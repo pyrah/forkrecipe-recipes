@@ -1,104 +1,229 @@
 export default {
-  repoId: "master_turkish_imam_bayildi_001",
-  parentRepoId: null,
-  slug: "imam-bayildi",
-  author: "ForkRecipe Kitchen",
-
-  title: "Imam Bayıldı",
-  description: "Whole eggplants slit lengthwise and filled with a slow-cooked melange of onion, tomato, garlic, and olive oil, then braised in more olive oil until the eggplant walls collapse into translucent silk — the dish whose name means 'the imam fainted,' allegedly from the extravagance of the oil.",
-  cuisine: "Turkish",
-  culture: "Ottoman",
-  category: "vegetables",
-
-  tags: ["eggplant", "turkish", "ottoman", "vegetarian", "vegan", "olive-oil", "slow-cook"],
-  difficulty: 2,
-  activeTime: "35 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "parts",
-
-  stars: 1123,
-  forks: 134,
-  contributors: 41,
-  license: "CC-BY-SA",
-  createdAt: "2024-10-30",
-  updatedAt: "2025-04-12",
-
-  flavorRadar: { sweet: 2, salty: 2, sour: 1, bitter: 2, umami: 3, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Medium globe eggplants",              ratioValue: 100, defaultUnit: "parts", substitutions: ["Italian eggplants"] },
-    { ingId: "ing_02", role: "Allium",   name: "Onions (very thinly sliced)",          ratioValue: 50,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",   name: "Garlic cloves (thinly sliced)",        ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Umami",    name: "Ripe tomatoes (peeled and chopped)",   ratioValue: 40,  defaultUnit: "parts", substitutions: ["San Marzano tomatoes (canned)"] },
-    { ingId: "ing_05", role: "Herb",     name: "Flat-leaf parsley (chopped)",          ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",      name: "Olive oil (use generously — this is the point)", ratioValue: 30, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Kosher salt, black pepper, and a pinch of sugar", ratioValue: 2, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_turkish_imam_bayildi_001",
+  "parentRepoId": null,
+  "slug": "imam-bayildi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Imam Bayıldı",
+  "description": "Les aubergines entières se coupent dans le sens de la longueur et se remplissent d'un mélange d'oignon, de tomate, d'ail et d'huile d'olive cuit lentement, puis se brassent dans plus d'huile d'olive jusqu'à ce que les parois de l'aubergine s'effondrent en soie translucide.",
+  "cuisine": "Turquie",
+  "culture": "Ottoman",
+  "category": "vegetables",
+  "tags": [
+    "aubergines",
+    "turc",
+    "Pouf",
+    "végétarien",
+    "végétalien",
+    "Huile d'olive",
+    "Cuisson lente"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "35 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 1123,
+  "forks": 134,
+  "contributors": 41,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-10-30",
+  "updatedAt": "2025-04-12",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Salt eggplant",
-      inputs: ["ing_01", "ing_07"],
-      outputState: "salted_eggplant",
-      instructions: "Peel the eggplants in alternating 2cm strips of skin and bare flesh — this striped pattern is traditional and helps the eggplant maintain its shape while still softening quickly. Make a deep lengthwise slit in each eggplant, not cutting all the way through. Salt the cut surfaces generously and the slits. Let rest in a colander for 30 minutes — the salt draws out the bitter liquid and also begins to relax the cell structure, reducing the spongy oil-absorption that makes eggplant dishes greasy when not pre-salted.",
-      visualCue: {
-        primaryTarget: "After 30 minutes, dark, bitter liquid has pooled in the colander beneath the eggplants. The cut surfaces have softened and turned slightly tan.",
-        spectrum: [
-          { state: "Underdone", description: "Less than 15 minutes have passed and no liquid has emerged yet.", action: "Wait the full 30 minutes. The pre-salting step is what allows the eggplant to absorb the olive oil flavors, not the oil itself." },
-          { state: "Perfect",   description: "Dark liquid in the colander, noticeably softer flesh, slightly tan surface. The eggplant compresses easily when squeezed.", action: "Rinse lightly, squeeze gently, and pat dry." },
-          { state: "Overdone",  description: "More than 1 hour of salting — the eggplant has become very soft and may fall apart when filled.", action: "Handle carefully, fill gently, and proceed." },
-        ],
-      },
-      feelCue: "Squeeze the salted eggplant gently — it should feel noticeably softer and more pliable than before salting. A small amount of dark liquid should be expressible from the flesh.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Aubergines à globe moyen",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Aubergines italiennes"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "filling_mixture",
-      instructions: "Heat half the olive oil in a wide pan over medium heat. Cook the onions very slowly for 20 minutes, stirring occasionally, until they are completely soft and golden — they should be jammy and sweet with no raw bite. Add the garlic for the last 3 minutes. Add the tomatoes and cook for 10 more minutes until reduced to a thick, fragrant paste. Season with salt, pepper, and a pinch of sugar. Stir in the parsley. The filling should be very well-seasoned and richly flavored.",
-      visualCue: {
-        primaryTarget: "A deeply golden, jammy mixture of onion and tomato that holds its shape when mounded on a spoon — thick, fragrant, and glistening with olive oil.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are still translucent and the tomato is still chunky and separate. The mixture tastes raw and sharp.", action: "Continue cooking. The onions need the full 20 minutes and the tomato needs to fully dissolve into the onions." },
-          { state: "Perfect",   description: "Deeply golden, jammy onions completely fused with the tomato. The paste is thick and leaves the pan sides clean when pushed across. The smell is deeply savory and slightly sweet.", action: "Fill the eggplants." },
-          { state: "Overdone",  description: "The filling has cooked down too far and is beginning to stick and burn.", action: "Add a splash of water to loosen and remove from heat immediately." },
-        ],
-      },
-      feelCue: "Press the filling against the side of the pan with a spoon — it should move as a cohesive mass, not separate into liquid and solids. The olive oil should be fully integrated, making the mixture shine.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignons (très mincement tranchés)",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Braise",
-      inputs: ["salted_eggplant", "filling_mixture", "ing_06"],
-      outputState: "braised_imam_bayildi",
-      instructions: "Rinse and dry the eggplants. Open the slits and fill generously with the onion-tomato mixture, pressing it in firmly. Arrange in a baking dish or wide pan that holds them snugly upright. Pour the remaining olive oil over and around the eggplants — do not be shy. Pour in 100ml of water. Cover tightly with foil and bake at 180°C (350°F) for 45–55 minutes until the eggplant walls are completely soft and translucent.",
-      visualCue: {
-        primaryTarget: "The eggplant has turned from opaque purple-beige to translucent, almost glassy, and has softened to the point where it yields completely when pressed. The filling is visible through the slit.",
-        spectrum: [
-          { state: "Underdone", description: "The eggplant walls still feel firm and opaque. A knife through the wall meets resistance.", action: "Continue baking covered for 10–15 more minutes." },
-          { state: "Perfect",   description: "Completely translucent, collapsing walls that yield to the lightest touch. The filling is hot and fragrant. The olive oil has been fully absorbed by the flesh.", action: "Uncover and cool to room temperature before serving." },
-          { state: "Overdone",  description: "The eggplant has collapsed entirely and the filling is spilling out — the walls are disintegrating.", action: "Remove from the oven. Serve carefully. The flavor will be excellent even if the presentation is imperfect." },
-        ],
-      },
-      feelCue: "Press the side of a braised eggplant very gently with a spoon — it should yield immediately with no resistance, like pressing into a water balloon. The flesh should feel completely yielding and almost liquid beneath the skin.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles d'ail (finement tranchés)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Cool and serve",
-      inputs: ["braised_imam_bayildi"],
-      outputState: "finished_imam_bayildi",
-      instructions: "Imam bayıldı is traditionally served at room temperature or warm, never hot. Allow to cool for at least 30 minutes after baking. This resting is part of the recipe — the olive oil is reabsorbed as it cools, and the flavors concentrate and integrate. Serve directly from the baking dish, garnished with additional fresh parsley and a drizzle of olive oil. Accompany with crusty bread to catch the accumulated juices.",
-      visualCue: {
-        primaryTarget: "Room-temperature eggplants, glistening with olive oil, their slit sides opening to reveal the dark golden filling inside. The juices in the dish have thickened to a concentrated, olive-oil-enriched sauce.",
-        spectrum: [
-          { state: "Underdone", description: "Served too hot — the olive oil is still liquid and pooled rather than integrated into the flesh.", action: "Allow to rest and cool further. Imam bayıldı genuinely improves with time." },
-          { state: "Perfect",   description: "Room temperature, deeply savory, collapsed walls saturated with olive oil, filling perfumed and concentrated. It smells like a garden in late summer.", action: "Serve with crusty bread." },
-          { state: "Overdone",  description: "Refrigerator-cold — the olive oil has solidified around the eggplant and the dish looks pale and congealed.", action: "Allow to come to room temperature for 45 minutes before serving. Do not microwave — it kills the texture." },
-        ],
-      },
-      feelCue: "Scoop a bite — the eggplant flesh should be completely soft and silky, almost dissolving on the spoon. The olive oil and tomato juices should pool slightly in the spoon. There should be no firmness or resistance whatsoever.",
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Tomates râpées (peautées et hachées)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Tomates de San Marzano (en conserve)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Persil à feuilles plates (choupé)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive (utiliser généreusement — c'est le point)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel casher, poivre noir et une pincée de sucre",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Aubergines salées",
+      "inputs": [
+        "ing_01",
+        "ing_07"
+      ],
+      "outputState": "salted_eggplant",
+      "instructions": "Peler les aubergines en alternant des bandes de 2cm de peau et de chair nue — ce motif rayé est traditionnel et aide l'aubergine à maintenir sa forme tout en adoucissant rapidement. Faire une fente longitudinale profonde dans chaque aubergine, ne pas couper tout le chemin. Saler généreusement les surfaces coupées et les fentes. Laisser reposer dans une calandre pendant 30 minutes — le sel retire le liquide amer et commence également à détendre la structure cellulaire, réduisant l'absorption d'huile spongieuse qui rend les plats d'aubergines gras lorsqu'ils ne sont pas pré-salés.",
+      "visualCue": {
+        "primaryTarget": "Après 30 minutes, le liquide amer et sombre s'est mis dans la calandre sous les aubergines. Les surfaces coupées ont ramolli et ont légèrement bronzé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Moins de 15 minutes se sont écoulées et aucun liquide n'est encore apparu.",
+            "action": "Attendez 30 minutes. L'étape de prévente est ce qui permet à l'aubergine d'absorber les arômes d'huile d'olive, pas l'huile elle-même."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide foncé dans la calandre, chair nettement plus douce, surface légèrement bronzée. L'aubergine se compresse facilement lorsqu'elle est pressée.",
+            "action": "Rincer légèrement, presser doucement et sécher."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus d'une heure de salage — l'aubergine est devenue très molle et peut tomber en morceaux lorsqu'elle est remplie.",
+            "action": "Poignez soigneusement, remplissez doucement et continuez."
+          }
+        ]
+      },
+      "feelCue": "Pressez doucement l'aubergine salée — elle doit se sentir nettement plus douce et plus souple qu'avant de la saler. Une petite quantité de liquide foncé doit être expressible de la chair."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "filling_mixture",
+      "instructions": "Chauffer la moitié de l'huile d'olive dans une grande casserole à feu moyen. Cuire les oignons très lentement pendant 20 minutes, en remuant de temps en temps, jusqu'à ce qu'ils soient complètement tendres et dorés. Ajouter l'ail pour les 3 dernières minutes. Ajouter les tomates et cuire encore 10 minutes jusqu'à ce qu'elles soient réduites à une pâte épaisse et parfumée. Assaisonner de sel, poivre et une pincée de sucre. Incorporer le persil. Le remplissage doit être très assaisonné et richement aromatisé.",
+      "visualCue": {
+        "primaryTarget": "Un mélange d'oignon et de tomate profondément doré et jammy qui tient sa forme lorsqu'il est bombé sur une cuillère, épais, parfumé et brillant avec de l'huile d'olive.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont encore translucides et la tomate est encore épaisse et séparée. Le mélange a un goût cru et vif.",
+            "action": "Continuez à cuisiner. Les oignons ont besoin de 20 minutes et la tomate doit se dissoudre complètement dans les oignons."
+          },
+          {
+            "state": "Perfect",
+            "description": "Profondément doré, les oignons confitureux se fusionnent complètement avec la tomate. La pâte est épaisse et laisse les côtés propres de la poêle lorsqu'elle est poussée à travers. L'odeur est profondément salée et légèrement sucrée.",
+            "action": "Remplissez les aubergines."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage a cuit trop loin et commence à coller et à brûler.",
+            "action": "Ajouter un jet d'eau pour se détendre et retirer immédiatement de la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le remplissage contre le côté de la casserole avec une cuillère — il doit se déplacer comme une masse cohésive, non se séparer en liquide et en solides. L'huile d'olive doit être entièrement intégrée, ce qui rend le mélange brillant."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "salted_eggplant",
+        "filling_mixture",
+        "ing_06"
+      ],
+      "outputState": "braised_imam_bayildi",
+      "instructions": "Rincer et sécher les aubergines. Ouvrez les fentes et remplissez généreusement le mélange oignon-tomate, en le pressant fermement. Disposer dans un plat de cuisson ou une grande casserole qui les tient bien droits. Versez le reste de l'huile d'olive sur et autour des aubergines — ne soyez pas timide. Verser 100 ml d'eau. Couvrir soigneusement avec du papier et cuire à 180°C (350°F) pendant 45 à 55 minutes jusqu'à ce que les parois des aubergines soient complètement douces et translucides.",
+      "visualCue": {
+        "primaryTarget": "L'aubergine est passée du beige-violet opaque au translucide, presque vitreux, et s'est adoucie au point où elle produit complètement lorsqu'elle est pressée. Le remplissage est visible à travers la fente.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les parois des aubergines se sentent encore fermes et opaques. Un couteau à travers le mur rencontre la résistance.",
+            "action": "Continuer à cuire pendant 10 à 15 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des murs complètement translucides et s'effondrent qui donnent au toucher le plus léger. Le remplissage est chaud et parfumé. L'huile d'olive a été totalement absorbée par la chair.",
+            "action": "Découvrez et refroidissez à la température ambiante avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'aubergine s'est complètement effondrée et le remplissage se déverse — les murs se désintègrent.",
+            "action": "Retirer du four. Servir soigneusement. La saveur sera excellente même si la présentation est imparfaite."
+          }
+        ]
+      },
+      "feelCue": "Appuyez très doucement sur le côté d'une aubergine braisée avec une cuillère — elle devrait produire immédiatement sans résistance, comme en appuyant sur un ballon d'eau. La chair doit se sentir complètement céder et presque liquide sous la peau."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Refroidir et servir",
+      "inputs": [
+        "braised_imam_bayildi"
+      ],
+      "outputState": "finished_imam_bayildi",
+      "instructions": "Imam bayıldı est traditionnellement servi à la température ambiante ou chaud, jamais chaud. Laisser refroidir au moins 30 minutes après cuisson. Ce repos fait partie de la recette: l'huile d'olive est réabsorbée à mesure qu'elle refroidit, et les saveurs se concentrent et s'intègrent. Servir directement depuis le plat de cuisson, garni de persil frais et d'un filet d'huile d'olive. Accompagner avec du pain croustillant pour attraper les jus accumulés.",
+      "visualCue": {
+        "primaryTarget": "Aubergines à température ambiante, scintillantes à l'huile d'olive, leurs côtés fendus s'ouvrent pour révéler le remplissage doré foncé à l'intérieur. Les jus du plat se sont épaissis à une sauce concentrée enrichie d'huile d'olive.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Servie trop chaude — l'huile d'olive est encore liquide et mise en commun plutôt que intégrée dans la chair.",
+            "action": "Laisser reposer et refroidir davantage. Imam bayıldı s'améliore vraiment avec le temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Température ambiante, profondément salée, parois effondrées saturées d'huile d'olive, remplissage parfumé et concentré. Ça sent le jardin à la fin de l'été.",
+            "action": "Servir avec du pain croustillant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Réfrigérateur-froid — l'huile d'olive s'est solidifiée autour de l'aubergine et le plat semble pâle et congelé.",
+            "action": "Laissez passer à la température ambiante pendant 45 minutes avant de servir. Ne pas micro-ondes — il tue la texture."
+          }
+        ]
+      },
+      "feelCue": "Faire une bouchée: la chair d'aubergine devrait être complètement douce et soyeuse, presque dissoute sur la cuillère. L'huile d'olive et les jus de tomate devraient se mettre légèrement dans la cuillère. Il ne doit y avoir ni fermeté ni résistance."
+    }
+  ]
 };

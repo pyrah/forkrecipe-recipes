@@ -1,102 +1,211 @@
 export default {
-  repoId: "master_irish_irish_soda_bread_001",
-  parentRepoId: null,
-  slug: "irish-soda-bread",
-  author: "ForkRecipe Kitchen",
-
-  title: "Irish Soda Bread",
-  description: "Forty minutes from flour to table — no yeast, no kneading, no waiting — just the fizzing reaction of baking soda against buttermilk lifting the dough into a rustic, crumb-strewn loaf with a thick crust and a tender, slightly sour interior that pulls apart in satisfying chunks.",
-  cuisine: "Irish",
-  culture: "Irish",
-  category: "breads",
-
-  tags: ["irish", "bread", "buttermilk", "quick-bread", "baking-soda"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "1 hr",
-  ratioSystem: "bakers_percentage",
-
-  stars: 1090,
-  forks: 130,
-  contributors: 16,
-  license: "CC-BY-SA",
-  createdAt: "2025-01-17",
-  updatedAt: "2025-03-09",
-
-  flavorRadar: { sweet: 1, salty: 2, sour: 2, bitter: 0, umami: 0, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Whole wheat flour (or half white, half wholemeal)", ratioValue: 100, defaultUnit: "%", substitutions: ["all-purpose flour (softer crumb)"] },
-    { ingId: "ing_02", role: "Hydration", name: "Buttermilk, cold",                                  ratioValue: 75,  defaultUnit: "%", substitutions: ["whole milk + 1 tbsp lemon juice, rested 5 min"] },
-    { ingId: "ing_03", role: "Leavener",  name: "Baking soda (bicarbonate of soda)",                 ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                                     ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",       name: "Cold unsalted butter, cubed (optional, for richness)", ratioValue: 5, defaultUnit: "%", substitutions: ["lard", "omit for vegan version"] },
+  "repoId": "master_irish_irish_soda_bread_001",
+  "parentRepoId": null,
+  "slug": "irish-soda-bread",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pain de soda irlandais",
+  "description": "Quarante minutes de la farine à la table — pas de levure, pas de pétrissage, pas d'attente — juste la réaction étourdissante de la cuisson du soda contre le babeurre soulevant la pâte dans un pain rustique, émietté avec une croûte épaisse et un intérieur tendre et légèrement aigre qui se détache dans des morceaux satisfaisants.",
+  "cuisine": "Irlandais",
+  "culture": "Irlandais",
+  "category": "breads",
+  "tags": [
+    "Irlandais",
+    "pain",
+    "beurre",
+    "pain rapide",
+    "Bicarbonate de soude"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "bakers_percentage",
+  "stars": 1090,
+  "forks": 130,
+  "contributors": 16,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-01-17",
+  "updatedAt": "2025-03-09",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_03", "ing_04", "ing_05"],
-      outputState: "dry_mix",
-      instructions: "Preheat the oven to 220°C (425°F). In a large bowl, whisk together the flour, baking soda, and salt until evenly combined. If using butter, rub it into the flour using your fingertips until the mixture resembles coarse breadcrumbs. Work quickly — you do not want the butter to melt from the heat of your hands. The dry mix should be aerated and loose.",
-      visualCue: {
-        primaryTarget: "A pale, aerated mixture with no clumps of flour or butter visible. If using butter, no pieces larger than a pea remain.",
-        spectrum: [
-          { state: "Underdone", description: "Large chunks of butter are still visible. Baking soda is not fully distributed — visible white streaks.", action: "Continue rubbing the butter in and whisk the dry ingredients more thoroughly. Undistributed baking soda creates bitter, alkaline pockets in the baked loaf." },
-          { state: "Perfect",   description: "Flour looks sandy and aerated. Butter (if used) is rubbed in to fine crumbs with no visible chunks. The mixture feels light and flows freely through your fingers.", action: "Add the buttermilk immediately — speed matters now. Baking soda activates the moment it contacts acid." },
-          { state: "Overdone",  description: "The mixture has been worked so long that the butter has melted into the flour from your hand's warmth, forming a paste.", action: "Chill the bowl for 5 minutes. The fat in the crumb will not create the same flaky structure but the bread will still rise." },
-        ],
-      },
-      feelCue: "Plunge your fingers into the dry mix — it should feel cool, light, and slightly gritty from the flour particles, like beach sand. If it feels dense and heavy, it needs more aerating.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de blé entier (ou moitié blanche, moitié de farine entière)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Farine tout usage (minute plus molle)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fold",
-      inputs: ["dry_mix", "ing_02"],
-      outputState: "soda_bread_dough",
-      instructions: "Make a well in the center of the dry mix. Pour in all the cold buttermilk at once. Using a large fork or your hand held flat like a paddle, stir in large circular motions from the inside out — 15 to 20 strokes maximum. Stop as soon as the dough just comes together. It will be shaggy, rough, and slightly sticky — this is correct. Over-mixing develops gluten and toughens the crumb fatally. The reaction between the soda and buttermilk has already begun.",
-      visualCue: {
-        primaryTarget: "A rough, shaggy dough that holds together in one mass but looks ragged at the edges. Dry flour streaks may still be visible on the edges — this is acceptable.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still crumbly and will not hold together when picked up. Dry flour pockets remain throughout.", action: "Fold 3–4 more times until it just coheres. A splash more buttermilk may be needed if the flour is particularly absorbent." },
-          { state: "Perfect",   description: "Dough holds together as one rough, lumpy mass. It looks messy but can be lifted from the bowl without falling apart. Bubbles may already be visible from the baking soda reaction. The surface is slightly tacky.", action: "Turn onto a floured surface and shape immediately — the leavening is already working." },
-          { state: "Overdone",  description: "Dough is smooth, elastic, and pulls cleanly away from the bowl. It has been over-mixed and developed gluten. The baking soda has had time to activate and may partially exhaust before baking.", action: "Shape and bake immediately. The bread will be chewier and denser than ideal but will still rise." },
-        ],
-      },
-      feelCue: "The dough should feel slightly tacky when you press it with a floured finger — it clings very gently but releases without tearing. If it pulls like elastic, gluten has developed too much. If it crumbles, it needs a little more liquid.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Beurre, froid",
+      "ratioValue": 75,
+      "defaultUnit": "%",
+      "substitutions": [
+        "lait entier + 1 c. à soupe de jus de citron, reposé 5 min"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Shape",
-      inputs: ["soda_bread_dough"],
-      outputState: "shaped_loaf",
-      instructions: "Turn the dough onto a lightly floured surface and shape quickly and gently into a round about 20cm in diameter and 5cm thick — use the minimum number of touches needed. Place on a parchment-lined baking tray. Using a sharp knife or blade, cut a deep cross into the top, nearly all the way through — this allows heat to penetrate the dense interior and is said traditionally to let the fairies out. Dust lightly with flour.",
-      visualCue: {
-        primaryTarget: "A rough, dome-shaped round with a deep, clean cross cut across the top. The surface is dusted with flour and slightly cracked from the cross.",
-        spectrum: [
-          { state: "Underdone", description: "The cross is too shallow — less than 1cm deep. Heat cannot penetrate the center and the interior will remain underbaked.", action: "Re-cut the cross more deeply. The knife should go through about 80% of the loaf depth." },
-          { state: "Perfect",   description: "Cross is cut nearly to the base of the loaf. The four quadrants open slightly from the cut, like a flower about to bloom. The loaf is approximately round and evenly domed.", action: "Bake immediately on the center shelf." },
-          { state: "Overdone",  description: "The loaf has been handled too much during shaping and is now smooth and flat — the dough has over-developed and spread. The baking soda has exhausted further.", action: "Bake immediately. Prioritize oven time — speed matters more than perfect shape at this stage." },
-        ],
-      },
-      feelCue: "Pick up the shaped loaf gently — it should feel airy and springy, not dense or heavy. Press the center lightly with a floured finger; it should indent and spring back slowly, a sign the leavening is actively working.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "Bicarbonate de soude",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["shaped_loaf"],
-      outputState: "finished_soda_bread",
-      instructions: "Bake at 220°C (425°F) for 20 minutes. Without opening the oven, reduce the temperature to 200°C (390°F) and bake for a further 20–25 minutes. To test doneness, lift the loaf and tap the base firmly with your knuckle — a fully baked soda bread sounds hollow, like an empty wooden box. If it sounds dense and dull, return to the oven for 5 more minutes base-side up. Cool on a wire rack for at least 20 minutes before cutting.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown crust all over with the cross spread open. The four quadrants have bloomed out and risen separately. No pale patches remain.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is pale gold and the cross has not fully opened. A tap on the base sounds dull and dense, not hollow.", action: "Return to the oven at 200°C for 10 more minutes, placing the loaf directly on the oven rack for a crisper base." },
-          { state: "Perfect",   description: "Even dark golden-brown crust, open cross with each quarter slightly curled outward. The base tap produces a clear, hollow sound — like tapping an overturned ceramic bowl. The aroma is toasted grain and buttermilk tang.", action: "Cool on a wire rack. Cutting too early creates a gummy interior — the steam is still finishing the crumb." },
-          { state: "Overdone",  description: "Crust is very dark brown or cracking. The cross quarters have split all the way and the bread has an almost hard exterior. The base smells slightly of char.", action: "The interior is likely still good. Slice off the very darkest crust to reveal the tender crumb beneath. Serve with plenty of butter to compensate." },
-        ],
-      },
-      feelCue: "The tap test is the most reliable: hold the loaf on your palm and knock the center of the base firmly with your knuckle — a baked-through soda bread resonates with a clear, ringing hollow knock. An underbaked loaf thuds flatly like tapping a block of wood.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre froid non salé, cube (facultatif, pour la richesse)",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Saindoux",
+        "omit pour la version végétalienne"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "dry_mix",
+      "instructions": "Préchauffer le four à 220°C (425°F). Dans un grand bol, fouetter ensemble la farine, le bicarbonate de soude et le sel jusqu'à ce qu'il soit uniformément combiné. Si vous utilisez du beurre, frottez-le dans la farine en utilisant le bout des doigts jusqu'à ce que le mélange ressemble à une chapelure grossière. Travaillez rapidement — vous ne voulez pas que le beurre fond de la chaleur de vos mains. Le mélange sec doit être aéré et lâche.",
+      "visualCue": {
+        "primaryTarget": "Un mélange aéré pâle sans croûtes de farine ou de beurre visible. Si vous utilisez du beurre, il ne reste pas de morceaux plus grands qu'un pois.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De gros morceaux de beurre sont encore visibles. Le bicarbonate de soude n'est pas entièrement distribué — des stries blanches visibles.",
+            "action": "Continuer à frotter le beurre et fouetter les ingrédients secs plus soigneusement. Le bicarbonate de soude non distribué crée des poches alcalines amères dans le pain cuit."
+          },
+          {
+            "state": "Perfect",
+            "description": "La farine a l'air sablonneuse et aérée. Le beurre (s'il est utilisé) est frotté dans des miettes fines sans morceaux visibles. Le mélange sent la lumière et coule librement à travers vos doigts.",
+            "action": "Ajoutez immédiatement le babeurre — la vitesse est importante maintenant. Le bicarbonate de soude active le moment où il contacte l'acide."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a été travaillé si longtemps que le beurre a fondu dans la farine à partir de la chaleur de votre main, formant une pâte.",
+            "action": "Refroidir le bol pendant 5 minutes. La graisse de la miette ne créera pas la même structure flocante, mais le pain se lèvera encore."
+          }
+        ]
+      },
+      "feelCue": "Plongez vos doigts dans le mélange sec — il devrait sentir frais, léger, et légèrement gras des particules de farine, comme le sable de plage. Si elle se sent dense et lourde, elle a besoin de plus d'aération."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "dry_mix",
+        "ing_02"
+      ],
+      "outputState": "soda_bread_dough",
+      "instructions": "Faites un puits au centre du mélange sec. Versez tout le beurre froid immédiatement. À l'aide d'une grande fourchette ou de votre main maintenue à plat comme une pagaie, remuez de l'intérieur de grands mouvements circulaires — 15 à 20 coups maximum. Arrêtez dès que la pâte se réunit. Il sera sec, rugueux et légèrement collant — c'est exact. Le surmélange développe du gluten et durcit la miettes de façon fatale. La réaction entre le soda et le babeurre a déjà commencé.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rugueuse et shaggy qui tient ensemble en une seule masse, mais qui a l'air ravagée aux bords. Des stries de farine sèche peuvent encore être visibles sur les bords, ce qui est acceptable.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Dough est toujours friable et ne tiendra pas ensemble quand ramassé. Les poches de farine sèche restent partout.",
+            "action": "Plier encore 3-4 fois jusqu'à ce qu'il cohère. Si la farine est particulièrement absorbante, il faudra peut-être plus de babeurre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dough tient ensemble comme une masse rugueuse et bosselée. Il semble désordonné mais peut être soulevé du bol sans tomber en morceaux. Les bulles peuvent déjà être visibles à partir de la réaction de bicarbonate de soude. La surface est légèrement collante.",
+            "action": "Tournez sur une surface farinée et formez immédiatement — le levain fonctionne déjà."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est lisse, élastique et s'éloigne complètement du bol. Il a été surmélangé et développé gluten. Le bicarbonate de soude a eu le temps d'être activé et peut être partiellement épuisé avant la cuisson.",
+            "action": "Formez et faites cuire immédiatement. Le pain sera plus mâcher et plus dense que l'idéal, mais se lèvera encore."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir légèrement collante quand on la presse avec un doigt fariné — elle s'accroche très doucement mais se libère sans déchirer. S'il tire comme élastique, gluten a développé trop. Si ça s'écroule, il lui faut un peu plus de liquide."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "soda_bread_dough"
+      ],
+      "outputState": "shaped_loaf",
+      "instructions": "Tourner la pâte sur une surface légèrement farinée et façonner rapidement et doucement en un rond d'environ 20 cm de diamètre et 5 cm d'épaisseur — utiliser le nombre minimum de touches nécessaires. Placer sur un plateau de cuisson parcheminé. À l'aide d'un couteau ou d'une lame tranchante, couper une croix profonde dans le haut, presque tout le chemin à travers, ce qui permet la chaleur pour pénétrer l'intérieur dense et est dit traditionnellement pour laisser sortir les fées. Poussière légèrement avec de la farine.",
+      "visualCue": {
+        "primaryTarget": "Une ronde rugueuse en forme de dôme avec une croix profonde et propre coupée au-dessus. La surface est souillée de farine et légèrement fissurée de la croix.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croix est trop peu profonde — moins de 1cm de profondeur. La chaleur ne peut pénétrer dans le centre et l'intérieur restera sous le feu.",
+            "action": "Recoupez la croix plus profondément. Le couteau devrait traverser environ 80 % de la profondeur du pain."
+          },
+          {
+            "state": "Perfect",
+            "description": "La croix est coupée presque jusqu'à la base du pain. Les quatre quadrants s'ouvrent légèrement de la coupe, comme une fleur sur le point de fleurir. Le pain est approximativement rond et uniformément bombé.",
+            "action": "Cuire immédiatement sur l'étagère centrale."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pain a été trop manipulé pendant la formation et est maintenant lisse et plat — la pâte a sur-développé et s'est étendue. Le bicarbonate de soude s'est encore épuisé.",
+            "action": "Faites cuire immédiatement. Privilégier le temps du four — la vitesse compte plus que la forme parfaite à ce stade."
+          }
+        ]
+      },
+      "feelCue": "Ramassez doucement le pain en forme — il doit se sentir aéré et printanier, pas dense ou lourd. Appuyez légèrement sur le centre à l'aide d'un doigt fariné; il devrait s'immerger et revenir lentement, un signe que le levain fonctionne activement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "shaped_loaf"
+      ],
+      "outputState": "finished_soda_bread",
+      "instructions": "Cuire au four à 220°C (425°F) pendant 20 minutes. Sans ouvrir le four, réduisez la température à 200°C (390°F) et faites cuire encore 20 à 25 minutes. Pour tester la finesse, soulevez le pain et tapez fermement la base avec votre joint: un pain de soda entièrement cuit sonne creux, comme une boîte en bois vide. Si ça sonne dense et terne, retournez au four pendant 5 minutes de plus. Laisser refroidir sur une grille pendant au moins 20 minutes avant de couper.",
+      "visualCue": {
+        "primaryTarget": "Une croûte dorée profonde partout, la croix s'est étendue. Les quatre quadrants ont fleuri et se sont levés séparément. Il ne reste pas de taches pâles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est d'or pâle et la croix n'est pas complètement ouverte. Un robinet sur la base semble terne et dense, pas creux.",
+            "action": "Retourner au four à 200°C pendant 10 minutes de plus, placer le pain directement sur la grille du four pour une base plus croustillante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même la croûte dorée foncée, la croix ouverte avec chaque quart légèrement enroulé vers l'extérieur. Le robinet de base produit un son clair et creux, comme un bol en céramique renversé. L'arôme est grillé grain et lait de beurre tang.",
+            "action": "Refroidir sur une grille. Découper trop tôt crée un intérieur gommé — la vapeur continue de finir la miette."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est brun foncé ou craquelée. Les quartiers croisés se sont séparés et le pain a un extérieur presque dur. La base sent légèrement l'omble.",
+            "action": "L'intérieur est probablement encore bon. Couper la croûte la plus sombre pour révéler la miette tendre. Servir avec beaucoup de beurre pour compenser."
+          }
+        ]
+      },
+      "feelCue": "Le test de robinet est le plus fiable: tenez le pain sur votre paume et frappez fermement le centre de la base avec votre couenne — un pain de soude cuit à travers résonne avec un coup creux clair et retentissant. Un pain sous-cuit touffe à plat comme un bloc de bois."
+    }
+  ]
 };

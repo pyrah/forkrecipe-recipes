@@ -1,88 +1,240 @@
 export default {
-  repoId: "master_brazilian_moqueca_de_peixe_001",
-  parentRepoId: null,
-  slug: "moqueca-de-peixe",
-  author: "ForkRecipe Kitchen",
-
-  title: "Moqueca de Peixe",
-  description: "The Bahian stew of the African diaspora: thick white fish simmered in a terracotta pan with coconut milk, dendê palm oil, tomato, onion, and cilantro until the broth is a brilliant orange, perfumed with something entirely its own — tropical, rich, and gently fiery.",
-  cuisine: "Brazilian",
-  culture: "Bahian",
-  category: "seafood",
-
-  tags: ["gluten-free", "dairy-free", "fish", "stew", "coconut", "afro-brazilian"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "50 min",
-  ratioSystem: "weight",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 1, umami: 4, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",    name: "Thick white fish fillets (cod, sea bass, or grouper)", ratioValue: 700, defaultUnit: "g", substitutions: ["halibut", "snapper"] },
-    { ingId: "ing_02", role: "Fat",        name: "Dendê (red palm oil)",                                 ratioValue: 40,  defaultUnit: "ml", substitutions: ["smoked paprika in olive oil — not authentic but functional"] },
-    { ingId: "ing_03", role: "Liquid",     name: "Full-fat coconut milk",                                ratioValue: 400, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_04", role: "Structure",  name: "Ripe tomatoes, sliced into rounds",                    ratioValue: 300, defaultUnit: "g", substitutions: ["400 g tin whole tomatoes"] },
-    { ingId: "ing_05", role: "Allium",     name: "White onion, sliced into thin rounds",                 ratioValue: 200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",     name: "Garlic cloves, minced",                                ratioValue: 15,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Structure",  name: "Red and green bell peppers, sliced into thin strips",  ratioValue: 200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Herb",       name: "Fresh coriander (cilantro), roughly chopped",          ratioValue: 25,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Acid",       name: "Lime juice",                                           ratioValue: 30,  defaultUnit: "ml", substitutions: ["lemon juice"] },
-    { ingId: "ing_10", role: "Heat",       name: "Malagueta chillies or scotch bonnet, finely sliced",   ratioValue: 10,  defaultUnit: "g", substitutions: ["bird's-eye chilli"] },
-    { ingId: "ing_11", role: "Seasoning",  name: "Fine salt",                                            ratioValue: 8,   defaultUnit: "g", substitutions: [] },
+  "repoId": "master_brazilian_moqueca_de_peixe_001",
+  "parentRepoId": null,
+  "slug": "moqueca-de-peixe",
+  "author": "ForkRecipe Kitchen",
+  "title": "Moqueca de Peixe",
+  "description": "Le ragoût bahaï de la diaspora africaine : épais poisson blanc mijoté dans une casserole de terre cuite avec du lait de coco, de l'huile de palme dendê, de la tomate, de l'oignon et de la coriandre jusqu'à ce que le bouillon soit une orange brillante, parfumée de quelque chose de tout à fait propre – tropical, riche et légèrement enflammé.",
+  "cuisine": "Brésil",
+  "culture": "Bahian",
+  "category": "seafood",
+  "tags": [
+    "Sans gluten",
+    "sans produits laitiers",
+    "poissons",
+    "ragoût",
+    "noix de coco",
+    "Afro-brazilien"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "50 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Marinate",
-      inputs: ["ing_01", "ing_09", "ing_06", "ing_11"],
-      outputState: "marinated_fish",
-      instructions: "Cut the fish fillets into large portions (approximately 150 g each). In a bowl, combine with the lime juice, half the garlic, and salt. Toss gently to coat. Marinate for 20–30 minutes in the refrigerator. The lime juice will begin to denature the surface proteins, giving the fish a slightly opaque look and a more flavourful surface.",
-      visualCue: {
-        primaryTarget: "Fish in the lime marinade",
-        spectrum: [
-          { state: "Underdone", description: "Fish is still completely translucent and raw-looking after only 5 minutes. Not enough time for the marinade to penetrate.", action: "Marinate for the full 20 minutes minimum." },
-          { state: "Perfect",   description: "Fish surface is slightly opaque — lightly 'cooked' by the acid. Flesh is firm and fragrant with lime and garlic. No browning or graying.", action: "Proceed to building the stew." },
-          { state: "Overdone",  description: "Fish has been marinating for over 2 hours in the lime juice. Surface is white and 'cooked' throughout, crumbling when touched.", action: "Reduce the simmering time significantly — the fish will need very little heat to cook through." },
-        ],
-      },
-      feelCue: "Press a piece of marinated fish gently — it should feel slightly firmer than raw fish but still fully yielding, like firm tofu rather than meat.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filets de poissons blancs épais (cod, bar ou mérou)",
+      "ratioValue": 700,
+      "defaultUnit": "g",
+      "substitutions": [
+        "flétan",
+        "snapper"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Assemble",
-      inputs: ["ing_02", "ing_05", "ing_04", "ing_07", "ing_10"],
-      outputState: "layered_moqueca",
-      instructions: "In a heavy clay pot (ideal) or wide, heavy-bottomed pan, pour the dendê oil. Layer the onion rounds across the base, then the tomato rounds, then the pepper strips, then the chilli. This layered approach is traditional — the vegetables cook in sequence from the heat of the oil below.",
-      visualCue: {
-        primaryTarget: "Layered vegetables in the pan",
-        spectrum: [
-          { state: "Underdone", description: "N/A — this is a cold-assembly step.", action: "Ensure the layers are even and cover the entire base of the pan so the fish cooks surrounded by vegetables on all sides." },
-          { state: "Perfect",   description: "Distinct, even layers of red-orange onion, red tomato rounds, and multicoloured pepper strips. The dendê oil at the base is a vivid orange-red.", action: "Scatter the remaining garlic over the top and lay the fish pieces on top of the vegetable layers." },
-          { state: "Overdone",  description: "N/A at assembly stage.", action: "Proceed." },
-        ],
-      },
-      feelCue: "The layered pan should feel cold and wet when you place the fish on top — the moisture from the vegetables and the raw fish will create the steam that begins the cooking process.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Dendê (huile de palme rouge)",
+      "ratioValue": 40,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "paprika fumé dans l'huile d'olive — non authentique mais fonctionnel"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["layered_moqueca", "marinated_fish", "ing_03", "ing_08"],
-      outputState: "finished_moqueca",
-      instructions: "Lay the marinated fish pieces on top of the layered vegetables. Pour the coconut milk over everything — it should nearly submerge the fish. Cover tightly and cook over medium heat for 15–20 minutes, without stirring, until the fish is just cooked through and the coconut milk has combined with the vegetable juices and palm oil to create a brilliant orange-red broth. Add most of the coriander in the final 2 minutes. Taste and adjust salt.",
-      visualCue: {
-        primaryTarget: "Moqueca broth and fish during cooking",
-        spectrum: [
-          { state: "Underdone", description: "Fish is still translucent at the centre. Broth is pale and has not yet emulsified the palm oil and coconut milk.", action: "Cover and continue simmering — the broth will turn orange as the dendê emulsifies into the coconut milk." },
-          { state: "Perfect",   description: "Fish is opaque all the way through but still holds its shape in large, moist flakes. Broth is a vivid, cloudy orange-red — the dendê and coconut have emulsified into a rich, aromatic sauce. Coriander floats on top. The pot smells of tropical richness.", action: "Serve directly from the pan at the table. Scatter remaining coriander over the top." },
-          { state: "Overdone",  description: "Fish has broken apart into flakes and disintegrated into the broth. Broth has separated — the oil floating on the surface of the coconut milk.", action: "Serve immediately and very gently. Do not stir. The flavour is intact but the fish texture is gone." },
-        ],
-      },
-      feelCue: "Use a large spoon to pull a piece of fish from the broth — it should break into large, moist, separate flakes rather than one cohesive piece. If it resists and feels rubbery, it needs more time; if it dissolves in the spoon, it is overcooked.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Lait de coco plein gras",
+      "ratioValue": 400,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Tomates de ripe, coupées en rondelles",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "400 g d'étain tomates entières"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon blanc, tranché en rondelles fines",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Structure",
+      "name": "poivrons rouges et verts, tranchés en fines bandes",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Coriandre fraîche (cilantro), grossièrement hachée",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de chaux",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "jus de citron"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Heat",
+      "name": "Piments de malagueta ou bonnet de scotch, tranchés finement",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "piment des yeux d'oiseau"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_09",
+        "ing_06",
+        "ing_11"
+      ],
+      "outputState": "marinated_fish",
+      "instructions": "Couper les filets de poisson en grandes portions (environ 150 g chacune). Dans un bol, mélanger avec le jus de lime, la moitié de l'ail et le sel. Mélanger doucement pour enrober. Faire mariner de 20 à 30 minutes au réfrigérateur. Le jus de lime commencera à dénaturationr les protéines de surface, donnant au poisson un aspect légèrement opaque et une surface plus parfumée.",
+      "visualCue": {
+        "primaryTarget": "Poissons dans la marinade de chaux",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le poisson est encore complètement translucide et à l'aspect brut après seulement 5 minutes. Pas assez de temps pour la marinade pour pénétrer.",
+            "action": "Faire mariner au minimum 20 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface du poisson est légèrement opaque — légèrement « cuite » par l'acide. La chair est ferme et parfumée avec de la chaux et de l'ail. Pas de brunissement ou de gris.",
+            "action": "Continuez à construire le ragoût."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson marine depuis plus de 2 heures dans le jus de lime. La surface est blanche et « cuite » partout, s'écroulant lorsqu'elle est touchée.",
+            "action": "Réduisez considérablement le temps de cuisson — le poisson aura besoin de très peu de chaleur pour cuire."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur un morceau de poisson mariné — il devrait se sentir légèrement plus ferme que le poisson cru, mais toujours plein rendement, comme le tofu ferme plutôt que la viande."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Assemblage",
+      "inputs": [
+        "ing_02",
+        "ing_05",
+        "ing_04",
+        "ing_07",
+        "ing_10"
+      ],
+      "outputState": "layered_moqueca",
+      "instructions": "Dans un pot d'argile lourd (idéal) ou une casserole large à fond lourd, verser l'huile dendê. Coucher les rondelles d'oignon sur la base, puis les rondelles de tomate, puis les bandes de poivre, puis le piment. Cette approche en couches est traditionnelle: les légumes cuits en séquence à partir de la chaleur de l'huile ci-dessous.",
+      "visualCue": {
+        "primaryTarget": "Légumes stratifiés dans la poêle",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "S.O. — C'est une étape de montage à froid.",
+            "action": "S'assurer que les couches sont uniformes et couvrir toute la base de la poêle de sorte que le poisson cuisine entouré de légumes de tous les côtés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des couches distinctes, même d'oignon rouge-orange, des rondelles de tomates rouges et des bandes de poivre multicolores. L'huile dendê à la base est un rouge orange vif.",
+            "action": "Dispersez le reste de l'ail sur le dessus et posez les morceaux de poisson sur les couches de légumes."
+          },
+          {
+            "state": "Overdone",
+            "description": "S.O. au stade de montage.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "La casserole en couches devrait être froide et humide lorsque vous placez le poisson sur le dessus — l'humidité des légumes et du poisson cru créera la vapeur qui commence le processus de cuisson."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "layered_moqueca",
+        "marinated_fish",
+        "ing_03",
+        "ing_08"
+      ],
+      "outputState": "finished_moqueca",
+      "instructions": "Placez les morceaux de poisson marinés sur le dessus des légumes stratifiés. Verser le lait de coco sur tout — il devrait presque submerger le poisson. Couvrir soigneusement et cuire à feu moyen pendant 15 à 20 minutes, sans remuer, jusqu'à ce que le poisson soit juste cuit et le lait de coco s'est combiné avec les jus de légumes et l'huile de palme pour créer un bouillon rouge orange brillant. Ajouter la plupart de la coriandre dans les 2 dernières minutes. Goûtez et ajustez le sel.",
+      "visualCue": {
+        "primaryTarget": "Bouillon de moqueca et poisson pendant la cuisson",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le poisson est toujours translucide au centre. Le bouillon est pâle et n'a pas encore émulsifié l'huile de palme et le lait de coco.",
+            "action": "Couvrir et continuer à mijoter — le bouillon deviendra orange au fur et à mesure que le dendê émulsifie dans le lait de coco."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le poisson est opaque tout au long du parcours, mais conserve sa forme dans de grands flocons humides. Broth est un rouge orangé vif et nuageux, le dendê et la noix de coco ont émulsifié en une sauce riche et aromatique. Coriandre flotte sur le dessus. Le pot sent la richesse tropicale.",
+            "action": "Servir directement de la casserole à la table. Dispersez le reste de la coriandre sur le dessus."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les poissons se sont séparés en flocons et se sont désintégrés dans le bouillon. Broth s'est séparé — l'huile flottant à la surface du lait de coco.",
+            "action": "Servir immédiatement et très doucement. Ne remuez pas. La saveur est intacte mais la texture du poisson a disparu."
+          }
+        ]
+      },
+      "feelCue": "Utilisez une grande cuillère pour tirer un morceau de poisson du bouillon — il devrait se briser en grands flocons, humides, séparés plutôt qu'une seule pièce cohésive. Si elle résiste et se sent caoutchouteuse, elle a besoin de plus de temps; si elle se dissout dans la cuillère, elle est trop cuite."
+    }
+  ]
 };

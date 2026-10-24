@@ -1,92 +1,211 @@
 export default {
-  repoId: "master_mexican_flourtortillas_001",
-  parentRepoId: null,
-  slug: "flour-tortillas",
-  author: "ForkRecipe Kitchen",
-  title: "Mexican Flour Tortillas",
-  description: "Wheat tortillas made tender with lard, rolled tissue-thin and cooked on a dry comal until blistered, pliable, and subtly sweet — the perfect pliable vessel that never competes with its filling.",
-  cuisine: "Mexican",
-  culture: "Northern Mexican (Sonoran)",
-  category: "breads",
-  tags: ["tortillas", "mexican", "flatbread", "lard", "comal", "wheat", "northern-mexican"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hour 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",              ratioValue: 100, defaultUnit: "parts", substitutions: ["bread flour (chewier result)"] },
-    { ingId: "ing_02", role: "Fat",        name: "Lard (manteca)",                 ratioValue: 12,  defaultUnit: "parts", substitutions: ["vegetable shortening", "butter (richer flavor)"] },
-    { ingId: "ing_03", role: "Hydration",  name: "Warm water (about 50 C)",        ratioValue: 55,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                  ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Leavener",   name: "Baking powder",                  ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_mexican_flourtortillas_001",
+  "parentRepoId": null,
+  "slug": "flour-tortillas",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tortilles à farine mexicaines",
+  "description": "Les tortillas de blé sont tendres avec du saindoux, des tissus roulés et cuits sur un comal sec jusqu'à ce qu'elles soient vétustes, pliables et subtilement sucrées, le récipient parfait qui ne rivalise jamais avec son remplissage.",
+  "cuisine": "Mexicain",
+  "culture": "Mexique du Nord (Sonoran)",
+  "category": "breads",
+  "tags": [
+    "tortillas",
+    "Mexique",
+    "Pain plat",
+    "Saindoux",
+    "comal",
+    "blé",
+    "Nord-mexican"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hour 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_04", "ing_05"],
-      outputState: "sandy_dough",
-      instructions: "Whisk flour, salt, and baking powder together in a large bowl. Add lard or shortening in small pieces. Using your fingertips or a pastry cutter, work the fat into the flour until it resembles coarse, irregular breadcrumbs with pea-sized fat pockets still visible — like a pie crust. Do not over-work.",
-      visualCue: {
-        primaryTarget: "A crumbly, sandy mixture with irregular pea-sized fat pockets distributed throughout. No single large lumps of fat.",
-        spectrum: [
-          { state: "Underdone", description: "Large unincorporated chunks of fat still visible. Mixture is not cohesive.", action: "Work the fat in more thoroughly. Each piece of fat needs to flatten into thin flakes against the flour." },
-          { state: "Perfect",   description: "Sandy, crumbly, cohesive when squeezed. Fat is fully incorporated in small, irregular pockets. Smells faintly of lard.", action: "Add the warm water and mix to a dough." },
-          { state: "Overdone",  description: "Fat has been fully melted into the flour from over-mixing. Mixture looks uniform and paste-like.", action: "Chill the bowl for 10 minutes, then proceed. Slightly over-worked but still usable." },
-        ],
-      },
-      feelCue: "Squeeze a handful of the flour-fat mixture — it should hold together loosely when compressed but crumble apart when you open your hand. That fragile clumping tells you the fat is distributed correctly.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "farine de pain (résultat chewier)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Knead",
-      inputs: ["sandy_dough", "ing_03"],
-      outputState: "rested_dough",
-      instructions: "Pour the warm water over the flour-fat mixture and stir with a fork until a rough dough forms. Turn out and knead for 2–3 minutes until smooth — flour tortilla dough should be worked less than bread dough. The goal is smooth, not elastic. Cover with a damp cloth and rest for 30 minutes.",
-      visualCue: {
-        primaryTarget: "A smooth, supple ball with no rough patches, resting under a damp cloth. Slightly tacky surface.",
-        spectrum: [
-          { state: "Underdone", description: "Rough, shaggy surface. Dough tears when you try to stretch it. Still has visible streaks.", action: "Knead 1–2 more minutes. The fat pockets just need to fully integrate with the water-flour network." },
-          { state: "Perfect",   description: "Smooth and soft. Not elastic — it does not spring back. Holds a pressed fingerprint without filling back.", action: "Rest 30 minutes minimum. This rest is essential for the gluten to relax enough to roll tissue-thin." },
-          { state: "Overdone",  description: "Dough is very elastic and springs back aggressively when pressed.", action: "Rest 45 minutes instead of 30. Over-kneaded tortilla dough needs more time to relax." },
-        ],
-      },
-      feelCue: "The rested dough should feel like a soft, warm earlobe — pliable, slightly tacky, with no elasticity. If you pull a small piece and it springs back, it needs more rest.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Lard (manteca)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Écourtement des légumes",
+        "beurre (arôme plus riche)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Shape",
-      inputs: ["rested_dough"],
-      outputState: "rolled_tortillas",
-      instructions: "Divide the dough into 8–10 equal balls. On a lightly floured surface, roll each ball into a thin, roughly round shape about 20–22 cm in diameter. Roll from the center outward in all directions, rotating frequently. The ideal thickness is 1–2 mm — almost translucent. Rest each rolled tortilla under a cloth while you roll the others.",
-      visualCue: {
-        primaryTarget: "Nearly translucent, thin discs, roughly round with irregular edges, about 20 cm in diameter.",
-        spectrum: [
-          { state: "Underdone", description: "Thick, doughy, less than 20 cm. Springs back as you try to roll it out.", action: "Rest 5 more minutes and try again. The gluten needs more relaxation time before it will accept a thin roll." },
-          { state: "Perfect",   description: "1–2 mm thin, almost translucent. Irregular but roughly round. Holds its rolled shape without pulling back significantly.", action: "Stack between pieces of parchment to prevent sticking and cook within 20 minutes." },
-          { state: "Overdone",  description: "Rolled so thin it has torn in places.", action: "Proceed — small tears are fine. Patch by pressing dough edges back together." },
-        ],
-      },
-      feelCue: "Hold the rolled tortilla up to a light source — you should be able to see your hand shadow through it. That level of translucency is the target thickness.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau chaude (environ 50 °C)",
+      "ratioValue": 55,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Toast",
-      inputs: ["rolled_tortillas"],
-      outputState: "finished_flour_tortillas",
-      instructions: "Heat a dry comal, cast-iron skillet, or heavy pan over medium-high to high heat until very hot. Cook each tortilla 45–60 seconds per side. The first side should develop golden-brown blisters. Flip when the surface loses its translucent, raw look and the first blisters appear. Stack finished tortillas in a clean cloth to trap steam and keep pliable.",
-      visualCue: {
-        primaryTarget: "Ivory-gold tortillas with dark brown blisters scattered across both sides. Slightly puffed in spots during cooking. Flexible when stacked in the cloth.",
-        spectrum: [
-          { state: "Underdone", description: "Still pale, doughy, and slightly translucent. Gummy texture.", action: "Cook longer. The raw dough flavor must cook out. Wait for the blisters before flipping." },
-          { state: "Perfect",   description: "Golden with dark brown blisters. Some puffing during cooking. Smells of toasted wheat and lard. Flexible when stacked.", action: "Stack immediately in a cloth. They soften and steam each other in the stack." },
-          { state: "Overdone",  description: "Very dark, beginning to harden and crisp. Edges are brittl.", action: "Wrap in a very damp cloth for 2 minutes — steam will partially re-soften them." },
-        ],
-      },
-      feelCue: "Pull a tortilla from the cloth stack after 2 minutes — it should be pliable enough to fold in half without cracking, warm on both sides from the steam. The cloth-stacking is what transforms a cooked flatbread into the yielding, tender wrap that defines a great taco.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "sandy_dough",
+      "instructions": "Dans un grand bol, fouetter la farine, le sel et la poudre à pâte. Ajouter le saindoux ou le raccourcissement en petits morceaux. À l'aide de votre bout des doigts ou d'une coupe-pâtisserie, tricotez la graisse dans la farine jusqu'à ce qu'elle ressemble à une chapelure grossière et irrégulière avec des poches de graisse de taille de pois encore visibles, comme une croûte à tarte. Ne pas trop travailler.",
+      "visualCue": {
+        "primaryTarget": "Un mélange friable et sablonneux avec des poches de graisse irrégulières aux pois. Pas de gros morceaux de graisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De gros morceaux non incorporés de graisse encore visibles. Le mélange n'est pas cohérent.",
+            "action": "Travaillez la graisse plus soigneusement. Chaque morceau de graisse doit s'aplatir en minces flocons contre la farine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sandy, miettes, cohésives quand pressées. Le gras est entièrement incorporé dans de petites poches irrégulières. Ça sent le saindoux.",
+            "action": "Ajouter l'eau chaude et mélanger à une pâte."
+          },
+          {
+            "state": "Overdone",
+            "description": "La graisse a été complètement fondue dans la farine par surmélange. Le mélange semble uniforme et collé.",
+            "action": "Refroidir le bol pendant 10 minutes, puis continuer. Un peu surmené mais toujours utilisable."
+          }
+        ]
+      },
+      "feelCue": "Pressez une poignée du mélange de farine-graisse — il devrait se tenir lâchement lorsqu'il est comprimé mais s'effondrer lorsque vous ouvrez la main. Ce fragile accrochage vous dit que la graisse est distribuée correctement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Agenouillement",
+      "inputs": [
+        "sandy_dough",
+        "ing_03"
+      ],
+      "outputState": "rested_dough",
+      "instructions": "Verser l'eau tiède sur le mélange farine-graisse et remuer avec une fourchette jusqu'à ce qu'une pâte rugueuse se forme. Éteindre et pétrir pendant 2 à 3 minutes jusqu'à ce que la pâte de tortilla de farine soit lisse. L'objectif est lisse, pas élastique. Couvrir d'un chiffon humide et reposer pendant 30 minutes.",
+      "visualCue": {
+        "primaryTarget": "Une boule lisse et souple sans taches rugueuses, reposant sous un chiffon humide. Une surface légèrement trapue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est dure et chaotique. Les larmes de la toux quand vous essayez de l'étirer. Il a encore des stries visibles.",
+            "action": "Agenouillez encore 1-2 minutes. Les poches de graisse doivent simplement s'intégrer pleinement au réseau de la farine d'eau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Douce et douce. Pas élastique — il ne ressort pas. Prend une empreinte digitale pressée sans la remplir.",
+            "action": "Reposez au minimum 30 minutes. Ce repos est essentiel pour que le gluten se détende suffisamment pour rouler tissu-fin."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est très élastique et ressort agressivement lorsqu'elle est pressée.",
+            "action": "Reposez 45 minutes au lieu de 30. Il faut plus de temps pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "La pâte reposée doit se sentir comme un lobe d'oreille doux et chaud, souple, légèrement collant, sans élasticité. Si vous tirez un petit morceau et qu'il ressort, il faut plus de repos."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "rested_dough"
+      ],
+      "outputState": "rolled_tortillas",
+      "instructions": "Divisez la pâte en 8-10 boules égales. Sur une surface légèrement farinée, rouler chaque boule en une forme mince et arrondie d'environ 20 à 22 cm de diamètre. Rouler du centre vers l'extérieur dans toutes les directions, en tournant fréquemment. L'épaisseur idéale est de 1–2 mm — presque translucide. Reposez chaque tortilla roulée sous un chiffon pendant que vous roulez les autres.",
+      "visualCue": {
+        "primaryTarget": "Disques minces, presque translucides, ronds avec bords irréguliers, d'environ 20 cm de diamètre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Épais, pâteux, moins de 20 cm. Ça revient quand tu essaies de le rouler.",
+            "action": "Reposez 5 minutes et essayez encore. Le gluten a besoin de plus de temps de relaxation avant d'accepter un rouleau mince."
+          },
+          {
+            "state": "Perfect",
+            "description": "1–2 mm de minceur, presque translucide. Irrégulier mais à peu près rond. Retient sa forme roulée sans tirer de manière significative.",
+            "action": "Placer entre les morceaux de parchemin pour éviter de coller et cuire dans les 20 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Rouleau si mince qu'il a déchiré par endroits.",
+            "action": "Continuez — les petites larmes sont bonnes. Patch en pressant les bords de la pâte à nouveau ensemble."
+          }
+        ]
+      },
+      "feelCue": "Tenez la tortilla roulée jusqu'à une source lumineuse — vous devriez être en mesure de voir votre ombre de main à travers elle. Ce niveau de translucidité est l'épaisseur de la cible."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Toast",
+      "inputs": [
+        "rolled_tortillas"
+      ],
+      "outputState": "finished_flour_tortillas",
+      "instructions": "Chauffer une poêle en comal sec, en fonte ou une poêle lourde à feu moyen-élevé à élevé jusqu'à très chaud. Faire cuire chaque tortilla de 45 à 60 secondes de chaque côté. Le premier côté doit développer des cloques dorées. Flip quand la surface perd son aspect translucide, brut et les premières cloques apparaissent. Piquer les tortillas finies dans un chiffon propre pour piéger la vapeur et garder pliable.",
+      "visualCue": {
+        "primaryTarget": "Tortilles or ivoire avec des cloques brun foncé éparpillées sur les deux côtés. Légèrement gonflé dans les taches pendant la cuisson. Flexible lorsqu'il est empilé dans le tissu.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours pâle, pâteux et légèrement translucide. texture gommy.",
+            "action": "Cuire plus longtemps. La saveur de pâte crue doit cuire. Attendez les ampoules avant de retourner."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or avec des blisters brun foncé. Quelques bouffées pendant la cuisson. Des odeurs de blé grillé et de saindoux. Flexible quand empilé.",
+            "action": "Empilez immédiatement dans un chiffon. Ils s'adoucissent et s'entretuent dans la pile."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très sombre, commençant à durcir et croustillant. Les bords sont brittl.",
+            "action": "Enveloppez-les dans un chiffon très humide pendant 2 minutes — la vapeur les résoudra partiellement."
+          }
+        ]
+      },
+      "feelCue": "Tirez une tortilla de la pile de tissu après 2 minutes — il devrait être suffisamment souple pour plier en deux sans craquer, chaud des deux côtés de la vapeur. Le chiffonnage est ce qui transforme un pain plat cuit en l'enveloppe tendre et productive qui définit un grand taco."
+    }
+  ]
 };

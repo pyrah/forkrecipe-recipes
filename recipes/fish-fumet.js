@@ -1,127 +1,325 @@
 export default {
-  repoId: "master_french_fish_fumet_001",
-  parentRepoId: null,
-  slug: "fish-fumet",
-  author: "ForkRecipe Kitchen",
-  title: "Fish Fumet",
-  description: "The fast, pale, perfumed cousin of the long brown stocks — lean white-fish bones sweated in butter with leek, fennel and a splash of dry white wine, then barely simmered for half an hour and never, ever boiled, so it stays clear, delicate and ready to become a sauce, a velouté, or a poaching bath.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "stocks",
-  tags: ["stock", "french", "fish", "white-wine", "fumet", "base"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 1, salty: 1, sour: 2, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",    name: "White fish bones & heads (sole, turbot, snapper — gills removed, rinsed cold)", ratioValue: 100, defaultUnit: "parts", substitutions: ["halibut frames", "monkfish bones"] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter",                                  ratioValue: 5,   defaultUnit: "parts", substitutions: ["light olive oil"] },
-    { ingId: "ing_03", role: "Allium",     name: "Leek, white & pale green only (thinly sliced, well washed)", ratioValue: 18, defaultUnit: "parts", substitutions: ["onion (sliced)"] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Fennel bulb (thinly sliced)",                      ratioValue: 12,  defaultUnit: "parts", substitutions: ["celery"] },
-    { ingId: "ing_05", role: "Aromatic",   name: "Button mushrooms (sliced, optional — for body)",   ratioValue: 8,   defaultUnit: "parts", substitutions: ["mushroom trimmings"] },
-    { ingId: "ing_06", role: "Acid",       name: "Dry white wine (Muscadet, Sauvignon Blanc)",       ratioValue: 25,  defaultUnit: "parts", substitutions: ["dry vermouth"] },
-    { ingId: "ing_07", role: "Liquid",     name: "Cold water (to just cover)",                       ratioValue: 130, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Herb",       name: "Bouquet garni (parsley stalks, thyme, bay)",       ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",      name: "White peppercorns (lightly cracked)",              ratioValue: 1,   defaultUnit: "parts", substitutions: ["black peppercorns"] },
-    { ingId: "ing_10", role: "Citrus",     name: "Lemon (a few thin slices, optional)",              ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_fish_fumet_001",
+  "parentRepoId": null,
+  "slug": "fish-fumet",
+  "author": "ForkRecipe Kitchen",
+  "title": "Fumet de poisson",
+  "description": "Le cousin rapide, pâle et parfumé des longs stocks bruns — les os maigres de poisson blanc transpiraient dans le beurre avec le poireau, le fenouil et un jet de vin blanc sec, puis à peine mijoté pendant une demi-heure et jamais, jamais bouilli, de sorte qu'il reste clair, délicat et prêt à devenir une sauce, un velours, ou un bain de braconnage.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "stocks",
+  "tags": [
+    "stock",
+    "français",
+    "poissons",
+    "Vin blanc",
+    "Fumet",
+    "base"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Soak",
-      inputs: ["ing_01"],
-      outputState: "cleaned_bones",
-      instructions: "Cut the fish frames into pieces that fit your pot. Pull out any dark gills and rinse the bones under cold running water, then soak them 10-15 minutes in a bowl of cold water to leach out blood, which would otherwise cloud and grey the stock. Drain well. The bones must be lean and white — no oily fish like salmon or mackerel, which turn a fumet rank.",
-      visualCue: {
-        primaryTarget: "Bones are pale ivory and the soaking water runs from pink to nearly clear, with no clinging blood, gills or guts.",
-        spectrum: [
-          { state: "Underdone", description: "Soaking water is cloudy pink-red and dark clots still cling along the spine and gill plates.", action: "Rinse again under cold water, pick out the remaining gills and blood line, and soak a few minutes more." },
-          { state: "Perfect",   description: "Clean white frames, clear water, a fresh sea smell with no muddy or bitter edge.", action: "Drain and sweat the aromatics for the bones." },
-          { state: "Overdone",  description: "Bones smell flat and washed-out, or the heads have warmed and started to smell off.", action: "Keep everything cold; if anything smells sour or ammoniated, discard it — a fumet is only as fresh as its bones." },
-        ],
-      },
-      feelCue: "The bones should feel firm and cold and smell cleanly of the sea — like a fresh tide, never of ammonia. If your nose wrinkles, the fish is too old for stock.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Ossements et têtes de poissons blancs (semelle, turbot, snapper — branchies enlevées, rincées à froid)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Cadres en flétan",
+        "os de lottes"
+      ]
     },
     {
-      nodeId: "step_2", action: "Sweat",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "sweated_vegetables",
-      instructions: "Melt the butter in a wide pot over low-medium heat. Add the leek, fennel and mushrooms and sweat gently, stirring, for 5-6 minutes until soft and translucent but with no colour at all. Browning here would tint and coarsen the stock — you want the sweetness of the vegetables, not caramel.",
-      visualCue: {
-        primaryTarget: "Vegetables are limp, glistening and translucent, the leek slumped and silky, with not a single spot of golden colour.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are still firm, opaque and squeaky, the leek bright green-white and crunchy.", action: "Lower the heat slightly, cover, and give them a few more minutes to soften and turn translucent." },
-          { state: "Perfect",   description: "Soft, glassy, sweet-smelling vegetables with no browning, sitting in clear melted butter.", action: "Add the cleaned bones and let them stiffen in the butter." },
-          { state: "Overdone",  description: "Edges of the leek and fennel are turning golden and the butter is starting to brown and smell nutty.", action: "Pull off the heat at once and add the bones and wine to cool the pot before any more colour develops." },
-        ],
-      },
-      feelCue: "Keep the heat low enough that you hear a soft, lazy sizzle and the butter never foams brown. Stir and watch — the moment a single edge browns, you have gone too hot.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile d'olive légère"
+      ]
     },
     {
-      nodeId: "step_3", action: "Stiffen",
-      inputs: ["sweated_vegetables", "cleaned_bones"],
-      outputState: "stiffened_bones",
-      instructions: "Add the drained bones to the pot, raise the heat to medium and stir for 2-3 minutes, just until the flesh clinging to the frames turns from translucent to opaque white and stiffens. Again, take no colour. This brief stiffening sets the proteins so they release flavour cleanly rather than clouding the broth.",
-      visualCue: {
-        primaryTarget: "The scraps of flesh on the bones have turned chalky white and firm, and the pot smells sweetly of butter, leek and fresh fish.",
-        spectrum: [
-          { state: "Underdone", description: "Flesh on the bones is still glassy and translucent, the bones limp in the pot.", action: "Keep stirring over medium heat another minute until the flesh whitens and firms." },
-          { state: "Perfect",   description: "Opaque, stiffened white flesh and bones, no browning, a clean sweet aroma rising from the pot.", action: "Deglaze with the wine and reduce briefly." },
-          { state: "Overdone",  description: "Bits of flesh or vegetable are catching gold on the pot floor and the smell is turning toasty.", action: "Add the wine immediately to deglaze and stop the colouring before it taints the stock." },
-        ],
-      },
-      feelCue: "Nudge a bone with the spoon — the clinging flesh should feel set and firm, not slippery. The aroma should still read as pale and sweet, never roasted.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Légume, blanc et vert pâle seulement (finement tranché, bien lavé)",
+      "ratioValue": 18,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon (coupé)"
+      ]
     },
     {
-      nodeId: "step_4", action: "Deglaze & Reduce",
-      inputs: ["stiffened_bones", "ing_06"],
-      outputState: "wine_base",
-      instructions: "Pour in the white wine and scrape the pot floor. Bring to a brisk simmer and let it bubble 3-4 minutes to cook off the raw alcohol and concentrate the wine — this builds the bright backbone of the fumet. Reduce by about half before adding water.",
-      visualCue: {
-        primaryTarget: "The wine has reduced to a small, fragrant pool around the bones, smelling of warm fruit and acidity with no raw spirit sting.",
-        spectrum: [
-          { state: "Underdone", description: "Lots of thin liquid in the pot and a sharp, nose-prickling smell of raw alcohol.", action: "Keep at a brisk simmer until the volume drops by half and the harsh fumes mellow." },
-          { state: "Perfect",   description: "Wine reduced by half, syrupy at the edges, smelling bright and fruity rather than boozy.", action: "Add cold water, the bouquet garni, peppercorns and lemon." },
-          { state: "Overdone",  description: "Pan is nearly dry and the wine is reducing to a sticky, over-acidic glaze that risks catching.", action: "Add the cold water right away to halt the reduction before anything scorches." },
-        ],
-      },
-      feelCue: "Lean in and breathe — when the sharp alcohol vapour softens into a mellow, fruity tang, the wine is ready to be lengthened with water.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Ampoule en fenouil (finement tranchée)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Céleri"
+      ]
     },
     {
-      nodeId: "step_5", action: "Simmer",
-      inputs: ["wine_base", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "infused_fumet",
-      instructions: "Add just enough cold water to barely cover the bones, then tuck in the bouquet garni, cracked white peppercorns and lemon slices. Bring up slowly to a bare simmer — a few lazy bubbles breaking, never a rolling boil — and skim off the grey foam that rises. Hold this whisper of a simmer for exactly 25-30 minutes, no longer; pushed past that, fish bones turn the stock bitter and glue-like.",
-      visualCue: {
-        primaryTarget: "A pale, faintly golden, near-clear broth with only the occasional bubble rising, a clean grey-free surface, smelling of sweet fish, wine and herbs.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is barely warm or has steeped under 15 minutes; it tastes thin and watery, more wine than fish.", action: "Hold the bare simmer a little longer, up to the 25-30 minute mark, to draw out the fish flavour." },
-          { state: "Perfect",   description: "Clear, pale, aromatic stock with rounded fish-and-wine flavour; surface barely trembling, foam skimmed away.", action: "Strain immediately to stop the extraction." },
-          { state: "Overdone",  description: "Stock has boiled hard and gone cloudy and grey, or simmered well past 30 minutes and turned bitter and bone-heavy.", action: "Strain at once; if cloudy, do not boil it again — clarify gently or accept it for opaque soups only." },
-        ],
-      },
-      feelCue: "Watch the surface like a hawk — it should shiver, not churn. A hard boil emulsifies fat and bone into the liquid and clouds it grey, the one mistake a fumet never forgives.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Champignons à bouton (en tranches, facultatifs — pour le corps)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "garnitures de champignons"
+      ]
     },
     {
-      nodeId: "step_6", action: "Strain",
-      inputs: ["infused_fumet"],
-      outputState: "finished_fumet",
-      instructions: "Ladle the fumet — do not tip the pot — through a fine sieve lined with damp muslin into a clean container, leaving the settled sediment behind. Do not press the solids, which would push grit and cloudiness through. Cool quickly over an ice bath and refrigerate; use within two days or freeze. Leave it unsalted so it can reduce freely into sauces later.",
-      visualCue: {
-        primaryTarget: "A clear, pale-gold to ivory liquid, free of bone fragments and grit, smelling delicately of the sea, leek and white wine.",
-        spectrum: [
-          { state: "Underdone", description: "Strained stock is cloudy or carries fine grit and specks because the pot was tipped or the solids pressed.", action: "Re-strain gently through fresh damp muslin, ladling from the top and leaving the sediment behind." },
-          { state: "Perfect",   description: "Bright, clear, lightly perfumed fumet with a clean savoury depth and gentle wine brightness.", action: "Chill fast over ice and store; build it into velouté, bisque, risotto or a poaching liquid." },
-          { state: "Overdone",  description: "Stock left to cool slowly at room temperature has turned dull, sour or cloudy as it sat warm too long.", action: "Cool fish stock rapidly over ice — if it has soured or smells off after slow cooling, discard it." },
-        ],
-      },
-      feelCue: "Tilt the container to the light — a good fumet is almost see-through, with a faint golden cast, and slips like thin silk, not like cloudy, fatty water. It should smell of a calm sea, not of a fish market at the end of the day.",
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Vin blanc sec (Muscadet, Sauvignon Blanc)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vermouth sec"
+      ]
     },
+    {
+      "ingId": "ing_07",
+      "role": "Liquid",
+      "name": "Eau froide (pour couvrir)",
+      "ratioValue": 130,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Bouquet garni (pâtes de persil, thym, baie)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Maïs de poivre blanc (légèrement craqué)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "maïs poivré noir"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Citrus",
+      "name": "Citron (quelques tranches fines, en option)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "cleaned_bones",
+      "instructions": "Coupez les cadres de poisson en morceaux qui correspondent à votre pot. Retirer les branchies sombres et rincer les os sous l'eau froide courante, puis les tremper 10 à 15 minutes dans un bol d'eau froide pour lessiver le sang, ce qui, sinon, troubler et griser le stock. Drainez bien. Les os doivent être maigres et blancs — aucun poisson gras comme le saumon ou le maquereau, qui devient un rang flou.",
+      "visualCue": {
+        "primaryTarget": "Les os sont de l'ivoire pâle et l'eau trempe du rose au presque clair, sans sang collant, branchies ou intestins.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau qui sème est nuageuse rouge-rose et les caillots foncés s'accrochent encore le long de la colonne vertébrale et des plaques branchiales.",
+            "action": "Rincez encore sous l'eau froide, choisissez les branchies restantes et la lignée sanguine, et trempez encore quelques minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des cadres blancs propres, de l'eau claire, une odeur de mer fraîche sans bord boueux ou amer.",
+            "action": "Égoutter et transpirer les aromatiques pour les os."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les os sentent plat et lavé, ou les têtes se sont réchauffées et ont commencé à sentir.",
+            "action": "Gardez tout froid; si quelque chose sent l'amer ou l'ammoniaque, jetez - un fumet est seulement aussi frais que ses os."
+          }
+        ]
+      },
+      "feelCue": "Les os doivent se sentir fermes et froids et sentir la mer propre — comme une marée fraîche, jamais d'ammoniac. Si votre nez ride, le poisson est trop vieux pour le stock."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sueur",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "sweated_vegetables",
+      "instructions": "Faire fondre le beurre dans une grande casserole à feu doux et moyen. Ajouter le poireau, le fenouil et les champignons et transpirer doucement, en remuant pendant 5-6 minutes jusqu'à ce qu'ils soient doux et translucides mais sans aucune couleur. Le brunissement ici ferait teinter et grossir le stock — vous voulez la douceur des légumes, pas du caramel.",
+      "visualCue": {
+        "primaryTarget": "Les légumes sont limpides, scintillants et translucides, le poireau est sombre et soyeux, avec pas une seule tache de couleur dorée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont encore fermes, opaques et criants, le poireau est blanc-vert vif et croquant.",
+            "action": "Abaissez légèrement le feu, couvrez-le et donnez-leur quelques minutes de plus pour adoucir et tourner translucide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légumes doux, vitreux et sucrés, sans brunissement, dans un beurre fondu clair.",
+            "action": "Ajouter les os nettoyés et laisser raidir le beurre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords du poireau et du fenouil deviennent dorés et le beurre commence à brunir et à sentir la noix.",
+            "action": "Retirez immédiatement le feu et ajoutez les os et le vin pour refroidir le pot avant que la couleur ne se développe."
+          }
+        ]
+      },
+      "feelCue": "Gardez la chaleur suffisamment basse pour que vous entendiez un doux et paresseux sizzle et le beurre ne mousse jamais brun. Remuer et regarder — au moment où un seul bord bruns, vous êtes allé trop chaud."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Stiffen",
+      "inputs": [
+        "sweated_vegetables",
+        "cleaned_bones"
+      ],
+      "outputState": "stiffened_bones",
+      "instructions": "Ajouter les os drainés dans le pot, lever le feu à moyen et remuer pendant 2-3 minutes, juste jusqu'à ce que la chair s'accrochant aux cadres tourne de translucide à opaque blanc et raidisse. Encore une fois, ne prenez pas de couleur. Ce court raidissement fixe les protéines afin qu'elles libèrent la saveur propre plutôt que d'assombrir le bouillon.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux de chair sur les os sont devenus blancs crayeux et fermes, et le pot sent le beurre, les poireaux et les poissons frais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La chair sur les os est encore vitreuse et translucide, les os boitent dans le pot.",
+            "action": "Continuer à remuer à feu moyen encore une minute jusqu'à ce que la chair blanchisse et ferme."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair blanche et les os opaques et raidis, sans brunissement, un arôme doux propre qui s'élève du pot.",
+            "action": "Déglacer avec le vin et réduire brièvement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des morceaux de chair ou de légumes attrapent de l'or sur le plancher de pot et l'odeur devient grillée.",
+            "action": "Ajouter le vin immédiatement pour déglacer et arrêter la coloration avant qu'il ne touche le stock."
+          }
+        ]
+      },
+      "feelCue": "Mangez un os avec la cuillère — la chair qui s'accroche doit se sentir ferme et ferme, et non glissante. L'arôme doit toujours être pâle et doux, jamais rôti."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Déglacer et réduire",
+      "inputs": [
+        "stiffened_bones",
+        "ing_06"
+      ],
+      "outputState": "wine_base",
+      "instructions": "Verser le vin blanc et racler le plancher de pot. Portez à frémir et laissez-le buller 3-4 minutes pour faire cuire l'alcool cru et concentrer le vin — ce qui construit l'épine dorsale brillante de la fumée. Réduire de moitié environ avant d'ajouter de l'eau.",
+      "visualCue": {
+        "primaryTarget": "Le vin a réduit à une petite piscine parfumée autour des os, sentant des fruits chauds et l'acidité sans piqûre d'alcool cru.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Beaucoup de liquide fin dans la casserole et une odeur d'alcool cru et piquant.",
+            "action": "Garder à mijoter rapidement jusqu'à ce que le volume baisse de moitié et que les fortes fumées se mêlent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vin réduit de moitié, sirupeux aux bords, sentant lumineux et fruité plutôt que boueux.",
+            "action": "Ajouter l'eau froide, le bouquet garni, les grains de poivre et le citron."
+          },
+          {
+            "state": "Overdone",
+            "description": "La poêle est presque sèche et le vin se réduit à une glaçure collante et suracide qui risque d'attraper.",
+            "action": "Ajouter l'eau froide tout de suite pour arrêter la réduction avant que rien ne brûle."
+          }
+        ]
+      },
+      "feelCue": "Penchez-vous et respirez — lorsque la vapeur d'alcool s'adoucit dans un tang doux et fruité, le vin est prêt à être allongé avec de l'eau."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "wine_base",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "infused_fumet",
+      "instructions": "Ajouter juste assez d'eau froide pour couvrir à peine les os, puis mettre dans le bouquet garni, les grains de poivre blanc cassé et les tranches de citron. Portez - vous lentement à mijoter à nu — quelques bulles paresseuses qui se brisent, qui ne font jamais bouillir — et éjaculez la mousse grise qui monte. Tenir ce murmure d'un mijot pendant exactement 25-30 minutes, pas plus; poussé au-delà cela, les os de poisson deviennent le stock amer et colle-like.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon pâle, légèrement doré, presque clair, avec seulement la bulle occasionnelle qui s'élève, une surface sans gris propre, sentant le poisson doux, le vin et les herbes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est à peine chaud ou a trempé moins de 15 minutes; il a un goût mince et aqueux, plus de vin que de poisson.",
+            "action": "Maintenez la mijoter un peu plus longtemps, jusqu'à la marque de 25-30 minutes, pour dessiner la saveur du poisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Stock aromatique clair, pâle et arrondi; surface à peine tremblante, mousse écrémée.",
+            "action": "Souchez immédiatement pour arrêter l'extraction."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock a bouilli dur et est devenu gris et nuageux, ou bien mijoté au bout de 30 minutes et est devenu amer et lourd d'os.",
+            "action": "La souche à la fois; si elle est trouble, ne la faites pas bouillir à nouveau — clarifiez-la doucement ou ne l'acceptez que pour des soupes opaques."
+          }
+        ]
+      },
+      "feelCue": "Surveillez la surface comme un faucon — elle doit trembler, et non pas hurler. Une ébullition dure émulsionne la graisse et l'os dans le liquide et la rend grise, la seule erreur qu'une fumée ne pardonne jamais."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Poignée",
+      "inputs": [
+        "infused_fumet"
+      ],
+      "outputState": "finished_fumet",
+      "instructions": "Déposer la fumée — ne pas mettre le pot — à travers un tamis fin bordé de mousseline humide dans un récipient propre, laissant les sédiments installés derrière. Ne pressez pas les solides, ce qui ferait passer le grain et le nuage. Laisser refroidir rapidement sur un bain de glace et réfrigérer; utiliser dans les deux jours ou congeler. Laissez-le non salé afin qu'il puisse réduire librement en sauces plus tard.",
+      "visualCue": {
+        "primaryTarget": "Un liquide clair, doré à ivoire, sans fragments d'os et de grain, sentant délicatement la mer, le poireau et le vin blanc.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock formé est nuageux ou porte du grain fin et des taches parce que le pot a été bouché ou les solides pressés.",
+            "action": "Reformer délicatement à travers la mousseline fraîche humide, larguer du haut et laisser les sédiments derrière."
+          },
+          {
+            "state": "Perfect",
+            "description": "Fumet lumineux, clair, légèrement parfumé avec une profondeur savoureuse propre et une légère luminosité de vin.",
+            "action": "Refroidissez-vous au-dessus de la glace et entreposez-la en velours, en bisque, en risotto ou en liquide de braconnage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock laissé pour se refroidir lentement à la température ambiante est devenu terne, aigre ou nuageux car il était trop longtemps chaud.",
+            "action": "Refroidir rapidement le stock de poisson au-dessus de la glace — s'il s'est assommé ou s'il s'éteint après un refroidissement lent, le jeter."
+          }
+        ]
+      },
+      "feelCue": "Inclinez le récipient à la lumière — une bonne fumée est presque à travers, avec un moulage d'or faible, et glisse comme de la soie mince, pas comme de l'eau grasse nuageuse. Il devrait sentir une mer calme, pas un marché de poisson en fin de journée."
+    }
+  ]
 };

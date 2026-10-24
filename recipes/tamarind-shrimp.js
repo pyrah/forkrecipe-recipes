@@ -1,122 +1,343 @@
 export default {
-  repoId: "master_indian_tamarind_shrimp_001",
-  parentRepoId: null,
-  slug: "tamarind-shrimp",
-  author: "ForkRecipe Kitchen",
-  title: "Kerala Tamarind Prawn Curry",
-  description: "Kerala-style prawn curry where shrimp simmer in a tangy, deeply spiced tamarind-coconut gravy with curry leaves, mustard seeds, turmeric, and dried red chiles — the sour tamarind balanced by sweet coconut and pungent fenugreek.",
-  cuisine: "Indian",
-  culture: "South Indian Kerala",
-  category: "seafood",
-  tags: ["gluten-free", "indian"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "35 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 2, sour: 3, bitter: 0, umami: 2, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Raw prawns, peeled and deveined",                    ratioValue: 500, defaultUnit: "g",  substitutions: ["shell-on shrimp (peel after cooking)", "langoustine"] },
-    { ingId: "ing_02", role: "Acid",      name: "Tamarind paste",                                     ratioValue: 40,  defaultUnit: "g",  substitutions: ["kokum (3-4 pieces)", "half the quantity of tamarind concentrate"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Full-fat coconut milk",                              ratioValue: 200, defaultUnit: "ml", substitutions: ["coconut cream, thinned with water"] },
-    { ingId: "ing_04", role: "Allium",    name: "White onion, finely sliced",                         ratioValue: 2,   defaultUnit: "medium", substitutions: ["shallots"] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic, minced",                                     ratioValue: 5,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Fresh ginger, minced",                               ratioValue: 20,  defaultUnit: "g",  substitutions: ["ginger paste"] },
-    { ingId: "ing_07", role: "Heat",      name: "Dried red chiles (Kashmiri or byadagi)",             ratioValue: 4,   defaultUnit: "whole", substitutions: ["1 tsp red chile flakes"] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Fresh curry leaves",                                 ratioValue: 15,  defaultUnit: "leaves", substitutions: ["dried curry leaves (double the quantity)"] },
-    { ingId: "ing_09", role: "Spice",     name: "Black mustard seeds",                                ratioValue: 1,   defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Fenugreek seeds",                                    ratioValue: 0.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Ground turmeric",                                    ratioValue: 0.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_12", role: "Spice",     name: "Ground coriander",                                   ratioValue: 1.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_13", role: "Spice",     name: "Red chile powder (or cayenne)",                      ratioValue: 1,   defaultUnit: "tsp", substitutions: ["paprika for milder heat"] },
-    { ingId: "ing_14", role: "Fat",       name: "Coconut oil",                                        ratioValue: 30,  defaultUnit: "ml", substitutions: ["vegetable oil", "ghee"] },
-    { ingId: "ing_15", role: "Seasoning", name: "Fine sea salt",                                      ratioValue: 6,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_indian_tamarind_shrimp_001",
+  "parentRepoId": null,
+  "slug": "tamarind-shrimp",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kerala Tamarind Crewn Curry",
+  "description": "Le curry aux crevettes de style kérala, où les crevettes mijotent dans une sauce au tamarin-cocon aux feuilles de curry, aux graines de moutarde, au curcuma et aux chiles rouges séchés, le tamarin aigre équilibré par la noix de coco douce et le fenugrec piquant.",
+  "cuisine": "Indiens",
+  "culture": "Kerala des Indes du Sud",
+  "category": "seafood",
+  "tags": [
+    "Sans gluten",
+    "indienne"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "35 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Bloom",
-      inputs: ["ing_14", "ing_09", "ing_10", "ing_07", "ing_08"],
-      outputState: "tempered_oil",
-      instructions: "Heat the coconut oil in a wide, heavy-bottomed pan over medium-high heat until it shimmers. Add the mustard seeds — they will pop and splutter within seconds, scattering against the lid, so have it ready. As soon as the popping slows, add the fenugreek seeds, dried red chiles, and curry leaves in that order. The curry leaves will erupt violently in the hot oil, releasing their aromatic oils in a crackling burst. Stir once and allow 20–30 seconds for the fenugreek to toast to a pale gold.",
-      visualCue: {
-        primaryTarget: "A fragrant, crackling mass of spices. Mustard seeds have popped open and grayed. Curry leaves are translucent and crisp. Dried chiles are darkened and glossy.",
-        spectrum: [
-          { state: "Underdone", description: "Mustard seeds have not yet popped. Fenugreek is pale and raw-smelling. The oil lacks the aromatic depth that this step creates.", action: "Keep heat high. The seeds must pop before adding the remaining spices." },
-          { state: "Perfect",   description: "Mustard seeds are popping and the oil is fragrant with a warm, slightly bitter, deeply aromatic smell. Curry leaves are dark and crisp. Fenugreek is golden.", action: "Add the sliced onions immediately." },
-          { state: "Overdone",  description: "Fenugreek seeds are dark brown. The oil smells intensely bitter. The kitchen is filled with a harsh, acrid smoke.", action: "Discard and start again. Over-toasted fenugreek ruins a dish with bitterness no amount of coconut milk can fix." },
-        ],
-      },
-      feelCue: "Stand back slightly when the curry leaves hit the oil — they will spit hot oil aggressively. This violent reaction is a sign you have the heat right.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Crevettes crues, pelées et dévorées",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "crevettes décortiquées (peau après cuisson)",
+        "langoustine"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["tempered_oil", "ing_04", "ing_05", "ing_06"],
-      outputState: "golden_masala_base",
-      instructions: "Add the finely sliced onions to the spiced oil and stir to coat. Cook over medium heat, stirring regularly, for 10–12 minutes until the onions have melted down from their raw volume by more than half and turned a deep, even golden-brown — not blond, not mahogany. Add the garlic and ginger and fry for 2 minutes more, stirring constantly, until the raw smell of garlic cooks out and the mixture becomes sticky and fragrant.",
-      visualCue: {
-        primaryTarget: "Onions are a deep, even golden-brown and have collapsed to a quarter of their original volume. The mixture is cohesive and sticky, not watery.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are still pale, translucent, and soft but without color. The base will taste raw and sweet rather than savory and deep.", action: "Continue cooking — golden-brown onions are the foundation of the curry's sweetness and body. Do not rush." },
-          { state: "Perfect",   description: "Onions are a rich, uniform caramel-gold throughout. The mixture has condensed into a sticky, fragrant paste that clings to the pan. Garlic and ginger have blended in completely.", action: "Add the ground spices." },
-          { state: "Overdone",  description: "Onions are dark brown and beginning to smell bitter. They are sticking aggressively to the pan and beginning to burn.", action: "Add a splash of water and scrape up the fond. Reduce heat and continue — the fond has flavor, the burnt bits do not." },
-        ],
-      },
-      feelCue: "Press a spoonful of the onion mixture between your fingers once it has cooled slightly — it should feel almost paste-like, smooth and completely without the granular texture of raw onion.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Pâte de tamarin",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "kokum (3-4 pièces)",
+        "la moitié de la quantité de concentré de tamarin"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Toast",
-      inputs: ["golden_masala_base", "ing_11", "ing_12", "ing_13"],
-      outputState: "spiced_masala",
-      instructions: "Add the ground turmeric, coriander, and red chile powder to the golden onion base and stir vigorously to combine. Cook the spice mixture in the oil and onion paste for 90 seconds to 2 minutes, stirring constantly. This step — called bhunao in Hindi — fries the ground spices in fat, toasting them and driving off their raw notes. The mixture will look dry and clumpy at first, then loosen slightly as the spice oils release. Add a tablespoon of water if the spices begin to scorch.",
-      visualCue: {
-        primaryTarget: "The masala has turned a vivid rust-orange and smells deeply aromatic — warm, earthy coriander over a turmeric backbone with chile heat rising.",
-        spectrum: [
-          { state: "Underdone", description: "Spices look dusty and pale, with a raw, powdery smell. They have not bloomed in the fat.", action: "Continue cooking and stirring for another 60 seconds. A splash of water helps the spices fry rather than just sit." },
-          { state: "Perfect",   description: "Spices are a deep, vivid rust-orange. The masala smells roasted and complex — earthy, warm, slightly pungent. It clings to the pan and pulls away cleanly.", action: "Add the tamarind paste and coconut milk." },
-          { state: "Overdone",  description: "Spices are beginning to turn dark brown and smell scorched. The turmeric in particular will smell sharp and unpleasant when burnt.", action: "Add a splash of water or coconut milk immediately and lower the heat. Scrape any dark bits from the pan base." },
-        ],
-      },
-      feelCue: "The masala should smell like the inside of a South Indian restaurant kitchen — warm, pungent, layered — not like raw spice powder poured onto a plate.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Lait de coco plein gras",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "crème de coco, éclaircie avec de l'eau"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["spiced_masala", "ing_02", "ing_03", "ing_15"],
-      outputState: "tamarind_gravy",
-      instructions: "Add the tamarind paste and stir it into the masala — it will hiss and sizzle. Pour in the coconut milk and salt, then stir thoroughly to combine everything into a smooth, uniform gravy. Bring to a gentle simmer and cook uncovered for 5–6 minutes, stirring occasionally, until the gravy has thickened slightly and the raw sour edge of the tamarind has mellowed into the coconut. Taste: the gravy should be sour, warm with spice, lightly sweet from the coconut, and well-salted.",
-      visualCue: {
-        primaryTarget: "A smooth, terracotta-orange gravy that coats the back of a spoon. It should hold a line when you draw your finger across a spoon dipped in it.",
-        spectrum: [
-          { state: "Underdone", description: "Gravy is thin and watery. The tamarind tastes sharp and harsh — it has not yet integrated with the coconut and spices.", action: "Simmer 3 more minutes to allow the flavors to merge and the gravy to tighten slightly." },
-          { state: "Perfect",   description: "Gravy is a smooth, unified terracotta-orange. The sourness is round and integrated, balanced by the coconut sweetness. Spice warmth builds at the back of the throat.", action: "Add the prawns." },
-          { state: "Overdone",  description: "Gravy has reduced too far and is very thick and oily, with the coconut fat beginning to separate at the edges.", action: "Add a small splash of water or coconut milk to loosen it. Stir vigorously to re-emulsify." },
-        ],
-      },
-      feelCue: "Run your finger across the back of a spoon coated with gravy — it should leave a clean, stable line that holds for several seconds before the liquid creeps back in.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc, tranché finement",
+      "ratioValue": 2,
+      "defaultUnit": "medium",
+      "substitutions": [
+        "Échalotes"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Poach",
-      inputs: ["tamarind_gravy", "ing_01", "ing_08"],
-      outputState: "finished_tamarind_shrimp",
-      instructions: "Add the peeled prawns to the simmering gravy in a single layer, pressing them down to submerge. Scatter a few fresh curry leaves over the top. Cook for 4–5 minutes over medium heat, turning the prawns once at the halfway mark, until they are fully pink and just cooked through. Remove from heat immediately — the residual heat of the gravy will continue cooking them if left on the stove. Serve with Kerala red rice, appam, or roti.",
-      visualCue: {
-        primaryTarget: "Prawns are uniformly coral-pink, curled gently, and coated in the russet-orange gravy.",
-        spectrum: [
-          { state: "Underdone", description: "Prawns are still translucent grey in patches. Flesh is soft and jelly-like at the thickest point.", action: "Cook 1–2 more minutes over medium heat." },
-          { state: "Perfect",   description: "Prawns are fully pink, opaque, and curled into a relaxed C. They give slightly when pressed and are coated in an even layer of gravy. Fresh curry leaves glisten on the surface.", action: "Remove from heat and serve with rice or bread." },
-          { state: "Overdone",  description: "Prawns are tightly curled into an O and feel hard when pressed. The flesh is dry and beginning to separate.", action: "Serve immediately. The gravy will help mask some of the texture issue — generous sauce on rice helps." },
-        ],
-      },
-      feelCue: "Press a prawn gently in the gravy with the back of your spoon — it should dimple with light pressure and spring back, not remain compressed or resist the spoon entirely.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 5,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Gingembre frais, haché",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâte de gingembre"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Heat",
+      "name": "Chiles rouges séchés (Kashmiri ou byadagi)",
+      "ratioValue": 4,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "1 c. à thé de piments rouges"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Feuilles fraîches de curry",
+      "ratioValue": 15,
+      "defaultUnit": "leaves",
+      "substitutions": [
+        "feuilles de curry séchées (double quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Graines de moutarde noire",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Graines de fénugreek",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Spice",
+      "name": "Poudre de chile rouge (ou cayenne)",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "paprika pour une chaleur plus légère"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Fat",
+      "name": "Huile de coco",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile végétale",
+        "ghee"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bloom",
+      "inputs": [
+        "ing_14",
+        "ing_09",
+        "ing_10",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "tempered_oil",
+      "instructions": "Chauffer l'huile de coco dans une poêle large à fond lourd à feu moyen-élevé jusqu'à ce qu'elle mijote. Ajoutez les graines de moutarde — elles s'éparpilleront en quelques secondes et se disperseront contre le couvercle, alors préparez - les. Aussitôt que le surgissement ralentit, ajouter les graines de fénugreek, les chiles rouges séchés et les feuilles de curry dans cet ordre. Les feuilles de curry éclateront violemment dans l'huile chaude, libérant leurs huiles aromatiques dans un éclat de craquage. Incorporer une fois et laisser 20 à 30 secondes pour que le fenugrec porte un toast en or pâle.",
+      "visualCue": {
+        "primaryTarget": "Une masse parfumée et crépitante d'épices. Les graines de moutarde sont ouvertes et grisées. Les feuilles de curry sont translucides et croquantes. Les chiles séchés sont foncés et brillants.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines de moutarde n'ont pas encore sauté. Le fenugreek est pâle et frais. L'huile manque de la profondeur aromatique que cette étape crée.",
+            "action": "Gardez la chaleur élevée. Les graines doivent sauter avant d'ajouter les épices restantes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les graines de moutarde jaillissent et l'huile est parfumée avec une odeur chaude, légèrement amère, profondément aromatique. Les feuilles de curry sont foncées et croquantes. Fenugreek est doré.",
+            "action": "Ajouter immédiatement les oignons tranchés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les graines de Fenugreek sont brun foncé. L'huile sent intensément amer. La cuisine est remplie d'une forte fumée acride.",
+            "action": "Jeter et recommencer. Un fenugrec surchargé ruine un plat avec de l'amertume aucune quantité de lait de coco ne peut fixer."
+          }
+        ]
+      },
+      "feelCue": "Reculez légèrement quand les feuilles de curry ont touché l'huile — elles cracheront l'huile chaude agressivement. Cette réaction violente est un signe que vous avez la bonne chaleur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "tempered_oil",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "golden_masala_base",
+      "instructions": "Ajouter les oignons finement tranchés à l'huile épicée et remuer pour enrober. Cuire à feu moyen, en remuant régulièrement, pendant 10 à 12 minutes, jusqu'à ce que les oignons aient fondu de plus de la moitié de leur volume brut et qu'ils aient tourné un brun foncé, même doré — pas blond, pas acajou. Ajouter l'ail et le gingembre et faire frire encore 2 minutes, en remuant constamment, jusqu'à ce que l'odeur brute de l'ail soit cuite et que le mélange devienne collant et parfumé.",
+      "visualCue": {
+        "primaryTarget": "Les oignons sont profonds, même brun doré, et se sont effondrés jusqu'à un quart de leur volume original. Le mélange est cohésif et collant, pas aqueux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont encore pâles, translucides et doux mais sans couleur. La base goûtera cru et doux plutôt que salé et profond.",
+            "action": "Continuer la cuisson — les oignons dorés sont le fondement de la douceur et du corps du curry. Ne vous pressez pas."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont un riche et uniforme or caramel. Le mélange s'est condensé dans une pâte collante et parfumée qui s'accroche à la poêle. L'ail et le gingembre se sont complètement mélangés.",
+            "action": "Ajouter les épices."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oignons sont brun foncé et commencent à sentir l'amertume. Ils s'accrochent agressivement à la poêle et commencent à brûler.",
+            "action": "Ajoutez un jet d'eau et grattez le fond. Réduisez la chaleur et continuez — le fond a de la saveur, les morceaux brûlés ne le font pas."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une cuillère de mélange d'oignon entre vos doigts une fois qu'il a légèrement refroidi — il devrait se sentir presque pâte-like, lisse et complètement sans la texture granulaire de l'oignon brut."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Toast",
+      "inputs": [
+        "golden_masala_base",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "spiced_masala",
+      "instructions": "Ajouter le curcuma moulu, la coriandre et la poudre de piment rouge à la base d'oignon doré et remuer vigoureusement pour combiner. Faire cuire le mélange d'épices dans l'huile et la pâte d'oignon pendant 90 secondes à 2 minutes, en remuant constamment. Cette étape, appelée bhunao in Hindi, fait frire les épices moulues dans la graisse, en les tordant et en leur faisant perdre leurs notes brutes. Le mélange sera d'abord sec et maladroit, puis desserré légèrement à mesure que les huiles d'épices se libèrent. Ajouter une cuillère à soupe d'eau si les épices commencent à brûler.",
+      "visualCue": {
+        "primaryTarget": "Le masala a tourné un orange-rouille vif et sent profondément aromatique — coriandre chaude et terreuse sur une colonne vertébrale de curcuma avec la chaleur de chile qui monte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les épices semblent poussiéreuses et pâles, avec une odeur crue et poudreuse. Ils n'ont pas fleuri dans la graisse.",
+            "action": "Continuer la cuisson et remuer encore 60 secondes. Un jet d'eau aide les épices à frire plutôt que de s'asseoir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les épices sont un orange-rouille profond et vif. Le masala sent torréfié et complexe: terreux, chaud, légèrement piquant. Il s'accroche à la poêle et s'éloigne proprement.",
+            "action": "Ajouter la pâte de tamarin et le lait de coco."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les épices commencent à devenir brun foncé et sentent brûlées. Le curcuma en particulier sentira vif et désagréable lorsqu'il sera brûlé.",
+            "action": "Ajouter immédiatement un jet d'eau ou de lait de coco et baisser la chaleur. Gratter les morceaux sombres de la base de la casserole."
+          }
+        ]
+      },
+      "feelCue": "Le masala doit sentir comme l'intérieur d'une cuisine de restaurant sud - indienne — chaude, piquante, en couches — pas comme de la poudre d'épices crue versée sur une assiette."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "spiced_masala",
+        "ing_02",
+        "ing_03",
+        "ing_15"
+      ],
+      "outputState": "tamarind_gravy",
+      "instructions": "Ajoutez la pâte de tamarin et remuez-la dans le masala — elle sifflera et s'étourdira. Verser le lait de noix de coco et le sel, puis mélanger soigneusement tout dans une sauce lisse et uniforme. Porter à mijoter doucement et cuire à découvert pendant 5-6 minutes, en remuant de temps en temps, jusqu'à ce que la sauce s'épaississe légèrement et que le bord aigre brut du tamarin se mêle à la noix de coco. Bouche: La sauce doit être aigre, chaude avec des épices, légèrement sucrée de la noix de coco, et bien salée.",
+      "visualCue": {
+        "primaryTarget": "Une sauce en terre cuite-orange lisse qui enveloppe l'arrière d'une cuillère. Il devrait tenir une ligne quand vous tirez votre doigt sur une cuillère trempée dedans.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La graisse est mince et aqueuse. Le tamarin a un goût aigu et dur, il n'a pas encore intégré la noix de coco et les épices.",
+            "action": "Laisser mijoter 3 minutes de plus pour permettre aux saveurs de fusionner et à la sauce de se serrer légèrement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gravy est une terre cuite-orange lisse et unifiée. La douceur est ronde et intégrée, équilibrée par la douceur de la noix de coco. La chaleur des épices se construit à l'arrière de la gorge.",
+            "action": "Ajouter les crevettes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Gravy a diminué trop loin et est très épais et huileux, avec la graisse de noix de coco commençant à se séparer aux bords.",
+            "action": "Ajouter un petit jet d'eau ou de lait de coco pour le desserrer. Mélanger vigoureusement pour réémulsionner."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre doigt sur l'arrière d'une cuillère enduite de sauce — il devrait laisser une ligne propre et stable qui tient pendant plusieurs secondes avant que le liquide ne s'infiltre."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Pochette",
+      "inputs": [
+        "tamarind_gravy",
+        "ing_01",
+        "ing_08"
+      ],
+      "outputState": "finished_tamarind_shrimp",
+      "instructions": "Ajouter les crevettes pelées dans la sauce mijotée en une seule couche, les presser pour les submerger. Dispersez quelques feuilles fraîches de curry sur le dessus. Cuire 4 à 5 minutes à feu moyen, en retournant les crevettes une fois à mi-chemin, jusqu'à ce qu'elles soient entièrement roses et simplement cuites. Retirer immédiatement du feu — la chaleur résiduelle de la sauce continuera à les cuire si elle est laissée sur le poêle. Servir avec du riz rouge Kerala, de l'appam ou du roti.",
+      "visualCue": {
+        "primaryTarget": "Les crevettes sont uniformément coralliennes, enroulées délicatement et revêtues de sauce orangée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont encore gris translucide dans les taches. La chair est douce et gelée au point le plus épais.",
+            "action": "Cuire encore 1 à 2 minutes à feu moyen."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les crevettes sont entièrement roses, opaques et enroulées dans un C détendu. Ils donnent légèrement lorsqu'ils sont pressés et sont enduits d'une couche uniforme de sauce. Les feuilles fraîches de curry brillent à la surface.",
+            "action": "Retirer du feu et servir avec du riz ou du pain."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes sont serrées dans un O et se sentent dures lorsqu'elles sont pressées. La chair est sèche et commence à se séparer.",
+            "action": "Servir immédiatement. La sauce aidera à masquer une partie de la texture — la sauce généreuse sur le riz aide."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur une crevette dans la sauce avec l'arrière de votre cuillère — elle doit s'effacer avec une légère pression et ressorter en arrière, ne pas rester comprimée ou résister entièrement à la cuillère."
+    }
+  ]
 };

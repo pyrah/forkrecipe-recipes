@@ -1,99 +1,247 @@
 export default {
-  repoId: "master_american_deviled_eggs_001",
-  parentRepoId: null,
-  slug: "deviled-eggs",
-  author: "ForkRecipe Kitchen",
-  title: "Classic Deviled Eggs",
-  description: "Hard-boiled eggs halved, yolks beaten with mayonnaise, Dijon, and a touch of vinegar into a tangy, creamy filling piped back into alabaster whites — the party staple that never fails.",
-  cuisine: "American",
-  culture: "American",
-  category: "eggs",
-  tags: ["deviled-eggs", "american", "party-food", "eggs", "mayonnaise", "classic", "appetizer"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 0, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Eggs (large, at least 1 week old — fresh eggs are harder to peel)", ratioValue: 6,    defaultUnit: "eggs",  substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Good-quality mayonnaise (Duke's or Hellmann's)",                      ratioValue: 2,    defaultUnit: "parts", substitutions: ["Greek yogurt for lighter version"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Dijon mustard",                                                       ratioValue: 0.3,  defaultUnit: "parts", substitutions: ["yellow mustard (more traditional Southern style)"] },
-    { ingId: "ing_04", role: "Acid",      name: "White wine vinegar",                                                  ratioValue: 0.15, defaultUnit: "parts", substitutions: ["apple cider vinegar", "fresh lemon juice"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine salt",                                                           ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "White pepper, finely ground",                                         ratioValue: 0.02, defaultUnit: "parts", substitutions: ["black pepper (more visible in the filling)"] },
-    { ingId: "ing_07", role: "Garnish",   name: "Sweet or smoked paprika, for dusting",                                ratioValue: 0.05, defaultUnit: "parts", substitutions: ["cayenne for heat"] },
-    { ingId: "ing_08", role: "Garnish",   name: "Fresh chives, finely snipped",                                        ratioValue: 0.1,  defaultUnit: "parts", substitutions: ["fresh dill fronds"] },
+  "repoId": "master_american_deviled_eggs_001",
+  "parentRepoId": null,
+  "slug": "deviled-eggs",
+  "author": "ForkRecipe Kitchen",
+  "title": "Œufs diaboliques classiques",
+  "description": "Des œufs durs ont été coupés en deux, des jaunes battus avec de la mayonnaise, Dijon, et une touche de vinaigre dans un remplissage glacé et crémeux ont été ramenés dans des blancs d'albâtre.",
+  "cuisine": "Américain",
+  "culture": "Américain",
+  "category": "eggs",
+  "tags": [
+    "Des œufs diaboliques",
+    "américains",
+    "aliments pour fêtes",
+    "œufs",
+    "mayonnaise",
+    "classique",
+    "Apéritif"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Boil",
-      inputs: ["ing_01"],
-      outputState: "hard_boiled_eggs",
-      instructions: "Bring a pot of water to a full rolling boil. Lower the eggs on a spoon and boil for exactly 11 minutes. Transfer immediately to an ice bath — cold water with as much ice as possible — and leave for 10 full minutes. The ice bath is what makes or breaks the yolk: it stops the carry-over cooking that creates the grey-green sulphur ring. Peel under cold running water, starting from the wide air-pocket end. Store peeled eggs in cold water until ready to use.",
-      visualCue: {
-        primaryTarget: "Peeled eggs with completely opaque, clean white exteriors. Sliced in half: a bright sunshine-yellow yolk, fully set and centred, with no grey-green ring.",
-        spectrum: [
-          { state: "Underdone", description: "Yolk is still soft or dark orange and slightly jammy at the centre when halved. Filling will be too soft to pipe cleanly.", action: "For deviled eggs you need a fully set, powdery yolk. Return to boiling water for 2 more minutes if underdone, then ice bath again." },
-          { state: "Perfect",   description: "Yolk is fully set, bright yellow-to-golden, powdery and dry throughout. No dark ring at the edge. White is completely firm and peels cleanly with no pocking.", action: "Halve immediately while the yolk is dry and crumbles freely — warm yolks mash more easily into a smooth filling." },
-          { state: "Overdone",  description: "A pronounced grey-green ring around the yolk. The yolk is pale yellow and chalky, with a faint sulphur smell.", action: "The eggs are still edible and the filling will mask the sulphur when mixed with mayo and mustard, but reduce your timing to 11 minutes with a proper ice bath next time." },
-        ],
-      },
-      feelCue: "Hold a peeled hard-boiled egg in your palm and squeeze very gently — it should feel completely solid and uniformly firm, like a stress ball that doesn't give at all.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Oeufs (grands, âgés d'au moins une semaine — les œufs frais sont plus difficiles à peler)",
+      "ratioValue": 6,
+      "defaultUnit": "eggs",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["hard_boiled_eggs", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "deviled_yolk_filling",
-      instructions: "Halve the eggs lengthwise with one clean confident cut. Scoop the yolks into a bowl — the whites go on a platter. Press the yolks through a fine-mesh sieve with the back of a spoon (or use a ricer) for the silkiest possible texture. Add the mayonnaise, Dijon, vinegar, salt, and white pepper. Stir vigorously until completely smooth and creamy — not a grain of yolk should be visible. Taste and adjust: it should be noticeably tangy and well-salted. The filling must be bolder than seems right in the bowl — it softens dramatically once it meets the egg white.",
-      visualCue: {
-        primaryTarget: "A smooth, creamy, pale-gold paste that falls off a spoon in a slow, ribbon without any graininess or lumps of unmashed yolk.",
-        spectrum: [
-          { state: "Underdone", description: "Visible yolk lumps remain in the filling. Mixture is grainy and does not yet hold together in a smooth paste. Vinegar not yet evenly distributed.", action: "Mash more vigorously, or press through a fine sieve. Graininess in the finished filling is the most common and most avoidable failure." },
-          { state: "Perfect",   description: "Completely smooth, uniform, pale gold. Falls off the spoon in a slow, thick ribbon. Smells of mustard and a clean sharp tang of vinegar. Holds a piped shape.", action: "Taste and season. Transfer to a piping bag fitted with a star tip, or use a zip-lock bag with a corner cut off." },
-          { state: "Overdone",  description: "Filling is too thin and runny from too much mayonnaise or vinegar — it will not hold a piped shape and will flow out of the whites.", action: "Add more sieved yolk (if available) or a touch more Dijon to thicken. Chill for 15 minutes — cold filling holds a pipe shape much better than room-temperature." },
-        ],
-      },
-      feelCue: "Rub a small amount between your fingers — it should feel silken and cool with no graininess whatsoever. Any texture you feel in the bowl will be amplified on the palate.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Mayonnaise de bonne qualité (Duke ou Hellmann)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Yogourt grec pour version plus légère"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["hard_boiled_eggs", "deviled_yolk_filling"],
-      outputState: "filled_egg_whites",
-      instructions: "Arrange the egg white halves on a serving platter. If they rock, slice a sliver off the rounded bottom to create a flat base. Pat the interiors dry with a corner of paper towel — any moisture will dilute the filling. Pipe or spoon the filling generously into each cavity, mounding it slightly above the rim of the white — a flush fill looks stingy, a generous dome looks abundant. Each half should have an equal, generous fill.",
-      visualCue: {
-        primaryTarget: "Alabaster white half-cups each crowned with a generous dome of pale-gold filling, sitting flat and stable on the platter.",
-        spectrum: [
-          { state: "Underdone", description: "Whites are wet inside and the filling is flowing and thin — not holding a dome shape. Some whites are still rocking on the plate.", action: "Pat whites dry before filling. Chill the filling for 15 minutes to firm it before piping if it is not holding its shape." },
-          { state: "Perfect",   description: "Each half holds a generous, cleanly piped dome of filling. Whites are bright white with no discolouration. The tray looks abundant and inviting.", action: "Garnish immediately before the filling surface dries." },
-          { state: "Overdone",  description: "Filling has been piled so high it is falling off the sides of the whites and pooling on the platter. Whites are overfilled and messy.", action: "A piping bag with a star tip gives the most control for generous-but-tidy fills. Scrape back excess and re-pipe more conservatively." },
-        ],
-      },
-      feelCue: "Press a finger lightly to the side of a filled white — it should be completely firm and not rock at all. A rocking egg white sends filling sliding across the platter the moment anyone touches the tray.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moutarde jaune (plus traditionnel style sud)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["filled_egg_whites", "ing_07", "ing_08"],
-      outputState: "deviled_eggs",
-      instructions: "Hold the paprika over each egg from at least 20 cm above and tap the container gently to dust a thin, even veil of red-orange across the surface — not a clump, just a whisper. Scatter the snipped chives across the tray. Serve immediately or refrigerate uncovered for up to 4 hours. Bring to room temperature 20 minutes before serving — cold filling loses much of its tang and creaminess.",
-      visualCue: {
-        primaryTarget: "A tray of pale-gold-crowned egg halves dusted with a light blush of paprika and scattered with bright green chive threads.",
-        spectrum: [
-          { state: "Underdone", description: "No paprika or chives applied yet. The filling looks plain and unfinished. The garnish is not merely decorative — the paprika adds gentle heat and smokiness that is part of the flavour.", action: "Apply garnish — paprika first, then chives. Keep paprika application light; it should tint the surface, not pile on it." },
-          { state: "Perfect",   description: "Uniform light blush of paprika across every egg. Chive pieces bright green and neatly scattered. The tray has a clean, festive visual rhythm.", action: "Serve within 2 hours for optimal freshness, or refrigerate and bring back to temperature before serving." },
-          { state: "Overdone",  description: "A heavy orange mound of paprika sits on top of each egg, obscuring the filling colour entirely and tasting bitter and dusty.", action: "Brush off the excess paprika gently with a soft pastry brush and reapply from a greater height with a much lighter hand." },
-        ],
-      },
-      feelCue: "Pick up a finished deviled egg and tip it very gently — the filling should not slide or jiggle. Firm, cool, set filling that holds in place is the sign that the balance of fats to vinegar is correct.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de cidre de pomme",
+        "jus de citron frais"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poivre blanc, finement moulu",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre noir (plus visible dans le remplissage)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Paprika doux ou fumé, pour la poussière",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cayenne pour la chaleur"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Ciboulette fraîche, finement tranchée",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "frondes fraîches d'aneth"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "hard_boiled_eggs",
+      "instructions": "Porter un pot d'eau à ébullition complète. Abaissez les œufs sur une cuillère et faites bouillir exactement 11 minutes. Transférer immédiatement dans un bain de glace — de l'eau froide avec autant de glace que possible — et laisser 10 minutes complètes. Le bain de glace est ce qui fait ou brise le jaune : il arrête la cuisson de report qui crée l'anneau de soufre gris-vert. Peler sous l'eau courante froide, à partir de l'extrémité large de la poche d'air. Entreposer les œufs pelés dans l'eau froide jusqu'à ce qu'ils soient prêts à être utilisés.",
+      "visualCue": {
+        "primaryTarget": "Oeufs pelés à l'extérieur blanc complètement opaque et propre. Séché en deux : un jaune jaune jaune soleil-jaune lumineux, entièrement réglé et centré, sans anneau gris-vert.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le jaune est encore doux ou orange foncé et légèrement embrouillé au centre lorsqu'il est coupé en deux. Le remplissage sera trop doux pour être propre.",
+            "action": "Pour les œufs diaboliques, vous avez besoin d'un jaune poudré. Retournez à l'eau bouillante pendant 2 minutes si vous êtes sous-dosé, puis rebain de glace."
+          },
+          {
+            "state": "Perfect",
+            "description": "Yolk est entièrement sertie, jaune vif à doré, poudreuse et sèche. Pas d'anneau noir au bord. Le blanc est complètement ferme et pele proprement sans piquer.",
+            "action": "Halte immédiatement pendant que le jaune est sec et s'émiette librement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un anneau vert-gris prononcé autour du jaune. Le jaune est jaune pâle et crayeux, avec une faible odeur de soufre.",
+            "action": "Les œufs sont encore comestibles et le remplissage masquera le soufre lorsqu'il sera mélangé avec de la mayo et de la moutarde, mais réduisez votre timing à 11 minutes avec un bain de glace approprié la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Maintenez un œuf pelé dur dans votre paume et pressez très doucement — il devrait se sentir complètement solide et uniformément ferme, comme une boule de stress qui ne donne pas du tout."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "hard_boiled_eggs",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "deviled_yolk_filling",
+      "instructions": "Couper les œufs dans le sens de la longueur avec une coupe sûre propre. Mettez les jaunes dans un bol — les blancs vont sur un plateau. Appuyez sur les jaunes à travers un tamis à mailles fines avec le dos d'une cuillère (ou utilisez un riz) pour obtenir la texture la plus soyeuse possible. Ajouter la mayonnaise, le Dijon, le vinaigre, le sel et le poivre blanc. Agiter vigoureusement jusqu'à ce qu'il soit complètement lisse et crémeux — pas un grain de jaune doit être visible. Goûtez et ajustez : il doit être nettement tanné et bien salé. Le remplissage doit être plus gras qu'il ne semble juste dans le bol — il adoucit considérablement une fois qu'il rencontre le blanc d'œuf.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse, crémeuse et dorée qui tombe d'une cuillère dans un ruban lent, sans grain ni grumeaux de jaune non masqué.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux de jaune visibles restent dans le remplissage. Le mélange est granuleux et ne tient pas encore ensemble dans une pâte lisse. Vinaigre pas encore uniformément distribué.",
+            "action": "Mash plus vigoureusement, ou appuyez à travers un tamis fin. La graine du remplissage fini est la défaillance la plus courante et la plus évitable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, uniforme, or pâle. Il tombe de la cuillère dans un ruban épais et lent. Des odeurs de moutarde et une tanget nette de vinaigre. Il tient une forme de pipe.",
+            "action": "Goût et saison. Transférer dans un sac de tuyauterie muni d'une pointe étoile ou utiliser un sac à fermeture éclair avec un coin coupé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage est trop mince et éclaboussé de trop de mayonnaise ou de vinaigre — il ne tiendra pas une forme piped et sortira des blancs.",
+            "action": "Ajouter plus de jaune tamisé (si disponible) ou une touche plus Dijon pour épaissir. Refroidir pendant 15 minutes — le remplissage à froid tient une forme de tuyau bien meilleure que la température ambiante."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité entre vos doigts — il devrait se sentir soyeux et frais sans grain. Toute texture dans le bol sera amplifiée en bouche."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "hard_boiled_eggs",
+        "deviled_yolk_filling"
+      ],
+      "outputState": "filled_egg_whites",
+      "instructions": "Disposer les moitiés blanches sur un plateau de service. S'ils se cassent, couper une tranche du fond arrondi pour créer une base plate. Faites sécher les intérieurs avec un coin de serviette en papier — toute humidité diluera le remplissage. Tuyau ou cuillère le remplissage généreusement dans chaque cavité, le bombant légèrement au-dessus du bord du blanc — un remplissage de chasse semble piquant, un dôme généreux semble abondant. Chaque moitié devrait avoir un remplissage égal, généreux.",
+      "visualCue": {
+        "primaryTarget": "Demi-tasses blanches d'albâtre chacune couronnée d'un généreux dôme de remplissage en or pâle, assis à plat et stable sur le plateau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les blancs sont mouillés à l'intérieur et le remplissage est fluide et mince — ne tenant pas une forme de dôme. Certains blancs sont encore en train de basculer sur l'assiette.",
+            "action": "Pat blanc sèche avant de remplir. Refroidir le remplissage pendant 15 minutes pour le fermer avant la tuyauterie s'il ne tient pas sa forme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque moitié tient un généreux et propre dôme de remplissage. Les blancs sont blancs vifs sans décoloration. Le plateau semble abondant et accueillant.",
+            "action": "Garnir immédiatement avant que la surface de remplissage sèche."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage a été empilé si haut qu'il tombe des côtés des blancs et pooling sur le plateau. Les blancs sont surchargés et désordonnés.",
+            "action": "Un sac de tuyauterie avec une pointe d'étoile donne le plus de contrôle pour les remplissages généreux mais doux. Gratter l'excès de dos et re-tuber plus prudemment."
+          }
+        ]
+      },
+      "feelCue": "Appuyez légèrement sur un doigt sur le côté d'un blanc rempli — il devrait être complètement ferme et pas du tout roc. Un blanc d'œuf à bascule envoie le remplissage glisser sur le plateau au moment où quelqu'un touche le plateau."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "filled_egg_whites",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "deviled_eggs",
+      "instructions": "Maintenez le paprika sur chaque oeuf d'au moins 20 cm au-dessus et appuyez doucement sur le récipient pour épousseter un mince voile d'orange rouge à la surface — pas un amas, juste un murmure. Dispersez la ciboulette à l'autre bout du plateau. Servir immédiatement ou réfrigérer à découvert jusqu'à 4 heures. Porter à température ambiante 20 minutes avant de servir — le remplissage à froid perd une grande partie de son tang et de sa crémosité.",
+      "visualCue": {
+        "primaryTarget": "Un plateau d'oeufs à croûte d'or pâle s'éparpille avec un léger roussissement de paprika et éparpillé de fils de ciboulette vert vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas encore de paprika ou de ciboulette. Le remplissage semble simple et inachevé. La garniture n'est pas simplement décorative: le paprika ajoute de la chaleur douce et de la fumée qui fait partie de la saveur.",
+            "action": "Appliquer d'abord la garniture — paprika, puis la ciboulette. Gardez la lumière d'application du paprika; il devrait teinter la surface, pas s'y empiler."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un rouge clair uniforme du paprika sur chaque œuf. Morceaux de colombier vert vif et soigneusement dispersés. Le plateau a un rythme visuel propre et festif.",
+            "action": "Servir dans les 2 heures pour une fraîcheur optimale, ou réfrigérer et ramener à la température avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un lourd monticule orange de paprika se trouve sur le dessus de chaque œuf, obscurcissant entièrement la couleur de remplissage et goûtant amer et poussiéreux.",
+            "action": "Badigeonner l'excès de paprika doucement avec une brosse à pâte douce et réappliquer d'une plus grande hauteur avec une main beaucoup plus légère."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un œuf fini démonté et aspirez - le très doucement — le remplissage ne doit pas glisser ou gâcher. Le remplissage ferme, frais et en place est le signe que la balance des graisses au vinaigre est correcte."
+    }
+  ]
 };

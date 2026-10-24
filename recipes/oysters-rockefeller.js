@@ -1,99 +1,243 @@
 export default {
-  repoId: "master_american_oysters_rockefeller_001",
-  parentRepoId: null,
-  slug: "oysters-rockefeller",
-  author: "ForkRecipe Kitchen",
-  title: "Oysters Rockefeller",
-  description: "Plump raw oysters baked on their half-shell under a blanket of creamed spinach, Pernod, and golden breadcrumbs — the grand New Orleans appetizer of 1899, as rich as its namesake.",
-  cuisine: "American",
-  culture: "New Orleans",
-  category: "seafood",
-  tags: ["oysters", "new-orleans", "american", "baked", "spinach", "appetizer", "classic"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 2, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Fresh oysters on the half-shell, shucked (cup side up)", ratioValue: 12,  defaultUnit: "oysters", substitutions: [] },
-    { ingId: "ing_02", role: "Structure", name: "Baby spinach, washed and dried",                          ratioValue: 3,   defaultUnit: "parts", substitutions: ["watercress", "young flat-leaf parsley leaves"] },
-    { ingId: "ing_03", role: "Allium",    name: "Shallots and garlic, finely minced together",             ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter",                                         ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Solvent",   name: "Pernod or Ricard anise liqueur",                          ratioValue: 0.3, defaultUnit: "parts", substitutions: ["dry vermouth", "dry white wine"] },
-    { ingId: "ing_06", role: "Dairy",     name: "Heavy cream",                                             ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Herb",      name: "Fresh tarragon, leaves only, finely chopped",             ratioValue: 0.1, defaultUnit: "parts", substitutions: ["fresh chervil"] },
-    { ingId: "ing_08", role: "Starch",    name: "Panko breadcrumbs and finely grated Parmesan, mixed 2:1", ratioValue: 0.5, defaultUnit: "parts", substitutions: ["plain breadcrumbs and Pecorino"] },
+  "repoId": "master_american_oysters_rockefeller_001",
+  "parentRepoId": null,
+  "slug": "oysters-rockefeller",
+  "author": "ForkRecipe Kitchen",
+  "title": "Huîtres Rockefeller",
+  "description": "Des huîtres crues ont été cuites sur leur demi-coquille sous une couverture d'épinards crémeux, de Pernod et de chapelures dorées, le grand apéritif de la Nouvelle-Orléans de 1899, aussi riche que son nom.",
+  "cuisine": "Américain",
+  "culture": "Nouvelle-Orléans",
+  "category": "seafood",
+  "tags": [
+    "Huîtres",
+    "nouveaux-orléens",
+    "américains",
+    "cuits",
+    "épinards",
+    "Apéritif",
+    "classique"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "softened_shallots",
-      instructions: "Melt the butter in a wide sauté pan over medium heat. Add the minced shallot and garlic. Sweat gently for 4–5 minutes, stirring often, until completely translucent, soft, and sweet-smelling. The alliums must dissolve completely into the butter — any residual crunch will be unpleasant in the final topping spooned over delicate oyster flesh. Season lightly with salt.",
-      visualCue: {
-        primaryTarget: "A butter-golden pool with completely collapsed, glass-clear shallot and garlic — no white opaque pieces remaining.",
-        spectrum: [
-          { state: "Underdone", description: "Shallot pieces are still opaque and firm. Raw garlic smell is prominent.", action: "Continue sweating at lower heat. The topping will be raw-tasting and gritty if the alliums aren't fully softened first." },
-          { state: "Perfect",   description: "Every piece of shallot and garlic is translucent and tender. Butter is pale gold and fragrant. No browning on the pan base.", action: "Add the spinach in large handfuls." },
-          { state: "Overdone",  description: "Shallots and garlic have coloured to gold at the edges. Pan smells toasty and slightly sweet-bitter.", action: "Lower heat immediately and add the spinach — the browning will blend into the finished topping, which can handle a small amount of colour." },
-        ],
-      },
-      feelCue: "Drag a spoon through the pan — the shallots should move like softened butter, offering no resistance at all.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Huîtres fraîches sur la demi-coquille, farcies (côté tasse vers le haut)",
+      "ratioValue": 12,
+      "defaultUnit": "oysters",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Reduce",
-      inputs: ["softened_shallots", "ing_02", "ing_05", "ing_06", "ing_07"],
-      outputState: "rockefeller_topping",
-      instructions: "Add the baby spinach to the pan in large batches, tossing with tongs to wilt each batch before adding the next — it will reduce to a quarter of its raw volume. Once all the spinach is wilted and any pooled water has evaporated, pour in the Pernod and let it sizzle and reduce for 30 seconds. Add the cream and increase heat to medium-high. Stir and reduce until the mixture is thick enough that a wooden spoon leaves a clear channel along the pan base. Remove from heat, stir in the tarragon, and season carefully with salt and cayenne.",
-      visualCue: {
-        primaryTarget: "A thick, dark-green, glossy paste that holds its shape on a spoon rather than flowing like a sauce.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is still watery and thin, running freely off the spoon. The cream has not reduced. Pooled liquid sits in the pan.", action: "Continue over medium-high heat, stirring frequently, until almost all the liquid has cooked away. A wet topping will dilute the oyster liquor and turn the breadcrumbs soggy immediately." },
-          { state: "Perfect",   description: "Thick, cohesive, rich green paste. Holds a mounded shape on a spoon. A clear channel in the pan when dragged stays clean for 3 seconds. Smells of anise, cream, and green vegetables.", action: "Remove from heat — it continues to thicken as it cools, so stop slightly before you think it is done." },
-          { state: "Overdone",  description: "Paste has dried out and is beginning to stick to the pan in patches. Spinach looks almost black and smells of cooked cream.", action: "Add a small splash of cream to loosen. The flavour will be more intense but still usable." },
-        ],
-      },
-      feelCue: "Drop a spoonful on a cold plate — it should hold a dome and not spread more than 1 cm. If it flows, it needs more reduction.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Bébés épinards, lavés et séchés",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cresson d'eau",
+        "jeunes feuilles de persil à feuilles plates"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["ing_01", "rockefeller_topping", "ing_08"],
-      outputState: "topped_oysters",
-      instructions: "Preheat the oven to 220°C (425°F), or preheat a grill/broiler to its highest setting. Arrange the oysters on their half-shells on a baking tray filled with rock salt or crumpled foil to keep them level — a tilted oyster loses all its precious liquor. Spoon a generous teaspoon of the Rockefeller topping over each oyster, leaving a thin rim of shell exposed. The topping should mound slightly above the shell edge. Combine the panko-Parmesan mixture and scatter evenly over each topped oyster.",
-      visualCue: {
-        primaryTarget: "Oyster shells sitting perfectly level on salt, each crowned with a dome of dark-green filling and a snowfall of pale golden breadcrumbs.",
-        spectrum: [
-          { state: "Underdone", description: "Some oysters are tilted and their liquor has run out. Breadcrumbs not yet applied. Topping is unevenly distributed.", action: "Level each shell carefully — the liquor that mingles with the topping as it bakes is irreplaceable flavour." },
-          { state: "Perfect",   description: "All shells level. Each crowned with a generous dome of filling that covers the oyster entirely. Breadcrumb-Parmesan crust applied evenly over the top.", action: "Into the oven or under the broiler immediately." },
-          { state: "Overdone",  description: "Breadcrumbs piled too thick, completely burying the topping and filling in a heavy crust. Oyster liquor has already begun pooling out of tilted shells.", action: "Sweep excess breadcrumbs off the top, level the shells, and bake immediately." },
-        ],
-      },
-      feelCue: "Nudge each shell with a fingertip — it should sit completely flat and not rock. A rocking shell will spill its liquor the instant the topping melts.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Échalotes et ail, hachées finement",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["topped_oysters"],
-      outputState: "oysters_rockefeller",
-      instructions: "Bake at 220°C (425°F) for 8–10 minutes, or broil for 3–4 minutes, until the breadcrumb topping is deeply golden-brown and the edges of the oyster flesh are just beginning to curl. The oyster itself should still be plump and juicy — it cooks almost entirely from the heat of the topping above it. If using a broiler, watch constantly: it goes from golden to burnt in under a minute.",
-      visualCue: {
-        primaryTarget: "Bubbling, deep-golden breadcrumb crust with darker patches at the edges. A thread of steam rising from each shell. Oyster edges very faintly curled.",
-        spectrum: [
-          { state: "Underdone", description: "Breadcrumbs are pale beige and not yet crunchy. Parmesan has not melted or coloured. Oyster flesh is unchanged.", action: "Return to the oven or raise the rack closer to the broiler for another 2–3 minutes. Undercooked breadcrumbs are gummy, not crunchy." },
-          { state: "Perfect",   description: "Deep golden crust with visible bubbling at the edges. The Parmesan has formed a crisp, caramelised lace pattern. Oyster edges are just barely curled — barely. The flesh inside should still be plump and trembling.", action: "Serve on the salt-filled tray immediately — the shells are extremely hot." },
-          { state: "Overdone",  description: "Breadcrumbs are dark brown to burnt. Oyster flesh has contracted dramatically, pulling away from the shell, looking dry and rubbery.", action: "The crust flavour will be bitter. Serve immediately — there is no recovery for an overcooked oyster." },
-        ],
-      },
-      feelCue: "Bring a shell close to your ear — you should faintly hear the filling still sizzling. That sizzle means the centre is still hot and the oyster is at the edge of perfect.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Solvent",
+      "name": "Pernod ou Ricard liqueur d'anis",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vermouth sec",
+        "vin blanc sec"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Estragon frais, feuilles seulement, hachées finement",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cervil frais"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Starch",
+      "name": "Panko chapelures et parmesan finement râpé, mélangé 2:1",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chapelures simples et Pecorino"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "softened_shallots",
+      "instructions": "Faire fondre le beurre dans une casserole à feu moyen. Ajouter l'échalote hachée et l'ail. Plongez doucement pendant 4 à 5 minutes, en remuant souvent, jusqu'à ce qu'il soit complètement translucide, doux et sucré. Les alliums doivent se dissoudre complètement dans le beurre — toute croûte résiduelle sera désagréable dans la garniture finale sur la chair délicate des huîtres. Assaisonner légèrement avec du sel.",
+      "visualCue": {
+        "primaryTarget": "Une piscine d'or au beurre avec une échalote et de l'ail complètement effondrés, clair de verre, sans morceaux blancs opaques.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux d'échalote sont encore opaques et fermes. L'odeur d'ail brut est importante.",
+            "action": "Continuez à transpirer à feu doux. La garniture sera croustillante et gritty si les alliums ne sont pas complètement adoucis en premier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque morceau d'échalote et d'ail est translucide et tendre. Le beurre est d'or pâle et parfumé. Pas de brunissement sur la base de la poêle.",
+            "action": "Ajouter les épinards dans de grandes poignées."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les échalotes et l'ail ont la couleur de l'or aux bords. La poêle sent le toast et légèrement sucré.",
+            "action": "Baissez immédiatement le feu et ajoutez les épinards — le brunissement se fondra dans la garniture finie, qui peut manipuler une petite quantité de couleur."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère dans la poêle — les échalotes doivent bouger comme du beurre ramolli, sans aucune résistance."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Réduire",
+      "inputs": [
+        "softened_shallots",
+        "ing_02",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "rockefeller_topping",
+      "instructions": "Ajouter le bébé épinard dans la casserole en grands lots, en jetant avec des pinces à flétrir chaque lot avant d'ajouter le prochain — il réduira à un quart de son volume brut. Une fois que tous les épinards sont flétris et que toute eau mise en commun s'est évaporée, versez dans le Pernod et laissez-le étourdir et réduire pendant 30 secondes. Ajouter la crème et augmenter à feu moyen-élevé. Incorporer et réduire jusqu'à ce que le mélange soit suffisamment épais pour qu'une cuillère en bois laisse un canal clair le long de la base de la casserole. Retirer du feu, remuer dans l'estragon et assaisonner soigneusement de sel et de cayenne.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, vert foncé, brillante qui tient sa forme sur une cuillère plutôt que de couler comme une sauce.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est encore aqueux et mince, courant librement hors de la cuillère. La crème n'a pas diminué. Le liquide en réserve est dans la casserole.",
+            "action": "Continuer à feu moyen-vif, en remuant fréquemment jusqu'à ce que presque tout le liquide soit cuit. Une garniture humide diluera la liqueur d'huître et fera bouillir la chapelure immédiatement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte verte épaisse, cohésive et riche. Il tient une forme bombée sur une cuillère. Un canal clair dans la casserole quand traîné reste propre pendant 3 secondes. Sens d'anis, de crème et de légumes verts.",
+            "action": "Retirer du feu — il continue à épaissir en refroidissant, alors arrêtez légèrement avant de penser que c'est fait."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a séché et commence à coller à la poêle en patchs. Les épinards sont presque noirs et sent la crème cuite.",
+            "action": "Ajouter une petite touche de crème pour se détendre. La saveur sera plus intense mais toujours utilisable."
+          }
+        ]
+      },
+      "feelCue": "Déposer une cuillère sur une assiette froide — elle devrait tenir un dôme et ne pas s'étendre plus de 1 cm. Si elle circule, elle doit être réduite."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "ing_01",
+        "rockefeller_topping",
+        "ing_08"
+      ],
+      "outputState": "topped_oysters",
+      "instructions": "Préchauffer le four à 220°C (425°F), ou préchauffer un gril/broiler à son réglage le plus élevé. Disposer les huîtres sur leurs demi-coquilles sur un plateau de cuisson rempli de sel de roche ou de papier cassé pour les maintenir à niveau — une huître inclinée perd toute sa liqueur précieuse. Spoon une généreuse cuillère à café du Rockefeller sur chaque huître, laissant une mince bordure de coquille exposée. La garniture doit être légèrement au-dessus du bord de la coque. Mélanger le panko-parmesan et disperser uniformément sur chaque huître.",
+      "visualCue": {
+        "primaryTarget": "Coquilles d'huîtres parfaitement planes sur le sel, chacune couronnée d'un dôme de remplissage vert foncé et d'une chute de neige de chapelure dorée pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Certaines huîtres sont inclinées et leur liqueur est épuisée. Fil d'Ariane pas encore appliqué. La garniture est inégalement répartie.",
+            "action": "Niveler soigneusement chaque coquille — la liqueur qui se mêle à la garniture pendant qu'elle fait cuire est une saveur irremplaçable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les obus sont à niveau. Chacun est couronné d'un généreux dôme de remplissage qui recouvre l'huître entièrement. Fil d'Ariane- croûte parmesan appliquée uniformément sur le dessus.",
+            "action": "Dans le four ou sous la grille immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Fil d'Ariane empilé trop épais, enterrant complètement la garniture et remplissant une croûte lourde. L'alcool d'huître a déjà commencé à se regrouper en coquilles inclinées.",
+            "action": "Balayer l'excès de chapelure du haut, mettre les coquilles à niveau et cuire immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Mordez chaque coquille avec un bout de doigt — il doit s'asseoir complètement à plat et non à la roche. Une coquille à bascule déversera sa liqueur à l'instant où la garniture fondra."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "topped_oysters"
+      ],
+      "outputState": "oysters_rockefeller",
+      "instructions": "Cuire à 220°C (425°F) pendant 8-10 minutes, ou faire griller 3-4 minutes, jusqu'à ce que la garniture de la chapelure soit profondément dorée et que les bords de la chair d'huître commencent à peine à se friser. L'huître elle-même devrait encore être juteuse et juteuse — elle cuit presque entièrement à partir de la chaleur de la garniture au-dessus. Si vous utilisez un grilleur, observez constamment : il va de l'or à l'incendie en moins d'une minute.",
+      "visualCue": {
+        "primaryTarget": "Croûte de chapelure boursouflante, d'or profond, aux bords plus foncés. Un fil de vapeur qui monte de chaque coque. Les bords de l'huître sont très faiblement enroulés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les fils d'Ariane sont beige pâle et pas encore croquants. Le parmesan n'a pas fondu ni coloré. La chair d'huître est inchangée.",
+            "action": "Retourner au four ou lever la grille près de la grille pendant 2 à 3 minutes. Les miettes de pain non cuites sont gommées, pas croquantes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Croûte d'or profond avec bulle visible aux bords. Le Parmesan a formé une dentelle croustillante et caramélisée. Les bords de l'huître sont à peine enroulés — à peine. La chair à l'intérieur devrait encore être ramollie et tremblante.",
+            "action": "Servir immédiatement sur le plateau rempli de sel — les coquilles sont extrêmement chaudes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les fils d'Ariane sont brun foncé à brûlé. La chair d'huître s'est considérablement contractée, s'éloignant de la coquille, elle semble sèche et caoutchouteuse.",
+            "action": "Le goût de la croûte sera amer. Servir immédiatement — il n'y a pas de rétablissement pour une huître trop cuite."
+          }
+        ]
+      },
+      "feelCue": "Apportez une coquille près de votre oreille — vous devriez entendre faiblement le remplissage encore étourdissant. Ce étourdissement signifie que le centre est encore chaud et que l'huître est au bord de la perfection."
+    }
+  ]
 };

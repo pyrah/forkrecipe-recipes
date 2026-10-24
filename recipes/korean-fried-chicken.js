@@ -1,103 +1,319 @@
 export default {
-  repoId: "master_korean_korean_fried_chicken_001",
-  parentRepoId: null,
-  slug: "korean-fried-chicken",
-  author: "ForkRecipe Kitchen",
-  title: "Korean Fried Chicken",
-  description: "The double-fry is not a technique — it is a philosophy. First fry sets the crust and begins rendering the fat; second fry shatters the crust into something approaching glass, a shell so thin and crisp it crackles audibly across a room. The yangnyeom sauce — a lacquer of gochujang, honey, and garlic — clings without softening it, and the whole thing glows under kitchen light like lacquerware.",
-  cuisine: "Korean",
-  culture: "Korean",
-  category: "proteins",
-  tags: ["korean-fried-chicken", "korean", "double-fry", "yangnyeom", "crispy"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "2 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 4, sour: 1, bitter: 1, umami: 4, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Chicken wings or drumettes (or bone-in pieces)",       ratioValue: 2,   defaultUnit: "lb", substitutions: ["boneless thigh pieces, 2-inch chunks"] },
-    { ingId: "ing_02", role: "Starch",    name: "Potato starch",                                         ratioValue: 0.5, defaultUnit: "cup", substitutions: ["cornstarch", "tapioca starch"] },
-    { ingId: "ing_03", role: "Starch",    name: "All-purpose flour",                                     ratioValue: 0.25, defaultUnit: "cup", substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",    name: "Cold water",                                            ratioValue: 0.5, defaultUnit: "cup", substitutions: ["cold soda water (crispier)"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Kosher salt",                                           ratioValue: 1,   defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Black pepper",                                          ratioValue: 0.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Garlic powder",                                         ratioValue: 0.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Neutral oil for deep frying (canola or rice bran)",     ratioValue: 4,   defaultUnit: "cups", substitutions: ["vegetable oil"] },
-    { ingId: "ing_09", role: "Spice",     name: "Gochujang (Korean fermented red chile paste)",          ratioValue: 3,   defaultUnit: "tbsp", substitutions: ["sriracha (less depth, more acid)"] },
-    { ingId: "ing_10", role: "Sweetener", name: "Honey",                                                 ratioValue: 2,   defaultUnit: "tbsp", substitutions: ["corn syrup", "rice syrup"] },
-    { ingId: "ing_11", role: "Sweetener", name: "Brown sugar",                                           ratioValue: 1,   defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_12", role: "Allium",    name: "Garlic cloves, minced to a paste",                      ratioValue: 4,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_13", role: "Seasoning", name: "Soy sauce",                                             ratioValue: 1,   defaultUnit: "tbsp", substitutions: ["tamari"] },
-    { ingId: "ing_14", role: "Fat",       name: "Toasted sesame oil",                                    ratioValue: 1,   defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_15", role: "Acid",      name: "Rice vinegar",                                          ratioValue: 1,   defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_16", role: "Garnish",   name: "Toasted sesame seeds and sliced scallions",             ratioValue: 1,   defaultUnit: "tbsp", substitutions: [] },
+  "repoId": "master_korean_korean_fried_chicken_001",
+  "parentRepoId": null,
+  "slug": "korean-fried-chicken",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poulet frit coréen",
+  "description": "La double frire n'est pas une technique, c'est une philosophie. La première frite sert la croûte et commence à la rendre grasse; la seconde frite brise la croûte en quelque chose qui approche du verre, une coquille si fine et si croquante qu'elle craque audiblement dans une pièce. La sauce yangnyeom — une laque de gochujang, de miel et d'ail — s'accroche sans la ramollir, et toute la chose brille sous la lumière de la cuisine comme de la laque.",
+  "cuisine": "Coréen",
+  "culture": "Coréen",
+  "category": "proteins",
+  "tags": [
+    "korean-fried-chicken",
+    "coréen",
+    "à double friture",
+    "Yangnyeom",
+    "croustillant"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "2 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Marinate",
-      inputs: ["ing_01", "ing_05", "ing_06", "ing_07"],
-      outputState: "seasoned_chicken",
-      instructions: "Pat chicken completely dry with paper towels — this is non-negotiable. Season with salt, pepper, and garlic powder. Toss to coat evenly. Let stand at room temperature for 30 minutes, or refrigerate uncovered for up to 2 hours for a drier surface and crispier result. The drier the surface, the crispier the crust.",
-      visualCue: {
-        primaryTarget: "Chicken pieces that look matte and completely dry, with an even, pale seasoning coat. No moisture beading on the skin surface.",
-        spectrum: [
-          { state: "Underdone", description: "Chicken is still wet or damp. The salt has not had time to draw surface moisture out.", action: "Pat dry again and wait longer. Moisture is the enemy of crispiness — it turns starch into a paste, not a crust." },
-          { state: "Perfect",   description: "Surface is completely dry and slightly tacky. Seasoning is evenly distributed. The skin looks tight and desiccated, not plump.", action: "Mix the batter and proceed." },
-          { state: "Overdone",  description: "N/A — chicken cannot be over-seasoned in this step at these ratios.", action: "Proceed to battering." },
-        ],
-      },
-      feelCue: "Run your finger along the skin — it should feel like dry parchment, slightly catching your fingertip rather than sliding. Any slipperiness means more drying is needed.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Ailes ou tambours de poulet (ou morceaux d'os)",
+      "ratioValue": 2,
+      "defaultUnit": "lb",
+      "substitutions": [
+        "morceaux de cuisse désossés, morceaux de 2 pouces"
+      ]
     },
     {
-      nodeId: "step_2", action: "Mix",
-      inputs: ["ing_02", "ing_03", "ing_04", "seasoned_chicken"],
-      outputState: "battered_chicken",
-      instructions: "Whisk potato starch and flour together in a wide bowl. Add cold water and mix until a thin, lumpy batter forms — do not overmix. The batter should be thinner than pancake batter and slightly lumpy. Add the seasoned chicken pieces and toss to coat thoroughly. Some pieces will have a thin, irregular coat; others will have drips and ridges — this inconsistency creates the craggly, ultra-crispy surface. Let battered chicken rest 5 minutes.",
-      visualCue: {
-        primaryTarget: "Chicken coated in a thin, uneven, pale batter with visible ridges and drips. Some areas show the chicken skin through the batter.",
-        spectrum: [
-          { state: "Underdone", description: "Batter is too thick and uniform — applied like a thick paste. Will create a bready crust, not a shatter-crisp one.", action: "Thin with additional cold water 1 tbsp at a time. Korean fried chicken batter should be much thinner than American batter." },
-          { state: "Perfect",   description: "Thin, irregular coat with peaks and valleys from the lumps in the batter. Drips of batter create fins and ridges that will fry extra crisp.", action: "Fry immediately." },
-          { state: "Overdone",  description: "Batter has been sitting too long — the starch has hydrated and thickened the batter into a paste.", action: "Add more cold water to restore thin consistency. Work faster for the next batch." },
-        ],
-      },
-      feelCue: "Hold a battered piece over the bowl — the batter should drip off in thin streams rather than clinging in thick blobs. That runny coat becomes a shatteringly thin shell.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Fécule de pomme de terre",
+      "ratioValue": 0.5,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "fécule de maïs",
+        "Amidon de tapioca"
+      ]
     },
     {
-      nodeId: "step_3", action: "Fry",
-      inputs: ["battered_chicken", "ing_08"],
-      outputState: "double_fried_chicken",
-      instructions: "Heat oil to 330 F (165 C) in a deep pot. Fry the battered chicken in uncrowded batches for 8-10 minutes until lightly golden and cooked through. Remove and drain on a wire rack — not paper towels. Rest 10 minutes. Increase oil temperature to 375 F (190 C). Fry the same pieces a second time for 3-4 minutes until they turn deep amber-gold and audibly crackle when lifted from the oil. Remove and drain immediately.",
-      visualCue: {
-        primaryTarget: "After the second fry: a deep amber-gold, craggly crust with a faceted surface that catches light at different angles. The chicken is visibly shrunken and the crust stands away from the meat.",
-        spectrum: [
-          { state: "Underdone", description: "After the first fry: pale gold, still slightly soft. This is intentional — first fry should not be golden. After second fry: pale with a soft crust. The oil was not hot enough for the second fry.", action: "Return to 375 F oil for 2 more minutes. The high-temp second fry is the critical step for the shatter-crisp texture." },
-          { state: "Perfect",   description: "After second fry: deep amber-gold crust with visible facets and peaks from the lumpy batter. Sounds hollow when tapped. The crust crackles when a piece is cut in half. Internal temp 165 F+.", action: "Toss in yangnyeom sauce immediately." },
-          { state: "Overdone",  description: "Dark brown crust with black at the peaks. Bitter smell. The crust may have contracted and cracked.", action: "Toss quickly in the sauce — the sauce will mask some of the bitter notes. Serve immediately." },
-        ],
-      },
-      feelCue: "After the second fry, hold a piece near your ear and press it — a perfect crust crackles and crunches audibly, like pressing a thin sheet of ice. If it just compresses silently, the crust is not set.",
+      "ingId": "ing_03",
+      "role": "Starch",
+      "name": "Farine à usage général",
+      "ratioValue": 0.25,
+      "defaultUnit": "cup",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Glaze",
-      inputs: ["ing_09", "ing_10", "ing_11", "ing_12", "ing_13", "ing_14", "ing_15", "double_fried_chicken", "ing_16"],
-      outputState: "finished_korean_fried_chicken",
-      instructions: "Combine gochujang, honey, brown sugar, garlic paste, soy sauce, sesame oil, and rice vinegar in a small saucepan. Warm over medium heat, stirring, until the sugar dissolves and the sauce barely simmers — about 2 minutes. Do not boil. Working quickly, add the double-fried chicken to a large bowl and pour the warm sauce over. Toss rapidly to coat every piece. Garnish with sesame seeds and scallions. Serve within 5 minutes — the crust stays crisp for about 10 minutes after saucing.",
-      visualCue: {
-        primaryTarget: "Every piece of chicken coated in a glossy, deep red-orange yangnyeom sauce that clings without drowning the crust. The crust remains visible through the sauce as a textured surface.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is cold or thick — it is clumping on some pieces and not adhering to others. Some pieces are sauced; others are dry.", action: "Warm the sauce until it flows freely. Add a teaspoon of water if needed. Toss again more vigorously." },
-          { state: "Perfect",   description: "Even, glossy coat across all pieces. Sauce has not pooled at the bottom of the bowl — each piece holds its sauce. Sesame seeds and scallions scattered over. The crust is still audibly crisp when pressed.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Too much sauce applied or chicken sat in the sauce too long. The crust has softened from the moisture.", action: "Drain excess sauce and serve immediately. Korean fried chicken is unforgiving about time after saucing." },
-        ],
-      },
-      feelCue: "Pick up a sauced piece — the exterior should feel taut and slightly sticky from the sauce but structurally rigid. If the crust bends or flexes under the sauce weight, serve it immediately before it softens further.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 0.5,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "eau de soude froide (crispier)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Poivre noir",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poudre d'ail",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile neutre pour friture profonde (canola ou son de riz)",
+      "ratioValue": 4,
+      "defaultUnit": "cups",
+      "substitutions": [
+        "huile végétale"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Gochujang (Pâte de piment rouge fermentée coréenne)",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "sriracha (moins de profondeur, plus d'acide)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Sweetener",
+      "name": "Chérie",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "sirop de maïs",
+        "sirop de riz"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Sweetener",
+      "name": "Sucre brun",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Allium",
+      "name": "Giroves d'ail hachées à la pâte",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Seasoning",
+      "name": "sauce soja",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "tamari"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Fat",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Acid",
+      "name": "Vinaigre de riz",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées et pétoncles tranchés",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "seasoned_chicken",
+      "instructions": "Pat poulet complètement sec avec des serviettes en papier — ce n'est pas négociable. Assaisonner de sel, poivre et poudre d'ail. Jetez-le uniformément. Laisser reposer à température ambiante pendant 30 minutes, ou réfrigérer à découvert jusqu'à 2 heures pour une surface plus sèche et un résultat plus croustillant. La surface sèche, la croûte plus croustillante.",
+      "visualCue": {
+        "primaryTarget": "Des morceaux de poulet qui ont l'air mats et complètement secs, avec une robe assaisonnée uniforme et pâle. Pas de perles d'humidité à la surface de la peau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le poulet est encore humide ou humide. Le sel n'a pas eu le temps d'extraire l'humidité de surface.",
+            "action": "Pat sèche encore et attends plus longtemps. L'humidité est l'ennemi de la croustillante, elle transforme l'amidon en pâte, et non en croûte."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est complètement sèche et légèrement collante. L'assaisonnement est également distribué. La peau a l'air serrée et déshydratée, pas diluvienne.",
+            "action": "Mélanger la pâte et procéder."
+          },
+          {
+            "state": "Overdone",
+            "description": "S.O. — le poulet ne peut pas être sursaisonné à cette étape à ces ratios.",
+            "action": "Allez-y."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre doigt le long de la peau — il devrait se sentir comme un parchemin sec, attraper légèrement votre bout de doigt plutôt que de glisser. N'importe quelle glissière signifie plus de séchage est nécessaire."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "seasoned_chicken"
+      ],
+      "outputState": "battered_chicken",
+      "instructions": "Dans un grand bol, fouetter la fécule de pomme de terre et la farine. Ajouter l'eau froide et mélanger jusqu'à ce qu'une pâte fine et grumelée se forme — ne pas trop mélanger. La pâte doit être plus mince que la pâte à crêpes et légèrement grumelée. Ajouter les morceaux de poulet assaisonnés et mélanger pour enrober soigneusement. Certaines pièces auront une couche mince et irrégulière; d'autres auront des gouttes et des arêtes — cette incohérence crée la surface craquante et ultra-crispy. Laisser reposer le poulet battu 5 minutes.",
+      "visualCue": {
+        "primaryTarget": "Poulet enrobé d'une pâte fine, inégale et pâle avec des arêtes visibles et des gouttes. Certaines zones montrent la peau de poulet à travers la pâte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La batterie est trop épaisse et uniforme — appliquée comme une pâte épaisse. Il créera une croûte panifiable, pas une croûte brisée.",
+            "action": "Arroser d'eau froide supplémentaire 1 c. à soupe à la fois. La pâte au poulet frit coréenne devrait être beaucoup plus mince que la pâte américaine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Manteau mince et irrégulier avec pics et vallées à partir des morceaux de la pâte. Des ailerons de pâte créent des ailerons et des arêtes qui feront frire des croustillants.",
+            "action": "Fry immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a été trop longue — l'amidon a hydraté et épaissi la pâte dans une pâte.",
+            "action": "Ajouter plus d'eau froide pour restaurer la consistance fine. Travaillez plus vite pour le prochain lot."
+          }
+        ]
+      },
+      "feelCue": "Tenez un morceau de pâte au - dessus du bol — la pâte doit s'écouler dans des ruisseaux minces plutôt que de s'accrocher à des taches épaisses. Ce manteau est devenu une coquille mince."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "battered_chicken",
+        "ing_08"
+      ],
+      "outputState": "double_fried_chicken",
+      "instructions": "Chauffer l'huile à 330 F (165 C) dans un pot profond. Faire frire le poulet battu dans des lots non encombrés pendant 8-10 minutes jusqu'à ce qu'il soit légèrement doré et cuit. Enlever et égoutter sur un porte-fils — pas des serviettes en papier. Reposez-vous 10 minutes. Augmenter la température de l'huile à 375 F (190 C). Faites frire les mêmes morceaux une seconde fois pendant 3-4 minutes jusqu'à ce qu'ils tournent en or ambré profond et craquent audiblement lorsqu'ils sont sortis de l'huile. Retirer et égoutter immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Après la deuxième friture : une croûte d'ambre profonde, avec une surface à facettes qui prend de la lumière à différents angles. Le poulet est visiblement rétréci et la croûte est loin de la viande.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après la première frite : or pâle, encore légèrement doux. C'est intentionnel: la première frite ne doit pas être dorée. Après la deuxième friture : pâle avec une croûte molle. L'huile n'était pas assez chaude pour la deuxième friture.",
+            "action": "Retourner à l'huile 375 F pendant 2 minutes. La seconde friture haute température est l'étape critique pour la texture de la déchirure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après la deuxième friture : croûte d'or ambre profonde aux facettes visibles et aux pics de la pâte grumelée. Ça a l'air creux. La croûte craque quand une pièce est coupée en deux. Température interne 165 F+.",
+            "action": "Ajouter immédiatement la sauce yangnyeom."
+          },
+          {
+            "state": "Overdone",
+            "description": "Croûte brun foncé avec noir aux pics. Une odeur amère. La croûte a pu se contracter et se fissurer.",
+            "action": "Ajouter rapidement dans la sauce — la sauce masquera certaines notes amères. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Après la deuxième friture, tenez un morceau près de l'oreille et pressez - le — une croûte parfaite craque et s'écrase audiblement, comme en appuyant sur une mince couche de glace. S'il compresse en silence, la croûte n'est pas réglée."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Glace",
+      "inputs": [
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13",
+        "ing_14",
+        "ing_15",
+        "double_fried_chicken",
+        "ing_16"
+      ],
+      "outputState": "finished_korean_fried_chicken",
+      "instructions": "Mélanger le gochujang, le miel, la cassonade, la pâte d'ail, la sauce soja, l'huile de sésame et le vinaigre de riz dans une petite casserole. Chauffer à feu moyen, en remuant, jusqu'à ce que le sucre se dissout et que la sauce mijote à peine — environ 2 minutes. Ne pas faire bouillir. Travailler rapidement, ajouter le poulet à deux frites dans un grand bol et verser la sauce tiède. Jeter rapidement pour enrober chaque pièce. Garnir de graines de sésame et de pétoncles. Servir dans les 5 minutes, la croûte reste croustillante environ 10 minutes après le saucisson.",
+      "visualCue": {
+        "primaryTarget": "Chaque morceau de poulet enrobé d'une sauce yangnyeom rouge-orange foncé brillant qui s'accroche sans noyer la croûte. La croûte reste visible à travers la sauce comme une surface texturée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est froide ou épaisse: elle est entaillée sur certains morceaux et ne adhère pas aux autres. Certains morceaux sont soudés, d'autres sont secs.",
+            "action": "Chauffer la sauce jusqu'à ce qu'elle coule librement. Ajouter une cuillère à café d'eau si nécessaire. Encore plus vigoureusement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même un manteau brillant sur toutes les pièces. La sauce n'a pas été mise en réserve au fond du bol — chaque morceau tient sa sauce. Graines de sésame et pétoncles éparpillés. La croûte est encore audiblement croustillante lorsqu'elle est pressée.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de sauce appliquée ou le poulet s'asseyait trop longtemps dans la sauce. La croûte s'est adoucie de l'humidité.",
+            "action": "Égoutter l'excès de sauce et servir immédiatement. Le poulet frit coréen est impitoyable après avoir sauté."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un morceau de sauce — l'extérieur doit se sentir tendu et légèrement collant de la sauce mais structurellement rigide. Si la croûte fléchit ou fléchit sous le poids de la sauce, la servir immédiatement avant qu'elle ne s'adoucisse davantage."
+    }
+  ]
 };

@@ -1,120 +1,317 @@
 export default {
-  repoId: "master_middle_eastern_malabi_001",
-  parentRepoId: null,
-  slug: "malabi",
-  author: "ForkRecipe Kitchen",
-  title: "Malabi",
-  description: "A milk-white pudding that trembles like moonlight — set with cornstarch to a delicate, custard-soft consistency, perfumed with rose water and orange blossom, and served cold under a river of pink rose syrup and crushed pistachios.",
-  cuisine: "Middle Eastern",
-  culture: "Israeli/Turkish",
-  category: "desserts",
-  tags: ["gluten-free", "vegetarian", "middle-eastern", "dessert", "rose", "pudding"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "2 hr 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 0, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",     name: "Whole milk",                      ratioValue: 500,  defaultUnit: "ml",  substitutions: ["oat milk (slightly less rich set)"] },
-    { ingId: "ing_02", role: "Dairy",      name: "Heavy cream",                     ratioValue: 100,  defaultUnit: "ml",  substitutions: ["coconut cream for dairy-free"] },
-    { ingId: "ing_03", role: "Sweetener",  name: "White sugar",                     ratioValue: 60,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_04", role: "Starch",     name: "Cornstarch",                      ratioValue: 45,   defaultUnit: "g",   substitutions: ["potato starch (use 40 g)"] },
-    { ingId: "ing_05", role: "Aromatic",   name: "Rose water",                      ratioValue: 20,   defaultUnit: "ml",  substitutions: ["orange blossom water (use half quantity)"] },
-    { ingId: "ing_06", role: "Aromatic",   name: "Orange blossom water",            ratioValue: 10,   defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_07", role: "Sweetener",  name: "Sugar (for rose syrup)",          ratioValue: 80,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_08", role: "Liquid",     name: "Water (for rose syrup)",          ratioValue: 80,   defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_09", role: "Aromatic",   name: "Rose water (for syrup)",          ratioValue: 15,   defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_10", role: "Acid",       name: "Pomegranate molasses or grenadine", ratioValue: 15, defaultUnit: "ml",  substitutions: ["a few drops of natural red food coloring"] },
-    { ingId: "ing_11", role: "Garnish",    name: "Shelled pistachios, roughly chopped", ratioValue: 40, defaultUnit: "g", substitutions: ["crushed walnuts"] },
-    { ingId: "ing_12", role: "Garnish",    name: "Dried rose petals",               ratioValue: 5,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_13", role: "Garnish",    name: "Desiccated coconut",              ratioValue: 20,   defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_middle_eastern_malabi_001",
+  "parentRepoId": null,
+  "slug": "malabi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Malabi",
+  "description": "Un pudding blanc lait qui tremble comme le clair de lune — sert avec de la fécule de maïs à une consistance délicate et douce, parfumée d'eau de rose et de fleur d'oranger, et servi froide sous une rivière de sirop de rose et de pistaches écrasées.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Israélienne/turque",
+  "category": "desserts",
+  "tags": [
+    "Sans gluten",
+    "végétarien",
+    "Moyen-Orient",
+    "dessert",
+    "rose",
+    "pudding"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "2 hr 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Dissolve",
-      inputs: ["ing_04", "ing_01"],
-      outputState: "slurry",
-      instructions: "Measure out 100 ml of the cold milk into a small bowl. Add all the cornstarch and whisk vigorously until not a single lump remains — the mixture should look like thin white paint with no dry powder specks floating at the surface or clinging to the bowl. This slurry technique prevents the starch from seizing into lumps when it hits the hot liquid. The remaining 400 ml of milk goes into the saucepan.",
-      visualCue: {
-        primaryTarget: "A smooth, completely lump-free white liquid the consistency of thin cream. Poured over a dark counter it should leave no lumps behind.",
-        spectrum: [
-          { state: "Underdone", description: "White lumps of undissolved cornstarch are visible at the bottom of the bowl or floating in the milk.", action: "Whisk more vigorously for another 60 seconds; press any visible lumps against the bowl wall with the whisk." },
-          { state: "Perfect",   description: "Perfectly smooth, uniform milky-white liquid. No texture, no lumps, no dry powder specks.", action: "Set aside and prepare the saucepan with remaining milk and cream." },
-          { state: "Overdone",  description: "Not possible to over-dissolve a cold slurry — this step cannot be overdone.", action: "Proceed." },
-        ],
-      },
-      feelCue: "Rub a drop of the slurry between your fingertips — it should feel as smooth as lotion, not at all gritty.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Lait entier",
+      "ratioValue": 500,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Lait d'avoine (ensemble légèrement moins riche)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Heat",
-      inputs: ["slurry", "ing_02", "ing_03"],
-      outputState: "set_malabi",
-      instructions: "Pour the remaining 400 ml of milk into a medium saucepan along with the cream and sugar. Warm over medium heat, stirring gently until the sugar dissolves. When the mixture is steaming and just below simmering, pour in the cornstarch slurry in a thin, steady stream while whisking continuously and vigorously. Do not stop whisking. The mixture will begin to thicken within 2–3 minutes. Continue whisking over medium-low heat until the first large, lazy bubbles break the surface — this activates the starch fully. Remove from heat immediately and whisk in rose water and orange blossom water. The residual fragrance is delicate; heat destroys it quickly, so add off the flame.",
-      visualCue: {
-        primaryTarget: "A thick, smooth, opaque white pudding that falls from the whisk in slow, heavy ribbons and holds a faint surface pattern for 2–3 seconds before settling.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is still thin and runny — it coats the whisk in a thin, watery layer that drips off quickly. Has not yet thickened to a pudding consistency.", action: "Keep whisking over medium heat — the starch needs to reach full gelatinization temperature (~95°C). A few more minutes will bring it together." },
-          { state: "Perfect",   description: "Thick enough to fall in slow, heavy sheets off the whisk. Opaque and silky white. The first lazy bubbles have broken the surface. The kitchen smells sweetly of milk.", action: "Remove from heat immediately and whisk in rose water and orange blossom water. Pour into cups." },
-          { state: "Overdone",  description: "Mixture is a very thick, nearly solid mass — it clumps rather than pours. Starch has fully over-gelatinized.", action: "Thin with a tablespoon of cold milk and whisk vigorously, then pour immediately — the set texture will still be acceptable." },
-        ],
-      },
-      feelCue: "Dip a clean spoon in and run your finger across the back — the line should hold clean and firm without the pudding flowing back across it.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "crème de noix de coco sans lait"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Chill",
-      inputs: ["set_malabi"],
-      outputState: "chilled_malabi",
-      instructions: "Pour the hot pudding into individual serving cups or glasses — about 120–150 ml per cup. If the surface has a skin forming, pass it through a fine sieve as you pour for a perfectly smooth top. Tap each cup gently on the counter to settle. Leave uncovered at room temperature for 15 minutes until the surface is no longer steaming, then cover with plastic wrap pressed directly onto the surface (to prevent a skin) and refrigerate for at least 2 hours. The pudding is best served cold — the rose water and orange blossom flavors bloom more clearly when chilled.",
-      visualCue: {
-        primaryTarget: "Perfectly smooth, white, firm-set puddings with no surface skin or cracks. They should tremble like panna cotta when the cup is gently shaken.",
-        spectrum: [
-          { state: "Underdone", description: "Pudding still moves loosely like a thick liquid when shaken after 2 hours of chilling. Has not fully set.", action: "Refrigerate another hour; the starch needs more time to fully gel at refrigerator temperature." },
-          { state: "Perfect",   description: "Firm with a delicate, gentle jiggle. Surface is matte-smooth and snow-white. Holds a slight indent when pressed with a fingertip before springing back.", action: "Top with rose syrup and garnishes just before serving." },
-          { state: "Overdone",  description: "Pudding is very hard and stiff, like a rubber ball. Does not jiggle at all. Over-starched or too much cooling time.", action: "Serve anyway — the flavor is unaffected. Increase ratio of cream to milk next time for a more delicate set." },
-        ],
-      },
-      feelCue: "Tilt the cup gently — the pudding should slide fractionally and then catch itself, like a very firm blancmange, not like gelatin.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "rose_syrup",
-      instructions: "Combine sugar and water in a small saucepan over medium heat. Stir until the sugar dissolves then bring to a simmer for 3 minutes without stirring. Remove from heat and stir in rose water and pomegranate molasses or grenadine. The syrup should be a soft blush-pink or dusty rose color. Cool to room temperature — do not pour hot syrup over the cold pudding or it will melt the surface and create a watery pool. The contrast between the cold white pudding and the fragrant rose syrup is the entire point.",
-      visualCue: {
-        primaryTarget: "A clear, pale rose-pink syrup that runs freely off a spoon in a thin thread. Fragrant with roses and just faintly tart from the pomegranate.",
-        spectrum: [
-          { state: "Underdone", description: "Syrup is thin and watery; it runs instantly off the spoon with no body.", action: "Return to heat and simmer 2 more minutes to concentrate slightly." },
-          { state: "Perfect",   description: "Lightly viscous, blush-pink, and beautifully fragrant. Coats the back of a spoon faintly. Tastes floral-sweet with a whisper of tartness.", action: "Cool to room temperature before pouring over the chilled malabi." },
-          { state: "Overdone",  description: "Syrup is thick and candy-like — when cooled it will harden on the pudding surface rather than pool gracefully.", action: "Thin with a tablespoon of water, stir, and cool." },
-        ],
-      },
-      feelCue: "A drop of cooled syrup on your wrist should feel like rose-scented water — light and clear, not at all sticky.",
+      "ingId": "ing_04",
+      "role": "Starch",
+      "name": "Farine de maïs",
+      "ratioValue": 45,
+      "defaultUnit": "g",
+      "substitutions": [
+        "fécule de pomme de terre (utilisation 40 g)"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Garnish",
-      inputs: ["chilled_malabi", "rose_syrup", "ing_11", "ing_12", "ing_13"],
-      outputState: "finished_malabi",
-      instructions: "Just before serving, spoon 2–3 tablespoons of the room-temperature rose syrup over each chilled malabi cup, letting it pool at the surface edges and seep slightly down the sides. Scatter roughly chopped pistachios over the center — they provide the textural contrast that makes the dessert. Add a few dried rose petals and a pinch of desiccated coconut. Serve immediately while the pudding is still cold and the garnishes are fresh and crisp. Malabi does not wait well once garnished — the nuts soften in the syrup.",
-      visualCue: {
-        primaryTarget: "A snow-white pudding cup wearing a crown of pink syrup with bright green pistachios, deep-red rose petals, and white coconut snow on top.",
-        spectrum: [
-          { state: "Underdone", description: "Not enough syrup — the pudding surface looks dry and plain. Garnishes look sparse.", action: "Add more syrup; the pudding can take more than you expect without becoming overly sweet." },
-          { state: "Perfect",   description: "The syrup pools beautifully at the top and drips attractively down the inside edge of the cup. Pistachios are vivid green, rose petals dramatic red-pink, coconut white. Visually striking.", action: "Serve immediately." },
-          { state: "Overdone",  description: "So much syrup the pudding is drowning and the garnishes have sunk and softened.", action: "Nothing to do post-plating — serve immediately and note to use less syrup next time." },
-        ],
-      },
-      feelCue: "Tap the pudding with a spoon — it should give a faint, satisfying resistance before the spoon breaks through to the cool, silky interior.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Eau de rose",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau de fleur d'orange (utiliser la moitié de la quantité)"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Eau de fleur d'orange",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre (pour le sirop de rose)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Liquid",
+      "name": "Eau (pour le sirop de rose)",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Eau de rose (pour sirop)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Acid",
+      "name": "Mélasse ou grenadine de grenade",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "quelques gouttes de colorant alimentaire rouge naturel"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Pistaches décortiquées, approximativement hachées",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Noix concassées"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Garnish",
+      "name": "Pétales de roses séchées",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Garnish",
+      "name": "Noix de coco déshydratée",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Dissoudre",
+      "inputs": [
+        "ing_04",
+        "ing_01"
+      ],
+      "outputState": "slurry",
+      "instructions": "Mesurer 100 ml de lait froid dans un petit bol. Ajouter toute la fécule de maïs et fouetter vigoureusement jusqu'à ce qu'il ne reste pas une seule masse – le mélange doit ressembler à de la peinture blanche mince sans tache de poudre sèche flottant à la surface ou s'accrocher au bol. Cette technique de lisier empêche l'amidon de se saisir en morceaux lorsqu'il atteint le liquide chaud. Les 400 ml restants de lait entrent dans la casserole.",
+      "visualCue": {
+        "primaryTarget": "Un liquide blanc lisse, complètement sans grumeaux, la consistance de la crème fine. Versé sur un comptoir sombre, il ne devrait pas laisser de bosses derrière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux blancs d'amidon de maïs non dissous sont visibles au fond du bol ou flottent dans le lait.",
+            "action": "fouetter plus vigoureusement pendant encore 60 secondes; presser les morceaux visibles contre la paroi du bol avec le fouet."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide blanc laiteux parfaitement lisse et uniforme. Pas de texture, pas de bosses, pas de taches de poudre sèche.",
+            "action": "Réserver et préparer la casserole avec le reste de lait et de crème."
+          },
+          {
+            "state": "Overdone",
+            "description": "Il n'est pas possible de sur-dissoudre un lisier froid — cette étape ne peut pas être exagérée.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte de lisier entre vos doigts — il devrait être aussi doux que la lotion, pas du tout gritty."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Chaleur",
+      "inputs": [
+        "slurry",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "set_malabi",
+      "instructions": "Verser le reste de 400 ml de lait dans une casserole moyenne avec la crème et le sucre. Chauffer à feu moyen, en remuant doucement jusqu'à dissolution du sucre. Lorsque le mélange est en vapeur et juste en dessous de la mijotation, verser dans le lisier de fécule de maïs dans un cours d'eau mince et stable tout en fouettant continuellement et vigoureusement. N'arrêtez pas de siffler. Le mélange commencera à épaissir en 2 à 3 minutes. Continuer à fouetter à feu moyen-doux jusqu'à ce que les premières grandes bulles paresseuses brisent la surface, ce qui active complètement l'amidon. Retirer immédiatement du feu et fouetter dans l'eau de rose et l'eau de fleur d'oranger. Le parfum résiduel est délicat ; la chaleur le détruit rapidement, donc rajoutez la flamme.",
+      "visualCue": {
+        "primaryTarget": "Un pudding blanc épais, lisse et opaque qui tombe du fouet dans des rubans lents et lourds et tient un faible motif de surface pendant 2-3 secondes avant de se déposer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est encore mince et rugueux, il enrobe le fouet dans une couche mince et aqueuse qui s'écoule rapidement. N'a pas encore épaissi à une consistance de pudding.",
+            "action": "Continuer à fouetter à feu moyen — l'amidon a besoin d'atteindre une température de gélatinisation complète (~95°C). Encore quelques minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Assez épais pour tomber dans des draps lents et lourds du fouet. Blanc opaque et soyeux. Les premières bulles paresseuses ont brisé la surface. La cuisine sent le lait.",
+            "action": "Retirer immédiatement du feu et fouetter dans l'eau de rose et l'eau de fleur d'oranger. Verser dans des tasses."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est une masse très épaisse, presque solide — il s'agrippe plutôt que se déverse. Starch a complètement surgélatinisé.",
+            "action": "Finissez avec une cuillère à soupe de lait froid et fouettez vigoureusement, puis versez immédiatement — la texture de l'ensemble sera toujours acceptable."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère propre dans le dos et lancez votre doigt à travers le dos — la ligne doit tenir propre et ferme sans que le pudding s'écoule à travers elle."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Refroidissement",
+      "inputs": [
+        "set_malabi"
+      ],
+      "outputState": "chilled_malabi",
+      "instructions": "Verser le pudding chaud dans des tasses ou des verres individuels — environ 120–150 ml par tasse. Si la surface a une forme de peau, passez-la à travers un tamis fin que vous versez pour un haut parfaitement lisse. Appuyez doucement sur chaque tasse sur le comptoir pour régler. Laisser à l'abri à température ambiante pendant 15 minutes jusqu'à ce que la surface ne s'éteigne plus, puis couvrir de plastique d'enveloppe pressé directement sur la surface (pour prévenir une peau) et réfrigérer pendant au moins 2 heures. Le pudding est mieux servi froid — l'eau de rose et les saveurs de fleur d'orange fleurissent plus clairement quand il est réfrigéré.",
+      "visualCue": {
+        "primaryTarget": "Parfaitement lisse, blanc, puddings fermes sans peau de surface ni fissures. Ils doivent trembler comme panna cotta quand la tasse est légèrement secouée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pudding se déplace encore comme un liquide épais lorsqu'elle est secouée après 2 heures de refroidissement. Il n'est pas prêt.",
+            "action": "Réfrigérer une autre heure; l'amidon a besoin de plus de temps pour geler complètement à la température du réfrigérateur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ferme avec un délicat et doux jeu. La surface est mate-smooth et blanche-neige. Tient un léger tiret lorsqu'il est pressé avec un bout de doigt avant de ressortir.",
+            "action": "Garnir de sirop de rose et de garnitures juste avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pudding est très dure et raide, comme une boule en caoutchouc. Ça ne me gêne pas du tout. Temps de refroidissement excessif ou trop long.",
+            "action": "Servir de toute façon — la saveur n'est pas affectée. Augmenter le rapport crème/lait la prochaine fois pour un ensemble plus délicat."
+          }
+        ]
+      },
+      "feelCue": "Inclinez doucement la tasse — le pudding doit glisser fractionnellement et puis se prendre, comme un blanc-manger très ferme, pas comme la gélatine."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "rose_syrup",
+      "instructions": "Mélanger le sucre et l'eau dans une petite casserole à feu moyen. Incorporer jusqu'à ce que le sucre se dissout et laisser mijoter 3 minutes sans remuer. Retirer du feu et remuer dans l'eau de rose et la mélasse de grenade ou la grenadine. Le sirop doit être d'une couleur rose molle ou poussiéreuse. Refroidir à température ambiante — ne versez pas de sirop chaud sur le pudding froid ou il fondra la surface et créera une piscine aqueuse. Le contraste entre le pudding blanc froid et le sirop de rose parfumé est tout le point.",
+      "visualCue": {
+        "primaryTarget": "Un sirop rose clair et pâle qui sort librement d'une cuillère dans un fil mince. Parfumé de roses et légèrement acidulé de la grenade.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sirop est mince et aqueux; il sort instantanément de la cuillère sans corps.",
+            "action": "Retourner au feu et laisser mijoter 2 minutes de plus pour se concentrer légèrement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légèrement visqueux, blush-pink, et magnifiquement parfumé. Enrober l'arrière d'une cuillère à peine. Goûte floral-douce avec un murmure de tarte.",
+            "action": "Laisser refroidir à température ambiante avant de verser sur le malabi réfrigéré."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sirop est épais et ressemble à un bonbon — lorsqu'il sera refroidi, il durcira sur la surface du pudding plutôt que de s'amadouer avec grâce.",
+            "action": "Finir avec une cuillère à soupe d'eau, remuer et refroidir."
+          }
+        ]
+      },
+      "feelCue": "Une goutte de sirop refroidi sur le poignet devrait se sentir comme de l'eau parfumée à la rose - légère et claire, pas du tout collante."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Garnir",
+      "inputs": [
+        "chilled_malabi",
+        "rose_syrup",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "finished_malabi",
+      "instructions": "Juste avant de servir, cuillerer 2 à 3 cuillères à soupe de sirop de rose à température ambiante sur chaque tasse de malabi réfrigérée, la laisser s'accumuler aux bords de la surface et s'infiltrer légèrement sur les côtés. Dispersez des pistaches grossièrement hachées sur le centre — elles fournissent le contraste textural qui fait le dessert. Ajouter quelques pétales de rose séchés et une pincée de noix de coco déshydratée. Servir immédiatement pendant que le pudding est encore froid et les garnitures sont fraîches et croustillantes. Malabi n'attend pas bien une fois garni, les noix ramollissent dans le sirop.",
+      "visualCue": {
+        "primaryTarget": "Une tasse de pudding blanc neige portant une couronne de sirop rose avec des pistaches vert vif, des pétales de rose rouge profond et de la neige de noix de coco blanche sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas assez de sirop — la surface du pudding semble sèche et lisse. Les garnitures sont rares.",
+            "action": "Ajouter plus de sirop; le pudding peut prendre plus que vous ne vous attendez sans devenir trop sucré."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les piscines de sirop magnifiquement en haut et gouttes d'eau attrayantement dans le bord intérieur de la tasse. Les pistaches sont vert vif, pétales de roses dramatiques rose-rouge, blanc de coco. Visuellement frappant.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tellement de sirop le pudding se noie et les garnitures ont coulé et adouci.",
+            "action": "Rien à faire après le pliage — servir immédiatement et noter d'utiliser moins de sirop la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Tapotez le pudding avec une cuillère — il devrait donner une résistance faible et satisfaisante avant que la cuillère ne brise à l'intérieur frais et soyeux."
+    }
+  ]
 };

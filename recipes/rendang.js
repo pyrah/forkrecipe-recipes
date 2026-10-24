@@ -1,108 +1,321 @@
 export default {
-  repoId: "master_indonesian_rendang_001",
-  parentRepoId: null,
-  slug: "rendang",
-  author: "ForkRecipe Kitchen",
-  title: "Beef Rendang",
-  description: "The Minangkabau's extraordinary dry beef curry — chunks of beef slow-cooked for hours in coconut milk with a complex paste of galangal, lemongrass, and chili until all liquid evaporates and the meat fries in its own released fat, coating itself in a dark, nearly black, intensely concentrated spice crust.",
-  cuisine: "Indonesian",
-  culture: "Minangkabau",
-  category: "proteins",
-  tags: ["indonesian", "minangkabau", "beef", "coconut-milk", "dry-curry", "spiced", "festive"],
-  difficulty: 4,
-  activeTime: "1 hr",
-  totalTime: "5 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 1, umami: 4, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Beef chuck or short rib, cut into 5 cm chunks", ratioValue: 1000, defaultUnit: "g", substitutions: ["beef brisket", "goat shoulder"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Full-fat coconut milk",                          ratioValue: 800,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Lemongrass stalks, bruised and tied in a knot", ratioValue: 40,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Kaffir lime leaves (daun jeruk purut)",          ratioValue: 10,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Turmeric leaves (daun kunyit), torn (optional)", ratioValue: 5,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Toasted desiccated coconut (kerisik)",           ratioValue: 50,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine sea salt",                                  ratioValue: 15,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Sweetener", name: "Palm sugar (gula merah), grated",                ratioValue: 20,   defaultUnit: "g",  substitutions: ["dark brown sugar"] },
-    // Rempah paste ingredients
-    { ingId: "ing_09", role: "Heat",      name: "Dried red chilies, soaked in hot water",         ratioValue: 30,   defaultUnit: "g",  substitutions: ["2 tbsp chili paste"] },
-    { ingId: "ing_10", role: "Heat",      name: "Fresh red bird's-eye chilies",                   ratioValue: 20,   defaultUnit: "g",  substitutions: ["cayenne pepper (use less)"] },
-    { ingId: "ing_11", role: "Allium",    name: "Shallots, peeled and roughly chopped",           ratioValue: 120,  defaultUnit: "g",  substitutions: ["red onion"] },
-    { ingId: "ing_12", role: "Allium",    name: "Garlic cloves, peeled",                          ratioValue: 40,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_13", role: "Aromatic",  name: "Fresh galangal, peeled and sliced",              ratioValue: 40,   defaultUnit: "g",  substitutions: ["frozen galangal", "2 tsp galangal powder"] },
-    { ingId: "ing_14", role: "Aromatic",  name: "Fresh ginger, peeled and sliced",                ratioValue: 25,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_15", role: "Spice",     name: "Fresh turmeric, peeled, or 1 tsp ground turmeric", ratioValue: 20, defaultUnit: "g",  substitutions: ["1 tsp ground turmeric"] },
-    { ingId: "ing_16", role: "Fat",       name: "Neutral oil for paste-frying",                   ratioValue: 30,   defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_indonesian_rendang_001",
+  "parentRepoId": null,
+  "slug": "rendang",
+  "author": "ForkRecipe Kitchen",
+  "title": "Boeuf Rendang",
+  "description": "L'extraordinaire curry de boeuf sec du Minangkabau — des morceaux de bœuf cuits lentement pendant des heures dans du lait de coco avec une pâte complexe de galangal, de citronnelle et de chili jusqu'à ce que tous les liquides s'évaporent et les frites de viande dans leur propre graisse libérée, se revêtement dans une croûte d'épices sombre, presque noire, intensement concentrée.",
+  "cuisine": "Indonésien",
+  "culture": "Minangkabau",
+  "category": "proteins",
+  "tags": [
+    "par an",
+    "Minangkabau",
+    "boeuf",
+    "lait de coco",
+    "curry sec",
+    "épicé",
+    "Fête"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hr",
+  "totalTime": "5 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_09", "ing_10", "ing_11", "ing_12", "ing_13", "ing_14", "ing_15"],
-      outputState: "rempah_paste",
-      instructions: "Drain the soaked dried chilies. Combine all paste ingredients — dried chilies, fresh chilies, shallots, garlic, galangal, ginger, and fresh turmeric — in a blender or food processor. Add a splash of water (2–3 tablespoons) to help the blades catch. Blend to a smooth, fine paste, scraping down the sides several times. The paste should have the consistency of thick hummus with no visible chunks of shallot or galangal remaining. Taste it raw: it should be fiercely aromatic, bright with chili, and pungent with allium. This is the rempah — the soul of the rendang.",
-      visualCue: {
-        primaryTarget: "A smooth, vivid orange-red paste with no visible lumps, smelling intensely of chili, shallot, galangal, and fresh turmeric.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is chunky and rough, with visible pieces of shallot, galangal, or chili. Texture is uneven.", action: "Continue blending, scraping down the sides frequently. Add another tablespoon of water if the blades are not catching." },
-          { state: "Perfect",   description: "Completely smooth and homogeneous — silky, thick, deeply aromatic. The colour is vivid orange-red from turmeric and chili.", action: "Fry the rempah immediately or refrigerate up to 24 hours in advance." },
-          { state: "Overdone",  description: "Paste has been blended so long it has aerated and turned foamy and pale orange.", action: "Proceed — the foam dissipates in the pan. The flavour is unaffected." },
-        ],
-      },
-      feelCue: "Rub a tiny amount between your fingers: you should feel smoothness with only the faintest fibrous resistance from the galangal. Any grittiness means more blending is needed.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Bouchée de boeuf ou côte courte, coupée en morceaux de 5 cm",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poitrine de boeuf",
+        "épaule de chèvre"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["rempah_paste", "ing_03", "ing_04", "ing_05", "ing_16"],
-      outputState: "fried_rempah",
-      instructions: "Heat the oil in a large, wide, heavy pot or wok over medium heat. Add the rempah paste, lemongrass, kaffir lime leaves, and turmeric leaves. Fry, stirring almost constantly, for 12–18 minutes. The paste will sputter and pop, then slowly darken and begin to stick to the pot. Keep stirring — this constant movement prevents burning and drives off the raw moisture in the aromatics. The rempah is ready when it has darkened several shades to a deep brick-red, the oil begins to separate and pool around the paste, and the kitchen fills with a toasted, fragrant aroma rather than the sharp raw smell of the uncooked paste.",
-      visualCue: {
-        primaryTarget: "Dark brick-red paste that has reduced by about a third, with clear, fragrant oil visibly pooling around and separating from the solids.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is still bright orange and smells raw and sharp. No oil separation visible.", action: "Keep frying. Unfried rempah gives a raw, harsh flavour to the final dish. The full 15-minute fry is non-negotiable." },
-          { state: "Perfect",   description: "Deep, dark brick-red, fragrant with a toasted, complex aroma. Oil shimmering separately at the edges of the paste. Volume significantly reduced.", action: "Add the beef chunks and stir to coat thoroughly." },
-          { state: "Overdone",  description: "Paste has stuck and scorched in patches — dark brown flecks at the bottom of the pot, acrid smell.", action: "Remove from heat, scrape the pot, and discard the scorched layer. Add a splash of coconut milk to deglaze before continuing." },
-        ],
-      },
-      feelCue: "Listen for the change in sound: the initial loud, wet spitting and hissing of the paste will gradually give way to a drier, quieter sizzle as the moisture cooks off. That quieting signals the rempah is nearly done.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Lait de coco plein gras",
+      "ratioValue": 800,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Braise",
-      inputs: ["fried_rempah", "ing_01", "ing_02", "ing_07", "ing_08", "ing_06"],
-      outputState: "simmering_rendang",
-      instructions: "Add the beef chunks to the fried rempah and stir to coat every surface. Pour in the coconut milk, add the salt and palm sugar, and stir to combine. Bring to a boil over high heat, then reduce to a vigorous simmer. The liquid will be a pale orange-yellow. Cook uncovered, stirring occasionally at first and more frequently as the liquid reduces. After about 1.5 to 2 hours, most of the liquid will have evaporated. Add the kerisik (toasted coconut) now — it absorbs the remaining liquid, thickens the sauce, and adds a nutty richness. Continue cooking.",
-      visualCue: {
-        primaryTarget: "A thick, deeply coloured curry with the beef fully submerged in a rich, caramel-brown sauce that is no longer liquid but thick and clingy.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still pale, thin, and watery. The coconut milk has not yet reduced significantly. Beef is not yet tender.", action: "Continue simmering uncovered. This stage takes time — 2 hours or more depending on the pot and heat." },
-          { state: "Perfect",   description: "Sauce is a deep caramel-brown, thick, and clings to the beef. Coconut oil has separated and begun to pool. Beef yields easily when pressed with a spoon.", action: "Now enter the dry-frying stage: continue cooking with frequent stirring until the oil fries the beef in the spice crust." },
-          { state: "Overdone",  description: "Sauce has reduced too fast before the beef is tender. The pot bottom is burning and the beef is still tough.", action: "Add 200 ml more coconut milk or water, lower the heat, cover partially, and continue. The beef needs adequate time to break down collagen." },
-        ],
-      },
-      feelCue: "Press a piece of beef with the back of a wooden spoon: it should offer initial resistance that yields without the beef falling apart — like pressing a firm mushroom. If it still feels springy and unyielding, it needs more time in the liquid.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Pâtes de citronnelle, meurtries et liées en un nœud",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Reduce",
-      inputs: ["simmering_rendang"],
-      outputState: "dry_rendang",
-      instructions: "Once the sauce is thick and the oil has separated, lower the heat slightly and continue cooking, now stirring almost constantly. The liquid is essentially gone and the beef is beginning to fry in the released coconut and spice oil. This final stage is transformative and takes another 30–60 minutes of patient, attentive stirring. The sauce will coat the meat in a dark, almost-black crust, and the aroma will shift from a curried fragrance to something deeper, drier, and almost smoky. The pot will hiss and crackle. This is rendang becoming rendang. Taste and adjust salt. Serve with steamed rice.",
-      visualCue: {
-        primaryTarget: "Beef chunks coated in a dark, nearly black, deeply fragrant spice crust that glistens with coconut oil — almost no sauce remaining in the pot, just oil and spice-coated meat.",
-        spectrum: [
-          { state: "Underdone", description: "Beef still has a visible wet, sauce-like coating rather than a dry crust. The colour is a muddy brown rather than dark mahogany-black.", action: "Keep cooking and stirring. The transformation from wet curry to dry rendang is a matter of patience." },
-          { state: "Perfect",   description: "Each piece of beef is coated in a dark, dry-looking, glistening crust of concentrated spice. The pot bottom is dry and fragrant. The beef pulls apart easily with two forks.", action: "Taste and adjust salt. Rest for 10 minutes off heat before serving." },
-          { state: "Overdone",  description: "Spice crust is charred, the meat smells burnt rather than toasted, and the flavour is acrid.", action: "Add 100 ml of water to lift the burnt layer and immediately remove from heat. The interior of the beef chunks is often still excellent; discard the burnt outer crust." },
-        ],
-      },
-      feelCue: "Pick up a piece of the finished rendang with tongs and tap it gently against the pot: it should make a dry, almost leathery sound, and the crust should feel firm rather than wet. The meat inside should shred easily when pulled apart with your fingers.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Feuilles de chaux de Kaffir (pourpre de jeruk)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Feuilles turcumaniques (daun kunyit), déchirées (facultatif)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Noix de coco déshydratée grillée (kerisik)",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Sucre de palme (gula merah), râpé",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brun foncé"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Heat",
+      "name": "Piments rouges séchés, trempés dans l'eau chaude",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "2 c. à soupe de pâte de chili"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Heat",
+      "name": "Chilies rouges rouges fraîches",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivre de Cayenne (utiliser moins)"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Allium",
+      "name": "Échalotes, pelées et hachées grossièrement",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon rouge"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Allium",
+      "name": "Giroves d'ail, pelées",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Aromatic",
+      "name": "Galangal frais, pelé et tranché",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "galangal congelé",
+        "2 c. à thé en poudre galangale"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Aromatic",
+      "name": "Gingembre frais, pelé et tranché",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Spice",
+      "name": "Curcuma frais, pelé ou 1 c. à thé, broyé",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 c. à soupe de curcuma"
+      ]
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Fat",
+      "name": "Huile neutre pour friture de pâte",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13",
+        "ing_14",
+        "ing_15"
+      ],
+      "outputState": "rempah_paste",
+      "instructions": "Égoutter les piments séchés trempés. Mélanger tous les ingrédients en pâte — chilis séchés, chilis frais, échalotes, ail, galangal, gingembre et curcuma frais — dans un mélangeur ou un robot culinaire. Ajouter un jet d'eau (2 à 3 cuillères à soupe) pour aider les lames à attraper. Mélanger à une pâte lisse et fine, grattant les côtés plusieurs fois. La pâte doit avoir la consistance d'un hummus épais sans morceaux visibles d'échalote ou de galangal restant. Goûtez-le cru: il devrait être farouchement aromatique, brillant avec du chili, et piquant avec de l'allium. C'est le rempa, l'âme du rendang.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse, rouge-orange vif sans bosses visibles, qui sent intensément le chili, l'échalote, le galangal et le curcuma frais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est épaisse et rugueuse, avec des morceaux visibles d'échalote, de galangal ou de chili. La texture est inégale.",
+            "action": "Continuer le mélange, en grattant fréquemment les côtés. Ajouter une autre cuillère à soupe d'eau si les lames ne sont pas attraper."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse et homogène — soyeux, épais, profondément aromatique. La couleur est rouge-orange vif du curcuma et du chili.",
+            "action": "Faire frire le rempa immédiatement ou réfrigérer jusqu'à 24 heures à l'avance."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a été mélangée si longtemps qu'elle a été aérée et devenue mousseuse et orange pâle.",
+            "action": "Procéder — la mousse se dissipe dans la poêle. La saveur n'est pas affectée."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité entre vos doigts : vous devriez sentir la douceur avec seulement la résistance fibreuse la plus faible du galangal. Tout grittness signifie plus de mélange est nécessaire."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "rempah_paste",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_16"
+      ],
+      "outputState": "fried_rempah",
+      "instructions": "Chauffer l'huile dans un grand pot ou un wok lourd à feu moyen. Ajouter la pâte de rempa, la citronnelle, les feuilles de lime kaffir et les feuilles de curcuma. Faire frire, en remuant presque constamment, pendant 12–18 minutes. La pâte crachera et sautera, puis s'assombrira lentement et commencera à coller au pot. Continuez à remuer — ce mouvement constant empêche la combustion et élimine l'humidité brute dans les aromatiques. Le rempah est prêt quand il a obscurci plusieurs nuances à un rouge-brique profond, l'huile commence à se séparer et baigner autour de la pâte, et la cuisine se remplit d'un arôme grillé, parfumé plutôt que l'odeur brute aiguë de la pâte non cuite.",
+      "visualCue": {
+        "primaryTarget": "Pâte rouge brique foncée qui a diminué d'environ un tiers, avec de l'huile claire et parfumée visiblement baissant autour et se séparant des solides.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore orange vif et sent cru et vif. Aucune séparation d'huile visible.",
+            "action": "Continuez à frire. Le rempa non frit donne un goût cru et dur au plat final. La frite pleine de 15 minutes n'est pas négociable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Profond, rouge brique foncé, parfumé avec un arôme complexe grillé. L'huile brille séparément aux bords de la pâte. Volume significativement réduit.",
+            "action": "Ajouter les morceaux de boeuf et remuer soigneusement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est collée et brûlée dans des taches — des taches brunes foncées au fond du pot, une odeur acride.",
+            "action": "Retirer du feu, racler le pot et jeter la couche brûlée. Ajouter une touche de lait de coco pour déglacer avant de continuer."
+          }
+        ]
+      },
+      "feelCue": "Écouter le changement de son : le premier craché fort et humide et le sifflement de la pâte laisseront peu à peu place à un étourdissement plus sec et plus silencieux lorsque l'humidité se consume. Ce silence indique que le Rempa est presque terminé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "fried_rempah",
+        "ing_01",
+        "ing_02",
+        "ing_07",
+        "ing_08",
+        "ing_06"
+      ],
+      "outputState": "simmering_rendang",
+      "instructions": "Ajouter les morceaux de boeuf au rempa frit et remuer pour enrober chaque surface. Verser le lait de coco, ajouter le sel et le sucre de palme et mélanger. Porter à ébullition à feu vif, puis laisser mijoter vigoureusement. Le liquide sera jaune orange pâle. Cuire à découvert, en remuant occasionnellement au début et plus fréquemment que le liquide diminue. Après environ 1,5 à 2 heures, la plupart du liquide se sera évaporé. Ajoutez maintenant le kérisik (noix de coco grillée), il absorbe le liquide restant, épaissit la sauce et ajoute une richesse en noix. Continuez à cuisiner.",
+      "visualCue": {
+        "primaryTarget": "Un curry épais, de couleur profonde avec le bœuf entièrement submergé dans une sauce riche, brun caramel qui n'est plus liquide mais épais et collant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore pâle, mince et aqueuse. Le lait de coco n'a pas encore diminué de façon significative. Le boeuf n'est pas encore tendre.",
+            "action": "Continuez à mijoter à découvert. Cette étape prend du temps — 2 heures ou plus selon la casserole et la chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est un caramel-brun profond, épais, et s'accroche au boeuf. L'huile de coco s'est séparée et a commencé à se mettre en commun. Le boeuf produit facilement lorsqu'il est pressé avec une cuillère.",
+            "action": "Maintenant, entrez dans l'étape de friture à sec: continuez la cuisson en remuant fréquemment jusqu'à ce que l'huile frite le boeuf dans la croûte d'épices."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite trop vite avant que le boeuf ne soit tendre. Le fond du pot brûle et le bœuf est encore dur.",
+            "action": "Ajouter 200 ml de lait de coco ou d'eau, baisser la chaleur, couvrir partiellement et continuer. Le boeuf a besoin de temps pour décomposer le collagène."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau de bœuf à l'arrière d'une cuillère en bois: il devrait offrir une résistance initiale qui donne sans que le boeuf tombe en morceaux — comme presser un champignon ferme. Si elle se sent encore printanière et inébranlable, elle a besoin de plus de temps dans le liquide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Réduire",
+      "inputs": [
+        "simmering_rendang"
+      ],
+      "outputState": "dry_rendang",
+      "instructions": "Une fois la sauce épaisse et l'huile séparée, abaissez légèrement la chaleur et continuez la cuisson, en remuant presque constamment. Le liquide est essentiellement parti et le boeuf commence à frire dans l'huile de coco et d'épices libérée. Cette dernière étape est transformatrice et prend encore 30 à 60 minutes de patient, en remuant attentivement. La sauce enrobera la viande dans une croûte noire et presque noire, et l'arôme passera d'un parfum séché à quelque chose de plus profond, plus sec et presque fumé. Le pot va siffler et craquer. C'est Rendang qui devient Rendang. Goûtez et ajustez le sel. Servir avec du riz cuit à la vapeur.",
+      "visualCue": {
+        "primaryTarget": "Des morceaux de boeuf enrobés d'une croûte d'épices foncée, presque noire et profondément parfumée qui brille avec de l'huile de coco — presque aucune sauce restant dans la casserole, juste de l'huile et de la viande enrobée d'épices.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le boeuf est encore recouvert d'une couche humide visible, semblable à une sauce, plutôt qu'une croûte sèche. La couleur est brun boueux plutôt que noir acajou foncé.",
+            "action": "Continuez à cuisiner et à remuer. La transformation du curry humide au rendang sec est une question de patience."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque morceau de boeuf est enrobé d'une croûte foncée, d'aspect sec, scintillante d'épices concentrées. Le fond du pot est sec et parfumé. Le bœuf se sépare facilement avec deux fourchettes.",
+            "action": "Goûtez et ajustez le sel. Reposez-vous 10 minutes avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte d'épices est carbonisée, la viande sent brûlée plutôt que grillée, et la saveur est acride.",
+            "action": "Ajouter 100 ml d'eau pour lever la couche brûlée et retirer immédiatement de la chaleur. L'intérieur des morceaux de boeuf est souvent encore excellent; jeter la croûte extérieure brûlée."
+          }
+        ]
+      },
+      "feelCue": "Prenez un morceau du rendang fini avec des pinces et tapez-le doucement contre le pot: il devrait faire un son sec, presque cuireux, et la croûte devrait se sentir ferme plutôt que humide. La viande à l'intérieur devrait être déchiquetée facilement lorsqu'elle est retirée des doigts."
+    }
+  ]
 };

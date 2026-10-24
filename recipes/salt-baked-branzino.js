@@ -1,115 +1,274 @@
 export default {
-  repoId: "master_italian_salt_baked_branzino_001",
-  parentRepoId: null,
-  slug: "salt-baked-branzino",
-  author: "ForkRecipe Kitchen",
-  title: "Salt-Baked Branzino",
-  description: "A whole branzino buried in a thick egg-white salt crust and baked — the mineral shell seals in steam and moisture, cooking the fish impossibly gently within its own aromatics.",
-  cuisine: "Italian",
-  culture: "Mediterranean",
-  category: "seafood",
-  tags: ["branzino", "italian", "salt-crust", "whole-fish", "mediterranean", "baking", "dramatic"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "50 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 3, sour: 1, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole branzino (European sea bass), gutted and scaled", ratioValue: 600,  defaultUnit: "g", substitutions: ["whole sea bream", "red snapper"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Coarse sea salt (not iodised)",                         ratioValue: 1500, defaultUnit: "g", substitutions: ["kosher salt"] },
-    { ingId: "ing_03", role: "Binder",    name: "Egg whites",                                            ratioValue: 3,    defaultUnit: "units", substitutions: [] },
-    { ingId: "ing_04", role: "Citrus",    name: "Lemon, thinly sliced into rounds",                      ratioValue: 1,    defaultUnit: "lemon", substitutions: ["orange slices"] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh fennel fronds",                                   ratioValue: 1,    defaultUnit: "small bunch", substitutions: ["fresh dill"] },
-    { ingId: "ing_06", role: "Herb",      name: "Fresh thyme sprigs",                                    ratioValue: 4,    defaultUnit: "sprigs", substitutions: ["fresh rosemary"] },
-    { ingId: "ing_07", role: "Herb",      name: "Fresh flat-leaf parsley sprigs",                        ratioValue: 4,    defaultUnit: "sprigs", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Extra-virgin olive oil, for serving",                   ratioValue: 30,   defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_italian_salt_baked_branzino_001",
+  "parentRepoId": null,
+  "slug": "salt-baked-branzino",
+  "author": "ForkRecipe Kitchen",
+  "title": "Branzino salé",
+  "description": "Un branzino entier enterré dans une épaisse croûte de sel blanc-oeuf et cuit au four — la coquille minérale s'étanchéité dans la vapeur et l'humidité, la cuisson du poisson impossiblement doucement dans ses propres aromatiques.",
+  "cuisine": "Italien",
+  "culture": "Méditerranée",
+  "category": "seafood",
+  "tags": [
+    "branzino",
+    "Italien",
+    "croûte salée",
+    "poissons entiers",
+    "méditerranéen",
+    "Cuisson",
+    "dramatique"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "50 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "salt_crust_mixture",
-      instructions: "Preheat the oven to 190°C (375°F). In a large bowl, combine the coarse sea salt with the egg whites. Mix firmly with your hands until every grain of salt is coated and the mixture resembles wet sand — it should clump when squeezed and hold an impression of your fist. This is the mortar that will seal the fish. If it crumbles and won't hold a shape, add a fourth egg white.",
-      visualCue: {
-        primaryTarget: "A dense, heavy mixture the colour and texture of damp beach sand — clumping easily when squeezed, holding its shape without collapsing.",
-        spectrum: [
-          { state: "Underdone", description: "Salt is still dry and granular. Egg whites sit in wet patches rather than coating all the grains. Mixture falls apart when squeezed.", action: "Mix more vigorously until all the egg white is evenly distributed. The mixture must hold a squeezed shape or the crust will crack open during baking." },
-          { state: "Perfect",   description: "Heavy, cohesive, damp throughout. Squeezes into a firm lump that holds its shape when released, like well-packed wet sand for a sandcastle.", action: "Work quickly — the egg whites begin to set as they warm up." },
-          { state: "Overdone",  description: "Mixture has been over-worked and is beginning to feel sticky rather than sandy. Egg whites are slightly frothy.", action: "It is still usable — press on. The crust may be slightly less rigid but will still seal adequately." },
-        ],
-      },
-      feelCue: "Squeeze a fistful — it should pack like wet sand, holding the impression of your knuckles without weeping liquid.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Branzino entier (basse européen), vidé et écalé",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "toute la mer",
+        "snapper rouge"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Season",
-      inputs: ["ing_01", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "stuffed_branzino",
-      instructions: "Check the fish cavity is clean and dry. Season the interior lightly with a pinch of salt. Lay the lemon rounds in a shingle pattern along the cavity floor. Pack the fennel fronds, thyme, and parsley in on top of the lemon — the cavity should be visibly full. The herbs will steam inside the crust and perfume the flesh from the inside out without penetrating it externally at all.",
-      visualCue: {
-        primaryTarget: "The fish cavity visibly bulging with green herbs and overlapping lemon rounds. The fish exterior is dry and unadorned.",
-        spectrum: [
-          { state: "Underdone", description: "Cavity is only half filled. A few sparse herb sprigs rattle around.", action: "Add more herbs — the stuffing expands with heat and releases its aromatics as steam. A sparse stuffing leaves the flesh flavourless." },
-          { state: "Perfect",   description: "Cavity packed firmly with herbs and lemon, with a faint bulge visible along the belly. The fish holds together when lifted.", action: "Transfer to the baking tray over the salt bed immediately." },
-          { state: "Overdone",  description: "So much stuffing crammed in that the belly has been torn or the fish has been forced open. Herbs are spilling from the cavity.", action: "Reduce the quantity slightly and close the belly with a skewer if needed to hold everything in place." },
-        ],
-      },
-      feelCue: "The stuffed fish should feel heavy and dense when you lift it. You can feel the herbs filling out the belly — a reassuring, solid resistance.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sels de mer grossiers (non iodés)",
+      "ratioValue": 1500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Press",
-      inputs: ["stuffed_branzino", "salt_crust_mixture"],
-      outputState: "encased_branzino",
-      instructions: "Spread a third of the salt mixture onto a rimmed baking sheet in the exact shape and size of the fish, about 1.5 cm thick. Lay the stuffed branzino on top. Pack the remaining salt mixture firmly over the top and sides of the fish, pressing and smoothing it into a solid, even casing at least 1.5 cm thick at every point. Pay special attention to the head and tail — cracks there will let steam escape and dry the flesh. The fish should be completely invisible under the crust. Smooth the surface with wet palms.",
-      visualCue: {
-        primaryTarget: "A smooth, solid mound of white salt on the baking sheet, clearly fish-shaped, with no cracks, gaps, or exposed fish visible.",
-        spectrum: [
-          { state: "Underdone", description: "Salt crust is thin in places, cracking at the edges or tail. Patches of fish skin are still visible through the crust.", action: "Press additional salt mixture over any exposed areas and smooth firmly with wet hands. Thin spots will crack open in the oven and dry those sections of fish." },
-          { state: "Perfect",   description: "A seamless, solid white dome 1.5–2 cm thick all over. No cracks. No visible fish. Surface has been smoothed to a uniform finish.", action: "Into the oven — cook immediately before the salt draws moisture out of the fish." },
-          { state: "Overdone",  description: "Salt crust is excessively thick (over 3 cm) in places, making it very heavy. The fish shape is completely lost and the crust looks like a formless white loaf.", action: "It will still work, but take longer to bake and be more difficult to crack. Aim for consistency in thickness next time." },
-        ],
-      },
-      feelCue: "Pat the crust firmly — it should feel as solid and rigid as packed clay, with no soft spots that give when pressed.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Blancs d'oeufs",
+      "ratioValue": 3,
+      "defaultUnit": "units",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["encased_branzino"],
-      outputState: "baked_branzino",
-      instructions: "Bake at 190°C (375°F) for 25–30 minutes for a 600g fish. The timing scales with fish weight: add 5 minutes per additional 200g. The crust will harden to a rigid, chalky shell and may develop faint ivory-to-beige colouring on top. It will not brown dramatically — the visual cues here are all about the crust hardening. A probe thermometer inserted through the crust should read 58–60°C at the thickest part of the fish. If you do not have a probe, use the timing as your guide.",
-      visualCue: {
-        primaryTarget: "A chalky-white, hard, rigid shell on the baking tray that resists when tapped with a wooden spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is still slightly soft and gives when pressed. Feels like dense, not-yet-set clay. Probe reads below 55°C.", action: "Return for 5 more minutes. The crust must be completely rigid before cracking — a soft crust means undercooked fish inside." },
-          { state: "Perfect",   description: "Crust is hard, chalky, and sounds hollow when tapped with a spoon. Probe at the thickest part reads 58–60°C. A faint smell of herbs escaping around the edges.", action: "Bring to the table immediately for the dramatic tableside cracking." },
-          { state: "Overdone",  description: "Crust has turned a deep beige or pale brown in spots. Probe reads above 65°C. Strong smell of baked salt.", action: "The fish may be drier than ideal inside. The crust method protects against extreme overcooking — crack it immediately and assess the flesh." },
-        ],
-      },
-      feelCue: "Knock the crust firmly with a wooden spoon handle — you should hear a solid, resonant 'thunk', like knocking on a thick ceramic pot.",
+      "ingId": "ing_04",
+      "role": "Citrus",
+      "name": "Citron, tranché en rondelles",
+      "ratioValue": 1,
+      "defaultUnit": "lemon",
+      "substitutions": [
+        "tranches d'orange"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Finish",
-      inputs: ["baked_branzino", "ing_08"],
-      outputState: "salt_baked_branzino",
-      instructions: "Bring the baking sheet to the table. Using the back of a heavy spoon or a small mallet, crack the crust firmly along the spine of the fish. It will fracture in large shards — peel these away and discard. Carefully lift the top fillet free, then remove the spine in one piece. The bottom fillet sits on the lower salt bed — slide a spatula underneath to lift it clean. Serve the fillets on warmed plates with a generous pour of extra-virgin olive oil and the lemon slices from inside the cavity.",
-      visualCue: {
-        primaryTarget: "Pearlescent, perfectly cooked fish fillets with a glistening surface and no grey, dry patches. The flesh should pull apart in large, moist, glass-clear flakes.",
-        spectrum: [
-          { state: "Underdone", description: "Flesh at the thickest point near the head is still translucent and cool to the touch. Flakes resist separating cleanly.", action: "Return the fish in the broken crust to the oven for another 5 minutes — the shell still traps some heat." },
-          { state: "Perfect",   description: "Flesh is fully opaque, white-to-ivory, and separates in generous, glistening flakes with no dryness at all. Smells intensely of herbs and sea. A slow, clear drop of natural jus beads on the plate.", action: "Plate immediately and pour olive oil over the exposed flesh while it is still steaming." },
-          { state: "Overdone",  description: "Flesh looks dry, chalky, or grainy. Flakes are small and tight rather than large and yielding. Any moisture has been baked away.", action: "A generous pour of excellent olive oil at the table can revive the flavour if not the texture. Serve with plenty of lemon." },
-        ],
-      },
-      feelCue: "Press a fillet gently with a fork — it should yield immediately and fall into thick, glossy flakes without any resistance. Resistance means dryness.",
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Frondes de fenouil frais",
+      "ratioValue": 1,
+      "defaultUnit": "small bunch",
+      "substitutions": [
+        "d'aneth frais"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 4,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "romarin frais"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Graines de persil à feuilles plates fraîches",
+      "ratioValue": 4,
+      "defaultUnit": "sprigs",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge, pour le service",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "salt_crust_mixture",
+      "instructions": "Préchauffer le four à 190°C (375°F). Dans un grand bol, mélanger le sel de mer grossier avec les blancs d'œufs. Mélangez fermement avec vos mains jusqu'à ce que chaque grain de sel soit enduit et que le mélange ressemble à du sable humide — il devrait s'agglutiner lorsqu'il est pressé et tenir une impression de votre poing. C'est le mortier qui va sceller le poisson. Si elle s'écroule et ne tient pas une forme, ajoutez un quatrième blanc d'œuf.",
+      "visualCue": {
+        "primaryTarget": "Un mélange dense et lourd de la couleur et de la texture du sable humide de la plage – grondant facilement lorsqu'il est pressé, tenant sa forme sans s'effondrer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sel est encore sec et granuleux. Les blancs d'oeufs s'assoient dans des zones humides plutôt que de couvrir tous les grains. Le mélange s'effondre lorsqu'il est pressé.",
+            "action": "Mélanger plus vigoureusement jusqu'à ce que tout le blanc d'œuf soit uniformément distribué. Le mélange doit avoir une forme pressée ou la croûte s'ouvrira pendant la cuisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lourd, cohésif, humide. Serrez dans une masse ferme qui tient sa forme lorsqu'elle est libérée, comme du sable humide bien emballé pour un sandcastle.",
+            "action": "Travaillez rapidement — les blancs d'œufs commencent à se mettre en température."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a été trop travaillé et commence à se sentir collant plutôt que sableux. Les blancs d'oeufs sont légèrement mousseux.",
+            "action": "Elle est encore utilisable — appuyez sur. La croûte est peut-être un peu moins rigide, mais elle scellera toujours adéquatement."
+          }
+        ]
+      },
+      "feelCue": "Serrez un poing — il devrait emballer comme du sable humide, en tenant l'impression de vos doigts sans pleurer liquide."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "ing_01",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "stuffed_branzino",
+      "instructions": "Vérifiez que la cavité du poisson est propre et sèche. Assaisonner légèrement l'intérieur avec une pincée de sel. Poser les rondelles de citron dans un motif de bardeau le long du plancher de la cavité. Emballez les frondes de fenouil, le thym et le persil sur le citron — la cavité doit être visiblement pleine. Les herbes vaporiseront à l'intérieur de la croûte et parfumeront la chair de l'intérieur sans la pénétrer extérieurement du tout.",
+      "visualCue": {
+        "primaryTarget": "La cavité des poissons bombait visiblement avec des herbes vertes et des rondelles de citron qui se chevauchaient. L'extérieur du poisson est sec et non décoré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La cavité est seulement à moitié remplie. Quelques brins d'herbe clairsemés se pressent autour.",
+            "action": "Ajouter plus d'herbes — la farce se développe avec la chaleur et libère ses aromatiques sous forme de vapeur. Une farce clairsemée laisse la chair sans saveur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cavidité bien remplie d'herbes et de citron, avec un léger gonflement visible le long du ventre. Le poisson tient ensemble lorsqu'il est levé.",
+            "action": "Transférer immédiatement dans le plateau de cuisson sur le lit de sel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tellement de farce entaillée dans le ventre a été déchiré ou le poisson a été forcé à ouvrir. Les herbes se déversent de la cavité.",
+            "action": "Réduire légèrement la quantité et fermer le ventre avec une brochette si nécessaire pour tenir tout en place."
+          }
+        ]
+      },
+      "feelCue": "Le poisson farci devrait se sentir lourd et dense quand vous le soulevez. Vous pouvez sentir les herbes remplir le ventre — une résistance rassurante et solide."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Appuyez sur",
+      "inputs": [
+        "stuffed_branzino",
+        "salt_crust_mixture"
+      ],
+      "outputState": "encased_branzino",
+      "instructions": "Étendre un tiers du mélange de sel sur une plaque de cuisson bordée de la forme et de la taille exactes du poisson, d'environ 1,5 cm d'épaisseur. Pose le branzino en peluche sur le dessus. Emballez fermement le reste du mélange de sel sur le dessus et les côtés du poisson, en le pressant et en le lissant dans une enveloppe solide, même d'au moins 1,5 cm d'épaisseur à chaque point. Faites une attention particulière à la tête et à la queue — les fissures là - bas laisseront échapper la vapeur et sécher la chair. Le poisson doit être complètement invisible sous la croûte. Lisser la surface avec des palmiers mouillés.",
+      "visualCue": {
+        "primaryTarget": "Un monticule lisse et solide de sel blanc sur la plaque de cuisson, clairement en forme de poisson, sans fissures, fentes ou poissons exposés visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte salée est mince dans les endroits, craquelant aux bords ou à la queue. Des taches de peau de poisson sont encore visibles à travers la croûte.",
+            "action": "Appuyez sur le mélange de sel supplémentaire sur toutes les zones exposées et lissez fermement avec les mains mouillées. Des taches fines s'ouvriront au four et sécheront ces portions de poisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un dôme blanc lisse et solide de 1,5 à 2 cm d'épaisseur. Pas de fissures. Pas de poisson visible. La surface a été lissée à une finition uniforme.",
+            "action": "Dans le four, cuire immédiatement avant que le sel ne tire l'humidité du poisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte salée est trop épaisse (plus de 3 cm) en place, ce qui la rend très lourde. La forme du poisson est complètement perdue et la croûte ressemble à un pain blanc sans forme.",
+            "action": "Il va encore fonctionner, mais prendre plus de temps à cuire et être plus difficile à craquer. Visez la cohérence de l'épaisseur la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Patientez fermement la croûte — elle doit se sentir aussi solide et rigide que l'argile emballée, sans taches molles qui donnent quand on la presse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "encased_branzino"
+      ],
+      "outputState": "baked_branzino",
+      "instructions": "Cuire à 190°C (375°F) pendant 25 à 30 minutes pour un poisson de 600g. Les échelles de temps avec le poids du poisson: ajouter 5 minutes par 200g supplémentaire. La croûte durcit jusqu'à une coquille rigide et crayeuse et peut développer une faible coloration ivoire à beige sur le dessus. Il ne brunira pas de façon spectaculaire — les indices visuels ici sont tout au sujet du durcissement de la croûte. Un thermomètre à sonde inséré dans la croûte doit lire de 58 à 60 °C à la partie la plus épaisse du poisson. Si vous n'avez pas de sonde, utilisez le timing comme guide.",
+      "visualCue": {
+        "primaryTarget": "Une coquille dure et rigide blanc crayeuse sur le plateau de cuisson qui résiste lorsqu'elle est tapée d'une cuillère en bois.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est encore légèrement douce et donne lorsqu'elle est pressée. C'est comme de l'argile dense et pas encore encombrée. Sonde se lit en dessous de 55°C.",
+            "action": "Revenez encore 5 minutes. La croûte doit être complètement rigide avant de craquer — une croûte molle signifie un poisson mal cuit à l'intérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "La croûte est dure, crayeuse et sonne creuse lorsqu'elle est tapée avec une cuillère. Sonde à la partie la plus épaisse lit 58-60°C. Une faible odeur d'herbes s'échappant autour des bords.",
+            "action": "Apportez immédiatement à la table pour le craquement spectaculaire côté table."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte a tourné un beige profond ou brun pâle dans les taches. Sonde se lit au-dessus de 65°C. Une forte odeur de sel cuit.",
+            "action": "Le poisson peut être plus sec qu'idéal à l'intérieur. La méthode de la croûte protège contre la surcuisson extrême — la fissurer immédiatement et évaluer la chair."
+          }
+        ]
+      },
+      "feelCue": "Frappez fermement la croûte à l'aide d'une poignée de cuillère en bois — vous devriez entendre un « thunk » solide et résonnant, comme frapper sur un pot de céramique épais."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Finition",
+      "inputs": [
+        "baked_branzino",
+        "ing_08"
+      ],
+      "outputState": "salt_baked_branzino",
+      "instructions": "Apportez la plaque de cuisson à la table. À l'aide d'une cuillère lourde ou d'un petit maillet, fissurer fermement la croûte le long de la colonne vertébrale du poisson. Il se brisera dans de grands bourrasques — les éplucher et les jeter. Soulevez soigneusement le filet supérieur, puis retirez la colonne vertébrale en une seule pièce. Le filet inférieur est assis sur le lit de sel inférieur — glissez une spatule en dessous pour le soulever propre. Servir les filets sur des assiettes chaudes avec une généreuse préparation d'huile d'olive extra vierge et les tranches de citron de l'intérieur de la cavité.",
+      "visualCue": {
+        "primaryTarget": "Filets de poissons perlés, parfaitement cuits avec une surface scintillante et sans taches grises et sèches. La chair doit se détacher dans de grands flocons, humides et limpides.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La chair au point le plus épais près de la tête est toujours translucide et fraîche au toucher. Les flocons résistent à la séparation proprement dite.",
+            "action": "Remettre le poisson dans la croûte cassée au four pendant encore 5 minutes — la coquille piège encore une certaine chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair est entièrement opaque, blanche à ivoire, et se sépare dans des flocons généreux et scintillants sans aucune sécheresse. Sensation intense d'herbes et de mer. Une goutte lente et claire de perles de jus naturel sur l'assiette.",
+            "action": "Assiettez immédiatement et versez l'huile d'olive sur la chair exposée pendant qu'elle est encore en vapeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair semble sèche, crayeuse ou granuleuse. Les flocons sont petits et serrés plutôt que grands et donnent. Toute humidité a été cuite.",
+            "action": "Un généreux dépôt d'excellente huile d'olive à table peut raviver la saveur, sinon la texture. Servir avec beaucoup de citron."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur un filet à l'aide d'une fourchette — il devrait se déposer immédiatement et tomber dans des flocons épais et brillants sans aucune résistance. Résistance signifie sécheresse."
+    }
+  ]
 };

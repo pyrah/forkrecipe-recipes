@@ -1,128 +1,343 @@
 export default {
-  repoId: "master_west_african_jollof_rice_001",
-  parentRepoId: null,
-  slug: "jollof-rice",
-  author: "ForkRecipe Kitchen",
-
-  title: "Party Jollof Rice",
-  description: "West Africa's most celebrated dish — long-grain rice cooked directly in a vivid tomato, pepper, and scotch bonnet base until each grain is stained deep red and infused with the smoky, irreplaceable flavor of the party pot.",
-  cuisine: "West African",
-  culture: "Nigerian/Ghanaian",
-  category: "grains",
-
-  tags: ["gluten-free", "west-african", "rice", "tomato", "one-pot"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hr 15 min",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 2, salty: 2, sour: 1, bitter: 0, umami: 3, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Long-grain parboiled rice",          ratioValue: 400, defaultUnit: "g",   substitutions: ["jasmine rice (reduce cook time by 5 min)"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Canned whole peeled tomatoes",       ratioValue: 400, defaultUnit: "g",   substitutions: ["4 large fresh plum tomatoes, blanched and peeled"] },
-    { ingId: "ing_03", role: "Aromatic",   name: "Red bell peppers",                   ratioValue: 200, defaultUnit: "g",   substitutions: ["pimento peppers"] },
-    { ingId: "ing_04", role: "Heat",       name: "Scotch bonnet pepper",               ratioValue: 1,   defaultUnit: "whole", substitutions: ["habanero pepper", "½ tsp cayenne if unavailable"] },
-    { ingId: "ing_05", role: "Allium",     name: "White onion (roughly chopped)",      ratioValue: 200, defaultUnit: "g",   substitutions: ["yellow onion"] },
-    { ingId: "ing_06", role: "Allium",     name: "Garlic cloves",                      ratioValue: 4,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Fresh ginger (peeled, roughly chopped)", ratioValue: 15, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Umami",      name: "Tomato paste",                       ratioValue: 60,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_09", role: "Liquid",     name: "Chicken or vegetable stock",         ratioValue: 500, defaultUnit: "ml",  substitutions: ["water + 1 stock cube"] },
-    { ingId: "ing_10", role: "Aromatic",   name: "Bay leaves",                         ratioValue: 2,   defaultUnit: "leaves", substitutions: [] },
-    { ingId: "ing_11", role: "Spice",      name: "Curry powder",                       ratioValue: 5,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_12", role: "Herb",       name: "Dried thyme",                        ratioValue: 3,   defaultUnit: "g",   substitutions: ["fresh thyme (double the quantity)"] },
-    { ingId: "ing_13", role: "Fat",        name: "Neutral oil (groundnut or sunflower)", ratioValue: 60, defaultUnit: "ml",  substitutions: ["vegetable oil"] },
-    { ingId: "ing_14", role: "Fat",        name: "Unsalted butter",                    ratioValue: 20,  defaultUnit: "g",   substitutions: ["more oil for vegan version"] },
-    { ingId: "ing_15", role: "Seasoning",  name: "Fine salt",                          ratioValue: 8,   defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_west_african_jollof_rice_001",
+  "parentRepoId": null,
+  "slug": "jollof-rice",
+  "author": "ForkRecipe Kitchen",
+  "title": "Fête Jollof Rice",
+  "description": "Le plat le plus célèbre de l'Afrique de l'Ouest - le riz à grains longs cuit directement dans une base de bonnet de tomate, de poivre et de scotch vif jusqu'à ce que chaque grain soit teinté rouge profond et infusé de la saveur fumée et irremplaçable du pot de fête.",
+  "cuisine": "Afrique de l ' Ouest",
+  "culture": "Nigéria/Ghanaïen",
+  "category": "grains",
+  "tags": [
+    "Sans gluten",
+    "Afrique de l ' Ouest",
+    "riz",
+    "tomates",
+    "un seul pot"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hr 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "tomato_pepper_puree",
-      instructions: "Combine the canned tomatoes, red bell peppers, scotch bonnet, half the onion, garlic, and ginger in a blender. Blitz until completely smooth with no visible chunks — you want a liquid slurry, not a chunky salsa. The color will be a vivid brick-orange at this stage. Set aside; the puree will release a lot of steam when it hits the hot oil, so have the pot ready before you blend.",
-      visualCue: {
-        primaryTarget: "A smooth, vibrantly colored liquid ranging from deep orange to brick red, with a consistency slightly thicker than passata.",
-        spectrum: [
-          { state: "Underdone", description: "Visible chunks of pepper or tomato skin are floating in the mix.", action: "Blend for another 30 seconds and check again; whole pieces will cause uneven cooking." },
-          { state: "Perfect",   description: "Completely smooth, pourable, a uniform deep orange-red with no solids. Pours cleanly off a spoon.", action: "Proceed to fry the paste immediately." },
-          { state: "Overdone",  description: "The blender has been running so long it has warmed the mixture noticeably.", action: "This is fine — proceed. The warming has no meaningful effect on the outcome." },
-        ],
-      },
-      feelCue: "The blended base should feel liquid and silky when rubbed between fingertips — any grittiness means the skin or seeds haven't broken down yet.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Riz à grains longs",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "riz jasmin (réduire le temps de cuisson de 5 min)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fry",
-      inputs: ["ing_13", "ing_05", "ing_08", "tomato_pepper_puree", "ing_10", "ing_11", "ing_12", "ing_15"],
-      outputState: "fried_tomato_base",
-      instructions: "Heat the oil in a heavy-bottomed pot over medium-high heat until shimmering. Add the remaining sliced onion and fry for 4 minutes until softened and translucent. Add the tomato paste and fry, stirring constantly, for 3 minutes until it darkens to a deep rust-red. Pour in the blended tomato-pepper purée — stand back, it will splutter dramatically. Stir in bay leaves, curry powder, thyme, and salt. Cook uncovered on medium heat, stirring every 3-4 minutes, for 20-25 minutes total, until the paste has reduced by roughly half, darkened to a deep brick-red, and the oil has separated and floats visibly on top.",
-      visualCue: {
-        primaryTarget: "A deeply reduced, dark brick-red paste with glistening oil pools on the surface. The paste should hold its shape briefly when a spoon parts it, then slowly flow back together.",
-        spectrum: [
-          { state: "Underdone", description: "The paste is still bright orange and watery. Oil has not separated. It smells raw and slightly acidic.", action: "Continue cooking — the tomato's water must evaporate before the paste is ready to carry the rice. This step cannot be rushed." },
-          { state: "Perfect",   description: "Deep, mahogany-red paste. Oil floats in distinct amber pools on top. The smell has shifted from acidic to sweet and smoky. A spoon dragged through the pot leaves a momentary channel.", action: "Add the stock, stir to combine, then add the rinsed rice." },
-          { state: "Overdone",  description: "The paste is very dark brown, almost black at the edges, with a sharp, acrid smell.", action: "Immediately add the stock to stop the cooking and deglaze any scorched bits from the bottom. The slight bitterness may mellow in the final dish." },
-        ],
-      },
-      feelCue: "You will hear the paste shift from a loud, aggressive sizzle to a deeper, quieter simmer as the water cooks out — that change in sound signals the paste is close to ready.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Tomates entières en conserve",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "4 grandes tomates prunes fraîches, blanchies et pelées"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["fried_tomato_base", "ing_09"],
-      outputState: "seasoned_cooking_liquid",
-      instructions: "Pour the stock into the reduced paste and stir vigorously to incorporate, scraping any caramelized bits from the bottom of the pot. Taste the liquid — it should be pleasantly seasoned, slightly more salty than you want the finished rice, since the rice will absorb and dilute the seasoning. Adjust salt now. Bring to a rolling boil.",
-      visualCue: {
-        primaryTarget: "A unified, deep reddish-brown liquid with a full, savory aroma and the texture of light tomato soup.",
-        spectrum: [
-          { state: "Underdone", description: "The stock and paste are not yet fully combined — streaks of pale stock visible.", action: "Stir more thoroughly, making sure to scrape the bottom. Bring to a boil before adding rice." },
-          { state: "Perfect",   description: "A uniformly colored, deeply flavored red broth that tastes boldly of pepper and tomato. Slightly over-salted to the palate — correct.", action: "Add the rice now." },
-          { state: "Overdone",  description: "You've let it reduce further and the broth is very thick, more like a sauce.", action: "Add a splash more stock or water to thin slightly — there needs to be enough liquid for the rice to cook through." },
-        ],
-      },
-      feelCue: "Taste a spoonful; it should feel like drinking a well-seasoned, robust tomato soup with heat at the back of the throat from the scotch bonnet.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Poivrons rouges",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivrons"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Boil",
-      inputs: ["ing_01", "seasoned_cooking_liquid"],
-      outputState: "rice_in_pot",
-      instructions: "Rinse the parboiled rice in cold water until the water runs mostly clear, then drain thoroughly. Add the rinsed rice to the boiling tomato base and stir once — just one firm stir to distribute the rice evenly and make sure no grains are floating above the liquid level. Add the butter in small pieces over the top. Do not stir again. Place the lid on the pot, reduce the heat to its absolute lowest setting, and cook for 30 minutes undisturbed.",
-      visualCue: {
-        primaryTarget: "All rice submerged and evenly distributed in the tomato liquid, butter melting on top, lid sealed tight.",
-        spectrum: [
-          { state: "Underdone", description: "Some rice is visible above the liquid level — dry peaks poking out.", action: "Add 50 ml more stock or hot water, tilt the pot to distribute, and replace the lid immediately." },
-          { state: "Perfect",   description: "Rice is fully submerged in a deep red liquid that just barely covers the grains. Steam is beginning to rise. Butter is starting to melt.", action: "Seal the lid tightly and reduce heat to the minimum. Do not lift the lid for 30 minutes." },
-          { state: "Overdone",  description: "Too much liquid — rice is floating freely rather than sitting in the base.", action: "Drain off a little excess liquid before sealing. The rice needs to steam-cook, not boil in liquid." },
-        ],
-      },
-      feelCue: "After 15 minutes, press gently on the lid — you should feel the rhythmic pulse of steam pressure beneath your palm, a sign the pot is doing its work.",
+      "ingId": "ing_04",
+      "role": "Heat",
+      "name": "Poivre de bonnet écossais",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Poivre habanero",
+        "1⁄2 cayenne si non disponible"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Rest",
-      inputs: ["rice_in_pot"],
-      outputState: "finished_jollof_rice",
-      instructions: "After 30 minutes, lift the lid quickly and look for steam holes — small craters on the surface of the rice where steam has tunneled up through the grains. These signal that the rice is cooked through. Using a long spoon, gently scrape the bottom of the pot: you should find the 'party crust' (conkon in Nigerian), a thin layer of smoky, slightly charred rice stuck to the pot floor. Fold this crust up through the rice — it is not burned; it is the prize. Replace the lid and let the rice rest off the heat for 10 minutes before serving.",
-      visualCue: {
-        primaryTarget: "Every grain uniformly stained deep red, separate and fluffy, with visible steam-hole craters on the surface. The bottom crust is dark, smoky, and fragrant — not acrid.",
-        spectrum: [
-          { state: "Underdone", description: "Grains in the center are still firm and chalky when bitten. No steam holes yet.", action: "Add 3 tablespoons of water around the edge, replace the lid, and cook for another 8-10 minutes on the lowest heat." },
-          { state: "Perfect",   description: "Steam holes across the surface. Grains are tender, fluffy, and deep red all the way through. The crust at the bottom is smoky and intact. The smell is unmistakably jollof.", action: "Scrape the crust into the rice, replace the lid, and rest for 10 minutes off the heat." },
-          { state: "Overdone",  description: "The crust has gone beyond smoky to genuinely burnt — the pot smells sharp and acrid rather than sweet-smoky.", action: "Remove the pot from the heat immediately. Carefully transfer the rice to a clean serving dish without scraping the very bottom, leaving the burnt layer behind." },
-        ],
-      },
-      feelCue: "Each grain should feel distinct and firm between your fingers — not clumped, not mushy — and stained completely through with the red base rather than just coated on the outside.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon blanc (approximativement haché)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Gingembre frais (peauté, approximativement haché)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Liquid",
+      "name": "Stocks de poulet ou de légumes",
+      "ratioValue": 500,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau + 1 cube de stock"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 2,
+      "defaultUnit": "leaves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Poudre de curry",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Herb",
+      "name": "Thym séché",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "thym frais (double quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Fat",
+      "name": "Huile neutre (arachide ou tournesol)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile végétale"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "plus d'huile pour la version végétalienne"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "tomato_pepper_puree",
+      "instructions": "Mélanger les tomates en conserve, les poivrons rouges, le bonnet à scotch, la moitié de l'oignon, l'ail et le gingembre dans un mélangeur. Blitz jusqu'à ce qu'il soit complètement lisse sans morceaux visibles — vous voulez un lisier liquide, pas une salsa épaisse. La couleur sera une brique-orange vive à ce stade. Réserver; la purée libérera beaucoup de vapeur quand elle frappera l'huile chaude, alors préparez le pot avant de mélanger.",
+      "visualCue": {
+        "primaryTarget": "Un liquide lisse, de couleur vibrante, allant de l'orange profonde au rouge brique, avec une consistance légèrement plus épaisse que passata.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux visibles de peau de poivre ou de tomate flottent dans le mélange.",
+            "action": "Mélangez encore 30 secondes et vérifiez à nouveau; les morceaux entiers provoqueront une cuisson inégale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, versable, un rouge orange foncé uniforme sans solides. Il verse proprement une cuillère.",
+            "action": "Passez immédiatement à la pâte."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélangeur a fonctionné si longtemps qu'il a réchauffé le mélange de façon notable.",
+            "action": "C'est bien — continuez. Le réchauffement n'a aucun effet significatif sur le résultat."
+          }
+        ]
+      },
+      "feelCue": "La base mélangée doit se sentir liquide et soyeuse lorsqu'elle est frottée entre le bout des doigts."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "ing_13",
+        "ing_05",
+        "ing_08",
+        "tomato_pepper_puree",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_15"
+      ],
+      "outputState": "fried_tomato_base",
+      "instructions": "Chauffer l'huile dans un pot à fond lourd à feu moyen-vif jusqu'à ce qu'elle mijote. Ajouter le reste de l'oignon tranché et faire frire pendant 4 minutes jusqu'à ramollir et translucide. Ajouter la pâte de tomate et faire frire, en remuant constamment, pendant 3 minutes jusqu'à ce qu'elle s'assombrisse à un rouge-rouille profond. Verser dans la purée de tomates-poivrons mélangée — Reculez, il s'effacera de façon spectaculaire. Incorporer les feuilles de laurier, la poudre de curry, le thym et le sel. Cuire à feu moyen à découvert, en remuant toutes les 3-4 minutes, pendant 20-25 minutes au total, jusqu'à ce que la pâte ait diminué d'environ la moitié, foncé à un rouge brique profond, et l'huile s'est séparée et flotte visiblement sur le dessus.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rouge brique foncée profondément réduite avec des piscines d'huile scintillante à la surface. La pâte doit tenir sa forme brièvement lorsqu'une cuillère la sépare, puis remonter lentement ensemble.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore orange vif et aqueuse. L'huile n'est pas séparée. Il sent cru et légèrement acide.",
+            "action": "Continuer la cuisson: l'eau de la tomate doit s'évaporer avant que la pâte ne soit prête à transporter le riz. Cette étape ne peut être précipitée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte rouge acajou profonde. Le pétrole flotte dans des piscines ambres distinctes sur le dessus. L'odeur est passée d'acide à sucré et fumé. Une cuillère traînée à travers le pot laisse un canal momentané.",
+            "action": "Ajouter le bouillon, mélanger, puis ajouter le riz rincé."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est brun très foncé, presque noire aux bords, avec une odeur aiguë et acride.",
+            "action": "Ajouter immédiatement le stock pour arrêter la cuisson et déglacer les morceaux brûlés du bas. La légère amertume peut se fondre dans le plat final."
+          }
+        ]
+      },
+      "feelCue": "Vous entendrez la pâte passer d'un étourdissement fort et agressif à un mijotement plus profond et plus silencieux au fur et à mesure que l'eau cuit — que le changement de signal sonore la pâte est proche de prêt."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "fried_tomato_base",
+        "ing_09"
+      ],
+      "outputState": "seasoned_cooking_liquid",
+      "instructions": "Verser le bouillon dans la pâte réduite et remuer vigoureusement pour incorporer, en grattant les morceaux caramélisés du fond du pot. Goûtez le liquide — il devrait être agréablement assaisonné, légèrement plus salé que vous voulez le riz fini, car le riz absorbera et diluera l'assaisonnement. Ajustez le sel maintenant. Porter à ébullition.",
+      "visualCue": {
+        "primaryTarget": "Un liquide uni, brun rougeâtre profond avec un arôme plein et salé et la texture de la soupe de tomate légère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock et la pâte ne sont pas encore entièrement combinés — des stries de stock pâle visibles.",
+            "action": "Mélanger plus soigneusement, en veillant à gratter le fond. Porter à ébullition avant d'ajouter du riz."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un bouillon rouge uniformément coloré et profondément aromatisé qui a un goût audacieux de poivre et de tomate. Légèrement sursauté au palais — c'est exact.",
+            "action": "Ajoutez le riz maintenant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous l'avez laissé réduire davantage et le bouillon est très épais, plus comme une sauce.",
+            "action": "Ajouter un peu plus de bouillon ou d'eau à mincer — il doit y avoir assez de liquide pour que le riz puisse cuire."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillerée; il devrait être comme boire une soupe de tomate bien assaisonnée et robuste avec de la chaleur à l'arrière de la gorge à partir du capot de scotch."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01",
+        "seasoned_cooking_liquid"
+      ],
+      "outputState": "rice_in_pot",
+      "instructions": "Rincer le riz par huilé dans de l'eau froide jusqu'à ce que l'eau soit généralement claire, puis bien égoutter. Ajouter le riz rincé à la base bouillante de la tomate et remuer une fois — juste un brassage ferme pour distribuer uniformément le riz et s'assurer qu'aucun grain ne flotte au-dessus du niveau liquide. Ajouter le beurre en petits morceaux sur le dessus. Ne remuez plus. Placer le couvercle sur la casserole, réduire la chaleur à son réglage absolu le plus bas, et cuire pendant 30 minutes sans gêne.",
+      "visualCue": {
+        "primaryTarget": "Tout le riz submergé et uniformément distribué dans le liquide de tomate, le beurre fondant sur le dessus, le couvercle fermé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Certains riz sont visibles au-dessus du niveau liquide — des pics secs se détachent.",
+            "action": "Ajouter 50 ml de plus de bouillon ou d'eau chaude, incliner le pot pour distribuer et remplacer immédiatement le couvercle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le riz est complètement submergé dans un liquide rouge profond qui recouvre à peine les grains. La vapeur commence à se lever. Le beurre commence à fondre.",
+            "action": "Fermez le couvercle et réduisez la chaleur au minimum. Ne levez pas le couvercle pendant 30 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de liquide: le riz flotte librement plutôt que de rester assis dans la base.",
+            "action": "Égoutter un peu de liquide avant de sceller. Le riz doit cuire à la vapeur, et non pas bouillir dans du liquide."
+          }
+        ]
+      },
+      "feelCue": "Après 15 minutes, appuyez doucement sur le couvercle — vous devriez sentir le pouls rythmique de la pression de vapeur sous votre paume, un signe que le pot fait son travail."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Repos",
+      "inputs": [
+        "rice_in_pot"
+      ],
+      "outputState": "finished_jollof_rice",
+      "instructions": "Après 30 minutes, levez le couvercle rapidement et recherchez des trous de vapeur — petits cratères à la surface du riz où la vapeur a traversé les grains. Ces signaux indiquent que le riz est cuit. À l'aide d'une longue cuillère, grattez doucement le fond du pot : vous devriez trouver la « croûte de fête » (conkon en Nigéria), une fine couche de riz fumé légèrement carbonisé collée au plancher du pot. Pliez cette croûte à travers le riz — elle n'est pas brûlée; c'est le prix. Remplacer le couvercle et laisser reposer le riz pendant 10 minutes avant de servir.",
+      "visualCue": {
+        "primaryTarget": "Chaque grain est uniformément teinté rouge profond, séparé et moelleux, avec des cratères visibles à la surface. La croûte inférieure est sombre, fumée et parfumée, et non acride.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains au centre sont encore fermes et crayeux quand mordus. Pas encore de trous de vapeur.",
+            "action": "Ajouter 3 cuillères à soupe d'eau autour du bord, remplacer le couvercle et cuire encore 8-10 minutes sur le feu le plus bas."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des trous de vapeur à travers la surface. Les grains sont tendres, moelleux et rouge foncé. La croûte au fond est fumée et intacte. L'odeur est incontestablement plaisante.",
+            "action": "Grattez la croûte dans le riz, remplacez le couvercle et reposez-la pendant 10 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est allée au - delà de la fumée pour être réellement brûlée — la casserole sent aiguisée et acride plutôt que sucrée.",
+            "action": "Retirer immédiatement la casserole du feu. Transférer soigneusement le riz dans un plat de service propre sans racler le fond même, laissant la couche brûlée derrière."
+          }
+        ]
+      },
+      "feelCue": "Chaque grain doit se sentir distinct et ferme entre les doigts — pas empilé, pas musqué — et teint complètement avec la base rouge plutôt que simplement revêtu sur l'extérieur."
+    }
+  ]
 };

@@ -1,101 +1,261 @@
 export default {
-  repoId: "master_malaysian_prawnlaksa_001",
-  parentRepoId: null,
-  slug: "prawn-laksa",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Prawn Laksa",
-  description: "A bowl of rice noodles drowned in a broth that is simultaneously fiery, rich, and sour — the coconut cream folding around lemongrass and shrimp paste like a warm tide, plump prawns barely cooked in the final simmer.",
-  cuisine: "Malaysian",
-  culture: "Peranakan-Nyonya",
-  category: "seafood",
-  tags: ["seafood", "prawns", "noodles", "malaysian", "laksa", "coconut", "spicy", "soup"],
-  difficulty: 3,
-  activeTime: "35 min",
-  totalTime: "55 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 1, umami: 4, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Large prawns, peeled and deveined (shells reserved)", ratioValue: 100, defaultUnit: "parts", substitutions: ["cooked shrimp added at the end"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Coconut cream (full-fat)",                            ratioValue: 60,  defaultUnit: "parts", substitutions: ["coconut milk for lighter broth"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Prawn or chicken stock",                              ratioValue: 80,  defaultUnit: "parts", substitutions: ["water + prawn shells simmered 20 min"] },
-    { ingId: "ing_04", role: "Spice",     name: "Laksa paste (store-bought or from scratch)",          ratioValue: 25,  defaultUnit: "parts", substitutions: ["red curry paste + shrimp paste + lemongrass"] },
-    { ingId: "ing_05", role: "Umami",     name: "Dried shrimp paste (belacan), toasted",              ratioValue: 3,   defaultUnit: "parts", substitutions: ["miso paste (not traditional but works)"] },
-    { ingId: "ing_06", role: "Starch",    name: "Thick rice vermicelli (laksa noodles), soaked",      ratioValue: 50,  defaultUnit: "parts", substitutions: ["rice stick noodles"] },
-    { ingId: "ing_07", role: "Acid",      name: "Lime juice, freshly squeezed",                       ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fish sauce",                                         ratioValue: 6,   defaultUnit: "parts", substitutions: ["salt + dash of soy sauce"] },
-    { ingId: "ing_09", role: "Garnish",   name: "Bean sprouts, laksa leaves (Vietnamese coriander), and sliced red chili", ratioValue: 15, defaultUnit: "parts", substitutions: ["regular coriander + mint"] },
+  "repoId": "master_malaysian_prawnlaksa_001",
+  "parentRepoId": null,
+  "slug": "prawn-laksa",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Laksa crevés",
+  "description": "Un bol de nouilles de riz noyées dans un bouillon qui est simultanément ardent, riche et aigre — la crème de noix de coco se repliant autour de la citronnelle et de la pâte de crevettes comme une marée chaude, prune les crevettes à peine cuites dans la mijot finale.",
+  "cuisine": "Malaisien",
+  "culture": "Peranakan-Nyonya",
+  "category": "seafood",
+  "tags": [
+    "Produits de la mer",
+    "crevettes",
+    "nouilles",
+    "Malaysian",
+    "Laksa",
+    "noix de coco",
+    "épicé",
+    "Soupe"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "35 min",
+  "totalTime": "55 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_03", "ing_01"],
-      outputState: "prawn_stock",
-      instructions: "If using raw prawn shells, simmer them in the stock for 15 minutes to build a deeper shellfish base. Strain and discard the shells. This step dramatically increases the prawn flavor in the broth and is worth the extra time. If using ready-made prawn stock, skip the shell simmer.",
-      visualCue: {
-        primaryTarget: "Stock has turned a faint coral-pink and smells strongly of roasted prawn heads.",
-        spectrum: [
-          { state: "Underdone", description: "Stock is still pale and thin. Prawn aroma faint.", action: "Simmer 5 more minutes, then taste — it should taste clearly of shellfish." },
-          { state: "Perfect",   description: "Coral-tinted broth, intensely savory and sweet-shellfish aroma. Slightly reduced.", action: "Strain and reserve. Discard shells." },
-          { state: "Overdone",  description: "Stock has reduced by more than half and tastes bitter or muddy.", action: "Dilute with water or additional stock to correct the concentration." },
-        ],
-      },
-      feelCue: "Taste the stock with a spoon — it should coat the tongue with prawn sweetness and savory depth, not taste watery or flat.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Grandes crevettes, pelées et dépouillées (coquilles réservées)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crevettes cuites ajoutées à la fin"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_04", "ing_05"],
-      outputState: "fried_laksa_paste",
-      instructions: "Heat a splash of oil in a deep pot over medium heat. Add the laksa paste and toasted belacan. Fry, stirring constantly, for 3–4 minutes until the paste darkens by one shade, the raw smell burns off, and the oil begins to separate and pool around the edges of the paste. This 'cooking out' step is essential — raw paste tastes sharp and unbalanced.",
-      visualCue: {
-        primaryTarget: "Paste has darkened from bright orange-red to a deeper, more muted brick. Oil pools visibly around the edges of the paste.",
-        spectrum: [
-          { state: "Underdone", description: "Paste still bright orange and smells raw and sharp — raw lemongrass and uncooked chili are dominant.", action: "Keep frying on medium heat, stirring constantly. Do not rush with high heat." },
-          { state: "Perfect",   description: "Deeper brick-orange paste, the kitchen smells complex and toasty — lemongrass, galangal, and a faint sweetness. Oil has clearly separated at the pot edges.", action: "Pour in the coconut cream immediately to halt the cooking." },
-          { state: "Overdone",  description: "Paste has darkened to brown in spots and smells scorched. The aromatics are burning.", action: "Reduce heat and add coconut cream right away to stop the burning." },
-        ],
-      },
-      feelCue: "Stir with a wooden spoon and feel the resistance — when the paste goes from soft and wet to slightly grainy and sticky, the aromatics are cooked.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Crème de coco (graisse)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "lait de coco pour bouillon plus léger"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["fried_laksa_paste", "ing_02", "prawn_stock", "ing_08"],
-      outputState: "laksa_broth",
-      instructions: "Pour in the coconut cream and prawn stock. Stir to combine and bring to a gentle simmer — not a rolling boil, which will break the coconut cream and make the broth grainy. Season with fish sauce. Simmer gently for 10 minutes, stirring occasionally, until the broth is fragrant, rich, and just slightly thickened.",
-      visualCue: {
-        primaryTarget: "A golden-orange broth with a velvety surface. No curdled patches. Bubbles rise lazily at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is pale and thin, paste still separating in clumps.", action: "Simmer 3 more minutes, stirring to integrate the paste fully." },
-          { state: "Perfect",   description: "Deep golden-orange, slightly viscous broth. Tastes of coconut, lemongrass, and savory depth. The surface shimmers with a faint slick.", action: "Add the prawns and noodles." },
-          { state: "Overdone",  description: "Broth has boiled too hard — curdled coconut cream forms white granules on the surface.", action: "Reduce heat to the lowest setting and whisk vigorously. Some curdling cannot be reversed but the flavor remains intact." },
-        ],
-      },
-      feelCue: "Taste the broth — it should feel silky on the tongue with a slow-building heat and lingering coconut sweetness.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Crevettes ou bouillons de poulet",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau + coquilles de crevettes mijotées 20 min"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["laksa_broth", "ing_01", "ing_06", "ing_07", "ing_09"],
-      outputState: "finished_prawn_laksa",
-      instructions: "Bring the broth to a lively simmer. Add the soaked noodles and poach for 2 minutes until tender. Slide in the raw prawns and cook for exactly 90 seconds until just pink throughout. Remove from heat immediately. Adjust seasoning with lime juice and fish sauce. Ladle into deep bowls over a nest of noodles and prawns. Top with bean sprouts, laksa leaves, and sliced chili.",
-      visualCue: {
-        primaryTarget: "Prawns are uniformly pink-orange, curled in a gentle C. Noodles are tender but still have slight bite. Garnishes are vivid and fresh against the golden broth.",
-        spectrum: [
-          { state: "Underdone", description: "Prawns still translucent grey at center, noodles feel hard.", action: "90 more seconds in the broth, then test a prawn by cutting it in half." },
-          { state: "Perfect",   description: "Pink-orange prawns in gentle C-curves, fully opaque. Noodles silky and tender. Broth is fragrant and complex.", action: "Serve immediately — laksa waits for no one." },
-          { state: "Overdone",  description: "Prawns are curled into tight O-shapes and rubbery. Noodles have dissolved slightly into the broth.", action: "Serve immediately with extra lime — the acid freshens an overcooked dish." },
-        ],
-      },
-      feelCue: "The broth should leave a faint coating on your lips after the first sip — coconut and spice, not water.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Pâte de laksa (achetée en magasin ou à partir de zéro)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pâte de curry rouge + pâte de crevette + citronnelle"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Pâte de crevettes séchées (belacan), grillée",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "miso pâte (pas traditionnelle mais travaille)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Starch",
+      "name": "Vermicelli de riz épais (nouilles laksa), trempé",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Nouilles à bâton de riz"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Jus de lime fraîchement pressé",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sauce de poisson",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel + pointe de sauce soja"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Garnish",
+      "name": "Choux de haricots, feuilles de laksa (coriandre vietnamienne) et chili rouge tranché",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Coriandre régulière + menthe"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_03",
+        "ing_01"
+      ],
+      "outputState": "prawn_stock",
+      "instructions": "Si vous utilisez des coquillages crus de crevettes, faites-les mijoter dans le stock pendant 15 minutes pour construire une base de mollusques plus profonde. Retirez et jetez les coquilles. Cette étape augmente considérablement la saveur de crevette dans le bouillon et vaut le temps supplémentaire. Si vous utilisez du stock de crevettes prêt à l'emploi, sautez la coquille.",
+      "visualCue": {
+        "primaryTarget": "Le stock a transformé un faible rose-corallien et sent fortement les crevettes rôties.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock est encore pâle et mince. Arôme crevé faible.",
+            "action": "Laisser mijoter 5 minutes de plus, puis goûter — il devrait goûter clairement des mollusques."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bouillon teinté de corail, arôme intensément salé et de coquillages doux. Un peu réduit.",
+            "action": "La souche et la réserve. Jetez les coquilles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock a diminué de plus de la moitié et goûte amer ou boueux.",
+            "action": "Diluer avec de l'eau ou du matériel supplémentaire pour corriger la concentration."
+          }
+        ]
+      },
+      "feelCue": "Goûtez le bouillon à l'aide d'une cuillère — elle doit enrober la langue de douceur et de profondeur savoureuse, et non pas de goût aqueux ou plat."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "fried_laksa_paste",
+      "instructions": "Chauffer un peu d'huile dans un pot profond à feu moyen. Ajouter la pâte de laksa et le bélacan grillé. Faire frire, en remuant constamment, pendant 3-4 minutes jusqu'à ce que la pâte s'assombrisse d'une seule nuance, que l'odeur brute brûle, et que l'huile commence à se séparer et à s'accumuler autour des bords de la pâte. Cette étape de « cuisson » est essentielle: la pâte crue a un goût aigu et déséquilibré.",
+      "visualCue": {
+        "primaryTarget": "La pâte s'est obscurcie de rouge-orange vif à une brique plus profonde et plus muette. Pools d'huile visiblement autour des bords de la pâte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore orange vive et sent cru et vif: la citronnelle crue et le chili non cuit dominent.",
+            "action": "Continuer à frire à feu moyen, en remuant constamment. Ne vous précipitez pas avec une chaleur élevée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte de brique-orange plus profonde, la cuisine sent complexe et grillée — citronnelle, galangale, et une légère douceur. L'huile est clairement séparée aux bords du pot.",
+            "action": "Verser la crème de noix de coco immédiatement pour arrêter la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte s'est assombrie à brune dans les taches et sent brûlé. Les aromatiques brûlent.",
+            "action": "Réduire la chaleur et ajouter immédiatement de la crème de coco pour arrêter la combustion."
+          }
+        ]
+      },
+      "feelCue": "Mélanger avec une cuillère en bois et sentir la résistance — quand la pâte passe de douce et humide à légèrement grainée et collante, les aromatiques sont cuits."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "fried_laksa_paste",
+        "ing_02",
+        "prawn_stock",
+        "ing_08"
+      ],
+      "outputState": "laksa_broth",
+      "instructions": "Verser la crème de coco et le bouillon de crevettes. Mélanger et laisser mijoter en douceur — pas un ébullition qui brisera la crème de noix de coco et rendra le bouillon granuleux. Assaisonner avec de la sauce de poisson. Laisser mijoter doucement pendant 10 minutes, en remuant occasionnellement, jusqu'à ce que le bouillon soit parfumé, riche et légèrement épaissi.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon doré-orange avec une surface veloutée. Pas de patchs caillés. Les bulles se lèvent paresseusement aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth est pâle et mince, pâte toujours se séparant en touffes.",
+            "action": "Laisser mijoter 3 minutes de plus, en remuant pour intégrer complètement la pâte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bouillon orangé-or profond, légèrement visqueux. Goûts de noix de coco, de citronnelle et de profondeur salée. La surface mijote d'une légère lisure.",
+            "action": "Ajouter les crevettes et les nouilles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon a bouilli trop dur — la crème de noix de coco caillée forme des granules blancs à la surface.",
+            "action": "Réduire la chaleur au réglage le plus bas et fouetter vigoureusement. Certains cambriolages ne peuvent pas être inversés, mais la saveur reste intacte."
+          }
+        ]
+      },
+      "feelCue": "Goûtez le bouillon — il doit se sentir soyeux sur la langue avec une chaleur lente et la douceur de la noix de coco."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "laksa_broth",
+        "ing_01",
+        "ing_06",
+        "ing_07",
+        "ing_09"
+      ],
+      "outputState": "finished_prawn_laksa",
+      "instructions": "Apportez le bouillon à une mijotée vivante. Ajouter les nouilles trempées et pocher pendant 2 minutes jusqu'à tendreté. Glisser dans les crevettes crues et cuire pendant exactement 90 secondes jusqu'à ce que tout soit rose. Retirer immédiatement du feu. Régler l'assaisonnement avec du jus de lime et de la sauce de poisson. Déposer dans des bols profonds sur un nid de nouilles et de crevettes. Garnir de pousses de haricots, de feuilles de laksa et de chili tranché.",
+      "visualCue": {
+        "primaryTarget": "Les crevettes sont uniformément rose-orange, enroulées dans un doux C. Les nouilles sont tendres mais ont encore une légère morsure. Les garnitures sont vives et fraîches contre le bouillon doré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont encore gris translucide au centre, les nouilles se sentent dures.",
+            "action": "90 secondes de plus dans le bouillon, puis tester une crevette en la coupant en deux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crevettes orange rose dans des courbures en C doux, entièrement opaques. Nouilles soyeuses et tendres. Broth est parfumé et complexe.",
+            "action": "Servir immédiatement — laksa n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes sont enroulées dans des formes O serrées et caoutchouteuses. Les nouilles se sont légèrement dissoutes dans le bouillon.",
+            "action": "Servir immédiatement avec de la chaux supplémentaire — l'acide rafraîchit un plat trop cuit."
+          }
+        ]
+      },
+      "feelCue": "Après la première gorgée, le bouillon devrait laisser un faible enrobage sur les lèvres: noix de coco et épices, et non de l'eau."
+    }
+  ]
 };

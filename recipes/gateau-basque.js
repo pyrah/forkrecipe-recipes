@@ -1,167 +1,398 @@
 export default {
-  repoId: "master_basque_gateaubasque_001",
-  parentRepoId: null,
-  slug: "gateau-basque",
-  author: "ForkRecipe Kitchen",
-  title: "Gâteau Basque",
-  description: "Buttery shortcake-like pastry encasing a vanilla pastry cream filling — humble, tightly crumbed, rich without being fussy. The cake of the French Basque coast.",
-  cuisine: "French",
-  culture: "Basque",
-  category: "desserts",
-  tags: ["basque", "french", "pastry", "cake", "custard", "tart", "classic", "dessert"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "3 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 4, salty: 1, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour — pastry",              ratioValue: 300, defaultUnit: "g", substitutions: ["T55 French flour"] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter, room temperature",        ratioValue: 200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Caster sugar — pastry",                   ratioValue: 150, defaultUnit: "g", substitutions: ["icing sugar (gives finer crumb)"] },
-    { ingId: "ing_04", role: "Binder",     name: "Whole eggs — pastry (3 large)",            ratioValue: 150, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Binder",     name: "Egg yolk — glaze (1 yolk)",                ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Leavener",   name: "Baking powder",                            ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Fine salt",                                ratioValue: 3,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Dairy",      name: "Whole milk — pastry cream",                ratioValue: 250, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Aromatic",   name: "Vanilla pod, split and scraped",           ratioValue: 1,   defaultUnit: "pod", substitutions: ["1 tsp vanilla extract or vanilla paste"] },
-    { ingId: "ing_10", role: "Starch",     name: "Cornstarch (cornflour)",                   ratioValue: 25,  defaultUnit: "g", substitutions: ["potato starch"] },
-    { ingId: "ing_11", role: "Sweetener",  name: "Caster sugar — pastry cream",              ratioValue: 60,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_12", role: "Binder",     name: "Egg yolks — pastry cream (3 yolks)",       ratioValue: 60,  defaultUnit: "g", substitutions: [] },
+  "repoId": "master_basque_gateaubasque_001",
+  "parentRepoId": null,
+  "slug": "gateau-basque",
+  "author": "ForkRecipe Kitchen",
+  "title": "Gâteau Basque",
+  "description": "Une pâtisserie à la bouche encaissant une crème à la vanille — humble, fortement émiettée, riche sans être agitée. Le gâteau de la côte basque française.",
+  "cuisine": "Français",
+  "culture": "Basque",
+  "category": "desserts",
+  "tags": [
+    "Basque",
+    "français",
+    "pâtisserie",
+    "gâteau",
+    "Coutard",
+    "tarte",
+    "classique",
+    "dessert"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_08", "ing_09", "ing_10", "ing_11", "ing_12"],
-      outputState: "hot_pastry_cream",
-      instructions: "Bring the milk to a simmer in a heavy saucepan with the vanilla pod and seeds. Meanwhile, whisk the egg yolks, caster sugar, and cornstarch together until pale and thick. When the milk steams, slowly pour it into the egg mixture while whisking constantly. Return everything to the saucepan over medium heat and whisk continuously until the cream thickens, bubbles, and holds a trail for 2 full minutes.",
-      visualCue: {
-        primaryTarget: "A thick, glossy cream that mounds on the whisk when lifted and holds its shape briefly before slowly slumping. The surface should have a faint sheen.",
-        spectrum: [
-          { state: "Underdone", description: "Cream is runny and pourable, coats the whisk thinly. No bubbles have appeared.", action: "Continue whisking over medium heat. The starch must reach boiling point to activate — undercooked pastry cream tastes of raw cornstarch and will split when cold." },
-          { state: "Perfect",   description: "Thick, glossy, and holding its shape on the whisk. Bubbles erupt lazily from the surface. Has been bubbling actively for at least 1 full minute.", action: "Remove from heat, whisk in a knob of butter if desired, and transfer to a flat dish." },
-          { state: "Overdone",  description: "Cream is very thick, pulling from the pan in clumps. Smells of scorched egg.", action: "Immediately remove from heat and strain through a sieve. If large scrambled egg lumps are visible, it cannot be rescued." },
-        ],
-      },
-      feelCue: "Drag a finger across the back of a spoon coated in pastry cream — the line should remain clean and defined. If it fills in immediately, cook longer.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général — pâtisserie",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "T55 Farine française"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Cool",
-      inputs: ["hot_pastry_cream"],
-      outputState: "chilled_pastry_cream",
-      instructions: "Pour the hot pastry cream into a flat, wide container. Press a sheet of cling film directly against the surface to prevent a skin from forming. Refrigerate until completely cold and set, at least 1 hour. Before using, beat briefly with a spatula to loosen it to a smooth, pipeable consistency.",
-      visualCue: {
-        primaryTarget: "Firm, smooth, pale yellow cream that holds its shape when scooped but can be spread with a spatula. No skin, no liquid pooled at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Still warm to the touch. Loose and pourable. Cling film has lifted off the surface.", action: "Press cling film back against the surface and refrigerate for at least 30 more minutes." },
-          { state: "Perfect",   description: "Cold, firm, smooth. Holds a clean indent when pressed. Peels away from the cling film in a clean sheet.", action: "Loosen with a spatula and use immediately to fill the gateau." },
-          { state: "Overdone",  description: "Very cold and almost rigid. Difficult to spread. Possibly watery from condensation if not covered properly.", action: "Beat firmly with a spatula for 1 minute until smooth and spreadable again." },
-        ],
-      },
-      feelCue: "Press a fingertip into the chilled cream — it should leave a clean, defined impression and feel cool and set, like very firm yoghurt.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé, température ambiante",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Cream",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "creamed_base",
-      instructions: "Beat the room-temperature butter and caster sugar together in a stand mixer with the paddle attachment (or by hand) until pale, light, and noticeably increased in volume — about 4 minutes on medium speed. The mixture should look almost white and feel airy.",
-      visualCue: {
-        primaryTarget: "Pale, almost white mixture that has doubled in volume from the original butter and sugar. Fluffy and light, with no visible grains of sugar.",
-        spectrum: [
-          { state: "Underdone", description: "Still yellow, dense, and grainy. Sugar granules visible and audible when the bowl is tapped.", action: "Continue creaming on medium speed. Proper aeration is what gives the gateau its crumble-short texture — this step cannot be rushed." },
-          { state: "Perfect",   description: "Pale ivory, doubled in volume, and fluffy. Rubs smooth between the fingers with no graininess.", action: "Add the eggs one at a time with the mixer running." },
-          { state: "Overdone",  description: "Over-beaten and beginning to look separated or curdled, with butter streaking the bowl.", action: "Add one egg immediately — it will help re-emulsify the mixture." },
-        ],
-      },
-      feelCue: "A pinch of properly creamed butter and sugar rubbed between thumb and forefinger should feel smooth and completely free of granules, almost like face cream.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre de canne à sucre — pâtisserie",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre glace (gives plus fines miettes)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Mix",
-      inputs: ["creamed_base", "ing_04"],
-      outputState: "egg_butter_mixture",
-      instructions: "With the mixer running on medium, add the whole eggs one at a time, waiting until each is fully incorporated before the next. If the mixture begins to look curdled, add a spoonful of flour to stabilize it. The result should be a smooth, pale, glossy emulsion.",
-      visualCue: {
-        primaryTarget: "A smooth, pale, creamy mixture that holds together and has a light, glossy sheen. Pourable but thick — similar to thick cake batter.",
-        spectrum: [
-          { state: "Underdone", description: "Eggs not fully incorporated — streaks of yolk visible, mixture uneven.", action: "Continue beating on medium speed until the mixture is uniform and glossy." },
-          { state: "Perfect",   description: "Smooth, emulsified, light. The paddle leaves clean trails when lifted.", action: "Fold in the flour, baking powder, and salt." },
-          { state: "Overdone",  description: "Mixture has split — looks grainy and wet, with butter pooling. Cold eggs added too quickly.", action: "Warm the bowl gently with a kitchen torch or warm cloth, and beat vigorously. A spoonful of flour will help." },
-        ],
-      },
-      feelCue: "The egg-butter mixture should feel silky and light in the bowl — you should be able to see it shiver slightly when the bowl is tapped, not sit heavy.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Oeufs entiers — pâtisserie (3 grands)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Fold",
-      inputs: ["egg_butter_mixture", "ing_01", "ing_06", "ing_07"],
-      outputState: "basque_shortcrust",
-      instructions: "Sift together the flour, baking powder, and salt directly over the egg-butter mixture. Fold gently with a spatula — cut down through the center, fold up from the bottom, rotate the bowl and repeat. Stop the moment no dry flour is visible. Do not overmix — this is a short, crumbly pastry, not a developed dough.",
-      visualCue: {
-        primaryTarget: "A soft, slightly sticky dough that just barely holds together. No visible flour streaks. Uniform pale color.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of dry flour visible at the bottom or edges of the bowl.", action: "Continue folding with a light hand — just enough to incorporate the last traces of flour." },
-          { state: "Perfect",   description: "Uniform, soft dough that is just holding together. Not glossy, not rough. Slightly tacky.", action: "Divide into two-thirds and one-third portions, flatten into discs, wrap in cling film, and chill 1 hour." },
-          { state: "Overdone",  description: "Dough has toughened and become glossy from over-working the gluten. Elastic when stretched.", action: "Chill for at least 2 hours before rolling — resting relaxes over-developed gluten." },
-        ],
-      },
-      feelCue: "Basque pastry dough should feel soft and slightly sticky — just firm enough to press into shape, but it will crumble if handled too aggressively when warm.",
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Jaune d'œuf — glaçure (1 jaune)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_6",
-      action: "Chill",
-      inputs: ["basque_shortcrust"],
-      outputState: "chilled_shortcrust",
-      instructions: "Wrap both portions of dough in cling film, press into flat discs, and refrigerate for at least 1 hour. This resting period relaxes any gluten, firms the butter, and makes the dough workable without crumbling. Preheat the oven to 180°C (355°F) while the dough chills.",
-      visualCue: {
-        primaryTarget: "Firm, cold discs of pale dough that hold their shape completely and are not sticky to the touch.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still soft and sticky, deforming under finger pressure.", action: "Chill longer. Warm shortcrust tears and crumbles when being worked into the pan." },
-          { state: "Perfect",   description: "Cold, firm discs that crack slightly when bent but are not brittle. Not sticky to the touch.", action: "Work quickly — press or roll the large portion into the base and sides of a 22 cm tart tin." },
-          { state: "Overdone",  description: "Dough is very hard and cracks when bent. Too cold from the fridge.", action: "Leave at room temperature for 5 minutes to soften slightly before working." },
-        ],
-      },
-      feelCue: "The chilled dough should feel like cold clay — firm, cool, and workable, but pliable without crumbling when pressed between two flat palms.",
+      "ingId": "ing_06",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_7",
-      action: "Assemble",
-      inputs: ["chilled_shortcrust", "chilled_pastry_cream", "ing_05"],
-      outputState: "assembled_gateau",
-      instructions: "Press the larger dough portion into the base and up the sides of a buttered 22 cm tart tin. Spread the chilled pastry cream evenly over the base, leaving a 1 cm border. Roll or press the smaller dough portion into a disc to cover. Seal and crimp the edges firmly. Brush the top with beaten egg yolk and score a crosshatch pattern with a fork.",
-      visualCue: {
-        primaryTarget: "A neatly assembled tart with a flat, evenly thick pastry lid, crimp sealed all around, and a golden egg wash with a visible crosshatch scored across the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Pastry lid has not sealed to the sides — gaps visible at the edge. Cream may have been spread too thick or too close to the edge.", action: "Press the edges firmly together with dampened fingertips. The egg wash will also help seal during baking." },
-          { state: "Perfect",   description: "Even pastry lid, sealed all around, crosshatch scored. Egg wash is even and golden-yellow.", action: "Bake immediately on the middle rack." },
-          { state: "Overdone",  description: "Pastry lid has been pressed so thin it is translucent. Cream visible through the pastry.", action: "Patch with a scrap of chilled dough pressed over the thin area." },
-        ],
-      },
-      feelCue: "Run a fingertip along the crimped edge — it should feel uniformly firm and cold, with a consistent thickness, giving you confidence the seal will hold through baking.",
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_8",
-      action: "Bake",
-      inputs: ["assembled_gateau"],
-      outputState: "finished_gateau_basque",
-      instructions: "Bake at 180°C (355°F) for 35–40 minutes until deeply golden all over, with the crosshatch pattern clearly visible and the pastry sound hollow when tapped on top. Cool in the tin for 15 minutes, then unmold. Serve at room temperature — never hot, never cold.",
-      visualCue: {
-        primaryTarget: "Deep, even golden-brown across the entire top surface with a clearly defined crosshatch pattern and slightly darker edges. The gateau has pulled away from the tin sides.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold on top, soft to the touch. The crosshatch has barely developed color. A skewer comes out with cream on it.", action: "Return to the oven for 5 more minutes. Underbaked gateau Basque has a raw, doughy layer directly beneath the pastry lid." },
-          { state: "Perfect",   description: "Rich, even golden-brown with crisp edges. Taps hollow. A skewer comes out clean or with dry crumbs only.", action: "Cool 15 minutes in the tin before unmolding. Serve at room temperature." },
-          { state: "Overdone",  description: "Very dark brown on top, edges nearly burnt. Kitchen smells of caramelized butter.", action: "Cool and unmold — the interior will likely be fine. Dust with icing sugar to conceal the dark crust." },
-        ],
-      },
-      feelCue: "A baked gateau Basque should feel solid and fully set when gently pressed in the center — no wobble, no give. The sound on tapping the top should be a clean, hollow knock.",
+      "ingId": "ing_08",
+      "role": "Dairy",
+      "name": "Lait entier — crème de pâtisserie",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Pousse de vanille, divisée et grattée",
+      "ratioValue": 1,
+      "defaultUnit": "pod",
+      "substitutions": [
+        "1 c. à thé extrait de vanille ou pâte de vanille"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Starch",
+      "name": "Farine de maïs",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": [
+        "fécule de pomme de terre"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Sweetener",
+      "name": "Sucre de canne à sucre — crème de pâtisserie",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Binder",
+      "name": "Jaunes d'œufs — crèmes de pâtisserie (3 jaunes)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "hot_pastry_cream",
+      "instructions": "Portez le lait à mijoter dans une casserole lourde avec la goutte de vanille et les graines. Pendant ce temps, fouetter les jaunes d'œufs, le sucre de castre et la fécule de maïs ensemble jusqu'à ce qu'ils soient pâles et épais. Lorsque le lait s'évapore, versez-le lentement dans le mélange d'oeufs tout en fouettant constamment. Retourner tout dans la casserole à feu moyen et fouetter continuellement jusqu'à ce que la crème épaississe, bulles, et tient un sentier pendant 2 minutes complètes.",
+      "visualCue": {
+        "primaryTarget": "Une crème épaisse et brillante qui fond sur le fouet lorsqu'elle est levée et tient sa forme brièvement avant de sombrer lentement. La surface devrait avoir un léger reflet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème est runny et versable, enrobe le fouet finement. Aucune bulle n'est apparue.",
+            "action": "Continuer à fouetter à feu moyen. L'amidon doit atteindre le point d'ébullition pour s'activer — la crème de pâtisserie sous-cuite goûte de la fécule de maïs crue et se fend à froid."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, brillant, et tenant sa forme sur le fouet. Des bulles éclatent paresseusement de la surface. Il agit activement depuis au moins 1 minute.",
+            "action": "Retirer du feu, fouetter dans un bouton de beurre si désiré, et transférer dans un plat plat."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème est très épaisse, tirant de la poêle dans les touffes. Des odeurs d'œuf brûlé.",
+            "action": "Retirez immédiatement de la chaleur et tendez à travers un tamis. Si de grandes masses d'oeufs brouillés sont visibles, elles ne peuvent pas être sauvées."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser un doigt sur l'arrière d'une cuillère enduite de crème de pâtisserie — la ligne doit rester propre et définie. Si elle se remplit immédiatement, cuire plus longtemps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Frais",
+      "inputs": [
+        "hot_pastry_cream"
+      ],
+      "outputState": "chilled_pastry_cream",
+      "instructions": "Verser la crème de pâtisserie chaude dans un récipient plat et large. Appuyez sur une feuille de film collant directement contre la surface pour empêcher une peau de se former. Réfrigérer jusqu'à ce qu'il soit complètement froid et régler au moins 1 heure. Avant d'utiliser, battre brièvement avec une spatule pour la desserrer à une consistance lisse et pipeable.",
+      "visualCue": {
+        "primaryTarget": "Crème ferme, lisse, jaune pâle qui tient sa forme lorsqu'elle est écorcée mais peut être étalée avec une spatule. Pas de peau, pas de liquide aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours chaud au toucher. Plongée et versable. La pellicule de cling-cling a levé la surface.",
+            "action": "Pressez le film de fixation en arrière contre la surface et réfrigérez pendant au moins 30 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Froid, ferme, doux. Tient un tiret propre lorsqu'il est pressé. Éplucher le film dans une feuille propre.",
+            "action": "Loyer avec une spatule et utiliser immédiatement pour remplir le gateau."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très froid et presque rigide. Difficile à se propager. Peut-être arroser de la condensation si elle n'est pas bien couverte.",
+            "action": "Battre fermement avec une spatule pendant 1 minute jusqu'à ce que lisse et extensible à nouveau."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un bout de doigt dans la crème fraîche — il devrait laisser une impression propre, définie et se sentir frais et réglé, comme un yaourt très ferme."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Crème",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "creamed_base",
+      "instructions": "Battre le beurre à température ambiante et le sucre de roulette ensemble dans un mélangeur de stand avec l'attache de la pagaie (ou à la main) jusqu'à ce que le volume soit pâle, léger et nettement augmenté — environ 4 minutes à vitesse moyenne. Le mélange devrait paraître presque blanc et se sentir aéré.",
+      "visualCue": {
+        "primaryTarget": "Mélange pâle, presque blanc qui a doublé en volume par rapport au beurre et au sucre d'origine. Flou et léger, sans grains visibles de sucre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours jaune, dense et granuleux. Les granules de sucre sont visibles et audibles lorsque le bol est tapé.",
+            "action": "Continuer la crème à vitesse moyenne. L'aération adéquate est ce qui donne au gateau sa texture courte et crumble — cette étape ne peut pas être précipitée."
+          },
+          {
+            "state": "Perfect",
+            "description": "ivoire pâle, doublé en volume et moelleux. Frotte les doigts sans grain.",
+            "action": "Ajouter les œufs un à la fois avec le mélangeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surbattre et commencer à regarder séparé ou caillé, avec du beurre striant le bol.",
+            "action": "Ajouter immédiatement un œuf — il aidera à réémulsionner le mélange."
+          }
+        ]
+      },
+      "feelCue": "Une pincée de beurre bien crémeux et de sucre frotté entre le pouce et l'index doit se sentir lisse et complètement exempt de granules, presque comme la crème du visage."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mélange",
+      "inputs": [
+        "creamed_base",
+        "ing_04"
+      ],
+      "outputState": "egg_butter_mixture",
+      "instructions": "Lorsque le mélangeur tourne sur le milieu, ajouter les œufs entiers un à la fois, en attendant que chacun soit complètement incorporé avant le suivant. Si le mélange commence à paraître caillé, ajoutez une cuillère de farine pour la stabiliser. Le résultat doit être une émulsion lisse, pâle et brillante.",
+      "visualCue": {
+        "primaryTarget": "Un mélange doux, pâle, crémeux qui tient ensemble et a un éclat léger et brillant. Versable mais épais — semblable à une pâte à gâteau épaisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Oeufs non entièrement incorporés — stries de jaune visibles, mélange inégal.",
+            "action": "Continuer à battre à vitesse moyenne jusqu'à ce que le mélange soit uniforme et brillant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, émulsifié, léger. La pagaie laisse des sentiers propres lorsqu'elle est levée.",
+            "action": "Pliez dans la farine, la poudre à pâte et le sel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange s'est fendu: il a l'air granuleux et humide, avec du beurre. Des œufs froids ajoutés trop rapidement.",
+            "action": "Chauffer le bol doucement avec une torche de cuisine ou un chiffon chaud, et battre vigoureusement. Une cuillère de farine aidera."
+          }
+        ]
+      },
+      "feelCue": "Le mélange de beurre d'oeufs devrait être soyeux et léger dans le bol — vous devriez être en mesure de le voir trembler légèrement lorsque le bol est tapé, pas s'asseoir lourd."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Plier",
+      "inputs": [
+        "egg_butter_mixture",
+        "ing_01",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "basque_shortcrust",
+      "instructions": "Mélanger la farine, la poudre à pâte et le sel directement sur le mélange de beurre d'oeufs. Plier doucement avec une spatule – couper à travers le centre, plier à partir du bas, tourner le bol et répéter. Arrêtez le moment où aucune farine sèche n'est visible. Ne pas trop mélanger — il s'agit d'une pâte courte, miettes, pas d'une pâte développée.",
+      "visualCue": {
+        "primaryTarget": "Une pâte douce et légèrement collante qui tient à peine ensemble. Pas de stries de farine visibles. Couleur pâle uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Échelles de farine sèche visibles au fond ou aux bords du bol.",
+            "action": "Continuez à plier avec une main légère — juste assez pour incorporer les dernières traces de farine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme, pâte douce qui tient juste ensemble. Pas brillant, pas dur. Légèrement collant.",
+            "action": "Divisez en deux tiers et un tiers des portions, aplatissez-les en disques, enveloppez-les dans un film de collage et refroidissez 1 heure."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dough s'est durci et est devenu brillant par le surmenage du gluten. Élastique quand étiré.",
+            "action": "Refroidir au moins 2 heures avant de rouler — se reposer relaxe le gluten sur-développé."
+          }
+        ]
+      },
+      "feelCue": "La pâte à pâtisserie basque doit se sentir douce et légèrement collante — juste assez ferme pour appuyer sur la forme, mais elle s'effondrera si elle est manipulée trop agressivement quand elle est chaude."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Refroidissement",
+      "inputs": [
+        "basque_shortcrust"
+      ],
+      "outputState": "chilled_shortcrust",
+      "instructions": "Envelopper les deux portions de pâte dans un film de collage, presser dans des disques plats et réfrigérer pendant au moins 1 heure. Cette période de repos relaxe tout gluten, ferme le beurre, et rend la pâte utilisable sans s'effondrer. Préchauffer le four à 180°C (355°F) pendant que la pâte refroidit.",
+      "visualCue": {
+        "primaryTarget": "Des disques fermes et froids de pâte pâle qui tiennent leur forme complètement et ne collent pas au toucher.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est encore douce et collante, déformant sous pression des doigts.",
+            "action": "Refroidir plus longtemps. Des larmes et des miettes chaudes à courte croûte lorsqu'on les travaille dans la poêle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Disques froids et fermes qui craquent légèrement lorsqu'ils sont pliés mais qui ne sont pas cassants. Pas collant au toucher.",
+            "action": "Travaillez rapidement — pressez ou roulez la grande partie dans la base et les côtés d'une boîte de tarte de 22 cm."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est très dure et craque quand elle est courbée. Trop froid du frigo.",
+            "action": "Laisser reposer à température ambiante pendant 5 minutes avant de travailler."
+          }
+        ]
+      },
+      "feelCue": "La pâte réfrigérée doit se sentir comme de l'argile froide, ferme, fraîche et utilisable, mais souple sans s'effondrer lorsqu'elle est pressée entre deux palmiers plats."
+    },
+    {
+      "nodeId": "step_7",
+      "action": "Assemblage",
+      "inputs": [
+        "chilled_shortcrust",
+        "chilled_pastry_cream",
+        "ing_05"
+      ],
+      "outputState": "assembled_gateau",
+      "instructions": "Appuyez sur la plus grande partie de la pâte dans la base et sur les côtés d'une boîte de tarte beurrée de 22 cm. Étendre la crème de pâtisserie fraîche uniformément sur la base, en laissant une bordure de 1 cm. Rouler ou presser la plus petite partie de pâte dans un disque pour couvrir. Scellez fermement les bords. Badigeonner le haut de jaune d'œuf battu et marquer un motif de croisement avec une fourchette.",
+      "visualCue": {
+        "primaryTarget": "Une tarte bien assemblée avec un couvercle plat, uniformément épais, serti scellé tout autour, et un lavage d'œuf doré avec un croisement visible marqué sur la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le couvercle de pâtisserie n'a pas été scellé sur les côtés — des trous visibles au bord. La crème peut être trop épaisse ou trop proche du bord.",
+            "action": "Appuyez fermement sur les bords avec le bout des doigts mouillés. Le lavage des œufs aidera également à sceller pendant la cuisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même couvercle de pâtisserie, scellé tout autour, croisé marqué. Le lavage des oeufs est uniforme et jaune doré.",
+            "action": "Cuire immédiatement sur la grille du milieu."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le couvercle de pâte a été pressé si fin qu'il est translucide. Crème visible à travers la pâtisserie.",
+            "action": "Couper avec un morceau de pâte fraîche pressé sur la zone mince."
+          }
+        ]
+      },
+      "feelCue": "Exécutez un bout de doigt le long du bord serti — il doit se sentir uniformément ferme et froid, avec une épaisseur constante, vous donnant confiance que le sceau tiendra par la cuisson."
+    },
+    {
+      "nodeId": "step_8",
+      "action": "Cuire",
+      "inputs": [
+        "assembled_gateau"
+      ],
+      "outputState": "finished_gateau_basque",
+      "instructions": "Cuire à 180°C (355°F) pendant 35 à 40 minutes jusqu'à ce qu'il soit bien doré partout, avec le motif d'intersection clairement visible et le bruit de pâtisserie creux lorsqu'il est tapé sur le dessus. Laisser refroidir dans l'étain pendant 15 minutes, puis déformer. Servir à température ambiante — jamais chaud, jamais froid.",
+      "visualCue": {
+        "primaryTarget": "Deep, même doré-brun sur toute la surface supérieure avec un motif de croisement clairement défini et des bords légèrement plus foncés. Le porteau s'est éloigné des côtés en étain.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle sur le dessus, doux au toucher. Le crosshatch a à peine développé la couleur. Une brochette sort avec de la crème dessus.",
+            "action": "Retourner au four 5 minutes de plus. Le gateau Basque sous le feu a une couche crue et pâteuse directement sous le couvercle de la pâtisserie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche, même brun doré aux bords croustillants. Des robinets creux. Une brochette sort propre ou avec des miettes sèches seulement.",
+            "action": "Laisser refroidir 15 minutes dans l'étain avant de se démouler. Servir à température ambiante."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très brun foncé sur le dessus, les bords presque brûlés. La cuisine sent le beurre caramélisé.",
+            "action": "Cool et inaltérable — l'intérieur sera probablement parfait. Poussière avec du sucre glaçant pour cacher la croûte noire."
+          }
+        ]
+      },
+      "feelCue": "Un gateau Basque cuit au four doit se sentir solide et complètement réglé lorsqu'il est pressé doucement au centre — pas de friction, pas de donner. Le son en tapant le haut doit être propre et creux."
+    }
+  ]
 };

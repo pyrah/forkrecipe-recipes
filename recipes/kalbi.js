@@ -1,101 +1,269 @@
 export default {
-  repoId: "master_korean_kalbi_001",
-  parentRepoId: null,
-  slug: "kalbi",
-  author: "ForkRecipe Kitchen",
-  title: "Korean Kalbi Short Ribs",
-  description: "Butterflied short ribs lacquered in a soy-pear-sesame marinade, grilled until the edges caramelize and the marrow-rich bones perfume the smoke.",
-  cuisine: "Korean",
-  culture: "Korean",
-  category: "proteins",
-  tags: ["beef", "korean", "grilled", "short-ribs", "bbq", "marinade", "kalbi", "galbi"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "5 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 4, salty: 3, sour: 1, bitter: 0, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Flanken-cut (cross-cut) short ribs, 1 cm thick", ratioValue: 800,  defaultUnit: "g",  substitutions: ["beef back ribs butterflied", "LA-cut short ribs"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Asian pear, grated (with juice)",                ratioValue: 120,  defaultUnit: "g",  substitutions: ["Bosc pear", "kiwi fruit (use half — more enzymatic)"] },
-    { ingId: "ing_03", role: "Umami",     name: "Soy sauce",                                      ratioValue: 80,   defaultUnit: "ml", substitutions: ["tamari", "coconut aminos (less salty)"] },
-    { ingId: "ing_04", role: "Fat",       name: "Toasted sesame oil",                             ratioValue: 20,   defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener", name: "White sugar",                                    ratioValue: 30,   defaultUnit: "g",  substitutions: ["brown sugar", "honey"] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, minced",                         ratioValue: 6,    defaultUnit: "pcs", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Fresh ginger, peeled and grated",               ratioValue: 10,   defaultUnit: "g",  substitutions: ["ground ginger (3 g)"] },
-    { ingId: "ing_08", role: "Allium",    name: "Scallions, thinly sliced",                       ratioValue: 4,    defaultUnit: "pcs", substitutions: ["green onion tops"] },
-    { ingId: "ing_09", role: "Spice",     name: "Black pepper, freshly ground",                   ratioValue: 4,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_10", role: "Garnish",   name: "Toasted sesame seeds",                           ratioValue: 10,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_korean_kalbi_001",
+  "parentRepoId": null,
+  "slug": "kalbi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Côtes courtes Kalbi coréennes",
+  "description": "Des côtes courtes beurrées laquées dans une marinade de soya, grillées jusqu'à ce que les bords caramélisent et que les os riches en moelle parfument la fumée.",
+  "cuisine": "Coréen",
+  "culture": "Coréen",
+  "category": "proteins",
+  "tags": [
+    "boeuf",
+    "coréen",
+    "grillé",
+    "côtes courtes",
+    "bbq",
+    "marinade",
+    "Kalbi",
+    "- Oui."
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "5 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Rest",
-      inputs: ["ing_01"],
-      outputState: "soaked_ribs",
-      instructions: "Place the flanken ribs in a large bowl of cold water. Soak for 30 minutes, changing the water once halfway through. This draws out surface blood and bone fragments, producing a cleaner, less gamey finished dish. Pat thoroughly dry with paper towels when done.",
-      visualCue: {
-        primaryTarget: "Water turns faintly pink then clears. Ribs emerge with pale, clean-looking bone edges and a matte surface.",
-        spectrum: [
-          { state: "Underdone", description: "Water is deeply red and cloudy after 10 minutes.", action: "Drain and refill immediately. The ribs need at least one more 15-minute soak." },
-          { state: "Perfect",   description: "Water is faintly blush and clear. Bone ends are bright white. Flesh is a clean deep red.", action: "Pat dry on both sides — surface moisture is the enemy of caramelization." },
-          { state: "Overdone",  description: "Soaked more than an hour — meat has begun to leach flavor into the water and looks pale.", action: "Pat dry and proceed. The marinade will restore flavor." },
-        ],
-      },
-      feelCue: "The ribs should feel cold, firm, and slick from the water. Pat until the paper towel comes away completely dry — any dampness will steam rather than sear.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Côtes courtes coupées (coupées transversalement) de 1 cm d'épaisseur",
+      "ratioValue": 800,
+      "defaultUnit": "g",
+      "substitutions": [
+        "côtes du dos de boeuf beurré",
+        "Côtes courtes coupées en LA"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Marinate",
-      inputs: ["soaked_ribs", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "marinated_ribs",
-      instructions: "Whisk together grated pear and its juice, soy sauce, sesame oil, sugar, garlic, ginger, scallion, and black pepper until the sugar dissolves. The pear enzymes (proteases) will tenderize the collagen in the bone-adjacent meat. Submerge the ribs completely, pressing out air bubbles. Marinate in the refrigerator for a minimum of 4 hours; 8 hours is ideal. Do not marinate beyond 24 hours or the meat will begin to turn mushy.",
-      visualCue: {
-        primaryTarget: "Ribs are fully submerged in a deep amber-brown marinade with visible grated pear and garlic bits coating every surface.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade sits on top of the ribs without coating; ribs float rather than submerge.", action: "Press ribs down and weigh with a plate. Massage the marinade into the meat if needed." },
-          { state: "Perfect",   description: "Ribs completely coated, marinade staining into the meat surface. After 4+ hours, the flesh near the bone has darkened noticeably.", action: "Remove from fridge 20 minutes before grilling. Discard excess marinade." },
-          { state: "Overdone",  description: "After 24+ hours: flesh feels soft and slightly slimy to the touch — pear enzymes have over-tenderized.", action: "Cook quickly on high heat; the texture will still be acceptable if not ideal." },
-        ],
-      },
-      feelCue: "Reach into the marinade and press a rib — the meat should feel firm but tacky from the soy and sugar. After 8 hours, the flesh near the bone will feel slightly more yielding, almost silky.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Poire asiatique râpée (avec jus)",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Poire de bosc",
+        "kiwis (utiliser la moitié — plus enzymatique)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Grill",
-      inputs: ["marinated_ribs"],
-      outputState: "grilled_kalbi",
-      instructions: "Heat the grill or grill pan to ripping high heat. Grill the ribs in a single layer without crowding, 2–3 minutes per side. You want rapid caramelization of the sugar and soy — the char is the flavor. The bones will perfume the air with a caramelized, nutty smoke. Do not move the ribs until they release cleanly from the grates.",
-      visualCue: {
-        primaryTarget: "Deep mahogany-brown lacquering on both sides with concentrated char-black at the thin bone edges. Grill marks are nearly invisible beneath the even caramelization.",
-        spectrum: [
-          { state: "Underdone", description: "Still grey-beige on the surface, meat releasing liquid rather than caramelizing. Sticks to the grill.", action: "Do not force it off — wait 30 more seconds. The meat will release when the Maillard crust has formed." },
-          { state: "Perfect",   description: "Lacquered deep brown, edges charring to black. Sizzling loudly. Releases cleanly with tongs. Bone ends are browned.", action: "Flip and grill the other side. Total cook time will be 5–6 minutes." },
-          { state: "Overdone",  description: "Uniformly black with a bitter smell. Sugar has carbonized past caramelization.", action: "Lower heat for remaining batches. Trim the most bitter edges before serving." },
-        ],
-      },
-      feelCue: "Grip a bone end with tongs — the rib should feel taut and stiff, not floppy. Press the meat between the bones with your finger: there should be firm resistance and a slight spring, not mushiness.",
+      "ingId": "ing_03",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari",
+        "amines de noix de coco (moins salées)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["grilled_kalbi", "ing_10", "ing_08"],
-      outputState: "finished_kalbi",
-      instructions: "Transfer immediately to a serving platter. Scatter toasted sesame seeds and freshly sliced scallion over the top while the residual heat blooms the sesame aroma. Serve with steamed rice, kimchi, and lettuce leaves for wrapping.",
-      visualCue: {
-        primaryTarget: "Lacquered ribs topped with white sesame seeds and bright green scallion against the near-black caramelized surface.",
-        spectrum: [
-          { state: "Underdone", description: "Sesame seeds are raw-looking and pale; added too early and got oily.", action: "Scatter a second round of seeds just before serving." },
-          { state: "Perfect",   description: "Seeds and scallion sit bright and fresh on top of the hot, glistening meat. The heat just barely wilts the scallion rings.", action: "Serve immediately — kalbi is best the moment it leaves the grill." },
-          { state: "Overdone",  description: "Allowed to sit too long — seeds have browned further and scallion has wilted completely.", action: "Re-scatter fresh garnish and give the ribs a 30-second blast on the grill to revive." },
-        ],
-      },
-      feelCue: "The sesame seeds should feel dry and crunchy, contrasting with the sticky, almost tacky glaze on the meat. Lift a rib by the bone — it should hold together firmly with a slight give when you bite.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brun",
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 6,
+      "defaultUnit": "pcs",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Gingembre frais, pelé et râpé",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gingembre haché (3 g)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Échalons, tranchés finement",
+      "ratioValue": 4,
+      "defaultUnit": "pcs",
+      "substitutions": [
+        "dessus d'oignon vert"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Poivre noir, fraîchement moulu",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Repos",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "soaked_ribs",
+      "instructions": "Placez les côtes flanquées dans un grand bol d'eau froide. Faire tremper pendant 30 minutes, changer l'eau une fois à mi-chemin. Cela retire des fragments de sang et d'os de surface, produisant un plat plus propre et moins gamey fini. Pat soigneusement sécher avec des serviettes en papier quand c'est fait.",
+      "visualCue": {
+        "primaryTarget": "L'eau devient légèrement rose puis s'éclaircit. Les côtes émergent avec des bords osseux pâles et propres et une surface mate.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est profondément rouge et nuageuse après 10 minutes.",
+            "action": "Égoutter et remplir immédiatement. Les côtes ont besoin d'au moins 15 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'eau est légèrement roussée et claire. Les extrémités osseuses sont blanches. La chair est un rouge profond propre.",
+            "action": "Pat sec des deux côtés — l'humidité de surface est l'ennemi de la caramélisation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Soupie plus d'une heure — la viande a commencé à lixivier le goût dans l'eau et semble pâle.",
+            "action": "Pat sèche et continue. La marinade restaurera la saveur."
+          }
+        ]
+      },
+      "feelCue": "Les côtes doivent être froides, fermes et lissées de l'eau. Patientez jusqu'à ce que la serviette de papier s'en aille complètement sèche — toute humidité va vapeur plutôt que de semer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "soaked_ribs",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "marinated_ribs",
+      "instructions": "Mélanger la poire râpée et son jus, la sauce de soja, l'huile de sésame, le sucre, l'ail, le gingembre, l'échon et le poivre noir jusqu'à ce que le sucre se dissout. Les enzymes de la poire (protéases) vont tendrer le collagène dans la viande osseuse. Submerger complètement les côtes, presser les bulles d'air. Faire mariner au réfrigérateur pendant au moins 4 heures; 8 heures est idéal. Ne pas mariner au-delà de 24 heures ou la viande commencera à devenir musquée.",
+      "visualCue": {
+        "primaryTarget": "Les côtes sont entièrement submergées dans une marinade brun-ambre profonde avec de la poire râpée visible et des morceaux d'ail enrobant chaque surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Marinade est assise sur les côtes sans revêtement; les côtes flottent plutôt que se submerger.",
+            "action": "Appuyez sur les côtes et peser avec une assiette. Masser la marinade dans la viande si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Côtes entièrement enduites, coloration marinade dans la surface de la viande. Après 4 heures et plus, la chair près de l'os s'est sensiblement obscurcie.",
+            "action": "Retirer du réfrigérateur 20 minutes avant de griller. Jeter l'excès de marinade."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après 24 heures et plus : la chair est douce et légèrement visqueuse au toucher – les enzymes de poire sont sur-tendrées.",
+            "action": "Cuire rapidement à feu vif; la texture sera toujours acceptable sinon idéale."
+          }
+        ]
+      },
+      "feelCue": "Atteindre la marinade et presser une côte — la viande doit se sentir ferme mais piquante du soja et du sucre. Après 8 heures, la chair près de l'os se sentira légèrement plus productive, presque soyeuse."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Grille",
+      "inputs": [
+        "marinated_ribs"
+      ],
+      "outputState": "grilled_kalbi",
+      "instructions": "Chauffer le gril ou le gril à feu vif. Griller les côtes en une seule couche sans encombrer, 2–3 minutes de chaque côté. Vous voulez une caramélisation rapide du sucre et du soja — l'omble est la saveur. Les os parfumeront l'air avec une fumée caramélisée et noisette. Ne bougez pas les côtes avant qu'elles ne se détachent proprement des grilles.",
+      "visualCue": {
+        "primaryTarget": "Laquage acajou-brun profond sur les deux côtés avec carbon-noir concentré aux bords fins de l'os. Les marques de gril sont presque invisibles sous la même caramélisation.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours gris beige à la surface, la viande libère du liquide plutôt que de la caramélisation. Ça colle au grill.",
+            "action": "Ne le forcez pas — attendez encore 30 secondes. La viande se libérera quand la croûte Maillard se sera formée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Laqué brun foncé, bords carbonisés à noir. Soufflant fort. Rejets proprement avec pinces. Les extrémités osseuses sont brunes.",
+            "action": "Flip et griller l'autre côté. Le temps total de cuisson sera de 5 à 6 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un noir uniforme avec une odeur amère. Le sucre a carbonisé la caramélisation passée.",
+            "action": "Moins de chaleur pour les lots restants. Couper les bords les plus amers avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Grappe un bout d'os avec des pinces — la côte doit être tendue et raide, et non floppée. Appuyez sur la viande entre les os avec votre doigt: il devrait y avoir une résistance ferme et un léger ressort, pas de mushiness."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "grilled_kalbi",
+        "ing_10",
+        "ing_08"
+      ],
+      "outputState": "finished_kalbi",
+      "instructions": "Transférer immédiatement dans un plateau de service. Éparpillement de graines de sésame grillées et de pétoncle fraîchement tranché sur le dessus tandis que la chaleur résiduelle fleurit l'arôme de sésame. Servir avec du riz à la vapeur, du kimchi et des feuilles de laitue pour l'emballage.",
+      "visualCue": {
+        "primaryTarget": "Côtes laquées surmontées de graines de sésame blanc et de pétoncle vert vif contre la surface caramélisée presque noire.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines de sésame sont crues et pâles; ajoutées trop tôt et devenant huileuses.",
+            "action": "Épargnez une seconde ronde de graines juste avant de servir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les graines et le pétoncle s'assoient vif et frais sur le dessus de la viande chaude et scintillante. La chaleur flétrit à peine les anneaux de pétoncle.",
+            "action": "Servir immédiatement — le kalbi est le meilleur moment où il quitte le grill."
+          },
+          {
+            "state": "Overdone",
+            "description": "Il est permis de s'asseoir trop longtemps — les graines ont bruni plus loin et le pétoncle s'est complètement flétri.",
+            "action": "Redistribuer la garniture fraîche et donner aux côtes une explosion de 30 secondes sur le gril pour relancer."
+          }
+        ]
+      },
+      "feelCue": "Les graines de sésame doivent se sentir sèches et croquantes, contrastant avec le glaçage collant et presque collant sur la viande. Soulevez une côte par l'os — il devrait tenir fermement ensemble avec un léger donner quand vous mordez."
+    }
+  ]
 };

@@ -1,93 +1,222 @@
 export default {
-  repoId: "master_french_hollandaise_001",
-  parentRepoId: null,
-  slug: "hollandaise",
-  author: "ForkRecipe Kitchen",
-  title: "Hollandaise",
-  description: "A warm, buttery mother sauce — egg yolks whisked to a pale sabayon over a bain-marie, then mounted with warm clarified butter into a glossy emulsion, sharpened with lemon and a whisper of cayenne.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "sauces",
-  tags: ["sauce", "french", "emulsion", "egg", "mother-sauce", "butter"],
-  difficulty: 4,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2025-06-09",
-  updatedAt: "2025-06-09",
-  flavorRadar: { sweet: 0, salty: 2, sour: 2, bitter: 0, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Binder",    name: "Egg yolks",                                              ratioValue: 3,   defaultUnit: "yolks", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Clarified butter (warm)",                                ratioValue: 8,   defaultUnit: "parts", substitutions: ["warm melted ghee"] },
-    { ingId: "ing_03", role: "Citrus",    name: "Lemon juice",                                            ratioValue: 1,   defaultUnit: "part",  substitutions: [] },
-    { ingId: "ing_04", role: "Acid",      name: "Water (or a splash of white-wine vinegar reduction)",    ratioValue: 1,   defaultUnit: "part",  substitutions: ["white-wine vinegar reduction"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Salt",                                                   ratioValue: 0.2, defaultUnit: "part",  substitutions: ["fine sea salt"] },
-    { ingId: "ing_06", role: "Heat",      name: "Cayenne pepper",                                         ratioValue: 0.05, defaultUnit: "part", substitutions: ["pinch of white pepper"] },
+  "repoId": "master_french_hollandaise_001",
+  "parentRepoId": null,
+  "slug": "hollandaise",
+  "author": "ForkRecipe Kitchen",
+  "title": "Hollande",
+  "description": "Une sauce mère chaude et beurrée — des jaunes d'œufs fouettés à un sabayon pâle sur un bain-marie, puis montés avec du beurre clarifié chaud dans une émulsion brillante, aiguisés avec du citron et un murmure de Cayenne.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "émulsion",
+    "œuf",
+    "mère-sauce",
+    "beurre"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-06-09",
+  "updatedAt": "2025-06-09",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Whisk",
-      inputs: ["ing_01", "ing_04"],
-      outputState: "sabayon",
-      instructions: "Set a heatproof bowl over a pan of barely simmering water — the bowl must not touch the water, and the water must steam, not boil. Add the yolks and the water (or vinegar reduction). Whisk constantly and vigorously, lifting the bowl off the heat every few seconds to control the temperature, until the yolks triple in volume and thicken to a pale, airy sabayon that holds a ribbon. This is the make-or-break stage: too much heat scrambles the yolks into sweet curds; too little and they never thicken enough to carry the butter.",
-      visualCue: {
-        primaryTarget: "Pale lemon-yellow, tripled in volume, glossy and mousse-like. When you lift the whisk, the sabayon falls in a thick ribbon that sits on the surface for two or three seconds before melting back in.",
-        spectrum: [
-          { state: "Underdone", description: "Still loose, dark-yellow, and watery. The whisk leaves no trail — the mixture runs flat the instant it falls.", action: "Keep whisking over the heat. It needs more time and a touch more warmth — but keep lifting off the heat so it thickens gradually rather than cooking." },
-          { state: "Perfect",   description: "Pale, voluminous, and thick enough to ribbon. You can see the bottom of the bowl for a beat when the whisk passes through. It is warm to the touch but not hot — body temperature, around 65 C / 150 F.", action: "Pull the bowl off the heat. Begin streaming in the warm butter immediately, while the sabayon is still warm." },
-          { state: "Overdone",  description: "Grainy, lumpy, or visibly scrambled — pale curds forming around the edge or on the whisk. It smells of cooked egg.", action: "If only just starting to grain at the edges, pull off the heat instantly and whisk in a teaspoon of cold water to drop the temperature. If it has truly scrambled into curds, start over — there is no recovery from cooked yolk." },
-        ],
-      },
-      feelCue: "The whisk should meet steadily growing resistance as the yolks aerate. The bowl should feel warm against your palm but never so hot you must let go — if it stings, you are seconds from scrambling.",
+      "ingId": "ing_01",
+      "role": "Binder",
+      "name": "Jaunes d'œuf",
+      "ratioValue": 3,
+      "defaultUnit": "yolks",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Mount",
-      inputs: ["sabayon", "ing_02"],
-      outputState: "emulsified_hollandaise",
-      instructions: "Off the heat (or with the bowl resting on a damp towel for stability), begin adding the warm clarified butter in a thin, steady stream while whisking without pause. Start drop by drop until the emulsion takes and visibly thickens, then increase to a slow trickle. The butter must be warm, not hot — around 40-50 C / 105-120 F — and the sabayon warm too, so the fat stays fluid and droplets disperse evenly. Add butter faster than the yolks can absorb it, or let either component get cold, and the emulsion breaks into an oily, separated mess.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, opaque pale-gold sauce that coats the whisk and falls in slow, smooth folds. It mounds softly and holds a clean line when you draw the whisk across the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Thin and pourable, like loose cream — not all the butter is in yet, or it is going in too slowly to build body.", action: "Keep streaming butter steadily while whisking. The sauce thickens as fat accumulates; it will reach nappe consistency as the last of the butter goes in." },
-          { state: "Perfect",   description: "Lush, thick, and glossy — it clings to the whisk in a smooth sheet and holds soft peaks. Drawn across a spoon, it coats the back and you can draw a clean line through it.", action: "Move on to seasoning. Whisk in the lemon, salt, and cayenne." },
-          { state: "Overdone",  description: "Broken: the sauce has gone thin, greasy, and curdled-looking, with butter pooling and separating from the yolk. It looks like oily scrambled egg in liquid fat.", action: "Rescue it: in a clean bowl, whisk a fresh egg yolk (or a tablespoon of warm water) and dribble the broken sauce into it drop by drop, re-emulsifying as you go. If the break came from overheating, a splash of cold water whisked in hard can also pull it back together." },
-        ],
-      },
-      feelCue: "The whisk drag grows heavier with every addition — the sound shifts from a thin splash to a thick, slapping fold. If you suddenly feel the resistance drop and hear it go watery, the emulsion is breaking; stop adding butter and whisk hard to recover before continuing.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre clarifié (chaud)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Ghee chaud fondu"
+      ]
     },
     {
-      nodeId: "step_3", action: "Season",
-      inputs: ["emulsified_hollandaise", "ing_03", "ing_05", "ing_06"],
-      outputState: "finished_hollandaise",
-      instructions: "Whisk in the lemon juice a few drops at a time, tasting as you go — it brightens the sauce and loosens it slightly. Season with salt and a small pinch of cayenne. The lemon should lift and balance the richness without making the sauce taste sour; the cayenne is a background warmth you sense more than taste.",
-      visualCue: {
-        primaryTarget: "A pourable-but-clingy, satiny sauce the color of soft butter, just slackened from the lemon. It flows in a smooth ribbon and coats the back of a spoon in an even, glossy sheet.",
-        spectrum: [
-          { state: "Underdone", description: "Tastes flat and overwhelmingly of butter — under-seasoned, with no brightness or lift on the palate.", action: "Add lemon juice a few drops at a time and a little more salt, tasting after each addition until the sauce tastes balanced and alive." },
-          { state: "Perfect",   description: "Balanced and glossy: rich but bright, with a clean lemony edge and a faint warmth from the cayenne. It is loose enough to pour yet thick enough to nap a spoon.", action: "Serve immediately, or hold gently warm until needed." },
-          { state: "Overdone",  description: "Too thick and pasty, or too sharp and sour from over-acidulating. The sauce tastes thin and tart rather than rich.", action: "If too thick, whisk in a teaspoon of warm water to loosen. If too sour, you cannot remove the acid — whisk in a little more warm butter to rebalance the richness." },
-        ],
-      },
-      feelCue: "The sauce should taste rich first, then bright, then warm — three notes in sequence. On the spoon it should feel like warm velvet, never gluey.",
+      "ingId": "ing_03",
+      "role": "Citrus",
+      "name": "Jus de citron",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Hold",
-      inputs: ["finished_hollandaise"],
-      outputState: "held_hollandaise",
-      instructions: "Hollandaise is a live, fragile emulsion that cannot be reheated. Hold it warm — not hot — in its bowl set over (not in) warm water around 50-60 C / 120-140 F, or in a warm spot near the stove, whisking occasionally. Use within an hour or two. Above roughly 65 C / 150 F the yolks scramble and the sauce breaks; let it go cold and the butter sets and separates.",
-      visualCue: {
-        primaryTarget: "The sauce stays loose, glossy, and warm to the touch, with no skin, no weeping of butter, and no graininess. A gentle whisk brings it back to a smooth sheen.",
-        spectrum: [
-          { state: "Underdone", description: "Gone cold and stiff — the butter has begun to set, the surface looks dull and pasty, and it no longer pours.", action: "Whisk in a teaspoon of warm (not hot) water and set the bowl briefly over warm water, whisking, to gently bring it back to temperature and consistency." },
-          { state: "Perfect",   description: "Warm, fluid, glossy, and stable. It pours in a smooth ribbon and naps whatever it touches. No skin, no oil slick on top.", action: "Spoon over eggs, fish, or vegetables and serve at once." },
-          { state: "Overdone",  description: "Held too hot or too long: grainy and broken, with a film on top and free butter pooling at the edges, sometimes smelling of overcooked egg.", action: "If merely broken from heat, whisk a tablespoon of cold water or a fresh yolk into a clean bowl and re-emulsify the sauce into it. If the yolks have scrambled, discard and make a fresh batch." },
-        ],
-      },
-      feelCue: "Touch the bowl: it should feel like a warm bath, never hot. If it is too hot for your fingers to rest against comfortably, it is too hot for the sauce — move it off the heat before it scrambles.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Eau (ou éclaboussure de vinaigre blanc)",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "réduction du vinaigre de vin blanc"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 0.2,
+      "defaultUnit": "part",
+      "substitutions": [
+        "sel de mer fin"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Heat",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 0.05,
+      "defaultUnit": "part",
+      "substitutions": [
+        "pincée de poivre blanc"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_04"
+      ],
+      "outputState": "sabayon",
+      "instructions": "Mettre un bol thermofuge sur une casserole d'eau à peine mijotée — le bol ne doit pas toucher l'eau, et l'eau doit vapeur, pas bouillir. Ajouter les jaunes et l'eau (ou la réduction du vinaigre). fouetter constamment et vigoureusement, lever le bol de la chaleur toutes les quelques secondes pour contrôler la température, jusqu'à ce que les jaunes triplent en volume et s'épaississent à un sabayon pâle et aéré qui tient un ruban. C'est l'étape de fabrication ou de rupture : trop de chaleur brouille les jaunes en caillés doux ; trop peu et ils ne s'épaississent jamais assez pour porter le beurre.",
+      "visualCue": {
+        "primaryTarget": "Jaune citronné pâle, triple en volume, brillant et mousseux. Lorsque vous soulevez le fouet, le sabayon tombe dans un ruban épais qui est assis sur la surface pendant deux ou trois secondes avant de fondre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours lâche, jaune foncé et aqueux. Le fouet ne laisse pas de trace — le mélange est plat à l'instant où il tombe.",
+            "action": "Continuez à fouetter. Il a besoin de plus de temps et d'une touche plus de chaleur — mais continuez à lever la chaleur afin qu'elle épaississe progressivement plutôt que de cuisiner."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pale, volumineux et assez épais pour rubaner. Vous pouvez voir le fond du bol pour un battement quand le fouet passe à travers. Il est chaud au toucher mais pas chaud — température du corps, environ 65 C / 150 F.",
+            "action": "Retirez le bol du feu. Commencez immédiatement à couler dans le beurre chaud, tandis que le sabayon est encore chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Graineux, grumeux ou visiblement brouillés — cords pâles formant autour du bord ou sur le fouet. Ça sent l'oeuf cuit.",
+            "action": "Si seulement commencer à grainer aux bords, retirer la chaleur instantanément et fouetter dans une cuillère à café d'eau froide pour baisser la température. S'il s'est vraiment enroulé dans des caillés, recommencer — il n'y a pas de récupération du jaune cuit."
+          }
+        ]
+      },
+      "feelCue": "Le fouet doit répondre à une résistance croissante à mesure que les jaunes aéreront. Le bol devrait se sentir chaud contre votre paume, mais jamais si chaud vous devez lâcher prise — si elle pique, vous êtes à quelques secondes de brouillage."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Monter",
+      "inputs": [
+        "sabayon",
+        "ing_02"
+      ],
+      "outputState": "emulsified_hollandaise",
+      "instructions": "Hors du feu (ou avec le bol reposant sur une serviette humide pour la stabilité), commencer à ajouter le beurre clarifié chaud dans un cours d'eau mince et stable tout en fouettant sans pause. Commencez à tomber jusqu'à ce que l'émulsion s'épaississe et s'épaississe visiblement, puis augmentez jusqu'à un filet lent. Le beurre doit être chaud, pas chaud — environ 40-50 C / 105-120 F — et le sabayon chaud aussi, de sorte que la graisse reste fluide et les gouttelettes se dispersent uniformément. Ajouter le beurre plus rapidement que les jaunes peut l'absorber, ou laisser l'un ou l'autre composant refroidir, et l'émulsion se brise dans un gâchis huileux et séparé.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse, brillante, opaque et dorée qui enveloppe le fouet et tombe dans des plis lents et lisses. Il fond doucement et tient une ligne propre lorsque vous dessinez le fouet sur la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Fin et versable, comme de la crème molle — pas tout le beurre est encore dans, ou il va dans trop lentement pour construire le corps.",
+            "action": "Continuez à diffuser régulièrement le beurre tout en fouettant. La sauce s'épaissit au fur et à mesure que le gras s'accumule; elle atteindra la consistance de la nappe au fur et à mesure que le dernier beurre entre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lush, épais et brillant — il s'accroche au fouet dans une feuille lisse et tient des pics doux. Tiré sur une cuillère, il enveloppe le dos et vous pouvez dessiner une ligne propre à travers elle.",
+            "action": "Passez à l'assaisonnement. Dans le citron, le sel et la cayenne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Broyée : la sauce est devenue mince, grasse et caillé, avec du beurre et se sépare du jaune. On dirait un œuf gras brouillé dans la graisse liquide.",
+            "action": "Sauvez-le: dans un bol propre, fouettez un jaune d'oeuf frais (ou une cuillère à soupe d'eau chaude) et dribblez la sauce cassée dans elle goutte à goutte, réémulsionnant au fur et à mesure que vous allez. Si la pause venait de la surchauffe, une éclaboussure d'eau froide fouettée en dur peut aussi la ramener ensemble."
+          }
+        ]
+      },
+      "feelCue": "La traînée de fouet devient plus lourde avec chaque addition — le son passe d'une fine éclaboussure à un pli épais et giflant. Si vous ressentez soudainement la chute de résistance et l'entendre s'abreuver, l'émulsion se brise; arrêtez d'ajouter du beurre et fouettez dur à récupérer avant de continuer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "emulsified_hollandaise",
+        "ing_03",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "finished_hollandaise",
+      "instructions": "Dans le jus de citron, fouetter quelques gouttes à la fois, goûter au fur et à mesure – il éclaircit la sauce et la détend légèrement. Assaisonner de sel et une petite pincée de Cayenne. Le citron devrait lever et équilibrer la richesse sans faire de la sauce un goût aigre; la Cayenne est une chaleur de fond que vous sentez plus que le goût.",
+      "visualCue": {
+        "primaryTarget": "Une sauce satinée à la couleur du beurre doux, mais versable, qui se détache du citron. Il coule dans un ruban lisse et enveloppe l'arrière d'une cuillère dans une feuille uniforme et brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Goûte plat et massivement de beurre, sous-assaisonnement, sans éclat ni ascenseur en bouche.",
+            "action": "Ajouter le jus de citron quelques gouttes à la fois et un peu plus de sel, goûter après chaque addition jusqu'à ce que la sauce ait un goût équilibré et vivant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Équilibré et brillant: riche mais lumineux, avec un bord citronné propre et une chaleur faible de la cayenne. Il est assez lâche pour verser encore assez épais pour faire une sieste.",
+            "action": "Servir immédiatement ou tenir doucement au chaud jusqu'à ce qu'il soit nécessaire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop épais et pâteux, ou trop tranchant et aigre de sur-acidification. La sauce a un goût mince et de tarte plutôt que riche.",
+            "action": "Si trop épais, fouetter dans une cuillère à café d'eau chaude pour se détendre. Si vous êtes trop aigre, vous ne pouvez pas retirer l'acide — fouetter un peu plus de beurre chaud pour rééquilibrer la richesse."
+          }
+        ]
+      },
+      "feelCue": "La sauce doit d'abord avoir un goût riche, puis lumineux, puis chaud — trois notes en séquence. Sur la cuillère, il devrait se sentir comme du velours chaud, jamais collant."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Attendez",
+      "inputs": [
+        "finished_hollandaise"
+      ],
+      "outputState": "held_hollandaise",
+      "instructions": "La Hollande est une émulsion vivante et fragile qui ne peut pas être réchauffée. Maintenez-le au chaud — pas au chaud — dans son bol sur l'eau chaude (pas dans) autour de 50-60 C / 120-140 F, ou dans un endroit chaud près du poêle, fouettant occasionnellement. Utiliser dans une heure ou deux. Au-dessus d'environ 65 C / 150 F les jaunes se brouillent et la sauce se brise; laissez-la refroidir et le beurre se sert et se sépare.",
+      "visualCue": {
+        "primaryTarget": "La sauce reste souple, brillante et chaude au toucher, sans peau, sans pleurs de beurre et sans grain. Un doux fouet le ramène à un éclat doux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Parti froid et raide — le beurre a commencé à se fixer, la surface semble terne et pâteuse, et il ne se déverse plus.",
+            "action": "fouetter dans une cuillère à café d'eau chaude (pas chaude) et mettre le bol brièvement sur l'eau chaude, fouetter, pour le ramener doucement à la température et à la consistance."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaud, fluide, brillant et stable. Il verse dans un ruban lisse et fait des siestes. Pas de peau, pas d'huile sur le dessus.",
+            "action": "Déposer sur les œufs, le poisson ou les légumes et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tenu trop chaud ou trop long : granuleux et cassé, avec un film sur le dessus et un brouillard de beurre libre aux bords, parfois sentant l'œuf trop cuit.",
+            "action": "S'il est simplement cassé par la chaleur, fouetter une cuillère à soupe d'eau froide ou un jaune frais dans un bol propre et ré-émulsionner la sauce en elle. Si les jaunes ont brouillé, jetez et faites un lot frais."
+          }
+        ]
+      },
+      "feelCue": "Touchez le bol : il devrait se sentir comme un bain chaud, jamais chaud. S'il est trop chaud pour que vos doigts s'arrêtent confortablement, il est trop chaud pour la sauce — le bouger du feu avant qu'il ne se brouille."
+    }
+  ]
 };

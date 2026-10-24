@@ -1,98 +1,241 @@
 export default {
-  repoId: "master_italian_cannoli_cream_001",
-  parentRepoId: null,
-  slug: "cannoli-cream",
-  author: "ForkRecipe Kitchen",
-  title: "Cannoli Cream",
-  description: "Freshly strained ricotta whipped with powdered sugar, orange zest, and chocolate chips — the soul of Sicily in a bowl, ethereally light when the ricotta is properly drained, with a clean dairy sweetness that the orange cuts through like a knife.",
-  cuisine: "Italian",
-  culture: "Sicilian",
-  category: "desserts",
-  tags: ["cannoli", "sicilian", "italian", "ricotta", "cream", "chocolate", "orange", "pastry"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 4, salty: 1, sour: 0, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",      name: "Whole-milk ricotta (impastata or fresh)", ratioValue: 1,     defaultUnit: "parts", substitutions: ["drained sheep's milk ricotta for sharper flavour"] },
-    { ingId: "ing_02", role: "Sweetener",  name: "Powdered (icing) sugar, sifted",          ratioValue: 0.15,  defaultUnit: "parts", substitutions: ["caster sugar beaten in for a slightly grainier texture"] },
-    { ingId: "ing_03", role: "Citrus",     name: "Orange zest (finely grated, 1 large orange)", ratioValue: 0.01, defaultUnit: "parts", substitutions: ["lemon zest for a brighter, sharper note"] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Vanilla extract",                          ratioValue: 0.01,  defaultUnit: "parts", substitutions: ["seeds of 1 vanilla bean"] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Mini dark chocolate chips",                ratioValue: 0.1,   defaultUnit: "parts", substitutions: ["roughly chopped bittersweet chocolate", "candied citrus peel"] },
-    { ingId: "ing_06", role: "Spice",      name: "Ground cinnamon",                          ratioValue: 0.005, defaultUnit: "parts", substitutions: ["a scrape of fresh nutmeg"] },
-    { ingId: "ing_07", role: "Garnish",    name: "Pistachios, finely chopped",               ratioValue: 0.05,  defaultUnit: "parts", substitutions: ["candied hazelnuts", "toasted almonds"] },
+  "repoId": "master_italian_cannoli_cream_001",
+  "parentRepoId": null,
+  "slug": "cannoli-cream",
+  "author": "ForkRecipe Kitchen",
+  "title": "Crème de cannoli",
+  "description": "La ricotta fraîchement tendue fouettée avec du sucre en poudre, du zeste d'orange et des chips de chocolat — l'âme de la Sicile dans un bol, éthérément légère quand la ricotta est correctement drainée, avec une douceur laitière propre que l'orange coupe comme un couteau.",
+  "cuisine": "Italien",
+  "culture": "Sicilien",
+  "category": "desserts",
+  "tags": [
+    "Cannoli",
+    "sicilienne",
+    "Italien",
+    "ricotta",
+    "crème",
+    "chocolat",
+    "orange",
+    "pâtisserie"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Set",
-      inputs: ["ing_01"],
-      outputState: "strained_ricotta",
-      instructions: "Line a fine-mesh sieve or colander with a double layer of damp cheesecloth and set it over a bowl in the refrigerator. Tip the ricotta into the lined sieve and leave to drain for at least 1 hour (or up to overnight for the driest result). Discard the liquid in the bowl. Properly strained ricotta should feel grainy and dry — like thick cottage cheese rather than yogurt. The water content of commercial ricotta is the single biggest reason cannoli cream turns out runny: drain it without mercy.",
-      visualCue: {
-        primaryTarget: "After draining, the ricotta sits in a compact, grainy mound in the sieve. When a spoon is pressed into it, no liquid seeps out around the edges.",
-        spectrum: [
-          { state: "Underdone", description: "The ricotta is still wet and creamy — when pressed, a ring of milky liquid immediately appears around the spoon. It has the consistency of Greek yogurt.", action: "Return to the fridge and drain for at least another 30 minutes. Wet ricotta produces a runny cannoli cream that cannot be piped and will sog the shells immediately upon contact." },
-          { state: "Perfect",   description: "Dry, crumbly, almost paste-like. Holds a shape when pressed. No liquid seeps. Tastes clean and milky with no excess water diluting the flavour.", action: "Proceed to beating. The strained curd is now ready to become a light, pipeable cream." },
-          { state: "Overdone",  description: "You drained overnight in the fridge in an uncovered sieve and the ricotta surface has dried and crusted slightly, or it has absorbed a faint refrigerator odour.", action: "Scrape away any dried crust and proceed — the inner mass will be perfect. In future, cover the sieve loosely with cling film during overnight draining." },
-        ],
-      },
-      feelCue: "Press a small amount of the drained ricotta between two fingers — it should feel dry and granular, like slightly damp fine sand, not smooth and glossy like cream cheese. Any slipperiness means more draining is needed.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Ricotta de lait entier (impastata ou frais)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Ricotta de lait de mouton drainé pour une saveur plus nette"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["strained_ricotta", "ing_02"],
-      outputState: "sweetened_ricotta",
-      instructions: "Transfer the strained ricotta to a bowl. Sift the powdered sugar over it and beat together with a spatula or hand mixer on low speed until completely smooth, with no sugar lumps and no ricotta curds remaining. This step breaks down the grainy texture of the ricotta into a creamy, cohesive mass. Taste for sweetness — the sugar level here is modest to allow the ricotta's flavour to come through. Add more sugar by the tablespoon if desired, but remember that the chocolate chips will add additional sweetness.",
-      visualCue: {
-        primaryTarget: "A smooth, uniform cream with the slightest grain — like a very thick, creamy custard. No visible curd chunks. A spoon dragged through it leaves a clean, slow-closing channel.",
-        spectrum: [
-          { state: "Underdone", description: "Still chunky, grainy, and uneven. Visible curd particles and undissolved sugar. The texture is inconsistent.", action: "Beat a little longer. The ricotta needs time to smooth out — high-speed whisking risks introducing too much air, so low and steady wins." },
-          { state: "Perfect",   description: "Creamy, smooth, with just a hint of pleasant grain — not as smooth as cream cheese, but not lumpy either. Clean, milky sweetness.", action: "Add the aromatics now — orange zest, vanilla, and cinnamon. These go in before the chips to distribute evenly." },
-          { state: "Overdone",  description: "You have beaten the ricotta on high speed to a completely smooth, almost liquid consistency. The cream is now loose and won't hold its shape when piped.", action: "Refrigerate for 30 minutes to firm slightly. If still too loose, fold in a tablespoon of extra strained ricotta to tighten the consistency." },
-        ],
-      },
-      feelCue: "Scoop a small amount and rub it on your finger — it should feel luxuriously smooth with just enough grain to remind you it's ricotta. If your finger feels perfectly clean after, the ricotta is too loose.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre en poudre (givrage), criblé",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre caster battu dans pour une texture légèrement plus grainée"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["sweetened_ricotta", "ing_03", "ing_04", "ing_06", "ing_05"],
-      outputState: "cannoli_cream",
-      instructions: "Add the orange zest, vanilla extract, and cinnamon to the sweetened ricotta and fold in with a spatula until fully distributed — the zest should be dispersed throughout, not clumped. Fold in the mini chocolate chips last, using three or four strokes to distribute evenly without crushing them. The chips should remain whole and provide textural contrast. Taste once more: the orange should be present but not dominant, the cinnamon a background whisper.",
-      visualCue: {
-        primaryTarget: "A cream flecked with orange zest and studded with whole chocolate chips throughout. Uniformly pale ivory with flecks of colour, smooth and scoopable.",
-        spectrum: [
-          { state: "Underdone", description: "The zest and cinnamon are unevenly distributed — pockets of intense orange flavour alternating with plain ricotta. Chips are piled at one side.", action: "Fold more thoroughly. Unlike a batter, ricotta cream needs active, deliberate folding to distribute aromatics — it does not naturally flow to homogenise." },
-          { state: "Perfect",   description: "Evenly flecked and dotted throughout. Every spoonful tastes of sweet ricotta, orange, vanilla, a whisper of cinnamon, and a random chip. Balanced and light.", action: "Refrigerate for at least 20 minutes before piping — the chill firms the cream and makes it easier to pipe into shells cleanly." },
-          { state: "Overdone",  description: "You crushed the chocolate chips during folding and they have dissolved into dark streaks. The cream looks marbled grey-brown.", action: "Fold more gently and add fresh chips. Crushed chips are not a disaster for flavour, but the cream loses visual appeal and textural variety." },
-        ],
-      },
-      feelCue: "The finished cream should hold its shape when you scoop it and flip the spoon upside down — it stays put for a slow count of three before drooping. If it falls off immediately, it needs more draining or a chill.",
+      "ingId": "ing_03",
+      "role": "Citrus",
+      "name": "Zeste d'orange (finement râpé, 1 grande orange)",
+      "ratioValue": 0.01,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "zeste de citron pour une note plus claire et plus nette"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Chill",
-      inputs: ["cannoli_cream", "ing_07"],
-      outputState: "finished_cannoli_cream",
-      instructions: "Cover the bowl tightly with cling film pressed directly onto the surface of the cream to prevent a skin forming. Refrigerate for at least 20 minutes before use. Fill cannoli shells at the very last moment by piping from both ends to ensure even filling — shells pre-filled more than 30 minutes ahead will soften and lose their crunch. For each filled cannoli, finish the exposed cream at both ends with a small pinch of chopped pistachios. Alternatively, serve the cream in small bowls or cups with crushed wafer for dipping.",
-      visualCue: {
-        primaryTarget: "Chilled cream that holds a clean piped rosette or swirl without slumping. The pistachio garnish adds vivid green contrast at the ends of each cannolo.",
-        spectrum: [
-          { state: "Underdone", description: "The cream is still warm or only slightly chilled — it flows when piped and won't hold a defined shape in the shell or cup.", action: "Refrigerate further. At least 20 minutes is the minimum; 1 hour is better. Cold ricotta cream pipes with far more control." },
-          { state: "Perfect",   description: "Holds a piped shape cleanly. Fills the shell with a slight resistance and stays in place when the shell is tilted. The pistachios press into the cream end neatly.", action: "Fill shells and serve immediately. Never refrigerate filled cannoli shells — condensation ruins the crunch within minutes." },
-          { state: "Overdone",  description: "The cream was refrigerated overnight without covering properly and the surface has dried slightly or absorbed other fridge odours.", action: "Stir from the bottom up to rehydrate the surface and taste. If the flavour is clean, proceed. Next time, press cling film directly onto the surface." },
-        ],
-      },
-      feelCue: "A cold, perfectly made cannoli cream should feel rich and slightly dense on the tongue — not light like mousse, not heavy like cheesecake, but somewhere in the middle, with the lingering brightness of orange lifting the richness at the end.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Extrait de vanille",
+      "ratioValue": 0.01,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "graines de 1 fève vanille"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Mini chips de chocolat noir",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chocolat doux amer haché approximativement",
+        "Peau d'agrumes confits"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 0.005,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une raclure de muscade fraîche"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Pistaches, hachées finement",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "noisettes confites",
+        "Amandes grillées"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Jeu",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "strained_ricotta",
+      "instructions": "Déposer un tamis à mailles fines ou une calandre avec une double couche de cheesewet humide et le placer sur un bol au réfrigérateur. Mettre la ricotta dans le tamis et laisser égoutter au moins 1 heure (ou jusqu'à la nuit pour le résultat le plus sec). Jeter le liquide dans le bol. La ricotta bien tendue devrait être grainée et sèche, comme du fromage cottage épais plutôt que du yogourt. La teneur en eau de la ricotta commerciale est la plus grande raison pour laquelle la crème de cannoli s'avère rugueuse : l'égoutter sans pitié.",
+      "visualCue": {
+        "primaryTarget": "Après s'être drainée, la ricotta se trouve dans un monticule compact et granuleux du tamis. Lorsqu'une cuillère est pressée, aucun liquide ne s'échappe autour des bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La ricotta est encore humide et crémeuse — lorsqu'elle est pressée, un anneau de liquide laiteux apparaît immédiatement autour de la cuillère. Il a la consistance du yogourt grec.",
+            "action": "Retourner au réfrigérateur et égoutter au moins 30 minutes. La ricotta humide produit une crème de canoli qui ne peut pas être piped et sèmera les coquilles immédiatement au contact."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sécher, miettes, presque pâteuses. Prend une forme lorsqu'elle est pressée. Pas de suintements liquides. Bouche propre et laiteux sans excès d'eau diluant la saveur.",
+            "action": "Continuez à battre. Le caillé tendu est maintenant prêt à devenir une crème légère et pipeable."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez égoutté au réfrigérateur pendant la nuit dans un tamis découvert et la surface de la ricotta a séché et croûté légèrement, ou elle a absorbé une faible odeur de réfrigérateur.",
+            "action": "Écraser toute croûte séchée et procéder — la masse intérieure sera parfaite. À l'avenir, couvrez le tamis de façon lâche avec du film de collage pendant le drainage de nuit."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une petite quantité de ricotta égoutté entre deux doigts — il doit sentir sec et granulaire, comme du sable fin légèrement humide, pas lisse et brillant comme du fromage à la crème. N'importe quelle glissante signifie plus de drainage est nécessaire."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "strained_ricotta",
+        "ing_02"
+      ],
+      "outputState": "sweetened_ricotta",
+      "instructions": "Transférer la ricotta tendue dans un bol. Sirotez le sucre en poudre dessus et battez-le avec une spatule ou un mélangeur à faible vitesse jusqu'à ce qu'il soit complètement lisse, sans morceaux de sucre et sans ricotta caillé restant. Cette étape décompose la texture granuleuse de la ricotta en une masse crémeuse et cohésive. Goût de douceur — le niveau de sucre ici est modeste pour permettre la saveur de la ricotta de passer. Ajouter plus de sucre par la cuillère à soupe si désiré, mais rappelez-vous que les croustilles au chocolat ajouteront de la douceur supplémentaire.",
+      "visualCue": {
+        "primaryTarget": "Une crème lisse et uniforme au moindre grain, comme une crème crémeuse très épaisse. Pas de morceaux de curd visible. Une cuillère traînée à travers elle laisse un canal propre et à fermeture lente.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours assez volumineux, granuleux et inégal. Particules de caillé visibles et sucre non dissous. La texture est incohérente.",
+            "action": "Plus longtemps. La ricotta a besoin de temps pour s'adoucir — le sifflement à grande vitesse risque d'introduire trop d'air, si faible et stable gagne."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crémeux, doux, avec un soupçon de grain agréable — pas aussi doux que le fromage à la crème, mais pas non plus. Une douceur propre et laiteuse.",
+            "action": "Ajoutez maintenant les arômes: zeste d'orange, vanille et cannelle. Ceux-ci entrent avant les jetons pour distribuer uniformément."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez battu la ricotta à grande vitesse à une consistance complètement lisse, presque liquide. La crème est maintenant lâche et ne tiendra pas sa forme quand piped.",
+            "action": "Réfrigérer pendant 30 minutes pour obtenir une légère fermeté. S'il est encore trop lâche, plier dans une cuillère à soupe de ricotta extra tendue pour resserrer la consistance."
+          }
+        ]
+      },
+      "feelCue": "Scoop une petite quantité et le frotter sur votre doigt — il devrait se sentir luxueusement lisse avec juste assez de grain pour vous rappeler qu'il est ricotta. Si votre doigt se sent parfaitement propre après, la ricotta est trop lâche."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "sweetened_ricotta",
+        "ing_03",
+        "ing_04",
+        "ing_06",
+        "ing_05"
+      ],
+      "outputState": "cannoli_cream",
+      "instructions": "Ajouter le zeste d'orange, l'extrait de vanille et la cannelle à la ricotta sucrée et le plier avec une spatule jusqu'à ce qu'elle soit entièrement distribuée. Plier dans les mini chips au chocolat en dernier, en utilisant trois ou quatre coups pour distribuer uniformément sans les écraser. Les jetons doivent rester entiers et fournir un contraste textuel. Goûte encore une fois : l'orange doit être présente mais non dominante, la cannelle un fond murmure.",
+      "visualCue": {
+        "primaryTarget": "Une crème flanquée de zeste d'orange et cloutée de chips de chocolat entiers. ivoire uniformément pâle avec des taches de couleur, lisse et écorcable.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le zeste et la cannelle sont inégalement distribués, des poches de saveur orange intense alternant avec la ricotta. Les jetons sont empilés d'un côté.",
+            "action": "Plier plus soigneusement. Contrairement à une pâte, la crème de ricotta a besoin d'un pliage actif et délibéré pour distribuer les aromatiques."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toujours flanqué et pointillé. Chaque cuillerée goûte de ricotta douce, orange, vanille, un murmure de cannelle, et une puce aléatoire. Équilibré et léger.",
+            "action": "Réfrigérer pendant au moins 20 minutes avant la canalisation — le refroidissement ferme la crème et facilite la canalisation dans les coquilles proprement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez écrasé les chips de chocolat pendant le pliage et ils se sont dissous dans des stries sombres. La crème a l'air gris-brun marbré.",
+            "action": "Plier plus doucement et ajouter des chips frais. Les croustilles ne sont pas un désastre pour la saveur, mais la crème perd l'attrait visuel et la variété texturale."
+          }
+        ]
+      },
+      "feelCue": "La crème finie devrait tenir sa forme quand vous la faites glisser et retourner la cuillère à l'envers — elle reste mise pour un compte lent de trois avant de s'enfoncer. Si elle tombe immédiatement, elle doit être plus drainée ou refroidie."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Refroidissement",
+      "inputs": [
+        "cannoli_cream",
+        "ing_07"
+      ],
+      "outputState": "finished_cannoli_cream",
+      "instructions": "Couvrez bien le bol avec un film de collage pressé directement sur la surface de la crème pour empêcher la formation d'une peau. Réfrigérer au moins 20 minutes avant utilisation. Remplir les coquilles de cannoli au tout dernier moment en coulant des deux extrémités pour assurer un remplissage uniforme — les coquilles préremplies plus de 30 minutes à l'avance s'adoucissent et perdent leur croûte. Pour chaque cannoli rempli, terminer la crème exposée aux deux extrémités par une petite pincée de pistaches hachées. D'autre part, servir la crème dans des petits bols ou des tasses avec une galette concassée pour tremper.",
+      "visualCue": {
+        "primaryTarget": "Crème refroidie qui tient une rosette à pipe propre ou tourbillonne sans chuter. La garniture de pistaches ajoute un contraste vert vif aux extrémités de chaque cannolo.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème est encore chaude ou seulement légèrement réfrigérée – elle coule lorsqu'elle est pipe et ne tient pas une forme définie dans la coquille ou la tasse.",
+            "action": "Réfrigérer davantage. Au moins 20 minutes est le minimum; 1 heure est meilleure. pipes à crème de ricotta froide avec beaucoup plus de contrôle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Prend une forme de pipe proprement. Remplit la coque d'une légère résistance et reste en place lorsque la coque est inclinée. Les pistaches pressent dans la crème.",
+            "action": "Remplissez les coquilles et servez immédiatement. Ne jamais réfrigérer les coquilles de canoli remplies — la condensation ruine la croûte en quelques minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème a été réfrigérée toute la nuit sans couvrir correctement et la surface a séché légèrement ou absorbé d'autres odeurs du réfrigérateur.",
+            "action": "Incorporer du fond jusqu'à réhydrater la surface et le goût. Si la saveur est propre, procéder. La prochaine fois, appuyez sur le film de collage directement sur la surface."
+          }
+        ]
+      },
+      "feelCue": "Une crème de cannoli fraîche, parfaitement faite, devrait se sentir riche et légèrement dense sur la langue — pas léger comme la mousse, pas lourd comme le cheesecake, mais quelque part au milieu, avec la luminosité persistante de l'orange soulevant la richesse à la fin."
+    }
+  ]
 };

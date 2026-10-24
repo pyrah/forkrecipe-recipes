@@ -1,81 +1,189 @@
 export default {
-  repoId: "master_italian_bagna_cauda_001",
-  parentRepoId: null,
-  slug: "bagna-cauda",
-  author: "ForkRecipe Kitchen",
-  title: "Bagna Cauda",
-  description: "A Piedmontese hot sauce of garlic dissolved in olive oil with melted anchovy — ancient, pungent, deeply savory, warming the winter table from a shared earthenware pot. Raw vegetables go in, transformed by the warm bath into something altogether richer.",
-  cuisine: "Italian",
-  culture: "Piedmontese",
-  category: "sauces",
-  tags: ["bagna-cauda", "italian", "anchovy", "garlic", "piemontese"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 4, sour: 0, bitter: 1, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Allium",    name: "Garlic cloves, peeled",                     ratioValue: 12,  defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_02", role: "Inosinate", name: "Salt-packed anchovies, rinsed and filleted", ratioValue: 12,  defaultUnit: "fillets", substitutions: ["oil-packed anchovy fillets, drained"] },
-    { ingId: "ing_03", role: "Fat",       name: "Extra-virgin olive oil",                     ratioValue: 1,   defaultUnit: "cup",   substitutions: [] },
-    { ingId: "ing_04", role: "Dairy",     name: "Unsalted butter",                            ratioValue: 4,   defaultUnit: "tbsp",  substitutions: ["omit for a purer oil version"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Whole milk (for pre-soaking garlic)",        ratioValue: 1,   defaultUnit: "cup",   substitutions: ["water for soaking"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine salt and white pepper",                 ratioValue: 1,   defaultUnit: "to taste", substitutions: [] },
+  "repoId": "master_italian_bagna_cauda_001",
+  "parentRepoId": null,
+  "slug": "bagna-cauda",
+  "author": "ForkRecipe Kitchen",
+  "title": "Bagna Cauda",
+  "description": "Une sauce piémontaise chaude d'ail dissoute dans de l'huile d'olive avec de l'anchois fondu — ancienne, piquante, profondément salée, réchauffant la table d'hiver d'un pot commun de terre cuite. Les légumes crus entrent, transformés par le bain chaud en quelque chose de plus riche.",
+  "cuisine": "Italien",
+  "culture": "Piémontais",
+  "category": "sauces",
+  "tags": [
+    "bagna-cauda",
+    "Italien",
+    "anchois",
+    "Ail",
+    "piémontais"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mellow the garlic",
-      inputs: ["ing_01", "ing_05"],
-      outputState: "mellowed_garlic",
-      instructions: "Place the peeled garlic cloves in a small saucepan and cover with cold milk. Bring gently to a simmer over low heat and cook for 10-12 minutes until the garlic is completely tender and has lost most of its sharp bite. Drain and discard the milk. This step transforms raw garlic's aggression into something sweet and mellow — it is not optional if you want an approachable bagna cauda.",
-      visualCue: {
-        primaryTarget: "Garlic cloves that have turned from stark white and firm to a pale ivory, swollen and yielding — they should press easily between two fingers without resistance.",
-        spectrum: [
-          { state: "Underdone", description: "The garlic cloves still hold their shape firmly and taste sharp and raw when you pinch one. The milk has barely begun to simmer.", action: "Continue simmering, partly covered, another 5 minutes. The garlic must fully soften or it will not dissolve into the oil." },
-          { state: "Perfect",   description: "The cloves are completely tender, ivory-pale, almost translucent at the edges, and taste mellow and sweet with only a whisper of garlic sharpness.", action: "Drain and proceed immediately to the oil with the drained garlic." },
-          { state: "Overdone",  description: "The garlic has disintegrated in the milk and some cloves have broken apart, turning slightly yellow.", action: "Proceed anyway — the dissolved garlic will melt even more easily into the oil. Discard the milk as planned." },
-        ],
-      },
-      feelCue: "Press a clove between thumb and forefinger — it should yield completely with no crunch, like ripe avocado flesh. If it pops intact, it needs more time.",
+      "ingId": "ing_01",
+      "role": "Allium",
+      "name": "Giroves d'ail, pelées",
+      "ratioValue": 12,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Infuse and melt",
-      inputs: ["mellowed_garlic", "ing_02", "ing_03"],
-      outputState: "infused_bagna",
-      instructions: "In a wide, low saucepan or terracotta bagna cauda pot, combine the warm olive oil and drained mellowed garlic over the lowest possible heat. Add the rinsed anchovy fillets. Cook gently, stirring occasionally, for 10-15 minutes. The anchovies will dissolve completely into the oil; press them with a wooden spoon to help. The garlic should also gradually break down — mash it against the pan with the spoon. Neither should fry or sizzle aggressively.",
-      visualCue: {
-        primaryTarget: "A warm, golden-brown oil spiked with the remains of the anchovies — a few fibrous traces may remain but most have melted into the oil, and the garlic has become a soft, dissolving paste on the pan bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Anchovy fillets still visibly intact, floating in the oil in recognizable strips. Garlic still in whole cloves. The oil is warm but the two have not integrated.", action: "Continue on low heat, stirring and pressing with a wooden spoon. The anchovies need time and gentle heat to fully dissolve." },
-          { state: "Perfect",   description: "The anchovies have almost completely melted into the oil, the garlic is broken into soft fragments that dissolve when pressed. The oil is warm, fragrant, and deeply savory — umami-rich but not fishy.", action: "Stir in the butter to finish and season." },
-          { state: "Overdone",  description: "The garlic and anchovy are frying rather than melting — the edges have browned, the oil is smoking, and the sauce smells sharp and bitter.", action: "Remove from heat immediately. Let it cool slightly and taste — if the bitter note is strong, add a tablespoon of warm milk or cream to calm it." },
-        ],
-      },
-      feelCue: "Stir the sauce — it should move with the thick, warm weight of oil infused with dissolved solids. You should smell the sea under the garlic, but nothing sharp or acrid.",
+      "ingId": "ing_02",
+      "role": "Inosinate",
+      "name": "Anchois salins, rincés et filetés",
+      "ratioValue": 12,
+      "defaultUnit": "fillets",
+      "substitutions": [
+        "Filets d'anchois remplis d'huile, égouttés"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Finish and serve",
-      inputs: ["infused_bagna", "ing_04", "ing_06"],
-      outputState: "finished_bagna_cauda",
-      instructions: "Off the lowest possible heat, stir in the cold butter piece by piece until it melts into the warm oil, giving the sauce a slightly creamier, richer texture. Season with white pepper. Transfer to a terracotta serving vessel over a tea light or candle to keep it warm at the table. Serve with raw and briefly blanched vegetables — cardoons, fennel, radicchio, peppers, carrots.",
-      visualCue: {
-        primaryTarget: "A warm, amber-golden sauce with a slight cloudiness from the dissolved garlic and anchovy, the butter adding a faint sheen and softening the color to a pale gold.",
-        spectrum: [
-          { state: "Underdone", description: "The butter has not been added or has not melted — the sauce looks purely oily without the slight creaminess that butter brings.", action: "Add the cold butter gradually off the heat; stir until each piece melts before adding the next." },
-          { state: "Perfect",   description: "Warm, fragrant, cloudy gold with a gentle richness. Dipping a fennel frond leaves it glossy with sauce. The smell is intensely savory — anchovy, garlic, warm olive oil.", action: "Keep warm over a candle. Stir occasionally as the party eats." },
-          { state: "Overdone",  description: "The sauce has separated — oil pooling separately from a dense, oily garlic-anchovy paste at the bottom of the vessel.", action: "Whisk vigorously over very gentle heat to re-emulsify. A teaspoon of warm water or milk can help bring it back together." },
-        ],
-      },
-      feelCue: "Dip a vegetable piece and lift it — the sauce should cling in a warm, thin coat, not drip away like water or cling in thick clumps. It should feel like warm, scented oil on the tongue.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 1,
+      "defaultUnit": "cup",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Beurre non salé",
+      "ratioValue": 4,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "omit pour une version huile plus pure"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Lait entier (pour l'ail pré-sevrant)",
+      "ratioValue": 1,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "eau pour tremper"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin et poivre blanc",
+      "ratioValue": 1,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire fondre l'ail",
+      "inputs": [
+        "ing_01",
+        "ing_05"
+      ],
+      "outputState": "mellowed_garlic",
+      "instructions": "Placer les gousses d'ail pelées dans une petite casserole et couvrir de lait froid. Porter doucement à mijoter à feu doux et cuire 10-12 minutes jusqu'à ce que l'ail soit complètement tendre et ait perdu la plupart de sa morsure aiguë. Égoutter et jeter le lait. Cette étape transforme l'agression de l'ail cru en quelque chose de doux et moelleux — ce n'est pas facultatif si vous voulez une bagna cauda accessible.",
+      "visualCue": {
+        "primaryTarget": "Les girofles d'ail qui sont passés d'un blanc étoilé et ferme à un ivoire pâle, gonflés et filants, doivent se serrer facilement entre deux doigts sans résistance.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les gousses d'ail tiennent encore leur forme fermement et goûtent vif et cru quand vous pincez un. Le lait commence à peine à mijoter.",
+            "action": "Continuer à mijoter, partiellement couvert, encore 5 minutes. L'ail doit adoucir complètement ou ne pas se dissoudre dans l'huile."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les girofles sont complètement tendres, ivoire-pale, presque translucides aux bords, et goûtent moelleux et doux avec seulement un murmure de netteté d'ail.",
+            "action": "Égoutter et passer immédiatement à l'huile avec l'ail égoutté."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail s'est désintégré dans le lait et certains girofles se sont brisés, devenant légèrement jaunes.",
+            "action": "De toute façon, l'ail dissous fondra encore plus facilement dans l'huile. Jetez le lait comme prévu."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une girofle entre le pouce et l'index — elle devrait donner complètement sans croquer, comme la chair d'avocat mûre. Si elle est intacte, elle a besoin de plus de temps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Infuser et fondre",
+      "inputs": [
+        "mellowed_garlic",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "infused_bagna",
+      "instructions": "Dans une grande casserole basse ou en terre cuite bagna cauda, mélanger l'huile d'olive chaude et l'ail égoutté au plus bas feu possible. Ajouter les filets d'anchois rincés. Cuire doucement, en remuant occasionnellement, pendant 10-15 minutes. Les anchois se dissoudreont complètement dans l'huile; appuyez-les avec une cuillère en bois pour aider. L'ail doit aussi se décomposer progressivement, le masturber contre la poêle avec la cuillère. Il ne faut pas non plus frire ou frire agressivement.",
+      "visualCue": {
+        "primaryTarget": "Une huile chaude, dorée-brun, épilée avec les restes des anchois — quelques traces fibreuses peuvent rester, mais la plupart ont fondu dans l'huile, et l'ail est devenu une pâte molle et dissolue sur le fond de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Filets d'anchois encore visiblement intacts, flottant dans l'huile en bandes reconnaissables. L'ail est toujours dans des gousses entières. L'huile est chaude mais les deux n'ont pas été intégrées.",
+            "action": "Continuer à feu doux, en remuant et en appuyant avec une cuillère en bois. Les anchois ont besoin de temps et de chaleur douce pour se dissoudre complètement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les anchois ont presque complètement fondu dans l'huile, l'ail est cassé en fragments mous qui se dissolvent quand on les presse. L'huile est chaude, parfumée et profondément salée, riche en umami, mais pas poissonneuse.",
+            "action": "Incorporer le beurre pour finir et assaisonner."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail et l'anchois font frire plutôt que de fondre — les bords ont bruni, l'huile fume, et la sauce sent vif et amer.",
+            "action": "Retirer immédiatement du feu. Laisser refroidir légèrement et goûter — si la note amère est forte, ajouter une cuillère à soupe de lait chaud ou de crème pour la calmer."
+          }
+        ]
+      },
+      "feelCue": "Mélanger la sauce — elle doit se déplacer avec le poids épais et chaud de l'huile infusée de solides dissous. Vous devriez sentir la mer sous l'ail, mais rien de tranchant ou d'acride."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Terminer et servir",
+      "inputs": [
+        "infused_bagna",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "finished_bagna_cauda",
+      "instructions": "Hors de la chaleur la plus basse possible, mélanger le beurre froid pièce par pièce jusqu'à ce qu'il fond dans l'huile chaude, donnant à la sauce une texture légèrement plus crémeuse et plus riche. Assaisonner de poivre blanc. Transférer dans un récipient servant de la terre cuite au-dessus d'une lampe à thé ou d'une bougie pour le garder au chaud à table. Servir avec des légumes crus et brièvement blanchis — cardons, fenouil, radicchio, poivrons, carottes.",
+      "visualCue": {
+        "primaryTarget": "Une sauce chaude, dorée ambre avec un léger nuage de l'ail dissous et de l'anchois, le beurre ajoutant un léger éclat et adoucissant la couleur à un or pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre n'a pas été ajouté ou n'a pas fondu — la sauce semble purement huileuse sans la légère crémosité que le beurre apporte.",
+            "action": "Ajouter le beurre froid graduellement hors du feu; remuer jusqu'à ce que chaque pièce fonde avant d'ajouter le suivant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or chaud, parfumé et nuageux avec une douce richesse. Le trempage d'une fronde de fenouil la laisse brillante avec de la sauce. L'odeur est intensément salée: anchois, ail, huile d'olive chaude.",
+            "action": "Gardez au chaud sur une bougie. Remuer à l'occasion."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce s'est séparée — l'huile est mise en commun séparément d'une pâte d'ail-anchois dense et huileuse au fond du récipient.",
+            "action": "fouetter vigoureusement sur une chaleur très douce pour réémulsionner. Une cuillère à café d'eau chaude ou de lait peut aider à le ramener ensemble."
+          }
+        ]
+      },
+      "feelCue": "Plongez un morceau de légume et soulevez - le: la sauce doit s'accrocher dans une couche chaude et fine, ne pas s'égoutter comme de l'eau ou s'accrocher dans d'épais empiècements. Il devrait se sentir comme de l'huile chaude et parfumée sur la langue."
+    }
+  ]
 };

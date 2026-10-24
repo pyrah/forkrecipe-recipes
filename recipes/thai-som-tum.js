@@ -1,101 +1,268 @@
 export default {
-  repoId: "master_thai_thaisomtum_001",
-  parentRepoId: null,
-  slug: "thai-som-tum",
-  author: "ForkRecipe Kitchen",
-  title: "Som Tum (Thai Green Papaya Salad)",
-  description: "Shredded raw papaya pounded with garlic and chili in a mortar, then tossed with lime, fish sauce, palm sugar, and dried shrimp — sour-hot-sweet-salty in such precise balance that each component disappears into a single electrifying punch.",
-  cuisine: "Thai",
-  culture: "Isaan",
-  category: "vegetables",
-  tags: ["vegetable", "gluten-free", "thai", "papaya", "lime", "spicy", "mortar-and-pestle"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 4, sour: 5, bitter: 1, umami: 4, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Green (unripe) papaya, peeled and shredded",  ratioValue: 300, defaultUnit: "g",  substitutions: ["green mango", "kohlrabi + cucumber combination"] },
-    { ingId: "ing_02", role: "Allium",   name: "Garlic cloves",                                ratioValue: 10,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_03", role: "Heat",     name: "Fresh Thai bird's eye chilis",                 ratioValue: 6,   defaultUnit: "g",  substitutions: ["serrano (less heat)", "dried red chili"] },
-    { ingId: "ing_04", role: "Umami",    name: "Fish sauce",                                   ratioValue: 30,  defaultUnit: "ml", substitutions: ["soy sauce + pinch of nori powder for vegan"] },
-    { ingId: "ing_05", role: "Sweetener","name": "Palm sugar (or light brown sugar)",          ratioValue: 15,  defaultUnit: "g",  substitutions: ["brown sugar", "coconut sugar"] },
-    { ingId: "ing_06", role: "Acid",     name: "Fresh lime juice",                             ratioValue: 45,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_07", role: "Umami",    name: "Dried shrimp",                                 ratioValue: 20,  defaultUnit: "g",  substitutions: ["skip for vegan", "fermented shrimp paste, tiny amount"] },
-    { ingId: "ing_08", role: "Structure","name": "Cherry tomatoes, halved",                    ratioValue: 100, defaultUnit: "g",  substitutions: ["grape tomatoes"] },
-    { ingId: "ing_09", role: "Structure","name": "Long beans (yard-long), cut into 3cm pieces",ratioValue: 60,  defaultUnit: "g",  substitutions: ["green beans"] },
-    { ingId: "ing_10", role: "Garnish",  name: "Roasted peanuts, roughly crushed",             ratioValue: 30,  defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_thai_thaisomtum_001",
+  "parentRepoId": null,
+  "slug": "thai-som-tum",
+  "author": "ForkRecipe Kitchen",
+  "title": "Som Tum (Salade de papaye verte thaïlandaise)",
+  "description": "La papaye crue s'est éparpillée d'ail et de piment dans un mortier, puis a été jetée avec de la chaux, de la sauce de poisson, du sucre de palme et des crevettes séchées — augure-chaud-doux-sel dans un équilibre si précis que chaque composant disparaît en un seul coup électrisant.",
+  "cuisine": "Thaï",
+  "culture": "Isaan",
+  "category": "vegetables",
+  "tags": [
+    "légumes",
+    "Sans gluten",
+    "Thaï",
+    "papaye",
+    "Chaux",
+    "épicé",
+    "mortier et peste"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 5,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Pound",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "pounded_aromatics",
-      instructions: "In a large granite mortar and pestle, add the garlic cloves and whole bird's eye chilis. Pound until they are bruised and broken — not a paste, but no longer whole. This releases the allicin in the garlic and the capsaicin oils in the chili without making them disappear into a paste. In som tum, you want visible shards of garlic and chili throughout, not a homogenous sauce. The technique is to pound and tumble, not grind.",
-      visualCue: {
-        primaryTarget: "Garlic in rough, torn pieces. Chili split open, seeds visible. The mortar smells of raw garlic and fresh chili heat.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is still whole and hard. Chili is unbroken.", action: "Pound harder and more vigorously. You need to break the cell walls, not just move things around." },
-          { state: "Perfect",   description: "Garlic is in irregular chunks with split fibers. Chili is cracked open with seeds exposed. The mortar smells sharp and intense.", action: "Add the dried shrimp and pound briefly, then add the papaya." },
-          { state: "Overdone",  description: "Garlic and chili have been pounded to a smooth paste.", action: "Still good — the flavors will be more uniform and intense throughout the salad." },
-        ],
-      },
-      feelCue: "Each pound should feel like a controlled strike — firm and deliberate, using the weight of the pestle rather than brute force. The sound should be a sharp, woody thud with the pestle bottom hitting the mortar wall.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Papaya verte (non mûre), pelée et déchiquetée",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "mangue verte",
+        "kohlrabi + combinaison de concombre"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Pound",
-      inputs: ["pounded_aromatics", "ing_07", "ing_01", "ing_09"],
-      outputState: "pounded_salad_base",
-      instructions: "Add the dried shrimp to the mortar and pound briefly to break them up. Add the shredded papaya and the long bean pieces. Now use a combined pound-and-toss technique: pound gently with the pestle while using a large spoon to toss the mixture. The goal is to bruise the papaya strands so they absorb the dressing, not to mash them. You want the papaya strands to remain intact but softened and pliable from the pounding. Add the halved cherry tomatoes and give them 2–3 gentle pounds to lightly crush them so they release their juice.",
-      visualCue: {
-        primaryTarget: "Papaya strands that are slightly translucent at the edges from bruising. Tomatoes are lightly crushed and releasing juice. The mixture is beginning to pool liquid at the bottom of the mortar.",
-        spectrum: [
-          { state: "Underdone", description: "Papaya strands are still completely raw and rigid. No liquid at the bottom of the mortar.", action: "Pound more — the papaya must be bruised to absorb the dressing. 20–30 strikes minimum." },
-          { state: "Perfect",   description: "Papaya strands are slightly softened and beginning to turn translucent at the edges. Tomatoes are lightly crushed and bleeding juice. Juice is pooling at the base of the mortar.", action: "Add the dressing ingredients." },
-          { state: "Overdone",  description: "Papaya has been pounded to mush. No texture remains.", action: "Still edible — the flavor will be fine but the texture is lost. For next time, pound less aggressively and use the toss technique more." },
-        ],
-      },
-      feelCue: "Pick up a strand of pounded papaya — it should bend without breaking and feel slightly moist rather than dry and crunchy. If it's still very stiff and dry, pound more.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Season",
-      inputs: ["pounded_salad_base", "ing_04", "ing_05", "ing_06"],
-      outputState: "finished_som_tum",
-      instructions: "Add the palm sugar, fish sauce, and lime juice to the mortar. Toss and lightly pound everything together to combine. Taste constantly — som tum is about precision balance between the four flavors: sour (lime), salty (fish sauce), sweet (sugar), and umami-hot (chili + fish sauce). Adjust one element at a time: more lime for brightness, more fish sauce for depth and salt, more sugar to soften if too harsh. No two batches are identical — the lime juice and papaya's natural acidity vary. The finished salad should be aggressively seasoned by Western standards — this is intentional.",
-      visualCue: {
-        primaryTarget: "A glossy, amber-tinted dressing coating every strand of papaya. The tomato juice and dressing have combined into a pool at the base of the mortar.",
-        spectrum: [
-          { state: "Underdone", description: "Dressing ingredients haven't fully combined. Pools of fish sauce visible. Sugar granules still visible.", action: "Toss more aggressively. The sugar must fully dissolve before tasting for balance." },
-          { state: "Perfect",   description: "A glossy, unified dressing coating everything. The papaya has absorbed flavor and is no longer neutral-tasting. Each bite delivers sour-hot-salty-sweet simultaneously.", action: "Transfer to a plate and finish with peanuts." },
-          { state: "Overdone",  description: "Too much liquid — the salad is swimming rather than dressed.", action: "Lift the solids out with tongs and serve over rice, which will absorb the extra dressing." },
-        ],
-      },
-      feelCue: "Taste the dressing from the mortar — it should simultaneously make your mouth water (sour), make you reach for water (heat), and keep you coming back (umami). If any one sensation dominates completely, it is unbalanced.",
+      "ingId": "ing_03",
+      "role": "Heat",
+      "name": "Chilis frais de l'œil d'oiseau thaïlandais",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "serrano (moins de chaleur)",
+        "Chili rouge séché"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["finished_som_tum", "ing_10"],
-      outputState: "plated_som_tum",
-      instructions: "Transfer the som tum to a plate using tongs, keeping the papaya strands intact and arranged loosely. Pour any remaining dressing from the mortar over the salad. Scatter the crushed roasted peanuts over the top. Serve immediately alongside sticky rice. Som tum does not hold — the salt and acid will continue to wilt the papaya and the salad will be soggy within 30 minutes. Make and eat.",
-      visualCue: {
-        primaryTarget: "A bright mound of pale papaya strands, vivid red tomato, and green beans in an amber dressing, topped with golden peanuts.",
-        spectrum: [
-          { state: "Underdone", description: "Peanuts not added. The salad looks pale and lacks textural contrast.", action: "Add peanuts generously. They provide the crunch and richness that balances the salad's acidity." },
-          { state: "Perfect",   description: "Vivid colors — pale papaya, red tomato, green beans. Peanuts golden and scattered. Dressing glistening on every surface.", action: "Serve within 5 minutes." },
-          { state: "Overdone",  description: "Papaya has wilted to a soggy, pale mass. The dressing has fully absorbed and the colors have dulled.", action: "It has been sitting too long. The flavor is still good — serve over warm rice and it becomes an excellent warm salad component." },
-        ],
-      },
-      feelCue: "Bite into the salad — you should feel multiple textures simultaneously: the crunch of peanut, the slight resistance of papaya, the softness of tomato, and the pop of the long bean. If everything is uniformly soft, it needs to be eaten sooner next time.",
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Sauce de poisson",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce soja + pincée de nori poudre pour végétalien"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre de palme (ou sucre brun léger)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brun",
+        "Sucre de coco"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "Crevettes séchées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "skip pour végétalien",
+        "pâte de crevette fermentée, petite quantité"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Structure",
+      "name": "Tomates cerises, coupées en deux",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates de raisins"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Structure",
+      "name": "Fèves longues (longueur de la cour), coupées en morceaux de 3 cm",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "haricots verts"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Cacahuètes grillées, grossièrement broyées",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "pounded_aromatics",
+      "instructions": "Dans un grand mortier de granit et un pilon, ajouter les gousses d'ail et le chilis des yeux entiers. Pound jusqu'à ce qu'ils soient meurtris et cassés — pas une pâte, mais plus tout. Cela libère l'allicine dans l'ail et les huiles de capsaïcine dans le chili sans les faire disparaître dans une pâte. Dans le tum som, vous voulez des éclats visibles d'ail et de chili partout, pas une sauce homogène. La technique, c'est de tabasser, pas de broyer.",
+      "visualCue": {
+        "primaryTarget": "L'ail en morceaux durs et déchirés. Le Chili s'ouvre, les graines sont visibles. Le mortier sent l'ail cru et le chili frais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est toujours entier et dur. Le Chili est intact.",
+            "action": "Livre plus dur et plus vigoureusement. Vous devez briser les murs de cellules, pas simplement déplacer les choses."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'ail est en morceaux irréguliers avec des fibres fractionnées. Le Chili est fissuré et les graines sont exposées. Le mortier sent vif et intense.",
+            "action": "Ajouter la crevette séchée et la livre brièvement, puis ajouter la papaye."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail et le chili ont été pincés dans une pâte lisse.",
+            "action": "Encore bon — les saveurs seront plus uniformes et intenses tout au long de la salade."
+          }
+        ]
+      },
+      "feelCue": "Chaque livre devrait se sentir comme une frappe contrôlée — ferme et délibérée, en utilisant le poids du peste plutôt que la force brute. Le son devrait être un bruit aigu et boisé avec le fond de la peste frappant le mur de mortier."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Livre",
+      "inputs": [
+        "pounded_aromatics",
+        "ing_07",
+        "ing_01",
+        "ing_09"
+      ],
+      "outputState": "pounded_salad_base",
+      "instructions": "Ajouter les crevettes séchées au mortier et les casser brièvement. Ajouter la papaye déchiquetée et les longs morceaux de haricots. Maintenant, utilisez une technique combinée de livre et de toss: livrez doucement avec le pilon tout en utilisant une grande cuillère pour lancer le mélange. Le but est de contusionner les brins de papaye pour qu'ils absorbent la vinaigrette, et non de les écraser. Vous voulez que les brins de papaye restent intacts, mais adoucis et pliables à partir des coups. Ajouter la moitié des tomates cerises et leur donner 2 à 3 livres doux pour les écraser légèrement afin qu'ils libèrent leur jus.",
+      "visualCue": {
+        "primaryTarget": "Les brins de papaye sont légèrement translucides aux bords des ecchymoses. Les tomates sont légèrement écrasées et libèrent du jus. Le mélange commence à mettre du liquide au fond du mortier.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les brins de papaye sont encore complètement crus et rigides. Pas de liquide au fond du mortier.",
+            "action": "Livre plus — la papaye doit être meurtrie pour absorber la vinaigrette. 20-30 grèves minimum."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les brins de papaye sont légèrement adoucis et commencent à tourner translucide aux bords. Les tomates sont légèrement écrasées et saignent le jus. Juice se rassemble à la base du mortier.",
+            "action": "Ajouter les ingrédients de la vinaigrette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Papaya a été battue. Aucune texture ne reste.",
+            "action": "Encore comestible — la saveur sera bonne mais la texture est perdue. Pour la prochaine fois, livrez moins agressivement et utilisez la technique de lancer plus."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un brin de papaye battue — il devrait plier sans casser et sentir légèrement humide plutôt que sec et croquant. S'il est encore très raide et sec, livrez plus."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "pounded_salad_base",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "finished_som_tum",
+      "instructions": "Ajouter le sucre de palme, la sauce de poisson et le jus de lime au mortier. Toss et légèrement tout battre ensemble pour combiner. Goûter constamment — le som tum est sur l'équilibre de précision entre les quatre saveurs: aigre (lime), salé (sauce de poisson), doux (sucre), et umami-chaud (chili + sauce de poisson). Ajuster un élément à la fois : plus de chaux pour la luminosité, plus de sauce de poisson pour la profondeur et le sel, plus de sucre pour adoucir si trop dur. Aucun lot n'est identique: le jus de lime et l'acidité naturelle de la papaye varient. La salade finie devrait être assaisonnée de façon agressive selon les normes occidentales — c'est intentionnel.",
+      "visualCue": {
+        "primaryTarget": "Un pansement brillant et teinté d'ambre pour chaque brin de papaye. Le jus de tomate et la vinaigrette se sont combinés dans une piscine à la base du mortier.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les ingrédients d'habillage n'ont pas été complètement combinés. Piscines de sauce de poisson visibles. Les granules de sucre sont encore visibles.",
+            "action": "Jetez plus agressivement. Le sucre doit se dissoudre complètement avant de goûter pour l'équilibre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un pansement brillant et unifié qui recouvre tout. La papaye a absorbé la saveur et n'est plus neutre-tâche. Chaque morsure produit simultanément de l'aurore-chaud-sel-douce.",
+            "action": "Transférer dans une assiette et finir avec des cacahuètes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop liquide — la salade nage plutôt que habillée.",
+            "action": "Soulever les solides avec des pinces et servir sur le riz, qui absorbera la vinaigrette supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Goûtez la vinaigrette du mortier — il devrait simultanément faire votre eau de bouche (sour), vous faire atteindre l'eau (chauffe), et vous garder revenir (umami). Si une sensation domine complètement, elle est déséquilibrée."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "finished_som_tum",
+        "ing_10"
+      ],
+      "outputState": "plated_som_tum",
+      "instructions": "Transférer le som tum dans une assiette en utilisant des pinces, en maintenant les brins de papaye intacts et disposés de façon lâche. Verser le reste de la vinaigrette du mortier sur la salade. Dispersez les cacahuètes grillées sur le dessus. Servir immédiatement à côté de riz collant. Som tum ne tient pas — le sel et l'acide vont continuer à flétrir la papaye et la salade sera soyeuse dans les 30 minutes. Faire et manger.",
+      "visualCue": {
+        "primaryTarget": "Un monticule lumineux de brins de papaye pâle, de tomates rouges vives et de haricots verts dans une vinaigrette ambre, surmonté d'arachides dorées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les arachides ne sont pas ajoutées. La salade semble pâle et manque de contraste textural.",
+            "action": "Ajouter généreusement des cacahuètes. Ils fournissent la croûte et la richesse qui équilibrent l'acidité de la salade."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleurs vives: papaye pâle, tomate rouge, haricots verts. Cacahuètes dorées et dispersées. Dressing scintillement sur chaque surface.",
+            "action": "Servir dans les 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Papaya s'est flétrie jusqu'à une masse sombre et pâle. Le pansement est entièrement absorbé et les couleurs sont ternes.",
+            "action": "Ça fait trop longtemps. La saveur est encore bonne — servir sur le riz chaud et il devient un excellent composant de salade chaude."
+          }
+        ]
+      },
+      "feelCue": "Mordre dans la salade — vous devriez sentir plusieurs textures simultanément: la croûte d'arachide, la légère résistance de la papaye, la douceur de la tomate, et la pop du long fève. Si tout est uniformément doux, il faut le manger plus tôt la prochaine fois."
+    }
+  ]
 };

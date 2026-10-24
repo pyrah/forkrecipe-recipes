@@ -1,76 +1,176 @@
 export default {
-  repoId: "master_american_hot_honey_001",
-  parentRepoId: null,
-  slug: "hot-honey",
-  author: "ForkRecipe Kitchen",
-  title: "Hot Honey",
-  description: "Raw honey gently warmed with dried red chili flakes until the capsaicin infuses the sweetness — a drizzle that transforms pizza, cheese, fried chicken, and everything in between.",
-  cuisine: "American",
-  culture: "American",
-  category: "condiments",
-  tags: ["hot-honey", "american", "condiment", "chili", "honey", "sweet-heat", "gluten-free", "vegan"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 5, salty: 0, sour: 0, bitter: 0, umami: 0, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Sweetener", name: "Raw or wildflower honey",                       ratioValue: 100, defaultUnit: "parts", substitutions: ["clover honey", "buckwheat honey for a more robust flavour"] },
-    { ingId: "ing_02", role: "Heat",      name: "Dried red chili flakes (calabrian or standard)", ratioValue: 5,   defaultUnit: "parts", substitutions: ["gochugaru for a Korean-style warmth", "chipotle flakes for smokiness"] },
-    { ingId: "ing_03", role: "Acid",      name: "Apple cider vinegar",                           ratioValue: 3,   defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine salt",                                     ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_hot_honey_001",
+  "parentRepoId": null,
+  "slug": "hot-honey",
+  "author": "ForkRecipe Kitchen",
+  "title": "Miel chaud",
+  "description": "Le miel cru se réchauffe délicatement avec des flocons de chili rouge séchés jusqu'à ce que la capsaïcine infuse la douceur — une bruine qui transforme la pizza, le fromage, le poulet frit et tout ce qui se trouve entre les deux.",
+  "cuisine": "Américain",
+  "culture": "Américain",
+  "category": "condiments",
+  "tags": [
+    "Le miel chaud",
+    "américains",
+    "condiment",
+    "Chili",
+    "Chérie",
+    "chaleur douce",
+    "Sans gluten",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Infuse",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "infusing_honey",
-      instructions: "Pour the honey into a small saucepan. Add the chili flakes. Set over the lowest possible heat — you want the honey warm and fluid, not simmering or bubbling. Stir occasionally for 5 minutes, then remove from the heat and let the chili steep in the residual warmth for a further 10 minutes. Capsaicin is fat-soluble but also dissolves in warm sugar syrup; the infusion works best at 60 to 70 C / 140 to 158 F. Too hot and you drive off the aromatic volatiles that give fresh chili its fruity complexity.",
-      visualCue: {
-        primaryTarget: "Honey is fluid and gently steaming, a shade deeper gold than raw, with the chili flakes suspended evenly throughout. No bubbles breaking the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Honey is still thick and cold-poured, chili flakes floating on top. Barely any warmth in the pan — the capsaicin will not infuse.", action: "Raise the heat very slightly and stir to submerge the flakes. You need the honey to become fluid and warm to the touch." },
-          { state: "Perfect",   description: "Honey is thinned to a loose, flowing consistency, warm but not steaming vigorously. The colour has deepened. The chili aroma is sharp and fruity in the steam above the pan.", action: "Remove from heat and allow the chili to continue steeping off the heat for 10 minutes." },
-          { state: "Overdone",  description: "Honey is bubbling and browning at the edges — it has reached caramelization temperature and will taste bitter and burnt rather than floral and hot.", action: "Remove from heat immediately. The honey is still usable if only lightly caramelized, but the next batch should go over much lower heat." },
-        ],
-      },
-      feelCue: "Hold your hand 10 cm above the surface of the pan — you should feel gentle warmth radiating from the honey but no real heat against your skin. If you have to pull your hand away, it is too hot.",
+      "ingId": "ing_01",
+      "role": "Sweetener",
+      "name": "Miel cru ou de fleurs sauvages",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Miel de trèfle",
+        "miel de sarrasin pour une saveur plus robuste"
+      ]
     },
     {
-      nodeId: "step_2", action: "Steep",
-      inputs: ["infusing_honey", "ing_03", "ing_04"],
-      outputState: "steeped_hot_honey",
-      instructions: "Stir in the apple cider vinegar and salt while the honey is still warm. The vinegar is not traditional in all recipes but it lifts the sweetness and prevents the honey from tasting cloying — a few drops sharpens the whole blend. Stir to combine, then allow to cool to room temperature for 10 minutes before tasting, as the heat from the chili blooms further as it cools.",
-      visualCue: {
-        primaryTarget: "A deep amber honey with flakes distributed evenly throughout, slightly thinner than raw honey due to the warmth and the small addition of liquid. The surface catches the light in a slow, glossy pour.",
-        spectrum: [
-          { state: "Underdone", description: "The honey still tastes of raw chili and straight sweetness with no integration between the two — the infusion time was too short.", action: "Return to gentle heat for another 5 minutes, then steep off the heat for a further 10." },
-          { state: "Perfect",   description: "Sweet-forward with a building heat that arrives 2 to 3 seconds after tasting and lingers warmly on the back of the throat. The vinegar provides a barely perceptible brightness.", action: "Pour into a jar and allow to cool to room temperature before sealing." },
-          { state: "Overdone",  description: "Eye-watering, sustained burn that overwhelms the honey sweetness — too many chili flakes or too long an infusion.", action: "Strain through a fine sieve into a larger volume of fresh warm honey to dilute the heat, tasting and adjusting until balanced." },
-        ],
-      },
-      feelCue: "Dip a fingertip and taste — the sweetness should arrive first, the heat second. If the heat is front-and-centre and the sweetness is buried, the ratio of chili to honey is off.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "flocons de chili rouges séchés (calabrien ou standard)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gochugaru pour une chaleur coréenne",
+        "flocons de chipotle pour la fumée"
+      ]
     },
     {
-      nodeId: "step_3", action: "Strain",
-      inputs: ["steeped_hot_honey"],
-      outputState: "finished_hot_honey",
-      instructions: "For a clean, smooth drizzle, pour the honey through a fine-mesh strainer into a sterilised jar, pressing the chili flakes against the strainer with the back of a spoon to extract as much infused honey as possible. Alternatively, leave the flakes in the jar — they continue to infuse over time, increasing the heat level week by week. Stored at room temperature the honey keeps indefinitely; the chili will not spoil in honey's low-moisture, high-sugar environment.",
-      visualCue: {
-        primaryTarget: "If strained: a glossy, clear amber honey — deeper than raw, completely smooth. If unstrained: the same honey with vivid red flakes suspended throughout, beautiful and rustic.",
-        spectrum: [
-          { state: "Underdone", description: "Honey is still pale and thin, the colour barely changed from raw — the infusion was too short or the heat too low.", action: "Return the strained honey (without flakes) to the pan with fresh chili and repeat the infusion process." },
-          { state: "Perfect",   description: "Deep gold, glossy, and pourable with a slow, unctuous drizzle. The heat level is present but balanced — spicy enough to notice immediately, not so fierce it overwhelms.", action: "Jar, label, and store at room temperature. The flavour matures over the first 24 to 48 hours." },
-          { state: "Overdone",  description: "Very dark amber, almost brown, with a bitter, caramelized edge underneath the heat — the honey was cooked rather than infused.", action: "Still usable over cheese or pizza where the slight bitterness will read as complexity; avoid drizzling over delicate desserts." },
-        ],
-      },
-      feelCue: "Pour a small drizzle from the spoon back into the jar — it should fall in a slow, unbroken ribbon that coils on the surface before sinking. Too thin means it was overheated; too stiff means it has cooled too much and needs gentle warming before serving.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Infuse",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "infusing_honey",
+      "instructions": "Verser le miel dans une petite casserole. Ajouter les flocons de chili. Réglez - vous sur la chaleur la plus basse possible: vous voulez que le miel soit chaud et fluide, sans mijoter ni bouillonner. Mélanger à l'occasion pendant 5 minutes, puis retirer du feu et laisser tremper le chili dans la chaleur résiduelle pendant 10 minutes supplémentaires. La capsaïcine est soluble dans la graisse mais se dissout également dans le sirop de sucre chaud; la perfusion fonctionne le mieux entre 60 et 70 C / 140 à 158 F. Trop chaud et vous chassez les volatiles aromatiques qui donnent au chili frais sa complexité fruitée.",
+      "visualCue": {
+        "primaryTarget": "Le miel est fluide et légèrement vapeur, une nuance plus profonde d'or que cru, avec les flocons de chili suspendus uniformément tout au long. Pas de bulles qui brisent la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le miel est encore épais et chaud, des flocons de chili flottant sur le dessus. À peine toute chaleur dans la poêle — la capsaïcine n'infuse pas.",
+            "action": "Levez la chaleur très légèrement et remuez pour submerger les flocons. Vous avez besoin du miel pour devenir fluide et chaud au toucher."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le miel est aminci à une consistance lâche et fluide, chaud mais ne fumant pas vigoureusement. La couleur s'est approfondie. L'arôme de chili est vif et fruité dans la vapeur au-dessus de la poêle.",
+            "action": "Retirer du feu et laisser le chili continuer à tremper le feu pendant 10 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le miel est bouillonnant et brunissant aux bords — il a atteint la température de caramélisation et aura un goût amer et brûlé plutôt que floral et chaud.",
+            "action": "Retirer immédiatement du feu. Le miel est encore utilisable si seulement légèrement caramélisé, mais le prochain lot devrait passer beaucoup moins de chaleur."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main à 10 cm au-dessus de la surface de la poêle — vous devriez sentir une chaleur douce rayonnant du miel mais pas de vraie chaleur contre votre peau. Si vous devez retirer votre main, il est trop chaud."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Streep",
+      "inputs": [
+        "infusing_honey",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "steeped_hot_honey",
+      "instructions": "Incorporer le vinaigre de cidre de pomme et le sel pendant que le miel est encore chaud. Le vinaigre n'est pas traditionnel dans toutes les recettes, mais il soulève la douceur et empêche le miel de goûter à la coagulation. Mélanger, puis laisser refroidir jusqu'à température ambiante pendant 10 minutes avant la dégustation, car la chaleur du chili s'épanouit davantage pendant qu'elle refroidit.",
+      "visualCue": {
+        "primaryTarget": "Un miel ambré profond avec des flocons distribués uniformément, légèrement plus mince que le miel cru en raison de la chaleur et de la petite addition de liquide. La surface capte la lumière dans une coulée lente et brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le miel a encore le goût de chili cru et de douceur droite sans intégration entre les deux — le temps de perfusion était trop court.",
+            "action": "Retourner à feu doux pendant 5 minutes, puis descendre le feu pour 10 minutes supplémentaires."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux avant avec une chaleur de bâtiment qui arrive 2 à 3 secondes après la dégustation et s'attarde chaudement sur le dos de la gorge. Le vinaigre offre une luminosité à peine perceptible.",
+            "action": "Verser dans un pot et laisser refroidir à la température ambiante avant de sceller."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'arrosage des yeux, la brûlure soutenue qui envahit la douceur du miel — trop de flocons de chili ou trop de perfusion.",
+            "action": "Plonger dans un tamis fin dans un plus grand volume de miel frais chaud pour diluer la chaleur, goûter et ajuster jusqu'à équilibrer."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt et goût: la douceur devrait arriver en premier, la chaleur en second. Si la chaleur est à l'avant et au centre et que la douceur est enterrée, le rapport du chili au miel est coupé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "steeped_hot_honey"
+      ],
+      "outputState": "finished_hot_honey",
+      "instructions": "Pour une bruine lisse et propre, versez le miel dans un pot stérilisé à l'aide d'une passoire fine, en pressant les flocons de chili sur la passoire avec le dos d'une cuillère pour extraire autant de miel infusé que possible. Alternativement, laissez les flocons dans le bocal — ils continuent à infuser au fil du temps, augmentant le niveau de chaleur semaine par semaine. Entreposé à température ambiante, le miel se conserve indéfiniment; le chili ne se gâtera pas dans l'environnement du miel à faible odeur et à haute teneur en sucre.",
+      "visualCue": {
+        "primaryTarget": "S'il est tendu: un miel ambré brillant et clair — plus profond que cru, complètement lisse. S'il n'est pas entraîné: le même miel avec des flocons rouges vifs suspendus tout au long, beau et rustique.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le miel est encore pâle et mince, la couleur à peine changée de brute — la perfusion était trop courte ou la chaleur trop faible.",
+            "action": "Retourner le miel tendu (sans flocons) dans la poêle avec du chili frais et répéter le processus de perfusion."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or profond, brillant et versable avec une bruine lente et onctueuse. Le niveau de chaleur est présent mais équilibré — assez épicé pour être remarqué immédiatement, pas si féroce qu'il submerge.",
+            "action": "Jar, étiquette et stockage à température ambiante. La saveur mûrit au cours des 24 à 48 premières heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ambre très foncé, presque brun, avec un bord amer et caramélisé sous la chaleur — le miel était cuit plutôt que infusé.",
+            "action": "Toujours utilisable sur le fromage ou la pizza où la légère amertume lira comme complexité; évitez de bruir sur les desserts délicats."
+          }
+        ]
+      },
+      "feelCue": "Versez une petite bruine de la cuillère dans le bocal — elle devrait tomber dans un ruban lent et intact qui se serpente à la surface avant de couler. Trop mince signifie qu'il était surchauffé; trop raide signifie qu'il a trop refroidi et a besoin d'un doux réchauffement avant de servir."
+    }
+  ]
 };

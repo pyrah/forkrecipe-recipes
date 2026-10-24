@@ -1,101 +1,305 @@
 export default {
-  repoId: "master_korean_japchae_001",
-  parentRepoId: null,
-  slug: "korean-japchae",
-  author: "ForkRecipe Kitchen",
-  title: "Japchae (Korean Glass Noodles)",
-  description: "Chewy, translucent sweet potato glass noodles stir-fried with rainbow-julienned vegetables — each component cooked separately then brought together in a soy-sesame-sugar sauce — Korea's festive noodle dish, born for celebrations and potlucks, beautiful as a jewelled tapestry.",
-  cuisine: "Korean",
-  culture: "Korean",
-  category: "vegetables",
-  tags: ["korean", "noodles", "glass-noodles", "vegetarian", "gluten-free"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 0, bitter: 0, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Dangmyeon (sweet potato glass noodles)",     ratioValue: 200,  defaultUnit: "g",    substitutions: ["mung bean vermicelli (different texture but similar spirit)"] },
-    { ingId: "ing_02", role: "Structure",  name: "Fresh spinach, briefly blanched and squeezed", ratioValue: 150, defaultUnit: "g",    substitutions: ["chrysanthemum greens", "watercress"] },
-    { ingId: "ing_03", role: "Structure",  name: "Carrots, julienned into fine matchsticks",   ratioValue: 120,  defaultUnit: "g",    substitutions: ["daikon radish (blanch briefly)"] },
-    { ingId: "ing_04", role: "Structure",  name: "Red bell pepper, julienned",                 ratioValue: 120,  defaultUnit: "g",    substitutions: ["yellow or orange bell pepper"] },
-    { ingId: "ing_05", role: "Umami",      name: "Shiitake mushrooms, stems removed and sliced", ratioValue: 100, defaultUnit: "g",   substitutions: ["dried shiitake, rehydrated (richer umami)", "oyster mushrooms"] },
-    { ingId: "ing_06", role: "Allium",     name: "Onion, thinly sliced",                       ratioValue: 100,  defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_07", role: "Allium",     name: "Garlic cloves, minced",                      ratioValue: 10,   defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_08", role: "Umami",      name: "Soy sauce (ganjang)",                        ratioValue: 45,   defaultUnit: "ml",   substitutions: ["tamari for certified gluten-free"] },
-    { ingId: "ing_09", role: "Fat",        name: "Toasted sesame oil",                         ratioValue: 30,   defaultUnit: "ml",   substitutions: [] },
-    { ingId: "ing_10", role: "Sweetener",  name: "Sugar (white)",                              ratioValue: 15,   defaultUnit: "g",    substitutions: ["honey", "maple syrup"] },
-    { ingId: "ing_11", role: "Fat",        name: "Vegetable oil (for stir-frying)",            ratioValue: 30,   defaultUnit: "ml",   substitutions: [] },
-    { ingId: "ing_12", role: "Seasoning",  name: "Fine sea salt",                              ratioValue: 5,    defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_13", role: "Garnish",    name: "Toasted sesame seeds",                       ratioValue: 10,   defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_14", role: "Garnish",    name: "Egg, cooked as a thin omelette and julienned (optional)", ratioValue: 1, defaultUnit: "egg", substitutions: ["fried egg, broken over the top"] },
+  "repoId": "master_korean_japchae_001",
+  "parentRepoId": null,
+  "slug": "korean-japchae",
+  "author": "ForkRecipe Kitchen",
+  "title": "Japchae (Nouilles en verre coréen)",
+  "description": "Des nouilles en verre de patate douce et translucide pétrissent avec des légumes de julienne arc-en-ciel — chaque composant cuit séparément puis rassemblé dans une sauce de soya-sésame-sucre — le plat de nouilles festive de Corée, né pour les célébrations et les pots, beau comme une tapisserie bijoutée.",
+  "cuisine": "Coréen",
+  "culture": "Coréen",
+  "category": "vegetables",
+  "tags": [
+    "coréen",
+    "nouilles",
+    "nouilles de verre",
+    "végétarien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Cook noodles",
-      inputs: ["ing_01"],
-      outputState: "cooked_noodles",
-      instructions: "Bring a large pot of water to a boil. Add the dangmyeon and cook for 6–8 minutes, stirring occasionally, until the noodles are fully tender — they should have completely transformed from opaque white to a clear, glassy translucence, with a satisfying chewy resistance when bitten. They should not be gummy or soft-centered. Drain immediately and rinse under cold water to stop the cooking. Toss with a teaspoon of sesame oil to prevent clumping. Using scissors, cut the noodles into roughly 15cm lengths — dangmyeon are very long and unwieldy otherwise. Set aside.",
-      visualCue: {
-        primaryTarget: "Fully translucent, glossy noodles — completely clear like glass, with a uniform semi-gloss sheen and no white opaque center remaining in any noodle.",
-        spectrum: [
-          { state: "Underdone", description: "The noodles are still opaque or white in the center when you bite through, with a chalky core and a firm, stiff texture rather than chewy.", action: "Continue cooking for 1–2 more minutes and test again. Under-cooked dangmyeon are unpleasantly dense and starchy in the final dish." },
-          { state: "Perfect",   description: "Completely translucent and glassy, with a pleasantly chewy bite — springy, not gummy — and a silky, smooth surface.", action: "Drain immediately and rinse with cold water. Toss with sesame oil and cut to length." },
-          { state: "Overdone",  description: "The noodles are soft, slippery and beginning to clump together — they've lost their characteristic chew and will be gluey in the stir-fry.", action: "Rinse thoroughly with cold water and toss with extra sesame oil to separate. They will be softer in the final dish but still edible." },
-        ],
-      },
-      feelCue: "Bite a noodle in half — it should spring back slightly rather than tearing easily, with a glossy, smooth surface that slides between your teeth. The glass-like appearance is the reliable visual cue.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Dangmyeon (Nouilles sucrées en verre de pomme de terre)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "mung haricot vermicelli (différente texture mais esprit similaire)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Stir-fry vegetables separately",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_11", "ing_08", "ing_12"],
-      outputState: "stir_fried_vegetables",
-      instructions: "The key to japchae's beauty is cooking each vegetable component separately so they retain individual color, texture and flavor. Heat a large wok or skillet over high heat. Working one ingredient at a time, add a thin film of oil and stir-fry each vegetable briefly: shiitake mushrooms, 3 minutes until golden and slightly reduced; onion with garlic, 3 minutes until translucent and softened; carrots, 2 minutes, still with some bite; red bell pepper, 1–2 minutes, still bright red; spinach (blanched, squeezed), 30 seconds just to warm through. Season each component lightly with salt as you go. Let each batch cool slightly on separate sections of a plate or tray — keeping them separate means the colors stay vivid when you bring everything together.",
-      visualCue: {
-        primaryTarget: "A palette of individually cooked vegetables — the dark-brown shiitakes, the bright orange carrots, the vivid red pepper, the jade-green spinach — each retaining its own color and distinct texture.",
-        spectrum: [
-          { state: "Underdone", description: "The vegetables are raw or barely cooked — the onion is still sharp and pungent, the mushrooms have not released their liquid, the carrot is hard.", action: "Cook each component for longer on high heat. Raw vegetables will bleed raw flavors into the finished dish rather than contributing mellowed, stir-fried character." },
-          { state: "Perfect",   description: "Each vegetable is cooked but retains its distinct color, aroma and slight bite. The mushrooms are golden-edged, the carrot is tender but not limp, the pepper is bright and just-softened.", action: "Rest each component on a plate until all vegetables are done, then proceed to combine with noodles." },
-          { state: "Overdone",  description: "The vegetables are overcooked, brown and soggy, the bell pepper dull and grey, the spinach slimy — the colors and textures that make japchae beautiful are gone.", action: "Proceed — the flavour is still there even if the visual impact is muted. Next time, keep the heat very high and the cooking times short." },
-        ],
-      },
-      feelCue: "The mushrooms should have a slight chew and a savory, meaty density. The carrot should snap slightly when bitten rather than yielding limply. The bell pepper should still smell fresh and sharp, not steam-cooked.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Epinards frais, brièvement blanchis et pressés",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "vert chrysanthème",
+        "cresson d'eau"
+      ]
     },
     {
-      nodeId: "step_3", action: "Combine and season",
-      inputs: ["cooked_noodles", "stir_fried_vegetables", "ing_08", "ing_09", "ing_10"],
-      outputState: "seasoned_japchae",
-      instructions: "In the largest bowl you own, or back in the wok over low heat, combine the cooked noodles and all the stir-fried vegetables. In a small bowl, whisk together the remaining soy sauce, sesame oil and sugar until the sugar dissolves. Pour this seasoning sauce over everything and toss gently but thoroughly with tongs or two forks, lifting and folding the noodles to distribute the sauce and vegetables evenly. The soy-sesame-sweet sauce should coat every noodle strand and cling to the vegetables. Taste and adjust: more soy if it needs saltiness, more sesame oil for nuttiness, more sugar to balance. The flavour should be beautifully balanced — savory, nutty, slightly sweet, deeply umami.",
-      visualCue: {
-        primaryTarget: "A glistening, translucent tangle of glass noodles shot through with vivid vegetable colours — a jewelled tapestry of black, orange, red, white and green — every strand coated in a dark sesame gloss.",
-        spectrum: [
-          { state: "Underdone", description: "The seasoning sauce sits pooled at the bottom of the bowl rather than coating the noodles — the tossing hasn't been thorough enough, and the noodles taste bland.", action: "Toss more vigorously and longer. Every noodle must be touched by the sauce. If the sauce pools, add it in two additions, tossing between each." },
-          { state: "Perfect",   description: "Every noodle strand carries a visible sesame gloss and the vegetables are evenly distributed. The fragrance is deeply savory with the distinctive toasty note of sesame oil. The taste is balanced and complex.", action: "Serve at room temperature, which is traditional, or warm — both are excellent." },
-          { state: "Overdone",  description: "Over-seasoned — the dish is aggressively salty from too much soy, or the sesame oil dominates and the whole dish tastes oily.", action: "Blanch a small handful of extra noodles and toss them through to dilute. Or add a small pinch of sugar to counterbalance the salt." },
-        ],
-      },
-      feelCue: "Run your fingers through the noodles — they should slide and separate freely, not clump, coated in a thin, uniform gloss. Lift a strand: it should carry a tangle of vegetable colour with it, not drop everything clean.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Carottes, julienned dans de fines allumettes",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "daikon radis (blanch bref)"
+      ]
     },
     {
-      nodeId: "step_4", action: "Garnish and serve",
-      inputs: ["seasoned_japchae", "ing_13", "ing_14"],
-      outputState: "finished_japchae",
-      instructions: "Transfer the japchae to a large serving platter. Scatter the toasted sesame seeds generously over the top. If using the egg garnish, cut the thin omelette into fine julienne strips and arrange them over the top in a loose pile — they add a gentle richness and a striking golden colour against the dark noodles. Japchae is traditionally served at room temperature, which makes it ideal for parties and communal meals — it can be made several hours ahead and improves as the sauce continues to marinate the noodles. If serving warm, a brief toss in a hot wok for 2 minutes will revive it.",
-      visualCue: {
-        primaryTarget: "A gleaming, abundant platter of glass noodles jewelled with colour, the sesame seeds catching the light, the egg julienne golden against the dark tangle — celebratory and beautiful.",
-        spectrum: [
-          { state: "Underdone", description: "The dish looks under-garnished and pale — the sesame seeds are missing or sparse and the colors are less vibrant than they should be.", action: "Add more toasted sesame seeds and fluff the noodles to expose more of the colourful vegetables within." },
-          { state: "Perfect",   description: "A lavish, glistening platter with vivid vegetable colours visible throughout the glossy noodles, the sesame seeds scattered generously, the egg strips bright and golden.", action: "Serve at room temperature. This dish is a celebration on a plate." },
-          { state: "Overdone",  description: "The japchae has been made too far in advance and the noodles have absorbed all the sauce, turning dry and slightly gummy, the colors dull.", action: "Toss with a small drizzle of extra sesame oil and soy to revive, and fluff with tongs over low heat for 1–2 minutes." },
-        ],
-      },
-      feelCue: "A chopstick-full of japchae should feel silky and yielding — the glass noodles lighter and more delicate than wheat pasta, the vegetables offering gentle resistance. The fragrance of toasted sesame should rise with the steam.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "poivron rouge, julienned",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivron jaune ou orange"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Champignons chiitake, tiges enlevées et tranchées",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "shiitake séché, réhydraté (umami plus riche)",
+        "Champignons d'huître"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Oignon, tranché finement",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "sauce soja (ganjang)",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari certifié sans gluten"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Sweetener",
+      "name": "Sucre (blanc)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Chérie",
+        "sirop d'érable"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Huile végétale",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Garnish",
+      "name": "Oeufs cuits en omelette fine et julienned (facultatif)",
+      "ratioValue": 1,
+      "defaultUnit": "egg",
+      "substitutions": [
+        "Oeuf frit, cassé sur le dessus"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation de nouilles",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "cooked_noodles",
+      "instructions": "Portez une grande casserole d'eau à ébullition. Ajouter le dangmyéon et cuire 6 à 8 minutes, en remuant occasionnellement, jusqu'à ce que les nouilles soient complètement tendres — elles auraient dû être complètement transformées de blanc opaque à une translucence claire et vitreuse, avec une résistance satisfaisante à mâcher quand mordu. Ils ne devraient pas être gommés ou mous. Égoutter immédiatement et rincer sous l'eau froide pour arrêter la cuisson. Mélanger avec une cuillère à café d'huile de sésame pour éviter les accrochages. À l'aide de ciseaux, couper les nouilles en longueurs d'environ 15 cm — le dangmyéon est très long et peu maniable autrement. Mettez de côté.",
+      "visualCue": {
+        "primaryTarget": "Nouilles entièrement translucides et brillantes — complètement limpides comme du verre, avec un éclat semi-brillant uniforme et aucun centre opaque blanc restant dans aucune nouilles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les nouilles sont encore opaques ou blanches au centre quand vous mordez, avec un noyau crayeux et une texture ferme et raide plutôt que mâcheuse.",
+            "action": "Continuer la cuisson pendant 1 à 2 minutes et tester à nouveau. Le dangmyéon sous-cuit est désagréablement dense et féculent dans le plat final."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement translucide et vitreux, avec une morsure agréablement mâchante — printanière, non gommante — et une surface lisse et soyeuse.",
+            "action": "Égoutter immédiatement et rincer à l'eau froide. Ajouter à l'huile de sésame et couper en longueur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles sont douces, glissantes et commencent à s'agglutiner ensemble — elles ont perdu leur mâche caractéristique et seront collantes dans l'agitation.",
+            "action": "Rincer soigneusement à l'eau froide et mélanger avec de l'huile de sésame supplémentaire pour séparer. Ils seront plus doux dans le plat final mais encore comestibles."
+          }
+        ]
+      },
+      "feelCue": "Mordre une nouille en deux — elle devrait revenir légèrement au lieu de se déchirer facilement, avec une surface lisse et brillante qui glisse entre les dents. L'aspect en verre est le signal visuel fiable."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Légumes-séparés",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_11",
+        "ing_08",
+        "ing_12"
+      ],
+      "outputState": "stir_fried_vegetables",
+      "instructions": "La clé de la beauté du japchae est de cuisiner chaque composant végétal séparément afin qu'ils conservent la couleur, la texture et la saveur individuelles. Chauffer un grand wok ou une poêle à feu vif. Tricoter un ingrédient à la fois, ajouter un mince film d'huile et remuer chaque légume brièvement : shiitake champignons, 3 minutes jusqu'à l'or et légèrement réduit; oignon à l'ail, 3 minutes jusqu'à translucide et adouci; carottes, 2 minutes, encore avec un peu de morsure; poivron rouge, 1-2 minutes, rouge vif; épinards (blanchis, pressés), 30 secondes à chauffer. Assaisonner chaque composant légèrement avec du sel au fur et à mesure. Laissez chaque lot refroidir légèrement sur des sections séparées d'une plaque ou d'un plateau — les garder séparés signifie que les couleurs restent vives lorsque vous rassemblez tout.",
+      "visualCue": {
+        "primaryTarget": "Une palette de légumes cuits individuellement — les shiitakes brun foncé, les carottes orange vif, le poivron rouge vif, les épinards verts jade — chacun conservant sa propre couleur et une texture distincte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont crus ou à peine cuits — l'oignon est encore aiguisé et piquant, les champignons n'ont pas libéré leur liquide, la carotte est dure.",
+            "action": "Faire cuire chaque composant plus longtemps à feu vif. Les légumes crus saignent les saveurs crues dans le plat fini plutôt que de contribuer au caractère sucré et sauté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque légume est cuit mais conserve sa couleur, son arôme et sa légère morsure. Les champignons sont bordés d'or, la carotte est tendre mais pas boiteuse, le poivre est brillant et juste-douci.",
+            "action": "Reposez chaque composant sur une assiette jusqu'à ce que tous les légumes soient cuits, puis mélangez avec des nouilles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont surcuits, bruns et soggy, le poivron terne et gris, les épinards visqueux — les couleurs et les textures qui rendent le japchae beau sont partis.",
+            "action": "Procéder — la saveur est toujours là même si l'impact visuel est muet. La prochaine fois, gardez la chaleur très élevée et les temps de cuisson courts."
+          }
+        ]
+      },
+      "feelCue": "Les champignons doivent avoir une légère mâche et une densité salée et charnue. La carotte doit se casser légèrement lorsqu'elle est mordue plutôt que d'être molle. Le poivron doit encore sentir frais et vif, pas cuit à la vapeur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Combiner et assaisonner",
+      "inputs": [
+        "cooked_noodles",
+        "stir_fried_vegetables",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "seasoned_japchae",
+      "instructions": "Dans le plus grand bol que vous possédez, ou dans le wok à feu doux, combinez les nouilles cuites et tous les légumes frits. Dans un petit bol, fouetter ensemble la sauce de soja restante, l'huile de sésame et le sucre jusqu'à ce que le sucre se dissout. Verser cette sauce assaisonnée sur tout et mélanger doucement mais soigneusement avec des pinces ou deux fourchettes, soulever et plier les nouilles pour distribuer la sauce et les légumes uniformément. La sauce soya-sésame-doux devrait enrober chaque brin de nouilles et s'accrocher aux légumes. Goûtez et ajustez : plus de soja s'il a besoin de sel, plus d'huile de sésame pour la noix, plus de sucre pour équilibrer. La saveur doit être magnifiquement équilibrée: savoureuse, noisette, légèrement sucrée, profondément umami.",
+      "visualCue": {
+        "primaryTarget": "Un enchevêtrement scintillant et translucide de nouilles de verre aux couleurs végétales vives — tapisserie joaillière de noir, orange, rouge, blanc et vert — chaque brin recouvert d'un brillant de sésame foncé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce d'assaisonnement est mise en réserve au fond du bol plutôt que d'enrober les nouilles — le lancer n'a pas été assez complet, et les nouilles ont un goût fade.",
+            "action": "Jetez plus vigoureusement et plus longtemps. Chaque nouilles doit être touchée par la sauce. Si les piscines de sauce, ajoutez-le en deux additions, en jetant entre chacune."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque brin de nouilles porte un brillant de sésame visible et les légumes sont distribués uniformément. Le parfum est profondément salé avec la note savoureuse distinctive de l'huile de sésame. Le goût est équilibré et complexe.",
+            "action": "Servir à la température ambiante, qui est traditionnelle, ou chaude — les deux sont excellents."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sursaisonné — le plat est fortement salé à partir de trop de soja, ou l'huile de sésame domine et le plat entier a un goût huileux.",
+            "action": "Blanchir une petite poignée de nouilles supplémentaires et les jeter à travers pour diluer. Ou ajouter une petite pincée de sucre pour contrebalancer le sel."
+          }
+        ]
+      },
+      "feelCue": "Exécutez vos doigts à travers les nouilles — ils doivent glisser et se séparer librement, et non s'écraser, revêtus d'un mince brillant uniforme. Soulevez un brin : il doit porter un enchevêtrement de couleur végétale avec lui, ne pas tout laisser tomber propre."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir et servir",
+      "inputs": [
+        "seasoned_japchae",
+        "ing_13",
+        "ing_14"
+      ],
+      "outputState": "finished_japchae",
+      "instructions": "Transférer le japchae dans un grand plateau de service. Dispersez généreusement les graines de sésame grillées sur le dessus. Si l'on utilise la garniture d'oeufs, couper l'omelette fine en fines bandes juliennes et les arranger sur le dessus dans une pile lâche — ils ajoutent une richesse douce et une couleur dorée frappante contre les nouilles foncées. Le japchae est traditionnellement servi à la température ambiante, ce qui le rend idéal pour les fêtes et les repas communautaires — il peut être fait plusieurs heures à l'avance et s'améliore à mesure que la sauce continue à mariner les nouilles. Si vous servez au chaud, un court lancer dans un wok chaud pendant 2 minutes le ravivera.",
+      "visualCue": {
+        "primaryTarget": "Un plateau de nouilles en verre brillant et abondant, orné de couleurs, les graines de sésame attrapant la lumière, l'œuf julienne doré contre l'enchevêtrement sombre, célébrant et beau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le plat a l'air grisé et pâle — les graines de sésame sont manquantes ou clairsemées et les couleurs sont moins vibrantes qu'elles ne devraient l'être.",
+            "action": "Ajoutez plus de graines de sésame grillées et flippez les nouilles pour exposer plus de légumes colorés à l'intérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un plateau scintillant et scintillant aux couleurs végétales vives visibles dans les nouilles brillantes, les graines de sésame dispersées généreusement, les bandes d'oeufs brillantes et dorées.",
+            "action": "Servir à température ambiante. Ce plat est une célébration sur une assiette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le japchae a été fait trop loin à l'avance et les nouilles ont absorbé toute la sauce, tournant à sec et légèrement gommeux, les couleurs ternes.",
+            "action": "Mélanger avec une petite bruine d'huile de sésame supplémentaire et de soja pour réanimer, et plisser avec des pinces à feu doux pendant 1 à 2 minutes."
+          }
+        ]
+      },
+      "feelCue": "Une baguette pleine de japchae doit se sentir soyeuse et productive — les nouilles de verre plus légères et plus délicates que les pâtes de blé, les légumes offrant une résistance douce. Le parfum de sésame grillé doit se lever avec la vapeur."
+    }
+  ]
 };

@@ -1,95 +1,246 @@
 export default {
-  repoId: "master_french_beurre_blanc_001",
-  parentRepoId: null,
-  slug: "beurre-blanc",
-  author: "ForkRecipe Kitchen",
-  title: "Beurre Blanc",
-  description: "The Loire's great white butter sauce — a tart reduction of wine, vinegar and shallot whisked drop by drop with cold butter until it billows into a pale, glossy emulsion light enough to coat a fillet of fish yet rich enough to make it sing. A sauce that lives or dies by temperature: too cool and it never comes together, too hot and it splits into oily ruin.",
-  cuisine: "French",
-  culture: "Nantais",
-  category: "sauces",
-  tags: ["sauce", "french", "butter", "emulsion", "beurre-blanc", "mounted"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 1, salty: 2, sour: 3, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Cold unsalted butter (cut into 2 cm cubes, kept refrigerated)", ratioValue: 100, defaultUnit: "parts", substitutions: ["European-style cultured butter"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Dry white wine (Muscadet or Sauvignon Blanc)",                 ratioValue: 30,  defaultUnit: "parts", substitutions: ["dry vermouth"] },
-    { ingId: "ing_03", role: "Acid",      name: "White wine vinegar",                                           ratioValue: 12,  defaultUnit: "parts", substitutions: ["champagne vinegar"] },
-    { ingId: "ing_04", role: "Allium",    name: "Shallot (very finely minced)",                                 ratioValue: 10,  defaultUnit: "parts", substitutions: ["échalote grise"] },
-    { ingId: "ing_05", role: "Dairy",     name: "Heavy cream (optional, for stability)",                        ratioValue: 8,   defaultUnit: "parts", substitutions: ["crème fraîche"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt",                                                ratioValue: 1,   defaultUnit: "parts", substitutions: ["fleur de sel"] },
-    { ingId: "ing_07", role: "Citrus",    name: "Lemon juice (to finish, to taste)",                            ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",   name: "White pepper & snipped chives (optional)",                     ratioValue: 1,   defaultUnit: "parts", substitutions: ["tarragon"] },
+  "repoId": "master_french_beurre_blanc_001",
+  "parentRepoId": null,
+  "slug": "beurre-blanc",
+  "author": "ForkRecipe Kitchen",
+  "title": "Beurre Blanc",
+  "description": "La grande sauce au beurre blanc de la Loire — une réduction de tarte de vin, de vinaigre et d'échalote fouettée goutte à goutte avec du beurre froid jusqu'à ce qu'elle se gonfle dans une lumière d'émulsion pâle et brillante assez pour enrober un filet de poisson pourtant assez riche pour le faire chanter. Une sauce qui vit ou meurt à la température: trop fraîche et elle ne se réunit jamais, trop chaude et se divise en ruine huileuse.",
+  "cuisine": "Français",
+  "culture": "Nantais",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "beurre",
+    "émulsion",
+    "beurre-blanc",
+    "monté"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Reduce",
-      inputs: ["ing_02", "ing_03", "ing_04"],
-      outputState: "shallot_reduction",
-      instructions: "In a small heavy non-reactive saucepan, combine the white wine, vinegar and minced shallot. Bring to a simmer over medium heat and reduce until almost dry — only 1-2 tablespoons of syrupy, glistening liquid remain among the soft shallots, 5-7 minutes. This concentrated, acidic base is what will hold the butter in suspension.",
-      visualCue: {
-        primaryTarget: "The pan holds a scant, syrupy puddle of liquid clinging to soft, translucent shallots, just barely wet with no free-running wine.",
-        spectrum: [
-          { state: "Underdone", description: "Plenty of thin liquid still sloshes in the pan and the vinegar smells sharp and raw.", action: "Keep simmering — the acid must concentrate and the harsh vinegar fumes mellow before you mount the butter." },
-          { state: "Perfect",   description: "Roughly a tablespoon or two of syrupy liquid remains, the shallots soft and glossy, the aroma tart but rounded.", action: "Lower the heat to its lowest setting and, if using, whisk in the cream." },
-          { state: "Overdone",  description: "The pan is bone dry, the shallots are browning and beginning to fry, and the smell turns scorched.", action: "Pull off the heat at once; add a splash of wine to deglaze and reset before continuing." },
-        ],
-      },
-      feelCue: "Tilt the pan — the reduction should move like a loose syrup, not splash like a liquid. The steam smells bright and tart, no longer prickling the nose with raw vinegar.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Beurre froid non salé (découpé en cubes de 2 cm, conservé réfrigéré)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Beurre cultivé de style européen"
+      ]
     },
     {
-      nodeId: "step_2", action: "Temper",
-      inputs: ["shallot_reduction", "ing_05"],
-      outputState: "stabilized_base",
-      instructions: "Reduce the heat to the lowest possible flame — the reduction should be warm, never simmering. If using cream, whisk it into the reduction now and let it warm through for a minute; the cream's emulsifiers make the sauce far more forgiving. The pan should feel hot to a hovering hand but the liquid must not bubble.",
-      visualCue: {
-        primaryTarget: "A warm, still base with no bubbles breaking the surface; if cream was added, it has loosened into a pale, slightly thickened pool.",
-        spectrum: [
-          { state: "Underdone", description: "The base has gone cold and the pan no longer radiates heat; butter added now would simply melt and pool without emulsifying.", action: "Return briefly to gentle heat until the pan is warm again — aim for hot bathwater warmth, not a simmer." },
-          { state: "Perfect",   description: "The reduction is hot but perfectly still, no bubbles, the cream (if used) smoothly incorporated.", action: "Begin whisking in the cold butter a few cubes at a time." },
-          { state: "Overdone",  description: "The base is simmering or spitting; it is too hot and will break the emulsion the instant butter melts.", action: "Lift the pan off the heat for thirty seconds to cool, then proceed off-heat if your stove runs hot." },
-        ],
-      },
-      feelCue: "Hold a palm just above the pan — it should feel insistently warm but never force you to pull away. No sound of simmering, only stillness.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Vin blanc sec (Muscadet ou Sauvignon Blanc)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vermouth sec"
+      ]
     },
     {
-      nodeId: "step_3", action: "Mount",
-      inputs: ["stabilized_base", "ing_01"],
-      outputState: "mounted_emulsion",
-      instructions: "Whisking constantly, add the cold butter two or three cubes at a time, letting each addition melt and emulsify into a creamy mass before adding more. Never let the butter melt to clear oil — it must soften and disappear into a thick, opaque sauce. Move the pan on and off the gentle heat as needed to keep it warm but never hot, building the emulsion cube by cube until all the butter is incorporated.",
-      visualCue: {
-        primaryTarget: "A pale ivory, glossy sauce thick enough to coat the whisk and leave slowly-closing ribbons, with no slick of free oil anywhere on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is thin and watery and butter is melting into a yellow oily layer rather than thickening.", action: "Stop adding butter; whisk hard off the heat to bring the emulsion back, and warm the pan only if it has gone cold." },
-          { state: "Perfect",   description: "Opaque, pale and satiny, the sauce billows and clings to the whisk, nappant and homogeneous with no visible oil.", action: "Pull from the heat and finish with salt, lemon and pepper." },
-          { state: "Overdone",  description: "The sauce has broken — grainy yellow curds float in a pool of clear melted butter, often from overheating.", action: "Whisk a spoonful of warm cream or water in a clean bowl, then dribble the broken sauce in slowly to re-emulsify." },
-        ],
-      },
-      feelCue: "Feel the whisk meet growing resistance as the sauce thickens — it should drag like soft cream, not slide like oil. Keep the butter just at the edge of melting; the moment you see clear yellow pooling, the pan is too hot.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de champagne"
+      ]
     },
     {
-      nodeId: "step_4", action: "Season & Finish",
-      inputs: ["mounted_emulsion", "ing_06", "ing_07", "ing_08"],
-      outputState: "finished_beurre_blanc",
-      instructions: "Off the heat, season the sauce with fine salt and a few drops of lemon juice, tasting as you go to balance the richness against the acidity. For a classic silken sauce, strain out the shallots through a fine sieve; for a rustic version, leave them in. Add white pepper and chives if using. Serve immediately — beurre blanc cannot be reheated or held hot for long without breaking. Keep it barely warm in a water bath if you must wait a few minutes.",
-      visualCue: {
-        primaryTarget: "A pourable yet clinging ivory sauce, glossy and balanced, tart enough to brighten rich fish without tasting of raw butter, that coats a spoon in a smooth even sheet.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce tastes flat and heavily buttery, lacking the bright acidic lift that defines beurre blanc.", action: "Add a few more drops of lemon juice and a pinch more salt, tasting until the richness snaps into balance." },
-          { state: "Perfect",   description: "Glossy, pale and pourable, the butter rounded by a clean tartness, seasoned so the acid and salt frame the richness.", action: "Spoon at once over fish, scallops or steamed vegetables and serve." },
-          { state: "Overdone",  description: "The sauce has been over-acidulated or held too long and tastes sharp, or has begun to separate at the edges from sitting.", action: "Whisk in a cube of cold butter to round it back out; if it is separating, re-emulsify off the heat and serve immediately." },
-        ],
-      },
-      feelCue: "Draw a spoon through the sauce and lift it — it should sheet off slowly in a smooth, even curtain. On the tongue it feels rich and velvety up front, then finishes clean and bright from the acid.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalote (très finement hachée)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "échalote grise"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Dairy",
+      "name": "Crème lourde (facultatif, pour la stabilité)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Crème fraîche"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fleur de sel"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Citrus",
+      "name": "Jus de citron (pour finir, pour goûter)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Poivre blanc et ciboulette ennivée (facultatif)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "estragon"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Réduire",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "shallot_reduction",
+      "instructions": "Dans une petite casserole non réactive, mélanger le vin blanc, le vinaigre et l'échalote hachée. Porter à mijoter à feu moyen et réduire jusqu'à ce qu'il soit presque sec — seulement 1 à 2 cuillères à soupe de sirupeux, le liquide brillant reste parmi les échalotes douces, 5 à 7 minutes. Cette base concentrée et acide est ce qui tiendra le beurre en suspension.",
+      "visualCue": {
+        "primaryTarget": "La poêle contient une petite flaque sirupeuse de liquide qui s'accroche aux échalotes douces et translucides, à peine mouillée sans vin libre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Beaucoup de liquides minces slottent encore dans la poêle et le vinaigre sent vif et cru.",
+            "action": "Continuez à mijoter — l'acide doit se concentrer et les fortes fumées de vinaigre se mêlent avant de monter le beurre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Environ une cuillère à soupe ou deux de liquide sirupeux reste, les échalotes douces et brillantes, l'arôme de tarte mais arrondi.",
+            "action": "Abaissez la chaleur à son réglage le plus bas et, si vous l'utilisez, fouettez dans la crème."
+          },
+          {
+            "state": "Overdone",
+            "description": "La poêle est sèche, les échalotes brunissent et commencent à frire, et l'odeur devient brûlée.",
+            "action": "Retirez immédiatement la chaleur; ajoutez une touche de vin pour déglacer et réinitialiser avant de continuer."
+          }
+        ]
+      },
+      "feelCue": "Inclinez la poêle — la réduction doit se déplacer comme un sirop lâche, et ne pas éclabousser comme un liquide. La vapeur sent la lumière et la tarte, ne pique plus le nez avec du vinaigre cru."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Température",
+      "inputs": [
+        "shallot_reduction",
+        "ing_05"
+      ],
+      "outputState": "stabilized_base",
+      "instructions": "Réduisez la chaleur à la flamme la plus basse possible — la réduction doit être chaude, ne jamais mijoter. Si vous utilisez de la crème, fouettez-la dans la réduction maintenant et laissez-la chauffer pendant une minute; les émulsifiants de la crème rendent la sauce beaucoup plus pardonnante. La casserole doit se sentir chaude à une main plane mais le liquide ne doit pas buller.",
+      "visualCue": {
+        "primaryTarget": "Une base chaude et calme sans bulles qui brise la surface; si de la crème est ajoutée, elle se détache dans une piscine pâle et légèrement épaissie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La base est devenue froide et la poêle ne dégage plus de chaleur; le beurre ajouté aujourd'hui serait tout simplement fondu et mis en réserve sans émulsifiant.",
+            "action": "Retournez brièvement à la chaleur douce jusqu'à ce que la poêle soit à nouveau chaude — visez la chaleur de l'eau de bain chaude, pas une mijoter."
+          },
+          {
+            "state": "Perfect",
+            "description": "La réduction est chaude mais parfaitement immobile, pas de bulles, la crème (si utilisée) facilement incorporée.",
+            "action": "Commencez à fouetter dans le beurre froid quelques cubes à la fois."
+          },
+          {
+            "state": "Overdone",
+            "description": "La base mijote ou crache; elle est trop chaude et rompt l'émulsion du beurre instantané.",
+            "action": "Soulevez la poêle de la chaleur pendant trente secondes pour refroidir, puis faites chauffer si votre poêle est chaud."
+          }
+        ]
+      },
+      "feelCue": "Tenez une paume juste au - dessus de la poêle — elle devrait vous sentir chaude avec insistance, mais jamais vous forcer à vous en tirer. Pas de bruit de frémissant, seulement de calme."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Monter",
+      "inputs": [
+        "stabilized_base",
+        "ing_01"
+      ],
+      "outputState": "mounted_emulsion",
+      "instructions": "Whisking constamment, ajouter le beurre froid deux ou trois cubes à la fois, laissant chaque addition fondre et émulsifier dans une masse crémeuse avant d'ajouter plus. Ne laissez jamais le beurre fondre à l'huile claire — il doit s'adoucir et disparaître dans une sauce épaisse et opaque. Déplacez la poêle sur et hors de la chaleur douce au besoin pour la garder au chaud mais jamais au chaud, construisant le cube d'émulsion par cube jusqu'à ce que tout le beurre soit incorporé.",
+      "visualCue": {
+        "primaryTarget": "Une sauce ivoire pâle et brillante assez épaisse pour enrober le fouet et laisser des rubans à fermeture lente, sans lécher d'huile libre nulle part sur la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse et le beurre fond dans une couche huileuse jaune plutôt que d'épaissir.",
+            "action": "Arrêter d'ajouter du beurre; fouetter dur sur le feu pour ramener l'émulsion, et réchauffer la poêle seulement si elle est devenue froide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Opaque, pâle et satinée, la sauce se colle au fouet, nappant et homogène sans huile visible.",
+            "action": "Tirez du feu et terminez avec du sel, du citron et du poivre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce s'est cassée — des cords jaunes granuleux flottent dans un bassin de beurre fondu clair, souvent par surchauffe.",
+            "action": "fouetter une cuillère de crème chaude ou d'eau dans un bol propre, puis dribber la sauce cassée lentement pour la réémulsionner."
+          }
+        ]
+      },
+      "feelCue": "Sentez que le fouet rencontre une résistance croissante à mesure que la sauce s'épaissit — il devrait glisser comme de la crème douce, pas glisser comme de l'huile. Gardez le beurre juste au bord de la fusion; au moment où vous voyez la piscine jaune clair, la poêle est trop chaude."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison & Finition",
+      "inputs": [
+        "mounted_emulsion",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_beurre_blanc",
+      "instructions": "Hors de la chaleur, assaisonner la sauce avec du sel fin et quelques gouttes de jus de citron, goûter pendant que vous allez équilibrer la richesse contre l'acidité. Pour une sauce soyeuse classique, filtrez les échalotes à travers un tamis fin; pour une version rustique, laissez-les entrer. Ajouter le poivre blanc et la ciboulette si vous l'utilisez. Servir immédiatement — le beurre blanc ne peut pas être réchauffé ou tenu chaud longtemps sans casser. Gardez-le à peine au chaud dans un bain d'eau si vous devez attendre quelques minutes.",
+      "visualCue": {
+        "primaryTarget": "Une sauce ivoire versable mais collante, brillante et équilibrée, assez tarte pour égayer les poissons riches sans goûter de beurre cru, qui enrobe une cuillère dans une feuille lisse et uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a un goût plat et fortement beurreux, sans l'ascenseur acide brillant qui définit le beurre blanc.",
+            "action": "Ajoutez encore quelques gouttes de jus de citron et une pincée de sel, en dégustant jusqu'à ce que la richesse s'équilibre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, pâle et versable, le beurre arrondi par une tarte propre, assaisonné ainsi l'acide et le sel cadrent la richesse.",
+            "action": "Déposer immédiatement sur des poissons, des pétoncles ou des légumes à la vapeur et servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été trop acidulée ou maintenue trop longtemps et goûte vif, ou a commencé à se séparer aux bords de l'assise.",
+            "action": "fouetter dans un cube de beurre froid pour l'arroser; si elle se sépare, réémulsionner le feu et servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Dessinez une cuillère à travers la sauce et soulevez - la; elle devrait s'enrouler lentement dans un rideau lisse et uniforme. Sur la langue il se sent riche et velouté à l'avant, puis se termine propre et lumineux de l'acide."
+    }
+  ]
 };

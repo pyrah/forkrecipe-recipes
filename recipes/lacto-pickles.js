@@ -1,115 +1,280 @@
 export default {
-  repoId: "master_eastern_european_lacto_pickles_001",
-  parentRepoId: null,
-  slug: "lacto-pickles",
-  author: "ForkRecipe Kitchen",
-  title: "Lacto-Fermented Dill Pickles",
-  description: "Cucumbers submerged in a cold salt brine, slowly transformed over a week by native lactobacillus into crunch-snapping, garlicky, deeply savory pickles that no vinegar jar can imitate. The dill fronds cloud the brine as fermentation deepens, and the smell shifts from vegetal to pleasantly sour — a living food that rewards patience with layers no vinegar jar can imitate.",
-  cuisine: "Eastern European",
-  culture: "Ashkenazi",
-  category: "fermented",
-  tags: ["pickles", "lacto-fermented", "dill", "eastern-european", "probiotic"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "7 days",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 4, sour: 5, bitter: 1, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Pickling cucumbers (Kirby, 3–5 inch)", ratioValue: 1,     defaultUnit: "kg",   substitutions: ["Persian cucumbers", "small garden cucumbers"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Non-chlorinated water (cold)",          ratioValue: 1,     defaultUnit: "liter", substitutions: ["filtered water", "spring water"] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Non-iodized salt (fine or kosher)",      ratioValue: 20,    defaultUnit: "g",    substitutions: ["sea salt (non-iodized only)"] },
-    { ingId: "ing_04", role: "Herb",       name: "Fresh dill (heads and fronds)",           ratioValue: 4,     defaultUnit: "heads", substitutions: ["2 tbsp dill seed"] },
-    { ingId: "ing_05", role: "Allium",     name: "Garlic cloves (crushed)",                 ratioValue: 6,     defaultUnit: "cloves", substitutions: ["shallot slices"] },
-    { ingId: "ing_06", role: "Spice",      name: "Whole black peppercorns",                 ratioValue: 1,     defaultUnit: "tsp",  substitutions: ["cracked pepper"] },
-    { ingId: "ing_07", role: "Spice",      name: "Dried chili flakes or whole dried chili", ratioValue: 0.5,   defaultUnit: "tsp",  substitutions: ["fresh jalapeño slice"] },
-    { ingId: "ing_08", role: "Structure",  name: "Grape or oak leaves (tannin source)",     ratioValue: 2,     defaultUnit: "leaves", substitutions: ["horseradish leaf", "black tea (1 tsp loose)"] },
+  "repoId": "master_eastern_european_lacto_pickles_001",
+  "parentRepoId": null,
+  "slug": "lacto-pickles",
+  "author": "ForkRecipe Kitchen",
+  "title": "Lacto-Fermented Dill Pickles",
+  "description": "Les concombres submergés dans une saumure de sel froid, lentement transformés en une semaine par des lactobacillus indigènes en croûtes, ailky, cornichons profondément salés qu'aucun pot de vinaigre ne peut imiter. La frondes d'aneth nuage la saumure comme la fermentation s'approfondit, et l'odeur passe de végétal à agréablement aigre — un aliment vivant qui récompense la patience avec des couches sans pot de vinaigre peut imiter.",
+  "cuisine": "Europe orientale",
+  "culture": "Ashkenazi",
+  "category": "fermented",
+  "tags": [
+    "cornichons",
+    "lactofermentés",
+    "d'aneth",
+    "Europe orientale",
+    "probiotique"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "7 days",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 5,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Prep",
-      inputs: ["ing_01"],
-      outputState: "prepped_cucumbers",
-      instructions: "Wash cucumbers thoroughly, scrubbing off any wax or surface dirt. Slice off both the blossom end (the end opposite the stem — typically the narrower, flatter end) and 1–2 mm of the stem end. The blossom end contains enzymes that will soften the pickles — removing it is essential for crunch. If cucumbers are not freshly picked, soak them in ice water for 1 hour before proceeding to refresh their crispness.",
-      visualCue: {
-        primaryTarget: "Clean cucumbers with both ends trimmed, showing a clean white cross-section at each cut. They should look turgid and bright green.",
-        spectrum: [
-          { state: "Underdone", description: "Cucumbers have a slightly wrinkled, limp appearance — they have started dehydrating.", action: "Soak in ice water for 1–2 hours before proceeding; they will plump back up." },
-          { state: "Perfect",   description: "Firm, bright green, blossom end removed. Cucumbers have visible, tight skin with no soft spots. Smell like fresh garden vegetables.", action: "Proceed to pack the jar." },
-          { state: "Overdone",  description: "Cucumbers have soft or yellowing spots.", action: "Cut away any soft spots. Severely soft cucumbers will not make good pickles." },
-        ],
-      },
-      feelCue: "A good pickling cucumber should feel as dense as a billiard ball — grip it firmly and you should feel no give whatsoever.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Concombres picturaux (Kirby, de 3 à 5 pouces)",
+      "ratioValue": 1,
+      "defaultUnit": "kg",
+      "substitutions": [
+        "Concombres perses",
+        "petits concombres de jardin"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Dissolve",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "brine",
-      instructions: "Combine cold non-chlorinated water and salt in a large bowl or pitcher. Stir until the salt is completely dissolved — at least 1–2 minutes of vigorous stirring. The salt concentration is 2% by weight (20g salt per 1 liter water), which selectively favors Lactobacillus bacteria while inhibiting pathogens. Do not use iodized salt — the iodine will kill the beneficial bacteria.",
-      visualCue: {
-        primaryTarget: "Perfectly clear water. No salt crystals visible on the bottom of the vessel. The liquid should look indistinguishable from plain water.",
-        spectrum: [
-          { state: "Underdone", description: "Salt crystals still visible on the bottom, or the water looks grainy when swirled.", action: "Keep stirring — undissolved salt will mean uneven salinity and potential spoilage." },
-          { state: "Perfect",   description: "Crystal clear, uniformly salty to the taste — like seawater, noticeably salty but not harsh.", action: "Use immediately; do not heat." },
-          { state: "Overdone",  description: "The brine is cloudy from over-salting or the wrong type of salt.", action: "Taste — if unpleasantly harsh and bitter, dilute with more water." },
-        ],
-      },
-      feelCue: "Dip a clean finger: the brine should taste clearly salty, like a well-seasoned soup — assertive but not overwhelming.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau non chlorée (froide)",
+      "ratioValue": 1,
+      "defaultUnit": "liter",
+      "substitutions": [
+        "eau filtrée",
+        "eau de source"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Pack",
-      inputs: ["prepped_cucumbers", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "packed_jar",
-      instructions: "Layer the bottom of a clean 1-liter glass jar or crock with half the dill, the crushed garlic, peppercorns, and chili. Add the grape or oak leaves (these provide tannins that keep the cucumbers crunchy by inhibiting the pectin-degrading enzymes released during fermentation). Pack the cucumbers in vertically, as tightly as possible without bruising them — the tighter the pack, the better they stay submerged. Top with the remaining dill.",
-      visualCue: {
-        primaryTarget: "Cucumbers packed vertically with no gaps large enough to let them float, dill nestled between them, garlic and spices visible through the glass.",
-        spectrum: [
-          { state: "Underdone", description: "Loose pack with large air gaps between cucumbers — they will float out of the brine and mold.", action: "Re-pack more tightly; use smaller cucumbers to fill gaps, or cut some in half to wedge in." },
-          { state: "Perfect",   description: "Cucumbers stand upright like soldiers, snug against each other and the jar walls. Aromatics distributed evenly.", action: "Pour the brine over and weigh down." },
-          { state: "Overdone",  description: "Cucumbers packed so forcefully they have cracked or bruised.", action: "Bruised cucumbers will still ferment but may be softer — they are still usable." },
-        ],
-      },
-      feelCue: "The jar should feel solidly heavy, dense with cucumbers — shake it and nothing should rattle loosely inside.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel non iodé (fin ou casher)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel de mer (non iodé seulement)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Ferment",
-      inputs: ["packed_jar", "brine"],
-      outputState: "fermenting_pickles",
-      instructions: "Pour the cold brine over the cucumbers, leaving 2–3 cm of headspace. All cucumbers must stay fully submerged — weigh them down with a small zip-lock bag filled with brine, a fermentation weight, or a smaller jar filled with water. Cover with a cloth or loose lid (NOT airtight). Ferment at room temperature, 18–22°C, for 5–7 days. Taste starting at day 3. Burp any gas and press cucumbers back below brine level daily.",
-      visualCue: {
-        primaryTarget: "By day 3–4: brine has turned visibly cloudy and white-milky, small bubbles rise when the jar is gently disturbed, and the cucumbers have shifted from bright green to a more muted olive-green.",
-        spectrum: [
-          { state: "Underdone", description: "Day 5 and the brine is still clear, cucumbers still bright green — fermentation has barely started. Taste is still raw and salty.", action: "Move to a warmer spot. Ensure all cucumbers are submerged — air exposure stops lacto-fermentation." },
-          { state: "Perfect",   description: "Brine is milky-cloudy, pleasantly tangy smell, cucumbers are uniformly olive-green and have lost their raw bite. They snap crisply when bitten, taste sour, garlicky, and deeply savory.", action: "Refrigerate to halt fermentation at your preferred sourness level." },
-          { state: "Overdone",  description: "Brine is very sour and sharp, cucumbers are mushy when bitten, possibly with a strong acetone or sulfur smell.", action: "If only slightly over, refrigerate immediately — they may still be edible. Discard if texture is uniformly mushy or smell is off." },
-        ],
-      },
-      feelCue: "A perfectly fermented pickle should snap audibly when bitten — like breaking a fresh celery stalk. If it bends, it has lost its crunch to enzymatic softening.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Diluant frais (têtes et frondes)",
+      "ratioValue": 4,
+      "defaultUnit": "heads",
+      "substitutions": [
+        "2 c. à soupe de graines d'aneth"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Chill",
-      inputs: ["fermenting_pickles"],
-      outputState: "finished_pickles",
-      instructions: "Once the pickles reach your desired sourness (typically between day 5 and 7 at room temperature), transfer the jar to the refrigerator. Cold dramatically slows the fermentation — the pickles will continue to sour very gradually but will remain good for 2–3 months. The cloudy brine is full of probiotics and is itself a condiment; drink it or use it to start your next batch.",
-      visualCue: {
-        primaryTarget: "Olive-green cucumbers in opaque white brine. The lid, when opened, releases a puff of pleasantly sour, garlicky-dill smell.",
-        spectrum: [
-          { state: "Underdone", description: "Still clear brine, cucumbers bright green — the batch went straight to the fridge before fermentation really started. These are brine-cured, not lacto-fermented.", action: "Pull back out and ferment at room temperature for another 2–3 days." },
-          { state: "Perfect",   description: "Opaque brine, olive-green pickles that snap, complex sour-savory-garlicky flavor with a pleasant acidity that doesn't sting.", action: "Serve cold, refrigerate, and enjoy for up to 3 months." },
-          { state: "Overdone",  description: "Very sour, almost harsh. Pickles are noticeably soft.", action: "Use in recipes (potato salad, chopped into dressings) where texture matters less." },
-        ],
-      },
-      feelCue: "Cold from the fridge, a good lacto pickle should feel dense and chilled all the way through — not hollow — and snap between your fingers without any flex.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail (crues)",
+      "ratioValue": 6,
+      "defaultUnit": "cloves",
+      "substitutions": [
+        "tranches d'échalote"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Grains de poivre noirs entiers",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "Poivre craqué"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "flocons de chili séchés ou de chili entier séché",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "tranche de jalapeño fraîche"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Structure",
+      "name": "Feuilles de raisins ou de chêne (source tannine)",
+      "ratioValue": 2,
+      "defaultUnit": "leaves",
+      "substitutions": [
+        "Feuille de raifort",
+        "thé noir (1 c. à thé lâche)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "prepped_cucumbers",
+      "instructions": "Lavez soigneusement les concombres, frottez toute cire ou saleté de surface. Couper à la fois l'extrémité de la fleur (l'extrémité opposée à la tige — généralement l'extrémité plus étroite et plus plate) et 1–2 mm de l'extrémité de la tige. L'extrémité de la fleur contient des enzymes qui adouciront les cornichons. Si les concombres ne sont pas fraîchement cueillis, trempez-les dans de l'eau glacée pendant 1 heure avant de les rafraîchir.",
+      "visualCue": {
+        "primaryTarget": "Nettoyer les concombres avec les deux extrémités, montrant une coupe transversale blanche propre à chaque coupe. Ils devraient avoir l'air turgesques et vert vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les concombres ont une apparence légèrement ridée et molle, ils ont commencé à se déshydrater.",
+            "action": "Tremper dans l'eau glacée pendant 1 à 2 heures avant d'aller de l'avant; ils s'effondreront."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ferme, vert vif, bout fleuri enlevé. Les concombres ont une peau visible et serrée sans taches molles. Sens comme des légumes frais de jardin.",
+            "action": "Continuez à emballer le pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les concombres ont des taches molles ou jaunissantes.",
+            "action": "Coupez les taches molles. Les concombres très doux ne feront pas de bons cornichons."
+          }
+        ]
+      },
+      "feelCue": "Un bon concombre décapant devrait se sentir aussi dense qu'une boule de billard — le serrer fermement et vous ne devriez pas sentir donner quoi que ce soit."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Dissoudre",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "brine",
+      "instructions": "Mélanger de l'eau non chlorée froide et du sel dans un grand bol ou un pichet. Incorporer jusqu'à ce que le sel soit complètement dissous — au moins 1 à 2 minutes de brassage vigoureux. La concentration en sel est de 2% en poids (20g de sel par 1 litre d'eau), ce qui favorise sélectivement les bactéries Lactobacillus tout en inhibant les agents pathogènes. Ne pas utiliser de sel iodé — l'iode tuera les bactéries bénéfiques.",
+      "visualCue": {
+        "primaryTarget": "De l'eau parfaitement claire. Pas de cristaux de sel visibles au fond du récipient. Le liquide doit être indistinguable de l'eau pure.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cristaux de sel sont encore visibles sur le fond, ou l'eau semble granuleuse en tourbillonnant.",
+            "action": "Continuez à remuer — le sel non dissous signifiera une salinité inégale et une détérioration potentielle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Limpide, uniformément salé au goût, comme l'eau de mer, nettement salée mais pas dure.",
+            "action": "Utiliser immédiatement; ne pas chauffer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La saumure est trouble par le surselage ou le mauvais type de sel.",
+            "action": "Goûter — si désagréablement dur et amer, diluer avec plus d'eau."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt propre: la saumure doit avoir un goût nettement salé, comme une soupe bien assaisonnée — assertive mais pas écrasante."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Boîte",
+      "inputs": [
+        "prepped_cucumbers",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "packed_jar",
+      "instructions": "Coucher le fond d'un pot ou d'une croûte de verre propre de 1 litre avec la moitié de l'aneth, l'ail écrasé, les grains de poivre et le chili. Ajouter les feuilles de raisin ou de chêne (ces derniers fournissent des tanins qui maintiennent les concombres croquants en inhibant les enzymes de dégradation de la pectine libérées pendant la fermentation). Emballez les concombres verticalement, aussi étroitement que possible sans les ecchymoses, plus ils sont serrés, mieux ils restent submergés. Ajouter le reste de l'aneth.",
+      "visualCue": {
+        "primaryTarget": "Concombres emballés verticalement sans espaces suffisamment grands pour les laisser flotter, l'aneth niché entre eux, l'ail et les épices visibles à travers le verre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Emballez - vous avec de grands espaces d'air entre les concombres — ils flotteront hors de la saumure et de la moisissure.",
+            "action": "Reconditionner plus étroitement; utiliser des concombres plus petits pour combler les lacunes, ou les couper en deux pour les coincer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les concombres se tiennent debout comme des soldats, ronflent les uns contre les autres et les murs du pot. Aromatique distribuée uniformément.",
+            "action": "Verser la saumure et peser."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les concombres emballés avec tant de force ont craqué ou meurtri.",
+            "action": "Les concombres meurtris seront encore fermentés, mais peuvent être plus doux — ils sont encore utilisables."
+          }
+        ]
+      },
+      "feelCue": "Le pot devrait se sentir solidement lourd, dense avec des concombres — agiter et rien ne devrait se déchirer librement à l'intérieur."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Ferment",
+      "inputs": [
+        "packed_jar",
+        "brine"
+      ],
+      "outputState": "fermenting_pickles",
+      "instructions": "Verser la saumure froide sur les concombres, laissant de 2 à 3 cm d'espace de tête. Tous les concombres doivent rester entièrement submergés — les peser avec un petit sac à fermeture éclair rempli de saumure, d'un poids de fermentation ou d'un pot plus petit rempli d'eau. Couvrir d'un chiffon ou d'un couvercle non étanche. Ferment à température ambiante, 18-22°C, pendant 5-7 jours. Goûtez dès le jour 3. Enterrez tous les gaz et pressez les concombres sous le niveau de saumure quotidiennement.",
+      "visualCue": {
+        "primaryTarget": "Au jour 3-4 : la saumure est devenue visiblement trouble et laiteuse, de petites bulles s'élèvent lorsque le pot est légèrement perturbé, et les concombres sont passés du vert vif au vert olive plus muté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Jour 5 et la saumure est encore claire, concombres encore vert vif — la fermentation a à peine commencé. Le goût est toujours cru et salé.",
+            "action": "Passez à un endroit plus chaud. S'assurer que tous les concombres sont submergés — l'exposition à l'air arrête la lactofermentation."
+          },
+          {
+            "state": "Perfect",
+            "description": "La saumure est laiteuse, agréablement tannante, les concombres sont uniformément vert olive et ont perdu leur bouchée crue. Ils se cassent croustillantment quand ils sont mordus, goûtent aigre, ailky et profondément salés.",
+            "action": "Réfrigérer pour arrêter la fermentation à votre niveau d'auresse préféré."
+          },
+          {
+            "state": "Overdone",
+            "description": "La saumure est très aigre et tranchante, les concombres sont musclés lorsqu'ils sont mordus, peut-être avec une forte odeur d'acétone ou de soufre.",
+            "action": "Si ce n'est que légèrement plus, réfrigérer immédiatement — ils peuvent encore être comestibles. Jeter si la texture est uniformément musquée ou l'odeur est éteinte."
+          }
+        ]
+      },
+      "feelCue": "Un cornichon parfaitement fermenté devrait se casser audiblement en mordant, comme casser une tige de céleri fraîche. Si elle fléchit, elle a perdu sa croûte à l'adoucissement enzymatique."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Refroidissement",
+      "inputs": [
+        "fermenting_pickles"
+      ],
+      "outputState": "finished_pickles",
+      "instructions": "Une fois que les cornichons atteignent l'aurence souhaitée (généralement entre les jours 5 et 7 à température ambiante), transférer le pot au réfrigérateur. Le froid ralentit considérablement la fermentation — les cornichons continueront à s'amer très progressivement mais resteront bons pendant 2 à 3 mois. La saumure nuageuse est pleine de probiotiques et est elle-même un condiment; buvez-le ou utilisez-le pour commencer votre prochain lot.",
+      "visualCue": {
+        "primaryTarget": "Concombres vert olive en saumure blanche opaque. Le couvercle, une fois ouvert, libère une bouffée d'odeur agréablement aigre, ailky-dill.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Saumure encore claire, concombres vert vif — le lot est allé directement au réfrigérateur avant que la fermentation commence vraiment. Ils sont saumurés, pas lactofermentés.",
+            "action": "Retirez-vous et fermentez à température ambiante pendant 2 à 3 jours."
+          },
+          {
+            "state": "Perfect",
+            "description": "Saumure opaque, cornichons verts d'olives qui craquent, saveur aigre-savoureuse complexe avec une acidité agréable qui ne pique pas.",
+            "action": "Servir froid, réfrigérer et profiter jusqu'à 3 mois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très aigre, presque dur. Les pickles sont nettement doux.",
+            "action": "Utiliser dans les recettes (salade de patate, hachée dans des vinaigrettes) où la texture compte moins."
+          }
+        ]
+      },
+      "feelCue": "Froid au réfrigérateur, un bon cornichon de lacto doit se sentir dense et réfrigéré jusqu'au bout — et non creux — et se casser entre les doigts sans aucun flex."
+    }
+  ]
 };

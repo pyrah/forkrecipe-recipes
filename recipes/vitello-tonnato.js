@@ -1,101 +1,258 @@
 export default {
-  repoId: "master_italian_vitello_tonnato_001",
-  parentRepoId: null,
-  slug: "vitello-tonnato",
-  author: "ForkRecipe Kitchen",
-  title: "Vitello Tonnato",
-  description: "Cold, paper-thin slices of poached veal draped in a silky cream of tuna, capers, and mayonnaise — a collision of land and sea that sounds absurd until the first bite makes it make complete, inevitable sense. A Piedmontese summer classic, best served cold enough that the sauce barely trembles.",
-  cuisine: "Italian",
-  culture: "Piedmontese",
-  category: "proteins",
-  tags: ["italian", "piedmontese", "veal", "tuna", "cold", "gluten-free", "summer"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "3 hr",
-  ratioSystem: "weight",
-  stars: 1180,
-  forks: 72,
-  contributors: 19,
-  license: "CC-BY-SA",
-  createdAt: "2026-02-15",
-  updatedAt: "2026-02-15",
-  flavorRadar: { sweet: 0, salty: 4, sour: 3, bitter: 0, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Veal eye of round or topside",     ratioValue: 800, defaultUnit: "g", substitutions: ["pork tenderloin", "turkey breast"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Dry white wine",                   ratioValue: 250, defaultUnit: "ml", substitutions: ["vermouth"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Bay leaves",                       ratioValue: 2,   defaultUnit: "leaves", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Whole peppercorns",                ratioValue: 8,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_05", role: "Umami",     name: "Tuna in olive oil, drained",       ratioValue: 160, defaultUnit: "g", substitutions: ["ventresca tuna (richer)"] },
-    { ingId: "ing_06", role: "Acid",      name: "Capers in brine, drained",         ratioValue: 40,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Binder",    name: "Egg yolks",                        ratioValue: 2,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Extra-virgin olive oil",           ratioValue: 120, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_09", role: "Acid",      name: "Fresh lemon juice",                ratioValue: 30,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_10", role: "Garnish",   name: "Capers and lemon slices for garnish", ratioValue: 15, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_italian_vitello_tonnato_001",
+  "parentRepoId": null,
+  "slug": "vitello-tonnato",
+  "author": "ForkRecipe Kitchen",
+  "title": "Vitello Tonnato",
+  "description": "Des tranches de veau poché, froides et fines, drapées dans une crème soyeuse de thon, de câpres et de mayonnaise, une collision de terre et de mer qui semble absurde jusqu'à ce que la première morsure rende son sens complet et inévitable. Un classique d'été piémontais, mieux servi assez froid que la sauce tremble à peine.",
+  "cuisine": "Italien",
+  "culture": "Piémontais",
+  "category": "proteins",
+  "tags": [
+    "Italien",
+    "piémontais",
+    "Viande bovine",
+    "thon",
+    "froid",
+    "Sans gluten",
+    "été"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "weight",
+  "stars": 1180,
+  "forks": 72,
+  "contributors": 19,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-02-15",
+  "updatedAt": "2026-02-15",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Poach",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "poached_veal",
-      instructions: "Tie the veal with kitchen twine into a compact cylinder if needed. Place in a pot just large enough to hold it. Add white wine, bay leaves, peppercorns, and cold water to cover by 3 cm. Bring very slowly to a bare simmer — 80–85 C, when tiny bubbles rise lazily and the surface barely shivers. Poach for 45–60 minutes, maintaining this temperature throughout. Do not let it boil; boiling will tighten and toughen the veal. Probe with an instant-read thermometer: pull at 62–63 C internal. Let cool completely in the poaching liquid.",
-      visualCue: {
-        primaryTarget: "Poaching liquid surface and veal color",
-        spectrum: [
-          { state: "Underdone", description: "Veal surface is still pale pink and the liquid is below 75 C. Thermometer reads below 55 C internal.", action: "Maintain the gentle simmer. Patience is essential — rushing with higher heat will seize the proteins." },
-          { state: "Perfect",   description: "Liquid trembles gently at 80 C. Veal surface has gone from pink to a matte, very pale grey-white. Internal temperature is 62–63 C.", action: "Turn off the heat. Leave the veal in the liquid to cool completely — this carryover poaching adds juiciness." },
-          { state: "Overdone",  description: "Liquid was boiling. Veal is very firm and has contracted visibly. Internal temperature exceeds 72 C.", action: "The veal is overcooked but salvageable. The tonnato sauce's richness will help compensate for the drier texture." },
-        ],
-      },
-      feelCue: "Press the veal through the water — it should yield with moderate resistance at 62 C, firmer than raw but not stiff. At room temperature, a perfectly poached piece slices without resistance, the fibers separating cleanly.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Oeil de veau rond ou supérieur",
+      "ratioValue": 800,
+      "defaultUnit": "g",
+      "substitutions": [
+        "filet de porc",
+        "poitrine de dinde"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "tonnato_sauce",
-      instructions: "Combine the drained tuna, capers, and egg yolks in a blender or food processor. Blend until smooth. With the motor running, add the olive oil in a thin, steady stream — exactly as you would build a mayonnaise — until the sauce is thick, creamy, and pale. Add lemon juice and blend again. Taste: it should be powerfully savory, bright with lemon, and rich enough to coat a spoon thickly. Thin with a tablespoon of poaching liquid if needed for a more draping consistency.",
-      visualCue: {
-        primaryTarget: "Tonnato sauce consistency in blender",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and pourable, clearly not emulsified. Oil has not been incorporated.", action: "Continue adding oil very slowly while blending at high speed. The emulsion needs time and the yolks need oil in small increments." },
-          { state: "Perfect",   description: "Pale beige-cream sauce, thick enough to fall from a spoon in a slow ribbon and hold its shape. Silky smooth with no tuna fibers visible.", action: "Season with salt and more lemon juice to taste. Refrigerate until ready to plate." },
-          { state: "Overdone",  description: "Sauce is very stiff, almost paste-like. Too much oil for the yolks to hold gracefully.", action: "Thin with poaching liquid or water, 1 tablespoon at a time, blending between additions." },
-        ],
-      },
-      feelCue: "Dip a finger into the tonnato — it should coat completely in a silky, uniform layer that requires a deliberate wipe to remove. If it drips off freely, it needs more emulsification.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Vin blanc sec",
+      "ratioValue": 250,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vermouth"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Slice",
-      inputs: ["poached_veal"],
-      outputState: "sliced_veal",
-      instructions: "Remove the completely cold veal from the poaching liquid. Using the sharpest knife available, slice the veal as thinly as possible — ideally 2–3 mm, almost translucent. A meat slicer is ideal but a long, thin-bladed knife works if the veal is cold enough (refrigerate for 1 hour before slicing). Each slice should be near-transparent at the edges and nearly white throughout.",
-      visualCue: {
-        primaryTarget: "Veal slice thickness held to light",
-        spectrum: [
-          { state: "Underdone", description: "Slices are thick — 7 mm or more. They look like roast beef slices rather than cold cuts.", action: "Thinner slices are essential to the dish. Chill the veal more thoroughly and use a longer, thinner knife." },
-          { state: "Perfect",   description: "Slices are 2–3 mm, semi-translucent at the edges and very pale pink-white. They drape over the knife like silk.", action: "Arrange on a platter, overlapping slightly, before saucing." },
-          { state: "Overdone",  description: "Slices are falling apart — too thin for the texture of the meat after poaching.", action: "Arrange the torn pieces as best you can. The sauce will cover any imperfections." },
-        ],
-      },
-      feelCue: "A properly sliced piece of cold poached veal should feel like cool, firm silk between your fingers — it should bend without breaking and have no visible grain when held to the light.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 2,
+      "defaultUnit": "leaves",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["sliced_veal", "tonnato_sauce", "ing_10"],
-      outputState: "finished_vitello_tonnato",
-      instructions: "Spoon a pool of tonnato sauce onto a large, flat platter. Layer the veal slices overlapping over the sauce. Drizzle more tonnato generously over the top, making sure every slice is covered. Scatter capers and lemon slices decoratively. Refrigerate for at least 1 hour before serving — the sauce must be very cold and the veal must absorb its flavor.",
-      visualCue: {
-        primaryTarget: "Plated dish after 1 hour refrigeration",
-        spectrum: [
-          { state: "Underdone", description: "The sauce looks wet and runny, pooling on the plate rather than draping the veal. Veal and sauce have not melded.", action: "Refrigerate longer. The sauce tightens and binds to the veal as it chills." },
-          { state: "Perfect",   description: "Sauce has set into a creamy, pale veil over the veal. Capers punctuate the surface. The whole dish is cold and unified — veal and sauce appear to be one entity.", action: "Serve cold, immediately from the refrigerator, with crusty bread." },
-          { state: "Overdone",  description: "Sauce has dried at the surface and cracked. The lemon has oxidized the top layer.", action: "Spoon a thin layer of fresh tonnato over the top to refresh. Cover and refrigerate until serving." },
-        ],
-      },
-      feelCue: "The finished dish should feel cool and uniform when you drag a finger across the surface — the sauce should yield slightly but not move, bonded to the veal below it.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Grains de poivre entiers",
+      "ratioValue": 8,
+      "defaultUnit": "whole",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Thon dans l'huile d'olive, égoutté",
+      "ratioValue": 160,
+      "defaultUnit": "g",
+      "substitutions": [
+        "thon ventresca (richisseur)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Capeurs en saumure, égouttés",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Binder",
+      "name": "Jaunes d'œuf",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 120,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Câpres et tranches de citron pour garnir",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Pochette",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "poached_veal",
+      "instructions": "Attachez le veau avec la ficelle de cuisine dans un cylindre compact si nécessaire. Placez dans un pot juste assez grand pour le tenir. Ajouter le vin blanc, les feuilles de laurier, les grains de poivre et l'eau froide pour couvrir de 3 cm. Portez-vous très lentement à un ébullition nu — 80-85 C, quand de minuscules bulles s'élèvent paresseusement et la surface tremble à peine. Poché pendant 45 à 60 minutes, en maintenant cette température. Ne la laissez pas bouillir; l'ébullition va resserrer et durcir le veau. Sonde avec thermomètre à lecture instantanée: tirer à 62-63 C interne. Laisser refroidir complètement dans le liquide de braconnage.",
+      "visualCue": {
+        "primaryTarget": "Poché surface liquide et couleur veau",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface du veau est encore rose pâle et le liquide est inférieur à 75°C. Le thermomètre se lit en dessous de 55°C à l'intérieur.",
+            "action": "Maintenez le doux mijot. La patience est essentielle: se précipiter avec une chaleur plus élevée saisira les protéines."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le liquide tremble doucement à 80 °C. La surface du veau est passée de rose à mat, gris-blanc très pâle. La température interne est de 62–63 °C.",
+            "action": "Éteins la chaleur. Laisser refroidir complètement le veau dans le liquide — ce braconnage de report ajoute de la jutosité."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide bouillait. Le veau est très ferme et s'est contracté visiblement. La température interne est supérieure à 72 °C.",
+            "action": "Le veau est trop cuit mais récupérable. La richesse de la sauce tonnato aidera à compenser la texture plus sèche."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le veau à travers l'eau — il devrait produire avec une résistance modérée à 62 °C, plus ferme que cru mais pas raide. A température ambiante, une pièce parfaitement pochée tranche sans résistance, les fibres se séparant proprement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "tonnato_sauce",
+      "instructions": "Mélanger le thon drainé, les câpres et les jaunes d'œufs dans un mélangeur ou un robot culinaire. Mélanger jusqu'à douceur. Lorsque le moteur tourne, ajouter l'huile d'olive dans un cours d'eau mince et stable, exactement comme vous construiriez une mayonnaise, jusqu'à ce que la sauce soit épaisse, crémeuse et pâle. Ajouter le jus de citron et mélanger à nouveau. Bouche : il devrait être très salé, brillant avec du citron, et assez riche pour enrober une cuillère épaisse. Finissez avec une cuillère à soupe de liquide de braconnage si nécessaire pour une consistance plus draguée.",
+      "visualCue": {
+        "primaryTarget": "Consistance de la sauce Tonnato dans le mélangeur",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est mince et versable, clairement non émulsifiée. Le pétrole n'a pas été incorporé.",
+            "action": "Continuer à ajouter de l'huile très lentement tout en mélangeant à grande vitesse. L'émulsion a besoin de temps et les jaunes ont besoin d'huile en petites tranches."
+          },
+          {
+            "state": "Perfect",
+            "description": "sauce beige-crème pâle, assez épaisse pour tomber d'une cuillère dans un ruban lent et tenir sa forme. Silence lisse sans fibres de thon visibles.",
+            "action": "Assaisonner de sel et plus de jus de citron au goût. Réfrigérer jusqu'à ce que l'assiette soit prête."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est très raide, presque pâteuse. Trop d'huile pour les jaunes.",
+            "action": "Teinture avec braconnage liquide ou eau, 1 cuillère à soupe à la fois, mélange entre les ajouts."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt dans le tonnato — il devrait être entièrement enrobé d'une couche soyeuse et uniforme qui nécessite une essuie-glaces délibérée à enlever. S'il coule librement, il faut plus d'émulsion."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Tranche",
+      "inputs": [
+        "poached_veal"
+      ],
+      "outputState": "sliced_veal",
+      "instructions": "Retirer le veau complètement froid du liquide de braconnage. À l'aide du couteau le plus tranchant disponible, couper le veau le plus fin possible – idéalement 2–3 mm, presque translucide. Une trancheuse de viande est idéale, mais un couteau long et mince fonctionne si le veau est assez froid (réfrigérer pendant 1 heure avant de trancher). Chaque tranche doit être presque transparente aux bords et presque blanche dans l'ensemble.",
+      "visualCue": {
+        "primaryTarget": "Épaisseur de la tranche de veau fixée à la lumière",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tranches sont épaisses — 7 mm ou plus. Ils ressemblent à des tranches de bœuf rôti plutôt qu'à des coupes froides.",
+            "action": "Les tranches plus épaisses sont essentielles au plat. Refroidir le veau plus soigneusement et utiliser un couteau plus long et plus mince."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tranches sont de 2 à 3 mm, semi-translucides aux bords et de couleur rose-blanc très pâle. Ils drapent le couteau comme de la soie.",
+            "action": "Arrangez-vous sur un plateau, qui se chevauche légèrement, avant de faire sauter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tranches s'effondrent — trop fines pour la texture de la viande après le braconnage.",
+            "action": "Disposer les pièces déchirées du mieux que vous pouvez. La sauce couvrira les imperfections."
+          }
+        ]
+      },
+      "feelCue": "Un morceau de veau poché froid bien tranché devrait se sentir comme de la soie fraîche et ferme entre les doigts — il devrait plier sans casser et n'avoir aucun grain visible lorsqu'il est tenu à la lumière."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "sliced_veal",
+        "tonnato_sauce",
+        "ing_10"
+      ],
+      "outputState": "finished_vitello_tonnato",
+      "instructions": "Déposer une piscine de sauce tonnato sur un grand plateau plat. Coucher les tranches de veau sur la sauce. Éjaculer plus de tonnato généreusement sur le dessus, en s'assurant que chaque tranche est couverte. Les câpres et les tranches de citron sont décoratives. Réfrigérer au moins 1 heure avant de servir — la sauce doit être très froide et le veau doit absorber son goût.",
+      "visualCue": {
+        "primaryTarget": "Plat plaqué après 1 heure de réfrigération",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a l'air mouillée et runny, pooling sur l'assiette plutôt que de draper le veau. Le veau et la sauce n'ont pas fondu.",
+            "action": "Réfrigérer plus longtemps. La sauce se serre et se lie au veau pendant qu'il refroidit."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est mise dans un voile crémeux et pâle sur le veau. Les câpres ponctuent la surface. Le plat entier est froid et unifié — le veau et la sauce semblent être une seule entité.",
+            "action": "Servir à froid, immédiatement à partir du réfrigérateur, avec du pain croustillant."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a séché à la surface et fissuré. Le citron a oxydé la couche supérieure.",
+            "action": "Déposer une fine couche de tonnato frais sur le dessus pour rafraîchir. Couvrir et réfrigérer jusqu'à servir."
+          }
+        ]
+      },
+      "feelCue": "Le plat fini doit se sentir frais et uniforme lorsque vous faites glisser un doigt sur la surface — la sauce doit produire légèrement mais ne pas bouger, collé au veau en dessous."
+    }
+  ]
 };

@@ -1,81 +1,189 @@
 export default {
-  repoId: "master_korean_koreansigeumchinamul_001",
-  parentRepoId: null,
-  slug: "korean-sigeumchi-namul",
-  author: "ForkRecipe Kitchen",
-  title: "Sigeumchi Namul (Korean Sesame Spinach)",
-  description: "Blanched spinach squeezed to silk and dressed in toasted sesame, garlic, and soy — the simplest banchan in the Korean table, and the one that disappears first from the bowl.",
-  cuisine: "Korean",
-  culture: "Korean",
-  category: "vegetables",
-  tags: ["vegetable", "vegan", "gluten-free", "spinach", "korean", "banchan"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 1, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Fresh spinach (whole leaf, not baby)",         ratioValue: 300, defaultUnit: "g",  substitutions: ["water spinach", "Swiss chard (blanch longer)"] },
-    { ingId: "ing_02", role: "Umami",    name: "Soy sauce (tamari for gluten-free)",            ratioValue: 15,  defaultUnit: "ml", substitutions: ["coconut aminos"] },
-    { ingId: "ing_03", role: "Fat",      name: "Toasted sesame oil",                            ratioValue: 10,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",   name: "Garlic cloves, minced",                         ratioValue: 5,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning","name": "Salt",                                        ratioValue: 3,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Garnish",  name: "Toasted sesame seeds",                          ratioValue: 5,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_korean_koreansigeumchinamul_001",
+  "parentRepoId": null,
+  "slug": "korean-sigeumchi-namul",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sigeumchi Namul (épinards sésame coréens)",
+  "description": "Des épinards blanchis pressés à la soie et vêtus de sésame grillé, d'ail et de soja — le plus simple banchan de la table coréenne, et celui qui disparaît le premier du bol.",
+  "cuisine": "Coréen",
+  "culture": "Coréen",
+  "category": "vegetables",
+  "tags": [
+    "légumes",
+    "végétalien",
+    "Sans gluten",
+    "épinards",
+    "coréen",
+    "Banchan"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blanch",
-      inputs: ["ing_01", "ing_05"],
-      outputState: "blanched_spinach",
-      instructions: "Bring a large pot of generously salted boiling water to a rolling boil. Add the spinach all at once and blanch for 30–45 seconds — just until fully wilted and vivid green. Do not blanch longer. Immediately drain and transfer to a bowl of ice water to stop the cooking and set the color. After 1 minute, drain and squeeze the spinach firmly with both hands to remove as much water as possible. The squeezed bundle should be about a third of the original volume. Cut the bundle twice crosswise into thirds.",
-      visualCue: {
-        primaryTarget: "A tightly squeezed bundle of vivid green spinach. When cut, the cross-section shows dense, compact spinach with very little water remaining.",
-        spectrum: [
-          { state: "Underdone", description: "Spinach is still slightly raw-tasting and the leaves haven't fully wilted. Dark green but not quite silky.", action: "30 seconds more in the boiling water." },
-          { state: "Perfect",   description: "Vivid, electric green. Fully wilted. Dense when squeezed — the water has been pressed out and the bundle holds its shape.", action: "Cut into thirds and season." },
-          { state: "Overdone",  description: "Spinach is olive-green or khaki. The ice bath was too slow.", action: "Proceed. The flavor is the same but the color is less vivid. Next time, prepare the ice bath before the spinach goes in the water." },
-        ],
-      },
-      feelCue: "The squeezed spinach bundle should feel as dense as a firm sponge — not wet and slack. If water drips when you hold it, squeeze harder.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Epinards frais (feuille entière, pas bébé)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "épinards d'eau",
+        "Fard suisse (blanchissement plus long)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Season",
-      inputs: ["blanched_spinach", "ing_02", "ing_03", "ing_04"],
-      outputState: "dressed_namul",
-      instructions: "Place the cut spinach in a bowl. Add the soy sauce, toasted sesame oil, and minced raw garlic. Toss with your hands, working the dressing into every layer of the spinach. Taste and adjust — the spinach should be well-seasoned and savory, with the sesame oil perfuming every bite. The raw garlic will mellow slightly as the namul sits. For a milder version, very briefly sauté the garlic in the sesame oil before adding.",
-      visualCue: {
-        primaryTarget: "Each strand of spinach glistening with sesame oil and uniformly seasoned with soy.",
-        spectrum: [
-          { state: "Underdone", description: "Spinach is unevenly seasoned — some bites are bland.", action: "Toss more thoroughly with your hands. Each strand needs to be coated." },
-          { state: "Perfect",   description: "Every piece of spinach is evenly seasoned. The sesame oil makes the spinach glisten. The garlic is distributed throughout.", action: "Plate and garnish with sesame seeds." },
-          { state: "Overdone",  description: "Too much soy — the namul is very salty and the delicate spinach flavor is overwhelmed.", action: "Add a few more pieces of blanched, unseasoned spinach and toss to dilute." },
-        ],
-      },
-      feelCue: "Toss the namul with your fingers — the spinach should feel slick with sesame oil, not dry. Each piece should separate easily, not clump.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "sauce soja (tamari sans gluten)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "aminos de coco"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Garnish",
-      inputs: ["dressed_namul", "ing_06"],
-      outputState: "finished_sigeumchi_namul",
-      instructions: "Transfer the seasoned spinach to a small serving bowl. Scatter the toasted sesame seeds over the top. Serve at room temperature or slightly chilled as a banchan alongside rice and other Korean dishes. Sigeumchi namul improves after 30 minutes as the flavors meld — it is an ideal make-ahead dish and keeps refrigerated for up to 3 days.",
-      visualCue: {
-        primaryTarget: "A compact mound of vivid green, sesame-glistening spinach with white sesame seeds scattered over the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Namul looks wet and unseasoned. No sheen from the sesame oil.", action: "Add another few drops of sesame oil and toss again." },
-          { state: "Perfect",   description: "Vivid green, uniformly glistening. Sesame seeds are white and fresh against the dark green. The aroma is nutty and savory.", action: "Serve as part of a banchan spread." },
-          { state: "Overdone",  description: "Color has faded to olive. Sesame seeds have absorbed moisture.", action: "Add fresh sesame seeds just before serving. The flavor is unchanged." },
-        ],
-      },
-      feelCue: "Pick up a strand of namul and hold it to the light — it should gleam with sesame oil, the leaves limp but intact, not torn or shredded.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Blanch",
+      "inputs": [
+        "ing_01",
+        "ing_05"
+      ],
+      "outputState": "blanched_spinach",
+      "instructions": "Portez une grande casserole d'eau bouillante généreusement salée à ébullition. Ajouter les épinards en même temps et blanchir pendant 30 à 45 secondes, jusqu'à ce qu'ils soient entièrement flétris et vert vif. Ne pas blanchir plus longtemps. Drainez et transférez immédiatement dans un bol d'eau glacée pour arrêter la cuisson et fixer la couleur. Après 1 minute, égoutter et presser fermement les épinards avec les deux mains pour retirer autant d'eau que possible. Le paquet pressé devrait être environ un tiers du volume original. Coupez le faisceau deux fois dans le sens transversal en troisièmes.",
+      "visualCue": {
+        "primaryTarget": "Un faisceau serré d'épinards verts vifs. Lorsqu'elle est coupée, la section transversale présente des épinards denses et compacts avec très peu d'eau restante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les épinards sont encore légèrement rafraîchis et les feuilles ne se sont pas complètement flétries. Vert foncé mais pas très soyeux.",
+            "action": "30 secondes de plus dans l'eau bouillante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vivant, vert électrique. Entièrement flétris. Sensé lorsqu'il est pressé — l'eau a été pressée et le faisceau tient sa forme.",
+            "action": "Coupe en troisièmes et saison."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'épinard est vert olive ou kaki. Le bain de glace était trop lent.",
+            "action": "Continuez. La saveur est la même, mais la couleur est moins vive. La prochaine fois, préparez le bain de glace avant que les épinards entrent dans l'eau."
+          }
+        ]
+      },
+      "feelCue": "Le faisceau d'épinards pressés doit se sentir aussi dense qu'une éponge ferme — pas mouillée et molle. Si l'eau coule quand vous la tenez, pressez plus fort."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "blanched_spinach",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "dressed_namul",
+      "instructions": "Placer les épinards coupés dans un bol. Ajouter la sauce soja, l'huile de sésame grillée et l'ail cru haché. Jetez avec vos mains, en travaillant le pansement dans chaque couche des épinards. Goûtez et ajustez - les épinards doivent être bien assaisonnés et salés, avec l'huile de sésame parfumant chaque bouchée. L'ail cru se moelle légèrement lorsque le namul est assis. Pour une version plus douce, faire sauter très brièvement l'ail dans l'huile de sésame avant de l'ajouter.",
+      "visualCue": {
+        "primaryTarget": "Chaque brin d'épinard scintille avec de l'huile de sésame et est uniformément assaisonné de soja.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les épinards sont assaisonnés de façon inégale — certaines morsures sont molles.",
+            "action": "Jetez plus soigneusement avec vos mains. Chaque brin doit être recouvert."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque morceau d'épinard est assaisonné uniformément. L'huile de sésame fait briller les épinards. L'ail est distribué partout.",
+            "action": "Assiette et garnir de graines de sésame."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de soja — le namul est très salé et la saveur délicate des épinards est débordée.",
+            "action": "Ajoutez encore quelques morceaux d'épinards blanchis et non assaisonnés et lancez-les pour diluer."
+          }
+        ]
+      },
+      "feelCue": "Jetez le namul avec vos doigts — les épinards devraient se sentir léchés avec de l'huile de sésame, et non secs. Chaque pièce doit se séparer facilement, et non s'écraser."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Garnir",
+      "inputs": [
+        "dressed_namul",
+        "ing_06"
+      ],
+      "outputState": "finished_sigeumchi_namul",
+      "instructions": "Transférer les épinards assaisonnés dans un petit bol de service. Déposer les graines de sésame grillées sur le dessus. Servir à température ambiante ou légèrement réfrigéré comme banchan aux côtés du riz et d'autres plats coréens. Sigeumchi namul s'améliore après 30 minutes à mesure que les saveurs se mélangent — c'est un plat idéal en tête de marque et conserve réfrigéré jusqu'à 3 jours.",
+      "visualCue": {
+        "primaryTarget": "Un monticule compact d'épinards verts vifs, avec des graines de sésame blanches dispersées sur la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Namul semble humide et sans saison. Pas d'éclat de l'huile de sésame.",
+            "action": "Ajouter encore quelques gouttes d'huile de sésame et jeter à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vert vif, illuminant uniformément. Les graines de sésame sont blanches et fraîches contre le vert foncé. L'arôme est noisette et salée.",
+            "action": "Servir dans le cadre d'une propagation banchan."
+          },
+          {
+            "state": "Overdone",
+            "description": "La couleur s'estompe en olive. Les graines de sésame ont absorbé l'humidité.",
+            "action": "Ajouter les graines de sésame frais juste avant de servir. La saveur est inchangée."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un brin de namul et tenez-le à la lumière — il devrait briller avec de l'huile de sésame, les feuilles boiteuses mais intactes, non déchirées ni déchiquetées."
+    }
+  ]
 };

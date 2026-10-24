@@ -1,115 +1,271 @@
 export default {
-  repoId: "master_italian_torta-caprese_001",
-  parentRepoId: null,
-  slug: "torta-caprese",
-  author: "ForkRecipe Kitchen",
-  title: "Torta Caprese",
-  description: "The legendary cake of Capri that contains not one grain of flour — just dark chocolate, whole almonds, eggs, butter, and sugar collapsed into a dense, fudgy disc that is simultaneously a brownie, a flourless chocolate cake, and something entirely its own: cracked on top, trembling within, dusted white with powdered sugar.",
-  cuisine: "Italian",
-  culture: "Neapolitan",
-  category: "desserts",
-  tags: ["chocolate", "almond", "gluten-free", "italian", "cake"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "1 hour 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 7, salty: 2, sour: 1, bitter: 5, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Blanched whole almonds (or almond flour)",      ratioValue: 3,   defaultUnit: "parts", substitutions: ["almond flour — skip grinding step"] },
-    { ingId: "ing_02", role: "Fat",        name: "Dark chocolate (60-70% cocoa), roughly chopped", ratioValue: 3,   defaultUnit: "parts", substitutions: ["bittersweet chocolate chips"] },
-    { ingId: "ing_03", role: "Fat",        name: "Unsalted butter, cut into cubes",               ratioValue: 1.5, defaultUnit: "parts", substitutions: ["cultured butter"] },
-    { ingId: "ing_04", role: "Sweetener",  name: "Caster sugar (superfine)",                     ratioValue: 2,   defaultUnit: "parts", substitutions: ["light brown sugar"] },
-    { ingId: "ing_05", role: "Binder",     name: "Large eggs, separated",                        ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine sea salt",                                ratioValue: 0.02, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Pure vanilla extract",                         ratioValue: 0.05, defaultUnit: "parts", substitutions: ["vanilla bean seeds"] },
-    { ingId: "ing_08", role: "Garnish",    name: "Icing sugar (powdered sugar), for dusting",    ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_torta-caprese_001",
+  "parentRepoId": null,
+  "slug": "torta-caprese",
+  "author": "ForkRecipe Kitchen",
+  "title": "Torta Caprese",
+  "description": "Le légendaire gâteau de Capri qui ne contient pas un grain de farine — juste du chocolat noir, des amandes entières, des œufs, du beurre et du sucre s'est effondré dans un disque dense et flou qui est simultanément un brownie, un gâteau au chocolat sans farine, et quelque chose de tout à fait propre: fissuré sur le dessus, tremblant à l'intérieur, blanc pulvérisé avec du sucre en poudre.",
+  "cuisine": "Italien",
+  "culture": "Napolitaine",
+  "category": "desserts",
+  "tags": [
+    "chocolat",
+    "Amandes",
+    "Sans gluten",
+    "Italien",
+    "gâteau"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "1 hour 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 7,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 5,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Grind",
-      inputs: ["ing_01"],
-      outputState: "almond_flour",
-      instructions: "If using whole blanched almonds, pulse them in a food processor until they reach a fine, sandy consistency — the texture of coarse cornmeal. Do not over-process: if the almonds become warm and clumping, they are releasing their oils and will turn to almond paste rather than flour. Work in short 3-second pulses, scraping down the sides between each. The goal is a dry, free-flowing nut meal. If using store-bought almond flour, skip this step.",
-      visualCue: {
-        primaryTarget: "A dry, pale, free-flowing almond meal with a consistency between fine breadcrumbs and coarse semolina.",
-        spectrum: [
-          { state: "Underdone", description: "Still grainy with visible large almond fragments that won't incorporate evenly.", action: "Continue pulsing in short bursts until the largest pieces are gone." },
-          { state: "Perfect",   description: "Free-flowing, dry, pale almond meal. No large fragments. Smells nutty and fresh. Falls off a spoon cleanly.", action: "Set aside and proceed to melting the chocolate." },
-          { state: "Overdone",  description: "Paste-like, sticky, and clumping — the fat has been fully released. Oily appearance.", action: "This almond paste will still work in the recipe but will produce a slightly denser, fudgier texture. Proceed." },
-        ],
-      },
-      feelCue: "Pinch the ground almond between your fingers — it should feel dry and slightly gritty, like fine sand, releasing no oil onto your skin.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Amandes entières blanchies (ou farine d'amande)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Farine d'amande — pas de broyage"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Melt",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "chocolate_butter_mixture",
-      instructions: "Combine the chopped dark chocolate and butter cubes in a heatproof bowl. Melt together over a gentle bain-marie (a saucepan of barely simmering water, bowl sitting above but not touching the water) or in a microwave in 30-second bursts, stirring between each. The mixture should be completely smooth and glossy — no streaks of unmelted chocolate. Let cool to room temperature, about 10 minutes. Do not use the chocolate mixture while it is still hot, as it will cook the egg yolks in the next step.",
-      visualCue: {
-        primaryTarget: "A smooth, glossy, uniformly dark chocolate-brown liquid with no visible pieces of unmelted chocolate or streaks of butter.",
-        spectrum: [
-          { state: "Underdone", description: "Chunks of chocolate still visible or streaks of unincorporated butter. Mix looks lumpy.", action: "Stir vigorously — the residual heat will usually complete the melting. Return to bain-marie briefly if needed." },
-          { state: "Perfect",   description: "Perfectly smooth, uniformly dark, glossy liquid. Flows freely off a spoon. Smells of deep, roasted chocolate.", action: "Cool to room temperature before using — warm chocolate will cook the eggs in the next step." },
-          { state: "Overdone",  description: "Chocolate has seized into a thick, grainy paste — overheated or water got in.", action: "Add a teaspoon of neutral oil and stir vigorously — this can sometimes rescue seized chocolate. If not, start over." },
-        ],
-      },
-      feelCue: "Touch a drop to the inside of your wrist — it should feel body-temperature or cooler before it goes into the batter. Warm chocolate will scramble the eggs.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Chocolat noir (60-70% cacao), approximativement haché",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Chips de chocolat doux amer"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["chocolate_butter_mixture", "ing_04", "ing_05", "almond_flour", "ing_06", "ing_07"],
-      outputState: "chocolate_batter",
-      instructions: "Separate the eggs, placing the yolks in one large bowl and the whites in another clean bowl. To the yolks, add the caster sugar and whisk until pale, slightly thickened, and the sugar is mostly dissolved, about 2 minutes. Add the cooled chocolate-butter mixture and whisk to combine. Add the vanilla extract and salt. Fold in the almond flour with a spatula until fully incorporated. The batter will be thick, glossy, and dense. Set aside. In the separate clean bowl, whisk the egg whites with a pinch of salt until they reach soft peaks — they should hold a peak that droops gently at the tip. Gently fold one-third of the whites into the chocolate batter to loosen it, then fold in the remaining whites in two additions, using slow, sweeping strokes to preserve as much air as possible.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, dark batter with no streaks of egg white remaining. Slightly lighter than the pure chocolate mixture due to the folded whites.",
-        spectrum: [
-          { state: "Underdone", description: "Egg whites visible as unmixed white streaks or blobs throughout the dark batter.", action: "Continue folding with a large spatula using slow, sweeping strokes. Do not stir — folding preserves the air." },
-          { state: "Perfect",   description: "Uniform dark, glossy batter with no white streaks. Slightly airy and moussey compared to the initial dense chocolate base.", action: "Pour into the prepared pan immediately." },
-          { state: "Overdone",  description: "Over-folded: the egg whites have fully deflated and the batter looks completely flat and dense again.", action: "Proceed — the cake will be denser but still delicious. The torta caprese is naturally fudgy." },
-        ],
-      },
-      feelCue: "Lift the spatula and let the batter fall back — it should flow slowly and hold a slight fold on the surface before sinking, like thick lava.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé, coupé en cubes",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre cultivé"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["chocolate_batter"],
-      outputState: "baked_torta",
-      instructions: "Butter and line a 22 cm (9-inch) springform pan with parchment. Pour the batter in and smooth the top gently with a spatula. Bake at 170 C (340 F) for 30-35 minutes. The cake is done when the top is set and cracked, the edges are firm, but the center still has a very slight wobble when the pan is gently shaken — like a barely-set jelly. A toothpick inserted into the center should come out with a few moist crumbs, not wet batter and not clean. The torta caprese is meant to be slightly underbaked by classical standards — the dense, fudgy center is a feature, not an error.",
-      visualCue: {
-        primaryTarget: "A cracked, matte dark surface with firm edges and a center that wobbles slightly — like a set ganache rather than a liquid. Edges have pulled away from the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Center wobbles dramatically, like liquid. Toothpick comes out completely wet. Edges have not set.", action: "Return to oven for 5 more minutes and test again. The center should jiggle, not wave." },
-          { state: "Perfect",   description: "Top is cracked and matte. Edges firm and slightly pulled from the pan. Center has a gentle wobble — like set jelly, not liquid. Toothpick has moist crumbs, not wet batter.", action: "Remove from oven. Cool completely in the pan on a rack — at least 1 hour." },
-          { state: "Overdone",  description: "Center is completely firm with no movement. Top may be uniformly puffed rather than cracked. Toothpick comes out clean and dry.", action: "The cake may be slightly drier than ideal but remains excellent. Serve with whipped cream or gelato to compensate." },
-        ],
-      },
-      feelCue: "Gently press the center of the baked cake — through the pan — it should yield softly, like pressing a firm ganache, rather than bouncing back like a sponge.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre de canne (superfine)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun léger"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Finish",
-      inputs: ["baked_torta", "ing_08"],
-      outputState: "finished_torta_caprese",
-      instructions: "Allow the cake to cool completely in the pan on a wire rack — at least 1 hour, ideally 2. It will firm up significantly as it cools. Do not try to unmold it warm. Once completely cool, unmold from the springform. The cake is deliberately flat, dense, and cracked on top — this is correct and beautiful. Just before serving, dust generously with icing sugar through a fine-mesh sieve for the classic snowfall effect. Serve at room temperature cut in wedges — a warm knife (run under hot water and wiped dry) makes the cleanest cuts.",
-      visualCue: {
-        primaryTarget: "A flat, dense, dark chocolate disc with a naturally cracked top blanketed in a white snowfall of icing sugar.",
-        spectrum: [
-          { state: "Underdone", description: "Cake too warm — it collapses when unmolded or is too soft to hold a clean wedge.", action: "Return to the pan and cool for at least another hour. Patience is the only tool here." },
-          { state: "Perfect",   description: "Firm, dense, flat disc. Top is beautifully cracked. Icing sugar evenly dusted. Cuts into clean, fudgy wedges with a warm knife.", action: "Serve immediately or refrigerate for up to 3 days." },
-          { state: "Overdone",  description: "N/A — dusting icing sugar cannot be overdone for a torta caprese.", action: "Serve." },
-        ],
-      },
-      feelCue: "The finished wedge should feel heavy and dense in the hand — almost like a slice of fudge. When you take the first bite, the outside gives a barely perceptible crust, then the interior is smooth, yielding, intensely chocolatey.",
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Gros œufs séparés",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Extrait de vanille pure",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "graines de haricots vanille"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Sucre de ciboulette (sucre pulvérisé), destiné à la dépoussiérage",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Grind",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "almond_flour",
+      "instructions": "Si vous utilisez des amandes blanchies entières, faites - les pousser dans un robot alimentaire jusqu'à ce qu'elles atteignent une consistance fine et sablonneuse — la texture de la farine de maïs grossière. Ne pas trop traiter : si les amandes se réchauffent et s'agrippent, elles libèrent leurs huiles et se transforment en pâte d'amande plutôt qu'en farine. Travailler en courtes impulsions de 3 secondes, en grattant les côtés entre chaque. Le but est un repas de noix sec et libre. Si vous utilisez de la farine d'amande achetée au magasin, sautez cette étape.",
+      "visualCue": {
+        "primaryTarget": "Un repas d'amande sec, pâle et libre, avec une consistance entre la chapelure fine et la semoule grossière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours granuleux avec de grands fragments d'amande visibles qui ne s'intégreront pas uniformément.",
+            "action": "Continuer à pulser en petits éclats jusqu'à ce que les plus grandes pièces soient parties."
+          },
+          {
+            "state": "Perfect",
+            "description": "Farine d'amande blanche et sèche. Pas de gros fragments. Ça sent la noix et le frais. Elle tombe d'une cuillère proprement.",
+            "action": "Réserver et faire fondre le chocolat."
+          },
+          {
+            "state": "Overdone",
+            "description": "La graisse a été complètement libérée. Aspect huileux.",
+            "action": "Cette pâte d'amande fonctionnera toujours dans la recette mais produira une texture légèrement plus dense et plus floue. Continuez."
+          }
+        ]
+      },
+      "feelCue": "Pincez l'amande moulue entre vos doigts – elle devrait être sèche et légèrement sèche, comme du sable fin, ne pas libérer d'huile sur votre peau."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Faire fondre",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "chocolate_butter_mixture",
+      "instructions": "Mélanger le chocolat noir haché et les cubes de beurre dans un bol thermofuge. Faire fondre ensemble sur un bain-marie doux (une casserole d'eau à peine mijotante, un bol assis au-dessus mais ne touchant pas l'eau) ou dans un micro-ondes en 30 secondes éclats, en remuant entre chacun. Le mélange doit être complètement lisse et brillant — pas de stries de chocolat non fondu. Laisser refroidir à température ambiante, environ 10 minutes. Ne pas utiliser le mélange de chocolat alors qu'il est encore chaud, car il fera cuire les jaunes d'œufs dans la prochaine étape.",
+      "visualCue": {
+        "primaryTarget": "Un liquide doux, brillant, uniformément brun chocolat, sans morceaux visibles de chocolat non fondu ou de stries de beurre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux de chocolat encore visibles ou des stries de beurre non incorporé. Le mélange a l'air bosseux.",
+            "action": "Mélanger vigoureusement — la chaleur résiduelle complète généralement la fusion. Revenez brièvement à Bain-marie si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Parfaitement lisse, uniformément sombre, liquide brillant. Elle coule librement d'une cuillère. Des odeurs de chocolat torréfié profond.",
+            "action": "Laisser refroidir à température ambiante avant d'utiliser — le chocolat chaud fera cuire les œufs à l'étape suivante."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le chocolat s'est emparé d'une pâte épaisse et granuleuse — surchauffée ou entrée dans l'eau.",
+            "action": "Ajouter une cuillère à café d'huile neutre et remuer vigoureusement — cela peut parfois sauver le chocolat saisi. Sinon, recommencer."
+          }
+        ]
+      },
+      "feelCue": "Touchez une goutte à l'intérieur de votre poignet — il devrait sentir la température du corps ou refroidir avant d'entrer dans la pâte. Le chocolat chaud va brouiller les œufs."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "chocolate_butter_mixture",
+        "ing_04",
+        "ing_05",
+        "almond_flour",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "chocolate_batter",
+      "instructions": "Séparer les œufs, placer les jaunes dans un grand bol et les blancs dans un autre bol propre. Ajouter le sucre de castre et fouetter jusqu'à ce qu'il soit pâle, légèrement épaissi, et que le sucre soit principalement dissous, environ 2 minutes. Ajouter le mélange de beurre de chocolat refroidi et fouetter pour le combiner. Ajouter l'extrait de vanille et le sel. Pliez dans la farine d'amande avec une spatule jusqu'à ce qu'elle soit entièrement incorporée. La pâte sera épaisse, brillante et dense. Mettez de côté. Dans le bol propre séparé, fouetter les blancs d'œufs avec une pincée de sel jusqu'à ce qu'ils atteignent des pics mous — ils devraient tenir un pic qui s'enfonce doucement à l'extrémité. Repliez doucement un tiers des blancs dans la pâte au chocolat pour le desserrer, puis repliez dans les blancs restants en deux ajouts, en utilisant des traits lents et balayants pour conserver autant d'air que possible.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, brillante, foncée, sans stries de blanc d'œuf restant. Un peu plus léger que le mélange de chocolat pur dû aux blancs pliés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Blancs d'oeufs visibles comme des stries blanches ou des taches non mélangées dans toute la pâte foncée.",
+            "action": "Continuer le pliage avec une grande spatule en utilisant des coups lents. Ne remuez pas — le pliage préserve l'air."
+          },
+          {
+            "state": "Perfect",
+            "description": "Battre uniforme foncé et brillant sans stries blanches. Légèrement aéré et mousseux par rapport à la base initiale de chocolat dense.",
+            "action": "Verser immédiatement dans la casserole préparée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surplié : les blancs d'œufs ont complètement dégonflé et la pâte semble complètement plate et dense à nouveau.",
+            "action": "Procéder — le gâteau sera plus dense mais toujours délicieux. La torte caprese est naturellement floue."
+          }
+        ]
+      },
+      "feelCue": "Soulevez la spatule et laissez tomber la pâte, elle doit s'écouler lentement et tenir un léger pli sur la surface avant de couler, comme la lave épaisse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "chocolate_batter"
+      ],
+      "outputState": "baked_torta",
+      "instructions": "Beurre et ligne d'une poêle à ressort de 22 cm (9 pouces) avec parchemin. Verser la pâte et lisser doucement le dessus avec une spatule. Cuire au four à 170 C (340 F) pendant 30 à 35 minutes. Le gâteau est fait quand le dessus est fixé et fissuré, les bords sont fermes, mais le centre a encore un très léger frottement quand la poêle est légèrement secouée — comme une gelée à peine sertie. Un cure-dent inséré dans le centre devrait sortir avec quelques miettes humides, pas de pâte humide et pas propre. La torte caprese est destinée à être légèrement sous-cuite par les standards classiques — le centre dense et flou est une caractéristique, pas une erreur.",
+      "visualCue": {
+        "primaryTarget": "Une surface foncée fissurée et mate avec des bords fermes et un centre qui oscille légèrement — comme une ganache set plutôt qu'un liquide. Les bords se sont éloignés de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre oscille considérablement, comme du liquide. Le pic-dent sort complètement mouillé. Les bords ne sont pas fixés.",
+            "action": "Retourner au four pendant 5 minutes et tester à nouveau. Le centre devrait gigoter, pas agiter."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le dessus est fissuré et mat. Les bords sont fermes et légèrement tirés de la poêle. Le centre a un doux wobble — comme de la gelée, pas du liquide. Le pick-dent a des miettes humides, pas de la pâte humide.",
+            "action": "Retirer du four. Laisser refroidir complètement dans la poêle sur un support — au moins 1 heure."
+          },
+          {
+            "state": "Overdone",
+            "description": "Centre est complètement ferme sans mouvement. Le dessus peut être uniformément gonflé plutôt que fissuré. Le pick-dent sort propre et sec.",
+            "action": "Le gâteau peut être légèrement plus sec que l'idéal, mais reste excellent. Servir avec de la crème fouettée ou du gelato pour compenser."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur le centre du gâteau cuit — à travers la poêle — il devrait produire doucement, comme presser une ganache ferme, plutôt que de rebondir comme une éponge."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Finition",
+      "inputs": [
+        "baked_torta",
+        "ing_08"
+      ],
+      "outputState": "finished_torta_caprese",
+      "instructions": "Laissez le gâteau refroidir complètement dans la poêle sur un support de fil — au moins 1 heure, idéalement 2. Elle se raffermira considérablement au fur et à mesure qu'elle refroidira. N'essayez pas de le démolder au chaud. Une fois complètement frais, démoudre de la forme du ressort. Le gâteau est délibérément plat, dense et fissuré sur le dessus — c'est exact et beau. Juste avant de servir, poussièrez généreusement avec du sucre glaçant à travers un tamis à mailles fines pour l'effet de chute de neige classique. Servir à la température ambiante coupée en quartiers — un couteau chaud (courant sous l'eau chaude et essuyé à sec) rend les coupes les plus propres.",
+      "visualCue": {
+        "primaryTarget": "Un disque de chocolat plat, dense et noir avec un dessus naturellement fissuré recouvert d'une neige blanche de sucre glace.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Cake trop chaud — il s'effondre quand il n'est pas moulé ou est trop doux pour tenir un coin propre.",
+            "action": "Retourner dans la casserole et refroidir pendant au moins une heure. La patience est le seul outil ici."
+          },
+          {
+            "state": "Perfect",
+            "description": "Disque ferme, dense et plat. Le dessus est magnifiquement cassé. Sucre écrémé uniformément. Coupe en quartiers propres et flous avec un couteau chaud.",
+            "action": "Servir immédiatement ou réfrigérer jusqu'à 3 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "S.O. — le sucre glace poussiéreux ne peut pas être surdosé pour une torte caprese.",
+            "action": "Servez."
+          }
+        ]
+      },
+      "feelCue": "Le coin fini doit se sentir lourd et dense dans la main — presque comme une tranche de caramel. Lorsque vous prenez la première bouchée, l'extérieur donne une croûte à peine perceptible, puis l'intérieur est lisse, productif, intensément chocolaté."
+    }
+  ]
 };

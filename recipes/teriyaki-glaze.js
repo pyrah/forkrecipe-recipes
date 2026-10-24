@@ -1,62 +1,155 @@
 export default {
-  repoId: "master_japanese_teriyaki_glaze_001",
-  parentRepoId: null,
-  slug: "teriyaki-glaze",
-  author: "ForkRecipe Kitchen",
-  title: "Teriyaki Glaze",
-  description: "A gleaming, lacquer-thick glaze of soy, mirin, and sake reduced to a syrupy consistency — sweet, savory, and deeply umami, brushed onto proteins in the final minutes of cooking.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "sauces",
-  tags: ["sauce", "japanese", "glaze", "sweet", "soy", "umami"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 3, sour: 0, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",     name: "Japanese soy sauce (koikuchi shoyu)",            ratioValue: 4,   defaultUnit: "parts", substitutions: ["tamari for gluten-free"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Mirin (hon-mirin, not aji-mirin seasoning)",     ratioValue: 4,   defaultUnit: "parts", substitutions: ["dry sherry + 1 tsp sugar"] },
-    { ingId: "ing_03", role: "Solvent",   name: "Sake (dry Japanese rice wine)",                  ratioValue: 2,   defaultUnit: "parts", substitutions: ["dry sherry", "dry white wine"] },
-    { ingId: "ing_04", role: "Sweetener", name: "White granulated sugar",                         ratioValue: 1,   defaultUnit: "parts", substitutions: ["light brown sugar", "honey"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Fresh ginger (1 thin slice, optional)",          ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_japanese_teriyaki_glaze_001",
+  "parentRepoId": null,
+  "slug": "teriyaki-glaze",
+  "author": "ForkRecipe Kitchen",
+  "title": "Teriyaki Glaze",
+  "description": "Un glaçure brillant, laqué et épais de soja, de mirine et de saké réduit à une consistance sirupeuse – sucré, salé et profondément umami, brossé sur les protéines dans les dernières minutes de cuisson.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "Japonais",
+    "glaçure",
+    "doux",
+    "soja",
+    "umami"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Combine and heat",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "teriyaki_liquid",
-      instructions: "Combine the soy sauce, mirin, sake, sugar, and ginger slice in a small saucepan. Stir briefly to help the sugar begin to dissolve. Bring to a simmer over medium heat, stirring once more to ensure the sugar has dissolved completely before the liquid reaches a boil. Do not leave unattended at this stage — the sugar content means it can boil over quickly once it gets going. Remove the ginger slice after 2 minutes if using.",
-      visualCue: {
-        primaryTarget: "A dark, amber-brown liquid simmering gently, with small bubbles at the edges and a slight sheen beginning to develop on the surface. Steam carries a sweet, savoury sake-and-soy aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar granules still visible on the spoon when you stir — the liquid hasn't reached a uniform temperature yet.", action: "Stir over the heat until sugar is fully dissolved and the liquid is uniform in color before reducing the heat." },
-          { state: "Perfect",   description: "Uniformly dark, gently simmering, and clear — the sugar is dissolved and the alcohol is beginning to cook off. Smells deeply of caramelizing soy and sweet mirin.", action: "Reduce heat to medium-low and begin the reduction phase." },
-          { state: "Overdone",  description: "Boiling too hard, with large bubbles and splattering — at risk of burning the sugar on the pan walls.", action: "Reduce heat immediately. Wipe down the pan sides with a wet pastry brush if sugar is caramelizing there." },
-        ],
-      },
-      feelCue: "The liquid at this stage should feel as thin as water when you test a drop between your fingers. The sweetness and salt should be equally assertive — if the soy dominates, add a tiny splash more mirin.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "sauce soja japonaise (koikuchi shoyu)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari pour sans gluten"
+      ]
     },
     {
-      nodeId: "step_2", action: "Reduce",
-      inputs: ["teriyaki_liquid"],
-      outputState: "finished_teriyaki_glaze",
-      instructions: "Reduce the simmering liquid over medium-low heat, without stirring, until it has reduced by roughly half and has reached a syrupy, glaze-like consistency. This takes 8-10 minutes. Watch carefully in the final 2 minutes — the sugar concentration rises sharply and the glaze can go from perfect to scorched in under a minute. To test: dip a cold spoon into the glaze and tilt it — it should flow in a slow, heavy sheet and coat the spoon in a thin lacquer. Off the heat, it will thicken further as it cools.",
-      visualCue: {
-        primaryTarget: "A glossy, mahogany-dark glaze that moves sluggishly in the pan when tilted. Small, slow bubbles pop at the surface. On a cold spoon, it coats in a thin, shiny, lacquer-like layer.",
-        spectrum: [
-          { state: "Underdone", description: "Still thin and watery — runs off a spoon immediately without coating. Won't adhere to protein during brushing and will produce a pale, uneven finish.", action: "Continue reducing over gentle heat. The transition from liquid to glaze is gradual, then sudden — stay attentive." },
-          { state: "Perfect",   description: "Thick, slow-moving, and lacquered-looking. Coats the back of a cold spoon in an even mahogany sheet. On the fingertip it feels distinctly syrupy and tacky.", action: "Remove from heat immediately. Use warm — brush over grilling salmon, chicken, or tofu in the last 2-3 minutes of cooking." },
-          { state: "Overdone",  description: "Too thick — almost caramel-stiff when warm, hardens to a brittle glassy film when cool. Tastes intensely sweet with a bitter, burnt-sugar edge.", action: "Off the heat, stir in a few drops of soy sauce and warm water to thin to a workable consistency. Use immediately or it will over-set." },
-        ],
-      },
-      feelCue: "Touch a cooled drop on a plate: at the perfect reduction it should be tacky like a sticky note — adherent but not tooth-gluingly stiff. If it sets to a rigid, glassy bead within seconds, it has reduced too far.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Mirin (Hon-mirin, pas l'assaisonnement aji-mirin)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec + 1 c. à thé sucre"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Solvent",
+      "name": "Cake (vin de riz japonais sec)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec",
+        "vin blanc sec"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre granulé blanc",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun léger",
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Gingembre frais (1 fine tranche, en option)",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélanger et chauffer",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "teriyaki_liquid",
+      "instructions": "Mélanger la sauce de soja, le mirin, le saké, le sucre et la tranche de gingembre dans une petite casserole. Mélanger brièvement pour aider le sucre à commencer à se dissoudre. Faire mijoter à feu moyen, en remuant une fois de plus pour s'assurer que le sucre s'est complètement dissous avant que le liquide ne ébullition. Ne pas laisser sans surveillance à ce stade — la teneur en sucre signifie qu'elle peut bouillir rapidement une fois qu'elle arrive. Retirer la tranche de gingembre après 2 minutes si vous utilisez.",
+      "visualCue": {
+        "primaryTarget": "Un liquide brun-ambre foncé mijotant doucement, avec de petites bulles aux bords et un léger éclat qui commence à se développer à la surface. La vapeur porte un arôme sucré et salé de saké et de soie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des granules de sucre encore visibles sur la cuillère lorsque vous remuez — le liquide n'a pas encore atteint une température uniforme.",
+            "action": "Mélanger sur la chaleur jusqu'à ce que le sucre soit complètement dissous et que le liquide soit de couleur uniforme avant de réduire la chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toujours sombre, mijotant doucement et clair: le sucre est dissous et l'alcool commence à cuire. Ça sent le soja caramélisant et le mirin doux.",
+            "action": "Réduire le feu à moyen-doux et commencer la phase de réduction."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brouillant trop fort, avec de grandes bulles et éclaboussures, au risque de brûler le sucre sur les parois de la poêle.",
+            "action": "Réduire immédiatement la chaleur. Essuyer les côtés de la poêle avec une brosse à pâtisserie humide si le sucre y caramélise."
+          }
+        ]
+      },
+      "feelCue": "Le liquide à ce stade devrait se sentir aussi mince que l'eau lorsque vous testez une goutte entre vos doigts. La douceur et le sel devraient être également affirmés — si le soja domine, ajouter une petite éclaboussure plus de mirin."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Réduire",
+      "inputs": [
+        "teriyaki_liquid"
+      ],
+      "outputState": "finished_teriyaki_glaze",
+      "instructions": "Réduire le liquide mijotant à feu moyen-doux, sans remuer, jusqu'à ce qu'il ait diminué d'environ la moitié et qu'il ait atteint une consistance sirupeuse et glaçure. Cela prend 8-10 minutes. Regardez attentivement dans les 2 dernières minutes — la concentration de sucre augmente fortement et la glaçure peut aller de parfait à brûlé en moins d'une minute. Pour tester: tremper une cuillère froide dans la glaçure et l'incliner — elle doit couler dans une feuille lente et lourde et enrober la cuillère dans une fine laque. Hors de la chaleur, il s'épaissira encore plus à mesure qu'il refroidit.",
+      "visualCue": {
+        "primaryTarget": "Un glaçure brillant et acajou foncé qui se déplace lentement dans la poêle lorsqu'il est incliné. De petites bulles lentes surgissent à la surface. Sur une cuillère froide, elle revêt une couche mince, brillante, laquée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours mince et aqueux — coule une cuillère immédiatement sans enrobage. Ne va pas adhérer aux protéines pendant le brossage et produira une finition pâle et inégale.",
+            "action": "Continuer à réduire à feu doux. Le passage du liquide à la glaçure est progressif, puis soudain — restez attentif."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, lent et laqué. Enrober l'arrière d'une cuillère froide dans une feuille d'acajou. Sur le bout du doigt, il est nettement sirupeux et collant.",
+            "action": "Retirer immédiatement du feu. Utilisez chaud — brossez sur le saumon, le poulet ou le tofu au cours des 2-3 dernières minutes de cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop épais — presque caramel-stiff quand chaud, durcit à un film vitreux fragile quand frais. Goûte intensément sucré avec un bord amer et carbonisé.",
+            "action": "Hors de la chaleur, mélanger quelques gouttes de sauce de soja et de l'eau chaude à mince à une consistance utilisable. Utilisez immédiatement ou il sera sur-réglé."
+          }
+        ]
+      },
+      "feelCue": "Touchez une goutte refroidie sur une plaque : à la réduction parfaite, elle doit être collante comme une note collante – adhérente mais non collante. S'il s'agit d'une perle rigide et vitreuse en quelques secondes, il a été réduit trop loin."
+    }
+  ]
 };

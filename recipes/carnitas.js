@@ -1,100 +1,255 @@
 export default {
-  repoId: "master_mexican_carnitas_001",
-  parentRepoId: null,
-  slug: "carnitas",
-  author: "ForkRecipe Kitchen",
-  title: "Carnitas",
-  description: "Michoacán's gift to the taco: pork shoulder braised slow in its own rendered fat with orange, bay, and a whisper of cinnamon, then fried in that same fat until the edges shatter and the center stays meltingly tender. Crispy outside, juicy inside — the eternal carnitas contradiction.",
-  cuisine: "Mexican",
-  culture: "Michoacán",
-  category: "proteins",
-  tags: ["carnitas", "mexican", "pork", "confit", "taco", "michoacan"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "3 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Pork shoulder (boston butt, cut into 5 cm chunks)", ratioValue: 1000, defaultUnit: "g",  substitutions: ["pork picnic shoulder"] },
-    { ingId: "ing_02", role: "Fat",       name: "Lard (manteca)",                                    ratioValue: 250,  defaultUnit: "g",  substitutions: ["rendered pork fat", "neutral oil"] },
-    { ingId: "ing_03", role: "Citrus",    name: "Orange (halved, juice and spent shells)",           ratioValue: 1,    defaultUnit: "whole", substitutions: ["½ orange + 1 lime"] },
-    { ingId: "ing_04", role: "Allium",    name: "White onion (quartered)",                           ratioValue: 0.5,  defaultUnit: "whole", substitutions: ["yellow onion"] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic (whole cloves, smashed)",                    ratioValue: 4,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Bay leaves",                                        ratioValue: 2,    defaultUnit: "leaves", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Mexican cinnamon stick (canela)",                   ratioValue: 1,    defaultUnit: "small piece", substitutions: ["ceylon cinnamon"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine sea salt",                                     ratioValue: 18,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Sweetener", name: "Sweetened condensed milk (optional, Michoacán style)", ratioValue: 30, defaultUnit: "g", substitutions: ["1 tsp whole milk", "omit"] },
+  "repoId": "master_mexican_carnitas_001",
+  "parentRepoId": null,
+  "slug": "carnitas",
+  "author": "ForkRecipe Kitchen",
+  "title": "Carnitas",
+  "description": "Le cadeau de Michoacán au taco : l'épaule de porc braisée lentement dans son propre rendu gras avec l'orange, la baie, et un murmure de cannelle, puis frit dans cette même graisse jusqu'à ce que les bords se brisent et le centre reste fondant tendre. Crispy dehors, juteux à l'intérieur — la contradiction éternelle des carnitas.",
+  "cuisine": "Mexicain",
+  "culture": "Michoacán",
+  "category": "proteins",
+  "tags": [
+    "Carnites",
+    "Mexique",
+    "porc",
+    "confit",
+    "Taco",
+    "Michoacan"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Season",
-      inputs: ["ing_01", "ing_08"],
-      outputState: "salted_pork",
-      instructions: "Pat the pork chunks thoroughly dry and toss with the salt until every surface is coated. Let them sit at room temperature for 15-20 minutes while you assemble the aromatics. Dry, well-salted meat is the foundation — surface moisture steams instead of browns and dilutes the rendering fat.",
-      visualCue: {
-        primaryTarget: "Pork chunks look matte and dry on the surface, with a faint sheen of salt-drawn moisture beginning to bead. Each piece is roughly the same size so they cook evenly.",
-        spectrum: [
-          { state: "Underdone", description: "Surfaces are visibly wet, slick with purge. Salt slides off rather than clinging.", action: "Blot again with paper towels and give it a few more minutes. Wet pork will never crisp." },
-          { state: "Perfect",   description: "Tacky but not wet, salt evenly distributed and dissolving into the surface. Pieces uniform in size.", action: "Move to the pot and begin the braise." },
-          { state: "Overdone",  description: "Pieces have sat over an hour and look gray and dehydrated; pooled liquid in the bowl.", action: "Drain the liquid, pat dry, and proceed — the cure went slightly far but the result is fine." },
-        ],
-      },
-      feelCue: "The meat should feel tacky and grippy between your fingers, not slippery. A faint clean-pork smell, nothing sour.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Épaule de porc (botton, coupée en morceaux de 5 cm)",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "épaule de pique-nique de porc"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Confit",
-      inputs: ["salted_pork", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "braised_pork",
-      instructions: "Nestle the pork in a single layer in a heavy wide pot or Dutch oven. Add the lard, squeeze in the orange juice and drop in the spent shells, then add onion, garlic, bay, and cinnamon. Add just enough water to barely reach the top of the meat. Bring to a gentle simmer, then drop to the lowest heat that keeps lazy bubbles rising. Cook uncovered 1.5-2 hours, undisturbed, until the water has cooked off and the pork is fork-tender, now submerged in clear rendered fat.",
-      visualCue: {
-        primaryTarget: "The bubbling has gone from rolling and watery to slow, lazy, oil-clear bubbles around the meat. The liquid is now translucent fat, not cloudy broth, and a fork sinks into a chunk with no resistance.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is still cloudy and watery, bubbling vigorously. A fork meets springy resistance and the meat holds its shape tightly.", action: "Keep simmering low. The water must fully cook off before the pork can fry — don't rush to high heat or it will toughen." },
-          { state: "Perfect",   description: "Clear golden fat, gentle oily bubbles, the kitchen smells of orange and pork. A fork slides in and the chunk yields but still holds together.", action: "Proceed to the fry — turn the heat up." },
-          { state: "Overdone",  description: "Meat has collapsed into shreds in the fat and is starting to brown unevenly while still wet inside the pile.", action: "Lift the pieces out gently and move straight to frying in batches; they'll firm up and crisp." },
-        ],
-      },
-      feelCue: "Early on you hear an active watery simmer; as the water leaves, the sound shifts to the quieter, deeper crackle-pop of frying fat. That change in sound is your timer.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Lard (manteca)",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gras de porc fondu",
+        "huile neutre"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["braised_pork", "ing_09"],
-      outputState: "crisped_carnitas",
-      instructions: "Once the water is gone and the pork sits in clear fat, raise the heat to medium-high. If using, drizzle in the sweetened condensed milk now — the trace of sugar and dairy boosts browning the Michoacán way. Let the pieces fry in their fat, turning them only every few minutes, until deeply golden and crisp at the edges, 8-12 minutes. Resist over-stirring; contact time with the hot pot is what builds the crust.",
-      visualCue: {
-        primaryTarget: "Edges and high points of each chunk are deep mahogany-brown and visibly crisp, while the meat still glistens with fat. Some pieces have shattered into lacy crackly bits.",
-        spectrum: [
-          { state: "Underdone", description: "Meat is pale tan, soft and floppy, no crust. It looks boiled rather than fried.", action: "Raise the heat and stop stirring — let pieces rest against the hot metal to color before turning." },
-          { state: "Perfect",   description: "Burnished brown crust on the exposed edges, tender and juicy within. Audible crackle, irresistible roasted aroma.", action: "Lift out with a slotted spoon, draining fat back into the pot." },
-          { state: "Overdone",  description: "Pieces are uniformly dark, hard all the way through, and the bay/cinnamon aroma has turned acrid and bitter.", action: "Pull immediately and chop fine — mixed into juicier shreds, even dark carnitas earn their place in a taco." },
-        ],
-      },
-      feelCue: "A finished piece should sound crisp when tapped with the spoon yet give easily when pressed. The fat should smell nutty and caramel-sweet, never scorched or smoky.",
+      "ingId": "ing_03",
+      "role": "Citrus",
+      "name": "Orange (chute, jus et coquilles épuisées)",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "1⁄2 orange + 1 chaux"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Rest & shred",
-      inputs: ["crisped_carnitas"],
-      outputState: "finished_carnitas",
-      instructions: "Transfer the carnitas to a board and let them rest 5 minutes so the juices settle. Roughly chop or pull into a craggy mix of crisp shards and tender shreds, spooning over a little of the warm rendered fat to keep them glossy. Taste and add a pinch more salt and a squeeze of fresh lime if it needs brightening. Serve hot on warm corn tortillas with onion, cilantro, and salsa.",
-      visualCue: {
-        primaryTarget: "A glistening tangle of textures — crackly browned edges woven through soft juicy shreds, slicked but not greasy, holding together when scooped onto a tortilla.",
-        spectrum: [
-          { state: "Underdone", description: "Mostly soft shreds with few crisp bits; looks pale and a little wet, tastes flat.", action: "Return to the hot fat for 2-3 minutes to crisp further, and check the salt." },
-          { state: "Perfect",   description: "Balanced craggy mix, glossy with rendered fat, savory with a sweet-citrus backnote and gentle warmth from the canela.", action: "Pile onto warm tortillas and serve at once." },
-          { state: "Overdone",  description: "Dry and hard throughout, the fat absorbed away, crumbling to dust rather than shredding.", action: "Toss with a spoonful of warm fat and a splash of orange juice to revive some moisture before serving." },
-        ],
-      },
-      feelCue: "It should feel rich but clean on the palate, the fat melting away rather than coating it. Each bite gives both the snap of a crisp edge and the give of a juicy center — that contrast is the whole point.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc (quartier)",
+      "ratioValue": 0.5,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Ail (Girofles entiers, cassés)",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 2,
+      "defaultUnit": "leaves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Stick de cannelle mexicaine (canelle)",
+      "ratioValue": 1,
+      "defaultUnit": "small piece",
+      "substitutions": [
+        "Ceylon cannelle"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 18,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Lait condensé sucré (facultatif, style Michoacán)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 c. à thé lait entier",
+        "omit"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saison",
+      "inputs": [
+        "ing_01",
+        "ing_08"
+      ],
+      "outputState": "salted_pork",
+      "instructions": "Mâcher les morceaux de porc bien sécher et mélanger avec le sel jusqu'à ce que chaque surface soit enrobée. Laissez-les s'asseoir à température ambiante pendant 15-20 minutes pendant que vous assemblez les aromatiques. La viande sèche, bien salée, est le fondement: l'humidité de surface s'écoule au lieu de brunir et de diluer le gras de rendu.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux de porc semblent mats et secs à la surface, avec un léger éclat d'humidité salée qui commence à être perlée. Chaque pièce est à peu près de la même taille afin qu'ils cuisinent uniformément.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les surfaces sont visiblement humides, lisses avec purge. Le sel glisse plutôt que de s'accrocher.",
+            "action": "Bloquez encore avec des serviettes en papier et donnez-lui quelques minutes de plus. Le porc mouillé ne sera jamais croquant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tacky mais pas humide, sel uniformément distribué et dissolution dans la surface. Des pièces de taille uniforme.",
+            "action": "Déplacez-vous dans le pot et commencez le brasage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les morceaux se sont assis pendant plus d'une heure et ont l'air gris et déshydraté; liquide mis en réserve dans le bol.",
+            "action": "Égoutter le liquide, faire sécher et procéder — le remède est allé légèrement loin, mais le résultat est bon."
+          }
+        ]
+      },
+      "feelCue": "La viande doit se sentir collante et grippante entre vos doigts, pas glissante. Une faible odeur de pork propre, rien d'amer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Confit",
+      "inputs": [
+        "salted_pork",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "braised_pork",
+      "instructions": "Nettoyez le porc en une seule couche dans une grande casserole ou un four hollandais. Ajouter le saindoux, presser le jus d'orange et déposer dans les coquilles épuisées, puis ajouter l'oignon, l'ail, la baie et la cannelle. Ajouter juste assez d'eau pour atteindre à peine le sommet de la viande. Portez à un doux mijoter, puis déposez à la chaleur la plus basse qui garde les bulles paresseuses montant. Cuire à découvert de 1,5 à 2 heures, sans gêne, jusqu'à ce que l'eau ait cuit et que le porc soit fourche-tendre, maintenant submergé dans la graisse rendue claire.",
+      "visualCue": {
+        "primaryTarget": "Les bulles sont passées du laminage et de l'eau à des bulles lentes, paresseuses et limpides autour de la viande. Le liquide est maintenant de la graisse translucide, pas du bouillon nuageux, et une fourchette coule dans un morceau sans résistance.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore nuageux et aqueux, bouillonnant vigoureusement. Une fourche rencontre une résistance printanière et la viande tient bien sa forme.",
+            "action": "Continuez à mijoter. L'eau doit entièrement cuire avant que le porc puisse frire — ne vous précipitez à feu vif ou elle va durcir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Graisse dorée claire, bulles huileuses douces, la cuisine sent l'orange et le porc. Une fourche glisse dans et le morceau donne, mais tient toujours ensemble.",
+            "action": "Passez à l'ail — mettez la chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande s'est effondrée en morceaux dans la graisse et commence à brunir inégalement tout en restant humide à l'intérieur de la pile.",
+            "action": "Soulevez les morceaux doucement et déplacez-vous droit à la friture en lots; ils vont se raffermir et croquant."
+          }
+        ]
+      },
+      "feelCue": "Dès le début, vous entendez une mijotée aqueuse active; tandis que l'eau s'en va, le son se déplace vers la popule de graisse de friture plus calme et plus profonde. Ce changement de son est votre minuterie."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "braised_pork",
+        "ing_09"
+      ],
+      "outputState": "crisped_carnitas",
+      "instructions": "Une fois que l'eau est partie et que le porc est dans la graisse claire, augmenter le feu à moyen-élevé. Si on l'utilise, on s'abreuve maintenant dans le lait condensé sucré — la trace de sucre et de lait augmente le brunissement de la façon de Michoacán. Laissez les morceaux frire dans leur graisse, en les tournant seulement toutes les quelques minutes, jusqu'à ce que profondément doré et croquant aux bords, 8-12 minutes. Résistez au surmenage; le temps de contact avec le pot chaud est ce qui construit la croûte.",
+      "visualCue": {
+        "primaryTarget": "Les bords et les points élevés de chaque morceau sont brun acajou profond et visiblement croustillants, tandis que la viande brille encore avec la graisse. Certaines pièces se sont brisées en morceaux de croustilles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est bronzée, molle et molle, sans croûte. Il a l'air bouilli plutôt que frit.",
+            "action": "Levez la chaleur et arrêtez de remuer — laissez reposer les morceaux contre le métal chaud à la couleur avant de tourner."
+          },
+          {
+            "state": "Perfect",
+            "description": "Croûte brune brûlée sur les bords exposés, tendre et juteuse à l'intérieur. Craquant sonore, arôme torréfié irrésistible.",
+            "action": "Soulevez avec une cuillère à fente, égouttant la graisse dans le pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les morceaux sont uniformément sombres, durs tout au long du chemin, et l'arôme de baie/cinnamon est devenu acride et amer.",
+            "action": "Tirer immédiatement et hacher fin — mélangés en morceaux juteux, même les carnitas foncés gagnent leur place dans un taco."
+          }
+        ]
+      },
+      "feelCue": "Une pièce finie doit sembler croustillante lorsqu'elle est tapée avec la cuillère, mais donner facilement en appuyant. La graisse doit sentir la noix et le caramel doux, jamais brûlé ou fumé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos & déchiqueté",
+      "inputs": [
+        "crisped_carnitas"
+      ],
+      "outputState": "finished_carnitas",
+      "instructions": "Transférer les carnitas dans une planche et les laisser reposer 5 minutes pour que les jus s'installent. Hacher ou tirer à peu près dans un mélange d'ardoises croustillantes et de lambeaux tendres, cuillerer sur un peu de gras chaud rendu pour les garder brillants. Goûtez et ajoutez une pincée plus de sel et une pression de chaux fraîche si elle a besoin d'éclaircir. Servir chaud sur les tortillas de maïs chaudes avec l'oignon, la coriandre et la salsa.",
+      "visualCue": {
+        "primaryTarget": "Un enchevêtrement de textures scintillantes — bords brunis crépités tissés à travers des lambeaux doux juteux, liquéqués mais pas gras, tenant ensemble lorsqu'ils sont écorcés sur une tortilla.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La plupart des lambeaux doux avec peu de morceaux croustillants; semble pâle et un peu humide, goût plat.",
+            "action": "Retour à la graisse chaude pendant 2-3 minutes pour croquer plus loin, et vérifier le sel."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mélange craquant équilibré, brillant avec de la graisse rendue, salé avec une note de retour de citrus doux et une douce chaleur de la cannela.",
+            "action": "Piler sur des tortillas chaudes et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sécher et dur dans l'ensemble, le gras absorbé, s'écroulant à la poussière plutôt que de déchiqueter.",
+            "action": "Mélanger avec une cuillère de gras chaud et un jet de jus d'orange pour raviver un peu d'humidité avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Il doit se sentir riche mais propre en bouche, la graisse fond au lieu de la couvrir. Chaque morsure donne à la fois l'éclat d'un bord croustillant et le don d'un centre juteux — ce contraste est tout le point."
+    }
+  ]
 };

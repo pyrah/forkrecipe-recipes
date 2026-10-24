@@ -1,113 +1,253 @@
 export default {
-  repoId: "master_italian_gnocchi_001",
-  parentRepoId: null,
-  slug: "gnocchi",
-  author: "ForkRecipe Kitchen",
-  title: "Potato Gnocchi",
-  description: "Cloud-light pillow-dumplings made from still-warm baked potato, just enough flour, and a single egg — the Italian grandmother's paradox: the less you work the dough, the better the gnocchi. One extra gram of flour is the difference between a dumpling and a torpedo.",
-  cuisine: "Italian",
-  culture: "Northern Italian",
-  category: "grains",
-  tags: ["pasta", "italian", "potato", "dumpling", "vegetarian", "comfort"],
-  difficulty: 3,
-  activeTime: "50 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "weight",
-  stars: 1487,
-  forks: 134,
-  contributors: 31,
-  license: "CC-BY-SA",
-  createdAt: "2026-01-15",
-  updatedAt: "2026-01-15",
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Russet or Yukon Gold potatoes (floury variety)", ratioValue: 1000, defaultUnit: "g", substitutions: ["sweet potato (denser, sweeter result)"] },
-    { ingId: "ing_02", role: "Structure", name: "All-purpose flour (plus extra for bench)",        ratioValue: 200,  defaultUnit: "g", substitutions: ["tipo 00 flour"] },
-    { ingId: "ing_03", role: "Binder",    name: "Egg (large), beaten",                             ratioValue: 1,    defaultUnit: "whole", substitutions: ["egg yolk only (richer, more tender)"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                                   ratioValue: 8,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Dairy",     name: "Parmigiano-Reggiano, grated (optional finish)",   ratioValue: 30,   defaultUnit: "g", substitutions: ["Grana Padano"] },
-    { ingId: "ing_06", role: "Fat",       name: "Unsalted butter, for pan sauce",                  ratioValue: 40,   defaultUnit: "g", substitutions: ["extra-virgin olive oil"] },
+  "repoId": "master_italian_gnocchi_001",
+  "parentRepoId": null,
+  "slug": "gnocchi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Gnocchi de pommes de terre",
+  "description": "Des coussins à lumière nuageuse à base de pommes de terre cuites encore chaudes, juste assez de farine, et un seul œuf — le paradoxe de la grand-mère italienne: moins vous travaillez la pâte, mieux le gnocchi. Un gramme supplémentaire de farine est la différence entre une boulette et une torpille.",
+  "cuisine": "Italien",
+  "culture": "Nord italien",
+  "category": "grains",
+  "tags": [
+    "pâtes",
+    "Italien",
+    "pommes de terre",
+    "les boulettes",
+    "végétarien",
+    "confort"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "50 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "weight",
+  "stars": 1487,
+  "forks": 134,
+  "contributors": 31,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-01-15",
+  "updatedAt": "2026-01-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Bake",
-      inputs: ["ing_01"],
-      outputState: "baked_potatoes",
-      instructions: "Preheat oven to 200 C (400 F). Scrub potatoes, prick all over with a fork, and place directly on the oven rack (not wrapped in foil — you want moisture to escape). Bake for 55–70 minutes until completely tender through the center when pierced with a skewer and the skin is papery and tight. Do not boil the potatoes — boiling adds water, which demands more flour, which makes heavy gnocchi.",
-      visualCue: {
-        primaryTarget: "Skin is wrinkled and papery, slightly pulled away from the flesh. A skewer meets zero resistance anywhere through the center.",
-        spectrum: [
-          { state: "Underdone", description: "Skewer meets resistance at the center. Potato feels firm when squeezed gently.", action: "Return to oven for 10-minute increments and retest." },
-          { state: "Perfect",   description: "Completely yielding. Skin is tight and dry. The potato collapses slightly when squeezed. A puff of steam escapes when pierced.", action: "Halve and scoop flesh immediately while hot — steam must escape now." },
-          { state: "Overdone",  description: "Skin has split and flesh is leaking and slightly caramelized.", action: "Still usable — the caramelized edges may add unwanted sweetness; scrape those away." },
-        ],
-      },
-      feelCue: "Squeeze a potato gently through an oven mitt — it should yield completely, like squeezing a stress ball, with no firm spots.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Pommes de terre russes ou or du Yukon (variété florale)",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "patates douces (denseur, résultat plus doux)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Press",
-      inputs: ["baked_potatoes"],
-      outputState: "riced_potato",
-      instructions: "While potatoes are still steaming hot, halve them and scoop the flesh directly through a ricer or food mill onto a clean board or baking sheet. Spread the riced potato in a thin layer and let the steam escape for 3–4 minutes. Do not mash with a masher — it crushes the cells and creates a gluey paste. Cool just until you can handle it, but no more.",
-      visualCue: {
-        primaryTarget: "Light, snowflake-like wisps of potato evenly distributed. No clumps. Steam visibly rising.",
-        spectrum: [
-          { state: "Underdone", description: "Large unpassed chunks remain. Uneven texture will create dense spots in gnocchi.", action: "Pass remaining chunks through the ricer. Every bit must be riced." },
-          { state: "Perfect",   description: "Even, feathery strands of potato. Light as fresh snow. Steam still rising gently.", action: "Let steam off for 3 minutes, then make a well in the center for the remaining ingredients." },
-          { state: "Overdone",  description: "Potato has cooled completely and is starting to clump and stick together.", action: "Proceed quickly — cold potato is workable but will take more flour and may be slightly denser." },
-        ],
-      },
-      feelCue: "The riced potato should feel like warm, dry sand running through your fingers — loose, light, not sticky.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Farine polyvalente (plus extra pour banc)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tipo 00 farine"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["riced_potato", "ing_02", "ing_03", "ing_04"],
-      outputState: "gnocchi_dough",
-      instructions: "Make a well in the riced potato. Add the beaten egg and salt into the well. Scatter the flour over the top. Using a bench scraper or your fingertips, cut and fold the mixture together — do not knead. Work until just combined: a shaggy dough forms and no dry flour remains. The moment you see a cohesive mass, stop. Over-working develops gluten and makes gnocchi tough.",
-      visualCue: {
-        primaryTarget: "A soft, barely-cohesive dough that holds together when pinched but is not smooth. Slightly tacky surface.",
-        spectrum: [
-          { state: "Underdone", description: "Dry flour still visible. Dough crumbles when pinched.", action: "Fold a few more times — but resist adding water; instead work the dry bits in." },
-          { state: "Perfect",   description: "Dough holds together in a ball. Surface is slightly sticky but not wet. No dry patches. Not smooth or elastic.", action: "Divide immediately and roll — resting develops gluten." },
-          { state: "Overdone",  description: "Dough is smooth, elastic, and pulls back when stretched. Feels like pizza dough.", action: "The gnocchi will be chewy. Proceed — nothing to do now — and work faster next time." },
-        ],
-      },
-      feelCue: "The dough should feel like cool, damp clay — it holds an impression from your thumb but doesn't spring back.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Oeufs (gros), battus",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Jaune d'œuf seulement (plus riche, plus tendre)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Shape",
-      inputs: ["gnocchi_dough"],
-      outputState: "shaped_gnocchi",
-      instructions: "Flour your work surface lightly. Tear off a golf-ball portion of dough and roll it into a rope about 1.5 cm in diameter, applying even pressure from the center outward. Cut the rope into 2 cm pillows with a bench scraper. Optional: roll each piece over a fork or gnocchi board, pressing gently with your thumb to create ridges that hold sauce. Place on a lightly floured baking sheet in a single layer.",
-      visualCue: {
-        primaryTarget: "Even, pillow-shaped pieces about 2 cm long with a slight indent on one side. Light and puffy, not dense.",
-        spectrum: [
-          { state: "Underdone", description: "Ropes are uneven — thick at center, thin at ends. Some pieces will cook at different rates.", action: "Re-roll uneven sections before cutting." },
-          { state: "Perfect",   description: "Uniform pillows, slightly plump, holding their shape without squashing. Ridged if using a board.", action: "Cook immediately or freeze in a single layer for later." },
-          { state: "Overdone",  description: "Pieces have been handled too much and are getting sticky and dense.", action: "Flour your hands and work surface more generously. Chill shaped gnocchi for 10 minutes to firm up." },
-        ],
-      },
-      feelCue: "When you roll a rope, it should feel like rolling a thick rope of soft butter — gentle pressure only; pressing hard compresses the gnocchi.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Boil",
-      inputs: ["shaped_gnocchi", "ing_06"],
-      outputState: "cooked_gnocchi",
-      instructions: "Bring a large pot of well-salted water to a vigorous boil. Cook gnocchi in batches of 20–25 pieces. They are done the moment they bob to the surface and have stayed there for 30 seconds — no longer. Remove with a slotted spoon directly into a waiting skillet of browned butter over medium heat. Toss to coat and finish in the butter for 60 seconds until lightly golden.",
-      visualCue: {
-        primaryTarget: "Gnocchi floating at the surface, visibly puffed and slightly translucent. Golden from butter in the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Still on the bottom of the pot. Dense, doughy when bitten.", action: "Wait — they will rise when fully cooked. Do not crowd the pot." },
-          { state: "Perfect",   description: "Floating at the surface, puffed and tender, lightly golden from butter. Yield to gentle pressure with no gummy center.", action: "Plate immediately with sauce." },
-          { state: "Overdone",  description: "Gnocchi have been boiling at the surface for over 2 minutes. Surface is starting to dissolve and look ragged.", action: "Remove immediately. They will be slightly mushy — serve with a thick sauce to mask." },
-        ],
-      },
-      feelCue: "Press one gnocco between your fingers — it should yield completely and feel like a steamed bun, not a rubber stopper.",
+      "ingId": "ing_05",
+      "role": "Dairy",
+      "name": "Parmigiano-Reggiano, râpé (finition facultative)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Grana Padano"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé, pour sauce",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile d'olive extra vierge"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Cuire",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "baked_potatoes",
+      "instructions": "Préchauffer le four à 200 C (400 F). Frottez les pommes de terre, piquez-les avec une fourchette et placez-les directement sur la grille du four (non enveloppée dans du papier — vous voulez que l'humidité s'échappe). Cuire de 55 à 70 minutes jusqu'à ce que le centre soit complètement tendre lorsqu'il est percé à l'aide d'une brochette et que la peau soit collante et serrée. Ne faites pas bouillir les pommes de terre — bouillir ajoute de l'eau, ce qui exige plus de farine, ce qui rend les gnocchi lourds.",
+      "visualCue": {
+        "primaryTarget": "La peau est ridée et papier, légèrement retirée de la chair. Une brochette rencontre une résistance nulle à travers le centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La brochette rencontre la résistance au centre. La pomme de terre se sent ferme lorsqu'elle est pressée doucement.",
+            "action": "Retourner au four pour des incréments de 10 minutes et retester."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement. La peau est serrée et sèche. La pomme de terre s'effondre légèrement lorsqu'elle est pressée. Une bouffée de vapeur s'échappe lorsqu'elle est percée.",
+            "action": "Coupez la chair et faites - la bouillir immédiatement, et la vapeur doit s'échapper."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau est fendue et la chair fuit et légèrement caramélisée.",
+            "action": "Encore utilisables — les bords caramélisés peuvent ajouter de la douceur non désirée; racler ceux - ci."
+          }
+        ]
+      },
+      "feelCue": "Pressez doucement une pomme de terre à travers une mitaine de four – elle devrait donner complètement, comme serrer une boule de stress, sans taches fermes."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Appuyez sur",
+      "inputs": [
+        "baked_potatoes"
+      ],
+      "outputState": "riced_potato",
+      "instructions": "Alors que les pommes de terre sont encore chaudes à la vapeur, les faire mijoter et écoper la chair directement à travers un rizier ou un moulin à nourriture sur une planche propre ou une plaque de cuisson. Étaler la pomme de terre rizisée dans une couche mince et laisser échapper la vapeur pendant 3-4 minutes. Ne pas écraser avec un mascher — il écrase les cellules et crée une pâte collante. Cool jusqu'à ce que tu puisses gérer ça, mais pas plus.",
+      "visualCue": {
+        "primaryTarget": "Des flocons de pommes de terre légers et semblables à des flocons de neige sont distribués uniformément. Pas d'embrouille. La vapeur s'élève visiblement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il reste encore de gros morceaux. Une texture inégale créera des taches denses dans le gnocchi.",
+            "action": "Passer les morceaux restants dans le rizier. Tout doit être rizisé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même des brins plumeux de pomme de terre. Léger comme de la neige fraîche. La vapeur se lève toujours doucement.",
+            "action": "Laisser reposer la vapeur pendant 3 minutes, puis faire un puits au centre pour les ingrédients restants."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pomme de terre s'est complètement refroidie et commence à se serrer et à se coller.",
+            "action": "Procéder rapidement — la pomme de terre froide est utilisable, mais elle prendra plus de farine et pourrait être légèrement plus dense."
+          }
+        ]
+      },
+      "feelCue": "La pomme de terre riée devrait se sentir comme du sable chaud et sec qui coule à travers vos doigts — lâche, léger, pas collant."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "riced_potato",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "gnocchi_dough",
+      "instructions": "Faites un puits dans la patate de riz. Ajouter l'œuf battu et le sel dans le puits. Dispersez la farine sur le dessus. À l'aide d'un racleur de banc ou du bout des doigts, couper et plier le mélange ensemble — ne pas pétrir. Travaillez jusqu'à ce qu'il soit simplement combiné: une pâte chaotique se forme et aucune farine sèche ne reste. Au moment où vous voyez une masse cohésive, arrêtez. Le surmenage développe du gluten et rend le gnocchi difficile.",
+      "visualCue": {
+        "primaryTarget": "Une pâte douce, à peine cohésive, qui tient ensemble lorsqu'elle est pincée mais n'est pas lisse. Une surface légèrement trapue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Farine sèche encore visible. La toux s'écroule quand elle est pincée.",
+            "action": "Pliez encore quelques fois — mais résistez à ajouter de l'eau; au lieu de travailler les morceaux secs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dough tient dans une balle. La surface est légèrement collante mais pas humide. Pas de taches sèches. Pas lisse ou élastique.",
+            "action": "Diviser immédiatement et rouler — se reposer développe le gluten."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est lisse, élastique et se retire lorsqu'elle est étirée. On dirait de la pâte à pizza.",
+            "action": "Les gnocchi vont être croustillants. Continuez — rien à faire maintenant — et travaillez plus vite la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "La pâte devrait se sentir comme de l'argile fraîche et humide — elle tient une impression de votre pouce mais ne ressort pas."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Forme",
+      "inputs": [
+        "gnocchi_dough"
+      ],
+      "outputState": "shaped_gnocchi",
+      "instructions": "Prosternez votre surface de travail légèrement. Enlevez une partie de la pâte de balle de golf et roulez-la dans une corde d'environ 1,5 cm de diamètre, en appliquant même la pression du centre vers l'extérieur. Couper la corde en oreillers de 2 cm avec un racleur de banc. En option : rouler chaque pièce sur une fourchette ou une planche de gnocchi, presser doucement avec votre pouce pour créer des crêtes qui tiennent la sauce. Placer sur une plaque de cuisson légèrement farinée en une seule couche.",
+      "visualCue": {
+        "primaryTarget": "Même des morceaux en forme d'oreiller d'environ 2 cm de long avec un léger tiret d'un côté. Léger et gonflé, pas dense.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les rotules sont inégales — épaisses au centre, minces aux extrémités. Certaines pièces seront cuites à des taux différents.",
+            "action": "Rerouler les sections inégales avant de couper."
+          },
+          {
+            "state": "Perfect",
+            "description": "Oreillers uniformes, légèrement rembourrés, tenant leur forme sans écraser. Ridged si vous utilisez une planche.",
+            "action": "Cuire immédiatement ou congeler en une seule couche pour plus tard."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pièces ont été trop manipulées et deviennent collantes et denses.",
+            "action": "Flourez vos mains et votre surface de travail plus généreusement. Gnocchi en forme de refroidissement pendant 10 minutes pour se raffermir."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous roulez une corde, elle devrait avoir l'impression de rouler une corde épaisse de beurre doux — pression douce seulement; presser dur compresse le gnocchi."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Bouillir",
+      "inputs": [
+        "shaped_gnocchi",
+        "ing_06"
+      ],
+      "outputState": "cooked_gnocchi",
+      "instructions": "Portez un grand pot d'eau bien salée à ébullition vigoureuse. Faire cuire les gnocchi en lots de 20 à 25 pièces. Ils sont faits dès qu'ils montent à la surface et y sont restés pendant 30 secondes — pas plus. Retirer avec une cuillère à fente directement dans une poêle d'attente de beurre brun à feu moyen. Mélanger et finir dans le beurre pendant 60 secondes jusqu'à ce qu'il soit légèrement doré.",
+      "visualCue": {
+        "primaryTarget": "Gnocchi flottant à la surface, visiblement gonflé et légèrement translucide. Or du beurre dans la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours au fond du pot. Sensé, pâteux quand mordu.",
+            "action": "Attendez, ils se lèveront quand ils seront cuits. Ne foulez pas le pot."
+          },
+          {
+            "state": "Perfect",
+            "description": "flottant à la surface, gonflé et tendre, légèrement doré du beurre. Rendement à la pression douce sans centre gommé.",
+            "action": "Assortir immédiatement avec de la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Gnocchi a bouilli à la surface pendant plus de 2 minutes. La surface commence à se dissoudre et a l'air rasée.",
+            "action": "Supprimer immédiatement. Ils seront légèrement musclés — servir avec une sauce épaisse pour masquer."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un gnocco entre les doigts — il devrait donner complètement et se sentir comme un pain à la vapeur, pas comme un bouchon en caoutchouc."
+    }
+  ]
 };

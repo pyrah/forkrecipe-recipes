@@ -1,98 +1,266 @@
 export default {
-  repoId: "master_french_herb_roasted_leg_of_lamb_001",
-  parentRepoId: null,
-  slug: "herb-roasted-leg-of-lamb",
-  author: "ForkRecipe Kitchen",
-  title: "Herb-Roasted Leg of Lamb",
-  description: "A bone-in leg of lamb studded with garlic, coated in a Dijon-herb crust, and roasted until the fat renders golden and the center stays a vivid rose-pink.",
-  cuisine: "French",
-  culture: "Provençal",
-  category: "proteins",
-  tags: ["lamb", "roasted", "herb", "french", "gluten-free", "sunday-roast"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "3 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in leg of lamb (2–2.5 kg, trimmed of excess fat)",   ratioValue: 100, defaultUnit: "parts", substitutions: ["semi-boneless leg of lamb"] },
-    { ingId: "ing_02", role: "Allium",    name: "Garlic cloves, peeled and cut into thin slivers",          ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Acid",      name: "Dijon mustard",                                             ratioValue: 8,   defaultUnit: "parts", substitutions: ["whole-grain mustard"] },
-    { ingId: "ing_04", role: "Herb",      name: "Fresh rosemary, finely chopped",                           ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh thyme leaves",                                        ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Extra-virgin olive oil",                                    ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Kosher salt",                                               ratioValue: 2,   defaultUnit: "parts", substitutions: ["fleur de sel"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Freshly ground black pepper",                               ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Liquid",    name: "Dry white wine or water (for roasting pan)",                ratioValue: 20,  defaultUnit: "parts", substitutions: ["chicken stock"] },
-    { ingId: "ing_10", role: "Aromatic",  name: "Anchovy fillets in oil (optional, flavor deepener)",        ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Citrus",    name: "Lemon, juice and zest",                                     ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_herb_roasted_leg_of_lamb_001",
+  "parentRepoId": null,
+  "slug": "herb-roasted-leg-of-lamb",
+  "author": "ForkRecipe Kitchen",
+  "title": "Jambe d'agneau grillée aux herbes",
+  "description": "Une jambe d'agneau désossée parsemée d'ail, enrobée d'une croûte dijon-herbe, rôtie jusqu'à ce que la graisse rende dorée et que le centre reste un rose vif.",
+  "cuisine": "Français",
+  "culture": "Provençal",
+  "category": "proteins",
+  "tags": [
+    "agneau",
+    "grillés",
+    "herbe",
+    "français",
+    "Sans gluten",
+    "Rôti du dimanche"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Stud and season",
-      inputs: ["ing_01", "ing_02", "ing_07", "ing_08"],
-      outputState: "studded_lamb",
-      instructions: "Remove the lamb from the refrigerator 1 hour before roasting — a cold leg at the center will cook unevenly, leaving the outer layers overcooked while the center struggles to reach temperature. Using a narrow paring knife, cut 20–25 deep slits all over the leg, 3–4 cm deep, through the fat cap and into the muscle. Push a garlic sliver (and optionally half an anchovy fillet) deep into each slit so it is flush with the surface. Season the entire exterior aggressively with kosher salt and black pepper — a bone-in leg of lamb this size needs more seasoning than you expect, as only the outer layer is accessible to the salt.",
-      visualCue: {
-        primaryTarget: "The leg surface is evenly studded with visible garlic slivers pushed flush into the slits, evenly distributed across all faces. The entire exterior is coated in salt crystals with no large bare patches.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic slivers are loose and protruding — they will burn in the oven and turn acrid.", action: "Push each sliver deeper with a fingertip until only the very tip is visible or it is fully recessed. Trim any that are too large to fit." },
-          { state: "Perfect",   description: "Garlic and anchovy fully recessed into slits, evenly distributed. Salt coating has dried the surface slightly — the exterior looks slightly chalky rather than glistening.", action: "Build the herb crust and apply immediately." },
-          { state: "Overdone",  description: "Too many closely spaced slits — the muscle structure is compromised and juices will leak excessively through them during roasting.", action: "Proceed — the flavor penetration is excellent. The roasting juices will be especially flavorful." },
-        ],
-      },
-      feelCue: "Run your hand across the salted leg — it should feel dry and slightly rough from the salt crystals, not wet or tacky. The bone should feel cool and solid at the shank end.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Jambe d'agneau désossée (2–2,5 kg, garnie d'excédent de graisse)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Jambe d'agneau semi-ossée"
+      ]
     },
     {
-      nodeId: "step_2", action: "Apply herb crust",
-      inputs: ["studded_lamb", "ing_03", "ing_04", "ing_05", "ing_06", "ing_11"],
-      outputState: "crusted_lamb",
-      instructions: "Combine the Dijon mustard, rosemary, thyme, olive oil, lemon zest, and a pinch of salt in a bowl. Using a spatula or your hands, coat the entire surface of the lamb leg with this paste — it should be 2–3 mm thick and cover every surface except the cut end of the bone. The mustard acts as both flavor and adhesive, holding the herbs against the surface during roasting and forming the crust. Press the herbs firmly into the paste so they are embedded rather than loose on top.",
-      visualCue: {
-        primaryTarget: "The lamb is uniformly coated in a thick, dark-green, paste — every millimeter covered, with no bare patches visible. The herb flecks are clearly embedded in the mustard layer, not floating on top.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is thin and patchy — herbs are sliding off and the mustard layer is too thin to hold them during roasting.", action: "Apply more paste to bare patches and press firmly with your palm. The crust needs to adhere under 200°C oven heat." },
-          { state: "Perfect",   description: "Thick, even, dark-green coat fully adherent to the surface. Pressing gently with your palm produces no sliding or separation.", action: "Place on a rack in a roasting pan with the wine in the base. Roast immediately or refrigerate up to overnight — overnight marination intensifies the herb flavor." },
-          { state: "Overdone",  description: "Paste is pooling off the sides rather than adhering — too much oil in the mix, or the surface was too wet when applied.", action: "Wipe the pooled paste back onto the surface and press firmly. Refrigerate for 15 minutes to let it firm up before roasting." },
-        ],
-      },
-      feelCue: "The lamb should feel like it is wearing a firm, slightly sticky coat — pressing firmly with your palm produces no sliding. The aroma should be intensely herbal and sharp with Dijon.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Giroves à l'ail, pelées et coupées en fines tranches",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Roast",
-      inputs: ["crusted_lamb", "ing_09"],
-      outputState: "roasted_lamb_leg",
-      instructions: "Preheat the oven to 220°C / 425°F. Place the lamb on a rack in a roasting pan with the wine in the base of the pan. Start at high heat for 20 minutes to brown and set the crust. Reduce to 170°C / 340°F and continue roasting until an instant-read thermometer at the thickest part (not touching bone) reads 57°C / 135°F for medium-rare or 63°C / 145°F for medium, approximately 1 hour 20 minutes to 1 hour 45 minutes for a 2 kg leg. The thickest muscle at the hip end is the reference — the shank will be more cooked, which is fine. Baste with pan juices every 30 minutes. If the crust darkens too fast, tent with foil.",
-      visualCue: {
-        primaryTarget: "The crust is deep golden-green, slightly charred at the highest points. The fat cap has rendered and is golden and crisped, not white and raw. The juices in the pan base are amber, not watery. Juices from the thickest part run clear pink when pierced.",
-        spectrum: [
-          { state: "Underdone", description: "Thermometer reads below 54°C — the center is still red and cold. The crust looks pale and the fat has not rendered.", action: "Return to the oven and check every 10 minutes. Do not rush by raising the heat — gentle roasting gives more even doneness." },
-          { state: "Perfect",   description: "Thermometer reads 57–60°C at the thickest point. Juices run clear pink. Crust is golden-green and fragrant. Fat is rendered and slightly crisp.", action: "Remove from oven immediately and rest uncovered on a cutting board for 20–30 minutes minimum." },
-          { state: "Overdone",  description: "Thermometer reads above 70°C. Juices run completely clear. The thickest muscle has gone from pink to grey-brown throughout.", action: "Remove immediately. Rest as usual. Serve with the pan juices — the outer leg will be dry but the interior near the bone may still be palatable." },
-        ],
-      },
-      feelCue: "Press the thickest muscle firmly with your palm through a folded kitchen towel — medium-rare lamb gives like a tensed bicep. If it feels as firm as a fully flexed forearm, it has overcooked.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moutarde à grains entiers"
+      ]
     },
     {
-      nodeId: "step_4", action: "Rest and carve",
-      inputs: ["roasted_lamb_leg"],
-      outputState: "finished_herb_roasted_lamb",
-      instructions: "Rest the lamb uncovered on a cutting board for at least 20 minutes — a full 30 for a 2 kg leg. The internal temperature will rise 3–5°C during rest. During this time, deglaze the roasting pan with the remaining wine, scraping up all the golden fond and drippings to make a simple pan jus. To carve: hold the shank bone upright with a towel, run the knife along the bone to free the meat, then carve across the grain in 8–10 mm slices. The slices near the hip will be medium-rare; those near the shank will be more cooked, giving guests options.",
-      visualCue: {
-        primaryTarget: "Carved slices show a vivid rose-pink center fading to a 3–5 mm grey-brown ring at the outer edge, topped with the golden-green crust. The cut surface glistens with redistributed juices rather than running with blood.",
-        spectrum: [
-          { state: "Underdone", description: "Slices are red and cool at the center and juices flood the board immediately. The meat has not rested long enough.", action: "Reassemble the carved slices and let them rest 10 more minutes before serving. The cut surfaces will slightly cook further from residual heat." },
-          { state: "Perfect",   description: "Vivid rose-pink center, no bleeding onto the board, glistening cut surfaces. The aroma of roasted garlic and rosemary fills the room.", action: "Arrange on a warmed platter and spoon pan jus over. Serve immediately." },
-          { state: "Overdone",  description: "Slices are uniformly grey-brown with no visible pink. The meat is firm and dry, and the juices ran clear as water when rested.", action: "Serve with plenty of pan jus and a good sauce — béarnaise or mint chimichurri — to compensate for the lost moisture." },
-        ],
-      },
-      feelCue: "After resting, press the whole leg with your palm: it should yield and spring back slowly, like a firm pillow. That slow spring is the collagen redistributing and the juices settling back into the muscle.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Romarin frais, haché finement",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Feuilles de thym fraîches",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fleur de sel"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Liquid",
+      "name": "Vin blanc sec ou eau (pour rôtir)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bouillon de poulet"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Filets d'anchois dans l'huile (facultatif, plus de saveur)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Citrus",
+      "name": "Citron, jus et zeste",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Stud et saison",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "studded_lamb",
+      "instructions": "Retirer l'agneau du réfrigérateur 1 heure avant le torréfaction — une jambe froide au centre fera cuire inégalement, laissant les couches extérieures trop cuites pendant que le centre lutte pour atteindre la température. À l'aide d'un couteau à parure étroit, couper de 20 à 25 fentes profondes sur toute la jambe, de 3 à 4 cm de profondeur, à travers le bouchon graisseux et dans le muscle. Poussez un filet d'ail (et éventuellement la moitié d'un filet d'anchois) profondément dans chaque fente afin qu'il soit bouffé avec la surface. Assaisonner l'ensemble de l'extérieur de façon agressive avec du sel casher et du poivre noir — une jambe d'agneau désossée de cette taille nécessite plus d'assaisonnement que vous ne vous attendez, car seule la couche externe est accessible au sel.",
+      "visualCue": {
+        "primaryTarget": "La surface des jambes est uniformément parsemée d'ail visible poussé dans les fentes, uniformément répartie sur tous les visages. L'extérieur entier est recouvert de cristaux de sel sans grandes taches nues.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les éclats d'ail sont lâches et en saillie; ils brûleront dans le four et se transformeront en acrides.",
+            "action": "Poussez chaque tranche plus profondément avec un bout de doigt jusqu'à ce que seule l'extrémité même soit visible ou qu'elle soit complètement encastrée. Trim tous ceux qui sont trop grands pour s'adapter."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'ail et l'anchois sont entièrement encastrés en fentes, répartis uniformément. Le revêtement en sel a légèrement séché la surface — l'extérieur est légèrement crayeux plutôt que brillant.",
+            "action": "Construisez la croûte d'herbe et appliquez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de fentes très espacées — la structure musculaire est compromise et les jus s'écoulent excessivement à travers eux pendant la torréfaction.",
+            "action": "Procéder — la pénétration de la saveur est excellente. Les jus de torréfaction seront particulièrement savoureux."
+          }
+        ]
+      },
+      "feelCue": "Passez votre main à travers la jambe salée — elle doit être sèche et légèrement rugueuse à partir des cristaux de sel, pas mouillée ou collante. L'os doit se sentir frais et solide à l'extrémité de la tige."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Appliquer la croûte d'herbe",
+      "inputs": [
+        "studded_lamb",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_11"
+      ],
+      "outputState": "crusted_lamb",
+      "instructions": "Mélanger la moutarde de Dijon, le romarin, le thym, l'huile d'olive, le zeste de citron et une pincée de sel dans un bol. À l'aide d'une spatule ou de vos mains, enrobez de cette pâte toute la surface de la jambe d'agneau, d'une épaisseur de 2 à 3 mm, et couvrez chaque surface à l'exception de l'extrémité coupée de l'os. La moutarde agit à la fois comme saveur et comme adhésif, tenant les herbes contre la surface pendant la torréfaction et formant la croûte. Appuyez fermement sur les herbes dans la pâte afin qu'elles soient intégrées plutôt que lâches sur le dessus.",
+      "visualCue": {
+        "primaryTarget": "L'agneau est uniformément recouvert d'une pâte épaisse, vert foncé, recouverte de chaque millimètre, sans taches nues visibles. Les taches d'herbe sont clairement intégrées dans la couche de moutarde, et ne flottent pas sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est fine et patchée — les herbes glissent et la couche de moutarde est trop fine pour les tenir pendant le rôti.",
+            "action": "Appliquez plus de pâte sur des patchs nus et appuyez fermement avec votre paume. La croûte doit adhérer sous 200°C de chaleur au four."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une couche épaisse, uniforme, vert foncé qui adhère entièrement à la surface. En appuyant doucement avec votre paume ne produit ni glissement ni séparation.",
+            "action": "Placer sur une grille dans une rôtissoire avec le vin à la base. Rôtir immédiatement ou réfrigérer jusqu'à la nuit — la marination de la nuit intensifie le goût de l'herbe."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte s'accumule sur les côtés plutôt que d'adhérer — trop d'huile dans le mélange, ou la surface était trop humide lorsqu'elle était appliquée.",
+            "action": "Essuyez la pâte enroulée sur la surface et appuyez fermement. Réfrigérer pendant 15 minutes pour le laisser raffermir avant de rôtir."
+          }
+        ]
+      },
+      "feelCue": "L'agneau doit avoir l'impression de porter un manteau ferme et légèrement collant. L'arôme doit être intensément à base de plantes et vif avec Dijon."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Rôtis",
+      "inputs": [
+        "crusted_lamb",
+        "ing_09"
+      ],
+      "outputState": "roasted_lamb_leg",
+      "instructions": "Préchauffer le four à 220°C / 425°F. Placer l'agneau sur une grille dans une poêle avec le vin à la base de la poêle. Commencez à feu vif pendant 20 minutes pour brunir et mettre la croûte. Réduisez à 170°C / 340°F et continuez à rôtir jusqu'à ce qu'un thermomètre à lecture instantanée à la partie la plus épaisse (sans toucher l'os) lit 57°C / 135°F pour un temps moyen ou 63°C / 145°F pour un temps moyen, environ 1 heure 20 minutes à 1 heure 45 minutes pour une jambe de 2 kg. Le muscle le plus épais à l'extrémité de la hanche est la référence: la tige sera plus cuite, ce qui est bien. Faire sauter les jus de cuisson toutes les 30 minutes. Si la croûte s'assombrit trop vite, tentez avec du papier.",
+      "visualCue": {
+        "primaryTarget": "La croûte est vert doré profond, légèrement carbonisée aux points les plus hauts. Le bouchon de graisse a rendu et est doré et croustillant, pas blanc et cru. Les jus dans la base de la casserole sont ambres, pas aqueux. Les jus de la partie la plus épaisse sont rose clair lorsqu'ils sont percés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Thermomètre lit en dessous de 54°C — le centre est encore rouge et froid. La croûte a l'air pâle et la graisse n'a pas rendu.",
+            "action": "Retournez au four et vérifiez toutes les 10 minutes. Ne vous précipitez pas en soulevant la chaleur — la torréfaction douce donne plus de cuisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le thermomètre lit 57-60°C au point le plus épais. Les jus sont roses. La croûte est verte dorée et parfumée. Le gras est rendu et légèrement croquant.",
+            "action": "Retirer immédiatement du four et reposer à découvert sur une planche à découper pendant 20 à 30 minutes minimum."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le thermomètre se lit au-dessus de 70°C. Les jus sont complètement dégagés. Le muscle le plus épais est passé du rose au brun gris.",
+            "action": "Supprimer immédiatement. Repose-toi comme d'habitude. Servir avec les jus de casserole — la jambe extérieure sera sèche, mais l'intérieur près de l'os peut encore être agréable."
+          }
+        ]
+      },
+      "feelCue": "Appuyez fermement sur le muscle le plus épais avec votre paume à travers une serviette de cuisine pliée — l'agneau moyen-rare donne comme un biceps tendu. Si elle se sent aussi ferme qu'un avant-bras entièrement flexible, elle a trop cuit."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos et coupe",
+      "inputs": [
+        "roasted_lamb_leg"
+      ],
+      "outputState": "finished_herb_roasted_lamb",
+      "instructions": "Reposez l'agneau à découvert sur une planche à découper pendant au moins 20 minutes — 30 pour une jambe de 2 kg. La température interne augmentera de 3 à 5 °C pendant le repos. Pendant ce temps, déglacer la rôtissoire avec le vin restant, racler tout le fond doré et les gouttes pour faire un simple jus de poêle. Pour découper : tenir l'os de la tige debout avec une serviette, lancer le couteau le long de l'os pour libérer la viande, puis couper le grain en tranches de 8 à 10 mm. Les tranches près de la hanche seront de moyenne-rare ; celles près de la tige seront plus cuites, donnant aux clients des options.",
+      "visualCue": {
+        "primaryTarget": "Les tranches sculptées montrent un centre rose-rose vif qui s'estompe jusqu'à un anneau brun-gris de 3 à 5 mm au bord extérieur, surmonté de la croûte verte dorée. La surface coupée brille avec des jus redistribués plutôt que de courir avec du sang.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tranches sont rouges et fraîches au centre et les jus inondent immédiatement la planche. La viande n'a pas assez longtemps reposé.",
+            "action": "Remonter les tranches sculptées et les laisser reposer encore 10 minutes avant de servir. Les surfaces coupées seront légèrement cuites à partir de la chaleur résiduelle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Centre rose vif, pas de saignement sur la planche, surfaces de coupe scintillantes. L'arôme d'ail rôti et de romarin remplit la pièce.",
+            "action": "Arrangez-vous sur un plateau chaud et le jus de cuillère. Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tranches sont uniformément brun-gris sans rose visible. La viande est ferme et sèche, et les jus sont limpides comme de l'eau au repos.",
+            "action": "Servir avec beaucoup de jus de poêle et une bonne sauce — béarnaise ou menthe chimichurri — pour compenser la perte d'humidité."
+          }
+        ]
+      },
+      "feelCue": "Après le repos, appuyez sur toute la jambe avec votre paume : elle devrait céder et revenir lentement, comme un oreiller ferme. Ce ressort lent est le collagène redistribuant et les jus se réinstallent dans le muscle."
+    }
+  ]
 };

@@ -1,102 +1,275 @@
 export default {
-  repoId: "master_scottish_scottishkedgeree_001",
-  parentRepoId: null,
-  slug: "scottish-kedgeree",
-  author: "ForkRecipe Kitchen",
-  title: "Scottish Kedgeree",
-  description: "A colonial-era dish born from Indian khichdi and Scottish smoked haddock — basmati rice scented with curry and butter, folded with flakes of golden haddock and gently hard-boiled eggs, scattered with crisp parsley and a squeeze of lemon.",
-  cuisine: "Scottish",
-  culture: "Anglo-Indian",
-  category: "eggs",
-  tags: ["eggs", "smoked-fish", "scottish", "rice", "curry", "haddock", "kedgeree"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Undyed smoked haddock fillet",        ratioValue: 400,  defaultUnit: "g",     substitutions: ["smoked cod", "hot-smoked salmon (flake in after cooking)"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Whole milk (for poaching fish)",       ratioValue: 400,  defaultUnit: "ml",    substitutions: ["half milk half water"] },
-    { ingId: "ing_03", role: "Starch",    name: "Basmati rice, rinsed until clear",    ratioValue: 300,  defaultUnit: "g",     substitutions: ["long-grain white rice"] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter",                     ratioValue: 50,   defaultUnit: "g",     substitutions: ["ghee for more depth"] },
-    { ingId: "ing_05", role: "Allium",    name: "Yellow onion, finely diced",          ratioValue: 150,  defaultUnit: "g",     substitutions: ["shallots"] },
-    { ingId: "ing_06", role: "Spice",     name: "Mild curry powder (Madras-style)",    ratioValue: 10,   defaultUnit: "g",     substitutions: ["1 tsp each: turmeric, cumin, coriander"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine sea salt",                       ratioValue: 5,    defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_08", role: "Protein",   name: "Eggs, large",                         ratioValue: 4,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_09", role: "Herb",      name: "Flat-leaf parsley, roughly chopped",  ratioValue: 20,   defaultUnit: "g",     substitutions: ["cilantro for a more Indian note"] },
-    { ingId: "ing_10", role: "Citrus",    name: "Lemon",                               ratioValue: 1,    defaultUnit: "whole", substitutions: ["lime"] },
-    { ingId: "ing_11", role: "Dairy",     name: "Heavy cream (optional, for richness)", ratioValue: 60,  defaultUnit: "ml",    substitutions: [] },
+  "repoId": "master_scottish_scottishkedgeree_001",
+  "parentRepoId": null,
+  "slug": "scottish-kedgeree",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kedgeree écossaise",
+  "description": "Un plat de l'époque coloniale né de l'aiglefin fumé indien kichdi et écossais — riz basmati parfumé de curry et de beurre, plié de flocons d'aiglefin doré et d'œufs légèrement durs, éparpillé de persil croustillant et d'une pression de citron.",
+  "cuisine": "Écossais",
+  "culture": "Anglo-Indien",
+  "category": "eggs",
+  "tags": [
+    "œufs",
+    "poisson fumé",
+    "écossais",
+    "riz",
+    "curry",
+    "l'aiglefin",
+    "kedgeree"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Poach",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "poached_haddock",
-      instructions: "Place the haddock skin-side down in a wide pan. Pour over the milk — it should just cover the fish. Bring to the barest simmer over medium-low heat. As soon as the milk begins to shiver and small bubbles appear around the edges (not a full boil), turn off the heat, cover the pan, and let the fish poach in the residual heat for 8–10 minutes. Lift the fish out and reserve the poaching milk. When cool enough to handle, peel off and discard the skin, then flake the flesh into large chunks, checking for pin bones.",
-      visualCue: {
-        primaryTarget: "Large, moist, opaque white-to-pale-gold flakes with no translucency remaining, skin removed cleanly.",
-        spectrum: [
-          { state: "Underdone", description: "The flesh is still translucent in the thicker parts and resists flaking — it pulls in strings rather than separating into clean pieces.", action: "Return to the covered pan for another 3 minutes. The residual milk heat will be sufficient." },
-          { state: "Perfect",   description: "The fish flakes into large, moist, golden pieces at the touch of a fork. No raw translucency. The milk beneath is opaque and white with rendered fish oils.", action: "Remove fish and reserve the poaching milk for the rice." },
-          { state: "Overdone",  description: "The fish has broken into tiny shreds and the flesh is dry and stringy. The milk is boiling and curdling.", action: "The flavor is intact — proceed with smaller flakes. The dish will be more homogeneous but still delicious." },
-        ],
-      },
-      feelCue: "The thickest part of the haddock should offer no resistance when pressed with a finger — yielding completely, like firmly set tofu.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filet d'aiglefin fumé non teint",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "morue fumée",
+        "Saumon fumé à chaud (flocon après cuisson)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Boil",
-      inputs: ["ing_08"],
-      outputState: "soft_boiled_eggs",
-      instructions: "Bring a pot of water to a full boil. Lower the eggs in gently and cook for exactly 8 minutes for yolks that are set but still have a faintly creamy center — a true soft-set rather than chalky hard-boiled. Transfer immediately to a bowl of ice water for 2 minutes to stop the cooking and make them easier to peel. Peel and cut into quarters lengthwise.",
-      visualCue: {
-        primaryTarget: "Peeled eggs with fully opaque, set whites and yolks that are pale yellow and fully set but not yet chalky-grey at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Yolk is runny and liquid in the center, making quartering messy — the yolk runs out.", action: "Add 1–2 more minutes. A fully soft-set yolk is the target for kedgeree." },
-          { state: "Perfect",   description: "Yolk is set and yellow throughout with a hint of a slightly creamier center. White is firm and peels cleanly.", action: "Quarter and set aside until assembly." },
-          { state: "Overdone",  description: "A grey-green ring forms around the yolk — the sulfur reaction from overcooking. Yolk is chalky and dry.", action: "Still usable. Next time reduce time by 1 minute and use ice bath immediately." },
-        ],
-      },
-      feelCue: "A perfectly cooked egg at 8 minutes feels completely firm when squeezed gently in the shell — no soft spot at the yolk end — yet yields a just-set, slightly yielding yolk when cut.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Lait entier (pour poissons braconniers)",
+      "ratioValue": 400,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "moitié lait moitié eau"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sauté",
-      inputs: ["ing_04", "ing_05", "ing_06"],
-      outputState: "curried_rice_base",
-      instructions: "In a large, wide saucepan, melt the butter over medium heat. Add the diced onion with a pinch of salt and cook, stirring, for 8–10 minutes until soft, translucent, and beginning to turn pale gold at the edges. Add the curry powder and stir for 60–90 seconds until the spices bloom and turn fragrant and dark. Add the rinsed rice and stir to coat every grain in the spiced butter — about 1 minute. Measure 450 ml of the reserved haddock poaching milk (top up with water if needed) and pour it over the rice. Season lightly with salt, remembering the fish and milk are already salty. Bring to a boil, reduce to the lowest simmer, cover tightly, and cook 12 minutes. Remove from heat and steam, lid on, for 5 more minutes.",
-      visualCue: {
-        primaryTarget: "Rice grains are separate, golden-yellow from the turmeric in the curry powder, with no pooling water or sticky clumping.",
-        spectrum: [
-          { state: "Underdone", description: "Rice has a hard, chalky center when bitten. The grains are slightly opaque and pool a little liquid at the bottom of the pan.", action: "Add 30 ml more liquid, re-cover, and cook another 5 minutes on the lowest possible heat." },
-          { state: "Perfect",   description: "Each grain is separate and fully cooked with a slight al dente give. The rice smells of butter, curry, and smoked fish milk. No liquid remains.", action: "Fold in the fish, eggs, cream, and parsley." },
-          { state: "Overdone",  description: "Rice is clumped, mushy, and the grains have broken down. The pan smells of scorched starch on the bottom.", action: "Fold in the other ingredients gently to minimize further breakdown. Scorched bottom: spoon from the top only." },
-        ],
-      },
-      feelCue: "Correctly cooked basmati should have the faintest spring when pressed between thumb and forefinger — soft throughout but not squashing to paste.",
+      "ingId": "ing_03",
+      "role": "Starch",
+      "name": "Riz Basmati, rincé jusqu'à l'éclair",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "riz blanc à grains longs"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Fold",
-      inputs: ["curried_rice_base", "poached_haddock", "soft_boiled_eggs", "ing_09", "ing_10", "ing_11"],
-      outputState: "finished_kedgeree",
-      instructions: "If using cream, pour it over the rice and fold gently with a wide spatula. Add the flaked haddock in large pieces and fold just twice or three times — you want chunks, not paste. Add half the parsley. Fold once more. Taste and adjust salt and lemon juice — the dish wants brightness. Arrange the egg quarters across the top, scatter the remaining parsley, and bring the pan to the table with lemon halves alongside. Kedgeree is traditionally served at breakfast or brunch, warm but not screaming hot.",
-      visualCue: {
-        primaryTarget: "Golden rice flecked with large white-and-amber haddock pieces, bright green parsley scattered throughout, and pale egg quarters arranged across the top.",
-        spectrum: [
-          { state: "Underdone", description: "The rice looks pale and the fish has disappeared into fine shreds from over-folding. The dish looks grey and homogeneous.", action: "Stop folding immediately. Add more parsley for color and arrange egg quarters prominently for visual contrast." },
-          { state: "Perfect",   description: "Distinct textures visible: separate rice grains, recognizable fish flakes, green herb, golden yolk quarters. The color is warm amber-gold. Smell is rich, smoky, and spiced.", action: "Serve immediately or hold covered on very low heat for up to 10 minutes." },
-          { state: "Overdone",  description: "The rice is clumping from over-stirring. The fish has shredded to paste and the eggs have broken.", action: "Press into a serving dish and garnish generously to restore visual appeal." },
-        ],
-      },
-      feelCue: "Each serving should have contrasting textures in a single spoonful — the slight resistance of rice grains, the tender yield of haddock flakes, and the soft give of egg yolk.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pour plus de profondeur"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon jaune, en dés",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Échalotes"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poudre de curry légère (style Madras)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 csp chacune: curcuma, cumin, coriandre"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Protein",
+      "name": "Oeufs grands",
+      "ratioValue": 4,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "coriandre pour une note plus indienne"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Citrus",
+      "name": "Citron",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Chaux"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Dairy",
+      "name": "Crème lourde (facultatif, pour la richesse)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Pochette",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "poached_haddock",
+      "instructions": "Placez le côté peau d'aiglefin dans une grande casserole. Verser le lait — il devrait couvrir le poisson. Porter à la plus petite mijoter à feu moyen-doux. Dès que le lait commence à trembler et que de petites bulles apparaissent autour des bords (pas un ébullition complet), éteignez la chaleur, couvrez la poêle et laissez le poisson pocher dans la chaleur résiduelle pendant 8-10 minutes. Soulevez le poisson et réservez le lait de braconnage. Lorsqu'elle est assez fraîche pour être manipulée, éplucher et jeter la peau, puis la flanquer dans de gros morceaux, en vérifiant les os des épingles.",
+      "visualCue": {
+        "primaryTarget": "Larges flocons blancs à or pâle, humides et opaques, sans translucidité restante, peau enlevée proprement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La chair est encore translucide dans les parties plus épaisses et résiste à l'éclaboussure — elle tire en cordes plutôt que de se séparer en morceaux propres.",
+            "action": "Retournez dans la casserole couverte pendant 3 minutes. La chaleur résiduelle du lait sera suffisante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le poisson s'éclabousse dans de grandes pièces d'or humides au toucher d'une fourchette. Pas de translucidité brute. Le lait est opaque et blanc avec des huiles de poisson fondues.",
+            "action": "Retirer le poisson et réserver le lait de braconnage pour le riz."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson s'est cassé en petits morceaux et la chair est sèche et à cordes. Le lait est bouillant et caillé.",
+            "action": "La saveur est intacte — procéder avec des flocons plus petits. Le plat sera plus homogène mais toujours délicieux."
+          }
+        ]
+      },
+      "feelCue": "La partie la plus épaisse de l'aiglefin ne devrait offrir aucune résistance lorsqu'elle est pressée d'un doigt, ce qui donne complètement, comme le tofu fermement fixé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_08"
+      ],
+      "outputState": "soft_boiled_eggs",
+      "instructions": "Portez un pot d'eau à ébullition complète. Abaissez les oeufs en douceur et faites cuire exactement 8 minutes pour les jaunes qui sont fixés mais ont toujours un centre légèrement crémeux — un vrai doux-set plutôt que crayeux dur-huile. Transférer immédiatement dans un bol d'eau glacée pendant 2 minutes pour arrêter la cuisson et les rendre plus faciles à peler. Peler et couper en quartiers sur la longueur.",
+      "visualCue": {
+        "primaryTarget": "Oeufs pelés avec des blancs et des jaunes entièrement opaques, de couleur jaune pâle et de couleur gris crayeux aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Yolk est runny et liquide au centre, rendant le quartier en désordre — le jaune s'épuise.",
+            "action": "Ajoutez encore 1 à 2 minutes. Un jaune entièrement mou est la cible du kedgeree."
+          },
+          {
+            "state": "Perfect",
+            "description": "Yolk est sertie et jaune tout au long avec un soupçon de centre légèrement plus crémeux. Le blanc est ferme et pele proprement.",
+            "action": "Quarter et réserver jusqu'à l'assemblée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un anneau gris-vert se forme autour du jaune — la réaction de soufre due à la surcuisson. Yolk est crayeuse et sèche.",
+            "action": "Toujours utilisable. La prochaine fois, réduisez le temps de 1 minute et utilisez immédiatement un bain de glace."
+          }
+        ]
+      },
+      "feelCue": "Un œuf parfaitement cuit à 8 minutes se sent complètement ferme lorsqu'il est pressé doucement dans la coquille — pas de tache molle à l'extrémité jaune — mais donne un jaune juste et légèrement à rendement lorsqu'il est coupé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "curried_rice_base",
+      "instructions": "Dans une grande casserole, faire fondre le beurre à feu moyen. Ajouter l'oignon en dés avec une pincée de sel et cuire en remuant pendant 8 à 10 minutes jusqu'à ce qu'il soit doux, translucide et commence à devenir or pâle aux bords. Ajouter la poudre de curry et remuer pendant 60 à 90 secondes jusqu'à ce que les épices fleurissent et deviennent parfumées et sombres. Ajouter le riz rincé et mélanger pour enrober chaque grain dans le beurre épicé — environ 1 minute. Mesurer 450 ml du lait de braconnage d'aiglefin réservé (s'il y a lieu de le verser avec de l'eau) et le verser sur le riz. Assaisonner légèrement avec du sel, se souvenir que le poisson et le lait sont déjà salés. Porter à ébullition, laisser mijoter au minimum, couvrir soigneusement et cuire 12 minutes. Retirer du feu et de la vapeur, couvrir pendant 5 minutes.",
+      "visualCue": {
+        "primaryTarget": "Les grains de riz sont séparés, dorés-jaunes du curcuma dans la poudre de curry, sans eau de pooling ou collant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz a un centre dur et crayeux quand il est mordu. Les grains sont légèrement opaques et mettent un peu de liquide au fond de la poêle.",
+            "action": "Ajouter 30 ml de plus de liquide, recouvrir et cuire encore 5 minutes sur la chaleur la plus basse possible."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain est séparé et entièrement cuit avec un léger al dente donner. Le riz sent le beurre, le curry et le lait de poisson fumé. Aucun liquide ne reste.",
+            "action": "Pliez dans le poisson, les œufs, la crème et le persil."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz est entaillé, musqué, et les grains se sont brisés. La poêle sent l'amidon brûlé sur le fond.",
+            "action": "Plier doucement dans les autres ingrédients afin de réduire au minimum la dégradation. Fond brûlé: cuillère du haut seulement."
+          }
+        ]
+      },
+      "feelCue": "Les basmati cuits correctement doivent avoir le ressort le plus faible lorsqu'ils sont pressés entre le pouce et l'index — doux tout au long de la pâte, mais pas écraser."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plier",
+      "inputs": [
+        "curried_rice_base",
+        "poached_haddock",
+        "soft_boiled_eggs",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "finished_kedgeree",
+      "instructions": "Si vous utilisez de la crème, versez-la sur le riz et pliez doucement avec une large spatule. Ajoutez l'aiglefin feuilleté en gros morceaux et pliez deux ou trois fois — vous voulez des morceaux, pas de la pâte. Ajouter la moitié du persil. Repliez-vous. Goûtez et ajustez le sel et le jus de citron. Disposer les quartiers d'oeufs sur le dessus, disperser le persil restant, et amener la casserole à la table avec les moitiés de citron à côté. Kedgeree est traditionnellement servi au petit déjeuner ou au brunch, chaud mais pas hurlant chaud.",
+      "visualCue": {
+        "primaryTarget": "Le riz doré est recouvert de gros morceaux d'aiglefin blanc et ambré, de persil vert vif dispersé dans l'ensemble et de quartiers d'oeufs pâles disposés sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz a l'air pâle et le poisson a disparu en fines lambeaux de surpliage. Le plat est gris et homogène.",
+            "action": "Arrêtez de plier immédiatement. Ajouter plus de persil pour la couleur et arranger les quartiers d'oeufs bien en vue pour le contraste visuel."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des textures distinctes visibles : grains de riz séparés, flocons de poissons reconnaissables, herbes vertes, quartiers jaunes dorés. La couleur est chaude ambre-or. L'odeur est riche, fumée et épicée.",
+            "action": "Servir immédiatement ou maintenir couvert à feu très doux pendant 10 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz est en train de s'écraser. Le poisson a été déchiqueté pour coller et les œufs ont cassé.",
+            "action": "Appuyez dans un plat de service et garnissez généreusement pour restaurer l'attrait visuel."
+          }
+        ]
+      },
+      "feelCue": "Chaque portion doit avoir des textures contrastées en une seule cuillère: la légère résistance des grains de riz, le rendement tendre des flocons d'aiglefin et le faible apport de jaune d'œuf."
+    }
+  ]
 };

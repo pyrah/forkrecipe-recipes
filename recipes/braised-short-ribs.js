@@ -1,136 +1,339 @@
 export default {
-  repoId: "master_french_braisedshortribs_001",
-  parentRepoId: null,
-  slug: "braised-short-ribs",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Wine-Braised Beef Short Ribs",
-  description: "Bone-in beef short ribs seared to a mahogany crust, then submerged in a full bottle of red wine and left to surrender slowly in a low oven until the collagen dissolves into silken richness and the meat slides from the bone at the touch of a spoon.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "proteins",
-  tags: ["beef", "braise", "french", "short-ribs", "red-wine", "slow-cook", "winter"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "4 hr 45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in beef short ribs (English cut)",       ratioValue: 1800, defaultUnit: "g", substitutions: ["beef chuck, bone-in"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Kosher salt",                                 ratioValue: 18,   defaultUnit: "g", substitutions: ["fine sea salt"] },
-    { ingId: "ing_03", role: "Spice",     name: "Black pepper, coarsely ground",               ratioValue: 5,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Neutral oil (grapeseed or canola)",           ratioValue: 30,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Yellow onion, roughly chopped",               ratioValue: 200,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Carrot, roughly chopped",                     ratioValue: 150,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Celery stalks, roughly chopped",              ratioValue: 100,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Allium",    name: "Garlic cloves, smashed",                     ratioValue: 30,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Umami",     name: "Tomato paste",                               ratioValue: 40,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Acid",      name: "Full-bodied red wine (Syrah or Cabernet)",   ratioValue: 750,  defaultUnit: "g", substitutions: ["Burgundy", "Côtes du Rhône"] },
-    { ingId: "ing_11", role: "Liquid",    name: "Beef or veal stock",                         ratioValue: 500,  defaultUnit: "g", substitutions: ["chicken stock"] },
-    { ingId: "ing_12", role: "Herb",      name: "Bouquet garni (thyme, bay, rosemary, parsley)", ratioValue: 15, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_french_braisedshortribs_001",
+  "parentRepoId": null,
+  "slug": "braised-short-ribs",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Côtes courtes de boeuf braisé de vin",
+  "description": "Des côtes courtes de bœuf désossées cousues à une croûte d'acajou, puis submergées dans une bouteille pleine de vin rouge et laissées lentement dans un four bas jusqu'à ce que le collagène se dissout en richesse soyeuse et que la viande glisse de l'os au toucher d'une cuillère.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "proteins",
+  "tags": [
+    "boeuf",
+    "braise",
+    "français",
+    "côtes courtes",
+    "Vin rouge",
+    "Cuisson lente",
+    "hiver"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "4 hr 45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Season",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "seasoned_ribs",
-      instructions: "Pat each short rib completely dry with paper towels — any surface moisture will steam rather than sear. Season aggressively on all six sides with kosher salt and coarse black pepper, pressing the seasoning into the meat. Rest at room temperature for at least 30 minutes, or salt the day before and refrigerate uncovered overnight for deeper seasoning and a drier surface (which sears better). Preheat the oven to 160 C (325 F).",
-      visualCue: {
-        primaryTarget: "Surface of the seasoned ribs",
-        spectrum: [
-          { state: "Underdone", description: "Surface still looks wet and glistening. Salt has not had time to draw surface moisture out and be reabsorbed.", action: "Rest longer — at least 20 more minutes. A wet surface will steam in the pan and prevent browning." },
-          { state: "Perfect",   description: "Surface is dry and matte, with a faint tacky quality. Pepper is evenly distributed. Ribs feel slightly firmer from the salt.", action: "Proceed to searing." },
-          { state: "Overdone",  description: "Ribs have been heavily salted and left more than 24 hours — surface looks slightly wet again as the drawn moisture has come back out.", action: "Pat dry again with paper towels before searing." },
-        ],
-      },
-      feelCue: "Press the surface of the rib — it should feel dry and slightly sticky under your fingertip, like the skin of a dry-aged steak, not wet or slick.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Côtes courtes de bœuf osseux (cut anglais)",
+      "ratioValue": 1800,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Bouchée de bœuf, désossée"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["seasoned_ribs", "ing_04"],
-      outputState: "seared_ribs",
-      instructions: "Heat a large Dutch oven or heavy braiser over high heat. Add the oil and heat until smoking. Working in batches of two or three ribs at a time — never crowd the pan — sear each rib on all four meaty sides and the two bone-end faces. Allow each side 3 to 4 minutes undisturbed contact with the pan before turning. Total searing time per batch: 15 to 18 minutes. Transfer the seared ribs to a plate. Do not clean the pot — the fond is critical.",
-      visualCue: {
-        primaryTarget: "Crust color on each face of the ribs",
-        spectrum: [
-          { state: "Underdone", description: "Ribs are grey-brown, steaming. They look boiled, not seared. The pan is too crowded or not hot enough.", action: "Remove some ribs to sear in smaller batches. Increase heat to high and let the pan recover for 2 minutes before the next batch." },
-          { state: "Perfect",   description: "Each seared face is a deep mahogany, almost chocolate brown, with a hard, lacquered crust. A thin smoke haze over the pot. The kitchen smells of caramelized beef.", action: "Set aside and sear the next batch." },
-          { state: "Overdone",  description: "Crust is black on the edges and the fond is burning, not caramelizing. Acrid smoke.", action: "Remove ribs. Deglaze the pot with wine to lift the fond immediately before it becomes bitter." },
-        ],
-      },
-      feelCue: "When a rib releases cleanly from the pan without sticking — without forcing — it is ready to turn. Early release attempts will tear the crust; the meat tells you when it is ready.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 18,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel de mer fin"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sauté",
-      inputs: ["ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "soffritto",
-      instructions: "In the same pot with all the accumulated fond, reduce heat to medium. Add the onion, carrot, and celery. Cook for 8 minutes, stirring occasionally and scraping the brown bits from the bottom, until the vegetables are deeply softened and beginning to brown. Add the garlic and cook 1 more minute. Push everything to the sides and add the tomato paste to the center. Cook the paste for 2 to 3 minutes until it darkens from red to brick-brown (pinçage). Stir into the vegetables.",
-      visualCue: {
-        primaryTarget: "Color of the vegetables and the tomato paste",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are translucent but still firm. Tomato paste is still bright red. The fond has lifted but not caramelized.", action: "Keep cooking — the vegetables need to soften further to melt into the braise liquid." },
-          { state: "Perfect",   description: "Vegetables are deeply golden at the edges. Tomato paste has gone from red to a dark reddish-brown. The bottom of the pot is coated in a rich, dark fond.", action: "Deglaze with the wine immediately." },
-          { state: "Overdone",  description: "Vegetables are charred, paste is black. Bitter smell dominates.", action: "Discard the vegetables, wipe the pot, and start the soffritto over with fresh aromatics." },
-        ],
-      },
-      feelCue: "Press a piece of carrot with the back of a spoon — it should yield completely with almost no resistance, signaling that the vegetables have fully released their sugars into the fond.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Poivre noir, grossièrement moulu",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Deglaze",
-      inputs: ["soffritto", "ing_10"],
-      outputState: "wine_base",
-      instructions: "Pour in the entire bottle of red wine. Bring to a boil, scraping every dark bit from the pot bottom. Let the wine reduce by half over medium-high heat — about 15 minutes — until the raw alcohol smell has burned off and the liquid smells of dark fruit and structure rather than vinegar. Add the beef stock and the bouquet garni.",
-      visualCue: {
-        primaryTarget: "Volume and aroma of the wine reduction",
-        spectrum: [
-          { state: "Underdone", description: "The wine has barely reduced. It smells sharp and alcoholic — like a glass of wine, not a braise.", action: "Continue reducing vigorously. Raw wine in a braise produces a sharp, astringent result." },
-          { state: "Perfect",   description: "The liquid has visibly thickened and reduced by roughly half. Deep purple-red with a glossy surface. Aroma is round and fruity — no harsh alcohol edge.", action: "Nestle the ribs into the liquid and add the stock." },
-          { state: "Overdone",  description: "Reduced too far — the wine has become syrupy and very sweet, with a jammy, cooked-fruit smell.", action: "Add the stock now to dilute before adding the ribs." },
-        ],
-      },
-      feelCue: "Dip a finger into the reduced wine (when cooled slightly on a spoon) — it should feel slightly thicker than water, coating the fingertip with a faint purple stain that does not immediately wipe away.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile neutre (grape graine ou canola)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Braise",
-      inputs: ["wine_base", "seared_ribs", "ing_11", "ing_12"],
-      outputState: "braised_ribs",
-      instructions: "Nestle the seared short ribs into the wine base, bone-side down. They should be at least two-thirds submerged — add more stock or water if not. Add the bouquet garni. Bring to a simmer on the stovetop, then cover with a tight-fitting lid and transfer to the preheated oven at 160 C (325 F). Braise for 3 to 3.5 hours, turning the ribs once halfway through. They are done when the meat has fully separated from the bone and a skewer or cake tester passes through with zero resistance.",
-      visualCue: {
-        primaryTarget: "Texture of the meat and behavior of the bones",
-        spectrum: [
-          { state: "Underdone", description: "Bones are still firmly attached. Meat resists a skewer with noticeable push-back. Braising liquid is still thin and wine-purple.", action: "Replace the lid and return to the oven. Test again in 30-minute increments." },
-          { state: "Perfect",   description: "Bones have pulled loose from the meat by at least 1 cm and can be slid free with a gentle tug. Meat trembles when the pot is jostled. Braising liquid has deepened to a mahogany brown and has a glossy, gelatin-rich surface sheen.", action: "Remove the ribs carefully with a wide spatula. Strain and reduce the braising liquid into a sauce." },
-          { state: "Overdone",  description: "Ribs have disintegrated — the meat has fallen off the bone into shreds and the surface is dry. Braising liquid has reduced too much in the oven.", action: "Salvage the shredded meat for a different application (pasta ragu, tacos). The braising liquid, if not burnt, will still make an excellent sauce." },
-        ],
-      },
-      feelCue: "Insert a thin metal skewer into the thickest part of a rib — it should slide in and out with the ease of pushing into room-temperature butter, with no pull or gristle resistance at any point.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon jaune, haché approximativement",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_6",
-      action: "Reduce",
-      inputs: ["braised_ribs"],
-      outputState: "finished_short_ribs",
-      instructions: "Transfer the ribs to a warm plate, tented loosely with foil. Strain the braising liquid through a fine-mesh strainer into a wide saucepan, pressing the spent vegetables to extract every drop. Bring to a vigorous simmer and reduce until the sauce coats a spoon cleanly and has a lacquered appearance — typically reducing by half to two-thirds over 15 to 20 minutes. Adjust salt. Spoon the glossy sauce over the ribs and serve immediately, or rest the ribs in the strained sauce in the refrigerator overnight (they reheat better the next day).",
-      visualCue: {
-        primaryTarget: "Consistency and gloss of the reduced sauce",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and wine-purple, runs off the spoon immediately. No body. Tastes watery despite the color.", action: "Continue reducing. A wider pan speeds reduction — surface area is key." },
-          { state: "Perfect",   description: "Sauce is a deep mahogany, almost black, with a glossy ribbon sheen. Coats the back of a spoon thickly; a finger drawn through the coating leaves a clean, dry line that holds. Tastes intensely of beef, wine, and thyme.", action: "Taste, adjust salt, and plate." },
-          { state: "Overdone",  description: "Sauce is very dark and syrup-thick. A slightly burnt, bitter edge when tasted. Sticks to the spoon in a dry, caramel-like way.", action: "Add a splash of stock or water and stir vigorously. Taste again — the sweetness and bitterness should rebalance." },
-        ],
-      },
-      feelCue: "Take a small spoonful of the reducing sauce and let it cool on a cold plate for 10 seconds — perfect reduction sets to a soft, trembling gel; under-reduction stays liquid; over-reduction forms a rigid caramel wafer.",
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Carotte, grossièrement hachée",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri, hachées approximativement",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Girofles d'ail brisées",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Acid",
+      "name": "Vin rouge corsé (Syrah ou Cabernet)",
+      "ratioValue": 750,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Bourgogne",
+        "Côtes du Rhône"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Liquid",
+      "name": "Viande bovine",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "bouillon de poulet"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Herb",
+      "name": "Bouquet garni (thyme, baie, romarin, persil)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saison",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "seasoned_ribs",
+      "instructions": "Chaque côte courte est complètement sèche avec des serviettes en papier. Assaisonner agressivement sur les six côtés avec du sel casher et du poivre noir grossier, en pressant l'assaisonnement dans la viande. Reposez-vous à température ambiante pendant au moins 30 minutes, ou salez la veille et réfrigérez-vous à découvert pendant la nuit pour un assaisonnement plus profond et une surface plus sèche (ce qui vaut mieux). Préchauffer le four à 160 C (325 F).",
+      "visualCue": {
+        "primaryTarget": "Surface des côtes assaisonnées",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface semble encore humide et scintillante. Le sel n'a pas eu le temps de retirer l'humidité de surface et d'être réabsorbé.",
+            "action": "Reposez plus longtemps — au moins 20 minutes de plus. Une surface humide va vapeur dans la poêle et empêcher le brunissement."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est sèche et mate, avec une faible qualité collante. Le poivre est uniformément distribué. Les côtes se sentent légèrement plus fermes du sel.",
+            "action": "Allez à la mer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les côtes ont été fortement salées et laissées plus de 24 heures — la surface semble légèrement mouillée à nouveau lorsque l'humidité tirée est revenue.",
+            "action": "Pat sécher à nouveau avec des serviettes en papier avant de saisir."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la surface de la côte – elle doit être sèche et légèrement collante sous le bout des doigts, comme la peau d'un steak d'âge sec, pas mouillée ou lissée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "seasoned_ribs",
+        "ing_04"
+      ],
+      "outputState": "seared_ribs",
+      "instructions": "Chauffer un grand four hollandais ou un brasseur lourd à feu vif. Ajouter l'huile et chauffer jusqu'à ce qu'il fume. Travaillant en lots de deux ou trois côtes à la fois — ne jamais fouler la poêle — semer chaque côte sur les quatre côtés charnus et les deux faces osseuses. Laisser chaque côté 3 à 4 minutes de contact non perturbé avec la poêle avant de tourner. Temps total de mise en mer par lot : 15 à 18 minutes. Transférer les côtes dans une assiette. Ne pas nettoyer le pot — le fond est critique.",
+      "visualCue": {
+        "primaryTarget": "Couleur croustillante sur chaque face des côtes",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les côtes sont brun gris, à la vapeur. Ils ont l'air bouillis, pas séchés. La poêle est trop bondée ou pas assez chaude.",
+            "action": "Enlever quelques côtes pour les saisir en petits lots. Augmenter la chaleur et laisser la poêle récupérer pendant 2 minutes avant le prochain lot."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque visage mariné est un acajou profond, presque brun chocolat, avec une croûte laquée dure. Une fumée mince brume sur le pot. La cuisine sent le boeuf caramélisé.",
+            "action": "Réserver et saisir le prochain lot."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est noire sur les bords et le fond brûle, pas caramélisant. Fumée acride.",
+            "action": "Enlevez les côtes. Déglacer le pot avec du vin pour soulever le fond immédiatement avant qu'il ne devienne amer."
+          }
+        ]
+      },
+      "feelCue": "Lorsqu'une côte se libère proprement de la poêle sans coller — sans forcer — elle est prête à tourner. Les tentatives de libération précoce déchireront la croûte; la viande vous dit quand elle est prête."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "soffritto",
+      "instructions": "Dans la même casserole avec tout le fond accumulé, réduire la chaleur à moyen. Ajouter l'oignon, la carotte et le céleri. Cuire 8 minutes en remuant occasionnellement et en grattant les morceaux bruns du fond, jusqu'à ce que les légumes soient profondément ramollis et commencent à brunir. Ajouter l'ail et cuire encore 1 minute. Poussez tout sur les côtés et ajoutez la pâte de tomate au centre. Cuire la pâte pendant 2 à 3 minutes jusqu'à ce qu'elle s'assombrisse du rouge au brun brique (pinçage). Incorporer les légumes.",
+      "visualCue": {
+        "primaryTarget": "Couleur des légumes et de la pâte de tomate",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont translucides mais toujours fermes. La pâte de tomates est encore rouge vif. Le fond s'est levé mais pas caramélisé.",
+            "action": "Conservez la cuisson — les légumes doivent encore s'assouplir pour fondre dans le liquide braisé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les légumes sont profondément dorés aux bords. La pâte de tomates est passée du rouge au brun rouge foncé. Le fond du pot est recouvert d'un fond riche et sombre.",
+            "action": "Déglacer avec le vin immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont carbonisés, la pâte est noire. L'odeur amère domine.",
+            "action": "Jeter les légumes, essuyer le pot, et recommencer le soffritto avec des aromatiques frais."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau de carotte avec l'arrière d'une cuillère — il devrait donner complètement sans résistance, signalant que les légumes ont complètement libéré leurs sucres dans le fond."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Déglacement",
+      "inputs": [
+        "soffritto",
+        "ing_10"
+      ],
+      "outputState": "wine_base",
+      "instructions": "Verser toute la bouteille de vin rouge. Porter à ébullition, en grattant chaque partie sombre du fond du pot. Laisser le vin réduire de moitié à feu moyen-élevé — environ 15 minutes — jusqu'à ce que l'odeur d'alcool brut ait brûlé et les odeurs liquides de fruits foncés et de structure plutôt que de vinaigre. Ajouter le bouillon de bœuf et le bouquet garni.",
+      "visualCue": {
+        "primaryTarget": "Volume et arôme de la réduction du vin",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le vin a à peine diminué. Il sent aigu et alcoolique — comme un verre de vin, pas un braise.",
+            "action": "Continuer à réduire vigoureusement. Le vin cru en braise produit un résultat aigu et astringent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le liquide a visiblement épaissi et réduit d'environ la moitié. Rouge-violet profond avec une surface brillante. L'arôme est rond et fruité — pas de bord dur d'alcool.",
+            "action": "Nettoyez les côtes dans le liquide et ajoutez le stock."
+          },
+          {
+            "state": "Overdone",
+            "description": "Réduit trop loin — le vin est devenu sirupeux et très doux, avec une odeur de confiture, de fruits cuits.",
+            "action": "Ajouter le stock maintenant pour diluer avant d'ajouter les côtes."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt dans le vin réduit (lorsqu'il est légèrement refroidi sur une cuillère) — il doit se sentir légèrement plus épais que l'eau, enrobant le bout du doigt d'une tache mauve faible qui ne s'efface pas immédiatement."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Brise",
+      "inputs": [
+        "wine_base",
+        "seared_ribs",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "braised_ribs",
+      "instructions": "Nettoyez les côtes courtes dans la base de vin, côté osseux. Ils devraient être au moins les deux tiers submergés — ajouter plus de stock ou d'eau si non. Ajouter le bouquet garni. Porter à la mijoter sur la cuisinière, puis couvrir avec un couvercle serré et transférer au four préchauffé à 160 C (325 F). Braser pendant 3 à 3,5 heures, tourner les côtes une fois à mi-chemin. Ils sont réalisés lorsque la viande est complètement séparée de l'os et qu'une brochette ou un testeur de gâteau passe à travers avec une résistance nulle.",
+      "visualCue": {
+        "primaryTarget": "Texture de la viande et comportement des os",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les os sont toujours solidement attachés. La viande résiste à une brochette avec repousse sensible. Le liquide de cuisson est encore mince et pourpre.",
+            "action": "Remplacer le couvercle et retourner au four. Testez de nouveau par paliers de 30 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les os ont été arrachés de la viande d'au moins 1 cm et peuvent être glissés avec un remorqueur doux. La viande tremble quand le pot est bouché. Le liquide de braisage s'est approfondi jusqu'à un brun acajou et a une surface brillante et riche en gélatine.",
+            "action": "Retirer soigneusement les côtes avec une large spatule. Retirez et réduisez le liquide de cuisson dans une sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les côtes se sont désintégrées — la viande est tombée de l'os en morceaux et la surface est sèche. Le liquide de cuisson a trop réduit dans le four.",
+            "action": "Sauver la viande déchiquetée pour une application différente (pasta ragu, tacos). Le liquide de cuisson, sinon brûlé, fera encore une excellente sauce."
+          }
+        ]
+      },
+      "feelCue": "Insérez une brochette en métal mince dans la partie la plus épaisse d'une côte — elle devrait glisser dans et hors avec la facilité de pousser dans le beurre à température ambiante, sans résistance à la traction ou à l'arrimage."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Réduire",
+      "inputs": [
+        "braised_ribs"
+      ],
+      "outputState": "finished_short_ribs",
+      "instructions": "Transférer les côtes dans une assiette chaude, recouverte de papier. Placer le liquide de cuisson dans une grande casserole, en pressant les légumes usés pour en extraire chaque goutte. Portez à frémir vigoureusement et réduisez jusqu'à ce que la sauce enrobe une cuillère proprement et ait un aspect laqué, réduisant généralement de moitié à deux tiers sur 15 à 20 minutes. Réglez le sel. Déposer la sauce brillante sur les côtes et servir immédiatement, ou reposer les côtes dans la sauce tendue au réfrigérateur pendant la nuit (ils réchauffent mieux le lendemain).",
+      "visualCue": {
+        "primaryTarget": "Cohérence et gloss de la sauce réduite",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et pourpre, s'écoule immédiatement de la cuillère. Pas de corps. Goûte aqueux malgré la couleur.",
+            "action": "Continuez à réduire. Une réduction plus large de la vitesse du bac — la surface est essentielle."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est une acajou profonde, presque noire, avec un ruban brillant. Enveloppe l'arrière d'une cuillère épaissement; un doigt tiré à travers le revêtement laisse une ligne propre et sèche qui tient. Goûte intensément de boeuf, vin et thym.",
+            "action": "Goûtez, ajustez le sel et l'assiette."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est très foncée et épaisse au sirop. Un bord légèrement brûlé et amer au goût. Elle colle à la cuillère d'une manière sèche, semblable au caramel.",
+            "action": "Ajouter un jet de bouillon ou d'eau et remuer vigoureusement. Goûtez encore — la douceur et l'amertume devraient rééquilibrer."
+          }
+        ]
+      },
+      "feelCue": "Prenez une petite cuillère de la sauce réductrice et laissez-la refroidir sur une assiette froide pendant 10 secondes – des ensembles de réduction parfaits pour un gel mou et tremblant ; une sous-réduction reste liquide ; une surréduction forme une galette rigide au caramel."
+    }
+  ]
 };

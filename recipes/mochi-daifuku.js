@@ -1,78 +1,193 @@
 export default {
-  repoId: "master_japanese_mochi_daifuku_001",
-  parentRepoId: null,
-  slug: "mochi-daifuku",
-  author: "ForkRecipe Kitchen",
-  title: "Strawberry Daifuku Mochi",
-  description: "A whole strawberry nestled in sweet red bean paste, then enveloped in a pillow of yielding, dusted mochi rice cake — the most celebrated of Japanese sweets.",
-  cuisine: "Japanese",
-  culture: "Wagashi",
-  category: "desserts",
-  tags: ["mochi", "japanese", "dessert", "strawberry", "sweet", "rice"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 0, sour: 1, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Shiratamako (glutinous rice flour)",     ratioValue: 100, defaultUnit: "parts", substitutions: ["mochiko (slightly coarser texture)"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Caster sugar",                           ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",    name: "Water",                                  ratioValue: 90,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Sweetener", name: "Tsubuan or koshian (sweet red bean paste)", ratioValue: 120, defaultUnit: "parts", substitutions: ["white bean paste (shiro-an)"] },
-    { ingId: "ing_05", role: "Acid",      name: "Fresh strawberries (hulled, uniform size)", ratioValue: 80,  defaultUnit: "parts", substitutions: ["seedless grapes", "whole raspberries"] },
-    { ingId: "ing_06", role: "Starch",    name: "Katakuriko (potato starch, for dusting)", ratioValue: 20,  defaultUnit: "parts", substitutions: ["cornstarch"] },
+  "repoId": "master_japanese_mochi_daifuku_001",
+  "parentRepoId": null,
+  "slug": "mochi-daifuku",
+  "author": "ForkRecipe Kitchen",
+  "title": "Fraises Daifuku Mochi",
+  "description": "Toute une fraise nichée dans de la pâte de haricots rouges doux, puis enveloppée dans un oreiller de gâteau de riz à mochi, le plus célèbre des bonbons japonais.",
+  "cuisine": "Japonais",
+  "culture": "Wagashi",
+  "category": "desserts",
+  "tags": [
+    "Mochi",
+    "Japonais",
+    "dessert",
+    "fraises",
+    "doux",
+    "riz"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 0,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Shape",
-      inputs: ["ing_04", "ing_05"],
-      outputState: "anko_wrapped_strawberries",
-      instructions: "Divide the anko (bean paste) into portions — approximately 25g per daifuku. Flatten each portion into a disc in your palm. Place a hulled strawberry point-down in the center and wrap the anko up around it, pinching to seal at the base of the strawberry. The strawberry tip should just be visible or barely covered. Refrigerate wrapped strawberries for 15 minutes to firm.",
-      visualCue: {
-        primaryTarget: "A smooth, compact ball of bean paste fully encasing the strawberry, with a slight point at the top where the hull was — no tears, no gaps.",
-        spectrum: [
-          { state: "Underdone", description: "Anko disc is too thick and the strawberry pokes through one side; coverage is uneven.", action: "Re-wrap with a thinner, wider disc of anko and press more carefully." },
-          { state: "Perfect",   description: "Smooth, seamless anko exterior. The ball sits flat on the base. When pressed very gently, you can feel the strawberry inside.", action: "Refrigerate for 15 minutes; cold anko is firmer and easier to handle when wrapping mochi." },
-          { state: "Overdone",  description: "Anko applied in too thick a layer; the ratio of paste to strawberry is out of balance.", action: "Trim excess anko from the seam side before wrapping in mochi." },
-        ],
-      },
-      feelCue: "The chilled anko-wrapped strawberry should feel solid and slightly cool in the hand — a quiet, dense weight, smooth without tackiness.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Shiratamako (farine de riz glutineux)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mochiko ( texture légèrement plus grossière)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Steam",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "cooked_mochi",
-      instructions: "Whisk shiratamako, sugar, and water together in a microwave-safe bowl until smooth with no lumps. Cover loosely with plastic wrap and microwave on high for 2 minutes. Remove, stir thoroughly with a wet spatula, then microwave for a further 1 minute. Stir again — the mochi should be fully translucent with no white, opaque patches. If white patches remain, microwave in 30-second bursts, stirring each time. Alternatively, steam in a covered steamer for 20 minutes, stirring halfway through.",
-      visualCue: {
-        primaryTarget: "A fully translucent, uniformly glossy mass with no white or opaque spots — stretchy and pulling away from the bowl cleanly.",
-        spectrum: [
-          { state: "Underdone", description: "White, chalky opaque patches throughout; mochi tears easily and feels grainy.", action: "Continue microwaving in 30-second increments, stirring vigorously between each, until fully translucent." },
-          { state: "Perfect",   description: "Shiny, fully translucent, elastic mass. Stretches smoothly without tearing. Smells faintly of warm cooked rice. Very hot.", action: "Work quickly while hot — mochi stiffens rapidly as it cools." },
-          { state: "Overdone",  description: "Mochi has dried and begun to skin over; surface is tacky but the interior is stiff.", action: "Dip hands in water and knead briefly; add 1 tsp water and microwave 20 seconds to soften." },
-        ],
-      },
-      feelCue: "Properly cooked mochi is intensely hot and stretches like warm bubble gum — it resists pulling, then yields smoothly, with a satisfying elastic tension.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Shape",
-      inputs: ["cooked_mochi", "anko_wrapped_strawberries", "ing_06"],
-      outputState: "finished_daifuku",
-      instructions: "Dust a work surface generously with katakuriko. Turn the hot mochi out onto the dusted surface — it will be extremely sticky and very hot, so work quickly. Dust the top and your hands. Divide into equal portions (approximately 40g each) using a dusted dough cutter or scissors. Stretch each portion into a disc about 10 cm wide. Place an anko-wrapped strawberry in the center, point-down. Gather the mochi edges up and over, pinching firmly to seal at the base. Pinch point downward. Dust the finished daifuku with more katakuriko to prevent sticking.",
-      visualCue: {
-        primaryTarget: "A smooth, round pillow of white mochi with a clean sealed base, coated in a fine dusting of potato starch — barely tacky to the touch.",
-        spectrum: [
-          { state: "Underdone", description: "Mochi tore during shaping and the anko is visible; seal is broken.", action: "Press the torn edges together and pinch firmly; a small patch of double-layered mochi at the seal is normal." },
-          { state: "Perfect",   description: "Smooth, domed top. Sealed base is tidy. Mochi is yielding when pressed and springs back. Dusting of starch is even, not clumped.", action: "Allow to rest 5 minutes at room temperature before serving. Best eaten within 4 hours." },
-          { state: "Overdone",  description: "Mochi cooled too much before shaping — it tore or cracked at the edges and is stiff.", action: "Microwave the remaining mochi for 15 seconds to restore pliability." },
-        ],
-      },
-      feelCue: "A finished daifuku should give under a gentle squeeze and push back slowly — a soft, yielding resistance, like pressing a firm marshmallow, with the subtle firmness of the strawberry inside.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 90,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Tsubuan ou koshian (pâte de haricots rouges sucrée)",
+      "ratioValue": 120,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pâte de haricots blancs"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Fraises fraîches (à coque, calibre uniforme)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "raisins sans pépins",
+        "framboises entières"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Starch",
+      "name": "Katakuriko (amidon de pomme de terre, pour la poussière)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fécule de maïs"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Forme",
+      "inputs": [
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "anko_wrapped_strawberries",
+      "instructions": "Divisez l'anko (pâte de haricots) en portions — environ 25g par daifuku. Aplatissez chaque portion dans un disque dans votre paume. Placer une fraise coquillée point vers le bas au centre et envelopper l'anko autour d'elle, pinçant pour sceller à la base de la fraise. La pointe de fraise doit être juste visible ou à peine couverte. Réfrigérer les fraises emballées pendant 15 minutes pour les fermer.",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte de haricots lisse et compacte encaissant complètement la fraise, avec un léger point au sommet où se trouvait la coque — pas de larmes, pas de trous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le disque d'Anko est trop épais et la fraise passe d'un côté à l'autre; la couverture est inégale.",
+            "action": "Re-envelopper avec un disque plus mince et plus large d'anko et appuyer plus soigneusement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Extérieur lisse, sans soudure anko. La balle est à plat sur la base. En appuyant très doucement, vous pouvez sentir la fraise à l'intérieur.",
+            "action": "Réfrigérer pendant 15 minutes; l'anko froid est plus ferme et plus facile à manipuler lors de l'emballage des mochi."
+          },
+          {
+            "state": "Overdone",
+            "description": "Anko appliqué dans une couche trop épaisse; le rapport de la pâte à la fraise est hors d'équilibre.",
+            "action": "Couper l'excès d'anko du côté de la couture avant de l'envelopper en mochi."
+          }
+        ]
+      },
+      "feelCue": "La fraise fraîchement enrobée d'anko doit se sentir solide et légèrement fraîche dans la main — un poids calme, dense, lisse sans tact."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "vapeur",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "cooked_mochi",
+      "instructions": "Fouetter le shiratamako, le sucre et l'eau ensemble dans un bol à micro-ondes jusqu'à ce qu'ils soient lisses sans grumeaux. Couvrir lâchement avec un enveloppement en plastique et un micro-ondes haut pendant 2 minutes. Retirer, mélanger soigneusement avec une spatule humide, puis le micro-ondes pendant 1 minute. Remuer à nouveau — le mochi doit être entièrement translucide sans taches blanches et opaques. Si des taches blanches demeurent, le micro-ondes éclate en 30 secondes, remuant à chaque fois. Alternativement, vapeur dans un vapeur couvert pendant 20 minutes, en remuant à mi-chemin.",
+      "visualCue": {
+        "primaryTarget": "Une masse entièrement translucide, uniformément brillante, sans taches blanches ou opaques, stretchy et tirant du bol proprement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les taches blanches et crayeuses sont opaques; les mochis se déchirent facilement et sont granuleuses.",
+            "action": "Continuer le micro-enroulement en 30 secondes, en remuant vigoureusement entre chacun, jusqu'à ce qu'il soit complètement translucide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Masse élastique brillante, entièrement translucide. S'étire en douceur sans déchirer. Ça sent peu le riz chaud cuit. Très chaud.",
+            "action": "Travailler rapidement pendant la chaleur — le mochi se raidit rapidement à mesure qu'il refroidit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mochi a séché et a commencé à peler; la surface est tacky mais l'intérieur est raide.",
+            "action": "Plonger les mains dans l'eau et pétrir brièvement; ajouter 1 c. à thé et micro-ondes 20 secondes pour adoucir."
+          }
+        ]
+      },
+      "feelCue": "Le mochi bien cuit est intensément chaud et s'étire comme du chewing-gum à bulles chaudes – il résiste à la traction, puis donne en douceur, avec une tension élastique satisfaisante."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "cooked_mochi",
+        "anko_wrapped_strawberries",
+        "ing_06"
+      ],
+      "outputState": "finished_daifuku",
+      "instructions": "Poussez généreusement une surface de travail avec katakuriko. Tournez le moche chaud sur la surface de la poussière — il sera extrêmement collant et très chaud, donc travaillez rapidement. Poussez le haut et vos mains. Divisez en portions égales (environ 40 g chacune) à l'aide d'un coupe-pâtes ou de ciseaux. Étendez chaque portion dans un disque d'environ 10 cm de largeur. Placez une fraise enrobée d'anko au centre, point vers le bas. Rassembler les bords de mochi de haut en haut, pincer fermement pour sceller à la base. Pinch point vers le bas. Poussez le daifuku fini avec plus de katakuriko pour éviter de coller.",
+      "visualCue": {
+        "primaryTarget": "Un oreiller rond et lisse de mochi blanc avec une base propre et scellée, recouvert d'une fine poussière de fécule de pomme de terre, à peine collant au toucher.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'anko est visible et le joint est brisé.",
+            "action": "Appuyez sur les bords déchirés et pincez fermement; un petit morceau de moche double couche au joint est normal."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, en forme. La base scellée est bien rangée. Mochi donne quand il est pressé et ressort. La pulvérisation de l'amidon n'est pas entachée.",
+            "action": "Laisser reposer 5 minutes à température ambiante avant de servir. Meilleur repas en 4 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mochi refroidit trop avant de façonner — il s'est déchiré ou fissuré aux bords et est raide.",
+            "action": "Micro-ondes les mochi restants pendant 15 secondes pour restaurer la pliabilité."
+          }
+        ]
+      },
+      "feelCue": "Un daifuku fini devrait donner sous une légère pression et repousser lentement — une résistance douce et induisante, comme presser un guimauve ferme, avec la fermeté subtile de la fraise à l'intérieur."
+    }
+  ]
 };

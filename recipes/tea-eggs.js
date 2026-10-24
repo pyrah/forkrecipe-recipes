@@ -1,97 +1,254 @@
 export default {
-  repoId: "master_chinese_tea_eggs_001",
-  parentRepoId: null,
-  slug: "tea-eggs",
-  author: "ForkRecipe Kitchen",
-  title: "Tea Eggs (Chá Yè Dàn)",
-  description: "Hard-boiled eggs cracked and simmered in a brew of black tea, soy, star anise, and cinnamon, developing a beautiful crackled marble pattern and a deeply savory, tea-smoky flavor.",
-  cuisine: "Chinese",
-  culture: "Chinese street food",
-  category: "eggs",
-  tags: ["eggs", "chinese", "tea", "marbled", "star anise", "street food"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "5 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 0, bitter: 2, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Large eggs (room temperature)",                              ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Liquid",    name: "Strong brewed black tea (Assam or Yunnan, double strength)", ratioValue: 80,  defaultUnit: "parts", substitutions: ["pu-erh tea for earthier flavor"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Dark soy sauce",                                            ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Light soy sauce",                                           ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Star anise (whole, 3-4 pieces)",                            ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Cinnamon stick",                                            ratioValue: 1,   defaultUnit: "parts", substitutions: ["cassia bark"] },
-    { ingId: "ing_07", role: "Spice",     name: "Whole cloves (3-4)",                                        ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Sichuan peppercorns (1 tsp, lightly crushed)",              ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Sweetener", name: "Rock sugar (small piece) or white sugar",                   ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Aromatic",  name: "Dried mandarin peel (chen pi) or fresh orange peel",        ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_chinese_tea_eggs_001",
+  "parentRepoId": null,
+  "slug": "tea-eggs",
+  "author": "ForkRecipe Kitchen",
+  "title": "Oeufs de thé (Chá Yè Dàn)",
+  "description": "Oeufs durs fissurés et mijotés dans un brassage de thé noir, soja, anis étoilé et cannelle, développant un beau motif de marbre craqué et une saveur profondément salée, fumée de thé.",
+  "cuisine": "Chinois",
+  "culture": "Nourriture de rue chinoise",
+  "category": "eggs",
+  "tags": [
+    "œufs",
+    "Chinois",
+    "thé",
+    "marbré",
+    "anis des étoiles",
+    "Alimentation de rue"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "5 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Boil",
-      inputs: ["ing_01"],
-      outputState: "hard_boiled_eggs",
-      instructions: "Place eggs in a single layer in a saucepan. Cover with cold water by 2 cm. Bring to a full boil over medium-high heat. Once boiling, cover and remove from heat. Let stand for exactly 10 minutes, then transfer to an ice bath for 5 minutes. The eggs should be fully hard-boiled with no grey ring at the yolk — they will be simmered further and need to start fully cooked.",
-      visualCue: {
-        primaryTarget: "A firm, fully set white and a bright yellow yolk with no translucent center and no grey-green ring at the yolk edge.",
-        spectrum: [
-          { state: "Underdone", description: "Yolk is still runny or jammy at the center; white is slightly wobbly.", action: "Return to boiling water for 2 more minutes." },
-          { state: "Perfect",   description: "Fully set yolk is bright golden yellow with no grey ring; white is firm and pulls cleanly away from the shell when peeled.", action: "Proceed immediately to cracking the shells." },
-          { state: "Overdone",  description: "Yolk has a grey-green ring and a sulfurous smell; whites are rubbery.", action: "Proceed anyway — the braising liquid will mask the sulfur and improve the flavor." },
-        ],
-      },
-      feelCue: "Hard-boiled eggs fresh from the ice bath feel solid and cool through the shell, with no soft spot when squeezed gently — the entire egg should feel uniformly firm.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Gros œufs (température ambiante)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Crack",
-      inputs: ["hard_boiled_eggs"],
-      outputState: "cracked_eggs",
-      instructions: "Using the back of a spoon, tap each egg all over its surface to create a fine network of cracks through the shell. The goal is to crack the shell without removing it — the shell must stay on to hold its shape during simmering. Cracks should be dense and close-set across the entire surface, like a cracked glaze on a ceramic piece.",
-      visualCue: {
-        primaryTarget: "A dense, even web of hairline cracks covering the entire shell surface with no large chunks removed or missing.",
-        spectrum: [
-          { state: "Underdone", description: "Cracks are sparse and widely spaced; large sections of uncracked shell remain; the braising liquid will not penetrate well.", action: "Continue tapping all over — pay special attention to the ends and equator of the egg." },
-          { state: "Perfect",   description: "The shell looks like a cracked glaze: dense, fine, even fractures across the whole surface. The shell is intact but the egg visible beneath in places.", action: "Lower carefully into the braising liquid." },
-          { state: "Overdone",  description: "Shell has broken away in large chunks, exposing bare egg white.", action: "Remove loose shell pieces; the exposed areas will absorb more color and the pattern will be irregular but still beautiful." },
-        ],
-      },
-      feelCue: "Tapping the egg with a spoon should produce a hollow sound that transitions to a duller thud as the shell fractures — tap gently with the back rather than the edge to avoid puncturing the white.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Thé noir brassé fort (Assam ou Yunnan, double force)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pu-erh thé pour une saveur plus terreuse"
+      ]
     },
     {
-      nodeId: "step_3", action: "Steep",
-      inputs: ["cracked_eggs", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "simmered_tea_eggs",
-      instructions: "Combine the strong black tea, both soy sauces, star anise, cinnamon, cloves, Sichuan peppercorns, sugar, and mandarin peel in a pot large enough to hold all the eggs in one layer. Bring to a simmer and add the cracked eggs. Simmer gently for 20 minutes — the shells should not bounce around. Remove from heat, let cool to room temperature in the liquid, then refrigerate in the braising liquid for a minimum of 4 hours, or overnight for the deepest color and flavor.",
-      visualCue: {
-        primaryTarget: "Eggs submerged in a dark, tea-brown braising liquid with visible spices; after simmering, the shell shows a darkening at the cracks.",
-        spectrum: [
-          { state: "Underdone", description: "After only 1-2 hours of steeping, the marble pattern is faint and the flavor is mild soy with little depth.", action: "Return to the refrigerator for at least 2-3 more hours; overnight is strongly preferred." },
-          { state: "Perfect",   description: "Braising liquid has darkened to a deep mahogany; eggs are a rich brown-black at the cracks with their original white showing in the pattern between.", action: "Peel carefully to reveal the marble pattern." },
-          { state: "Overdone",  description: "After more than 48 hours, the egg white has become overly salty and the texture slightly rubbery from the soy.", action: "Remove from liquid; eggs are still edible, just very strongly seasoned — pair with unseasoned rice." },
-        ],
-      },
-      feelCue: "After overnight steeping, the braising liquid smells like an intensely savory cup of spiced tea — the perfume of star anise and mandarin peel rises through the soy.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "sauce de soja foncé",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Peel",
-      inputs: ["simmered_tea_eggs"],
-      outputState: "finished_tea_eggs",
-      instructions: "Peel each egg under cold running water, removing the shell fragments and the inner membrane together. The revealed surface should show a striking marble pattern: dark brown-black staining along every crack line set against the pale amber of the stained egg white. Serve whole or halved, at room temperature or cold.",
-      visualCue: {
-        primaryTarget: "A beautiful crackled marble pattern of dark brown veins against an amber-stained white, the yolk a pale golden beige from the absorbed brine.",
-        spectrum: [
-          { state: "Underdone", description: "Marble pattern is faint and light grey rather than dark brown; the egg white is pale and barely seasoned.", action: "The pattern reveals the steeping time — very light means much shorter than the recommended time; re-steep in warmed braising liquid for 2 more hours." },
-          { state: "Perfect",   description: "Deep mahogany veins contrast with the amber-brown egg white; the yolk is pale and delicately flavored with tea and spice. A cross-section is visually striking.", action: "Serve as a snack, a ramen topping, or a bento component." },
-          { state: "Overdone",  description: "Egg white is uniformly dark brown with minimal marble contrast; the white is very firm and quite salty.", action: "Slice and serve over plain steamed rice or congee to balance the intense seasoning." },
-        ],
-      },
-      feelCue: "The surface of a perfectly steeped tea egg feels smooth and faintly waxy; the egg white is firm but not rubbery, and the outer millimeter carries the full complex flavor of the braising liquid.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "sauce de soja légère",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Anise d'étoile (en entier, 3-4 pièces)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Bâton de cannelle",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "écorce de cassie"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Girofles entiers (3-4)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Maïs poivré sichuan (1 c. à thé, légèrement broyé)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Sucre de roche (petite pièce) ou sucre blanc",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Peau de mandarine séchée (chen pi) ou d'orange fraîche",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "hard_boiled_eggs",
+      "instructions": "Mettre les œufs dans une seule couche dans une casserole. Couvrir d'eau froide de 2 cm. Porter à ébullition à feu moyen-vif. Une fois bouillant, couvrir et retirer du feu. Laisser reposer exactement 10 minutes, puis transférer dans un bain de glace pendant 5 minutes. Les œufs doivent être entièrement bouillis avec un anneau gris au jaune — ils seront mijotés plus loin et devront commencer à cuire complètement.",
+      "visualCue": {
+        "primaryTarget": "Un jaune blanc ferme et clair, sans centre translucide et sans anneau vert-gris au bord du jaune.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Yolk est toujours en rogne ou jammy au centre ; le blanc est légèrement agité.",
+            "action": "Retour à l'eau bouillante pendant 2 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le jaune entièrement serti est jaune d'or vif sans anneau gris; le blanc est ferme et s'éloigne proprement de la coquille lorsqu'il est pelé.",
+            "action": "Procédez immédiatement à la fissuration des coquilles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Yolk a un anneau gris-vert et une odeur sulfureuse; les blancs sont caoutchouteux.",
+            "action": "Procéder de toute façon — le liquide de braisage masquera le soufre et améliorera la saveur."
+          }
+        ]
+      },
+      "feelCue": "Les œufs durs, frais provenant du bain de glace, se sentent solides et frais à travers la coquille, sans tache molle lorsqu'ils sont pressés doucement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Crack",
+      "inputs": [
+        "hard_boiled_eggs"
+      ],
+      "outputState": "cracked_eggs",
+      "instructions": "En utilisant l'arrière d'une cuillère, tapotez chaque œuf sur toute sa surface pour créer un réseau fin de fissures à travers la coquille. L'objectif est de fendre la coquille sans la retirer — la coquille doit rester sur pour maintenir sa forme pendant la mijotation. Les fissures doivent être denses et serrées sur toute la surface, comme une glaçure fissurée sur une pièce en céramique.",
+      "visualCue": {
+        "primaryTarget": "Une toile dense, même de fissures de la ligne de cheveux couvrant toute la surface de la coquille sans gros morceaux enlevés ou manquants.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les fissures sont clairsemées et largement espacées; il reste de larges sections de coquilles non craquées; le liquide de braisement ne pénètre pas bien.",
+            "action": "Continuez à taper partout — prêtez une attention particulière aux extrémités et à l'équateur de l'œuf."
+          },
+          {
+            "state": "Perfect",
+            "description": "La coque ressemble à une glaçure fissurée : dense, fine, même des fractures sur toute la surface. La coquille est intacte, mais l'œuf est visible en dessous.",
+            "action": "Abaissez soigneusement dans le liquide de graissage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La coquille s'est brisée en gros morceaux, exposant le blanc d'œuf nu.",
+            "action": "Enlevez les morceaux de coquilles; les zones exposées absorberont plus de couleur et le motif sera irrégulier mais encore beau."
+          }
+        ]
+      },
+      "feelCue": "Le fait de taper l'œuf avec une cuillère devrait produire un son creux qui se transforme en un bourbier plus terne lorsque la coquille se fracture."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Streep",
+      "inputs": [
+        "cracked_eggs",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "simmered_tea_eggs",
+      "instructions": "Combinez le thé noir fort, les deux sauces de soja, l'anis étoilé, la cannelle, les girofles, les grains de poivre Sichuan, le sucre et l'écorce de mandarine dans un pot assez grand pour tenir tous les œufs dans une seule couche. Porter à mijoter et ajouter les œufs fissurés. Laisser mijoter doucement pendant 20 minutes — les coquilles ne doivent pas rebondir. Retirer du feu, laisser refroidir à température ambiante dans le liquide, puis réfrigérer dans le liquide de cuisson pendant au moins 4 heures, ou nuit pour la couleur et la saveur les plus profondes.",
+      "visualCue": {
+        "primaryTarget": "Oeufs immergés dans un liquide brun-thé foncé, libérant avec des épices visibles; après avoir mijoté, la coquille montre un assombrissement aux fissures.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après seulement 1-2 heures de trempe, le motif en marbre est faible et la saveur est douce soja avec peu de profondeur.",
+            "action": "Retourner au réfrigérateur pendant au moins 2-3 heures de plus; la nuit est fortement préférée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le liquide de braisage s'est obscurci jusqu'à une acajou profonde; les oeufs sont un riche brun-noir aux fissures avec leur blanc original montrant dans le motif entre.",
+            "action": "Peler soigneusement pour révéler le motif de marbre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après plus de 48 heures, le blanc d'œuf est devenu trop salé et la texture légèrement caoutchouteuse du soja.",
+            "action": "Retirer du liquide; les œufs sont encore comestibles, juste très assaisonnés, en couple avec du riz non assaisonné."
+          }
+        ]
+      },
+      "feelCue": "Après la nuit, le liquide de braise sent comme une tasse intensément salée de thé épicé — le parfum d'anis étoilé et de pelure de mandarine s'élève à travers le soja."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Peler",
+      "inputs": [
+        "simmered_tea_eggs"
+      ],
+      "outputState": "finished_tea_eggs",
+      "instructions": "Peler chaque oeuf sous l'eau froide courante, enlevant les fragments de la coquille et la membrane interne ensemble. La surface révélée devrait montrer un motif de marbre frappant : coloration brun foncé-noir le long de chaque ligne de fissures contre l'ambre pâle du blanc d'oeuf teint. Servir à la température ambiante ou au froid.",
+      "visualCue": {
+        "primaryTarget": "Un beau motif de marbre crépité de nervures brun foncé contre un blanc tacheté d'ambre, le jaune un beige doré pâle de la saumure absorbée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le motif de marbre est faible et gris clair plutôt que brun foncé; le blanc d'œuf est pâle et à peine assaisonné.",
+            "action": "Le motif révèle le temps d'inclinaison — très léger signifie beaucoup plus court que le temps recommandé; re-step dans le liquide de braisage chaud pendant 2 heures de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "De profondes veines d'acajou contrastent avec le blanc d'œuf brun-ambre; le jaune est pâle et délicatement aromatisé avec du thé et des épices. Une coupe transversale est visuellement frappante.",
+            "action": "Servir comme une collation, une garniture de ramen ou un composant de bento."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le blanc d'oeuf est uniformément brun foncé avec un contraste minimal en marbre; le blanc est très ferme et assez salé.",
+            "action": "Couper et servir sur du riz à la vapeur ou des conges pour équilibrer l'assaisonnement intense."
+          }
+        ]
+      },
+      "feelCue": "La surface d'un œuf de thé parfaitement abîmé est lisse et légèrement cireuse; le blanc d'œuf est ferme mais pas caoutchouteux, et le millimètre extérieur porte la saveur complexe du liquide de braisage."
+    }
+  ]
 };

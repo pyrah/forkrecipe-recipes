@@ -1,85 +1,232 @@
 export default {
-  repoId: "master_french_lemon_butter_sauce_001",
-  parentRepoId: null,
-  slug: "lemon-butter-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Lemon Butter Sauce (Beurre Blanc au Citron)",
-  description: "A shallot-and-lemon reduction finished with a cascade of cold butter: trembling, pale gold, and impossibly light for something made almost entirely of fat — the kind of sauce that makes simple pan-seared fish transcend itself. The science is elementary; the execution demands complete attention and cold butter.",
-  cuisine: "French",
-  culture: "French",
-  category: "sauces",
-  tags: ["butter", "lemon", "sauce", "french", "beurre-blanc", "emulsion", "fish", "classic"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 4, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Allium",   name: "Shallots, finely minced",                              ratioValue: 60,  defaultUnit: "g",   substitutions: ["white onion, very finely minced"] },
-    { ingId: "ing_02", role: "Acid",     name: "Dry white wine",                                       ratioValue: 80,  defaultUnit: "ml",  substitutions: ["dry vermouth"] },
-    { ingId: "ing_03", role: "Acid",     name: "White wine vinegar",                                   ratioValue: 40,  defaultUnit: "ml",  substitutions: ["champagne vinegar"] },
-    { ingId: "ing_04", role: "Citrus",   name: "Fresh lemon juice",                                    ratioValue: 30,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_05", role: "Dairy",    name: "Heavy cream",                                          ratioValue: 30,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_06", role: "Fat",      name: "Unsalted butter, cold, cut into 1 cm cubes",          ratioValue: 200, defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine sea salt",                                       ratioValue: 3,   defaultUnit: "g",   substitutions: ["fleur de sel"] },
-    { ingId: "ing_08", role: "Spice",    name: "White pepper, freshly ground",                        ratioValue: 1,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_09", role: "Citrus",   name: "Lemon zest, finely grated",                           ratioValue: 4,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_10", role: "Herb",     name: "Fresh chives, finely cut (optional finish)",          ratioValue: 5,   defaultUnit: "g",   substitutions: ["fresh tarragon, chiffonade"] },
+  "repoId": "master_french_lemon_butter_sauce_001",
+  "parentRepoId": null,
+  "slug": "lemon-butter-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce au beurre de citron (Beurre Blanc au Citron)",
+  "description": "Une réduction d'échalote et de citron finie avec une cascade de beurre froid : tremblante, or pâle, et incroyablement légère pour quelque chose fait presque entièrement de graisse, le genre de sauce qui fait transcendance simple de poisson pan-sairé. La science est élémentaire; l'exécution exige une attention complète et du beurre froid.",
+  "cuisine": "Français",
+  "culture": "Français",
+  "category": "sauces",
+  "tags": [
+    "beurre",
+    "citron",
+    "sauce",
+    "français",
+    "beurre-blanc",
+    "émulsion",
+    "poissons",
+    "classique"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Reduce",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "shallot_reduction",
-      instructions: "Combine the minced shallots, white wine, white wine vinegar, and lemon juice in a small, heavy-bottomed saucepan. Bring to a boil over medium-high heat, then reduce the heat to maintain a brisk simmer. Cook, stirring occasionally, until the liquid has reduced to roughly 2–3 tablespoons — you should be able to see the pan bottom clearly between shallot pieces, and the liquid should look syrupy and concentrated. This takes 6–8 minutes. The reduction does two things simultaneously: it concentrates the acidity that will counterbalance the richness of the butter, and it softens the shallots until they are completely tender and mellow. The sharp bite of raw shallot and vinegar should smell mellower and more round by the time the reduction is ready. Do not rush — an under-reduced base produces a watery, acidic sauce that will not emulsify properly.",
-      visualCue: {
-        primaryTarget: "The liquid has reduced to a scant, syrupy few tablespoons. Shallot pieces are visible and soft, swimming in a concentrated, slightly viscous liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is still watery and clear. More than 4 tablespoons remain. The sharp vinegar smell is still aggressive.", action: "Continue simmering — you need at least 2/3 reduction. Patience here prevents a thin sauce later." },
-          { state: "Perfect",   description: "2–3 tablespoons of syrupy liquid remain. Shallots are completely soft. Liquid clings to the spoon. Smell is tart but rounded.", action: "Add the cream and reduce briefly before mounting with butter." },
-          { state: "Overdone",  description: "Liquid has almost entirely evaporated. Shallots look dry and are beginning to fry in a sticky residue.", action: "Add 2 tbsp of white wine or water immediately to rescue. Stir to dissolve and proceed — some caramelization will add depth." },
-        ],
-      },
-      feelCue: "Tilt the pan slightly — the reduced liquid should flow in a slow, syrupy sheet rather than running freely like water. You should be able to hear the change in sound too: from a vigorous splattering boil to a thick, lazy bubbling as the liquid concentrates.",
+      "ingId": "ing_01",
+      "role": "Allium",
+      "name": "Échalotes finement hachées",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon blanc, très finement haché"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Reduce",
-      inputs: ["shallot_reduction", "ing_05"],
-      outputState: "cream_base",
-      instructions: "Add the heavy cream to the shallot reduction. Bring to a boil and reduce by half — this takes only 60–90 seconds. The cream serves two functions: it adds a small amount of dairy fat that stabilizes the emulsion you are about to build, and its proteins create a physical net that helps hold the butter droplets in suspension even if the temperature fluctuates slightly. A traditional beurre blanc does not include cream, but the cream-enriched version is far more stable and forgiving for home cooking — it will hold its emulsion for longer and tolerate slightly higher temperatures without breaking. The reduction should look slightly thickened and ivory-colored when ready.",
-      visualCue: {
-        primaryTarget: "The cream has reduced and the mixture looks slightly thickened, ivory-white, and creamy. Volume should be roughly halved from when the cream was added.",
-        spectrum: [
-          { state: "Underdone", description: "Cream is still thin and watery, not yet reduced. Will produce a less stable emulsion.", action: "Continue at a brisk boil for 30 more seconds." },
-          { state: "Perfect",   description: "Slightly thickened, ivory, coating the spoon very lightly. Smells like a combination of cream and tart reduction.", action: "Reduce heat to the lowest setting. Begin mounting with butter." },
-          { state: "Overdone",  description: "Cream has reduced too far and is beginning to look grainy or scorched.", action: "Add 1 tbsp of fresh cream, stir, and proceed immediately with butter mounting." },
-        ],
-      },
-      feelCue: "The mixture should coat the back of a wooden spoon in a thin, even film that just barely runs off when the spoon is tilted. The smell should be gently sour and creamy at the same time — like a very light crème fraîche.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Vin blanc sec",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vermouth sec"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mount",
-      inputs: ["cream_base", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "finished_lemon_butter_sauce",
-      instructions: "This is the mounting step — the heart of beurre blanc. Remove the pan from the heat entirely, or reduce to the absolute lowest flame. The goal temperature is 60–80°C (140–176°F) — hot enough to melt butter, too cool to break the emulsion. Add the cold butter cubes two at a time, whisking constantly between each addition. The cold butter does two things: it melts and its fat disperses into tiny droplets throughout the reduction, and its cold temperature helps regulate the pan's heat, preventing it from climbing too high. Wait until each addition is almost fully absorbed before adding the next — you should see the sauce thicken and become creamy with each addition. If the sauce looks greasy or the butter is melting but not emulsifying (clear fat on top), the pan is too hot. Move it briefly off heat and whisk more vigorously. Once all the butter is incorporated, season with salt, white pepper, and lemon zest. Add chives if using. Strain through a fine sieve if you want a refined sauce without the shallot pieces; serve unstrained for a more rustic presentation. Serve immediately — the emulsion is live and will break if reheated above 80°C.",
-      visualCue: {
-        primaryTarget: "A pale, opaque, ivory-gold sauce with a glossy sheen. Thick enough to coat a spoon and hold on a tilted plate. Looks slightly lighter than cream — almost foamy in its lightness.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery — not enough butter mounted yet, or the emulsion hasn't formed. Looks like flavored water with butter floating on top.", action: "Whisk more vigorously and add butter more slowly. Keep adding — the emulsion will form." },
-          { state: "Perfect",   description: "Creamy, pale gold, opaque. Holds its shape on the spoon, flows smoothly when poured. Tastes rich, acidic, and intensely buttery with the lemon asserting itself cleanly.", action: "Season, finish with zest and chives, and serve immediately." },
-          { state: "Overdone",  description: "Sauce has broken — clear yellow butter fat pooled on top of a thin, watery liquid. The emulsion failed from excess heat.", action: "Remove from heat. Whisk in 1 tbsp of cold water or cold cream vigorously. Add 2 fresh cold butter cubes and whisk from scratch. If it will not re-emulsify, use it anyway as a pan drizzle — the flavor is all there." },
-        ],
-      },
-      feelCue: "Drag a cold spoon through the sauce — it should leave a clean trail that holds for a moment before closing, like a wake in thickened water. The sauce should feel lighter than it looks, almost airy, and the smell should be pure lemon-butter — clean, acidic, and deeply rich at the same time.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 40,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de champagne"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Citrus",
+      "name": "Jus de citron frais",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé, froid, coupé en cubes de 1 cm",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "fleur de sel"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre blanc, fraîchement moulu",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Citrus",
+      "name": "Zeste de citron, râpé finement",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Ciboulette fraîche, finement coupée (finition facultative)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "estragon frais, mousseline"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Réduire",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "shallot_reduction",
+      "instructions": "Mélanger les échalotes hachées, le vin blanc, le vinaigre de vin blanc et le jus de citron dans une petite casserole à fond lourd. Porter à ébullition à feu moyen-vif, puis réduire le feu pour maintenir une fraicheur rapide. Faites cuire, en remuant occasionnellement, jusqu'à ce que le liquide ait réduit à environ 2–3 cuillerées à soupe — vous devriez être en mesure de voir clairement le fond de la poêle entre les morceaux d'échalote, et le liquide devrait avoir l'air sirupeux et concentré. Cela prend 6–8 minutes. La réduction fait deux choses simultanément : elle concentre l'acidité qui va contrebalancer la richesse du beurre, et elle adoucit les échalotes jusqu'à ce qu'elles soient complètement tendres et moelleuses. La morsure aiguë de l'échalote crue et du vinaigre devrait sentir plus moelleuse et plus ronde au moment où la réduction est prête. Ne vous précipitez pas: une base sous-réduite produit une sauce aqueuse et acide qui n'émulsionnera pas correctement.",
+      "visualCue": {
+        "primaryTarget": "Le liquide a été réduit à une petite cuillère à soupe sirupeuse. Les morceaux d'échalote sont visibles et doux, nageant dans un liquide concentré, légèrement visqueux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore liquide et clair. Plus de 4 cuillères à soupe restent. L'odeur du vinaigre est toujours agressive.",
+            "action": "Continuez à mijoter — vous avez besoin d'au moins 2/3 de réduction. La patience ici empêche une sauce fine plus tard."
+          },
+          {
+            "state": "Perfect",
+            "description": "2 à 3 cuillères à soupe de liquide sirupeux restent. Les échalotes sont complètement molles. Le liquide s'accroche à la cuillère. L'odeur est tarte mais arrondie.",
+            "action": "Ajouter la crème et réduire brièvement avant de monter avec du beurre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide s'est presque entièrement évaporé. Les échalotes semblent sèches et commencent à frire dans un résidu collant.",
+            "action": "Ajouter 2 c. à soupe de vin blanc ou d'eau immédiatement pour sauver. Mélanger pour dissoudre et procéder — une certaine caramélisation ajoutera de la profondeur."
+          }
+        ]
+      },
+      "feelCue": "Inclinez légèrement la casserole — le liquide réduit doit couler dans une feuille lente et sirupeuse plutôt que de courir librement comme de l'eau. Vous devriez être capable d'entendre le changement de son aussi: d'une forte éclaboussure à un bouillonnement épais et paresseux comme le liquide se concentre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Réduire",
+      "inputs": [
+        "shallot_reduction",
+        "ing_05"
+      ],
+      "outputState": "cream_base",
+      "instructions": "Ajouter la crème lourde à la réduction de l'échalote. Porter à ébullition et réduire de moitié — cela ne prend que 60 à 90 secondes. La crème sert deux fonctions : elle ajoute une petite quantité de graisse laitière qui stabilise l'émulsion que vous êtes sur le point de construire, et ses protéines créent un filet physique qui aide à maintenir les gouttelettes de beurre en suspension même si la température fluctue légèrement. Un beurre blanc traditionnel n'inclut pas la crème, mais la version enrichie en crème est beaucoup plus stable et pardonnante pour la cuisine à domicile - il conservera son émulsion pour plus longtemps et tolérera des températures légèrement plus élevées sans casser. La réduction devrait être légèrement épaissie et couleur ivoire lorsqu'elle est prête.",
+      "visualCue": {
+        "primaryTarget": "La crème a diminué et le mélange semble légèrement épaissi, blanc ivoire et crémeux. Le volume doit être réduit de moitié à partir de l'ajout de la crème.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème est encore mince et aqueuse, pas encore réduite. Produira une émulsion moins stable.",
+            "action": "Continuer à ébullition rapide pendant 30 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légèrement épais, ivoire, enrobant la cuillère très légèrement. Ça sent la crème et la tarte.",
+            "action": "Réduire la chaleur au réglage le plus bas. Commencez à monter avec du beurre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème a diminué trop loin et commence à avoir l'air granuleuse ou brûlée.",
+            "action": "Ajouter 1 c. à soupe de crème fraîche, remuer et procéder immédiatement au montage au beurre."
+          }
+        ]
+      },
+      "feelCue": "Le mélange devrait enrober l'arrière d'une cuillère en bois dans un film mince, même qui s'écoule à peine lorsque la cuillère est inclinée. L'odeur doit être douce et crémeuse en même temps, comme une crème fraîche très légère."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Monter",
+      "inputs": [
+        "cream_base",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_lemon_butter_sauce",
+      "instructions": "C'est l'étape montante — le cœur du beurre blanc. Retirer complètement la poêle de la chaleur ou la réduire à la flamme la plus basse absolue. La température d'objectif est de 60 à 80°C (140 à 176°F) — assez chaude pour fondre le beurre, trop froide pour briser l'émulsion. Ajouter les cubes de beurre froid deux à la fois, fouettant constamment entre chaque addition. Le beurre froid fait deux choses : il fond et sa graisse se disperse dans de minuscules gouttelettes tout au long de la réduction, et sa température froide aide à réguler la chaleur de la poêle, l'empêchant de grimper trop haut. Attendez que chaque ajout soit presque complètement absorbé avant d'ajouter le suivant — vous devriez voir la sauce épaissir et devenir crémeux avec chaque ajout. Si la sauce a l'air grasse ou si le beurre fond mais n'émulsionne pas (graisse claire sur le dessus), la poêle est trop chaude. Déplacer brièvement la chaleur et fouetter plus vigoureusement. Une fois le beurre incorporé, assaisonner de sel, de poivre blanc et de zeste de citron. Ajouter la ciboulette si elle est utilisée. Plongez dans un tamis si vous voulez une sauce raffinée sans les morceaux d'échalote; servez sans entraînement pour une présentation plus rustique. Servir immédiatement — l'émulsion est vivante et se brisera si elle est réchauffée à plus de 80°C.",
+      "visualCue": {
+        "primaryTarget": "Une sauce pâle, opaque, or ivoire avec un éclat brillant. Assez épais pour enrober une cuillère et tenir sur une assiette inclinée. Il semble légèrement plus léger que la crème, presque mousseux dans sa légèreté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse — pas encore assez de beurre monté, ou l'émulsion ne s'est pas formée. On dirait de l'eau aromatisée avec du beurre flottant sur le dessus.",
+            "action": "fouetter plus vigoureusement et ajouter le beurre plus lentement. Continuez à ajouter — l'émulsion se formera."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crémeux, or pâle, opaque. Il tient sa forme sur la cuillère, coule doucement lorsqu'il est versé. Goûte riche, acide et intensément beurré avec le citron s'affirmant proprement.",
+            "action": "Assaisonner, terminer avec du zeste et de la ciboulette, et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce s'est cassée: le beurre jaune clair est contenu sur un liquide mince et aqueux. L'émulsion a échoué de l'excès de chaleur.",
+            "action": "Retirer du feu. fouetter vigoureusement 1 c. à soupe d'eau froide ou de crème froide. Ajouter 2 cubes de beurre frais et fouetter à partir de zéro. S'il ne réémulsionnera pas, l'utilisera de toute façon comme une bruine de pan — la saveur est là."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère froide dans la sauce — elle devrait laisser un sentier propre qui tient un moment avant de fermer, comme un réveil dans l'eau épaissée. La sauce doit se sentir plus légère qu'elle ne l'a l'air, presque aérée, et l'odeur doit être pur beurre de citron — propre, acide et profondément riche en même temps."
+    }
+  ]
 };

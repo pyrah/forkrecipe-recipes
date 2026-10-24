@@ -1,83 +1,218 @@
 export default {
-  repoId: "master_japanese_dashi_beurre_blanc_001",
-  parentRepoId: null,
-  slug: "dashi-beurre-blanc",
-  author: "ForkRecipe Kitchen",
-  title: "Dashi Beurre Blanc — Sake-Mirin Butter Sauce",
-  description: "A Franco-Japanese emulsion that begins as a dashi reduction laced with sake and mirin and finishes in a rapid mount of cold butter — trembling, pale gold, alive with umami in a way that no classic beurre blanc can match, clinging to fish and vegetables with a silky, barely-there weight.",
-  cuisine: "Japanese",
-  culture: "Washoku-French fusion / Nouvelle cuisine",
-  category: "sauces",
-  tags: ["japanese", "butter", "sauce", "dashi", "beurre-blanc", "french-japanese", "emulsion", "kaiseki"],
-  difficulty: 4,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 0, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Ichiban dashi (first-draw kombu and katsuobushi)",   ratioValue: 200, defaultUnit: "ml", substitutions: ["kombu dashi (vegan)", "light chicken stock diluted 50:50 with water"] },
-    { ingId: "ing_02", role: "Solvent",   name: "Sake (dry, drinking quality)",                      ratioValue: 100, defaultUnit: "ml", substitutions: ["dry white wine (Muscadet or Chablis)"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Mirin (hon-mirin)",                                  ratioValue: 50,  defaultUnit: "ml", substitutions: ["2 tsp sugar dissolved in sake"] },
-    { ingId: "ing_04", role: "Allium",    name: "Shallot, very finely minced",                        ratioValue: 40,  defaultUnit: "g",  substitutions: ["mild white onion"] },
-    { ingId: "ing_05", role: "Acid",      name: "Rice vinegar",                                       ratioValue: 20,  defaultUnit: "ml", substitutions: ["light white wine vinegar"] },
-    { ingId: "ing_06", role: "Fat",       name: "Unsalted butter, very cold, cut in 1 cm cubes",      ratioValue: 200, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine sea salt",                                      ratioValue: 3,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Herb",      name: "Chives, finely sliced, for finish",                  ratioValue: 10,  defaultUnit: "g",  substitutions: ["mitsuba (Japanese parsley)", "shiso, chiffonaded"] },
+  "repoId": "master_japanese_dashi_beurre_blanc_001",
+  "parentRepoId": null,
+  "slug": "dashi-beurre-blanc",
+  "author": "ForkRecipe Kitchen",
+  "title": "Dashi Beurre Blanc — Sauce au beurre mirin",
+  "description": "Une émulsion franco-japonaise qui commence comme une réduction de dashi laquée de saké et de mirin et se termine dans un montage rapide de beurre froid — tremblant, or pâle, vivant avec umami d'une manière qu'aucun beurre blanc classique ne peut égaler, accrochant au poisson et aux légumes avec un poids soyeux, à peine là.",
+  "cuisine": "Japonais",
+  "culture": "Washoku-fusion française / Nouvelle cuisine",
+  "category": "sauces",
+  "tags": [
+    "Japonais",
+    "beurre",
+    "sauce",
+    "Dashi",
+    "beurre-blanc",
+    "français-japonais",
+    "émulsion",
+    "Kaiseki"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Reduce",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "reduction_base",
-      instructions: "Combine the dashi, sake, mirin, minced shallot, and rice vinegar in a small, heavy-bottomed saucepan — stainless steel is ideal, as it lets you see the color of the reduction clearly. Bring to a boil over medium-high, then reduce to a vigorous simmer and cook until the liquid has reduced to a glaze — approximately 2–3 tablespoons of highly concentrated, syrupy liquid. This takes 12–15 minutes. The reduction is the foundation of the entire sauce and must be cooked thoroughly to drive off all the alcohol from the sake and mirin. If you can still smell raw alcohol in the steam, continue reducing. The finished reduction should smell intensely of the sea (dashi), sweet caramel (mirin), and shallot. The shallot will have become very soft and almost translucent, suspended in the glaze. Do not strain the shallot out — it provides additional body and flavor. The color will deepen from pale gold to a darker amber.",
-      visualCue: {
-        primaryTarget: "A dark amber, almost syrupy glaze with softened shallot pieces. When you tilt the pan, it moves slowly and coats the sides. Volume should be 2–3 tablespoons.",
-        spectrum: [
-          { state: "Underdone", description: "Still quite liquid — more than 5 tablespoons remain. Alcohol smell still present. Shallot still has some bite.", action: "Continue reducing. The emulsion will break if too much water remains in the base." },
-          { state: "Perfect",   description: "2–3 tablespoons of amber, syrupy glaze. No alcohol smell. Shallot is translucent and tender. Smells deeply of caramelized dashi and sweet mirin.", action: "Reduce heat to the absolute minimum and begin mounting with butter." },
-          { state: "Overdone",  description: "Reduced to less than 1 tablespoon. The glaze is nearly black and the shallot is dark and slightly bitter.", action: "Add 30 ml of fresh dashi and 15 ml of sake. Return to a simmer briefly, then proceed." },
-        ],
-      },
-      feelCue: "Drag a spoon across the bottom of the pan — the reduction should draw a clean, slow-filling line rather than instantly flowing back in. If the line fills immediately, reduce another 2 minutes. The pan should feel hot enough that a drop of butter sizzles immediately when it touches the base.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Ichiban dashi (premier draw kombu et katsuobushi)",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "kombu dashi (vegan)",
+        "stock de poulet léger dilué 50:50 avec de l'eau"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mount",
-      inputs: ["reduction_base", "ing_06", "ing_07"],
-      outputState: "mounted_sauce",
-      instructions: "This is the technically demanding step. Remove the pan from direct heat and let it cool for 30 seconds — the base must be hot but not scorching. Place the pan over the lowest possible heat or use a double boiler. Begin adding the cold butter, two or three cubes at a time, whisking constantly in a rapid circular motion. Wait for each addition to be fully incorporated before adding the next. The cold butter performs two functions simultaneously: it lowers the temperature of the base (preventing it from overheating and breaking) while its emulsifiers (primarily lecithin in the butter fat) bind the water phase and the fat phase into a stable emulsion. The sauce will gradually transform from the dark reduction into a pale, creamy, opaque emulsion as you add more butter. If the sauce looks greasy and separated, it has overheated — immediately remove from all heat and add a cube of cold butter while whisking vigorously. Once all butter is incorporated, season with fine salt and taste. The sauce should be rich, smooth, and intensely umami with a bright lactic finish.",
-      visualCue: {
-        primaryTarget: "A pale ivory-gold emulsion that is opaque, slightly thickened, and glossy — not greasy, not thin. When poured from a spoon, it falls in a slow, creamy ribbon. Color should be the pale gold of salted butter, not the dark amber of the reduction.",
-        spectrum: [
-          { state: "Underdone", description: "Only 3–4 cubes of butter added. Sauce is still mostly dark reduction. Flavor is too sharp and concentrated without the butter's richness.", action: "Continue adding butter cubes while whisking. Do not rush — each addition must emulsify before the next." },
-          { state: "Perfect",   description: "All butter incorporated. Sauce is pale, creamy, opaque, and flows in a slow ribbon. Rich, round, umami-forward with bright acidity. Holds on a warm plate without breaking.", action: "Finish with chives and serve within 10 minutes. Keep warm over a hot water bath — never over direct heat." },
-          { state: "Overdone",  description: "Sauce has separated — a pool of clear golden butter fat floats over a thin, darker liquid. The emulsion has broken from overheating.", action: "Start recovery: take 2 tbsp of the broken sauce in a new pan. Over very low heat, whisk in 2 cubes of cold butter until emulsified, then very slowly whisk in the rest of the broken sauce. It may not fully recover, but it will improve." },
-        ],
-      },
-      feelCue: "When you coat the back of a warm spoon and tilt it, the sauce should cling for 3–4 seconds before slowly running — it should feel substantial, like coating the spoon in warm cream rather than water. The temperature on the back of your hand hovering 10 cm above the pan should be warm but not aggressively hot — this is the temperature zone where the emulsion is stable.",
+      "ingId": "ing_02",
+      "role": "Solvent",
+      "name": "Gâteau (sèche, qualité de boisson)",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vin blanc sec (Muscadet ou Chablis)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Finish",
-      inputs: ["mounted_sauce", "ing_08"],
-      outputState: "finished_dashi_beurre_blanc",
-      instructions: "Fold the sliced chives (or mitsuba or shiso) into the mounted sauce with a few gentle turns of the whisk — do not over-agitate or you will break the emulsion. Taste and adjust seasoning. The sauce should be served immediately or held in a warm water bath (50–55 °C) for no longer than 20 minutes before service. Beyond 20 minutes, the emulsion begins to weaken as the butter fat slowly separates. When plating, spoon the sauce under or alongside the protein — fish, scallops, or vegetables — never over the crispy surface of something you spent effort crisping. The sauce should pool elegantly and form a thin, luminous skin where it contacts the hot plate. Drizzle any remaining sauce from the spoon in a single deliberate motion: a beurre blanc waits for no one.",
-      visualCue: {
-        primaryTarget: "A pale, glossy, chive-flecked ivory sauce. When spooned onto a warm plate, it spreads slowly and forms a slightly thickened pool. The surface is smooth with a gentle sheen — not oily, not watery.",
-        spectrum: [
-          { state: "Underdone", description: "Too little salt. Sauce tastes rich but flat — the umami and acidity are buried. Chives not yet added.", action: "Add salt in small pinches and taste between each addition. Fold in chives." },
-          { state: "Perfect",   description: "Chives are evenly distributed. Sauce is balanced: rich, oceanic, bright, and deeply savory. Coats every surface it touches with a thin, glossy film.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Sauce has been held too long or reheated. It has broken into greasy pools. The emulsion is lost.", action: "A broken beurre blanc cannot be meaningfully recovered at this stage. Use it as a finishing drizzle of flavored butter rather than a sauce — it will still taste good." },
-        ],
-      },
-      feelCue: "A spoonful of finished dashi beurre blanc on the tongue should feel like warm cream that instantly coats and then dissolves — no heaviness, no grease film left behind. The umami note from the dashi lingers after the butter has gone, which is the entire point of this hybrid sauce. The chives should crackle faintly with freshness against the richness of the butter.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Mirin (Hon-mirin)",
+      "ratioValue": 50,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "2 c. à thé de sucre dissous dans le saké"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalote, très finement hachée",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon blanc doux"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Vinaigre de riz",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de vin blanc clair"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé, très froid, coupé en cubes de 1 cm",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Poêles, finement coupées, pour finition",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "mitsuba ( persil japonais)",
+        "shiso, broyé"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Réduire",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "reduction_base",
+      "instructions": "Combinez le dashi, le saké, le mirin, l'échalote hachée et le vinaigre de riz dans une petite casserole à fond lourd – l'acier inoxydable est idéal, car il vous permet de voir clairement la couleur de la réduction. Porter à ébullition sur une hauteur moyenne, puis laisser mijoter vigoureusement et cuire jusqu'à ce que le liquide soit réduit à un glaçage — environ 2 à 3 cuillères à soupe de liquide sirupeux hautement concentré. Cela prend 12-15 minutes. La réduction est le fondement de la sauce entière et doit être cuite soigneusement pour chasser tout l'alcool du saké et du mirin. Si vous pouvez encore sentir de l'alcool cru dans la vapeur, continuez à réduire. La réduction finie doit sentir intensément la mer (dashi), le caramel doux (mirin) et l'échalote. L'échalote sera devenue très douce et presque translucide, suspendue dans la glaçure. Ne pas extirper l'échalote — il fournit corps et saveur supplémentaires. La couleur s'approfondira de l'or pâle à un ambre plus foncé.",
+      "visualCue": {
+        "primaryTarget": "Une glaçure sombre et presque sirupeuse avec des morceaux d'échalote adoucis. Lorsque vous penchez la casserole, elle se déplace lentement et enrobe les côtés. Le volume doit être de 2 à 3 cuillères à soupe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Encore assez liquide — il reste plus de 5 cuillères à soupe. L'odeur d'alcool est toujours présente. Shallot a encore une bouchée.",
+            "action": "Continuez à réduire. L'émulsion se brisera si trop d'eau reste dans la base."
+          },
+          {
+            "state": "Perfect",
+            "description": "2 à 3 cuillères à soupe d'ambre, glaçure sirupeuse. Pas d'odeur d'alcool. L'échalote est translucide et tendre. Ça sent le dashi caramélisé et le mirin sucré.",
+            "action": "Réduire la chaleur au minimum absolu et commencer à monter avec du beurre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Réduit à moins d'une cuillère à soupe. La glaçure est presque noire et l'échalote est sombre et légèrement amère.",
+            "action": "Ajouter 30 ml de dashi frais et 15 ml de saké. Retournez à une mijoter brièvement, puis procédez."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère sur le fond de la casserole — la réduction devrait dessiner une ligne propre et lente de remplissage plutôt que de revenir instantanément. Si la ligne se remplit immédiatement, réduisez encore 2 minutes. La poêle doit être assez chaude pour qu'une goutte de beurre s'échauffe immédiatement lorsqu'elle touche la base."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Monter",
+      "inputs": [
+        "reduction_base",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "mounted_sauce",
+      "instructions": "C'est l'étape techniquement exigeante. Retirer la poêle du feu direct et la laisser refroidir pendant 30 secondes — la base doit être chaude mais ne pas brûler. Placez la poêle sur la chaleur la plus basse possible ou utilisez une double chaudière. Commencez à ajouter le beurre froid, deux ou trois cubes à la fois, fouettant constamment dans un mouvement circulaire rapide. Attendez que chaque ajout soit entièrement incorporé avant d'ajouter le suivant. Le beurre froid remplit deux fonctions simultanément : il diminue la température de la base (prévenir la surchauffe et la rupture) tandis que ses émulsifiants (principalement la lécithine dans la graisse du beurre) lient la phase de l'eau et la phase de la graisse dans une émulsion stable. La sauce se transformera progressivement de la réduction foncée en une émulsion pâle, crémeuse, opaque que vous ajoutez plus de beurre. Si la sauce a l'air grasse et séparée, elle a surchauffé — retirez immédiatement de toute chaleur et ajoutez un cube de beurre froid tout en fouettant vigoureusement. Une fois que tout le beurre est incorporé, assaisonner de sel fin et de goût. La sauce doit être riche, lisse et intensément umami avec une finition lactique brillante.",
+      "visualCue": {
+        "primaryTarget": "Une émulsion dorée à l'ivoire pâle, opaque, légèrement épaissie et brillante, pas grasse, pas fine. Une fois versé d'une cuillère, il tombe dans un ruban lent et crémeux. La couleur doit être l'or pâle du beurre salé, et non l'ambre foncé de la réduction.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Seulement 3-4 cubes de beurre ajoutés. La sauce est encore la plupart du temps de réduction sombre. Le goût est trop vif et concentré sans la richesse du beurre.",
+            "action": "Continuer à ajouter des cubes de beurre tout en fouettant. Ne vous précipitez pas: chaque ajout doit être émulsifié avant le suivant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tout beurre incorporé. La sauce est pâle, crémeuse, opaque et coule dans un ruban lent. Riche, rond, umami-avant avec une acidité vive. Se tient sur une assiette chaude sans casser.",
+            "action": "Terminer avec la ciboulette et servir dans les 10 minutes. Gardez - vous au chaud au cours d'un bain d'eau chaude — jamais à feu direct."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce s'est séparée — une piscine de graisse de beurre d'or clair flotte sur un liquide mince et plus foncé. L'émulsion est cassée par surchauffe.",
+            "action": "Début de la récupération: prendre 2 c. à soupe de la sauce cassée dans une nouvelle casserole. À feu très doux, fouetter dans 2 cubes de beurre froid jusqu'à l'émulsion, puis fouetter très lentement dans le reste de la sauce cassée. Il peut ne pas se rétablir complètement, mais il s'améliorera."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous enrobez l'arrière d'une cuillère chaude et l'inclinez, la sauce doit s'accrocher pendant 3-4 secondes avant de courir lentement — elle doit se sentir substantielle, comme enrober la cuillère dans de la crème chaude plutôt que de l'eau. La température à l'arrière de la main, au-dessus de 10 cm, doit être chaude mais pas agressivement chaude, c'est la zone de température où l'émulsion est stable."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Finition",
+      "inputs": [
+        "mounted_sauce",
+        "ing_08"
+      ],
+      "outputState": "finished_dashi_beurre_blanc",
+      "instructions": "Pliez la ciboulette tranchée (ou mitsuba ou shiso) dans la sauce montée avec quelques tournures douces du fouet — ne pas trop agiter ou vous briserez l'émulsion. Goûtez et assaisonnez. La sauce doit être servie immédiatement ou maintenue dans un bain d'eau chaude (50–55 °C) pendant au plus 20 minutes avant le service. Au-delà de 20 minutes, l'émulsion commence à s'affaiblir à mesure que la graisse de beurre se sépare lentement. Lorsque vous plaquez, cuillerez la sauce sous ou à côté de la protéine — poisson, pétoncles ou légumes — jamais sur la surface croustillante de quelque chose que vous avez dépensé l'effort croustillant. La sauce doit se mettre élégamment et former une peau fine et lumineuse où elle contacte la plaque chaude. Arrosez toute sauce restante de la cuillère en un seul mouvement délibéré : un beurre blanc n'attend personne.",
+      "visualCue": {
+        "primaryTarget": "Une sauce d'ivoire pâle, brillante, au cigogne. Lorsqu'il est cuit sur une assiette chaude, il s'étend lentement et forme une piscine légèrement épaissie. La surface est lisse avec un reflet doux — pas grasse, pas aqueuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Trop peu de sel. La sauce a un goût riche mais plat: l'umami et l'acidité sont enterrés. Pas encore ajouté.",
+            "action": "Ajouter le sel dans de petites pincées et goûter entre chaque addition. Pliez dans la ciboulette."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les chives sont distribuées uniformément. La sauce est équilibrée : riche, océanique, lumineuse et profondément salée. Enrobe chaque surface qu'elle touche avec un film fin et brillant.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été maintenue trop longtemps ou réchauffée. Il s'est cassé en piscines grasses. L'émulsion est perdue.",
+            "action": "Un beurre blanc cassé ne peut pas être réellement récupéré à ce stade. Utilisez-le comme une bruine finale de beurre aromatisé plutôt qu'une sauce — il restera bon goût."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère de dashi beurre blanc fini sur la langue devrait se sentir comme de la crème chaude qui enveloppe instantanément et puis se dissout — pas de lourdeur, aucun film de graisse laissé derrière. La note umami du dashi s'attarde après la disparition du beurre, qui est le point entier de cette sauce hybride. La ciboulette devrait craquer légèrement avec fraîcheur contre la richesse du beurre."
+    }
+  ]
 };

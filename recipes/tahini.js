@@ -1,74 +1,152 @@
 export default {
-  repoId: "master_levantine_tahini_001",
-  parentRepoId: null,
-  slug: "tahini",
-  author: "ForkRecipe Kitchen",
-  title: "Tahini",
-  description: "Ground sesame paste — the foundation of hummus, baba ganoush, and a hundred sauces — made by toasting raw sesame seeds at the lowest possible heat until barely golden and blending them long and slow into a smooth, pourable ivory cream. The quality of the tahini determines everything that follows it.",
-  cuisine: "Middle Eastern",
-  culture: "Levantine",
-  category: "condiments",
-  tags: ["condiment", "sesame", "middle-eastern", "vegan", "gluten-free", "dairy-free"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 1, sour: 0, bitter: 2, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Raw white sesame seeds",        ratioValue: 400, defaultUnit: "g",   substitutions: ["unhulled sesame seeds for a darker, more bitter tahini with higher mineral content"] },
-    { ingId: "ing_02", role: "Fat",       name: "Neutral oil (only if needed)",  ratioValue: 15,  defaultUnit: "ml",  substitutions: ["light sesame oil to intensify flavour"] },
+  "repoId": "master_levantine_tahini_001",
+  "parentRepoId": null,
+  "slug": "tahini",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tahini",
+  "description": "Pâte de sésame moulue, base de l'hummus, du baba ganoush et d'une centaine de sauces, faite en torréfaction de graines de sésame crues au plus bas feu possible jusqu'à ce qu'elles soient à peine dorées et mélangées longtemps et lentement dans une crème d'ivoire lisse et versable. La qualité du tahini détermine tout ce qui le suit.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Levantine",
+  "category": "condiments",
+  "tags": [
+    "condiment",
+    "sésame",
+    "Moyen-Orient",
+    "végétalien",
+    "Sans gluten",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Toast",
-      inputs: ["ing_01"],
-      outputState: "toasted_sesame",
-      instructions: "Spread the raw sesame seeds in a single layer in a wide, dry skillet over medium-low heat. Stir almost constantly with a wooden spoon or shake the pan every 15 to 20 seconds. The seeds will begin to jump and pop as they heat. Your goal is a very light toast — just enough to wake up their nutty flavour and drive off surface moisture, not to colour them. This is a patient, watchful job: sesame goes from perfect to bitter in under 30 seconds. The difference between raw and properly toasted is subtle in colour but significant in flavour.",
-      visualCue: {
-        primaryTarget: "Seeds that have gone from chalky, flat white to a very pale cream — like the colour of fresh ivory — with a few of the lightest golden specks beginning to appear.",
-        spectrum: [
-          { state: "Underdone", description: "Still chalk-white with no fragrance rising from the pan; the raw, slightly musty smell of untoasted sesame still dominant.", action: "Continue over gentle heat, stirring. Colour is not the only cue — wait for the warm, toasty sesame fragrance to appear." },
-          { state: "Perfect",   description: "Barely cream-coloured with a fragrant, warm, nutty smell — not popcorn-nutty but clean and distinctly sesame. A few seeds are golden; most are still pale.", action: "Tip immediately onto a cold plate or baking sheet to halt cooking. Do not leave in the pan — residual heat will keep toasting them." },
-          { state: "Overdone",  description: "Visibly golden or tan with a darker, more assertively nutty aroma that crosses into bitterness, and some seeds beginning to pop more aggressively.", action: "Stop immediately. Over-toasted tahini will be bitter. Let the seeds cool and taste a pinch — if bitterness is sharp, start over. A mild over-toast can still produce acceptable tahini." },
-        ],
-      },
-      feelCue: "Roll a warm seed between your fingertips — it should feel dry and slightly crisp, with the faintest give rather than hard rawness. The smell on your fingertips should be warm and pleasantly nutty.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Graines de sésame blanc cru",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "graines de sésame non décortiquées pour un tahini plus foncé et plus amer ayant une teneur minérale plus élevée"
+      ]
     },
     {
-      nodeId: "step_2", action: "Cool",
-      inputs: ["toasted_sesame"],
-      outputState: "cooled_sesame",
-      instructions: "Tip the toasted sesame seeds onto a cool plate or baking sheet and spread them into a single layer. Let them rest for at least 5 minutes until they reach room temperature. Blending hot sesame seeds carries two risks: the steam they release will condense inside the blender and introduce moisture, which can seize the paste; and the heat can make the blending motor run very hot, shortening its life. Patience here is structural, not optional.",
-      visualCue: {
-        primaryTarget: "Seeds spread in a thin, even layer, no longer jumping or popping, cooling uniformly without steam rising from the plate.",
-        spectrum: [
-          { state: "Underdone", description: "Seeds are still too warm to hold comfortably in a cupped palm for 5 seconds.", action: "Wait another 3 minutes. Blending warm-but-not-cool seeds risks steam moisture seizing the paste." },
-          { state: "Perfect",   description: "Completely room temperature, dry, and fragrant — you can scoop them into a cupped palm without any warmth felt on the skin.", action: "Transfer to the blender or food processor." },
-          { state: "Overdone",  description: "Seeds have been left to cool for over an hour and have re-absorbed humidity from the air, turning slightly soft.", action: "Return to the dry pan over low heat for 60 seconds to drive off the moisture before blending." },
-        ],
-      },
-      feelCue: "Hold your palm flat 2 cm above the plate — no residual warmth should be detectable. The seeds should feel, between fingers, like cool dry beads.",
-    },
-    {
-      nodeId: "step_3", action: "Blend",
-      inputs: ["cooled_sesame", "ing_02"],
-      outputState: "finished_tahini",
-      instructions: "Transfer the cooled seeds to a high-powered blender or food processor. Blend continuously on high for 3 to 4 minutes, scraping down the sides every 60 seconds. The transformation happens in stages: first a coarse, dry crumble; then a thick, clumping ball that rides the blade; then, as the seeds' own oils are released, a sudden collapse into a rough paste; finally, with continued blending, a smooth, flowing cream. If the machine struggles or the paste refuses to loosen after 3 minutes, add the neutral oil one teaspoon at a time, blending after each addition. Do not over-oil — the goal is a paste that moves on its own. Taste and add salt if desired.",
-      visualCue: {
-        primaryTarget: "A smooth, pale ivory-cream paste with a satiny sheen, no visible seed fragments, that pours slowly from a tilted jar like cool cream.",
-        spectrum: [
-          { state: "Underdone", description: "A rough, grainy paste with visible seed fragments; it looks like wet sand rather than a cream. The surface is matte and dull.", action: "Scrape down the sides and blend for at least another 2 full minutes. The oils need more time to fully release." },
-          { state: "Perfect",   description: "Pale, smooth, and silky-glossy — it pools in the blender like liquid ivory and flows off a lifted spatula in a slow, even drizzle. The smell is gently toasted and clean.", action: "Transfer to a jar and store at room temperature up to 1 month, or refrigerate up to 3 months. Stir well before each use." },
-          { state: "Overdone",  description: "Too much neutral oil added; the tahini is thin and almost watery, with a greasy rather than creamy mouthfeel.", action: "Use as is — it is still functional. Next time add oil sparingly, only one teaspoon at a time, stopping the moment the paste flows freely." },
-        ],
-      },
-      feelCue: "Rub a small amount between the pad of a fingertip and the thumb — at the perfect consistency it should feel smooth and coating, like a fine lotion, with no grittiness at all. A finished tahini should leave no grit on the fingertip.",
-    },
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile neutre (uniquement si nécessaire)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile de sésame légère pour intensifier la saveur"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "toasted_sesame",
+      "instructions": "Répartir les graines de sésame crues en une seule couche dans une poêle large et sèche à feu moyen-doux. Mélanger presque constamment avec une cuillère en bois ou agiter la poêle toutes les 15 à 20 secondes. Les graines commenceront à sauter et à s'échauffer. Votre objectif est un toast très léger — juste assez pour réveiller leur saveur de noix et chasser l'humidité de surface, pas pour les colorer. C'est un travail patient et vigilant : le sésame va de parfait à amer en moins de 30 secondes. La différence entre cru et bien grillé est subtile en couleur mais significative en saveur.",
+      "visualCue": {
+        "primaryTarget": "Des graines qui sont passées de blanc plat et crayeux à une crème très pâle, comme la couleur de l'ivoire frais, avec quelques - unes des taches d'or les plus légères qui commencent à apparaître.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours blanc craie sans parfum qui monte de la poêle ; l'odeur crue, légèrement moisie, du sésame inaltéré domine toujours.",
+            "action": "Continuer à feu doux en remuant. La couleur n'est pas le seul indice: attendez que le parfum de sésame chaud et grillé apparaisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "A peine de couleur crème avec une odeur parfumée, chaude, noisetée — pas popcorn-nourriture mais propre et nettement sésame. Quelques graines sont dorées; la plupart sont encore pâles.",
+            "action": "Astucez immédiatement sur une plaque froide ou une plaque de cuisson pour arrêter la cuisson. Ne laissez pas dans la poêle — la chaleur résiduelle continuera de les griller."
+          },
+          {
+            "state": "Overdone",
+            "description": "D'or visible ou de bronzage avec un arôme de noix plus foncé et plus affirmé qui traverse l'amertume, et certaines graines commencent à se former plus agressivement.",
+            "action": "Arrêtez immédiatement. Les tahini surchargés seront amers. Laisser refroidir les graines et goûter une pincée — si l'amertume est vive, recommencer. Un léger excès peut encore produire des tahini acceptables."
+          }
+        ]
+      },
+      "feelCue": "Rouler une graine chaude entre les doigts — elle devrait être sèche et légèrement croustillante, avec les plus faibles donner plutôt qu'une dureté brute. L'odeur sur le bout des doigts doit être chaude et agréablement noisette."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Frais",
+      "inputs": [
+        "toasted_sesame"
+      ],
+      "outputState": "cooled_sesame",
+      "instructions": "Astucez les graines de sésame grillées sur une assiette fraîche ou une plaque de cuisson et étalez-les en une seule couche. Laisser reposer au moins 5 minutes jusqu'à ce qu'ils atteignent la température ambiante. Le mélange de graines de sésame chaudes comporte deux risques : la vapeur qu'elles libèrent condense à l'intérieur du mélangeur et introduit l'humidité, qui peut saisir la pâte; et la chaleur peut faire tourner le moteur de mélange très chaud, raccourcissant sa vie. La patience ici est structurelle, pas facultative.",
+      "visualCue": {
+        "primaryTarget": "Les graines se répandent dans une couche mince, uniforme, ne sautent plus ou ne sautent plus, se refroidissant uniformément sans que la vapeur monte de la plaque.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines sont encore trop chaudes pour être maintenues confortablement dans un palmier en coupe pendant 5 secondes.",
+            "action": "Attendez encore 3 minutes. Mélanger des graines chaudes mais non refroidies risque d'humidité de vapeur en saisissant la pâte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement à température ambiante, sèche et parfumée, vous pouvez les plonger dans une paume en coupe sans aucune chaleur sur la peau.",
+            "action": "Transférer au mélangeur ou au robot culinaire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les graines ont été laissées pour refroidir pendant plus d'une heure et ont ré-absorbé l'humidité de l'air, tournant légèrement doux.",
+            "action": "Retourner à la casserole sèche à feu doux pendant 60 secondes pour éliminer l'humidité avant le mélange."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre paume à plat 2 cm au-dessus de la plaque — aucune chaleur résiduelle ne doit être détectable. Les graines doivent se sentir, entre les doigts, comme des perles sèches fraîches."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "cooled_sesame",
+        "ing_02"
+      ],
+      "outputState": "finished_tahini",
+      "instructions": "Transférer les graines refroidies dans un mélangeur ou un robot alimentaire à haute puissance. Mélanger en continu en haut pendant 3 à 4 minutes, en grattant les côtés toutes les 60 secondes. La transformation se produit par étapes : d'abord un crumble grossier et sec ; puis une grosse boule qui gronde sur la lame ; puis, à mesure que les huiles des graines sont libérées, un brusque effondrement dans une pâte rugueuse ; enfin, avec le mélange continu, une crème lisse et fluide. Si la machine se débat ou si la pâte refuse de se desserrer après 3 minutes, ajouter l'huile neutre une cuillère à café à la fois, en mélangeant après chaque ajout. Ne faites pas trop d'huile — le but est une pâte qui se déplace seule. Goûtez et ajoutez du sel si désiré.",
+      "visualCue": {
+        "primaryTarget": "Une pâte d'ivoire lisse et pâle avec un éclat satiné, pas de fragments de graines visibles, qui coule lentement d'un pot incliné comme de la crème fraîche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Une pâte rugueuse et granuleuse avec des fragments visibles de graines; elle ressemble à du sable humide plutôt qu'à une crème. La surface est mate et terne.",
+            "action": "Gratter les côtés et mélanger pendant au moins 2 minutes. Les huiles ont besoin de plus de temps pour se libérer complètement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pale, lisse et soyeuse, elle s'accumule dans le mélangeur comme de l'ivoire liquide et s'écoule d'une spatule levée dans une bruine lente. L'odeur est légèrement grillée et propre.",
+            "action": "Transférer dans un pot et conserver à température ambiante jusqu'à 1 mois, ou réfrigérer jusqu'à 3 mois. Bien mélanger avant chaque utilisation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop d'huile neutre ajoutée ; le tahini est mince et presque aqueux, avec une sensation de bouche grasse plutôt que crémeuse.",
+            "action": "Utiliser tel quel — il est toujours fonctionnel. La prochaine fois ajouter de l'huile parcimonieusement, une seule cuillère à café à la fois, arrêtant le moment où la pâte coule librement."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité entre le tampon d'un bout de doigt et le pouce — à la consistance parfaite, il devrait se sentir lisse et enduit, comme une fine lotion, sans aucune graisse. Un tahini fini ne devrait pas laisser de grain sur le bout des doigts."
+    }
+  ]
 };

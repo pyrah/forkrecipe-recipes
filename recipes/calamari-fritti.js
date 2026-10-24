@@ -1,99 +1,244 @@
 export default {
-  repoId: "master_italian_calamari_fritti_001",
-  parentRepoId: null,
-  slug: "calamari-fritti",
-  author: "ForkRecipe Kitchen",
-  title: "Calamari Fritti",
-  description: "Crisp, airy fried squid rings and tentacles dusted in seasoned semolina and dropped in hot oil until shattering gold — served immediately with lemon wedges, because the thirty-second window between perfect and limp is real and unforgiving.",
-  cuisine: "Italian",
-  culture: "Southern Italian",
-  category: "seafood",
-  tags: ["calamari", "squid", "fried", "italian", "southern-italian", "seafood", "antipasto"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 2, sour: 0, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Fresh squid, cleaned (tubes + tentacles)",             ratioValue: 500,  defaultUnit: "g",  substitutions: ["frozen squid, fully thawed and dried"] },
-    { ingId: "ing_02", role: "Starch",    name: "Fine semolina (or half 00 flour, half semolina)",      ratioValue: 120,  defaultUnit: "g",  substitutions: ["all-purpose flour (less crisp)", "rice flour (gluten-free)"] },
-    { ingId: "ing_03", role: "Starch",    name: "Cornstarch",                                           ratioValue: 30,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                                        ratioValue: 6,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Black pepper, freshly cracked",                        ratioValue: 2,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Cayenne pepper",                                       ratioValue: 1,    defaultUnit: "g",  substitutions: ["mild dried red pepper flakes"] },
-    { ingId: "ing_07", role: "Fat",       name: "Vegetable oil, for deep frying (sunflower or peanut)", ratioValue: 1000, defaultUnit: "ml", substitutions: ["rice bran oil", "grapeseed oil"] },
-    { ingId: "ing_08", role: "Citrus",    name: "Lemon wedges, for serving",                            ratioValue: 2,    defaultUnit: "ea", substitutions: [] },
+  "repoId": "master_italian_calamari_fritti_001",
+  "parentRepoId": null,
+  "slug": "calamari-fritti",
+  "author": "ForkRecipe Kitchen",
+  "title": "Calamari Fritti",
+  "description": "Des anneaux de calmars frits et des tentacules aérés dans de la semoule assaisonnée et sont tombés dans l'huile chaude jusqu'à briser l'or — servis immédiatement avec des quartiers de citron, parce que la fenêtre de trente secondes entre parfait et boiteux est réelle et impitoyable.",
+  "cuisine": "Italien",
+  "culture": "Sud de l ' Italie",
+  "category": "seafood",
+  "tags": [
+    "calamars",
+    "calmars",
+    "frits",
+    "Italien",
+    "italiques du Sud",
+    "Produits de la mer",
+    "antipasto"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Slice",
-      inputs: ["ing_01"],
-      outputState: "prepped_dry_squid",
-      instructions: "Pull the tentacles from the tubes and discard the quill (the clear plastic-like spine inside the tube). Pull away the purple-grey skin from the tubes if it has not already been removed by the fishmonger. Cut each tube into rings about 1cm wide. Keep the tentacles whole if small, or cut the crown in half if large. Now — this is the most important step — pat everything bone-dry in multiple changes of paper towels and leave spread on a rack for 10 minutes. Wet squid = steamed, rubbery calamari. Dry squid = crisp, tender calamari.",
-      visualCue: {
-        primaryTarget: "Squid rings and tentacles are completely dry, matte white, and have slightly curled at the cut edges. No water pools on the tray beneath them.",
-        spectrum: [
-          { state: "Underdone", description: "Rings are still visibly wet and shiny with moisture. Placed on paper, they immediately soak through.", action: "Pat again with fresh dry paper and leave uncovered a further 5 minutes. Do not rush this step — wet squid will make the oil temperature plunge and produce soggy results." },
-          { state: "Perfect",   description: "Rings are matte white and dry. They feel slightly tacky to the touch from their natural proteins. No visible moisture on the tray.", action: "Proceed to seasoning the coating mix." },
-          { state: "Overdone",  description: "Squid has been sitting so long at room temperature it has started to dry out at the edges and smell slightly stronger.", action: "Coat and fry immediately. The thin-dried edges will actually cling to the coating better, and the frying will seal in the remaining moisture quickly." },
-        ],
-      },
-      feelCue: "Pick up a ring and hold it between thumb and finger — it should feel slightly tacky and dry, like a dried rubber band, not slippery or wet. Slip means more drying time is needed.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Calmars frais, nettoyés (tubes + tentacules)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "calmars congelés, entièrement dégelés et séchés"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toss",
-      inputs: ["prepped_dry_squid", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "coated_squid",
-      instructions: "Whisk together the semolina, cornstarch, salt, black pepper, and cayenne in a wide, shallow bowl or a paper bag. Working in two batches, add the squid and toss to coat thoroughly, then lift each piece and shake off every excess grain of coating — only a thin, even film should remain. Excess coating falls off in the oil, burns, and pollutes the oil while making the calamari heavy and doughy. Lay the coated pieces in a single layer on a plate until ready to fry.",
-      visualCue: {
-        primaryTarget: "Each ring and tentacle is coated in a thin, matte, even dusting of semolina. The natural white of the squid is barely visible beneath the coating. No clumps.",
-        spectrum: [
-          { state: "Underdone", description: "Large patches of bare squid visible — coating is not adhering evenly because the squid is still too wet, or not enough coating was used.", action: "Return to the coating bowl. The coating must cover the entire surface or those bare spots will be rubbery and pale." },
-          { state: "Perfect",   description: "Thin, even, matte coating all over. When you shake a ring, the coating stays put — no heavy clumps or piles of loose semolina.", action: "Fry immediately in hot oil. Do not let the coated calamari sit too long or the moisture in the squid will hydrate the coating and make it paste-like." },
-          { state: "Overdone",  description: "Thick coating, visibly lumpy, with balls of wet semolina clinging to the squid. Rings feel heavy.", action: "Shake vigorously and pull off any thick doughy patches with your fingers. A thick coating steams rather than crisps." },
-        ],
-      },
-      feelCue: "Hold a coated ring up and blow gently on it — the excess loose semolina should drift away, leaving a fine, dry coat that clings as if the ring had simply been lightly dusted with snow.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Semoule fine (ou moitié de farine 00, moitié de semoule)",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Farine polyvalente (moins croquante)",
+        "farine de riz (sans gluten)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["coated_squid", "ing_07"],
-      outputState: "fried_calamari",
-      instructions: "Heat the oil in a wide, deep, heavy pot to 180–185°C (a pinch of coating dropped in should sizzle immediately and rise to the surface). Fry the squid in small batches — no more than a handful at a time — for exactly 60 to 90 seconds. Do not walk away. The rings cook very fast and overcooking by even 30 seconds makes them rubbery. They are done when golden-amber all over and floating freely in the oil. Remove with a spider strainer and place on a wire rack immediately — never paper towels on the bottom, which trap steam.",
-      visualCue: {
-        primaryTarget: "Rings and tentacles are uniformly amber-gold all over, slightly puffed, and floating freely in the oil. The tentacles are curled and crunchy-looking, like tiny fried flowers.",
-        spectrum: [
-          { state: "Underdone", description: "Rings are pale gold and still sinking in the oil after 60 seconds. Coating does not sound crisp when a ring is lifted and tapped. Squid is likely still chewy inside.", action: "Give them 20 more seconds maximum and remove. The oil temperature may have dropped — let it recover between batches." },
-          { state: "Perfect",   description: "Deep amber-gold, crunchy-sounding when tapped. Tentacles are golden and fully curled. Rings have a slight spring when pressed and smell of toasted semolina and the sea.", action: "Remove immediately to a wire rack. Season with salt the instant they come out of the oil." },
-          { state: "Overdone",  description: "Dark brown, even in the semolina pockets. The squid inside has shrunk and contracted, and the texture will be tough and rubbery regardless of the crisp exterior.", action: "Serve immediately with extra lemon to cut through any bitterness. Next batch, reduce time to 60 seconds and ensure oil is at proper temperature." },
-        ],
-      },
-      feelCue: "Lift a ring from the oil with the spider — it should sound faintly crisp when it clinks against other rings on the rack, like a delicate wind chime, not soft and silent like wet cardboard.",
+      "ingId": "ing_03",
+      "role": "Starch",
+      "name": "Farine de maïs",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Season",
-      inputs: ["fried_calamari", "ing_04", "ing_08"],
-      outputState: "finished_calamari_fritti",
-      instructions: "The instant the calamari comes off the rack — within 10 seconds — season generously with fine salt while the oil on the surface is still hot and the salt will adhere. Arrange on a warm plate lined with a paper napkin (paper underneath is fine at this stage since the calamari is already on a wire rack; the napkin is for tableside aesthetics, not to re-steam them). Serve immediately with lemon wedges alongside. Calamari fritti waits for no one — it has a window of perfection measured in minutes.",
-      visualCue: {
-        primaryTarget: "Glistening amber-gold rings and tentacles piled on the plate, with fine salt crystals visible on the surface. The steam rising from the pile is fragrant with fried semolina.",
-        spectrum: [
-          { state: "Underdone", description: "Calamari has not been seasoned yet. Without salt applied immediately after frying, the coating will not hold it and the squid will taste flat.", action: "Season now, even if a minute has passed — it will still adhere to the warm oil on the surface." },
-          { state: "Perfect",   description: "Lightly salted, crunchy, golden rings that crackle when bitten. Lemon wedges on the side. The table smells of fried seafood and seasoned oil.", action: "Eat immediately. The entire window of perfection is 3–4 minutes maximum." },
-          { state: "Overdone",  description: "Calamari has sat for 5+ minutes. The crust has softened and the rings are beginning to feel leathery from the trapped steam of the hot squid inside.", action: "Spread on a baking tray and return to a 220°C oven for 3 minutes to re-crisp. Good, not perfect, but salvageable." },
-        ],
-      },
-      feelCue: "Pick up one ring and bite — you want to hear a clean, audible crunch from the semolina crust followed immediately by the tender, slightly sweet yield of the squid inside. Two textures, no gap between them.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poivre noir, fraichement craqué",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "flocons de poivre rouge séché doux"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile végétale, pour friture profonde (fleur de soleil ou arachide)",
+      "ratioValue": 1000,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Huile de son de riz",
+        "huile de raisin"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Citrus",
+      "name": "Coins de citron, pour servir",
+      "ratioValue": 2,
+      "defaultUnit": "ea",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Tranche",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "prepped_dry_squid",
+      "instructions": "Tirez les tentacules des tubes et jetez la plume (la colonne vertébrale en plastique clair à l'intérieur du tube). Retirez la peau violet-gris des tubes si elle n'a pas déjà été enlevée par le poissonnier. Couper chaque tube en anneaux d'environ 1cm de large. Gardez les tentacules entiers si petits, ou coupez la couronne en deux si grands. Maintenant — c'est l'étape la plus importante — tapez tout désossé dans plusieurs changements de serviettes en papier et laissez étaler sur un support pendant 10 minutes. Calmar humide = calamar à la vapeur et caoutchouteux. Calmar sec = calamar croustillant et tendre.",
+      "visualCue": {
+        "primaryTarget": "Les anneaux de calmar et les tentacules sont entièrement secs, blancs mats et légèrement frisés aux bords coupés. Pas de piscines sous le plateau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les anneaux sont encore visiblement humides et brillants avec l'humidité. Placés sur du papier, ils s'imprégnent immédiatement.",
+            "action": "Patrez encore avec du papier sec frais et laissez découvert 5 minutes supplémentaires. Ne précipitez pas cette étape — le calmar humide fera plonger la température de l'huile et produira des résultats soyeux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les anneaux sont blancs mats et secs. Ils se sentent légèrement collants au toucher à partir de leurs protéines naturelles. Pas d'humidité visible sur le plateau.",
+            "action": "Procéder à l'assaisonnement du mélange de revêtement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le calmar est si longtemps assis à température ambiante qu'il a commencé à sécher aux bords et à sentir un peu plus fort.",
+            "action": "Manteau et frit immédiatement. Les bords finement séchés s'accrocheront mieux au revêtement, et la friture scellera rapidement dans l'humidité restante."
+          }
+        ]
+      },
+      "feelCue": "Prenez une bague et maintenez-la entre le pouce et le doigt — elle doit être légèrement collante et sèche, comme une bande de caoutchouc séchée, non glissante ni mouillée. Slip signifie plus de temps de séchage est nécessaire."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Découpe",
+      "inputs": [
+        "prepped_dry_squid",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "coated_squid",
+      "instructions": "Battre la semoule, la fécule de maïs, le sel, le poivre noir et la cayenne dans un grand bol peu profond ou un sac en papier. Travailler en deux lots, ajouter le calmar et jeter pour enrober soigneusement, puis soulever chaque morceau et secouer chaque grain excédentaire de revêtement — il ne devrait rester qu'un mince film. L'excès de revêtement tombe dans l'huile, brûle et pollue l'huile tout en rendant le calamar lourd et pâteux. Poser les morceaux enduits en une seule couche sur une plaque jusqu'à ce qu'ils soient prêts à frire.",
+      "visualCue": {
+        "primaryTarget": "Chaque anneau et tentacule est recouvert d'une fine, mate, même poussière de semoule. Le blanc naturel du calmar est à peine visible sous le revêtement. Pas d'embrouille.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De grandes taches de calmars nus visibles — le revêtement n'est pas uniforme parce que le calmar est encore trop humide, ou pas assez de revêtement a été utilisé.",
+            "action": "Retournez dans le bol de revêtement. Le revêtement doit couvrir toute la surface ou ces taches nues seront caoutchouteuses et pâles."
+          },
+          {
+            "state": "Perfect",
+            "description": "Fin, même, revêtement mat partout. Lorsque vous secouez un anneau, le revêtement reste mis — pas de touffes ou de tas de semoule lâche.",
+            "action": "Faire revenir immédiatement l'huile chaude. Ne laissez pas le calamar couché s'asseoir trop longtemps ou l'humidité dans le calmar hydratera le revêtement et le rendra collant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Revêtement épais, visiblement grumeux, avec des boules de semoule humide accrochées au calmar. Les anneaux sont lourds.",
+            "action": "Agiter vigoureusement et retirer les plaques épaisses avec vos doigts. Une épaisse vapeur de revêtement plutôt que des croustillants."
+          }
+        ]
+      },
+      "feelCue": "Tenez un anneau enduit et soufflez doucement dessus — l'excès de semoule libre devrait dériver, laissant une fine couche sèche qui s'accroche comme si l'anneau avait simplement été légèrement pulvérisé avec de la neige."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "coated_squid",
+        "ing_07"
+      ],
+      "outputState": "fried_calamari",
+      "instructions": "Chauffer l'huile dans un pot large, profond et lourd à 180–185°C (une pincée de revêtement doit tomber immédiatement et monter à la surface). Faire frire le calmar en petits lots — pas plus qu'une poignée à la fois — pendant exactement 60 à 90 secondes. Ne partez pas. Les anneaux cuisinent très vite et la cuisson excessive de même 30 secondes les rend caoutchouteux. Ils sont faits quand l'ambre d'or partout et flottant librement dans l'huile. Retirez - vous avec une souche d'araignée et placez - la immédiatement sur une grille de fils — jamais de serviettes en papier sur le fond, qui piègent la vapeur.",
+      "visualCue": {
+        "primaryTarget": "Les anneaux et les tentacules sont uniformément or-ambre partout, légèrement gonflés, et flottant librement dans l'huile. Les tentacules sont enroulées et croquantes, comme de petites fleurs frites.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les anneaux sont en or pâle et coulent toujours dans l'huile après 60 secondes. Le revêtement ne semble pas croquant lorsqu'une bague est levée et tapée. Le calmar est probablement encore à croquer à l'intérieur.",
+            "action": "Donnez-leur 20 secondes de plus et retirez. La température de l'huile a peut - être baissé, qu'elle se rétablisse entre les lots."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep amber-or, croquant-sounding quand tapoté. Les tentacules sont dorés et entièrement enroulés. Les anneaux ont un léger ressort lorsqu'ils sont pressés et sentent la semoule grillée et la mer.",
+            "action": "Retirez-vous immédiatement sur une grille. Assaisonner de sel dès qu'ils sortent de l'huile."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé, même dans les poches de semoule. Le calmar intérieur a rétréci et contracté, et la texture sera dure et caoutchouteuse indépendamment de l'extérieur croquant.",
+            "action": "Servir immédiatement avec du citron supplémentaire à couper à travers toute amertume. Prochain lot, réduisez le temps à 60 secondes et assurez-vous que l'huile est à la bonne température."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un anneau de l'huile avec l'araignée — il devrait sembler légèrement croustillant quand il clique contre d'autres anneaux sur la grille, comme un vent délicat carillon, pas doux et silencieux comme du carton humide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "fried_calamari",
+        "ing_04",
+        "ing_08"
+      ],
+      "outputState": "finished_calamari_fritti",
+      "instructions": "L'instant où le calamar sort de la grille — dans les 10 secondes — assaisonne généreusement avec du sel fin alors que l'huile à la surface est encore chaude et que le sel adhère. Disposer sur une plaque chaude doublée d'une serviette en papier (le papier en dessous est très bien à ce stade puisque le calamar est déjà sur un support en fil; la serviette est pour l'esthétique côté table, pas pour les re-déguster). Servir immédiatement avec des quartiers de citron. Calamari Fritti n'attend personne — il a une fenêtre de perfection mesurée en minutes.",
+      "visualCue": {
+        "primaryTarget": "Des anneaux d'or ambré et des tentacules empilés sur la plaque, avec des cristaux de sel fins visibles à la surface. La vapeur qui monte de la pile est parfumée de semoule frite.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Calamari n'a pas encore été assaisonné. Sans sel appliqué immédiatement après la friture, le revêtement ne le tiendra pas et le calmar aura un goût plat.",
+            "action": "Assaisonner maintenant, même si une minute s'est écoulée — il continuera à adhérer à l'huile chaude à la surface."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des anneaux dorés légèrement salés et croquants qui craquent en mordant. Des coins de citron sur le côté. La table sent les fruits de mer frits et l'huile assaisonnée.",
+            "action": "Mangez immédiatement. Toute la fenêtre de la perfection est de 3 à 4 minutes maximum."
+          },
+          {
+            "state": "Overdone",
+            "description": "Calamari s'est assis 5+ minutes. La croûte s'est ramollie et les anneaux commencent à se sentir cuireux à partir de la vapeur piégée du calmar chaud à l'intérieur.",
+            "action": "Étaler sur un plateau de cuisson et retourner au four à 220°C pendant 3 minutes pour ré-crisp. Bien, pas parfait, mais récupérable."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une bague et mordez — vous voulez entendre une croûte propre et audible de la croûte de semoule suivie immédiatement du rendement tendre et légèrement doux du calmar à l'intérieur. Deux textures, pas d'écart entre elles."
+    }
+  ]
 };

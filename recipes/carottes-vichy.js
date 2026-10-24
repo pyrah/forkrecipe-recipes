@@ -1,65 +1,164 @@
 export default {
-  repoId: "master_french_carottesvichy_001",
-  parentRepoId: null,
-  slug: "carottes-vichy",
-  author: "ForkRecipe Kitchen",
-  title: "Carottes Vichy (Glazed Carrots)",
-  description: "Carrots simmered in Vichy water, butter, and a whisper of sugar until tender and lacquered — a humble side that shines with sweetness and shine.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "vegetables",
-  tags: ["french", "carrots", "glazed", "side", "classical", "vegetarian"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 4, salty: 2, sour: 0, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Carrots, peeled and sliced into 5 mm rounds", ratioValue: 500, defaultUnit: "g",   substitutions: ["baby carrots, halved"] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter",                              ratioValue: 30,  defaultUnit: "g",   substitutions: ["vegan butter"] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Caster sugar",                                ratioValue: 10,  defaultUnit: "g",   substitutions: ["honey"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine salt",                                   ratioValue: 4,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_05", role: "Hydration",  name: "Water (sparkling mineral preferred)",          ratioValue: 200, defaultUnit: "ml",  substitutions: ["still water"] },
-    { ingId: "ing_06", role: "Garnish",    name: "Flat-leaf parsley, finely chopped",            ratioValue: 10,  defaultUnit: "g",   substitutions: ["chervil"] },
+  "repoId": "master_french_carottesvichy_001",
+  "parentRepoId": null,
+  "slug": "carottes-vichy",
+  "author": "ForkRecipe Kitchen",
+  "title": "Carottes Vichy (carottes émaillées)",
+  "description": "Les carottes mijotaient dans l'eau de Vichy, le beurre, et un murmure de sucre jusqu'à tendre et laqué, un côté humble qui brille avec douceur et brillance.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "vegetables",
+  "tags": [
+    "français",
+    "Carottes",
+    "glacé",
+    "côté",
+    "classique",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "simmering_carrots",
-      instructions: "Arrange the carrot rounds in a single layer in a wide sauté pan. Add butter, sugar, salt, and just enough water to barely cover the carrots — no more. Bring to a vigorous simmer over medium-high heat, uncovered. Cook, swirling the pan occasionally, until the liquid has almost entirely evaporated and a syrupy glaze remains.",
-      visualCue: {
-        primaryTarget: "The liquid is almost gone and the carrots are coated in a glossy, amber-tinged glaze that clings to each round.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is still cloudy and loose; carrots resist a knife tip. No sheen on the surface.", action: "Continue cooking over medium-high heat, uncovered. Resist adding more water — trust the reduction." },
-          { state: "Perfect",   description: "Liquid has reduced to a few tablespoons of glaze. Carrots are fork-tender and each round is lacquered, catching the light.", action: "Remove from heat immediately and toss with parsley." },
-          { state: "Overdone",  description: "Glaze has caramelized to a dark, sticky film. Edges of the carrots are starting to burn.", action: "Add a splash of water and swirl to dissolve the dark bits. The sweetness will be more pronounced but still good." },
-        ],
-      },
-      feelCue: "A toothpick should slide through a carrot round with gentle, even resistance — tender but not mushy, the way a ripe peach yields to a fingernail.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Carottes, pelées et coupées en rondelles de 5 mm",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Carottes pour bébés, coupées en deux"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toss",
-      inputs: ["simmering_carrots", "ing_06"],
-      outputState: "finished_carottes_vichy",
-      instructions: "Off the heat, scatter the chopped parsley over the glazed carrots. Toss gently to coat, then taste and adjust salt. Serve immediately — the glaze tightens as it cools.",
-      visualCue: {
-        primaryTarget: "Each carrot round is jewel-bright orange with a sheen of glaze and flecks of vivid green parsley throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Parsley is stirred in but glaze looks thin and watery — too much moisture from the herb.", action: "Return briefly to low heat for 30 seconds, tossing constantly, to re-tighten the glaze." },
-          { state: "Perfect",   description: "Carrots are glossy, evenly coated, and dotted with bright green. The pan is nearly clean of liquid.", action: "Plate and serve at once." },
-          { state: "Overdone",  description: "Parsley has wilted to olive drab and the glaze has seized into a sticky mass.", action: "Add a tiny knob of cold butter and a spoonful of water; swirl gently over low heat to loosen." },
-        ],
-      },
-      feelCue: "The carrots should yield to the touch of a spoon without breaking — cohesive, lacquered rounds that move as one when the pan is swirled.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "beurre végétal"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Hydration",
+      "name": "Eau (minéraux parsemés de préférence)",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau morte"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Garnish",
+      "name": "Persil à feuilles plates, haché finement",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Cerveau"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "simmering_carrots",
+      "instructions": "Disposer les rondelles de carottes en une seule couche dans une grande casserole. Ajouter le beurre, le sucre, le sel et juste assez d'eau pour couvrir à peine les carottes — pas plus. Faire mijoter vigoureusement à feu moyen-vif, à découvert. Cuire, en tourbillonnant parfois la poêle, jusqu'à ce que le liquide ait presque entièrement évaporé et qu'un glaçage sirupeux reste.",
+      "visualCue": {
+        "primaryTarget": "Le liquide est presque parti et les carottes sont enduites d'une glaçure brillante et ambrée qui s'accroche à chaque tour.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore nuageux et lâche; les carottes résistent à une pointe de couteau. Pas d'éblouissement à la surface.",
+            "action": "Continuer la cuisson à feu moyen-vif, à découvert. Résistez à ajouter plus d'eau — faites confiance à la réduction."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide a réduit à quelques cuillères à soupe de glaçure. Les carottes sont de type fourche et chaque tour est laqué, captant la lumière.",
+            "action": "Retirer immédiatement du feu et mélanger avec du persil."
+          },
+          {
+            "state": "Overdone",
+            "description": "Glaze a caramélisé en un film sombre et collant. Les bords des carottes commencent à brûler.",
+            "action": "Ajouter une éclaboussure d'eau et tourbillonner pour dissoudre les morceaux sombres. La douceur sera plus prononcée mais toujours bonne."
+          }
+        ]
+      },
+      "feelCue": "Un cure - cure - cure - cure - cure - cure - cure - cure - carotte ronde avec une résistance douce et uniforme — tendre mais pas musquée, la façon dont une pêche mûre donne à un ongle."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Découpe",
+      "inputs": [
+        "simmering_carrots",
+        "ing_06"
+      ],
+      "outputState": "finished_carottes_vichy",
+      "instructions": "Hors de la chaleur, dispersez le persil haché sur les carottes vitrées. Mélanger doucement pour enrober, puis goûter et ajuster le sel. Servir immédiatement — la glaçure se serre en refroidissant.",
+      "visualCue": {
+        "primaryTarget": "Chaque carotte ronde est orange brillant avec un éclat de glaçure et de paillettes de persil vert vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le persil est agité, mais la glaçure semble mince et aqueuse — trop d'humidité de l'herbe.",
+            "action": "Revenez brièvement à feu doux pendant 30 secondes, jetant constamment, pour re-resserrer la glaçure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les carottes sont brillantes, uniformément revêtues et parsemées de vert vif. La casserole est presque propre du liquide.",
+            "action": "Assortiment et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le persil s'est flétri jusqu'au drab d'olive et la glaçure s'est emparée d'une masse collante.",
+            "action": "Ajouter un petit bouton de beurre froid et une cuillère d'eau; tourner doucement à feu doux pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "Les carottes doivent céder au toucher d'une cuillère sans se briser — des rondelles cohésives et laquées qui se déplacent comme une seule fois que la poêle est agitée."
+    }
+  ]
 };

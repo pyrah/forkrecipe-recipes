@@ -1,104 +1,302 @@
 export default {
-  repoId: "master_jamaican_jerkchicken_001",
-  parentRepoId: null,
-  slug: "jerk-chicken",
-  author: "ForkRecipe Kitchen",
-  title: "Jamaican Jerk Chicken",
-  description: "Charred outside, smoky within — scotch bonnet-fired, allspice-heavy jerk chicken that blisters on the grill and perfumes everything for ten feet around.",
-  cuisine: "Jamaican",
-  culture: "Jamaican",
-  category: "proteins",
-  tags: ["chicken", "jamaican", "grilled", "spicy", "marinade", "jerk"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "5 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 1, umami: 2, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",    name: "Bone-in chicken pieces (legs, thighs, breasts)", ratioValue: 1000, defaultUnit: "g",  substitutions: ["whole spatchcocked chicken"] },
-    { ingId: "ing_02", role: "Spice",      name: "Scotch bonnet chili, stems removed",             ratioValue: 3,    defaultUnit: "pcs", substitutions: ["habanero chili"] },
-    { ingId: "ing_03", role: "Allium",     name: "Scallions, roughly chopped",                     ratioValue: 6,    defaultUnit: "pcs", substitutions: ["green onions"] },
-    { ingId: "ing_04", role: "Herb",       name: "Fresh thyme leaves",                             ratioValue: 10,   defaultUnit: "g",   substitutions: ["dried thyme (use half quantity)"] },
-    { ingId: "ing_05", role: "Allium",     name: "Garlic cloves",                                  ratioValue: 6,    defaultUnit: "pcs", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",   name: "Fresh ginger, peeled",                           ratioValue: 20,   defaultUnit: "g",   substitutions: ["ground ginger (5 g)"] },
-    { ingId: "ing_07", role: "Spice",      name: "Whole allspice berries, toasted and ground",     ratioValue: 8,    defaultUnit: "g",   substitutions: ["ground allspice"] },
-    { ingId: "ing_08", role: "Spice",      name: "Ground cinnamon",                                ratioValue: 2,    defaultUnit: "g",   substitutions: ["half a cinnamon stick, blended"] },
-    { ingId: "ing_09", role: "Sweetener",  name: "Dark brown sugar",                               ratioValue: 15,   defaultUnit: "g",   substitutions: ["light brown sugar", "molasses"] },
-    { ingId: "ing_10", role: "Umami",      name: "Soy sauce",                                      ratioValue: 30,   defaultUnit: "ml",  substitutions: ["tamari for gluten-free"] },
-    { ingId: "ing_11", role: "Acid",       name: "Fresh lime juice",                               ratioValue: 30,   defaultUnit: "ml",  substitutions: ["white wine vinegar"] },
-    { ingId: "ing_12", role: "Fat",        name: "Neutral oil (canola or vegetable)",              ratioValue: 30,   defaultUnit: "ml",  substitutions: ["olive oil"] },
-    { ingId: "ing_13", role: "Seasoning",  name: "Kosher salt",                                    ratioValue: 10,   defaultUnit: "g",   substitutions: ["fine sea salt"] },
+  "repoId": "master_jamaican_jerkchicken_001",
+  "parentRepoId": null,
+  "slug": "jerk-chicken",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poulet jamaïcain",
+  "description": "Charred outdoor, fumant à l'intérieur — scotch bonnet-feu, toutspice-heavy poulet sec qui cloques sur le grill et parfume tout pour dix pieds autour.",
+  "cuisine": "Jamaïquen",
+  "culture": "Jamaïquen",
+  "category": "proteins",
+  "tags": [
+    "poulet",
+    "Jamaïcain",
+    "grillé",
+    "épicé",
+    "marinade",
+    "Imbécile"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "5 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12", "ing_13"],
-      outputState: "jerk_paste",
-      instructions: "Combine all marinade ingredients in a blender or food processor. Blitz to a smooth, intensely aromatic paste. Taste it — it should be fiery, fragrant with allspice, and deeply savory. Adjust salt and lime. The color should be a deep olive-green flecked with red.",
-      visualCue: {
-        primaryTarget: "A thick, dark green-brown paste that clings to a spoon without dripping. No large visible chunks.",
-        spectrum: [
-          { state: "Underdone", description: "Chunky texture with visible herb and pepper fragments; oily separation at the top.", action: "Blend another 30 seconds, scraping down the sides. Add a splash of oil to help it emulsify." },
-          { state: "Perfect",   description: "Dense, uniform paste with a faintly glossy surface. Deep green-brown color, nose-stinging aroma.", action: "Proceed immediately to scoring and coating the chicken." },
-          { state: "Overdone",  description: "Completely liquefied and thin — lost body and cohesion.", action: "The marinade will still work; it will just be more of a wet brine than a paste. Reduce marinating time by one hour." },
-        ],
-      },
-      feelCue: "The paste should be thick enough to mound on a spoon. When you rub it between your fingers it feels slick and dense — it should cling to your skin and make your eyes water from the volatiles.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Morceaux de poulet désossé (jambes, cuisses, poitrines)",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "de poulet entiers"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Marinate",
-      inputs: ["ing_01", "jerk_paste"],
-      outputState: "marinated_chicken",
-      instructions: "Using a sharp knife, score the chicken pieces to the bone — three deep parallel cuts per piece allows the paste to penetrate. Wearing gloves (scotch bonnet oil is serious), massage the jerk paste into every surface including under the skin where possible. Pack tightly into a zip-lock bag or sealed container. Refrigerate for a minimum of 4 hours; overnight is ideal for full smoke-spice penetration.",
-      visualCue: {
-        primaryTarget: "Chicken completely cloaked in dark paste. The scored cuts have opened slightly and absorbed color into the flesh.",
-        spectrum: [
-          { state: "Underdone", description: "Paste sits on the surface without penetrating. Flesh beneath the skin still pink-white.", action: "Re-massage, pressing paste actively into the score marks. Marinate longer." },
-          { state: "Perfect",   description: "Flesh visible through the score marks has taken on a greenish-brown stain from the marinade. Skin is dark-coated.", action: "Pull from the fridge 30 minutes before grilling to take the chill off." },
-          { state: "Overdone",  description: "Marinated more than 24 hours — flesh at the surface has taken on a mushy texture from the acid.", action: "Cook as planned; the interior will still be fine. Reduce acid in future batches." },
-        ],
-      },
-      feelCue: "The paste on the scored flesh should feel tacky rather than wet — press a finger in and the marinade sticks. The chicken should feel firm, not spongy.",
+      "ingId": "ing_02",
+      "role": "Spice",
+      "name": "Chili de bonnet écossais, tiges enlevées",
+      "ratioValue": 3,
+      "defaultUnit": "pcs",
+      "substitutions": [
+        "Piments de habanero"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Grill",
-      inputs: ["marinated_chicken"],
-      outputState: "grilled_jerk_chicken",
-      instructions: "Set up a two-zone grill: high direct heat on one side, indirect medium on the other. Start the chicken skin-side up on the indirect side, covered, for 25–30 minutes until internal temperature reaches 65°C. Then move to direct high heat, skin-side down, for 4–6 minutes to char and blister the exterior. Flip and char the flesh side for 2 minutes. The char is not a mistake — it is the point.",
-      visualCue: {
-        primaryTarget: "Deep mahogany crust with true char marks and blistered black spots at the scored edges. The paste has fused to the skin.",
-        spectrum: [
-          { state: "Underdone", description: "Pale brown with no charring. Paste still looks wet and green-tinged. Skin soft and flabby.", action: "Continue on direct heat. The Maillard reaction and char are critical flavor events — do not rush to indirect too soon." },
-          { state: "Perfect",   description: "Near-black char on the ridges and edges. Deep mahogany everywhere else. Skin crackles when pressed. Internal temperature 74°C.", action: "Transfer to a cutting board to rest." },
-          { state: "Overdone",  description: "Surface is uniformly black and bitter-smelling. Flesh at the thinnest points has dried to jerky.", action: "Salvage by stripping off the burnt outer layer — the flesh beneath should still be juicy. Serve with extra lime." },
-        ],
-      },
-      feelCue: "Press the thickest part of the thigh — it should give firmly with very slight resistance, not squishy. The charred crust should feel dry and rigid under your fingertip, while the flesh below springs back slowly.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Échalons, hachés approximativement",
+      "ratioValue": 6,
+      "defaultUnit": "pcs",
+      "substitutions": [
+        "oignons verts"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Rest",
-      inputs: ["grilled_jerk_chicken"],
-      outputState: "rested_jerk_chicken",
-      instructions: "Rest the chicken on a wooden board, loosely tented with foil, for 8–10 minutes. The internal temperature will coast up 2–3°C. The juices, which have been driven to the center by the heat, redistribute through the meat. Do not cut early.",
-      visualCue: {
-        primaryTarget: "The char has dulled to a matte finish. A small pool of dark, spiced juice has collected under each piece.",
-        spectrum: [
-          { state: "Underdone", description: "Rested less than 5 minutes — juices run bright pink when cut.", action: "Wait. The rest is not optional." },
-          { state: "Perfect",   description: "Juices run clear-amber when the thigh is pierced at the thickest point. Flesh relaxed and pulling slightly away from bone.", action: "Serve immediately with rice and peas, festival dumplings, or sliced with lime." },
-          { state: "Overdone",  description: "Rested too long uncovered — exterior has cooled and lost its crackle.", action: "Blast under the broiler for 60 seconds to revive the char crust." },
-        ],
-      },
-      feelCue: "Lift a thigh — the bone should feel loose in the joint. When you cut through, the flesh should part cleanly with a faint crackle from the outer crust. The smell is all woodsmoke, allspice, and scotch bonnet heat.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Feuilles de thym fraîches",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Thym séché (utiliser la moitié de la quantité)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 6,
+      "defaultUnit": "pcs",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Gingembre frais, pelé",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gingembre moulu (5 g)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Baies entières, grillées et moulues",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tous les poissons"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "moitié d'un bâton de cannelle, mélangé"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Sucre brun foncé",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brun léger",
+        "mélasse"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari pour sans gluten"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Fat",
+      "name": "Huile neutre (canola ou légumes)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel de mer fin"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "jerk_paste",
+      "instructions": "Mélanger tous les ingrédients de la marinade dans un mélangeur ou un robot culinaire. Blitz à une pâte aromatique lisse et intense. Goûtez - le — il devrait être ardent, parfumé de tout l'aspice, et profondément salé. Régler le sel et la chaux. La couleur doit être un vert olive profond tacheté de rouge.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse et brun-vert foncé qui s'accroche à une cuillère sans goutter. Pas de gros morceaux visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "texture épaisse avec des fragments visibles d'herbe et de poivre; séparation huileuse au sommet.",
+            "action": "Mélanger encore 30 secondes, en grattant les côtés. Ajoutez une touche d'huile pour l'aider à émulsifier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte dense et uniforme avec une surface légèrement brillante. Couleur vert-brun profond, arôme piquant du nez.",
+            "action": "Procédez immédiatement au marquage et au revêtement du poulet."
+          },
+          {
+            "state": "Overdone",
+            "description": "Complètement liquéfié et mince — corps perdu et cohésion.",
+            "action": "La marinade fonctionnera toujours; elle sera juste plus d'une saumure humide qu'une pâte. Réduire le temps de marinage d'une heure."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit être assez épaisse pour être collée sur une cuillère. Lorsque vous le frottez entre vos doigts, il se sent lissé et dense — il devrait s'accrocher à votre peau et faire vos yeux arroser des volatiles."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "jerk_paste"
+      ],
+      "outputState": "marinated_chicken",
+      "instructions": "À l'aide d'un couteau tranchant, marquer les morceaux de poulet à l'os — trois coupes parallèles profondes par morceau permettent à la pâte de pénétrer. Porter des gants (l'huile de capot scotch est grave), masser la pâte de sourcil dans toutes les surfaces, y compris sous la peau si possible. Emballez fermement dans un sac à fermeture éclair ou un contenant scellé. Réfrigérer pendant au moins 4 heures; la nuit est idéale pour une pénétration complète de la fumée.",
+      "visualCue": {
+        "primaryTarget": "Poulet entièrement recouvert de pâte foncée. Les coupures ont ouvert légèrement et absorbé la couleur dans la chair.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est assise sur la surface sans pénétrer. Flèche sous la peau encore blanc rose.",
+            "action": "Remassage, pression active de la pâte dans les marques de score. Plus longtemps."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair visible à travers les marques de score a pris une tache brun verdâtre de la marinade. La peau est foncée.",
+            "action": "Tirez du réfrigérateur 30 minutes avant de griller pour enlever le froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mariné plus de 24 heures — la chair à la surface a pris une texture musclée de l'acide.",
+            "action": "Cuire comme prévu; l'intérieur sera encore bien. Réduire l'acide dans les futurs lots."
+          }
+        ]
+      },
+      "feelCue": "La pâte sur la chair marquée doit se sentir collante plutôt que mouillée — appuyez sur un doigt et les bâtons de marinade. Le poulet doit se sentir ferme, pas spongieux."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Grille",
+      "inputs": [
+        "marinated_chicken"
+      ],
+      "outputState": "grilled_jerk_chicken",
+      "instructions": "Mettre en place un grill à deux zones : feu direct élevé d'un côté, milieu indirect de l'autre. Mettre la peau de poulet sur le côté indirect, couvert, pendant 25 à 30 minutes jusqu'à ce que la température interne atteigne 65°C. Puis passer à feu élevé direct, côté peau vers le bas, pendant 4–6 minutes à l'omble et blister l'extérieur. Flip et charrer le côté chair pendant 2 minutes. L'omble n'est pas une erreur — c'est le point.",
+      "visualCue": {
+        "primaryTarget": "Croûte acajou profonde avec de vraies marques d'omble et des taches noires cloquées aux bords marqués. La pâte a fondu à la peau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Marron pâle sans ombrage. La pâte a toujours l'air humide et verte. Peau douce et molle.",
+            "action": "Continuer avec la chaleur directe. La réaction de Maillard et l'omble sont des événements de saveur critiques — ne vous précipitez pas à l'indirect trop tôt."
+          },
+          {
+            "state": "Perfect",
+            "description": "Char presque noir sur les crêtes et les bords. Une acajou profonde partout ailleurs. La peau craque quand elle est pressée. Température interne 74°C.",
+            "action": "Transférer sur une planche à découper pour se reposer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface est uniformément noire et amère. La chair aux points les plus fins est séchée à chamois.",
+            "action": "Le salut par enlèvement de la couche extérieure brûlée — la chair en dessous devrait encore être juteuse. Servir avec de la chaux supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la partie la plus épaisse de la cuisse — elle devrait donner fermement avec une résistance très légère, et non pas squishy. La croûte carbonisée doit se sentir sèche et rigide sous le bout des doigts, tandis que la chair en dessous ressort lentement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "grilled_jerk_chicken"
+      ],
+      "outputState": "rested_jerk_chicken",
+      "instructions": "Reposez le poulet sur une planche en bois, lâchement recouvert de papier, pendant 8-10 minutes. La température interne s'effondrera de 2 à 3 °C. Les jus, qui ont été conduits au centre par la chaleur, redistribuent à travers la viande. Ne pas couper tôt.",
+      "visualCue": {
+        "primaryTarget": "L'omble est terne jusqu'à un fini mat. Un petit bassin de jus d'épices foncé a été recueilli sous chaque morceau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Reposé moins de 5 minutes — les jus sont rose vif lorsqu'ils sont coupés.",
+            "action": "Attendez. Le reste n'est pas facultatif."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les jus sont transparents lorsque la cuisse est percée au point le plus épais. Flesh détendu et tirant légèrement loin de l'os.",
+            "action": "Servir immédiatement avec du riz et des pois, des boulettes de fête ou en tranches de citron vert."
+          },
+          {
+            "state": "Overdone",
+            "description": "Reposé trop longtemps découvert — l'extérieur s'est refroidi et a perdu son craquelin.",
+            "action": "Blast sous le grilleur pendant 60 secondes pour raviver la croûte d'omble."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une cuisse — l'os doit se sentir lâche dans l'articulation. Lorsque vous coupez, la chair doit se séparer proprement avec un léger craquement de la croûte extérieure. L'odeur, c'est de la fumée de bois, de l'aspice et du scotch."
+    }
+  ]
 };

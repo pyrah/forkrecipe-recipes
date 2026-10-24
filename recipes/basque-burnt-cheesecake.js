@@ -1,116 +1,259 @@
 export default {
-  repoId: "master_spanish_basque_burnt_cheesecake_001",
-  parentRepoId: null,
-  slug: "basque-burnt-cheesecake",
-  author: "ForkRecipe Kitchen",
-
-  title: "Basque Burnt Cheesecake",
-  description: "A cream-cheese custard baked at furious heat until the top scorches to a deep mahogany — caramelized, almost bitter — while the center stays barely set, trembling like cold flan at room temperature.",
-  cuisine: "Spanish",
-  culture: "Basque",
-  category: "desserts",
-
-  tags: ["vegetarian", "gluten-free", "cheesecake", "basque", "spanish", "baking"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "1 hour 20 min",
-  ratioSystem: "bakers_percentage",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 3, salty: 2, sour: 2, bitter: 2, umami: 1, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Full-fat cream cheese, room temperature", ratioValue: 100, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener", name: "Granulated sugar",                         ratioValue: 25,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_03", role: "Binder",    name: "Eggs (large), room temperature",           ratioValue: 20,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Dairy",     name: "Heavy cream (35% fat)",                    ratioValue: 30,  defaultUnit: "%", substitutions: ["creme fraiche"] },
-    { ingId: "ing_05", role: "Binder",    name: "All-purpose flour",                        ratioValue: 2,   defaultUnit: "%", substitutions: ["cornstarch (use half)"] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Vanilla extract",                          ratioValue: 0.5, defaultUnit: "%", substitutions: ["vanilla paste"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine sea salt",                            ratioValue: 0.5, defaultUnit: "%", substitutions: [] },
+  "repoId": "master_spanish_basque_burnt_cheesecake_001",
+  "parentRepoId": null,
+  "slug": "basque-burnt-cheesecake",
+  "author": "ForkRecipe Kitchen",
+  "title": "Cheesecake Basque Burnt",
+  "description": "Une crème à la crème cuite à la chaleur furieuse jusqu'à ce que le haut scorse une acajou profonde — caramélisée, presque amère — tandis que le centre reste à peine fixé, tremblant comme un flan froid à température ambiante.",
+  "cuisine": "Espagnol",
+  "culture": "Basque",
+  "category": "desserts",
+  "tags": [
+    "végétarien",
+    "Sans gluten",
+    "Cake au fromage",
+    "Basque",
+    "Espagnol",
+    "Cuisson"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "1 hour 20 min",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Cream",
-      inputs: ["ing_01", "ing_02", "ing_07"],
-      outputState: "creamed_base",
-      instructions: "Beat cream cheese with sugar and salt in a stand mixer with the paddle attachment on medium speed — or with a hand mixer — until the mixture is completely smooth, fluffy, and light, about 3 minutes. Scrape down the bowl twice. No lumps are acceptable here — cold cream cheese leaves clumps that never fully dissolve in the oven.",
-      visualCue: {
-        primaryTarget: "White, airy, and ribbony — holds a soft shape when the paddle is lifted but flows slowly back into itself.",
-        spectrum: [
-          { state: "Underdone", description: "Small white lumps visible; mixture feels grainy.", action: "Continue beating — lumps mean the cheese was too cold. Beat 2 more minutes." },
-          { state: "Perfect",   description: "Silky, uniformly pale, no graininess. Falls from the paddle in a thick ribbon.", action: "Add eggs one at a time." },
-          { state: "Overdone",  description: "Mixture has become very fluffy and airy — too much air will cause the cheesecake to puff and crack.", action: "Switch to the lowest speed for the remaining steps." },
-        ],
-      },
-      feelCue: "Rub a small amount between thumb and forefinger — it should feel like cold face cream: smooth, no graininess at all.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Fromage à la crème plein gras, température ambiante",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["creamed_base", "ing_03", "ing_06"],
-      outputState: "egg_enriched_batter",
-      instructions: "Add eggs one at a time on low speed, mixing until just incorporated before adding the next. Add vanilla with the final egg. Do not rush this step — adding eggs too quickly causes the emulsion to break. Scrape the bowl after each addition.",
-      visualCue: {
-        primaryTarget: "A smooth, uniform batter with no streaks of yolk. Slightly more fluid than the creamed base, with a pale yellow tint.",
-        spectrum: [
-          { state: "Underdone", description: "Visible yellow streaks of egg yolk unmixed into the batter.", action: "Scrape and mix on low until streaks disappear." },
-          { state: "Perfect",   description: "Homogeneous, pale cream color. No streaks, no bubbles, pours in a slow stream.", action: "Add cream and flour." },
-          { state: "Overdone",  description: "Batter looks curdled or grainy — egg was added too fast.", action: "Continue mixing on medium — in most cases it will come back together; if not, warm the bowl briefly over a water bath." },
-        ],
-      },
-      feelCue: "Tilt the bowl — the batter should flow lazily and evenly, like a slow-moving river of cream.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 25,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Whisk",
-      inputs: ["egg_enriched_batter", "ing_04", "ing_05"],
-      outputState: "cheesecake_batter",
-      instructions: "Sift flour directly into the batter. Add heavy cream. Whisk gently by hand until everything is incorporated — do not use the electric mixer at this stage. The batter should be thin, pourable, and completely smooth. Strain through a fine-mesh sieve into a jug for easy pouring.",
-      visualCue: {
-        primaryTarget: "A silky, fluid batter that pours like heavy cream. No lumps, no flour pockets. Almost translucent at the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Flour pockets visible as white specks or streaks.", action: "Whisk until fully incorporated, then strain." },
-          { state: "Perfect",   description: "Smooth, glossy, pours in an unbroken stream. Straining through a sieve yields no residue.", action: "Pour into parchment-lined pan and bake immediately." },
-          { state: "Overdone",  description: "Over-whisked — many tiny bubbles across the surface.", action: "Let rest 5 minutes, then skim bubbles with a spoon before baking." },
-        ],
-      },
-      feelCue: "Run the batter off a spoon — it should cascade in a thin, even sheet, coating the back of the spoon in a translucent film.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Œufs (grands), température ambiante",
+      "ratioValue": 20,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["cheesecake_batter"],
-      outputState: "baked_cheesecake",
-      instructions: "Preheat oven to 230 C (450 F) conventional, or 210 C (410 F) fan. Line a 20 cm (8 inch) springform pan with two sheets of parchment, pushing them up the sides — the paper will ruffle and buckle and that is perfectly traditional. Pour in the batter. Bake for 28–32 minutes, until the top is deeply scorched — nearly burnt — with a dark mahogany center and the entire interior wobbles dramatically when the pan is nudged.",
-      visualCue: {
-        primaryTarget: "Top is uniformly dark brown to mahogany-black, with lighter amber edges. The entire cheesecake jiggles like a still pond when the pan is tapped — center moves as one piece, not sloshing.",
-        spectrum: [
-          { state: "Underdone", description: "Top is pale gold or beige. No scorch. Interior sloshes visibly when moved.", action: "Return to oven for 5 more minutes — the burnt top is not a mistake, it is the recipe." },
-          { state: "Perfect",   description: "Top is dark mahogany with traces of black at the peaks. Edges are set, center wobbles as a single mass. Parchment has puffed up and charred at the tips.", action: "Cool completely at room temperature, at least 1 hour, before chilling." },
-          { state: "Overdone",  description: "Top is uniformly black and the edges have pulled away from the paper. Jiggles only slightly.", action: "Scrape off the very top layer if truly burnt to ash. The interior is likely still custardy and delicious." },
-        ],
-      },
-      feelCue: "Wearing oven gloves, hold the pan and give it a quick jerk side-to-side — the center should ripple in slow, synchronous waves, like a waterbed settling. That wobble is the promise of a custardy interior.",
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Crème lourde (35% de matières grasses)",
+      "ratioValue": 30,
+      "defaultUnit": "%",
+      "substitutions": [
+        "crème fraîche"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Chill",
-      inputs: ["baked_cheesecake"],
-      outputState: "finished_cheesecake",
-      instructions: "Cool the cheesecake in the pan at room temperature for at least 1 hour — it will deflate dramatically as it cools, developing the characteristic sunken center. Refrigerate for a minimum of 3 hours (overnight is ideal) to allow the custard to fully set. Serve at room temperature for the most custardy texture: remove from fridge 30 minutes before slicing.",
-      visualCue: {
-        primaryTarget: "Sunken, wrinkled center with a dark cracked surface — almost like a deflated soufflé. Cream-colored interior is visible at the cuts, with a slightly translucent, barely-set center.",
-        spectrum: [
-          { state: "Underdone", description: "Interior is still liquid or pours off the cut face.", action: "Return to fridge for at least 2 more hours. A fully set Basque cheesecake still looks barely set — you need the chill to achieve it." },
-          { state: "Perfect",   description: "Slices cleanly with a warm knife. Interior is creamy and just barely holds its shape on the plate, like very cold pastry cream.", action: "Serve at room temperature, in wedges, with no garnish needed." },
-          { state: "Overdone",  description: "Interior is rubbery and dry — no custardy give.", action: "Over-baked; serve with a spoonful of creme fraiche to restore richness." },
-        ],
-      },
-      feelCue: "A perfectly chilled slice should yield to gentle pressure from a fork with almost no resistance — parting like cold butter, never bouncing back.",
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Farine à usage général",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "fécule de maïs (utiliser moitié)"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Extrait de vanille",
+      "ratioValue": 0.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "pâte de vanille"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Crème",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_07"
+      ],
+      "outputState": "creamed_base",
+      "instructions": "Battre le fromage à la crème avec du sucre et du sel dans un mélangeur de stand avec l'attache de palette à vitesse moyenne — ou avec un mélangeur à main — jusqu'à ce que le mélange soit complètement lisse, moelleux et léger, environ 3 minutes. Dégâtez le bol deux fois. Aucune bosse n'est acceptable ici: le fromage à la crème froide laisse des grumeaux qui ne se dissolvent jamais complètement au four.",
+      "visualCue": {
+        "primaryTarget": "Blanc, aéré et rubané — tient une forme douce quand la pagaie est levée mais revient lentement en elle - même.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Petits morceaux blancs visibles; le mélange est granuleux.",
+            "action": "Continuer à battre — les morceaux signifient que le fromage était trop froid. Encore deux minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Soyeux, uniformément pâle, sans grain. Des chutes de la pagaie dans un ruban épais.",
+            "action": "Ajouter les œufs un à la fois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est devenu très moelleux et aéré — trop d'air fera bouillir le cheesecake et craquer.",
+            "action": "Passez à la vitesse la plus basse pour les étapes restantes."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité entre le pouce et l'index — il devrait se sentir comme de la crème du visage froid: lisse, pas de grain."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "creamed_base",
+        "ing_03",
+        "ing_06"
+      ],
+      "outputState": "egg_enriched_batter",
+      "instructions": "Ajouter les œufs un à la fois à faible vitesse, mélanger jusqu'à juste incorporé avant d'ajouter le suivant. Ajouter la vanille avec l'oeuf final. Ne précipitez pas cette étape — ajouter des œufs trop rapidement provoque la rupture de l'émulsion. Gratter le bol après chaque ajout.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse et uniforme sans stries de jaune. Légèrement plus fluide que la base crémeuse, avec une teinte jaune pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Bandes jaunes visibles de jaune d'œuf non mélangées dans la pâte.",
+            "action": "Grattez et mélangez en bas jusqu'à ce que les stries disparaissent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Homogénéité, couleur crème pâle. Pas de stries, pas de bulles, coule dans un ruisseau lent.",
+            "action": "Ajouter la crème et la farine."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les battements ont l'air caillés ou granuleux — l'œuf a été ajouté trop vite.",
+            "action": "Continuer à mélanger sur le milieu — dans la plupart des cas, il reviendra ensemble; sinon, réchauffer brièvement le bol sur un bain d'eau."
+          }
+        ]
+      },
+      "feelCue": "Inclinez le bol — la pâte doit couler paresseusement et uniformément, comme une rivière de crème qui bouge lentement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "egg_enriched_batter",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "cheesecake_batter",
+      "instructions": "Farine tamisée directement dans la pâte. Ajouter la crème lourde. fouetter doucement à la main jusqu'à ce que tout soit incorporé — n'utilisez pas le mélangeur électrique à ce stade. La pâte doit être mince, versable et complètement lisse. Plongez dans un tamis à mailles fines dans une cruche pour le verser facilement.",
+      "visualCue": {
+        "primaryTarget": "Une pâte soyeuse et fluide qui verse comme de la crème lourde. Pas de grumeaux, pas de poches de farine. Presque translucide à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poches de farine visibles comme taches blanches ou stries.",
+            "action": "Whisk jusqu'à ce qu'il soit complètement incorporé, puis souche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, brillant, coule dans un ruisseau intact. L'entraînement par tamis ne produit aucun résidu.",
+            "action": "Verser dans une poêle parcheminée et cuire immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Beaucoup de petites bulles à travers la surface.",
+            "action": "Laisser reposer 5 minutes, puis écrémer les bulles avec une cuillère avant de cuire."
+          }
+        ]
+      },
+      "feelCue": "Exécutez la pâte hors d'une cuillère — elle devrait s'étaler dans une mince feuille, même, enrober l'arrière de la cuillère dans un film translucide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "cheesecake_batter"
+      ],
+      "outputState": "baked_cheesecake",
+      "instructions": "Préchauffer le four à 230 C (450 F) conventionnel, ou 210 C (410 F) ventilateur. Lignez une poêle à ressort de 20 cm (8 pouces) avec deux feuilles de parchemin, les poussant vers le haut des côtés - le papier va se plisser et boucler et c'est parfaitement traditionnel. Versez la pâte. Cuire au four pendant 28 à 32 minutes, jusqu'à ce que le sommet soit profondément brûlé — presque brûlé — avec un centre d'acajou sombre et que tout l'intérieur tremble considérablement lorsque la poêle est bouchée.",
+      "visualCue": {
+        "primaryTarget": "Le dessus est uniformément brun foncé à noir acajou, avec des bords ambrés plus légers. Tout le gâteau au fromage grouille comme un étang immobile quand la poêle est tapotée — le centre se déplace comme une seule pièce, non pas sloshing.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le dessus est en or pâle ou beige. Pas de brûlure. L'intérieur flotte visiblement lorsqu'il est déplacé.",
+            "action": "Retourner au four 5 minutes de plus — le haut brûlé n'est pas une erreur, c'est la recette."
+          },
+          {
+            "state": "Perfect",
+            "description": "Top est acajou foncé avec des traces de noir aux pics. Les bords sont fixés, le centre oscille en une seule masse. Le parchemin a gonflé et carbonisé aux extrémités.",
+            "action": "Laisser refroidir complètement à température ambiante, au moins 1 heure, avant de refroidir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le dessus est uniformément noir et les bords se sont éloignés du papier. Jiggles seulement légèrement.",
+            "action": "Grattez la couche supérieure si elle est vraiment brûlée en cendres. L'intérieur est probablement encore crépuscule et délicieux."
+          }
+        ]
+      },
+      "feelCue": "Porter des gants de four, tenir la poêle et lui donner un petit sac à dos rapide — le centre devrait se courber dans des vagues lentes et synchrones, comme un lit d'eau qui se dépose. Ce tourbillon est la promesse d'un intérieur crépuscule."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Refroidissement",
+      "inputs": [
+        "baked_cheesecake"
+      ],
+      "outputState": "finished_cheesecake",
+      "instructions": "Laisser refroidir le cheesecake dans la poêle à température ambiante pendant au moins 1 heure — il se dégonflera considérablement au fur et à mesure qu'il refroidit, développant le centre caractéristique coulé. Réfrigérer pendant au moins 3 heures (la nuit est idéale) pour permettre à la crème de se régler complètement. Servir à la température ambiante pour la texture la plus crépuscule : retirer du réfrigérateur 30 minutes avant de trancher.",
+      "visualCue": {
+        "primaryTarget": "Centre ridiculisé avec une surface fêlée sombre, presque comme un soufflé dégonflé. L'intérieur de couleur crème est visible aux coupes, avec un centre légèrement translucide, à peine fixé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'intérieur est encore liquide ou coule du visage coupé.",
+            "action": "Retourner au réfrigérateur pendant au moins 2 heures de plus. Un gâteau au fromage basque est encore à peine réglé, vous avez besoin du froid pour l'atteindre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Slices propres avec un couteau chaud. L'intérieur est crémeux et tient à peine sa forme sur l'assiette, comme de la crème pâtissière très froide.",
+            "action": "Servir à température ambiante, en quartiers, sans garniture nécessaire."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'intérieur est caoutchouteux et sec — pas de crème.",
+            "action": "Surcuite; servir avec une cuillère de crème fraiche pour restaurer la richesse."
+          }
+        ]
+      },
+      "feelCue": "Une tranche parfaitement réfrigérée devrait céder à la pression douce d'une fourchette sans résistance, se séparer comme du beurre froid, ne jamais rebondir."
+    }
+  ]
 };

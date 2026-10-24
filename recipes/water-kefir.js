@@ -1,97 +1,233 @@
 export default {
-  repoId: "master_universal_water_kefir_001",
-  parentRepoId: null,
-  slug: "water-kefir",
-  author: "ForkRecipe Kitchen",
-  title: "Water Kefir",
-  description: "Sparkling, mildly tangy probiotic water — living kefir grains, a symbiotic colony of bacteria and yeasts encased in polysaccharide matrices, convert a simple sugar water into something lightly effervescent and gut-kind over 48 hours. A second ferment in a sealed bottle with fruit traps the CO₂ and builds a proper fizz. Infinitely variable in flavor; demanding in only one thing — keep your grains alive between batches.",
-  cuisine: "Universal",
-  culture: "Traditional",
-  category: "fermented",
-  tags: ["fermented", "beverage", "probiotic", "vegan", "gluten-free"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "2 day",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 0, sour: 3, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",      name: "Water kefir grains (live, active)",              ratioValue: 3,    defaultUnit: "tbsp",   substitutions: ["tibicos grains", "milk kefir grains will not work"] },
-    { ingId: "ing_02", role: "Sweetener", name: "White cane sugar (or rapadura for minerals)",    ratioValue: 60,   defaultUnit: "g",      substitutions: ["coconut palm sugar", "turbinado sugar — never honey or stevia, which harm the grains"] },
-    { ingId: "ing_03", role: "Solvent",   name: "Filtered or unchlorinated water",                ratioValue: 1000, defaultUnit: "g",      substitutions: ["spring water — chlorinated tap water inhibits the culture"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Dried apricots (unsulfured, as a mineral source)", ratioValue: 2,  defaultUnit: "pieces", substitutions: ["1 dried fig", "a few raisins", "a pinch of mineral-rich blackstrap molasses"] },
-    { ingId: "ing_05", role: "Citrus",    name: "Lemon slice (unpeeled, unwaxed)",                ratioValue: 1,    defaultUnit: "slice",  substitutions: ["lime slice", "orange slice"] },
-    { ingId: "ing_06", role: "Sweetener", name: "Fresh fruit juice or sliced ginger (for second ferment)", ratioValue: 50, defaultUnit: "g", substitutions: ["berries", "mango chunks", "hibiscus flowers", "cucumber and mint"] },
+  "repoId": "master_universal_water_kefir_001",
+  "parentRepoId": null,
+  "slug": "water-kefir",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kéfir d'eau",
+  "description": "L'eau probiotique étincelante, légèrement tannante — les grains vivants de kéfir, une colonie symbiotique de bactéries et de levures enrobées de matrices polysaccharidiques, convertit une simple eau sucrière en quelque chose d'effervescent et d'intestin léger sur 48 heures. Un deuxième ferment dans une bouteille scellée avec des fruits piège le CO2 et construit un bon fizz. Infiniment variable en saveur; exigeant en une seule chose — garder vos grains en vie entre les lots.",
+  "cuisine": "Universel",
+  "culture": "Traditionnel",
+  "category": "fermented",
+  "tags": [
+    "fermenté",
+    "boisson",
+    "probiotique",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "2 day",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Build the sugar water",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "sugar_water",
-      instructions: "Dissolve the cane sugar in a cup of warm (not hot) water first, stirring until every grain is gone. Let it cool to room temperature, then combine with the remaining cool filtered water in a clean wide-mouth jar. The final temperature must be below 30°C (86°F) — warm enough to be active but not hot enough to damage the grain organisms. The sugar is the sole food source for the grains; do not substitute with honey (which contains antimicrobials that stress the culture), artificial sweeteners (no nutrition for bacteria), or stevia. Rapadura or raw cane sugar are excellent choices as their residual minerals support grain health over time.",
-      visualCue: {
-        primaryTarget: "Completely clear, faintly sweet-smelling water with no visible sugar crystals — held to the light it should look as clear as plain water with no shimmer of undissolved sugar.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar crystals still visible at the bottom of the jar, or the water is still warm above 30°C.", action: "Stir more vigorously, or add a splash more room-temperature water and stir again. Test temperature on your wrist — it must feel neutral before the grains go in." },
-          { state: "Perfect",   description: "Crystal-clear, fully dissolved, at room temperature, smelling mildly sweet. Ready for the grains.", action: "Add the dried apricots and lemon slice, then proceed to adding the kefir grains." },
-          { state: "Overdone",  description: "Used boiling water to dissolve the sugar and poured the grains in before it had fully cooled.", action: "Remove the grains immediately and rinse in cool filtered water. Damaged grains will recover if the temperature shock was brief — give them a fresh cool batch and wait an extra day." },
-        ],
-      },
-      feelCue: "Test the water temperature on the inside of your wrist, the way you would test a baby's bottle: it should feel completely neutral, neither warm nor cool. That neutrality is the safety zone for your grains.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Graines de kéfir d'eau (vivantes, actives)",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Graines de tibicos",
+        "les grains de kéfir de lait ne fonctionneront pas"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Pitch the grains",
-      inputs: ["sugar_water", "ing_01", "ing_04", "ing_05"],
-      outputState: "first_ferment",
-      instructions: "Gently scoop the water kefir grains into the prepared sugar water using a plastic or wooden spoon — avoid metal utensils, which some producers caution can stress the grains over time (the evidence is mixed, but it is a simple precaution). Add the dried apricots and lemon slice: the apricots provide trace minerals that the grains need for their polysaccharide matrix, and the lemon lowers the pH slightly, suppressing unwanted organisms in the first hours. Cover with a breathable cloth or coffee filter secured with a rubber band — not a solid lid, as the culture produces CO₂ and needs to breathe. Leave at room temperature 22 to 28°C for 24 to 48 hours.",
-      visualCue: {
-        primaryTarget: "Translucent grain clusters sinking through the clear sugar water, dried apricots floating, lemon slice tucked in. The jar covered with cloth, set in a warm spot.",
-        spectrum: [
-          { state: "Underdone", description: "Grains added before the sugar water fully cooled, or the dried fruit and lemon were forgotten.", action: "Add the missing mineral sources now if forgotten; cool the sugar water before adding grains if you caught it in time." },
-          { state: "Perfect",   description: "Grains, apricots, and lemon in cool sugar water, covered breathably, in a warm spot. The grains will be active within 4 to 6 hours.", action: "Leave undisturbed for 24 hours before checking. Mark the jar with the start time." },
-          { state: "Overdone",  description: "Used a sealed metal lid that will trap CO₂ and prevent the aerobic organisms in the grains from getting any oxygen.", action: "Swap to a breathable cover. A tight metal lid during first ferment can cause overflow and pressure buildup." },
-        ],
-      },
-      feelCue: "Active, healthy kefir grains look like small, opaque, cauliflower-like clusters or translucent pebbles and feel slightly rubbery, like soft gelatin candy. Grains that smell sour and yeasty are healthy; grains that smell rotten or cheesy need a few conditioning batches before full use.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre de canne blanc (ou rapadura pour les minéraux)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre de coco de palme",
+        "sucre turbinado — jamais miel ou stévia, qui nuisent aux grains"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "First ferment",
-      inputs: ["first_ferment"],
-      outputState: "fermented_kefir_water",
-      instructions: "Leave the covered jar at 22 to 28°C for 24 to 48 hours. After 24 hours you should see small bubbles clinging to the grains and rising slowly to the surface, and the liquid will have gone slightly more opaque with a faintly sour-yeasty aroma replacing the plain sugar water. Taste at 24 hours: at this point it should be lightly sweet, slightly sour, and faintly fizzy — more like sweet lemonade than kefir. At 48 hours it will be noticeably more sour and tangy with reduced sweetness. The warmer your kitchen, the faster this goes — in a 28°C kitchen, 24 hours may already be past peak. In a 20°C kitchen, 48 hours may not be enough.",
-      visualCue: {
-        primaryTarget: "A lightly cloudy, faintly effervescent liquid with grains floating or resting at the bottom, the dried apricots plumped and rehydrated, and a clean, mildly sour-yeasty aroma rising from the jar when uncovered.",
-        spectrum: [
-          { state: "Underdone", description: "After 24 hours: completely clear, very sweet, barely any bubbles, smells of plain sugar water. Grains may not have activated yet.", action: "Ensure the jar is warm enough. A cold environment stalls kefir dramatically — move to a warmer spot and give another 12 to 24 hours." },
-          { state: "Perfect",   description: "Lightly cloudy, gentle bubbling, grains visibly producing tiny CO₂ streams, and the liquid tasting pleasantly tart with about half the original sweetness consumed. The dried apricots are soft.", action: "Strain the grains out with a plastic strainer and set aside in a small amount of fresh sugar water for the next batch. Proceed with the strained kefir water." },
-          { state: "Overdone",  description: "Left 72 hours or more in warm temperatures: the kefir water is very sour, the sugar entirely consumed, and the grains are starving — which damages them over time.", action: "Strain immediately and feed the grains fresh sugar water right away. Use the over-fermented batch as a starter for a new batch or dilute with fresh water to taste." },
-        ],
-      },
-      feelCue: "Tilt the jar to one side and watch: in an active batch, you'll see a faint blizzard of tiny CO₂ bubbles releasing from the grains and drifting upward. That movement means the culture is metabolizing well. Stagnant, motionless water means the ferment has stalled.",
+      "ingId": "ing_03",
+      "role": "Solvent",
+      "name": "Eau filtrée ou non chlorée",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau de source — l'eau chlorée du robinet inhibe la culture"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Second ferment",
-      inputs: ["fermented_kefir_water", "ing_06"],
-      outputState: "finished_water_kefir",
-      instructions: "Strain the finished kefir water through a plastic sieve into clean swing-top bottles, leaving the grains behind. Add fruit juice, sliced ginger, or fresh fruit to each bottle — the residual sugar in the kefir water plus the sugars in the fruit will drive a vigorous second fermentation inside the sealed bottle, dissolving CO₂ into the liquid as carbonation. Seal airtight and leave at room temperature for 12 to 24 hours, pressing or squeezing the bottle every 8 hours to gauge pressure — when it feels drum-tight, refrigerate. Swing-top glass bottles build pressure more predictably than sealed jars. Always open carefully over a sink; the carbonation can be lively.",
-      visualCue: {
-        primaryTarget: "On opening, a clear fizzing and a rush of fine bubbles; the liquid poured into a glass should show lasting effervescence and be lightly flavored with whatever fruit or ginger was added.",
-        spectrum: [
-          { state: "Underdone", description: "The bottle opens with no hiss, the liquid is flat or barely tingly, and it tastes more like tart fruit juice than a sparkling drink.", action: "Return to room temperature for another 12 hours, checking the bottle pressure every 4 to 6 hours. Carbonation often lags in cool rooms." },
-          { state: "Perfect",   description: "A crisp, audible pfft on opening, abundant fine bubbles, and a clean tart-sweet flavor lifted by the chosen fruit. Pleasantly effervescent in the glass with a mild kefir tang.", action: "Refrigerate immediately once carbonated. Drink within 2 weeks for peak flavor and fizz." },
-          { state: "Overdone",  description: "The bottle feels rock-hard and foams violently on opening, or brine explodes from the cap. This is a 'bottle bomb' risk with glass.", action: "Refrigerate immediately to slow carbonation. When opening an over-pressured bottle, hold a cloth over the cap and open very slowly over a sink. Next time, refrigerate sooner." },
-        ],
-      },
-      feelCue: "Squeeze a plastic second-ferment bottle every 8 hours: it should progress from floppy to firm to drum-tight over 12 to 24 hours. That escalating pressure is CO₂ dissolving into solution — pure carbonation physics you can feel in your palm.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Abricots séchés (non sulfurés, comme source minérale)",
+      "ratioValue": 2,
+      "defaultUnit": "pieces",
+      "substitutions": [
+        "1 figues séchées",
+        "quelques raisins secs",
+        "une pincée de mélasse riche en minéraux"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Citrus",
+      "name": "Tranche de citron (non pelée, non épilée)",
+      "ratioValue": 1,
+      "defaultUnit": "slice",
+      "substitutions": [
+        "tranche de chaux",
+        "tranche d'orange"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Jus de fruits frais ou gingembre tranché (pour deuxième fermentation)",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "baies",
+        "Mango morceaux",
+        "fleurs d'hibiscus",
+        "concombre et menthe"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Construisez l'eau de sucre",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "sugar_water",
+      "instructions": "Dissoudre le sucre de canne dans une tasse d'eau chaude (pas chaude) d'abord, en remuant jusqu'à ce que chaque grain soit parti. Laisser refroidir à température ambiante, puis combiner avec l'eau filtrée fraîche restante dans un pot à grande bouche propre. La température finale doit être inférieure à 30°C (86°F) — assez chaude pour être active mais pas assez chaude pour endommager les organismes céréaliers. Le sucre est la seule source alimentaire pour les grains; ne pas remplacer par le miel (qui contient des antimicrobiens qui stressent la culture), les édulcorants artificiels (pas de nutrition pour les bactéries), ou la stévia. Rapadura ou sucre de canne brut sont d'excellents choix car leurs minéraux résiduels soutiennent la santé des grains au fil du temps.",
+      "visualCue": {
+        "primaryTarget": "L'eau complètement limpide, peu sucrée, sans cristaux de sucre visibles — tenue à la lumière, doit avoir l'air aussi claire que l'eau pure, sans éclat de sucre non dissous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des cristaux de sucre encore visibles au fond du pot, ou l'eau est encore chaude au-dessus de 30°C.",
+            "action": "Mélanger plus vigoureusement, ou ajouter un peu plus d'eau à température ambiante et remuer à nouveau. Testez la température sur votre poignet — il doit se sentir neutre avant que les grains entrent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Clair cristallin, complètement dissous, à température ambiante, sentant légèrement doux. Prêt pour les grains.",
+            "action": "Ajouter les abricots secs et la tranche de citron, puis ajouter les grains de kefir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Utilisez de l'eau bouillante pour dissoudre le sucre et verser les grains avant qu'il n'ait complètement refroidi.",
+            "action": "Retirer immédiatement les grains et rincer dans de l'eau fraîche filtrée. Les grains endommagés se rétabliront si le choc de température était bref — donnez-leur un lot frais et attendez un jour supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Testez la température de l'eau à l'intérieur de votre poignet, la façon dont vous testez la bouteille d'un bébé: il devrait se sentir complètement neutre, ni chaud ni frais. Cette neutralité est la zone de sécurité de vos grains."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Pitch les grains",
+      "inputs": [
+        "sugar_water",
+        "ing_01",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "first_ferment",
+      "instructions": "Versez délicatement les grains de kefir dans l'eau de sucre préparée à l'aide d'une cuillère en plastique ou en bois — évitez les ustensiles métalliques, ce que certains producteurs mettent en garde peut stresser les grains au fil du temps (la preuve est mélangée, mais c'est une simple précaution). Ajouter les abricots séchés et la tranche de citron: les abricots fournissent des minéraux traces dont les grains ont besoin pour leur matrice polysaccharidique, et le citron abaisse légèrement le pH, supprimant les organismes indésirables dans les premières heures. Couvrir avec un chiffon respirant ou un filtre à café fixé avec une bande de caoutchouc — pas un couvercle solide, car la culture produit du CO2 et a besoin de respirer. Laisser à température ambiante de 22 à 28°C pendant 24 à 48 heures.",
+      "visualCue": {
+        "primaryTarget": "Les grappes de grains translucides coulent dans l'eau claire de sucre, les abricots séchés flottent, la tranche de citron est cousue. Le pot recouvert de tissu, placé dans un endroit chaud.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains ajoutés avant l'eau de sucre entièrement refroidie, ou les fruits secs et le citron ont été oubliés.",
+            "action": "Ajouter les sources minérales manquantes maintenant si oublié; refroidir l'eau de sucre avant d'ajouter des grains si vous l'avez attrapé à temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Grains, abricots et citron dans de l'eau à sucre fraîche, rembourrés, dans un endroit chaud. Les grains seront actifs dans les 4 à 6 heures.",
+            "action": "Laisser reposer 24 heures avant de vérifier. Marquez le pot avec l'heure de départ."
+          },
+          {
+            "state": "Overdone",
+            "description": "Utilisé un couvercle métallique scellé qui emprisonne le CO2 et empêche les organismes aérobies dans les grains d'obtenir de l'oxygène.",
+            "action": "Swap vers une couverture respirante. Un couvercle métallique serré pendant le premier ferment peut provoquer un débordement et une accumulation de pression."
+          }
+        ]
+      },
+      "feelCue": "Les grains de kéfir actifs et sains ressemblent à de petits amas de chou-fleur opaques ou translucides et se sentent légèrement caoutchouteux, comme des bonbons à la gélatine douce. Les grains qui sentent l'aurore et la levure sont sains; les grains qui sentent l'odeur pourrie ou cheesy ont besoin de quelques lots de conditionnement avant la pleine utilisation."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Première fermentation",
+      "inputs": [
+        "first_ferment"
+      ],
+      "outputState": "fermented_kefir_water",
+      "instructions": "Laisser le pot couvert entre 22 et 28°C pendant 24 à 48 heures. Après 24 heures, vous devriez voir de petites bulles s'accrocher aux grains et monter lentement à la surface, et le liquide aura été légèrement plus opaque avec un arôme peu aigre-yeux remplaçant l'eau de sucre ordinaire. Goûtez à 24 heures : à ce stade, il doit être légèrement doux, légèrement aigre et légèrement pétillant, plus comme de la limonade sucrée que du kéfir. À 48 heures, il sera nettement plus aigre et acidulé avec une douceur réduite. Plus votre cuisine est chaude, plus vite cela va — dans une cuisine de 28°C, 24 heures peuvent déjà être dépassées. Dans une cuisine de 20°C, 48 heures peuvent ne pas suffire.",
+      "visualCue": {
+        "primaryTarget": "Liquide légèrement nuageux, faiblement effervescent, avec des grains flottants ou reposant au fond, les abricots séchés ont plut et réhydraté, et un arôme propre, légèrement acide-yeux, qui sort du pot à découvert.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 24 heures : complètement clair, très doux, à peine n'importe quelles bulles, sent l'eau de sucre. Les grains n'ont peut-être pas encore été activés.",
+            "action": "Assurez-vous que le pot est assez chaud. Un environnement froid s'arrête de façon spectaculaire au kéfir — passer à un endroit plus chaud et donner encore 12 à 24 heures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légèrement nuageux, doux bouillonnant, grains produisant visiblement de minuscules flux de CO2, et la dégustation liquide agréablement goudronnée avec environ la moitié de la douceur originale consommée. Les abricots secs sont doux.",
+            "action": "Retirez les grains avec une souche en plastique et mettez de côté dans une petite quantité d'eau de sucre frais pour le prochain lot. Procédez avec l'eau de kefir tendue."
+          },
+          {
+            "state": "Overdone",
+            "description": "A gauche 72 heures ou plus dans des températures chaudes: l'eau de kéfir est très aigre, le sucre entièrement consommé, et les grains sont affamés — ce qui les endommage au fil du temps.",
+            "action": "Souchez immédiatement et nourrissez immédiatement les grains d'eau sucrée fraîche. Utilisez le lot surfermenté comme démarreur pour un nouveau lot ou diluer avec de l'eau douce au goût."
+          }
+        ]
+      },
+      "feelCue": "Inclinez le pot d'un côté et observez : dans un lot actif, vous verrez un léger blizzard de minuscules bulles de CO2 se libérer des grains et dériver vers le haut. Ce mouvement signifie que la culture se métabolise bien. L'eau stagnante et immobile signifie que le ferment a décroché."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Deuxième fermentation",
+      "inputs": [
+        "fermented_kefir_water",
+        "ing_06"
+      ],
+      "outputState": "finished_water_kefir",
+      "instructions": "Placer l'eau de kefi finie à travers un tamis en plastique dans des bouteilles swing-top propres, laissant les grains derrière. Ajouter le jus de fruits, le gingembre tranché ou les fruits frais à chaque bouteille — le sucre résiduel dans l'eau du kéfir et les sucres dans le fruit provoqueront une deuxième fermentation vigoureuse à l'intérieur de la bouteille scellée, la dissolution du CO2 dans le liquide comme carbonation. Sceller l'étanchéité à l'air et laisser à température ambiante 12 à 24 heures, presser ou presser le flacon toutes les 8 heures pour mesurer la pression — lorsqu'il se sent étanche au tambour, réfrigérer. Les bouteilles en verre de swing-top augmentent la pression de façon plus prévisible que les pots scellés. Toujours ouvrir soigneusement sur un évier; la carbonation peut être vive.",
+      "visualCue": {
+        "primaryTarget": "À l'ouverture, un étourdissement clair et une ruée de fines bulles; le liquide versé dans un verre doit montrer une effervescence durable et être légèrement aromatisé avec n'importe quel fruit ou gingembre ajouté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La bouteille s'ouvre sans sifflement, le liquide est plat ou à peine teinté, et il a plus un goût de jus de fruit de tarte qu'une boisson pétillante.",
+            "action": "Retourner à la température ambiante pendant 12 heures, vérifier la pression du flacon toutes les 4 à 6 heures. La carbonation est souvent en retard dans les pièces froides."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un pfft croustillant et audible à l'ouverture, des bulles fines abondantes, et une saveur propre de tarte sucrée levée par le fruit choisi. Agréablement effervescent dans le verre avec un doux tang kefir.",
+            "action": "Réfrigérer immédiatement une fois carboné. Buvez dans les 2 semaines pour la saveur maximale et le fizz."
+          },
+          {
+            "state": "Overdone",
+            "description": "La bouteille se sent dure et mousse violemment à l'ouverture, ou la saumure explose du bouchon. C'est un risque de \"bombe à beurre\" avec du verre.",
+            "action": "Réfrigérer immédiatement pour ralentir la carbonation. En ouvrant une bouteille surpression, maintenez un chiffon au-dessus du capuchon et ouvrez-le très lentement sur un évier. La prochaine fois, réfrigérer plus tôt."
+          }
+        ]
+      },
+      "feelCue": "Pressez une bouteille de seconde fermentation en plastique toutes les 8 heures : elle devrait passer de la disquette à la bouteille ferme à la bouteille étanche au tambour pendant 12 à 24 heures. Cette pression croissante est la dissolution du CO2 en solution — la physique de la carbonation pure que vous pouvez sentir dans votre paume."
+    }
+  ]
 };

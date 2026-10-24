@@ -1,99 +1,275 @@
 export default {
-  repoId: "master_portuguese_portuguese_egg_tarts_001",
-  parentRepoId: null,
-  slug: "portuguese-egg-tarts",
-  author: "ForkRecipe Kitchen",
-  title: "Pasteis de Nata",
-  description: "The custard tarts of Lisbon: blistered, charred, and caramelised in a furiously hot oven until the surface is a topographic map of dark amber leopard-spots above a trembling, still-barely-set custard of egg yolks, cream, and vanilla, all cradled in a shatteringly thin, flaky puff pastry shell that crumbles into golden debris at the first bite. Dusted with cinnamon, eaten standing up at a marble counter with a bica of espresso.",
-  cuisine: "Portuguese",
-  culture: "Lisbon",
-  category: "desserts",
-  tags: ["pastel-de-nata", "portuguese", "egg-tart", "custard", "puff-pastry", "lisbon"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "2 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 1, sour: 0, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-butter puff pastry (ready-rolled or block)", ratioValue: 320, defaultUnit: "g",  substitutions: ["rough puff pastry made from scratch"] },
-    { ingId: "ing_02", role: "Protein",    name: "Egg yolks",                                       ratioValue: 5,   defaultUnit: "pc", substitutions: [] },
-    { ingId: "ing_03", role: "Dairy",      name: "Double cream (heavy cream)",                      ratioValue: 150, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",     name: "Whole milk",                                      ratioValue: 150, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Caster sugar (custard)",                          ratioValue: 100, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Starch",     name: "Cornflour (cornstarch)",                          ratioValue: 15,  defaultUnit: "g",  substitutions: ["plain flour"] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Vanilla bean, seeds scraped",                     ratioValue: 1,   defaultUnit: "pc", substitutions: ["1 tsp vanilla extract"] },
-    { ingId: "ing_08", role: "Aromatic",   name: "Lemon peel strip",                                ratioValue: 1,   defaultUnit: "pc", substitutions: ["orange peel"] },
-    { ingId: "ing_09", role: "Aromatic",   name: "Cinnamon stick",                                  ratioValue: 1,   defaultUnit: "pc", substitutions: [] },
-    { ingId: "ing_10", role: "Sweetener",  name: "Water (sugar syrup)",                             ratioValue: 80,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_11", role: "Sweetener",  name: "Caster sugar (sugar syrup)",                      ratioValue: 120, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_12", role: "Garnish",    name: "Ground cinnamon and icing sugar, to finish",      ratioValue: 5,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_portuguese_portuguese_egg_tarts_001",
+  "parentRepoId": null,
+  "slug": "portuguese-egg-tarts",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pasteis de Nata",
+  "description": "Les tartes à la crème de Lisbonne : cloquées, carbonisées et caramélisées dans un four furieusement chaud jusqu'à ce que la surface soit une carte topographique de taches de léopards foncés ambrés au-dessus d'une crème tremblante, encore à peine sertie, de jaunes d'œufs, de crème et de vanille, toutes bercées dans une coquille de pâte feuilletée effilée, d'une minceur éclatante, qui s'écroule en débris dorés à la première bouchée. Poussés de cannelle, mangés debout sur un comptoir en marbre avec un bica d'espresso.",
+  "cuisine": "Portugais",
+  "culture": "Lisbonne",
+  "category": "desserts",
+  "tags": [
+    "pastel-de-nata",
+    "portugais",
+    "oeuf-tart",
+    "Coutard",
+    "Pâtisserie",
+    "Lisbon"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "2 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Simmer",
-      inputs: ["ing_10", "ing_11", "ing_07", "ing_08", "ing_09"],
-      outputState: "aromatic_syrup",
-      instructions: "Combine sugar, water, cinnamon stick, lemon peel, and vanilla bean in a small saucepan. Bring to a boil without stirring and simmer for 3 minutes at 107 C (a light syrup). Remove from heat and steep for 10 minutes to allow the aromatics to infuse deeply. Discard the cinnamon, lemon peel, and vanilla pod — reserve the vanilla seeds if you scraped them in. Cool to room temperature.",
-      visualCue: {
-        primaryTarget: "A clear, lightly golden syrup with a thin viscosity — just thicker than water. The kitchen smells of vanilla, cinnamon, and lemon peel.",
-        spectrum: [
-          { state: "Underdone", description: "Syrup is still thin and watery. Sugar barely dissolved.", action: "Simmer for 2 more minutes. The syrup needs to reach 107 C to have the right sugar concentration for the custard." },
-          { state: "Perfect",   description: "Glossy, thin but not watery. A drop on a cold plate sets to a soft, slightly sticky film within 30 seconds. Fragrant with lemon and vanilla.", action: "Cool completely before adding to the egg yolk mixture." },
-          { state: "Overdone",  description: "Syrup is thick and pulling in strings — it has concentrated too much.", action: "Add 30ml hot water and stir to thin before using." },
-        ],
-      },
-      feelCue: "The cooled syrup should feel like very thin honey between the fingers — slippery and slightly tacky, but not thick enough to leave a visible thread when you pull your fingers apart.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Pâtisserie soufflée à beurre entier (prête à rouler ou en bloc)",
+      "ratioValue": 320,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâte bouffée brute faite à partir de rayure"
+      ]
     },
     {
-      nodeId: "step_2", action: "Whisk",
-      inputs: ["ing_02", "ing_06", "ing_03", "ing_04", "aromatic_syrup"],
-      outputState: "custard_base",
-      instructions: "Whisk together egg yolks and cornflour in a bowl until smooth. In a saucepan, combine milk, cream, and the cooled syrup. Bring to just below a simmer (small bubbles at the edge). Slowly pour the hot milk over the yolk mixture, whisking constantly. Return the whole mixture to the saucepan and cook over medium heat, whisking constantly, until it just begins to thicken to a pourable custard — remove immediately. Strain through a fine sieve.",
-      visualCue: {
-        primaryTarget: "A smooth, pale gold custard that coats the back of a spoon lightly — thinner than double cream but thicker than milk. Silky and completely lump-free.",
-        spectrum: [
-          { state: "Underdone", description: "Custard is still thin as milk. No coating on the back of a spoon. Cornflour hasn't reached gelatinisation temperature.", action: "Return to gentle heat and whisk continuously — it will thicken quickly once it reaches 82 C." },
-          { state: "Perfect",   description: "Thin nappe consistency — coats the back of a spoon, and a line drawn through it holds cleanly. Pours easily. Smells of vanilla and cream.", action: "Strain immediately and pour into prepared pastry shells." },
-          { state: "Overdone",  description: "Custard has scrambled — visible yellow flecks and grainy texture. Smells eggy.", action: "Discard and start again — scrambled custard will bake unevenly and with an unpleasant grainy texture." },
-        ],
-      },
-      feelCue: "Draw a finger across a spoon dipped in the custard — the line should hold clean and sharp for 5 seconds. The custard should feel silky, with absolutely no graininess on the fingertip — not even a hint.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Jaunes d'œuf",
+      "ratioValue": 5,
+      "defaultUnit": "pc",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Shape",
-      inputs: ["ing_01"],
-      outputState: "pastry_shells",
-      instructions: "Roll puff pastry into a tight log, then slice into 12 equal discs about 1.5 cm thick. Press each disc into the base of a greased standard muffin tin, using your thumbs to work the pastry up the sides evenly — it should be thicker at the base than the sides, and the sides should come right to the top of the tin. The pastry will be thin and slightly translucent at the sides. Refrigerate for 20 minutes.",
-      visualCue: {
-        primaryTarget: "Thin, even pastry shells that reach the top of each muffin cup with no gaps, tears, or visible thick patches. The layered cross-section of the puff pastry is visible at the cut edge.",
-        spectrum: [
-          { state: "Underdone", description: "Pastry is too thick at the base and too thin at the sides, or doesn't reach the top of the tin.", action: "Work the pastry more with your thumbs — think of throwing a pot, working from the centre outward and upward." },
-          { state: "Perfect",   description: "Uniform shells with an even wall of approximately 3mm. Layered pastry visible at the rim. No holes. Slightly translucent at the sides when held to the light.", action: "Refrigerate for 20 minutes to relax the gluten before baking." },
-          { state: "Overdone",  description: "Pastry has been handled so much it has torn or the butter has melted — pastry feels greasy and is beginning to lose its layered structure.", action: "Refrigerate immediately for 30 minutes before proceeding. Cold butter is the foundation of puff pastry." },
-        ],
-      },
-      feelCue: "Press your thumbnail gently into the side of a chilled shell — the pastry should feel firm and cold, not soft or greasy. The layered structure should be perceptible as a slight springiness.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Double crème (crème lourde)",
+      "ratioValue": 150,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Bake",
-      inputs: ["pastry_shells", "custard_base", "ing_12"],
-      outputState: "finished_pasteis_de_nata",
-      instructions: "Preheat oven to its maximum temperature — ideally 250 C (480 F) or higher. Fill each chilled shell three-quarters full with custard. Bake on the highest rack for 13–17 minutes, watching carefully. You are chasing the classic dark amber leopard-spots across the surface — the tops will blister and char in places and the custard will wobble alarmingly. Pull when the tops are darkly blistered but the custard is still trembling. Cool for 10 minutes and dust with ground cinnamon.",
-      visualCue: {
-        primaryTarget: "Custard surface is a constellation of dark amber to near-black caramelised spots across a pale cream background. The pastry is deeply golden and blistered. The custard still trembles at the centre when tapped.",
-        spectrum: [
-          { state: "Underdone", description: "Custard surface is uniformly pale — no blistering or browning. Custard jiggles as one liquid mass. Pastry is pale and soft.", action: "Return to the highest rack for 3–5 more minutes. A lower oven temperature is your enemy here — these tarts need ferocious heat." },
-          { state: "Perfect",   description: "Dark, dramatic caramelised spots across the custard. Pastry is crispily golden and separating into flaky layers. The custard centre trembles independently when the tin is tapped. Smells of caramelised sugar and vanilla.", action: "Cool in the tin for 5 minutes then transfer to a rack. Serve warm, dusted with cinnamon." },
-          { state: "Overdone",  description: "Custard is completely set — no tremor. Surface is uniformly dark. Pastry is very dark at the edges.", action: "The tarts will still be delicious, just fully set rather than creamy. Serve immediately and adjust time next batch." },
-        ],
-      },
-      feelCue: "Tap the side of the tin gently — the custard in the centre should shimmer and wobble with a loose, liquid movement separate from the set edges. This wobble is the soul of a pastel de nata.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Lait entier",
+      "ratioValue": 150,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre de ricin",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Starch",
+      "name": "Farine de maïs",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Farine pure"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Haricots de vanille, graines raclées",
+      "ratioValue": 1,
+      "defaultUnit": "pc",
+      "substitutions": [
+        "1 c. à thé extrait de vanille"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Bande de citron",
+      "ratioValue": 1,
+      "defaultUnit": "pc",
+      "substitutions": [
+        "peau d'orange"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Bâton de cannelle",
+      "ratioValue": 1,
+      "defaultUnit": "pc",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Sweetener",
+      "name": "Eau (sirop de sucre)",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Sweetener",
+      "name": "Sucre de canne à sucre",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Garnish",
+      "name": "Cannelle hachée et sucre glace, pour finir",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_10",
+        "ing_11",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "aromatic_syrup",
+      "instructions": "Mélanger le sucre, l'eau, le bâton de cannelle, l'écorce de citron et la vanille dans une petite casserole. Porter à ébullition sans remuer et laisser mijoter 3 minutes à 107 C (un sirop léger). Retirer du feu et laisser infuser profondément les aromatiques pendant 10 minutes. Jeter la cannelle, la pelure de citron et la gousse de vanille — réserver les graines de vanille si vous les avez grattées. Refroidir à la température ambiante.",
+      "visualCue": {
+        "primaryTarget": "Un sirop clair, légèrement doré, avec une viscosité mince, juste plus épais que l'eau. La cuisine sent la vanille, la cannelle et la pelure de citron.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sirop est encore mince et aqueux. Sucre à peine dissous.",
+            "action": "Laisser mijoter encore 2 minutes. Le sirop doit atteindre 107 C pour avoir la bonne concentration de sucre pour la crème."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, mince mais pas aqueuse. Une goutte sur une plaque froide se met à un film doux et légèrement collant en 30 secondes. Parfumé de citron et de vanille.",
+            "action": "Laisser refroidir complètement avant d'ajouter le jaune d'œuf."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sirop est épais et tire en cordes — il s'est trop concentré.",
+            "action": "Ajouter 30 ml d'eau chaude et remuer à mince avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Le sirop refroidi doit se sentir comme du miel très mince entre les doigts — glissant et légèrement collant, mais pas assez épais pour laisser un fil visible lorsque vous tirez vos doigts."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_02",
+        "ing_06",
+        "ing_03",
+        "ing_04",
+        "aromatic_syrup"
+      ],
+      "outputState": "custard_base",
+      "instructions": "Mélanger les jaunes d'œufs et la farine de maïs dans un bol jusqu'à ce qu'ils soient doux. Dans une casserole, mélanger le lait, la crème et le sirop refroidi. Portez à juste en dessous d'une mijot (petites bulles au bord). Versez lentement le lait chaud sur le mélange de jaunes, en fouettant constamment. Retournez le mélange entier dans la casserole et faites cuire à feu moyen, fouettant constamment, jusqu'à ce qu'il commence juste à épaissir à une crème versable — retirez immédiatement. Plongez dans un bon tamis.",
+      "visualCue": {
+        "primaryTarget": "Une crème douce d'or pâle qui enveloppe légèrement l'arrière d'une cuillère — plus mince que la crème double mais plus épaisse que le lait. Silky et complètement sans grumeaux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le custard est encore mince comme le lait. Pas de revêtement à l'arrière d'une cuillère. Cornflour n'a pas atteint la température de gélatinisation.",
+            "action": "Retourner à la chaleur douce et fouetter continuellement — il s'épaissira rapidement une fois qu'il atteindra 82 °C."
+          },
+          {
+            "state": "Perfect",
+            "description": "La consistance de la nappe est mince — elle recouvre l'arrière d'une cuillère, et une ligne tirée à travers elle tient parfaitement. Ça coule facilement. Sens de vanille et de crème.",
+            "action": "Plongez immédiatement et versez dans des coquilles de pâtisserie préparées."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le custard est brouillé — taches jaunes visibles et texture granuleuse. Ça sent l'oeuf.",
+            "action": "Jeter et recommencer à zéro — la crème brouillée fera cuire de façon inégale et avec une texture granuleuse désagréable."
+          }
+        ]
+      },
+      "feelCue": "Dessinez un doigt sur une cuillère trempée dans la crème — la ligne doit tenir propre et tranchant pendant 5 secondes. La crème devrait se sentir soyeuse, sans grain sur le bout des doigts — pas même un indice."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "pastry_shells",
+      "instructions": "Rouler la pâte soufflée dans une bûche serrée, puis couper en 12 disques égaux d'environ 1,5 cm d'épaisseur. Appuyez sur chaque disque dans la base d'une boîte à muffins standard graissée, en utilisant vos pouces pour travailler uniformément la pâte sur les côtés — il devrait être plus épais à la base que les côtés, et les côtés devraient venir directement au sommet de l'étain. La pâtisserie sera mince et légèrement translucide sur les côtés. Réfrigérer pendant 20 minutes.",
+      "visualCue": {
+        "primaryTarget": "Coques fines, même pâtissières qui atteignent le haut de chaque tasse de muffin sans trous, larmes ou taches épaisses visibles. La coupe en couches de la pâte feuilletée est visible au bord de coupe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est trop épaisse à la base et trop fine aux côtés, ou n'atteint pas le haut de l'étain.",
+            "action": "Travaillez la pâtisserie plus avec vos pouces — pensez à jeter un pot, travaillant du centre vers l'extérieur et vers le haut."
+          },
+          {
+            "state": "Perfect",
+            "description": "Coquilles uniformes d'une paroi uniforme d'environ 3 mm. Pâtisserie en couches visible au bord. Pas de trous. Légèrement translucide sur les côtés lorsqu'il est tenu à la lumière.",
+            "action": "Réfrigérer pendant 20 minutes pour détendre le gluten avant cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a été manipulée tellement elle a déchiré ou le beurre a fondu — la pâte se sent grasse et commence à perdre sa structure en couches.",
+            "action": "Réfrigérer immédiatement pendant 30 minutes avant de procéder. Le beurre froid est le fondement de la pâte feuilletée."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur votre vignette dans le côté d'une coquille réfrigérée — la pâtisserie doit se sentir ferme et froide, pas molle ou grasse. La structure en couches doit être perceptible comme un léger ressort."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "pastry_shells",
+        "custard_base",
+        "ing_12"
+      ],
+      "outputState": "finished_pasteis_de_nata",
+      "instructions": "Préchauffer le four à sa température maximale – idéalement 250 C (480 F) ou plus. Remplir chaque coquille réfrigérée des trois quarts pleins de crème. Cuire sur le support le plus haut pendant 13–17 minutes, en regardant attentivement. Vous êtes à la poursuite des points léopards foncés classiques à travers la surface — les sommets vont blister et l'omble dans les endroits et la crème va trembler de façon alarmante. Tirez quand les dessus sont boursouflés, mais la crème tremble encore. Laisser refroidir 10 minutes et la poussière avec la cannelle.",
+      "visualCue": {
+        "primaryTarget": "La surface du custard est une constellation de taches caramélisées d'ambre foncé à presque noir sur un fond crème pâle. La pâtisserie est profondément dorée et cloquée. La crème tremble toujours au centre quand elle est tapée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface du custard est uniformément pâle, sans cloque ni brunissement. La custarde est une masse liquide. La pâte est pâle et douce.",
+            "action": "Retourner au rack le plus haut pendant 3 à 5 minutes de plus. Une température plus basse est votre ennemi ici — ces tartes ont besoin de chaleur féroce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des taches sombres et dramatiques caramélisées à travers la crème. La pâte est d'or croustillant et se sépare en couches molles. Le centre de la crème tremble indépendamment lorsque l'étain est tapé. Sens de sucre caramélisé et de vanille.",
+            "action": "Laisser refroidir dans l'étain pendant 5 minutes puis transférer sur un support. Servir chaud, avec de la cannelle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Custard est complètement réglé — pas de tremblement. La surface est uniformément sombre. La pâtisserie est très sombre aux bords.",
+            "action": "Les tartes seront toujours délicieuses, juste en position complète plutôt que crémeuse. Servir immédiatement et ajuster l'heure du prochain lot."
+          }
+        ]
+      },
+      "feelCue": "Tapotez doucement le côté de l'étain — la crème au centre devrait mijoter et osciller avec un mouvement liquide lâche séparé des bords fixés. Ce tourbillon est l'âme d'un pastel de nata."
+    }
+  ]
 };

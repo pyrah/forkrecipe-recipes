@@ -1,95 +1,256 @@
 export default {
-  repoId: "master_hungarian_goulash-paste_001",
-  parentRepoId: null,
-  slug: "goulash-paste",
-  author: "ForkRecipe Kitchen",
-  title: "Hungarian Goulash Paste",
-  description: "A brick-red aromatic paste built on sweet Hungarian paprika, caramelized onions, and rendered beef fat — the concentrated soul of goulash that can be stirred into stock to make the stew, or spread as a condiment.",
-  cuisine: "Hungarian",
-  culture: "Hungarian",
-  category: "sauces",
-  tags: ["paprika", "beef", "hungarian", "stew", "paste"],
-  difficulty: 3,
-  activeTime: "60 min",
-  totalTime: "75 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 4, sour: 2, bitter: 2, umami: 6, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Allium",     name: "Yellow onions, finely diced",              ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",        name: "Lard or beef tallow (or neutral oil)",     ratioValue: 20,  defaultUnit: "parts", substitutions: ["sunflower oil"] },
-    { ingId: "ing_03", role: "Spice",      name: "Sweet Hungarian paprika",                  ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",      name: "Hot Hungarian paprika or smoked paprika",  ratioValue: 5,   defaultUnit: "parts", substitutions: ["cayenne (use half the amount)"] },
-    { ingId: "ing_05", role: "Aromatic",   name: "Garlic cloves, minced",                    ratioValue: 6,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",   name: "Green bell pepper, finely diced",          ratioValue: 25,  defaultUnit: "parts", substitutions: ["cubanelle pepper"] },
-    { ingId: "ing_07", role: "Umami",      name: "Tomato paste",                             ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Fine sea salt",                            ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",      name: "Caraway seeds, lightly crushed",           ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Liquid",     name: "Beef stock",                               ratioValue: 15,  defaultUnit: "parts", substitutions: ["water"] },
+  "repoId": "master_hungarian_goulash-paste_001",
+  "parentRepoId": null,
+  "slug": "goulash-paste",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pâte goulash hongroise",
+  "description": "Une pâte aromatique rouge brique construite sur du paprika hongrois doux, des oignons caramélisés et de la graisse de boeuf rendu — l'âme concentrée de goulasch qui peut être brassée en stock pour faire le ragoût, ou se répandre comme un condiment.",
+  "cuisine": "Hongrois",
+  "culture": "Hongrois",
+  "category": "sauces",
+  "tags": [
+    "paprika",
+    "boeuf",
+    "Hongrois",
+    "ragoût",
+    "pâte"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "60 min",
+  "totalTime": "75 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 6,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Caramelize",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "deeply_caramelized_onions",
-      instructions: "Melt the lard or fat in a wide, heavy-bottomed pan (a cast-iron skillet is ideal) over medium-low heat. Add all the diced onions with a generous pinch of salt. Cook, stirring every 5-7 minutes, for 40-50 minutes total. The onions will go through stages: sweating and turning translucent at 10 minutes, then softening and reducing at 20 minutes, then beginning to caramelize and turn golden at 30 minutes. You want them at deep golden-amber — not dark brown — when the paprika goes in. Do not rush this step; increasing the heat to hurry the process causes bitterness.",
-      visualCue: {
-        primaryTarget: "Deeply golden-amber onions that have reduced to about one-fifth of their original volume, soft and jammy, with a sweet caramelized smell and no raw sharpness.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are still pale gold or tan. They smell sweet but not yet deeply caramelized.", action: "Continue cooking at medium-low for another 15-20 minutes. The flavor payoff is in the final stage — do not stop early." },
-          { state: "Perfect",   description: "Deep amber, almost the color of strong tea. Volume reduced to one-fifth. Taste one: it should be intensely sweet and savory, almost like marmalade. Jammy texture.", action: "Add garlic, bell pepper, and caraway. Stir and cook for 3 minutes." },
-          { state: "Overdone",  description: "Onions are dark brown or black at the edges. Smell is bitter and sharp.", action: "Remove the darkest pieces. Add a splash of stock to deglaze and cool the pan slightly before adding the paprika." },
-        ],
-      },
-      feelCue: "Perfectly caramelized onions should collapse to a near-paste when pressed with the back of a spoon — no crunch, no structure. The smell is deeply sweet and savory, like onion soup at its best.",
+      "ingId": "ing_01",
+      "role": "Allium",
+      "name": "Oignons jaunes, coupés en dés",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Sauté",
-      inputs: ["deeply_caramelized_onions", "ing_05", "ing_06", "ing_09"],
-      outputState: "aromatic_base",
-      instructions: "Add the minced garlic, diced green bell pepper, and lightly crushed caraway seeds to the caramelized onions. Stir and cook for 3-4 minutes over medium heat until the garlic is fragrant and the bell pepper has softened slightly. The garlic should not brown — keep the heat moderate. Add the tomato paste, stir it into the mixture, and fry it for 2 minutes until it darkens to brick-red and smells caramelized.",
-      visualCue: {
-        primaryTarget: "Garlic has softened and is fragrant (not browned). Bell pepper is slightly softened. Tomato paste has turned brick-red and smells jammy.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is still sharp and raw-tasting. Bell pepper is hard and crunchy.", action: "Cook for 2 more minutes at medium heat. Raw garlic in a paste will taste harsh." },
-          { state: "Perfect",   description: "Garlic is fragrant and sweet, not browned. Pepper is softened. Tomato paste is brick-red and jammy. The mixture smells complex and savory.", action: "Remove from heat briefly before adding paprika." },
-          { state: "Overdone",  description: "Garlic has gone golden-brown and smells slightly bitter.", action: "Proceed but reduce heat aggressively before adding paprika — burnt paprika cannot be rescued." },
-        ],
-      },
-      feelCue: "When the garlic and pepper are right, the pan will smell intensely aromatic — sharp garlic sweetening into something earthy, the green vegetal note of the pepper softening. Caraway adds a faint anise-rye warmth underneath.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Suif de lard ou de bœuf (ou huile neutre)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile de tournesol"
+      ]
     },
     {
-      nodeId: "step_3", action: "Bloom",
-      inputs: ["aromatic_base", "ing_03", "ing_04"],
-      outputState: "paprika_paste",
-      instructions: "CRITICAL STEP: Remove the pan from the heat entirely, or reduce to the absolute lowest setting. Add all the sweet and hot paprika at once. Stir it into the oil and onion mixture vigorously. The residual heat in the pan is enough — paprika burns in seconds if it hits a hot pan directly, turning bitter and irreversible. Stir continuously for 30-45 seconds until the paprika is fully incorporated and the mixture has turned a uniform, vivid brick-red. Return to the lowest possible heat.",
-      visualCue: {
-        primaryTarget: "Vivid, uniform brick-red paste with no dry paprika pockets. The mixture looks almost like a smooth red jam. No dark or black speckles.",
-        spectrum: [
-          { state: "Underdone", description: "Paprika is not fully incorporated. Dry red powder visible mixed through the paste.", action: "Stir vigorously for another 30 seconds. Every paprika granule must be coated in fat to bloom properly." },
-          { state: "Perfect",   description: "Uniform deep brick-red paste. Vivid, almost fluorescent red color. The smell is deeply paprika — sweet, warm, and slightly floral. No sharp or acrid notes.", action: "Add the stock and stir to loosen. Simmer for 5 minutes." },
-          { state: "Overdone",  description: "Paste has turned dark brown or black in spots. A sharp, bitter, acrid smell has developed. Paprika has burnt.", action: "Unfortunately burnt paprika must be discarded — it will make the entire paste bitter. Start from the aromatic base step again with fresh paprika." },
-        ],
-      },
-      feelCue: "When the paprika blooms correctly in warm fat, it smells like the best Hungarian restaurant you have ever been in — vivid, complex, slightly fruity, and warm. That scent is the signal to proceed immediately.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Paprika hongrois doux",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Reduce",
-      inputs: ["paprika_paste", "ing_10", "ing_08"],
-      outputState: "finished_goulash_paste",
-      instructions: "Add the beef stock and salt to the paste. Stir to combine — the mixture will loosen into a thick paste-sauce. Simmer on very low heat for 8-10 minutes, stirring frequently, until the stock has reduced and the paste has thickened back to a spreadable, jammy consistency that holds a mound on a spoon. Taste and adjust salt. The paste should be intensely savory, sweet, paprika-forward, and complex. Cool completely before storing — it keeps refrigerated for 2 weeks, or frozen for 3 months.",
-      visualCue: {
-        primaryTarget: "Thick, brick-red paste with a jammy texture that holds its shape on a spoon without running. Deeply colored and glossy.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is too thin and saucy. It runs off a spoon like thick soup.", action: "Continue simmering for another 5 minutes at low heat. The goal is a concentrated, thick paste." },
-          { state: "Perfect",   description: "Holds a mound on a spoon. Falls in a slow, thick sheet when the spoon is tilted. Deeply red and glossy. Concentrated, complex flavor.", action: "Cool and store, or use immediately in goulash by dissolving in beef stock." },
-          { state: "Overdone",  description: "Paste has reduced to a very thick, almost dry brick that sticks to the pan.", action: "Add a tablespoon of stock or water to loosen. Stir over low heat until it comes back to a spreadable paste." },
-        ],
-      },
-      feelCue: "The finished paste should cling to a spoon and fall slowly when you tilt it — the consistency of a thick fruit jam. The smell should be deeply roasted paprika with sweet onion, garlic, and a warm spice undercurrent.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Paprika hongrois chaud ou paprika fumé",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cayenne (utiliser la moitié du montant)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "poivron vert, finement coupé en dés",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre de cubanelle"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Graines de carave, légèrement broyées",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Liquid",
+      "name": "Viande bovine",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Caramélisation",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "deeply_caramelized_onions",
+      "instructions": "Faire fondre le saindoux ou la graisse dans une grande poêle à fond lourd (une poêle en fonte est idéale) à feu moyen-doux. Ajouter tous les dés d'oignons avec une pincée généreuse de sel. Cuire en remuant toutes les 5-7 minutes, pendant 40-50 minutes au total. Les oignons passeront par étapes : translucide et translucide à 10 minutes, puis ramollissant et réduisant à 20 minutes, puis commençant à caraméliser et doré à 30 minutes. Vous les voulez à l'ambre d'or profond — pas brun foncé — quand le paprika entre. Ne précipitez pas cette étape ; augmenter la chaleur pour presser le processus provoque l'amertume.",
+      "visualCue": {
+        "primaryTarget": "Des oignons fortement dorés-ambres qui ont réduit à environ un cinquième de leur volume original, doux et confitureux, avec une odeur caramélisée douce et aucune netteté brute.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont encore dorés ou bronzés. Ils sentent doux mais pas encore profondément caramélisé.",
+            "action": "Continuer la cuisson à feu moyen-doux pendant 15-20 minutes. La récompense de la saveur est à la dernière étape — ne vous arrêtez pas tôt."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profonde, presque la couleur du thé fort. Volume réduit à un cinquième. Goûtez un: il doit être intensément sucré et salé, presque comme de la marmelade. La texture de Jammy.",
+            "action": "Ajouter l'ail, le poivron et la carafe. Mélanger et cuire 3 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oignons sont brun foncé ou noir aux bords. L'odeur est amère et tranchante.",
+            "action": "Enlevez les morceaux les plus sombres. Ajouter une touche de stock pour déglacer et refroidir légèrement la poêle avant d'ajouter le paprika."
+          }
+        ]
+      },
+      "feelCue": "Les oignons parfaitement caramélisés devraient s'effondrer jusqu'à un quasi-collé lorsqu'ils sont pressés à l'arrière d'une cuillère — pas de croûte, pas de structure. L'odeur est profondément sucrée et salée, comme la soupe à l'oignon à son meilleur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "deeply_caramelized_onions",
+        "ing_05",
+        "ing_06",
+        "ing_09"
+      ],
+      "outputState": "aromatic_base",
+      "instructions": "Ajouter l'ail haché, le poivron vert en dés et les graines de carvi légèrement broyées aux oignons caramélisés. Incorporer et cuire 3-4 minutes à feu moyen jusqu'à ce que l'ail soit parfumé et que le poivron ait légèrement ramolli. L'ail ne doit pas brunir — garder le feu modéré. Ajouter la pâte de tomate, la remuer dans le mélange et la faire frire pendant 2 minutes jusqu'à ce qu'elle s'assombrisse en rouge brique et sente caramélisée.",
+      "visualCue": {
+        "primaryTarget": "L'ail s'est adouci et est parfumé (non bruni). Le poivron est légèrement adouci. La pâte de tomates est devenue rouge brique et sent le confiture.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est encore vif et goûté. Le poivron est dur et croquant.",
+            "action": "Cuire encore 2 minutes à feu moyen. L'ail cru dans une pâte aura un goût dur."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'ail est parfumé et doux, pas doré. Le poivre est adouci. La pâte de tomates est rouge brique et confiture. Le mélange sent complexe et salé.",
+            "action": "Retirer brièvement du feu avant d'ajouter du paprika."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est devenu doré et sent légèrement amer.",
+            "action": "Continuez mais réduisez la chaleur agressivement avant d'ajouter du paprika — le paprika brûlé ne peut être sauvé."
+          }
+        ]
+      },
+      "feelCue": "Lorsque l'ail et le poivre sont à droite, la poêle sentira intensément aromatique — l'ail vif sucré dans quelque chose de terreux, la note végétale verte du poivre ramollissant. Caraway ajoute une légère chaleur à l'anis."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Bloom",
+      "inputs": [
+        "aromatic_base",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "paprika_paste",
+      "instructions": "ÉTAPE CRITIQUE : Retirez entièrement la poêle de la chaleur ou réduisez à la valeur la plus basse absolue. Ajouter tout le paprika doux et chaud à la fois. Incorporer vigoureusement le mélange d'huile et d'oignon. La chaleur résiduelle dans la poêle est suffisante — le paprika brûle en quelques secondes s'il frappe directement une poêle chaude, devenant amer et irréversible. Mélanger en continu pendant 30-45 secondes jusqu'à ce que le paprika soit entièrement incorporé et que le mélange ait fait un rouge-brique uniforme et vif. Retour à la chaleur la plus basse possible.",
+      "visualCue": {
+        "primaryTarget": "Pâte rouge brique uniforme, sans poches paprika sèches. Le mélange ressemble presque à une confiture rouge lisse. Pas de taches sombres ou noires.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Paprika n'est pas entièrement incorporé. Poudre rouge sèche visible mélangée à la pâte.",
+            "action": "Agiter vigoureusement pendant 30 secondes. Chaque granule de paprika doit être recouvert de graisse pour fleurir correctement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte uniforme rouge brique profonde. Couleur rouge vive, presque fluorescente. L'odeur est profondément paprika — douce, chaude et légèrement florale. Pas de notes pointues ou acrides.",
+            "action": "Ajouter le stock et remuer pour se détendre. Laisser mijoter 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est devenue brun foncé ou noir dans les taches. Une odeur aiguë, amère et acride s'est développée. Paprika a brûlé.",
+            "action": "Malheureusement, le paprika brûlé doit être jeté — il rendra la pâte entière amère. Commencez à partir de la base aromatique pas à nouveau avec le paprika frais."
+          }
+        ]
+      },
+      "feelCue": "Lorsque le paprika fleurit correctement dans la graisse chaude, il sent comme le meilleur restaurant hongrois que vous avez jamais été dans - vif, complexe, légèrement fruité, et chaud. Cette odeur est le signal pour procéder immédiatement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Réduire",
+      "inputs": [
+        "paprika_paste",
+        "ing_10",
+        "ing_08"
+      ],
+      "outputState": "finished_goulash_paste",
+      "instructions": "Ajouter le bouillon de bœuf et le sel à la pâte. Mélanger — le mélange se desserre dans une pâte-sauce épaisse. Laisser mijoter à feu très doux pendant 8-10 minutes, en remuant fréquemment, jusqu'à ce que le stock ait diminué et que la pâte s'épaississe de nouveau à une consistance de confiture qui tient un monticule sur une cuillère. Goûtez et ajustez le sel. La pâte doit être intensément salée, douce, paprika-avant et complexe. Laisser refroidir complètement avant d'être entreposé — il conserve au réfrigérateur pendant 2 semaines ou surgelé pendant 3 mois.",
+      "visualCue": {
+        "primaryTarget": "Pâte épaisse, rouge brique avec une texture jammy qui tient sa forme sur une cuillère sans courir. Profondément coloré et brillant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est trop fine et savoureuse. Il coule d'une cuillère comme une soupe épaisse.",
+            "action": "Continuer à mijoter encore 5 minutes à feu doux. Le but est une pâte concentrée et épaisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Il tient un monticule sur une cuillère. Tomber dans une feuille lente et épaisse lorsque la cuillère est inclinée. Profondément rouge et brillant. Une saveur concentrée et complexe.",
+            "action": "Laisser refroidir et conserver, ou utiliser immédiatement dans la goulasse en se dissolvant dans le stock de boeuf."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a été réduite à une brique très épaisse, presque sèche qui colle à la poêle.",
+            "action": "Ajouter une cuillère à soupe de bouillon ou d'eau pour se détendre. Incorporer à feu doux jusqu'à ce qu'il revienne à une pâte extensible."
+          }
+        ]
+      },
+      "feelCue": "La pâte finie doit s'accrocher à une cuillère et tomber lentement lorsque vous l'inclinez — la consistance d'une épaisse confiture de fruits. L'odeur doit être profondément torréfié paprika avec l'oignon doux, l'ail, et une épice chaude sous courant."
+    }
+  ]
 };

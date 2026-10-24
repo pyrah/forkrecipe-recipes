@@ -1,120 +1,302 @@
 export default {
-  repoId: "master_georgian_khachapuri_001",
-  parentRepoId: null,
-  slug: "khachapuri",
-  author: "ForkRecipe Kitchen",
-  title: "Adjarian Khachapuri",
-  description: "Georgia's boat-shaped cheese bread from Adjara — a yeasted dough folded into an oval vessel and filled with a molten mixture of suluguni and imeruli cheese, then baked until the crust browns and a raw egg and pat of butter are dropped into the bubbling center at the table.",
-  cuisine: "Georgian",
-  culture: "Adjarian",
-  category: "breads",
-  tags: ["georgian", "adjarian", "cheese-bread", "egg", "butter", "boat-bread", "indulgent"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "2 hr 10 min",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    // Dough
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour (plain flour)",              ratioValue: 100, defaultUnit: "%",  substitutions: ["bread flour (gives chewier crust)"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Warm water (35–38°C)",                         ratioValue: 55,  defaultUnit: "%",  substitutions: [] },
-    { ingId: "ing_03", role: "Hydration",  name: "Warm whole milk",                              ratioValue: 10,  defaultUnit: "%",  substitutions: ["water (total liquid stays the same)"] },
-    { ingId: "ing_04", role: "Leavener",   name: "Instant yeast",                                ratioValue: 1.5, defaultUnit: "%",  substitutions: ["active dry yeast (proof in warm water first)"] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine sea salt",                                ratioValue: 2,   defaultUnit: "%",  substitutions: [] },
-    { ingId: "ing_06", role: "Sweetener",  name: "Sugar",                                        ratioValue: 2,   defaultUnit: "%",  substitutions: [] },
-    { ingId: "ing_07", role: "Fat",        name: "Neutral oil or melted unsalted butter",        ratioValue: 4,   defaultUnit: "%",  substitutions: [] },
-    // Filling and finish
-    { ingId: "ing_08", role: "Dairy",      name: "Suluguni cheese (or low-moisture mozzarella), grated", ratioValue: 250, defaultUnit: "g", substitutions: ["Monterey Jack", "young provolone"] },
-    { ingId: "ing_09", role: "Dairy",      name: "Imeruli or feta cheese, crumbled",             ratioValue: 150, defaultUnit: "g",  substitutions: ["firm ricotta salata", "mild feta"] },
-    { ingId: "ing_10", role: "Protein",    name: "Eggs — 1 per khachapuri for the center, plus 1 for egg wash", ratioValue: 2, defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_11", role: "Fat",        name: "Unsalted butter, cold, cut into small cubes",  ratioValue: 30,  defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_georgian_khachapuri_001",
+  "parentRepoId": null,
+  "slug": "khachapuri",
+  "author": "ForkRecipe Kitchen",
+  "title": "Adjari Khachapuri",
+  "description": "Le pain au fromage en forme de bateau d'Adjara, une pâte à levure pliée dans un récipient ovale et remplie d'un mélange fondu de suluguni et d'imeruli, puis cuite au four jusqu'à ce que la croûte brunisse et qu'un œuf cru et une pat de beurre soient jetés dans le centre bouillonnant à la table.",
+  "cuisine": "Géorgien",
+  "culture": "Adjarien",
+  "category": "breads",
+  "tags": [
+    "Géorgie",
+    "adjaire",
+    "pain au fromage",
+    "œuf",
+    "beurre",
+    "pain de bateau",
+    "indulgent"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "2 hr 10 min",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Knead",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "smooth_dough",
-      instructions: "Combine flour, yeast, salt, and sugar in a large bowl and stir to mix. Add the warm water, warm milk, and oil. Mix until a shaggy dough forms, then turn out onto a lightly floured surface. Knead firmly for 8–10 minutes until the dough is smooth, elastic, and springs back when poked. Khachapuri dough is enriched and moderately hydrated — it should feel soft, slightly tacky, but not sticky, and should window-pane finely. Form into a ball, place in a lightly oiled bowl, cover with a damp cloth or plastic wrap, and leave at room temperature for 1 hour or until doubled in size.",
-      visualCue: {
-        primaryTarget: "A smooth, satiny ball of dough with a slightly matte surface — it holds its round shape, springs back when poked, and passes the windowpane test.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still rough and shaggy, tears rather than stretches, and has a lumpy surface. Sticks aggressively to the board.", action: "Keep kneading. Gluten development requires sustained work. If sticking is severe, lightly oil your hands rather than adding more flour — extra flour toughens the final crust." },
-          { state: "Perfect",   description: "Smooth, elastic, slightly tacky but not sticky. Passes windowpane test: a small piece stretched thin shows a translucent membrane without tearing.", action: "Ball it, oil the bowl, cover, and leave to double — about 1 hour at 24°C." },
-          { state: "Overdone",  description: "Dough is very tight and springy, snapping back aggressively when stretched.", action: "Let it rest 15 minutes uncovered. Over-kneaded gluten relaxes quickly and will roll out fine for shaping." },
-        ],
-      },
-      feelCue: "The properly kneaded dough should feel like a firm earlobe — soft enough to easily indent with a finger, elastic enough to push back slowly. It should leave your hands clean after a few strokes.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine polyvalente (farine plate)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de pain (gives croûte plus croustillante)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["ing_08", "ing_09"],
-      outputState: "cheese_filling",
-      instructions: "While the dough proofs, combine the grated suluguni and crumbled imeruli (or feta) in a bowl. Toss together with your hands, breaking up any large feta clumps so the two cheeses are evenly distributed. The filling should look like a loose mixture of stringy melting cheese and crumbled salty cheese. Taste: it should be boldly salty and milky. If using feta in place of imeruli, taste before adding any extra salt — feta is often saltier than imeruli. If the cheeses feel very dry, stir in 1–2 tablespoons of water or milk to help them bind into a cohesive filling once melted.",
-      visualCue: {
-        primaryTarget: "An evenly mixed pile of grated and crumbled cheese — no large blocks of one type, just an intermingled, slightly tacky mound that smells milky and clean.",
-        spectrum: [
-          { state: "Underdone", description: "Cheeses are in two distinct unmixed halves of the bowl. Large chunks of suluguni not broken up.", action: "Mix more thoroughly with your fingers, breaking up the suluguni strands and crumbling feta to approximately match the size of the grated cheese." },
-          { state: "Perfect",   description: "Evenly combined, loose and slightly tacky to the touch. Smells pleasantly milky and salty.", action: "Keep at room temperature until ready to fill — cold, firm cheese is harder to spread in the dough boats." },
-          { state: "Overdone",  description: "Cheeses have been squeezed together into a dense, compacted paste.", action: "Break it back apart with your fingers. Compacted cheese melts unevenly and can pool in the center rather than filling the boat." },
-        ],
-      },
-      feelCue: "Squeeze a small handful of the cheese mixture: it should clump lightly under pressure but fall apart again when you open your hand — not rock solid and not powdery.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau chaude (35–38°C)",
+      "ratioValue": 55,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Shape",
-      inputs: ["smooth_dough", "cheese_filling"],
-      outputState: "shaped_khachapuri_boats",
-      instructions: "Preheat the oven to 230°C (450°F) with a heavy baking sheet or baking stone inside. Punch down the proofed dough and divide into two equal pieces. On a lightly floured surface, roll each piece into an oval about 30 cm x 18 cm. Spread half the cheese filling across the center of each oval, leaving a 4 cm border around the edge. Roll the long sides of each oval tightly inward over the cheese, creating two raised walls. Pinch and twist each short end firmly into a point to form the prow and stern of the boat — the pinched ends hold the walls together during baking. The boat should hold its shape when lifted. The cheese will be almost fully enclosed, peeking through a narrow gap at the top center.",
-      visualCue: {
-        primaryTarget: "Two neat, oval dough boats with raised, twisted-end points and a visible strip of cheese across the center — the dough walls should stand upright and hold their shape.",
-        spectrum: [
-          { state: "Underdone", description: "The ends are not properly pinched — they splay open and the cheese is escaping at the sides.", action: "Pinch and re-twist the ends firmly. Use wet fingers to seal — moisture helps the dough stick to itself." },
-          { state: "Perfect",   description: "Upright, oval boats with clean, twisted pointed ends. Walls stand 3–4 cm tall. Cheese is visible as a snowy filling across the top center.", action: "Transfer to a sheet of parchment on a peel or flat baking sheet. Brush the dough walls with egg wash and immediately load into the oven." },
-          { state: "Overdone",  description: "Dough walls are too thin and the cheese is too exposed — the filling may leak through the sides during baking.", action: "Patch any thin spots by pressing a piece of torn dough against the thin wall, pinching to seal." },
-        ],
-      },
-      feelCue: "Lift a shaped boat in both hands and gently jostle it: the walls should hold their shape with only slight wobble, and the cheese should not shift or pour. If the boat collapses, the dough needs 10 more minutes of bench rest before shaping.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Lait entier chaud",
+      "ratioValue": 10,
+      "defaultUnit": "%",
+      "substitutions": [
+        "eau (le liquide total reste le même)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["shaped_khachapuri_boats", "ing_10"],
-      outputState: "baked_khachapuri",
-      instructions: "Slide the parchment with the shaped boats onto the preheated baking sheet in the oven. Bake at 230°C (450°F) for 12–15 minutes until the dough walls are deeply golden-brown with some charred spots at the edges and the cheese is bubbling and gooey across the top. Remove from the oven. Working quickly, use a spoon to gently press a small well in the center of the bubbling cheese in each boat. Crack one egg carefully into each well — the yolk should sit visibly, the white spreading slightly into the molten cheese. Return to the oven for exactly 3 minutes: the white should be just set at the edges while the yolk remains completely liquid and runny. Remove and immediately add cubes of cold butter over the hot cheese.",
-      visualCue: {
-        primaryTarget: "A golden-brown dough boat with charred tips, bubbling and browned cheese filling, and a raw egg yolk sitting in a pool of soft white — the butter just beginning to melt into the edge of the cheese.",
-        spectrum: [
-          { state: "Underdone", description: "Dough walls are still pale and soft. Cheese has not yet melted into a molten pool but is still a distinct mound.", action: "Continue baking for 3–5 more minutes. Underbaked dough will be gummy inside the walls." },
-          { state: "Perfect",   description: "Deep golden-brown walls with appealing char at the pointed ends. Cheese bubbling and molten. Egg yolk a vivid, glossy dome sitting in creamy white. Butter just melting.", action: "Rush to the table. Khachapuri waits for no one." },
-          { state: "Overdone",  description: "Egg yolk is set solid or the cheese has browned to a dark, dry, leathery film.", action: "Set the solid-yolk one aside for yourself and cook a replacement for the table if time allows. Overcooked egg renders the whole dish less dramatic — the runny yolk is the ritual." },
-        ],
-      },
-      feelCue: "Pull apart the rim of the warm bread and drag it through the melted cheese, raw-egg, and butter mixture at the center — the bread should have a slight chew and crackle from the oven crust, and the filling should coat it in a rich, glossy, intensely savory slick.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "levure sèche active (proof dans l'eau chaude d'abord)"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Finish",
-      inputs: ["baked_khachapuri", "ing_11"],
-      outputState: "finished_khachapuri",
-      instructions: "At the table, stir the runny egg yolk and melting butter vigorously into the molten cheese center, swirling with a fork until everything is incorporated into a rich, glossy, scrambled-looking sauce. Tear pieces of the crust rim and dip and drag them through the cheese mixture — this is the correct and only way to eat Adjarian khachapuri. The outer bread acts as an edible spoon. Eat immediately while the cheese is still flowing. No cutlery required.",
-      visualCue: {
-        primaryTarget: "A molten, glossy pool of mixed cheese, butter, and egg — a pale golden-yellow lava that flows to fill the boat edge-to-edge when the boat is tilted.",
-        spectrum: [
-          { state: "Underdone", description: "Butter and egg not yet incorporated — they sit separately on top of the cheese. The center mixture is not yet homogeneous.", action: "Stir more vigorously at the table. The heat of the cheese is enough to set the egg to a flowing, custard-like consistency if stirred immediately." },
-          { state: "Perfect",   description: "A silky, glossy, golden pool of cheese-egg-butter that runs and pools like thick cream when the boat tilts. Smells of toasted bread, warm milk, and butter.", action: "Tear and dip. There is nothing else to do." },
-          { state: "Overdone",  description: "Mixture has cooled and set into a rubbery, dense layer that no longer flows.", action: "Return the boat to a 180°C oven for 3 minutes to re-melt the center. The bread may lose some crunch, but the cheese will flow again." },
-        ],
-      },
-      feelCue: "Drag a torn piece of the rim crust through the center: the cheese sauce should coat the bread completely and cling in a thick, glossy layer — not watery, not solid. The bread should give a slight resistance, then yield with a satisfying softness from the steam of the filling.",
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile neutre ou beurre non salé fondu",
+      "ratioValue": 4,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Dairy",
+      "name": "Fromage suluguni (ou mozzarella à faible odeur), râpé",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Monterey Jack",
+        "jeune provolone"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Dairy",
+      "name": "Imeruli ou fromage feta, émietté",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "ricotta salata ferme",
+        "Féta léger"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Protein",
+      "name": "Œufs — 1 par khachapuri pour le centre, plus 1 pour le lavage des œufs",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Beurre non salé, froid, coupé en petits cubes",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Agenouillement",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "smooth_dough",
+      "instructions": "Mélanger la farine, la levure, le sel et le sucre dans un grand bol et mélanger. Ajouter l'eau chaude, le lait chaud et l'huile. Mélanger jusqu'à ce qu'une pâte chaotique se forme, puis tourner sur une surface légèrement farineuse. Agenouillez fermement pendant 8 à 10 minutes jusqu'à ce que la pâte soit lisse, élastique et ressorte lorsqu'elle est cuite. La pâte de Khachapuri est enrichie et modérément hydratée; elle doit se sentir douce, légèrement collante, mais pas collante, et doit être fine. Former en boule, placer dans un bol légèrement huilé, couvrir d'un chiffon humide ou d'un enveloppement plastique, et laisser à température ambiante pendant 1 heure ou jusqu'à doublé en taille.",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte lisse et satinée avec une surface légèrement mate — elle tient sa forme ronde, ressort quand elle est pochée et passe l'épreuve de la vitre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est encore rugueuse et lugubre, les larmes plutôt que les étirements, et a une surface grumelée. C'est agressif.",
+            "action": "Continuez à péter. Le développement du gluten nécessite un travail soutenu. Si le collage est sévère, huilez légèrement vos mains plutôt que d'ajouter plus de farine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, élastique, légèrement collant mais pas collant. Passe le test de la vitre : une petite pièce étirée mince montre une membrane translucide sans déchirement.",
+            "action": "Faire péter, huiler le bol, couvrir et laisser doubler — environ 1 heure à 24°C."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est très serrée et printanière, en cas d'étirement.",
+            "action": "Laissez reposer 15 minutes à découvert. Le gluten surcollé se détend rapidement et s'enroulera bien pour la façonnage."
+          }
+        ]
+      },
+      "feelCue": "La pâte bien pétrifiée doit se sentir comme un lobe d'oreille ferme — assez doux pour s'immerger facilement avec un doigt, assez élastique pour repousser lentement. Il devrait laisser vos mains propres après quelques coups."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "cheese_filling",
+      "instructions": "Pendant que la pâte résiste, mélanger les sulfuguni râpés et les imeruli émiettés (ou feta) dans un bol. Mélangez avec vos mains, en brisant les gros fetas afin que les deux fromages soient distribués uniformément. Le remplissage doit ressembler à un mélange lâche de fromage fondant à chaîne et de fromage salé émietté. Bouche : il doit être grasement salé et laiteux. Si vous utilisez du feta à la place d'imeruli, goûtez avant d'ajouter du sel supplémentaire — le feta est souvent plus salé que l'imeruli. Si les fromages sont très secs, remuez 1 à 2 cuillerées à soupe d'eau ou de lait pour les aider à se lier dans un remplissage cohérent une fois fondu.",
+      "visualCue": {
+        "primaryTarget": "Un tas uniformément mélangé de fromage râpé et émietté — pas de grands blocs d'un seul type, juste un monticule entremêlé, légèrement collant qui sent la laiterie et propre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les fromages sont dans deux moitiés distinctes non mélangées du bol. De gros morceaux de suluguni ne se sont pas séparés.",
+            "action": "Mélanger plus soigneusement avec les doigts, casser les brins de suluguni et écraser le feta pour correspondre à peu près à la taille du fromage râpé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Combiné uniformément, lâche et légèrement collant au toucher. Sens agréablement laiteux et salé.",
+            "action": "Gardez à température ambiante jusqu'à ce qu'il soit prêt à être rempli — le fromage ferme et froid est plus difficile à étaler dans les bateaux à pâte."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les fromages ont été pressés ensemble dans une pâte dense et compacte.",
+            "action": "Découpez-le avec vos doigts. Le fromage compacté fond inégalement et peut se mettre en piscine au centre plutôt que de remplir le bateau."
+          }
+        ]
+      },
+      "feelCue": "Pressez une petite poignée du mélange de fromage : il doit s'agglutiner légèrement sous pression mais s'effondrer à nouveau lorsque vous ouvrez la main, et non pas la roche solide et non poudreuse."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "smooth_dough",
+        "cheese_filling"
+      ],
+      "outputState": "shaped_khachapuri_boats",
+      "instructions": "Préchauffer le four à 230°C (450°F) avec une plaque de cuisson lourde ou de la pierre de cuisson à l'intérieur. Descendez la pâte éprouvée et divisez en deux morceaux égaux. Sur une surface légèrement farinée, rouler chaque pièce dans un ovale d'environ 30 cm x 18 cm. Étaler la moitié du remplissage du fromage sur le centre de chaque ovale, laissant une bordure de 4 cm autour du bord. Rouler les longues faces de chaque ovale étroitement vers l'intérieur sur le fromage, créant deux murs surélevés. Pincer et tordre fermement chaque extrémité courte en un point pour former la proue et la poupe du bateau — les extrémités pincées maintiennent les murs ensemble pendant la cuisson. Le bateau devrait tenir sa forme lorsqu'il est levé. Le fromage sera presque entièrement fermé, en regardant à travers un écart étroit au centre supérieur.",
+      "visualCue": {
+        "primaryTarget": "Deux embarcations de pâte ovales avec des pointes montantes et tordues et une bande de fromage visible à travers le centre - les murs de pâte doivent se tenir debout et tenir leur forme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les extrémités ne sont pas bien pincées — elles s'ouvrent et le fromage s'échappe sur les côtés.",
+            "action": "Pinch et re-twist les extrémités fermement. Utilisez des doigts mouillés pour sceller — l'humidité aide la pâte à se coller."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bateaux droits et ovales aux extrémités droites et pointues tordues. Les murs ont une hauteur de 3 à 4 cm. Le fromage est visible comme un remplissage neigeux à travers le centre supérieur.",
+            "action": "Transférer sur une feuille de parchemin sur une pelure ou une plaque de cuisson plate. Badigeonner les parois de pâte avec le lavage des œufs et les charger immédiatement dans le four."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les parois sont trop fines et le fromage trop exposé — le remplissage peut s'écouler sur les côtés pendant la cuisson.",
+            "action": "Placer les taches fines en appuyant sur un morceau de pâte déchirée contre la paroi mince, en pinçant pour sceller."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un bateau en forme dans les deux mains et jetez-le doucement : les murs doivent tenir leur forme avec seulement un léger frottement, et le fromage ne doit pas se déplacer ou verser. Si le bateau s'effondre, la pâte a besoin de 10 minutes de plus de repos du banc avant de façonner."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "shaped_khachapuri_boats",
+        "ing_10"
+      ],
+      "outputState": "baked_khachapuri",
+      "instructions": "Faites glisser le parchemin avec les bateaux en forme sur la plaque de cuisson préchauffée dans le four. Cuire au four à 230°C (450°F) pendant 12-15 minutes jusqu'à ce que les parois de la pâte soient profondément dorées avec quelques taches carbonisées aux bords et que le fromage soit bouillonnant et goeey sur le dessus. Retirer du four. Travailler rapidement, utiliser une cuillère pour presser doucement un petit puits au centre du fromage bouillonnant dans chaque bateau. Casser un œuf soigneusement dans chaque puits — le jaune doit s'asseoir visiblement, le blanc se répand légèrement dans le fromage fondu. Retourner au four pendant exactement 3 minutes : le blanc doit juste être réglé aux bords tandis que le jaune reste complètement liquide et liquide. Retirer et ajouter immédiatement des cubes de beurre froid sur le fromage chaud.",
+      "visualCue": {
+        "primaryTarget": "Un bateau à pâte dorée aux bouts carbonisés, au bouillon et au fromage brun, et un jaune d'œuf cru assis dans une piscine de blanc doux — le beurre commence à peine à fondre dans le bord du fromage.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les murs sont encore pâles et doux. Le fromage n'a pas encore fondu dans une piscine en fusion mais est toujours un monticule distinct.",
+            "action": "Continuer la cuisson 3 à 5 minutes de plus. La pâte cuite sera gommée à l'intérieur des murs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Murs dorés profonds avec ombrage attrayant aux extrémités pointues. Fromage bouillonnant et fondu. Jaune d'œuf un dôme vif et brillant, en blanc crémeux. Le beurre fond.",
+            "action": "Allez à la table. Khachapuri n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le jaune d'oeuf est solide ou le fromage est doré à un film foncé, sec et cuireux.",
+            "action": "Placez la jeune solide de côté pour vous et faites cuire un remplacement pour la table si le temps le permet. L'œuf surcuit rend le plat tout entier moins dramatique — le jaune roux est le rituel."
+          }
+        ]
+      },
+      "feelCue": "Débarrassez le bord du pain chaud et faites-le glisser à travers le fromage fondu, l'œuf cru et le mélange de beurre au centre. Le pain devrait avoir une légère mâche et du crackle de la croûte du four, et le remplissage devrait l'enrober d'une lécher riche, brillante, intensément salée."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Finition",
+      "inputs": [
+        "baked_khachapuri",
+        "ing_11"
+      ],
+      "outputState": "finished_khachapuri",
+      "instructions": "À table, remuer le jaune d'œuf et fondre vigoureusement le beurre dans le centre du fromage fondu, en tourbillonnant avec une fourchette jusqu'à ce que tout soit incorporé dans une sauce riche, brillante et brouillée. Morceaux de la croûte et trempez et faites-les glisser dans le mélange de fromage — c'est le seul moyen de manger le khachapuri adjarien. Le pain extérieur agit comme une cuillère comestible. Mangez immédiatement pendant que le fromage coule encore. Pas de couverts requis.",
+      "visualCue": {
+        "primaryTarget": "Une piscine fondue et brillante de fromage mélangé, de beurre et d'œuf — une lave jaune doré pâle qui s'écoule pour remplir le bateau bord à bord lorsque le bateau est incliné.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Beurre et œuf non encore incorporés — ils sont assis séparément sur le dessus du fromage. Le mélange central n'est pas encore homogène.",
+            "action": "Mélanger plus vigoureusement à la table. La chaleur du fromage suffit pour donner à l'œuf une consistance fluide, semblable à de la crème, s'il est immédiatement agité."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une piscine soyeuse, brillante, dorée de fromage-œuf-beurre qui court et des piscines comme de la crème épaisse quand le bateau bascule. Des odeurs de pain grillé, de lait chaud et de beurre.",
+            "action": "La déchirure et la trempette. Il n'y a rien d'autre à faire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange s'est refroidi et est placé dans une couche caoutchouteuse et dense qui ne coule plus.",
+            "action": "Retourner le bateau à un four à 180°C pendant 3 minutes pour refondre le centre. Le pain peut perdre un peu de croustillant, mais le fromage coule à nouveau."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser un morceau déchiré de la croûte de la bordure à travers le centre: la sauce au fromage doit enrober complètement le pain et s'accrocher dans une couche épaisse et brillante — pas aqueuse, pas solide. Le pain doit donner une légère résistance, puis donner avec une douceur satisfaisante de la vapeur de remplissage."
+    }
+  ]
 };

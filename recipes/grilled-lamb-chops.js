@@ -1,97 +1,268 @@
 export default {
-  repoId: "master_mediterranean_grilled_lamb_chops_001",
-  parentRepoId: null,
-  slug: "grilled-lamb-chops",
-  author: "ForkRecipe Kitchen",
-  title: "Grilled Lamb Chops",
-  description: "Rosemary-garlic marinated lamb loin chops seared over high heat to a rosé center and charred perimeter, carved and served in a pool of their own resting juices.",
-  cuisine: "Mediterranean",
-  culture: "Mediterranean",
-  category: "proteins",
-  tags: ["lamb", "grilled", "mediterranean", "herb", "gluten-free", "quick"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "2 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Lamb loin chops (2–3 cm thick, frenched)",               ratioValue: 100, defaultUnit: "parts", substitutions: ["lamb rib chops", "lamb t-bone chops"] },
-    { ingId: "ing_02", role: "Fat",       name: "Extra-virgin olive oil",                                  ratioValue: 15,  defaultUnit: "parts", substitutions: ["avocado oil"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, smashed and peeled",                       ratioValue: 6,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Herb",      name: "Fresh rosemary sprigs",                                   ratioValue: 4,   defaultUnit: "parts", substitutions: ["fresh thyme", "fresh oregano"] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh thyme sprigs",                                      ratioValue: 3,   defaultUnit: "parts", substitutions: ["fresh marjoram"] },
-    { ingId: "ing_06", role: "Citrus",    name: "Lemon zest",                                              ratioValue: 2,   defaultUnit: "parts", substitutions: ["orange zest"] },
-    { ingId: "ing_07", role: "Acid",      name: "Fresh lemon juice",                                       ratioValue: 5,   defaultUnit: "parts", substitutions: ["red wine vinegar"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Kosher salt",                                             ratioValue: 2,   defaultUnit: "parts", substitutions: ["fleur de sel"] },
-    { ingId: "ing_09", role: "Spice",     name: "Freshly cracked black pepper",                            ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Garnish",   name: "Fresh mint leaves, torn",                                 ratioValue: 2,   defaultUnit: "parts", substitutions: ["flat-leaf parsley"] },
+  "repoId": "master_mediterranean_grilled_lamb_chops_001",
+  "parentRepoId": null,
+  "slug": "grilled-lamb-chops",
+  "author": "ForkRecipe Kitchen",
+  "title": "Chopes d'agneau grillées",
+  "description": "Des côtelettes de longe d'agneau marinées au romarin marinées à feu vif au centre du rosé et au périmètre carbonisé, sculptées et servies dans une piscine de leurs propres jus de repos.",
+  "cuisine": "Méditerranée",
+  "culture": "Méditerranée",
+  "category": "proteins",
+  "tags": [
+    "agneau",
+    "grillé",
+    "méditerranéen",
+    "herbe",
+    "Sans gluten",
+    "Vite"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "2 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Marinate",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "marinated_lamb",
-      instructions: "Combine the olive oil, smashed garlic, rosemary, thyme, lemon zest, and lemon juice in a shallow dish or zip-lock bag. Add the lamb chops and turn to coat every surface. The olive oil carries the aromatic compounds of the rosemary and garlic into the meat; the lemon juice tenderizes the surface proteins and brightens the finished flavor. Marinate at room temperature for 1–2 hours or refrigerated for up to 8 hours. If refrigerated, bring to room temperature for 30 minutes before grilling — cold meat seizes on contact with heat and cooks unevenly.",
-      visualCue: {
-        primaryTarget: "Each chop is well-coated in olive oil and scattered with herb flecks and lemon zest. The oil has taken on a faint green tint from the rosemary. The meat looks glossy, not pooled in marinade.",
-        spectrum: [
-          { state: "Underdone", description: "Chops are barely coated — oil slides off, herbs have not adhered, and the meat looks dry in patches.", action: "Toss more thoroughly and press the herbs against the surface. A zip-lock bag ensures full contact with minimal marinade." },
-          { state: "Perfect",   description: "Every surface glistens with herbed oil; garlic and rosemary are visibly embedded. The oil smells fragrant from the aromatics releasing their oils.", action: "Leave to marinate the full time and remove from marinade before grilling, wiping off excess herbs to prevent burning." },
-          { state: "Overdone",  description: "Chops have marinated over 12 hours; surfaces look pale and slightly mushy where lemon acid has begun to denature the proteins.", action: "Cook them as-is — the flavor is still good but they may not develop as strong a crust. Pat dry aggressively before grilling." },
-        ],
-      },
-      feelCue: "Press the raw chop through the bag: the meat should feel dense and spring back firmly. After marinating, it will feel slightly softer at the very surface — a sign the marinade has penetrated.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Côtelettes de longe d'agneau (2–3 cm d'épaisseur, à la française)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "côtelettes d'agneau",
+        "côtelettes d'agneau"
+      ]
     },
     {
-      nodeId: "step_2", action: "Grill",
-      inputs: ["marinated_lamb"],
-      outputState: "grilled_lamb_chops",
-      instructions: "Prepare a very hot charcoal or gas grill — you want direct high heat that chars immediately on contact, not medium heat that dries. Wipe the excess marinade and herbs from the chops with paper towels (wet herbs and oil cause flare-ups and bitter char). Season generously with kosher salt on both sides immediately before grilling. Grill the chops 2–3 minutes per side for medium-rare — do not move them during each side. Use tongs to sear the fat cap along the edge for 1 minute. For 2 cm chops, total grill time is 5–7 minutes; for 3 cm, 7–9 minutes. Internal temperature should read 57–60°C / 135–140°F for medium-rare.",
-      visualCue: {
-        primaryTarget: "Bold crosshatch char marks on both faces, fat cap crisped and amber. The sides show a cooked band 60–70% through the thickness. Internal color is a vivid rose-pink throughout when cut.",
-        spectrum: [
-          { state: "Underdone", description: "Grill marks are pale, the exterior feels soft and tacky. The cut interior is red and cool at the center.", action: "Return to the grill for another 60–90 seconds per side. Lamb is safe to eat at rare but the texture improves at medium-rare." },
-          { state: "Perfect",   description: "Bold char marks with a faint orange glow between them. The interior reads 57–60°C. The fat cap is amber and partially rendered. The meat springs back firmly when pressed.", action: "Remove to a rack over a plate and tent loosely with foil. Rest for 5 minutes minimum." },
-          { state: "Overdone",  description: "Interior is uniformly grey-brown when cut, reads above 68°C. The meat has tightened and exuded juices visibly during grilling. Fat cap may be scorched.", action: "Slice immediately and serve with extra sauce — dry lamb benefits from a good deal of acid and fat alongside it." },
-        ],
-      },
-      feelCue: "Press the center of a chop with your fingertip: medium-rare lamb should push back with moderate resistance, like pressing the base of your thumb when your hand is relaxed. The surface should sizzle, not steam.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile d'avocat"
+      ]
     },
     {
-      nodeId: "step_3", action: "Rest",
-      inputs: ["grilled_lamb_chops"],
-      outputState: "rested_lamb_chops",
-      instructions: "Transfer the chops to a rack set over a plate and tent loosely with foil — not sealed tight, which traps steam and softens the crust. Rest for 5 minutes per 2 cm of thickness. During resting, the muscle fibers relax and the juices redistribute from the center outward; cutting too early sends them flooding onto the board. The internal temperature will rise 2–3°C during rest from carryover cooking.",
-      visualCue: {
-        primaryTarget: "The foil tent looks damp on the inside from escaping steam. The plate beneath collects 1–2 tablespoons of amber-pink resting juices. The meat looks slightly more uniform in color when cut after resting versus immediately after grilling.",
-        spectrum: [
-          { state: "Underdone", description: "Rest time under 3 minutes — the meat releases a rush of red juices when cut and the interior is still very hot at the center.", action: "Allow the full rest. Patience here is the difference between good lamb and great lamb." },
-          { state: "Perfect",   description: "Resting juices collected on the plate are clear amber-pink, not bloody red. Cutting now reveals a uniform rose-pink interior with no hot spot at the center.", action: "Collect the resting juices to spoon over the plated chops." },
-          { state: "Overdone",  description: "Rested too long — more than 15 minutes — and the chops have cooled significantly. The crust has softened.", action: "Flash the chops on the grill for 30 seconds per side to reheat the crust. Serve immediately." },
-        ],
-      },
-      feelCue: "Pick up a chop after resting: it should feel heavy and dense, not tight. Press it — it yields more than on the grill and the juices do not spring to the surface.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles d'ail, cassées et pelées",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Plate",
-      inputs: ["rested_lamb_chops", "ing_10"],
-      outputState: "finished_lamb_chops",
-      instructions: "Arrange the chops on warmed plates, leaning against each other or upright so the charred faces and interior color are visible. Spoon the collected resting juices over them — do not waste a drop. Scatter torn fresh mint leaves over. Serve with grilled flatbread, tzatziki, or a simple salad of tomato and herbs.",
-      visualCue: {
-        primaryTarget: "Bold char marks, glistening resting juices, vivid rose interior visible at the bone. Mint leaves bright green and fresh against the brown crust.",
-        spectrum: [
-          { state: "Underdone", description: "The plate is cold and the resting juices have congealed.", action: "Warm the plates in an oven at 80°C / 175°F for 5 minutes before plating. Always plate on warm surfaces." },
-          { state: "Perfect",   description: "Warm plate, glistening chops, bright garnish. The aroma of char, rosemary, and lamb fat fills the immediate vicinity.", action: "Serve at once." },
-          { state: "Overdone",  description: "Chops have been left plated too long — juices have run off and the crust is soft.", action: "Accept the loss and serve anyway. Next time: plate and serve within 2 minutes of resting." },
-        ],
-      },
-      feelCue: "The bone should feel warm in your fingers but not burn them. Lift a chop by the bone — it should feel substantial and weighty, not light and hollow.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Graines de romarin fraîches",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym frais",
+        "Origan frais"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Marjoram frais"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Citrus",
+      "name": "Zeste de citron",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "zeste d'orange"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin rouge"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fleur de sel"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Poivre noir fraichement craqué",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Feuilles fraîches de menthe, déchirées",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Persil à feuilles plates"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "marinated_lamb",
+      "instructions": "Mélanger l'huile d'olive, l'ail cassé, le romarin, le thym, le zeste de citron et le jus de citron dans un plat peu profond ou un sac à fermeture éclair. Ajouter les côtelettes d'agneau et tourner pour enrober chaque surface. L'huile d'olive transporte les composés aromatiques du romarin et de l'ail dans la viande; le jus de citron tendre les protéines de surface et illumine le goût fini. Faire mariner à température ambiante pendant 1 à 2 heures ou réfrigéré pendant 8 heures. Si elle est réfrigérée, porter à température ambiante pendant 30 minutes avant le grillage.",
+      "visualCue": {
+        "primaryTarget": "Chaque côte est bien recouverte d'huile d'olive et éparpillée de paillettes d'herbes et de zeste de citron. L'huile a pris une faible teinte verte du romarin. La viande a l'air brillante, pas mise en marinade.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les copeaux sont à peine enduits — l'huile glisse, les herbes n'ont pas adhéré, et la viande semble sèche dans les taches.",
+            "action": "Jeter plus soigneusement et presser les herbes contre la surface. Un sac zippé assure un contact complet avec la marinade minimale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque surface brille avec de l'huile d'herbe; l'ail et le romarin sont visiblement encastrés. L'huile sent l'odeur parfumée des aromatiques qui libèrent leurs huiles.",
+            "action": "Laisser mariner à temps plein et retirer de la marinade avant de griller, essuyant les herbes excédentaires pour éviter la combustion."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les chopes ont mariné plus de 12 heures; les surfaces ont l'air pâle et légèrement musclées où l'acide citron a commencé à dénaturé les protéines.",
+            "action": "Faites-les cuire comme si — la saveur est encore bonne, mais ils peuvent ne pas se développer comme une croûte forte. Pat sécher agressivement avant de griller."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la côte brute dans le sac : la viande doit se sentir dense et revenir fermement. Après avoir mariné, il se sentira légèrement plus doux à la surface même — un signe que la marinade a pénétré."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Grille",
+      "inputs": [
+        "marinated_lamb"
+      ],
+      "outputState": "grilled_lamb_chops",
+      "instructions": "Préparez un grill à charbon ou à gaz très chaud — vous voulez une chaleur directe élevée qui s'accumule immédiatement au contact, pas une chaleur moyenne qui sèche. Essuyer l'excès de marinade et les herbes des côtelettes avec des serviettes en papier (herbes humides et huile causent des éruptions et de l'omble amer). Assaisonner généreusement avec du sel casher des deux côtés immédiatement avant de griller. Faire griller les côtes de 2 à 3 minutes de chaque côté pour obtenir des rares moyens — ne pas les déplacer de chaque côté. Utilisez des pinces pour saisir le bouchon de graisse le long du bord pendant 1 minute. Pour les côtelettes de 2 cm, le temps total de grillage est de 5 à 7 minutes; pour 3 cm, 7 à 9 minutes. La température interne doit être de 57 à 60 °C / 135 à 140 °F pour les rares moyens.",
+      "visualCue": {
+        "primaryTarget": "Marques d'omble de crosshatch gras sur les deux visages, le bouchon gras croustillé et ambre. Les côtés montrent une bande cuite de 60 à 70 % à travers l'épaisseur. La couleur interne est un rose vif tout au long de la coupe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les marques du gril sont pâles, l'extérieur est doux et collant. L'intérieur coupé est rouge et frais au centre.",
+            "action": "Retourner à la grille pendant 60 à 90 secondes de chaque côté. L'agneau est sans danger à manger à de rares endroits, mais la texture s'améliore à moyenne-rare."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des marques de char gras avec une faible lueur orange entre eux. L'intérieur lit 57-60°C. Le bouchon est ambré et partiellement rendu. La viande ressort fermement lorsqu'elle est pressée.",
+            "action": "Retirez sur un support sur une plaque et tentez en toute liberté avec du papier. Reposez-vous pendant 5 minutes minimum."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'intérieur est uniformément gris-brun lorsqu'il est coupé, se lit au-dessus de 68°C. La viande a resserré et exsudé les jus visiblement pendant la cuisson. Le gras peut être brûlé.",
+            "action": "Couper immédiatement et servir avec de la sauce supplémentaire — l'agneau sec bénéficie d'une bonne quantité d'acide et de graisse à côté."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le centre d'une côte avec votre bout de doigt: l'agneau moyen-rare devrait repousser avec une résistance modérée, comme appuyer sur la base de votre pouce lorsque votre main est détendue. La surface doit étourdir, pas la vapeur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Repos",
+      "inputs": [
+        "grilled_lamb_chops"
+      ],
+      "outputState": "rested_lamb_chops",
+      "instructions": "Transférer les côtelettes sur un rack placé sur une plaque et la tente lâchement avec de la feuille — non étanche, qui piège la vapeur et adoucit la croûte. Reposez-vous 5 minutes par 2 cm d'épaisseur. Pendant le repos, les fibres musculaires se détendent et les jus se redistribuent du centre vers l'extérieur ; la coupe trop tôt les envoie inonder sur la planche. La température interne augmentera de 2 à 3 °C pendant le repos après la cuisson.",
+      "visualCue": {
+        "primaryTarget": "La tente en feuilles semble humide à l'intérieur d'échapper à la vapeur. La plaque ci-dessous recueille 1 à 2 cuillères à soupe de jus de repos rose-ambre. La viande semble légèrement plus uniforme lorsqu'elle est coupée après le repos contre immédiatement après le grillage.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Temps de repos sous 3 minutes — la viande libère une ruée de jus rouges quand coupé et l'intérieur est encore très chaud au centre.",
+            "action": "Laissez le reste entier. La patience est la différence entre le bon agneau et le grand agneau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les jus de repos recueillis sur l'assiette sont de couleur rose-ambre claire, pas rouge sanglant. La coupe révèle maintenant un intérieur uniforme rose-rose sans point chaud au centre.",
+            "action": "Recueillir les jus de repos à la cuillère sur les côtelettes plaquées."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le repos est trop long — plus de 15 minutes — et les côtelettes se sont refroidies de façon significative. La croûte s'est ramollie.",
+            "action": "Faites clignoter les côtelettes sur la grille pendant 30 secondes par côté pour réchauffer la croûte. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une côte après le repos : elle doit se sentir lourde et dense, pas serrée. Pressez - le — il donne plus que sur la grille et les jus ne ressortent pas à la surface."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plaque",
+      "inputs": [
+        "rested_lamb_chops",
+        "ing_10"
+      ],
+      "outputState": "finished_lamb_chops",
+      "instructions": "Disposer les côtelettes sur des plaques chaudes, s'appuyer l'une contre l'autre ou verticalement pour que les faces carbonisées et la couleur intérieure soient visibles. Couchez les jus de repos sur eux — ne gaspillez pas une goutte. Éparpiller les feuilles de menthe fraîche déchirées. Servir avec du pain plat grillé, du tzatziki ou une simple salade de tomates et d'herbes.",
+      "visualCue": {
+        "primaryTarget": "Marques d'omble gras, jus de repos brillants, intérieur rose vif visible à l'os. Feuilles de menthe vert vif et frais contre la croûte brune.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'assiette est froide et les jus de repos ont congelé.",
+            "action": "Chauffer les assiettes dans un four à 80°C / 175°F pendant 5 minutes avant de les déposer. Toujours déposer sur les surfaces chaudes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Plaque chaude, côtelettes scintillantes, garniture lumineuse. L'arôme d'omble, de romarin et de graisse d'agneau remplit les environs immédiats.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les croûtes ont été laissées trop longtemps plaquées, les jus sont épuisés et la croûte est molle.",
+            "action": "Acceptez la perte et servez de toute façon. La prochaine fois : déposer et servir dans les 2 minutes suivant le repos."
+          }
+        ]
+      },
+      "feelCue": "L'os doit se sentir chaud dans les doigts mais ne pas les brûler. Soulevez une côte par l'os — il doit se sentir substantiel et lourd, pas léger et creux."
+    }
+  ]
 };

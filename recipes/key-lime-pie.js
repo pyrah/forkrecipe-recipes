@@ -1,101 +1,266 @@
 export default {
-  repoId: "master_american_key_lime_pie_001",
-  parentRepoId: null,
-  slug: "key-lime-pie",
-  author: "ForkRecipe Kitchen",
-  title: "Florida Key Lime Pie",
-  description: "A trembling, pale-yellow custard made from the tiny, intensely perfumed key limes of the Florida Keys — bracingly tart and sweetened only by sweetened condensed milk, set in a buttery graham cracker crust that shatters at the first fork.",
-  cuisine: "American",
-  culture: "Floridian",
-  category: "desserts",
-  tags: ["pie", "citrus", "florida", "lime", "custard", "dessert", "tart"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "3 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 1, sour: 5, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Graham cracker crumbs (about 11 full crackers)",       ratioValue: 1.5,  defaultUnit: "cups",  substitutions: ["digestive biscuit crumbs", "vanilla wafer crumbs"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Granulated sugar",                                     ratioValue: 2,    defaultUnit: "tbsp",  substitutions: ["light brown sugar (adds molasses depth)"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fine sea salt",                                        ratioValue: 0.25, defaultUnit: "tsp",   substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter, melted",                              ratioValue: 5,    defaultUnit: "tbsp",  substitutions: ["coconut oil, melted"] },
-    { ingId: "ing_05", role: "Binder",    name: "Sweetened condensed milk (14 oz can)",                 ratioValue: 1,    defaultUnit: "can",   substitutions: [] },
-    { ingId: "ing_06", role: "Acid",      name: "Fresh key lime juice (about 20–25 key limes)",         ratioValue: 0.5,  defaultUnit: "cup",   substitutions: ["Persian lime juice + 1 tsp zest (less floral, more tart)"] },
-    { ingId: "ing_07", role: "Citrus",    name: "Key lime zest",                                        ratioValue: 1,    defaultUnit: "tbsp",  substitutions: ["Persian lime zest"] },
-    { ingId: "ing_08", role: "Binder",    name: "Egg yolks (large)",                                    ratioValue: 4,    defaultUnit: "yolks", substitutions: [] },
-    { ingId: "ing_09", role: "Dairy",     name: "Heavy cream, chilled, for whipped topping",            ratioValue: 1,    defaultUnit: "cup",   substitutions: ["full-fat coconut cream, chilled"] },
-    { ingId: "ing_10", role: "Sweetener", name: "Powdered sugar, for whipped cream",                    ratioValue: 2,    defaultUnit: "tbsp",  substitutions: ["granulated sugar"] },
+  "repoId": "master_american_key_lime_pie_001",
+  "parentRepoId": null,
+  "slug": "key-lime-pie",
+  "author": "ForkRecipe Kitchen",
+  "title": "Florida Key Lime Pie",
+  "description": "Une crème frémissante, jaune pâle, faite à partir de minuscules citrons clés intensément parfumés des Keys de la Floride — tarte frénétique et sucrée uniquement par du lait condensé sucré, serti dans une croûte de cracker graham beurreux qui éclate à la première fourchette.",
+  "cuisine": "Américain",
+  "culture": "Floridienne",
+  "category": "desserts",
+  "tags": [
+    "tarte",
+    "agrumes",
+    "Floride",
+    "Chaux",
+    "Coutard",
+    "dessert",
+    "tarte"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "3 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 5,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Bake",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "baked_crust",
-      instructions: "Preheat your oven to 350°F (175°C). In a medium bowl, combine the graham cracker crumbs, granulated sugar, and salt. Drizzle the melted butter over the crumbs and stir with a fork until every crumb is evenly moistened — the mixture should look like damp sand and hold its shape when squeezed in your fist, but crumble apart when released. Press the mixture firmly and evenly into a 9-inch pie pan: start at the center and work outward along the bottom, then press the sides up to a uniform height of about 1.5 inches. Use the bottom of a measuring cup to compact the base; use the heel of your hand on the sides. The crust should be uniformly dense, with no thin spots. Bake for 8–10 minutes until the crust smells of toasted graham and the edges show the faintest hint of golden-brown darkening. Remove and cool on a wire rack for at least 15 minutes before filling — a hot crust will pre-cook the edges of the filling unevenly.",
-      visualCue: {
-        primaryTarget: "Golden-tan crust, uniformly set and firm. The edges show a very slight darkening. The crust holds its shape cleanly when you press the side of the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Crust looks pale and sandy. Crumbles when you press the rim. Smells of raw butter.", action: "Return to the 350°F oven for another 3 minutes. A properly baked crust sets via the butter binding the crumbs." },
-          { state: "Perfect",   description: "Uniformly golden, aromatic of caramelized honey and toasted wheat. Firm to the touch, does not crumble at the edges. Crust is set and rigid.", action: "Cool completely before filling — at minimum 15 minutes at room temperature." },
-          { state: "Overdone",  description: "Edges are dark brown or black. Bitter smell. Crust has pulled away from the sides of the pan.", action: "Trim the darkest edges with kitchen shears before filling. The filling flavor is strong enough to mask mild overbaking." },
-        ],
-      },
-      feelCue: "Press your fingertip into the bottom of the cooled crust — it should feel solid and dry, like compressed hardwood, not spongy or crumbly. Run your finger along the side wall: it should be smooth and even, not thick in some places and paper-thin in others.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Graham craquelins (environ 11 craquelins pleins)",
+      "ratioValue": 1.5,
+      "defaultUnit": "cups",
+      "substitutions": [
+        "miettes de biscuits digestifs",
+        "miettes de vanille"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "lime_custard",
-      instructions: "In a medium bowl, combine the egg yolks and lime zest. Whisk vigorously for 2 minutes until the yolks lighten slightly in color and the zest releases its oils into the yolk, turning the mixture a vivid yellow-green. Add the sweetened condensed milk and whisk to combine — it will be thick and sticky. Finally, add the key lime juice and whisk until the filling is completely smooth and uniform. Watch closely: the citric acid in the key lime juice will begin to chemically set (denature) the condensed milk proteins immediately on contact, thickening the mixture noticeably. This is correct — it is the mechanism that allows key lime pie to set without gelatin. Do not add lemon juice, do not substitute bottled juice — the volatile aromatics of fresh key lime are the soul of this dessert. The filling should taste aggressively tart with a floral, tropical fragrance. It will mellow in the oven.",
-      visualCue: {
-        primaryTarget: "A pale, chalky yellow-green custard. Thick enough to fall from the whisk in a slow, continuous ribbon. Specks of green zest visible throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Filling is still loose and watery — the condensed milk and lime juice have not fully integrated. Yolks visible as separate yellow streaks.", action: "Whisk more vigorously for another 90 seconds. The acid needs to contact all the condensed milk proteins to begin thickening." },
-          { state: "Perfect",   description: "Pale yellow-green, smooth, and falls from the whisk in a thick ribbon that holds a trail on the surface for 2 seconds. Intensely fragrant of key lime.", action: "Pour immediately into the cooled crust." },
-          { state: "Overdone",  description: "Filling has become very thick and gelatinous from over-whisking with too much air, or has been sitting too long and the acid has over-set it.", action: "Pour immediately — over-set filling still bakes fine, though the texture may be very dense." },
-        ],
-      },
-      feelCue: "Dip your fingertip into the filling — the tartness should be bracingly sharp, almost eye-watering. This is correct and intentional. The floral, musky-tart scent of key lime should be unmistakably different from a Persian lime: more complex, slightly bitter at the edges, with a tropical sweetness behind.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "sucre brun clair (ajouter la profondeur de mélasse)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["lime_custard", "baked_crust"],
-      outputState: "baked_pie",
-      instructions: "Pour the lime custard filling into the cooled graham cracker crust. The filling should come nearly to the rim of the crust — no more than 1/4-inch below. Gently tilt the pan to level the filling without disturbing the crust. Bake at 325°F (163°C) — lower than the crust — for 15–17 minutes. The filling is done when the outer inch is completely set and the center 3–4 inches still wobbles gently when you jiggle the pan, like a barely-set Jell-O. This is important: a fully still center means the eggs have overcooked. The filling continues to set via carryover heat as it cools. Do not overbake — the texture of a perfect key lime pie is barely-trembling, almost panna-cotta-like, not firm and cheesecake-like.",
-      visualCue: {
-        primaryTarget: "The pie surface is uniformly matte and pale yellow-green. The outer ring is completely still; the center wobbles like water when the pan is nudged.",
-        spectrum: [
-          { state: "Underdone", description: "The entire filling surface wobbles, including the very edges. The filling looks liquid and shiny.", action: "Continue baking in 2-minute increments until the outer inch is set. The center wobble is correct — only the edges must be still." },
-          { state: "Perfect",   description: "Outer 1-inch ring is completely still and matte. Center 3-inch circle wobbles gently but does not slosh. Surface is pale green-yellow and just set.", action: "Remove from oven. Cool to room temperature (1 hour), then refrigerate at least 2 hours before serving." },
-          { state: "Overdone",  description: "No wobble whatsoever. Surface may show small cracks or a slightly greenish-grey tinge. Smells eggy.", action: "The pie will be edible but dense and slightly rubbery in texture rather than trembling. Refrigerate and serve with extra whipped cream to compensate." },
-        ],
-      },
-      feelCue: "The surface of a properly baked pie should feel like a barely-set panna cotta under a very light fingertip touch — there is resistance but it gives immediately, and a light fingerprint mark will remain. If it feels completely firm and bounces back, it is overcooked.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Whip",
-      inputs: ["baked_pie", "ing_09", "ing_10"],
-      outputState: "finished_key_lime_pie",
-      instructions: "Refrigerate the cooled pie for at least 2 hours, or up to overnight. The filling will firm considerably in the cold — this is where it achieves its final, trembling set. Just before serving, whip the chilled heavy cream with the powdered sugar in a cold bowl using a hand mixer or stand mixer. Begin at low speed and increase to medium-high. Whip to medium-stiff peaks — the cream should hold a soft curl when the beaters are lifted, but the tip of the peak should fall gently to one side rather than standing rigid. Over-whipped cream looks grainy and borders on butter. Spoon or pipe the whipped cream over the pie: you can cover the entire surface for a traditional presentation, or pipe decorative rosettes around the perimeter. Finish with a few thin rounds of key lime or a sprinkle of zest. Slice with a knife dipped in hot water and wiped dry between cuts for clean edges.",
-      visualCue: {
-        primaryTarget: "Glossy white whipped cream with soft, billowing peaks sitting atop the pale yellow-green filling. A key lime slice or curl of zest as a final accent.",
-        spectrum: [
-          { state: "Underdone", description: "Cream is still loose and pourable, flows off the pie rather than sitting. Cream forms no peak.", action: "Return to mixer and continue whipping at medium-high. Chilled cream whips faster — ensure bowl and cream are cold." },
-          { state: "Perfect",   description: "Glossy, soft medium-stiff peaks. Cream holds a shape but the tip bends softly. Bright white, no graininess.", action: "Spoon or pipe onto the chilled pie and serve immediately." },
-          { state: "Overdone",  description: "Cream looks dull, chunky, and slightly yellow. Watery liquid separating at the bottom of the bowl.", action: "Fold in a tablespoon of fresh cold cream to bring it back. If too far gone, whip into butter and start a fresh batch — it only takes 3 minutes." },
-        ],
-      },
-      feelCue: "The finished pie, sliced and plated, should feel like a miniature study in contrasts: the crunch and gentle sweetness of the crust crackling under the fork, the cool, tart-sweet trembling of the filling yielding immediately, and the airy cloud of cream dissolving before the creaminess of the lime even registers. The scent is unmistakably floral and citrus-electric.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé fondu",
+      "ratioValue": 5,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "huile de coco fondue"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Lait condensé sucré (14 oz de canette)",
+      "ratioValue": 1,
+      "defaultUnit": "can",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Jus de citron vert frais (environ 20 à 25 citron vert)",
+      "ratioValue": 0.5,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "Jus de lime perse + 1 c. à thé zeste (moins floral, plus de tarte)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Citrus",
+      "name": "Zeste de chaux clé",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Zeste de chaux perse"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Binder",
+      "name": "Jaunes d'œufs (grandes)",
+      "ratioValue": 4,
+      "defaultUnit": "yolks",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Dairy",
+      "name": "Crème lourde, réfrigérée, pour garniture fouettée",
+      "ratioValue": 1,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "crème de coco pleine graisse, réfrigérée"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Sweetener",
+      "name": "Sucre en poudre, pour crème fouettée",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "sucre granulé"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Cuire",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "baked_crust",
+      "instructions": "Préchauffer votre four à 350°F (175°C). Dans un bol moyen, mélanger les miettes de graham, le sucre granulé et le sel. Arroser le beurre fondu sur les miettes et remuer à l'aide d'une fourchette jusqu'à ce que chaque miettes soit uniformément humidifiées — le mélange devrait ressembler à du sable humide et tenir sa forme lorsqu'il est pressé dans le poing, mais s'effondrer lorsqu'il est relâché. Appuyez fermement et uniformément sur le mélange dans une poêle à tarte de 9 pouces : commencez au centre et travaillez vers l'extérieur le long du fond, puis appuyez sur les côtés jusqu'à une hauteur uniforme d'environ 1,5 pouces. Utilisez le fond d'une tasse de mesure pour compacter la base; utilisez le talon de votre main sur les côtés. La croûte doit être uniformément dense, sans taches fines. Cuire au four de 8 à 10 minutes jusqu'à ce que la croûte sente le graham grillé et que les bords montrent un léger soupçon de brun doré. Retirer et refroidir sur un support de fil pendant au moins 15 minutes avant le remplissage — une croûte chaude précuira les bords du remplissage de façon inégale.",
+      "visualCue": {
+        "primaryTarget": "Croûte dorée, uniforme et ferme. Les bords montrent un très léger assombrissement. La croûte tient sa forme proprement lorsque vous appuyez sur le côté de la casserole.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte semble pâle et sablonneuse. Crumble quand vous appuyez sur la jante. Des odeurs de beurre cru.",
+            "action": "Retourner au four à 350°F pendant encore 3 minutes. Une croûte bien cuite sert à fixer les miettes par le beurre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement doré, aromatique de miel caramélisé et de blé grillé. Ferme au toucher, ne s'écroule pas aux bords. La croûte est fixée et rigide.",
+            "action": "Laisser refroidir complètement avant le remplissage — au minimum 15 minutes à température ambiante."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont brun foncé ou noir. Une odeur amère. La croûte s'est retirée des côtés de la casserole.",
+            "action": "Trim les bords les plus sombres avec les cisailles de cuisine avant le remplissage. La saveur de remplissage est assez forte pour masquer le surbassement doux."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur votre bout de doigt dans le fond de la croûte refroidie — il devrait sentir solide et sec, comme du bois dur comprimé, pas spongieux ou friable. Courez votre doigt le long de la paroi latérale : il devrait être lisse et même, pas épais dans certains endroits et papier-mince dans d'autres."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "lime_custard",
+      "instructions": "Dans un bol moyen, mélanger les jaunes d'œufs et le zeste de lime. fouetter vigoureusement pendant 2 minutes jusqu'à ce que les jaunes s'éclaircissent légèrement de couleur et que le zeste libère ses huiles dans le jaune, en tournant le mélange un jaune-vert vif. Ajouter le lait condensé sucré et fouetter pour le combiner — il sera épais et collant. Enfin, ajouter le jus de lime clé et fouetter jusqu'à ce que le remplissage soit complètement lisse et uniforme. Attention: l'acide citrique dans le jus de chaux clé commencera à fixer chimiquement (denature) les protéines du lait condensé immédiatement au contact, épaississant sensiblement le mélange. C'est exact — c'est le mécanisme qui permet à la tarte à la chaux clé de se fixer sans gélatine. Ne pas ajouter de jus de citron, ne pas substituer de jus en bouteille — les aromatiques volatils de la chaux à clé fraîche sont l'âme de ce dessert. La garniture doit avoir un goût de tarte agressive avec un parfum floral et tropical. Ça va refroidir dans le four.",
+      "visualCue": {
+        "primaryTarget": "Une crème jaune-vert craie pâle. Assez épais pour tomber du fouet dans un ruban lent et continu. Specques de zeste vert visibles dans l'ensemble.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le remplissage est encore lâche et aqueux — le lait condensé et le jus de lime ne sont pas entièrement intégrés. Yolques visibles sous forme de stries jaunes séparées.",
+            "action": "Frottez plus vigoureusement pendant 90 secondes. L'acide doit entrer en contact avec toutes les protéines du lait condensé pour commencer à épaissir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Jaune pâle-vert, lisse, et tombe du fouet dans un ruban épais qui tient un sentier sur la surface pendant 2 secondes. Intensément parfumé de chaux clé.",
+            "action": "Verser immédiatement dans la croûte refroidie."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage est devenu très épais et gélatineux à cause de l'excès d'air, ou a été trop longtemps assis et l'acide l'a mis en trop.",
+            "action": "Verser immédiatement — le remplissage sur-ensemble reste fin, bien que la texture puisse être très dense."
+          }
+        ]
+      },
+      "feelCue": "Plongez votre bout de doigt dans le remplissage — la tarte doit être extrêmement tranchante, presque abreuvante. C'est correct et intentionnel. L'odeur florale musky-tart de la chaux clé doit être nettement différente d'une chaux perse : plus complexe, légèrement amère aux bords, avec une douceur tropicale derrière."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "lime_custard",
+        "baked_crust"
+      ],
+      "outputState": "baked_pie",
+      "instructions": "Verser la crème à la chaux dans la croûte refroidie de graham. Le remplissage doit se situer presque au bord de la croûte — pas plus de 1/4 pouce en dessous. Basculez doucement la poêle pour mettre le remplissage à niveau sans perturber la croûte. Cuire à 325°F (163°C) — en dessous de la croûte — pendant 15–17 minutes. Le remplissage est fait lorsque le pouce extérieur est complètement réglé et que le centre de 3 à 4 pouces oscille encore doucement lorsque vous sautez la poêle, comme un Jell-O à peine fixé. C'est important : un centre complet signifie que les œufs ont trop cuit. Le remplissage continue d'être réglé par la chaleur de report lorsqu'il refroidit. Ne pas surprendre — la texture d'une tarte à la chaux parfaite est à peine tringlante, presque panna-cotta-like, pas ferme et cheesecake-like.",
+      "visualCue": {
+        "primaryTarget": "La surface de la tarte est uniformément mate et jaune-vert pâle. L'anneau extérieur est complètement immobile; le centre oscille comme de l'eau quand la poêle est bouchée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toute la surface de remplissage oscille, y compris les bords. Le remplissage semble liquide et brillant.",
+            "action": "Continuer la cuisson par paliers de 2 minutes jusqu'à ce que le pouce extérieur soit réglé. Le wobble central est correct — seuls les bords doivent être immobiles."
+          },
+          {
+            "state": "Perfect",
+            "description": "Anneau extérieur de 1 pouce est complètement immobile et mat. Le cercle central de 3 pouces oscille doucement mais ne s'enlise pas. La surface est jaune-vert pâle et sertie.",
+            "action": "Retirer du four. Laisser refroidir à température ambiante (1 heure), puis réfrigérer au moins 2 heures avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Aucun doute. La surface peut présenter de petites fissures ou une teinte légèrement gris verdâtre. Ça sent l'oeuf.",
+            "action": "La tarte sera comestible mais dense et légèrement caoutchouteuse plutôt que tremblante. Réfrigérer et servir avec de la crème fouettée supplémentaire pour compenser."
+          }
+        ]
+      },
+      "feelCue": "La surface d'une tarte bien cuite doit se sentir comme une panna cotta à peine posée sous un toucher très léger de bout de doigt — il y a une résistance mais elle donne immédiatement, et une légère empreinte digitale restera. Si elle se sent complètement ferme et rebondit, elle est trop cuite."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Whip",
+      "inputs": [
+        "baked_pie",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_key_lime_pie",
+      "instructions": "Réfrigérer la tarte refroidie pendant au moins 2 heures ou jusqu'à la nuit. Le remplissage sera considérablement ferme dans le froid — c'est là qu'il atteint son dernier ensemble tremblant. Juste avant de servir, fouetter la crème lourde réfrigérée avec le sucre en poudre dans un bol froid à l'aide d'un mélangeur à main ou d'un mélangeur de support. Commencez à basse vitesse et augmentez à moyen-élevé. Des pics à pointes moyennes — la crème devrait tenir une boucle douce lorsque les batteurs sont levés, mais l'extrémité du pic devrait tomber doucement d'un côté plutôt que de rester rigide. La crème trop fouettée semble granuleuse et borde le beurre. Spoon ou pipe la crème fouettée sur la tarte: vous pouvez couvrir toute la surface pour une présentation traditionnelle, ou pipe rosettes décoratives autour du périmètre. Terminer avec quelques fines rondelles de chaux clé ou une saupoudrée de zeste. Couper avec un couteau trempé dans de l'eau chaude et essuyer entre les coupes pour des bords propres.",
+      "visualCue": {
+        "primaryTarget": "Crème fouettée blanche glissée avec des pics mous et saillants assis au sommet de la garniture jaune-vert pâle. Une tranche de citron vert ou une boucle de zeste comme accent final.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème est encore lâche et versable, coule de la tarte plutôt que de s'asseoir. La crème ne forme pas de pic.",
+            "action": "Retourner au mélangeur et continuer à fouetter à moyenne-élevée. fouets à la crème refroidis plus rapidement — assurez-vous que le bol et la crème sont froids."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des pics glacés, doux et moyennement raides. La crème tient une forme mais le bout se plie doucement. Blanc vif, pas de grain.",
+            "action": "Déposer ou piper sur la tarte fraîche et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème a l'air terne, épaisse et légèrement jaune. Liquide aqueux se séparant au fond du bol.",
+            "action": "Plier dans une cuillère à soupe de crème fraîche froide pour la rapporter. Si trop loin, fouetter dans le beurre et commencer un lot frais — cela ne prend que 3 minutes."
+          }
+        ]
+      },
+      "feelCue": "La tarte finie, tranchée et plaquée, doit se sentir comme une étude miniature en contrastes : la douceur croquante et douce de la croûte craquelante sous la fourchette, le fraicheur frais et sucrée du remplissage donnant immédiatement, et le nuage aéré de crème se dissolvant avant même que la crémosité de la chaux ne s'enregistre. Le parfum est très floral et agrumes-électrique."
+    }
+  ]
 };

@@ -1,83 +1,210 @@
 export default {
-  repoId: "master_caribbean_habanero_mango_sauce_001",
-  parentRepoId: null,
-  slug: "habanero-mango-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Habanero Mango Sauce",
-  description: "A Caribbean hot sauce that is also a fruit sauce — ripe mango's tropical sweetness and the high, floral heat of habanero exist in perfect, improbable tension. Ginger and lime tie them together into something vivid and golden that belongs on grilled fish, jerk chicken, and everything in between.",
-  cuisine: "Caribbean",
-  culture: "Jamaican",
-  category: "condiments",
-  tags: ["hot-sauce", "caribbean", "mango", "habanero", "tropical", "fruity", "vegan"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "25 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 2, sour: 3, bitter: 0, umami: 1, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Ripe mango flesh (Ataulfo or Alphonso preferred)", ratioValue: 300, defaultUnit: "g", substitutions: ["frozen mango, thawed"] },
-    { ingId: "ing_02", role: "Heat",      name: "Fresh habanero peppers (stemmed, seeded for less heat)", ratioValue: 30, defaultUnit: "g", substitutions: ["scotch bonnets for authentic Jamaican heat", "2 jalapeños for milder version"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Fresh ginger, peeled and roughly chopped",             ratioValue: 15, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves",                                        ratioValue: 10, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Acid",      name: "Fresh lime juice",                                     ratioValue: 40, defaultUnit: "g", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_06", role: "Acid",      name: "Apple cider vinegar",                                  ratioValue: 30, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Sweetener", name: "Honey or light brown sugar",                           ratioValue: 15, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine salt",                                            ratioValue: 5,  defaultUnit: "g", substitutions: [] },
+  "repoId": "master_caribbean_habanero_mango_sauce_001",
+  "parentRepoId": null,
+  "slug": "habanero-mango-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce de mangue Habanero",
+  "description": "Une sauce chaude caribéenne qui est aussi une sauce fruitière — la douceur tropicale de la mangue mûre et la chaleur florale élevée du habanero existent dans une tension parfaite et improbable. Le gingembre et la chaux les relient à quelque chose de vif et d'or qui appartient au poisson grillé, au poulet et à tout entre les deux.",
+  "cuisine": "Caraïbes",
+  "culture": "Jamaïquen",
+  "category": "condiments",
+  "tags": [
+    "Sucre chaude",
+    "Caribbean",
+    "Mango",
+    "habanero",
+    "tropicale",
+    "fruité",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "25 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend raw",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "raw_blended_sauce",
-      instructions: "Wear gloves when handling habanero peppers — the capsaicin is extremely potent and will burn eyes and skin for hours. Stem and seed the habaneros (seeding removes roughly 30% of the heat; leave seeds in if maximum heat is desired). Combine all ingredients in a blender and blend on high for 90 seconds until completely smooth. The color should be a vivid, almost neon golden-orange. Taste before cooking — a raw sauce has a different character, useful to establish the flavor baseline.",
-      visualCue: {
-        primaryTarget: "A vivid, golden-orange, completely smooth puree. Color is almost unnaturally bright. Smells simultaneously tropical and dangerously hot.",
-        spectrum: [
-          { state: "Underdone", description: "Still some mango fiber or habanero skin shreds visible. Texture is uneven and flavor delivery will be inconsistent.", action: "Blend longer on high speed. Mango fiber requires sustained blending to fully break down." },
-          { state: "Perfect",   description: "Completely smooth, flowing, vivid orange puree. The blender runs clear and the sauce pours like a thin smoothie.", action: "Taste (carefully — the raw habanero bite is intense). Note the balance before cooking, then simmer to deepen the flavor." },
-          { state: "Overdone",  description: "Over-blended and frothy, with the motor warming the sauce. The habanero aroma has intensified to overwhelming.", action: "Let settle before cooking. The froth will subside and the sauce quality is not harmed." },
-        ],
-      },
-      feelCue: "Do not touch your face. Use a small spoon to taste — the raw habanero-mango blend delivers simultaneous tropical sweetness and a high, almost perfumed heat. If your eyes water within 3 seconds of tasting, the habaneros have done their job.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Viande de mangue (Ataulfo ou Alphonso préféré)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "mangue congelée, dégelée"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["raw_blended_sauce"],
-      outputState: "cooked_sauce",
-      instructions: "Pour the blended sauce into a small saucepan. Bring to a simmer over medium heat, stirring often. Simmer uncovered for 8 to 12 minutes, stirring constantly in the final few minutes as the sauce thickens. Cooking mellows the raw habanero bite, caramelizes the mango sugars slightly, and concentrates the flavors. The sauce is ready when it thickens to the consistency of a pourable fruit sauce and the color deepens from bright orange to a deeper, richer gold.",
-      visualCue: {
-        primaryTarget: "A glossy, thickened golden-amber sauce that coats a spoon and runs off in slow, thick drops. Slightly darker in color than the raw blend.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still very thin and watery, the raw edge of the habanero still present and sharp, mango flavor tastes flat and uncaramelized.", action: "Continue simmering and stirring. The thickening happens after 8 minutes and accelerates — watch it." },
-          { state: "Perfect",   description: "Thickened to a pourable fruit sauce consistency. Deep golden. Smells of tropical fruit, ginger, and a ghost of habanero floral heat. Tastes complex, balanced, multilayered.", action: "Remove from heat and cool before bottling or serving." },
-          { state: "Overdone",  description: "Sauce has reduced to a thick paste, sticking to the spoon and pulling up from the bottom. The mango sugars have caramelized too far and it tastes more like jam than hot sauce.", action: "Stir in lime juice and water to restore pourable consistency." },
-        ],
-      },
-      feelCue: "Simmer the sauce with the lid off and stand back — the capsaicin steam from habaneros in a hot pan is enough to make eyes water and throat tighten. When the aggressive capsaicin smell softens to something more fruity and rounded, the sauce is cooked through.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Poivrons habanero frais (épilés, ensemencés pour moins de chaleur)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "scotch capots pour la chaleur authentique jamaïcaine",
+        "2 jalapeños pour version plus légère"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Bottle",
-      inputs: ["cooked_sauce"],
-      outputState: "finished_habanero_mango_sauce",
-      instructions: "Cool the sauce to room temperature. Taste once more — the finished sauce should be sweeter and rounder than when raw, with the habanero's floral heat still prominent but no longer aggressive. Adjust salt and lime to taste. Pour into sterilized bottles or jars. Refrigerate for up to 1 month. For a smoother, restaurant-style texture, pass through a fine-mesh sieve before bottling. For a more rustic, full-bodied sauce, leave unsieved.",
-      visualCue: {
-        primaryTarget: "A glossy, deep golden sauce in a jar, moving slowly when tilted, coating the glass in a thin, translucent amber film.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still warm and thinner than it will be cold. It will appear too loose.", action: "Chill first before judging consistency — habanero mango sauce thickens noticeably on refrigeration." },
-          { state: "Perfect",   description: "Cold, deep gold, pours in a slow, controlled stream from a bottle. Balanced: tropical, spicy, tangy. Clings to food rather than running off.", action: "Use within 1 month. Shake before each use." },
-          { state: "Overdone",  description: "Stored too long — sauce has separated, mold has appeared at the top, or the color has darkened to brown.", action: "Discard. This sauce is acidic but homemade sauces should be treated as perishable. Start a fresh batch." },
-        ],
-      },
-      feelCue: "A perfect habanero mango sauce should deliver three distinct phases when tasted: first the cool tropical sweetness of mango, then the sharp citrus of lime, then the floral, fruity heat of habanero building steadily over 5 seconds. If all three arrive simultaneously in a flat wall of sweetness-and-pain, it needs more lime and another few minutes of simmering.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Gingembre frais, pelé et haché grossièrement",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Miel ou sucre brun léger",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélanger brut",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "raw_blended_sauce",
+      "instructions": "Portez des gants lors de la manipulation des poivrons habanero — la capsaïcine est extrêmement puissante et brûlera les yeux et la peau pendant des heures. Stem et semer les habaneros (semer enlève environ 30% de la chaleur; laisser les graines dans si la chaleur maximale est souhaitée). Mélanger tous les ingrédients dans un mélangeur et mélanger à haute pendant 90 secondes jusqu'à ce qu'ils soient complètement lisses. La couleur devrait être un orange doré vif, presque néon. Goûtez avant la cuisson — une sauce crue a un caractère différent, utile pour établir la base de saveur.",
+      "visualCue": {
+        "primaryTarget": "Une purée vive, dorée, complètement lisse. La couleur est presque anormalement brillante. Il sent simultanément tropical et dangereusement chaud.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Encore une fibre de mangue ou une peau habanero déchiquetée visible. La texture est inégale et la livraison de saveur sera incohérente.",
+            "action": "Mélanger plus longtemps à haute vitesse. La fibre de mangue nécessite un mélange soutenu pour se décomposer complètement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement lisse, fluide, purée d'orange vif. Le mélangeur est transparent et la sauce verse comme un smoothie fin.",
+            "action": "Goût (attention – la morsure brute de habanero est intense). Notez l'équilibre avant la cuisson, puis laissez mijoter pour approfondir la saveur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surcollé et mousseux, avec le moteur réchauffant la sauce. L'arôme de habanero s'est intensifié à écrasant.",
+            "action": "Laisser reposer avant de cuisiner. La mousse s'effondrera et la qualité de la sauce ne sera pas endommagée."
+          }
+        ]
+      },
+      "feelCue": "Ne touchez pas votre visage. Utilisez une petite cuillère pour goûter — le mélange habanero-mango brut offre une douceur tropicale simultanée et une chaleur élevée, presque parfumée. Si vos yeux arrosent dans les 3 secondes de la dégustation, les habaneros ont fait leur travail."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "raw_blended_sauce"
+      ],
+      "outputState": "cooked_sauce",
+      "instructions": "Verser la sauce mélangée dans une petite casserole. Faire mijoter à feu moyen, en remuant souvent. Laisser mijoter à découvert pendant 8 à 12 minutes, en remuant constamment dans les dernières minutes lorsque la sauce s'épaissit. La cuisson adoucit la morsure brute de habanero, caramélise légèrement les sucres de mangue et concentre les saveurs. La sauce est prête quand elle s'épaissit à la consistance d'une sauce aux fruits versables et la couleur s'approfondit de l'orange vif à un or plus profond et plus riche.",
+      "visualCue": {
+        "primaryTarget": "Une sauce dorée-ambre brillante et épaissie qui enveloppe une cuillère et s'écoule dans des gouttes épaisses et lentes. Un peu plus foncé que le mélange brut.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore très fine et aqueuse, le bord brut du habanero encore présent et tranchant, saveur de mangue goûte plat et non caramélisé.",
+            "action": "Continuer à mijoter et à remuer. L'épaississement se produit après 8 minutes et accélère — regardez - le."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaissé à une consistance de sauce aux fruits. De l'or profond. Des odeurs de fruits tropicaux, de gingembre et un fantôme de chaleur florale habanero. Goûte complexe, équilibré, multicouche.",
+            "action": "Retirer du feu et refroidir avant d'embouteiller ou de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite à une pâte épaisse, collée à la cuillère et tirant du bas. Les sucres de mangue ont caramélisé trop loin et il a un goût plus comme la confiture que la sauce chaude.",
+            "action": "Incorporer le jus de lime et l'eau pour rétablir la consistance versable."
+          }
+        ]
+      },
+      "feelCue": "Laisser mijoter la sauce avec le couvercle et se tenir en arrière — la vapeur de capsaïcine des habaneros dans une poêle chaude suffit à resserrer l'eau et la gorge des yeux. Lorsque l'odeur agressive de la capsaïcine s'adoucit à quelque chose de plus fruité et arrondi, la sauce est cuite."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Bouteille",
+      "inputs": [
+        "cooked_sauce"
+      ],
+      "outputState": "finished_habanero_mango_sauce",
+      "instructions": "Laisser refroidir la sauce à température ambiante. Goûtez encore une fois — la sauce finie devrait être plus douce et plus ronde qu'à l'état cru, avec la chaleur florale du habanero toujours en évidence mais plus agressive. Ajustez le sel et la chaux au goût. Verser dans des bouteilles ou des pots stérilisés. Réfrigérer jusqu'à 1 mois. Pour une texture plus lisse et de style restaurant, passez à travers un tamis à mailles fines avant l'embouteillage. Pour une sauce plus rustique, corsé, laisser non tamisée.",
+      "visualCue": {
+        "primaryTarget": "Une sauce dorée foncée et brillante dans un pot, se déplaçant lentement lorsqu'elle est inclinée, enrobant le verre dans un mince film ambre translucide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore plus chaude et plus mince qu'elle ne sera froide. Il apparaîtra trop lâche.",
+            "action": "Refroidir d'abord avant de juger de la consistance — la sauce de mangue habanero épaissit sensiblement sur la réfrigération."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'or froid et profond se déverse dans un ruisseau lent et contrôlé d'une bouteille. Équilibré : tropical, épicé, acidulé. Clings à la nourriture plutôt que de s'enfuir.",
+            "action": "Utiliser dans un délai de 1 mois. Agiter avant chaque utilisation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Conservé trop longtemps — la sauce s'est séparée, la moisissure est apparue en haut, ou la couleur s'est foncée à brun.",
+            "action": "Jetez. Cette sauce est acide mais les sauces maison doivent être traitées comme périssables. Commencez un nouveau lot."
+          }
+        ]
+      },
+      "feelCue": "Une parfaite sauce à la mangue habanero devrait offrir trois phases distinctes au goût : d'abord la douceur tropicale fraîche de la mangue, puis les agrumes vifs de la chaux, puis la chaleur florale et fruitée de la construction habanero régulièrement sur 5 secondes. Si les trois arrivent simultanément dans un mur plat de douceur et de douleur, il faut plus de chaux et encore quelques minutes de mijotage."
+    }
+  ]
 };

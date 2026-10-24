@@ -1,104 +1,239 @@
 export default {
-  repoId: "master_american_banana_bread_001",
-  parentRepoId: null,
-  slug: "banana-bread",
-  author: "ForkRecipe Kitchen",
-
-  title: "Banana Bread",
-  description: "Overripe bananas — almost black, intensely sweet and tropical — folded into a simple batter and baked into a dense, moist loaf with a crackling sugar crust that smells like a bakery and tastes like nostalgia.",
-  cuisine: "American",
-  culture: "American",
-  category: "breads",
-
-  tags: ["american", "banana", "bread", "baking", "comfort"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "1 hr 15 min",
-  ratioSystem: "bakers_percentage",
-
-  stars: 2109,
-  forks: 234,
-  contributors: 28,
-  license: "CC-BY-SA",
-  createdAt: "2024-10-08",
-  updatedAt: "2025-10-30",
-
-  flavorRadar: { sweet: 4, salty: 1, sour: 0, bitter: 1, umami: 0, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "All-purpose flour",                                  ratioValue: 100, defaultUnit: "%", substitutions: ["whole wheat flour (50% swap for nuttier flavor)", "oat flour blend"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Overripe bananas, mashed (3–4 large, very black)",   ratioValue: 130, defaultUnit: "%", substitutions: ["plantains (very ripe)", "frozen-thawed bananas"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Brown sugar, packed",                               ratioValue: 65,  defaultUnit: "%", substitutions: ["granulated sugar", "coconut sugar"] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter, melted and cooled",                ratioValue: 40,  defaultUnit: "%", substitutions: ["vegetable oil (moister result)", "coconut oil"] },
-    { ingId: "ing_05", role: "Binder",    name: "Large eggs",                                        ratioValue: 25,  defaultUnit: "%", substitutions: ["flax egg (1 tbsp flax + 3 tbsp water)"] },
-    { ingId: "ing_06", role: "Leavener",  name: "Baking soda",                                      ratioValue: 1.5, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine salt, vanilla extract, ground cinnamon",       ratioValue: 1,   defaultUnit: "%", substitutions: ["cardamom", "nutmeg"] },
+  "repoId": "master_american_banana_bread_001",
+  "parentRepoId": null,
+  "slug": "banana-bread",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pain de banane",
+  "description": "Des bananes trop mûres, presque noires, intensément sucrées et tropicales, pliées dans une simple pâte et cuites dans un pain dense et humide avec une croûte de sucre crépitante qui sent la boulangerie et goûte la nostalgie.",
+  "cuisine": "Américain",
+  "culture": "Américain",
+  "category": "breads",
+  "tags": [
+    "américains",
+    "banane",
+    "pain",
+    "Cuisson",
+    "confort"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "1 hr 15 min",
+  "ratioSystem": "bakers_percentage",
+  "stars": 2109,
+  "forks": 234,
+  "contributors": 28,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-10-08",
+  "updatedAt": "2025-10-30",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mash and prep bananas",
-      inputs: ["ing_02"],
-      outputState: "mashed_banana",
-      instructions: "Peel the overripe bananas into a large bowl. Mash thoroughly with a fork until almost completely smooth — a few small lumps are fine and add texture. The bananas must be very overripe: deep brown to black on the exterior, soft to the point of being nearly liquid. Underripe yellow bananas lack the concentrated sweetness and starch conversion that makes banana bread work.",
-      visualCue: {
-        primaryTarget: "A smooth, dark golden-brown paste with occasional small lumps. The mash is wet and glossy, not dry and pale. Smells intensely of ripe banana.",
-        spectrum: [
-          { state: "Underdone", description: "Bananas are yellow or barely spotted — they mash into a pale, stiff paste that smells green and starchy rather than sweet.", action: "Do not use yellow bananas. Ripen faster by baking unpeeled bananas at 150°C for 20 minutes until the skins turn black, then cool before using." },
-          { state: "Perfect",   description: "Almost entirely black bananas mash into a dark, wet, smooth paste with an intensely sweet, almost fermented banana aroma. Very little resistance to the fork.", action: "Proceed to mixing." },
-          { state: "Overdone",  description: "Bananas have started to ferment — the mash has a slightly alcoholic, sour smell alongside the banana sweetness.", action: "These are actually ideal for banana bread — the fermentation adds complexity. Proceed." },
-        ],
-      },
-      feelCue: "The mashed banana should feel like thick, wet mud between the fork tines — not stiff or chalky. When you lift the fork, a thick ribbon of mash should fall slowly back into the bowl.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de blé entier (swap de 50% pour une saveur de noisette)",
+        "Mélange de farine d'avoine"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix wet ingredients",
-      inputs: ["mashed_banana", "ing_03", "ing_04", "ing_05", "ing_07"],
-      outputState: "wet_mixture",
-      instructions: "To the mashed banana, add the brown sugar, melted (and cooled) butter, eggs, vanilla, and spices. Whisk until fully combined and the sugar is mostly dissolved. The butter must be cooled — if it's still hot, it will scramble the eggs. The mixture will look thick and glossy, like a loose caramel sauce.",
-      visualCue: {
-        primaryTarget: "A thick, dark golden-brown liquid that flows slowly. Color is uniform — no streaks of unmixed butter or swirls of undissolved sugar visible.",
-        spectrum: [
-          { state: "Underdone", description: "Visible streaks of butter swirling through the mixture. Sugar sits in visible granules at the bottom. Eggs may not be fully incorporated.", action: "Whisk more vigorously for another 30 seconds. Warm butter rising to the surface is a sign the butter was too hot — let it cool and re-whisk." },
-          { state: "Perfect",   description: "Uniform, thick, glossy dark-golden mixture. Smells of banana, vanilla, and brown sugar. Sugar is completely dissolved. Flows off a whisk in a thick ribbon.", action: "Add the flour and leavener." },
-          { state: "Overdone",  description: "Not applicable for a cold-mixed batter. If you see curdled or scrambled egg bits, the butter was too hot.", action: "If eggs scrambled, strain the mixture through a sieve to remove the cooked egg bits. The batter will still work." },
-        ],
-      },
-      feelCue: "Dip a finger in the wet mixture and rub between your fingers — it should feel slightly gritty from residual sugar, then smooth as you rub. No distinct butter film or sugar granule crunch.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Bananes trop mûres, purée (3–4 grandes, très noires)",
+      "ratioValue": 130,
+      "defaultUnit": "%",
+      "substitutions": [
+        "plantains (très mûrs)",
+        "bananes congelées"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold in dry ingredients",
-      inputs: ["wet_mixture", "ing_01", "ing_06"],
-      outputState: "banana_batter",
-      instructions: "Sift the flour, baking soda, and salt together over the wet mixture. Using a rubber spatula, fold gently with a J-stroke motion — scrape under, fold over — just until no dry flour streaks remain. Do not stir vigorously or beat. Overworking the batter develops gluten and creates a tough, rubbery loaf rather than a tender, moist one. Ten to fifteen folds should be enough.",
-      visualCue: {
-        primaryTarget: "A thick, lumpy batter with no visible dry flour. The texture is rough and uneven — not smooth. Banana mash creates visible brown swirls in the batter.",
-        spectrum: [
-          { state: "Underdone", description: "White streaks and pockets of dry flour still visible in the batter. Inconsistent mixing means some bites of the bread will be gummy from raw flour.", action: "Fold 3–4 more times until no dry patches remain. A few lumps are fine — lumps are banana, not unmixed flour." },
-          { state: "Perfect",   description: "Batter is thick and uneven, with no dry flour visible. Looks slightly lumpy from banana pieces. The spatula leaves a trail that fills in slowly when dragged through.", action: "Pour immediately into the prepared pan." },
-          { state: "Overdone",  description: "Batter is smooth and elastic — it stretches slightly when you lift the spatula, almost like a bread dough. Gluten has developed. The bread will be tighter and denser.", action: "Proceed to baking. Avoid this next time by counting folds — 15 maximum." },
-        ],
-      },
-      feelCue: "Drag a spatula through the batter slowly — it should part and come back together gradually, like thick cake batter, not spring back like elastic dough or flow freely like pancake batter.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre brun, emballé",
+      "ratioValue": 65,
+      "defaultUnit": "%",
+      "substitutions": [
+        "sucre granulé",
+        "Sucre de coco"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["banana_batter"],
-      outputState: "finished_banana_bread",
-      instructions: "Preheat the oven to 175°C. Pour the batter into a greased and floured 23x13cm loaf pan. Optionally, sprinkle the top with 1 tablespoon of brown sugar for a crackly crust. Bake for 55–65 minutes until a toothpick inserted in the center comes out clean or with just a few moist crumbs. The top should crack along the center — this is correct. Cool in the pan for 10 minutes before turning out.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown top with a natural crack running down the center. The crack edges are slightly darker. The loaf has pulled away from the sides of the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Top is golden but not deeply browned. The center of the top looks wet and sunken slightly. A toothpick comes out with wet batter on it, not crumbs.", action: "Return to the oven for 5–10 more minutes. Tent with foil if the top is browning too fast while the center is still wet." },
-          { state: "Perfect",   description: "Deep golden-brown with a central crack. The crack interior is still moist-looking but the surrounding surface is set. Toothpick comes out clean or with a few moist crumbs — not wet batter.", action: "Cool in pan 10 minutes, then turn out." },
-          { state: "Overdone",  description: "Top is very dark brown and the center crack looks dry. Edges have pulled significantly away from the pan. Toothpick comes out completely dry.", action: "Remove immediately. Cool in pan — the dry interior will rehydrate slightly from the steam trapped inside as it cools." },
-        ],
-      },
-      feelCue: "Press the center of the loaf gently with a fingertip — it should spring back slowly and completely, like pressing a ripe but firm fruit. If it stays dented, the center is still liquid and needs more time.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé fondu et refroidi",
+      "ratioValue": 40,
+      "defaultUnit": "%",
+      "substitutions": [
+        "huile végétale (résultat d'humidité)",
+        "Huile de coco"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Gros œufs",
+      "ratioValue": 25,
+      "defaultUnit": "%",
+      "substitutions": [
+        "oeuf de lin (1 c. à soupe de lin + 3 c. à soupe d'eau)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Leavener",
+      "name": "Soda au four",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin, extrait de vanille, cannelle moulue",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Cardamome",
+        "muscade"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mash et prép bananes",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "mashed_banana",
+      "instructions": "Peler les bananes trop mûres dans un grand bol. Masser soigneusement avec une fourchette jusqu'à ce qu'elle soit presque complètement lisse – quelques petites boulettes sont fines et ajoutent de la texture. Les bananes doivent être très trop mûres : brun foncé à noir à l'extérieur, douces au point d'être presque liquides. Les bananes jaunes peu mûres manquent de douceur concentrée et de conversion de l'amidon qui fait travailler le pain de banane.",
+      "visualCue": {
+        "primaryTarget": "Une pâte dorée-brun lisse et foncée avec de petites bosses occasionnelles. Le mash est humide et brillant, pas sec et pâle. Sensation intense de banane mûre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les bananes sont jaunes ou à peine tachetées; elles se mélangent dans une pâte pâle et raide qui sent le vert et l'amidon plutôt que le doux.",
+            "action": "N'utilisez pas de bananes jaunes. Rippez plus vite en faisant cuire les bananes non pelées à 150°C pendant 20 minutes jusqu'à ce que les peaux deviennent noires, puis refroidissez avant d'utiliser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Presque entièrement noir bananes mash dans une pâte sombre, humide, lisse avec un arôme de banane intensément doux, presque fermenté. Très peu de résistance à la fourchette.",
+            "action": "Procédez au mélange."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bananes ont commencé à fermenter: la mash a une odeur légèrement alcoolique et aigre à côté de la douceur de la banane.",
+            "action": "Ceux-ci sont en fait idéaux pour le pain de banane — la fermentation ajoute de la complexité. Continuez."
+          }
+        ]
+      },
+      "feelCue": "La purée de banane doit se sentir comme de la boue épaisse et humide entre les dents de fourche — pas raide ou crayeuse. Lorsque vous soulevez la fourchette, un ruban épais de machette devrait retomber lentement dans le bol."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélanger les ingrédients humides",
+      "inputs": [
+        "mashed_banana",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "wet_mixture",
+      "instructions": "Vers la purée de banane, ajouter la cassonade, le beurre fondu (et refroidi), les œufs, la vanille et les épices. Whisk jusqu'à ce qu'il soit complètement combiné et que le sucre soit principalement dissous. Le beurre doit être refroidi — s'il est encore chaud, il va brouiller les œufs. Le mélange sera épais et brillant, comme une sauce au caramel lâche.",
+      "visualCue": {
+        "primaryTarget": "Un épais liquide brun doré foncé qui coule lentement. La couleur est uniforme — pas de stries de beurre non mélangé ou de tourbillons de sucre non dissous visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries visibles de beurre tourbillonnent dans le mélange. Le sucre se trouve dans des granules visibles au fond. Les œufs ne peuvent pas être entièrement incorporés.",
+            "action": "Frottez plus vigoureusement pendant 30 secondes. Le beurre chaud qui monte à la surface est un signe que le beurre était trop chaud — qu'il refroidisse et qu'il remblaie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mélange uniforme, épais et brillant d'or foncé. Des odeurs de banane, de vanille et de sucre brun. Le sucre est complètement dissous. Il coule d'un fouet dans un ruban épais.",
+            "action": "Ajouter la farine et le levain."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sans objet pour une pâte mélangée à froid. Si vous voyez des morceaux d'oeufs caillés ou brouillés, le beurre était trop chaud.",
+            "action": "Si les œufs sont brouillés, filtrez le mélange dans un tamis pour enlever les morceaux d'oeuf cuits. Le batteur marchera toujours."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt dans le mélange humide et frottez entre vos doigts — il devrait se sentir légèrement gritty du sucre résiduel, puis lisse comme vous frottez. Pas de pellicule de beurre ou de croquant de sucre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier dans des ingrédients secs",
+      "inputs": [
+        "wet_mixture",
+        "ing_01",
+        "ing_06"
+      ],
+      "outputState": "banana_batter",
+      "instructions": "Passer la farine, le bicarbonate de soude et le sel ensemble sur le mélange humide. À l'aide d'une spatule en caoutchouc, plier délicatement avec un mouvement J — gratter, plier — jusqu'à ce qu'il ne reste pas de stries de farine sèche. Ne pas remuer vigoureusement ou battre. Surmener la pâte développe du gluten et crée un pain dur et caoutchouteux plutôt qu'un pain tendre et humide. Dix à quinze plis devraient suffire.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse et grumelée sans farine sèche visible. La texture est rugueuse et inégale — pas lisse. Banana mash crée des tourbillons bruns visibles dans la pâte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries blanches et des poches de farine sèche encore visibles dans la pâte. Un mélange incohérent signifie que certaines bouchées du pain seront gommées de farine crue.",
+            "action": "Repliez encore 3 à 4 fois jusqu'à ce qu'il ne reste plus de taches sèches. Quelques morceaux sont fins: les morceaux sont de la banane et non de la farine non mélangée."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte est épaisse et inégale, sans farine sèche visible. Ça a l'air légèrement grumelé des morceaux de banane. La spatule laisse un sentier qui se remplit lentement lorsqu'elle est traînée.",
+            "action": "Verser immédiatement dans la casserole préparée."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie est lisse et élastique — elle s'étire légèrement lorsque vous soulevez la spatule, presque comme une pâte à pain. Le gluten s'est développé. Le pain sera plus serré et plus dense.",
+            "action": "Passer à la cuisson. Évitez cette prochaine fois en comptant les plis — 15 maximum."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une spatule à travers la pâte lentement — elle doit se séparer et revenir ensemble progressivement, comme la pâte à gâteau épaisse, ne ressort pas comme la pâte élastique ou coule librement comme la pâte à crêpe."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "banana_batter"
+      ],
+      "outputState": "finished_banana_bread",
+      "instructions": "Préchauffer le four à 175°C. Verser la pâte dans une poêle à pain graissée et farinée de 23x13cm. En option, saupoudrer le dessus d'une cuillère à soupe de sucre brun pour une croûte craquelée. Cuire pendant 55 à 65 minutes jusqu'à ce qu'un cure-dent inséré au centre soit propre ou avec seulement quelques miettes humides. Le haut devrait craquer le long du centre — c'est exact. Laisser refroidir dans la casserole pendant 10 minutes avant d'arriver.",
+      "visualCue": {
+        "primaryTarget": "Haut d'or-brun profond avec une fissure naturelle qui descend le centre. Les bords des fissures sont légèrement plus foncés. Le pain s'est éloigné des côtés de la casserole.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le dessus est doré mais pas profondément doré. Le centre du sommet semble humide et légèrement coulé. Un cure-dent sort avec une pâte mouillée dessus, pas des miettes.",
+            "action": "Retourner au four 5-10 minutes de plus. Tente avec feuille si le dessus est brunissant trop vite alors que le centre est encore humide."
+          },
+          {
+            "state": "Perfect",
+            "description": "De couleur dorée profonde avec une fissure centrale. L'intérieur de la fissure est encore humide, mais la surface environnante est réglée. L'épiderme sort propre ou avec quelques miettes humides — pas de pâte humide.",
+            "action": "Laisser refroidir 10 minutes, puis tourner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le dessus est brun très foncé et la fissure centrale semble sèche. Les bords se sont nettement éloignés de la casserole. Le pick-dent est complètement sec.",
+            "action": "Supprimer immédiatement. Refroidir dans la poêle — l'intérieur sec réhydrate légèrement de la vapeur piégée à l'intérieur pendant qu'il refroidit."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur le centre du pain avec un bout de doigt — il devrait revenir lentement et complètement, comme presser un fruit mûr mais ferme. Si elle reste dentelée, le centre est encore liquide et a besoin de plus de temps."
+    }
+  ]
 };

@@ -1,104 +1,238 @@
 export default {
-  repoId: "master_french_mushroom_bourguignon_001",
-  parentRepoId: null,
-  slug: "mushroom-bourguignon",
-  author: "ForkRecipe Kitchen",
-
-  title: "Mushroom Bourguignon",
-  description: "A braise of wild and cultivated mushrooms surrendered to Burgundy wine until the broth is thick, deeply violet, and perfumed with thyme — all the gravity of boeuf bourguignon, none of the beef.",
-  cuisine: "French",
-  culture: "Burgundian",
-  category: "vegetables",
-
-  tags: ["french", "mushroom", "vegan", "red-wine", "bourguignon"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hr 20 min",
-  ratioSystem: "parts",
-
-  stars: 1843,
-  forks: 214,
-  contributors: 31,
-  license: "CC-BY-SA",
-  createdAt: "2024-03-10",
-  updatedAt: "2025-11-22",
-
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 2, umami: 5, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Mixed mushrooms (cremini, shiitake, king oyster), roughly torn", ratioValue: 100, defaultUnit: "parts", substitutions: ["portobello", "porcini"] },
-    { ingId: "ing_02", role: "Allium",     name: "Shallots, quartered",                                            ratioValue: 20,  defaultUnit: "parts", substitutions: ["pearl onions"] },
-    { ingId: "ing_03", role: "Solvent",    name: "Burgundy or other dry red wine",                                 ratioValue: 40,  defaultUnit: "parts", substitutions: ["Pinot Noir", "Merlot"] },
-    { ingId: "ing_04", role: "Liquid",     name: "Vegetable stock",                                                ratioValue: 40,  defaultUnit: "parts", substitutions: ["mushroom stock", "water"] },
-    { ingId: "ing_05", role: "Fat",        name: "Olive oil",                                                      ratioValue: 8,   defaultUnit: "parts", substitutions: ["vegan butter"] },
-    { ingId: "ing_06", role: "Herb",       name: "Fresh thyme sprigs and bay leaves",                              ratioValue: 2,   defaultUnit: "parts", substitutions: ["dried thyme"] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Fine sea salt and black pepper",                                 ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_mushroom_bourguignon_001",
+  "parentRepoId": null,
+  "slug": "mushroom-bourguignon",
+  "author": "ForkRecipe Kitchen",
+  "title": "Champignon Bourguignon",
+  "description": "Un braise de champignons sauvages et cultivés remis au vin de Bourgogne jusqu'à ce que le bouillon soit épais, profondément violet, parfumé de thym — toute la gravité du boeuf bourgignon, aucun de la viande.",
+  "cuisine": "Français",
+  "culture": "Burgundian",
+  "category": "vegetables",
+  "tags": [
+    "français",
+    "champignon",
+    "végétalien",
+    "Vin rouge",
+    "bourgignon"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hr 20 min",
+  "ratioSystem": "parts",
+  "stars": 1843,
+  "forks": 214,
+  "contributors": 31,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-03-10",
+  "updatedAt": "2025-11-22",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sear",
-      inputs: ["ing_01", "ing_05", "ing_07"],
-      outputState: "seared_mushrooms",
-      instructions: "Heat olive oil in a wide, heavy-bottomed pot or Dutch oven over high heat until shimmering. Add mushrooms in a single layer — work in batches if needed. Season with salt and do not stir for 2 minutes. Allow the mushrooms to release their moisture and then re-absorb it, developing a deep mahogany sear on each cut face.",
-      visualCue: {
-        primaryTarget: "Each mushroom piece carries a deep golden-brown crust on at least one side. The bottom of the pot is dry and beginning to show fond.",
-        spectrum: [
-          { state: "Underdone", description: "Mushrooms are steaming and pale, moisture pooling in the pot. No colour has developed.", action: "Increase heat and wait — do not stir. Stirring releases more moisture and prevents browning." },
-          { state: "Perfect",   description: "Rich mahogany sear on the flat faces. Fond (brown bits) coating the pot bottom. Mushrooms have reduced by about a third.", action: "Transfer to a bowl and sear the next batch." },
-          { state: "Overdone",  description: "Mushrooms are very dark, nearly black at the edges. Fond on the pot is nearly burnt.", action: "Deglaze immediately with a splash of wine. Reduce heat before the next batch." },
-        ],
-      },
-      feelCue: "The mushrooms should feel significantly lighter and denser than when raw — the moisture has cooked off and their fibres have tightened, like squeezing a sponge.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Champignons mélangés (cremini, shiitake, huître royale), approximativement déchirés",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "portobello",
+        "porcins"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sweat",
-      inputs: ["ing_02", "ing_05"],
-      outputState: "softened_shallots",
-      instructions: "In the same pot over medium heat, add shallots. Cook, stirring occasionally, for 6–8 minutes until softened and golden at the edges. The shallots should be translucent throughout but still hold their shape. Scrape up any remaining fond with a wooden spoon as the shallots release their liquid.",
-      visualCue: {
-        primaryTarget: "Shallots are translucent and limp, edges faintly golden, sitting in a thin glaze of their own juice.",
-        spectrum: [
-          { state: "Underdone", description: "Shallots are still firm and opaque white in the centre. Raw allium sharpness is still dominant.", action: "Continue cooking at medium heat. Adding the wine now will halt softening and leave a raw bite." },
-          { state: "Perfect",   description: "Fully translucent, slightly golden, sweet-smelling. They collapse gently when pressed with a spoon.", action: "Add the wine and herbs." },
-          { state: "Overdone",  description: "Shallots are deeply brown, shrinking to caramel. Edges are catching.", action: "Add a splash of stock to arrest the browning. The flavour will be sweeter and more intense but still usable." },
-        ],
-      },
-      feelCue: "The kitchen should fill with a sweet, caramelised onion perfume — if you still smell raw sharpness, the shallots need more time.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Échalotes, classées",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Oignons perlés"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Reduce",
-      inputs: ["softened_shallots", "ing_03", "ing_06"],
-      outputState: "reduced_wine_base",
-      instructions: "Pour the red wine into the pot with the shallots and add the thyme and bay leaves. Raise heat to medium-high and bring to a boil. Reduce the wine by half, about 8–10 minutes. This cooks off alcohol, concentrates fruit, and allows the tannins to mellow before the mushrooms rejoin.",
-      visualCue: {
-        primaryTarget: "The wine has reduced to a deep, glossy purple syrup coating the shallots. Volume has dropped by roughly half.",
-        spectrum: [
-          { state: "Underdone", description: "Wine is still thin and alcoholic-smelling. Steam is sharp and eye-watering.", action: "Continue reducing. Adding stock now will trap the alcohol and give a harsh, boozy flavour." },
-          { state: "Perfect",   description: "Wine is concentrated and glossy, smells of dark fruit and earth. The alcohol sharpness has gone. Volume has halved.", action: "Add the stock and seared mushrooms." },
-          { state: "Overdone",  description: "Wine has reduced to a sticky, near-dry glaze. Tannins smell harsh and burnt.", action: "Add stock immediately. The flavour will be very intense — you may need to balance with a small pinch of sugar at the end." },
-        ],
-      },
-      feelCue: "Dip a spoon and let a drop fall — it should form a distinct bead that holds briefly before spreading, not disappear instantly into the pan.",
+      "ingId": "ing_03",
+      "role": "Solvent",
+      "name": "Bourgogne ou autre vin rouge sec",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pinot Noir",
+        "Merlot"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Braise",
-      inputs: ["reduced_wine_base", "seared_mushrooms", "ing_04"],
-      outputState: "braised_bourguignon",
-      instructions: "Return the seared mushrooms to the pot, pour in the vegetable stock, and stir to combine. Bring to a gentle simmer, then reduce heat to low. Cover partially and cook for 40–45 minutes, stirring every 10 minutes. The liquid should maintain a slow, lazy bubble throughout — aggressive boiling will toughen the mushrooms.",
-      visualCue: {
-        primaryTarget: "The broth has turned deep garnet and thickened to coat a spoon. Mushrooms are very tender and have absorbed the wine colour throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is thin and light-coloured. Mushrooms still have some resistance when bitten. Flavours taste separate.", action: "Continue simmering uncovered to concentrate. Give it another 15 minutes." },
-          { state: "Perfect",   description: "Broth is thick, garnet, and glossy. It coats a spoon and runs off slowly. Mushrooms are silky and yielding. Flavours are unified and deep.", action: "Taste, adjust seasoning, and serve." },
-          { state: "Overdone",  description: "Broth has reduced to a thick, almost paste-like consistency. Mushrooms are very soft and collapsing.", action: "Add a splash of stock to loosen. The flavour will be very concentrated — taste before adding more salt." },
-        ],
-      },
-      feelCue: "The broth should feel velvety on a fingertip — not watery, not sticky, but with a gentle body that clings slightly when you rub your fingers together.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Stocks de légumes",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Matériel de champignons",
+        "eau"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre végétal"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Fils de thym frais et feuilles de laurier",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym séché"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre noir",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_01",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "seared_mushrooms",
+      "instructions": "Chauffer l'huile d'olive dans une grande casserole à fond lourd ou un four hollandais à feu vif jusqu'à ce qu'elle mijote. Ajouter les champignons en une seule couche — travailler en lots si nécessaire. Assaisonner de sel et ne pas remuer pendant 2 minutes. Laisser les champignons libérer leur humidité et ensuite l'absorber, en développant une couche d'acajou profonde sur chaque face coupée.",
+      "visualCue": {
+        "primaryTarget": "Chaque morceau de champignon porte une croûte dorée profonde sur au moins un côté. Le fond du pot est sec et commence à faire preuve d'affection.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les champignons sont à vapeur et pâles, l'humidité s'accumule dans le pot. Aucune couleur n'est apparue.",
+            "action": "Augmentez la chaleur et attendez — ne remuez pas. Stirring libère plus d'humidité et empêche le brunissement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche taille acajou sur les visages plats. Fond (mèches brunes) enrobant le fond du pot. Les champignons ont diminué d'environ un tiers.",
+            "action": "Transférer dans un bol et saisir le prochain lot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les champignons sont très sombres, presque noirs aux bords. Le fond du pot est presque brûlé.",
+            "action": "Déglacer immédiatement avec un jet de vin. Réduire la chaleur avant le prochain lot."
+          }
+        ]
+      },
+      "feelCue": "Les champignons doivent se sentir nettement plus légers et plus denses que lorsqu'ils sont crus — l'humidité a cuit et leurs fibres se sont resserrées, comme serrer une éponge."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sueur",
+      "inputs": [
+        "ing_02",
+        "ing_05"
+      ],
+      "outputState": "softened_shallots",
+      "instructions": "Dans la même casserole à feu moyen, ajouter les échalotes. Cuire en remuant occasionnellement pendant 6 à 8 minutes jusqu'à ce que les bords soient adoucis et dorés. Les échalotes doivent être translucides tout au long du cycle, mais elles doivent garder leur forme. Grattez tout fond restant avec une cuillère en bois lorsque les échalotes libèrent leur liquide.",
+      "visualCue": {
+        "primaryTarget": "Les échalotes sont translucides et boiteuses, bords légèrement dorés, assises dans une fine glaçure de leur propre jus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les échalotes sont toujours blanches fermes et opaques au centre. La netteté de l'allium brut est toujours dominante.",
+            "action": "Continuer la cuisson à feu moyen. L'ajout du vin cessera de ramollir et laissera une bouchée crue."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement translucide, légèrement dorée, sucrée. Ils s'effondrent doucement lorsqu'ils sont pressés avec une cuillère.",
+            "action": "Ajouter le vin et les herbes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les échalotes sont profondément brunes, se rétrécissant au caramel. Les bords attrapent.",
+            "action": "Ajoutez un peu de stock pour arrêter le brunissement. La saveur sera plus douce et plus intense mais toujours utilisable."
+          }
+        ]
+      },
+      "feelCue": "La cuisine devrait se remplir d'un parfum d'oignon doux caramélisé — si vous sentez encore la netteté brute, les échalotes ont besoin de plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Réduire",
+      "inputs": [
+        "softened_shallots",
+        "ing_03",
+        "ing_06"
+      ],
+      "outputState": "reduced_wine_base",
+      "instructions": "Verser le vin rouge dans le pot avec les échalotes et ajouter le thym et les feuilles de laurier. Porter à feu moyen-élevé et porter à ébullition. Réduire le vin de moitié, environ 8-10 minutes. Elle fait cuire l'alcool, concentre les fruits et permet aux tanins de se moeller avant que les champignons ne se joignent.",
+      "visualCue": {
+        "primaryTarget": "Le vin a réduit à un sirop pourpre profond et brillant enrobant les échalotes. Le volume a diminué d'environ la moitié.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le vin est encore mince et alcoolisé. La vapeur est tranchante et abreuvante.",
+            "action": "Continuez à réduire. L'ajout d'un stock permettra maintenant de piéger l'alcool et de donner une saveur dure et boueuse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le vin est concentré et brillant, sent les fruits foncés et la terre. La netteté de l'alcool a disparu. Le volume a diminué de moitié.",
+            "action": "Ajouter le stock et les champignons."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le vin est réduit à une glaçure collante, presque sèche. Les tannins sentent dur et brûlé.",
+            "action": "Ajouter le stock immédiatement. La saveur sera très intense — vous devrez peut-être équilibrer avec une petite pincée de sucre à la fin."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère et laissez tomber une goutte — elle devrait former une perle distincte qui tient brièvement avant de s'étendre, ne pas disparaître instantanément dans la poêle."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Brise",
+      "inputs": [
+        "reduced_wine_base",
+        "seared_mushrooms",
+        "ing_04"
+      ],
+      "outputState": "braised_bourguignon",
+      "instructions": "Retourner les champignons séchés dans le pot, verser dans le bouillon de légumes et remuer pour mélanger. Porter à mijoter doucement, puis réduire la chaleur à faible. Couvrir partiellement et cuire de 40 à 45 minutes, en remuant toutes les 10 minutes. Le liquide devrait maintenir une bulle lente et paresseuse dans l'ensemble de l'organisme.",
+      "visualCue": {
+        "primaryTarget": "Le bouillon a tourné le grenat profond et épaissi pour enrober une cuillère. Les champignons sont très tendres et ont absorbé la couleur du vin.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth est mince et de couleur claire. Les champignons ont encore une certaine résistance quand ils sont mordus. Les saveurs sont séparées.",
+            "action": "Continuer à mijoter à découvert pour se concentrer. Encore 15 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bouillon est épais, grenat et brillant. Il enrobe une cuillère et s'écoule lentement. Les champignons sont soyeux et productifs. Les arômes sont unifiés et profonds.",
+            "action": "Goûtez, assaisonnez et servez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon est réduit à une consistance épaisse, presque en pâte. Les champignons sont très doux et s'effondrent.",
+            "action": "Ajouter une touche de stock pour se détendre. La saveur sera très concentrée — goût avant d'ajouter plus de sel."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon doit se sentir velouté sur un bout de doigt — pas aqueux, pas collant, mais avec un corps doux qui s'accroche légèrement lorsque vous frottez vos doigts ensemble."
+    }
+  ]
 };

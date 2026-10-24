@@ -1,111 +1,280 @@
 export default {
-  repoId: "master_french_brioche_001",
-  parentRepoId: null,
-  slug: "brioche",
-  tool: { kind: "dough", doughId: "brioche" },
-  author: "ForkRecipe Kitchen",
-  title: "Brioche",
-  description: "The richest of the enriched doughs — a glossy, deep-amber loaf shot through with butter, eggs, and a slow cold ferment that pulls apart into feathered, golden strands and smells of toasted brioche the moment you tear it.",
-  cuisine: "French",
-  culture: "Norman",
-  category: "breads",
-  tags: ["brioche", "french", "enriched", "viennoiserie", "butter", "laminated-crumb"],
-  difficulty: 4,
-  activeTime: "45 min",
-  totalTime: "18 hours",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 2, salty: 2, sour: 1, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Bread flour (high-protein, 12–13%)", ratioValue: 100, defaultUnit: "%", substitutions: ["Type 45 / French pastry flour for a finer crumb"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Whole eggs, cold",                  ratioValue: 55,  defaultUnit: "%", substitutions: ["1 yolk per 2 whole eggs for a richer, more golden crumb"] },
-    { ingId: "ing_03", role: "Liquid",     name: "Whole milk, cold",                  ratioValue: 12,  defaultUnit: "%", substitutions: ["water for a lighter crumb"] },
-    { ingId: "ing_04", role: "Leavener",   name: "Fresh yeast",                       ratioValue: 4,   defaultUnit: "%", substitutions: ["1.5% instant dry yeast"] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Caster sugar",                      ratioValue: 12,  defaultUnit: "%", substitutions: ["honey for a softer, more aromatic crumb"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine sea salt",                     ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",        name: "Unsalted butter, cool but pliable (82% fat)", ratioValue: 50, defaultUnit: "%", substitutions: ["good cultured butter for extra tang"] },
-    { ingId: "ing_08", role: "Garnish",    name: "Egg yolk beaten with a splash of cream (egg wash)", ratioValue: 5, defaultUnit: "%", substitutions: ["whole egg beaten with a pinch of salt"] },
+  "repoId": "master_french_brioche_001",
+  "parentRepoId": null,
+  "slug": "brioche",
+  "tool": {
+    "kind": "dough",
+    "doughId": "brioche"
+  },
+  "author": "ForkRecipe Kitchen",
+  "title": "Brioche",
+  "description": "Le plus riche des pâtes enrichies — un pain brillant et ambre profond, traversé de beurre, d'œufs et d'un ferment froid lent qui se détache en brins dorés et des odeurs de brioche grillée au moment où vous le déchirez.",
+  "cuisine": "Français",
+  "culture": "Pays-Bas",
+  "category": "breads",
+  "tags": [
+    "brioche",
+    "français",
+    "enrichi",
+    "Viennoiserie",
+    "beurre",
+    "laminés"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "45 min",
+  "totalTime": "18 hours",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "shaggy_dough",
-      instructions: "In a stand mixer with the dough hook, combine the flour, cold eggs, cold milk, crumbled fresh yeast, sugar, and salt. Keep the salt and yeast from touching directly until they hit the flour. Mix on low for 3 to 4 minutes just until there is no dry flour and a rough, sticky dough forms. Everything stays cold — brioche is a battle against heat, and the dough should never climb past about 24°C / 75°F before the butter goes in.",
-      visualCue: {
-        primaryTarget: "A shaggy, sticky, uniformly hydrated mass that clings to the hook and the bowl, with no patches of dry flour and no pools of loose egg.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of dry flour remain and loose egg slicks the bottom of the bowl.", action: "Mix another 30 to 60 seconds on low until cohesive. Scrape down the bowl to catch dry flour hiding in the corners." },
-          { state: "Perfect",   description: "A single rough, tacky dough gathered around the hook, shiny with egg but holding together as one mass.", action: "Move straight into the gluten development stage — do not rest yet." },
-          { state: "Overdone",  description: "The dough is smooth and elastic already and feels warm to the touch.", action: "You over-mixed at this stage; chill the bowl for 15 minutes before adding butter so the dough does not overheat later." },
-        ],
-      },
-      feelCue: "The dough should feel cool, heavy, and stubbornly sticky — like wet modeling clay. If it feels even slightly warm, refrigerate the bowl before going on; warmth here means greasy bread later.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain (protéines élevées, 12–13%)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Type 45 / Farine de pâtisserie française pour une miette plus fine"
+      ]
     },
     {
-      nodeId: "step_2", action: "Knead",
-      inputs: ["shaggy_dough"],
-      outputState: "developed_dough",
-      instructions: "Knead on medium speed for 8 to 12 minutes until the dough is smooth, very elastic, and pulls cleanly off the sides of the bowl in one slapping mass. You are building a strong gluten network NOW, before the fat coats the proteins. Stop and stretch a small piece into a windowpane — it should thin to translucency without tearing. Develop the gluten fully here; you cannot build it once the butter is in.",
-      visualCue: {
-        primaryTarget: "A glossy, springy dough that slaps the bowl and pulls away clean, stretching into a thin translucent windowpane that lets light through without ripping.",
-        spectrum: [
-          { state: "Underdone", description: "The dough still sticks to the bowl walls and a stretched piece tears quickly into a thick, cloudy sheet.", action: "Keep kneading in 2-minute bursts, checking the windowpane each time. Pause if the bowl warms past 26°C / 79°F." },
-          { state: "Perfect",   description: "Smooth and satiny, slapping rhythmically against the bowl and clearing the sides; the windowpane stretches paper-thin and translucent.", action: "Begin adding the butter, a knob at a time." },
-          { state: "Overdone",  description: "The dough has gone slack, sticky, and shreds rather than stretches — the gluten has broken down, often from overheating.", action: "Chill it hard for 30 minutes and proceed gently; severely over-kneaded dough cannot be fully rescued, but cold rest helps it firm up." },
-        ],
-      },
-      feelCue: "Listen for the rhythmic slap-slap of the dough against the bowl — that sound is the signal the gluten is ready. The dough should feel taut and springy, bouncing back fast when poked.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Oeufs entiers, froids",
+      "ratioValue": 55,
+      "defaultUnit": "%",
+      "substitutions": [
+        "1 jaune par 2 œufs entiers pour une miette plus riche et plus dorée"
+      ]
     },
     {
-      nodeId: "step_3", action: "Emulsify",
-      inputs: ["developed_dough", "ing_07"],
-      outputState: "buttered_dough",
-      instructions: "With the mixer on medium-low, add the cool, pliable butter a tablespoon-sized knob at a time, letting each piece disappear into the dough before adding the next — this takes 5 to 10 minutes. The dough will look broken and slick at first; keep going and it re-gathers into a glossy, supple mass. Add the butter slowly so it laminates into the gluten rather than greasing it out. Finish when the dough is satiny, fully homogeneous, and pulls off the bowl again.",
-      visualCue: {
-        primaryTarget: "A deeply glossy, golden, elastic dough with every trace of butter absorbed — smooth as satin and pulling cleanly off the bowl sides once more.",
-        spectrum: [
-          { state: "Underdone", description: "Visible smears or flecks of unincorporated butter streak the dough and it feels greasy and loose.", action: "Keep mixing until the butter vanishes; if it stays greasy, you added butter too fast — slow down and let each addition absorb." },
-          { state: "Perfect",   description: "Uniformly smooth, glossy, and elastic, clearing the bowl walls, with a faint cool sheen and no loose butter anywhere.", action: "Round into a ball, cover, and move to the cold ferment." },
-          { state: "Overdone",  description: "The dough is hot (above 27°C / 81°F), soupy, and oily, with butter weeping out at the edges.", action: "Stop immediately and refrigerate 30 minutes to firm the fat, then give a few slow turns to re-emulsify before proofing." },
-        ],
-      },
-      feelCue: "The dough passes through an ugly, broken phase that feels like it will never come together — trust it and keep going. The finished dough should feel cool, supple, and faintly tacky, like soft leather, never oily or warm.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Lait entier, froid",
+      "ratioValue": 12,
+      "defaultUnit": "%",
+      "substitutions": [
+        "eau pour une miette plus légère"
+      ]
     },
     {
-      nodeId: "step_4", action: "Ferment",
-      inputs: ["buttered_dough"],
-      outputState: "proofed_dough",
-      instructions: "Give the dough a 1-hour rest at room temperature, then fold it over on itself, press flat, cover tightly, and refrigerate for at least 8 hours and up to 24. This long cold ferment is non-negotiable: it firms the butter so the dough is workable, deepens flavor with a faint tang, and slows the yeast for an even, fine crumb. The next day, divide, shape (a braid, a fluted mold, or balls in a tin), and proof at warm room temperature, 24–26°C / 75–79°F, until nearly doubled and jiggly.",
-      visualCue: {
-        primaryTarget: "After the cold ferment, a firm, cold, smooth dough that handles like cool putty; after the final proof, a pillowy, risen loaf that wobbles and springs back slowly when poked.",
-        spectrum: [
-          { state: "Underdone", description: "The shaped loaf is dense and tight, and a gentle poke springs back instantly and fully.", action: "Keep proofing in 20-minute checks. Cold brioche from the fridge proofs slowly — be patient, it can take 2 to 3 hours." },
-          { state: "Perfect",   description: "The loaf has grown to nearly double, looks puffed and pillowy, and a light poke leaves a dent that fills back in slowly and only partway.", action: "Egg wash and bake at once — over-proofed brioche collapses in the oven." },
-          { state: "Overdone",  description: "The loaf looks bloated and slack, smells boozy, and a poke leaves a dent that does not spring back at all.", action: "Bake immediately and gently; it will be a touch coarser but still good. Next time pull it from the proof earlier." },
-        ],
-      },
-      feelCue: "Straight from the fridge the dough should feel cold and firm, like cool clay — that firmness is what makes it shapeable. A fully proofed loaf feels delicate and air-filled, trembling like a set custard when you nudge the pan.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "levure fraîche",
+      "ratioValue": 4,
+      "defaultUnit": "%",
+      "substitutions": [
+        "1,5% levure sèche instantanée"
+      ]
     },
     {
-      nodeId: "step_5", action: "Bake",
-      inputs: ["proofed_dough", "ing_08"],
-      outputState: "finished_brioche",
-      instructions: "Brush the proofed loaf gently and thoroughly with the egg-yolk wash, getting into every seam without deflating it. Bake at 180°C / 350°F for 25 to 40 minutes depending on size, until deep mahogany-brown and the internal temperature reads 88–90°C / 190–195°F. Tent loosely with foil if it browns too fast — the high sugar and egg make brioche colour quickly. Cool fully on a rack before slicing; cutting it warm tears the tender crumb.",
-      visualCue: {
-        primaryTarget: "A glossy, deep mahogany crust that sounds hollow when tapped on the bottom, with a feathered, golden crumb that pulls apart in soft strands.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is pale gold and the loaf feels heavy; the centre reads below 85°C / 185°F and the crumb is gummy.", action: "Return to the oven and bake on, checking temperature every 5 minutes. Tent with foil if the top is already dark." },
-          { state: "Perfect",   description: "Rich, even mahogany shine all over, hollow-sounding base, internal temperature 88–90°C / 190–195°F, crumb springy and tender.", action: "Cool completely on a rack for at least an hour before slicing." },
-          { state: "Overdone",  description: "Crust is very dark, edging toward bitter and brittle, and the crumb is dry near the crust.", action: "Cover with a clean towel as it cools to soften the crust, and toast or use slices for French toast or bread pudding." },
-        ],
-      },
-      feelCue: "The whole kitchen should smell of warm butter and toasted egg. Tap the cooled base — a clear hollow knock means it is done. Resist slicing until fully cool; warm brioche compresses and gums under the knife.",
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 12,
+      "defaultUnit": "%",
+      "substitutions": [
+        "miel pour une miette plus douce et plus aromatique"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Beurre non salé, frais mais souple (82% de matières grasses)",
+      "ratioValue": 50,
+      "defaultUnit": "%",
+      "substitutions": [
+        "bon beurre cultivé pour extra tang"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Jaune d'oeuf battue avec une touche de crème (lavage des œufs)",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "oeuf entier battu avec une pincée de sel"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "shaggy_dough",
+      "instructions": "Dans un mélangeur de stand avec le crochet de pâte, combiner la farine, les oeufs froids, le lait froid, la levure fraîche émiettée, le sucre et le sel. Gardez le sel et la levure de toucher directement jusqu'à ce qu'ils frappent la farine. Mélanger à basse température pendant 3 à 4 minutes jusqu'à ce qu'il n'y ait pas de farine sèche et qu'une pâte rugueuse et collante se forme. Tout reste froid — la brioche est une bataille contre la chaleur, et la pâte ne devrait jamais passer à environ 24°C / 75°F avant l'entrée du beurre.",
+      "visualCue": {
+        "primaryTarget": "Une masse collante, collante et uniformément hydratée qui s'accroche au crochet et au bol, sans tache de farine sèche et sans réservoir d'oeufs lâches.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux de farine sèche restent et un œuf lâche lèche le fond du bol.",
+            "action": "Mélanger 30 à 60 secondes de plus en bas jusqu'à cohésion. Grattez le bol pour attraper de la farine sèche cachée dans les coins."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une seule pâte rugueuse et piquante ramassée autour du crochet, brillante avec de l'œuf mais tenant ensemble comme une seule masse.",
+            "action": "Passez directement au stade de développement du gluten — ne vous reposez pas encore."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est déjà lisse et élastique et elle est chaude au toucher.",
+            "action": "Vous avez trop mélangé à ce stade; refroidir le bol pendant 15 minutes avant d'ajouter du beurre afin que la pâte ne surchauffe pas plus tard."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir fraîche, lourde et obstinément collante, comme de l'argile à modeler humide. S'il se sent même légèrement chaud, réfrigérer le bol avant de continuer; chaleur ici signifie pain gras plus tard."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Agenouillement",
+      "inputs": [
+        "shaggy_dough"
+      ],
+      "outputState": "developed_dough",
+      "instructions": "Agenouillez à vitesse moyenne pendant 8 à 12 minutes jusqu'à ce que la pâte soit lisse, très élastique et tire proprement des côtés du bol en une seule gifle. Vous construisez un fort réseau de gluten MAINTENANT, avant que la graisse enrobe les protéines. Arrêter et étirer une petite pièce dans une vitre — elle devrait être mince à translucidité sans déchirer. Développez le gluten entièrement ici; vous ne pouvez pas le construire une fois le beurre entré.",
+      "visualCue": {
+        "primaryTarget": "Une pâte brillante et printanière qui gifle le bol et s'enlève propre, s'étirant dans une mince vitre translucide qui laisse passer la lumière sans déchirer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte colle encore aux parois du bol et une pièce étirée se déchire rapidement dans une épaisse feuille nuageuse.",
+            "action": "Continuez à pétrir en 2 minutes, en vérifiant la fenêtre à chaque fois. Pause si le bol se réchauffe après 26°C / 79°F."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux et satiné, giflant rythmiquement contre le bol et défrichant les côtés ; la vitre s'étend sur du papier-fin et translucide.",
+            "action": "Commencez à ajouter le beurre, un bouton à la fois."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est devenue molle, collante et déchiquetée au lieu de s'étirer — le gluten s'est brisé, souvent par surchauffe.",
+            "action": "Refroidissez-le dur pendant 30 minutes et procédez doucement; la pâte fortement surcollée ne peut pas être complètement secourue, mais le repos froid l'aide à se raffermir."
+          }
+        ]
+      },
+      "feelCue": "Écoutez la gifle rythmique de la pâte contre le bol — ce son est le signal que le gluten est prêt. La pâte doit se sentir tendue et printanière, rebondissant rapidement lorsqu'elle est cuite."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Émulsifier",
+      "inputs": [
+        "developed_dough",
+        "ing_07"
+      ],
+      "outputState": "buttered_dough",
+      "instructions": "Avec le mélangeur sur moyen-doux, ajouter le beurre frais et souple un bouton de cuillère à soupe à la fois, laissant chaque pièce disparaître dans la pâte avant d'ajouter le suivant — cela prend 5 à 10 minutes. La pâte aura l'air cassée et liquéfiée au début; continuer et elle se ré-assemble dans une masse brillante et souple. Ajouter le beurre lentement afin qu'il soit stratifié dans le gluten plutôt que de le graisser. Terminer lorsque la pâte est satinée, entièrement homogène, et retirer à nouveau le bol.",
+      "visualCue": {
+        "primaryTarget": "Une pâte très brillante, dorée et élastique avec chaque trace de beurre absorbée – lisse comme du satin et tirant proprement des côtés du bol une fois de plus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des frottis ou des taches visibles de beurre non incorporé sillonnent la pâte et elle est grasse et lâche.",
+            "action": "Continuez à mélanger jusqu'à ce que le beurre disparaisse; s'il reste gras, vous ajoutez le beurre trop vite — ralentissez et laissez chaque addition absorber."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lisses, brillants et élastiques, éclaircissant les parois du bol, avec un léger reflet frais et aucun beurre lâche nulle part.",
+            "action": "Rond dans une boule, couvrir, et passer au ferment froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est chaude (au-dessus de 27°C / 81°F), soupeuse et grasse, avec du beurre qui pleure aux bords.",
+            "action": "Arrêter immédiatement et réfrigérer 30 minutes pour raffermir la graisse, puis donner quelques tours lents pour réémulsionner avant la mise à l'épreuve."
+          }
+        ]
+      },
+      "feelCue": "La pâte passe par une phase laid et cassée qui a l'impression qu'elle ne se rassemblera jamais — croyez - la et continuez. La pâte finie doit se sentir fraîche, souple et légèrement collante, comme du cuir doux, jamais grasse ou chaude."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Ferment",
+      "inputs": [
+        "buttered_dough"
+      ],
+      "outputState": "proofed_dough",
+      "instructions": "Reposez la pâte pendant 1 heure à température ambiante, puis pliez-la sur elle-même, pressez à plat, couvrez bien et réfrigérez pendant au moins 8 heures et jusqu'à 24. Ce long ferment froid n'est pas négociable : il raffermit le beurre pour que la pâte soit exploitable, approfondit la saveur avec un léger tang, et ralentit la levure pour une miette uniforme et fine. Le lendemain, divisez, formez (une tressée, un moule cannelé, ou des boules en étain), et prouvez à température ambiante chaude, 24–26°C / 75–79°F, jusqu'à presque doubler et jiggly.",
+      "visualCue": {
+        "primaryTarget": "Après le ferment froid, une pâte ferme, froide et lisse qui manie comme un mastic frais; après la dernière preuve, un pain d'oreiller, levé qui oscille et ressort lentement lorsqu'il est poché.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pain en forme est dense et serré, et un poke doux ressort instantanément et complètement.",
+            "action": "Continuez à vérifier en 20 minutes. Brioche froide à partir des épreuves du réfrigérateur lentement — être patient, il peut prendre 2 à 3 heures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le pain a presque doublé, semble gonflé et oreiller, et un poke léger laisse une bosse qui se remplit de nouveau lentement et seulement de côté.",
+            "action": "Lavez les œufs et faites cuire à la fois — la brioche surprotégée s'effondre dans le four."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pain semble gonflé et lâche, sent le boozy, et un poke laisse une bosse qui ne ressort pas du tout.",
+            "action": "Cuire immédiatement et doucement; ce sera un toucher plus grossier mais toujours bon. La prochaine fois, tirez-la de la preuve plus tôt."
+          }
+        ]
+      },
+      "feelCue": "Tout droit depuis le réfrigérateur, la pâte doit être froide et ferme, comme de l'argile fraîche. Un pain entièrement éprouvé se sent délicat et rempli d'air, tremblant comme une crème de set quand on pique la poêle."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "proofed_dough",
+        "ing_08"
+      ],
+      "outputState": "finished_brioche",
+      "instructions": "Badigeonner délicatement et soigneusement le pain d'œuf-jaune, en entrant dans chaque couture sans le dégonfler. Cuire à 180°C / 350°F pendant 25 à 40 minutes selon la taille, jusqu'à ce que l'acajou-brun profond et la température interne lisent 88–90°C / 190–195°F. Tente lâche avec de la feuille si elle brunit trop vite — le haut sucre et l'oeuf rendent la brioche rapidement. Laisser refroidir complètement sur un rack avant de le trancher; le couper réchauffe la miette tendre.",
+      "visualCue": {
+        "primaryTarget": "Une croûte d'acajou brillante et profonde qui semble creuse lorsqu'on la tape sur le fond, avec une miette dorée à plumes qui se détache en brins doux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est d'or pâle et le pain est lourd; le centre se trouve en dessous de 85°C / 185°F et la croûte est gommante.",
+            "action": "Retourner au four et cuire, vérifier la température toutes les 5 minutes. Tente avec feuille si le dessus est déjà sombre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche, même acajou briller partout, base à sonner creux, température intérieure 88–90°C / 190–195°F, miettes printanières et tendres.",
+            "action": "Laisser refroidir complètement sur une grille pendant au moins une heure avant de trancher."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est très foncée, s'accroupissant vers l'amère et fragile, et la croûte est sèche près de la croûte.",
+            "action": "Couvrir d'une serviette propre car elle refroidit pour adoucir la croûte, et faire griller ou utiliser des tranches de pain ou de pain."
+          }
+        ]
+      },
+      "feelCue": "Toute la cuisine doit sentir le beurre chaud et les oeufs grillés. Tapez sur la base refroidie — un coup creux clair signifie que c'est fait. Résistez à couper jusqu'à ce qu'il soit complètement frais; la brioche chaude compresse et gomme sous le couteau."
+    }
+  ]
 };

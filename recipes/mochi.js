@@ -1,97 +1,230 @@
 export default {
-  repoId: "master_japanese_mochi_001",
-  parentRepoId: null,
-  slug: "mochi",
-  author: "ForkRecipe Kitchen",
-  title: "Japanese Basic Mochi",
-  description: "Steamed glutinous rice coaxed into a smooth, stretchy, glistening mass — plain mochi dusted in kinako (toasted soy flour) carries a quiet earthiness, while the red bean paste filling beneath the translucent skin is sweet without being saccharine.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "desserts",
-  tags: ["mochi", "japanese", "rice", "glutinous", "anko", "wagashi", "kinako", "gluten-free"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 2, salty: 0, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Glutinous rice flour (mochiko or shiratamako)", ratioValue: 1,    defaultUnit: "parts", substitutions: ["shiratamako for a silkier texture"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Water",                                          ratioValue: 0.8,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Granulated sugar",                               ratioValue: 0.3,  defaultUnit: "parts", substitutions: ["caster sugar", "honey (reduce water slightly)"] },
-    { ingId: "ing_04", role: "Starch",     name: "Kinako (toasted soy flour) for dusting",         ratioValue: 0.15, defaultUnit: "parts", substitutions: ["toasted sesame seeds", "matcha powder mixed with icing sugar"] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Red bean paste (tsubuan or koshian)",            ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["white bean paste (shiro-an)", "sweetened chestnut paste"] },
-    { ingId: "ing_06", role: "Starch",     name: "Cornstarch (katakuriko) for dusting work surface", ratioValue: 0.1,  defaultUnit: "parts", substitutions: ["potato starch", "rice flour"] },
+  "repoId": "master_japanese_mochi_001",
+  "parentRepoId": null,
+  "slug": "mochi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Moche de base japonaise",
+  "description": "Le riz glutineux cuit à la vapeur, coaxié dans une masse lisse, extensible et scintillante, le mochi uni épluché dans le kinako (farine de soja grillée) porte une terre calme, tandis que la pâte de haricots rouges qui se remplit sous la peau translucide est sucrée sans être saccharine.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "desserts",
+  "tags": [
+    "Mochi",
+    "Japonais",
+    "riz",
+    "glutineux",
+    "En effet.",
+    "Autres",
+    "kinako",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "mochi_batter",
-      instructions: "Combine the glutinous rice flour and sugar in a microwave-safe bowl. Add the water gradually while stirring with a spatula until completely smooth and lump-free. The batter will be thin — like very thick cream — and should pour off the spatula in a slow, even sheet. Pass it through a fine strainer if any lumps remain. Cover loosely with microwave-safe plastic wrap or a damp paper towel.",
-      visualCue: {
-        primaryTarget: "A uniformly smooth, thin, milk-white batter with no lumps or undissolved sugar grains. Falls in a slow, even sheet from the spatula.",
-        spectrum: [
-          { state: "Underdone", description: "Lumpy and heterogeneous. Sugar has not fully dissolved. Dry flour clumps float on the surface.", action: "Stir more vigorously and ensure the sugar has fully dissolved before microwaving. Lumps that remain will become chewy, rubbery patches in the finished mochi." },
-          { state: "Perfect",   description: "Pourable, silky-smooth, uniformly white. Leaves the spoon cleanly. Tastes faintly sweet and floury.", action: "Cover and microwave on high for 2 minutes for the first burst." },
-          { state: "Overdone",  description: "You've added too little water and the mixture is thick and dough-like before cooking — not a pourable batter.", action: "Add water a tablespoon at a time, stirring between additions, until the batter pours freely." },
-        ],
-      },
-      feelCue: "The batter should flow off the spatula in a smooth, even curtain — not drip in separate drops, but not pour like water. Between milk and condensed milk in viscosity.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de riz glutineux (mochiko ou shiratamako)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "shiratamako pour une texture plus soyeuse"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Set",
-      inputs: ["mochi_batter"],
-      outputState: "cooked_mochi",
-      instructions: "Microwave the covered batter on HIGH for 2 minutes. Remove, uncover, and stir vigorously — the outer edge will have cooked to a translucent, rubbery mass while the centre remains white and liquid. Stir to combine them, re-cover, and microwave again for 1 to 2 minutes until the entire mass is translucent, pulling away from the bowl sides, and glistening. Stir well between each burst. The dough should look uniformly glossy and slightly translucent, not chalky or opaque. Total microwave time: 4 to 6 minutes in 1-2 minute bursts.",
-      visualCue: {
-        primaryTarget: "A smooth, glossy, fully translucent (not chalky) mass that is uniformly cooked and pulls away from the bowl walls cleanly. Glistens in the light.",
-        spectrum: [
-          { state: "Underdone", description: "Opaque white patches remain, especially at the centre. The dough is two-toned and the uncooked parts look chalky and feel cold relative to the outer edges.", action: "Re-cover and microwave in further 1-minute bursts, stirring between, until the entire mass is uniformly translucent. Raw mochi starch is unpleasant and will be hard to work with." },
-          { state: "Perfect",   description: "Fully translucent, glossy, and smooth. The mass pulls away from the bowl as a single elastic unit. Very sticky and hot. Smells faintly like cooked rice.", action: "Let it cool in the bowl for 5 minutes, then transfer to a cornstarch-dusted surface to work while still pliable but cool enough to handle." },
-          { state: "Overdone",  description: "The mochi has gone rubbery, dense, and extremely tough. It resists stretching and has dried patches from repeated microwaving.", action: "A slightly over-cooked mochi can sometimes be rescued by kneading in a few drops of water on a wet surface. But severe over-cooking makes it unworkably stiff." },
-        ],
-      },
-      feelCue: "Poke the cooked mochi with a wet fingertip — it should feel uniformly elastic throughout, like a firm gummy bear, not firm on the outside and squishy in the middle. No cold or chalky spots.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau",
+      "ratioValue": 0.8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Cool",
-      inputs: ["cooked_mochi", "ing_06"],
-      outputState: "workable_mochi",
-      instructions: "Dust a clean work surface generously with cornstarch. Turn the hot mochi out onto the surface and dust the top as well. Let it cool for 5 to 10 minutes — it should be warm but comfortable to handle. Do not let it cool completely: cold mochi becomes stiff and tears when portioned. Divide into 8 equal pieces using a bench scraper or a knife dusted with cornstarch. Flatten each piece into a round disc about 8 cm in diameter, working quickly.",
-      visualCue: {
-        primaryTarget: "A warm, pliable, ivory-white mass that stretches smoothly without tearing. The cornstarch forms a dry, non-sticky coating on the surface. Pieces pull apart cleanly.",
-        spectrum: [
-          { state: "Underdone", description: "The mochi is still too hot to handle — steam rises and it sticks aggressively to hands and bench even with dusting.", action: "Wait 2 to 3 more minutes. Working too-hot mochi causes it to tear and the steam can burn. It also won't hold the filling shape." },
-          { state: "Perfect",   description: "Warm, smooth, and elastic. Pulls without tearing. Cornstarch dusting keeps it completely non-sticky. Feels like smooth, warm playdough.", action: "Portion and flatten the discs now — fill within the next 5 to 8 minutes before the mochi stiffens from cooling." },
-          { state: "Overdone",  description: "The mochi has cooled to room temperature and is now stiff, reluctant to stretch, and tears at the edges when flattened.", action: "Microwave for 15 to 20 seconds to rewarm and restore pliability. Re-dust with cornstarch before proceeding." },
-        ],
-      },
-      feelCue: "Press the mochi disc with three fingers — it should stretch evenly in all directions with gentle resistance, like stretching warm gum, without snapping back or tearing at the edges.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre de ricin",
+        "miel (réduire légèrement l'eau)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Fold",
-      inputs: ["workable_mochi", "ing_05", "ing_04"],
-      outputState: "finished_mochi",
-      instructions: "Roll a tablespoon-sized ball of anko between your palms to a smooth sphere and place it at the centre of each mochi disc. Gather the edges of the mochi up around the filling and pinch firmly together at the top, rotating and pleating as you go, until the seam is completely sealed with no filling visible. Pinch the seam tightly — a loose seam opens during handling. Turn seam-side down and roll gently between cupped palms to smooth the surface. Roll in kinako to coat. Arrange seam-side down on a tray. Eat at room temperature on the day they are made.",
-      visualCue: {
-        primaryTarget: "Smooth, slightly oval spheres with no visible seam. A uniform, matte, pale-tan kinako coat on every surface. No cracks or thin spots where the filling might be seen.",
-        spectrum: [
-          { state: "Underdone", description: "The seam is open or only loosely pinched. The mochi disc was not stretched thinly enough over the filling and the anko is pushing through a weak spot.", action: "Pinch the seam closed firmly and roll between cupped palms to seal. If the mochi has torn, press it gently together — it will re-fuse if still warm." },
-          { state: "Perfect",   description: "A smooth, unblemished exterior with the filling fully concealed. Even kinako coating. When held up to a light, you can faintly see the darker anko through the translucent mochi skin.", action: "Serve within 4 hours at room temperature. Do not refrigerate — cold stiffens the mochi and makes it unpleasantly tough." },
-          { state: "Overdone",  description: "The mochi skin was stretched so thin you can see the anko clearly through it, or it has split. Alternatively, the filling overpowers the delicate mochi texture.", action: "Use slightly less filling next time. A 1:1 ratio by weight of mochi to anko is the maximum — many prefer more mochi than filling." },
-        ],
-      },
-      feelCue: "A well-made mochi should feel cool and slightly yielding when pressed — not hard, not soft. The kinako coat should feel dry and powdery, like a gentle dusting of flour, not greasy or damp.",
+      "ingId": "ing_04",
+      "role": "Starch",
+      "name": "Kinako (farine de soja grillée) pour la poussière",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Graines de sésame grillées",
+        "poudre de matcha mélangée avec du sucre glace"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Pâte de haricots rouges (tsubuan ou koshian)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pâte de haricots blancs",
+        "Pâte de châtaigne sucrée"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Starch",
+      "name": "Cornstarch (katakuriko) pour la surface de travail",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fécule de pomme de terre",
+        "Farine de riz"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "mochi_batter",
+      "instructions": "Mélanger la farine de riz glutineuse et le sucre dans un bol micro-ondes. Ajouter progressivement l'eau en remuant avec une spatule jusqu'à ce qu'elle soit complètement lisse et sans grumeaux. La pâte sera mince — comme de la crème très épaisse — et devrait verser la spatule dans une feuille lente et uniforme. Passez-le à travers une fine souche si des morceaux restent. Couvrez-les de façon souple avec un enveloppement en plastique micro-ondes ou une serviette en papier humide.",
+      "visualCue": {
+        "primaryTarget": "Une pâte blanche au lait uniformément lisse et fine, sans grumeaux ni grains de sucre non dissous. Des chutes dans un drap lent, même de la spatule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Lumpy et hétérogène. Le sucre n'est pas complètement dissous. La farine sèche flotte à la surface.",
+            "action": "Mélanger plus vigoureusement et s'assurer que le sucre a complètement dissous avant de micro-enrouler. Les lumps qui restent deviendront des patchs caoutchouteux et croustillants dans le mochi fini."
+          },
+          {
+            "state": "Perfect",
+            "description": "Versable, soyeux, uniformément blanc. Laisse la cuillère propre. Goûte légèrement doux et farineux.",
+            "action": "Couvrir et micro-ondes haut pendant 2 minutes pour la première explosion."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez ajouté trop peu d'eau et le mélange est épais et pâte-comme avant la cuisson — pas une pâte versable.",
+            "action": "Ajouter une cuillère à soupe à la fois, en remuant entre les ajouts, jusqu'à ce que la pâte coule librement."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit couler de la spatule dans un rideau lisse, même — pas couler dans des gouttes séparées, mais ne pas verser comme de l'eau. Entre le lait et le lait condensé en viscosité."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Jeu",
+      "inputs": [
+        "mochi_batter"
+      ],
+      "outputState": "cooked_mochi",
+      "instructions": "Micro-ondes la pâte couverte sur HIGH pendant 2 minutes. Retirer, découvrir et remuer vigoureusement — le bord extérieur aura cuit à une masse translucide et caoutchouteuse, tandis que le centre restera blanc et liquide. Incorporer pour les combiner, recouvrir et micro-ondes de nouveau pendant 1 à 2 minutes jusqu'à ce que toute la masse soit translucide, s'éloigner des côtés du bol et briller. Bien mélanger entre chaque éclatement. La pâte doit être uniformément brillante et légèrement translucide, non crayeuse ou opaque. Durée totale du micro-ondes: 4 à 6 minutes en rafales de 1 à 2 minutes.",
+      "visualCue": {
+        "primaryTarget": "Une masse lisse, brillante, entièrement translucide (pas crayeuse) qui est uniformément cuite et s'éloigne des parois du bol proprement. Glistens dans la lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les taches blanches opaques demeurent, surtout au centre. La pâte est à deux tons et les parties non cuites semblent crayeuses et froides par rapport aux bords extérieurs.",
+            "action": "Récupérer et micro-ondes en une minute supplémentaires, en remuant entre, jusqu'à ce que la masse entière soit uniformément translucide. L'amidon cru de mochi est désagréable et sera difficile à travailler avec."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement translucide, brillant et lisse. La masse s'éloigne du bol en une seule unité élastique. Très collant et chaud. Ça sent peu comme du riz cuit.",
+            "action": "Laisser refroidir dans le bol pendant 5 minutes, puis transférer sur une surface pulvérisée en amidon de maïs pour travailler tout en restant souple mais assez frais pour être manipulé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mochi est devenu caoutchouteux, dense et extrêmement dur. Il résiste à l'étirement et a séché des patchs de microwaving répété.",
+            "action": "Un mochi légèrement surcuit peut parfois être secouru en pétrissant dans quelques gouttes d'eau sur une surface humide. Mais une trop grande cuisson la rend incontrôlable."
+          }
+        ]
+      },
+      "feelCue": "Cocher le mochi cuit avec un bout de doigt mouillé — il devrait se sentir uniformément élastique tout au long, comme un ours gommé ferme, pas ferme à l'extérieur et grinçant au milieu. Pas de taches froides ou crayeuses."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Frais",
+      "inputs": [
+        "cooked_mochi",
+        "ing_06"
+      ],
+      "outputState": "workable_mochi",
+      "instructions": "Poussez généreusement une surface de travail propre avec de la fécule de maïs. Tourner le mochi chaud sur la surface et poussièrer également le dessus. Laisser refroidir pendant 5 à 10 minutes — il devrait être chaud mais confortable à manipuler. Ne la laissez pas refroidir complètement : le moche froid devient raide et déchire lorsqu'il est coupé. Divisez en 8 pièces égales à l'aide d'un gratteur de banc ou d'un couteau à l'amidon de maïs. Aplatissez chaque pièce dans un disque rond d'environ 8 cm de diamètre, en travaillant rapidement.",
+      "visualCue": {
+        "primaryTarget": "Une masse chaude, souple, blanc ivoire qui s'étire facilement sans déchirer. La fécule de maïs forme un revêtement sec et non collant sur la surface. Les pièces se détachent proprement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mochi est encore trop chaud pour être manipulé — la vapeur monte et il colle agressivement aux mains et au banc même avec la poussière.",
+            "action": "Attendez encore 2 à 3 minutes. Le travail trop chaud de mochi provoque la déchirure et la vapeur peut brûler. Il ne tiendra pas non plus la forme de remplissage."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaud, lisse et élastique. Tire sans déchirer. La poussière d'amidon de maïs la maintient complètement non collante. C'est comme si c'était doux et chaud.",
+            "action": "Portion et aplatir les disques maintenant — remplir dans les 5 à 8 minutes avant que les mochi ne se rafraîchissent."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mochi a refroidi à la température ambiante et est maintenant raide, réticent à s'étirer, et déchire les bords lorsqu'il est aplati.",
+            "action": "Micro-ondes pendant 15 à 20 secondes pour réchauffer et restaurer la pliabilité. Repoudre avec de la fécule de maïs avant de procéder."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le disque de mochi avec trois doigts — il doit s'étirer uniformément dans toutes les directions avec une résistance douce, comme l'étirement de gomme chaude, sans casser ou déchirer les bords."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plier",
+      "inputs": [
+        "workable_mochi",
+        "ing_05",
+        "ing_04"
+      ],
+      "outputState": "finished_mochi",
+      "instructions": "Rouler une boule d'anko de taille à soupe entre vos paumes à une sphère lisse et la placer au centre de chaque disque de mochi. Rassemblez les bords du mochi autour du remplissage et pincez fermement en haut, en tournant et en plis au fur et à mesure, jusqu'à ce que la couture soit complètement scellée sans remplissage visible. Pincez fermement la couture — une couture lâche s'ouvre pendant la manipulation. Tournez le bord de la couture vers le bas et roulez doucement entre les palmiers en coupe pour lisser la surface. Rouler en kinako pour enrober. Disposer les coutures vers le bas sur un plateau. Mangez à la température ambiante le jour où ils sont faits.",
+      "visualCue": {
+        "primaryTarget": "Des sphères lisses, légèrement ovales sans couture visible. Un manteau kinako uniforme, mat et pâle sur chaque surface. Pas de fissures ou de taches fines où le remplissage pourrait être vu.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La couture est ouverte ou seulement légèrement pincée. Le disque de mochi n'était pas assez étendu sur le remplissage et l'anko pousse à travers un point faible.",
+            "action": "Pincez la couture ferme fermement et roulez entre les palmiers en coupe pour sceller. Si le moche est déchiré, appuyez - le doucement — il se réalimentera s'il est encore chaud."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un extérieur lisse et intact avec le remplissage entièrement dissimulé. Même le revêtement kinako. Lorsqu'on le tient jusqu'à une lumière, on peut peu voir l'anko plus foncé à travers la peau translucide de mochi.",
+            "action": "Servir dans les 4 heures à température ambiante. Ne réfrigérez pas — le froid raidit le moche et le rend désagréablement dur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau de mochi a été étirée si mince vous pouvez voir l'anko clairement à travers elle, ou il a fendu. Alternativement, le remplissage déborde la texture délicate du mochi.",
+            "action": "Utilisez un peu moins de remplissage la prochaine fois. Un rapport 1:1 en poids de mochi à anko est le maximum — beaucoup préfèrent plus de mochi que de remplissage."
+          }
+        ]
+      },
+      "feelCue": "Un moche bien fait doit se sentir frais et légèrement fléchir lorsqu'il est pressé — pas dur, pas doux. La couche de kinako doit se sentir sèche et poudreuse, comme une douce poussière de farine, pas grasse ou humide."
+    }
+  ]
 };

@@ -1,121 +1,326 @@
 export default {
-  repoId: "master_turkish_redlentilsoup_001",
-  parentRepoId: null,
-  slug: "red-lentil-soup",
-  author: "ForkRecipe Kitchen",
-  title: "Turkish Red Lentil Soup",
-  description: "Velvety blended soup of red lentils, cumin, and paprika finished with a swirl of chili-crimson brown butter — warming, silken, and deeply satisfying.",
-  cuisine: "Turkish",
-  culture: "Anatolian",
-  category: "grains",
-  tags: ["turkish", "anatolian", "lentil", "soup", "vegan", "blended", "comfort", "winter"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 2, sour: 2, bitter: 1, umami: 2, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Split red lentils, rinsed until water runs clear",  ratioValue: 300, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_02", role: "Allium",     name: "White onion, finely diced",                         ratioValue: 150, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves, minced",                             ratioValue: 3,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Carrot, peeled and roughly diced",                  ratioValue: 120, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Spice",      name: "Ground cumin",                                      ratioValue: 8,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Spice",      name: "Ground turmeric",                                   ratioValue: 4,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Spice",      name: "Sweet paprika",                                     ratioValue: 6,   defaultUnit: "g",  substitutions: ["smoked paprika"] },
-    { ingId: "ing_08", role: "Base",       name: "Tomato paste (double concentrate)",                 ratioValue: 30,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Fat",        name: "Olive oil",                                         ratioValue: 45,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_10", role: "Liquid",     name: "Vegetable stock (or water)",                        ratioValue: 1400,defaultUnit: "ml", substitutions: ["light chicken stock"] },
-    { ingId: "ing_11", role: "Acid",       name: "Fresh lemon juice",                                 ratioValue: 30,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_12", role: "Seasoning",  name: "Fine salt",                                         ratioValue: 10,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_13", role: "Fat",        name: "Unsalted butter",                                   ratioValue: 40,  defaultUnit: "g",  substitutions: ["olive oil for vegan"] },
-    { ingId: "ing_14", role: "Spice",      name: "Dried chili flakes (pul biber / Aleppo preferred)", ratioValue: 5,   defaultUnit: "g",  substitutions: ["regular chili flakes"] },
+  "repoId": "master_turkish_redlentilsoup_001",
+  "parentRepoId": null,
+  "slug": "red-lentil-soup",
+  "author": "ForkRecipe Kitchen",
+  "title": "Soupe de lentilles rouges turques",
+  "description": "Soupe veloutée de lentilles rouges, de cumin et de paprika finie avec un tourbillon de beurre brun chili-crimson - réchauffement, soyeux, et profondément satisfaisant.",
+  "cuisine": "Turquie",
+  "culture": "Anatolien",
+  "category": "grains",
+  "tags": [
+    "turc",
+    "anatolien",
+    "lentilles",
+    "Soupe",
+    "végétalien",
+    "mélangés",
+    "confort",
+    "hiver"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_09", "ing_02", "ing_04", "ing_03", "ing_08", "ing_05", "ing_06", "ing_07"],
-      outputState: "spiced_soup_base",
-      instructions: "Warm the olive oil in a large heavy pot over medium heat. Add onion and carrot and cook, stirring occasionally, until the onion is soft and translucent and the carrot has begun to soften — about 8 minutes. Add the garlic and cook 1 minute until fragrant. Add the tomato paste and stir vigorously, cooking until it darkens from bright red to a deeper brick color, about 2 minutes. Add the cumin, turmeric, and paprika and stir constantly for 30 seconds until the spices bloom and become very fragrant.",
-      visualCue: {
-        primaryTarget: "The tomato paste has darkened to a deep brick-red and is sticking slightly to the pot. The spices are coating the vegetables and the pot smells of toasted cumin and paprika.",
-        spectrum: [
-          { state: "Underdone", description: "Tomato paste is still bright red and hasn't darkened. Spices smell raw and pungent rather than toasty.", action: "Continue stirring over medium heat — the paste needs to caramelize against the hot pot." },
-          { state: "Perfect",   description: "Paste has deepened to a rich, dark red-brown. Spices have bloomed: fragrant, toasty, and slightly sweet. The bottom of the pot shows a lightly stuck, dark film that will deglaze into flavor.", action: "Add lentils and stock immediately." },
-          { state: "Overdone",  description: "Spices smell bitter and sharp. The paste has turned very dark brown or black at the edges.", action: "Add a splash of stock immediately to deglaze and cool the pan. The bitterness may fade once diluted." },
-        ],
-      },
-      feelCue: "The paste should feel slightly tacky when you drag a spoon through it — you want resistance against the pot, telling you the moisture has cooked off and the sugars are concentrating.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Lentilles rouges fendues, rincées jusqu'à ce que l'eau soit claire",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["spiced_soup_base", "ing_01", "ing_10", "ing_12"],
-      outputState: "cooked_lentil_soup",
-      instructions: "Add the rinsed lentils to the pot and stir to coat them in the spiced base. Pour in the stock, add salt, and bring to a boil. Reduce heat, cover partially, and simmer for 20–25 minutes, stirring occasionally, until the lentils have completely dissolved into the liquid and the soup is thick and homogeneous.",
-      visualCue: {
-        primaryTarget: "The soup is a uniform, thick, warm-orange liquid — no distinct lentil shapes visible. It should have the consistency of a pourable cream soup.",
-        spectrum: [
-          { state: "Underdone", description: "Individual lentil pieces are still visible and the liquid is thin and separating. Lentils taste chalky.", action: "Continue simmering, covered, for 5–10 more minutes. Red lentils dissolve readily — the heat just needs more time." },
-          { state: "Perfect",   description: "Completely smooth, thick, and a deep orange-gold color. Stirs like a loose porridge. Tastes earthy, sweet, and deeply savory.", action: "Blend until completely smooth, then adjust seasoning and stir in lemon juice." },
-          { state: "Overdone",  description: "Soup has reduced too much and is beginning to stick and spit. It is very thick and difficult to stir.", action: "Add hot stock or water to thin and remove from heat. It will thicken further when rested." },
-        ],
-      },
-      feelCue: "Rub a spoonful of the soup between your fingers — it should feel perfectly smooth, with no graininess from undissolved starch.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon blanc, finement coupé en dés",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["cooked_lentil_soup", "ing_11"],
-      outputState: "smooth_lentil_soup",
-      instructions: "Use a hand blender directly in the pot and blend until completely smooth and silky — 1–2 minutes. Alternatively blend in batches in a countertop blender, filling no more than half full each time. Stir in the lemon juice. Taste and adjust salt and lemon — the soup should be bright and acidic enough to make the back of your throat tingle gently. Return to a gentle simmer and adjust consistency with a little hot water if needed.",
-      visualCue: {
-        primaryTarget: "A completely smooth, glossy, deep-orange soup — the color of late afternoon sunlight. No lumps, threads, or graininess visible.",
-        spectrum: [
-          { state: "Underdone", description: "Some texture remains — the soup looks slightly mottled and threads of carrot or onion are visible.", action: "Continue blending. At this stage another 30 seconds of blending will make a significant difference." },
-          { state: "Perfect",   description: "Perfectly smooth, uniform orange, with a glossy surface. Lemon juice has brightened the color slightly. The soup coats the back of a spoon and leaves a clean, thin film.", action: "Prepare the chili butter topping and serve." },
-          { state: "Overdone",  description: "Soup is very pale — over-blended and aerated, almost frothy.", action: "Let it rest off the heat for 2 minutes to allow the foam to settle before serving." },
-        ],
-      },
-      feelCue: "The blended soup should feel like velvet when you draw a finger through a pooled spoonful — absolutely no grain, no resistance, just smooth weight.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 3,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Reduce",
-      inputs: ["ing_13", "ing_14"],
-      outputState: "chili_butter",
-      instructions: "Melt the butter in a small saucepan over medium heat. Cook, swirling, until the milk solids turn golden brown and it smells of hazelnuts. Remove from heat and immediately add the chili flakes — they will sizzle and bloom in the hot butter. The butter will turn a deep brick-red almost instantly.",
-      visualCue: {
-        primaryTarget: "The butter is a deep, crimson-tinged brown with chili-red flakes suspended throughout. The sizzle has subsided and the oil is still and glowing.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is still yellow and foamy; chili flakes are barely colored.", action: "Return briefly to heat until the butter browns and the chili blooms." },
-          { state: "Perfect",   description: "Deep amber-red butter with vivid chili. The kitchen smells of toasted spice, hazelnut, and smoke.", action: "Drizzle immediately over bowls of soup." },
-          { state: "Overdone",  description: "Butter is very dark brown and the chili smells acrid and burnt.", action: "Discard and start fresh — burnt chili butter will make the whole dish bitter." },
-        ],
-      },
-      feelCue: "The finished chili butter should feel liquid but substantial when tilted in the pan — not water-thin, but a rich, heavy oil with tiny suspended chili fragments.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Carotte, pelée et coupée en dés",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Season",
-      inputs: ["smooth_lentil_soup", "chili_butter"],
-      outputState: "finished_red_lentil_soup",
-      instructions: "Ladle the hot soup into warmed bowls. Swirl a generous teaspoon of the chili butter across the surface of each bowl in a spiral. Serve with lemon wedges and crusty bread on the side. The butter will bleed into the soup as the diner stirs — this is correct and beautiful.",
-      visualCue: {
-        primaryTarget: "A deep orange bowl of soup with a crimson swirl of chili butter across the surface, bleeding red-orange trails at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Chili butter is added in too small an amount — a thin, pale streak with no color impact.", action: "Add more butter — the swirl should be vivid and generous, not timid." },
-          { state: "Perfect",   description: "A bold crimson spiral on deep orange. The butter floats on the surface and the chili flakes dot the edge of the swirl. The contrast is visually striking.", action: "Serve immediately while the temperature and color contrast are at their best." },
-          { state: "Overdone",  description: "The butter has been fully stirred in before serving and the soup is now uniformly pale orange with no visual drama.", action: "Serve as is. It will still taste excellent — the visual effect is gone but the chili flavor is now distributed throughout." },
-        ],
-      },
-      feelCue: "The soup should feel like warm liquid velvet when sipped — it coats the tongue with weight and warmth, the heat building slowly at the back of the throat from the chili butter.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Paprika doux",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika fumé"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Base",
+      "name": "Pâte de tomates (double concentré)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Liquid",
+      "name": "Matières végétales (ou eau)",
+      "ratioValue": 1400,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Poulet léger"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile d'olive pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Spice",
+      "name": "Flacons de chili séchés (Bibardage d'pul / Alep préféré)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "flocons de chili réguliers"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_09",
+        "ing_02",
+        "ing_04",
+        "ing_03",
+        "ing_08",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "spiced_soup_base",
+      "instructions": "Chauffer l'huile d'olive dans un grand pot lourd à feu moyen. Ajouter l'oignon et la carotte et cuire, en remuant de temps en temps, jusqu'à ce que l'oignon soit doux et translucide et que la carotte commence à ramollir — environ 8 minutes. Ajouter l'ail et cuire 1 minute jusqu'à parfumer. Ajouter la pâte de tomate et remuer vigoureusement, jusqu'à ce qu'elle s'assombrisse du rouge vif à une couleur brique plus profonde, environ 2 minutes. Ajouter le cumin, le curcuma et le paprika et remuer constamment pendant 30 secondes jusqu'à ce que les épices fleurissent et deviennent très parfumées.",
+      "visualCue": {
+        "primaryTarget": "La pâte de tomate a foncé jusqu'à un rouge-brique profond et colle légèrement au pot. Les épices recouvrent les légumes et la casserole sent le cumin grillé et le paprika.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte de tomates est encore rouge vif et n'a pas obscurci. Les épices sentent crus et piquants plutôt que grillés.",
+            "action": "Continuer à remuer à feu moyen — la pâte doit caraméliser contre le pot chaud."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte s'est approfondie jusqu'à un riche brun-rouge foncé. Les épices ont fleuri: parfumé, grillé et légèrement sucré. Le fond du pot montre un film sombre légèrement collé qui déglacera dans la saveur.",
+            "action": "Ajouter immédiatement les lentilles et le stock."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les épices sentent amers et tranchants. La pâte est devenue brun foncé ou noir sur les bords.",
+            "action": "Ajouter un jet de stock immédiatement pour déglacer et refroidir la poêle. L'amertume peut disparaître une fois diluée."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir légèrement collante quand vous faites glisser une cuillère à travers elle — vous voulez une résistance contre le pot, vous disant que l'humidité a cuit et les sucres se concentrent."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "spiced_soup_base",
+        "ing_01",
+        "ing_10",
+        "ing_12"
+      ],
+      "outputState": "cooked_lentil_soup",
+      "instructions": "Ajouter les lentilles rincées dans le pot et remuer pour les enrober dans la base épicée. Verser le bouillon, ajouter le sel et porter à ébullition. Réduire le feu, couvrir partiellement et laisser mijoter de 20 à 25 minutes, en remuant occasionnellement, jusqu'à ce que les lentilles se soient complètement dissoutes dans le liquide et que la soupe soit épaisse et homogène.",
+      "visualCue": {
+        "primaryTarget": "La soupe est un liquide uniforme, épais, chaud-orange — aucune forme de lentilles distincte visible. Il devrait avoir la consistance d'une soupe à la crème versable.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pièces individuelles de lentilles sont encore visibles et le liquide est mince et se sépare. Les lentilles ont un goût crayeux.",
+            "action": "Continuer à mijoter, couvert, pendant 5 à 10 minutes. Les lentilles rouges se dissolvent facilement — la chaleur a besoin de plus de temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, épaisse et d'une couleur orange-or profonde. Ça mord comme un porridge. Goûte terreux, doux et profondément salé.",
+            "action": "Mélanger jusqu'à ce qu'il soit complètement lisse, puis assaisonner et mélanger le jus de citron."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe a trop diminué et commence à coller et à cracher. Il est très épais et difficile à remuer.",
+            "action": "Ajouter le bouillon chaud ou l'eau à mincer et retirer de la chaleur. Il s'épaissira encore plus quand il sera reposé."
+          }
+        ]
+      },
+      "feelCue": "Frottez une cuillerée de soupe entre vos doigts — elle devrait se sentir parfaitement lisse, sans grain de l'amidon non dissous."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "cooked_lentil_soup",
+        "ing_11"
+      ],
+      "outputState": "smooth_lentil_soup",
+      "instructions": "Utilisez un mélangeur à main directement dans la casserole et mélangez jusqu'à ce qu'il soit complètement lisse et soyeux — 1-2 minutes. Alternativement mélanger en lots dans un mélangeur de comptoir, ne remplissant pas plus de la moitié à chaque fois. Incorporer le jus de citron. Goûtez et ajustez le sel et le citron – la soupe doit être suffisamment brillante et acide pour que l'arrière de votre gorge fourmille doucement. Retourner à une mijoter douce et ajuster la consistance avec un peu d'eau chaude si nécessaire.",
+      "visualCue": {
+        "primaryTarget": "Une soupe entièrement lisse, brillante et orangée, la couleur de la fin de l'après - midi. Pas de grumeaux, de fils ou de grains visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il reste une texture: la soupe semble légèrement tachetée et les fils de carotte ou d'oignon sont visibles.",
+            "action": "Continuez à mélanger. À ce stade, 30 secondes de mélange feront une différence significative."
+          },
+          {
+            "state": "Perfect",
+            "description": "Parfaitement lisse, orange uniforme, avec une surface brillante. Le jus de citron a légèrement éclairci la couleur. La soupe recouvre l'arrière d'une cuillère et laisse un film propre et fin.",
+            "action": "Préparer la garniture de beurre de chili et servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe est très pâle — surmenée et aérée, presque mousseuse.",
+            "action": "Laisser reposer le feu pendant 2 minutes pour permettre à la mousse de se déposer avant de servir."
+          }
+        ]
+      },
+      "feelCue": "La soupe mélangée devrait se sentir comme du velours quand vous dessinez un doigt à travers une cuillère en commun — absolument aucun grain, aucune résistance, juste un poids lisse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Réduire",
+      "inputs": [
+        "ing_13",
+        "ing_14"
+      ],
+      "outputState": "chili_butter",
+      "instructions": "Faire fondre le beurre dans une petite casserole à feu moyen. Cuire, en tourbillonnant, jusqu'à ce que les solides de lait deviennent dorés et qu'ils sentent les noisettes. Retirer du feu et ajouter immédiatement les flocons de chili — ils crèveront et fleuriront dans le beurre chaud. Le beurre va tourner un rouge brique profond presque instantanément.",
+      "visualCue": {
+        "primaryTarget": "Le beurre est un brun cramoisi profond avec des flocons de chili-rouge suspendus. Le grésil s'est effondré et l'huile est immobile et éclatante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est encore jaune et mousseux; les flocons de chili sont à peine colorés.",
+            "action": "Revenez brièvement au feu jusqu'à ce que le beurre brunisse et que le chili fleurisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Beurre rouge-ambre profond avec chili vif. La cuisine sent les épices grillées, les noisettes et la fumée.",
+            "action": "Arrosez immédiatement sur des bols de soupe."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre est brun très foncé et le chili sent acride et brûlé.",
+            "action": "Jeter et commencer frais — le beurre de chili brûlé rendra tout le plat amer."
+          }
+        ]
+      },
+      "feelCue": "Le beurre de chili fini devrait se sentir liquide mais substantiel lorsqu'il est incliné dans la poêle — pas l'eau-mince, mais une huile riche et lourde avec de minuscules fragments de chili suspendus."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Saison",
+      "inputs": [
+        "smooth_lentil_soup",
+        "chili_butter"
+      ],
+      "outputState": "finished_red_lentil_soup",
+      "instructions": "Déposer la soupe chaude dans des bols chauds. Tourner une généreuse cuillère à café du beurre de chili sur la surface de chaque bol en spirale. Servir avec des quartiers de citron et du pain croustillant sur le côté. Le beurre saignera dans la soupe au fur et à mesure que le dîner remuera — c'est exact et beau.",
+      "visualCue": {
+        "primaryTarget": "Un bol de soupe orange foncé avec un tourbillon de beurre de chili sur la surface, ensanglantantant les sentiers rouge-orange aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre de chili est ajouté en trop petite quantité — une mince et pâle stries sans impact de couleur.",
+            "action": "Ajouter plus de beurre — le tourbillon doit être vif et généreux, et non timide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une spirale cramoisi sur l'orange profonde. Le beurre flotte sur la surface et les flocons de chili pointent le bord du tourbillon. Le contraste est frappant visuellement.",
+            "action": "Servir immédiatement pendant que la température et le contraste de couleur sont à leur meilleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre a été complètement agité avant de servir et la soupe est maintenant uniformément orange pâle sans drame visuel.",
+            "action": "Servez comme il est. Il aura encore un excellent goût — l'effet visuel est parti mais la saveur de chili est maintenant distribuée tout au long."
+          }
+        ]
+      },
+      "feelCue": "La soupe doit se sentir comme du velours liquide chaud lorsqu'elle est sirotée — elle enveloppe la langue de poids et de chaleur, la chaleur se construisant lentement à l'arrière de la gorge du beurre de chili."
+    }
+  ]
 };

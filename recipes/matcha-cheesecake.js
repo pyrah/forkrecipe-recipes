@@ -1,112 +1,293 @@
 export default {
-  repoId: "master_japanese_matcha_cheesecake_001",
-  parentRepoId: null,
-  slug: "matcha-cheesecake",
-  author: "ForkRecipe Kitchen",
-  title: "No-Bake Matcha Cheesecake",
-  description: "A cool, dense Japanese-style cheesecake with the quiet bitterness of ceremonial-grade matcha cutting through rich cream cheese, set just enough to slice clean on a crumbled digestive biscuit base — vivid green, barely sweet, deeply fragrant.",
-  cuisine: "Japanese",
-  culture: "Japanese-Western Fusion",
-  category: "desserts",
-  tags: ["matcha", "cheesecake", "japanese", "no-bake", "green-tea", "dessert", "make-ahead"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "5 hr 25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 1, sour: 1, bitter: 3, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Digestive biscuits (crushed fine)",          ratioValue: 100, defaultUnit: "parts", substitutions: ["graham crackers", "Hobnobs", "sable shortbread"] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter (melted)",                   ratioValue: 40,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Dairy",      name: "Full-fat cream cheese (room temperature)",   ratioValue: 200, defaultUnit: "parts", substitutions: ["mascarpone for a richer, less tangy version"] },
-    { ingId: "ing_04", role: "Dairy",      name: "Heavy cream (cold)",                        ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Icing sugar (sifted)",                      ratioValue: 40,  defaultUnit: "parts", substitutions: ["caster sugar"] },
-    { ingId: "ing_06", role: "Umami",      name: "Ceremonial-grade matcha powder",             ratioValue: 8,   defaultUnit: "parts", substitutions: ["culinary-grade matcha (increase to 10 parts)"] },
-    { ingId: "ing_07", role: "Hydration",  name: "Hot water (just off the boil, for matcha paste)", ratioValue: 12, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Acid",       name: "Lemon juice (freshly squeezed)",             ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Binder",     name: "Sheet gelatin (gold, 200 bloom)",            ratioValue: 4,   defaultUnit: "parts", substitutions: ["1.5 tsp powdered gelatin bloomed in 2 tbsp cold water"] },
-    { ingId: "ing_10", role: "Garnish",    name: "Matcha powder (for dusting)",               ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_japanese_matcha_cheesecake_001",
+  "parentRepoId": null,
+  "slug": "matcha-cheesecake",
+  "author": "ForkRecipe Kitchen",
+  "title": "No-Bake Matcha Cheesecake",
+  "description": "Un gâteau au fromage frais et dense de style japonais avec l'amertume tranquille de matcha de qualité cérémonielle coupant à travers le riche fromage à la crème, serti juste assez pour trancher propre sur une base de biscuits digestif émiettée - vert vif, à peine sucré, profondément parfumé.",
+  "cuisine": "Japonais",
+  "culture": "Fusion japonaise-occidentale",
+  "category": "desserts",
+  "tags": [
+    "matcha",
+    "Cake au fromage",
+    "Japonais",
+    "Pas de cuisson",
+    "thé vert",
+    "dessert",
+    "marque à l'avance"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "5 hr 25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 1,
+    "bitter": 3,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Press",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "biscuit_base",
-      instructions: "Crush the digestive biscuits in a food processor to a fine, even sand — no large chunks or sandy dust, a uniform medium crumb. Alternatively, seal them in a zip-lock bag and roll with a rolling pin. Stir in the melted butter until every crumb is evenly coated — the mixture should look like damp sand that just clumps when pressed. Tip into the base of a 20 cm (8 inch) springform tin lined with baking parchment. Use the flat base of a glass to press the crumbs into a compact, even, level layer. Refrigerate for 15 minutes to set the butter.",
-      visualCue: {
-        primaryTarget: "An even, compact, flat biscuit layer that holds its shape when the tin is tilted and doesn't crumble when the edge is pressed with a fingernail.",
-        spectrum: [
-          { state: "Underdone", description: "Crumbs are too coarse or the layer is uneven, with visible mounds and valleys.", action: "Press more firmly and evenly with the glass base. A loose base crumbles when sliced." },
-          { state: "Perfect",   description: "Compact, flat, even, and slightly dark from the butter. Firm to the touch and holds a clean edge when pressed.", action: "Refrigerate while making the filling." },
-          { state: "Overdone",  description: "Too much butter has made the base greasy — it pools at the edges and the surface looks shiny and wet.", action: "Blot gently with paper towel and refrigerate — the excess butter will firm up when chilled." },
-        ],
-      },
-      feelCue: "Press your palm flat on the chilled base — it should feel cold, firm, and faintly gritty, like cool, compacted sand. If it yields or feels soft, refrigerate longer before adding the filling.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Biscuits digestifs (amende écrue)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Graham craquelins",
+        "Hobbs",
+        "pain court de sable"
+      ]
     },
     {
-      nodeId: "step_2", action: "Bloom",
-      inputs: ["ing_09"],
-      outputState: "bloomed_gelatin",
-      instructions: "Submerge the gelatin sheets in cold water for 5–8 minutes until completely floppy and translucent. Lift them out and squeeze out the excess water — the gelatin should weigh almost nothing in your palm. Set aside. For powdered gelatin, sprinkle it over 2 tablespoons of cold water and leave it to absorb into a firm sponge before heating. Gelatin enables the no-bake filling to hold its shape while maintaining a creamy, barely-set texture rather than a rubbery one.",
-      visualCue: {
-        primaryTarget: "Fully floppy, translucent gelatin sheets that drape over the fingers — no stiff or opaque spots remaining.",
-        spectrum: [
-          { state: "Underdone", description: "Sheets are still stiff and opaque at the edges, not fully hydrated.", action: "Return to the cold water for another 2 minutes." },
-          { state: "Perfect",   description: "Fully limp, clear, and cool. Drapes without resistance. Easy to squeeze dry.", action: "Squeeze gently and melt into warm cream in step 3." },
-          { state: "Overdone",  description: "Sheets have begun dissolving into the water, leaving a cloudy bloom.", action: "If mostly intact, proceed. If dissolved significantly, start with fresh sheets — you've lost gelatin strength." },
-        ],
-      },
-      feelCue: "A bloomed gelatin sheet feels like a cool, wet piece of plastic film — completely pliable, weightless, and slightly slippery between the fingers.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé (mellé)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Whisk",
-      inputs: ["ing_06", "ing_07"],
-      outputState: "matcha_paste",
-      instructions: "Sift the matcha powder into a small bowl — sifting is non-negotiable, as matcha clumps badly and will leave green specks in the filling if not dispersed. Add the hot water (about 70–80°C, just off the boil — not boiling, which degrades the vivid green and the delicate flavor). Using a small whisk or matcha chasen, whisk in tight 'M' or 'W' motions until the powder is fully dissolved into a smooth, vivid green paste with no lumps. Melt the squeezed gelatin in 2 tablespoons of warm cream in a small saucepan over very low heat, swirling until dissolved. Stir the gelatin into the matcha paste.",
-      visualCue: {
-        primaryTarget: "A smooth, intensely vivid jade-green paste with no lumps, clumps, or floating powder — uniform and glossy.",
-        spectrum: [
-          { state: "Underdone", description: "Green specks and lumps of powder are still visible — it looks mottled, not smooth.", action: "Sift the matcha first and whisk more vigorously. Lumps in the paste will show as dark spots in the finished cheesecake." },
-          { state: "Perfect",   description: "Bright, even jade-green, smooth and lump-free. The aroma is grassy, vegetal, and intensely fragrant.", action: "Cool the paste slightly before folding into the cream cheese mixture." },
-          { state: "Overdone",  description: "Matcha was mixed with boiling water and has gone an olive-drab, dull green.", action: "Still usable but the color and delicate flavor are compromised. Keep the water temperature at 70–80°C." },
-        ],
-      },
-      feelCue: "Taste a tiny amount of the paste on a fingertip — the bitterness should be immediate and intense, then give way to the grassy, umami sweetness. This concentrated paste is what gives the cheesecake its assertive matcha character.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Fromage à la crème plein gras (température ambiante)",
+      "ratioValue": 200,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Mascarpone pour une version plus riche et moins tannante"
+      ]
     },
     {
-      nodeId: "step_4", action: "Fold",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_08", "matcha_paste", "bloomed_gelatin"],
-      outputState: "cheesecake_filling",
-      instructions: "Beat the room-temperature cream cheese with the icing sugar and lemon juice until completely smooth and lump-free — 2 minutes with a hand mixer. Fold in the matcha-gelatin paste until evenly colored. In a cold bowl, whip the cold heavy cream to firm peaks. Fold the whipped cream into the matcha cream cheese mixture in three additions, from the bottom up, cutting and folding gently to retain the volume. The final filling should be airy, vivid green, and hold a soft peak.",
-      visualCue: {
-        primaryTarget: "A smooth, vivid jade-green mousse-like filling — uniformly colored, airy, and holding a soft peak — with no white streaks of cream cheese or whipped cream.",
-        spectrum: [
-          { state: "Underdone", description: "White streaks of unmixed cream cheese or whipped cream are visible through the green. The texture is uneven.", action: "Fold 2–3 more times, scraping the bottom of the bowl to catch unmixed white patches." },
-          { state: "Perfect",   description: "Uniformly jade-green, smooth, billowy, holds a soft peak. Smells strongly of matcha. Falls off the spatula in slow, airy folds.", action: "Pour onto the chilled base and smooth the surface." },
-          { state: "Overdone",  description: "The cream has been over-folded and deflated — the filling looks dense and heavy, barely holding its structure.", action: "Still functional; the cheesecake will be denser and creamier rather than airy. Pour immediately." },
-        ],
-      },
-      feelCue: "Lift a spatula full: the filling should hold a soft, lazy mound for a moment before slowly settling — airy and cool, like mousse. If it runs off the spatula, it has been over-folded or the cream wasn't whipped enough.",
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Crème lourde (froid)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Set",
-      inputs: ["cheesecake_filling", "biscuit_base", "ing_10"],
-      outputState: "finished_matcha_cheesecake",
-      instructions: "Pour the filling over the chilled biscuit base and smooth the top with an offset spatula, spreading to the edges. Tap the tin gently on the counter twice to settle any air bubbles. Cover with cling film and refrigerate for a minimum of 4 hours, or overnight — the gelatin needs time to set fully and the flavors to develop. Before serving, dust the surface lightly with sifted matcha powder through a fine-mesh sieve. Release the springform and cut with a hot, wiped knife for clean slices.",
-      visualCue: {
-        primaryTarget: "A smooth, vivid green cheesecake with a flat, even surface and a clean green matcha dusting — set firmly enough to hold clean edges when sliced.",
-        spectrum: [
-          { state: "Underdone", description: "The filling trembles too much when the tin is nudged — center is still very soft and would slump when unclipped.", action: "Refrigerate longer — at least another 2 hours. Rushing a gelatin set results in a cake that flows rather than holds." },
-          { state: "Perfect",   description: "Holds its dome cleanly, just trembles at the center when tapped, slices with a clean, smooth face. The green is vivid, the dusting matte and even.", action: "Serve cold. Keeps refrigerated for up to 2 days." },
-          { state: "Overdone",  description: "Set for too long or too much gelatin — rubbery, bouncy, and holds a sharp shape with no trembling.", action: "Still tastes correct; texture is less refined. Use slightly less gelatin next time." },
-        ],
-      },
-      feelCue: "Press the surface gently with a fingertip: it should give just slightly and spring back — not hard like rubber, not liquid soft. Cold, creamy, and faintly yielding, like the best cheesecake always is.",
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre glacé",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre de ricin"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "Poudre de matcha de qualité cérémonielle",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "matcha culinaire (augmentation à 10 parties)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Hydration",
+      "name": "Eau chaude (juste à ébullition, pour la pâte de matcha)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "Jus de citron (fraîchement pressé)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Binder",
+      "name": "Feuille gélatine (or, 200 fleurs)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1,5 c. à thé gélatine pulvérisée dans 2 c. à thé d'eau froide"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Poudre de Matcha (pour la poussière)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Appuyez sur",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "biscuit_base",
+      "instructions": "Écraser les biscuits digestifs dans un robot culinaire à un sable fin et uniforme — pas de gros morceaux ou de poussière de sable, une miette moyenne uniforme. Alternativement, scellez-les dans un sac à fermeture éclair et roulez avec un rouleau. Incorporer le beurre fondu jusqu'à ce que chaque miette soit uniformément enrobée — le mélange doit ressembler à du sable humide qui s'empiète simplement lorsqu'il est pressé. Astuce dans la base d'une étain printanière de 20 cm (8 pouces) doublée de parchemin de cuisson. Utilisez la base plate d'un verre pour presser les miettes dans une couche compacte, uniforme, de niveau. Réfrigérer pendant 15 minutes pour mettre le beurre.",
+      "visualCue": {
+        "primaryTarget": "Une couche uniforme, compacte et plate qui tient sa forme lorsque l'étain est incliné et ne s'écroule pas lorsque le bord est pressé avec un ongle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les miettes sont trop grossières ou la couche est inégale, avec des monticules et des vallées visibles.",
+            "action": "Appuyez plus fermement et uniformément avec la base en verre. Une base lâche s'écroule en tranches."
+          },
+          {
+            "state": "Perfect",
+            "description": "Compact, plat, uniforme et légèrement sombre du beurre. Ferme au toucher et tient un bord propre lorsqu'il est pressé.",
+            "action": "Réfrigérer pendant le remplissage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de beurre a rendu la base grasse — elle se jette aux bords et la surface semble brillante et humide.",
+            "action": "Bloquez doucement avec une serviette en papier et réfrigérez - l'excès de beurre se raffermira lorsqu'il sera réfrigéré."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur votre paume à plat sur la base réfrigérée — il devrait se sentir froid, ferme et légèrement gritté, comme du sable frais et compacté. Si elle donne ou se sent douce, réfrigérer plus longtemps avant d'ajouter le remplissage."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bloom",
+      "inputs": [
+        "ing_09"
+      ],
+      "outputState": "bloomed_gelatin",
+      "instructions": "Submerger les feuilles de gélatine dans l'eau froide pendant 5 à 8 minutes jusqu'à ce qu'elles soient complètement flopées et translucides. Soulevez-les et pressez l'excès d'eau — la gélatine ne devrait pas peser presque rien dans votre paume. Mettez de côté. Pour la gélatine pulvérisée, arrosez-la sur 2 cuillerées à soupe d'eau froide et laissez-la absorber dans une éponge ferme avant de chauffer. La gélatine permet au remplissage sans cuisson de tenir sa forme tout en conservant une texture crémeuse et à peine fixe plutôt qu'en caoutchouc.",
+      "visualCue": {
+        "primaryTarget": "Feuilles de gélatine entièrement molles et translucides qui drapent sur les doigts — il ne reste pas de taches raides ou opaques.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les feuilles sont toujours rigides et opaques aux bords, pas complètement hydratées.",
+            "action": "Retourner à l'eau froide pendant encore 2 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement boiteux, transparent et frais. Draps sans résistance. Facile à serrer à sec.",
+            "action": "Presser doucement et fondre en crème chaude à l'étape 3."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les feuilles ont commencé à se dissoudre dans l'eau, laissant une floraison nuageuse.",
+            "action": "Si la plupart sont intacts, procédez. Si elle est dissoute de façon significative, commencez par des feuilles fraîches — vous avez perdu de la force gélatine."
+          }
+        ]
+      },
+      "feelCue": "Une feuille de gélatine fleurie ressemble à un morceau de film plastique frais et humide, complètement souple, sans poids et légèrement glissant entre les doigts."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "matcha_paste",
+      "instructions": "Sirotez la poudre de matcha dans un petit bol — le tamisage n'est pas négociable, car le matcha s'agrippe mal et laissera des taches vertes dans le remplissage, sinon dispersé. Ajouter l'eau chaude (environ 70 à 80 °C, juste hors de l'ébullition — sans bouillir, ce qui dégrade le vert vif et la saveur délicate). À l'aide d'un petit fouet ou d'un matcha, fouetter dans des mouvements serrés 'M' ou 'W' jusqu'à ce que la poudre soit complètement dissoute dans une pâte verte lisse et vive sans grumeaux. Faire fondre la gélatine pressée dans 2 cuillerées à soupe de crème chaude dans une petite casserole à feu très doux, en tourbillonnant jusqu'à dissolution. Incorporer la gélatine dans la pâte de matcha.",
+      "visualCue": {
+        "primaryTarget": "Une pâte jade-verte lisse et intense, sans grumeaux, ni grumeaux, ni poudre flottante — uniforme et brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les taches vertes et les morceaux de poudre sont encore visibles — il semble tacheté, pas lisse.",
+            "action": "Sift le matcha d'abord et fouetter plus vigoureusement. Les lumps dans la pâte montreront comme taches sombres dans le gâteau au fromage fini."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lumineux, même vert jade, lisse et sans bosse. L'arôme est herbacé, végétal et intensément parfumé.",
+            "action": "Laisser refroidir légèrement la pâte avant de la plier dans le mélange de fromage à la crème."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le Matcha a été mélangé avec de l'eau bouillante et est devenu un olive-drabe vert terne.",
+            "action": "Toujours utilisable mais la couleur et la saveur délicate sont compromises. Conserver la température de l'eau à 70-80°C."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite quantité de pâte sur un bout de doigt — l'amertume doit être immédiate et intense, puis laissez place à la douceur umami herbacée. Cette pâte concentrée donne au cheesecake son caractère de matcha affirmé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plier",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_08",
+        "matcha_paste",
+        "bloomed_gelatin"
+      ],
+      "outputState": "cheesecake_filling",
+      "instructions": "Battre le fromage à la crème à température ambiante avec le sucre glaçant et le jus de citron jusqu'à ce qu'il soit complètement lisse et sans morceaux — 2 minutes avec un mélangeur à main. Plier dans la pâte de matcha-gélatine jusqu'à coloration uniforme. Dans un bol froid, fouetter la crème lourde froide aux pics fermes. Plier la crème fouettée dans le mélange de fromage à la crème de matcha en trois ajouts, du bas vers le haut, couper et plier doucement pour conserver le volume. Le remplissage final doit être aéré, vert vif, et tenir un pic doux.",
+      "visualCue": {
+        "primaryTarget": "Un remplissage lisse et vif en mousse vert jade — uniformément coloré, aéré et tenant un pic doux — sans stries blanches de fromage à la crème ou de crème fouettée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries blanches de fromage à la crème non mélangé ou de crème fouettée sont visibles à travers le vert. La texture est inégale.",
+            "action": "Plier encore 2 à 3 fois, racler le fond du bol pour attraper des taches blanches non mélangées."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement vert jade, lisse, bouffant, tient un pic doux. Ça sent fortement le matcha. Des chutes de la spatule dans des plis lents et aérés.",
+            "action": "Verser sur la base réfrigérée et lisser la surface."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème a été surpliée et dégonflée — le remplissage semble dense et lourd, tenant à peine sa structure.",
+            "action": "Toujours fonctionnel, le cheesecake sera plus dense et plus crémeux qu'aéré. Versez immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une spatule pleine: le remplissage doit tenir un monticule doux et paresseux un moment avant de s'installer lentement — aéré et frais, comme la mousse. S'il s'échappe de la spatule, il a été surplié ou la crème n'était pas assez fouettée."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Jeu",
+      "inputs": [
+        "cheesecake_filling",
+        "biscuit_base",
+        "ing_10"
+      ],
+      "outputState": "finished_matcha_cheesecake",
+      "instructions": "Verser le remplissage sur la base de biscuits réfrigérés et lisser le dessus avec une spatule offset, s'étendant sur les bords. Appuyez doucement sur l'étain sur le comptoir deux fois pour régler les bulles d'air. Couvrir d'un film de collage et réfrigérer pendant au moins 4 heures, ou pendant la nuit — la gélatine a besoin de temps pour se mettre pleinement et les saveurs pour se développer. Avant de servir, poussièrer légèrement la surface avec de la poudre de matcha tamisée à travers un tamis à mailles fines. Relâchez le ressort et coupez avec un couteau chaud et essuyé pour des tranches propres.",
+      "visualCue": {
+        "primaryTarget": "Un gâteau au fromage vert lisse et vif avec une surface plate, uniforme et une poussière de matcha vert propre – fixé assez fermement pour tenir les bords propres quand tranché.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le remplissage tremble trop lorsque l'étain est bouché — le centre est encore très doux et s'effondrerait quand il n'est pas enclenché.",
+            "action": "Réfrigérer plus longtemps — au moins 2 heures de plus. En précipitant un ensemble de gélatine, on obtient un gâteau qui coule plutôt que qui tient."
+          },
+          {
+            "state": "Perfect",
+            "description": "Il tient son dôme proprement, tremble au centre lorsqu'il est tapé, tranche avec un visage propre et lisse. Le vert est vif, la poussière matte et même.",
+            "action": "Servir froid. Conserver au réfrigérateur jusqu'à 2 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pour une gélatine trop longue ou trop longue – caoutchouteuse, généreuse, et qui tient une forme nette sans trembler.",
+            "action": "La texture est moins raffinée. Utilisez un peu moins de gélatine la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur la surface avec un bout de doigt: il devrait donner juste légèrement et ressortre en arrière — pas dur comme du caoutchouc, pas liquide doux. Froid, crémeux, et à faible rendement, comme le meilleur gâteau au fromage est toujours."
+    }
+  ]
 };

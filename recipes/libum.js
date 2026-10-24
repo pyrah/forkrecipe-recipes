@@ -1,108 +1,256 @@
 export default {
-  repoId: "master_ancient-roman_libum_001",
-  parentRepoId: null,
-  slug: "libum",
-  author: "ForkRecipe Kitchen",
-  title: "Libum",
-  description: "Cato's sacrificial cake, reborn for the table — fresh ricotta beaten to a curd-flecked batter, bound with egg and a little spelt flour, mounded onto bay leaves and baked beneath a covered pot until the edges crack golden. Split warm and drowned in dark honey, it eats like the oldest cheesecake in the world.",
-  cuisine: "Ancient Roman",
-  culture: "Latial",
-  category: "desserts",
-  tags: ["libum", "ancient-roman", "cato", "ricotta", "honey", "cheesecake", "historical"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 4, salty: 1, sour: 1, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Fresh whole-milk ricotta (well-drained)", ratioValue: 100, defaultUnit: "parts", substitutions: ["fresh sheep's-milk ricotta", "homemade whey ricotta"] },
-    { ingId: "ing_02", role: "Structure", name: "Spelt flour (far)",                        ratioValue: 50,  defaultUnit: "parts", substitutions: ["emmer flour", "soft white wheat flour"] },
-    { ingId: "ing_03", role: "Binder",    name: "Egg",                                       ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                             ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Fresh bay leaves (for the bed)",            ratioValue: 4,   defaultUnit: "parts", substitutions: ["dried bay leaves, soaked"] },
-    { ingId: "ing_06", role: "Sweetener", name: "Dark honey (for finishing)",                ratioValue: 60,  defaultUnit: "parts", substitutions: ["chestnut honey", "thyme honey"] },
+  "repoId": "master_ancient-roman_libum_001",
+  "parentRepoId": null,
+  "slug": "libum",
+  "author": "ForkRecipe Kitchen",
+  "title": "Libum",
+  "description": "Gâteau sacrificiel de Cato, renaître pour la table — ricotta fraîche battue à une pâte à caillebotis, liée d'œuf et d'un peu de farine d'épeautre, broyée sur les feuilles de laurier et cuite sous un pot couvert jusqu'à ce que les bords s'endorment. Séparé chaud et noyé dans le miel noir, il mange comme le plus vieux gâteau au fromage du monde.",
+  "cuisine": "Ancien romain",
+  "culture": "Latial",
+  "category": "desserts",
+  "tags": [
+    "libum",
+    "Ancien-roman",
+    "cato",
+    "ricotta",
+    "Chérie",
+    "Cake au fromage",
+    "historique"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Drain",
-      inputs: ["ing_01"],
-      outputState: "drained_ricotta",
-      instructions: "If your ricotta is loose and weeping, line a sieve with cheesecloth, spoon it in, and let it drain over a bowl for 20 to 30 minutes — or longer in the fridge — until it firms to the texture of soft, sliceable curd. Wet ricotta makes a batter that slumps and steams rather than bakes, so this step decides whether the libum holds a mound. Discard the whey.",
-      visualCue: {
-        primaryTarget: "A pale, ridged dome of ricotta sitting proud in the sieve, the dripping slowed to the occasional bead, the curd holding the shape of the spoon's last press.",
-        spectrum: [
-          { state: "Underdone", description: "Whey still streams out and the ricotta sags flat and glossy-wet, pooling against the cloth.", action: "Keep draining. Gather the cheesecloth and twist gently to squeeze out more, or refrigerate another 20 minutes." },
-          { state: "Perfect",   description: "The ricotta is dense and matte, soft but no longer soupy, and a spoonful holds its edges without weeping.", action: "Scrape it into a mixing bowl and proceed." },
-          { state: "Overdone",  description: "The ricotta has gone dry, crumbly, and stiff, almost like fresh paneer.", action: "Fine for structure — just plan to beat it well and let the egg rehydrate it into a smooth batter." },
-        ],
-      },
-      feelCue: "Pressed between two fingers the drained ricotta should feel like soft, cool clay that holds a fingerprint, not like wet paint that runs off the fingertip.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Ricotta de lait entier frais (bien drainé)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ricotta de lait de brebis frais",
+        "ricotta de lactosérum maison"
+      ]
     },
     {
-      nodeId: "step_2", action: "Mix",
-      inputs: ["drained_ricotta", "ing_02", "ing_03", "ing_04"],
-      outputState: "libum_batter",
-      instructions: "Beat the drained ricotta hard with a wooden spoon until it loosens and turns creamy, then work in the egg until the batter is uniform and glossy. Add the salt, then fold in the spelt flour a little at a time — just until it disappears into a soft, thick, scoopable dough. Cato says to mix it 'bene' (well); beating the cheese smooth is what gives the baked libum its tender, even crumb. Stop the moment the flour is incorporated so the gluten stays slack.",
-      visualCue: {
-        primaryTarget: "A soft, cohesive batter the pale gold of fresh cream, thick enough to mound on a spoon and slowly settle, flecked with the faint grain of the curd and the bran of the spelt.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of dry flour or lumps of unbeaten ricotta still show, and the batter looks patchy and grainy.", action: "Keep folding and pressing against the bowl until it comes together into one smooth, even mass." },
-          { state: "Perfect",   description: "A homogeneous, pliable dough-batter that mounds and holds a soft peak, neither runny nor stiff, smelling milky and faintly nutty from the spelt.", action: "Divide and shape onto the bay-leaf bed." },
-          { state: "Overdone",  description: "The batter has been worked so long it feels tight and elastic and pulls back when stirred.", action: "Let it rest 10 minutes to relax the gluten before shaping, and bake promptly so it doesn't toughen." },
-        ],
-      },
-      feelCue: "Drag the spoon through and the batter should close slowly behind it like thick cake batter; it should feel cohesive and slightly tacky, not loose or sticky-wet against the spoon.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Farine d'épeautre",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Farine d'émmer",
+        "farine de blé blanc tendre"
+      ]
     },
     {
-      nodeId: "step_3", action: "Shape",
-      inputs: ["libum_batter", "ing_05"],
-      outputState: "raw_cakes",
-      instructions: "Arrange the bay leaves on a baking sheet or in a shallow ovenproof dish, fanned so the cakes will rest directly on the leaves. Divide the batter into four and shape each into a round mound about three inches across and an inch high, setting one on each leaf. The bay's oils perfume the underside of the cake as it bakes and keep it from sticking — the leaf is flavor and parchment in one. Smooth the tops lightly so they bake evenly.",
-      visualCue: {
-        primaryTarget: "Four neat, domed rounds of pale batter each cupped on a glossy green bay leaf, their surfaces smooth and their edges clean, with the leaf tips peeking out beneath.",
-        spectrum: [
-          { state: "Underdone", description: "The mounds are slumped and flat, spreading thin and threatening to run off the leaves.", action: "The batter is too wet — work in a spoonful more spelt flour, then reshape taller and tighter." },
-          { state: "Perfect",   description: "Self-supporting domes that hold their height, each centered on its leaf with the leaf's edges showing all around.", action: "Move straight to baking before the leaves wilt and the batter warms." },
-          { state: "Overdone",  description: "The mounds are cracked and dry-looking already, or shaped so tall and tight they'll bake unevenly.", action: "Dampen your fingers and smooth the surface, flattening slightly so the centers cook through before the edges scorch." },
-        ],
-      },
-      feelCue: "The batter should release from damp fingers cleanly as you shape it; if it sticks and tears, wet your hands lightly. The bay leaves should snap with a sharp, resinous, eucalyptus-like fragrance when you arrange them.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Œuf",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Bake",
-      inputs: ["raw_cakes"],
-      outputState: "baked_libum",
-      instructions: "Bake at 375 F / 190 C. Cato directs the cake be cooked slowly under a hot earthenware cover — to mimic that 'sub testu' hearth, set an inverted metal bowl or a covered pot over the cakes for the first 15 minutes to trap gentle, even heat, then lift it off and bake 5 to 10 minutes more to color the tops. They are done when set through, puffed, and golden at the edges, 20 to 25 minutes total. The bay leaves will have browned and crisped beneath.",
-      visualCue: {
-        primaryTarget: "Risen, lightly cracked rounds, pale gold across the top and deeper amber at the rim, firm and dry to a light touch, perfuming the kitchen with warm milk and bay.",
-        spectrum: [
-          { state: "Underdone", description: "The tops still look damp and shiny, the centers wobble when the tray is nudged, and a tester comes out wet.", action: "Re-cover and bake another 5 minutes, then uncover and check again — the center must set before they leave the oven." },
-          { state: "Perfect",   description: "Domed and set with a few fine surface cracks, golden-edged, springing back when pressed in the center, the bay leaves toasted brown underneath.", action: "Pull them out and let them cool just until handleable — they are best eaten warm." },
-          { state: "Overdone",  description: "The tops are deep brown and the edges are hard and dry, the crumb tightening toward rubbery.", action: "Get them out at once and be generous with the honey — its moisture and sweetness will rescue an over-baked libum." },
-        ],
-      },
-      feelCue: "A finger pressed to the center should meet a gentle, springy resistance that pushes back, not a soft squelch and not a hard crust. The cake should feel light for its size when lifted on its leaf.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Finish",
-      inputs: ["baked_libum", "ing_06"],
-      outputState: "finished_libum",
-      instructions: "Warm the honey gently until it runs thin. Lift each libum from its bay leaf onto a serving plate while still warm, split or prick the top, and pour the warm honey over so it soaks into the cracks and pools around the base. Cato has the cakes served hot and drenched in honey — eat them straight away, when the curd is still soft and the honey sinks in. The toasted bay leaf can stay tucked beneath as a fragrant, edible-adjacent garnish.",
-      visualCue: {
-        primaryTarget: "A warm, honey-glazed round glistening dark gold, the honey sunk into every crack and pooled in a glossy ring at the base, steam carrying milk, bay, and the deep malt of dark honey.",
-        spectrum: [
-          { state: "Underdone", description: "The honey sits in a stiff bead on top and won't spread or soak in, sliding off in a clump.", action: "It's too cold and the cake too cool — warm the honey thinner and the cake briefly, then re-pour so it penetrates." },
-          { state: "Perfect",   description: "Honey has soaked into the crumb and glazed the surface to a lacquered shine, with a small pool collecting at the plate. The first bite is soft, sweet, and faintly savory.", action: "Serve immediately, warm, on its bay leaf." },
-          { state: "Overdone",  description: "The cake is swimming in honey, soggy and cloying, its structure dissolving into the pool.", action: "Lift the libum onto a fresh plate to drain off the excess, and serve the surplus honey on the side." },
-        ],
-      },
-      feelCue: "The honey should disappear into the warm cake with a soft hiss of absorption rather than beading on top. On the tongue it eats like a tender, just-sweet cheesecake — milky and curd-soft, lifted by bay and finished long with dark honey.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Feuilles fraîches de laurier (pour le lit)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "feuilles de laurier séchées, trempées"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Miel foncé (pour finition)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "miel de châtaigne",
+        "miel de thym"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Égoutter",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "drained_ricotta",
+      "instructions": "Si votre ricotta est lâche et pleure, alignez un tamis avec de l'étoffe de fromage, cuillerez-le, et laissez-le égoutter au-dessus d'un bol pendant 20 à 30 minutes — ou plus au réfrigérateur — jusqu'à ce qu'il consolide à la texture d'un caillé doux et tranché. La ricotta humide fait une pâte qui s'écroule et s'évapore plutôt que de se faire cuire, donc cette étape décide si la libum tient un monticule. Jetez le lactosérum.",
+      "visualCue": {
+        "primaryTarget": "Un dôme de ricotta pâle et arqué, assis fièrement dans le tamis, la goutte d'eau ralentit jusqu'à la perle occasionnelle, le caillé tenant la forme de la dernière presse de la cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Whey coule toujours et la ricotta sags plat et brillant-humide, baignant contre le tissu.",
+            "action": "Continue de drainer. Recueillir le cheesewet et tordre doucement pour en extirper plus, ou réfrigérer encore 20 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La ricotta est dense et mate, douce mais non plus soupeuse, et une cuillère tient ses bords sans pleurer.",
+            "action": "Grattez-le dans un bol de mélange et continuez."
+          },
+          {
+            "state": "Overdone",
+            "description": "La ricotta est devenue sèche, émiettée et raide, presque comme une vitre fraîche.",
+            "action": "Parfait pour la structure — il suffit de planifier pour bien battre et laisser l'oeuf réhydrater en pâte lisse."
+          }
+        ]
+      },
+      "feelCue": "Pressée entre deux doigts, la ricotta drainée devrait se sentir comme de l'argile douce et fraîche qui tient une empreinte digitale, pas comme de la peinture humide qui coule du bout des doigts."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "drained_ricotta",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "libum_batter",
+      "instructions": "Battre la ricotta égouttée avec une cuillère en bois jusqu'à ce qu'elle se relâche et devienne crémeuse, puis travailler dans l'œuf jusqu'à ce que la pâte soit uniforme et brillante. Ajouter le sel, puis plier un peu à la fois dans la farine d'épeautre, jusqu'à ce qu'elle disparaisse dans une pâte molle, épaisse et écorcable. Cato dit de le mélanger 'bène' (bien); battre le fromage lisse est ce qui donne à la libum cuite sa tendre, même miettes. Arrêtez le moment où la farine est incorporée afin que le gluten reste lâche.",
+      "visualCue": {
+        "primaryTarget": "Une pâte douce et cohésive l'or pâle de la crème fraîche, assez épaisse pour marbrer sur une cuillère et se déposer lentement, flanqué du grain faible du caillé et du son de l'épeautre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des bouts de farine sèche ou des morceaux de ricotta imbattables montrent encore, et la pâte semble patchy et granuleuse.",
+            "action": "Continuez à plier et appuyez sur le bol jusqu'à ce qu'il se réunisse en une seule masse lisse, même."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte-batterie homogène et pliable qui se fond et tient un pic doux, ni écoulement ni raide, sentant laiteux et peu de noix de l'épeautre.",
+            "action": "Divisez et formez sur le lit à feuilles de laurier."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a été travaillée si longtemps qu'elle se sent serrée et élastique et recule lorsqu'elle est agitée.",
+            "action": "Laisser reposer 10 minutes pour détendre le gluten avant de façonner, et cuire rapidement afin qu'il ne durcisse pas."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser la cuillère à travers et la pâte doit se fermer lentement derrière elle comme une pâte à gâteau épaisse; elle doit se sentir cohésive et légèrement collante, non lâche ou collante-humide contre la cuillère."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "libum_batter",
+        "ing_05"
+      ],
+      "outputState": "raw_cakes",
+      "instructions": "Disposer les feuilles de la baie sur une plaque de cuisson ou dans un plat peu profond et résistant au four, aventuré de sorte que les gâteaux reposeront directement sur les feuilles. Divisez la pâte en quatre et formez chacun en un monticule rond d'environ trois pouces de long et un pouce de haut, en plaçant un sur chaque feuille. Les huiles de la baie parfument le dessous du gâteau pendant qu'il fait cuire et de l'empêcher de coller — la feuille est saveur et parchemin dans un. Lisser légèrement les dessus afin qu'ils cuisent uniformément.",
+      "visualCue": {
+        "primaryTarget": "Quatre rondelles de pâte pâle soignées, en forme de dôme, chacune sur une feuille de laurier vert brillant, leurs surfaces lisses et leurs bords propres, les bouts de la feuille regardant en dessous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les monticules sont effondrés et plats, se répandent minces et menacent de s'échapper des feuilles.",
+            "action": "La pâte est trop humide: travailler dans une farine d'épeautre, puis reformer plus grand et plus serré."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dômes autoportants qui tiennent leur hauteur, chacun centré sur sa feuille avec les bords de la feuille montrant tout autour.",
+            "action": "Passer directement à la cuisson avant que les feuilles se flétrissent et que la pâte se réchauffe."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les monticules sont déjà fissurés et d'apparence sèche, ou en forme si grande et serrée qu'ils cuireont inégalement.",
+            "action": "Dégringolez vos doigts et lissez la surface, aplatissant légèrement pour que les centres cuisent avant que les bords ne crèvent."
+          }
+        ]
+      },
+      "feelCue": "La pâte devrait se libérer des doigts mouillés de façon propre pendant que vous la formez; si elle colle et larmes, mouiller vos mains légèrement. Les feuilles de laurier devraient se casser avec un parfum tranchant, résineux, comme l'eucalyptus quand vous les arrangez."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "raw_cakes"
+      ],
+      "outputState": "baked_libum",
+      "instructions": "Cuire à 375 F / 190 C. Cato fait cuire lentement le gâteau sous une couverture de faïence chaude — pour imiter le foyer 'sub testu', mettre un bol en métal inversé ou un pot couvert sur les gâteaux pendant les 15 premières minutes pour piéger douce, même la chaleur, puis le lever et cuire 5 à 10 minutes de plus pour colorer les dessus. Ils sont faits quand ils sont mis à travers, gonflés, et dorés aux bords, 20 à 25 minutes au total. Les feuilles de laurier auront bruni et croustillé en dessous.",
+      "visualCue": {
+        "primaryTarget": "Ronds rasés, légèrement fissurés, or pâle sur le dessus et ambre plus profond sur le bord, fermes et secs à un toucher léger, perfumant la cuisine avec du lait chaud et de la baie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les sommets semblent encore humides et brillants, les centres oscillent quand le plateau est bouché, et un testeur sort mouillé.",
+            "action": "Récupérer et cuire encore 5 minutes, puis découvrir et vérifier à nouveau — le centre doit se mettre avant qu'ils quittent le four."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dôme et serti de quelques fines fissures de surface, bordées d'or, qui ressortent lorsqu'elles sont pressées au centre, la baie laisse des feuilles brunes grillées en dessous.",
+            "action": "Tirez - les et laissez - les refroidir jusqu'à ce qu'ils puissent être manipulés — ils sont mieux mangés au chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les dessus sont brun foncé et les bords sont durs et secs, la miette se resserrant vers le caoutchouc.",
+            "action": "Faites - les sortir immédiatement et soyez généreux avec le miel; son humidité et sa douceur sauveront une libum surcuite."
+          }
+        ]
+      },
+      "feelCue": "Un doigt pressé au centre devrait rencontrer une résistance douce et printanière qui repousse, pas un squuelch doux et non une croûte dure. Le gâteau doit sentir la lumière pour sa taille lorsqu'il est soulevé sur sa feuille."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Finition",
+      "inputs": [
+        "baked_libum",
+        "ing_06"
+      ],
+      "outputState": "finished_libum",
+      "instructions": "Chauffer doucement le miel jusqu'à ce qu'il soit mince. Soulevez chaque libum de sa feuille de laurier sur une assiette de service tout en restant chaud, fendez ou piquez le dessus, et versez le miel chaud sur afin qu'il trempe dans les fissures et les piscines autour de la base. Cato a les gâteaux servis chaud et trempé dans le miel — les manger immédiatement, quand le caillé est encore doux et le miel coule dans. La feuille de laurier grillée peut rester cousue en dessous comme une garniture parfumée et comestible.",
+      "visualCue": {
+        "primaryTarget": "Un rond chaud, glacé de miel, brillant or foncé, le miel coulé dans chaque fissure et mis dans un anneau brillant à la base, vapeur transportant le lait, la baie, et le malt profond de miel foncé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le miel est assis dans une perle raide sur le dessus et ne s'étend ni ne s'imprégne, glissant dans une masse.",
+            "action": "Il fait trop froid et le gâteau trop frais — réchauffez brièvement le miel et le gâteau, puis repourrez afin qu'il pénètre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le miel s'est trempé dans la miette et a recouvert la surface d'une brillance laquée, avec une petite piscine collectant à la plaque. La première bouchée est douce, douce et légèrement salée.",
+            "action": "Servir immédiatement, au chaud, sur sa feuille de laurier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le gâteau nage dans le miel, le soggy et la cloie, sa structure se dissolvant dans la piscine.",
+            "action": "Soulevez le libum sur une assiette fraîche pour égoutter l'excédent et servir le surplus de miel sur le côté."
+          }
+        ]
+      },
+      "feelCue": "Le miel devrait disparaître dans le gâteau chaud avec un sifflement doux d'absorption plutôt que de perler sur le dessus. Sur la langue il mange comme un cheesecake tendre et doux — laiteux et mou, levé à la baie et fini longtemps avec du miel foncé."
+    }
+  ]
 };

@@ -1,104 +1,297 @@
 export default {
-  repoId: "master_jamaican_jerk-marinade_001",
-  parentRepoId: null,
-  slug: "jerk-marinade",
-  author: "ForkRecipe Kitchen",
-  title: "Jerk Marinade",
-  description: "Jamaica's defining marinade — scotch bonnet peppers, allspice, thyme, and ginger pounded with scallion and soy sauce into a fiery, aromatic paste that penetrates deeply into chicken or pork before it hits the grill or pit.",
-  cuisine: "Jamaican",
-  culture: "Jamaican",
-  category: "condiments",
-  tags: ["jamaican", "scotch-bonnet", "allspice", "marinade", "spicy", "smoky", "grilled"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 3, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",      name: "Scotch bonnet peppers (stemmed; seeds in for full heat, seeds removed for medium)", ratioValue: 2,   defaultUnit: "parts", substitutions: ["habanero peppers", "rocoto"] },
-    { ingId: "ing_02", role: "Allium",    name: "Scallions (spring onions), roughly chopped",                                       ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Spice",     name: "Whole allspice berries, freshly ground (or ground allspice)",                      ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Herb",      name: "Fresh thyme, leaves picked (or 1 tsp dried)",                                      ratioValue: 0.5, defaultUnit: "parts", substitutions: ["dried thyme"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Fresh ginger, peeled and roughly sliced",                                          ratioValue: 0.5, defaultUnit: "parts", substitutions: ["ground ginger (use 1/4 the amount)"] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves",                                                                    ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Umami",     name: "Soy sauce",                                                                        ratioValue: 1,   defaultUnit: "parts", substitutions: ["tamari", "coconut aminos"] },
-    { ingId: "ing_08", role: "Fat",       name: "Neutral vegetable oil",                                                            ratioValue: 0.5, defaultUnit: "parts", substitutions: ["olive oil"] },
-    { ingId: "ing_09", role: "Acid",      name: "Fresh lime juice",                                                                 ratioValue: 0.5, defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_10", role: "Sweetener", name: "Dark brown sugar",                                                                 ratioValue: 0.3, defaultUnit: "parts", substitutions: ["molasses", "honey"] },
-    { ingId: "ing_11", role: "Spice",     name: "Ground cinnamon",                                                                  ratioValue: 0.2, defaultUnit: "parts", substitutions: ["ground nutmeg"] },
-    { ingId: "ing_12", role: "Seasoning", name: "Fine sea salt",                                                                    ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_13", role: "Seasoning", name: "Black pepper, freshly ground",                                                     ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_jamaican_jerk-marinade_001",
+  "parentRepoId": null,
+  "slug": "jerk-marinade",
+  "author": "ForkRecipe Kitchen",
+  "title": "Marinade de la cervelle",
+  "description": "La marinade qui caractérise la Jamaïque: les poivrons de scotch, l'Allspice, le thym et le gingembre fourrés de pétoncle et de sauce de soja dans une pâte aromatique ardente qui pénètre profondément dans le poulet ou le porc avant qu'elle ne touche le grill ou la fosse.",
+  "cuisine": "Jamaïquen",
+  "culture": "Jamaïquen",
+  "category": "condiments",
+  "tags": [
+    "Jamaïcain",
+    "scotch-bonnet",
+    "Toussages",
+    "marinade",
+    "épicé",
+    "fumée",
+    "grillé"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Prep",
-      inputs: ["ing_01"],
-      outputState: "prepped_scotch_bonnets",
-      instructions: "Put on gloves — this is not optional with scotch bonnets. Stem each pepper. If you want the full, traditional heat, leave the seeds and white membrane intact; if you want a hot-but-tolerable marinade, halve each pepper and scrape out the seeds and membrane with a small spoon. Either way, the scotch bonnet's unique quality is not simply heat — it carries a distinctive tropical-floral fruitiness (mango, apricot, a hint of tamarind) that no other chili provides. Habaneros are the closest substitute but lack the specific floral depth. Roughly chop the prepped peppers. Do not touch your face.",
-      visualCue: {
-        primaryTarget: "Vivid orange or red pepper pieces with a waxy, smooth surface, their distinctive wrinkled shape visible, cut surfaces showing either the full seed cavity or cleanly scraped flesh.",
-        spectrum: [
-          { state: "Underdone", description: "Peppers left whole and unstemmed; seeds decision not made yet.", action: "Make the seeds decision before proceeding — it fundamentally affects the heat level of the entire marinade and cannot be undone later." },
-          { state: "Perfect",   description: "Prepped and chopped to roughly 1–2cm pieces, consistently prepared based on desired heat level. Gloves still on.", action: "Add to the blender with all other ingredients." },
-          { state: "Overdone",  description: "Peppers have been minced so finely that the capsaicin oil is now on the cutting board and everything nearby; aerosolized pepper in the air.", action: "Step back, ventilate the room, and proceed to the blender." },
-        ],
-      },
-      feelCue: "Even through gloves, you can feel the slight oiliness of the scotch bonnet skin — the capsaicin is that concentrated near the surface. Resist any urge to smell closely; even the vapors are potent.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Poivrons de bonnet scotch (moussés; graines à feu complet, graines enlevées à feu moyen)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Poivrons",
+        "rocoto"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["prepped_scotch_bonnets", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12", "ing_13"],
-      outputState: "rough_jerk_paste",
-      instructions: "Add all prepared ingredients to a blender or food processor: the chopped scotch bonnets, scallions, freshly ground allspice, thyme, ginger, garlic, soy sauce, oil, lime juice, brown sugar, cinnamon, salt, and black pepper. Blend in 30-second bursts, scraping down the sides between bursts, until the mixture forms a cohesive paste — rough and slightly chunky is traditional and preferable to fully smooth, as the texture helps the paste cling to meat. If the blender is struggling, add a tablespoon of water to help it move. If you want an authentic Maroon-style jerk, pound everything in a large mortar instead — the mortar shears the cells rather than chopping them, releasing more volatile oils from the allspice and ginger and creating a more complex, deeper paste.",
-      visualCue: {
-        primaryTarget: "A rough, deep green-brown paste with visible flecks of thyme and scallion, an oily sheen from the allspice volatile oils, and an aroma that is simultaneously scorching-hot and tropical-floral.",
-        spectrum: [
-          { state: "Underdone", description: "Visibly chunky with large pieces of scallion, ginger, or pepper; the paste has not yet come together and smells of raw, separate ingredients.", action: "Blend further — the scallion and ginger are the hardest to break down; use short high-speed bursts." },
-          { state: "Perfect",   description: "Cohesive, slightly rough paste with a mossy green-brown color and glistening, oily surface. Smells intensely of allspice and scotch bonnet heat with the thyme weaving through. Tastes of fire, smoke, and tropical fruit.", action: "Taste carefully — it will be very hot. Adjust salt and brown sugar." },
-          { state: "Overdone",  description: "Over-blended into a thin, smooth liquid; the allspice and thyme volatiles have been aerated away; the paste is too watery to cling to meat.", action: "Add more scallion and ginger and pulse briefly to rebuild body; if still too thin, transfer to a bowl and stir in a tablespoon of ground allspice to thicken." },
-        ],
-      },
-      feelCue: "Dab a tiny amount on the back of your hand (not your tongue — not yet) and let it sit for 10 seconds. The scotch bonnet heat should build slowly, peaking about 30 seconds in, with a distinct wave of allspice warmth underneath and the floral fruitiness of the pepper arriving last. That three-part progression is the signature of a proper jerk paste.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Échalons (oignons de printemps), hachés approximativement",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Season",
-      inputs: ["rough_jerk_paste"],
-      outputState: "balanced_jerk_marinade",
-      instructions: "Taste the paste carefully — use a very small amount on a plain cracker or a piece of bread to buffer the heat and allow you to taste beneath the fire. The paste should be extremely hot, deeply savory from the soy sauce, fragrant with allspice (the soul of jerk), and carry the specific tropical-fruity dimension of the scotch bonnet underneath the heat. It should not taste one-dimensionally fiery. Adjust: if it needs more allspice depth, add more ground allspice; if the soy is too dominant, add more lime; if the heat is overwhelming to the point of being unpleasant even for the intended audience, add more scallion and a second drizzle of oil to dilute it; if it tastes flat, more salt. The balancing principle of jerk is that allspice and scotch bonnet are co-equal leads — neither should be entirely absent.",
-      visualCue: {
-        primaryTarget: "A dark, complex, deep green-brown paste that is clearly not one-dimensional; the flecks of thyme and scallion visible throughout; the surface slightly glistening with allspice essential oil.",
-        spectrum: [
-          { state: "Underdone", description: "Paste tastes only of scotch bonnet heat without the allspice, thyme, or soy backing — it is hot but not complex.", action: "Add more ground allspice, a pinch more thyme, and more soy sauce; blend briefly to integrate." },
-          { state: "Perfect",   description: "Hot, complex, fragrant, and uniquely Jamaican — the allspice resin is forward, the scotch bonnet fruitiness is there beneath the heat, soy adds depth, thyme adds an herbal lift. Properly balanced, it should make the air smell like a jerk pit.", action: "Use immediately or transfer to a jar." },
-          { state: "Overdone",  description: "The brown sugar has caramelized slightly from the blender's heat or there is too much of it; the paste tastes sweet and candy-like rather than balanced.", action: "Add more scotch bonnet, scallion, and lime juice to reassert the savory-hot character." },
-        ],
-      },
-      feelCue: "Smell the paste by cupping your hand over the bowl and waving the air toward your nose rather than smelling directly — the volatiles from scotch bonnet can burn the nasal passages. What you should detect is the distinctive resinous-clove-pepper smell of allspice first, then the tropical wave of the scotch bonnet, then the sharp vegetal freshness of the scallion. That order of aromatic layers is the architecture of jerk.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Baies entières de tous les poissons, fraîchement moulues (ou tous les poissons moulus)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["balanced_jerk_marinade"],
-      outputState: "finished_jerk_marinade",
-      instructions: "Transfer the finished jerk marinade to a jar or a lidded container. To use: rub the marinade generously over chicken pieces (cuts on the bone are traditional — leg quarters and thighs hold up best), pork shoulder pieces, or whole fish. Work the paste under the skin of chicken and into any cuts or slits made in the meat. For best results, marinate chicken for at least 4 hours and ideally overnight; pork for 8–12 hours minimum. The soy and salt will season the protein all the way through, the acid will tighten and condition the surface, and the allspice volatiles will penetrate deeply into the fat. Cook over charcoal with pimento (allspice) wood if available for authenticity, or any charcoal. The marinade keeps refrigerated for two weeks.",
-      visualCue: {
-        primaryTarget: "A deeply colored jar of rough, fragrant paste that visibly clings to the glass, with a complex, layered appearance — dark from the soy and allspice, flecked with green thyme and scallion, with visible oil rising to the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Paste stored without oil on the surface; oxidation will dull the color and aromatics within a day.", action: "Pour a thin film of neutral oil over the surface before sealing." },
-          { state: "Perfect",   description: "Sealed under oil, vivid in color, intensely fragrant when opened. When rubbed on chicken, it clings and begins to penetrate immediately. After marinating overnight, the meat is visibly stained and the paste has formed a dry crust on the surface that will char perfectly on the grill.", action: "Marinate your protein and cook over the highest heat you have." },
-          { state: "Overdone",  description: "Paste has been stored too long; the volatile oils from allspice and scotch bonnet have dissipated; the paste smells flat and predominantly of soy sauce.", action: "Revive with fresh lime juice, more freshly ground allspice, and a fresh scotch bonnet or habanero blended in." },
-        ],
-      },
-      feelCue: "Rub a small amount of the finished marinade between your fingertips and then smell your fingers — the scent should be almost overwhelming, a wall of allspice-resin and scotch-bonnet fruit that your nose can't file under a single category. That complexity is the mark of a marinade worth the burn.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Thym frais, feuilles cueillies (ou 1 c. à thé séchée)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym séché"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Gingembre frais, pelé et tranché approximativement",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gingembre moulu (utiliser 1/4 de la quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari",
+        "aminos de coco"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile végétale neutre",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Sweetener",
+      "name": "Sucre brun foncé",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mélasse",
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "noix de muscade"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Seasoning",
+      "name": "Poivre noir, fraîchement moulu",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "prepped_scotch_bonnets",
+      "instructions": "Mettre des gants — ce n'est pas facultatif avec des bonnets de scotch. Coupez chaque poivre. Si vous voulez la chaleur complète et traditionnelle, laissez les graines et la membrane blanche intacte; si vous voulez une marinade chaude mais tolérable, de moitié chaque poivre et racler les graines et la membrane avec une petite cuillère. Quoi qu'il en soit, la qualité unique du bonnet de scotch n'est pas simplement la chaleur — il porte un fruité tropical-floral distinctif (mango, abricot, un soupçon de tamarin) qu'aucun autre chili ne fournit. Les habaneros sont le substitut le plus proche, mais manquent de la profondeur florale spécifique. Hacher à peu près les poivrons préparés. Ne touchez pas votre visage.",
+      "visualCue": {
+        "primaryTarget": "Morceaux d'orange vif ou de poivron rouge d'une surface cireuse et lisse, leur forme ridée distinctive visible, les surfaces coupées montrant soit la cavité pleine des graines, soit la chair proprement raclée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Peppers laissés entiers et non agglomérés; la décision sur les graines n'a pas encore été prise.",
+            "action": "Prendre la décision sur les graines avant de procéder — cela affecte fondamentalement le niveau de chaleur de toute la marinade et ne peut être défait plus tard."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couper et couper en morceaux d'environ 1 à 2 cm, toujours préparés en fonction du niveau de chaleur souhaité. Gants toujours allumés.",
+            "action": "Ajouter au mélangeur avec tous les autres ingrédients."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les poivrons ont été hachés si finement que l'huile de capsaïcine est maintenant sur la planche à découper et tout à proximité; poivre aérosolisé dans l'air.",
+            "action": "Reculez, aspirez la pièce et passez au mélangeur."
+          }
+        ]
+      },
+      "feelCue": "Même à travers des gants, vous pouvez sentir la légère huile de la peau de scotch, la capsaïcine est concentrée près de la surface. Résistez à toute envie d'odeur étroite; même les vapeurs sont puissantes."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "prepped_scotch_bonnets",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "rough_jerk_paste",
+      "instructions": "Ajouter tous les ingrédients préparés à un mélangeur ou à un robot culinaire : les bonnets de scotch hachés, les pétoncles, l'Allspice fraîchement moulu, le thym, le gingembre, l'ail, la sauce de soja, l'huile, le jus de lime, le sucre brun, la cannelle, le sel et le poivre noir. Mélanger en éclats de 30 secondes, en grattant les côtés entre les éclats, jusqu'à ce que le mélange forme une pâte cohésive - rugueuse et légèrement chunky est traditionnelle et préférable à entièrement lisse, car la texture aide la pâte à s'accrocher à la viande. Si le mélangeur lutte, ajoutez une cuillère à soupe d'eau pour l'aider à bouger. Si vous voulez un vrai branleur de style Maroon, tapez tout dans un gros mortier à la place — le mortier cisaille les cellules plutôt que de les couper, libérant des huiles plus volatiles de l'Allspice et du gingembre et créant une pâte plus complexe et plus profonde.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rugueuse, vert-brun profond avec des taches visibles de thym et d'échon, un reflet huileux des huiles volatiles allspice, et un arôme qui est simultanément chaud-brillant et tropical-floral.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Visiblement chunky avec de grands morceaux de pétoncle, de gingembre ou de poivre; la pâte ne s'est pas encore réunie et sent des ingrédients crus et séparés.",
+            "action": "Mélanger plus loin — le pétoncle et le gingembre sont les plus difficiles à décomposer; utiliser de courts éclats à grande vitesse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte cohésive légèrement rugueuse avec une couleur vert-brun mousseux et une surface brillante et grasse. Sentez intensément de toutspice et de scotch de chaleur de capot avec le thym tisser à travers. Goûts de feu, de fumée et de fruits tropicaux.",
+            "action": "Goûtez soigneusement — il fera très chaud. Ajuster le sel et le sucre brun."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmené dans un liquide fin et lisse; le toutspice et le thym volatils ont été aérés; la pâte est trop aqueuse pour s'accrocher à la viande.",
+            "action": "Ajouter plus de pétoncle et de gingembre et donner une impulsion brièvement pour reconstruire le corps; si elle est encore trop fine, transférer dans un bol et remuer dans une cuillère à soupe de toutspice moulu à épaissir."
+          }
+        ]
+      },
+      "feelCue": "Mettez une petite quantité au dos de votre main (pas encore votre langue) et laissez-la reposer pendant 10 secondes. La chaleur du capot de scotch devrait se construire lentement, atteignant un pic d'environ 30 secondes, avec une vague distincte de chaleur allspice en dessous et le fruité floral du poivre arrivant en dernier. Cette progression en trois parties est la signature d'une bonne pâte."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "rough_jerk_paste"
+      ],
+      "outputState": "balanced_jerk_marinade",
+      "instructions": "Goûtez soigneusement la pâte — utilisez une très petite quantité sur un cracker ou un morceau de pain pour tamponner la chaleur et vous permettre de goûter sous le feu. La pâte doit être extrêmement chaude, profondément salée à partir de la sauce soja, parfumée d'Allspice (l'âme de l'amande), et porter la dimension tropicale-fruitée spécifique du capot scotch sous la chaleur. Il ne doit pas avoir un goût de feu unidimensionnel. Ajuster: si elle a besoin de plus de profondeur, ajouter plus de toutspice du sol; si le soja est trop dominant, ajouter plus de chaux; si la chaleur est écrasante au point d'être désagréable même pour le public prévu, ajouter plus de pétoncle et une seconde goutte d'huile pour la diluer; si elle a un goût plat, plus de sel. Le principe d'équilibre de l'arnaque est que tous les spices et le capot scotch sont des pistes co-égales — ni l'un ni l'autre ne devrait être complètement absent.",
+      "visualCue": {
+        "primaryTarget": "Une pâte brun-vert foncée, complexe et profonde qui n'est clairement pas unidimensionnelle; les taches de thym et d'échon visible à travers; la surface scintille légèrement avec l'huile essentielle allspice.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte ne goûte qu'à la chaleur de scotch, sans le toutspice, le thym, ou le soya.",
+            "action": "Ajouter plus de toutspice moulu, une pincée plus de thym, et plus de sauce de soja; mélanger brièvement pour intégrer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaud, complexe, parfumé et uniquement jamaïcain — la résine allspice est vers l'avant, le bont de scotch fruité est là sous la chaleur, le soja ajoute de la profondeur, le thym ajoute un lifting à base de plantes. Bien équilibré, il devrait faire sentir l'air comme une fosse à con.",
+            "action": "Utiliser immédiatement ou transférer dans un bocal."
+          },
+          {
+            "state": "Overdone",
+            "description": "La cassonade a caramélisé légèrement à partir de la chaleur du mélangeur ou il y en a trop ; la pâte a un goût sucré et sucré plutôt que équilibré.",
+            "action": "Ajouter plus de scotch, de pétoncle et de jus de lime pour réaffirmer le caractère chaud et salé."
+          }
+        ]
+      },
+      "feelCue": "Sentez la pâte en coupant votre main sur le bol et en agitant l'air vers votre nez plutôt que de sentir directement — les volatiles du capot de scotch peuvent brûler les passages nasaux. Ce que vous devez détecter est l'odeur résineuse-clove-pepper caractéristique de toutspice d'abord, puis l'onde tropicale du capot scotch, puis la fraîcheur végétale aiguë de l'échon. Cet ordre de couches aromatiques est l'architecture du crétin."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "balanced_jerk_marinade"
+      ],
+      "outputState": "finished_jerk_marinade",
+      "instructions": "Transférez la marinade de con finie dans un pot ou un contenant en lis. À utiliser: frotter généreusement la marinade sur des morceaux de poulet (les coupes sur l'os sont traditionnelles — les jambes et les cuisses tiennent le mieux), les épaulettes de porc, ou le poisson entier. Tricoter la pâte sous la peau du poulet et dans toute coupe ou fente faite dans la viande. Pour de meilleurs résultats, faire mariner le poulet pendant au moins 4 heures et idéalement toute la nuit; le porc pendant au moins 8 à 12 heures. Le soja et le sel assaisonneront la protéine jusqu'au bout, l'acide se serrera et conditionnera la surface, et les volatiles de tous les spices pénétreront profondément dans la graisse. Cuire au-dessus du charbon de bois avec du piment (allspice) si disponible pour l'authenticité, ou tout autre charbon. La marinade reste réfrigérée pendant deux semaines.",
+      "visualCue": {
+        "primaryTarget": "Un pot de pâte rugueuse et parfumée aux couleurs profondes qui s'accroche visiblement au verre, avec un aspect complexe et en couches, sombre du soja et de l'aspice, flanqué de thym vert et d'échon, avec de l'huile visible montant à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pâte entreposée sans huile à la surface; l'oxydation va ternir la couleur et les aromatiques dans la journée.",
+            "action": "Verser un mince film d'huile neutre sur la surface avant de sceller."
+          },
+          {
+            "state": "Perfect",
+            "description": "Scellé sous l'huile, de couleur vive, intensément parfumé à l'ouverture. Lorsque frotté sur le poulet, il s'accroche et commence à pénétrer immédiatement. Après avoir mariné pendant la nuit, la viande est visiblement teintée et la pâte a formé une croûte sèche sur la surface qui s'étalera parfaitement sur le grill.",
+            "action": "Faites mariner votre protéine et faites cuire à feu vif."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a été stockée trop longtemps; les huiles volatiles de toutspice et le capot scotch se sont dissipées; la pâte sent plat et surtout de sauce soja.",
+            "action": "Revivez avec du jus de lime frais, plus frais et moulu, et un bonnet de scotch frais ou habanero mélangé."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité de la marinade finie entre vos doigts et puis sentez vos doigts — le parfum devrait être presque écrasant, un mur de tous les fruits de résine et de scotch-bonnet que votre nez ne peut pas déposer sous une seule catégorie. Cette complexité est la marque d'une marinade qui en vaut la peine."
+    }
+  ]
 };

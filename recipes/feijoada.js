@@ -1,111 +1,295 @@
 export default {
-  repoId: "master_brazilian_feijoada_001",
-  parentRepoId: null,
-  slug: "feijoada",
-  author: "ForkRecipe Kitchen",
-  title: "Feijoada",
-  description: "Brazil's national stew: black beans cooked low and slow with smoked pork, cured sausage, and bay, until the broth turns inky and unctuous — served with white rice, shredded collard greens, and orange slices that cut through the richness like a blade.",
-  cuisine: "Brazilian",
-  culture: "Carioca",
-  category: "grains",
-  tags: ["black beans", "pork", "brazilian", "stew", "hearty"],
-  difficulty: 4,
-  activeTime: "60 min",
-  totalTime: "4 hours",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 7, sour: 1, bitter: 2, umami: 9, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried black beans, soaked overnight",    ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Protein",   name: "Smoked pork ribs or smoked ham hock",    ratioValue: 3,   defaultUnit: "parts", substitutions: ["smoked pork shoulder"] },
-    { ingId: "ing_03", role: "Protein",   name: "Linguiça or chouriço sausage, sliced 1cm thick", ratioValue: 2, defaultUnit: "parts", substitutions: ["Spanish chorizo", "kielbasa"] },
-    { ingId: "ing_04", role: "Protein",   name: "Bacon (slab or thick-cut), cubed",       ratioValue: 1,   defaultUnit: "parts", substitutions: ["pancetta"] },
-    { ingId: "ing_05", role: "Allium",    name: "White onion, diced",                     ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, minced",                  ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",       name: "Lard or neutral oil",                    ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Bay leaves",                             ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine salt",                              ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Black pepper, freshly ground",           ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Garnish",   name: "Orange, sliced into rounds",             ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_brazilian_feijoada_001",
+  "parentRepoId": null,
+  "slug": "feijoada",
+  "author": "ForkRecipe Kitchen",
+  "title": "Feijoada",
+  "description": "Le ragoût national du Brésil : les haricots noirs cuits lentement avec du porc fumé, des saucisses et de la baie, jusqu'à ce que le bouillon devienne inky et onctueux — servis avec du riz blanc, des verts à collier déchiquetés et des tranches d'orange qui coupent à travers la richesse comme une lame.",
+  "cuisine": "Brésil",
+  "culture": "Carioca",
+  "category": "grains",
+  "tags": [
+    "haricots noirs",
+    "porc",
+    "Brésilien",
+    "ragoût",
+    "coeurux"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "60 min",
+  "totalTime": "4 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 7,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 9,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Sear",
-      inputs: ["ing_04", "ing_02", "ing_03", "ing_07"],
-      outputState: "browned_pork",
-      instructions: "In a large, heavy-bottomed pot or Dutch oven, render the bacon over medium-high heat in the lard until the fat is released and the cubes are golden-brown on all sides (4–5 minutes). Add the smoked ribs or ham hock and sear until lightly browned (3 minutes per side). Add the sausage slices and brown until the cut edges are caramelized (2 minutes per side). Do not crowd the pot — work in batches if needed. This browning builds the fond that becomes the foundation of the stew's flavor. Remove the meats and set aside.",
-      visualCue: {
-        primaryTarget: "Each piece of pork is a deep mahogany-brown on the contact surfaces. The pot bottom has a rich brown fond — not black, but deeply caramelized. Fat has rendered and the oil is golden.",
-        spectrum: [
-          { state: "Underdone", description: "Meat surfaces are grey rather than brown. Pot has no fond — looks clean. Fat has barely rendered.", action: "Increase heat to medium-high and let each piece sit undisturbed for a full 2 minutes before checking color." },
-          { state: "Perfect",   description: "Rich brown crust on the contact faces. The sausage edges are caramelized and slightly crisped. The rendered fat is fragrant with pork.", action: "Remove meats. Proceed to sofrito in the same pot without cleaning." },
-          { state: "Overdone",  description: "Black crust that smells acrid. Fond on the pot bottom is dark and bitter-smelling.", action: "Remove meats. Add a splash of water and scrape the darkest spots to assess — if it smells bitter rather than roasted, deglaze with more water and discard the dark fond before continuing." },
-        ],
-      },
-      feelCue: "When you press a piece of sausage and it releases from the pot cleanly without tearing, the Maillard crust has formed — that natural release is your cue to flip.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Haricots noirs séchés, trempés pendant la nuit",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Sauté",
-      inputs: ["ing_05", "ing_06", "ing_08"],
-      outputState: "sofrito_base",
-      instructions: "In the same pot with all the remaining rendered fat, add the diced onion. Cook over medium heat, scraping up the brown fond from the bottom of the pot as the onion releases moisture. Stir frequently for 5–7 minutes until the onion is completely softened and translucent — golden at the edges. Add the minced garlic and bay leaves and cook for 1 minute more until fragrant. The fond should be completely dissolved into the onion.",
-      visualCue: {
-        primaryTarget: "Onion is golden at the edges, deeply softened, and fully transparent. Garlic is pale gold and fragrant. The pot bottom is clean — all the fond has integrated into the base.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still white and firm with raw crunch. Garlic has not yet become fragrant. Pot bottom still has loose dry fond.", action: "Add a small splash of water to deglaze and continue cooking. The moisture helps lift the fond." },
-          { state: "Perfect",   description: "Onion is translucent, golden at the edges, sweet-smelling. Garlic is pale gold with no rawness. The kitchen smells of caramelized onion.", action: "Return the browned meats to the pot and add the drained beans." },
-          { state: "Overdone",  description: "Onion is dark brown and beginning to crisp at the edges. Garlic is turning brown and smells bitter.", action: "The garlic bitterness will diminish with long braising. Add the beans and liquid immediately to stop the cooking." },
-        ],
-      },
-      feelCue: "An onion piece pressed between fingers should offer no resistance — completely soft, with no crunch. If there is still a faint snap, continue cooking.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Côtes de porc fumées ou jarrets fumés",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "épaule de porc fumée"
+      ]
     },
     {
-      nodeId: "step_3", action: "Braise",
-      inputs: ["sofrito_base", "browned_pork", "ing_01"],
-      outputState: "simmering_feijoada",
-      instructions: "Return all browned meats to the pot. Add the drained soaked beans. Pour in enough cold water to cover everything by 5 cm (about 2 inches). Bring to a vigorous boil, skimming off any grey foam that rises to the surface in the first 10 minutes — this is coagulated protein and will make the broth muddy if left. Once skimmed, reduce heat to the lowest setting, partially cover, and begin the long braise.",
-      visualCue: {
-        primaryTarget: "After skimming: a clear, dark broth with visible beans and meat submerged. The liquid is at a bare simmer — one or two lazy bubbles rising to the surface every few seconds.",
-        spectrum: [
-          { state: "Underdone", description: "Grey foam still covers the surface. Liquid is rolling at a full boil. No reduction in volume yet.", action: "Continue skimming and reduce heat. Full boiling makes beans tough and the broth muddy — it must be brought down to a bare simmer." },
-          { state: "Perfect",   description: "Broth has darkened from the beans and smoked pork. No foam. Surface trembles with a gentle simmer. Beans are beginning to expand.", action: "Cover partially and let the long braise begin. Set a timer for 2 hours." },
-          { state: "Overdone",  description: "Liquid has already reduced significantly in the first 15 minutes. Some beans on top are exposed.", action: "Add hot water to cover by 3 cm. Reduce heat — you cannot rush feijoada." },
-        ],
-      },
-      feelCue: "A bare simmer should sound like faint murmuring — you can hear it if the kitchen is quiet. A full boil sounds aggressive and will crack the beans and toughen the pork.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Saucisse Linguiça ou chouriço, coupée en tranches de 1cm d'épaisseur",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Chorizo espagnol",
+        "kielbasa"
+      ]
     },
     {
-      nodeId: "step_4", action: "Simmer",
-      inputs: ["simmering_feijoada"],
-      outputState: "tender_feijoada",
-      instructions: "Braise, partially covered, over very low heat for 2–2.5 hours, stirring every 30 minutes and checking liquid levels. The beans should always remain submerged. After 90 minutes, begin testing beans: press one between two fingers or on the roof of your mouth. At 2 hours, remove any bones and shred the meat back into the pot. Remove the bay leaves. The broth should have thickened significantly from the starch released by the beans.",
-      visualCue: {
-        primaryTarget: "Broth is very dark, almost black, and thick enough to coat the back of a spoon. Beans have expanded to their full size and are uniformly tender with no white starchy centers. Shredded pork has distributed throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Beans have a chalky, starchy center when bitten. Broth is still thin and broth-colored rather than inky. Meat is not yet falling from the bone.", action: "Continue simmering. Check every 20 minutes. Some beans varieties need up to 3 hours." },
-          { state: "Perfect",   description: "Beans are completely creamy throughout with no resistance. Broth is thick, dark, and unctuous. Meat shreds effortlessly.", action: "Season with salt and pepper. Rest 15 minutes before serving." },
-          { state: "Overdone",  description: "Many beans have burst and dissolved into the broth, making it porridge-thick. Meat is stringy.", action: "This is still delicious — serve it. Add hot water in small amounts to adjust consistency to a thick stew rather than a paste." },
-        ],
-      },
-      feelCue: "Pinch a bean between thumb and forefinger — it should squash completely flat with almost no resistance, like pressing a very soft grape. Any graininess or resistance in the center means more time.",
+      "ingId": "ing_04",
+      "role": "Protein",
+      "name": "Bacon (slabe ou coupe épaisse), cubes",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pancetta"
+      ]
     },
     {
-      nodeId: "step_5", action: "Season",
-      inputs: ["tender_feijoada", "ing_09", "ing_10", "ing_11"],
-      outputState: "finished_feijoada",
-      instructions: "Taste the feijoada critically and season with salt and black pepper. Because of the salt in the smoked meats and sausage, you may need very little additional salt — taste before adding anything. The finished stew should taste deeply savory, smoky, with a slight bitter note from the black bean skins. Serve in deep bowls over white rice. Lay orange rounds on the side of each bowl — they are not optional garnish; the citrus is essential to cut through the fat and cleanse the palate between bites.",
-      visualCue: {
-        primaryTarget: "A deep, glossy near-black stew with visible shredded meat and whole beans. Surface has a slight sheen from rendered fat. Color is the color of dark coffee.",
-        spectrum: [
-          { state: "Underdone", description: "Broth tastes thin and flat. Smokiness is present but the flavors have not united. Beans are distinct rather than integrated.", action: "Simmer uncovered for 15 more minutes to reduce and concentrate. The flavors need time to unify." },
-          { state: "Perfect",   description: "A single spoonful contains beans, meat, and broth in a unified, layered flavor: smoke, salt, earthiness, subtle bitterness. Deeply satisfying.", action: "Serve with white rice, collard greens, farofa, and orange slices." },
-          { state: "Overdone",  description: "Broth is overly salty from reduction. Beans have dissolved into the base. Pork flavor dominates everything else.", action: "Add hot water to thin, then add a handful of uncooked beans if you have them, or cooked beans from a can to restore texture." },
-        ],
-      },
-      feelCue: "A spoonful of feijoada broth should have a viscous, slightly slippery quality — the starch from the dissolved beans gives it body. If it runs off the spoon like water, it needs more reduction time.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon blanc, coupé en dés",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Lard ou huile neutre",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Poivre noir, fraîchement moulu",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Orange, tranché en rondelles",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_04",
+        "ing_02",
+        "ing_03",
+        "ing_07"
+      ],
+      "outputState": "browned_pork",
+      "instructions": "Dans une grande casserole à fond lourd ou un four hollandais, rendre le bacon à feu moyen-élevé dans le saindoux jusqu'à ce que la graisse soit libérée et que les cubes soient dorés de tous les côtés (4-5 minutes). Ajouter les côtes fumées ou le jarret de jambon et saisir jusqu'à ce qu'elles soient légèrement dorées (3 minutes de chaque côté). Ajouter les tranches de saucisse et brunir jusqu'à ce que les bords coupés soient caramélisés (2 minutes par côté). Ne foulez pas le pot — travaillez en lots si nécessaire. Ce brunissement construit le fond qui devient le fondement de la saveur du ragoût. Retirer les viandes et réserver.",
+      "visualCue": {
+        "primaryTarget": "Chaque morceau de porc est un acajou-brun profond sur les surfaces de contact. Le fond du pot a un riche fond brun — pas noir, mais profondément caramélisé. La graisse a rendu et l'huile est dorée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les surfaces de viande sont grises plutôt que brunes. Pot n'a pas d'affection — semble propre. La graisse a à peine rendu.",
+            "action": "Augmenter la chaleur à moyenne-élevée et laisser chaque pièce rester intacte pendant 2 minutes avant de vérifier la couleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche croûte brune sur les faces de contact. Les bords des saucisses sont caramélisés et légèrement croustillants. La graisse fondue est parfumée de porc.",
+            "action": "Enlevez les viandes. Passer à sofrito dans la même casserole sans nettoyage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte noire qui sent l'acride. Le fond du pot est sombre et amer.",
+            "action": "Enlevez les viandes. Ajouter un jet d'eau et gratter les taches les plus foncées pour évaluer — si elle sent amer plutôt que torréfié, déglacer avec plus d'eau et jeter le fond sombre avant de continuer."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous appuyez sur un morceau de saucisse et qu'il libère du pot proprement sans déchirer, la croûte de Maillard s'est formée — ce relâchement naturel est votre signal à retourner."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_08"
+      ],
+      "outputState": "sofrito_base",
+      "instructions": "Dans le même pot avec tout le reste de graisse fondue, ajouter l'oignon en dés. Cuire à feu moyen, en grattant le fond brun du pot, car l'oignon libère l'humidité. Incorporer fréquemment 5 à 7 minutes jusqu'à ce que l'oignon soit complètement adouci et translucide – doré aux bords. Ajouter l'ail haché et les feuilles de laurier et cuire encore 1 minute jusqu'à odorat. Le fond doit être complètement dissous dans l'oignon.",
+      "visualCue": {
+        "primaryTarget": "L'oignon est doré aux bords, profondément adouci et entièrement transparent. L'ail est d'or pâle et parfumé. Le fond du pot est propre — tout le fonds s'est intégré à la base.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore blanc et ferme avec une croûte brute. L'ail n'est pas encore parfumé. Le fond du pot a encore un fond sec.",
+            "action": "Ajouter un petit jet d'eau pour déglacer et poursuivre la cuisson. L'humidité aide à soulever le fond."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon est translucide, doré aux bords, sucré. L'ail est d'or pâle sans crudité. La cuisine sent l'oignon caramélisé.",
+            "action": "Retournez les viandes brunes dans le pot et ajoutez les haricots égouttés."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon est brun foncé et commence à croquer aux bords. L'ail devient brun et sent amer.",
+            "action": "L'amertume à l'ail diminuera avec la longue cuisson. Ajouter les haricots et le liquide immédiatement pour arrêter la cuisson."
+          }
+        ]
+      },
+      "feelCue": "Une pièce d'oignon pressée entre les doigts ne devrait offrir aucune résistance — complètement douce, sans croquant. S'il y a encore un léger coup, continuez à cuisiner."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "sofrito_base",
+        "browned_pork",
+        "ing_01"
+      ],
+      "outputState": "simmering_feijoada",
+      "instructions": "Retournez toutes les viandes brunes dans le pot. Ajouter les haricots trempés drainés. Verser suffisamment d'eau froide pour couvrir tout par 5 cm (environ 2 pouces). Porter à ébullition vigoureuse, en écrémant toute mousse grise qui monte à la surface dans les 10 premières minutes — c'est une protéine coagulée et fera le bouillon boueux si laissé. Une fois écrémé, réduire la chaleur au réglage le plus bas, couvrir partiellement et commencer le long brassage.",
+      "visualCue": {
+        "primaryTarget": "Après écrémage : un bouillon clair et foncé avec des haricots visibles et de la viande submergée. Le liquide est à mijoter, une ou deux bulles paresseuses montant à la surface toutes les quelques secondes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La mousse grise couvre toujours la surface. Le liquide roule à ébullition complète. Pas encore de réduction du volume.",
+            "action": "Continuer à écumer et réduire la chaleur. L'ébullition complète rend les haricots durs et le bouillon boueux — il faut le faire mijoter à nu."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le papillon s'est obscurci des haricots et du porc fumé. Pas de mousse. La surface tremble avec un doux mijot. Les haricots commencent à se développer.",
+            "action": "Couvrir partiellement et laisser commencer le long brassage. Réglez une minuterie pendant 2 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide a déjà diminué significativement dans les 15 premières minutes. Certains haricots sont exposés.",
+            "action": "Ajouter l'eau chaude à couvrir de 3 cm. Réduisez la chaleur — vous ne pouvez pas précipiter feijoada."
+          }
+        ]
+      },
+      "feelCue": "Un mijot nu devrait ressembler à un léger murmure — vous pouvez l'entendre si la cuisine est calme. Un ébullition complet semble agressif et va casser les haricots et durcir le porc."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "simmering_feijoada"
+      ],
+      "outputState": "tender_feijoada",
+      "instructions": "Brais, partiellement recouvert, à feu très doux pendant 2 à 2,5 heures, en remuant toutes les 30 minutes et en vérifiant les niveaux de liquide. Les haricots doivent toujours rester submergés. Après 90 minutes, commencez à tester les haricots : appuyez un entre deux doigts ou sur le toit de votre bouche. À 2 heures, retirer les os et rabattre la viande dans le pot. Enlevez les feuilles de la baie. Le bouillon aurait dû épaissir significativement à partir de l'amidon libéré par les haricots.",
+      "visualCue": {
+        "primaryTarget": "Broth est très foncé, presque noir, et assez épais pour envelopper le dos d'une cuillère. Les haricots ont augmenté à leur pleine taille et sont uniformément tendres sans centres d'amidon blanc. Le porc éraflé a été distribué partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les haricots ont un centre crayeux et féculent quand ils sont mordus. Le bouillon est encore mince et coloré au bouillon plutôt qu'inky. La viande ne tombe pas encore de l'os.",
+            "action": "Continuez à mijoter. Vérifiez toutes les 20 minutes. Certaines variétés de haricots nécessitent jusqu'à 3 heures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les haricots sont complètement crémeux tout au long sans résistance. Le papillon est épais, sombre et onctueux. La viande déchique sans effort.",
+            "action": "Assaisonner de sel et de poivre. Reposez-vous 15 minutes avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Beaucoup de haricots ont éclaté et se sont dissous dans le bouillon, le rendant porridge-épaisseur. La viande est forte.",
+            "action": "C'est encore délicieux — servez - le. Ajouter de l'eau chaude en petites quantités pour ajuster la consistance à un ragoût épais plutôt qu'à une pâte."
+          }
+        ]
+      },
+      "feelCue": "Pincez un haricot entre le pouce et l'index — il devrait squash complètement plat avec presque aucune résistance, comme presser un raisin très doux. Toute grainosité ou résistance au centre signifie plus de temps."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Saison",
+      "inputs": [
+        "tender_feijoada",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "finished_feijoada",
+      "instructions": "Goûtez la feijoada de façon critique et assaisonnez avec du sel et du poivre noir. En raison du sel contenu dans les viandes et les saucisses fumées, il est possible que vous ayez besoin de très peu de sel supplémentaire — goût avant d'ajouter quoi que ce soit. Le ragoût fini doit goûter profondément salé, fumé, avec une note légèrement amère des peaux de haricots noirs. Servir dans des bols profonds sur du riz blanc. Étendre des ronds d'orange sur le côté de chaque bol — ils ne sont pas en option garnir; les agrumes sont essentiels pour couper à travers la graisse et nettoyer le palais entre les morsures.",
+      "visualCue": {
+        "primaryTarget": "Un ragoût profond, brillant et presque noir avec de la viande déchiquetée visible et des haricots entiers. La surface a un léger reflet de graisse rendue. La couleur est la couleur du café noir.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth a un goût mince et plat. La fumée est présente mais les saveurs n'ont pas uni. Les haricots sont distincts plutôt que intégrés.",
+            "action": "Laisser mijoter à découvert pendant 15 minutes pour réduire et concentrer. Les saveurs ont besoin de temps pour unifier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une seule cuillère contient des haricots, de la viande et du bouillon dans une saveur unifiée, en couches : fumée, sel, terre, amertume subtile. Profondément satisfaisant.",
+            "action": "Servir avec du riz blanc, des verts à collier, du farofa et des tranches d'orange."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon est trop salé par réduction. Les haricots se sont dissous dans la base. La saveur de porc domine tout le reste.",
+            "action": "Ajouter de l'eau chaude à mince, puis ajouter une poignée de haricots non cuits si vous les avez, ou des haricots cuits d'une boîte pour restaurer la texture."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère de bouillon de feijoada devrait avoir une qualité visqueuse, légèrement glissante — l'amidon des haricots dissous lui donne le corps. Si elle s'écoule de la cuillère comme de l'eau, il faut plus de temps de réduction."
+    }
+  ]
 };

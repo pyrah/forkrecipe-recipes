@@ -1,94 +1,231 @@
 export default {
-  repoId: "master_french_anchovy_butter_001",
-  parentRepoId: null,
-  slug: "anchovy-butter",
-  author: "ForkRecipe Kitchen",
-  title: "Anchovy Butter",
-  description: "Room-temperature butter beaten with salt-packed anchovies, lemon zest, and parsley into a savory compound butter — melted over a steak it disappears into the meat in a wave of oceanic umami.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "condiments",
-  tags: ["anchovy-butter", "compound-butter", "french", "umami", "savory", "condiment"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "1 hr 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 4, sour: 1, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",      name: "Unsalted butter (at room temperature)",              ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Umami",    name: "Salt-packed anchovy fillets (rinsed, finely minced)", ratioValue: 15,  defaultUnit: "parts", substitutions: ["good-quality oil-packed anchovies, drained", "anchovy paste (use two thirds of the weight)"] },
-    { ingId: "ing_03", role: "Citrus",   name: "Lemon zest (finely grated)",                        ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Acid",     name: "Lemon juice",                                       ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",     name: "Flat-leaf parsley (very finely chopped)",            ratioValue: 8,   defaultUnit: "parts", substitutions: ["chives", "tarragon"] },
-    { ingId: "ing_06", role: "Allium",   name: "Shallot (very finely minced)",                      ratioValue: 5,   defaultUnit: "parts", substitutions: ["1 small garlic clove, minced to a paste"] },
-    { ingId: "ing_07", role: "Heat",     name: "Freshly cracked black pepper",                      ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_anchovy_butter_001",
+  "parentRepoId": null,
+  "slug": "anchovy-butter",
+  "author": "ForkRecipe Kitchen",
+  "title": "Beurre d'anchois",
+  "description": "Beurre à température ambiante battu avec des anchois salants, du zeste de citron et du persil dans un beurre composé salé — fondu sur un steak, il disparaît dans la viande dans une vague d'umami océanique.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "condiments",
+  "tags": [
+    "Anchois",
+    "Beurre composé",
+    "français",
+    "umami",
+    "savoureux",
+    "condiment"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "1 hr 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Prep",
-      inputs: ["ing_02"],
-      outputState: "minced_anchovies",
-      instructions: "If using salt-packed anchovies, separate the fillets under cold running water, brushing away the salt with your fingers and removing the central spine. Pat thoroughly dry. On a dry cutting board, finely mince the anchovy fillets until they form a near-paste — you want no large pieces, as chunks in the finished butter will taste overwhelming rather than integrated. Use the flat of the knife to smear the mince against the board in long strokes, dragging the paste to create a completely smooth, homogeneous puree.",
-      visualCue: {
-        primaryTarget: "A smooth, glossy, dark-brown paste with no visible fibre or large pieces — it looks like a concentrated meat paste and sticks to the knife in a thin, even film.",
-        spectrum: [
-          { state: "Underdone", description: "Visible chunks of anchovy remain — you can see the individual fibre of the fillet. These will create hot-spots of intensity in the finished butter.", action: "Continue mincing and smearing with the flat of the knife until the paste is completely smooth and homogeneous." },
-          { state: "Perfect",   description: "A uniform, sticky, glossy brown paste that smells intensely of the sea — salty, deeply savoury, fermented. It clings to the blade in a thin, even coat.", action: "Set aside and proceed to softening the butter." },
-          { state: "Overdone",  description: "Not really possible at the mince stage — thoroughly worked anchovy is always welcome. Just ensure the board and knife are dry or the paste will become watery.", action: "Pat the board dry and continue — water in the paste will interfere with emulsification in the butter." },
-        ],
-      },
-      feelCue: "The paste should feel smooth and slightly sticky between your fingers with no gritty fibrous texture. It smears on the board like a paste, leaving a faint, glossy trail.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Beurre non salé (à température ambiante)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Cream",
-      inputs: ["ing_01", "minced_anchovies", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "compound_butter_mixture",
-      instructions: "Beat the room-temperature butter in a bowl with a wooden spoon or in a stand mixer until it is pale, fluffy, and spreadable. Add the anchovy paste, lemon zest, lemon juice, parsley, shallot, and pepper. Beat vigorously until all the ingredients are completely and evenly incorporated — no visible streaks of anchovy or parsley clumps remaining. The butter should be a uniform, pale olive-green flecked with darker parsley and smell intoxicating: buttery, briny, herbal, and citrus-bright.",
-      visualCue: {
-        primaryTarget: "A pale olive-green, flecked compound butter — uniform in colour with no dark streaks of anchovy or uneven patches of herb. Fluffy and light from being beaten with air.",
-        spectrum: [
-          { state: "Underdone", description: "Dark anchovy streaks visible in the pale butter, and parsley not yet evenly distributed. The flavour will be uneven — bites alternating between too fishy and too bland.", action: "Continue beating until absolutely no streaks remain and the colour is perfectly uniform throughout." },
-          { state: "Perfect",   description: "A uniform, fluffy, pale herb-green butter. Every forkful will taste the same: rich, umami-laden, bright with lemon, and just faintly briny. It smells alive — savoury, herbal, citrus.", action: "Proceed to shaping and chilling." },
-          { state: "Overdone",  description: "Over-beaten with a mixer, the butter has split into greasy crumbs and watery liquid from the lemon juice — the emulsion has broken.", action: "Gather the mixture onto a sheet of cling film and roll into a log anyway; the texture will improve as it chills and the butter re-solidifies around the herbs." },
-        ],
-      },
-      feelCue: "The butter should feel light and airy when pressed with the back of a spoon — it should yield immediately and spread without resistance, like softened cream cheese.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Filets d'anchois salins (rincés, finement hachés)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "anchois à huile de bonne qualité, drainés",
+        "pâte d'anchois (utiliser les deux tiers du poids)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Shape",
-      inputs: ["compound_butter_mixture"],
-      outputState: "rolled_anchovy_butter",
-      instructions: "Lay a sheet of cling film or parchment on a clean surface. Spoon the compound butter in a rough log shape along the lower third of the film. Fold the film over the butter and use the edge of a bench scraper or ruler to compact and roll it into a smooth, even cylinder about 3 cm in diameter. Twist the ends tightly. Refrigerate for at least 1 hour until firm, or freeze for longer storage. The log shape allows you to cut precise coins of butter to serve.",
-      visualCue: {
-        primaryTarget: "A neat, smooth, firm cylinder wrapped in cling film — olive-green flecked with visible herb throughout the cross-section when cut. Firm enough to slice cleanly.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is soft and won't hold its shape — still warm or not chilled long enough. The log sags and deforms under its own weight.", action: "Refrigerate for a further 30 minutes. The butter must be completely cold before serving to hold its shape on a hot surface." },
-          { state: "Perfect",   description: "Firm, smooth, and sliceable into clean, even coins that hold their shape for a moment on the plate before slowly melting. The cut face is evenly coloured and speckled with herb throughout.", action: "Slice into 1 cm coins and serve immediately on grilled steak, fish, or hot vegetables." },
-          { state: "Overdone",  description: "Butter has been frozen and is rock-hard — slicing shards the coin rather than cutting cleanly.", action: "Transfer to the refrigerator 30 minutes before serving to soften to sliceable consistency." },
-        ],
-      },
-      feelCue: "The chilled log should feel firm and slightly resistant when you press the outside of the film — it should dent slightly but spring back. If it caves immediately under gentle pressure, it needs more time in the refrigerator.",
+      "ingId": "ing_03",
+      "role": "Citrus",
+      "name": "Zeste de citron (finement râpé)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Finish",
-      inputs: ["rolled_anchovy_butter"],
-      outputState: "finished_anchovy_butter",
-      instructions: "To serve, slice the log into 1 cm coins directly from the refrigerator and place one or two over freshly grilled or seared meat, fish, or vegetables. The residual heat of the food melts the butter in a slow, glossy pool, drawing out the anchovy-lemon-herb fragrance in a cloud of steam. Anchovy butter keeps, wrapped, for 1 week in the refrigerator or 2 months in the freezer. Slice coins from frozen and return unused portions to the freezer.",
-      visualCue: {
-        primaryTarget: "A coin of firm, speckled green-brown butter placed on a just-rested steak, beginning to melt at the edges into a glossy, shimmering pool. The heat draws up wisps of steam that smell of butter, sea, and herbs.",
-        spectrum: [
-          { state: "Underdone", description: "Butter coin has been placed on lukewarm food and is sitting solid and unmelted, not integrating with the food beneath.", action: "The food is not hot enough. Ensure the protein has just come off the grill or pan — residual heat above 50 C is required to melt the butter into a glaze." },
-          { state: "Perfect",   description: "The coin melts in 30 to 60 seconds on a hot resting steak — first pooling at the base, then spreading across the surface in a golden-green, aromatic glaze. The anchovy disappears into the meat, leaving only a profound savoury depth.", action: "Serve immediately with the butter still liquid and glistening." },
-          { state: "Overdone",  description: "Placed on food that is too hot (still cooking or just out of a 250 C oven), the butter has separated into oil and solids and evaporated rather than pooling gracefully.", action: "Allow the protein to rest for 2 to 3 minutes before adding the butter coin — resting drops the surface temperature into the ideal range." },
-        ],
-      },
-      feelCue: "When the butter coin hits a properly rested steak, you should feel the immediate warmth through the tongs — and watch the edges begin to soften and shimmer within seconds. If nothing happens in the first 30 seconds, the food is not hot enough.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Jus de citron",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Persil à feuilles plates (très finement haché)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ruches",
+        "estragon"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Échalote (très finement hachée)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1 petite gousse d'ail hachée à la pâte"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Heat",
+      "name": "Poivre noir fraichement craqué",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "minced_anchovies",
+      "instructions": "Si vous utilisez des anchois salins, séparer les filets sous l'eau froide courante, brosser le sel avec vos doigts et enlever la colonne vertébrale centrale. Pat complètement sec. Sur une planche à découper sèche, émincer finement les filets d'anchois jusqu'à ce qu'ils forment un quasi-collé — vous ne voulez pas de gros morceaux, car les morceaux dans le beurre fini auront un goût écrasant plutôt que intégré. Utilisez le plat du couteau pour frotter la menthe contre la planche en longs coups, en faisant glisser la pâte pour créer une purée complètement lisse et homogène.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse, brillante, brun foncé sans fibre visible ni gros morceaux, qui ressemble à une pâte de viande concentrée et qui colle au couteau dans un film mince et uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux visibles d'anchois restent — vous pouvez voir la fibre individuelle du filet. Ils créeront des points chauds d'intensité dans le beurre fini.",
+            "action": "Continuer à hacher et à frotter avec le plat du couteau jusqu'à ce que la pâte soit complètement lisse et homogène."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte brune uniforme, collante et brillante qui sent intensément la mer, salée, profondément salée, fermentée. Il s'accroche à la lame dans une couche mince et uniforme.",
+            "action": "Réserver et procéder à l'adoucissement du beurre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ce n'est pas vraiment possible au stade mince — l'anchois bien travaillé est toujours le bienvenu. Il suffit de s'assurer que la planche et le couteau sont secs ou la pâte deviendra aqueuse.",
+            "action": "La planche sèche et continue — l'eau dans la pâte interfère avec l'émulsion dans le beurre."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit être lisse et légèrement collante entre les doigts sans texture fibreuse. Il frotte sur le tableau comme une pâte, laissant un léger et brillant sentier."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Crème",
+      "inputs": [
+        "ing_01",
+        "minced_anchovies",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "compound_butter_mixture",
+      "instructions": "Battre le beurre à température ambiante dans un bol avec une cuillère en bois ou dans un mélangeur de stand jusqu'à ce qu'il soit pâle, moelleux et extensible. Ajouter la pâte d'anchois, le zeste de citron, le jus de citron, le persil, l'échalote et le poivre. Battre vigoureusement jusqu'à ce que tous les ingrédients soient complètement et uniformément incorporés — il ne reste pas de stries visibles d'anchois ou de persil. Le beurre doit être uniforme, vert olive pâle, tacheté de persil plus foncé et sentant enivrant : beurre, bruine, herbes et agrumes.",
+      "visualCue": {
+        "primaryTarget": "Beurre composé vert olive pâle, de couleur uniforme, sans stries foncées d'anchois ou de taches irrégulières d'herbe. Fumé et léger d'être battu avec de l'air.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries d'anchois sombres sont visibles dans le beurre pâle, et le persil n'est pas encore uniformément distribué. La saveur sera inégale — des morsures alternant trop poissonneuses et trop molles.",
+            "action": "Continuer à battre jusqu'à ce qu'aucune stries ne subsiste et que la couleur soit parfaitement uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un beurre uniforme, moelleux et vert-herbe pâle. Chaque fourchette aura le même goût: riche, umami-chargé, lumineux avec du citron, et juste légèrement briny. Elle sent la vie: saveur, herbes, agrumes.",
+            "action": "Procédez à la formation et au refroidissement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sur-battant avec un mélangeur, le beurre s'est divisé en miettes grasses et liquide aqueux du jus de citron — l'émulsion s'est cassée.",
+            "action": "Rassemblez le mélange sur une feuille de film de collage et roulez dans un log de toute façon; la texture s'améliorera à mesure qu'elle refroidit et que le beurre se solidifie autour des herbes."
+          }
+        ]
+      },
+      "feelCue": "Le beurre doit se sentir léger et aéré lorsqu'il est pressé à l'arrière d'une cuillère — il doit se développer immédiatement et se propager sans résistance, comme le fromage à la crème ramolli."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "compound_butter_mixture"
+      ],
+      "outputState": "rolled_anchovy_butter",
+      "instructions": "Poser une feuille de pellicule ou de parchemin sur une surface propre. Déposer le beurre composé en forme brute le long du tiers inférieur du film. Pliez le film sur le beurre et utilisez le bord d'un racleur ou d'une règle de banc pour le compacter et le rouler dans un cylindre lisse, même d'environ 3 cm de diamètre. Tordre les extrémités. Réfrigérer pendant au moins 1 heure jusqu'à ce qu'il soit ferme ou congeler pour un stockage plus long. La forme en rondins vous permet de couper des pièces précises de beurre à servir.",
+      "visualCue": {
+        "primaryTarget": "Un cylindre propre, lisse, ferme, enveloppé dans un film de collage — vert olive flanqué d'herbe visible dans toute la section lorsqu'il est coupé. Assez ferme pour trancher proprement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est doux et ne tiendra pas sa forme — encore chaud ou pas assez longtemps réfrigéré. Le log sag et se déforme sous son propre poids.",
+            "action": "Réfrigérer encore 30 minutes. Le beurre doit être complètement froid avant de servir pour maintenir sa forme sur une surface chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ferme, lisse, et trancheable en propre, même les pièces qui tiennent leur forme pendant un moment sur la plaque avant de fondre lentement. Le visage coupé est uniformément coloré et tacheté d'herbe.",
+            "action": "Couper en pièces de 1 cm et servir immédiatement sur le steak grillé, le poisson ou les légumes chauds."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre a été gelé et est dur à roc — couper la pièce, plutôt que de la couper proprement.",
+            "action": "Transférer au réfrigérateur 30 minutes avant de servir pour adoucir à la consistance trancheuse."
+          }
+        ]
+      },
+      "feelCue": "La bûche réfrigérée doit se sentir ferme et légèrement résistante lorsque vous appuyez sur l'extérieur du film — elle doit denteler légèrement mais ressortre. Si elle tombe immédiatement sous une pression douce, il faut plus de temps au réfrigérateur."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "rolled_anchovy_butter"
+      ],
+      "outputState": "finished_anchovy_butter",
+      "instructions": "Pour servir, tranchez la bûche en pièces de 1 cm directement du réfrigérateur et placez un ou deux sur de la viande, du poisson ou des légumes fraîchement grillés ou séchés. La chaleur résiduelle de la nourriture fait fondre le beurre dans un bassin lent et brillant, puisant le parfum anchois-lémon-herbe dans un nuage de vapeur. Le beurre d'anchois conserve, emballé, pendant 1 semaine au réfrigérateur ou 2 mois au congélateur. Couper les pièces de monnaie congelées et les retourner au congélateur.",
+      "visualCue": {
+        "primaryTarget": "Une pièce de beurre vert-brun tacheté ferme, placée sur un steak juste-resté, commençant à fondre aux bords dans une piscine brillante et chatoyante. La chaleur emporte de la vapeur qui sent le beurre, la mer et les herbes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pièce de beurre a été placée sur des aliments tièdes et est assise solide et non fondue, ne s'intégrant pas à la nourriture en dessous.",
+            "action": "La nourriture n'est pas assez chaude. S'assurer que la protéine vient de sortir de la grille ou de la poêle — une chaleur résiduelle supérieure à 50 C est nécessaire pour faire fondre le beurre dans une glaçure."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pièce fond en 30 à 60 secondes sur un steak au repos chaud, d'abord à la base, puis s'étend à la surface dans un glaçage aromatique vert doré. L'anchois disparaît dans la viande, ne laissant qu'une profondeur savoureuse profonde.",
+            "action": "Servir immédiatement avec le beurre encore liquide et brillant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Placé sur des aliments trop chauds (toujours cuits ou juste hors d'un four de 250 °C), le beurre s'est séparé en huile et en solides et s'est évaporé plutôt que de se mettre en commun gracieusement.",
+            "action": "Laisser reposer la protéine pendant 2 à 3 minutes avant d'ajouter la pièce de beurre."
+          }
+        ]
+      },
+      "feelCue": "Lorsque la pièce de beurre frappe un steak correctement reposé, vous devriez sentir la chaleur immédiate à travers les pinces — et regarder les bords commencer à s'adoucir et à briller en quelques secondes. Si rien ne se passe dans les 30 premières secondes, la nourriture n'est pas assez chaude."
+    }
+  ]
 };

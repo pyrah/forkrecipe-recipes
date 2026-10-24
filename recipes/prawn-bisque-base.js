@@ -1,139 +1,384 @@
 export default {
-  repoId: "master_french_prawn_bisque_base_001",
-  parentRepoId: null,
-  slug: "prawn-bisque-base",
-  author: "ForkRecipe Kitchen",
-  title: "Prawn Bisque Base",
-  description: "The foundation of classic bisque — prawn shells roasted until deep orange, then deglazed with cognac and white wine, simmered with aromatics and cream into a rich, coral-hued base.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "stocks",
-  tags: ["french", "classical", "shellfish", "bisque", "cream", "cognac"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 2, sour: 1, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Raw prawn or shrimp shells and heads (from 1 kg prawns)", ratioValue: 400, defaultUnit: "g",  substitutions: ["crab shells", "lobster shells"] },
-    { ingId: "ing_02", role: "Allium",    name: "Shallots, finely diced",                                   ratioValue: 100, defaultUnit: "g",  substitutions: ["white onion"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Celery stalk, diced",                                      ratioValue: 60,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Carrot, diced",                                            ratioValue: 60,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves, sliced",                                    ratioValue: 3,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_06", role: "Umami",     name: "Tomato paste",                                             ratioValue: 30,  defaultUnit: "g",  substitutions: ["2 ripe Roma tomatoes, roughly chopped"] },
-    { ingId: "ing_07", role: "Solvent",   name: "Cognac or brandy",                                         ratioValue: 60,  defaultUnit: "ml", substitutions: ["dry sherry", "Pernod for a fennel note"] },
-    { ingId: "ing_08", role: "Acid",      name: "Dry white wine",                                           ratioValue: 200, defaultUnit: "ml", substitutions: ["dry vermouth"] },
-    { ingId: "ing_09", role: "Liquid",    name: "Fish stock or water",                                      ratioValue: 750, defaultUnit: "ml", substitutions: ["light chicken stock (less marine)"] },
-    { ingId: "ing_10", role: "Dairy",     name: "Heavy cream",                                              ratioValue: 200, defaultUnit: "ml", substitutions: ["coconut cream (dairy-free)"] },
-    { ingId: "ing_11", role: "Aromatic",  name: "Bay leaf",                                                 ratioValue: 1,   defaultUnit: "leaf",   substitutions: [] },
-    { ingId: "ing_12", role: "Herb",      name: "Fresh tarragon sprigs",                                    ratioValue: 3,   defaultUnit: "sprigs", substitutions: ["1/4 tsp dried tarragon"] },
-    { ingId: "ing_13", role: "Heat",      name: "Cayenne pepper",                                           ratioValue: 0.25, defaultUnit: "tsp",  substitutions: ["pinch of smoked paprika"] },
-    { ingId: "ing_14", role: "Seasoning", name: "Fine sea salt",                                            ratioValue: 4,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_15", role: "Fat",       name: "Unsalted butter",                                          ratioValue: 40,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_16", role: "Fat",       name: "Olive oil",                                                ratioValue: 20,  defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_french_prawn_bisque_base_001",
+  "parentRepoId": null,
+  "slug": "prawn-bisque-base",
+  "author": "ForkRecipe Kitchen",
+  "title": "Base Bisque coudée",
+  "description": "La base du bisque classique — les coquilles de crevettes rôties jusqu'à l'orange profonde, puis déglacées avec du cognac et du vin blanc, mijotées d'aromates et de crème dans une base riche et corallienne.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "stocks",
+  "tags": [
+    "français",
+    "classique",
+    "crustacés",
+    "bisque",
+    "crème",
+    "Cognac"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sear",
-      inputs: ["ing_01", "ing_15", "ing_16"],
-      outputState: "roasted_shells",
-      instructions: "Heat the butter and olive oil together in a large, heavy-bottomed pot over high heat until the butter foam subsides and the fat is very hot — nearly smoking. Add the prawn shells and heads in a single layer. Do not stir for the first 2 minutes. You are looking for the Maillard reaction to occur on the shell surface, creating the toasted shellfish flavor that is the soul of bisque. After 2 minutes, stir and toss vigorously for another 3-4 minutes until the shells are uniformly bright orange-red and the kitchen smells intensely of roasted crustacean.",
-      visualCue: {
-        primaryTarget: "Shells have transformed from grey-pink to a vivid, deep orange-red. The bottom of the pot has developed dark brown shellfish fond. The room smells powerfully of roasted prawn.",
-        spectrum: [
-          { state: "Underdone", description: "Shells are pale pink, barely coloured. No fond on the pot bottom. Smell is raw, briny, not toasty.", action: "Keep the heat very high and resist stirring — the shells need sustained high heat contact to colour properly." },
-          { state: "Perfect",   description: "Deep, vivid orange-red shells. Dark brown — nearly black — fond across the pot bottom. The smell has shifted from raw seafood to something deeply toasted and complex.", action: "Add tomato paste and stir to pincer (caramelize)." },
-          { state: "Overdone",  description: "Shells are beginning to blacken at the edges and the fond is burnt. Bitter, acrid smell.", action: "Deglaze immediately with the cognac to arrest the burning. Reduce heat for remaining steps. Some bitterness will be present but will be muted by the cream." },
-        ],
-      },
-      feelCue: "Listen to the pot — the shells searing at the correct temperature should produce a continuous, aggressive sizzle, almost a roar. If it sounds like a quiet fry, the heat is insufficient and the shells are steaming rather than searing.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Coquilles et têtes de crevettes (à partir de 1 kg)",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Coquilles de crabe",
+        "coquilles de homard"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Caramelize",
-      inputs: ["roasted_shells", "ing_06"],
-      outputState: "pinced_shells",
-      instructions: "Add the tomato paste directly to the shells and stir vigorously to coat every shell with the paste. This technique — called pinçage in classical French cooking — involves frying the tomato paste in the shell fat for 2-3 minutes until it darkens from red to a deep brick-orange and sticks in places to the pot bottom. The acidity of the tomato paste cooks off, leaving concentrated sweetness that reinforces the shellfish sweetness.",
-      visualCue: {
-        primaryTarget: "Tomato paste has darkened from bright red to a deep, rust-orange and is visibly sticking and caramelizing against the hot pot bottom. Shells are coated in a thin, sticky, orange-brown glaze.",
-        spectrum: [
-          { state: "Underdone", description: "Tomato paste is still bright red and wet. No colour change on the paste itself.", action: "Fry for another minute on high heat — the paste needs to dry and concentrate before it is ready for the deglaze." },
-          { state: "Perfect",   description: "Paste has darkened and the pot bottom shows dark patches where it has caramelized. The sweetness of roasted tomato is now detectable beneath the shellfish aroma.", action: "Immediately add the cognac and deglaze." },
-          { state: "Overdone",  description: "Tomato paste is black and acrid. Pot bottom is heavily burnt.", action: "Add the cognac immediately and work quickly to deglaze. If the burn is severe, the bisque base will taste bitter — no fix exists beyond prevention." },
-        ],
-      },
-      feelCue: "A slight tacky resistance when you drag the spoon across the pot bottom — that's the caramelized tomato paste binding to the metal. It should peel away with the motion of the spoon, not flow freely.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Échalotes coupées en dés",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon blanc"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Deglaze",
-      inputs: ["pinced_shells", "ing_07", "ing_08"],
-      outputState: "deglazed_shells",
-      instructions: "Pour the cognac into the pot and stir vigorously — the alcohol will immediately lift the fond from the bottom. If you have a gas flame, tip the pan slightly and allow the cognac to flame briefly (flambé), which burns off the harshest alcohol edge while preserving the brandy complexity. Allow the flame to die naturally, then add the white wine. Reduce the wine by half over high heat, about 5 minutes, stirring occasionally. The liquid should smell of shellfish, toasted cognac, and a faint marine sweetness.",
-      visualCue: {
-        primaryTarget: "After the wine reduction, the liquid is a concentrated, deep amber-orange. The shells and aromatics are bathed in a thick, slightly syrupy liquid. The pot bottom is clean.",
-        spectrum: [
-          { state: "Underdone", description: "Wine has not reduced — liquid is thin and watery, pale gold. Raw alcohol still prominent in the aroma.", action: "Continue reducing on high heat. The reduction step concentrates everything and must not be skipped." },
-          { state: "Perfect",   description: "Liquid has reduced to a glaze that coats the shells — about half its original volume. Colour is deep amber-orange. Smells complex and inviting.", action: "Add aromatics and fish stock." },
-          { state: "Overdone",  description: "Wine has reduced to almost nothing — shells are nearly dry and beginning to scorch again.", action: "Add the fish stock immediately. Work quickly — scorched wine is bitter and harsh." },
-        ],
-      },
-      feelCue: "Tilt the pot and look at the liquid pooling in the corner — it should leave a thin, slightly syrupy coating on the pot wall as it flows back, not run freely like water.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Pâte de céleri, coupée en dés",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["deglazed_shells", "ing_02", "ing_03", "ing_04", "ing_05", "ing_09", "ing_11", "ing_12", "ing_13"],
-      outputState: "simmered_bisque",
-      instructions: "Add the shallots, celery, carrot, and garlic to the pot and stir. Add the fish stock, bay leaf, tarragon, and cayenne. Bring to a simmer and cook for 25-30 minutes. Do not boil aggressively — shellfish stocks become bitter under a rolling boil. The broth should be a rich, warm orange-coral. At 25 minutes, taste: it should be intensely savory, sweet from the shellfish, and warmly spiced from the cayenne.",
-      visualCue: {
-        primaryTarget: "A vibrant, coral-orange broth simmering gently around a mass of shells and vegetables. After 25 minutes, the broth has a glossy, slightly reduced look and a deep, warm orange colour.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is pale gold after 15 minutes. Flavour is thin and has not extracted the depth of the shells.", action: "Continue simmering — shellfish shells need at least 25-30 minutes to fully release their flavour compounds." },
-          { state: "Perfect",   description: "After 30 minutes, the broth is a deep, warm coral-orange with a glossy sheen. A spoonful tastes powerfully of prawn with supporting sweetness and spice. The tarragon is detectable but subtle.", action: "Remove from heat and blend the shells into the broth." },
-          { state: "Overdone",  description: "Simmered over 45 minutes — the shells have given a slightly bitter, overcooked note. Broth colour has darkened toward brown.", action: "Proceed immediately. The cream and reduction will soften the excess extraction." },
-        ],
-      },
-      feelCue: "Bring a ladle of the warm broth close to your face and inhale — the steam should smell like standing next to a charcoal grill on a coastal pier, all roasted shellfish and sea salt with a whisper of brandy.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Carotte coupée en dés",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Blend",
-      inputs: ["simmered_bisque"],
-      outputState: "blended_bisque",
-      instructions: "Remove the bay leaf and tarragon sprigs. Working in batches (or using an immersion blender), blend the entire contents of the pot — shells, vegetables, and broth — on high speed for 2 minutes per batch. The shells will break down into small fragments. This step extracts the last collagen and chitin from the shells and gives the bisque its characteristic opaque, velvety body. Blend thoroughly.",
-      visualCue: {
-        primaryTarget: "A thick, vivid coral-orange liquid that looks slightly gritty and is definitely opaque. The shells have broken down into the broth.",
-        spectrum: [
-          { state: "Underdone", description: "Large shell fragments still visible. Broth still looks like a stew rather than a blended base.", action: "Blend for another 60 seconds on high speed — the shells are tough and need extended blending to break down." },
-          { state: "Perfect",   description: "A vibrant, uniformly coral paste-like liquid with fine shell particulate. Opaque and slightly thick. Smells intensely of roasted shellfish.", action: "Strain through a fine sieve and press firmly to extract all liquid." },
-          { state: "Overdone",  description: "Over-blended to a very fine, almost smooth liquid. Little texture remaining.", action: "This is acceptable — the subsequent strain and cream will produce a beautiful bisque regardless of how finely the shells are blended." },
-        ],
-      },
-      feelCue: "The blended liquid should feel slightly gritty on the tongue — fine shell particulate that will be removed by straining but which has transferred its chitin and flavor compounds to the broth during blending.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Girofles d'ail, tranchés",
+      "ratioValue": 3,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_6",
-      action: "Reduce",
-      inputs: ["blended_bisque", "ing_10", "ing_14"],
-      outputState: "finished_bisque_base",
-      instructions: "Strain the blended bisque through a fine-mesh sieve, pressing firmly with the back of a ladle to extract as much liquid as possible from the shell pulp. Discard the dry shell paste. Return the strained liquid to a clean saucepan. Add the heavy cream and bring to a gentle simmer. Reduce over medium heat for 10-15 minutes, stirring occasionally, until the bisque has thickened to a consistency that coats the back of a spoon and the colour has deepened to a rich, coral-salmon. Season with salt. Taste and adjust — bisque should be lush and intensely flavored, slightly sweet from the shellfish and cream.",
-      visualCue: {
-        primaryTarget: "A silky, coral-salmon sauce that sheets off a spoon in a slow, even pour. Completely smooth and velvety. Colour is a warm, rich coral-orange.",
-        spectrum: [
-          { state: "Underdone", description: "Bisque is too thin — runs off a spoon like water. Colour is pale and flavor is dilute.", action: "Continue reducing on medium heat — the cream needs to reduce by at least 20% for proper consistency." },
-          { state: "Perfect",   description: "The bisque coats a spoon and when you draw a finger through the coat, the line holds clean for 3-4 seconds before slowly closing. Colour is a deep, warm coral. Taste is rich, sweet, savory, and slightly warming from the cayenne.", action: "Strain once more through a fine sieve for the smoothest possible result. Use immediately as a bisque base or cool and refrigerate 3 days." },
-          { state: "Overdone",  description: "Over-reduced to a thick, sticky, clinging sauce — more like a glaze than a bisque. Colour is dark, brownish-red.", action: "Thin with 50ml of warm fish stock or water, whisking over low heat to incorporate. Reduce further only if still too thin." },
-        ],
-      },
-      feelCue: "Take a spoonful and let it cool on your lower lip for a moment before tasting — a correctly made bisque base should feel velvety and almost rich enough to feel solid on the palate, coating your mouth in a way that water-based stocks never can.",
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "2 tomates roms mûres, hachées approximativement"
+      ]
     },
+    {
+      "ingId": "ing_07",
+      "role": "Solvent",
+      "name": "Cognac ou cognac",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sherry sec",
+        "Pernode pour une note de fenouil"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "Vin blanc sec",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vermouth sec"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Liquid",
+      "name": "Stocks ou eaux de poissons",
+      "ratioValue": 750,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Poulet léger (moins marin)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "crème de coco (sans lait)"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Aromatic",
+      "name": "Feuille de la baie",
+      "ratioValue": 1,
+      "defaultUnit": "leaf",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Herb",
+      "name": "Tours d'estragon frais",
+      "ratioValue": 3,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "1/4 c. à thé d'estragon séché"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Heat",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "pincée de paprika fumé"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_01",
+        "ing_15",
+        "ing_16"
+      ],
+      "outputState": "roasted_shells",
+      "instructions": "Chauffer le beurre et l'huile d'olive ensemble dans une grande casserole à fond lourd à feu vif jusqu'à ce que la mousse de beurre s'abaisse et que la graisse soit très chaude — presque fumer. Ajouter les coquilles et les têtes de crevettes en une seule couche. Ne pas remuer pendant les 2 premières minutes. Vous cherchez la réaction de Maillard à se produire sur la surface de la coquille, créant la saveur de coquillages grillés qui est l'âme de bisque. Après 2 minutes, remuer et remuer vigoureusement pendant encore 3-4 minutes jusqu'à ce que les coquilles soient uniformément orange-rouge et que la cuisine sente intensément les crustacés grillés.",
+      "visualCue": {
+        "primaryTarget": "Les coquilles sont passées du rose gris à un rouge orange vif et profond. Le fond de la marmite a développé un goût de crustacés brun foncé. La chambre sent très bien la crevette rôtie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coquilles sont rose pâle, à peine colorées. Pas d'affection pour le fond du pot. L'odeur est crue, briny, pas grillée.",
+            "action": "Gardez la chaleur très élevée et résistez à l'agitation — les coquilles ont besoin d'un contact thermique élevé pour se colorer correctement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des coquilles orange-rouge. Brun foncé — presque noir — affectionne le fond du pot. L'odeur est passée de fruits de mer crus à quelque chose de profondément grillé et complexe.",
+            "action": "Ajouter la pâte de tomate et remuer au pinceau (caraméliser)."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les coquilles commencent à noircir les bords et le fond est brûlé. Une odeur amère et acride.",
+            "action": "Déglacer immédiatement avec le cognac pour arrêter la brûlure. Réduire la chaleur pour les étapes restantes. Une certaine amertume sera présente mais sera muée par la crème."
+          }
+        ]
+      },
+      "feelCue": "Écoutez le pot: les coquilles qui s'entretuent à la bonne température devraient produire un étourdissement continu et agressif, presque un rugissement. S'il semble qu'il s'agisse d'un alevin calme, la chaleur est insuffisante et les coquillages sont à la vapeur plutôt qu'à la mer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Caramélisation",
+      "inputs": [
+        "roasted_shells",
+        "ing_06"
+      ],
+      "outputState": "pinced_shells",
+      "instructions": "Ajouter la pâte de tomate directement aux coquilles et remuer vigoureusement pour enrober chaque coquille de la pâte. Cette technique, appelée pinçage dans la cuisine classique française, consiste à faire frire la pâte de tomate dans la graisse de la coquille pendant 2-3 minutes jusqu'à ce qu'elle s'assombrisse du rouge à une profonde brique-orange et colle à des endroits au fond du pot. L'acidité de la pâte de tomate cuit, laissant la douceur concentrée qui renforce la douceur des mollusques.",
+      "visualCue": {
+        "primaryTarget": "La pâte de tomate a obscurci du rouge vif à un orange-rouille profond et est visiblement collant et caramélisant contre le fond de pot chaud. Les coquilles sont recouvertes d'un glaçure mince, collant et brun orange.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte de tomates est encore rouge vif et humide. Aucun changement de couleur sur la pâte elle-même.",
+            "action": "Faire frire une autre minute à feu vif — la pâte doit sécher et se concentrer avant d'être prête pour le déglaçage."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte a obscurci et le fond du pot montre des taches sombres où il a caramélisé. La douceur de la tomate rôtie est maintenant décelable sous l'arôme des mollusques.",
+            "action": "Ajouter immédiatement le cognac et déglacer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte de tomate est noire et acride. Le fond du pot est fortement brûlé.",
+            "action": "Ajouter le cognac immédiatement et travailler rapidement pour déglacer. Si la brûlure est grave, la base de bisque aura un goût amer."
+          }
+        ]
+      },
+      "feelCue": "Une légère résistance piquante lorsque vous faites glisser la cuillère sur le fond du pot — c'est la pâte de tomate caramélisée qui se lie au métal. Il doit se détacher avec le mouvement de la cuillère, pas s'écouler librement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Déglacement",
+      "inputs": [
+        "pinced_shells",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "deglazed_shells",
+      "instructions": "Verser le cognac dans la casserole et remuer vigoureusement — l'alcool lèvera immédiatement le fond du fond. Si vous avez une flamme à gaz, abaissez légèrement la poêle et laissez le cognac brûler brièvement (flammé), qui brûle du bord d'alcool le plus dur tout en préservant la complexité du cognac. Laisser la flamme mourir naturellement, puis ajouter le vin blanc. Réduire le vin de moitié à feu vif, environ 5 minutes, en remuant occasionnellement. Le liquide doit sentir les mollusques, le cognac grillé et une légère douceur marine.",
+      "visualCue": {
+        "primaryTarget": "Après la réduction du vin, le liquide est un ambre-orange concentré et profond. Les coquilles et les aromatiques sont baignés dans un liquide épais et légèrement sirupeux. Le fond est propre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le vin n'a pas diminué — le liquide est mince et aqueux, or pâle. L'alcool brut est toujours prédominant dans l'arôme.",
+            "action": "Continuer à réduire à feu vif. L'étape de réduction concentre tout et ne doit pas être ignorée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le liquide s'est réduit à une glaçure qui enveloppe les coquilles, soit environ la moitié de son volume d'origine. La couleur est ambre-orange profonde. Ça sent complexe et accueillant.",
+            "action": "Ajouter les aromatiques et les poissons."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le vin s'est réduit à presque rien — les coquilles sont presque sèches et commencent à brûler à nouveau.",
+            "action": "Ajouter immédiatement le stock de poisson. Travaillez rapidement — le vin brûlé est amer et dur."
+          }
+        ]
+      },
+      "feelCue": "Inclinez le pot et regardez la mise en commun du liquide dans le coin — il devrait laisser un mince revêtement légèrement sirupeux sur la paroi du pot pendant qu'il s'écoule, ne pas courir librement comme de l'eau."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "deglazed_shells",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_09",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "simmered_bisque",
+      "instructions": "Ajouter les échalotes, le céleri, la carotte et l'ail dans la casserole et remuer. Ajouter le stock de poissons, la feuille de laurier, l'estragon et la cayenne. Porter à mijoter et cuire 25-30 minutes. Ne pas faire bouillir de façon agressive: les stocks de mollusques deviennent amers sous un ébullition. Le bouillon doit être un coral orangé riche et chaud. A 25 minutes, goût : il devrait être intensément salé, sucré par les coquillages, et chaud épicé par la cayenne.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon corallien-orange vibrant mijotant doucement autour d'une masse de coquilles et de légumes. Après 25 minutes, le bouillon a un aspect brillant, légèrement réduit et une couleur orange profonde et chaude.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon est en or pâle après 15 minutes. La saveur est mince et n'a pas extrait la profondeur des coquilles.",
+            "action": "Continuer à mijoter — les coquillages ont besoin d'au moins 25-30 minutes pour libérer complètement leurs composés aromatisants."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 30 minutes, le bouillon est un corail-orange profond et chaud avec un éclat brillant. Une cuillerée goûte fortement de crevette avec support de douceur et d'épices. L'estragon est détectable mais subtil.",
+            "action": "Retirer du feu et mélanger les coquilles dans le bouillon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pendant plus de 45 minutes, les coquilles ont donné une note légèrement amère et trop cuite. La couleur de la bordure est foncée vers le brun.",
+            "action": "Continuez immédiatement. La crème et la réduction adouciront l'extraction excédentaire."
+          }
+        ]
+      },
+      "feelCue": "Apportez une louche du bouillon chaud près de votre visage et inhalez - la vapeur doit sentir comme se tenir à côté d'une grille de charbon sur une jetée côtière, tous les coquillages rôtis et le sel de mer avec un murmure de cognac."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Mélange",
+      "inputs": [
+        "simmered_bisque"
+      ],
+      "outputState": "blended_bisque",
+      "instructions": "Enlever la feuille de laurier et les brins d'estragon. Travailler en lots (ou à l'aide d'un mélangeur d'immersion), mélanger la totalité du contenu du pot — coquilles, légumes et bouillon — à grande vitesse pendant 2 minutes par lot. Les coquilles se décomposent en petits fragments. Cette étape extrait le dernier collagène et la chitine des coquilles et donne à la bisque son corps opaque et velouté caractéristique. Bien mélanger.",
+      "visualCue": {
+        "primaryTarget": "Un liquide corallien-orange épais et vif qui a l'air légèrement gris et est définitivement opaque. Les coquilles se sont cassées dans le bouillon.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De gros fragments de coquilles encore visibles. On dirait toujours un ragoût plutôt qu'une base mélangée.",
+            "action": "Mélanger encore 60 secondes à grande vitesse — les coquilles sont difficiles et doivent être mélangées de façon prolongée pour se décomposer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un liquide corallien dynamique et uniforme avec des particules fines. Opaque et légèrement épais. Sensation intense de crustacés grillés.",
+            "action": "Plongez dans un tamis fin et appuyez fermement pour extraire tout le liquide."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un liquide très fin, presque lisse. Il reste peu de texture.",
+            "action": "Ceci est acceptable — la souche et la crème subséquentes produiront une belle bisque, peu importe la finesse des coquilles."
+          }
+        ]
+      },
+      "feelCue": "Le liquide mélangé doit se sentir légèrement gras sur la langue — les particules fines de la coquille qui seront éliminées par déformation mais qui ont transféré ses composés chitinés et aromatisés au bouillon pendant le mélange."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Réduire",
+      "inputs": [
+        "blended_bisque",
+        "ing_10",
+        "ing_14"
+      ],
+      "outputState": "finished_bisque_base",
+      "instructions": "Placer la bisque mélangée dans un tamis à mailles fines, en pressant fermement le dos d'une louche pour extraire le plus de liquide possible de la pulpe de coquille. Jeter la pâte sèche. Retourner le liquide tendu dans une casserole propre. Ajouter la crème lourde et laisser mijoter. Réduire à feu moyen pendant 10-15 minutes, en remuant de temps en temps, jusqu'à ce que la bisque s'épaississe à une consistance qui enveloppe l'arrière d'une cuillère et que la couleur s'approfondisse jusqu'à un riche sel de corail. Assaisonner de sel. Goûtez et ajustez - la bisque doit être luxuriante et intensément aromatisée, légèrement sucrée des mollusques et de la crème.",
+      "visualCue": {
+        "primaryTarget": "Une sauce corallien-saumon soyeuse qui recouvre une cuillère dans un lent, même verser. Complètement lisse et velouté. La couleur est un chaud, riche corail-orange.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Bisque est trop mince — coule une cuillère comme de l'eau. La couleur est pâle et la saveur est diluée.",
+            "action": "Continuer à réduire à feu moyen — la crème doit réduire d'au moins 20% pour une bonne consistance."
+          },
+          {
+            "state": "Perfect",
+            "description": "La bisque enrobe une cuillère et lorsque vous dessinez un doigt à travers la couche, la ligne reste propre pendant 3-4 secondes avant de se refermer lentement. La couleur est un corail profond et chaud. Le goût est riche, doux, salé et légèrement réchauffé de la cayenne.",
+            "action": "Plongez encore une fois dans un tamis fin pour obtenir le résultat le plus doux possible. Utiliser immédiatement comme base bisque ou refroidir et réfrigérer 3 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surréduit à une sauce épaisse, collante et collante, plus comme une glaçure qu'une bisque. Couleur foncée, rouge brunâtre.",
+            "action": "Fin avec 50 ml de stock de poisson chaud ou d'eau, fouettant à feu doux pour incorporer. Réduire davantage seulement si encore trop mince."
+          }
+        ]
+      },
+      "feelCue": "Prenez une cuillère et laissez refroidir sur votre lèvre inférieure un moment avant de déguster — une base de bisque correctement faite devrait se sentir veloutée et presque assez riche pour se sentir solide en bouche, enrobant votre bouche d'une manière que les stocks à base d'eau ne peuvent jamais."
+    }
+  ]
 };

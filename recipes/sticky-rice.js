@@ -1,94 +1,189 @@
 export default {
-  repoId: "master_thai_sticky-rice_001",
-  parentRepoId: null,
-  slug: "sticky-rice",
-  author: "ForkRecipe Kitchen",
-  title: "Sticky Rice (Khao Niao)",
-  description: "Northern Thailand's staple glutinous rice — soaked overnight and steamed in a bamboo basket over a clay pot of boiling water until the grains turn translucent and sticky, perfect for rolling into balls and dipping into everything.",
-  cuisine: "Thai",
-  culture: "Northern Thai",
-  category: "grains",
-  tags: ["thai", "rice", "glutinous", "steamed", "northern-thai", "vegan"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "6 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 0, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Thai glutinous (sweet) rice, long-grain",    ratioValue: 400, defaultUnit: "g",  substitutions: ["Japanese mochigome (shorter grain, stickier result)"] },
-    { ingId: "ing_02", role: "Hydration", name: "Cold water, for soaking",                    ratioValue: 1200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Hydration", name: "Boiling water, for steaming (in pot below)", ratioValue: 1500, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_thai_sticky-rice_001",
+  "parentRepoId": null,
+  "slug": "sticky-rice",
+  "author": "ForkRecipe Kitchen",
+  "title": "Riz collant (Khao Niao)",
+  "description": "Nord Le riz glutineux de base de la Thaïlande — trempé toute la nuit et cuit à la vapeur dans un panier en bambou sur une marmite d'eau bouillante jusqu'à ce que les grains deviennent translucides et collants, parfaits pour rouler en boules et tremper dans tout.",
+  "cuisine": "Thaï",
+  "culture": "Nord thaïlandais",
+  "category": "grains",
+  "tags": [
+    "Thaï",
+    "riz",
+    "glutineux",
+    "vapeur",
+    "nord-thai",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "6 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "soaked_raw_rice",
-      instructions: "Rinse the glutinous rice under cold running water, swirling with your hand, until the water runs mostly clear — this removes excess surface starch that would otherwise make the cooked rice gummy rather than sticky. Transfer to a large bowl and cover with cold water by at least 5 cm. Soak for a minimum of 4 hours; overnight (8–12 hours) is strongly preferred. The grains must be fully hydrated before steaming — without this soak, the interior of each grain will remain hard and chalky no matter how long you steam them. The rice is ready to drain when each grain has swollen, turned chalky-white all the way through, and feels soft when pressed between two fingers but does not shatter.",
-      visualCue: {
-        primaryTarget: "Swollen, matte-white grains that have increased noticeably in volume, lying in water that has turned slightly milky from the leached starch.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still translucent at the core and feel hard when pressed. The soaking water is still clear.", action: "Continue soaking. A 2-hour soak produces raw-centered rice — there is no workaround for insufficient soak time. If pressed, soak in warm (not hot) water for at least 1 hour." },
-          { state: "Perfect",   description: "All grains are uniformly chalky-white and swollen. They give when pressed between thumb and forefinger but hold their shape. Water is white-milky.", action: "Drain thoroughly through a fine-mesh sieve. Shake off excess water before loading into the steaming basket." },
-          { state: "Overdone",  description: "Grains have soaked more than 18 hours — they are beginning to break apart at the edges and the water smells faintly sour.", action: "Drain and steam immediately. Slightly over-soaked rice will steam faster and turn mushier, so check for doneness earlier than usual." },
-        ],
-      },
-      feelCue: "Pinch a single grain and press firmly — it should crack cleanly across like a piece of soft chalk, not squash into paste. If it squashes to paste, it has soaked too long; if it resists and feels glassy, it needs more time.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz glutineux thaï (doux), à grains longs",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Mochigome japonais (grain plus court, résultat plus collant)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Boil",
-      inputs: ["ing_03"],
-      outputState: "steaming_water",
-      instructions: "Pour the boiling water into a wide clay pot, wok, or large saucepan — whichever will fit your bamboo steaming basket (or a heatproof colander lined with muslin). The water should be deep enough that it does not touch the bottom of the basket, but not so high that you have to refill frequently. Bring it to a full, rolling boil before loading the rice. Line the bamboo basket with a single layer of damp cheesecloth or muslin to prevent rice from falling through the slats.",
-      visualCue: {
-        primaryTarget: "A vigorous, rolling boil — large bubbles breaking the surface constantly, with a sustained column of steam rising from the pot.",
-        spectrum: [
-          { state: "Underdone", description: "Water is hot but not yet boiling — a slow simmer with lazy bubbles and a thin trickle of steam.", action: "Wait for a full rolling boil before loading the rice. Steaming over insufficient steam produces unevenly cooked rice with a hard core." },
-          { state: "Perfect",   description: "Full rolling boil with vigorous steam. The bamboo basket, when set in place, immediately shows steam puffing up through the rice.", action: "Load the drained rice into the lined basket, spread level, and cover with the lid or a cloth." },
-          { state: "Overdone",  description: "The pot has boiled dry during steaming — you can hear the pot crackling and no steam is coming through the rice.", action: "Add boiling water immediately (never cold, which can crack a clay pot and will cause temperature shock). Check the water level every 15 minutes during steaming." },
-        ],
-      },
-      feelCue: "Hold your hand 10 cm above the basket before loading — you should feel a consistent, steady column of heat pressing against your palm. Patches of cool air mean the seal between basket and pot is letting steam escape sideways.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau froide, pour tremper",
+      "ratioValue": 1200,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Steam",
-      inputs: ["soaked_raw_rice", "steaming_water"],
-      outputState: "half_steamed_rice",
-      instructions: "Spread the drained glutinous rice evenly in the lined bamboo basket in a layer no thicker than 4 cm. Cover and steam over the vigorously boiling water for 12 minutes. The heat will gelatinize the outer layers of starch first. After 12 minutes, flip the rice mass over using the cloth liner — this is the key step that ensures even cooking from both surfaces. The bottom layer will already look glossy and slightly translucent; the top will still look chalky. After flipping, level the mass and continue steaming for another 8–10 minutes.",
-      visualCue: {
-        primaryTarget: "After the first 12 minutes, the bottom half of the rice mass has turned from chalky white to a semi-translucent, shiny appearance — the starch gelatinizing under the direct steam.",
-        spectrum: [
-          { state: "Underdone", description: "Even the bottom layer is still completely chalky-white and the grains feel hard when touched with a spoon. No glossiness visible.", action: "Check that the pot is at a full boil and the basket is sealing properly. Cover tightly and steam for another 5 minutes before checking again." },
-          { state: "Perfect",   description: "The bottom half is clearly glossy and semi-translucent. The top half is still chalky but the grains on the boundary layer have just begun to stick to each other.", action: "Flip the rice in the cloth, level it, and replace the lid to finish the second half of the steam." },
-          { state: "Overdone",  description: "The bottom layer has gone fully translucent all the way through and the grains are beginning to collapse together into a solid mass.", action: "Steam for a shorter second half — only 5–6 minutes after flipping. The rice is cooking faster than expected, possibly because the soak was too long or the steam too intense." },
-        ],
-      },
-      feelCue: "After flipping, press the center of the rice mass with your palm through the cloth — it should feel warm and slightly resistant, like a firm pillow. If it gives completely without resistance, it is close to done; if it feels hard and cold at the core, it needs more time.",
-    },
-    {
-      nodeId: "step_4",
-      action: "Rest",
-      inputs: ["half_steamed_rice"],
-      outputState: "finished_sticky_rice",
-      instructions: "After a total of 20–22 minutes steaming (12 minutes + 8–10 minutes after flip), remove the basket from the pot. Taste a few grains from the center of the mass — they should be uniformly tender, sticky, and slightly sweet with no chalky or hard core. Turn the rice out of the cloth into a traditional sticky-rice serving basket (a krathip) or a covered bowl lined with a clean cloth to keep it warm and prevent it from drying out. Do not leave it exposed to air — it stiffens within minutes. Sticky rice is eaten by hand: pinch a small amount and roll it into a ball with your fingers, using the warm, malleable texture of the rice itself as the adhesive.",
-      visualCue: {
-        primaryTarget: "Glossy, fully translucent grains that cling together in a cohesive, pliable mass — like a very firm, moldable dough — with no chalky white centers visible when a grain is pulled apart.",
-        spectrum: [
-          { state: "Underdone", description: "The center of the mass still contains chalky-white grains that are hard and taste raw-starchy. The mass is crumbly rather than cohesive.", action: "Return to the steam for another 5 minutes. Underdone sticky rice is unmistakable — the raw starch taste is unpleasant and there is no fixing it at the table." },
-          { state: "Perfect",   description: "Every grain is translucent, tender, and clings to its neighbors. Rolling a small ball between your fingers produces a smooth, non-sticky surface on the outside. The flavor is clean, sweet, and faintly nutty.", action: "Transfer to a covered serving basket immediately. Keep covered at all times. Serve within the hour for the best texture." },
-          { state: "Overdone",  description: "The rice has steamed too long and collapsed into a single gummy, wet mass with no individual grain definition. It sticks aggressively to everything.", action: "It is still edible and can be used as congee or a sticky base for mango sticky rice with the addition of sweetened coconut milk, but the texture is past ideal for hand-eating." },
-        ],
-      },
-      feelCue: "Take a small pinch and press it firmly in your fingers. It should release cleanly from your skin without stringing — sticky to itself, not to you. If it glues itself to your palm and strings when you pull away, it has over-steamed. If it crumbles like couscous, it needs more time.",
-    },
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau bouillante, pour vapeur (en pot ci-dessous)",
+      "ratioValue": 1500,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "soaked_raw_rice",
+      "instructions": "Rincer le riz glutineux sous l'eau froide courante, tourbillonner avec votre main, jusqu'à ce que l'eau coule principalement limpide - ce qui élimine l'excès d'amidon de surface qui ferait autrement la gomme de riz cuite plutôt que collante. Transférer dans un grand bol et couvrir d'eau froide d'au moins 5 cm. Faire tremper pendant au moins 4 heures; la nuit (8 à 12 heures) est fortement préférée. Les grains doivent être complètement hydratés avant la vapeur — sans cette imprégnation, l'intérieur de chaque grain restera dur et crayeux, peu importe la durée de la vapeur. Le riz est prêt à s'égoutter lorsque chaque grain est enflé, est devenu blanc craie tout au long de la traversée, et se sent doux lorsqu'il est pressé entre deux doigts mais ne se brise pas.",
+      "visualCue": {
+        "primaryTarget": "Grains de loupe, blancs mats, qui ont augmenté sensiblement en volume, couchés dans de l'eau qui est légèrement laiteuse à partir de l'amidon lessivé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore translucides au cœur et se sentent difficiles lorsqu'ils sont pressés. L'eau de trempage est encore claire.",
+            "action": "Continuez à tremper. Un trempage de 2 heures produit du riz au centre brut — il n'y a pas de solution de rechange pour un temps de trempage insuffisant. En cas de pression, trempez dans de l'eau chaude (pas chaude) pendant au moins 1 heure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les grains sont uniformément blancs crayeux et gonflés. Ils donnent quand ils sont pressés entre le pouce et l'index, mais tiennent leur forme. L'eau est laiteuse.",
+            "action": "Égoutter soigneusement dans un tamis à mailles fines. Secouez l'excès d'eau avant de charger dans le panier à vapeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains ont trempé plus de 18 heures — ils commencent à se briser aux bords et l'eau sent peu aigre.",
+            "action": "Égoutter et vapeur immédiatement. Le riz légèrement sursauté va chauffer plus vite et tourner le mushier, donc vérifiez la cuisson plus tôt que d'habitude."
+          }
+        ]
+      },
+      "feelCue": "Pincez un seul grain et appuyez fermement — il devrait se fissurer proprement comme un morceau de craie douce, et non squash dans la pâte. S'il grince à coller, il a trempé trop longtemps; s'il résiste et se sent vitreux, il a besoin de plus de temps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "steaming_water",
+      "instructions": "Verser l'eau bouillante dans une grande casserole, un wok ou une grande casserole en terre cuite, selon ce qui convient à votre panier à vapeur en bambou (ou une calandre thermofuge doublée de mousseline). L'eau devrait être assez profonde pour qu'elle ne touche pas le fond du panier, mais pas si haut que vous devez le recharger fréquemment. Portez-le à plein ébullition avant de charger le riz. Étaler le panier en bambou d'une seule couche de mousseline ou de fromage humide pour empêcher le riz de tomber dans les lamelles.",
+      "visualCue": {
+        "primaryTarget": "Un ébullition vigoureux et enroulant — de grandes bulles brisent constamment la surface, avec une colonne de vapeur soutenue qui monte du pot.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est chaude mais pas encore bouillante: une mijote lente avec des bulles paresseuses et un mince filet de vapeur.",
+            "action": "Attendez un ébullition complet avant de charger le riz. La vapeur sur une vapeur insuffisante produit du riz mal cuit avec un noyau dur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Faire bouillir complètement avec de la vapeur vigoureuse. Le panier en bambou, lorsqu'il est mis en place, montre immédiatement une explosion de vapeur à travers le riz.",
+            "action": "Chargez le riz égoutté dans le panier doublé, étaler le niveau et couvrir avec le couvercle ou un chiffon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pot a bouilli à sec pendant la vapeur — vous pouvez entendre le pot craqueler et aucune vapeur ne vient à travers le riz.",
+            "action": "Ajouter immédiatement de l'eau bouillante (jamais froide, qui peut fissurer un pot d'argile et provoquer un choc de température). Vérifiez le niveau d'eau toutes les 15 minutes pendant la vapeur."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main à 10 cm au-dessus du panier avant le chargement — vous devriez sentir une colonne constante et constante de pression thermique contre votre paume. Des patchs d'air frais signifient que le joint entre le panier et le pot laisse échapper la vapeur latéralement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "vapeur",
+      "inputs": [
+        "soaked_raw_rice",
+        "steaming_water"
+      ],
+      "outputState": "half_steamed_rice",
+      "instructions": "Étendre le riz glutineux égoutté uniformément dans le panier en bambou doublé dans une couche ne dépassant pas 4 cm. Couvrir l'eau chaudement bouillante pendant 12 minutes. La chaleur gélatinisera d'abord les couches extérieures de l'amidon. Après 12 minutes, retournez la masse de riz à l'aide de la doublure en tissu — c'est l'étape clé qui assure même la cuisson des deux surfaces. La couche inférieure sera déjà lustrée et légèrement translucide; le dessus sera encore crayeux. Après le retournement, niveler la masse et continuer la vapeur pendant encore 8-10 minutes.",
+      "visualCue": {
+        "primaryTarget": "Après les 12 premières minutes, la moitié inférieure de la masse de riz est passée du blanc crayeux à un aspect semi-translucide et brillant, l'amidon gélatinisant sous la vapeur directe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Même la couche inférieure est toujours complètement blanc crayeux et les grains se sentent durs lorsqu'ils sont touchés par une cuillère. Pas de brillant visible.",
+            "action": "Vérifiez que le pot est à ébullition et que le panier est bien scellé. Couvrir soigneusement et laisser cuire encore 5 minutes avant de vérifier à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "La moitié inférieure est nettement brillante et semi-translucide. La moitié supérieure est encore crayeuse, mais les grains de la couche limite commencent tout juste à se coller.",
+            "action": "Frotter le riz dans le chiffon, le mettre à niveau et remplacer le couvercle pour terminer la deuxième moitié de la vapeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La couche inférieure est complètement translucide et les grains commencent à s'effondrer ensemble en une masse solide.",
+            "action": "Steam pendant une seconde moitié plus courte — seulement 5–6 minutes après le retournement. Le riz cuit plus vite que prévu, peut-être parce que le trempage était trop long ou la vapeur trop intense."
+          }
+        ]
+      },
+      "feelCue": "Après avoir retourné, appuyez sur le centre de la masse de riz avec votre paume à travers le tissu — il devrait se sentir chaud et légèrement résistant, comme un oreiller ferme. S'il donne complètement sans résistance, il est proche de faire; s'il se sent dur et froid au cœur, il a besoin de plus de temps."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "half_steamed_rice"
+      ],
+      "outputState": "finished_sticky_rice",
+      "instructions": "Après un total de 20 à 22 minutes de vapeur (12 minutes + 8 à 10 minutes après le flip), retirer le panier de la casserole. Goûtez quelques grains du centre de la masse — ils devraient être uniformément tendres, collants et légèrement sucrés sans noyau crayeux ou dur. Transformez le riz en panier de service traditionnel (un krathip) ou en bol couvert doublé d'un chiffon propre pour le garder au chaud et l'empêcher de sécher. Ne la laissez pas exposée à l'air — elle se raidit en quelques minutes. Le riz collant est consommé à la main : pincez une petite quantité et roulez-la dans une boule avec vos doigts, en utilisant la texture chaude et malléable du riz lui-même comme adhésif.",
+      "visualCue": {
+        "primaryTarget": "Grains brillants, entièrement translucides qui s'accrochent ensemble dans une masse cohésive et souple — comme une pâte très ferme et moulageable — sans centres blancs crayeux visibles lorsqu'un grain est arraché.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre de la masse contient encore des grains blancs crayeux qui sont durs et goûtent de l'amidon brut. La masse est émiettée plutôt que cohésive.",
+            "action": "Retour à la vapeur pendant 5 minutes. Le riz collant est indiscutable: le goût d'amidon brut est désagréable et il n'y a aucune fixation à la table."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain est translucide, tendre et s'accroche à ses voisins. Rouler une petite boule entre les doigts produit une surface lisse et non collante à l'extérieur. La saveur est propre, douce et légèrement noisette.",
+            "action": "Transférer immédiatement dans un panier de service couvert. Couvrez-vous en tout temps. Servir dans l'heure pour la meilleure texture."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz a été cuit à la vapeur trop longtemps et s'est effondré en une seule masse gommée, humide, sans définition de grain individuel. Ça colle agressivement à tout.",
+            "action": "Il est encore comestible et peut être utilisé comme congee ou une base collante pour le riz collant mangue avec l'ajout de lait de coco sucré, mais la texture est passée idéal pour manger à la main."
+          }
+        ]
+      },
+      "feelCue": "Prenez une petite pince et appuyez fermement dans vos doigts. Il devrait se libérer proprement de votre peau sans filer — collant à lui - même, pas à vous. Si elle se colle à votre paume et à vos cordes quand vous vous retirez, elle a trop d'équipes. Si ça s'écroule comme du couscous, il lui faut plus de temps."
+    }
+  ]
 };

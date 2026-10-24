@@ -1,120 +1,324 @@
 export default {
-  repoId: "master_british_scallops_with_pea_puree_001",
-  parentRepoId: null,
-  slug: "scallops-with-pea-puree",
-  author: "ForkRecipe Kitchen",
-  title: "Seared Scallops with Pea Purée and Pancetta",
-  description: "Pan-seared king scallops with a velvety, sweet pea purée and crispy pancetta — a three-part restaurant classic with a brutally simple margin for error on the sear: golden on one side, translucent at the centre.",
-  cuisine: "British",
-  culture: "Modern British",
-  category: "seafood",
-  tags: ["gluten-free"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 3, sour: 0, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "King scallops, dry-packed, roe removed",       ratioValue: 12,  defaultUnit: "whole", substitutions: ["large sea scallops (U10)"] },
-    { ingId: "ing_02", role: "Structure", name: "Frozen garden peas",                            ratioValue: 300, defaultUnit: "g",  substitutions: ["fresh peas, shelled", "petit pois"] },
-    { ingId: "ing_03", role: "Protein",   name: "Pancetta, finely diced (or lardons)",           ratioValue: 100, defaultUnit: "g",  substitutions: ["guanciale", "smoked bacon lardons"] },
-    { ingId: "ing_04", role: "Allium",    name: "Shallot, finely diced",                         ratioValue: 1,   defaultUnit: "large", substitutions: ["small onion"] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic, minced",                                ratioValue: 1,   defaultUnit: "clove", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Unsalted butter",                               ratioValue: 60,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Dairy",     name: "Double cream (heavy cream)",                    ratioValue: 60,  defaultUnit: "ml", substitutions: ["crème fraîche"] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh mint leaves",                             ratioValue: 10,  defaultUnit: "g",  substitutions: ["basil leaves"] },
-    { ingId: "ing_09", role: "Acid",      name: "Fresh lemon juice",                             ratioValue: 10,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_10", role: "Fat",       name: "Neutral oil (sunflower or grapeseed)",          ratioValue: 15,  defaultUnit: "ml", substitutions: ["clarified butter"] },
-    { ingId: "ing_11", role: "Seasoning", name: "Fine sea salt",                                 ratioValue: 5,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_12", role: "Seasoning", name: "White pepper",                                  ratioValue: 1,   defaultUnit: "g",  substitutions: ["black pepper"] },
-    { ingId: "ing_13", role: "Garnish",   name: "Pea shoots or watercress",                      ratioValue: 20,  defaultUnit: "g",  substitutions: ["micro herbs", "baby cress"] },
+  "repoId": "master_british_scallops_with_pea_puree_001",
+  "parentRepoId": null,
+  "slug": "scallops-with-pea-puree",
+  "author": "ForkRecipe Kitchen",
+  "title": "Scallops Seared avec Pea Purée et Pancetta",
+  "description": "Des pétoncles royaux à la sauce veloutée, au pois doux et à la pancetta croustillante, un restaurant classique en trois parties avec une marge d'erreur brutalement simple : doré d'un côté, translucide au centre.",
+  "cuisine": "Anglais",
+  "culture": "Britanniques modernes",
+  "category": "seafood",
+  "tags": [
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_04", "ing_05", "ing_06", "ing_02", "ing_07", "ing_08"],
-      outputState: "pea_puree",
-      instructions: "Melt 20 g of the butter in a small saucepan over medium heat. Add the diced shallot and garlic with a pinch of salt and sweat gently for 3–4 minutes until completely soft and translucent — no color at all. Add the frozen peas and double cream, bring to a simmer, and cook for 3 minutes until the peas are just tender and brilliant green. Transfer everything to a blender, add the mint leaves, and blend on high until completely smooth. Pass through a fine sieve if you want restaurant-level silkiness. Season with salt, white pepper, and a small squeeze of lemon. Keep warm.",
-      visualCue: {
-        primaryTarget: "A smooth, vivid green purée with the sheen of a fine vegetable cream. It falls off a spoon in a slow, controlled ribbon.",
-        spectrum: [
-          { state: "Underdone", description: "Purée is lumpy and pale — peas were not cooked long enough before blending, and the shallot is still gritty.", action: "Return to the blender and process for longer. If still lumpy, push through a fine sieve." },
-          { state: "Perfect",   description: "The purée is a vivid, uniform spring green with a velvet surface. It falls in a slow ribbon from the spoon and holds its shape on the plate. The mint is present but not dominant.", action: "Keep covered in a warm bain-marie or low oven." },
-          { state: "Overdone",  description: "Purée has turned a dull, grey-green — the peas were overcooked and the chlorophyll has broken down.", action: "Proceed. The flavor is still good but the color is lost. Next time, cook peas for only 3 minutes and blend immediately." },
-        ],
-      },
-      feelCue: "The purée should flow off a warm spoon like thick paint — neither so stiff it sits rigid nor so thin it runs into a puddle on the plate.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Stylos à tête grise, emballés à sec, désossés",
+      "ratioValue": 12,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "grands pétoncles marins (U10)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fry",
-      inputs: ["ing_03"],
-      outputState: "crispy_pancetta",
-      instructions: "Place the diced pancetta in a cold dry frying pan and set over medium heat. As the fat renders slowly, the pancetta will crisp evenly without burning. Cook for 5–7 minutes, stirring occasionally, until the dice are deeply golden and crispy and the surrounding fat has fully rendered out. Remove with a slotted spoon and drain on paper towel. Reserve the rendered fat in the pan — this will be used to sear the scallops.",
-      visualCue: {
-        primaryTarget: "Dice are a deep, even mahogany. Crispy throughout with no soft or chewy centres. Fat has fully rendered clear.",
-        spectrum: [
-          { state: "Underdone", description: "Pancetta is golden but still soft and yielding. Fat is not fully rendered — dice will be chewy rather than crispy.", action: "Continue cooking over medium heat for 2–3 more minutes." },
-          { state: "Perfect",   description: "Dice are uniformly dark gold to light mahogany, crispy all the way through, and shatter slightly when pressed. The rendered fat is clear gold.", action: "Remove and drain immediately — they will continue to color from residual heat." },
-          { state: "Overdone",  description: "Dice are very dark brown, beginning to smell acrid. The rendered fat is browning.", action: "Remove and drain. Trim any blackened pieces. The flavor will be intensely smoky rather than balanced — use a smaller amount." },
-        ],
-      },
-      feelCue: "Crispy pancetta should shatter with a clean snap between your fingers, not bend or feel leathery. If it bends, it needs more time.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Pois de jardin congelés",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pois frais, écossés",
+        "petits pois"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sear",
-      inputs: ["ing_01", "ing_10", "ing_11", "ing_12"],
-      outputState: "seared_scallops",
-      instructions: "Pat the scallops completely dry with paper towel — this is the single most important step. Any surface moisture will steam rather than sear. Season both flat faces with salt and white pepper. Add the neutral oil to the pancetta-fat pan and heat over the highest possible heat until the oil just begins to smoke. Place scallops flat-side down in the pan, one by one, and do not touch them for exactly 90 seconds to 2 minutes. The sear must be uninterrupted. They are ready to flip when they release easily from the pan — not when the timer says so.",
-      visualCue: {
-        primaryTarget: "A deep mahogany-gold crust on the bottom face. The sides of the scallop are opaque white and cooked approximately two-thirds of the way up. The very top remains translucent and glossy.",
-        spectrum: [
-          { state: "Underdone", description: "The sear is pale gold, patchy, or non-existent. The scallop stuck to the pan when you tried to flip it.", action: "Leave it. A scallop releases itself from a hot pan when the crust has formed — it will not release until then." },
-          { state: "Perfect",   description: "A defined, dark gold caramelized crust on the seared face. Sides are white to two-thirds up. The top center is still translucent and lightly glossy — the scallop is essentially raw at its very heart, which is correct.", action: "Flip, cook 30–45 seconds, add cold butter, and baste." },
-          { state: "Overdone",  description: "Scallop is fully opaque white all the way through. The sear is very dark. The scallop feels firm when pressed.", action: "Remove immediately and plate. An overcooked scallop is rubbery — serve it as quickly as possible, the sauce and purée will help." },
-        ],
-      },
-      feelCue: "Press a scallop gently with your fingertip after flipping — it should feel like a soft, resilient pillow with a slight give. Rubbery firmness means it is overcooked.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Pancetta, en dés (ou en lardons)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "guanciale",
+        "lardons de bacon fumés"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Mount",
-      inputs: ["seared_scallops", "ing_06", "ing_09"],
-      outputState: "basted_scallops",
-      instructions: "The moment the scallops are flipped, add the remaining cold butter to the pan in two pieces. It will melt and foam immediately in the residual heat. Tilt the pan and use a spoon to continuously baste the scallops with the foaming butter for 30–45 seconds. Add a tiny squeeze of lemon. Remove scallops the moment the second side shows a pale gold — the center should still feel yielding. Rest on a warm plate for 30 seconds while you arrange the components.",
-      visualCue: {
-        primaryTarget: "Scallops are golden on both flat faces with white sides. Brown butter foam clings to the surface. The plate beneath them glistens with butter.",
-        spectrum: [
-          { state: "Underdone", description: "Second face is still pale and uncrusted. Butter is not foaming — pan has lost too much heat from adding cold butter.", action: "Increase heat briefly to restore the foam and continue basting." },
-          { state: "Perfect",   description: "Both faces are golden. The butter has foamed and turned a pale nut-brown, imparting a hazelnut note. Scallops feel soft and yielding. The center is translucent when sliced.", action: "Plate immediately — scallops wait for no one." },
-          { state: "Overdone",  description: "Butter has burned beyond brown to black. Acrid smell. Scallops feel firm throughout.", action: "Plate immediately. Wipe excess dark butter from the scallops with a clean spoon before serving." },
-        ],
-      },
-      feelCue: "The basting butter should foam and hiss constantly — the moment it goes quiet, either the heat is too low or the scallops need to come out.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalote, finement coupée",
+      "ratioValue": 1,
+      "defaultUnit": "large",
+      "substitutions": [
+        "petit oignon"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Assemble",
-      inputs: ["pea_puree", "basted_scallops", "crispy_pancetta", "ing_13"],
-      outputState: "finished_scallops_plate",
-      instructions: "Working quickly, spoon a swoosh of warm pea purée across each plate using the back of a warm spoon. Arrange three scallops per plate on and around the purée, seared-side facing up to display the crust. Scatter the crispy pancetta dice over and around the scallops. Finish with a small cluster of pea shoots or watercress placed in the center, dressed with a tiny drizzle of olive oil. The three elements must arrive together: any one of them cold ruins the dish.",
-      visualCue: {
-        primaryTarget: "Vivid green purée, three golden-crusted scallops, mahogany pancetta crumble, and bright green shoots — four distinct colors and textures on the plate.",
-        spectrum: [
-          { state: "Underdone", description: "Purée is cold and has formed a skin. Pancetta has softened from humidity. Components feel assembled in stages rather than simultaneously.", action: "This dish waits for nothing. Everything must be warm and assembled in under 90 seconds." },
-          { state: "Perfect",   description: "Purée is warm and vivid green. Scallops are hot with a crackling crust. Pancetta is crispy. Pea shoots are fresh and upright. All three temperatures and textures are present simultaneously.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Pea shoots have wilted over the hot scallops. Purée has spread flat across the plate. Components have merged into each other.", action: "Plate more quickly next time. A warm, pre-heated plate helps keep components in place." },
-        ],
-      },
-      feelCue: "When you cut through a perfect scallop it should yield with almost no resistance at the edges, then offer a slight, creamy resistance at the translucent center — like cutting through cold butter that has been left out for ten minutes.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 1,
+      "defaultUnit": "clove",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Double crème (crème lourde)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Crème fraîche"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Feuilles fraîches de menthe",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "feuilles de basilic"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile neutre (fleur de soleil ou graines de raisin)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "beurre clarifié"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Poivre blanc",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivre noir"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Garnish",
+      "name": "pousses de pois ou cresson d'eau",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "microherbes",
+        "bébé cress"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_02",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "pea_puree",
+      "instructions": "Faire fondre 20 g de beurre dans une petite casserole à feu moyen. Ajouter l'échalote en dés et l'ail avec une pincée de sel et transpirer doucement pendant 3 à 4 minutes jusqu'à ce qu'il soit complètement doux et translucide — sans couleur du tout. Ajouter les pois congelés et la double crème, laisser mijoter et cuire 3 minutes jusqu'à ce que les pois soient tendres et brillants. Transférer tout dans un mélangeur, ajouter les feuilles de menthe, et mélanger à haute jusqu'à ce que complètement lisse. Passez à travers un tamis si vous voulez soyeux niveau restaurant. Assaisonner de sel, de poivre blanc et d'une petite pression de citron. Restez au chaud.",
+      "visualCue": {
+        "primaryTarget": "Une purée verte douce et vive avec le reflet d'une crème de légumes fine. Il tombe d'une cuillère dans un ruban lent et contrôlé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La purée est grumelée et pâle — les pois n'ont pas été cuits assez longtemps avant le mélange, et l'échalote est encore gritty.",
+            "action": "Retourner au mélangeur et le traiter plus longtemps. Si elle est encore grumelée, poussez dans un tamis."
+          },
+          {
+            "state": "Perfect",
+            "description": "La purée est un vert de printemps vif et uniforme avec une surface en velours. Il tombe dans un ruban lent de la cuillère et tient sa forme sur l'assiette. La menthe est présente mais non dominante.",
+            "action": "Conserver couvert dans un bain-marie chaud ou un four bas."
+          },
+          {
+            "state": "Overdone",
+            "description": "La purée a transformé un vert grisâtre — les pois ont été trop cuits et la chlorophylle s'est dégradée.",
+            "action": "Continuez. La saveur est encore bonne, mais la couleur est perdue. La prochaine fois, faire cuire les pois seulement 3 minutes et mélanger immédiatement."
+          }
+        ]
+      },
+      "feelCue": "La purée doit couler d'une cuillère chaude comme de la peinture épaisse — ni si raide qu'elle soit rigide ni si mince qu'elle coule dans une flaque sur l'assiette."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "crispy_pancetta",
+      "instructions": "Placer la pancetta en dés dans une poêle sèche et froide et la mettre à feu moyen. Comme la graisse rend lentement, la pancetta sera croustillante uniformément sans brûler. Cuire de 5 à 7 minutes en remuant de temps en temps, jusqu'à ce que les dés soient profondément dorés et croustillants et que la graisse qui les entoure soit complètement extraite. Retirer avec une cuillère à fente et égoutter sur une serviette en papier. Réservez la graisse fondue dans la poêle, qui servira à saisir les pétoncles.",
+      "visualCue": {
+        "primaryTarget": "Les dés sont une acajou profonde. Crispy tout au long sans centres mous ou mâcheurs. La graisse a rendu clair.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pancetta est dorée mais encore douce et productive. Le gras n'est pas entièrement rendu — les dés seront croustillants plutôt que croustillants.",
+            "action": "Continuer la cuisson à feu moyen pendant 2 à 3 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les dés sont uniformément d'or foncé à acajou clair, croustillant tout le long du chemin, et se brisent légèrement lorsqu'ils sont pressés. La graisse rendue est de l'or clair.",
+            "action": "Retirer et égoutter immédiatement — ils continueront à colorier de la chaleur résiduelle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les dés sont brun foncé, et commencent à sentir l'acride. La graisse rendue est brune.",
+            "action": "Retirer et égoutter. Trim tous les morceaux noircis. La saveur sera intensément fumée plutôt que équilibrée — utilisez une plus petite quantité."
+          }
+        ]
+      },
+      "feelCue": "Crispy pancetta devrait éclater avec un claquage propre entre vos doigts, pas plier ou se sentir cuir. Si ça se penche, il lui faut plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sear",
+      "inputs": [
+        "ing_01",
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "seared_scallops",
+      "instructions": "Les pétoncles sont complètement secs avec une serviette en papier — c'est l'étape la plus importante. N'importe quelle humidité de surface va vapeur plutôt que de semer. Assaisonner les deux faces plates avec du sel et du poivre blanc. Ajouter l'huile neutre dans la poêle à matières grasses de la pancetta et chauffer sur la chaleur la plus élevée possible jusqu'à ce que l'huile commence à fumer. Placez les pétoncles à plat dans la poêle, un par un, et ne les touchez pas pendant exactement 90 secondes à 2 minutes. La mer doit être ininterrompue. Ils sont prêts à basculer lorsqu'ils se libèrent facilement de la poêle — pas quand le minuteur le dit.",
+      "visualCue": {
+        "primaryTarget": "Une croûte d'acajou profonde sur la face inférieure. Les côtés du pétoncle sont blancs opaques et cuits environ les deux tiers du chemin vers le haut. Le haut reste translucide et brillant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La taille est en or pâle, patchy ou inexistante. Le pétoncle est resté dans la poêle quand vous avez essayé de le retourner.",
+            "action": "Laisse tomber. Un pétoncle se libère d'une casserole chaude lorsque la croûte s'est formée — il ne se libérera pas avant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte caramélisée en or foncé définie sur le visage mariné. Les côtés sont blancs jusqu'aux deux tiers. Le centre supérieur est encore translucide et légèrement brillant — le pétoncle est essentiellement cru à son cœur, ce qui est correct.",
+            "action": "Flip, faire cuire 30 à 45 secondes, ajouter le beurre froid et faire baste."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pétoncle est entièrement blanc opaque tout au long du parcours. La mer est très sombre. Le pétoncle se sent ferme lorsqu'il est pressé.",
+            "action": "Retirer immédiatement et plaquer. Un pétoncle surcuit est caoutchouteux — servez-le le plus rapidement possible, la sauce et la purée vous aideront."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur un pétoncle avec votre bout de doigt après avoir retourné — il devrait se sentir comme un oreiller doux et résistant avec un léger donner. La fermeté caoutchouteuse signifie qu'elle est trop cuite."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Monter",
+      "inputs": [
+        "seared_scallops",
+        "ing_06",
+        "ing_09"
+      ],
+      "outputState": "basted_scallops",
+      "instructions": "Au moment où les pétoncles sont retournés, ajouter le beurre froid restant dans la poêle en deux morceaux. Il fondra et moussera immédiatement dans la chaleur résiduelle. Incliner la poêle et utiliser une cuillère pour assainir continuellement les pétoncles avec le beurre moussant pendant 30 à 45 secondes. Ajouter une petite pression de citron. Enlevez les pétoncles au moment où le deuxième côté montre un or pâle — le centre devrait encore se sentir céder. Reposez-vous sur une assiette chaude pendant 30 secondes pendant que vous arrangez les composants.",
+      "visualCue": {
+        "primaryTarget": "Les pétoncles sont dorés sur les deux faces plates aux côtés blancs. La mousse de beurre brun s'accroche à la surface. L'assiette sous eux brille de beurre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le deuxième visage est encore pâle et sans croûte. Le beurre n'est pas mousseux — la poêle a perdu trop de chaleur en ajoutant du beurre froid.",
+            "action": "Augmenter brièvement la chaleur pour restaurer la mousse et continuer à se baser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les deux visages sont dorés. Le beurre a moulu et est devenu brun-noix pâle, donnant une note de noisette. Les pétoncles se sentent doux et productifs. Le centre est translucide en tranches.",
+            "action": "Assiette immédiatement — les pétoncles n'attendent personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre a brûlé au-delà du brun jusqu'au noir. Une odeur d'acride. Les pétoncles se sentent fermes.",
+            "action": "Tout de suite. Essuyer l'excès de beurre foncé des pétoncles avec une cuillère propre avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Le beurre basting devrait mousser et siffler constamment — dès qu'il se calme, soit la chaleur est trop faible, soit les pétoncles doivent sortir."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Assemblage",
+      "inputs": [
+        "pea_puree",
+        "basted_scallops",
+        "crispy_pancetta",
+        "ing_13"
+      ],
+      "outputState": "finished_scallops_plate",
+      "instructions": "Travaillant rapidement, cuillerez un swoosh de purée de pois chauds sur chaque assiette en utilisant le dos d'une cuillère chaude. Disposer trois pétoncles par plaque sur et autour de la purée, côté mer face à la croûte. Dispersez les dés croustillants de la pancetta autour des pétoncles. Terminer avec un petit groupe de pousses de pois ou de cresson d'eau placé au centre, vêtu d'une petite bruine d'huile d'olive. Les trois éléments doivent arriver ensemble: n'importe lequel d'entre eux détruit froid le plat.",
+      "visualCue": {
+        "primaryTarget": "Purée verte vive, trois pétoncles dorés, une pancetta acajoue et des pousses vert vif – quatre couleurs et textures distinctes sur l'assiette.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La purée est froide et a formé une peau. Pancetta s'est adouci par l'humidité. Les composants se sentent assemblés par étapes plutôt que simultanément.",
+            "action": "Ce plat n'attend rien. Tout doit être chaud et assemblé en moins de 90 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La purée est chaude et vive. Les pétoncles sont chauds avec une croûte crépitante. Pancetta est croustillante. Les pousses de pois sont fraîches et droites. Les trois températures et textures sont présentes simultanément.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pousses de pois se sont flétries au-dessus des pétoncles chauds. Purée s'est étendue à plat sur l'assiette. Les composants se sont fusionnés.",
+            "action": "Plaque plus rapidement la prochaine fois. Une plaque chaude et préchauffée permet de maintenir les composants en place."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous coupez à travers un pétoncle parfait, il devrait donner avec presque aucune résistance aux bords, puis offrir une légère résistance crémeuse au centre translucide — comme couper à travers le beurre froid qui a été laissé dehors pendant dix minutes."
+    }
+  ]
 };

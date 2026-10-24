@@ -1,81 +1,179 @@
 export default {
-  repoId: "master_italian_farinata_001",
-  parentRepoId: null,
-  slug: "farinata",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Farinata Genovese",
-  description: "A thin, crackling chickpea-flour pancake from the Ligurian coast — blistered and gilt at the edges from a screaming-hot copper pan, custardy and golden within, needing nothing but black pepper and a patient oven.",
-  cuisine: "Italian",
-  culture: "Ligurian",
-  category: "grains",
-  tags: ["vegan", "gluten-free", "chickpea", "flatbread", "italian", "liguria", "street-food"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "5 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 1, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Chickpea flour (farina di ceci)",   ratioValue: 1,    defaultUnit: "parts", substitutions: ["gram flour (besan — similar but denser)"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Tepid water",                       ratioValue: 3,    defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Fat",       name: "Extra-virgin olive oil",            ratioValue: 0.25, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                     ratioValue: 0.03, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Coarsely cracked black pepper",     ratioValue: 0.02, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_farinata_001",
+  "parentRepoId": null,
+  "slug": "farinata",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Farinata Genovese",
+  "description": "Un mince pancake à la farine de pois chiches crépitant de la côte ligurienne, blister et dorer aux bords d'une poêle en cuivre chaud et hurlante, crépuscule et dorée à l'intérieur, n'ayant besoin que d'un poivre noir et d'un four patient.",
+  "cuisine": "Italien",
+  "culture": "Ligurien",
+  "category": "grains",
+  "tags": [
+    "végétalien",
+    "Sans gluten",
+    "pois chiches",
+    "Pain plat",
+    "Italien",
+    "ligurie",
+    "Produits de la rue"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "5 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_04"],
-      outputState: "farinata_batter",
-      instructions: "Sift the chickpea flour into a wide bowl to remove any lumps. Gradually whisk in the tepid water, adding it in a slow stream while whisking constantly. The goal is a completely smooth, lump-free batter the consistency of thin cream. Add salt and whisk again. Skim off the foam that rises to the surface — this foam, if left in, creates bubbles that prevent the characteristic smooth top. Cover with a cloth and rest at room temperature for 4 hours minimum, 8 hours ideally. During resting, the flour fully hydrates and the batter deepens in flavor.",
-      visualCue: {
-        primaryTarget: "A pale yellow, translucent batter with no lumps and no visible foam on the surface. It should coat the back of a spoon lightly and run off in a smooth sheet.",
-        spectrum: [
-          { state: "Underdone", description: "Lumps of dry chickpea flour float in the batter. Foam covers the entire surface.", action: "Whisk more vigorously and strain through a fine-mesh sieve. Skim the foam with a spoon and discard." },
-          { state: "Perfect",   description: "Completely smooth, pale gold, and slightly translucent. When you blow across the surface no ripple forms — a good sign of the right viscosity. After resting, it smells faintly of chickpeas and has a thin, oily sheen where the flour has settled slightly at the bottom.", action: "Stir gently to re-incorporate settled flour, then proceed to bake." },
-          { state: "Overdone",  description: "The batter has thickened during resting to the consistency of pancake batter — the flour has over-hydrated and absorbed too much water.", action: "Thin with a small splash of water and whisk. Taste — if it has soured (rare but possible with long resting in heat), discard and start again." },
-        ],
-      },
-      feelCue: "Dip a finger in the rested batter — it should coat thinly and feel like silk, not cornstarch. Any grittiness means the flour hasn't fully hydrated yet.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Farine de pois chiches (farina di ceci)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "farine de gramme (san, similaire mais plus dense)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Heat",
-      inputs: ["ing_03"],
-      outputState: "seasoned_hot_pan",
-      instructions: "Place a 30 cm round copper or carbon-steel pan (or a heavy cast-iron skillet) in the oven. Heat the oven to its maximum temperature — 280 C (540 F) if your oven reaches it, or as high as it goes. Let the pan heat in the oven for at least 20 minutes. When you are ready to bake, remove the pan with thick oven gloves and pour in the olive oil, tilting to coat the entire surface. The oil should shimmer immediately. Pour in the batter to a depth of 5–6 mm — no more. The batter should sizzle at the edges on contact.",
-      visualCue: {
-        primaryTarget: "Oil shimmering with heat, forming the faintest haze above the pan surface. The batter sizzles audibly when poured.",
-        spectrum: [
-          { state: "Underdone", description: "The oil sits still and cool when the pan is removed from the oven. No sizzle when the batter hits.", action: "Return the pan to the oven for another 10 minutes. A cold pan means a soggy, un-blistered farinata." },
-          { state: "Perfect",   description: "Oil shimmers. The batter sizzles at the edges on contact and begins to set within 30 seconds of being poured. The edges immediately show a rim of cooked batter.", action: "Place in the oven immediately at the top rack." },
-          { state: "Overdone",  description: "The oil is smoking and the batter immediately scorches on contact, creating a dark bottom before the top sets.", action: "Remove the pan briefly, let it cool for 1 minute, wipe with a cloth, add fresh oil, and pour the batter." },
-        ],
-      },
-      feelCue: "Hold your hand 10 cm above the empty oiled pan surface — you should feel intense, face-flushing radiant heat immediately. That is the minimum for a proper farinata.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau tiède",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["farinata_batter", "seasoned_hot_pan", "ing_05"],
-      outputState: "finished_farinata",
-      instructions: "Slide the pan onto the top rack of the oven. Bake for 5 minutes, then scatter coarsely cracked black pepper over the surface. Bake for a further 8–12 minutes until the center is set and the edges are deeply blistered and golden-brown. The top should have a thin, papery golden crust while the interior remains just slightly custardy — this is the hallmark of farinata, not a fully dry pancake. Remove and serve immediately from the pan, cut into irregular wedges.",
-      visualCue: {
-        primaryTarget: "A thin golden disc with a blistered, papery top and dark, caramelized edges. The center has set but still trembles slightly when the pan is nudged.",
-        spectrum: [
-          { state: "Underdone", description: "The center is liquid and moves like water. The top has no color and the surface is wet.", action: "Return to the oven for 5 more minutes. The center must set before serving." },
-          { state: "Perfect",   description: "The top is golden-amber with darker blistered spots at the rim. A knife inserted in the center comes out with a thin, creamy film — not liquid, not dry. The edges have crisped and pulled slightly from the pan. The farinata smells of toasted chickpea and olive oil.", action: "Serve immediately — farinata waits for no one." },
-          { state: "Overdone",  description: "The center is completely dry and the edges are dark brown approaching black. The texture is cardboard-flat with no custardy interior.", action: "Serve with extra olive oil drizzled over to compensate for the dryness. Still good, but not the ideal." },
-        ],
-      },
-      feelCue: "Press a fingertip gently on the center of the farinata — it should feel just set, with a faint yielding give like a firm custard, not completely rigid. That give is the soul of the dish.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.03,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poivre noir grossièrement craqué",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "farinata_batter",
+      "instructions": "Sirotez la farine de pois chiches dans un grand bol pour enlever les morceaux. Peu à peu fouetter dans l'eau tiède, l'ajouter dans un ruisseau lent tout en fouettant constamment. L'objectif est une pâte complètement lisse, sans grumeaux, la consistance de la crème fine. Ajouter le sel et fouetter à nouveau. Éliminez la mousse qui monte à la surface — cette mousse, si elle est laissée dedans, crée des bulles qui empêchent le haut lisse caractéristique. Couvrir avec un chiffon et reposer à température ambiante pendant 4 heures minimum, 8 heures idéalement. Pendant le repos, la farine s'hydrate complètement et la pâte s'approfondit en saveur.",
+      "visualCue": {
+        "primaryTarget": "Une pâte translucide jaune pâle sans grumeaux et sans mousse visible à la surface. Il devrait envelopper l'arrière d'une cuillère légèrement et s'écouler dans une feuille lisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des lumps de farine sèche de pois chiches flottent dans la pâte. La mousse couvre toute la surface.",
+            "action": "fouetter plus vigoureusement et tendrer à travers un tamis à mailles fines. Essuyez la mousse avec une cuillère et jetez."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement lisse, or pâle et légèrement translucide. Quand vous soufflez à travers la surface aucune forme d'ondulation — un bon signe de la viscosité droite. Après le repos, il sent peu les pois chiches et a un éclat mince et huileux où la farine s'est légèrement installée au fond.",
+            "action": "Incorporer délicatement la farine, puis cuire."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte s'est épaissie pendant le repos jusqu'à la consistance de la pâte à crêpes — la farine a trop hydraté et absorbé trop d'eau.",
+            "action": "Finissez avec un petit jet d'eau et fouettez. Goûter — s'il s'est amer (rare mais possible avec un long repos en chaleur), jeter et recommencer."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt dans la pâte reposée — il devrait être mince et se sentir comme de la soie, pas de la fécule de maïs. La farine n'est pas encore complètement hydratée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Chaleur",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "seasoned_hot_pan",
+      "instructions": "Placer une poêle ronde en cuivre ou en acier au carbone de 30 cm (ou une poêle en fonte lourde) dans le four. Chauffer le four à sa température maximale — 280 °C (540 °F) si votre four l'atteigne, ou aussi haut que possible. Laisser chauffer au four pendant au moins 20 minutes. Lorsque vous êtes prêt à cuire, retirez la poêle avec des gants épais et versez dans l'huile d'olive, inclinant pour enrober toute la surface. L'huile devrait mijoter immédiatement. Verser la pâte à une profondeur de 5 à 6 mm — pas plus. La pâte doit étourdir les bords au contact.",
+      "visualCue": {
+        "primaryTarget": "L'huile brille de chaleur, formant la plus faible brume au-dessus de la surface de la casserole. La pâte étourdit audiblement lorsqu'elle est versée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'huile reste immobile et refroidit lorsque la poêle est retirée du four. Pas de vertige quand la batte frappe.",
+            "action": "Retournez la poêle au four pendant encore 10 minutes. Une casserole froide signifie une farinata soyeuse et sans tache."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'huile brille. La pâte s'étourne aux bords au contact et commence à se régler dans les 30 secondes suivant le passage. Les bords montrent immédiatement un bord de pâte cuite.",
+            "action": "Placez au four immédiatement au support supérieur."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'huile fume et la pâte brûle immédiatement au contact, créant un fond sombre avant les ensembles supérieurs.",
+            "action": "Retirer brièvement la poêle, laisser refroidir 1 minute, essuyer avec un chiffon, ajouter l'huile fraîche et verser la pâte."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main à 10 cm au-dessus de la surface vide de la poêle huilée — vous devriez sentir une chaleur intense et éclatante. C'est le minimum pour une bonne farinata."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "farinata_batter",
+        "seasoned_hot_pan",
+        "ing_05"
+      ],
+      "outputState": "finished_farinata",
+      "instructions": "Faites glisser la poêle sur la grille supérieure du four. Cuire 5 minutes, puis disperser le poivre noir grossièrement fissuré sur la surface. Cuire encore 8-12 minutes jusqu'à ce que le centre soit réglé et que les bords soient profondément cloqués et dorés. Le dessus devrait avoir une fine croûte d'or papier tandis que l'intérieur reste légèrement crépuscule — c'est la marque de Farinata, pas un pancake entièrement sec. Retirer et servir immédiatement de la poêle, couper en quartiers irréguliers.",
+      "visualCue": {
+        "primaryTarget": "Un disque d'or fin avec un haut en papier blister et des bords foncés caramélisés. Le centre s'est fixé mais tremble encore légèrement quand la poêle est bouchée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre est liquide et se déplace comme de l'eau. Le haut n'a pas de couleur et la surface est mouillée.",
+            "action": "Retourner au four 5 minutes de plus. Le centre doit être réglé avant de servir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le haut est doré-ambre avec des taches plus foncées sur le bord. Un couteau inséré au centre sort avec un mince film crémeux — pas liquide, pas sec. Les bords sont croquants et légèrement tirés de la poêle. La farinata sent le pois chiche grillé et l'huile d'olive.",
+            "action": "Servir immédiatement — Farinata n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le centre est complètement sec et les bords brun foncé approchent le noir. La texture est carton-plat sans intérieur crépus.",
+            "action": "Servir avec de l'huile d'olive extra arrosée pour compenser la sécheresse. Toujours bon, mais pas idéal."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur un bout de doigt au centre de la farinata — il devrait se sentir juste réglé, avec un faible rendement donner comme une crème ferme, pas complètement rigide. Ce don est l'âme du plat."
+    }
+  ]
 };

@@ -1,98 +1,279 @@
 export default {
-  repoId: "master_french_beef_tartare_001",
-  parentRepoId: null,
-  slug: "beef-tartare",
-  author: "ForkRecipe Kitchen",
-  title: "Steak Tartare",
-  description: "Hand-cut beef fillet mixed tableside with egg yolk, Dijon, capers, shallot, and Worcestershire — a classic that demands quality beef, confident seasoning, and no cooking at all.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "proteins",
-  tags: ["tartare", "beef", "raw", "french", "capers", "no-cook"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 4, sour: 3, bitter: 1, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Beef fillet (center-cut, fully trimmed of sinew and silver skin)", ratioValue: 100, defaultUnit: "parts", substitutions: ["dry-aged beef sirloin", "wagyu striploin"] },
-    { ingId: "ing_02", role: "Binder",    name: "Egg yolk (very fresh, preferably pasteurized)",                     ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Acid",      name: "Dijon mustard",                                                      ratioValue: 4,   defaultUnit: "parts", substitutions: ["whole-grain mustard"] },
-    { ingId: "ing_04", role: "Allium",    name: "Shallot, very finely brunoise",                                      ratioValue: 6,   defaultUnit: "parts", substitutions: ["red onion, rinsed"] },
-    { ingId: "ing_05", role: "Umami",     name: "Non-pareil capers, drained and roughly chopped",                     ratioValue: 5,   defaultUnit: "parts", substitutions: ["cornichons, finely chopped"] },
-    { ingId: "ing_06", role: "Umami",     name: "Worcestershire sauce",                                               ratioValue: 2,   defaultUnit: "parts", substitutions: ["soy sauce (small amount)"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine sea salt",                                                      ratioValue: 1,   defaultUnit: "parts", substitutions: ["fleur de sel"] },
-    { ingId: "ing_08", role: "Heat",      name: "Freshly ground black pepper",                                        ratioValue: 0.5, defaultUnit: "parts", substitutions: ["white pepper"] },
-    { ingId: "ing_09", role: "Acid",      name: "Cognac or brandy (optional)",                                        ratioValue: 2,   defaultUnit: "parts", substitutions: ["red wine", "Tabasco"] },
-    { ingId: "ing_10", role: "Herb",      name: "Flat-leaf parsley, finely chopped",                                  ratioValue: 3,   defaultUnit: "parts", substitutions: ["chives"] },
-    { ingId: "ing_11", role: "Garnish",   name: "Cornichons, sliced, to serve",                                       ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_beef_tartare_001",
+  "parentRepoId": null,
+  "slug": "beef-tartare",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tartare de Steak",
+  "description": "Le filet de bœuf coupé à la main est mélangé avec du jaune d'œuf, du Dijon, des câpres, de l'échalote et du Worcestershire, un classique qui exige de la viande de bœuf de qualité, un assaisonnement confiant et aucune cuisson.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "proteins",
+  "tags": [
+    "tartare",
+    "boeuf",
+    "cru",
+    "français",
+    "Câpres",
+    "pas de cuisson"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Chill",
-      inputs: ["ing_01"],
-      outputState: "chilled_beef",
-      instructions: "Keep the beef in the freezer for 15–20 minutes before cutting — a partially firm fillet is dramatically easier to cut cleanly. This is not to freeze it but to firm the fibers so the knife glides rather than drags. The beef must remain red, not grey; it should be cold to the touch at the core but not frozen solid. All bowls, the cutting board, and the knife should be chilled as well if working in a warm kitchen.",
-      visualCue: {
-        primaryTarget: "Beef is a vivid, deep cherry-red throughout. The exterior is firm to the touch and holds its shape when sliced, but yields without crumbling. No browning or grey oxidation on any surface.",
-        spectrum: [
-          { state: "Underdone", description: "Beef is room temperature and soft — the muscle fibers compress under the knife and the meat tears and shreds rather than cutting cleanly.", action: "Return to the freezer for 10 more minutes. Do not rush this step; rough-cut tartare has an unpleasant stringy texture." },
-          { state: "Perfect",   description: "Firm but yielding at the very center, cold all the way through. Vivid cherry-red color. The knife moves through it cleanly with almost no drag.", action: "Begin cutting immediately — do not let it sit on the board." },
-          { state: "Overdone",  description: "Beef has been in the freezer too long and is partially frozen — the knife crunches through it and the cut edges are grey-tinged and icy.", action: "Let it rest at room temperature for 3–4 minutes until just the surface softens, then proceed." },
-        ],
-      },
-      feelCue: "The beef should feel cold and firm as a hard-boiled egg when you press it with your palm — not rock-solid, not giving. That firmness is what gives you the clean knife work.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filet de bœuf (découpé au centre, entièrement coupé en sinus et en argent)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "longe de bœuf d'âge sec",
+        "Bandelettes wagyu"
+      ]
     },
     {
-      nodeId: "step_2", action: "Dice",
-      inputs: ["chilled_beef"],
-      outputState: "hand_cut_beef",
-      instructions: "Using a sharp, heavy chef's knife, first slice the beef across the grain into 4 mm planks. Stack the planks and cut into 4 mm batons. Rotate and cut into 4 mm dice. Gather the dice and run the knife through them once or twice to break up any larger pieces — you want 3–4 mm irregular cubes, not a paste. Do not use a food processor; it purees rather than cuts, yielding a rubbery, homogeneous texture. The goal is pieces small enough to meld with the dressing but large enough to retain the clean, iron-rich flavor of the beef.",
-      visualCue: {
-        primaryTarget: "Rough, irregular cubes of 3–4 mm. The cut faces are bright red and glistening, not brown. The pile of beef holds itself loosely and you can see distinct pieces, not a uniform paste.",
-        spectrum: [
-          { state: "Underdone", description: "Pieces are too large — 6 mm or more — and will not meld with the dressing. Each bite will be a chunk of plain beef.", action: "Run the knife through again, rocking it over the pile to reduce the size." },
-          { state: "Perfect",   description: "3–4 mm irregular dice, vivid red throughout, no grey patches, no stringy sinew. The pile is loose and fluffy rather than compressed.", action: "Transfer to the chilled mixing bowl immediately and begin dressing." },
-          { state: "Overdone",  description: "Knife has been run through too many times and the beef is approaching a paste — grey and compressed, fibers destroyed.", action: "You cannot un-mince it. Use it as a tighter, pâté-style tartare; adjust seasoning and serve in a round mold. Note for next time: fewer passes." },
-        ],
-      },
-      feelCue: "Run your fingertip across the pile: it should feel like coarse, moist sand — individual grains you can feel, not a smooth putty. If it sticks together in a solid mass, you have gone too far.",
+      "ingId": "ing_02",
+      "role": "Binder",
+      "name": "Jaune d'oeuf (très frais, de préférence pasteurisé)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Season",
-      inputs: ["hand_cut_beef", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "dressed_tartare",
-      instructions: "In a cold bowl, combine the Dijon, Worcestershire, cognac (if using), and egg yolk, whisking briefly to blend. Add the shallot, capers, and parsley. Fold in the hand-cut beef using a fork — do not use your hands, which will warm the meat. Season aggressively with salt and pepper, tasting as you go. Raw beef needs noticeably more salt than you expect; under-seasoned tartare tastes flat and bloody. The mustard and capers carry acidity; the Worcestershire and egg yolk provide binding and depth. Taste. Adjust. Taste again. The mix should taste bright, savory, and boldly seasoned — not timid.",
-      visualCue: {
-        primaryTarget: "The beef pieces are uniformly coated in a thin, glossy dressing — barely bound, not wet or swimming. The color is vivid red with specks of green (parsley) and pale (shallot). You can still see individual pieces of beef.",
-        spectrum: [
-          { state: "Underdone", description: "Beef looks dry and naked, with dressing pooled at the bottom of the bowl rather than clinging to each piece. Tastes flat and under-seasoned.", action: "Toss more thoroughly and add a touch more Dijon and salt. Taste after each addition." },
-          { state: "Perfect",   description: "Every piece of beef glistens with a light coating. The mixture tastes assertively savory, sharp from mustard and capers, with a round depth from the yolk and Worcestershire. It holds together lightly but is not dense.", action: "Plate immediately or hold in the fridge for no more than 10 minutes." },
-          { state: "Overdone",  description: "The tartare looks wet and is losing its texture — the salt and acid have begun to draw moisture from the beef and partially 'cook' it. Color may be shifting towards grey-pink at the edges.", action: "Serve immediately. Do not attempt to drain and re-season; it will only continue degrading." },
-        ],
-      },
-      feelCue: "Taste a small spoonful on the back of your hand: you should get salt first, then iron-rich beefiness, then the sharp tang of mustard and capers, then a lingering savory depth. If you only taste beef and nothing else, add more seasoning.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moutarde à grains entiers"
+      ]
     },
     {
-      nodeId: "step_4", action: "Plate",
-      inputs: ["dressed_tartare", "ing_11"],
-      outputState: "finished_tartare",
-      instructions: "Press the tartare into a ring mold set on a chilled plate, or form a neat mound by hand using two spoons. If presenting formally, create a shallow well on top and nestle an extra egg yolk in the shell. Arrange cornichons, extra capers, and toasted bread around the plate. Serve within 5 minutes of plating — the acid and salt will continue to break down the beef. Raw beef served cold on a cold plate.",
-      visualCue: {
-        primaryTarget: "A neatly domed mound of vivid red tartare, glistening but not weeping liquid. Clean edges where the mold released. Garnishes arranged simply — nothing overcrowding the beef.",
-        spectrum: [
-          { state: "Underdone", description: "The tartare collapses when the mold is removed, spreading flat on the plate — either too loose or not enough binding.", action: "Pack the mold more firmly next time. The egg yolk provides enough binding if the dice is uniform and the dressing proportions are correct." },
-          { state: "Perfect",   description: "Holds its shape cleanly, vivid red, garnishes crisp and bright. The whole plate looks alive and well-seasoned.", action: "Serve immediately with warm toast, grissini, or pommes allumettes." },
-          { state: "Overdone",  description: "Tartare looks grey-brown and has begun to weep pink liquid onto the plate — it has been plated too long and the acid is breaking it down.", action: "This is a timing issue: plate to table in under 5 minutes. Serve as-is — the flavor is largely intact even if the appearance is compromised." },
-        ],
-      },
-      feelCue: "The mound should feel cold and firm under the back of a spoon — pressing it should feel like pressing lightly packed moist earth, not water-balloon soft. If it slumps, it is too warm or too wet.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalote, très finement brunoise",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon rouge, rincé"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Autres câpres, égouttés et hachés approximativement",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cornichons, hachés finement"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "sauce Worcestershire",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja (petite quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fleur de sel"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Heat",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre blanc"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Cognac ou brandy (facultatif)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vin rouge",
+        "Tabasco"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, haché finement",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ruches"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Cornichons, tranchés, à servir",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Refroidissement",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "chilled_beef",
+      "instructions": "Conservez le boeuf au congélateur pendant 15 à 20 minutes avant de couper, un filet partiellement ferme est considérablement plus facile à couper proprement. Ce n'est pas pour le congeler mais pour raffermir les fibres afin que le couteau glisse plutôt que de glisser. Le boeuf doit rester rouge et non gris; il doit être froid au toucher au cœur, mais non congelé solide. Tous les bols, la planche à découper et le couteau doivent aussi être réfrigérés si vous travaillez dans une cuisine chaude.",
+      "visualCue": {
+        "primaryTarget": "Le boeuf est un rouge cerise vif et profond. L'extérieur est ferme au toucher et tient sa forme lorsqu'il est tranché, mais donne sans s'effondrer. Pas de brunissement ou d'oxydation grise sur aucune surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le boeuf est à température ambiante et doux — les fibres musculaires se compressent sous le couteau et les larmes et les lambeaux de viande plutôt que de couper proprement.",
+            "action": "Retourner au congélateur pendant 10 minutes. Ne précipitez pas cette étape ; le tartare brut a une texture fictive désagréable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ferme, mais en train de céder au centre, froid jusqu'au bout. Couleur rouge cerise vif. Le couteau s'y déplace proprement sans presque aucune traînée.",
+            "action": "Commencez à couper immédiatement — ne le laissez pas s'asseoir sur la planche."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande de boeuf a été trop longtemps au congélateur et est partiellement congelée — le couteau s'écrase à travers elle et les bords coupés sont grisâtres et glacés.",
+            "action": "Laisser reposer à température ambiante pendant 3-4 minutes jusqu'à ce que la surface s'adoucisse, puis procéder."
+          }
+        ]
+      },
+      "feelCue": "Le boeuf doit se sentir froid et ferme comme un œuf dur à bouillir quand vous le pressez avec votre paume — pas solide en pierre, ne donnant pas. Cette fermeté est ce qui vous donne le travail de couteau propre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sérum",
+      "inputs": [
+        "chilled_beef"
+      ],
+      "outputState": "hand_cut_beef",
+      "instructions": "À l'aide d'un couteau aiguisé et lourd, couper d'abord le boeuf à travers le grain en planches de 4 mm. Empilez les planches et coupez en bâtons de 4 mm. Rotation et coupe en dés de 4 mm. Rassemblez les dés et lancez le couteau à travers eux une ou deux fois pour briser des morceaux plus grands — vous voulez des cubes irréguliers de 3 à 4 mm, pas une pâte. N'utilisez pas de robot culinaire; il purifie plutôt que coupe, donnant une texture caoutchouteuse et homogène. Le but est des morceaux assez petits pour mélanger avec la vinaigrette mais assez grands pour conserver la saveur propre et riche en fer du boeuf.",
+      "visualCue": {
+        "primaryTarget": "cubes grossiers et irréguliers de 3 à 4 mm. Les faces coupées sont rouge vif et brillantes, pas brunes. Le tas de bœuf se tient lâchement et vous pouvez voir des morceaux distincts, pas une pâte uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux sont trop grands — 6 mm ou plus — et ne se mélangent pas avec la vinaigrette. Chaque bouchée sera un morceau de bœuf.",
+            "action": "Faites passer le couteau à nouveau, le basculer sur la pile pour réduire la taille."
+          },
+          {
+            "state": "Perfect",
+            "description": "dés irréguliers de 3 à 4 mm, rouge vif dans l'ensemble, pas de taches grises, pas de sinus à cordes. La pile est lâche et souple plutôt que comprimée.",
+            "action": "Transférer immédiatement dans le bol de mélange réfrigéré et commencer la vinaigrette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Couteau a été traversé trop de fois et le boeuf approche d'une pâte — gris et comprimé, fibres détruites.",
+            "action": "Tu ne peux pas le déjouer. Utilisez-le comme un tartare plus serré et de style pâté; assaisonner et servir dans un moule rond. Note pour la prochaine fois : moins de passes."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre bout de doigt à travers la pile: il devrait se sentir comme du sable grossier et humide — grains individuels que vous pouvez sentir, pas un mastic lisse. S'il reste dans une masse solide, vous êtes allés trop loin."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "hand_cut_beef",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "dressed_tartare",
+      "instructions": "Dans un bol froid, mélanger le Dijon, le Worcestershire, le cognac (si utilisé) et le jaune d'œuf, en fouettant brièvement pour mélanger. Ajouter l'échalote, les câpres et le persil. Pliez dans le bœuf coupé à la main à l'aide d'une fourchette — n'utilisez pas vos mains, ce qui réchauffera la viande. Assaisonner agressivement avec du sel et du poivre, déguster au fur et à mesure. Le boeuf cru a besoin de beaucoup plus de sel que vous ne vous attendez; le tartare sous-saisonné a un goût plat et sanglant. La moutarde et les câpres transportent l'acidité; le Worcestershire et le jaune d'oeuf fournissent une liaison et une profondeur. Goûte. Réglez. Goûte encore. Le mélange doit avoir un goût brillant, salé et assaisonné avec hardiesse, et non timide.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux de bœuf sont uniformément recouverts d'un pansement fin et brillant — à peine lié, pas mouillé ou nageant. La couleur est rouge vif avec des taches de vert ( persil) et pâle (hallot). Vous pouvez encore voir des morceaux individuels de bœuf.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le boeuf a l'air sec et nu, avec un pansement au fond du bol plutôt que de s'accrocher à chaque morceau. Goûte plat et sous-saisonné.",
+            "action": "Mélanger plus soigneusement et ajouter une touche plus Dijon et sel. Goûtez après chaque ajout."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque morceau de bœuf brille avec un revêtement léger. Le mélange a un goût savoureux, aiguisé de moutarde et de câpres, avec une profondeur ronde du jaune et du Worcestershire. Il se tient légèrement mais n'est pas dense.",
+            "action": "Assiettez immédiatement ou maintenez au réfrigérateur pendant 10 minutes au maximum."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le tartare a l'air humide et perd sa texture: le sel et l'acide ont commencé à puiser de l'humidité dans le boeuf et en partie le «cuisson». La couleur peut être déplacée vers le rose gris aux bords.",
+            "action": "Servir immédiatement. Ne tentez pas de vous égoutter et de recommencer la saison; elle continuera seulement à se dégrader."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite cuillerée sur le dos de votre main: vous devriez d'abord obtenir du sel, puis de la viande de bœuf riche en fer, puis le tangage aigu de moutarde et de câpres, puis une profondeur savoureuse persistante. Si vous goûtez seulement du boeuf et rien d'autre, ajoutez plus d'assaisonnement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plaque",
+      "inputs": [
+        "dressed_tartare",
+        "ing_11"
+      ],
+      "outputState": "finished_tartare",
+      "instructions": "Appuyez sur le tartare dans un moule à anneaux fixé sur une plaque réfrigérée ou formez un monticule soigné à la main à l'aide de deux cuillères. Si vous présentez officiellement, créez un puits peu profond sur le dessus et nichez un jaune d'œuf supplémentaire dans la coquille. Disposer les cornichons, les câpres et le pain grillé autour de l'assiette. Servir dans les 5 minutes suivant le placage — l'acide et le sel continueront à décomposer le boeuf. Boeuf cru servi froid sur une assiette froide.",
+      "visualCue": {
+        "primaryTarget": "Un monticule bien bombé de tartare rouge vif, brillant mais ne pleurant pas liquide. Nettoyer les bords où le moule s'est libéré. Garnitures arrangées simplement — rien ne surpeuple le boeuf.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le tartare s'effondre lorsque le moule est enlevé, s'étendant à plat sur la plaque — soit trop lâche ou pas assez de fixation.",
+            "action": "Emballez le moule plus fermement la prochaine fois. Le jaune d'œuf fournit suffisamment de liaison si le dés est uniforme et les proportions de vinaigrette sont correctes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tient sa forme propre, rouge vif, garnit de croustillant et de brillant. Toute l'assiette semble vivante et bien assaisonnée.",
+            "action": "Servir immédiatement avec des toasts chauds, des grissini ou des pommes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tartare a l'air gris-brun et a commencé à pleurer le liquide rose sur la plaque — il a été plaqué trop longtemps et l'acide est en train de le décomposer.",
+            "action": "Il s'agit d'un problème de chronométrage: plaque à déposer en moins de 5 minutes. Servir comme si — la saveur est largement intacte même si l'apparence est compromise."
+          }
+        ]
+      },
+      "feelCue": "Le monticule doit se sentir froid et ferme sous l'arrière d'une cuillère — le presser devrait avoir l'impression de presser une terre humide légèrement emballée, et non un ballon d'eau doux. S'il s'effondre, il est trop chaud ou trop humide."
+    }
+  ]
 };

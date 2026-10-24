@@ -1,88 +1,265 @@
 export default {
-  repoId: "master_lebanese_fattoush_001",
-  parentRepoId: null,
-  slug: "fattoush",
-  author: "ForkRecipe Kitchen",
-  title: "Fattoush",
-  description: "A crisp, restless salad of day-old flatbread toasted to shattering, tossed with tomato, cucumber, radish, and herbs under a dressing that punches with sumac — the tart, fruity spice that dyes the whole bowl a dusty rose and makes it impossible to stop eating.",
-  cuisine: "Lebanese",
-  culture: "Levantine",
-  category: "vegetables",
-  tags: ["salad", "lebanese", "pita", "sumac", "levantine", "bread salad", "vegetarian"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 2, sour: 4, bitter: 1, umami: 1, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Day-old pita bread (2 rounds)",      ratioValue: 2,    defaultUnit: "rounds", substitutions: ["lavash bread", "stale flour tortillas"] },
-    { ingId: "ing_02", role: "Fat",        name: "Extra-virgin olive oil (for toasting pita)", ratioValue: 3, defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_03", role: "Structure",  name: "Ripe tomatoes, cut in wedges",       ratioValue: 3,    defaultUnit: "medium", substitutions: ["cherry tomatoes, halved"] },
-    { ingId: "ing_04", role: "Structure",  name: "Persian cucumbers, sliced thin",     ratioValue: 2,    defaultUnit: "whole",  substitutions: ["English cucumber, seeded"] },
-    { ingId: "ing_05", role: "Structure",  name: "Red radishes, sliced into thin rounds", ratioValue: 6,  defaultUnit: "whole",  substitutions: ["watermelon radish"] },
-    { ingId: "ing_06", role: "Allium",    name: "Spring onions, sliced thin",          ratioValue: 4,    defaultUnit: "stalks", substitutions: ["red onion, thinly sliced and rinsed"] },
-    { ingId: "ing_07", role: "Herb",      name: "Flat-leaf parsley leaves",            ratioValue: 0.5,  defaultUnit: "cup",    substitutions: [] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh mint leaves",                   ratioValue: 0.25, defaultUnit: "cup",    substitutions: ["dried mint (1 tsp)"] },
-    { ingId: "ing_09", role: "Acid",      name: "Fresh lemon juice",                   ratioValue: 3,    defaultUnit: "tbsp",   substitutions: [] },
-    { ingId: "ing_10", role: "Fat",       name: "Extra-virgin olive oil (dressing)",   ratioValue: 4,    defaultUnit: "tbsp",   substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Ground sumac",                        ratioValue: 2,    defaultUnit: "tsp",    substitutions: ["lemon zest + extra lemon juice (poor substitute)"] },
-    { ingId: "ing_12", role: "Seasoning", name: "Fine sea salt",                       ratioValue: 1,    defaultUnit: "tsp",    substitutions: [] },
-    { ingId: "ing_13", role: "Spice",     name: "Aleppo pepper flakes (or chili flakes)", ratioValue: 0.5, defaultUnit: "tsp",  substitutions: ["red chili flakes (use half the amount)"] },
+  "repoId": "master_lebanese_fattoush_001",
+  "parentRepoId": null,
+  "slug": "fattoush",
+  "author": "ForkRecipe Kitchen",
+  "title": "Groseille",
+  "description": "Une salade croustillante et agitée de pain plat d'un jour grillée à éclater, jetée avec de la tomate, du concombre, du radis et des herbes sous un pansement qui frappe avec du sumac — l'épice fruitée de tarte qui teinte tout le bol une rose poussiéreuse et rend impossible l'arrêt de manger.",
+  "cuisine": "Libanais",
+  "culture": "Levantine",
+  "category": "vegetables",
+  "tags": [
+    "salade",
+    "lébanèse",
+    "Pita",
+    "Sumac",
+    "lévantine",
+    "salade de pain",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "pita_chips",
-      instructions: "Tear or cut the pita rounds into rough pieces — about 3-4 cm across, irregular shapes welcome. The ragged edges become the crispest parts. Place them in a bowl, drizzle with olive oil and toss so every piece is lightly coated. Spread on a baking sheet in a single layer and bake at 200 C (400 F) for 8-12 minutes, turning once halfway, until deep golden brown and completely rigid. Every piece must be fully toasted — any that remain soft will turn to mush the moment the dressing lands on them. Alternatively, fry them in a shallow pool of oil in a skillet over medium-high heat, turning frequently, for a richer, more golden result. Either way: they should shatter, not bend, when done. Let them cool completely before adding to the salad — hot chips steam the vegetables.",
-      visualCue: {
-        primaryTarget: "Evenly deep-golden-brown pita pieces that are rigid and crackle audibly when pressed. No pale or soft spots. They look like expensive croutons.",
-        spectrum: [
-          { state: "Underdone", description: "The pita pieces are light gold and still bend slightly under pressure. They will soften within minutes of touching the dressing.", action: "Return to the oven for 3-4 more minutes. Don't be shy about the color — pale chips are soggy chips." },
-          { state: "Perfect",   description: "Deep golden-brown all over. Rigid enough to snap cleanly when broken. They sound like breaking crackers. The smell is toasty, nutty, slightly charred at the edges.", action: "Cool completely on the baking sheet before adding to the salad." },
-          { state: "Overdone",  description: "The chips are very dark brown, with some edges nearly black. Bitter smell. Brittle to the point of shattering into crumbs.", action: "Discard the darkest pieces. The light-brown ones from the center of the tray are salvageable — they'll add color but with a slightly bitter note." },
-        ],
-      },
-      feelCue: "A perfectly toasted pita chip breaks with a sharp, clean snap — like breaking a cracker — and the fresh-baked smell is warm and nutty, with that distinctive yeast-toasted-bread-crust perfume.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Pain pita d'un jour (2 rondelles)",
+      "ratioValue": 2,
+      "defaultUnit": "rounds",
+      "substitutions": [
+        "pain de lave",
+        "tortillas de farine morte"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["ing_09", "ing_10", "ing_11", "ing_12", "ing_13"],
-      outputState: "sumac_dressing",
-      instructions: "In a small bowl or jar, combine the lemon juice, olive oil, sumac, salt, and Aleppo pepper. Whisk vigorously or shake the jar until combined — it will not fully emulsify since there is no binder, but it should come together into a loose, tangy slurry. Taste it: it should be aggressively sour (from both lemon and sumac), fruity (sumac has an almost cranberry quality), and pleasantly spicy from the Aleppo. Sumac is not just decorative — it is the primary acidic agent alongside lemon and it stains everything it touches a dusty rose-pink. Let the dressing sit for 5 minutes so the sumac can bloom and soften slightly in the acid.",
-      visualCue: {
-        primaryTarget: "A deep rust-pink, slightly opaque dressing with visible sumac particles. When shaken, it comes together briefly before separating. The color is distinctive — unmistakably sumac.",
-        spectrum: [
-          { state: "Underdone", description: "The dressing tastes flat — not enough sumac or lemon. It looks like plain lemon-oil dressing without the characteristic pink tint.", action: "Add another half teaspoon of sumac and a squeeze more lemon. Let it sit 3 more minutes." },
-          { state: "Perfect",   description: "Bright sour, fruity, deeply savory from the salt, and with a gentle lingering heat from the Aleppo. The color is a distinct dusty rose. It smells of lemon zest and dried berry.", action: "Pour over the assembled salad immediately before serving." },
-          { state: "Overdone",  description: "Too much sumac makes the dressing gritty, overly tannic, and drying in the mouth. The sourness is aggressive and one-dimensional.", action: "Add more olive oil to temper the sourness and dilute the sumac concentration. More oil makes it rounder." },
-        ],
-      },
-      feelCue: "A fingertip dipped in sumac dressing and tasted should produce a sharp sourness that hits immediately, then a fruity warmth that lingers — like the impression left by dried cranberry, floral and tart, not harsh.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra-vierge (pour toaster pita)",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Toss",
-      inputs: ["pita_chips", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "sumac_dressing"],
-      outputState: "finished_fattoush",
-      instructions: "In a large wide bowl, combine the tomatoes, cucumber, radishes, spring onions, parsley, and mint. Season the vegetables with a pinch of salt directly and toss — this draws out a small amount of juice that joins the dressing. Add the sumac dressing and toss thoroughly, making sure every vegetable is coated. Finally, add the toasted pita chips and toss one last time — gently, so the chips don't shatter into fine crumbs. The chips must go in immediately before serving, never before. Fattoush waits for no one: once the dressing meets the chips, you have about 10 minutes before they lose their crunch. Serve in the widest bowl you own and eat immediately.",
-      visualCue: {
-        primaryTarget: "A vivid, jewel-colored salad: red tomato wedges, green cucumber, pink radish, golden pita chips, and the entire bowl dusted a dusty rose from the sumac dressing. Every element glistens.",
-        spectrum: [
-          { state: "Underdone", description: "The salad looks dry — dressing hasn't coated the vegetables, and the pita chips are sitting on top of an undressed pile.", action: "Toss more thoroughly, lifting from the bottom. Add another tablespoon of dressing if needed." },
-          { state: "Perfect",   description: "Every vegetable gleams with dressing. The chips are still crunchy and contrast sharply with the juicy vegetables. The color is vivid and varied. It smells bright, tangy, and herbal simultaneously.", action: "Serve immediately — delay of more than 10 minutes is the enemy of this salad." },
-          { state: "Overdone",  description: "The pita chips have softened and are beginning to dissolve into the dressing. The salad looks muddy rather than crisp. The texture is uniform and soft.", action: "Toast a fresh batch of pita chips and toss them in at the table. The vegetables are fine — only the chips are lost." },
-        ],
-      },
-      feelCue: "A perfect bite of fattoush delivers simultaneous crunch (pita chip), resistance (cucumber), soft give (tomato), and a sharp tart liquid (dressing) — four textures and the sour-fruity sumac all at once, finishing with the cool bite of fresh mint.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Tomates à croquer, coupées en quartiers",
+      "ratioValue": 3,
+      "defaultUnit": "medium",
+      "substitutions": [
+        "tomates cerises, coupées en deux"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Concombres perses, tranchés",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Concombre anglais, ensemencé"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Structure",
+      "name": "Radis rouges, tranchés en rondelles fines",
+      "ratioValue": 6,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "radis de pastèque"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Oignons de printemps, coupés en tranches",
+      "ratioValue": 4,
+      "defaultUnit": "stalks",
+      "substitutions": [
+        "oignons rouges, tranchés finement et rincés"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Feuilles de persil à feuilles plates",
+      "ratioValue": 0.5,
+      "defaultUnit": "cup",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Feuilles fraîches de menthe",
+      "ratioValue": 0.25,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "menthe séchée (1 c. à thé)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge (vêtements)",
+      "ratioValue": 4,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Sumac au sol",
+      "ratioValue": 2,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "zeste de citron + jus de citron supplémentaire (faible substitut)"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Spice",
+      "name": "Alep flocons de poivre (ou flocons de chili)",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "flocons de chili rouge (utiliser la moitié du montant)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "pita_chips",
+      "instructions": "Déchirez ou coupez les rondelles de pita en morceaux rugueux — environ 3-4 cm de travers, formes irrégulières bienvenues. Les bords radés deviennent les parties les plus croustillantes. Placez-les dans un bol, arrosez d'huile d'olive et jetez-les donc chaque pièce est légèrement enduite. Étaler sur une plaque de cuisson en une seule couche et cuire au four à 200 C (400 F) pendant 8-12 minutes, en tournant une fois à mi-chemin, jusqu'à ce qu'il soit doré et complètement rigide. Chaque pièce doit être entièrement grillée — celle qui reste douce se tournera pour bousculer le moment où le pansement s'y posera. Alternativement, les faire frire dans une piscine d'huile peu profonde dans une poêle à feu moyen-vif, en tournant fréquemment, pour un résultat plus riche et plus doré. Quoi qu'il en soit, ils devraient se briser, et non se plier. Laissez-les refroidir complètement avant d'ajouter à la salade — les croustilles chaudes vaporisent les légumes.",
+      "visualCue": {
+        "primaryTarget": "Des pitas brun-gol foncé, rigides et crépitants audiblement pressés. Pas de taches pâles ou molles. Ils ressemblent à des croûtons chers.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pièces de pita sont en or clair et se plient légèrement sous pression. Ils se ramolliront quelques minutes après avoir touché la vinaigrette.",
+            "action": "Retourner au four 3-4 minutes de plus. Ne soyez pas timide à propos de la couleur — les jetons pâles sont des jetons ensanglantés."
+          },
+          {
+            "state": "Perfect",
+            "description": "De couleur dorée partout. Assez rigide pour se casser proprement en cas de rupture. On dirait des craquelins cassés. L'odeur est grillée, noisette, légèrement carbonisée aux bords.",
+            "action": "Laisser refroidir complètement sur la plaque de cuisson avant d'ajouter à la salade."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les chips sont brun très foncé, avec quelques bords presque noirs. Une odeur amère. Bristé au point de se briser en miettes.",
+            "action": "Jeter les pièces les plus sombres. Les brun clair du centre du plateau sont récupérables — ils ajouteront de la couleur mais avec une note légèrement amère."
+          }
+        ]
+      },
+      "feelCue": "Une puce de pita parfaitement grillée se rompt avec une touche nette et propre, comme casser un cracker, et l'odeur fraîche-cuite est chaude et noisette, avec ce parfum de croûte de pain de levure distinctif."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "sumac_dressing",
+      "instructions": "Dans un petit bol ou un pot, mélanger le jus de citron, l'huile d'olive, le sumac, le sel et le poivre d'Alep. Frottez vigoureusement ou secouez le pot jusqu'à ce qu'il soit combiné — il n'émulsionnera pas complètement puisqu'il n'y a pas de liant, mais il devrait s'assembler dans un lisier mou et acidulé. Goûtez-le: il doit être amer (du citron et du sumac), fruité (le sumac est presque de qualité canneberge), et agréablement épicé de l'Alep. Sumac n'est pas seulement décoratif, c'est l'agent acide primaire à côté du citron et il tache tout ce qu'il touche une rose-rose poussiéreuse. Laissez la vinaigrette reposer pendant 5 minutes afin que le sumac puisse fleurir et adoucir légèrement dans l'acide.",
+      "visualCue": {
+        "primaryTarget": "Un pansement profond, légèrement opaque avec des particules visibles de sumac. Lorsqu'il est secoué, il se réunit brièvement avant de se séparer. La couleur est distinctive — indubitablement sumac.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La vinaigrette a un goût plat — pas assez de sumac ou de citron. On dirait une vinaigrette à huile de citron sans teinte rose caractéristique.",
+            "action": "Ajouter une autre demi cuillère à café de sumac et presser plus de citron. Laissez-la encore 3 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légère aigre, fruitée, profondément salée du sel, et avec une douce chaleur persistante de l'Alep. La couleur est une rose poussiéreuse distincte. Ça sent le zeste de citron et les baies séchées.",
+            "action": "Verser sur la salade assemblée immédiatement avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de sumac rend le pansement gritty, trop tannique, et sèche dans la bouche. L'aurore est agressive et unidimensionnelle.",
+            "action": "Ajouter plus d'huile d'olive pour tempérer l'auresse et diluer la concentration de sumac. Plus d'huile le rend plus rond."
+          }
+        ]
+      },
+      "feelCue": "Un bout de doigt trempé dans la vinaigrette de sumac et goûté devrait produire une amerie aiguë qui frappe immédiatement, puis une chaleur fruitée qui persiste — comme l'impression laissée par la canneberge séchée, florale et tarte, pas dure."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Découpe",
+      "inputs": [
+        "pita_chips",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "sumac_dressing"
+      ],
+      "outputState": "finished_fattoush",
+      "instructions": "Dans un grand bol, mélanger les tomates, le concombre, les radis, les oignons de printemps, le persil et la menthe. Assaisonner les légumes avec une pincée de sel directement et jeter — cela dégage une petite quantité de jus qui rejoint la vinaigrette. Ajouter la vinaigrette de sumac et mélanger soigneusement, en veillant à ce que chaque légume soit enduit. Enfin, ajoutez les chips pita grillés et lancez une dernière fois — doucement, afin que les chips ne se brisent pas en miettes fines. Les chips doivent entrer immédiatement avant de servir, jamais avant. Fattoush n'attend personne : une fois que le pansement rencontre les chips, vous avez environ 10 minutes avant qu'ils perdent leur croquant. Servir dans le bol le plus large que vous possédez et manger immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Une salade vive et de couleur bijou : quartiers de tomates rouges, concombre vert, radis rose, chips pita dorés, et le bol entier a pulvérisé une rose poussiéreuse de la vinaigrette sumac. Chaque élément brille.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La salade a l'air sèche — la vinaigrette n'a pas enrobé les légumes, et les chips pita sont assis sur une pile déshabillée.",
+            "action": "Jeter plus soigneusement, soulever du bas. Ajouter une autre cuillère à soupe de vinaigrette si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque légume brille avec de la vinaigrette. Les croustilles sont encore croquantes et contrastent fortement avec les légumes juteux. La couleur est vive et variée. Il sent lumineux, tannant et à base de plantes simultanément.",
+            "action": "Servir immédiatement — un délai de plus de 10 minutes est l'ennemi de cette salade."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les chips de pita se sont adoucis et commencent à se dissoudre dans la vinaigrette. La salade semble boueuse plutôt que croquante. La texture est uniforme et douce.",
+            "action": "Faites griller un lot frais de chips de pita et jetez-les à la table. Les légumes sont fins, seuls les chips sont perdus."
+          }
+        ]
+      },
+      "feelCue": "Une morsure parfaite de fattoush procure simultanément une croûte (pipe), une résistance (cucumber), un don doux (tomato) et un liquide de tarte vif (vêtements) — quatre textures et le sumac aigre-fruité tout d'un coup, finissant par la morsure fraîche de menthe fraîche."
+    }
+  ]
 };

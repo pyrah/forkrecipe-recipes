@@ -1,84 +1,225 @@
 export default {
-  repoId: "master_indian_date_tamarind_chutney_001",
-  parentRepoId: null,
-  slug: "date-tamarind-chutney",
-  author: "ForkRecipe Kitchen",
-  title: "Date Tamarind Chutney",
-  description: "The sweet-sour soul of chaat — a thick, deeply colored Indian chutney of medjool dates, sour tamarind, and raw jaggery balanced with cumin, ginger, and chili. It tastes of tamarind's sour complexity and date sweetness simultaneously, making everything it touches more interesting.",
-  cuisine: "Indian",
-  culture: "North Indian",
-  category: "condiments",
-  tags: ["chutney", "indian", "tamarind", "date", "sweet", "sour", "chaat", "vegan"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 5, salty: 2, sour: 5, bitter: 0, umami: 1, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Medjool dates (pitted)",                       ratioValue: 150, defaultUnit: "g", substitutions: ["dried figs", "prunes"] },
-    { ingId: "ing_02", role: "Acid",      name: "Tamarind paste (pure, seedless)",              ratioValue: 60,  defaultUnit: "g", substitutions: ["tamarind concentrate, 30 g, diluted with water"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Jaggery or raw cane sugar",                   ratioValue: 50,  defaultUnit: "g", substitutions: ["dark brown sugar", "palm sugar"] },
-    { ingId: "ing_04", role: "Spice",     name: "Ground cumin (roasted)",                      ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground ginger",                               ratioValue: 4,   defaultUnit: "g", substitutions: ["1 tsp fresh grated ginger"] },
-    { ingId: "ing_06", role: "Spice",     name: "Black salt (kala namak)",                     ratioValue: 3,   defaultUnit: "g", substitutions: ["fine sea salt"] },
-    { ingId: "ing_07", role: "Heat",      name: "Red chili powder (Kashmiri for mild, cayenne for heat)", ratioValue: 3, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Hydration", name: "Water",                                       ratioValue: 200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine sea salt",                               ratioValue: 3,   defaultUnit: "g", substitutions: [] },
+  "repoId": "master_indian_date_tamarind_chutney_001",
+  "parentRepoId": null,
+  "slug": "date-tamarind-chutney",
+  "author": "ForkRecipe Kitchen",
+  "title": "Date Tamarind Chutney",
+  "description": "L'âme douce-sour du chaat — un chutney indien épais et profondément coloré de dates de medjool, le tamarin aigre, et le jaggery cru équilibré avec le cumin, le gingembre et le chili. Il goûte de la complexité aigre du tamarin et de la douceur de date simultanément, rendant tout ce qu'il touche plus intéressant.",
+  "cuisine": "Indiens",
+  "culture": "Inde du Nord",
+  "category": "condiments",
+  "tags": [
+    "Chutney",
+    "indienne",
+    "Tamarin",
+    "date",
+    "doux",
+    "acide",
+    "Chaat",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 2,
+    "sour": 5,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Soak and soften dates",
-      inputs: ["ing_01", "ing_08"],
-      outputState: "soaked_dates",
-      instructions: "Pit the dates and tear them roughly in half. Place in a small saucepan with the water and bring to a simmer over medium heat. Simmer 8 to 10 minutes until the dates are completely soft, collapsed, and nearly dissolved into the water. The liquid will turn a deep amber-brown. The goal is to fully hydrate and break down the dates so they blend to a completely smooth texture — any residual fibers from under-softened dates will appear as strings in the finished chutney.",
-      visualCue: {
-        primaryTarget: "Dates have completely collapsed, the liquid is deep amber-brown and syrupy, and the date flesh is falling apart.",
-        spectrum: [
-          { state: "Underdone", description: "Dates still hold their shape and have only softened slightly. The simmering liquid is pale and thin.", action: "Continue simmering and press down on the dates with a spoon to encourage breakdown. They need to be essentially dissolved." },
-          { state: "Perfect",   description: "Dates have disintegrated into the liquid. The mixture is thick, jammy, and the whole surface bubbles gently with a caramel-brown color.", action: "Add tamarind paste and jaggery in the next step." },
-          { state: "Overdone",  description: "Liquid has reduced too far and the date mixture is scorching at the bottom of the pan.", action: "Remove from heat, add a splash of water, and scrape the bottom to loosen any fond before proceeding." },
-        ],
-      },
-      feelCue: "Press a date piece against the side of the pan with a spoon — it should yield and smear completely with no resistance, like soft butter. Any spring-back means it needs more time.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Dates Medjool",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "figues séchées",
+        "pruneaux"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer with tamarind and spices",
-      inputs: ["soaked_dates", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_09"],
-      outputState: "cooked_chutney",
-      instructions: "To the hot date mixture, add the tamarind paste, jaggery, ground cumin, ground ginger, black salt, regular salt, and chili powder. Stir well to dissolve the jaggery and incorporate the tamarind. Simmer over medium-low heat for 8 to 10 minutes more, stirring frequently. The chutney will darken, thicken, and the raw spice edge will mellow. The tamarind and jaggery will fully integrate, creating that characteristic chaat chutney balance: sweet-first, sour-finish, with warm spice and a soft heat in the background.",
-      visualCue: {
-        primaryTarget: "A thick, dark, mahogany-brown chutney that bubbles lazily and coats the spoon in a heavy, glossy layer.",
-        spectrum: [
-          { state: "Underdone", description: "Still thin and somewhat watery, with the raw, sharp edge of tamarind paste clearly detectable and the jaggery not fully dissolved.", action: "Simmer longer and stir. The transformation from thin and sharp to thick and complex requires time." },
-          { state: "Perfect",   description: "Thick, glossy, complex. The sweet and sour arrive simultaneously. A drop on a cold plate holds its shape for a moment before spreading slowly.", action: "Remove from heat and blend until smooth." },
-          { state: "Overdone",  description: "Chutney has reduced to a very thick paste, sticking heavily to the spoon. It will be too concentrated and intensely sweet.", action: "Add 30 to 40 g of water, whisk vigorously over low heat to re-incorporate, and check consistency." },
-        ],
-      },
-      feelCue: "The warm chutney should smell simultaneously of tamarind's clean sourness, dark sugar caramel, and the earthy-smoke of roasted cumin. Taste it and notice the sequence: sweet richness, then sour tamarind bloom, then the cumin's warmth, then very gentle heat on the finish.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Pâte de tamarin (pure, sans pépins)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "concentré de tamarin, 30 g, dilué avec de l'eau"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Blend and strain",
-      inputs: ["cooked_chutney"],
-      outputState: "finished_date_tamarind_chutney",
-      instructions: "Allow the chutney to cool 5 minutes, then blend with an immersion blender or in a standing blender until completely smooth. Pass through a medium-mesh sieve, pushing with a ladle to remove any date skins or fibers. The finished chutney should be pourable, completely smooth, and the color of dark mahogany with a mirror-like sheen. Taste once more — adjust salt, jaggery, and tamarind to balance. Cool completely, then bottle or refrigerate. Keeps refrigerated for 3 to 4 weeks. Use on samosas, papdi chaat, dahi puri, or swirl into yogurt.",
-      visualCue: {
-        primaryTarget: "A smooth, deep mahogany-brown, glossy chutney that pours in a slow, continuous stream. Mirror surface with no fibrous texture.",
-        spectrum: [
-          { state: "Underdone", description: "Still chunky with date fiber bits and a rough surface. The straining has not been thorough.", action: "Pass through the sieve again, pressing firmly with the ladle. Take your time — the final texture defines the chutney's quality." },
-          { state: "Perfect",   description: "Completely smooth, deeply colored, pours beautifully. Every component is in balance. A spoonful on chaat creates the sweet-sour contrast that defines the dish.", action: "Cool and refrigerate in a jar." },
-          { state: "Overdone",  description: "Stored too long, the chutney has thickened to a paste in the refrigerator and the tamarind sourness has become dominant.", action: "Warm gently, stir in a small splash of water, and add a pinch more jaggery to rebalance the sweetness." },
-        ],
-      },
-      feelCue: "Finished date-tamarind chutney should flow off a spoon in an unbroken ribbon, coating the back without dripping — like a very fluid caramel. It should leave your mouth tasting of something dark, complex, and layered — sweet, sour, and warm in a sequence that keeps repeating as the flavor develops.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre jaggé ou brut de canne",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brun foncé",
+        "sucre de palme"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Cumin au sol (rôti)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Gingembre moulu",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 c. à thé de gingembre râpé frais"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Sel noir (kala namak)",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel de mer fin"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Heat",
+      "name": "Poudre de chili rouge (Kashmiri pour légère, Cayenne pour la chaleur)",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Hydration",
+      "name": "Eau",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Arroser et adoucir les dates",
+      "inputs": [
+        "ing_01",
+        "ing_08"
+      ],
+      "outputState": "soaked_dates",
+      "instructions": "Piquez les dates et déchirez-les en deux. Mettre dans une petite casserole à l'eau et laisser mijoter à feu moyen. Laisser mijoter de 8 à 10 minutes jusqu'à ce que les dates soient complètement douces, effondrées et presque dissoutes dans l'eau. Le liquide deviendra brun-ambre profond. L'objectif est d'hydrater complètement et de décomposer les dates afin qu'elles se mélangent à une texture complètement lisse - toutes les fibres résiduelles des dates sous-assouplies apparaîtront comme des cordes dans le chutney fini.",
+      "visualCue": {
+        "primaryTarget": "Les dattes se sont complètement effondrées, le liquide est brun-ambre profond et sirupeux, et la chair de la datte s'effondre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les dattes tiennent encore leur forme et n'ont que légèrement ramolli. Le liquide mijotant est pâle et mince.",
+            "action": "Continuer à mijoter et appuyer sur les dates avec une cuillère pour encourager la panne. Elles doivent être dissoutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les dates se sont désintégrées dans le liquide. Le mélange est épais, jammy, et la surface entière bulle doucement avec une couleur brun caramel.",
+            "action": "Ajouter la pâte de tamarin et le jaggery dans la prochaine étape."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide a été réduit trop loin et le mélange de date est en train de brûler au fond de la casserole.",
+            "action": "Retirer du feu, ajouter une éclaboussure d'eau et racler le fond pour desserrer tout fond avant de procéder."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau de date contre le côté de la casserole avec une cuillère — il devrait donner et frotter complètement sans résistance, comme le beurre doux. N'importe quel ressort signifie qu'il a besoin de plus de temps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter de tamarin et d'épices",
+      "inputs": [
+        "soaked_dates",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_09"
+      ],
+      "outputState": "cooked_chutney",
+      "instructions": "Ajouter la pâte de tamarin, le cumin moulu, le gingembre moulu, le sel noir, le sel ordinaire et la poudre de chili. Bien mélanger pour dissoudre le jaggery et incorporer le tamarin. Laisser mijoter à feu moyen-doux encore 8 à 10 minutes, en remuant fréquemment. Le chutney s'obscurcit, s'épaissit, et le bord cru des épices s'assouplit. Le tamarin et le jaggery s'intégreront pleinement, créant cet équilibre caractéristique du chutney chaat : doux-premier, aigre-fin, avec des épices chaudes et une chaleur douce en arrière-plan.",
+      "visualCue": {
+        "primaryTarget": "Un chutney épais, foncé, brun acajou qui bulle paresseusement et enveloppe la cuillère dans une couche lourde et brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Encore mince et un peu aqueux, avec le bord brut et tranchant de la pâte de tamarin clairement détectable et le jaggery pas complètement dissous.",
+            "action": "Laisser mijoter plus longtemps et remuer. La transformation de mince et nette à épaisse et complexe demande du temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, brillant, complexe. Le doux et aigre arrivent simultanément. Une goutte sur une plaque froide tient sa forme pendant un moment avant de s'étendre lentement.",
+            "action": "Retirer du feu et mélanger jusqu'à lisse."
+          },
+          {
+            "state": "Overdone",
+            "description": "Chutney a réduit à une pâte très épaisse, collant fortement à la cuillère. Il sera trop concentré et intensément sucré.",
+            "action": "Ajouter 30 à 40 g d'eau, fouetter vigoureusement à feu doux pour réincorporer et vérifier la consistance."
+          }
+        ]
+      },
+      "feelCue": "Le chutney chaud doit sentir simultanément l'aurore propre du tamarin, le caramel à sucre foncé et la fumée de terre du cumin rôti. Goûtez-le et remarquez la séquence : la richesse sucrée, puis le tamarin aigre fleurissent, puis la chaleur du cumin, puis la chaleur très douce sur la finale."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange et déformation",
+      "inputs": [
+        "cooked_chutney"
+      ],
+      "outputState": "finished_date_tamarind_chutney",
+      "instructions": "Laisser refroidir le chutney 5 minutes, puis mélanger avec un mélangeur d'immersion ou dans un mélangeur debout jusqu'à ce qu'il soit complètement lisse. Passez à travers un tamis à mailles moyennes, en poussant avec une louche pour enlever les peaux de dattes ou les fibres. Le chutney fini devrait être versable, complètement lisse, et la couleur de l'acajou foncé avec un reflet de miroir. Goûtez encore une fois – ajustez le sel, le jaggery et le tamarin pour équilibrer. Laisser refroidir complètement, puis mettre en bouteille ou réfrigérer. Conserver au réfrigérateur pendant 3 à 4 semaines. Utiliser sur les samosas, les papadi chaat, les dahi puri, ou tourner dans le yogourt.",
+      "visualCue": {
+        "primaryTarget": "Un chutney lisse, brun acajou profond et brillant qui coule dans un courant lent et continu. Surface miroir sans texture fibreuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours en croûte avec des fibres de date et une surface rugueuse. La pression n'a pas été complète.",
+            "action": "Passez à nouveau dans le tamis, appuyez fermement sur la louche. Prenez votre temps — la texture finale définit la qualité du chutney."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, de couleur profonde, verse magnifiquement. Chaque composant est en équilibre. Une cuillère sur le chaat crée le contraste sucré-sour qui définit le plat.",
+            "action": "Laisser refroidir et réfrigérer dans un pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Conservé trop longtemps, le chutney s'est épaissi jusqu'à une pâte au réfrigérateur et l'acidité du tamarin est devenue dominante.",
+            "action": "Chauffer doucement, remuer dans un petit jet d'eau et ajouter une pincée plus jaggée pour rééquilibrer la douceur."
+          }
+        ]
+      },
+      "feelCue": "Le chutney à tamarin à date fini doit couler d'une cuillère dans un ruban non cassé, enrobant le dos sans goutter — comme un caramel très fluide. Il devrait laisser votre bouche goûter quelque chose de sombre, complexe, et stratifié — doux, aigre, et chaud dans une séquence qui continue de répéter au fur et à mesure que la saveur se développe."
+    }
+  ]
 };

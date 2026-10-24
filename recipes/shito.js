@@ -1,117 +1,299 @@
 export default {
-  repoId: "master_ghanaian_shito_001",
-  parentRepoId: null,
-  slug: "shito",
-  author: "ForkRecipe Kitchen",
-  title: "Shito",
-  description: "Ghana's famous black pepper sauce — ground dried shrimp and chiles slowly fried down in oil until deep mahogany and intensely savory, one of the most punishingly umami condiments on earth.",
-  cuisine: "Ghanaian",
-  culture: "West African Ghanaian",
-  category: "condiments",
-  tags: ["ghanaian", "west-african", "condiment", "chile", "dried-shrimp", "umami"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 1, umami: 5, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried shrimp (small, sun-dried)",              ratioValue: 80,  defaultUnit: "g",  substitutions: ["shrimp powder (store-bought)", "dried prawns"] },
-    { ingId: "ing_02", role: "Protein",   name: "Dried herrings or smoked mackerel, de-boned",  ratioValue: 60,  defaultUnit: "g",  substitutions: ["dried anchovies", "dried catfish"] },
-    { ingId: "ing_03", role: "Heat",      name: "Dried red chiles (cayenne, bird's eye, or Ghana peppers)", ratioValue: 40, defaultUnit: "g", substitutions: ["1-2 tbsp cayenne pepper"] },
-    { ingId: "ing_04", role: "Allium",    name: "Red onion, roughly chopped",                   ratioValue: 200, defaultUnit: "g",  substitutions: ["white onion"] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves",                                ratioValue: 6,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Fresh ginger, peeled, roughly sliced",         ratioValue: 30,  defaultUnit: "g",  substitutions: ["1 tsp ground ginger"] },
-    { ingId: "ing_07", role: "Fat",       name: "Neutral vegetable oil (canola or sunflower)",  ratioValue: 240, defaultUnit: "ml", substitutions: ["refined coconut oil"] },
-    { ingId: "ing_08", role: "Umami",     name: "Tomato paste",                                 ratioValue: 60,  defaultUnit: "g",  substitutions: ["2 Roma tomatoes, chopped and cooked down"] },
-    { ingId: "ing_09", role: "Liquid",    name: "Stock or water",                               ratioValue: 120, defaultUnit: "ml", substitutions: ["chicken stock", "mushroom stock"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fine sea salt",                                ratioValue: 6,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_ghanaian_shito_001",
+  "parentRepoId": null,
+  "slug": "shito",
+  "author": "ForkRecipe Kitchen",
+  "title": "Merde",
+  "description": "La fameuse sauce au poivre noir du Ghana — crevettes séchées et chiles moulues lentement frites dans l'huile jusqu'à l'acajou profond et intensément salé, l'un des condiments les plus punitifs de la terre.",
+  "cuisine": "Ghanéen",
+  "culture": "Ghanéen de l'Afrique de l'Ouest",
+  "category": "condiments",
+  "tags": [
+    "ghanaïen",
+    "Afrique de l ' Ouest",
+    "condiment",
+    "Chile",
+    "crevettes séchées",
+    "umami"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Pound",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "seafood_powder",
-      instructions: "Break the dried shrimp and de-boned dried fish into small pieces. Working in batches, grind them in a spice grinder, food processor, or high-speed blender until they are a coarse, dry powder — not a paste, not a flour, but a textured, fragrant powder roughly the consistency of coarsely ground coffee. Spread the finished powder on a plate and check for any remaining bone fragments from the dried fish before proceeding. The powder will smell intensely of the sea.",
-      visualCue: {
-        primaryTarget: "A dry, sandy-textured powder of reddish-tan colour from the shrimp and darker flecks from the fish. Should pour freely from a spoon with no clumping.",
-        spectrum: [
-          { state: "Underdone", description: "Pieces still recognizable as shrimp or fish. Powder is chunky and uneven.", action: "Return to the grinder in smaller batches and pulse in short bursts — overloading the grinder produces uneven texture." },
-          { state: "Perfect",   description: "Uniform coarse powder, dry and free-flowing. The aroma is intensely saline and marine — almost overwhelming at this concentration. No visible bone fragments.", action: "Set aside and prepare the paste." },
-          { state: "Overdone",  description: "Ground to a fine flour — will create a different texture in the final sauce (smoother, less textured).", action: "Proceed — a finer powder is not a failure, it simply produces a smoother shito." },
-        ],
-      },
-      feelCue: "Pinch a small amount of the powder between your fingers and rub — it should feel dry and slightly gritty, not wet or clumping. If it clumps, the dried seafood has absorbed humidity and may need a brief dry-toast before grinding.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Crevettes séchées (petites, séchées au soleil)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poudre de crevettes (achetée en magasin)",
+        "crevettes séchées"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "chile_paste",
-      instructions: "If using whole dried chiles, rehydrate them in warm water for 15 minutes, then drain. Combine the rehydrated or dried chiles (a small amount of soaking water is fine), red onion, garlic, and ginger in a blender or food processor. Blend to a coarse, brick-red paste — not completely smooth, but no large chunks remaining. A mortar and pestle produces a more textured paste if time allows.",
-      visualCue: {
-        primaryTarget: "A deep brick-red paste with visible onion and chile texture. Should be thick enough to hold a peak briefly but will slump immediately. Pungent, eye-watering aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Paste still has large chunks of onion and whole chile pieces. Uneven texture that will cook unevenly.", action: "Blend for another 30 seconds, adding 1 tablespoon of water if needed to help the blender catch the ingredients." },
-          { state: "Perfect",   description: "A thick, deeply coloured paste with fine but visible texture. The raw onion smell is strong. The chile colour is a rich brick-red.", action: "Heat the oil in a wide pan and begin frying." },
-          { state: "Overdone",  description: "Blended completely smooth with too much added water — paste is thin and watery.", action: "The excess water will splatter badly in the hot oil. Cook over lower heat initially to drive off the water before frying proper begins." },
-        ],
-      },
-      feelCue: "The paste should drag when you pull a spoon through it and settle back slowly — like a thick tomato sauce, not like a liquid. If it pours freely, it contains too much water.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Harengs séchés ou maquereaux fumés, désossés",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "anchois séchés",
+        "Poisson-chat séché"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["chile_paste", "ing_07"],
-      outputState: "fried_paste",
-      instructions: "Heat the oil in a wide, heavy-bottomed skillet or wok over medium heat until shimmering but not smoking. Add the chile paste all at once — it will spatter and hiss dramatically. Stand back and reduce heat to medium-low immediately. Fry the paste, stirring constantly with a long-handled spoon, for 15-20 minutes. The paste must fry — not simmer — in the oil: you want active frying sounds (a continuous, lively crackle) not a gentle gurgle. The paste will progressively darken from brick-red to a deep, dark maroon.",
-      visualCue: {
-        primaryTarget: "After 15-20 minutes, the paste has darkened dramatically to a deep mahogany-maroon. The paste has shrunken and the oil is visibly separating, pooling in clear channels around the edges of the paste.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is still bright red and smells of raw onion and chile. Oil has not separated. Less than 10 minutes in.", action: "Continue frying — the raw flavours need to cook out completely. The colour change is the signal, not the clock." },
-          { state: "Perfect",   description: "Deep, dark mahogany-red paste. The oil has visibly separated from the solids, pooling cleanly around the edges. The raw onion smell has been replaced by a complex, roasted, deeply savory aroma.", action: "Add the seafood powder." },
-          { state: "Overdone",  description: "Paste is nearly black, smells acrid, and the oil is smoking. Small burning flecks visible.", action: "Remove from heat immediately. If the taste has a harsh bitterness, there is no recovery — the sauce will be unpleasant. Use a lower heat and longer time next attempt." },
-        ],
-      },
-      feelCue: "Listen to the pan — the correct sound is a steady, active frying crackle, like a vigorous sauté. If it sounds like a gentle simmer with occasional pops, the heat is too low and you are stewing, not frying the paste.",
+      "ingId": "ing_03",
+      "role": "Heat",
+      "name": "Chiles rouges séchés (cayenne, oeil d'oiseau ou poivrons ghanéens)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1-2 c. à soupe de poivre de Cayenne"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Toast",
-      inputs: ["fried_paste", "seafood_powder"],
-      outputState: "seafood_incorporated",
-      instructions: "Add the seafood powder to the dark fried paste and stir vigorously to combine. The powder will absorb some of the oil and the mixture will seize slightly and become a thick, dark mass. Continue frying for 5-7 more minutes, stirring constantly. The seafood powder will toast in the residual oil, intensifying its marine flavor and developing a nutty, roasted depth. The mixture will smell powerfully savory — nearly overwhelming at close range.",
-      visualCue: {
-        primaryTarget: "A thick, very dark, mahogany-to-black paste where the seafood powder has become fully incorporated and toasted. The mixture is dry-ish and stiff, clinging to the spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Seafood powder still looks raw and pale against the dark paste base. Raw marine smell hasn't cooked off.", action: "Continue frying for another 3-4 minutes, stirring constantly to prevent the powder from scorching on the pan bottom." },
-          { state: "Perfect",   description: "The combined mixture is one uniform, very dark, intensely aromatic mass. The smell has shifted from raw fish to deeply roasted and savory — funky in the best possible way.", action: "Add the tomato paste and stock." },
-          { state: "Overdone",  description: "Seafood powder has scorched on the hot pan bottom — a sharp, bitter, burnt-fish smell.", action: "Add the stock immediately to arrest the burning. If the bitter smell is strong, the batch is compromised." },
-        ],
-      },
-      feelCue: "Press the mixture against the side of the pan with a spoon — it should feel like very thick, stiff tomato paste: dense and resistant, requiring real force to push and spread. If it flows easily, more frying time is needed to reduce its moisture.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon rouge, haché approximativement",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon blanc"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Reduce",
-      inputs: ["seafood_incorporated", "ing_08", "ing_09", "ing_10"],
-      outputState: "finished_shito",
-      instructions: "Add the tomato paste and stir it vigorously into the fried paste mixture, frying for 2 minutes to cook the tomato paste and deepen its color. Add the stock or water and stir well to incorporate. Raise the heat to medium and fry-reduce the mixture, stirring constantly, for another 5-8 minutes until the stock has cooked off and the oil is again visibly separating from the solids. The finished shito should be loose enough to spoon but thick enough to mound. Season with salt. Cool completely before storing in sterilized jars covered generously with oil. Keeps refrigerated for 3-4 weeks.",
-      visualCue: {
-        primaryTarget: "A very dark, almost black-maroon paste that is thick but spreadable. A generous layer of dark red-tinged oil pools on the surface and around the edges — this is the preservation layer. The smell is deeply complex: smoky, marine, chile-hot, savory.",
-        spectrum: [
-          { state: "Underdone", description: "Stock has not fully reduced — shito is wet and thin, lacks depth. Still smells of raw tomato paste.", action: "Continue cooking on medium heat, stirring constantly, until the mixture stiffens and oil separates again." },
-          { state: "Perfect",   description: "Deep, near-black paste that holds its shape on a spoon. Oil visible pooling on the surface. Taste is an overwhelming cascade of heat, umami, salt, and a faint sweetness from the tomato. The heat builds slowly and persists.", action: "Cool completely, transfer to sterilized jars, ensuring a layer of oil covers the surface to preserve it. Refrigerate." },
-          { state: "Overdone",  description: "Overcooked to the point of dryness — the shito has seized into a stiff, crumbly mass with barely any oil remaining.", action: "Add 30ml of vegetable oil, stir well over low heat to rehydrate, and transfer to jars. The texture will be restored even if the shito tightened too much." },
-        ],
-      },
-      feelCue: "Taste a small amount of finished shito and hold it on the back of your tongue — the heat should arrive late, building over 10-15 seconds to a high, sustained intensity that is more about depth than immediate sharpness. The umami note should feel almost meaty, as though the sauce has protein in it — it does.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 6,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Gingembre frais, pelé, tranché approximativement",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 c. à thé de gingembre moulu"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile végétale neutre (canola ou tournesol)",
+      "ratioValue": 240,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile de coco raffinée"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "2 tomates roms, hachées et cuites"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Liquid",
+      "name": "Stock ou eau",
+      "ratioValue": 120,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "bouillon de poulet",
+        "Matériel de champignons"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "seafood_powder",
+      "instructions": "Briser les crevettes séchées et les poissons séchés désossés en petits morceaux. Travailler en lots, les broyer dans un broyeur d'épices, un robot culinaire ou un mélangeur à grande vitesse jusqu'à ce qu'il s'agisse d'une poudre grossière et sèche — pas d'une pâte, pas d'une farine, mais d'une poudre texturée et parfumée à peu près la consistance du café grossièrement moulu. Étendre la poudre finie sur une plaque et vérifier les fragments d'os restants du poisson séché avant de procéder. La poudre sentira intensément la mer.",
+      "visualCue": {
+        "primaryTarget": "Poudre sèche, texturée de sable, de couleur rougeâtre-tan, de crevettes et de taches plus foncées du poisson. Doit verser librement d'une cuillère sans accroupir.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pièces encore reconnaissables comme crevettes ou poissons. La poudre est épaisse et inégale.",
+            "action": "Retour à la meuleuse en petits lots et impulsion en courts éclats - surcharger la meuleuse produit une texture inégale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Poudre grossière uniforme, sèche et libre. L'arôme est intensément salin et marin, presque écrasant à cette concentration. Pas de fragments osseux visibles.",
+            "action": "Réserver et préparer la pâte."
+          },
+          {
+            "state": "Overdone",
+            "description": "Répartir à la farine fine – créera une texture différente dans la sauce finale (lunette, moins texturée).",
+            "action": "Procéder — une poudre plus fine n'est pas un échec, elle produit simplement un chito plus lisse."
+          }
+        ]
+      },
+      "feelCue": "Pincez une petite quantité de poudre entre vos doigts et frottez - elle doit être sèche et légèrement gribouillée, non mouillée ou entaillée. Si elle s'agrippe, les fruits de mer séchés ont absorbé l'humidité et peuvent avoir besoin d'un bref toast sec avant de broyer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "chile_paste",
+      "instructions": "Si vous utilisez des chiles séchés entiers, réhydratez-les dans de l'eau tiède pendant 15 minutes, puis égouttez. Mélanger les chiles réhydratés ou séchés (une petite quantité d'eau de trempe est fine), l'oignon rouge, l'ail et le gingembre dans un mélangeur ou un robot culinaire. Mélanger à une pâte grossière, rouge brique — pas complètement lisse, mais pas de gros morceaux restant. Un mortier et un pilon produisent une pâte plus texturée si le temps le permet.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rouge brique profonde avec une texture d'oignon visible et de piment. Doit être assez épais pour maintenir un pic brièvement mais va s'effondrer immédiatement. Arôme piquant et apaisant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte a encore de gros morceaux d'oignon et des morceaux entiers de chile. Une texture inégale qui fera cuire inégalement.",
+            "action": "Mélanger encore 30 secondes, en ajoutant 1 cuillère à soupe d'eau si nécessaire pour aider le mélangeur à attraper les ingrédients."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte épaisse, de couleur profonde avec une texture fine mais visible. L'odeur d'oignon cru est forte. La couleur du chile est un riche rouge brique.",
+            "action": "Chauffer l'huile dans une grande poêle et commencer à frire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mélanger complètement lisse avec trop d'eau ajoutée — la pâte est fine et aqueuse.",
+            "action": "L'excès d'eau s'effacera mal dans l'huile chaude. Faire cuire à feu doux au départ pour sortir de l'eau avant de commencer à frire proprement."
+          }
+        ]
+      },
+      "feelCue": "La pâte devrait glisser quand vous tirez une cuillère à travers elle et se déposer lentement — comme une sauce tomate épaisse, pas comme un liquide. S'il verse librement, il contient trop d'eau."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "chile_paste",
+        "ing_07"
+      ],
+      "outputState": "fried_paste",
+      "instructions": "Chauffer l'huile dans une poêle large à fond lourd ou wok à feu moyen jusqu'à ce qu'elle mijote mais ne fume pas. Ajouter la pâte de piment tout à la fois — elle éclaboussera et sifflera de façon spectaculaire. Reculez et réduisez immédiatement le feu à moyen-doux. Faire frire la pâte en remuant constamment avec une cuillère à main longue, pendant 15-20 minutes. La pâte doit frire — pas mijoter — dans l'huile: vous voulez des sons de friture actifs (un crackle continu, vif) pas une gourde douce. La pâte s'obscurcira progressivement de rouge brique à un marron foncé profond.",
+      "visualCue": {
+        "primaryTarget": "Après 15-20 minutes, la pâte s'est considérablement foncée jusqu'à un maroon-acajou profond. La pâte s'est rétrécie et l'huile se sépare visiblement, se regroupant dans des canaux clairs autour des bords de la pâte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore rouge vif et sent l'oignon cru et le chile. L'huile n'est pas séparée. Moins de 10 minutes.",
+            "action": "Continuer à frire — les saveurs crues doivent être complètement cuites. Le changement de couleur est le signal, pas l'horloge."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte rouge acajou foncée. L'huile est visiblement séparée des solides, se superposant autour des bords. L'odeur d'oignon brut a été remplacée par un arôme complexe, torréfié et profondément salé.",
+            "action": "Ajouter la poudre de fruits de mer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est presque noire, sent l'acride, et l'huile fume. Petites taches brûlantes visibles.",
+            "action": "Retirer immédiatement du feu. Si le goût est amer, il n'y a pas de guérison, la sauce sera désagréable. Utilisez une chaleur plus faible et plus longtemps la prochaine tentative."
+          }
+        ]
+      },
+      "feelCue": "Écoutez la poêle — le son correct est un craquelin à frire stable et actif, comme une sauce vigoureuse. Si ça sonne comme une mijot douce avec des pops occasionnels, la chaleur est trop faible et vous êtes éparpillé, sans faire frire la pâte."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Toast",
+      "inputs": [
+        "fried_paste",
+        "seafood_powder"
+      ],
+      "outputState": "seafood_incorporated",
+      "instructions": "Ajouter la poudre de fruits de mer à la pâte frite foncée et mélanger vigoureusement. La poudre absorbera une partie de l'huile et le mélange saisira légèrement et deviendra une masse épaisse et sombre. Continuer à frire pendant 5-7 minutes en remuant constamment. La poudre de fruits de mer grillera dans l'huile résiduelle, intensifiant sa saveur marine et développant une profondeur torréfié aux noix. Le mélange sentira une odeur très savoureuse, presque écrasante à proximité.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, très sombre, acajou à noir où la poudre de fruits de mer est devenue entièrement incorporée et grillée. Le mélange est sec et raide, collant à la cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La poudre de fruits de mer semble toujours crue et pâle contre la base de pâte foncée. L'odeur marine n'a pas cuit.",
+            "action": "Continuer à frire pendant encore 3-4 minutes, en remuant constamment pour éviter que la poudre ne brûle sur le fond de la poêle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le mélange combiné est une masse homogène, très foncée, intensément aromatique. L'odeur est passée d'un poisson cru à un poisson profondément rôti et salé — funky de la meilleure façon possible.",
+            "action": "Ajouter la pâte de tomate et le bouillon."
+          },
+          {
+            "state": "Overdone",
+            "description": "La poudre de poisson de mer a été brûlée sur le fond de la poêle, une odeur de poisson vif, amer et brûlé.",
+            "action": "Ajouter le stock immédiatement pour arrêter le brûlage. Si l'odeur amère est forte, le lot est compromis."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le mélange contre le côté de la poêle avec une cuillère — il doit se sentir comme une pâte de tomate très épaisse et raide: dense et résistant, nécessitant une force réelle pour pousser et se propager. S'il coule facilement, il faut plus de temps à frire pour réduire son humidité."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Réduire",
+      "inputs": [
+        "seafood_incorporated",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_shito",
+      "instructions": "Ajouter la pâte de tomate et la mélanger vigoureusement dans le mélange de pâte frite, faire frire pendant 2 minutes pour cuire la pâte de tomate et approfondir sa couleur. Ajouter le bouillon ou l'eau et bien mélanger pour incorporer. Relever le feu à moyen et réduire le mélange en brassant constamment pendant 5 à 8 minutes jusqu'à ce que le bouillon ait cuit et que l'huile se sépare visiblement des solides. Le chito fini devrait être assez lâche pour cuillerer mais assez épais pour fouiner. Assaisonner de sel. Laisser refroidir complètement avant de conserver dans des pots stérilisés recouverts généreusement d'huile. Conserver au réfrigérateur pendant 3-4 semaines.",
+      "visualCue": {
+        "primaryTarget": "Une pâte très foncée, presque noire-maron qui est épaisse mais extensible. Une généreuse couche d'huile rouge foncé sur la surface et autour des bords — c'est la couche de préservation. L'odeur est profondément complexe : fumée, marine, piment chaud, salé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock n'est pas complètement réduit — le chito est humide et mince, manque de profondeur. Encore des odeurs de pâte de tomate crue.",
+            "action": "Continuer la cuisson à feu moyen, en remuant constamment, jusqu'à ce que le mélange se raidisse et que l'huile se sépare à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte profonde, presque noire, qui tient sa forme sur une cuillère. Pool de pétrole visible à la surface. Le goût est une cascade écrasante de chaleur, d'umami, de sel, et une légère douceur de la tomate. La chaleur se construit lentement et persiste.",
+            "action": "Refroidir complètement, transférer dans des pots stérilisés, en assurant une couche d'huile couvre la surface pour la préserver. Réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surcuite jusqu'au point de sécheresse — le chito s'est emparé d'une masse raide et friable avec à peine n'importe quelle huile restante.",
+            "action": "Ajouter 30 ml d'huile végétale, bien remuer à feu doux pour réhydrater et transférer dans les pots. La texture sera restaurée même si le chito est trop serré."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite quantité de chito fini et maintenez-le à l'arrière de votre langue — la chaleur devrait arriver tard, construisant plus de 10-15 secondes à une intensité élevée et soutenue qui est plus au sujet de la profondeur que la netteté immédiate. La note de l'umami devrait se sentir presque charnue, comme si la sauce avait des protéines en elle - même."
+    }
+  ]
 };

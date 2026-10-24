@@ -1,122 +1,333 @@
 export default {
-  repoId: "master_indian_kadhi_001",
-  parentRepoId: null,
-  slug: "kadhi",
-  author: "ForkRecipe Kitchen",
-  title: "Punjabi Kadhi",
-  description: "A tangy, golden yogurt-chickpea-flour curry from Punjab — bhajia fritters simmered in a sour, turmeric-tinted sauce tempered with mustard seed, dried chili, and a final pinch of methi, deeply satisfying and completely vegetarian.",
-  cuisine: "Indian",
-  culture: "Punjabi",
-  category: "sauces",
-  tags: ["indian", "yogurt", "chickpea", "curry", "sour", "comfort"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "50 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 4, bitter: 2, umami: 2, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Full-fat plain yogurt, whisked smooth",                 ratioValue: 300, defaultUnit: "g", substitutions: ["vegan soy yogurt, full-fat"] },
-    { ingId: "ing_02", role: "Binder",    name: "Chickpea flour (besan), sifted",                       ratioValue: 60,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",    name: "Water",                                                 ratioValue: 600, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",     name: "Ground turmeric",                                       ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine salt",                                             ratioValue: 10,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Ghee",                                                  ratioValue: 30,  defaultUnit: "g", substitutions: ["neutral oil"] },
-    { ingId: "ing_07", role: "Spice",     name: "Black mustard seeds",                                   ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Cumin seeds",                                           ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Allium",    name: "Yellow onion, finely sliced",                           ratioValue: 80,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Heat",      name: "Dried red chilies, whole",                              ratioValue: 4,   defaultUnit: "g", substitutions: ["1 tsp chili flake"] },
-    { ingId: "ing_11", role: "Aromatic",  name: "Curry leaves, fresh or dried",                          ratioValue: 8,   defaultUnit: "g", substitutions: ["1/4 tsp asafoetida (hing)"] },
-    { ingId: "ing_12", role: "Herb",      name: "Dried fenugreek leaves (kasuri methi)",                 ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_13", role: "Binder",    name: "Additional chickpea flour (besan, for pakoras)",        ratioValue: 80,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_14", role: "Allium",    name: "Small red onion, finely sliced (for pakoras)",          ratioValue: 60,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_15", role: "Fat",       name: "Neutral oil for frying pakoras",                        ratioValue: 300, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_indian_kadhi_001",
+  "parentRepoId": null,
+  "slug": "kadhi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Punjabi Kadhi",
+  "description": "Un curry au yogourt doré au pois chiche du Pendjab — des beignets bhajia mijotés dans une sauce aigre, teinte de curcuma, trempée de moutarde, de chili séché et d'une pincée finale de méthi, profondément satisfaisante et complètement végétarienne.",
+  "cuisine": "Indiens",
+  "culture": "Punjabi",
+  "category": "sauces",
+  "tags": [
+    "indienne",
+    "yaourt",
+    "pois chiches",
+    "curry",
+    "acide",
+    "confort"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "50 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 2,
+    "umami": 2,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "kadhi_base",
-      instructions: "In a large, heavy-bottomed pot, whisk together the yogurt, chickpea flour, and water until completely smooth with no lumps of flour remaining. The order matters: whisk the chickpea flour into the yogurt first before adding the water — this prevents lumping, as the yogurt's thickness helps the flour incorporate before being diluted. Add the turmeric and salt. The resulting mixture should be the consistency of very thin batter — opaque, bright yellow, and smelling of raw chickpea flour. Set the pot over medium heat and begin stirring immediately.",
-      visualCue: {
-        primaryTarget: "A uniform, opaque, vivid yellow-gold thin batter with no lumps; when stirred, it moves as one cohesive liquid without any white or clumped streaks.",
-        spectrum: [
-          { state: "Underdone", description: "Visible lumps of chickpea flour floating in the mixture; the mixture looks mottled rather than uniform.", action: "Whisk more vigorously, paying attention to the bottom edges of the pot where flour clumps hide." },
-          { state: "Perfect",   description: "Smooth, uniform, yellow-tinted thin batter that pours cleanly with no solid pieces.", action: "Place over heat immediately and begin stirring — yogurt will curdle if heat is applied before whisking is complete." },
-          { state: "Overdone",  description: "The yogurt has been mixed with hot water and begun to curdle before the chickpea flour was fully incorporated.", action: "Strain through a sieve to remove any curdled bits; the chickpea flour will still thicken the strained mixture." },
-        ],
-      },
-      feelCue: "Dip a finger — the batter should feel silky and slightly slippery, with no grit of unincorporated flour against your fingertip. If it feels sandy, whisk longer.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Yogourt plein de matière grasse, doux et fouetté",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "yaourt de soja végétalien, plein gras"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["kadhi_base"],
-      outputState: "thickened_kadhi",
-      instructions: "Cook the kadhi base over medium heat, stirring constantly and vigorously for the first 10 minutes — the yogurt-chickpea mixture is liable to scorch or curdle if left unattended. As it heats, the chickpea flour will begin to thicken the mixture and the yogurt's proteins will be tamed by the starch. Once it reaches a gentle simmer (small bubbles breaking at the surface), reduce to medium-low and cook uncovered for another 15–20 minutes, stirring every 3–4 minutes. The kadhi is ready when it has thickened to the consistency of a light cream sauce and the raw chickpea flour taste has cooked out.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, deep-golden yellow sauce that coats the back of a spoon and drips slowly; no curdling visible; the surface bubbles gently rather than furiously.",
-        spectrum: [
-          { state: "Underdone", description: "Kadhi is still thin and tastes raw and floury; has not yet thickened; cooking time under 20 minutes.", action: "Continue simmering — the raw flour taste takes time to cook out; patience is essential." },
-          { state: "Perfect",   description: "Nappe consistency; coats the spoon; tastes tangy, slightly earthy, and chickpea-rich with no raw flour note. The turmeric has made it golden and brilliant.", action: "Begin the tadka while the kadhi rests at a gentle simmer." },
-          { state: "Overdone",  description: "Kadhi has reduced too much; it is very thick and almost paste-like; the sour taste has concentrated to harsh.", action: "Stir in water by the spoonful to loosen; taste and add a pinch of sugar to round the sourness." },
-        ],
-      },
-      feelCue: "Coat a finger and touch it to your thumb — the thickened kadhi should feel slightly slippery and leave a clear coating that does not immediately wipe off. A thin, watery feel means it needs more cooking time.",
+      "ingId": "ing_02",
+      "role": "Binder",
+      "name": "Farine de pois chiches (blé), ciselée",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["ing_13", "ing_14", "ing_15"],
-      outputState: "pakoras",
-      instructions: "Mix the additional chickpea flour with the sliced red onion, a pinch of salt, a pinch of chili powder, and enough water to make a thick batter (about 50 g water) that holds the onion slices together when a clump is dropped. Heat the neutral oil in a deep pan to 175°C / 350°F. Drop spoonfuls of the onion-batter clumps into the oil and fry in batches for 3–4 minutes, turning once, until golden-brown and crispy. Drain on paper towels. These pakoras are added to the kadhi to simmer briefly; making them slightly crispier than you want to eat them standalone ensures they hold their structure after time in the sauce.",
-      visualCue: {
-        primaryTarget: "Golden-brown, craggy pakoras with crispy edges and visible strands of onion; uniformly colored; not oily when pressed on paper towel.",
-        spectrum: [
-          { state: "Underdone", description: "Pakoras are pale gold and still soft; they will dissolve completely in the kadhi.", action: "Fry another 1–2 minutes until properly golden and firm." },
-          { state: "Perfect",   description: "Deep golden-brown, firm exterior; slightly crispy surface that will soften to pillowy in the kadhi while retaining its shape.", action: "Drain on paper towels and set aside for the final simmer." },
-          { state: "Overdone",  description: "Pakoras are dark brown and hard; they will remain tough even after simmering in the kadhi.", action: "Soak briefly in warm water for 5 minutes before adding to the sauce to soften." },
-        ],
-      },
-      feelCue: "Press a hot pakora: the exterior should feel firm and dry, not greasy. Press harder — the center should yield slightly, indicating it is cooked through and fluffy rather than doughy.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bloom",
-      inputs: ["ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12"],
-      outputState: "kadhi_tadka",
-      instructions: "In a small skillet, heat the ghee over medium-high heat. Add the black mustard seeds and let them pop for 30 seconds. Add the cumin seeds, sliced onion, whole dried chilies, and curry leaves — stand back as the curry leaves will spit dramatically. Fry for 4–5 minutes, stirring, until the onion is golden and the curry leaves are crisp. Remove from heat and crumble in the dried fenugreek leaves (kasuri methi) — they go in off the heat to protect their volatile aromatic compounds from burning. The tadka will hiss and crackle spectacularly when poured into the kadhi.",
-      visualCue: {
-        primaryTarget: "A fragrant, sizzling mix of golden onion, darkened whole spices, crisped curry leaves, and aromatic ghee in a small pan — the scent is intensely savory and smoky-floral from the curry leaves.",
-        spectrum: [
-          { state: "Underdone", description: "Mustard seeds have not fully popped; onion is still pale; curry leaves are still bright green rather than darkened and crisp.", action: "Increase heat and cook longer; the distinctive smoky aroma of curry leaves only develops when they are fully fried." },
-          { state: "Perfect",   description: "Loud pop of mustard seeds followed by crisping onion; curry leaves darkened and fragrant; onion golden. Aroma is smoky, floral, and intoxicating.", action: "Remove from heat, add kasuri methi, and pour over the kadhi immediately." },
-          { state: "Overdone",  description: "Onion is dark brown-black; curry leaves are charred and bitter; ghee smells acrid.", action: "Discard and make a fresh tadka — a burnt tadka dominates the entire pot of kadhi." },
-        ],
-      },
-      feelCue: "The moment the mustard seeds start popping, the countdown begins. Keep one hand over the pan lid to shield from spattering; the sizzle should peak and then soften within 30 seconds as the moisture burns off from the onion.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Simmer",
-      inputs: ["thickened_kadhi", "kadhi_tadka", "pakoras"],
-      outputState: "finished_kadhi",
-      instructions: "Pour the sizzling tadka over the simmering kadhi, stirring immediately to incorporate the spiced ghee throughout the sauce. Add the pakoras gently, pushing them below the surface so they begin to absorb the kadhi. Simmer together on low heat for 5–7 minutes — just enough time for the pakoras to soften and swell from the sauce without falling apart. Taste and adjust salt; if the sourness is too sharp, add half a teaspoon of sugar. Serve in deep bowls over steamed basmati rice. The kadhi should be generously poured over the rice so the rice can absorb the tangy golden sauce.",
-      visualCue: {
-        primaryTarget: "A deep golden, glossy sauce with golden pakoras swelling and floating throughout; a visible slick of fragrant ghee on the surface from the tadka; curry leaves and whole spices visible.",
-        spectrum: [
-          { state: "Underdone", description: "Tadka not yet added; pakoras still crispy and separate; flavors not unified.", action: "Pour the tadka in and allow the 5-minute final simmer — the integration step is not optional." },
-          { state: "Perfect",   description: "Pakoras are plump and pillowy, having absorbed kadhi but still identifiable; sauce is glossy, tangy, and complex; ghee pools at the surface.", action: "Serve over rice immediately." },
-          { state: "Overdone",  description: "Pakoras have fully dissolved into the sauce, which is now very thick with visible lumps of former fritter.", action: "Thin with water and serve — it is now a thicker style of kadhi, equally delicious." },
-        ],
-      },
-      feelCue: "Lift a pakora from the pot — it should feel soft but springy, like a wet sponge that holds its shape. If it crumbles in the ladle, it has simmered too long. If it is still hard and dry in the center, give it 2 more minutes.",
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Ghee",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile neutre"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Graines de moutarde noire",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Graines de cumin",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Allium",
+      "name": "Oignon jaune, tranché finement",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Heat",
+      "name": "Piments rouges séchés, entiers",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 cuillerée au chili"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Aromatic",
+      "name": "Feuilles de curry, fraîches ou sèches",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1/4 ct asafoetida (hing)"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Herb",
+      "name": "Feuilles de fénugreek séchées (kasuri methi)",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Binder",
+      "name": "Farine de pois chiches supplémentaire (san, pour pakoras)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Allium",
+      "name": "Petit oignon rouge, finement tranché (pour pakoras)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Fat",
+      "name": "Huile neutre pour la friture de pakoras",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "kadhi_base",
+      "instructions": "Dans un grand pot à fond lourd, fouetter ensemble le yogourt, la farine de pois chiches et l'eau jusqu'à ce qu'elle soit complètement lisse sans qu'il reste de morceaux de farine. L'ordre est important: fouetter la farine de pois chiches dans le yogourt d'abord avant d'ajouter l'eau, ce qui empêche les grumeaux, car l'épaisseur du yogourt aide la farine à s'incorporer avant d'être diluée. Ajouter le curcuma et le sel. Le mélange qui en résulte doit être la consistance d'une pâte très fine: opaque, jaune vif et sentant la farine de pois chiche crue. Régler le pot à feu moyen et commencer à remuer immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Une pâte mince uniforme, opaque et à or jaune vif sans grumeaux; lorsqu'elle est agitée, elle se déplace comme un liquide cohésif sans stries blanches ou entaillées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux visibles de farine de pois chiches flottent dans le mélange; le mélange semble tacheté plutôt que uniforme.",
+            "action": "fouetter plus vigoureusement, en prêtant attention aux bords inférieurs de la casserole où se cache la farine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte fine lisse, uniforme et teintée de jaune qui coule proprement sans morceaux solides.",
+            "action": "Placer immédiatement sur le feu et commencer à remuer — le yogourt sert si la chaleur est appliquée avant que le fouet ne soit terminé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le yogourt a été mélangé à de l'eau chaude et a commencé à durcir avant que la farine de pois chiches ne soit entièrement incorporée.",
+            "action": "La farine de pois chiches va encore épaissir le mélange."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt — la pâte doit se sentir soyeuse et légèrement glissante, sans grain de farine non incorporée contre votre bout de doigt. Si ça sent le sable, fouetter plus longtemps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "kadhi_base"
+      ],
+      "outputState": "thickened_kadhi",
+      "instructions": "Cuire la base de kadhi à feu moyen, en remuant constamment et vigoureusement pendant les 10 premières minutes — le mélange yogourt-chickpea est susceptible de scorch ou de curdle s'il reste sans surveillance. Comme il chauffe, la farine de pois chiches commencera à épaissir le mélange et les protéines du yogourt seront domptées par l'amidon. Une fois qu'il atteint une mijotée douce (petites bulles se brisant à la surface), réduire à moyen-doux et cuire à découvert pendant 15 à 20 minutes, en remuant toutes les 3 à 4 minutes. Le kadhi est prêt quand il s'est épaissi à la consistance d'une sauce à la crème légère et le goût cru de farine de pois chiche a cuit.",
+      "visualCue": {
+        "primaryTarget": "Une sauce jaune épaisse, brillante et d'or profond qui enveloppe l'arrière d'une cuillère et coule lentement; pas de courbure visible; la surface bulle doucement plutôt que furieusement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Kadhi est encore mince et goûte cru et farineux; n'a pas encore épaissi; temps de cuisson inférieur à 20 minutes.",
+            "action": "Continuer à mijoter — le goût de la farine crue prend du temps à cuire; la patience est essentielle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Consistance à la nappe; enrobe la cuillère; goûte tannant, légèrement terreux et riche en pois chiches sans note de farine crue. Le curcuma l'a rendu doré et brillant.",
+            "action": "Commencez le tadka pendant que le kadhi se repose à un mijot doux."
+          },
+          {
+            "state": "Overdone",
+            "description": "Kadhi a trop réduit; il est très épais et presque pâteux; le goût aigre s'est concentré à rude.",
+            "action": "Incorporer dans l'eau à la cuillère pour se détendre; goûter et ajouter une pincée de sucre pour arrondir l'aurore."
+          }
+        ]
+      },
+      "feelCue": "Enrober un doigt et le toucher au pouce — le kadhi épaissé devrait se sentir légèrement glissant et laisser un revêtement clair qui ne s'efface pas immédiatement. Une sensation fine et aqueuse signifie qu'il faut plus de temps pour cuisiner."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "ing_13",
+        "ing_14",
+        "ing_15"
+      ],
+      "outputState": "pakoras",
+      "instructions": "Mélanger la farine de pois chiches supplémentaire avec l'oignon rouge tranché, une pincée de sel, une pincée de poudre de chili, et assez d'eau pour faire une pâte épaisse (environ 50 g d'eau) qui maintient les tranches d'oignon ensemble lorsqu'une touffe est tombée. Chauffer l'huile neutre dans une casserole profonde à 175°C / 350°F. Déposer des cuillères de la coupe d'oignons dans l'huile et faire frire en lots pendant 3 à 4 minutes, en tournant une fois, jusqu'à ce qu'elles soient dorées et croustillantes. Égoutter sur des serviettes en papier. Ces pakoras sont ajoutés au kadhi pour mijoter brièvement; les rendre légèrement plus croustillants que vous voulez les manger autonome assure qu'ils tiennent leur structure après le temps dans la sauce.",
+      "visualCue": {
+        "primaryTarget": "Pakoras dorés-bruns, aux bords croustillants et aux brins visibles d'oignon; uniformément colorés; non gras lorsqu'ils sont pressés sur une serviette en papier.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pakoras sont d'or pâle et encore doux; ils se dissolvent complètement dans le kadhi.",
+            "action": "Faire frire encore 1 à 2 minutes jusqu'à ce qu'il soit bien doré et ferme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep or-brun, extérieur ferme; surface légèrement croustillante qui s'adoucira à l'oreiller dans le kadhi tout en conservant sa forme.",
+            "action": "Égoutter sur des serviettes en papier et réserver pour la mijoter finale."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pakoras sont brun foncé et durs; ils resteront durs même après avoir mijoté dans le kadhi.",
+            "action": "Faire tremper brièvement dans l'eau tiède pendant 5 minutes avant d'ajouter à la sauce pour adoucir."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un pakora chaud: l'extérieur doit se sentir ferme et sec, pas gras. Pressez plus fort — le centre devrait produire légèrement, indiquant qu'il est cuit à travers et moelleux plutôt que pâteux."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Bloom",
+      "inputs": [
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "kadhi_tadka",
+      "instructions": "Dans une petite poêle, faire chauffer le ghee à feu moyen-vif. Ajouter les graines de moutarde noire et laisser sauter pendant 30 secondes. Ajoutez les graines de cumin, l'oignon tranché, les piments entiers séchés et les feuilles de curry — reculez, car les feuilles de curry crachent de façon spectaculaire. Faire frire 4 à 5 minutes en remuant jusqu'à ce que l'oignon soit doré et que les feuilles de curry soient croustillantes. Retirer du feu et s'effondrer dans les feuilles de fénugreek séchées (kasuri methi) — elles entrent dans le feu pour protéger leurs composés aromatiques volatils de la combustion. Le tadka sifflera et craquera spectaculairement quand il sera versé dans le kadhi.",
+      "visualCue": {
+        "primaryTarget": "Un mélange parfumé et étourdissant d'oignon doré, d'épices entières obscurcies, de feuilles de curry croustillantes et de ghee aromatique dans une petite casserole – le parfum est intensément salé et fumé-floral des feuilles de curry.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines de moutarde n'ont pas complètement sauté; l'oignon est encore pâle; les feuilles de curry sont encore vert clair plutôt que foncé et croquant.",
+            "action": "Augmenter la chaleur et faire cuire plus longtemps; l'arôme fumé distinctif des feuilles de curry ne se développe que lorsqu'elles sont entièrement frites."
+          },
+          {
+            "state": "Perfect",
+            "description": "Loud pop de graines de moutarde suivie d'oignon croquant; feuilles de curry obscurcies et parfumées; oignon doré. L'arôme est fumé, floral et enivrant.",
+            "action": "Retirer du feu, ajouter le kasuri methi et verser sur le kadhi immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon est brun foncé-noir; les feuilles de curry sont carbonisées et amères; le ghee sent l'acride.",
+            "action": "Jeter et faire un tadka frais — un tadka brûlé domine tout le pot de kadhi."
+          }
+        ]
+      },
+      "feelCue": "Dès que les graines de moutarde commencent à sauter, le compte à rebours commence. Gardez une main sur le couvercle de la casserole pour protéger contre les éclaboussures; le étourdissement doit picer et puis adoucir dans les 30 secondes que l'humidité brûle de l'oignon."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "thickened_kadhi",
+        "kadhi_tadka",
+        "pakoras"
+      ],
+      "outputState": "finished_kadhi",
+      "instructions": "Verser le tadka sur le kadhi mijotant, en remuant immédiatement pour incorporer le ghe épicé dans toute la sauce. Ajouter les pakoras doucement, les pousser sous la surface afin qu'ils commencent à absorber le kadhi. Laisser mijoter à feu doux de 5 à 7 minutes — juste assez de temps pour que les pakoras s'adoucissent et gonflent de la sauce sans tomber en morceaux. Goûtez et ajustez le sel; si l'auresse est trop forte, ajoutez une demi cuillère à café de sucre. Servir dans des bols profonds sur du riz basmati cuit à la vapeur. Le kadhi doit être généreusement versé sur le riz afin que le riz puisse absorber la sauce dorée tannée.",
+      "visualCue": {
+        "primaryTarget": "Une sauce bien dorée et brillante avec des pakoras dorés enflammés et flottants; une lécherette visible de ghee parfumé à la surface de la tadka; des feuilles de curry et des épices entières visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Tadka pas encore ajouté; pakoras encore croustillant et séparé; saveurs non unifiées.",
+            "action": "Verser le tadka et laisser mijoter 5 minutes – l'étape d'intégration n'est pas facultative."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pakoras sont plumés et oreillers, ayant absorbé le kadhi mais toujours identifiable; la sauce est brillante, tannante et complexe; piscines de ghee à la surface.",
+            "action": "Servir sur le riz immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pakoras s'est complètement dissout dans la sauce, qui est maintenant très épaisse avec des morceaux visibles d'anciennes beignets.",
+            "action": "Finissez avec de l'eau et servez - il est maintenant un style plus épais de kadhi, tout aussi délicieux."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une pakora de la casserole — elle devrait se sentir douce mais printanière, comme une éponge humide qui tient sa forme. Si elle s'écroule dans la louche, elle a mijoté trop longtemps. S'il est encore dur et sec au centre, donnez-lui 2 minutes de plus."
+    }
+  ]
 };

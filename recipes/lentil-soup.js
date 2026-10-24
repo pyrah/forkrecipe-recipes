@@ -1,123 +1,292 @@
 export default {
-  repoId: "master_turkish_lentil_soup_001",
-  parentRepoId: null,
-  slug: "lentil-soup",
-  author: "ForkRecipe Kitchen",
-
-  title: "Red Lentil Soup",
-  description: "Turkey's most democratic dish — red lentils dissolved to velvet, bloomed with paprika-butter at the table, and finished with a jolt of lemon that transforms humble into electric.",
-  cuisine: "Turkish",
-  culture: "Turkish",
-  category: "grains",
-
-  tags: ["lentil", "soup", "turkish", "vegan", "blended", "winter"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-
-  stars: 1990,
-  forks: 156,
-  contributors: 44,
-  license: "CC-BY-SA",
-  createdAt: "2024-07-20",
-  updatedAt: "2025-02-01",
-
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 1, umami: 3, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Red lentils (rinsed)",             ratioValue: 100, defaultUnit: "parts", substitutions: ["yellow split peas"] },
-    { ingId: "ing_02", role: "Allium",    name: "Yellow onion (diced)",              ratioValue: 60,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic (minced)",                   ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Structure", name: "Carrot (diced)",                    ratioValue: 30,  defaultUnit: "parts", substitutions: ["parsnip"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Vegetable or chicken stock",        ratioValue: 500, defaultUnit: "parts", substitutions: ["water + bouillon"] },
-    { ingId: "ing_06", role: "Spice",     name: "Sweet paprika",                     ratioValue: 3,   defaultUnit: "parts", substitutions: ["smoked paprika"] },
-    { ingId: "ing_07", role: "Spice",     name: "Ground cumin",                      ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Butter (for bloom)",                ratioValue: 10,  defaultUnit: "parts", substitutions: ["olive oil"] },
-    { ingId: "ing_09", role: "Acid",      name: "Fresh lemon juice",                 ratioValue: 15,  defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Salt and black pepper",             ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_turkish_lentil_soup_001",
+  "parentRepoId": null,
+  "slug": "lentil-soup",
+  "author": "ForkRecipe Kitchen",
+  "title": "Soupe de lentilles rouges",
+  "description": "Le plat le plus démocratique de la Turquie — les lentilles rouges dissoutes en velours, fleuries de paprika-butter à la table, et finies par une jute de citron qui se transforme humble en électrique.",
+  "cuisine": "Turquie",
+  "culture": "Turquie",
+  "category": "grains",
+  "tags": [
+    "lentilles",
+    "Soupe",
+    "turc",
+    "végétalien",
+    "mélangés",
+    "hiver"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 1990,
+  "forks": 156,
+  "contributors": 44,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-07-20",
+  "updatedAt": "2025-02-01",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_08"],
-      outputState: "softened_aromatics",
-      instructions: "Melt half the butter in a large pot over medium heat. Add onion and carrot and cook, stirring occasionally, for 8-10 minutes until softened and the onion is translucent and lightly golden at the edges. Add garlic and cook 1 more minute. Add paprika and cumin and stir for 30 seconds — the spices should sizzle briefly in the butter and release a fragrant bloom. Do not let them scorch.",
-      visualCue: {
-        primaryTarget: "Onions are translucent and lightly golden. The pot smells of bloomed paprika and sweet carrot — a warm, brick-red aroma rising from the butter.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still white and firm. Garlic smells raw. Spices are pale and unactivated.", action: "Cook 3-5 more minutes. The onion base needs to be softened to blend smoothly." },
-          { state: "Perfect",   description: "Onions are floppy and golden-edged. Spice in the butter is deep orange-red and fragrant.", action: "Add lentils and stock immediately." },
-          { state: "Overdone",  description: "Spices are dark brown and smell bitter. Garlic has scorched.", action: "Add a splash of stock immediately to stop cooking. The bitter garlic flavor will be diluted by the lentils." },
-        ],
-      },
-      feelCue: "When paprika hits butter, the kitchen fills immediately with a warm, slightly sweet spice cloud — it smells like the beginning of something good.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Lentilles rouges (rincées)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pois fendus jaunes"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["softened_aromatics", "ing_01", "ing_05", "ing_10"],
-      outputState: "cooked_lentil_soup",
-      instructions: "Add rinsed lentils and stock to the pot. Season with salt and pepper. Bring to a boil over high heat, then reduce to a steady simmer. Cook uncovered for 20-25 minutes, stirring occasionally. Red lentils dissolve on their own — no blending required for a smooth texture — but a brief blend produces a silkier, restaurant-quality result. Skim any foam that rises in the first few minutes.",
-      visualCue: {
-        primaryTarget: "Lentils have completely dissolved into the stock. The soup is thick, opaque, and deep orange-yellow. A wooden spoon dragged through the surface leaves a trail that closes slowly.",
-        spectrum: [
-          { state: "Underdone", description: "Lentils are visible as distinct pale-orange discs. The soup is thin and brothy.", action: "Simmer 10 more minutes. Red lentils lose structure gradually — they will dissolve with patience." },
-          { state: "Perfect",   description: "Soup is thick and uniformly colored. Lentils are indistinguishable from the broth. Stirs with gentle resistance.", action: "Remove from heat and blend if desired, then return to pot." },
-          { state: "Overdone",  description: "Soup has become very thick and is beginning to stick and spit. The bottom may be scorching.", action: "Remove from heat, add a ladle of hot water, and stir vigorously." },
-        ],
-      },
-      feelCue: "The soup at this point smells warmly of cumin and lentil starch — almost bread-like, with a gentle mineral note from the stock.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon jaune (découpé)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["cooked_lentil_soup"],
-      outputState: "blended_soup",
-      instructions: "Use an immersion blender to blend the soup directly in the pot for 1-2 minutes until completely smooth. Alternatively, blend in batches in a stand blender, filling only halfway and holding the lid with a folded towel. Return to the pot, adjust consistency with a splash of hot water if too thick, and bring back to a simmer. Taste and adjust salt. The texture should flow like heavy cream — fluid but substantial.",
-      visualCue: {
-        primaryTarget: "Uniformly smooth, orange-amber soup with a glossy surface. No visible lentil pieces. It coats the back of a spoon and holds there.",
-        spectrum: [
-          { state: "Underdone", description: "Visible pieces of carrot or lentil remain. Texture is rough when you run a spoon across your tongue.", action: "Continue blending. An immersion blender takes longer than a stand blender — at least 90 seconds at full speed." },
-          { state: "Perfect",   description: "Glossy, smooth, and perfectly uniform. The orange color deepens when blended. No grainy texture.", action: "Return to pot, adjust seasoning, and prepare the paprika butter." },
-          { state: "Overdone",  description: "Blended too long and the soup has become thin from aeration and heat loss.", action: "Return to heat and simmer uncovered briefly to restore body. This cannot truly be over-blended — more is better." },
-        ],
-      },
-      feelCue: "Properly blended lentil soup coats the back of a spoon and feels like velvet on your tongue — no grit, no lumps, only warmth.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bloom",
-      inputs: ["ing_08", "ing_06"],
-      outputState: "paprika_butter",
-      instructions: "In a small saucepan or ladle held over the flame, melt the remaining butter over medium heat. When it foams, add a pinch more of paprika and swirl until the butter turns vivid orange-red and smells intensely of sweet pepper. This takes 30-45 seconds. Remove from heat the moment it begins to deepen past orange toward brown.",
-      visualCue: {
-        primaryTarget: "Butter is bright orange-red and foaming around the paprika. It smells intensely of bloomed sweet pepper, not burnt fat.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is still yellow and the paprika is floating on top, unactivated.", action: "Increase heat slightly and swirl the pan more actively." },
-          { state: "Perfect",   description: "Bright orange, foaming, intensely aromatic. The paprika has dissolved into the fat.", action: "Remove from heat and drizzle immediately over the soup bowls." },
-          { state: "Overdone",  description: "Butter is dark brown and the paprika has turned bitter and dark. Acrid smell.", action: "Discard and start again — burnt butter drizzle will ruin the soup's delicate finish." },
-        ],
-      },
-      feelCue: "The paprika butter moment is fleeting and theatrical — you can smell it from across the room, sweet and capsicum-rich, cutting through the neutral lentil steam.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Carotte (découpée)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "panais"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Finish",
-      inputs: ["blended_soup", "paprika_butter", "ing_09"],
-      outputState: "finished_lentil_soup",
-      instructions: "Ladle the hot soup into warm bowls. Drizzle a teaspoon of paprika butter in a circle over each bowl. Squeeze fresh lemon juice directly into each serving — about half a teaspoon per bowl — and serve immediately with crusty bread or flatbread alongside. The lemon must be added at serving, not to the pot, to preserve its brightness.",
-      visualCue: {
-        primaryTarget: "A vivid orange bowl with a ring of burnt-orange paprika butter floating on the surface and a shimmer of lemon juice catching the light.",
-        spectrum: [
-          { state: "Underdone", description: "No paprika butter drizzle. The soup looks flat and monochrome.", action: "Add the paprika butter — it is essential, not decorative." },
-          { state: "Perfect",   description: "Vibrant orange soup with a swirled red-orange butter ring. Steam rises. The smell is warm paprika, lemon, and cumin.", action: "Serve immediately before the butter sinks." },
-          { state: "Overdone",  description: "Soup has sat too long and the paprika butter has sunk and incorporated. Lemon has faded.", action: "Add a fresh squeeze of lemon at the table to restore brightness." },
-        ],
-      },
-      feelCue: "The moment lemon hits the hot soup, the aromatic profile snaps upward — the warmth and weight of the lentils are suddenly lifted, and the whole bowl tastes brighter.",
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Stocks de légumes ou de poulet",
+      "ratioValue": 500,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau + bouillon"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Paprika doux",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika fumé"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Beurre (pour floraison)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel et poivre noir",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_08"
+      ],
+      "outputState": "softened_aromatics",
+      "instructions": "Faire fondre la moitié du beurre dans une grande casserole à feu moyen. Ajouter l'oignon et la carotte et cuire, en remuant de temps en temps, pendant 8-10 minutes jusqu'à ramollir et l'oignon est translucide et légèrement doré aux bords. Ajouter l'ail et cuire encore 1 minute. Ajouter le paprika et le cumin et remuer pendant 30 secondes — les épices doivent s'étourdir brièvement dans le beurre et libérer une floraison parfumée. Ne les laissez pas scorcher.",
+      "visualCue": {
+        "primaryTarget": "Les oignons sont translucides et légèrement dorés. Le pot sent le paprika fleuri et la carotte douce — un arôme chaud et rouge brique qui s'élève du beurre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore blanc et ferme. L'ail sent cru. Les épices sont pâles et non activées.",
+            "action": "Faire cuire 3-5 minutes de plus. La base d'oignons doit être adoucie pour se fondre en douceur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont floppés et dorés. L'épice dans le beurre est rouge-orange foncé et parfumée.",
+            "action": "Ajouter immédiatement les lentilles et le stock."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les épices sont brun foncé et sentent amer. L'ail a brûlé.",
+            "action": "Ajoutez immédiatement un peu de bouillon pour arrêter la cuisson. L'ail amer sera dilué par les lentilles."
+          }
+        ]
+      },
+      "feelCue": "Lorsque le paprika frappe le beurre, la cuisine se remplit immédiatement d'un nuage d'épices tièdes et légèrement sucrées."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "softened_aromatics",
+        "ing_01",
+        "ing_05",
+        "ing_10"
+      ],
+      "outputState": "cooked_lentil_soup",
+      "instructions": "Ajouter les lentilles rincées et le bouillon dans la casserole. Assaisonner de sel et de poivre. Porter à ébullition à feu vif, puis laisser mijoter régulièrement. Cuire à découvert pendant 20-25 minutes, en remuant occasionnellement. Les lentilles rouges se dissolvent seules — aucun mélange nécessaire pour une texture lisse — mais un bref mélange produit un résultat plus soyeux et de qualité restaurant. Essuie toute mousse qui monte dans les premières minutes.",
+      "visualCue": {
+        "primaryTarget": "Les lentilles se sont complètement dissoutes dans le stock. La soupe est épaisse, opaque et jaune-orange foncé. Une cuillère en bois traînée à travers la surface laisse un sentier qui se ferme lentement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les lentilles sont visibles sous forme de disques orange pâle distincts. La soupe est fine et bouillonnante.",
+            "action": "Faites mijoter 10 minutes de plus. Les lentilles rouges perdent progressivement leur structure — elles se dissolvent avec patience."
+          },
+          {
+            "state": "Perfect",
+            "description": "La soupe est épaisse et uniformément colorée. Les lentilles sont indistinguables du bouillon. Mélanger avec une résistance douce.",
+            "action": "Retirer du feu et mélanger si désiré, puis retourner en pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe est devenue très épaisse et commence à coller et à cracher. Le fond peut être brûlant.",
+            "action": "Retirer du feu, ajouter une louche d'eau chaude et remuer vigoureusement."
+          }
+        ]
+      },
+      "feelCue": "La soupe à ce point sent chaudement l'amidon de cumin et de lentilles, presque comme du pain, avec une note minérale douce du stock."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "cooked_lentil_soup"
+      ],
+      "outputState": "blended_soup",
+      "instructions": "Utilisez un mélangeur d'immersion pour mélanger la soupe directement dans la casserole pendant 1 à 2 minutes jusqu'à ce qu'elle soit complètement lisse. Alternativement, mélanger en lots dans un mélangeur de support, ne remplir qu'à mi-chemin et tenir le couvercle avec une serviette pliée. Retourner dans le pot, ajuster la consistance avec une éclaboussure d'eau chaude si trop épaisse, et ramener à mijoter. Goûtez et ajustez le sel. La texture doit couler comme de la crème lourde — fluide mais substantielle.",
+      "visualCue": {
+        "primaryTarget": "Soupe orange-ambre uniformément lisse avec une surface brillante. Pas de lentilles visibles. Il enveloppe l'arrière d'une cuillère et y tient.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il reste des morceaux visibles de carottes ou de lentilles. La texture est rugueuse quand vous passez une cuillère à travers votre langue.",
+            "action": "Continuez à mélanger. Un mélangeur d'immersion prend plus de temps qu'un mélangeur de peuplement — au moins 90 secondes à pleine vitesse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, lisse et parfaitement uniforme. La couleur orange s'approfondit lorsqu'elle est mélangée. Pas de texture granuleuse.",
+            "action": "Retourner en pot, ajuster l'assaisonnement et préparer le beurre de paprika."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mélange trop long et la soupe est devenue mince de l'aération et de la perte de chaleur.",
+            "action": "Retour à la chaleur et mijoter découvert brièvement pour restaurer le corps. Cela ne peut vraiment pas être exagéré — c'est mieux."
+          }
+        ]
+      },
+      "feelCue": "La soupe de lentilles bien mélangée enveloppe l'arrière d'une cuillère et se sent comme du velours sur votre langue — pas de grumeaux, pas de grumeaux, seulement de chaleur."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Bloom",
+      "inputs": [
+        "ing_08",
+        "ing_06"
+      ],
+      "outputState": "paprika_butter",
+      "instructions": "Dans une petite casserole ou une louche maintenue au-dessus de la flamme, faire fondre le beurre restant à feu moyen. Quand il mousse, ajouter une pincée de paprika et tourbillonner jusqu'à ce que le beurre devienne rouge orange vif et sente intensément le poivre doux. Cela prend 30-45 secondes. Retirer du feu le moment où il commence à approfondir l'orange passée vers le brun.",
+      "visualCue": {
+        "primaryTarget": "Le beurre est rouge-orange vif et mousse autour du paprika. Il sent intensément le poivre sucré fleuri, pas la graisse brûlée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est encore jaune et le paprika flotte sur le dessus, non activé.",
+            "action": "Augmenter légèrement la chaleur et tourner la poêle plus activement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Orange vif, mousseux, intensément aromatique. Le paprika s'est dissous dans la graisse.",
+            "action": "Retirer du feu et arroser immédiatement sur les bols à soupe."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre est brun foncé et le paprika est devenu amer et sombre. Une odeur d'acride.",
+            "action": "Jeter et recommencer à zéro — la bruine au beurre brûlé ruinera la délicate finale de la soupe."
+          }
+        ]
+      },
+      "feelCue": "Le moment du beurre de paprika est éphémère et théâtral — vous pouvez le sentir de l'autre côté de la pièce, doux et riche en capsicum, coupant à travers la vapeur neutre de lentilles."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Finition",
+      "inputs": [
+        "blended_soup",
+        "paprika_butter",
+        "ing_09"
+      ],
+      "outputState": "finished_lentil_soup",
+      "instructions": "Déposer la soupe chaude dans des bols chauds. Faire tremper une cuillère à café de beurre de paprika dans un cercle au-dessus de chaque bol. Pressez le jus de citron frais directement dans chaque portion — environ une demi- cuillère à café par bol — et servez immédiatement avec du pain croustillant ou du pain plat. Le citron doit être ajouté au service, et non au pot, pour préserver sa luminosité.",
+      "visualCue": {
+        "primaryTarget": "Un bol orange vif avec un anneau de beurre de paprika brûlé-orange flottant à la surface et un éclat de jus de citron attraper la lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas de bruine de beurre de paprika. La soupe a l'air plate et monochrome.",
+            "action": "Ajouter le beurre de paprika — il est essentiel, et non décoratif."
+          },
+          {
+            "state": "Perfect",
+            "description": "Soupe orange vive avec un anneau de beurre rouge-orange tourbillonné. La vapeur monte. L'odeur est le paprika chaud, le citron et le cumin.",
+            "action": "Servir immédiatement avant que le beurre coule."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe est trop longue et le beurre de paprika est coulé et incorporé. Le citron s'est évanoui.",
+            "action": "Ajouter une touche de citron fraîche à la table pour restaurer la luminosité."
+          }
+        ]
+      },
+      "feelCue": "Au moment où le citron frappe la soupe chaude, le profil aromatique s'enfonce vers le haut — la chaleur et le poids des lentilles sont soudainement levés, et le bol entier a un goût plus lumineux."
+    }
+  ]
 };

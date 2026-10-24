@@ -1,79 +1,177 @@
 export default {
-  repoId: "master_american_drinkingshrub_001",
-  parentRepoId: null,
-  slug: "drinking-shrub",
-  author: "ForkRecipe Kitchen",
-  title: "Drinking Shrub",
-  description: "A colonial-era fruit vinegar syrup — seasonal berries macerated in sugar until their juices run free, then aged with apple cider vinegar for a week into a tangy, complex drinking concentrate that wakes up sparkling water or cocktails alike.",
-  cuisine: "American",
-  culture: "American",
-  category: "beverages",
-  tags: ["beverages", "american", "shrub", "vinegar", "fruit", "vegan", "gluten-free"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "7 days",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 0, sour: 4, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Aromatic",  name: "Seasonal berries (strawberry, raspberry, or blackberry)", ratioValue: 250, defaultUnit: "g",   substitutions: ["stone fruit, pitted and halved", "peaches", "plums"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Cane sugar",                                               ratioValue: 200, defaultUnit: "g",   substitutions: ["raw sugar", "honey (warm method)"] },
-    { ingId: "ing_03", role: "Acid",      name: "Raw unfiltered apple cider vinegar",                      ratioValue: 200, defaultUnit: "ml",  substitutions: ["champagne vinegar", "white wine vinegar"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Fresh herbs or whole spices (optional — e.g. rosemary, black pepper, cardamom)", ratioValue: 5, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_american_drinkingshrub_001",
+  "parentRepoId": null,
+  "slug": "drinking-shrub",
+  "author": "ForkRecipe Kitchen",
+  "title": "Boire de l'arbuste",
+  "description": "Un sirop de vinaigre de fruits de l'époque coloniale — des baies de saison macérées dans du sucre jusqu'à ce que leurs jus soient libres, puis vieillies avec du vinaigre de cidre de pomme pendant une semaine dans un concentré de boisson complexe et tannant qui réveille l'eau pétillante ou les cocktails.",
+  "cuisine": "Américain",
+  "culture": "Américain",
+  "category": "beverages",
+  "tags": [
+    "boissons",
+    "américains",
+    "arbuste",
+    "vinaigre",
+    "fruits",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "7 days",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 0,
+    "sour": 4,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Cure",
-      inputs: ["ing_01", "ing_02", "ing_04"],
-      outputState: "macerated_fruit",
-      instructions: "Combine berries and sugar in a clean glass jar. Add any aromatics — a sprig of rosemary or a few cracked peppercorns work beautifully with strawberries. Stir, cover loosely, and leave at room temperature for 24-48 hours. The sugar draws moisture out of the fruit through osmosis, creating a vivid, intensely flavored syrup as the fruit begins to collapse.",
-      visualCue: {
-        primaryTarget: "After 24 hours: fruit shrunken and pale, surrounded by a pool of richly colored, viscous fruit syrup.",
-        spectrum: [
-          { state: "Underdone", description: "After 6 hours: barely any liquid released. Sugar looks wet but the fruit is still intact.", action: "Stir once and wait. The osmosis takes time. The room temperature matters too." },
-          { state: "Perfect",   description: "Fruit has given up most of its liquid. Pool of deep-colored, jewel-bright syrup coats the fruit. Smells intensely of ripe fruit and sweetness.", action: "Strain out the fruit and add vinegar." },
-          { state: "Overdone",  description: "Left more than 48 hours — fruit begins to ferment. Faintly sour, fizzy smell.", action: "This is actually fine — a slightly fermented shrub has more complexity. Proceed." },
-        ],
-      },
-      feelCue: "Tilt the jar — the syrup should flow thickly and slowly, coating the glass in a jewel-colored film. It should smell aggressively of ripe fruit.",
+      "ingId": "ing_01",
+      "role": "Aromatic",
+      "name": "baies saisonnières (framboise, framboise ou mûre)",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Fruits en pierre, piqués et coupés en deux",
+        "Pêches",
+        "prunes"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Strain",
-      inputs: ["macerated_fruit"],
-      outputState: "fruit_syrup",
-      instructions: "Pour the macerated fruit through a fine-mesh strainer into a clean jar, pressing the fruit to extract every drop of syrup. Discard the spent fruit pulp (or use in baking). You want only the vivid, concentrated liquid. You should have roughly 150-200 ml of syrup.",
-      visualCue: {
-        primaryTarget: "A dense, jewel-colored syrup — ruby for strawberry, deep magenta for raspberry, near-black for blackberry.",
-        spectrum: [
-          { state: "Underdone", description: "Not enough liquid pressed through — fruit still holding too much syrup.", action: "Press more firmly with the back of a spoon." },
-          { state: "Perfect",   description: "Rich, intensely colored syrup with a thick, coating consistency. Tastes explosively of concentrated fruit and sugar.", action: "Add vinegar." },
-          { state: "Overdone",  description: "Pressed so hard that pulp and seeds passed through — cloudy, gritty texture.", action: "Re-strain through cheesecloth or a coffee filter." },
-        ],
-      },
-      feelCue: "A drop on the fingertip should feel sticky and dense — it pulls into strings when you press finger to thumb and pull apart.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brut",
+        "miel (méthode chaude)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Infuse",
-      inputs: ["fruit_syrup", "ing_03"],
-      outputState: "finished_drinking_shrub",
-      instructions: "Stir vinegar into the fruit syrup in the jar until combined. Seal and refrigerate for 5-7 days, shaking once daily. The rest period is essential — the harsh raw edge of the vinegar integrates with the fruit syrup and rounds out into something harmonious and complex. Taste after 5 days. Serve 2 tbsp per glass topped with sparkling water over ice.",
-      visualCue: {
-        primaryTarget: "After resting: a clear-ish, jewel-toned syrup that smells of fruit and vinegar but where neither element dominates. Neither purely sweet nor purely acidic.",
-        spectrum: [
-          { state: "Underdone", description: "Vinegar smell sharp and harsh, raw edge not integrated. Tastes like vinegar with fruit in it.", action: "Seal and refrigerate at least 5 days more. The time does the work." },
-          { state: "Perfect",   description: "Harmonious — fruit, vinegar, and sweetness in conversation. Diluted 1:5 with sparkling water, it's bright, complex, and addictive. Refrigerated, it keeps 3 months.", action: "Use in sparkling water, cocktails, or over vanilla ice cream." },
-          { state: "Overdone",  description: "Overly fermented — the shrub has turned alcoholic from wild yeasts on the fruit. Faintly boozy smell.", action: "Still drinkable and interesting. Use as a cocktail mixer." },
-        ],
-      },
-      feelCue: "The finished shrub should make your mouth water the moment you open the jar — the acidity triggers salivation before you even taste it.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme brut non filtré",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de champagne",
+        "vinaigre de vin blanc"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Herbes fraîches ou épices entières (facultatif: romarin, poivre noir, cardamome)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Cure",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "macerated_fruit",
+      "instructions": "Mélanger les baies et le sucre dans un pot en verre propre. Ajouter n'importe quel aromatique — un brin de romarin ou quelques grains de poivre fissurés travaillent magnifiquement avec les fraises. Incorporer, couvrir librement et laisser à température ambiante pendant 24-48 heures. Le sucre tire l'humidité du fruit par osmose, créant un sirop vif et intensément aromatisé au moment où le fruit commence à s'effondrer.",
+      "visualCue": {
+        "primaryTarget": "Au bout de 24 heures, les fruits sont clairs et clairs, entourés d'une piscine de sirop de fruits visqueux richement coloré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 6 heures : à peine tout liquide libéré. Le sucre semble humide mais le fruit est toujours intact.",
+            "action": "Remuer une fois et attendre. L'osmose prend du temps. La température ambiante compte aussi."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le fruit a abandonné la plupart de son liquide. Pool de sirop de couleur foncée et brillant enrobe les fruits. Sensation intense de fruits mûrs et de douceur.",
+            "action": "Retirer les fruits et ajouter le vinaigre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Laisser plus de 48 heures — le fruit commence à fermenter. Une odeur étourdie.",
+            "action": "C'est très bien, un arbuste légèrement fermenté a plus de complexité. Continuez."
+          }
+        ]
+      },
+      "feelCue": "Inclinez le pot — le sirop doit couler épais et lentement, en enrobant le verre dans un film de couleur bijou. Il doit sentir agressivement les fruits mûrs."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Poignée",
+      "inputs": [
+        "macerated_fruit"
+      ],
+      "outputState": "fruit_syrup",
+      "instructions": "Verser le fruit macéré dans un pot propre, en appuyant sur le fruit pour extraire chaque goutte de sirop. Jeter la pulpe de fruits usés (ou l'utiliser pour la cuisson). Vous ne voulez que le liquide vif et concentré. Vous devriez avoir environ 150-200 ml de sirop.",
+      "visualCue": {
+        "primaryTarget": "Un sirop dense et de couleur bijou: rubis pour fraise, magenta profonde pour framboise, presque noir pour mûre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il n'y a pas assez de liquide pressé: les fruits contiennent encore trop de sirop.",
+            "action": "Appuyez plus fermement avec le dos d'une cuillère."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sirop riche et intensément coloré avec une consistance de revêtement épaisse. Goûte explosivement de fruits concentrés et de sucre.",
+            "action": "Ajouter le vinaigre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pousser si fort que la pulpe et les graines passèrent à travers — texture nuageuse et grisâtre.",
+            "action": "Retransformez-vous à travers une nappe de fromage ou un filtre à café."
+          }
+        ]
+      },
+      "feelCue": "Une goutte sur le bout des doigts devrait se sentir collante et dense — il tire dans les cordes lorsque vous appuyez sur le doigt pour le pouce et se détacher."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Infuse",
+      "inputs": [
+        "fruit_syrup",
+        "ing_03"
+      ],
+      "outputState": "finished_drinking_shrub",
+      "instructions": "Incorporer le vinaigre dans le sirop de fruits dans le pot jusqu'à combinaison. Sceller et réfrigérer pendant 5 à 7 jours, en agitant une fois par jour. La période de repos est essentielle — le dur bord brut du vinaigre s'intègre au sirop de fruits et s'achève dans quelque chose d'harmonieux et complexe. Goûtez après 5 jours. Servir 2 c. à soupe par verre recouvert d'eau pétillante sur la glace.",
+      "visualCue": {
+        "primaryTarget": "Après le repos : un sirop limpide, aux tons de bijoux qui sent le fruit et le vinaigre mais où aucun élément ne domine. Ni purement sucré, ni purement acide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Vinaigre odeur nette et dure, bord brut non intégré. Goûte comme du vinaigre avec des fruits dedans.",
+            "action": "Sceller et réfrigérer au moins 5 jours de plus. Le temps fait le travail."
+          },
+          {
+            "state": "Perfect",
+            "description": "Harmonieux: fruits, vinaigre et douceur dans la conversation. Dilué 1:5 avec de l'eau pétillante, il est lumineux, complexe et addictif. Réfrigéré, il garde 3 mois.",
+            "action": "Utiliser dans l'eau pétillante, les cocktails ou la crème glacée à la vanille."
+          },
+          {
+            "state": "Overdone",
+            "description": "La fermentation excessive — l'arbuste a fait alcooliser les levures sauvages sur les fruits. Fausse odeur boueuse.",
+            "action": "Toujours potable et intéressant. Utiliser comme mélangeur de cocktails."
+          }
+        ]
+      },
+      "feelCue": "L'arbuste fini devrait faire de votre bouche de l'eau au moment où vous ouvrez le pot — l'acidité déclenche la salivation avant même de le goûter."
+    }
+  ]
 };

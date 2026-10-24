@@ -1,77 +1,183 @@
 export default {
-  repoId: "master_indian_wholewheatroti_001",
-  parentRepoId: null,
-  slug: "whole-wheat-roti",
-  author: "ForkRecipe Kitchen",
-  title: "Whole-Wheat Roti (Chapati)",
-  description: "Unleavened whole-wheat flatbread kneaded to a supple dough, rolled paper-thin, and cooked on a tawa until it puffs into a full balloon of trapped steam — nutty, wholesome, and impossibly light.",
-  cuisine: "Indian",
-  culture: "North Indian home cooking",
-  category: "breads",
-  tags: ["roti", "chapati", "indian", "flatbread", "whole-wheat", "unleavened", "tawa", "vegan"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 1, sour: 0, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Atta (Indian whole-wheat flour)",  ratioValue: 100, defaultUnit: "parts", substitutions: ["whole wheat pastry flour", "50% AP + 50% whole wheat"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Warm water",                       ratioValue: 55,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Fine sea salt",                    ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",        name: "Neutral oil or ghee (optional)",   ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",        name: "Ghee for brushing (finish)",       ratioValue: 3,   defaultUnit: "parts", substitutions: ["butter", "olive oil"] },
+  "repoId": "master_indian_wholewheatroti_001",
+  "parentRepoId": null,
+  "slug": "whole-wheat-roti",
+  "author": "ForkRecipe Kitchen",
+  "title": "Roti de blé entier (Chapati)",
+  "description": "Le pain plat de blé entier non levain pétri à une pâte souple, roulé du papier-fin, et cuit sur un tawa jusqu'à ce qu'il souffle dans un ballon plein de vapeur piégée — noix, sain, et la lumière impossible.",
+  "cuisine": "Indiens",
+  "culture": "Cuisine maison nord-indienne",
+  "category": "breads",
+  "tags": [
+    "pourri",
+    "Chapitre",
+    "indienne",
+    "Pain plat",
+    "blé entier",
+    "sans levain",
+    "tawa",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Knead",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "roti_dough",
-      instructions: "Combine atta, salt, and optional oil in a large bowl. Add warm water gradually, mixing with your hand as you pour, until a dough forms. Knead in the bowl for 8–10 minutes, working the dough with the heel of your hand and folding it back repeatedly. The goal is a dough that is very soft — softer than bread dough, almost like Play-Doh — with no tears when stretched.",
-      visualCue: {
-        primaryTarget: "A smooth, very soft, slightly tacky ball of dough with a uniform surface and no visible cracks or dry patches.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is stiff, cracks when folded, feels dry. Too little water.", action: "Add water one teaspoon at a time, kneading in between, until the dough reaches Play-Doh softness." },
-          { state: "Perfect",   description: "Silky smooth, very soft. Leaves no dough on your hands when you pull away. Does not stick to the bowl. Almost pillow-like.", action: "Cover with a damp cloth and rest for 15–20 minutes." },
-          { state: "Overdone",  description: "Dough is sticky and wet, clings to hands and bowl.", action: "Dust with a small amount of atta and knead in. Add only 1 teaspoon at a time." },
-        ],
-      },
-      feelCue: "Press your thumb deeply into the center of the dough ball — it should leave a smooth, clean indentation that slowly fills back halfway over 3 seconds. That exact spring-back is the signature of properly hydrated roti dough.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Atta (farine de blé entier indienne)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Farine de pâte de blé entier",
+        "50 % AP + 50 % blé entier"
+      ]
     },
     {
-      nodeId: "step_2", action: "Shape",
-      inputs: ["roti_dough"],
-      outputState: "rolled_rotis",
-      instructions: "After resting, divide the dough into 10–12 equal balls, rolling each smooth between your palms. On a lightly floured board, roll each ball into a thin, even disc about 20 cm in diameter. Work from the center outward, rotating the disc a quarter turn after each roll. The ideal thickness is about 1.5–2 mm.",
-      visualCue: {
-        primaryTarget: "A uniformly thin, even round, about 20 cm across and 1.5–2 mm thick, with no thick center or thin edges.",
-        spectrum: [
-          { state: "Underdone", description: "Thick, uneven disc with a domed center. Will cook unevenly.", action: "Apply more even pressure and roll from the center outward, not just forward and back." },
-          { state: "Perfect",   description: "Even, thin disc that almost holds its circular shape without springing back. Faint atta dusting on the surface.", action: "Cook immediately — do not let rolled rotis sit long before cooking." },
-          { state: "Overdone",  description: "Rolled too thin and torn in places.", action: "Patch by pressing torn edges back together. Minor tears are not visible in the finished roti." },
-        ],
-      },
-      feelCue: "Pick up the rolled roti and let it drape over your palm — it should be supple enough to hang loosely without tearing, like a soft chamois cloth draped over the back of a chair.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau chaude",
+      "ratioValue": 55,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Toast",
-      inputs: ["rolled_rotis", "ing_05"],
-      outputState: "finished_roti",
-      instructions: "Heat a tawa or dry cast-iron skillet over high heat until very hot. Place a rolled roti on the dry surface. After 30 seconds, when the surface becomes matte and small blisters begin to appear, flip. After another 30 seconds on the second side, flip directly onto an open flame (gas hob) or press with a folded cloth — the roti will puff into a full balloon as the steam inside expands. Remove and brush immediately with ghee.",
-      visualCue: {
-        primaryTarget: "A fully puffed roti balloon with light brown patches and a few darker char spots from the flame. Collapses softly when removed from heat.",
-        spectrum: [
-          { state: "Underdone", description: "Roti has not puffed. Pale and doughy. Did not develop blisters before being placed on the flame.", action: "The tawa must be hotter. Also ensure the roti was properly rolled thin and rested before cooking." },
-          { state: "Perfect",   description: "Fully puffed balloon with light golden-brown mottling and a few dark spots from the flame. Collapses softly when pressed. Smells of toasted wheat.", action: "Brush with ghee immediately while hot. Stack in a casserole dish lined with a cloth." },
-          { state: "Overdone",  description: "Dark brown patches throughout, stiff edges. Has dried out from too long on the heat.", action: "Wrap in a damp cloth immediately to re-soften. Eat within 5 minutes." },
-        ],
-      },
-      feelCue: "A freshly made roti still has warmth you can feel through a cloth — pick it up and it should feel as light as a sheet of paper, yet resilient. Fold it in half and then in quarters; if it cracks, the dough was too dry or the heat too high. If it folds silently, the roti is perfect.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile neutre ou ghee (facultatif)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Ghee pour brossage (finish)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre",
+        "Huile d'olive"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Agenouillement",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "roti_dough",
+      "instructions": "Mélanger atta, sel et huile en option dans un grand bol. Ajouter l'eau tiède graduellement, mélanger avec votre main pendant que vous versez, jusqu'à ce qu'une pâte se forme. Agenouillez le bol de 8 à 10 minutes, tricotez la pâte avec le talon de votre main et repliez-la à plusieurs reprises. Le but est une pâte très douce — plus douce que la pâte à pain, presque comme Play-Doh — sans larmes lorsqu'elle est tendue.",
+      "visualCue": {
+        "primaryTarget": "Une boule lisse, très douce, légèrement collante de pâte avec une surface uniforme et sans fissures visibles ni taches sèches.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est raide, craque lorsqu'elle est pliée, elle est sèche. Trop peu d'eau.",
+            "action": "Ajouter de l'eau une cuillère à café à la fois, pétrir entre les deux, jusqu'à ce que la pâte atteigne la douceur Play-Doh."
+          },
+          {
+            "state": "Perfect",
+            "description": "Silence douce, très douce. Ne laisse pas de pâte sur tes mains quand tu t'éloignes. Ne colle pas au bol. Presque comme un oreiller.",
+            "action": "Couvrir d'un chiffon humide et reposer 15 à 20 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est collante et humide, s'accroche aux mains et au bol.",
+            "action": "Poussière avec une petite quantité d'atta et pétrir. Ajouter seulement 1 cuillère à café à la fois."
+          }
+        ]
+      },
+      "feelCue": "Appuyez profondément sur votre pouce dans le centre de la boule de pâte — il devrait laisser une indentation lisse et propre qui se remplit lentement à mi-chemin sur 3 secondes. Ce ressort-retour exact est la signature de la pâte roti correctement hydratée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Forme",
+      "inputs": [
+        "roti_dough"
+      ],
+      "outputState": "rolled_rotis",
+      "instructions": "Après le repos, divisez la pâte en boules égales de 10 à 12, roulant chacune lisse entre vos paumes. Sur une planche légèrement farineuse, rouler chaque boule dans un disque mince, même d'environ 20 cm de diamètre. Travaillez du centre vers l'extérieur, en tournant le disque un quart de tour après chaque rouleau. L'épaisseur idéale est de 1,5 à 2 mm.",
+      "visualCue": {
+        "primaryTarget": "Une épaisseur uniforme, même ronde, d'environ 20 cm et 1,5–2 mm, sans centre épais ni bords fins.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Disque épais et inégal avec un centre en dôme. Elle cuisine mal.",
+            "action": "Appliquer plus de pression et de roulis du centre vers l'extérieur, pas seulement vers l'avant et vers l'arrière."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même, disque mince qui tient presque sa forme circulaire sans ressort. Faint atta poussière sur la surface.",
+            "action": "Cuire immédiatement — ne laissez pas les rotis roulés s'asseoir longtemps avant de cuisiner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Roulé trop mince et déchiré dans des endroits.",
+            "action": "Patch en pressant les bords déchirés à nouveau ensemble. Les larmes mineures ne sont pas visibles dans le roti fini."
+          }
+        ]
+      },
+      "feelCue": "Prenez le roti roulé et laissez-le draper sur votre paume — il devrait être suffisamment souple pour accrocher lâchement sans déchirer, comme un chiffon chamois doux drapé sur le dos d'une chaise."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Toast",
+      "inputs": [
+        "rolled_rotis",
+        "ing_05"
+      ],
+      "outputState": "finished_roti",
+      "instructions": "Chauffer une poêle en tawa ou en fonte sèche à feu vif jusqu'à très chaud. Placez un roti roulé sur la surface sèche. Après 30 secondes, lorsque la surface devient mate et que de petites cloques commencent à apparaître, retourner. Après 30 secondes supplémentaires sur le deuxième côté, retourner directement sur une flamme ouverte (bouilloire à gaz) ou presser avec un chiffon replié — le roti soufflera dans un ballon complet à mesure que la vapeur s'étend à l'intérieur. Retirer et brosser immédiatement avec le ghee.",
+      "visualCue": {
+        "primaryTarget": "Un ballon roti entièrement gonflé avec des taches brun clair et quelques taches d'omble plus foncé de la flamme. S'effondre doucement lorsqu'il est retiré de la chaleur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Roti n'a pas gonflé. Pale et pâteux. N'a pas développé de cloques avant d'être placé sur la flamme.",
+            "action": "Le tawa doit être plus chaud. Assurez-vous également que le roti a été correctement roulé mince et reposé avant la cuisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ballon entièrement gonflé avec un léger marbré doré et quelques taches sombres de la flamme. S'effondre doucement en appuyant. Des odeurs de blé grillé.",
+            "action": "Badigeonner immédiatement le ghee pendant qu'il est chaud. Empiler dans un plat de casserole doublé d'un chiffon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Morceaux brun foncé, bords raides. A séché de trop longtemps sur la chaleur.",
+            "action": "Enveloppez immédiatement dans un chiffon humide pour le ré-souvent. Mangez dans 5 minutes."
+          }
+        ]
+      },
+      "feelCue": "Un roti fraîchement fait a encore de la chaleur que vous pouvez sentir à travers un chiffon — le ramasser et il devrait sentir aussi léger qu'une feuille de papier, mais résistant. Pliez-le en deux et puis en quartiers; s'il craque, la pâte était trop sèche ou la chaleur trop élevée. Si elle se replie silencieusement, le roti est parfait."
+    }
+  ]
 };

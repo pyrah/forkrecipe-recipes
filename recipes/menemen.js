@@ -1,101 +1,258 @@
 export default {
-  repoId: "master_turkish_menemen_001",
-  parentRepoId: null,
-  slug: "menemen",
-  author: "ForkRecipe Kitchen",
-  title: "Menemen",
-  description: "Turkish eggs in spiced tomato — ripe tomatoes and sivri peppers sautéed until jammy and concentrated, then eggs poured directly in and folded gently until barely set, finished with a knob of butter, Aleppo pepper, and flat-leaf parsley. Breakfast, lunch, or late night — eaten from the pan with white bread.",
-  cuisine: "Turkish",
-  culture: "Turkish",
-  category: "eggs",
-  tags: ["turkish", "eggs", "tomato", "pepper", "breakfast", "one-pan", "vegetarian"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 2, sour: 1, bitter: 0, umami: 2, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Eggs, large",                                           ratioValue: 4,   defaultUnit: "ea", substitutions: [] },
-    { ingId: "ing_02", role: "Aromatic",  name: "Ripe tomatoes, cored and roughly chopped",              ratioValue: 400, defaultUnit: "g",  substitutions: ["good quality canned whole tomatoes, hand-crushed"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Green sivri peppers or Italian frying peppers, sliced", ratioValue: 150, defaultUnit: "g",  substitutions: ["1 green bell pepper + 1 long green chile"] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter",                                       ratioValue: 20,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Fat",       name: "Olive oil",                                             ratioValue: 20,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "White onion, finely diced (optional — contested)",      ratioValue: 80,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Aleppo pepper (pul biber), or mild red pepper flakes",  ratioValue: 6,   defaultUnit: "g",  substitutions: ["sweet paprika + pinch of cayenne"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine sea salt",                                         ratioValue: 4,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Black pepper, freshly cracked",                         ratioValue: 2,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_10", role: "Herb",      name: "Flat-leaf parsley, roughly chopped",                    ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_turkish_menemen_001",
+  "parentRepoId": null,
+  "slug": "menemen",
+  "author": "ForkRecipe Kitchen",
+  "title": "Hommes",
+  "description": "Les oeufs turcs dans la tomate épicée — tomates mûres et poivrons sivri sautés jusqu'à confiture et concentrés, puis les œufs versés directement dans et pliés doucement jusqu'à peine serti, fini avec un bouton de beurre, poivre d'Alep et persil à feuilles plates. Petit déjeuner, déjeuner ou tard dans la nuit — mangé dans la poêle avec du pain blanc.",
+  "cuisine": "Turquie",
+  "culture": "Turquie",
+  "category": "eggs",
+  "tags": [
+    "turc",
+    "œufs",
+    "tomates",
+    "poivre",
+    "Petit déjeuner",
+    "1 pan",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_03", "ing_06", "ing_04", "ing_05"],
-      outputState: "softened_peppers",
-      instructions: "Heat the butter and olive oil together in a wide, shallow pan — ideally a sahan (copper pan) or small cast-iron skillet, 22–24cm — over medium heat. If using onion, add it first and cook for 3–4 minutes until translucent. Add the sliced sivri peppers and cook, stirring occasionally, for 5–7 minutes until the peppers are completely soft, limp, and faintly blistered at the edges. The peppers should be almost sweet by this point — green pepper's bitterness cooks away with time. Season with a pinch of salt.",
-      visualCue: {
-        primaryTarget: "Peppers are fully limp and dark green, with faint brown blistering at the tips. The butter has taken on a faint green tint from the pepper juices. Onion (if used) is fully translucent.",
-        spectrum: [
-          { state: "Underdone", description: "Peppers are still bright green and firm, resisting a wooden spoon. They smell raw and slightly grassy.", action: "Lower the heat and cook another 3 minutes. Raw-pepper menemen is the most common mistake — the peppers must be fully cooked before the tomatoes are added or they stay raw in the final dish." },
-          { state: "Perfect",   description: "Peppers are dark olive-green, completely limp, and smell sweet and slightly caramelised. They collapse under a spoon with no resistance.", action: "Add the chopped tomatoes and seasoning immediately." },
-          { state: "Overdone",  description: "Peppers have begun to brown and stick to the pan. Some are very dark at the edges and beginning to taste bitter.", action: "Proceed — the tomatoes will deglaze the pan and the deeper flavour actually adds complexity. Just ensure no parts are truly burned." },
-        ],
-      },
-      feelCue: "Press a pepper slice against the pan wall with a spoon — at the right stage it should collapse completely with no resistance, leaving a glossy smear. Any springiness or crunch means more time.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Oeufs grands",
+      "ratioValue": 4,
+      "defaultUnit": "ea",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["softened_peppers", "ing_02", "ing_07", "ing_08", "ing_09"],
-      outputState: "jammy_tomato_base",
-      instructions: "Add the roughly chopped tomatoes to the peppers, along with half the Aleppo pepper, the salt, and the black pepper. Stir to combine. Increase the heat to medium-high and cook, stirring occasionally and breaking up the tomato pieces with a wooden spoon, for 8–12 minutes until the tomatoes have completely collapsed and the mixture is thick, jammy, and reduced — the water has evaporated and the mixture is clinging to the pan rather than flowing freely. The sauce should be deeply coloured and fragrant.",
-      visualCue: {
-        primaryTarget: "Tomato and pepper mixture is thick, glossy, and dark red-orange. It sits in the pan without flowing when the pan is tilted. A wooden spoon dragged through it leaves a clean line that fills back slowly.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is still very liquid and pale — the tomato water has not evaporated. It pours easily when the pan is tilted. Adding eggs now will make watery, scrambled-in-soup menemen.", action: "Continue cooking on medium-high, uncovered. Stir more frequently as it reduces. The water must leave before the eggs go in." },
-          { state: "Perfect",   description: "Thick, reduced, nearly jam-like. Deep orange-red. Trails of sauce left by the spoon fill back in over 3–4 seconds. The smell is intense: sweet tomato, Aleppo pepper, and butter.", action: "Reduce heat to medium-low and add the eggs." },
-          { state: "Overdone",  description: "Sauce has reduced to a very thick paste that is beginning to stick and scorch on the pan bottom. Smells slightly caramelised.", action: "Add a tablespoon of water, stir to loosen, and proceed to the eggs. The caramelisation is actually flavour." },
-        ],
-      },
-      feelCue: "Drag a wooden spoon across the bottom of the pan and lift it — the sauce should coat the back of the spoon in a thick, glossy layer and drip off slowly, not run off like water. That's the sign to add the eggs.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "Tomates râpées, cardées et hachées à peu près",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates entières en conserve de bonne qualité, broyées à la main"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["jammy_tomato_base", "ing_01"],
-      outputState: "eggs_in_menemen",
-      instructions: "Beat the eggs lightly in a bowl — just enough to break the yolks and roughly combine, leaving streaks of white visible (these streaks create a marbled effect in the finished dish). Pour the eggs directly over the tomato and pepper base. Using a silicone spatula, fold the eggs gently through the tomato base in slow, wide strokes — pull from the edges inward, letting the tomato base streak through the eggs. Alternatively, leave the eggs mostly whole for a different style: nest the eggs whole on top and cover with a lid for 3 minutes until the whites set but the yolks remain runny.",
-      visualCue: {
-        primaryTarget: "Eggs have just set into soft, glossy, custardy folds that are streaked with red-orange tomato. The yolk is still visibly yellow in places. No liquid egg remains pooled.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid egg is still pooling at the base of the pan and raw egg white is clearly visible running freely.", action: "Continue folding over medium-low heat for 30 more seconds. Do not rush with higher heat — the eggs will curdle and seize." },
-          { state: "Perfect",   description: "Eggs are just barely set — glossy, soft, and creamy with no liquid pooling but still moist and slightly trembling when the pan is nudged. The tomato-streaked scramble holds its shape on a spoon.", action: "Remove from heat immediately. Residual heat will carry-cook the eggs another 10–15 seconds." },
-          { state: "Overdone",  description: "Eggs are fully set, dry, and separating from the tomato. The mixture looks crumbly and the egg has seized into tight, dry curds.", action: "Serve immediately with a drizzle of good olive oil over the top to restore some richness. Next time, remove from the heat 15 seconds earlier." },
-        ],
-      },
-      feelCue: "Tilt the pan gently when the eggs are folding — the mixture should move as a single, barely-set mass, not slosh like raw egg and not hold completely rigid. It should feel like a very soft, heavy custard.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Poivrons sivri verts ou poivrons frits italiens, tranchés",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 poivron vert + 1 chile vert long"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["eggs_in_menemen", "ing_07", "ing_10"],
-      outputState: "finished_menemen",
-      instructions: "Remove the pan from the heat. Scatter the remaining Aleppo pepper generously over the top — it should look like a dusting of dark rust-red across the yellow-orange surface. Scatter the chopped parsley. Serve immediately in the pan — menemen is traditionally brought to the table in its cooking vessel with a stack of white bread alongside for tearing and scooping. Do not let it sit: the carry-over heat from the pan will continue cooking the eggs, and the difference between perfect and overcooked is measured in minutes.",
-      visualCue: {
-        primaryTarget: "Vivid red-orange egg scramble blanketed in rust-red Aleppo pepper and bright green parsley. Still gently steaming. The butter and olive oil glisten slightly at the edges of the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Garnish not yet added. The dish looks monochrome and flat without the Aleppo pepper — and more critically, the heat of the pepper is missing from the flavour profile.", action: "Add the Aleppo pepper and parsley now. They are not optional decoration." },
-          { state: "Perfect",   description: "Glossy, custardy eggs streaked with tomato, generously dusted with Aleppo pepper, and flecked with parsley. Steam rising. The butter is still foaming faintly at the edges.", action: "Serve immediately with white bread, sliced tomatoes, and white cheese alongside." },
-          { state: "Overdone",  description: "The eggs have continued cooking from pan heat and are now dry and fully set. Parsley has wilted. The Aleppo pepper has absorbed the surface moisture.", action: "Add a small knob of fresh butter to the pan's edge and let it melt over the surface — it will restore some gloss and richness. Serve immediately." },
-        ],
-      },
-      feelCue: "Scoop a spoonful of menemen from the centre of the pan and hold it over the vessel — the eggs should fall back off the spoon slowly, in a creamy, cohesive ribbon, not drip off like liquid or hold stiffly like a solid. That slow ribbon is perfect menemen.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Oignon blanc, finement coupé (facultatif — contesté)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre d'Alep (bibereau de pulpe), ou flocons de poivre rouge doux",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika doux + pincée de Cayenne"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Poivre noir, fraichement craqué",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_03",
+        "ing_06",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "softened_peppers",
+      "instructions": "Chauffer le beurre et l'huile d'olive dans une poêle large et peu profonde, idéalement une poêle sahan (cuivre) ou une petite poêle en fonte de 22 à 24 cm, à feu moyen. Si vous utilisez de l'oignon, ajoutez-le d'abord et faites cuire pendant 3 à 4 minutes jusqu'à translucide. Ajouter les poivrons sivri tranchés et cuire, en remuant occasionnellement, pendant 5 à 7 minutes jusqu'à ce que les poivrons soient complètement doux, limpides et légèrement cloqués aux bords. Les poivrons devraient être presque sucrés à ce moment - là — l'amertume du poivre vert s'éloigne avec le temps. Assaisonner avec une pincée de sel.",
+      "visualCue": {
+        "primaryTarget": "Les poivrons sont entièrement boiteux et vert foncé, avec des cloques brun pâle aux extrémités. Le beurre a pris une faible teinte verte des jus de poivre. L'oignon (si utilisé) est entièrement translucide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les poivrons sont encore vert vif et fermes, résistant à une cuillère en bois. Ils sentent cru et légèrement herbacé.",
+            "action": "Baisser le feu et cuire encore 3 minutes. Les menemen crus-poivrons sont l'erreur la plus courante: les poivrons doivent être cuits avant d'ajouter les tomates ou rester crus dans le plat final."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les poivrons sont vert olive foncé, complètement boiteux, et sentent doux et légèrement caramélisé. Ils s'effondrent sous une cuillère sans résistance.",
+            "action": "Ajouter les tomates hachées et assaisonner immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les poivrons ont commencé à brunir et à coller à la poêle. Certains sont très sombres aux bords et commencent à goûter amer.",
+            "action": "Procéder — les tomates déglaceront la poêle et la saveur plus profonde ajoute en fait de la complexité. S'assurer qu'aucune pièce n'est vraiment brûlée."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une tranche de poivre contre la paroi de la poêle avec une cuillère — au stade droit, elle devrait s'effondrer complètement sans résistance, laissant un frottis brillant. Tout ressort ou croquant signifie plus de temps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "softened_peppers",
+        "ing_02",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "jammy_tomato_base",
+      "instructions": "Ajouter les tomates hachées aux poivrons, avec la moitié du poivre d'Alep, le sel et le poivre noir. Mélanger. Augmenter le feu à feu moyen-élevé et cuire, en remuant occasionnellement et en brisant les morceaux de tomates avec une cuillère en bois, pendant 8 à 12 minutes jusqu'à ce que les tomates se soient complètement effondrées et que le mélange soit épais, embrouillé et réduit. La sauce doit être profondément colorée et parfumée.",
+      "visualCue": {
+        "primaryTarget": "Le mélange de tomates et de poivre est épais, brillant et orange rouge foncé. Il est assis dans la casserole sans couler lorsque la casserole est inclinée. Une cuillère en bois traînée à travers elle laisse une ligne propre qui se remplit lentement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est encore très liquide et pâle: l'eau de tomate n'a pas évaporé. Il coule facilement lorsque la poêle est inclinée. L'ajout d'oeufs va faire des ménemen aqueux et brouillés.",
+            "action": "Continuer la cuisson sur moyenne-élevée, à découvert. Mélanger plus souvent car il réduit. L'eau doit partir avant que les œufs entrent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, réduit, presque comme de la confiture. Rouge orangé. Les traces de sauce laissées par la cuillère se remplissent en 3-4 secondes. L'odeur est intense : tomate douce, poivre d'Alep et beurre.",
+            "action": "Réduire le feu à moyen-doux et ajouter les œufs."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite à une pâte très épaisse qui commence à coller et à brûler sur le fond de la poêle. Sensations légèrement caramélisées.",
+            "action": "Ajouter une cuillère à soupe d'eau, remuer pour se détendre et aller aux œufs. La caramélisation est en fait une saveur."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère en bois sur le fond de la casserole et soulevez - la sauce doit enrober l'arrière de la cuillère dans une couche épaisse et brillante et s'égoutter lentement, ne pas s'écouler comme de l'eau. C'est le signe pour ajouter les œufs."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "jammy_tomato_base",
+        "ing_01"
+      ],
+      "outputState": "eggs_in_menemen",
+      "instructions": "Battre les œufs légèrement dans un bol — juste assez pour casser les jaunes et se combiner grossièrement, laissant des stries de blanc visibles (ces stries créent un effet marbré dans le plat fini). Verser les œufs directement sur la base de la tomate et du poivre. À l'aide d'une spatule de silicone, plier délicatement les œufs à travers la base de la tomate en faisant des coups lents et larges — tirer des bords vers l'intérieur, laissant la base de la tomate sillonner les œufs. Alternativement, laisser les oeufs entiers pour un style différent : les nids entiers sur le dessus et couvrir d'un couvercle pendant 3 minutes jusqu'à ce que les blancs se mettent mais les jaunes restent éclaboussés.",
+      "visualCue": {
+        "primaryTarget": "Les oeufs viennent de se mettre en plis doux, brillants et crépusculaires qui sont rayés avec de la tomate rouge-orange. Le jaune est encore visiblement jaune dans les endroits. Aucun œuf liquide n'est encore mis en réserve.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'œuf liquide est encore en pool à la base de la poêle et le blanc d'œuf cru est clairement visible en courant librement.",
+            "action": "Continuer à plier sur feu moyen-doux pendant 30 secondes de plus. Ne vous précipitez pas avec une chaleur plus élevée — les œufs vont cacher et saisir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les œufs sont tout simplement à peine fixés — brillants, doux et crémeux sans pool liquide mais encore humides et légèrement tremblants quand la poêle est bouchée. Le brouillon à la tomate tient sa forme sur une cuillère.",
+            "action": "Retirer immédiatement du feu. La chaleur résiduelle transportera les œufs encore 10 à 15 secondes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les œufs sont entièrement coupés, secs et séparés de la tomate. Le mélange semble émietté et l'oeuf s'est emparé dans des caillés secs et serrés.",
+            "action": "Servir immédiatement avec une bruine d'huile d'olive sur le dessus pour restaurer une certaine richesse. La prochaine fois, retirer de la chaleur 15 secondes plus tôt."
+          }
+        ]
+      },
+      "feelCue": "Incliner doucement la poêle lorsque les œufs se replient — le mélange doit se déplacer comme une masse unique, à peine fixée, ne pas slosh comme un oeuf cru et ne pas tenir complètement rigide. Ça devrait être une crème très douce et lourde."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "eggs_in_menemen",
+        "ing_07",
+        "ing_10"
+      ],
+      "outputState": "finished_menemen",
+      "instructions": "Retirer la poêle du feu. Dispersez généreusement le reste du poivre d'Alep au-dessus de la surface – il devrait ressembler à une poussière de rouge rouille foncé sur la surface jaune-orange. Épargnez le persil haché. Servir immédiatement dans la casserole — les menemen sont traditionnellement amenés à la table dans son récipient de cuisson avec une pile de pain blanc à côté pour déchirer et écoper. Ne le laissez pas s'asseoir: la chaleur de report de la poêle continuera à cuire les œufs, et la différence entre parfait et trop cuit est mesurée en minutes.",
+      "visualCue": {
+        "primaryTarget": "Oeuf rouge-orange vif brouillé recouvert de poivre d'Alep rouge rouille et de persil vert vif. Toujours à la vapeur. Le beurre et l'huile d'olive brillent légèrement aux bords de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Garnir non encore ajouté. Le plat semble monochrome et plat sans poivre d'Alep — et plus critique, la chaleur du poivre est absente du profil de saveur.",
+            "action": "Ajouter le poivre d'Alep et le persil maintenant. Ils ne sont pas en option décoration."
+          },
+          {
+            "state": "Perfect",
+            "description": "Oeufs dorés, crépus, striés de tomates, généreusement épluchés avec du poivre d'Alep, et tachetés de persil. La vapeur s'élève. Le beurre mousse encore faiblement aux bords.",
+            "action": "Servir immédiatement avec du pain blanc, des tomates en tranches et du fromage blanc à côté."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oeufs ont continué à cuire à partir de la poêle et sont maintenant secs et entièrement préparés. Le persil s'est flétri. Le poivre d'Alep a absorbé l'humidité de surface.",
+            "action": "Ajoutez un petit bouton de beurre frais au bord de la poêle et laissez-le fondre sur la surface – il restaurera un peu de brillance et de richesse. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère de ménemen au centre de la poêle et maintenez-la au-dessus du récipient — les œufs devraient retomber lentement de la cuillère, dans un ruban crémeux et cohésif, ne pas couler comme du liquide ou tenir fermement comme un solide. Ce ruban lent est parfait."
+    }
+  ]
 };

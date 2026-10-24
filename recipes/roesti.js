@@ -1,91 +1,202 @@
 export default {
-  repoId: "master_swiss_roesti_001",
-  parentRepoId: null,
-  slug: "roesti",
-  author: "ForkRecipe Kitchen",
-  title: "Rösti",
-  description: "A Swiss potato cake of elemental satisfaction — waxy potatoes grated raw, pressed into a cast-iron pan with clarified butter until the bottom crust is a shattering, tawny-gold disc and the interior remains steaming, creamy, and fragrant.",
-  cuisine: "Swiss",
-  culture: "Bernese",
-  category: "vegetables",
-  tags: ["roesti", "swiss", "potato", "cast-iron", "brunch", "gluten-free"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Waxy potatoes (Yukon Gold or Charlotte)", ratioValue: 100, defaultUnit: "parts", substitutions: ["boiled-and-chilled floury potatoes (Bernese method)"] },
-    { ingId: "ing_02", role: "Fat",        name: "Clarified butter (or ghee)",              ratioValue: 8,   defaultUnit: "parts", substitutions: ["duck fat", "lard"] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Fine sea salt",                           ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Freshly ground black pepper",             ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_swiss_roesti_001",
+  "parentRepoId": null,
+  "slug": "roesti",
+  "author": "ForkRecipe Kitchen",
+  "title": "Rösti",
+  "description": "Un gâteau de pomme de terre suisse de satisfaction élémentaire — pommes de terre cireuses râpées crues, pressées dans une poêle en fonte avec du beurre clarifié jusqu'à ce que la croûte inférieure soit un disque d'or broyant et fauve et que l'intérieur reste vapeur, crémeux et parfumé.",
+  "cuisine": "Suisse",
+  "culture": "Bernois",
+  "category": "vegetables",
+  "tags": [
+    "oesti",
+    "Suisse",
+    "pommes de terre",
+    "en fonte",
+    "brunch",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Peel",
-      inputs: ["ing_01"],
-      outputState: "grated_potato",
-      instructions: "Peel the potatoes. Grate them on the coarse side of a box grater into a large bowl. Working quickly (grated potato oxidizes and discolors), gather handfuls of the grated potato and squeeze them as hard as you can over the sink. Remove as much starch-water as possible — this is critical for crispness. If the potato releases a bluish-purple liquid, it contains excess starch: squeeze more. Season the dry-ish grated potato with salt and pepper and toss to distribute evenly.",
-      visualCue: {
-        primaryTarget: "Long, uniform white shreds of potato piled loosely in a bowl. The shreds are slightly damp but not dripping. No pooling liquid at the bottom of the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Grated potato is very wet. A squeeze produces streams of starchy liquid. The bottom of the bowl has puddles.", action: "Continue squeezing in handfuls — inadequately dried potato will steam rather than fry and never develop a crust." },
-          { state: "Perfect",   description: "Shreds are dry to the touch but pliable. A hard squeeze yields only a few drops. The potato surface looks slightly chalky, not wet.", action: "Season and press into the pan immediately before oxidation occurs." },
-          { state: "Overdone",  description: "Potato has been squeezed so much the shreds are compacted into dense, waterlogged-looking mats.", action: "Loosen with your fingers before pressing into the pan — good rösti needs air between the shreds." },
-        ],
-      },
-      feelCue: "A handful of properly prepared grated potato should feel like damp straw — not wet fabric, not dry paper. When you open your fist, the shreds fall apart rather than holding together in a matted ball.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Pommes de terre cireuses (or yukon ou Charlotte)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pommes de terre farineuses bouillies et réfrigérées (méthode bernoise)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Fry",
-      inputs: ["grated_potato", "ing_02"],
-      outputState: "pressing_roesti",
-      instructions: "Heat a 24–26cm cast-iron or heavy non-stick pan over medium heat. Add the clarified butter and swirl to coat. When the butter is hot and shimmering but not smoking, add all the grated potato at once. Immediately use a wide spatula to press the potato into a firm, even disc, extending it to the pan edges. Do not touch it again. Cook on medium-low heat for 10–12 minutes. The goal is a deep golden-brown crust built slowly from even, patient heat.",
-      visualCue: {
-        primaryTarget: "The edges of the rösti disc have turned golden-brown and are visibly crisping. The top surface, though still raw-looking, shows steam escaping, indicating the interior is cooking through.",
-        spectrum: [
-          { state: "Underdone", description: "After 10 minutes, the bottom is still pale and the rösti slides freely in the pan with no color.", action: "Increase heat very slightly. The butter may have been insufficient or the heat too low. Wait longer — do not flip yet." },
-          { state: "Perfect",   description: "A gentle shake of the pan reveals that the rösti slides as a single unit. The visible edges are deep amber-gold. A peek with a spatula confirms a mahogany crust.", action: "Flip onto a plate, slide back butter-side down, and cook the second side." },
-          { state: "Overdone",  description: "The edges are very dark brown, edges smell of burnt butter, and the crust is dark brown-black.", action: "Flip immediately onto a plate. The bottom may be saved; the edges can be trimmed after. Reduce heat significantly for the second side." },
-        ],
-      },
-      feelCue: "Shake the pan gently — a properly formed rösti moves as one solid disc, like a pancake, with no loose potato shifting underneath. If any part drags or tears, it is not yet set. Wait and trust.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre clarifié (ou ghee)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gras de canard",
+        "Saindoux"
+      ]
     },
     {
-      nodeId: "step_3", action: "Fry",
-      inputs: ["pressing_roesti", "ing_02"],
-      outputState: "flipped_roesti",
-      instructions: "To flip: invert a large plate over the pan and, in one confident motion, flip both together so the rösti drops onto the plate crust-side up. Add the remaining clarified butter to the pan. Slide the rösti back in, uncooked side down. Increase heat to medium. Cook 8–10 minutes until the second side is equally golden and crisp.",
-      visualCue: {
-        primaryTarget: "The second side builds the same deep, even amber-gold crust as the first. Both sides should look equally browned when done.",
-        spectrum: [
-          { state: "Underdone", description: "Second side is still pale and steamy-soft when pressed. The potato interior feels dense and slightly raw.", action: "Continue cooking. Check every 2 minutes by lifting an edge with a spatula." },
-          { state: "Perfect",   description: "Both sides are a matching deep amber gold. The rösti is firm to the touch, holding its disc shape. Tap the crust with a knuckle — it sounds hollow.", action: "Slide onto a board and rest 2 minutes before cutting." },
-          { state: "Overdone",  description: "Second crust is browning too quickly from the higher heat. Dark patches forming.", action: "Reduce heat to low and cover for the last 3 minutes to finish the center gently." },
-        ],
-      },
-      feelCue: "After the flip, press the center of the rösti with your palm — there should be firm resistance, not a soft give. As the second crust sets, you'll hear the sizzling change from a wet, steamy sound to a dry, crackly crispness.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Rest",
-      inputs: ["flipped_roesti", "ing_03", "ing_04"],
-      outputState: "roesti",
-      instructions: "Slide the finished rösti onto a wooden board. Season lightly with additional flaky salt. Rest for 2 minutes before cutting into wedges — this allows the interior steam to redistribute and the crust to firm completely. Serve immediately. Classic accompaniments are fried eggs, smoked salmon, applesauce, or alpine cheese.",
-      visualCue: {
-        primaryTarget: "A golden-amber disc with a uniformly crisped top and bottom. Cut cross-section reveals steaming, creamy potato interior against the dark-gold crust.",
-        spectrum: [
-          { state: "Underdone", description: "Interior is gluey and dense when cut. The potato shreds are fused into a soft, starchy paste rather than tender individual shreds.", action: "The center needed more time. Next time, lower heat and extend cooking time. For now, return the cut wedges face-down to a hot buttered pan for 3 minutes." },
-          { state: "Perfect",   description: "Crust shatters like a biscuit when tapped. Interior is creamy and yielding, with individual potato shreds still visible. Steam escapes from the cut face.", action: "Eat immediately — rösti waits for no one." },
-          { state: "Overdone",  description: "Both crusts are very dark and taste of over-browned butter. The interior is dry.", action: "Trim the darkest exterior edges. The interior is likely fine and the flavor salvageable." },
-        ],
-      },
-      feelCue: "The perfect rösti offers two textures in one bite — the brittle shattering of the exterior crust giving way immediately to the soft, steamy, creamy interior. Your knife should pass through it with an audible snap at the crust.",
-    },
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Peler",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "grated_potato",
+      "instructions": "Peler les pommes de terre. Râper-les sur le côté grossier d'un grat de boîte dans un grand bol. Travailler rapidement (la pomme de terre graduée s'oxyde et décolore), recueillir des poignées de la pomme de terre râpée et les presser aussi fort que possible sur l'évier. Enlevez autant d'eau d'amidon que possible — c'est essentiel pour la netteté. Si la pomme de terre libère un liquide bleuâtre-purple, elle contient de l'amidon excédentaire : presser davantage. Assaisonner la pomme de terre râpée sèche avec du sel et du poivre et mélanger pour la distribuer uniformément.",
+      "visualCue": {
+        "primaryTarget": "De longs morceaux blancs et uniformes de pomme de terre empilés dans un bol. Les lambeaux sont légèrement humides, mais ne coulent pas. Pas de liquide de mise en commun au fond du bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pomme de terre râpée est très humide. Une presse produit des flux de liquide féculent. Le fond du bol a des flaques.",
+            "action": "Continuer à presser dans les poignées — une pomme de terre insuffisamment séchée va se vaporiser plutôt que d'agglomérer et de ne jamais développer de croûte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les lustres sont secs au toucher mais souples. Une compression dure ne donne que quelques gouttes. La surface de la pomme de terre semble légèrement crayeuse, pas humide.",
+            "action": "Assaisonner et presser dans la casserole immédiatement avant l'oxydation."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pomme de terre a été tellement pressée que les lambeaux sont compactés en tapis denses, à l'aspect d'eau.",
+            "action": "Loosen avec les doigts avant de presser dans la poêle — bon rösti a besoin d'air entre les lambeaux."
+          }
+        ]
+      },
+      "feelCue": "Une poignée de pommes de terre râpées bien préparées devrait ressembler à de la paille humide — pas du tissu humide, pas du papier sec. Lorsque vous ouvrez votre poing, les morceaux tombent en morceaux plutôt que de se tenir ensemble dans une boule mat."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "grated_potato",
+        "ing_02"
+      ],
+      "outputState": "pressing_roesti",
+      "instructions": "Chauffer une poêle en fonte de 24 à 26 cm ou une poêle antiadhésive lourde à feu moyen. Ajouter le beurre clarifié et agiter pour enrober. Lorsque le beurre est chaud et chatoyant mais ne fume pas, ajouter toute la pomme de terre râpée à la fois. Utilisez immédiatement une large spatule pour presser la pomme de terre dans un disque ferme, même, l'étendant aux bords de la poêle. Ne le touchez plus. Cuire à feu moyen-doux pendant 10-12 minutes. L'objectif est une croûte dorée profonde construite lentement à partir d'une chaleur uniforme et patiente.",
+      "visualCue": {
+        "primaryTarget": "Les bords du disque rösti ont été dorés et sont visiblement croquants. La surface supérieure, quoique toujours brute, montre une fuite de vapeur, ce qui indique que l'intérieur est en cours de cuisson.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 10 minutes, le fond est encore pâle et le rösti glisse librement dans la poêle sans couleur.",
+            "action": "Augmenter la chaleur très légèrement. Le beurre peut avoir été insuffisant ou la chaleur trop faible. Attendez plus longtemps — ne retournez pas encore."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un doux tremblement de la casserole révèle que le rösti glisse en une seule unité. Les bords visibles sont en or ambré profond. Un coup d'œil avec une spatule confirme une croûte d'acajou.",
+            "action": "Flipez sur une assiette, glissez vers le bas le côté beurre et faites cuire le deuxième côté."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont brun très foncé, les bords sentent le beurre brûlé, et la croûte est brun foncé noir.",
+            "action": "Plongez immédiatement sur une assiette. Le fond peut être sauvé; les bords peuvent être parés après. Réduire significativement la chaleur pour le deuxième côté."
+          }
+        ]
+      },
+      "feelCue": "Agiter doucement la poêle — un rösti bien formé se déplace comme un disque solide, comme un crêpe, sans mouvement de pomme de terre en dessous. Si une partie traîne ou pleure, elle n'est pas encore réglée. Attendez et faites confiance."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "pressing_roesti",
+        "ing_02"
+      ],
+      "outputState": "flipped_roesti",
+      "instructions": "Pour retourner : inverser une grande plaque sur la casserole et, en un mouvement confiant, retourner les deux ensemble afin que le rösti tombe sur la croûte de la plaque vers le haut. Ajouter le reste du beurre clarifié dans la poêle. Faites glisser le rösti à l'intérieur, côté non cuit vers le bas. Augmenter le feu à moyen. Cuire de 8 à 10 minutes jusqu'à ce que le deuxième côté soit également doré et croustillant.",
+      "visualCue": {
+        "primaryTarget": "Le second côté construit la même croûte profonde, même or ambre que le premier. Les deux côtés devraient avoir l'air tout aussi bruns lorsqu'ils sont faits.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le deuxième côté est encore pâle et souple lorsqu'il est pressé. L'intérieur de la pomme de terre est dense et légèrement cru.",
+            "action": "Continuez à cuisiner. Vérifiez toutes les 2 minutes en soulevant un bord avec une spatule."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les deux côtés sont un or ambré profond assorti. Le rösti est ferme au toucher, tenant sa forme de disque. Tapotez la croûte avec un noeud — ça semble creux.",
+            "action": "Glissez sur une planche et reposez-vous 2 minutes avant de couper."
+          },
+          {
+            "state": "Overdone",
+            "description": "La deuxième croûte brunit trop rapidement à partir de la chaleur plus élevée. Des taches sombres se forment.",
+            "action": "Réduire le feu à faible et couvrir pendant les 3 dernières minutes pour terminer le centre doucement."
+          }
+        ]
+      },
+      "feelCue": "Après le flip, appuyez sur le centre du rösti avec votre paume — il devrait y avoir une résistance ferme, pas un don doux. Au fur et à mesure que la seconde croûte se met, vous entendrez le grésillement passer d'un son humide et vapeur à une croustillante sèche et craquelée."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "flipped_roesti",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "roesti",
+      "instructions": "Faites glisser le rösti fini sur une planche en bois. Assaisonner légèrement avec du sel feuilleté supplémentaire. Reposez-vous pendant 2 minutes avant de couper en quartiers, ce qui permet à la vapeur intérieure de se redistribuer et à la croûte de se raffermir complètement. Servir immédiatement. Les accompagnements classiques sont des œufs frits, du saumon fumé, de la compote de pommes ou du fromage alpin.",
+      "visualCue": {
+        "primaryTarget": "Un disque doré-ambre avec un dessus et un fond uniformément croustillés. La coupe transversale de la pomme de terre présente un intérieur crémeux à la vapeur contre la croûte d'or foncé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'intérieur est collant et dense lorsqu'il est coupé. Les croustilles de pommes de terre sont fondues dans une pâte molle et féculente plutôt que dans des croustilles individuelles tendres.",
+            "action": "Le centre avait besoin de plus de temps. La prochaine fois, diminuer la chaleur et prolonger le temps de cuisson. Pour l'instant, rendez les coins coupés face vers le bas dans une poêle beurrée chaude pendant 3 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La croûte se brise comme un biscuit quand on la tape. L'intérieur est crémeux et productif, avec des morceaux de pomme de terre individuels encore visibles. La vapeur s'échappe du visage coupé.",
+            "action": "Mangez immédiatement — rösti n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les deux croûtes sont très foncées et le goût de beurre surbrondu. L'intérieur est sec.",
+            "action": "Trim les bords extérieurs les plus sombres. L'intérieur est probablement fin et la saveur récupérable."
+          }
+        ]
+      },
+      "feelCue": "Le rösti parfait offre deux textures en une seule morsure: le bris fragile de la croûte extérieure qui fait place immédiatement à l'intérieur doux, vapeur, crémeux. Votre couteau devrait passer par là avec une touche sonore sur la croûte."
+    }
+  ]
 };

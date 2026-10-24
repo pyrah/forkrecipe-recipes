@@ -1,100 +1,252 @@
 export default {
-  repoId: "master_italian_acqua_pazza_001",
-  parentRepoId: null,
-  slug: "acqua-pazza",
-  author: "ForkRecipe Kitchen",
-  title: "Pesce all'Acqua Pazza",
-  description: "Whole sea bream or bass simmered in 'crazy water' — a broth of olive oil, cherry tomatoes, garlic, and white wine that is barely a sauce, barely a broth, and perfectly Neapolitan.",
-  cuisine: "Italian",
-  culture: "Neapolitan",
-  category: "seafood",
-  tags: ["fish", "italian", "tomato", "seafood", "neapolitan"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "35 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 0, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole sea bream or sea bass (gutted, scaled, 500–700 g each)", ratioValue: 100, defaultUnit: "parts", substitutions: ["snapper", "branzino", "porgy"] },
-    { ingId: "ing_02", role: "Allium",    name: "Garlic cloves (thinly sliced)",                ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Base",      name: "Cherry tomatoes (halved)",                     ratioValue: 40,  defaultUnit: "parts", substitutions: ["datterini tomatoes", "San Marzano peeled whole"] },
-    { ingId: "ing_04", role: "Liquid",    name: "Dry white wine (e.g. Falanghina, Verdicchio)", ratioValue: 25,  defaultUnit: "parts", substitutions: ["dry vermouth", "fish stock"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Water or light fish stock",                    ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Extra-virgin olive oil (generous)",             ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Herb",      name: "Flat-leaf parsley (roughly chopped)",           ratioValue: 5,   defaultUnit: "parts", substitutions: ["fresh basil at the finish"] },
-    { ingId: "ing_08", role: "Heat",      name: "Dried red chili flakes (or fresh peperoncino)", ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine sea salt",                                ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_acqua_pazza_001",
+  "parentRepoId": null,
+  "slug": "acqua-pazza",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pesce all'Acqua Pazza",
+  "description": "Brème de mer entier ou bar mijoté dans de l'eau vive — un bouillon d'huile d'olive, de tomates cerises, d'ail et de vin blanc qui est à peine une sauce, à peine un bouillon, et parfaitement napolitain.",
+  "cuisine": "Italien",
+  "culture": "Napolitaine",
+  "category": "seafood",
+  "tags": [
+    "poissons",
+    "Italien",
+    "tomates",
+    "Produits de la mer",
+    "napolitaine"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "35 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Season",
-      inputs: ["ing_01", "ing_09"],
-      outputState: "seasoned_fish",
-      instructions: "Score each fish with 3–4 deep diagonal cuts on each side, cutting through to the bone — this allows seasoning to penetrate and ensures even cooking. Season inside and out with salt, including into the cavity and the score marks. Allow to rest at room temperature for 10 minutes while you prepare the broth base. Pat the exterior dry with paper towels before adding to the pan.",
-      visualCue: {
-        primaryTarget: "Fish is dry on the exterior, score marks are deep and clearly cut through the skin to the bone, salt is distributed into every cut and into the cavity.",
-        spectrum: [
-          { state: "Underdone", description: "Score marks are shallow, barely cutting through the skin; salt applied only to surface.", action: "Deepen the cuts with a sharp knife; re-season inside the cuts and cavity." },
-          { state: "Perfect",   description: "Each cut exposes white flesh and pink bone; fish is dry to the touch; cavity and cuts are salted.", action: "Proceed to building the broth." },
-          { state: "Overdone",  description: "Cuts have gone through the spine and the fish is partially split open.", action: "Cook it anyway; it will flake more but the flavor is unaffected." },
-        ],
-      },
-      feelCue: "The knife should glide through the fish flesh with a smooth drag — a dull knife will tear rather than cut, so use your sharpest blade for scoring.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Brème de mer entier ou bar (gouttes, écaillées, de 500 à 700 g chacune)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "snapper",
+        "branzino",
+        "porcin"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_02", "ing_08", "ing_06"],
-      outputState: "aromatic_base",
-      instructions: "In a wide, lidded pan large enough to hold the fish flat, warm the olive oil over medium heat. Add the sliced garlic and chili flakes. Cook gently for 1–2 minutes, stirring, until the garlic is softened and just beginning to turn pale gold at the edges — not brown. Add the halved cherry tomatoes, pressing a few gently with the back of a spoon to release their juice. Cook another 2 minutes until the tomatoes begin to soften and the oil takes on their color.",
-      visualCue: {
-        primaryTarget: "Garlic is pale gold, not brown; tomatoes are beginning to collapse and their juices are mingling with the oil, which has turned a faint orange-pink.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is still white; tomatoes are firm and whole with no released juice.", action: "Continue cooking on medium heat; the garlic needs to soften to mellow its raw bite." },
-          { state: "Perfect",   description: "Garlic slices are translucent with faint gold edges; tomatoes half-collapsed; pan liquid is an emulsified pink oil. Smells sweetly of garlic and fresh tomato.", action: "Add wine and water and bring to a simmer." },
-          { state: "Overdone",  description: "Garlic is brown and bitter-smelling; tomatoes have reduced to a thick paste.", action: "Add the wine immediately to stop the cooking; a slightly over-cooked base is salvageable, burnt garlic is not — if truly burnt, start over." },
-        ],
-      },
-      feelCue: "The pan should smell sweet and garlicky with no acrid edge — the moment any bitterness enters the aroma, the heat is too high or the garlic has gone too far.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Girofles d'ail (finement tranchés)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["seasoned_fish", "aromatic_base", "ing_04", "ing_05"],
-      outputState: "cooked_fish_in_broth",
-      instructions: "Pour the wine and water into the tomato base and raise heat to bring to a brisk simmer. Lay the seasoned fish flat in the pan — they can overlap slightly if necessary. Spoon some of the broth and tomatoes over the fish. Cover with a lid and cook on medium heat for 12–15 minutes, depending on the size of the fish. The fish is done when the flesh at the deepest score mark pulls away from the bone cleanly and is opaque white all the way through.",
-      visualCue: {
-        primaryTarget: "Fish flesh is opaque white at the deepest score mark; the eye has turned completely white and slightly sunken; liquid is a thin, fragrant, oil-enriched pink-gold broth.",
-        spectrum: [
-          { state: "Underdone", description: "Flesh at the score marks is still translucent and pinkish near the bone; eye is still clear.", action: "Replace the lid and cook another 2–3 minutes; check again at the bone." },
-          { state: "Perfect",   description: "Flesh pulls easily from the bone in clean flakes; completely opaque; skin is just beginning to loosen around the scores. Broth is fragrant and slightly emulsified.", action: "Finish with parsley and olive oil and serve immediately." },
-          { state: "Overdone",  description: "Flesh has retracted from the bone significantly; skin is falling off; broth has reduced to a thick sauce.", action: "Serve immediately with extra water added to the broth; the fish will be drier but the flavor is still good." },
-        ],
-      },
-      feelCue: "Press gently at the thickest part of the fish with a fingertip — perfectly cooked fish should yield with a very slight spring-back, like pressing a firm ripe peach rather than raw flesh.",
+      "ingId": "ing_03",
+      "role": "Base",
+      "name": "Tomates cerises (chaudées)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates datterini",
+        "San Marzano pelé entier"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["cooked_fish_in_broth", "ing_07", "ing_06"],
-      outputState: "finished_acqua_pazza",
-      instructions: "Scatter the roughly chopped parsley over the fish and pan. Drizzle a final generous stream of your best extra-virgin olive oil directly over the fish and broth. The raw olive oil added at the end is essential to the dish's character — it emulsifies into the broth as you spoon it over. Serve the fish whole in the pan or carefully transferred to a deep platter with all the broth ladled around it. Provide good bread to mop the pan.",
-      visualCue: {
-        primaryTarget: "Golden-green oil swirling into the pink-gold broth; bright green parsley scattered over the fish; broth has a faint sheen of olive oil on its surface.",
-        spectrum: [
-          { state: "Underdone", description: "No olive oil drizzle added; broth is thin and unfinished-looking.", action: "Add the olive oil now — it rounds and enriches the broth even at the table." },
-          { state: "Perfect",   description: "Broth is lightly emulsified with olive oil, bright and fragrant; parsley is vivid green; dish looks alive and glistening.", action: "Serve immediately with crusty bread." },
-          { state: "Overdone",  description: "Too much olive oil has made the broth greasy and heavy-looking.", action: "Add a splash of water and swirl to re-balance the emulsion." },
-        ],
-      },
-      feelCue: "The broth at its best is almost weightless on the spoon — light as consommé but glistening with olive oil; it should smell of the sea, garlic, and warm tomatoes simultaneously.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Vin blanc sec (par exemple Falanghina, Verdicchio)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vermouth sec",
+        "stocks de poissons"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau ou stock de poissons légers",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge (généreuse)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Persil à feuilles plates (approximativement haché)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "basilic frais à la finale"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Heat",
+      "name": "Flacons de chili rouges séchés (ou peperoncino frais)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saison",
+      "inputs": [
+        "ing_01",
+        "ing_09"
+      ],
+      "outputState": "seasoned_fish",
+      "instructions": "Scorez chaque poisson avec 3–4 coupes diagonales profondes de chaque côté, coupant à travers l'os, ce qui permet l'assaisonnement pour pénétrer et assure une cuisson uniforme. Assaisonner à l'intérieur et à l'extérieur avec du sel, y compris dans la cavité et les marques de score. Laissez reposer à température ambiante pendant 10 minutes pendant que vous préparez la base du bouillon. Faites sécher l'extérieur avec des serviettes en papier avant d'ajouter à la casserole.",
+      "visualCue": {
+        "primaryTarget": "Le poisson est sec à l'extérieur, les marques sont profondes et nettement coupées à travers la peau à l'os, le sel est distribué dans chaque coupe et dans la cavité.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les marques sont peu profondes, à peine coupées à travers la peau; le sel n'est appliqué qu'à la surface.",
+            "action": "Ensemencer les découpes avec un couteau tranchant; re-saisonner à l'intérieur des découpes et de la cavité."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque coupe expose la chair blanche et l'os rose; le poisson est sec au toucher; la cavité et les coupes sont salées.",
+            "action": "Continuez à construire le bouillon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les découpes ont traversé la colonne vertébrale et le poisson est partiellement ouvert.",
+            "action": "Cuire de toute façon ; il va flocer plus mais la saveur n'est pas affectée."
+          }
+        ]
+      },
+      "feelCue": "Le couteau devrait glisser à travers la chair de poisson avec une traînée lisse — un couteau terne déchirera plutôt que coupé, alors utilisez votre lame la plus tranchante pour marquer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_02",
+        "ing_08",
+        "ing_06"
+      ],
+      "outputState": "aromatic_base",
+      "instructions": "Dans une casserole large, en lisière assez grande pour maintenir le poisson à plat, chauffer l'huile d'olive à feu moyen. Ajouter l'ail tranché et les flocons de chili. Cuire doucement pendant 1 à 2 minutes, en remuant, jusqu'à ce que l'ail soit adouci et commence juste à tourner l'or pâle aux bords — pas brun. Ajouter la moitié des tomates cerises, presser doucement quelques-unes avec le dos d'une cuillère pour libérer leur jus. Cuire encore 2 minutes jusqu'à ce que les tomates commencent à ramollir et que l'huile prenne leur couleur.",
+      "visualCue": {
+        "primaryTarget": "L'ail est d'or pâle, pas brun; les tomates commencent à s'effondrer et leurs jus se mêlent à l'huile, qui a tourné un faible rose-orange.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est encore blanc; les tomates sont fermes et entières sans jus libéré.",
+            "action": "Continuer la cuisson à feu moyen; l'ail a besoin d'adoucir pour sa bouchée crue."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tranches d'ail sont translucides avec des bords d'or clairs; les tomates sont à moitié coupées; le liquide de la poêle est une huile rose émulsifiée. Ça sent l'ail et la tomate fraîche.",
+            "action": "Ajouter le vin et l'eau et laisser mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est brun et amer; les tomates ont été réduites à une pâte épaisse.",
+            "action": "Ajouter le vin immédiatement pour arrêter la cuisson; une base légèrement surcuite est récupérable, l'ail brûlé n'est pas — si vraiment brûlé, recommencer."
+          }
+        ]
+      },
+      "feelCue": "La poêle doit sentir doux et ailky sans bord acride — au moment où toute amertume entre dans l'arôme, la chaleur est trop élevée ou l'ail est allé trop loin."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "seasoned_fish",
+        "aromatic_base",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "cooked_fish_in_broth",
+      "instructions": "Verser le vin et l'eau dans la base de tomates et augmenter le feu pour laisser mijoter modérément. Placer le poisson assaisonné à plat dans la poêle — ils peuvent se chevaucher légèrement si nécessaire. Déposer une partie du bouillon et des tomates sur le poisson. Couvrir avec un couvercle et cuire à feu moyen 12-15 minutes, selon la taille du poisson. Le poisson est fait lorsque la chair au point le plus profond s'éloigne proprement de l'os et est blanc opaque tout le long du chemin.",
+      "visualCue": {
+        "primaryTarget": "La chair de poisson est blanche opaque à la marque la plus profonde; l'œil est devenu complètement blanc et légèrement coulé; le liquide est un bouillon fin, parfumé, riche en huile rose-or.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La chair à la marque est toujours translucide et rosée près de l'os; l'œil est encore clair.",
+            "action": "Remplacez le couvercle et faites cuire encore 2 à 3 minutes; vérifiez encore à l'os."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair tire facilement de l'os dans des flocons propres; complètement opaque; la peau commence juste à se desserrer autour des scores. Le bouillon est parfumé et légèrement émulsifié.",
+            "action": "Terminer avec du persil et de l'huile d'olive et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair s'est rétractée significativement de l'os; la peau tombe; le bouillon est réduit à une sauce épaisse.",
+            "action": "Servir immédiatement avec de l'eau supplémentaire ajoutée au bouillon; le poisson sera plus sec mais la saveur est encore bonne."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur la partie la plus épaisse du poisson avec un bout de doigt — les poissons parfaitement cuits doivent produire avec un très léger dos de ressort, comme presser une pêche mûre ferme plutôt que de la chair crue."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "cooked_fish_in_broth",
+        "ing_07",
+        "ing_06"
+      ],
+      "outputState": "finished_acqua_pazza",
+      "instructions": "Dispersez le persil haché sur le poisson et la poêle. Faites glisser un dernier jet généreux de votre meilleure huile d'olive extra vierge directement sur le poisson et le bouillon. L'huile d'olive crue ajoutée à la fin est essentielle au caractère du plat — elle émulsifie dans le bouillon pendant que vous le cuillerez. Servir le poisson entier dans la casserole ou soigneusement transféré sur un plateau profond avec tout le bouillon lavé autour. Apportez du bon pain à la poêle.",
+      "visualCue": {
+        "primaryTarget": "L'huile d'or vert tourbillonne dans le bouillon d'or rose; le persil vert vif éparpillé au-dessus du poisson; le bouillon a un peu d'huile d'olive sur sa surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas d'huile d'olive ajoutée; le bouillon est mince et inachevé.",
+            "action": "Ajoutez l'huile d'olive maintenant — elle rondelle et enrichit le bouillon même à table."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bouillon est légèrement émulsifié avec l'huile d'olive, lumineux et parfumé; le persil est vert vif; le plat semble vivant et scintillant.",
+            "action": "Servir immédiatement avec du pain croustillant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop d'huile d'olive a rendu le bouillon gras et lourd.",
+            "action": "Ajouter un jet d'eau et un tourbillon pour rééquilibrer l'émulsion."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon à son meilleur est presque sans poids sur la cuillère — léger comme consommé mais scintille avec l'huile d'olive; il doit sentir la mer, l'ail et les tomates chaudes simultanément."
+    }
+  ]
 };

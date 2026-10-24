@@ -1,104 +1,234 @@
 export default {
-  repoId: "master_portuguese_pasteis_de_nata_001",
-  parentRepoId: null,
-  slug: "pasteis-de-nata",
-  author: "ForkRecipe Kitchen",
-
-  title: "Pastéis de Nata (Portuguese Custard Tarts)",
-  description: "Conceived by Jerónimo monks in Lisbon, these tarts exist at the intersection of violence and delicacy — shatteringly flaky pastry shells holding a barely-set custard that emerges from an inferno of an oven speckled with dark leopard spots of caramelized sugar.",
-  cuisine: "Portuguese",
-  culture: "Lisbon",
-  category: "desserts",
-
-  tags: ["portuguese", "custard", "tart", "pastry", "dessert"],
-  difficulty: 4,
-  activeTime: "1 hr",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "parts",
-
-  stars: 3210,
-  forks: 412,
-  contributors: 48,
-  license: "CC-BY-SA",
-  createdAt: "2024-02-14",
-  updatedAt: "2025-10-30",
-
-  flavorRadar: { sweet: 3, salty: 1, sour: 0, bitter: 0, umami: 0, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "All-purpose flour",                              ratioValue: 100, defaultUnit: "parts", substitutions: ["00 flour"] },
-    { ingId: "ing_02", role: "Fat",       name: "Unsalted butter, softened to room temperature", ratioValue: 60,  defaultUnit: "parts", substitutions: ["lard (more traditional, flakier)"] },
-    { ingId: "ing_03", role: "Dairy",     name: "Whole milk",                                    ratioValue: 80,  defaultUnit: "parts", substitutions: ["cream + milk combination"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Caster sugar",                                  ratioValue: 40,  defaultUnit: "parts", substitutions: ["superfine sugar"] },
-    { ingId: "ing_05", role: "Binder",    name: "Egg yolks (5 total)",                           ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Starch",    name: "Plain flour (for custard thickening, small amount)", ratioValue: 8, defaultUnit: "parts", substitutions: ["cornstarch"] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Lemon zest strip and cinnamon stick",           ratioValue: 2,   defaultUnit: "parts", substitutions: ["vanilla bean"] },
+  "repoId": "master_portuguese_pasteis_de_nata_001",
+  "parentRepoId": null,
+  "slug": "pasteis-de-nata",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pastéis de Nata (Custard Tarts portugais)",
+  "description": "Conçus par des moines de Jerónimo à Lisbonne, ces tartes existent à l'intersection de la violence et de la délicatesse — des coquilles de pâtisserie effrénées tenant une crème à peine sertie qui émerge d'un inferno d'un four tacheté de taches de léopard foncé de sucre caramélisé.",
+  "cuisine": "Portugais",
+  "culture": "Lisbonne",
+  "category": "desserts",
+  "tags": [
+    "portugais",
+    "Coutard",
+    "tarte",
+    "pâtisserie",
+    "dessert"
   ],
-
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hr",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 3210,
+  "forks": 412,
+  "contributors": 48,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-02-14",
+  "updatedAt": "2025-10-30",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Knead",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "laminated_pastry",
-      instructions: "Mix the flour with a pinch of salt and enough cold water (roughly 50 parts) to form a shaggy dough. Knead for 5 minutes until smooth. Rest 10 minutes, then roll into a large rectangle on a floured surface. Spread two-thirds of the softened butter in an even, thin layer across the surface. Fold into thirds (letter fold), rotate 90 degrees, roll out again, and repeat with remaining butter. Fold into thirds one final time. Chill for 20 minutes before shaping.",
-      visualCue: {
-        primaryTarget: "A layered dough package that, when cut at the edge, reveals distinct strata of pale dough and white butter with clean, separate lines.",
-        spectrum: [
-          { state: "Underdone", description: "Butter has smeared into the dough rather than layering — the cut edge shows a uniform pale yellow, not distinct stripes. The dough feels greasy.", action: "Chill for 15 minutes and try rolling more gently. Warm butter breaks down layers; cold butter maintains them." },
-          { state: "Perfect",   description: "Clean, distinct layers visible when the folded block is cut at the edge. The dough is smooth on the outside, cool, and pliable but not sticky. The butter is in thin, flat sheets between the dough layers.", action: "Chill 20 minutes, then roll into a log and cut into rounds for the tart tins." },
-          { state: "Overdone",  description: "Dough has been over-worked and is becoming elastic, springing back when rolled. Butter layers are beginning to merge. Gluten is developing excessively.", action: "Rest the dough in the fridge for 30 minutes. Over-kneaded laminated dough will never be as flaky but will still produce an acceptable pastry." },
-        ],
-      },
-      feelCue: "The laminated dough, when pressed with a fingertip, should feel cool and firm at the surface with a slightly yielding interior — like pressing on a closed paperback book. It should not leave a grease mark on your fingers when you pick it up.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "00 farine"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Shape",
-      inputs: ["laminated_pastry"],
-      outputState: "lined_tins",
-      instructions: "Roll the chilled dough into a tight cylinder about 4cm in diameter. Slice the cylinder into rounds 2cm thick. Press each round into a lightly greased tart tin, working from the center outward with your thumbs to line the sides, creating a thin, even shell that extends just above the tin rim. The walls should be thinner than you think — the butter layers will puff in the oven. Refrigerate the lined tins for 15 minutes before filling.",
-      visualCue: {
-        primaryTarget: "Evenly lined tins with thin walls (about 3mm) that come up just above the rim. The cut layers of dough are visible at the top edge.",
-        spectrum: [
-          { state: "Underdone", description: "Pastry shell walls are too thick (6mm+) and uneven. The bottom is thick and the sides are thin. Thick pastry will not cook through before the custard sets.", action: "Work the dough thinner by pressing more firmly from the center. Aim for translucence — you should almost see your fingers through the dough at the sides." },
-          { state: "Perfect",   description: "Walls are a uniform 3mm with clean visible lamination layers. The top edge is slightly uneven and textured from the cut cylinder — this is correct and will form the most flaky edge.", action: "Chill 15 minutes before filling." },
-          { state: "Overdone",  description: "Pastry has been handled so much it is very soft and greasy from warm hands melting the butter. The layers have begun to merge.", action: "Return to the freezer for 10 minutes. The butter must re-solidify before baking or the pastry will not puff." },
-        ],
-      },
-      feelCue: "Run your thumb around the inside of the tin after lining — you should feel a uniform resistance and the layered dough should feel cool and slightly papery, not warm and greasy. Any thick spots will bake dense and raw.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli à température ambiante",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "saindoux (plus traditionnel, flakier)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Whisk",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "custard_filling",
-      instructions: "Warm the milk in a saucepan with the lemon zest and cinnamon stick until steaming but not boiling. In a separate bowl, whisk together the sugar, flour, and egg yolks until pale and smooth. Remove aromatics from the milk. Stream the hot milk gradually into the egg mixture, whisking constantly — never add hot milk to cold eggs all at once. Return the mixture to the saucepan and cook over medium heat, stirring constantly, until it just begins to thicken and the first bubbles appear. Remove from heat immediately. The custard will look too loose — this is correct; it will set in the oven.",
-      visualCue: {
-        primaryTarget: "A smooth, glossy, pale-yellow custard that coats a spoon but flows freely. When you draw a finger across the back of the spoon, the line holds for 3–4 seconds before the custard creeps back.",
-        spectrum: [
-          { state: "Underdone", description: "Custard is thin and watery. No coating on the spoon. Line drawn in it disappears instantly. Flour has not cooked and will leave a raw starchy taste.", action: "Return to medium heat and stir until the coating consistency is reached. Do not stop stirring or the bottom will curdle." },
-          { state: "Perfect",   description: "Custard coats the spoon in a thin, even layer. When poured, it falls in a steady ribbon, not a stream. It smells of warm milk, egg, and cinnamon. Color is deep golden-yellow from the yolks.", action: "Pass through a fine sieve into a jug for easy pouring. Use while warm." },
-          { state: "Overdone",  description: "Custard has scrambled — yellow eggy lumps are visible. The mixture smells of cooked egg rather than custard. It is grainy when stirred.", action: "Pass urgently through a fine sieve, pressing hard. Some custard can be rescued this way if the lumps are not too large. Reduce oven temperature by 20°C when baking to prevent the pre-scrambled custard from completely setting hard." },
-        ],
-      },
-      feelCue: "Dip a clean finger into the warm custard — it should feel silky and coating, like heavy cream, with no graininess on your fingertip. The warmth should be pleasantly hot but not scalding, around 60–65°C.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mélange crème + lait"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["lined_tins", "custard_filling"],
-      outputState: "finished_pasteis",
-      instructions: "Preheat your oven to its maximum temperature — at minimum 240°C (465°F), ideally 260°C or higher. The high heat is non-negotiable: it is what creates the characteristic leopard-spot caramelization on the custard surface. Fill the chilled pastry shells three-quarters full with warm custard. Bake on the top shelf for 12–15 minutes until the pastry is golden-brown and the custard surface is blistered with dark caramelized spots. Allow to cool for 5 minutes before eating.",
-      visualCue: {
-        primaryTarget: "Pastry shells are deep golden-brown with visible flaky layers. The custard surface has irregular dark brown to black caramelized spots, like a leopard's skin. The custard should still wobble slightly in the center when the tin is shaken.",
-        spectrum: [
-          { state: "Underdone", description: "Custard surface is pale yellow with no caramelized spots. The pastry is blond but not golden. The custard center feels completely liquid when the tin is gently shaken.", action: "Return to the oven for 3–5 more minutes. The caramelized spots are not optional — they are the defining character of the pastel de nata." },
-          { state: "Perfect",   description: "Pastry is deep amber-gold and flaky at the visible edges. The custard has a dramatic pattern of dark spots from intense caramelization. When the tin is shaken, the center wobbles slightly like barely set gelatin — not liquid, not rigid.", action: "Cool for at least 5 minutes before eating — the custard is liquid-hot and will burn. They are best warm, eaten within 30 minutes of the oven." },
-          { state: "Overdone",  description: "Custard has puffed dramatically and then collapsed, leaving a sunken center. The spots have merged into an entirely black, burnt surface. The custard edges have gone rubbery.", action: "The caramelized center may be salvageable if you peel away the worst of the surface. Reduce oven time by 3 minutes next batch." },
-        ],
-      },
-      feelCue: "Lift a cooled tart from its tin — the bottom of the pastry should feel rigid and dry, not soggy. Tap the base with a fingernail and it should sound hollow, like a good cracker. The top custard, when touched with a fingertip, should resist gently and then slowly spring back.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre superfin"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Jaunes d'œufs (5 au total)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Starch",
+      "name": "Farine pure (pour épaississement de la crème, petite quantité)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fécule de maïs"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Bande zeste de citron et bâton de cannelle",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "haricots vanille"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Agenouillement",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "laminated_pastry",
+      "instructions": "Mélanger la farine avec une pincée de sel et suffisamment d'eau froide (environ 50 parties) pour former une pâte chaotique. Agenouillez pendant 5 minutes jusqu'à ce qu'il soit lisse. Reposez-vous 10 minutes, puis roulez dans un grand rectangle sur une surface farinée. Étaler les deux tiers du beurre ramolli dans une couche mince et uniforme à la surface. Plier en troisièmes (pli de lettres), faire tourner 90 degrés, rouler à nouveau, et répéter avec le beurre restant. Plier en troisièmes une dernière fois. Refroidir pendant 20 minutes avant de façonner.",
+      "visualCue": {
+        "primaryTarget": "Un paquet de pâte en couches qui, coupé au bord, révèle des strates distinctes de pâte pâle et de beurre blanc avec des lignes propres et séparées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre s'est frotté dans la pâte plutôt qu'en couches; le bord coupé présente un jaune pâle uniforme et non des rayures distinctes. La pâte est grasse.",
+            "action": "Refroidir pendant 15 minutes et essayer de rouler plus doucement. Le beurre chaud se décompose en couches; le beurre froid les maintient."
+          },
+          {
+            "state": "Perfect",
+            "description": "Nettoyer les couches distinctes visibles lorsque le bloc plié est coupé au bord. La pâte est lisse à l'extérieur, fraîche et souple mais pas collante. Le beurre est en feuilles minces et plates entre les couches de pâte.",
+            "action": "Refroidir 20 minutes, puis rouler dans un log et couper en rondelles pour les boîtes de tarte."
+          },
+          {
+            "state": "Overdone",
+            "description": "La touffe a été surmenée et devient élastique, en ressortant quand elle est roulée. Les couches de beurre commencent à fusionner. Le gluten se développe excessivement.",
+            "action": "Reposez la pâte au réfrigérateur pendant 30 minutes. La pâte feuilletée sur-collée ne sera jamais aussi molle, mais elle produira toujours une pâtisserie acceptable."
+          }
+        ]
+      },
+      "feelCue": "La pâte laminée, lorsqu'elle est pressée avec un bout de doigt, doit se sentir fraîche et ferme à la surface avec un intérieur légèrement productif, comme appuyer sur un livre de papier fermé. Il ne devrait pas laisser une marque de graisse sur vos doigts quand vous le ramassez."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Forme",
+      "inputs": [
+        "laminated_pastry"
+      ],
+      "outputState": "lined_tins",
+      "instructions": "Rouler la pâte réfrigérée dans un cylindre serré d'environ 4cm de diamètre. Couper le cylindre en rondelles de 2cm d'épaisseur. Appuyez chaque tour dans une boîte de tarte légèrement graissée, en travaillant du centre vers l'extérieur avec vos pouces pour tracer les côtés, créant une mince, même coquille qui s'étend juste au-dessus du bord de l'étain. Les murs devraient être plus minces que vous ne le pensez — les couches de beurre vont souffler dans le four. Réfrigérer les boîtes doublées pendant 15 minutes avant de les remplir.",
+      "visualCue": {
+        "primaryTarget": "Boîtes uniformément doublées avec des parois minces (environ 3mm) qui viennent juste au-dessus de la jante. Les couches de pâte coupées sont visibles au bord supérieur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les parois de la pâte sont trop épaisses (6mm+) et inégales. Le fond est épais et les côtés minces. Une pâte épaisse ne fera pas cuire avant les décors de crème.",
+            "action": "Tricoter la pâte en appuyant plus fermement du centre. Visez la translucence — vous devriez presque voir vos doigts à travers la pâte sur les côtés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les murs sont un uniforme 3mm avec des couches de laminage visibles propres. Le bord supérieur est légèrement inégal et texturé à partir du cylindre coupé, c'est exact et formera le bord le plus flou.",
+            "action": "Réfrigérer 15 minutes avant le remplissage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a été manipulée tellement elle est très douce et grasse à partir des mains chaudes qui fondent le beurre. Les couches ont commencé à fusionner.",
+            "action": "Retourner au congélateur pendant 10 minutes. Le beurre doit se solidifier avant la cuisson ou la pâtisserie ne souffle pas."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre pouce autour de l'intérieur de l'étain après la doublure — vous devez sentir une résistance uniforme et la pâte en couches doit sentir frais et légèrement papier, pas chaud et gras. N'importe quelle tache épaisse fera cuire dense et cru."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "custard_filling",
+      "instructions": "Chauffer le lait dans une casserole avec le zeste de citron et la cannelle jusqu'à ce qu'il soit cuit à la vapeur mais pas bouillant. Dans un bol séparé, fouetter ensemble le sucre, la farine et les jaunes d'œufs jusqu'à ce qu'ils soient pâles et lisses. Retirer les aromatiques du lait. Versez progressivement le lait chaud dans le mélange d'œufs, en fouettant constamment — n'ajoutez jamais de lait chaud aux œufs froids. Retourner le mélange dans la casserole et cuire à feu moyen, en remuant constamment, jusqu'à ce qu'il commence à épaissir et que les premières bulles apparaissent. Retirer immédiatement du feu. La crème aura l'air trop lâche — c'est exact; elle sera placée dans le four.",
+      "visualCue": {
+        "primaryTarget": "Une crème lisse, brillante, jaune pâle qui enrobe une cuillère mais coule librement. Lorsque vous tirez un doigt sur l'arrière de la cuillère, la ligne se maintient pendant 3-4 secondes avant que la crème ne recule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Custard est mince et aqueux. Pas de revêtement sur la cuillère. La ligne tracée en elle disparaît instantanément. La farine n'a pas cuit et laissera un goût d'amidon cru.",
+            "action": "Retourner à feu moyen et remuer jusqu'à ce que la consistance du revêtement soit atteinte. N'arrêtez pas de remuer ou le fond sera caillé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Custard enveloppe la cuillère dans une couche mince et uniforme. Une fois versé, il tombe dans un ruban stable, pas dans un ruisseau. Ça sent le lait chaud, l'œuf et la cannelle. La couleur est jaune doré profond des jaunes.",
+            "action": "Passer à travers un tamis fin dans une cruche pour verser facilement. À utiliser au chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le custard est brouillé — des bosses jaunes sont visibles. Le mélange sent l'oeuf cuit plutôt que la crème. Il est granuleux lorsqu'il est agité.",
+            "action": "Passez d'urgence à travers un bon tamis, appuyez fort. Certaines custardes peuvent être sauvées de cette façon si les morceaux ne sont pas trop grands. Réduire la température du four de 20 °C lors de la cuisson afin d'éviter que la crème pré-égratignée ne soit complètement durcie."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt propre dans la crème chaude — il devrait se sentir soyeux et enduit, comme de la crème lourde, sans grain sur le bout des doigts. La chaleur devrait être agréablement chaude, mais pas scalding, autour de 60-65°C."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "lined_tins",
+        "custard_filling"
+      ],
+      "outputState": "finished_pasteis",
+      "instructions": "Préchauffer votre four à sa température maximale – au minimum 240°C (465°F), idéalement 260°C ou plus. La chaleur élevée n'est pas négociable : c'est ce qui crée la caramélisation caractéristique des points léopards sur la surface de la crème. Remplir les coquillages réfrigérés des trois quarts pleins de crème chaude. Cuire sur le plateau supérieur pendant 12-15 minutes jusqu'à ce que la pâtisserie soit dorée et que la surface de la crème soit blister avec des taches caramélisées foncées. Laisser refroidir 5 minutes avant de manger.",
+      "visualCue": {
+        "primaryTarget": "Les coquillages de pâte sont brun doré profond avec des couches apparentes. La surface de la crème a des taches irrégulières brun foncé à noir caramélisé, comme la peau d'un léopard. La crème devrait encore trembler légèrement au centre lorsque l'étain est secoué.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface du custard est jaune pâle sans taches caramélisées. La pâtisserie est blonde mais pas dorée. Le centre de crème est complètement liquide lorsque l'étain est légèrement secoué.",
+            "action": "Retourner au four pour 3 à 5 minutes de plus. Les taches caramélisées ne sont pas facultatives — elles sont le caractère déterminant du pastel de nata."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte est en or ambré profond et flocée aux bords visibles. La crème a un motif dramatique de taches sombres de caramélisation intense. Lorsque l'étain est secoué, le centre oscille légèrement comme de la gélatine à peine mise — pas liquide, pas rigide.",
+            "action": "Laisser refroidir au moins 5 minutes avant de manger — la crème est liquide et brûlera. Ils sont les mieux chauds, mangés dans les 30 minutes du four."
+          },
+          {
+            "state": "Overdone",
+            "description": "Custard a gonflé considérablement et s'est ensuite effondré, laissant un centre coulé. Les taches ont fusionné en une surface entièrement noire brûlée. Les bords de crème sont devenus caoutchouteux.",
+            "action": "Le centre caramélisé peut être récupérable si vous épluchez le pire de la surface. Réduire le temps de cuisson de 3 minutes."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une tarte refroidie de son étain — le fond de la pâtisserie doit se sentir rigide et sec, pas soyeux. Tapez sur la base avec un ongle et il devrait sembler creux, comme un bon craquelin. La crème supérieure, lorsqu'elle est touchée par un bout de doigt, doit résister doucement, puis revenir lentement."
+    }
+  ]
 };

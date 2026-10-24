@@ -1,99 +1,242 @@
 export default {
-  repoId: "master_austrian_porkschnitzel_001",
-  parentRepoId: null,
-  slug: "pork-schnitzel",
-  author: "ForkRecipe Kitchen",
-  title: "Wiener Schnitzel",
-  description: "Pork loin pounded thin as a page, encased in three precise coats of flour, egg, and breadcrumb, then fried in a deep wave of clarified butter until the crust billows away from the meat in a golden, gossamer shell that crackles on the first cut.",
-  cuisine: "Austrian",
-  culture: "Viennese",
-  category: "proteins",
-  tags: ["schnitzel", "austrian", "viennese", "pork", "fried", "breaded", "classic"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 3, sour: 1, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Pork loin cutlets (180–200g each)",        ratioValue: 4,    defaultUnit: "cutlets", substitutions: ["veal leg cutlets (the original)", "chicken breast, butterflied"] },
-    { ingId: "ing_02", role: "Starch",    name: "All-purpose flour",                        ratioValue: 100,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_03", role: "Binder",    name: "Eggs, lightly beaten with a fork (not whisked)", ratioValue: 3, defaultUnit: "large", substitutions: [] },
-    { ingId: "ing_04", role: "Structure", name: "Fine, dry white breadcrumbs (not panko)",  ratioValue: 150,  defaultUnit: "g",   substitutions: ["fine panko (produces a coarser crust)"] },
-    { ingId: "ing_05", role: "Fat",       name: "Clarified butter or lard",                 ratioValue: 300,  defaultUnit: "ml",  substitutions: ["a mix of clarified butter and neutral oil"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt",                            ratioValue: 6,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "White pepper, freshly ground",             ratioValue: 2,    defaultUnit: "g",   substitutions: ["black pepper"] },
-    { ingId: "ing_08", role: "Citrus",    name: "Lemon wedges, for serving",                ratioValue: 2,    defaultUnit: "wedges", substitutions: [] },
+  "repoId": "master_austrian_porkschnitzel_001",
+  "parentRepoId": null,
+  "slug": "pork-schnitzel",
+  "author": "ForkRecipe Kitchen",
+  "title": "Légumes et légumes",
+  "description": "La longe de porc pillée comme une page, enrobée de trois couches précises de farine, d'œuf et de chapelure, puis frite dans une vague profonde de beurre clarifié jusqu'à ce que la croûte s'éloigne de la viande dans une coquille de gossamer dorée qui craque sur la première coupe.",
+  "cuisine": "Autriche",
+  "culture": "Viennese",
+  "category": "proteins",
+  "tags": [
+    "schnitzel",
+    "autrien",
+    "Viennese",
+    "porc",
+    "frits",
+    "panées",
+    "classique"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Pound",
-      inputs: ["ing_01", "ing_06", "ing_07"],
-      outputState: "seasoned_cutlets",
-      instructions: "Place a cutlet between two sheets of plastic wrap or inside a zip-lock bag. Using a meat mallet or the bottom of a heavy pan, pound the meat to an even 3mm thickness with firm, outward strokes — starting from the center and sweeping toward the edges to stretch rather than tear the meat. A properly pounded schnitzel should be uniformly thin across its entire surface, with no thick center or torn holes. Season both sides with salt and white pepper, then let rest for 5 minutes at room temperature so the salt begins to draw moisture to the surface.",
-      visualCue: {
-        primaryTarget: "A very thin, near-transparent veil of pork — the same thickness as a pound coin across its entire width. The grain of the meat should have visibly elongated from the pounding.",
-        spectrum: [
-          { state: "Underdone", description: "Cutlet still has a thick center and thinner edges. The pork springs back noticeably when pressed.", action: "Pound the thick areas with direct, firm blows. Work the mallet outward from the center. A 3mm cutlet should not spring back at all." },
-          { state: "Perfect",   description: "Uniform thickness across the entire surface. Semi-translucent at the thinnest points. Lies completely flat with no curl or spring.", action: "Season both sides and let rest 5 minutes before breading." },
-          { state: "Overdone",  description: "Cutlet has holes or tears from over-pounding. The edges have separated from the meat.", action: "Patch tears by pressing the edges back together. The breading will hold small tears together during frying." },
-        ],
-      },
-      feelCue: "The pounded cutlet should feel like a damp chamois cloth when held — supple and yielding, with almost no spring or thickness. Fold a corner over itself: it should drape, not fold with resistance.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Coupettes de longes de porc (180 à 200g chacune)",
+      "ratioValue": 4,
+      "defaultUnit": "cutlets",
+      "substitutions": [
+        "coupées de cuisses de veau (l'original)",
+        "poitrine de poulet, beurré"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Dredge",
-      inputs: ["seasoned_cutlets", "ing_02", "ing_03", "ing_04"],
-      outputState: "breaded_cutlets",
-      instructions: "Set up three separate wide dishes: flour in the first, beaten eggs in the second, breadcrumbs in the third. Working one cutlet at a time: first dredge in flour, pressing to adhere and shaking off every grain of excess — you want a ghostly, light dusting, not a thick coat. Dip immediately into the egg, allowing the excess to drip off for 3 seconds. Lay in the breadcrumbs and, critically, do NOT press the crumbs into the meat — scatter them over the top, and shake the tray to set them. This loose, unpressed crumb is what allows the crust to soufflé away from the meat in the fat, creating the billowing effect.",
-      visualCue: {
-        primaryTarget: "A lightly, evenly coated cutlet with crumbs adhering loosely all over. The surface looks matte and irregular — not smooth or tightly pressed. Crumbs should not clump.",
-        spectrum: [
-          { state: "Underdone", description: "Bare patches of egg showing through where crumbs didn't adhere. Parts of the meat are visible through the coating.", action: "Sprinkle crumbs over the bare spots and shake the tray gently. Do not press — that undoes the loose coating." },
-          { state: "Perfect",   description: "Uniform loose crumb coat. Slightly irregular surface. No bare patches and no areas where the crumb has been pressed into a dense layer.", action: "Fry within 5 minutes. Do not refrigerate — a cold, compressed crust will not soufflé." },
-          { state: "Overdone",  description: "Crumbs have been pressed firmly into the egg — the surface looks smooth, dense, and compact.", action: "The schnitzel will still fry fine but the crust will be stuck tightly to the meat rather than billowing. Taste is unaffected." },
-        ],
-      },
-      feelCue: "Pick up a breaded cutlet and hold it horizontal — the crumbs should stay in place but feel loosely attached, not anchored. A gentle shake should make a few crumbs drift off. That fragility is what produces the famous crust.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["breaded_cutlets", "ing_05"],
-      outputState: "fried_schnitzel",
-      instructions: "Pour clarified butter into a wide pan to a depth of 8–10mm. Heat to 160–170°C — test with a breadcrumb: it should sizzle immediately and turn golden in 30 seconds. Slide in the breaded cutlet. Immediately begin spooning hot butter over the top of the cutlet in a continuous stream while gently moving the pan to keep the fat agitated. This constant basting and movement is how the crust inflates. Fry 2–3 minutes per side until deep golden-amber. Never crowd the pan — fry one cutlet at a time if necessary. Remove to a wire rack (never paper) to drain.",
-      visualCue: {
-        primaryTarget: "A golden-amber schnitzel with a visibly inflated, rippled crust that has detached from the meat surface in places — it looks like a crinkled golden map rather than a flat slab of breading.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold, flat crust still touching the meat uniformly. Fat may not have been hot enough. The crust is soft rather than set.", action: "Increase heat and continue frying with constant basting. The temperature was too low — 160°C minimum is essential." },
-          { state: "Perfect",   description: "Deep golden-amber, rippled, billowing crust with visible air pockets between the crumb and the meat. The schnitzel has inflated noticeably. Sounds hollow when tapped.", action: "Drain on a wire rack and season immediately with a pinch of salt. Serve within 2 minutes." },
-          { state: "Overdone",  description: "Dark brown crust with some charred spots. Crust has contracted back against the meat from over-frying.", action: "The cutlet inside is still good — the outside will taste somewhat bitter. Avoid this by using a thermometer." },
-        ],
-      },
-      feelCue: "Gently press the crust with the back of a spatula — it should resist and spring back, like pressing a crisp autumn leaf. Any softness means more time in the fat. Listen: the sizzle should be a steady, vigorous hiss throughout — anything weaker means the fat has cooled.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Oeufs légèrement battus avec une fourchette (non fouettés)",
+      "ratioValue": 3,
+      "defaultUnit": "large",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["fried_schnitzel", "ing_08"],
-      outputState: "schnitzel",
-      instructions: "Transfer immediately to warmed plates — schnitzel waits for no one and softens within minutes. Place one lemon wedge alongside, not squeezed over. Serve with potato salad, parsley potatoes, or lingonberry jam. The lemon is squeezed at the table by the diner, and only directly over their portion. Schnitzel eaten 10 minutes after frying is a different, lesser dish — time it to the moment the plates hit the table.",
-      visualCue: {
-        primaryTarget: "A golden-amber, crackling schnitzel on a warm plate with a bright yellow lemon wedge. The crust should be dry and rippled — not glistening with fat.",
-        spectrum: [
-          { state: "Underdone", description: "Schnitzel is sitting in a pool of fat on the plate, and the crust is already softening from steam.", action: "Drain on a wire rack, not paper, for 30 seconds before plating. Paper traps steam and destroys the crust." },
-          { state: "Perfect",   description: "Dry, crackly crust. The plate shows no pool of fat. A squeeze of lemon causes an immediate sizzle as the acid hits the hot crust.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Schnitzel has been held too long — the crust has gone soft and the meat inside has dried out. The breading looks pale and steamy.", action: "Serve immediately regardless — there is no recovery from a held schnitzel, only speed going forward." },
-        ],
-      },
-      feelCue: "Cut the schnitzel with a knife: the crust should shatter with a clean crack before the knife reaches the meat beneath. If it compresses and squashes rather than cracks, the crust was never crisp to begin with.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Petites chapelures blanches (pas panko)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "panko fin (produit une croûte plus grossière)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre ou saindoux clarifié",
+      "ratioValue": 300,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "un mélange de beurre clarifié et d'huile neutre"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre blanc, fraîchement moulu",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivre noir"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Citrus",
+      "name": "Coins de citron, pour servir",
+      "ratioValue": 2,
+      "defaultUnit": "wedges",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_01",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "seasoned_cutlets",
+      "instructions": "Placez une découpe entre deux feuilles d'enveloppe plastique ou à l'intérieur d'un sac à fermeture éclair. À l'aide d'un maillet de viande ou du fond d'une poêle lourde, livrez la viande à une épaisseur égale de 3 mm avec des traits fermes et extérieurs — en partant du centre et balayant vers les bords pour s'étirer plutôt que de déchirer la viande. Un schnitzel correctement piqué doit être uniformément mince sur toute sa surface, sans centre épais ni trous déchirés. Assaisonner les deux côtés avec du sel et du poivre blanc, puis laisser reposer 5 minutes à température ambiante afin que le sel commence à attirer l'humidité à la surface.",
+      "visualCue": {
+        "primaryTarget": "Un voile de porc très mince et presque transparent — la même épaisseur qu'une pièce de monnaie de livre sur toute sa largeur. Le grain de la viande aurait dû être visiblement allongé du pilonnage.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La découpe a encore un centre épais et des bords plus fins. Le porc ressort nettement lorsqu'il est pressé.",
+            "action": "Pound les zones épaisses avec des coups directs et fermes. Travaillez le maillet vers l'extérieur du centre. Une découpe de 3 mm ne doit pas revenir du tout."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur uniforme sur toute la surface. Semi-translucide aux points les plus fins. Se couche complètement à plat sans boucle ni ressort.",
+            "action": "Assaisonner les deux côtés et laisser reposer 5 minutes avant de panser."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le cutlet a des trous ou des larmes de trop-livre. Les bords se sont séparés de la viande.",
+            "action": "Patch larmes en pressant les bords à nouveau ensemble. La panure tiendra les petites larmes ensemble pendant la friture."
+          }
+        ]
+      },
+      "feelCue": "La découpe fourrée doit se sentir comme un tissu chamois humide lorsqu'elle est retenue — souple et souple, sans ressort ni épaisseur. Pliez un coin sur lui-même: il devrait draper, pas plier avec la résistance."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Drague",
+      "inputs": [
+        "seasoned_cutlets",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "breaded_cutlets",
+      "instructions": "Mettre en place trois plats séparés : la farine dans le premier, les œufs battus dans le second, la chapelure dans le troisième. Travailler une coupe à la fois : première drague dans la farine, presser pour adhérer et secouer chaque grain d'excès — vous voulez un fantôme, poussière légère, pas une couche épaisse. Plongez immédiatement dans l'œuf, laissant l'excédent s'écouler pendant 3 secondes. Couchez - vous dans la chapelure et, de façon critique, n'enfoncez PAS la chapelure dans la viande; dispersez - la au - dessus, et secouez le plateau pour les mettre. Cette miettes lâches et non pressées permet à la croûte de souffler loin de la viande dans la graisse, créant ainsi l'effet de bouffée.",
+      "visualCue": {
+        "primaryTarget": "Une découpe légèrement, uniformément revêtue avec des miettes s'adhérant lâchement partout. La surface semble mate et irrégulière — pas lisse ou serrée. Les miettes ne doivent pas s'écraser.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des taches d'œuf à la nuque montrant que les miettes n'ont pas adhéré. Des parties de la viande sont visibles par le revêtement.",
+            "action": "Saupoudrer les taches nues et agiter doucement le plateau. Ne pressez pas, ce qui annule le revêtement lâche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un manteau uniforme en miettes. Surface légèrement irrégulière. Pas de taches nues et pas de zones où la miette a été pressée dans une couche dense.",
+            "action": "Faire frire dans 5 minutes. Ne pas réfrigérer — une croûte froide et comprimée ne sera pas soufflée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les miettes ont été pressées fermement dans l'oeuf — la surface semble lisse, dense et compacte.",
+            "action": "Le schnitzel fera encore frire fin mais la croûte sera collée étroitement à la viande plutôt que de gonfler. Le goût n'est pas affecté."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une découpe panée et maintenez-la horizontalement — les miettes doivent rester en place mais se sentir lâchement attachées, non ancrées. Un doux tremblement devrait faire dériver quelques miettes. Cette fragilité est ce qui produit la fameuse croûte."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "breaded_cutlets",
+        "ing_05"
+      ],
+      "outputState": "fried_schnitzel",
+      "instructions": "Verser le beurre clarifié dans une casserole large à une profondeur de 8 à 10 mm. Chauffer jusqu'à 160–180°C — tester avec une chapelure : il doit s'étourdir immédiatement et tourner en or en 30 secondes. Glissez dans la coupe panée. Commencez immédiatement à cuillerer du beurre chaud sur le dessus de la découpe dans un ruisseau continu tout en déplaçant doucement la poêle pour garder la graisse agitée. Ce basting constant et le mouvement est la façon dont la croûte gonfle. Faire frire 2–3 minutes de chaque côté jusqu'à ce que l'ambre d'or soit profond. Ne jamais fouler la poêle — faire frire une coupe à la fois si nécessaire. Retirez-vous sur un support de fil (jamais de papier) pour égoutter.",
+      "visualCue": {
+        "primaryTarget": "Un schnitzel doré-ambre avec une croûte visiblement gonflée et déchirée qui s'est détachée de la surface de la viande dans les endroits — il ressemble à une carte dorée frisée plutôt qu'à une plaque plate de pain.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle, croûte plate touchant toujours uniformément la viande. La graisse n'a peut-être pas été assez chaude. La croûte est douce plutôt qu'établie.",
+            "action": "Augmenter la chaleur et continuer à frire avec un basting constant. La température était trop basse — 160°C minimum est essentiel."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte de couleur dorée profonde, ondulée et bondissante avec des poches d'air visibles entre la miette et la viande. Le schnitzel a considérablement gonflé. Ça a l'air creux.",
+            "action": "Égoutter sur une grille et assaisonner immédiatement avec une pincée de sel. Servir dans les 2 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Croûte brun foncé avec quelques taches carbonisées. La croûte s'est rétractée contre la viande de la surfraction.",
+            "action": "La coupe à l'intérieur est encore bonne — l'extérieur aura un goût un peu amer. Évitez cela en utilisant un thermomètre."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur la croûte avec le dos d'une spatule — elle devrait résister et revenir en arrière, comme appuyer sur une feuille d'automne croustillante. Toute douceur signifie plus de temps dans la graisse. Écoutez: le étourdissement doit être un sifflement constant et vigoureux, tout ce qui est plus faible signifie que la graisse a refroidi."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "fried_schnitzel",
+        "ing_08"
+      ],
+      "outputState": "schnitzel",
+      "instructions": "Transférer immédiatement dans des assiettes chaudes — schnitzel n'attend personne et s'assouplit en quelques minutes. Placer un coin de citron à côté, non pressé. Servir avec de la salade de pommes de terre, des pommes de terre à persil ou de la confiture de lingonberry. Le citron est pressé à la table par le diner, et seulement directement sur leur portion. Schnitzel a mangé 10 minutes après la friture est un plat différent, plus petit — le temps que les assiettes frappent la table.",
+      "visualCue": {
+        "primaryTarget": "Un schnitzel doré et crépitant sur une assiette chaude avec un coin citron jaune vif. La croûte doit être sèche et rincée, et non scintille avec de la graisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Schnitzel est assis dans une piscine de graisse sur l'assiette, et la croûte est déjà adoucie par la vapeur.",
+            "action": "Égoutter sur un support de fil, pas sur du papier, pendant 30 secondes avant le placage. Le papier piège la vapeur et détruit la croûte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte sèche et craquante. L'assiette ne montre pas de graisse. Une pression de citron provoque un étourdissement immédiat lorsque l'acide frappe la croûte chaude.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Schnitzel a été tenu trop longtemps — la croûte est devenue molle et la viande à l'intérieur a séché. La panure semble pâle et vapeuruse.",
+            "action": "Servir immédiatement indépendamment — il n'y a pas de récupération d'un schnitzel retenu, seulement la vitesse allant de l'avant."
+          }
+        ]
+      },
+      "feelCue": "Couper le schnitzel avec un couteau: la croûte doit se briser avec une fissure propre avant que le couteau atteigne la viande en dessous. S'il compresse et s'écrase plutôt que de craquelures, la croûte n'a jamais été croustillante pour commencer."
+    }
+  ]
 };

@@ -1,115 +1,277 @@
 export default {
-  repoId: "master_french_moules_marinieres_001",
-  parentRepoId: null,
-  slug: "moules-marinieres",
-  author: "ForkRecipe Kitchen",
-  title: "Moules Marinières",
-  description: "Mussels steamed open in white wine, shallots, and parsley — the entire broth becoming the sauce. The dish is done in ten minutes and must be eaten immediately.",
-  cuisine: "French",
-  culture: "Norman/Breton",
-  category: "seafood",
-  tags: ["mussels", "french", "seafood", "wine", "steamed", "normandy", "breton"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Live mussels, scrubbed and debearded",          ratioValue: 8,    defaultUnit: "parts", substitutions: ["clams", "cockles"] },
-    { ingId: "ing_02", role: "Solvent",   name: "Dry white wine (Muscadet or Chablis)",           ratioValue: 1.5,  defaultUnit: "parts", substitutions: ["dry cider", "light fish stock"] },
-    { ingId: "ing_03", role: "Allium",    name: "Shallots, finely sliced into rings",             ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["white onion, finely sliced"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves, thinly sliced",                   ratioValue: 0.2,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Flat-leaf parsley, roughly chopped",             ratioValue: 0.2,  defaultUnit: "parts", substitutions: ["chervil"] },
-    { ingId: "ing_06", role: "Fat",       name: "Unsalted butter",                                ratioValue: 0.3,  defaultUnit: "parts", substitutions: ["good olive oil"] },
-    { ingId: "ing_07", role: "Spice",     name: "Black pepper, freshly cracked",                  ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",   name: "Crusty baguette or sourdough, to serve",         ratioValue: 1,    defaultUnit: "parts", substitutions: ["frites"] },
+  "repoId": "master_french_moules_marinieres_001",
+  "parentRepoId": null,
+  "slug": "moules-marinieres",
+  "author": "ForkRecipe Kitchen",
+  "title": "Moules Marinières",
+  "description": "Les moules s'ouvraient à la vapeur dans du vin blanc, des échalotes et du persil — le bouillon entier devenant la sauce. Le plat est fait en dix minutes et doit être mangé immédiatement.",
+  "cuisine": "Français",
+  "culture": "Norman/Breton",
+  "category": "seafood",
+  "tags": [
+    "Moules",
+    "français",
+    "Produits de la mer",
+    "vin",
+    "vapeur",
+    "Normes",
+    "breton"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sort",
-      inputs: ["ing_01"],
-      outputState: "sorted_mussels",
-      instructions: "Tip the mussels into a colander under cold running water. Discard any with cracked or broken shells. Hold each open-shelled mussel and tap it firmly on the edge of the sink — a live mussel will clench shut within 30 seconds. Discard any that stay open. Grip any visible beards (the fibrous tuft protruding from the seam) between your fingers and rip firmly toward the hinge to pull them free. Scrub off any remaining barnacles with a stiff brush. Keep the sorted mussels in the colander at room temperature; do not submerge them in fresh water.",
-      visualCue: {
-        primaryTarget: "A pile of tightly closed, clean-shelled dark mussels with no visible beards or barnacle clusters.",
-        spectrum: [
-          { state: "Underdone", description: "Several shells still open and untested, beards still trailing from the seams, heavy barnacle coating on shells.", action: "Tap each open shell individually; remove beards by gripping close to the shell and pulling firmly toward the hinge. Discard any that don't close after tapping." },
-          { state: "Perfect",   description: "All shells closed tight or actively closing when touched. Shells are clean and dark. No beards visible at any seam.", action: "Proceed — mussels are ready. Cook within the hour." },
-          { state: "Overdone",  description: "Mussels have been submerged in fresh water and some are gaping open or floating — they are drowning.", action: "Drain immediately and proceed to cooking. Do not soak bivalves in fresh water — it kills them and dilutes the briny liquor the dish depends on." },
-        ],
-      },
-      feelCue: "Each mussel should feel heavy and dense for its size — a shell that rattles or feels hollow is empty or dead and must be discarded.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Moules vivantes, broyées et démêlées",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Palourdes",
+        "coqs"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_03", "ing_04", "ing_06"],
-      outputState: "softened_alliums",
-      instructions: "Set a large, wide, heavy-based pot over medium heat — it must be big enough to hold all the mussels with room to spare. Melt the butter until foaming. Add the shallots and garlic. Sweat gently, stirring often, for 3–4 minutes until completely soft, glassy, and sweet-smelling. Do not let them colour at all — any browning will push the final broth bitter.",
-      visualCue: {
-        primaryTarget: "Shallot rings and garlic slices collapsed to limp, glassy ribbons clinging in foamy golden butter.",
-        spectrum: [
-          { state: "Underdone", description: "Shallots are still opaque white and snap when pressed. Garlic smells raw and sharp.", action: "Lower the heat and continue cooking. Raw alliums will leave a harsh, pungent edge in the finished broth." },
-          { state: "Perfect",   description: "Completely translucent, soft as cooked noodles, sweet-smelling. Butter is golden and fragrant with no browning on the pan bottom.", action: "Increase heat to high and add the wine immediately." },
-          { state: "Overdone",  description: "Garlic edges are pale gold or brown and smell toasty-bitter. Shallots are jammy and dark at the edges.", action: "Remove the browned garlic pieces. The broth will carry a faint bitter note but is still serviceable." },
-        ],
-      },
-      feelCue: "Press a softened shallot ring between your fingers — it should collapse instantly with no resistance, like a cooked pasta ring.",
+      "ingId": "ing_02",
+      "role": "Solvent",
+      "name": "Vin blanc sec (Muscadet ou Chablis)",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cidre sec",
+        "stocks de poissons légers"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Deglaze",
-      inputs: ["softened_alliums", "ing_02", "ing_07"],
-      outputState: "wine_broth",
-      instructions: "Pour in the white wine and add the cracked black pepper. Raise the heat to high and bring to a vigorous rolling boil. Let it boil for 1 minute to drive off the harsh raw-alcohol edge. The liquid should reduce very slightly and smell like a clean, refined court-bouillon — bright and winey but not sharp.",
-      visualCue: {
-        primaryTarget: "A rapidly bubbling pale-gold liquid filling the pot with billowing steam. The sharpness of raw wine has cooked away.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is barely simmering and smells clearly of raw alcohol — sharp and fermented.", action: "Increase heat further and wait for a proper rolling boil before adding mussels. Raw alcohol shrinks mussel flesh and dulls the broth." },
-          { state: "Perfect",   description: "Rolling boil, bubbles churning in the centre. Steam smells bright and clean — fruity wine notes without the bite. Shallots are bobbing.", action: "Tip in all the mussels in a single motion and cover immediately." },
-          { state: "Overdone",  description: "Liquid has reduced to a thin, syrupy pool. The shallots are catching on the bottom of the pot.", action: "Add another small splash of wine or water to restore enough volume to create steam." },
-        ],
-      },
-      feelCue: "Cup your hand over the steam rising from the pot — it should smell like the sea with a clean wine note, not like the inside of a wine bottle.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Échalotes finement coupées en rondelles",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignons blancs, tranchés finement"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Steam",
-      inputs: ["sorted_mussels", "wine_broth"],
-      outputState: "steamed_mussels",
-      instructions: "Tip all the sorted mussels into the boiling broth in one go. Clamp the lid on immediately and cook over maximum heat for 3–4 minutes. Shake the pot vigorously by the handles once or twice during cooking to redistribute the mussels so every shell gets direct steam contact. Lift the lid and inspect: every shell must be open. Any mussel still clamped shut after 6 minutes of total cooking must be discarded — they were dead before they went in.",
-      visualCue: {
-        primaryTarget: "A pot of wide-open mussels with plump, bright orange-yellow flesh, sitting in a rich amber-gold broth.",
-        spectrum: [
-          { state: "Underdone", description: "Several shells still clamped tightly shut. Broth is still lightly simmering, not fully rolling. Mussel flesh inside any open shells is still grey and slightly translucent.", action: "Replace the lid immediately and steam 1–2 minutes more, shaking the pot. If shells remain shut after 6 minutes total, remove and discard them — do not force them open." },
-          { state: "Perfect",   description: "All shells gaping wide. Flesh is plump, fully opaque, and a vivid saffron-orange. Broth is deep gold, fragrant, and abundant.", action: "Remove from heat instantly — every additional second on the heat toughens the flesh." },
-          { state: "Overdone",  description: "Mussel flesh has shrunk, curled, and become rubbery. Some have detached from their shells entirely. Broth is reduced and intensely salty.", action: "Serve immediately regardless — the broth is still good and the mussels still edible, just chewier. There is no rescue once overcooked." },
-        ],
-      },
-      feelCue: "Shake the pot mid-cook — you should hear a full, heavy clatter of shells rolling together. A thin, rattling sound means the mussels are mostly empty shells.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Girofles à l'ail, tranchés finement",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Garnish",
-      inputs: ["steamed_mussels", "ing_05", "ing_08"],
-      outputState: "moules_marinieres",
-      instructions: "Ladle the mussels and every drop of fragrant broth into deep, warmed bowls. Scatter a generous fistful of roughly chopped parsley over each bowl. Serve instantly with a basket of crusty bread for mopping. The entire pot should reach the table within 90 seconds of leaving the heat — mussels are the most time-sensitive dish in French bistro cooking.",
-      visualCue: {
-        primaryTarget: "Deep bowls heaped with open jet-black shells, vivid orange flesh glinting within, bright green parsley scattered across the top, steaming golden broth pooled below.",
-        spectrum: [
-          { state: "Underdone", description: "Parsley not yet added. Bowls are cold. Broth still in the pot.", action: "Warm the bowls first (fill with boiling water for 30 seconds, empty). Parsley is not optional decoration — it adds essential grassy freshness that cuts the brine." },
-          { state: "Perfect",   description: "Parsley bright green and abundant. Broth steaming and shimmering. Mussels all open and orange. Bread alongside.", action: "Eat immediately. Do not let them sit." },
-          { state: "Overdone",  description: "Mussels have been sitting and are cooling in their shells. Broth has become a gelatinous, congealing slick.", action: "There is no recovery. Serve the instant the pot leaves the stove — moules marinières wait for no one." },
-        ],
-      },
-      feelCue: "The broth in the spoon should taste simultaneously salty, sweet, winey, and oceanic — a complete sauce born from nothing but heat, wine, and mussel liquor.",
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Cerveau"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Bonne huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre noir, fraichement craqué",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "La baguette croustillante ou la courge, pour servir",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "frites"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Tri",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "sorted_mussels",
+      "instructions": "Astucez les moules dans une calandre sous eau froide. Jetez tout avec des coquilles cassées ou cassées. Maintenez chaque moule à coquille ouverte et tapez-la fermement sur le bord de l'évier — une moule vivante se fermera en 30 secondes. Jetez tout ce qui reste ouvert. Grappez toutes les barbes visibles (la touffe fibreuse qui dépasse la couture) entre vos doigts et déchirez fermement vers la charnière pour les tirer libres. Éliminez les branles restantes avec une brosse rigide. Conserver les moules triées dans la calandre à température ambiante; ne pas les submerger dans l'eau douce.",
+      "visualCue": {
+        "primaryTarget": "Un tas de moules foncées bien fermées, à coquille propre, sans barbe visible ni amas de barnacles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Plusieurs coquilles encore ouvertes et non testées, des barbes encore en fuite des coutures, de lourds revêtements de barnacles sur les coquilles.",
+            "action": "Appuyez sur chaque coque ouverte individuellement; retirez les barbes en s'attachant près de la coque et en tirant fermement vers la charnière. Jetez ceux qui ne se referment pas après avoir tapé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les coquillages sont fermés serrés ou activement fermés lorsqu'ils sont touchés. Les coquilles sont propres et sombres. Aucune barbe visible à n'importe quelle couture.",
+            "action": "Continuez — les moules sont prêtes. Cuire dans l'heure."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les moules ont été submergées dans l'eau douce et certaines sont en train de s'ouvrir ou de flotter, elles se noient.",
+            "action": "Égoutter immédiatement et procéder à la cuisson. Ne trempez pas les bivalves dans de l'eau douce — il les tue et dilue la liqueur de bricolage dont dépend le plat."
+          }
+        ]
+      },
+      "feelCue": "Chaque moule doit se sentir lourde et dense pour sa taille: une coquille qui se déchire ou qui se sent creuse est vide ou morte et doit être jetée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "softened_alliums",
+      "instructions": "Réglez un grand pot, large, à base lourde à feu moyen — il doit être assez grand pour tenir toutes les moules avec de la place à épargner. Faire fondre le beurre jusqu'à mousser. Ajouter les échalotes et l'ail. Transpirer doucement, en remuant souvent, pendant 3 à 4 minutes jusqu'à ce qu'il soit complètement doux, vitreux et sucré. Ne les laissez pas colorer du tout — tout brunissement poussera le bouillon final amer.",
+      "visualCue": {
+        "primaryTarget": "Des anneaux d'échalote et des tranches d'ail se sont effondrés dans des rubans glacés collés au beurre doré mousseux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les échalotes sont toujours blanches opaques et se cassent lorsqu'elles sont pressées. L'ail sent cru et vif.",
+            "action": "Abaissez la chaleur et continuez la cuisson. Les alliums bruts laisseront un bord dur et piquant dans le bouillon fini."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement translucide, douce comme des nouilles cuites, sucrée. Le beurre est doré et parfumé sans brunissement sur le fond de la poêle.",
+            "action": "Augmenter la chaleur et ajouter le vin immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords de l'ail sont dorés pâles ou bruns et sentent les amers grillés. Les échalotes sont jammy et sombres aux bords.",
+            "action": "Enlevez les morceaux d'ail doré. Le bouillon portera une faible note amère, mais est toujours utilisable."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un anneau d'échalote ramolli entre vos doigts — il devrait s'effondrer instantanément sans résistance, comme un anneau de pâtes cuites."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Déglacement",
+      "inputs": [
+        "softened_alliums",
+        "ing_02",
+        "ing_07"
+      ],
+      "outputState": "wine_broth",
+      "instructions": "Verser le vin blanc et ajouter le poivre noir cassé. Augmenter la chaleur et porter à un ébullition vigoureux. Laisser bouillir pendant 1 minute pour sortir du bord dur de l'alcool brut. Le liquide devrait réduire très légèrement et sentir comme un court-bouillon propre et raffiné – lumineux et vineux mais pas tranchant.",
+      "visualCue": {
+        "primaryTarget": "Un liquide d'or pâle bouillonnant rapidement remplit le pot de vapeur bouillante. La netteté du vin cru a cuit.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide mijote à peine et sent clairement l'alcool brut, vif et fermenté.",
+            "action": "Augmentez encore la chaleur et attendez un ébullition approprié avant d'ajouter des moules. L'alcool brut rétrécit la chair des moules et terne le bouillon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Faire bouillir, faire des bulles au centre. La vapeur sent clair et propre — des notes de vin fruité sans la morsure. Les échalotes boudent.",
+            "action": "Astucez toutes les moules en un seul mouvement et couvrez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide a été réduit à une fine piscine sirupeuse. Les échalotes s'attrapent au fond du pot.",
+            "action": "Ajouter une autre petite éclaboussure de vin ou d'eau pour restaurer suffisamment de volume pour créer de la vapeur."
+          }
+        ]
+      },
+      "feelCue": "Coupez votre main sur la vapeur qui s'élève de la casserole — elle doit sentir comme la mer avec une note de vin propre, pas comme l'intérieur d'une bouteille de vin."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "vapeur",
+      "inputs": [
+        "sorted_mussels",
+        "wine_broth"
+      ],
+      "outputState": "steamed_mussels",
+      "instructions": "Astucez toutes les moules triées dans le bouillon bouillant en un seul coup. Fermez immédiatement le couvercle et faites cuire à feu maximum pendant 3-4 minutes. Agiter vigoureusement le pot par les poignées une ou deux fois pendant la cuisson pour redistribuer les moules afin que chaque coquille soit directement en contact avec la vapeur. Soulevez le couvercle et inspectez : chaque coque doit être ouverte. Toute moule encore fermée après 6 minutes de cuisson totale doit être jetée — ils étaient morts avant d'entrer.",
+      "visualCue": {
+        "primaryTarget": "Un pot de moules larges ouvertes à la chair jaune orange vif, dans un bouillon riche en or ambre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Plusieurs coquilles sont encore serrées. Le bouillon est encore légèrement mijoté, pas complètement enroulé. La chair des moules à l'intérieur des coquilles ouvertes est encore grise et légèrement translucide.",
+            "action": "Remplacez immédiatement le couvercle et faites cuire 1 à 2 minutes de plus, en agitant le pot. Si les coquilles restent fermées après 6 minutes au total, retirez-les et jetez-les — ne les forcez pas à s'ouvrir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les coquillages sont larges. La chair est pluviale, entièrement opaque, et un safran-orange vif. Le papillon est d'or profond, parfumé et abondant.",
+            "action": "Retirer du feu instantanément — chaque seconde supplémentaire sur la chaleur durcit la chair."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair des moules a rétréci, frisé et est devenue caoutchouteuse. Certains se sont entièrement détachés de leurs coquilles. Le bouillon est réduit et intensément salé.",
+            "action": "Servir immédiatement, peu importe — le bouillon est toujours bon et les moules sont encore comestibles, juste plus mâcher. Il n'y a pas de sauvetage une fois trop cuit."
+          }
+        ]
+      },
+      "feelCue": "Agiter le pot à mi-cuisson — vous devriez entendre un tas de coquillages qui roulent ensemble. Un son mince et craquant signifie que les moules sont surtout des coquilles vides."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Garnir",
+      "inputs": [
+        "steamed_mussels",
+        "ing_05",
+        "ing_08"
+      ],
+      "outputState": "moules_marinieres",
+      "instructions": "Déposer les moules et chaque goutte de bouillon parfumé dans des bols profonds et chauds. Dispersez un généreux poing de persil haché approximativement sur chaque bol. Servir instantanément avec un panier de pain croustillant pour la garniture. Toute la casserole devrait atteindre la table dans les 90 secondes suivant la sortie de la chaleur — les moules sont le plat le plus sensible au temps dans la cuisine bistro française.",
+      "visualCue": {
+        "primaryTarget": "Des bols profonds empilés de coquilles noires à jet ouvert, de chair orange vif scintillent à l'intérieur, de persil vert vif éparpillé sur le dessus, bouillon doré à la vapeur pooled below.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le persil n'est pas encore ajouté. Les bols sont froids. Broth toujours dans la casserole.",
+            "action": "Chauffer les bols d'abord (remplir d'eau bouillante pendant 30 secondes, vide). Le persil n'est pas une décoration facultative — il ajoute une fraîcheur herbacée essentielle qui coupe la saumure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Persil vert vif et abondant. Brûlant et chatoyant. Les moules sont toutes ouvertes et oranges. Du pain à côté.",
+            "action": "Mangez immédiatement. Ne les laissez pas s'asseoir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les moules sont assises et refroidissent dans leurs coquilles. Le papillon est devenu une lécherette gélatineuse et congelante.",
+            "action": "Il n'y a pas de rétablissement. Servir l'instant où le pot quitte le poêle — les moules marinières n'attendent personne."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon dans la cuillère doit goûter simultanément salé, doux, vineux et océanique — une sauce complète née de la chaleur, du vin et de la liqueur de moules."
+    }
+  ]
 };

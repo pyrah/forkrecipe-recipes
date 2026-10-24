@@ -1,107 +1,245 @@
 export default {
-  repoId: "master_japanese_miso-soup_001",
-  parentRepoId: null,
-  slug: "miso-soup",
-  author: "ForkRecipe Kitchen",
-  title: "Classic Miso Soup",
-  description: "The quiet heartbeat of a Japanese breakfast — dashi softened with fermented soybean paste, served the moment it is ready, never a minute later.",
-  cuisine: "Japanese",
-  culture: "Washoku",
-  category: "stocks",
-  tags: ["soup", "japanese", "miso", "umami", "fermented"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-01-20",
-  updatedAt: "2024-11-15",
-  flavorRadar: { sweet: 1, salty: 5, sour: 1, bitter: 0, umami: 9, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",      name: "Dashi stock",           ratioValue: 100, defaultUnit: "parts", substitutions: ["kombu-shiitake dashi"] },
-    { ingId: "ing_02", role: "Umami",     name: "Awase miso (blended)", ratioValue: 8,   defaultUnit: "parts", substitutions: ["shiro miso", "aka miso"] },
-    { ingId: "ing_03", role: "Protein",   name: "Silken tofu",          ratioValue: 12,  defaultUnit: "parts", substitutions: ["firm tofu"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Wakame (dried seaweed)", ratioValue: 1, defaultUnit: "parts", substitutions: ["fresh wakame"] },
-    { ingId: "ing_05", role: "Allium",    name: "Scallion (green part)", ratioValue: 2,  defaultUnit: "parts", substitutions: ["mitsuba"] },
+  "repoId": "master_japanese_miso-soup_001",
+  "parentRepoId": null,
+  "slug": "miso-soup",
+  "author": "ForkRecipe Kitchen",
+  "title": "Soupe classique Miso",
+  "description": "Le cœur tranquille d'un petit déjeuner japonais — dashi ramolli avec de la pâte de soja fermentée, servi au moment où il est prêt, jamais une minute plus tard.",
+  "cuisine": "Japonais",
+  "culture": "Washoku",
+  "category": "stocks",
+  "tags": [
+    "Soupe",
+    "Japonais",
+    "miso",
+    "umami",
+    "fermenté"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-01-20",
+  "updatedAt": "2024-11-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 5,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 9,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Rehydrate",
-      inputs: ["ing_04"],
-      outputState: "bloomed_wakame",
-      instructions: "Place dried wakame in a small bowl of cold water. Let it soak until it has fully expanded and turned silky — about five minutes. Drain and gently squeeze out excess water.",
-      visualCue: {
-        primaryTarget: "Wakame has tripled in volume and turned a deep, translucent green — each frond is pliable and slightly slippery.",
-        spectrum: [
-          { state: "Underdone", description: "Pieces are still dark, shriveled, and leathery at the center.", action: "Continue soaking. Dried wakame reconstitutes unevenly, so give it another minute or two." },
-          { state: "Perfect",   description: "Uniformly green, soft, with a slight sheen. Tears easily between fingers.", action: "Drain and set aside." },
-          { state: "Overdone",  description: "Slimy, mushy, with a dull olive color. Falls apart when lifted.", action: "Use it — the flavor is intact, but cut back the amount slightly as it will dissolve into the broth." },
-        ],
-      },
-      feelCue: "Properly rehydrated wakame feels like wet silk between your fingers — if it feels gritty or stiff, it needs more time.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Stock de Dashi",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "kombu-shiitake dashi"
+      ]
     },
     {
-      nodeId: "step_2", action: "Heat",
-      inputs: ["ing_01"],
-      outputState: "warmed_dashi",
-      instructions: "Bring dashi to a gentle simmer over medium heat. You want steam and faint movement at the surface — never a rolling boil, which destroys the delicate aromatics.",
-      visualCue: {
-        primaryTarget: "Wisps of steam rising from the surface. Tiny bubbles forming around the edges of the pot but not breaking at the center.",
-        spectrum: [
-          { state: "Underdone", description: "No steam, no bubbles. Surface is still.", action: "Increase heat slightly and wait." },
-          { state: "Perfect",   description: "Gentle steam, occasional small bubbles at the perimeter. Surface shimmers but does not churn.", action: "Reduce heat to low and add tofu." },
-          { state: "Overdone",  description: "Full rolling boil with aggressive bubbling.", action: "Remove from heat immediately and let it settle — boiling muddies the clarity." },
-        ],
-      },
-      feelCue: "Hold your hand six inches above the pot — you should feel steady warmth, not blasting heat. The dashi should smell oceanic and clean.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Awase miso (complété)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Shiro miso",
+        "Aka miso"
+      ]
     },
     {
-      nodeId: "step_3", action: "Poach",
-      inputs: ["warmed_dashi", "ing_03"],
-      outputState: "tofu_in_dashi",
-      instructions: "Cut tofu into 1.5cm cubes and lower them gently into the dashi with a spoon. Let them warm through for two minutes on the lowest heat. Never stir — push gently if needed.",
-      visualCue: {
-        primaryTarget: "Tofu cubes are floating just below the surface, warmed through, with clean white edges intact.",
-        spectrum: [
-          { state: "Underdone", description: "Tofu cubes have sunk to the bottom and feel cold when one is fished out.", action: "Give them another minute. They are dense when cold and will rise slightly as they warm." },
-          { state: "Perfect",   description: "Cubes are suspended in the broth, edges sharp, surface smooth. A test cube is warm all the way through.", action: "Proceed to dissolve miso." },
-          { state: "Overdone",  description: "Cubes have developed a pockmarked, cratered surface. Broth around them is cloudy.", action: "The tofu boiled — it will be spongy. Lower heat and proceed. Flavor is still fine." },
-        ],
-      },
-      feelCue: "Lift a cube with a spoon and touch it — it should be bath-temperature warm, with a custard-like give, not rubbery resistance.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Tofu de soie",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tofu ferme"
+      ]
     },
     {
-      nodeId: "step_4", action: "Dissolve",
-      inputs: ["tofu_in_dashi", "ing_02"],
-      outputState: "miso_broth",
-      instructions: "Place miso in a ladle or small strainer. Submerge it halfway into the broth and stir with chopsticks until the paste has fully dissolved. This prevents lumps and keeps the broth from boiling. Never boil miso — it kills the living cultures and turns the flavor flat.",
-      visualCue: {
-        primaryTarget: "Broth has turned an opaque tawny-amber. No miso lumps visible. A gentle haze hangs evenly throughout — not settling to the bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of undissolved miso swirling in the broth. Gritty patches near the bottom.", action: "Return the ladle and continue stirring through it. Some misos are stubborn — pressing against the mesh helps." },
-          { state: "Perfect",   description: "Uniformly cloudy, warm amber throughout. Tastes balanced — salty, round, and deep.", action: "Remove from heat immediately." },
-          { state: "Overdone",  description: "Broth has boiled after miso was added — surface roiling. Flavor tastes flat and one-dimensional.", action: "Cannot undo, but a tiny splash of fresh miso stirred in off-heat can partially restore depth." },
-        ],
-      },
-      feelCue: "The aroma should bloom the moment the miso dissolves — earthy, warm, and slightly sweet, like a barn in autumn. If it smells sharp or acrid, the broth was too hot.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Wakame (algue séchée)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "wawame frais"
+      ]
     },
     {
-      nodeId: "step_5", action: "Assemble",
-      inputs: ["miso_broth", "bloomed_wakame", "ing_05"],
-      outputState: "finished_miso_soup",
-      instructions: "Add the drained wakame to the pot. Ladle the soup into warm bowls. Float thinly sliced scallion greens on the surface. Serve immediately — miso soup is a dish that cannot wait.",
-      visualCue: {
-        primaryTarget: "A warm bowl of amber broth with white tofu cubes, dark-green wakame fronds, and bright scallion rings floating on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Broth looks thin and watery. Garnishes have sunk.", action: "Check the miso ratio — you may need more. Scallions should be added last so they stay afloat." },
-          { state: "Perfect",   description: "Broth has body and opacity. Each ingredient is distinct and visible. The surface has a gentle sheen.", action: "Bring to the table. This is ready." },
-          { state: "Overdone",  description: "Wakame has broken down into the broth. Scallions are wilted and dull.", action: "Garnish with fresh scallion on top. The soup itself is still perfectly fine to eat." },
-        ],
-      },
-      feelCue: "The first sip should feel like a warm blanket — gentle heat, soft salinity, and a lingering sweetness at the back of the throat. If the salt hits first, the miso ratio was too high.",
-    },
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Échalote (partie verte)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mitsuba"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Réhydrater",
+      "inputs": [
+        "ing_04"
+      ],
+      "outputState": "bloomed_wakame",
+      "instructions": "Dans un petit bol d'eau froide, déposer le wakame séché. Laissez - le tremper jusqu'à ce qu'il ait complètement élargi et qu'il devienne soyeux — environ cinq minutes. Égoutter et presser doucement l'excès d'eau.",
+      "visualCue": {
+        "primaryTarget": "Wakame a triplé en volume et a tourné un vert profond et translucide — chaque fronde est souple et légèrement glissante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pièces sont encore sombres, râpées et en cuir au centre.",
+            "action": "Continuez à tremper. Le wakame séché se reconstitue inégalement, alors donnez-lui une minute ou deux de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement vert, doux, avec un léger reflet. Larmes facilement entre les doigts.",
+            "action": "Égoutter et réserver."
+          },
+          {
+            "state": "Overdone",
+            "description": "Slimy, musclé, avec une couleur olive terne. S'effondrent quand ils sont levés.",
+            "action": "Utilisez - le — la saveur est intacte, mais réduisez légèrement la quantité car elle se dissout dans le bouillon."
+          }
+        ]
+      },
+      "feelCue": "Le wakame bien réhydraté se sent comme de la soie humide entre vos doigts — s'il se sent dur ou raide, il a besoin de plus de temps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Chaleur",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "warmed_dashi",
+      "instructions": "Porter le dashi à feu doux à feu moyen. Vous voulez de la vapeur et un léger mouvement à la surface — jamais un ébullition qui détruit les aromatiques délicats.",
+      "visualCue": {
+        "primaryTarget": "Essence de vapeur montant de la surface. Petites bulles se formant autour des bords du pot mais ne se brisant pas au centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas de vapeur, pas de bulles. La surface est toujours là.",
+            "action": "Augmentez légèrement la chaleur et attendez."
+          },
+          {
+            "state": "Perfect",
+            "description": "vapeur douce, petites bulles occasionnelles au périmètre. La surface mijote mais ne bouge pas.",
+            "action": "Réduire la chaleur à faible et ajouter le tofu."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pleine ébullition avec des bulles agressives.",
+            "action": "Retirer immédiatement du feu et laisser reposer — bouillir la clarté."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main à six pouces au - dessus de la casserole — vous devriez sentir la chaleur régulière, et non la chaleur qui souffle. Le dashi doit sentir l'océan et nettoyer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Pochette",
+      "inputs": [
+        "warmed_dashi",
+        "ing_03"
+      ],
+      "outputState": "tofu_in_dashi",
+      "instructions": "Couper le tofu en cubes de 1,5 cm et les déposer doucement dans le dashi avec une cuillère. Laissez-les chauffer pendant deux minutes sur la chaleur la plus basse. Ne remuez jamais — poussez doucement si nécessaire.",
+      "visualCue": {
+        "primaryTarget": "Les cubes de tofu flottent juste sous la surface, chauffés à travers, avec des bords blancs propres intacts.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cubes de tofu ont coulé au fond et se sentent froids quand on est pêché.",
+            "action": "Donne-leur encore une minute. Ils sont denses quand ils sont froids et se lèveront légèrement quand ils seront chauds."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les cubes sont suspendus dans le bouillon, bords tranchants, surface lisse. Un cube de test est chaud jusqu'au bout.",
+            "action": "Continuez à dissoudre miso."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les cubes ont développé une surface cratère et écailleuse. Le bruit autour d'eux est nuageux.",
+            "action": "Le tofu bouilli — il sera spongieux. Baissez la chaleur et continuez. Le goût est toujours bon."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un cube avec une cuillère et touchez - le — il devrait être chaud au bain-température, avec une crème-comme donner, pas une résistance caoutchouteuse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Dissoudre",
+      "inputs": [
+        "tofu_in_dashi",
+        "ing_02"
+      ],
+      "outputState": "miso_broth",
+      "instructions": "Placer le miso dans une louche ou une petite souche. Submerger-le à mi-chemin dans le bouillon et remuer avec des baguettes jusqu'à ce que la pâte soit complètement dissoute. Cela empêche les grumeaux et empêche le bouillon de bouillir. Ne jamais faire bouillir le miso — il tue les cultures vivantes et fait fondre la saveur.",
+      "visualCue": {
+        "primaryTarget": "Broth est devenu un bourdon opaque. Pas de miseso visibles. Une légère brume s'accroche uniformément dans tout le pays, sans s'installer au fond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Streaks de miso non dissous tourbillonnant dans le bouillon. Les taches de gritty près du fond.",
+            "action": "Retournez la louche et continuez à la remuer. Certains misos sont têtus — appuyer sur le filet aide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre uniformément nuageuse et chaude. Goûts équilibrés — salés, ronds et profonds.",
+            "action": "Retirer immédiatement du feu."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon a bouilli après l'ajout de miso — rugissement de surface. Le goût est plat et unidimensionnel.",
+            "action": "Ne peut pas se défaire, mais une petite éclaboussure de miso frais agité en dehors de la chaleur peut partiellement restaurer la profondeur."
+          }
+        ]
+      },
+      "feelCue": "L'arôme devrait fleurir au moment où le miso se dissout — terreux, chaud et légèrement doux, comme une grange en automne. S'il sent aiguisé ou acride, le bouillon était trop chaud."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Assemblage",
+      "inputs": [
+        "miso_broth",
+        "bloomed_wakame",
+        "ing_05"
+      ],
+      "outputState": "finished_miso_soup",
+      "instructions": "Ajouter le wakame égoutté dans le pot. Déposer la soupe dans des bols chauds. Float mincement tranché vert pétoncle sur la surface. Servir immédiatement — la soupe miso est un plat qui ne peut pas attendre.",
+      "visualCue": {
+        "primaryTarget": "Un bol chaud de bouillon ambre avec des cubes de tofu blanc, des frondes de wakame vert foncé et des anneaux de pétoncle lumineux flottant à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth a l'air mince et aqueux. Les garnitures ont coulé.",
+            "action": "Vérifiez le rapport miso — vous pourriez avoir besoin de plus. Il faut ajouter les oignons pour qu'ils restent à flot."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le papillon a le corps et l'opacité. Chaque ingrédient est distinct et visible. La surface est douce.",
+            "action": "Amène-toi à la table. C'est prêt."
+          },
+          {
+            "state": "Overdone",
+            "description": "Wakame est tombé dans le bouillon. Les pétoncles sont flétris et ternes.",
+            "action": "Garnir d'échalote fraîche sur le dessus. La soupe elle-même est encore parfaitement bonne à manger."
+          }
+        ]
+      },
+      "feelCue": "La première gorgée devrait ressembler à une couverture chaude: chaleur douce, salinité douce et douceur persistante à l'arrière de la gorge. Si le sel frappe en premier, le rapport miso était trop élevé."
+    }
+  ]
 };

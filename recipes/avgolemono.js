@@ -1,79 +1,171 @@
 export default {
-  repoId: "master_greek_avgolemono_001",
-  parentRepoId: null,
-  slug: "avgolemono",
-  author: "ForkRecipe Kitchen",
-  title: "Avgolemono",
-  description: "Greece's silky egg-and-lemon emulsion — beaten eggs and lemon juice tempered into warm broth until the sauce thickens to a velvety consistency without scrambling, the kitchen's most elegant natural thickener.",
-  cuisine: "Greek",
-  culture: "Greek",
-  category: "sauces",
-  tags: ["greek", "egg", "lemon", "sauce", "thickener", "chicken"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 2, sour: 4, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Hot chicken or vegetable broth (well-seasoned)",        ratioValue: 4, defaultUnit: "parts", substitutions: ["lamb broth", "vegetable stock"] },
-    { ingId: "ing_02", role: "Protein",   name: "Large eggs",                                            ratioValue: 1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Acid",      name: "Fresh lemon juice (about 2 large lemons per 4 eggs)",  ratioValue: 1, defaultUnit: "parts", substitutions: ["Meyer lemon juice"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                                        ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_greek_avgolemono_001",
+  "parentRepoId": null,
+  "slug": "avgolemono",
+  "author": "ForkRecipe Kitchen",
+  "title": "Avolemono",
+  "description": "L'émulsion soyeuse d'oeufs et de citrons de Grèce — œufs battus et jus de citron trempés dans un bouillon chaud jusqu'à ce que la sauce s'épaississe à une consistance veloutée sans brouillage, l'épaississant naturel le plus élégant de la cuisine.",
+  "cuisine": "Grec",
+  "culture": "Grec",
+  "category": "sauces",
+  "tags": [
+    "grec",
+    "œuf",
+    "citron",
+    "sauce",
+    "épaississant",
+    "poulet"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 4,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk egg base",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "egg_lemon_base",
-      instructions: "Crack the eggs into a medium bowl and whisk vigorously for 1–2 minutes until completely homogeneous and slightly frothy — no streaks of white or separated yolk should remain. While still whisking, pour in the fresh lemon juice in a slow, steady stream. The mixture will turn paler and slightly thicker as the acid begins to partially denature the egg proteins — this is intentional and helps the emulsion hold under heat. The finished base should be a pale, foamy, uniformly yellow-cream liquid that smells intensely of fresh lemon with an underlying egg richness. Have the hot broth already simmering in a pot nearby before you begin the temper.",
-      visualCue: {
-        primaryTarget: "A pale, foamy, uniform pale-yellow liquid with a bright lemon fragrance — no streaks, no separation, and a slight increase in viscosity compared to unwhisked eggs.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of white are still visible and the yolk has not fully incorporated — the sauce will set unevenly and may leave rubbery strands of white in the finished dish.", action: "Whisk for another minute. The mixture should be fully homogeneous before adding lemon." },
-          { state: "Perfect",   description: "Pale, foamy, and completely uniform — pale cream-yellow with a faint sheen. Smells brightly of lemon with egg richness behind it.", action: "Proceed immediately to tempering while the broth is hot." },
-          { state: "Overdone",  description: "Mixture has been whisked so aggressively it is very foamy and has increased dramatically in volume — excess foam will cause the sauce to look bubbly rather than silky.", action: "Let it settle for 2 minutes before beginning the temper." },
-        ],
-      },
-      feelCue: "Dip a finger and taste — the raw lemon-egg mix should be bright and sharp, with a clean citrus hit that coats the tongue. It should feel slippery, not watery, from the emulsified yolk. This is the flavor backbone of the finished sauce, so taste it critically now.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "bouillon de poulet chaud ou de légumes (bien assaisonné)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bouillon d'agneau",
+        "stock de légumes"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Temper",
-      inputs: ["ing_01", "egg_lemon_base"],
-      outputState: "tempered_avgolemono",
-      instructions: "Have the hot broth at a bare simmer (just below boiling, about 85–90C). Using a ladle, pour a single ladle of hot broth into the egg-lemon mixture while whisking constantly and rapidly. The egg mixture will lighten and thin slightly as the first ladle hits. Add a second ladle, still whisking. Then a third. By the time you have added 3–4 ladles, the egg mixture will be warm and the temperature differential will be small enough that adding it back to the pot will not scramble it. Pour the tempered mixture back into the pot of broth in a slow stream while whisking the broth continuously. The temperature must remain below 85C throughout — if the broth is at a hard boil, remove from heat first.",
-      visualCue: {
-        primaryTarget: "After adding each ladle, the egg mixture should look progressively lighter and thinner, with no lumps or wisps of cooked egg — it should remain smooth and flowing at every stage of the temper.",
-        spectrum: [
-          { state: "Underdone", description: "Only one ladle has been added — the temperature differential is still too great to safely return the mixture to the pot. Adding it now will likely scramble the eggs.", action: "Add 2–3 more ladles before returning to the pot. Patience at this stage prevents broken sauce." },
-          { state: "Perfect",   description: "After 3–4 ladles, the mixture is warm to the touch, flowing freely, and still completely smooth. It smells of hot broth and lemon.", action: "Pour back into the pot in a slow stream while whisking, then immediately assess the consistency and heat." },
-          { state: "Overdone",  description: "Cooked egg wisps or lumps are visible in the tempered mixture — the ladle of broth was too hot, or the whisking stopped during the pour.", action: "Strain the tempered mixture through a fine sieve to remove the cooked bits, then return it carefully to the pot. The sauce will still work." },
-        ],
-      },
-      feelCue: "Touch the outside of the bowl after 3 ladles have been added — it should feel warm but not hot, somewhere between a comfortable bath and a hot cup of tea. That warmth tells you the temperature bridge has been safely built.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Gros œufs",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Finish and thicken",
-      inputs: ["tempered_avgolemono", "ing_04"],
-      outputState: "finished_avgolemono",
-      instructions: "With the tempered egg-lemon mixture now in the pot, heat over medium-low while stirring gently and constantly with a wooden spoon or spatula, making sure to reach the bottom and corners of the pot. The sauce will thicken gradually over 3–5 minutes as the egg proteins set at a low temperature, coating the spoon progressively more. Do not boil — the moment you see bubbles beginning to form at the edges, reduce heat immediately. The finished sauce should coat the back of a spoon with a smooth, velvety layer and leave a clean line when a finger is drawn through it. Taste and adjust salt. The sauce should taste brightly of lemon with a rich, savory broth behind it — neither element should dominate. Serve immediately or keep at around 70C to hold.",
-      visualCue: {
-        primaryTarget: "A pale, smooth, velvety sauce with a creamy ivory-gold color — opaque but glossy, with a consistency between double cream and a thin béchamel. No scrambled egg bits, no separation.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery — it runs off the spoon in a fast stream rather than coating it. The egg proteins have not had time to set and thicken the broth.", action: "Continue heating gently, stirring constantly. The thickening happens progressively and then suddenly — do not raise the heat to rush it." },
-          { state: "Perfect",   description: "Silky, opaque, and velvety — coats a spoon in a layer that holds for 3–4 seconds before running. Tastes bright and rich simultaneously. A small spoonful holds its shape briefly in a bowl.", action: "Serve immediately at this moment of peak silkiness." },
-          { state: "Overdone",  description: "The sauce has been boiled — it has curdled into small, pale lumps suspended in a thin, watery liquid. The egg has scrambled.", action: "Strain urgently through a fine-mesh sieve. The result will be a thinner but still flavorful sauce. The scrambled bits are not recoverable." },
-        ],
-      },
-      feelCue: "Draw a spoon through the sauce and tilt the pan — the sauce should flow slowly and reluctantly back into the gap, like warm cream. If it rushes to fill the gap like water, it needs more time. If it never flows back at all, it has overcooked to a custard.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Jus de citron frais (environ 2 grands citrons par 4 œufs)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Jus de citron Meyer"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Base d'œufs fouettés",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "egg_lemon_base",
+      "instructions": "Couper les œufs dans un bol moyen et fouetter vigoureusement pendant 1 à 2 minutes jusqu'à ce qu'ils soient complètement homogènes et légèrement mousseux — il ne faut pas laisser de traces de jaune blanc ou séparé. Pendant qu'il siffle encore, verser le jus de citron frais dans un ruisseau lent et stable. Le mélange devient plus pâle et légèrement plus épais lorsque l'acide commence à dénaturé partiellement les protéines de l'œuf, ce qui est intentionnel et aide l'émulsion à se maintenir sous la chaleur. La base finie doit être un liquide crème jaune pâle, mousseux et uniforme qui sent intensément le citron frais avec une richesse en oeuf sous-jacente. Avoir le bouillon chaud déjà mijoter dans un pot à proximité avant de commencer le tempérament.",
+      "visualCue": {
+        "primaryTarget": "Un liquide jaune pâle, mousseux et uniforme, avec un parfum de citron vif, sans stries, sans séparation et une légère augmentation de la viscosité par rapport aux œufs non broyés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les éclats de blanc sont encore visibles et le jaune n'a pas été entièrement incorporé — la sauce se met inégalement et peut laisser des brins caoutchouteux de blanc dans le plat fini.",
+            "action": "Whisky pour une minute. Le mélange doit être entièrement homogène avant d'ajouter du citron."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pale, mousseux, et complètement uniforme — jaune crème pâle avec un léger reflet. Ça sent le citron avec de la richesse en oeufs.",
+            "action": "Procédez immédiatement à la trempe pendant que le bouillon est chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a été fouetté de façon si agressive qu'il est très mousseux et a augmenté de façon spectaculaire en volume.",
+            "action": "Laisser reposer 2 minutes avant de commencer le tempérament."
+          }
+        ]
+      },
+      "feelCue": "Plongez le doigt et le goût — le mélange de citron et d'œuf cru doit être vif et vif, avec un coup d'agrumes propre qui enrobe la langue. Il devrait se sentir glissant, pas aqueux, du jaune émulsifié. C'est l'épine dorsale de saveur de la sauce finie, alors goûtez-le de façon critique maintenant."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Température",
+      "inputs": [
+        "ing_01",
+        "egg_lemon_base"
+      ],
+      "outputState": "tempered_avgolemono",
+      "instructions": "Avoir le bouillon chaud à mijoter (juste en dessous de l'ébullition, environ 85-90C). À l'aide d'une louche, verser une seule louche de bouillon chaud dans le mélange oeuf-lemon tout en fouettant constamment et rapidement. Le mélange d'oeufs s'éclaircit et s'amincit légèrement lorsque la première louche frappe. Ajouter une seconde louche, toujours fouetter. Puis un troisième. Lorsque vous aurez ajouté 3 à 4 louches, le mélange d'oeufs sera chaud et la différence de température sera suffisamment petite pour que l'ajouter au pot ne le brouille pas. Verser le mélange trempé dans le pot de bouillon dans un ruisseau lent tout en fouettant le bouillon en continu. La température doit rester en dessous de 85C pendant toute la durée du bouillon, si celui-ci est à ébullition dure, retirer de la chaleur d'abord.",
+      "visualCue": {
+        "primaryTarget": "Après l'ajout de chaque louche, le mélange d'oeufs doit avoir l'air progressivement plus léger et plus mince, sans grumeaux ni glissades d'oeufs cuits — il doit rester lisse et couler à chaque étape du tempérament.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Une seule louche a été ajoutée — la différence de température est encore trop grande pour renvoyer le mélange en toute sécurité dans la casserole. L'ajouter maintenant va probablement brouiller les œufs.",
+            "action": "Ajouter 2–3 autres louches avant de retourner dans le pot. La patience à ce stade empêche la sauce cassée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 3 à 4 louches, le mélange est chaud au toucher, coulant librement et encore complètement lisse. Ça sent le bouillon chaud et le citron.",
+            "action": "Verser dans le pot dans un ruisseau lent tout en fouettant, puis évaluer immédiatement la consistance et la chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les flocons d'œuf cuits ou les grumeaux sont visibles dans le mélange trempé — la louche du bouillon était trop chaude, ou le sifflement s'arrêtait pendant la coulée.",
+            "action": "Placer le mélange trempé dans un tamis fin pour enlever les morceaux cuits, puis le retourner soigneusement dans la casserole. La sauce marchera toujours."
+          }
+        ]
+      },
+      "feelCue": "Touchez l'extérieur du bol après avoir ajouté 3 louches — il devrait se sentir chaud mais pas chaud, quelque part entre un bain confortable et une tasse de thé chaud. Cette chaleur vous dit que le pont de température a été construit en toute sécurité."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Finition et épaississement",
+      "inputs": [
+        "tempered_avgolemono",
+        "ing_04"
+      ],
+      "outputState": "finished_avgolemono",
+      "instructions": "Avec le mélange d'oeufs et de citrons trempés maintenant dans la casserole, faire chauffer à feu moyen-doux tout en remuant doucement et constamment avec une cuillère en bois ou une spatule, en veillant à atteindre le fond et les coins de la casserole. La sauce s'épaissira progressivement pendant 3 à 5 minutes lorsque les protéines d'œuf seront fixées à basse température, enrobant progressivement la cuillère. Ne pas faire bouillir — au moment où vous voyez des bulles qui commencent à se former aux bords, réduisez immédiatement la chaleur. La sauce finie doit envelopper le dos d'une cuillère d'une couche lisse et veloutée et laisser une ligne propre lorsqu'un doigt est tiré à travers elle. Goûtez et ajustez le sel. La sauce doit avoir un goût brillant de citron avec un bouillon riche et salé derrière lui — aucun des éléments ne doit dominer. Servir immédiatement ou garder à environ 70C pour tenir.",
+      "visualCue": {
+        "primaryTarget": "Une sauce pâle, lisse et veloutée de couleur crème ivoire-or – opaque mais brillant, avec une consistance entre la double crème et un béchamel fin. Pas d'oeuf brouillé, pas de séparation.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse — elle s'écoule de la cuillère dans un flux rapide plutôt que de la couvrir. Les protéines des oeufs n'ont pas eu le temps de fixer et d'épaissir le bouillon.",
+            "action": "Continuer à chauffer doucement, en remuant constamment. L'épaississement se produit progressivement, puis soudainement — ne levez pas la chaleur pour la précipiter."
+          },
+          {
+            "state": "Perfect",
+            "description": "Silicieuse, opaque et veloutée — enveloppe une cuillère d'une couche qui tient 3-4 secondes avant de courir. Goûte lumineux et riche simultanément. Une petite cuillère tient sa forme brièvement dans un bol.",
+            "action": "Servir immédiatement à ce moment de pointe soyeux."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été bouillie; elle a été caillée en petites morceaux pâles, en suspension dans un liquide mince et aqueux. L'œuf est brouillé.",
+            "action": "Plongez d'urgence dans un tamis à mailles fines. Le résultat sera une sauce plus mince mais toujours saveur. Les morceaux brouillés ne sont pas récupérables."
+          }
+        ]
+      },
+      "feelCue": "Dessinez une cuillère à travers la sauce et inclinez la poêle – la sauce doit s'écouler lentement et à contrecœur revenir dans l'espace, comme de la crème chaude. Si elle se précipite pour combler l'écart comme l'eau, elle a besoin de plus de temps. S'il ne revient jamais du tout, il a trop cuit à une crème."
+    }
+  ]
 };

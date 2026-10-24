@@ -1,80 +1,182 @@
 export default {
-  repoId: "master_indonesian_sambal-oelek_001",
-  parentRepoId: null,
-  slug: "sambal-oelek",
-  author: "ForkRecipe Kitchen",
-  title: "Sambal Oelek",
-  description: "Indonesia's foundational raw chili paste — fresh red chilies, salt, and a splash of vinegar pounded in a mortar into a coarse, fiery paste whose pure chili heat and fruity freshness serve as the base of countless Indonesian dishes and the perfect condiment for everything else.",
-  cuisine: "Indonesian",
-  culture: "Indonesian",
-  category: "condiments",
-  tags: ["indonesian", "chili-sauce", "raw", "spicy", "vegan", "quick", "condiment"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 1, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",      name: "Fresh red Fresno or Holland chilies (medium heat), stems removed", ratioValue: 200, defaultUnit: "g", substitutions: ["bird's-eye chilies (much hotter — halve the quantity)", "red serrano chilies"] },
-    { ingId: "ing_02", role: "Heat",      name: "Fresh red bird's-eye chilies (cabe rawit), for heat boost (optional)", ratioValue: 20, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, peeled",                            ratioValue: 15, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                                    ratioValue: 8,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Acid",      name: "White vinegar or distilled cane vinegar",          ratioValue: 15, defaultUnit: "ml", substitutions: ["rice wine vinegar", "lime juice (for fresher flavour)"] },
+  "repoId": "master_indonesian_sambal-oelek_001",
+  "parentRepoId": null,
+  "slug": "sambal-oelek",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sambal Oelek",
+  "description": "La pâte de chili crue de base de l'Indonésie — des chilis rouges frais, du sel et une éclaboussure de vinaigre poncé dans un mortier dans une pâte grossière et ardente dont la chaleur de chili pur et la fraîcheur fruitée servent de base à d'innombrables plats indonésiens et le condiment parfait pour tout le reste.",
+  "cuisine": "Indonésien",
+  "culture": "Indonésien",
+  "category": "condiments",
+  "tags": [
+    "par an",
+    "chili-sauce",
+    "cru",
+    "épicé",
+    "végétalien",
+    "Vite",
+    "condiment"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Chop",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "rough_chopped_chilies",
-      instructions: "Roughly chop the Fresno chilies into large pieces — halve them lengthwise and cut into thirds. If you prefer a milder sambal, scrape out the seeds and white ribs with a spoon; for full heat, leave them in. If using bird's-eye chilies, leave them whole or halve them. Peel the garlic cloves. This rough prep is all that is needed before the mortar does its work — do not fine-mince. Keep seeds and juice from the cutting board; they are flavour.",
-      visualCue: {
-        primaryTarget: "Rough, large chunks of red chili and whole garlic cloves on the board — vibrantly red, glistening with juice and seeds.",
-        spectrum: [
-          { state: "Underdone", description: "Chilies are uncut and whole — they will not fit in the mortar easily and will take forever to pound.", action: "Roughly chop into thirds at minimum. The mortar needs surface area to grab." },
-          { state: "Perfect",   description: "Chunky, irregular pieces about 2–3 cm. Juices are running freely on the board. Seeds scattered throughout.", action: "Transfer to the mortar immediately — the juice is volatile and fresh-smelling." },
-          { state: "Overdone",  description: "Chilies are fine-minced and seeds are already crushed on the board.", action: "Proceed directly to seasoning — skip the pounding stage or it will become a liquid purée rather than a coarse paste." },
-        ],
-      },
-      feelCue: "The moment you cut the chilies, the capsaicin oils begin to volatilize — your eyes will know when the chilies are fresh and potent. Wear gloves if your skin is sensitive, and resist touching your face.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Frosno rouge frais ou chilis hollandais (chaleur moyenne), tiges enlevées",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Chilies oculaires d'oiseaux (plus chaudes — moitié de la quantité)",
+        "piments serrano rouges"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Pound",
-      inputs: ["rough_chopped_chilies", "ing_04"],
-      outputState: "coarse_sambal_base",
-      instructions: "Transfer the chopped chilies and garlic to a large granite or stone mortar. Add the salt — salt acts as an abrasive grit that helps break down the fibers faster. Pound with firm, deliberate downward strokes: the pestle should thud, not grind. Begin with harder downward blows to break down the larger pieces, then shift to a rotating, pressing grind for the final paste. The goal is a coarse, rustic paste with visible flecks of chili skin and seeds — not a smooth purée. Sambal oelek's character is its roughness; a blender makes it too uniform and drives off the fresh aroma. Pound for 3–4 minutes total.",
-      visualCue: {
-        primaryTarget: "A rough, vivid red paste with visible chunks of chili skin, scattered seeds, and a glistening, wet surface — chunky like a fresh salsa, not smooth like ketchup.",
-        spectrum: [
-          { state: "Underdone", description: "Large pieces of chili still intact, garlic not yet broken down. The mixture looks more like a rough chop than a paste.", action: "Continue pounding with more force. The garlic especially needs to be fully smashed to release its flavour." },
-          { state: "Perfect",   description: "Coarse, rustic paste — red, glistening, fragrant with chili heat. Seeds and skin flecks visible throughout. Garlic dissolved into the paste.", action: "Add the vinegar, stir, and taste for salt before jarring." },
-          { state: "Overdone",  description: "Paste has become a very smooth, uniform liquid — all texture lost, skin fragments gone.", action: "Stir in a few coarsely chopped fresh chili pieces to restore some texture. The flavour is still good, but authenticity is in the chunkiness." },
-        ],
-      },
-      feelCue: "After pounding, drag the pestle through the paste: it should feel like dragging through thick, gritty jam — resistance from chili skin and seeds, with the paste clinging to the stone.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Chilies rouges d'oiseaux frais (cabe roughit), pour un coup de chaleur (facultatif)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Season",
-      inputs: ["coarse_sambal_base", "ing_05"],
-      outputState: "finished_sambal_oelek",
-      instructions: "Pour the vinegar over the pounded paste and stir to combine. Taste carefully — it should be fiercely hot, brightly acidic, and cleanly salty, with the fresh, fruity aroma of raw chili dominant. Adjust: more salt for presence, more vinegar for brightness and preservation, more garlic pounded in for depth. Transfer to a clean glass jar and press the surface down to eliminate air pockets. Refrigerate. The sambal keeps for up to 2 weeks refrigerated — the vinegar and salt are natural preservatives. The colour will darken slightly from bright scarlet to a deeper red over the first 24 hours as it rests.",
-      visualCue: {
-        primaryTarget: "Vivid, scarlet-red, coarse paste glistening under a thin sheen of vinegar. Smells bright, sharp, fruity, and powerfully hot.",
-        spectrum: [
-          { state: "Underdone", description: "Paste tastes flat and only hot — no brightness, no salt presence, no acid lift.", action: "Add more salt in small pinches and stir, then add more vinegar drop by drop. The acid lifts all the other flavours; without it, sambal tastes one-dimensional." },
-          { state: "Perfect",   description: "A perfect triangle of heat, salt, and acid, with the raw fruity fragrance of the fresh chili coming through clearly. Burns pleasantly and builds.", action: "Jar it and refrigerate. Use immediately as a condiment or as a building block in cooked dishes." },
-          { state: "Overdone",  description: "Over-salted or the vinegar is so prominent it smells pickled rather than fresh.", action: "Add a small amount of freshly pounded chili to dilute and freshen. Once jarred, over-salted sambal cannot be easily fixed — use it sparingly as a seasoning paste rather than a condiment." },
-        ],
-      },
-      feelCue: "Touch a tiny amount to your lower lip with a clean finger — you should feel an immediate, bright sting that spreads rapidly across the lips, followed by a fruity heat that builds for 30 seconds. The vinegar should balance the burn with a clean, sharp brightness rather than muting it.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Giroves d'ail, pelées",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "vinaigre blanc ou vinaigre de canne distillé",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de vin de riz",
+        "jus de lime (pour une saveur plus fraîche)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Chop",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "rough_chopped_chilies",
+      "instructions": "Hacher à peu près le fresno en gros morceaux, les couper en deux dans le sens de la longueur et en troisièmes. Si vous préférez un sambal plus doux, raclez les graines et les côtes blanches avec une cuillère; pour le feu complet, laissez-les entrer. Si vous utilisez des piments à yeux d'oiseau, laissez-les entiers ou de moitié. Peler les gousses d'ail. Cette préparation rugueuse est tout ce qu'il faut avant que le mortier ne fasse son travail — ne le faites pas. Conserver les graines et le jus de la planche à découper; ils sont de la saveur.",
+      "visualCue": {
+        "primaryTarget": "De gros morceaux de chili rouge et de girofles d'ail entiers sur la planche, d'un rouge vif, scintillent avec du jus et des graines.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les chilies ne sont pas coupées et entières — elles ne s'intégreront pas facilement dans le mortier et prendront une durée indéfinie.",
+            "action": "Hacher à peu près les tiers au minimum. Le mortier a besoin d'une surface à saisir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Morceaux irréguliers d'environ 2 à 3 cm. Les jus courent librement sur la planche. Des graines éparpillées.",
+            "action": "Transférer immédiatement dans le mortier — le jus est volatil et frais."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les piments sont fins et les graines sont déjà écrasées sur le plateau.",
+            "action": "Aller directement à l'assaisonnement — sauter le stade de pilonnage ou il deviendra une purée liquide plutôt qu'une pâte grossière."
+          }
+        ]
+      },
+      "feelCue": "Au moment où vous coupez les piments, les huiles de capsaïcine commencent à se volatiliser — vos yeux sauront quand les piments sont frais et puissants. Portez des gants si votre peau est sensible et résistez à toucher votre visage."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Livre",
+      "inputs": [
+        "rough_chopped_chilies",
+        "ing_04"
+      ],
+      "outputState": "coarse_sambal_base",
+      "instructions": "Transférer les piments hachés et l'ail dans un grand mortier de granit ou de pierre. Ajouter le sel — le sel agit comme un grain abrasif qui aide à décomposer les fibres plus rapidement. Pound avec des coups fermes et délibérés vers le bas: le pestle devrait tud, pas broyer. Commencez par des coups plus dures vers le bas pour décomposer les pièces plus grandes, puis passez à une mouture tournante, en appuyant pour la pâte finale. Le but est une pâte grossière et rustique avec des taches visibles de peau de chili et de graines — pas une purée lisse. Le caractère de Sambal oelek est sa rugosité ; un mélangeur le rend trop uniforme et élimine l'arôme frais. Livre pour 3-4 minutes au total.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rouge rugueuse et vive avec des morceaux visibles de peau de chili, des graines éparpillées, et une surface brillante et humide — un morceau comme une salsa fraîche, non lisse comme du ketchup.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De grands morceaux de chili encore intacts, l'ail n'est pas encore décomposé. Le mélange ressemble plus à une côte brute qu'à une pâte.",
+            "action": "Continuez à frapper avec plus de force. L'ail doit particulièrement être complètement écrasé pour libérer sa saveur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte grossière, rustique, rouge, étincelante, parfumée à la chaleur de chili. Graines et taches de peau visibles partout. L'ail est dissous dans la pâte.",
+            "action": "Ajouter le vinaigre, remuer et goûter au sel avant de jarrer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est devenue un liquide très lisse et uniforme — toute texture perdue, fragments de peau partis.",
+            "action": "Incorporer quelques morceaux de chili frais hachés grossièrement pour restaurer une certaine texture. La saveur est encore bonne, mais l'authenticité est dans le brouillon."
+          }
+        ]
+      },
+      "feelCue": "Après le pilonnage, faites glisser le pilon à travers la pâte: il devrait avoir l'impression de traîner à travers une confiture épaisse et gritty — résistance de la peau de chili et des graines, avec la pâte accrochée à la pierre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "coarse_sambal_base",
+        "ing_05"
+      ],
+      "outputState": "finished_sambal_oelek",
+      "instructions": "Verser le vinaigre sur la pâte et mélanger. Goûtez soigneusement — il doit être farouchement chaud, légèrement acide et proprement salé, avec l'arôme frais et fruité du chili brut dominant. Ajuster: plus de sel pour la présence, plus de vinaigre pour la luminosité et la conservation, plus d'ail piqué pour la profondeur. Transférer dans un pot en verre propre et appuyer sur la surface pour éliminer les poches d'air. Réfrigérer. Le sambal reste réfrigéré jusqu'à 2 semaines, le vinaigre et le sel sont des conservateurs naturels. La couleur s'obscurcit légèrement de l'écarlate brillante à un rouge plus profond au cours des premières 24 heures pendant qu'elle repose.",
+      "visualCue": {
+        "primaryTarget": "Pâte vive, rouge écarlate, grossière scintillement sous un mince éclat de vinaigre. Sens lumineux, vif, fruité et très chaud.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte a un goût plat et seulement chaud: pas de luminosité, pas de présence de sel, pas de lifting acide.",
+            "action": "Ajouter plus de sel dans les petites pinces et remuer, puis ajouter plus de vinaigre goutte à goutte. L'acide soulève toutes les autres saveurs; sans elle, le sambal a un goût unidimensionnel."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un triangle parfait de chaleur, de sel et d'acide, avec le parfum fruité brut du chili frais qui passe clairement. Brûle agréablement et construit.",
+            "action": "Jar et réfrigérer. Utiliser immédiatement comme condiment ou comme bloc de construction dans les plats cuits."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sursalé ou le vinaigre est si proéminent qu'il sent mariné plutôt que frais.",
+            "action": "Ajouter une petite quantité de chili fraîchement piquée pour diluer et fraicher. Une fois jarré, le sambal sursalté ne peut pas être facilement fixé — l'utiliser avec parcimonie comme pâte assaisonnée plutôt qu'un condiment."
+          }
+        ]
+      },
+      "feelCue": "Touchez une petite quantité à votre lèvre inférieure avec un doigt propre — vous devriez sentir une piqûre vive et immédiate qui se répand rapidement sur les lèvres, suivie d'une chaleur fruitée qui se construit pendant 30 secondes. Le vinaigre devrait équilibrer la brûlure avec une luminosité nette et nette plutôt que de la muter."
+    }
+  ]
 };

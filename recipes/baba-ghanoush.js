@@ -1,83 +1,207 @@
 export default {
-  repoId: "master_middleeastern_babaghanoush_001",
-  parentRepoId: null,
-  slug: "baba-ghanoush",
-  author: "ForkRecipe Kitchen",
-  title: "Baba Ghanoush",
-  description: "Char-roasted eggplant scooped from its skin and beaten with tahini, lemon, and garlic into a smoky, silken dip that carries the ghost of fire in every bite.",
-  cuisine: "Middle Eastern",
-  culture: "Levantine",
-  category: "vegetables",
-  tags: ["levantine", "middle-eastern", "eggplant", "dip", "smoky", "vegan", "meze"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 2, sour: 3, bitter: 2, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Large globe eggplants (aubergines)",    ratioValue: 2,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Tahini (well-stirred)",                 ratioValue: 60,  defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_03", role: "Acid",      name: "Fresh lemon juice",                     ratioValue: 45,  defaultUnit: "ml",   substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves",                         ratioValue: 2,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine salt",                             ratioValue: 6,   defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Extra-virgin olive oil",                ratioValue: 30,  defaultUnit: "ml",   substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Smoked paprika",                        ratioValue: 2,   defaultUnit: "g",    substitutions: ["pul biber (Aleppo pepper)"] },
-    { ingId: "ing_08", role: "Garnish",   name: "Flat-leaf parsley, roughly chopped",    ratioValue: 10,  defaultUnit: "g",    substitutions: ["fresh mint"] },
+  "repoId": "master_middleeastern_babaghanoush_001",
+  "parentRepoId": null,
+  "slug": "baba-ghanoush",
+  "author": "ForkRecipe Kitchen",
+  "title": "Baba Ghanoush",
+  "description": "L'aubergine grillée à l'char a écopé de sa peau et battue avec du tahini, du citron et de l'ail dans une trempe fumée et soyeuse qui porte le fantôme du feu dans chaque bouchée.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Levantine",
+  "category": "vegetables",
+  "tags": [
+    "lévantine",
+    "Moyen-Orient",
+    "aubergines",
+    "trempette",
+    "fumée",
+    "végétalien",
+    "meze"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 2,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_01"],
-      outputState: "charred_eggplant",
-      instructions: "Place whole eggplants directly on a gas burner set to high flame, or as close as possible to a very hot grill or broiler element. Char on all sides, turning with tongs every 3–4 minutes, until the entire exterior is blackened and the eggplant has completely collapsed and feels hollow. This takes 15–20 minutes total. The more thoroughly charred, the deeper the smoke.",
-      visualCue: {
-        primaryTarget: "The entire outer skin is blackened, papery, and cracking. The eggplant has visibly collapsed and deflated — it looks defeated, small relative to where it started.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is only spotted with char; eggplant still feels firm and full when squeezed. The flesh inside will be fibrous and taste raw.", action: "Continue charring over direct flame, turning to reach unblackened patches." },
-          { state: "Perfect",   description: "All surfaces are deeply black and papery. The eggplant collapses fully when lifted — almost weightless. Steam hisses from splits in the skin.", action: "Transfer to a covered bowl and steam for 10 minutes to loosen the skin." },
-          { state: "Overdone",  description: "Skin has burned entirely through in patches; flesh is exposed and drying out on the flame.", action: "Remove immediately and proceed. Some ash may enter the flesh — pick it out during scooping." },
-        ],
-      },
-      feelCue: "Squeeze the eggplant gently through a towel — it should feel like a deflated balloon, soft and yielding throughout, with no firm pockets of uncooked flesh.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Grandes aubergines (aubergines)",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Strain",
-      inputs: ["charred_eggplant"],
-      outputState: "drained_eggplant_flesh",
-      instructions: "Place the charred eggplants in a colander over a bowl. Cover the colander and let them steam for 10 minutes — this loosens the skin and allows the eggplant to release bitter liquid. Peel away all the charred skin with your fingers, working carefully to remove any large patches of black. Discard the liquid that has collected. Allow the drained flesh to sit for a further 5 minutes to shed more liquid.",
-      visualCue: {
-        primaryTarget: "Pale, moist, smoke-scented flesh with no remaining patches of black skin. The colander holds a small pool of dark, bitter liquid beneath.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is sticking and tearing the flesh; liquid is still running freely. The flesh looks wet.", action: "Give it more time — the steam is still working. Do not rush the draining step or the dip will be watery." },
-          { state: "Perfect",   description: "Flesh is silky, pale grey-beige, and cohesive. Most liquid has drained. Skin peels away cleanly.", action: "Transfer flesh to a wide bowl and proceed with mashing." },
-          { state: "Overdone",  description: "Flesh has dried out and is becoming stringy and fibrous from sitting too long.", action: "Proceed immediately — add the tahini right away to bind and moisten before it dries further." },
-        ],
-      },
-      feelCue: "The flesh should feel like cool, wet silk between your fingers — soft and collapsing, with occasional stringy fibers from the seed cavities.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Tahini (bien ciré)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["drained_eggplant_flesh", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "finished_baba_ghanoush",
-      instructions: "Using a fork or pestle, mash the garlic with the salt to a smooth paste. Add the eggplant flesh and mash roughly — some texture is welcome. Beat in the tahini and lemon juice in alternating additions, tasting as you go. The dip will tighten and turn creamy as the tahini emulsifies with the eggplant. Adjust salt and lemon aggressively — it needs more than you expect. Transfer to a serving plate, make a well with the back of a spoon, drizzle with olive oil, dust with paprika, and scatter parsley.",
-      visualCue: {
-        primaryTarget: "A creamy, pale dove-grey dip with visible smoke-darkened threads of eggplant. The surface catches the light with a sheen of olive oil pooling in the central well.",
-        spectrum: [
-          { state: "Underdone", description: "Dip looks grainy and separated — tahini has not incorporated; eggplant and fat are distinct.", action: "Beat more vigorously with a fork in circular strokes, adding lemon juice a teaspoon at a time." },
-          { state: "Perfect",   description: "Smooth and cohesive with slight coarse texture from the eggplant. The dip holds a swirl and the color is uniformly pale grey with no dark streaks of unmixed tahini.", action: "Taste for salt and lemon — it should be bright and assertive. Plate and drizzle." },
-          { state: "Overdone",  description: "Over-beaten to a completely smooth, featureless paste. Some of the rustic character has been lost.", action: "Fold in a small piece of roughly mashed eggplant to restore texture." },
-        ],
-      },
-      feelCue: "The finished dip should feel silky and substantial on a spoon — it holds its shape briefly before spreading, like a very thick cream. The smoke should hit the back of your throat first, then lemon, then salt.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 2,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pul biber (poivre d'Alep)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "menthe fraîche"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "charred_eggplant",
+      "instructions": "Placer les aubergines entières directement sur un brûleur à gaz à haute flamme, ou aussi près que possible d'un grill ou d'un élément de grille très chaud. Char de tous les côtés, tournant avec des pinces toutes les 3-4 minutes, jusqu'à ce que tout l'extérieur soit noirci et que l'aubergine se soit complètement effondrée et se sente creuse. Cela prend 15-20 minutes au total. Plus la fumée est carbonisée, plus la fumée est profonde.",
+      "visualCue": {
+        "primaryTarget": "Toute la peau extérieure est noircie, papier et craquelée. L'aubergine s'est visiblement effondrée et dégonflée — elle semble vaincue, petite par rapport à l'endroit où elle a commencé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau n'est tachetée qu'avec de l'omble; l'aubergine est encore ferme et pleine lorsqu'elle est pressée. La chair intérieure sera fibreuse et aura un goût cru.",
+            "action": "Continuer à carboniser au-dessus d'une flamme directe, tourner pour atteindre des taches non noircies."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toutes les surfaces sont profondément noires et papiers. L'aubergine s'effondre complètement lorsqu'elle est levée, presque sans poids. Steam siffle des fentes dans la peau.",
+            "action": "Transférer dans un bol couvert et vapeur pendant 10 minutes pour desserrer la peau."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau s'est entièrement brûlée; la chair est exposée et sèche sur la flamme.",
+            "action": "Supprimer immédiatement et procéder. Certains cendres peuvent entrer dans la chair — le choisir pendant le scoop."
+          }
+        ]
+      },
+      "feelCue": "Pressez l'aubergine doucement à travers une serviette — il devrait se sentir comme un ballon dégonflé, doux et donnant partout, sans poches fermes de chair non cuite."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Poignée",
+      "inputs": [
+        "charred_eggplant"
+      ],
+      "outputState": "drained_eggplant_flesh",
+      "instructions": "Placez les aubergines carbonisées dans une calandre sur un bol. Couvrez la calandre et laissez-les cuire 10 minutes, ce qui relâche la peau et permet à l'aubergine de libérer du liquide amer. Épluchez toute la peau carbonisée avec vos doigts, en travaillant avec soin pour enlever toute grande tache de noir. Jetez le liquide qui a été recueilli. Laisser la chair drainée s'asseoir encore 5 minutes pour verser plus de liquide.",
+      "visualCue": {
+        "primaryTarget": "Peau pâle, humide, parfumée à la fumée sans taches de peau noire restantes. La calandre contient un petit bassin de liquide sombre et amer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau colle et déchire la chair; le liquide fonctionne toujours librement. La chair semble mouillée.",
+            "action": "Donnez-lui plus de temps — la vapeur fonctionne toujours. Ne précipitez pas l'étape de vidange ou la trempette sera aqueuse."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair est soyeuse, beige gris pâle et cohésive. La plupart des liquides sont drainés. La peau s'éloigne complètement.",
+            "action": "Transférer la chair dans un grand bol et procéder à la mastication."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair s'est séchée et devient fibreuse et s'assoie trop longtemps.",
+            "action": "Continuez immédiatement — ajoutez immédiatement les tahini pour les lier et les humidifier avant qu'ils ne sèchent davantage."
+          }
+        ]
+      },
+      "feelCue": "La chair doit se sentir comme de la soie fraîche et humide entre vos doigts — douce et s'effondrer, avec des fibres à cordes occasionnelles provenant des cavités des graines."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "drained_eggplant_flesh",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_baba_ghanoush",
+      "instructions": "À l'aide d'une fourchette ou d'un peste, écraser l'ail avec le sel dans une pâte lisse. Ajouter la chair et la purée d'aubergine à peu près — une certaine texture est la bienvenue. Battre dans le tahini et le jus de citron en alternant les additions, en dégustant au fur et à mesure. La trempette se serre et devient crémeuse à mesure que le tahini émulsifie avec l'aubergine. Ajustez le sel et le citron avec agressivité — il a besoin de plus que vous ne vous attendez. Transférer dans une assiette de service, faire un puits avec le dos d'une cuillère, arroser avec l'huile d'olive, la poussière avec le paprika, et disperser le persil.",
+      "visualCue": {
+        "primaryTarget": "Plongée crémeuse, gris colombe pâle, avec des fils d'aubergine visibles déchiquetés par la fumée. La surface prend la lumière avec un éclat d'huile d'olive pooling dans le puits central.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Dip semble granuleux et séparé — le tahini n'a pas été incorporé; aubergines et graisses sont distinctes.",
+            "action": "Battre plus vigoureusement avec une fourchette en coups circulaires, en ajoutant du jus de citron une cuillère à café à la fois."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lisse et cohésive avec une légère texture grossière de l'aubergine. La trempette tient un tourbillon et la couleur est uniformément gris pâle sans stries foncées de tahini non mélangé.",
+            "action": "Goûtez au sel et au citron — il devrait être brillant et affirmé. Plaque et bruine."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sur-battez à une pâte complètement lisse et sans caractéristiques. Une partie du caractère rustique a été perdue.",
+            "action": "Plier dans un petit morceau d'aubergine grossièrement purée pour restaurer la texture."
+          }
+        ]
+      },
+      "feelCue": "Le plongeon fini doit se sentir soyeux et substantiel sur une cuillère — il tient sa forme brièvement avant de s'étendre, comme une crème très épaisse. La fumée devrait frapper l'arrière de votre gorge d'abord, puis le citron, puis le sel."
+    }
+  ]
 };

@@ -1,97 +1,270 @@
 export default {
-  repoId: "master_peruvian_ceviche_001",
-  parentRepoId: null,
-  slug: "ceviche",
-  author: "ForkRecipe Kitchen",
-  title: "Ceviche",
-  description: "Limeño ceviche at its purest — cubes of pearly white fish flashed in raw lime, garlic, and aji until the edges turn opaque, swimming in the cloudy, fiery, citrus-sharp leche de tigre that Peruvians drink straight from the bowl. Cool sweet potato and crunchy corn ride alongside to tame the burn.",
-  cuisine: "Peruvian",
-  culture: "Limeño",
-  category: "seafood",
-  tags: ["ceviche", "peruvian", "raw fish", "lime", "aji", "leche de tigre"],
-  difficulty: 3,
-  activeTime: "25 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 1, salty: 3, sour: 5, bitter: 1, umami: 3, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Firm white ocean fish, skinless and boneless (corvina, sea bass, halibut, or fluke)", ratioValue: 100, defaultUnit: "parts", substitutions: ["flounder", "snapper", "sushi-grade hamachi"] },
-    { ingId: "ing_02", role: "Citrus",    name: "Fresh lime juice (key/Mexican limes preferred, never bottled)", ratioValue: 60, defaultUnit: "parts", substitutions: ["a splash of bitter orange for a softer acid"] },
-    { ingId: "ing_03", role: "Heat",      name: "Aji limo or fresh habanero, seeded and minced", ratioValue: 5, defaultUnit: "parts", substitutions: ["aji amarillo paste", "Fresno chile for a milder bowl"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic clove, grated to a paste", ratioValue: 4, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Fresh ginger, finely grated (optional Nikkei accent)", ratioValue: 3, defaultUnit: "parts", substitutions: ["omit for a classic criollo bowl"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt", ratioValue: 4, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Allium",    name: "Red onion, sliced paper-thin (sliced with the grain)", ratioValue: 30, defaultUnit: "parts", substitutions: ["shallot"] },
-    { ingId: "ing_08", role: "Herb",      name: "Cilantro leaves, roughly chopped", ratioValue: 6, defaultUnit: "parts", substitutions: ["culantro / sawtooth herb"] },
-    { ingId: "ing_09", role: "Starch",    name: "Sweet potato (camote), boiled and sliced into rounds", ratioValue: 50, defaultUnit: "parts", substitutions: ["boiled cassava"] },
-    { ingId: "ing_10", role: "Garnish",   name: "Choclo or boiled corn kernels / toasted cancha", ratioValue: 25, defaultUnit: "parts", substitutions: ["sweet corn kernels"] },
+  "repoId": "master_peruvian_ceviche_001",
+  "parentRepoId": null,
+  "slug": "ceviche",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ceviche",
+  "description": "Limeño ceviche à son plus pur — des cubes de poisson blanc nacré clignotaient dans de la chaux crue, de l'ail et de l'aji jusqu'à ce que les bords deviennent opaques, nageant dans la leche de tigre nuageuse, ardente et agrumes que les Péruviens boivent directement dans le bol. La patate douce fraîche et le maïs croquant chevauchent à côté pour apprivoiser la brûlure.",
+  "cuisine": "Pérou",
+  "culture": "Limeño",
+  "category": "seafood",
+  "tags": [
+    "Ceviche",
+    "périuvien",
+    "Poisson cru",
+    "Chaux",
+    "Aji",
+    "leche de tigre"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "25 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 5,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Cure",
-      inputs: ["ing_09", "ing_07"],
-      outputState: "prepped_garnishes",
-      instructions: "Boil the unpeeled sweet potato whole until a knife slides through with no resistance, 20 to 30 minutes, then cool, peel, and slice into thick rounds — it must be ready to serve before the fish ever touches lime. Meanwhile slice the red onion paper-thin and soak it in ice water for 10 minutes to strip its raw bite, then drain and dry it well. Cold, sweet camote and crisp, mellow onion are the counterweights to the acid and heat that come next.",
-      visualCue: {
-        primaryTarget: "Sweet potato rounds are tender and brilliant orange, holding their shape; the red onion is crisp, translucent, and no longer sharp-smelling.",
-        spectrum: [
-          { state: "Underdone", description: "The sweet potato is firm at the center and the onion still stings the nose and bites hot on the tongue.", action: "Cook the camote longer until fully soft, and give the onion a fresh ice-water soak — limp, harsh onion ruins the plate." },
-          { state: "Perfect",   description: "Camote is creamy-soft all the way through and the drained onion is crisp, glassy, and gently sweet.", action: "Set both aside, cold, and move to building the leche de tigre." },
-          { state: "Overdone",  description: "The sweet potato has collapsed to mush and the onion has gone floppy and waterlogged.", action: "Slice fresh rounds from a firmer section if the potato is too far gone; pat the onion bone-dry and use it anyway." },
-        ],
-      },
-      feelCue: "A finished camote round should yield to gentle finger pressure like a ripe avocado. The drained onion should still snap when bent. Everything here stays cold — warmth is the enemy of crisp ceviche.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Poisson blanc ferme, sans peau et désossé (corvina, bar, flétan ou flocons)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Flotteur",
+        "snapper",
+        "Hamachi de qualité sushi"
+      ]
     },
     {
-      nodeId: "step_2", action: "Mix",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "leche_de_tigre",
-      instructions: "Squeeze the limes gently by hand — never wring them to the rind, which releases bitter pith oils. In a bowl, whisk the fresh lime juice with the grated garlic, minced aji, optional ginger, and the salt until the salt dissolves. This is the leche de tigre, the tiger's milk: it should taste aggressively bright, garlicky, hot, and a touch too salty on its own, because the fish will quickly pull it into balance.",
-      visualCue: {
-        primaryTarget: "A pale, slightly cloudy, pourable liquid flecked with garlic and chile, smelling sharply of lime with a chile prickle in the nose.",
-        spectrum: [
-          { state: "Underdone", description: "The liquid tastes flat and watery, with no salt edge and only a weak chile presence.", action: "Add salt a pinch at a time and more minced aji until it tastes vivid and almost too intense on its own." },
-          { state: "Perfect",   description: "Bracingly tart and savory, with clear garlic warmth and a building chile heat, salted just past comfortable.", action: "Move quickly to the fish — leche de tigre is at its best within minutes of mixing." },
-          { state: "Overdone",  description: "The juice tastes harshly bitter and resinous, with a sharp metallic edge.", action: "You squeezed the limes too hard or let it sit too long. Cut the bitterness with a few drops of fresh juice and a tiny pinch of sugar." },
-        ],
-      },
-      feelCue: "Dip a fingertip and taste: it should make you wince a little and warm at the back of the throat. If your eyes water from the chile and the lime, it is exactly right — the bland fish will round off all those sharp corners.",
+      "ingId": "ing_02",
+      "role": "Citrus",
+      "name": "Jus de chaux frais (choix/chaux mexicaine préférée, jamais embouteillé)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une touche d'orange amère pour un acide plus doux"
+      ]
     },
     {
-      nodeId: "step_3", action: "Cure",
-      inputs: ["ing_01", "leche_de_tigre"],
-      outputState: "cured_fish",
-      instructions: "Cut the chilled, scrupulously fresh fish into even half-inch cubes — uniform pieces cure at the same rate. Fold the fish into the leche de tigre so every cube is bathed, then let it sit just 2 to 5 minutes for the modern Limeño style. The acid denatures the surface proteins, turning the edges opaque and firm while the centers stay tender and almost raw. Do not walk away — over-curing turns ceviche chalky and tough.",
-      visualCue: {
-        primaryTarget: "Fish cubes have whitened and firmed at the edges but show a faint translucent line at the very center; the surrounding liquid has turned milkier as proteins release.",
-        spectrum: [
-          { state: "Underdone", description: "Cubes are still glossy and translucent throughout with a slippery, fully-raw texture and bland flavor.", action: "Stir gently and give it another minute, tasting a cube every 30 seconds until the edges turn opaque but the center stays tender." },
-          { state: "Perfect",   description: "Edges are opaque white and just-firm while the centers stay juicy and barely translucent; a cube flakes cleanly but tastes succulent, not chalky.", action: "Stop the cure immediately — fold in the aromatics and plate." },
-          { state: "Overdone",  description: "Cubes are opaque white all the way through, firm and rubbery, with a dry, cooked, cottony bite.", action: "It has over-cured into 'cooked' fish. Drain off most of the leche de tigre, serve at once, and cut the curing time next round." },
-        ],
-      },
-      feelCue: "A perfectly cured cube has a gentle resistance like a ripe plum — firm skin, soft inside — never the squeak of raw fish nor the dry crumble of overcooked. The liquid thickens and turns opaque as it works.",
+      "ingId": "ing_03",
+      "role": "Heat",
+      "name": "Limone aji ou habanero frais, ensemencée et hachée",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pâte aji amarillo",
+        "Fresno chile pour un bol plus doux"
+      ]
     },
     {
-      nodeId: "step_4", action: "Finish",
-      inputs: ["cured_fish", "ing_07", "ing_08", "prepped_garnishes", "ing_10"],
-      outputState: "finished_ceviche",
-      instructions: "Off the heat of the acid, gently fold the drained red onion and most of the cilantro into the cured fish so they stay crisp and bright. Taste the leche de tigre one last time and correct the salt, lime, and heat. Spoon the fish and its cloudy liquid into a cold shallow bowl, lean the sweet potato rounds against one side, scatter the corn or toasted cancha, and crown with the remaining cilantro. Serve immediately, while everything is icy and the cure is at its peak.",
-      visualCue: {
-        primaryTarget: "A glistening mound of opaque-edged fish in a pool of milky, green-and-red-flecked leche de tigre, with vivid orange camote and pale corn framing the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "The bowl looks pale and tastes timid — not enough salt or chile, the onion barely present.", action: "Adjust the leche de tigre with salt, a squeeze of lime, and more minced aji, then fold through and re-plate." },
-          { state: "Perfect",   description: "Bright, balanced, and alive: tart and savory with a clean chile burn, the fish tender, the onion crisp, the camote cool and sweet against the heat.", action: "Serve at once with the leche de tigre to drink, ideally within a few minutes of plating." },
-          { state: "Overdone",  description: "The fish has continued curing on the plate into firm, chalky cubes and the onion has wilted into the acid.", action: "There is no rescue — ceviche does not keep. Serve immediately next time and cure the fish to order." },
-        ],
-      },
-      feelCue: "The contrast is everything: cold, soft, sweet camote against hot, sharp, citrusy fish; crisp onion against tender cube. The leche de tigre at the bottom should be worth drinking on its own — that pooled tiger's milk is the soul of the dish.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousse d'ail râpée à la pâte",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Gingembre frais, finement râpé (accent Nikkei en option)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omit pour un bol criollo classique"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Oignon rouge, en tranches de papier-fin (collé avec le grain)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalote"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Feuilles de cilantro, hachées approximativement",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Culantro / herbe à dents de scie"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Starch",
+      "name": "Pommes de terre douces (camote), bouillies et coupées en rondelles",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "manioc bouilli"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Amandes de maïs Choclo ou bouillies/cancha grillée",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "grains de maïs doux"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Cure",
+      "inputs": [
+        "ing_09",
+        "ing_07"
+      ],
+      "outputState": "prepped_garnishes",
+      "instructions": "Faire bouillir la patate douce non pelée entière jusqu'à ce qu'un couteau glisse sans résistance, 20 à 30 minutes, puis refroidir, peler et trancher en rondelles épaisses — il doit être prêt à servir avant que le poisson ne touche jamais la chaux. Pendant ce temps, couper le papier d'oignon rouge-mince et le tremper dans l'eau glacée pendant 10 minutes pour retirer sa bouchée brute, puis l'égoutter et bien le sécher. Camote froide, douce et croquante, l'oignon moelleux sont les contrepoids à l'acide et à la chaleur qui viennent ensuite.",
+      "visualCue": {
+        "primaryTarget": "Les rondelles de patates douces sont tendres et orange brillant, tenant leur forme; l'oignon rouge est croquant, translucide et ne dégage plus d'odeur vive.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La patate douce est ferme au centre et l'oignon pique encore le nez et mord chaud sur la langue.",
+            "action": "Faire cuire la camote plus longtemps jusqu'à ce qu'elle soit complètement molle, et faire tremper l'oignon dans l'eau fraîche de glace."
+          },
+          {
+            "state": "Perfect",
+            "description": "Camote est crémeuse-douce tout le long du chemin et l'oignon égoutté est croquant, vitreux et doux.",
+            "action": "Réserver les deux, froid, et passer à la construction de la leche de tigre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La patate douce s'est effondrée et l'oignon s'est flippé et ligoté.",
+            "action": "Couper les rondelles fraîches d'une section plus ferme si la pomme de terre est trop loin; faire sécher l'oignon et l'utiliser de toute façon."
+          }
+        ]
+      },
+      "feelCue": "Un tour de camote fini devrait céder à une légère pression du doigt comme un avocat mûr. L'oignon drainé devrait quand même craquer. Tout ici reste froid — la chaleur est l'ennemi du ceviche croquant."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "leche_de_tigre",
+      "instructions": "Pressez les limes doucement à la main, sans les mettre à la croûte, qui libère des huiles amères. Dans un bol, fouetter le jus de lime frais avec l'ail râpé, l'aji haché, le gingembre en option et le sel jusqu'à ce que le sel se dissout. C'est la leche de tigre, le lait du tigre: il doit goûter agressivement brillant, ailky, chaud, et une touche trop salée sur lui-même, parce que le poisson va rapidement l'équilibrer.",
+      "visualCue": {
+        "primaryTarget": "Un liquide pâle, légèrement nuageux, versable, avec de l'ail et du piment, sentant fortement la chaux avec un piment au nez.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide a un goût plat et aqueux, sans bord de sel et seulement une faible présence de chile.",
+            "action": "Ajouter le sel une pincée à la fois et plus haché aji jusqu'à ce qu'il goûte vif et presque trop intense à lui seul."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tarte et savoureuse, avec une chaleur claire à l'ail et un chile de construction, salée juste après confortable.",
+            "action": "Déplacez-vous rapidement vers le poisson — leche de tigre est à son meilleur dans les minutes qui suivent le mélange."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le jus a un goût dur et résineux, avec un bord métallique tranchant.",
+            "action": "Tu as pressé les citrons trop fort ou tu les as laissés s'asseoir trop longtemps. Couper l'amertume avec quelques gouttes de jus frais et une petite pincée de sucre."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt et goûtez: il devrait vous faire un peu de wince et chaud à l'arrière de la gorge. Si vos yeux arrosent du piment et de la chaux, c'est tout à fait juste — le poisson maladroit arrondira tous ces coins tranchants."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cure",
+      "inputs": [
+        "ing_01",
+        "leche_de_tigre"
+      ],
+      "outputState": "cured_fish",
+      "instructions": "Coupez le poisson frais et réfrigéré en cubes de 50 cm, les morceaux uniformes se soignent au même rythme. Pliez le poisson dans la leche de tigre afin que chaque cube soit baigné, puis laissez-le s'asseoir juste 2 à 5 minutes pour le style moderne Limeño. L'acide dénature les protéines de surface, tournant les bords opaques et fermes tandis que les centres restent tendres et presque crus. Ne t'en va pas, c'est ceviche et dure.",
+      "visualCue": {
+        "primaryTarget": "Les cubes de poisson ont blanchi et raffermi aux bords, mais montrent une faible ligne translucide au centre même; le liquide environnant a transformé le laitier en libération de protéines.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cubes sont encore brillants et translucides tout au long avec une texture glissante, entièrement ramifiée et une saveur fade.",
+            "action": "Mélanger doucement et lui donner une autre minute, en dégustant un cube toutes les 30 secondes jusqu'à ce que les bords deviennent opaques mais le centre reste tendre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords sont blancs opaques et juste-fermes tandis que les centres restent juteux et à peine translucides ; un cube flocait proprement mais goûte succulent, pas crayeux.",
+            "action": "Arrêter immédiatement le traitement — plier dans les aromatiques et la plaque."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les cubes sont blancs opaques tout au long, fermes et caoutchouteux, avec une bouchée sèche, cuite et cotonneuse.",
+            "action": "Il a trop envahi les poissons 'cuits'. Égoutter la plus grande partie de la leche de tigre, servir à la fois, et couper le temps de guérison prochaine ronde."
+          }
+        ]
+      },
+      "feelCue": "Un cube parfaitement guéri a une résistance douce comme une prune mûre — une peau ferme, douce à l'intérieur — jamais la courbure du poisson cru ni le crumble sec de trop cuit. Le liquide s'épaissit et devient opaque à mesure qu'il fonctionne."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "cured_fish",
+        "ing_07",
+        "ing_08",
+        "prepped_garnishes",
+        "ing_10"
+      ],
+      "outputState": "finished_ceviche",
+      "instructions": "Hors de la chaleur de l'acide, plier doucement l'oignon rouge drainé et la plupart de la coriandre dans le poisson guéri afin qu'ils restent croustillants et lumineux. Goûtez la leche de tigre une dernière fois et corrigez le sel, la chaux et la chaleur. Déposer le poisson et son liquide nuageux dans un bol froid peu profond, pencher les rondelles de patate douce contre un côté, disperser le maïs ou le châtaigne grillé, et couronner avec le reste de la coriandre. Servir immédiatement, tandis que tout est glacé et le remède est à son maximum.",
+      "visualCue": {
+        "primaryTarget": "Un monticule scintillant de poissons à bord opaque dans une piscine de leche de tigre laiteuse, verte et rouge, avec une camote orange vive et du maïs pâle encadrant le bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bol a l'air pâle et goûte timide — pas assez de sel ou de piment, l'oignon à peine présent.",
+            "action": "Ajuster la leche de tigre avec du sel, une pression de chaux, et plus haché aji, puis plier à travers et re-plaquer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lumineux, équilibré, et vivant : tarte et savoureuse au chile propre, le poisson tendre, l'oignon croquant, la camote fraîche et douce contre la chaleur.",
+            "action": "Servir à la fois avec la leche de tigre à boire, idéalement à quelques minutes du plat."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson a continué à se mouiller sur l'assiette en cubes fermes et crayeux et l'oignon s'est flétri dans l'acide.",
+            "action": "Il n'y a pas de sauvetage — ceviche ne garde pas. Servir immédiatement la prochaine fois et guérir le poisson à commander."
+          }
+        ]
+      },
+      "feelCue": "Le contraste est tout : froid, doux, doux, camote contre le poisson chaud, vif, agrumes; oignon croquant contre le cube tendre. La leche de tigre au fond mérite d'être bue par elle - même — que le lait de tigre mis en commun est l'âme du plat."
+    }
+  ]
 };

@@ -1,96 +1,252 @@
 export default {
-  repoId: "master_japanese_karaage_001",
-  parentRepoId: null,
-  slug: "karaage",
-  author: "ForkRecipe Kitchen",
-  title: "Karaage",
-  description: "Bite-sized chicken thighs marinated in ginger and soy, dredged in potato starch, and fried twice — the first fry sets the crust, the second fry drives it to a mahogany shattering crunch while the interior stays succulent. The defining izakaya bite.",
-  cuisine: "Japanese",
-  culture: "Izakaya",
-  category: "proteins",
-  tags: ["fried chicken", "japanese", "soy", "ginger", "izakaya"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "90 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 7, sour: 1, bitter: 1, umami: 7, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Chicken thighs, boneless skin-on (2.5 cm pieces)", ratioValue: 6, defaultUnit: "parts", substitutions: ["boneless skinless thigh — less crisp but still good"] },
-    { ingId: "ing_02", role: "Umami",     name: "Soy sauce (koikuchi)",                             ratioValue: 1, defaultUnit: "parts", substitutions: ["tamari"] },
-    { ingId: "ing_03", role: "Solvent",   name: "Sake",                                             ratioValue: 0.5, defaultUnit: "parts", substitutions: ["dry sherry", "mirin (reduce by half)"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Fresh ginger (grated fine, juice and pulp)",       ratioValue: 0.4, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic (grated fine)",                             ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine salt",                                        ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Starch",    name: "Katakuriko (potato starch)",                       ratioValue: 2, defaultUnit: "parts", substitutions: ["cornstarch — crisper, lighter colored"] },
-    { ingId: "ing_08", role: "Fat",       name: "Neutral frying oil (vegetable or rice bran)",      ratioValue: 10, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Acid",      name: "Lemon (wedges for serving)",                       ratioValue: 0.5, defaultUnit: "parts", substitutions: ["sudachi", "yuzu"] },
+  "repoId": "master_japanese_karaage_001",
+  "parentRepoId": null,
+  "slug": "karaage",
+  "author": "ForkRecipe Kitchen",
+  "title": "Karaage",
+  "description": "Des cuisses de poulet de taille bite marinées dans du gingembre et du soja, draguées dans de la fécule de pomme de terre, et frites deux fois — la première frite met la croûte, la deuxième frite la conduit à une croûte en acajou qui éclate tandis que l'intérieur reste succulent. La morsure d'izakaya.",
+  "cuisine": "Japonais",
+  "culture": "Izakaya",
+  "category": "proteins",
+  "tags": [
+    "Poulet frit",
+    "Japonais",
+    "soja",
+    "gingembre",
+    "izakaya"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "90 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 7,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 7,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Marinate",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "marinated_chicken",
-      instructions: "Cut chicken thighs into 2.5–3 cm pieces — bite-sized, uniform, with skin on each piece where possible. Place in a bowl. Add soy sauce, sake, grated ginger (including the juice from squeezing the gratings), grated garlic, and salt. Toss to coat evenly. Cover and marinate in the refrigerator for a minimum of 30 minutes and up to 2 hours. Do not marinate longer — the salt and soy will begin to cure the exterior and make the crust absorb more oil. Remove from refrigerator 10 minutes before frying.",
-      visualCue: {
-        primaryTarget: "Chicken pieces are uniformly dark amber-brown from the soy and ginger, with no pale dry patches. The surface glistens with the marinade.",
-        spectrum: [
-          { state: "Underdone", description: "Some pieces still have pale, uncoated surfaces. Marinade pooled at the bottom of the bowl.", action: "Toss again and ensure every surface is touched by the marinade." },
-          { state: "Perfect",   description: "Every piece uniformly coated in dark soy-ginger marinade. Smells deeply of ginger, soy, and raw chicken. Surface is wet and fragrant.", action: "Drain excess marinade (shake off each piece) and dredge in starch." },
-          { state: "Overdone",  description: "Marinated more than 4 hours. Exterior is slightly grey and tight — salt-cured.", action: "Proceed to frying. The texture will be slightly firmer and the crust will be darker, but the flavor is intense and good." },
-        ],
-      },
-      feelCue: "After 30 minutes of marinating, the chicken pieces feel slightly firmer on the outside — the salt has begun to tighten the proteins. This is correct and means the marinade has penetrated.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "cuisses de poulet désossées avec peau (2,5 cm)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cuisse désossée sans peau, moins croquante mais encore bonne"
+      ]
     },
     {
-      nodeId: "step_2", action: "Toss",
-      inputs: ["marinated_chicken", "ing_07"],
-      outputState: "dredged_chicken",
-      instructions: "Remove chicken from marinade, shaking off any excess liquid. Place potato starch in a wide, shallow bowl or tray. Add the chicken pieces and toss to coat thoroughly — press the starch onto every surface, including the skin side. Shake off any loose excess starch: you want an even, thin, opaque white coating, not a thick blanket. The marinade's moisture will absorb into the starch and make it cling. Work quickly and cook within 5 minutes of dredging — starch absorbs moisture from the chicken and loses its crunch potential if it sits too long.",
-      visualCue: {
-        primaryTarget: "Every piece is uniformly coated in an opaque, slightly damp white crust of potato starch. No bare wet spots. No thick clumped patches.",
-        spectrum: [
-          { state: "Underdone", description: "Bare glistening patches of marinade still visible. Starch not adhering to some surfaces.", action: "Press starch onto the bare patches firmly — the marinade's moisture is the adhesive." },
-          { state: "Perfect",   description: "Opaque, matte white coating on all surfaces. Starch has slightly absorbed the surface moisture and looks tacky-dry. The coating is thin and even.", action: "Fry within 5 minutes." },
-          { state: "Overdone",  description: "Heavy, clumped starch coating. Thick in patches, looks like plaster.", action: "Shake vigorously and tap each piece against the bowl rim to dislodge excess. Thick coating absorbs oil and turns gummy." },
-        ],
-      },
-      feelCue: "A properly dredged piece should feel slightly chalky and dry to the touch — the starch has captured the surface moisture. If the piece feels wet and slippery despite the white coating, it needs more starch.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "sauce soja (koikuchi)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari"
+      ]
     },
     {
-      nodeId: "step_3", action: "Fry",
-      inputs: ["dredged_chicken", "ing_08"],
-      outputState: "first_fried_chicken",
-      instructions: "Pour oil to a depth of 4–5 cm in a heavy Dutch oven or wok and heat to 160–165 C. This is the first, lower-temperature fry — it cooks the interior through without burning the crust. Working in small batches (never more than 5 pieces at once), lower the chicken into the oil gently using chopsticks or a spider. Fry for 3–4 minutes, turning once, until the crust is pale gold and set but not deeply colored. Remove with a spider and drain on a wire rack. Let the chicken rest on the rack for 4–5 minutes. The interior will finish cooking from residual heat.",
-      visualCue: {
-        primaryTarget: "Pieces are pale golden — the color of very light honey. The crust is set and no longer soft or fragile to the touch. The chicken inside is cooked through.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is still very pale, almost white. Interior feels soft and yielding when pressed with tongs.", action: "Fry 1 more minute. The crust is fragile when the chicken is still raw — do not rush the first fry." },
-          { state: "Perfect",   description: "Light honey-gold. Crust is firm and set. A probe thermometer reads 72–75 C at the center. Ready for the rest period and second fry.", action: "Rest on wire rack 4 minutes. Increase oil temperature to 190 C for the second fry." },
-          { state: "Overdone",  description: "Crust is already dark golden from the first fry. The second fry will burn it.", action: "Skip the second fry or reduce it to 30 seconds only for a final crunch reheat." },
-        ],
-      },
-      feelCue: "After the first fry, the crust should sound faintly hollow when tapped with a chopstick — a light tck rather than a dull thump. That hollow sound means the moisture has been driven out and the second fry will make it shatter.",
+      "ingId": "ing_03",
+      "role": "Solvent",
+      "name": "Mâcher",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec",
+        "mirine (réduire de moitié)"
+      ]
     },
     {
-      nodeId: "step_4", action: "Fry",
-      inputs: ["first_fried_chicken", "ing_08"],
-      outputState: "finished_karaage",
-      instructions: "Increase oil temperature to 185–190 C. Return the rested pieces to the oil — they will sizzle immediately and violently. Fry for 60–90 seconds only, turning once, until the crust is a deep, rich mahogany and audibly crunching as the pieces move in the oil. Remove quickly and drain on a clean wire rack — not paper towel, which traps steam and softens the crust. The second fry drives out the last moisture from the crust and gelatinizes the starch, creating the karaage signature: mahogany shattering exterior, juicy steaming interior. Serve immediately.",
-      visualCue: {
-        primaryTarget: "Deep mahogany-brown, uniform across all surfaces. The crust makes a distinct cracking sound when a piece is pressed with tongs. Steam rises from the rack.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is golden but not deeply colored. Does not crunch audibly. The skin side may still feel slightly soft.", action: "Return to hot oil for 30 more seconds. The second fry window is short — keep heat at 190 C." },
-          { state: "Perfect",   description: "Rich brown. Audible crunch when squeezed gently with tongs. The interior juices run clear when a piece is cut. Smells of dark-roasted soy, ginger, and hot oil.", action: "Drain on rack, squeeze lemon, and eat within 5 minutes of leaving the oil." },
-          { state: "Overdone",  description: "Very dark brown to black on the surface. Bitter smell. Crust is hard rather than brittle-crunchy.", action: "Drain immediately and eat quickly — the bitterness is mostly on the exterior and the interior is still good. Do not eat pieces that are fully black." },
-        ],
-      },
-      feelCue: "Perfect karaage, picked up with chopsticks, should crunch audibly just from being gripped — before the first bite. That sound is the promise of the dish. Squeeze lemon generously: the acid cuts the oil and lifts the soy-ginger glaze.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Gingembre frais (fin, jus et pulpe)",
+      "ratioValue": 0.4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Aile (amende graduée)",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Starch",
+      "name": "Katakuriko (amidon de pomme de terre)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fécule de maïs — plus croustillante, de couleur plus légère"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile de friture neutre (légume ou son de riz)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Citron (fruits pour servir)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sudachi",
+        "Yuzu"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "marinated_chicken",
+      "instructions": "Couper les cuisses de poulet en morceaux de 2,5 à 3 cm — taille bouchée, uniforme, avec la peau sur chaque morceau si possible. Mettre dans un bol. Ajouter la sauce de soja, le saké, le gingembre râpé (y compris le jus de serrer les grilles), l'ail râpé et le sel. Jetez-le uniformément. Couvrir et faire mariner au réfrigérateur pendant au moins 30 minutes et jusqu'à 2 heures. Ne pas mariner plus longtemps: le sel et le soja commenceront à guérir l'extérieur et à faire absorber plus d'huile. Retirer du réfrigérateur 10 minutes avant de faire frire.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux de poulet sont uniformément brun-ambre foncé du soja et du gingembre, sans taches pâles sèches. La surface brille avec la marinade.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Certaines pièces ont encore des surfaces pâles et non revêtues. Marinade pooled au fond du bol.",
+            "action": "Recollez et assurez-vous que chaque surface est touchée par la marinade."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque pièce est uniformément revêtue de marinade de soja foncé. Ça sent le gingembre, le soja et le poulet cru. La surface est humide et parfumée.",
+            "action": "Égoutter l'excès de marinade (secouer chaque morceau) et la drague dans l'amidon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Marié plus de 4 heures. L'extérieur est légèrement gris et serré — salin.",
+            "action": "Aller à la friture. La texture sera légèrement plus ferme et la croûte sera plus foncée, mais la saveur est intense et bonne."
+          }
+        ]
+      },
+      "feelCue": "Après 30 minutes de marinage, les morceaux de poulet se sentent légèrement plus fermes à l'extérieur — le sel a commencé à resserrer les protéines. Ceci est exact et signifie que la marinade a pénétré."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Découpe",
+      "inputs": [
+        "marinated_chicken",
+        "ing_07"
+      ],
+      "outputState": "dredged_chicken",
+      "instructions": "Retirer le poulet de la marinade, agiter tout excès de liquide. Mettre la fécule de pomme de terre dans un grand bol ou un plateau peu profond. Ajouter les morceaux de poulet et mélanger pour bien enrober — presser l'amidon sur chaque surface, y compris le côté de la peau. Agiter tout excès d'amidon : vous voulez un revêtement blanc uniforme, mince, opaque, pas une couverture épaisse. L'humidité de la marinade absorbera l'amidon et le fera s'accrocher. Travailler rapidement et cuire dans les 5 minutes suivant le dragage — l'amidon absorbe l'humidité du poulet et perd son potentiel croquant s'il reste trop longtemps.",
+      "visualCue": {
+        "primaryTarget": "Chaque morceau est uniformément recouvert d'une croûte blanche opaque et légèrement humide de fécule de pomme de terre. Pas de taches nues mouillées. Pas de plaques épaisses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des taches de marinade scintillantes sont encore visibles. L'amidon ne adhère pas à certaines surfaces.",
+            "action": "Pressez fermement l'amidon sur les plaques nues — l'humidité de la marinade est l'adhésif."
+          },
+          {
+            "state": "Perfect",
+            "description": "Revêtement opaque et blanc mat sur toutes les surfaces. L'amidon a légèrement absorbé l'humidité de la surface et semble sec. Le revêtement est mince et uniforme.",
+            "action": "Faire frire dans 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Revêtement lourd en amidon. On dirait du plâtre.",
+            "action": "Agiter vigoureusement et tapoter chaque pièce contre le bord du bol pour déloger l'excès. Le revêtement épais absorbe l'huile et devient gommeux."
+          }
+        ]
+      },
+      "feelCue": "Une pièce correctement draguée doit se sentir légèrement crayeuse et sèche au toucher — l'amidon a capté l'humidité de surface. Si la pièce est mouillée et glissante malgré le revêtement blanc, elle a besoin de plus d'amidon."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "dredged_chicken",
+        "ing_08"
+      ],
+      "outputState": "first_fried_chicken",
+      "instructions": "Verser l'huile à une profondeur de 4 à 5 cm dans un four ou wok néerlandais lourd et chauffer à 160 à 165 C. C'est la première frite à température plus basse, qui fait cuire l'intérieur sans brûler la croûte. Travaillant en petits lots (jamais plus de 5 morceaux à la fois), abaissez doucement le poulet dans l'huile en utilisant des baguettes ou une araignée. Faire frire pendant 3-4 minutes, tourner une fois, jusqu'à ce que la croûte soit d'or pâle et sertie mais pas profondément colorée. Retirer avec une araignée et égoutter sur une grille. Laisser reposer le poulet pendant 4 à 5 minutes. L'intérieur finira la cuisson à partir de la chaleur résiduelle.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux sont d'or pâle — la couleur du miel très léger. La croûte est réglée et n'est plus douce ou fragile au toucher. Le poulet à l'intérieur est cuit.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est encore très pâle, presque blanche. L'intérieur se sent doux et céder lorsqu'il est pressé avec des pinces.",
+            "action": "Encore 1 minute. La croûte est fragile quand le poulet est encore cru — ne précipitez pas la première frite."
+          },
+          {
+            "state": "Perfect",
+            "description": "Du miel léger. La croûte est ferme. Un thermomètre à sonde lit 72-75 C au centre. Prêt pour la période de repos et la deuxième frite.",
+            "action": "Repose-toi sur la grille 4 minutes. Augmenter la température de l'huile à 190 C pour la deuxième friture."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est déjà d'or foncé dès la première frite. La deuxième frite va la brûler.",
+            "action": "Sautez la deuxième friture ou réduisez-la à 30 secondes seulement pour un réchauffage crunch final."
+          }
+        ]
+      },
+      "feelCue": "Après la première frite, la croûte doit paraître légèrement creuse lorsqu'elle est tapée d'une baguette — un léger tic plutôt qu'une touffe terne. Ce son creux signifie que l'humidité a été chassée et que la seconde frite va la briser."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "first_fried_chicken",
+        "ing_08"
+      ],
+      "outputState": "finished_karaage",
+      "instructions": "Augmenter la température de l'huile à 185-190 C. Remettez les morceaux reposés à l'huile — ils s'étourdiront immédiatement et violemment. Faire frire pendant 60 à 90 secondes seulement, en tournant une fois, jusqu'à ce que la croûte soit une acajou profonde, riche et audiquement croquante au fur et à mesure que les morceaux se déplacent dans l'huile. Retirer rapidement et égoutter sur un support de fil propre — pas une serviette en papier, qui piège la vapeur et adoucit la croûte. La deuxième friture chasse la dernière humidité de la croûte et gélatinise l'amidon, créant la signature karaage : l'acajou brise l'extérieur, l'intérieur juteux à vapeur. Servir immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Deep acajou brun, uniforme sur toutes les surfaces. La croûte fait un son de fissuration distinct lorsqu'une pièce est pressée avec des pinces. La vapeur s'élève du rack.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est dorée mais pas profondément colorée. Ne croque pas audiquement. La peau peut encore être légèrement douce.",
+            "action": "Revenez à l'huile chaude pendant 30 secondes. La deuxième fenêtre est courte: gardez la chaleur à 190 °C."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche marron. Crunch sonore lorsqu'il est pressé doucement avec des pinces. Les jus intérieurs sont clairs lorsqu'une pièce est coupée. Des odeurs de soja, de gingembre et d'huile chaude.",
+            "action": "Égoutter sur la grille, presser le citron et manger dans les 5 minutes suivant la sortie de l'huile."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très brun foncé à noir à la surface. Une odeur amère. La croûte est dure plutôt que fragile.",
+            "action": "Égoutter immédiatement et manger rapidement — l'amertume est surtout à l'extérieur et l'intérieur est encore bon. Ne mangez pas de morceaux entièrement noirs."
+          }
+        ]
+      },
+      "feelCue": "Le karaage parfait, ramassé avec des baguettes, devrait s'écraser audiblement juste d'être pris — avant la première morsure. Ce son est la promesse du plat. Pressez généreusement le citron : l'acide coupe l'huile et soulève la glaçure de soja."
+    }
+  ]
 };

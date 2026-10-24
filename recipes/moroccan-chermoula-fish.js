@@ -1,87 +1,251 @@
 export default {
-  repoId: "master_moroccan_moroccanchermoula_001",
-  parentRepoId: null,
-  slug: "moroccan-chermoula-fish",
-  author: "ForkRecipe Kitchen",
-  title: "Moroccan Chermoula Baked Fish",
-  description: "A whole fish marinated inside and out in chermoula — a vivid green paste of cilantro, cumin, and preserved lemon — then baked until the flesh steams in its own herb-perfumed cloud.",
-  cuisine: "Moroccan",
-  culture: "Moroccan",
-  category: "seafood",
-  tags: ["seafood", "gluten-free", "moroccan", "chermoula", "herb", "baked", "fish"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "1 hour",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 3, bitter: 2, umami: 2, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole sea bream or sea bass (1–1.2kg), cleaned and scored", ratioValue: 1100, defaultUnit: "g", substitutions: ["snapper", "branzino"] },
-    { ingId: "ing_02", role: "Herb",      name: "Fresh cilantro (large bunch)",           ratioValue: 50,   defaultUnit: "g",   substitutions: ["flat-leaf parsley"] },
-    { ingId: "ing_03", role: "Herb",      name: "Fresh flat-leaf parsley",                ratioValue: 30,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_04", role: "Allium",   name: "Garlic cloves",                            ratioValue: 4,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",    name: "Ground cumin",                             ratioValue: 8,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_06", role: "Spice",    name: "Sweet paprika",                            ratioValue: 6,    defaultUnit: "g",   substitutions: ["smoked paprika"] },
-    { ingId: "ing_07", role: "Spice",    name: "Cayenne pepper",                           ratioValue: 2,    defaultUnit: "g",   substitutions: ["ground chili"] },
-    { ingId: "ing_08", role: "Acid",     name: "Preserved lemon, rind only, rinsed",      ratioValue: 30,   defaultUnit: "g",   substitutions: ["fresh lemon zest + 1 tsp salt"] },
-    { ingId: "ing_09", role: "Acid",     name: "Fresh lemon juice",                       ratioValue: 30,   defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_10", role: "Fat",      name: "Extra-virgin olive oil",                  ratioValue: 60,   defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning", name: "Fine sea salt",                          ratioValue: 8,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_12", role: "Garnish",  name: "Lemon wedges and extra cilantro",         ratioValue: 1,    defaultUnit: "serving", substitutions: [] },
+  "repoId": "master_moroccan_moroccanchermoula_001",
+  "parentRepoId": null,
+  "slug": "moroccan-chermoula-fish",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poissons cuits au four à la Chermoula marocaine",
+  "description": "Un poisson entier mariné à l'intérieur et à l'extérieur dans la cermoule — une pâte verte vive de coriandre, de cumin et de citron conservé — a ensuite cuit jusqu'à ce que la chair s'évapore dans son propre nuage parfumé d'herbe.",
+  "cuisine": "Maroc",
+  "culture": "Maroc",
+  "category": "seafood",
+  "tags": [
+    "Produits de la mer",
+    "Sans gluten",
+    "Maroc",
+    "Cermoula",
+    "herbe",
+    "cuits",
+    "poissons"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "1 hour",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 2,
+    "umami": 2,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "chermoula_paste",
-      instructions: "Combine all chermoula ingredients in a food processor or pound in a large mortar. Process until a thick, bright-green paste forms — it should have body and cling to a spoon, not be a smooth liquid. Taste: it should be intensely herby, sour from the preserved lemon, and earthy-warm from the cumin. A traditional chermoula made in a mortar will have more texture; a processor gives a smoother result. Both are correct.",
-      visualCue: {
-        primaryTarget: "A thick, vivid green paste speckled with darker herb flecks and pale preserved lemon.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is still chunky with visible large herb pieces and unbroken garlic.", action: "Continue blending or pounding until cohesive and spreadable." },
-          { state: "Perfect",   description: "Thick, bright-green paste that holds its shape on a spoon. Smells powerfully of cumin, cilantro, and lemon.", action: "Divide: two-thirds for marinating the fish, one-third reserved for basting." },
-          { state: "Overdone",  description: "Paste is watery and thin from over-processing; the herbs have released too much moisture.", action: "Squeeze through a cloth to remove excess liquid; the paste will be denser and more concentrated." },
-        ],
-      },
-      feelCue: "The chermoula should feel slightly gritty from the herb stems and spices — a living, aromatic paste rather than a smooth sauce. Rub a small amount between your fingers; you should be able to smell it across the room.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Brème de mer entier ou bar (1–1,2 kg), nettoyé et marqué",
+      "ratioValue": 1100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "snapper",
+        "branzino"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Marinate",
-      inputs: ["ing_01", "chermoula_paste"],
-      outputState: "marinated_fish",
-      instructions: "Score the fish deeply on both sides — 4–5 diagonal cuts per side, down to the bone. This is essential for two reasons: it allows the chermoula to penetrate deep into the flesh, and it prevents the skin from buckling in the oven. Rub two-thirds of the chermoula aggressively into every surface of the fish: inside the body cavity, into every score cut, and over the skin. Marinate for at least 30 minutes at room temperature, or up to 4 hours in the refrigerator.",
-      visualCue: {
-        primaryTarget: "Fish is entirely coated in green paste, with chermoula visible deep in every score cut and throughout the body cavity.",
-        spectrum: [
-          { state: "Underdone", description: "Chermoula is only on the surface; score cuts are not filled.", action: "Use your fingers to press and force the paste into every cut and crevice." },
-          { state: "Perfect",   description: "Fish is completely green. Score cuts are packed with paste. Cavity is generously coated. The fish smells intensely herby.", action: "Allow to marinate. Preheat oven to 200°C." },
-          { state: "Overdone",  description: "Fish has marinated more than 6 hours in lemon-heavy chermoula; the acid has begun to 'cook' the surface flesh.", action: "Rinse off the marinade, pat dry, apply fresh chermoula, and bake immediately." },
-        ],
-      },
-      feelCue: "Work the chermoula into the score cuts firmly with your thumb — you should feel each cut open and accept the paste rather than sealing over it.",
+      "ingId": "ing_02",
+      "role": "Herb",
+      "name": "Coriandre fraîche (grande grappe)",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Persil à feuilles plates"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["marinated_fish", "chermoula_paste", "ing_12"],
-      outputState: "finished_chermoula_fish",
-      instructions: "Place the fish on a lightly oiled baking sheet or in a tagine. Spoon the reserved chermoula over the top. Bake at 200°C (400°F) for 20–25 minutes depending on thickness (10 minutes per 2.5cm of thickness at the widest point). The fish is done when the score cuts have opened and the flesh inside is white and opaque, and the skin is lightly blistered. Rest 5 minutes before serving. Garnish with lemon wedges and fresh cilantro.",
-      visualCue: {
-        primaryTarget: "Skin is blistered and slightly charred at the score cut edges; chermoula has darkened to a deep green-brown. Score cuts gape open revealing white, opaque flesh.",
-        spectrum: [
-          { state: "Underdone", description: "Score cuts are still closed; flesh inside shows translucent pink sections. Skin has not blistered.", action: "Return to the oven for 5 more minutes. Test with a skewer at the thickest point — it should pass through without resistance." },
-          { state: "Perfect",   description: "Score cuts have opened fully; every cut reveals bright white, fully opaque fish. Chermoula is dark and fragrant. The fish peels away from the bone cleanly.", action: "Rest 5 minutes before bringing to the table." },
-          { state: "Overdone",  description: "Flesh is beginning to pull away from the bone spontaneously; the outside looks very dry.", action: "Serve immediately with a drizzle of raw olive oil and extra lemon to restore moisture." },
-        ],
-      },
-      feelCue: "Slide a spoon or knife into the thickest score cut — perfectly baked fish should part cleanly in large, glistening flakes, each one still moist and tender rather than dry and stringy.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Persil frais à feuilles plates",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Paprika doux",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika fumé"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "piment au sol"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "Citron conservé, croûte seulement, rincé",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "zeste de citron frais + 1 c. à thé sel"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Garnish",
+      "name": "Coins de citron et coriandre supplémentaire",
+      "ratioValue": 1,
+      "defaultUnit": "serving",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "chermoula_paste",
+      "instructions": "Mélanger tous les ingrédients de la cermoule dans un robot culinaire ou la livre dans un grand mortier. Procéder jusqu'à ce qu'une pâte épaisse et vert vif se forme — elle doit avoir le corps et s'accrocher à une cuillère, pas être un liquide lisse. Bouche: Il doit être intensément herbacé, aigre du citron conservé, et terreux chaud du cumin. Une cermoule traditionnelle faite dans un mortier aura plus de texture ; un processeur donne un résultat plus lisse. Les deux sont corrects.",
+      "visualCue": {
+        "primaryTarget": "Une pâte verte épaisse et vive tachetée de taches d'herbes plus foncées et de citron pâle conservé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore épaisse avec de grandes herbes visibles et de l'ail intact.",
+            "action": "Continuer à mélanger ou frapper jusqu'à ce qu'il soit cohérent et extensible."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte épaisse et vert vif qui tient sa forme sur une cuillère. Ça sent le cumin, la coriandre et le citron.",
+            "action": "Diviser : les deux tiers pour mariner le poisson, un tiers réservé au basting."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est aqueuse et mince due au surtraitement; les herbes ont libéré trop d'humidité.",
+            "action": "Pressez à travers un chiffon pour enlever l'excès de liquide ; la pâte sera plus dense et plus concentrée."
+          }
+        ]
+      },
+      "feelCue": "La cermoule doit se sentir légèrement gritté à partir des tiges et des épices de l'herbe, une pâte aromatique vivante plutôt qu'une sauce lisse. Frottez une petite quantité entre vos doigts; vous devriez être en mesure de le sentir à travers la pièce."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "chermoula_paste"
+      ],
+      "outputState": "marinated_fish",
+      "instructions": "Noter le poisson en profondeur des deux côtés — 4–5 coupes diagonales par côté, jusqu'à l'os. C'est essentiel pour deux raisons : il permet à la cermoule de pénétrer profondément dans la chair, et il empêche la peau de se bouillir dans le four. Frottez les deux tiers de la cermoule de façon agressive dans toutes les surfaces du poisson : à l'intérieur de la cavité corporelle, dans chaque coupe et sur la peau. Faire mariner au moins 30 minutes à température ambiante ou jusqu'à 4 heures au réfrigérateur.",
+      "visualCue": {
+        "primaryTarget": "Le poisson est entièrement enduit de pâte verte, avec une cermoule visible profondément dans chaque coupe et dans toute la cavité du corps.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La Chermoula n'est qu'en surface; les coupures ne sont pas remplies.",
+            "action": "Utilisez vos doigts pour appuyer et forcer la pâte dans chaque coupe et crevasse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le poisson est complètement vert. Les coupures sont emballées avec de la pâte. La cavité est généreusement recouverte. Le poisson sent l'herbe intensément.",
+            "action": "Laisser mariner. Préchauffer le four à 200°C."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson a mariné plus de 6 heures dans la cermoule lourde de citron; l'acide a commencé à «cuire» la chair de surface.",
+            "action": "Rincer la marinade, sécher, appliquer la cermoule fraîche et cuire immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Travaillez la cermoula dans les coupes de score fermement avec votre pouce — vous devriez sentir chaque coupe ouverte et accepter la pâte plutôt que de sceller dessus."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "marinated_fish",
+        "chermoula_paste",
+        "ing_12"
+      ],
+      "outputState": "finished_chermoula_fish",
+      "instructions": "Placez le poisson sur une plaque de cuisson légèrement huilée ou dans un tagine. Spoon la chermoula réservée sur le dessus. Cuire à 200 °C (400 °F) pendant 20 à 25 minutes selon l'épaisseur (10 minutes par 2,5 cm d'épaisseur au point le plus large). Le poisson est fait lorsque les coupes de pointes ont ouvert et la chair à l'intérieur est blanche et opaque, et la peau est légèrement cloquée. Reposez-vous 5 minutes avant de servir. Garnir de quartiers de citron et de coriandre fraîche.",
+      "visualCue": {
+        "primaryTarget": "La peau est cloquée et légèrement carbonisée aux bords coupés; la cermoule est foncée jusqu'à un brun vert foncé. Les coupes de score s'ouvrent révélant la chair blanche et opaque.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coupes sont toujours fermées; la chair à l'intérieur montre des sections roses translucides. La peau n'a pas été cloquée.",
+            "action": "Retourner au four 5 minutes de plus. Testez avec une brochette au point le plus épais — elle devrait passer sans résistance."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les coupes de pointage s'ouvrent complètement; chaque coupe révèle des poissons blancs vifs et entièrement opaques. Chermoula est sombre et parfumée. Le poisson s'éloigne complètement de l'os.",
+            "action": "Reposez-vous 5 minutes avant d'apporter à la table."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair commence à s'éloigner spontanément de l'os; l'extérieur semble très sec.",
+            "action": "Servir immédiatement avec une bruine d'huile d'olive crue et un citron supplémentaire pour restaurer l'humidité."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère ou un couteau dans la coupe la plus épaisse — le poisson parfaitement cuit doit se séparer proprement dans de grands flocons brillants, chacun encore humide et tendre plutôt que sec et à cordes."
+    }
+  ]
 };

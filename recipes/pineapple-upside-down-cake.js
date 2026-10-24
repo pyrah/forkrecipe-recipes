@@ -1,105 +1,236 @@
 export default {
-  repoId: "master_american_pineapple_upside_down_cake_001",
-  parentRepoId: null,
-  slug: "pineapple-upside-down-cake",
-  author: "ForkRecipe Kitchen",
-
-  title: "Pineapple Upside-Down Cake",
-  description: "A golden sponge baked over a glossy layer of caramelised pineapple rings and brown sugar, then inverted to reveal a lacquered, jewel-bright topping that smells of caramel and tropical fruit.",
-  cuisine: "American",
-  culture: "American",
-  category: "desserts",
-
-  tags: ["american", "pineapple", "cake", "caramel", "dessert"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "55 min",
-  ratioSystem: "parts",
-
-  stars: 1124,
-  forks: 138,
-  contributors: 16,
-  license: "CC-BY-SA",
-  createdAt: "2024-08-09",
-  updatedAt: "2025-04-25",
-
-  flavorRadar: { sweet: 4, salty: 1, sour: 2, bitter: 0, umami: 0, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Canned or fresh pineapple rings",                 ratioValue: 60,  defaultUnit: "parts", substitutions: ["mango slices", "peach halves"] },
-    { ingId: "ing_02", role: "Sweetener",  name: "Dark brown sugar (for caramel base)",             ratioValue: 40,  defaultUnit: "parts", substitutions: ["light brown sugar"] },
-    { ingId: "ing_03", role: "Fat",        name: "Unsalted butter (for the caramel base)",          ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Structure",  name: "Plain (all-purpose) flour",                       ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Caster or granulated sugar",                      ratioValue: 80,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Binder",     name: "Eggs, at room temperature",                       ratioValue: 50,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Leavener",   name: "Baking powder",                                   ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",        name: "Unsalted butter, softened (for the sponge batter)", ratioValue: 80, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_pineapple_upside_down_cake_001",
+  "parentRepoId": null,
+  "slug": "pineapple-upside-down-cake",
+  "author": "ForkRecipe Kitchen",
+  "title": "Cake à l'envers d'ananas",
+  "description": "Une éponge dorée cuite sur une couche brillante d'ananas caramélisés et de sucre brun, puis inversée pour révéler une garniture laquée et brillante qui sent le caramel et les fruits tropicaux.",
+  "cuisine": "Américain",
+  "culture": "Américain",
+  "category": "desserts",
+  "tags": [
+    "américains",
+    "ananas",
+    "gâteau",
+    "Caramel",
+    "dessert"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "55 min",
+  "ratioSystem": "parts",
+  "stars": 1124,
+  "forks": 138,
+  "contributors": 16,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-08-09",
+  "updatedAt": "2025-04-25",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Build caramel base",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "caramel_base",
-      instructions: "Preheat oven to 175°C (350°F). Place a 24cm oven-safe skillet or round cake tin directly on the stovetop over medium heat. Add the butter and let it melt. Add the dark brown sugar and stir briefly to combine, then leave undisturbed for 2 minutes until it bubbles and darkens slightly. The caramel does not need to be fully made at this point — it will finish in the oven — but the butter and sugar should be melted and fragrant. Remove from heat.",
-      visualCue: {
-        primaryTarget: "A dark, glossy, bubbling mixture of butter and brown sugar covering the base of the pan. It smells of deep toffee with a hint of bitterness.",
-        spectrum: [
-          { state: "Underdone", description: "Butter and sugar have barely combined — still looks sandy and pale.", action: "Stir briefly and continue heating for 1 more minute. The mixture needs to be fully melted and beginning to bubble before adding the pineapple." },
-          { state: "Perfect",   description: "Dark, glossy, and bubbling. Toffee aroma fills the kitchen. The mixture is uniform with no visible sugar crystals.", action: "Remove from heat and arrange pineapple rings immediately." },
-          { state: "Overdone",  description: "Caramel is very dark and smells slightly burnt. It is beginning to separate and look oily.", action: "Remove from heat immediately. If it smells acrid, discard and start again — bitter burnt caramel will dominate the entire cake." },
-        ],
-      },
-      feelCue: "The caramel at this stage should smell like warm toffee sauce — deeply sweet with a faint edge of bitterness. If it smells predominantly sweet and buttery, give it another 30 seconds of heat.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Anneaux d'ananas frais ou en conserve",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tranches de mangue",
+        "moitiés de pêche"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Arrange fruit",
-      inputs: ["caramel_base", "ing_01"],
-      outputState: "decorated_base",
-      instructions: "Lay the pineapple rings over the hot caramel in the pan, fitting them snugly — one in the centre and as many as will fit around the edge without overlapping. Press them gently into the caramel. If using canned pineapple, pat the rings thoroughly dry first — excess juice will water down the caramel and prevent the fruit from browning properly. Place a maraschino cherry or dried cherry in the centre of each ring if desired.",
-      visualCue: {
-        primaryTarget: "Pineapple rings are flat against the caramel base with no gaps between them. The caramel is visible at the edges and between the rings. The rings look slightly golden from the caramel heat.",
-        spectrum: [
-          { state: "Underdone", description: "Rings are sitting loosely on top and the caramel around them is still very fluid and separating.", action: "Press the rings down more firmly. Wet rings are also floating — pat them drier and replace." },
-          { state: "Perfect",   description: "Rings are flush with the pan, caramel has crept up slightly around their edges. The arrangement looks neat and the rings have a slight gloss from the caramel.", action: "Pour the sponge batter immediately and evenly over the top." },
-          { state: "Overdone",  description: "The caramel has hardened while arranging the fruit and the rings are sitting on a solid toffee disc.", action: "Very gently warm the pan base for 30 seconds to soften. Proceed — the fruit will still caramelise beautifully in the oven." },
-        ],
-      },
-      feelCue: "When pressed gently, the pineapple rings should have a slight resistance — not the springiness of cold tinned fruit, but a settled, flush contact with the caramel beneath them.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre brun foncé (pour base de caramel)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun léger"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mix batter",
-      inputs: ["ing_04", "ing_05", "ing_06", "ing_07", "ing_03"],
-      outputState: "cake_batter",
-      instructions: "In a bowl, beat the softened butter and caster sugar together with an electric mixer for 3 minutes until pale and fluffy. Add the eggs one at a time, beating well after each addition. Sift in the flour and baking powder and fold until just combined — a few turns with a spatula rather than vigorous beating. The batter should be smooth, thick, and fall from the spatula in slow ribbons. A small splash of milk or pineapple juice from the tin can loosen it to the right consistency.",
-      visualCue: {
-        primaryTarget: "Pale, creamy batter that falls from a spoon or spatula in thick, slow ribbons. No flour streaks visible. Batter is smooth and glossy.",
-        spectrum: [
-          { state: "Underdone", description: "Butter and sugar are not fully creamed — the mixture is dense and yellowish rather than pale and fluffy. Flour streaks visible.", action: "Beat butter and sugar longer before adding eggs. Fold the flour more completely." },
-          { state: "Perfect",   description: "Pale, very smooth batter that falls in thick ribbons. Slightly thicker than double cream — it holds a figure-eight pattern briefly when dropped.", action: "Pour evenly over the arranged pineapple and caramel." },
-          { state: "Overdone",  description: "Batter has been over-mixed and looks slightly dense and gluey. It does not fall smoothly.", action: "Proceed. The texture may be slightly less tender but the caramelised topping is the star of this cake." },
-        ],
-      },
-      feelCue: "A ribbon of batter dropped from a spoon should hold its shape on the surface for 2–3 seconds before slowly dissolving back — this viscosity ensures the sponge will bake with an even, fine crumb.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé (pour la base de caramel)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake and invert",
-      inputs: ["cake_batter", "decorated_base"],
-      outputState: "finished_cake",
-      instructions: "Pour the batter carefully over the pineapple arrangement, spreading gently to the edges to cover everything evenly without disturbing the fruit arrangement. Bake at 175°C for 30–35 minutes until the sponge is deep golden and a skewer inserted in the centre comes out clean. Remove from the oven and rest for 5 minutes — not longer. Run a knife around the edge, place a large serving plate on top, and invert decisively in one motion. Lift the pan straight up. Any caramel clinging to the pan can be scraped off and poured over the top.",
-      visualCue: {
-        primaryTarget: "After inversion: a glossy lacquer of amber caramel and golden pineapple rings facing upward on a dark, beautifully coloured sponge base.",
-        spectrum: [
-          { state: "Underdone", description: "After inversion, the centre of the sponge is sunken and raw-looking. The batter may have partially adhered to the pan.", action: "Re-cover with the pan and return to the oven for 10 minutes. The caramel can be re-warmed if needed." },
-          { state: "Perfect",   description: "A perfect circle of glossy amber caramel and fruit rings resting on a golden sponge. The caramel has set to a glaze. No raw spots visible.", action: "Serve warm with cream or ice cream." },
-          { state: "Overdone",  description: "The caramel has hardened to a dark, almost brittle toffee. Sponge edges are very brown and dry.", action: "The flavour is still good. Warm slices briefly in the microwave before serving, or serve with extra cream to moisten." },
-        ],
-      },
-      feelCue: "The five-minute resting period before inversion is critical — the caramel needs to set slightly from its boiling state. If you invert immediately, it will pour off the cake; wait too long and it bonds to the pan.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Farine pure (toute destination)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucres castrés ou granulés",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Binder",
+      "name": "Oeufs, à température ambiante",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli (pour la pâte à éponge)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Construire une base de caramel",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "caramel_base",
+      "instructions": "Préchauffer le four à 175°C (350°F). Placez une poêle de 24 cm ou une boîte de gâteau ronde directement sur la cuisinière à feu moyen. Ajouter le beurre et laisser fondre. Ajouter la cassonade foncée et remuer brièvement pour la combiner, puis laisser reposer pendant 2 minutes jusqu'à ce qu'elle s'assombrisse légèrement. Le caramel n'a pas besoin d'être entièrement fabriqué à ce stade — il finira au four — mais le beurre et le sucre doivent être fondus et parfumés. Retirer du feu.",
+      "visualCue": {
+        "primaryTarget": "Un mélange noir, brillant et bouillonnant de beurre et de sucre brun couvrant la base de la poêle. Il sent le caramel profond avec un soupçon d'amertume.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre et le sucre se sont à peine combinés — encore sablonneux et pâle.",
+            "action": "Mélanger brièvement et continuer le chauffage pendant 1 minute. Le mélange doit être complètement fondu et commencer à buller avant d'ajouter l'ananas."
+          },
+          {
+            "state": "Perfect",
+            "description": "Noir, brillant et bouillonnant. L'arôme de café remplit la cuisine. Le mélange est uniforme sans cristaux de sucre visibles.",
+            "action": "Retirer du feu et arranger immédiatement les anneaux d'ananas."
+          },
+          {
+            "state": "Overdone",
+            "description": "Caramel est très sombre et sent légèrement brûlé. Il commence à se séparer et à paraître huileux.",
+            "action": "Retirer immédiatement du feu. Si elle sent l'acride, jetez - la et recommencez - le caramel brûlé amer dominera tout le gâteau."
+          }
+        ]
+      },
+      "feelCue": "À ce stade, le caramel doit sentir la sauce chaude au caramel, profondément sucrée avec un léger bord d'amertume. Si elle sent principalement sucrée et beurrée, donnez-lui encore 30 secondes de chaleur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Disposer les fruits",
+      "inputs": [
+        "caramel_base",
+        "ing_01"
+      ],
+      "outputState": "decorated_base",
+      "instructions": "Placez les anneaux d'ananas sur le caramel chaud dans la poêle, en les installant correctement — l'un au centre et le plus grand nombre qui s'adaptera autour du bord sans se chevaucher. Appuyez doucement sur le caramel. Si vous utilisez de l'ananas en conserve, faites d'abord bien sécher les anneaux; l'excès de jus arrosera le caramel et empêchera les fruits de brunir correctement. Placer une cerise maraschino ou une cerise séchée au centre de chaque anneau si désiré.",
+      "visualCue": {
+        "primaryTarget": "Les ananas sont plats contre la base du caramel, sans discontinuité entre eux. Le caramel est visible aux bords et entre les anneaux. Les anneaux sont légèrement dorés par la chaleur du caramel.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les anneaux sont assis lâchement sur le dessus et le caramel autour d'eux est encore très fluide et se sépare.",
+            "action": "Appuyez plus fermement sur les anneaux. Les anneaux mouillés flottent aussi, les patient plus sec et les remplacent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les anneaux sont rincés avec la poêle, le caramel s'est légèrement relevé autour de leurs bords. L'arrangement semble soigné et les anneaux ont un léger brillant du caramel.",
+            "action": "Verser la pâte à éponge immédiatement et uniformément sur le dessus."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le caramel a durci tout en arrangeant les fruits et les anneaux sont assis sur un disque de caramel solide.",
+            "action": "Chauffer très doucement la base de la poêle pendant 30 secondes pour adoucir. Procéder — les fruits caraméliseront encore magnifiquement dans le four."
+          }
+        ]
+      },
+      "feelCue": "Lorsqu'ils sont pressés doucement, les anneaux d'ananas doivent avoir une légère résistance, non pas à la source des fruits en conserve froids, mais à un contact rincé avec le caramel sous eux."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélanger la pâte",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_03"
+      ],
+      "outputState": "cake_batter",
+      "instructions": "Dans un bol, battre le beurre ramolli et le sucre de roulette avec un mélangeur électrique pendant 3 minutes jusqu'à ce qu'il soit pâle et moelleux. Ajouter les œufs un à la fois, battant bien après chaque ajout. Plongez dans la farine et la poudre de cuisson et pliez jusqu'à ce qu'ils se combinent — quelques tours avec une spatule plutôt que de battre vigoureusement. La pâte doit être lisse, épaisse et tomber de la spatule dans des rubans lents. Un petit jet de lait ou de jus d'ananas de l'étain peut le desserrer à la bonne consistance.",
+      "visualCue": {
+        "primaryTarget": "Une pâte pâle et crémeuse qui tombe d'une cuillère ou d'une spatule en rubans épais et lents. Pas de stries de farine visibles. La batte est lisse et brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre et le sucre ne sont pas entièrement crémeux — le mélange est dense et jaunâtre plutôt que pâle et moelleux. Des stries de farine visibles.",
+            "action": "Battre le beurre et le sucre plus longtemps avant d'ajouter des œufs. Pliez la farine plus complètement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pale, pâte très lisse qui tombe dans des rubans épais. Un peu plus épais que la crème double — il tient un motif de figure-huit brièvement lorsqu'il est tombé.",
+            "action": "Verser uniformément sur l'ananas et le caramel disposés."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie a été trop mélangée et semble légèrement dense et collante. Ça ne tombe pas bien.",
+            "action": "Continuez. La texture peut être légèrement moins tendre, mais la garniture caramélisée est l'étoile de ce gâteau."
+          }
+        ]
+      },
+      "feelCue": "Un ruban de pâte laissé tomber d'une cuillère devrait maintenir sa forme sur la surface pendant 2-3 secondes avant de se dissoudre lentement en arrière.Cette viscosité assure que l'éponge cuirea avec une miette uniforme et fine."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire et inverser",
+      "inputs": [
+        "cake_batter",
+        "decorated_base"
+      ],
+      "outputState": "finished_cake",
+      "instructions": "Verser soigneusement la pâte sur l'arrangement d'ananas, en s'étendant doucement sur les bords pour couvrir tout uniformément sans perturber l'arrangement de fruits. Cuire au four à 175°C pendant 30 à 35 minutes jusqu'à ce que l'éponge soit bien dorée et qu'une brochette insérée au centre ressorte propre. Retirer du four et reposer 5 minutes — pas plus. Exécutez un couteau autour du bord, placez une grande plaque de service sur le dessus, et inversez de façon décisive en un seul mouvement. Soulevez la poêle tout droit. N'importe quel caramel accroché à la poêle peut être gratté et versé sur le dessus.",
+      "visualCue": {
+        "primaryTarget": "Après inversion : une laque brillante de caramel ambre et des anneaux d'ananas dorés orientés vers le haut sur une base d'éponge foncée et magnifiquement colorée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après inversion, le centre de l'éponge est coulé et à l'aspect brut. La pâte peut avoir partiellement adhéré à la poêle.",
+            "action": "Récupérer avec la poêle et retourner au four pendant 10 minutes. Le caramel peut être réchauffé si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un cercle parfait de caramel ambré brillant et des anneaux de fruits reposant sur une éponge dorée. Le caramel a mis une glaçure. Pas de taches brutes visibles.",
+            "action": "Servir au chaud avec de la crème ou de la crème glacée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le caramel s'est durci jusqu'à un caramel sombre, presque fragile. Les bords de l'éponge sont très bruns et secs.",
+            "action": "La saveur est encore bonne. Réchauffer les tranches brièvement au micro-ondes avant de servir, ou servir avec de la crème supplémentaire pour humidifier."
+          }
+        ]
+      },
+      "feelCue": "La période de repos de cinq minutes avant l'inversion est critique — le caramel doit se fixer légèrement à partir de son état d'ébullition. Si vous retournez immédiatement, il versera le gâteau; attendez trop longtemps et il se lie à la poêle."
+    }
+  ]
 };

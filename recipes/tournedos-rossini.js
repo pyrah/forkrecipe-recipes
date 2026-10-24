@@ -1,112 +1,309 @@
 export default {
-  repoId: "master_french_tournedos_rossini_001",
-  parentRepoId: null,
-  slug: "tournedos-rossini",
-  author: "ForkRecipe Kitchen",
-  title: "Tournedos Rossini",
-  description: "The composer's namesake extravagance — a thick filet mignon seared to a rosy heart, set on a butter-fried crouton and crowned with a slab of seared foie gras, the whole gilded with shaved black truffle and a glossy Madeira demi-glace that pulls every luxury into one bite.",
-  cuisine: "French",
-  culture: "Parisian Haute Cuisine",
-  category: "proteins",
-  tags: ["french", "beef", "filet", "foie-gras", "truffle", "madeira", "haute-cuisine", "pan-sauce"],
-  difficulty: 4,
-  activeTime: "40 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Filet mignon (two 4 cm thick tournedos, ~180 g each, tied)", ratioValue: 100, defaultUnit: "parts", substitutions: ["beef tenderloin centre-cut"] },
-    { ingId: "ing_02", role: "Protein",   name: "Foie gras (two ~60 g slices, 1.5 cm thick, well chilled)",   ratioValue: 60,  defaultUnit: "parts", substitutions: ["seared duck liver", "chicken-liver parfait (off-heat)"] },
-    { ingId: "ing_03", role: "Structure", name: "White bread (two crustless rounds cut to the filet's width)", ratioValue: 30,  defaultUnit: "parts", substitutions: ["brioche", "country sourdough"] },
-    { ingId: "ing_04", role: "Fat",       name: "Clarified butter (for the crouton and the sear)",             ratioValue: 18,  defaultUnit: "parts", substitutions: ["ghee", "neutral oil + butter"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Dry Madeira (Sercial or Verdelho)",                           ratioValue: 22,  defaultUnit: "parts", substitutions: ["dry Marsala", "amontillado sherry"] },
-    { ingId: "ing_06", role: "Liquid",    name: "Veal demi-glace (or rich brown veal stock, reduced)",         ratioValue: 35,  defaultUnit: "parts", substitutions: ["beef demi-glace", "concentrated brown stock"] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Shallot (finely minced)",                                     ratioValue: 6,   defaultUnit: "parts", substitutions: ["banana shallot"] },
-    { ingId: "ing_08", role: "Umami",     name: "Black truffle (fresh, half shaved / half minced into sauce)",  ratioValue: 8,   defaultUnit: "parts", substitutions: ["preserved winter truffle + truffle jus"] },
-    { ingId: "ing_09", role: "Fat",       name: "Cold unsalted butter (to mount the sauce)",                   ratioValue: 12,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fleur de sel & freshly cracked black pepper",                 ratioValue: 1,   defaultUnit: "parts", substitutions: ["sea salt"] },
+  "repoId": "master_french_tournedos_rossini_001",
+  "parentRepoId": null,
+  "slug": "tournedos-rossini",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tournedos Rossini",
+  "description": "Le compositeur porte le nom d'extravagance — un filet mignon épais cousu au cœur rosé, sur un crouton au beurre et couronné d'une dalle de foie gras mariné, l'ensemble doré à la truffe noire rasée et une demi-glace de Madère brillante qui tire chaque luxe en une seule bouchée.",
+  "cuisine": "Français",
+  "culture": "Haute Cuisine parisienne",
+  "category": "proteins",
+  "tags": [
+    "français",
+    "boeuf",
+    "fichier",
+    "foie gras",
+    "truffe",
+    "madeira",
+    "haute-cuisine",
+    "pan-sauce"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "40 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Fry",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "fried_croutons",
-      instructions: "Cut the bread into rounds the exact width of the tournedos so the meat sits flush. Heat clarified butter in a skillet over medium heat and fry the rounds, turning once, until evenly golden and crisp on both faces but still tender at the centre, 1-2 minutes a side. Drain on paper and keep warm — these crisp pedestals lift the meat off its juices so the bottom never goes soggy.",
-      visualCue: {
-        primaryTarget: "Each crouton is an even biscuit-gold across the whole face, crisp at the rim, with no pale raw patches and no scorched dark rings.",
-        spectrum: [
-          { state: "Underdone", description: "Bread is pale and still soft, soaking up butter without colouring; the surface gives like fresh toast.", action: "Return to the pan and keep frying — it needs colour to stay crisp under the meat and sauce." },
-          { state: "Perfect",   description: "Uniform golden brown, audibly crisp when tapped, holding its shape but not hard as a cracker.", action: "Drain and reserve warm; wipe the pan to sear the beef." },
-          { state: "Overdone",  description: "Edges are dark brown to black and the crumb tastes scorched and bitter; the butter in the pan is smoking.", action: "Discard the burnt rounds and start fresh with cooler butter — bitter croutons will taint the whole plate." },
-        ],
-      },
-      feelCue: "The bread should sizzle softly and feel light when you lift it. Tap a finished crouton with your nail — a crisp click means it will hold up under the foie gras and sauce.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filet mignon (deux tournedos de 4 cm d'épaisseur, ~180 g chacun, attaché)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "filet de viande bovine coupe centrale"
+      ]
     },
     {
-      nodeId: "step_2", action: "Sear",
-      inputs: ["fried_croutons", "ing_01", "ing_04", "ing_10"],
-      outputState: "rested_filet",
-      instructions: "Pat the tournedos bone-dry and season well with salt and pepper. In a heavy skillet, heat a film of clarified butter until shimmering. Sear the filets undisturbed until a deep crust forms, about 3 minutes, then turn and sear the second face, basting, to a rosy medium-rare (52°C / 125°F internal), 3-4 minutes more. Transfer to a plate, tent loosely, and rest while you build the sauce in the same pan. Leave the fond behind.",
-      visualCue: {
-        primaryTarget: "A dark, even mahogany crust on both faces; pressed at the centre the meat feels springy with a soft give, and juices run clear-pink, not red.",
-        spectrum: [
-          { state: "Underdone", description: "Surface is grey-brown and patchy with no real crust; the centre feels soft and slack and reads below 48°C.", action: "Raise the heat and keep searing for crust, or return briefly to finish — but pull before the centre tightens past medium-rare." },
-          { state: "Perfect",   description: "Crisp burnished crust all over, a springy centre yielding to the touch, an internal temperature of 50-52°C carrying to a rosy medium-rare on rest.", action: "Rest the filets and start the Madeira sauce in the rendered fond." },
-          { state: "Overdone",  description: "Meat feels firm and resistant when pressed, juices run clear with no pink, internal temperature climbs past 60°C.", action: "Accept it as medium and serve promptly with extra sauce to keep it moist — it cannot be undone." },
-        ],
-      },
-      feelCue: "Press the centre with a fingertip: medium-rare feels like the fleshy base of your thumb when the thumb and middle finger touch — yielding but with a gentle bounce back. Hold the rest; resting lets the juices settle so they don't flood the crouton.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Foie gras (deux tranches d'environ 60 g, épaisseur 1,5 cm, bien réfrigéré)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "foie de canard marin",
+        "lait de poule (hors chauffage)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Sear",
-      inputs: ["rested_filet", "ing_02", "ing_10"],
-      outputState: "seared_foie",
-      instructions: "Score the chilled foie gras slices lightly in a crosshatch and season with salt and pepper. Wipe the skillet of all but a whisper of fat and set over medium-high heat. Sear the foie straight from the fridge, 45-60 seconds per side, until a caramel crust forms but the centre stays just-set and meltingly soft. Lift it out the instant it yields — foie gras renders to nothing if it lingers. Pour off the rendered fat, reserving it, and keep the pan for the sauce.",
-      visualCue: {
-        primaryTarget: "A glossy caramel-brown crust on each face, the slice still plump and holding its shape, its centre soft and barely warm through — not collapsing into the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Surface is pale grey with no sear; the slice is cold and firm in the centre and slick rather than crusted.", action: "Get the pan hotter and sear a few seconds more per side — you want a crust, but move fast before it melts." },
-          { state: "Perfect",   description: "Deep golden crust, the slice yielding and just-set at the core, a generous slick of rendered fat in the pan.", action: "Remove immediately and set each slice atop a rested filet; reserve the rendered fat for the sauce." },
-          { state: "Overdone",  description: "The slice has shrunk and slumped, leaking most of its fat into the pan and turning greasy and small with a livery edge.", action: "Rescue what holds together and plate it quickly; lower the heat and work faster on any remaining slices." },
-        ],
-      },
-      feelCue: "Foie gras tells you it's ready by smell and sound — a sweet, nutty caramel aroma and a soft sizzle, not a violent fry. The moment the surface looks lacquered, it's done; hesitation turns it to a puddle of fat.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Pain blanc (deux rondelles sans croûte coupées à la largeur du filet)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "brioche",
+        "pays sourd"
+      ]
     },
     {
-      nodeId: "step_4", action: "Reduce",
-      inputs: ["seared_foie", "ing_07", "ing_05", "ing_06", "ing_08"],
-      outputState: "madeira_reduction",
-      instructions: "Lower the heat to medium and sweat the minced shallot in a teaspoon of the reserved foie fat until soft and translucent, about 1 minute. Pour in the Madeira to deglaze, scraping the fond loose, and reduce until syrupy and nearly dry, 2-3 minutes. Add the demi-glace and the minced portion of the truffle and simmer until the sauce coats the back of a spoon and turns deep and glossy, 3-4 minutes.",
-      visualCue: {
-        primaryTarget: "A dark, gleaming sauce that naps a spoon and holds a clean line when you draw a finger through it, smelling of toasted wine, truffle and roast meat.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery, the Madeira still sharp with raw alcohol and the colour a flat, pale brown.", action: "Keep simmering to reduce — the harsh wine fumes must mellow and the body must thicken before it's ready." },
-          { state: "Perfect",   description: "Glossy and lightly syrupy, deep mahogany, clinging to the spoon, the truffle perfuming the steam and the alcohol cooked clean away.", action: "Pull off the heat and mount with cold butter." },
-          { state: "Overdone",  description: "Sauce has reduced to a sticky, salty glaze that gums the spoon and tastes over-concentrated and tight.", action: "Loosen with a splash of stock or water and a few drops of Madeira, then re-taste for salt before mounting." },
-        ],
-      },
-      feelCue: "Listen as the Madeira reduces — the loose splashy boil tightens to a slow, thick blooping as it nears syrup. Drag a spoon across the pan floor: when the trail closes slowly rather than instantly, it has body.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre clarifié (pour le crouton et la couture)",
+      "ratioValue": 18,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ghee",
+        "huile neutre + beurre"
+      ]
     },
     {
-      nodeId: "step_5", action: "Mount & Plate",
-      inputs: ["madeira_reduction", "ing_09", "ing_08", "ing_10"],
-      outputState: "tournedos_rossini",
-      instructions: "Off the heat, swirl the cold butter into the sauce a cube at a time until it turns silky and emulsified — never let it boil or it will break. Taste and adjust salt. Set each foie-crowned filet on its crouton, spoon the glossy Madeira sauce over and around, shower with the remaining shaved truffle, and finish with a pinch of fleur de sel. Serve at once, while the foie is still warm and yielding.",
-      visualCue: {
-        primaryTarget: "A glossy, unbroken sauce pooling around a crisp crouton, the rosy filet topped with seared foie and a drift of black truffle catching the light.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce looks thin and dull, slides off the meat, and the butter hasn't fully emulsified so it tastes flat and unfinished.", action: "Off heat, whisk in another knob of cold butter to build gloss and body, then taste for seasoning." },
-          { state: "Perfect",   description: "Silky, glossy sauce that naps the meat and rings the plate, foie warm and soft, truffle fragrant, the crouton still crisp beneath.", action: "Serve immediately — the dish waits for no one." },
-          { state: "Overdone",  description: "Sauce has broken into oily droplets and a grainy puddle because it got too hot or reduced too far after mounting.", action: "Whisk in a teaspoon of cold stock or water off the heat to bring it back, or strain and re-mount with fresh cold butter." },
-        ],
-      },
-      feelCue: "The mounted sauce should feel velvety and look mirror-bright, not greasy or split. Plate fast and serve hot — the foie deflates and the crouton softens with every minute it sits.",
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Madère sèche (Sercial ou Verdelho)",
+      "ratioValue": 22,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Marsala sec",
+        "amontillado sherry"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Démi-glaces de veau (ou stock de veau brun riche, réduit)",
+      "ratioValue": 35,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "demi-glaces de boeuf",
+        "blanc concentré"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Échalote (finement hachée)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalote de bananes"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "Truffe noire (fraîche, moitié rasée / moitié hachée en sauce)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "truffes d'hiver conservées + truffes jus"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Beurre froid non salé (pour monter la sauce)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Fleur de sel & poivre noir fraichement craqué",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel de mer"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Fry",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "fried_croutons",
+      "instructions": "Couper le pain en rondelles de la largeur exacte des tournedos, de sorte que la viande s'assoie. Chauffer le beurre dans une poêle à feu moyen et faire frire les ronds, en tournant une fois, jusqu'à ce qu'il soit uniformément doré et croustillant sur les deux faces, mais toujours tendre au centre, 1-2 minutes de côté. Égoutter sur du papier et garder au chaud — ces piédestaux croustillants lèvent la viande de ses jus de sorte que le fond ne sème jamais.",
+      "visualCue": {
+        "primaryTarget": "Chaque crouton est un biscuit-or uniforme sur toute la face, croquant au bord, sans taches brutes pâles et sans anneaux foncés brûlés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pain est pâle et encore doux, absorbant le beurre sans coloration; la surface donne comme un toast frais.",
+            "action": "Retournez dans la poêle et continuez à frire — il faut de la couleur pour rester croquant sous la viande et la sauce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un brun doré uniforme, audiquement croustillant lorsqu'il est tapé, tenant sa forme mais pas dur comme un craquelin.",
+            "action": "Égoutter et réserver au chaud; essuyer la poêle pour saisir le boeuf."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont brun foncé à noir et la miette a un goût brûlé et amer; le beurre dans la poêle fume.",
+            "action": "Jeter les rondelles brûlées et commencer à l'état frais avec du beurre frais — les croûtons amers vont taper toute l'assiette."
+          }
+        ]
+      },
+      "feelCue": "Le pain doit tordre doucement et sentir la lumière quand vous le soulevez. Tapez un crouton fini avec votre ongles — un clic croustillant signifie qu'il tiendra sous le foie gras et la sauce."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "fried_croutons",
+        "ing_01",
+        "ing_04",
+        "ing_10"
+      ],
+      "outputState": "rested_filet",
+      "instructions": "Saupoudrer le tournedos d'os et bien assaisonner de sel et de poivre. Dans une poêle lourde, faire chauffer un film de beurre clarifié jusqu'à ce qu'il mijote. Semer les filets sans gêner jusqu'à ce qu'une croûte profonde se forme, environ 3 minutes, puis tourner et saisir le deuxième visage, en basting, à un rose moyen-rare (52°C / 125°F interne), 3-4 minutes de plus. Transférer dans une assiette, la tente lâchement et se reposer pendant que vous construisez la sauce dans la même casserole. Laissez le fond derrière.",
+      "visualCue": {
+        "primaryTarget": "Une croûte acajou foncée et même acajoue sur les deux faces; pressée au centre, la viande se sent printanière avec une douceur de donner, et les jus coulent à l'étroit, pas rouge.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est gris-brun et patchy sans véritable croûte; le centre se sent doux et lâche et se lit en dessous de 48°C.",
+            "action": "Augmenter la chaleur et garder l'encroûtement pour la croûte, ou revenir brièvement à la finition — mais tirer avant le centre se resserre au-delà de moyenne-rare."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crisp croûte brûlée partout, un centre printanier donnant au toucher, une température interne de 50-52°C portant à un rose moyen-rare au repos.",
+            "action": "Reposez les filets et commencez la sauce Madeira dans le fond rendu."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande se sent ferme et résistante lorsqu'elle est pressée, les jus sont limpides sans rose, la température interne passe à 60°C.",
+            "action": "Accepter comme moyen et servir rapidement avec de la sauce supplémentaire pour le garder humide — il ne peut pas être défait."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le centre avec un bout de doigt : les rares moyens ressemblent à la base charnue de votre pouce lorsque le pouce et le doigt du milieu se touchent. Retenez le reste ; le repos permet aux jus de s'installer pour ne pas inonder le crouton."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sear",
+      "inputs": [
+        "rested_filet",
+        "ing_02",
+        "ing_10"
+      ],
+      "outputState": "seared_foie",
+      "instructions": "Faire le point sur les tranches de foie gras réfrigérées légèrement dans un croisement et assaisonner de sel et de poivre. Essuyer la poêle de tous, sauf un murmure de graisse et mettre à feu moyen-élevé. Entrer le foie directement du réfrigérateur, 45-60 secondes de chaque côté, jusqu'à ce qu'une croûte de caramel se forme, mais le centre reste juste et fondant. Éloignez-le dès qu'il en donne — le foie gras ne rend rien s'il s'attarde. Verser la graisse fondue, la réserver et garder la poêle pour la sauce.",
+      "visualCue": {
+        "primaryTarget": "Une croûte brun caramel brillant sur chaque visage, la tranche encore plombée et tenant sa forme, son centre doux et à peine chaud à travers — ne s'écroulant pas dans la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est gris pâle sans couture; la tranche est froide et ferme au centre et lisse plutôt qu'en croûte.",
+            "action": "Obtenez la poêle plus chaude et la couture quelques secondes de plus par côté — vous voulez une croûte, mais bougez vite avant qu'elle ne fond."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte d'or profond, la tranche qui se présente et qui se fixe au cœur, une généreuse lécherette de graisse fondue dans la poêle.",
+            "action": "Retirer immédiatement et mettre chaque tranche sur un filet reposé; réserver le gras rendu pour la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "La tranche s'est rétrécie et s'est effondrée, coulant la majeure partie de sa graisse dans la poêle et transformant en graisse et en petite avec un bord de la livrée.",
+            "action": "Sauver ce qui tient ensemble et le déposer rapidement; baisser la chaleur et travailler plus rapidement sur les tranches restantes."
+          }
+        ]
+      },
+      "feelCue": "Le foie gras vous dit qu'il est prêt par l'odeur et le son — un arôme de caramel doux et noisette et un doux grésil, pas une frite violente. Au moment où la surface semble laquée, c'est fait; l'hésitation la transforme en flaque de graisse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Réduire",
+      "inputs": [
+        "seared_foie",
+        "ing_07",
+        "ing_05",
+        "ing_06",
+        "ing_08"
+      ],
+      "outputState": "madeira_reduction",
+      "instructions": "Abaissez le feu à moyen et transpirez l'échalote hachée dans une cuillère à café du foie gras réservé jusqu'à ce qu'elle soit douce et translucide, environ 1 minute. Verser à Madère pour déglacer, racler le fond en vrac, et réduire jusqu'à siruposité et presque sèche, 2-3 minutes. Ajouter le demi-glace et la partie hachée de la truffe et laisser mijoter jusqu'à ce que la sauce enveloppe l'arrière d'une cuillère et tourne profondément et brillant, 3-4 minutes.",
+      "visualCue": {
+        "primaryTarget": "Une sauce foncée et scintillante qui sirote une cuillère et tient une ligne propre quand vous tirez un doigt à travers elle, sentant le vin grillé, la truffe et la viande rôtie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse, la Madère encore pointue avec de l'alcool cru et la couleur un plat, brun pâle.",
+            "action": "Continuez à mijoter pour réduire — les fortes vapeurs de vin doivent se calmer et le corps doit épaissir avant qu'il ne soit prêt."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire et légèrement sirupeuse, acajou profond, accroché à la cuillère, la truffe perfumant la vapeur et l'alcool cuit propre.",
+            "action": "Tirez le feu et montez avec du beurre froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est réduite à un glaçage collant et salé qui gomme la cuillère et a un goût surconcentré et serré.",
+            "action": "Loyer avec un jet de bouillon ou d'eau et quelques gouttes de Madère, puis re-goûter pour le sel avant de monter."
+          }
+        ]
+      },
+      "feelCue": "Écoutez-moi, le Madère réduit: l'ébullition lâche se serre à un bloop lent et épais, alors qu'il approche du sirop. Faites glisser une cuillère sur le plancher de la casserole: quand le sentier se ferme lentement plutôt que instantanément, il a le corps."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Montage et plaque",
+      "inputs": [
+        "madeira_reduction",
+        "ing_09",
+        "ing_08",
+        "ing_10"
+      ],
+      "outputState": "tournedos_rossini",
+      "instructions": "Hors du feu, remuez le beurre froid dans la sauce un cube à la fois jusqu'à ce qu'il devienne soyeux et émulsifié — ne le laissez jamais bouillir ou il se brisera. Goûtez et ajustez le sel. Mettre chaque filet de foie sur son crouton, cuillerer la sauce Madeira brillante sur et autour, se doucher avec le reste de la truffe rasée, et terminer avec une pincée de fleur de sel. Servir immédiatement, tandis que le foie est encore chaud et productif.",
+      "visualCue": {
+        "primaryTarget": "Une sauce brillante et non cassée qui s'accumule autour d'un crouton croustillant, le filet rosé surmonté d'un foie de mer et une dérive de truffes noires attrapant la lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce semble mince et terne, glisse de la viande, et le beurre n'a pas complètement émulsifié pour qu'il goûte plat et inachevé.",
+            "action": "Hors chaleur, fouetter dans un autre bouton de beurre froid pour construire le gloss et le corps, puis goûter à l'assaisonnement."
+          },
+          {
+            "state": "Perfect",
+            "description": "sauce soyeuse et brillante qui since la viande et sonne l'assiette, le foie chaud et doux, la truffe parfumée, le crouton encore croustillant sous.",
+            "action": "Servir immédiatement — le plat n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sauce a cassé en gouttelettes huileuses et une flaque granuleuse parce qu'elle est devenue trop chaude ou réduite trop loin après le montage.",
+            "action": "fouetter dans une cuillère à café de bouillons froids ou arroser le feu pour le ramener, ou tendre et remonter avec du beurre frais froid."
+          }
+        ]
+      },
+      "feelCue": "La sauce montée doit se sentir veloutée et regarder miroir-brillant, pas gras ou fendue. Plaque rapide et servir chaud — le foie se dégonfle et le crouton s'adoucit à chaque minute qu'il est assis."
+    }
+  ]
 };

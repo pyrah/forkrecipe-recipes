@@ -1,101 +1,265 @@
 export default {
-  repoId: "master_american_hoppin_john_001",
-  parentRepoId: null,
-  slug: "hoppin-john",
-  author: "ForkRecipe Kitchen",
-  title: "Hoppin' John",
-  description: "Black-eyed peas braised low and slow with a smoked ham hock, onion, and rice in their own broth — the dish of luck and prosperity eaten on New Year's Day across the American South, rooted in the Gullah Geechee food traditions of the Lowcountry.",
-  cuisine: "American",
-  culture: "Gullah/Southern",
-  category: "grains",
-  tags: ["black-eyed-peas", "rice", "southern", "gullah", "new-years", "ham", "one-pot"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "2 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 0, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Dried black-eyed peas, soaked overnight", ratioValue: 2,    defaultUnit: "parts", substitutions: ["fresh or frozen black-eyed peas (reduce cook time to 30 min)"] },
-    { ingId: "ing_02", role: "Protein",   name: "Smoked ham hock or thick-cut bacon",      ratioValue: 0.75, defaultUnit: "parts", substitutions: ["smoked turkey leg (for lighter version)"] },
-    { ingId: "ing_03", role: "Allium",    name: "White onion, diced",                      ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["yellow onion"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves, smashed",                  ratioValue: 0.1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Bay leaf",                                 ratioValue: 0.01, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Herb",      name: "Fresh thyme sprigs",                       ratioValue: 0.02, defaultUnit: "parts", substitutions: ["dried thyme, halved quantity"] },
-    { ingId: "ing_07", role: "Spice",     name: "Cayenne pepper",                           ratioValue: 0.01, defaultUnit: "parts", substitutions: ["crushed red pepper flakes"] },
-    { ingId: "ing_08", role: "Starch",    name: "Long-grain white rice",                    ratioValue: 1,    defaultUnit: "parts", substitutions: ["Carolina Gold rice"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Salt",                                     ratioValue: 0.06, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Garnish",   name: "Scallion, thinly sliced",                  ratioValue: 0.1,  defaultUnit: "parts", substitutions: ["fresh parsley"] },
+  "repoId": "master_american_hoppin_john_001",
+  "parentRepoId": null,
+  "slug": "hoppin-john",
+  "author": "ForkRecipe Kitchen",
+  "title": "C'est John.",
+  "description": "Les pois aux yeux noirs braisaient bas et lents avec un hamac fumé, de l'oignon et du riz dans leur propre bouillon — le plat de chance et de prospérité mangé le jour de l'an à travers le Sud américain, enraciné dans les traditions alimentaires Gullah Geechee du Lowcountry.",
+  "cuisine": "Américain",
+  "culture": "Gullah/Sud",
+  "category": "grains",
+  "tags": [
+    "Pois aux yeux noirs",
+    "riz",
+    "sud",
+    "Goullah",
+    "nouveaux ans",
+    "jambon",
+    "un seul pot"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "2 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Soak",
-      inputs: ["ing_01"],
-      outputState: "soaked_peas",
-      instructions: "The night before: rinse the dried black-eyed peas in cold water, picking out any stones or shriveled peas. Place in a large bowl and cover with cold water by at least 5 cm. Let soak at room temperature overnight, 8–12 hours. The peas will roughly double in volume. Drain and discard the soaking water. This step is not optional — soaking reduces the total cook time from 3 hours to under 90 minutes and ensures the peas cook evenly without their skins bursting before the interiors are done.",
-      visualCue: {
-        primaryTarget: "Swollen, smooth-skinned peas that have plumped to nearly double their dried size. The characteristic black eye on each pea should be clearly visible.",
-        spectrum: [
-          { state: "Underdone", description: "Peas are still compact and hard, only marginally larger than dried. The black eye is still pinched and small.", action: "Continue soaking. If short on time, use the quick-soak: cover with water, boil 2 minutes, remove from heat, soak 1 hour." },
-          { state: "Perfect",   description: "Peas are clearly swollen, with taut, plump skins and the black eye prominently expanded. A pea pressed between thumb and forefinger yields with some resistance but doesn't crumble.", action: "Drain, discard soaking water, and proceed to simmer." },
-          { state: "Overdone",  description: "Peas smell faintly sour. Skins are beginning to slip from the flesh. The soaking water is murky and thick.", action: "Drain immediately and cook at once. Fermentation has begun but the peas are still excellent." },
-        ],
-      },
-      feelCue: "A properly soaked black-eyed pea should feel like a firm but yielding grape — not the hard pebble of a dried pea, but with enough body that it does not squash completely when pinched.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Pois secs aux yeux noirs, trempés pendant la nuit",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pois aux yeux noirs frais ou congelés (réduire le temps de cuisson à 30 min)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["soaked_peas", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_09"],
-      outputState: "tender_peas_with_ham",
-      instructions: "Place the drained peas and ham hock in a heavy pot or Dutch oven. Add the onion, smashed garlic, bay leaf, thyme, cayenne, and a generous pinch of salt. Cover with cold water by 5 cm. Bring to a boil, skimming any grey foam from the surface. Reduce to a gentle, steady simmer. Cook for 60–75 minutes, checking every 20 minutes and adding hot water to keep the peas just submerged. When the peas are completely tender, remove the ham hock and let it cool enough to handle. Pull all the meat from the bone in generous chunks and return it to the pot. Discard the skin and bone. Taste the broth — it should be deeply smoky, savory, and faintly spiced.",
-      visualCue: {
-        primaryTarget: "Fully tender peas in a rich, amber-brown, slightly smoky broth. The ham meat is in soft, shaggy pieces distributed through the pot.",
-        spectrum: [
-          { state: "Underdone", description: "Peas still firm and slightly chalky in the center when bitten. The broth is thin, pale, and tastes flat.", action: "Continue simmering. Taste every 15 minutes. A hard pea will not soften once the rice is added — this step is critical." },
-          { state: "Perfect",   description: "Peas are creamy-soft all the way through with no starchy center. The broth is a deep amber, rich with smoke and rendered pork fat, and coats the lips slightly.", action: "Measure the broth — you need a 1.5:1 ratio of broth to rice. Add water if needed. Proceed to add the rice." },
-          { state: "Overdone",  description: "Many peas have dissolved into the broth, which is now thick and opaque. The pot looks more like a porridge than a braise.", action: "Proceed — the pot liquor is deeply flavored from the dissolved peas. The finished dish will be thick and comforting, not separate and distinct." },
-        ],
-      },
-      feelCue: "The broth of properly cooked Hoppin' John coats your lips when you sip it — that faint, silky fattiness is the collagen and pork fat released by the ham hock. If the broth tastes thin and watery, keep simmering with the lid off.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Tablier fumé ou bacon épais",
+      "ratioValue": 0.75,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jambe de dinde fumée (pour version plus légère)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["tender_peas_with_ham", "ing_08"],
-      outputState: "finished_hoppin_john",
-      instructions: "Bring the pot to a boil over medium-high heat. Stir in the rinsed rice and stir once to distribute evenly. Reduce to the lowest possible heat and cover tightly. Cook for 18–20 minutes without lifting the lid. The rice absorbs the smoky, pork-rich broth as it cooks — this is what makes Hoppin' John different from rice served alongside beans. Remove from heat and rest covered for 10 minutes. The rice should be fully cooked and the liquid completely absorbed. Fluff gently with a fork.",
-      visualCue: {
-        primaryTarget: "Rice cooked directly in the broth, absorbing its smoke and color. The finished pot should look unified — smoky beige rice interspersed with cream-colored peas and dark shards of ham.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid still pooling at the edges when you tilt the pot. Rice is chalky and crunchy in the center.", action: "Cover and cook 5 more minutes on very low heat. If liquid is gone but rice is still hard, add 60 ml of hot water and cover again." },
-          { state: "Perfect",   description: "All liquid absorbed. Rice grains are fully cooked but distinct. The peas have settled throughout and the pot smells of smoke, thyme, and pork.", action: "Fluff with a fork and garnish with scallion." },
-          { state: "Overdone",  description: "The bottom has formed a thick crust and the rice is beginning to smell toasty and scorched.", action: "In the South, this bottom crust is called 'pot rice' and is prized. Scrape it up and fold it in, or offer it separately." },
-        ],
-      },
-      feelCue: "When you lift the lid after the rest, a cloud of smoky, thyme-scented steam should billow up. Drag a fork through the rice — it should feel light and separate, each grain distinct and faintly stained the amber-gold of the ham broth.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon blanc, coupé en dés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["finished_hoppin_john", "ing_10"],
-      outputState: "plated_hoppin_john",
-      instructions: "Taste the finished Hoppin' John one more time for salt, cayenne, and smokiness. Adjust as needed. Spoon into wide bowls and scatter a generous pinch of thinly sliced scallion over the top — the green is not just decoration but a fresh, sharp counterpoint to the deep, smoky richness of the peas and rice. Serve with hot-water cornbread, collard greens, and hot sauce on the table.",
-      visualCue: {
-        primaryTarget: "A unified pot of smoky amber-rice, cream-white peas, and dark ham — crowned with a bright scatter of green scallion.",
-        spectrum: [
-          { state: "Underdone", description: "The scallion is absent or sparse. The dish looks brown and monochrome in the bowl.", action: "Scatter scallion generously. In Gullah tradition the green garnish carries symbolic as well as culinary significance." },
-          { state: "Perfect",   description: "The bowl is fragrant and warm. Smoky, amber rice and peas fill the bowl, topped with bright green scallion. The smell is smoke, pork, thyme, and just a whisper of cayenne.", action: "Serve immediately. Pass the hot sauce." },
-          { state: "Overdone",  description: "The scallion has wilted and turned olive-drab from sitting on hot rice too long.", action: "Refresh with freshly sliced scallion. Pre-slice a backup batch." },
-        ],
-      },
-      feelCue: "A perfect spoonful of Hoppin' John should feel warm and dense — the rice coats the mouth with faint pork fat, the peas give a soft, yielding pop, and the ham provides occasional bursts of smoke and salt against the gentle heat of cayenne.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Girofles d'ail brisées",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Feuille de la baie",
+      "ratioValue": 0.01,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym séché, quantité réduite de moitié"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 0.01,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "flocons de poivre rouge concassé"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Starch",
+      "name": "Riz blanc à grains longs",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Riz d'or de Caroline"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 0.06,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Échalote, tranchée finement",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "persil frais"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "soaked_peas",
+      "instructions": "La veille : rincer les pois secs aux yeux noirs dans de l'eau froide, ramasser les pierres ou les petits pois. Déposer dans un grand bol et couvrir d'eau froide d'au moins 5 cm. Laisser tremper à température ambiante pendant la nuit, de 8 à 12 heures. Les pois vont à peu près doubler en volume. Égoutter et jeter l'eau de trempage. Cette étape n'est pas optionnelle : le trempage réduit la durée totale de cuisson de 3 heures à moins de 90 minutes et assure une cuisson uniforme des pois sans éclats de peau avant la fin des intérieurs.",
+      "visualCue": {
+        "primaryTarget": "Pois à la peau lisse et gonflés qui ont presque doublé leur taille sèche. L'œil noir caractéristique de chaque pois doit être clairement visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pois sont encore compacts et durs, mais légèrement plus gros que les pois séchés. L'œil noir est encore pincée et petit.",
+            "action": "Continuez à tremper. Si le temps est court, utiliser le savon rapide: couvrir d'eau, faire bouillir 2 minutes, retirer du feu, tremper 1 heure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pois sont clairement gonflés, avec des peaux tendues, de la chair et l'œil noir fortement élargi. Un pois pressé entre le pouce et l'index donne avec une certaine résistance mais ne s'effondre pas.",
+            "action": "Égoutter, jeter l'eau de trempe et laisser mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pois sentent légèrement aigre. Les peaux commencent à glisser de la chair. L'eau de trempe est trouble et épaisse.",
+            "action": "Égoutter immédiatement et cuire immédiatement. La fermentation a commencé, mais les pois sont encore excellents."
+          }
+        ]
+      },
+      "feelCue": "Un pois aux yeux noirs bien trempé devrait se sentir comme un raisin ferme, mais qui donne du raisin — pas le caillou dur d'un pois séché, mais avec suffisamment de corps qu'il ne s'écrase pas complètement quand pincée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "soaked_peas",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_09"
+      ],
+      "outputState": "tender_peas_with_ham",
+      "instructions": "Placer les pois drainés et le jarret dans une casserole ou un four hollandais. Ajouter l'oignon, l'ail cassé, la laurier, le thym, la cayenne, et une pincée généreuse de sel. Couvrir d'eau froide de 5 cm. Porter à ébullition, en écrémant toute mousse grise de la surface. Réduire en mijotant doucement et régulièrement. Cuire de 60 à 75 minutes, vérifier toutes les 20 minutes et ajouter de l'eau chaude pour garder les pois juste immergés. Lorsque les pois sont complètement tendres, retirez le jarret et laissez-le refroidir pour le manipuler. Tirez toute la viande de l'os dans des morceaux généreux et retournez-la dans le pot. Jeter la peau et les os. Goûtez le bouillon — il devrait être profondément fumé, salé et légèrement épicé.",
+      "visualCue": {
+        "primaryTarget": "Des pois entièrement tendres dans un bouillon riche, brun-ambre, légèrement fumé. La viande de jambon est en morceaux doux et chaggy distribués dans le pot.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pois encore fermes et légèrement crayeux au centre quand mordu. Le bouillon est mince, pâle et a un goût plat.",
+            "action": "Continuez à mijoter. Goûtez toutes les 15 minutes. Un pois dur ne s'adoucira pas une fois le riz ajouté — cette étape est critique."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pois sont crémeux-doux tout le long du chemin sans centre féculent. Le bouillon est un ambre profond, riche en fumée et rendu gras de porc, et enveloppe légèrement les lèvres.",
+            "action": "Mesurez le bouillon — vous avez besoin d'un rapport de 1,5:1 de bouillon au riz. Ajouter de l'eau si nécessaire. Ajouter le riz."
+          },
+          {
+            "state": "Overdone",
+            "description": "De nombreux pois se sont dissous dans le bouillon, qui est maintenant épais et opaque. Le pot ressemble plus à un porridge qu'à un braise.",
+            "action": "Procéder — la liqueur de pot est profondément aromatisée à partir des pois dissous. Le plat fini sera épais et réconfortant, non séparé et distinct."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon de Hoppin' John bien cuit couvre vos lèvres quand vous le sirotez — cette graisse faible et soyeuse est le collagène et la graisse de porc libérée par le jarret. Si le bouillon a un goût mince et aqueux, laisser mijoter avec le couvercle."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "tender_peas_with_ham",
+        "ing_08"
+      ],
+      "outputState": "finished_hoppin_john",
+      "instructions": "Porter le pot à ébullition à feu moyen-vif. Incorporer le riz rincé et mélanger une fois pour distribuer uniformément. Réduire au minimum la chaleur et couvrir soigneusement. Cuire de 18 à 20 minutes sans soulever le couvercle. Le riz absorbe le bouillon fumé et riche en porc qu'il cuisine — c'est ce qui rend Hoppin' John différent du riz servi aux haricots. Retirer du feu et reposer couvert pendant 10 minutes. Le riz doit être entièrement cuit et le liquide complètement absorbé. Fluffer doucement avec une fourchette.",
+      "visualCue": {
+        "primaryTarget": "Riz cuit directement dans le bouillon, absorbant sa fumée et sa couleur. Le pot fini devrait avoir l'air unifié — riz beige fumé entrecoupé de pois de couleur crème et de morceaux de jambon foncé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Liquid toujours pooling aux bords lorsque vous inclinez le pot. Le riz est crayeux et croquant au centre.",
+            "action": "Couvrir et cuire encore 5 minutes à feu très doux. Si le liquide est parti mais le riz est encore dur, ajouter 60 ml d'eau chaude et couvrir à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tout liquide absorbé. Les grains de riz sont entièrement cuits mais distincts. Les pois se sont installés et la casserole sent la fumée, le thym et le porc.",
+            "action": "Flacon avec une fourchette et garnir d'échon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le fond a formé une croûte épaisse et le riz commence à sentir grillé et brûlé.",
+            "action": "Dans le Sud, cette croûte inférieure est appelée « riz pot » et est prisée. Grattez-le et repliez-le, ou offrez-le séparément."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous soulevez le couvercle après le reste, un nuage de vapeur fumée et parfumée de thym devrait gonfler. Faites glisser une fourchette à travers le riz — elle devrait se sentir légère et séparée, chaque grain distincte et légèrement teint l'ambre-or du bouillon de jambon."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "finished_hoppin_john",
+        "ing_10"
+      ],
+      "outputState": "plated_hoppin_john",
+      "instructions": "Goûtez le Hoppin' John fini encore une fois pour le sel, la cayenne et la fumée. Ajuster au besoin. Spoon dans de larges bols et disperser une pincée généreuse de pétoncle finement tranché sur le dessus — le vert n'est pas seulement décoration, mais un contrepoint frais et tranchant à la richesse profonde et fumée des pois et du riz. Servir avec du pain de maïs à l'eau chaude, des verts à collier et de la sauce chaude sur la table.",
+      "visualCue": {
+        "primaryTarget": "Un pot unifié de riz d'ambre fumé, de pois blanc crème et de jambon foncé, couronné d'un éclat d'éparpillement vert.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pétoncle est absent ou clairsemé. Le plat est brun et monochrome dans le bol.",
+            "action": "Scatter les pétoncles généreusement. Dans la tradition du Gullah, la garniture verte a une signification symbolique et culinaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bol est parfumé et chaud. Le bol est rempli de riz fumé, d'ambre et de petits pois, surmonté de pétoncle vert vif. L'odeur est la fumée, le porc, le thym, et juste un murmure de Cayenne.",
+            "action": "Servir immédiatement. Passe la sauce chaude."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pétoncle s'est flétri et a tourné le olive-drabe de s'asseoir sur le riz chaud trop longtemps.",
+            "action": "Rafraîchir avec du pétoncle fraîchement tranché. Pré-découpez un lot de sauvegarde."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère parfaite de Hoppin' John devrait se sentir chaud et dense — le riz enveloppe la bouche avec de la graisse de porc faible, les pois donnent une pop douce et productive, et le jambon fournit occasionnellement des éclats de fumée et de sel contre la chaleur douce de Cayenne."
+    }
+  ]
 };

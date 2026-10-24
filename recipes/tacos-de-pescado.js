@@ -1,112 +1,314 @@
 export default {
-  repoId: "master_mexican_tacos_de_pescado_001",
-  parentRepoId: null,
-  slug: "tacos-de-pescado",
-  author: "ForkRecipe Kitchen",
-
-  title: "Baja Fish Tacos",
-  description: "Beer-battered white fish from the Baja California coast — impossibly light, shatteringly crisp, tucked into warm corn tortillas with shredded cabbage, chipotle crema, and a squeeze of lime that cuts through the richness like a knife. Street food at its most honest.",
-  cuisine: "Mexican",
-  culture: "Baja California",
-  category: "seafood",
-
-  tags: ["fish-tacos", "mexican", "baja", "fried", "cabbage", "crema"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 1, salty: 3, sour: 4, bitter: 1, umami: 2, heat: 3 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Firm white fish fillets (mahi-mahi, cod, or halibut), skinless", ratioValue: 600, defaultUnit: "g",  substitutions: ["tilapia", "snapper", "catfish"] },
-    { ingId: "ing_02", role: "Binder",    name: "All-purpose flour",                                               ratioValue: 120, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_03", role: "Leavener",  name: "Baking powder",                                                   ratioValue: 5,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",    name: "Ice-cold lager beer",                                             ratioValue: 200, defaultUnit: "ml", substitutions: ["sparkling water for alcohol-free"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",                                                   ratioValue: 6,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Cumin, ground",                                                   ratioValue: 3,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Smoked paprika",                                                  ratioValue: 3,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Neutral oil for deep-frying (vegetable or sunflower)",            ratioValue: 1,   defaultUnit: "L",  substitutions: ["canola oil"] },
-    { ingId: "ing_09", role: "Structure", name: "Corn tortillas, warmed",                                          ratioValue: 12,  defaultUnit: "tortillas", substitutions: ["flour tortillas"] },
-    { ingId: "ing_10", role: "Garnish",   name: "Green cabbage, finely shredded",                                  ratioValue: 200, defaultUnit: "g",  substitutions: ["purple cabbage", "pre-made slaw mix"] },
-    { ingId: "ing_11", role: "Dairy",     name: "Mexican crema or sour cream",                                     ratioValue: 120, defaultUnit: "ml", substitutions: ["plain Greek yogurt"] },
-    { ingId: "ing_12", role: "Spice",     name: "Chipotle peppers in adobo, minced",                               ratioValue: 20,  defaultUnit: "g",  substitutions: ["hot sauce + 1/2 tsp smoked paprika"] },
-    { ingId: "ing_13", role: "Citrus",    name: "Fresh limes, cut in wedges",                                      ratioValue: 3,   defaultUnit: "limes", substitutions: [] },
-    { ingId: "ing_14", role: "Herb",      name: "Fresh cilantro, roughly torn",                                    ratioValue: 20,  defaultUnit: "g",  substitutions: ["flat-leaf parsley for cilantro-averse"] },
-    { ingId: "ing_15", role: "Garnish",   name: "Pickled jalapeños or fresh salsa",                                ratioValue: 1,   defaultUnit: "to taste", substitutions: [] },
+  "repoId": "master_mexican_tacos_de_pescado_001",
+  "parentRepoId": null,
+  "slug": "tacos-de-pescado",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tacos de poissons de Baja",
+  "description": "Des poissons blancs bercés de la côte de la Basse-Californie — incroyablement légers, éclatants et croustillants, cousus dans des tortillas de maïs chaudes avec du chou déchiqueté, du crema de chipotle et une pression de chaux qui coupe à travers la richesse comme un couteau. La nourriture de rue à son plus honnête.",
+  "cuisine": "Mexicain",
+  "culture": "Baja Californie",
+  "category": "seafood",
+  "tags": [
+    "poisson-tacos",
+    "Mexique",
+    "Baja",
+    "frits",
+    "Choux",
+    "Créma"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Make chipotle crema",
-      inputs: ["ing_11", "ing_12"],
-      outputState: "chipotle_crema",
-      instructions: "Whisk minced chipotles in adobo into the crema until fully combined. Start with half the chipotle and taste — it should be smoky, creamy, and moderately spicy. The heat blooms after a minute of contact, so taste again before adding more. Transfer to a squeeze bottle or small bowl. Refrigerate until ready to use.",
-      visualCue: {
-        primaryTarget: "An orange-tinged cream with visible red-brown flecks of chipotle throughout. Smooth enough to drizzle but thick enough to hold its shape on the taco.",
-        spectrum: [
-          { state: "Underdone", description: "Plain white crema with no smoke or heat. Chipotle not yet incorporated.", action: "Whisk more vigorously and taste again. The adobo sauce is as important as the pepper itself." },
-          { state: "Perfect",   description: "Pale orange, pleasantly smoky and spicy. Coats a spoon in a thin film. Heat level is approachable but present.", action: "Cover and refrigerate. Flavors will deepen over 15 minutes." },
-          { state: "Overdone",  description: "Crema is deeply orange and very spicy — too hot for most guests.", action: "Whisk in more plain crema to dilute. Chipotle heat is forgiving and can always be cut back." },
-        ],
-      },
-      feelCue: "Taste a small amount on the tip of your tongue — the smoke should arrive first, then the cream, then the heat building gently at the back of the throat.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filets de poissons blancs fermes (mahi-mahi, morue ou flétan), sans peau",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tilapia",
+        "snapper",
+        "Poisson-chat"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix beer batter",
-      inputs: ["ing_02", "ing_03", "ing_05", "ing_06", "ing_07", "ing_04"],
-      outputState: "beer_batter",
-      instructions: "Whisk flour, baking powder, salt, cumin, and paprika together in a wide bowl. Make a well in the center and pour in the ice-cold beer all at once. Whisk just until combined — lumps are welcome, overworking builds gluten and the batter will be tough. The batter should be the consistency of thin pancake batter. Keep the batter cold; set the bowl over ice if your kitchen is warm.",
-      visualCue: {
-        primaryTarget: "A loose, thin batter with some lumps remaining. Pale tan with flecks of red paprika. Bubbles rising from the carbonation of the beer — this is what makes the crust light.",
-        spectrum: [
-          { state: "Underdone", description: "Flour pockets still visible. Dry flour not fully incorporated.", action: "Fold a few more times with a spatula — but stop at incorporation, not smoothness." },
-          { state: "Perfect",   description: "Thin, pourable, slightly lumpy. Runs off the whisk in a thin ribbon. Still carbonated and slightly foamy on top.", action: "Use immediately while cold and carbonated." },
-          { state: "Overdone",  description: "Batter is smooth and elastic. No bubbles. Dense. Will produce a tough, bready crust rather than a crisp, airy one.", action: "Whisk in a little more cold beer to loosen and re-introduce carbonation." },
-        ],
-      },
-      feelCue: "Dip a finger and let the batter drip — it should fall off in a thin, flowing curtain, not thick drops. Cold batter makes light crust; warm batter makes heavy crust.",
+      "ingId": "ing_02",
+      "role": "Binder",
+      "name": "Farine à usage général",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["ing_01", "beer_batter", "ing_08"],
-      outputState: "fried_fish",
-      instructions: "Heat oil in a deep, heavy pot to 185°C (365°F). Cut fish into strips about 2.5 cm × 8 cm. Pat completely dry. Working in batches of 4–5 strips, dip each piece in batter, let excess drip for 2 seconds, then lower gently into the oil. Fry for 3–4 minutes, turning once, until the batter is deep golden and the fish floats freely. Drain on a wire rack over a sheet pan — never on paper towel, which steams the crust soft.",
-      visualCue: {
-        primaryTarget: "Deep golden-amber batter, blistered and puffy with air pockets from the carbonation. Fish floats at the surface of the oil. A piece lifted from the oil should steam visibly and sound hollow when tapped.",
-        spectrum: [
-          { state: "Underdone", description: "Batter is pale blond and still looks wet on the surface. Fish sinks in the oil rather than floating. Internal flesh is still translucent.", action: "Return to oil and check temperature — it may have dropped from overcrowding. Fry in smaller batches." },
-          { state: "Perfect",   description: "Deep amber crust, free-floating, blistered and crisp. Fish inside is opaque and flakes cleanly when a piece is broken open. Crust sounds hollow when tapped.", action: "Drain on a wire rack and season with a pinch of salt immediately while hot." },
-          { state: "Overdone",  description: "Crust is dark brown and very thick. Edges look brittle. Fish inside may be starting to dry out.", action: "Drain immediately. The exterior can be trimmed of the darkest bits. Next batch: reduce fry time by 30–45 seconds." },
-        ],
-      },
-      feelCue: "Press the crust lightly with a fingertip — it should crunch and shatter under pressure, not compress softly like a damp sponge. If it gives without crackling, the oil was too cool.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["fried_fish", "ing_09", "ing_10", "chipotle_crema", "ing_13", "ing_14", "ing_15"],
-      outputState: "finished_fish_tacos",
-      instructions: "Warm tortillas directly on a gas flame or dry hot griddle until pliable and slightly charred at the edges. Double them up (traditional Baja style prevents sogginess). Layer: a pinch of raw cabbage, 2–3 strips of hot fish, a drizzle of chipotle crema, a scattering of cilantro, and a stripe of salsa or pickled jalapeños. Finish with a hard squeeze of lime. Eat immediately — the crust on the fish is a living, dying thing that begins to soften the moment it is dressed.",
-      visualCue: {
-        primaryTarget: "A plump, slightly overstuffed taco, steaming from the hot fish. The crust of the fish is still visible and golden above the cabbage. Crema drizzle glints in orange-white ribbons. Lime juice glistens on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Tortilla not warmed. Cabbage placed under the fish, making the tortilla soggy. No acid applied.", action: "Lime juice is non-negotiable — the taco is incomplete without its brightness. Warm the tortilla or it will tear." },
-          { state: "Perfect",   description: "Tortilla is warm and flexible. Fish is hot, crisp, and visible above the toppings. Every bite has cold cabbage crunch, hot crisp fish, smoky crema, and bright lime.", action: "Eat immediately, holding it in both hands." },
-          { state: "Overdone",  description: "Fish sat too long and the crust has steamed soft. Crema has soaked the tortilla through.", action: "For the next round: dress and eat immediately, one taco at a time from the pan." },
-        ],
-      },
-      feelCue: "The first bite should give you three textures in one: the slight chew of the warm tortilla, the sharp crunch and then yielding flake of the fish, and the cool, fresh snap of cabbage.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Bière à lager glacé",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau pétillante pour sans alcool"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Cumin, sol",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile neutre pour friture profonde (végétable ou tournesol)",
+      "ratioValue": 1,
+      "defaultUnit": "L",
+      "substitutions": [
+        "huile de canola"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Structure",
+      "name": "Tortilles de maïs, chaudes",
+      "ratioValue": 12,
+      "defaultUnit": "tortillas",
+      "substitutions": [
+        "tortillas de farine"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Choux verts, finement déchiquetés",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "choux violets",
+        "Mélange de griffes préfabriquées"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Dairy",
+      "name": "Crème créma ou aigre mexicaine",
+      "ratioValue": 120,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "yogourt grec"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Spice",
+      "name": "Piments chipotles en adobo, hachés",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sauce chaude + 1/2 c. à thé paprika fumé"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Citrus",
+      "name": "Limes fraîches, coupées en quartiers",
+      "ratioValue": 3,
+      "defaultUnit": "limes",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Herb",
+      "name": "Coriandre fraîche, grossièrement déchirée",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "persil à feuilles plates pour coriandre-averse"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Garnish",
+      "name": "Jalapeños marinés ou salsa frais",
+      "ratioValue": 1,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire crema de chipotle",
+      "inputs": [
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "chipotle_crema",
+      "instructions": "fouetter les chipotles hachés dans l'adobo dans le créma jusqu'à ce qu'ils soient complètement combinés. Commencez par la moitié du chipotle et du goût — il devrait être fumé, crémeux et modérément épicé. La chaleur fleurit après une minute de contact, alors goûtez encore avant d'ajouter plus. Transférer dans une bouteille de pression ou un petit bol. Réfrigérer jusqu'à ce qu'il soit prêt à l'emploi.",
+      "visualCue": {
+        "primaryTarget": "Une crème aux teintes oranges avec des taches visibles de chipotle rouge-brun. Assez lisse pour arroser mais assez épaisse pour tenir sa forme sur le taco.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Créma blanc clair sans fumée ni chaleur. Chipotle non encore incorporé.",
+            "action": "Frottez plus vigoureusement et goûtez à nouveau. La sauce adobo est aussi importante que le poivre lui-même."
+          },
+          {
+            "state": "Perfect",
+            "description": "Orange pâle, agréablement fumé et épicé. Coats une cuillère dans un film mince. Le niveau de chaleur est abordable mais présent.",
+            "action": "Couvrir et réfrigérer. Les saveurs vont s'approfondir pendant 15 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le créma est profondément orange et très épicé — trop chaud pour la plupart des invités.",
+            "action": "Whisk in more plain crema to dilute. La chaleur de chipotle est pardonne et peut toujours être coupée."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite quantité sur l'extrémité de votre langue — la fumée devrait arriver d'abord, puis la crème, puis le bâtiment de chaleur doucement à l'arrière de la gorge."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélanger la pâte à bière",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_04"
+      ],
+      "outputState": "beer_batter",
+      "instructions": "Dans un grand bol, fouetter la farine, la poudre à pâte, le sel, le cumin et le paprika ensemble. Faites un puits au centre et versez dans la bière glacée tout à la fois. Whisk juste jusqu'à ce qu'il soit combiné — les morceaux sont les bienvenus, le surmenage construit du gluten et la pâte sera difficile. La pâte doit être la consistance de la pâte à crêpes mince. Gardez la pâte froide; placez le bol sur la glace si votre cuisine est chaude.",
+      "visualCue": {
+        "primaryTarget": "Une pâte mince et lâche avec quelques morceaux restants. Tan pâle avec des taches de paprika rouge. Des bulles montant de la carbonation de la bière — c'est ce qui rend la croûte légère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poches de farine encore visibles. Farine sèche non entièrement incorporée.",
+            "action": "Plier encore quelques fois avec une spatule — mais arrêter à l'incorporation, pas la douceur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mince, versable, légèrement bosselé. Exécute le fouet dans un mince ruban. Toujours carboné et légèrement mousseux sur le dessus.",
+            "action": "Utiliser immédiatement pendant le froid et le carbonate."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batte est lisse et élastique. Pas de bulles. Sensé. Produira une croûte dure et panée plutôt qu'une croûte croustillante et aérée.",
+            "action": "fouetter un peu plus de bière froide pour se détendre et réintroduire la carbonation."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt et laissez couler la pâte — elle devrait tomber dans un rideau mince et fluide, et non dans des gouttes épaisses. La pâte froide fait de la croûte légère; la pâte chaude fait de la croûte lourde."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "ing_01",
+        "beer_batter",
+        "ing_08"
+      ],
+      "outputState": "fried_fish",
+      "instructions": "Chauffer l'huile dans un pot profond et lourd à 185°C (365°F). Couper le poisson en bandes d'environ 2,5 cm × 8 cm. Pat complètement sec. Travailler en lots de 4 à 5 bandes, tremper chaque morceau dans la pâte, laisser couler l'excès pendant 2 secondes, puis descendre doucement dans l'huile. Faire frire 3 à 4 minutes, en tournant une fois, jusqu'à ce que la pâte soit d'or profond et que le poisson flotte librement. Égoutter sur un porte-fils au-dessus d'une casserole — jamais sur une serviette en papier, qui vapeur la croûte douce.",
+      "visualCue": {
+        "primaryTarget": "Pâte d'ambre dorée profonde, blister et gonflée avec poches d'air de la carbonation. Le poisson flotte à la surface de l'huile. Une pièce levée de l'huile doit se vapeur visiblement et sonner creux lorsqu'elle est tapée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La batte est blonde pâle et semble encore humide à la surface. Le poisson coule dans l'huile plutôt que de flotter. La chair interne est toujours translucide.",
+            "action": "Retourner à l'huile et vérifier la température — il peut avoir baissé de surpeuplement. Faire frire en petits lots."
+          },
+          {
+            "state": "Perfect",
+            "description": "Croûte ambre profonde, flottante, cloquée et croustillante. Les poissons à l'intérieur sont opaques et flocons propres lorsqu'une pièce est cassée ouverte. La croûte semble creuse quand on la tape.",
+            "action": "Égoutter sur un porte-fils et assaisonner avec une pincée de sel immédiatement, à chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est brun foncé et très épaisse. Les bords sont fragiles. Les poissons à l'intérieur peuvent commencer à sécher.",
+            "action": "Égoutter immédiatement. L'extérieur peut être paré des morceaux les plus sombres. Prochain lot : réduire le temps d'alevage de 30 à 45 secondes."
+          }
+        ]
+      },
+      "feelCue": "Appuyez légèrement sur la croûte avec un bout de doigt — elle doit se croquer et se briser sous pression, et ne pas compresser doucement comme une éponge humide. Si elle donne sans craquer, l'huile était trop froide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "fried_fish",
+        "ing_09",
+        "ing_10",
+        "chipotle_crema",
+        "ing_13",
+        "ing_14",
+        "ing_15"
+      ],
+      "outputState": "finished_fish_tacos",
+      "instructions": "Tortilles chaudes directement sur une flamme de gaz ou une grille sèche jusqu'à ce qu'elles soient pliables et légèrement carbonisées aux bords. Doublez-les (le style traditionnel Baja prévient le soggisme). Calque : une pincée de chou cru, 2 à 3 bandes de poissons chauds, une bruine de chipotle créma, une dispersion de coriandre et une bande de salsa ou de jalapeños marinés. Terminer avec une forte pression de chaux. Mangez immédiatement — la croûte sur le poisson est une chose vivante et mourante qui commence à ramollir le moment où il est habillé.",
+      "visualCue": {
+        "primaryTarget": "Un taco à la vapeur, légèrement suralimenté. La croûte du poisson est encore visible et dorée au-dessus du chou. Crema scintille dans des rubans blanc orangé. Le jus de chaux brille à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Tortilla non chauffée. Cabotage placé sous le poisson, rendant la tortilla soggy. Pas d'acide appliqué.",
+            "action": "Le jus de chaux n'est pas négociable — le taco est incomplet sans sa luminosité. Chauffer la tortilla ou elle se déchirera."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tortilla est chaude et flexible. Le poisson est chaud, croustillant et visible au-dessus des garnitures. Chaque morsure a le chou froid croquant, poisson croustillant chaud, créma fumé, et la chaux vive.",
+            "action": "Mangez immédiatement, le tenant dans les deux mains."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les poissons s'asseyaient trop longtemps et la croûte était molle. Crema a trempé la tortilla.",
+            "action": "Pour le tour suivant : habiller et manger immédiatement, un taco à la fois de la casserole."
+          }
+        ]
+      },
+      "feelCue": "La première bouchée devrait vous donner trois textures en une : la légère mâche de la tortilla chaude, la croûte pointue et ensuite le flocon du poisson, et la fraiche touche de chou frais."
+    }
+  ]
 };

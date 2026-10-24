@@ -1,100 +1,239 @@
 export default {
-  repoId: "master_austrian_chickenschnitzel_001",
-  parentRepoId: null,
-  slug: "chicken-schnitzel",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Austrian Chicken Schnitzel",
-  description: "A chicken breast pounded to translucency, dressed in fine breadcrumbs, and shallow-fried in clarified butter until the coating billows away from the meat like a souffleed golden shell — the quintessential Vienna technique applied to poultry.",
-  cuisine: "Austrian",
-  culture: "Viennese",
-  category: "proteins",
-  tags: ["chicken", "austrian", "schnitzel", "breaded", "fried", "viennese", "shallow-fried"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Boneless, skinless chicken breasts",          ratioValue: 600,  defaultUnit: "g", substitutions: ["chicken thighs, butterflied and pounded"] },
-    { ingId: "ing_02", role: "Structure", name: "Fine dried breadcrumbs (not panko)",           ratioValue: 100,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Starch",    name: "Plain flour (all-purpose)",                    ratioValue: 60,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Binder",    name: "Eggs, beaten with a splash of milk",          ratioValue: 120,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt and white pepper",               ratioValue: 5,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Clarified butter (Butterschmalz)",             ratioValue: 150,  defaultUnit: "g", substitutions: ["neutral oil", "lard"] },
-    { ingId: "ing_07", role: "Citrus",    name: "Lemon, cut into wedges",                       ratioValue: 60,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",   name: "Flat-leaf parsley, roughly chopped",           ratioValue: 8,    defaultUnit: "g", substitutions: [] },
+  "repoId": "master_austrian_chickenschnitzel_001",
+  "parentRepoId": null,
+  "slug": "chicken-schnitzel",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Poulet autrichien Schnitzel",
+  "description": "Une poitrine de poulet pillée à la translucidité, vêtue de fines chapelures, et frite peu profonde dans du beurre clarifié jusqu'à ce que le revêtement s'éloigne de la viande comme une coquille dorée soufflée — la technique quintessence de Vienne appliquée à la volaille.",
+  "cuisine": "Autriche",
+  "culture": "Viennese",
+  "category": "proteins",
+  "tags": [
+    "poulet",
+    "autrien",
+    "schnitzel",
+    "panées",
+    "frits",
+    "Viennese",
+    "frites peu profondes"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Pound",
-      inputs: ["ing_01", "ing_05"],
-      outputState: "pounded_cutlets",
-      instructions: "Butterfly each chicken breast by cutting horizontally almost through and opening it flat. Place between two sheets of plastic wrap. Using a meat mallet or heavy rolling pin, pound outward from the centre in sweeping motions until the cutlet is a uniform 4–5 mm thick — thin enough to be almost translucent when held up to light. Season both sides with salt and white pepper.",
-      visualCue: {
-        primaryTarget: "A large, thin, even sheet of chicken with no thick or thin patches. Held up to a light, it is slightly translucent and shows even colouring throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Thick patches at the centre where the original breast muscle was. Edges much thinner than the middle.", action: "Concentrate the mallet on the thick spots. Work from thick to thin, always pushing the meat outward." },
-          { state: "Perfect",   description: "Uniformly 4–5 mm across the entire surface. No tears. The edges are ragged but the main body is smooth and even. Season immediately.", action: "Bread within 5 minutes before the surface dries." },
-          { state: "Overdone",  description: "Multiple tears or holes where the meat has been pounded through.", action: "Proceed carefully — the holes will be sealed by the breading. Avoid those areas when pressing the crumb." },
-        ],
-      },
-      feelCue: "After pounding, the cutlet should feel like a piece of soft chamois leather — pliable, even in thickness, with a slight resistance when you press it. If it feels leathery and stiff, it needs more pounding.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Poitrines de poulet désossées et sans peau",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cuisses de poulet, frites au beurre et pillées"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Bread",
-      inputs: ["pounded_cutlets", "ing_02", "ing_03", "ing_04"],
-      outputState: "breaded_schnitzel",
-      instructions: "Set up the classic crumb station: flour, egg wash (egg beaten with a splash of milk), and fine dry breadcrumbs. Dust each cutlet in flour, shaking off every trace of excess. Dip into the egg wash, lifting and letting it drip for 3 seconds. Lay in breadcrumbs and toss crumbs over the top — then gently press the crumbs on with the flat of your hand. Crucially: do not press hard. The loose crumb is what creates the characteristic souffled, billowing crust.",
-      visualCue: {
-        primaryTarget: "An even, lightly applied crumb coating that looks powdery and slightly airy, not compacted. Crumbs sit loosely on the egg-washed surface.",
-        spectrum: [
-          { state: "Underdone", description: "Crumbs are barely adhering and falling off when the cutlet is lifted.", action: "The egg wash was not thick enough, or you shook off too much. Dip back in egg, then back in crumbs and pat very gently." },
-          { state: "Perfect",   description: "An even but loose crumb coat that adheres when the schnitzel is held vertically but doesn't form a rigid shell. The schnitzel looks slightly powdery. Do NOT press hard.", action: "Fry within 2 minutes while the egg wash is still slightly tacky." },
-          { state: "Overdone",  description: "Crumbs have been pressed firmly into a solid, compacted shell.", action: "The souffled effect will be much less dramatic. It will still taste good but won't billow away from the meat." },
-        ],
-      },
-      feelCue: "Lift the breaded cutlet — you should feel the weight of the chicken with a powder-light crumb coat. Tilt it: if crumbs shower off, press very gently once more. The crumbs should be present without being packed.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Mocassins fins séchés (pas panko)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["breaded_schnitzel", "ing_06"],
-      outputState: "fried_schnitzel",
-      instructions: "Heat the clarified butter in a very wide, shallow pan over medium-high heat to 160–170 C (320–340 F). The butter should be deep enough to come halfway up the schnitzel. Lay the cutlet in the butter. Immediately start tilting and spooning the hot butter over the top surface. Cook for 2–3 minutes, then flip — the bottom should be deep golden. Continue basting and cook 2 more minutes. The characteristic Viennese schnitzel will soufflé away from the meat as it fries.",
-      visualCue: {
-        primaryTarget: "The breading has souffled and billowed away from the chicken surface, creating a visible gap of air between meat and crust. The exterior is uniformly golden with no dark patches.",
-        spectrum: [
-          { state: "Underdone", description: "Breading is pale and still flat against the meat. Has not souffled. Butter not hot enough.", action: "Increase heat slightly and continue basting. The souffled effect happens when enough steam is generated between the egg and the outer crust." },
-          { state: "Perfect",   description: "The crust has visibly lifted and billowed away from the meat in waves. Colour is a uniform, pale golden-amber. The schnitzel looks like a puffed golden cloud.", action: "Drain immediately on paper towels. Serve within 2 minutes of frying." },
-          { state: "Overdone",  description: "Crust is deep brown and the butter is dark. Bitter smell of burnt milk solids.", action: "Remove immediately. If using whole butter instead of clarified, this will happen faster — reduce heat and use clarified butter next time." },
-        ],
-      },
-      feelCue: "When you flip the schnitzel, it should feel almost weightless — the fat has fully wicked through the crumb and the souffled shell feels hollow when tapped with a spoon.",
+      "ingId": "ing_03",
+      "role": "Starch",
+      "name": "Farine plate (tout usage)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["fried_schnitzel", "ing_07", "ing_08"],
-      outputState: "finished_schnitzel",
-      instructions: "Drain the schnitzel briefly on a paper towel — 10 seconds only, not longer, or the crust will steam and soften. Transfer to a warm plate and serve immediately with a wedge of lemon and a scattering of parsley. The traditional accompaniment is potato salad (Erdäpfelsalat) or simply cucumber salad.",
-      visualCue: {
-        primaryTarget: "A large, golden-hued cutlet that covers most of the plate, its billowed crust shining with clarified butter, a bright lemon wedge alongside.",
-        spectrum: [
-          { state: "Underdone", description: "The crust feels soft and has absorbed the butter rather than being crisp. The chicken beneath feels dense and cold.", action: "Return to hot butter for 1 minute per side. The chicken may be undercooked — check internal temperature (74 C)." },
-          { state: "Perfect",   description: "The crust is crisp and billowed. Squeezing lemon over it produces an audible sizzle. The chicken beneath is fully cooked and juicy. Cutting reveals pale, just-cooked meat throughout.", action: "Eat immediately. Schnitzel waits for no one." },
-          { state: "Overdone",  description: "Crust has sat too long and softened. Chicken is overcooked and dry inside.", action: "Add extra lemon — the acid perks up the flavour considerably. Use leftovers for schnitzel sandwiches the next day." },
-        ],
-      },
-      feelCue: "Squeeze lemon over the finished schnitzel from a height — you should hear the juice sizzle and hiss on the hot crust. If it hisses, it is ready to eat.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Oeufs battus à coups de lait",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre blanc",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre clarifié (Butterschmalz)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile neutre",
+        "Saindoux"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Citrus",
+      "name": "Citron, coupé en quartiers",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_01",
+        "ing_05"
+      ],
+      "outputState": "pounded_cutlets",
+      "instructions": "Butterfly chaque poitrine de poulet en coupant horizontalement presque à travers et en l'ouvrant plat. Placez entre deux feuilles d'enveloppe plastique. À l'aide d'un maillet de viande ou d'un laminoir lourd, livrez vers l'extérieur du centre en balayant les mouvements jusqu'à ce que la découpe soit uniforme de 4 à 5 mm d'épaisseur — assez mince pour être presque translucide lorsqu'elle est maintenue à la lumière. Assaisonner les deux côtés de sel et de poivre blanc.",
+      "visualCue": {
+        "primaryTarget": "Une grande, mince, même feuille de poulet sans taches épaisses ou fines. Soutenue jusqu'à une lumière, elle est légèrement translucide et présente une coloration uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des taches épaisses au centre où se trouvait le muscle mammaire d'origine. Les bords sont beaucoup plus minces que le milieu.",
+            "action": "Concentrez le maillet sur les taches épaisses. Travaillez d'épaisseur en épaisseur, toujours en poussant la viande vers l'extérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "De 4 à 5 mm sur toute la surface. Pas de larmes. Les bords sont griffés mais le corps principal est lisse et uniforme. Assaisonner immédiatement.",
+            "action": "Pain dans les 5 minutes avant que la surface sèche."
+          },
+          {
+            "state": "Overdone",
+            "description": "Larmes multiples ou trous où la viande a été pilonnée.",
+            "action": "Procédez soigneusement — les trous seront scellés par la panure. Évitez ces zones en appuyant sur la miette."
+          }
+        ]
+      },
+      "feelCue": "Après le pilonnage, la découpe doit se sentir comme un morceau de cuir chamois doux — souple, même d'épaisseur, avec une légère résistance quand on la presse. S'il se sent coriace et raide, il lui faut plus de coups de pied."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Pain",
+      "inputs": [
+        "pounded_cutlets",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "breaded_schnitzel",
+      "instructions": "Installez la station de miettes classique : farine, lavage d'oeufs (œufs battus avec un jet de lait), et fines chapelures sèches. Poussez chaque découpe dans de la farine, en agitant chaque trace d'excès. Plongez dans le lavage des œufs, levant et laissant couler pendant 3 secondes. Couchez la chapelure et jetez les miettes sur le dessus, puis appuyez doucement sur les miettes avec le plat de votre main. Surtout : ne pressez pas fort. La miette lâche est ce qui crée la croûte de soufflage caractéristique.",
+      "visualCue": {
+        "primaryTarget": "Un revêtement de miettes uniforme et légèrement appliqué qui semble poudreux et légèrement aéré, non compacté. Les miettes s'assoient librement sur la surface lavée aux œufs.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les miettes sont à peine adhérentes et tombent quand la coupure est levée.",
+            "action": "Le lavage des œufs n'était pas assez épais, ou vous vous êtes trop secoué. Plongez dans l'œuf, puis retournez dans les miettes et tapez très doucement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une couche de miettes uniforme mais lâche qui adhère lorsque le schnitzel est maintenu verticalement mais ne forme pas une coquille rigide. Le schnitzel semble légèrement poudreux. Ne appuyez pas fort.",
+            "action": "Faire frire en 2 minutes pendant que le lavage des œufs est encore légèrement collant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les miettes ont été fermement pressées dans une coque solide et compacte.",
+            "action": "L'effet étouffé sera beaucoup moins dramatique. Il aura encore un bon goût, mais ne sera pas loin de la viande."
+          }
+        ]
+      },
+      "feelCue": "Soulevez la découpe panée — vous devriez sentir le poids du poulet avec une couche de miettes légères. Inclinez-le : si la douche s'effondre, appuyez très doucement une fois de plus. Les miettes doivent être présentes sans être emballées."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "breaded_schnitzel",
+        "ing_06"
+      ],
+      "outputState": "fried_schnitzel",
+      "instructions": "Chauffer le beurre clarifié dans une poêle très large et peu profonde à feu moyen-vif jusqu'à 160–170 C (320–340 F). Le beurre devrait être assez profond pour monter à mi-chemin le schnitzel. Placez la découpe dans le beurre. Commencez immédiatement à basculer et cuillerez le beurre chaud sur la surface supérieure. Cuire 2-3 minutes, puis retourner — le fond doit être en or profond. Continuer à basting et cuire 2 minutes de plus. Le schnitzel viennois caractéristique s'éloigne de la viande comme des frites.",
+      "visualCue": {
+        "primaryTarget": "La panure s'est étouffée et s'estompée de la surface du poulet, créant un espace d'air visible entre la viande et la croûte. L'extérieur est uniformément doré sans taches foncées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pain est pâle et encore plat contre la viande. Il n'a pas bougé. Beurre pas assez chaud.",
+            "action": "Augmenter légèrement la chaleur et continuer à se baser. L'effet soufflé se produit lorsque suffisamment de vapeur est générée entre l'œuf et la croûte externe."
+          },
+          {
+            "state": "Perfect",
+            "description": "La croûte a visiblement soulevé et gonflé loin de la viande par vagues. La couleur est uniforme, jaune-or pâle. Le schnitzel ressemble à un nuage doré gonflé.",
+            "action": "Égoutter immédiatement sur des serviettes en papier. Servir dans les 2 minutes suivant la friture."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est brun foncé et le beurre est foncé. Une odeur amère de solides de lait brûlé.",
+            "action": "Supprimer immédiatement. Si l'on utilise du beurre entier plutôt que du beurre clarifié, cela se produira plus rapidement — réduire la chaleur et utiliser du beurre clarifié la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous retournez le schnitzel, il devrait se sentir presque sans poids — la graisse a complètement mal à travers la miette et la coquille soufflée se sent creuse quand tapotée avec une cuillère."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "fried_schnitzel",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_schnitzel",
+      "instructions": "Égoutter le schnitzel brièvement sur une serviette en papier — seulement 10 secondes, pas plus, ou la croûte va vapeur et adoucir. Transférer dans une assiette chaude et servir immédiatement avec un coin de citron et une dispersion de persil. L'accompagnement traditionnel est la salade de pommes de terre (Erdäpfelsalat) ou simplement la salade de concombre.",
+      "visualCue": {
+        "primaryTarget": "Une grande coutelette dorée qui recouvre la plus grande partie de l'assiette, sa croûte bondée brillant avec du beurre clarifié, un coin citron clair à côté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est douce et a absorbé le beurre plutôt que croquant. Le poulet en dessous est dense et froid.",
+            "action": "Retourner au beurre chaud 1 minute par côté. Le poulet peut être mal cuit — vérifier la température interne (74 °C)."
+          },
+          {
+            "state": "Perfect",
+            "description": "La croûte est croustillante et gonflée. La pression du citron sur elle produit une vertigineuse audible. Le poulet est entièrement cuit et juteux. La coupe révèle de la viande pâle et juste cuite.",
+            "action": "Mangez immédiatement. Schnitzel n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte s'est assise trop longtemps et adoucie. Le poulet est trop cuit et sec à l'intérieur.",
+            "action": "Ajouter le citron en plus — l'acide augmente considérablement le goût. Utilisez les restes pour les sandwichs schnitzel le lendemain."
+          }
+        ]
+      },
+      "feelCue": "Pressez le citron sur le schnitzel fini d'une hauteur — vous devriez entendre le jus et le sifflement sur la croûte chaude. Si elle siffle, elle est prête à manger."
+    }
+  ]
 };

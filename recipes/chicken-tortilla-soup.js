@@ -1,110 +1,342 @@
 export default {
-  repoId: "master_mexican_chickentortillasoup_001",
-  parentRepoId: null,
-  slug: "chicken-tortilla-soup",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Chicken Tortilla Soup",
-  description: "A brick-red, gently smoky tomato-and-chile broth full of shredded chicken thigh, sweet corn, and black beans, finished with a squeeze of lime and a crackling tangle of oven-crisped corn tortilla strips that soften at the edges as you eat.",
-  cuisine: "Mexican-American",
-  culture: "Tex-Mex home kitchen",
-  category: "proteins",
-  tags: ["home-kitchen", "soup", "freezer-friendly", "chicken", "chipotle", "weeknight", "big-batch"],
-  difficulty: 2,
-  activeTime: "35 min",
-  totalTime: "1 hr",
-  ratioSystem: "weight",
-  servings: 6,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 0, umami: 3, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Chicken thighs, boneless and skinless",               ratioValue: 900,  defaultUnit: "g",       substitutions: ["bone-in thighs (add 10 min simmer)", "chicken breast (pull at 165°F/74°C sharp)"] },
-    { ingId: "ing_02", role: "Fat",       name: "Neutral oil, divided",                                ratioValue: 45,   defaultUnit: "ml",      substitutions: ["olive oil"] },
-    { ingId: "ing_03", role: "Allium",    name: "Yellow onion, diced",                                  ratioValue: 250,  defaultUnit: "g",       substitutions: ["white onion"] },
-    { ingId: "ing_04", role: "Base",      name: "Poblano pepper, seeded and diced",                     ratioValue: 1,    defaultUnit: "whole",   substitutions: ["green bell pepper"] },
-    { ingId: "ing_05", role: "Heat",      name: "Jalapeño, seeded and minced",                          ratioValue: 1,    defaultUnit: "whole",   substitutions: ["serrano (hotter)"] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic, minced",                                       ratioValue: 4,    defaultUnit: "cloves",  substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Ground cumin",                                         ratioValue: 2,    defaultUnit: "tsp",     substitutions: [] },
-    { ingId: "ing_08", role: "Herb",      name: "Dried oregano (Mexican if possible)",                  ratioValue: 1,    defaultUnit: "tsp",     substitutions: ["Mediterranean oregano"] },
-    { ingId: "ing_09", role: "Heat",      name: "Chipotle chiles in adobo, minced with their sauce",    ratioValue: 20,   defaultUnit: "g",       substitutions: ["1 tsp smoked paprika plus a pinch of cayenne"] },
-    { ingId: "ing_10", role: "Base",      name: "Fire-roasted diced tomatoes, with juices",            ratioValue: 400,  defaultUnit: "g",       substitutions: ["plain canned diced tomatoes"] },
-    { ingId: "ing_11", role: "Liquid",    name: "Chicken stock, low-sodium",                            ratioValue: 1500, defaultUnit: "ml",      substitutions: ["water plus 1 tsp extra salt"] },
-    { ingId: "ing_12", role: "Starch",    name: "Black beans, cooked (or canned, rinsed and drained)",  ratioValue: 450,  defaultUnit: "g",       substitutions: ["pinto beans"] },
-    { ingId: "ing_13", role: "Base",      name: "Corn kernels, frozen or cut from the cob",             ratioValue: 250,  defaultUnit: "g",       substitutions: [] },
-    { ingId: "ing_14", role: "Citrus",    name: "Lime juice, fresh",                                    ratioValue: 30,   defaultUnit: "ml",      substitutions: [] },
-    { ingId: "ing_15", role: "Seasoning", name: "Kosher salt",                                          ratioValue: 0,    defaultUnit: "to taste", substitutions: [] },
-    { ingId: "ing_16", role: "Structure", name: "Corn tortillas, cut into thin strips",                 ratioValue: 6,    defaultUnit: "whole",   substitutions: ["a handful of sturdy tortilla chips, broken"] },
-    { ingId: "ing_17", role: "Garnish",   name: "Cilantro, avocado (diced), and crumbled queso fresco", ratioValue: 0,    defaultUnit: "to taste", substitutions: ["sour cream", "sliced radish"] },
+  "repoId": "master_mexican_chickentortillasoup_001",
+  "parentRepoId": null,
+  "slug": "chicken-tortilla-soup",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Soupe de poulet Tortilla",
+  "description": "Un bouillon de tomates et de chiles légèrement fumé, rouge brique, rempli de cuisses de poulet déchiquetées, de maïs sucré et de haricots noirs, fini par une pression de chaux et un enchevêtrement de lanières de tortillas de maïs croustillantes au four qui adoucissent aux bords lorsque vous mangez.",
+  "cuisine": "Mexique-Américain",
+  "culture": "Cuisine maison Tex-Mex",
+  "category": "proteins",
+  "tags": [
+    "cuisine maison",
+    "Soupe",
+    "congélateur",
+    "poulet",
+    "Chipotle",
+    "nuit",
+    "gros lot"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "35 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "weight",
+  "servings": 6,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Bake",
-      inputs: ["ing_16", "ing_02", "ing_15"],
-      outputState: "crisp_tortilla_strips",
-      instructions: "Heat the oven to 400°F (200°C). Toss the tortilla strips with 15 ml of the oil and a pinch of salt, spread them in a single layer on a sheet pan, and bake 10–14 minutes, stirring once halfway, until crisp and golden. They firm up further as they cool. Store at room temperature, uncovered — never in the soup you plan to freeze.",
-      visualCue: {
-        primaryTarget: "Strips evenly golden with a few deeper amber edges, curled and rigid.",
-        spectrum: [
-          { state: "Underdone", description: "Pale and bendy in the middle of the pan; strips flop when lifted.", action: "Stir, spread thinner, and bake 2–3 minutes more." },
-          { state: "Perfect",   description: "Uniform gold with toasty edges; they rattle on the pan when shaken and smell like fresh tortilla chips.", action: "Pull and cool on the pan." },
-          { state: "Overdone",  description: "Brown to mahogany edges, bitter burnt-corn smell.", action: "Pick out the darkest strips; the rest will be fine. Check sooner next batch — the last 2 minutes go fast." },
-        ],
-      },
-      feelCue: "Snap one after a minute out of the oven — it should break cleanly with a dry crack, not bend.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "cuisses de poulet désossées et sans peau",
+      "ratioValue": 900,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cuisses désossées (ajouter 10 min mijoter)",
+        "poitrine de poulet (pull à 165°F/74°C vif)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sweat aromatics",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "chile_base",
-      instructions: "Heat the remaining 30 ml oil in a 5–6 litre Dutch oven over medium heat. Add onion, poblano, and jalapeño with a pinch of salt and cook 7–9 minutes, stirring often, until soft and translucent. Add garlic, cumin, and oregano and stir 45–60 seconds until fragrant, then stir in the chipotle and adobo for 30 seconds.",
-      visualCue: {
-        primaryTarget: "Soft, glossy vegetables coated in a rusty, spice-stained film, with no browning on the pot floor beyond a faint tint.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still opaque white and squeaky; poblano bright green and firm.", action: "Keep going 2–3 more minutes before adding garlic and spice." },
-          { state: "Perfect",   description: "Onion translucent and slumped; poblano dulled to olive green. Cumin smells toasty, not raw-dusty.", action: "Add the tomatoes and stock right away so the spices don't scorch." },
-          { state: "Overdone",  description: "Dark spots on the pot floor and a sharp, acrid cumin smell — spices have burned.", action: "If only lightly smoky, carry on. If truly acrid, wipe the pot and restart; burnt cumin will flavor every bowl." },
-        ],
-      },
-      feelCue: "The wooden spoon should push through the onion with no resistance, and the pot should smell warm and earthy rather than sharp.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile neutre, divisée",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Huile d'olive"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["chile_base", "ing_10", "ing_11", "ing_01"],
-      outputState: "poached_chicken_broth",
-      instructions: "Add tomatoes with their juices and the stock; bring to a boil. Lower in the whole chicken thighs, reduce to a gentle simmer (small bubbles breaking steadily), cover partially, and cook 20–25 minutes until the thickest thigh reads at least 165°F (74°C). Thighs are most tender around 175–185°F (79–85°C). Transfer chicken to a board.",
-      visualCue: {
-        primaryTarget: "A lazily bubbling brick-red broth; chicken opaque all the way through with clear juices.",
-        spectrum: [
-          { state: "Underdone", description: "Chicken still pink or glassy at the centre of the thickest piece; probe reads under 165°F (74°C).", action: "Return to the pot and simmer 5 more minutes, then re-check." },
-          { state: "Perfect",   description: "Thighs fully opaque, firm but yielding, and the broth has taken on a deeper, rounder color.", action: "Remove chicken to shred; keep the broth at a bare simmer." },
-          { state: "Overdone",  description: "A hard boil has turned the broth cloudy and the chicken is tight and stringy.", action: "Lower heat. Thighs forgive this well — shred finely and they will re-absorb broth." },
-        ],
-      },
-      feelCue: "Press a thigh with tongs — it should feel springy-firm, and the probe should slide in with no rubbery resistance.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon jaune en dés",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon blanc"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Shred and finish",
-      inputs: ["poached_chicken_broth", "ing_12", "ing_13", "ing_14", "ing_15"],
-      outputState: "finished_tortilla_soup",
-      instructions: "Shred chicken with two forks into bite-size pieces and return it to the pot with the beans and corn. Simmer 5 minutes to heat through. Off the heat, stir in lime juice and season with salt — usually 1–2 tsp with low-sodium stock. Serve topped with tortilla strips, cilantro, avocado, and queso fresco. To freeze: cool the soup (no lime garnish, no strips) in shallow containers to below 70°F (21°C) within 2 hours and refrigerate, then freeze up to 3 months. Reheat to a simmer and add fresh lime.",
-      visualCue: {
-        primaryTarget: "A full, chunky soup where chicken, beans, and corn are suspended evenly in the red broth.",
-        spectrum: [
-          { state: "Underdone", description: "Corn still icy or beans cold in the centre; broth tastes flat.", action: "Simmer 2–3 more minutes and add salt in small pinches." },
-          { state: "Perfect",   description: "Everything steaming, broth bright from lime with a smoky backbone, chicken in soft shreds.", action: "Ladle and top generously." },
-          { state: "Overdone",  description: "Beans bursting and clouding the broth after long boiling; lime tastes cooked and bitter.", action: "Thin with a splash of stock and add fresh lime at the table." },
-        ],
-      },
-      feelCue: "A spoonful should hit tart first, then smoky heat that builds slowly at the back of the throat, not a sharp sting.",
+      "ingId": "ing_04",
+      "role": "Base",
+      "name": "Poivre poblané, ensemencé et en dés",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "poivron vert"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Heat",
+      "name": "Jalapeño, ensemencée et hachée",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Serrano (haut)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 2,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Origan séché (Mexicaine si possible)",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "Origan méditerranéen"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Heat",
+      "name": "Chipotle en adobo, haché avec leur sauce",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 c. à thé de paprika fumé plus une pincée de Cayenne"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Base",
+      "name": "Tomates coupées en dés, cuites au feu, avec jus",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates coupées en dés en conserve"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Liquid",
+      "name": "Stock de poulet, faible teneur en sodium",
+      "ratioValue": 1500,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau plus 1 c. à thé sel supplémentaire"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Starch",
+      "name": "Fèves noires, cuites (ou en conserve, rincées et égouttées)",
+      "ratioValue": 450,
+      "defaultUnit": "g",
+      "substitutions": [
+        "haricots pinto"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Base",
+      "name": "Amandes de maïs, congelées ou coupées",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Citrus",
+      "name": "Jus de lime, frais",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 0,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Structure",
+      "name": "Tortilles de maïs, coupées en fines bandes",
+      "ratioValue": 6,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "une poignée de croustilles robustes, cassées"
+      ]
+    },
+    {
+      "ingId": "ing_17",
+      "role": "Garnish",
+      "name": "Cilantro, avocat (diced), et fresque queso émiettée",
+      "ratioValue": 0,
+      "defaultUnit": "to taste",
+      "substitutions": [
+        "crème aigre",
+        "radis tranchés"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Cuire",
+      "inputs": [
+        "ing_16",
+        "ing_02",
+        "ing_15"
+      ],
+      "outputState": "crisp_tortilla_strips",
+      "instructions": "Chauffer le four à 400°F (200°C). Verser les lanières de tortilla avec 15 ml d'huile et une pincée de sel, les étaler en une seule couche sur une casserole, et cuire 10-14 minutes, en remuant une fois à mi-chemin, jusqu'à ce que croquant et doré. Ils se raffermissent plus loin qu'ils le font. Conserver à température ambiante, à découvert — jamais dans la soupe que vous prévoyez de congeler.",
+      "visualCue": {
+        "primaryTarget": "Bandes uniformément dorées avec quelques bords ambres plus profonds, enroulées et rigides.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pale et courbé au milieu de la poêle; les bandes flopent lorsqu'elles sont levées.",
+            "action": "Incorporer, étaler plus finement et cuire encore 2 à 3 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or uniforme avec des bords grillés; ils hoochent sur la poêle lorsqu'ils sont secoués et sentent comme des croustilles de tortilla fraîches.",
+            "action": "Tirer et refroidir sur la casserole."
+          },
+          {
+            "state": "Overdone",
+            "description": "Arêtes brunes à acajou, odeur amère de maïs brûlé.",
+            "action": "Choisissez les bandes les plus sombres; le reste ira bien. Vérifiez plus tôt le prochain lot — les 2 dernières minutes vont vite."
+          }
+        ]
+      },
+      "feelCue": "Enfilez - le un après une minute du four — il devrait se casser proprement avec une fissure sèche, et non plier."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sueurs aromatiques",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "chile_base",
+      "instructions": "Chauffer le reste de 30 ml d'huile dans un four hollandais de 5 à 6 litres à feu moyen. Ajouter l'oignon, le poblano et le jalapeño avec une pincée de sel et cuire de 7 à 9 minutes, en remuant souvent jusqu'à ce qu'ils soient doux et translucides. Ajouter l'ail, le cumin et l'origan et remuer 45 à 60 secondes jusqu'à odorat, puis remuer le chipotle et l'adobo pendant 30 secondes.",
+      "visualCue": {
+        "primaryTarget": "Légumes doux et brillants enrobés d'un film rouillé et teinté d'épices, sans brunissement sur le plancher de la casserole au-delà d'une teinte faible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore blanc opaque et criant; poblano vert vif et ferme.",
+            "action": "Continuez encore 2 à 3 minutes avant d'ajouter de l'ail et des épices."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon translucide et somnolent; poblano terne à vert olive. Cumin sent le toast, pas la poussière crue.",
+            "action": "Ajouter les tomates et les bouillons tout de suite afin que les épices ne crèvent pas."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des taches sombres sur le plancher de la casserole et une odeur de cumin vif et acride ont brûlé.",
+            "action": "Si seulement légèrement fumé, continuez. Si vraiment acride, essuyez le pot et redémarrez ; le cumin brûlé parfumera chaque bol."
+          }
+        ]
+      },
+      "feelCue": "La cuillère en bois doit pousser à travers l'oignon sans résistance, et le pot doit sentir chaud et terreux plutôt que vif."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "chile_base",
+        "ing_10",
+        "ing_11",
+        "ing_01"
+      ],
+      "outputState": "poached_chicken_broth",
+      "instructions": "Ajouter les tomates avec leur jus et le bouillon; porter à ébullition. Baisser les cuisses entières de poulet, réduire à une mijotée douce (petites bulles se brisant régulièrement), couvrir partiellement et cuire de 20 à 25 minutes jusqu'à ce que la cuisse la plus épaisse lise au moins 165°F (74°C). Les hauteurs sont plus tendres entre 175 et 185 °F (79 et 85 °C). Transférer le poulet dans une planche.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon paresseux rouge brique; le poulet est opaque tout au long avec des jus clairs.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poulet encore rose ou vitreux au centre de la pièce la plus épaisse; la sonde lit sous 165°F (74°C).",
+            "action": "Retournez dans la casserole et laissez mijoter 5 minutes de plus, puis revérifiez."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les cuisses sont complètement opaques, fermes mais produisantes, et le bouillon a pris une couleur plus profonde et plus ronde.",
+            "action": "Retirer le poulet à la râpe; garder le bouillon à mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un ébullition dur a rendu le bouillon nuageux et le poulet est serré et stringy.",
+            "action": "Moins de chaleur. Pardonne-moi bien: déchiquetez finement et ils réabsorberont le bouillon."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une cuisse avec des pinces — il doit se sentir printanière-ferme, et la sonde doit glisser dans sans résistance caoutchouteuse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Déchiré et fini",
+      "inputs": [
+        "poached_chicken_broth",
+        "ing_12",
+        "ing_13",
+        "ing_14",
+        "ing_15"
+      ],
+      "outputState": "finished_tortilla_soup",
+      "instructions": "Poulet émietté avec deux fourchettes en morceaux de morsure et le retourner au pot avec les haricots et le maïs. Laisser mijoter 5 minutes pour chauffer. Hors du feu, mélanger le jus de lime et assaisonner avec du sel — généralement 1–2 c. à thé avec du stock de sodium faible. Servir avec des bandes de tortillas, coriandre, avocat et fresque queso. Pour congeler : refroidir la soupe (pas de garniture de chaux, pas de lanières) dans des récipients peu profonds à moins de 70°F (21°C) dans les 2 heures et réfrigérer, puis congeler jusqu'à 3 mois. Réchauffer à mijoter et ajouter la chaux fraîche.",
+      "visualCue": {
+        "primaryTarget": "Une soupe pleine et moelleuse où le poulet, les haricots et le maïs sont suspendus uniformément dans le bouillon rouge.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Maïs encore glacé ou haricots froid au centre; le bouillon a un goût plat.",
+            "action": "Laisser mijoter 2 à 3 minutes de plus et ajouter le sel en petites pincées."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tout vapeur, bouillon lumineux de chaux avec une colonne vertébrale fumée, poulet en lambeaux doux.",
+            "action": "Louche et haut généreusement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots éclatent et obscurcissent le bouillon après avoir bouilli longtemps; la chaux a un goût cuit et amer.",
+            "action": "Finis avec un jet de stock et ajoutez de la chaux fraîche à la table."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère doit frapper la tarte d'abord, puis la chaleur fumée qui se construit lentement à l'arrière de la gorge, pas une piqûre aiguë."
+    }
+  ]
 };

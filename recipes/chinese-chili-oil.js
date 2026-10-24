@@ -1,85 +1,227 @@
 export default {
-  repoId: "master_chinese_chinesechilioil_001",
-  parentRepoId: null,
-  slug: "chinese-chili-oil",
-  author: "ForkRecipe Kitchen",
-  title: "Sichuan Chili Crisp Oil",
-  description: "Hong you — a fragrant Sichuan chili oil where hot oil blooms in stages over aromatics and dried chili flakes, building a deep, layered heat punctuated by the lip-numbing tingle of Sichuan peppercorn, with crispy garlic and shallot suspended in the finished oil.",
-  cuisine: "Chinese",
-  culture: "Sichuan",
-  category: "condiments",
-  tags: ["condiment", "vegan", "gluten-free", "chili", "sichuan", "crispy", "oil", "numbing"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "40 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 2, sour: 0, bitter: 1, umami: 3, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Neutral oil (sunflower or vegetable)",              ratioValue: 250, defaultUnit: "ml",    substitutions: [] },
-    { ingId: "ing_02", role: "Allium",    name: "Garlic cloves, thinly sliced",                      ratioValue: 30,  defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "Shallots, thinly sliced",                           ratioValue: 40,  defaultUnit: "g",     substitutions: ["1 small yellow onion"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Star anise",                                        ratioValue: 2,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Cassia bark or cinnamon stick",                     ratioValue: 1,   defaultUnit: "piece", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Sichuan peppercorns (Szechuan pepper)",             ratioValue: 10,  defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_07", role: "Heat",      name: "Dried Sichuan chili flakes (er jing tiao or similar)", ratioValue: 40, defaultUnit: "g",   substitutions: ["Korean gochugaru for a milder version", "generic red pepper flakes"] },
-    { ingId: "ing_08", role: "Umami",     name: "Soy sauce",                                         ratioValue: 15,  defaultUnit: "ml",    substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine sea salt",                                     ratioValue: 5,   defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning", name: "Toasted sesame seeds",                              ratioValue: 15,  defaultUnit: "g",     substitutions: [] },
+  "repoId": "master_chinese_chinesechilioil_001",
+  "parentRepoId": null,
+  "slug": "chinese-chili-oil",
+  "author": "ForkRecipe Kitchen",
+  "title": "Huile de chili de sichuan",
+  "description": "Hong you — une huile de chili sichuan parfumée où l'huile chaude fleurit par étapes sur les aromatiques et les flocons de chili séchés, construisant une chaleur profonde et en couches ponctuée par le picotement lip-numbing de maïs poivré sichuan, avec de l'ail croustillant et de l'échalote en suspension dans l'huile finie.",
+  "cuisine": "Chinois",
+  "culture": "Sichuan",
+  "category": "condiments",
+  "tags": [
+    "condiment",
+    "végétalien",
+    "Sans gluten",
+    "Chili",
+    "Sichuan",
+    "croustillant",
+    "huile",
+    "engourdissement"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "40 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Fry",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "aromatic_oil",
-      instructions: "Combine the oil, sliced garlic, sliced shallots, star anise, cassia bark, and Sichuan peppercorns in a cold saucepan. Start everything in cold oil — this slow extraction method renders the aromatics slowly without burning, drawing out every layer of flavor. Bring to medium-low heat and cook, stirring occasionally, for 20–25 minutes. The shallots and garlic will slowly fry to golden-brown crisps. Watch carefully in the last 5 minutes — the transition from golden to burnt is fast. When the shallots and garlic are deep golden and crispy, remove from heat and strain through a fine-mesh sieve, reserving both the crispy aromatics and the infused oil separately.",
-      visualCue: {
-        primaryTarget: "Golden-brown, crispy shallot and garlic slices floating in a deep amber-gold oil, the whole pot smelling of sweet fried onion and anise.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic and shallots are soft and blonde, not crispy. The oil is still pale and underdeveloped.", action: "Continue frying over medium heat. The crispy texture is essential — soft garlic will make the finished oil taste raw and damp." },
-          { state: "Perfect",   description: "Shallots and garlic are evenly deep golden-brown and crispy — like the best fried shallots you've ever had. The oil is dark amber and smells sweet, spiced, and toasty.", action: "Remove from heat and strain immediately." },
-          { state: "Overdone",  description: "Garlic and shallots are dark brown approaching black, and the oil smells bitter.", action: "Discard the burned aromatics. The oil itself may still be usable if only lightly colored by the burnt bits." },
-        ],
-      },
-      feelCue: "A well-fried shallot or garlic slice should snap cleanly between fingers — dry and brittle, not soft or oily. These are your toppings.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Huile neutre (fleur de soleil ou légumes)",
+      "ratioValue": 250,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Bloom",
-      inputs: ["aromatic_oil", "ing_07", "ing_09", "ing_10"],
-      outputState: "chili_oil_base",
-      instructions: "Place the chili flakes, salt, and sesame seeds in a heatproof bowl large enough to accommodate sputtering. The blooming temperature of the oil matters enormously: too cool and the chili flakes merely steep without fragrance; too hot and they burn to carbon. Heat the strained aromatic oil to 175–180°C (use a thermometer, or test with a single chili flake — it should sizzle immediately but not blacken within 5 seconds). Pour the hot oil over the chili flakes in three stages: first pour triggers the sizzle and darkens the chili; second pour deepens the color; third pour incorporates any remaining powder. Stir after each pour. The oil will turn deep red-orange and smell smoky-sweet and intensely of dried chili.",
-      visualCue: {
-        primaryTarget: "A deep crimson-red oil that has fully bloomed the chili — a uniform, vivid red with no pale or un-bloomed flakes visible.",
-        spectrum: [
-          { state: "Underdone", description: "The oil was too cool when poured — chili flakes are swollen but the oil is still amber rather than deep red, and the smell is flat.", action: "Reheat the oil to 180°C and pour again over a fresh tablespoon of chili flakes to deepen the color." },
-          { state: "Perfect",   description: "Deep crimson oil, dramatically colored, with fully bloomed chili flakes. Smells of sweet-smoky dried chili and sesame. The sesame seeds have turned a slightly deeper gold.", action: "Add soy sauce, stir, and fold in the crispy aromatics." },
-          { state: "Overdone",  description: "The oil was too hot — the chili flakes went black immediately on contact and the oil smells acrid and charred.", action: "The oil may be salvageable if diluted: add 50 ml fresh oil and strain out the blackest flakes. Otherwise discard and start the bloom step again." },
-        ],
-      },
-      feelCue: "The bloom step should produce a dramatic sizzle and a cloud of fragrant, reddish steam — the moment the hot oil hits the chili, you should smell the full, rich scent of dried chili opening up.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Girofles à l'ail, tranchés finement",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["chili_oil_base", "ing_08"],
-      outputState: "finished_chinese_chili_oil",
-      instructions: "While the chili oil is still warm (not boiling), stir in the soy sauce. Fold in the reserved crispy shallots and garlic. Stir to distribute evenly — the crispy bits will soften slightly as they sit in the oil, transforming from crackers to chewy-crispy morsels. Transfer to a jar. Allow to cool completely before sealing. The flavor develops and deepens over 24 hours as everything melds — restrain yourself and let it rest. Stored at room temperature away from light, chili crisp keeps for 2–3 months. The crispy bits absorb oil over time; stir well before each use.",
-      visualCue: {
-        primaryTarget: "A jewel-red oil filled with golden crispy pieces of shallot and garlic, chili flakes, and sesame seeds — beautiful, textured, and vivid.",
-        spectrum: [
-          { state: "Underdone", description: "The crispy aromatics have been omitted or forgotten — plain chili oil without texture.", action: "Fold in the crispy pieces now." },
-          { state: "Perfect",   description: "A stunning, deeply red oil with visible crispy pieces and sesame seeds distributed evenly. After 24 hours, the flavor is rounded and complex — spicy, numbing (from the Sichuan pepper), smoky, and deeply savory.", action: "Store and use freely." },
-          { state: "Overdone",  description: "The crispy pieces have fully softened and sunk. Oil looks uniform and dark with no texture.", action: "The flavor is intact. Fry a fresh batch of garlic and shallots in a small amount of oil and add to the jar." },
-        ],
-      },
-      feelCue: "On the tongue, the finished chili oil should produce two distinct sensations: a sharp, immediate capsaicin burn from the chili, followed 30 seconds later by the unique electric tingle and mild numbness of the Sichuan peppercorn.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Échalotes, tranchées finement",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 petit oignon jaune"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Anis étoilé",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Aboiement de Cassia ou bâtonnet de cannelle",
+      "ratioValue": 1,
+      "defaultUnit": "piece",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Maïs poivré sichuan",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Heat",
+      "name": "Flacons de chili séchés au sichuan (en jing tiao ou similaires)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Gochugaru coréen pour une version plus douce",
+        "flocons de poivre rouge générique"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Fry",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "aromatic_oil",
+      "instructions": "Mélanger l'huile, l'ail tranché, les échalotes tranchées, l'anis étoilé, l'écorce de cassie et les grains de poivre Sichuan dans une casserole froide. Commencer tout dans l'huile froide — cette méthode d'extraction lente rend les aromatiques lentement sans brûler, en tirant toutes les couches de saveur. Porter à feu moyen-doux et cuire, en remuant occasionnellement, pendant 20 à 25 minutes. Les échalotes et l'ail frirent lentement à des croustilles dorées. Regardez attentivement au cours des 5 dernières minutes — la transition de l'or au feu est rapide. Lorsque les échalotes et l'ail sont d'or profond et croustillant, retirer de la chaleur et de la déformation à travers un tamis à mailles fines, réserver séparément les arômes croustillants et l'huile infusée.",
+      "visualCue": {
+        "primaryTarget": "Morne doré, échalote croustillante et tranches d'ail flottant dans une huile d'or ambre profonde, toute la casserole sentant l'oignon frit et l'anis.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail et les échalotes sont doux et blonds, pas croustillants. L'huile est encore pâle et sous-développée.",
+            "action": "Continuer à frire à feu moyen. La texture croustillante est essentielle : l'ail doux rendra l'huile finie crue et humide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les échalotes et l'ail sont uniformément dorées et croustillantes, comme les meilleures échalotes frites que vous ayez jamais eues. L'huile est d'ambre foncé et sent doux, épicé et grillé.",
+            "action": "Retirer immédiatement du feu et de la déformation."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail et les échalotes sont brun foncé et s'approchent du noir, et l'huile sent amer.",
+            "action": "Jeter les aromatiques brûlés. L'huile elle-même peut encore être utilisable si seulement légèrement colorée par les morceaux brûlés."
+          }
+        ]
+      },
+      "feelCue": "Une échalote ou une tranche d'ail bien cuite doit se casser proprement entre les doigts — sèche et cassante, non molle ou huileuse. Ce sont tes garnitures."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bloom",
+      "inputs": [
+        "aromatic_oil",
+        "ing_07",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "chili_oil_base",
+      "instructions": "Placez les flocons de chili, le sel et les graines de sésame dans un bol assez grand pour permettre l'aspersion. La température de floraison de l'huile importe énormément: trop frais et les flocons de chili simplement raides sans parfum; trop chaud et ils brûlent au carbone. Chauffer l'huile aromatique tendue à 175–180°C (utiliser un thermomètre, ou tester avec un seul flocon de chili — il devrait étourdir immédiatement mais pas noircir en 5 secondes). Verser l'huile chaude sur les flocons de chili en trois étapes : d'abord verser déclenche le étourdissement et assombrit le chili ; ensuite verser approfondit la couleur ; troisième verser incorpore toute poudre restante. Mélanger après chaque verser. L'huile va devenir rouge-orange profonde et odeur fumée-douce et intensément de chili séché.",
+      "visualCue": {
+        "primaryTarget": "Une huile rouge cramoisi profonde qui a pleinement fleuri le chili — un rouge uniforme, vif, sans flocons pâles ou non apparents.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'huile était trop froide lorsqu'elle était versée — les flocons de chili sont gonflés, mais l'huile est encore ambre plutôt que rouge profond, et l'odeur est plate.",
+            "action": "Réchauffer l'huile à 180°C et verser à nouveau sur une cuillère à soupe fraîche de flocons de chili pour approfondir la couleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Huile pourpre profonde, de couleur spectaculaire, avec des flocons de chili entièrement fleuris. Des odeurs de chili et de sésame séchés sucrés. Les graines de sésame ont transformé un or légèrement plus profond.",
+            "action": "Ajouter la sauce soja, remuer et plier dans les arômes croustillants."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'huile était trop chaude — les flocons de chili sont devenus noirs immédiatement au contact et l'huile sent l'acride et le carbonisé.",
+            "action": "L'huile peut être récupérée si elle est diluée : ajouter 50 ml d'huile fraîche et extirper les flocons les plus noirs. Sinon jetez et recommencez l'étape de la floraison."
+          }
+        ]
+      },
+      "feelCue": "L'étape de la floraison devrait produire un étourdissement dramatique et un nuage de vapeur parfumée et rougeâtre — au moment où l'huile chaude frappe le chili, vous devriez sentir le parfum riche et plein de chili séché s'ouvrir."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "chili_oil_base",
+        "ing_08"
+      ],
+      "outputState": "finished_chinese_chili_oil",
+      "instructions": "Alors que l'huile de chili est encore chaude (pas bouillante), remuer dans la sauce de soja. Plier dans les échalotes croustillantes et l'ail réservés. Mélanger pour répartir uniformément — les morceaux croustillants s'assoupliront légèrement en s'asseyant dans l'huile, transformant des craquelins en morsels croustillants. Transférer dans un pot. Laisser refroidir complètement avant de sceller. La saveur se développe et s'approfondit sur 24 heures pendant que tout se mélange — retenez - vous et laissez - la reposer. Le chili croustillant conserve à température ambiante à l'abri de la lumière pendant 2-3 mois. Les morceaux croustillants absorbent l'huile au fil du temps; remuer bien avant chaque utilisation.",
+      "visualCue": {
+        "primaryTarget": "Une huile rouge bijou remplie de morceaux dorés croustillants d'échalote et d'ail, de flocons de chili et de graines de sésame, belles, texturées et vives.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les aromatiques croustillants ont été omis ou oubliés — huile de chili sans texture.",
+            "action": "Plier dans les morceaux croustillants maintenant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une huile magnifique, profondément rouge avec des morceaux croustillants visibles et des graines de sésame distribuées uniformément. Après 24 heures, la saveur est arrondie et complexe – épicée, engourdie (du poivre Sichuan), fumée et profondément salée.",
+            "action": "Conserver et utiliser librement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les morceaux croustillants ont complètement ramolli et coulé. L'huile semble uniforme et sombre sans texture.",
+            "action": "La saveur est intacte. Faire frire un lot frais d'ail et d'échalotes dans une petite quantité d'huile et ajouter au pot."
+          }
+        ]
+      },
+      "feelCue": "Sur la langue, l'huile de chili finie devrait produire deux sensations distinctes : une brûlure aiguë et immédiate de capsaïcine à partir du chili, suivie 30 secondes plus tard par le teintage électrique unique et l'engourdissement léger du maïs poivré Sichuan."
+    }
+  ]
 };

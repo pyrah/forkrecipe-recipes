@@ -1,102 +1,271 @@
 export default {
-  repoId: "master_moroccan_tagine_lamb_chickpea_001",
-  parentRepoId: null,
-  slug: "tagine-lamb-chickpea",
-  author: "ForkRecipe Kitchen",
-  title: "Lamb, Chickpea and Apricot Tagine",
-  description: "Lamb shoulder braised under the conical lid of a tagine in a sauce fragrant with ras el hanout, saffron, and preserved lemon — the steam cycling endlessly from the base to the cone tip, condensing, and raining back down onto the meat to keep it impossibly tender without a drop of added liquid. Dried apricots and chickpeas dissolve into the sauce over two hours until the sweet-savory balance tips exactly where Moroccan cooking has always known it should.",
-  cuisine: "Moroccan",
-  culture: "Moroccan/Berber",
-  category: "proteins",
-  tags: ["lamb", "moroccan", "tagine", "ras-el-hanout", "gluten-free", "apricot", "chickpea", "braise"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "2 hr 30 min",
-  ratioSystem: "parts",
-  stars: 1432,
-  forks: 96,
-  contributors: 30,
-  license: "CC-BY-SA",
-  createdAt: "2026-01-15",
-  updatedAt: "2026-01-15",
-  flavorRadar: { sweet: 3, salty: 3, sour: 2, bitter: 1, umami: 3, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in lamb shoulder, cut into 7cm pieces", ratioValue: 100, defaultUnit: "parts", substitutions: ["bone-in goat", "beef short rib"] },
-    { ingId: "ing_02", role: "Spice",     name: "Ras el hanout",                               ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "Yellow onion, finely diced",                  ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Garlic cloves, minced",                       ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener", name: "Dried apricots, halved",                      ratioValue: 10,  defaultUnit: "parts", substitutions: ["dried prunes", "golden raisins"] },
-    { ingId: "ing_06", role: "Protein",   name: "Cooked chickpeas (canned, drained)",          ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Acid",      name: "Preserved lemon rind, sliced",                ratioValue: 5,   defaultUnit: "parts", substitutions: ["1 tsp lemon zest + pinch salt"] },
-    { ingId: "ing_08", role: "Spice",     name: "Saffron threads, bloomed in 2 tbsp hot water", ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Fat",       name: "Extra-virgin olive oil",                      ratioValue: 8,   defaultUnit: "parts", substitutions: ["butter", "argan oil"] },
-    { ingId: "ing_10", role: "Herb",      name: "Fresh cilantro and flat-leaf parsley, chopped", ratioValue: 5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning", name: "Fine sea salt and black pepper",               ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_moroccan_tagine_lamb_chickpea_001",
+  "parentRepoId": null,
+  "slug": "tagine-lamb-chickpea",
+  "author": "ForkRecipe Kitchen",
+  "title": "L'agneau, le pois chiche et l'abricot Tagine",
+  "description": "L'épaule d'agneau braisée sous le couvercle conique d'un tagine dans une sauce parfumée au ras el hanout, au safran et au citron conservé — la vapeur circulant sans fin de la base à l'extrémité du cône, se condensant et pleuvant vers le bas sur la viande pour la garder incroyablement tendre sans une goutte de liquide ajouté. Les abricots séchés et les pois chiches se dissolvent dans la sauce pendant deux heures jusqu'à ce que l'équilibre sucré-savori se termine exactement là où la cuisine marocaine a toujours su qu'elle devrait.",
+  "cuisine": "Maroc",
+  "culture": "Maroc/Berbère",
+  "category": "proteins",
+  "tags": [
+    "agneau",
+    "Maroc",
+    "Tagine",
+    "Le ras-el-hanout",
+    "Sans gluten",
+    "abricot",
+    "pois chiches",
+    "braise"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "2 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 1432,
+  "forks": 96,
+  "contributors": 30,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-01-15",
+  "updatedAt": "2026-01-15",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Marinate",
-      inputs: ["ing_01", "ing_02", "ing_04", "ing_11"],
-      outputState: "marinated_lamb",
-      instructions: "Combine the lamb pieces with ras el hanout, garlic, salt, and pepper in a bowl. Massage the spice blend into every surface. Cover and refrigerate for at least 1 hour, or overnight. The ras el hanout is a pre-made blend of up to 30 spices; a good one will include ginger, cinnamon, coriander, cumin, and rose petals. The marinated lamb should be deeply fragrant and the spices should have begun to hydrate against the meat's surface.",
-      visualCue: {
-        primaryTarget: "Lamb is uniformly coated in the spice blend. No bare patches visible.",
-        spectrum: [
-          { state: "Underdone", description: "Spice blend sits in dry patches on the surface and has not adhered.", action: "Massage more vigorously for 2 minutes. A small amount of olive oil helps adhesion." },
-          { state: "Perfect",   description: "Every surface is coated in fragrant golden-brown spice. The lamb smells of warm, complex Moroccan spice.", action: "Proceed to brown the lamb." },
-          { state: "Overdone",  description: "Lamb has marinated over 24 hours. Surface is slightly tacky and beginning to cure.", action: "Cook immediately. The flavor will be very intense, which is not undesirable." },
-        ],
-      },
-      feelCue: "After marinating, the lamb surface should feel faintly sticky from the oils in the ras el hanout — that tackiness tells you the spices have bonded to the protein surface.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Épaule d'agneau désossée, coupée en morceaux de 7 cm",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chèvres désossées",
+        "côtes courtes de bœuf"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["marinated_lamb", "ing_09"],
-      outputState: "seared_lamb",
-      instructions: "In the base of a tagine or a heavy Dutch oven, heat the olive oil over medium-high heat. Sear the lamb pieces on all sides, working in batches, until deeply golden-brown. Do not rush and do not crowd the pot. The spiced crust needs 3–4 minutes on each surface to develop. Set the seared lamb aside. In the remaining fat and fond, add the diced onion and cook over medium heat for 10 minutes until soft and golden.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown crust on the lamb. Onion is soft and golden throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Lamb has a pale golden surface. Spices have not properly caramelized.", action: "Return to high heat. The crust is the foundation of the tagine's flavor." },
-          { state: "Perfect",   description: "Lamb has a deep mahogany crust. Onion is soft, translucent, and golden-amber. The tagine base smells of caramelized meat and sweet onion.", action: "Return lamb to the pot and add the braising ingredients." },
-          { state: "Overdone",  description: "Onion has gone dark and bitter. Fond is beginning to burn.", action: "Deglaze with a splash of water immediately and reduce heat." },
-        ],
-      },
-      feelCue: "Press a seared piece of lamb gently — the crust should feel firm and slightly textured under pressure, like cardboard, not smooth like unseared meat.",
+      "ingId": "ing_02",
+      "role": "Spice",
+      "name": "Le Président",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Braise",
-      inputs: ["seared_lamb", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "braised_tagine",
-      instructions: "Return the seared lamb and softened onion to the tagine base. Add the apricots, drained chickpeas, preserved lemon, and the bloomed saffron with its soaking liquid. Add just enough water to come halfway up the lamb — about 200ml. Place the conical tagine lid on, or cover the Dutch oven tightly. Cook over the lowest possible flame (use a flame diffuser if available) for 1.5–2 hours. Do not lift the lid for the first 60 minutes.",
-      visualCue: {
-        primaryTarget: "Lamb is completely tender. Sauce is thick, golden-orange, and glossy. Apricots have partially dissolved into the sauce.",
-        spectrum: [
-          { state: "Underdone", description: "Lamb is still firm at the center. Sauce is thin and watery. Apricots are still intact.", action: "Continue braising 30 more minutes. Check liquid level and add a splash of water if needed." },
-          { state: "Perfect",   description: "Lamb falls off the bone with gentle pressure. Sauce is thick and complex — sweet from apricot, sour from preserved lemon, warm from saffron and ras el hanout. Chickpeas are creamy.", action: "Garnish and serve directly from the tagine." },
-          { state: "Overdone",  description: "Lamb has dried out. Sauce has reduced to a scorched paste at the bottom.", action: "Add hot water and stir gently from the bottom. Cover and rest off heat for 10 minutes." },
-        ],
-      },
-      feelCue: "Lean into the tagine and inhale through the small hole in the lid at the 90-minute mark — the escaping steam should carry a perfume of saffron, warm spice, and sweet fruit that nearly makes you dizzy.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon jaune, en dés",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["braised_tagine", "ing_10"],
-      outputState: "finished_tagine_lamb_chickpea",
-      instructions: "Adjust seasoning with salt, pepper, and additional lemon juice or preserved lemon if needed. Scatter the chopped cilantro and parsley over the tagine in a thick, fragrant layer. Serve directly at the table in the tagine pot, accompanied by warm Moroccan bread (khobz) or couscous to absorb the sauce. The meat should be so tender it is served with a spoon, not a knife.",
-      visualCue: {
-        primaryTarget: "A golden-orange stew with chunks of tender lamb and plump chickpeas. Vivid green herb garnish contrasting the amber sauce.",
-        spectrum: [
-          { state: "Underdone", description: "Herbs were added too early and have wilted and yellowed.", action: "Always add fresh herb garnish immediately before serving." },
-          { state: "Perfect",   description: "Vivid green cilantro and parsley against the golden sauce. The contrast in color is as important as the freshness of flavor the herbs add.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Garnish has fully wilted after sitting too long before serving.", action: "Add a second layer of fresh herbs immediately before bringing to the table." },
-        ],
-      },
-      feelCue: "When you lift a piece of lamb with the serving spoon, it should tremble and threaten to fall apart — that fragility is the sign of two hours of patience paying off.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Abricots séchés, coupés en deux",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pruneaux séchés",
+        "raisins dorés"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Pois chiches cuits (en conserve, égouttés)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Ronde de citron conservée, tranchée",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1 c. à thé zeste de citron + sel de pincée"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Fils de safran, fleuris dans 2 c. à soupe d'eau chaude",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre",
+        "huile d'argan"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Coriandre fraîche et persil à feuilles plates, haché",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre noir",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04",
+        "ing_11"
+      ],
+      "outputState": "marinated_lamb",
+      "instructions": "Mélanger les morceaux d'agneau avec ras el hanout, ail, sel et poivre dans un bol. Massage du mélange d'épices dans chaque surface. Couvrir et réfrigérer pendant au moins 1 heure ou pendant la nuit. Le ras el hanout est un mélange pré-fait de jusqu'à 30 épices; un bon comprend le gingembre, la cannelle, la coriandre, le cumin et les pétales de rose. L'agneau mariné devrait être profondément parfumé et les épices devraient avoir commencé à s'hydrater contre la surface de la viande.",
+      "visualCue": {
+        "primaryTarget": "L'agneau est uniformément enduit dans le mélange d'épices. Pas de taches nues visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange d'épices se trouve dans des zones sèches à la surface et n'a pas adhéré.",
+            "action": "Massage plus vigoureusement pendant 2 minutes. Une petite quantité d'huile d'olive aide à l'adhésion."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque surface est recouverte d'épices dorées parfumées. L'agneau sent les épices marocaines chaudes et complexes.",
+            "action": "Allez brunir l'agneau."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'agneau a mariné plus de 24 heures. La surface est légèrement collante et commence à guérir.",
+            "action": "Cuire immédiatement. La saveur sera très intense, ce qui n'est pas indésirable."
+          }
+        ]
+      },
+      "feelCue": "Après avoir mariné, la surface de l'agneau devrait se sentir légèrement collante à partir des huiles du ras el hanout, ce qui indique que les épices se sont collées à la surface des protéines."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "marinated_lamb",
+        "ing_09"
+      ],
+      "outputState": "seared_lamb",
+      "instructions": "Dans la base d'un tagine ou d'un four hollandais lourd, chauffer l'huile d'olive à feu moyen-vif. Casser les morceaux d'agneau de tous les côtés, en travaillant par lots, jusqu'à ce qu'ils soient profondément dorés. Ne vous précipitez pas et ne foulez pas le pot. La croûte épicée a besoin de 3-4 minutes sur chaque surface pour se développer. Mettez de côté l'agneau mariné. Dans le reste de la graisse et de l'huile, ajouter les dés d'oignon et cuire à feu moyen pendant 10 minutes jusqu'à ce que tendre et doré.",
+      "visualCue": {
+        "primaryTarget": "Une croûte dorée profonde sur l'agneau. L'oignon est doux et doré partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'agneau a une surface dorée pâle. Les épices n'ont pas correctement caramélisé.",
+            "action": "Revenez à la chaleur élevée. La croûte est le fondement de la saveur du tagine."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'agneau a une croûte acajou profonde. L'oignon est doux, translucide et doré. La base de tagine sent la viande caramélisée et l'oignon sucré.",
+            "action": "Retournez l'agneau dans la casserole et ajoutez les ingrédients de la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon est devenu sombre et amer. Le Fonds commence à brûler.",
+            "action": "Déglacer avec un jet d'eau immédiatement et réduire la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur un morceau d'agneau mariné — la croûte doit se sentir ferme et légèrement texturée sous pression, comme du carton, pas lisse comme de la viande non sayée."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "seared_lamb",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "braised_tagine",
+      "instructions": "Retourner l'agneau mariné et l'oignon ramolli à la base de tagine. Ajouter les abricots, les pois chiches égouttés, le citron conservé et le safran fleuri avec son liquide absorbant. Ajoutez juste assez d'eau pour monter à mi - chemin l'agneau — environ 200 ml. Placer le couvercle conique du tagine, ou bien couvrir le four hollandais. Cuire au-dessus de la flamme la plus basse possible (utiliser un diffuseur de flamme si disponible) pendant 1,5 à 2 heures. Ne levez pas le couvercle pendant les 60 premières minutes.",
+      "visualCue": {
+        "primaryTarget": "L'agneau est complètement tendre. La sauce est épaisse, dorée et brillante. Les abricots ont été partiellement dissous dans la sauce.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Lamb est toujours ferme au centre. La sauce est fine et aqueuse. Les abricots sont toujours intacts.",
+            "action": "Continuez à faire l'éloge 30 minutes de plus. Vérifiez le niveau de liquide et ajoutez un jet d'eau si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'agneau tombe de l'os avec une pression douce. La sauce est épaisse et complexe — douce d'abricot, aigre de citron préservé, chaude de safran et de ras el-hanout. Les pois chiches sont crémeux.",
+            "action": "Garnir et servir directement à partir du tagine."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'agneau a séché. La sauce a été réduite à une pâte brûlée au fond.",
+            "action": "Ajouter l'eau chaude et remuer doucement du fond. Couvrir et reposer le feu pendant 10 minutes."
+          }
+        ]
+      },
+      "feelCue": "Penchez-vous dans le tagine et inhalez-vous à travers le petit trou dans le couvercle à la marque de 90 minutes – la vapeur qui s'échappe devrait porter un parfum de safran, d'épices chaudes et de fruits doux qui vous rend presque vertigineuse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "braised_tagine",
+        "ing_10"
+      ],
+      "outputState": "finished_tagine_lamb_chickpea",
+      "instructions": "Réglez l'assaisonnement avec du sel, du poivre et du jus de citron supplémentaire ou conservez le citron si nécessaire. Dispersez la coriandre hachée et le persil sur le tagine dans une couche épaisse et parfumée. Servir directement à la table dans la marmite, accompagné de pain marocain chaud (khobz) ou couscous pour absorber la sauce. La viande doit être si tendre qu'elle est servie avec une cuillère, pas un couteau.",
+      "visualCue": {
+        "primaryTarget": "Un ragoût doré-orange avec des morceaux d'agneau tendre et de pois chiches. Garnir d'herbes vertes vivaces contrastant la sauce ambre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les herbes ont été ajoutées trop tôt et se sont flétries et jaunies.",
+            "action": "Ajouter toujours la garniture d'herbe fraîche immédiatement avant de servir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Coriandre verte vive et persil contre la sauce dorée. Le contraste de couleur est aussi important que la fraîcheur de la saveur que les herbes ajoutent.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La garniture s'est complètement flétrie après s'être assise trop longtemps avant de servir.",
+            "action": "Ajouter une deuxième couche d'herbes fraîches immédiatement avant d'apporter à la table."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous soulevez un morceau d'agneau avec la cuillère de service, il devrait trembler et menacer de s'effondrer — cette fragilité est le signe de deux heures de patience qui paye."
+    }
+  ]
 };

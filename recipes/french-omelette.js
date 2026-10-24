@@ -1,107 +1,242 @@
 export default {
-  repoId: "master_french_omelette_001",
-  parentRepoId: null,
-  slug: "french-omelette",
-  author: "ForkRecipe Kitchen",
-  title: "French Rolled Omelette",
-  description: "A pale, unmarked envelope of barely set curds — the Escoffier benchmark where technique replaces seasoning and the pan does half the thinking.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "eggs",
-  tags: ["eggs", "french", "technique", "breakfast", "quick"],
-  difficulty: 2,
-  activeTime: "5 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-02-14",
-  updatedAt: "2025-01-08",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Eggs",              ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Unsalted butter",   ratioValue: 10,  defaultUnit: "parts", substitutions: ["clarified butter"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fine sea salt",     ratioValue: 1,   defaultUnit: "parts", substitutions: ["fleur de sel"] },
-    { ingId: "ing_04", role: "Seasoning", name: "White pepper",      ratioValue: 0.3, defaultUnit: "parts", substitutions: ["black pepper"] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh chives",      ratioValue: 2,   defaultUnit: "parts", substitutions: ["fines herbes"] },
+  "repoId": "master_french_omelette_001",
+  "parentRepoId": null,
+  "slug": "french-omelette",
+  "author": "ForkRecipe Kitchen",
+  "title": "Omelette française à rouleaux",
+  "description": "Une enveloppe pâle et non marquée de cords à peine fixés — la référence d'Escoffier où la technique remplace l'assaisonnement et la poêle fait la moitié de la pensée.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "eggs",
+  "tags": [
+    "œufs",
+    "français",
+    "technique",
+    "Petit déjeuner",
+    "Vite"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "5 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-02-14",
+  "updatedAt": "2025-01-08",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Beat",
-      inputs: ["ing_01", "ing_03", "ing_04"],
-      outputState: "seasoned_eggs",
-      instructions: "Crack eggs into a bowl. Season with salt and white pepper. Beat with a fork until yolks and whites are fully unified — no streaks — but do not introduce air. The goal is a homogeneous liquid, not a foam.",
-      visualCue: {
-        primaryTarget: "A uniform pale-yellow liquid with no visible white strands and no froth on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Translucent egg-white ribbons still visible when fork is lifted.", action: "Keep beating with short, flat strokes — tilt the bowl toward you and drag the fork across the bottom." },
-          { state: "Perfect",   description: "Consistent golden color throughout. When poured, it flows as one liquid with no separation.", action: "Set aside. Prep the pan." },
-          { state: "Overdone",  description: "Surface covered in fine bubbles and foam. Mixture has lightened noticeably.", action: "Let it rest two minutes so bubbles settle — an airy omelette turns spongy." },
-        ],
-      },
-      feelCue: "The fork should glide without resistance. If you hear the tines scraping the bowl loudly, you are being too aggressive.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Oeufs",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Heat pan",
-      inputs: ["ing_02"],
-      outputState: "foamed_butter",
-      instructions: "Set an 8-inch nonstick or well-seasoned carbon-steel pan over medium-high heat. Add butter and swirl constantly. The butter will foam, then the foam will subside. Act before it colors.",
-      visualCue: {
-        primaryTarget: "Butter has melted, foamed vigorously, and the foam is just beginning to subside — the pan surface is coated and glistening.",
-        spectrum: [
-          { state: "Underdone", description: "Butter still solid or only half-melted with no foam yet.", action: "Wait. The pan must be evenly hot before eggs go in or they will set unevenly." },
-          { state: "Perfect",   description: "Foam has peaked and is collapsing. Butter is golden, silent between sizzles.", action: "Add eggs immediately." },
-          { state: "Overdone",  description: "Butter has browned — hazelnut color and nutty smell. Small dark flecks.", action: "Wipe the pan, re-butter, and restart. Brown butter will mark the omelette." },
-        ],
-      },
-      feelCue: "The first sizzle when butter hits the pan should be gentle, like rain on a tin roof — if it spatters violently, the pan is too hot.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre clarifié"
+      ]
     },
     {
-      nodeId: "step_3", action: "Scramble curds",
-      inputs: ["seasoned_eggs", "foamed_butter"],
-      outputState: "soft_curds",
-      instructions: "Pour in the eggs. Immediately shake the pan with one hand while stirring rapidly with a fork or chopsticks held flat in the other. Pull the pan on and off the heat every few seconds. You are creating tiny, creamy curds, not large scrambled pieces.",
-      visualCue: {
-        primaryTarget: "The egg mass has thickened into small, glossy curds with a thin layer of liquid egg still visible on top.",
-        spectrum: [
-          { state: "Underdone", description: "Mostly liquid — curds barely forming. Fork leaves no trail.", action: "Return to heat and keep stirring. The curds will come together quickly once the pan is hot enough." },
-          { state: "Perfect",   description: "Small, custard-like curds throughout. A thin film of wet egg remains on the surface. Mixture moves as a mass when you shake the pan.", action: "Stop stirring. Smooth the surface with the back of the fork." },
-          { state: "Overdone",  description: "Large, dry clumps. No wet egg remains. Curds have separated from each other.", action: "Proceed to roll — it will be edible but firm. Next time, pull from heat earlier." },
-        ],
-      },
-      feelCue: "The sound shifts from a sharp hiss to a soft, wet murmur — that quieting is your cue to stop stirring.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fleur de sel"
+      ]
     },
     {
-      nodeId: "step_4", action: "Roll",
-      inputs: ["soft_curds"],
-      outputState: "rolled_omelette",
-      instructions: "Tilt the pan to a 45-degree angle, handle up. Let the omelette slide toward the far edge. Use the fork to fold the near third over the center, then invert the pan onto a warm plate so the omelette lands seam-side down.",
-      visualCue: {
-        primaryTarget: "A pale-yellow, cigar-shaped omelette with no browning, sitting seam-down on the plate with a smooth, slightly moist surface.",
-        spectrum: [
-          { state: "Underdone", description: "The omelette tears when folding — liquid egg runs out onto the plate.", action: "Return to pan for ten more seconds. The residual heat may be enough." },
-          { state: "Perfect",   description: "Uniform pale exterior, no cracks, no brown spots. A gentle press yields a soft, baveuse center.", action: "Rub a cold piece of butter over the top for sheen." },
-          { state: "Overdone",  description: "Brown streaks or spots on the surface. Feels firm and rubbery when pressed.", action: "Serve it — but lower the heat next time and move faster." },
-        ],
-      },
-      feelCue: "Press the top gently with a fingertip — it should feel like the flesh between your thumb and index finger when you make an OK sign. Jiggly, not bouncy.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Poivre blanc",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre noir"
+      ]
     },
     {
-      nodeId: "step_5", action: "Garnish",
-      inputs: ["rolled_omelette", "ing_05"],
-      outputState: "finished_omelette",
-      instructions: "Rub a small knob of cold butter across the surface for a glossy sheen. Scatter finely snipped chives along the top.",
-      visualCue: {
-        primaryTarget: "A glistening, butter-sheened omelette with a fine confetti of bright-green chives against the pale yellow.",
-        spectrum: [
-          { state: "Underdone", description: "Surface looks matte and dry.", action: "Apply a bit more butter while the omelette is still warm enough to melt it." },
-          { state: "Perfect",   description: "Glossy surface that catches the light. Chives evenly distributed.", action: "Serve immediately — this dish waits for no one." },
-          { state: "Overdone",  description: "Butter has pooled into puddles. Chives are wilting from residual heat.", action: "Blot excess butter with a paper towel. The chives are fine." },
-        ],
-      },
-      feelCue: "The aroma should be clean dairy and fresh-cut grass — if you smell anything toasty or sulfurous, the eggs were overcooked.",
-    },
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Ciboulette fraîche",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "amende les herbes"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Combattre",
+      "inputs": [
+        "ing_01",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "seasoned_eggs",
+      "instructions": "Casser les œufs dans un bol. Assaisonner de sel et de poivre blanc. Battre avec une fourchette jusqu'à ce que les jaunes et les blancs soient complètement unifiés — sans stries — mais n'introduisent pas d'air. Le but est un liquide homogène, pas une mousse.",
+      "visualCue": {
+        "primaryTarget": "Liquide jaune pâle uniforme sans brins blancs visibles et sans mousse à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des rubans translucides blanc-oeuf sont encore visibles lorsque la fourchette est levée.",
+            "action": "Continuez à battre avec des coups courts et plats — inclinez le bol vers vous et faites glisser la fourchette sur le fond."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur dorée constante à travers. Lorsqu'il est versé, il coule comme un liquide sans séparation.",
+            "action": "Mettez de côté. Préparez la poêle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surface recouverte de fines bulles et de mousse. Le mélange s'est sensiblement allégé.",
+            "action": "Laissez reposer deux minutes pour que les bulles s'installent — une omelette aérienne devient spongieuse."
+          }
+        ]
+      },
+      "feelCue": "La fourche doit glisser sans résistance. Si vous entendez les dents gratter fort le bol, vous êtes trop agressif."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plaque thermoformée",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "foamed_butter",
+      "instructions": "Réglez un moule antiadhésif de 8 pouces ou en acier au carbone bien assaisonné à feu moyen-élevé. Ajouter le beurre et tourner constamment. Le beurre va mousser, puis la mousse va tomber. Agir avant qu'il ne colore.",
+      "visualCue": {
+        "primaryTarget": "Beurre a fondu, mousse vigoureusement, et la mousse commence à peine à s'effondrer — la surface de la poêle est enduite et scintille.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Beurre encore solide ou à moitié fondu sans mousse.",
+            "action": "Attendez. La poêle doit être uniformément chaude avant que les oeufs entrent ou ils seront mis inégalement."
+          },
+          {
+            "state": "Perfect",
+            "description": "La mousse a culminé et s'effondre. Le beurre est doré, silencieux entre les étourdissements.",
+            "action": "Ajouter les œufs immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre est bruni — couleur de la noisette et odeur de noix. De petites taches sombres.",
+            "action": "Essuyez la casserole, re-butter, et redémarrez. Le beurre brun marquera l'omelette."
+          }
+        ]
+      },
+      "feelCue": "Le premier étourdissement lorsque le beurre frappe la poêle doit être doux, comme la pluie sur un toit en étain — si elle éclabousse violemment, la poêle est trop chaude."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cords à crampons",
+      "inputs": [
+        "seasoned_eggs",
+        "foamed_butter"
+      ],
+      "outputState": "soft_curds",
+      "instructions": "Verser les œufs. Secouez immédiatement la poêle d'une main en remuant rapidement avec une fourchette ou des baguettes maintenues à plat dans l'autre. Tirez la poêle toutes les quelques secondes. Vous créez de petits caillés crémeux, pas de gros morceaux brouillés.",
+      "visualCue": {
+        "primaryTarget": "La masse des oeufs s'est épaissie en petits caillés brillants avec une fine couche d'oeuf liquide encore visible sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La plupart du temps liquide — les caillés se forment à peine. La fourche ne laisse aucune trace.",
+            "action": "Revenez à chauffer et continuez à remuer. Les caillés se réuniront rapidement une fois la poêle assez chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Petits caillés à la crème. Un mince film d'oeuf humide reste à la surface. Le mélange se déplace en masse lorsque vous secouez la casserole.",
+            "action": "Arrête de remuer. Lisser la surface avec le dos de la fourchette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Grandes croûtes sèches. Aucun œuf humide ne reste. Les courbes se sont séparées.",
+            "action": "Continuez à rouler — il sera comestible mais ferme. La prochaine fois, tirez de la chaleur plus tôt."
+          }
+        ]
+      },
+      "feelCue": "Le son passe d'un sifflement aigu à un murmure doux et humide — ce silence est votre signal pour arrêter de remuer."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Rouleaux",
+      "inputs": [
+        "soft_curds"
+      ],
+      "outputState": "rolled_omelette",
+      "instructions": "Incliner la poêle à un angle de 45 degrés, tenir. Laissez l'omelette glisser vers l'extrémité. Utilisez la fourche pour plier le tiers près sur le centre, puis inverser la poêle sur une plaque chaude afin que l'omelette atterrisse côté couture vers le bas.",
+      "visualCue": {
+        "primaryTarget": "Une omelette jaune pâle, en forme de cigare, sans brunissement, assise sur la plaque avec une surface lisse et légèrement humide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'omelette se déchire au moment du pliage — l'œuf liquide s'écoule sur l'assiette.",
+            "action": "Retournez à la poêle pendant dix secondes. La chaleur résiduelle peut suffire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Extérieur pâle uniforme, pas de fissures, pas de taches brunes. Une presse douce donne un centre de baveuse doux.",
+            "action": "Frottez un morceau de beurre froid sur le dessus."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des stries brunes ou des taches à la surface. Se sent ferme et caoutchouteux quand pressé.",
+            "action": "Servir — mais baisser la chaleur la prochaine fois et aller plus vite."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur le haut avec un bout de doigt — il devrait se sentir comme la chair entre votre pouce et l'index lorsque vous faites un signe OK. Jiggly, pas du tout."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Garnir",
+      "inputs": [
+        "rolled_omelette",
+        "ing_05"
+      ],
+      "outputState": "finished_omelette",
+      "instructions": "Frotter un petit bouton de beurre froid sur la surface pour un éclat brillant. Éparpillement de ciboulette finement tranchée le long du sommet.",
+      "visualCue": {
+        "primaryTarget": "Une omelette éblouissante au beurre avec un fin confetti de ciboulette vert vif contre le jaune pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface semble mate et sèche.",
+            "action": "Appliquer un peu plus de beurre alors que l'omelette est encore assez chaude pour le fondre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface brillante qui prend la lumière. Des chives distribuées uniformément.",
+            "action": "Servir immédiatement — ce plat n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre s'est emparé de flaques. Les chives se flétrissent à cause de la chaleur résiduelle.",
+            "action": "Blot de beurre excédentaire avec une serviette en papier. La ciboulette va bien."
+          }
+        ]
+      },
+      "feelCue": "L'arôme doit être de lait propre et d'herbe fraîche-coupée — si vous sentez quelque chose de grillé ou de soufre, les œufs ont été trop cuits."
+    }
+  ]
 };

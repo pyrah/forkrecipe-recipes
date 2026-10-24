@@ -1,96 +1,255 @@
 export default {
-  repoId: "master_thai_greencurrypaste_001",
-  parentRepoId: null,
-  slug: "thai-green-curry-paste",
-  author: "ForkRecipe Kitchen",
-  title: "Thai Green Curry Paste",
-  description: "A foundational aromatic paste built on the trinity of fresh chili heat, galangal warmth, and lemongrass perfume. Pounded — never blended — to release oils, not bruise them.",
-  cuisine: "Thai",
-  culture: "Central Thai",
-  category: "sauces",
-  tags: ["paste", "thai", "spicy", "mortar-and-pestle", "aromatic"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "1 hour",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-02-10",
-  updatedAt: "2024-09-15",
-  flavorRadar: { sweet: 3, salty: 6, sour: 4, bitter: 2, umami: 7, heat: 8 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",       name: "Green bird's eye chili", ratioValue: 1.0, defaultUnit: "parts", substitutions: ["serrano", "jalapeño (milder)"] },
-    { ingId: "ing_02", role: "Aromatic",   name: "Lemongrass (tender core)", ratioValue: 1.0, defaultUnit: "parts", substitutions: ["lemongrass paste"] },
-    { ingId: "ing_03", role: "Aromatic",   name: "Galangal",              ratioValue: 0.5, defaultUnit: "parts", substitutions: ["young ginger (different flavor)"] },
-    { ingId: "ing_04", role: "Allium",     name: "Shallot",               ratioValue: 1.5, defaultUnit: "parts", substitutions: ["red onion"] },
-    { ingId: "ing_05", role: "Allium",     name: "Garlic",                ratioValue: 1.0, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Citrus",     name: "Kaffir lime zest",      ratioValue: 0.25, defaultUnit: "parts", substitutions: ["lime zest + bay leaf"] },
-    { ingId: "ing_07", role: "Herb",       name: "Cilantro root",         ratioValue: 0.5, defaultUnit: "parts", substitutions: ["cilantro stems"] },
-    { ingId: "ing_08", role: "Umami",      name: "Shrimp paste",          ratioValue: 0.25, defaultUnit: "parts", substitutions: ["white miso (vegetarian)"] },
-    { ingId: "ing_09", role: "Spice",      name: "Toasted coriander seed",ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_thai_greencurrypaste_001",
+  "parentRepoId": null,
+  "slug": "thai-green-curry-paste",
+  "author": "ForkRecipe Kitchen",
+  "title": "Thai Green Curry Paste",
+  "description": "Une pâte aromatique fondamentale construite sur la trinité de la chaleur de chili frais, de la chaleur galangale et du parfum de citronnelle. Poundé — jamais mélangé — pour libérer les huiles, et non les contuser.",
+  "cuisine": "Thaï",
+  "culture": "Centre thaïlandais",
+  "category": "sauces",
+  "tags": [
+    "pâte",
+    "Thaï",
+    "épicé",
+    "mortier et peste",
+    "aromatiques"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "1 hour",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-02-10",
+  "updatedAt": "2024-09-15",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 6,
+    "sour": 4,
+    "bitter": 2,
+    "umami": 7,
+    "heat": 8
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Toast",
-      inputs: ["ing_09"],
-      outputState: "toasted_spices",
-      instructions: "Dry-toast coriander seeds in a pan over medium heat, swirling constantly.",
-      visualCue: {
-        primaryTarget: "Seeds darken one shade and a thin smoke rises from the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Pale, raw color. No fragrance.", action: "Keep going — they need heat to bloom." },
-          { state: "Perfect",   description: "Warm honey color, kitchen smells like an orange grove.", action: "Tip onto a cool plate immediately." },
-          { state: "Overdone",  description: "Black flecks, acrid smoke.", action: "Discard. Burnt spices ruin the whole paste." },
-        ],
-      },
-      feelCue: "Smells intensely of toasted nuts crossed with citrus peel.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Chili des yeux d'oiseau vert",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Serrano",
+        "jalapeño (meilleur)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Pound",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "fibrous_base",
-      instructions: "In a granite mortar, pound chilies, lemongrass, and galangal hardest first — fibers down to threads.",
-      visualCue: {
-        primaryTarget: "A coarse, pale-green fibrous mash with no recognizable chunks.",
-        spectrum: [
-          { state: "Underdone", description: "Visible chunks of stem and seed.", action: "Pound longer, scrape the sides." },
-          { state: "Perfect",   description: "Stringy paste; pestle leaves a clean trail.", action: "Add the alliums." },
-          { state: "Overdone",  description: "Watery, juice pooling.", action: "Drain liquid, save for cooking the paste later." },
-        ],
-      },
-      feelCue: "Slow rhythm. The pestle should thud, not click. You feel the resistance shift from crunchy to wet-sandy.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "Lemongrass (noyau sensible)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pâte de citronnelle"
+      ]
     },
     {
-      nodeId: "step_3", action: "Pound",
-      inputs: ["fibrous_base", "ing_04", "ing_05", "ing_07"],
-      outputState: "aromatic_base",
-      instructions: "Add shallot, garlic, and cilantro root. Continue pounding until alliums dissolve into the paste.",
-      visualCue: {
-        primaryTarget: "A wet, pale-green paste with no white or pink chunks.",
-        spectrum: [
-          { state: "Underdone", description: "Pink shallot specks visible.", action: "Pound until they vanish." },
-          { state: "Perfect",   description: "Glossy, uniform color, a single shade of bright green.", action: "Add zest, spice, shrimp paste." },
-          { state: "Overdone",  description: "Soupy. Liquid pools at the edges.", action: "Strain off and save the liquid." },
-        ],
-      },
-      feelCue: "Smells sharp and oniony, with lemongrass perfume rising on top.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Galangal",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jeune gingembre (différente saveur)"
+      ]
     },
     {
-      nodeId: "step_4", action: "Finish",
-      inputs: ["aromatic_base", "ing_06", "ing_08", "toasted_spices"],
-      outputState: "finished_paste",
-      instructions: "Add lime zest, shrimp paste, and ground toasted spices. Pound until the paste pulls cleanly from the mortar.",
-      visualCue: {
-        primaryTarget: "A glossy, deep-green paste that holds peaks like stiff frosting.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of darker shrimp paste visible.", action: "Pound and fold until uniform." },
-          { state: "Perfect",   description: "Single deep-jade color, glossy, holds shape.", action: "Use within 3 days, or freeze in tablespoon portions." },
-          { state: "Overdone",  description: "Loose, oily, sliding off the pestle.", action: "Stir back together; flavor is still good." },
-        ],
-      },
-      feelCue: "Stings the eyes. Smells like a wet jungle floor at dawn.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalote",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon rouge"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Aile",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Citrus",
+      "name": "Zeste de chaux de Kaffir",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "zeste de chaux + feuille de laurier"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Racine de cilantro",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tiges coriandres"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "Pâte de crevettes",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "miso blanc (végétarien)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Graines de coriandre grillées",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_09"
+      ],
+      "outputState": "toasted_spices",
+      "instructions": "Graines de coriandre au toast sec dans une poêle à feu moyen, tourbillonnant constamment.",
+      "visualCue": {
+        "primaryTarget": "Les graines s'assombrissent d'une ombre et une fumée mince s'élève de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pale, couleur brute. Pas de parfum.",
+            "action": "Continuez — ils ont besoin de chaleur pour fleurir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur de miel chaud, la cuisine sent comme une orangeraie.",
+            "action": "Astucez immédiatement sur une assiette fraîche."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des taches noires, de la fumée acride.",
+            "action": "Jetez. Les épices brûlées ruinent toute la pâte."
+          }
+        ]
+      },
+      "feelCue": "Sensations intenses de noix grillées croisées avec des agrumes."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Livre",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "fibrous_base",
+      "instructions": "Dans un mortier de granit, les piments de livre, la citronnelle et le galangal d'abord plus dur — les fibres vers le bas jusqu'aux fils.",
+      "visualCue": {
+        "primaryTarget": "Une masse fibreuse grossière, vert pâle, sans morceaux reconnaissables.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux visibles de tiges et de graines.",
+            "action": "Pound plus long, racler les côtés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte à chaîne; le peste laisse un sentier propre.",
+            "action": "Ajouter les alliums."
+          },
+          {
+            "state": "Overdone",
+            "description": "De l'eau, du jus.",
+            "action": "Égoutter le liquide, économiser pour cuire la pâte plus tard."
+          }
+        ]
+      },
+      "feelCue": "Rythme lent. Le pestile devrait toud, pas cliquer. Vous sentez la résistance passer de croquant à humide-sandy."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Livre",
+      "inputs": [
+        "fibrous_base",
+        "ing_04",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "aromatic_base",
+      "instructions": "Ajouter l'échalote, l'ail et la racine de coriandre. Continuer à frapper jusqu'à ce que les alliums se dissolvent dans la pâte.",
+      "visualCue": {
+        "primaryTarget": "Une pâte humide et vert pâle sans morceaux blancs ou roses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Echalote rose visible.",
+            "action": "Pound jusqu'à ce qu'ils disparaissent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, couleur uniforme, une seule nuance de vert vif.",
+            "action": "Ajouter le zeste, les épices, la pâte de crevettes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Soupie. Des bassins liquides aux bords.",
+            "action": "Retirez-vous et sauvez le liquide."
+          }
+        ]
+      },
+      "feelCue": "Sens aiguisé et oignoneux, avec un parfum de citronnelle montant sur le dessus."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "aromatic_base",
+        "ing_06",
+        "ing_08",
+        "toasted_spices"
+      ],
+      "outputState": "finished_paste",
+      "instructions": "Ajouter le zeste de lime, la pâte de crevettes et les épices grillées. Pound jusqu'à ce que la pâte tire proprement du mortier.",
+      "visualCue": {
+        "primaryTarget": "Une pâte vert foncé brillante qui tient des sommets comme un gel raide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pâte de crevettes plus foncée visible.",
+            "action": "Pound et plier jusqu'à uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une seule couleur de jade profonde, brillante, tient forme.",
+            "action": "Utiliser dans les 3 jours ou congeler en portions de cuillère à soupe."
+          },
+          {
+            "state": "Overdone",
+            "description": "Lâche, huileux, glisse du pestle.",
+            "action": "Remuer ensemble; la saveur est encore bonne."
+          }
+        ]
+      },
+      "feelCue": "Ça colle les yeux. Ça sent le sol humide de la jungle à l'aube."
+    }
+  ]
 };

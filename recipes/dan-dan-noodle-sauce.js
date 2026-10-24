@@ -1,103 +1,288 @@
 export default {
-  repoId: "master_chinese_dan-dan-noodle-sauce_001",
-  parentRepoId: null,
-  slug: "dan-dan-noodle-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Dan Dan Noodle Sauce",
-  description: "The addictive sesame-chili sauce that defines Sichuan street noodles — rich tahini and chili crisp swirled into a pork-and-ya-cai topped bowl with a slow-building ma-la tingle.",
-  cuisine: "Chinese",
-  culture: "Sichuan",
-  category: "sauces",
-  tags: ["chinese", "sichuan", "noodles", "spicy", "sesame", "numbing"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 4, sour: 2, bitter: 1, umami: 5, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Chinese sesame paste or well-stirred tahini",     ratioValue: 3,   defaultUnit: "parts", substitutions: ["peanut butter (less complex)"] },
-    { ingId: "ing_02", role: "Heat",      name: "Chili crisp (la jiao you)",                       ratioValue: 2,   defaultUnit: "parts", substitutions: ["chili oil with sediment", "sambal oelek"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Soy sauce",                                       ratioValue: 2,   defaultUnit: "parts", substitutions: ["tamari"] },
-    { ingId: "ing_04", role: "Acid",      name: "Chinese black vinegar (Chinkiang)",               ratioValue: 1,   defaultUnit: "parts", substitutions: ["rice vinegar (less complexity)", "balsamic (same depth, different fruit)"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Hot noodle cooking water",                        ratioValue: 2,   defaultUnit: "parts", substitutions: ["hot water"] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, minced to a paste",                ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Sichuan peppercorns, toasted and finely ground",  ratioValue: 0.25, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Protein",   name: "Ground pork",                                     ratioValue: 2,   defaultUnit: "parts", substitutions: ["ground chicken", "crumbled firm tofu"] },
-    { ingId: "ing_09", role: "Umami",     name: "Yibin ya cai (Yibin pickled mustard greens), rinsed and chopped", ratioValue: 1, defaultUnit: "parts", substitutions: ["tianjin preserved vegetable", "Korean kimchi, chopped"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Doubanjiang (Pixian chili bean paste)",           ratioValue: 0.5, defaultUnit: "parts", substitutions: ["gochujang"] },
-    { ingId: "ing_11", role: "Fat",       name: "Neutral oil",                                     ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_12", role: "Allium",    name: "Scallions, thinly sliced (for serving)",          ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_chinese_dan-dan-noodle-sauce_001",
+  "parentRepoId": null,
+  "slug": "dan-dan-noodle-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Dan Dan Noodle",
+  "description": "La sauce sésame-chili addictif qui définit les nouilles de rue Sichuan - riche tahini et chili croustillant tournoyé dans un bol de porc et-ya-cai surmonté avec un ma-la à bâtir lente.",
+  "cuisine": "Chinois",
+  "culture": "Sichuan",
+  "category": "sauces",
+  "tags": [
+    "Chinois",
+    "Sichuan",
+    "nouilles",
+    "épicé",
+    "sésame",
+    "engourdissement"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "sesame_sauce_base",
-      instructions: "Combine the sesame paste, chili crisp, soy sauce, black vinegar, minced garlic, and ground Sichuan peppercorn in a bowl. Add the hot noodle cooking water (or hot water) a little at a time and whisk vigorously — sesame paste seizes initially when liquid is added and may look broken and grainy before it comes together. Keep whisking and adding hot water until the sauce is completely smooth, glossy, and flows in a thick, pourable ribbon from the whisk. The finished sauce should be about the consistency of heavy cream — thin enough to coat noodles evenly but not watery. The black vinegar gives brightness and a faint wine-dark complexity that rice vinegar alone cannot provide.",
-      visualCue: {
-        primaryTarget: "A smooth, glossy, deep reddish-brown sauce — the sesame paste's beige fully integrated with the chili crisp's red oil — that flows from a spoon in a slow, even sheet with no lumps or oil separation.",
-        spectrum: [
-          { state: "Underdone", description: "Sesame paste has seized into a thick, grainy lump at the bottom of the bowl with oily red chili crisp sitting on top, not emulsified. The mixture looks broken and separated.", action: "Add hot water one tablespoon at a time while whisking hard in a circular motion — sesame paste always seizes first before it releases and emulsifies. Patience and heat are the keys." },
-          { state: "Perfect",   description: "A unified, glossy, reddish-tan sauce that flows evenly, smells of sesame, chili, garlic, and the dark, wine-like note of black vinegar. It coats the back of a spoon in a thin, even layer.", action: "Taste and adjust: add more chili crisp for heat, more vinegar for brightness, more soy for salt." },
-          { state: "Overdone",  description: "Too much hot water added — the sauce is thin and watery, barely coating a finger, the sesame flavor diluted and the chili oil floating on the surface rather than emulsified.", action: "Add more sesame paste and whisk to re-emulsify and thicken." },
-        ],
-      },
-      feelCue: "Run a finger through the sauce on the back of the spoon — it should leave a clean stripe that holds briefly before the sauce flows back over it. If the stripe fills immediately, the sauce is too thin. If it takes a full 5 seconds to fill, it is thick enough for the noodles.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Pâte de sésame chinois ou tahini bien ciré",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre d'arachide (moins complexe)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "pork_ya_cai_topping",
-      instructions: "Heat the neutral oil in a wok or skillet over high heat until smoking. Add the ground pork and cook without stirring for 60–90 seconds, pressing it flat, until the underside is deeply browned and caramelized. Break up the meat and continue cooking until all the pink is gone and the pork is in crumbled, well-browned bits with some crispy edges. Add the doubanjiang and stir-fry for 1 minute until the chili paste coats the pork and turns everything a vivid red. Add the rinsed ya cai and stir to combine — the pickled greens will sizzle in the hot fat. Cook together for 1–2 minutes until the ya cai is heated through and fragrant. The topping should be intensely savory, slightly oily, and fragrant.",
-      visualCue: {
-        primaryTarget: "A dry, intensely fragrant mixture of crumbled, well-browned pork bits coated in red chili paste, interspersed with dark, slightly translucent pieces of ya cai. No liquid pooling in the pan — the topping should be dry enough to mound.",
-        spectrum: [
-          { state: "Underdone", description: "Pork is still in a pale grey mass, the doubanjiang sits on top without coating the meat, and the ya cai is cold and raw-smelling.", action: "Increase heat and break up the pork more aggressively. The pork must be genuinely browned and crumbled before the condiments are added." },
-          { state: "Perfect",   description: "Dark, crumbled, dry-ish pork bits coated in red paste, interspersed with fragrant ya cai. The whole pan smells deeply of fermented chili, pork fat, and the briny, mustard-green tang of the pickle.", action: "Remove from heat and reserve as topping." },
-          { state: "Overdone",  description: "Ya cai has been over-cooked and has lost its distinctive texture, turning into a dried-out, almost sandy crumble with a bitter edge.", action: "Add the pork-ya cai topping to the bowl immediately; the residual moisture from the sauce will revive the ya cai's texture as the bowl is assembled." },
-        ],
-      },
-      feelCue: "The finished topping should feel dry and crumbly when tossed with a spoon — like coarse, fragrant breadcrumbs. If it feels wet or pasty, the pan wasn't hot enough and the pork has steamed rather than seared.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Chili croustillant (la jiao vous)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile de chili avec sédiments",
+        "sambal oelek"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["sesame_sauce_base", "pork_ya_cai_topping", "ing_12"],
-      outputState: "assembled_dan_dan_bowl",
-      instructions: "Divide the sesame sauce evenly between serving bowls. Cook fresh or dried wheat noodles in well-salted boiling water until just tender, drain (reserving cooking water if not done already), and divide among the bowls, placing them directly on top of the sauce without stirring. Mound the pork-ya cai topping in the center of each bowl of noodles. Drizzle additional chili crisp over the top, scatter sliced scallion, and dust with a pinch more ground Sichuan peppercorn. Serve immediately — the noodles should be placed over the sauce rather than the sauce poured over the noodles, so the diner experiences the visual composition before stirring everything together at the table.",
-      visualCue: {
-        primaryTarget: "A composed bowl: pale noodles piled over a deep reddish-tan sauce base, crowned with a mound of dark red pork and ya cai, a drizzle of scarlet chili oil across the surface, bright green scallion on top.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce has been mixed with the noodles before serving — the dramatic color contrast of noodle and sauce is lost, and the table experience of stirring your own bowl is removed.", action: "For future servings, layer in order: sauce first, then noodles, then topping. The mixing at the table is part of the dish's theater." },
-          { state: "Perfect",   description: "A beautiful, layered bowl that looks dramatic and restaurant-worthy before being mixed. The sauce is visible at the base, the topping high and dry on top, the chili oil gleaming across the surface.", action: "Serve with chopsticks and a deep spoon. Instruct the diner to stir from the bottom up to incorporate all the sauce." },
-          { state: "Overdone",  description: "Bowl was assembled and left sitting too long — noodles have absorbed all the sauce and swollen, the topping has sunk and gone soggy, and the chili oil has been absorbed rather than glistening on the surface.", action: "Dan dan noodles must be served and eaten immediately. Assemble only when the diner is seated and ready." },
-        ],
-      },
-      feelCue: "Stir the bowl from the bottom — you should feel the sauce rise and coat the noodles as you lift. The first bite after full mixing should deliver sesame richness, chili heat, and the electric tingle of Sichuan peppercorn almost simultaneously, with the chewy noodle providing the base texture that carries everything.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "sauce soja",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Season",
-      inputs: ["assembled_dan_dan_bowl"],
-      outputState: "finished_dan_dan_noodle_sauce",
-      instructions: "After the diner stirs the bowl, instruct them to taste and self-season from condiments at the table: additional chili crisp for more heat and crunch, a few more drops of black vinegar for brightness and acid, a pinch of sugar if the heat is overwhelming, or a few drops of sesame oil if the noodles feel dry. This final open seasoning is traditional — a good dan dan noodle bowl should be adjusted by the eater to their own preference of heat and numbing. The sauce as built is the balanced midpoint; the table condiments push it to the individual. The dish is finished when every noodle strand is coated in sauce and the diner can feel the slow-building ma-la tingle spreading from the center of the tongue outward.",
-      visualCue: {
-        primaryTarget: "A fully stirred bowl where every noodle strand is coated in a dark reddish-tan sauce, the pork and ya cai distributed throughout, with puddles of chili oil across the surface and the scallion scattered through.",
-        spectrum: [
-          { state: "Underdone", description: "Noodles are not yet fully coated — the sauce is still pooled at the bottom of the bowl and the top noodles are dry and pale.", action: "Continue stirring from the very bottom of the bowl, lifting and turning the noodles through the sauce until every strand is colored and coated." },
-          { state: "Perfect",   description: "Every noodle is tawny-red from the sauce, the pork and ya cai are distributed evenly, the chili oil shimmers across the surface, and the diner's mouth is tingling with the slow, pleasant burn of ma-la.", action: "Eat immediately." },
-          { state: "Overdone",  description: "Bowl has been sitting too long post-stir — noodles have absorbed all the sauce and become a single clumped mass. The ma-la effect has peaked and begun to fade.", action: "Add a drizzle of sesame oil and a splash of water or stock to loosen, stir again, and serve. Do not let a dan dan bowl wait." },
-        ],
-      },
-      feelCue: "The tingle of ground Sichuan peppercorn should arrive distinctly after the first 3–4 bites, a sensation best described as a slow electric buzz that spreads from the center of the tongue to the lips and cheeks. If it is absent, there is not enough Sichuan peppercorn; if it arrives too quickly and overwhelms, there is too much. The ideal is a sauce that keeps revealing itself, bite after bite.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "vinaigre noir chinois (Chinkiang)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de riz (moins de complexité)",
+        "balsamique (même profondeur, fruits différents)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau chaude de cuisson des nouilles",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau chaude"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Giroves d'ail hachées à la pâte",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Maïs poivré sichuan, grillé et finement moulu",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Protein",
+      "name": "Porc haché",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poulet haché",
+        "tofu ferme émietté"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Umami",
+      "name": "Yibin ya cai (Yibin vert de moutarde marinée), rincé et haché",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "légumes conservés à la tianjin",
+        "Kimchi coréen, haché"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Doubanjiang (Pâte de chili de Pixian)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Gochujang"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Allium",
+      "name": "Échalons, tranchés finement (pour servir)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "sesame_sauce_base",
+      "instructions": "Mélanger la pâte de sésame, le chili croustillant, la sauce soja, le vinaigre noir, l'ail haché et le maïs poivré Sichuan moulu dans un bol. Ajouter l'eau chaude de cuisson des nouilles (ou de l'eau chaude) un peu à la fois et fouetter vigoureusement — la pâte de sésame saisit d'abord quand le liquide est ajouté et peut sembler cassée et granuleuse avant qu'elle ne se réunisse. Continuez à fouetter et à ajouter de l'eau chaude jusqu'à ce que la sauce soit complètement lisse, brillante, et coule dans un ruban épais et versable du fouet. La sauce finie devrait être sur la consistance de la crème lourde — assez mince pour enrober les nouilles uniformément mais pas aqueuse. Le vinaigre noir donne de la luminosité et une faible complexité vin-obscurité que le vinaigre de riz seul ne peut fournir.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lisse, brillante, brun rougeâtre profond — le beige de la pâte de sésame entièrement intégré à l'huile rouge du chili croustillant — qui coule d'une cuillère dans une feuille lente, même sans grumeaux ni séparation d'huile.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte de sésame s'est emparée d'une grosse masse granuleuse au fond du bol, avec un chili rouge gras et croustillant assis sur le dessus, non émulsifié. Le mélange semble cassé et séparé.",
+            "action": "Ajouter de l'eau chaude une cuillère à soupe à la fois tout en fouettant dur dans un mouvement circulaire — la pâte de sésame saisit toujours d'abord avant qu'elle libère et émulsifie. La patience et la chaleur sont les clés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce unie, brillante, rougeâtre-tan qui coule uniformément, sent le sésame, le chili, l'ail et la note foncée, semblable au vin, du vinaigre noir. Il enveloppe l'arrière d'une cuillère dans une couche mince et uniforme.",
+            "action": "Goûtez et ajustez : ajoutez plus de chili croustillant pour la chaleur, plus de vinaigre pour la luminosité, plus de soja pour le sel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop d'eau chaude ajoutée — la sauce est fine et aqueuse, enrobant à peine un doigt, la saveur de sésame diluée et l'huile de chili flottant sur la surface plutôt que émulsifiée.",
+            "action": "Ajouter plus de pâte de sésame et fouetter pour réémulsionner et épaissir."
+          }
+        ]
+      },
+      "feelCue": "Passez un doigt dans la sauce à l'arrière de la cuillère — il devrait laisser une bande propre qui se tient brièvement avant que la sauce ne retombe dessus. Si la bande se remplit immédiatement, la sauce est trop fine. S'il faut 5 secondes pour le remplir, il est assez épais pour les nouilles."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "pork_ya_cai_topping",
+      "instructions": "Chauffer l'huile neutre dans un wok ou une poêle à feu vif jusqu'à ce qu'elle fume. Ajouter le porc moulu et cuire sans remuer pendant 60 à 90 secondes, le presser à plat, jusqu'à ce que le dessous soit profondément doré et caramélisé. Séparez la viande et continuez à cuisiner jusqu'à ce que tout le rose soit parti et le porc est en morceaux émiettés, bien connus avec quelques bords croustillants. Ajouter le doubanjiang et faire revenir 1 minute jusqu'à ce que la pâte de chili enrobe le porc et transforme tout en rouge vif. Ajouter le cai rincé et remuer pour le combiner — les verts décapés s'étourdiront dans la graisse chaude. Cuire ensemble pendant 1 à 2 minutes jusqu'à ce que le ya cai soit chauffé et parfumé. La garniture doit être intensément salée, légèrement grasse et parfumée.",
+      "visualCue": {
+        "primaryTarget": "Un mélange sec, intensément parfumé de morceaux de porc émietté, bien-brouillés, enrobés de pâte de chili rouge, entrecoupés de morceaux sombres et légèrement translucides de ya cai. Pas de mise en commun de liquide dans la casserole: la garniture doit être assez sèche pour faire du monticule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc est encore dans une masse gris pâle, le doubanjiang est assis sur le dessus sans enrober la viande, et le ya cai est froid et frais.",
+            "action": "Augmenter la chaleur et briser le porc plus agressivement. Le porc doit être véritablement bruni et émietté avant que les condiments ne soient ajoutés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Morceaux de porc foncés, émiettés et secs enrobés de pâte rouge, entrecoupés de ya cai parfumé. Toute la poêle sent profondément le chili fermenté, la graisse de porc, et le bricolage, la moutarde-verte, du cornichon.",
+            "action": "Retirer du feu et réserver comme garniture."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ya cai a été trop cuit et a perdu sa texture distinctive, se transformant en un crumble presque sablonneux et amer.",
+            "action": "Ajouter immédiatement la garniture de cai de porc-ya dans le bol; l'humidité résiduelle de la sauce ravivera la texture du cai de ya lorsque le bol est assemblé."
+          }
+        ]
+      },
+      "feelCue": "La garniture finie doit se sentir sèche et émiettée lorsqu'elle est jetée à l'aide d'une cuillère, comme une chapelure grossière et parfumée. S'il se sent humide ou pâteux, la poêle n'était pas assez chaude et le porc a cuit à la vapeur plutôt qu'à la mer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "sesame_sauce_base",
+        "pork_ya_cai_topping",
+        "ing_12"
+      ],
+      "outputState": "assembled_dan_dan_bowl",
+      "instructions": "Divisez la sauce de sésame uniformément entre les bols. Cuire les nouilles de blé frais ou séchées dans de l'eau bouillante bien salée jusqu'à ce qu'elles soient tendres, égoutter (réserver l'eau de cuisson si ce n'est déjà fait) et diviser entre les bols, les placer directement sur le dessus de la sauce sans remuer. Monter la garniture de porc-ya cai au centre de chaque bol de nouilles. Arrosez le chili supplémentaire croustillant sur le dessus, éparpillez l'échalote coupée et la poussière avec une pincée plus de maïs poivré Sichuan. Servir immédiatement — les nouilles devraient être placées sur la sauce plutôt que la sauce versée sur les nouilles, de sorte que le diner éprouve la composition visuelle avant de tout remuer ensemble à la table.",
+      "visualCue": {
+        "primaryTarget": "Un bol composé : des nouilles pâles empilées au-dessus d'une base profonde de sauce au tank rougeâtre, couronnées d'un monticule de porc rouge foncé et de ya cai, une bruine d'huile de chili écarlate à la surface, de l'échalon vert vif sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a été mélangée avec les nouilles avant de servir — le contraste de couleur dramatique des nouilles et de la sauce est perdu, et l'expérience de table de remuer votre propre bol est enlevée.",
+            "action": "Pour les portions futures, couchez dans l'ordre : sauce d'abord, puis nouilles, puis garniture. Le mélange à table fait partie du théâtre du plat."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un beau bol en couches qui semble dramatique et digne d'un restaurant avant d'être mélangé. La sauce est visible à la base, la garniture haute et sèche sur le dessus, l'huile de chili brille à travers la surface.",
+            "action": "Servir avec des baguettes et une cuillère profonde. Demandez au diner de remuer du fond jusqu'à incorporer toute la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bol a été assemblé et laissé assis trop longtemps — les nouilles ont absorbé toute la sauce et gonflé, la garniture a coulé et est partie en losange, et l'huile de chili a été absorbée plutôt que de briller à la surface.",
+            "action": "Dan dan nouilles doit être servi et mangé immédiatement. Assemblez seulement lorsque le dîner est assis et prêt."
+          }
+        ]
+      },
+      "feelCue": "Mélanger le bol du bas — vous devriez sentir la sauce lever et enrober les nouilles pendant que vous soulevez. La première morsure après mélange complet devrait fournir la richesse de sésame, la chaleur de chili, et le picotement électrique du poivre de Sichuan presque simultanément, avec la nouille mâcheuse fournissant la texture de base qui porte tout."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "assembled_dan_dan_bowl"
+      ],
+      "outputState": "finished_dan_dan_noodle_sauce",
+      "instructions": "Après que le diner remue le bol, leur demander de goûter et d'auto-saison des condiments à la table: chili supplémentaire croquant pour plus de chaleur et de croquant, quelques gouttes de vinaigre noir pour la luminosité et l'acide, une pincée de sucre si la chaleur est écrasante, ou quelques gouttes d'huile de sésame si les nouilles se sentent sèches. Ce dernier assaisonnement ouvert est traditionnel: un bon bol de nouilles dan dan devrait être ajusté par le mangeur à sa propre préférence de chaleur et d'engourdissement. La sauce telle que construite est le point médian équilibré; les condiments de la table la poussent à l'individu. Le plat est fini lorsque chaque brin de nouilles est enrobé de sauce et que le diner peut sentir le m-la brillance de construction lente s'étendre du centre de la langue vers l'extérieur.",
+      "visualCue": {
+        "primaryTarget": "Un bol entièrement remué où chaque brin de nouilles est enrobé d'une sauce de trique rougeâtre foncée, le porc et le ya cai répartis dans l'ensemble, avec des flaques d'huile de chili sur la surface et le pétoncle dispersé à travers.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les nouilles ne sont pas encore entièrement enrobées — la sauce est encore mise en commun au fond du bol et les nouilles supérieures sont sèches et pâles.",
+            "action": "Continuer à remuer à partir du fond du bol, lever et tourner les nouilles à travers la sauce jusqu'à ce que chaque brin soit coloré et enduit."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque nouilles est rouge-tawny de la sauce, le porc et ya cai sont distribués uniformément, l'huile de chili brille à la surface, et la bouche du diner picote avec le feu lent et agréable de ma-la.",
+            "action": "Mangez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bol a été trop longtemps assis après le trempage — les nouilles ont absorbé toute la sauce et sont devenues une seule masse entachée. L'effet ma-la a atteint son maximum et a commencé à s'estomper.",
+            "action": "Ajouter une bruine d'huile de sésame et un jet d'eau ou de bouillon pour se détendre, remuer à nouveau et servir. Ne laissez pas un bol de Dan Dan attendre."
+          }
+        ]
+      },
+      "feelCue": "Le picotement du maïs poivré Sichuan devrait arriver nettement après les 3-4 premières bouchées, une sensation mieux décrite comme un bourdonnement électrique lent qui s'étend du centre de la langue aux lèvres et aux joues. S'il est absent, il n'y a pas assez de maïs poivré sichuan; s'il arrive trop vite et déborde, il y en a trop. L'idéal est une sauce qui continue à se révéler, mordre après mordre."
+    }
+  ]
 };

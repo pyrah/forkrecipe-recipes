@@ -1,107 +1,323 @@
 export default {
-  repoId: "master_german_sauerbraten_001",
-  parentRepoId: null,
-  slug: "sauerbraten",
-  author: "ForkRecipe Kitchen",
-  title: "Rhineland Sauerbraten",
-  description: "Germany's pot roast nobility — beef marinated for three to four days in red wine vinegar, wine, and a raft of aromatics until the tough outside round transforms into something silken, then braised low and slow with crumbled gingersnaps stirred into the sauce for a haunting, sweet-sour richness unique to the Rhineland.",
-  cuisine: "German",
-  culture: "Rhineland German",
-  category: "proteins",
-  tags: ["beef", "german", "braise", "vinegar", "marinade", "slow-cook", "comfort"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "4 days (marinade)",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 2, sour: 3, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Beef bottom round or top round (about 1.5 kg, tied)",    ratioValue: 1500, defaultUnit: "g",  substitutions: ["beef chuck roast (more marbling, richer result)"] },
-    { ingId: "ing_02", role: "Acid",      name: "Red wine vinegar",                                        ratioValue: 250,  defaultUnit: "ml", substitutions: ["cider vinegar (milder)"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Dry red wine",                                            ratioValue: 250,  defaultUnit: "ml", substitutions: ["additional red wine vinegar + 100ml water"] },
-    { ingId: "ing_04", role: "Liquid",    name: "Water",                                                   ratioValue: 250,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "White onion, roughly sliced",                             ratioValue: 200,  defaultUnit: "g",  substitutions: ["yellow onion"] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Celery stalks, roughly chopped",                          ratioValue: 100,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Carrot, roughly chopped",                                 ratioValue: 100,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Bay leaves",                                              ratioValue: 3,    defaultUnit: "ea", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Juniper berries, lightly crushed",                        ratioValue: 8,    defaultUnit: "ea", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Whole cloves",                                            ratioValue: 4,    defaultUnit: "ea", substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Black peppercorns",                                       ratioValue: 10,   defaultUnit: "ea", substitutions: [] },
-    { ingId: "ing_12", role: "Sweetener", name: "Sugar",                                                   ratioValue: 15,   defaultUnit: "g",  substitutions: ["brown sugar"] },
-    { ingId: "ing_13", role: "Seasoning", name: "Fine sea salt",                                           ratioValue: 12,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_14", role: "Fat",       name: "Lard or neutral oil",                                     ratioValue: 30,   defaultUnit: "ml", substitutions: ["beef tallow", "vegetable oil"] },
-    { ingId: "ing_15", role: "Sweetener", name: "Gingersnap cookies (Lebkuchen or ginger snaps), crumbled", ratioValue: 80,  defaultUnit: "g",  substitutions: ["2 tbsp dark rye bread crumbs + 1 tsp honey + 0.5 tsp ground ginger"] },
-    { ingId: "ing_16", role: "Dairy",     name: "Sour cream (optional, for finishing)",                    ratioValue: 80,   defaultUnit: "g",  substitutions: ["crème fraîche"] },
+  "repoId": "master_german_sauerbraten_001",
+  "parentRepoId": null,
+  "slug": "sauerbraten",
+  "author": "ForkRecipe Kitchen",
+  "title": "Rhénanie Sauerbraten",
+  "description": "La noblesse allemande de rôtissage — le bœuf mariné pendant trois à quatre jours dans le vinaigre de vin rouge, le vin et un radeau d'aromates jusqu'à ce que la ronde extérieure dure se transforme en quelque chose de soyeux, puis braisé bas et lent avec des gingembres émiettés agités dans la sauce pour une richesse hantante et douce-sour propre à la Rhénanie.",
+  "cuisine": "Allemand",
+  "culture": "Rhénanie Allemand",
+  "category": "proteins",
+  "tags": [
+    "boeuf",
+    "allemand",
+    "braise",
+    "vinaigre",
+    "marinade",
+    "Cuisson lente",
+    "confort"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "4 days (marinade)",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Marinate",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12", "ing_13"],
-      outputState: "marinated_beef",
-      instructions: "Do not heat the marinade — a cold marinade is traditional for sauerbraten. Combine the red wine vinegar, red wine, water, onion, celery, carrot, bay leaves, juniper berries, cloves, peppercorns, sugar, and salt in a large non-reactive bowl or pot (glass, ceramic, or stainless steel — never aluminium or cast iron at this stage). Stir until the salt and sugar dissolve. Submerge the beef completely, pressing it down. Cover with plastic wrap and refrigerate for 3–4 days, turning the meat once per day so all sides marinate evenly.",
-      visualCue: {
-        primaryTarget: "After 3 days, the surface of the beef has turned from bright red to a dull grayish-brown on all sides — the acid has penetrated the outer 1–2 cm of meat.",
-        spectrum: [
-          { state: "Underdone", description: "After only 1 day: beef is still bright red throughout. Only the surface is slightly discoloured. The flavour will be mild and the texture not yet transformed.", action: "Return to the refrigerator. Sauerbraten's magic requires time. A minimum of 3 days is non-negotiable for authentic Rhineland flavour." },
-          { state: "Perfect",   description: "After 3–4 days: outer 2 cm of the beef is uniformly grey-brown from acid. The marinade smells complex — sour, spiced, and wine-dark. The meat feels noticeably firmer and denser than raw beef.", action: "Remove from the marinade, pat very dry, and strain the marinade through a sieve, reserving all the liquid." },
-          { state: "Overdone",  description: "After 5+ days: the acid has penetrated further and the surface meat is beginning to turn mealy and very soft. The marinade smells strongly sour.", action: "Proceed — the braising will rescue the texture. The flavour will be very tart; the gingersnaps become even more critical to balance." },
-        ],
-      },
-      feelCue: "On day three, press the surface of the beef with a finger — it feels denser and slightly tighter than fresh beef, almost like cured meat. That resistance tells you the acid has done its work.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Boeuf rond inférieur ou rond supérieur (environ 1,5 kg, attaché)",
+      "ratioValue": 1500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "rôti de poulet de bœuf (plus marbré, résultat plus riche)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["marinated_beef", "ing_14"],
-      outputState: "seared_beef",
-      instructions: "Remove the beef from the marinade and pat it completely dry with paper towels — moisture is the enemy of a good sear. Strain and reserve all the marinade liquid. Heat the lard or oil in a heavy Dutch oven or braising pot over high heat until just beginning to smoke. Sear the beef on all sides, including the ends, for 3–4 minutes per side without moving it. You are building deep brown crust for colour and flavour — the Maillard crust will dissolve into the braising liquid and become the backbone of the sauce.",
-      visualCue: {
-        primaryTarget: "All surfaces of the beef are uniformly deep mahogany-brown with no grey or blond patches. The pot bottom has a dark brown fond stuck to it.",
-        spectrum: [
-          { state: "Underdone", description: "Meat is blond or pale grey on some sides — still wet-looking in patches. The fond on the pot bottom is thin and pale.", action: "Continue searing, ensuring the heat is high and the surface is bone-dry. Do not rush — a pale sear produces a pale, flat-tasting sauce." },
-          { state: "Perfect",   description: "Deep mahogany crust on all sides. The pot has a rich dark fond. The kitchen smells of caramelised beef and spice. The meat sizzles loudly when each side first contacts the pan.", action: "Remove the beef and set aside. Discard the burned fat if dark; leave if golden." },
-          { state: "Overdone",  description: "Parts of the crust are black. A scorched, acrid smell in the kitchen. Fond on the pot is black.", action: "Wipe the burnt fond from the pot before adding the marinade, or it will turn the sauce bitter." },
-        ],
-      },
-      feelCue: "A properly seared side releases from the pot with zero sticking when you try to lift it — the crust has formed a dry seal. If it sticks and tears, it needs 60 more seconds.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "vinaigre de vin rouge",
+      "ratioValue": 250,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de cidre (mineur)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Braise",
-      inputs: ["seared_beef", "marinated_beef"],
-      outputState: "braised_sauerbraten",
-      instructions: "Return the seared beef to the pot. Pour the strained marinade over it — the liquid should come at least halfway up the sides of the meat. Bring to a gentle simmer over medium heat, then cover with a tight lid and reduce to the lowest possible heat (or transfer to a 160°C oven). Braise for 2.5–3 hours, turning the beef every 45 minutes. The meat is done when a carving fork slides in and out without resistance, and the fibres are beginning to separate when pressed.",
-      visualCue: {
-        primaryTarget: "Beef is deep brown throughout, visibly shrunken from its raw size. A carving fork slides in and out of the thickest point with no resistance — like hot butter.",
-        spectrum: [
-          { state: "Underdone", description: "Fork meets significant resistance in the centre. Internal temperature is below 90°C. The fibres are still knitted tightly together.", action: "Replace the lid and continue braising. At this low-and-slow temperature, 30 more minutes can transform the texture entirely." },
-          { state: "Perfect",   description: "Fork slides in effortlessly. Meat shreds at the edges with a gentle nudge. The braising liquid is dark and fragrant. Internal temperature is 93–97°C.", action: "Remove the beef and set aside, covered with foil, while you make the sauce." },
-          { state: "Overdone",  description: "Meat has collapsed and is falling apart. Fibres are completely loose and the roast cannot hold its shape for slicing.", action: "Serve it pulled or shredded rather than sliced. The flavour is unaffected — it is arguably even better." },
-        ],
-      },
-      feelCue: "Lift the lid after 2 hours and press the beef with your finger through a folded kitchen towel — perfect sauerbraten yields like memory foam, springing back very slowly. If it springs back fast, it needs more time.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Vin rouge sec",
+      "ratioValue": 250,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de vin rouge supplémentaire + 100ml d'eau"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Reduce",
-      inputs: ["braised_sauerbraten", "ing_15", "ing_16"],
-      outputState: "finished_sauerbraten_sauce",
-      instructions: "Remove the beef and keep warm under foil. Pour all the braising liquid through a fine strainer into a wide saucepan — discard the spent aromatics. Bring the liquid to a vigorous boil and reduce by one-third, about 10 minutes. Crumble in the gingersnaps and whisk over medium heat until they dissolve completely and the sauce thickens noticeably to a coating consistency. Taste for balance — it should be sweet, sour, warm with spice, and deeply savoury. If it is too tart, add another crumbled gingersnap. Off the heat, stir in the sour cream if using, and reheat gently without boiling.",
-      visualCue: {
-        primaryTarget: "Sauce coats the back of a spoon in a glossy, brown-mahogany layer that does not run off immediately when the spoon is held upright. The gingersnaps have vanished entirely into the sauce.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery, running off the spoon like coloured water. Gingersnaps still visible as lumps or pale patches.", action: "Whisk vigorously over medium heat for another 3–4 minutes. Add another crumbled gingersnap if thickness is lacking." },
-          { state: "Perfect",   description: "Nappe consistency — coats a spoon cleanly. Deep mahogany in colour, glossy, and complex: sour, sweet, spiced, and meaty all at once.", action: "Slice the rested beef against the grain and serve napped with the sauce, alongside potato dumplings (Knödel) or braised red cabbage." },
-          { state: "Overdone",  description: "Sauce has reduced too far — it is thick, sticky, and very sweet from the concentrated gingersnap sugars. Slightly gluey on the spoon.", action: "Add a splash of the cooking liquid or hot water and whisk to loosen to the desired consistency." },
-        ],
-      },
-      feelCue: "Dip a clean finger into the sauce — it should leave a visible, glossy coat on your fingertip that clings for a few seconds rather than beading off. That film is the emulsified gelatin, fat, and gingersnap starch binding the Rhineland sweet-sour into one thing.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 250,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon blanc, tranché approximativement",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon jaune"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri, hachées approximativement",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Carotte, grossièrement hachée",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 3,
+      "defaultUnit": "ea",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "baies de genièvre, légèrement broyées",
+      "ratioValue": 8,
+      "defaultUnit": "ea",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Giroves entières",
+      "ratioValue": 4,
+      "defaultUnit": "ea",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Maïs de poivre noir",
+      "ratioValue": 10,
+      "defaultUnit": "ea",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brun"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 12,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Fat",
+      "name": "Lard ou huile neutre",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "suif de bœuf",
+        "huile végétale"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Sweetener",
+      "name": "Gingersnap cookies (lebkuchen ou gingembre), émietté",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "2 c. à soupe de pain au seigle foncé miettes + 1 c. à thé de miel + 0,5 c. à thé de gingembre moulu"
+      ]
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Dairy",
+      "name": "Crème acide (facultatif, pour la finition)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Crème fraîche"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "marinated_beef",
+      "instructions": "Ne pas chauffer la marinade — une marinade froide est traditionnelle pour le sauerbraten. Combiner le vinaigre de vin rouge, le vin rouge, l'eau, l'oignon, le céleri, la carotte, les feuilles de laurier, les baies de genièvre, les girofles, les grains de poivre, le sucre et le sel dans un grand bol ou un pot non réactif (verre, céramique ou acier inoxydable — jamais aluminium ou fonte à ce stade). Incorporer jusqu'à dissolution du sel et du sucre. Submerger le bœuf complètement, le presser. Couvrir d'enveloppe en plastique et réfrigérer pendant 3 à 4 jours, tourner la viande une fois par jour afin que tous les côtés marinent uniformément.",
+      "visualCue": {
+        "primaryTarget": "Après 3 jours, la surface du boeuf est passée du rouge vif à un brun grisâtre terne de tous les côtés – l'acide a pénétré l'extérieur de 1 à 2 cm de viande.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après seulement 1 jour : le boeuf est encore rouge vif. Seule la surface est légèrement décolorée. La saveur sera douce et la texture ne sera pas encore transformée.",
+            "action": "Retournez au réfrigérateur. La magie de Sauerbraten demande du temps. Un minimum de 3 jours n'est pas négociable pour les saveurs authentiques de la Rhénanie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 3 à 4 jours : 2 cm de bœuf sont uniformément gris-brun de l'acide. La marinade sent complexe: aigre, épicée, et vin foncé. La viande est nettement plus ferme et plus dense que le boeuf cru.",
+            "action": "Retirez de la marinade, tapez très sec, et filtrez la marinade à travers un tamis, en réservant tout le liquide."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après plus de 5 jours : l'acide a pénétré plus loin et la viande de surface commence à devenir farineuse et très molle. La marinade sent fortement acide.",
+            "action": "Continuez — la louange sauvera la texture. La saveur sera très piquante; les gingembres deviennent encore plus critiques pour l'équilibre."
+          }
+        ]
+      },
+      "feelCue": "Le troisième jour, appuyez sur la surface de la viande de bœuf avec un doigt — elle est plus dense et légèrement plus serrée que la viande fraîche, presque comme de la viande guérie. Cette résistance vous dit que l'acide a fait son travail."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "marinated_beef",
+        "ing_14"
+      ],
+      "outputState": "seared_beef",
+      "instructions": "Enlevez le bœuf de la marinade et tapez - le complètement sec avec des serviettes en papier — l'humidité est l'ennemi d'une bonne couture. Retirez et réservez tout le liquide marinade. Chauffer le saindoux ou l'huile dans un four hollandais lourd ou faire chauffer le pot à feu vif jusqu'à ce qu'il commence à fumer. Semer le bœuf de tous les côtés, y compris les extrémités, pendant 3 à 4 minutes de chaque côté sans le déplacer. Vous construisez une croûte brun foncé pour la couleur et la saveur, la croûte de Maillard se dissout dans le liquide de cuisson et devient l'épine dorsale de la sauce.",
+      "visualCue": {
+        "primaryTarget": "Toutes les surfaces du boeuf sont uniformément profondes acajou-brun sans taches grises ou blondes. Le fond du pot a un fond brun foncé collé à lui.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est blonde ou gris pâle sur certains côtés, encore humide dans les taches. Le fond du pot est fin et pâle.",
+            "action": "Continuer la mise en mer, en s'assurant que la chaleur est élevée et que la surface est sèche. Ne vous précipitez pas: une couture pâle produit une sauce pâle et plat."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte acajou profonde de tous les côtés. Le pot a un riche fond sombre. La cuisine sent le boeuf caramélisé et l'épice. La viande s'étourne fort quand chaque côté contacte la poêle.",
+            "action": "Retirer le boeuf et réserver. Jeter la graisse brûlée si elle est sombre; laisser si elle est dorée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Certaines parties de la croûte sont noires. Une odeur brûlée et acride dans la cuisine. Le fond du pot est noir.",
+            "action": "Essuyer le fond brûlé de la casserole avant d'ajouter la marinade, ou il fera tourner la sauce amère."
+          }
+        ]
+      },
+      "feelCue": "Un côté bien scellé libère du pot avec zéro collant lorsque vous essayez de le soulever — la croûte a formé un joint sec. Si ça colle et ça déchire, il lui faut 60 secondes de plus."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "seared_beef",
+        "marinated_beef"
+      ],
+      "outputState": "braised_sauerbraten",
+      "instructions": "Retournez le bœuf au pot. Verser la marinade tendue sur elle — le liquide devrait venir au moins à mi - haut des côtés de la viande. Faire mijoter légèrement à feu moyen, puis couvrir d'un couvercle serré et réduire à la chaleur la plus faible possible (ou transférer à un four à 160°C). Braser de 2,5 à 3 heures, tourner le bœuf toutes les 45 minutes. La viande est faite lorsqu'une fourche sculptante glisse sans résistance, et les fibres commencent à se séparer lorsqu'elles sont pressées.",
+      "visualCue": {
+        "primaryTarget": "Le boeuf est brun foncé partout, visiblement éparpillé de sa taille brute. Une fourche sculptante glisse dans et hors du point le plus épais sans résistance, comme le beurre chaud.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La fourche rencontre une résistance importante au centre. La température interne est inférieure à 90°C. Les fibres sont toujours tricotées étroitement.",
+            "action": "Remplacer le couvercle et continuer la cuisson. A cette température basse et basse, 30 minutes de plus peuvent transformer entièrement la texture."
+          },
+          {
+            "state": "Perfect",
+            "description": "La fourche glisse sans effort. La viande déchique aux bords avec un doux coup de pouce. Le liquide de braisage est sombre et parfumé. La température interne est de 93–97°C.",
+            "action": "Retirer le bœuf et réserver, couvert de papier, pendant que vous faites la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande s'est effondrée et s'effondre. Les fibres sont complètement lâches et le rôti ne peut pas tenir sa forme pour trancher.",
+            "action": "Servez-le tiré ou déchiqueté plutôt que tranché. La saveur n'est pas affectée, elle est sans doute encore meilleure."
+          }
+        ]
+      },
+      "feelCue": "Soulevez le couvercle après 2 heures et pressez le bœuf avec votre doigt à travers une serviette de cuisine pliée – parfait sauerbraten donne comme de la mousse de mémoire, ressortant très lentement. Si ça revient vite, il lui faut plus de temps."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Réduire",
+      "inputs": [
+        "braised_sauerbraten",
+        "ing_15",
+        "ing_16"
+      ],
+      "outputState": "finished_sauerbraten_sauce",
+      "instructions": "Retirer le bœuf et garder au chaud sous le papier. Verser tout le liquide de cuisson à travers une fine passoire dans une grande casserole — jetez les aromatiques usés. Porter le liquide à ébullition vigoureuse et réduire d'un tiers, environ 10 minutes. Incorporer les gingembres et fouetter à feu moyen jusqu'à ce qu'ils se dissolvent complètement et que la sauce s'épaississe sensiblement à une consistance de revêtement. Goûtez à l'équilibre: il doit être doux, aigre, chaud avec des épices et profondément salé. Si elle est trop goudronneuse, ajoutez un autre gingembre émietté. Hors du feu, remuer la crème aigre en cas d'utilisation et réchauffer doucement sans bouillir.",
+      "visualCue": {
+        "primaryTarget": "La sauce recouvre le dos d'une cuillère dans une couche de mahogany brun brillant qui ne s'écoule pas immédiatement lorsque la cuillère est maintenue debout. Les gingembres ont disparu entièrement dans la sauce.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse, qui sort de la cuillère comme de l'eau colorée. Gingersnaps reste visible sous forme de grumeaux ou de taches pâles.",
+            "action": "fouetter vigoureusement à feu moyen pendant encore 3 à 4 minutes. Ajouter un autre gingembre émietté si l'épaisseur manque."
+          },
+          {
+            "state": "Perfect",
+            "description": "Consistance de la nappe — enrobe une cuillère proprement. Acajou profond de couleur, brillant et complexe: aigre, doux, épicé, et charnu tout à la fois.",
+            "action": "Couper le boeuf reposé contre le grain et servir avec la sauce, aux côtés des boulettes de pommes de terre (Knödel) ou du chou rouge braisé."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite trop loin — elle est épaisse, collante et très sucrée à partir des sucres concentrés de gingembre. Un peu collant sur la cuillère.",
+            "action": "Ajouter une touche de liquide de cuisson ou d'eau chaude et fouetter pour se détendre à la consistance souhaitée."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt propre dans la sauce — il devrait laisser un manteau visible et brillant sur votre bout de doigt qui s'accroche pendant quelques secondes plutôt que de s'enfiler. Ce film est la gélatine émulsifiée, la graisse et l'amidon gingembre qui lie la douceur de la Rhénanie à une seule chose."
+    }
+  ]
 };

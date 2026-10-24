@@ -1,64 +1,177 @@
 export default {
-  repoId: "master_mexican_elote_callejero_001",
-  parentRepoId: null,
-  slug: "elote-callejero",
-  author: "ForkRecipe Kitchen",
-  title: "Elote Callejero (Mexican Street Corn)",
-  description: "Corn charred on a comal or grill, then slathered with mayonnaise, rolled in crumbled Cotija cheese, dusted with chili, and finished with fresh lime — Mexico's greatest street snack.",
-  cuisine: "Mexican",
-  culture: "Mexican street food",
-  category: "vegetables",
-  tags: ["corn", "mexican", "street food", "cotija", "lime"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 3, sour: 2, bitter: 0, umami: 2, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Fresh corn on the cob (husks on or off)",      ratioValue: 100, defaultUnit: "parts", substitutions: ["frozen corn cobs, thawed"] },
-    { ingId: "ing_02", role: "Fat",        name: "Mayonnaise",                                    ratioValue: 15,  defaultUnit: "parts", substitutions: ["Mexican crema", "sour cream"] },
-    { ingId: "ing_03", role: "Dairy",      name: "Cotija cheese (finely crumbled)",               ratioValue: 12,  defaultUnit: "parts", substitutions: ["queso fresco", "feta (less salty)"] },
-    { ingId: "ing_04", role: "Spice",      name: "Ancho chili powder (or piquin)",                ratioValue: 2,   defaultUnit: "parts", substitutions: ["Tajín seasoning", "cayenne + paprika"] },
-    { ingId: "ing_05", role: "Acid",       name: "Fresh lime (halved for squeezing)",             ratioValue: 8,   defaultUnit: "parts", substitutions: ["lemon"] },
-    { ingId: "ing_06", role: "Herb",       name: "Fresh cilantro (roughly chopped)",              ratioValue: 3,   defaultUnit: "parts", substitutions: ["flat-leaf parsley"] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Fine salt",                                     ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_mexican_elote_callejero_001",
+  "parentRepoId": null,
+  "slug": "elote-callejero",
+  "author": "ForkRecipe Kitchen",
+  "title": "Elote Callejero (maïs de la rue mexicaine)",
+  "description": "Maïs carbonisé sur un comal ou une grille, puis slathered avec de la mayonnaise, roulé dans du fromage Cotija émietté, dépoussiéré avec du chili, et fini avec de la chaux fraîche — la plus grande collation de rue du Mexique.",
+  "cuisine": "Mexicain",
+  "culture": "Nourriture de rue mexicaine",
+  "category": "vegetables",
+  "tags": [
+    "maïs",
+    "Mexique",
+    "Alimentation de rue",
+    "cotija",
+    "Chaux"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Grill",
-      inputs: ["ing_01"],
-      outputState: "charred_corn",
-      instructions: "Peel the husks back but leave them attached as a handle, or shuck completely. Place the corn directly over a high flame on a gas burner, on a very hot dry comal, or on a hot grill. Turn every minute or so for 8-12 minutes total until the kernels develop deep charred spots across the entire cob — some kernels should be near-black while others remain golden.",
-      visualCue: {
-        primaryTarget: "The cob shows irregular charring across its full surface — dark mahogany to black spots on protruding kernels, golden yellow in the valleys between.",
-        spectrum: [
-          { state: "Underdone", description: "Corn is steamed and hot but uniformly yellow; no charring or color change. Kernels look plump but lack any caramelization.", action: "Increase heat significantly or move the cob directly onto the flame; the kernels need direct contact with heat." },
-          { state: "Perfect",   description: "Kernels alternate between charred-black and golden-yellow. Some kernels have popped open slightly. The husk ends smoke gently. Smells of roasted corn and caramel.", action: "Transfer to a plate and apply toppings immediately while hot." },
-          { state: "Overdone",  description: "Entire cob is uniformly black; kernels are shriveled rather than just charred.", action: "Scrape the worst kernels with a butter knife; the interior of the cob is still usable." },
-        ],
-      },
-      feelCue: "Hot off the grill, the cob is almost too hot to hold — the charred spots feel slightly tacky, while the plump golden kernels still give with a faint burst of juice when pressed.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Maïs frais sur la cabillaud (pousses sur ou en dehors)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "épis de maïs congelés, dégelés"
+      ]
     },
     {
-      nodeId: "step_2", action: "Season",
-      inputs: ["charred_corn", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "dressed_elote",
-      instructions: "While the corn is still steaming hot, use a spoon or brush to coat the entire surface with a generous, even layer of mayonnaise. Roll or press the coated cob into a plate of crumbled Cotija so the cheese adheres all around. Dust liberally with chili powder from above. Squeeze fresh lime over the entire cob. Scatter cilantro. Finish with a pinch of salt.",
-      visualCue: {
-        primaryTarget: "The cob is thickly coated white with Cotija, red-dusted with chili powder, and visibly glistening with lime juice. Cilantro confetti is scattered across the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Thin, patchy mayo coat; cheese isn't adhering well; looks anemic and dry.", action: "Apply a thicker mayo layer with a spoon and press the Cotija firmly onto the surface — work fast while the cob is still hot and sticky." },
-          { state: "Perfect",   description: "Every kernel is blanketed in white Cotija. Chili powder dusts orange-red across the top. A visible slick of lime juice runs down the side. Smells of lime zest, chili, and toasted corn.", action: "Serve immediately and eat quickly — elote is best blazing hot." },
-          { state: "Overdone",  description: "Too much mayo has made the surface sodden; cheese has dissolved into a wet paste instead of adhering in distinct crumbles.", action: "Roll the cob through extra dry Cotija to reabsorb the moisture." },
-        ],
-      },
-      feelCue: "Biting into a perfect elote gives you crunch of char, burst of sweet corn juice, then the cool slick of mayo and the crumble of salty Cotija — all within a single bite.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Mayonnaise",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Créma mexicain",
+        "crème aigre"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Fromage Cotija (finement émietté)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "queso fresque",
+        "feta (moins salé)"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Poudre de chili ancho (ou piquin)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Assaisonnement de Tajín",
+        "cayenne + paprika"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Chaux fraîche (aspirée pour presser)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "citron"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Coriandre fraîche (approximativement hachée)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Persil à feuilles plates"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Grille",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "charred_corn",
+      "instructions": "Pelez les défenses en arrière, mais laissez-les attachés comme une poignée, ou secouez complètement. Placez le maïs directement sur une flamme élevée sur un brûleur à gaz, sur un comal sec très chaud, ou sur une grille chaude. Tourner toutes les minutes pendant environ 8-12 minutes jusqu'à ce que les grains développent des taches carbonisées profondes sur l'ensemble de la corb – certains grains doivent être presque noirs tandis que d'autres restent dorés.",
+      "visualCue": {
+        "primaryTarget": "L'omble montre un ombrage irrégulier sur toute sa surface: taches foncées d'acajou à noires sur les grains en saillie, jaune doré dans les vallées entre les deux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le maïs est cuit à la vapeur et chaud, mais uniformément jaune; aucun ombrage ni changement de couleur. Les amandes ont l'air d'avoir l'air d'avoir l'air d'avoir l'air d'une caramélisation.",
+            "action": "Augmentez significativement la chaleur ou déplacez le chevreuil directement sur la flamme; les grains ont besoin d'un contact direct avec la chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les amandes alternent entre noir carbonisé et jaune doré. Certains noyaux sont légèrement ouverts. La coque finit par fumer doucement. Sens de maïs rôti et de caramel.",
+            "action": "Transférer dans une assiette et appliquer les garnitures immédiatement quand elles sont chaudes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La noix entière est uniformément noire; les grains sont broyés plutôt que simplement carbonisés.",
+            "action": "Gratter les grains les plus mauvais avec un couteau à beurre; l'intérieur de la corbeille est encore utilisable."
+          }
+        ]
+      },
+      "feelCue": "Chaud hors de la grille, la corbeille est presque trop chaude pour tenir — les taches carbonisées se sentent légèrement collantes, tandis que les grains d'or plombés donnent encore avec un léger éclat de jus lorsqu'ils sont pressés."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "charred_corn",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "dressed_elote",
+      "instructions": "Alors que le maïs est encore chaud à la vapeur, utilisez une cuillère ou un pinceau pour enrober toute la surface d'une couche généreuse et uniforme de mayonnaise. Enroulez ou pressez le coton enduit dans une assiette de Cotija émietté afin que le fromage adhère tout autour. Poussière en poudre de chili d'en haut. Pressez la chaux fraîche sur toute la côte. Scatter la coriandre. Terminer avec une pincée de sel.",
+      "visualCue": {
+        "primaryTarget": "La corbe est épaissement enduite de blanc avec Cotija, rouge-poussière avec de la poudre de chili, et visiblement scintille avec du jus de lime. Cilantro confetti est dispersé à travers la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mâchoire mince et tachetée; le fromage n'est pas bien adhérant; il semble anémique et sec.",
+            "action": "Appliquez une couche de mayo plus épaisse avec une cuillère et appuyez fermement sur la Cotija sur la surface — travaillez vite alors que la corbeille est encore chaude et collante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain est recouvert de blanc Cotija. Poudre de Chili poussières orange-rouge sur le dessus. Une limace visible de jus de lime coule sur le côté. Des odeurs de zeste de lime, de chili et de maïs grillé.",
+            "action": "Servir immédiatement et manger rapidement — l'éliote est le meilleur chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de mayo a fait la surface soudée; le fromage s'est dissous dans une pâte humide au lieu d'adhérer à des miettes distinctes.",
+            "action": "Rouler la corbe à travers Cotija extra sec pour réabsorber l'humidité."
+          }
+        ]
+      },
+      "feelCue": "Un mélange d'éliote parfait vous donne une croûte d'omble, une explosion de jus de maïs sucré, puis la lécherette fraîche de mayo et le crumble de Cotija salé — le tout en une seule bouchée."
+    }
+  ]
 };

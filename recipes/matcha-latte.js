@@ -1,95 +1,205 @@
 export default {
-  repoId: "master_japanese_matcha_latte_001",
-  parentRepoId: null,
-  slug: "matcha-latte",
-  author: "ForkRecipe Kitchen",
-  title: "Matcha Latte",
-  description: "Ceremonial-grade matcha whisked with a small measure of hot (not boiling) water into a smooth, foam-flecked concentrate, then poured over steamed milk — bitter, grassy, and creamy.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "beverages",
-  tags: ["matcha", "japanese", "latte", "beverage", "green-tea", "vegetarian"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 0, sour: 0, bitter: 3, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Ceremonial-grade matcha powder (sifted)",         ratioValue: 1,   defaultUnit: "part",  substitutions: ["culinary-grade matcha (stronger, more bitter)"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Hot water (70–80°C / 158–175°F, not boiling)",    ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Dairy",     name: "Whole milk (steamed or frothed)",                  ratioValue: 8,   defaultUnit: "parts", substitutions: ["oat milk (froths well)", "almond milk", "coconut milk"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Simple syrup or honey (optional)",                 ratioValue: 0.5, defaultUnit: "part",  substitutions: ["maple syrup", "agave"] },
+  "repoId": "master_japanese_matcha_latte_001",
+  "parentRepoId": null,
+  "slug": "matcha-latte",
+  "author": "ForkRecipe Kitchen",
+  "title": "Latte de Matcha",
+  "description": "Ceremonial-grade matcha fouetté avec une petite mesure d'eau chaude (non bouillante) dans un concentré lisse, mouflé, puis versé sur le lait vapeur — amer, herbacé, crémeux.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "beverages",
+  "tags": [
+    "matcha",
+    "Japonais",
+    "Latte",
+    "boisson",
+    "thé vert",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 3,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sift",
-      inputs: ["ing_01"],
-      outputState: "sifted_matcha",
-      instructions: "Sift the matcha powder through a fine-mesh sieve into a small ceramic bowl (chawan) or a regular bowl. This single step is more important than most cooks expect: matcha clumps aggressively due to its ultra-fine particle size and the natural static electricity of the dry powder. Unsifted matcha forms stubborn lumps that no amount of whisking will fully dissolve, producing a visibly grainy drink with an uneven bitter hit. Even freshly opened tins should be sifted. Use 1–2 grams (about 1 teaspoon) per serving — this quantity is critical, as ceremonial matcha is potent and expensive.",
-      visualCue: {
-        primaryTarget: "A fine, even, dry layer of vivid jade-to-forest-green powder in the bowl, with no visible clumps. The color should be intensely, evenly green — bright and slightly luminous, not dull or yellowish.",
-        spectrum: [
-          { state: "Underdone", description: "Visible clumps remain after sifting — they look like tiny dark-green pebbles or irregular specks in the fine powder. They will not dissolve cleanly in the next step.", action: "Press them through the sieve with the back of a spoon. Every clump must be broken down before adding water." },
-          { state: "Perfect",   description: "A perfectly even, silky-fine green powder with no clumps whatsoever. Runs through your fingers like the finest flour. Color is uniformly bright, vivid green.", action: "Proceed to mixing with hot water immediately. Sifted matcha is ready to hydrate." },
-          { state: "Overdone",  description: "Sifted into a warm or moist environment — the matcha has begun to absorb ambient moisture and will be slightly harder to fully dissolve. Not a failure, but ideal conditions are dry and cool.", action: "Proceed quickly. Do not let sifted matcha sit in a humid kitchen for more than a few minutes." },
-        ],
-      },
-      feelCue: "Touch the sifted matcha with a dry fingertip: it should feel impossibly soft and fine — lighter than cornstarch, leaving an intense green stain on the skin that washes off with water but not with a quick wipe. No lumps, no grit.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Poudre de matcha de qualité cérémonielle (soufflée)",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "matcha culinaire (plus fort, plus amer)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["sifted_matcha", "ing_02"],
-      outputState: "matcha_concentrate",
-      instructions: "Pour the hot water (70–80°C / 158–175°F) over the sifted matcha. The temperature is non-negotiable: boiling water denatures the amino acids (especially L-theanine and the chlorophyll) that give ceremonial matcha its sweet, umami edge, producing an acrid, vegetal drink that tastes like hot lawn clippings. Using a bamboo chasen (matcha whisk), whisk briskly in a W or M motion — not a circular stirring — for 20–30 seconds until a fine, stable foam forms on the surface with no visible powder clumps. The W-pattern breaks the surface tension and aerates; circular stirring only moves liquid without creating the micro-foam that defines a proper bowl of matcha.",
-      visualCue: {
-        primaryTarget: "A smooth, vivid jade-green liquid covered with a fine, uniform layer of small, stable bubbles — the foam should look like a soft green carpet across the whole surface, not large bubbles at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Large bubbles at the rim, dry powder visible at the bottom, foam thin and immediately collapsing. The liquid below the surface looks streaky rather than uniformly green.", action: "Continue whisking in the W-pattern, faster and with more wrist action. The chasen should feel like it is barely touching the bottom — you are frothing the surface, not scraping the bowl." },
-          { state: "Perfect",   description: "Dense, fine-bubbled jade foam covering the entire surface. The liquid below is uniformly green with no powder spots. The aroma is grassy, sweet, and slightly marine — umami-green, not vegetal or bitter.", action: "Pour over steamed milk immediately. Matcha foam begins to settle within 30–60 seconds — move quickly." },
-          { state: "Overdone",  description: "Whisked so long and hard that the foam has collapsed back to liquid and re-formed as larger, coarse bubbles. The matcha may also have been whisked with too-hot water, giving the surface a darker, slightly dull green.", action: "Give one final burst of W-whisking and pour immediately. The quality of the foam affects aesthetics more than flavor — proceed." },
-        ],
-      },
-      feelCue: "A properly made matcha concentrate smells of fresh green leaves, the sea (from L-theanine and umami compounds), and a faint sweetness — it should smell enticing, not sharp or grassy-acrid. If it smells acrid, the water was too hot.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau chaude (70-80°C/ 158-175°F, non bouillante)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Steam",
-      inputs: ["ing_03"],
-      outputState: "steamed_milk",
-      instructions: "Steam or heat the milk to 60–65°C / 140–150°F. If using an espresso machine steamer, introduce the steam wand just below the surface and incorporate air in the first few seconds before submerging to create a microfoam with fine, even bubbles. If no steamer: heat in a small saucepan over medium heat until steaming (do not simmer), then transfer to a jar and shake vigorously for 30–45 seconds to create a coarse foam, or use a handheld frother for 20 seconds. Oat milk and whole milk produce the best foam; skim milk foams but yields watery texture; plant milks vary — oat milk is remarkably close to whole milk.",
-      visualCue: {
-        primaryTarget: "Steamed milk with a glossy, thick microfoam — the surface should look like wet paint: smooth, shiny, and slightly viscous. The foam should pour as part of the milk, not float separately like shaving cream.",
-        spectrum: [
-          { state: "Underdone", description: "Milk is warm but not steamed — it has no foam, just warm liquid. The latte will be flat and the matcha will not blend attractively without the foam layer.", action: "Steam or froth until you achieve visible foam. Even a small amount of foam transforms the texture of the final drink." },
-          { state: "Perfect",   description: "Glossy, fine-bubbled microfoam with a silky, almost pourable texture. Tipped, the pitcher should show the foam moving slowly as a unified mass, not sloshing like water.", action: "Pour over the matcha concentrate immediately before the foam settles." },
-          { state: "Overdone",  description: "Scalded milk — milk boiled past 70°C / 160°F loses sweetness and develops a cooked, slightly sulfurous taste. The foam is large-bubbled and rapidly collapsing.", action: "Discard scalded milk and steam a fresh portion. Scalded milk cannot be fixed and will make the latte taste flat and slightly stale." },
-        ],
-      },
-      feelCue: "Test the steaming pitcher against your palm: it should be almost too warm to hold comfortably but not burn. That warmth — sustained for 3 seconds of contact — is 60–65°C. Any hotter and the milk is scalded.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Lait entier (soufflé ou mousseux)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Lait d'avoine (beurre bien)",
+        "lait d'amande",
+        "lait de coco"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["matcha_concentrate", "steamed_milk", "ing_04"],
-      outputState: "finished_matcha_latte",
-      instructions: "Add simple syrup or honey to a pre-warmed cup or glass if using, then pour the matcha concentrate over it and stir briefly. Pour the steamed milk from a low height at first to combine, then raise the pitcher to layer the foam on top. For an iced matcha latte: fill a tall glass with ice, pour the matcha concentrate over, then pour cold milk (no steaming needed) from a height. Stir before drinking — iced matcha separates as it sits. The contrast of bitter-umami matcha against sweet, creamy milk is the whole point; resist the urge to fully homogenize them into a uniform green drink.",
-      visualCue: {
-        primaryTarget: "A two-tone drink: a deep jade-green matcha layer beneath a creamy, golden-white milk and foam layer, with a gradient halo where they meet. The foam cap should hold a faint green tinge from the matcha below.",
-        spectrum: [
-          { state: "Underdone", description: "Milk poured too quickly and stirred too aggressively — the drink is now a uniform, pale sage-green without the striking contrast layers. Still tastes correct but loses the visual appeal.", action: "No fix needed — drink as-is. Next time, pour the milk from a low height and angle to achieve layering." },
-          { state: "Perfect",   description: "Visible gradient from deep green at the base to creamy white at the top, with the foam cap dusted with a faint green trace from the matcha below. It looks like a Japanese aesthetic composition. The first sip is pure milk foam; the second is the bittersweet green layer beneath.", action: "Stir once lightly before the second sip to blend, or drink layered for the full experience." },
-          { state: "Overdone",  description: "Too much matcha or too little milk — the drink tastes aggressively bitter and the matcha flavor overwhelms the milk entirely. Ceremonial matcha should balance, not dominate.", action: "Add more steamed milk or a touch more sweetener to tame the bitterness. Culinary-grade matcha particularly benefits from a higher milk ratio." },
-        ],
-      },
-      feelCue: "The finished latte should feel silky and slightly coating in the mouth — the fat of the milk blending with the fine particle suspension of the matcha creates a texture that is fuller than either alone. The warmth should linger after swallowing, with a sweet-grassy aftertaste that fades slowly.",
-    },
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sirop simple ou miel (facultatif)",
+      "ratioValue": 0.5,
+      "defaultUnit": "part",
+      "substitutions": [
+        "sirop d'érable",
+        "agave"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sift",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "sifted_matcha",
+      "instructions": "Passer la poudre de matcha dans un tamis à mailles fines dans un petit bol en céramique (chawan) ou dans un bol ordinaire. Cette seule étape est plus importante que la plupart des cuisiniers ne s'attendent: matcha s'agrippe agressivement en raison de sa taille de particules ultra-fines et de l'électricité statique naturelle de la poudre sèche. Un matcha non tamisé forme des grumeaux tenaces qu'aucune quantité de fouet se dissoudra complètement, produisant une boisson visiblement grainée avec un coup amer inégal. Même les boîtes fraîchement ouvertes doivent être tamisées. Utilisez 1 à 2 grammes (environ 1 cuillère à café) par portion – cette quantité est critique, car le matcha cérémonial est puissant et coûteux.",
+      "visualCue": {
+        "primaryTarget": "Une fine couche sèche, même, de poudre jade-forestière-verte vive dans le bol, sans empiècements visibles. La couleur doit être intensément, uniformément verte — brillante et légèrement lumineuse, non terne ou jaunâtre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grumeaux visibles restent après avoir criblé — ils ressemblent à de minuscules cailloux vert foncé ou à des taches irrégulières dans la poudre fine. Ils ne se dissoudreont pas proprement dans la prochaine étape.",
+            "action": "Appuyez sur le tamis avec l'arrière d'une cuillère. Chaque taillis doit être décomposé avant d'ajouter de l'eau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une poudre verte parfaitement uniforme, soyeuse et sans crosse. Il passe par les doigts comme la meilleure farine. La couleur est uniformément lumineuse, vert vif.",
+            "action": "Procédez immédiatement au mélange avec de l'eau chaude. Sifted matcha est prêt à s'hydrater."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le matcha a commencé à absorber l'humidité ambiante et sera un peu plus difficile à dissoudre complètement. Pas un échec, mais les conditions idéales sont sèches et fraîches.",
+            "action": "Continuez vite. Ne laissez pas sifted matcha s'asseoir dans une cuisine humide pendant plus de quelques minutes."
+          }
+        ]
+      },
+      "feelCue": "Touchez le matcha tamisé avec un bout de doigt sec: il doit se sentir incroyablement doux et fin — plus léger que la fécule de maïs, laissant une tache verte intense sur la peau qui se lave avec de l'eau mais pas avec une lingette rapide. Pas de grumeaux."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "sifted_matcha",
+        "ing_02"
+      ],
+      "outputState": "matcha_concentrate",
+      "instructions": "Verser l'eau chaude (70–80°C / 158–175°F) sur le matcha tamisé. La température n'est pas négociable : l'eau bouillante dénature les acides aminés (en particulier la L-théanine et la chlorophylle) qui donnent au matcha cérémonial son bord doux et umami, produisant une boisson acride et végétale qui a le goût de couper la pelouse chaude. À l'aide d'un chaînon de bambou, fouetter modérément dans un mouvement W ou M — et non dans un mouvement circulaire — pendant 20 à 30 secondes jusqu'à ce qu'une mousse fine et stable se forme à la surface sans amas visibles de poudre. Le modèle W brise la tension de surface et aérer; le brassage circulaire ne fait que déplacer le liquide sans créer la micro-mousse qui définit un bon bol de matcha.",
+      "visualCue": {
+        "primaryTarget": "Un liquide jade-vert lisse et vif recouvert d'une fine couche uniforme de petites bulles stables — la mousse devrait ressembler à un tapis vert doux sur toute la surface, pas de grandes bulles sur les bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Grandes bulles au bord, poudre sèche visible au fond, mousse mince et s'effondre immédiatement. Le liquide sous la surface est strié plutôt que uniformément vert.",
+            "action": "Continuez à fouetter dans le W-pattern, plus vite et avec plus d'action du poignet. Le chasseur devrait avoir l'impression qu'il touche à peine le fond — vous faites mousser la surface, pas gratter le bol."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mousse de jade dense et fin couvrant toute la surface. Le liquide ci-dessous est uniformément vert sans taches de poudre. L'arôme est herbacé, doux et légèrement marin — vert umami, pas végétal ou amer.",
+            "action": "Verser immédiatement sur le lait cuit à la vapeur. La mousse de Matcha commence à se tasser dans les 30 à 60 secondes — se déplace rapidement."
+          },
+          {
+            "state": "Overdone",
+            "description": "C'était si long et si dur que la mousse s'est effondrée et s'est transformée en bulles plus grosses et plus grossières. Le matcha peut aussi avoir été fouetté avec de l'eau trop chaude, donnant à la surface un vert plus foncé et légèrement terne.",
+            "action": "Donnez une dernière explosion de W-whisking et versez immédiatement. La qualité de la mousse affecte l'esthétique plus que la saveur — procéder."
+          }
+        ]
+      },
+      "feelCue": "Un concentré de matcha bien fait sent des feuilles vertes fraîches, la mer (à partir de L-théanine et de composés umami), et une légère douceur — il doit sentir attrayant, pas aiguisé ou herbacé-acride. Si ça sent l'acride, l'eau était trop chaude."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "vapeur",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "steamed_milk",
+      "instructions": "Chauffer ou chauffer le lait à 60–65°C / 140–150°F. Si vous utilisez un vapeur de machine à expresso, introduisez la baguette de vapeur juste sous la surface et incorporez de l'air dans les premières secondes avant de plonger pour créer une micromousse avec de fines bulles. Si aucun vapeur : chauffer dans une petite casserole à feu moyen jusqu'à ce que la vapeur (ne pas mijoter), puis transférer dans un pot et agiter vigoureusement pendant 30 à 45 secondes pour créer une mousse grossière, ou utiliser un frêne portatif pendant 20 secondes. Le lait d'avoine et le lait entier produisent la meilleure mousse; les mousses de lait écrémé mais donnent une texture aqueuse; les laits végétaux varient; le lait d'avoine est remarquablement proche du lait entier.",
+      "visualCue": {
+        "primaryTarget": "Lait cuit à la vapeur avec un micromousse épais et brillant — la surface doit ressembler à de la peinture humide: lisse, brillant et légèrement visqueux. La mousse doit verser comme partie du lait, pas flotter séparément comme la crème de rasage.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait est chaud mais pas cuit à la vapeur — il n'a pas de mousse, juste un liquide chaud. Le latte sera plat et le matcha ne se mélangera pas de façon attrayante sans la couche de mousse.",
+            "action": "Steam ou mousse jusqu'à obtenir une mousse visible. Même une petite quantité de mousse transforme la texture de la boisson finale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Micromousse brillante et fine avec une texture soyeuse et presque versable. Le pichet doit montrer que la mousse se déplace lentement comme une masse unifiée, et non comme de l'eau.",
+            "action": "Versez sur le concentré de matcha immédiatement avant que la mousse ne s'installe."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait écalé — le lait bouilli au-delà de 70°C/160°F perd sa douceur et développe un goût cuit et légèrement sulfureux. La mousse est de grande taille et s'effondre rapidement.",
+            "action": "Jeter le lait échaudé et cuire une portion fraîche. Le lait scaldé ne peut pas être fixé et fera le goût de latte plat et légèrement stalle."
+          }
+        ]
+      },
+      "feelCue": "Testez le pichet à vapeur contre votre paume: il devrait être presque trop chaud pour tenir confortablement mais pas brûler. Cette chaleur — soutenue pendant 3 secondes de contact — est de 60 à 65°C. N'importe quel chaud et le lait est échaudé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "matcha_concentrate",
+        "steamed_milk",
+        "ing_04"
+      ],
+      "outputState": "finished_matcha_latte",
+      "instructions": "Ajouter le sirop simple ou le miel dans une tasse ou un verre préchauffé si vous l'utilisez, puis verser le concentré de matcha dessus et remuer brièvement. Verser le lait à la vapeur à partir d'une faible hauteur au début pour combiner, puis lever le pichet pour recouvrir la mousse sur le dessus. Pour un matcha latte glacé: remplir un grand verre de glace, verser le matcha concentré sur, puis verser le lait froid (pas besoin de vapeur) à partir d'une hauteur. Mélanger avant de boire — le matcha glacé se sépare au moment où il est assis. Le contraste entre le matcha amertume et le lait crémeux est tout le point; résistez à l'envie de les homogénéiser complètement en une boisson verte uniforme.",
+      "visualCue": {
+        "primaryTarget": "Une boisson bicolore : une couche de matcha vert jade profonde sous une couche crémeuse de lait blanc doré et de mousse, avec un halo dégradé où ils se rencontrent. Le bouchon en mousse doit contenir une faible teinte verte du matcha ci-dessous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait versé trop rapidement et agité de façon trop agressive — la boisson est maintenant uniforme, vert-sage pâle sans les couches de contraste frappantes. Toujours bon goût mais perd l'attrait visuel.",
+            "action": "Aucun remède n'est nécessaire: boire comme il faut. La prochaine fois, versez le lait d'une hauteur et d'un angle bas pour obtenir une couche."
+          },
+          {
+            "state": "Perfect",
+            "description": "gradient visible du vert profond à la base au blanc crémeux au sommet, avec le capuchon en mousse épousseté avec une faible trace verte du matcha ci-dessous. On dirait une composition esthétique japonaise. La première gorgée est une mousse de lait pur; la seconde est une couche verte amère.",
+            "action": "Mélanger une fois légèrement avant la seconde gorgée ou boire en couches pour toute l'expérience."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de matcha ou trop peu de lait — la boisson a un goût agressif et la saveur de matcha envahit entièrement le lait. Ceremonial matcha devrait équilibrer, pas dominer.",
+            "action": "Ajouter plus de lait à la vapeur ou une touche plus d'édulcorant pour apprivoiser l'amertume. Le matcha de qualité culinaire bénéficie particulièrement d'un ratio lait plus élevé."
+          }
+        ]
+      },
+      "feelCue": "Le latte fini doit se sentir soyeux et légèrement enduit dans la bouche — la graisse du lait mélangée avec la suspension de particules fines du matcha crée une texture plus complète que l'un ou l'autre seul. La chaleur devrait s'attarder après avoir avalé, avec un arrière-goût sucré qui s'estompe lentement."
+    }
+  ]
 };

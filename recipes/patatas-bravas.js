@@ -1,100 +1,252 @@
 export default {
-  repoId: "master_spanish_patatas-bravas_001",
-  parentRepoId: null,
-  slug: "patatas-bravas",
-  author: "ForkRecipe Kitchen",
-  title: "Patatas Bravas",
-  description: "Madrid's beloved bar tapa — thick-cut potatoes twice-fried to a craggy, crisp exterior and a fluffy center, served doused in a spicy tomato-paprika brava sauce and a drizzle of aioli.",
-  cuisine: "Spanish",
-  culture: "Madrid",
-  category: "vegetables",
-  tags: ["spanish", "potato", "tapas", "spicy", "fried", "sauce"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 2, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Floury potatoes (Maris Piper or Russet), peeled and cut into 3 cm chunks", ratioValue: 100, defaultUnit: "%", substitutions: ["King Edward potatoes"] },
-    { ingId: "ing_02", role: "Fat",       name: "Olive oil or sunflower oil for frying",                                      ratioValue: 80,  defaultUnit: "%", substitutions: ["rice bran oil"] },
-    { ingId: "ing_03", role: "Structure", name: "Ripe tomatoes, roughly chopped (or canned whole plum tomatoes)",             ratioValue: 40,  defaultUnit: "%", substitutions: ["San Marzano canned tomatoes"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves, sliced",                                                      ratioValue: 5,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Smoked hot paprika (pimentón picante)",                                      ratioValue: 3,   defaultUnit: "%", substitutions: ["sweet paprika plus cayenne"] },
-    { ingId: "ing_06", role: "Spice",     name: "Sweet smoked paprika (pimentón dulce)",                                      ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Acid",      name: "Sherry vinegar",                                                             ratioValue: 2,   defaultUnit: "%", substitutions: ["red wine vinegar"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine sea salt",                                                              ratioValue: 1.5, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_09", role: "Fat",       name: "Olive oil for the brava sauce",                                              ratioValue: 10,  defaultUnit: "%", substitutions: [] },
+  "repoId": "master_spanish_patatas-bravas_001",
+  "parentRepoId": null,
+  "slug": "patatas-bravas",
+  "author": "ForkRecipe Kitchen",
+  "title": "Patatas Bravas",
+  "description": "Tapa au bar bien-aimé de Madrid — pommes de terre épaisses deux fois frites à un extérieur croustillant et un centre moelleux, servies dans une sauce épicée tomate-paprika brava et un filet d'aioli.",
+  "cuisine": "Espagnol",
+  "culture": "Espagne",
+  "category": "vegetables",
+  "tags": [
+    "Espagnol",
+    "pommes de terre",
+    "Tapas",
+    "épicé",
+    "frits",
+    "sauce"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Parboil potatoes",
-      inputs: ["ing_01", "ing_08"],
-      outputState: "parboiled_potatoes",
-      instructions: "Place the potato chunks in a large pot and cover generously with cold salted water. Bring to a boil over high heat and cook for 12–15 minutes until the potatoes are just cooked through but not falling apart — a skewer should slide in with slight resistance at the center. Drain in a colander and shake the colander vigorously 5–6 times to rough up the edges. This roughing-up shatters the exterior starch into jagged, uneven points that will turn into the craggy, shattery crust that defines great bravas. Spread the roughed-up potatoes in a single layer on a rack and let them steam-dry for at least 10 minutes. The drier the surface, the more ferocious the crust in the fry.",
-      visualCue: {
-        primaryTarget: "Potato chunks with shaggy, roughed-up edges and a dry, matte, chalky exterior from the steam-drying — they should look almost frosted with surface starch.",
-        spectrum: [
-          { state: "Underdone", description: "Potato chunks are still hard at the center — a skewer meets significant resistance. The exterior will not fluff during frying.", action: "Return to boiling water for another 3–4 minutes. The parboil must go far enough for the center to be fully tender." },
-          { state: "Perfect",   description: "Just yielding at the center with a chalky, roughed exterior. They hold their shape but the edges are visibly shaggy from shaking.", action: "Steam-dry on a rack for 10 minutes minimum before the first fry." },
-          { state: "Overdone",  description: "Potatoes have boiled too long and are crumbling apart — the chunks cannot hold together for frying.", action: "Handle very gently during frying. A crumbled bravo is less tragic than it sounds — the rough pieces still fry well and the irregular shapes can be charming." },
-        ],
-      },
-      feelCue: "Pick up a potato chunk and shake it — it should feel light for its size, like the moisture is already leaving the surface. The exterior should feel dry and slightly powdery under your fingers, not damp or slick.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Pommes de terre mousseuses (Maris Piper ou Russet), pelées et coupées en morceaux de 3 cm",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Pommes de terre King Edward"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Build brava sauce",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "brava_sauce",
-      instructions: "Heat the olive oil for the sauce in a small saucepan over medium heat. Add the sliced garlic and cook for 1–2 minutes until pale gold. Add both paprikas and stir for 30 seconds — the paprika blooms almost immediately, turning the oil a vivid red-orange. Add the chopped tomatoes and a pinch of salt and cook, stirring occasionally, for 15–20 minutes until the tomatoes have broken down completely and the sauce has thickened and darkened. Add the sherry vinegar, stir to combine, and taste. The sauce should be bold, smoky, and hot — not just mildly spiced but genuinely brava (brave, ferocious). Blend until smooth with a stick blender or pass through a sieve. Keep warm.",
-      visualCue: {
-        primaryTarget: "A deep, mahogany-orange sauce with a glossy, slightly oily surface, thick enough to coat the back of a spoon heavily without running. The aroma should be intensely smoky-sweet with a background heat.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and still tastes of raw tomato — the moisture hasn't cooked off and the paprika hasn't integrated with the tomato.", action: "Continue cooking over medium heat, stirring occasionally. It needs to reduce by roughly half from where it started." },
-          { state: "Perfect",   description: "Thick, glossy, deeply colored, and intensely flavored — smoky paprika dominant, with sweet tomato body and a vinegar brightness at the end.", action: "Remove from heat, blend smooth, and keep warm until the potatoes are fried." },
-          { state: "Overdone",  description: "Sauce has reduced too far and is sticking to the pan, becoming grainy and bitter-smelling from scorched paprika.", action: "Add a splash of water or tomato juice to loosen and remove from heat. The burnt flavor is difficult to mask — better to strain and accept a thin sauce than to serve a scorched one." },
-        ],
-      },
-      feelCue: "Dip a finger and rub the sauce — it should feel silky and coat the skin evenly, not greasy or watery. The heat should arrive a second after the sweet smoke — first the paprika, then the burn climbing.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive ou de tournesol pour la friture",
+      "ratioValue": 80,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Huile de son de riz"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Double fry",
-      inputs: ["ing_02", "parboiled_potatoes"],
-      outputState: "fried_potatoes",
-      instructions: "Heat the frying oil in a wide, heavy pan to 150C / 300F. Add the potato chunks in batches and fry for 4–5 minutes until they have a pale, set exterior but no color — this is the first fry, which drives out any remaining surface moisture and begins to build the interior structure. Remove with a slotted spoon and drain on paper towel. Raise the oil temperature to 190C / 375F. Return the potatoes in smaller batches and fry for 3–4 minutes until they turn deep gold, with a craggy, puffed, irregular crust. Remove and drain immediately. Season with flakes of sea salt the moment they leave the oil while the surface is still wet with fat — the salt will stick. Do not pile the finished potatoes — they lose their crust in seconds against each other's steam.",
-      visualCue: {
-        primaryTarget: "Potatoes with a deeply golden, craggily irregular exterior — the surface should look almost blistered in places, with shaggy ridges from the roughing-up catching and crisping in the hot oil.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold and soft — the exterior has not formed a proper crust and the potatoes feel hollow when pressed. They will go soggy quickly.", action: "Return to the hot oil for another 2 minutes. The oil must be genuinely hot (190C) for the crust to form." },
-          { state: "Perfect",   description: "Deep gold with an irregular, craggy crust that sounds hollow when tapped and shatters under slight pressure. Interior is fluffy and steaming.", action: "Season immediately with salt and serve within minutes, sauced at the table." },
-          { state: "Overdone",  description: "Dark brown or beginning to look oily, with a hard, thick crust that tastes bitter rather than toasty. The interior has dried out.", action: "Drain and season; cut one open to assess — if the interior is still fluffy and pale, only the exterior is overdone. The sauce will help." },
-        ],
-      },
-      feelCue: "Tap a finished potato with your fingernail — it should ring slightly hollow, like tapping a thin ceramic tile. That hollow ring is the sound of the crisp exterior and the gap of steam it has made between crust and fluffy interior.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Tomates ripées, hachées approximativement (ou en conserve)",
+      "ratioValue": 40,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Tomates en conserve de San Marzano"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Sauce and serve",
-      inputs: ["fried_potatoes", "brava_sauce"],
-      outputState: "finished_patatas_bravas",
-      instructions: "Arrange the fried potatoes in a shallow dish or cazuela in a single loose layer. Spoon the warm brava sauce generously over the top — not a thin drizzle but a proper coating, enough that every potato gets touched. The sauce should puddle slightly in the gaps between the potatoes. Serve immediately. Bravas should always arrive at the table hot — the window between perfect and soggy is narrow. If serving with aioli (traditional in some regions), drizzle it over the sauce in thin lines or zigzags. The dual-sauce version (bravas with both brava and aioli) is called bravas 'ali-oli' and is a common Madrid tapas bar offering.",
-      visualCue: {
-        primaryTarget: "Craggy golden potatoes half-submerged in deep red brava sauce, the sauce still glistening and pooling, steam rising from the potatoes underneath.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce applied too sparingly — potatoes are mostly bare and the brava impact is lost. The dish looks and tastes dry.", action: "Add more sauce. Bravas should be sauced generously enough that you scoop sauce with every potato piece." },
-          { state: "Perfect",   description: "Every potato is coated in bold, spicy sauce; the crust is still audible when a potato is picked up; the heat of the sauce and the crunch arrive simultaneously.", action: "Eat immediately — this dish waits for no one." },
-          { state: "Overdone",  description: "Potatoes sauced and left to sit for 10+ minutes — the crust has absorbed the sauce's moisture and gone soft and heavy.", action: "Nothing to recover here. For next service, keep potatoes and sauce separate and combine at the last moment." },
-        ],
-      },
-      feelCue: "Bite through a sauced potato — you should hear the crack of the crust a fraction of a second before the interior gives way and the heat of the sauce lands on your tongue. The crunch should survive the sauce. That's the whole point.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Girofles d'ail, tranchés",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Paprika chaud fumé (pimentón picante)",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": [
+        "paprika doux et Cayenne"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Paprika fumé doux (pimentón dulce)",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "vinaigre de sherry",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "vinaigre de vin rouge"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile d'olive pour sauce brava",
+      "ratioValue": 10,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Pommes de terre",
+      "inputs": [
+        "ing_01",
+        "ing_08"
+      ],
+      "outputState": "parboiled_potatoes",
+      "instructions": "Placer les morceaux de pommes de terre dans un grand pot et couvrir généreusement d'eau salée froide. Porter à ébullition à feu vif et cuire de 12 à 15 minutes jusqu'à ce que les pommes de terre soient juste cuites à travers mais ne tombent pas en morceaux. Égoutter dans une calandre et agiter vigoureusement la calandre 5-6 fois pour rugir les bords. Ce dégrossissement brise l'amidon extérieur en points déchiquetés et irréguliers qui se transformeront en la croûte encrassée qui définit les grands bravas. Répartir les pommes de terre rugueuses en une seule couche sur un support et les laisser sécher à la vapeur pendant au moins 10 minutes. Plus la surface est sèche, plus la croûte est féroce.",
+      "visualCue": {
+        "primaryTarget": "Des morceaux de pommes de terre aux bords chaotiques et rugueux et un extérieur sec, mat et crayeux du séchage à la vapeur — ils devraient être presque givrés avec de l'amidon de surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux de pommes de terre sont encore difficiles au centre — une brochette rencontre une résistance significative. L'extérieur ne va pas pleuvoir pendant la friture.",
+            "action": "Retourner à l'eau bouillante pendant 3 à 4 minutes. Le bois doit aller assez loin pour que le centre soit complètement tendre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Il suffit de céder au centre avec un extérieur crayeux et rugueux. Ils tiennent leur forme mais les bords sont visiblement ébranlés par les tremblements.",
+            "action": "Séchage à la vapeur sur un support pendant 10 minutes minimum avant la première friture."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pommes de terre ont bouilli trop longtemps et s'écroulent; les morceaux ne peuvent pas tenir ensemble pour frire.",
+            "action": "Poignez très doucement pendant la friture. Un bravo émietté est moins tragique qu'il ne semble — les pièces rugueuses encore bien frire et les formes irrégulières peuvent être charmantes."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un morceau de pomme de terre et secouez - il devrait sentir la lumière pour sa taille, comme l'humidité quitte déjà la surface. L'extérieur doit se sentir sec et légèrement poudreux sous vos doigts, pas humide ou lissé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Construire la sauce brava",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "brava_sauce",
+      "instructions": "Chauffer l'huile d'olive pour la sauce dans une petite casserole à feu moyen. Ajouter l'ail tranché et cuire 1 à 2 minutes jusqu'à ce que l'or soit pâle. Ajouter les deux paprikas et remuer pendant 30 secondes — le paprika fleurit presque immédiatement, tournant l'huile un orange rouge vif. Ajouter les tomates hachées et une pincée de sel et cuire, en remuant occasionnellement, pendant 15 à 20 minutes jusqu'à ce que les tomates se soient complètement cassées et que la sauce ait épaissi et obscurci. Ajouter le vinaigre de sherry, mélanger et goûter. La sauce doit être audacieuse, fumée et chaude — non seulement légèrement épicée mais vraiment brava (brave, féroce). Mélanger jusqu'à ce qu'il soit lisse avec un mélangeur de bâtons ou passer à travers un tamis. Restez au chaud.",
+      "visualCue": {
+        "primaryTarget": "Une sauce acajou-orange profonde avec une surface lustrée, légèrement huileuse, assez épaisse pour enrober fortement le dos d'une cuillère sans courir. L'arôme doit être intensement fumé-doux avec une chaleur de fond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est mince et goûte toujours de la tomate crue — l'humidité n'a pas cuit et le paprika n'a pas été intégré à la tomate.",
+            "action": "Continuer la cuisson à feu moyen, en remuant occasionnellement. Il doit réduire d'environ la moitié de l'endroit où il a commencé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, brillant, profondément coloré et intensément aromatisé — paprika fumé dominant, avec corps de tomate douce et une luminosité de vinaigre à la fin.",
+            "action": "Retirer du feu, mélanger lisse et garder au chaud jusqu'à ce que les pommes de terre soient frites."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce s'est réduite trop loin et est collée à la poêle, devenant granuleuse et amère-smelling du paprika brûlé.",
+            "action": "Ajouter un jet d'eau ou de jus de tomate pour se détendre et retirer du feu. La saveur brûlée est difficile à masquer — mieux à étirer et accepter une sauce fine que de servir une sauce brûlée."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt et frottez la sauce — elle doit être soyeuse et enrober la peau uniformément, pas grasse ou aqueuse. La chaleur devrait arriver une seconde après la fumée douce — d'abord le paprika, puis la brûlure grimpant."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Double frite",
+      "inputs": [
+        "ing_02",
+        "parboiled_potatoes"
+      ],
+      "outputState": "fried_potatoes",
+      "instructions": "Chauffer l'huile de friture dans une poêle large et lourde à 150C / 300F. Ajouter les morceaux de pommes de terre en lots et faire frire pendant 4 à 5 minutes jusqu'à ce qu'ils aient un extérieur pâle, mais sans couleur — c'est le premier frit, qui chasse toute humidité de surface restante et commence à construire la structure intérieure. Retirer avec une cuillère à fente et égoutter sur une serviette en papier. Augmenter la température de l'huile à 190C / 375F. Retourner les pommes de terre en petits lots et les faire frire pendant 3-4 minutes jusqu'à ce qu'elles deviennent en or profond, avec une croûte enroulée, gonflée et irrégulière. Retirer et égoutter immédiatement. Assaisonner avec des flocons de sel de mer au moment où ils quittent l'huile alors que la surface est encore humide de graisse — le sel va coller. Ne pas empiler les pommes de terre finies — elles perdent leur croûte en quelques secondes contre la vapeur de l'autre.",
+      "visualCue": {
+        "primaryTarget": "Pommes de terre à l'extérieur profondément doré et irrégulier, la surface devrait être presque cloquée dans les endroits, avec des crêtes lugubres de l'arrachage et croquant dans l'huile chaude.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle et doux — l'extérieur n'a pas formé une croûte appropriée et les pommes de terre se sentent creuses lorsqu'elles sont pressées. Ils vont s'évanouir rapidement.",
+            "action": "Retournez à l'huile chaude pour encore 2 minutes. L'huile doit être vraiment chaude (190C) pour que la croûte se forme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or profond avec une croûte irrégulière et craquante qui semble creuse quand tapotée et brisée sous une légère pression. L'intérieur est moelleux et vapeur.",
+            "action": "Assaisonner immédiatement de sel et servir en quelques minutes, sauce à table."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé ou commençant à paraître huileux, avec une croûte dure et épaisse qui a un goût amer plutôt que grillé. L'intérieur a séché.",
+            "action": "Égoutter et assaisonner; couper un ouvert pour évaluer — si l'intérieur est encore moelleux et pâle, seul l'extérieur est surdosé. La sauce aidera."
+          }
+        ]
+      },
+      "feelCue": "Tapotez une pomme de terre finie avec votre ongle — elle devrait sonner légèrement creux, comme tapoter une mince tuile de céramique. Cette bague creuse est le son de l'extérieur croustillant et l'espace de vapeur qu'elle a fait entre la croûte et l'intérieur moelleux."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Sauce et servir",
+      "inputs": [
+        "fried_potatoes",
+        "brava_sauce"
+      ],
+      "outputState": "finished_patatas_bravas",
+      "instructions": "Disposer les pommes de terre frites dans un plat peu profond ou dans un cazuela en une seule couche lâche. Spoon la sauce brava chaude généreusement sur le dessus — pas une mince bruine mais un revêtement approprié, assez pour que chaque pomme de terre soit touchée. La sauce devrait pulvériser légèrement dans les espaces entre les pommes de terre. Servir immédiatement. Bravas devrait toujours arriver à la table chaude — la fenêtre entre parfait et soggy est étroite. Si vous servez avec de l'aioli (traditionnelle dans certaines régions), arrosez-le sur la sauce en fines lignes ou en zigzags. La version double-sauce (bravas avec brava et aioli) est appelée bravas 'ali-oli' et est une offre commune de tapas de Madrid.",
+      "visualCue": {
+        "primaryTarget": "Pommes de terre dorées à moitié submergées dans la sauce brava rouge foncé, la sauce scintille toujours et baignée, la vapeur montant des pommes de terre en dessous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sauce appliquée trop parcimonieusement — les pommes de terre sont pour la plupart nues et l'impact brava est perdu. Le plat a l'air sec.",
+            "action": "Ajouter plus de sauce. Bravas devrait être soudé assez généreusement pour que vous écoper la sauce avec chaque morceau de pomme de terre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque pomme de terre est enrobée de sauce épicée et audacieuse; la croûte est encore audible lorsqu'une pomme de terre est ramassée; la chaleur de la sauce et la croûte arrivent simultanément.",
+            "action": "Mangez immédiatement — ce plat n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pommes de terre souillées et laissées assises pendant plus de 10 minutes — la croûte a absorbé l'humidité de la sauce et est devenue molle et lourde.",
+            "action": "Rien à récupérer ici. Pour le prochain service, gardez les pommes de terre et la sauce séparées et combinez au dernier moment."
+          }
+        ]
+      },
+      "feelCue": "Agiter à travers une pomme de terre souillée — vous devriez entendre la fissuration de la croûte une fraction de seconde avant que l'intérieur ne cède le pas et que la chaleur de la sauce se répande sur votre langue. La croûte devrait survivre à la sauce. C'est tout."
+    }
+  ]
 };

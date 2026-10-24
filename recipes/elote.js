@@ -1,62 +1,169 @@
 export default {
-  repoId: "master_mexican_elote_001",
-  parentRepoId: null,
-  slug: "elote",
-  author: "ForkRecipe Kitchen",
-  title: "Elote",
-  description: "Whole ears of corn blistered directly over an open flame until the kernels caramelize and char in spots, then rolled in crema, packed with cotija, dusted with chili powder, and finished with a squeeze of lime that sizzles against the hot surface.",
-  cuisine: "Mexican",
-  culture: "Mexican Street Food",
-  category: "vegetables",
-  tags: ["corn", "street food", "mexican", "lime", "chili"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 7, salty: 5, sour: 4, bitter: 1, umami: 3, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Ears of corn, husked",                  ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Dairy",      name: "Mexican crema or sour cream",            ratioValue: 2,   defaultUnit: "parts", substitutions: ["mayonnaise (for esquites style)"] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Cotija cheese, finely crumbled",         ratioValue: 1.5, defaultUnit: "parts", substitutions: ["feta cheese, finely crumbled", "queso fresco"] },
-    { ingId: "ing_04", role: "Spice",      name: "Chili powder (or tajín)",                ratioValue: 0.5, defaultUnit: "parts", substitutions: ["cayenne + smoked paprika"] },
-    { ingId: "ing_05", role: "Citrus",     name: "Lime, halved",                           ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",        name: "Butter or neutral oil",                  ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Garnish",    name: "Fresh cilantro, roughly chopped",        ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_mexican_elote_001",
+  "parentRepoId": null,
+  "slug": "elote",
+  "author": "ForkRecipe Kitchen",
+  "title": "Éloté",
+  "description": "Des épis entiers de maïs ont été cloqués directement au-dessus d'une flamme ouverte jusqu'à ce que les grains caramélisent et charmentent les taches, puis ils ont été roulés dans du créma, emballés avec du cotija, pulvérisés avec de la poudre de chili, et terminés avec une pression de chaux qui s'échauffe contre la surface chaude.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain Street Food",
+  "category": "vegetables",
+  "tags": [
+    "maïs",
+    "Alimentation de rue",
+    "Mexique",
+    "Chaux",
+    "Chili"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 7,
+    "salty": 5,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Grill",
-      inputs: ["ing_01", "ing_06"],
-      outputState: "charred_corn",
-      instructions: "For a gas burner: place the husked ear directly on the burner grate over high flame, turning with tongs every 45–60 seconds. For a grill or grill pan: heat to high and lightly brush the corn with butter or oil before placing. You want rotation — do not leave any single side facing the flame for more than 60 seconds or it will burn through rather than char in spots. Total time: 8–12 minutes per ear. The corn is done when every side has some char and the kitchen smells of sweet, caramelized corn.",
-      visualCue: {
-        primaryTarget: "At least 30% of the kernels are charred black or deep brown, with the rest a vivid golden-yellow. No raw pale patches remain. The ear looks like it has been kissed by fire at irregular intervals.",
-        spectrum: [
-          { state: "Underdone", description: "Corn is pale yellow and uniformly steamed-looking. Kernels are plump but no char. Smells of raw sweet corn.", action: "Increase heat and stop moving it so frequently. Let each side hold for a full 60 seconds before rotating." },
-          { state: "Perfect",   description: "Irregular charred spots across the entire ear. Kernels are taut and slightly wrinkled at the tips. The aroma is sweet, smoky, and buttery.", action: "Remove from heat and coat immediately while hot." },
-          { state: "Overdone",  description: "More than 60% of the ear is black. Kernels have hardened and shrunk. Bitter smoke dominates the sweet corn smell.", action: "Brush off the heaviest char with a dry cloth and proceed — the remaining kernels will still be excellent under the toppings." },
-        ],
-      },
-      feelCue: "Hold the cob by the narrow end and give it a gentle squeeze — the kernels should feel plump and taut rather than mushy. You should hear a faint pop when the corn hits the hottest part of the flame.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Oreilles de maïs décortiquées",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Assemble",
-      inputs: ["charred_corn", "ing_02", "ing_03", "ing_04", "ing_05", "ing_07"],
-      outputState: "finished_elote",
-      instructions: "Working quickly while the corn is still hot: brush or spoon crema generously over the entire surface, rotating to coat. Roll the coated ear in a plate of crumbled cotija until the cheese adheres in a thick, uneven crust. Hold the ear over the plate to catch the fall. Dust generously with chili powder from above — the heat from the corn will bloom the spice immediately. Squeeze half a lime over the ear from close range; it should sizzle against the hot surface. Scatter cilantro. Serve immediately on the stick or with a fork. Do not let it sit — the crema will cool and the cheese will dry out.",
-      visualCue: {
-        primaryTarget: "A golden, charred ear densely encrusted with white cheese, speckled with red-orange chili powder, with bright green cilantro. Crema is visible at the edges where the cheese is thinner.",
-        spectrum: [
-          { state: "Underdone", description: "Thin coating of crema, sparse cheese that barely sticks. The corn's surface is visible between the toppings.", action: "Add another spoonful of crema and press more cotija firmly against the surface while rotating." },
-          { state: "Perfect",   description: "Generously, almost excessively coated. Every bite will have corn, crema, cheese, heat, and acid simultaneously. The lime is still sizzling faintly.", action: "Eat immediately — this is a dish that waits for no one." },
-          { state: "Overdone",  description: "So heavily coated that the corn and its charred flavor are buried. Saltiness from excess cotija is overwhelming.", action: "Brush off some of the outer cheese layer, serve with extra lime to cut the salt, and use as a lesson in restraint for next time." },
-        ],
-      },
-      feelCue: "The finished elote should be heavy in your hand — dense with toppings. When you take a bite, you should get the crunch of char, the creaminess of crema, the salt of cotija, and the acid of lime in a single moment.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Crème créma ou aigre mexicaine",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mayonnaise (pour esquites style)"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Fromage Cotija finement émietté",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fromage feta finement émietté",
+        "queso fresque"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Poudre de Chili (ou tajín)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cayenne + paprika fumé"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Citrus",
+      "name": "Chaux, coupée en deux",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre ou huile neutre",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Coriandre fraîche, grossièrement hachée",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Grille",
+      "inputs": [
+        "ing_01",
+        "ing_06"
+      ],
+      "outputState": "charred_corn",
+      "instructions": "Pour un brûleur à gaz : placez l'oreille enroulée directement sur la grille du brûleur au-dessus d'une flamme élevée, tournant avec des pinces toutes les 45-60 secondes. Pour un gril ou un gril : chauffer à haute température et brosser légèrement le maïs avec du beurre ou de l'huile avant de le placer. Vous voulez la rotation — ne laissez aucun côté face à la flamme pendant plus de 60 secondes ou elle brûlera à travers plutôt que de l'omble dans les taches. Durée totale: 8-12 minutes par oreille. Le maïs est fait quand chaque côté a un peu d'omble et que la cuisine sent le maïs sucré caramélisé.",
+      "visualCue": {
+        "primaryTarget": "Au moins 30% des grains sont carbonisés noir ou brun foncé, avec le reste un jaune doré vif. Il ne reste pas de taches pâles brutes. L'oreille semble avoir été embrassée par le feu à intervalles irréguliers.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le maïs est jaune pâle et uniformément à la vapeur. Les amandes sont pleines mais pas d'omble. Des odeurs de maïs sucré cru.",
+            "action": "Augmentez la chaleur et arrêtez de la déplacer si fréquemment. Laisser chaque côté tenir 60 secondes avant de tourner."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des taches carbonées irrégulières sur toute l'oreille. Les amandes sont tendues et légèrement ridées aux extrémités. L'arôme est doux, fumé et beurreux.",
+            "action": "Retirer du feu et enrober immédiatement pendant la chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus de 60% de l'oreille est noire. Les amandes ont durci et rétréci. La fumée amère domine l'odeur du maïs sucré.",
+            "action": "Badigeonner l'omble le plus lourd d'un chiffon sec et procéder — les grains restants seront encore excellents sous les garnitures."
+          }
+        ]
+      },
+      "feelCue": "Maintenez la corbe par l'extrémité étroite et donnez-lui une pression douce — les grains doivent se sentir gras et tendus plutôt que musqués. Vous devriez entendre un coup faible quand le maïs frappe la partie la plus chaude de la flamme."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Assemblage",
+      "inputs": [
+        "charred_corn",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "finished_elote",
+      "instructions": "Travailler rapidement pendant que le maïs est encore chaud: brosser ou cuiller créma généreusement sur toute la surface, tournant pour enrober. Rouler l'oreille enduite dans une assiette de cotija émietté jusqu'à ce que le fromage adhère dans une croûte épaisse et inégale. Tenez l'oreille au-dessus de l'assiette pour attraper la chute. Poussez généreusement avec de la poudre de chili d'en haut — la chaleur du maïs fleurira immédiatement l'épice. Presser la moitié d'une chaux sur l'oreille de près; elle devrait s'étourdir contre la surface chaude. Scatter la coriandre. Servir immédiatement sur le bâton ou avec une fourchette. Ne le laissez pas s'asseoir — le créma refroidira et le fromage se desséchera.",
+      "visualCue": {
+        "primaryTarget": "Une oreille dorée et carbonisée densément incrustée de fromage blanc, tachetée de poudre de chili rouge-orange, avec coriandre vert vif. Le créma est visible aux bords où le fromage est plus mince.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Revêtement fin de créma, fromage clairsemé qui colle à peine. La surface du maïs est visible entre les garnitures.",
+            "action": "Ajouter une autre cuillère de créma et presser plus de cotija fermement contre la surface tout en tournant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Généreusement, presque trop enduite. Chaque morsure aura du maïs, du créma, du fromage, de la chaleur et de l'acide simultanément. La chaux est encore étourdissante.",
+            "action": "Mangez immédiatement — c'est un plat qui n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tellement enduit que le maïs et sa saveur carbonisée sont enterrés. La salinité de l'excès de cotija est écrasante.",
+            "action": "Badigeonner une partie de la couche de fromage externe, servir avec de la chaux supplémentaire pour couper le sel, et utiliser comme leçon de retenue pour la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "L'élot fini devrait être lourd dans votre main — dense avec des garnitures. Lorsque vous prenez une bouchée, vous devriez obtenir la croûte d'omble, le créma crémeux, le sel de cotija et l'acide de la chaux en un seul instant."
+    }
+  ]
 };

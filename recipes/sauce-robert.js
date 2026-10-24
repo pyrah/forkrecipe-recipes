@@ -1,137 +1,340 @@
 export default {
-  repoId: "fork_french_robert_001",
-  parentRepoId: "fork_french_demiglace_001",
-  slug: "sauce-robert",
-  parentSlug: "demi-glace",
-  author: "ForkRecipe Kitchen",
-  title: "Sauce Robert",
-  description: "One of espagnole's oldest children — a brown sauce built on slowly sweated onions, sharpened with reduced white wine, and finished off the heat with a swirl of Dijon. Tangy, mustard-bright, and savory all at once, it is the classic companion to roast pork and grilled meats.",
-  cuisine: "French",
-  culture: "Classical",
-  category: "sauces",
-  tags: ["sauce", "french", "mustard", "brown-sauce", "pork"],
-  difficulty: 4,
-  activeTime: "45 min",
-  totalTime: "1 hour",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2025-06-09",
-  updatedAt: "2025-06-09",
-  forkNote: "Espagnole built on sweated onions, white wine, and a finish of mustard — sharp and savory, classic with pork.",
-  changes: {
-    ingredientsAdded: 3,
-    ingredientsRemoved: 0,
-    ingredientsModified: 0,
-    stepsAdded: 2,
-    stepsRemoved: 0,
-    stepsModified: 0,
+  "repoId": "fork_french_robert_001",
+  "parentRepoId": "fork_french_demiglace_001",
+  "slug": "sauce-robert",
+  "parentSlug": "demi-glace",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Robert",
+  "description": "Un des plus vieux enfants de l'espagnole — une sauce brune construite sur des oignons lentement transpirés, aiguisé avec du vin blanc réduit, et fini par un tourbillon de Dijon. Tangy, moutarde-brillante et savoureuse à la fois, c'est le compagnon classique de rôtir le porc et les viandes grillées.",
+  "cuisine": "Français",
+  "culture": "Classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "moutarde",
+    "sauce brune",
+    "porc"
+  ],
+  "difficulty": 4,
+  "activeTime": "45 min",
+  "totalTime": "1 hour",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-06-09",
+  "updatedAt": "2025-06-09",
+  "forkNote": "Espagnole construit sur des oignons transpirés, du vin blanc, et une finale de moutarde - vif et salé, classique avec du porc.",
+  "changes": {
+    "ingredientsAdded": 3,
+    "ingredientsRemoved": 0,
+    "ingredientsModified": 0,
+    "stepsAdded": 2,
+    "stepsRemoved": 0,
+    "stepsModified": 0
   },
-  flavorRadar: { sweet: 1, salty: 2, sour: 2, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Brown stock (veal)",                 ratioValue: 12, defaultUnit: "parts", substitutions: ["brown beef stock", "rich chicken stock"] },
-    { ingId: "ing_02", role: "Fat",        name: "Clarified butter",                   ratioValue: 1,  defaultUnit: "parts", substitutions: ["rendered beef fat", "neutral oil"] },
-    { ingId: "ing_03", role: "Structure",  name: "All-purpose flour",                  ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Mirepoix (onion, carrot, celery)",   ratioValue: 2,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Umami",      name: "Tomato paste",                       ratioValue: 0.5, defaultUnit: "parts", substitutions: ["crushed tomato (reduced)"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine sea salt",                      ratioValue: 0.1, defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Bouquet garni",                      ratioValue: 0.1, defaultUnit: "parts", substitutions: ["thyme, bay, parsley stems tied in cheesecloth"] },
-    { ingId: "ing_09", role: "Allium",     name: "Onion (finely diced)",               ratioValue: 2,  defaultUnit: "parts", substitutions: ["shallot (finely diced)"] },
-    { ingId: "ing_10", role: "Acid",       name: "Dry white wine",                     ratioValue: 3,  defaultUnit: "parts", substitutions: ["dry vermouth", "white wine vinegar (reduced, smaller amount)"] },
-    { ingId: "ing_11", role: "Spice",      name: "Dijon mustard",                      ratioValue: 0.5, defaultUnit: "parts", substitutions: ["whole-grain mustard"] },
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
+    {
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Stock brun (veau)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "viande bovine brune",
+        "de poulet riche"
+      ]
+    },
+    {
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre clarifié",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gras de boeuf fondu",
+        "huile neutre"
+      ]
+    },
+    {
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Mirepoix (oignon, carotte, céleri)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates écrasées (réduites)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Bouquet garni",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym, laurier, persil, tiges attachées en tissu de fromage"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Allium",
+      "name": "Oignon (en dés)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalote (en dés)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Acid",
+      "name": "Vin blanc sec",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vermouth sec",
+        "vinaigre de vin blanc (réduit, plus petite quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moutarde à grains entiers"
+      ]
+    }
   ],
-  processNodes: [
+  "processNodes": [
     {
-      nodeId: "step_1", action: "Caramelize",
-      inputs: ["ing_04", "ing_02"],
-      outputState: "browned_mirepoix",
-      instructions: "Melt about a third of the clarified butter in a heavy-bottomed pot over medium heat. Add the mirepoix and cook, stirring occasionally, until deeply browned and sweet-smelling — 12 to 18 minutes. Build a rust-colored fond on the bottom of the pot; that caramelization is the backbone of the espagnole base.",
-      visualCue: {
-        primaryTarget: "Mirepoix softened and collapsed, edges of onion turned golden-amber, with a rust-colored fond forming on the pan bottom. The kitchen smells sweet and savory.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are translucent and limp but still pale — no color, no fond, and the smell is raw and grassy.", action: "Raise the heat slightly and keep cooking. Browning is where the depth comes from." },
-          { state: "Perfect",   description: "Onions are amber at the edges, carrots glisten and have softened, and a brown fond clings to the bottom of the pot.", action: "Push the mirepoix aside and add the remaining butter to begin the roux." },
-          { state: "Overdone",  description: "Vegetables are blackening, the fond has gone from brown to black, and there is an acrid, scorched smell.", action: "Lower the heat at once. If the fond is truly burnt, deglaze with a splash of stock, wipe the pot, and restart the mirepoix." },
-        ],
+      "nodeId": "step_1",
+      "action": "Caramélisation",
+      "inputs": [
+        "ing_04",
+        "ing_02"
+      ],
+      "outputState": "browned_mirepoix",
+      "instructions": "Faire fondre environ un tiers du beurre clarifié dans un pot à fond lourd à feu moyen. Ajouter le mirpoix et cuire, en remuant occasionnellement, jusqu'à ce qu'il soit profondément doré et sucré — 12 à 18 minutes. Construire un fond de couleur rouille sur le fond du pot; que la caramélisation est l'épine dorsale de la base espagnole.",
+      "visualCue": {
+        "primaryTarget": "Mirepoix ramolli et effondré, bords d'oignon doré-ambre, avec un fond de couleur rouille formant sur le fond de la poêle. La cuisine sent bon et salé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont translucides et boiteux mais encore pâles — sans couleur, sans affection, et l'odeur est crue et herbacée.",
+            "action": "Levez légèrement la chaleur et faites cuire. Browning est d'où vient la profondeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont ambres aux bords, les carottes scintillent et se ramollissent, et un fond brun s'accroche au fond du pot.",
+            "action": "Poussez le mirepix de côté et ajoutez le beurre restant pour commencer le roux."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont noircis, le fond est passé du brun au noir, et il y a une odeur acride et brûlée.",
+            "action": "Baissez immédiatement la chaleur. Si le fond est vraiment brûlé, déglacer avec un jet de stock, essuyer le pot, et redémarrer le mirepoïx."
+          }
+        ]
       },
-      feelCue: "The vegetables should sizzle steadily, not violently. Dragging a spoon across the bottom should meet the sticky drag of fond, not a smooth slick of fat.",
+      "feelCue": "Les légumes doivent étourdir régulièrement, pas violemment. Traîner une cuillère sur le fond devrait rencontrer la traînée collante de l'affection, pas une lécher lisse de graisse."
     },
     {
-      nodeId: "step_2", action: "Toast",
-      inputs: ["browned_mirepoix", "ing_02", "ing_03", "ing_05"],
-      outputState: "brown_roux_base",
-      instructions: "Melt the remaining butter into the cleared part of the pot, sprinkle in the flour, and cook the roux to a deep chestnut brown, stirring almost constantly — 10 to 20 minutes, until it smells nutty and toasty. Stir in the tomato paste and cook it out for 3 to 5 minutes until it darkens to brick-rust and smells sweet rather than sharp. Go low and patient; brown roux scorches in a heartbeat.",
-      visualCue: {
-        primaryTarget: "A deep chestnut-brown roux smelling of toasted nuts, with the tomato paste cooked into it to a brick-rust color and a sweet, roasted aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Roux is pale or blond and smells of raw flour; the tomato paste is still bright orange-red and smells tinny.", action: "Keep cooking and stirring over low-medium heat until the roux browns and the tomato turns brick-red and sweet." },
-          { state: "Perfect",   description: "Chestnut-brown roux carrying a cooked-out, brick-rust tomato paste, smelling toasty and sweet, with a deep fond on the pan.", action: "Whisk in the brown stock to build the loose espagnole." },
-          { state: "Overdone",  description: "Roux or tomato has darkened to black, with an acrid burnt smell and scorched specks throughout.", action: "Discard and start the roux over. Burnt roux is bitter and loses its thickening power — it cannot be saved." },
-        ],
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "browned_mirepoix",
+        "ing_02",
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "brown_roux_base",
+      "instructions": "Faites fondre le reste du beurre dans la partie dégagée de la casserole, saupoudrez la farine et faites cuire le roux jusqu'à ce qu'il soit brun châtaignier profond, en remuant presque constamment — 10 à 20 minutes, jusqu'à ce qu'il sente la noix et le toast. Incorporer la pâte de tomate et la faire cuire pendant 3 à 5 minutes jusqu'à ce qu'elle s'assombrisse à la rouille de brique et sente sucrée plutôt que tranchante. Doucement et patient; le roux brun brûle dans un battement de cœur.",
+      "visualCue": {
+        "primaryTarget": "Un roux brun marron profond qui sent les noix grillées, avec la pâte de tomate cuite dans elle à une couleur de rouille brique et un arôme doux et rôti.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Roux est pâle ou blond et sent la farine crue; la pâte de tomate est encore rouge-orange vif et sent le teint.",
+            "action": "Continuer à cuire et à remuer à feu doux jusqu'à ce que le roux brunisse et que la tomate devienne rouge brique et douce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Roux brun-châtaigne portant une pâte de tomate cuite, rouille brique, sentant toast et sucré, avec un profond goût pour la poêle.",
+            "action": "Whisk dans le stock brun pour construire l'espagnole lâche."
+          },
+          {
+            "state": "Overdone",
+            "description": "Roux ou tomate a foncé au noir, avec une odeur brûlée acride et des taches brûlées partout.",
+            "action": "Jeter et recommencer le roux. Burnt roux est amer et perd son pouvoir épaississant — il ne peut être sauvé."
+          }
+        ]
       },
-      feelCue: "The roux moves from gritty sand to silky mud as it cooks, then the tomato paste stiffens and pulls together before it darkens. A soft, steady sizzle is right; a sharp crackle means too much heat.",
+      "feelCue": "Le roux passe du sable grisâtre à la boue soyeuse lorsqu'il cuit, puis la pâte de tomate se raidit et se ressaisit avant de s'assombrir. Un étourdissement doux et stable est juste; un craquement aigu signifie trop de chaleur."
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["brown_roux_base", "ing_01", "ing_07", "ing_06"],
-      outputState: "finished_espagnole",
-      instructions: "Pour in the brown stock a few ladles at a time, whisking out lumps before adding more. Add the bouquet garni, bring to the barest simmer, and hold 2 to 3 hours, skimming the fat and froth from the surface and seasoning lightly with salt near the end. When reduced by about a third and coating a spoon, strain through a fine sieve. This is your base espagnole.",
-      visualCue: {
-        primaryTarget: "A clear, glossy, deep-mahogany sauce that lightly coats the back of a spoon, reduced by about a third, surface clean of fat and scum.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery, pale brown, runs off a spoon, and the surface is greasy and cloudy.", action: "Keep simmering and skimming. The espagnole needs time to build body and shed impurities before it becomes the base for Sauce Robert." },
-          { state: "Perfect",   description: "Deep mahogany, glossy and clean, coating the back of a spoon so a finger-line holds. No raw flour or harsh tomato in the taste.", action: "Strain through a fine sieve and hold warm while you build the onion and wine reduction." },
-          { state: "Overdone",  description: "Reduced too far — thick, sludgy, and over-salted.", action: "Whisk in a little warm stock to bring it back to a proper nappe and rebalance the seasoning." },
-        ],
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "brown_roux_base",
+        "ing_01",
+        "ing_07",
+        "ing_06"
+      ],
+      "outputState": "finished_espagnole",
+      "instructions": "Verser dans le bouillon brun quelques louches à la fois, en remuant des morceaux avant d'ajouter plus. Ajouter le bouquet garni, laisser mijoter et tenir 2 à 3 heures, écrémer la graisse et la mousse de la surface et assaisonner légèrement de sel près de la fin. Lorsqu'elle est réduite d'environ un tiers et qu'elle enrobe une cuillère, il faut passer par un tamis fin. C'est ton espagnole de base.",
+      "visualCue": {
+        "primaryTarget": "Une sauce claire, brillante et mahoganie profonde qui enrobe légèrement l'arrière d'une cuillère, réduite d'environ un tiers, à la surface propre de la graisse et de la souillure.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est mince et aqueuse, brun pâle, sort d'une cuillère, et la surface est grasse et nuageuse.",
+            "action": "Continuez à mijoter et à écrémer. L'espagnole a besoin de temps pour construire le corps et verser les impuretés avant qu'il ne devienne la base de Sauce Robert."
+          },
+          {
+            "state": "Perfect",
+            "description": "Acajou profond, brillant et propre, enrobant l'arrière d'une cuillère ainsi une ligne de doigt tient. Pas de farine crue ou de tomate dure dans le goût.",
+            "action": "Plongez dans un tamis fin et tenez au chaud pendant que vous construisez l'oignon et la réduction du vin."
+          },
+          {
+            "state": "Overdone",
+            "description": "Réduit trop loin — épais, lugubre et sursalé.",
+            "action": "Whisk dans un peu de stock chaud pour le ramener à une bonne nappe et rééquilibrer l'assaisonnement."
+          }
+        ]
       },
-      feelCue: "A finished espagnole drawn across a spoon leaves a clean, lasting trail. The surface should look polished rather than slick with fat, with a deep roasted aroma.",
+      "feelCue": "Un espagnole fini tiré sur une cuillère laisse un sentier propre et durable. La surface doit être polie plutôt que lissée avec du gras, avec un arôme torréfié profond."
     },
     {
-      nodeId: "step_4", action: "Sauté",
-      inputs: ["ing_09", "ing_02"],
-      outputState: "sweated_onions",
-      instructions: "In a separate clean saucepan, melt a little clarified butter over low-medium heat and add the finely diced onion. Sweat it gently, stirring often, until soft, translucent, and just beginning to turn golden at the edges — 8 to 12 minutes. The goal is sweetness and tenderness without hard browning; keep the heat low so the onion melts rather than crisps.",
-      visualCue: {
-        primaryTarget: "Onion fully softened, glassy and translucent, with only the faintest golden tinge at the edges and a sweet, mellow aroma — no dark color.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still firm, sharp, and white, with a raw, pungent bite to the smell.", action: "Keep sweating gently over low heat. Sauce Robert depends on a soft, sweet onion base — raw onion will taste harsh in the finished sauce." },
-          { state: "Perfect",   description: "Soft, translucent, glassy onion, just barely golden at the edges, smelling sweet and mellow.", action: "Pour in the white wine to deglaze and reduce." },
-          { state: "Overdone",  description: "Onion has browned hard or scorched, turning bitter and dark.", action: "Lower the heat and add the wine immediately to stop the cooking; if badly burnt, start the onions again to keep the sauce clean and sweet." },
-        ],
+      "nodeId": "step_4",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_09",
+        "ing_02"
+      ],
+      "outputState": "sweated_onions",
+      "instructions": "Dans une casserole propre séparée, faire fondre un peu de beurre clarifié à feu doux et ajouter l'oignon finement coupé en dés. Plongez doucement, en remuant souvent, jusqu'à ce qu'il soit doux, translucide, et commencez à tourner en or aux bords — 8 à 12 minutes. Le but est la douceur et la tendresse sans brunissement dur; gardez la chaleur basse afin que l'oignon fond plutôt que les croustillants.",
+      "visualCue": {
+        "primaryTarget": "L'oignon est complètement adouci, vitreux et translucide, avec seulement la teinte dorée la plus faible aux bords et un arôme doux et moelleux, sans couleur foncée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore ferme, vif et blanc, avec une bouchée crue et piquante à l'odeur.",
+            "action": "Continuez à transpirer doucement à feu doux. La sauce Robert dépend d'une base d'oignon douce et douce – l'oignon cru goûtera dur dans la sauce finie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Oignon doux, translucide, vitreux, à peine doré aux bords, sentant doux et moelleux.",
+            "action": "Verser le vin blanc pour déglacer et réduire."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon a bruni dur ou brûlé, devenant amer et sombre.",
+            "action": "Abaissez le feu et ajoutez immédiatement le vin pour arrêter la cuisson; en cas de grave brûlure, recommencez les oignons pour garder la sauce propre et douce."
+          }
+        ]
       },
-      feelCue: "The onion should hiss softly and turn limp and slippery, almost dissolving when pressed with the spoon. There should be no crackle of browning — only a gentle, sweet sizzle.",
+      "feelCue": "L'oignon doit siffler doucement et devenir boiteux et glissant, se dissolvant presque avec la cuillère. Il ne devrait pas y avoir de crépitement de brunissement, seulement un doux et doux étourdissement."
     },
     {
-      nodeId: "step_5", action: "Reduce",
-      inputs: ["sweated_onions", "ing_10"],
-      outputState: "wine_reduction",
-      instructions: "Pour the dry white wine over the sweated onions and raise the heat to bring it to a brisk simmer. Reduce, scraping up any fond, until the wine has cooked down to a syrupy glaze barely covering the onions and the sharp alcohol smell has cooked off — 5 to 8 minutes. This reduction concentrates the wine's acidity into a bright backbone for the sauce.",
-      visualCue: {
-        primaryTarget: "The wine reduced to a scant, syrupy glaze coating the onions, with the raw alcohol smell gone and a bright, mellow, wine-sweet aroma in its place.",
-        spectrum: [
-          { state: "Underdone", description: "Still a pool of thin, watery wine around the onions, smelling sharply of raw alcohol.", action: "Keep simmering to drive off the alcohol and concentrate the wine; under-reduced wine leaves a thin, boozy harshness." },
-          { state: "Perfect",   description: "Wine cooked down to a glossy, syrupy glaze just coating the onions, smelling bright and mellow with no alcohol burn.", action: "Add the strained espagnole and simmer the two together." },
-          { state: "Overdone",  description: "The pan has gone dry and the glaze is starting to scorch and turn bitter.", action: "Pull off the heat and add the espagnole at once to deglaze and stop the cooking before the bitterness sets in." },
-        ],
+      "nodeId": "step_5",
+      "action": "Réduire",
+      "inputs": [
+        "sweated_onions",
+        "ing_10"
+      ],
+      "outputState": "wine_reduction",
+      "instructions": "Verser le vin blanc sec sur les oignons transpirés et lever le feu pour le faire mijoter. Réduire en grattant n'importe quel fond, jusqu'à ce que le vin ait cuit à une glaçure sirupeuse couvrant à peine les oignons et que l'odeur d'alcool vive ait cuit — 5 à 8 minutes. Cette réduction concentre l'acidité du vin dans une colonne vertébrale brillante pour la sauce.",
+      "visualCue": {
+        "primaryTarget": "Le vin réduit à une glaçure sirupeuse et peu abondante enrobant les oignons, avec l'odeur d'alcool cru disparue et un arôme vineux et moelleux à sa place.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours un bassin de vin mince et aqueux autour des oignons, sentant fortement l'alcool cru.",
+            "action": "Continuer à mijoter pour chasser l'alcool et concentrer le vin; le vin sous-réduit laisse une dureté mince et boueuse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vin cuit jusqu'à un glaçage brillant et sirupeux enrobant les oignons, sentant lumineux et moelleux sans brûlure d'alcool.",
+            "action": "Ajouter l'espagnole tendu et laisser mijoter les deux ensemble."
+          },
+          {
+            "state": "Overdone",
+            "description": "La poêle est sèche et la glaçure commence à brûler et à devenir amère.",
+            "action": "Retirer le feu et ajouter l'espagnole à la fois pour déglacer et arrêter la cuisson avant l'amertume."
+          }
+        ]
       },
-      feelCue: "As the wine reduces, the brisk simmer slows and the bubbles thicken into a glossy syrup that drags behind the spoon. The sharp vapor of alcohol should give way to a soft, sweet wine aroma.",
+      "feelCue": "Au fur et à mesure que le vin diminue, la fraiche mijote lentement et les bulles s'épaississent dans un sirop brillant qui traîne derrière la cuillère. La forte vapeur d'alcool devrait laisser place à un arôme de vin doux et doux."
     },
     {
-      nodeId: "step_6", action: "Finish",
-      inputs: ["wine_reduction", "finished_espagnole", "ing_11"],
-      outputState: "finished_robert",
-      instructions: "Pour the strained espagnole into the onion and wine reduction and simmer gently together for 8 to 10 minutes, skimming, until married and smooth. Then pull the pan completely off the heat and let it stop bubbling before whisking in the Dijon mustard. Never let the sauce boil after the mustard goes in — boiling mustard turns harsh and bitter. Taste, adjust the salt, and serve warm.",
-      visualCue: {
-        primaryTarget: "A smooth, glossy brown sauce flecked with soft onion, with the mustard whisked in off the heat to a bright, tangy, mellow finish — no bitterness, no broken or grainy look.",
-        spectrum: [
-          { state: "Underdone", description: "Mustard stirred in but the espagnole and onion reduction have not yet married — flavors taste disjointed and the mustard sits sharp on top.", action: "Let the espagnole simmer with the reduction a few minutes longer BEFORE the mustard goes in, so the flavors meld; add the mustard only at the very end, off heat." },
-          { state: "Perfect",   description: "Glossy, cohesive, mahogany sauce with tender onion throughout and a balanced tang — savory base lifted by bright, mellow mustard. Smooth and warm, not boiling.", action: "Taste, correct the salt, and serve immediately over roast pork or grilled meats." },
-          { state: "Overdone",  description: "The sauce was boiled after the mustard went in — it tastes sharp and bitter, and the mustard has lost its rounded warmth.", action: "There is no fully undoing boiled mustard; whisk in a little fresh Dijon off the heat and a pinch of sugar to soften the bitterness, and never let it boil again." },
-        ],
+      "nodeId": "step_6",
+      "action": "Finition",
+      "inputs": [
+        "wine_reduction",
+        "finished_espagnole",
+        "ing_11"
+      ],
+      "outputState": "finished_robert",
+      "instructions": "Verser l'espagnole tendue dans l'oignon et la réduction du vin et laisser mijoter doucement pendant 8 à 10 minutes, en écrémant jusqu'à ce qu'elle soit mariée et lisse. Puis retirez complètement la poêle du feu et laissez-la cesser de bouillonner avant de fouetter dans la moutarde de Dijon. Ne laissez jamais la sauce bouillir après l'entrée de la moutarde — la moutarde bouillante devient dure et amère. Goûtez, ajustez le sel et servez au chaud.",
+      "visualCue": {
+        "primaryTarget": "Une sauce marron lisse et brillante, pétrie d'oignon doux, avec la moutarde fouettée hors du feu jusqu'à une finale brillante, acidulée, moelleuse, sans amertume, sans aspect cassé ou granuleux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La moutarde s'agite, mais l'espagnole et la réduction de l'oignon ne se sont pas encore mariés.",
+            "action": "Laissez l'espagnole mijoter avec la réduction quelques minutes plus longtemps AVANT que la moutarde entre, donc les saveurs se mélangent; ajouter la moutarde seulement à la fin, hors chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce acajou brillante, cohésive et tendre à l'oignon tout entier et un tang équilibré – base salée levée par de la moutarde vive et moelleuse. Doux et chaud, sans bouillir.",
+            "action": "Goûtez, corrigez le sel et servez immédiatement sur le porc rôti ou les viandes grillées."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce était bouillie après l'entrée de la moutarde — elle a un goût vif et amer, et la moutarde a perdu sa chaleur arrondie.",
+            "action": "Il n'y a pas de moutarde bouillie entièrement; fouetter un peu de Dijon frais sur le feu et une pincée de sucre pour adoucir l'amertume, et ne jamais la laisser bouillir à nouveau."
+          }
+        ]
       },
-      feelCue: "The mustard should disappear into the sauce with a few turns of the whisk, leaving it glossy and smooth. The pan should be hot but still — no bubbles breaking the surface when the Dijon goes in.",
-    },
-  ],
+      "feelCue": "La moutarde devrait disparaître dans la sauce avec quelques tours de fouet, la laissant brillante et lisse. La poêle doit être chaude, mais quand même: aucune bulle ne brise la surface lorsque le Dijon entre."
+    }
+  ]
 };

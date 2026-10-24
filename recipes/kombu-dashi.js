@@ -1,93 +1,181 @@
 export default {
-  repoId: "master_japanese_kombu_dashi_001",
-  parentRepoId: null,
-  slug: "kombu-dashi",
-  author: "ForkRecipe Kitchen",
-  title: "Kombu Dashi",
-  description: "Cold-brew kombu dashi — the purest expression of umami, a crystal-clear broth of nothing but dried kelp and cold water, the vegetarian backbone of Japanese cuisine with a clean oceanic depth.",
-  cuisine: "Japanese",
-  culture: "Japanese Vegan",
-  category: "stocks",
-  tags: ["vegan", "gluten-free", "japanese", "dashi", "kombu", "umami"],
-  difficulty: 1,
-  activeTime: "5 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 1, sour: 0, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",  name: "Kombu (dried kelp), preferably ma-kombu",  ratioValue: 20,   defaultUnit: "g",  substitutions: ["rausu-kombu (richer)", "rishiri-kombu (more delicate)"] },
-    { ingId: "ing_02", role: "Liquid", name: "Cold water (soft or filtered preferred)",   ratioValue: 1000, defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_japanese_kombu_dashi_001",
+  "parentRepoId": null,
+  "slug": "kombu-dashi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kombu Dashi",
+  "description": "Cold-brew kombu dashi — l'expression la plus pure de l'umami, un bouillon cristallin de rien d'autre que la varech séchée et l'eau froide, l'épine dorsale végétarienne de la cuisine japonaise avec une profondeur océanique propre.",
+  "cuisine": "Japonais",
+  "culture": "Végétaux japonais",
+  "category": "stocks",
+  "tags": [
+    "végétalien",
+    "Sans gluten",
+    "Japonais",
+    "Dashi",
+    "kombu",
+    "umami"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "5 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Wipe",
-      inputs: ["ing_01"],
-      outputState: "prepared_kombu",
-      instructions: "Examine the kombu: it should be dark brownish-green with a heavy white powder coating — mannitol, a natural sugar alcohol that is the foundation of kombu's sweetness and umami. Wipe the surface very gently with a barely damp cloth or dry paper towel, removing only any grit or debris. Do not rinse the kombu under running water and do not scrub: the white powder is precious and must be preserved. Cut or score the kombu into smaller pieces (about 10cm lengths) with scissors to increase the surface area exposed to the water.",
-      visualCue: {
-        primaryTarget: "Kombu pieces still show a clear white powder coating across their surface, with no patches of bare, shiny black kelp visible.",
-        spectrum: [
-          { state: "Underdone", description: "Debris or grit still visible on the surface. Small marine particles adhering to the fronds.", action: "Wipe again with a dry cloth — targeted, not broad strokes." },
-          { state: "Perfect",   description: "Clean, intact kombu with the full white mannitol bloom preserved. The pieces smell of the sea — clean, mineral, faintly sweet — not fishy.", action: "Submerge in cold water." },
-          { state: "Overdone",  description: "Rinsed under running water — white powder has washed away. Kombu is bare, dark, and shiny.", action: "The dashi will still be good but will be lighter in body and sweetness. Steep for an extra 15 minutes to compensate." },
-        ],
-      },
-      feelCue: "Run a fingernail gently over the kombu surface and then rub the residue between your fingers — the white powder should feel waxy and almost sweet, not gritty like sand or salt.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "Kombu, de préférence ma-kombu",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "rausu-kombu (richisseur)",
+        "rishiri-kombu (plus délicat)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Steep",
-      inputs: ["prepared_kombu", "ing_02"],
-      outputState: "steeping_dashi",
-      instructions: "Place the prepared kombu in a clean pot or deep container. Pour the cold water over it. Let it steep at room temperature for 30-60 minutes. During this cold extraction, glutamic acid, minerals, and mannitol dissolve slowly into the water in a way that hot extraction cannot replicate — hot water extracts faster but also pulls bitter compounds from the kombu cell walls. The water will gradually shift from clear to a faint golden-green as the glutamates dissolve.",
-      visualCue: {
-        primaryTarget: "After 30-60 minutes, the water has shifted to a faint, pale gold-green. The kombu is hydrated and has expanded, becoming softer and more pliable.",
-        spectrum: [
-          { state: "Underdone", description: "Less than 15 minutes — water is still nearly clear. Kombu is still stiff and rigid.", action: "Wait the full 30 minutes minimum. The glutamate extraction requires time; there is no shortcut at cold temperature." },
-          { state: "Perfect",   description: "After 45-60 minutes, the water is a delicate pale gold, faintly green, and smells cleanly of the sea. Kombu is now soft and pliable, with slightly softened edges.", action: "Begin gentle heating." },
-          { state: "Overdone",  description: "Steeped more than 3 hours at room temperature — the kombu has released an excess of alginic acid, giving the water a slightly slimy texture.", action: "Proceed, but heat briefly to coagulate the excess mucilage before straining." },
-        ],
-      },
-      feelCue: "Lift a piece of steeped kombu and let it drape over your finger — properly cold-steeped kombu flows like a soft ribbon, while under-steeped kombu is still rigid and breaks rather than bends.",
-    },
-    {
-      nodeId: "step_3",
-      action: "Heat",
-      inputs: ["steeping_dashi"],
-      outputState: "heated_dashi",
-      instructions: "Place the pot over the lowest possible heat setting. Heat very slowly, aiming for a temperature of 55-65°C — this range maximizes glutamate extraction while keeping the broth clean and clear. You will see tiny bubbles beginning to form on the surface of the kombu and on the bottom of the pot as the water approaches 60°C. This is the critical window. Watch closely: the moment these bubbles begin appearing on the kombu edges, the temperature is perfect. Do not allow the water to reach a simmer.",
-      visualCue: {
-        primaryTarget: "Tiny pin-point bubbles clinging to the kombu surface and pot bottom. Water is very gently trembling but not moving. The dashi has shifted from pale gold to a warm, clear amber.",
-        spectrum: [
-          { state: "Underdone", description: "No bubbles visible anywhere. Water still cold or only barely warm. Kombu is lying flat and still.", action: "Increase heat very slightly — the bubble stage is critical for the final extraction of sweetness and body." },
-          { state: "Perfect",   description: "Small, pin-head bubbles cling to the kombu edges and the pot walls. The dashi is warm to the touch (can hold a hand nearby without pulling away). Colour is a warm, clear golden-amber.", action: "Remove the kombu immediately and turn off the heat." },
-          { state: "Overdone",  description: "Water reached a simmer or boil — kombu has turned the dashi viscous and slightly slimy, with a bitter, iodine-forward aroma replacing the clean oceanic sweetness.", action: "The dashi is not ruined — strain immediately and cool quickly. The bitterness will be present but will not be overwhelming in a composed dish." },
-        ],
-      },
-      feelCue: "Hold your palm above the surface of the pot at a distance of 5cm — you should feel steady, gentle warmth, equivalent to holding your hand over a warm (not hot) cup of tea. If it forces you to pull away, the temperature is too high.",
-    },
-    {
-      nodeId: "step_4",
-      action: "Strain",
-      inputs: ["heated_dashi"],
-      outputState: "finished_kombu_dashi",
-      instructions: "Remove the kombu pieces from the pot with tongs or a slotted spoon — do not squeeze or press them, which releases bitter compounds. Strain the dashi through a fine-mesh sieve (no cheesecloth needed — a well-made kombu dashi should already be clear). The finished dashi can be used immediately as a base for miso soup, noodle broth, or simmered dishes. Refrigerated, it keeps for 3 days. The spent kombu can be simmered with soy sauce and mirin to make tsukudani — a salty-sweet condiment.",
-      visualCue: {
-        primaryTarget: "A clear, pale amber-gold liquid of remarkable clarity — like a fine, very lightly coloured mineral water. When held to the light, it should be completely transparent.",
-        spectrum: [
-          { state: "Underdone", description: "Dashi is slightly hazy — kombu mucilage has not been fully separated. Small particles visible.", action: "Strain again through a fine sieve. Clarity is the mark of a correctly made kombu dashi." },
-          { state: "Perfect",   description: "Crystal-clear, golden dashi. The aroma is clean, oceanic, very faintly sweet. The taste should deliver a gentle, clean umami that arrives slowly and lingers without any sharpness or bitterness.", action: "Use immediately or refrigerate in a sealed container for up to 3 days." },
-          { state: "Overdone",  description: "Dashi is deep brown and smells strongly of iodine and kelp — was heated too aggressively or the kombu was left in boiling water.", action: "Use in a strongly flavored dish where it will be balanced by miso, soy sauce, or other bold ingredients. For clean applications like clear soup, remake with correct temperature control." },
-        ],
-      },
-      feelCue: "Take a small sip of the finished dashi without any seasoning — you should experience almost no taste initially, followed 5-8 seconds later by a quiet, spreading warmth on the back of the palate that is pure glutamate. This delayed arrival is the signature of clean, properly extracted kombu dashi.",
-    },
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau froide (de préférence douce ou filtrée)",
+      "ratioValue": 1000,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Essuie",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "prepared_kombu",
+      "instructions": "Examinez le kombu: il devrait être brunâtre-vert foncé avec un lourd revêtement en poudre blanche — le mannitol, un alcool sucré naturel qui est le fondement de la douceur et de l'umami de kombu. Essuyer la surface très doucement avec un chiffon à peine humide ou une serviette en papier sec, en enlevant seulement le grain ou les débris. Ne pas rincer le kombu sous l'eau courante et ne pas frotter : la poudre blanche est précieuse et doit être conservée. Couper ou marquer le kombu en petits morceaux (longueur d'environ 10 cm) avec des ciseaux pour augmenter la surface exposée à l'eau.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux de Kombu montrent encore un revêtement blanc clair de poudre sur leur surface, sans tache de varech noir nu et brillant visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les débris ou le grain sont encore visibles à la surface. Petites particules marines adhérant aux frondes.",
+            "action": "Essuyer de nouveau avec un chiffon sec — ciblé, pas des traits larges."
+          },
+          {
+            "state": "Perfect",
+            "description": "Propre, intact kombu avec la pleine fleur de mannitol blanc conservé. Les morceaux sentent la mer — propre, minéral, légèrement sucré — pas poissonneuse.",
+            "action": "Submerger dans l'eau froide."
+          },
+          {
+            "state": "Overdone",
+            "description": "Rincé sous l'eau courante — la poudre blanche s'est lavée. Kombu est nu, sombre et brillant.",
+            "action": "Le dashi sera toujours bon mais sera plus léger dans le corps et la douceur. Steep pendant 15 minutes supplémentaires pour compenser."
+          }
+        ]
+      },
+      "feelCue": "Exécutez un ongle doucement sur la surface du kombu, puis frottez le résidu entre vos doigts.La poudre blanche doit être cireuse et presque douce, pas sèche comme du sable ou du sel."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Streep",
+      "inputs": [
+        "prepared_kombu",
+        "ing_02"
+      ],
+      "outputState": "steeping_dashi",
+      "instructions": "Placer le kombu préparé dans un pot propre ou un récipient profond. Versez l'eau froide dessus. Laisser raide à température ambiante pendant 30-60 minutes. Au cours de cette extraction à froid, l'acide glutamique, les minéraux et le mannitol se dissolvent lentement dans l'eau d'une manière que l'extraction à chaud ne peut se répliquer — l'eau chaude extrait plus rapidement mais tire aussi des composés amers des parois cellulaires du kombu. L'eau passera progressivement de clair à un peu vert doré lorsque les glutamates se dissoudreont.",
+      "visualCue": {
+        "primaryTarget": "Après 30 à 60 minutes, l'eau s'est déplacée vers un vert doré pâle et faible. Le kombu est hydraté et s'est élargi, devenant plus doux et plus souple.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Moins de 15 minutes — l'eau est encore presque claire. Kombu est toujours rigide.",
+            "action": "Attendez au moins 30 minutes. L'extraction du glutamate nécessite du temps; il n'y a pas de raccourci à température froide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 45-60 minutes, l'eau est un délicat or pâle, légèrement vert, et sent propre de la mer. Kombu est maintenant doux et souple, avec des bords légèrement adoucis.",
+            "action": "Commencez à chauffer doucement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus de 3 heures à température ambiante — le kombu a libéré un excès d'acide alginique, donnant à l'eau une texture légèrement visqueuse.",
+            "action": "Procéder, mais chauffer brièvement pour coaguler l'excès de mucilage avant la déformation."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un morceau de kombu abîmé et laissez-le draper au-dessus de votre doigt — le kombu correctement à l'épaisseur froide coule comme un ruban doux, tandis que le kombu sous l'épaisseur est toujours rigide et se brise plutôt que de plier."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Chaleur",
+      "inputs": [
+        "steeping_dashi"
+      ],
+      "outputState": "heated_dashi",
+      "instructions": "Placez le pot sur le réglage thermique le plus bas possible. Chauffer très lentement, en visant une température de 55-65°C — cette plage maximise l'extraction du glutamate tout en maintenant le bouillon propre et clair. Vous verrez de minuscules bulles qui commencent à se former à la surface du kombu et au fond du pot lorsque l'eau approche de 60°C. C'est la fenêtre critique. Regardez attentivement : au moment où ces bulles apparaissent sur les bords du kombu, la température est parfaite. Ne laissez pas l'eau mijoter.",
+      "visualCue": {
+        "primaryTarget": "Petites bulles point d'épingle s'accrochant à la surface du kombu et au fond du pot. L'eau tremble très doucement mais ne bouge pas. Le dashi est passé de l'or pâle à un ambre chaud et clair.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas de bulles visibles. L'eau est encore froide ou à peine chaude. Kombu est à plat et immobile.",
+            "action": "Augmentez la chaleur très légèrement — le stade de bulle est critique pour l'extraction finale de la douceur et du corps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Petites bulles de tête d'épingle accrochées aux bords de kombu et aux murs de pot. Le dashi est chaud au toucher (peut tenir une main à proximité sans s'éloigner). La couleur est un jaune-or chaud et clair.",
+            "action": "Retirez immédiatement le kombu et éteignez le feu."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'eau a mijoté ou bouilli — le kombu a tourné le dashi visqueux et légèrement visqueux, avec un arôme amer et iode-avant remplaçant la douceur océanique propre.",
+            "action": "Le dashi n'est pas gâché — s'étirer immédiatement et refroidir rapidement. L'amertume sera présente mais ne sera pas écrasante dans un plat composé."
+          }
+        ]
+      },
+      "feelCue": "Maintenez votre paume au-dessus de la surface du pot à une distance de 5cm — vous devriez sentir la chaleur régulière et douce, équivalent à tenir votre main sur une tasse de thé chaude (pas chaude). Si cela vous force à vous retirer, la température est trop élevée."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Poignée",
+      "inputs": [
+        "heated_dashi"
+      ],
+      "outputState": "finished_kombu_dashi",
+      "instructions": "Retirer les morceaux de kombu du pot avec des pinces ou une cuillère à fentes — ne pas les presser ou les presser, ce qui libère des composés amers. Enfilez le dashi dans un tamis à mailles fines (pas de cheesewack nécessaire — un dashi kombu bien fait devrait déjà être clair). Le dashi fini peut être utilisé immédiatement comme base pour la soupe miso, le bouillon de nouilles ou les plats mijotés. Réfrigéré, il garde 3 jours. Le kombu peut être mijoté avec de la sauce de soja et du mirin pour faire du tsukudani, un condiment sucré et salé.",
+      "visualCue": {
+        "primaryTarget": "Un liquide clair, pâle et doré, d'une clarté remarquable, comme une eau minérale fine et très légèrement colorée. Lorsqu'elle est fixée à la lumière, elle doit être complètement transparente.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Dashi est légèrement brumeux — le mucilage kombu n'a pas été complètement séparé. Petites particules visibles.",
+            "action": "Plongez encore à travers un bon tamis. La clarté est la marque d'un kombu dashi correctement fait."
+          },
+          {
+            "state": "Perfect",
+            "description": "Clair cristallin, dashi doré. L'arôme est propre, océanique, très légèrement sucré. Le goût devrait fournir un umami doux et propre qui arrive lentement et persiste sans aucune netteté ou amertume.",
+            "action": "Utiliser immédiatement ou réfrigérer dans un contenant scellé jusqu'à 3 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dashi est brun foncé et sent fortement l'iode et le varech — il a été chauffé trop fortement ou le kombu a été laissé dans l'eau bouillante.",
+            "action": "Utiliser dans un plat fortement aromatisé où il sera équilibré par miso, sauce de soja, ou d'autres ingrédients audacieux. Pour des applications propres comme la soupe claire, remake avec contrôle de température correct."
+          }
+        ]
+      },
+      "feelCue": "Prenez une petite gorgée de dashi fini sans assaisonnement — vous devriez éprouver presque aucun goût au départ, suivi 5-8 secondes plus tard par une chaleur calme, qui répand sur le dos du palais qui est pur glutamate. Cette arrivée retardée est la signature de kombu dashi propre, correctement extrait."
+    }
+  ]
 };

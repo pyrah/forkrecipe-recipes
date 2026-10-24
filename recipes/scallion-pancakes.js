@@ -1,82 +1,202 @@
 export default {
-  repoId: "master_chinese_scallion_pancakes_001",
-  parentRepoId: null,
-  slug: "scallion-pancakes",
-  author: "ForkRecipe Kitchen",
-  title: "Scallion Pancakes (Cong You Bing)",
-  description: "A hot water dough is rolled flat, painted with sesame oil and salt, blanketed in scallion, then coiled and re-rolled — the same lamination trick as a croissant, but humble enough to eat on the street. The result is a flaky, chewy, pan-fried flatbread that shatters at the first bite into dozens of separated, fragrant layers.",
-  cuisine: "Chinese",
-  culture: "Northern Chinese Street",
-  category: "breads",
-  tags: ["chinese", "bread", "scallion", "pan-fried", "layered", "street-food", "vegan"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour (plain flour)",              ratioValue: 250, defaultUnit: "g", substitutions: ["bread flour (chewier result)"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Boiling water (100 C)",                        ratioValue: 130, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Fat",        name: "Toasted sesame oil",                           ratioValue: 30,  defaultUnit: "g", substitutions: ["lard for richer flavour"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                                ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Scallions (spring onions), thinly sliced",      ratioValue: 80,  defaultUnit: "g", substitutions: ["chives"] },
-    { ingId: "ing_06", role: "Fat",        name: "Neutral oil for frying (vegetable or rapeseed)", ratioValue: 40, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Flaky sea salt for layering",                  ratioValue: 3,   defaultUnit: "g", substitutions: ["Maldon salt"] },
+  "repoId": "master_chinese_scallion_pancakes_001",
+  "parentRepoId": null,
+  "slug": "scallion-pancakes",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pancakes d'oignons",
+  "description": "Une pâte à eau chaude est roulée à plat, peinte avec de l'huile de sésame et du sel, recouverte de pétoncle, puis enroulée et laminée à nouveau — le même tour de laminage qu'un croissant, mais assez humble pour manger dans la rue. Le résultat est un pain plat feuilleté, croustillant et frit qui se brise à la première morsure en dizaines de couches séparées et parfumées.",
+  "cuisine": "Chinois",
+  "culture": "Rue de la Chine du Nord",
+  "category": "breads",
+  "tags": [
+    "Chinois",
+    "pain",
+    "scalpel",
+    "frites",
+    "en couches",
+    "Produits de la rue",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "hot_water_dough",
-      instructions: "Place the flour in a bowl and pour in the boiling water all at once. Immediately stir with a chopstick or wooden spoon in circular motions until the water is absorbed and the mixture looks like a shaggy, steaming mass. The boiling water partially cooks the starch — this gelatinisation is what makes the dough pliable and the pancake chewy rather than biscuity. Once cool enough to handle (about 2 minutes), knead briefly in the bowl until a smooth dough forms — about 3 minutes. It should feel soft and slightly tacky.",
-      visualCue: {
-        primaryTarget: "A smooth, elastic dough ball that is noticeably softer and more supple than a standard bread dough — almost silk-like.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still rough, shaggy, and tears when stretched.", action: "Knead for 2 more minutes — the gelatinised starch needs more working to become cohesive." },
-          { state: "Perfect",   description: "Smooth, uniform dough that stretches without tearing, soft to the touch and slightly warm.", action: "Cover with a damp cloth and rest for 30 minutes." },
-          { state: "Overdone",  description: "Dough has been over-kneaded and is slightly rubbery, springing back aggressively.", action: "Cover and rest for 20 minutes — the gluten will relax before rolling." },
-        ],
-      },
-      feelCue: "The dough should feel distinctly softer and more yielding than pasta dough — almost ear-lobe soft — with a slight warmth still emanating from the hydrated starch.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine polyvalente (farine plate)",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "farine de pain (résultat chewier)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Shape",
-      inputs: ["hot_water_dough", "ing_03", "ing_04", "ing_05", "ing_07"],
-      outputState: "coiled_pancake",
-      instructions: "Divide the rested dough into 4 equal pieces. On a lightly oiled surface (not floured), roll each piece into a thin rectangle about 3 mm thick. Brush generously with sesame oil to within 5 mm of the edges. Scatter salt and sliced scallion evenly across the surface, pressing lightly so they adhere. Now roll the rectangle into a tight log from the long edge, like a Swiss roll. Then coil the log into a tight snail shape and press it flat with your palm. Re-roll the coiled disc to about 5 mm thick. This double-rolling is the technique that creates the layered structure.",
-      visualCue: {
-        primaryTarget: "A flat disc about 18 cm diameter with visible spiral lines on the surface and faint green flecks of scallion peeking through.",
-        spectrum: [
-          { state: "Underdone", description: "Disc is too thick (more than 8 mm) and the layers are too compressed — it will be doughy rather than flaky.", action: "Roll more firmly and evenly, working from the centre outward." },
-          { state: "Perfect",   description: "Roughly 5 mm thick with a clear spiral pattern on the surface, pliable and cooperative under the rolling pin.", action: "Fry immediately for maximum layer definition." },
-          { state: "Overdone",  description: "Dough has been rolled so thin that scallions are bursting through the surface.", action: "Proceed carefully — the layers are still there, just very fine. Handle gently when transferring to the pan." },
-        ],
-      },
-      feelCue: "The coiled disc should feel laminated under your palm — press it and you can sense the layered structure resist slightly differently than a single-sheet dough.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau bouillante (100 C)",
+      "ratioValue": 130,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["coiled_pancake", "ing_06"],
-      outputState: "finished_scallion_pancake",
-      instructions: "Heat a heavy skillet or cast iron pan over medium heat. Add enough neutral oil to coat the bottom with a 2 mm layer. When the oil shimmers, add one pancake. Cook for 2 to 3 minutes on the first side without moving it — the underside should be golden and crisping. Flip and press lightly with a spatula to encourage even contact with the pan. Cook the second side for 2 minutes. The pancake is done when both sides are deep golden-brown with dark, crispy edges and you can hear it crackling and hissing in the oil.",
-      visualCue: {
-        primaryTarget: "Both sides deep golden-brown with darker, lacey-crisp edges. The surface bubbles and blisters slightly. Scallion appears bright green through the crust.",
-        spectrum: [
-          { state: "Underdone", description: "Pale golden, soft when pressed, doughy in the centre — the inside is not cooked.", action: "Reduce heat to medium-low, cover the pan, and cook for 2 more minutes to cook the interior without burning the outside." },
-          { state: "Perfect",   description: "Deep golden-brown exterior, audibly crisp when tapped with a spatula, with visible layers separating at the edges. Inside is chewy and cooked through.", action: "Transfer to a cutting board. Cut into wedges and eat immediately." },
-          { state: "Overdone",  description: "Dark brown verging on burnt, smells of scorched sesame oil, very rigid.", action: "Still edible — the char adds a smoky note. Do not cover or steam or you will lose the crispness." },
-        ],
-      },
-      feelCue: "A well-made scallion pancake crackles audibly when bent — the layers shatter like the pages of a book. If it bends silently and pliant, it needs another minute in the pan.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Saindoux pour une saveur plus riche"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Échalons (oignons de printemps), tranchés finement",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "ruches"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile neutre pour la friture (végétable ou colza)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel de mer pour la couche",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Sel de maldon"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "hot_water_dough",
+      "instructions": "Placer la farine dans un bol et verser dans l'eau bouillante. Mélanger immédiatement avec un baguette ou une cuillère en bois en mouvements circulaires jusqu'à ce que l'eau soit absorbée et que le mélange ressemble à une masse bouillante. L'eau bouillante fait cuire partiellement l'amidon — cette gélatinisation rend la pâte pliable et le pancake mâche plutôt que la biscuité. Une fois assez frais pour être manipulé (environ 2 minutes), pétrir brièvement dans le bol jusqu'à ce qu'une pâte lisse se forme — environ 3 minutes. Il doit se sentir doux et légèrement collant.",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte lisse et élastique qui est nettement plus douce et souple qu'une pâte à pain standard, presque à la soie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est encore dure, lugubre et larmes lorsqu'elle est tendue.",
+            "action": "Knead pendant 2 minutes de plus — l'amidon gélatinisé a besoin de plus de travail pour devenir cohérent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte lisse et uniforme qui s'étire sans déchirer, douce au toucher et légèrement chaude.",
+            "action": "Couvrir d'un chiffon humide et reposer pendant 30 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dough a été surcollé et est légèrement caoutchouteux, ressortant agressivement.",
+            "action": "Couvrir et reposer pendant 20 minutes — le gluten se détendrea avant de rouler."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir nettement plus douce et plus productive que la pâte à pâtes — presque lobe d'oreille — avec une légère chaleur qui émane encore de l'amidon hydraté."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Forme",
+      "inputs": [
+        "hot_water_dough",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "coiled_pancake",
+      "instructions": "Divisez la pâte reposée en 4 morceaux égaux. Sur une surface légèrement huilée (non farinée), rouler chaque pièce dans un mince rectangle d'environ 3 mm d'épaisseur. Badigeonner généreusement d'huile de sésame à moins de 5 mm des bords. Scatter le sel et le pétoncle tranché uniformément à travers la surface, appuyant légèrement pour qu'ils adhèrent. Maintenant roulez le rectangle dans une bûche serrée du long bord, comme un rouleau suisse. Puis enroulez le grume dans une forme d'escargot serré et appuyez-le à plat avec votre paume. Rerouler le disque enroulé à environ 5 mm d'épaisseur. Cette double rotation est la technique qui crée la structure en couches.",
+      "visualCue": {
+        "primaryTarget": "Un disque plat d'environ 18 cm de diamètre avec des lignes en spirale visibles à la surface et des flocons de pétoncle vert pâle qui pèlent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le disque est trop épais (plus de 8 mm) et les couches sont trop comprimées — il sera pâteux plutôt que flocé.",
+            "action": "Rouler plus fermement et uniformément, travailler du centre vers l'extérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Environ 5 mm d'épaisseur avec un motif en spirale clair sur la surface, souple et coopératif sous la goupille.",
+            "action": "Fry immédiatement pour la définition de couche maximale."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux a été roulée si mince que les pétoncles éclatent à la surface.",
+            "action": "Procédez prudemment — les couches sont toujours là, juste très bien. Manipulation délicate lors du transfert dans la casserole."
+          }
+        ]
+      },
+      "feelCue": "Le disque enroulé doit se sentir stratifié sous votre paume — appuyez dessus et vous pouvez sentir la structure en couches résister légèrement différemment qu'une pâte à feuille unique."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "coiled_pancake",
+        "ing_06"
+      ],
+      "outputState": "finished_scallion_pancake",
+      "instructions": "Chauffer une poêle lourde ou une poêle en fonte à feu moyen. Ajouter suffisamment d'huile neutre pour enrober le fond d'une couche de 2 mm. Lorsque l'huile mijote, ajouter un crêpe. Cuire 2 à 3 minutes du premier côté sans le déplacer — le dessous doit être doré et croustillant. Flipez et pressez légèrement avec une spatule pour encourager le contact avec la poêle. Cuire le deuxième côté pendant 2 minutes. Le crêpe est fait lorsque les deux côtés sont brun-or profond avec des bords foncés et croustillants et vous pouvez l'entendre craquer et siffler dans l'huile.",
+      "visualCue": {
+        "primaryTarget": "Les deux côtés profond doré-brun avec des bords plus foncés, dentelle-crisp. Les bulles de surface et les cloques légèrement. L'échalote apparaît vert vif dans la croûte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle, doux quand pressé, pâteux au centre — l'intérieur n'est pas cuit.",
+            "action": "Réduire le feu à moyen-doux, couvrir la casserole et cuire encore 2 minutes pour cuire l'intérieur sans brûler l'extérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Extérieur doré-brun profond, audiblement croustillant lorsqu'il est tapé avec une spatule, avec des couches visibles se séparant aux bords. À l'intérieur est mâché et cuit à travers.",
+            "action": "Transfert sur une planche à découper. Couper en quartiers et manger immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vertige brune foncée sur brûlé, odeurs d'huile de sésame brûlée, très rigide.",
+            "action": "Encore comestible — l'omble ajoute une note fumée. Ne pas couvrir ou la vapeur ou vous perdrez la croustillant."
+          }
+        ]
+      },
+      "feelCue": "Une crêpe bien faite craque audiblement lorsqu'elle est pliée — les couches éclatent comme les pages d'un livre. Si elle s'incline silencieusement et s'incline, elle a besoin d'une minute de plus dans la casserole."
+    }
+  ]
 };

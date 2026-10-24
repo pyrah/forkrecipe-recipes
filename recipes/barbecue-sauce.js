@@ -1,88 +1,274 @@
 export default {
-  repoId: "master_american_barbecue_sauce_001",
-  parentRepoId: null,
-  slug: "barbecue-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Classic American Sweet-Smoky BBQ Sauce",
-  description: "A glossy, ember-dark sauce built on a ketchup base and deepened with molasses, apple cider vinegar, and smoked paprika — sweet and tangy in the same breath, with a back-of-the-throat heat that lingers like good firewood smoke.",
-  cuisine: "American",
-  culture: "Southern",
-  category: "sauces",
-  tags: ["bbq", "sauce", "american", "condiment", "smoky", "sweet"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 3, sour: 3, bitter: 1, umami: 3, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",      name: "Ketchup",                          ratioValue: 1,    defaultUnit: "cup",  substitutions: ["tomato passata reduced by half"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Molasses (unsulfured)",            ratioValue: 0.25, defaultUnit: "cup",  substitutions: ["dark brown sugar packed", "sorghum syrup"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Brown sugar, packed",              ratioValue: 0.25, defaultUnit: "cup",  substitutions: ["turbinado sugar", "honey"] },
-    { ingId: "ing_04", role: "Acid",      name: "Apple cider vinegar",              ratioValue: 0.25, defaultUnit: "cup",  substitutions: ["white wine vinegar", "sherry vinegar"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Water",                            ratioValue: 0.25, defaultUnit: "cup",  substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Smoked paprika",                   ratioValue: 1,    defaultUnit: "tbsp", substitutions: ["a drop of liquid smoke + sweet paprika"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Kosher salt",                      ratioValue: 1,    defaultUnit: "tsp",  substitutions: ["fine sea salt"] },
-    { ingId: "ing_08", role: "Spice",     name: "Black pepper, freshly cracked",    ratioValue: 0.5,  defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Dry mustard powder",               ratioValue: 1,    defaultUnit: "tsp",  substitutions: ["1 tbsp yellow mustard"] },
-    { ingId: "ing_10", role: "Spice",     name: "Cayenne pepper",                   ratioValue: 0.25, defaultUnit: "tsp",  substitutions: ["hot sauce (1 tbsp)", "chipotle powder"] },
-    { ingId: "ing_11", role: "Aromatic",  name: "Garlic powder",                    ratioValue: 1,    defaultUnit: "tsp",  substitutions: ["2 cloves fresh garlic, minced and sautéed"] },
-    { ingId: "ing_12", role: "Aromatic",  name: "Onion powder",                     ratioValue: 1,    defaultUnit: "tsp",  substitutions: ["1/4 onion, minced and sautéed"] },
-    { ingId: "ing_13", role: "Umami",     name: "Worcestershire sauce",             ratioValue: 1,    defaultUnit: "tbsp", substitutions: ["soy sauce (use half)", "fish sauce (use 1 tsp)"] },
+  "repoId": "master_american_barbecue_sauce_001",
+  "parentRepoId": null,
+  "slug": "barbecue-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce BBQ classique américaine sucrée et fumée",
+  "description": "Une sauce braise brillante et foncée construite sur une base de ketchup et approfondie avec de la mélasse, du vinaigre de cidre de pomme et du paprika fumé — sucrée et acidulée dans le même souffle, avec une chaleur au dos de la gorge qui reste comme une bonne fumée de bois de chauffage.",
+  "cuisine": "Américain",
+  "culture": "Sud",
+  "category": "sauces",
+  "tags": [
+    "bbq",
+    "sauce",
+    "américains",
+    "condiment",
+    "fumée",
+    "doux"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12", "ing_13"],
-      outputState: "combined_sauce",
-      instructions: "Measure all ingredients into a medium heavy-bottomed saucepan — the heavy bottom is important, as the sugars in this sauce will scorch on thin stainless or aluminum. Whisk everything together thoroughly before applying any heat. Start with the ketchup as your base, then add molasses (pour it slow — it's stubborn), brown sugar, apple cider vinegar, and water. Add all the dry spices: smoked paprika, salt, black pepper, dry mustard, cayenne, garlic powder, and onion powder. Finish with the Worcestershire sauce. Whisk until the sauce is completely uniform — no streaks of molasses spiraling through lighter ketchup, no pockets of dry spice clinging to the bottom. Taste the raw mixture: it should taste harsh, aggressively vinegary, and a little medicinal from the dry mustard. This is correct. The heat will transform it.",
-      visualCue: {
-        primaryTarget: "A uniform deep brick-red sauce with flecks of paprika. No swirls or color variation. Smooth and slightly thick at room temperature.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of dark molasses spiral through lighter red ketchup. Dry spice visible as dark dots in clumps.", action: "Keep whisking — pour in the molasses slowly in a thin stream while whisking to prevent ribboning." },
-          { state: "Perfect",   description: "Uniformly deep red-brown, slightly glossy, no visible dry-spice clumps. All molasses fully incorporated.", action: "Place over medium heat and begin simmering." },
-          { state: "Overdone",  description: "You've whisked so vigorously the sauce has become frothy with air bubbles.", action: "Let it stand 2 minutes to settle, then proceed to heat." },
-        ],
-      },
-      feelCue: "Drag a clean finger across a spoonful — the raw sauce tastes simultaneously of sharp vinegar and dark sugar, with a dry, chalky edge from the mustard powder. Nothing is in harmony yet. That's the promise of the simmer.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Ketchup",
+      "ratioValue": 1,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "tomate passata réduite de moitié"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["combined_sauce"],
-      outputState: "simmered_sauce",
-      instructions: "Place the saucepan over medium heat and bring to a gentle simmer, stirring frequently to prevent the sugars from catching on the bottom. Once bubbling, reduce heat to low-medium. Simmer uncovered for 20–25 minutes, stirring every 2–3 minutes throughout. As the sauce cooks, it will deepen from bright brick-red to a darker, redder-brown mahogany. The raw vinegar sharpness will round and mellow; the molasses will gain caramel depth; the dry mustard will bloom and integrate. Watch the edges of the pot — this is where scorching begins. If you see any darkening at the edges, immediately reduce heat and stir from the bottom. The sauce is done when it coats the back of a spoon and a line drawn through it with your finger holds its shape for 2–3 seconds before slowly filling in.",
-      visualCue: {
-        primaryTarget: "Deep mahogany-red with a visible sheen of glossiness. Slow, lazy bubbles breaking the surface — not a rolling boil, but a steady, gentle burp.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce still bright red and thin, runs off a spoon quickly. Still tastes sharply of raw vinegar. Bubbling vigorously.", action: "Reduce heat to a gentle simmer and continue cooking. The transformation happens gradually — give it time." },
-          { state: "Perfect",   description: "Deep mahogany, coats a spoon in a thick, even layer. A finger-line on the spoon holds for 3 seconds. Tastes balanced: sweet, tangy, smoky, with a gentle heat bloom at the finish.", action: "Remove from heat and cool to room temperature before storing or using." },
-          { state: "Overdone",  description: "Sauce is very thick, almost jammy. Dark brown approaching black at the edges. Tastes overly sweet and burnt-sugar bitter.", action: "Whisk in water 1 tablespoon at a time over low heat to thin. Taste for balance — a splash more vinegar may restore the acid." },
-        ],
-      },
-      feelCue: "Lean over the pot as it simmers — the smell transforms visibly as it cooks. First you get the acrid hit of hot vinegar, then it mellows into something rounder and darker, like caramelized onion and wood smoke. When the smell shifts from sharp to sweet-smoky, you are close.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Molasses (non sulfurées)",
+      "ratioValue": 0.25,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "sucre brun foncé emballé",
+        "sirop de sorgho"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Cool",
-      inputs: ["simmered_sauce"],
-      outputState: "finished_bbq_sauce",
-      instructions: "Remove from heat and let cool in the pan for 10 minutes. Taste and adjust: if too sweet, add apple cider vinegar by the teaspoon; if too sharp, add a pinch more brown sugar; if flat, add a small pinch of salt and another drop of Worcestershire. Transfer to a glass jar or squeeze bottle. The sauce will thicken further as it cools — a sauce that seems slightly thin off the heat will be perfectly glossy and coating when it reaches room temperature. Refrigerate for up to 3 weeks. The flavor improves markedly after 24 hours in the refrigerator, as the spices continue to bloom and integrate. Reheat gently before serving — never boil again once made, or the vinegar balance will shift.",
-      visualCue: {
-        primaryTarget: "At room temperature: a thick, glossy, dark mahogany sauce that flows slowly from a tilted jar, coating the glass in a translucent burgundy film.",
-        spectrum: [
-          { state: "Underdone", description: "Still warm and thin, flows easily like water. Not yet at finished consistency.", action: "Allow to cool completely at room temperature — 20–30 minutes minimum before judging thickness." },
-          { state: "Perfect",   description: "Thick, glossy, slow-flowing. Tastes balanced across all registers: initial sweetness, mid-palate tang, smoky depth, and a mild cayenne finish. Coats a spoon without dripping.", action: "Transfer to storage container. Allow to rest refrigerated for 24 hours for best flavor." },
-          { state: "Overdone",  description: "Sets stiff and nearly solid in the jar when cold. Almost impossible to pour.", action: "Thin with water 1 tablespoon at a time over gentle heat, then re-cool." },
-        ],
-      },
-      feelCue: "Coat a clean finger and rub thumb against fingertip — the sauce should feel lightly sticky and slightly resistant, like a good lip gloss. Not gluey, not watery. A lick reveals the full arc: sweet front, acid middle, smoky finish, and a warmth that builds slowly at the back of the tongue.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre brun, emballé",
+      "ratioValue": 0.25,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "sucre turbinado",
+        "Chérie"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 0.25,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "vinaigre de vin blanc",
+        "vinaigre de sherry"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 0.25,
+      "defaultUnit": "cup",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "une goutte de fumée liquide + paprika sucré"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "sel de mer fin"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre noir, fraichement craqué",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Poudre sèche de moutarde",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "1 c. à soupe de moutarde jaune"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "sauce chaude (1 c. à soupe)",
+        "poudre de chipotle"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Aromatic",
+      "name": "Poudre d'ail",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "2 gousses d'ail frais, hachées et sautées"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Aromatic",
+      "name": "Poudre d'oignon",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "1/4 oignon haché et sauté"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Umami",
+      "name": "sauce Worcestershire",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "sauce de soja (utiliser la moitié)",
+        "sauce de poisson (utiliser 1 c. à thé)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "combined_sauce",
+      "instructions": "Mesurez tous les ingrédients dans une casserole moyennement à fond lourd — le fond lourd est important, car les sucres de cette sauce vont brûler sur l'inox mince ou l'aluminium. Battre tout soigneusement avant d'appliquer la chaleur. Commencez avec le ketchup comme base, puis ajoutez la mélasse (pour le faire lentement — c'est têtu), la cassonade, le vinaigre de cidre de pomme et l'eau. Ajouter toutes les épices sèches : paprika fumé, sel, poivre noir, moutarde sèche, cayenne, poudre d'ail et poudre d'oignon. Finissez avec la sauce Worcestershire. fouetter jusqu'à ce que la sauce soit complètement uniforme — pas de traces de mélasse en spirale à travers le ketchup plus léger, pas de poches d'épices sèches accrochées au fond. Goûtez le mélange brut: il doit goûter dur, vinaigre agressif, et un peu médicinal de la moutarde sèche. C'est exact. La chaleur va la transformer.",
+      "visualCue": {
+        "primaryTarget": "Une sauce rouge brique profonde uniforme avec des taches de paprika. Pas de tourbillons ou de variation de couleur. Doux et légèrement épais à température ambiante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Streaks de mélasse foncée spirale à travers le ketchup rouge plus léger. Epices sèches visibles comme des points foncés dans les touffes.",
+            "action": "Continuez à fouetter — versez lentement dans la mélasse dans un cours d'eau mince tout en fouettant pour éviter le rubanage."
+          },
+          {
+            "state": "Perfect",
+            "description": "De couleur brun-rouge foncé uniforme, légèrement luisant, pas d'embouts à sec visibles. Toutes les mélasses sont entièrement incorporées.",
+            "action": "Mettre à feu moyen et commencer à mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez fouetté si vigoureusement la sauce est devenue mousseuse avec des bulles d'air.",
+            "action": "Laisser reposer 2 minutes, puis procéder à la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser un doigt propre sur une cuillère — la sauce crue goûte simultanément de vinaigre vif et de sucre foncé, avec un bord sec et crayeux de la poudre de moutarde. Rien n'est encore en harmonie. C'est la promesse du mijot."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "combined_sauce"
+      ],
+      "outputState": "simmered_sauce",
+      "instructions": "Placer la casserole à feu moyen et laisser mijoter doucement, en remuant fréquemment pour empêcher les sucres de prendre sur le fond. Une fois le bouillonnement, réduire la chaleur à faible-moyenne. Laisser mijoter à découvert de 20 à 25 minutes, en remuant toutes les 2 à 3 minutes. Au fur et à mesure que la sauce cuit, elle s'amplifiera de rouge brique vif à une acajou brun-rouge plus foncé. La netteté du vinaigre brut sera ronde et moelleuse; la mélasse augmentera la profondeur du caramel; la moutarde sèche fleurira et s'intégrera. Surveillez les bords de la marmite, c'est là que commence la brûlure. Si vous voyez un quelconque assombrissement aux bords, réduisez immédiatement la chaleur et remuez du bas. La sauce est faite lorsqu'elle enveloppe l'arrière d'une cuillère et qu'une ligne tirée à travers elle avec votre doigt tient sa forme pendant 2-3 secondes avant de se remplir lentement.",
+      "visualCue": {
+        "primaryTarget": "Deep acajou-rouge avec un éclat visible de brillant. Des bulles lentes et paresseuses brisent la surface — non pas un ébullition, mais une rotule douce et régulière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sauce encore rouge vif et mince, sort rapidement d'une cuillère. Toujours goûté de vinaigre cru. Brûlant vigoureusement.",
+            "action": "Réduire le feu à mijoter doucement et poursuivre la cuisson. La transformation se produit progressivement — donnez-lui du temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Acajou profond, enrobe une cuillère dans une couche épaisse et uniforme. Une ligne de doigt sur la cuillère tient pendant 3 secondes. Goûts équilibrés : doux, acidulé, fumé, avec une douce floraison de chaleur à la finale.",
+            "action": "Retirer de la chaleur et refroidir à la température ambiante avant de stocker ou d'utiliser."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est très épaisse, presque jammy. Brun foncé approchant noir aux bords. Goûte trop doux et amer de sucre brûlé.",
+            "action": "fouetter dans l'eau 1 cuillère à soupe à la fois à feu doux à mince. Goûtez pour l'équilibre — un éclaboussure plus de vinaigre peut restaurer l'acide."
+          }
+        ]
+      },
+      "feelCue": "Penchez - vous sur la casserole pendant qu'elle mijote — l'odeur se transforme visiblement en cuisine. D'abord vous obtenez le coup acride du vinaigre chaud, puis il se mélange en quelque chose de plus rond et plus sombre, comme l'oignon caramélisé et la fumée de bois. Quand l'odeur passe de vive à douce fumée, vous êtes proche."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Frais",
+      "inputs": [
+        "simmered_sauce"
+      ],
+      "outputState": "finished_bbq_sauce",
+      "instructions": "Retirer du feu et laisser refroidir dans la poêle pendant 10 minutes. Goûtez et ajustez: si trop sucré, ajoutez le vinaigre de cidre de pomme par la cuillère à café; si trop tranchant, ajoutez une pincée plus de sucre brun; si plat, ajoutez une petite pincée de sel et une autre goutte de Worcestershire. Transférer dans un pot en verre ou serrer le flacon. La sauce va s'épaissir davantage à mesure qu'elle refroidit — une sauce qui semble légèrement mince sur la chaleur sera parfaitement brillante et enrobée lorsqu'elle atteindra la température ambiante. Réfrigérer jusqu'à 3 semaines. La saveur s'améliore nettement après 24 heures au réfrigérateur, tandis que les épices continuent à fleurir et à s'intégrer. Réchauffer doucement avant de servir — ne plus jamais faire bouillir une fois, ou l'équilibre vinaigre changera.",
+      "visualCue": {
+        "primaryTarget": "À température ambiante : une sauce acajou épaisse, brillante et sombre qui coule lentement d'un pot incliné, enrobant le verre dans un film bordeaux translucide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours chaud et mince, coule facilement comme de l'eau. Pas encore à la consistance finie.",
+            "action": "Laisser refroidir complètement à température ambiante — 20-30 minutes minimum avant de juger l'épaisseur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, brillant, lent. Goûts équilibrés dans tous les registres : douceur initiale, tang mi-palate, profondeur fumée et légère finale cayenne. Coats une cuillère sans goutter.",
+            "action": "Transfert dans un contenant de stockage. Laisser reposer au réfrigérateur pendant 24 heures pour une meilleure saveur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Set rigide et presque solide dans le pot à froid. Presque impossible à verser.",
+            "action": "Arroser d'eau 1 cuillère à soupe à la fois à feu doux, puis refroidir."
+          }
+        ]
+      },
+      "feelCue": "Enrober un doigt propre et frotter le pouce contre le bout des doigts — la sauce devrait se sentir légèrement collante et légèrement résistante, comme un bon brillant à lèvres. Pas collant, pas aqueux. Une lécherette révèle l'arc : devant doux, milieu acide, fini fumé, et une chaleur qui se construit lentement à l'arrière de la langue."
+    }
+  ]
 };

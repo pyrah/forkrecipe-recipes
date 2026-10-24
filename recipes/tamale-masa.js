@@ -1,97 +1,223 @@
 export default {
-  repoId: "master_mexican_tamale-masa_001",
-  parentRepoId: null,
-  slug: "tamale-masa",
-  author: "ForkRecipe Kitchen",
-  title: "Tamale Masa",
-  description: "The foundation of every great tamale — nixtamalized masa harina beaten with lard and chicken stock until the dough is light enough to float in water, ready to be spread, filled, and steamed.",
-  cuisine: "Mexican",
-  culture: "Central Mexican",
-  category: "grains",
-  tags: ["mexican", "masa", "corn", "tamale", "vegetarian", "festive"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "3 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Masa harina (Maseca or fine-ground nixtamal corn flour)", ratioValue: 100, defaultUnit: "%", substitutions: ["fresh masa from a tortilleria (skip the hydration step)"] },
-    { ingId: "ing_02", role: "Fat",        name: "Lard, room temperature",                        ratioValue: 40,  defaultUnit: "%", substitutions: ["vegetable shortening (less flavor)", "refined coconut oil"] },
-    { ingId: "ing_03", role: "Liquid",     name: "Warm chicken stock (or vegetable stock)",       ratioValue: 90,  defaultUnit: "%", substitutions: ["warm water with added salt"] },
-    { ingId: "ing_04", role: "Leavener",   name: "Baking powder",                                 ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine sea salt",                                 ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Chicken bouillon powder (optional, for depth)", ratioValue: 1,   defaultUnit: "%", substitutions: ["MSG (use half the amount)"] },
+  "repoId": "master_mexican_tamale-masa_001",
+  "parentRepoId": null,
+  "slug": "tamale-masa",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tamale Masa",
+  "description": "La fondation de chaque grand tamale — masa harina nixtamalisée battue avec du saindoux et du bouillon de poulet jusqu'à ce que la pâte soit assez légère pour flotter dans l'eau, prête à être étalée, remplie et vapeur.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain central",
+  "category": "grains",
+  "tags": [
+    "Mexique",
+    "Masa",
+    "maïs",
+    "Tamale",
+    "végétarien",
+    "Fête"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01", "ing_03"],
-      outputState: "hydrated_masa",
-      instructions: "In a large bowl, combine the masa harina with the warm stock. Stir with a wooden spoon or your hands until no dry flour remains and a rough, slightly stiff dough has formed. The masa should feel like thick modeling clay — cohesive but not yet smooth. Cover the bowl with plastic wrap or a damp cloth and let the masa rest for 20 minutes. This rest allows the nixtamalized corn flour to fully absorb the liquid, swell the starches, and lose the raw, powdery texture that straight-mixed masa can have.",
-      visualCue: {
-        primaryTarget: "A pale, smooth-ish dough the color of sun-dried corn, with no dry pockets or crumbly patches — uniformly hydrated throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Dry, crumbly, or powdery patches visible; the dough crumbles when pressed.", action: "Add warm stock a tablespoon at a time and work it in — the masa needs full hydration before fat is added." },
-          { state: "Perfect",   description: "A stiff, pliable, uniformly moist dough that holds together when pressed but is not sticky. Smells of nixtamal — earthy, faintly alkaline corn.", action: "Cover and rest for 20 minutes to finish absorbing the liquid." },
-          { state: "Overdone",  description: "Dough is wet and slack, almost pasty — too much liquid added.", action: "Sprinkle in additional masa harina a tablespoon at a time and work in; the lard beating stage will emulsify some of the extra moisture." },
-        ],
-      },
-      feelCue: "Press a golf-ball of masa flat in your palm — it should hold its shape with clean edges, not crumble at the cracks or stick aggressively to your palm. The smell should be warmly earthy, like corn tortillas, not raw or chemical.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Masa harina (Maseca ou farine de maïs nixtamal fin)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "masa fraîche d'une tortilleria (skiper l'étape d'hydratation)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Cream",
-      inputs: ["ing_02", "ing_04", "ing_05", "ing_06"],
-      outputState: "whipped_lard",
-      instructions: "In a stand mixer fitted with the paddle attachment (or using a hand mixer), beat the room-temperature lard on medium-high for 3–4 minutes until it turns white, fluffy, and nearly doubles in volume. Add the baking powder, salt, and optional bouillon and beat another minute to incorporate. The lard should look and feel like thick whipped cream — light, airy, and pale. This aeration step is critical: the air beaten into the fat is what ultimately makes tamale masa light and tender, not heavy and dense.",
-      visualCue: {
-        primaryTarget: "The lard has turned white and fluffy, nearly doubled in volume, and holds soft peaks — it looks like whipped cream or thick frosting.",
-        spectrum: [
-          { state: "Underdone", description: "Lard is still translucent, greasy-looking, and has not taken on volume — it will make a dense, greasy tamale.", action: "Keep beating on high speed; aeration can take 4–5 minutes with a stand mixer." },
-          { state: "Perfect",   description: "White, cloud-like, holds soft peaks, and feels almost weightless when you scoop it. The volume increase is visible and dramatic.", action: "Begin adding the hydrated masa gradually." },
-          { state: "Overdone",  description: "Lard has over-beaten and begun to separate or look oily again — this rarely happens but can occur if the lard is too cold and then overheated by friction.", action: "Let it rest at room temperature for 5 minutes and beat briefly again — it will usually come back together." },
-        ],
-      },
-      feelCue: "Lift a spoonful of the whipped lard and shake the spoon — it should jiggle like foam and feel almost lighter than air. The contrast with cold lard from the block should be dramatic. This is the transformation that makes tamales worth making.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Lard, température ambiante",
+      "ratioValue": 40,
+      "defaultUnit": "%",
+      "substitutions": [
+        "raccourcissement des légumes (moins de saveur)",
+        "huile de coco raffinée"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["hydrated_masa", "whipped_lard"],
-      outputState: "beaten_tamale_masa",
-      instructions: "With the mixer running on medium, add the hydrated masa to the whipped lard in four additions, beating for 2 minutes between each addition. The mixture will look rough and broken at first — keep going. After all the masa is added, beat the combined dough on medium-high for 5–8 minutes, adding the remaining stock a tablespoon at a time if the dough seems too stiff. The finished masa should be smooth, fluffy, and light. Perform the float test: pinch off a small ball and drop it into a cup of cold water. If it floats, the masa is ready. If it sinks, keep beating and aerating.",
-      visualCue: {
-        primaryTarget: "A pale, fluffy dough that looks and almost feels like thick mashed potato — light, airy, with no graininess, and a faint sheen from the emulsified fat.",
-        spectrum: [
-          { state: "Underdone", description: "The dough is stiff, grainy, and heavy. The float test fails — the ball sinks immediately.", action: "Keep beating; also add stock a tablespoon at a time — the dough needs more aeration and hydration." },
-          { state: "Perfect",   description: "Smooth, fluffy, and light. A ball floats confidently in cold water. Tastes pleasantly of corn and salt, with a fatty richness that doesn't feel heavy.", action: "Use immediately or cover and refrigerate up to 2 days; bring back to room temperature before spreading." },
-          { state: "Overdone",  description: "The masa has broken and is greasy and shiny, with fat visibly separating from the corn.", action: "Add a tablespoon of cold stock and beat on high — often the emulsion can be rescued; if not, the tamales will still cook but will be slightly greasier." },
-        ],
-      },
-      feelCue: "Spread a tablespoon of masa on a corn husk and hold it up to the light — it should look almost translucent at the edges, airy and thin. The texture in your hand should feel like spreading light buttercream on a cake, not spackling.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Stock de poulet chaud (ou stock de légumes)",
+      "ratioValue": 90,
+      "defaultUnit": "%",
+      "substitutions": [
+        "eau chaude avec sel ajouté"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Rest",
-      inputs: ["beaten_tamale_masa"],
-      outputState: "rested_tamale_masa",
-      instructions: "Cover the beaten masa tightly with plastic wrap pressed directly against its surface to prevent drying. Rest at room temperature for 30 minutes before spreading onto soaked corn husks. This resting period allows the masa to relax, the starches to fully hydrate, and the flavors to mellow. While the masa rests, soak your corn husks in warm water for at least 30 minutes until fully pliable. When ready to use, wipe each husk dry and spread the masa into a thin, even rectangle — approximately 3mm thick — leaving a border at the top and sides. Fill, fold, and steam upright for 60–75 minutes until the masa pulls cleanly away from the husk.",
-      visualCue: {
-        primaryTarget: "Masa spread on a husk is smooth, even, and opaque — not runny or cracked at the edges — with a consistent thickness across the entire rectangle.",
-        spectrum: [
-          { state: "Underdone", description: "Masa is still too warm and stiff from the stand mixer; it tears when spread and doesn't adhere to the husk.", action: "Rest longer — 30 minutes is the minimum; up to 1 hour is fine." },
-          { state: "Perfect",   description: "Masa spreads smoothly and evenly with the back of a spoon, holds its shape, and has a slight tackiness that grips the husk.", action: "Fill and fold immediately; do not let the spread masa sit exposed for more than 10 minutes or it will dry at the edges." },
-          { state: "Overdone",  description: "Masa has been left uncovered and dried out — cracked at the surface, stiff at the edges.", action: "Knead in a tablespoon of warm stock to re-moisten and smooth." },
-        ],
-      },
-      feelCue: "Press your fingertip gently into the spread masa — it should spring back very slightly, leaving only the faintest impression. If it doesn't spring back at all, it may be overhydrated; if the impression stays sharp and deep, rest a little longer. A finished tamale, unwrapped from the husk, should peel away cleanly — the dough pulling from the husk like a letter from its envelope.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Poudre de bouillon de poulet (facultatif, pour la profondeur)",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": [
+        "MSG (utiliser la moitié du montant)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_03"
+      ],
+      "outputState": "hydrated_masa",
+      "instructions": "Dans un grand bol, combiner la masa harina avec le stock chaud. Mélanger avec une cuillère en bois ou vos mains jusqu'à ce qu'il ne reste plus de farine sèche et qu'une pâte rugueuse et légèrement raide se forme. La masa devrait se sentir comme une épaisse argile de modélisation, cohésive mais pas encore lisse. Couvrir le bol d'une pellicule plastique ou d'un chiffon humide et laisser reposer la masa pendant 20 minutes. Ce reste permet à la farine de maïs nixtamalisée d'absorber complètement le liquide, de gonfler les amidons et de perdre la texture brute et poudreuse que la masa mélangée droite peut avoir.",
+      "visualCue": {
+        "primaryTarget": "Une pâte pâle et lisse de la couleur du maïs séché au soleil, sans poches sèches ni taches miettes, uniformément hydratée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Plaques sèches, émiettées ou pulvérulentes visibles; la pâte s'écroule lorsqu'elle est pressée.",
+            "action": "Ajouter le stock chaud une cuillère à soupe à la fois et le travailler dans — la masa a besoin d'hydratation complète avant que la graisse est ajoutée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte rigide, souple et uniformément humide qui tient ensemble lorsqu'elle est pressée mais n'est pas collante. Des odeurs de maïs nixtamal, terreux et faiblement alcalin.",
+            "action": "Couvrir et reposer pendant 20 minutes pour finir d'absorber le liquide."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est humide et molle, presque pâteuse — trop de liquide ajouté.",
+            "action": "Saupoudrer de masa harina supplémentaire une cuillère à soupe à la fois et travailler à l'intérieur; le stade de battement de saindoux émulsifier une partie de l'humidité supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une boule de golf de masa plat dans votre paume — il devrait tenir sa forme avec des bords propres, ne pas s'écrouler aux fissures ou coller agressivement à votre paume. L'odeur doit être chaudement terreuse, comme les tortillas de maïs, pas crue ou chimique."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Crème",
+      "inputs": [
+        "ing_02",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "whipped_lard",
+      "instructions": "Dans un mélangeur de support muni de la fixation de la palette (ou à l'aide d'un mélangeur à main), battre le saindoux à température ambiante sur une hauteur moyenne de 3 à 4 minutes jusqu'à ce qu'il devienne blanc, moelleux et presque double en volume. Ajouter la poudre à pâte, le sel et le bouillon en option et battre une autre minute pour incorporer. Le saindoux doit avoir l'air d'une épaisse crème fouettée, légère, aérée et pâle. Cette étape d'aération est critique: l'air battu dans la graisse est ce qui finalement rend tamale masa léger et tendre, pas lourd et dense.",
+      "visualCue": {
+        "primaryTarget": "Le saindoux est devenu blanc et moelleux, presque doublé en volume, et tient des pics doux — on dirait de la crème fouettée ou un givre épais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Laard est encore translucide, l'air gras, et n'a pas pris de volume — il fera un tamale dense et gras.",
+            "action": "Continuez à battre à grande vitesse; l'aération peut prendre de 4 à 5 minutes avec un mélangeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Blanc, comme un nuage, tient des pics doux, et se sent presque sans poids quand vous le scoop. L'augmentation du volume est visible et spectaculaire.",
+            "action": "Commencez à ajouter la masa hydratée progressivement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le saindoux a surchauffé et a commencé à se séparer ou à redevenir huileux — cela arrive rarement mais peut se produire si le saindoux est trop froid et surchauffé par friction.",
+            "action": "Laisser reposer à température ambiante pendant 5 minutes et battre brièvement à nouveau — il reviendra généralement ensemble."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une cuillerée de saindoux fouettés et secouez la cuiller — il devrait gigoter comme de la mousse et se sentir presque plus léger que l'air. Le contraste avec le saindoux froid du bloc devrait être dramatique. C'est la transformation qui rend les tamales dignes d'être faites."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "hydrated_masa",
+        "whipped_lard"
+      ],
+      "outputState": "beaten_tamale_masa",
+      "instructions": "Avec le mélangeur fonctionnant sur support, ajouter la masa hydratée au saindoux fouetté en quatre ajouts, battant pendant 2 minutes entre chaque ajout. Le mélange aura l'air brut et cassé au début — continuez. Après toute la masa est ajoutée, battre la pâte combinée sur moyenne-élevée pendant 5–8 minutes, ajoutant le stock restant une cuillère à soupe à la fois si la pâte semble trop raide. La masa finie doit être lisse, souple et légère. Effectuez l'essai de flotteur : pincez une petite boule et déposez-la dans une tasse d'eau froide. Si elle flotte, la masa est prête. Si ça coule, continuez à battre et à aérer.",
+      "visualCue": {
+        "primaryTarget": "Une pâte pâle et moelleuse qui ressemble presque à une épaisse purée de pommes de terre — légère, aérée, sans grain, et un léger reflet de graisse émulsifiée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est rigide, granuleuse et lourde. L'essai du flotteur échoue: la boule coule immédiatement.",
+            "action": "Continuez à battre; ajoutez aussi une cuillère à soupe à la fois — la pâte a besoin de plus d'aération et d'hydratation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, moelleux et léger. Une balle flotte avec confiance dans l'eau froide. Goûte agréablement de maïs et de sel, avec une richesse grasse qui ne se sent pas lourde.",
+            "action": "Utiliser immédiatement ou couvrir et réfrigérer jusqu'à 2 jours; ramener à la température ambiante avant de s'étendre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La masa a cassé et est grasse et brillante, la graisse se séparant visiblement du maïs.",
+            "action": "Ajouter une cuillère à soupe de bouillon froid et battre à haute — souvent l'émulsion peut être sauvée; sinon, les tamales cuireont encore mais seront légèrement plus greasier."
+          }
+        ]
+      },
+      "feelCue": "Étendre une cuillère à soupe de masa sur un museau de maïs et le tenir jusqu'à la lumière — il devrait regarder presque translucide aux bords, aéré et mince. La texture de votre main devrait avoir l'impression d'étaler une légère crème au beurre sur un gâteau, et non de l'emballer."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "beaten_tamale_masa"
+      ],
+      "outputState": "rested_tamale_masa",
+      "instructions": "Couvrez bien la masa battue avec un enveloppement plastique pressé directement contre sa surface pour éviter le séchage. Reposez-vous à température ambiante pendant 30 minutes avant de s'étendre sur des mulets de maïs trempés. Cette période de repos permet à la masa de se détendre, aux amidons de s'hydrater complètement et aux saveurs de se moeller. Pendant que la masa se repose, trempez vos défenses de maïs dans de l'eau chaude pendant au moins 30 minutes jusqu'à ce qu'elles soient entièrement pliables. Lorsqu'il est prêt à l'emploi, essuyer chaque tache et étendre la masa dans un mince rectangle d'environ 3 mm d'épaisseur, laissant une bordure au sommet et aux côtés. Remplir, plier et laisser la vapeur verticalement pendant 60 à 75 minutes jusqu'à ce que la masa s'éloigne proprement de la coque.",
+      "visualCue": {
+        "primaryTarget": "Masa est lisse, uniforme et opaque, sans écoulement ni fissure aux bords, avec une épaisseur constante sur tout le rectangle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Masa est encore trop chaud et raide du mélangeur de stand ; il déchire lorsqu'il se répand et ne adhère pas à la coque.",
+            "action": "Repos plus long — 30 minutes est le minimum; jusqu'à 1 heure est très bien."
+          },
+          {
+            "state": "Perfect",
+            "description": "Masa s'étend doucement et uniformément avec l'arrière d'une cuillère, tient sa forme, et a une légère tackness qui saisit la coque.",
+            "action": "Remplir et plier immédiatement; ne laissez pas la masa s'étendre exposée pendant plus de 10 minutes ou elle séchera aux bords."
+          },
+          {
+            "state": "Overdone",
+            "description": "Masa a été laissé à découvert et séché — fissuré à la surface, raide aux bords.",
+            "action": "Agenouillez-vous dans une cuillère à soupe de bouillon chaud à réhydrater et lisser."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur le bout du doigt dans la masa à dispersion — il devrait revenir très légèrement, laissant seulement l'impression la plus faible. S'il ne ressort pas du tout, il peut être surhydraté; si l'impression reste nette et profonde, reposez-vous un peu plus longtemps. Un tamale fini, déballé du museau, devrait se détacher proprement — la pâte tirant du museau comme une lettre de son enveloppe."
+    }
+  ]
 };

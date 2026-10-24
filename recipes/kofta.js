@@ -1,82 +1,199 @@
 export default {
-  repoId: "master_levantine_kofta_001",
-  parentRepoId: null,
-  slug: "kofta",
-  author: "ForkRecipe Kitchen",
-  title: "Kofta",
-  description: "Hand-formed lamb and onion cylinders threaded on flat skewers, heavy with allspice and raw parsley — grilled over charcoal until the outside is dark and crackling while the inside stays pink-tinged and impossibly juicy.",
-  cuisine: "Levantine",
-  culture: "Pan-Levantine",
-  category: "proteins",
-  tags: ["kofta", "lamb", "grilling", "levantine", "meze", "kebab", "spiced"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 1, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Ground lamb (20–25% fat)",                  ratioValue: 500, defaultUnit: "g",      substitutions: ["80/20 ground beef", "50/50 lamb-beef blend"] },
-    { ingId: "ing_02", role: "Allium",    name: "Brown onion, grated on large holes",        ratioValue: 1,   defaultUnit: "medium", substitutions: [] },
-    { ingId: "ing_03", role: "Herb",      name: "Flat-leaf parsley, very finely chopped",   ratioValue: 0.5, defaultUnit: "cup",    substitutions: [] },
-    { ingId: "ing_04", role: "Spice",     name: "Baharat (seven-spice blend)",               ratioValue: 2,   defaultUnit: "tsp",   substitutions: ["allspice + cinnamon + black pepper"] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground cumin",                              ratioValue: 1,   defaultUnit: "tsp",   substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt",                             ratioValue: 1.5, defaultUnit: "tsp",   substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Aleppo pepper flakes or red chilli flakes", ratioValue: 0.5, defaultUnit: "tsp",   substitutions: [] },
+  "repoId": "master_levantine_kofta_001",
+  "parentRepoId": null,
+  "slug": "kofta",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kofta",
+  "description": "Bouteilles d'agneau et d'oignon formés à la main filetées sur des brochettes plates, lourdes avec du persil tout-puce et brut — grillées sur du charbon de bois jusqu'à ce que l'extérieur soit sombre et crépitant, tandis que l'intérieur reste rosé et incroyablement juteux.",
+  "cuisine": "Levantine",
+  "culture": "Pan-Levantine",
+  "category": "proteins",
+  "tags": [
+    "kofta",
+    "agneau",
+    "grillage",
+    "lévantine",
+    "meze",
+    "Kebab",
+    "épicé"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "kofta_mixture",
-      instructions: "Grate the onion on the large side of a box grater directly into a bowl, then squeeze out as much liquid as possible — wet onion will make the kofta fall off the skewer. Combine with lamb, parsley, baharat, cumin, salt, and Aleppo pepper. Mix with your hands for a full 3 minutes, working and folding the mixture as though kneading bread. The mixture should become sticky and cohesive, almost elastic, as the myosin proteins bind. Refrigerate for 30 minutes to firm.",
-      visualCue: {
-        primaryTarget: "A dark, speckled mixture with visible green parsley flecks that holds a clean shape when squeezed in the fist and does not spring back or fall apart.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture falls apart when pressed. Crumbly, not binding. Onion too wet.", action: "Squeeze out more onion liquid and continue mixing for 2 more minutes — the protein network needs time to form." },
-          { state: "Perfect",   description: "Mixture is sticky, cohesive, and clings to itself. A ball formed in the palm holds its shape and does not crack.", action: "Refrigerate for 30 minutes before shaping — cold mixture shapes far more easily." },
-          { state: "Overdone",  description: "Over-mixed to the point of being sticky and paste-like. Texture will be dense and rubbery when cooked.", action: "Shape and cook immediately — do not mix further." },
-        ],
-      },
-      feelCue: "A properly worked kofta mixture should feel like firm, slightly sticky clay — cold, dense, and malleable. It should leave a clean impression when squeezed and not crumble at the edges.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "agneau moulu (20 à 25 % de matières grasses)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "80/20 boeuf haché",
+        "50/50 mélange agneau-bœuf"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Shape",
-      inputs: ["kofta_mixture"],
-      outputState: "shaped_kofta",
-      instructions: "With wet hands, take roughly 90g of mixture (about the size of a golf ball) and press firmly around a flat metal skewer, moulding it into a cylinder about 12 cm long and 3 cm wide. Press hard enough to eliminate any air pockets — squeeze from the centre outward. Press the ends firmly closed. The kofta should feel solid and dense, not hollow. If using bamboo skewers, soak in water 30 minutes first. Alternatively, shape into patties for pan-frying.",
-      visualCue: {
-        primaryTarget: "Smooth, firm cylinders gripping the skewer tightly with no cracks, air bubbles, or thin spots.",
-        spectrum: [
-          { state: "Underdone", description: "Cracks visible along the length. Kofta feels loose around the skewer. Thin ends.", action: "Press more firmly and re-shape, smoothing with wet hands." },
-          { state: "Perfect",   description: "Uniform cylinder, smooth surface, grips the skewer firmly. Same thickness end to end. No cracks.", action: "Rest on a tray in the fridge until the grill is ready." },
-          { state: "Overdone",  description: "Over-compressed and very thin — will dry out quickly on the grill.", action: "Make them thicker and shorter for next time; 3 cm diameter is the minimum." },
-        ],
-      },
-      feelCue: "Squeeze the shaped kofta gently around the skewer — it should feel solid throughout, with no hollow or soft spots in the centre.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon brun, râpé sur de grands trous",
+      "ratioValue": 1,
+      "defaultUnit": "medium",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Grill",
-      inputs: ["shaped_kofta"],
-      outputState: "finished_kofta",
-      instructions: "Grill over very high, direct charcoal or gas heat. Do not touch for the first 3–4 minutes — let the kofta sear and release naturally from the grill. Turn once, cook another 3–4 minutes. Total cook time is 7–9 minutes for medium (still pink inside), which is the traditional target. An internal temperature of 63 C is medium. Rest on a rack for 3 minutes before serving with warm pita, tahini, and fattoush.",
-      visualCue: {
-        primaryTarget: "Dark mahogany exterior with charred edges and grill marks. Sizzling fat droplets falling into the coals.",
-        spectrum: [
-          { state: "Underdone", description: "Pale, soft exterior. Has not released from the grill cleanly.", action: "Do not force it — wait another 2 minutes. It will release when a crust has formed." },
-          { state: "Perfect",   description: "Deep caramelised crust, charred edges, juices running clear to pale pink. Interior is moist and barely pink at 63 C.", action: "Remove and rest 3 minutes — resting is what keeps the juices inside." },
-          { state: "Overdone",  description: "Black, dry, and shrunken. Fat has rendered completely, leaving the kofta tight and chalky.", action: "Serve wrapped in pita with extra sauce to compensate for lost moisture." },
-        ],
-      },
-      feelCue: "Squeeze the kofta lightly — perfectly cooked kofta gives slightly under pressure and springs back halfway. If it feels rock-hard or rubbery, it has overcooked. If it yields completely with no spring, it is underdone.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, très finement haché",
+      "ratioValue": 0.5,
+      "defaultUnit": "cup",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Baharat (mélange de sept épices)",
+      "ratioValue": 2,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "Allspice + cannelle + poivre noir"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Alep flocons de poivre ou piments rouges",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "kofta_mixture",
+      "instructions": "Râper l'oignon sur le grand côté de la boîte grater directement dans un bol, puis presser le plus de liquide possible — l'oignon mouillé fera tomber le kofta de la brochette. Combiner avec l'agneau, le persil, le bahrat, le cumin, le sel et le poivre d'Alep. Mélangez avec vos mains pendant 3 minutes, en travaillant et en pliant le mélange comme si vous pétriez du pain. Le mélange doit devenir collant et cohésif, presque élastique, comme les protéines de myosine se lient. Réfrigérer 30 minutes à ferme.",
+      "visualCue": {
+        "primaryTarget": "Un mélange foncé et tacheté avec des taches de persil vert visible qui tient une forme propre lorsqu'il est pressé dans le poing et ne ressort pas ou ne tombe pas à l'écart.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange s'effondre lorsqu'il est pressé. Doucement, pas de liaison. L'oignon trop mouillé.",
+            "action": "Retirez plus d'oignon liquide et continuez à mélanger pendant 2 minutes de plus — le réseau protéique a besoin de temps pour se former."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le mélange est collant, cohésif et s'accroche. Une balle formée dans la paume tient sa forme et ne craque pas.",
+            "action": "Réfrigérer 30 minutes avant de façonner — le mélange froid se forme beaucoup plus facilement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop mélangé au point d'être collant et collant. La texture sera dense et caoutchouteuse lorsqu'elle sera cuite.",
+            "action": "Former et cuire immédiatement — ne pas mélanger davantage."
+          }
+        ]
+      },
+      "feelCue": "Un mélange de kofta bien travaillé doit se sentir ferme et légèrement collant: froid, dense et malléable. Il devrait laisser une impression nette lorsqu'il est pressé et ne pas s'effondrer aux bords."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Forme",
+      "inputs": [
+        "kofta_mixture"
+      ],
+      "outputState": "shaped_kofta",
+      "instructions": "Avec les mains mouillées, prendre environ 90g de mélange (environ la taille d'une balle de golf) et serrer fermement autour d'une brochette en métal plat, le mouler dans un cylindre d'environ 12 cm de long et 3 cm de large. Appuyez assez fort pour éliminer les poches d'air — pressez du centre vers l'extérieur. Appuyez fermement sur les extrémités fermées. Le kofta doit se sentir solide et dense, pas creux. Si vous utilisez des brochettes de bambou, trempez dans l'eau 30 minutes d'abord. Alternativement, façonner en galettes pour le frittage.",
+      "visualCue": {
+        "primaryTarget": "Des cylindres lisses et fermes accrochent fermement la brochette sans fissures, bulles d'air ou taches fines.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des fissures visibles le long de la longueur. Kofta se sent lâche autour de la brochette. C'est fini.",
+            "action": "Appuyez plus fermement et remodeler, lisser avec les mains mouillées."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cylindre uniforme, surface lisse, accroche fermement la brochette. Même épaisseur. Pas de fissures.",
+            "action": "Reposez-vous sur un plateau au réfrigérateur jusqu'à ce que le grill soit prêt."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surcompressé et très mince – se dessécher rapidement sur la grille.",
+            "action": "Les rendre plus épais et plus courts pour la prochaine fois; 3 cm de diamètre est le minimum."
+          }
+        ]
+      },
+      "feelCue": "Pressez doucement le kofta en forme autour de la brochette – il doit se sentir solide tout au long, sans taches creuses ou molles au centre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Grille",
+      "inputs": [
+        "shaped_kofta"
+      ],
+      "outputState": "finished_kofta",
+      "instructions": "Griller sur une chaleur très élevée, directe au charbon ou au gaz. Ne touchez pas pendant les 3-4 premières minutes — laissez le kofta semer et relâchez-vous naturellement du grill. Tourner une fois, cuire encore 3-4 minutes. La durée totale de cuisson est de 7 à 9 minutes pour le milieu (toujours rose à l'intérieur), qui est la cible traditionnelle. Une température interne de 63 C est moyenne. Reposez-vous sur un rack pendant 3 minutes avant de servir avec du pita chaud, du tahini et du gras.",
+      "visualCue": {
+        "primaryTarget": "Extérieur acajou foncé avec bords carbonisés et marques de grill. Des gouttelettes de graisse étourdissantes tombent dans les charbons.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Extérieur pâle et doux. N'a pas libéré de la grille proprement.",
+            "action": "Ne le forcez pas — attendez encore 2 minutes. Il se libérera quand une croûte se sera formée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Croûte caramélisée profonde, bords carbonisés, jus limpides à rose pâle. L'intérieur est humide et à peine rose à 63°C.",
+            "action": "Retirez et reposez-vous 3 minutes — le repos est ce qui garde les jus à l'intérieur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Noir, sec et réduit. La graisse a rendu complètement, laissant le kofta serré et crayeux.",
+            "action": "Servir en pita avec de la sauce supplémentaire pour compenser la perte d'humidité."
+          }
+        ]
+      },
+      "feelCue": "Pressez le kofta légèrement — le kofta parfaitement cuit donne légèrement sous pression et ressort à mi-chemin. S'il se sent dur ou caoutchouteux, il a trop cuit. S'il donne complètement sans ressort, il est sous-fait."
+    }
+  ]
 };

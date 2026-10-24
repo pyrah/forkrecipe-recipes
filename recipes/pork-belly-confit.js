@@ -1,100 +1,251 @@
 export default {
-  repoId: "master_french_pork_belly_confit_001",
-  parentRepoId: null,
-  slug: "pork-belly-confit",
-  author: "ForkRecipe Kitchen",
-  title: "Pork Belly Confit",
-  description: "Skin-on pork belly cured overnight in salt and aromatics, then slow-cooked submerged in its own rendered fat until the collagen surrenders completely — pressed flat overnight and finished with a skin so crisp it shatters like a pane of amber glass.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "proteins",
-  tags: ["pork", "french", "confit", "belly", "slow-cook", "crackling"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "18 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 0, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Skin-on pork belly, whole piece",     ratioValue: 1200, defaultUnit: "g",   substitutions: ["duck legs for classic confit"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Coarse sea salt",                     ratioValue: 25,   defaultUnit: "g",   substitutions: ["kosher salt"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Sugar",                               ratioValue: 10,   defaultUnit: "g",   substitutions: ["brown sugar"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves, lightly crushed",      ratioValue: 5,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh thyme sprigs",                  ratioValue: 5,    defaultUnit: "sprigs", substitutions: ["dried thyme (1 tsp)"] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Bay leaves",                          ratioValue: 3,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Black peppercorns, lightly crushed",  ratioValue: 1,    defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Juniper berries, lightly crushed",    ratioValue: 0.5,  defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_09", role: "Fat",       name: "Rendered pork fat or duck fat",       ratioValue: 1000, defaultUnit: "g",   substitutions: ["a mix of lard and vegetable oil"] },
+  "repoId": "master_french_pork_belly_confit_001",
+  "parentRepoId": null,
+  "slug": "pork-belly-confit",
+  "author": "ForkRecipe Kitchen",
+  "title": "Confit Belly de porc",
+  "description": "Skin-on porc ventre guéri toute la nuit dans le sel et les aromatiques, puis cuit lentement submergé dans son propre rendu gras jusqu'à ce que le collagène se rend complètement — pressé à plat la nuit et fini avec une peau si croustillante qu'il éclate comme une vitre de verre ambre.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "proteins",
+  "tags": [
+    "porc",
+    "français",
+    "confit",
+    "ventre",
+    "Cuisson lente",
+    "crépitement"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "18 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Cure",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "cured_belly",
-      instructions: "Mix together the salt, sugar, lightly crushed garlic, thyme, bay leaves, cracked peppercorns, and juniper berries in a small bowl. Score the skin of the pork belly in a crosshatch pattern with a sharp knife or Stanley blade — cuts 1 cm apart, through the skin and just into the fat layer but not reaching the meat. This scoring promotes even crackling later. Rub the cure mixture thoroughly over every surface of the belly, working it into the score cuts and pressing the aromatics firmly into the flesh. Place skin-side up on a wire rack set over a tray, cover loosely with cling wrap, and refrigerate overnight (8-12 hours).",
-      visualCue: {
-        primaryTarget: "Belly coated in an even white-grey cure crust. Score lines visible through the cure. Tray beneath shows a small amount of drawn-out pink brine by morning.",
-        spectrum: [
-          { state: "Underdone", description: "Less than 4 hours of curing. Little or no brine at the base of the tray. The salt has not drawn moisture and begun to cycle back in as a concentrated brine.", action: "Return to the fridge. Overnight is necessary for the cure to penetrate through the fat to the meat layers." },
-          { state: "Perfect",   description: "After 8-12 hours. The tray has a visible pool of pink brine. The cure has partially dissolved. The skin feels slightly tacky and firm.", action: "Rinse the belly under cold water, pat bone-dry with paper towels, and proceed." },
-          { state: "Overdone",  description: "More than 24 hours. Belly is overly salty and the texture of the meat at the edges is dense and slightly translucent — beginning to cure rather than just season.", action: "Soak in cold water for 30 minutes to draw out some excess salt before continuing." },
-        ],
-      },
-      feelCue: "After curing, the belly feels noticeably firmer to the touch than raw — the salt has tightened the protein structure slightly and the skin has taken on a dry, papery texture.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Skin-on porc ventre, entier morceau",
+      "ratioValue": 1200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "jambes de canard pour confit classique"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Poach",
-      inputs: ["cured_belly", "ing_09"],
-      outputState: "confited_belly",
-      instructions: "Preheat the oven to 90°C (195°F). Melt the pork fat in a deep roasting dish or Dutch oven large enough to hold the belly. Place the belly skin-side down, pour in enough warm fat to completely submerge it — the fat should cover the belly by at least 1 cm. Place a piece of parchment over the surface and then the lid or tight foil. Transfer to the oven and cook for 6-8 hours. Do not rush this with higher heat. At 90°C, the collagen in the connective tissue and skin gradually converts to gelatin without ever forcing the fat to fry — the distinction between confit and poaching in fat.",
-      visualCue: {
-        primaryTarget: "The belly has turned from pale pink to an opaque, ivory-cream color throughout. Surrounded by gently trembling, clear fat — not bubbling or frying. A thin probe inserted into the meat meets almost no resistance.",
-        spectrum: [
-          { state: "Underdone", description: "Interior temperature below 70°C. Meat is still slightly pink at center. A skewer meets firm resistance. The connective tissue between fat layers has not softened.", action: "Continue confiting. At 90°C you cannot overcook the exterior while the center slowly comes up. Check at 7 hours, then again at 8." },
-          { state: "Perfect",   description: "After 6-8 hours, the belly is completely ivory and tender. A thin wooden skewer slides through every layer — meat, fat, and between — with no resistance. The skin is translucent and gelatinous.", action: "Lift carefully from the fat and proceed to pressing." },
-          { state: "Overdone",  description: "Fat was too hot (above 110°C). The belly has fried slightly — exterior is yellowed and the fat layers have begun to render out excessively.", action: "Press and chill as normal. The crackling step will still work — in fact a slightly drier belly crisps more readily." },
-        ],
-      },
-      feelCue: "After 7 hours, press the back of a spoon against the meat side — it should yield with almost no pressure, sinking gently like pressing into cold butter, each layer distinct but utterly tender.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sels de mer grossiers",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Press",
-      inputs: ["confited_belly"],
-      outputState: "pressed_belly",
-      instructions: "Line a small baking dish or loaf tin with cling wrap, leaving an overhang on all sides. Lift the belly from the fat and place it skin-side down in the lined tin. Fold the cling wrap over the top. Place another baking sheet directly on the cling wrap and weigh it down with heavy cans — at least 2 kg of weight. Refrigerate for a minimum of 6 hours, ideally overnight. The pressing compacts the belly into a uniform slab for clean portioning and forces the fat and gelatin to redistribute evenly throughout.",
-      visualCue: {
-        primaryTarget: "After pressing, the belly has become a compact, even-thickness slab. The skin is smooth and flat on the bottom. Cross-section shows defined, even layers of skin, fat, and meat.",
-        spectrum: [
-          { state: "Underdone", description: "Less than 4 hours of pressing. The belly is still rounded and uneven. The layers have not set firmly.", action: "Return to the fridge with the weight. The setting happens as the gelatin firms in the cold." },
-          { state: "Perfect",   description: "A clean, rectangular slab that holds its shape when unmoulded. Layers are clearly defined. The skin is tight and smooth on the underside.", action: "Unmould, peel off cling wrap, and portion into squares or rectangles with a sharp knife." },
-          { state: "Overdone",  description: "Not possible to over-press. More pressing time only improves the result.", action: "Proceed at your convenience — the pressed belly keeps refrigerated for up to 3 days before the final sear." },
-        ],
-      },
-      feelCue: "The pressed slab should feel cold, dense, and uniform under your palm — like a block of cold butter rather than yielding meat, the gelatin and fat having fully set.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brun"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Sear",
-      inputs: ["pressed_belly"],
-      outputState: "finished_pork_belly",
-      instructions: "Portion the pressed belly into individual serving pieces (typically 5-6 cm squares). Place a heavy oven-safe skillet — cast iron ideal — over medium-low heat. Do not add fat; the belly itself will render immediately. Place the portions skin-side down, pressing firmly with a spatula. Cook over medium-low heat for 12-18 minutes without moving — patience here is essential. The fat will slowly render and the skin will progressively crisp and turn translucent amber. It should crackle like glass underfoot when tapped with a spoon. Flip for the final 2 minutes to lightly colour the meat side.",
-      visualCue: {
-        primaryTarget: "The skin has transformed from gelatinous and pale to a deep amber, blistered, and puffed surface. When tapped with a spoon it rings and resists — it should shatter when bitten.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is still pale and slightly tacky. Makes a soft, yielding sound when pressed. Has not reached the shattering stage.", action: "Continue on medium-low heat. Do not increase heat — rushing the render causes the fat to fry before the water escapes the skin, making rubbery crackling instead of glass." },
-          { state: "Perfect",   description: "Deep amber-gold, dramatically blistered skin that makes an audible tap-tap when pressed with a spoon. The pan is full of rendered lard. Meat side is warm and glistening.", action: "Remove and blot the skin surface with a paper towel. Serve immediately — crackling degrades within minutes in humid air." },
-          { state: "Overdone",  description: "Skin has crossed from amber to dark brown. Smaller pieces may be beginning to char. Smells of burnt fat.", action: "Remove immediately. The skin is likely still delicious — the Maillard reaction on pig skin is forgiving — but do not let it go further." },
-        ],
-      },
-      feelCue: "Press the skin with the flat of a spoon during searing — the resistance increases minute by minute from soft and giving, to springy, to the final glass-hard tap that tells you it is done.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Girofles d'ail légèrement broyés",
+      "ratioValue": 5,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 5,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "Thym séché (1 c. à thé)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 3,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Graines de poivre noires, légèrement broyées",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "baies de genièvre, légèrement broyées",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Graisses de porc ou de canard rendues",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "un mélange de saindoux et d'huile végétale"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Cure",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "cured_belly",
+      "instructions": "Mélanger le sel, le sucre, l'ail légèrement broyé, le thym, les feuilles de laurier, les grains de poivre cassés et les baies de genièvre dans un petit bol. Score la peau du ventre de porc dans un motif de croisement avec un couteau tranchant ou une lame Stanley — coupe 1 cm d'écart, à travers la peau et juste dans la couche de graisse mais pas atteindre la viande. Ce score favorise même le craquement plus tard. Frotter soigneusement le mélange de guérison sur chaque surface du ventre, le travailler dans les coupes de score et presser fermement les aromatiques dans la chair. Placer le côté peau sur un rack de fil placé sur un plateau, couvrir de façon lâche avec l'enveloppe de collage, et réfrigérer pendant la nuit (8-12 heures).",
+      "visualCue": {
+        "primaryTarget": "Enrobé d'une croûte de cure blanche. Des lignes de score visibles à travers le remède. Le plateau ci-dessous montre une petite quantité de saumure rose dessinée le matin.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Moins de 4 heures de guérison. Peu ou pas de saumure à la base du plateau. Le sel n'a pas attiré l'humidité et a commencé à revenir comme une saumure concentrée.",
+            "action": "Retournez au frigo. La nuit est nécessaire pour que le remède pénètre à travers la graisse aux couches de viande."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 8-12 heures. Le plateau a une piscine visible de saumure rose. Le remède a été partiellement dissous. La peau est légèrement tachée et ferme.",
+            "action": "Rincez le ventre sous l'eau froide, faites sécher les os avec des serviettes en papier et continuez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus de 24 heures. Le ventre est trop salé et la texture de la viande aux bords est dense et légèrement translucide.",
+            "action": "Faire tremper dans l'eau froide pendant 30 minutes pour obtenir un excès de sel avant de continuer."
+          }
+        ]
+      },
+      "feelCue": "Après le durcissement, le ventre se sent nettement plus ferme au toucher qu'au cru — le sel a légèrement resserré la structure protéique et la peau a pris une texture sèche et papier."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Pochette",
+      "inputs": [
+        "cured_belly",
+        "ing_09"
+      ],
+      "outputState": "confited_belly",
+      "instructions": "Préchauffer le four à 90°C (195°F). Faire fondre la graisse de porc dans un plat de rôtissage profond ou un four hollandais assez grand pour tenir le ventre. Placez la peau du ventre vers le bas, versez suffisamment de gras chaud pour la submerger complètement — la graisse devrait couvrir le ventre d'au moins 1 cm. Placer un morceau de parchemin sur la surface, puis sur le couvercle ou le papier. Transférer au four et cuire 6-8 heures. Ne précipitez pas cela avec plus de chaleur. À 90°C, le collagène dans le tissu conjonctif et la peau se convertit progressivement en gélatine sans jamais forcer la graisse à frire — la distinction entre confit et braconnage dans la graisse.",
+      "visualCue": {
+        "primaryTarget": "Le ventre est passé du rose pâle à une couleur opaque de crème d'ivoire. Entouré d'un léger tremblement, d'une graisse limpide, sans bouillonner ni frire. Une fine sonde insérée dans la viande ne présente presque aucune résistance.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Température intérieure inférieure à 70°C. La viande est encore légèrement rose au centre. Une brochette rencontre une résistance ferme. Le tissu conjonctif entre les couches de graisse n'a pas ramolli.",
+            "action": "Continuez à confiner. À 90 °C, vous ne pouvez pas trop cuire l'extérieur pendant que le centre monte lentement. Vérifiez à 7 heures, puis encore à 8 heures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 6-8 heures, le ventre est complètement ivoire et tendre. Une fine brochette en bois glisse à travers chaque couche — viande, graisse et entre — sans résistance. La peau est translucide et gélatine.",
+            "action": "Soulever soigneusement de la graisse et procéder au pressage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La graisse était trop chaude (au-dessus de 110°C). Le ventre s'est légèrement frit — l'extérieur est jauni et les couches de graisse ont commencé à se défaire excessivement.",
+            "action": "Appuyez et refroidissez comme d'habitude. L'étape de craquage fonctionnera encore — en fait, un ventre légèrement plus sec croustilles plus facilement."
+          }
+        ]
+      },
+      "feelCue": "Au bout de 7 heures, pressez l'arrière d'une cuillère contre le côté de la viande — elle devrait céder avec presque aucune pression, en s'enfonceant doucement comme en pressant dans le beurre froid, chaque couche distincte mais complètement tendre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Appuyez sur",
+      "inputs": [
+        "confited_belly"
+      ],
+      "outputState": "pressed_belly",
+      "instructions": "Étaler un petit plat de cuisson ou une boîte à pain avec de l'enveloppe collante, laissant un surplomb de tous les côtés. Soulevez le ventre de la graisse et placez-le côté peau vers le bas dans l'étain doublé. Pliez l'enveloppe sur le dessus. Placer une autre plaque de cuisson directement sur l'enveloppe de collage et peser avec des boîtes lourdes — au moins 2 kg de poids. Réfrigérer pendant au moins 6 heures, idéalement pendant la nuit. Le pressage compacte le ventre dans une dalle uniforme pour une portion propre et force la graisse et la gélatine à se redistribuer uniformément.",
+      "visualCue": {
+        "primaryTarget": "Après avoir pressé, le ventre est devenu une dalle compacte et uniforme. La peau est lisse et plate sur le fond. La coupe transversale montre des couches de peau, de graisse et de viande définies.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Moins de 4 heures de pression. Le ventre est encore arrondi et inégal. Les couches n'ont pas fixé fermement.",
+            "action": "Retourner au réfrigérateur avec le poids. Le cadre se produit comme les firmes de gélatine dans le froid."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une dalle rectangulaire propre qui tient sa forme lorsqu'elle n'est pas moulée. Les calques sont clairement définis. La peau est serrée et lisse sur le dessous.",
+            "action": "Démoudre, éplucher l'enveloppe de collage et en faire des carrés ou des rectangles avec un couteau tranchant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Impossible de trop presser. Le temps de pression ne fait qu'améliorer le résultat.",
+            "action": "Continuez à votre convenance — le ventre pressé se conserve réfrigéré jusqu'à 3 jours avant la fermeture finale."
+          }
+        ]
+      },
+      "feelCue": "La dalle pressée devrait se sentir froide, dense et uniforme sous votre paume — comme un bloc de beurre froid plutôt que de donner de la viande, la gélatine et la graisse ayant été entièrement serties."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Sear",
+      "inputs": [
+        "pressed_belly"
+      ],
+      "outputState": "finished_pork_belly",
+      "instructions": "Porter le ventre pressé en portions individuelles (généralement 5-6 cm carrés). Placez une poêle à four lourde, en fonte idéale, à feu moyen-doux. Ne pas ajouter de graisse; le ventre lui-même rendra immédiatement. Placez les portions côté peau vers le bas, appuyez fermement avec une spatule. Faire cuire à feu moyen-doux pendant 12-18 minutes sans bouger — la patience ici est essentielle. La graisse se rendra lentement et la peau sera progressivement croquante et devenir translucide ambre. Il devrait craquer comme du verre sous les pieds quand tapoté avec une cuillère. Dépliez les 2 dernières minutes pour colorer légèrement le côté viande.",
+      "visualCue": {
+        "primaryTarget": "La peau est passée de gélatineux et pâle à un ambre profond, cloqué et gonflé. Lorsqu'elle est tapée avec une cuillère, elle sonne et résiste; elle doit se briser lorsqu'elle est mordue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore pâle et légèrement collante. Fait un son doux et productif lorsqu'il est pressé. N'a pas atteint le stade de rupture.",
+            "action": "Continuer à feu moyen-doux. Ne pas augmenter la chaleur — précipiter le rendu fait frire la graisse avant que l'eau n'échappe à la peau, faisant craquer caoutchouteux au lieu du verre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep ambre-or, éclaboussure spectaculaire peau qui fait un tap-tap audible lorsqu'il est pressé avec une cuillère. La poêle est pleine de saindoux. Le côté viande est chaud et brillant.",
+            "action": "Retirer et éponger la surface de la peau avec une serviette en papier. Servir immédiatement — les fissures se dégradent en quelques minutes dans l'air humide."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau est passée d'ambre à brun foncé. Des morceaux plus petits peuvent commencer à être char. Des odeurs de graisse brûlée.",
+            "action": "Supprimer immédiatement. La peau est probablement encore délicieuse — la réaction de Maillard sur la peau de porc est pardonnante — mais ne la laissez pas aller plus loin."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la peau avec l'aplat d'une cuillère pendant la mise en mer — la résistance augmente de minute en minute du doux et donnant, au printemps, au dernier robinet de verre dur qui vous dit que c'est fait."
+    }
+  ]
 };

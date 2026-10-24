@@ -1,84 +1,222 @@
 export default {
-  repoId: "master_italian_tonnato_sauce_001",
-  parentRepoId: null,
-  slug: "tonnato-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Tonnato Sauce",
-  description: "A blender emulsion of oil-packed tuna, anchovy, capers, and mayonnaise — cold, silky, and unapologetically briny, the sauce that makes vitello tonnato what it is and transforms roasted vegetables into something quietly extraordinary.",
-  cuisine: "Italian",
-  culture: "Piedmontese",
-  category: "sauces",
-  tags: ["italian", "piedmontese", "tuna", "cold-sauce", "anchovy", "capers", "blender"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 4, sour: 2, bitter: 0, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Oil-packed tuna, well drained (quality matters)",    ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Umami",     name: "Anchovy fillets in oil, drained",                   ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning", name: "Capers, rinsed (salt-packed preferred)",            ratioValue: 20,  defaultUnit: "parts", substitutions: ["caper berries, halved"] },
-    { ingId: "ing_04", role: "Fat",       name: "Mayonnaise (egg-yolk based, full-fat)",             ratioValue: 80,  defaultUnit: "parts", substitutions: ["Greek yogurt for a lighter version"] },
-    { ingId: "ing_05", role: "Acid",      name: "Fresh lemon juice",                                 ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Acid",      name: "White wine vinegar",                                ratioValue: 15,  defaultUnit: "parts", substitutions: ["Champagne vinegar"] },
-    { ingId: "ing_07", role: "Fat",       name: "Extra-virgin olive oil",                            ratioValue: 30,  defaultUnit: "parts", substitutions: ["light olive oil for a subtler flavor"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine sea salt",                                     ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "White pepper, freshly ground",                      ratioValue: 1,   defaultUnit: "parts", substitutions: ["black pepper"] },
+  "repoId": "master_italian_tonnato_sauce_001",
+  "parentRepoId": null,
+  "slug": "tonnato-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce au Tonnato",
+  "description": "Une émulsion de mélangeur de thon, d'anchois, de câpres et de mayonnaise, froide, soyeuse et non apologétique, la sauce qui fait du vitello tonnato ce qu'il est et transforme les légumes rôtis en quelque chose d'extraordinaire.",
+  "cuisine": "Italien",
+  "culture": "Piémontais",
+  "category": "sauces",
+  "tags": [
+    "Italien",
+    "piémontais",
+    "thon",
+    "Sauce froide",
+    "anchois",
+    "Câpres",
+    "Mélangeur"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_05", "ing_06"],
-      outputState: "tuna_base",
-      instructions: "Add the drained tuna, anchovy fillets, rinsed capers, lemon juice, and white wine vinegar to a blender. The quality of the tuna is the ceiling of this sauce — use the best oil-packed tuna you can find; water-packed tuna produces a grainy, dull result. Blend on high for 60–90 seconds until the mixture is completely smooth. There should be no visible tuna flakes, anchovy pieces, or caper skins. At this stage the mixture will be thick, blond-beige, and intensely savory — almost overwhelmingly salty and sour before the mayo is added.",
-      visualCue: {
-        primaryTarget: "A smooth, uniform pale-beige paste with absolutely no visible fish flakes, herb pieces, or caper skins — fine-textured enough to flow from the blender jar when tipped.",
-        spectrum: [
-          { state: "Underdone", description: "Tuna flakes still visible as distinct pieces. The mixture is grainy and chunky rather than paste-smooth. Anchovy may still be identifiable as thin ribbons.", action: "Blend for another 30–45 seconds at full speed. If the blades are struggling, add a splash of the lemon juice or a tablespoon of cold water to free the mixture." },
-          { state: "Perfect",   description: "Completely smooth, uniform pale-beige emulsion. The texture is fine and cohesive — closer to hummus than to pâté. The smell is intensely briny and savory, with a clean citrus lift from the vinegar and lemon.", action: "Add the mayonnaise and blend again briefly to create the finished emulsion." },
-          { state: "Overdone",  description: "The tuna base has been blended so long it is warm from friction and starting to look slightly aerated — it will appear lighter and more foamy than a smooth paste.", action: "Proceed immediately to add the mayo; the colder, denser mayonnaise will cool and de-aerate the mixture." },
-        ],
-      },
-      feelCue: "Rub a small amount of the tuna base between fingers — it should feel perfectly smooth, dense, and slightly sticky from the proteins, with no graininess whatsoever. Any roughness means more blending is needed.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Thon décortiqué, bien drainé (questions de qualité)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["tuna_base", "ing_04"],
-      outputState: "tonnato_emulsion",
-      instructions: "Add the mayonnaise to the blender with the tuna base. Blend on medium speed for 20–30 seconds until completely combined — do not over-blend at this stage, as the mayonnaise can break under prolonged high-speed blending. The sauce will transform from the stark, too-salty tuna paste into something considerably more rounded, creamy, and pale. The mayonnaise provides the emulsifying structure, fat, and body that ties everything together. Scrape down the sides and blend for 5 more seconds if any unmixed mayo is visible.",
-      visualCue: {
-        primaryTarget: "A smooth, pale ivory-cream sauce — noticeably lighter in color than the tuna base, with a uniform, creamy texture and a glossy surface.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of white mayonnaise are still visible against the beige tuna base. The texture is uneven and the flavor tastes disjointed — salty tuna in one bite, flat mayo in the next.", action: "Blend for another 10–15 seconds, scraping the sides well beforehand. The two components will combine quickly once the blade reaches all surfaces." },
-          { state: "Perfect",   description: "A smooth, homogeneous ivory-cream sauce with no visible streaks or variations in color. The flavor is now cohesive: savory, briny, creamy, and bright with acid.", action: "Stream in the olive oil and season with salt and white pepper to finish." },
-          { state: "Overdone",  description: "The sauce has been blended too long and the mayonnaise emulsion is beginning to break — the surface looks greasy and the texture is separating.", action: "Transfer to a bowl and whisk in a tablespoon of ice-cold water to help re-emulsify. Do not return to the blender." },
-        ],
-      },
-      feelCue: "A properly emulsified tonnato should coat a spoon in a smooth, even layer that clings without running — similar to a slightly loosened mayonnaise. If it slides off like water, the emulsion needs more body.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Filets d'anchois dans l'huile, égouttés",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Season",
-      inputs: ["tonnato_emulsion", "ing_07", "ing_08", "ing_09"],
-      outputState: "tonnato_sauce",
-      instructions: "Transfer the sauce to a bowl. Stream in the olive oil while whisking by hand — this adds a final layer of richness and adjusts the consistency. The olive oil will loosen the sauce slightly; add only as much as needed to reach the consistency you want: thicker for spreading on a platter of sliced veal, thinner for drizzling over roasted cauliflower or boiled eggs. Season with salt (taste first — the tuna, anchovies, and capers carry a great deal of salt) and white pepper. Taste and adjust acid if needed. Refrigerate immediately; tonnato sauce keeps for 3 days and is always served cold.",
-      visualCue: {
-        primaryTarget: "A pale ivory sauce with a light, drizzleable consistency and a subtle sheen from the olive oil — it should pour steadily from a spoon in an unbroken stream.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is too thick and stiff — it mounds on the spoon rather than flowing. The flavor is flat and one-dimensional before the olive oil rounds it out.", action: "Add more olive oil a teaspoon at a time, whisking after each addition until the sauce reaches a slow-pouring consistency." },
-          { state: "Perfect",   description: "The sauce flows in a slow, steady pour, coats the back of a spoon in a generous, even layer, and reveals complex flavor: first the creaminess of mayo, then the deep umami of tuna and anchovy, then the bright acid cut of lemon, then a gentle brine finish from the capers.", action: "Refrigerate until cold before serving. The sauce firms slightly when cold and the flavor deepens — made ahead by 2–3 hours is ideal." },
-          { state: "Overdone",  description: "Too much olive oil — the sauce is thin and oily, running immediately rather than coating. It may also look slightly broken, with oil pooling on the surface.", action: "Whisk in another tablespoon of mayonnaise to re-emulsify and add body. If the oil has separated, do not blend again — whisk vigorously by hand instead." },
-        ],
-      },
-      feelCue: "The finished tonnato should feel silky and dense on the tongue — it coats the palate and releases flavor slowly, the brininess and umami arriving in sequence rather than all at once. Serve it cold and generous.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Récipients, rincés (favorisé pour le sel)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "baies de câpres, coupées en deux"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Mayonnaise (à base d'œufs, pleine graisse)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Yogourt grec pour une version plus légère"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vinaigre de Champagne"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile d'olive légère pour une saveur plus subtile"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Poivre blanc, fraîchement moulu",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre noir"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "tuna_base",
+      "instructions": "Ajouter le thon égoutté, les filets d'anchois, les câpres rincés, le jus de citron et le vinaigre de vin blanc dans un mélangeur. La qualité du thon est le plafond de cette sauce — utilisez le meilleur thon rempli d'huile que vous pouvez trouver; le thon rempli d'eau produit un résultat granuleux et terne. Mélanger en haut pendant 60 à 90 secondes jusqu'à ce que le mélange soit complètement lisse. Il ne doit pas y avoir de flocons de thon visibles, de morceaux d'anchois ou de peaux de câpres. À ce stade, le mélange sera épais, blond-bêti et intensément salé, presque très salé et aigre avant d'ajouter la mayo.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse, uniforme et beige pâle, sans flocons de poissons visibles, de morceaux d'herbes ou de peaux de câpres, suffisamment texturée pour s'écouler du pot de mélangeur lorsqu'il est touffu.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le thon est encore visible comme des morceaux distincts. Le mélange est granuleux et volumineux plutôt que pâte-mousse. L'anchois peut encore être identifiable comme ruban mince.",
+            "action": "Mélanger encore 30 à 45 secondes à pleine vitesse. Si les lames se battent, ajoutez un jet de jus de citron ou une cuillère à soupe d'eau froide pour libérer le mélange."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement lisse, émulsion beige pâle uniforme. La texture est fine et cohésive, plus proche de l'hummus que du pâté. L'odeur est intensément bruine et salée, avec un lift d'agrumes propre du vinaigre et du citron.",
+            "action": "Ajouter la mayonnaise et mélanger à nouveau brièvement pour créer l'émulsion finie."
+          },
+          {
+            "state": "Overdone",
+            "description": "La base de thon a été mélangée si longtemps qu'elle est chaude par friction et commence à avoir un aspect légèrement aéré; elle apparaîtra plus légère et plus mousseuse qu'une pâte lisse.",
+            "action": "Procéder immédiatement à l'ajout de la mayonnaise; la mayonnaise plus froide et plus dense refroidira et désaérera le mélange."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité de la base de thon entre les doigts — elle doit se sentir parfaitement lisse, dense et légèrement collante des protéines, sans grain. Toute rugosité signifie plus de mélange est nécessaire."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "tuna_base",
+        "ing_04"
+      ],
+      "outputState": "tonnato_emulsion",
+      "instructions": "Ajouter la mayonnaise au mélangeur avec la base de thon. Mélanger à vitesse moyenne de 20 à 30 secondes jusqu'à ce qu'il soit complètement combiné — ne pas surbriller à ce stade, car la mayonnaise peut se briser sous un mélange prolongé à grande vitesse. La sauce se transformera de la pâte de thon, trop salée, en quelque chose de beaucoup plus arrondi, crémeux et pâle. La mayonnaise fournit la structure émulsifiante, la graisse et le corps qui relie tout ensemble. Grattez les côtés et mélangez pendant 5 secondes si une mayo non mélangée est visible.",
+      "visualCue": {
+        "primaryTarget": "Une sauce à la crème d'ivoire lisse et pâle – nettement plus légère que la base du thon, avec une texture uniforme et crémeuse et une surface brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des écharpes de mayonnaise blanche sont encore visibles contre la base de thon beige. La texture est inégale et le goût est disjoint — thon salé dans une bouchée, mayo plat dans la prochaine.",
+            "action": "Mélanger encore 10-15 secondes, en grattant bien les côtés avant. Les deux composants se combineront rapidement lorsque la lame atteindra toutes les surfaces."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce à la crème d'ivoire lisse et homogène sans stries visibles ni variations de couleur. La saveur est maintenant cohésive: savoureuse, bricolée, crémeuse et lumineuse avec de l'acide.",
+            "action": "Arroser l'huile d'olive et assaisonner de sel et de poivre blanc pour finir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été mélangée trop longtemps et l'émulsion de mayonnaise commence à se briser — la surface semble grasse et la texture se sépare.",
+            "action": "Transférer dans un bol et fouetter dans une cuillère à soupe d'eau glacée pour aider à réémulsionner. Ne retournez pas au mélangeur."
+          }
+        ]
+      },
+      "feelCue": "Un tonnato correctement émulsifié devrait enrober une cuillère dans une couche lisse et uniforme qui s'accroche sans courir, semblable à une mayonnaise légèrement délavée. Si elle glisse comme de l'eau, l'émulsion a besoin de plus de corps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "tonnato_emulsion",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "tonnato_sauce",
+      "instructions": "Transférer la sauce dans un bol. Rincer l'huile d'olive tout en fouettant à la main — cela ajoute une dernière couche de richesse et ajuste la consistance. L'huile d'olive desserre légèrement la sauce; ajouter autant que nécessaire pour atteindre la consistance que vous voulez: plus épais pour étendre sur un plateau de veau tranché, plus mince pour arroser sur le chou-fleur rôti ou les œufs bouillis. Assaisonner de sel (le thon, les anchois et les câpres portent beaucoup de sel) et de poivre blanc. Goûtez et ajustez l'acide si nécessaire. Réfrigérer immédiatement; la sauce tonnato conserve 3 jours et est toujours servie à froid.",
+      "visualCue": {
+        "primaryTarget": "Une sauce d'ivoire pâle avec une légère consistance drizzleable et un reflet subtil de l'huile d'olive — il devrait verser régulièrement d'une cuillère dans un ruisseau intact.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est trop épaisse et raide — elle frotte sur la cuillère plutôt que de couler. La saveur est plate et unidimensionnelle avant que l'huile d'olive le ronge.",
+            "action": "Ajouter plus d'huile d'olive une cuillère à café à la fois, en fouettant après chaque addition jusqu'à ce que la sauce atteigne une consistance à soupe lente."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce coule dans une goutte lente et régulière, enrobe l'arrière d'une cuillère dans une couche généreuse et uniforme, et révèle une saveur complexe : d'abord la crémosité de mayo, puis l'umami profond de thon et d'anchois, puis la coupe d'acide vif de citron, puis une finale saumure douce des câpres.",
+            "action": "Réfrigérer jusqu'à froid avant de servir. La sauce ferme légèrement quand le froid et la saveur s'approfondit — fait en avance de 2 à 3 heures est idéal."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop d'huile d'olive — la sauce est fine et grasse, courant immédiatement plutôt qu'enrobée. Il peut également avoir l'air légèrement cassé, avec un pool d'huile à la surface.",
+            "action": "fouetter dans une autre cuillère à soupe de mayonnaise pour réémulsionner et ajouter le corps. Si l'huile s'est séparée, ne pas se fondre à nouveau — fouetter vigoureusement à la main."
+          }
+        ]
+      },
+      "feelCue": "Le tonnato fini devrait se sentir soyeux et dense sur la langue — il enrobe le palais et libère la saveur lentement, le brininess et l'umami arrivant en séquence plutôt que tout à la fois. Servez-le froid et généreux."
+    }
+  ]
 };

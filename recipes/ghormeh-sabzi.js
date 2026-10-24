@@ -1,103 +1,277 @@
 export default {
-  repoId: "master_persian_ghormeh_sabzi_001",
-  parentRepoId: null,
-  slug: "ghormeh-sabzi",
-  author: "ForkRecipe Kitchen",
-  title: "Ghormeh Sabzi",
-  description: "Iran's national dish — a dark, deeply herby stew of lamb, kidney beans, and an enormous quantity of dried and fried herbs, given its distinctive sour punch by dried Persian limes (limoo omani).",
-  cuisine: "Persian",
-  culture: "Iranian",
-  category: "proteins",
-  tags: ["stew", "persian", "herb", "lamb", "dried lime"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "3 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 3, bitter: 2, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in lamb shoulder (3-4 cm chunks)",       ratioValue: 100, defaultUnit: "parts", substitutions: ["beef chuck", "lamb neck"] },
-    { ingId: "ing_02", role: "Herb",      name: "Fresh or dried flat-leaf parsley (chopped)",  ratioValue: 40,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Herb",      name: "Fresh or dried fenugreek leaves",             ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Herb",      name: "Fresh or dried cilantro",                     ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Green onion tops or chives (chopped)",        ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Protein",   name: "Cooked kidney beans (or canned, drained)",    ratioValue: 35,  defaultUnit: "parts", substitutions: ["red beans"] },
-    { ingId: "ing_07", role: "Acid",      name: "Dried Persian limes / limoo omani (pierced)", ratioValue: 6,   defaultUnit: "parts", substitutions: ["dried black limes", "2 tbsp fresh lime juice as last resort"] },
-    { ingId: "ing_08", role: "Allium",    name: "Yellow onion (finely diced)",                  ratioValue: 35,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Ground turmeric",                              ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Fat",       name: "Neutral oil or ghee",                          ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning", name: "Fine salt and black pepper",                   ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_12", role: "Liquid",    name: "Water",                                        ratioValue: 80,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_persian_ghormeh_sabzi_001",
+  "parentRepoId": null,
+  "slug": "ghormeh-sabzi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ghormeh Sabzi",
+  "description": "Le plat national iranien — un ragoût d'agneau, de haricots et d'une énorme quantité d'herbes séchées et frites, profondément herbies, étant donné son poinçon aigre caractéristique par les citrons perses séchés (limoo omani).",
+  "cuisine": "Perse",
+  "culture": "Iranien",
+  "category": "proteins",
+  "tags": [
+    "ragoût",
+    "persienne",
+    "herbe",
+    "agneau",
+    "chaux séchée"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "3 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 2,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Fry",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_10"],
-      outputState: "fried_herb_mixture",
-      instructions: "This step is the heart of ghormeh sabzi. Heat 8 parts of the oil in a wide pan over medium heat. Add ALL the herbs — parsley, fenugreek, cilantro, green onion — and fry, stirring constantly, for 20-30 minutes until they have turned very dark green, almost black, are completely dry, and smell nutty and deeply herbal rather than fresh and grassy. They will reduce to a fraction of their original volume. This is not a sauté — it is a long, patient frying that transforms raw herbs into something profound.",
-      visualCue: {
-        primaryTarget: "Herbs are very dark green approaching black, completely dry, crumbling slightly when pressed with a spoon. The oil in the pan is now a deep, fragrant herb oil.",
-        spectrum: [
-          { state: "Underdone", description: "Herbs are still bright green and releasing steam — they are sautéed, not fried. The flavor will be thin and fresh rather than deep.", action: "Continue frying over medium heat, stirring every 2-3 minutes, for 10-15 more minutes." },
-          { state: "Perfect",   description: "Dark, nearly black-green herbs that are dry to the touch, nutty-smelling, and collapsed to about one-quarter of their raw volume.", action: "Set aside in the pan — these herbs and their oil go into the stew together." },
-          { state: "Overdone",  description: "Herbs have turned uniformly black and smell acrid rather than nutty — they have burned, not darkened.", action: "Discard and restart the herb fry with fresh herbs — burned herbs will make the stew bitter." },
-        ],
-      },
-      feelCue: "Perfectly fried herbs crumble when pressed with a spoon — dry and dark like ground coffee, releasing a deeply savory, earthy aroma.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Épaule d'agneau désossée (3-4 cm)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mandrin de boeuf",
+        "cou d'agneau"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_01", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "browned_lamb_base",
-      instructions: "In a large, heavy pot, heat the remaining oil over medium-high heat. Add the diced onion and cook until golden-brown, about 10 minutes. Add the lamb pieces and turmeric, season generously with salt and pepper, and brown the lamb on all sides — 5-6 minutes per batch. Do not crowd the pot. The goal is a deep brown crust on the meat, not grey steaming.",
-      visualCue: {
-        primaryTarget: "Onions are deep golden and soft; lamb pieces are mahogany-brown on at least two sides, with rendered exterior fat.",
-        spectrum: [
-          { state: "Underdone", description: "Lamb is grey and releasing liquid; onions are still translucent.", action: "Increase heat and ensure pieces are not crowded — brown in batches." },
-          { state: "Perfect",   description: "Deeply browned lamb with golden onion — the pot bottom is caramelized and dark, not burnt. Smells meaty and rich.", action: "Add water and proceed to the long braise." },
-          { state: "Overdone",  description: "Pot bottom is scorching and blackened; onions are dark brown with burnt edges.", action: "Deglaze with a splash of water, scraping the good fond; discard any truly black bits." },
-        ],
-      },
-      feelCue: "The sizzle should be a consistent, aggressive hiss — if it quiets to a soft bubble, the pan has cooled and meat will steam instead of sear.",
+      "ingId": "ing_02",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, frais ou séchés",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Braise",
-      inputs: ["browned_lamb_base", "fried_herb_mixture", "ing_06", "ing_07", "ing_12"],
-      outputState: "braised_ghormeh_sabzi",
-      instructions: "Add the fried herb mixture (with all its oil) to the pot with the browned lamb. Add the pierced dried limes and the cooked kidney beans. Pour in enough water to barely cover — about 80 parts. Bring to a boil, skim any foam, reduce to a very low simmer, cover, and cook for 2.5-3 hours. The stew should barely move — a lazy bubble every 5-10 seconds. Check every 45 minutes and add splashes of water if it tightens too much.",
-      visualCue: {
-        primaryTarget: "A very dark, almost black-green stew with a deep reddish-amber oil floating on the surface. The dried limes have swollen and softened. The lamb is falling-tender.",
-        spectrum: [
-          { state: "Underdone", description: "Stew is still brown-green rather than deep dark; lamb is firm and chewy; dried limes are still hard.", action: "Continue braising — ghormeh sabzi cannot be rushed; the color change takes time." },
-          { state: "Perfect",   description: "The stew is dark and almost black-green, deeply savory with a round sourness from the limes. Lamb pulls apart with no resistance. Sauce is thick and coating.", action: "Taste: adjust salt and let sit covered for 15 minutes off heat before serving." },
-          { state: "Overdone",  description: "Beans are dissolving into the stew, lamb has shredded completely, and the sauce has scorched at the bottom.", action: "Remove from heat immediately. The shredded texture is still authentic; just ensure there is no bitterness from scorching." },
-        ],
-      },
-      feelCue: "Press a dried lime against the side of the pot after 2 hours — it should compress easily, its sourness fully leached into the stew.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Feuilles de fénugreek fraîches ou séchées",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Season",
-      inputs: ["braised_ghormeh_sabzi", "ing_11"],
-      outputState: "finished_ghormeh_sabzi",
-      instructions: "Taste the stew carefully. The flavor should be deeply savory, bitter-herbal, and sour — the sourness is the defining characteristic. If it lacks sourness, squeeze a softened dried lime against the side of the pot to release its remaining juice. If it lacks depth, simmer uncovered for 10 minutes to concentrate. Adjust salt. Serve over Persian rice (tahdig if possible), with the dried limes placed on top as a garnish.",
-      visualCue: {
-        primaryTarget: "A very dark, oil-sheened stew with visible lamb and beans, the sauce thick enough to coat a spoon with a dark, opaque layer.",
-        spectrum: [
-          { state: "Underdone", description: "Stew is watery and light-colored; the herb and lime character is thin.", action: "Simmer uncovered for 15-20 more minutes to reduce and concentrate." },
-          { state: "Perfect",   description: "The stew is dense, dark, and coats the back of a spoon. It smells complex — earthy, sour, deeply herbal. The oil on the surface is a deep khaki-green.", action: "Serve at once or rest overnight — ghormeh sabzi improves dramatically on day two." },
-          { state: "Overdone",  description: "Stew has become paste-like and clings to the pot; sourness is overwhelming.", action: "Add a splash of water and a pinch of sugar to balance; stir gently over low heat." },
-        ],
-      },
-      feelCue: "A spoonful of finished ghormeh sabzi should feel heavy and coating on the tongue — dense and serious, not light or brothy.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Coriandre fraîche ou séchée",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Planchers d'oignons verts ou ciboulette",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Graines de rein cuites (ou en conserve, égouttées)",
+      "ratioValue": 35,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "haricots rouges"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Lime perse séchée / limoo omani (piercé)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chaux noire séchée",
+        "2 c. à soupe de jus de lime frais en dernier recours"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Oignon jaune (en dés)",
+      "ratioValue": 35,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile neutre ou ghee",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin et poivre noir",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Fry",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_10"
+      ],
+      "outputState": "fried_herb_mixture",
+      "instructions": "Cette étape est le cœur de Ghormeh sabzi. Chauffer 8 parties de l'huile dans une casserole large à feu moyen. Ajouter TOUTES les herbes — persil, fenugrec, coriandre, oignon vert — et faire frire, en remuant constamment, pendant 20-30 minutes jusqu'à ce qu'elles deviennent vert très foncé, presque noir, sont complètement sèches, et sentent la noix et les herbes profondes plutôt que fraîches et herbacées. Ils réduiront à une fraction de leur volume original. Ce n'est pas une aubaine, c'est une longue friture patiente qui transforme les herbes crues en quelque chose de profond.",
+      "visualCue": {
+        "primaryTarget": "Les herbes sont vert très foncé approchant noir, complètement sèches, s'écroulant légèrement lorsqu'elles sont pressées avec une cuillère. L'huile dans la poêle est maintenant une huile d'herbe profonde et parfumée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les herbes sont encore vert vif et libèrent de la vapeur — elles sont sautées, pas frites. La saveur sera fine et fraîche plutôt que profonde.",
+            "action": "Continuer à frire à feu moyen, en remuant toutes les 2-3 minutes, pendant 10-15 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Herbes sombres, presque vert noir, sèches au toucher, pétillantes et effondrées à environ un quart de leur volume brut.",
+            "action": "Mettre de côté dans la poêle: ces herbes et leur huile entrent dans le ragoût ensemble."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les herbes sont devenues uniformément noires et sentaient l'acride plutôt que la noix — elles ont brûlé, et non l'obscurité.",
+            "action": "Jetez et redémarrez l'herbe avec des herbes fraîches — les herbes brûlées rendront le ragoût amer."
+          }
+        ]
+      },
+      "feelCue": "Des herbes parfaitement frites s'effondrent lorsqu'elles sont pressées à l'aide d'une cuillère — du café sec et sombre comme du café moulu, libérant un arôme de terre profondément salé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_01",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "browned_lamb_base",
+      "instructions": "Dans un grand pot lourd, chauffer le reste de l'huile à feu moyen-vif. Ajouter l'oignon en dés et cuire jusqu'à ce qu'il soit doré, environ 10 minutes. Ajouter les morceaux d'agneau et le curcuma, assaisonner généreusement de sel et de poivre et faire revenir l'agneau de tous les côtés — 5-6 minutes par lot. Ne foulez pas le pot. L'objectif est une croûte brun foncé sur la viande, pas de la vapeur grise.",
+      "visualCue": {
+        "primaryTarget": "Les oignons sont d'or profond et doux; les morceaux d'agneau sont acajou-brun sur au moins deux côtés, avec rendu gras extérieur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'agneau est gris et libère du liquide; les oignons sont encore translucides.",
+            "action": "Augmenter la chaleur et veiller à ce que les morceaux ne soient pas encombrés — brunir en lots."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'agneau très brun avec de l'oignon doré — le fond du pot est caramélisé et sombre, non brûlé. Ça sent la viande et la richesse.",
+            "action": "Ajouter l'eau et passer à la longue braise."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le fond du pot est brûlant et noirci; les oignons sont brun foncé avec des bords brûlés.",
+            "action": "Déglacer avec une éclaboussure d'eau, grattant le bon fond; jeter les morceaux vraiment noirs."
+          }
+        ]
+      },
+      "feelCue": "Le sizzle devrait être un sifflement constant et agressif — s'il se calme à une bulle molle, la poêle a refroidi et la viande va vapeur au lieu de la mer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "browned_lamb_base",
+        "fried_herb_mixture",
+        "ing_06",
+        "ing_07",
+        "ing_12"
+      ],
+      "outputState": "braised_ghormeh_sabzi",
+      "instructions": "Ajouter le mélange d'herbe frite (avec toute son huile) au pot avec l'agneau brun. Ajouter les citrons secs percés et les haricots rouges cuits. Versez suffisamment d'eau pour couvrir à peine — environ 80 parties. Porter à ébullition, écrémer toute mousse, réduire à très faible mijoter, couvrir et cuire pendant 2,5-3 heures. Le ragoût devrait à peine bouger — une bulle paresseuse toutes les 5-10 secondes. Vérifiez toutes les 45 minutes et ajoutez des éclaboussures d'eau si elle resserre trop.",
+      "visualCue": {
+        "primaryTarget": "Un ragoût très foncé, presque vert noir avec une huile rougeâtre-ambre profonde flottant à la surface. Les citrons secs sont gonflés et adoucis. L'agneau tombe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le ragoût est encore brun-vert plutôt que foncé; l'agneau est ferme et mâcheux; les chaux séchées sont encore dures.",
+            "action": "Continuer le braisage — ghormeh sabzi ne peut pas être précipité; le changement de couleur prend du temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le ragoût est sombre et presque vert-noir, profondément salé avec une auresse ronde des chaux. L'agneau se sépare sans résistance. La sauce est épaisse et enrobée.",
+            "action": "Bouche : ajuster le sel et laisser reposer couvert pendant 15 minutes avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots se dissolvent dans le ragoût, l'agneau est complètement déchiqueté, et la sauce est brûlée au fond.",
+            "action": "Retirer immédiatement du feu. La texture déchiquetée est toujours authentique; il suffit de s'assurer qu'il n'y a pas d'amertume de la brûlure."
+          }
+        ]
+      },
+      "feelCue": "Après 2 heures, pressez une chaux séchée contre le côté de la casserole — elle devrait se compresser facilement, sa surdité entièrement lixiviée dans le ragoût."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "braised_ghormeh_sabzi",
+        "ing_11"
+      ],
+      "outputState": "finished_ghormeh_sabzi",
+      "instructions": "Goûtez soigneusement le ragoût. La saveur doit être profondément savore, amère-herbe et aigre - la surdité est la caractéristique déterminante. S'il manque d'aurore, pressez une chaux séchée adoucie sur le côté du pot pour libérer le jus restant. S'il manque de profondeur, laisser mijoter pendant 10 minutes pour se concentrer. Réglez le sel. Servir sur le riz persan (tahdig si possible), avec les citrons secs placés sur le dessus comme garniture.",
+      "visualCue": {
+        "primaryTarget": "Un ragoût très foncé, avec de l'agneau et des haricots visibles, la sauce assez épaisse pour enrober une cuillère d'une couche sombre et opaque.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le ragoût est aqueux et de couleur claire; l'herbe et la chaux sont minces.",
+            "action": "Laisser mijoter à découvert pendant 15 à 20 minutes pour réduire et concentrer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le ragoût est dense, sombre, et enveloppe l'arrière d'une cuillère. Il sent complexe — terreux, aigre, profondément herbacé. L'huile à la surface est un vert kaki profond.",
+            "action": "Servir en même temps ou se reposer toute la nuit — le sabzi s'améliore considérablement le deuxième jour."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le ragoût est devenu pâteux et s'accroche au pot; l'aurore est accablante.",
+            "action": "Ajouter une touche d'eau et une pincée de sucre pour équilibrer; remuer doucement à feu doux."
+          }
+        ]
+      },
+      "feelCue": "Une cuillerée de sabzi ghormeh finie doit se sentir lourde et enrobée sur la langue — dense et sérieuse, pas légère ou bouillonnante."
+    }
+  ]
 };

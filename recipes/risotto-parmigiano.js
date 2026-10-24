@@ -1,93 +1,221 @@
 export default {
-  repoId: "master_italian_risotto_001",
-  parentRepoId: null,
-  slug: "risotto-parmigiano",
-  author: "ForkRecipe Kitchen",
-  title: "Risotto alla Parmigiana",
-  description: "The Milanese discipline of coaxing starch from rice — ladle by ladle, stir by stir — until each grain suspends in a creamy wave that flows like lava when the plate is tapped.",
-  cuisine: "Italian",
-  culture: "Milanese",
-  category: "grains",
-  tags: ["risotto", "italian", "parmigiano", "rice", "technique"],
-  difficulty: 3,
-  activeTime: "35 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-03-22",
-  updatedAt: "2025-03-10",
-  flavorRadar: { sweet: 1, salty: 4, sour: 0, bitter: 0, umami: 7, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Carnaroli rice",                     ratioValue: 100, defaultUnit: "parts", substitutions: ["arborio rice", "vialone nano"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Light chicken or vegetable stock (warm)", ratioValue: 300, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "White onion (finely diced)",         ratioValue: 15,  defaultUnit: "parts", substitutions: ["shallot"] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter",                    ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Umami",     name: "Parmigiano-Reggiano (finely grated)", ratioValue: 20, defaultUnit: "parts", substitutions: ["Grana Padano"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt",                      ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_risotto_001",
+  "parentRepoId": null,
+  "slug": "risotto-parmigiano",
+  "author": "ForkRecipe Kitchen",
+  "title": "Risotto alla Parmigiana",
+  "description": "La discipline milanaise de l'amidon coaxiant du riz — louche par louche, remuer — jusqu'à ce que chaque grain suspende dans une vague crémeuse qui coule comme de la lave lorsque l'assiette est tapée.",
+  "cuisine": "Italien",
+  "culture": "Milanais",
+  "category": "grains",
+  "tags": [
+    "Risotto",
+    "Italien",
+    "d'origine",
+    "riz",
+    "technique"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "35 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-03-22",
+  "updatedAt": "2025-03-10",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 7,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Sweat",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "sweated_onion",
-      instructions: "Melt half the butter in a wide, heavy-bottomed pan over medium-low heat. Add the diced onion and cook slowly, stirring occasionally, until completely soft and translucent. This takes 8-10 minutes. The onion must never color — the risotto's purity depends on it.",
-      visualCue: {
-        primaryTarget: "Onion is glassy and translucent, sitting in gently foaming butter. No browning whatsoever — each piece is soft enough to crush between your fingers.",
-        spectrum: [
-          { state: "Underdone", description: "Onion pieces are still white and opaque. They crunch when pressed against the pan.", action: "Lower the heat, add a tablespoon of water, and continue. Patience here determines the entire dish." },
-          { state: "Perfect",   description: "Translucent and collapsed. Sweet aroma. No sizzling sound — just a quiet, moist softening.", action: "Add the rice." },
-          { state: "Overdone",  description: "Golden-brown edges. Caramel smell. Some pieces are crispy.", action: "The risotto will have a slightly toasty note. Proceed — but know it has departed from the Milanese ideal." },
-        ],
-      },
-      feelCue: "The pan should be nearly silent — if you hear aggressive sizzling, the heat is too high. The kitchen should smell sweet and mild, like clean linen, not like frying.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz de Carnaroli",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "riz arborio",
+        "flaconone nano"
+      ]
     },
     {
-      nodeId: "step_2", action: "Toast",
-      inputs: ["sweated_onion", "ing_01"],
-      outputState: "toasted_rice",
-      instructions: "Add the rice to the sweated onion and increase heat to medium. Stir constantly, coating every grain in butter. Toast for 2-3 minutes until the edges of the grains become translucent while the centers remain chalky white. This seals the exterior starch and creates the signature al-dente core.",
-      visualCue: {
-        primaryTarget: "Each grain has a glassy, translucent rim with an opaque white dot at the center — like a tiny eye. The rice clicks and rustles in the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are uniformly white and opaque. No translucency at the edges.", action: "Continue stirring over heat. The transformation happens grain by grain — look closely." },
-          { state: "Perfect",   description: "Translucent edges, white cores. A warm, nutty aroma rises. The rice makes a dry, sandy sound when stirred.", action: "Add the first ladle of stock." },
-          { state: "Overdone",  description: "Grains are yellowing. Some are sticking to the pan with brown spots.", action: "Add stock immediately to stop the toasting. The risotto may have a slightly burnt note." },
-        ],
-      },
-      feelCue: "Listen for the sound — properly toasting rice sounds like sand shifting in a bucket. If it starts to pop or crackle, it has gone too far.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Poulet léger ou bouillon de légumes (chaud)",
+      "ratioValue": 300,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Build (ladle by ladle)",
-      inputs: ["toasted_rice", "ing_02"],
-      outputState: "cooked_risotto",
-      instructions: "Add warm stock one ladle at a time, stirring gently but constantly. Wait until each addition is nearly absorbed before adding the next. The rice should always be moist but never swimming. This process takes 16-18 minutes. Taste at 15 minutes — the rice should be tender with the faintest chalky resistance at the core.",
-      visualCue: {
-        primaryTarget: "The risotto moves in slow, creamy waves when the pan is shaken. Individual grains are plump and suspended in a starchy, glossy sauce — not sitting in clear broth, not stuck in a thick paste.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still hard and crunchy at the center. Broth is thin and watery, not creamy. Rice sits at the bottom of the liquid.", action: "Continue adding stock and stirring. The starch releases slowly — it needs more time and more liquid." },
-          { state: "Perfect",   description: "Each grain is tender with a barely perceptible bite at the very center. The surrounding liquid is creamy and opaque, coating the back of a spoon. When you drag a spoon through the pan, the trail fills in slowly.", action: "Remove from heat for mantecatura." },
-          { state: "Overdone",  description: "Grains are blown out and splitting. The texture is porridge-like and sticky. No individual grain structure.", action: "It has passed al dente. Serve it as a looser, more rustic risotto — add extra stock to lighten the texture." },
-        ],
-      },
-      feelCue: "The stirring resistance changes as you cook — it starts liquid, thickens in the middle, then finds a sweet spot where the spoon moves through it like stirring warm honey. If it becomes difficult to stir, add more stock immediately.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon blanc (en dés)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalote"
+      ]
     },
     {
-      nodeId: "step_4", action: "Mantecatura",
-      inputs: ["cooked_risotto", "ing_04", "ing_05", "ing_06"],
-      outputState: "finished_risotto",
-      instructions: "Remove the pan from heat. Add the remaining cold butter and the grated Parmigiano. Stir vigorously for 60 seconds — this is the mantecatura, the act of beating the risotto into a creamy emulsion. The cold butter and cheese create a glossy, flowing sauce that binds everything. Season with salt. Cover and rest for 2 minutes.",
-      visualCue: {
-        primaryTarget: "The risotto is glossy and flows like lava when the pan is tilted. It should spread slowly across a warm plate, not hold its shape like a mound and not run like soup.",
-        spectrum: [
-          { state: "Underdone", description: "Butter and cheese are sitting in visible streaks. The risotto looks grainy and separated.", action: "Stir more aggressively — the emulsion needs energy. A splash of warm stock can help it come together." },
-          { state: "Perfect",   description: "Glossy, flowing, unified. When spooned onto a warm plate and the plate is tapped, it slowly spreads into a flat, creamy wave (all'onda). Each grain is distinct within the cream.", action: "Serve immediately on warm plates." },
-          { state: "Overdone",  description: "Gummy, thick, and sticky. Holds a stiff mound. The cheese has clumped.", action: "Beat in a ladle of hot stock to loosen. The starch has over-thickened — liquid will restore the flow." },
-        ],
-      },
-      feelCue: "Taste the finished risotto — the Parmigiano should hum in the background, not shout. The butter should give it a round, silky mouthfeel. If it coats your palate like paste, it needs more stock. If it feels thin and watery, it needs another minute of rest to thicken.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Parmigiano-Reggiano (finement râpé)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Grana Padano"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sueur",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "sweated_onion",
+      "instructions": "Faire fondre la moitié du beurre dans une casserole large à fond lourd à feu moyen-doux. Ajouter l'oignon en dés et cuire lentement, en remuant occasionnellement, jusqu'à ce qu'il soit complètement doux et translucide. Cela prend 8-10 minutes. L'oignon ne doit jamais colorer — la pureté du risotto en dépend.",
+      "visualCue": {
+        "primaryTarget": "L'oignon est vitreux et translucide, assis dans un beurre mousseux. Pas de brunissement — chaque pièce est assez douce pour écraser entre vos doigts.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux d'oignon sont encore blancs et opaques. Ils craquent quand ils sont pressés contre la poêle.",
+            "action": "Abaissez la chaleur, ajoutez une cuillère à soupe d'eau et continuez. La patience détermine ici tout le plat."
+          },
+          {
+            "state": "Perfect",
+            "description": "Translucide et effondré. Doux arôme. Pas de bruit étourdissant — juste un adoucissement calme et humide.",
+            "action": "Ajouter le riz."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords dorés. Une odeur de caramel. Certaines pièces sont croustillantes.",
+            "action": "Le risotto aura une note légèrement grillée. Continuez, mais sachez qu'elle a quitté l'idéal milanais."
+          }
+        ]
+      },
+      "feelCue": "La poêle devrait être presque silencieuse — si vous entendez des étourdissements agressifs, la chaleur est trop élevée. La cuisine doit sentir doux et doux, comme du linge propre, pas comme de la friture."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "sweated_onion",
+        "ing_01"
+      ],
+      "outputState": "toasted_rice",
+      "instructions": "Ajouter le riz à l'oignon transpiré et augmenter le feu à moyen. Mélanger constamment, enrober chaque grain de beurre. Toast pendant 2-3 minutes jusqu'à ce que les bords des grains deviennent translucides tandis que les centres restent blancs crayeux. Ceci scelle l'amidon extérieur et crée le noyau de signature al-dente.",
+      "visualCue": {
+        "primaryTarget": "Chaque grain a un bord verreux et translucide avec un point blanc opaque au centre — comme un petit œil. Le riz clique et rouille dans la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont uniformément blancs et opaques. Pas de translucidité aux bords.",
+            "action": "Continuer à remuer sur la chaleur. La transformation se produit grain par grain — regardez de près."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bords translucides, carottes blanches. Un arôme chaud et noisette se lève. Le riz fait un son sec et sablonneux lorsqu'il est agité.",
+            "action": "Ajouter la première louche de stock."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains jaunissent. Certains sont collés à la poêle avec des taches brunes.",
+            "action": "Ajouter immédiatement du stock pour arrêter le toast. Le risotto peut avoir une note légèrement brûlée."
+          }
+        ]
+      },
+      "feelCue": "Écoutez le son — on dirait que le riz grillé se déplace dans un seau. S'il commence à craquer, il est allé trop loin."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Construire (douche par louche)",
+      "inputs": [
+        "toasted_rice",
+        "ing_02"
+      ],
+      "outputState": "cooked_risotto",
+      "instructions": "Ajouter le bouillon chaud une louche à la fois, en remuant doucement mais constamment. Attendez que chaque ajout soit presque absorbé avant d'ajouter le prochain. Le riz devrait toujours être humide mais jamais nager. Ce processus prend 16-18 minutes. Goûtez à 15 minutes — le riz doit être tendre avec la résistance crayeuse la plus faible au cœur.",
+      "visualCue": {
+        "primaryTarget": "Le risotto se déplace dans des vagues lentes et crémeuses lorsque la poêle est secouée. Les grains individuels sont plumés et suspendus dans une sauce amylacée et brillante — sans être assis dans un bouillon clair, non collés dans une pâte épaisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore durs et croquants au centre. Le bouillon est mince et aqueux, pas crémeux. Le riz se trouve au fond du liquide.",
+            "action": "Continuer d'ajouter du stock et de remuer. L'amidon se libère lentement — il lui faut plus de temps et de liquide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain est tendre avec une morsure à peine perceptible au centre. Le liquide environnant est crémeux et opaque, enrobant l'arrière d'une cuillère. Lorsque vous faites glisser une cuillère dans la casserole, le sentier se remplit lentement.",
+            "action": "Retirer du feu pour la mantecatura."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains sont soufflés et fractionnés. La texture est de type porridge et collante. Aucune structure céréalière individuelle.",
+            "action": "Il a passé al dente. Servez-le comme un risotto plus lâche, plus rustique – ajoutez du stock supplémentaire pour alléger la texture."
+          }
+        ]
+      },
+      "feelCue": "La résistance à l'agitation change au fur et à mesure que vous cuisinez — elle commence à être liquide, s'épaissit au milieu, puis trouve un endroit sucré où la cuillère se déplace à travers elle comme en remuant le miel chaud. S'il devient difficile de remuer, ajouter plus de stock immédiatement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mantecatura",
+      "inputs": [
+        "cooked_risotto",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "finished_risotto",
+      "instructions": "Retirer la poêle du feu. Ajouter le reste du beurre froid et le Parmigiano râpé. Remuer vigoureusement pendant 60 secondes — c'est la mantecatura, l'acte de battre le risotto dans une émulation crémeuse. Le beurre froid et le fromage créent une sauce brillante et fluide qui lie tout. Assaisonner de sel. Couvrir et se reposer pendant 2 minutes.",
+      "visualCue": {
+        "primaryTarget": "Le risotto est brillant et coule comme de la lave lorsque la poêle est inclinée. Il devrait s'étendre lentement sur une assiette chaude, ne pas tenir sa forme comme un monticule et ne pas courir comme une soupe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Beurre et fromage sont assis dans des stries visibles. Le risotto semble granuleux et séparé.",
+            "action": "Stirer de manière plus agressive — l'émulsion a besoin d'énergie. Une vague de stock chaud peut l'aider à se réunir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, fluide, unifié. Lorsqu'elle est cuillée sur une assiette chaude et que l'assiette est tapée, elle se propage lentement dans une vague plate et crémeuse (all'onda). Chaque grain est distinct dans la crème.",
+            "action": "Servir immédiatement sur des assiettes chaudes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Gummy, épais et collant. Il tient un monticule raide. Le fromage a germé.",
+            "action": "Battre dans une poche de bouillon chaud pour se détendre. L'amidon a surchauffé — le liquide rétablira le flux."
+          }
+        ]
+      },
+      "feelCue": "Goûtez le risotto fini — le Parmigiano doit humer en arrière-plan, pas crier. Le beurre devrait lui donner une bouche ronde et soyeuse. Si elle enrobe votre palais comme de la pâte, il faut plus de stock. Si elle se sent mince et aqueuse, elle a besoin d'une minute de repos supplémentaire pour épaissir."
+    }
+  ]
 };

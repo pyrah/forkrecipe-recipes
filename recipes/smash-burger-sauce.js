@@ -1,66 +1,185 @@
 export default {
-  repoId: "master_american_smash-burger-sauce_001",
-  parentRepoId: null,
-  slug: "smash-burger-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Smash Burger Sauce",
-  description: "The five-ingredient secret sauce that separates a smash burger from a regular burger — creamy mayo, sweet ketchup, briny pickle juice, sharp mustard, and just enough cayenne to remind you it is there. It is the reason every bite tastes somehow more complete than the sum of its parts.",
-  cuisine: "American",
-  culture: "American Diner",
-  category: "condiments",
-  tags: ["american", "burger", "sauce", "diner", "condiment", "quick", "mayo", "pickle"],
-  difficulty: 1,
-  activeTime: "5 min",
-  totalTime: "5 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 0, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Mayonnaise (full-fat, not light)", ratioValue: 4, defaultUnit: "parts", substitutions: ["Japanese Kewpie mayo (richer, more umami)"] },
-    { ingId: "ing_02", role: "Base",      name: "Ketchup", ratioValue: 2, defaultUnit: "parts", substitutions: ["sriracha ketchup (adds heat)", "tomato paste + pinch sugar (less sweet)"] },
-    { ingId: "ing_03", role: "Acid",      name: "Dill pickle brine (strained from the jar)", ratioValue: 1, defaultUnit: "parts", substitutions: ["white wine vinegar (sharper, less flavor)", "cornichon brine"] },
-    { ingId: "ing_04", role: "Acid",      name: "Yellow mustard (American-style)", ratioValue: 0.5, defaultUnit: "parts", substitutions: ["Dijon (more complex)", "stone-ground (coarser texture)"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Garlic powder", ratioValue: 0.25, defaultUnit: "parts", substitutions: ["onion powder (sweeter)", "fresh garlic (minced very fine)"] },
-    { ingId: "ing_06", role: "Spice",     name: "Cayenne pepper (pinch — just enough to feel)", ratioValue: 0.1, defaultUnit: "parts", substitutions: ["smoked paprika (no heat, adds color)", "white pepper"] },
-    { ingId: "ing_07", role: "Garnish",   name: "Chopped dill pickles (fine dice, optional garnish in sauce)", ratioValue: 0.5, defaultUnit: "parts", substitutions: ["bread-and-butter pickles (sweeter)", "capers (more brine)"] },
+  "repoId": "master_american_smash-burger-sauce_001",
+  "parentRepoId": null,
+  "slug": "smash-burger-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce de Burger Smash",
+  "description": "La sauce secrète à cinq ingrédients qui sépare un hamburger fracassé d'un hamburger régulier – mayo crémeux, ketchup sucré, jus de cornichon briné, moutarde pointue, et juste assez de cayenne pour vous rappeler qu'il est là. C'est la raison pour laquelle chaque bouchée a un goût plus complet que la somme de ses parties.",
+  "cuisine": "Américain",
+  "culture": "Diner américain",
+  "category": "condiments",
+  "tags": [
+    "américains",
+    "burger",
+    "sauce",
+    "dîner",
+    "condiment",
+    "Vite",
+    "Mayo",
+    "cornichons"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "5 min",
+  "totalTime": "5 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "base_sauce",
-      instructions: "Combine the mayonnaise, ketchup, pickle brine, mustard, garlic powder, and cayenne in a small bowl. Stir with a fork or small whisk until completely uniform and smooth. The brine will loosen the mayo significantly, so the finished sauce is more pourable than standard mayo — this is correct, it allows it to spread into every crevice of the smashed patty and bun.",
-      visualCue: {
-        primaryTarget: "A uniformly peachy-pink, smooth sauce with no visible streaks of white mayo or red ketchup remaining. The color should be a consistent rose-orange.",
-        spectrum: [
-          { state: "Underdone", description: "Ketchup streaks still visible in the mayo. Sauce looks marbled rather than uniform.", action: "Continue stirring until fully incorporated. No streaks should remain." },
-          { state: "Perfect",   description: "Smooth, uniform peachy-rose color. Slightly thinner than mayo alone. Smells tangy, mustardy, and savory.", action: "Fold in the chopped pickles and taste." },
-          { state: "Overdone",  description: "Sauce was over-whisked and is now somewhat aerated and fluffy.", action: "Stir gently with a spoon to settle. The texture will return to normal in a few minutes." },
-        ],
-      },
-      feelCue: "The sauce should feel creamy and slightly flowing — not stiff like straight mayo, but not thin like a dressing. A spoon dipped and lifted should hold a coating but let the excess drip freely after 2 seconds.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Mayonnaise (grave, pas légère)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Mayo kewpie japonais (plus riche, plus umami)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Season",
-      inputs: ["base_sauce", "ing_07"],
-      outputState: "finished_smash_burger_sauce",
-      instructions: "Fold in the finely diced dill pickles. Taste and adjust: more ketchup for sweetness, more pickle brine for sharpness, more mustard for bite, more cayenne for heat. The sauce improves with 15–30 minutes of resting time in the refrigerator — the flavors meld and the pickle brine fully integrates into the mayo. Apply generously to the bottom bun before building the smash burger.",
-      visualCue: {
-        primaryTarget: "Peachy-rose sauce studded with small green-white pickle pieces. Glossy and inviting.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce tastes flat and one-dimensional — just mayo and ketchup. No bright acid or complexity.", action: "Add more pickle brine by the teaspoon and another small squeeze of mustard. The acid is what makes the sauce work." },
-          { state: "Perfect",   description: "Creamy, tangy, slightly sweet, with a gentle heat at the back of the throat. Pickle pieces add crunch and intensity. The flavors are balanced — no single element dominates.", action: "Refrigerate until needed or apply directly to burgers." },
-          { state: "Overdone",  description: "Sauce is too sour or briny — the pickle brine overpowers everything.", action: "Add more mayo and a small additional squeeze of ketchup to balance the acid back into proportion." },
-        ],
-      },
-      feelCue: "A small taste of the finished sauce should coat your tongue smoothly with creaminess before the tang arrives, then the warmth of mustard, then a clean finish of dill. It should make you immediately want something to put it on.",
+      "ingId": "ing_02",
+      "role": "Base",
+      "name": "Ketchup",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sriracha ketchup (ajoute de la chaleur)",
+        "pâte de tomate + sucre de pincée (moins sucré)"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Saumure de cornichon d'aneth (à partir du pot)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc (récolte, moins de saveur)",
+        "saumure de cornichon"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Moutarde jaune (style américain)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Dijon (plus complexe)",
+        "sol en pierre (texte de l'encolure)"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Poudre d'ail",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poudre d'oignon (sweeter)",
+        "ail frais (mentionné très fin)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poivre de Cayenne (poudre — juste assez pour sentir)",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika fumé (pas de chaleur, ajoute de la couleur)",
+        "poivre blanc"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Pickles d'aneth coupés (déjà fine, garniture en option dans la sauce)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Choux de pain et de beurre",
+        "Câpres (plus saumure)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "base_sauce",
+      "instructions": "Mélanger la mayonnaise, le ketchup, la saumure de cornichon, la moutarde, la poudre d'ail et la cayenne dans un petit bol. Incorporer avec une fourchette ou un petit fouet jusqu'à ce qu'il soit complètement uniforme et lisse. La saumure desserre la mayo de façon significative, de sorte que la sauce finie est plus versable que la mayo standard — c'est exact, elle lui permet de se répandre dans chaque crevasse de la patte cassée et le pain.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lisse et uniformément rose-pêche, sans stries visibles de mayo blanc ou de ketchup rouge. La couleur doit être une rose-orange cohérente.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries de ketchup encore visibles dans la mayo. La sauce semble marbrée plutôt que uniforme.",
+            "action": "Continuer à remuer jusqu'à ce qu'il soit entièrement incorporé. Il ne devrait pas rester de stries."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur lisse et uniforme de rose-pêche. Plus mince que mayo seul. Ça sent la brume, la moutarde et la savoureuse.",
+            "action": "Plier dans les cornichons hachés et goûter."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce était trop fouettée et est maintenant un peu aérée et moelleuse.",
+            "action": "Mélanger doucement avec une cuillère à poser. La texture reviendra à la normale dans quelques minutes."
+          }
+        ]
+      },
+      "feelCue": "La sauce doit se sentir crémeuse et légèrement coulante — pas raide comme la mayo droite, mais pas mince comme une vinaigrette. Une cuillère trempée et levée devrait contenir un enduit, mais laisser l'excès couler librement après 2 secondes."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "base_sauce",
+        "ing_07"
+      ],
+      "outputState": "finished_smash_burger_sauce",
+      "instructions": "Pliez dans les cornichons en dés d'aneth. Goûtez et ajustez : plus de ketchup pour la douceur, plus de saumure de cornichon pour la netteté, plus de moutarde pour la morsure, plus de cayenne pour la chaleur. La sauce s'améliore avec 15 à 30 minutes de temps de repos au réfrigérateur — les saveurs se mélangent et la saumure de cornichon s'intègre pleinement dans la mayo. Appliquer généreusement sur le pain du bas avant de construire le hamburger.",
+      "visualCue": {
+        "primaryTarget": "sauce peachy-rose parsemée de petits morceaux de cornichon vert-blanc. Gloire et invitation.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a un goût plat et unidimensionnel — juste mayo et ketchup. Pas d'acide brillant ou de complexité.",
+            "action": "Ajouter plus de saumure de cornichon par la cuillère à café et une autre petite pression de moutarde. L'acide fait fonctionner la sauce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crémeux, acidulé, légèrement sucré, avec une chaleur douce à l'arrière de la gorge. Les pickles ajoutent croquant et intensité. Les saveurs sont équilibrées — aucun élément ne domine.",
+            "action": "Réfrigérer jusqu'à ce que nécessaire ou appliquer directement sur les hamburgers."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est trop aigre ou bricolée — la saumure de cornichon domine tout.",
+            "action": "Ajouter plus de mayo et une petite pression supplémentaire du ketchup pour équilibrer l'acide en proportion."
+          }
+        ]
+      },
+      "feelCue": "Un petit goût de la sauce finie devrait enrober votre langue avec douceur et crémosité avant l'arrivée du tang, puis la chaleur de la moutarde, puis une finition propre de l'aneth. Il devrait vous faire vouloir immédiatement quelque chose pour le mettre."
+    }
+  ]
 };

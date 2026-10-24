@@ -1,65 +1,162 @@
 export default {
-  repoId: "master_mexican_agua_fresca_001",
-  parentRepoId: null,
-  slug: "agua-fresca",
-  author: "ForkRecipe Kitchen",
-  title: "Agua fresca à l’hibiscus et au citron vert",
-  description: "Fleurs d’hibiscus séchées infusées dans l’eau bouillante jusqu’à teinter la boisson d’un rouge presque violet. Refroidie, sucrée et relevée de citron vert, elle brille comme un coucher de soleil et évoque dès la première gorgée la canneberge, la rose et des notes sauvages.",
-  cuisine: "Mexicaine",
-  culture: "Centre du Mexique",
-  category: "beverages",
-  tags: ["agua-fresca", "hibiscus", "jamaica", "lime", "mexicaine", "boisson-fraîche", "végétalien"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 0, sour: 4, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Fleurs d’hibiscus séchées (flor de jamaica)", ratioValue: 60,  defaultUnit: "g", substitutions: ["sachets de tisane d’hibiscus (8 sachets)"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Eau bouillante",                            ratioValue: 500, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",     name: "Eau froide",                               ratioValue: 1.5, defaultUnit: "liters", substitutions: [] },
-    { ingId: "ing_04", role: "Sweetener",  name: "Sucre blanc en poudre",                  ratioValue: 120, defaultUnit: "g", substitutions: ["piloncillo", "agave syrup (reduce to 80g)"] },
-    { ingId: "ing_05", role: "Acid",       name: "Jus de citron vert frais",                         ratioValue: 60,  defaultUnit: "ml", substitutions: ["jus de citron jaune frais"] },
-    { ingId: "ing_06", role: "Aromatic",   name: "Gingembre frais finement tranché, facultatif",     ratioValue: 3,   defaultUnit: "slices", substitutions: [] },
+  "repoId": "master_mexican_agua_fresca_001",
+  "parentRepoId": null,
+  "slug": "agua-fresca",
+  "author": "ForkRecipe Kitchen",
+  "title": "Agua fresca à l’hibiscus et au citron vert",
+  "description": "Fleurs d’hibiscus séchées infusées dans l’eau bouillante jusqu’à teinter la boisson d’un rouge presque violet. Refroidie, sucrée et relevée de citron vert, elle brille comme un coucher de soleil et évoque dès la première gorgée la canneberge, la rose et des notes sauvages.",
+  "cuisine": "Mexicaine",
+  "culture": "Centre du Mexique",
+  "category": "beverages",
+  "tags": [
+    "agua-fresca",
+    "hibiscus",
+    "jamaica",
+    "lime",
+    "mexicaine",
+    "boisson-fraîche",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 0,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Steep",
-      inputs: ["ing_01", "ing_02", "ing_04", "ing_06"],
-      outputState: "hibiscus_concentrate",
-      instructions: "Placez les fleurs d’hibiscus séchées et, si vous le souhaitez, le gingembre dans un grand récipient résistant à la chaleur. Versez l’eau bouillante dessus et ajoutez immédiatement le sucre : la chaleur le dissout sans qu’il soit nécessaire de remuer. Mélangez doucement 30 secondes pour bien dissoudre le sucre et immerger les fleurs. Couvrez hermétiquement avec une assiette ou du film alimentaire et laissez infuser 20 à 30 minutes. Évitez une infusion trop longue : l’hibiscus devient astringent et amer, surtout si l’eau était très chaude. En cinq minutes, l’eau prend une teinte pourpre cramoisi intense, signe que les pigments des pétales se diffusent. L’infusion est prête lorsque le liquide est si foncé qu’on ne peut pas voir à travers une fine couche. Filtrez dans un grand pichet à l’aide d’une passoire fine et pressez doucement les fleurs pour extraire le liquide sans faire passer leurs tanins amers.",
-      visualCue: {
-        primaryTarget: "Le liquide est d’un pourpre cramoisi dense, presque noir dans le récipient mais rouge rubis à la lumière. Les fleurs épuisées sont gris-brun et ont perdu toute leur couleur.",
-        spectrum: [
-          { state: "Underdone", description: "Le liquide est rose rouge pâle et translucide ; les fleurs sont encore vivement colorées. Le goût est aqueux, avec une légère acidité d’hibiscus.", action: "Prolongez l’infusion : il faut au moins 20 minutes. Si l’eau a trop refroidi, ajoutez un peu d’eau fraîchement bouillie et couvrez de nouveau." },
-          { state: "Perfect",   description: "Le liquide est pourpre cramoisi, presque opaque, mais devient d’un rouge rubis brillant à la lumière. Il évoque la canneberge acidulée et de légères notes florales. Le concentré est très intense, presque trop acidulé à lui seul : c’est normal, il sera dilué.", action: "Filtrez, puis diluez avec l’eau froide et terminez avec le citron vert." },
-          { state: "Overdone",  description: "L’infusion a dépassé 45 minutes dans une eau très chaude. Le liquide est âpre, astringent et asséchant, comme un thé noir trop infusé. Sa couleur peut tirer vers le brun violacé.", action: "Diluez davantage que prévu avec de l’eau froide : jusqu’à 2 litres au lieu de 1,5. Ajoutez du jus de citron vert pour atténuer l’astringence. Une pincée de bicarbonate peut neutraliser une partie de l’amertume des tanins." },
-        ],
-      },
-      feelCue: "L’infusion doit rappeler un concentré de canneberge très puissant, à l’odeur comme à l’aspect. Une petite cuillerée doit faire légèrement froncer les lèvres : son acidité naturelle est vive, presque médicinale.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Fleurs d’hibiscus séchées (flor de jamaica)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sachets de tisane d’hibiscus (8 sachets)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Strain",
-      inputs: ["hibiscus_concentrate", "ing_03", "ing_05"],
-      outputState: "finished_agua_fresca",
-      instructions: "Filtrez le concentré d’hibiscus chaud dans un grand pichet à travers une passoire fine. Pressez les fleurs avec le dos d’une cuillère pour en extraire le maximum de liquide, puis jetez-les. Ajoutez l’eau froide et mélangez : en se diluant, la boisson passe du cramoisi foncé à un rose rubis éclatant. Incorporez le jus de citron vert et mélangez bien. Goûtez : une agua fresca réussie est à la fois désaltérante et pleine de saveur, avec une acidité nette apportée par l’hibiscus et le citron vert, une douceur franche et un fond floral délicat. Ajustez avec un sirop simple (même quantité de sucre et d’eau, mélangée jusqu’à dissolution) si elle manque de sucre, ou ajoutez du citron vert si elle paraît fade. Réfrigérez au moins 30 minutes, puis servez sur de gros glaçons dans de grands verres. Décorez traditionnellement d’une rondelle de citron vert et de quelques feuilles de menthe fraîche.",
-      visualCue: {
-        primaryTarget: "Rose rubis éclatant, comme un spritz au Campari ou un rosé soutenu. La boisson est limpide et transparente à la lumière, ni trouble, ni orange, ni rose pâle.",
-        spectrum: [
-          { state: "Underdone", description: "Le liquide est rose pâle et goûte surtout l’eau sucrée, avec une faible note d’hibiscus. Le citron vert ne ressort pas encore et la couleur est délavée.", action: "Le concentré a manqué d’infusion ou la quantité d’hibiscus était insuffisante. Ajoutez du concentré d’une seconde préparation ou faites infuser d’autres fleurs 10 minutes directement dans l’agua fresca." },
-          { state: "Perfect",   description: "Rose rubis profond, limpide et éclatant. Le parfum est déjà rafraîchissant : hibiscus acidulé, note franche de citron vert et légère douceur. La première gorgée apporte d’abord l’acidité fraîche, puis le sucre et enfin une finale florale. L’ensemble est équilibré.", action: "Servez immédiatement sur des glaçons ou conservez jusqu’à cinq jours au réfrigérateur." },
-          { state: "Overdone",  description: "La boisson est trop concentrée ou pas assez diluée : sa couleur est presque opaque et son goût trop acide et astringent, proche d’un sirop.", action: "Ajoutez de l’eau froide par petites quantités d’environ 60 ml, en goûtant à chaque fois, jusqu’à ce que la boisson soit rafraîchissante sans faire grimacer." },
-        ],
-      },
-      feelCue: "Bien froide, l’agua fresca doit être légère et nette en bouche : ni épaisse comme un jus, ni aussi fluide que de l’eau. L’acidité doit être vive et immédiate, suivie d’une douceur discrète et d’une finale légèrement florale et sèche.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau bouillante",
+      "ratioValue": 500,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 1.5,
+      "defaultUnit": "liters",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre blanc en poudre",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "piloncillo",
+        "agave syrup (reduce to 80g)"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Jus de citron vert frais",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "jus de citron jaune frais"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Gingembre frais finement tranché, facultatif",
+      "ratioValue": 3,
+      "defaultUnit": "slices",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Streep",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "hibiscus_concentrate",
+      "instructions": "Placez les fleurs d’hibiscus séchées et, si vous le souhaitez, le gingembre dans un grand récipient résistant à la chaleur. Versez l’eau bouillante dessus et ajoutez immédiatement le sucre : la chaleur le dissout sans qu’il soit nécessaire de remuer. Mélangez doucement 30 secondes pour bien dissoudre le sucre et immerger les fleurs. Couvrez hermétiquement avec une assiette ou du film alimentaire et laissez infuser 20 à 30 minutes. Évitez une infusion trop longue : l’hibiscus devient astringent et amer, surtout si l’eau était très chaude. En cinq minutes, l’eau prend une teinte pourpre cramoisi intense, signe que les pigments des pétales se diffusent. L’infusion est prête lorsque le liquide est si foncé qu’on ne peut pas voir à travers une fine couche. Filtrez dans un grand pichet à l’aide d’une passoire fine et pressez doucement les fleurs pour extraire le liquide sans faire passer leurs tanins amers.",
+      "visualCue": {
+        "primaryTarget": "Le liquide est d’un pourpre cramoisi dense, presque noir dans le récipient mais rouge rubis à la lumière. Les fleurs épuisées sont gris-brun et ont perdu toute leur couleur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est rose rouge pâle et translucide ; les fleurs sont encore vivement colorées. Le goût est aqueux, avec une légère acidité d’hibiscus.",
+            "action": "Prolongez l’infusion : il faut au moins 20 minutes. Si l’eau a trop refroidi, ajoutez un peu d’eau fraîchement bouillie et couvrez de nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le liquide est pourpre cramoisi, presque opaque, mais devient d’un rouge rubis brillant à la lumière. Il évoque la canneberge acidulée et de légères notes florales. Le concentré est très intense, presque trop acidulé à lui seul : c’est normal, il sera dilué.",
+            "action": "Filtrez, puis diluez avec l’eau froide et terminez avec le citron vert."
+          },
+          {
+            "state": "Overdone",
+            "description": "L’infusion a dépassé 45 minutes dans une eau très chaude. Le liquide est âpre, astringent et asséchant, comme un thé noir trop infusé. Sa couleur peut tirer vers le brun violacé.",
+            "action": "Diluez davantage que prévu avec de l’eau froide : jusqu’à 2 litres au lieu de 1,5. Ajoutez du jus de citron vert pour atténuer l’astringence. Une pincée de bicarbonate peut neutraliser une partie de l’amertume des tanins."
+          }
+        ]
+      },
+      "feelCue": "L’infusion doit rappeler un concentré de canneberge très puissant, à l’odeur comme à l’aspect. Une petite cuillerée doit faire légèrement froncer les lèvres : son acidité naturelle est vive, presque médicinale."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Poignée",
+      "inputs": [
+        "hibiscus_concentrate",
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "finished_agua_fresca",
+      "instructions": "Filtrez le concentré d’hibiscus chaud dans un grand pichet à travers une passoire fine. Pressez les fleurs avec le dos d’une cuillère pour en extraire le maximum de liquide, puis jetez-les. Ajoutez l’eau froide et mélangez : en se diluant, la boisson passe du cramoisi foncé à un rose rubis éclatant. Incorporez le jus de citron vert et mélangez bien. Goûtez : une agua fresca réussie est à la fois désaltérante et pleine de saveur, avec une acidité nette apportée par l’hibiscus et le citron vert, une douceur franche et un fond floral délicat. Ajustez avec un sirop simple (même quantité de sucre et d’eau, mélangée jusqu’à dissolution) si elle manque de sucre, ou ajoutez du citron vert si elle paraît fade. Réfrigérez au moins 30 minutes, puis servez sur de gros glaçons dans de grands verres. Décorez traditionnellement d’une rondelle de citron vert et de quelques feuilles de menthe fraîche.",
+      "visualCue": {
+        "primaryTarget": "Rose rubis éclatant, comme un spritz au Campari ou un rosé soutenu. La boisson est limpide et transparente à la lumière, ni trouble, ni orange, ni rose pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est rose pâle et goûte surtout l’eau sucrée, avec une faible note d’hibiscus. Le citron vert ne ressort pas encore et la couleur est délavée.",
+            "action": "Le concentré a manqué d’infusion ou la quantité d’hibiscus était insuffisante. Ajoutez du concentré d’une seconde préparation ou faites infuser d’autres fleurs 10 minutes directement dans l’agua fresca."
+          },
+          {
+            "state": "Perfect",
+            "description": "Rose rubis profond, limpide et éclatant. Le parfum est déjà rafraîchissant : hibiscus acidulé, note franche de citron vert et légère douceur. La première gorgée apporte d’abord l’acidité fraîche, puis le sucre et enfin une finale florale. L’ensemble est équilibré.",
+            "action": "Servez immédiatement sur des glaçons ou conservez jusqu’à cinq jours au réfrigérateur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La boisson est trop concentrée ou pas assez diluée : sa couleur est presque opaque et son goût trop acide et astringent, proche d’un sirop.",
+            "action": "Ajoutez de l’eau froide par petites quantités d’environ 60 ml, en goûtant à chaque fois, jusqu’à ce que la boisson soit rafraîchissante sans faire grimacer."
+          }
+        ]
+      },
+      "feelCue": "Bien froide, l’agua fresca doit être légère et nette en bouche : ni épaisse comme un jus, ni aussi fluide que de l’eau. L’acidité doit être vive et immédiate, suivie d’une douceur discrète et d’une finale légèrement florale et sèche."
+    }
+  ]
 };

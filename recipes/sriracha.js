@@ -1,102 +1,213 @@
 export default {
-  repoId: "master_thai_sriracha_001",
-  parentRepoId: null,
-  slug: "sriracha",
-  author: "ForkRecipe Kitchen",
-
-  title: "Sriracha",
-  description: "Red jalapeños ground with garlic and left to ferment for three days, then cooked briefly with vinegar and sugar — the result is a hot sauce with more depth than anything from a bottle, because time did the real seasoning.",
-  cuisine: "Thai-American",
-  culture: "Thai",
-  category: "condiments",
-
-  tags: ["hot sauce", "fermented", "thai", "chili", "garlic", "condiment"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "3 days 25 min",
-  ratioSystem: "parts",
-
-  stars: 1980,
-  forks: 246,
-  contributors: 62,
-  license: "CC-BY-SA",
-  createdAt: "2024-06-20",
-  updatedAt: "2025-01-15",
-
-  flavorRadar: { sweet: 2, salty: 2, sour: 3, bitter: 1, umami: 2, heat: 5 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Red jalapeños (or Fresno chilis)",       ratioValue: 100, defaultUnit: "parts", substitutions: ["red serranos", "red Holland chilis"] },
-    { ingId: "ing_02", role: "Allium",    name: "Garlic cloves (peeled)",                 ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener", name: "White sugar",                            ratioValue: 10,  defaultUnit: "parts", substitutions: ["palm sugar", "brown sugar"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Salt (non-iodized)",                     ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Acid",      name: "Distilled white vinegar",                ratioValue: 20,  defaultUnit: "parts", substitutions: ["rice vinegar (milder)"] },
+  "repoId": "master_thai_sriracha_001",
+  "parentRepoId": null,
+  "slug": "sriracha",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sriracha",
+  "description": "Le jalapeños rouge moulu avec de l'ail et laissé fermenter pendant trois jours, puis cuit brièvement avec du vinaigre et du sucre — le résultat est une sauce chaude avec plus de profondeur que n'importe quoi d'une bouteille, parce que le temps a fait le vrai assaisonnement.",
+  "cuisine": "Thai-Américain",
+  "culture": "Thaï",
+  "category": "condiments",
+  "tags": [
+    "sauce chaude",
+    "fermenté",
+    "Thaï",
+    "Chili",
+    "Ail",
+    "condiment"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "3 days 25 min",
+  "ratioSystem": "parts",
+  "stars": 1980,
+  "forks": 246,
+  "contributors": 62,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-06-20",
+  "updatedAt": "2025-01-15",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "chili_mash",
-      instructions: "Remove the stems from the chilis but leave the seeds — they carry heat and pectin that thickens the final sauce. Combine chilis, garlic, sugar, and salt in a food processor or blender. Pulse until you have a coarse, textured mash — think chunky salsa consistency, not a smooth puree. The mash should be bright red-orange and smell intensely of raw chili and sharp garlic. Transfer to a clean glass jar, leaving 3cm of headspace for fermentation gases.",
-      visualCue: {
-        primaryTarget: "A bright red-orange coarse mash that holds its texture when spooned — not a smooth paste, not large visible chunks. Seeds distributed throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Still has large chili and garlic pieces. Uneven texture will ferment unevenly and clog the blender in the final step.", action: "Pulse more aggressively in short bursts until the texture is uniformly chunky." },
-          { state: "Perfect",   description: "Evenly textured, deep red-orange mash. Seeds are visible but uniformly distributed. Aroma is sharply pungent — raw chili, garlic, and salt.", action: "Transfer to a jar and begin fermentation." },
-          { state: "Overdone",  description: "Over-blended into a completely smooth puree. No texture remaining.", action: "Proceed — the fermentation and final cook will produce a thicker-than-ideal but perfectly fine sriracha." },
-        ],
-      },
-      feelCue: "Wear gloves and avoid touching your eyes — the capsaicin in the mash will burn exposed skin. The raw mash should smell sharply pungent, almost eye-watering, with a bright green-red herbal note from the chili flesh.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Jalapeños rouges (ou fresno chilis)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "serranos rouges",
+        "Chilis rouge Holland"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Ferment",
-      inputs: ["chili_mash"],
-      outputState: "fermented_mash",
-      instructions: "Cover the jar loosely with cheesecloth secured with a rubber band — this allows fermentation gases to escape while keeping contaminants out. Store at room temperature (18–24°C) for 3–7 days. Stir the mash once per day with a clean spoon. After 24 hours, you should see small bubbles forming throughout the mash. By day 3, the mash will smell noticeably more complex — less raw, more savory, with an acidic tang. The color deepens from bright red to a darker, more saturated crimson.",
-      visualCue: {
-        primaryTarget: "Visible small bubbles throughout the mash surface when stirred. Color is deeper than the original red-orange.",
-        spectrum: [
-          { state: "Underdone", description: "No bubbles at all after 48 hours. Mash smells identical to day one — raw and sharp with no acidic note.", action: "Move the jar to a warmer spot (22–26°C). If still no activity after 72 hours, the salt percentage was too high or the chilis carried residual pesticide — start again with organic chilis." },
-          { state: "Perfect",   description: "Steady fine bubbles throughout, especially when stirred. Mash has a tangy, complex aroma with garlic deepened and raw chili edge smoothed. Day 3 is typical for a lively ferment.", action: "Proceed to cooking with vinegar." },
-          { state: "Overdone",  description: "Fermented past day 7 in warm conditions — mash smells very acidic, almost alcoholic, and the color has turned dark brown-red.", action: "Proceed with cooking — the extra fermentation increases acidity and complexity. Reduce the added vinegar by half to compensate." },
-        ],
-      },
-      feelCue: "Lean close to the jar and stir — a properly fermenting mash releases a wave of savory, slightly tangy heat that is noticeably different from the raw sharpness of day one. Your eyes may water, but this time from acidity, not raw capsaicin.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Girofles à l'ail",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["fermented_mash", "ing_05"],
-      outputState: "cooked_sriracha",
-      instructions: "Transfer the fermented mash and vinegar to a saucepan. Bring to a boil over medium heat, then reduce to a steady simmer for 5–7 minutes, stirring frequently. The mash will thicken and darken slightly as it cooks. The vinegar both preserves the sauce and brightens the acidic note that fermentation softened. Do not over-reduce — you want a pourable hot sauce, not a paste.",
-      visualCue: {
-        primaryTarget: "A bubbling, deep red-orange sauce that has thickened slightly and smells cooked rather than raw.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still thin and the mash hasn't fully integrated with the vinegar. Tastes separately of mash and vinegar.", action: "Simmer 2–3 more minutes, stirring constantly." },
-          { state: "Perfect",   description: "A unified, deeply red sauce that coats the back of a spoon. Aroma is cooked chili, garlic, and vinegar — the signature sriracha note. Visible steam and gentle bubbling.", action: "Blend until smooth, then strain and bottle." },
-          { state: "Overdone",  description: "Sauce has reduced too much — it is thick and sticky, pulling away from the pan sides.", action: "Add water a tablespoon at a time until the consistency loosens to a pourable sauce." },
-        ],
-      },
-      feelCue: "The simmering sauce should fill the kitchen with a sweet-spicy vapor that makes the back of your throat tingle — put on the range hood fan.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre de palme",
+        "sucre brun"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Blend",
-      inputs: ["cooked_sriracha"],
-      outputState: "finished_sriracha",
-      instructions: "Allow the cooked sauce to cool for 10 minutes. Transfer to a blender and blend on high for 1–2 minutes until completely smooth. Pass through a fine-mesh strainer, pressing firmly with a spoon to extract every drop of sauce. Discard the dry solids (mostly seeds and skin). The strained sauce will be glossy, smooth, and deeply red. Bottle in sterilized squeeze bottles or glass jars. Refrigerate — it will keep for 6 months.",
-      visualCue: {
-        primaryTarget: "A glossy, smooth, deep red sauce with a consistency just thin enough to squeeze from a bottle but thick enough to hold a trail on a plate.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce still has visible seeds and skin fragments after straining. Texture is rough.", action: "Strain again, pressing more firmly. If seeds are still passing through, use a finer strainer or cheesecloth." },
-          { state: "Perfect",   description: "Silky smooth, glossy dark red. No particles. Drizzled on a white plate, it holds a clean trail and doesn't run immediately.", action: "Bottle and refrigerate." },
-          { state: "Overdone",  description: "Over-strained and very little sauce remains — the solids were too dry to yield more.", action: "Add 1–2 tablespoons of water to the solids and press again; you will recover more sauce." },
-        ],
-      },
-      feelCue: "The finished sauce should smell unmistakably like sriracha — that garlic-forward, vinegary, roasted chili aroma — but richer, more complex, and less synthetic than anything from a commercial bottle.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel (non iodé)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Vinaigre blanc distillé",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de riz"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "chili_mash",
+      "instructions": "Enlevez les tiges du chilis, mais laissez les graines – elles portent du feu et de la pectine qui épaissit la sauce finale. Mélanger le chilis, l'ail, le sucre et le sel dans un robot culinaire ou un mélangeur. Pulse jusqu'à ce que vous ayez une masse grossière et texturée — pensez à la consistance de la salsa, pas une purée lisse. La mash doit être rouge-orange vif et sentir intensément le chili cru et l'ail aiguisé. Transférer dans un pot en verre propre, laissant 3cm d'espace de tête pour les gaz de fermentation.",
+      "visualCue": {
+        "primaryTarget": "Un mash grossier rouge-orange brillant qui tient sa texture lorsqu'il est cuillé — pas une pâte lisse, pas de gros morceaux visibles. Graines distribuées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il a encore de gros morceaux de chili et d'ail. Une texture inégale fermentera inégalement et obstruera le mélangeur dans la dernière étape.",
+            "action": "Pulse plus agressive en courts éclats jusqu'à ce que la texture soit uniformément chunky."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mash texturé de couleur rouge-orange. Les graines sont visibles mais uniformément distribuées. L'arôme est fortement piquant: chili cru, ail et sel.",
+            "action": "Transférer dans un pot et commencer la fermentation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmené dans une purée complètement lisse. Aucune texture restante.",
+            "action": "Procéder — la fermentation et la cuisson finale produiront une sriracha plus épaisse que l'idéal mais parfaitement fine."
+          }
+        ]
+      },
+      "feelCue": "Portez des gants et évitez de toucher vos yeux: la capsaïcine dans la mèche brûlera la peau exposée. La mash crue doit sentir fortement piquante, presque abreuvante, avec une note à base de plantes vert vif de la chair de chili."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Ferment",
+      "inputs": [
+        "chili_mash"
+      ],
+      "outputState": "fermented_mash",
+      "instructions": "Couvrez le pot de façon lâche avec une bande de caoutchouc, ce qui permet aux gaz de fermentation de s'échapper tout en gardant les contaminants à l'écart. Conserver à température ambiante (18–24°C) pendant 3–7 jours. Mélanger la mash une fois par jour avec une cuillère propre. Après 24 heures, vous devriez voir de petites bulles se former tout au long du mash. Au troisième jour, le mash sentira nettement plus complexe — moins cru, plus salé, avec un tang acide. La couleur s'approfondit du rouge vif à un pourpre plus foncé et plus saturé.",
+      "visualCue": {
+        "primaryTarget": "Petites bulles visibles sur toute la surface de la masse lorsqu'elles sont agitées. La couleur est plus profonde que l'orange rouge d'origine.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas de bulles après 48 heures. Mash sent la même chose que le premier jour — cru et aiguisé sans note acide.",
+            "action": "Déplacez le pot dans un endroit plus chaud (22–26°C). S'il n'y a pas d'activité après 72 heures, le pourcentage de sel est trop élevé ou le chilis transporte un pesticide résiduel — recommencez avec le chilis organique."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des fines bulles stables, surtout lorsqu'elles sont agitées. Mash a un arôme tangent et complexe avec l'ail approfondi et le bord cru du chili lissé. Le jour 3 est typique pour un ferment animé.",
+            "action": "Passer à la cuisson au vinaigre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Fermenté le jour dernier 7 dans des conditions chaudes — la mash sent très acide, presque alcoolique, et la couleur est devenue brun foncé-rouge.",
+            "action": "Procéder à la cuisson — la fermentation supplémentaire augmente l'acidité et la complexité. Réduire de moitié le vinaigre ajouté pour compenser."
+          }
+        ]
+      },
+      "feelCue": "Penchez - vous près du pot et remuez - vous: une mash bien fermentée dégage une vague de chaleur savoureuse et légèrement acidulée qui est nettement différente de la netteté brute du premier jour. Vos yeux peuvent arroser, mais cette fois de l'acidité, pas de la capsaïcine crue."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "fermented_mash",
+        "ing_05"
+      ],
+      "outputState": "cooked_sriracha",
+      "instructions": "Transférer la mousse fermentée et le vinaigre dans une casserole. Porter à ébullition à feu moyen, puis laisser mijoter régulièrement pendant 5 à 7 minutes, en remuant fréquemment. La mash s'épaissit et s'obscurcit légèrement en cuisinant. Le vinaigre conserve la sauce et illumine la note acide que la fermentation adoucit. Ne pas sur-réduire — vous voulez une sauce chaude versable, pas une pâte.",
+      "visualCue": {
+        "primaryTarget": "Une sauce orangée rouge foncé et bouillonnante qui s'est légèrement épaissie et qui sent cuit plutôt que cru.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore mince et la mash n'est pas complètement intégrée au vinaigre. Goûte séparément de mash et de vinaigre.",
+            "action": "Laisser mijoter encore 2 à 3 minutes, en remuant constamment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce unie, profondément rouge qui enveloppe l'arrière d'une cuillère. L'aroma est du chili cuit, de l'ail et du vinaigre — la signature sriracha. La vapeur visible et le bouillonnement doux.",
+            "action": "Mélanger jusqu'à douceur, puis soucher et bouteille."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a trop diminué — elle est épaisse et collante, s'éloignant des côtés de la poêle.",
+            "action": "Ajouter une cuillère à soupe à la fois jusqu'à ce que la consistance se détache dans une sauce versable."
+          }
+        ]
+      },
+      "feelCue": "La sauce mijotante devrait remplir la cuisine d'une vapeur sucrée et épicée qui fait fourrer l'arrière de votre gorge — mettre sur l'éventail ventilateur de capot."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mélange",
+      "inputs": [
+        "cooked_sriracha"
+      ],
+      "outputState": "finished_sriracha",
+      "instructions": "Laisser refroidir la sauce cuite pendant 10 minutes. Transférer dans un mélangeur et mélanger en haut pendant 1 à 2 minutes jusqu'à ce qu'il soit complètement lisse. Passez à travers une passoire fine, appuyez fermement avec une cuillère pour extraire chaque goutte de sauce. Jeter les solides secs (principalement les graines et la peau). La sauce tendue sera brillante, lisse et profondément rouge. Bouteille dans des bouteilles stérilisées ou des pots en verre. Réfrigérer — il restera six mois.",
+      "visualCue": {
+        "primaryTarget": "Une sauce rouge lustrée, lisse et profonde avec une consistance juste assez fine pour presser d'une bouteille mais assez épaisse pour tenir une piste sur une assiette.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a encore des graines visibles et des fragments de peau après déformation. La texture est rude.",
+            "action": "Retendez-vous, appuyez plus fermement. Si les graines passent encore, utilisez une souche plus fine ou une nappe de fromage."
+          },
+          {
+            "state": "Perfect",
+            "description": "Silky lisse, rouge foncé brillant. Pas de particules. Arrosé sur une plaque blanche, il tient une piste propre et ne court pas immédiatement.",
+            "action": "Bouteille et réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Il reste très peu de sauces, les solides étaient trop secs pour produire plus.",
+            "action": "Ajoutez 1 à 2 cuillères à soupe d'eau aux solides et pressez à nouveau; vous récupérerez plus de sauce."
+          }
+        ]
+      },
+      "feelCue": "La sauce finie doit sentir de façon indiscutable comme la sriracha — l'ail, le vinaigre, l'arôme de chili rôti — mais plus riche, plus complexe et moins synthétique qu'une bouteille commerciale."
+    }
+  ]
 };

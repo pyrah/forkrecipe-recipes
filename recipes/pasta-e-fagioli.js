@@ -1,102 +1,265 @@
 export default {
-  repoId: "master_italian_pasta-e-fagioli_001",
-  parentRepoId: null,
-  slug: "pasta-e-fagioli",
-  author: "ForkRecipe Kitchen",
-  title: "Pasta e Fagioli",
-  description: "Naples's definitive cold-weather dish — short pasta and creamy white beans in a thick, rosetinted broth that hovers perfectly between soup and stew, built slowly on a soffritto base and finished with enough olive oil that each bowl shimmers.",
-  cuisine: "Italian",
-  culture: "Neapolitan",
-  category: "grains",
-  tags: ["pasta", "beans", "italian", "vegetarian", "soup"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "2 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 5, sour: 1, bitter: 2, umami: 6, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried borlotti or cannellini beans, soaked overnight", ratioValue: 2,    defaultUnit: "parts", substitutions: ["canned borlotti beans"] },
-    { ingId: "ing_02", role: "Starch",    name: "Short pasta: ditalini, tubettini, or broken spaghetti", ratioValue: 1,    defaultUnit: "parts", substitutions: ["orecchiette"] },
-    { ingId: "ing_03", role: "Allium",    name: "White onion, finely diced",                          ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Celery, finely diced (including the pale inner leaves)", ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Carrot, finely diced",                               ratioValue: 0.25, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, minced",                              ratioValue: 0.1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Umami",     name: "Tomato paste",                                       ratioValue: 0.15, defaultUnit: "parts", substitutions: ["canned crushed tomatoes, reduced"] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh rosemary sprig",                               ratioValue: 0.05, defaultUnit: "parts", substitutions: ["dried rosemary"] },
-    { ingId: "ing_09", role: "Fat",       name: "Extra-virgin olive oil, plus more to finish",        ratioValue: 0.25, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Dried red pepper flakes (peperoncino)",              ratioValue: 0.02, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning", name: "Fine sea salt",                                      ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_pasta-e-fagioli_001",
+  "parentRepoId": null,
+  "slug": "pasta-e-fagioli",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pâtes alimentaires",
+  "description": "Le plat définitif de Naples pour la saison froide — des pâtes courtes et des haricots blancs crémeux dans un bouillon épais et rosé qui oscille parfaitement entre soupe et ragoût, construit lentement sur une base soffritto et fini avec suffisamment d'huile d'olive que chaque bol mijote.",
+  "cuisine": "Italien",
+  "culture": "Napolitaine",
+  "category": "grains",
+  "tags": [
+    "pâtes",
+    "haricots",
+    "Italien",
+    "végétarien",
+    "Soupe"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "2 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 5,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 6,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_08", "ing_11"],
-      outputState: "cooked_beans",
-      instructions: "Drain and rinse the soaked beans. Place them in a large pot and cover with fresh cold water by 6 cm. Add the rosemary sprig and a generous pinch of salt. Bring to a boil over high heat, skim any grey foam, then reduce to a gentle simmer. Cook uncovered for 60-90 minutes until the beans are completely tender — no chalkiness at the center when bitten. Do not rush this step with a hard boil, which can split the bean skins and make the broth cloudy. Reserve all the cooking liquid. Remove the rosemary. Using a potato masher or the back of a spoon, roughly mash about one-third of the beans directly in the pot to create a naturally thick, creamy broth.",
-      visualCue: {
-        primaryTarget: "Tender beans with no chalky center in a cloudy, starchy broth. One-third of the beans partially mashed to create thickness.",
-        spectrum: [
-          { state: "Underdone", description: "Beans have a firm, chalky center when bitten. Broth is thin and clear.", action: "Continue simmering and test every 10 minutes. Old beans can take up to 2 hours." },
-          { state: "Perfect",   description: "Beans crush completely between fingers with no resistance. Broth is cloudy and slightly thick from dissolved starch. One-third mashed into the broth.", action: "Set aside and begin the soffritto." },
-          { state: "Overdone",  description: "Most beans have burst and dissolved into the broth. Liquid is very thick.", action: "This is fine — the dissolved beans enrich the broth. Proceed." },
-        ],
-      },
-      feelCue: "Pinch a bean — it should collapse instantly to a smooth paste without any grit or resistance, like pressing a ripe grape.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Morceaux séchés en borlotti ou en cannellini, trempés pendant la nuit",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "haricots borlotti en conserve"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sweat",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_09", "ing_10"],
-      outputState: "soffritto",
-      instructions: "Heat the olive oil in a large, heavy pot over medium-low heat. Add the diced onion, celery, carrot, garlic, and red pepper flakes. Season lightly with salt. Cook, stirring occasionally, for 10-12 minutes until the vegetables are completely soft and the onion is translucent and just beginning to turn gold. Add the tomato paste and stir to coat all the vegetables. Cook for 3-4 minutes, stirring constantly, pressing the paste against the hot pot until it darkens slightly from bright red to brick-red and smells sweet and caramelized.",
-      visualCue: {
-        primaryTarget: "Completely softened, glossy vegetables in a fragrant base, with a brick-red tomato paste coating fully incorporated.",
-        spectrum: [
-          { state: "Underdone", description: "Onion still has a raw bite. Tomato paste still bright red and smells raw.", action: "Continue cooking. The tomato paste especially needs time on the heat to develop sweetness." },
-          { state: "Perfect",   description: "Vegetables completely tender and glossy. Tomato paste darkened to brick red. Smells sweet, savory, and complex.", action: "Add the beans and their cooking liquid." },
-          { state: "Overdone",  description: "Tomato paste has scorched to black spots. Bitter smell.", action: "Add a small splash of water to deglaze any scorched spots before adding the beans." },
-        ],
-      },
-      feelCue: "Press a piece of onion against the side of the pot — it should smear entirely without resistance. The soffritto should smell like the beginning of every good Sunday sauce.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Pâtes courtes: ditalini, tubettini, ou spaghettis cassés",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "orecchiette"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["soffritto", "cooked_beans"],
-      outputState: "bean_broth",
-      instructions: "Add the cooked beans and all their reserved cooking liquid to the soffritto. Stir together and bring to a gentle simmer. If the broth is too thick, add water until you reach a consistency slightly thinner than your target finished soup — the pasta will thicken it further. Simmer for 15 minutes to allow the flavors to meld. Taste and adjust salt. The broth should now taste deeply savory with a faint sweetness from the soffritto and a lingering heat from the peperoncino.",
-      visualCue: {
-        primaryTarget: "A creamy, rose-tinted broth — somewhere between a cream soup and a thin broth — with whole and mashed beans visible throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Broth still tastes separately of beans and tomato. The flavors haven't melded.", action: "Simmer for 10 more minutes and taste again." },
-          { state: "Perfect",   description: "Unified, deeply savory broth with a slight sweetness and heat. The bean starchiness and soffritto are fully integrated.", action: "Add the pasta directly to the pot." },
-          { state: "Overdone",  description: "Broth has reduced too far and is very thick and starchy.", action: "Add water to loosen before adding the pasta — the pasta will thicken it further." },
-        ],
-      },
-      feelCue: "Taste a spoonful of broth — it should coat the back of the spoon slightly, with a warm, savory, slightly sweet weight that feels substantial even without the pasta.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon blanc, finement coupé en dés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Boil",
-      inputs: ["bean_broth", "ing_02"],
-      outputState: "finished_pasta_e_fagioli",
-      instructions: "Add the dry pasta directly to the simmering bean broth. Stir immediately and frequently — the pasta will absorb the broth aggressively, so check consistency every 2 minutes and add water as needed to keep it soupy throughout cooking. Cook until the pasta is al dente — it will continue softening in the residual heat. The final dish should be thick enough that a spoon dragged through it leaves a clear channel that fills back slowly. Remove from heat. Taste and adjust salt generously. Drizzle a generous amount of olive oil over the surface and stir it in. Let the soup rest for 2-3 minutes before serving.",
-      visualCue: {
-        primaryTarget: "A thick, creamy rose-pink soup with pasta and beans evenly distributed. The surface shimmers with olive oil. A spoon-trail closes slowly.",
-        spectrum: [
-          { state: "Underdone", description: "Pasta is still very firm or chalky at the center. Broth is thin.", action: "Continue cooking, adding a splash of water if the broth has absorbed too quickly." },
-          { state: "Perfect",   description: "Pasta is just al dente. The soup is thick enough to hold a spoon-trail but loose enough to pour into a bowl. Rich, creamy, shimmering with olive oil.", action: "Let rest 3 minutes off-heat, then serve in warm bowls." },
-          { state: "Overdone",  description: "Pasta has absorbed all the broth. The dish has become a thick, starchy paste. Pasta overcooked.", action: "Add warm water and stir vigorously — pasta e fagioli is very forgiving. A wetter version is still delicious." },
-        ],
-      },
-      feelCue: "Ladle into a bowl and tilt — the soup should flow slowly as a single, unified mass, neither running freely like water nor sitting immovably like polenta. This is the perfect 'lagane' consistency Neapolitans call 'né troppo asciutta, né troppo brodosa.'",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Céleri, coupé en dés (y compris les feuilles intérieures pâles)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Carotte en dés",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates concassées en conserve, réduites"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Graines de romarin frais",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "romarin séché"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge, plus plus à finir",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "flocons de poivre rouge séché (peperoncino)",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_08",
+        "ing_11"
+      ],
+      "outputState": "cooked_beans",
+      "instructions": "Égoutter et rincer les haricots trempés. Placez-les dans une grande casserole et couvrez-les d'eau froide fraîche de 6 cm. Ajouter le rameau de romarin et une pincée généreuse de sel. Porter à ébullition à feu vif, écrémer toute mousse grise, puis laisser mijoter doucement. Cuire à découvert pendant 60-90 minutes jusqu'à ce que les haricots soient complètement tendres — pas de craie au centre quand mordu. Ne précipitez pas cette étape avec un ébullition dur, qui peut diviser les peaux de haricots et rendre le bouillon nuageux. Réserver tout le liquide de cuisson. Enlevez le romarin. À l'aide d'une purée de pommes de terre ou de l'arrière d'une cuillère, écraser environ un tiers des haricots directement dans le pot pour créer un bouillon crémeux naturellement épais.",
+      "visualCue": {
+        "primaryTarget": "Fèves tendres sans centre crayeux dans un bouillon amylacé nuageux. Un tiers des haricots ont été partiellement massés pour créer de l'épaisseur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les haricots ont un centre crayeux ferme quand ils sont mordus. Le bouillon est mince et clair.",
+            "action": "Continuer à mijoter et tester toutes les 10 minutes. Les vieux haricots peuvent prendre jusqu'à 2 heures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les haricots s'écrasent complètement entre les doigts sans résistance. Le bouillon est nuageux et légèrement épais à partir d'amidon dissous. Un tiers dans le bouillon.",
+            "action": "Réserver et commencer le soffritto."
+          },
+          {
+            "state": "Overdone",
+            "description": "La plupart des haricots ont éclaté et se sont dissous dans le bouillon. Le liquide est très épais.",
+            "action": "C'est très bien, les haricots dissous enrichissent le bouillon. Continuez."
+          }
+        ]
+      },
+      "feelCue": "Pincez un haricot — il devrait s'effondrer instantanément à une pâte lisse sans aucune résistance, comme presser un raisin mûr."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sueur",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "soffritto",
+      "instructions": "Chauffer l'huile d'olive dans un grand pot lourd à feu moyen-doux. Ajouter les dés d'oignon, le céleri, la carotte, l'ail et les flocons de poivre rouge. Assaisonner légèrement avec du sel. Cuire, en remuant de temps en temps, pendant 10-12 minutes jusqu'à ce que les légumes soient complètement doux et que l'oignon soit translucide et commence à tourner l'or. Ajouter la pâte de tomate et remuer pour enrober tous les légumes. Cuire 3-4 minutes, en remuant constamment, en pressant la pâte contre la casserole chaude jusqu'à ce qu'elle s'assombrisse légèrement du rouge vif au rouge brique et sent doux et caramélisé.",
+      "visualCue": {
+        "primaryTarget": "Légumes complètement adoucis et brillants dans une base parfumée, avec un revêtement en pâte de tomate rouge brique entièrement incorporé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon a encore une bouchée crue. Pâte de tomate encore rouge vif et sent cru.",
+            "action": "Continuez à cuisiner. La pâte de tomate a particulièrement besoin de temps sur la chaleur pour développer la douceur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légumes complètement tendres et brillants. Pâte de tomates foncée à rouge brique. Sens doux, salé et complexe.",
+            "action": "Ajouter les haricots et leur liquide de cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte de tomates est brûlée à des taches noires. Une odeur amère.",
+            "action": "Ajouter une petite éclaboussure d'eau pour déglacer les taches brûlées avant d'ajouter les haricots."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau d'oignon contre le côté du pot — il devrait frotter entièrement sans résistance. Le soffritto doit sentir comme le début de chaque bonne sauce du dimanche."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "soffritto",
+        "cooked_beans"
+      ],
+      "outputState": "bean_broth",
+      "instructions": "Ajouter les haricots cuits et tout leur liquide de cuisson réservé au soffritto. Mélanger et laisser mijoter. Si le bouillon est trop épais, ajoutez de l'eau jusqu'à ce que vous atteigniez une consistance légèrement plus mince que votre soupe finie cible — les pâtes l'épaississent davantage. Laisser mijoter pendant 15 minutes pour permettre aux saveurs de fondre. Goûtez et ajustez le sel. Le bouillon doit maintenant goûter profondément salé avec une légère douceur du soffritto et une chaleur persistante du peperoncino.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon crémeux, teinté de rose, quelque part entre une soupe à la crème et un bouillon mince, avec des haricots entiers et de la purée visibles partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon a encore un goût séparé de haricots et de tomates. Les saveurs n'ont pas fondu.",
+            "action": "Laisser mijoter encore 10 minutes et goûter à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Unifié, bouillon profondément salé avec une légère douceur et de la chaleur. L'amidon de haricots et le soffritto sont entièrement intégrés.",
+            "action": "Ajouter les pâtes directement dans la casserole."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon a été réduit trop loin et est très épais et féculent.",
+            "action": "Ajouter de l'eau pour se détendre avant d'ajouter les pâtes — les pâtes s'épaississent davantage."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillerée de bouillon – elle doit enrober légèrement l'arrière de la cuillère, avec un poids chaud, salé, légèrement sucré qui se sent important même sans les pâtes."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Bouillir",
+      "inputs": [
+        "bean_broth",
+        "ing_02"
+      ],
+      "outputState": "finished_pasta_e_fagioli",
+      "instructions": "Ajouter les pâtes sèches directement au bouillon de haricots. Mélanger immédiatement et fréquemment — les pâtes absorberont le bouillon de façon agressive, vérifier la consistance toutes les 2 minutes et ajouter de l'eau au besoin pour le garder souper tout au long de la cuisson. Cuire jusqu'à ce que les pâtes soient al dente — il continuera à ramollir dans la chaleur résiduelle. Le plat final doit être assez épais pour qu'une cuillère traînée à travers elle laisse un canal clair qui se remplit lentement. Retirer du feu. Goûtez et ajustez généreusement le sel. Arrosez une généreuse quantité d'huile d'olive sur la surface et remuez-la. Laisser reposer la soupe 2-3 minutes avant de servir.",
+      "visualCue": {
+        "primaryTarget": "Une soupe épaisse et crémeuse rose-rose avec des pâtes et des haricots distribués uniformément. La surface mijote d'huile d'olive. Une cuillère-trail se ferme lentement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pâtes sont encore très fermes ou crayeuses au centre. Le papillon est mince.",
+            "action": "Continuer la cuisson, en ajoutant un jet d'eau si le bouillon a absorbé trop rapidement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pâtes sont juste al dente. La soupe est assez épaisse pour tenir une cuillère-trail mais assez lâche pour verser dans un bol. Riche, crémeux, éclatant d'huile d'olive.",
+            "action": "Laisser reposer 3 minutes hors chauffage, puis servir dans des bols chauds."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pâtes ont absorbé tout le bouillon. Le plat est devenu une pâte épaisse et féculente. Les pâtes ont trop cuit.",
+            "action": "Ajouter de l'eau tiède et remuer vigoureusement. Une version plus humide est toujours délicieuse."
+          }
+        ]
+      },
+      "feelCue": "Plongez dans un bol et inclinez - la soupe doit couler lentement comme une seule masse unifiée, ni courir librement comme de l'eau, ni s'asseoir immovablement comme de la polenta. C'est la consistance parfaite de la lagane que les napolitains appellent « né troppo asciutta, né troppo brodosa »."
+    }
+  ]
 };

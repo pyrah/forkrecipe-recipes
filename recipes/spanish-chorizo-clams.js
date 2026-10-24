@@ -1,84 +1,219 @@
 export default {
-  repoId: "master_spanish_spanishchorizoclams_001",
-  parentRepoId: null,
-  slug: "spanish-chorizo-clams",
-  author: "ForkRecipe Kitchen",
-  title: "Spanish Clams with Chorizo and White Wine",
-  description: "Littleneck clams steam open in a broth of smoky chorizo fat, white wine, and garlic — the most effortless dish in the Spanish canon, and the one most likely to make you forget everything else you planned to cook.",
-  cuisine: "Spanish",
-  culture: "Iberian",
-  category: "proteins",
-  tags: ["protein", "clams", "chorizo", "spanish", "seafood", "wine"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "35 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 2, bitter: 1, umami: 5, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",  name: "Littleneck clams, scrubbed clean",                ratioValue: 1000, defaultUnit: "g",  substitutions: ["Manila clams", "cockles"] },
-    { ingId: "ing_02", role: "Protein",  name: "Spanish chorizo (cured, sliced into coins)",      ratioValue: 150,  defaultUnit: "g",  substitutions: ["Portuguese chouriço"] },
-    { ingId: "ing_03", role: "Allium",   name: "Garlic cloves, thinly sliced",                    ratioValue: 20,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_04", role: "Solvent",  name: "Dry white wine (Albariño or Verdejo)",            ratioValue: 200,  defaultUnit: "ml", substitutions: ["dry vermouth", "fish stock"] },
-    { ingId: "ing_05", role: "Fat",      name: "Extra-virgin olive oil",                          ratioValue: 30,   defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_06", role: "Herb",     name: "Flat-leaf parsley, roughly chopped",              ratioValue: 15,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Acid",     name: "Fresh lemon juice",                               ratioValue: 20,   defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",    name: "Smoked paprika (pimentón de la Vera)",            ratioValue: 3,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning","name": "Black pepper",                                  ratioValue: 2,    defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_spanish_spanishchorizoclams_001",
+  "parentRepoId": null,
+  "slug": "spanish-chorizo-clams",
+  "author": "ForkRecipe Kitchen",
+  "title": "Clams espagnols au Chorizo et au vin blanc",
+  "description": "Les palourdes à petit cou s'ouvrent dans un bouillon de graisse chorizo fumée, de vin blanc et d'ail — le plat le plus facile dans le canon espagnol, et le plus susceptible de vous faire oublier tout ce que vous aviez prévu de cuisiner.",
+  "cuisine": "Espagnol",
+  "culture": "ibérique",
+  "category": "proteins",
+  "tags": [
+    "protéine",
+    "Palourdes",
+    "chorizo",
+    "Espagnol",
+    "Produits de la mer",
+    "vin"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "35 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Purge",
-      inputs: ["ing_01"],
-      outputState: "purged_clams",
-      instructions: "Soak the clams in cold, lightly salted water (30g salt per liter) for 30 minutes. The clams will expel any sand and grit they are holding. Drain and scrub the shells under cold running water. Discard any clam with a cracked shell or any that does not close when tapped — these are dead and will ruin the dish. Sort through them one by one; a single bad clam can make the entire broth bitter and unpleasant.",
-      visualCue: {
-        primaryTarget: "Clean, tightly closed clam shells with no sand or mud on the exterior.",
-        spectrum: [
-          { state: "Underdone", description: "Clams are still gritty when you rub your fingers over the shells. Some may still have sand in their hinges.", action: "Change the water and soak for another 20 minutes." },
-          { state: "Perfect",   description: "Shells are clean and smooth. When tapped, all living clams close tightly. The soaking water has sand and grit at the bottom.", action: "Drain and proceed to cooking." },
-          { state: "Overdone",  description: "Clams have soaked so long in the same water that they are re-ingesting expelled sand.", action: "Change the water and give them 5 more minutes in fresh saltwater, then drain." },
-        ],
-      },
-      feelCue: "Run a clean clam shell between your fingers — it should feel smooth and slightly chalky, not gritty. The hinge should feel tight and spring back when pressed.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Palourdes à petit cou, nettoyées",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Palourdes de Manille",
+        "coqs"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["purged_clams", "ing_02", "ing_03", "ing_05", "ing_08"],
-      outputState: "chorizo_base",
-      instructions: "Heat the olive oil in a wide, heavy pan with a lid over medium heat. Add the chorizo coins and cook for 2–3 minutes until the fat renders and the oil turns a vivid orange-red from the paprika in the chorizo. Add the sliced garlic and smoked paprika, cooking for 60 seconds until fragrant. Do not let the garlic brown. This rendered chorizo fat is the foundation of the entire dish.",
-      visualCue: {
-        primaryTarget: "The oil in the pan is vibrantly orange-red from the chorizo fat. Garlic slices are golden and translucent at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Chorizo coins are still pale and the oil is clear. The paprika-colored fat has not yet rendered.", action: "Continue cooking over medium heat. The fat needs to fully render from the chorizo for the flavor to transfer to the broth." },
-          { state: "Perfect",   description: "Oil is vivid orange-red. Chorizo coins are slightly firm, not crispy. Garlic is golden at the edges and fragrant.", action: "Add the clams and wine immediately — do not let the garlic go further." },
-          { state: "Overdone",  description: "Garlic is brown and beginning to smell bitter. Chorizo is crispy and dry.", action: "Add the wine immediately to stop the cooking. The burnt garlic will slightly bitter the broth; add an extra squeeze of lemon at the end to counteract." },
-        ],
-      },
-      feelCue: "The kitchen should smell of paprika and rendered pork fat — warm, smoky, and intensely savory. This is the moment the dish announces itself.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Chorizo espagnol (curé, tranché en pièces de monnaie)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Chouriço portugais"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Steam",
-      inputs: ["chorizo_base", "ing_04", "ing_06", "ing_07", "ing_09"],
-      outputState: "finished_chorizo_clams",
-      instructions: "Add the scrubbed clams to the pan and immediately pour in the white wine. Cover tightly and raise the heat to high. Cook for 4–5 minutes, shaking the pan once or twice. Begin checking at 4 minutes — the moment all (or nearly all) the clams are open, they are done. Remove the lid and add the parsley and lemon juice. Toss quickly and serve in deep bowls with crusty bread to mop the broth. Discard any clam that has not opened after 6 minutes — it was dead before cooking.",
-      visualCue: {
-        primaryTarget: "All clam shells are open, curled back to reveal the plump, orange-edged meat inside. The broth is a vivid orange-red from the chorizo fat.",
-        spectrum: [
-          { state: "Underdone", description: "After 3 minutes, fewer than half the clams have opened. The broth is still barely simmering.", action: "Cover and give 2 more minutes on high heat. Do not uncover too early — the steam is essential." },
-          { state: "Perfect",   description: "Nearly all clams are open, revealing plump, just-cooked meat. The broth is a vivid orange-red and smells of sea, wine, and smoke. The clam meat is still slightly translucent at the thickest point.", action: "Add parsley and lemon. Serve immediately — every minute the clams spend on heat after opening toughens them." },
-          { state: "Overdone",  description: "Clam meat has contracted to a small, rubbery curl. The shells have been open for too long.", action: "Serve immediately. Overcooked clams are still good — the broth is the salvation. Provide extra bread." },
-        ],
-      },
-      feelCue: "Lift a cooked clam out of the shell with your fingers — it should feel plump and silky, yielding with very slight resistance. If it feels like a rubber eraser, it has cooked too long.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles à l'ail, tranchés finement",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Solvent",
+      "name": "Vin blanc sec (Albariño ou Verdejo)",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vermouth sec",
+        "stocks de poissons"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Paprika fumé (pimentón de la Vera)",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Poivre noir",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Purge",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "purged_clams",
+      "instructions": "Faire tremper les palourdes dans de l'eau froide légèrement salée (30g de sel par litre) pendant 30 minutes. Les palourdes expulseront tout sable et tout grain qu'elles détiennent. Égoutter et frotter les coquilles sous l'eau froide. Jeter toute palourde avec une coquille fissurée ou n'importe quelle autre qui ne se ferme pas quand tapoté — ceux - ci sont morts et ruineront le plat. Triez-les une par une; une seule mauvaise palourde peut rendre le bouillon entier amer et désagréable.",
+      "visualCue": {
+        "primaryTarget": "Nettoyez les coquilles de palourdes bien fermées sans sable ni boue à l'extérieur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les clams sont encore gritty quand vous frottez vos doigts sur les coquilles. Certains peuvent encore avoir du sable dans leurs charnières.",
+            "action": "Changez l'eau et trempez encore 20 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les coquilles sont propres et lisses. En tapotant, toutes les palourdes vivantes se ferment étroitement. L'eau de trempe a du sable et du sable au fond.",
+            "action": "Égoutter et procéder à la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les clams sont si longtemps trempés dans la même eau qu'ils réingèrent du sable expulsé.",
+            "action": "Changez l'eau et donnez-leur 5 minutes de plus dans l'eau salée, puis égouttez."
+          }
+        ]
+      },
+      "feelCue": "Exécutez une coquille propre de palourde entre vos doigts — elle devrait être lisse et légèrement crayeuse, et non pas gritty. La charnière doit se sentir serrée et ressortre quand elle est pressée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "purged_clams",
+        "ing_02",
+        "ing_03",
+        "ing_05",
+        "ing_08"
+      ],
+      "outputState": "chorizo_base",
+      "instructions": "Chauffer l'huile d'olive dans une poêle large et lourde avec un couvercle à feu moyen. Ajouter les pièces de chorizo et cuire pendant 2-3 minutes jusqu'à ce que la graisse rende et l'huile devient un rouge orange vif du paprika dans le chorizo. Ajouter l'ail tranché et le paprika fumé, cuire 60 secondes jusqu'à odorat. Ne laissez pas l'ail brunir. Cette graisse de chorizo rendu est le fondement de tout le plat.",
+      "visualCue": {
+        "primaryTarget": "L'huile dans la poêle est fortement rouge-orange de la graisse chorizo. Les tranches d'ail sont dorées et translucides aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pièces de Chorizo sont encore pâles et l'huile est claire. La graisse de couleur paprika n'a pas encore rendu.",
+            "action": "Continuer la cuisson à feu moyen. La graisse a besoin de rendre complètement du chorizo pour la saveur à transférer au bouillon."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'huile est rouge-orange vif. Les pièces de Chorizo sont légèrement fermes, pas croustillantes. L'ail est doré aux bords et parfumé.",
+            "action": "Ajouter immédiatement les palourdes et le vin — ne laissez pas l'ail aller plus loin."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est brun et commence à sentir amer. Le chorizo est croustillant et sec.",
+            "action": "Ajouter le vin immédiatement pour arrêter la cuisson. L'ail brûlé amère légèrement le bouillon; ajouter un peu de citron à la fin pour compenser."
+          }
+        ]
+      },
+      "feelCue": "La cuisine doit sentir le paprika et rendre le porc gras — chaud, fumé et intensément salé. C'est le moment où le plat s'annonce."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "vapeur",
+      "inputs": [
+        "chorizo_base",
+        "ing_04",
+        "ing_06",
+        "ing_07",
+        "ing_09"
+      ],
+      "outputState": "finished_chorizo_clams",
+      "instructions": "Ajouter les palourdes frottées dans la poêle et verser immédiatement dans le vin blanc. Couvrez bien et augmentez la chaleur. Cuire de 4 à 5 minutes en agitant la poêle une ou deux fois. Commencez à vérifier à 4 minutes — au moment où toutes (ou presque) les palourdes sont ouvertes, elles sont terminées. Retirer le couvercle et ajouter le persil et le jus de citron. Mélanger rapidement et servir dans des bols profonds avec du pain croustillant pour éponger le bouillon. Jeter toute palourde qui n'a pas ouvert après 6 minutes — elle était morte avant de cuisiner.",
+      "visualCue": {
+        "primaryTarget": "Toutes les coquilles de palourdes sont ouvertes, recourbées pour révéler la chair à l'intérieur. Le bouillon est un rouge-orange vif de la graisse de chorizo.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 3 minutes, moins de la moitié des palourdes ont ouvert. Le bouillon mijote encore à peine.",
+            "action": "Couvrir et donner 2 minutes de plus à feu vif. Ne pas découvrir trop tôt — la vapeur est essentielle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Presque toutes les palourdes sont ouvertes, révélant de la viande fraîche. Le bouillon est rouge-orange vif et sent la mer, le vin et la fumée. La chair de palourde est encore légèrement translucide au point le plus épais.",
+            "action": "Ajouter le persil et le citron. Servir immédiatement — chaque minute que les palourdes dépensent sur la chaleur après l'ouverture les durcit."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande de clam a contracté une petite boucle caoutchouteuse. Les coquilles sont ouvertes depuis trop longtemps.",
+            "action": "Servir immédiatement. Les palourdes surcuites sont encore bonnes: le bouillon est le salut. Fournir du pain supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une palourde cuite de la coquille avec vos doigts — elle devrait se sentir plombée et soyeuse, donnant avec une très légère résistance. S'il se sent comme une gomme en caoutchouc, il a cuit trop longtemps."
+    }
+  ]
 };

@@ -1,99 +1,292 @@
 export default {
-  repoId: "master_russian_mushroom_stroganoff_001",
-  parentRepoId: null,
-  slug: "mushroom-stroganoff",
-  author: "ForkRecipe Kitchen",
-  title: "Mushroom Stroganoff",
-  description: "A vegetarian riff on the Russian classic — wild mushrooms sautéed hard in butter until their edges char and their liquid has cooked away entirely, then brought together with shallots, thyme and brandy, finished with sour cream into a rich, pale brown sauce that clings to every strand of egg noodle.",
-  cuisine: "Russian",
-  culture: "Russian",
-  category: "vegetables",
-  tags: ["russian", "mushroom", "vegetarian", "pasta"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 2, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Mixed mushrooms (cremini, shiitake, porcini), thickly sliced", ratioValue: 700, defaultUnit: "g", substitutions: ["all cremini", "oyster mushrooms", "dried porcini rehydrated for deeper umami"] },
-    { ingId: "ing_02", role: "Allium",     name: "Shallots, thinly sliced",                   ratioValue: 100,  defaultUnit: "g",    substitutions: ["1 medium brown onion"] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves, minced",                     ratioValue: 10,   defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_04", role: "Fat",        name: "Unsalted butter",                           ratioValue: 50,   defaultUnit: "g",    substitutions: ["olive oil and a splash of butter for flavour"] },
-    { ingId: "ing_05", role: "Solvent",    name: "Brandy or Cognac",                          ratioValue: 30,   defaultUnit: "ml",   substitutions: ["dry sherry", "extra stock"] },
-    { ingId: "ing_06", role: "Liquid",     name: "Vegetable stock",                           ratioValue: 200,  defaultUnit: "ml",   substitutions: ["mushroom soaking liquid plus water", "beef stock for non-vegetarian version"] },
-    { ingId: "ing_07", role: "Dairy",      name: "Full-fat sour cream",                       ratioValue: 200,  defaultUnit: "g",    substitutions: ["crème fraîche (richer)", "full-fat Greek yogurt (lighter)"] },
-    { ingId: "ing_08", role: "Umami",      name: "Dijon mustard",                             ratioValue: 10,   defaultUnit: "g",    substitutions: ["whole grain mustard"] },
-    { ingId: "ing_09", role: "Herb",       name: "Fresh thyme sprigs",                        ratioValue: 4,    defaultUnit: "sprigs", substitutions: ["dried thyme (use half the amount)"] },
-    { ingId: "ing_10", role: "Herb",       name: "Flat-leaf parsley, roughly chopped",        ratioValue: 15,   defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_11", role: "Starch",     name: "Egg noodles or tagliatelle, cooked to serve", ratioValue: 300, defaultUnit: "g",   substitutions: ["white rice", "mashed potato"] },
-    { ingId: "ing_12", role: "Seasoning",  name: "Fine sea salt and black pepper",            ratioValue: 8,    defaultUnit: "g",    substitutions: [] },
+  "repoId": "master_russian_mushroom_stroganoff_001",
+  "parentRepoId": null,
+  "slug": "mushroom-stroganoff",
+  "author": "ForkRecipe Kitchen",
+  "title": "Les champignons Stroganoff",
+  "description": "Un riff végétarien sur le classique russe — champignons sauvages sautés dur dans le beurre jusqu'à ce que leurs bords char et leur liquide ont entièrement cuit, puis réunis avec des échalotes, thym et cognac, fini avec de la crème aigre dans une sauce riche, brun pâle qui s'accroche à chaque brin de nouilles d'œuf.",
+  "cuisine": "Russe",
+  "culture": "Russe",
+  "category": "vegetables",
+  "tags": [
+    "Russe",
+    "champignon",
+    "végétarien",
+    "pâtes"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Sear mushrooms",
-      inputs: ["ing_01", "ing_04", "ing_12"],
-      outputState: "seared_mushrooms",
-      instructions: "This is the most important step and the most commonly botched. Heat a wide, heavy skillet — cast iron ideal — over high heat until it smokes. Add half the butter. When the foam subsides and the butter begins to brown, add the mushrooms in a single layer. Do NOT stir. Do not add all the mushrooms at once if they crowd the pan — do them in two or three batches. Let them sit and sear, undisturbed, for 2–3 minutes until a deep brown crust forms on the underside, then turn them. Initially the mushrooms release a large amount of liquid; this is normal. Stay on high heat and let that liquid evaporate completely. The sound in the pan changes from a steam-hiss to a sizzle when the moisture is gone — that is your cue. The mushrooms should be deeply browned, about 70% reduced in volume, their edges slightly crisped. Season with salt and pepper and transfer to a plate.",
-      visualCue: {
-        primaryTarget: "Dark, bronzed mushrooms — almost meaty in their depth of colour — shrunken to roughly half their original volume, with caramelized edges and a glistening surface.",
-        spectrum: [
-          { state: "Underdone", description: "The mushrooms are pale, steamed-looking and watery, sitting in a pool of their own liquid, soft and slippery rather than browned.", action: "You added too many to the pan at once, or the heat was too low. Drain off the liquid, raise the heat to high and cook until the liquid evaporates and browning begins." },
-          { state: "Perfect",   description: "Deep, even brown on all sides, the mushrooms shrunken and dense, smelling intensely of browned, earthy umami. The pan has a brown fond on the base.", action: "Transfer to a plate and proceed with the shallots in the same pan — do not wipe out the fond, it is flavour." },
-          { state: "Overdone",  description: "The mushrooms have gone from brown to black at the edges, some pieces are acrid and powdery-dry rather than tender.", action: "Reduce heat for subsequent batches. Remove any fully black pieces before finishing the sauce." },
-        ],
-      },
-      feelCue: "A properly seared mushroom feels firm and almost meaty when pressed with a spatula — not spongy or water-logged. The edge should have a slight snap of caramelized crust, and the whole pan should smell like the forest floor roasted over fire.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Champignons mélangés (crémini, shiitake, porcini), tranchés épaisement",
+      "ratioValue": 700,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tous crémini",
+        "Champignons d'huître",
+        "porcin séché réhydraté pour un umami plus profond"
+      ]
     },
     {
-      nodeId: "step_2", action: "Build sauce base",
-      inputs: ["seared_mushrooms", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_09"],
-      outputState: "sauce_base",
-      instructions: "Reduce the heat to medium. Add the remaining butter to the same pan — the brown fond on the base will immediately begin to release into the butter, darkening it beautifully. Add the shallots and thyme and cook, stirring regularly, for 5–6 minutes until the shallots are soft and golden. Add the garlic and cook 1 minute more. Pour in the brandy — step back as it may flame briefly if the pan is hot enough. Scrape the base of the pan vigorously as the brandy reduces to almost nothing in about 1 minute. Pour in the stock and return the seared mushrooms to the pan. Simmer for 5 minutes until the stock has reduced by about half and the liquid is slightly thickened and glossy.",
-      visualCue: {
-        primaryTarget: "A glossy, reduced, medium-brown liquid in the pan, the shallots melted into it, the mushrooms sitting in a bubbling sauce that has the colour of pale mahogany.",
-        spectrum: [
-          { state: "Underdone", description: "The stock is still thin, watery and pale, the shallots still have texture, and the sauce runs freely around the pan.", action: "Simmer for longer to reduce. A thin sauce won't hold the sour cream and will make the noodles watery." },
-          { state: "Perfect",   description: "Reduced by half, the sauce is glossy and lightly syrupy, the fond incorporated, the thyme fragrant and the mushrooms warmed through.", action: "Proceed to the sour cream finish immediately." },
-          { state: "Overdone",  description: "The stock has over-reduced to a sticky, almost syrupy liquid that is too concentrated and salty.", action: "Add a splash more stock to loosen, then proceed with caution — the sour cream will add further body." },
-        ],
-      },
-      feelCue: "Tilt the pan — the sauce should flow and pool in the corner in a slow, thick-ish ribbon, not a watery splash. The smell should be deep and savory: the brandy's warmth, the butter-fond, the thyme.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Échalotes, tranchées finement",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 oignon brun moyen"
+      ]
     },
     {
-      nodeId: "step_3", action: "Finish with sour cream",
-      inputs: ["sauce_base", "ing_07", "ing_08", "ing_12"],
-      outputState: "stroganoff_sauce",
-      instructions: "Reduce the heat to the absolute lowest setting — sour cream must never boil or it will split and curdle into grainy, broken lumps. Add the Dijon mustard to the pan and stir through. Spoon in the sour cream and fold it gently through the sauce in slow, wide strokes. Let it warm through for 1–2 minutes, barely simmering — the surface should shiver gently but never bubble actively. The sauce will turn from brown to a warm, pale buff colour as the cream is incorporated. Taste and adjust salt and pepper carefully — the reduction will have concentrated the saltiness already. The finished sauce should be creamy, tangy from the sour cream, warmly savory from the mushrooms, and bright from the mustard.",
-      visualCue: {
-        primaryTarget: "A smooth, pale-brown, creamy sauce just beneath a gentle simmer — the colour of café au lait — coating the mushrooms and leaving a visible, lasting trail when the spoon is dragged through.",
-        spectrum: [
-          { state: "Underdone", description: "The sour cream is stirred in but still cold-streaked and not fully incorporated, the sauce striped rather than uniform, and the tang too sharp.", action: "Stir gently and hold on the lowest heat until the cream is fully integrated and the temperature is even throughout." },
-          { state: "Perfect",   description: "A smooth, uniform, pale-brown sauce with a gentle tang from the cream, warmth from the mustard, and deep, earthy mushroom savouriness. It coats a spoon and falls in a slow stream.", action: "Toss with noodles immediately and serve." },
-          { state: "Overdone",  description: "The sour cream has been heated too aggressively — the sauce has split into an oily, grainy mess with curdled white specks and a thin, greasy liquid.", action: "The sauce is broken. Off the heat, whisk in a tablespoon of cold sour cream vigorously to try to bring it back. Or serve over noodles and call it rustic — the flavour is still there." },
-        ],
-      },
-      feelCue: "Run a spoon across the surface of the finished sauce — it should leave a groove that closes slowly and evenly, the sauce neither too thick to stir nor so thin it slides off. The tang of the sour cream should be present but rounded, not sharp.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Toss and serve",
-      inputs: ["stroganoff_sauce", "ing_11", "ing_10"],
-      outputState: "finished_mushroom_stroganoff",
-      instructions: "Add the cooked, drained egg noodles directly into the pan with the sauce and toss to coat every strand. If the sauce is too thick to coat the noodles freely, add a splash of pasta cooking water to loosen — it emulsifies beautifully with the cream. Divide into warm bowls and shower generously with freshly chopped flat-leaf parsley. Serve with nothing more than a grinding of black pepper and a simple green salad. The noodles should be enrobed, not drowning; each strand should carry a visible, creamy coating.",
-      visualCue: {
-        primaryTarget: "Coiled egg noodles enrobed in a creamy, pale-brown sauce, the mushrooms visible throughout, the parsley bright green against the muted tones — aromatic and steaming.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is too thick to coat the noodles and sits in clumps rather than enrobing them evenly.", action: "Add pasta water a splash at a time, tossing vigorously. It loosens the sauce and helps it cling to the noodles." },
-          { state: "Perfect",   description: "Every noodle strand carries a creamy coat, the mushrooms distributed evenly, the parsley bright. The bowl smells of warm cream, earth and herbs.", action: "Eat immediately — stroganoff waits for no one." },
-          { state: "Overdone",  description: "The noodles have been tossed over heat and the sauce has reduced further and is drying out, clumping and sticking.", action: "Add a splash of warm water or stock to revive, toss quickly and serve without further delay." },
-        ],
-      },
-      feelCue: "Twirl a forkful and lift — the noodles should trail a silky coat of sauce and resist slightly before releasing, like perfectly dressed pasta. The mushrooms on the fork should feel dense and satisfying, almost meaty, against the soft noodle.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile d'olive et une touche de beurre pour la saveur"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Solvent",
+      "name": "Brandy ou Cognac",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sherry sec",
+        "stock supplémentaire"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Stocks de légumes",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "champignon liquide de trempe plus eau",
+        "stock de viande bovine pour la version non végétarienne"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Crème aigre pleine graisse",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "crème fraîche (richissante)",
+        "yogourt grec plein gras (léger)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "moutarde à grains entiers"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 4,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "Thym séché (utiliser la moitié de la quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Starch",
+      "name": "Nouilles ou tagliatelles d'oeufs, cuites pour servir",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "riz blanc",
+        "purée de pommes de terre"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre noir",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Champignons de mer",
+      "inputs": [
+        "ing_01",
+        "ing_04",
+        "ing_12"
+      ],
+      "outputState": "seared_mushrooms",
+      "instructions": "C'est l'étape la plus importante et la plus souvent bâclée. Chauffer une poêle large et lourde, idéale en fonte, à feu vif jusqu'à ce qu'elle fume. Ajouter la moitié du beurre. Lorsque la mousse s'abaisse et que le beurre commence à brunir, ajouter les champignons en une seule couche. Ne remuez pas. Ne pas ajouter tous les champignons à la fois s'ils foulent la poêle — faites - les en deux ou trois lots. Qu'ils s'asseyent et souillent, sans gêne, pendant 2-3 minutes jusqu'à ce qu'une croûte brune profonde se forme sur le dessous, puis les tournent. Initialement, les champignons libèrent une grande quantité de liquide; c'est normal. Restez à feu vif et laissez ce liquide s'évaporer complètement. Le bruit dans la poêle passe d'un sifflement de vapeur à un étourdissement lorsque l'humidité est partie — c'est votre signal. Les champignons doivent être profondément dorés, environ 70% en volume, leurs bords légèrement croustillants. Assaisonner de sel et de poivre et transférer dans une assiette.",
+      "visualCue": {
+        "primaryTarget": "Les champignons foncés, bronzés, presque charnus dans leur profondeur de couleur, ont diminué jusqu'à environ la moitié de leur volume d'origine, avec des bords caramélisés et une surface scintillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les champignons sont pâles, à la vapeur et aqueux, assis dans une piscine de leur propre liquide, doux et glissant plutôt que brunis.",
+            "action": "Vous en avez ajouté trop à la poêle à la fois, ou la chaleur était trop faible. Égoutter du liquide, élever le feu à haute température et cuire jusqu'à ce que le liquide s'évapore et commence à brunir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Profond, même brun de tous les côtés, les champignons se sont rétrécis et denses, sentant intensément l'umami brun, terreux. La poêle a un fond brun sur la base.",
+            "action": "Transférer dans une assiette et procéder avec les échalotes dans la même casserole — ne pas essuyer le fond, il est saveur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les champignons sont passés du brun au noir sur les bords, certains morceaux sont acrides et secs poudreux plutôt que tendres.",
+            "action": "Réduire la chaleur pour les lots suivants. Retirer les morceaux entièrement noirs avant de terminer la sauce."
+          }
+        ]
+      },
+      "feelCue": "Un champignon bien cousu se sent ferme et presque charnu lorsqu'il est pressé avec une spatule, non spongieuse ou arrosée. Le bord devrait avoir un léger éclat de croûte caramélisée, et toute la poêle devrait sentir comme le plancher de forêt rôti sur le feu."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Construire la base de sauce",
+      "inputs": [
+        "seared_mushrooms",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_09"
+      ],
+      "outputState": "sauce_base",
+      "instructions": "Réduire le feu à moyen. Ajouter le reste du beurre dans la même casserole — le fond brun sur la base commencera immédiatement à se libérer dans le beurre, l'assombrissant magnifiquement. Ajouter les échalotes et le thym et cuire, en remuant régulièrement, pendant 5-6 minutes jusqu'à ce que les échalotes soient tendres et dorées. Ajouter l'ail et cuire encore 1 minute. Verser le cognac — reculez car il peut brûler brièvement si la poêle est assez chaude. Gratter vigoureusement la base de la poêle, car le cognac réduit à presque rien en environ 1 minute. Verser le stock et retourner les champignons dans la poêle. Laisser mijoter pendant 5 minutes jusqu'à ce que le stock ait diminué d'environ la moitié et que le liquide soit légèrement épaissé et brillant.",
+      "visualCue": {
+        "primaryTarget": "Liquide brun moyen et brillant dans la poêle, les échalotes y ont fondu, les champignons sont assis dans une sauce bouillonnante de couleur acajou pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock est encore mince, aqueux et pâle, les échalotes ont encore de la texture, et la sauce court librement autour de la casserole.",
+            "action": "Laisser mijoter plus longtemps pour réduire. Une sauce fine ne tiendra pas la crème aigre et rendra les nouilles aqueuses."
+          },
+          {
+            "state": "Perfect",
+            "description": "Réduction de moitié, la sauce est lustrée et légèrement sirupeuse, le fond incorporé, le thym parfumé et les champignons se réchauffent.",
+            "action": "Passez immédiatement à la crème sure."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock a surréduit à un liquide collant, presque sirupeux qui est trop concentré et salé.",
+            "action": "Ajouter un éclaboussure plus de stock pour se détendre, puis procéder avec prudence — la crème aigre ajoutera plus de corps."
+          }
+        ]
+      },
+      "feelCue": "Inclinez la poêle — la sauce doit couler et mettre en piscine dans le coin dans un ruban épais et lent, pas un jet d'eau. L'odeur doit être profonde et savoureuse : la chaleur du brandy, le beurre-fond, le thym."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Finir avec de la crème aigre",
+      "inputs": [
+        "sauce_base",
+        "ing_07",
+        "ing_08",
+        "ing_12"
+      ],
+      "outputState": "stroganoff_sauce",
+      "instructions": "Réduisez la chaleur au réglage le plus bas absolu — la crème aigre ne doit jamais bouillir ou elle se divisera en morceaux granuleux et cassés. Ajouter la moutarde de Dijon dans la poêle et remuer. Spoon dans la crème aigre et plier doucement dans la sauce en petits coups. Laissez-la chauffer pendant 1 à 2 minutes, à peine mijotant, la surface devrait trembler doucement mais ne jamais buller activement. La sauce passera de brun à une couleur chaude et pâle car la crème est incorporée. Goûtez et ajustez soigneusement le sel et le poivre — la réduction aura déjà concentré le sel. La sauce finie doit être crémeuse, acidulée de la crème sure, chaudement salée des champignons et brillante de la moutarde.",
+      "visualCue": {
+        "primaryTarget": "Une sauce douce, brun pâle, crémeuse, juste sous une mijotée douce — la couleur du café au lait — enrobant les champignons et laissant une trace visible et durable lorsque la cuillère est traînée à travers.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème aigre est brassée, mais encore étirée à froid et pas entièrement incorporée, la sauce rayée plutôt que uniforme, et le tang trop tranchant.",
+            "action": "Incorporer doucement et maintenir le feu le plus bas jusqu'à ce que la crème soit complètement intégrée et que la température soit uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce lisse, uniforme, brun pâle avec un doux tang de la crème, la chaleur de la moutarde, et profonde, terreux champignons savoureux. Il enveloppe une cuillère et tombe dans un ruisseau lent.",
+            "action": "Ajouter les nouilles immédiatement et servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème aigre a été chauffée trop agressivement — la sauce s'est divisée en un gâchis huileux et granuleux avec des taches blanches caillées et un liquide mince et gras.",
+            "action": "La sauce est cassée. Hors de la chaleur, fouetter dans une cuillère à soupe de crème aigre froide vigoureusement pour essayer de le ramener. Ou servir sur les nouilles et l'appeler rustique — la saveur est toujours là."
+          }
+        ]
+      },
+      "feelCue": "Exécutez une cuillère sur la surface de la sauce finie — elle devrait laisser une rainure qui se ferme lentement et uniformément, la sauce ni trop épaisse pour remuer ni si mince qu'elle glisse. La tange de la crème sure doit être présente mais arrondie, non pointue."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Verser et servir",
+      "inputs": [
+        "stroganoff_sauce",
+        "ing_11",
+        "ing_10"
+      ],
+      "outputState": "finished_mushroom_stroganoff",
+      "instructions": "Ajouter les nouilles d'oeufs cuites et égouttées directement dans la poêle avec la sauce et mélanger pour enrober chaque brin. Si la sauce est trop épaisse pour enrober les nouilles librement, ajoutez une éclaboussure d'eau de cuisson de pâtes à desserrer. Divisez en bols chauds et douchez généreusement avec du persil plat fraîchement haché. Servir avec rien de plus qu'un broyage de poivre noir et une simple salade verte. Les nouilles doivent être enrobées et non noyées; chaque brin doit porter un revêtement visible et crémeux.",
+      "visualCue": {
+        "primaryTarget": "Les nouilles d'œufs enroulées enrobées dans une sauce crémeuse, brun pâle, les champignons visibles dans l'ensemble, le persil vert vif contre les tons mutés — aromatique et vapeur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est trop épaisse pour enrober les nouilles et s'assied en croûtes plutôt que de les enrober uniformément.",
+            "action": "Ajouter l'eau de pâtes à la fois, jeter vigoureusement. Il relâche la sauce et l'aide à s'accrocher aux nouilles."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque brin de nouilles porte une couche crémeuse, les champignons distribués uniformément, le persil brillant. Le bol sent la crème chaude, la terre et les herbes.",
+            "action": "Mangez immédiatement — Stroganoff n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles ont été jetées à la chaleur et la sauce a encore diminué et est en train de sécher, d'empiler et de coller.",
+            "action": "Ajouter un éclaboussure d'eau chaude ou de stock pour relancer, lancer rapidement et servir sans plus tarder."
+          }
+        ]
+      },
+      "feelCue": "Twirl un fourche et levez - les nouilles devraient traquer une couche soyeuse de sauce et résister légèrement avant de relâcher, comme des pâtes parfaitement habillées. Les champignons sur la fourchette doivent se sentir denses et satisfaisants, presque charnus, contre les nouilles douces."
+    }
+  ]
 };

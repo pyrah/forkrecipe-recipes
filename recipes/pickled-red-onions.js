@@ -1,94 +1,235 @@
 export default {
-  repoId: "master_international_pickled_red_onions_001",
-  parentRepoId: null,
-  slug: "pickled-red-onions",
-  author: "ForkRecipe Kitchen",
-  title: "Pickled Red Onions",
-  description: "Thin-sliced red onions submerged in a vinegar brine with a pinch of sugar and salt, left for as little as 30 minutes — turning from sharp and raw to bright magenta, tender, and mellow.",
-  cuisine: "International",
-  culture: "International",
-  category: "condiments",
-  tags: ["pickled-onions", "condiment", "quick-pickle", "vegan", "gluten-free", "no-cook"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 2, sour: 4, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",      name: "Red onion (halved, sliced paper-thin on a mandoline or knife)", ratioValue: 100, defaultUnit: "parts", substitutions: ["shallots", "white onion"] },
-    { ingId: "ing_02", role: "Acid",      name: "Apple cider vinegar",                                           ratioValue: 60,  defaultUnit: "parts", substitutions: ["red wine vinegar", "white wine vinegar", "rice vinegar"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Water",                                                         ratioValue: 40,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Sweetener", name: "Caster sugar",                                                  ratioValue: 8,   defaultUnit: "parts", substitutions: ["honey", "maple syrup"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine salt",                                                     ratioValue: 5,   defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_06", role: "Spice",     name: "Whole black peppercorns",                                       ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Dried bay leaf",                                                ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_international_pickled_red_onions_001",
+  "parentRepoId": null,
+  "slug": "pickled-red-onions",
+  "author": "ForkRecipe Kitchen",
+  "title": "Oignons rouges marinés",
+  "description": "Des oignons rouges finement coupés sont immergés dans une saumure de vinaigre avec une pincée de sucre et de sel, laissés aussi peu que 30 minutes — passant de vifs et crus à brillants magenta, tendres et moelleux.",
+  "cuisine": "internationaux relatifs",
+  "culture": "internationaux relatifs",
+  "category": "condiments",
+  "tags": [
+    "d'oignons marinés",
+    "condiment",
+    "cueillir rapidement",
+    "végétalien",
+    "Sans gluten",
+    "pas de cuisson"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Slice",
-      inputs: ["ing_01"],
-      outputState: "sliced_onions",
-      instructions: "Halve the red onion through the root, then slice as thinly as you can manage — ideally 2 mm or less on a mandoline, or with careful knife work following the grain. The thinner the slice, the faster the pickle penetrates and the more tender the result. Uniformity matters: thick and thin slices pickle at different rates and you end up with some raw and some limp.",
-      visualCue: {
-        primaryTarget: "Translucent, even, paper-thin half-rings with a deep purple-red colour. A pile of them looks almost transparent when held to the light.",
-        spectrum: [
-          { state: "Underdone", description: "Slices are uneven — some thick wedges mixed with thin slivers; the pile has no uniformity.", action: "Sort and re-cut the thicker pieces, or accept that thicker slices will need a longer pickle time (at least 2 hours)." },
-          { state: "Perfect",   description: "Even, gossamer-thin half-rings that drape and curl. They look almost translucent and will colour uniformly in the brine.", action: "Pack loosely into a jar and prepare the brine." },
-          { state: "Overdone",  description: "Slices are so thin they have turned to shreds or the onion has crushed rather than sliced cleanly.", action: "Still usable — the shreds will pickle quickly and taste fine, just with a less elegant texture." },
-        ],
-      },
-      feelCue: "Run a finger across the cut face of the onion — it should feel smooth and glassy, not ragged. The sting in your eyes is a sign the cells have been cut cleanly rather than crushed.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Oignon rouge (causé, tranché en papier-fin sur une mandoline ou un couteau)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalotes",
+        "oignon blanc"
+      ]
     },
     {
-      nodeId: "step_2", action: "Dissolve",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "pickling_brine",
-      instructions: "Combine the vinegar, water, sugar, and salt in a small saucepan over medium heat. Stir constantly until the sugar and salt are fully dissolved, about 2 minutes. Add the peppercorns and bay leaf and remove from the heat. The brine does not need to boil — you are only dissolving solids, not cooking the onions. Allow to cool for 5 minutes before pouring.",
-      visualCue: {
-        primaryTarget: "A clear, pale amber liquid with no visible sugar or salt granules. Peppercorns bob at the surface. It smells clean and sharply vinegary.",
-        spectrum: [
-          { state: "Underdone", description: "Cloudy liquid with sugar granules still visible on the bottom of the pan; the liquid tastes gritty.", action: "Keep stirring over low heat until every crystal has dissolved before removing from the heat." },
-          { state: "Perfect",   description: "Clear, glossy, and balanced — sharply acidic with a light sweetness and clean saltiness. No graininess when tasted.", action: "Cool slightly, then pour over the onions." },
-          { state: "Overdone",  description: "Brine has boiled vigorously and reduced noticeably, concentrating the acid and salt beyond the recipe ratio.", action: "Add a splash of water to restore volume and re-taste for balance before using." },
-        ],
-      },
-      feelCue: "Dip a fingertip — it should sting cleanly with vinegar. A gritty sensation means undissolved salt or sugar remains.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin rouge",
+        "vinaigre de vin blanc",
+        "vinaigre de riz"
+      ]
     },
     {
-      nodeId: "step_3", action: "Steep",
-      inputs: ["sliced_onions", "pickling_brine"],
-      outputState: "pickling_onions",
-      instructions: "Pack the sliced onions into a clean glass jar, pressing down gently so they sit below the rim. Pour the warm (not boiling) brine over the onions, submerging them completely. Press the onions down with a fork if needed — any exposed to air will not pickle and may discolour. Seal the jar loosely or lay a small piece of plastic wrap across the top. Leave at room temperature for at least 30 minutes; 1 hour is better.",
-      visualCue: {
-        primaryTarget: "Onions fully submerged in brine, already beginning to turn from vivid purple to a deep magenta-pink at the edges where the acid has penetrated. The jar looks like it holds liquid jewels.",
-        spectrum: [
-          { state: "Underdone", description: "Onions still look raw purple and are sitting above the brine, barely in contact with the acid.", action: "Push them down firmly with a fork or spoon and ensure the brine fully covers. Add a little more vinegar-water if the jar is not full enough." },
-          { state: "Perfect",   description: "Onions submerged and beginning their colour shift to magenta-pink at the edges, with a bright, clean aroma when you lift the lid.", action: "Let steep for the minimum 30 minutes, then taste one — it should be bright, tangy, and pleasantly mellow." },
-          { state: "Overdone",  description: "Not applicable at the steeping stage — there is no 'overdone' at 30 minutes. Extended pickling (several days) can make them soft and very sour.", action: "For a quicker, crisper result use at the 30-minute mark; for a more mellow, deeply flavoured pickle, refrigerate and use within 2 weeks." },
-        ],
-      },
-      feelCue: "After 30 minutes, fish out one slice and bite it — it should still have a small amount of snap, not the raw crunch of a fresh onion or the limpness of a long-cooked one. You want mellow but not flabby.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Chill",
-      inputs: ["pickling_onions"],
-      outputState: "finished_pickled_red_onions",
-      instructions: "After 30 to 60 minutes at room temperature, transfer the sealed jar to the refrigerator. The pickle is ready to eat immediately but will continue to improve over the next 24 hours as the onions soften slightly and the brine penetrates fully. Use within 2 to 3 weeks. The brine will turn a vivid magenta that will stain — keep a cloth nearby when pouring.",
-      visualCue: {
-        primaryTarget: "Onions are fully saturated with a bright fuchsia-magenta colour, uniform throughout each slice. The brine in the jar is a vivid, jewel-bright pink.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are still partly purple at the core of each slice — the acid has not fully penetrated. They taste raw and sulphurous at the centre.", action: "Return to room temperature for another 30 minutes, or refrigerate overnight and use the next day." },
-          { state: "Perfect",   description: "Uniformly magenta, lightly crisp, mellow, and bright with a clean vinegar bite that doesn't overwhelm. They fold and drape without breaking.", action: "Pile onto tacos, grain bowls, sandwiches, or serve alongside grilled meats." },
-          { state: "Overdone",  description: "After more than 3 weeks, the onions turn limp, very sour, and lose their bright colour to a muddy reddish-brown.", action: "Discard and make a fresh batch. The brine itself can be reused once for a second, lighter pickle." },
-        ],
-      },
-      feelCue: "A perfect pickled onion should feel silky and yielding between your fingers, not crunchy and raw, not waterlogged and soft — there is a narrow window of tender-crisp you are aiming for.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Chérie",
+        "sirop d'érable"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Grains de poivre noirs entiers",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Feuille de laurier séchée",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Tranche",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "sliced_onions",
+      "instructions": "Coupez l'oignon rouge à travers la racine, puis coupez le plus fin possible – idéalement 2 mm ou moins sur une mandoline, ou avec un travail de couteau soigné suivant le grain. Plus la tranche est mince, plus le cornichon pénètre rapidement et plus le résultat est tendre. L'uniformité est importante : les tranches épaisses et minces se corsent à des taux différents et on finit avec un peu de brut et de limon.",
+      "visualCue": {
+        "primaryTarget": "Anneaux translucides, même fins, de couleur rouge-violet foncé. Un tas d'entre eux semble presque transparent lorsqu'il est tenu à la lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tranches sont inégales — quelques coins épais mélangés à de fines tranches; la pile n'a pas d'uniformité.",
+            "action": "Triez et coupez les morceaux plus épais, ou acceptez que les tranches plus épaisses nécessitent un temps de cornichons plus long (au moins 2 heures)."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même, les demi-roues minces de gossamer qui drapent et bouclent. Elles ont l'air presque translucides et se colorent uniformément dans la saumure.",
+            "action": "Emballez dans un bocal et préparez la saumure."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tranches sont si fines qu'elles se sont transformées en lambeaux ou l'oignon a broyé plutôt qu'en tranches propres.",
+            "action": "Toujours utilisables, les lambeaux se corsent rapidement et goûtent bien, avec une texture moins élégante."
+          }
+        ]
+      },
+      "feelCue": "Exécutez un doigt sur la face coupée de l'oignon — il devrait se sentir lisse et vitreux, non rabâché. La piqûre dans vos yeux est un signe que les cellules ont été coupées proprement plutôt que écrasées."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Dissoudre",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "pickling_brine",
+      "instructions": "Mélanger le vinaigre, l'eau, le sucre et le sel dans une petite casserole à feu moyen. Incorporer constamment jusqu'à ce que le sucre et le sel soient complètement dissous, environ 2 minutes. Ajouter les grains de poivre et la laurier et retirer du feu. La saumure n'a pas besoin de bouillir — vous ne faites que dissoudre les solides et non pas cuire les oignons. Laisser refroidir 5 minutes avant de verser.",
+      "visualCue": {
+        "primaryTarget": "Un liquide ambré clair et pâle sans sucre visible ni granulés de sel. Peppercorns bob à la surface. Il sent propre et fortement vinaigre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Liquide nuageux avec des granules de sucre encore visibles sur le fond de la poêle; le liquide a un goût de gritty.",
+            "action": "Continuez à remuer à feu doux jusqu'à ce que chaque cristal se dissout avant de le retirer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Clair, brillant et équilibré — fortement acide avec une légère douceur et un sel propre. Pas de grain au goût.",
+            "action": "Laisser refroidir légèrement, puis verser sur les oignons."
+          },
+          {
+            "state": "Overdone",
+            "description": "La saumure a fait bouillir vigoureusement et a diminué sensiblement, concentrant l'acide et le sel au-delà du ratio de la recette.",
+            "action": "Ajouter une éclaboussure d'eau pour restaurer le volume et re-goûter pour l'équilibre avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt — il devrait piquer proprement avec du vinaigre. Une sensation de gritty signifie le sel non dissous ou le sucre reste."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Streep",
+      "inputs": [
+        "sliced_onions",
+        "pickling_brine"
+      ],
+      "outputState": "pickling_onions",
+      "instructions": "Conditionnez les oignons tranchés dans un bocal en verre propre, pressez doucement pour qu'ils s'assoient sous le bord. Verser la saumure chaude (non bouillante) sur les oignons, les submerger complètement. Appuyez sur les oignons à l'aide d'une fourchette, si nécessaire — tout exposé à l'air ne se corse pas et peut décolorer. Sceller le pot de façon lâche ou déposer un petit morceau de plastique sur le dessus. Laisser à température ambiante pendant au moins 30 minutes; 1 heure est meilleure.",
+      "visualCue": {
+        "primaryTarget": "Oignons entièrement immergés dans la saumure, qui commencent déjà à passer du violet vif au rose-magenta profond aux bords où l'acide a pénétré. Le pot ressemble à des bijoux liquides.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons ont toujours l'air violet cru et sont assis au-dessus de la saumure, à peine en contact avec l'acide.",
+            "action": "Poussez-les fermement avec une fourchette ou une cuillère et assurez-vous que la saumure couvre entièrement. Ajouter un peu plus d'eau vinaigre si le pot n'est pas assez plein."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons submergés et commençant leur changement de couleur au magenta-pink aux bords, avec un arôme lumineux et propre quand vous soulevez le couvercle.",
+            "action": "Laisser raide pendant au moins 30 minutes, puis goûter un — il devrait être lumineux, tannant, et agréablement moelleux."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ne s'applique pas à l'étape du trempage — il n'y a pas de surdosage à 30 minutes. Le décapage prolongé (plusieurs jours) peut les rendre doux et très aigres.",
+            "action": "Pour un résultat plus rapide et plus croustillant, utiliser à la marque de 30 minutes; pour un cornichon plus moelleux et aromatisé, réfrigérer et utiliser dans les 2 semaines."
+          }
+        ]
+      },
+      "feelCue": "Après 30 minutes, poissonnez une tranche et mordez-la — elle devrait encore avoir une petite quantité de claquage, pas la croûte brute d'un oignon frais ou la boiterie d'une longue cuisson. Tu veux de la douceur, mais pas du flabby."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Refroidissement",
+      "inputs": [
+        "pickling_onions"
+      ],
+      "outputState": "finished_pickled_red_onions",
+      "instructions": "Après 30 à 60 minutes à température ambiante, transférer le pot scellé au réfrigérateur. Le cornichon est prêt à manger immédiatement mais continuera à s'améliorer au cours des 24 prochaines heures lorsque les oignons s'adoucissent légèrement et que la saumure pénètre complètement. Utiliser dans les 2 à 3 semaines. La saumure tournera un magenta vif qui tachera — gardez un chiffon à proximité au moment de verser.",
+      "visualCue": {
+        "primaryTarget": "Les oignons sont entièrement saturés d'une couleur fuchsia-magenta vive, uniforme dans chaque tranche. La saumure dans le pot est un rose vif et brillant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont encore partiellement violets au cœur de chaque tranche — l'acide n'a pas complètement pénétré. Ils goûtent cru et sulfureux au centre.",
+            "action": "Revenir à la température ambiante pendant 30 minutes, ou réfrigérer pendant la nuit et utiliser le lendemain."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement magenta, légèrement croquant, moelleux, et lumineux avec une morsure de vinaigre propre qui ne déborde pas. Ils se replient et drapent sans se casser.",
+            "action": "Pilez sur des tacos, des bols à grains, des sandwichs ou servez avec des viandes grillées."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après plus de 3 semaines, les oignons deviennent boiteux, très aigres, et perdent leur couleur vive à un brun rougeâtre boueux.",
+            "action": "Jetez et faites un lot frais. La saumure elle-même peut être réutilisée une fois pour une seconde, cornichon plus léger."
+          }
+        ]
+      },
+      "feelCue": "Un oignon mariné parfait devrait se sentir soyeux et céder entre vos doigts, pas croquant et cru, pas waterlogged et doux — il ya une fenêtre étroite de tendre-crisp que vous visez."
+    }
+  ]
 };

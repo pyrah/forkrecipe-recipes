@@ -1,81 +1,238 @@
 export default {
-  repoId: "master_jamaican_jerk-paste_001",
-  parentRepoId: null,
-  slug: "jerk-paste",
-  author: "ForkRecipe Kitchen",
-  title: "Jerk Paste",
-  description: "A ferociously fragrant, near-black paste of scotch bonnets, allspice, and scallions that scorches your nose with heat before the deep, clove-dark warmth follows — the soul of every proper Jamaican jerk.",
-  cuisine: "Jamaican",
-  culture: "Jamaican",
-  category: "condiments",
-  tags: ["jerk", "scotch bonnet", "jamaican", "spicy", "vegan"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 5, sour: 4, bitter: 2, umami: 3, heat: 9 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",      name: "Scotch bonnet peppers, stems removed", ratioValue: 3,   defaultUnit: "parts", substitutions: ["habanero (same heat, slightly less floral)"] },
-    { ingId: "ing_02", role: "Allium",    name: "Scallions, roughly chopped (white and green)", ratioValue: 4, defaultUnit: "parts", substitutions: ["shallots"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves",                        ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",     name: "Ground allspice (pimento)",            ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground cinnamon",                      ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Ground nutmeg",                        ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Kosher salt",                          ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Sweetener", name: "Brown sugar",                          ratioValue: 0.3, defaultUnit: "parts", substitutions: ["dark molasses (reduce by half)"] },
-    { ingId: "ing_09", role: "Acid",      name: "Lime juice, freshly squeezed",         ratioValue: 0.5, defaultUnit: "parts", substitutions: ["cider vinegar"] },
-    { ingId: "ing_10", role: "Aromatic",  name: "Fresh thyme leaves",                   ratioValue: 0.3, defaultUnit: "parts", substitutions: ["dried thyme (use half)"] },
-    { ingId: "ing_11", role: "Solvent",   name: "Neutral oil (vegetable or canola)",    ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_jamaican_jerk-paste_001",
+  "parentRepoId": null,
+  "slug": "jerk-paste",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pâte à jerk",
+  "description": "Une pâte odorante et quasi-noire de bonnets de scotch, d'Allspice et d'oignons qui vous brûle le nez avec chaleur avant que la chaleur profonde et sombre de girofle ne s'ensuive — l'âme de chaque vrai crétin jamaïcain.",
+  "cuisine": "Jamaïquen",
+  "culture": "Jamaïquen",
+  "category": "condiments",
+  "tags": [
+    "Imbécile",
+    "de scotch",
+    "Jamaïcain",
+    "épicé",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 5,
+    "sour": 4,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 9
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Chop",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "rough_aromatics",
-      instructions: "Wear gloves when handling scotch bonnets — the capsaicin in these peppers will transfer to your hands and linger for hours. Roughly chop the peppers (seeds and all for full heat; remove seeds for milder paste), scallions, and garlic into pieces small enough to blend. The seeds of scotch bonnets carry significant flavor in addition to heat — do not discard them unless you specifically want a milder result.",
-      visualCue: {
-        primaryTarget: "All aromatics are in rough 2–3 cm pieces. Nothing is fine-diced — the blender will do that work.",
-        spectrum: [
-          { state: "Underdone", description: "Pieces are too large (whole peppers, uncut) and will stall a small food processor.", action: "Chop into smaller pieces. A blender handles large chunks better than a food processor." },
-          { state: "Perfect",   description: "Rough, uneven chunks. Scotch bonnets are halved or quartered. Scallions in thirds. Garlic left whole or halved.", action: "Transfer to blender with all remaining ingredients." },
-          { state: "Overdone",  description: "Aromatics have been minced very fine by hand. Fine — the blend will still work.", action: "Proceed to blending. The fine pre-chop will make a smoother paste." },
-        ],
-      },
-      feelCue: "The moment you cut a scotch bonnet, your eyes will feel a faint sting from the airborne capsaicin — a reliable sign the pepper is potent. Work quickly and do not touch your face.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Poivrons de bonnet écossais, tiges enlevées",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "habanero (même chaleur, légèrement moins florale)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Blend",
-      inputs: ["rough_aromatics", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "rough_paste",
-      instructions: "Add all remaining ingredients to a blender or food processor. Pulse 5–6 times to break everything down, then blend on high for 60 seconds. Scrape down the sides and blend again for 30 seconds. Add oil one tablespoon at a time if the paste is too dry to move in the blender — you want a thick, spreadable paste, not a sauce.",
-      visualCue: {
-        primaryTarget: "A very dark green, almost olive-black paste with visible flecks of pepper skin and spice. Uniform enough to spread, thick enough to hold its shape on a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is chunky with large visible pieces of pepper skin and whole spice. The blender cannot pull it down.", action: "Add one more tablespoon of oil and pulse again. If the blender is small, blend in two batches." },
-          { state: "Perfect",   description: "Smooth-ish paste, deeply fragrant, spreadable like thick pesto. Dark green-brown with a glossy surface from the oil.", action: "Taste and adjust: add more lime for brightness, more sugar to round the heat, or salt to amplify." },
-          { state: "Overdone",  description: "Paste has become a thin sauce — too much oil was added.", action: "It will still work as a marinade but will not adhere as a paste. Reduce in a small pan over medium heat for 3 minutes to concentrate." },
-        ],
-      },
-      feelCue: "Rub a very small amount on the back of your wrist (not your fingers — you will touch your face) — the heat should bloom slowly, peaking about 30 seconds after contact. If you feel nothing, the peppers were weak; add more.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Échalons, hachés approximativement (blanc et vert)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalotes"
+      ]
     },
     {
-      nodeId: "step_3", action: "Rest",
-      inputs: ["rough_paste"],
-      outputState: "jerk_paste",
-      instructions: "Transfer the paste to a jar or sealed container and refrigerate for at least 2 hours before using. The resting period allows the acid from the lime juice to mellow the raw sharpness of the allium, the spices to bloom and integrate, and the capsaicin to distribute evenly throughout the paste. The flavor difference between freshly blended and rested jerk paste is significant.",
-      visualCue: {
-        primaryTarget: "After resting, the paste darkens slightly and becomes more uniform in color as the oil and vegetable liquids homogenize.",
-        spectrum: [
-          { state: "Underdone", description: "Paste used immediately after blending tastes sharp, raw, and one-dimensional — mostly pepper heat with no depth.", action: "Use it if you must, but refrigerate the remainder and taste the difference the next day." },
-          { state: "Perfect",   description: "After 2+ hours: the heat is still fierce but now has a layered warmth beneath it. The allspice and cinnamon are clearly present. The lime is integrated rather than sharp.", action: "Use to marinate chicken, pork, or vegetables for a minimum of 4 hours, preferably overnight." },
-          { state: "Overdone",  description: "Paste stored more than 2 weeks in the fridge begins to lose its fresh pepper brightness.", action: "Freeze in ice cube trays. Frozen jerk paste cubes keep for 3 months and are convenient for small batches." },
-        ],
-      },
-      feelCue: "A rested paste should smell like a single, integrated fragrance — warm, floral, and aggressively spiced — rather than the disjointed raw-garlic and pepper smell of freshly blended. Trust your nose; it tells you more than any timer.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "(pimento)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Noix de muscade",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Sucre brun",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mélasse foncée (réduire de moitié)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de lime fraîchement pressé",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de cidre"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Feuilles de thym fraîches",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym séché (utiliser la moitié)"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Solvent",
+      "name": "Huile neutre (légume ou canola)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Chop",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "rough_aromatics",
+      "instructions": "Portez des gants lorsque vous manipulez des bonnets de scotch — la capsaïcine dans ces poivrons vous sera transférée aux mains et durera des heures. Hacher grossièrement les poivrons (semences et tout pour le feu complet; retirer les graines pour une pâte plus douce), les pétoncles et l'ail en morceaux assez petits pour mélanger. Les graines de bonnets de scotch ont une saveur significative en plus de la chaleur — ne les jetez pas à moins que vous voulez spécifiquement un résultat plus doux.",
+      "visualCue": {
+        "primaryTarget": "Tous les aromatiques sont en morceaux bruts de 2 à 3 cm. Rien n'est parfait — le mélangeur fera ce travail.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux sont trop grands (poivrons entiers, non coupés) et vont bloquer un petit robot culinaire.",
+            "action": "Chop en petits morceaux. Un mélangeur gère les gros morceaux mieux qu'un robot alimentaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des morceaux inégaux. Les capots écossais sont coupés en deux ou en quatre. Des pétoncles en troisième. Ail laissé entier ou coupé en deux.",
+            "action": "Transférer au mélangeur avec tous les autres ingrédients."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'aromatisme a été aiguisé à la main. Bien — le mélange fonctionnera encore.",
+            "action": "Procéder au mélange. La préparation fine fera une pâte plus lisse."
+          }
+        ]
+      },
+      "feelCue": "Au moment où vous coupez un bonnet de scotch, vos yeux sentiront une légère piqûre de la capsaïcine aéroportée — un signe fiable le poivre est puissant. Travaillez vite et ne touchez pas votre visage."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "rough_aromatics",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "rough_paste",
+      "instructions": "Ajouter tous les ingrédients restants à un mélangeur ou à un robot culinaire. Pulse 5-6 fois pour tout casser, puis mélanger en haut pendant 60 secondes. Grattez les côtés et mélangez à nouveau pendant 30 secondes. Ajoutez une cuillère à soupe d'huile à la fois si la pâte est trop sèche pour se déplacer dans le mélangeur — vous voulez une pâte épaisse et extensible, pas une sauce.",
+      "visualCue": {
+        "primaryTarget": "Une pâte vert très foncé, presque noir olive avec des taches visibles de peau de poivre et d'épices. Assez uniforme pour se propager, assez épais pour tenir sa forme sur une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est épaisse avec de grands morceaux visibles de peau de poivre et d'épices entières. Le mélangeur ne peut pas l'abattre.",
+            "action": "Ajoutez encore une cuillère à soupe d'huile et de pouls. Si le mélangeur est petit, mélanger en deux lots."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte lisse, profondément parfumée, tartinable comme un pesto épais. Brun vert foncé avec une surface brillante de l'huile.",
+            "action": "Goûtez et ajustez : ajoutez plus de chaux pour la luminosité, plus de sucre pour autour de la chaleur, ou sel pour amplifier."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est devenue une sauce fine — trop d'huile a été ajoutée.",
+            "action": "Il fonctionnera toujours comme une marinade, mais n'adhérera pas comme une pâte. Réduire dans une petite casserole à feu moyen pendant 3 minutes pour se concentrer."
+          }
+        ]
+      },
+      "feelCue": "Frottez une très petite quantité sur le dos de votre poignet (pas vos doigts — vous toucherez votre visage) — la chaleur devrait fleurir lentement, atteignant environ 30 secondes après le contact. Si vous ne sentez rien, les poivrons étaient faibles; ajouter plus."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Repos",
+      "inputs": [
+        "rough_paste"
+      ],
+      "outputState": "jerk_paste",
+      "instructions": "Transférer la pâte dans un pot ou un contenant scellé et réfrigérer pendant au moins 2 heures avant d'utiliser. La période de repos permet à l'acide du jus de chaux de souder la netteté brute de l'allium, les épices de fleurir et d'intégrer, et la capsaïcine de distribuer uniformément dans la pâte. La différence de saveur entre la pâte fraîchement mélangée et la pâte reposée est significative.",
+      "visualCue": {
+        "primaryTarget": "Après le repos, la pâte s'assombrit légèrement et devient plus uniforme dans la couleur que les liquides d'huile et de légumes homogénéisent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pâte utilisée immédiatement après mélange goûts vifs, crus et unidimensionnels — la plupart du temps la chaleur de poivre sans profondeur.",
+            "action": "Utilisez-le si vous devez, mais réfrigérez le reste et goûtez la différence le lendemain."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 2 heures et plus: la chaleur est encore féroce mais a maintenant une chaleur en couches sous elle. L'espice et la cannelle sont clairement présentes. La chaux est intégrée plutôt que pointue.",
+            "action": "Utilisez pour mariner le poulet, le porc ou les légumes pendant au moins 4 heures, de préférence pendant la nuit."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte entreposée plus de 2 semaines au réfrigérateur commence à perdre son éclat de poivre frais.",
+            "action": "Congeler dans des plateaux de glaçons. Les cubes de pâte de con congelés conservent pendant 3 mois et sont pratiques pour les petits lots."
+          }
+        ]
+      },
+      "feelCue": "Une pâte reposée doit sentir comme un seul parfum intégré — chaud, floral et aggressivement épicé — plutôt que l'odeur d'ail brut et de poivre désarticulé de fraîchement mélangé. Faites confiance à votre nez, il vous dit plus que n'importe quelle minuterie."
+    }
+  ]
 };

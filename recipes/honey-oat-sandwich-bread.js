@@ -1,117 +1,283 @@
 export default {
-  repoId: "master_american_honey_oat_sandwich_bread_001",
-  parentRepoId: null,
-  slug: "honey-oat-sandwich-bread",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Honey Oat Sandwich Bread",
-  description: "A soft, high-domed pan loaf with a tight, cushiony crumb flecked with rolled oats, a whisper of honey sweetness, and a thin burnished crust that slices cleanly for sandwiches and toast.",
-  cuisine: "American",
-  culture: "American home baking",
-  category: "breads",
-  tags: ["bread", "yeast", "sandwich-loaf", "oats", "honey", "pan-loaf", "home-kitchen", "baking"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "3 hr 20 min",
-  ratioSystem: "weight",
-  servings: 12,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 2, salty: 2, sour: 0, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Bread flour",                                         ratioValue: 400, defaultUnit: "g",     substitutions: ["all-purpose flour (slightly softer, less rise)", "100 g whole wheat flour in place of 100 g bread flour"] },
-    { ingId: "ing_02", role: "Structure", name: "Rolled oats (old-fashioned), plus 10 g for topping",  ratioValue: 90,  defaultUnit: "g",     substitutions: ["quick oats"] },
-    { ingId: "ing_03", role: "Hydration", name: "Water, warm (about 105°F / 40°C)",                    ratioValue: 270, defaultUnit: "ml",    substitutions: ["half water, half whole milk (softer crumb)"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Honey",                                               ratioValue: 50,  defaultUnit: "g",     substitutions: ["maple syrup", "brown sugar"] },
-    { ingId: "ing_05", role: "Fat",       name: "Unsalted butter, softened",                           ratioValue: 30,  defaultUnit: "g",     substitutions: ["neutral oil"] },
-    { ingId: "ing_06", role: "Leavener",  name: "Instant yeast",                                       ratioValue: 7,   defaultUnit: "g",     substitutions: ["active dry yeast, 8 g (dissolve in the warm water first)"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine salt",                                           ratioValue: 9,   defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_08", role: "Dairy",     name: "Milk, for brushing",                                  ratioValue: 1,   defaultUnit: "tbsp",  substitutions: ["beaten egg (shinier, darker crust)"] },
+  "repoId": "master_american_honey_oat_sandwich_bread_001",
+  "parentRepoId": null,
+  "slug": "honey-oat-sandwich-bread",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Pain de sandwich d'avoine au miel",
+  "description": "Un pain de casserole doux et à forte dominance avec une miette serrée et amortissante avec de l'avoine roulée, un murmure de douceur de miel et une fine croûte brûlée qui tranche proprement pour les sandwichs et les toasts.",
+  "cuisine": "Américain",
+  "culture": "Cuisson maison américaine",
+  "category": "breads",
+  "tags": [
+    "pain",
+    "levure",
+    "pain sandwich",
+    "avoine",
+    "Chérie",
+    "pain pan",
+    "cuisine maison",
+    "Cuisson"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "3 hr 20 min",
+  "ratioSystem": "weight",
+  "servings": 12,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Knead",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "kneaded_dough",
-      instructions: "In a large bowl (or stand mixer with a dough hook), stir the warm water and honey together, then add the flour, 80 g of the oats, and the yeast. Mix until a shaggy dough forms and rest 10 minutes so the oats and flour hydrate. Add the salt and butter and knead: 8–10 minutes by hand on an unfloured counter, or 6–7 minutes on medium-low in a mixer. The dough starts sticky but becomes smooth and elastic.",
-      visualCue: {
-        primaryTarget: "A smooth, slightly tacky, springy dough ball with oats visible throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is shaggy, tears when stretched, and the butter still streaks the surface.", action: "Keep kneading another 2–3 minutes." },
-          { state: "Perfect",   description: "Dough is smooth and elastic, springs back when poked, and a small piece stretches thin enough to let light through before tearing (the oats will create a few holes).", action: "Proceed to the first rise." },
-          { state: "Overdone",  description: "Dough is overheated from a long machine knead, feels slack and very warm, and tears easily.", action: "Rest it 10 minutes before shaping; it will usually recover." },
-        ],
-      },
-      feelCue: "The dough should feel like a soft earlobe — tacky enough to briefly grip your palm but releasing cleanly without leaving residue.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Farine polyvalente (légèrement plus douce, moins élevée)",
+        "100 g de farine de blé entier au lieu de 100 g de farine de pain"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Proof",
-      inputs: ["kneaded_dough"],
-      outputState: "risen_dough",
-      instructions: "Place the dough in a lightly greased bowl, cover, and let rise in a warm spot (75–78°F / 24–26°C) for 60–75 minutes, until doubled in size.",
-      visualCue: {
-        primaryTarget: "Dough doubled in volume with a domed, smooth surface.",
-        spectrum: [
-          { state: "Underdone", description: "Dough has barely grown and a poke springs back immediately.", action: "Give it 15–20 more minutes in a warmer spot." },
-          { state: "Perfect",   description: "Doubled, puffy, and airy; a floured finger poked 2 cm in leaves a dent that slowly fills back halfway.", action: "Shape the loaf." },
-          { state: "Overdone",  description: "Dough has more than tripled, collapsed on top, and smells strongly of alcohol.", action: "Punch it down, reshape, and give a shorter second rise." },
-        ],
-      },
-      feelCue: "The risen dough should feel light and pillowy, sighing slightly as you press into it.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Avoine laminée (à l'ancienne), plus 10 g pour garniture",
+      "ratioValue": 90,
+      "defaultUnit": "g",
+      "substitutions": [
+        "avoine rapide"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Shape",
-      inputs: ["risen_dough", "ing_08", "ing_02"],
-      outputState: "panned_loaf",
-      instructions: "Grease a 9 × 5 in (23 × 13 cm) loaf pan. Turn the dough out and press into a rectangle about 23 × 30 cm with a short side toward you. Roll it up tightly from the short end, pinching the seam at each turn, then pinch the final seam closed and tuck the ends under. Place seam-side down in the pan. Cover and let rise 40–50 minutes, until it crowns about 2.5 cm (1 in) above the rim. Heat the oven to 375°F (190°C) during the last 20 minutes. Brush the top with milk and scatter with the reserved 10 g of oats.",
-      visualCue: {
-        primaryTarget: "A smooth, tight loaf with an even dome rising about 2.5 cm above the pan rim.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still below or level with the rim, and bounces back instantly when poked.", action: "Wait 10–15 more minutes." },
-          { state: "Perfect",   description: "Dome sits about 2.5 cm above the rim, the surface is taut, and a light poke springs back slowly.", action: "Brush, top, and bake." },
-          { state: "Overdone",  description: "Dough towers far above the rim with a slack, wrinkly surface, and poking leaves a dent that doesn't recover.", action: "Bake immediately; it may sink a little, but it will still be good bread." },
-        ],
-      },
-      feelCue: "The shaped log should feel taut, like a well-inflated balloon, with no loose flaps on the surface.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau chaude (environ 105°F / 40°C)",
+      "ratioValue": 270,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "moitié de l'eau, moitié du lait entier"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["panned_loaf"],
-      outputState: "baked_oat_loaf",
-      instructions: "Bake on the middle rack 35–40 minutes, until deep golden brown and an instant-read thermometer in the center of the loaf reads 195–200°F (90–93°C). Tent loosely with foil after 25 minutes if the top is browning too fast (honey browns quickly).",
-      visualCue: {
-        primaryTarget: "Deep golden-brown crust on the top and sides, internal temperature 195–200°F (90–93°C).",
-        spectrum: [
-          { state: "Underdone", description: "Crust is pale, the sides are soft and white when you tip the loaf out, and it reads under 190°F (88°C).", action: "Return the loaf (out of the pan, straight on the rack) for 5 more minutes." },
-          { state: "Perfect",   description: "Burnished golden top, golden sides, reads 195–200°F (90–93°C), and sounds hollow when tapped on the bottom.", action: "Remove from the pan to cool." },
-          { state: "Overdone",  description: "Top is dark mahogany and the crust is thick and hard.", action: "Brush the warm crust with melted butter to soften it; tent earlier next time." },
-        ],
-      },
-      feelCue: "Tap the bottom of the unmolded loaf — it should sound hollow, like knocking on a wooden door.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Chérie",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sirop d'érable",
+        "sucre brun"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Cool",
-      inputs: ["baked_oat_loaf"],
-      outputState: "sliceable_oat_bread",
-      instructions: "Turn the loaf out of the pan immediately and cool on a wire rack for at least 45 minutes (ideally 1 hour) before slicing with a serrated knife. The crumb is still setting as steam escapes.",
-      visualCue: {
-        primaryTarget: "Clean slices with a fine, even, springy crumb.",
-        spectrum: [
-          { state: "Underdone", description: "Sliced too hot; the knife drags and the crumb is gummy and compresses.", action: "Wait longer before slicing the rest." },
-          { state: "Perfect",   description: "Slices hold their shape; crumb is soft, even, and springs back when pressed.", action: "Slice and serve." },
-          { state: "Overdone",  description: "Left uncovered overnight; the crust has hardened and the cut end is dry.", action: "Toast it — once cooled, store in a bag." },
-        ],
-      },
-      feelCue: "The bottom of the loaf should be only faintly warm when you lay your palm against it before slicing.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile neutre"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 7,
+      "defaultUnit": "g",
+      "substitutions": [
+        "levure sèche active, 8 g (dissoudre d'abord dans l'eau chaude)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 9,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Dairy",
+      "name": "Lait, pour brossage",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "oeuf battu (brillant, croûte plus foncée)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Agenouillement",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "kneaded_dough",
+      "instructions": "Dans un grand bol (ou mélangeur avec un crochet de pâte), remuer l'eau chaude et le miel ensemble, puis ajouter la farine, 80 g d'avoine et la levure. Mélanger jusqu'à ce qu'une pâte chaotique se forme et reposer 10 minutes afin que l'avoine et la farine s'hydratent. Ajouter le sel et le beurre et pétrir : de 8 à 10 minutes à la main sur un comptoir sans farine, ou de 6 à 7 minutes sur un mélangeur moyennement bas. La pâte commence collante mais devient lisse et élastique.",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte douce, légèrement collante et printanière avec de l'avoine visible partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est lugubre, les larmes sont étirées, et le beurre stries encore la surface.",
+            "action": "Continuez à pétrir encore 2-3 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La toux est lisse et élastique, ressort lorsqu'elle est pochée, et une petite pièce s'étire assez fin pour laisser passer la lumière avant de déchirer (l'avoine créera quelques trous).",
+            "action": "Passez à la première montée."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est surchauffée à partir d'un long pétrin de machine, se sent lâche et très chaude, et se déchire facilement.",
+            "action": "Reposez-le 10 minutes avant de façonner; il se rétablira habituellement."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir comme un lobe d'oreille doux — assez téméraire pour saisir brièvement votre paume, mais libérer proprement sans laisser de résidus."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Preuve",
+      "inputs": [
+        "kneaded_dough"
+      ],
+      "outputState": "risen_dough",
+      "instructions": "Placer la pâte dans un bol légèrement huilé, couvrir et laisser monter dans un endroit chaud (75–78°F / 24–26°C) pendant 60–75 minutes, jusqu'à ce que la taille double.",
+      "visualCue": {
+        "primaryTarget": "Dough a doublé en volume avec une surface lisse et bombée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux a à peine grandi et un poke ressort immédiatement.",
+            "action": "Donnez-lui 15 à 20 minutes de plus dans un endroit plus chaud."
+          },
+          {
+            "state": "Perfect",
+            "description": "Double, gonflé et aéré; un doigt fariné poêlait 2 cm dans les feuilles une bosse qui se remplit lentement en arrière à mi-chemin.",
+            "action": "Formez le pain."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux a plus que triplé, s'est effondrée sur le dessus et sent fortement l'alcool.",
+            "action": "Frappe-le, remodele, et donne une seconde montée plus courte."
+          }
+        ]
+      },
+      "feelCue": "La pâte levée doit se sentir légère et oreiller, soupirant légèrement pendant que vous pressez dedans."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "risen_dough",
+        "ing_08",
+        "ing_02"
+      ],
+      "outputState": "panned_loaf",
+      "instructions": "Graisser un moule à pain de 9 × 5 dans (23 × 13 cm). Tourner la pâte et presser dans un rectangle d'environ 23 × 30 cm avec un côté court vers vous. Roulez-le bien à partir de l'extrémité courte, pincez la couture à chaque tour, puis pincez la couture finale fermée et collez les extrémités sous. Placez le côté couture dans la casserole. Couvrir et lever de 40 à 50 minutes, jusqu'à ce qu'il couronne environ 2,5 cm (1 po) au-dessus de la jante. Chauffer le four à 375°F (190°C) au cours des 20 dernières minutes. Badigeonner le dessus de lait et disperser avec les 10 g d'avoine réservés.",
+      "visualCue": {
+        "primaryTarget": "Un pain lisse et serré avec un dôme uniforme s'élevant à environ 2,5 cm au-dessus du bord de la casserole.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Dough est toujours en dessous ou en niveau avec la jante, et rebondit instantanément quand on pète.",
+            "action": "Attendez encore 10-15 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dome se trouve à environ 2,5 cm au-dessus du bord, la surface est tendue, et un poke léger ressort lentement.",
+            "action": "Brosse, haut et cuire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des tours de dough bien au-dessus de la jante avec une surface molle, ridée, et poking laisse une bosse qui ne se rétablit pas.",
+            "action": "Cuire immédiatement; il peut couler un peu, mais ce sera encore du bon pain."
+          }
+        ]
+      },
+      "feelCue": "Le log en forme devrait se sentir tendu, comme un ballon bien gonflé, sans rabats lâches à la surface."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "panned_loaf"
+      ],
+      "outputState": "baked_oat_loaf",
+      "instructions": "Cuire sur la grille centrale 35–40 minutes, jusqu'à ce que le brun doré profond et un thermomètre à lecture instantanée au centre du pain mesure 195–200°F (90–93°C). Tente lâche avec du papier d'aluminium après 25 minutes si le dessus brunit trop vite (le miel brunit rapidement).",
+      "visualCue": {
+        "primaryTarget": "Croûte dorée profonde sur le dessus et les côtés, température interne 195–200°F (90–93°C).",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est pâle, les côtés sont doux et blancs quand on pointe le pain, et il lit sous 190°F (88°C).",
+            "action": "Retournez le pain (hors de la poêle, tout droit sur la grille) pendant 5 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Haut doré brûlé, côtés dorés, lit 195–200°F (90–93°C), et sonne creux lorsqu'il est tapé sur le fond.",
+            "action": "Retirer de la poêle pour refroidir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le dessus est acajou foncé et la croûte est épaisse et dure.",
+            "action": "Brossez la croûte chaude avec du beurre fondu pour l'adoucir; tentez plus tôt la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Tapez sur le fond du pain non moulé — il devrait sembler creux, comme frapper sur une porte en bois."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Frais",
+      "inputs": [
+        "baked_oat_loaf"
+      ],
+      "outputState": "sliceable_oat_bread",
+      "instructions": "Retirez immédiatement le pain de la poêle et refroidissez-le sur une grille pendant au moins 45 minutes (idéalement 1 heure) avant de trancher avec un couteau dentelé. La miette se met toujours comme la vapeur s'échappe.",
+      "visualCue": {
+        "primaryTarget": "Nettoyer les tranches avec une miette fine, uniforme et printanière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Découpé trop chaud; le couteau traîne et la miette est gommée et compresse.",
+            "action": "Attendez plus longtemps avant de trancher le reste."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tranches tiennent leur forme; la miette est douce, uniforme et ressort lorsqu'elle est pressée.",
+            "action": "Couper et servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte s'est durcie et l'extrémité coupée est sèche.",
+            "action": "Jetez - le — une fois refroidi, rangez - le dans un sac."
+          }
+        ]
+      },
+      "feelCue": "Le fond du pain ne devrait être légèrement chaud que lorsque vous posez votre paume contre lui avant de le trancher."
+    }
+  ]
 };

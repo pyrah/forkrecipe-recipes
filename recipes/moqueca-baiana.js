@@ -1,101 +1,262 @@
 export default {
-  repoId: "master_brazilian_moquecabaiana_001",
-  parentRepoId: null,
-  slug: "moqueca-baiana",
-  author: "ForkRecipe Kitchen",
-  title: "Moqueca Baiana",
-  description: "A Bahian fish stew of intoxicating depth — white fish simmered in coconut milk and dendê palm oil with tomatoes, peppers, and cilantro, everything cooked in a heavy clay pot that holds the heat like a loving embrace.",
-  cuisine: "Brazilian",
-  culture: "Bahian",
-  category: "seafood",
-  tags: ["seafood", "brazilian", "bahian", "fish-stew", "coconut", "moqueca", "gluten-free"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "1 hour",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 2, sour: 1, bitter: 0, umami: 3, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Firm white fish fillets (e.g. sea bass or cod), 4 cm chunks", ratioValue: 600, defaultUnit: "g",   substitutions: ["halibut", "mahi-mahi", "tilapia"] },
-    { ingId: "ing_02", role: "Acid",      name: "Lime juice, freshly squeezed",                                 ratioValue: 30,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_03", role: "Fat",       name: "Dendê (red palm) oil",                                        ratioValue: 40,  defaultUnit: "ml",  substitutions: ["achiote-infused vegetable oil"] },
-    { ingId: "ing_04", role: "Allium",    name: "White onion, finely sliced",                                  ratioValue: 150, defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves, minced",                                       ratioValue: 12,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Plum tomatoes, roughly chopped",                              ratioValue: 250, defaultUnit: "g",   substitutions: ["canned whole tomatoes"] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Red and green bell peppers, thinly sliced",                  ratioValue: 200, defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_08", role: "Liquid",    name: "Full-fat coconut milk",                                       ratioValue: 400, defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_09", role: "Herb",      name: "Fresh cilantro, stems and leaves separated",                  ratioValue: 20,  defaultUnit: "g",   substitutions: ["flat-leaf parsley if cilantro-adverse"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fine sea salt",                                               ratioValue: 8,   defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_brazilian_moquecabaiana_001",
+  "parentRepoId": null,
+  "slug": "moqueca-baiana",
+  "author": "ForkRecipe Kitchen",
+  "title": "Moqueca Baiana",
+  "description": "Un ragoût de poisson bahaï d'une profondeur enivrante — des poissons blancs mijotés dans du lait de coco et de l'huile de palme dendê avec des tomates, des poivrons et de la coriandre, tout cuit dans un pot d'argile lourd qui tient la chaleur comme une étreinte aimante.",
+  "cuisine": "Brésil",
+  "culture": "Bahian",
+  "category": "seafood",
+  "tags": [
+    "Produits de la mer",
+    "Brésilien",
+    "Bahian",
+    "d'un poids au mètre carré",
+    "noix de coco",
+    "Moqueca",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "1 hour",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Marinate",
-      inputs: ["ing_01", "ing_02", "ing_10"],
-      outputState: "marinated_fish",
-      instructions: "Toss fish chunks with lime juice, a pinch of salt, and minced garlic (half the garlic). Cover and refrigerate for 20-30 minutes. The acid will begin to set the exterior proteins, helping the fish hold together in the stew without falling apart.",
-      visualCue: {
-        primaryTarget: "Fish slightly opaque and white at the edges where the lime juice has contacted — otherwise still translucent and raw in the center.",
-        spectrum: [
-          { state: "Underdone", description: "Fish still fully raw-looking and glossy — acid hasn't had time to act.", action: "Wait the full 20 minutes." },
-          { state: "Perfect",   description: "Edges turned opaque white, interior still raw. Fish holds its shape when lifted.", action: "Proceed to build the base." },
-          { state: "Overdone",  description: "Fish has been in the acid too long and is white and firm throughout — essentially ceviche.", action: "Cook quickly to warm through only — it will toughen further with heat." },
-        ],
-      },
-      feelCue: "The fish should feel slightly firmer at the edges than at its core — there's a tension to the outer layer that wasn't there before.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filets de poissons blancs fermes (par exemple bar ou morue), morceaux de 4 cm",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "flétan",
+        "Mahi-mahi",
+        "tilapia"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_07"],
-      outputState: "sofrito_base",
-      instructions: "Heat dendê oil in a heavy clay pot or Dutch oven over medium heat. Add onion and cook 5 minutes until soft and turning golden. Add remaining garlic and bell peppers and cook 3 more minutes. The dendê oil will turn the whole base a vivid orange — this is correct and beautiful.",
-      visualCue: {
-        primaryTarget: "Onions and peppers soft and glistening, the whole base turned a rich saffron-orange from the dendê oil.",
-        spectrum: [
-          { state: "Underdone", description: "Onions still translucent and crunchy, no color developed.", action: "Cook longer — don't rush the softening." },
-          { state: "Perfect",   description: "Onions translucent-to-golden, peppers soft, everything stained a deep orange. Kitchen smells earthy and fruity.", action: "Add tomatoes." },
-          { state: "Overdone",  description: "Onions browning and beginning to stick; dendê oil smoking.", action: "Deglaze with a splash of water and reduce heat." },
-        ],
-      },
-      feelCue: "The dendê oil has a distinctive smell — earthy, faintly fruity, reminiscent of carrots and forest floor. If you've never smelled it before, it's assertive. Trust it.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Jus de lime fraîchement pressé",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["sofrito_base", "ing_06", "ing_08", "ing_09"],
-      outputState: "moqueca_broth",
-      instructions: "Add tomatoes and cilantro stems to the sofrito. Cook 5 minutes until tomatoes begin to dissolve. Pour in coconut milk and stir. Bring to a gentle simmer over medium heat. Season well with salt and taste — the broth should be rich, sweet from coconut, and slightly acidic from the tomato.",
-      visualCue: {
-        primaryTarget: "A deeply orange-red broth with visible tomato pieces, steaming gently, coconut milk swirled into the dendê into a sunset gradient.",
-        spectrum: [
-          { state: "Underdone", description: "Coconut milk and oil not fully combined — visible white streaks.", action: "Stir and give it 2 more minutes of gentle heat." },
-          { state: "Perfect",   description: "Uniform golden-orange, gently simmering at the edges. Smells of coconut, tomato, and the sea.", action: "Taste for salt and add the fish." },
-          { state: "Overdone",  description: "Broth boiling hard — coconut milk has broken and looks grainy.", action: "Reduce heat immediately. Boiling splits coconut milk. It will re-integrate with gentle heat." },
-        ],
-      },
-      feelCue: "The broth should coat a spoon in a thin, silky layer — richer than water but lighter than cream. Tasting it raw tells you everything about where the finished stew is going.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile de palme rouge",
+      "ratioValue": 40,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile végétale infusée d'achiote"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Poach",
-      inputs: ["marinated_fish", "moqueca_broth", "ing_09"],
-      outputState: "finished_moqueca_baiana",
-      instructions: "Nestle the marinated fish gently into the simmering broth in a single layer. Cover and cook over medium-low heat for 8-12 minutes, depending on thickness. Do not stir — use the lid to baste. The fish is done when it flakes easily at the thickest point and is opaque throughout. Scatter cilantro leaves over the top and serve straight from the clay pot.",
-      visualCue: {
-        primaryTarget: "Fish opaque and beginning to flake at the edges, broth still vivid orange and gently bubbling, cilantro green against the golden surface.",
-        spectrum: [
-          { state: "Underdone", description: "Fish still translucent in the center when a fork is pressed into the thickest point.", action: "Cover and cook 2 more minutes. Check again." },
-          { state: "Perfect",   description: "Opaque throughout, flaking into large, moist, clean plates when probed. Broth simmering gently. Cilantro fragrant.", action: "Serve immediately over white rice." },
-          { state: "Overdone",  description: "Fish has broken apart and turned dry and stringy, sinking into the broth.", action: "Serve anyway — it becomes a thick, rich stew rather than intact pieces." },
-        ],
-      },
-      feelCue: "A fish chunk pulled from the broth should offer gentle resistance and then give way in large, moist flakes — never cottony, never wet and raw.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc, tranché finement",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 12,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Tomates de prune, hachées approximativement",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates entières en conserve"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "poivrons rouges et verts, tranchés finement",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Liquid",
+      "name": "Lait de coco plein gras",
+      "ratioValue": 400,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Coriandre fraîche, tiges et feuilles séparées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "persil à feuilles plates si coriandre-adversaire"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_10"
+      ],
+      "outputState": "marinated_fish",
+      "instructions": "Ajouter des morceaux de poisson avec du jus de lime, une pincée de sel et de l'ail haché (la moitié de l'ail). Couvrir et réfrigérer pendant 20-30 minutes. L'acide va commencer à mettre les protéines extérieures, aidant le poisson à tenir ensemble dans le ragoût sans tomber en morceaux.",
+      "visualCue": {
+        "primaryTarget": "Poisson légèrement opaque et blanc aux bords où le jus de lime a contacté — autrement encore translucide et cru au centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le poisson est toujours tout cru et brillant — l'acide n'a pas eu le temps d'agir.",
+            "action": "Attendez 20 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords deviennent blancs opaques, l'intérieur est encore brut. Le poisson tient sa forme lorsqu'il est levé.",
+            "action": "Construisez la base."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson a été dans l'acide trop longtemps et est blanc et ferme partout — essentiellement ceviche.",
+            "action": "Cuire rapidement pour ne réchauffer que par la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Le poisson devrait se sentir légèrement plus ferme aux bords qu'à son cœur — il y a une tension à la couche extérieure qui n'était pas là avant."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "sofrito_base",
+      "instructions": "Chauffer l'huile dendê à feu moyen dans un pot d'argile ou un four hollandais. Ajouter l'oignon et cuire 5 minutes jusqu'à ce qu'il soit doux et doré. Ajouter le reste de l'ail et les poivrons et cuire encore 3 minutes. L'huile dendê transformera toute la base en orange vif — c'est exact et beau.",
+      "visualCue": {
+        "primaryTarget": "Oignons et poivrons doux et scintillants, toute la base tournait un riche safran-orange de l'huile dendê.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Oignons encore translucides et croquants, aucune couleur développée.",
+            "action": "Cuire plus longtemps — ne pas précipiter l'adoucissement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons translucides à dorés, les poivrons doux, tout teint une orange profonde. La cuisine sent la terre et le fruité.",
+            "action": "Ajouter les tomates."
+          },
+          {
+            "state": "Overdone",
+            "description": "Oignons brunissants et commençant à coller; dendê huile fumant.",
+            "action": "Déglacer avec un jet d'eau et réduire la chaleur."
+          }
+        ]
+      },
+      "feelCue": "L'huile dendê a une odeur distinctive – terreuse, légèrement fruitée, rappelant les carottes et le sol forestier. Si vous ne l'avez jamais senti avant, c'est affirmé. Fais-le confiance."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "sofrito_base",
+        "ing_06",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "moqueca_broth",
+      "instructions": "Ajouter les tomates et les tiges de coriandre à la sofrito. Cuire 5 minutes jusqu'à ce que les tomates commencent à se dissoudre. Verser dans le lait de coco et remuer. Porter à feu doux à feu moyen. Assaisonner bien avec le sel et le goût — le bouillon doit être riche, doux de la noix de coco et légèrement acide de la tomate.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon profondément orange-rouge avec des morceaux visibles de tomate, qui s'échauffait doucement, le lait de coco tournoyait dans le dendê dans un dégradé de coucher de soleil.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait de coco et l'huile ne sont pas entièrement combinés — stries blanches visibles.",
+            "action": "Ajouter 2 minutes de feu doux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme or-orange, mijotant doucement aux bords. Des odeurs de noix de coco, de tomates et de mer.",
+            "action": "Goûtez au sel et ajoutez le poisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Broth bouillant dur — le lait de coco a cassé et semble granuleux.",
+            "action": "Réduire immédiatement la chaleur. L'exploitation fractionne le lait de coco. Il se réintègrera avec une chaleur douce."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon devrait enrober une cuillère dans une couche mince et soyeuse, plus riche que l'eau mais plus légère que la crème. Dégustation brute vous dit tout sur l'endroit où va le ragoût fini."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Pochette",
+      "inputs": [
+        "marinated_fish",
+        "moqueca_broth",
+        "ing_09"
+      ],
+      "outputState": "finished_moqueca_baiana",
+      "instructions": "Nettoyez doucement le poisson mariné dans le bouillon mijotant en une seule couche. Couvrir et cuire à feu moyen-doux pendant 8-12 minutes, selon l'épaisseur. Ne pas remuer — utilisez le couvercle pour vous abaisser. Le poisson se fait lorsqu'il floconne facilement au point le plus épais et est opaque partout. Scatter coriandre feuilles sur le dessus et servir directement à partir du pot d'argile.",
+      "visualCue": {
+        "primaryTarget": "Poisson opaque et commençant à flotter aux bords, bouillon toujours orange vif et bouillonnant doucement, vert coriandre contre la surface dorée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poisson encore translucide au centre quand une fourchette est pressée dans le point le plus épais.",
+            "action": "Couvrir et cuire encore 2 minutes. Vérifiez encore."
+          },
+          {
+            "state": "Perfect",
+            "description": "Opaque tout au long, s'éclaboussant dans de grandes plaques humides et propres lorsqu'elles sont sondées. Broth mijotant doucement. Cilantro parfumé.",
+            "action": "Servir immédiatement sur le riz blanc."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson s'est brisé et est devenu sec et stringy, s'enfonce dans le bouillon.",
+            "action": "Servir de toute façon — il devient un ragoût épais et riche plutôt que des morceaux intacts."
+          }
+        ]
+      },
+      "feelCue": "Un morceau de poisson tiré du bouillon devrait offrir une résistance douce et ensuite céder la place dans de grands flocons humides — jamais cotonneux, jamais mouillés et crus."
+    }
+  ]
 };

@@ -1,93 +1,237 @@
 export default {
-  repoId: "master_scandinavian_danish-rye_001",
-  parentRepoId: null,
-  slug: "danish-rye",
-  author: "ForkRecipe Kitchen",
-  title: "Danish Rye Bread",
-  description: "A dense, dark loaf with a moist, tight crumb and a crackling crust — sourdough-fermented rye studded with seeds, sliced thin for open-face smørrebrød, tasting of grain and fermentation and something ancient.",
-  cuisine: "Scandinavian",
-  culture: "Danish",
-  category: "breads",
-  tags: ["rye", "sourdough", "dense", "nordic", "vegan"],
-  difficulty: 4,
-  activeTime: "30 min",
-  totalTime: "30 hours",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 7, bitter: 3, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Dark rye flour (whole grain)",              ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Leavener",   name: "Rye sourdough starter (100% hydration)",   ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Hydration",  name: "Water (room temperature)",                  ratioValue: 90,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                             ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",   name: "Whole sunflower seeds",                     ratioValue: 20,  defaultUnit: "parts", substitutions: ["pumpkin seeds"] },
-    { ingId: "ing_06", role: "Aromatic",   name: "Whole flaxseeds",                           ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Cracked rye kernels (rye chops)",           ratioValue: 15,  defaultUnit: "parts", substitutions: ["rolled rye flakes"] },
-    { ingId: "ing_08", role: "Sweetener",  name: "Dark malt syrup or molasses",               ratioValue: 3,   defaultUnit: "parts", substitutions: ["treacle"] },
+  "repoId": "master_scandinavian_danish-rye_001",
+  "parentRepoId": null,
+  "slug": "danish-rye",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pain de seigle danois",
+  "description": "Un pain dense et foncé avec une miette humide et serrée et une croûte crépitante — seigle au fermenté à l'aurore parsemé de graines, tranché fin pour smørrebrød à face ouverte, dégustation de grain et de fermentation et quelque chose d'antique.",
+  "cuisine": "Scandinave",
+  "culture": "Danois",
+  "category": "breads",
+  "tags": [
+    "seigle",
+    "Pâtes alimentaires",
+    "dense",
+    "Nordique",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "30 min",
+  "totalTime": "30 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 7,
+    "bitter": 3,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Hydrate",
-      inputs: ["ing_07", "ing_06"],
-      outputState: "soaked_seeds",
-      instructions: "Combine the cracked rye kernels and flaxseeds in a bowl. Pour enough boiling water over them to submerge by 1 cm. Stir and cover. Soak for a minimum of 8 hours (or overnight) at room temperature. The flaxseeds will absorb all their water and release mucilage, forming a gel. The cracked rye will soften completely. This soaker is essential: dry rye chops added directly to the dough will steal water during fermentation and make the bread dry and crumbly.",
-      visualCue: {
-        primaryTarget: "After 8 hours, the seeds form a thick gel — flaxseeds have expanded and are encased in clear mucilage. Cracked rye has plumped and softened. No free liquid remaining.",
-        spectrum: [
-          { state: "Underdone", description: "Seeds are still hard and separate, floating in water. Soaking time was too short.", action: "Continue soaking. The soaker can go up to 18 hours safely in a cool kitchen. Do not skip this step." },
-          { state: "Perfect",   description: "Thick, gelatinous mass. No free liquid. Flaxseeds are coated in clear gel. Cracked rye is fully softened. The whole mass holds its shape in a spoon.", action: "Add directly to the bread dough without draining." },
-          { state: "Overdone",  description: "Soaker has sat for over 24 hours at warm room temperature and smells slightly fermented or sour.", action: "Still usable — the slight fermentation actually adds flavor. Use it immediately." },
-        ],
-      },
-      feelCue: "Stir the soaker — a spoon should drag through it with resistance, like thick oatmeal. The gel-like texture is correct: it is the flaxseed mucilage binding everything together, which will keep the bread moist for days.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de seigle foncé (grain entier)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_08", "soaked_seeds"],
-      outputState: "rye_batter_dough",
-      instructions: "Combine the rye sourdough starter, water, salt, and malt syrup in a large bowl and stir to dissolve. Add all the dark rye flour, sunflower seeds, and the entire soaker (seed gel and all). Stir vigorously with a sturdy spoon or dough whisk for 3-4 minutes until completely homogeneous. Rye dough is not a wheat dough — it will never be smooth or elastic. It will be thick and sticky, like wet cement, and should be mixed only until uniform. Gluten development is irrelevant in rye; what matters is thorough hydration and even distribution of seeds.",
-      visualCue: {
-        primaryTarget: "A thick, dark, uniform paste — the consistency of very stiff porridge or wet concrete. All seeds are evenly distributed. No dry flour pockets.",
-        spectrum: [
-          { state: "Underdone", description: "Dry flour patches visible. Seeds are clustered. The dough looks streaky.", action: "Stir for another 2 minutes, focusing on the dry patches. Every grain of flour must be hydrated." },
-          { state: "Perfect",   description: "Dark, uniform, thick paste. Seeds distributed evenly throughout. No dry areas or wet puddles. Sticks to the spoon heavily.", action: "Transfer immediately to the greased tin." },
-          { state: "Overdone",  description: "Dough has been over-stirred and feels slightly gummy or broken down.", action: "Transfer to the tin immediately — rye cannot be over-stirred to the point of damage. Proceed normally." },
-        ],
-      },
-      feelCue: "The mixed dough should feel like heavy, wet clay — it pulls off the spoon in thick, slow strings and lands with a dense plop. It will feel dramatically different from wheat dough: no springiness, no elasticity, just dark, grainy mass.",
+      "ingId": "ing_02",
+      "role": "Leavener",
+      "name": "Démarrage au sarcophage (hydratation 100%)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Proof",
-      inputs: ["rye_batter_dough"],
-      outputState: "proofed_rye_loaf",
-      instructions: "Grease a 900g loaf tin (approximately 22 x 11 x 7 cm) generously with oil. Wet your hands and spatula to prevent sticking. Transfer the dough into the tin, pressing it firmly into the corners with wet fingers or a wet spatula. Smooth the top with a wet spatula — the surface should be flat and even. Scatter a few sunflower seeds on top if desired. Cover with oiled plastic wrap and proof at room temperature (20-22 C) for 8-12 hours, until the dough has risen to the tin rim and the surface shows small cracks and bubble pores.",
-      visualCue: {
-        primaryTarget: "Dough has risen to the tin rim or slightly above. The top surface shows small surface cracks and tiny bubble pores — signs of active fermentation throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Dough has risen less than halfway up the tin. Surface is flat with no cracks. Feels dense and inert.", action: "Cover and wait. Rye sourdough is slower than wheat. Move to a warmer spot (25 C) if very slow. May need up to 14 hours in a cold kitchen." },
-          { state: "Perfect",   description: "Surface at or just above the tin rim. Surface shows fine cracks and bubble pores. Slightly domed. Smells actively sour and fermented.", action: "Bake immediately while the dough is at its peak." },
-          { state: "Overdone",  description: "Dough has risen well above the rim and collapsed inward. Surface is concave and wet-looking.", action: "Bake immediately — it has over-proofed. The bread will be more acidic and have a denser crumb, but it is not ruined." },
-        ],
-      },
-      feelCue: "Tap the surface of the proofed dough lightly — it should feel slightly firm and dry on top, like a skin has formed. The smell should be actively sour and yeasty, not flat. A properly proofed rye loaf barely moves when the tin is jostled.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau (température ambiante)",
+      "ratioValue": 90,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Bake",
-      inputs: ["proofed_rye_loaf"],
-      outputState: "finished_danish_rye",
-      instructions: "Preheat the oven to 230 C (450 F). Place the loaf in the oven and immediately reduce to 200 C (390 F). Bake for 60-70 minutes total. For the last 10 minutes, remove the loaf from the tin and bake directly on the oven rack for maximum crust development. A probe thermometer inserted into the center should read 95-98 C (203-208 F) when done. THE MOST IMPORTANT STEP: do not cut the bread for at least 12-24 hours after baking. The crumb must set completely — cutting hot rye bread produces a gummy, underdone-tasting interior. Wrap in a clean cloth and wait.",
-      visualCue: {
-        primaryTarget: "Deep, very dark brown crust on all sides. The surface is slightly cracked and dry. When tapped, the bread sounds hollow.",
-        spectrum: [
-          { state: "Underdone", description: "The surface is brown but the interior reads below 92 C on a probe thermometer. The bread feels soft and heavy.", action: "Return to the oven for another 10-15 minutes. Under-baked rye is gummy and indigestible." },
-          { state: "Perfect",   description: "Very dark, nearly black crust with surface cracks. Probe reads 96 C or above. The loaf sounds completely hollow when tapped on the bottom.", action: "Cool on a wire rack for at least 12 hours before cutting. Overnight is better." },
-          { state: "Overdone",  description: "The crust is deeply black and the loaf smells of char. The bread has lost significant moisture and sounds lighter when tapped.", action: "Cool and assess: if the crumb is still moist and the flavor is complex (not purely bitter), the bread is fine. Rye can take a lot of color." },
-        ],
-      },
-      feelCue: "When you remove the baked loaf from the tin, it should feel lighter than you expect — moisture has evaporated. Tap the bottom firmly: a hollow thock means the structure is set. The kitchen should smell of sour grain, roasted malt, and something almost coffee-like from the dark crust.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Graines de tournesol entières",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Graines de citrouille"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Lin entier",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Amandes de seigle craqué (coches de seigle)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "flocons de seigle roulés"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Sirop de malt foncé ou mélasse",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Treacle"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_07",
+        "ing_06"
+      ],
+      "outputState": "soaked_seeds",
+      "instructions": "Mélanger les grains de seigle fissurés et les graines de lin dans un bol. Verser suffisamment d'eau bouillante sur eux pour submerger de 1 cm. Remuer et couvrir. Faire tremper pendant au moins 8 heures (ou une nuit) à température ambiante. Les graines de lin absorberont toute leur eau et libéreront le mucilage, formant un gel. Le seigle fissuré s'assouplira complètement. Ce soaker est essentiel : les côtelettes sèches de seigle ajoutées directement à la pâte voleront de l'eau pendant la fermentation et feront sécher le pain et s'émietter.",
+      "visualCue": {
+        "primaryTarget": "Après 8 heures, les graines forment un gel épais — les graines de lin se sont étendues et sont enrobées de mucilage clair. Le seigle craqué a été ramolli et ramolli. Pas de liquide libre restant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines sont encore dures et séparées, flottant dans l'eau. Le temps était trop court.",
+            "action": "Continuez à tremper. Le soaker peut aller jusqu'à 18 heures en toute sécurité dans une cuisine fraîche. Ne sautez pas cette étape."
+          },
+          {
+            "state": "Perfect",
+            "description": "Grosse masse gélatineuse. Pas de liquide libre. Les graines de lin sont enrobées de gel transparent. Le seigle craqué est complètement ramolli. Toute la masse tient sa forme dans une cuillère.",
+            "action": "Ajouter directement à la pâte à pain sans égoutter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Soaker est resté assis plus de 24 heures à température ambiante chaude et sent légèrement fermenté ou aigre.",
+            "action": "Toujours utilisable — la légère fermentation ajoute en fait de la saveur. Utilisez-le immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Mélanger le soûl — une cuillère devrait le glisser avec résistance, comme de l'avoine épaisse. La texture gel-like est correcte: c'est le mucilage de lin liant tout ensemble, qui gardera le pain humide pendant des jours."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_08",
+        "soaked_seeds"
+      ],
+      "outputState": "rye_batter_dough",
+      "instructions": "Dans un grand bol, mélanger le début du seigle, l'eau, le sel et le sirop de malt et mélanger pour dissoudre. Ajouter toute la farine de seigle foncé, les graines de tournesol et tout le terreau (gel de graines et tout). Mélanger vigoureusement avec une cuillère solide ou une pâte fouetter pendant 3-4 minutes jusqu'à ce qu'elle soit complètement homogène. La pâte de seigle n'est pas une pâte de blé — elle ne sera jamais lisse ou élastique. Il sera épais et collant, comme du ciment humide, et devrait être mélangé seulement jusqu'à uniforme. Le développement du gluten n'est pas pertinent dans le seigle; ce qui importe, c'est l'hydratation complète et même la distribution des graines.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, sombre et uniforme — la consistance du porridge très rigide ou du béton humide. Toutes les graines sont distribuées uniformément. Pas de poches de farine sèche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Plaques de farine sèche visibles. Les graines sont groupées. La pâte a l'air striée.",
+            "action": "Incorporer encore 2 minutes, en mettant l'accent sur les zones sèches. Chaque grain de farine doit être hydraté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte sombre, uniforme, épaisse. Graines distribuées uniformément. Pas de zones sèches ou de flaques humides. Se colle fortement à la cuillère.",
+            "action": "Transférer immédiatement dans l'étain gras."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux a été surstirée et se sent légèrement gommée ou cassée.",
+            "action": "Transférer immédiatement dans l'étain — le seigle ne peut pas être surmené au point de causer des dommages. Continuez normalement."
+          }
+        ]
+      },
+      "feelCue": "La pâte mélangée doit se sentir comme de l'argile lourde et humide — elle tire la cuillère dans des cordes épaisses et lentes et atterrit avec une pente dense. Il se sentira radicalement différent de la pâte de blé : pas de springness, pas d'élasticité, juste une masse sombre et granuleuse."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Preuve",
+      "inputs": [
+        "rye_batter_dough"
+      ],
+      "outputState": "proofed_rye_loaf",
+      "instructions": "Graisser généreusement avec de l'huile une boîte de pain de 900g (environ 22 x 11 x 7 cm). Mouiller les mains et la spatule pour éviter de coller. Transférer la pâte dans l'étain, la presser fermement dans les coins avec des doigts mouillés ou une spatule humide. Lissez le dessus avec une spatule humide — la surface doit être plate et uniforme. Éparpiller quelques graines de tournesol sur le dessus si désiré. Couvrir de l'enveloppe en plastique huilé et l'épreuve à température ambiante (20-22 C) pendant 8-12 heures, jusqu'à ce que la pâte soit montée sur le bord de l'étain et que la surface présente de petites fissures et des pores à bulles.",
+      "visualCue": {
+        "primaryTarget": "La toux est montée sur le bord de l'étain ou légèrement au-dessus. La surface supérieure présente de petites fissures superficielles et de minuscules pores à bulles, signes de fermentation active.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux a augmenté moins de la moitié de l'étain. La surface est plate sans fissures. Se sent dense et inerte.",
+            "action": "Couvrez et attendez. Le seigle est plus lent que le blé. Déplacez-vous vers un endroit plus chaud (25 C) si très lent. Peut nécessiter jusqu'à 14 heures dans une cuisine froide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface à ou juste au-dessus du bord de l'étain. La surface montre des fissures fines et des pores à bulles. Un peu drogué. Ça sent l'amertume et le ferment.",
+            "action": "Cuire immédiatement pendant que la pâte est à son maximum."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux s'est élevée bien au-dessus du bord et s'est effondrée vers l'intérieur. La surface est concave et humide.",
+            "action": "Cuire immédiatement — il a surprouvé. Le pain sera plus acide et aura une miette plus dense, mais il n'est pas ruiné."
+          }
+        ]
+      },
+      "feelCue": "Tapotez légèrement la surface de la pâte éprouvée – elle doit se sentir légèrement ferme et sèche sur le dessus, comme une peau s'est formée. L'odeur doit être activement aigre et levure, pas plate. Un pain de seigle bien éprouvé bouge à peine quand l'étain est bouché."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "proofed_rye_loaf"
+      ],
+      "outputState": "finished_danish_rye",
+      "instructions": "Préchauffer le four à 230 C (450 F). Placez le pain au four et réduisez immédiatement à 200 C (390 F). Faire cuire 60-70 minutes au total. Au cours des 10 dernières minutes, retirer le pain de l'étain et cuire directement sur la grille du four pour le développement maximal de la croûte. Un thermomètre à sonde inséré dans le centre doit lire 95-98 C (203-208 F) lorsqu'il est fait. L'ÉTAPE LA PLUS IMPORTANTE : ne pas couper le pain pendant au moins 12-24 heures après la cuisson. La miette doit se mettre complètement — la coupe de pain de seigle chaud produit un intérieur gommé et sous-dégustant. Enveloppez un chiffon propre et attendez.",
+      "visualCue": {
+        "primaryTarget": "Une croûte brune profonde et très foncée de tous les côtés. La surface est légèrement fissurée et sèche. Une fois tapé, le pain semble creux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est brune, mais l'intérieur lit en dessous de 92°C sur un thermomètre à sonde. Le pain est doux et lourd.",
+            "action": "Retourner au four encore 10-15 minutes. Le seigle sous-cuit est chewing-gum et indigeste."
+          },
+          {
+            "state": "Perfect",
+            "description": "Très sombre, croûte presque noire avec des fissures de surface. Sonde lit 96 C ou plus. Le pain semble complètement creux lorsqu'il est tapé sur le fond.",
+            "action": "Laisser refroidir sur une grille pendant au moins 12 heures avant de couper. La nuit est meilleure."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est profondément noire et le pain sent l'omble. Le pain a perdu beaucoup d'humidité et sonne plus léger lorsqu'il est tapé.",
+            "action": "Refroidir et évaluer: si la miette est encore humide et la saveur est complexe (pas purement amère), le pain est fin. Rye peut prendre beaucoup de couleur."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous retirez le pain cuit de l'étain, il doit se sentir plus léger que vous ne l'espérez — l'humidité s'est évaporée. Tapez fermement sur le bas : un thock creux signifie que la structure est réglée. La cuisine devrait sentir le grain aigre, le malt rôti, et quelque chose de presque café-comme de la croûte sombre."
+    }
+  ]
 };

@@ -1,110 +1,275 @@
 export default {
-  repoId: "master_chinese_egg-drop-soup_001",
-  parentRepoId: null,
-  slug: "egg-drop-soup",
-  author: "ForkRecipe Kitchen",
-  title: "Egg Drop Soup",
-  description: "Silky egg ribbons bloom through a ginger-scented golden broth thickened just enough to carry them — a bowl that comes together in 10 minutes and tastes like something your grandmother took all day to make.",
-  cuisine: "Chinese",
-  culture: "Cantonese",
-  category: "stocks",
-  tags: ["egg", "soup", "chinese", "quick", "vegetarian"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 6, sour: 0, bitter: 0, umami: 7, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Good chicken or vegetable broth",        ratioValue: 8,   defaultUnit: "parts", substitutions: ["dashi", "mushroom broth"] },
-    { ingId: "ing_02", role: "Protein",   name: "Eggs, beaten",                           ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Starch",    name: "Cornstarch",                             ratioValue: 0.3, defaultUnit: "parts", substitutions: ["potato starch", "arrowroot"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Fresh ginger, sliced thin",              ratioValue: 0.2, defaultUnit: "parts", substitutions: ["1/4 tsp ground ginger"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Soy sauce or light tamari",              ratioValue: 0.3, defaultUnit: "parts", substitutions: ["salt to taste"] },
-    { ingId: "ing_06", role: "Fat",       name: "Toasted sesame oil",                     ratioValue: 0.05,defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Garnish",   name: "Sliced scallions",                       ratioValue: 0.2, defaultUnit: "parts", substitutions: ["chives"] },
-    { ingId: "ing_08", role: "Seasoning", name: "White pepper, ground",                   ratioValue: 0.02,defaultUnit: "parts", substitutions: ["black pepper"] },
+  "repoId": "master_chinese_egg-drop-soup_001",
+  "parentRepoId": null,
+  "slug": "egg-drop-soup",
+  "author": "ForkRecipe Kitchen",
+  "title": "Soupe aux oeufs",
+  "description": "Les rubans d'oeufs soyeux fleurissent à travers un bouillon doré parfumé de gingembre épaississant juste assez pour les porter — un bol qui se réunit en 10 minutes et goûte comme quelque chose que votre grand - mère a pris toute la journée pour faire.",
+  "cuisine": "Chinois",
+  "culture": "Cantonais",
+  "category": "stocks",
+  "tags": [
+    "œuf",
+    "Soupe",
+    "Chinois",
+    "Vite",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 6,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 7,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Simmer",
-      inputs: ["ing_01", "ing_04", "ing_05", "ing_08"],
-      outputState: "seasoned_broth",
-      instructions: "Combine broth, sliced ginger, soy sauce, and white pepper in a medium saucepan. Bring to a gentle simmer over medium heat. Taste: the broth should be assertively seasoned — it is the soul of the soup. A bland broth produces a bland soup no amount of egg ribbons can rescue. Simmer for 5 minutes to allow the ginger to infuse. Remove and discard the ginger slices.",
-      visualCue: {
-        primaryTarget: "A clear, golden-amber broth at a steady gentle simmer — small bubbles rising consistently from the bottom, not a rolling boil.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is flat and watery. Ginger has not had time to release its aromatics.", action: "Simmer 3–5 more minutes. Taste — there should be a warm, spicy ginger note." },
-          { state: "Perfect",   description: "Deep golden, steaming, with a clear ginger warmth on the palate. Well-seasoned without being salty.", action: "Remove ginger slices and make the slurry." },
-          { state: "Overdone",  description: "Broth is rapidly boiling and has reduced noticeably. Ginger is turning the broth slightly bitter.", action: "Add a splash of fresh broth or water. Remove ginger immediately. Lower to a bare simmer." },
-        ],
-      },
-      feelCue: "The kitchen should smell of clean, gingery chicken steam — bright and warming, not meaty or heavy. If you smell nothing, the broth needs more time or needs better-quality stock.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Bon bouillon de poulet ou de légumes",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Dashi",
+        "bouillon de champignons"
+      ]
     },
     {
-      nodeId: "step_2", action: "Mix",
-      inputs: ["ing_03"],
-      outputState: "cornstarch_slurry",
-      instructions: "In a small bowl, combine cornstarch with an equal volume of cold water (roughly 2 tablespoons cornstarch to 3 tablespoons cold water). Whisk until completely smooth with no white lumps. The slurry must be made with cold water — hot or warm water causes the starch to clump immediately. This slurry thickens the broth just enough to give the egg ribbons something to hang on to — without it, eggs sink to the bottom.",
-      visualCue: {
-        primaryTarget: "A milky-white, perfectly smooth slurry that flows easily off the whisk without any lumps.",
-        spectrum: [
-          { state: "Underdone", description: "Small white lumps of undissolved cornstarch visible when the bowl is tilted.", action: "Keep whisking. Lumps of starch will create gelatinous blobs in the finished soup." },
-          { state: "Perfect",   description: "Completely homogeneous milky liquid that flows like thin cream.", action: "Stir again just before adding to the soup — starch settles quickly." },
-          { state: "Overdone",  description: "Slurry was made with warm water and has already begun to gel.", action: "Discard and make a fresh slurry with cold water." },
-        ],
-      },
-      feelCue: "The slurry should feel slippery and light between fingers — like water with a barely perceptible weight to it. If you feel gritty particles, keep whisking.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Oeufs battus",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Thicken",
-      inputs: ["seasoned_broth", "cornstarch_slurry"],
-      outputState: "thickened_broth",
-      instructions: "Stir the cornstarch slurry one final time (it settles fast), then pour it in a slow, steady stream into the simmering broth while stirring constantly. As the starch granules heat past 65°C (149°F) they swell and burst, thickening the broth almost instantly. Stir constantly for 1 full minute after adding. The finished broth should coat the back of a spoon lightly — thick enough to hold egg ribbons suspended, but not gloopy or paste-like.",
-      visualCue: {
-        primaryTarget: "The broth has shifted from watery-clear to slightly veiled and silky, with a faint sheen. A spoon dragged across the surface leaves a brief parting before the broth flows back.",
-        spectrum: [
-          { state: "Underdone", description: "Broth still watery and runs immediately off a spoon. Egg ribbons will sink and clump.", action: "Add a small additional slurry (1 tsp starch dissolved in 2 tsp cold water)." },
-          { state: "Perfect",   description: "Coats the back of a spoon. A finger drawn across the coated spoon leaves a clean line that holds for 2 seconds.", action: "Immediately begin the egg pour." },
-          { state: "Overdone",  description: "Broth is thick and gelatinous — moves slowly, has an unpleasant sticky texture.", action: "Add 2–3 tbsp additional broth and stir vigorously to thin. Avoid this by adding slurry slowly." },
-        ],
-      },
-      feelCue: "The thickened broth should feel silky when a finger is dipped in — slightly more substantial than water, like very thin syrup. The moment it coats your fingertip rather than running off instantly, it is ready.",
+      "ingId": "ing_03",
+      "role": "Starch",
+      "name": "Farine de maïs",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fécule de pomme de terre",
+        "fléchée"
+      ]
     },
     {
-      nodeId: "step_4", action: "Whisk",
-      inputs: ["ing_02"],
-      outputState: "beaten_eggs",
-      instructions: "Beat eggs thoroughly until completely uniform — no streaks of white, no unincorporated yolk. A fork is fine; whisking until the eggs are smooth and just slightly foamy gives the best ribbon structure. Some cooks add a pinch of salt and 1 tsp of water to thin the eggs for longer, more dramatic ribbons. The beaten eggs should flow like a thin custard.",
-      visualCue: {
-        primaryTarget: "A uniform pale-gold liquid with a faint foam layer on top. No streaks of white albumin remaining.",
-        spectrum: [
-          { state: "Underdone", description: "Visible streaks of white egg white that haven't been beaten into the yolks.", action: "Beat more thoroughly — unbeaten whites create rubbery, uneven ribbons." },
-          { state: "Perfect",   description: "Smooth, uniform golden liquid. Flows off the whisk in a steady, unbroken stream.", action: "Pour immediately — beaten eggs deteriorate if they sit too long." },
-          { state: "Overdone",  description: "Eggs are very foamy and airy from over-beating.", action: "Let the foam settle for 30 seconds before pouring. Excess air makes the ribbons puffy and fragile." },
-        ],
-      },
-      feelCue: "Dip a finger — beaten eggs should feel slippery and uniform, slightly heavier than water. You should feel no tacky albumin strings.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Gingembre frais, tranché",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1/4 c. à thé de gingembre moulu"
+      ]
     },
     {
-      nodeId: "step_5", action: "Pour",
-      inputs: ["thickened_broth", "beaten_eggs", "ing_06", "ing_07"],
-      outputState: "finished_egg_drop_soup",
-      instructions: "Bring the thickened broth to a steady simmer. With one hand, stir the broth in a slow, circular motion to create a gentle vortex. With the other hand, pour the beaten egg in a slow, steady, thin stream from about 12 inches above the pot — the height and the stirring motion are what create long, silky ribbons rather than scrambled egg clumps. Once all the egg is added, stir once gently and immediately remove from heat. Finish with a few drops of sesame oil. Ladle into bowls and garnish with sliced scallions.",
-      visualCue: {
-        primaryTarget: "Gossamer ivory and gold ribbons of cooked egg suspended throughout the broth, flowing and intact. The broth holds them gently — they do not sink or clump.",
-        spectrum: [
-          { state: "Underdone", description: "Egg ribbons are still translucent and slightly raw-looking, clinging together.", action: "Stir gently once more and let the residual heat finish cooking them — 30 seconds off the heat is enough." },
-          { state: "Perfect",   description: "Fully opaque, feathery white-and-gold ribbons throughout a clear golden broth. Scallions bright green on top.", action: "Serve immediately — egg drop soup does not hold well." },
-          { state: "Overdone",  description: "Egg has become rubbery, yellow clumps rather than ribbons. Broth is cloudy.", action: "This happened from boiling too hard or stirring after adding egg. Salvageable — the flavor is fine, only the texture is imperfect." },
-        ],
-      },
-      feelCue: "The surface of the finished soup should shimmer with the sheen of sesame oil and appear almost mirror-smooth between the ribbons. The moment the egg hits the hot broth, a gentle sizzle-hiss announces each ribbon forming.",
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "sauce soja ou tamari léger",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel au goût"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Échalons coupés",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ruches"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Poivre blanc, moulu",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre noir"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_04",
+        "ing_05",
+        "ing_08"
+      ],
+      "outputState": "seasoned_broth",
+      "instructions": "Mélanger le bouillon, le gingembre tranché, la sauce soja et le poivre blanc dans une casserole moyenne. Porter à feu doux à feu moyen. Bouche: le bouillon doit être assaisonné avec assurance — c'est l'âme de la soupe. Un bouillon maladroit produit une soupe maladroite qu'aucune quantité de rubans d'oeuf ne peut sauver. Laisser mijoter 5 minutes pour laisser infuser le gingembre. Retirer et jeter les tranches de gingembre.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon clair, doré-ambre, à une mijoter douce et régulière — de petites bulles s'élevant constamment du fond, et non pas un ébullition.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth est plat et aqueux. Ginger n'a pas eu le temps de libérer ses aromatiques.",
+            "action": "Laisser mijoter encore 3 à 5 minutes. Goûtez — il devrait y avoir une note de gingembre chaude et épicée."
+          },
+          {
+            "state": "Perfect",
+            "description": "D'or profond, à la vapeur, avec une nette chaleur de gingembre en bouche. Bien assaisonné sans être salé.",
+            "action": "Retirer les tranches de gingembre et faire le lisier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon est rapidement bouillant et a nettement diminué. Le gingembre rend le bouillon légèrement amer.",
+            "action": "Ajouter un peu de bouillon frais ou d'eau. Retirer immédiatement le gingembre. Abaissez jusqu'à une mijotée nue."
+          }
+        ]
+      },
+      "feelCue": "La cuisine doit sentir de la vapeur de poulet propre et gingembre — brillante et réchauffante, pas charnue ou lourde. Si vous ne sentez rien, le bouillon a besoin de plus de temps ou besoin d'un stock de meilleure qualité."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "cornstarch_slurry",
+      "instructions": "Dans un petit bol, mélanger la fécule de maïs avec un volume égal d'eau froide (environ 2 cuillères à soupe de fécule de maïs à 3 cuillères à soupe d'eau froide). fouetter jusqu'à ce qu'il soit complètement lisse sans grumeaux blancs. Le lisier doit être fait avec de l'eau froide — de l'eau chaude ou chaude provoque immédiatement l'amidon. Ce lisier épaissit le bouillon juste assez pour donner aux rubans d'oeufs quelque chose à accrocher — sans lui, les œufs coulent au fond.",
+      "visualCue": {
+        "primaryTarget": "Un lisier blanc laiteux parfaitement lisse qui coule facilement du fouet sans grumeaux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Petits morceaux blancs d'amidon de maïs non dissous visibles lorsque le bol est incliné.",
+            "action": "Continuez à fouetter. Les lumps d'amidon créeront des taches gélatineuses dans la soupe finie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide laiteux complètement homogène qui coule comme de la crème fine.",
+            "action": "Mélanger de nouveau juste avant d'ajouter à la soupe — l'amidon se dépose rapidement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La boue a été faite avec de l'eau chaude et a déjà commencé à geler.",
+            "action": "Jeter et faire un lisier frais avec de l'eau froide."
+          }
+        ]
+      },
+      "feelCue": "Le lisier doit se sentir glissant et léger entre les doigts, comme de l'eau à peine perceptible. Si vous ressentez des particules grinçantes, continuez à fouetter."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Thicken",
+      "inputs": [
+        "seasoned_broth",
+        "cornstarch_slurry"
+      ],
+      "outputState": "thickened_broth",
+      "instructions": "Mélanger la fécule de maïs une dernière fois (elle s'installe rapidement), puis la verser dans un flux lent et régulier dans le bouillon mijotant tout en remuant constamment. Comme les granules d'amidon chauffent à 65°C (149°F), ils gonflent et éclatent, épaississant le bouillon presque instantanément. Incorporer constamment pendant 1 minute après l'ajout. Le bouillon fini devrait enrober légèrement l'arrière d'une cuillère — assez épais pour tenir les rubans d'oeuf suspendus, mais pas gloussés ou pâteux.",
+      "visualCue": {
+        "primaryTarget": "Le bouillon est passé de clair-eau à légèrement voilé et soyeux, avec un léger reflet. Une cuillère traînée sur la surface laisse une brève séparation avant que le bouillon ne retombe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth encore aqueux et court immédiatement hors d'une cuillère. Les rubans d'oeufs couleront et s'écraseront.",
+            "action": "Ajouter un petit lisier supplémentaire (1 c. à thé d'amidon dissous dans 2 c. à thé d'eau froide)."
+          },
+          {
+            "state": "Perfect",
+            "description": "Enveloppe l'arrière d'une cuillère. Un doigt tiré à travers la cuillère enduite laisse une ligne propre qui tient pendant 2 secondes.",
+            "action": "Commencez immédiatement l'oeuf verser."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon est épais et gélatineux — se déplace lentement, a une texture collante désagréable.",
+            "action": "Ajouter 2-3 c. à soupe de bouillon supplémentaire et remuer vigoureusement à mince. Évitez cela en ajoutant le lisier lentement."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon épaissé doit se sentir soyeux lorsqu'un doigt est trempé dans — un peu plus substantiel que l'eau, comme le sirop très mince. Le moment où il enveloppe votre bout de doigt plutôt que de s'enfuir instantanément, il est prêt."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Whisk",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "beaten_eggs",
+      "instructions": "Battre soigneusement les oeufs jusqu'à ce qu'ils soient complètement uniformes — pas de stries blanches, pas de jaune non incorporé. Une fourchette est fine; fouetter jusqu'à ce que les œufs soient lisses et juste légèrement mousseux donne la meilleure structure de ruban. Certains cuisiniers ajoutent une pincée de sel et 1 c. à thé d'eau pour mincer les œufs pour des rubans plus longs et plus spectaculaires. Les œufs battus devraient couler comme une fine crème.",
+      "visualCue": {
+        "primaryTarget": "Un liquide or pâle uniforme avec une faible couche de mousse sur le dessus. Il ne reste pas de stries d'albumine blanche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des traces visibles de blanc d'œuf qui n'ont pas été battues dans les jaunes.",
+            "action": "Battre plus soigneusement — les blancs imbattables créent des rubans caoutchouteux et inégaux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide doré lisse et uniforme. Il coule du fouet dans un cours d'eau stable et ininterrompu.",
+            "action": "Verser immédiatement — les œufs battus se détériorent s'ils sont trop longs."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oeufs sont très mousseux et aérés à cause d'un excès de battement.",
+            "action": "Laisser reposer la mousse pendant 30 secondes avant de verser. L'excès d'air rend les rubans gonflés et fragiles."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt — les œufs battus doivent se sentir glissants et uniformes, légèrement plus lourds que l'eau. Tu ne devrais pas ressentir de ficelles d'albumine."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Verser",
+      "inputs": [
+        "thickened_broth",
+        "beaten_eggs",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "finished_egg_drop_soup",
+      "instructions": "Porter le bouillon épaissé à une mijotation régulière. D'une main, remuer le bouillon dans un mouvement lent et circulaire pour créer un vortex doux. D'autre part, versez l'œuf battu dans un cours d'eau lent, stable et mince d'environ 12 pouces au - dessus du pot — la hauteur et le mouvement en remuant sont ce qui créent de longs rubans soyeux plutôt que des griffes d'oeuf brouillés. Une fois l'œuf ajouté, remuer une fois doucement et retirer immédiatement du feu. Terminer avec quelques gouttes d'huile de sésame. Déposer dans des bols et garnir d'échalons tranchés.",
+      "visualCue": {
+        "primaryTarget": "Des rubans d'ivoire gossamer et d'or d'oeuf cuit suspendus dans tout le bouillon, coulants et intacts. Le bouillon les tient doucement — ils ne coulent ni ne s'agrippent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les rubans d'oeufs sont encore translucides et légèrement bruts, s'accrochent ensemble.",
+            "action": "Agiter doucement une fois de plus et laisser la chaleur résiduelle finir de les cuire — 30 secondes après la chaleur suffit."
+          },
+          {
+            "state": "Perfect",
+            "description": "Rubans blancs et dorés entièrement opaques et plumeux dans un bouillon doré clair. Échalons vert vif sur le dessus.",
+            "action": "Servir immédiatement — la soupe aux oeufs ne tient pas bien."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oeuf est devenu caoutchouteux et jaune plutôt que des rubans. Le temps est nuageux.",
+            "action": "Cela s'est produit en bouillant trop fort ou en remuant après avoir ajouté des œufs. Salvageable — la saveur est bonne, seule la texture est imparfaite."
+          }
+        ]
+      },
+      "feelCue": "La surface de la soupe finie devrait mijoter avec l'éclat d'huile de sésame et apparaître presque miroitement entre les rubans. Au moment où l'œuf frappe le bouillon chaud, un doux sizzle-hiss annonce chaque ruban formant."
+    }
+  ]
 };

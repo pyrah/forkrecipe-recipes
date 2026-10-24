@@ -1,81 +1,184 @@
 export default {
-  repoId: "master_spanish_spanishbacalaalpilpil_001",
-  parentRepoId: null,
-  slug: "spanish-bacalao-al-pil-pil",
-  author: "ForkRecipe Kitchen",
-  title: "Spanish Bacalao al Pil-Pil",
-  description: "Basque salt cod confited gently in olive oil at a whisper of heat, then coaxed by swirling the pan into a trembling, ivory emulsion from its own collagen — no cream, no flour, nothing but the fish and oil.",
-  cuisine: "Spanish",
-  culture: "Basque",
-  category: "seafood",
-  tags: ["seafood", "gluten-free", "spanish", "salt-cod", "emulsion", "basque", "bacalao"],
-  difficulty: 4,
-  activeTime: "45 min",
-  totalTime: "30 hours",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 1, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried salt cod (bacalao), skin-on, bone-in", ratioValue: 600, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Extra-virgin olive oil",                ratioValue: 350,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_03", role: "Allium",   name: "Garlic cloves, thinly sliced",           ratioValue: 6,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Heat",     name: "Dried guindilla or árbol chili",         ratioValue: 2,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt (for soaking water only)", ratioValue: 0,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_06", role: "Garnish",  name: "Fresh flat-leaf parsley, chopped",       ratioValue: 10,   defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_spanish_spanishbacalaalpilpil_001",
+  "parentRepoId": null,
+  "slug": "spanish-bacalao-al-pil-pil",
+  "author": "ForkRecipe Kitchen",
+  "title": "Espagnol Bacalao al Pil-Pil",
+  "description": "Le sel basque confisquait délicatement l'huile d'olive à un murmure de chaleur, puis il tournait la poêle dans une émulsion d'ivoire tremblante de son propre collagène — pas de crème, pas de farine, rien que le poisson et l'huile.",
+  "cuisine": "Espagnol",
+  "culture": "Basque",
+  "category": "seafood",
+  "tags": [
+    "Produits de la mer",
+    "Sans gluten",
+    "Espagnol",
+    "morue salée",
+    "émulsion",
+    "Basque",
+    "bacalao"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "45 min",
+  "totalTime": "30 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01"],
-      outputState: "desalted_cod",
-      instructions: "Submerge the salt cod in a large bowl of cold water, skin side up. Refrigerate for 24–48 hours, changing the water every 8 hours (at least 3 changes). The fish is ready when a small piece, tasted raw, is pleasantly salty — like a lightly seasoned piece of fish, not aggressively briny. The flesh will have rehydrated and turned from stiff board to supple, with a pearlescent color. Cut into 150g portions. Pat completely dry.",
-      visualCue: {
-        primaryTarget: "Flesh is pearlescent white, supple and pliable, no longer stiff. Soaking water has turned very salty.",
-        spectrum: [
-          { state: "Underdone", description: "Flesh is still partially stiff and tasting sharply, aggressively salty (too much for a sauce).", action: "Continue soaking with fresh water changes every 6 hours for 12–24 more hours." },
-          { state: "Perfect",   description: "Flesh is fully supple and pearlescent, tastes pleasantly salty. Returns to its original cream-white color.", action: "Pat dry and bring to room temperature 30 minutes before cooking." },
-          { state: "Overdone",  description: "Fish has been soaked too long (72+ hours) and is now tasteless, having lost all its characteristic salt-dried flavor.", action: "Cook immediately; the texture will be fine, though the flavor will be milder than ideal." },
-        ],
-      },
-      feelCue: "Properly desalted bacalao should feel like a thick, supple piece of fresh fish with a slight resistance when bent — not stiff, not watery, but plump and firm.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Cabillaud salé séché (bacalao), avec peau, désossé",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Poach",
-      inputs: ["desalted_cod", "ing_02", "ing_03", "ing_04"],
-      outputState: "confited_cod",
-      instructions: "In a wide, heavy skillet or earthenware cazuela, pour all the olive oil. Add the garlic slices and dried chilies. Over very low heat, slowly bring the oil to 60–65°C — use a thermometer; it must never boil or even simmer. Gently lay the cod portions skin-side up in the oil. Confit for 12–15 minutes at this gentle temperature, carefully turning once. The oil should show only the faintest, laziest movement around the fish — almost still. Remove the cod and set aside, reserving the oil.",
-      visualCue: {
-        primaryTarget: "Cod is opaque and just set — white and glistening, not flaking apart. The oil is barely moving, showing only the mildest tremor around the fish.",
-        spectrum: [
-          { state: "Underdone", description: "Cod is still partially translucent at the center. Oil is too cold — barely above room temperature.", action: "Increase heat very slightly and check the temperature — it must reach 60°C." },
-          { state: "Perfect",   description: "Cod is fully opaque but still holding together in one piece, glistening and supple. Garlic is golden, not brown.", action: "Remove the cod and proceed to the emulsification." },
-          { state: "Overdone",  description: "Oil has boiled and the cod is falling apart; flesh is dry and stringy rather than silky.", action: "Proceed to emulsification anyway — the gelatin is still present, just the texture of the fish is compromised." },
-        ],
-      },
-      feelCue: "At the correct confit temperature, the oil should feel barely warm on the back of your hand — almost like a warm bath, not a cooking medium. The fish should look like it is merely resting in oil, not cooking.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 350,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Emulsify",
-      inputs: ["confited_cod", "ing_02"],
-      outputState: "finished_bacalao_pil_pil",
-      instructions: "Remove the garlic and chilies from the oil and set aside for garnish. Return the cazuela with the oil to the very lowest heat. Return the cod to the pan, skin-side down. Begin swirling the pan in a continuous circular motion, or use a flat-mesh spider to agitate the oil in circles around the fish. The gelatin released from the cod's skin will slowly emulsify with the oil over 8–15 minutes of continuous swirling. Do not stop or add any other ingredient. The sauce will gradually turn from translucent golden oil to an opaque, ivory-cream sauce — the pil-pil.",
-      visualCue: {
-        primaryTarget: "Oil has transformed into a thick, creamy ivory emulsion that clings to the fish and the sides of the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Oil is still clear and golden; no emulsification has occurred despite swirling. The fish may not be releasing enough gelatin.", action: "Continue swirling patiently — it can take 12–15 minutes. Add a tablespoon of cold water to trigger the emulsification." },
-          { state: "Perfect",   description: "Sauce is opaque, ivory-white, and thick enough to coat the back of a spoon. It clings to the fish in a silky, trembling layer. The pan moves in slow, heavy waves.", action: "Plate the fish and spoon the pil-pil over. Garnish with garlic and chili." },
-          { state: "Overdone",  description: "Emulsion has broken — the sauce has separated back into clear oil with white flecks.", action: "Remove from heat and let cool slightly. Add 1 tbsp cold water and begin swirling again — broken pil-pil can often be rescued with patience and a temperature reduction." },
-        ],
-      },
-      feelCue: "The pil-pil sauce should feel completely smooth on the tongue — no graininess, no oiliness — just a round, almost neutral creaminess with a lingering salt-cod depth. It should shiver when the plate is tapped.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles à l'ail, tranchés finement",
+      "ratioValue": 6,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Heat",
+      "name": "Pigogne séchée ou piment árbol",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (pour l'eau de trempe seulement)",
+      "ratioValue": 0,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Garnish",
+      "name": "Persil frais à feuilles plates, haché",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "desalted_cod",
+      "instructions": "Submerger la morue salée dans un grand bol d'eau froide, côté peau vers le haut. Réfrigérer pendant 24 à 48 heures, changer l'eau toutes les 8 heures (au moins 3 changements). Le poisson est prêt lorsqu'un petit morceau, goûté cru, est agréablement salé, comme un morceau de poisson légèrement assaisonné, et non pas avec un brin agressif. La chair aura réhydraté et tourné de planche rigide à souple, avec une couleur nacrée. Couper en portions de 150 g. Pat complètement sec.",
+      "visualCue": {
+        "primaryTarget": "La chair est blanche nacrée, souple et souple, non rigide. L'eau qui sème est devenue très salée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La chair est encore partiellement raide et goûte fortement, agressivement salée (trop pour une sauce).",
+            "action": "Continuer à tremper avec de l'eau douce change toutes les 6 heures pendant 12 à 24 heures de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair est entièrement souple et nacrée, goût agréablement salée. Retourne à sa couleur blanc crème d'origine.",
+            "action": "Laisser sécher et porter à température ambiante 30 minutes avant la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson a été trempé trop longtemps (72+ heures) et est maintenant sans goût, ayant perdu toute sa saveur caractéristique séchée au sel.",
+            "action": "Cuire immédiatement; la texture sera fine, bien que la saveur sera plus douce que l'idéal."
+          }
+        ]
+      },
+      "feelCue": "Le bacalao correctement désalté doit se sentir comme un morceau épais et souple de poisson frais avec une légère résistance lorsqu'il est plié — pas raide, pas aqueux, mais ferme."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Pochette",
+      "inputs": [
+        "desalted_cod",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "confited_cod",
+      "instructions": "Dans une grande poêle ou en faïence, verser toute l'huile d'olive. Ajouter les tranches d'ail et les piments secs. À feu très doux, porter lentement l'huile à 60-65°C — utiliser un thermomètre; il ne doit jamais bouillir ni même mijoter. Poser doucement les portions de morue côté peau dans l'huile. Confir 12-15 minutes à cette température douce, en tournant soigneusement une fois. L'huile ne devrait montrer que le mouvement le plus faible et le plus paresseux autour du poisson — presque immobile. Retirer la morue et réserver, réserver l'huile.",
+      "visualCue": {
+        "primaryTarget": "La morue est opaque et sertie — blanche et scintillante, sans se détacher. L'huile est à peine en mouvement, ne montrant que le tremblement le plus doux autour du poisson.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La morue est encore partiellement translucide au centre. L'huile est trop froide — à peine au - dessus de la température ambiante.",
+            "action": "Augmentez la chaleur très légèrement et vérifiez la température – elle doit atteindre 60°C."
+          },
+          {
+            "state": "Perfect",
+            "description": "La morue est complètement opaque, mais toujours en un seul morceau, scintillement et souple. L'ail est doré, pas brun.",
+            "action": "Retirer la morue et procéder à l'émulsion."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'huile a bouilli et la morue s'effondre; la chair est sèche et stringée plutôt que soyeuse.",
+            "action": "Procéder à l'émulsion de toute façon — la gélatine est encore présente, la texture du poisson est compromise."
+          }
+        ]
+      },
+      "feelCue": "À la bonne température de confit, l'huile devrait se sentir à peine chaude sur le dos de votre main — presque comme un bain chaud, pas comme un milieu de cuisson. Le poisson devrait avoir l'air de se reposer dans l'huile et non de cuisiner."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Émulsifier",
+      "inputs": [
+        "confited_cod",
+        "ing_02"
+      ],
+      "outputState": "finished_bacalao_pil_pil",
+      "instructions": "Retirer l'ail et les piments de l'huile et réserver pour garnir. Retournez la cazuela avec l'huile à la chaleur la plus basse. Remettre la morue dans la poêle, côté peau. Commencer à tourner la poêle dans un mouvement circulaire continu, ou utiliser une araignée à mailles plates pour agiter l'huile en cercles autour du poisson. La gélatine libérée de la peau de la morue s'émulsionnera lentement avec l'huile pendant 8 à 15 minutes de tourbillonnement continu. Ne pas arrêter ou ajouter tout autre ingrédient. La sauce passera progressivement de l'huile d'or translucide à une sauce opaque à la crème d'ivoire — le pil-pil.",
+      "visualCue": {
+        "primaryTarget": "L'huile s'est transformée en une épaisse émulsion d'ivoire crémeuse qui s'accroche au poisson et aux côtés de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'huile est encore claire et dorée; aucune émulsification n'a eu lieu malgré le tourbillonnement. Le poisson ne libère peut-être pas assez de gélatine.",
+            "action": "Continuez à tourner patiemment — cela peut prendre 12-15 minutes. Ajouter une cuillère à soupe d'eau froide pour déclencher l'émulsion."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est opaque, blanc ivoire et assez épaisse pour enrober le dos d'une cuillère. Il s'accroche au poisson dans une couche soyeuse et tremblante. La casserole se déplace dans des vagues lentes et lourdes.",
+            "action": "Déposer le poisson et la cuillère sur le pil-pil. Garnir d'ail et de chili."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'émulsion a cassé — la sauce s'est séparée en huile claire avec des taches blanches.",
+            "action": "Retirer du feu et laisser refroidir légèrement. Ajoutez 1 c. à soupe d'eau froide et commencez à tourner à nouveau — le pulpe cassé peut souvent être sauvé avec patience et une réduction de température."
+          }
+        ]
+      },
+      "feelCue": "La sauce pil-pil doit se sentir complètement lisse sur la langue — pas de grain, pas de huile — juste une crème ronde, presque neutre avec une profondeur persistante de morue salée. Il devrait frissonner quand l'assiette est tapée."
+    }
+  ]
 };

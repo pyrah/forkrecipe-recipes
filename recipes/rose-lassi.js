@@ -1,89 +1,221 @@
 export default {
-  repoId: "master_indian_rose_lassi_001",
-  parentRepoId: null,
-  slug: "rose-lassi",
-  author: "ForkRecipe Kitchen",
-
-  title: "Rose Lassi",
-  description: "A cooling North Indian yogurt drink perfumed with rose water and green cardamom, tinted a blush pink by a spoonful of rose syrup, and finished with a pinch of saffron bloomed in warm milk — simultaneously cooling and aromatic, its floral complexity deepening with each sip.",
-  cuisine: "Indian",
-  culture: "Punjab",
-  category: "beverages",
-
-  tags: ["lassi", "indian", "yogurt-drink", "rose", "cardamom", "saffron", "punjab", "vegetarian"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "weight",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 4, salty: 0, sour: 2, bitter: 0, umami: 0, heat: 1 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",      name: "Full-fat plain yogurt (room temperature)",    ratioValue: 400, defaultUnit: "g", substitutions: ["Greek yogurt thinned with 100g milk", "coconut yogurt (vegan)"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Whole milk (cold)",                           ratioValue: 150, defaultUnit: "g", substitutions: ["water for a lighter lassi"] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Rose syrup (Rooh Afza or similar)",           ratioValue: 40,  defaultUnit: "g", substitutions: ["2 tbsp sugar + 1 tsp rose water"] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Rose water (pure, food-grade)",               ratioValue: 10,  defaultUnit: "g", substitutions: ["rose extract, use half the amount"] },
-    { ingId: "ing_05", role: "Spice",      name: "Green cardamom pods, seeds ground",           ratioValue: 3,   defaultUnit: "g", substitutions: ["1/4 tsp pre-ground cardamom"] },
-    { ingId: "ing_06", role: "Aromatic",   name: "Saffron threads",                             ratioValue: 0.1, defaultUnit: "g", substitutions: ["a pinch of turmeric for color only"] },
-    { ingId: "ing_07", role: "Liquid",     name: "Warm milk (for blooming saffron)",            ratioValue: 30,  defaultUnit: "g", substitutions: ["warm water"] },
-    { ingId: "ing_08", role: "Garnish",    name: "Dried rose petals and crushed pistachios",    ratioValue: 5,   defaultUnit: "g", substitutions: ["a pinch of ground cardamom"] },
+  "repoId": "master_indian_rose_lassi_001",
+  "parentRepoId": null,
+  "slug": "rose-lassi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Rose Lassi",
+  "description": "Une boisson fraîche de yogourt indien du Nord parfumée avec de l'eau de rose et de la cardamome verte, teintée d'un rose blush par une cuillère de sirop de rose, et finie avec une pincée de safran fleuri dans du lait chaud — simultanément refroidissement et aromatique, sa complexité florale s'amplifie avec chaque gorgée.",
+  "cuisine": "Indiens",
+  "culture": "Punjab",
+  "category": "beverages",
+  "tags": [
+    "Lassi",
+    "indienne",
+    "yaourt-boissons",
+    "rose",
+    "Cardamome",
+    "safran",
+    "panjab",
+    "végétarien"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 0,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Bloom saffron",
-      inputs: ["ing_06", "ing_07"],
-      outputState: "saffron_milk",
-      instructions: "Crush the saffron threads between your fingers to break them into smaller pieces — this dramatically increases the surface area and the amount of color and flavor extracted. Add to the warm (not boiling) milk and stir. Leave to bloom for 5–10 minutes. The milk will turn a deep golden-orange and the room will fill with the unmistakable honeyed, slightly medicinal fragrance of good saffron. A small pinch of saffron is potent — more than 5–6 threads for this quantity will make the lassi bitter and medicinal rather than fragrant.",
-      visualCue: {
-        primaryTarget: "The warm milk has turned a deep amber-gold, with visible saffron threads floating. The color is vivid and saturated, not pale yellow.",
-        spectrum: [
-          { state: "Underdone", description: "Milk is barely tinted, pale yellow, after less than 2 minutes of blooming. Little aroma released.", action: "Wait the full 10 minutes. Saffron needs time and warmth to release its color and volatile aromatic compounds." },
-          { state: "Perfect",   description: "Deep amber-gold color. Rich, complex floral-honey smell. Threads have given most of their color to the milk.", action: "Use immediately or cool and use later." },
-          { state: "Overdone",  description: "The milk was too hot (boiling) and the saffron's most volatile aromatics have cooked off. Color present but fragrance diminished.", action: "The color and a baseline saffron flavor remain — use it. Next time, use warm (65 C) not boiling milk." },
-        ],
-      },
-      feelCue: "Press a saffron thread between your fingers before adding: it should stain your fingertips deep orange immediately — that's the crocin pigment. A thread that barely stains is either old or low quality; genuine saffron (Kashmiri or Spanish) stains vividly.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Yogourt plein gras (température ambiante)",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Yogourt grec éclairci par 100g de lait",
+        "yaourt de noix de coco (vegan)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "saffron_milk"],
-      outputState: "blended_lassi",
-      instructions: "Combine the yogurt, cold milk, rose syrup, rose water, and ground cardamom in a blender. Add the bloomed saffron milk. Blend on high for 90 seconds until completely smooth, frothy, and well-combined. Taste after blending: the rose should be prominent but not soap-like, the cardamom a warm whisper on the finish, and the saffron should add a golden depth rather than a medicinal note. Adjust sweetness with a touch more rose syrup if needed. The lassi should be pourable but creamy — if too thick, add cold milk a tablespoon at a time.",
-      visualCue: {
-        primaryTarget: "A frothy, blush-pink to pale orange drink with a thick foam cap, blended so smoothly it shows no yogurt lumps or unmixed streaks.",
-        spectrum: [
-          { state: "Underdone", description: "Thick, lumpy, unblended. Visible yogurt curds. Layers of ingredients not fully mixed.", action: "Blend another 60 seconds on high speed until completely smooth and frothy." },
-          { state: "Perfect",   description: "Uniformly pink-orange, frothy, smooth. Tastes floral, sweet, cool, and complex. Pours smoothly without any gluey resistance.", action: "Pour over ice and garnish." },
-          { state: "Overdone",  description: "Over-blended until warm from friction — the ice will melt immediately. Rose flavor muted from heat.", action: "Refrigerate for 15 minutes before serving over ice." },
-        ],
-      },
-      feelCue: "Pour a small amount into your palm: it should flow like heavy cream — smooth, slightly thick, with no graininess. The aroma off the foam should be immediately and unmistakably floral: rose dominant, with cardamom rising beneath it.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Lait entier (froid)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau pour un lassi plus léger"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Serve",
-      inputs: ["blended_lassi", "ing_08"],
-      outputState: "finished_rose_lassi",
-      instructions: "Fill tall glasses with crushed ice. Pour the blended lassi over the ice. The foam will settle in a thick cap on top. Scatter a few dried rose petals and crushed pistachios across the foam for color and texture contrast. Serve immediately with a long spoon or wide straw. Rose lassi does not hold well — the foam settles and the ice dilutes within 10 minutes, so serve it the moment it is made. In Punjab, it is served in tall clay glasses (kulhads) that add an earthy, mineral note; a chilled glass is a good substitute.",
-      visualCue: {
-        primaryTarget: "A tall glass layered with crushed ice and blush-pink lassi foam, crowned with vivid dried rose petals and pale green pistachio crumble.",
-        spectrum: [
-          { state: "Underdone", description: "Served without enough ice or at room temperature. Flat, warm, and heavy.", action: "Add more crushed ice and serve in chilled glasses. The cold is not aesthetic — it changes the texture and the perceived sweetness." },
-          { state: "Perfect",   description: "Ice-cold, frothy, aromatic, pink, and decorated. The first sip is cold and floral; the finish is warm from cardamom and saffron.", action: "Drink within 5–10 minutes." },
-          { state: "Overdone",  description: "Left standing too long — ice has melted, foam has collapsed, and the drink is now watery and diluted.", action: "If this happens, re-blend with fresh ice and serve again." },
-        ],
-      },
-      feelCue: "The first sip should deliver an immediate cold shock followed by a rapid expansion of rose fragrance at the back of the nose — that retronasal rose bloom is what distinguishes a real rose lassi from a sweetened yogurt drink.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sirop de rose (Rooh Afza ou similaire)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "2 c. à soupe de sucre + 1 c. à thé d'eau rose"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Eau de rose (pure, de qualité alimentaire)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "extrait de rose, utiliser la moitié de la quantité"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Gousses de cardamome vert, moulues de graines",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1/4 c. à thé cardamome pré-planché"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Fils de safran",
+      "ratioValue": 0.1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "une pincée de curcuma pour la couleur seulement"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Liquid",
+      "name": "Lait chaud (pour la floraison du safran)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau chaude"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Pétales de roses séchées et pistaches concassées",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "une pincée de cardamome au sol"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Safran à fleurs",
+      "inputs": [
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "saffron_milk",
+      "instructions": "Coupez les fils de safran entre vos doigts pour les casser en petits morceaux, ce qui augmente considérablement la surface et la quantité de couleur et de saveur extraites. Ajouter le lait chaud (sans bouillir) et remuer. Laisser fleurir 5-10 minutes. Le lait tournera un orangé d'or profond et la pièce se remplira d'un parfum de bon safran, légèrement médicinal et miellé. Une petite pincée de safran est puissante — plus de 5 à 6 fils pour cette quantité rendra le lassi amer et médicinal plutôt que parfumé.",
+      "visualCue": {
+        "primaryTarget": "Le lait chaud a tourné un or ambre profond, avec des fils de safran visibles flottant. La couleur est vive et saturée, pas jaune pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait est à peine teinté, jaune pâle, après moins de 2 minutes de floraison. Petit arôme libéré.",
+            "action": "Attendez les 10 minutes. Safran a besoin de temps et de chaleur pour libérer sa couleur et ses composés aromatiques volatils."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur ambre-or profonde. Une odeur riche et complexe de miel floral. Les fils ont donné la plus grande partie de leur couleur au lait.",
+            "action": "Utiliser immédiatement ou refroidir et utiliser plus tard."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait était trop chaud (brouillant) et les aromatiques les plus volatils du safran ont cuit. Couleur présente mais parfum diminué.",
+            "action": "La couleur et une saveur de base de safran restent — utilisez-la. La prochaine fois, utilisez du lait chaud (65 C) non bouillant."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un fil de safran entre les doigts avant d'ajouter : il devrait tacher immédiatement le bout des doigts de l'orange profonde – c'est le pigment de la crocine. Un fil qui tache à peine est soit vieux ou de mauvaise qualité; le vrai safran (Kashmiri ou espagnol) tache vivement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "saffron_milk"
+      ],
+      "outputState": "blended_lassi",
+      "instructions": "Mélanger le yogourt, le lait froid, le sirop de rose, l'eau de rose et la cardamome souterraine dans un mélangeur. Ajouter le lait de safran fleuri. Mélanger en haut pendant 90 secondes jusqu'à ce qu'il soit complètement lisse, mousseux et bien combiné. Goût après mélange: la rose doit être proéminente mais pas comme du savon, la cardamome un murmure chaud sur la finale, et le safran doit ajouter une profondeur dorée plutôt qu'une note médicinale. Ajustez la douceur avec une touche plus de sirop de rose si nécessaire. Le lassi doit être versable mais crémeux — si trop épais, ajouter le lait froid une cuillère à soupe à la fois.",
+      "visualCue": {
+        "primaryTarget": "Une boisson mousseuse, rose-bleu à orange pâle avec un bouchon épais en mousse, mélangée si bien qu'elle ne présente pas de morceaux de yaourt ou de stries non mélangées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Épais, grumeux, sans nuance. Yogourt visible. Les couches d'ingrédients ne sont pas entièrement mélangées.",
+            "action": "Mélanger encore 60 secondes à haute vitesse jusqu'à ce qu'il soit complètement lisse et mousseux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement orange-rose, mousseux, doux. Goûte floral, doux, frais et complexe. Verse en douceur sans résistance collante.",
+            "action": "Verser sur la glace et garnir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surplombée jusqu'à ce qu'elle soit chaude, la glace fond immédiatement. La saveur de la rose a bougé de la chaleur.",
+            "action": "Réfrigérer 15 minutes avant de servir sur la glace."
+          }
+        ]
+      },
+      "feelCue": "Versez une petite quantité dans votre paume: elle doit couler comme de la crème lourde — lisse, légèrement épaisse, sans grain. L'arôme de la mousse doit être immédiatement et sans équivoque floral: rose dominant, avec la cardamome montant sous elle."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Servir",
+      "inputs": [
+        "blended_lassi",
+        "ing_08"
+      ],
+      "outputState": "finished_rose_lassi",
+      "instructions": "Remplissez les grands verres de glace écrasée. Versez le lassi mélangé sur la glace. La mousse se déposera dans un bouchon épais sur le dessus. Dispersez quelques pétales de rose séchés et des pistaches broyées à travers la mousse pour le contraste de couleur et de texture. Servir immédiatement avec une longue cuillère ou une paille large. Rose lassi ne tient pas bien — la mousse s'installe et la glace dilue dans les 10 minutes, alors servez-la au moment où elle est faite. Au Pendjab, il est servi dans de grands verres d'argile (kulhads) qui ajoutent une note minérale terreuse; un verre réfrigéré est un bon substitut.",
+      "visualCue": {
+        "primaryTarget": "Un grand verre recouvert de glace concassée et de mousse de lassi rose-bleu, couronné de pétales de rose séchés vifs et de crumble pistache vert pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Servi sans glace suffisante ou à température ambiante. Plat, chaud et lourd.",
+            "action": "Ajouter la glace concassée et servir dans des verres réfrigérés. Le froid n'est pas esthétique, il change la texture et la douceur perçue."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ice-froid, mousseux, aromatique, rose et décoré. La première gorgée est froide et florale; la finale est chaude de cardamome et de safran.",
+            "action": "Buvez dans les 5-10 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La glace a fondu, la mousse s'est effondrée et la boisson est maintenant aqueuse et diluée.",
+            "action": "Si c'est le cas, renouer avec de la glace fraîche et servir à nouveau."
+          }
+        ]
+      },
+      "feelCue": "La première gorgée devrait provoquer un choc froid immédiat suivi d'une expansion rapide du parfum de rose à l'arrière du nez — que la floraison de rose rétronasale est ce qui distingue un vrai lassi de rose d'une boisson sucrée de yogourt."
+    }
+  ]
 };

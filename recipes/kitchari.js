@@ -1,67 +1,178 @@
 export default {
-  repoId: "master_indian_kitchari_001",
-  parentRepoId: null,
-  slug: "kitchari",
-  author: "ForkRecipe Kitchen",
-  title: "Kitchari",
-  description: "The Ayurvedic healing porridge of India — split mung dal and basmati rice cooked together with golden ghee, cumin, and turmeric until they dissolve into a warmly fragrant, deeply nourishing, easily digestible whole that is more than the sum of its parts.",
-  cuisine: "Indian",
-  culture: "Indian",
-  category: "grains",
-  tags: ["grains", "indian", "ayurvedic", "lentil", "rice", "vegan", "gluten-free"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 1, sour: 0, bitter: 1, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Basmati rice (rinsed)",                ratioValue: 200, defaultUnit: "g",  substitutions: ["short-grain white rice"] },
-    { ingId: "ing_02", role: "Protein",   name: "Split yellow mung dal (moong dal)",    ratioValue: 150, defaultUnit: "g",  substitutions: ["red lentils"] },
-    { ingId: "ing_03", role: "Fat",       name: "Ghee",                                 ratioValue: 40,  defaultUnit: "g",  substitutions: ["coconut oil"] },
-    { ingId: "ing_04", role: "Spice",     name: "Cumin seeds",                          ratioValue: 8,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground turmeric",                      ratioValue: 5,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt",                        ratioValue: 8,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Liquid",    name: "Water",                                ratioValue: 1200, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",   name: "Fresh coriander, lemon, ghee to serve", ratioValue: 1,  defaultUnit: "serving", substitutions: [] },
+  "repoId": "master_indian_kitchari_001",
+  "parentRepoId": null,
+  "slug": "kitchari",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kitchari",
+  "description": "Le porridge ayurvédique de guérison de l'Inde — le mung dal et le riz basmati fendus cuits ensemble avec le ghee doré, le cumin et le curcuma jusqu'à ce qu'ils se dissolvent dans un tout parfumé, profondément nourrissant, facilement digestible qui est plus que la somme de ses parties.",
+  "cuisine": "Indiens",
+  "culture": "Indiens",
+  "category": "grains",
+  "tags": [
+    "grains",
+    "indienne",
+    "ayurvédique",
+    "lentilles",
+    "riz",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Bloom",
-      inputs: ["ing_03", "ing_04", "ing_05"],
-      outputState: "spiced_ghee",
-      instructions: "Melt the ghee in a heavy-bottomed pot over medium heat. Add the cumin seeds and fry for 60-90 seconds, stirring, until they begin to pop and turn a shade darker. Add the turmeric and stir for 20 seconds. The spices are bloomed in fat to release their fat-soluble flavour compounds — this step builds the backbone of the dish.",
-      visualCue: {
-        primaryTarget: "Cumin seeds that have visibly darkened from pale tan to a rich brown, surrounded by bubbling golden ghee. The turmeric has turned the fat a vivid gold.",
-        spectrum: [
-          { state: "Underdone", description: "Cumin seeds are still pale, no popping sound. The ghee is warm but not sizzling.", action: "Increase heat slightly. The seeds must pop and darken to release their aroma — pale cumin is raw-tasting and grassy." },
-          { state: "Perfect",   description: "Seeds are popping, dark tan, fragrant. The kitchen smells of warm, earthy cumin. Ghee is deeply golden from the turmeric.", action: "Add rice and dal immediately." },
-          { state: "Overdone",  description: "Seeds are very dark brown to black. Bitter, acrid smell. Ghee is smoking.", action: "Remove from heat and pour off into a clean pot through a sieve to remove the burnt seeds. Start with fresh cumin." },
-        ],
-      },
-      feelCue: "You'll hear the cumin before you see it — a rapid, staccato popping, like very small fireworks. That sound is your signal.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz basmati (rincé)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "riz blanc à grains courts"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["spiced_ghee", "ing_01", "ing_02", "ing_07", "ing_06"],
-      outputState: "finished_kitchari",
-      instructions: "Add the rinsed rice and mung dal to the spiced ghee and stir to coat in the turmeric-gold fat. Pour in the water, add salt, and bring to a boil. Reduce to a gentle simmer, cover, and cook for 25-30 minutes, stirring occasionally, until the rice and dal have completely merged into a soft, porridge-like consistency. The kitchari should flow slowly from the spoon, not hold its shape.",
-      visualCue: {
-        primaryTarget: "A golden, flowing porridge where individual rice grains and dal are no longer distinguishable — the dish has softened into a unified, deeply yellow mass.",
-        spectrum: [
-          { state: "Underdone", description: "Rice and dal are still clearly separate entities. A firm bite reveals chalky centres. The texture is more rice-and-dal than porridge.", action: "Add 200 ml more water, cover, and simmer for another 10-15 minutes. Kitchari is not done until it flows like a slow river." },
-          { state: "Perfect",   description: "Golden, unified, flows slowly off a ladle. The texture is soft and comforting, with no hard pieces. Smells of cumin, ghee, and turmeric.", action: "Taste for salt, add a finishing drizzle of ghee, and serve topped with fresh coriander and a squeeze of lemon." },
-          { state: "Overdone",  description: "Very wet and watery — the water-to-grain ratio was too high or it cooked too long. Resembles thin porridge.", action: "Cook uncovered for 5-10 minutes to reduce the excess moisture, stirring frequently." },
-        ],
-      },
-      feelCue: "Taste a spoonful — the dal and rice should have dissolved so completely that they feel like a single soft substance on your tongue, warm and coating, with the ghost of individual grains rather than their reality.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Fendue jaune munge dal (mong dal)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "lentilles rouges"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Ghee",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Huile de coco"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Graines de cumin",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 1200,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Coriandre fraîche, citron, ghee à servir",
+      "ratioValue": 1,
+      "defaultUnit": "serving",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bloom",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "spiced_ghee",
+      "instructions": "Faire fondre le ghee dans un pot à fond lourd à feu moyen. Ajouter les graines de cumin et faire frire pendant 60-90 secondes, en remuant, jusqu'à ce qu'elles commencent à sauter et à tourner une ombre plus foncée. Ajouter le curcuma et remuer pendant 20 secondes. Les épices sont fleuries dans les graisses pour libérer leurs composés aromatisants solubles dans les graisses.",
+      "visualCue": {
+        "primaryTarget": "Graines de cumin qui ont visiblement obscurci du bronzage pâle à un brun riche, entourées de ghee doré bouillonnant. Le curcuma a transformé la graisse en or vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines de cumin sont encore pâles, pas de son. Le ghee est chaud mais pas étourdissant.",
+            "action": "Augmenter légèrement la chaleur. Les graines doivent s'assombrir et s'assombrir pour libérer leur arôme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les graines sont soufflées, bronzées, parfumées. La cuisine sent le cumin chaud et terreux. Ghee est profondément doré du curcuma.",
+            "action": "Ajouter le riz et le dal immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les graines sont très brun foncé à noir. Une odeur amère et acride. Ghee fume.",
+            "action": "Retirer du feu et verser dans un pot propre à travers un tamis pour enlever les graines brûlées. Commencez par du cumin frais."
+          }
+        ]
+      },
+      "feelCue": "Vous entendrez le cumin avant de le voir — un rapide, saccato popping, comme de très petits feux d'artifice. Ce son est votre signal."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "spiced_ghee",
+        "ing_01",
+        "ing_02",
+        "ing_07",
+        "ing_06"
+      ],
+      "outputState": "finished_kitchari",
+      "instructions": "Ajouter le riz rincé et le dal mung dans le ghee épicé et mélanger pour enrober la graisse d'or curcuma. Verser l'eau, ajouter le sel et porter à ébullition. Réduire à mijoter doucement, couvrir et cuire pendant 25-30 minutes, en remuant occasionnellement, jusqu'à ce que le riz et le dal aient complètement fusionné en une consistance douce, semblable au porridge. Le kitchari doit couler lentement de la cuillère, ne pas tenir sa forme.",
+      "visualCue": {
+        "primaryTarget": "Un porridge doré, qui coule, où les grains de riz et le dal ne se distinguent plus, le plat s'est adouci en une masse unie, profondément jaune.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz et le dal sont encore des entités clairement distinctes. Une morsure ferme révèle des centres crayeux. La texture est plus riz-et-dal que porridge.",
+            "action": "Ajouter 200 ml d'eau, couvrir et laisser mijoter encore 10-15 minutes. Kitchari n'est pas fait avant qu'il coule comme une rivière lente."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or, unifié, coule lentement d'une louche. La texture est douce et réconfortante, sans pièces durs. Des odeurs de cumin, de ghee et de curcuma.",
+            "action": "Goûtez au sel, ajoutez une bruine de ghee, et servez avec de la coriandre fraîche et une touche de citron."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très humide et aqueuse — le rapport eau-grain était trop élevé ou il cuisinait trop longtemps. Ressemble à du porridge fin.",
+            "action": "Cuire à découvert pendant 5-10 minutes pour réduire l'excès d'humidité, en remuant fréquemment."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillère — le dal et le riz auraient dû se dissoudre si complètement qu'ils se sentent comme une seule substance douce sur votre langue, chaude et enrobée, avec le fantôme des grains individuels plutôt que leur réalité."
+    }
+  ]
 };

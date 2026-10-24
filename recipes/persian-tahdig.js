@@ -1,102 +1,207 @@
 export default {
-  repoId: "master_persian_persian_tahdig_001",
-  parentRepoId: null,
-  slug: "persian-tahdig",
-  author: "ForkRecipe Kitchen",
-
-  title: "Persian Tahdig (Crispy Rice)",
-  description: "Rice that is as much about its golden, shattering crust as the fluffy grains above it — parboiled, rested, steamed under a towel-wrapped lid for an hour until the bottom transforms into a burnished disk that comes away from the pot in one dramatic, crackling sheet.",
-  cuisine: "Persian",
-  culture: "Iranian",
-  category: "grains",
-
-  tags: ["persian", "rice", "crispy", "vegetarian", "technique"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "1 hr 20 min",
-  ratioSystem: "parts",
-
-  stars: 4120,
-  forks: 388,
-  contributors: 42,
-  license: "CC-BY-SA",
-  createdAt: "2024-10-21",
-  updatedAt: "2026-02-14",
-
-  flavorRadar: { sweet: 0, salty: 2, sour: 0, bitter: 0, umami: 1, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Aged basmati rice (extra-long grain)",   ratioValue: 100, defaultUnit: "parts", substitutions: ["regular basmati (soak extra 30 min)"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Fine sea salt (for parboiling water)",   ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Fat",       name: "Neutral oil (sunflower or vegetable)",   ratioValue: 8,   defaultUnit: "parts", substitutions: ["clarified butter / ghee for richer flavor"] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter, cubed",                 ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Liquid",    name: "Water (for parboiling)",                 ratioValue: 500, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_persian_persian_tahdig_001",
+  "parentRepoId": null,
+  "slug": "persian-tahdig",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tahdig persan (riz crispy)",
+  "description": "Le riz qui est autant au sujet de sa croûte dorée et éclatante que les grains moelleux au - dessus de celle - ci — bouillis, reposés, cuits à la vapeur sous un couvercle recouvert d'une serviette pendant une heure, jusqu'à ce que le fond se transforme en un disque carbonisé qui s'éloigne du pot dans une feuille dramatique et crépitante.",
+  "cuisine": "Perse",
+  "culture": "Iranien",
+  "category": "grains",
+  "tags": [
+    "persienne",
+    "riz",
+    "croustillant",
+    "végétarien",
+    "technique"
   ],
-
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "1 hr 20 min",
+  "ratioSystem": "parts",
+  "stars": 4120,
+  "forks": 388,
+  "contributors": 42,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-10-21",
+  "updatedAt": "2026-02-14",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Soak and parboil rice",
-      inputs: ["ing_01", "ing_02", "ing_05"],
-      outputState: "parboiled_rice",
-      instructions: "Rinse the rice in cold water until the water runs clear — this removes excess surface starch that would otherwise glue the grains together. Soak in cold, lightly salted water for 30 minutes minimum, 2 hours ideally. Drain. Bring a large pot of heavily salted water (it should taste like the sea) to a vigorous boil. Add the soaked, drained rice and parboil for exactly 6–7 minutes, stirring gently once. The rice is done when the outside is fully cooked but the center still has a small chalky core — bite a grain to check. Drain immediately in a colander and rinse briefly with lukewarm water to stop the cooking.",
-      visualCue: {
-        primaryTarget: "Each grain is slightly translucent at the edges but shows a distinct white chalky core when bitten. The rice is al dente — cooked through on the outside, firm in the middle.",
-        spectrum: [
-          { state: "Underdone", description: "Most of the grain is still hard and chalky throughout. The exterior is barely softened. The rice looks largely unchanged from raw.", action: "Continue boiling for another 2 minutes and check again. The parboil is the foundation — undercooked rice will not steam to perfection in the final step." },
-          { state: "Perfect",   description: "Outer layer fully cooked, translucent-soft. A visible white dot at the center when you bite a grain. The grain is elongated — it has expanded significantly.", action: "Drain immediately and rinse with lukewarm water. Work quickly — the carry-over cooking continues in the colander." },
-          { state: "Overdone",  description: "Grain has no chalky center — it is fully soft throughout. The rice is already fully cooked and will turn mushy in the steam step.", action: "Drain and rinse with cold water immediately to stop cooking. Proceed with the steam step, but reduce steaming time to 30 minutes. The tahdig will still form." },
-        ],
-      },
-      feelCue: "Bite a parboiled grain in half — the outside should yield immediately while the interior pushes back faintly, like an al dente pasta that still has one more minute of cooking ahead of it.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz basmati vieilli (grain extra-long)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Basmati régulier (soak extra 30 min)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Build tahdig crust",
-      inputs: ["parboiled_rice", "ing_03"],
-      outputState: "layered_rice_pot",
-      instructions: "In a heavy-bottomed, non-stick pot (24–26cm diameter), heat the oil over medium heat until shimmering. For a plain crust: add 2–3 tablespoons of water to the oil and let it sizzle, then immediately pile in all the parboiled rice, mounding it slightly in the center. Do not press or compact it — use a spoon handle to poke 5–6 holes down through the rice to allow steam to travel upward. For a potato tahdig (beloved variation): place thin potato slices in the oiled pan in a single overlapping layer before adding the rice. Scatter the cubed butter over the top of the mounded rice.",
-      visualCue: {
-        primaryTarget: "A tall mound of rice with steam vents poked through, sitting in lightly sizzling oil, butter distributed across the top — ready to be covered for the steam phase.",
-        spectrum: [
-          { state: "Underdone", description: "Rice has been pressed down flat and compacted — no steam vents poked. The rice layer is dense and uniform.", action: "Use a chopstick to poke vents from top to bottom. Compact rice steams unevenly and produces a thick, rubbery crust rather than a crisp one." },
-          { state: "Perfect",   description: "Loose, fluffy mound with visible vent holes. Oil is quietly sizzling at the edges of the pot. The bottom layer of rice is beginning to cook in the oil.", action: "Wrap the pot lid tightly in a clean kitchen towel, then place firmly on the pot." },
-          { state: "Overdone",  description: "Oil is too hot — rice added to it is already sizzling aggressively and browning immediately, before the steam step.", action: "Reduce heat immediately. The crust forms over 45 minutes on low, not in the first 2 minutes." },
-        ],
-      },
-      feelCue: "The pile of rice on top should feel as loose as freshly fallen snow — no compaction, no resistance when you push a chopstick through it. That airiness is what allows the steam to lift every grain.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (pour l'eau bouillante)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Steam under towel-wrapped lid",
-      inputs: ["layered_rice_pot"],
-      outputState: "steamed_tahdig",
-      instructions: "Wrap the pot lid tightly in a clean kitchen towel, securing the corners at the top so they do not hang near the burner. Place the lid on the pot — the towel absorbs condensation that would otherwise drip back down and make the rice wet. Set heat to medium-high for 3 minutes to start building the crust, then reduce to the absolute lowest simmer your burner offers. Cook undisturbed for 40–45 minutes. Do not lift the lid. The golden crust develops from below through even, gentle heat — disturbing this process resets it.",
-      visualCue: {
-        primaryTarget: "After 40 minutes: wisps of steam are escaping around the towel-lid seal. The rice has puffed and separated above the pot line. A faint toasty aroma — not burnt, but golden.",
-        spectrum: [
-          { state: "Underdone", description: "After 30 minutes: steam is still actively escaping and the rice smells of steam rather than toasted grain. The pot bottom does not yet make a sizzling sound when shaken.", action: "Continue steaming. The tahdig crust takes time — check again at 40 minutes." },
-          { state: "Perfect",   description: "After 40–45 minutes: the faintest golden, nutty, toasted smell rises from the pot. The rice is completely fluffy. When you place your hand near the bottom of the pot, you feel focused radiant heat.", action: "Remove from heat and let rest 5 minutes before unmolding." },
-          { state: "Overdone",  description: "A sharp, acrid burnt smell — like scorched popcorn rather than toasted bread. The sizzling from the pot bottom has gone from a quiet whisper to a loud hiss.", action: "Remove from heat immediately. The top rice will be perfect; only the bottom crust layer is affected. Fill the sink with 3cm of cold water and place the pot in it for 30 seconds — this releases the crust from the pan." },
-        ],
-      },
-      feelCue: "Hold your palm 10cm below the pot (without touching) during the steam phase — you should feel steady, even warmth like a low heat lamp. A scorching heat means the burner is too high.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile neutre (fleur de soleil ou légumes)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre clarifié / ghee pour une saveur plus riche"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Unmold and serve",
-      inputs: ["steamed_tahdig"],
-      outputState: "finished_tahdig",
-      instructions: "The unmolding is the theater of tahdig. Place a large serving platter on top of the pot. With one decisive, confident motion, flip the entire pot over onto the platter — like unmolding a cake. If the tahdig releases cleanly, you will hear it land in one piece. If it sticks, place the pot back on the cold sink bottom for 30 more seconds, then try again. Alternatively, serve family-style by first spooning the fluffy top rice onto the platter, then carefully lifting the crust in one piece to place on top, golden-side up.",
-      visualCue: {
-        primaryTarget: "A golden, burnished disk of crust — the color of a perfect caramel or a well-baked cookie — sitting intact on the platter, with fluffy white rice surrounding or beneath it.",
-        spectrum: [
-          { state: "Underdone", description: "When unmolded, the bottom is pale cream — barely golden, not yet caramelized. The crust is soft rather than crunchy, almost spongy.", action: "Return rice to the pot, replace the lid-towel, and steam 10 more minutes on medium-low. The crust needs more time to caramelize." },
-          { state: "Perfect",   description: "A single, intact golden disk — evenly caramelized across its entire surface, from deep amber at the center to golden at the edges. It makes a hollow sound when tapped. The underside smells of toasted grain and butter.", action: "Bring to the table whole and crack with a spoon for dramatic service." },
-          { state: "Overdone",  description: "The crust is very dark brown — almost black in the center — and acrid-smelling. It may have cracked into pieces during unmolding.", action: "Flip it broken-side down and serve it as a crumbled topping over the fluffy rice instead of as an intact disk. Offer extra salt to balance the bitter notes." },
-        ],
-      },
-      feelCue: "Tap the bottom of the fresh tahdig crust with your knuckle — the perfect crust rings back with a hollow, ceramic sound and feels rigid and glassy, not soft or pliable under your finger.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé, cube",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau (pour parboulage)",
+      "ratioValue": 500,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Morceaux de riz",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_05"
+      ],
+      "outputState": "parboiled_rice",
+      "instructions": "Rincer le riz dans de l'eau froide jusqu'à ce que l'eau soit claire, ce qui élimine l'excès d'amidon de surface qui, autrement, collerait les grains ensemble. Laisser tremper dans l'eau froide légèrement salée pendant 30 minutes minimum, 2 heures idéalement. Égoutter. Portez un grand pot d'eau fortement salée (il doit avoir un goût comme la mer) à ébullition vigoureuse. Ajouter le riz trempé, égoutté et le parboil pendant exactement 6 à 7 minutes, en remuant doucement une fois. Le riz est fait quand l'extérieur est entièrement cuit, mais le centre a encore un petit noyau crayeux — mordez un grain à vérifier. Égoutter immédiatement dans une calandre et rincer brièvement avec de l'eau tiède pour arrêter la cuisson.",
+      "visualCue": {
+        "primaryTarget": "Chaque grain est légèrement translucide aux bords, mais montre un noyau blanc crayeux distinct lorsqu'il est mordu. Le riz est al dente — cuit à l'extérieur, ferme au milieu.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La plupart du grain est encore dur et crayeux partout. L'extérieur est à peine ramolli. Le riz semble en grande partie inchangé par rapport au cru.",
+            "action": "Continuer à bouillir encore 2 minutes et vérifier à nouveau. Le gazouillis est le fondement: le riz mal cuit n'aura pas de vapeur à la perfection dans la dernière étape."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couche extérieure entièrement cuite, translucide-douce. Un point blanc visible au centre quand vous mordez un grain. Le grain est allongé — il a beaucoup augmenté.",
+            "action": "Égoutter immédiatement et rincer à l'eau tiède. Travailler rapidement — la cuisson de report continue dans la calandre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le grain n'a pas de centre crayeux — il est entièrement mou. Le riz est déjà entièrement cuit et va devenir mousseux à la vapeur.",
+            "action": "Égoutter et rincer à l'eau froide immédiatement pour arrêter la cuisson. Passez à l'étape vapeur, mais réduisez le temps de vapeur à 30 minutes. Le tahdig va encore se former."
+          }
+        ]
+      },
+      "feelCue": "Bite un grain parboulé en deux — l'extérieur devrait produire immédiatement pendant que l'intérieur repousse faiblement, comme une pâte al dente qui a encore une minute de cuisson devant elle."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Construire la croûte de tahdig",
+      "inputs": [
+        "parboiled_rice",
+        "ing_03"
+      ],
+      "outputState": "layered_rice_pot",
+      "instructions": "Dans un pot antiadhésif à fond lourd (24–26cm de diamètre), faire chauffer l'huile à feu moyen jusqu'à ce qu'elle mijote. Pour une croûte unie : ajouter 2 à 3 cuillerées à soupe d'eau à l'huile et la laisser cuillerer, puis empiler immédiatement dans tout le riz parboulé, le broyant légèrement au centre. Ne pas presser ou compacter — utilisez une poignée de cuillère pour faire passer 5-6 trous à travers le riz pour permettre à la vapeur de remonter. Pour un tahdig de pomme de terre (variation bien-aimée): placer les fines tranches de pomme de terre dans la poêle huilée dans une seule couche de chevauchement avant d'ajouter le riz. Dispersez le beurre cube sur le dessus du riz grillé.",
+      "visualCue": {
+        "primaryTarget": "Un grand monticule de riz avec des évents à vapeur poêlés, assis dans l'huile légèrement grésillante, beurre distribué sur le dessus — prêt à être couvert pour la phase de vapeur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz a été pressé à plat et compacté, sans évents à vapeur. La couche de riz est dense et uniforme.",
+            "action": "Utilisez une baguette pour évents de haut en bas. Le riz compact s'évapore inégalement et produit une croûte épaisse et caoutchouteuse plutôt qu'une croûte croustillante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Monticule souple avec trous de ventilation visibles. L'huile est étourdissante aux bords du pot. La couche inférieure de riz commence à cuire dans l'huile.",
+            "action": "Enveloppez fermement le couvercle du pot dans une serviette de cuisine propre, puis placez fermement sur le pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'huile est trop chaude — le riz ajouté est déjà grincant agressivement et brunissant immédiatement, avant le pas de vapeur.",
+            "action": "Réduire immédiatement la chaleur. La croûte se forme plus de 45 minutes en bas, pas dans les 2 premières minutes."
+          }
+        ]
+      },
+      "feelCue": "Le tas de riz sur le dessus devrait se sentir aussi lâche que la neige fraîchement tombée — pas de compactage, pas de résistance quand vous poussez une baguette à travers elle. Cette aération permet à la vapeur de soulever chaque grain."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Couvercle à vapeur sous la serviette",
+      "inputs": [
+        "layered_rice_pot"
+      ],
+      "outputState": "steamed_tahdig",
+      "instructions": "Enveloppez fermement le couvercle du pot dans une serviette de cuisine propre, en serrant les coins au sommet afin qu'ils ne s'accrochent pas près du brûleur. Placez le couvercle sur le pot — la serviette absorbe la condensation qui, autrement, s'égoutterait et rendrait le riz humide. Réglez le feu à moyen-élevé pendant 3 minutes pour commencer à construire la croûte, puis réduisez à la plus basse mijotez votre brûleur. Faire cuire pendant 40 à 45 minutes. Ne levez pas le couvercle. La croûte dorée se développe d'en bas à travers une chaleur régulière et douce, perturbant ce processus.",
+      "visualCue": {
+        "primaryTarget": "Au bout de 40 minutes : des spores de vapeur s'échappent autour du joint de la serviette. Le riz a gonflé et séparé au-dessus de la ligne de pot. Un léger arôme grillé, non brûlé, mais doré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 30 minutes : la vapeur s'échappe encore activement et le riz sent la vapeur plutôt que le grain grillé. Le fond du pot ne fait pas encore de bruit vertigineux lorsqu'il est secoué.",
+            "action": "Continuez la vapeur. La croûte de tahdig prend du temps — vérifiez à nouveau à 40 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 40 à 45 minutes : l'odeur la plus légère d'or, de noix, grillée se lève du pot. Le riz est complètement moelleux. Lorsque vous placez votre main près du fond du pot, vous vous sentez concentré chaleur rayonnante.",
+            "action": "Retirer du feu et laisser reposer 5 minutes avant de démoler."
+          },
+          {
+            "state": "Overdone",
+            "description": "Une odeur vive et acride brûlée, comme du popcorn brûlé plutôt que du pain grillé. L'étourdissement du fond du pot est passé d'un murmure silencieux à un sifflement fort.",
+            "action": "Retirer immédiatement du feu. Le riz supérieur sera parfait; seule la couche inférieure de croûte est affectée. Remplissez l'évier de 3cm d'eau froide et placez le pot dedans pendant 30 secondes, ce qui libère la croûte de la casserole."
+          }
+        ]
+      },
+      "feelCue": "Maintenez votre paume 10cm sous le pot (sans toucher) pendant la phase de vapeur — vous devriez vous sentir stable, même la chaleur comme une lampe à faible chaleur. Une chaleur brûlante signifie que le brûleur est trop élevé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Démoudre et servir",
+      "inputs": [
+        "steamed_tahdig"
+      ],
+      "outputState": "finished_tahdig",
+      "instructions": "Le démolding est le théâtre de Tahdig. Déposer un grand plateau de service sur le dessus de la casserole. Avec un mouvement décisif et confiant, retournez tout le pot sur le plateau, comme démouler un gâteau. Si le tahdig se libère proprement, vous l'entendrez atterrir en un seul morceau. Si elle colle, placez le pot sur le fond de l'évier froid pendant 30 secondes, puis essayez à nouveau. D'autre part, servir de style familial en cuillerant le riz haut moelleux sur le plateau, puis en soulevant soigneusement la croûte en une seule pièce à placer sur le dessus, côté doré.",
+      "visualCue": {
+        "primaryTarget": "Un disque de croûte doré et brûlé — la couleur d'un caramel parfait ou d'un biscuit bien cuit — assis intact sur le plateau, avec du riz blanc moelleux qui l'entoure ou sous celui-ci.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "En l'état, le fond est une crème pâle, à peine dorée, pas encore caramélisée. La croûte est douce plutôt que croquante, presque spongieuse.",
+            "action": "Retournez le riz dans la casserole, remplacez la serviette à couvercle et faites cuire 10 minutes de plus à feu moyen-doux. La croûte a besoin de plus de temps pour caraméliser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un seul disque d'or intact — caramélisé uniformément sur toute sa surface, de l'ambre profond au centre à l'or aux bords. Il fait un son creux quand tapoté. Le dessous sent le grain grillé et le beurre.",
+            "action": "Apportez à la table tout et craquez avec une cuillère pour un service dramatique."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est brun très foncé — presque noire au centre — et agrippante. Il a peut-être craqué en morceaux pendant le démolage.",
+            "action": "Dépliez-le en morceaux et servez-le comme une garniture émiettée sur le riz moelleux plutôt que comme un disque intact. Offrez du sel supplémentaire pour équilibrer les notes amères."
+          }
+        ]
+      },
+      "feelCue": "Tapez le fond de la croûte de tahdig fraîche avec votre mandrin — la croûte parfaite sonne en arrière avec un son creux, céramique et se sent rigide et vitreux, pas doux ou souple sous votre doigt."
+    }
+  ]
 };

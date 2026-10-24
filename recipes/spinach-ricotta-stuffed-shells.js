@@ -1,123 +1,332 @@
 export default {
-  repoId: "master_italianamerican_spinachricottashells_001",
-  parentRepoId: null,
-  slug: "spinach-ricotta-stuffed-shells",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Spinach and Ricotta Stuffed Shells",
-  description: "Jumbo pasta shells packed with a lemony ricotta-spinach filling, nestled in a quick garlic-basil tomato sauce and baked under a blanket of bubbling, browned mozzarella. Creamy, cheesy, and deeply comforting.",
-  cuisine: "Italian-American",
-  culture: "Italian-American home cooking",
-  category: "grains",
-  tags: ["home-kitchen", "vegetarian", "pasta", "ricotta", "spinach", "baked", "comfort-food"],
-  difficulty: 2,
-  activeTime: "35 min",
-  totalTime: "75 min",
-  ratioSystem: "weight",
-  servings: 4,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 0, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Olive oil",                                             ratioValue: 30,  defaultUnit: "ml",      substitutions: [] },
-    { ingId: "ing_02", role: "Allium",    name: "Garlic, thinly sliced",                                 ratioValue: 4,   defaultUnit: "cloves",  substitutions: [] },
-    { ingId: "ing_03", role: "Heat",      name: "Red pepper flakes",                                     ratioValue: 0.25, defaultUnit: "tsp",    substitutions: [] },
-    { ingId: "ing_04", role: "Base",      name: "Crushed tomatoes",                                      ratioValue: 800, defaultUnit: "g",       substitutions: ["tomato passata"] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh basil",                                           ratioValue: 10,  defaultUnit: "leaves",  substitutions: ["1 tsp dried oregano"] },
-    { ingId: "ing_06", role: "Structure", name: "Jumbo pasta shells (about 24)",                         ratioValue: 250, defaultUnit: "g",       substitutions: ["manicotti tubes"] },
-    { ingId: "ing_07", role: "Dairy",     name: "Whole-milk ricotta",                                    ratioValue: 450, defaultUnit: "g",       substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",   name: "Frozen chopped spinach, thawed and squeezed very dry",  ratioValue: 280, defaultUnit: "g",       substitutions: ["450 g fresh spinach, wilted and squeezed"] },
-    { ingId: "ing_09", role: "Binder",    name: "Egg, large",                                            ratioValue: 1,   defaultUnit: "whole",   substitutions: [] },
-    { ingId: "ing_10", role: "Dairy",     name: "Parmesan-style hard cheese (vegetarian rennet), grated", ratioValue: 50, defaultUnit: "g",       substitutions: [] },
-    { ingId: "ing_11", role: "Citrus",    name: "Lemon zest",                                            ratioValue: 1,   defaultUnit: "tsp",     substitutions: [] },
-    { ingId: "ing_12", role: "Spice",     name: "Nutmeg, freshly grated",                                ratioValue: 0.25, defaultUnit: "tsp",    substitutions: [] },
-    { ingId: "ing_13", role: "Dairy",     name: "Low-moisture mozzarella, shredded",                     ratioValue: 200, defaultUnit: "g",       substitutions: ["provolone"] },
-    { ingId: "ing_14", role: "Seasoning", name: "Kosher salt and black pepper",                          ratioValue: 0,   defaultUnit: "to taste", substitutions: [] },
+  "repoId": "master_italianamerican_spinachricottashells_001",
+  "parentRepoId": null,
+  "slug": "spinach-ricotta-stuffed-shells",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Coquilles farcies d'épinards et de Ricotta",
+  "description": "Coquilles de pâtes jumbo farcies d'un ricotta-épinard citronné, nichées dans une sauce tomate à base d'ail et cuites sous une couverture de mozzarella brunâtre bouillonnante. Crémeux, chiant et profondément réconfortant.",
+  "cuisine": "Italien-Américain",
+  "culture": "Cuisine maison italo-américaine",
+  "category": "grains",
+  "tags": [
+    "cuisine maison",
+    "végétarien",
+    "pâtes",
+    "ricotta",
+    "épinards",
+    "cuits",
+    "la nourriture confortable"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "35 min",
+  "totalTime": "75 min",
+  "ratioSystem": "weight",
+  "servings": 4,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_14"],
-      outputState: "quick_tomato_sauce",
-      instructions: "Warm the olive oil in a saucepan over medium-low heat. Add the garlic and pepper flakes and cook 1–2 minutes until the garlic is pale gold. Add the crushed tomatoes, basil, 1 teaspoon salt, and pepper. Simmer gently 15 minutes, stirring occasionally, until slightly thickened. Meanwhile, heat the oven to 375°F (190°C).",
-      visualCue: {
-        primaryTarget: "A slightly thickened, brick-red sauce with a sheen of oil at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and bright red, tasting raw and tinny.", action: "Simmer 5 minutes longer." },
-          { state: "Perfect",   description: "Sauce has deepened in color and coats a spoon; tastes sweet and rounded.", action: "Remove the basil stems and set aside." },
-          { state: "Overdone",  description: "Sauce is thick and spattering, sticking on the bottom.", action: "Stir in 60 ml water to loosen." },
-        ],
-      },
-      feelCue: "The garlic should smell sweet and toasty when the tomatoes go in — never sharp or burnt.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Parboil",
-      inputs: ["ing_06", "ing_14"],
-      outputState: "parboiled_shells",
-      instructions: "Boil the shells in a large pot of salted water for 2 minutes less than the package time (usually 7–8 minutes). Drain gently, rinse with cool water, and lay them open-side down on an oiled tray so they don't stick together. Cook a few extra — some always tear.",
-      visualCue: {
-        primaryTarget: "Pliable shells that hold their curled shape with no cracks.",
-        spectrum: [
-          { state: "Underdone", description: "Shells are stiff and crack when opened.", action: "Boil another minute." },
-          { state: "Perfect",   description: "Flexible and whole, still firm to the bite.", action: "Drain, rinse, and lay out." },
-          { state: "Overdone",  description: "Shells are floppy and tearing, collapsing flat.", action: "Use torn shells to patch the dish; bake a few minutes less." },
-        ],
-      },
-      feelCue: "A shell should open under your thumb like a soft clam without splitting at the seam.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Ail, tranché finement",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12", "ing_13", "ing_14"],
-      outputState: "ricotta_spinach_filling",
-      instructions: "In a bowl, mix the ricotta, squeezed spinach, egg, grated hard cheese, lemon zest, nutmeg, 80 g of the mozzarella, 3/4 teaspoon salt, and pepper until evenly combined. Taste before adding the egg if you want to check seasoning.",
-      visualCue: {
-        primaryTarget: "A thick, pale filling evenly flecked with dark green spinach.",
-        spectrum: [
-          { state: "Underdone", description: "White pockets of ricotta and clumps of spinach remain.", action: "Keep folding until uniformly speckled." },
-          { state: "Perfect",   description: "Uniformly green-flecked and thick enough to hold a spoon upright.", action: "Fill the shells." },
-          { state: "Overdone",  description: "Filling is loose and weeping green liquid — spinach wasn't squeezed enough.", action: "Stir in 2 tablespoons more grated cheese or breadcrumbs to firm it up." },
-        ],
-      },
-      feelCue: "Scoop some up — it should hold its shape like thick mashed potatoes, not slump.",
+      "ingId": "ing_03",
+      "role": "Heat",
+      "name": "Flacons de poivre rouge",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["quick_tomato_sauce", "parboiled_shells", "ricotta_spinach_filling"],
-      outputState: "filled_shell_dish",
-      instructions: "Spread two-thirds of the sauce over the bottom of a 23 x 33 cm baking dish. Fill each shell with about 2 tablespoons of filling and nestle them open-side up in a snug single layer. Spoon the remaining sauce over and between the shells.",
-      visualCue: {
-        primaryTarget: "Tightly packed rows of plump shells sitting in red sauce, filling peeking out.",
-        spectrum: [
-          { state: "Underdone", description: "Shells look thin and underfilled, and gaps are wide.", action: "Add more filling and push the shells closer together." },
-          { state: "Perfect",   description: "Shells are generously filled and touching, sauce around and over them.", action: "Top with cheese and bake." },
-          { state: "Overdone",  description: "Filling is mounded so high it's spilling over.", action: "Scrape back — it will puff and leak during baking." },
-        ],
-      },
-      feelCue: "Each shell should feel heavy and full in your hand, closing gently around the filling.",
+      "ingId": "ing_04",
+      "role": "Base",
+      "name": "Tomates concassées",
+      "ratioValue": 800,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates passata"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Bake",
-      inputs: ["filled_shell_dish", "ing_13"],
-      outputState: "finished_stuffed_shells",
-      instructions: "Scatter the remaining 120 g mozzarella over the top. Cover with foil and bake at 375°F (190°C) for 20 minutes. Uncover and bake 10–15 minutes more until the cheese is bubbling and spotted brown. Rest 10 minutes before serving so the filling sets.",
-      visualCue: {
-        primaryTarget: "Melted, blistered mozzarella with golden-brown spots and sauce bubbling at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Cheese is melted but pale white; sauce not bubbling at the edges.", action: "Bake 5 minutes more, or broil 1–2 minutes watching closely." },
-          { state: "Perfect",   description: "Cheese is bubbling with golden-brown blisters; sauce is thick and simmering around the edges.", action: "Rest 10 minutes and serve." },
-          { state: "Overdone",  description: "Cheese is dark and leathery; shell tips are hard and crunchy.", action: "Spoon extra warm sauce over when serving to soften the tops." },
-        ],
-      },
-      feelCue: "A knife through the center should meet hot, steaming filling that holds together rather than running out.",
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Basilic frais",
+      "ratioValue": 10,
+      "defaultUnit": "leaves",
+      "substitutions": [
+        "1 c. à thé d'origan séché"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Structure",
+      "name": "Coquilles de pâtes Jumbo (environ 24)",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Tubes de manicotte"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Ricotta de lait entier",
+      "ratioValue": 450,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Epinards hachés congelés, dégelés et pressés très secs",
+      "ratioValue": 280,
+      "defaultUnit": "g",
+      "substitutions": [
+        "450 g d'épinards frais, flétris et pressés"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Binder",
+      "name": "Oeufs gros",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Dairy",
+      "name": "Fromage dur de type parmesan (rennet végétarien), râpé",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Citrus",
+      "name": "Zeste de citron",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Spice",
+      "name": "Nutemeg, fraîchement râpé",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Dairy",
+      "name": "Mozzarella à faible odeur, déchiquetée",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "provolone"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Seasoning",
+      "name": "Sel casher et poivre noir",
+      "ratioValue": 0,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_14"
+      ],
+      "outputState": "quick_tomato_sauce",
+      "instructions": "Chauffer l'huile d'olive dans une casserole à feu moyen-doux. Ajouter l'ail et le poivre et cuire 1-2 minutes jusqu'à ce que l'ail soit doré. Ajouter les tomates concassées, le basilic, 1 cuillère à café de sel et le poivre. Laisser mijoter doucement 15 minutes, en remuant occasionnellement, jusqu'à ce qu'il y ait un léger épaississement. Pendant ce temps, chauffer le four à 375°F (190°C).",
+      "visualCue": {
+        "primaryTarget": "Une sauce légèrement épaissie, rouge brique avec un éclat d'huile aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et rouge vif, goûtant cru et teinté.",
+            "action": "Laisser mijoter 5 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce a approfondi en couleur et enrobe une cuillère; goût doux et arrondi.",
+            "action": "Retirer les tiges de basilic et réserver."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est épaisse et éclaboussante, collée sur le fond.",
+            "action": "Incorporer 60 ml d'eau à desserrer."
+          }
+        ]
+      },
+      "feelCue": "L'ail doit sentir doux et grillé lorsque les tomates entrent — jamais pointu ni brûlé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Feuilles",
+      "inputs": [
+        "ing_06",
+        "ing_14"
+      ],
+      "outputState": "parboiled_shells",
+      "instructions": "Faire bouillir les coquilles dans un grand pot d'eau salée pendant 2 minutes de moins que le temps d'emballage (habituellement de 7 à 8 minutes). Égoutter doucement, rincer à l'eau fraîche et les déposer sur un plateau huilé afin qu'ils ne collent pas ensemble. Faites cuire quelques-uns de plus — certains se déchirent toujours.",
+      "visualCue": {
+        "primaryTarget": "Des coquilles souples qui tiennent leur forme enroulée sans fissures.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coquilles sont raides et craquent lorsqu'elles sont ouvertes.",
+            "action": "Faites bouillir encore une minute."
+          },
+          {
+            "state": "Perfect",
+            "description": "Flexible et entier, toujours ferme à la morsure.",
+            "action": "Égoutter, rincer et allonger."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les coquilles sont molles et déchirantes, s'effondrent à plat.",
+            "action": "Utiliser des coquillages déchirés pour patcher le plat; cuire quelques minutes de moins."
+          }
+        ]
+      },
+      "feelCue": "Une coquille devrait s'ouvrir sous votre pouce comme une palourde molle sans se diviser à la couture."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13",
+        "ing_14"
+      ],
+      "outputState": "ricotta_spinach_filling",
+      "instructions": "Dans un bol, mélanger la ricotta, les épinards pressés, les oeufs, le fromage dur râpé, le zeste de citron, la muscade, 80 g de mozzarella, le sel de 3/4 de cuillère à café et le poivre jusqu'à ce qu'il soit uniformément combiné. Goûtez avant d'ajouter l'oeuf si vous voulez vérifier l'assaisonnement.",
+      "visualCue": {
+        "primaryTarget": "Un remplissage épais, pâle et uniforme avec des épinards vert foncé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il reste des poches blanches de ricotta et des épinards.",
+            "action": "Continuer à plier jusqu'à ce qu'il soit uniformément tacheté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement vert et assez épais pour tenir une cuillère droite.",
+            "action": "Remplissez les coquilles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage est lâche et le liquide vert pleure.",
+            "action": "Incorporer 2 cuillères à soupe de fromage râpé ou de chapelure pour le raffermir."
+          }
+        ]
+      },
+      "feelCue": "Il devrait tenir sa forme comme une épaisse purée de pommes de terre, et non s'effondrer."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "quick_tomato_sauce",
+        "parboiled_shells",
+        "ricotta_spinach_filling"
+      ],
+      "outputState": "filled_shell_dish",
+      "instructions": "Étaler les deux tiers de la sauce sur le fond d'un plat de cuisson de 23 x 33 cm. Remplir chaque coquille d'environ 2 cuillerées à soupe de remplissage et les nicher dans une seule couche. Verser le reste de la sauce entre les coquilles.",
+      "visualCue": {
+        "primaryTarget": "Des rangées serrées de coquilles de plomberie assises dans de la sauce rouge, en remblayant les yeux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coquilles semblent minces et sous-remplies, et les trous sont larges.",
+            "action": "Ajouter plus de remplissage et pousser les coquilles plus près."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les coquilles sont généreusement remplies et touchantes, sauce autour et au-dessus.",
+            "action": "Garnir de fromage et cuire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage est tellement haut qu'il déborde.",
+            "action": "Grattez le dos — il soufflera et s'échappera pendant la cuisson."
+          }
+        ]
+      },
+      "feelCue": "Chaque coquille doit se sentir lourde et pleine dans votre main, se refermant doucement autour du remplissage."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "filled_shell_dish",
+        "ing_13"
+      ],
+      "outputState": "finished_stuffed_shells",
+      "instructions": "Dispersez les 120 g de mozzarella restants sur le dessus. Couvrir d'une feuille d'aluminium et cuire à 375°F (190°C) pendant 20 minutes. Couvrir et cuire encore 10 à 15 minutes jusqu'à ce que le fromage soit brun tacheté et bouillonnant. Reposez-vous 10 minutes avant de servir ainsi les ensembles de remplissage.",
+      "visualCue": {
+        "primaryTarget": "Mozzarella fondue, blister avec des taches dorées et de la sauce bouillonnant aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le fromage est fondu mais blanc pâle; la sauce ne bouillonne pas aux bords.",
+            "action": "Cuire encore 5 minutes ou faire griller 1 à 2 minutes en regardant attentivement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le fromage est bouillonnant avec des blisters dorées; la sauce est épaisse et mijotée autour des bords.",
+            "action": "Reposez 10 minutes et servez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le fromage est foncé et cuireux; les bouts de coquille sont durs et croquants.",
+            "action": "Verser la sauce trop tiède au moment de servir pour adoucir les dessus."
+          }
+        ]
+      },
+      "feelCue": "Un couteau à travers le centre devrait rencontrer un remplissage chaud et à vapeur qui tient ensemble plutôt que de s'épuiser."
+    }
+  ]
 };

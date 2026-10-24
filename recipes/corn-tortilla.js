@@ -1,75 +1,159 @@
 export default {
-  repoId: "master_mexican_corn_tortilla_001",
-  parentRepoId: null,
-  slug: "corn-tortilla",
-  author: "ForkRecipe Kitchen",
-  title: "Corn Tortilla",
-  description: "Three-ingredient rounds of nixtamalized masa pressed thin, cooked on a dry comal until they puff and char in spots, with an earthy, faintly sweet corn perfume.",
-  cuisine: "Mexican",
-  culture: "Mexican",
-  category: "breads",
-  tags: ["tortilla", "mexican", "masa", "corn", "vegan", "gluten-free"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 1, sour: 0, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Masa harina (nixtamalized corn flour, e.g. Maseca)", ratioValue: 2, defaultUnit: "cups", substitutions: ["freshly ground masa (use 3 cups for same yield)"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Warm water (105–115°F / 41–46°C)",                  ratioValue: 1.5, defaultUnit: "cups", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Fine salt",                                           ratioValue: 0.5, defaultUnit: "tsp", substitutions: [] },
+  "repoId": "master_mexican_corn_tortilla_001",
+  "parentRepoId": null,
+  "slug": "corn-tortilla",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tortille de maïs",
+  "description": "Des rondelles à trois ingrédients de masa nixtamalisées pressées minces, cuites sur un comal sec jusqu'à ce qu'elles bouffent et char dans des taches, avec un parfum de maïs terreux et légèrement sucré.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain",
+  "category": "breads",
+  "tags": [
+    "tortilla",
+    "Mexique",
+    "Masa",
+    "maïs",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Hydrate",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "masa_dough",
-      instructions: "Combine the masa harina and salt in a medium bowl. Add the warm water gradually, mixing with your hands as you pour. Work the dough by squeezing and folding for 2–3 minutes until it comes together into a smooth, uniform ball with no dry streaks. The masa should feel like soft playdough — pliable, moist, and smooth — not sticky or crumbly. Cover with a damp cloth and rest 5–10 minutes. This rest is brief but important: the masa harina absorbs water fully during the rest, and dough that seemed slightly dry often reaches the right consistency after waiting. Test hydration by pressing a ball in your palm: if the edges crack, add water one teaspoon at a time; if it sticks to your palm and leaves residue, add a pinch more masa harina.",
-      visualCue: {
-        primaryTarget: "A smooth, even ball of dough that holds together without cracking at the edges. The color is a uniform pale yellow-tan. The surface is smooth with no cracks or dry streaks when you pinch and fold a piece.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is crumbly and falls apart when pressed. Edges crack when you roll a ball between your palms. The dough looks powdery in spots.", action: "Add water one teaspoon at a time, kneading after each addition, until the dough holds together when pressed. Too little water is the most common masa harina mistake." },
-          { state: "Perfect",   description: "Smooth, pliable ball that presses flat without cracking. Feels like soft modelling clay. No stickiness on a dry palm, no crumbling at the edge. A pressed tortilla holds a clean round shape without tearing.", action: "Divide into golf-ball-sized portions (about 35 g each) and proceed to pressing." },
-          { state: "Overdone",  description: "Dough is sticky and tacky — it leaves a film on your palms and the pressed tortilla surface looks wet and limp. It may stick to the plastic in the press.", action: "Knead in masa harina one tablespoon at a time until the tackiness resolves. Over-hydrated masa also makes tortillas that steam on the comal rather than developing char." },
-        ],
-      },
-      feelCue: "Perfect masa dough should feel like the inside of a soft ear — supple, smooth, and perfectly yielding without being sticky. When you roll a ball between your palms it should feel dense and even, leaving no residue. Press it between your thumb and forefinger: the edges should press flat without cracking. That tactile threshold — no crack, no stick — is the target.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Masa harina (farine de maïs nixtamalisée, p.ex. Maseca)",
+      "ratioValue": 2,
+      "defaultUnit": "cups",
+      "substitutions": [
+        "masa fraîchement moulue (utiliser 3 tasses pour le même rendement)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Press",
-      inputs: ["masa_dough"],
-      outputState: "pressed_tortillas",
-      instructions: "Divide the dough into balls approximately 35 g each. Place a ball between two sheets of plastic (cut from a zip-lock bag works well) in a tortilla press. Press firmly with one smooth motion — do not rock or pump the handle. Open, rotate the tortilla 180°, and press again for even thickness. The tortilla should be uniformly thin (about 2 mm) and round, approximately 15 cm (6 inches) in diameter. Peel carefully from the plastic — it should release cleanly if hydrated correctly. If you do not have a press, use a flat-bottomed heavy pan or rolling pin.",
-      visualCue: {
-        primaryTarget: "A thin, even, round disc with smooth, uncracked edges. The color is uniform pale yellow-tan and the surface is even without thin spots or holes. When peeled from the plastic it holds its shape.",
-        spectrum: [
-          { state: "Underdone", description: "Tortilla is too thick — more than 4 mm. Looks like a short hockey puck. Thick tortillas will cook unevenly, staying doughy in the center while the surface chars.", action: "Press again with more force, or use more body weight on the press. Alternatively, use a rolling pin to roll thinner between the plastic sheets." },
-          { state: "Perfect",   description: "Thin (2 mm), even round with clean edges. Light enough to see your hand through it in a bright window but not paper-thin. Peels from plastic cleanly in one piece.", action: "Cook immediately on a preheated comal. Pressed tortillas can rest under a damp cloth for a few minutes but should not sit long or they dry at the edges." },
-          { state: "Overdone",  description: "Tortilla is translucently thin — you can see through it clearly. Edges look ragged and torn where it was pressed beyond its structural limit. It tears when peeled from the plastic.", action: "Re-ball carefully, knead briefly, and re-press with less force. Too-thin tortillas burn instantly on the comal and have no puff. A fresh press from a re-balled piece is always better than working with a torn sheet." },
-        ],
-      },
-      feelCue: "A correctly pressed tortilla should peel from the plastic smoothly, without resistance or tearing — the way a round sticker peels from its backing. Hold it on your palm: it should drape slightly at the edges and feel cool, soft, and flexible. If it is stiff or cracking, the dough is too dry. If it stretches and tears, it is too wet or too thin.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau chaude (105–115°F / 41–46°C)",
+      "ratioValue": 1.5,
+      "defaultUnit": "cups",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Bake",
-      inputs: ["pressed_tortillas"],
-      outputState: "finished_tortillas",
-      instructions: "Heat a dry comal, cast-iron skillet, or heavy griddle over high heat until it is very hot — a drop of water should vaporize instantly. Do not grease the surface. Lay the tortilla on the comal and cook for 30–40 seconds on the first side — you will see the edges begin to look dry and slightly lighter, and small steam bubbles may form on the surface. Flip with a flat spatula. Cook the second side 30–40 seconds, then flip back to the first side. On this third contact, the trapped steam will cause the tortilla to puff — sometimes dramatically, into a full balloon. This puff is a sign of perfect cooking: it means the two surface layers separated cleanly, creating a light, airy interior. Total cook time per tortilla is 90 seconds to 2 minutes. Stack in a cloth-lined container immediately to trap steam and keep soft.",
-      visualCue: {
-        primaryTarget: "Light tan with irregular dark-brown and faintly charred spots on both sides, and a complete or partial puff during the third contact. The edges look dry and slightly blistered. The surface looks toasted and matte, not raw.",
-        spectrum: [
-          { state: "Underdone", description: "Surface is pale, mostly raw-looking. No char spots. The tortilla does not puff. Feels doughy and damp when pressed.", action: "Cook for another 15–20 seconds per side. The comal may not be hot enough — increase heat. An under-cooked tortilla tears and sticks when used to scoop food." },
-          { state: "Perfect",   description: "Both sides show a pattern of tan background with darker brown speckles. The tortilla puffed at least partially on the final flip. It is pliable when hot, firm when cool, with a toasted corn aroma.", action: "Stack immediately in a cloth napkin or tortilla warmer. The trapped steam keeps them pliable for 20–30 minutes." },
-          { state: "Overdone",  description: "Dark brown-black all over, stiff, and dry. Smells of burnt corn. Does not puff — the surface sealed before the steam could form. Brittle and crackling when bent.", action: "Discard and reduce the comal heat, or cook for a shorter time. Corn tortillas go from perfect to burnt very fast on high heat." },
-        ],
-      },
-      feelCue: "A finished tortilla, fresh from the comal and stacked in a cloth, should be pliable and warm — you should be able to fold it in half without cracking. When you press the stack with your palm, it should give softly. If the tortillas crack when folded, either they are over-cooked, or they were not stacked immediately in cloth to hold the steam. The aroma should be toasted corn — sweet, nutty, faintly earthy — not raw flour or burnt.",
-    },
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "masa_dough",
+      "instructions": "Mélanger la masa harina et saler dans un bol moyen. Ajouter l'eau chaude progressivement, mélanger avec vos mains pendant que vous versez. Tricoter la pâte en taillant et en pliant pendant 2-3 minutes jusqu'à ce qu'elle se combine dans une boule lisse et uniforme sans stries sèches. La masa devrait avoir l'impression qu'elle est tendre, souple, humide et lisse, et non collante ou émiettée. Couvrir avec un chiffon humide et reposer 5-10 minutes. Ce repos est bref mais important : la masa harina absorbe complètement l'eau pendant le repos, et la pâte qui semblait légèrement sèche atteint souvent la bonne consistance après avoir attendu. Testez l'hydratation en appuyant sur une boule dans votre paume : si les bords craquent, ajoutez de l'eau une cuillère à café à la fois ; si elle colle à votre paume et laisse des résidus, ajoutez une pincée plus de masa harina.",
+      "visualCue": {
+        "primaryTarget": "Une boule lisse et uniforme de pâte qui tient ensemble sans craquer aux bords. La couleur est un jaune-tan pâle uniforme. La surface est lisse sans fissures ni stries sèches lorsque vous pincez et repliez une pièce.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est émiettée et s'effondre lorsqu'elle est pressée. Les bords craquent quand vous roulez une balle entre vos paumes. La pâte a l'air poudreuse dans les taches.",
+            "action": "Ajouter une cuillerée à café à la fois, pétrir après chaque addition, jusqu'à ce que la pâte se maintienne lorsqu'elle est pressée. Trop peu d'eau est l'erreur la plus courante de la masa harina."
+          },
+          {
+            "state": "Perfect",
+            "description": "Balle lisse et souple qui presse à plat sans craquer. C'est comme de l'argile de modélisation douce. Pas de collants sur une paume sèche, pas de chute au bord. Une tortilla pressée tient une forme ronde propre sans déchirer.",
+            "action": "Divisez en parties de golf (environ 35 g chacune) et appuyez sur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est collante et collante, elle laisse un film sur vos paumes et la surface de la tortilla pressée semble humide et boiteuse. Il peut coller au plastique dans la presse.",
+            "action": "Knead dans masa harina une cuillère à soupe à la fois jusqu'à ce que l'embout soit résolu. La masa trop hydratée fabrique aussi des tortillas qui s'évaporent sur le comal plutôt que de développer l'omble."
+          }
+        ]
+      },
+      "feelCue": "La pâte masa parfaite doit se sentir comme l'intérieur d'une oreille douce — souple, lisse et parfaitement céder sans être collante. Lorsque vous roulez une balle entre vos paumes, elle doit se sentir dense et même, ne laissant aucun résidu. Appuyez entre le pouce et l'index : les bords doivent appuyer à plat sans craquer. Ce seuil tactile — pas de fissure, pas de bâton — est la cible."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Appuyez sur",
+      "inputs": [
+        "masa_dough"
+      ],
+      "outputState": "pressed_tortillas",
+      "instructions": "Divisez la pâte en boules d'environ 35 g chacune. Placez une balle entre deux feuilles de plastique (coupée d'un sac à fermeture éclair fonctionne bien) dans une presse à tortilla. Appuyez fermement avec un mouvement lisse — ne pas basculer ou pomper la poignée. Ouvrir, tourner la tortilla 180° et presser à nouveau pour une épaisseur uniforme. La tortilla doit être uniformément mince (environ 2 mm) et ronde, d'environ 15 cm (6 pouces) de diamètre. Peler soigneusement du plastique — il doit libérer proprement si hydraté correctement. Si vous n'avez pas de presse, utilisez une poêle à fond plat ou une goupille de roulement.",
+      "visualCue": {
+        "primaryTarget": "Un disque mince, même rond avec des bords lisses et non craqués. La couleur est uniforme jaune-tan pâle et la surface est même sans taches ou trous fins. Une fois pelé du plastique, il tient sa forme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La tortilla est trop épaisse — plus de 4 mm. On dirait une petite rondelle de hockey. Les tortillas épaisses cuisinent inégalement, restant pâteux au centre pendant que les chars de surface.",
+            "action": "Appuyez à nouveau avec plus de force, ou utilisez plus de poids sur la presse. Alternativement, utiliser un laminoir pour rouler plus finement entre les feuilles de plastique."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mince (2 mm), même ronde avec des bords propres. Suffisamment de lumière pour voir votre main à travers elle dans une fenêtre lumineuse mais pas papier-fin. Pele le plastique en une seule pièce.",
+            "action": "Cuire immédiatement sur un comal préchauffé. Les tortillas pressées peuvent se reposer sous un chiffon humide pendant quelques minutes, mais ne doivent pas rester longtemps assis ou elles sèchent aux bords."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tortilla est translucidement mince — vous pouvez le voir clairement. Les bords semblent arrachés et déchirés là où ils ont été pressés au-delà de sa limite structurelle. Il déchire quand il est pelé du plastique.",
+            "action": "Re-ballez soigneusement, agenouillez brièvement, et ré-pressez avec moins de force. Les tortillas trop minces brûlent instantanément sur le comal et n'ont pas de bouffées. Une presse fraîche d'une pièce re-ballée est toujours mieux que de travailler avec une feuille déchirée."
+          }
+        ]
+      },
+      "feelCue": "Une tortilla correctement pressée devrait se détacher du plastique en douceur, sans résistance ni déchirement — la façon dont un autocollant rond se détache de son support. Tenez-le sur votre paume : il devrait draper légèrement les bords et se sentir frais, doux et flexible. Si elle est rigide ou craquelée, la pâte est trop sèche. Si elle s'étire et déchire, elle est trop humide ou trop fine."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "pressed_tortillas"
+      ],
+      "outputState": "finished_tortillas",
+      "instructions": "Chauffer à feu vif une poêle à comal sec, en fonte ou à grille lourde jusqu'à ce qu'elle soit très chaude — une goutte d'eau devrait vaporiser instantanément. Ne graissez pas la surface. Placez la tortilla sur le comal et faites cuire 30 à 40 secondes sur le premier côté – vous verrez les bords commencer à paraître secs et légèrement plus légers, et de petites bulles de vapeur peuvent se former à la surface. Flip avec une spatule plate. Cuire le deuxième côté 30 à 40 secondes, puis retourner sur le premier côté. Sur ce troisième contact, la vapeur piégée fera souffler la tortilla, parfois de façon spectaculaire, dans un ballon complet. Cette bouffée est un signe de cuisson parfaite : elle signifie que les deux couches de surface se séparent proprement, créant un intérieur léger et aéré. La durée totale de cuisson par tortilla est de 90 secondes à 2 minutes. Empiler dans un récipient en tissu immédiatement pour emprisonner la vapeur et garder doux.",
+      "visualCue": {
+        "primaryTarget": "bronzage léger avec des taches irrégulières brun foncé et légèrement carbonisées des deux côtés, et une bouffée complète ou partielle pendant le troisième contact. Les bords semblent secs et légèrement cloqués. La surface semble grillée et mate, pas crue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est pâle, surtout crue. Pas de taches de char. La tortilla ne souffle pas. Sense pâteux et humide quand pressé.",
+            "action": "Cuire encore 15 à 20 secondes de chaque côté. Le comal peut ne pas être assez chaud — augmenter la chaleur. Une tortilla sous-cuite larmes et des bâtons lorsqu'il est utilisé pour ramasser de la nourriture."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les deux côtés montrent un motif de fond bronzé avec des taches brun foncé. La tortilla a soufflé au moins partiellement sur le dernier tour. Il est souple quand chaud, ferme quand frais, avec un arôme de maïs grillé.",
+            "action": "Piquer immédiatement dans une serviette en tissu ou une tortille chaude. La vapeur piégée les maintient souples pendant 20 à 30 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Noir brun foncé partout, raide et sec. Des odeurs de maïs brûlé. Ne souffle pas — la surface scellée avant que la vapeur puisse se former. Bristé et craquelure quand plié.",
+            "action": "Jeter et réduire la chaleur comale, ou faire cuire plus rapidement. Tortilles de maïs vont de parfait à brûlé très rapidement sur la chaleur élevée."
+          }
+        ]
+      },
+      "feelCue": "Une tortilla finie, fraîche du comal et empilée dans un chiffon, devrait être souple et chaude — vous devriez pouvoir la plier en deux sans craquelure. Lorsque vous appuyez sur la pile avec votre paume, il devrait donner doucement. Si les tortillas craquent lorsqu'elles sont pliées, soit elles sont surcuites, soit elles n'ont pas été empilées immédiatement en tissu pour retenir la vapeur. L'arôme doit être grillé au maïs — sucré, noisette, peu terreux — et non pas à la farine crue ou brûlée."
+    }
+  ]
 };

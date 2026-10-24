@@ -1,105 +1,281 @@
 export default {
-  repoId: "master_chinese_bok_choy_oyster_sauce_001",
-  parentRepoId: null,
-  slug: "bok-choy-in-oyster-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Bok Choy in Oyster Sauce",
-  description: "Baby bok choy blanched to brilliant jade green, arranged cut-side up, and lacquered with a glossy, garlicky oyster sauce that pools in every crevice. One of the great fast Cantonese side dishes — its success entirely a matter of not overcooking the greens by a single second.",
-  cuisine: "Chinese",
-  culture: "Cantonese",
-  category: "vegetables",
-  tags: ["gluten-free", "cantonese", "stir-fry", "quick", "side"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 0, umami: 3, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Baby bok choy, halved lengthwise",                ratioValue: 500, defaultUnit: "g",  substitutions: ["Shanghai bok choy", "gai lan (Chinese broccoli) — adjust blanch time to 2 min"] },
-    { ingId: "ing_02", role: "Umami",      name: "Oyster sauce",                                    ratioValue: 40,  defaultUnit: "ml", substitutions: ["vegetarian oyster sauce (mushroom-based)", "hoisin sauce (sweeter)"] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves, finely minced (4 cloves)",        ratioValue: 20,  defaultUnit: "g",  substitutions: ["garlic paste"] },
-    { ingId: "ing_04", role: "Fat",        name: "Neutral oil (sunflower, rice bran, or grapeseed)", ratioValue: 30, defaultUnit: "ml", substitutions: ["avocado oil"] },
-    { ingId: "ing_05", role: "Aromatic",   name: "Fresh ginger, finely minced",                    ratioValue: 10,  defaultUnit: "g",  substitutions: ["ginger paste"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Soy sauce (light)",                              ratioValue: 15,  defaultUnit: "ml", substitutions: ["tamari (gluten-free)", "coconut aminos"] },
-    { ingId: "ing_07", role: "Solvent",    name: "Shaoxing rice wine (or water)",                  ratioValue: 15,  defaultUnit: "ml", substitutions: ["dry sherry", "water"] },
-    { ingId: "ing_08", role: "Binder",     name: "Cornstarch",                                     ratioValue: 5,   defaultUnit: "g",  substitutions: ["tapioca starch", "potato starch"] },
-    { ingId: "ing_09", role: "Sweetener",  name: "Sugar",                                          ratioValue: 5,   defaultUnit: "g",  substitutions: ["honey"] },
-    { ingId: "ing_10", role: "Fat",        name: "Toasted sesame oil, for finishing",              ratioValue: 8,   defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_11", role: "Garnish",    name: "Toasted sesame seeds",                           ratioValue: 6,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_chinese_bok_choy_oyster_sauce_001",
+  "parentRepoId": null,
+  "slug": "bok-choy-in-oyster-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Bok Choy en sauce à l'huître",
+  "description": "Baby bok choy blanchi au vert jade brillant, agencé côté coupé, et laqué avec une sauce à l'huître brillante et ailky qui se met dans chaque crevasse. L'un des grands plats rapides cantonais — son succès est entièrement une question de ne pas trop cuire les verts d'une seule seconde.",
+  "cuisine": "Chinois",
+  "culture": "Cantonais",
+  "category": "vegetables",
+  "tags": [
+    "Sans gluten",
+    "cantonais",
+    "sauté",
+    "Vite",
+    "côté"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blanch",
-      inputs: ["ing_01"],
-      outputState: "blanched_bok_choy",
-      instructions: "Bring a large pot of generously salted water to a full rolling boil — the salt seasons the bok choy as it blanches and helps set its vivid green color. Add the halved bok choy cut-side down and blanch for exactly 60–90 seconds. The timing is critical: too short and the stems are crunchy raw, too long and the leaves turn drab and the stems go limp and watery. The stems should be crisp-tender and the leaves should be brilliantly green and wilted.",
-      visualCue: {
-        primaryTarget: "Vivid jade-green leaves fully wilted but bright, stems translucent and just yielding to the edge of a knife. No yellowing or graying.",
-        spectrum: [
-          { state: "Underdone", description: "Leaves are still dark and stiff, stems are hard white at the core.", action: "Leave in the water for another 20–30 seconds. Do not walk away." },
-          { state: "Perfect",   description: "Leaves are brilliantly green and wilted, stems are translucent and tender with a slight resistance when bitten. Color is vivid emerald.", action: "Drain immediately and arrange on the serving plate." },
-          { state: "Overdone",  description: "Bok choy has turned from vivid green to a dull khaki-olive. Stems are floppy and waterlogged.", action: "Drain immediately. The dish is still edible but the texture and color are compromised. Adjust timing next time." },
-        ],
-      },
-      feelCue: "Pick up a halved bok choy by the stem end — a perfectly blanched one holds its shape but bends gently when tilted. An underdone one is stiff and heavy; an overdone one collapses at the bend.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Baby bok choy, moitié dans le sens de la longueur",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Shanghaï bok choy",
+        "gai lan (brocoli chinois) — ajuster le temps blanc à 2 min"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Assemble",
-      inputs: ["blanched_bok_choy"],
-      outputState: "plated_bok_choy",
-      instructions: "Drain the blanched bok choy thoroughly in a colander, shaking to remove excess water — too much water on the vegetables will dilute the sauce. Arrange on a serving plate or platter cut-side up in a single tight layer, the leaves fanning outward and the pale stem ends grouped at the center. Cantonese plating of this dish is deliberately formal: even the arrangement signals care. Do not pile them haphazardly — the sauce pours over the arranged bok choy and should glide into every cut face.",
-      visualCue: {
-        primaryTarget: "Tightly arranged cut-side-up bok choy halves, stems centered, leaves fanning out, vivid green on the plate. No pooled water visible.",
-        spectrum: [
-          { state: "Underdone", description: "Bok choy is still draining and water is pooling on the plate.", action: "Drain more thoroughly in the colander before arranging. Blot with paper towel if needed." },
-          { state: "Perfect",   description: "Neat, dry arrangement, vivid green. The cut white faces are visible and ready to receive the sauce.", action: "Prepare the sauce immediately — the bok choy should be served hot." },
-          { state: "Overdone",  description: "The bok choy has cooled too long waiting and is no longer steaming.", action: "Quickly reheat by pouring a small ladle of very hot boiling water over it before applying the sauce." },
-        ],
-      },
-      feelCue: "The arranged bok choy on the plate should still feel hot through the plate itself. The steam rising from the cut faces means the residual heat is in the right place.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "sauce à l'huître",
+      "ratioValue": 40,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce végétarienne aux huîtres (à base de champignons)",
+        "sauce hoisine (sweeter)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sauté",
-      inputs: ["ing_04", "ing_03", "ing_05", "ing_02", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "oyster_sauce_glaze",
-      instructions: "Heat the neutral oil in a small saucepan over medium-high heat until it shimmers. Add the minced garlic and ginger all at once — they should sizzle immediately. Stir constantly for 30–45 seconds until they are fragrant and just beginning to color — do not let them burn. Add the oyster sauce, soy sauce, Shaoxing wine, and sugar. Stir briefly. Mix the cornstarch with 2 tablespoons of cold water to form a slurry, then pour into the sauce while stirring. Cook, stirring constantly, for 30–40 seconds until the sauce turns glossy and has thickened slightly to a flowing, lacquer-like consistency.",
-      visualCue: {
-        primaryTarget: "Glossy, dark brown sauce that flows slowly from the spoon in a thick, even sheet. The garlic is visible as golden flecks throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery. The cornstarch has not yet activated and the garlic smells raw.", action: "Stir over heat for another 30 seconds. The sauce thickens quickly once the starch activates." },
-          { state: "Perfect",   description: "Glossy, moderately thick, dark brown sauce with garlic flecks. Falls from the spoon in a slow, even cascade. Smells intensely of oyster sauce and fried garlic.", action: "Pour immediately over the arranged bok choy." },
-          { state: "Overdone",  description: "Sauce has become too thick and gluey, the starch has over-thickened.", action: "Add a tablespoon of water and stir over heat to loosen to the correct flowing consistency." },
-        ],
-      },
-      feelCue: "The sauce should feel glossy and smooth on the back of a metal spoon — drag your finger through the coating on the spoon and the line should hold clean edges without running.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles à l'ail, finement hachées (4 girofles)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Pâte d'ail"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["plated_bok_choy", "oyster_sauce_glaze", "ing_10", "ing_11"],
-      outputState: "bok_choy_in_oyster_sauce",
-      instructions: "Pour the hot sauce evenly over the arranged bok choy, starting from the stem ends and flowing toward the leaves. Every cut face should receive sauce. Drizzle the toasted sesame oil in a thin, even zigzag over the top — the sesame oil is a finishing fragrance, not a cooking fat, and it should be the last thing applied. Scatter toasted sesame seeds and serve within 2 minutes while the sauce is hot and the bok choy is still at its most vivid. Do not cover the dish — trapped steam will make the leaves go limp and dull.",
-      visualCue: {
-        primaryTarget: "Gleaming jade bok choy lacquered with dark, glossy sauce, sesame seeds scattered across the top. The color contrast between deep green leaves and the dark sauce is vivid.",
-        spectrum: [
-          { state: "Underdone", description: "Some bok choy halves have no sauce on them. The sauce has pooled at the base rather than coating the vegetables.", action: "Tilt the plate slightly and spoon the pooled sauce over the bare sections." },
-          { state: "Perfect",   description: "Every piece is evenly glazed. The sesame oil is fragrant, the sesame seeds add texture, and the bok choy is brilliantly green beneath the sauce.", action: "Serve immediately." },
-          { state: "Overdone",  description: "The dish has been sitting — the bok choy has wilted further and gone dull. Sauce has been absorbed and the surface looks dry.", action: "Serve it as is — it is past its prime visually but still delicious. Next time, time the sauce to finish as the bok choy is plated." },
-        ],
-      },
-      feelCue: "Lift the plate and feel its weight — it should feel heavier than expected from the dense, juicy bok choy. The aroma of sesame oil and oyster sauce should be immediate and strong.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile neutre (fleur de soleil, son de riz ou graines de raisin)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile d'avocat"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Gingembre frais, finement haché",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâte de gingembre"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sauce de soja (légère)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari (sans gluten)",
+        "aminos de coco"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Solvent",
+      "name": "Vin de riz rasoir (ou eau)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sherry sec",
+        "eau"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Binder",
+      "name": "Farine de maïs",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Amidon de tapioca",
+        "fécule de pomme de terre"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile de sésame grillée, pour finition",
+      "ratioValue": 8,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Blanch",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "blanched_bok_choy",
+      "instructions": "Portez un grand pot d'eau généreusement salée à un ébullition complet — le sel s'épanouit au fur et à mesure qu'il blanchit et aide à fixer sa couleur vert vif. Ajouter le côté coupé en bok choy et blanchir pendant exactement 60 à 90 secondes. Le timing est critique: trop court et les tiges sont crucieuses, trop longues et les feuilles deviennent drabes et les tiges sont molles et aqueuses. Les tiges doivent être croustillantes et les feuilles doivent être brillamment vertes et flétries.",
+      "visualCue": {
+        "primaryTarget": "Feuilles jade-vertes vivides entièrement flétries mais brillantes, tiges translucides et donnant simplement au bord d'un couteau. Pas de jaunissement ou de gris.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les feuilles sont encore sombres et raides, les tiges sont blanches au cœur.",
+            "action": "Laisser dans l'eau encore 20 à 30 secondes. Ne partez pas."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les feuilles sont brillamment vertes et flétries, les tiges sont translucides et tendres avec une légère résistance lorsqu'elles sont mordues. La couleur est l'émeraude vive.",
+            "action": "Égoutter immédiatement et disposer sur l'assiette de service."
+          },
+          {
+            "state": "Overdone",
+            "description": "Bok choy est passé d'un vert vif à un khaki-olive terne. Les tiges sont floppées et arrosées.",
+            "action": "Égoutter immédiatement. Le plat est toujours comestible mais la texture et la couleur sont compromises. Réglez le timing la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une bok choy à moitié par l'extrémité de la tige, une blouse parfaitement blanchie tient sa forme mais se penche doucement lorsqu'elle est inclinée. Un sous-doré est raide et lourd; un surdoré s'effondre au virage."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Assemblage",
+      "inputs": [
+        "blanched_bok_choy"
+      ],
+      "outputState": "plated_bok_choy",
+      "instructions": "Égoutter soigneusement le bok blanchi dans une calandre, agiter pour enlever l'excès d'eau — trop d'eau sur les légumes diluera la sauce. Arrangez-vous sur une assiette de service ou sur un plateau en une seule couche serrée, les feuilles s'aventurant vers l'extérieur et les extrémités pâles de la tige groupées au centre. Le placage cantonais de ce plat est délibérément formel : même l'arrangement signale le soin. Ne les empilez pas au hasard — la sauce se déverse sur le bok choy disposé et devrait glisser dans chaque face coupée.",
+      "visualCue": {
+        "primaryTarget": "Des moitiés de bok choy, des tiges centrées, des feuilles s'aventurant, vert vif sur la plaque. Pas d'eau commune visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Bok choy est encore en train de s'égoutter et l'eau est mise en commun sur l'assiette.",
+            "action": "Égoutter plus soigneusement dans la calandre avant de s'arranger. Blot avec serviette en papier si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Neat, arrangement sec, vert vif. Les visages blancs coupés sont visibles et prêts à recevoir la sauce.",
+            "action": "Préparez la sauce immédiatement — le bok choy doit être servi chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bok choy a refroidi trop longtemps et n'est plus à la vapeur.",
+            "action": "Réchauffer rapidement en versant une petite louche d'eau bouillante très chaude sur elle avant d'appliquer la sauce."
+          }
+        ]
+      },
+      "feelCue": "Le bok choy disposé sur la plaque devrait encore sentir chaud à travers la plaque elle-même. La vapeur montant des faces coupées signifie que la chaleur résiduelle est au bon endroit."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_04",
+        "ing_03",
+        "ing_05",
+        "ing_02",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "oyster_sauce_glaze",
+      "instructions": "Chauffer l'huile neutre dans une petite casserole à feu moyen-vif jusqu'à ce qu'elle mijote. Ajouter l'ail haché et le gingembre tout en même temps — ils doivent cuillerer immédiatement. Remuer constamment pendant 30 à 45 secondes jusqu'à ce qu'ils soient parfumés et commencent juste à colorier — ne les laissez pas brûler. Ajouter la sauce huître, la sauce soja, le vin Shaoxing et le sucre. Remuer brièvement. Mélanger la fécule de maïs avec 2 cuillères à soupe d'eau froide pour former un lisier, puis verser dans la sauce en remuant. Cuire en remuant constamment pendant 30 à 40 secondes jusqu'à ce que la sauce devienne brillante et s'est légèrement épaissie jusqu'à une consistance fluide et laquée.",
+      "visualCue": {
+        "primaryTarget": "Sauce dorée et brun foncé qui coule lentement de la cuillère dans une feuille épaisse et uniforme. L'ail est visible sous forme de paillettes dorées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse. La fécule de maïs n'est pas encore activée et l'ail sent cru.",
+            "action": "Ajouter 30 secondes de plus. La sauce épaissit rapidement une fois l'amidon activé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sauce dorée, modérément épaisse, brun foncé avec des taches d'ail. Des chutes de la cuillère dans une cascade lente. Sensation intense de sauce aux huîtres et d'ail frit.",
+            "action": "Versez immédiatement sur le bok choy arrangé."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est devenue trop épaisse et collante, l'amidon a trop épais.",
+            "action": "Ajouter une cuillère à soupe d'eau et remuer sur la chaleur pour se détendre à la bonne consistance."
+          }
+        ]
+      },
+      "feelCue": "La sauce doit être lustrée et lisse à l'arrière d'une cuillère en métal — faites glisser votre doigt dans le revêtement de la cuillère et la ligne doit tenir les bords propres sans courir."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "plated_bok_choy",
+        "oyster_sauce_glaze",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "bok_choy_in_oyster_sauce",
+      "instructions": "Verser la sauce chaude uniformément sur le bok choy disposé, en commençant par les extrémités de la tige et en descendant vers les feuilles. Chaque visage coupé devrait recevoir de la sauce. Arrosez l'huile de sésame grillée dans un zigzag mince et même sur le dessus. L'huile de sésame est un parfum de finition, pas une graisse de cuisson, et il devrait être la dernière chose appliquée. Scatter les graines de sésame grillées et servir en 2 minutes tandis que la sauce est chaude et le bok choy est encore à son plus vif. Ne couvrez pas le plat — la vapeur piégée rendra les feuilles molles et ternes.",
+      "visualCue": {
+        "primaryTarget": "Gleaming jade bok choy laqué avec une sauce foncée et brillante, des graines de sésame éparpillées sur le dessus. Le contraste de couleur entre les feuilles vert foncé et la sauce foncée est vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Certaines moitiés de bok choy n'ont pas de sauce dessus. La sauce a été mise en commun à la base plutôt que d'enrober les légumes.",
+            "action": "Inclinez légèrement l'assiette et cuillerez la sauce poêlée sur les parties nues."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque pièce est uniformément vitrée. L'huile de sésame est parfumée, les graines de sésame ajoutent de la texture et le bok choy est brillamment vert sous la sauce.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le plat a été assis — le bok choy s'est flétri plus loin et est allé terne. La sauce a été absorbée et la surface semble sèche.",
+            "action": "Servir comme il est — il est passé son premier visuellement mais toujours délicieux. La prochaine fois, quand la sauce finira comme le bok choy est plaqué."
+          }
+        ]
+      },
+      "feelCue": "Soulevez la plaque et sentez son poids — il doit se sentir plus lourd que prévu à partir du bok choy dense et juteux. L'arôme d'huile de sésame et de sauce aux huîtres doit être immédiat et fort."
+    }
+  ]
 };

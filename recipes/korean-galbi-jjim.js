@@ -1,113 +1,304 @@
 export default {
-  repoId: "master_korean_galbiijjim_001",
-  parentRepoId: null,
-  slug: "korean-galbi-jjim",
-  author: "ForkRecipe Kitchen",
-  title: "Korean Galbi-Jjim (Braised Beef Short Ribs)",
-  description: "Soy-sweet short ribs slow-braised with Asian pear, garlic, and ginger until the collagen melts into a glossy, lacquered sauce that clings to bone-loosened beef.",
-  cuisine: "Korean",
-  culture: "Hansik home cooking",
-  category: "proteins",
-  tags: ["korean", "braised", "beef", "short-ribs", "soy", "pear", "galbi", "slow-cook"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "3 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 4, sour: 1, bitter: 0, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in beef short ribs (flanken-cut or English-cut)", ratioValue: 100, defaultUnit: "parts", substitutions: ["bone-in beef chuck"] },
-    { ingId: "ing_02", role: "Umami",     name: "Soy sauce (ganjang)",              ratioValue: 15,  defaultUnit: "parts", substitutions: ["tamari"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Mirin",                            ratioValue: 8,   defaultUnit: "parts", substitutions: ["rice wine + 1 tsp sugar"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Asian pear, grated (nashi pear)",  ratioValue: 20,  defaultUnit: "parts", substitutions: ["Bosc pear", "kiwi (half the amount)"] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves, minced",            ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Fresh ginger, grated",             ratioValue: 3,   defaultUnit: "parts", substitutions: ["galangal"] },
-    { ingId: "ing_07", role: "Sweetener", name: "Brown sugar or raw sugar",         ratioValue: 4,   defaultUnit: "parts", substitutions: ["honey"] },
-    { ingId: "ing_08", role: "Liquid",    name: "Water or beef stock",              ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Sesame oil (finish)",              ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Garnish",   name: "Toasted sesame seeds and sliced scallion", ratioValue: 1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Gochujang or dried chili flakes (optional heat)", ratioValue: 1, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_korean_galbiijjim_001",
+  "parentRepoId": null,
+  "slug": "korean-galbi-jjim",
+  "author": "ForkRecipe Kitchen",
+  "title": "Galbi-Jjim coréen (côtes courtes braisées de boeuf)",
+  "description": "Les côtes courtes sucrées au soja se saignent lentement avec la poire, l'ail et le gingembre d'Asie jusqu'à ce que le collagène fonde dans une sauce laquée brillante qui s'accroche au boeuf dépoli.",
+  "cuisine": "Coréen",
+  "culture": "Hansik cuisine maison",
+  "category": "proteins",
+  "tags": [
+    "coréen",
+    "braisés",
+    "boeuf",
+    "côtes courtes",
+    "soja",
+    "poire",
+    "- Oui.",
+    "Cuisson lente"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "3 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Blanch",
-      inputs: ["ing_01"],
-      outputState: "blanched_ribs",
-      instructions: "Place the short ribs in a large pot and cover with cold water. Bring to a boil over high heat. Once boiling, skim the grey foam vigorously. After 5–7 minutes of blanching, drain and rinse each rib under cold running water, scrubbing off any residual grey proteins. This step is non-negotiable for a clean, clear braise with no off-flavors.",
-      visualCue: {
-        primaryTarget: "Ribs are pale grey all over with no blood-red patches. Water runs clear when rinsed.",
-        spectrum: [
-          { state: "Underdone", description: "Still blood-red at the bone end. Grey foam still rising in the pot.", action: "Continue blanching — those blood proteins will cloud and muddy the final sauce." },
-          { state: "Perfect",   description: "Uniformly pale grey, firm to the touch. No more foam. Water runs clear.", action: "Drain, rinse, and pat dry. Proceed to braise." },
-          { state: "Overdone",  description: "Surface of the meat is beginning to tighten and pull away from the bone.", action: "No lasting harm — the long braise will relax everything. Proceed immediately." },
-        ],
-      },
-      feelCue: "Each rib should feel firm and cool after rinsing — the cold water stops carryover cooking and sets the surface so it sears properly in the next stage.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Côtes courtes de boeuf désossées (coupées en blanc ou en anglais)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "rondelle de bœuf osseux"
+      ]
     },
     {
-      nodeId: "step_2", action: "Marinate",
-      inputs: ["blanched_ribs", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_11"],
-      outputState: "marinated_ribs",
-      instructions: "Combine soy sauce, mirin, grated pear, garlic, ginger, sugar, and optional gochujang in a bowl. Whisk until the sugar dissolves. Toss with the blanched ribs and massage the marinade into every crevice around the bone. Marinate for at least 30 minutes at room temperature, or up to overnight in the refrigerator.",
-      visualCue: {
-        primaryTarget: "Ribs are deeply coated in a reddish-brown, glossy marinade with visible bits of garlic and ginger clinging to the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade pools at the bottom. Meat surface is still pale grey, not yet tinted.", action: "Toss again and massage more actively. The pear enzymes need contact to tenderize." },
-          { state: "Perfect",   description: "Each rib is evenly coated. Surface has taken on a light mahogany tint. A sweet, savory aroma is rising.", action: "Proceed to braising, reserving all marinade liquid." },
-          { state: "Overdone",  description: "Meat marinated in pear more than 6 hours — surface may be slightly mushy.", action: "The texture will still be excellent after the long braise. Proceed." },
-        ],
-      },
-      feelCue: "The marinade should be thick enough to cling to the vertical surfaces of the bone — if it slides off like water, add a touch more grated pear or sugar to build viscosity.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "sauce soja (ganjang)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari"
+      ]
     },
     {
-      nodeId: "step_3", action: "Braise",
-      inputs: ["marinated_ribs", "ing_08"],
-      outputState: "braised_ribs",
-      instructions: "Transfer the ribs and all marinade to a heavy Dutch oven or braising pot. Add the water or stock so the liquid comes about halfway up the ribs. Bring to a boil over high heat, then reduce to a low, steady simmer. Cover and braise for 1.5–2 hours, turning the ribs every 30 minutes so all sides bathe in the sauce.",
-      visualCue: {
-        primaryTarget: "Ribs are tender to the bone, deeply mahogany, and the braising liquid has reduced to a syrupy, glossy sauce.",
-        spectrum: [
-          { state: "Underdone", description: "Meat is still firm and resists when pressed. Bone does not wiggle. Sauce is thin and watery.", action: "Continue braising. At low simmer, collagen takes time. Give it another 30 minutes before testing again." },
-          { state: "Perfect",   description: "Meat yields to gentle pressure and pulls cleanly from the bone with a slight tug. Sauce is thick and clings to a spoon. Deep caramel-soy color.", action: "Uncover to reduce and finish the glaze." },
-          { state: "Overdone",  description: "Meat is falling completely off the bone in shreds. Sauce may be too reduced or scorching.", action: "Remove meat carefully. Add a splash of water to the pot and reduce more gently to bring the sauce back." },
-        ],
-      },
-      feelCue: "Press a rib with a chopstick — it should meet almost no resistance, like pushing into soft butter. The meat should feel like it wants to leave the bone, not fall off it involuntarily.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Mirin",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vin de riz + 1 c. à thé sucre"
+      ]
     },
     {
-      nodeId: "step_4", action: "Reduce",
-      inputs: ["braised_ribs"],
-      outputState: "glazed_ribs",
-      instructions: "Uncover the pot and increase heat to medium. Spoon the braising liquid continuously over the ribs as it reduces, basting them every minute. Cook for 10–15 minutes until the sauce is thick, glossy, and coats the back of a spoon without running. Remove from heat and stir in sesame oil.",
-      visualCue: {
-        primaryTarget: "A lacquered, mirror-glossy coat on each rib. Sauce leaves a thick, slow trail when drizzled from a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce still watery and pale. Drips off the spoon quickly.", action: "Continue reducing, basting continuously. The sugars need to concentrate." },
-          { state: "Perfect",   description: "Sauce is syrupy and deep mahogany. Falls off the spoon in slow, thick ribbons. Ribs have a lacquered sheen.", action: "Finish with sesame oil off heat, then plate immediately." },
-          { state: "Overdone",  description: "Sauce is sticking and beginning to burn at the edges of the pot. Smells of caramel turning bitter.", action: "Remove from heat immediately. Deglaze with 2 tablespoons of water and stir to re-emulsify." },
-        ],
-      },
-      feelCue: "The basting spoon should leave a trail that holds its shape for a full second before flowing back — that is the nappe point where soy sugars and collagen have become one.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Poire asiatique râpée (poire nashi)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Poire de bosc",
+        "kiwi (la moitié du montant)"
+      ]
     },
     {
-      nodeId: "step_5", action: "Garnish",
-      inputs: ["glazed_ribs", "ing_09", "ing_10"],
-      outputState: "finished_galbi_jjim",
-      instructions: "Arrange the ribs bone-side down on a serving platter. Drizzle any remaining sauce over the top. Scatter toasted sesame seeds and thinly sliced scallion. Serve immediately with steamed short-grain rice.",
-      visualCue: {
-        primaryTarget: "Deep mahogany ribs glistening with sesame oil, dotted with white sesame and bright green scallion against the dark glaze.",
-        spectrum: [
-          { state: "Underdone", description: "Ribs look dry and matte. No gloss from the sesame oil.", action: "Drizzle a little more sesame oil while hot. The residual heat will spread and emulsify it across the surface." },
-          { state: "Perfect",   description: "Mirror-glossy surface. Sesame seeds and scallion sit on top without sinking. Steam rising gently.", action: "Serve immediately. The sauce will firm as it cools." },
-          { state: "Overdone",  description: "Sesame seeds added while the meat was too hot — they are toasting further and turning dark.", action: "Add a second layer of fresh seeds on top to correct the color." },
-        ],
-      },
-      feelCue: "The finished rib should offer no resistance when pulled by hand — the bone should slide clean as if oiled, leaving the meat behind in one glossy, intact piece.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Gingembre frais, râpé",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Galangal"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre brun ou brut",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Liquid",
+      "name": "Stocks d'eau ou de viande bovine",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Huile de sésame (finie)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées et pétoncle tranché",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Gochujang ou flocons de chili séchés (chaleur facultative)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Blanch",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "blanched_ribs",
+      "instructions": "Placer les côtes courtes dans une grande casserole et couvrir d'eau froide. Porter à ébullition à feu vif. Une fois bouillante, écumer vigoureusement la mousse grise. Après 5 à 7 minutes de blanchiment, égoutter et rincer chaque côte sous l'eau froide courante, frotter les protéines grises résiduelles. Cette étape n'est pas négociable pour un braise propre et clair sans aromatisants.",
+      "visualCue": {
+        "primaryTarget": "Les côtes sont gris pâle partout sans taches rouge sang. L'eau est libre lorsqu'elle est rincée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours rouge sang à l'extrémité osseuse. La mousse grise monte toujours dans le pot.",
+            "action": "Continuer à blanchir — ces protéines sanguines vont troubler et bouillir la sauce finale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gris uniformément pâle, ferme au toucher. Plus de mousse. L'eau est libre.",
+            "action": "Égoutter, rincer et sécher. Allez au braise."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface de la viande commence à se resserrer et à s'éloigner de l'os.",
+            "action": "Aucun mal durable — le long braise va tout détendre. Continuez immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Chaque côte doit se sentir ferme et fraîche après le rinçage: l'eau froide arrête la cuisson et place la surface de façon à ce qu'elle souille correctement à l'étape suivante."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "blanched_ribs",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_11"
+      ],
+      "outputState": "marinated_ribs",
+      "instructions": "Mélanger la sauce soja, le mirin, la poire râpée, l'ail, le gingembre, le sucre et le gochujang en option dans un bol. fouetter jusqu'à ce que le sucre se dissout. Ajouter les côtes blanchies et masser la marinade dans chaque crevasse autour de l'os. Faire mariner au moins 30 minutes à température ambiante ou jusqu'à la nuit au réfrigérateur.",
+      "visualCue": {
+        "primaryTarget": "Les côtes sont profondément enrobées d'une marinade brun rougeâtre, brillante avec des morceaux visibles d'ail et de gingembre qui s'accrochent à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les piscines de Marinade en bas. La surface de la viande est encore gris pâle, pas encore teintée.",
+            "action": "Rejeter et masser plus activement. Les enzymes de la poire doivent être en contact avec la fève."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque côte est uniformément recouverte. La surface a pris une teinte acajou légère. Un arôme sucré et salé se lève.",
+            "action": "Procédez à la préparation de l'eau, réservant tout liquide marinade."
+          },
+          {
+            "state": "Overdone",
+            "description": "Viande marinée dans la poire pendant plus de 6 heures — la surface peut être légèrement musclée.",
+            "action": "La texture sera encore excellente après la longue braise. Continuez."
+          }
+        ]
+      },
+      "feelCue": "La marinade doit être assez épaisse pour s'accrocher aux surfaces verticales de l'os — si elle glisse comme de l'eau, ajouter une touche plus râpée poire ou sucre pour construire la viscosité."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "marinated_ribs",
+        "ing_08"
+      ],
+      "outputState": "braised_ribs",
+      "instructions": "Transférer les côtes et toute la marinade dans un four hollandais lourd ou une marmite. Ajouter l'eau ou le stock de sorte que le liquide arrive à la moitié des côtes. Porter à ébullition à feu vif, puis laisser mijoter lentement et régulièrement. Couvrir et brasser pendant 1,5 à 2 heures, tourner les côtes toutes les 30 minutes afin que tous les côtés se baignent dans la sauce.",
+      "visualCue": {
+        "primaryTarget": "Les côtes sont tendres à l'os, profondément acajou, et le liquide de cuisson est réduit à une sauce sirupeuse et brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande reste ferme et résiste lorsqu'elle est pressée. L'os ne bouge pas. La sauce est fine et aqueuse.",
+            "action": "Continuez à faire des larmes. À faible mijoter, le collagène prend du temps. Donnez-lui encore 30 minutes avant de tester à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande produit une pression douce et tire proprement de l'os avec un léger remorqueur. La sauce est épaisse et s'accroche à une cuillère. Couleur profonde caramel-soy.",
+            "action": "Découvrez pour réduire et terminer la glaçure."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande tombe complètement en morceaux. La sauce peut être trop réduite ou brûlée.",
+            "action": "Retirer soigneusement la viande. Ajouter une éclaboussure d'eau dans la casserole et réduire plus doucement pour ramener la sauce."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une côte avec une baguette — elle ne devrait rencontrer presque aucune résistance, comme pousser dans le beurre doux. La viande devrait avoir l'impression qu'elle veut quitter l'os, pas la tomber involontairement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Réduire",
+      "inputs": [
+        "braised_ribs"
+      ],
+      "outputState": "glazed_ribs",
+      "instructions": "Découvrez le pot et augmentez le feu à moyen. Déposer le liquide de cuisson en continu sur les côtes en les réduisant, en les basifiant chaque minute. Cuire de 10 à 15 minutes jusqu'à ce que la sauce soit épaisse, brillante et enveloppe l'arrière d'une cuillère sans courir. Retirer du feu et remuer dans l'huile de sésame.",
+      "visualCue": {
+        "primaryTarget": "Un manteau laqué, brillant miroir sur chaque côte. La sauce laisse un épais sentier lent lorsqu'elle sort d'une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sauce encore aqueuse et pâle. Débarrasse vite la cuillère.",
+            "action": "Continuez à réduire, en basting continuellement. Les sucres doivent se concentrer."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est sirupeuse et acajou profond. On tombe de la cuillère dans des rubans épais et lents. Les côtes sont laquées.",
+            "action": "Terminer avec de l'huile de sésame hors feu, puis déposer immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce colle et commence à brûler aux bords du pot. Des odeurs de caramel qui deviennent amères.",
+            "action": "Retirer immédiatement du feu. Déglacer avec 2 cuillères à soupe d'eau et remuer pour réémulsionner."
+          }
+        ]
+      },
+      "feelCue": "La cuillère à basting devrait laisser un sentier qui tient sa forme pendant une seconde avant de retomber — c'est le point de nappe où les sucres de soja et le collagène sont devenus un."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Garnir",
+      "inputs": [
+        "glazed_ribs",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_galbi_jjim",
+      "instructions": "Disposer les côtes côté os sur un plateau de service. Arrosez toute la sauce restante sur le dessus. Éparpiller les graines de sésame grillées et les tranches minces de pétoncle. Servir immédiatement avec du riz à grains courts cuit à la vapeur.",
+      "visualCue": {
+        "primaryTarget": "Des côtes acajoues profondes scintillent avec de l'huile de sésame, parsemées de sésame blanc et de pétoncle vert vif contre la glaçure foncée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les côtes sont sèches et mates. Pas de gloss de l'huile de sésame.",
+            "action": "Arrosez un peu plus d'huile de sésame tout en étant chaud. La chaleur résiduelle s'étendra et l'émulsionnera à travers la surface."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface vitrée. Les graines de sésame et le pétoncle s'assoient sur le dessus sans couler. La vapeur monte doucement.",
+            "action": "Servir immédiatement. La sauce sera ferme comme elle refroidit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des graines de sésame ont été ajoutées alors que la viande était trop chaude.",
+            "action": "Ajouter une deuxième couche de graines fraîches sur le dessus pour corriger la couleur."
+          }
+        ]
+      },
+      "feelCue": "La côte finie ne devrait offrir aucune résistance lorsqu'elle est tirée à la main; l'os doit glisser comme si elle était huilée, laissant la viande derrière elle dans une pièce brillante et intacte."
+    }
+  ]
 };

@@ -1,106 +1,363 @@
 export default {
-  repoId: "master_moroccan_couscous_seven_vegetables_001",
-  parentRepoId: null,
-  slug: "couscous-seven-vegetables",
-  author: "ForkRecipe Kitchen",
-  title: "Couscous with Seven Vegetables",
-  description: "North Africa's communal centerpiece — semolina couscous steamed twice until each grain is featherlight and separate, served over a broth-rich stew of seven vegetables scented with ras el hanout and saffron, the whole table gathering around a single, fragrant mound.",
-  cuisine: "Moroccan",
-  culture: "Moroccan",
-  category: "grains",
-  tags: ["moroccan", "north-african", "couscous", "vegetables", "vegan", "dairy-free"],
-  difficulty: 2,
-  activeTime: "45 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 2, sour: 0, bitter: 0, umami: 2, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Fine semolina couscous",           ratioValue: 500,  defaultUnit: "g",  substitutions: ["medium-grain couscous (add 2 min steaming time)"] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter or olive oil",     ratioValue: 30,   defaultUnit: "g",  substitutions: ["olive oil for fully vegan"] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Fine sea salt",                    ratioValue: 10,   defaultUnit: "g",  substitutions: ["kosher salt"] },
-    { ingId: "ing_04", role: "Fat",        name: "Olive oil (for stew)",             ratioValue: 60,   defaultUnit: "ml", substitutions: ["sunflower oil"] },
-    { ingId: "ing_05", role: "Allium",     name: "Yellow onions, roughly diced",     ratioValue: 2,    defaultUnit: "whole", substitutions: ["shallots"] },
-    { ingId: "ing_06", role: "Aromatic",   name: "Carrots, peeled and halved",       ratioValue: 2,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Turnips, peeled and quartered",    ratioValue: 2,    defaultUnit: "whole", substitutions: ["parsnips"] },
-    { ingId: "ing_08", role: "Aromatic",   name: "Butternut squash, cut in large chunks", ratioValue: 300, defaultUnit: "g", substitutions: ["pumpkin", "acorn squash"] },
-    { ingId: "ing_09", role: "Aromatic",   name: "Zucchini, cut in thick rounds",    ratioValue: 2,    defaultUnit: "whole", substitutions: ["summer squash"] },
-    { ingId: "ing_10", role: "Aromatic",   name: "Savoy or green cabbage, cut in wedges", ratioValue: 0.25, defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_11", role: "Protein",    name: "Canned chickpeas, drained",        ratioValue: 400,  defaultUnit: "g",  substitutions: ["dried chickpeas soaked overnight and pre-cooked"] },
-    { ingId: "ing_12", role: "Umami",      name: "Tomato paste",                     ratioValue: 30,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_13", role: "Spice",      name: "Ras el hanout",                    ratioValue: 8,    defaultUnit: "g",  substitutions: ["a blend of cumin, coriander, cinnamon, ginger and allspice"] },
-    { ingId: "ing_14", role: "Spice",      name: "Ground turmeric",                  ratioValue: 3,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_15", role: "Spice",      name: "Ground cinnamon",                  ratioValue: 2,    defaultUnit: "g",  substitutions: ["cinnamon stick"] },
-    { ingId: "ing_16", role: "Aromatic",   name: "Saffron threads, pinch",           ratioValue: 0.3,  defaultUnit: "g",  substitutions: ["a pinch of sweet paprika for color only"] },
-    { ingId: "ing_17", role: "Liquid",     name: "Water (for stew)",                 ratioValue: 1200, defaultUnit: "ml", substitutions: ["light vegetable stock"] },
-    { ingId: "ing_18", role: "Herb",       name: "Fresh cilantro",                   ratioValue: 20,   defaultUnit: "g",  substitutions: ["flat-leaf parsley for cilantro-adverse"] },
-    { ingId: "ing_19", role: "Heat",       name: "Harissa paste, to serve",          ratioValue: 30,   defaultUnit: "g",  substitutions: ["chili oil", "sambal oelek"] },
+  "repoId": "master_moroccan_couscous_seven_vegetables_001",
+  "parentRepoId": null,
+  "slug": "couscous-seven-vegetables",
+  "author": "ForkRecipe Kitchen",
+  "title": "Couscous avec sept légumes",
+  "description": "Le centre commun de l'Afrique du Nord — semolina couscous vapeur deux fois jusqu'à ce que chaque grain soit clair de plume et séparé, servi sur un ragoût riche en bouillon de sept légumes parfumés de ras el hanout et de safran, toute la table se rassemble autour d'un seul monticule parfumé.",
+  "cuisine": "Maroc",
+  "culture": "Maroc",
+  "category": "grains",
+  "tags": [
+    "Maroc",
+    "nord-africain",
+    "couscous",
+    "légumes",
+    "végétalien",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "45 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Build the stew base",
-      inputs: ["ing_04", "ing_05", "ing_12", "ing_13", "ing_14", "ing_15", "ing_16", "ing_06", "ing_07", "ing_11", "ing_17", "ing_03"],
-      outputState: "simmering_stew",
-      instructions: "Heat the olive oil in a large, wide pot or Dutch oven over medium heat. Add the onion and cook, stirring occasionally, until softened and golden at the edges, about 8 minutes. Stir in the tomato paste and cook for 2 minutes until it darkens. Add the ras el hanout, turmeric and cinnamon and stir for 30 seconds until fragrant. Bloom the saffron in a tablespoon of warm water and add it to the pot. Add the carrots, turnips and chickpeas, pour in the water, and season generously with salt. Bring to a boil, then reduce to a steady simmer and cook 20 minutes — these harder vegetables go in first because they need the most time.",
-      visualCue: {
-        primaryTarget: "A deeply golden broth, tinted amber from turmeric and saffron, with the carrots and turnips beginning to show tender edges. The aroma is warm and complex — sweet spice, tomato, onion.",
-        spectrum: [
-          { state: "Underdone", description: "The broth looks pale and thin, barely colored. The spices haven't had time to bloom and the vegetables are completely raw.", action: "Keep the simmer going — the first 15 minutes are aromatic development, not vegetable cooking." },
-          { state: "Perfect",   description: "The broth is a rich golden-amber. The carrots give slightly when prodded with a knife but still have some resistance at the center. It smells deeply of ras el hanout.", action: "Add the squash and zucchini for the second phase of cooking." },
-          { state: "Overdone",  description: "The harder vegetables are already completely soft and falling apart.", action: "Add the remaining vegetables and couscous immediately to catch up — the stew can be blended slightly to thicken without losing the dish." },
-        ],
-      },
-      feelCue: "The broth should taste boldly of spice and salt with a background sweetness from the onion. Taste after 20 minutes and adjust — you are seasoning the liquid that will flavor both the stew and the couscous.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Semoule fine couscous",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "couscous à grains moyens (ajouter 2 min de temps de vapeur)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Steam the couscous (first pass)",
-      inputs: ["ing_01", "ing_03"],
-      outputState: "first_steamed_couscous",
-      instructions: "While the stew base simmers, place the dry couscous in a large bowl. Sprinkle over 1 teaspoon of salt, then drizzle with 3 tablespoons of cold water and 1 tablespoon of olive oil. Rub the grains between your palms to distribute the moisture evenly and break up any clumps. If you have a couscoussier or large steamer, line it with a damp cloth and add the couscous. Steam over the simmering stew (or plain boiling water) for 15 minutes. The steam perfumes the couscous with the stew's aromatics.",
-      visualCue: {
-        primaryTarget: "After the first steam, the couscous should look visibly puffed and slightly tender, with wisps of steam rising through the grains. It will still be somewhat clumped and dense.",
-        spectrum: [
-          { state: "Underdone", description: "The couscous is still hard, dry and granular with no steam coming through. It sits like a solid plug.", action: "Check your water level below — ensure a vigorous steam is reaching the grains. Poke holes through with a spoon handle to let steam penetrate." },
-          { state: "Perfect",   description: "Steam rises freely through the mass. The grains have begun to swell and the top surface looks damp and tender.", action: "Tip into the bowl for the raking step, then return for the second steam." },
-          { state: "Overdone",  description: "The couscous has steamed too long and is already mushy and clumped in wet masses.", action: "Spread on a tray to cool and dry briefly before the second steam — it will recover." },
-        ],
-      },
-      feelCue: "Take a small pinch of couscous from the steamer between your fingers and rub — it should feel warm and slightly damp, with some give, but still grainy and not fully cooked.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre ou huile d'olive non salé",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile d'olive pour végétal"
+      ]
     },
     {
-      nodeId: "step_3", action: "Rake and add final vegetables",
-      inputs: ["first_steamed_couscous", "ing_02", "ing_08", "ing_09", "ing_10", "ing_18"],
-      outputState: "raked_couscous_and_full_stew",
-      instructions: "Tip the first-steamed couscous into a large bowl. Add the butter and a ladleful of the hot stew broth. Rake vigorously with your fingers or a large fork, breaking up every clump and coating each grain in the butter and broth. Taste and add more salt if needed. Return to the steamer for a second 15-minute steam. Meanwhile, add the butternut squash, zucchini and cabbage to the stew and continue simmering for the remaining 20–25 minutes until all vegetables are tender and the broth has reduced slightly and thickened.",
-      visualCue: {
-        primaryTarget: "After raking, the couscous should be individual grains, each one glistening with butter. No visible clumps remain. After the second steam it will be pillowy and light.",
-        spectrum: [
-          { state: "Underdone", description: "Clumps the size of marbles remain after raking. The butter has not distributed evenly.", action: "Rake more vigorously, adding another splash of broth to help break the clumps apart." },
-          { state: "Perfect",   description: "Loose, individual grains, each one buttered and separate. They flow through your fingers like warm sand. The second steam will make them perfectly light.", action: "Return to the steamer for the final 15 minutes." },
-          { state: "Overdone",  description: "The couscous absorbed so much broth during raking that it is wet and sodden.", action: "Spread on a tray to dry for 5 minutes before returning to steam — excess moisture is the enemy of fluffy couscous." },
-        ],
-      },
-      feelCue: "Raked couscous flows through your fingers like warm sand — if it clumps and sticks together, rake harder and add another splash of hot broth. You are teaching each grain to stand alone.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
     },
     {
-      nodeId: "step_4", action: "Assemble",
-      inputs: ["raked_couscous_and_full_stew", "ing_19"],
-      outputState: "finished_couscous_seven_vegetables",
-      instructions: "Mound the finished couscous in a high dome on a large round platter or communal bowl. Ladle the vegetable stew with all its vegetables over and around the couscous, allowing the broth to soak into the center of the mound. Scatter chopped cilantro over the top. Serve the remaining hot broth in a small jug on the side for people to add as they eat. Serve the harissa in a separate small dish. Traditionally this is eaten communally, everyone gathering around the shared platter.",
-      visualCue: {
-        primaryTarget: "A golden, steaming mound of couscous rising from a pool of amber broth, crowned with jewel-colored vegetables — orange carrots, golden squash, dark green zucchini — and bright green cilantro.",
-        spectrum: [
-          { state: "Underdone", description: "The couscous mound looks dry and dense and the stew broth is pale and thin with undercooked, hard vegetables.", action: "Return stew to heat and simmer longer. Ladle more hot broth over the couscous mound and let it rest a few minutes to absorb." },
-          { state: "Perfect",   description: "The couscous is featherlight and aromatic, soaking up the fragrant golden broth like a sponge. Each vegetable is yielding and well seasoned. The room smells of cinnamon, saffron and contentment.", action: "Set on the table and serve immediately — couscous waits for no one." },
-          { state: "Overdone",  description: "The couscous has sat too long in the broth and the mound has collapsed into a wet, stodgy mass.", action: "Fork it back to life, adding it to individual bowls with broth ladled on top — the flavors are all there." },
-        ],
-      },
-      feelCue: "Press the side of a spoon gently into the mound — it should yield like a soft pillow. Each bite of couscous should dissolve into the spiced broth almost instantly, leaving behind warmth and the echoes of cinnamon and saffron.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile d'olive (pour ragoût)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile de tournesol"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignons jaunes, coupés en dés",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Échalotes"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Carottes pelées et coupées en deux",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "navets, pelés et quartiers",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "panais"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Courge de beurre, coupée en gros morceaux",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Citrouille",
+        "courge de maïs"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Zucchini, coupé en rondelles épaisses",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "courges d'été"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Choux savoyeurs ou verts, coupés en quartiers",
+      "ratioValue": 0.25,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Protein",
+      "name": "Pois chiches en conserve, égouttés",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pois chiches séchés trempés pendant la nuit et précuits"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Spice",
+      "name": "Le Président",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": [
+        "un mélange de cumin, de coriandre, de cannelle, de gingembre et d'aspice"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "bâton de cannelle"
+      ]
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Aromatic",
+      "name": "Fils de safran, pincer",
+      "ratioValue": 0.3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "une pincée de paprika doux pour la couleur seulement"
+      ]
+    },
+    {
+      "ingId": "ing_17",
+      "role": "Liquid",
+      "name": "Eau (pour ragoût)",
+      "ratioValue": 1200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "stock de légumes légers"
+      ]
+    },
+    {
+      "ingId": "ing_18",
+      "role": "Herb",
+      "name": "Coriandre fraîche",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "persil à feuilles plates pour coriandre-advers"
+      ]
+    },
+    {
+      "ingId": "ing_19",
+      "role": "Heat",
+      "name": "Pâte de Harissa, à servir",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile de chili",
+        "sambal oelek"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Construire la base du ragoût",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_12",
+        "ing_13",
+        "ing_14",
+        "ing_15",
+        "ing_16",
+        "ing_06",
+        "ing_07",
+        "ing_11",
+        "ing_17",
+        "ing_03"
+      ],
+      "outputState": "simmering_stew",
+      "instructions": "Chauffer l'huile d'olive dans une grande casserole ou un four hollandais à feu moyen. Ajouter l'oignon et cuire, en remuant occasionnellement, jusqu'à ce qu'il soit adouci et doré aux bords, environ 8 minutes. Incorporer la pâte de tomate et cuire 2 minutes jusqu'à ce qu'elle s'assombrisse. Ajouter le ras el hanout, le curcuma et la cannelle et remuer pendant 30 secondes jusqu'à parfumer. Bloomez le safran dans une cuillère à soupe d'eau chaude et ajoutez-le au pot. Ajouter les carottes, les navets et les pois chiches, verser dans l'eau et assaisonner généreusement de sel. Porter à ébullition, puis laisser mijoter régulièrement et cuire 20 minutes — ces légumes plus difficiles vont d'abord parce qu'ils ont besoin du plus de temps.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon profondément doré, teinté ambre du curcuma et du safran, avec les carottes et les navets qui commencent à montrer des bords tendres. L'arôme est chaud et complexe: épices douces, tomate, oignon.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon semble pâle et mince, à peine coloré. Les épices n'ont pas eu le temps de fleurir et les légumes sont complètement crus.",
+            "action": "Continuez à mijoter — les 15 premières minutes sont le développement aromatique, et non la cuisson végétale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bouillon est un riche ambre doré. Les carottes donnent un peu lorsqu'elles sont munies d'un couteau, mais ont encore une certaine résistance au centre. Ça sent le ras el-hanout.",
+            "action": "Ajouter la courge et la courgette pour la deuxième phase de cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes plus durs sont déjà complètement mous et s'effondrent.",
+            "action": "Ajouter immédiatement le reste des légumes et du couscous pour rattraper le retard — le ragoût peut être mélangé légèrement à épaissir sans perdre le plat."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon doit avoir un goût d'épices et de sel avec une douceur de fond de l'oignon. Goûtez après 20 minutes et ajustez - vous assaisonnez le liquide qui parfumera le ragoût et le couscous."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Steam le couscous (premier passage)",
+      "inputs": [
+        "ing_01",
+        "ing_03"
+      ],
+      "outputState": "first_steamed_couscous",
+      "instructions": "Pendant que la base mijote, placez le couscous sec dans un grand bol. Saupoudrer plus d'une cuillère à café de sel, puis arroser avec 3 cuillères à soupe d'eau froide et 1 cuillère à soupe d'huile d'olive. Frottez les grains entre vos paumes pour répartir uniformément l'humidité et briser les amas. Si vous avez un couscoussier ou un grand vapeur, l'aligner avec un chiffon humide et ajouter le couscous. Faire cuire à la vapeur sur le ragoût (ou l'eau bouillante) pendant 15 minutes. La vapeur parfume le couscous avec les arômes du ragoût.",
+      "visualCue": {
+        "primaryTarget": "Après la première vapeur, le couscous devrait avoir l'air visiblement gonflé et légèrement tendre, avec des cernes de vapeur montant à travers les grains. Elle sera encore quelque peu entachée et dense.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le couscous est encore dur, sec et granulaire sans vapeur. Il est assis comme une prise solide.",
+            "action": "Vérifiez votre niveau d'eau ci-dessous — assurez-vous qu'une vapeur vigoureuse atteint les grains. Poke trous à travers avec une poignée de cuillère pour laisser la vapeur pénétrer."
+          },
+          {
+            "state": "Perfect",
+            "description": "La vapeur monte librement à travers la masse. Les grains ont commencé à gonfler et la surface supérieure semble humide et tendre.",
+            "action": "Astuce dans le bol pour l'étape de roulage, puis retour pour la deuxième vapeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le couscous s'est vaporisé trop longtemps et est déjà musqué et entaché de masses humides.",
+            "action": "Répartir sur un plateau pour refroidir et sécher brièvement avant la seconde vapeur — il se rétablira."
+          }
+        ]
+      },
+      "feelCue": "Prenez une petite pincée de couscous du vapeur entre vos doigts et frottez - il doit se sentir chaud et légèrement humide, avec un peu de donner, mais toujours granuleux et pas entièrement cuit."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Râteau et ajouter les légumes finals",
+      "inputs": [
+        "first_steamed_couscous",
+        "ing_02",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_18"
+      ],
+      "outputState": "raked_couscous_and_full_stew",
+      "instructions": "Mettre le couscous à l'eau dans un grand bol. Ajouter le beurre et une louche du bouillon de ragoût chaud. Rincez vigoureusement avec vos doigts ou une grande fourchette, coupez chaque griffe et enrobez chaque grain dans le beurre et le bouillon. Goûtez et ajoutez plus de sel si nécessaire. Retournez au vapeur pour une seconde vapeur de 15 minutes. Pendant ce temps, ajouter la courge, la courge et le chou au ragoût et continuer à mijoter pendant les 20 à 25 minutes restantes jusqu'à ce que tous les légumes soient tendres et que le bouillon ait diminué légèrement et épaissi.",
+      "visualCue": {
+        "primaryTarget": "Après le râpage, le couscous doit être des grains individuels, chacun scintille avec du beurre. Il ne reste pas de touffes visibles. Après la seconde vapeur, il sera oreiller et léger.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La taille des marbres reste après le râpage. Le beurre n'a pas été distribué uniformément.",
+            "action": "Râtez plus vigoureusement, ajoutant une autre éclaboussure de bouillon pour aider à briser les touffes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Loyer, grains individuels, chacun beurré et séparé. Ils coulent dans vos doigts comme du sable chaud. La seconde vapeur les rendra parfaitement légers.",
+            "action": "Retournez au vapeur pour les 15 dernières minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le couscous a absorbé tellement de bouillon pendant le râpage qu'il est mouillé et carbonisé.",
+            "action": "Répartir sur un plateau pour sécher pendant 5 minutes avant de revenir à la vapeur — l'excès d'humidité est l'ennemi du couscous moelleux."
+          }
+        ]
+      },
+      "feelCue": "Le couscous ramassé s'écoule à travers les doigts comme du sable chaud — s'il s'agrippe et colle, râteau plus fort et ajouter une autre éclaboussure de bouillon chaud. Vous apprenez à chaque grain à rester seul."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "raked_couscous_and_full_stew",
+        "ing_19"
+      ],
+      "outputState": "finished_couscous_seven_vegetables",
+      "instructions": "Monter le couscous fini dans un dôme élevé sur un grand plateau rond ou un bol commun. Déposer le ragoût de légumes avec tous ses légumes sur et autour du couscous, permettant au bouillon de tremper dans le centre du monticule. Scatter la coriandre hachée sur le dessus. Servir le bouillon chaud restant dans une petite cruche sur le côté pour les gens à ajouter comme ils mangent. Servir le harissa dans un petit plat séparé. Traditionnellement, cela est mangé en commun, tout le monde se réunissant autour du plateau commun.",
+      "visualCue": {
+        "primaryTarget": "Un monticule de couscous doré, qui s'élève d'une piscine de bouillon d'ambre, couronné de légumes de couleur bijou, carottes d'orange, courge dorée, courgette vert foncé, et coriandre vert vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le museau couscous semble sec et dense et le bouillon de ragoût est pâle et mince avec des légumes durs et mal cuits.",
+            "action": "Remettre le ragoût à feu et laisser mijoter plus longtemps. Déposer le bouillon plus chaud sur le monticule du couscous et laisser reposer quelques minutes pour absorber."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le couscous est clair de plumes et aromatique, absorbant le bouillon doré parfumé comme une éponge. Chaque légume donne et est bien assaisonné. La chambre sent la cannelle, le safran et le contentement.",
+            "action": "Assis sur la table et servir immédiatement — couscous n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le couscous s'est assis trop longtemps dans le bouillon et le monticule s'est effondré dans une masse humide et stody.",
+            "action": "Fourche-le à la vie, en l'ajoutant à des bols individuels avec du bouillon lavé sur le dessus — les saveurs sont toutes là."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur le côté d'une cuillère dans le monticule — il devrait donner comme un oreiller doux. Chaque morsure de couscous devrait se dissoudre presque instantanément dans le bouillon épicé, laissant derrière elle la chaleur et les échos de cannelle et de safran."
+    }
+  ]
 };

@@ -1,105 +1,252 @@
 export default {
-  repoId: "fork_french_allemande_001",
-  parentRepoId: "master_french_veloute_001",
-  slug: "allemande",
-  parentSlug: "veloute",
-  author: "ForkRecipe Kitchen",
-  title: "Sauce Allemande",
-  description: "A velouté enriched with a liaison of egg yolk and cream, then brightened with a squeeze of lemon. The finish is the whole point: stir the liaison in off the boil so the yolks thicken without scrambling, and the sauce turns pale gold, glossy, and round on the palate.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "sauces",
-  tags: ["sauce", "french", "daughter-sauce", "liaison", "egg-yolk"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2025-06-09",
-  updatedAt: "2025-06-09",
-  forkNote: "Velouté thickened with a liaison of egg yolk and cream, brightened with lemon — a richer, rounder daughter sauce.",
-  changes: {
-    ingredientsAdded: 3,
-    ingredientsRemoved: 0,
-    ingredientsModified: 0,
-    stepsAdded: 1,
-    stepsRemoved: 0,
-    stepsModified: 1,
+  "repoId": "fork_french_allemande_001",
+  "parentRepoId": "master_french_veloute_001",
+  "slug": "allemande",
+  "parentSlug": "veloute",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Allemande",
+  "description": "Un velours enrichi d'une liaison de jaune d'œuf et de crème, puis illuminé d'une pression de citron. La finale est tout le point: remuer la liaison en dehors de l'ébullition afin que les jaunes épaississent sans brouillage, et la sauce devient or pâle, brillant, et rond en bouche.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "fille-sauce",
+    "liaison",
+    "œuf-jaune"
+  ],
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-06-09",
+  "updatedAt": "2025-06-09",
+  "forkNote": "Velouté épaissi d'une liaison de jaune d'œuf et de crème, illuminé de citron — une sauce fille plus riche et plus ronde.",
+  "changes": {
+    "ingredientsAdded": 3,
+    "ingredientsRemoved": 0,
+    "ingredientsModified": 0,
+    "stepsAdded": 1,
+    "stepsRemoved": 0,
+    "stepsModified": 1
   },
-  flavorRadar: { sweet: 1, salty: 2, sour: 1, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "White stock (chicken or veal)", ratioValue: 12, defaultUnit: "parts", substitutions: ["fish stock", "vegetable stock"] },
-    { ingId: "ing_02", role: "Fat",       name: "Unsalted butter",               ratioValue: 1,  defaultUnit: "parts", substitutions: ["clarified butter"] },
-    { ingId: "ing_03", role: "Structure", name: "All-purpose flour",             ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                 ratioValue: 0.1, defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_05", role: "Spice",     name: "White pepper",                  ratioValue: 0.02, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Binder",    name: "Egg yolk",                      ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Dairy",     name: "Heavy cream",                   ratioValue: 2,  defaultUnit: "parts", substitutions: ["crème fraîche"] },
-    { ingId: "ing_08", role: "Citrus",    name: "Lemon juice",                   ratioValue: 0.3, defaultUnit: "parts", substitutions: ["white wine vinegar (a drop)"] },
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
+    {
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Stock blanc (poulets ou veau)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "stocks de poissons",
+        "stock de légumes"
+      ]
+    },
+    {
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre clarifié"
+      ]
+    },
+    {
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poivre blanc",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Binder",
+      "name": "Jaune d'œuf",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Crème fraîche"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Citrus",
+      "name": "Jus de citron",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc (une goutte)"
+      ]
+    }
   ],
-  processNodes: [
+  "processNodes": [
     {
-      nodeId: "step_1", action: "Toast",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "blond_roux",
-      instructions: "Melt the butter over medium-low heat until it foams without browning, then whisk in the flour. Cook, stirring, 4 to 6 minutes until the raw-flour smell turns to toasted hazelnut and the paste is pale straw — a blond roux, the base for the velouté beneath this sauce.",
-      visualCue: {
-        primaryTarget: "A loose, glossy, pale-straw paste that moves like wet sand and smells of warm toasted nuts.",
-        spectrum: [
-          { state: "Underdone", description: "Bright white and pasty, still smelling of raw flour.", action: "Stir over the heat another minute until the color shifts to faint straw and the smell turns nutty." },
-          { state: "Perfect",   description: "Even pale straw, smooth and fluid, faintly nutty. Bubbles lazily at the edges.", action: "Pull from the heat and ready the warm stock." },
-          { state: "Overdone",  description: "Gone golden-brown and strongly toasted.", action: "Start over for a true blond — a browned roux would dull the pale gold this sauce wants." },
-        ],
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "blond_roux",
+      "instructions": "Faire fondre le beurre à feu moyen-doux jusqu'à ce qu'il mousse sans brunir, puis fouetter dans la farine. Cuire en remuant, 4 à 6 minutes jusqu'à ce que l'odeur de la farine brute se transforme en noisettes grillées et que la pâte soit de la paille pâle — un roux blond, la base du velours sous cette sauce.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lâche, brillante et à paille pâle qui se déplace comme du sable humide et sent les noix grillées chaudes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Blanc vif et pâteux, sent toujours la farine crue.",
+            "action": "Mélanger sur la chaleur encore une minute jusqu'à ce que la couleur se déplace pour évanouir la paille et l'odeur devient noisette."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même la paille pâle, lisse et fluide, légèrement noisette. Bubbles paresseux aux bords.",
+            "action": "Tirez de la chaleur et préparez le stock chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Glissé doré-brun et fortement grillé.",
+            "action": "Commencer par une vraie blonde — un roux brun assombrirait l'or pâle que veut cette sauce."
+          }
+        ]
       },
-      feelCue: "The whisk drags through a soft, fluid paste with almost no resistance — if it balls up dry, there is too much flour.",
+      "feelCue": "Le fouet traîne à travers une pâte douce et fluide sans résistance. S'il se met à sécher, il y a trop de farine."
     },
     {
-      nodeId: "step_2", action: "Whisk",
-      inputs: ["blond_roux", "ing_01"],
-      outputState: "loose_veloute",
-      instructions: "Off the heat, whisk the warm white stock into the roux in three or four additions, letting each disappear before the next. Return to medium heat and bring to a gentle boil, whisking, until smooth, glossy, and lightly thickened.",
-      visualCue: {
-        primaryTarget: "A smooth, lump-free, pale ivory sauce, glossy and just thick enough to leave a fleeting trail behind the whisk.",
-        spectrum: [
-          { state: "Underdone", description: "Thin and watery, slides off the whisk with no body.", action: "Hold at a gentle boil, whisking, a few minutes longer to let the starch thicken." },
-          { state: "Perfect",   description: "Smooth, glossy, pale ivory; lightly coats the whisk.", action: "Lower to a bare simmer and skim until clean, then reduce slightly." },
-          { state: "Overdone",  description: "Gluey and paste-thick with a dull surface.", action: "Whisk in a little warm stock to loosen back to a glossy, pourable nappe." },
-        ],
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "blond_roux",
+        "ing_01"
+      ],
+      "outputState": "loose_veloute",
+      "instructions": "Hors de la chaleur, fouetter le stock blanc chaud dans le roux en trois ou quatre ajouts, laissant chacun disparaître avant le suivant. Retourner à feu moyen et porter à ébullition douce, fouetter, jusqu'à ce que lisse, brillant et légèrement épaississant.",
+      "visualCue": {
+        "primaryTarget": "Une sauce d'ivoire pâle, lisse, sans morceaux, brillante et juste assez épaisse pour laisser une trace fugace derrière le fouet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mince et aqueuse, glisse du fouet sans corps.",
+            "action": "Tenir à ébullition douce, fouetter, quelques minutes de plus pour laisser épaissir l'amidon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, lustré, ivoire pâle; il recouvre légèrement le fouet.",
+            "action": "Abaissez jusqu'à ce qu'une mijote nue et écrémez jusqu'à ce qu'elle soit propre, puis réduisez légèrement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Coller et coller avec une surface terne.",
+            "action": "Whisk in a little hot stock to desserre vers une nappe brillante et versable."
+          }
+        ]
       },
-      feelCue: "You feel a gentle thickening grab the whisk as it boils — that grab is the starch setting. Skim the surface clean before moving on.",
+      "feelCue": "Vous sentez un doux épaississement prendre le fouet quand il se bouillit — qui prend est le réglage d'amidon. Écraser la surface avant de passer."
     },
     {
-      nodeId: "step_3", action: "Temper",
-      inputs: ["ing_06", "ing_07"],
-      outputState: "tempered_liaison",
-      instructions: "Whisk the egg yolk and cream together in a bowl until smooth — this is the liaison. Ladle a little of the hot velouté into it in a thin stream, whisking hard, then add a second and third ladle. The goal is to warm the yolks gradually so they never see a shock of heat. This whole tempering step is new to this sauce; it is what separates an allemande from its velouté parent.",
-      visualCue: {
-        primaryTarget: "A smooth, pale-gold cream that has been loosened and warmed by several ladles of hot sauce — pourable, glossy, with no flecks of cooked egg.",
-        spectrum: [
-          { state: "Underdone", description: "Liaison is still cold and thick, only a single ladle of sauce stirred in.", action: "Whisk in another ladle or two of hot velouté — it must be warm to the touch before it goes back to the pan." },
-          { state: "Perfect",   description: "Loose, warm, pale-gold cream that pours in a smooth ribbon with no lumps.", action: "Whisk the warmed liaison back into the pan of velouté, off the boil." },
-          { state: "Overdone",  description: "Specks or threads of pale, set egg appear — the sauce went in too fast or too hot.", action: "Strain the liaison through a fine sieve to catch the cooked bits before returning it to the pan." },
-        ],
+      "nodeId": "step_3",
+      "action": "Température",
+      "inputs": [
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "tempered_liaison",
+      "instructions": "Dans un bol, fouetter le jaune d'œuf et la crème jusqu'à ce qu'elle soit lisse. Déposer un peu de velours chaud dans un cours d'eau mince, fouetter dur, puis ajouter une seconde et troisième louche. Le but est de réchauffer progressivement les jaunes afin qu'ils ne voient jamais un choc de chaleur. Toute cette étape de tempérament est nouvelle dans cette sauce ; c'est ce qui sépare une allemande de son parent velouté.",
+      "visualCue": {
+        "primaryTarget": "Une crème lisse et dorée qui a été desserrée et chauffée par plusieurs louches de sauce chaude – versables, brillants, sans flecks d'oeuf cuit.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La liaison est encore froide et épaisse, seulement une seule louche de sauce brassée.",
+            "action": "fouetter dans une autre louche ou deux de velours chaud — il doit être chaud au toucher avant de retourner à la poêle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crème molle, chaude et dorée qui verse dans un ruban lisse sans grumeaux.",
+            "action": "Faites revenir la liaison chaude dans la casserole de velours, hors ébullition."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des mouchets ou des fils d'œufs pâles apparaissent — la sauce est entrée trop vite ou trop chaude.",
+            "action": "Retirez la liaison à travers un tamis fin pour attraper les morceaux cuits avant de la retourner dans la poêle."
+          }
+        ]
       },
-      feelCue: "Feel the side of the bowl: it should go from cool to gently warm as you ladle in the sauce. If it ever feels hot enough to startle you, slow down — that heat is what curdles yolks.",
+      "feelCue": "Sentez le côté du bol : il doit passer du frais au doux chaud pendant que vous louchez dans la sauce. S'il fait assez chaud pour vous faire peur, ralentissez - vous."
     },
     {
-      nodeId: "step_4", action: "Finish",
-      inputs: ["loose_veloute", "tempered_liaison", "ing_08", "ing_04", "ing_05"],
-      outputState: "finished_allemande",
-      instructions: "Whisk the tempered liaison back into the velouté over LOW heat. Warm it gently, stirring constantly, just until it thickens to a glossy nappe — do NOT let it boil, or the yolks will curdle. Pull from the heat, brighten with a squeeze of lemon, and season with salt and a touch of white pepper.",
-      visualCue: {
-        primaryTarget: "A pale-gold, satiny sauce, noticeably richer and rounder than plain velouté. It coats a spoon in a thick nappe and holds a clean line when you draw a finger through it. Surface is glossy, never broken.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still loose and pale, the liaison not yet set — tastes thin and a little raw with egg.", action: "Keep it over low heat, stirring, just until it thickens and the gloss deepens — watch closely, it sets fast." },
-          { state: "Perfect",   description: "Thick, glossy, pale gold. Coats the spoon richly; tastes round and savory with a clean lemon lift.", action: "Serve immediately over poultry, veal, or vegetables." },
-          { state: "Overdone",  description: "Sauce has boiled — grainy curds of cooked yolk break the once-smooth surface.", action: "Pull off the heat at once and blend or strain to smooth it; next time hold the pan below a simmer." },
-        ],
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "loose_veloute",
+        "tempered_liaison",
+        "ing_08",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "finished_allemande",
+      "instructions": "Faites revenir la liaison trempée dans le velours à feu doux. Chauffer doucement, en remuant constamment, jusqu'à ce qu'il s'épaississe jusqu'à ce que la nappe soit brillante — ne la laissez PAS bouillir, ou les jaunes seront caillés. Tirer du feu, éclaircir avec une touche de citron, et assaisonner avec du sel et une touche de poivre blanc.",
+      "visualCue": {
+        "primaryTarget": "Une sauce pâle et satinée, nettement plus riche et plus ronde que le velours uni. Il enrobe une cuillère dans une couche épaisse et tient une ligne propre quand vous tirez un doigt à travers elle. La surface est brillante, jamais cassée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore molle et pâle, la liaison n'est pas encore fixée — goût mince et un peu cru avec l'oeuf.",
+            "action": "Gardez - le à feu doux, en remuant, jusqu'à ce qu'il s'épaississe et que le brillant s'approfondisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, brillant, or pâle. Coats la cuillère richement; goût rond et salé avec un lift de citron propre.",
+            "action": "Servir immédiatement sur la volaille, le veau ou les légumes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a bouilli — des caillés granuleux de jaunes cuits brisent la surface une fois lisse.",
+            "action": "Retirez le feu à la fois et mélangez ou tendez pour le lisser; la prochaine fois, maintenez la poêle sous une mijoter."
+          }
+        ]
       },
-      feelCue: "On the spoon it feels heavier and silkier than velouté — the cream and yolk give it a velvety cling. Stir lazily; you should never see a bubble break the surface once the liaison is in.",
-    },
-  ],
+      "feelCue": "Sur la cuillère, il est plus lourd et plus soyeux que la velouté: la crème et le jaune lui donnent un collage velouté. Stir paresseux; vous ne devriez jamais voir une bulle briser la surface une fois que la liaison est entrée."
+    }
+  ]
 };

@@ -1,97 +1,265 @@
 export default {
-  repoId: "master_japanese_shrimp_tempura_001",
-  parentRepoId: null,
-  slug: "shrimp-tempura",
-  author: "ForkRecipe Kitchen",
-  title: "Ebi Tempura",
-  description: "Tail-on prawns stretched straight, dipped in an ice-cold, just-barely-mixed flour-and-water batter, and dropped into 175°C oil until the coating puffs into a ghostly, crackle-crisp shell.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "seafood",
-  tags: ["tempura", "japanese", "shrimp", "fried", "light", "batter"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Tiger prawns or large shrimp, shell-on (16/20 count)",       ratioValue: 100, defaultUnit: "parts", substitutions: ["jumbo shrimp", "spot prawns"] },
-    { ingId: "ing_02", role: "Starch",    name: "Cake flour or low-protein (pastry) flour, sifted",           ratioValue: 30,  defaultUnit: "parts", substitutions: ["tempura flour mix"] },
-    { ingId: "ing_03", role: "Starch",    name: "Potato starch or cornstarch",                                ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",    name: "Ice-cold sparkling water (or ice-cold flat water)",          ratioValue: 35,  defaultUnit: "parts", substitutions: ["very cold club soda"] },
-    { ingId: "ing_05", role: "Binder",    name: "Egg yolk (1 large), ice-cold",                               ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Neutral oil for deep frying (rice bran or sunflower)",       ratioValue: 200, defaultUnit: "parts", substitutions: ["canola oil", "refined coconut oil"] },
-    { ingId: "ing_07", role: "Umami",     name: "Dashi (for tentsuyu dipping sauce)",                         ratioValue: 20,  defaultUnit: "parts", substitutions: ["light chicken stock"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Soy sauce (for tentsuyu)",                                   ratioValue: 5,   defaultUnit: "parts", substitutions: ["tamari"] },
-    { ingId: "ing_09", role: "Sweetener", name: "Mirin (for tentsuyu)",                                       ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Aromatic",  name: "Freshly grated daikon, to serve",                            ratioValue: 10,  defaultUnit: "parts", substitutions: ["grated ginger"] },
+  "repoId": "master_japanese_shrimp_tempura_001",
+  "parentRepoId": null,
+  "slug": "shrimp-tempura",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ebi Tempura",
+  "description": "Les crevettes à queue tendues droites, trempées dans une pâte à farine et à eau à peine mélangée à la glace, sont tombées dans l'huile de 175°C jusqu'à ce que le revêtement s'enfonce dans une coquille fantomatique, crépitante.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "seafood",
+  "tags": [
+    "tempura",
+    "Japonais",
+    "crevettes",
+    "frits",
+    "Lumière",
+    "pâte"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Prep shrimp",
-      inputs: ["ing_01"],
-      outputState: "prepped_shrimp",
-      instructions: "Peel the shrimp, leaving the final tail segment and tail fan intact — the tail is the handle for dipping and eating. Devein by making a shallow cut along the back with a paring knife and lifting out the dark intestine with the tip. To straighten the shrimp so they fry evenly and do not curl: flip them belly-up and make 4–5 shallow diagonal cuts across the belly 2 mm deep, spacing them evenly. Then press each shrimp flat against the cutting board with your thumb, gently stretching it until you hear and feel a tiny snap — the connective tissue breaking. The shrimp should now lie flat and remain straight when fried.",
-      visualCue: {
-        primaryTarget: "Pale, deveined shrimp lying completely straight on the board without curling. The belly shows 4–5 evenly spaced score marks. The tail fan is intact and symmetrical.",
-        spectrum: [
-          { state: "Underdone", description: "Shrimp still curves naturally — it has not been scored or stretched sufficiently. It will curl tightly into a half-circle when it hits hot oil.", action: "Make the belly scores slightly deeper and press the shrimp against the board more firmly until it relaxes fully flat." },
-          { state: "Perfect",   description: "Shrimp lies completely flat and does not spring back when released. Belly scores are visible but have not cut through the flesh. Tail is clean and dry.", action: "Pat dry with paper towels and keep cold until ready to batter." },
-          { state: "Overdone",  description: "Belly scores are too deep and have cut through the flesh, or the pressing has broken the shrimp into two connected sections.", action: "Use it anyway — the flavor is unaffected. Just handle gently during batter dipping to avoid separating it further." },
-        ],
-      },
-      feelCue: "A properly stretched shrimp should feel almost rigid — it resists curling when you hold it by the tail. It should not feel floppy or disconnected at the belly cuts.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Crevettes tigrées ou grandes crevettes, coquillages (16/20 nombre)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Crevettes jumbo",
+        "Crevettes tachetées"
+      ]
     },
     {
-      nodeId: "step_2", action: "Make tentsuyu dipping sauce",
-      inputs: ["ing_07", "ing_08", "ing_09"],
-      outputState: "tentsuyu_sauce",
-      instructions: "Combine the dashi, soy sauce, and mirin in a small saucepan. Bring to a brief simmer over medium heat, about 2 minutes, to cook off the alcohol from the mirin. Taste — it should be savory and round with a faint sweetness and no sharp edge. Pour into small dipping bowls and place a small mound of grated daikon alongside for guests to stir in. Make this before the batter so you are not distracted once frying starts.",
-      visualCue: {
-        primaryTarget: "A clear, amber-brown liquid with a faint sheen. The aroma is savory and slightly sweet from the mirin, with the oceanic depth of dashi.",
-        spectrum: [
-          { state: "Underdone", description: "Mirin's alcohol has not cooked off — the sauce tastes sharp and boozy at the edge.", action: "Simmer for an additional minute. The sharpness should mellow to sweetness." },
-          { state: "Perfect",   description: "Balanced: savory, slightly sweet, with an umami backbone. Cool enough to use as a dipping sauce — not hot.", action: "Set aside and prepare the batter next." },
-          { state: "Overdone",  description: "Sauce has reduced too far and tastes intensely salty and cloying — the proportions are now off.", action: "Dilute with additional dashi, tasting until the balance returns." },
-        ],
-      },
-      feelCue: "Dip your fingertip and touch it to your tongue: the sauce should taste like the sea with a sweet undertone, clean and direct. It should make you want to eat something fried immediately.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Farine de gâteau ou farine à faible teneur en protéines (pâtisserie), tamisée",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mélange de farine de tempura"
+      ]
     },
     {
-      nodeId: "step_3", action: "Mix batter and fry",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "prepped_shrimp"],
-      outputState: "tempura_shrimp",
-      instructions: "Heat the oil to exactly 175°C / 347°F in a deep, heavy pot. While the oil heats, chill your mixing bowl in the freezer for 5 minutes. Make the batter at the last possible moment: combine the sifted flour and starch in the frozen bowl. In a separate bowl, whisk the egg yolk into the ice-cold water with a single stir. Pour the egg water into the flour in one addition. Mix with chopsticks in 4–5 deliberate strokes, turning rather than stirring — the batter must remain lumpy, streaky, and barely combined, with visible dry flour patches. Overmixing develops gluten and produces a dense, cakey crust instead of the ethereal tempura shell. Batter should be used within 10 minutes. Hold each shrimp by the tail, dip in batter, let excess drip for one second, and immediately lower it gently into the oil headfirst. Fry 2–3 minutes, turning once, until the batter is pale gold and the shrimp curled only slightly. Fry in small batches to maintain oil temperature.",
-      visualCue: {
-        primaryTarget: "The finished shrimp is encased in a pale, almost translucent gold shell that looks lacy and irregular — you can see the outline of the shrimp beneath. The coating is clearly separated from the flesh in places, creating small pockets of air.",
-        spectrum: [
-          { state: "Underdone", description: "Batter is still pale white and looks raw and wet. Oil temperature has dropped and the batter is absorbing rather than crisping. The shrimp floats awkwardly and does not sizzle aggressively.", action: "Check oil temperature — it should be 175°C. Remove the shrimp, let oil recover to temperature, and re-dip and fry fresh if not yet set." },
-          { state: "Perfect",   description: "Pale golden, lacy, almost translucent shell with irregular surface texture. The shrimp barely curved. The crust sounds hollow when tapped. Interior reads 60–65°C.", action: "Remove with a mesh skimmer, drain upright briefly, and serve within 60 seconds." },
-          { state: "Overdone",  description: "Crust is deep gold to amber and looks smooth and dense rather than lacy. The oil may be smoking. The shrimp may have curled significantly.", action: "Remove immediately. The shrimp will be cooked through but the crust has lost its delicate character. Lower oil temperature by 5°C for the next batch." },
-        ],
-      },
-      feelCue: "Listen to the sizzle when the shrimp enters the oil: a vigorous, high-frequency crackle is correct — like static electricity. A low, slow gurgling means the oil is too cold; near-silence means the oil has dropped severely.",
+      "ingId": "ing_03",
+      "role": "Starch",
+      "name": "Fécule de pomme de terre ou fécule de maïs",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Drain and plate",
-      inputs: ["tempura_shrimp", "ing_10"],
-      outputState: "finished_shrimp_tempura",
-      instructions: "Drain each piece upright against the edge of a wire rack for 10 seconds — holding it tail-up so excess oil runs down and off the crust. Arrange on a folded napkin or washi paper on a plate or bamboo tray, tails fanned upward. Serve with the tentsuyu in small bowls alongside grated daikon. The shrimp must be eaten immediately — tempura degrades within 2 minutes as steam from the interior migrates out and softens the shell.",
-      visualCue: {
-        primaryTarget: "Pale gold, ghostly, lacy shell standing upright on the plate, tail fan fanned out symmetrically at the top. The surface looks dry and matte, not oily or glistening.",
-        spectrum: [
-          { state: "Underdone", description: "Surface looks wet and oily — the crust has not drained and is already softening from the trapped oil.", action: "Stand upright on the rack 10 more seconds. Serve immediately after." },
-          { state: "Perfect",   description: "Dry-looking, pale gold, lacy shell. Tapping it with a chopstick produces a crisp, hollow sound. The tail is bright orange-red from the heat.", action: "Serve within 60 seconds." },
-          { state: "Overdone",  description: "The crust has softened and deflated — it is now chewy rather than crisp. Steam from the hot shrimp has collapsed the lacy structure.", action: "Eat it anyway, but quickly. The flavor is intact even when the texture has gone. Plan to serve the next batch the instant it comes out of the oil." },
-        ],
-      },
-      feelCue: "Pick up a piece by the tail — the crust should feel light as paper and crackle between your fingers when very slightly compressed. Any softness means moisture has already won.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Eau gazeuse froide (ou eau plate froide)",
+      "ratioValue": 35,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "soda club très froid"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Jaune d'œuf (1 grand), glacé",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile neutre pour friture profonde (bron de riz ou tournesol)",
+      "ratioValue": 200,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile de canola",
+        "huile de coco raffinée"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "Dashi (pour la sauce à tremper tentesuyu)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Poulet léger"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "sauce soja (pour tentessuyu)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Mirin (pour tentessuyu)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Daicon fraîchement râpé, à servir",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Gingembre râpé"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation de crevettes",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "prepped_shrimp",
+      "instructions": "Peler la crevette, laissant intact le segment final de la queue et l'éventail de la queue – la queue est la poignée pour tremper et manger. Déveinez en faisant une coupe peu profonde le long du dos avec un couteau à parer et en soulevant l'intestin sombre avec l'extrémité. Pour redresser les crevettes afin qu'elles frisent uniformément et ne se bouclent pas : retournez-les vers le haut du ventre et faites 4-5 coupes diagonales peu profondes à travers le ventre 2 mm de profondeur, les espacer uniformément. Appuyez ensuite sur chaque crevette plate contre la planche à découper avec votre pouce, en l'étirant doucement jusqu'à ce que vous entendiez et sentiez un petit coup — le tissu conjonctif se briser. Les crevettes devraient maintenant se mettre à plat et rester droites lorsqu'elles sont frites.",
+      "visualCue": {
+        "primaryTarget": "Crevettes pâles, dépeintes, allongées complètement droites sur la planche sans curling. Le ventre montre 4 à 5 marques de scores uniformément espacées. Le ventilateur de queue est intact et symétrique.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crevette tourne encore naturellement — elle n'a pas été notée ou suffisamment tendue. Il sera serré dans un demi-cercle quand il frappe l'huile chaude.",
+            "action": "Rendre le ventre légèrement plus profond et presser les crevettes contre la planche plus fermement jusqu'à ce qu'il se détende complètement à plat."
+          },
+          {
+            "state": "Perfect",
+            "description": "La crevette est complètement plate et ne ressort pas une fois relâchée. Les scores sont visibles mais n'ont pas traversé la chair. La queue est propre et sèche.",
+            "action": "Sèchez avec des serviettes en papier et gardez-les au froid jusqu'à ce qu'ils soient prêts à être battus."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les scores de ventre sont trop profonds et ont coupé la chair, ou le pressurage a cassé les crevettes en deux sections reliées.",
+            "action": "Utilisez - le de toute façon — la saveur n'est pas affectée. Il suffit de manipuler doucement pendant le trempage de pâte pour éviter de le séparer davantage."
+          }
+        ]
+      },
+      "feelCue": "Une crevette correctement étirée devrait se sentir presque rigide — elle résiste au curling lorsque vous la tenez par la queue. Il ne doit pas se sentir flou ou déconnecté des coupes du ventre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Faire tremper la sauce tentesuyu",
+      "inputs": [
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "tentsuyu_sauce",
+      "instructions": "Mélanger le dashi, la sauce soja et le mirin dans une petite casserole. Faire mijoter brièvement à feu moyen, environ 2 minutes, pour faire cuire l'alcool du mirin. Goûter — il doit être salé et rond avec une douceur faible et aucun bord tranchant. Verser dans de petits bols à tremper et placer un petit monticule de daikon râpé à côté pour les invités à remuer. Faites ceci avant la pâte pour que vous ne soyez pas distrait une fois que la friture commence.",
+      "visualCue": {
+        "primaryTarget": "Un liquide clair et brun-ambre avec un léger éclat. L'arôme est salé et légèrement sucré du mirin, avec la profondeur océanique de dashi.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'alcool de Mirin n'a pas cuit — la sauce a un goût vif et boueux au bord.",
+            "action": "Laisser mijoter une minute supplémentaire. La netteté devrait être douce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Équilibré : salé, légèrement sucré, avec une colonne vertébrale umami. Assez frais pour être utilisé comme sauce à tremper — pas chaud.",
+            "action": "Réserver et préparer la pâte ensuite."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a diminué trop loin et a un goût intensément salé et bouillant — les proportions sont maintenant dépassées.",
+            "action": "Diluer avec le dashi supplémentaire, goûter jusqu'à ce que le solde revienne."
+          }
+        ]
+      },
+      "feelCue": "Plongez votre bout de doigt et touchez-le à votre langue : la sauce doit goûter comme la mer avec un doux sous-ton, propre et direct. Il devrait vous faire vouloir manger quelque chose frit immédiatement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélanger la pâte et les frites",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "prepped_shrimp"
+      ],
+      "outputState": "tempura_shrimp",
+      "instructions": "Chauffer l'huile à exactement 175°C / 347°F dans un pot profond et lourd. Pendant que l'huile chauffe, refroidissez votre bol de mélange au congélateur pendant 5 minutes. Faire la pâte au dernier moment possible: combiner la farine et l'amidon tamisés dans le bol congelé. Dans un bol séparé, fouetter le jaune d'œuf dans l'eau froide avec un seul mélange. Verser l'eau de l'œuf dans la farine en un seul supplément. Mélanger avec des baguettes en 4-5 coups délibérés, tourner plutôt que de remuer — la pâte doit rester grumelée, striée et à peine combinée, avec des taches de farine sèche visible. Le surmélange développe du gluten et produit une croûte cakey dense au lieu de la coquille de tempura éthérée. La batterie doit être utilisée dans les 10 minutes. Maintenez chaque crevette par la queue, trempez dans la pâte, laissez couler l'excès pendant une seconde, et abaissez immédiatement doucement dans la tête d'huile en premier. Faire frire 2 à 3 minutes, tourner une fois, jusqu'à ce que la pâte soit d'or pâle et que les crevettes ne soient que légèrement recourbées. Faire frire en petits lots pour maintenir la température de l'huile.",
+      "visualCue": {
+        "primaryTarget": "La crevette finie est enveloppée dans une coquille d'or pâle, presque translucide, qui a l'air lacy et irrégulière — on peut voir le contour de la crevette en dessous. Le revêtement est clairement séparé de la chair dans les endroits, créant de petites poches d'air.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le battement est encore blanc pâle et semble cru et humide. La température de l'huile a baissé et la pâte est absorbante plutôt que croquante. La crevette flotte maladroitement et n'étourne pas agressivement.",
+            "action": "Vérifiez la température de l'huile — elle doit être de 175°C. Enlevez les crevettes, laissez l'huile se rétablir à la température, et rafraîchissez-les et faites fraicher si ce n'est pas encore réglé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Coquille pâle dorée, lavée, presque translucide, à texture superficielle irrégulière. Les crevettes à peine courbées. La croûte semble creuse lorsqu'elle est tapée. L'intérieur lit 60-65°C.",
+            "action": "Retirer avec un écumoir, égoutter brièvement et servir dans les 60 secondes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est d'or profond à ambre et semble lisse et dense plutôt que lacy. L'huile peut fumer. Les crevettes ont peut-être frisé significativement.",
+            "action": "Supprimer immédiatement. La crevette sera cuite à travers mais la croûte a perdu son caractère délicat. Baisser la température de l'huile de 5°C pour le lot suivant."
+          }
+        ]
+      },
+      "feelCue": "Écoutez le grésillement lorsque la crevette entre dans l'huile : un crack fort et à haute fréquence est correct, comme l'électricité statique. Un gourdin faible et lent signifie que l'huile est trop froide; la quasi-silence signifie que l'huile a fortement chuté."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Égoutter et plaque",
+      "inputs": [
+        "tempura_shrimp",
+        "ing_10"
+      ],
+      "outputState": "finished_shrimp_tempura",
+      "instructions": "Égoutter chaque pièce verticalement contre le bord d'un porte-fils pendant 10 secondes — le tenir en arrière pour que l'excès d'huile descende et sorte la croûte. Disposer sur une serviette pliée ou sur du papier de wachi sur une plaque ou un plateau de bambou, les queues aspirées vers le haut. Servir avec la tentesuyu dans de petits bols à côté du daikon râpé. La crevette doit être consommée immédiatement — la tempura se dégrade dans les 2 minutes à mesure que la vapeur de l'intérieur migre et adoucit la coquille.",
+      "visualCue": {
+        "primaryTarget": "Or pâle, fantomatique, coquillage lacé debout sur la plaque, éventail de queue aventuré symétriquement au sommet. La surface a l'air sèche et mate, pas grasse ou scintillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface semble humide et huileuse — la croûte n'a pas été drainée et s'adoucit déjà à partir de l'huile piégée.",
+            "action": "Tenez-vous debout sur la grille 10 secondes de plus. Servir immédiatement après."
+          },
+          {
+            "state": "Perfect",
+            "description": "D'aspect sec, or pâle, coquillage lacé. Le tapoter avec une baguette produit un son creux et net. La queue est rouge-orange vif à cause de la chaleur.",
+            "action": "Servir dans les 60 secondes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte s'est ramollie et dégonflée; elle est maintenant croustillante plutôt que croquante. La vapeur de la crevette chaude s'est effondrée.",
+            "action": "Mangez quand même, mais vite. La saveur est intacte même quand la texture est partie. Prévoyez de servir le prochain lot dès qu'il sortira de l'huile."
+          }
+        ]
+      },
+      "feelCue": "Prenez un morceau par la queue — la croûte doit sentir la lumière comme du papier et craquer entre vos doigts quand très légèrement comprimé. Toute douceur signifie que l'humidité a déjà gagné."
+    }
+  ]
 };

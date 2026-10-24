@@ -1,82 +1,209 @@
 export default {
-  repoId: "master_indian_mango-lassi_001",
-  parentRepoId: null,
-  slug: "mango-lassi",
-  author: "ForkRecipe Kitchen",
-  title: "Mango Lassi",
-  description: "The chilled Punjabi yogurt drink made with ripe Alphonso mango — thick, sweet, and faintly tart, with the dairy's richness cooling the palate like nothing else on a hot day.",
-  cuisine: "Indian",
-  culture: "Punjabi",
-  category: "beverages",
-  tags: ["indian", "mango", "yogurt", "beverage", "sweet", "cooling"],
-  difficulty: 1,
-  activeTime: "5 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 1, sour: 2, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Sweetener", name: "Ripe Alphonso mango pulp (fresh or canned Kesar)",    ratioValue: 2,    defaultUnit: "parts", substitutions: ["ripe Ataulfo mango", "frozen mango chunks, thawed"] },
-    { ingId: "ing_02", role: "Dairy",     name: "Full-fat plain yogurt, cold",                         ratioValue: 2,    defaultUnit: "parts", substitutions: ["whole-milk kefir", "coconut yogurt"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Whole milk, cold",                                    ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["cold water for lighter body"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Sugar or honey",                                      ratioValue: 0.1,  defaultUnit: "parts", substitutions: ["agave nectar"] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground cardamom (freshly ground from green pods)",    ratioValue: 0.01, defaultUnit: "parts", substitutions: ["a strip of cardamom steeped and removed"] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Rose water",                                          ratioValue: 0.02, defaultUnit: "parts", substitutions: ["orange blossom water"] },
-    { ingId: "ing_07", role: "Garnish",   name: "Pinch of saffron threads, bloomed in 1 tsp warm milk", ratioValue: 0.005, defaultUnit: "parts", substitutions: ["pinch of turmeric for color"] },
+  "repoId": "master_indian_mango-lassi_001",
+  "parentRepoId": null,
+  "slug": "mango-lassi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Mango Lassi",
+  "description": "La boisson fraîche de yaourt de Punjabi faite avec la mangue d'Alphonso mûre — épaisse, douce et légèrement goudronnée, avec la richesse de la laiterie refroidissant le palais comme rien d'autre par une journée chaude.",
+  "cuisine": "Indiens",
+  "culture": "Punjabi",
+  "category": "beverages",
+  "tags": [
+    "indienne",
+    "Mango",
+    "yaourt",
+    "boisson",
+    "doux",
+    "refroidissement"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "5 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Bloom",
-      inputs: ["ing_07"],
-      outputState: "bloomed_saffron",
-      instructions: "Crumble a small pinch of saffron threads into one teaspoon of warm (not boiling) milk or water. Stir and leave to steep for 5 minutes. The liquid will turn golden-orange and the room will fill with a faintly floral, honeyed scent. This brief blooming extracts both the color and the aroma compounds that a blender alone cannot release. If using canned mango pulp (which is already deep golden), you can skip this step — the saffron is primarily a luxury flourish.",
-      visualCue: {
-        primaryTarget: "The small amount of milk has turned a vivid golden-orange from the saffron; the threads themselves have softened and release color evenly when stirred.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is still pale; saffron threads look dry and have not fully released color.", action: "Wait another 2–3 minutes; the blooming is passive — do not rush it with boiling liquid." },
-          { state: "Perfect",   description: "Vivid golden-orange liquid; threads are plump and stained pale orange; aroma is distinctly floral and saffron-sweet.", action: "Set aside until blending." },
-          { state: "Overdone",  description: "Liquid has cooled; no harm done — saffron does not burn in liquid. Oversteeping in warm liquid only deepens the color slightly.", action: "Use as-is." },
-        ],
-      },
-      feelCue: "A properly bloomed saffron suspension smells like warm honey meeting a wildflower meadow — a scent that feels expensive and sunny. If you smell nothing, the saffron may be old or adulterated.",
+      "ingId": "ing_01",
+      "role": "Sweetener",
+      "name": "Pâte de mangue Ripe Alphonso (Kesar frais ou en conserve)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Mangue d'Ataulfo mûre",
+        "morceaux de mangues congelés, dégelés"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "bloomed_saffron"],
-      outputState: "blended_lassi",
-      instructions: "Combine the mango pulp, cold yogurt, cold milk, sugar, cardamom, and rose water in a blender. Add the bloomed saffron and all its liquid. Blend on high for 60–90 seconds until completely smooth, frothy, and homogeneous. Taste and adjust: add more sugar if the mango is tart, more yogurt if you want a thicker, more tangy result, or a splash more milk if you prefer it to pour like a drink rather than be eaten with a spoon. Serve immediately or refrigerate for up to an hour — longer and the foam collapses and the mango can separate.",
-      visualCue: {
-        primaryTarget: "A thick, frothy, vivid golden-orange drink with a rich foam cap; no visible lumps of mango or streaks of white yogurt; color is uniform mango-gold.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is lumpy; white yogurt streaks visible; blender ran for too short a time.", action: "Blend for another 30–60 seconds on high until perfectly smooth." },
-          { state: "Perfect",   description: "Thick, homogeneous, golden, and foamy; pours slowly; tastes balanced between sweet mango and tangy yogurt with a floral cardamom lift.", action: "Pour into tall glasses over ice or serve chilled as-is." },
-          { state: "Overdone",  description: "Blended so long the foam has already started to deflate; temperature has risen and the lassi tastes warm and flat.", action: "Add a small handful of ice, blend for 10 seconds to re-chill and re-froth." },
-        ],
-      },
-      feelCue: "The lassi should pour like a thick milkshake — not as watery as juice, not as solid as smoothie. It should coat the inside of the glass slightly before sliding down. A good lassi sits on your palate for a moment before cooling the throat.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Yogourt plein gras, frais",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "kéfir lait entier",
+        "yaourt de noix de coco"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Chill",
-      inputs: ["blended_lassi"],
-      outputState: "chilled_lassi",
-      instructions: "If serving immediately, pour into chilled glasses over a few cubes of ice. If making ahead, transfer to a pitcher, cover, and refrigerate for up to 1 hour. Give the pitcher a vigorous shake or a 10-second re-blend before pouring, as the mango pulp and yogurt can settle in layers. The lassi should arrive at the table cold enough to fog the glass — its entire purpose is thermal relief.",
-      visualCue: {
-        primaryTarget: "A tall, fogged glass of dense golden drink; condensation forming on the outside; a faint froth cap of pale foam; color a rich saffron-mango gold.",
-        spectrum: [
-          { state: "Underdone", description: "Lassi is room temperature or only slightly cool; foam has collapsed; glass is not cold.", action: "Add ice and refrigerate the glasses for 5 minutes before serving." },
-          { state: "Perfect",   description: "Deeply cold, condensation on the glass, still frothy at the top, vivid golden color.", action: "Serve at once and drink slowly." },
-          { state: "Overdone",  description: "Separated after more than 2 hours in the fridge; top layer is thin and watery, mango solids sunken.", action: "Re-blend for 20 seconds to recombine before serving." },
-        ],
-      },
-      feelCue: "Hold the glass for a moment — you should feel the chill immediately through the glass. On the first sip, the cold hits first, then sweetness blooms, then the yogurt tang arrives at the back of the throat. That sequence is the whole point.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Lait entier, froid",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau froide pour corps plus léger"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre ou miel",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "nectar d'agave"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cardamome au sol (fraîchir à partir de gousses vertes)",
+      "ratioValue": 0.01,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une bande de cardamome trempée et enlevée"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Eau de rose",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau de fleur d'orange"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Pince de fils de safran, fleuri dans 1 c. à thé de lait chaud",
+      "ratioValue": 0.005,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pincée de curcuma pour la couleur"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bloom",
+      "inputs": [
+        "ing_07"
+      ],
+      "outputState": "bloomed_saffron",
+      "instructions": "Crumblez une petite pincée de fils de safran dans une cuillère à café de lait chaud (sans bouillir) ou d'eau. Mélanger et laisser tremper pendant 5 minutes. Le liquide deviendra doré-orange et la pièce se remplira d'un parfum légèrement floral et miellé. Cette brève floraison extrait à la fois la couleur et les composés aromatiques qu'un mélangeur seul ne peut pas libérer. Si vous utilisez de la pulpe de mangue en conserve (qui est déjà en or profond), vous pouvez sauter cette étape — le safran est avant tout un fleuron de luxe.",
+      "visualCue": {
+        "primaryTarget": "La petite quantité de lait a tourné un orange doré vif du safran; les fils eux-mêmes se sont adoucis et libèrent la couleur uniformément lorsqu'ils sont remués.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore pâle; les fils de safran semblent secs et n'ont pas complètement libéré la couleur.",
+            "action": "Attendez encore 2-3 minutes; la floraison est passive — ne la précipitez pas avec du liquide bouillant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide orangé d'or vif; les fils sont plumés et teintés d'orange pâle; l'arôme est nettement floral et sucré au safran.",
+            "action": "Réserver jusqu'au mélange."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide s'est refroidi; aucun mal n'a été fait — le safran ne brûle pas dans le liquide. Le sursaut du liquide chaud ne fait qu'approfondir légèrement la couleur.",
+            "action": "Utiliser comme-est."
+          }
+        ]
+      },
+      "feelCue": "Une suspension de safran bien fleurie sent comme du miel chaud qui rencontre une prairie de fleurs sauvages, une odeur qui se sent chère et ensoleillée. Si vous ne sentez rien, le safran peut être vieux ou falsifié."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "bloomed_saffron"
+      ],
+      "outputState": "blended_lassi",
+      "instructions": "Mélanger la pâte de mangue, le yogourt froid, le lait froid, le sucre, la cardamome et l'eau de rose dans un mélangeur. Ajouter le safran fleuri et tout son liquide. Mélanger en haut pendant 60 à 90 secondes jusqu'à ce qu'il soit complètement lisse, mousseux et homogène. Goûtez et ajustez : ajoutez plus de sucre si la mangue est tarte, plus de yogourt si vous voulez un résultat plus épais, plus tannant, ou un éclaboussure de lait si vous préférez le verser comme une boisson plutôt que d'être mangé avec une cuillère. Servir immédiatement ou réfrigérer jusqu'à une heure — plus longtemps et la mousse s'effondre et la mangue peut se séparer.",
+      "visualCue": {
+        "primaryTarget": "Une boisson épaisse, mousseuse, dorée-orange vive avec un bouchon de mousse riche; pas de morceaux visibles de mangue ou de stries de yogourt blanc; la couleur est uniforme mangue-or.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est grumelé; le yogourt blanc est visible; le mélangeur a couru pendant trop peu de temps.",
+            "action": "Mélanger encore 30 à 60 secondes en haut jusqu'à ce qu'il soit parfaitement lisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, homogène, doré et mousseux; verse lentement; goût équilibré entre la mangue douce et le yogourt tanné avec un lift floral cardamome.",
+            "action": "Verser dans de grands verres sur de la glace ou servir au frais."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mélangeé si longtemps, la mousse a déjà commencé à dégonfler; la température a augmenté et le lassi goûte chaud et plat.",
+            "action": "Ajouter une petite poignée de glace, mélanger pendant 10 secondes pour re-froidir et re-froth."
+          }
+        ]
+      },
+      "feelCue": "Le lassi doit verser comme un épais milkshake — pas aussi liquide que le jus, pas aussi solide que le smoothie. Elle doit recouvrir légèrement l'intérieur du verre avant de glisser. Un bon lassi est assis en bouche un moment avant de refroidir la gorge."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Refroidissement",
+      "inputs": [
+        "blended_lassi"
+      ],
+      "outputState": "chilled_lassi",
+      "instructions": "Si vous servez immédiatement, verser dans des verres réfrigérés sur quelques cubes de glace. Si vous avancez, passez sur un pichet, couvrez et réfrigérez jusqu'à 1 heure. Donnez au pichet une secousse vigoureuse ou un remuant de 10 secondes avant de verser, car la pulpe de mangue et le yogourt peuvent se déposer en couches. Le lassi devrait arriver à la table assez froid pour brouiller le verre — tout son but est le soulagement thermique.",
+      "visualCue": {
+        "primaryTarget": "Un grand verre emboîté de boisson d'or dense; condensation se formant à l'extérieur; un faible bouchon de mousse pâle de mousse de mousse; colorer un riche or safran-mango.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Lassi est à température ambiante ou légèrement frais; la mousse s'est effondrée; le verre n'est pas froid.",
+            "action": "Ajouter la glace et réfrigérer les verres pendant 5 minutes avant de servir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Profondément froid, condensation sur le verre, encore mousseux au sommet, couleur dorée vive.",
+            "action": "Servir immédiatement et boire lentement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Séparé après plus de 2 heures au réfrigérateur; couche supérieure mince et aqueuse, solides de mangue coulés.",
+            "action": "Reremplir pendant 20 secondes avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Tenez le verre un moment — vous devriez sentir le froid immédiatement à travers le verre. Sur la première gorgée, le froid frappe d'abord, puis la douceur fleurit, puis le yaourt tang arrive à l'arrière de la gorge. Cette séquence est tout le point."
+    }
+  ]
 };

@@ -1,100 +1,257 @@
 export default {
-  repoId: "master_italian_agrodolce_001",
-  parentRepoId: null,
-  slug: "agrodolce",
-  author: "ForkRecipe Kitchen",
-  title: "Agrodolce",
-  description: "Sicily's sweet-sour reduction — red wine vinegar and sugar cooked together until they thicken to a syrup, then sharpened with pine nuts and raisins or aromatics. It glazes game birds and pork with a mahogany lacquer and a flavor that swings between caramel and acid before settling into something ancient and complex.",
-  cuisine: "Italian",
-  culture: "Sicilian",
-  category: "sauces",
-  tags: ["agrodolce", "italian", "sweet-sour", "sicilian"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 1, sour: 4, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Sweetener", name: "Granulated sugar",                           ratioValue: 3,    defaultUnit: "parts", substitutions: ["honey for a floral agrodolce", "light brown sugar"] },
-    { ingId: "ing_02", role: "Acid",      name: "Red wine vinegar",                           ratioValue: 3,    defaultUnit: "parts", substitutions: ["sherry vinegar for a deeper flavor", "white wine vinegar"] },
-    { ingId: "ing_03", role: "Fat",       name: "Extra-virgin olive oil",                     ratioValue: 1,    defaultUnit: "part",  substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Shallots or red onion, thinly sliced",       ratioValue: 2,    defaultUnit: "parts", substitutions: ["white onion"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Raisins (golden or dark)",                   ratioValue: 1,    defaultUnit: "part",  substitutions: ["dried currants", "dried cherries"] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Pine nuts, lightly toasted",                 ratioValue: 0.5,  defaultUnit: "part",  substitutions: ["toasted slivered almonds"] },
-    { ingId: "ing_07", role: "Liquid",    name: "Dry white wine",                             ratioValue: 2,    defaultUnit: "parts", substitutions: ["chicken stock for an alcohol-free version"] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Fresh rosemary sprig",                       ratioValue: 1,    defaultUnit: "sprig", substitutions: ["thyme", "bay leaf"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine salt and black pepper",                 ratioValue: 1,    defaultUnit: "to taste", substitutions: [] },
+  "repoId": "master_italian_agrodolce_001",
+  "parentRepoId": null,
+  "slug": "agrodolce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Agrodolce",
+  "description": "La réduction des sucreries de la Sicile — vinaigre de vin rouge et sucre cuits ensemble jusqu'à ce qu'ils épaississent en sirop, puis aiguisés avec des noix de pin et des raisins secs ou aromatiques. Il émaille les oiseaux de gibier et le porc avec une laque acajou et une saveur qui oscille entre le caramel et l'acide avant de s'installer dans quelque chose d'ancien et complexe.",
+  "cuisine": "Italien",
+  "culture": "Sicilien",
+  "category": "sauces",
+  "tags": [
+    "agrodolce",
+    "Italien",
+    "douce-douleur",
+    "sicilienne"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Soften the shallots",
-      inputs: ["ing_03", "ing_04", "ing_08"],
-      outputState: "softened_shallots",
-      instructions: "Warm the olive oil in a wide saucepan over medium-low heat. Add the sliced shallots and the rosemary sprig. Cook gently, stirring occasionally, for 6-8 minutes until the shallots are completely soft, translucent, and just beginning to take on a light golden color. They must not brown — agrodolce's sweetness comes from the sugar, not caramelized onion.",
-      visualCue: {
-        primaryTarget: "Translucent, floppy shallot rings in warm oil, pale gold at their edges, the rosemary beginning to release its resin into the oil.",
-        spectrum: [
-          { state: "Underdone", description: "The shallots are still opaque and slightly crunchy, holding their raw structure. They haven't softened into the oil.", action: "Lower the heat and continue cooking with a lid on for 3-4 more minutes. Agrodolce needs the onion fully sweated before the liquids arrive." },
-          { state: "Perfect",   description: "Completely soft and translucent, golden at the very edges but mostly pale. The oil in the pan is fragrant with rosemary.", action: "Add the wine to deglaze, then begin building the sweet-sour balance." },
-          { state: "Overdone",  description: "Shallots have browned and begun to crisp at the edges, the pan smells of caramelized onion.", action: "Proceed, but know the agrodolce will have a slightly more savory, bitter edge from the browned allium." },
-        ],
-      },
-      feelCue: "The shallots should look like limp ribbons in the oil — you should be able to see the oil through them. They'll feel entirely soft if you press one against the pan with a spoon.",
+      "ingId": "ing_01",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "miel pour une agrodolce florale",
+        "sucre brun léger"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Deglaze and add raisins",
-      inputs: ["softened_shallots", "ing_07", "ing_05"],
-      outputState: "reduced_base",
-      instructions: "Pour in the white wine and let it bubble and reduce by half over medium heat, 3-4 minutes. Add the raisins. Continue simmering until the wine is nearly evaporated and the raisins have plumped in the liquid. The pan will look jammy and slightly reduced.",
-      visualCue: {
-        primaryTarget: "The wine has largely evaporated; the pan holds a small amount of syrupy, purple-tinged liquid with plump raisins nestled among the soft shallots.",
-        spectrum: [
-          { state: "Underdone", description: "The wine is still visibly liquid and thin, not yet reduced. The raisins are shriveled and haven't absorbed liquid.", action: "Raise the heat slightly and simmer another 2-3 minutes until the wine reduces to a syrupy glaze coating the shallots." },
-          { state: "Perfect",   description: "The wine is reduced to a concentrated syrup; the raisins are swollen and glistening. A wooden spoon dragged across the bottom leaves a clean trail that fills back slowly.", action: "Add the sugar and vinegar to build the agrodolce proper." },
-          { state: "Overdone",  description: "The liquid has reduced too far and the raisins are beginning to catch on the pan bottom. The aroma is sharp and slightly scorched.", action: "Immediately add a splash of the vinegar to deglaze — it will lift the fond and the acid will prevent further burning." },
-        ],
-      },
-      feelCue: "Tilt the pan — the liquid should move sluggishly, coating the bottom with a thin, sticky film. The raisins should look glossy and swollen, like grapes.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "vinaigre de vin rouge",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de sherry pour une saveur plus profonde",
+        "vinaigre de vin blanc"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Build the agrodolce",
-      inputs: ["reduced_base", "ing_01", "ing_02"],
-      outputState: "agrodolce_sauce",
-      instructions: "Add the sugar to the pan and stir for 30 seconds until it begins to dissolve in the heat of the base. Pour in the red wine vinegar all at once — it will bubble sharply. Stir to combine and simmer over medium heat for 8-10 minutes until the sauce reduces to a syrupy consistency that coats a spoon. Taste throughout: the ratio of sweet to sour should feel balanced, not one-sided.",
-      visualCue: {
-        primaryTarget: "A deep mahogany, syrupy sauce — the vinegar and sugar have reduced into something thick and glossy, clinging to the spoon and shallots in lacquer-like sheets.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is still thin and sharp, with the vinegar's acidity forward and the sweetness not yet integrated. It runs freely off the spoon.", action: "Continue simmering to reduce. The balance between sweet and sour only emerges as the water content cooks off." },
-          { state: "Perfect",   description: "Thick enough to coat the back of a spoon with a glossy, mahogany-colored layer. Sweet and sour arrive together and then the sauce lingers. The shallots and raisins are suspended in the glaze.", action: "Stir in the toasted pine nuts and season. Serve warm." },
-          { state: "Overdone",  description: "The sauce has reduced to a sticky, jammy paste that threads when lifted on a spoon. Very sweet, the vinegar largely gone.", action: "Add a splash of red wine vinegar and a tablespoon of warm water, stir over low heat, and taste again." },
-        ],
-      },
-      feelCue: "Dip a spoon, hold it up, and watch the sauce fall — at the right consistency it drops in thick, slow beads that momentarily string before breaking. A drop on a cold plate should hold its shape briefly.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Finish with pine nuts",
-      inputs: ["agrodolce_sauce", "ing_06", "ing_09"],
-      outputState: "finished_agrodolce",
-      instructions: "Off the heat, fold in the toasted pine nuts and season with salt and black pepper. The salt will sharpen the sweet-sour contrast dramatically — taste after each pinch. Remove the rosemary sprig. Serve warm over duck, pork tenderloin, pan-roasted chicken thighs, or roasted winter squash.",
-      visualCue: {
-        primaryTarget: "A dark, glossy sauce with the pine nuts glistening within it, the shallots and raisins visible through the mahogany glaze — it should look like something lacquered.",
-        spectrum: [
-          { state: "Underdone", description: "The pine nuts are pale and raw, not yet toasted, giving them a bitter green taste in the finished sauce.", action: "Toast the pine nuts separately in a dry pan until golden before adding them — they should smell nutty and warm." },
-          { state: "Perfect",   description: "The pine nuts are golden-brown, their toasty richness bridging the gap between the vinegar's sharpness and the sugar's sweetness. The sauce is balanced, glossy, and deeply flavored.", action: "Serve immediately or hold warm. Agrodolce firms as it cools but can be rewarmed gently." },
-          { state: "Overdone",  description: "Over-seasoned with salt — the sauce tastes sharp and one-dimensional, the sweet-sour balance upset.", action: "Stir in a small additional pinch of sugar to rebalance. Add salt sparingly — this sauce carries its own." },
-        ],
-      },
-      feelCue: "Taste a small spoonful: sweet hits first, then the acid lifts the back of the palate, then the salt tightens everything and the pine nut richness lingers. If any one note shouts, adjust it before the sauce leaves the pot.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalotes ou oignons rouges, tranchés finement",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon blanc"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Raisins (or ou noir)",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "Cerises séchées",
+        "Cerises séchées"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Noix de pin, légèrement grillées",
+      "ratioValue": 0.5,
+      "defaultUnit": "part",
+      "substitutions": [
+        "aux amandes grillées"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Liquid",
+      "name": "Vin blanc sec",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bouillon de poulet pour une version sans alcool"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Graines de romarin frais",
+      "ratioValue": 1,
+      "defaultUnit": "sprig",
+      "substitutions": [
+        "thym",
+        "feuille de laurier"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin et poivre noir",
+      "ratioValue": 1,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Adoucir les échalotes",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_08"
+      ],
+      "outputState": "softened_shallots",
+      "instructions": "Chauffer l'huile d'olive dans une grande casserole à feu moyen-doux. Ajouter les échalotes tranchées et le rameau de romarin. Cuire doucement, en remuant de temps en temps, pendant 6-8 minutes jusqu'à ce que les échalotes soient complètement douces, translucides et commencent juste à prendre une couleur dorée claire. Ils ne doivent pas brunir — la douceur de l'agrodolce vient du sucre, pas de l'oignon caramélisé.",
+      "visualCue": {
+        "primaryTarget": "Anneaux d'échalote translucides et floppy dans l'huile chaude, or pâle à leurs bords, le romarin commence à libérer sa résine dans l'huile.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les échalotes sont encore opaques et légèrement croquantes, tenant leur structure brute. Ils n'ont pas ramolli dans l'huile.",
+            "action": "Abaissez le feu et continuez la cuisson avec un couvercle sur 3-4 minutes. Agrodolce a besoin de l'oignon complètement transpiré avant l'arrivée des liquides."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement doux et translucide, doré aux bords, mais généralement pâle. L'huile dans la poêle est parfumée de romarin.",
+            "action": "Ajouter le vin à déglacer, puis commencer à construire l'équilibre de notre douceur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les échalotes ont bruni et commencent à croquer aux bords, la poêle sent l'oignon caramélisé.",
+            "action": "Continuez, mais sachez que l'agrodolce aura un bord légèrement plus salé et amer de l'allium doré."
+          }
+        ]
+      },
+      "feelCue": "Les échalotes devraient ressembler à des rubans boiteux dans l'huile — vous devriez pouvoir voir l'huile à travers eux. Ils se sentiront tout doux si vous appuyez un contre la poêle avec une cuillère."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Déglacer et ajouter les raisins secs",
+      "inputs": [
+        "softened_shallots",
+        "ing_07",
+        "ing_05"
+      ],
+      "outputState": "reduced_base",
+      "instructions": "Verser le vin blanc et le laisser buller et réduire de moitié à feu moyen, 3-4 minutes. Ajouter les raisins secs. Continuer à mijoter jusqu'à ce que le vin soit presque évaporé et que les raisins secs aient trempé dans le liquide. La poêle sera jammy et légèrement réduite.",
+      "visualCue": {
+        "primaryTarget": "Le vin s'est en grande partie évaporé; la poêle contient une petite quantité de liquide sirupeux, dentelé pourpre, avec des raisins secs de plomb nichés parmi les échalotes douces.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le vin est encore visiblement liquide et mince, pas encore réduit. Les raisins secs sont broyés et n'ont pas absorbé de liquide.",
+            "action": "Augmenter légèrement le feu et laisser mijoter encore 2-3 minutes jusqu'à ce que le vin réduise à un glaçage sirupeux enrobant les échalotes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le vin est réduit à un sirop concentré; les raisins sont gonflés et scintillent. Une cuillère en bois traînée sur le fond laisse un sentier propre qui se remplit lentement.",
+            "action": "Ajouter le sucre et le vinaigre pour construire l'agrodolce propre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide s'est réduit trop loin et les raisins commencent à s'attraper sur le fond de la poêle. L'arôme est vif et légèrement brûlé.",
+            "action": "Ajoutez immédiatement une éclaboussure de vinaigre pour déglacer — il soulèvera le fond et l'acide empêchera toute autre combustion."
+          }
+        ]
+      },
+      "feelCue": "Inclinez la poêle — le liquide doit se déplacer lentement, en enrobant le fond d'un mince film collant. Les raisins devraient être brillants et gonflés, comme les raisins."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Construire l'agrodolce",
+      "inputs": [
+        "reduced_base",
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "agrodolce_sauce",
+      "instructions": "Ajouter le sucre dans la poêle et remuer pendant 30 secondes jusqu'à ce qu'il commence à se dissoudre dans la chaleur de la base. Verser le vinaigre de vin rouge tout d'un coup — il fera une forte bulle. Mélanger et laisser mijoter à feu moyen pendant 8-10 minutes jusqu'à ce que la sauce diminue à une consistance sirupeuse qui enrobe une cuillère. Goût tout au long : le rapport sucre/ aigre devrait se sentir équilibré, et non pas à sens unique.",
+      "visualCue": {
+        "primaryTarget": "Une sauce acajou, sirupeuse et profonde — le vinaigre et le sucre ont réduit en quelque chose d'épais et brillant, s'accrochant à la cuillère et échalotes dans des feuilles de laque.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore fine et nette, avec l'acidité du vinaigre vers l'avant et la douceur non encore intégrée. Il coule librement de la cuillère.",
+            "action": "Continuer à mijoter pour réduire. L'équilibre entre sucré et aigre n'apparaît que lorsque la teneur en eau se consume."
+          },
+          {
+            "state": "Perfect",
+            "description": "Assez épais pour enrober l'arrière d'une cuillère d'une couche brillante de couleur acajou. Douce et aigre arrivent ensemble, puis la sauce s'attarde. Les échalotes et les raisins secs sont suspendus dans la glaçure.",
+            "action": "Incorporer les pignons grillés et assaisonner. Servir au chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est réduite à une pâte collante et jammy qui file lorsqu'elle est levée sur une cuillère. Très doux, le vinaigre a largement disparu.",
+            "action": "Ajouter une touche de vinaigre de vin rouge et une cuillère à soupe d'eau chaude, remuer à feu doux et goûter à nouveau."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère, maintenez-la et regardez tomber la sauce — à la bonne consistance, elle tombe dans des perles épaisses et lentes qui s'attachent momentanément avant de casser. Une goutte sur une plaque froide devrait tenir sa forme brièvement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Terminer avec les noix de pin",
+      "inputs": [
+        "agrodolce_sauce",
+        "ing_06",
+        "ing_09"
+      ],
+      "outputState": "finished_agrodolce",
+      "instructions": "Hors du feu, plier dans les pignons grillés et assaisonner de sel et de poivre noir. Le sel aiguisera de façon spectaculaire le contraste de la saveur douce — goût après chaque pincement. Enlevez le rameau de romarin. Servir au chaud sur le canard, le filet de porc, les cuisses de poulet grillées ou la courge d'hiver rôtie.",
+      "visualCue": {
+        "primaryTarget": "Une sauce foncée et brillante avec les noix de pin qui brillent à l'intérieur, les échalotes et les raisins visibles à travers la glaçure acajou – il devrait ressembler à quelque chose de laqué.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pignons sont pâles et crus, pas encore grillés, leur donnant un goût vert amer dans la sauce finie.",
+            "action": "Faire cuire les pignons séparément dans une poêle sèche jusqu'à ce qu'ils soient dorés avant de les ajouter — ils doivent sentir la noix et le chaud."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pignons sont dorés, leur richesse grillée comblant l'écart entre la netteté du vinaigre et la douceur du sucre. La sauce est équilibrée, brillante et aromatisée.",
+            "action": "Servir immédiatement ou tenir au chaud. Agrodolce firmes comme il refroidit mais peut être réchauffé doucement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sursaisonnée de sel — la sauce a un goût aigu et unidimensionnel, l'équilibre sucré-sour est perturbé.",
+            "action": "Incorporer une petite pincée supplémentaire de sucre pour rééquilibrer. Ajouter le sel parcimonieusement — cette sauce porte la sienne."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite cuillère : des coups sucrés d'abord, puis l'acide soulève l'arrière du palais, puis le sel resserre tout et la richesse en noix de pin s'attarde. Si une seule note crie, ajustez-la avant que la sauce ne quitte le pot."
+    }
+  ]
 };

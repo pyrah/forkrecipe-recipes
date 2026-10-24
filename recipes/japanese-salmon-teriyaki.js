@@ -1,83 +1,211 @@
 export default {
-  repoId: "master_japanese_japanesesalmonteriyaki_001",
-  parentRepoId: null,
-  slug: "japanese-salmon-teriyaki",
-  author: "ForkRecipe Kitchen",
-  title: "Japanese Salmon Teriyaki",
-  description: "Thick salmon fillets lacquered in a four-ingredient teriyaki glaze until the skin crackles and the glaze turns to a mahogany, bittersweet varnish that shatters at the fork.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "seafood",
-  tags: ["seafood", "gluten-free", "salmon", "japanese", "teriyaki", "glaze"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "35 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 4, sour: 0, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Salmon fillets, skin-on (200g each)",   ratioValue: 2,    defaultUnit: "fillets", substitutions: ["yellowtail", "black cod"] },
-    { ingId: "ing_02", role: "Umami",     name: "Soy sauce (tamari for gluten-free)",     ratioValue: 3,    defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener", name: "Mirin",                                  ratioValue: 3,    defaultUnit: "tbsp", substitutions: ["2 tbsp rice wine + 1 tsp sugar"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Sake",                                   ratioValue: 3,    defaultUnit: "tbsp", substitutions: ["dry sherry"] },
-    { ingId: "ing_05", role: "Sweetener", name: "Sugar",                                  ratioValue: 1,    defaultUnit: "tbsp", substitutions: ["honey"] },
-    { ingId: "ing_06", role: "Fat",       name: "Neutral oil (sunflower or rice bran)",   ratioValue: 1,    defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_07", role: "Garnish",   name: "Thinly sliced green onion",              ratioValue: 10,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",   name: "Toasted sesame seeds",                   ratioValue: 5,    defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_japanese_japanesesalmonteriyaki_001",
+  "parentRepoId": null,
+  "slug": "japanese-salmon-teriyaki",
+  "author": "ForkRecipe Kitchen",
+  "title": "Saumon japonais Teriyaki",
+  "description": "Des filets de saumon épais laqués dans une glaçure teriyaki à quatre ingrédients jusqu'à ce que la peau craque et la glaçure se transforme en vernis acajou et doux amer qui se brise à la fourchette.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "seafood",
+  "tags": [
+    "Produits de la mer",
+    "Sans gluten",
+    "saumon",
+    "Japonais",
+    "Teriyaki",
+    "glaçure"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "35 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "teriyaki_glaze",
-      instructions: "Combine the soy sauce, mirin, sake, and sugar in a small saucepan. Bring to a boil over medium heat and stir to dissolve the sugar. Simmer for 3–4 minutes until reduced by one-third and the glaze coats the back of a spoon with a thin sheen. Remove from heat. The glaze thickens further as it cools.",
-      visualCue: {
-        primaryTarget: "Glaze is dark amber and coats the spoon in a thin, even film that runs slowly off the edge.",
-        spectrum: [
-          { state: "Underdone", description: "Glaze is thin and watery; runs off the spoon immediately without coating.", action: "Continue simmering for 2 more minutes." },
-          { state: "Perfect",   description: "Leaves a clean, slow-dripping coat on the spoon. Deep amber-brown. Smells of caramelized soy and sweet rice wine.", action: "Remove from heat. It will thicken further as it cools." },
-          { state: "Overdone",  description: "Glaze has become very thick and sticky while hot — it will set rock-hard as it cools.", action: "Add 1 tbsp of water and stir over low heat to loosen." },
-        ],
-      },
-      feelCue: "Dip a spoon and drag your finger through the coating — a properly reduced teriyaki should hold a clean line for 3–4 seconds before it flows back together.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filets de saumon, avec peau (200g chacun)",
+      "ratioValue": 2,
+      "defaultUnit": "fillets",
+      "substitutions": [
+        "à queue jaune",
+        "morue noire"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["ing_01", "ing_06"],
-      outputState: "seared_salmon",
-      instructions: "Pat the salmon fillets completely dry with kitchen paper — any moisture creates steam and prevents a crust. Score the skin 3 times diagonally to prevent curling. Heat the oil in a non-stick or cast-iron pan over medium-high heat until shimmering. Place the salmon skin-side down and press firmly with a spatula for 10 seconds to prevent curling. Cook skin-side down for 4 minutes until the skin is deeply golden and crisp and the flesh has turned opaque 2/3 of the way up the sides. Flip once.",
-      visualCue: {
-        primaryTarget: "Skin is a deep, golden-brown with crisp, rendered edges; the flesh has turned opaque from the bottom up, leaving a translucent orange band at the top.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is pale and sticking to the pan; flesh is still fully translucent. Salmon will tear if you try to flip it.", action: "Wait — salmon releases naturally when the skin is properly seared. Do not force it." },
-          { state: "Perfect",   description: "Skin is deep golden-brown and releases cleanly. Flesh is opaque 60–70% of the way through. Edges are just beginning to turn white.", action: "Flip and reduce heat to medium." },
-          { state: "Overdone",  description: "Flesh has gone fully opaque and white all the way to the top before flipping. Skin may be too dark.", action: "Flip immediately and apply glaze. The center will be cooked through but not dry yet." },
-        ],
-      },
-      feelCue: "Press the thickest part of the salmon with your fingertip — skin-down, it should feel firm at the base but spring back like a muscle at rest in the upper half.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "sauce soja (tamari sans gluten)",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Glaze",
-      inputs: ["seared_salmon", "teriyaki_glaze", "ing_07", "ing_08"],
-      outputState: "finished_salmon_teriyaki",
-      instructions: "After flipping, cook the flesh side for 1 minute. Reduce heat to low. Pour the teriyaki glaze over and around the salmon. As it bubbles, spoon it over the top of the fillets repeatedly for 1–2 minutes. The glaze will reduce and lacquer the salmon in a shiny, mahogany coating. Remove from heat and spoon any remaining glaze over the top. Scatter green onion and sesame seeds. Rest 1 minute before serving.",
-      visualCue: {
-        primaryTarget: "Salmon is coated in a deeply shiny mahogany glaze with caramelized edges and the skin is visibly crisp beneath.",
-        spectrum: [
-          { state: "Underdone", description: "Glaze is still thin and running off; the salmon looks pale and under-lacquered.", action: "Baste more aggressively over low heat for 1–2 more minutes." },
-          { state: "Perfect",   description: "Salmon glistens with a thick, dark glaze that barely moves when the pan tilts. Smells of caramelized soy and sake. Flesh is just set and yields to gentle pressure.", action: "Rest 1 minute and serve immediately." },
-          { state: "Overdone",  description: "Glaze has blackened and turned bitter-sharp; salmon interior is chalky and dry.", action: "Remove from heat immediately. Serve with extra plain rice to balance the intense, slightly bitter exterior." },
-        ],
-      },
-      feelCue: "The finished fillet should offer a distinct two-texture experience — a barely yielding press on the surface followed by a clean, buttery give as the fork enters the flesh.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Mirin",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "2 c. à soupe de vin de riz + 1 c. à thé de sucre"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Mâcher",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "sherry sec"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile neutre (sunflower ou son de riz)",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Oignon vert tranché finement",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "teriyaki_glaze",
+      "instructions": "Mélanger la sauce de soja, le mirin, le saké et le sucre dans une petite casserole. Porter à ébullition à feu moyen et remuer pour dissoudre le sucre. Laisser mijoter de 3 à 4 minutes jusqu'à ce qu'il soit réduit d'un tiers et que la glaçure recouvre le dos d'une cuillère d'un mince éclat. Retirer du feu. La glaçure s'épaissit davantage pendant qu'elle refroidit.",
+      "visualCue": {
+        "primaryTarget": "La glace est ambre foncée et enrobe la cuillère dans un film mince, même qui court lentement hors du bord.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La glace est mince et aqueuse; elle s'écoule immédiatement sans enrobage.",
+            "action": "Continuer à mijoter pendant 2 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Laisse une couche propre et lente sur la cuillère. Deep ambre-brun. Des odeurs de soja caramélisé et de vin de riz sucré.",
+            "action": "Retirer du feu. Il s'épaissira encore plus en refroidissant."
+          },
+          {
+            "state": "Overdone",
+            "description": "La glace est devenue très épaisse et collante, alors qu'elle est chaude, et elle va rendre la roche dure à mesure qu'elle refroidit.",
+            "action": "Ajouter 1 c. à soupe d'eau et remuer à feu doux pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère et faites glisser votre doigt à travers le revêtement — un teriyaki correctement réduit devrait tenir une ligne propre pendant 3-4 secondes avant qu'il se retourne ensemble."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "ing_01",
+        "ing_06"
+      ],
+      "outputState": "seared_salmon",
+      "instructions": "Les filets de saumon sont complètement secs avec du papier de cuisine. Noter la peau 3 fois en diagonale pour éviter le curling. Chauffer l'huile dans une poêle antiadhésive ou en fonte à feu moyen-élevé jusqu'à ce qu'elle mijote. Placer la peau du saumon vers le bas et appuyer fermement avec une spatule pendant 10 secondes pour éviter le curling. Cuire la peau vers le bas pendant 4 minutes jusqu'à ce que la peau soit profondément dorée et croustillante et que la chair soit devenue opaque 2/3 du chemin vers le haut des côtés. Flip une fois.",
+      "visualCue": {
+        "primaryTarget": "La peau est un brun doré profond aux bords croustillants et rendus; la chair est devenue opaque du bas vers le haut, laissant une bande orange translucide en haut.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est pâle et collée à la poêle; la chair est encore entièrement translucide. Le saumon déchirera si vous essayez de le retourner.",
+            "action": "Attendez — le saumon se libère naturellement lorsque la peau est bien séchée. Ne la forcez pas."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est brun-or profond et se libère proprement. La chair est opaque 60 à 70 % du passage. Les bords commencent à peine à devenir blancs.",
+            "action": "Fliper et réduire le feu à moyen."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair est devenue complètement opaque et blanche jusqu'au sommet avant de retourner. La peau peut être trop sombre.",
+            "action": "Flipez immédiatement et appliquez de la glaçure. Le centre sera cuit mais pas encore sec."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la partie la plus épaisse du saumon avec votre bout de doigt — peau vers le bas, il doit se sentir ferme à la base mais ressort comme un muscle au repos dans la moitié supérieure."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Glace",
+      "inputs": [
+        "seared_salmon",
+        "teriyaki_glaze",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_salmon_teriyaki",
+      "instructions": "Après avoir retourné, cuire le côté chair pendant 1 minute. Réduire la chaleur à faible. Verser le teriyaki glaçure sur et autour du saumon. Pendant qu'elle bulle, la cuillère sur le dessus des filets à plusieurs reprises pendant 1-2 minutes. La glaçure réduira et laquera le saumon dans un revêtement acajou brillant. Retirer du feu et cuillerer toute glaçure restante sur le dessus. Éparpiller l'oignon vert et les graines de sésame. Reposez-vous 1 minute avant de servir.",
+      "visualCue": {
+        "primaryTarget": "Le saumon est recouvert d'une glaçure acajou profondément brillante aux bords caramélisés et la peau est visiblement croquante en dessous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La glace est encore mince et s'écoule; le saumon semble pâle et sous-laqué.",
+            "action": "Bastir plus agressivement à feu doux pendant 1 à 2 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le saumon brille d'une épaisse glaçure foncée qui se déplace à peine lorsque la poêle bascule. Des odeurs de soja caramélisé et de saké. La chair est juste mise et donne à la pression douce.",
+            "action": "Reposez-vous 1 minute et servez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La glace a noirci et est devenue amère; l'intérieur du saumon est crayeux et sec.",
+            "action": "Retirer immédiatement du feu. Servir avec du riz extra uni pour équilibrer l'extérieur intense et légèrement amer."
+          }
+        ]
+      },
+      "feelCue": "Le filet fini devrait offrir une expérience distincte à deux textures: une presse à peine filante sur la surface suivie d'une fourche propre et beurreuse qui pénètre dans la chair."
+    }
+  ]
 };

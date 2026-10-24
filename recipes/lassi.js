@@ -1,103 +1,277 @@
 export default {
-  repoId: "master_indian_lassi_001",
-  parentRepoId: null,
-  slug: "lassi",
-  author: "ForkRecipe Kitchen",
-  title: "Lassi",
-  description: "Punjab's cooling yogurt drink — thick, tangy dairy whipped with cold water until frothy and pale, offered sweet with rose water and saffron or savory with roasted cumin and black salt; the perfect antidote to any spiced meal.",
-  cuisine: "Indian",
-  culture: "North Indian Punjabi",
-  category: "beverages",
-  tags: ["vegetarian", "gluten-free", "indian", "beverage", "yogurt", "punjabi"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 1, sour: 2, bitter: 0, umami: 0, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",      name: "Whole-milk plain yogurt (full fat)", ratioValue: 300, defaultUnit: "g",  substitutions: ["Greek yogurt (thin with extra water)", "buffalo yogurt for ultra-rich"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Cold water or ice cubes",          ratioValue: 150,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Sugar or honey (sweet version)",   ratioValue: 25,   defaultUnit: "g",   substitutions: ["jaggery for earthy sweetness"] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Rose water (sweet version)",       ratioValue: 10,   defaultUnit: "ml",  substitutions: ["kewra water"] },
-    { ingId: "ing_05", role: "Aromatic",   name: "Saffron threads (sweet version)",  ratioValue: 0.2,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_06", role: "Liquid",     name: "Warm milk, 1 tbsp (for blooming saffron)", ratioValue: 15, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",      name: "Roasted cumin powder / jeera (savory version)", ratioValue: 3, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Black salt / kala namak (savory version)", ratioValue: 2, defaultUnit: "g", substitutions: ["regular salt (loses the sulfurous depth)"] },
-    { ingId: "ing_09", role: "Herb",       name: "Fresh mint leaves (savory version)", ratioValue: 8,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_10", role: "Aromatic",   name: "Fresh ginger, grated (savory version)", ratioValue: 5, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_11", role: "Garnish",    name: "Crushed pistachios (sweet) or fried cumin seeds (savory)", ratioValue: 10, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_12", role: "Spice",      name: "Ground cardamom (sweet version)",  ratioValue: 1,    defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_indian_lassi_001",
+  "parentRepoId": null,
+  "slug": "lassi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Lassi",
+  "description": "La boisson de yaourt rafraîchissante du Pendjab — épaisse, laiteuse tannée fouettée avec de l'eau froide jusqu'à ce que mousseux et pâle, offert doux avec de l'eau de rose et du safran ou salé avec du cumin rôti et du sel noir; l'antidote parfait à tout repas épicé.",
+  "cuisine": "Indiens",
+  "culture": "Punjabi indien du Nord",
+  "category": "beverages",
+  "tags": [
+    "végétarien",
+    "Sans gluten",
+    "indienne",
+    "boisson",
+    "yaourt",
+    "punjabi"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Bloom",
-      inputs: ["ing_05", "ing_06"],
-      outputState: "saffron_milk",
-      instructions: "For the sweet lassi version: combine the saffron threads with the warm milk (about 50°C — very warm but not scalding) in a small cup. Crush the threads very gently between your fingers as you add them. Stir and leave to bloom for 5 minutes. The milk will gradually turn a vivid golden-orange, and the room will fill with the unmistakable floral-honeyed scent of saffron. This blooming step maximizes color and flavor extraction — saffron threads added directly to cold yogurt release far less of their compounds. If making savory lassi, skip this step entirely.",
-      visualCue: {
-        primaryTarget: "The warm milk has turned a deep, vivid saffron-orange with crimson streaks from the threads. The liquid smells powerfully of saffron — floral, slightly metallic, honeyed.",
-        spectrum: [
-          { state: "Underdone", description: "Milk is barely yellow after 2 minutes. Threads have not yet released their pigment or aroma.", action: "Use slightly warmer milk (but not boiling, which damages the aromatic compounds) and wait the full 5 minutes." },
-          { state: "Perfect",   description: "Vivid deep gold to orange color. Intense saffron fragrance. Threads have turned pale and cream-colored, having given up most of their color.", action: "Use immediately in the blender." },
-          { state: "Overdone",  description: "Milk was too hot and boiled, cooking off the volatile saffron aromatics. Color is there but fragrance is muted.", action: "Still usable — the color remains even if some aroma is lost. Proceed and add an extra drop of rose water to compensate." },
-        ],
-      },
-      feelCue: "Hold the cup close to your nose — a strong saffron bloom should hit you immediately, a distinctive floral-honey-metallic scent unlike anything else. If you smell nothing, the threads were poor quality.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Yogourt à lait entier (graisse pleine)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Yogourt grec (fin avec de l'eau supplémentaire)",
+        "yaourt de bison pour ultra-riche"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_12", "saffron_milk"],
-      outputState: "sweet_lassi_blend",
-      instructions: "For sweet lassi: combine the yogurt, cold water or ice cubes, sugar, rose water, cardamom, and the saffron-infused milk in a blender. For savory lassi: use yogurt, cold water, roasted cumin powder, black salt, fresh mint leaves, and grated ginger instead. Blend at high speed for 60 full seconds. The key to lassi's characteristic frothy, aerated texture is blending at high speed long enough for air to be incorporated — do not stop at 20 seconds. The mixture should go from pale white-yellow to a visibly paler, frothier consistency as air is whipped in. A traditional Punjabi method uses a hand-churner (mathani) for even longer to achieve a deeply frothy result.",
-      visualCue: {
-        primaryTarget: "A vigorously frothy, uniformly pale drink with a thick cap of small white bubbles at the top. The color is a soft golden-ivory for sweet, or pure white for savory. No visible yogurt lumps.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is blended but not frothy — it pours like thick milk rather than a frothy drink. Blended less than 30 seconds.", action: "Continue blending at maximum speed for another 30–45 seconds. Real lassi is defined by its foam." },
-          { state: "Perfect",   description: "Thick, airy foam has formed at the top. The main body of the drink is uniformly pale and visibly lighter in color than the original yogurt. Pours with a slight bubble trail.", action: "Pour immediately into chilled glasses over ice." },
-          { state: "Overdone",  description: "Blended too long and the ice has fully melted, making the lassi too thin and watery. Or the blender heat has warmed it.", action: "Add more ice and blend briefly (5 seconds) to re-chill and recover some froth." },
-        ],
-      },
-      feelCue: "Pour a small amount onto the back of your hand — it should feel cool, smooth, and slightly silky, not watery or thick. The foam should hold for at least 10 seconds before deflating.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau froide ou glaçons",
+      "ratioValue": 150,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Season",
-      inputs: ["sweet_lassi_blend"],
-      outputState: "seasoned_lassi",
-      instructions: "Taste the blended lassi immediately. Sweet version: adjust sugar upward if too tart (yogurt acidity varies significantly by brand), add a touch more rose water if the floral note is absent, or a pinch more cardamom for warmth. Savory version: the kala namak (black salt) is crucial — it provides a distinctive sulfurous egg-like quality that is characteristic of salted lassi and should be perceptible but not overpowering. Add more cumin if the drink tastes flat. For both versions, the balance of sweet or savory against the natural yogurt sourness is the key. Taste several times — adjustments change the drink dramatically.",
-      visualCue: {
-        primaryTarget: "For sweet: a golden, fragrant, beautifully frothy drink. For savory: a pure-white frothy drink with visible flecks of cumin and mint fragments.",
-        spectrum: [
-          { state: "Underdone", description: "Lassi tastes flat — not enough seasoning to balance the yogurt's acidity. Seems sour without depth.", action: "Add more sugar for sweet version or more kala namak and cumin for savory; blend again briefly to incorporate." },
-          { state: "Perfect",   description: "A complete, layered flavor: the yogurt tang is present but in balance. Sweet version: floral, gently sweet, with saffron and rose weaving through. Savory: cooling, cumin-forward, refreshing with a funky black-salt edge.", action: "Serve immediately — lassi does not improve with waiting." },
-          { state: "Overdone",  description: "Over-seasoned: too sweet and cloying, or so salty it is unpleasant to drink.", action: "Add more plain yogurt and cold water; blend to dilute and re-balance, then re-taste." },
-        ],
-      },
-      feelCue: "Sip a tablespoon and hold it on your tongue — the yogurt's cool acidity should arrive first, then the flavoring (rose and saffron or cumin and black salt), then a smooth, creamy dairy finish.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre ou miel (version sucrée)",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": [
+        "jaggery pour la douceur terreuse"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["seasoned_lassi", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "finished_lassi",
-      instructions: "Pour the lassi immediately into pre-chilled tall glasses or clay cups over a generous handful of ice. The froth is the most prized part — pour carefully to preserve as much foam on top as possible, rather than directly onto the ice where the bubbles will collapse. For sweet lassi: garnish with a pinch of crushed pistachios, a light dusting of ground cardamom, and a few extra saffron threads laid across the foam. For savory lassi: float a few whole mint leaves on the foam, dust with a pinch of roasted cumin, and add a light sprinkle of black salt. Serve immediately — lassi waits for no one.",
-      visualCue: {
-        primaryTarget: "A tall glass wearing a proud cap of foam with garnishes resting on top. The foam should be visibly distinct from the body of the drink for at least the first 2–3 minutes of serving.",
-        spectrum: [
-          { state: "Underdone", description: "Foam has completely collapsed before serving. Glass looks like pale milk rather than frothy lassi.", action: "Re-blend at high speed for 30 seconds and pour immediately without delay." },
-          { state: "Perfect",   description: "Generous head of fine, stable foam. Garnishes sit attractively on the foam without sinking. The body below is uniformly colored and chilled.", action: "Serve and drink immediately." },
-          { state: "Overdone",  description: "Over-garnished to the point of obscuring the drink. Or the glass was not chilled and the lassi warms immediately.", action: "No recovery once plated — serve and drink within 2 minutes while cold and frothy." },
-        ],
-      },
-      feelCue: "Lift the glass and feel the cold against your palm — a perfect lassi should feel as cold as a glass of ice water, the chill transferring immediately through the glass, with foam that tickles the upper lip when you drink.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Eau de rose (version sucrée)",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau de kewra"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Fils de safran (version douce)",
+      "ratioValue": 0.2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Lait chaud, 1 c. à soupe (pour la floraison du safran)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poudre de cumin grillée / jera (version salée)",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel noir / kala namak (version salée)",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel régulier (perte la profondeur sulfureuse)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Feuilles de menthe fraîches (version salée)",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Gingembre frais, râpé (version salée)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Pistaches concassées (doux) ou graines de cumin frites (savori)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Spice",
+      "name": "Cardamome au sol (version sucrée)",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bloom",
+      "inputs": [
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "saffron_milk",
+      "instructions": "Pour la version lassi douce: combiner les fils de safran avec le lait chaud (environ 50°C – très chaud mais pas écalage) dans une petite tasse. Crushez les fils très doucement entre vos doigts en les ajoutant. Incorporer et laisser fleurir pendant 5 minutes. Le lait tournera progressivement un orange doré vif, et la pièce se remplira d'un parfum de safran floral et frais. Cette étape de floraison maximise l'extraction de la couleur et de la saveur — fils de safran ajoutés directement au yaourt froid libèrent beaucoup moins de leurs composés. Si vous faites du lassi salé, sautez cette étape entièrement.",
+      "visualCue": {
+        "primaryTarget": "Le lait chaud a transformé un safran-orange profond et vif avec des stries pourpres des fils. Le liquide sent fortement le safran — floral, légèrement métallique, miellé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait est à peine jaune après 2 minutes. Les fils n'ont pas encore libéré leur pigment ou leur arôme.",
+            "action": "Utilisez du lait légèrement plus chaud (mais pas bouillant, ce qui endommage les composés aromatiques) et attendez les 5 minutes complètes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vivant or profond à couleur orange. Parfum de safran intense. Les fils sont devenus pâles et de couleur crème, ayant renoncé à la plupart de leur couleur.",
+            "action": "Utiliser immédiatement dans le mélangeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait était trop chaud et bouilli, faisant cuire les aromatiques volatils du safran. La couleur est là mais le parfum est muet.",
+            "action": "Toujours utilisable — la couleur reste même si un certain arôme est perdu. Continuer et ajouter une goutte d'eau de rose supplémentaire pour compenser."
+          }
+        ]
+      },
+      "feelCue": "Tenez la tasse près de votre nez — une forte floraison de safran devrait vous frapper immédiatement, un parfum floral-argent-métallique distinctif contrairement à tout autre. Si vous ne sentez rien, les fils étaient de mauvaise qualité."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_12",
+        "saffron_milk"
+      ],
+      "outputState": "sweet_lassi_blend",
+      "instructions": "Pour le lassi sucré : combiner le yaourt, l'eau froide ou les glaçons, le sucre, l'eau de rose, la cardamome et le lait infusé de safran dans un mélangeur. Pour le lassi salé : utiliser du yogourt, de l'eau froide, de la poudre de cumin grillée, du sel noir, des feuilles de menthe fraîches et du gingembre râpé. Mélanger à haute vitesse pendant 60 secondes complètes. La clé de la texture caractéristique de la mousse aérée de lassi se mélange à grande vitesse assez longtemps pour que l'air soit incorporé — ne pas s'arrêter à 20 secondes. Le mélange doit passer de jaune-blanc pâle à une consistance visiblement plus pâle, plus mousseuse lorsque l'air est fouetté. Une méthode traditionnelle du Pendjabi utilise un churner à la main (mathani) pour obtenir un résultat profondément mousseux.",
+      "visualCue": {
+        "primaryTarget": "Une boisson chaudement mousseuse, uniformément pâle, avec un épais capuchon de petites bulles blanches au sommet. La couleur est un doux or-ivory pour doux, ou blanc pur pour salé. Pas de grumeaux de yaourt visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est mélangé mais non mousseux — il verse comme du lait épais plutôt qu'une boisson mousseuse. Mélange de moins de 30 secondes.",
+            "action": "Continuer le mélange à vitesse maximale pendant 30 à 45 secondes. La vraie lassi est définie par sa mousse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une mousse épaisse et aérée s'est formée au sommet. Le corps principal de la boisson est uniformément pâle et visiblement plus clair de couleur que le yogourt original. Verse avec une légère trace de bulle.",
+            "action": "Verser immédiatement dans des verres réfrigérés sur de la glace."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mélange trop long et la glace a complètement fondu, rendant la lassi trop fine et aqueuse. Ou la chaleur du mélangeur l'a chauffée.",
+            "action": "Ajouter plus de glace et mélanger brièvement (5 secondes) pour re-froidir et récupérer un peu de mousse."
+          }
+        ]
+      },
+      "feelCue": "Versez une petite quantité sur le dos de votre main — elle doit être fraîche, lisse et légèrement soyeuse, non aqueuse ou épaisse. La mousse doit être maintenue pendant au moins 10 secondes avant le dégonflage."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "sweet_lassi_blend"
+      ],
+      "outputState": "seasoned_lassi",
+      "instructions": "Goûtez la lassi mélangée immédiatement. Version douce : ajuster le sucre vers le haut si trop de tarte (l'acidité du yogourt varie significativement selon la marque), ajouter une touche plus d'eau de rose si la note florale est absente, ou une pincée plus de cardamome pour la chaleur. Version savore: le kala namak (sel noir) est crucial — il fournit une qualité ovoïde sulfureuse distinctive qui est caractéristique de la lassi salée et doit être perceptible, mais pas en excès. Ajouter plus de cumin si la boisson a un goût plat. Pour les deux versions, l'équilibre entre sucré ou salé contre l'auresse naturelle du yogourt est la clé. Goûtez plusieurs fois — les réglages changent considérablement la boisson.",
+      "visualCue": {
+        "primaryTarget": "Pour le doux : une boisson dorée, parfumée, magnifiquement mousseuse. Pour sarriette : boisson mousseuse blanc pur avec des taches visibles de cumin et de menthe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Lassi a un goût plat — pas assez assaisonnement pour équilibrer l'acidité du yogourt. Ça semble aigre sans profondeur.",
+            "action": "Ajouter plus de sucre pour la version sucrée ou plus de kala namak et de cumin pour le savory; mélanger à nouveau brièvement à incorporer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une saveur complète, stratifiée: le yaourt tang est présent mais en équilibre. Version douce : florale, douce, avec safran et rose. Saveur: refroidissement, cumin-avant, rafraîchissant avec un bord de sel noir funky.",
+            "action": "Servir immédiatement — le lassi ne s'améliore pas en attendant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop assaisonné : trop sucré et bouillant, ou si salé, il est désagréable de boire.",
+            "action": "Ajouter plus de yogourt et d'eau froide; mélanger pour diluer et rééquilibrer, puis réalimenter."
+          }
+        ]
+      },
+      "feelCue": "Sirotez une cuillère à soupe et maintenez-la sur votre langue — l'acidité fraîche du yogourt devrait arriver d'abord, puis l'arôme (rose et safran ou cumin et sel noir), puis une finale laitière douce et crémeuse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "seasoned_lassi",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "finished_lassi",
+      "instructions": "Verser immédiatement le lassi dans des grands verres ou des gobelets d'argile pré-réfrigérés sur une généreuse poignée de glace. La mousse est la partie la plus prisée — versez soigneusement pour conserver le plus de mousse possible, plutôt que directement sur la glace où les bulles s'effondreront. Pour le lassi sucré : garnir d'une pincée de pistaches concassées, d'une légère poussière de cardamome moulu et de quelques fils de safran supplémentaires posés sur la mousse. Pour le lassi salé: flotter quelques feuilles entières de menthe sur la mousse, la poussière avec une pincée de cumin rôti, et ajouter une légère saupoudrée de sel noir. Servir immédiatement — Lassi n'attend personne.",
+      "visualCue": {
+        "primaryTarget": "Un grand verre portant une fière casquette de mousse avec des garnitures reposant sur le dessus. La mousse doit être visiblement distincte du corps de la boisson pendant au moins les 2 à 3 premières minutes de service.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La mousse s'est complètement effondrée avant de servir. Le verre ressemble à du lait pâle plutôt qu'à du lassi mousseux.",
+            "action": "Remonter à haute vitesse pendant 30 secondes et verser immédiatement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tête généreuse de mousse fine et stable. Les garnitures s'assoient joliment sur la mousse sans couler. Le corps ci-dessous est uniformément coloré et réfrigéré.",
+            "action": "Servir et boire immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmené au point d'obscurcir la boisson. Ou le verre n'était pas refroidi et le lassi se réchauffe immédiatement.",
+            "action": "Aucun rétablissement une fois plaqué — servir et boire dans les 2 minutes pendant le froid et la mousse."
+          }
+        ]
+      },
+      "feelCue": "Soulevez le verre et sentez le froid contre votre paume — un lassi parfait devrait se sentir aussi froid qu'un verre d'eau glacée, le froid se transférant immédiatement à travers le verre, avec de la mousse qui chatouille la lèvre supérieure quand vous buvez."
+    }
+  ]
 };

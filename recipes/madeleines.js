@@ -1,116 +1,287 @@
 export default {
-  repoId: "master_french_madeleines_001",
-  parentRepoId: null,
-  slug: "madeleines",
-  author: "ForkRecipe Kitchen",
-  title: "Classic Madeleines",
-  description: "Shell-shaped, honey-golden sponge cakes with a distinctive hump — a fleeting warmth of browned butter and lemon zest that perfumes the kitchen for only a few minutes after leaving the pan, best eaten while still crackling at the edges.",
-  cuisine: "French",
-  culture: "Lorraine",
-  category: "desserts",
-  tags: ["madeleines", "french", "butter", "lemon", "petite-fours", "tea-cake", "baking"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "2 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 4, salty: 1, sour: 1, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",                  ratioValue: 120, defaultUnit: "g",   substitutions: ["cake flour for a more tender crumb"] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter",                    ratioValue: 115, defaultUnit: "g",   substitutions: ["European-style butter for richer noisette"] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Caster sugar",                       ratioValue: 100, defaultUnit: "g",   substitutions: ["fine granulated sugar"] },
-    { ingId: "ing_04", role: "Binder",     name: "Eggs (large, room temperature)",     ratioValue: 100, defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Honey (floral, mild)",               ratioValue: 20,  defaultUnit: "g",   substitutions: ["golden syrup", "maple syrup"] },
-    { ingId: "ing_06", role: "Citrus",     name: "Lemon zest (finely grated)",         ratioValue: 4,   defaultUnit: "g",   substitutions: ["orange zest for a softer, warmer note"] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Vanilla extract",                    ratioValue: 5,   defaultUnit: "g",   substitutions: ["vanilla bean paste"] },
-    { ingId: "ing_08", role: "Leavener",   name: "Baking powder",                      ratioValue: 5,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning",  name: "Fine sea salt",                      ratioValue: 2,   defaultUnit: "g",   substitutions: ["fleur de sel"] },
+  "repoId": "master_french_madeleines_001",
+  "parentRepoId": null,
+  "slug": "madeleines",
+  "author": "ForkRecipe Kitchen",
+  "title": "Madeleines classiques",
+  "description": "Gâteaux d'éponge en forme de coquille, dorés au miel, avec une bosse distinctive: une chaleur fugace de beurre brun et de zeste de citron qui parfume la cuisine quelques minutes seulement après avoir quitté la poêle, mieux mangé tout en craquelant encore aux bords.",
+  "cuisine": "Français",
+  "culture": "Lorraine",
+  "category": "desserts",
+  "tags": [
+    "madeleines",
+    "français",
+    "beurre",
+    "citron",
+    "Petite-quatre",
+    "Cake à thé",
+    "Cuisson"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "2 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Melt",
-      inputs: ["ing_02"],
-      outputState: "browned_butter",
-      instructions: "Place the butter in a light-coloured saucepan over medium heat. It will melt, foam, subside, then foam a second time. At the second foam, swirl constantly and watch the milk solids on the bottom: they will turn from blonde to golden to hazelnut-brown (noisette). At the first scent of toasty hazelnuts, immediately pour the butter into a cold bowl to stop cooking. Cool to room temperature — it should be liquid but not warm.",
-      visualCue: {
-        primaryTarget: "Golden-amber liquid with a scattering of dark-brown milk solids on the bottom of the receiving bowl. The kitchen smells of toasted hazelnuts and caramel.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is fully melted and clear yellow but the milk solids are still pale and blonde. Little aroma beyond fresh butter.", action: "Return to heat and continue swirling. The noisette colour happens quickly — watch closely and don't walk away." },
-          { state: "Perfect",   description: "A clear amber-gold liquid with dark-brown flecks settled at the bottom. Smell is unmistakably nutty and caramel-sweet.", action: "Pour immediately into a cold bowl. Don't leave it in the hot pan — it will continue to darken from residual heat." },
-          { state: "Overdone",  description: "Butter has gone past amber to dark brown and smells acrid or burnt. The milk solids are nearly black.", action: "Discard and start again — burnt beurre noisette will make every madeleine bitter. The window between perfect and overdone is about 15 seconds." },
-        ],
-      },
-      feelCue: "The second foam is quieter and more golden than the first — when the sizzling softens and you smell something like roasted nuts, you have five seconds to act.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "farine de gâteau pour une miette plus tendre"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["ing_04", "ing_03", "ing_05"],
-      outputState: "ribbon_mixture",
-      instructions: "In a large bowl, whisk together the eggs, caster sugar, and honey. Whisk vigorously — by hand for 3 to 4 minutes, or with an electric whisk on high for 2 minutes — until the mixture has roughly doubled in volume, turned pale ivory, and falls from the whisk in a thick ribbon that holds its shape on the surface for a few seconds before dissolving.",
-      visualCue: {
-        primaryTarget: "A pale, creamy-ivory, billowing mixture that falls from the whisk in a slow, thick ribbon and sits on the surface for 3–4 seconds before sinking.",
-        spectrum: [
-          { state: "Underdone", description: "Still golden-yellow and liquid. The whisk leaves no trail. Mixture is thin and homogeneous.", action: "Keep whisking — you need to dissolve the sugar fully and incorporate enough air to give the madeleines their lift. Under-aerated batter bakes flat." },
-          { state: "Perfect",   description: "Pale, thick, almost mousse-like. Holds a clear ribbon. The volume is about double what you started with.", action: "Stop whisking. Now add the dry ingredients and aromatics — over-whisking from this point collapses the air you just built." },
-          { state: "Overdone",  description: "Mixture has become stiff, meringue-like, and the whisk leaves rigid peaks. Bright white and grainy.", action: "You've over-aerated. Fold in the dry ingredients gently to deflate to a reasonable consistency — the madeleines may still be fine, but slightly drier." },
-        ],
-      },
-      feelCue: "Lift the whisk and draw a figure-eight in the batter with the falling ribbon. If the line holds for a moment before melting back in, you're there.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 115,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Beurre de style européen pour plus de bruit"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["ribbon_mixture", "ing_01", "ing_08", "ing_09", "ing_06", "ing_07", "browned_butter"],
-      outputState: "madeleine_batter",
-      instructions: "Sift the flour, baking powder, and salt directly over the ribbon mixture. Add the lemon zest and vanilla extract. Using a large spatula, fold gently with wide, sweeping, under-over strokes until just combined — no dry streaks, but don't over-mix. Finally, pour the cooled browned butter around the edge of the batter and fold it in the same way until fully incorporated. The batter will be smooth, glossy, and noticeably heavier.",
-      visualCue: {
-        primaryTarget: "A smooth, glossy, pale batter — slightly heavier than the ribbon stage, with a subtle shimmer from the butter. Smells of lemon and hazelnuts.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of flour still visible, or the butter is pooled at the base rather than incorporated. Looks streaky and uneven.", action: "Fold a few more strokes, focusing on the bottom of the bowl where flour hides. Be deliberate but not vigorous." },
-          { state: "Perfect",   description: "Uniform, smooth, and glossy. Falls off the spatula in a slow ribbon. No flour streaks, no butter pools.", action: "Cover the bowl tightly with cling film and refrigerate for at least 1 hour, or up to 24 hours. The cold rest is essential for the signature hump." },
-          { state: "Overdone",  description: "Batter looks deflated, flat, and dense. Vigorous stirring has popped all the air bubbles and developed the gluten.", action: "Proceed — the rest in the fridge may help recover some structure, but the hump will be smaller and the crumb tighter." },
-        ],
-      },
-      feelCue: "The batter should pour slowly off a spoon in a single, unbroken ribbon — not drip, not flow. If it runs like water, the butter was too warm; if it sits in stiff mounds, it was over-worked.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre granulé fin"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Chill",
-      inputs: ["madeleine_batter"],
-      outputState: "rested_batter",
-      instructions: "Press cling film directly onto the surface of the batter and refrigerate for at least 1 hour, or up to 24 hours. Meanwhile, butter the madeleine molds generously and dust with flour, tapping out the excess; refrigerate the prepared pan too. The cold shock when cold batter meets a hot oven creates the distinctive hump — do not skip this step.",
-      visualCue: {
-        primaryTarget: "The batter has firmed slightly and is noticeably cold. It holds its shape when piped or spooned into the mold without spreading immediately.",
-        spectrum: [
-          { state: "Underdone", description: "Batter is still warm or room temperature. It flows too easily into the molds and spreads thin before the oven can set it.", action: "Return to the fridge. An hour is the minimum — overnight rested batters often produce a more defined hump than a 1-hour rest." },
-          { state: "Perfect",   description: "Cold, firm, thick. Holds its shape in the mold for a few seconds before settling. The butter in the molds has set solid.", action: "Fill the molds to three-quarters full and bake immediately from cold. Have the oven pre-heated to 200°C for at least 20 minutes." },
-          { state: "Overdone",  description: "You rested the batter for several days — it may have absorbed too much liquid or begun to smell sour from the eggs.", action: "The batter is best used within 24 hours. Beyond that, it still bakes but the lift is diminished." },
-        ],
-      },
-      feelCue: "Scoop the batter cold and it should hold a small dome in the mold for 2–3 seconds before slowly relaxing — a sign the fat has solidified enough to create a temperature shock in the oven.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Oeufs (large, température ambiante)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Bake",
-      inputs: ["rested_batter"],
-      outputState: "finished_madeleines",
-      instructions: "Preheat the oven to 200°C (390°F) for at least 20 minutes. Fill the chilled, floured molds to three-quarters full. Bake for 10 to 12 minutes until the edges are deep golden and pulling away from the shell, the hump has risen fully and the peak is just set. Remove immediately and turn out onto a rack. Eat within 30 minutes — they are a different food after an hour.",
-      visualCue: {
-        primaryTarget: "The classic hump has risen clearly above the rim. Edges are deep golden-brown; the hump peak is pale gold and just dry. The shell-side is richly caramelised and patterned.",
-        spectrum: [
-          { state: "Underdone", description: "The hump looks raw and damp at the peak. Shell-side is pale blond. The madeleine springs back loosely when pressed.", action: "Add 1–2 more minutes. The hump should be dry to the touch at its highest point and the edges visibly darker than the centre." },
-          { state: "Perfect",   description: "Hump stands high and firm, dry at the top. Edges and shell underside are deep golden. The kitchen smells of warm butter, honey, and lemon. They release from the mold cleanly.", action: "Turn out shell-side up immediately onto a rack. They are at their peak for the next 20 minutes." },
-          { state: "Overdone",  description: "Edges are dark brown approaching burnt, the hump is cracked, and the aroma tips from caramel toward bitter biscuit.", action: "They are still edible — trim the darkest edges and dip in chocolate to rescue. Lower oven or reduce time by 2 minutes next time." },
-        ],
-      },
-      feelCue: "Freshly unmolded, the shell underside should feel warm and slightly tacky with caramelised butter. The hump should be springy, not soft. Press it gently: it should push back immediately like a sponge, not collapse.",
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Miel (floral, doux)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sirop d'or",
+        "sirop d'érable"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Citrus",
+      "name": "Zeste de citron (finement râpé)",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": [
+        "zeste orange pour une note plus douce et plus chaude"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Extrait de vanille",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâte de haricots vanille"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "fleur de sel"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire fondre",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "browned_butter",
+      "instructions": "Placer le beurre dans une casserole de couleur claire à feu moyen. Il va fondre, mousser, s'abaisser, puis mousser une seconde fois. À la deuxième mousse, tourner constamment et regarder les solides de lait sur le fond : ils tourneront de blond à doré à noisette-brun (noisette). Au premier parfum de noisettes grillées, verser immédiatement le beurre dans un bol froid pour arrêter la cuisson. Refroidir à la température ambiante — il doit être liquide mais pas chaud.",
+      "visualCue": {
+        "primaryTarget": "Liquide doré-ambre avec une dispersion de solides de lait brun foncé sur le fond du bol récepteur. La cuisine sent les noisettes grillées et le caramel.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est complètement fondu et jaune clair, mais les solides de lait sont encore pâles et blonds. Petit arôme au-delà du beurre frais.",
+            "action": "Retourner à la chaleur et continuer à tourner. La couleur de la noisette se produit rapidement — surveillez attentivement et ne partez pas."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un liquide d'or ambré clair avec des taches brun foncé s'installe au fond. L'odeur est sans conteste la noix et le caramel sucré.",
+            "action": "Verser immédiatement dans un bol froid. Ne la laissez pas dans la poêle chaude — elle continuera à s'assombrir de la chaleur résiduelle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre a passé l'ambre au brun foncé et sent acride ou brûlé. Les solides de lait sont presque noirs.",
+            "action": "Jetez et recommencez — le bruit de beurre brûlé rendra chaque madeleine amère. La fenêtre entre parfait et dépassé est d'environ 15 secondes."
+          }
+        ]
+      },
+      "feelCue": "La deuxième mousse est plus calme et plus dorée que la première — quand le grésillement s'adoucit et que vous sentez quelque chose comme des noix grillées, vous avez cinq secondes à agir."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_04",
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "ribbon_mixture",
+      "instructions": "Dans un grand bol, fouetter ensemble les œufs, le sucre et le miel. fouetter vigoureusement — à la main pendant 3 à 4 minutes, ou avec un fouet électrique en haut pendant 2 minutes — jusqu'à ce que le mélange ait à peu près doublé en volume, soit devenu ivoire pâle, et tombe du fouet dans un ruban épais qui tient sa forme sur la surface pendant quelques secondes avant de se dissoudre.",
+      "visualCue": {
+        "primaryTarget": "Un mélange pâle, onctueux et enflammé qui tombe du fouet dans un ruban lent et épais et s'assied à la surface pendant 3-4 secondes avant de couler.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours jaune doré et liquide. Le fouet ne laisse aucune trace. Le mélange est mince et homogène.",
+            "action": "Continuez à fouetter — vous devez dissoudre complètement le sucre et incorporer suffisamment d'air pour donner aux madeleines leur ascenseur. La pâte sous-aérée est plate."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pale, épais, presque mousseux. Il tient un ruban clair. Le volume est à peu près le double de ce que vous avez commencé avec.",
+            "action": "Arrête de siffler. Ajoutez maintenant les ingrédients secs et les aromatiques — le sursaut à partir de ce point s'effondre l'air que vous venez de construire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est devenu rigide, semblable à la meringue, et les feuilles fouettent les pics rigides. Blanc vif et granuleux.",
+            "action": "Vous avez trop aéré. Plier doucement dans les ingrédients secs pour dégonfler à une consistance raisonnable — les madeleines peuvent encore être fines, mais légèrement plus sèches."
+          }
+        ]
+      },
+      "feelCue": "Soulevez le fouet et dessinez une figure-huit dans la pâte avec le ruban tombant. Si la ligne tient un moment avant de fondre, vous êtes là."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "ribbon_mixture",
+        "ing_01",
+        "ing_08",
+        "ing_09",
+        "ing_06",
+        "ing_07",
+        "browned_butter"
+      ],
+      "outputState": "madeleine_batter",
+      "instructions": "Passer la farine, la poudre à pâte et le sel directement sur le mélange de ruban. Ajouter le zeste de citron et l'extrait de vanille. À l'aide d'une grande spatule, plier délicatement avec de larges traits balayés, en dessous jusqu'à ce qu'ils soient simplement combinés — pas de stries sèches, mais ne pas trop mélanger. Enfin, verser le beurre doré refroidi autour du bord de la pâte et le plier de la même manière jusqu'à ce qu'il soit entièrement incorporé. La pâte sera lisse, brillante et nettement plus lourde.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse, brillante, pâle, légèrement plus lourde que le plateau du ruban, avec un éclat subtil du beurre. Des odeurs de citron et de noisettes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des bouts de farine encore visibles, ou le beurre est mis en commun à la base plutôt que incorporé. Ça a l'air strié et inégal.",
+            "action": "Plier encore quelques coups, en se concentrant sur le fond du bol où la farine se cache. Soyez délibéré mais pas vigoureux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme, lisse et brillant. Il tombe de la spatule dans un ruban lent. Pas de stries de farine, pas de piscines de beurre.",
+            "action": "Couvrir fermement le bol avec un film d'accrochage et réfrigérer pendant au moins 1 heure, ou jusqu'à 24 heures. Le repos froid est essentiel pour la bosse signature."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie semble dégonflée, plate et dense. Agitation vigoureuse a fait jaillir toutes les bulles d'air et développé le gluten.",
+            "action": "Continuez — le reste dans le réfrigérateur peut aider à récupérer une certaine structure, mais la bosse sera plus petite et la miette plus serrée."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit verser lentement d'une cuillère dans un seul ruban non cassé — pas goutte à goutte, pas couler. S'il coule comme de l'eau, le beurre était trop chaud; s'il était assis dans des monticules raides, il était surmené."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Refroidissement",
+      "inputs": [
+        "madeleine_batter"
+      ],
+      "outputState": "rested_batter",
+      "instructions": "Appuyez sur le film de collage directement sur la surface de la pâte et réfrigérez pendant au moins 1 heure, ou jusqu'à 24 heures. Pendant ce temps, beurrer les moules de madeleine généreusement et la poussière avec la farine, en tapant l'excès; réfrigérer la poêle préparée aussi. Le choc froid lorsque la pâte froide rencontre un four chaud crée la bosse distinctive — ne sautez pas cette étape.",
+      "visualCue": {
+        "primaryTarget": "La pâte s'est légèrement raffermie et est nettement froide. Il tient sa forme lorsqu'il est conduit ou cuillé dans le moule sans s'étendre immédiatement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La batterie est encore chaude ou température ambiante. Il s'écoule trop facilement dans les moules et s'étend fin avant que le four puisse le régler.",
+            "action": "Retournez au frigo. Une heure est le minimum — les pâtes au repos de nuit produisent souvent une bosse plus définie qu'un repos d'une heure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Froid, ferme, épais. Il tient sa forme dans le moule pendant quelques secondes avant de se poser. Le beurre dans les moules est solide.",
+            "action": "Remplir les moules à trois quarts et cuire immédiatement à partir du froid. Préchauffer le four à 200°C pendant au moins 20 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez reposé la pâte pendant plusieurs jours — elle a peut - être absorbé trop de liquide ou commencé à sentir de l'aigre des œufs.",
+            "action": "La pâte est mieux utilisée en 24 heures. Au-delà de cela, il fait encore des ravages mais l'ascenseur est diminué."
+          }
+        ]
+      },
+      "feelCue": "Faites refroidir la pâte et il devrait tenir un petit dôme dans le moule pendant 2-3 secondes avant de se détendre lentement — un signe que la graisse a suffisamment solidifié pour créer un choc de température dans le four."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "rested_batter"
+      ],
+      "outputState": "finished_madeleines",
+      "instructions": "Préchauffer le four à 200°C (390°F) pendant au moins 20 minutes. Remplir les moules frais et farinés à trois quarts. Cuire au four pendant 10 à 12 minutes jusqu'à ce que les bords soient en or profond et qu'ils s'éloignent de la coquille, la bosse s'est levée complètement et le pic est juste réglé. Retirer immédiatement et tourner sur un rack. Mangez dans les 30 minutes — ce sont des aliments différents après une heure.",
+      "visualCue": {
+        "primaryTarget": "La bosse classique s'est nettement relevée au-dessus de la jante. Les bords sont brun doré profond; le pic de bosse est d'or pâle et juste sec. Le côté coquillier est richement caramélisé et motif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La bosse semble crue et humide au pic. Le côté coquille est blond pâle. La madeleine ressort lâchement lorsqu'elle est pressée.",
+            "action": "Ajoutez encore 1 à 2 minutes. La bosse doit être sèche au toucher à son point le plus élevé et les bords visiblement plus foncés que le centre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Humpe haute et ferme, sèche au sommet. Les bords et la coquille sont en or profond. La cuisine sent le beurre chaud, le miel et le citron. Ils libèrent du moule proprement.",
+            "action": "Il s'avère qu'il y a une coquille immédiatement sur un rack. Ils sont à leur apogée pendant les 20 prochaines minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont brun foncé à l'approche des brûlés, la bosse est fissurée, et l'arôme de pointe du caramel vers le biscuit amer.",
+            "action": "Ils sont encore comestibles — tailler les bords les plus sombres et tremper dans le chocolat pour sauver. Baisser le four ou réduire le temps de 2 minutes la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Fraisement non mélangée, la coquille en dessous doit se sentir chaude et légèrement collante avec du beurre caramélisé. La bosse devrait être printanière, pas molle. Appuyez doucement sur : il doit repousser immédiatement comme une éponge, pas s'effondrer."
+    }
+  ]
 };

@@ -1,93 +1,225 @@
 export default {
-  repoId: "master_american_shrimp_stock_001",
-  parentRepoId: null,
-  slug: "shrimp-stock",
-  author: "ForkRecipe Kitchen",
-  title: "Quick Shrimp Stock",
-  description: "A fast-simmered prawn shell stock from the New England pantry — pale gold, clean, and sweet with the briny perfume of the Atlantic. Ready in under an hour; the essential base for chowder, bisque, and seafood risotto.",
-  cuisine: "American",
-  culture: "New England",
-  category: "stocks",
-  tags: ["stock", "shrimp", "prawn", "seafood", "american", "new england", "quick"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 0, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Shrimp shells and heads",              ratioValue: 2, defaultUnit: "parts", substitutions: ["prawn shells", "lobster bodies"] },
-    { ingId: "ing_02", role: "Aromatic",  name: "Onion, quartered",                     ratioValue: 0.5, defaultUnit: "parts", substitutions: ["shallots"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Celery stalks with leaves",            ratioValue: 0.25, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Herb",      name: "Bay leaves and black peppercorns",     ratioValue: 1, defaultUnit: "bundle", substitutions: [] },
-    { ingId: "ing_05", role: "Liquid",    name: "Cold water",                           ratioValue: 6, defaultUnit: "parts", substitutions: ["light fish stock"] },
-    { ingId: "ing_06", role: "Acid",      name: "Dry white wine",                       ratioValue: 0.5, defaultUnit: "parts", substitutions: ["dry vermouth", "lemon juice (half the amount)"] },
+  "repoId": "master_american_shrimp_stock_001",
+  "parentRepoId": null,
+  "slug": "shrimp-stock",
+  "author": "ForkRecipe Kitchen",
+  "title": "Stock de crevettes rapides",
+  "description": "Un stock de coquilles de crevettes à mijoter rapidement du garde-manger de la Nouvelle - Angleterre — or pâle, propre et doux avec le parfum de l'Atlantique. Prêt en moins d'une heure; la base essentielle pour le risotto de la boucherie, bisque et fruits de mer.",
+  "cuisine": "Américain",
+  "culture": "Nouvelle-Angleterre",
+  "category": "stocks",
+  "tags": [
+    "stock",
+    "crevettes",
+    "crevette",
+    "Produits de la mer",
+    "américains",
+    "Nouvelle-Angleterre",
+    "Vite"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Sauté",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "toasted_shells",
-      instructions: "In a heavy saucepan over medium-high heat, add the shrimp shells and heads with the onion and celery — no fat needed. Stir and press the shells against the hot pan until they turn bright pink-orange and the kitchen fills with a toasty, oceanic aroma. About 3–4 minutes. Do not let them burn.",
-      visualCue: {
-        primaryTarget: "Shells have shifted from translucent grey to vivid pink-orange. The pan bottom may show faint browning.",
-        spectrum: [
-          { state: "Underdone", description: "Shells are still grey and wet-looking. No color change. Smells only of raw shellfish.", action: "Raise the heat and keep pressing — you need the Maillard reaction to start." },
-          { state: "Perfect",   description: "Bright coral-pink shells with a few golden spots. The aroma is sweet, briny, and faintly nutty.", action: "Add wine and deglaze." },
-          { state: "Overdone",  description: "Shells are darkening to brown and starting to smell acrid.", action: "Immediately add the wine to stop the cooking." },
-        ],
-      },
-      feelCue: "Press a shell flat against the pan with your wooden spoon — it should release with a snap, not stick or drag.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Coquilles et têtes de crevettes",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "coquilles de crevettes",
+        "les caisses de homard"
+      ]
     },
     {
-      nodeId: "step_2", action: "Deglaze",
-      inputs: ["toasted_shells", "ing_06"],
-      outputState: "deglazed_shells",
-      instructions: "Pour the white wine into the hot pan and scrape any stuck bits from the bottom. Let the wine reduce by half — about 2 minutes — until the raw alcohol smell gives way to something softer and winey.",
-      visualCue: {
-        primaryTarget: "Wine has reduced to a syrupy glaze coating the shells. Bubbles are slow and large rather than furious.",
-        spectrum: [
-          { state: "Underdone", description: "Wine is still bubbling vigorously and smells sharply of alcohol.", action: "Continue reducing — raw wine makes the stock taste harsh." },
-          { state: "Perfect",   description: "Wine has reduced to a few tablespoons of glossy, light amber liquid with a mellow, integrated aroma.", action: "Add cold water and bay leaves." },
-          { state: "Overdone",  description: "Wine has completely evaporated and shells are starting to fry again.", action: "Add water immediately." },
-        ],
-      },
-      feelCue: "Tilt the pan — the liquid should flow slowly, coating the shells in a thin, shiny film rather than pooling freely.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "Oignon, quarté",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalotes"
+      ]
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["deglazed_shells", "ing_05", "ing_04"],
-      outputState: "simmered_stock",
-      instructions: "Add cold water and bay leaves. Bring to a gentle simmer over medium heat. Do NOT boil — shrimp shells release bitter compounds if aggressively cooked. Simmer uncovered for 25–30 minutes, skimming any foam that rises in the first 10 minutes. The liquid should barely tremble at the surface.",
-      visualCue: {
-        primaryTarget: "A pale gold, slightly pink-tinged liquid with a quiet, breathing surface. Faint foam skimmed and discarded in the first minutes.",
-        spectrum: [
-          { state: "Underdone", description: "Stock is nearly colorless and tastes of plain water. The shells look unchanged.", action: "Simmer another 10 minutes and taste again." },
-          { state: "Perfect",   description: "Light gold with a rosy tint, clear, with a clean briny-sweet shrimp flavor and a lingering sweetness on the finish.", action: "Strain immediately — do not over-steep or it turns bitter." },
-          { state: "Overdone",  description: "Stock has turned darker orange and has a slightly chalky, metallic taste.", action: "Strain right away and dilute with a little fresh water." },
-        ],
-      },
-      feelCue: "Dip a teaspoon and sip directly: the sweetness should hit first, followed by a clean salt-brine note. If bitterness comes first, it has gone too long.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri avec feuilles",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Strain",
-      inputs: ["simmered_stock"],
-      outputState: "finished_shrimp_stock",
-      instructions: "Strain through a fine-mesh sieve into a clean container, pressing the shells gently. Discard solids. Use immediately in chowder or bisque, or cool in an ice bath and refrigerate up to 2 days. Freeze in ice cube trays for convenient portions.",
-      visualCue: {
-        primaryTarget: "A clear, pale gold stock with a very faint pink blush. Light-bodied but glossy.",
-        spectrum: [
-          { state: "Underdone", description: "Stock is milky or cloudy with shell debris.", action: "Pass through the sieve a second time; if still cloudy, let it rest 10 minutes and ladle off the clear liquid above the sediment." },
-          { state: "Perfect",   description: "Clear, golden, faintly pink. Smells of the sea and herbs. Tastes clean and sweet.", action: "Use within 2 days or freeze." },
-          { state: "Overdone",  description: "Stock is dark amber and intensely concentrated — more of a glaze than a stock.", action: "Dilute to taste with water before using." },
-        ],
-      },
-      feelCue: "Run a drop between your fingers — it should feel just barely slicker than water, with a whisper of body but nothing sticky.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Feuilles de baies et grains de poivre noirs",
+      "ratioValue": 1,
+      "defaultUnit": "bundle",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "stocks de poissons légers"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Vin blanc sec",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vermouth sec",
+        "jus de citron (la moitié de la quantité)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "toasted_shells",
+      "instructions": "Dans une casserole lourde à feu moyen-vif, ajouter les coquilles et les têtes de crevettes avec l'oignon et le céleri — sans gras nécessaire. Mélanger et presser les coquillages contre la poêle chaude jusqu'à ce qu'ils deviennent orange rose vif et la cuisine se remplit d'un arôme océanique grillé. Environ 3-4 minutes. Ne les laissez pas brûler.",
+      "visualCue": {
+        "primaryTarget": "Les coquilles sont passées de gris translucide à orange rose vif. Le fond de la poêle peut être légèrement bruni.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coquilles sont encore grises et humides. Pas de changement de couleur. Il sent seulement les mollusques crus.",
+            "action": "Levez la chaleur et continuez à presser — vous avez besoin de la réaction Maillard pour commencer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Coquilles coralliennes brillantes avec quelques taches dorées. L'arôme est doux, brillant et légèrement noisette.",
+            "action": "Ajouter le vin et déglacer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les coquilles s'assombrissent à brun et commencent à sentir l'acride.",
+            "action": "Ajouter immédiatement le vin pour arrêter la cuisson."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une coquille plane contre la poêle avec votre cuillère en bois — elle devrait se relâcher avec un bouton, ne pas coller ou glisser."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Déglacement",
+      "inputs": [
+        "toasted_shells",
+        "ing_06"
+      ],
+      "outputState": "deglazed_shells",
+      "instructions": "Verser le vin blanc dans la poêle chaude et racler les morceaux collés du fond. Laissez le vin diminuer de moitié — environ 2 minutes — jusqu'à ce que l'odeur d'alcool brut laisse place à quelque chose de plus doux et vineux.",
+      "visualCue": {
+        "primaryTarget": "Le vin a réduit à un glaçage sirupeux enrobant les coquilles. Les bulles sont lentes et grandes plutôt que furieuses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le vin bouillonne encore vigoureusement et sent fortement l'alcool.",
+            "action": "Continuer à réduire — le vin cru rend le goût du stock dur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le vin a réduit à quelques cuillères à soupe de liquide ambré brillant et léger avec un arôme doux et intégré.",
+            "action": "Ajouter l'eau froide et les feuilles de laurier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le vin s'est complètement évaporé et les coquilles recommencent à frire.",
+            "action": "Ajouter de l'eau immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Inclinez la casserole — le liquide doit s'écouler lentement, en enrobant les coquilles dans un film mince et brillant plutôt que de se regrouper librement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "deglazed_shells",
+        "ing_05",
+        "ing_04"
+      ],
+      "outputState": "simmered_stock",
+      "instructions": "Ajouter l'eau froide et les feuilles de laurier. Porter à feu doux à feu moyen. NE PAS bouillir — les coquilles de crevettes libèrent des composés amers si elles sont cuites de façon agressive. Laisser mijoter à découvert de 25 à 30 minutes, en écrémant toute mousse qui monte dans les 10 premières minutes. Le liquide devrait à peine trembler à la surface.",
+      "visualCue": {
+        "primaryTarget": "Un liquide d'or pâle, légèrement rose, avec une surface de respiration calme. Mousse écrémée et jetée dans les premières minutes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock est presque incolore et les goûts d'eau pure. Les coquilles n'ont pas changé.",
+            "action": "Laisser mijoter encore 10 minutes et goûter à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or clair avec une teinte rosée, clair, avec une saveur propre de crevettes briny-sweet et une douceur persistante sur la finale.",
+            "action": "Sourire immédiatement — ne pas trop tordre ou il devient amer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock est devenu orange plus foncé et a un goût légèrement crayeux et métallique.",
+            "action": "La souche tout de suite et diluer avec un peu d'eau douce."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère à café et sirotez directement : la douceur devrait frapper en premier, suivie d'une note saline propre. Si l'amertume vient en premier, elle est partie trop longtemps."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Poignée",
+      "inputs": [
+        "simmered_stock"
+      ],
+      "outputState": "finished_shrimp_stock",
+      "instructions": "Plongez dans un tamis à mailles fines dans un récipient propre, pressez doucement les coquilles. Jetez les solides. Utiliser immédiatement dans la poêle ou la bisque, ou refroidir dans un bain de glace et réfrigérer jusqu'à 2 jours. Congeler dans des plateaux de glaçons pour des portions pratiques.",
+      "visualCue": {
+        "primaryTarget": "Un stock d'or clair et pâle avec un bleu rose très faible. Léger mais brillant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock est laiteux ou nuageux avec des débris de coquille.",
+            "action": "Passer à travers le tamis une deuxième fois; si le temps est encore nuageux, laisser reposer 10 minutes et laisser reposer le liquide clair au-dessus du sédiment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Clair, doré, légèrement rose. Sens de la mer et des herbes. Bouche propre et sucré.",
+            "action": "Utiliser dans les 2 jours ou congeler."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock est ambré foncé et intensément concentré, plus d'un glaçage qu'un stock.",
+            "action": "Diluer au goût avec de l'eau avant utilisation."
+          }
+        ]
+      },
+      "feelCue": "Courez une goutte entre vos doigts — il devrait se sentir à peine plus lisse que l'eau, avec un murmure de corps mais rien collant."
+    }
+  ]
 };

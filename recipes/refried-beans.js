@@ -1,93 +1,221 @@
 export default {
-  repoId: "master_mexican_refried-beans_001",
-  parentRepoId: null,
-  slug: "refried-beans",
-  author: "ForkRecipe Kitchen",
-  title: "Refried Black Beans",
-  description: "Frijoles refritos from the Oaxacan kitchen — black beans simmered until they surrender, then mashed into rendered lard with onion until they form a velvety, savory paste that holds a spoon upright.",
-  cuisine: "Mexican",
-  culture: "Oaxacan",
-  category: "grains",
-  tags: ["beans", "mexican", "oaxacan", "side-dish", "comfort"],
-  difficulty: 1,
-  activeTime: "25 min",
-  totalTime: "3 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-09-18",
-  updatedAt: "2024-12-28",
-  flavorRadar: { sweet: 1, salty: 4, sour: 0, bitter: 1, umami: 5, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried black beans",     ratioValue: 100, defaultUnit: "parts", substitutions: ["pinto beans"] },
-    { ingId: "ing_02", role: "Fat",       name: "Lard (or vegetable oil)", ratioValue: 10, defaultUnit: "parts", substitutions: ["bacon fat", "avocado oil"] },
-    { ingId: "ing_03", role: "Allium",    name: "White onion (quartered for broth, diced for frying)", ratioValue: 15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Epazote (fresh or dried)", ratioValue: 1, defaultUnit: "parts", substitutions: ["Mexican oregano"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",         ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Solvent",   name: "Water",                 ratioValue: 300, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_mexican_refried-beans_001",
+  "parentRepoId": null,
+  "slug": "refried-beans",
+  "author": "ForkRecipe Kitchen",
+  "title": "Haricots noirs refusés",
+  "description": "Frijoles refritos de la cuisine Oaxacan — haricots noirs mijotés jusqu'à ce qu'ils se rendent, puis massés en saindoux avec de l'oignon jusqu'à ce qu'ils forment une pâte veloutée et salée qui tient une cuillère droite.",
+  "cuisine": "Mexicain",
+  "culture": "Oaxacan",
+  "category": "grains",
+  "tags": [
+    "haricots",
+    "Mexique",
+    "oaxacan",
+    "side-dish",
+    "confort"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "25 min",
+  "totalTime": "3 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-09-18",
+  "updatedAt": "2024-12-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Simmer beans",
-      inputs: ["ing_01", "ing_03", "ing_04", "ing_06"],
-      outputState: "cooked_beans",
-      instructions: "Rinse beans and place in a large pot with water, quartered onion, and epazote. Bring to a boil, then reduce to a low simmer. Cook uncovered for 2-2.5 hours, adding hot water as needed to keep the beans submerged. Do not salt until the last 30 minutes — early salt toughens the skins. The beans are done when they crush effortlessly between your fingers.",
-      visualCue: {
-        primaryTarget: "Beans are uniformly dark purple-black, swollen to twice their dried size, with skins intact but tender. The cooking liquid is thick, dark, and inky — almost like strong coffee.",
-        spectrum: [
-          { state: "Underdone", description: "Beans are firm, chalky at the center when bitten. Skins feel tough. Cooking liquid is thin and watery.", action: "Continue simmering. Add more hot water if the level has dropped. Altitude, age of beans, and water hardness all affect time." },
-          { state: "Perfect",   description: "Beans crush between thumb and finger with no resistance. A spoonful mashes easily against the side of the pot. Broth is viscous, dark, and bean-flavored.", action: "Reserve the cooking liquid. Drain the beans." },
-          { state: "Overdone",  description: "Beans have split open and are falling apart into the broth. The pot is more paste than beans.", action: "This is actually fine for refried beans — you have a head start on mashing. Proceed directly to frying." },
-        ],
-      },
-      feelCue: "Fish out a bean and press it between your fingers — it should squash with zero resistance, like pressing a ripe blackberry. The broth should smell deeply earthy, like wet forest floor after rain.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Haricots noirs séchés",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "haricots pinto"
+      ]
     },
     {
-      nodeId: "step_2", action: "Render fat",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "flavored_fat",
-      instructions: "Heat lard in a wide, heavy skillet over medium heat. When it shimmers, add the diced onion. Cook, stirring occasionally, until the onion is soft, golden, and sweet — about 8 minutes. The onion-flavored fat is the foundation of the refried beans' richness.",
-      visualCue: {
-        primaryTarget: "Diced onion is translucent and golden at the edges, sitting in shimmering, fragrant lard. The pan smells sweet and porky.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still white and crunchy. Lard is not fully rendered and has solid patches.", action: "Lower heat and continue — the onion needs to sweat gently, not fry." },
-          { state: "Perfect",   description: "Onion is soft, golden, and sweet-smelling. Lard is fully liquid, clear, and fragrant. A few caramelized edges on the onion add depth.", action: "Begin adding beans." },
-          { state: "Overdone",  description: "Onion is dark brown or burnt. Lard smells acrid. Black bits stuck to the pan.", action: "Start over with fresh lard and onion. Burnt allium will make the entire dish bitter." },
-        ],
-      },
-      feelCue: "The lard should sizzle gently, not pop. If fat is spattering, the heat is too high. The kitchen should smell like a Mexican grandmother's house — warm, porky, and sweet.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Lard (ou huile végétale)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Lait de bacon",
+        "huile d'avocat"
+      ]
     },
     {
-      nodeId: "step_3", action: "Mash",
-      inputs: ["cooked_beans", "flavored_fat"],
-      outputState: "mashed_beans",
-      instructions: "Add the cooked beans to the skillet in batches, mashing them into the onion-fat mixture with a potato masher or the back of a large wooden spoon. Add splashes of the reserved bean broth to keep the mixture moist. Work in batches — fry, mash, add more beans. The beans should sizzle and fry as they are mashed, not just be stirred in.",
-      visualCue: {
-        primaryTarget: "A thick, dark paste that holds a ridge when dragged with a spoon. Some whole bean pieces remain for texture. The surface glistens with rendered fat.",
-        spectrum: [
-          { state: "Underdone", description: "Chunky and wet — more like a rough bean stew than a paste. Beans are not frying, just sitting in liquid.", action: "Increase heat slightly and mash more aggressively. Let the liquid cook off before adding more beans." },
-          { state: "Perfect",   description: "Thick, spreadable paste that pulls away from the pan in a mass. Glistening with fat. Some whole beans visible but the majority is a creamy, unified puree.", action: "Season and adjust consistency." },
-          { state: "Overdone",  description: "Dried out and crumbly. Sticking to the pan. No sheen — the fat has been absorbed or evaporated.", action: "Add reserved bean broth a tablespoon at a time and stir until the paste is moist again." },
-        ],
-      },
-      feelCue: "The sound is key — you should hear a steady, thick bubbling, like mud pots in a geothermal field. Each mash should meet resistance, then give way. If the spoon moves freely, it is too wet. If it sticks, add broth.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon blanc (en dés pour le bouillon)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Season and finish",
-      inputs: ["mashed_beans", "ing_05"],
-      outputState: "finished_refried_beans",
-      instructions: "Season with salt to taste. Continue cooking over medium-low heat, stirring constantly, for another 3-5 minutes. The beans will tighten and become glossy. They should be thick enough to hold a spoon upright but still spreadable — like soft peanut butter. Adjust with bean broth if too thick.",
-      visualCue: {
-        primaryTarget: "A dark, glossy, voluptuous paste that slowly mounds when spooned and holds its shape. The surface has a satin sheen from the fat. A spoon stands briefly upright before slowly sinking.",
-        spectrum: [
-          { state: "Underdone", description: "Still soupy and loose. Slides off a tilted spoon. No sheen.", action: "Continue cooking over medium heat, stirring constantly. The excess moisture needs to evaporate." },
-          { state: "Perfect",   description: "Dense, glossy, and rich. Holds a shape on the plate. A drag of the spoon leaves a clean trail that slowly fills back in. Deep, savory aroma.", action: "Serve immediately, or keep warm with a film of broth on the surface to prevent a skin from forming." },
-          { state: "Overdone",  description: "Cracked, dry surface. Pulls away from the pan in stiff chunks. Tastes chalky.", action: "Stir in bean broth and a small knob of lard. Beat vigorously — the paste can be revived." },
-        ],
-      },
-      feelCue: "Taste the beans — they should coat your palate with a velvety richness, then give way to a deep, earthy flavor with a whisper of pork fat. If they taste flat, they need more salt. If they feel gritty on the tongue, they were not mashed enough.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Épazote (frais ou secs)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Origan mexicain"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Solvent",
+      "name": "Eau",
+      "ratioValue": 300,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire mijoter les haricots",
+      "inputs": [
+        "ing_01",
+        "ing_03",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "cooked_beans",
+      "instructions": "Rincer les haricots et les déposer dans une grande casserole avec de l'eau, de l'oignon coupé et de l'épazote. Porter à ébullition, puis laisser mijoter. Cuire à découvert pendant 2 à 2,5 heures, en ajoutant de l'eau chaude au besoin pour maintenir les haricots immergés. Ne salez pas avant les 30 dernières minutes — le sel précoce durcit les peaux. Les haricots sont faits quand ils écrasent sans effort entre vos doigts.",
+      "visualCue": {
+        "primaryTarget": "Les haricots sont uniformément violet-noir foncé, gonflés à deux fois leur taille sèche, avec des peaux intactes mais tendres. Le liquide de cuisson est épais, sombre et enky — presque comme un café fort.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les haricots sont fermes, craies au centre quand mordus. Les peaux sont durs. Le liquide de cuisson est mince et aqueux.",
+            "action": "Continuez à mijoter. Ajouter plus d'eau chaude si le niveau a baissé. L'altitude, l'âge des haricots et la dureté de l'eau affectent le temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les haricots s'écrasent entre le pouce et le doigt sans résistance. Une cuillerée machette facilement contre le côté du pot. Le papillon est visqueux, sombre et aromatisé par les haricots.",
+            "action": "Réservez le liquide de cuisson. Égoutter les haricots."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots s'ouvrent et tombent dans le bouillon. La casserole est plus pâte que les haricots.",
+            "action": "En fait, c'est bien pour les haricots refried — vous avez une longueur d'avance sur l'échouement. Aller directement à la friture."
+          }
+        ]
+      },
+      "feelCue": "Faites passer un haricot et pressez - le entre vos doigts — il devrait squash avec une résistance nulle, comme presser une mûre. Le bouillon doit sentir profondément terre, comme le sol humide après la pluie."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Graisse tendre",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "flavored_fat",
+      "instructions": "Chauffer le saindoux dans une poêle large et lourde à feu moyen. Quand il mijote, ajouter l'oignon en dés. Cuire en remuant occasionnellement jusqu'à ce que l'oignon soit doux, doré et doux — environ 8 minutes. La graisse aromatisée à l'oignon est le fondement de la richesse des haricots refried.",
+      "visualCue": {
+        "primaryTarget": "L'oignon coupé est translucide et doré aux bords, assis dans un saindoux odorant et chatoyant. La poêle sent doux et porcin.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore blanc et croquant. Lard n'est pas entièrement rendu et a des patchs solides.",
+            "action": "Baisser la chaleur et continuer — l'oignon doit transpirer doucement, pas frire."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon est doux, doré et sucré. La boue est entièrement liquide, limpide et parfumée. Quelques bords caramélisés sur l'oignon ajoutent de la profondeur.",
+            "action": "Commencez à ajouter des haricots."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon est brun foncé ou brûlé. Lard sent l'acride. Des morceaux noirs collés à la poêle.",
+            "action": "Recommencer avec du saindoux frais et de l'oignon. L'allium brûlé rendra tout le plat amer."
+          }
+        ]
+      },
+      "feelCue": "Le saindoux doit s'étourdir doucement, pas sauter. Si la graisse éclabousse, la chaleur est trop élevée. La cuisine devrait sentir la maison d'une grand - mère mexicaine — chaude, porcine et sucrée."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mash",
+      "inputs": [
+        "cooked_beans",
+        "flavored_fat"
+      ],
+      "outputState": "mashed_beans",
+      "instructions": "Ajouter les haricots cuits dans la poêle en lots, en les massant dans le mélange de gras d'oignon avec une maseuse de pommes de terre ou l'arrière d'une grande cuillère en bois. Ajouter les éclaboussures du bouillon de haricots réservé pour maintenir le mélange humide. Travaillez en lots — alevons, mash, ajoutez plus de haricots. Les haricots devraient frire et frire en purée, et pas seulement être remués.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse et sombre qui tient une crête lorsqu'elle est traînée avec une cuillère. Certains morceaux de haricots entiers restent pour la texture. La surface scintille avec la graisse rendue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mouilleux et humide — plus comme un ragoût de haricots rugueux qu'une pâte. Les haricots ne sont pas frits, juste assis dans du liquide.",
+            "action": "Augmenter légèrement la chaleur et écraser de façon plus agressive. Laisser le liquide cuire avant d'ajouter plus de haricots."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte épaisse et extensible qui s'éloigne de la poêle en masse. Glisser avec du gras. Certains haricots entiers visibles mais la majorité est une purée crémeuse et unifiée.",
+            "action": "Assaisonner et ajuster la consistance."
+          },
+          {
+            "state": "Overdone",
+            "description": "Séché et émietté. Se tenir à la casserole. Pas d'éclat — la graisse a été absorbée ou évaporée.",
+            "action": "Ajouter le bouillon de haricots réservé une cuillère à soupe à la fois et remuer jusqu'à ce que la pâte soit à nouveau humide."
+          }
+        ]
+      },
+      "feelCue": "Le son est la clé — vous devriez entendre un bouillonnement constant et épais, comme des pots de boue dans un champ géothermique. Chaque mash doit répondre à la résistance, puis céder. Si la cuillère bouge librement, elle est trop humide. Si elle colle, ajouter le bouillon."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison et fin",
+      "inputs": [
+        "mashed_beans",
+        "ing_05"
+      ],
+      "outputState": "finished_refried_beans",
+      "instructions": "Assaisonner de sel au goût. Continuer la cuisson à feu moyen-doux, en remuant constamment, pendant encore 3-5 minutes. Les haricots se serreront et deviendront brillants. Ils devraient être assez épais pour tenir une cuillère droite, mais encore extensibles, comme le beurre d'arachide. Régler avec le bouillon de haricots si trop épais.",
+      "visualCue": {
+        "primaryTarget": "Une pâte foncée, brillante et voluptueuse qui fond lentement en cuillère et tient sa forme. La surface est satinée par la graisse. Une cuillère se tient brièvement debout avant de sombrer lentement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours soupeux et lâche. Il glisse sur une cuillère inclinée. Pas d'éclat.",
+            "action": "Continuer la cuisson à feu moyen, en remuant constamment. L'excès d'humidité doit s'évaporer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sensé, brillant et riche. Prend une forme sur la plaque. Une traînée de la cuillère laisse un sentier propre qui se remplit lentement. Arôme profond et salé.",
+            "action": "Servir immédiatement, ou garder au chaud avec une pellicule de bouillon sur la surface pour empêcher une peau de se former."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surface sèche et craquée. Éloignez-vous de la poêle en morceaux raides. Ça a un goût crayeux.",
+            "action": "Incorporer le bouillon de haricots et un petit bouton de saindoux. Battre vigoureusement — la pâte peut être ravivée."
+          }
+        ]
+      },
+      "feelCue": "Goûtez les haricots — ils devraient envelopper votre palais d'une richesse veloutée, puis laisser place à une saveur profonde et terreuse avec un murmure de graisse de porc. S'ils ont le goût plat, ils ont besoin de plus de sel. S'ils se sentent gritty sur la langue, ils n'ont pas été suffisamment massés."
+    }
+  ]
 };

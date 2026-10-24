@@ -1,101 +1,260 @@
 export default {
-  repoId: "master_vietnamese_ca-kho-to_001",
-  parentRepoId: null,
-  slug: "ca-kho-to",
-  author: "ForkRecipe Kitchen",
-  title: "Cá Kho Tộ (Caramelized Braised Fish)",
-  description: "Mekong Delta's clay-pot braised catfish — fish steaks simmered in a deeply reduced caramel of coconut water, fish sauce, and sugar until the sauce turns glossy and amber, the fish infused with a complex bittersweet savour.",
-  cuisine: "Vietnamese",
-  culture: "Mekong Delta",
-  category: "seafood",
-  tags: ["vietnamese", "fish", "braised", "caramel", "clay-pot", "mekong"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "50 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 4, sour: 0, bitter: 2, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Catfish steaks, bone-in, 3 cm thick (cá tra or swai)", ratioValue: 600, defaultUnit: "g", substitutions: ["tilapia steaks", "firm tofu for vegan version"] },
-    { ingId: "ing_02", role: "Sweetener", name: "White sugar (for dry caramel)",                       ratioValue: 40,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",    name: "Young green coconut water (nước dừa tươi)",           ratioValue: 200, defaultUnit: "g",  substitutions: ["plain water + 1 tsp sugar"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fish sauce",                                          ratioValue: 40,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Shallots, thinly sliced",                             ratioValue: 40,  defaultUnit: "g",  substitutions: ["small red onion"] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, thinly sliced",                        ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Heat",      name: "Bird's eye chilies, halved lengthwise",               ratioValue: 8,   defaultUnit: "g",  substitutions: ["dried red chili flakes"] },
-    { ingId: "ing_08", role: "Spice",     name: "Freshly cracked black pepper",                        ratioValue: 3,   defaultUnit: "g",  substitutions: ["white pepper"] },
-    { ingId: "ing_09", role: "Garnish",   name: "Spring onion greens, sliced into 3 cm pieces",        ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_10", role: "Fat",       name: "Neutral oil",                                         ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_vietnamese_ca-kho-to_001",
+  "parentRepoId": null,
+  "slug": "ca-kho-to",
+  "author": "ForkRecipe Kitchen",
+  "title": "Cá Kho T. (Poissons braisés caramélisés)",
+  "description": "Le poisson-chat braisé en pot d'argile du delta du Mékong — des steaks de poisson mijotés dans un caramel profondément réduit d'eau de coco, de sauce de poisson et de sucre jusqu'à ce que la sauce devienne brillante et ambre, le poisson infusé d'une saveur amère complexe.",
+  "cuisine": "Vietnamiens",
+  "culture": "Delta du Mékong",
+  "category": "seafood",
+  "tags": [
+    "vietnamese",
+    "poissons",
+    "braisés",
+    "Caramel",
+    "pot d'argile",
+    "Mékong"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "50 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Caramelize",
-      inputs: ["ing_02", "ing_10"],
-      outputState: "dark_caramel",
-      instructions: "In a clay pot (or heavy-bottomed saucepan), add the sugar in an even layer over medium heat. Do not stir. Watch it carefully — sugar caramelizes unevenly and can go from perfect to burnt in seconds. As the edges begin to melt and turn amber, tilt the pot gently to encourage even melting. Once about two-thirds of the sugar has melted and turned a deep amber-brown, you can stir very gently. Continue until the entire mass is a dark mahogany color, just beginning to smoke at the edges, and smells deeply bitter-sweet with a trace of smoky bitterness. This darker-than-usual caramel is intentional — the slight bitterness it carries is what gives cá kho tộ its distinctive complexity when balanced against the fish sauce and coconut water. Immediately and carefully pour in the coconut water (it will hiss violently) and stir to combine.",
-      visualCue: {
-        primaryTarget: "A dark, almost coffee-colored caramel — deep amber to mahogany, far darker than a blond caramel, with a thin thread of smoke rising and a sharp, slightly bitter-sweet smell.",
-        spectrum: [
-          { state: "Underdone", description: "The caramel is still pale gold — barely colored and smelling only of melted sugar with no bitter complexity. It will produce a flat, one-dimensional sweetness in the braise.", action: "Continue cooking without stirring. The color change from gold to amber to mahogany happens quickly in the final stages — stay close and watch carefully." },
-          { state: "Perfect",   description: "A deep mahogany that approaches but does not reach black, with a faint smoke trail and an aroma that is simultaneously sweet, bitter, and faintly smoky. When the coconut water is added it erupts violently and then settles to a deep amber liquid.", action: "Immediately add the coconut water (step back from the steam burst) and stir to dissolve any hardened caramel from the bottom of the pot." },
-          { state: "Overdone",  description: "The caramel has gone past mahogany to black, smells harshly of carbonized sugar, and tastes unpleasantly bitter without any sweetness remaining.", action: "Discard the burnt caramel, wash the pot, and start again. Burnt caramel cannot be rescued and will make the entire dish taste acrid. Next time, pull it at the first wisp of smoke." },
-        ],
-      },
-      feelCue: "A properly made caramel for cá kho tộ is intentionally dark — if it smells pleasant and candy-like, it has not gone far enough. It should make you slightly nervous: right at the edge of too-far is where the complexity lives.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Steaks de poissons-chat, désossés, d'une épaisseur de 3 cm (cá tra ou swai)",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "steaks tilapia",
+        "tofu ferme pour la version végétalienne"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["dark_caramel", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "braising_liquid",
-      instructions: "Once the caramel and coconut water have combined into a smooth, dark liquid, add the fish sauce, sliced shallots, garlic, halved chilies, and cracked black pepper. Stir gently and bring to a simmer over medium heat. Let the aromatics cook in the braising liquid for 3–4 minutes — the shallots should begin to soften and the garlic should turn translucent. The braising liquid at this stage should taste intensely salty, bitter-sweet, and funky from the fish sauce, with a spicy undercurrent from the chili and pepper. It will seem aggressively seasoned — this is correct, because the fish will dilute it during the braise.",
-      visualCue: {
-        primaryTarget: "A deep amber-brown braising liquid with visible slices of shallot and garlic softening in the sauce, red chili halves floating on the surface, and a glossy, caramel-sheened surface.",
-        spectrum: [
-          { state: "Underdone", description: "The fish sauce and coconut water have been added but the sugar and caramel are not fully dissolved — pale streaks of unreduced liquid are visible and the sauce looks thin and two-toned.", action: "Stir over medium heat until fully homogeneous. All the caramel residue must dissolve into the liquid before the fish goes in." },
-          { state: "Perfect",   description: "A uniform, deep amber sauce that is fully integrated. The shallots have begun to soften and the garlic edges are translucent. The aroma is simultaneously caramel-sweet, fish-funky, and pepper-warm.", action: "Carefully lay the fish steaks into the braising liquid in a single layer." },
-          { state: "Overdone",  description: "The aromatics have been cooking too long in the sauce without the fish and the garlic and shallots are beginning to burn at the edges, adding an acrid note.", action: "Add the fish immediately and reduce the heat. The aromatics should be simmered gently in the sauce, not fried in it." },
-        ],
-      },
-      feelCue: "Taste a spoonful of the braising liquid at this stage and let it sit on the back of your tongue for 3 seconds — it should be almost uncomfortably bold and salty. If it tastes good by itself, it will be under-seasoned after the fish is added and the liquid is further reduced. Trust the bitterness; trust the saltiness.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre blanc (pour le caramel sec)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Braise",
-      inputs: ["braising_liquid", "ing_01"],
-      outputState: "braised_fish",
-      instructions: "Gently lay the catfish steaks into the braising liquid in a single layer. The liquid should come about halfway up the sides of the fish. Bring to a simmer over medium heat, then reduce to medium-low. Do not stir the fish — catfish steaks break apart easily and the intact shape is important both aesthetically and texturally. Instead, use a spoon to baste the top of the fish every few minutes with the braising liquid. Cook for 15–20 minutes, occasionally tilting the pot to redistribute the sauce. As the liquid reduces, it will thicken and darken further, beginning to glaze the bottom of the fish. The fish is done when it is just cooked through and the sauce has reduced by about half and coats the fish in a thick, glossy lacquer.",
-      visualCue: {
-        primaryTarget: "The catfish steaks are sitting in a thick, glossy, deeply amber sauce that has reduced to about half its original volume. The edges of the fish where they contact the sauce are glazed and caramelized to a darker amber-brown.",
-        spectrum: [
-          { state: "Underdone", description: "The fish is still raw-looking (translucent) in the thicker parts when pressed with a spoon. The sauce is still thin and pours easily rather than coating the back of a spoon.", action: "Continue braising on medium-low heat, basting regularly. Do not increase heat — a hard boil will break apart the fish. Patience is everything in kho (braising)." },
-          { state: "Perfect",   description: "Fish flesh is fully opaque and just beginning to flake when pressed with a spoon at the thickest part. The sauce has reduced to a thick, glossy consistency — it falls off a spoon in heavy drops rather than flowing. The color of the sauce is a deep, burnished amber.", action: "Remove from heat. Garnish immediately and serve with plain jasmine rice, which absorbs the sauce beautifully." },
-          { state: "Overdone",  description: "The sauce has reduced too far and has begun to burn and caramelize onto the bottom of the pot. The fish has broken apart and is dry and stringy.", action: "Add a splash of coconut water to loosen the sauce and rescue what remains. Reduce the heat and the timing for the next batch. Check the sauce level every 5 minutes in the final stage." },
-        ],
-      },
-      feelCue: "Gently press the thickest part of a fish steak with the back of a spoon — the flesh should yield and just begin to separate along its natural grain lines without collapsing. That moment of initial yielding, before the flakes fully separate, is medium-done catfish. It will continue to cook for another 60 seconds from the residual heat of the clay pot.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Jeune eau de noix de coco verte",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau pure + 1 c. à thé sucre"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["braised_fish", "ing_09"],
-      outputState: "finished_ca_kho_to",
-      instructions: "Scatter the spring onion greens over the finished fish while it is still in the pot, directly before serving. In Vietnamese tradition, cá kho tộ is served in the clay pot it was cooked in, placed on a small trivet at the table, so the sauce continues to very gently simmer from the residual heat of the clay. Each diner spoons the fish and sauce generously over their bowl of plain steamed rice. The correct way to eat it is to spoon the sauce first — it is intensely flavored and should be used to season the rice — and then eat the fish in pieces, dipping each into the pooled sauce on your rice. The bittersweet, salty, fish-sauce complexity of the reduced caramel is the entire point of the dish.",
-      visualCue: {
-        primaryTarget: "A clay pot of deeply glazed fish steaks in a thick, mahogany-amber sauce, garnished with bright green spring onion against the dark sauce — rustic, rich, and visually dramatic.",
-        spectrum: [
-          { state: "Underdone", description: "The spring onion has been added too early and has cooked limp and olive-colored in the residual heat of the braise. The bright color contrast that announces the dish is gone.", action: "Add the spring onion only at the moment of serving, never before. It should wilt slightly from the steam but stay vivid green." },
-          { state: "Perfect",   description: "Vivid green spring onion against the dark, glossy sauce. The pot is still gently bubbling at the edges from residual clay-pot heat. The sauce surface has a lacquered sheen and the fish holds its shape. The smell is intensely savory, caramel-sweet, and pepper-warm.", action: "Carry to the table and serve immediately with jasmine rice. Provide a spoon for the sauce so nothing is left behind." },
-          { state: "Overdone",  description: "The dish has been kept warm too long on the stove after garnishing — the sauce has continued to reduce and is now almost completely absorbed into the fish, the bottom of the pot beginning to caramelize and stick.", action: "Add a small splash of hot water and swirl the pot gently to loosen the bottom glaze. Serve immediately. Cá kho tộ should never be kept waiting." },
-        ],
-      },
-      feelCue: "Carry the clay pot to the table and hold your hand above it — you should feel a gentle, steady warmth rising up, like a warm stone in the sun. That retained heat is the magic of clay cookware: it keeps the dish at the perfect serving temperature without overcooking. If the pot has gone cold and silent, the dish has sat too long.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sauce de poisson",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Échalotes, tranchées finement",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "petit oignon rouge"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Girofles à l'ail, tranchés finement",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Heat",
+      "name": "Chilies oculaires d'oiseau, à moitié long",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": [
+        "flocons de chili rouge séché"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre noir fraichement craqué",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivre blanc"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Garnish",
+      "name": "Verts d'oignon de printemps, tranchés en morceaux de 3 cm",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Caramélisation",
+      "inputs": [
+        "ing_02",
+        "ing_10"
+      ],
+      "outputState": "dark_caramel",
+      "instructions": "Dans un pot d'argile (ou casserole à fond lourd), ajouter le sucre dans une couche uniforme à feu moyen. Ne remuez pas. Veillez bien — le sucre caramélise inégalement et peut aller de parfait à brûlé en quelques secondes. Lorsque les bords commencent à fondre et à tourner en ambre, inclinez doucement le pot pour encourager la fusion. Une fois qu'environ les deux tiers du sucre a fondu et est devenu un brun-ambre profond, vous pouvez remuer très doucement. Continuer jusqu'à ce que la masse entière soit une couleur acajou foncée, juste commencer à fumer aux bords, et sente profondément amer-douce avec une trace d'amertume fumée. Ce caramel plus foncé que d'habitude est intentionnel — la légère amertume qu'il porte est ce qui donne au cá kho t--- sa complexité distinctive lorsqu'il est équilibré contre la sauce de poisson et l'eau de coco. Verser immédiatement et soigneusement dans l'eau de coco (il sifflera violemment) et remuer pour mélanger.",
+      "visualCue": {
+        "primaryTarget": "Un caramel foncé presque de couleur café — ambre profond à acajou, beaucoup plus foncé qu'un caramel blond, avec un mince fil de fumée qui monte et une odeur vive et légèrement amère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le caramel est toujours d'or pâle, à peine coloré et sent seulement du sucre fondu sans complexité amère. Il produira une douceur plate et unidimensionnelle dans le braise.",
+            "action": "Continuer la cuisson sans remuer. Le changement de couleur de l'or à l'ambre à l'acajou se produit rapidement dans les dernières étapes — restez près et regardez attentivement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une acajou profonde qui s'approche mais n'atteint pas le noir, avec un léger sentier de fumée et un arôme qui est simultanément doux, amer et légèrement fumé. Lorsque l'eau de coco est ajoutée, elle éclate violemment et se dépose ensuite dans un liquide ambre profond.",
+            "action": "Ajouter immédiatement l'eau de coco (retirez-vous de l'éclatement de la vapeur) et remuer pour dissoudre tout caramel durci du fond du pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le caramel a passé l'acajou au noir, sent durement le sucre carbonisé, et goûte désagréablement amer sans aucune douceur restante.",
+            "action": "Jeter le caramel brûlé, laver la casserole et recommencer. Le caramel brûlé ne peut pas être sauvé et rendra le plat entier goût acride. La prochaine fois, tire-la au premier coup de fumée."
+          }
+        ]
+      },
+      "feelCue": "Un caramel bien fait pour le cá kho tш est intentionnellement sombre — s'il sent agréable et comme des bonbons, il n'est pas allé assez loin. Il devrait vous rendre légèrement nerveux: juste au bord de trop loin est où la complexité vit."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "dark_caramel",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "braising_liquid",
+      "instructions": "Une fois que l'eau de caramel et de noix de coco se sont combinées dans un liquide lisse et foncé, ajouter la sauce de poisson, les échalotes tranchées, l'ail, les mi-piments et le poivre noir fissuré. Incorporer doucement et laisser mijoter à feu moyen. Laisser les aromatiques cuire dans le liquide de cuisson pendant 3-4 minutes — les échalotes devraient commencer à ramollir et l'ail devrait devenir translucide. Le liquide de cuisson à ce stade devrait goûter intensément salé, amer-doux, et funky de la sauce de poisson, avec un sous-courant épicé du chili et du poivre. Il sera assaisonné de façon agressive — c'est exact, car le poisson le diluera pendant le brassage.",
+      "visualCue": {
+        "primaryTarget": "Un liquide de braisage brun-ambre profond avec des tranches visibles d'échalote et d'ail adoucissant dans la sauce, des moitiés de chili rouge flottant sur la surface, et une surface brillante au caramel.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce de poisson et l'eau de coco ont été ajoutés, mais le sucre et le caramel ne sont pas complètement dissous; des traces pâles de liquide non réduit sont visibles et la sauce semble mince et à deux tons.",
+            "action": "Incorporer à feu moyen jusqu'à ce qu'il soit complètement homogène. Tous les résidus de caramel doivent se dissoudre dans le liquide avant l'entrée du poisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce ambre uniforme et profonde qui est entièrement intégrée. Les échalotes commencent à se ramollir et les bords d'ail sont translucides. L'arôme est simultanément caramel-doux, poisson-funky, et poivre-chauffe.",
+            "action": "Poser soigneusement les steaks de poisson dans le liquide de cuisson en une seule couche."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les aromatiques ont été trop longtemps cuits dans la sauce sans le poisson et l'ail et les échalotes commencent à brûler aux bords, ajoutant une note acride.",
+            "action": "Ajouter immédiatement le poisson et réduire la chaleur. Les arômes doivent être mijotés doucement dans la sauce et non frits."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillerée de liquide de bronzage à ce stade et laissez - la s'asseoir sur le dos de votre langue pendant 3 secondes — il devrait être presque inconfortable et salé. Si elle goûte bien à elle seule, elle sera sous-assaisonnée après l'ajout du poisson et le liquide sera encore réduit. Faites confiance à l'amertume, faites confiance au sel."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "braising_liquid",
+        "ing_01"
+      ],
+      "outputState": "braised_fish",
+      "instructions": "Poser délicatement les steaks de poisson-chat dans le liquide de culture en une seule couche. Le liquide devrait venir à la moitié des côtés du poisson. Faire mijoter à feu moyen, puis réduire à moyen-doux. Ne remuez pas le poisson — les steaks de poisson-chat se brisent facilement et la forme intacte est importante sur le plan esthétique et textuel. Au lieu de cela, utilisez une cuillère pour arroser le haut du poisson toutes les quelques minutes avec le liquide de cuisson. Cuire de 15 à 20 minutes, en inclinant occasionnellement le pot pour redistribuer la sauce. Au fur et à mesure que le liquide diminue, il s'épaissit et s'obscurcit davantage, commençant à glacer le fond du poisson. Le poisson est fait quand il est juste cuit à travers et la sauce a réduit d'environ la moitié et enrobe le poisson dans une laque épaisse et brillante.",
+      "visualCue": {
+        "primaryTarget": "Les steaks de poisson-chat sont assis dans une sauce épaisse, brillante, profondément ambre qui a réduit à environ la moitié de son volume original. Les bords du poisson où ils entrent en contact avec la sauce sont glacés et caramélisés en brun-ambre plus foncé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le poisson est encore brut (translucide) dans les parties plus épaisses lorsqu'il est pressé avec une cuillère. La sauce est encore mince et verse facilement au lieu de recouvrir l'arrière d'une cuillère.",
+            "action": "Continuer la cuisson à feu moyen-doux, en basting régulièrement. N'augmentez pas la chaleur — une ébullition dure brisera le poisson. La patience, c'est tout au kho."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair de poisson est entièrement opaque et commence à flocer lorsqu'elle est pressée avec une cuillère à la partie la plus épaisse. La sauce a réduit à une consistance épaisse et brillante — elle tombe d'une cuillère dans de lourdes gouttes plutôt que de couler. La couleur de la sauce est une ambre profonde et brûlée.",
+            "action": "Retirer du feu. Garnir immédiatement et servir avec du riz jasmin uni, qui absorbe la sauce magnifiquement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a diminué trop loin et a commencé à brûler et caraméliser sur le fond du pot. Le poisson s'est brisé et est sec et à cordes.",
+            "action": "Ajouter un jet d'eau de coco pour desserrer la sauce et sauver ce qui reste. Réduire la chaleur et le timing pour le prochain lot. Vérifiez le niveau de sauce toutes les 5 minutes dans l'étape finale."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur la partie la plus épaisse d'un steak de poisson avec le dos d'une cuillère — la chair devrait céder et commencer à se séparer le long de ses lignes de grains naturelles sans s'effondrer. Le moment de la production initiale, avant que les flocons ne soient complètement séparés, est celui du poisson-chat de taille moyenne. Elle continuera de cuire pendant 60 secondes à partir de la chaleur résiduelle du pot d'argile."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "braised_fish",
+        "ing_09"
+      ],
+      "outputState": "finished_ca_kho_to",
+      "instructions": "Éparpiller les verts d'oignons de printemps sur le poisson fini alors qu'il est encore dans le pot, directement avant de servir. Dans la tradition vietnamienne, le cá kho ta est servi dans le pot d'argile dans lequel il a été cuit, placé sur un petit trivet à table, de sorte que la sauce continue à mijoter très doucement de la chaleur résiduelle de l'argile. Chaque souper cuillere le poisson et la sauce généreusement sur leur bol de riz à la vapeur. La bonne façon de la manger est de faire d'abord une cuillère à la sauce — elle est intensément aromatisée et doit être utilisée pour assaisonner le riz — puis de manger le poisson en morceaux, tremper chacun dans la sauce poolée sur votre riz. La complexité amère, salée, poisson-sauce du caramel réduit est le point entier du plat.",
+      "visualCue": {
+        "primaryTarget": "Un pot d'argile de steaks de poisson profondément glacés dans une sauce acajou-ambre épaisse, garnie d'oignon de printemps vert vif contre la sauce foncée, rustique, riche et visuellement dramatique.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon de printemps a été ajouté trop tôt et a cuit limpide et couleur olive dans la chaleur résiduelle du braise. Le contraste de couleur vive qui annonce que le plat est parti.",
+            "action": "Ajouter l'oignon de printemps seulement au moment de servir, jamais auparavant. Il devrait se flétrir légèrement de la vapeur mais rester vert vif."
+          },
+          {
+            "state": "Perfect",
+            "description": "Oignon vert vif contre la sauce foncée et brillante. Le pot est encore légèrement bouillonnant aux bords de la chaleur résiduelle de pot d'argile. La surface de la sauce est laquée et le poisson tient sa forme. L'odeur est intensément savoureuse, caramel-doux, et poivre chaud.",
+            "action": "Porter à la table et servir immédiatement avec du riz jasmin. Fournissez une cuillère pour la sauce, donc rien n'est laissé derrière."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le plat a été gardé trop longtemps au chaud sur le poêle après la garniture — la sauce a continué à réduire et est maintenant presque complètement absorbé dans le poisson, le fond du pot commençant à caraméliser et à coller.",
+            "action": "Ajouter une petite éclaboussure d'eau chaude et agiter doucement le pot pour démêler la glaçure du fond. Servir immédiatement. On ne devrait jamais attendre."
+          }
+        ]
+      },
+      "feelCue": "Portez le pot d'argile à la table et tenez votre main au-dessus, vous devriez sentir une chaleur douce et régulière se lever, comme une pierre chaude au soleil. Cette chaleur conservée est la magie de la cuisine en argile: elle maintient le plat à la température de service parfaite sans trop cuire. Si le pot est devenu froid et silencieux, le plat est resté trop longtemps."
+    }
+  ]
 };

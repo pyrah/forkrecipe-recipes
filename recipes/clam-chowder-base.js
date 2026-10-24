@@ -1,110 +1,292 @@
 export default {
-  repoId: "master_american_clam-chowder-base_001",
-  parentRepoId: null,
-  slug: "clam-chowder-base",
-  author: "ForkRecipe Kitchen",
-  title: "New England Clam Chowder Base",
-  description: "A thick, ivory chowder built on salt pork, clam liquor, and floury potatoes, finished with enough cream to turn the briny, smoky stock into something that coats a spoon with the weight of a winter coast.",
-  cuisine: "American",
-  culture: "New England",
-  category: "stocks",
-  tags: ["clam", "chowder", "cream", "new england", "seafood"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "75 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 7, sour: 1, bitter: 1, umami: 8, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Salt pork or thick-cut bacon, small dice", ratioValue: 1.5, defaultUnit: "parts", substitutions: ["unsalted butter (lose smokiness but keep fat)"] },
-    { ingId: "ing_02", role: "Allium",    name: "Yellow onion, medium dice",              ratioValue: 2,   defaultUnit: "parts", substitutions: ["leeks (milder, sweeter)"] },
-    { ingId: "ing_03", role: "Structure", name: "All-purpose flour",                       ratioValue: 0.5, defaultUnit: "parts", substitutions: ["potato starch (use half quantity, add at end)"] },
-    { ingId: "ing_04", role: "Liquid",    name: "Clam juice or bottled clam broth",        ratioValue: 6,   defaultUnit: "parts", substitutions: ["fish stock (less briny)"] },
-    { ingId: "ing_05", role: "Starch",    name: "Russet or Yukon Gold potatoes, 1cm dice", ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Protein",   name: "Chopped clams (canned or fresh-shucked)", ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Dairy",     name: "Heavy cream",                             ratioValue: 2,   defaultUnit: "parts", substitutions: ["half-and-half (thinner body)"] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Fresh thyme sprigs (2–3)",                ratioValue: 0.2, defaultUnit: "parts", substitutions: ["dried thyme (use half)"] },
-    { ingId: "ing_09", role: "Aromatic",  name: "Bay leaf (1 large)",                      ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning", name: "Kosher salt and white pepper",            ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_clam-chowder-base_001",
+  "parentRepoId": null,
+  "slug": "clam-chowder-base",
+  "author": "ForkRecipe Kitchen",
+  "title": "Nouvelle-Angleterre Clam Chowder Base",
+  "description": "Une cuillerée d'ivoire épaisse, construite sur du porc salé, de la liqueur de palourde et des pommes de terre farineuses, finie avec assez de crème pour transformer le bouillon fumé en quelque chose qui enveloppe une cuillère du poids d'une côte hivernale.",
+  "cuisine": "Américain",
+  "culture": "Nouvelle-Angleterre",
+  "category": "stocks",
+  "tags": [
+    "palourdes",
+    "Chowder",
+    "crème",
+    "Nouvelle-Angleterre",
+    "Produits de la mer"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "75 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 7,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 8,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Render",
-      inputs: ["ing_01"],
-      outputState: "rendered_salt_pork",
-      instructions: "Place the salt pork or bacon in a cold, heavy-bottomed pot (Dutch oven is ideal). Set over medium-low heat. Starting from cold allows the fat to render slowly without browning the exterior — you want fat in the pot, not a crispy texture. Cook for 8–10 minutes, stirring occasionally, until most of the fat has rendered and the pieces are golden but not yet crispy. Remove the pork pieces with a slotted spoon and reserve — they go back in at the end.",
-      visualCue: {
-        primaryTarget: "Pork pieces are golden-yellow and shrunken to about half their original size. A generous pool of clear-to-golden fat coats the bottom of the pot.",
-        spectrum: [
-          { state: "Underdone", description: "Pork is still pale pink and soft. Very little fat has rendered — the pot is barely glistening.", action: "Continue cooking over medium-low. Starting hot renders the exterior before the fat releases." },
-          { state: "Perfect",   description: "Pieces are a consistent golden-tan, firm, and glossy with rendered fat. At least 3–4 tablespoons of fat pool visible in the bottom.", action: "Remove pork with a slotted spoon and reserve. Leave all the fat in the pot." },
-          { state: "Overdone",  description: "Pieces are dark brown and starting to crisp at the edges. Some fat may be smoking.", action: "Remove immediately. Reduce heat. The pork is still usable — the slight extra crispness will soften when it goes back into the chowder." },
-        ],
-      },
-      feelCue: "A wooden spoon dragged across the pot bottom should glide through clear, shimmering fat. You should hear a gentle, lazy sizzle — not a sharp, aggressive crackling — throughout the render.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Porc salé ou bacon épais coupé, petits dés",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre non salé (perdre la fumée mais garder la graisse)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Sauté",
-      inputs: ["rendered_salt_pork", "ing_02"],
-      outputState: "sweated_onion",
-      instructions: "Add the diced onion to the rendered fat in the pot over medium heat. Cook, stirring every 2 minutes, for 8–10 minutes until completely softened and translucent. The onions should be sweet and yielding — not browned. New England chowder is a white chowder; any caramelization of the aromatics will tint it yellow-brown and add sweetness that fights the brine.",
-      visualCue: {
-        primaryTarget: "Onions are completely translucent and limp, reduced to about 60% of their raw volume. No golden or brown edges.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are still opaque white with rigid structure. Taste has not become sweet.", action: "Lower heat slightly and cook another 3–4 minutes. Cover the pot to trap steam and speed softening." },
-          { state: "Perfect",   description: "Fully translucent, floppy, and sweet-smelling. They slide freely in the fat with no resistance.", action: "Add the flour and stir to coat." },
-          { state: "Overdone",  description: "Onions are beginning to develop golden edges and smell of caramel rather than allium.", action: "They are still usable but the chowder will have a slightly sweeter, amber-tinted base. Proceed." },
-        ],
-      },
-      feelCue: "A translucent onion pressed between two spoons should collapse to a smooth, sweet paste with no crunch or resistance — the water has left and the sugars have softened.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon jaune, dés moyens",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poireaux (douces, plus douces)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Whisk",
-      inputs: ["sweated_onion", "ing_03"],
-      outputState: "veloute_base",
-      instructions: "Sprinkle the flour over the onions and fat. Stir constantly for 2–3 minutes over medium heat until the raw flour smell dissipates and the mixture smells faintly of cooked pastry. You are making a pale roux in situ. Then pour in the clam juice gradually while whisking constantly — add the first cup slowly to prevent lumps, then add the rest in a steady stream.",
-      visualCue: {
-        primaryTarget: "A thick, ivory-white liquid, free of lumps, with a satiny sheen. The base coats the back of a spoon in a thin layer.",
-        spectrum: [
-          { state: "Underdone", description: "Flour has been added but not cooked — it smells raw and starchy. Clam juice added too quickly and visible lumps are forming.", action: "Whisk more vigorously. If lumps persist, use an immersion blender on the base before adding potatoes." },
-          { state: "Perfect",   description: "Smooth, ivory-colored, slightly thickened liquid. Smells of briny clam and cooked flour. No floury taste.", action: "Add potatoes, thyme, and bay leaf." },
-          { state: "Overdone",  description: "Roux was cooked too long and turned tan. The chowder base has a nutty flavor.", action: "This is fine — it will produce a slightly nuttier, more complex chowder. Proceed." },
-        ],
-      },
-      feelCue: "The base should feel like thin béchamel on the spoon — slightly heavier than water but still pourable, with a silky resistance when the spoon is dragged through it.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fécule de pomme de terre (utiliser la moitié de la quantité, ajouter à la fin)"
+      ]
     },
     {
-      nodeId: "step_4", action: "Simmer",
-      inputs: ["veloute_base", "ing_04", "ing_05", "ing_08", "ing_09"],
-      outputState: "potato_chowder",
-      instructions: "Add any remaining clam juice, the diced potatoes, thyme sprigs, and bay leaf. Bring to a gentle simmer (not a full boil — boiling makes the potatoes fall apart unevenly). Cook uncovered at a moderate simmer for 15–20 minutes until the potatoes are completely tender. Test multiple pieces — outer cubes may be done before center cubes from the same dice.",
-      visualCue: {
-        primaryTarget: "Potato cubes are fully tender and have begun to release a small amount of starch into the chowder, thickening it further. A few cubes at the surface may be very slightly broken at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Potatoes resist a fork or paring knife. Center of the dice feels firm and raw.", action: "Continue simmering. Check every 3 minutes — the difference between underdone and overdone potato in soup is fast." },
-          { state: "Perfect",   description: "A potato cube pierced with a knife tip slides off without resistance. The chowder base has thickened from released potato starch.", action: "Add the clams and cream." },
-          { state: "Overdone",  description: "Many potato cubes have disintegrated into the liquid. The chowder is very thick and more like a potato soup.", action: "It will still be delicious as a thicker chowder. Add cream and clams and proceed — the broken potatoes are not a problem." },
-        ],
-      },
-      feelCue: "A soft potato cube pressed against the side of the pot with a spoon should crush cleanly to a smooth mash with no gritty resistance. If it slides off before you press, it is overdone.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Jus de clam ou bouillon de palourdes en bouteille",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "stocks de poissons (moins de soie)"
+      ]
     },
     {
-      nodeId: "step_5", action: "Finish",
-      inputs: ["potato_chowder", "ing_06", "ing_07", "ing_10", "rendered_salt_pork"],
-      outputState: "finished_chowder",
-      instructions: "Remove the thyme sprigs and bay leaf. Reduce heat to low — the chowder must never boil again after the cream goes in or the cream will break. Add the chopped clams (with their juices if using canned), pour in the heavy cream, and return the reserved salt pork. Stir gently to combine. Heat through for 3–5 minutes until the clams are warmed and the cream is fully integrated. Season with white pepper and taste for salt — the clam juice and salt pork are already quite salty.",
-      visualCue: {
-        primaryTarget: "A thick, ivory-white chowder with a glossy cream sheen on the surface. Clams and pork distributed throughout. Color is uniform cream-white with no cream separation.",
-        spectrum: [
-          { state: "Underdone", description: "Cream looks thin and watery, separating visibly from the potato base. Clams are still cold.", action: "Stir gently over low heat for 2 more minutes. Do not raise the heat or the cream will break." },
-          { state: "Perfect",   description: "Fully integrated, thick, glossy chowder. Runs off the spoon in a single coat. Smells intensely of ocean, cream, and smoked pork.", action: "Ladle into warm bowls. Serve immediately with oyster crackers." },
-          { state: "Overdone",  description: "Cream has broken — yellow butterfat pools are visible on the surface and the base looks curdled and grainy.", action: "Whisk in a tablespoon of cold water while stirring vigorously. The chowder may re-emulsify partially. Next time, never let it boil after adding cream." },
-        ],
-      },
-      feelCue: "Drag a clean spoon through the chowder and hold it up — the chowder should coat the back of the spoon in a layer you can draw a line through with your finger (nappé consistency). The smell should be the full combination: brine, smoke, cream, and sweet allium.",
+      "ingId": "ing_05",
+      "role": "Starch",
+      "name": "Pommes de terre en russe ou en or du Yukon, 1cm dés",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Palourdes en conserve ou fraîches",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moitié et moitié (douceur)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Fils de thym frais (2–3)",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym séché (utiliser la moitié)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Feuille de la baie (1 grande)",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel casher et poivre blanc",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rendu",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "rendered_salt_pork",
+      "instructions": "Placer le porc salé ou le bacon dans une casserole froide à fond lourd (le four hollandais est idéal). Régler à feu moyen-doux. À partir du froid permet à la graisse de rendre lentement sans brunir l'extérieur — vous voulez de la graisse dans le pot, pas une texture croustillante. Cuire de 8 à 10 minutes, en remuant occasionnellement jusqu'à ce que la majeure partie de la graisse soit rendue et que les morceaux soient dorés mais pas encore croustillants. Enlevez les morceaux de porc avec une cuillère à fentes et réservez — ils retournent à la fin.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux de porc sont dorés-jaunes et rétrécis à environ la moitié de leur taille originale. Une généreuse piscine de graisse claire à dorée enveloppe le fond du pot.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc est encore rose pâle et doux. Très peu de graisse a rendu — le pot brille à peine.",
+            "action": "Continuer la cuisson sur moyenne-doux. Début chaud rend l'extérieur avant la libération de graisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pièces sont un tandem d'or, ferme, brillant et rendu gras. Au moins 3 à 4 cuillères à soupe de graisse visible dans le fond.",
+            "action": "Retirer le porc avec une cuillère à fentes et réserver. Laisse toute la graisse dans le pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les morceaux sont brun foncé et commencent à croquer aux bords. Certains gras peuvent fumer.",
+            "action": "Supprimer immédiatement. Réduire la chaleur. Le porc est encore utilisable — la légère croustillante s'assouplira lorsqu'il retournera dans la poêle."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère en bois traînée à travers le fond du pot devrait glisser dans la graisse claire et chatoyante. Vous devriez entendre un étourdissement doux et paresseux — et non un craquement aigu et agressif — tout au long du rendu."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "rendered_salt_pork",
+        "ing_02"
+      ],
+      "outputState": "sweated_onion",
+      "instructions": "Ajouter l'oignon en dés à la graisse fondue dans le pot à feu moyen. Cuire en remuant toutes les 2 minutes, de 8 à 10 minutes jusqu'à ce qu'il soit complètement adouci et translucide. Les oignons doivent être doux et productifs, et non brunis. New England chowder est une chowder blanche; toute caramélisation des aromatiques la teintera jaune-brun et ajoutera de la douceur qui combat la saumure.",
+      "visualCue": {
+        "primaryTarget": "Les oignons sont complètement translucides et boiteux, réduits à environ 60% de leur volume brut. Pas de bords dorés ou bruns.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont encore blancs opaques avec une structure rigide. Le goût n'est pas devenu sucré.",
+            "action": "Réduire légèrement le feu et cuire encore 3-4 minutes. Couvrez le pot pour piéger la vapeur et la vitesse d'adoucissement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement translucide, floppy et sucré. Ils glissent librement dans la graisse sans résistance.",
+            "action": "Ajouter la farine et mélanger pour enrober."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oignons commencent à développer des bords dorés et une odeur de caramel plutôt que d'allium.",
+            "action": "Ils sont encore utilisables mais la chowder aura une base légèrement plus douce, teintée d'ambre. Continuez."
+          }
+        ]
+      },
+      "feelCue": "Un oignon translucide pressé entre deux cuillères devrait s'effondrer à une pâte douce lisse sans croûte ni résistance — l'eau est partie et les sucres se sont adoucis."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "sweated_onion",
+        "ing_03"
+      ],
+      "outputState": "veloute_base",
+      "instructions": "Saupoudrer la farine sur les oignons et la graisse. Incorporer constamment 2 à 3 minutes à feu moyen jusqu'à ce que l'odeur de la farine brute se dissipe et que le mélange sente faiblement la pâtisserie cuite. Vous faites un roux pâle sur place. Verser ensuite le jus de palourde progressivement tout en fouettant constamment — ajouter la première tasse lentement pour éviter les grumeaux, puis ajouter le reste dans un ruisseau stable.",
+      "visualCue": {
+        "primaryTarget": "Un liquide épais, blanc ivoire, sans grumeaux, avec un éclat satiné. La base recouvre l'arrière d'une cuillère en couche mince.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La farine a été ajoutée mais n'a pas été cuite — elle sent le cru et l'amidon. Le jus de clam ajouté trop rapidement et les morceaux visibles se forment.",
+            "action": "Plus vigoureusement. Si des morceaux persistent, utilisez un mélangeur d'immersion sur la base avant d'ajouter des pommes de terre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide lisse, couleur ivoire, légèrement épaissé. Sens de palourde et de farine cuite. Pas de goût farineux.",
+            "action": "Ajouter les pommes de terre, le thym et la laurier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Roux était cuit trop longtemps et bronzé. La base de chowder a une saveur de noix.",
+            "action": "C'est très bien, il produira un peu plus noisette, plus complexe. Continuez."
+          }
+        ]
+      },
+      "feelCue": "La base doit se sentir comme du béchamel fin sur la cuillère — légèrement plus lourd que l'eau mais toujours versable, avec une résistance soyeuse quand la cuillère est traînée à travers elle."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "veloute_base",
+        "ing_04",
+        "ing_05",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "potato_chowder",
+      "instructions": "Ajouter le jus de palourde restant, les pommes de terre en dés, les brins de thym et la feuille de laurier. Porter à mijoter doucement (pas un ébullition complet — le bouillir fait tomber les pommes de terre de façon inégale). Cuire à découvert à mi-chemin pendant 15 à 20 minutes jusqu'à ce que les pommes de terre soient complètement tendres. Tester plusieurs pièces — les cubes extérieurs peuvent être faits avant les cubes centraux à partir du même dés.",
+      "visualCue": {
+        "primaryTarget": "Les cubes de pommes de terre sont entièrement tendres et ont commencé à libérer une petite quantité d'amidon dans la hotte, l'épaississant davantage. Quelques cubes à la surface peuvent être très légèrement cassés aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pommes de terre résistent à une fourche ou à un couteau. Centre des dés se sent ferme et brut.",
+            "action": "Continuez à mijoter. Vérifiez toutes les 3 minutes — la différence entre la pomme de terre sous - done et la pomme de terre sur done dans la soupe est rapide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un cube de pomme de terre percé avec une pointe de couteau glisse sans résistance. La base de chowder s'est épaissie à partir de fécule de pomme de terre libérée.",
+            "action": "Ajouter les palourdes et la crème."
+          },
+          {
+            "state": "Overdone",
+            "description": "De nombreux cubes de pommes de terre se sont désintégrés dans le liquide. La chowder est très épaisse et plus comme une soupe de pomme de terre.",
+            "action": "Ce sera toujours délicieux comme une chowder plus épaisse. Ajouter la crème et les palourdes et procéder — les pommes de terre cassées ne sont pas un problème."
+          }
+        ]
+      },
+      "feelCue": "Un cube de pomme de terre molle pressé contre le côté de la casserole avec une cuillère doit écraser proprement jusqu'à une masse lisse sans résistance au grain. Si ça glisse avant d'appuyer, c'est exagéré."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Finition",
+      "inputs": [
+        "potato_chowder",
+        "ing_06",
+        "ing_07",
+        "ing_10",
+        "rendered_salt_pork"
+      ],
+      "outputState": "finished_chowder",
+      "instructions": "Enlevez les brins de thym et les feuilles de laurier. Réduisez la chaleur à faible — la cuillerée ne doit plus jamais bouillir après l'entrée de la crème ou la crème se brise. Ajouter les palourdes hachées (avec leur jus si elles sont en conserve), verser la crème lourde et retourner le porc salé réservé. Mélanger doucement. Chauffer pendant 3 à 5 minutes jusqu'à ce que les palourdes soient chaudes et que la crème soit complètement intégrée. Assaisonner de poivre blanc et goûter au sel — le jus de palourde et le porc salé sont déjà assez salés.",
+      "visualCue": {
+        "primaryTarget": "Un épais, blanc ivoire avec une crème brillante brillance sur la surface. Clams et porc distribués partout. Couleur est blanc crème uniforme sans séparation de la crème.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème semble mince et aqueuse, se séparant visiblement de la base de la pomme de terre. Les clams sont encore froids.",
+            "action": "Incorporer doucement à feu doux pendant 2 minutes supplémentaires. Ne pas lever la chaleur ou la crème se briser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chowder entièrement intégré, épais et brillant. Exécute la cuillère en une seule couche. Sensation intense d'océan, de crème et de porc fumé.",
+            "action": "Déposer dans des bols chauds. Servir immédiatement avec des craquelins d'huîtres."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème a cassé — les piscines de graisse de beurre jaune sont visibles à la surface et la base semble caillé et granuleux.",
+            "action": "Dans une cuillère à soupe d'eau froide, fouetter vigoureusement. La chowder peut ré-émulsionner partiellement. La prochaine fois, ne le laissez jamais bouillir après avoir ajouté de la crème."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère propre à travers la hotte et maintenez-la en place — la hotte doit enrober le dos de la cuillère dans une couche que vous pouvez tracer une ligne à travers votre doigt (co consistance nappé). L'odeur doit être la combinaison complète: saumure, fumée, crème et allium doux."
+    }
+  ]
 };

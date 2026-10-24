@@ -1,81 +1,189 @@
 export default {
-  repoId: "master_middle_eastern_zaatar_001",
-  parentRepoId: null,
-  slug: "zaatar-blend",
-  author: "ForkRecipe Kitchen",
-  title: "Za'atar Spice Blend",
-  description: "The iconic Levantine herb-spice blend: dried thyme and oregano, sumac, toasted sesame seeds, and salt — stirred into olive oil, it becomes a dip; scattered over flatbread, it becomes a meal.",
-  cuisine: "Middle Eastern",
-  culture: "Levantine",
-  category: "condiments",
-  tags: ["zaatar", "levantine", "middle-eastern", "spice-blend", "herb", "dip", "condiment"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 2, sour: 3, bitter: 2, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Herb",      name: "Dried thyme",          ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Herb",      name: "Dried oregano",        ratioValue: 50,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Herb",      name: "Dried marjoram",       ratioValue: 30,  defaultUnit: "parts", substitutions: ["dried savory"] },
-    { ingId: "ing_04", role: "Acid",      name: "Ground sumac",         ratioValue: 60,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",       name: "White sesame seeds",   ratioValue: 60,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine salt",            ratioValue: 10,  defaultUnit: "parts", substitutions: ["flaked sea salt"] },
+  "repoId": "master_middle_eastern_zaatar_001",
+  "parentRepoId": null,
+  "slug": "zaatar-blend",
+  "author": "ForkRecipe Kitchen",
+  "title": "Mélange d'épices Za'atar",
+  "description": "L'emblématique mélange d'herbes et d'épices de Levantine : thym séché et origan, sumac, graines de sésame grillées et sel – brassé dans l'huile d'olive, il devient un plongeon ; dispersé sur des pains plats, il devient un repas.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Levantine",
+  "category": "condiments",
+  "tags": [
+    "zaatar",
+    "lévantine",
+    "Moyen-Orient",
+    "d'épices",
+    "herbe",
+    "trempette",
+    "condiment"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 2,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Pound",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "crushed_herbs",
-      instructions: "Rub the dried thyme, oregano, and marjoram between your palms over the mixing bowl, pressing firmly to break the leaves into coarse fragments and release their volatile oils. Alternatively, give them a brief pulse in a spice grinder. The herbs should retain some texture — do not reduce them to a fine powder.",
-      visualCue: {
-        primaryTarget: "Coarsely broken herb flakes with irregular edges, releasing a concentrated herbal aroma. The color brightens slightly from dull grey-green to true green as the cell walls break open.",
-        spectrum: [
-          { state: "Underdone", description: "Leaves are still whole and rigid. No aroma has been released — the oils are sealed inside the intact leaves.", action: "Rub more firmly and longer between palms. The friction breaks the cell walls and releases the thymol and other aromatics locked inside." },
-          { state: "Perfect",   description: "Irregular flakes ranging from fine crumbs to 3–4 mm pieces. The aroma is bright, resinous, and herbal. The bowl smells like a Levantine hillside after rain.", action: "Add the remaining ingredients and toss together." },
-          { state: "Overdone",  description: "Herbs have been ground to a fine dust. All texture is lost and the aroma is already beginning to fade as the volatile oils evaporate.", action: "Add the sumac and sesame immediately to extend the shelf life of the oils. Powdered za'atar is still delicious — use it promptly." },
-        ],
-      },
-      feelCue: "Press a pinch between your fingers — it should feel coarsely textured like dried breadcrumbs, and your fingertips should come away lightly fragrant with thyme oil.",
+      "ingId": "ing_01",
+      "role": "Herb",
+      "name": "Thym séché",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Toast",
-      inputs: ["ing_05"],
-      outputState: "toasted_sesame",
-      instructions: "Place the sesame seeds in a dry skillet over medium heat. Toast, shaking the pan continuously, for 2–3 minutes until the seeds are golden — they will darken quickly once they start to color. Remove immediately to a plate to stop cooking.",
-      visualCue: {
-        primaryTarget: "Evenly golden sesame seeds with a warm, nutty aroma. A few will be slightly darker than the rest — this is normal and adds complexity.",
-        spectrum: [
-          { state: "Underdone", description: "Seeds are still white and raw. No color change, no nutty aroma — just a raw grain smell.", action: "Continue over medium heat. The moment color starts to develop it moves fast — watch closely." },
-          { state: "Perfect",   description: "Light to medium golden. Smell is warm, toasty, and faintly sweet. Seeds pop very slightly in the pan.", action: "Tip immediately onto a cool plate — they will continue cooking for 30 seconds from residual heat." },
-          { state: "Overdone",  description: "Dark brown, some black edges. Smell has turned bitter and acrid, like burnt popcorn.", action: "Discard and start again with fresh seeds. Burnt sesame will make the entire za'atar bitter." },
-        ],
-      },
-      feelCue: "Toss a cooled sesame seed between your fingers — it should feel dry and slightly rough, with a detectable warmth from toasting still radiating from the surface.",
+      "ingId": "ing_02",
+      "role": "Herb",
+      "name": "Origan séché",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Toss",
-      inputs: ["crushed_herbs", "ing_04", "toasted_sesame", "ing_06"],
-      outputState: "zaatar_blend",
-      instructions: "Combine the crushed herbs, ground sumac, toasted sesame seeds, and salt in the bowl. Toss with a spoon or shake in a sealed jar to distribute evenly. Taste — adjust sumac for tartness, salt for seasoning. Store in an airtight jar away from light. Use within 2 months for peak flavor.",
-      visualCue: {
-        primaryTarget: "A heterogeneous blend of green herb flakes, deep burgundy sumac, ivory sesame seeds, and white salt crystals — no single ingredient dominant to the eye, the colors interspersed throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Sumac has clumped in one corner and the herbs are grouped separately — the blend is not evenly distributed.", action: "Shake the jar vigorously or stir for 30 seconds. Sumac is finely ground and tends to clump — ensure the bowl is completely dry before mixing." },
-          { state: "Perfect",   description: "An evenly mixed, aromatic blend. Every spoonful contains visible herb fragments, sesame seeds, and the deep burgundy tint of sumac. The smell is complex: herbal, sour, nutty, and slightly floral.", action: "Transfer to a sealed jar. The blend needs no refrigeration." },
-          { state: "Overdone",  description: "Over-mixed in a food processor — the blend has homogenized into a fine green-brown powder with no visible texture.", action: "Stir in a few whole sesame seeds for texture. The flavor is intact." },
-        ],
-      },
-      feelCue: "A pinch of za'atar should feel slightly gritty from the sesame and sumac, lightly oily from the crushed herb leaves, with an immediate sharp-herbal smell on the warm palm.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Marjoram séché",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "salé séché"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Sumac au sol",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Graines de sésame blanc",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sel de mer flocé"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "crushed_herbs",
+      "instructions": "Frottez le thym séché, l'origan et le marjoram entre vos paumes au-dessus du bol de mélange, appuyez fermement pour briser les feuilles en fragments grossiers et relâchez leurs huiles volatiles. Alternativement, donnez-leur un bref pouls dans un broyeur d'épices. Les herbes devraient conserver une certaine texture — ne pas les réduire à une poudre fine.",
+      "visualCue": {
+        "primaryTarget": "Herbes grossièrement cassées flocons avec des bords irréguliers, libérant un arôme concentré de plantes. La couleur s'éclaircit légèrement de gris-vert terne à vrai vert lorsque les parois cellulaires s'ouvrent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les feuilles sont toujours entières et rigides. Aucun arôme n'a été libéré — les huiles sont scellées à l'intérieur des feuilles intactes.",
+            "action": "Frottez plus fermement et plus longtemps entre les palmiers. La friction brise les parois cellulaires et libère le thymol et d'autres aromatiques enfermés à l'intérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Flocons irréguliers allant de fines miettes à des morceaux de 3 à 4 mm. L'arôme est lumineux, résineux et à base de plantes. Le bol sent comme une colline de Levantine après la pluie.",
+            "action": "Ajouter le reste des ingrédients et mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les herbes ont été broyées à une fine poussière. Toute la texture est perdue et l'arôme commence déjà à se faner à mesure que les huiles volatiles s'évaporent.",
+            "action": "Ajouter le sumac et le sésame immédiatement pour prolonger la durée de conservation des huiles. Le za'atar en poudre est toujours délicieux — utilisez - le rapidement."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une pincée entre vos doigts — il devrait se sentir grossièrement texturé comme une chapelure séchée, et vos doigts devraient sortir légèrement parfumé avec l'huile de thym."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "ing_05"
+      ],
+      "outputState": "toasted_sesame",
+      "instructions": "Placer les graines de sésame dans une poêle sèche à feu moyen. Faire cuire, agiter la poêle en continu, pendant 2 à 3 minutes jusqu'à ce que les graines soient dorées — elles s'assombrissent rapidement une fois qu'elles commencent à colorier. Retirer immédiatement dans une assiette pour arrêter la cuisson.",
+      "visualCue": {
+        "primaryTarget": "Graines de sésame d'or uniforme avec un arôme chaud et noisette. Quelques-uns seront un peu plus sombres que les autres — c'est normal et ajoute de la complexité.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines sont encore blanches et crues. Pas de changement de couleur, pas d'arôme de noix — juste une odeur de grain cru.",
+            "action": "Continuer à feu moyen. Le moment où la couleur commence à se développer se déplace rapidement — regardez de près."
+          },
+          {
+            "state": "Perfect",
+            "description": "Léger à moyen doré. L'odeur est chaude, grillée et légèrement sucrée. Les graines apparaissent très légèrement dans la poêle.",
+            "action": "Astuce immédiatement sur une assiette fraîche — ils continueront à cuire pendant 30 secondes à partir de la chaleur résiduelle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé, quelques bords noirs. L'odeur est devenue amère et acride, comme du popcorn brûlé.",
+            "action": "Jeter et recommencer avec des graines fraîches. Le sésame brûlé rendra le za'atar amer."
+          }
+        ]
+      },
+      "feelCue": "Mélangez une graine de sésame refroidie entre vos doigts – elle devrait être sèche et légèrement rugueuse, avec une chaleur détectable de griller encore rayonnant de la surface."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Découpe",
+      "inputs": [
+        "crushed_herbs",
+        "ing_04",
+        "toasted_sesame",
+        "ing_06"
+      ],
+      "outputState": "zaatar_blend",
+      "instructions": "Mélanger les herbes concassées, le sumac moulu, les graines de sésame grillées et le sel dans le bol. Mélanger avec une cuillère ou agiter dans un pot scellé pour distribuer uniformément. Goûter — ajuster le sumac pour la tarte, le sel pour l'assaisonnement. Conserver dans un pot hermétique à l'abri de la lumière. Utiliser dans les 2 mois pour la saveur maximale.",
+      "visualCue": {
+        "primaryTarget": "Un mélange hétérogène de flocons d'herbes vertes, de sumac bourgogneux profonds, de graines de sésame d'ivoire et de cristaux de sel blanc — aucun ingrédient dominant à l'œil, les couleurs s'entremêlaient.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sumac s'est emparé d'un coin et les herbes sont regroupées séparément — le mélange n'est pas uniformément distribué.",
+            "action": "Agiter vigoureusement le pot ou remuer pendant 30 secondes. Sumac est finement moulu et tend à s'agglutiner — assurez-vous que le bol est complètement sec avant de mélanger."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un mélange aromatique uniformément mélangé. Chaque cuillère contient des fragments d'herbes visibles, des graines de sésame et la teinte de sumac. L'odeur est complexe : herbes, aigre, noix et légèrement florale.",
+            "action": "Transférer dans un pot scellé. Le mélange n'a pas besoin de réfrigération."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmélangé dans un robot culinaire — le mélange s'est homogénéisé en poudre fine brun-vert sans texture visible.",
+            "action": "Incorporer quelques graines de sésame pour obtenir de la texture. La saveur est intacte."
+          }
+        ]
+      },
+      "feelCue": "Une pincée de za'atar doit se sentir légèrement gritte du sésame et du sumac, légèrement huilée des feuilles d'herbe broyées, avec une odeur immédiate d'herbe vive sur le palmier chaud."
+    }
+  ]
 };

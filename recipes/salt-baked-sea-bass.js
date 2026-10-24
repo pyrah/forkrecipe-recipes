@@ -1,116 +1,286 @@
 export default {
-  repoId: "master_chinese_salt_baked_sea_bass_001",
-  parentRepoId: null,
-  slug: "salt-baked-sea-bass",
-  author: "ForkRecipe Kitchen",
-  title: "Salt-Baked Sea Bass",
-  description: "A whole sea bass encased in an egg-white-bound salt crust and baked until the crust sets hard as stone — inside, the fish has steamed in its own juices and the heat of the sealed crust, emerging perfectly cooked, sweet-fleshed, and explosively fragrant with ginger and scallion.",
-  cuisine: "Chinese",
-  culture: "Cantonese",
-  category: "seafood",
-  tags: ["sea-bass", "chinese", "cantonese", "salt-crust", "whole-fish", "steamed", "ginger"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 2, sour: 0, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole sea bass, cleaned and scaled (about 700g)",         ratioValue: 700,  defaultUnit: "g",  substitutions: ["whole snapper", "whole bream", "whole trout"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Coarse sea salt (not fine — it must be granular)",        ratioValue: 1500, defaultUnit: "g",  substitutions: ["kosher salt", "rock salt"] },
-    { ingId: "ing_03", role: "Binder",    name: "Egg whites, lightly beaten",                              ratioValue: 3,    defaultUnit: "ea", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Fresh ginger, peeled, sliced into coins",                 ratioValue: 30,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Scallions (spring onions), tied in a loose knot",         ratioValue: 4,    defaultUnit: "ea", substitutions: [] },
-    { ingId: "ing_06", role: "Herb",      name: "Fresh cilantro sprigs",                                   ratioValue: 6,    defaultUnit: "ea", substitutions: ["flat-leaf parsley if allergic to cilantro"] },
-    { ingId: "ing_07", role: "Fat",       name: "Sesame oil, toasted",                                     ratioValue: 15,   defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning", name: "Soy sauce (light soy)",                                   ratioValue: 30,   defaultUnit: "ml", substitutions: ["tamari (gluten-free)"] },
-    { ingId: "ing_09", role: "Liquid",    name: "Shaoxing rice wine",                                      ratioValue: 15,   defaultUnit: "ml", substitutions: ["dry sherry", "dry Vermouth"] },
+  "repoId": "master_chinese_salt_baked_sea_bass_001",
+  "parentRepoId": null,
+  "slug": "salt-baked-sea-bass",
+  "author": "ForkRecipe Kitchen",
+  "title": "Basse mer salée",
+  "description": "Un bar de mer entier enrobé d'une croûte de sel liée aux œufs et cuit jusqu'à ce que la croûte soit dure comme de la pierre — à l'intérieur, le poisson a cuit à la vapeur dans ses propres jus et la chaleur de la croûte scellée, émergeant parfaitement cuit, doux-floqué, et explosivement parfumé de gingembre et d'échon.",
+  "cuisine": "Chinois",
+  "culture": "Cantonais",
+  "category": "seafood",
+  "tags": [
+    "base maritime",
+    "Chinois",
+    "cantonais",
+    "croûte salée",
+    "poissons entiers",
+    "vapeur",
+    "gingembre"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Peel",
-      inputs: ["ing_01"],
-      outputState: "dried_fish",
-      instructions: "Preheat the oven to 200°C (390°F) with a rack in the centre position. Pat the sea bass completely dry — inside the cavity and all over the outside — with multiple changes of paper towels. Dryness is critical: any moisture on the fish surface will steam inside the salt crust rather than allowing the fish to cook in the dry residual heat of the crust. Inspect the fish for any remaining scales by running a finger from tail to head — any that remain will prevent the crust from sealing properly and can embed in the fish.",
-      visualCue: {
-        primaryTarget: "Fish skin is completely matte and dry with no glistening or wet patches. The cavity interior is also dry when inspected.",
-        spectrum: [
-          { state: "Underdone", description: "Skin still glistens with moisture from the fish monger's ice. Dark wet patches on the skin and wet spots inside the cavity.", action: "Pat again with fresh dry paper towels and leave uncovered at room temperature for 5 minutes before encasing. Even a thin film of moisture affects the crust." },
-          { state: "Perfect",   description: "Skin is completely matte. Running a dry paper towel over it produces no moisture. Inside the cavity is dry to the touch.", action: "Stuff immediately and proceed to building the salt crust." },
-          { state: "Overdone",  description: "Fish has been left uncovered so long the surface has begun to dry and firm slightly at the thinnest points, like the tail.", action: "Proceed immediately — superficial drying does not affect the eating. The salt crust will protect it." },
-        ],
-      },
-      feelCue: "Run a dry finger from tail to head across the fish skin — it should catch slightly on the scales and feel completely dry, like touching dry parchment paper, not the slippery wet surface of a fresh-washed fish.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Bars entiers, nettoyés et étalonnés (environ 700g)",
+      "ratioValue": 700,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Déclencheur entier",
+        "Bream entier",
+        "Truite entière"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Stuff",
-      inputs: ["dried_fish", "ing_04", "ing_05", "ing_06", "ing_09"],
-      outputState: "stuffed_fish",
-      instructions: "Lay the ginger slices in an overlapping layer along the length of the cavity floor. Place the knotted scallions on top of the ginger, and tuck the cilantro sprigs around them. Drizzle the Shaoxing wine into the cavity — it will perfume the fish as it steams. Close the cavity by pressing the sides of the fish together gently. The aromatics inside do not season the flesh directly; they create a fragrant steam environment that perfumes the fish from within.",
-      visualCue: {
-        primaryTarget: "Cavity is neatly filled with ginger, scallions, and herbs. Sides of the fish are pressed together. The stuffing is visible if the belly is opened but not spilling out.",
-        spectrum: [
-          { state: "Underdone", description: "Too few aromatics — cavity looks sparse and the ginger and scallions cover less than half the interior length.", action: "Add more ginger and scallions. The cavity should be generously packed but not so full it cannot close." },
-          { state: "Perfect",   description: "Cavity neatly and fully packed. Fish sides close together with a gentle press. Faint perfume of ginger and Shaoxing wine already present.", action: "Proceed to building the salt crust." },
-          { state: "Overdone",  description: "Stuffing so abundant that the fish cannot close. Aromatics are bulging out of the cavity opening.", action: "Remove a few pieces. An overstuffed fish will not seal in the salt crust properly." },
-        ],
-      },
-      feelCue: "Press the belly of the stuffed fish closed with your palm — it should stay shut with gentle pressure, not spring open. If it springs open, reduce the stuffing slightly.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel de mer grossier (non fin — il doit être granulé)",
+      "ratioValue": 1500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher",
+        "sel de roche"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["stuffed_fish", "ing_02", "ing_03"],
-      outputState: "salt_crusted_baked_fish",
-      instructions: "Mix the coarse sea salt and lightly beaten egg whites together with your hands until the mixture resembles wet sand that holds its shape when squeezed — it should clump, not crumble. Spread a 1.5cm bed of the salt mixture on a baking tray or oven-proof dish. Lay the stuffed fish on the bed. Pack the remaining salt mixture over and around the entire fish, pressing firmly to build a uniform crust 2cm thick on all sides. Seal any gaps, especially around the tail and head. Bake at 200°C for 25–30 minutes (about 20 minutes per 500g of fish weight, plus 5 minutes for the crust).",
-      visualCue: {
-        primaryTarget: "After baking, the salt crust has hardened to a uniformly pale ivory or lightly golden shell that sounds hollow when tapped. There are no cracks or soft spots.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is still somewhat soft and yielding in places — the egg whites have not fully set. Soft spots likely over the thickest part of the fish.", action: "Return to the oven for 5 more minutes. A soft crust means the interior is also likely undercooked." },
-          { state: "Perfect",   description: "Crust sounds hollow and hard when knocked with a knuckle, like tapping a terracotta pot. The surface is bone-dry, off-white, and lightly coloured. A thin crack may appear along the back.", action: "Bring the dish to the table immediately and crack the crust theatrically with the back of a large serving spoon." },
-          { state: "Overdone",  description: "Crust has developed very deep golden to brown colour. The fish inside has likely cooked further than intended.", action: "Crack immediately upon removing from the oven. The thick crust insulates the fish and it will continue cooking if left sealed. Serve at once." },
-        ],
-      },
-      feelCue: "Knock the crust sharply with a knuckle after baking — it should ring hollow and hard, like a clay flowerpot, not give under your knuckle. Any softness means it needs more time.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Blancs d'oeufs, légèrement battus",
+      "ratioValue": 3,
+      "defaultUnit": "ea",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Strain",
-      inputs: ["salt_crusted_baked_fish"],
-      outputState: "unveiled_salt_baked_fish",
-      instructions: "At the table, present the salt-crusted dish. Using the back of a heavy spoon or small hammer, crack the crust along the spine with a few firm blows. Lift off the large pieces of crust — the fish skin will often come away with the top crust, revealing bright, pearlescent white flesh beneath. Brush away any salt granules clinging to the flesh with a pastry brush. The fish will not taste salty — the salt crust seasons it only from the outside through the skin, not into the flesh.",
-      visualCue: {
-        primaryTarget: "After cracking and removing the crust, the fish flesh is bright white, fully opaque, and moist-looking. It separates cleanly into large, glossy segments when touched with a fork.",
-        spectrum: [
-          { state: "Underdone", description: "Flesh at the backbone is still translucent or faintly pink-grey. The segments resist separation when a fork is pressed in at the spine.", action: "Replace the crust pieces and return to the oven for 8 minutes. The crust, even cracked, will still conduct heat." },
-          { state: "Perfect",   description: "Flesh is uniformly bright white throughout, pearlescent and glistening. Segments separate effortlessly. Steam rises gently from the open fish. The ginger and scallion perfume is immediate and beautiful.", action: "Drizzle with soy sauce and sesame oil and serve directly from the dish." },
-          { state: "Overdone",  description: "Flesh looks dry and compact at the thinner areas near the tail. Segments are slightly rubbery rather than glossy.", action: "Serve immediately with extra sesame oil drizzled generously. Avoid the driest tail sections." },
-        ],
-      },
-      feelCue: "Touch the exposed flesh lightly with the back of a fork — perfect salt-baked fish should feel warm and yielding with the faintest resistance, like pressing a very soft, ripe mango. Cool or hard flesh means more time was needed.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Gingembre frais, pelé, tranché en pièces de monnaie",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Finish",
-      inputs: ["unveiled_salt_baked_fish", "ing_07", "ing_08"],
-      outputState: "finished_salt_baked_sea_bass",
-      instructions: "Working quickly so the fish does not cool, drizzle the soy sauce evenly over the exposed flesh, followed by the toasted sesame oil — the sesame oil should sizzle faintly as it hits the hot fish. Serve directly from the dish with steamed white jasmine rice and a simple stir-fried green vegetable. Use a tablespoon to scoop portions of the flesh off the spine, keeping the segments as large and intact as possible — this fish deserves to be eaten in generous, moist chunks, not shredded.",
-      visualCue: {
-        primaryTarget: "Flesh is coated in a thin, glistening film of soy and sesame. The dark soy creates a beautiful contrast against the bright white flesh. The kitchen smells of toasted sesame, soy, and ginger.",
-        spectrum: [
-          { state: "Underdone", description: "Soy has not been added yet — the flesh looks pale and unseasoned. Without the soy, the dish lacks the savoury depth that ties the sweet fish to the aromatic filling.", action: "Add the soy sauce and sesame oil immediately. The fish is cooling fast." },
-          { state: "Perfect",   description: "Thin even glaze of soy, just enough to season without puddling at the base of the dish. Sesame oil fragrance mingles with the ginger and scallion rising from the opened cavity.", action: "Bring to the table and serve immediately." },
-          { state: "Overdone",  description: "Too much soy sauce — the flesh is swimming in liquid and tastes aggressively salty, overwhelming the subtle sweetness of the bass.", action: "Tilt the dish and pour off excess soy. Add a splash of hot water and a few drops of sesame oil to restore balance." },
-        ],
-      },
-      feelCue: "The first bite should taste clean, sweet, and of the sea — with the ginger and sesame oil arriving as a warm, aromatic whisper rather than a shout. If the salt dominates, the crust was too thin or the fish was undersized for the salt ratio.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Échalons (oignons de printemps), liés dans un noeud lâche",
+      "ratioValue": 4,
+      "defaultUnit": "ea",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Coriandres fraîches",
+      "ratioValue": 6,
+      "defaultUnit": "ea",
+      "substitutions": [
+        "persil à feuilles plates si allergique à la coriandre"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "sauce soja (soja léger)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari (sans gluten)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Liquid",
+      "name": "Vin de riz shaoxant",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sherry sec",
+        "Vermouth sec"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Peler",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "dried_fish",
+      "instructions": "Préchauffer le four à 200°C (390°F) avec un support en position centrale. Pat le bar de mer complètement sec — à l'intérieur de la cavité et partout à l'extérieur — avec de multiples changements de serviettes en papier. La sécheresse est critique : toute humidité à la surface du poisson s'écoule à l'intérieur de la croûte salée plutôt que de laisser le poisson cuire dans la chaleur résiduelle sèche de la croûte. Inspectez le poisson pour les autres écailles en tirant un doigt de la queue à la tête — tout ce qui reste empêchera la croûte de s'étanchéité correctement et pourra s'intégrer dans le poisson.",
+      "visualCue": {
+        "primaryTarget": "La peau de poisson est complètement mate et sèche sans tache scintilleante ou humide. L'intérieur de la cavité est également sec lors de l'inspection.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau brille toujours avec l'humidité de la glace du poisson-monger. Des taches sombres humides sur la peau et des taches humides dans la cavité.",
+            "action": "Patez encore avec des serviettes en papier sec frais et laissez à découvert à température ambiante pendant 5 minutes avant d'encaisser. Même un mince film d'humidité affecte la croûte."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est complètement mate. L'exécution d'une serviette en papier sec sur elle ne produit pas d'humidité. L'intérieur de la cavité est sec au toucher.",
+            "action": "Embouts immédiatement et procéder à la construction de la croûte salée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson a été laissé découvert si longtemps que la surface a commencé à sécher et à se raffermir légèrement aux points les plus fins, comme la queue.",
+            "action": "Procéder immédiatement — le séchage superficiel n'affecte pas l'alimentation. La croûte salée la protégera."
+          }
+        ]
+      },
+      "feelCue": "Courez un doigt sec de la queue à la tête à travers la peau du poisson — il devrait attraper légèrement sur les écailles et se sentir complètement sec, comme toucher le papier parchemin sec, pas la surface glissante humide d'un poisson fraîchement lavé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Matériel",
+      "inputs": [
+        "dried_fish",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_09"
+      ],
+      "outputState": "stuffed_fish",
+      "instructions": "Placer les tranches de gingembre dans une couche qui se chevauche le long du plancher de la cavité. Placez les pétoncles à nœuds sur le dessus du gingembre et placez les coriandres autour d'eux. Arrosez le vin Shaoxing dans la cavité, il parfumera le poisson à la vapeur. Fermez la cavité en appuyant doucement sur les côtés du poisson. Les aromatiques à l'intérieur n'assaisonnent pas directement la chair; ils créent un environnement parfumé de vapeur qui parfume le poisson de l'intérieur.",
+      "visualCue": {
+        "primaryTarget": "La cavité est bien remplie avec du gingembre, des oignons et des herbes. Les côtés du poisson sont pressés ensemble. La farce est visible si le ventre est ouvert mais ne se répand pas.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Trop peu d'arômes — la cavité semble clairsemée et le gingembre et les pétoncles couvrent moins de la moitié de la longueur intérieure.",
+            "action": "Ajouter encore du gingembre et des oignons. La cavité doit être généreusement emballée mais pas si pleine qu'elle ne peut pas fermer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Caviété soigneusement et complètement emballé. Les côtés du poisson se ferment avec une presse douce. Parfum faint de gingembre et de vin Shaoxing déjà présent.",
+            "action": "Passer à la construction de la croûte salée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Il est tellement abondant que le poisson ne peut pas fermer. L'aromatisme s'élargit de l'ouverture de la cavité.",
+            "action": "Enlevez quelques morceaux. Un poisson suralimenté ne scellera pas correctement la croûte salée."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le ventre du poisson farci fermé avec votre paume — il devrait rester fermé avec une pression douce, pas ressort ouvert. S'il ressort ouvert, réduire légèrement la farce."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "stuffed_fish",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "salt_crusted_baked_fish",
+      "instructions": "Mélangez le gros sel de mer et les blancs d'oeuf légèrement battus avec vos mains jusqu'à ce que le mélange ressemble au sable humide qui tient sa forme lorsqu'il est pressé — il devrait s'écraser, non s'effondrer. Étendre un lit de 1,5 cm du mélange de sel sur un plateau ou un plat à l'épreuve du four. Pose le poisson farci sur le lit. Emballez le reste du mélange de sel sur et autour de tout le poisson, appuyez fermement pour construire une croûte uniforme de 2 cm d'épaisseur sur tous les côtés. Scellez les trous, surtout autour de la queue et de la tête. Cuire à 200°C pendant 25 à 30 minutes (environ 20 minutes par 500 g de poids du poisson, plus 5 minutes pour la croûte).",
+      "visualCue": {
+        "primaryTarget": "Après cuisson, la croûte salée s'est durcie à un ivoire uniformément pâle ou une coquille légèrement dorée qui semble creuse lorsqu'elle est tapée. Il n'y a pas de fissures ou de taches molles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est encore un peu molle et donne en place — les blancs d'œufs n'ont pas encore été complètement fixés. Des taches molles sur la partie la plus épaisse du poisson.",
+            "action": "Retourner au four 5 minutes de plus. Une croûte molle signifie que l'intérieur est également probablement mal cuit."
+          },
+          {
+            "state": "Perfect",
+            "description": "La croûte semble creuse et dure lorsqu'elle est frappée avec un joint, comme taper un pot de terre cuite. La surface est sèche, blanc cassé et légèrement colorée. Une mince fissure peut apparaître le long du dos.",
+            "action": "Apportez immédiatement le plat à la table et fissurez la croûte de façon théâtrale avec le dos d'une grande cuillère de service."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte a développé une couleur dorée très profonde à brune. Le poisson à l'intérieur a probablement cuit plus loin que prévu.",
+            "action": "Casser immédiatement après avoir retiré le four. La croûte épaisse isole le poisson et il continuera à cuire si laissé scellé. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Frappez fortement la croûte avec un joint après la cuisson — il devrait sonner creux et dur, comme un pot de fleurs d'argile, ne pas donner sous votre joint. Toute douceur nécessite plus de temps."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Poignée",
+      "inputs": [
+        "salt_crusted_baked_fish"
+      ],
+      "outputState": "unveiled_salt_baked_fish",
+      "instructions": "À table, présentez le plat croqué au sel. À l'aide d'une cuillère lourde ou d'un petit marteau, fissurer la croûte le long de la colonne vertébrale avec quelques coups fermes. Soulevez les gros morceaux de croûte: la peau de poisson s'en va souvent avec la croûte supérieure, révélant une chair blanche brillante et perlée. Badigeonner les granules de sel qui s'accrochent à la chair avec une brosse à pâtisserie. Le poisson n'aura pas de goût salé — la croûte salée ne le fait que de l'extérieur à travers la peau, pas dans la chair.",
+      "visualCue": {
+        "primaryTarget": "Après avoir fissuré et enlevé la croûte, la chair de poisson est blanche, entièrement opaque et humide. Il se sépare proprement en grands segments brillants lorsqu'il est touché par une fourchette.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La chair de l'épine dorsale est toujours translucide ou légèrement rose-gris. Les segments résistent à la séparation lorsqu'une fourchette est pressée à la colonne vertébrale.",
+            "action": "Remplacer les morceaux de croûte et retourner au four pendant 8 minutes. La croûte, même fissurée, continuera à chauffer."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair est uniformément blanche, perlée et brillante. Les segments se séparent sans effort. La vapeur s'élève doucement du poisson ouvert. Le parfum de gingembre et de pétoncle est immédiat et beau.",
+            "action": "Arroser de sauce de soja et d'huile de sésame et servir directement depuis le plat."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair semble sèche et compacte aux zones plus minces près de la queue. Les segments sont légèrement caoutchouteux plutôt que brillants.",
+            "action": "Servir immédiatement avec de l'huile de sésame en plus, puis arroser généreusement. Évitez les sections de queue les plus sèches."
+          }
+        ]
+      },
+      "feelCue": "Touchez légèrement la chair exposée avec le dos d'une fourchette — le poisson au sel parfait devrait se sentir chaud et céder avec la résistance la plus faible, comme appuyer sur une mangue très douce et mûre. La chair fraîche ou dure nécessite plus de temps."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Finition",
+      "inputs": [
+        "unveiled_salt_baked_fish",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_salt_baked_sea_bass",
+      "instructions": "Travailler rapidement pour que le poisson ne refroidisse pas, arroser la sauce de soja uniformément sur la chair exposée, suivie de l'huile de sésame grillée — l'huile de sésame devrait s'étourdir légèrement lorsqu'elle touche le poisson chaud. Servir directement du plat avec du riz blanc au jasmin à la vapeur et un simple légume vert sauté. Utilisez une cuillère à soupe pour enlever des portions de la chair de la colonne vertébrale, en maintenant les segments aussi grands et intacts que possible — ce poisson mérite d'être mangé dans des morceaux généreux et humides, non déchiquetés.",
+      "visualCue": {
+        "primaryTarget": "La chair est recouverte d'un mince film scintillant de soja et de sésame. Le soja foncé crée un beau contraste avec la chair blanche. La cuisine sent le sésame grillé, le soja et le gingembre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le soja n'a pas encore été ajouté: la chair semble pâle et non assaisonnée. Sans le soja, le plat manque de la profondeur salée qui relie le poisson sucré au remplissage aromatique.",
+            "action": "Ajouter immédiatement la sauce de soja et l'huile de sésame. Le poisson se refroidit vite."
+          },
+          {
+            "state": "Perfect",
+            "description": "Fine même glaçure de soja, juste assez pour assaisonner sans pulvériser à la base du plat. Le parfum de l'huile de sésame se marie avec le gingembre et l'échon qui sortent de la cavité ouverte.",
+            "action": "Apportez à la table et servez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de sauce de soja — la chair nage dans le liquide et goûte agressivement salé, accablant la douceur subtile de la basse.",
+            "action": "Incliner le plat et verser l'excès de soja. Ajouter un jet d'eau chaude et quelques gouttes d'huile de sésame pour rétablir l'équilibre."
+          }
+        ]
+      },
+      "feelCue": "La première bouchée doit avoir un goût propre, doux et de la mer, l'huile de gingembre et de sésame arrivant comme un murmure aromatique chaud plutôt qu'un cri. Si le sel domine, la croûte est trop fine ou le poisson est sous-dimensionné pour le rapport sel."
+    }
+  ]
 };

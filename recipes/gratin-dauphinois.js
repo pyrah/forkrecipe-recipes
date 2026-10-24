@@ -1,110 +1,270 @@
 export default {
-  repoId: "master_french_gratin_dauphinois_001",
-  parentRepoId: null,
-  slug: "gratin-dauphinois",
-  author: "ForkRecipe Kitchen",
-  title: "Gratin Dauphinois",
-  description: "Paper-thin potato slices layered in garlicked cream and baked until the top is deeply golden and bubbling while the interior becomes a single, unified, silky mass — the most indulgent thing you can do with a potato.",
-  cuisine: "French",
-  culture: "Dauphiné",
-  category: "vegetables",
-  tags: ["gratin", "french", "potato", "cream", "dauphinois", "baked", "comfort"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "1 hr 45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 1, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Floury potatoes (Russet or Maris Piper, peeled)", ratioValue: 100, defaultUnit: "parts", substitutions: ["Yukon Gold (slightly wetter result)"] },
-    { ingId: "ing_02", role: "Dairy",      name: "Double cream (heavy cream)",                      ratioValue: 45,  defaultUnit: "parts", substitutions: ["crème fraîche (reduces the split risk)"] },
-    { ingId: "ing_03", role: "Dairy",      name: "Whole milk",                                      ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",     name: "Garlic cloves (1 halved for rubbing, 2 minced)",  ratioValue: 3,   defaultUnit: "pieces", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",        name: "Unsalted butter (for the dish and dotting)",      ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine sea salt",                                   ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",      name: "Freshly grated nutmeg",                           ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Freshly ground white pepper",                     ratioValue: 0.3, defaultUnit: "parts", substitutions: ["black pepper"] },
+  "repoId": "master_french_gratin_dauphinois_001",
+  "parentRepoId": null,
+  "slug": "gratin-dauphinois",
+  "author": "ForkRecipe Kitchen",
+  "title": "Gratin Dauphinois",
+  "description": "Des tranches de pommes de terre minces en papier, recouvertes de crème ailée et cuites au four jusqu'à ce que le dessus soit profondément doré et bouillonnant, tandis que l'intérieur devient une masse unique, unifiée et soyeuse, la chose la plus indulgente que l'on puisse faire avec une pomme de terre.",
+  "cuisine": "Français",
+  "culture": "Dauphiné",
+  "category": "vegetables",
+  "tags": [
+    "Gratin",
+    "français",
+    "pommes de terre",
+    "crème",
+    "dauphinois",
+    "cuits",
+    "confort"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "1 hr 45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Slice",
-      inputs: ["ing_01"],
-      outputState: "sliced_potatoes",
-      instructions: "Peel the potatoes. Using a mandoline set to 2–3mm, slice each potato into uniform thin rounds. Do not rinse the sliced potato — the surface starch is what causes the cream to thicken and bind the gratin as it bakes. Place slices in a bowl as you work. The mandoline setting is not a suggestion: 4mm slices will still be firm in the center when the top is golden; 1mm slices will dissolve entirely.",
-      visualCue: {
-        primaryTarget: "A pile of translucent, paper-thin rounds, uniform in thickness, slightly gummy to the touch from surface starch.",
-        spectrum: [
-          { state: "Underdone", description: "Slices are thick and uneven — some 4–5mm, some thinner. Will not cook evenly.", action: "Use a mandoline consistently set at 2–3mm. Inconsistent slices create a gratin with crunchy pockets inside a soft matrix." },
-          { state: "Perfect",   description: "Uniformly thin, semi-translucent. When held to the light you can nearly see through them. Slightly sticky on the surface.", action: "Season the slices and build the gratin immediately." },
-          { state: "Overdone",  description: "Sliced so thin the rounds are tearing and fragmenting.", action: "Adjust mandoline slightly thicker. Fragmented potato is harder to layer cleanly but still perfectly edible." },
-        ],
-      },
-      feelCue: "The sliced potatoes should feel like pages of a heavy book between your fingers — thin but not fragile, with a slight tackiness from the starch that makes them cling together slightly when stacked.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Pommes de terre mousseuses (Russet ou Maris Piper, pelés)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Or du Yukon (résultat légèrement plus humide)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Infuse",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_06", "ing_07", "ing_08"],
-      outputState: "seasoned_cream",
-      instructions: "In a wide saucepan, combine the cream, milk, minced garlic, salt, pepper, and a generous grating of nutmeg. Bring to a bare simmer over medium-low heat, stirring to dissolve the salt. Taste the cream — it should taste slightly overseasoned because the potato will absorb salt significantly. Do not boil. Remove from heat and set aside.",
-      visualCue: {
-        primaryTarget: "Cream is steaming and at a bare simmer — small bubbles appearing at the edges, not a rolling boil. The garlic is fragrant.",
-        spectrum: [
-          { state: "Underdone", description: "Cream is barely warmed. Salt has not fully dissolved. Garlic aroma is raw.", action: "Continue warming gently. The cream must be hot when it goes into the dish to ensure even cooking." },
-          { state: "Perfect",   description: "Steaming, at a bare simmer, garlic fragrant and beginning to turn translucent. Cream is well-seasoned throughout.", action: "Use immediately or hold at a low simmer." },
-          { state: "Overdone",  description: "Cream has come to a full boil and is beginning to reduce. The fat is starting to separate.", action: "Remove from heat immediately. Stir well to re-emulsify and add a splash of cold milk to bring the temperature down." },
-        ],
-      },
-      feelCue: "Dip a clean finger into the cream — it should feel distinctly hot, thin but coating, and intensely flavored. The seasoning should make your eyes slightly widen — it needs to be boldly seasoned to season the potato.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Double crème (crème lourde)",
+      "ratioValue": 45,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Crème fraîche (réduit le risque fractionné)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Assemble",
-      inputs: ["sliced_potatoes", "seasoned_cream", "ing_05", "ing_04"],
-      outputState: "assembled_gratin",
-      instructions: "Preheat oven to 160°C (320°F). Rub a baking dish generously with the halved garlic clove, then butter it liberally. Layer potato slices evenly across the bottom, overlapping like scales. Season the layer lightly. Continue layering and seasoning until all the potato is used. Pour the hot cream mixture over the top — it should come about two-thirds up the depth of the potato. Dot with butter.",
-      visualCue: {
-        primaryTarget: "Neat, overlapping rows of potato, uniformly cream-submerged to two-thirds depth, with butter dots glistening on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Potatoes are haphazardly piled rather than layered. Cream is well below or well above the two-thirds mark.", action: "Even layers ensure uniform cooking. Press down gently to flatten the top and distribute cream if needed." },
-          { state: "Perfect",   description: "Clean overlapping layers, cream visible at the sides, butter evenly distributed. The dish looks promising.", action: "Place in the oven immediately." },
-          { state: "Overdone",  description: "Cream fills to the very top — will overflow in the oven.", action: "Remove some cream with a ladle. The baking dish needs headspace for the bubbling expansion." },
-        ],
-      },
-      feelCue: "Press down on the assembled gratin with the flat of your hand — the potato layers should compact slightly and cream should well up around your hand. The dish should feel substantial and dense.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Bake",
-      inputs: ["assembled_gratin"],
-      outputState: "baked_gratin",
-      instructions: "Bake at 160°C (320°F) for 60–75 minutes. For the first 45 minutes, do not open the oven — the potato is slowly absorbing the cream and the starch is thickening the matrix. At 45 minutes, increase heat to 190°C (375°F) and bake another 15–20 minutes until the top is deeply golden-brown and bubbling at the edges. Test doneness by inserting a thin knife into the center — it should slide through with zero resistance.",
-      visualCue: {
-        primaryTarget: "Top is deeply golden-brown, almost caramelized in patches. The cream is visibly bubbling and thickened at the edges. The surface has a slight skin with dark gold patches.",
-        spectrum: [
-          { state: "Underdone", description: "Top is pale gold, cream is still liquid and thin at the edges. Knife meets resistance at the center.", action: "Continue baking. Cover loosely with foil if the top is coloring too fast while the interior finishes." },
-          { state: "Perfect",   description: "Deep golden-brown, bubbling, knife slides in like butter. The whole dish trembles slightly when the rack is nudged — the cream has set to a silky, stable gel.", action: "Remove from oven. Rest 15 minutes before serving." },
-          { state: "Overdone",  description: "Top is very dark brown to black in patches. Edges have dried and shrunk from the dish sides. Smell of scorched cream.", action: "Cover with foil immediately and remove from oven. The interior is likely fine — remove the darkest top layer before serving." },
-        ],
-      },
-      feelCue: "After baking, nudge the dish gently — the gratin should tremble like set gelatin, not slosh like liquid. That tremor means the cream has fully absorbed into the potato starch and set into the classic silky texture.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Giroves à l'ail (1 moitié pour frotter, 2 mn)",
+      "ratioValue": 3,
+      "defaultUnit": "pieces",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Rest",
-      inputs: ["baked_gratin"],
-      outputState: "gratin_dauphinois",
-      instructions: "Allow the gratin to rest at room temperature for 15–20 minutes before serving. This rest period allows the cream matrix to firm up enough to slice cleanly. Serve in portions using a wide spatula, lifting from the bottom. The gratin reheats beautifully the next day — covered with foil at 160°C for 20 minutes.",
-      visualCue: {
-        primaryTarget: "When cut, the gratin holds its shape as a clean slice with visible layers. The cream matrix is set — no liquid pooling on the plate.",
-        spectrum: [
-          { state: "Underdone", description: "Cut immediately from the oven, the gratin slumps and cream floods the plate. Structure has not set.", action: "Rest longer. 20 minutes minimum — the cream matrix needs time to firm after the heat is removed." },
-          { state: "Perfect",   description: "Clean slice with distinct layers visible. Cream is set to a silky, not runny, consistency. Top crust is intact and golden.", action: "Serve alongside roast meat, or simply with a green salad." },
-          { state: "Overdone",  description: "Rested too long and cooled completely. Cream has set very firm and the gratin has dried out at the edges.", action: "Reheat covered at 160°C for 15 minutes with a splash of cream added around the edges." },
-        ],
-      },
-      feelCue: "The serving spatula should slide cleanly beneath a slice and the slice should hold together without crumbling — a test of whether the cream has properly thickened and set. The interior should feel soft and yielding when pressed, like a firm custard.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé (pour le plat et le dot)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Noix de muscade fraîchement râpée",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Poivre blanc fraîchement moulu",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre noir"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Tranche",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "sliced_potatoes",
+      "instructions": "Peler les pommes de terre. À l'aide d'une mandoline de 2 à 3 mm, couper chaque pomme de terre en rondelles minces uniformes. Ne pas rincer la pomme de terre coupée — l'amidon de surface est ce qui provoque l'épaississement de la crème et lier le gratin au fur et à mesure qu'il fait cuire. Placer les tranches dans un bol pendant que vous travaillez. Le réglage de la mandoline n'est pas une suggestion: les tranches de 4mm seront toujours fermes au centre lorsque le dessus est doré; les tranches de 1mm se dissolvent entièrement.",
+      "visualCue": {
+        "primaryTarget": "Un tas de rondelles translucides, d'épaisseur uniforme, légèrement gommées au toucher de l'amidon de surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tranches sont épaisses et inégales — environ 4-5mm, un peu plus minces. Ne cuisinera pas uniformément.",
+            "action": "Utilisez une mandoline constamment réglée à 2–3mm. Des tranches incohérentes créent un gratin avec des poches croquantes à l'intérieur d'une matrice douce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement mince, semi-translucide. Quand vous êtes tenu à la lumière, vous pouvez presque voir à travers eux. Légèrement collant sur la surface.",
+            "action": "Assaisonner les tranches et construire le gratin immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Séchés si minces, les rondelles se déchirent et se fragmentent.",
+            "action": "Régler la mandoline légèrement plus épaisse. La pomme de terre fragrmentée est plus difficile à coucher proprement mais toujours parfaitement comestible."
+          }
+        ]
+      },
+      "feelCue": "Les pommes de terre coupées doivent se sentir comme des pages d'un livre lourd entre vos doigts — minces mais non fragiles, avec un léger collage de l'amidon qui les fait s'accrocher légèrement lorsqu'elles sont empilées."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Infuse",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "seasoned_cream",
+      "instructions": "Dans une grande casserole, mélanger la crème, le lait, l'ail haché, le sel, le poivre et une généreuse grille de muscade. Faire mijoter à feu moyen-doux, en remuant pour dissoudre le sel. Goûtez la crème — elle devrait goûter légèrement outre-mer parce que la pomme de terre absorbera le sel de façon significative. Ne pas faire bouillir. Retirer du feu et réserver.",
+      "visualCue": {
+        "primaryTarget": "La crème est à la vapeur et à la mijote nue — de petites bulles apparaissant aux bords, pas un ébullition. L'ail est parfumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème est à peine chaude. Le sel n'est pas complètement dissous. L'arôme d'ail est cru.",
+            "action": "Continuez à vous réchauffer doucement. La crème doit être chaude lorsqu'elle entre dans le plat pour assurer une cuisson uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "La vapeur, à mijoter nue, parfumée d'ail et commence à devenir translucide. La crème est bien assaisonnée.",
+            "action": "Utilisez immédiatement ou maintenez-vous à une mijoteuse basse."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème est arrivée à ébullition et commence à diminuer. La graisse commence à se séparer.",
+            "action": "Retirer immédiatement du feu. Bien mélanger pour réémulsionner et ajouter une touche de lait froid pour faire baisser la température."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt propre dans la crème — il doit se sentir nettement chaud, mince mais revêtement, et intensément aromatisé. L'assaisonnement devrait rendre vos yeux légèrement élargis — il doit être assaisonné avec hardiesse pour assaisonner la pomme de terre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "sliced_potatoes",
+        "seasoned_cream",
+        "ing_05",
+        "ing_04"
+      ],
+      "outputState": "assembled_gratin",
+      "instructions": "Préchauffer le four à 160°C (350°F). Frotter généreusement un plat de cuisson avec la gousse d'ail à moitié, puis le beurrer généreusement. Coucher les tranches de pommes de terre uniformément à travers le fond, se chevauchant comme des écailles. Assaisonner la couche légèrement. Continuer la stratification et l'assaisonnement jusqu'à ce que toute la pomme de terre soit utilisée. Verser le mélange de crème chaude sur le dessus — il devrait venir environ deux tiers plus haut la profondeur de la pomme de terre. Dont le beurre.",
+      "visualCue": {
+        "primaryTarget": "Nez, recoupant des rangées de pommes de terre, uniformément submergées à la crème jusqu'à la profondeur des deux tiers, avec des points de beurre qui brillent à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pommes de terre sont empilées de façon aléatoire plutôt qu'en couches. La crème est bien en dessous ou bien au-dessus de la marque des deux tiers.",
+            "action": "Même les couches assurent une cuisson uniforme. Appuyez doucement pour aplatir le dessus et distribuer la crème si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Nettoyer les couches recoupantes, la crème visible sur les côtés, le beurre uniformément distribué. Le plat semble prometteur.",
+            "action": "Mettre au four immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème se remplit jusqu'au dessus même — débordera dans le four.",
+            "action": "Retirer de la crème avec une louche. Le plat de cuisson a besoin d'espace de tête pour l'expansion bouillonnante."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le gratin assemblé avec le plat de votre main — les couches de pommes de terre devraient se compacter légèrement et la crème devrait bien monter autour de votre main. Le plat doit se sentir substantiel et dense."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "assembled_gratin"
+      ],
+      "outputState": "baked_gratin",
+      "instructions": "Cuire à 160°C (350°F) pendant 60 à 75 minutes. Pendant les 45 premières minutes, n'ouvrez pas le four — la pomme de terre absorbe lentement la crème et l'amidon épaissit la matrice. À 45 minutes, augmenter le feu à 190°C (375°F) et cuire encore 15 à 20 minutes jusqu'à ce que le dessus soit profondément doré et bouillonnant aux bords. Testez la finesse en insérant un couteau au centre — il devrait glisser à travers avec une résistance zéro.",
+      "visualCue": {
+        "primaryTarget": "Le sommet est profondément doré, presque caramélisé en patchs. La crème est visiblement bouillonnante et épaissie aux bords. La surface a une légère peau avec des taches d'or foncé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le dessus est en or pâle, la crème est encore liquide et mince aux bords. Le couteau rencontre la résistance au centre.",
+            "action": "Continuer la cuisson. Couvrir lâchement avec du papier si le dessus est coloration trop rapide pendant que l'intérieur se termine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep doré-brun, bouillonnant, couteau glisse dans comme le beurre. Le plat entier tremble légèrement lorsque la grille est bouchée — la crème a mis à un gel soyeux et stable.",
+            "action": "Retirer du four. Reposez-vous 15 minutes avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le dessus est très brun foncé à noir en patchs. Les bords sont séchés et rétrécis des côtés du plat. Sens de crème brûlée.",
+            "action": "Couvrir immédiatement de papier et retirer du four. L'intérieur est probablement fin — retirez la couche supérieure la plus sombre avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Après cuisson, rongez doucement le plat — le gratin doit trembler comme de la gélatine, et non pas se perdre comme du liquide. Ce tremblement signifie que la crème a complètement absorbé la fécule de pomme de terre et est mise dans la texture soyeuse classique."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Repos",
+      "inputs": [
+        "baked_gratin"
+      ],
+      "outputState": "gratin_dauphinois",
+      "instructions": "Laisser reposer le gratin à température ambiante pendant 15 à 20 minutes avant de servir. Cette période de repos permet à la matrice de crème de se raffermir suffisamment pour trancher proprement. Servir en portions à l'aide d'une large spatule, levant du fond. Le gratin se réchauffe magnifiquement le lendemain, couvert d'une feuille de 160°C pendant 20 minutes.",
+      "visualCue": {
+        "primaryTarget": "Lors de la coupe, le gratin tient sa forme comme une tranche propre avec des couches visibles. La matrice de crème est réglée — pas de mise en commun liquide sur l'assiette.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Couper immédiatement du four, le gratin s'effondre et la crème inonde l'assiette. La structure n'a pas été réglée.",
+            "action": "Reposez-vous plus longtemps. 20 minutes minimum — la matrice à la crème a besoin de temps pour se raffermir après l'élimination de la chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Nettoyer la tranche avec des couches distinctes visibles. La crème est mise à une soyeuse, pas rincée, consistance. La croûte supérieure est intacte et dorée.",
+            "action": "Servir à côté de la viande rôtie, ou simplement avec une salade verte."
+          },
+          {
+            "state": "Overdone",
+            "description": "Reposé trop longtemps et complètement refroidi. La crème est très ferme et le gratin est séché aux bords.",
+            "action": "Réchauffer couvert à 160°C pendant 15 minutes avec une touche de crème ajoutée autour des bords."
+          }
+        ]
+      },
+      "feelCue": "La spatule de service doit glisser proprement sous une tranche et la tranche doit se tenir ensemble sans s'effondrer, ce qui permet de vérifier si la crème s'est épaissie et s'est bien mise. L'intérieur doit se sentir doux et céder lorsqu'il est pressé, comme une crème ferme."
+    }
+  ]
 };

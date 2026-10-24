@@ -1,103 +1,275 @@
 export default {
-  repoId: "master_greek_greek_gigantes_001",
-  parentRepoId: null,
-  slug: "greek-gigantes",
-  author: "ForkRecipe Kitchen",
-  title: "Gigantes Plaki",
-  description: "Enormous white butter beans baked low and slow in a rich tomato sauce with olive oil, celery, and sweet onion until their skins split and their interiors become creamy and yielding — the sauce reducing to a thick, tomatoey glaze that the beans absorb like sponges.",
-  cuisine: "Greek",
-  culture: "Greek",
-  category: "vegetables",
-  tags: ["gigantes", "greek", "baked-beans", "tomato", "vegan"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "2 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 3, sour: 2, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried gigantes beans (giant white beans), soaked overnight", ratioValue: 400,  defaultUnit: "g",    substitutions: ["butter beans (canned — skip steps 1 and 2)", "cannellini beans"] },
-    { ingId: "ing_02", role: "Allium",    name: "Yellow onion, finely diced",                                  ratioValue: 2,    defaultUnit: "large", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, sliced thin",                                  ratioValue: 4,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Celery stalks with leaves, diced",                            ratioValue: 3,    defaultUnit: "stalks", substitutions: [] },
-    { ingId: "ing_05", role: "Structure", name: "Crushed canned tomatoes",                                     ratioValue: 400,  defaultUnit: "g",    substitutions: ["ripe fresh tomatoes, peeled and crushed"] },
-    { ingId: "ing_06", role: "Sweetener", name: "Tomato paste",                                                ratioValue: 2,    defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",       name: "Extra-virgin olive oil",                                      ratioValue: 80,   defaultUnit: "ml",   substitutions: [] },
-    { ingId: "ing_08", role: "Herb",      name: "Flat-leaf parsley, roughly chopped",                          ratioValue: 4,    defaultUnit: "tbsp", substitutions: ["dill"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine salt",                                                   ratioValue: 1.5,  defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning", name: "Black pepper, freshly ground",                                ratioValue: 0.5,  defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_11", role: "Sweetener", name: "Granulated sugar",                                            ratioValue: 1,    defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_12", role: "Liquid",    name: "Water or vegetable stock",                                    ratioValue: 200,  defaultUnit: "ml",   substitutions: [] },
+  "repoId": "master_greek_greek_gigantes_001",
+  "parentRepoId": null,
+  "slug": "greek-gigantes",
+  "author": "ForkRecipe Kitchen",
+  "title": "Gigantes Plaki",
+  "description": "D'énormes haricots au beurre blanc cuits bas et lents dans une sauce tomate riche à l'huile d'olive, au céleri et à l'oignon doux jusqu'à ce que leurs peaux se fendent et que leurs intérieurs deviennent crémeux et donnent.",
+  "cuisine": "Grec",
+  "culture": "Grec",
+  "category": "vegetables",
+  "tags": [
+    "gigantes",
+    "grec",
+    "Haricots cuits",
+    "tomates",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "2 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Boil",
-      inputs: ["ing_01"],
-      outputState: "parboiled_beans",
-      instructions: "Drain the soaked beans and rinse well. Cover with fresh cold water in a large pot by at least 5 cm. Bring to a boil, skim off any white foam that rises in the first 5 minutes. Reduce to a vigorous simmer and cook for 45 to 60 minutes until the beans are tender but still slightly firm at the center — they will finish in the oven. Drain and reserve.",
-      visualCue: {
-        primaryTarget: "The beans are plump and creamy white, expanded to roughly double their dry size. They hold their shape but squash easily between two fingers.",
-        spectrum: [
-          { state: "Underdone", description: "The beans are still dense and chalky at the center. They resist firm pressure between fingers.", action: "Continue boiling — partially cooked beans will never soften fully in the acidic tomato sauce in the oven." },
-          { state: "Perfect",   description: "Squash completely between two fingers with light pressure. No chalkiness. The skin is intact but relaxed.", action: "Drain immediately and proceed to the sauce." },
-          { state: "Overdone",  description: "The beans are very soft and some skins have split. They are beginning to fall apart.", action: "Drain immediately and handle very gently. They will break down more in the oven — the result will be creamier rather than distinct beans." },
-        ],
-      },
-      feelCue: "Press a bean between thumb and index finger — it should yield completely with moderate pressure, leaving a smooth, dense smear. No grit or chalkiness.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Haricots gigants séchés (haricots blancs géants), trempés pendant la nuit",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "fèves de beurre (en conserve — sauter les étapes 1 et 2)",
+        "haricots cannellini"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_07"],
-      outputState: "soffritto",
-      instructions: "Preheat oven to 180 C (350 F). In a large, wide oven-safe pan or skillet, heat half the olive oil over medium heat. Add onion, garlic, and celery. Cook, stirring, for 12 to 15 minutes until everything is very soft, sweet-smelling, and just beginning to turn golden at the edges. Do not rush this step.",
-      visualCue: {
-        primaryTarget: "Translucent, jammy onion and celery with a hint of gold at the edges. The mixture has shrunk by half and looks glossy.",
-        spectrum: [
-          { state: "Underdone", description: "The onion is still opaque and the celery is bright green and crunchy. Raw, pungent smell.", action: "More time over medium heat — raw alliums will make the sauce taste harsh and sharp, not sweet and mellow." },
-          { state: "Perfect",   description: "All three vegetables are completely limp, sweet-smelling, and slightly golden. The mixture looks like a soft, fragrant pile. Celery has lost its bright green, turning a muted jade.", action: "Add tomato paste to pinch." },
-          { state: "Overdone",  description: "The onion is deeply caramelized and brown. The garlic has begun to crisp.", action: "Proceed — the extra caramelization will make the sauce sweeter and richer. Just watch the garlic." },
-        ],
-      },
-      feelCue: "Drag a wooden spoon through the soffritto — it should move easily like a soft paste, leaving a trail that slowly closes. If it resists, cook longer.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon jaune, en dés",
+      "ratioValue": 2,
+      "defaultUnit": "large",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["soffritto", "ing_05", "ing_06", "ing_11", "ing_09", "ing_10", "ing_12"],
-      outputState: "tomato_sauce",
-      instructions: "Add the tomato paste to the soffritto and stir for 2 minutes until it darkens from bright red to rust-brown (this is pinçage — it mellows the acidity). Add the crushed tomatoes, sugar, salt, pepper, and water or stock. Stir to combine. Simmer for 10 minutes until slightly thickened.",
-      visualCue: {
-        primaryTarget: "A thick, burgundy-red sauce with visible vegetable pieces. The surface is gently bubbling. The color is darker than raw canned tomatoes.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is bright, thin, and watery. It smells raw and acidic.", action: "Simmer more — the sauce needs to concentrate slightly before the beans go in or it will be too liquid in the oven." },
-          { state: "Perfect",   description: "Deep burgundy, gently thickened, smelling of sweet cooked tomato and celery. Tastes pleasantly sweet-sour, well-seasoned.", action: "Add the beans and transfer to the oven." },
-          { state: "Overdone",  description: "The sauce is very thick and dark, sticking to the pan. Slightly bitter.", action: "Add another 100 ml of water, stir, and proceed." },
-        ],
-      },
-      feelCue: "The sauce should coat the back of a spoon in a thin, even layer — not transparent and watery, not so thick it clumps.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles d'ail, tranchés minces",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["tomato_sauce", "parboiled_beans", "ing_07", "ing_08"],
-      outputState: "finished_gigantes_plaki",
-      instructions: "Gently fold the parboiled beans into the tomato sauce in the pan. Drizzle the remaining olive oil over the top. Transfer to the preheated oven uncovered. Bake for 50 to 60 minutes, turning the beans once at the halfway point, until the sauce is thick and jammy and the top layer of beans has formed a slightly caramelized, darkened crust. Scatter fresh parsley over the top just before serving.",
-      visualCue: {
-        primaryTarget: "A pan of glossy, sauce-lacquered beans with some split skins and caramelized tops. The sauce is visibly thick and barely pourable — it clings to each bean. Bright green parsley punctuates the surface.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is still loose and watery. The beans look pale and are not absorbing the sauce. The top layer has not caramelized.", action: "Return to the oven for another 15 minutes uncovered. The beans need to drink in the sauce." },
-          { state: "Perfect",   description: "The sauce is thick and jammy, nearly absorbed by the beans. The top layer has a slightly darkened, caramelized crust. The kitchen smells of sweet tomato and olive oil. Each bean is tender throughout, its interior creamy.", action: "Scatter parsley and serve warm or at room temperature." },
-          { state: "Overdone",  description: "The sauce has completely reduced and the beans at the top are dry and crispy. The edges of the pan are dark.", action: "Add 100 ml of hot water, stir gently, and return to the oven for 5 minutes with foil over the top." },
-        ],
-      },
-      feelCue: "Pick up a bean and bite it in half — the interior should be creamy and yielding, almost like a dense, savory custard, with no firm or chalky center.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri avec feuilles en dés",
+      "ratioValue": 3,
+      "defaultUnit": "stalks",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Structure",
+      "name": "Tomates en conserve concassées",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates fraîches mûres, pelées et broyées"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Pâte de tomates",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 4,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "d'aneth"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Poivre noir, fraîchement moulu",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Liquid",
+      "name": "Stocks d'eau ou de légumes",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "parboiled_beans",
+      "instructions": "Égoutter les haricots trempés et bien rincer. Couvrir d'eau froide dans une grande casserole d'au moins 5 cm. Porter à ébullition, enlever toute mousse blanche qui monte dans les 5 premières minutes. Réduire à mijoter vigoureusement et cuire de 45 à 60 minutes jusqu'à ce que les haricots soient tendres mais encore légèrement fermes au centre — ils finiront au four. Égoutter et réserver.",
+      "visualCue": {
+        "primaryTarget": "Les haricots sont bruns et crémeux blancs, élargis pour environ doubler leur taille sèche. Ils tiennent leur forme mais squash facilement entre deux doigts.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les haricots sont encore denses et crayeux au centre. Ils résistent à une pression ferme entre les doigts.",
+            "action": "Continuer à bouillir — les haricots partiellement cuits ne s'adouciront jamais complètement dans la sauce tomate acide au four."
+          },
+          {
+            "state": "Perfect",
+            "description": "Squash complètement entre deux doigts avec la pression de la lumière. Pas de craie. La peau est intacte mais détendue.",
+            "action": "Égoutter immédiatement et passer à la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots sont très doux et certaines peaux ont fendue. Ils commencent à s'effondrer.",
+            "action": "Égoutter immédiatement et manipuler très doucement. Ils se décomposeront davantage au four — le résultat sera plus crémeux que des haricots distincts."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un haricot entre le pouce et l'index — il devrait donner complètement avec une pression modérée, laissant un frottis lisse et dense. Pas de craie."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_07"
+      ],
+      "outputState": "soffritto",
+      "instructions": "Préchauffer le four à 180 C (350 F). Dans une grande poêle ou poêle, chauffer la moitié de l'huile d'olive à feu moyen. Ajouter l'oignon, l'ail et le céleri. Cuire, en remuant, pendant 12 à 15 minutes jusqu'à ce que tout soit très doux, doux-éperlan, et commence juste à devenir doré aux bords. Ne précipitez pas cette étape.",
+      "visualCue": {
+        "primaryTarget": "Translucide, oignon jammy et céleri avec une pointe d'or aux bords. Le mélange a diminué de moitié et semble brillant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore opaque et le céleri est vert vif et croquant. Une odeur crue et piquante.",
+            "action": "Plus de temps à feu moyen — les alliums crus feront goûter la sauce dure et nette, pas sucrée et moelleuse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les trois légumes sont complètement boiteux, sucrés et légèrement dorés. Le mélange ressemble à une pile douce et parfumée. Celery a perdu son vert vif, tournant un jade muet.",
+            "action": "Ajouter la pâte de tomate à pincer."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon est profondément caramélisé et brun. L'ail a commencé à croquer.",
+            "action": "Procéder — la caramélisation supplémentaire rendra la sauce plus douce et plus riche. Surveille l'ail."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère en bois à travers le soffritto — il devrait se déplacer facilement comme une pâte douce, laissant un sentier qui se ferme lentement. Si elle résiste, cuire plus longtemps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "soffritto",
+        "ing_05",
+        "ing_06",
+        "ing_11",
+        "ing_09",
+        "ing_10",
+        "ing_12"
+      ],
+      "outputState": "tomato_sauce",
+      "instructions": "Ajouter la pâte de tomate à la soffritto et remuer pendant 2 minutes jusqu'à ce qu'elle s'assombrisse du rouge vif au brun rouille (c'est le pinçage – il adoucit l'acidité). Ajouter les tomates écrasées, le sucre, le sel, le poivre et l'eau ou le bouillon. Mélanger. Laisser mijoter pendant 10 minutes jusqu'à ce qu'elle épaississe légèrement.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse, rouge bordeaux avec des morceaux de légumes visibles. La surface bouillonne doucement. La couleur est plus foncée que les tomates en conserve crues.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est lumineuse, fine et aqueuse. Ça sent cru et acide.",
+            "action": "Laisser mijoter davantage — la sauce doit se concentrer légèrement avant l'entrée des haricots ou elle sera trop liquide au four."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bourgogne profonde, épaissie délicatement, sentant la tomate cuite et le céleri. Goûte agréablement sucrée, bien assaisonnée.",
+            "action": "Ajouter les haricots et les transférer au four."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est très épaisse et sombre, collée à la poêle. Un peu amer.",
+            "action": "Ajouter 100 ml d'eau, remuer et poursuivre."
+          }
+        ]
+      },
+      "feelCue": "La sauce doit enrober l'arrière d'une cuillère dans une couche mince et uniforme — non transparente et aqueuse, pas si épaisse qu'elle s'y accroche."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "tomato_sauce",
+        "parboiled_beans",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_gigantes_plaki",
+      "instructions": "Repliez doucement les haricots parboulés dans la sauce tomate dans la poêle. Arrosez le reste de l'huile d'olive sur le dessus. Transférer au four préchauffé découvert. Cuire au four pendant 50 à 60 minutes, en tournant les haricots une fois à mi-chemin, jusqu'à ce que la sauce soit épaisse et confitureuse et que la couche supérieure des haricots ait formé une croûte légèrement caramélisée et foncée. Éparpiller du persil frais sur le dessus juste avant de servir.",
+      "visualCue": {
+        "primaryTarget": "Une casserole de haricots brillants, laqués de sauce avec quelques peaux fendues et des dessus caramélisés. La sauce est visiblement épaisse et à peine versable — elle s'accroche à chaque fève. Le persil vert vif ponctue la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore molle et aqueuse. Les haricots semblent pâles et n'absorbent pas la sauce. La couche supérieure n'a pas caramélisé.",
+            "action": "Retourner 15 minutes au four à découvert. Les haricots doivent boire dans la sauce."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est épaisse et confitureuse, presque absorbée par les haricots. La couche supérieure a une croûte caramélisée légèrement foncée. La cuisine sent la tomate sucrée et l'huile d'olive. Chaque fève est tendre tout au long, son intérieur crémeux.",
+            "action": "Scatter le persil et servir chaud ou à température ambiante."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est complètement réduite et les haricots en haut sont secs et croustillants. Les bords de la poêle sont sombres.",
+            "action": "Ajouter 100 ml d'eau chaude, remuer doucement et retourner au four pendant 5 minutes avec du papier sur le dessus."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un haricot et mordez-le en deux — l'intérieur doit être crémeux et productif, presque comme une crème dense et salée, sans centre ferme ou crayeux."
+    }
+  ]
 };

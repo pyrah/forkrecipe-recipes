@@ -1,98 +1,267 @@
 export default {
-  repoId: "master_french_canele_001",
-  parentRepoId: null,
-  slug: "canele",
-  author: "ForkRecipe Kitchen",
-  title: "Canelé de Bordeaux",
-  description: "A vanilla-and-rum custard batter rested 48 hours, poured into beeswax-coated copper moulds, and baked at two temperatures — producing a nearly burnt, mahogany shell that shatters to reveal a moist, custardy interior.",
-  cuisine: "French",
-  culture: "Bordelais",
-  category: "desserts",
-  tags: ["canele", "french", "bordeaux", "custard", "beeswax", "dark-crust", "patisserie"],
-  difficulty: 4,
-  activeTime: "30 min",
-  totalTime: "50 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 0, sour: 0, bitter: 2, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",      name: "Full-fat whole milk",                       ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter",                           ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Caster sugar",                              ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Structure",  name: "All-purpose flour",                         ratioValue: 2.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Binder",     name: "Whole eggs",                                ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Binder",     name: "Egg yolks",                                 ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Vanilla bean (split and scraped)",          ratioValue: 0.5, defaultUnit: "parts", substitutions: ["2 tsp vanilla extract"] },
-    { ingId: "ing_08", role: "Solvent",    name: "Dark rum",                                  ratioValue: 1,   defaultUnit: "parts", substitutions: ["amber rum", "cognac"] },
-    { ingId: "ing_09", role: "Seasoning",  name: "Fine salt",                                 ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Fat",        name: "Food-grade beeswax (pellets or block)",     ratioValue: 0.5, defaultUnit: "parts", substitutions: ["clarified butter — produces a less dramatic crust"] },
-    { ingId: "ing_11", role: "Fat",        name: "Unsalted butter (mixed with beeswax for moule coating)", ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_canele_001",
+  "parentRepoId": null,
+  "slug": "canele",
+  "author": "ForkRecipe Kitchen",
+  "title": "Canélé de Bordeaux",
+  "description": "Une pâte à crème à la vanille et aurum reposa 48 heures, versa dans des moules de cuivre recouverts de cire d'abeille, et cuit à deux températures — produisant une coquille presque brûlée et acajou qui se brise pour révéler un intérieur humide et crépuscule.",
+  "cuisine": "Français",
+  "culture": "Bordelais",
+  "category": "desserts",
+  "tags": [
+    "canele",
+    "français",
+    "bordeaux",
+    "Coutard",
+    "cire d'abeille",
+    "croûte noire",
+    "pâtisserie"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "30 min",
+  "totalTime": "50 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Infuse",
-      inputs: ["ing_01", "ing_02", "ing_07"],
-      outputState: "infused_milk",
-      instructions: "Combine the milk, butter, and the split vanilla bean with its scraped seeds in a saucepan. Warm over medium heat until the mixture just reaches a simmer — small bubbles around the edge and steam rising, but not a full boil. Remove from heat and allow to infuse for 10 minutes, then remove the vanilla pod. The milk should be warm to hot — it will be whisked into the egg-flour mixture and the heat helps hydrate the flour and temper the eggs simultaneously.",
-      visualCue: {
-        primaryTarget: "Warm, pale gold milk with fine vanilla seeds distributed throughout. Small wisps of steam. Smells deeply, almost overpoweringly of vanilla.",
-        spectrum: [
-          { state: "Underdone", description: "Milk is barely warm — the vanilla has not had time to infuse and the seeds have settled without dispersing. The fat has not melted fully.", action: "Return to low heat and warm gently until butter melts and the milk steams. Infuse for the full 10 minutes." },
-          { state: "Perfect",   description: "Warm, steaming, clearly vanilla-scented with the seeds fully dispersed. Butter has melted and integrated. No boiling or scorching.", action: "Remove the pod and proceed — whisk the flour-sugar-egg mixture immediately while the milk is still warm." },
-          { state: "Overdone",  description: "Milk has boiled hard — skin has formed, there is scorching at the base, and the vanilla has become bitter.", action: "Strain and use — a light boil rarely ruins canelé batter. Discard if scorched. Keep the heat lower next time." },
-        ],
-      },
-      feelCue: "The warm milk should feel hot on the wrist — around 70-80 C / 160-175 F. Hot enough that you cannot hold your wrist under the steam for more than a second, but not boiling.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Lait entier plein",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Whisk",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_09", "infused_milk", "ing_08"],
-      outputState: "canele_batter",
-      instructions: "In a large bowl, whisk together the flour, sugar, and salt. Add the whole eggs and yolks and whisk to a smooth, thick paste — no lumps. Pour the warm (not boiling) infused milk into the flour mixture in a thin, steady stream, whisking constantly as you go. The batter will loosen from a paste to a fluid, thin liquid as the milk is added. Finally, whisk in the rum. The critical technique: do not incorporate air — stir rather than whisk aggressively. Air creates an uneven, bubbly interior rather than the dense custard the canelé is famous for. Cover and refrigerate for 48 hours minimum — 72 hours is better. The flour absorbs the liquid and the batter settles.",
-      visualCue: {
-        primaryTarget: "A smooth, thin, pale-ivory batter — almost as thin as crepe batter. Falls from the whisk in a fast, even stream. A very thin coating on the back of a ladle. Smells of vanilla and rum.",
-        spectrum: [
-          { state: "Underdone", description: "Lumpy or still thick — the milk and flour have not fully combined. Visible flour streaks or egg lumps.", action: "Whisk more slowly and thoroughly, adding the milk even more gradually. Pass through a fine-mesh sieve if lumps persist." },
-          { state: "Perfect",   description: "Completely smooth, very thin, and even. Falls off the whisk in a continuous, fast stream with no lumps. Smells intensely of vanilla and rum.", action: "Cover the surface with cling film and refrigerate for 48-72 hours before baking." },
-          { state: "Overdone",  description: "Over-whisked and foamy — air bubbles incorporated into the batter. These will create an uneven, pitted interior rather than a smooth custard.", action: "Allow to rest in the refrigerator — the bubbles will dissipate over the 48-hour rest. Do not whisk again before baking; ladle or pour very gently." },
-        ],
-      },
-      feelCue: "A ladle of the batter should feel incredibly light and liquid — like barely-thickened water. It should pour off the ladle without any hesitation, with almost no viscosity at all.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Temper",
-      inputs: ["ing_10", "ing_11"],
-      outputState: "waxed_moulds",
-      instructions: "Melt the beeswax pellets and butter together in a small saucepan over very low heat until fully liquid. The mixture should be around 70 C / 160 F — liquid but not so hot it burns the hand on contact. Using a small brush or by pouring and swirling, coat the inside of each copper canelé mould with the wax-butter mixture — a thin, even film. Place the moulds on a baking tray and allow the wax to set slightly — 1-2 minutes in the freezer. The beeswax creates the dramatically dark, shatteringly crisp shell that defines the canelé; butter alone gives a softer crust. Preheat the oven to 250 C / 480 F with the mould-lined tray inside.",
-      visualCue: {
-        primaryTarget: "Each mould interior has a thin, opaque white film of set wax — completely even with no pooling at the base. When you tilt a mould, no liquid wax runs.",
-        spectrum: [
-          { state: "Underdone", description: "The wax is uneven — thick pools at the base and bare patches on the upper walls. The mould is not fully coated.", action: "Re-melt and re-coat, working the liquid wax all the way up the walls of the mould immediately after coating, before it sets." },
-          { state: "Perfect",   description: "Thin, even white film from base to rim. No bare copper visible. The wax is set but not thick — a coat of paint, not a plug.", action: "Place in the freezer for 2 minutes to set fully, then fill immediately with the cold batter." },
-          { state: "Overdone",  description: "Wax applied too thickly — pooled at the base and dripped to the outside. Will produce an uneven, overly thick crust.", action: "Re-heat the mould gently and pour out the excess wax, then swirl to redistribute into a thinner coat." },
-        ],
-      },
-      feelCue: "When you run a finger inside the waxed mould, the surface should feel smooth and barely waxy — like the inside of a well-seasoned cast iron pan rather than a thick candle. No pooling, no bare metal.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Bake",
-      inputs: ["canele_batter", "waxed_moulds"],
-      outputState: "finished_canele",
-      instructions: "Stir the cold batter very gently — no whisking — and ladle or pour it through a fine-mesh sieve into the waxed moulds, filling to 1 cm below the rim. The batter must be cold from the refrigerator. Place immediately in the preheated 250 C / 480 F oven. Bake at this high temperature for 10 minutes, then reduce to 180 C / 355 F without opening the oven door and bake for a further 50-60 minutes. The high initial heat sets the shell instantly and creates the dark crust; the lower temperature cooks the custard interior through without burning. The canelés are ready when they are a deep mahogany — almost approaching black — and have pulled away from the mould edges slightly. Unmould immediately onto a wire rack.",
-      visualCue: {
-        primaryTarget: "Nearly black on the exterior — deep mahogany with dark, almost charred ridges from the fluted mould. The canelé has pulled away from the mould walls slightly. The base is the darkest point.",
-        spectrum: [
-          { state: "Underdone", description: "Pale golden or mid-brown — the shell has not caramelised to the near-black required. The interior will be undercooked and liquid at the centre.", action: "Return to the oven at 180 C for another 10-15 minutes. The colour should be almost alarming — much darker than feels comfortable." },
-          { state: "Perfect",   description: "Dark, deeply mahogany — the colour of very dark chocolate or strong espresso. Slightly glossy from the wax. Has visibly contracted from the mould walls. A skewer withdrawn from the centre comes out clean.", action: "Unmould immediately — they release in one twist. Allow to cool on a rack for at least 15 minutes before eating. The shell crisps further as it cools." },
-          { state: "Overdone",  description: "Uniformly black and bitter-smelling. The shell has carbonised and the interior will also be overcooked and dry.", action: "If only slightly too dark, still unmould and allow to cool — the bitterness may be tolerable and is part of the canelé's character. If truly burnt, start over." },
-        ],
-      },
-      feelCue: "A perfect canelé fresh from the mould should feel very hot and solid when you pick it up — dense and heavy for its size. Tap the base: it should ring like a hollow shell, not thud like a dense cake. The shell is the prize.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 2.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Oeufs entiers",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Binder",
+      "name": "Jaunes d'œuf",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Haricots de vanille (découpés et raclés)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "2 c. à thé extrait de vanille"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Solvent",
+      "name": "Rhum foncé",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "rhum ambré",
+        "Cognac"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Cires d'abeilles de qualité alimentaire (pellets ou blocs)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre clarifié — produit une croûte moins dramatique"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Beurre non salé (mélangé avec cire d'abeille pour revêtement de mue)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Infuse",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_07"
+      ],
+      "outputState": "infused_milk",
+      "instructions": "Mélanger le lait, le beurre et la fendue de vanille avec ses graines raclées dans une casserole. Chauffer à feu moyen jusqu'à ce que le mélange n'arrive qu'à mijoter — de petites bulles autour du bord et de la vapeur s'élevant, mais pas un ébullition complet. Retirer du feu et laisser infuser pendant 10 minutes, puis retirer la gousse de vanille. Le lait doit être chaud à chaud — il sera fouetté dans le mélange de farine d'oeufs et la chaleur aide à hydrater la farine et à tempérer les œufs simultanément.",
+      "visualCue": {
+        "primaryTarget": "Lait d'or pâle chaud avec de fines graines de vanille distribuées dans l'ensemble. Petite vapeur. Sensation profonde, presque excessive de vanille.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait est à peine chaud: la vanille n'a pas eu le temps d'infuser et les graines se sont installées sans se disperser. La graisse n'a pas complètement fondu.",
+            "action": "Retourner à feu doux et chauffer doucement jusqu'à ce que le beurre fond et que le lait s'échauffe. Infuser pendant 10 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaud, vapeur, parfumé à la vanille avec les graines entièrement dispersées. Le beurre a fondu et s'est intégré. Pas d'ébullition ou de brûlure.",
+            "action": "Retirer le goupille et procéder — fouetter le mélange farine-sucre-œuf immédiatement pendant que le lait est encore chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait a bouilli dur — la peau s'est formée, il y a des brûlures à la base, et la vanille est devenue amère.",
+            "action": "La souche et l'utilisation — un léger ébullition ruine rarement la pâte au canelé. Jeter s'il est brûlé. Baissez la chaleur la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Le lait chaud doit se sentir chaud sur le poignet — environ 70-80 C / 160-175 F. Assez chaud pour que vous ne puissiez pas tenir votre poignet sous la vapeur plus d'une seconde, mais pas bouillant."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_09",
+        "infused_milk",
+        "ing_08"
+      ],
+      "outputState": "canele_batter",
+      "instructions": "Dans un grand bol, fouetter ensemble la farine, le sucre et le sel. Ajouter les œufs entiers et les jaunes et fouetter à une pâte lisse et épaisse, sans grumeaux. Versez le lait chaud (sans bouillir) infusé dans le mélange de farine dans un cours d'eau mince et stable, fouettant constamment au fur et à mesure. La pâte se desserre d'une pâte à un liquide, liquide mince comme le lait est ajouté. Enfin, fouetter dans le rhum. La technique critique: ne pas incorporer l'air — remuer plutôt que fouetter agressivement. L'air crée un intérieur inégal et bubble plutôt que la crème dense pour laquelle le canélé est célèbre. Couvrir et réfrigérer pendant 48 heures minimum — 72 heures est mieux. La farine absorbe le liquide et la pâte se dépose.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse, mince, pâle-ivrée — presque aussi fine que la pâte à crêpe. Des chutes du fouet dans un ruisseau rapide, même. Un revêtement très fin sur le dos d'une louche. Sens de vanille et de rhum.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait et la farine n'ont pas été complètement combinés. Des stries de farine visibles ou des morceaux d'oeuf.",
+            "action": "fouetter plus lentement et soigneusement, ajouter le lait encore plus graduellement. Passer à travers un tamis à mailles fines si les bosses persistent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, très mince, et même. Descendre du fouet dans un courant continu et rapide sans bosses. Sensation intense de vanille et de rhum.",
+            "action": "Couvrir la surface d'un film de collage et réfrigérer pendant 48-72 heures avant la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Survolé et mousseux — bulles d'air incorporées dans la pâte. Ceux-ci créeront un intérieur inégal, pitté plutôt qu'une crème lisse.",
+            "action": "Laisser reposer au réfrigérateur — les bulles se dissiperont pendant 48 heures de repos. Ne pas fouetter à nouveau avant de cuire; verser ou verser très doucement."
+          }
+        ]
+      },
+      "feelCue": "Une louche de la pâte doit se sentir incroyablement légère et liquide, comme de l'eau à peine bouillie. Il devrait verser la louche sans aucune hésitation, sans viscosité du tout."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Température",
+      "inputs": [
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "waxed_moulds",
+      "instructions": "Faire fondre les pastilles de cire d'abeille et le beurre ensemble dans une petite casserole à feu très doux jusqu'à ce qu'il soit complètement liquide. Le mélange doit être d'environ 70 C / 160 F — liquide mais pas si chaud qu'il brûle la main au contact. À l'aide d'un petit pinceau ou en versant et en tourbillonnant, envelopper l'intérieur de chaque moule de canélé de cuivre avec le mélange cire-beurre — un film mince et uniforme. Placez les moules sur un plateau de cuisson et laissez la cire se fixer légèrement — 1-2 minutes au congélateur. La cire d'abeille crée la coquille spectaculairement sombre et croustillante qui définit le cannelé; le beurre seul donne une croûte plus douce. Préchauffer le four à 250 C / 480 F avec le plateau à l'intérieur.",
+      "visualCue": {
+        "primaryTarget": "Chaque intérieur de moule a un mince film blanc opaque de cire de set, complètement même sans mise en commun à la base. Lorsque vous basculez un moule, aucune cire liquide ne coule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La cire est inégale — des fosses épaisses à la base et des plaques nues sur les parois supérieures. Le moule n'est pas entièrement enduit.",
+            "action": "Re-fondre et re-coat, en faisant fonctionner la cire liquide jusqu'aux parois du moule immédiatement après le revêtement, avant qu'elle ne se met."
+          },
+          {
+            "state": "Perfect",
+            "description": "Film mince, même blanc de la base à la jante. Pas de cuivre nu visible. La cire est sertie, mais pas épaisse: une couche de peinture, pas un bouchon.",
+            "action": "Placer au congélateur pendant 2 minutes pour mettre complètement, puis remplir immédiatement avec la pâte froide."
+          },
+          {
+            "state": "Overdone",
+            "description": "La cire appliquée trop épaissement — mise en commun à la base et égouttée à l'extérieur. Produira une croûte inégale, trop épaisse.",
+            "action": "Réchauffer doucement le moule et verser l'excès de cire, puis tourner pour le redistribuer dans une couche plus mince."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous lancez un doigt à l'intérieur du moule ciré, la surface doit être lisse et à peine cireuse, comme l'intérieur d'une poêle en fonte bien assaisonnée plutôt qu'une bougie épaisse. Pas de billard, pas de métal nu."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "canele_batter",
+        "waxed_moulds"
+      ],
+      "outputState": "finished_canele",
+      "instructions": "Incorporer la pâte froide très doucement — sans fouet — et la déposer dans un tamis à mailles fines dans les moules cirés, en remplissant à 1 cm au-dessous de la jante. La pâte doit être froide depuis le réfrigérateur. Placez immédiatement dans le four préchauffé 250 C / 480 F. Cuire à cette température élevée pendant 10 minutes, puis réduire à 180 C / 355 F sans ouvrir la porte du four et cuire encore 50 à 60 minutes. La chaleur initiale élevée met la coquille instantanément et crée la croûte sombre; la température inférieure fait cuire l'intérieur de la crème à travers sans brûler. Les cannelés sont prêts lorsqu'ils sont une acajou profonde, presque noire, et se sont légèrement éloignés des bords du moule. Démouvoir immédiatement sur une grille.",
+      "visualCue": {
+        "primaryTarget": "Presque noir sur l'extérieur — acajou profond avec des crêtes sombres presque carbonisées du moule cannelé. Le canélé s'est légèrement éloigné des murs des moules. La base est le point le plus sombre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle ou brun moyen — la coquille n'a pas caramélisé jusqu'au presque noir requis. L'intérieur sera peu cuit et liquide au centre.",
+            "action": "Retourner au four à 180 °C pendant 10-15 minutes. La couleur devrait être presque alarmante, beaucoup plus foncée que confortable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dark, profondément acajou — la couleur du chocolat très foncé ou l'espresso fort. Légèrement brillant de la cire. A visiblement contracté des murs de moisissure. Une brochette retirée du centre sort propre.",
+            "action": "Tout de suite, ils se libèrent d'une seule tournure. Laisser refroidir sur un rack pendant au moins 15 minutes avant de manger. La coquille croustille plus loin qu'elle refroidit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Toujours noir et amer. La coque a carbonisé et l'intérieur sera également trop cuit et sec.",
+            "action": "Si ce n'est que légèrement trop sombre, encore non moulu et laisser refroidir — l'amertume peut être tolérable et fait partie du caractère du cannelé. Si vraiment brûlé, recommencez."
+          }
+        ]
+      },
+      "feelCue": "Un canélé parfait frais du moule devrait se sentir très chaud et solide quand vous le ramassez, dense et lourd pour sa taille. Tapez sur la base : elle doit sonner comme une coquille creuse, pas comme un gâteau dense. La coquille est le prix."
+    }
+  ]
 };

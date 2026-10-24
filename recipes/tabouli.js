@@ -1,124 +1,297 @@
 export default {
-  repoId: "master_lebanese_tabouli_001",
-  parentRepoId: null,
-  slug: "tabouli",
-  author: "ForkRecipe Kitchen",
-
-  title: "Tabouli",
-  description: "Lebanon's great herb salad — an enormous, verdant mass of flat-leaf parsley and mint, finely hand-chopped, with only a small quantity of fine bulgur soaked (never cooked), dressed aggressively with lemon juice and olive oil; the grain is an accent, the parsley is everything.",
-  cuisine: "Lebanese",
-  culture: "Levantine",
-  category: "grains",
-
-  tags: ["vegan", "gluten-free-option", "lebanese", "herb-salad", "bulgur", "fresh"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 0, salty: 2, sour: 4, bitter: 1, umami: 0, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Herb",       name: "Flat-leaf parsley (4 large bunches, leaves and fine stems only)", ratioValue: 200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Herb",       name: "Fresh mint leaves",                                              ratioValue: 30,  defaultUnit: "g",   substitutions: ["spearmint"] },
-    { ingId: "ing_03", role: "Structure",  name: "Fine bulgur wheat (#1 grade)",                                   ratioValue: 50,  defaultUnit: "g",   substitutions: ["quinoa (gluten-free — soak 20 min in lemon juice)", "cooked millet"] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Ripe tomatoes (finely diced, drained of excess juice)",          ratioValue: 300, defaultUnit: "g",   substitutions: ["cherry tomatoes, quartered"] },
-    { ingId: "ing_05", role: "Allium",     name: "Scallions (white and pale green parts, thinly sliced)",          ratioValue: 60,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_06", role: "Acid",       name: "Fresh lemon juice (about 3 lemons)",                            ratioValue: 80,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_07", role: "Fat",        name: "Extra-virgin olive oil",                                        ratioValue: 60,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_08", role: "Spice",      name: "Ground allspice",                                               ratioValue: 2,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_09", role: "Spice",      name: "Ground cinnamon",                                               ratioValue: 1,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning",  name: "Fine salt",                                                     ratioValue: 6,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning",  name: "Black pepper (freshly ground)",                                 ratioValue: 2,   defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_lebanese_tabouli_001",
+  "parentRepoId": null,
+  "slug": "tabouli",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tabouli",
+  "description": "La grande salade d'herbe du Liban — une énorme masse verdissante de persil à feuilles plates et de menthe, finement hachée à la main, avec seulement une petite quantité de bulgur fin trempé (jamais cuit), habillé agressivement de jus de citron et d'huile d'olive; le grain est un accent, le persil est tout.",
+  "cuisine": "Libanais",
+  "culture": "Levantine",
+  "category": "grains",
+  "tags": [
+    "végétalien",
+    "Option sans gluten",
+    "lébanèse",
+    "salade d'herbe",
+    "bulgur",
+    "frais"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_03", "ing_06"],
-      outputState: "soaked_bulgur",
-      instructions: "Place the fine bulgur in a small bowl. Pour half the lemon juice (40 ml) directly over it — soaking in lemon juice rather than water means the bulgur absorbs acidity as it hydrates, so it is never bland or watery. Add just enough cold water to barely cover the grain (about 50 ml). Stir once and leave to soak for 20 minutes. After soaking, tip the bulgur into the center of a clean kitchen towel or several layers of cheesecloth and wring firmly — extracting as much liquid as possible. The bulgur must be as dry as you can make it, or it will water down the salad.",
-      visualCue: {
-        primaryTarget: "Bulgur grains have swollen to roughly double their dry size, absorbed all visible liquid, and are uniformly pale golden-tan. When squeezed, they release very little moisture.",
-        spectrum: [
-          { state: "Underdone", description: "Bulgur grains are still hard at the center and chewy in a gritty, unpleasant way.", action: "Add another tablespoon of liquid and soak for 10 more minutes. Fine bulgur should fully hydrate without heat." },
-          { state: "Perfect",   description: "Grains are swollen, uniformly hydrated, and tender — but still have a very slight, pleasant bite. They clump when pressed but are not wet.", action: "Wring dry in a cloth and set aside. Proceed to chop the herbs." },
-          { state: "Overdone",  description: "Bulgur has soaked too long in too much liquid and is completely waterlogged and mushy.", action: "Squeeze out as much liquid as possible. The texture will be softer in the final salad, but the flavor is unaffected." },
-        ],
-      },
-      feelCue: "When you wring the soaked bulgur in the cloth, you should feel it resist the pressure like damp sand — yielding but not liquid, with grains that feel distinct between your knuckles.",
+      "ingId": "ing_01",
+      "role": "Herb",
+      "name": "Persil à feuilles plates (4 grosses grappes, feuilles et tiges fines seulement)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Chop",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "chopped_herbs",
-      instructions: "Wash and thoroughly dry the parsley and mint — wet herbs will release water into the salad. Use a sharp chef's knife only — never a food processor, which bruises the leaves and turns them dark and bitter within minutes. Gather the parsley into a tight bundle and chop fine with a rocking motion, then rotate 90 degrees and chop again. The goal is a fine, green confetti — not a paste, not rough chunks. Chop the mint separately (it is more delicate) and fold it in. The volume of herb should be approximately 4-5 times the volume of everything else; if you feel you have too much parsley, you are probably correct.",
-      visualCue: {
-        primaryTarget: "A brilliant green, fine confetti of parsley and mint — each piece no larger than 3-4 mm. No bruised, dark, or mushy patches.",
-        spectrum: [
-          { state: "Underdone", description: "Parsley is in large rough pieces with long stems still visible. The pieces are too large to distribute evenly through the salad.", action: "Continue chopping, gathering the parsley back into a tight mound between passes." },
-          { state: "Perfect",   description: "Fine, vivid green confetti that looks like an explosion of color. Each piece is small enough to sit on a fingertip. No large stems. Smells intensely herbal.", action: "Transfer to a large mixing bowl and proceed." },
-          { state: "Overdone",  description: "The parsley has been chopped to a near-paste and is beginning to turn dark green from bruising and oxidation.", action: "Use immediately — oxidized parsley cannot be recovered. The flavor is unaffected, but the salad will look duller." },
-        ],
-      },
-      feelCue: "Properly chopped fresh parsley feels lively and springy in your hands — it bounces back when pressed, is cool and very slightly damp from its own volatile oils, and smells like a garden after rain.",
+      "ingId": "ing_02",
+      "role": "Herb",
+      "name": "Feuilles fraîches de menthe",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "menthe épineuse"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Dice",
-      inputs: ["ing_04", "ing_05"],
-      outputState: "prepared_vegetables",
-      instructions: "Dice the tomatoes into small cubes, no larger than 5 mm. Place the diced tomatoes in a fine-mesh sieve or colander and let them drain for 10 minutes — tomatoes release a lot of water, and undrained tomatoes will pool at the bottom of the salad within minutes of serving. Slice the scallions into thin rounds. The scallion provides the onion note in tabouli — raw white onion is traditional in some versions, but scallions are milder and more commonly used in modern Lebanese kitchens.",
-      visualCue: {
-        primaryTarget: "Small, uniform tomato cubes that hold their shape and are not mushy. Thin scallion rounds. The tomatoes have drained and are no longer sitting in a pool of juice.",
-        spectrum: [
-          { state: "Underdone", description: "Tomato pieces are large and irregular. They are still sitting in a pool of juice in the bowl.", action: "Drain the tomatoes in a sieve before adding. Large pieces make the texture unbalanced." },
-          { state: "Perfect",   description: "Small, uniform tomato cubes, drained and just slightly damp. Thin scallion rounds.", action: "Combine with the herbs and proceed to dress." },
-          { state: "Overdone",  description: "Tomatoes have been chopped so fine they are mushy and more like a pulp than diced vegetables.", action: "Drain thoroughly and proceed — they will still taste good but lose textural definition in the final salad." },
-        ],
-      },
-      feelCue: "A properly drained tomato cube should feel firm and dry on the outside when touched with a fingertip — if it leaves a wet tomato print, drain it longer.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Blé fin bourdon (no 1 grade)",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "quinoa (sans gluten — tremper 20 min dans le jus de citron)",
+        "millet cuit"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Toss",
-      inputs: ["chopped_herbs", "soaked_bulgur", "prepared_vegetables", "ing_07", "ing_06", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "dressed_tabouli",
-      instructions: "In a large mixing bowl, combine the chopped herbs, squeezed-dry bulgur, drained tomatoes, and scallions. Drizzle the remaining lemon juice and olive oil over everything. Add the allspice, cinnamon, salt, and pepper. Toss gently but thoroughly using two large spoons or clean hands, lifting from the bottom and turning — you are not trying to crush anything, just coat every element in the dressing. The salad will compress slightly as it is tossed. Taste: tabouli should be aggressively, almost bracingly lemony. If it seems too mild, add more lemon juice.",
-      visualCue: {
-        primaryTarget: "A vivid, glistening green salad with tiny red tomato jewels and golden bulgur dispersed throughout. Every element is coated in lemon and oil. It looks alive.",
-        spectrum: [
-          { state: "Underdone", description: "The dressing has not been fully tossed through — some dry parsley clumps at the top are undressed, and the bulgur has sunk to the bottom.", action: "Toss again, making sure to lift from the very bottom of the bowl. Every green piece must be coated." },
-          { state: "Perfect",   description: "Uniformly glistening, every element coated. The parsley is still brilliant green. The smell is intensely herbal and lemony. When you taste it, the first sensation should be sharp lemon, followed by olive oil and herb.", action: "Rest for 15 minutes for the flavors to marry, then serve." },
-          { state: "Overdone",  description: "The tabouli has sat dressed for more than 30 minutes. The parsley is beginning to wilt and the salad is pooling liquid at the bottom.", action: "Drain the excess liquid if it is significant. Serve immediately. Dressed tabouli does not keep; make it as close to serving as possible." },
-        ],
-      },
-      feelCue: "When you toss tabouli, the herbs should feel springy and light in your hands — not wet and heavy; if the bowl feels like it is full of wet grass, the tomatoes were not drained enough.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Tomates de ripe (en dés, égouttées de l'excès de jus)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates cerises, en quartiers"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Season",
-      inputs: ["dressed_tabouli"],
-      outputState: "finished_tabouli",
-      instructions: "Taste the dressed tabouli and adjust. The correct seasoning for tabouli is different from most dishes: the lemon must be the loudest note — if you are hesitant, add more. The olive oil should be present but should not make the salad heavy. The allspice and cinnamon are subtle warmth, not detectable as distinct spices. Salt should make everything pop without being perceptible on its own. Let the tabouli rest at room temperature for 15 minutes before serving — this brief rest allows the salt to draw a small amount of moisture from the herbs, which mingles with the dressing and creates the finished sauce.",
-      visualCue: {
-        primaryTarget: "A salad that looks impossibly green and fresh, slightly shiny from olive oil, with the parsley still holding its vivid color. The bulgur is barely visible among the herbs.",
-        spectrum: [
-          { state: "Underdone", description: "The salad tastes flat — not enough salt or lemon. The green tastes like raw parsley without the bright acidity that transforms it.", action: "Add more lemon juice first, then taste for salt. The Lebanese palate for this dish is bold — trust it." },
-          { state: "Perfect",   description: "The first taste is bright acid lemon, followed immediately by the herbaceous, almost bitter freshness of parsley and mint, then the warm spice of allspice. The olive oil coats the palate and ties everything together.", action: "Serve immediately alongside romaine lettuce hearts or pita bread for scooping, and kibbeh or grilled meats." },
-          { state: "Overdone",  description: "The tabouli is too salty or the lemon is too aggressive — one note dominates everything else.", action: "Add a little more olive oil to buffer the sharpness. A small amount of extra bulgur can absorb excess acid if needed." },
-        ],
-      },
-      feelCue: "A spoonful of perfect tabouli should feel bright and clean on the palate, never heavy — the olive oil coats without weighing down, and the lemon lifts every element into clarity.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Échalons (parties blanches et vert pâle, tranchés finement)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Jus de citron frais (environ 3 citrons)",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Vers le sol",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Poivre noir (fraîchir)",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_03",
+        "ing_06"
+      ],
+      "outputState": "soaked_bulgur",
+      "instructions": "Dans un petit bol, déposer le boulgur fin. Verser la moitié du jus de citron (40 ml) directement dessus — tremper dans le jus de citron plutôt que dans l'eau signifie que le bulgur absorbe l'acidité pendant qu'il s'hydrate, de sorte qu'il n'est jamais fade ou aqueux. Ajouter juste assez d'eau froide pour couvrir à peine le grain (environ 50 ml). Mélanger une fois et laisser tremper pendant 20 minutes. Après avoir trempé, asperger le bulgur dans le centre d'une serviette de cuisine propre ou plusieurs couches d'étoffe de fromage et enrouler fermement — en extrayant le plus de liquide possible. Le bulgur doit être aussi sec que vous pouvez le faire, ou il va arroser la salade.",
+      "visualCue": {
+        "primaryTarget": "Les grains de Bulgur ont enflé à environ doubler leur taille sèche, absorbé tout le liquide visible, et sont uniformément pâles or-tan. Lorsqu'ils sont pressés, ils libèrent très peu d'humidité.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains de Bulgur sont encore durs au centre et mâchent d'une manière désagréable et désagréable.",
+            "action": "Ajouter une autre cuillère à soupe de liquide et tremper encore 10 minutes. Le bulgur fin doit s'hydrater complètement sans chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont gonflés, hydratés uniformément et tendres, mais ils ont encore une morsure très légère et agréable. Ils se battent quand ils sont pressés mais ne sont pas mouillés.",
+            "action": "Mèche sèche dans un chiffon et mise de côté. Allez couper les herbes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Bulgur a trempé trop longtemps dans trop de liquide et est complètement arrosé et musclé.",
+            "action": "Éteignez autant de liquide que possible. La texture sera plus douce dans la salade finale, mais la saveur n'est pas affectée."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous lancez le bulgur trempé dans le tissu, vous devez sentir qu'il résiste à la pression comme du sable humide — donnant mais pas liquide, avec des grains qui se sentent distincts entre vos doigts."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Chop",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "chopped_herbs",
+      "instructions": "Laver et bien sécher le persil et la menthe — les herbes humides libèrent de l'eau dans la salade. N'utilisez que le couteau d'un chef pointu — jamais un robot culinaire, qui meurtrisse les feuilles et les rend sombres et amers en quelques minutes. Recueillir le persil dans un faisceau serré et hacher finement avec un mouvement de basculement, puis faire pivoter 90 degrés et hacher à nouveau. Le but est un confettis fin et vert — pas une pâte, pas des morceaux rugueux. Couper la menthe séparément (c'est plus délicat) et la plier. Le volume de l'herbe devrait être environ 4-5 fois le volume de tout le reste; si vous sentez que vous avez trop de persil, vous avez probablement raison.",
+      "visualCue": {
+        "primaryTarget": "Un confettis de persil et de menthe vert brillant et fin — chaque pièce ne dépasse pas 3-4 mm. Pas de taches meurtries, sombres ou musquées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le persil est en gros morceaux rugueux avec de longues tiges encore visibles. Les morceaux sont trop grands pour être distribués uniformément à travers la salade.",
+            "action": "Continuer à couper le persil en ramenant le persil dans un monticule serré entre les passages."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des confettis verts vifs qui ressemblent à une explosion de couleur. Chaque pièce est assez petite pour s'asseoir sur un bout de doigt. Pas de grosses tiges. Ça sent les herbes intenses.",
+            "action": "Transférer dans un grand bol de mélange et procéder."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le persil a été haché dans un quasi-pâte et commence à devenir vert foncé à partir de meurtrissures et d'oxydation.",
+            "action": "Utiliser immédiatement — le persil oxydé ne peut pas être récupéré. La saveur n'est pas affectée, mais la salade sera plus terne."
+          }
+        ]
+      },
+      "feelCue": "Le persil frais bien haché se sent vif et printanier dans les mains — il rebondit quand il est pressé, est frais et très légèrement humide de ses propres huiles volatiles, et sent comme un jardin après la pluie."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sérum",
+      "inputs": [
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "prepared_vegetables",
+      "instructions": "Couper les tomates en petits cubes, ne dépassant pas 5 mm. Placez les tomates coupées en dés dans un tamis à mailles fines ou un cololander et laissez-les égoutter pendant 10 minutes.Les tomates libèrent beaucoup d'eau, et les tomates non drainées s'assemblent au fond de la salade en quelques minutes de la portion. Couper les pétoncles en rondelles minces. L'oignon blanc brut est traditionnel dans certaines versions, mais les oignons sont plus doux et plus couramment utilisés dans les cuisines libanaises modernes.",
+      "visualCue": {
+        "primaryTarget": "Petits cubes de tomates uniformes qui tiennent leur forme et ne sont pas musclés. Des rondelles de pétoncle. Les tomates ont drainé et ne sont plus assises dans une piscine de jus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux de tomates sont grands et irréguliers. Ils sont toujours assis dans une piscine de jus dans le bol.",
+            "action": "Égoutter les tomates dans un tamis avant de les ajouter. De grandes pièces déséquilibrent la texture."
+          },
+          {
+            "state": "Perfect",
+            "description": "Petits cubes de tomates uniformes, drainés et légèrement humides. Des rondelles de pétoncle.",
+            "action": "Combiner avec les herbes et procéder à l'habillage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tomates ont été hachées si fines qu'elles sont musées et plus comme une pulpe que des légumes en dés.",
+            "action": "Égoutter soigneusement et continuer — ils auront encore bon goût, mais perdre la définition textuelle dans la salade finale."
+          }
+        ]
+      },
+      "feelCue": "Un cube de tomate bien drainé doit se sentir ferme et sec à l'extérieur lorsqu'il est touché par un bout de doigt — s'il laisse une empreinte de tomate humide, l'égoutter plus longtemps."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Découpe",
+      "inputs": [
+        "chopped_herbs",
+        "soaked_bulgur",
+        "prepared_vegetables",
+        "ing_07",
+        "ing_06",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "dressed_tabouli",
+      "instructions": "Dans un grand bol à mélanger, mélanger les herbes hachées, le bulgur sec pressé, les tomates égouttées et les pétoncles. Arrosez le jus de citron restant et l'huile d'olive sur tout. Ajouter la tousse, la cannelle, le sel et le poivre. Mélangez doucement mais soigneusement en utilisant deux grandes cuillères ou des mains propres, levant du bas et tournant — vous n'essayez pas d'écraser quoi que ce soit, il suffit de couvrir tous les éléments de la vinaigrette. La salade se compressera légèrement car elle est jetée. Bouche : Le tabou doit être agressif, presque fortement citronné. S'il semble trop doux, ajouter plus de jus de citron.",
+      "visualCue": {
+        "primaryTarget": "Une salade verte vive et scintillante avec de minuscules bijoux de tomate rouge et un bulgur doré dispersé partout. Chaque élément est recouvert de citron et d'huile. Ça a l'air vivant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pansement n'a pas été entièrement jeté à travers — certains grumeaux de persil sec au sommet sont déshabillés, et le bulgur a coulé au fond.",
+            "action": "Rejeter, en veillant à soulever du fond du bol. Chaque pièce verte doit être enduite."
+          },
+          {
+            "state": "Perfect",
+            "description": "Éblouissement uniforme, chaque élément revêtu. Le persil est encore vert brillant. L'odeur est intensément herbacée et citronnée. Lorsque vous le goûtez, la première sensation doit être le citron vif, suivi de l'huile d'olive et de l'herbe.",
+            "action": "Reposez-vous 15 minutes pour que les saveurs se marient, puis servez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le tabou est habillé pendant plus de 30 minutes. Le persil commence à se flétrir et la salade met du liquide au fond.",
+            "action": "Égoutter le liquide excédentaire s'il est important. Servir immédiatement. Tabouli habillé ne tient pas; le rendre le plus près possible de servir."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous lancez des tabous, les herbes doivent se sentir printanières et légères dans vos mains — pas mouillées et lourdes; si le bol a l'impression qu'il est plein d'herbe humide, les tomates n'ont pas été suffisamment drainées."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Saison",
+      "inputs": [
+        "dressed_tabouli"
+      ],
+      "outputState": "finished_tabouli",
+      "instructions": "Goûtez le tabou habillé et ajustez. L'assaisonnement correct pour les tabous est différent de la plupart des plats: le citron doit être la note la plus forte — si vous hésitez, ajoutez plus. L'huile d'olive doit être présente mais ne doit pas rendre la salade lourde. Le toutspice et la cannelle sont une chaleur subtile, non détectable comme des épices distinctes. Le sel devrait rendre tout pop sans être perceptible seul. Laissez le tabouli reposer à température ambiante pendant 15 minutes avant de servir — ce bref repos permet au sel de puiser une petite quantité d'humidité dans les herbes, qui se mêle à la vinaigrette et crée la sauce finie.",
+      "visualCue": {
+        "primaryTarget": "Une salade qui semble incroyablement verte et fraîche, légèrement brillante à partir de l'huile d'olive, avec le persil tenant toujours sa couleur vive. Le bulgur est à peine visible parmi les herbes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La salade a un goût plat — pas assez de sel ou de citron. Le vert a le goût de persil brut sans l'acidité vive qui le transforme.",
+            "action": "Ajouter d'abord plus de jus de citron, puis goûter au sel. Le palais libanais pour ce plat est audacieux — croyez-le."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le premier goût est le citron acide vif, suivi immédiatement par la fraîcheur herbacée, presque amère du persil et de la menthe, puis l'épice chaude de l'Allspice. L'huile d'olive enveloppe le palais et relie tout.",
+            "action": "Servir immédiatement aux côtés des cœurs de laitue romaine ou du pain pita pour scooping, et des viandes de kibbeh ou grillées."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le tabou est trop salé ou le citron est trop agressif — une note domine tout le reste.",
+            "action": "Ajouter un peu plus d'huile d'olive pour tamponner la netteté. Une petite quantité de bulgur supplémentaire peut absorber l'excès d'acide si nécessaire."
+          }
+        ]
+      },
+      "feelCue": "Une cuillerée de tabous parfaits devrait se sentir lumineuse et propre en bouche, jamais lourde — l'huile d'olive manteaux sans alourdir, et le citron soulève chaque élément dans la clarté."
+    }
+  ]
 };

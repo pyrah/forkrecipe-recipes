@@ -1,110 +1,273 @@
 export default {
-  repoId: "master_italian_sourdoughfocaccia_001",
-  parentRepoId: null,
-  slug: "sourdough-focaccia",
-  author: "ForkRecipe Kitchen",
-  title: "Sourdough Focaccia",
-  description: "A slow-fermented sourdough focaccia — pools of olive oil settling into finger-pressed dimples over an open, webbed crumb, finished with flaky salt and rosemary, the crust crackling and caramelized on the bottom.",
-  cuisine: "Italian",
-  culture: "Ligurian",
-  category: "breads",
-  tags: ["focaccia", "sourdough", "italian", "olive-oil", "ligurian", "slow-ferment", "rosemary", "dimpled"],
-  difficulty: 3,
-  activeTime: "35 min",
-  totalTime: "24 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 3, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Bread flour",                       ratioValue: 100, defaultUnit: "parts", substitutions: ["tipo 0 flour", "all-purpose (less chew)"] },
-    { ingId: "ing_02", role: "Leavener",   name: "Active sourdough starter (100% hydration, fed 8–12 hrs ago)", ratioValue: 20, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Hydration",  name: "Warm water (30–32 C)",              ratioValue: 75,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",        name: "Extra-virgin olive oil (in dough)", ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine sea salt",                     ratioValue: 2.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",        name: "Extra-virgin olive oil (for pan and dimpling)", ratioValue: 15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Garnish",    name: "Flaky sea salt",                    ratioValue: 0.5, defaultUnit: "parts", substitutions: ["Maldon salt"] },
-    { ingId: "ing_08", role: "Herb",       name: "Fresh rosemary sprigs",             ratioValue: 1,   defaultUnit: "parts", substitutions: ["fresh thyme", "sage leaves"] },
+  "repoId": "master_italian_sourdoughfocaccia_001",
+  "parentRepoId": null,
+  "slug": "sourdough-focaccia",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sourdough Focaccia",
+  "description": "Focaccia à autruche fermentée lentement — des bassins d'huile d'olive se déposent dans des fossettes pressées par les doigts au-dessus d'une miette ouverte, à toile, finie avec du sel flocé et du romarin, la croûte craque et caramélisée sur le fond.",
+  "cuisine": "Italien",
+  "culture": "Ligurien",
+  "category": "breads",
+  "tags": [
+    "focaccia",
+    "Pâtes alimentaires",
+    "Italien",
+    "Huile d'olive",
+    "ligurienne",
+    "ferment lent",
+    "romarin",
+    "fossettes"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "35 min",
+  "totalTime": "24 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "sourdough_focaccia_dough",
-      instructions: "Verify the starter is active: it should float in water and smell pleasantly sour and yeasty. Combine warm water, starter, and olive oil in a large bowl. Add flour and salt. Mix with a wet hand or a spatula until no dry flour remains — about 3 minutes. Unlike commercial-yeast focaccia, this dough moves more slowly and benefits from patience. Cover and let rest 30 minutes for autolyse.",
-      visualCue: {
-        primaryTarget: "A rough, cohesive, very wet dough with a slightly shaggy surface and no dry patches. A starter float in the mixing water confirms readiness.",
-        spectrum: [
-          { state: "Underdone", description: "Dry flour pockets remain. Dough is not fully combined.", action: "Fold the dry flour into the center with a wet hand. Add a teaspoon of water if genuinely dry." },
-          { state: "Perfect",   description: "Uniformly combined, shaggy, wet. Smells of the starter's culture — sour and yeasty. No dry patches.", action: "Cover and rest 30 minutes, then begin folds." },
-          { state: "Overdone",  description: "Over-mixed — dough is smooth already and gluten seems very developed.", action: "Proceed. The sourdough focaccia will accommodate: it needs strong gluten for the open crumb." },
-        ],
-      },
-      feelCue: "This dough should feel wetter and more fluid than the commercial-yeast version — it clings to the bowl and stretches in long, silky sheets rather than pulling away cleanly. The starter makes it more elastic, almost alive.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tipo 0 farine",
+        "tout usage (moins de mâcher)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Fold",
-      inputs: ["sourdough_focaccia_dough"],
-      outputState: "developed_sourdough_focaccia",
-      instructions: "Perform four sets of coil folds over 2 hours: wet your hand, slide it under the dough, lift the whole mass, and let it fold under itself. Rotate the bowl 90 degrees and repeat. Perform one set every 30 minutes for the first two hours. After the fourth set, cover and let bulk ferment at room temperature until the dough is 50–75% larger, visibly bubbly, and airy — typically another 3–5 hours depending on room temperature and starter strength.",
-      visualCue: {
-        primaryTarget: "After bulk ferment: dough has grown 50–75%, is visibly bubbly throughout, domed on top, and jiggles in a wave when the bowl is shaken.",
-        spectrum: [
-          { state: "Underdone", description: "Dough barely grown. Less than 30% increase. Few bubbles. Starter may have been weak or room too cold.", action: "Continue fermenting. Move to a warmer spot. Sourdough is not on a rigid schedule — it is done when it is done." },
-          { state: "Perfect",   description: "50–75% larger, clearly bubbly and airy, dome is formed. Jiggles when nudged. Smells pleasantly tangy. Large bubbles visible along the bowl walls.", action: "Transfer to the olive-oil-flooded pan for the final rise." },
-          { state: "Overdone",  description: "More than doubled, beginning to look flat or collapsed. Very sour smell. Dough is slack and doesn't hold its shape.", action: "Transfer to the pan immediately and bake without further delay. Do not dimple until immediately before baking." },
-        ],
-      },
-      feelCue: "By the last fold, the sourdough dough should feel lighter in your hands with each set — as if air is being woven into the fabric of the dough. It stretches farther without tearing and holds its shape briefly before slowly relaxing back.",
+      "ingId": "ing_02",
+      "role": "Leavener",
+      "name": "Démarrage actif à l'aurore (hydratation à 100%, alimenté il y a 8-12 heures)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Proof",
-      inputs: ["developed_sourdough_focaccia", "ing_06"],
-      outputState: "pan_proofed_focaccia",
-      instructions: "Pour a generous pool of olive oil (at least 3 tablespoons) into a half-sheet pan. Tip the dough in and gently stretch it toward the edges. Cover loosely with plastic and refrigerate overnight (8–12 hours) for a slow, cold final proof. The next day, remove from the refrigerator 2 hours before baking. The dough should have spread to fill most of the pan and look puffy and airy.",
-      visualCue: {
-        primaryTarget: "Dough fills the pan, slightly domed and clearly puffy, with visible bubbles under the oiled surface after coming to room temperature.",
-        spectrum: [
-          { state: "Underdone", description: "Dough fills less than 70% of the pan and looks dense, not airy, after coming to temperature.", action: "Leave it at room temperature for another 1–2 hours. The cold retard slows the yeast significantly." },
-          { state: "Perfect",   description: "Dough covers 90–100% of the pan, is visibly puffy and bubbly, and jiggles when the pan is nudged. Large bubbles are visible through the oil.", action: "Dimple and bake immediately." },
-          { state: "Overdone",  description: "Dough is very puffy and beginning to look deflated or flat. Bubbles are large and the surface looks fragile.", action: "Dimple and bake immediately without delay." },
-        ],
-      },
-      feelCue: "Press the cold focaccia dough with an oily fingertip — after 2 hours at room temperature it should press in slowly and spring back about halfway over 3–4 seconds. If it springs back instantly, give it more time. If it collapses and does not spring back, bake immediately.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau chaude (30–32 C)",
+      "ratioValue": 75,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Dimple",
-      inputs: ["pan_proofed_focaccia", "ing_06", "ing_07", "ing_08"],
-      outputState: "dimpled_sourdough_focaccia",
-      instructions: "Drizzle additional olive oil generously over the surface of the dough. Spread your fingers wide and press them firmly through the dough to the pan bottom, creating deep dimples across the entire surface. Don't be timid — press firmly. Scatter fresh rosemary sprigs and flaky sea salt. The oil will pool in the dimples. Bake immediately at 230 C (450 F).",
-      visualCue: {
-        primaryTarget: "A landscape of dramatic, deep dimples with olive oil pooling in each crater. Rosemary sprigs scattered throughout. Flaky salt glinting on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Shallow dimples that have mostly sprung back. Oil slides off to the sides.", action: "Press harder and deeper — all the way to the pan. The dough can take this force." },
-          { state: "Perfect",   description: "Deep craters with oil pooling in each one. The dough between dimples has risen into small hills. Rosemary and salt are evenly placed.", action: "Into the oven immediately. Every second delays the oven spring." },
-          { state: "Overdone",  description: "Dimpled too vigorously and torn through the dough in places. Oil leaking under.", action: "Gently press torn areas back together. The oven will heal minor tears." },
-        ],
-      },
-      feelCue: "Your fingertips should encounter soft, yielding dough and then suddenly feel the slick resistance of the oil-coated pan bottom. That two-stage feeling — soft dough, then hard pan — is confirmation you have pressed all the way through to create true dimples.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge (en pâte)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Bake",
-      inputs: ["dimpled_sourdough_focaccia"],
-      outputState: "finished_sourdough_focaccia",
-      instructions: "Bake at 230 C (450 F) on the lower-middle rack for 20–25 minutes until the top is deeply golden with darker blistered spots at the dimple peaks and the bottom is crispy and caramelized. Lift a corner with a spatula to check the bottom. Remove from the pan immediately to a wire rack to preserve the crisp bottom.",
-      visualCue: {
-        primaryTarget: "A deeply golden top with darker blistered peaks and caramelized dimple edges. The bottom is a rich caramel-brown that audibly crackles when the pan is tapped.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold top, soft and blond bottom. No crackle sound.", action: "Return to the oven. Drop to the lowest rack for bottom heat. 3–5 more minutes." },
-          { state: "Perfect",   description: "Rich golden top with charred blisters at the dimple peaks. Bottom is deep caramel-brown and crackles when the corner is lifted. The focaccia sounds hollow when tapped.", action: "Transfer immediately to a wire rack. The caramelized bottom will become the pride of this loaf." },
-          { state: "Overdone",  description: "Dark brown top with very dark edges. Bitter smell from the rosemary.", action: "Trim the darkest edges. The interior is likely still excellent." },
-        ],
-      },
-      feelCue: "Tap the bottom of the focaccia — it should ring with a clean, hollow sound, like knocking on wood, rather than a dull thud. The bottom crust should feel rigid and dry under your knuckle: that crispness from the olive-oil caramelization is the crown jewel of sourdough focaccia.",
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2.2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive extra-virgine (pour poêle et vidange)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Sel de mer blanc",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sel de maldon"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Graines de romarin fraîches",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym frais",
+        "Feuilles de sauge"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "sourdough_focaccia_dough",
+      "instructions": "Vérifier que le démarreur est actif: il doit flotter dans l'eau et sentir agréablement aigre et levure. Dans un grand bol, mélanger l'eau chaude, le démarreur et l'huile d'olive. Ajouter la farine et le sel. Mélanger avec une main mouillée ou une spatule jusqu'à ce qu'il ne reste plus de farine sèche — environ 3 minutes. Contrairement à la focaccia commerciale, cette pâte se déplace plus lentement et bénéficie de la patience. Couvrir et laisser reposer 30 minutes pour autolyser.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rugueuse, cohésive et très humide avec une surface légèrement chaotique et sans taches sèches. Un flotteur de départ dans l'eau de mélange confirme sa disponibilité.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les poches de farine sèche restent. La toux n'est pas complètement combinée.",
+            "action": "Pliez la farine sèche au centre avec une main mouillée. Ajouter une cuillère à café d'eau si vraiment sèche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement combiné, humide, humide. Les odeurs de la culture d'entrée — aigre et levure. Pas de taches sèches.",
+            "action": "Couvrir et reposer 30 minutes, puis commencer à plier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmélangé — la pâte est déjà lisse et le gluten semble très développé.",
+            "action": "Continuez. La focaccia auriculeuse s'accommodera : elle a besoin de gluten fort pour la miette ouverte."
+          }
+        ]
+      },
+      "feelCue": "Cette pâte devrait se sentir plus humide et plus fluide que la version commerciale du yeast — elle s'accroche au bol et s'étire dans de longues feuilles soyeuses plutôt que de s'éloigner proprement. Le démarreur le rend plus élastique, presque vivant."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "sourdough_focaccia_dough"
+      ],
+      "outputState": "developed_sourdough_focaccia",
+      "instructions": "Effectuez quatre séries de plis de bobines sur 2 heures : mouillez votre main, glissez-la sous la pâte, soulevez toute la masse et laissez-la plier sous elle-même. Faites tourner le bol à 90 degrés et répétez. Effectuez un jeu toutes les 30 minutes pendant les deux premières heures. Après le quatrième set, couvrir et laisser le ferment en vrac à la température ambiante jusqu'à ce que la pâte soit de 50 à 75 % plus grande, visiblement bouillie et aérée — généralement 3 à 5 heures de plus selon la température ambiante et la résistance au démarrage.",
+      "visualCue": {
+        "primaryTarget": "Après le ferment en vrac : la pâte a grandi de 50 à 75 %, est visiblement bouillie, bombée sur le dessus, et grince dans une vague lorsque le bol est secoué.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toux à peine cultivée. Augmentation de moins de 30%. Quelques bulles. Le démarrage a pu être faible ou trop froid.",
+            "action": "Continuez à fermenter. Passez à un endroit plus chaud. Sourdough n'est pas sur un calendrier rigide — c'est fait quand c'est fait."
+          },
+          {
+            "state": "Perfect",
+            "description": "50 à 75 % plus gros, clairement bubble et aéré, le dôme se forme. Jiggles quand j'ai bu. Ça sent agréablement tannant. Grandes bulles visibles le long des parois du bol.",
+            "action": "Transférer dans la poêle inondée d'huile d'olive pour la montée finale."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus que doublé, commençant à avoir l'air plat ou effondré. Très aigre odeur. La toux est molle et ne tient pas sa forme.",
+            "action": "Transférer immédiatement dans la poêle et cuire sans plus tarder. Ne pas fosser avant de cuire."
+          }
+        ]
+      },
+      "feelCue": "Par le dernier pli, la pâte à augure devrait se sentir plus légère dans vos mains avec chaque ensemble — comme si l'air était tissé dans le tissu de la pâte. Il s'étend plus loin sans déchirer et tient sa forme brièvement avant de se détendre lentement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Preuve",
+      "inputs": [
+        "developed_sourdough_focaccia",
+        "ing_06"
+      ],
+      "outputState": "pan_proofed_focaccia",
+      "instructions": "Verser une généreuse marmite d'huile d'olive (au moins 3 cuillerées à soupe) dans une demi-bouilloire. Astucez la pâte et étirez-la doucement vers les bords. Couvrir lâchement de plastique et réfrigérer pendant la nuit (8 à 12 heures) pour une épreuve finale lente et froide. Le lendemain, retirer du réfrigérateur 2 heures avant la cuisson. La pâte aurait dû s'étendre pour remplir la plus grande partie de la casserole et avoir l'air gonflé et aéré.",
+      "visualCue": {
+        "primaryTarget": "La toux remplit la casserole, légèrement bombée et nettement gonflée, avec des bulles visibles sous la surface huilée après être arrivée à la température ambiante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux remplit moins de 70 % de la poêle et semble dense, pas aérée, après être arrivée à la température.",
+            "action": "Laissez-le à température ambiante pendant encore 1 à 2 heures. Le retard froid ralentit significativement la levure."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte couvre 90 à 100 % de la poêle, est visiblement gonflée et bouillie, et grippe lorsque la poêle est bouchée. De grandes bulles sont visibles à travers l'huile.",
+            "action": "Fossez et faites cuire immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est très gonflée et commence à avoir l'air dégonflée ou plate. Les bulles sont grandes et la surface semble fragile.",
+            "action": "Fossez et faites cuire immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la pâte froide de focaccia avec un bout de doigt huileux — après 2 heures à température ambiante, il devrait appuyer lentement et revenir à mi-chemin sur 3-4 secondes. Si elle revient instantanément, donnez-lui plus de temps. S'il s'effondre et ne ressort pas, cuire immédiatement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fosse",
+      "inputs": [
+        "pan_proofed_focaccia",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "dimpled_sourdough_focaccia",
+      "instructions": "Arrosez généreusement l'huile d'olive supplémentaire sur la surface de la pâte. Étendez vos doigts et appuyez fermement sur la pâte jusqu'au fond de la poêle, créant ainsi des fossettes profondes sur toute la surface. Ne soyez pas timide — appuyez fermement. Éparpiller les brins de romarin frais et le sel de mer. L'huile sera mise dans les fossettes. Cuire immédiatement à 230 C (450 F).",
+      "visualCue": {
+        "primaryTarget": "Un paysage de fossettes spectaculaires et profondes avec piscine d'huile d'olive dans chaque cratère. Des brins de romarin éparpillés. Scintillant de sel à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des fossettes peu profondes qui ont pour la plupart jailli. L'huile glisse sur les côtés.",
+            "action": "Pressez de plus en plus, jusqu'à la poêle. La pâte peut prendre cette force."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des cratères profonds avec piscine d'huile dans chacun. La pâte entre fossettes est montée dans de petites collines. Le romarin et le sel sont également placés.",
+            "action": "Dans le four immédiatement. Chaque seconde retarde le ressort du four."
+          },
+          {
+            "state": "Overdone",
+            "description": "Frappé trop vigoureusement et déchiré à travers la pâte dans les endroits. Une fuite d'huile.",
+            "action": "Appuyez doucement sur les zones déchirées à nouveau ensemble. Le four guérira les larmes mineures."
+          }
+        ]
+      },
+      "feelCue": "Votre bout des doigts devrait rencontrer de la pâte douce, donnant, puis sentir soudainement la résistance lissée du fond de la poêle recouverte d'huile. Cette sensation en deux étapes — pâte molle, puis poêle dure — est la confirmation que vous avez pressé tout le chemin à travers pour créer de véritables fossettes."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "dimpled_sourdough_focaccia"
+      ],
+      "outputState": "finished_sourdough_focaccia",
+      "instructions": "Cuire à 230 °C (450 °F) sur le support intermédiaire inférieur pendant 20 à 25 minutes jusqu'à ce que le dessus soit profondément doré avec des taches blister plus foncées aux pics de fossette et que le fond soit croustillant et caramélisé. Soulevez un coin avec une spatule pour vérifier le fond. Retirez immédiatement de la poêle sur un support en fil pour préserver le fond croustillant.",
+      "visualCue": {
+        "primaryTarget": "Un haut en or profond avec des pics blisters plus foncés et des bords de fossettes caramélisées. Le fond est un riche caramel-brun qui craque audiblement quand la poêle est tapée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Haut en or pâle, fond doux et blond. Pas de crépitement.",
+            "action": "Retournez au four. Déposer au support le plus bas pour la chaleur du fond. 3-5 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Top riche en or avec des blisters carbonisés aux pics de fossette. Le fond est brun caramel profond et craque quand le coin est levé. La focaccia semble creuse quand elle est tapée.",
+            "action": "Transférer immédiatement sur une grille. Le fond caramélisé deviendra la fierté de ce pain."
+          },
+          {
+            "state": "Overdone",
+            "description": "Haut brun foncé aux bords très foncés. Une odeur amère du romarin.",
+            "action": "Coupez les bords les plus sombres. L'intérieur est probablement encore excellent."
+          }
+        ]
+      },
+      "feelCue": "Tapez sur le fond de la focaccia — elle doit sonner d'un son propre et creux, comme frapper sur le bois, plutôt qu'un bruit terne. La croûte inférieure doit se sentir rigide et sèche sous votre mèche : cette croustillante de la caramélisation à l'huile d'olive est le joyau de la couronne de la focaccia aurifère."
+    }
+  ]
 };

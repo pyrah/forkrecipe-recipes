@@ -1,117 +1,287 @@
 export default {
-  repoId: "master_shanghainese_xiao_long_bao_001",
-  parentRepoId: null,
-  slug: "xiao-long-bao",
-  author: "ForkRecipe Kitchen",
-  title: "Xiao Long Bao (小笼包)",
-  description: "Thin, pleated dumplings cradling a pork and ginger filling suspended in aspic that melts to soup during steaming — the skin is so translucent you can see the filling shift when you lift it from the bamboo, and biting too eagerly will cost you.",
-  cuisine: "Chinese",
-  culture: "Shanghainese",
-  category: "proteins",
-  tags: ["dumplings", "pork", "shanghainese", "steamed", "soup-dumplings", "aspic", "dim-sum"],
-  difficulty: 5,
-  activeTime: "3 hr",
-  totalTime: "5 hr",
-  ratioSystem: "parts",
-  stars: 2340,
-  forks: 312,
-  contributors: 74,
-  license: "CC-BY-SA",
-  createdAt: "2026-02-01",
-  updatedAt: "2026-02-01",
-  flavorRadar: { sweet: 2, salty: 4, sour: 1, bitter: 0, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",                         ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Hydration",  name: "Boiling water (for scalded dough)",         ratioValue: 55,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Protein",    name: "Ground pork (30% fat content)",              ratioValue: 80,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Umami",      name: "Pork skin aspic (dong), chilled until firm",ratioValue: 60,  defaultUnit: "parts", substitutions: ["powdered gelatin dissolved in good pork stock, chilled"] },
-    { ingId: "ing_05", role: "Aromatic",   name: "Fresh ginger, minced",                      ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",     name: "Scallions (spring onions), finely minced",  ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Soy sauce",                                 ratioValue: 6,   defaultUnit: "parts", substitutions: ["tamari"] },
-    { ingId: "ing_08", role: "Solvent",    name: "Shaoxing rice wine",                        ratioValue: 4,   defaultUnit: "parts", substitutions: ["dry sherry"] },
-    { ingId: "ing_09", role: "Seasoning",  name: "Salt, sugar, white pepper",                 ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Fat",        name: "Sesame oil",                                ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_shanghainese_xiao_long_bao_001",
+  "parentRepoId": null,
+  "slug": "xiao-long-bao",
+  "author": "ForkRecipe Kitchen",
+  "title": "Xiao Long Bao ()",
+  "description": "De minces boulettes plissées câlinent une garniture de porc et de gingembre suspendue à l'aspic qui fond à la soupe pendant la vapeur — la peau est tellement translucide que vous pouvez voir le changement de remplissage lorsque vous le soulevez du bambou, et mordre trop avidement vous coûtera.",
+  "cuisine": "Chinois",
+  "culture": "Shanghainese",
+  "category": "proteins",
+  "tags": [
+    "boulettes",
+    "porc",
+    "shanghainese",
+    "vapeur",
+    "Bouchons à soupe",
+    "aspic",
+    "dim-sum"
   ],
-  processNodes: [
+  "difficulty": 5,
+  "activeTime": "3 hr",
+  "totalTime": "5 hr",
+  "ratioSystem": "parts",
+  "stars": 2340,
+  "forks": 312,
+  "contributors": 74,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-02-01",
+  "updatedAt": "2026-02-01",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_04"],
-      outputState: "pork_aspic",
-      instructions: "If making from scratch: simmer pork skin (or trotters) with water, ginger, and scallion for 2–3 hours. Strain, season, and pour the liquid into a flat tray to set in the refrigerator for at least 2 hours until completely firm. The gel should be solid enough to dice. Cut into 1 cm cubes when needed for the filling. If using gelatin: bloom, dissolve in hot pork stock, season, pour into a tray and refrigerate until firm.",
-      visualCue: {
-        primaryTarget: "The aspic after chilling — its firmness and translucency.",
-        spectrum: [
-          { state: "Underdone", description: "Aspic is still jiggly and sticky, not holding a clean cut — insufficient gelatin or inadequate chilling time.", action: "Return to the refrigerator for another hour; it must be firm enough to hold diced cubes." },
-          { state: "Perfect",   description: "Completely firm, slightly translucent gel that holds a clean-edged dice when cut. Smells of rich pork with a clean ginger note. Does not stick to the knife.", action: "Dice into 1 cm cubes and refrigerate until the filling is ready." },
-          { state: "Overdone",  description: "Aspic is so stiff it resists the knife and the texture inside is gummy rather than clean.", action: "It will still melt during steaming — proceed. Slightly stiffer aspic just takes an extra 30 seconds to liquefy." },
-        ],
-      },
-      feelCue: "Firm aspic should feel like very firm Jell-O — press a fingertip in and it springs back completely without leaving a depression, a clean, taut surface.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["ing_03", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "seasoned_pork_filling",
-      instructions: "Combine ground pork, minced ginger, scallions, soy sauce, Shaoxing wine, salt, sugar, white pepper, and sesame oil in a bowl. Using chopsticks or your hand, stir and fold in one direction only for 3–4 minutes until the mixture becomes sticky and cohesive — the protein strands are aligning. Do not overmix or the filling becomes dense. Refrigerate 30 minutes.",
-      visualCue: {
-        primaryTarget: "The filling — its cohesion when lifted on a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Filling is loose and falls apart when scooped — not enough mixing to develop the protein bonds.", action: "Continue stirring in one direction for another 2 minutes." },
-          { state: "Perfect",   description: "Filling is cohesive and springy — when scooped with a spoon it holds together in a mound rather than crumbling. When stirred, it resists like thick clay. The surface looks slightly shiny from protein extraction.", action: "Refrigerate while preparing the dough. Add aspic cubes just before wrapping." },
-          { state: "Overdone",  description: "Filling has been overworked and is very stiff and paste-like — the cooked result will be dense.", action: "Proceed — the aspic will add juiciness to the filling during steaming." },
-        ],
-      },
-      feelCue: "Properly mixed xiao long bao filling should feel like very thick, tacky modeling clay when pressed in your palm — dense and unified, not crumbly, not pasty.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau bouillante (pour pâte échaudée)",
+      "ratioValue": 55,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Knead",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "xlb_dough",
-      instructions: "Pour boiling water gradually over the flour while stirring quickly with a fork or chopsticks. Once cool enough to handle (about 2 minutes), knead by hand for 8–10 minutes until the dough is smooth, elastic, and slightly tacky but not sticky. The hot water gelatinizes the starch, making the dough extensible enough to roll paper-thin without tearing. Cover and rest 30 minutes.",
-      visualCue: {
-        primaryTarget: "The dough surface — its smoothness and response to pressure.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still rough and slightly lumpy with visible dry seams where the flour hasn't fully hydrated.", action: "Continue kneading; the rough surface will smooth out in 5 more minutes of work." },
-          { state: "Perfect",   description: "Completely smooth, matte surface with no tears or ridges. The dough springs back slowly when poked and can be stretched a few centimeters without tearing.", action: "Cover with plastic wrap and rest for 30 minutes." },
-          { state: "Overdone",  description: "Dough has been kneaded too vigorously and feels elastic and rubbery — it snaps back when stretched rather than yielding.", action: "Rest 30 minutes — the gluten needs time to relax before it can be rolled thin." },
-        ],
-      },
-      feelCue: "Properly kneaded xlb dough should feel like warm Play-Doh — smooth, pliable, dense but not stiff. Press it with a thumb and it should hold the impression without springing back immediately.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Porc haché (30% de matières grasses)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Shape",
-      inputs: ["xlb_dough", "seasoned_pork_filling", "pork_aspic"],
-      outputState: "wrapped_xlb",
-      instructions: "Divide the dough into small pieces (about 10g each). Roll each piece into a thin disc 8–9 cm across — thinner at the edges, slightly thicker in the center to resist the soup weight. Place 1 tsp pork filling in the center with 2–3 aspic cubes. Pleat the edges with 18–22 folds, twisting and pinching the top closed. The pleat count is not vanity — more pleats means a tighter seal and less soup loss.",
-      visualCue: {
-        primaryTarget: "The pleated crown of the dumpling — the twist and the tightness of the seal.",
-        spectrum: [
-          { state: "Underdone", description: "Only 8–10 pleats, the crown is a rough pinch rather than a twist. The seal will likely break during steaming, releasing the soup.", action: "Practice the pleat motion before filling; even irregular pleats are better than too few." },
-          { state: "Perfect",   description: "18+ regular, evenly spaced pleats twist to a tight, secure crown with no gaps. The dumpling stands on its base without the crown opening. The skin is thin enough to see the filling faintly.", action: "Place on parchment-lined steamer basket and proceed immediately." },
-          { state: "Overdone",  description: "Pleating took too long and the skin has warmed and stretched — it may be too thin in places and the aspic is melting into the filling.", action: "Steam immediately and work faster next batch; keep the wrapped dumplings cold while working." },
-        ],
-      },
-      feelCue: "A well-wrapped xiao long bao feels taut and round when lifted — the skin has tension from the steam trapped inside during wrapping, and the dumpling should wobble slightly when set down, like a water-filled balloon.",
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Peau de porc aspice (dong), réfrigérée jusqu'à ce que ferme",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gélatine en poudre dissoute dans un bon stock de porc, réfrigérée"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Simmer",
-      inputs: ["wrapped_xlb"],
-      outputState: "finished_xiao_long_bao",
-      instructions: "Line bamboo steamer with parchment or cabbage leaves. Place dumplings 2 cm apart — they expand. Steam over vigorously boiling water for exactly 8 minutes. Not 6 (filling undercooked), not 10 (skin tears). Serve immediately in the steamer. Accompany with Chinkiang black vinegar and thin-cut ginger.",
-      visualCue: {
-        primaryTarget: "The dumplings in the steamer — the skin's translucency and the soup visible inside.",
-        spectrum: [
-          { state: "Underdone", description: "At 6 minutes: the skin is still opaque white and the aspic inside has not fully melted — the soup is still semi-solid.", action: "Steam for 2 more minutes; do not open the steamer lid or temperature will drop." },
-          { state: "Perfect",   description: "At 8 minutes: the skin is translucent, almost glowing, and you can see the liquid soup filling shift when the steamer is gently tilted. Each dumpling has puffed slightly. The pleated crown is intact.", action: "Serve immediately at the table — every second it rests the skin toughens." },
-          { state: "Overdone",  description: "One or more dumplings have a split or burst skin, leaking soup into the steamer basket — over-steamed or a sealing fault.", action: "Serve the intact ones immediately; the burst ones can be eaten from the basket with a spoon." },
-        ],
-      },
-      feelCue: "Lift a xiao long bao with chopsticks very gently by the crown — it should swing slightly like a pendulum, the soup inside pooling to one side, the skin translucent and resilient. Set it in a spoon, bite a small hole in the side, and wait three seconds for the steam to release before sipping the soup.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Gingembre frais, haché",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Échalons (oignons de printemps), finement hachés",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "sauce soja",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Solvent",
+      "name": "Vin de riz shaoxant",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel, sucre, poivre blanc",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile de sésame",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_04"
+      ],
+      "outputState": "pork_aspic",
+      "instructions": "Si vous faites à partir de rayure : faire mijoter la peau de porc (ou les trotters) avec de l'eau, du gingembre et de l'échon pendant 2 à 3 heures. Tente, assaisonner et verser le liquide dans un plateau plat pour le mettre au réfrigérateur pendant au moins 2 heures jusqu'à ce qu'il soit complètement ferme. Le gel doit être assez solide pour dés. Couper en cubes de 1 cm si nécessaire pour le remplissage. Si vous utilisez de la gélatine : fleurir, dissoudre dans le stock de porc chaud, assaisonner, verser dans un plateau et réfrigérer jusqu'à ce que ferme.",
+      "visualCue": {
+        "primaryTarget": "L'aspic après le froid — sa fermeté et sa translucidité.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Aspic est toujours jigly et collant, ne tenant pas une coupe propre — gélatine insuffisante ou temps de refroidissement insuffisant.",
+            "action": "Retourner au réfrigérateur pendant une autre heure; il doit être suffisamment ferme pour tenir les cubes en dés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gel complètement ferme, légèrement translucide, qui tient un dés propre lors de la coupe. Sens de porc riche avec une note de gingembre propre. Ne colle pas au couteau.",
+            "action": "Couper en cubes de 1 cm et réfrigérer jusqu'à ce que le remplissage soit prêt."
+          },
+          {
+            "state": "Overdone",
+            "description": "Aspic est si raide qu'il résiste au couteau et la texture à l'intérieur est gommée plutôt que propre.",
+            "action": "Il fondra encore pendant la vapeur — continuez. Un peu plus raide aspic prend juste 30 secondes de plus pour liquéfier."
+          }
+        ]
+      },
+      "feelCue": "Un aspic ferme devrait se sentir comme un Jell-O très ferme — appuyez sur un bout de doigt et il ressort complètement sans laisser une dépression, une surface propre et tendue."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_03",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "seasoned_pork_filling",
+      "instructions": "Mélanger le porc haché, le gingembre haché, les oignons verts, la sauce soja, le vin Shaoxing, le sel, le sucre, le poivre blanc et l'huile de sésame dans un bol. À l'aide de baguettes ou de votre main, remuer et plier dans un seul sens pendant 3 à 4 minutes jusqu'à ce que le mélange devienne collant et cohésif — les brins de protéines s'alignent. Ne pas trop mélanger ou le remplissage devient dense. Réfrigérer 30 minutes.",
+      "visualCue": {
+        "primaryTarget": "Le remplissage — sa cohésion lorsqu'il est soulevé sur une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le remplissage est lâche et s'effondre lorsqu'il est écopé — pas assez de mélange pour développer les liaisons protéiques.",
+            "action": "Continuer à remuer dans une direction pendant 2 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le remplissage est cohérent et printanier — lorsqu'il est écopé d'une cuillère, il se tient dans un monticule plutôt que de s'effondrer. Lorsqu'il est agité, il résiste comme de l'argile épaisse. La surface semble légèrement brillante par extraction de protéines.",
+            "action": "Réfrigérer pendant la préparation de la pâte. Ajouter les cubes aspic juste avant l'emballage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage a été surmené et est très rigide et pâteux – le résultat cuit sera dense.",
+            "action": "Continuez — l'aspic ajoutera de la jutosité au remplissage pendant la vapeur."
+          }
+        ]
+      },
+      "feelCue": "Le remplissage de longue bao xiao bien mélangé devrait se sentir comme de l'argile de modélisation très épaisse et collante lorsqu'elle est pressée dans la paume — dense et unifiée, pas émiettée, pas pâteuse."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Agenouillement",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "xlb_dough",
+      "instructions": "Verser progressivement l'eau bouillante sur la farine en remuant rapidement avec une fourchette ou des baguettes. Une fois assez frais pour manipuler (environ 2 minutes), pétrir à la main de 8 à 10 minutes jusqu'à ce que la pâte soit lisse, élastique et légèrement collante mais non collante. L'eau chaude gélatinise l'amidon, rendant la pâte suffisamment extensible pour rouler le papier-mince sans déchirer. Couvrir et reposer 30 minutes.",
+      "visualCue": {
+        "primaryTarget": "La surface de la pâte — sa douceur et sa réponse à la pression.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est encore rugueuse et légèrement bosselée avec des coutures sèches visibles où la farine n'est pas complètement hydratée.",
+            "action": "Continuer le pétrissage; la surface rugueuse se lissera dans 5 minutes de plus de travail."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement lisse, surface mate sans larmes ni arêtes. La pâte ressort lentement lorsqu'elle est cuite et peut être étirée de quelques centimètres sans déchirer.",
+            "action": "Couvrir d'enveloppe plastique et reposer pendant 30 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La touffe a été pétrie trop vigoureusement et se sent élastique et caoutchouteuse — elle se renverse lorsqu'elle est étirée au lieu de céder.",
+            "action": "Reposez-vous 30 minutes — le gluten a besoin de temps pour se détendre avant qu'il puisse être roulé mince."
+          }
+        ]
+      },
+      "feelCue": "Bien pétrir la pâte xlb doit se sentir comme chaud Play-Doh - lisse, souple, dense mais pas raide. Appuyez sur le pouce et il devrait retenir l'impression sans retomber immédiatement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Forme",
+      "inputs": [
+        "xlb_dough",
+        "seasoned_pork_filling",
+        "pork_aspic"
+      ],
+      "outputState": "wrapped_xlb",
+      "instructions": "Divisez la pâte en petits morceaux (environ 10 g chacun). Rouler chaque pièce dans un disque mince de 8 à 9 cm de diamètre — plus mince aux bords, légèrement plus épais au centre pour résister au poids de la soupe. Placez 1 c. à thé de garniture de porc au centre avec 2-3 cubes aspic. Pliez les bords avec 18–22 plis, torsion et pincement du dessus fermé. Le nombre de plis n'est pas vanité — plus de plis signifie un joint plus serré et moins de perte de soupe.",
+      "visualCue": {
+        "primaryTarget": "La couronne plissée du bouleau — la torsion et l'étanchéité du joint.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Seulement 8 à 10 plis, la couronne est une pince rugueuse plutôt qu'une torsion. Le phoque se brisera probablement pendant la vapeur, libérant la soupe.",
+            "action": "Pratiquez la motion de plaidoyer avant de remplir; même les plis irréguliers sont meilleurs que trop peu."
+          },
+          {
+            "state": "Perfect",
+            "description": "18+ plis réguliers, uniformément espacés, torsion à une couronne serrée et sécurisée sans trous. Le boulet se tient sur sa base sans l'ouverture de la couronne. La peau est assez mince pour voir le remplissage faible.",
+            "action": "Placer sur le panier à vapeur parcheminé et procéder immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pliage a pris trop de temps et la peau s'est réchauffée et étirée — il peut être trop mince dans les endroits et l'aspic fond dans le remplissage.",
+            "action": "Steam immédiatement et travailler plus rapidement prochain lot; garder les boulettes emballées froides tout en travaillant."
+          }
+        ]
+      },
+      "feelCue": "Une longue bao de xiao bien enveloppée se sent tendue et ronde lorsqu'elle est levée — la peau a une tension de la vapeur piégée à l'intérieur pendant l'emballage, et la boulette devrait grouiller légèrement lorsqu'elle est posée, comme un ballon rempli d'eau."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "wrapped_xlb"
+      ],
+      "outputState": "finished_xiao_long_bao",
+      "instructions": "Lignez un vapeur de bambou avec des feuilles de parchemin ou de chou. Placez les boulettes à 2 cm d'écart — elles s'étendent. Au-dessus de l'eau bouillante pendant exactement 8 minutes. Pas 6 (remplissant sous-cuisine), pas 10 (larmes de peau). Servir immédiatement dans le vapeur. Accompagner avec du vinaigre noir et du gingembre mince.",
+      "visualCue": {
+        "primaryTarget": "Les boulettes dans le vapeur — la translucidité de la peau et la soupe visible à l'intérieur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "A 6 minutes: la peau est encore blanche opaque et l'intérieur aspic n'a pas complètement fondu — la soupe est encore semi-solide.",
+            "action": "Steam pendant 2 minutes de plus; ne pas ouvrir le couvercle du vapeur ou la température chutera."
+          },
+          {
+            "state": "Perfect",
+            "description": "A 8 minutes : la peau est translucide, presque éclatante, et vous pouvez voir le décalage de remplissage de soupe liquide lorsque le vapeur est légèrement incliné. Chaque boulette a légèrement gonflé. La couronne plissée est intacte.",
+            "action": "Servir immédiatement à la table — chaque seconde elle repose la peau durcit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Une ou plusieurs boulettes ont une peau fendue ou éclatée, laissant la soupe dans le panier à vapeur — surchauffé ou défaut d'étanchéité.",
+            "action": "Servir immédiatement les intacts; les éclats peuvent être mangés dans le panier avec une cuillère."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un long bao xiao avec des baguettes très doucement par la couronne — il devrait osciller légèrement comme un pendule, la soupe à l'intérieur pooling d'un côté, la peau translucide et résistante. Placez-le dans une cuillère, mordez un petit trou dans le côté, et attendez trois secondes pour que la vapeur se libère avant de siroter la soupe."
+    }
+  ]
 };

@@ -1,112 +1,293 @@
 export default {
-  repoId: "master_french_duck_a_lorange_001",
-  parentRepoId: null,
-  slug: "duck-a-lorange",
-  author: "ForkRecipe Kitchen",
-  title: "Duck à l'Orange",
-  description: "The grand bourgeois roast — a whole duck rendered to crackling, lacquered skin, served beneath a sauce bigarade built on a hair's-breadth caramel gastrique tightened with bitter Seville orange. Sweet, sharp and just shy of burnt, it is the dish that taught a generation what sweet-and-sour could be at the high table.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "proteins",
-  tags: ["roast", "french", "duck", "gastrique", "orange", "sauce-bigarade"],
-  difficulty: 4,
-  activeTime: "1 hr",
-  totalTime: "2 hr 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 3, salty: 2, sour: 4, bitter: 3, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole duck (2-2.5 kg, trimmed, patted bone-dry)",        ratioValue: 100, defaultUnit: "parts", substitutions: ["duck legs & breasts"] },
-    { ingId: "ing_02", role: "Citrus",    name: "Seville (bitter) oranges — zest in strips & juice",       ratioValue: 18,  defaultUnit: "parts", substitutions: ["sweet orange + a squeeze of lemon"] },
-    { ingId: "ing_03", role: "Sweetener", name: "White sugar (for the caramel)",                           ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Acid",      name: "Red wine vinegar (for the gastrique)",                    ratioValue: 6,   defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Brown duck or veal stock (reduced, warm)",                ratioValue: 40,  defaultUnit: "parts", substitutions: ["chicken stock fortified with a little gelatine"] },
-    { ingId: "ing_06", role: "Liquid",    name: "Dry white wine (for deglazing)",                          ratioValue: 12,  defaultUnit: "parts", substitutions: ["dry vermouth"] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Shallot (finely minced)",                                 ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Liquid",    name: "Orange liqueur (Grand Marnier or Cointreau)",             ratioValue: 4,   defaultUnit: "parts", substitutions: ["omit"] },
-    { ingId: "ing_09", role: "Fat",       name: "Cold unsalted butter (to mount the sauce)",               ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning", name: "Sea salt & white pepper",                                 ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_duck_a_lorange_001",
+  "parentRepoId": null,
+  "slug": "duck-a-lorange",
+  "author": "ForkRecipe Kitchen",
+  "title": "Duck à l'Orange",
+  "description": "Le grand rôti bourgeois — un canard entier rendu à la peau crépitante, laquée, servi sous une sauce bigarade construite sur un caramel gastrique de pain de cheveux serré avec de l'orange amère Séville. Douce, tranchante et juste timide de brûlée, c'est le plat qui a enseigné à une génération ce qu'elle pouvait être à la table haute.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "proteins",
+  "tags": [
+    "rôti",
+    "français",
+    "canard",
+    "gaztrique",
+    "orange",
+    "sauce-bigarade"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hr",
+  "totalTime": "2 hr 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 2,
+    "sour": 4,
+    "bitter": 3,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Season & Prick",
-      inputs: ["ing_01", "ing_10"],
-      outputState: "prepped_duck",
-      instructions: "Pat the duck bone-dry inside and out. Prick the skin all over the breast and thighs with a fork held at a shallow angle, piercing the fat layer but not the meat beneath, so the rendering fat has an exit. Season the cavity and skin generously with salt and white pepper and, ideally, leave uncovered in the fridge an hour or more to dry the skin. Tie the legs to draw the bird tight.",
-      visualCue: {
-        primaryTarget: "Skin is taut, dry to the touch and dotted with shallow punctures; the surface looks matte rather than damp and faintly tacky from the salt.",
-        spectrum: [
-          { state: "Underdone", description: "Skin still feels damp and slick; pricks are deep enough that pink meat shows through the holes.", action: "Blot again with paper towels and re-prick at a flatter angle — you want to nick only the fat, never the flesh, or juices weep out during roasting." },
-          { state: "Perfect",   description: "Dry, taut, evenly seasoned skin with a fine field of shallow punctures over breast and thigh; cavity smells clean and seasoned.", action: "Set the bird breast-up on a rack to begin the roast." },
-          { state: "Overdone",  description: "Skin is torn or gashed and the breast meat is exposed and salting heavily, which will dry it out.", action: "Pat away excess salt from torn areas and roast a touch shorter; baste the exposed meat to keep it from drying." },
-        ],
-      },
-      feelCue: "The fork should give two distinct resistances — the slight pop of the skin, then the soft fat — and stop before it reaches the firmer meat. Dry skin squeaks faintly under your fingertips.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Canards entiers (2 à 2,5 kg, parés, désossés)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jambes et seins de canard"
+      ]
     },
     {
-      nodeId: "step_2", action: "Roast",
-      inputs: ["prepped_duck"],
-      outputState: "roasted_duck",
-      instructions: "Roast breast-up on a rack at 200°C / 400°F. After 25 minutes drop to 170°C / 340°F and continue, tipping out the rendered fat from the tray every 30 minutes (reserve it — it is gold). Roast about 75-90 minutes total, until the skin is deep amber and crisp and the thigh juices run clear. Rest the bird, loosely tented, at least 15 minutes before carving.",
-      visualCue: {
-        primaryTarget: "Skin is burnished mahogany and crackling-crisp, the breast plump, and a skewer in the thickest thigh releases clear, faintly golden juices.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is pale and flabby with unrendered fat beneath it; thigh juices run pink and the leg still feels tight to the wiggle.", action: "Return to the oven — raise the heat for the last stretch to crisp the skin, and keep checking the thigh juices until they run clear." },
-          { state: "Perfect",   description: "Deep amber, crackling skin that shatters when tapped; thigh juices run clear; the leg joint loosens and wiggles freely.", action: "Rest the duck and build the gastrique while the tray fat and juices wait for deglazing." },
-          { state: "Overdone",  description: "Skin is darkening toward black at the edges and the breast feels firm and dry; juices have stopped running altogether.", action: "Pull it immediately and rest well; carve thin and nap generously with sauce to make up for lost moisture." },
-        ],
-      },
-      feelCue: "Tap the breast skin with a fingernail — when it sounds hollow and crisp rather than soft, the fat below has rendered. The leg should swing loose at the joint, not hold rigid.",
+      "ingId": "ing_02",
+      "role": "Citrus",
+      "name": "Les oranges de Séville (amère) — zestes en lanières et jus",
+      "ratioValue": 18,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "orange douce + une pression de citron"
+      ]
     },
     {
-      nodeId: "step_3", action: "Caramelise",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "gastrique",
-      instructions: "In a clean heavy saucepan, melt the sugar over medium heat without stirring, swirling the pan as it liquefies, until it turns a deep amber caramel right at the edge of bitter — this dark caramel is what keeps the sauce from being merely sweet. Off the heat, stand back and pour in the vinegar; it will sputter and seize. Return to low heat and stir until the hardened caramel melts smooth into a syrupy gastrique.",
-      visualCue: {
-        primaryTarget: "A glossy, deep-amber syrup that smells of toasted sugar with a sharp vinegar lift — dark enough to carry a faint, pleasant bitterness, not pale gold.",
-        spectrum: [
-          { state: "Underdone", description: "Caramel is pale straw-gold and the gastrique tastes flatly sweet, with no roasted depth to balance the orange.", action: "Cook the sugar further next time — for now, simmer the gastrique a little to concentrate it, but it will lack the bitter backbone." },
-          { state: "Perfect",   description: "Deep amber, just shy of mahogany, with a toasted aroma and a clean acidic edge once the vinegar is stirred in smooth.", action: "Add the citrus to begin building the sauce bigarade." },
-          { state: "Overdone",  description: "Caramel is dark brown verging on black and gives off acrid, scorched fumes; the syrup tastes harshly bitter.", action: "Discard and start the caramel again — burnt sugar cannot be rescued and will taint the whole sauce." },
-        ],
-      },
-      feelCue: "Watch the colour and trust your nose over the clock — caramel turns from gold to amber to burnt in seconds. The vinegar hits with a violent hiss and a sharp cloud; keep your face back and your hand steady.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre blanc (pour le caramel)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Build the Sauce",
-      inputs: ["gastrique", "ing_02", "ing_07", "ing_06", "ing_05"],
-      outputState: "sauce_base",
-      instructions: "Blanch the orange zest strips in boiling water for a minute to soften their harsh bitterness, then drain. Add the minced shallot to the gastrique and soften briefly, deglaze with the white wine and reduce by half, then pour in the warm brown stock and the orange juice. Simmer and reduce until the sauce lightly naps a spoon, 8-12 minutes, skimming as needed. Stir in the blanched zest.",
-      visualCue: {
-        primaryTarget: "A glossy, deep-russet sauce, translucent at the edges, with ribbons of softened zest suspended in it; it coats the back of a spoon and tastes sharp, sweet and savoury at once.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery, running straight off the spoon; the flavours of stock, caramel and orange sit separate and unmarried.", action: "Keep reducing at a gentle simmer until it thickens enough to nap, then taste again for the balance of sweet and sour." },
-          { state: "Perfect",   description: "Lightly syrupy, glossy and clinging to the spoon, balanced between bright orange acidity, savoury stock and the caramel's gentle bitterness.", action: "Finish the sauce with liqueur and a swirl of cold butter." },
-          { state: "Overdone",  description: "Sauce has reduced to a thick, dark, over-sweet glaze and the orange has cooked to a dull, jammy edge.", action: "Loosen with a splash of stock or a little fresh orange juice to recover brightness, and re-balance the seasoning." },
-        ],
-      },
-      feelCue: "Drag a spoon through the sauce and lift it — at the right point it sheets and clings rather than dripping off thin and fast. Blanched zest should bend softly, never snap.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "vinaigre de vin rouge (pour la gaztrique)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
     },
     {
-      nodeId: "step_5", action: "Mount & Finish",
-      inputs: ["sauce_base", "ing_08", "ing_09", "ing_10", "roasted_duck"],
-      outputState: "finished_duck_a_lorange",
-      instructions: "Off direct high heat, stir the orange liqueur into the sauce and simmer a few seconds to soften its alcohol. Whisk in the cold butter a knob at a time, off the heat, swirling until the sauce turns glossy and silken — do not let it boil or it will split. Taste and correct the salt and the sweet-sour balance. Carve the rested duck, fan the slices, and spoon the warm sauce over and around. Serve at once.",
-      visualCue: {
-        primaryTarget: "A satiny, mirror-glossy sauce that clings to each slice of duck in a thin, even sheen, with the crisp skin still audible under the spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce looks lean and matte, the butter not yet emulsified; it tastes sharp and thin without the rounding richness of fat.", action: "Whisk in the remaining cold butter off the heat until the surface turns glossy and the edges round out." },
-          { state: "Perfect",   description: "Glossy, emulsified and silken, coating the duck in a bright, balanced sauce — sweet, sour and savoury in one clean line, the skin still crisp beneath.", action: "Plate immediately and serve before the sauce cools and the skin softens." },
-          { state: "Overdone",  description: "Sauce has been boiled after the butter went in and looks broken and greasy, with a thin oily slick separating out.", action: "Pull from the heat, whisk in a splash of cold stock or a fresh knob of butter off the heat to re-emulsify, and serve at once." },
-        ],
-      },
-      feelCue: "Swirl the pan as the butter melts in — the sauce should thicken and gloss under the whisk, feeling heavier and smoother. The moment it simmers hard it threatens to break, so keep it just off the boil.",
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Viande de canard ou de veau brun (réduite, chaude)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "stock de poulet fortifié avec un peu de gélatine"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Vin blanc sec (pour le déglacement)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vermouth sec"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Échalote (finement hachée)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Liquid",
+      "name": "liqueur orange (Grand Marnier ou Cointreau)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omit"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Beurre froid non salé (pour monter la sauce)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel de mer & poivre blanc",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saison & Prick",
+      "inputs": [
+        "ing_01",
+        "ing_10"
+      ],
+      "outputState": "prepped_duck",
+      "instructions": "Faites sécher le canard à l'intérieur et à l'extérieur. Piquez la peau sur toute la poitrine et les cuisses avec une fourchette maintenue à un angle peu profond, perçant la couche grasse mais pas la viande en dessous, de sorte que la graisse de rendu a une sortie. Assaisonner la cavité et la peau généreusement avec du sel et du poivre blanc et, idéalement, laisser découvert au réfrigérateur une heure ou plus pour sécher la peau. Attachez les jambes pour serrer l'oiseau.",
+      "visualCue": {
+        "primaryTarget": "La peau est tendue, sèche au toucher et parsemée de ponctions peu profondes; la surface semble mate plutôt que humide et légèrement tachée du sel.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore humide et lissée; les piqûres sont assez profondes que la viande rose montre à travers les trous.",
+            "action": "Bloquez encore avec des serviettes en papier et re-prick à un angle plus plat — vous voulez ne piquer que la graisse, jamais la chair, ou les jus pleurent pendant la torréfaction."
+          },
+          {
+            "state": "Perfect",
+            "description": "Peau sèche, tendue, uniformément assaisonnée avec un champ fin de perforations peu profondes sur la poitrine et la cuisse; la cavité sent propre et assaisonnée.",
+            "action": "Placez l'oiseau sur une grille pour commencer le rôti."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau est déchirée ou gâchée et la viande de poitrine est exposée et salée fortement, ce qui la séchera.",
+            "action": "Éliminer l'excès de sel des zones déchirées et rôtir une touche plus courte; abaisser la viande exposée pour l'empêcher de sécher."
+          }
+        ]
+      },
+      "feelCue": "La fourchette devrait donner deux résistances distinctes — la légère pop de la peau, puis la graisse molle — et s'arrêter avant qu'elle n'atteigne la viande plus ferme. La peau sèche grince légèrement sous le bout des doigts."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rôtis",
+      "inputs": [
+        "prepped_duck"
+      ],
+      "outputState": "roasted_duck",
+      "instructions": "Allumer sur un rack à 200 °C / 400 °F. Après 25 minutes, chutez à 170°C / 340°F et continuez, en tirant le gras rendu du plateau toutes les 30 minutes (réservez-le – c'est de l'or). Faire cuire environ 75-90 minutes au total, jusqu'à ce que la peau soit profondément ambre et croustillante et que les jus de cuisse soient limpides. Reposez l'oiseau, lâchement tenté, au moins 15 minutes avant la sculpture.",
+      "visualCue": {
+        "primaryTarget": "La peau est acajou brûlé et crépitante-crisp, la poitrine plombée, et une brochette dans la cuisse la plus épaisse libère des jus clairs et légèrement dorés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est pâle et effilée avec de la graisse non rapportée sous elle; les jus de cuisses sont roses et la jambe est encore serrée à la pelle.",
+            "action": "Retourner au four — relever la chaleur pour le dernier étirement pour croquer la peau, et continuer à vérifier les jus de cuisse jusqu'à ce qu'ils soient limpides."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep ambre, peau crépitante qui se brise lorsqu'il est tapoté; les jus de cuisses s'échappent; l'articulation de la jambe se détache et s'agite librement.",
+            "action": "Reposez le canard et construisez le gastrique pendant que le plateau gras et les jus attendent le déglacement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau s'obscurcit vers le noir aux bords et la poitrine se sent ferme et sèche; les jus ont complètement cessé de courir.",
+            "action": "Tirez-le immédiatement et reposez-vous bien; carivez mince et sieste généreusement avec de la sauce pour compenser la perte d'humidité."
+          }
+        ]
+      },
+      "feelCue": "Tapotez la peau de la poitrine avec un ongle — quand il semble creux et croustillant plutôt que doux, la graisse ci-dessous a rendu. La jambe doit se balancer à l'articulation et ne pas tenir rigide."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Caramélise",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "gastrique",
+      "instructions": "Dans une casserole lourde propre, faire fondre le sucre à feu moyen, sans remuer, en tourbillonnant la casserole pendant qu'elle liquéfie, jusqu'à ce qu'il transforme un caramel ambre profond au bord de l'amertume — ce caramel sombre est ce qui empêche la sauce d'être simplement sucrée. Hors de la chaleur, retenez-vous et versez dans le vinaigre; il va saper et saisir. Retourner à feu doux et remuer jusqu'à ce que le caramel durci fond lisse dans une gaztrique sirupeuse.",
+      "visualCue": {
+        "primaryTarget": "Un sirop d'ambre foncé et brillant qui sent le sucre grillé avec un lifting au vinaigre vif, assez sombre pour porter une amertume faible et agréable, pas de l'or pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le caramel est d'or paille pâle et le gaztrique goûte très doux, sans profondeur torréfié pour équilibrer l'orange.",
+            "action": "Faites cuire le sucre plus loin la prochaine fois — pour l'instant, laissez mijoter le gaztrique un peu pour le concentrer, mais il manquera l'épine dorsale amère."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profonde, juste timide d'acajou, avec un arôme grillé et un bord acide propre une fois le vinaigre remué dans lisse.",
+            "action": "Ajouter les agrumes pour commencer à construire la sauce bigarade."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le caramel est brun foncé verglant sur le noir et dégage des fumées acrides et brûlées; le sirop a un goût dur et amer.",
+            "action": "Jeter et recommencer le caramel — le sucre brûlé ne peut être sauvé et va arroser toute la sauce."
+          }
+        ]
+      },
+      "feelCue": "Regardez la couleur et faites confiance à votre nez sur l'horloge — caramel tourne de l'or à l'ambre à brûlé en quelques secondes. Le vinaigre frappe avec un sifflement violent et un nuage aigu; gardez votre visage en arrière et votre main stable."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Construire la sauce",
+      "inputs": [
+        "gastrique",
+        "ing_02",
+        "ing_07",
+        "ing_06",
+        "ing_05"
+      ],
+      "outputState": "sauce_base",
+      "instructions": "Blanchir les zestes d'orange dans l'eau bouillante pendant une minute pour adoucir leur amerrissement, puis égoutter. Ajouter l'échalote hachée au gastrique et adoucir brièvement, déglacer avec le vin blanc et réduire de moitié, puis verser dans le bouillon brun chaud et le jus d'orange. Laisser mijoter et réduire jusqu'à ce que la sauce sirote légèrement une cuillère, 8-12 minutes, en écrémant au besoin. Incorporer le zeste blanchi.",
+      "visualCue": {
+        "primaryTarget": "Une sauce brillante, à roussissement profond, translucide aux bords, avec des rubans de zeste adoucis suspendus à l'intérieur; elle enveloppe le dos d'une cuillère et goûte vif, doux et salé à la fois.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse, qui coule tout droit de la cuillère; les arômes de bouillon, de caramel et d'orange sont séparés et non mariés.",
+            "action": "Continuez à réduire à mijoter doucement jusqu'à ce qu'il épaississe suffisamment pour la sieste, puis goûtez à nouveau pour l'équilibre sucré et aigre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légèrement sirupeux, brillant et collant à la cuillère, équilibré entre l'acidité orange vive, le stock salé et l'amertume douce du caramel.",
+            "action": "Finissez la sauce avec une liqueur et un tourbillon de beurre froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite à un glaçage épais, foncé, surdoué et l'orange a cuit à un bord terne et jammy.",
+            "action": "Loosen avec un jet de bouillon ou un peu de jus d'orange frais pour récupérer la luminosité, et rééquilibrer l'assaisonnement."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère dans la sauce et soulevez - la — au bon endroit, elle la recouvre et s'accroche plutôt que de s'égoutter fin et rapide. Le zeste blanc devrait se plier doucement, ne jamais craquer."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Monter et terminer",
+      "inputs": [
+        "sauce_base",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "roasted_duck"
+      ],
+      "outputState": "finished_duck_a_lorange",
+      "instructions": "À feu vif direct, remuer la liqueur orange dans la sauce et laisser mijoter quelques secondes pour adoucir son alcool. fouetter dans le beurre froid un bouton à la fois, hors du feu, tourbillonner jusqu'à ce que la sauce devienne brillante et soyeuse — ne la laissez pas bouillir ou elle se fendra. Goûtez et corrigez le sel et l'équilibre sucré-sour. Découpez le canard reposé, éventez les tranches, et cuillerez la sauce chaude encore et encore. Servir immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Une sauce satinée, miroir-brillante qui s'accroche à chaque tranche de canard dans une fine, même éclat, avec la peau croquante encore audible sous la cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a l'air maigre et mate, le beurre non encore émulsifié; elle a un goût vif et mince sans la richesse arrondie de la graisse.",
+            "action": "Frottez le reste du beurre froid jusqu'à ce que la surface soit brillante et que les bords se terminent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, émulsifiée et soyeuse, enrobant le canard dans une sauce claire et équilibrée — douce, aigre et salée dans une ligne propre, la peau encore croquante sous.",
+            "action": "Assortir immédiatement et servir avant que la sauce se refroidisse et que la peau s'adoucisse."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été bouillie après l'entrée du beurre et a l'air cassée et grasse, avec une fine lèche huileuse se séparant.",
+            "action": "Tirer de la chaleur, fouetter dans une éclaboussure de bouillon froid ou un bouton frais de beurre hors du feu pour réémulsionner, et servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Faire pivoter la poêle au fur et à mesure que le beurre fond — la sauce doit épaissir et brillant sous le fouet, se sentir plus lourd et plus lisse. Au moment où il mijote dur, il menace de se briser, alors gardez-le juste hors de l'ébullition."
+    }
+  ]
 };

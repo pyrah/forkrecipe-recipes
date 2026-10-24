@@ -1,85 +1,236 @@
 export default {
-  repoId: "master_american_green_goddess_001",
-  parentRepoId: null,
-  slug: "green-goddess-dressing",
-  author: "ForkRecipe Kitchen",
-  title: "Green Goddess Dressing",
-  description: "A 1920s San Francisco blender sauce of mayonnaise, sour cream, anchovy, and a generous fistful of tarragon, chives, and parsley — blended smooth to a vivid, herb-electric green.",
-  cuisine: "American",
-  culture: "Californian",
-  category: "sauces",
-  tags: ["american", "californian", "dressing", "herb", "anchovy", "creamy", "blender"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Mayonnaise (good quality, egg-yolk based)", ratioValue: 100, defaultUnit: "parts", substitutions: ["vegan mayo"] },
-    { ingId: "ing_02", role: "Dairy",     name: "Sour cream",                               ratioValue: 60,  defaultUnit: "parts", substitutions: ["full-fat Greek yogurt", "crème fraîche"] },
-    { ingId: "ing_03", role: "Herb",      name: "Fresh tarragon leaves",                    ratioValue: 15,  defaultUnit: "parts", substitutions: ["dried tarragon (use 1 tsp, not a full substitution)"] },
-    { ingId: "ing_04", role: "Herb",      name: "Flat-leaf parsley, leaves and stems",      ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh chives, roughly chopped",            ratioValue: 15,  defaultUnit: "parts", substitutions: ["green onion tops"] },
-    { ingId: "ing_06", role: "Umami",     name: "Anchovy fillets in oil, drained",          ratioValue: 20,  defaultUnit: "parts", substitutions: ["1 tsp Worcestershire sauce for a milder umami"] },
-    { ingId: "ing_07", role: "Allium",    name: "Garlic clove",                             ratioValue: 5,   defaultUnit: "parts", substitutions: ["roasted garlic for a sweeter result"] },
-    { ingId: "ing_08", role: "Acid",      name: "White wine vinegar",                       ratioValue: 15,  defaultUnit: "parts", substitutions: ["Champagne vinegar"] },
-    { ingId: "ing_09", role: "Acid",      name: "Fresh lemon juice",                        ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fine sea salt",                            ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_green_goddess_001",
+  "parentRepoId": null,
+  "slug": "green-goddess-dressing",
+  "author": "ForkRecipe Kitchen",
+  "title": "Robe de déesse verte",
+  "description": "Une sauce de mélangeur San Francisco des années 1920 de mayonnaise, de crème aigre, d'anchois et d'un généreux poing d'estragon, de ciboulette et de persil, mélangée lisse à un vert herbacé vif.",
+  "cuisine": "Américain",
+  "culture": "Californien",
+  "category": "sauces",
+  "tags": [
+    "américains",
+    "californien",
+    "vinaigrette",
+    "herbe",
+    "anchois",
+    "Crémeux",
+    "Mélangeur"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "herb_blend",
-      instructions: "Add the tarragon, parsley, chives, anchovy fillets, garlic, white wine vinegar, and lemon juice to a blender. Blend on high for 30–45 seconds until the herbs are completely pulverized and the mixture is smooth. The blend will be intensely green at this point — almost luminous — and the raw garlic and anchovies will have dissolved completely into the herb puree. Scrape down the sides once if needed.",
-      visualCue: {
-        primaryTarget: "A vivid, electric-green smooth liquid with no visible herb chunks or anchovy pieces — the color of a high-summer garden in blended form.",
-        spectrum: [
-          { state: "Underdone", description: "Visible herb pieces still identifiable. The liquid is green but speckled rather than uniformly colored. Anchovy may still be in chunks.", action: "Blend for another 20–30 seconds at full speed, stopping to scrape down the jar walls if herbs are clinging." },
-          { state: "Perfect",   description: "Completely smooth, uniform, vivid green. The color is deep and saturated — brighter than a pesto, more transparent than a puree. The kitchen smells intensely of fresh tarragon and parsley.", action: "Add the mayonnaise, sour cream, and salt and blend again briefly." },
-          { state: "Overdone",  description: "The herb mixture has been blended so long that the friction is heating it slightly, causing the fresh herbs to oxidize and the green to dull slightly toward olive.", action: "Proceed immediately. The dairy components added in the next step will cool and stabilize the mixture." },
-        ],
-      },
-      feelCue: "Rub a drop of the herb blend between your fingers — it should feel slightly oily from the herb oils, completely smooth, and leave a vivid green stain on your fingertip.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Mayonnaise (bonne qualité, à base d'oeufs)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mayo végétalien"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["herb_blend", "ing_01", "ing_02", "ing_10"],
-      outputState: "green_goddess_base",
-      instructions: "Add the mayonnaise, sour cream, and salt to the blender with the herb mixture. Blend on high for 20–30 seconds until completely smooth and uniformly colored. The dairy will turn the intense herb green into a lighter, slightly more pastel sage-green. Taste immediately and adjust: more vinegar or lemon juice if it needs brightness, more salt if it tastes flat, more anchovy if the umami backbone is missing. The dressing should be pourable but thick — similar in consistency to a light ranch dressing.",
-      visualCue: {
-        primaryTarget: "A smooth, uniformly sage-green dressing — lighter and slightly creamier-looking than the pure herb blend, opaque from the mayo and sour cream.",
-        spectrum: [
-          { state: "Underdone", description: "The dressing shows swirls of white mayo and cream against the green herb puree — the two have not fully incorporated. The texture is uneven.", action: "Blend for another 15 seconds. The mayonnaise emulsion needs a moment to break down and re-emulsify with the herb liquid." },
-          { state: "Perfect",   description: "Completely smooth, uniform sage-green dressing that flows from the blender jar in a slow, steady pour. The flavor hits with bright herb and acid, followed by creamy richness, followed by a faint umami echo from the anchovy.", action: "Refrigerate for at least 15 minutes before serving to let the herb flavors meld and the dressing thicken slightly." },
-          { state: "Overdone",  description: "The dressing is too thin — the blender has whipped in air and thinned the dairy components. It runs like water rather than pouring like cream.", action: "This is hard to fix without adding more mayo. Stir in an additional tablespoon of mayonnaise and whisk by hand to restore body without further thinning." },
-        ],
-      },
-      feelCue: "Dip a finger and coat it lightly — the dressing should cling in a thin, uniform layer that doesn't immediately run. The tarragon should be the most prominent herb flavor on the palate.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Crème acides",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "yogourt grec plein gras",
+        "Crème fraîche"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Chill",
-      inputs: ["green_goddess_base"],
-      outputState: "green_goddess_dressing",
-      instructions: "Transfer the dressing to a sealed container and refrigerate for a minimum of 15 minutes before serving — ideally 30 minutes. The cold thickens the mayo-sour cream base slightly and allows the raw garlic to mellow and the fresh herbs to release more of their aromatic oils into the surrounding fat. The color will deepen slightly as it rests. Green Goddess can be refrigerated for up to 3 days; the herb flavors actually develop and intensify on day two.",
-      visualCue: {
-        primaryTarget: "A cold, thickened sage-green dressing that pours in a viscous, unbroken stream and clings generously to greens, vegetables, or a dipped crudité.",
-        spectrum: [
-          { state: "Underdone", description: "The dressing is still at room temperature — it pours too thinly, the garlic tastes raw and sharp, and the herbs have not yet fully integrated with the creamy base.", action: "Refrigerate for at least 15 minutes. The cold both thickens and harmonizes this dressing in ways that room-temperature resting cannot." },
-          { state: "Perfect",   description: "Cold, slightly thickened, vivid sage-green. The flavors are harmonious — the tarragon is prominent but balanced by parsley freshness, the anchovy is present as a background depth rather than a fishiness, and the acid is bright and clean.", action: "Serve over butter lettuce, romaine, cucumber, or asparagus. It is also excellent as a dip for crudités or a spread for cold chicken sandwiches." },
-          { state: "Overdone",  description: "The dressing has been refrigerated for more than 24 hours and the fresh herb color has faded from sage-green to olive-grey. The garlic flavor has become dominant.", action: "The flavor remains good for up to 3 days, though the color will not recover. Stir in a tablespoon of freshly chopped parsley before serving to restore some brightness." },
-        ],
-      },
-      feelCue: "The chilled dressing should feel cold, thick, and slightly resistant — dragging a spoon through it should require a gentle push, unlike a vinaigrette which flows immediately.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Feuilles fraîches d'estragon",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "l'estragon séché (utiliser 1 c. à thé, pas une substitution complète)"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, feuilles et tiges",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Ciboulette fraîche, grossièrement hachée",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "dessus d'oignon vert"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "Filets d'anchois dans l'huile, égouttés",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1 c. à thé sauce Worcestershire pour un umami plus doux"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Gousse d'ail",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Ail rôti pour un résultat plus sucré"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vinaigre de Champagne"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "herb_blend",
+      "instructions": "Ajouter l'estragon, le persil, la ciboulette, les filets d'anchois, l'ail, le vinaigre de vin blanc et le jus de citron dans un mélangeur. Mélanger en haut pendant 30 à 45 secondes jusqu'à ce que les herbes soient complètement pulvérisées et que le mélange soit lisse. Le mélange sera intensément vert à ce point — presque lumineux — et l'ail cru et les anchois se seront complètement dissous dans la purée d'herbe. Une fois, grattez les côtés si nécessaire.",
+      "visualCue": {
+        "primaryTarget": "Un liquide lisse vif, vert électrique, sans morceaux visibles d'herbes ou de pièces d'anchois, la couleur d'un jardin d'été sous forme mélangée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux d'herbe visibles encore identifiables. Le liquide est vert mais tacheté plutôt que uniformément coloré. L'anchois peut encore être en morceaux.",
+            "action": "Mélanger encore 20 à 30 secondes à pleine vitesse, s'arrêtant pour racler les parois du pot si les herbes s'accrochent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, uniforme, vert vif. La couleur est profonde et saturée — plus brillante qu'un pesto, plus transparente qu'une purée. La cuisine sent intensément l'estragon frais et le persil.",
+            "action": "Ajouter la mayonnaise, la crème aigre et saler et mélanger à nouveau brièvement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange d'herbes a été mélangé si longtemps que la friction le chauffe légèrement, ce qui provoque l'oxydation des herbes fraîches et le vert s'attarde légèrement vers l'olive.",
+            "action": "Continuez immédiatement. Les composants laitiers ajoutés à la prochaine étape refroidiront et stabiliseront le mélange."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte de l'herbe entre vos doigts – elle devrait se sentir légèrement grasse à partir des huiles d'herbe, complètement lisse, et laisser une tache verte vive sur le bout des doigts."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "herb_blend",
+        "ing_01",
+        "ing_02",
+        "ing_10"
+      ],
+      "outputState": "green_goddess_base",
+      "instructions": "Ajouter la mayonnaise, la crème aigre et le sel au mélangeur avec le mélange d'herbes. Mélanger en haut pendant 20 à 30 secondes jusqu'à ce qu'il soit complètement lisse et uniformément coloré. La laiterie transformera l'intense vert herbe en un plus léger, légèrement plus pastel vert sage. Goûtez immédiatement et ajustez : plus de vinaigre ou de jus de citron s'il a besoin de luminosité, plus de sel s'il a un goût plat, plus d'anchois s'il manque l'épine dorsale de l'umami. Le pansement doit être versable mais épais, semblable à un ranch léger.",
+      "visualCue": {
+        "primaryTarget": "Une vinaigrette lisse, uniformément verte-sage – plus légère et légèrement plus crémeuse que le mélange d'herbes pures, opaque de la crème mayo et aigre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La vinaigrette présente des tourbillons de mayo blanc et de crème contre la purée d'herbe verte — les deux n'ont pas été entièrement incorporés. La texture est inégale.",
+            "action": "Mélanger encore 15 secondes. L'émulsion mayonnaise a besoin d'un moment pour se décomposer et réémulsionner avec le liquide d'herbe."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement lisse, pansement uniforme de sauge-vert qui coule du pot de mélangeur dans une verser lente et régulière. La saveur frappe avec de l'herbe brillante et de l'acide, suivie par la richesse crémeuse, suivie d'un faible écho umami de l'anchois.",
+            "action": "Réfrigérer pendant au moins 15 minutes avant de servir pour laisser les arômes d'herbe se fondre et la vinaigrette s'épaissir légèrement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La vinaigrette est trop fine — le mélangeur a fouetté dans l'air et éclairci les composants laitiers. Il coule comme de l'eau plutôt que de verser comme de la crème.",
+            "action": "C'est difficile à réparer sans ajouter plus de mayo. Incorporer une cuillère à soupe supplémentaire de mayonnaise et fouetter à la main pour restaurer le corps sans éclaircir davantage."
+          }
+        ]
+      },
+      "feelCue": "Plonger un doigt et l'enrober légèrement — la vinaigrette devrait s'accrocher dans une couche mince et uniforme qui ne court pas immédiatement. L'estragon doit être la saveur d'herbe la plus importante en bouche."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Refroidissement",
+      "inputs": [
+        "green_goddess_base"
+      ],
+      "outputState": "green_goddess_dressing",
+      "instructions": "Transférer la vinaigrette dans un récipient scellé et réfrigérer au moins 15 minutes avant de servir, idéalement 30 minutes. Le froid épaissit légèrement la base de la crème mayo-sour et permet à l'ail cru de se moeller et aux herbes fraîches de libérer plus d'huiles aromatiques dans la graisse environnante. La couleur s'approfondira légèrement comme elle repose. La déesse verte peut être réfrigérée jusqu'à 3 jours ; les saveurs d'herbes se développent et s'intensifient le deuxième jour.",
+      "visualCue": {
+        "primaryTarget": "Une vinaigrette froide, épaisse et verte-sage qui verse dans un cours d'eau visqueux, intact et s'accroche généreusement aux verts, légumes ou crudité trempée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La vinaigrette est encore à température ambiante — elle verse trop finement, l'ail goûte cru et tranchant, et les herbes n'ont pas encore complètement intégré à la base crémeuse.",
+            "action": "Réfrigérer pendant au moins 15 minutes. Le froid s'épaissit et harmonise cette vinaigrette de manière que la température ambiante ne puisse pas se reposer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Froid, légèrement épaissi, sauge-vert vif. Les saveurs sont harmonieuses — l'estragon est proéminent mais équilibré par la fraîcheur du persil, l'anchois est présent comme une profondeur de fond plutôt qu'une pêche, et l'acide est lumineux et propre.",
+            "action": "Servir sur la laitue au beurre, la romaine, le concombre ou les asperges. Il est également excellent comme trempette pour les crudités ou comme tartinade pour les sandwichs au poulet froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "La vinaigrette est réfrigérée depuis plus de 24 heures et la couleur de l'herbe fraîche s'estompe du vert sauge au gris olive. La saveur d'ail est devenue dominante.",
+            "action": "La saveur reste bonne pour jusqu'à 3 jours, bien que la couleur ne récupérera pas. Incorporer une cuillère à soupe de persil fraîchement haché avant de servir pour restaurer la luminosité."
+          }
+        ]
+      },
+      "feelCue": "La vinaigrette réfrigérée doit se sentir froide, épaisse et légèrement résistante, et faire passer une cuillère à travers elle devrait nécessiter une légère poussée, contrairement à une vinaigrette qui coule immédiatement."
+    }
+  ]
 };

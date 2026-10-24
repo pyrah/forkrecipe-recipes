@@ -1,104 +1,294 @@
 export default {
-  repoId: "master_french_jerusalem_artichoke_soup_001",
-  parentRepoId: null,
-  slug: "jerusalem-artichoke-soup",
-  author: "ForkRecipe Kitchen",
-  title: "Jerusalem Artichoke Soup",
-  description: "A quiet, wintry soup of roasted Jerusalem artichokes pureed into a pale, ivory bisque with the distinct earthy sweetness of artichoke and sunflower — deepened by a shallot base and a careful touch of truffle oil or hazelnut oil drizzled at the finish.",
-  cuisine: "French",
-  culture: "French",
-  category: "vegetables",
-  tags: ["jerusalem-artichoke", "soup", "french", "winter", "vegetarian"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "55 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 3, sour: 0, bitter: 1, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Jerusalem artichokes (sunchokes), scrubbed",   ratioValue: 700,  defaultUnit: "g",    substitutions: ["parsnips (less distinctive flavor)", "celeriac"] },
-    { ingId: "ing_02", role: "Allium",     name: "Shallots, roughly sliced",                      ratioValue: 4,    defaultUnit: "shallots", substitutions: ["half a yellow onion"] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves, unpeeled",                       ratioValue: 2,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",     name: "Vegetable stock, warm",                         ratioValue: 900,  defaultUnit: "ml",   substitutions: ["chicken stock (non-vegetarian, richer)"] },
-    { ingId: "ing_05", role: "Dairy",      name: "Heavy cream",                                   ratioValue: 80,   defaultUnit: "ml",   substitutions: ["creme fraiche", "oat cream for vegan"] },
-    { ingId: "ing_06", role: "Fat",        name: "Unsalted butter",                               ratioValue: 30,   defaultUnit: "g",    substitutions: ["olive oil"] },
-    { ingId: "ing_07", role: "Fat",        name: "Olive oil (for roasting)",                      ratioValue: 2,    defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_08", role: "Herb",       name: "Fresh thyme sprigs",                            ratioValue: 4,    defaultUnit: "sprigs", substitutions: ["dried thyme (half quantity)"] },
-    { ingId: "ing_09", role: "Seasoning",  name: "Fine salt",                                     ratioValue: 1.5,  defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning",  name: "White pepper, freshly ground",                  ratioValue: 0.25, defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_11", role: "Fat",        name: "Truffle oil or hazelnut oil (for finishing)",   ratioValue: 1,    defaultUnit: "tsp",  substitutions: ["good olive oil"] },
-    { ingId: "ing_12", role: "Garnish",    name: "Chives, finely snipped",                        ratioValue: 1,    defaultUnit: "tbsp", substitutions: ["flat-leaf parsley"] },
-    { ingId: "ing_13", role: "Garnish",    name: "Toasted hazelnuts, roughly crushed",            ratioValue: 2,    defaultUnit: "tbsp", substitutions: ["crispy shallots"] },
+  "repoId": "master_french_jerusalem_artichoke_soup_001",
+  "parentRepoId": null,
+  "slug": "jerusalem-artichoke-soup",
+  "author": "ForkRecipe Kitchen",
+  "title": "Soupe d'Artichaut de Jérusalem",
+  "description": "Une soupe tranquille et captivante d'artichauts de Jérusalem rôtis se purifia dans un bisque d'ivoire pâle avec la douceur terreuse distincte de l'artichaut et du tournesol, approfondie par une base d'échalote et une touche soignée d'huile de truffes ou de noisette arrosée à la finale.",
+  "cuisine": "Français",
+  "culture": "Français",
+  "category": "vegetables",
+  "tags": [
+    "Jerusalem-artichaut",
+    "Soupe",
+    "français",
+    "hiver",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "55 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_07", "ing_08", "ing_09"],
-      outputState: "roasted_artichokes",
-      instructions: "Preheat oven to 200 C (400 F). Cut the Jerusalem artichokes into roughly equal 3 cm pieces — no need to peel, the skin carries flavor. Toss on a baking sheet with the sliced shallots, unpeeled garlic cloves, olive oil, thyme sprigs, and a generous pinch of salt. Roast for 25 to 30 minutes, turning once, until the artichokes are golden-brown on the cut surfaces, completely tender, and the skins are slightly wrinkled.",
-      visualCue: {
-        primaryTarget: "Knobbly artichoke pieces with caramelized golden-brown cut surfaces and slightly wrinkled skins. Shallots and garlic are soft and charred at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "The artichokes are pale, the cut faces barely colored. A knife tip meets resistance at the center.", action: "Continue roasting — under-roasted sunchokes make a grey, thin-tasting soup with none of the caramel sweetness." },
-          { state: "Perfect",   description: "Deep golden-brown on the flat cut faces, slightly wrinkled skins, completely yielding to a fork. The pan smells of sweet, earthy caramel and thyme.", action: "Squeeze out the garlic and transfer everything to the blender." },
-          { state: "Overdone",  description: "Some pieces are very dark and dry at the edges. The skin is fully charred on some.", action: "Remove the most charred pieces and continue with the rest. The soup will have a more pronounced bitter edge — balance with extra cream." },
-        ],
-      },
-      feelCue: "Pick up a piece and press it between thumb and finger — it should collapse completely with almost no effort, like a roasted potato.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Artichauts de Jérusalem (sunchokes), frottés",
+      "ratioValue": 700,
+      "defaultUnit": "g",
+      "substitutions": [
+        "panais (moins de saveur distinctive)",
+        "céleriac"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_06"],
-      outputState: "butter_base",
-      instructions: "While the artichokes roast, melt the butter in a large saucepan over medium-low heat. Let it foam and cook for 2 to 3 minutes until it smells faintly nutty — beurre noisette. This enriches the base of the soup.",
-      visualCue: {
-        primaryTarget: "Pale golden butter with a light foam, just beginning to show faint brown specks in the pan.",
-        spectrum: [
-          { state: "Underdone", description: "The butter has barely melted and is still pale yellow. No foam, no nuttiness.", action: "Continue cooking over medium-low heat — the goal is a light noisette, not raw melted butter." },
-          { state: "Perfect",   description: "Pale gold, foaming, with first whispers of hazelnut aroma. Faint brown specks just appearing.", action: "Set aside off heat until artichokes are done." },
-          { state: "Overdone",  description: "Butter is dark brown and smells acrid. Burnt milk solids visible.", action: "Discard and start with fresh butter — burnt butter will make the soup bitter." },
-        ],
-      },
-      feelCue: "The moment the nutty smell becomes distinct — like warm toasted hazelnuts — the butter is ready. This is a matter of seconds at this stage.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Échalotes, coupées en tranches",
+      "ratioValue": 4,
+      "defaultUnit": "shallots",
+      "substitutions": [
+        "un demi-oignon jaune"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["roasted_artichokes", "butter_base", "ing_04"],
-      outputState: "rough_puree",
-      instructions: "Squeeze the roasted garlic from its skin into the blender. Add all the roasted artichokes, shallots, and the butter. Discard the thyme stems. Pour in enough warm stock to cover the solids. Blend on high speed for 2 to 3 minutes until completely smooth. Add more stock to reach a consistency between heavy cream and a thin porridge. Pass through a fine-mesh sieve for an exceptionally refined result.",
-      visualCue: {
-        primaryTarget: "A uniformly smooth, pale ivory-gold puree with no chunks or fibrous threads. The color is a soft, muted gold.",
-        spectrum: [
-          { state: "Underdone", description: "Visible chunks and fibrous strands from the artichoke skins. The puree is grey and heterogeneous.", action: "Blend much longer, or pass through a fine sieve to remove the fibers. The texture of a velouté must be perfectly smooth." },
-          { state: "Perfect",   description: "Completely smooth, pale gold, flowing slowly from the blender. Tastes intensely of sweet roasted artichoke with a faint nuttiness.", action: "Transfer to a saucepan and warm over low heat." },
-          { state: "Overdone",  description: "The blend is very airy and has expanded in volume. A layer of foam sits on top.", action: "Let settle for 5 minutes before proceeding. Do not try to use the soup while it is foamy." },
-        ],
-      },
-      feelCue: "Rub a drop between two fingers — completely smooth, like cold face cream, with no gritty particles or fibrous strands whatsoever.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail, non pelées",
+      "ratioValue": 2,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["rough_puree", "ing_05", "ing_09", "ing_10"],
-      outputState: "finished_jerusalem_artichoke_soup",
-      instructions: "Return the puree to a saucepan over low heat. Stir in the cream. Adjust consistency with additional stock if too thick. Season carefully with salt and white pepper. Do not boil after the cream is added. Ladle into warmed bowls. Finish each bowl with a thin drizzle of truffle or hazelnut oil, a scatter of snipped chives, and a few toasted crushed hazelnuts.",
-      visualCue: {
-        primaryTarget: "A pale, silken ivory soup in a warmed bowl. A dark thread of oil spirals across the surface. Green chives and toasted hazelnut fragments provide textural contrast.",
-        spectrum: [
-          { state: "Underdone", description: "The soup is too thick and sits in a dome in the bowl. The cream has not been incorporated and the surface is dull.", action: "Whisk the cream in completely off the heat, then add stock in small amounts to loosen to a pourable consistency." },
-          { state: "Perfect",   description: "Flows gently when the bowl is tilted. Pale, silken ivory, with a glossy surface from the cream. The truffle oil drizzle sits on the surface as a dark ring. Smells of earth, sweet caramel, and thyme. Chives are vivid green and fresh.", action: "Serve immediately." },
-          { state: "Overdone",  description: "The soup was boiled after the cream was added. The surface is broken and grainy. The cream has split and the soup looks curdled.", action: "Blend briefly with an immersion blender to re-emulsify. Serve at once." },
-        ],
-      },
-      feelCue: "The soup should feel rich and coating on the tongue, with a long, earthy-sweet finish that lingers like warm roasted vegetables — not bland or thin.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Stock de légumes, chaud",
+      "ratioValue": 900,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "poulet (non végétarien, plus riche)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "crème fraîche",
+        "crème d'avoine pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive (à rôtir)",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 4,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "Thym séché (demi-quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Poivre blanc, fraîchement moulu",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Huile de truffe ou de noisettes (pour la finition)",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "Bonne huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Garnish",
+      "name": "Chives, finement cueillies",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Persil à feuilles plates"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Garnish",
+      "name": "Noisettes grillées, grossièrement broyées",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Échalotes croustillantes"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "roasted_artichokes",
+      "instructions": "Préchauffer le four à 200 C (400 F). Coupez les artichauts de Jérusalem en morceaux d'environ 3 cm — pas besoin de peler, la peau porte de la saveur. Verser sur une plaque de cuisson les échalotes tranchées, les gousses d'ail non pelées, l'huile d'olive, les brins de thym et une généreuse pincée de sel. Faire cuire 25 à 30 minutes, tourner une fois, jusqu'à ce que les artichauts soient dorés sur les surfaces coupées, complètement tendres, et que les peaux soient légèrement ridées.",
+      "visualCue": {
+        "primaryTarget": "Pièces d'artichaut knobbly avec des surfaces coupées dorées caramélisées et des peaux légèrement ridées. Les échalotes et l'ail sont tendres et carbonisés aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les artichauts sont pâles, les visages coupés à peine colorés. Une pointe de couteau rencontre une résistance au centre.",
+            "action": "Continuer le rôtissage — les sunchokes sous-rôtis font une soupe grise et fine avec aucune de la douceur caramel."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep doré-brun sur les faces planes coupées, peaux légèrement ridées, donnant complètement à une fourchette. La poêle sent le caramel doux et terreux et le thym.",
+            "action": "Éteignez l'ail et transférez tout au mélangeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Certaines pièces sont très sombres et sèches aux bords. La peau est entièrement carbonisée sur certains.",
+            "action": "Retirer les morceaux les plus carbonisés et continuer avec le reste. La soupe aura un bord amer plus prononcé — équilibre avec de la crème supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Prenez un morceau et appuyez entre le pouce et le doigt — il devrait s'effondrer complètement sans effort, comme une pomme de terre rôtie."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_06"
+      ],
+      "outputState": "butter_base",
+      "instructions": "Pendant que les artichauts rôtissent, faire fondre le beurre dans une grande casserole à feu moyen-doux. Laisser mousser et cuire 2 à 3 minutes jusqu'à ce qu'il sente peu la noix — beurre bruit. Cela enrichit la base de la soupe.",
+      "visualCue": {
+        "primaryTarget": "Beurre doré pâle avec une mousse légère, qui commence juste à montrer des taches brun pâle dans la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre a à peine fondu et est encore jaune pâle. Pas de mousse, pas de noix.",
+            "action": "Continuer la cuisson à feu moyen-doux — l'objectif est un léger bruit, pas du beurre fondu cru."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or pâle, mousse, avec des premiers murmures d'arôme de noisette. Des taches brunes qui apparaissent.",
+            "action": "Réserver la chaleur jusqu'à ce que les artichauts soient terminés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre est brun foncé et sent acride. Lait brûlé solide visible.",
+            "action": "Jeter et commencer par du beurre frais — le beurre brûlé rendra la soupe amère."
+          }
+        ]
+      },
+      "feelCue": "Au moment où l'odeur de noix devient distincte — comme les noisettes grillées chaudes — le beurre est prêt. C'est une question de secondes à ce stade."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "roasted_artichokes",
+        "butter_base",
+        "ing_04"
+      ],
+      "outputState": "rough_puree",
+      "instructions": "Pressez l'ail rôti de sa peau dans le mélangeur. Ajouter tous les artichauts rôtis, les échalotes et le beurre. Jeter les tiges de thym. Verser suffisamment de bouillon chaud pour couvrir les solides. Mélanger à haute vitesse pendant 2 à 3 minutes jusqu'à ce qu'il soit complètement lisse. Ajouter plus de stock pour atteindre une consistance entre la crème lourde et un porridge mince. Passer à travers un tamis à mailles fines pour un résultat exceptionnellement raffiné.",
+      "visualCue": {
+        "primaryTarget": "Une purée d'ivoire pâle uniformément lisse, sans morceaux ni fils fibreux. La couleur est un or doux et muet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux visibles et des brins fibreux des peaux d'artichaut. La purée est grise et hétérogène.",
+            "action": "Mélanger beaucoup plus longtemps, ou passer à travers un tamis fin pour enlever les fibres. La texture d'un velours doit être parfaitement lisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement lisse, or pâle, qui coule lentement du mélangeur. Goûte intensément d'artichaut torréfié doux avec une légère noisette.",
+            "action": "Transférer dans une casserole et chauffer à feu doux."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est très aéré et a augmenté en volume. Une couche de mousse est posée sur le dessus.",
+            "action": "Laisser reposer 5 minutes avant de procéder. N'essayez pas d'utiliser la soupe pendant qu'elle est mousseuse."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte entre deux doigts – complètement lisse, comme de la crème du visage froid, sans particules râpées ni brins fibreux."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "rough_puree",
+        "ing_05",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_jerusalem_artichoke_soup",
+      "instructions": "Retournez la purée dans une casserole à feu doux. Incorporer la crème. Ajuster la consistance avec le stock supplémentaire si trop épais. Assaisonner soigneusement avec du sel et du poivre blanc. Ne pas faire bouillir après l'ajout de la crème. Déposer dans des bols chauds. Finissez chaque bol avec une fine bruine de truffes ou d'huile de noisettes, un peu de ciboulette et quelques noisettes concassées grillées.",
+      "visualCue": {
+        "primaryTarget": "Une soupe d'ivoire pâle et soyeuse dans un bol chaud. Un fil sombre de spirales d'huile traverse la surface. La ciboulette verte et les fragments de noisettes grillées offrent un contraste textural.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La soupe est trop épaisse et est assise dans un dôme dans le bol. La crème n'a pas été incorporée et la surface est terne.",
+            "action": "fouetter la crème complètement hors du feu, puis ajouter le stock en petites quantités pour se détendre à une consistance versable."
+          },
+          {
+            "state": "Perfect",
+            "description": "S'écoule doucement lorsque le bol est incliné. ivoire pâle, soyeux, avec une surface brillante de la crème. La bruine d'huile de truffe se trouve à la surface comme un anneau foncé. Sens de terre, caramel doux et thym. Les chips sont vert vif et frais.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe était bouillie après l'ajout de la crème. La surface est brisée et granuleuse. La crème s'est fendue et la soupe a l'air caillée.",
+            "action": "Mélanger brièvement avec un mélangeur d'immersion pour réémulsionner. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "La soupe doit se sentir riche et enrobée sur la langue, avec une longue finale terreuse et sucrée qui reste comme des légumes torréfiés chauds — pas fade ou mince."
+    }
+  ]
 };

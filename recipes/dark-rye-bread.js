@@ -1,99 +1,239 @@
 export default {
-  repoId: "master_scandinavian_darkryebread_001",
-  parentRepoId: null,
-  slug: "dark-rye-bread",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Scandinavian Dark Rye Bread",
-  description: "A close-crumbed, densely packed rugbrød built from whole rye, cracked rye berries, and sourdough fermentation — earthy, mildly sour, and nutty, sliced thin for smørrebrød or eaten with cold butter.",
-  cuisine: "Scandinavian",
-  culture: "Danish",
-  category: "breads",
-  tags: ["bread", "rye", "sourdough", "danish", "scandinavian", "wholesome", "fermented"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "30 hours",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 4, bitter: 2, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Whole rye flour (stone-ground)",       ratioValue: 100, defaultUnit: "%", substitutions: ["dark rye flour"] },
-    { ingId: "ing_02", role: "Starch",     name: "Cracked rye berries (soaked overnight)", ratioValue: 60,  defaultUnit: "%", substitutions: ["rye flakes"] },
-    { ingId: "ing_03", role: "Hydration",  name: "Water (room temperature)",              ratioValue: 90,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Leavener",   name: "Active rye sourdough starter (100% hydration)", ratioValue: 30, defaultUnit: "%", substitutions: ["stiff wheat starter (add 2% vinegar for sourness)"] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine sea salt",                         ratioValue: 2.5, defaultUnit: "%", substitutions: ["kosher salt"] },
-    { ingId: "ing_06", role: "Spice",      name: "Caraway seeds, lightly toasted",        ratioValue: 1.5, defaultUnit: "%", substitutions: ["fennel seeds", "cumin seeds"] },
-    { ingId: "ing_07", role: "Sweetener",  name: "Dark molasses or dark malt syrup",      ratioValue: 3,   defaultUnit: "%", substitutions: ["treacle", "dark brown sugar"] },
+  "repoId": "master_scandinavian_darkryebread_001",
+  "parentRepoId": null,
+  "slug": "dark-rye-bread",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Pain de seigle foncé scandinave",
+  "description": "Un rugbrød serré, densément emballé, construit à partir de seigle entier, de baies de seigle craquelées et de fermentation de la courge – terreuse, légèrement aigre, et de noix, tranché mince pour smørrebrød ou mangé avec du beurre froid.",
+  "cuisine": "Scandinave",
+  "culture": "Danois",
+  "category": "breads",
+  "tags": [
+    "pain",
+    "seigle",
+    "Pâtes alimentaires",
+    "danois",
+    "scandinave",
+    "sain",
+    "fermenté"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "30 hours",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 2,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "soaked_grains",
-      instructions: "The evening before baking, combine the cracked rye berries with an equal weight of water. Stir well, cover, and leave at room temperature overnight (8–12 hours). The grains will absorb most of the water and swell significantly — this soaker prevents them from stealing moisture from the dough during baking and gives the loaf its characteristic chewy grain pockets.",
-      visualCue: {
-        primaryTarget: "Grains have swelled to nearly twice their dry volume, most of the water absorbed. The mixture looks like a thick wet porridge.",
-        spectrum: [
-          { state: "Underdone", description: "Grains still hard and chalky in the center. Little water absorbed.", action: "Give them more time, or use warm water to speed the soak. Do not bake with under-soaked grains." },
-          { state: "Perfect",   description: "Grains are plump and yielding — you can crush one between your fingers without grit. Mixture is thick and wet but not soupy.", action: "Use in the dough immediately after mixing." },
-          { state: "Overdone",  description: "Grains have soaked so long they are mushy and the water smells slightly fermented.", action: "This is still fine — slightly fermented soaker adds complexity. Drain any free-standing water before using." },
-        ],
-      },
-      feelCue: "A well-soaked rye berry crushes between thumb and forefinger with a soft, yielding resistance — no hard center, no grit.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de seigle entière (pierre)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de seigle foncé"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["ing_01", "ing_04", "ing_05", "ing_06", "ing_07", "soaked_grains"],
-      outputState: "rye_batter",
-      instructions: "In a large bowl, combine the rye flour, sourdough starter, salt, caraway seeds, and molasses. Add the soaked grain mixture along with any residual soaking water. Mix thoroughly with a stiff spatula or dough scraper for 3–4 minutes — rye dough does not knead like wheat dough because rye has almost no gluten. What you are building is a sticky, cohesive batter, not a dough. Mix until completely uniform — no pockets of flour or unmixed starter.",
-      visualCue: {
-        primaryTarget: "A thick, dark, sticky batter that cannot be kneaded — it holds its shape briefly when scooped but slowly flows back. Dark brown-grey color from the rye and molasses.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of lighter flour or unmixed starter visible. Uneven color.", action: "Keep mixing — rye batter needs thorough incorporation. No shortcuts; undermixed rye bakes with gummy streaks." },
-          { state: "Perfect",   description: "Uniform dark color throughout. Thick, sticky, and homogeneous. Caraway seeds evenly suspended. Smells of sour starter and molasses.", action: "Transfer to the loaf pan immediately." },
-          { state: "Overdone",  description: "You cannot over-mix a rye batter — there is no gluten to damage. Mix as long as needed.", action: "Proceed." },
-        ],
-      },
-      feelCue: "Rye batter sticks to everything — your hands, the spatula, the bowl. It is heavier and denser than any wheat dough, and should feel like wet clay with embedded seeds.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Graisses de seigle craquées (poêlées la nuit)",
+      "ratioValue": 60,
+      "defaultUnit": "%",
+      "substitutions": [
+        "flocons de seigle"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Proof",
-      inputs: ["rye_batter"],
-      outputState: "proofed_loaf",
-      instructions: "Line a 23 x 11 cm (9 x 4 inch) loaf pan with oiled parchment. Scrape the batter in and smooth the top with a wet spatula — rye batter will not level itself. Cover with plastic wrap and let proof at room temperature (20–22 C) for 3–5 hours, or until the surface has risen to within 1 cm of the pan rim and shows small cracks and bubbles. Rye rises slowly and only about 20–30% in volume. Do not expect a dramatic rise — this bread proves its fermentation through texture and flavour, not height.",
-      visualCue: {
-        primaryTarget: "The surface has risen to just below the pan rim. Small cracks radiate across the top. Tiny bubble holes are visible at the surface. The loaf has a matte, slightly porous look.",
-        spectrum: [
-          { state: "Underdone", description: "Surface is still dense, smooth, and below the halfway point in the pan. No cracks, no bubbles.", action: "Wait — rye fermentation is patient. A cooler kitchen may need 6–7 hours total. The loaf is not ready." },
-          { state: "Perfect",   description: "Surface within 1 cm of the rim, cracked, porous, and smells deeply sour and malty. The loaf wiggles very slightly if you move the pan.", action: "Bake immediately." },
-          { state: "Overdone",  description: "Surface has risen above the rim and started to collapse inward. Cracks are jagged and collapsing.", action: "Bake immediately — do not delay. Overproofed rye becomes gummy and dense." },
-        ],
-      },
-      feelCue: "Wet a fingertip and press the surface gently — a perfectly proofed rye loaf barely springs back at all. It holds the indent like a firm custard, not like a yeast bread.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau (température ambiante)",
+      "ratioValue": 90,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["proofed_loaf"],
-      outputState: "baked_rye_loaf",
-      instructions: "Preheat the oven to 200 C (390 F) with a rack in the lower third. Remove the plastic wrap and place the pan directly in the oven. Bake for 60–70 minutes. At 20 minutes, cover the loaf loosely with foil to prevent the top from hardening too fast. The internal temperature should reach 97–99 C (206–210 F). This is a dense loaf — do not rush it. If you have an oven thermometer, use it: dark rye must hit temperature to avoid a gummy center.",
-      visualCue: {
-        primaryTarget: "A deep mahogany-brown top with a cracked, slightly domed center. The loaf has pulled slightly from the pan sides. Sounds hollow when the bottom is rapped.",
-        spectrum: [
-          { state: "Underdone", description: "Top looks dark but internal temperature is below 95 C. A skewer comes out with sticky, gummy residue.", action: "Cover with foil, lower the temperature to 180 C, and bake for another 15–20 minutes. Check internal temp." },
-          { state: "Perfect",   description: "Deep brown, firm crust, internal temp 97–99 C, skewer comes out clean with no stickiness. The loaf pulls cleanly from the pan.", action: "Cool completely in the pan for 30 minutes, then on a rack." },
-          { state: "Overdone",  description: "Top is very dark and hard. Internal temp over 102 C.", action: "The loaf will be drier than ideal but still edible. Slice thinly and serve with fatty toppings." },
-        ],
-      },
-      feelCue: "Do not cut this loaf for at least 12–24 hours after baking — the starches need time to fully set. A freshly baked rye loaf is almost gummy inside; overnight it firms into its characteristic dense, sliceable texture. The wait is not optional.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "Démarrage actif du seigle aurifère (hydratation 100%)",
+      "ratioValue": 30,
+      "defaultUnit": "%",
+      "substitutions": [
+        "entrée de blé rigide (ajouter 2 % de vinaigre pour l'amerie)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Graines de Caraway, légèrement grillées",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "graines de fenouil",
+        "Graines de cumin"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Mélasses foncées ou sirop de malt foncé",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Treacle",
+        "sucre brun foncé"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "soaked_grains",
+      "instructions": "La veille de la cuisson, mélanger les baies de seigle fissurées avec un poids d'eau égal. Bien mélanger, couvrir et laisser à température ambiante pendant la nuit (8-12 heures). Les grains absorberont la plus grande partie de l'eau et gonfleront de façon significative — ce mousqueton les empêche de voler l'humidité de la pâte pendant la cuisson et donne au pain ses poches caractéristiques de grains à croquer.",
+      "visualCue": {
+        "primaryTarget": "Les grains ont gonflé à près de deux fois leur volume sec, la plupart de l'eau absorbée. Le mélange ressemble à un porridge épais humide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Grains encore durs et crayeux au centre. Peu d'eau absorbée.",
+            "action": "Donnez-leur plus de temps, ou utilisez de l'eau chaude pour accélérer l'imprégnation. Ne pas cuire avec des grains sous-poêlés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont rampants et donnent — vous pouvez en écraser un entre vos doigts sans grain. Le mélange est épais et humide mais pas soupeux.",
+            "action": "Utiliser dans la pâte immédiatement après mélange."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains ont trempé si longtemps qu'ils sont musqués et l'eau sent légèrement fermenté.",
+            "action": "C'est encore très bien — un peu fermenté, le soaker ajoute de la complexité. Égoutter toute eau libre avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Une baie de seigle bien trempée écrase entre le pouce et l'index avec une résistance douce et induisante — pas de centre dur, pas de grain."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "soaked_grains"
+      ],
+      "outputState": "rye_batter",
+      "instructions": "Dans un grand bol, mélanger la farine de seigle, l'auriculum, le sel, les graines de carvi et la mélasse. Ajouter le mélange de grains trempés avec toute eau de trempage résiduelle. Mélanger soigneusement avec une spatule rigide ou un racleur à pâte pendant 3-4 minutes — la pâte de seigle ne knead pas comme la pâte de blé parce que le seigle n'a presque pas de gluten. Ce que vous construisez est une pâte collante et cohésive, pas une pâte. Mélanger jusqu'à uniformisation complète — pas de poches de farine ou de démarrage non mélangé.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, foncée et collante qui ne peut pas être pétrie — elle tient sa forme brièvement lorsqu'elle est écorcée, mais qui revient lentement. Couleur brun foncé gris du seigle et de la mélasse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Streaks de farine plus légère ou de démarrage non mélangé visibles. Une couleur inégale.",
+            "action": "Continuez à mélanger — la pâte au seigle doit être complètement incorporée. Pas de raccourcis; seigle mal mélangé avec des stries gommées."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur foncée uniforme partout. Épaisseur, collant et homogène. Graines de Caraway régulièrement suspendues. Des odeurs de démarrage aigre et de mélasse.",
+            "action": "Transférez immédiatement dans la casserole."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous ne pouvez pas trop mélanger une pâte au seigle — il n'y a pas de gluten à endommager. Mélanger aussi longtemps que nécessaire.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "La pâte au seigle colle à tout — vos mains, la spatule, le bol. Il est plus lourd et plus dense que n'importe quelle pâte de blé, et devrait se sentir comme de l'argile humide avec des graines encastrées."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Preuve",
+      "inputs": [
+        "rye_batter"
+      ],
+      "outputState": "proofed_loaf",
+      "instructions": "Lignez une poêle à pain de 23 x 11 cm (9 x 4 pouces) avec du parchemin huilé. Grattez la pâte et lissez le dessus avec une spatule humide — la pâte au seigle ne se mettra pas à niveau. Couvrir d'enveloppe en plastique et laisser la preuve à température ambiante (20–22 C) pendant 3–5 heures, ou jusqu'à ce que la surface ait atteint 1 cm de la jante de la casserole et montre de petites fissures et bulles. Le seigle augmente lentement et seulement entre 20 et 30 % en volume. Ne vous attendez pas à une augmentation spectaculaire — ce pain prouve sa fermentation par la texture et la saveur, pas par la hauteur.",
+      "visualCue": {
+        "primaryTarget": "La surface est montée juste au-dessous de la jante. De petites fissures rayonnent en haut. De petits trous à bulles sont visibles à la surface. Le pain a un aspect mat, légèrement poreux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est encore dense, lisse et au-dessous du demi-point de la poêle. Pas de fissures, pas de bulles.",
+            "action": "Attendez — la fermentation du seigle est patiente. Une cuisine plus froide peut nécessiter un total de 6 à 7 heures. Le pain n'est pas prêt."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface à moins de 1 cm du bord, fissurée, poreuse, et sent profondément acide et malté. Le pain oscille très légèrement si vous déplacez la poêle.",
+            "action": "Faites cuire immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface s'est levée au-dessus du bord et a commencé à s'effondrer vers l'intérieur. Les fissures s'effondrent.",
+            "action": "Faites cuire immédiatement — ne tardez pas. Le seigle surproof devient gommé et dense."
+          }
+        ]
+      },
+      "feelCue": "Mouillez un bout de doigt et appuyez doucement sur la surface — un pain de seigle parfaitement éprouvé ressort à peine du tout. Il tient le tiret comme une crème ferme, pas comme un pain de levure."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "proofed_loaf"
+      ],
+      "outputState": "baked_rye_loaf",
+      "instructions": "Préchauffer le four à 200 C (390 F) avec une grille dans le tiers inférieur. Retirez l'enveloppe plastique et placez la poêle directement dans le four. Cuire 60 à 70 minutes. À 20 minutes, couvrir le pain de façon lâche avec du papier pour éviter que le dessus ne durcisse trop vite. La température interne devrait atteindre 97 à 99 °C (206 à 210 °F). C'est un pain dense — ne le précipitez pas. Si vous avez un thermomètre de four, utilisez-le: le seigle foncé doit frapper la température pour éviter un centre de gomme.",
+      "visualCue": {
+        "primaryTarget": "Un haut acajou-brun profond avec un centre craqué, légèrement bombé. Le pain a légèrement tiré des côtés de la poêle. Ça sonne creux quand le fond est rappé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Top semble sombre mais la température interne est inférieure à 95 °C. Une brochette sort avec des résidus collants et gommés.",
+            "action": "Couvrir avec du papier, baisser la température à 180 C et cuire encore 15 à 20 minutes. Vérifiez la température interne."
+          },
+          {
+            "state": "Perfect",
+            "description": "Brun profond, croûte ferme, température interne 97-99 C, brochette sort propre sans collants. Le pain tire proprement de la poêle.",
+            "action": "Laisser refroidir complètement dans la casserole pendant 30 minutes, puis sur une grille."
+          },
+          {
+            "state": "Overdone",
+            "description": "Top est très sombre et dur. Température interne supérieure à 102 °C.",
+            "action": "Le pain sera plus sec que l'idéal mais toujours comestible. Couper finement et servir avec des garnitures grasses."
+          }
+        ]
+      },
+      "feelCue": "Ne coupez pas ce pain pendant au moins 12 à 24 heures après la cuisson — les amidons ont besoin de temps pour être entièrement mis. Un pain de seigle fraîchement cuit est presque gommé à l'intérieur; du jour au lendemain, il s'insère dans sa texture dense et trancheable caractéristique. L'attente n'est pas facultative."
+    }
+  ]
 };

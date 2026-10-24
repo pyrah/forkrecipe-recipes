@@ -1,64 +1,151 @@
 export default {
-  repoId: "master_american_switchel_001",
-  parentRepoId: null,
-  slug: "switchel",
-  author: "ForkRecipe Kitchen",
-  title: "Switchel (Haymaker's Punch)",
-  description: "Apple cider vinegar, molasses, ginger, and water — the colonial American field drink that predates sports drinks by 300 years. Tart, sweet, gingery, and surprisingly refreshing.",
-  cuisine: "American",
-  culture: "Colonial American",
-  category: "beverages",
-  tags: ["switchel", "colonial", "ginger", "vinegar", "hydration", "old-fashioned", "no-cook"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 2, salty: 0, sour: 4, bitter: 1, umami: 0, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Acid",      name: "Raw apple cider vinegar",       ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener", name: "Molasses or honey",             ratioValue: 80,  defaultUnit: "parts", substitutions: ["maple syrup", "brown sugar"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Fresh ginger, finely grated",   ratioValue: 20,  defaultUnit: "parts", substitutions: ["ground ginger (use half the amount)"] },
-    { ingId: "ing_04", role: "Hydration", name: "Cold water",                    ratioValue: 800, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Acid",      name: "Fresh lemon juice (optional)",  ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_switchel_001",
+  "parentRepoId": null,
+  "slug": "switchel",
+  "author": "ForkRecipe Kitchen",
+  "title": "Interrupteur (Haymaker's Punch)",
+  "description": "Le vinaigre de cidre de pomme, la mélasse, le gingembre et l'eau — le champ américain colonial boit avant les boissons sportives de 300 ans. Tarte, douce, gingembre et étonnamment rafraîchissante.",
+  "cuisine": "Américain",
+  "culture": "Colonial américain",
+  "category": "beverages",
+  "tags": [
+    "Interrupteur",
+    "coloniale",
+    "gingembre",
+    "vinaigre",
+    "hydratation",
+    "vieux jeu",
+    "pas de cuisson"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "switchel_concentrate",
-      instructions: "Combine the apple cider vinegar, molasses, and grated ginger in a large jar or pitcher. Whisk or stir vigorously until the molasses is fully dissolved — it is thick and will want to cling to the bottom. Add a small splash of water to help it loosen if needed. The concentrate will be dark, syrupy, and intensely flavored.",
-      visualCue: {
-        primaryTarget: "A dark, almost black concentrate with golden-brown ginger pulp suspended throughout. No streaks of undissolved molasses coiling at the bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Dark molasses ribbons are still coiling at the bottom when the jar is tipped — not yet dissolved.", action: "Keep stirring. Molasses dissolves slowly in cold vinegar. A 30-second warm-water bath around the outside of the jar (not inside) loosens it faster." },
-          { state: "Perfect",   description: "A uniformly dark brown-black syrup with ginger pulp distributed throughout. Tastes sharply sour, deeply sweet, and punishingly spicy in concentration.", action: "Add the cold water and lemon juice to dilute to a drinkable level." },
-          { state: "Overdone",  description: "Concentrate was heated to dissolve the molasses and now tastes thin and cooked.", action: "Cool it before adding the cold water. Switchel is cold-process — heat drives off the bright vinegar and ginger top notes." },
-        ],
-      },
-      feelCue: "Dip a fingertip into the concentrate — it should feel viscous and sticky, coating your skin like a dark syrup, with the sharp sting of vinegar cutting right through.",
+      "ingId": "ing_01",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme cru",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Chill",
-      inputs: ["switchel_concentrate", "ing_04", "ing_05"],
-      outputState: "switchel",
-      instructions: "Pour the cold water and lemon juice into the concentrate and stir well. Taste and adjust — more molasses if too sharp, more vinegar if too sweet, more ginger if too flat. Refrigerate for at least 1 hour to allow the ginger to mellow and the flavors to marry. Serve over ice, stirring before each pour as the ginger pulp settles.",
-      visualCue: {
-        primaryTarget: "A cloudy, golden-brown liquid over ice — darker than sweet tea, lighter than cola, with ginger sediment visible settling in the bottom of the pitcher.",
-        spectrum: [
-          { state: "Underdone", description: "The switchel has just been made and tastes sharp and disjointed — vinegar leads and sweetness has not integrated.", action: "Give it at least an hour in the fridge. The rest is not optional — raw switchel tastes harsh because the ginger and molasses have not yet melded with the acid." },
-          { state: "Perfect",   description: "Golden-amber and slightly cloudy. Cold. Tastes tart-sweet with warm ginger building slowly at the back of the throat and a long, clean vinegar finish.", action: "Serve over ice and stir before each pour." },
-          { state: "Overdone",  description: "Left too long — the ginger flavor has become overwhelming and pungent, the vinegar flat.", action: "Dilute with more cold water and add a squeeze of citrus to brighten. Extended steeping intensifies ginger beyond pleasant." },
-        ],
-      },
-      feelCue: "Cold switchel should feel thin and hydrating on the palate, with a gentle heat that builds slowly from the ginger — refreshing in a way that seems counterintuitive given the vinegar.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Molasses ou miel",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sirop d'érable",
+        "sucre brun"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Gingembre frais, râpé finement",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gingembre moulu (utiliser la moitié de la quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Eau froide",
+      "ratioValue": 800,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Jus de citron frais (facultatif)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "switchel_concentrate",
+      "instructions": "Mélanger le vinaigre de cidre de pomme, la mélasse et le gingembre râpé dans un grand pot ou un pichet. fouetter ou remuer vigoureusement jusqu'à ce que la mélasse soit complètement dissoute — elle est épaisse et voudra s'accrocher au fond. Ajouter un petit jet d'eau pour l'aider à se détendre si nécessaire. Le concentré sera foncé, sirupeux et intensément aromatisé.",
+      "visualCue": {
+        "primaryTarget": "Un concentré noir foncé avec de la pulpe de gingembre dorée suspendue. Pas de stries de mélasses non dissoutes enroulant au fond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les rubans de mélasse sombres sont encore enroulés au fond lorsque le pot est renversé — pas encore dissous.",
+            "action": "Continuez à remuer. Les molass se dissolvent lentement dans le vinaigre froid. Un bain d'eau chaude de 30 secondes autour de l'extérieur du pot (pas à l'intérieur) le détend plus rapidement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un sirop brun-noir uniformément foncé avec de la pulpe de gingembre distribuée partout. Goûte fortement aigre, profondément sucré, et punissantment épicé en concentration.",
+            "action": "Ajouter l'eau froide et le jus de citron pour diluer à un niveau buvable."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le concentré a été chauffé pour dissoudre la mélasse et goûte maintenant fin et cuit.",
+            "action": "Refroidir avant d'ajouter l'eau froide. Le switchel est un procédé à froid — la chaleur élimine les notes de vinaigre vif et de gingembre."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt dans le concentré — il doit sentir visqueux et collant, enrobant votre peau comme un sirop foncé, avec la piqûre aiguë de vinaigre coupant à travers."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Refroidissement",
+      "inputs": [
+        "switchel_concentrate",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "switchel",
+      "instructions": "Verser l'eau froide et le jus de citron dans le concentré et bien mélanger. Goûtez et ajustez - plus de mélasse si trop tranchante, plus de vinaigre si trop sucré, plus de gingembre si trop plat. Réfrigérer pendant au moins 1 heure pour permettre au gingembre de se moeller et aux saveurs de se marier. Servir sur de la glace, en remuant avant chaque verser lorsque la pulpe de gingembre se dépose.",
+      "visualCue": {
+        "primaryTarget": "Un liquide doré-brun nuageux sur la glace — plus foncé que le thé doux, plus léger que le cola, avec des sédiments de gingembre visibles se déposer dans le fond du pichet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le switchel vient d'être fait et goûte aiguisé et disjointé — les pistes de vinaigre et la douceur n'ont pas été intégrées.",
+            "action": "Donnez-le au moins une heure au frigo. Le reste n'est pas facultatif — le switchel brut a un goût dur parce que le gingembre et la mélasse n'ont pas encore mélangé avec l'acide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre doré et légèrement nuageux. Froid. Goûte à la tarte sucrée au gingembre chaud lentement à l'arrière de la gorge et à une longue finale de vinaigre propre.",
+            "action": "Servir sur la glace et remuer avant chaque verser."
+          },
+          {
+            "state": "Overdone",
+            "description": "Laissé trop longtemps — la saveur de gingembre est devenue écrasante et piquante, le vinaigre plat.",
+            "action": "Diluer avec plus d'eau froide et ajouter une pression d'agrumes pour éclaircir. L'allongement des pentes intensifie le gingembre au-delà des agréables."
+          }
+        ]
+      },
+      "feelCue": "Le switchel froid doit se sentir mince et hydratant en bouche, avec une chaleur douce qui se construit lentement à partir du gingembre — rafraîchissant d'une manière qui semble contre-intuitive compte tenu du vinaigre."
+    }
+  ]
 };

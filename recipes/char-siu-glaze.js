@@ -1,67 +1,184 @@
 export default {
-  repoId: "master_cantonese_char_siu_glaze_001",
-  parentRepoId: null,
-  slug: "char-siu-glaze",
-  author: "ForkRecipe Kitchen",
-  title: "Char Siu Glaze",
-  description: "A thick, lacquering glaze of hoisin, honey, fermented red bean curd, and five spice that caramelizes over pork in the oven to a deep mahogany — sweet and savory in alternating waves, with that singular roasted-char edge that defines Cantonese BBQ.",
-  cuisine: "Chinese",
-  culture: "Cantonese",
-  category: "sauces",
-  tags: ["char-siu", "cantonese", "bbq", "pork", "glaze", "chinese"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 920,
-  forks: 71,
-  contributors: 23,
-  license: "CC-BY-SA",
-  createdAt: "2026-02-01",
-  updatedAt: "2026-02-01",
-  flavorRadar: { sweet: 4, salty: 3, sour: 1, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Sweetener",  name: "Honey",                                    ratioValue: 25,  defaultUnit: "parts", substitutions: ["maltose syrup (traditional)", "agave"] },
-    { ingId: "ing_02", role: "Umami",      name: "Hoisin sauce",                             ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Umami",      name: "Red fermented bean curd (nam yu), mashed", ratioValue: 15,  defaultUnit: "parts", substitutions: ["1 tsp red food coloring + 1 tsp miso for color-only sub"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Soy sauce",                                ratioValue: 15,  defaultUnit: "parts", substitutions: ["tamari for gluten-free"] },
-    { ingId: "ing_05", role: "Spice",      name: "Five spice powder",                        ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Solvent",    name: "Shaoxing rice wine or dry sherry",         ratioValue: 10,  defaultUnit: "parts", substitutions: ["dry sherry", "apple juice"] },
-    { ingId: "ing_07", role: "Sweetener",  name: "Brown sugar",                              ratioValue: 10,  defaultUnit: "parts", substitutions: ["white sugar"] },
-    { ingId: "ing_08", role: "Allium",     name: "Garlic, grated",                           ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_cantonese_char_siu_glaze_001",
+  "parentRepoId": null,
+  "slug": "char-siu-glaze",
+  "author": "ForkRecipe Kitchen",
+  "title": "Char Siu Glaze",
+  "description": "Une épaisse glaçure laquée de hoisin, de miel, de haricot rouge fermenté, et cinq épices qui caramélisent le porc au four à une acajou profonde — sucrée et salée dans les vagues alternées, avec ce singulier bord de char grillé qui définit le barbecue cantonais.",
+  "cuisine": "Chinois",
+  "culture": "Cantonais",
+  "category": "sauces",
+  "tags": [
+    "Char-siu",
+    "cantonais",
+    "bbq",
+    "porc",
+    "glaçure",
+    "Chinois"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 920,
+  "forks": 71,
+  "contributors": 23,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-02-01",
+  "updatedAt": "2026-02-01",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "combined_glaze",
-      instructions: "Mash the red fermented bean curd to a smooth paste with a fork. Combine all ingredients in a saucepan and whisk together until uniform. The fermented bean curd will resist — work it in thoroughly. The glaze at this stage will be a dark, muddy reddish-brown.",
-      visualCue: {
-        primaryTarget: "The mixture — the integration of the red bean curd into the other liquids.",
-        spectrum: [
-          { state: "Underdone", description: "Visible lumps of bean curd and the five spice is still a floating powder.", action: "Whisk vigorously; the bean curd must be fully incorporated before heating." },
-          { state: "Perfect",   description: "A uniform, deeply red-brown liquid with a slight sheen. No lumps, no powder floating on the surface. Smells intensely of anise and sweet soy.", action: "Transfer to heat and reduce." },
-          { state: "Overdone",  description: "Over-whisking has incorporated too much air — the glaze is foamy.", action: "Let it rest 2 minutes and the foam will settle before heating." },
-        ],
-      },
-      feelCue: "Dip a finger — the raw glaze should feel viscous and sticky immediately, coating your fingertip in a dark, fragrant film that smells of five spice and sweet soy.",
+      "ingId": "ing_01",
+      "role": "Sweetener",
+      "name": "Chérie",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sirop de maltose (traditionnel)",
+        "agave"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Reduce",
-      inputs: ["combined_glaze"],
-      outputState: "finished_char_siu_glaze",
-      instructions: "Heat the glaze in a small saucepan over medium heat, stirring constantly. Bring to a gentle simmer and cook for 4–5 minutes until the glaze has thickened, the sugar has fully dissolved, and it coats the back of a spoon heavily. Remove from heat — it will continue to thicken as it cools. Use warm for marinating and glazing, or store refrigerated for 3 weeks.",
-      visualCue: {
-        primaryTarget: "The glaze on the back of a spoon — its thickness and the way it drips.",
-        spectrum: [
-          { state: "Underdone", description: "Glaze is still thin and pours freely off the spoon — it will run off the pork rather than lacquering it.", action: "Continue simmering for another 2 minutes and test again." },
-          { state: "Perfect",   description: "Glossy, deep mahogany glaze that moves slowly off a tilted spoon and leaves a thick, even coat on the back. A finger drawn through it leaves a clean, slow-filling trail.", action: "Use immediately as a marinade (reserve some for basting) and glaze the pork on the final 15 minutes of roasting." },
-          { state: "Overdone",  description: "Glaze has reduced to a very thick, almost solid paste. It will solidify completely as it cools and burn in the oven.", action: "Add warm water a tablespoon at a time and stir over low heat to restore proper consistency." },
-        ],
-      },
-      feelCue: "When the glaze is at the right consistency, a spoon lifted from the pot should hold a heavy drop at its tip for 2 full seconds before it falls — longer than water, shorter than honey straight from the jar.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Sauce à l'huile",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_03",
+      "role": "Umami",
+      "name": "Haricot rouge fermenté (nam yu), purée",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1 c. à thé rouge colorant alimentaire + 1 c. à thé miso pour color-only sub"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "sauce soja",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari pour sans gluten"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cinq épices en poudre",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Solvent",
+      "name": "Vin de riz Shaoxing ou sherry sec",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec",
+        "jus de pomme"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre brun",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre blanc"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Ail, râpé",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "combined_glaze",
+      "instructions": "Mash le haricots rouge fermenté courbé à une pâte lisse avec une fourchette. Mélanger tous les ingrédients dans une casserole et fouetter ensemble jusqu'à uniforme. Le haricot fermenté résistera, et le travaillera en profondeur. La glaçure à ce stade sera un brun rouge foncé et boueux.",
+      "visualCue": {
+        "primaryTarget": "Le mélange — l'intégration des haricots rouges dans les autres liquides.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux visibles de courge de haricots et les cinq épices sont encore une poudre flottante.",
+            "action": "fouetter vigoureusement; le caillé de haricots doit être entièrement incorporé avant le chauffage."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un liquide uniforme profondément brun-rouge avec un léger éclat. Pas de bosses, pas de poudre flottant à la surface. Sensation intense d'anis et de soja sucré.",
+            "action": "Transférer à la chaleur et réduire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sursaut a incorporé trop d'air — la glaçure est mousseuse.",
+            "action": "Laisser reposer 2 minutes et la mousse se déposera avant le chauffage."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt — la glaçure crue doit se sentir visqueuse et collante immédiatement, enrobant votre bout de doigt dans un film sombre et parfumé qui sent cinq épices et du soja sucré."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Réduire",
+      "inputs": [
+        "combined_glaze"
+      ],
+      "outputState": "finished_char_siu_glaze",
+      "instructions": "Chauffer la glaçure dans une petite casserole à feu moyen, en remuant constamment. Porter à mijoter doucement et cuire 4 à 5 minutes jusqu'à ce que la glaçure ait épaissi, que le sucre ait complètement dissous, et qu'il enveloppe fortement l'arrière d'une cuillère. Retirer du feu — il continuera à épaissir à mesure qu'il refroidira. Utiliser chaud pour la marination et le vitrage, ou conserver réfrigéré pendant 3 semaines.",
+      "visualCue": {
+        "primaryTarget": "La glaçure sur le dos d'une cuillère — son épaisseur et la façon dont elle coule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La glace est encore mince et se déverse librement de la cuillère — elle épuisera le porc plutôt que de le laquager.",
+            "action": "Continuer à mijoter encore 2 minutes et tester à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, glaçure acajou profond qui se déplace lentement hors d'une cuillère inclinée et laisse un épais, même manteau sur le dos. Un doigt tiré à travers elle laisse une piste propre et lente.",
+            "action": "Utiliser immédiatement comme marinade (réserver un peu pour le basting) et glacer le porc sur les 15 dernières minutes de rôtissage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La glace a été réduite à une pâte très épaisse, presque solide. Il se solidifiera complètement en refroidissant et en brûlant au four.",
+            "action": "Ajouter l'eau chaude une cuillère à soupe à la fois et remuer à feu doux pour rétablir la consistance appropriée."
+          }
+        ]
+      },
+      "feelCue": "Lorsque la glaçure est à la bonne consistance, une cuillère levée du pot doit tenir une lourde goutte à son extrémité pendant 2 secondes complètes avant qu'elle ne tombe — plus longue que l'eau, plus courte que le miel directement du pot."
+    }
+  ]
 };

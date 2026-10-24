@@ -1,101 +1,262 @@
 export default {
-  repoId: "master_mexican_pozole-rojo-broth_001",
-  parentRepoId: null,
-  slug: "pozole-rojo-broth",
-  author: "ForkRecipe Kitchen",
-  title: "Pozole Rojo Broth",
-  description: "The deep brick-red broth of Jalisco's pozole rojo — pork shoulder simmered with ancho and guajillo chilies until the meat falls apart and the stock turns a rich, earthy crimson.",
-  cuisine: "Mexican",
-  culture: "Jalisco",
-  category: "stocks",
-  tags: ["mexican", "pork", "hominy", "red-chili", "broth", "festive"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "4 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 2, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",    name: "Pork shoulder (bone-in preferred), cut into large chunks", ratioValue: 100, defaultUnit: "%", substitutions: ["pork neck bones + boneless shoulder"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Water, enough to cover by 5 cm",                ratioValue: 250, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_03", role: "Heat",       name: "Dried ancho chilies, stemmed and seeded",       ratioValue: 10,  defaultUnit: "%", substitutions: ["dried California chili"] },
-    { ingId: "ing_04", role: "Heat",       name: "Dried guajillo chilies, stemmed and seeded",    ratioValue: 8,   defaultUnit: "%", substitutions: ["dried New Mexico chili"] },
-    { ingId: "ing_05", role: "Allium",     name: "White onion, halved",                           ratioValue: 15,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",     name: "Garlic cloves, whole and unpeeled",             ratioValue: 5,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Dried Mexican oregano",                        ratioValue: 1,   defaultUnit: "%", substitutions: ["marjoram"] },
-    { ingId: "ing_08", role: "Aromatic",   name: "Cumin seeds, toasted",                         ratioValue: 0.5, defaultUnit: "%", substitutions: ["ground cumin (use half)"] },
-    { ingId: "ing_09", role: "Starch",     name: "Canned hominy (pozole corn), drained and rinsed", ratioValue: 60, defaultUnit: "%", substitutions: ["dried hominy, soaked overnight and boiled separately until tender"] },
-    { ingId: "ing_10", role: "Seasoning",  name: "Fine sea salt",                                 ratioValue: 3,   defaultUnit: "%", substitutions: [] },
+  "repoId": "master_mexican_pozole-rojo-broth_001",
+  "parentRepoId": null,
+  "slug": "pozole-rojo-broth",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pozole Rojo Broth",
+  "description": "Le bouillon rouge brique profond du pozole rojo de Jalisco — l'épaule de porc mijoté d'anchos et de chilis guajillo jusqu'à ce que la viande tombe en morceaux et que le stock devienne un riche et terreux pourpre.",
+  "cuisine": "Mexicain",
+  "culture": "Jalisco",
+  "category": "stocks",
+  "tags": [
+    "Mexique",
+    "porc",
+    "hominy",
+    "Chille rouge",
+    "bouillon",
+    "Fête"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "4 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_02", "ing_05", "ing_06", "ing_10"],
-      outputState: "pork_broth",
-      instructions: "Place the pork shoulder pieces in a large heavy pot. Cover with cold water by at least 5 cm. Add the halved onion, unpeeled garlic cloves, and a generous pinch of salt. Bring to a vigorous boil over high heat — you will see grey-brown foam rise to the surface within the first 5–10 minutes. Skim this foam aggressively and completely before it dissolves back into the broth; it is coagulated proteins and impurities that make for a muddy, less clean stock. Once the foam is gone, reduce the heat to a low, steady simmer. Partially cover and cook for 2–2.5 hours, skimming occasionally, until the pork is completely tender and the broth is savory and milky-opaque.",
-      visualCue: {
-        primaryTarget: "A gently simmering, lightly milky-gold broth with tender pork pieces beneath the surface; the foam phase is completely past and the liquid is relatively clear.",
-        spectrum: [
-          { state: "Underdone", description: "Grey foam still rising, broth is murky and smells raw. Pork is still firm and resists a fork.", action: "Skim aggressively and continue — the foam phase must be completely cleared before adding chilies." },
-          { state: "Perfect",   description: "Broth is clear-ish with a faint opaque richness, smells deeply of pork and onion. Pork collapses easily between your fingers.", action: "Remove the pork and strain the broth; proceed to make the chili paste." },
-          { state: "Overdone",  description: "Broth has boiled hard and is very cloudy; pork is falling completely to shreds in the pot.", action: "The positional texture is recoverable — a cloudy pozole is not wrong, just rustic. Skim the fat and continue." },
-        ],
-      },
-      feelCue: "Test the pork by pressing a chunk firmly between your fingers — it should offer no resistance and begin to naturally shred at the pressure. The broth should taste like a delicious, simple pork soup at this stage: savory, clean, and warm.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Épaule de porc (de préférence désossée), coupée en gros morceaux",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "os du cou de porc + épaule désossée"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toast",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "toasted_chilies",
-      instructions: "While the pork simmers, heat a dry skillet or comal over medium heat. Working one at a time, press each dried ancho and guajillo flat against the hot surface with a spatula for 8–10 seconds per side. You are blooming the oils, not burning them — the chilies should soften, blister, and smell of warm dried fruit and mild chocolate, not acrid smoke. Transfer immediately to a bowl and cover with very hot water. Weight them with a plate and soak for 20–25 minutes until fully softened. Reserve the soaking water — a small amount can be added to the blended paste for depth, but taste it first as it can be very bitter.",
-      visualCue: {
-        primaryTarget: "Rehydrated chilies are uniformly pliable and dark, soaking liquid is a rich mahogany-red, and the chilies smell of dried fruit and mild earth when you open one up.",
-        spectrum: [
-          { state: "Underdone", description: "Chilies are still brittle and stiff, water is pale, they crack when bent.", action: "Extend the soak — they need full rehydration to blend into a smooth paste." },
-          { state: "Perfect",   description: "Completely pliable, tear like wet leather, dark red-brown inside, soaking water is a deep brick-red.", action: "Drain and proceed to blend immediately." },
-          { state: "Overdone",  description: "Chilies were scorched on the comal — bitter, with the skin charred through.", action: "Use but taste the soaking water before adding it; very bitter water should be discarded and replaced with fresh stock." },
-        ],
-      },
-      feelCue: "Bend a rehydrated chili in half — it should fold cleanly without any cracking sound, like supple leather. The inside flesh should be deep red and moist. If it cracks, it needs more soaking time.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau, assez pour couvrir de 5 cm",
+      "ratioValue": 250,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["toasted_chilies", "ing_07", "ing_08"],
-      outputState: "chili_paste",
-      instructions: "Combine the soaked and drained chilies in a blender with the dried oregano, toasted cumin seeds, and enough of the pork broth (or clean water) to blend smoothly — start with about half a cup and add more as needed. Blend on high for 2 full minutes until completely smooth. Pass through a medium-mesh sieve, pressing firmly on the solids with a spoon. Discard the skins and seeds left in the sieve. The resulting paste should be a deep brick-red to mahogany, smooth as velvet, with a clean, fruity-earthy chili aroma.",
-      visualCue: {
-        primaryTarget: "A deep brick-red, completely smooth paste that passes easily through a sieve with no visible skin or seed fragments, smelling of dried fruit and warm earth.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is grainy or orange-red; chili skins haven't been fully pulverized; sieve is clogged with chunks.", action: "Blend longer in smaller batches and press more firmly through the sieve." },
-          { state: "Perfect",   description: "A deep, brick-red, silky paste. Passes cleanly through a medium sieve. Smells deeply of ancho and guajillo — like dried fruit wine.", action: "Fry the paste immediately in the returned broth pot before adding back the stock." },
-          { state: "Overdone",  description: "Too much soaking water added — paste is thin and watery, color is washed out.", action: "Fry longer in the next step to drive off the excess moisture and re-concentrate." },
-        ],
-      },
-      feelCue: "Rub a small amount of the finished paste between your fingers — it should feel silky and stain them a vivid brick-red. The aroma should be deeply fruity and earthy, like concentrated dried-chili wine. If it smells acrid, the chilies were over-toasted.",
+      "ingId": "ing_03",
+      "role": "Heat",
+      "name": "Piments anchos séchés, ensemencés",
+      "ratioValue": 10,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Chili de Californie séché"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Fry aromatics",
-      inputs: ["chili_paste", "pork_broth", "ing_09"],
-      outputState: "pozole_rojo_broth",
-      instructions: "In the same large pot used for the pork, heat a tablespoon of lard or oil over medium-high until shimmering. Add the chili paste — it will sizzle aggressively. Fry the paste, stirring constantly, for 5 minutes until it darkens slightly, loses its raw edge, and the fat begins to separate at the edges. Add the reserved pork broth back in, stirring to combine. Add the drained hominy. Return the shredded pork meat (discarding any large bones) to the pot. Simmer everything together for 30 minutes. The broth will turn a deep, saturated brick-red and the hominy will swell slightly, softening into the broth. Taste and adjust salt generously — a well-seasoned pozole broth should be boldly flavored to stand up to the raw garnishes (shredded cabbage, radish, lime, oregano) served alongside.",
-      visualCue: {
-        primaryTarget: "A deep, saturated brick-red broth with hominy and shredded pork visible throughout, the surface slightly glossy from rendered pork fat, smelling of dried chili, pork, and oregano.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is orange and thin, the chili paste hasn't fully integrated, the raw edge of the dried chili is still present.", action: "Simmer longer — the broth needs at least 30 minutes to fully integrate the chili paste into the pork stock." },
-          { state: "Perfect",   description: "A deep, earthy brick-red — the color of dried chili and old terracotta — with a glossy surface, full hominy, and shredded pork. Tastes bold, complex, slightly smoky, and richly savory.", action: "Serve immediately with garnishes, or cool and refrigerate overnight — pozole improves enormously the next day." },
-          { state: "Overdone",  description: "Broth has reduced too far; hominy is falling apart into mush; the flavor is concentrated and very intense.", action: "Add boiling water or additional stock to restore volume and balance, then re-season." },
-        ],
-      },
-      feelCue: "Ladle a small bowl of the finished broth and hold it with both hands — you should feel the heat through the bowl and smell the warm chili-and-pork aroma before it reaches your lips. The first sip should be bold and warming without being sharp. The hominy should yield with gentle resistance, like a soft corn pillow.",
+      "ingId": "ing_04",
+      "role": "Heat",
+      "name": "Chilies de guajillo séchées, ensemencées",
+      "ratioValue": 8,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Chili séché Nouveau-Mexique"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon blanc, coupé en deux",
+      "ratioValue": 15,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail, entières et non pelées",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Origan mexicain séché",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Marjoram"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Graines de cumin grillées",
+      "ratioValue": 0.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "cumin du sol (utiliser la moitié)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Starch",
+      "name": "Hominy en conserve (maïs pozole), égoutté et rincé",
+      "ratioValue": 60,
+      "defaultUnit": "%",
+      "substitutions": [
+        "séché hominy, trempé pendant la nuit et bouilli séparément jusqu'à tendreté"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_05",
+        "ing_06",
+        "ing_10"
+      ],
+      "outputState": "pork_broth",
+      "instructions": "Placez les morceaux d'épaules de porc dans un grand pot lourd. Couvrir d'eau froide d'au moins 5 cm. Ajouter l'oignon à moitié, les gousses d'ail non pelées et une pincée généreuse de sel. Portez à ébullition vigoureuse à feu vif — vous verrez la mousse brun-gris monter à la surface dans les 5-10 premières minutes. Écraser cette mousse de façon agressive et complète avant qu'elle ne se dissout dans le bouillon; ce sont les protéines et les impuretés coagulées qui font un stock boueux et moins propre. Une fois que la mousse est partie, réduisez la chaleur à une faible mijotation constante. Couvrir et cuire partiellement pendant 2 à 2,5 heures, écrémer à l'occasion, jusqu'à ce que le porc soit complètement tendre et que le bouillon soit salé et laiteux-opaque.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon légèrement laiteux et mijotant avec des morceaux de porc tendres sous la surface; la phase de mousse est complètement passée et le liquide est relativement clair.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mousse grise toujours en hausse, bouillon est trouble et sent cru. Le porc est toujours ferme et résiste à une fourchette.",
+            "action": "Agitez agressivement et continuez — la phase de mousse doit être complètement nettoyée avant d'ajouter des piments."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bouillon est limpide avec une faible richesse opaque, sent profondément le porc et l'oignon. Le porc s'effondre facilement entre les doigts.",
+            "action": "Retirez le porc et tendez le bouillon; faites la pâte de chili."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon a bouilli dur et est très nuageux; le porc tombe complètement en morceaux dans le pot.",
+            "action": "La texture positionnelle est récupérable — un pozole nuageux n'est pas faux, juste rustique. Abattez la graisse et continuez."
+          }
+        ]
+      },
+      "feelCue": "Testez le porc en pressant fermement un morceau entre les doigts — il ne devrait pas offrir de résistance et commencer à déchiqueter naturellement à la pression. Le bouillon devrait goûter comme une délicieuse soupe de porc simple à ce stade : salée, propre et chaude."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "toasted_chilies",
+      "instructions": "Pendant que le porc mijote, faire chauffer une poêle sèche ou un comal à feu moyen. Travaillant un à la fois, pressez chaque ancho et guajillo séché à plat contre la surface chaude avec une spatule pendant 8-10 secondes de chaque côté. Vous fleurissez les huiles, vous ne les brûlez pas: les chilys devraient adoucir, blister et sentir les fruits secs chauds et le chocolat doux, et non la fumée acride. Transférer immédiatement dans un bol et couvrir d'eau très chaude. Peser avec une assiette et tremper pendant 20 à 25 minutes jusqu'à ce qu'ils soient complètement adoucis. Réservez l'eau de trempage — une petite quantité peut être ajoutée à la pâte mélangée pour la profondeur, mais goûtez d'abord car elle peut être très amère.",
+      "visualCue": {
+        "primaryTarget": "Les chilies réhydratées sont uniformément pliables et sombres, le liquide de trempe est un riche rouge acajou, et l'odeur des chilies des fruits secs et de la terre douce quand vous ouvrez un.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les chilis sont encore cassants et raides, l'eau est pâle, ils craquent lorsqu'ils sont pliés.",
+            "action": "Étendre le trempage — ils ont besoin de réhydratation complète pour se fondre dans une pâte lisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement pliable, déchirante comme du cuir humide, brun-rouge foncé à l'intérieur, l'eau trempe est un rouge-brique profond.",
+            "action": "Égoutter et procéder immédiatement au mélange."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les chiles étaient brûlés sur le comal — amer, la peau carbonisée.",
+            "action": "Utiliser mais goûter l'eau de trempe avant de l'ajouter; l'eau très amère doit être jetée et remplacée par du matériel frais."
+          }
+        ]
+      },
+      "feelCue": "Pliez un chili réhydraté en deux — il devrait plier proprement sans aucun bruit de fissuration, comme du cuir souple. La chair intérieure doit être rouge foncé et humide. Si ça craque, il lui faut plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "toasted_chilies",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "chili_paste",
+      "instructions": "Mélanger les chilis trempés et drainés dans un mélangeur avec l'origan séché, les graines de cumin grillées, et suffisamment de bouillon de porc (ou d'eau propre) pour se fondre en douceur — commencer par environ une demi-tasse et ajouter plus au besoin. Mélanger en haut pendant 2 minutes complètes jusqu'à ce qu'il soit complètement lisse. Passer à travers un tamis à mailles moyennes, appuyer fermement sur les solides avec une cuillère. Jeter les peaux et les graines laissées dans le tamis. La pâte résultante doit être un rouge brique profond à acajou, lisse comme du velours, avec un arôme de chili propre, fruité et terreux.",
+      "visualCue": {
+        "primaryTarget": "Une pâte profondément rouge brique, complètement lisse qui passe facilement à travers un tamis sans peau visible ni fragments de graines, sentant les fruits secs et la terre chaude.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est granuleuse ou rouge-orange; les peaux de chili n'ont pas été complètement pulvérisées; le tamis est bouché de morceaux.",
+            "action": "Mélanger plus longtemps en petits lots et presser plus fermement à travers le tamis."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte profonde, rouge brique, soyeuse. Passe à travers un tamis moyen. Il sent profondément l'ancho et le guajillo, comme le vin de fruits séchés.",
+            "action": "Faire frire la pâte immédiatement dans la casserole de bouillon retournée avant d'ajouter le stock."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop d'eau de trempage ajoutée — la pâte est fine et aqueuse, la couleur est lavée.",
+            "action": "Faire frire plus longtemps dans la prochaine étape pour éliminer l'excès d'humidité et de concentration."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité de la pâte finie entre vos doigts — elle devrait se sentir soyeuse et tacher une brique rouge vif. L'arôme doit être profondément fruité et terreux, comme le vin concentré de chili séché. Si ça sent l'acride, les chilies étaient surchargées."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Aromates frits",
+      "inputs": [
+        "chili_paste",
+        "pork_broth",
+        "ing_09"
+      ],
+      "outputState": "pozole_rojo_broth",
+      "instructions": "Dans la même grande casserole utilisée pour le porc, faire chauffer une cuillère à soupe de saindoux ou d'huile sur une hauteur moyenne jusqu'à ce qu'elle mijote. Ajouter la pâte de chili — elle s'étourdira agressivement. Faire frire la pâte en remuant constamment, pendant 5 minutes jusqu'à ce qu'elle s'assombrisse légèrement, perde son bord brut, et la graisse commence à se séparer aux bords. Ajouter le bouillon de porc réservé, en remuant pour mélanger. Ajouter le hominy drainé. Remettez la viande de porc déchiquetée (enlevant les gros os) dans la casserole. Faire mijoter tout ensemble pendant 30 minutes. Le bouillon tournera un rouge-brique saturé profond et le hominy gonflera légèrement, ramollissant dans le bouillon. Goûtez et ajustez généreusement le sel — un bouillon de pozole bien assaisonné doit être aromatisé avec hardiesse pour résister aux garnitures crues (choux cassés, radis, lime, origan) servies à côté.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon rouge-brique saturé profond avec du porc hominy et déchiqueté visible partout, la surface légèrement brillante de la graisse de porc rendu, odeur de chili séché, de porc et d'origan.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon est orange et mince, la pâte de chili n'est pas complètement intégrée, le bord brut du chili séché est toujours présent.",
+            "action": "Laisser mijoter plus longtemps — le bouillon a besoin d'au moins 30 minutes pour intégrer pleinement la pâte de chili dans le stock de porc."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un rouge-brique profond et terreux — la couleur du chili séché et de la vieille terre cuite — avec une surface brillante, plein hominy, et le porc déchiqueté. Goûte audacieux, complexe, légèrement fumé et richement salé.",
+            "action": "Servir immédiatement avec des garnitures, ou refroidir et réfrigérer pendant la nuit — le pozole s'améliore énormément le lendemain."
+          },
+          {
+            "state": "Overdone",
+            "description": "Broth a diminué trop loin; hominy est en train de s'effondrer en mousse; la saveur est concentrée et très intense.",
+            "action": "Ajouter l'eau bouillante ou le stock supplémentaire pour rétablir le volume et l'équilibre, puis ré-saisonner."
+          }
+        ]
+      },
+      "feelCue": "Déposer un petit bol du bouillon fini et le tenir avec les deux mains — vous devriez sentir la chaleur dans le bol et sentir l'arôme chaud de chili-and-pork avant qu'il atteigne vos lèvres. La première gorgée devrait être audacieuse et se réchauffer sans être tranchante. L'hominy devrait céder avec une résistance douce, comme un oreiller de maïs tendre."
+    }
+  ]
 };

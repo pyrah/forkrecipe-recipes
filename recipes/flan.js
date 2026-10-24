@@ -1,99 +1,236 @@
 export default {
-  repoId: "master_spanish_flan_001",
-  parentRepoId: null,
-  slug: "flan",
-  author: "ForkRecipe Kitchen",
-  title: "Flan de Leche",
-  description: "A trembling, silken custard baked in a water bath until it barely sets, then inverted so that the bittersweet caramel pooled in the base flows down its sides in amber rivulets. The contrast between the dark, slightly bitter caramel and the pale, sweetly eggy custard beneath is one of the most elegant flavour contrasts in the Spanish kitchen.",
-  cuisine: "Spanish",
-  culture: "Spanish",
-  category: "desserts",
-  tags: ["flan", "spanish", "caramel", "custard", "baked", "latin"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "3 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 1, sour: 0, bitter: 2, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Sweetener", name: "Caster sugar (for caramel)",   ratioValue: 0.75, defaultUnit: "cup",   substitutions: [] },
-    { ingId: "ing_02", role: "Liquid",    name: "Water (for caramel)",          ratioValue: 3,    defaultUnit: "tbsp",  substitutions: [] },
-    { ingId: "ing_03", role: "Dairy",     name: "Whole milk",                   ratioValue: 2,    defaultUnit: "cups",  substitutions: [] },
-    { ingId: "ing_04", role: "Dairy",     name: "Sweetened condensed milk",     ratioValue: 1,    defaultUnit: "can (397g)", substitutions: ["evaporated milk + extra sugar"] },
-    { ingId: "ing_05", role: "Protein",   name: "Whole eggs",                   ratioValue: 3,    defaultUnit: "large", substitutions: [] },
-    { ingId: "ing_06", role: "Protein",   name: "Egg yolks",                    ratioValue: 2,    defaultUnit: "large", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Pure vanilla extract",         ratioValue: 1,    defaultUnit: "tsp",   substitutions: ["scraped vanilla bean"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine salt",                    ratioValue: 1,    defaultUnit: "pinch", substitutions: [] },
+  "repoId": "master_spanish_flan_001",
+  "parentRepoId": null,
+  "slug": "flan",
+  "author": "ForkRecipe Kitchen",
+  "title": "Flan de Leche",
+  "description": "Une crème soyeuse, tremblante, cuite dans un bain d'eau jusqu'à ce qu'elle se couche à peine, puis inversée de sorte que le caramel doux amer pooled dans la base coule sur ses côtés en rivouettes ambres. Le contraste entre le caramel foncé et légèrement amer et la crème aux oeufs pâles et doux est l'un des contrastes les plus élégants de la cuisine espagnole.",
+  "cuisine": "Espagnol",
+  "culture": "Espagnol",
+  "category": "desserts",
+  "tags": [
+    "Flan",
+    "Espagnol",
+    "Caramel",
+    "Coutard",
+    "cuits",
+    "Latin"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Caramelize",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "dark_caramel",
-      instructions: "Combine sugar and water in a small, heavy saucepan over medium-high heat. Do not stir — swirl the pan gently if needed. The syrup will bubble, then turn golden. Watch carefully once the colour begins to develop; it darkens rapidly. Remove from heat when it reaches a deep amber (the colour of old whiskey). Immediately pour into the base of a 20 cm round cake pan or 6 individual ramekins. Tilt to coat evenly before the caramel sets.",
-      visualCue: {
-        primaryTarget: "Deep amber-brown liquid, the colour of dark honey, with a slight wisp of smoke and a bittersweet caramel aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Pale golden, still sweet-smelling. No bitter complexity yet. Will make a cloyingly sweet flan.", action: "Continue cooking over medium-high — the colour develops very quickly from here. Watch closely." },
-          { state: "Perfect",   description: "Deep amber — like dark ale. Smells of toffee with a trace of bitterness. The edges are darker than the centre. A drop on a white plate looks like mahogany.", action: "Remove from heat immediately and pour into the prepared pan. Work quickly — it will harden in seconds." },
-          { state: "Overdone",  description: "Dark brown approaching black, acrid burnt smell, wisps of dark smoke. Bitter and unpleasant.", action: "Discard and start over — burnt caramel is not redeemable. Clean the pan thoroughly." },
-        ],
-      },
-      feelCue: "Hold your hand 10 cm above the pan — you should feel intense, dry heat radiating from the caramel. That intensity is the signal it is approaching done.",
+      "ingId": "ing_01",
+      "role": "Sweetener",
+      "name": "Sucre de ricin (pour le caramel)",
+      "ratioValue": 0.75,
+      "defaultUnit": "cup",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "custard_mixture",
-      instructions: "In a large bowl, whisk eggs and yolks gently — do not beat aggressively, as you want to avoid incorporating air. Whisk in condensed milk, whole milk, vanilla, and salt until smooth. Strain the entire mixture through a fine-mesh sieve to remove any chalazae or egg threads. This is what gives flan its flawlessly smooth surface.",
-      visualCue: {
-        primaryTarget: "A smooth, pale golden liquid with no visible bubbles on the surface. Pours like heavy cream.",
-        spectrum: [
-          { state: "Underdone", description: "Visible egg threads in the mixture, surface covered in foam from over-whisking.", action: "Strain through a fine sieve; if very foamy, let rest 5 minutes and skim the foam before pouring." },
-          { state: "Perfect",   description: "Completely smooth, no bubbles, uniform pale amber. The surface is still and mirror-like. Strains cleanly through a fine sieve.", action: "Gently pour the custard over the set caramel in the pan." },
-          { state: "Overdone",  description: "N/A — custard mixture cannot be over-whisked to a point of failure.", action: "Strain and skim any surface bubbles with a spoon before baking." },
-        ],
-      },
-      feelCue: "Run a clean fingertip across the surface of the strained custard — it should feel like touching warm cream, completely smooth with zero graininess.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau (pour le caramel)",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["custard_mixture", "dark_caramel"],
-      outputState: "baked_flan",
-      instructions: "Preheat the oven to 160 C (325 F). Pour the custard gently over the set caramel in the pan. Place the pan in a roasting tin. Pour boiling water into the roasting tin to come halfway up the sides of the flan pan — this is the bain-marie that ensures even, gentle heat. Bake for 50–60 minutes. Start checking at 45 minutes.",
-      visualCue: {
-        primaryTarget: "A set custard with a barely perceptible wobble at the very centre when the pan is gently shaken. Pale golden surface with no browning.",
-        spectrum: [
-          { state: "Underdone", description: "A wide, liquid wobble in the centre — more than 4 cm of the surface moves fluidly when shaken. Surface is still pale and liquid-looking.", action: "Return to the oven for 10 more minutes; check the water bath level has not run dry." },
-          { state: "Perfect",   description: "A gentle, localized jiggle only at the very centre — the edges are completely set. Surface is lightly set and just beginning to catch a hint of colour. A thermometer in the centre reads 77–79 C (170–175 F).", action: "Remove from the water bath. Cool to room temperature, then refrigerate a minimum of 2 hours (overnight is ideal)." },
-          { state: "Overdone",  description: "Surface has puffed and cracked, turned noticeably golden-brown, or has a ring of bubbles. Custard has curdled — will be grainy with a honeycomb interior.", action: "Cool and refrigerate; the caramel will mask some textural flaws. The flavour is still good." },
-        ],
-      },
-      feelCue: "Press the edge of the flan very lightly with a fingertip — it should feel like touching firm set jelly at the edge, while the centre still yields and ripples like a liquid.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 2,
+      "defaultUnit": "cups",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["baked_flan"],
-      outputState: "finished_flan",
-      instructions: "Run a thin knife around the edge of the flan to loosen it. Place a deep-lipped serving plate — larger than the pan — over the top. In one confident motion, invert the pan onto the plate. Hold for 10 seconds, then lift the pan. The caramel will flow down the sides and pool on the plate. If the flan doesn't release, return to the refrigerator for 30 minutes and try again.",
-      visualCue: {
-        primaryTarget: "A trembling dome of pale golden custard sitting in a dark amber caramel lake, the caramel flowing elegantly down the sides.",
-        spectrum: [
-          { state: "Underdone", description: "Flan released but crumpled or the centre flowed out — it was still liquid inside.", action: "No recovery — this is a serving failure. Scoop the best-set portions carefully and call it 'deconstructed flan.' Refrigerate next time for the full 2 hours minimum." },
-          { state: "Perfect",   description: "A clean dome with a smooth surface, the caramel running freely around the base. The flan holds its shape but trembles slightly when the plate is moved.", action: "Serve immediately or within 30 minutes; do not re-refrigerate after unmoulding." },
-          { state: "Overdone",  description: "Flan is so firmly set it cracked on inversion, or the caramel has hardened into toffee instead of flowing. Both signs of over-baking.", action: "Score the caramel top with the back of a spoon to crack it attractively. Serve with a small jug of warm caramel sauce on the side." },
-        ],
-      },
-      feelCue: "Lift the plate — it should feel heavier than expected. That weight is the caramel pooling beneath the custard. Give the plate a slow tilt to confirm the caramel flows freely.",
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Lait condensé sucré",
+      "ratioValue": 1,
+      "defaultUnit": "can (397g)",
+      "substitutions": [
+        "lait évaporé + sucre supplémentaire"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Protein",
+      "name": "Oeufs entiers",
+      "ratioValue": 3,
+      "defaultUnit": "large",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Jaunes d'œuf",
+      "ratioValue": 2,
+      "defaultUnit": "large",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Extrait de vanille pure",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "Haricot à la vanille gratté"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1,
+      "defaultUnit": "pinch",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Caramélisation",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "dark_caramel",
+      "instructions": "Mélanger le sucre et l'eau dans une petite casserole lourde à feu moyen-vif. Ne pas remuer — agiter doucement la poêle si nécessaire. Le sirop va buller, puis devenir doré. Veillez attentivement une fois que la couleur commence à se développer; elle s'assombrit rapidement. Retirer du feu lorsqu'il atteint un ambre profond (la couleur du vieux whisky). Verser immédiatement dans la base d'une poêle à gâteau ronde de 20 cm ou de 6 ramequins individuels. Tilt pour enrober uniformément avant les ensembles de caramel.",
+      "visualCue": {
+        "primaryTarget": "Liquide brun-ambre profond, couleur miel foncé, avec une légère cuillerée de fumée et un arôme de caramel doux et amer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "En or pâle, encore sucré. Pas encore de complexité amère. Ça fera un flan très doux.",
+            "action": "Continuer la cuisson sur moyenne-élevée — la couleur se développe très rapidement d'ici. Regardez de près."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profonde — comme une bière foncée. Des odeurs de caramel avec une trace d'amertume. Les bords sont plus foncés que le centre. Une goutte sur une assiette blanche ressemble à de l'acajou.",
+            "action": "Retirer immédiatement du feu et verser dans la casserole préparée. Travaillez vite — il va durcir en quelques secondes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé approchant noir, odeur brûlée acride, bouffées de fumée foncée. Amère et désagréable.",
+            "action": "Jeter et recommencer — le caramel brûlé n'est pas échangeable. Nettoyer soigneusement la poêle."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main 10 cm au-dessus de la poêle — vous devriez sentir une chaleur intense et sèche rayonnant du caramel. Cette intensité est le signal qu'elle approche."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "custard_mixture",
+      "instructions": "Dans un grand bol, fouettez doucement les œufs et les jaunes — ne battez pas agressivement, car vous voulez éviter d'incorporer de l'air. fouetter le lait condensé, le lait entier, la vanille et le sel jusqu'à ce qu'il soit doux. Retirez tout le mélange à travers un tamis à mailles fines afin d'enlever les fils de chalazae ou d'oeuf. C'est ce qui donne à Flan sa surface parfaitement lisse.",
+      "visualCue": {
+        "primaryTarget": "Un liquide lisse et doré sans bulles visibles à la surface. Ça verse comme de la crème lourde.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Filets d'oeufs visibles dans le mélange, recouverts de mousse de sursaut.",
+            "action": "S'il est très mousseux, laisser reposer 5 minutes et écumer la mousse avant de verser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, sans bulles, uniforme ambre pâle. La surface est immobile et semblable à un miroir. Peau propre dans un tamis fin.",
+            "action": "Versez doucement la crème sur le caramel dans la poêle."
+          },
+          {
+            "state": "Overdone",
+            "description": "S.O. — Le mélange de crème ne peut pas être exagéré jusqu'à un point de défaillance.",
+            "action": "Soucher et écrémer toutes les bulles de surface avec une cuillère avant cuisson."
+          }
+        ]
+      },
+      "feelCue": "Exécutez un bout de doigt propre à travers la surface de la crème tendue — il devrait sentir comme toucher la crème chaude, complètement lisse avec zéro grain."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "custard_mixture",
+        "dark_caramel"
+      ],
+      "outputState": "baked_flan",
+      "instructions": "Préchauffer le four à 160 C (325 F). Verser doucement la crème sur le caramel dans la poêle. Placez la poêle dans une boîte de cuisson. Verser de l'eau bouillante dans l'étain rôti pour monter à mi-chemin sur les côtés de la poêle à flan — c'est le bain-marie qui assure une chaleur uniforme et douce. Cuire 50 à 60 minutes. Commencez à vérifier à 45 minutes.",
+      "visualCue": {
+        "primaryTarget": "Un ensemble de crème avec un wobble à peine perceptible au centre même lorsque la poêle est légèrement secouée. Surface dorée pâle sans brunissement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Un large oscillation liquide au centre — plus de 4 cm de la surface se déplace fluidement lorsqu'elle est secouée. La surface est encore pâle et liquide.",
+            "action": "Retourner au four pendant 10 minutes; vérifier que le niveau du bain d'eau n'est pas sec."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une légère et localisée joggle seulement au centre – les bords sont complètement fixés. La surface est légèrement définie et commence à peine à prendre un soupçon de couleur. Un thermomètre au centre lit 77–79 C (170–175 F).",
+            "action": "Retirer du bain d'eau. Laisser refroidir à la température ambiante, puis réfrigérer au moins 2 heures (la nuit est idéale)."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface a gonflé et fissuré, est nettement dorée, ou a un anneau de bulles. Custard a craqué — sera granuleux avec un intérieur en nid d'abeille.",
+            "action": "Refroidir et réfrigérer; le caramel masquera quelques défauts texturaux. La saveur est encore bonne."
+          }
+        ]
+      },
+      "feelCue": "Appuyez très légèrement sur le bord du flan avec un bout de doigt — il devrait avoir envie de toucher de la gelée ferme au bord, tandis que le centre donne toujours et ondule comme un liquide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "baked_flan"
+      ],
+      "outputState": "finished_flan",
+      "instructions": "Lancez un couteau mince autour du bord du flan pour le desserrer. Déposer une plaque de service à l'eau profonde — plus grande que la poêle — sur le dessus. Dans un mouvement confiant, retourner la poêle sur la plaque. Maintenez 10 secondes, puis soulevez la casserole. Le caramel coule sur les côtés et pool sur la plaque. Si le flan ne se relâche pas, retournez au réfrigérateur pendant 30 minutes et essayez de nouveau.",
+      "visualCue": {
+        "primaryTarget": "Dôme tremblant de crème dorée pâle assise dans un lac de caramel ambre sombre, le caramel coule élégamment sur les côtés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Flan s'est libéré, mais s'est effondré ou le centre s'est envolé — il était encore liquide à l'intérieur.",
+            "action": "Pas de rétablissement — c'est un échec. Scoop les meilleures portions soigneusement et l'appellent 'flan déconstruite.' Réfrigérer la prochaine fois pendant 2 heures minimum."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dôme propre avec une surface lisse, le caramel circulant librement autour de la base. Le flan tient sa forme mais tremble légèrement lorsque la plaque est déplacée.",
+            "action": "Servir immédiatement ou dans les 30 minutes; ne pas réfrigérer après le démouillage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Flan est si fermement fixé qu'il a fissuré sur l'inversion, ou le caramel a durci dans le caramel au lieu de couler. Les deux signes de surchauffe.",
+            "action": "Noter le dessus de caramel avec l'arrière d'une cuillère pour le fissurer de façon attrayante. Servir avec un petit pot de sauce caramel tiède sur le côté."
+          }
+        ]
+      },
+      "feelCue": "Soulevez la plaque — elle devrait être plus lourde que prévu. Ce poids est le caramel pooling sous la crème. Donnez à la plaque une inclinaison lente pour confirmer les flux de caramel librement."
+    }
+  ]
 };

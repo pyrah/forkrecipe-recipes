@@ -1,102 +1,280 @@
 export default {
-  repoId: "master_french_shellfish_bisque_stock_001",
-  parentRepoId: null,
-  slug: "shellfish-bisque-stock",
-  author: "ForkRecipe Kitchen",
-  title: "Shellfish Bisque Stock",
-  description: "Shrimp, crab, or lobster shells and heads roasted in a hot oven until their carotenoids bloom coral-orange, then deglazed with cognac and tomato and simmered into a scarlet, deeply oceanic essence — the base beneath every true bisque. What you are really extracting is chitin, fat-soluble pigment, and a concentrated oceanic sweetness that no fish stock can replicate.",
-  cuisine: "French",
-  culture: "Normand",
-  category: "stocks",
-  tags: ["stock", "french", "shellfish", "seafood", "gluten-free", "dairy-free"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 1, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Shrimp or lobster shells and heads",  ratioValue: 500, defaultUnit: "g", substitutions: ["crab shells and claws", "mixed prawn heads"] },
-    { ingId: "ing_02", role: "Aromatic",  name: "Shallots, roughly chopped",           ratioValue: 90,  defaultUnit: "g", substitutions: ["half a white onion"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, smashed",              ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Umami",     name: "Tomato paste",                        ratioValue: 30,  defaultUnit: "g", substitutions: ["2 fresh plum tomatoes, crushed"] },
-    { ingId: "ing_05", role: "Solvent",   name: "Cognac",                              ratioValue: 60,  defaultUnit: "g", substitutions: ["dry brandy", "Calvados"] },
-    { ingId: "ing_06", role: "Acid",      name: "Dry white wine",                      ratioValue: 200, defaultUnit: "g", substitutions: ["dry vermouth", "extra fish stock"] },
-    { ingId: "ing_07", role: "Liquid",    name: "Fish stock or water",                 ratioValue: 1500, defaultUnit: "g", substitutions: ["clam juice diluted 1:1 with water"] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh tarragon sprigs",               ratioValue: 10,  defaultUnit: "g", substitutions: ["fresh thyme", "a bay leaf"] },
-    { ingId: "ing_09", role: "Aromatic",  name: "Bay leaf",                            ratioValue: 1,   defaultUnit: "piece", substitutions: [] },
-    { ingId: "ing_10", role: "Fat",       name: "Unsalted butter",                     ratioValue: 30,  defaultUnit: "g", substitutions: ["clarified butter"] },
-    { ingId: "ing_11", role: "Fat",       name: "Olive oil",                           ratioValue: 30,  defaultUnit: "g", substitutions: ["neutral oil"] },
+  "repoId": "master_french_shellfish_bisque_stock_001",
+  "parentRepoId": null,
+  "slug": "shellfish-bisque-stock",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poisson blanc",
+  "description": "Crevettes, crabes ou homards et têtes rôties dans un four chaud jusqu'à ce que leurs caroténoïdes fleurissent l'orange corallienne, puis déglacées avec du cognac et de la tomate et mijotées dans une écarlate, essence profondément océanique — la base sous chaque véritable bisque. Ce que vous extrayez vraiment, c'est de la chitine, un pigment soluble dans la graisse et une douceur océanique concentrée qu'aucun stock de poissons ne peut reproduire.",
+  "cuisine": "Français",
+  "culture": "Norvège",
+  "category": "stocks",
+  "tags": [
+    "stock",
+    "français",
+    "crustacés",
+    "Produits de la mer",
+    "Sans gluten",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_01"],
-      outputState: "roasted_shells",
-      instructions: "Preheat the oven to 220°C (425°F). Spread the shells and heads in a single layer on a heavy rimmed baking sheet — do not crowd them, or they steam rather than roast. Drizzle with the olive oil and toss to coat. Roast 15 to 20 minutes, shaking the pan once halfway through, until the shells have turned a vivid coral-orange to brick-red and are fragrant throughout the kitchen. The heads will sizzle and any residual moisture will evaporate. The carotenoid pigments in the shells, which are fat-soluble, are activated by dry heat and will bleed their color and flavor into the fat you cook them in next.",
-      visualCue: {
-        primaryTarget: "Shells deeply bronzed and dry, with an intense seafood perfume — caramel-sweet and oceanic. Heads should look almost toasted, with any wet spots completely evaporated.",
-        spectrum: [
-          { state: "Underdone", description: "Shells are pale, still look raw, and smell only of raw seafood with no caramelized sweetness.", action: "Return to the oven for another 5 minutes. Pale shells produce a dull, watery stock with little color." },
-          { state: "Perfect",   description: "Bright coral to brick-red, dry, fragrant with a sweet roasted seafood aroma. A white fond (dried shell residue) may appear on the baking sheet — that is flavor.", action: "Transfer shells to the pot immediately and deglaze the baking sheet with the cognac to collect every bit of fond." },
-          { state: "Overdone",  description: "Shells are dark brown or black in spots, smelling acrid and burnt rather than roasted-sweet.", action: "Pick out any badly charred pieces. A few dark spots are fine, but significant charring will make the stock bitter. Use as is and taste critically before reducing." },
-        ],
-      },
-      feelCue: "Roasted shells should snap crisply and feel dry, not rubbery. When you crush one between your fingers it should crumble rather than bend — fully dry and caramelized through.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Coquilles et têtes de crevettes ou de homard",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Coquilles et griffes de crabe",
+        "têtes de crevettes mixtes"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["roasted_shells", "ing_10", "ing_02", "ing_03", "ing_04"],
-      outputState: "pinced_base",
-      instructions: "Melt the butter in a large heavy pot over high heat until it foams and begins to brown. Add the roasted shells and crush them roughly with the back of a heavy spoon to expose more surface area — this is not optional. Add the shallots and garlic and cook, stirring, for 3 minutes until softened and translucent. Push everything to the side and add the tomato paste, pressing it flat against the hot pot surface (pinçage). Let it cook untouched for 2 minutes, then stir it into the shells — it will turn from scarlet to a deep brick-brown, losing its raw tinned edge and gaining depth and sweetness.",
-      visualCue: {
-        primaryTarget: "A richly fragrant, reddish-brown mixture of crushed shells, soft shallots, and caramelized tomato, with the butter turned orange-red from the shell pigments.",
-        spectrum: [
-          { state: "Underdone", description: "The tomato paste is still bright red and tastes sharp and raw; the shallots are barely translucent.", action: "Cook the tomato paste longer against the hot pot surface — it should turn a dull brick-brown and smell sweet and nutty before you proceed." },
-          { state: "Perfect",   description: "Deep, complex shellfish and caramelized tomato aroma rising from the pot. The butter has turned a vivid orange-red from the carotenoids. The paste is dark and smells sweet.", action: "Pour in the cognac and flambé or simply cook down over high heat to burn off the alcohol." },
-          { state: "Overdone",  description: "The tomato paste has scorched to black on the pan bottom and smells acrid, or the shallots have burnt to dark brown.", action: "Deglaze immediately with the cognac, scraping up what you can. Taste the stock critically after simmering and consider adding a splash of cream or fresh tomato to blunt the bitter note." },
-        ],
-      },
-      feelCue: "The shells should feel light and crisp when you press them, surrendering easily to the spoon. The pot should hiss and spit with each stir — sustained loud sizzling means the heat is right.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "Échalotes, grossièrement hachées",
+      "ratioValue": 90,
+      "defaultUnit": "g",
+      "substitutions": [
+        "moitié d'oignon blanc"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Deglaze",
-      inputs: ["pinced_base", "ing_05", "ing_06"],
-      outputState: "deglazed_base",
-      instructions: "Pour the cognac into the hot pot. If using a gas flame, tip the pan to ignite it; on electric, allow it to boil vigorously until the alcohol cooks off (about 30 seconds). Do not flinch from the flambé — it burns off the harsh alcohol and leaves behind the cognac's fruit and vanilla character. Add the white wine and reduce by half over high heat, about 3 to 4 minutes. The wine's acidity will lift any remaining fond from the pot bottom and help extract the remaining soluble compounds from the shells.",
-      visualCue: {
-        primaryTarget: "A glistening, aromatic liquid reduced to a syrupy sheen, the color of burnt orange, steaming with the mingled scent of seafood, caramel, and wine.",
-        spectrum: [
-          { state: "Underdone", description: "The wine still tastes raw and sharp with evident alcohol; the reduction is loose and watery.", action: "Continue reducing over high heat, stirring occasionally, until the liquid has reduced by half and the raw alcohol burn is gone." },
-          { state: "Perfect",   description: "Concentrated, glossy, and deeply fragrant. The liquid has reduced to a thick glaze coating the shells, with a sweet, round wine character replacing the sharp raw alcohol.", action: "Add the fish stock, herbs, and bay leaf and bring to a simmer." },
-          { state: "Overdone",  description: "Over-reduced to a sticky, dark caramel that may catch on the pot bottom.", action: "Add a splash of fish stock immediately to lift it, scraping the bottom. The fond that lifts off is still good flavor." },
-        ],
-      },
-      feelCue: "The moment to add the stock is when you drag a spoon across the pan and the smear of reduction holds its shape for a beat before flowing back — concentrated but not jammy.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles d'ail brisées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["deglazed_base", "ing_07", "ing_08", "ing_09"],
-      outputState: "finished_bisque_stock",
-      instructions: "Add the fish stock, tarragon, and bay leaf and bring to a bare simmer — never a boil, which turns shellfish stock bitter and cloudy. Simmer gently 30 to 40 minutes. Skim the rust-colored foam that rises in the first 10 minutes. The stock is ready when it has reduced by about a quarter and the color is a deep, clear orange-red. Strain through a fine-mesh sieve set over a bowl, pressing the shells firmly to extract every drop. Discard the spent shells. Taste: it should be intensely oceanic, sweet, and full, with no bitterness or sourness. Use as the base for bisque, shellfish sauces, or risotto.",
-      visualCue: {
-        primaryTarget: "A clear, deeply colored orange-red stock — transparent rather than cloudy, shot through with color like amber held to light. The aroma is oceanic, sweet, and faintly smoky from the roasted shells.",
-        spectrum: [
-          { state: "Underdone", description: "Pale, thin, and watery after only 15 minutes, tasting primarily of wine and raw shallot with little shellfish depth.", action: "Continue simmering at least 20 more minutes. The extraction from roasted shells is slow and rewards patience." },
-          { state: "Perfect",   description: "A vivid orange-red, intensely fragrant, and deeply savory with clean oceanic sweetness and no bitterness. It should coat the back of a spoon with a faint shellfish gelatin sheen.", action: "Strain, press the shells, and use immediately or chill over ice and refrigerate up to 2 days." },
-          { state: "Overdone",  description: "A full rolling boil has made the stock cloudy and slightly bitter, or it has over-reduced to a concentrated, salty paste.", action: "If cloudy but not bitter, use as is for bisque — the final purée step will smooth it. If bitter, dilute with water or cream and adjust salt at the end." },
-        ],
-      },
-      feelCue: "At service temperature — not boiling, just steaming — the stock should feel almost silky on the tongue from the dissolved gelatin and fat. A metallic or sharp aftertaste means it needs more cream (in bisque) or has been overcooked.",
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "2 tomates prunes fraîches, concassées"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Solvent",
+      "name": "Cognac",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "brandy sec",
+        "Calvados"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Vin blanc sec",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Vermouth sec",
+        "stocks de poissons supplémentaires"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Liquid",
+      "name": "Stocks ou eaux de poissons",
+      "ratioValue": 1500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "jus de palourde dilué 1:1 avec de l'eau"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Tours d'estragon frais",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Thym frais",
+        "une feuille de laurier"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Feuille de la baie",
+      "ratioValue": 1,
+      "defaultUnit": "piece",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "beurre clarifié"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile neutre"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "roasted_shells",
+      "instructions": "Préchauffer le four à 220°C (425°F). Étendre les coquillages et les têtes en une seule couche sur une plaque de cuisson à bord lourd — ne pas les fouler, ou ils vapeur plutôt que rôtir. Arroser d'huile d'olive et mélanger pour enrober. Faire bouillir 15 à 20 minutes, agiter une fois la poêle à mi-chemin, jusqu'à ce que les coquilles aient transformé un corallien-orange vif en brique-rouge et soient parfumées dans toute la cuisine. La tête étourdira et toute humidité résiduelle s'évaporera. Les pigments caroténoïdes dans les coquilles, qui sont solubles dans la graisse, sont activés par la chaleur sèche et saignent leur couleur et leur saveur dans la graisse que vous faites cuire dans la prochaine.",
+      "visualCue": {
+        "primaryTarget": "Des coquilles profondément bronzées et sèches, avec un parfum intense de fruits de mer — caramel-doux et océanique. Les têtes devraient avoir l'air presque grillées, les taches humides étant complètement évaporées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coquilles sont pâles, semblent toujours crues, et ne sentent que des fruits de mer crus sans douceur caramélisée.",
+            "action": "Retourner au four encore 5 minutes. Les coquilles pâles produisent un stock aqueux et terne avec peu de couleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Coral brillant à rouge brique, sec, parfumé avec un arôme de fruits de mer torréfié doux. Un fond blanc (résidus de coquille séché) peut apparaître sur la plaque de cuisson, c'est - à - dire une saveur.",
+            "action": "Transférer immédiatement les coquillages dans le pot et déglacer la plaque de cuisson avec le cognac pour recueillir chaque morceau de fond."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les coquilles sont brun foncé ou noir dans les taches, sentant l'acridité et brûlé plutôt que torréfié sucré.",
+            "action": "Choisissez des morceaux carbonisés. Quelques taches sombres sont fines, mais l'ombrage significatif rendra le stock amer. Utilisez comme il est et goût critique avant de réduire."
+          }
+        ]
+      },
+      "feelCue": "Les coquillages grillés doivent se casser croustillantement et se sentir secs, pas caoutchouteux. Quand vous l'écrasez entre vos doigts, il doit s'effondrer plutôt que de plier — complètement sec et caramélisé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "roasted_shells",
+        "ing_10",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "pinced_base",
+      "instructions": "Faire fondre le beurre dans une grande casserole lourde à feu vif jusqu'à ce qu'il mousse et commence à brunir. Ajouter les coquilles grillées et les écraser à peu près avec le dos d'une cuillère lourde pour exposer plus de surface — ce n'est pas facultatif. Ajouter les échalotes et l'ail et cuire en remuant pendant 3 minutes jusqu'à ce qu'ils soient adoucis et translucides. Poussez tout sur le côté et ajoutez la pâte de tomate, en la pressant à plat contre la surface du pot chaud (pinçage). Laissez-la cuire pendant 2 minutes, puis remuez-le dans les coquilles — il se transformera d'écarlate à une brique-brun profonde, perdant son bord teinté brut et gagnant en profondeur et en douceur.",
+      "visualCue": {
+        "primaryTarget": "Un mélange richement parfumé, brun rougeâtre de coquilles concassées, d'échalotes douces et de tomates caramélisées, avec le beurre rouge-orange des pigments de coquille.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte de tomate est encore rouge vif et goûte vif et cru; les échalotes sont à peine translucides.",
+            "action": "Cuire la pâte de tomate plus longtemps contre la surface du pot chaud — il devrait tourner un brun brique terne et sentir doux et noisette avant de procéder."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un arôme profond et complexe de mollusques et de tomates caramélisées s'élève du pot. Le beurre est devenu un rouge orange vif des caroténoïdes. La pâte est sombre et sent bon.",
+            "action": "Verser le cognac et le flammé ou simplement cuire à feu vif pour brûler l'alcool."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte de tomate a brûlé à noir sur le fond de la poêle et sent l'acride, ou les échalotes ont brûlé à brun foncé.",
+            "action": "Déglacer immédiatement avec le cognac, en grattant ce que vous pouvez. Goûtez le stock de façon critique après avoir mijoté et envisagez d'ajouter une touche de crème ou de tomate fraîche pour émousser la note amère."
+          }
+        ]
+      },
+      "feelCue": "Les coquilles doivent être légères et croustillantes lorsque vous les appuyez, se rendant facilement à la cuillère. Le pot doit siffler et cracher à chaque remuement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Déglacement",
+      "inputs": [
+        "pinced_base",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "deglazed_base",
+      "instructions": "Verser le cognac dans la casserole. En cas d'utilisation d'une flamme à gaz, mettre la poêle en feu; à l'électricité, laisser bouillir vigoureusement jusqu'à ce que l'alcool soit cuit (environ 30 secondes). Ne flippez pas du flambeau — il brûle l'alcool dur et laisse derrière le fruit et le caractère vanille du cognac. Ajouter le vin blanc et réduire de moitié à feu vif, environ 3 à 4 minutes. L'acidité du vin permettra d'extraire les autres composés solubles des coquilles.",
+      "visualCue": {
+        "primaryTarget": "Un liquide brillant et aromatique réduit à un éclat sirupeux, la couleur de l'orange brûlée, la vapeur avec l'odeur mêlée de fruits de mer, de caramel et de vin.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le vin a encore un goût cru et vif avec de l'alcool évident; la réduction est lâche et aqueuse.",
+            "action": "Continuer à réduire à feu vif, en remuant occasionnellement, jusqu'à ce que le liquide ait diminué de moitié et que la brûlure d'alcool brut soit éliminée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Concentré, brillant et profondément parfumé. Le liquide s'est réduit à une épaisse glaçure enrobant les coquilles, avec un caractère vin doux et rond remplaçant l'alcool cru vif.",
+            "action": "Ajouter le stock de poisson, les herbes et la feuille de laurier et laisser mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surréduit à un caramel foncé collant qui peut attraper sur le fond du pot.",
+            "action": "Ajouter immédiatement une éclaboussure de poisson pour le soulever, en grattant le fond. Le fond qui décolle est toujours bon goût."
+          }
+        ]
+      },
+      "feelCue": "Le moment d'ajouter le stock est quand vous faites glisser une cuillère à travers la casserole et le frottis de réduction tient sa forme pour un battement avant de revenir — concentré mais pas jammy."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "deglazed_base",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "finished_bisque_stock",
+      "instructions": "Ajouter le stock de poisson, l'estragon et la feuille de laurier et laisser mijoter à nu — jamais un ébullition, ce qui rend le stock de mollusques amer et nuageux. Laisser mijoter doucement 30 à 40 minutes. Écraser la mousse couleur rouille qui monte dans les 10 premières minutes. Le stock est prêt quand il a réduit d'environ un quart et la couleur est une couleur profonde, rouge orange clair. Plongez dans un tamis à mailles fines sur un bol, pressez fermement les coquilles pour extraire chaque goutte. Jetez les coquilles épuisées. Bouche : il doit être intensement océanique, doux et plein, sans amertume ni amerie. Utiliser comme base pour le bisque, les sauces de mollusques ou le risotto.",
+      "visualCue": {
+        "primaryTarget": "Un stock orange-rouge clair et profondément coloré — transparent plutôt que nuageux, tourné à travers avec la couleur comme l'ambre tenu à la lumière. L'arôme est océanique, doux et légèrement fumé des coquilles grillées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pâle, mince et aqueuse après seulement 15 minutes, dégustation principalement de vin et d'échalote crue avec peu de profondeur de mollusques.",
+            "action": "Continuer à mijoter au moins 20 minutes. L'extraction des coquilles grillées est lente et récompense la patience."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un rouge-orange vif, intensément parfumé, et profondément salé avec une douceur océanique propre et aucune amertume. Il devrait enrober l'arrière d'une cuillère d'un éclat de gélatine de mollusques.",
+            "action": "Étrier, presser les coquilles et utiliser immédiatement ou refroidir sur la glace et réfrigérer jusqu'à 2 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un ébullition complet a rendu le stock nuageux et légèrement amer, ou il a surréduit à une pâte concentrée et salée.",
+            "action": "Si le temps est nuageux mais pas amer, utilisez-le comme pour le bisque, l'étape finale de la purée lissera. Si amer, diluer avec de l'eau ou de la crème et ajuster le sel à la fin."
+          }
+        ]
+      },
+      "feelCue": "À la température de service — sans bouillir, juste à la vapeur — le stock doit se sentir presque soyeux sur la langue à partir de la gélatine et de la graisse dissoutes. Un arrière-goût métallique ou tranchant signifie qu'il a besoin de plus de crème (en bisque) ou a été trop cuit."
+    }
+  ]
 };

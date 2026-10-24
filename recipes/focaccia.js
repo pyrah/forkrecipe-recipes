@@ -1,109 +1,254 @@
 export default {
-  repoId: "master_italian_focaccia_001",
-  parentRepoId: null,
-  slug: "focaccia",
-  tool: { kind: "dough", doughId: "focaccia" },
-  author: "ForkRecipe Kitchen",
-  title: "Ligurian Focaccia",
-  description: "A golden slab of olive-oil-drenched bread from the coast of Genoa — crisp and blistered on top, impossibly airy within, dimpled by fingertips and flaked with coarse salt.",
-  cuisine: "Italian",
-  culture: "Ligurian",
-  category: "breads",
-  tags: ["bread", "italian", "olive-oil", "focaccia", "baking"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "3 hours",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-04-10",
-  updatedAt: "2025-02-01",
-  flavorRadar: { sweet: 1, salty: 5, sour: 2, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Bread flour (12-13% protein)", ratioValue: 100, defaultUnit: "%", substitutions: ["tipo 0 flour"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Warm water (35-38 C)",          ratioValue: 80,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_03", role: "Fat",        name: "Extra-virgin olive oil",        ratioValue: 10,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                 ratioValue: 2.5, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Leavener",   name: "Instant yeast",                 ratioValue: 1,   defaultUnit: "%", substitutions: ["active dry yeast (proof first)"] },
-    { ingId: "ing_06", role: "Garnish",    name: "Flaky sea salt",                ratioValue: 0.5, defaultUnit: "%", substitutions: ["Maldon salt"] },
+  "repoId": "master_italian_focaccia_001",
+  "parentRepoId": null,
+  "slug": "focaccia",
+  "tool": {
+    "kind": "dough",
+    "doughId": "focaccia"
+  },
+  "author": "ForkRecipe Kitchen",
+  "title": "Focaccia ligurienne",
+  "description": "Une dalle dorée de pain à l'huile d'olive de la côte de Gênes – croustillante et cloquée sur le dessus, insaisissable à l'intérieur, fendu par bout des doigts et flocée de sel grossier.",
+  "cuisine": "Italien",
+  "culture": "Ligurien",
+  "category": "breads",
+  "tags": [
+    "pain",
+    "Italien",
+    "Huile d'olive",
+    "focaccia",
+    "Cuisson"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "3 hours",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-04-10",
+  "updatedAt": "2025-02-01",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 5,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_04", "ing_05"],
-      outputState: "shaggy_dough",
-      instructions: "Combine flour, salt, yeast, and warm water in a large bowl. Stir with a wooden spoon or dough whisk until no dry flour remains. The dough will be wet and sticky — this is correct. Do not add extra flour.",
-      visualCue: {
-        primaryTarget: "A rough, shaggy mass clinging to itself. Wet and ragged — no dry patches, no smooth surface yet.",
-        spectrum: [
-          { state: "Underdone", description: "Pockets of dry flour visible at the bottom or edges of the bowl.", action: "Scrape the sides and fold the dry flour into the center. Add a teaspoon of water if truly dry." },
-          { state: "Perfect",   description: "Uniformly ragged and wet. Sticks to your fingers. Pulls in long, glutinous strings.", action: "Cover and rest for 20 minutes (autolyse)." },
-          { state: "Overdone",  description: "You over-mixed with a machine — dough is already smooth and elastic.", action: "Proceed. The focaccia may be slightly tighter in crumb, but it will still bake well." },
-        ],
-      },
-      feelCue: "It should feel like thick, wet paste — if your hand comes away clean, the dough is too dry.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain (12-13% de protéines)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "tipo 0 farine"
+      ]
     },
     {
-      nodeId: "step_2", action: "Fold",
-      inputs: ["shaggy_dough", "ing_03"],
-      outputState: "developed_dough",
-      instructions: "Drizzle half the olive oil over the dough. Perform a series of stretch-and-folds: wet your hand, grab one side of the dough, stretch it up and fold it over the center. Rotate the bowl 90 degrees and repeat. Do four folds per round, three rounds over 90 minutes (one round every 30 minutes).",
-      visualCue: {
-        primaryTarget: "After the third set of folds, the dough is smooth, pillowy, and holds its shape in the bowl. Large bubbles visible beneath the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still flat and slack between folds. No visible bubbles. Tears easily.", action: "Give it another round of folds and more resting time — gluten needs patience at high hydration." },
-          { state: "Perfect",   description: "Dough is puffy, jiggles when the bowl is tapped, and springs back slowly when poked. Smooth and slightly translucent.", action: "Oil the pan and transfer the dough." },
-          { state: "Overdone",  description: "Dough has become tight and resists stretching. Snaps back aggressively.", action: "Let it relax for 15 minutes uncovered — overworked gluten needs rest." },
-        ],
-      },
-      feelCue: "Each fold should feel like pulling warm taffy. The dough will become lighter in your hands with each round — by the third, it almost lifts itself.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau chaude (35-38 C)",
+      "ratioValue": 80,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Proof",
-      inputs: ["developed_dough"],
-      outputState: "proofed_focaccia",
-      instructions: "Pour a generous pool of olive oil into a half-sheet pan. Transfer the dough into the pan and gently stretch it toward the edges. If it springs back, cover it and wait 15 minutes, then stretch again. Cover with plastic wrap and let it proof until doubled and filling most of the pan.",
-      visualCue: {
-        primaryTarget: "Dough nearly fills the pan edge to edge, visibly puffy and domed, with a bubbly, airy structure visible through the oiled surface.",
-        spectrum: [
-          { state: "Underdone", description: "Dough has barely spread. Sits like a thick disc in the center of the pan.", action: "Cover and wait — cold rooms slow fermentation. Move to a warmer spot if needed." },
-          { state: "Perfect",   description: "Dough covers 90% of the pan. Surface is pillowy and jiggles like a waterbed. Large bubbles are visible.", action: "Preheat the oven to 220 C (425 F) and dimple the dough." },
-          { state: "Overdone",  description: "Dough has spread thin and flat. Surface looks deflated with large collapsed bubbles.", action: "It overproofed — bake it anyway. The crust will be good, but the crumb will be denser." },
-        ],
-      },
-      feelCue: "Press a floured fingertip into the dough — it should slowly spring back about halfway, leaving a soft indent. If it fills back instantly, it needs more time. If it doesn't spring back at all, it has overproofed.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 10,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Dimple",
-      inputs: ["proofed_focaccia", "ing_03", "ing_06"],
-      outputState: "dimpled_focaccia",
-      instructions: "Drizzle the remaining olive oil over the surface and into any pools. Spread your fingers and press them firmly into the dough, all the way to the pan bottom, creating deep dimples across the entire surface. Scatter flaky salt. The oil will pool in the dimples — this is what makes focaccia focaccia.",
-      visualCue: {
-        primaryTarget: "The surface is a landscape of deep finger-craters with olive oil pooling in each one. Flakes of salt glint across the top.",
-        spectrum: [
-          { state: "Underdone", description: "Shallow indentations that barely dent the surface. Oil slides off to the edges.", action: "Press harder — use all ten fingertips and push to the pan. The dough can take it." },
-          { state: "Perfect",   description: "Deep, dramatic craters. Oil pools in every dimple. Salt is evenly scattered. The dough around each dimple has risen into small hills.", action: "Into the oven immediately." },
-          { state: "Overdone",  description: "Dough has been torn through in places. Oil is leaking under the dough.", action: "Gently press the torn spots back together. The oven spring will heal minor tears." },
-        ],
-      },
-      feelCue: "Your fingertips should meet resistance and then break through to the slick pan bottom. It feels like pressing into a firm pillow — satisfying, not violent.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2.5,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Bake",
-      inputs: ["dimpled_focaccia"],
-      outputState: "finished_focaccia",
-      instructions: "Bake at 220 C (425 F) on the lower-middle rack for 22-28 minutes, until deeply golden on top and crisp on the bottom. Remove from the pan immediately to a wire rack to prevent the bottom from steaming.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown on top with darker blistered spots around the dimples. The bottom, when lifted, is an even caramel-brown and audibly crisp.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold on top. Bottom is still soft and blond. No audible crunch when the pan is tapped.", action: "Return to the oven for 3-5 more minutes. Drop the rack one position lower for bottom heat." },
-          { state: "Perfect",   description: "Rich golden top with charred blisters at the peaks. Bottom is deeply browned and releases from the pan with a crackle. The focaccia sounds hollow when tapped.", action: "Transfer to a wire rack. Resist cutting for at least 10 minutes." },
-          { state: "Overdone",  description: "Dark brown approaching burnt. Edges are very dark. Bitter smell.", action: "Trim the darkest edges with kitchen shears. The interior is likely still excellent." },
-        ],
-      },
-      feelCue: "Tap the bottom of the focaccia — it should sound hollow, like knocking on a wooden door. If it sounds dense and thuddy, it needs more time. The kitchen should smell of toasted olive oil and warm wheat.",
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": [
+        "levure sèche active (proof first)"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Garnish",
+      "name": "Sel de mer blanc",
+      "ratioValue": 0.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Sel de maldon"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "shaggy_dough",
+      "instructions": "Mélanger la farine, le sel, la levure et l'eau chaude dans un grand bol. Mélanger avec une cuillère en bois ou de la pâte fouetter jusqu'à ce qu'aucune farine sèche ne reste. La pâte sera mouillée et collante — c'est exact. Ne pas ajouter de farine supplémentaire.",
+      "visualCue": {
+        "primaryTarget": "Une masse rugueuse et chaotique qui s'accroche à elle-même. Mouiller et agglomérer — pas de taches sèches, pas encore de surface lisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poches de farine sèche visibles au fond ou aux bords du bol.",
+            "action": "Gratter les côtés et plier la farine sèche au centre. Ajouter une cuillère à café d'eau si vraiment sèche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniquement ravagé et mouillé. Ça colle aux doigts. Il tire dans de longues cordes glutineuses.",
+            "action": "Couvrir et se reposer pendant 20 minutes (autolyse)."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez trop mélangé avec une machine — la pâte est déjà lisse et élastique.",
+            "action": "Continuez. La focaccia peut être légèrement plus serrée en miettes, mais elle va encore bien cuire."
+          }
+        ]
+      },
+      "feelCue": "Il devrait se sentir comme de la pâte épaisse et humide — si votre main sort propre, la pâte est trop sèche."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "shaggy_dough",
+        "ing_03"
+      ],
+      "outputState": "developed_dough",
+      "instructions": "Arroser la moitié de l'huile d'olive sur la pâte. Effectuez une série de stretch-and-folds: mouiller votre main, saisir un côté de la pâte, l'étirer et le plier sur le centre. Faites tourner le bol à 90 degrés et répétez. Faites quatre plis par tour, trois tours sur 90 minutes (un tour toutes les 30 minutes).",
+      "visualCue": {
+        "primaryTarget": "Après le troisième jeu de plis, la pâte est lisse, oreiller, et tient sa forme dans le bol. Grandes bulles visibles sous la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est encore plate et lâche entre les plis. Pas de bulles visibles. Larmes facilement.",
+            "action": "Donnez-lui une autre ronde de plis et plus de temps de repos — le gluten a besoin de patience à une hydratation élevée."
+          },
+          {
+            "state": "Perfect",
+            "description": "La toux est bouffie, glousse quand le bol est tapoté, et ressort lentement lorsqu'il est poché. Doux et légèrement translucide.",
+            "action": "Huiler la poêle et transférer la pâte."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est devenue serrée et résiste à l'étirement. Il recule agressivement.",
+            "action": "Laissez-le se détendre pendant 15 minutes à découvert — le gluten surmené a besoin de repos."
+          }
+        ]
+      },
+      "feelCue": "Chaque pli devrait avoir l'impression de tirer un taffiy chaud. La pâte deviendra plus légère dans vos mains à chaque tour — par le troisième, elle se soulève presque."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Preuve",
+      "inputs": [
+        "developed_dough"
+      ],
+      "outputState": "proofed_focaccia",
+      "instructions": "Verser une généreuse piscine d'huile d'olive dans une casserole en demi-feuille. Transférer la pâte dans la poêle et l'étirer doucement vers les bords. S'il ressort, couvrez-le et attendez 15 minutes, puis étirez à nouveau. Couvrir d'enveloppe en plastique et laisser la preuve jusqu'à ce que doublé et remplir la plupart de la casserole.",
+      "visualCue": {
+        "primaryTarget": "La douille remplit presque le bord de la poêle au bord, visiblement gonflée et bombée, d'une structure aérée et bubble visible à travers la surface huilée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux s'est à peine répandue. Assise comme un disque épais au centre de la casserole.",
+            "action": "Couvrir et attendre — les chambres froides ferment lentement. Passer à un endroit plus chaud si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte couvre 90 % de la poêle. La surface est oreiller et jiggle comme un lit d'eau. De grandes bulles sont visibles.",
+            "action": "Préchauffer le four à 220 C (425 F) et laisser tremper la pâte."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux s'est étendue mince et plate. La surface semble dégonflée avec de grandes bulles effondrées.",
+            "action": "C'est surpropriété — le faire cuire de toute façon. La croûte sera bonne, mais la miette sera plus dense."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un bout de doigt fariné dans la pâte — il devrait lentement revenir vers la moitié, laissant un creux doux. Si elle se remplit instantanément, il lui faut plus de temps. S'il ne ressort pas du tout, il a surprouvé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fosse",
+      "inputs": [
+        "proofed_focaccia",
+        "ing_03",
+        "ing_06"
+      ],
+      "outputState": "dimpled_focaccia",
+      "instructions": "Arrosez le reste de l'huile d'olive sur la surface et dans n'importe quelle piscine. Répartir vos doigts et les presser fermement dans la pâte, jusqu'au fond de la poêle, créant des fossettes profondes sur toute la surface. Saupoudrer le sel. L'huile sera mise dans les fossettes — c'est ce qui fait focaccia focaccia.",
+      "visualCue": {
+        "primaryTarget": "La surface est un paysage de gratte-doigts profonds avec l'huile d'olive pooling dans chacun. Des flocons de sel scintillent sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Indentations peu profondes qui ne dentelent pas la surface. L'huile glisse vers les bords.",
+            "action": "Appuyez plus fort — utilisez les dix bouts de doigts et poussez jusqu'à la casserole. La pâte peut la prendre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des cratères profonds et dramatiques. Des piscines pétrolières dans chaque fossette. Le sel est uniformément dispersé. La pâte autour de chaque fossette s'est levée dans de petites collines.",
+            "action": "Dans le four immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux a été déchirée par endroits. L'huile fuit sous la pâte.",
+            "action": "Appuyez doucement sur les points déchirés à nouveau ensemble. Le ressort du four guérira les larmes mineures."
+          }
+        ]
+      },
+      "feelCue": "Votre bout des doigts devrait rencontrer une résistance et ensuite passer au fond de la poêle. C'est comme si on pressait dans un oreiller ferme, satisfaisant et non violent."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "dimpled_focaccia"
+      ],
+      "outputState": "finished_focaccia",
+      "instructions": "Cuire à 220 °C (425 °F) sur le support intermédiaire inférieur pendant 22-28 minutes, jusqu'à ce qu'il soit profondément doré sur le dessus et croustillant sur le fond. Retirez immédiatement de la poêle sur un porte-fils pour empêcher le fond de la vapeur.",
+      "visualCue": {
+        "primaryTarget": "De couleur dorée sur le dessus avec des taches plus foncées autour des fossettes. Le fond, lorsqu'il est levé, est même brun caramel et audiblement croquant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle sur le dessus. Le fond est encore doux et blond. Pas de croûte sonore lorsque la casserole est tapée.",
+            "action": "Retourner au four 3-5 minutes de plus. Baissez la grille d'une position inférieure pour la chaleur du fond."
+          },
+          {
+            "state": "Perfect",
+            "description": "Top riche en or avec des blisters carbonisés aux pics. Le fond est profondément bruni et libère de la poêle avec un craquelin. La focaccia semble creuse quand elle est tapée.",
+            "action": "Transférez-le sur une grille. Résister à la coupe pendant au moins 10 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé approchant brûlé. Les bords sont très sombres. Une odeur amère.",
+            "action": "Trim les bords les plus sombres avec des cisailles de cuisine. L'intérieur est probablement encore excellent."
+          }
+        ]
+      },
+      "feelCue": "Tapez sur le fond de la focaccia — elle devrait sembler creuse, comme frapper sur une porte en bois. Si ça a l'air dense et dégueulasse, il faut plus de temps. La cuisine doit sentir l'huile d'olive grillée et le blé chaud."
+    }
+  ]
 };

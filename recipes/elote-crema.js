@@ -1,66 +1,176 @@
 export default {
-  repoId: "master_mexican_elote-crema_001",
-  parentRepoId: null,
-  slug: "elote-crema",
-  author: "ForkRecipe Kitchen",
-  title: "Elote Crema",
-  description: "The tangy, spiced mayo-cream that coats Mexican street corn — crema, mayo, and lime stirred together with chili powder into the essential slathering sauce for elotes and esquites.",
-  cuisine: "Mexican",
-  culture: "Mexico City",
-  category: "condiments",
-  tags: ["mexican", "corn", "street-food", "mayo", "chili", "lime"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 0, umami: 2, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",        name: "Mayonnaise (full-fat, preferably Hellmann's or Mexican brand)", ratioValue: 2, defaultUnit: "parts", substitutions: ["vegan mayo"] },
-    { ingId: "ing_02", role: "Dairy",      name: "Mexican crema (or sour cream)",                 ratioValue: 1,   defaultUnit: "parts", substitutions: ["crème fraîche", "labneh thinned with a little cream"] },
-    { ingId: "ing_03", role: "Acid",       name: "Fresh lime juice",                              ratioValue: 0.5, defaultUnit: "parts", substitutions: ["lemon juice"] },
-    { ingId: "ing_04", role: "Spice",      name: "Chili powder (pure ancho or New Mexico blend)", ratioValue: 0.15, defaultUnit: "parts", substitutions: ["smoked paprika", "Tajín seasoning"] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine sea salt",                                 ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Garnish",    name: "Cotija cheese, finely crumbled",                ratioValue: 0.5, defaultUnit: "parts", substitutions: ["feta cheese (less salty)", "Parmesan, finely grated"] },
-    { ingId: "ing_07", role: "Garnish",    name: "Extra chili powder or Tajín, for dusting",      ratioValue: 0,   defaultUnit: "to taste", substitutions: [] },
+  "repoId": "master_mexican_elote-crema_001",
+  "parentRepoId": null,
+  "slug": "elote-crema",
+  "author": "ForkRecipe Kitchen",
+  "title": "Éloté Créma",
+  "description": "La crème mayonnaise épicée et tannante qui enrobe le maïs de rue mexicain — créma, mayo et citron vert se mélange avec de la poudre de chili dans la sauce essentielle pour les éloutes et les esquites.",
+  "cuisine": "Mexicain",
+  "culture": "Mexico",
+  "category": "condiments",
+  "tags": [
+    "Mexique",
+    "maïs",
+    "Produits de la rue",
+    "Mayo",
+    "Chili",
+    "Chaux"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "elote_crema_base",
-      instructions: "In a medium bowl, combine the mayonnaise and Mexican crema. Whisk together until fully homogeneous — no streaks of either component should remain. Add the fresh lime juice a little at a time, whisking continuously; it will thin the mixture slightly and make it glossy. Add the chili powder and salt. Whisk vigorously for another 30 seconds. The crema should be smooth, glossy, and thick enough to cling to a spoon without running immediately. Taste at this point — the lime should be clearly present, the chili should give warmth rather than heat, and the overall flavor should be creamy, tangy, and moreish.",
-      visualCue: {
-        primaryTarget: "A smooth, pale-coral sauce with an even color throughout — no streaks of white mayo or cream — glossy enough to catch the light, and thick enough to hold its shape on a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "White streaks of unmixed mayo or cream visible; chili powder sitting in unblended clumps; the mixture looks separated.", action: "Whisk more vigorously until fully emulsified; chili powder needs thorough incorporation or it will bloom unevenly." },
-          { state: "Perfect",   description: "A uniform pale-coral cream, smooth and glossy, with a flavor that is tangy, creamy, and warmly spiced in equal measure.", action: "Taste and adjust lime for tartness and salt for savory backbone before adding garnish." },
-          { state: "Overdone",  description: "Sauce is very thin and watery — likely too much lime juice broke the emulsion, or the crema was very thin.", action: "Whisk in another spoonful of mayo to re-bind and thicken." },
-        ],
-      },
-      feelCue: "Drag a spoon through the sauce and lift it — the ribbon should fall slowly, holding its shape for a moment before blending back in. Too watery and it will run straight off corn; too thick and it won't coat evenly.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Mayonnaise (gros gras, de préférence de marque Hellmann ou mexicaine)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mayo végétalien"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Season",
-      inputs: ["elote_crema_base", "ing_06", "ing_07"],
-      outputState: "finished_elote_crema",
-      instructions: "Fold half of the crumbled cotija into the crema base and stir to combine — the salt from the cotija will further season the sauce. Taste again and adjust if needed. Transfer to a shallow bowl for dipping whole cobs, or to a squeeze bottle for esquites (corn cups). Just before serving, dust the surface generously with extra chili powder or Tajín and scatter the remaining cotija. The sauce can be made up to 3 days ahead and refrigerated; the flavors improve overnight as the lime mellows and the chili blooms.",
-      visualCue: {
-        primaryTarget: "A coral-toned, chunky-creamy sauce studded with white cotija crumbles, topped with a dusting of vivid red chili powder, ready for a cob to be rolled through it.",
-        spectrum: [
-          { state: "Underdone", description: "Cotija not yet incorporated, sauce looks plain and pale, no garnish — it will taste under-seasoned and one-dimensional.", action: "Fold in the cheese and dust with chili — these are not just garnish but essential seasoning in the sauce." },
-          { state: "Perfect",   description: "A richly flavored, creamy sauce with cotija providing salty pockets, chili powder giving color and warmth, lime keeping everything bright.", action: "Serve immediately with grilled corn, or refrigerate up to 3 days." },
-          { state: "Overdone",  description: "Too much cotija has made the sauce gritty and very salty.", action: "Add another dollop of crema and a squeeze of lime to balance the salt and smooth the texture." },
-        ],
-      },
-      feelCue: "Roll a cob through the finished sauce — it should adhere in a generous, even coat without being so thick it clumps. When you bite into an elote dressed this way, the cold, tangy cream should hit first, then the smoky chili, then the sweet char of the corn.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Créma mexicain (ou crème sure)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Crème fraîche",
+        "labneh éclairci avec un peu de crème"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de citron"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Poudre de chili (mélange pur ancho ou Nouveau-Mexique)",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika fumé",
+        "Assaisonnement de Tajín"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Garnish",
+      "name": "Fromage Cotija finement émietté",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fromage feta (moins salé)",
+        "Parmesan, râpé finement"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Poudre de chili supplémentaire ou Tajín, pour la poussière",
+      "ratioValue": 0,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "elote_crema_base",
+      "instructions": "Dans un bol moyen, mélanger la mayonnaise et le créma mexicain. Frottez ensemble jusqu'à ce qu'il y ait une homogénéité complète — aucune stries de chaque composant ne doit rester. Ajouter le jus de lime frais un peu à la fois, fouetter en continu; il éclaircira légèrement le mélange et le rendra brillant. Ajouter la poudre de chili et le sel. Frottez vigoureusement pendant 30 secondes. Le créma doit être lisse, brillant et assez épais pour s'accrocher à une cuillère sans courir immédiatement. Goûtez à ce point - la chaux devrait être clairement présente, le chili devrait donner de la chaleur plutôt que de la chaleur, et la saveur globale devrait être crémeuse, tannante et plus.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lisse, pâle-corale avec une couleur uniforme à travers — pas de stries de mayo blanc ou de crème — assez brillante pour attraper la lumière, et assez épaisse pour tenir sa forme sur une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries blanches de mayo ou de crème non mélangées visibles; poudre de chili assise dans des touffes non mélangées; le mélange semble séparé.",
+            "action": "fouetter plus vigoureusement jusqu'à ce qu'il soit complètement émulsifié; la poudre de chili doit être complètement incorporée ou elle fleurira inégalement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une crème uniforme pâle-corale, lisse et brillante, avec une saveur qui est tannante, crémeuse et chaudement épicée dans une mesure égale.",
+            "action": "Goûtez et ajustez la chaux pour la tarte et le sel pour l'épine dorsale salée avant d'ajouter la garniture."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est très fine et aqueuse — probablement trop de jus de lime cassé l'émulsion, ou le créma était très mince.",
+            "action": "fouetter dans une autre cuillère de mayo pour recoller et épaissir."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère à travers la sauce et soulevez - la — le ruban devrait tomber lentement, en tenant sa forme un moment avant de se fondre. Trop arrosé et il s'écoulera tout droit du maïs; trop épais et il ne s'enveloppera pas uniformément."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "elote_crema_base",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "finished_elote_crema",
+      "instructions": "Pliez la moitié du cotija émietté dans la base créma et remuez pour le combiner — le sel du cotija assaisonnera la sauce. Goûtez encore et ajustez si nécessaire. Transférer dans un bol peu profond pour tremper des épis entiers, ou dans une bouteille de compression pour esquites (gottes de maïs). Juste avant de servir, époussetez généreusement la surface avec de la poudre de chili supplémentaire ou Tajín et dispersez le cotija restant. La sauce peut être composée jusqu'à 3 jours à l'avance et réfrigérée; les saveurs s'améliorent pendant la nuit comme la chaux moelle et les fleurs de chili.",
+      "visualCue": {
+        "primaryTarget": "Une sauce aux tons coralliens et à la crème épaisse parsemée de croûtes de cotija blanc, surmontée d'une poussière de poudre de chili rouge vif, prête à être roulée à l'intérieur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Cotija non encore incorporé, la sauce a l'air claire et pâle, sans garniture — elle aura un goût sous-assaisonné et unidimensionnel.",
+            "action": "Pliez dans le fromage et la poussière avec du chili — ce ne sont pas seulement des garnitures mais des assaisonnements essentiels dans la sauce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce richement parfumée et crémeuse avec cotija fournissant des poches salées, poudre de chili donnant la couleur et la chaleur, la chaux gardant tout lumineux.",
+            "action": "Servir immédiatement avec du maïs grillé ou réfrigérer jusqu'à 3 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de cotija a rendu la sauce gritty et très salée.",
+            "action": "Ajouter une autre poupée de créma et une pression de chaux pour équilibrer le sel et lisser la texture."
+          }
+        ]
+      },
+      "feelCue": "Rouler une herbe à travers la sauce finie — elle devrait adhérer dans une couche généreuse, même sans être si épaisse qu'elle s'entremêle. Lorsque vous mordez dans une élote habillée de cette façon, la crème froide et acidulée devrait frapper d'abord, puis le chili fumé, puis le doux char du maïs."
+    }
+  ]
 };

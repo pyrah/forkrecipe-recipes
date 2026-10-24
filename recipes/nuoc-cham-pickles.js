@@ -1,114 +1,270 @@
 export default {
-  repoId: "master_vietnamese_nuocchamspickles_001",
-  parentRepoId: null,
-  slug: "nuoc-cham-pickles",
-  author: "ForkRecipe Kitchen",
-  title: "Vietnamese Quick-Pickled Vegetables",
-  description: "Ribbons of daikon and carrot pickled in sweetened rice vinegar brine — crunchy, bright, tangy, and essential alongside banh mi, pho, or any grilled protein.",
-  cuisine: "Vietnamese",
-  culture: "Vietnamese",
-  category: "fermented",
-  tags: ["vietnamese", "pickled", "daikon", "carrot", "banh-mi", "quick-pickle", "condiment"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 3, salty: 2, sour: 4, bitter: 0, umami: 0, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Daikon radish, peeled and julienned (matchstick cut)", ratioValue: 60, defaultUnit: "parts", substitutions: ["white turnip", "watermelon radish"] },
-    { ingId: "ing_02", role: "Structure",  name: "Carrot, peeled and julienned (matchstick cut)",        ratioValue: 40, defaultUnit: "parts", substitutions: ["young parsnip"] },
-    { ingId: "ing_03", role: "Acid",       name: "Unseasoned rice vinegar",                               ratioValue: 50, defaultUnit: "parts", substitutions: ["white wine vinegar (sharper)", "apple cider vinegar"] },
-    { ingId: "ing_04", role: "Sweetener",  name: "White sugar",                                           ratioValue: 30, defaultUnit: "parts", substitutions: ["caster sugar"] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine non-iodized salt",                                 ratioValue: 5,  defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_06", role: "Hydration",  name: "Warm water",                                            ratioValue: 50, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",      name: "Fresh red bird's eye chili, thinly sliced",             ratioValue: 5,  defaultUnit: "parts", substitutions: ["dried red chili flakes", "fresno chili"] },
+  "repoId": "master_vietnamese_nuocchamspickles_001",
+  "parentRepoId": null,
+  "slug": "nuoc-cham-pickles",
+  "author": "ForkRecipe Kitchen",
+  "title": "Légumes à pick-up rapide vietnamiens",
+  "description": "Rubans de daikon et de carottes marinés dans de la saumure sucrée de vinaigre de riz, croquants, brillants, acidulés et essentiels aux côtés de banh mi, de pho ou de toute protéine grillée.",
+  "cuisine": "Vietnamiens",
+  "culture": "Vietnamiens",
+  "category": "fermented",
+  "tags": [
+    "vietnamese",
+    "marinés",
+    "Daïkon",
+    "Carotte",
+    "BANH-MI",
+    "cueillir rapidement",
+    "condiment"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 2,
+    "sour": 4,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Salt",
-      inputs: ["ing_01", "ing_02", "ing_05"],
-      outputState: "salted_vegetables",
-      instructions: "Toss the julienned daikon and carrot with 1 teaspoon of the fine salt in a large bowl. Toss well and let stand for 10 minutes. This draws out excess water from the vegetables through osmosis, which concentrates their flavor, improves their texture, and allows the pickle brine to penetrate more evenly.",
-      visualCue: {
-        primaryTarget: "After 10 minutes: the vegetables have released a small amount of liquid into the bowl. The daikon and carrot are slightly wilted and more flexible, but not yet limp.",
-        spectrum: [
-          { state: "Underdone", description: "No liquid released. Vegetables still rigid and water-logged.", action: "Toss again and wait longer. If the room is cold, the osmotic process is slower — move to a warmer spot." },
-          { state: "Perfect",   description: "A small puddle of liquid has formed, vegetables are pliable and slightly translucent at the edges but still have excellent snap.", action: "Squeeze and rinse immediately." },
-          { state: "Overdone",  description: "Vegetables have been salted too long (over 30 minutes) and are very limp, releasing large amounts of liquid. Watery and soft.", action: "Rinse thoroughly and proceed — the pickles will be softer than ideal but still edible." },
-        ],
-      },
-      feelCue: "Pick up a strand of daikon and bend it — it should flex slightly and hold the curve rather than snapping rigidly, but it must not droop limply. That middle state is perfect.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Radis de Daikon, pelés et julienned",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "navets blancs",
+        "radis de pastèque"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Strain",
-      inputs: ["salted_vegetables"],
-      outputState: "rinsed_vegetables",
-      instructions: "Gather the salted vegetables in your hands and squeeze firmly over the sink, expelling as much water as possible. Rinse briefly under cold water, then squeeze again. This step removes excess salt and the bitter, sulfurous compounds released from the daikon during salting. Taste a strand — it should taste faintly salty, not aggressively so.",
-      visualCue: {
-        primaryTarget: "Squeezed, rinsed vegetables that look bright and clean. The daikon should be white again (not yellowed). No pooling liquid when set aside.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables still releasing liquid when squeezed, still taste very salty and slightly bitter.", action: "Rinse and squeeze again. Inadequate squeezing dilutes the pickling brine and makes the final product soggy." },
-          { state: "Perfect",   description: "Vegetables are dry enough that no water runs when squeezed hard. Clean, mild flavor. Slight translucency from the wilting.", action: "Pack into the jar with the chili and pour brine over." },
-          { state: "Overdone",  description: "Vegetables squeezed too aggressively and have become matted and compressed, losing their individual strand texture.", action: "Separate the strands by shaking in a bowl before packing. They will loosen in the brine." },
-        ],
-      },
-      feelCue: "A handful of rinsed, squeezed daikon should feel dry in your palm — like squeezing a wrung-out cloth, not a wet sponge. If liquid still drips, squeeze again.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Carottes pelées et juliennes (coupes de mâts)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jeune panais"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "pickling_brine",
-      instructions: "Combine the rice vinegar, remaining salt, sugar, and warm water in a bowl or small saucepan. Stir until the sugar and salt dissolve completely — no heat is strictly necessary since warm water (not boiling) does the job. The brine should taste assertively sweet-sour-salty in a 3:4:2 balance: punchy but not painful.",
-      visualCue: {
-        primaryTarget: "Completely clear brine that shimmers slightly from the dissolved sugar. Smells of clean rice vinegar with a sweet note.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar or salt granules still visible at the bottom when the bowl is swirled.", action: "Stir longer, or warm gently if needed. Undissolved sugar creates uneven sweetness." },
-          { state: "Perfect",   description: "Perfectly clear, no crystalline residue. Tastes like a balanced sweet-sour sauce — acidic but tempered by sweetness.", action: "Pour over the packed vegetables immediately." },
-          { state: "Overdone",  description: "Brine has been heated to boiling and reduced, concentrating the acidity and making the sugar caramelize slightly, changing the color to golden.", action: "Dilute with a splash of cold water to restore the intended volume. A pale, clear brine is the target." },
-        ],
-      },
-      feelCue: "Taste a small spoonful: there should be a sharp, bright citric-acid-like hit followed immediately by a sweet, round finish and a subtle salt undertone — never flat, never one-dimensional.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Vinaigre de riz non désaisonnalisé",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc (poivre)",
+        "vinaigre de cidre de pomme"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Infuse",
-      inputs: ["rinsed_vegetables", "ing_07", "pickling_brine"],
-      outputState: "brined_vietnamese_pickles",
-      instructions: "Pack the squeezed daikon and carrot into a clean jar, tucking the sliced chili throughout. Pour the brine over until the vegetables are fully submerged. Gently press down any floating strands. Seal the jar loosely and allow to sit at room temperature for 30 minutes minimum.",
-      visualCue: {
-        primaryTarget: "Daikon and carrot strands fully submerged in clear brine. Red chili slices visible throughout. The vegetables have already begun to take on a pale translucency from the acid.",
-        spectrum: [
-          { state: "Underdone", description: "Brine only covers part of the vegetables. Top strands are exposed to air.", action: "Press the vegetables down firmly and add more brine if needed. Exposed vegetables will not pickle and may discolor." },
-          { state: "Perfect",   description: "All vegetables submerged, brine level 1 cm above the vegetable mass. Chili visible. The brine is clear and the vegetables are beginning to turn from bright white/orange to lightly translucent.", action: "Seal loosely and rest 30 minutes at room temperature, then refrigerate." },
-          { state: "Overdone",  description: "Brine overfilled, barely any headspace. Jar will be messy to open.", action: "Pour off a little brine to leave 1–2 cm of headspace." },
-        ],
-      },
-      feelCue: "Reach into the jar and press the vegetables down through the brine — they should feel pliable and slightly springy, already beginning to absorb the brine rather than feeling stiff and raw.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre de ricin"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Chill",
-      inputs: ["brined_vietnamese_pickles"],
-      outputState: "finished_vietnamese_pickles",
-      instructions: "After 30 minutes at room temperature, refrigerate the jar for at least 30 more minutes — ideally 1 hour total from when the brine was poured. The cold accelerates the penetration of the brine into the vegetable cells. Pickles are best used within 2 weeks and keep well refrigerated for up to 3 weeks.",
-      visualCue: {
-        primaryTarget: "Lightly translucent daikon and carrot strands with a distinct sheen from the brine. The daikon is bright white with glassy edges; the carrot is a vivid amber-orange.",
-        spectrum: [
-          { state: "Underdone", description: "After 30 minutes: vegetables still taste raw and crunchy. Brine flavor has not penetrated beyond the surface.", action: "Refrigerate for another 30 minutes. The flavor develops from the outside in — patience produces a more evenly pickled result." },
-          { state: "Perfect",   description: "Slightly translucent, very crisp strands with a clean, bright, sweet-sour-salty flavor all the way through. Chili adds a gentle background heat. Snap when bitten.", action: "Serve immediately or refrigerate sealed for up to 3 weeks." },
-          { state: "Overdone",  description: "Vegetables are very soft and the brine is now sweet-sour water with little flavor left in the vegetables themselves.", action: "Use the soft pickles as an ingredient in rice paper rolls or slaws where texture is less critical." },
-        ],
-      },
-      feelCue: "A perfect strand of pickled daikon should snap cleanly and audibly when bent — a clean, crisp break with no stretching or tearing. That snap is what makes these irreplaceable on a banh mi.",
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin non iodé",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Hydration",
+      "name": "Eau chaude",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Chili des yeux d'oiseau rouge frais, tranché finement",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "flocons de chili rouge séché",
+        "fresno chili"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sel",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_05"
+      ],
+      "outputState": "salted_vegetables",
+      "instructions": "Mélanger le daikon julienned et la carotte avec 1 cuillère à café du sel fin dans un grand bol. Bien mélanger et laisser reposer 10 minutes. Cela tire l'excès d'eau des légumes par osmose, qui concentre leur saveur, améliore leur texture, et permet à la saumure de mariner de pénétrer plus uniformément.",
+      "visualCue": {
+        "primaryTarget": "Après 10 minutes: les légumes ont libéré une petite quantité de liquide dans le bol. Le daikon et la carotte sont légèrement flétris et plus souples, mais pas encore boiteux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Aucun liquide libéré. Légumes encore rigides et à l'eau.",
+            "action": "Jette encore et attends plus longtemps. Si la pièce est froide, le processus osmotique est plus lent — passer à un endroit plus chaud."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une petite flaque de liquide s'est formée, les légumes sont pliables et légèrement translucides aux bords, mais ont toujours une excellente touche.",
+            "action": "Presser et rincer immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes ont été salés trop longtemps (plus de 30 minutes) et sont très boiteux, libérant de grandes quantités de liquide. Eauux et doux.",
+            "action": "Rincer soigneusement et procéder — les cornichons seront plus doux que l'idéal, mais encore comestibles."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un brin de daikon et penchez - il devrait légèrement fléchir et tenir la courbe plutôt que de se casser rigidement, mais il ne doit pas tomber limpidement. Cet état est parfait."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Poignée",
+      "inputs": [
+        "salted_vegetables"
+      ],
+      "outputState": "rinsed_vegetables",
+      "instructions": "Rassemblez les légumes salés dans vos mains et pressez fermement sur l'évier, expulsant autant d'eau que possible. Rincer brièvement sous l'eau froide, puis presser à nouveau. Cette étape élimine l'excès de sel et les composés amers et sulfureux libérés du daikon pendant le salage. Goûtez un brin — il devrait goûter légèrement salé, pas agressivement.",
+      "visualCue": {
+        "primaryTarget": "Légumes pressés, rincés qui semblent brillants et propres. Le daikon doit être de nouveau blanc (non jauni). Pas de liquide de mise en réserve.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes libèrent encore du liquide lorsqu'ils sont pressés, ils ont encore un goût très salé et légèrement amer.",
+            "action": "Rincez et pressez encore. Une pression insuffisante dilue la saumure de décapage et rend le produit fini soggy."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les légumes sont assez secs pour qu'aucune eau ne coule lorsqu'elle est pressée. Saveur propre et douce. Légère translucidité du flétrissement.",
+            "action": "Emballez dans le bocal avec le chili et versez la saumure."
+          },
+          {
+            "state": "Overdone",
+            "description": "Légumes pressés trop agressivement et sont devenus mats et compressés, perdant leur texture individuelle de brin.",
+            "action": "Séparer les brins en tremblant dans un bol avant d'emballer. Ils vont se détendre dans la saumure."
+          }
+        ]
+      },
+      "feelCue": "Une poignée de daikon rincé et pressé devrait se sentir sec dans votre paume, comme serrer un chiffon, pas une éponge mouillée. Si le liquide coule encore, pressez à nouveau."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "pickling_brine",
+      "instructions": "Mélanger le vinaigre de riz, le reste du sel, le sucre et l'eau chaude dans un bol ou une petite casserole. Mélanger jusqu'à ce que le sucre et le sel se dissolvent complètement — aucune chaleur n'est strictement nécessaire puisque l'eau chaude (pas bouillante) fait le travail. La saumure doit goûter assidûment sucrée-saure-salée dans un balance 3:4:2 : puant mais pas douloureux.",
+      "visualCue": {
+        "primaryTarget": "Saumure complètement claire qui mijote légèrement du sucre dissous. Sens de vinaigre de riz propre avec une note sucrée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les granules de sucre ou de sel sont encore visibles au fond lorsque le bol est agité.",
+            "action": "Incorporer plus longtemps ou réchauffer doucement si nécessaire. Le sucre non dissous crée une douceur inégale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Parfaitement clair, pas de résidu cristallin. Goûte comme une sauce sucrée équilibrée – acide mais tempérée par la douceur.",
+            "action": "Verser les légumes emballés immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La saumure a été chauffée à ébullition et réduite, concentrant l'acidité et faisant le sucre caraméliser légèrement, changeant la couleur en or.",
+            "action": "Diluer avec un jet d'eau froide pour restaurer le volume prévu. Une saumure claire et pâle est la cible."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite cuillère: il devrait y avoir un coup citrique vif et citrique-comme l'acide, suivi immédiatement d'une finale douce, ronde et un subtil sous-ton sel — jamais plat, jamais unidimensionnel."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Infuse",
+      "inputs": [
+        "rinsed_vegetables",
+        "ing_07",
+        "pickling_brine"
+      ],
+      "outputState": "brined_vietnamese_pickles",
+      "instructions": "Emballez le daikon pressé et la carotte dans un pot propre, en tupant le chili tranché. Verser la saumure jusqu'à ce que les légumes soient complètement submergés. Appuyez doucement sur tous les brins flottants. Scellez le pot de façon souple et laissez reposer à température ambiante pendant 30 minutes minimum.",
+      "visualCue": {
+        "primaryTarget": "Daikon et les brins de carottes entièrement submergés dans la saumure claire. Des tranches de chili rouge sont visibles partout. Les légumes ont déjà commencé à prendre une translucence pâle de l'acide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La saumure ne couvre qu'une partie des légumes. Les fils supérieurs sont exposés à l'air.",
+            "action": "Appuyez fermement sur les légumes et ajoutez plus de saumure si nécessaire. Les légumes exposés ne piquent pas et peuvent décolorer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les légumes submergés, saumure 1 cm au-dessus de la masse végétale. Du Chili visible. La saumure est claire et les légumes commencent à tourner de blanc vif/orange à légèrement translucide.",
+            "action": "Sceller librement et reposer 30 minutes à température ambiante, puis réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brine surchargée, à peine n'importe quel espace. Jar sera mal à ouvrir.",
+            "action": "Verser un peu de saumure pour laisser 1 à 2 cm d'espace de tête."
+          }
+        ]
+      },
+      "feelCue": "Atteindre dans le pot et presser les légumes à travers la saumure — ils devraient se sentir souples et légèrement printaniers, déjà commencer à absorber la saumure plutôt que de se sentir raides et crus."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Refroidissement",
+      "inputs": [
+        "brined_vietnamese_pickles"
+      ],
+      "outputState": "finished_vietnamese_pickles",
+      "instructions": "Après 30 minutes à température ambiante, réfrigérer le pot pendant au moins 30 minutes de plus – idéalement 1 heure au total à partir du moment où la saumure a été versée. Le froid accélère la pénétration de la saumure dans les cellules végétales. Les pickles sont utilisés dans les 2 semaines et restent bien réfrigérés jusqu'à 3 semaines.",
+      "visualCue": {
+        "primaryTarget": "Daïkon et carotte légèrement translucides avec un éclat distinct de la saumure. Le daikon est blanc vif avec des bords vitreux; la carotte est un orange-ambre vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 30 minutes : les légumes ont encore un goût cru et croquant. La saveur de saumure n'a pas pénétré au-delà de la surface.",
+            "action": "Réfrigérer encore 30 minutes. La saveur se développe de l'extérieur dans — la patience produit un résultat plus uniformément décapé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un peu translucide, des brins très croustillants avec une saveur propre, lumineuse, sucrée-salée tout au long de la vie. Le Chili ajoute une douce chaleur de fond. Snap quand il est mordu.",
+            "action": "Servir immédiatement ou réfrigérer scellé jusqu'à 3 semaines."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont très doux et la saumure est maintenant douce-sour eau avec peu de saveur laissée dans les légumes eux-mêmes.",
+            "action": "Utilisez les cornichons mous comme ingrédient dans les rouleaux de papier de riz ou les griffes où la texture est moins critique."
+          }
+        ]
+      },
+      "feelCue": "Un brin parfait de daikon mariné doit se casser proprement et audiquement lorsqu'il est plié — une rupture propre et nette sans étirement ni déchirement. C'est ce qui les rend irremplaçables sur un banh mi."
+    }
+  ]
 };

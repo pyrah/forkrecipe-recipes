@@ -1,125 +1,287 @@
 export default {
-  repoId: "master_korean_kimchi-jjigae-broth_001",
-  parentRepoId: null,
-  slug: "kimchi-jjigae-broth",
-  author: "ForkRecipe Kitchen",
-
-  title: "Kimchi Jjigae Broth",
-  description: "A rust-red broth that hits with funky fermented depth before pork fat coats your tongue — built from aged kimchi that collapses into a silky, lip-sticking stock that smells like the inside of a Korean grandmother's refrigerator in the best possible way.",
-  cuisine: "Korean",
-  culture: "Korean Home Cooking",
-  category: "stocks",
-
-  tags: ["kimchi", "stew", "korean", "pork", "fermented"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-
-  // 0–5 scale. Aged kimchi and gochugaru push sour, heat, and umami high.
-  flavorRadar: { sweet: 1, salty: 4, sour: 4, bitter: 1, umami: 5, heat: 4 },
-
-  ingredients: [
-    // Fermented kimchi is the structural backbone of this broth.
-    { ingId: "ing_01", role: "Structure",  name: "Aged napa cabbage kimchi (at least 2 weeks old), roughly chopped", ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Protein",    name: "Pork belly or shoulder, cut into 3 cm cubes",                      ratioValue: 3,   defaultUnit: "parts", substitutions: ["firm tofu for vegetarian"] },
-    { ingId: "ing_03", role: "Liquid",     name: "Anchovy-kelp dashi or water",                                       ratioValue: 6,   defaultUnit: "parts", substitutions: ["low-sodium chicken stock"] },
-    { ingId: "ing_04", role: "Umami",      name: "Kimchi brine (reserved from the kimchi jar)",                       ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",      name: "Gochugaru (Korean red pepper flakes)",                              ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Umami",      name: "Doenjang (fermented soybean paste)",                                ratioValue: 0.25, defaultUnit: "parts", substitutions: ["white miso"] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Fish sauce",                                                        ratioValue: 0.25, defaultUnit: "parts", substitutions: ["soy sauce"] },
-    { ingId: "ing_08", role: "Allium",     name: "Garlic, minced (4 cloves)",                                         ratioValue: 0.25, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning",  name: "Sesame oil, to finish",                                             ratioValue: 0.1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Garnish",    name: "Scallion, sliced on the bias",                                      ratioValue: 0.25, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_korean_kimchi-jjigae-broth_001",
+  "parentRepoId": null,
+  "slug": "kimchi-jjigae-broth",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kimchi Jjigae Broth",
+  "description": "Un bouillon rouge rouille qui frappe avec une profondeur fermentée funky avant que la graisse de porc enrobe votre langue — construit à partir de kimchi vieilli qui s'effondre dans un stock soyeux et adhésif qui sent l'intérieur du réfrigérateur d'une grand-mère coréenne de la meilleure façon possible.",
+  "cuisine": "Coréen",
+  "culture": "Cuisine maison coréenne",
+  "category": "stocks",
+  "tags": [
+    "kimchi",
+    "ragoût",
+    "coréen",
+    "porc",
+    "fermenté"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sear",
-      inputs: ["ing_02"],
-      outputState: "browned_pork",
-      instructions: "Set a heavy-bottomed pot or Korean earthenware dolsot over medium-high heat without oil. Add pork cubes in a single layer and leave them undisturbed for 2–3 minutes. You want rendered fat pooling in the pot and caramel-brown crusts on at least two sides — this Maillard base is what gives the broth body. Turn once and brown the opposite side for 90 seconds. The pork should not be cooked through.",
-      visualCue: {
-        primaryTarget: "Mahogany-brown crust on at least two faces of each cube. Fat has rendered into the pot and the pork sizzles loudly in its own fat.",
-        spectrum: [
-          { state: "Underdone", description: "Meat is grey-white and steaming rather than searing. Fat has not rendered.", action: "Raise the heat and stop touching the meat — patience here pays dividends in broth depth." },
-          { state: "Perfect",   description: "Deep brown crusts, clear rendered fat pooling, the pot smells of roasted meat. Pork still raw at the center.", action: "Lower heat to medium and add garlic and gochugaru." },
-          { state: "Overdone",  description: "Crust is turning very dark or burning. Fond on the pot bottom is scorching.", action: "Add a splash of dashi immediately to deglaze, then proceed. The fond is still flavourful if not black." },
-        ],
-      },
-      feelCue: "You should hear a sustained, aggressive sizzle the moment pork hits the pot — a quiet or steaming sound means the pot or pork is too wet; pat the pork dry and raise the heat.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Choux de napa kimchi (âgés d'au moins 2 semaines), hachés approximativement",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["browned_pork", "ing_08", "ing_05"],
-      outputState: "bloomed_base",
-      instructions: "Push the pork to one side. Drop garlic and gochugaru into the rendered fat in the center of the pot. Stir and cook for 60–90 seconds until the garlic is fragrant but not browned and the gochugaru has turned the fat a vivid brick-red. This blooms the fat-soluble capsaicin compounds and builds colour into the broth from the start.",
-      visualCue: {
-        primaryTarget: "The fat in the pot is uniformly deep red-orange. Garlic smells sweet and cooked, not sharp. No dark brown spots on the garlic.",
-        spectrum: [
-          { state: "Underdone", description: "Fat still orange-yellow. Raw garlic smell still sharp and pungent.", action: "Keep stirring on medium heat for another 30 seconds." },
-          { state: "Perfect",   description: "Fat is rich brick-red. Garlic is softened and sweet-smelling. Kitchen smells of toasted chili.", action: "Add kimchi and stir to coat in the red oil." },
-          { state: "Overdone",  description: "Garlic is tan or brown. Gochugaru has darkened and smells bitter.", action: "Add kimchi immediately and deglaze — the broth will absorb and mellow the bitterness." },
-        ],
-      },
-      feelCue: "The fat should smell warm and deeply spiced, not acrid — a burnt-chili smell means the heat is too high.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Porc, ventre ou épaule, coupé en cubes de 3 cm",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tofu ferme pour végétarien"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["bloomed_base", "ing_01", "ing_04", "ing_06"],
-      outputState: "braised_kimchi",
-      instructions: "Add the chopped kimchi and its reserved brine, then the doenjang. Stir everything together, coating the kimchi in the red fat. Raise heat to medium and cook the kimchi for 5–7 minutes, stirring occasionally. The kimchi will begin to soften and deepen in colour from bright orange-red to a darker, brick-maroon. The smell shifts from sharply fermented to rounder and more complex.",
-      visualCue: {
-        primaryTarget: "Kimchi has wilted and darkened to a brick-maroon. The pot smells of cooked fermented cabbage — punchy and complex, not raw.",
-        spectrum: [
-          { state: "Underdone", description: "Kimchi is still bright orange and barely wilted. Brine smells raw and acidic.", action: "Cook 2–3 more minutes, stirring. The kimchi needs to fry a little in the fat." },
-          { state: "Perfect",   description: "Kimchi is visibly softened, darker, and fragrant. The doenjang has dissolved into the mix and smells savory.", action: "Pour in the dashi and raise heat to a boil." },
-          { state: "Overdone",  description: "Kimchi has collapsed to mush and is beginning to stick. Pot smells scorched.", action: "Add dashi immediately and scrape the bottom. The flavour is concentrated but not lost." },
-        ],
-      },
-      feelCue: "When you press a piece of kimchi with a wooden spoon it should yield easily and feel silky rather than crisp or squeaky.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Dashi anchois-kelp ou eau",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Stock de poulet à faible teneur en sodium"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["braised_kimchi", "ing_03", "ing_07"],
-      outputState: "developed_broth",
-      instructions: "Pour in the anchovy-kelp dashi and fish sauce. Bring to a vigorous boil over high heat, then reduce to a gentle, steady simmer. Cook uncovered for 20–25 minutes. The broth will reduce slightly and the pork will become tender. Skim any grey foam that rises in the first 5 minutes — after that, the fat rising is flavourful and should be left in.",
-      visualCue: {
-        primaryTarget: "Broth is a deep brick-red, slightly opaque, with fat droplets shimmering on the surface. Pork cubes are tender when pressed with a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is thin and still tastes sharp and raw-kimchi acidic. Pork is chewy.", action: "Continue simmering — 10 more minutes will knit it together." },
-          { state: "Perfect",   description: "Broth has body, a round fermented depth, and the pork yields to gentle pressure. The fat has partially emulsified into the liquid, giving it a silky feel on the lip.", action: "Taste and season, then finish with sesame oil." },
-          { state: "Overdone",  description: "Broth has reduced to a very thick paste. Kimchi is disintegrating.", action: "Add 1/4 cup hot water to bring it back, simmer 2 minutes to re-integrate." },
-        ],
-      },
-      feelCue: "Dip a spoon and let the broth coat the back — it should leave a thin, slightly clinging film rather than sheeting off clean like water.",
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Saumure de Kimchi (réservée du pot de kimchi)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Season",
-      inputs: ["developed_broth", "ing_09", "ing_10"],
-      outputState: "finished_kimchi_jjigae_broth",
-      instructions: "Taste the broth and adjust: if it needs salt, add fish sauce in 1/4-teaspoon increments rather than table salt. If it's too sour, a small pinch of sugar (not in the recipe — use judgment) will round it. If it's flat, add a little more kimchi brine. Remove from heat and drizzle sesame oil over the surface — do not stir it in fully, let it pool in patches. Scatter scallion over the top and serve immediately in the pot.",
-      visualCue: {
-        primaryTarget: "Broth surface gleams with sesame oil pools. Scallion is bright green against the dark red broth. Steam carries a warm, complex, fermented-spicy aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Sesame oil not added. Scallion raw. Broth seasoning not tasted and adjusted.", action: "Finish the seasoning step — the sesame oil is structural to the aroma, not optional." },
-          { state: "Perfect",   description: "Broth is complex, lip-smacking, and deeply savory with a clean chili finish. Scallion adds fresh contrast.", action: "Serve in the pot immediately while still at a rolling simmer." },
-          { state: "Overdone",  description: "Too much sesame oil has made the broth greasy and the sesame aroma dominates.", action: "Blot surface with a paper towel or add a splash more dashi to dilute." },
-        ],
-      },
-      feelCue: "The finished broth should make the inside of your cheeks salivate immediately on the first taste — salt, acid, and umami all hitting simultaneously before the chili heat builds on the back of the throat.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Gochugaru (poivrons rouges coréens)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "Doenjang (pâte de soja fermentée)",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "miso blanc"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sauce de poisson",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce de soja"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Ail, haché (4 girofles)",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Huile de sésame, pour finir",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Échalote, tranchée sur le biais",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "browned_pork",
+      "instructions": "Mettre un pot à fond lourd ou un dolsot coréen en faïence à feu moyen-élevé sans huile. Ajouter les cubes de porc en une seule couche et les laisser intacts pendant 2 à 3 minutes. Vous voulez rendre gras pooling dans le pot et croûtes brun caramel sur au moins deux côtés — cette base Maillard est ce qui donne le corps de bouillon. Tourner une fois et brunir le côté opposé pendant 90 secondes. Le porc ne doit pas être cuit.",
+      "visualCue": {
+        "primaryTarget": "Croûte brun acajou sur au moins deux faces de chaque cube. La graisse s'est transformée en pot et le porc s'étourne fort dans sa propre graisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est gris-blanc et vapeur plutôt que mer. La graisse n'a pas rendu.",
+            "action": "Levez la chaleur et arrêtez de toucher la viande — la patience verse ici des dividendes en profondeur de bouillon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des croûtes brunes profondes, de la graisse blanchie, le pot sent la viande rôtie. Du porc encore cru au centre.",
+            "action": "Réduire le feu à moyen et ajouter l'ail et le gochugaru."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte devient très sombre ou brûlante. Le fond de la marmite est brûlant.",
+            "action": "Ajouter immédiatement une touche de dashi pour déglacer, puis procéder. Le fond est encore parfumé, sinon noir."
+          }
+        ]
+      },
+      "feelCue": "Vous devriez entendre un étourdissement soutenu et agressif au moment où le porc frappe le pot — un bruit calme ou vapeur signifie que le pot ou le porc est trop humide; faire sécher le porc et augmenter la chaleur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "browned_pork",
+        "ing_08",
+        "ing_05"
+      ],
+      "outputState": "bloomed_base",
+      "instructions": "Poussez le porc d'un côté. Déposer l'ail et le gochugaru dans la graisse rendue au centre du pot. Mélanger et cuire pendant 60 à 90 secondes jusqu'à ce que l'ail soit parfumé mais non doré et que le gochugaru ait transformé la graisse en rouge brique vif. Cela fleurit les composés de capsaïcine solubles dans la graisse et ajoute de la couleur au bouillon dès le début.",
+      "visualCue": {
+        "primaryTarget": "La graisse est uniformément rouge-orange. L'ail sent doux et cuit, pas vif. Pas de taches brun foncé sur l'ail.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le gras est encore jaune orange. L'ail cru sent encore aiguisé et piquant.",
+            "action": "Continuer à remuer à feu moyen pendant 30 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La graisse est riche en briques rouges. L'ail est adouci et sucré. La cuisine sent le chili grillé.",
+            "action": "Ajouter le kimchi et mélanger pour enrober l'huile rouge."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est bronzé ou brun. Gochugaru s'est obscurci et sent amer.",
+            "action": "Ajouter kimchi immédiatement et déglacer — le bouillon absorbera et apaisera l'amertume."
+          }
+        ]
+      },
+      "feelCue": "La graisse doit sentir chaud et profondément épicé, pas acride — une odeur de chili brûlé signifie que la chaleur est trop élevée."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "bloomed_base",
+        "ing_01",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "braised_kimchi",
+      "instructions": "Ajouter le kimchi haché et sa saumure réservée, puis le doenjang. Mélanger tout ensemble, enrober le kimchi dans la graisse rouge. Élevez le feu à feu moyen et faites cuire le kimchi pendant 5 à 7 minutes, en remuant occasionnellement. Les kimchis commenceront à s'assouplir et à s'amplifier de rouge-orange vif à un maroon brique plus foncé. L'odeur passe d'une fermentation brusque à une fermentation plus ronde et plus complexe.",
+      "visualCue": {
+        "primaryTarget": "Kimchi s'est flétrie et a foncé dans un maroon de brique. La casserole sent le chou fermenté cuit — punchy et complexe, pas cru.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Kimchi est encore orange vif et à peine flétri. La saumure sent cru et acide.",
+            "action": "Cuire encore 2 à 3 minutes en remuant. Le kimchi a besoin de frire un peu dans la graisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Kimchi est visiblement adouci, plus foncé et parfumé. Le doenjang s'est dissous dans le mélange et sent savoureux.",
+            "action": "Verser le dashi et faire bouillir la chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Kimchi s'est effondré et commence à rester. Le pot sent brûlé.",
+            "action": "Ajouter immédiatement le dashi et gratter le fond. La saveur est concentrée mais pas perdue."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous appuyez sur un morceau de kimchi avec une cuillère en bois, il doit donner facilement et se sentir soyeux plutôt que croustillant ou sournois."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "braised_kimchi",
+        "ing_03",
+        "ing_07"
+      ],
+      "outputState": "developed_broth",
+      "instructions": "Verser le dashi anchois-kelp et la sauce de poisson. Porter à ébullition vigoureuse à feu vif, puis laisser mijoter doucement et régulièrement. Cuire à découvert pendant 20 à 25 minutes. Le bouillon diminuera légèrement et le porc deviendra tendre. Écraser toute mousse grise qui monte dans les 5 premières minutes — après cela, la hausse de graisse est aromatisée et doit être laissée dedans.",
+      "visualCue": {
+        "primaryTarget": "Broth est un rouge brique profond, légèrement opaque, avec des gouttelettes de graisse qui brillent à la surface. Les cubes de porc sont tendres lorsqu'ils sont pressés avec une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon est mince et a encore un goût vif et kimchi acide. Le porc mâche.",
+            "action": "Continuez à mijoter — 10 minutes de plus le tricoteront ensemble."
+          },
+          {
+            "state": "Perfect",
+            "description": "Broth a corps, une profondeur ronde fermentée, et le porc donne à la pression douce. La graisse a partiellement émulsifié dans le liquide, lui donnant une sensation soyeuse sur la lèvre.",
+            "action": "Goûter et assaisonner, puis finir avec de l'huile de sésame."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon a été réduit à une pâte très épaisse. Kimchi se désintègre.",
+            "action": "Ajouter 1/4 tasse d'eau chaude pour le ramener, laisser mijoter 2 minutes pour ré-intégrer."
+          }
+        ]
+      },
+      "feelCue": "Plonger une cuillère et laisser le bouillon enrober le dos — il devrait laisser un film mince, légèrement collant plutôt que de draper comme de l'eau propre."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Saison",
+      "inputs": [
+        "developed_broth",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_kimchi_jjigae_broth",
+      "instructions": "Goûtez le bouillon et ajustez-le : si vous avez besoin de sel, ajoutez la sauce de poisson en tranches 1/4-teaspon plutôt que le sel de table. Si elle est trop aigre, une petite pincée de sucre (pas dans la recette — utiliser le jugement) l'entourera. Si elle est plate, ajoutez un peu plus de saumure kimchi. Retirer du feu et arroser l'huile de sésame sur la surface — ne pas l'agiter complètement, laissez - le mettre en morceaux. Éparpillement de pétoncle sur le dessus et servir immédiatement dans la casserole.",
+      "visualCue": {
+        "primaryTarget": "Glissements de surface avec piscines de sésame. L'échalon est vert vif contre le bouillon rouge foncé. La vapeur porte un arôme chaud, complexe, fermenté et épicé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Huile de sésame non ajoutée. C'est cru. L'assaisonnement du bouillon n'a pas été goûté et ajusté.",
+            "action": "Terminer l'étape d'assaisonnement — l'huile de sésame est structurelle à l'arôme, pas facultatif."
+          },
+          {
+            "state": "Perfect",
+            "description": "Broth est complexe, lip-smacking, et profondément salé avec une finition de chili propre. L'oignon ajoute un contraste frais.",
+            "action": "Servir dans le pot immédiatement pendant qu'il est encore à mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop d'huile de sésame a rendu le bouillon gras et l'arôme de sésame domine.",
+            "action": "Blot surface avec une serviette en papier ou ajouter une éclaboussure plus de dashi pour diluer."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon fini devrait faire saliver l'intérieur de vos joues immédiatement sur le premier goût — sel, acide, et umami tous frappent simultanément avant que la chaleur de chili ne s'accumule sur le dos de la gorge."
+    }
+  ]
 };

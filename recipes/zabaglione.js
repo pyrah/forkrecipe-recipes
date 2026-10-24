@@ -1,95 +1,204 @@
 export default {
-  repoId: "master_italian_zabaglione_001",
-  parentRepoId: null,
-  slug: "zabaglione",
-  author: "ForkRecipe Kitchen",
-  title: "Zabaglione",
-  description: "A warm Italian custard of just three elements — egg yolks, sugar, and Marsala wine — whisked over a bain-marie until they triple in volume and become an impossibly light, trembling foam that tastes simultaneously of sweet wine, warm custard, and something almost ethereal.",
-  cuisine: "Italian",
-  culture: "Northern Italian",
-  category: "desserts",
-  tags: ["custard", "marsala", "egg", "dessert", "vegetarian"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 8, salty: 1, sour: 2, bitter: 2, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Binder",    name: "Egg yolks, room temperature",                   ratioValue: 6,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener", name: "Caster sugar (superfine)",                      ratioValue: 3,   defaultUnit: "parts", substitutions: ["honey (use slightly less)"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Dry Marsala wine (Florio Secco or similar)",    ratioValue: 3,   defaultUnit: "parts", substitutions: ["Moscato d'Asti", "dry sherry", "Vin Santo"] },
-    { ingId: "ing_04", role: "Garnish",   name: "Fresh seasonal berries or peaches, for serving", ratioValue: 1,   defaultUnit: "parts", substitutions: ["amaretti cookies", "pandoro"] },
+  "repoId": "master_italian_zabaglione_001",
+  "parentRepoId": null,
+  "slug": "zabaglione",
+  "author": "ForkRecipe Kitchen",
+  "title": "Zabaglione",
+  "description": "Une crème italienne chaude de seulement trois éléments — les jaunes d'œufs, le sucre et le vin Marsala — fouettée sur un bain-marie jusqu'à ce qu'ils triplent en volume et deviennent une mousse incroyablement légère et tremblante qui goûte simultanément du vin doux, de la crème chaude et quelque chose de presque éthéré.",
+  "cuisine": "Italien",
+  "culture": "Nord italien",
+  "category": "desserts",
+  "tags": [
+    "Coutard",
+    "Marsala",
+    "œuf",
+    "dessert",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 8,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "ribboned_yolk_mixture",
-      instructions: "Place the egg yolks and caster sugar in a large, deep, round-bottomed metal or glass bowl. Whisk vigorously by hand or with a hand mixer until the mixture turns pale ivory, triples slightly in volume, and falls from the whisk in a thick, slow ribbon that holds its shape on the surface for 2-3 seconds before dissolving. This pre-mixing — called 'blanchir' — begins the emulsification and ensures even, smooth cooking over the bain-marie. The sugar must be nearly fully dissolved before the bowl goes over heat — feel the mixture between fingers; it should feel smooth, not gritty.",
-      visualCue: {
-        primaryTarget: "Pale ivory, almost white mixture that has expanded in volume and falls from the whisk in a thick, continuous ribbon.",
-        spectrum: [
-          { state: "Underdone", description: "Still deep yellow and liquid. Falls from the whisk in thin drops, not a ribbon. Sugar granules are visible.", action: "Continue whisking for 2-3 more minutes. The color change and volume increase are essential for a stable zabaglione." },
-          { state: "Perfect",   description: "Pale ivory, nearly doubled in volume. Falls in a slow, thick ribbon that holds briefly on the surface before dissolving. Smooth to the touch, no grit.", action: "Add the Marsala and move to the bain-marie." },
-          { state: "Overdone",  description: "Over-whisked without heat — very stiff and dry. Difficult to stir.", action: "This is fine; proceed to the bain-marie. The heat will loosen it." },
-        ],
-      },
-      feelCue: "Rub a drop between your fingertips — it should feel satiny and smooth, with no sugar crystals remaining. The mixture should be warm from the friction of whisking.",
+      "ingId": "ing_01",
+      "role": "Binder",
+      "name": "Jaunes d'oeufs, température ambiante",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["ribboned_yolk_mixture", "ing_03"],
-      outputState: "zabaglione_base",
-      instructions: "Add the Marsala wine to the ribboned yolk-sugar mixture and whisk to combine. The mixture will thin out significantly — this is expected. The Marsala should be at room temperature; cold wine can cause the eggs to cook unevenly. Taste the raw mixture: it should be sweet, winey, and slightly rich. This is your baseline — everything that follows is just cooking and incorporating air.",
-      visualCue: {
-        primaryTarget: "A thin, pale-gold liquid, evenly combined with no streaks of egg yolk or unmixed sugar.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of dark yolk or unmixed sugar at the bottom of the bowl.", action: "Whisk more thoroughly until completely uniform." },
-          { state: "Perfect",   description: "Uniform pale gold liquid, evenly combined. Smells of wine and egg.", action: "Position the bowl over the simmering bain-marie and begin whisking immediately." },
-          { state: "Overdone",  description: "N/A — this step cannot be overdone.", action: "Proceed." },
-        ],
-      },
-      feelCue: "The mixture should smell delicately of Marsala — not raw egg, not alcohol burn, but a round, fruity, slightly caramelized wine fragrance.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre de canne (superfine)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "miel (utiliser un peu moins)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Whisk",
-      inputs: ["zabaglione_base"],
-      outputState: "cooked_zabaglione",
-      instructions: "Bring a saucepan of water to a gentle simmer — the water must not touch the bottom of the bowl, and it must not boil aggressively. Place the bowl of zabaglione base over the simmering water and immediately begin whisking continuously in a figure-eight pattern, making sure to reach the sides and bottom of the bowl. Whisk without stopping for 8-12 minutes. The mixture will slowly begin to thicken, increase dramatically in volume, and change from liquid to a thick foam. Watch the temperature: if you see any steam rising from the mixture or the eggs begin to look lumpy at the edges, remove the bowl from the heat immediately and continue whisking off-heat for 30 seconds, then return. The target temperature is 70-75 C (160-170 F). The zabaglione is done when it has tripled in volume and holds a soft mound.",
-      visualCue: {
-        primaryTarget: "A pale, voluminous foam three times the original volume, holding a soft mound when the whisk is lifted and dropped back in. Pale gold to ivory in color.",
-        spectrum: [
-          { state: "Underdone", description: "Still liquid and thin. The mixture barely coats the whisk. Less than doubled in volume. The Marsala smell is still very prominent and raw.", action: "Continue whisking over the bain-marie. The transformation takes patience — 10 minutes of continuous whisking is normal." },
-          { state: "Perfect",   description: "Tripled in volume, thick as softly whipped cream, and pale gold. Holds a soft ribbon or mound when the whisk is lifted. Smells of warm wine custard. Reaches 72 C on an instant-read thermometer.", action: "Remove from heat immediately and serve within 5 minutes." },
-          { state: "Overdone",  description: "Lumpy, grainy, or scrambled appearance at the sides. A slightly sulphurous smell. The foam has deflated and the mixture looks dense and curdled.", action: "Remove from heat immediately. If just starting to scramble, strain through a fine-mesh sieve — the texture improves somewhat. Serve immediately, chilled, as a sauce rather than a foam." },
-        ],
-      },
-      feelCue: "Lift the whisk and watch the mixture fall back: it should mound briefly on the surface before slowly sinking — like soft whipped cream, not liquid. Your arm will be genuinely tired at this point, which is how you know it's done.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Vin sec de Marsala (Florio Secco ou similaire)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Moscato d'Asti",
+        "sherry sec",
+        "Vin Santo"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Serve",
-      inputs: ["cooked_zabaglione", "ing_04"],
-      outputState: "finished_zabaglione",
-      instructions: "Divide the warm zabaglione immediately among warm glasses or shallow coupes — it will begin to deflate and separate within 10-15 minutes, so speed matters. Spoon the fresh berries or sliced peaches alongside or beneath the foam. The warm foam against cold or room-temperature fruit is the defining contrast of the dish. Serve with a small spoon and a delicate biscuit such as a savoiardi or amaretto if desired. Zabaglione can also be chilled briefly and served cold, in which case fold in a small amount of softly whipped cream while it is still warm to stabilize the foam.",
-      visualCue: {
-        primaryTarget: "Pale gold foam billowing above the rim of the glass, glossy and trembling, with bright fruit alongside or beneath.",
-        spectrum: [
-          { state: "Underdone", description: "Zabaglione served too cool and already deflating. Looks watery in the glass.", action: "Zabaglione must be served immediately from the heat. Prepare the glasses and fruit before you begin cooking." },
-          { state: "Perfect",   description: "Warm, voluminous pale-gold foam barely contained in the glass. Trembles when touched. Fruit provides brilliant color contrast.", action: "Eat immediately." },
-          { state: "Overdone",  description: "Served too late — foam has fully deflated into a thin, liquid custard layer at the bottom of the glass.", action: "It still tastes excellent — spoon it over the fruit as a sauce. For future reference, prepare glasses before starting." },
-        ],
-      },
-      feelCue: "The first spoonful should feel impossibly light on the tongue — a warm, sweet, winey cloud that dissolves before you expect it to, leaving behind a warmth that radiates from the chest.",
-    },
+      "ingId": "ing_04",
+      "role": "Garnish",
+      "name": "baies ou pêches de saison fraîches, à servir",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cookies d'amaretti",
+        "Pandoro"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "ribboned_yolk_mixture",
+      "instructions": "Placez les jaunes d'œufs et le sucre de roulette dans un grand bol en métal ou en verre à fond rond profond. fouetter vigoureusement à la main ou avec un mélangeur jusqu'à ce que le mélange devienne ivoire pâle, triple légèrement en volume, et tombe du fouet dans un ruban épais et lent qui tient sa forme à la surface pendant 2-3 secondes avant de se dissoudre. Ce prémélange, appelé « blanchir », commence l'émulsion et assure une cuisson uniforme et lisse sur le bain-marie. Le sucre doit être presque complètement dissout avant que le bol ne passe à chaud — sentir le mélange entre les doigts; il doit se sentir lisse, pas gritty.",
+      "visualCue": {
+        "primaryTarget": "ivoire pâle, mélange presque blanc qui a augmenté en volume et tombe du fouet dans un ruban épais et continu.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours jaune profond et liquide. Des chutes du fouet dans de fines gouttes, pas un ruban. Les granules de sucre sont visibles.",
+            "action": "Continuez à fouetter encore 2-3 minutes. Le changement de couleur et l'augmentation de volume sont essentiels pour une zabaglione stable."
+          },
+          {
+            "state": "Perfect",
+            "description": "ivoire pâle, presque doublé en volume. Des chutes dans un ruban lent et épais qui tient brièvement à la surface avant de se dissoudre. Doux au toucher, pas de grit.",
+            "action": "Ajouter le Marsala et passer au bain-marie."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surgissant sans chaleur — très raide et sèche. Difficile à remuer.",
+            "action": "C'est bien, allez au bain-marie. La chaleur va la relâcher."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte entre vos doigts — il devrait se sentir satiné et lisse, sans les cristaux de sucre restant. Le mélange doit être chaud à cause de la friction du fouet."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ribboned_yolk_mixture",
+        "ing_03"
+      ],
+      "outputState": "zabaglione_base",
+      "instructions": "Ajouter le vin Marsala au mélange de yolk-sucre et fouetter pour le combiner. Le mélange s'amincira considérablement, ce qui est attendu. Le Marsala doit être à température ambiante; le vin froid peut provoquer une cuisson inégale des œufs. Goûtez le mélange cru : il doit être doux, vineux et légèrement riche. C'est votre point de départ — tout ce qui suit est juste la cuisson et l'incorporation de l'air.",
+      "visualCue": {
+        "primaryTarget": "Un liquide mince, pâle-or, uniformément combiné avec aucune stries de jaune d'œuf ou de sucre non mélangé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Streaks de jaune foncé ou de sucre non mélangé au fond du bol.",
+            "action": "fouetter plus soigneusement jusqu'à ce qu'il soit complètement uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide uniforme en or pâle, uniformément combiné. Des odeurs de vin et d'œuf.",
+            "action": "Placez le bol sur le bain-marie et commencez à fouetter immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "S.O. — Cette étape ne peut pas être exagérée.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "Le mélange doit sentir délicatement Marsala — pas l'œuf cru, pas la brûlure d'alcool, mais un parfum rond, fruité, légèrement caramélisé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "zabaglione_base"
+      ],
+      "outputState": "cooked_zabaglione",
+      "instructions": "Portez une casserole d'eau à mijoter doucement — l'eau ne doit pas toucher le fond du bol, et elle ne doit pas bouillir agressivement. Placer le bol de la base de la zabaglione sur l'eau mijotante et commencer immédiatement à fouetter en continu dans un motif de figure-huit, en veillant à atteindre les côtés et le fond du bol. fouetter sans s'arrêter pendant 8-12 minutes. Le mélange commencera lentement à épaissir, à augmenter considérablement le volume et à passer du liquide à une mousse épaisse. Surveillez la température : si vous voyez de la vapeur monter du mélange ou si les oeufs commencent à avoir l'air grumeux aux bords, retirez immédiatement le bol de la chaleur et continuez à fouetter pendant 30 secondes, puis revenez. La température cible est de 70-75 C (160-170 F). La zabaglione se fait quand elle a triplé en volume et tient un monticule doux.",
+      "visualCue": {
+        "primaryTarget": "Une mousse pâle et volumineuse trois fois le volume d'origine, tenant un monticule doux lorsque le fouet est levé et retombé. Or pâle à ivoire de couleur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours liquide et mince. Le mélange enrobe à peine le fouet. Moins que doublé en volume. L'odeur de Marsala est encore très importante et crue.",
+            "action": "Continuez à fouetter sur le bain-marie. La transformation prend patience — 10 minutes de sifflement continu est normal."
+          },
+          {
+            "state": "Perfect",
+            "description": "Triple en volume, épais comme crème fouettée douce, et or pâle. Prend un ruban mou ou un monticule lorsque le fouet est levé. Des odeurs de crème de vin chaud. Atteint 72°C sur un thermomètre à lecture instantanée.",
+            "action": "Retirer immédiatement du feu et servir dans les 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Aspect lumpy, granuleux ou brouillé sur les côtés. Une odeur légèrement sulfureuse. La mousse a dégonflé et le mélange semble dense et caillé.",
+            "action": "Retirer immédiatement du feu. Si juste commencer à brouiller, à travers un tamis à mailles fines — la texture s'améliore quelque peu. Servir immédiatement, réfrigéré, comme une sauce plutôt qu'une mousse."
+          }
+        ]
+      },
+      "feelCue": "Soulevez le fouet et regardez le mélange retomber: il devrait se poser brièvement sur la surface avant de sombrer lentement — comme la crème fouettée douce, pas liquide. Votre bras sera vraiment fatigué à ce stade, ce qui est comment vous savez que c'est fait."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Servir",
+      "inputs": [
+        "cooked_zabaglione",
+        "ing_04"
+      ],
+      "outputState": "finished_zabaglione",
+      "instructions": "Divisez immédiatement la zabaglione chaude entre des verres chauds ou des coupés peu profonds — elle commencera à dégonfler et à se séparer dans les 10-15 minutes, donc la vitesse compte. Déposer les baies fraîches ou les pêches en tranches à côté ou sous la mousse. La mousse chaude contre les fruits froids ou à température ambiante est le contraste déterminant du plat. Servir avec une petite cuillère et un biscuit délicat comme un savoiardi ou un amaretto si désiré. Zabaglione peut également être réfrigéré brièvement et servi à froid, auquel cas plier dans une petite quantité de crème fouettée douce alors qu'il est encore chaud pour stabiliser la mousse.",
+      "visualCue": {
+        "primaryTarget": "Mousse d'or pâle soufflant au-dessus du bord du verre, brillant et tremblant, avec des fruits brillants à côté ou en dessous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Zabaglione servi trop cool et déjà déflatant. Ça a l'air aqueux dans le verre.",
+            "action": "Zabaglione doit être servi immédiatement à partir de la chaleur. Préparez les verres et les fruits avant de commencer à cuisiner."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mousse chaude et volumineuse d'or pâle à peine contenue dans le verre. Tremble quand il est touché. Le fruit offre un contraste de couleur brillant.",
+            "action": "Mangez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Servi trop tard — la mousse s'est complètement dégonflée dans une fine couche de crème liquide au fond du verre.",
+            "action": "Il a encore un excellent goût — le cuillerer sur le fruit comme une sauce. Pour référence future, préparez des verres avant de commencer."
+          }
+        ]
+      },
+      "feelCue": "La première cuillerée doit sentir une lumière impossible sur la langue — un nuage chaud, doux et vineux qui se dissout avant de s'y attendre, laissant derrière elle une chaleur qui rayonne de la poitrine."
+    }
+  ]
 };

@@ -1,78 +1,159 @@
 export default {
-  repoId: "master_japanese_shio_koji_001",
-  parentRepoId: null,
-  slug: "shio-koji",
-  author: "ForkRecipe Kitchen",
-  title: "Shio Koji",
-  description: "Salt-fermented koji rice that liquefies over seven days into a sweet, savory paste of devastating enzymatic power — it tenderizes protein, deepens umami, and transforms everything it touches into something more than the sum of its parts.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "fermented",
-  tags: ["fermented", "koji", "japanese", "marinade", "umami", "condiment"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "7 days",
-  ratioSystem: "weight",
-  stars: 1690,
-  forks: 231,
-  contributors: 57,
-  license: "CC-BY-SA",
-  createdAt: "2026-01-15",
-  updatedAt: "2026-01-15",
-  flavorRadar: { sweet: 2, salty: 4, sour: 1, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Dried rice koji (kome koji)",   ratioValue: 200, defaultUnit: "g",  substitutions: ["barley koji for earthier flavor"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Fine sea salt (non-iodized)",   ratioValue: 60,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",    name: "Water (filtered, room temp)",   ratioValue: 200, defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_japanese_shio_koji_001",
+  "parentRepoId": null,
+  "slug": "shio-koji",
+  "author": "ForkRecipe Kitchen",
+  "title": "Shio Koji",
+  "description": "Le riz koji fermenté au sel qui se liquéfie pendant sept jours en une pâte sucrée et salée d'une puissance enzymatique dévastatrice — il tend les protéines, approfondit l'umami et transforme tout ce qu'il touche en quelque chose de plus que la somme de ses parties.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "fermented",
+  "tags": [
+    "fermenté",
+    "Koji",
+    "Japonais",
+    "marinade",
+    "umami",
+    "condiment"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "7 days",
+  "ratioSystem": "weight",
+  "stars": 1690,
+  "forks": 231,
+  "contributors": 57,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-01-15",
+  "updatedAt": "2026-01-15",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "raw_shio_koji",
-      instructions: "Combine dried koji, salt, and water in a clean glass jar or container. Mix thoroughly with clean hands or a wooden spoon, breaking up any clumps of koji. Ensure the salt is evenly distributed throughout. The mixture should feel like wet, salted rice — the koji grains will be firm and distinct.",
-      visualCue: {
-        primaryTarget: "A moist, granular mixture where each koji grain is visible and uniformly coated in the salt-water solution.",
-        spectrum: [
-          { state: "Underdone", description: "Dry clumps of koji in a separate pool of salted water — not mixed.", action: "Mix more thoroughly, pressing the koji grains against the side of the jar to hydrate them evenly." },
-          { state: "Perfect",   description: "Uniformly moist, every grain glistening. Salt dissolved into the water. Smells faintly of mushrooms and grain.", action: "Loosely cover and begin fermentation." },
-          { state: "Overdone",  description: "Koji is completely waterlogged and mushy — too much water was added.", action: "The batch is compromised; fermentation may still proceed but texture will be off." },
-        ],
-      },
-      feelCue: "The mixture should feel like damp sand — each grain distinct but held together by moisture, not dissolved into a slurry.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz séché koji (kome koji)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "orge koji pour une saveur plus terreuse"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Ferment",
-      inputs: ["raw_shio_koji"],
-      outputState: "fermenting_shio_koji",
-      instructions: "Cover the jar loosely — not airtight, as the koji needs to breathe slightly. Leave at room temperature (18–25°C / 64–77°F) for 7–10 days. Stir once daily with a clean spoon, pressing the grains against the sides to feel the softening. The mixture will become wetter as the koji enzymes break down the starches and release liquid. It will smell progressively sweeter and more miso-like.",
-      visualCue: {
-        primaryTarget: "By day 4–5, the koji grains have softened noticeably and the mixture is visibly wetter. By day 7, a distinct liquid pools on top when undisturbed.",
-        spectrum: [
-          { state: "Underdone", description: "Koji grains are still firm and dry on day 3–4 with no visible liquefaction.", action: "Move to a warmer location; enzymatic activity is temperature-dependent." },
-          { state: "Perfect",   description: "Grains have softened to the consistency of overcooked rice. The mixture is pourable, smells sweetly of miso and rice wine. Color is pale amber.", action: "Taste: should be mildly salty, sweet, and deeply umami. Continue 1–2 more days if the sweetness is still too faint." },
-          { state: "Overdone",  description: "The mixture has darkened significantly and smells acidic — like mild vinegar.", action: "Transfer immediately to the refrigerator; it has fermented past peak but is still usable as a marinade." },
-        ],
-      },
-      feelCue: "By day 7, the koji paste should feel like thick yogurt — no longer gritty, but smooth and slightly viscous when pressed between your fingers.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (non iodé)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Set",
-      inputs: ["fermenting_shio_koji"],
-      outputState: "finished_shio_koji",
-      instructions: "Once the shio koji has reached its desired sweetness and the koji grains have mostly softened (7–10 days), stir well and transfer to an airtight container. Refrigerate — cold temperatures halt active fermentation and the paste will keep for 3–6 months, continuing to develop flavor very slowly. Use as a marinade, seasoning, or condiment.",
-      visualCue: {
-        primaryTarget: "A pale amber, porridge-like paste with softened grain texture and a fragrant, sweetly salty aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Grains still firm and distinctly grainy. Flavor is just salty with no sweetness yet.", action: "Continue fermenting 2–3 more days at room temperature." },
-          { state: "Perfect",   description: "Creamy, porridge-like consistency. Grains are soft. Flavor is round, sweet-salty-umami. Smells of miso, sake, and fresh grain.", action: "Refrigerate in an airtight container. Label with the date." },
-          { state: "Overdone",  description: "Very liquid, darker amber color, pronounced acidic smell.", action: "Still functional; strain out the grain solids for a smoother, liquid shio koji and use as a brine." },
-        ],
-      },
-      feelCue: "Properly fermented shio koji feels slightly slimy between the fingers — that viscosity is dissolved starch and released amino acids, the whole point of the fermentation.",
-    },
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau (filtrée, température ambiante)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "raw_shio_koji",
+      "instructions": "Mélanger le koji séché, le sel et l'eau dans un pot ou un contenant en verre propre. Mélanger soigneusement avec des mains propres ou une cuillère en bois, en brisant les amas de koji. Assurez-vous que le sel est uniformément distribué. Le mélange doit se sentir comme du riz humide et salé — les grains de koji seront fermes et distincts.",
+      "visualCue": {
+        "primaryTarget": "Un mélange granulaire humide où chaque grain koji est visible et uniformément revêtu dans la solution d'eau salée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des taillis secs de koji dans une piscine séparée d'eau salée — non mélangés.",
+            "action": "Mélanger plus soigneusement, en pressant les grains koji contre le côté du pot pour les hydrater uniformément."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toujours humide, chaque grain scintille. Sel dissous dans l'eau. Ça sent peu les champignons et les grains.",
+            "action": "Couvrir et commencer la fermentation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Koji est complètement arrosé et musqué — trop d'eau a été ajoutée.",
+            "action": "Le lot est compromis; la fermentation peut encore se poursuivre mais la texture sera éteinte."
+          }
+        ]
+      },
+      "feelCue": "Le mélange doit se sentir comme du sable humide — chaque grain distinct mais maintenu ensemble par l'humidité, non dissous dans un lisier."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Ferment",
+      "inputs": [
+        "raw_shio_koji"
+      ],
+      "outputState": "fermenting_shio_koji",
+      "instructions": "Couvrez le pot de manière lâche — pas hermétique, car le koji a besoin de respirer légèrement. Laisser à température ambiante (18-25°C / 64-77°F) pendant 7-10 jours. Mélanger une fois par jour avec une cuillère propre, presser les grains contre les côtés pour sentir l'adoucissement. Le mélange deviendra plus humide alors que les enzymes koji décomposent les amidons et libèrent du liquide. Il sentira progressivement plus doux et plus miso-like.",
+      "visualCue": {
+        "primaryTarget": "De 4 à 5 jours, les grains koji se sont adoucis de façon notable et le mélange est visiblement plus humide. Dès le 7ème jour, un bassin liquide distinct sur le dessus quand il n'est pas perturbé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains de Koji sont encore fermes et secs les jours 3-4 sans liquéfaction visible.",
+            "action": "Passer à un endroit plus chaud; l'activité enzymatique dépend de la température."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains se sont adoucis à la consistance du riz surcuit. Le mélange est versable, sent doux de miso et vin de riz. La couleur est ambre pâle.",
+            "action": "Bouche: doit être légèrement salé, doux et profondément umami. Continuer encore 1-2 jours si la douceur est encore trop faible."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange s'est considérablement obscurci et sent l'acidité, comme le vinaigre doux.",
+            "action": "Transférer immédiatement au réfrigérateur; il a fermenté au-delà du pic mais est encore utilisable comme marinade."
+          }
+        ]
+      },
+      "feelCue": "Au jour 7, la pâte de koji doit se sentir comme un yogourt épais, non plus gras, mais lisse et légèrement visqueuse lorsqu'on la presse entre les doigts."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Jeu",
+      "inputs": [
+        "fermenting_shio_koji"
+      ],
+      "outputState": "finished_shio_koji",
+      "instructions": "Une fois le shio koji a atteint sa douceur désirée et les grains koji ont pour la plupart adouci (7-10 jours), bien remuer et transférer dans un récipient hermétique. Réfrigérer — les températures froides arrêtent la fermentation active et la pâte conserve pendant 3 à 6 mois, continuant à développer la saveur très lentement. Utiliser comme marinade, assaisonnement ou condiment.",
+      "visualCue": {
+        "primaryTarget": "Une pâte ambre pâle, de type porridge avec une texture de grain adoucie et un arôme parfumé et douxment salé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore fermes et nettement granuleux. Le goût est juste salé sans douceur.",
+            "action": "Continuer à fermenter 2–3 jours de plus à température ambiante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une consistance crémeuse et porridge. Les grains sont doux. L'arôme est rond, doux-salé-umami. Des odeurs de miso, de saké et de grain frais.",
+            "action": "Réfrigérer dans un récipient hermétique. Étiquette avec la date."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très liquide, couleur ambre plus foncée, odeur acide prononcée.",
+            "action": "Toujours fonctionnel; épuiser les grains solides pour un shio koji liquide plus lisse et utiliser comme saumure."
+          }
+        ]
+      },
+      "feelCue": "Shio koji bien fermenté se sent légèrement visqueux entre les doigts — que la viscosité est l'amidon dissous et libère les acides aminés, le point entier de la fermentation."
+    }
+  ]
 };

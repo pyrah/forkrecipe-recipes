@@ -1,77 +1,181 @@
 export default {
-  repoId: "master_mexican_tamarind_agua_fresca_001",
-  parentRepoId: null,
-  slug: "tamarind-agua-fresca",
-  author: "ForkRecipe Kitchen",
-  title: "Agua de Tamarindo",
-  description: "The most complex of the aguas frescas — tamarind pods cracked open to reveal their sticky, dark pulp, which is dissolved in hot water and coaxed into a dark amber drink that is profoundly sour, faintly sweet, and loaded with a fruity depth that is halfway between ripe date and tart apricot.",
-  cuisine: "Mexican",
-  culture: "Mexican",
-  category: "beverages",
-  tags: ["beverage", "mexican", "tamarind", "agua-fresca", "vegan", "gluten-free", "dairy-free"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 0, sour: 5, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Tamarind pods (fresh) or seedless block", ratioValue: 200,  defaultUnit: "g",  substitutions: ["tamarind concentrate — use 3 tbsp dissolved in water, skip the soak step"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Boiling water (for dissolving pulp)",     ratioValue: 500,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",    name: "Cold water (to dilute)",                  ratioValue: 1000, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_04", role: "Sweetener", name: "White sugar",                             ratioValue: 100,  defaultUnit: "g",  substitutions: ["piloncillo (raw cane sugar) for a deeper molasses note", "agave nectar"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Pinch of fine sea salt",                  ratioValue: 1,    defaultUnit: "pinch", substitutions: [] },
+  "repoId": "master_mexican_tamarind_agua_fresca_001",
+  "parentRepoId": null,
+  "slug": "tamarind-agua-fresca",
+  "author": "ForkRecipe Kitchen",
+  "title": "Agua de Tamarindo",
+  "description": "Le plus complexe des aguas frescas — les gousses de tamarins s'ouvrent pour révéler leur pulpe collante et foncée, qui est dissoute dans l'eau chaude et coaxée dans une boisson ambre foncée profondément aigre, légèrement sucrée et chargée d'une profondeur fruitée à mi-chemin entre la date mûre et l'abricot de tarte.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain",
+  "category": "beverages",
+  "tags": [
+    "boisson",
+    "Mexique",
+    "Tamarin",
+    "agua-fresca",
+    "végétalien",
+    "Sans gluten",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 5,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Hydrate",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "soaked_tamarind",
-      instructions: "If using fresh pods, crack the hard brittle shells and peel them away, pulling off the dark stringy fibres that run lengthwise down the pod. The sticky, chestnut-coloured pulp inside should feel soft and dense. If using a seedless block, simply break it into rough chunks. Place the pulp in a heatproof bowl and pour the boiling water over it. Let it sit for 10 minutes, pressing and massaging the pulp with a fork or your fingers every few minutes — you will feel it loosen and dissolve into the water progressively. The liquid will turn a deep amber-brown.",
-      visualCue: {
-        primaryTarget: "A dark, amber-brown liquid with the tamarind pulp beginning to break apart into soft threads and fibres, smelling of sour fruit and dried dates.",
-        spectrum: [
-          { state: "Underdone", description: "The pulp is still dense and compact, releasing only a thin tinge of colour into the water — barely dissolved after 5 minutes.", action: "Continue soaking and press more vigorously with a fork, or use slightly hotter water. The fibres need sustained heat and pressure to release." },
-          { state: "Perfect",   description: "The water has turned a rich, dark amber and the pulp has broken into soft, paste-like strands easily pushed through a sieve. Seeds (if present) sit visible and free.", action: "Pour through a fine-mesh sieve into a clean pitcher, pressing out every drop." },
-          { state: "Overdone",  description: "Left too long, the mixture has cooled and the pulp has re-congealed into a thick, sticky mass that is harder to press through a sieve.", action: "Add a splash more warm water and massage again — it will loosen and pass through the sieve without issue." },
-        ],
-      },
-      feelCue: "Press the softened pulp between two fingers — it should spread easily and feel like soft, moist dried fruit rather than a dense, resistant block. If it still feels rubbery, it needs more soaking.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Blocs de tamarins (frais) ou sans pépins",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "concentré de tamarin — utiliser 3 c. à soupe dissous dans l'eau, sauter l'étape de stabilisation"
+      ]
     },
     {
-      nodeId: "step_2", action: "Strain",
-      inputs: ["soaked_tamarind"],
-      outputState: "tamarind_concentrate",
-      instructions: "Set a fine-mesh sieve over a large jug. Pour the tamarind water and pulp into the sieve and press firmly with the back of a large spoon, working in circular motions. The dark amber liquid will pass through while the fibres, seeds, and seed skins remain behind. Keep pressing until the residue in the sieve is nearly dry and fibrous. Discard the solids. The resulting concentrate should be a thick, dark amber liquid with a consistency slightly thicker than water — intensely sour and complex.",
-      visualCue: {
-        primaryTarget: "A dark, glossy amber-brown liquid collecting in the jug, deeper in colour than apple juice, with a slightly syrupy body that runs slowly from a tilted spoon.",
-        spectrum: [
-          { state: "Underdone", description: "The liquid running through the sieve is thin and pale, leaving most of the colour and flavour locked in unpressed pulp.", action: "Press the residue more firmly and in more passes — there is significant flavour still in the pulp." },
-          { state: "Perfect",   description: "A rich, dark amber concentrate that smells intensely of tart fruit and leaves a sticky residue on the sieve. The pressed solids are pale, dry, and papery.", action: "Proceed to sweetening and diluting immediately." },
-          { state: "Overdone",  description: "The fibrous residue has been pushed through the sieve, clouding the concentrate with fine threads.", action: "Strain once more through a coffee filter or fine cloth for clarity. The taste is unaffected." },
-        ],
-      },
-      feelCue: "Taste a drop of the concentrate on the tip of your finger — it should make you wince with tartness. If it merely tastes sour, press more pulp through the sieve.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau bouillante (pour dissoudre la pulpe)",
+      "ratioValue": 500,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Season",
-      inputs: ["tamarind_concentrate", "ing_04", "ing_05", "ing_03"],
-      outputState: "finished_tamarindo",
-      instructions: "Stir the sugar into the warm concentrate until completely dissolved, then add the pinch of salt. Pour in the cold diluting water gradually, tasting as you go — tamarind is assertive and the balance between sour, sweet, and salty is what defines the drink. The final agua should taste powerfully of tamarind fruit first, with the sweetness arriving second and the salt as a distant back note that makes the sourness pop. Refrigerate until cold. Stir before each pour as fine sediment will settle. Serve over ice.",
-      visualCue: {
-        primaryTarget: "A dark amber drink in a glass over ice — the colour of strong iced tea, slightly deeper, with a translucence that lets light glow amber through the glass.",
-        spectrum: [
-          { state: "Underdone", description: "Still warm and barely diluted, the drink is overwhelmingly sour with the sugar not yet fully dissolved.", action: "Stir until the sugar dissolves completely, then add the remaining cold water and refrigerate. Taste cold — the perception of sweetness changes significantly with temperature." },
-          { state: "Perfect",   description: "Cold, amber, and complex — the sourness is emphatic but cushioned by sweetness, with the salt giving it an almost savoury depth that makes it more interesting than any standard fruit drink.", action: "Serve immediately over ice. It keeps refrigerated for 3 days; stir before each use." },
-          { state: "Overdone",  description: "Too much sugar has dulled the tamarind's sourness and the drink tastes flat and sweet, like diluted tamarind candy.", action: "Squeeze in a lime or add a tablespoon more tamarind concentrate to reassert the tartness." },
-        ],
-      },
-      feelCue: "The cold drink should hit the back of the throat with a bright, clean tartness followed by a round, fruity sweetness — never sticky or cloying. The salt is felt rather than tasted, making the whole drink feel more alive.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau froide (à diluer)",
+      "ratioValue": 1000,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "piloncillo (sucre de canne brut) pour une note de mélasse plus profonde",
+        "nectar d'agave"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Pince de sel de mer fin",
+      "ratioValue": 1,
+      "defaultUnit": "pinch",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "soaked_tamarind",
+      "instructions": "Si vous utilisez des gousses fraîches, fissurez les coquilles cassantes et les épluchez, enlevez les fibres à cordes foncées qui s'écoulent dans le sens de la longueur. La pulpe collante de couleur châtaigne à l'intérieur devrait être douce et dense. Si vous utilisez un bloc sans graines, il suffit de le casser en morceaux rugueux. Placer la pulpe dans un bol thermofuge et verser l'eau bouillante dessus. Laissez-le reposer pendant 10 minutes, presser et masser la pulpe à l'aide d'une fourchette ou de vos doigts toutes les quelques minutes — vous la sentirez se détendre et se dissoudre progressivement dans l'eau. Le liquide deviendra brun-ambre profond.",
+      "visualCue": {
+        "primaryTarget": "Un liquide brun-ambre foncé avec la pulpe de tamarin qui commence à se décomposer en fils et fibres mous, sentant les fruits aigres et les dattes séchées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pulpe est encore dense et compacte, ne dégageant qu'une fine teinte de couleur dans l'eau, à peine dissoute après 5 minutes.",
+            "action": "Continuez à tremper et appuyez plus vigoureusement avec une fourchette ou utilisez de l'eau légèrement plus chaude. Les fibres ont besoin de chaleur et de pression soutenues pour se libérer."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'eau a transformé une ambre riche et foncée et la pulpe s'est brisée en brins doux, en pâte, facilement poussé à travers un tamis. Les graines (si présentes) sont visibles et libres.",
+            "action": "Verser à travers un tamis à mailles fines dans un pichet propre, en appuyant sur chaque goutte."
+          },
+          {
+            "state": "Overdone",
+            "description": "Laissé trop longtemps, le mélange s'est refroidi et la pulpe s'est re-congénérée en une masse épaisse et collante qui est plus difficile à presser à travers un tamis.",
+            "action": "Ajoutez une éclaboussure d'eau plus chaude et massez à nouveau — il se desserre et passer à travers le tamis sans problème."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la pulpe ramollie entre deux doigts — elle devrait se propager facilement et se sentir comme un fruit séché doux et humide plutôt qu'un bloc dense et résistant. Si elle est encore caoutchouteuse, elle a besoin d'être trempée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Poignée",
+      "inputs": [
+        "soaked_tamarind"
+      ],
+      "outputState": "tamarind_concentrate",
+      "instructions": "Réglez un tamis à mailles fines sur une grande cruche. Verser l'eau de tamarin et la pulpe dans le tamis et presser fermement avec le dos d'une grande cuillère, en travaillant en mouvements circulaires. Le liquide ambre foncé passera à travers tandis que les fibres, les graines et les peaux de graines restent derrière. Continuer à presser jusqu'à ce que le résidu du tamis soit presque sec et fibreux. Jetez les solides. Le concentré qui en résulte doit être un liquide ambré épais et foncé avec une consistance légèrement plus épaisse que l'eau, intensément acide et complexe.",
+      "visualCue": {
+        "primaryTarget": "Un liquide brun-ambre foncé et brillant qui s'accumule dans la cruche, de couleur plus profonde que le jus de pomme, avec un corps légèrement sirupeux qui coule lentement d'une cuillère inclinée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide qui traverse le tamis est mince et pâle, laissant la plus grande partie de la couleur et du goût enfermés dans une pulpe non pressée.",
+            "action": "Appuyez plus fermement sur le résidu et dans plus de passages — il y a encore une saveur importante dans la pulpe."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un concentré ambré riche et foncé qui sent intensément les fruits tartes et laisse un résidu collant sur le tamis. Les solides pressés sont pâles, secs et papiers.",
+            "action": "Procédez immédiatement à l'édulcoration et à la dilution."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le résidu fibreux a été poussé à travers le tamis, brouillant le concentré avec des fils fins.",
+            "action": "Plongez encore une fois à travers un filtre à café ou un fin chiffon pour plus de clarté. Le goût n'est pas affecté."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une goutte de concentré sur le bout de votre doigt — il devrait vous faire gagner avec de la tarte. S'il a seulement un goût aigre, pressez plus de pulpe dans le tamis."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "tamarind_concentrate",
+        "ing_04",
+        "ing_05",
+        "ing_03"
+      ],
+      "outputState": "finished_tamarindo",
+      "instructions": "Incorporer le sucre dans le concentré chaud jusqu'à dissolution complète, puis ajouter la pincée de sel. Versez progressivement dans l'eau froide diluante, en dégustant au fur et à mesure — le tamarin est affirmé et l'équilibre entre aigre, doux et salé est ce qui définit la boisson. L'agua finale devrait d'abord goûter de façon puissante aux fruits tamarins, avec la douceur arrivant en seconde et le sel comme une note arrière lointaine qui fait apparaître la surdité. Réfrigérer jusqu'à froid. Incorporer avant que les sédiments fins ne se déposent. Servir sur glace.",
+      "visualCue": {
+        "primaryTarget": "Une boisson d'ambre foncée dans un verre au-dessus de la glace — la couleur du thé fortement glacé, légèrement plus profonde, avec une translucence qui laisse briller l'ambre dans le verre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours chaude et à peine diluée, la boisson est extrêmement aigre avec le sucre non encore complètement dissous.",
+            "action": "Mélanger jusqu'à ce que le sucre se dissout complètement, puis ajouter l'eau froide restante et réfrigérer. Goûtez au froid — la perception de la douceur change significativement avec la température."
+          },
+          {
+            "state": "Perfect",
+            "description": "Froid, ambre et complexe — l'aurore est emphatique mais amortie par la douceur, avec le sel lui donnant une profondeur presque salée qui le rend plus intéressant que toute boisson de fruits standard.",
+            "action": "Servir immédiatement sur la glace. Il se conserve au réfrigérateur pendant 3 jours; remuer avant chaque utilisation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de sucre a terni l'aurore du tamarin et la boisson goûte plat et sucré, comme les bonbons dilués au tamarin.",
+            "action": "Presser dans une chaux ou ajouter une cuillère à soupe plus de concentré de tamarin pour réaffirmer la tartness."
+          }
+        ]
+      },
+      "feelCue": "La boisson froide doit frapper l'arrière de la gorge avec une tarte claire et propre suivie d'une douceur ronde et fruitée — jamais collante ni cloie. Le sel est ressenti plutôt que goûté, rendant la boisson entière plus vivante."
+    }
+  ]
 };

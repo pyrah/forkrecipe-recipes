@@ -1,78 +1,213 @@
 export default {
-  repoId: "master_american_fried-chicken-brine_001",
-  parentRepoId: null,
-  slug: "fried-chicken-brine",
-  author: "ForkRecipe Kitchen",
-  title: "Fried Chicken Brine",
-  description: "A tangy, herb-spiked buttermilk bath that penetrates deep into the chicken over 12–24 hours, tenderizing the muscle fibers and building a seasoned base that carries all the way to the bone.",
-  cuisine: "American",
-  culture: "Southern",
-  category: "condiments",
-  tags: ["brine", "buttermilk", "southern", "fried chicken", "marinade"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "720 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 7, sour: 6, bitter: 1, umami: 2, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Full-fat buttermilk",                 ratioValue: 8,   defaultUnit: "parts", substitutions: ["plain whole-milk yogurt thinned with water 1:1"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Kosher salt",                         ratioValue: 0.5, defaultUnit: "parts", substitutions: ["fine sea salt (reduce by 20%)"] },
-    { ingId: "ing_03", role: "Spice",     name: "Hot sauce (Crystal or Frank's)",      ratioValue: 0.5, defaultUnit: "parts", substitutions: ["pickled jalapeño brine"] },
-    { ingId: "ing_04", role: "Spice",     name: "Smoked paprika",                      ratioValue: 0.2, defaultUnit: "parts", substitutions: ["sweet paprika"] },
-    { ingId: "ing_05", role: "Spice",     name: "Garlic powder",                       ratioValue: 0.15, defaultUnit: "parts", substitutions: ["2 cloves fresh garlic, smashed"] },
-    { ingId: "ing_06", role: "Spice",     name: "Onion powder",                        ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Herb",      name: "Fresh thyme sprigs",                  ratioValue: 0.1, defaultUnit: "parts", substitutions: ["dried thyme (use half the quantity)"] },
-    { ingId: "ing_08", role: "Spice",     name: "Black pepper, coarsely ground",       ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_fried-chicken-brine_001",
+  "parentRepoId": null,
+  "slug": "fried-chicken-brine",
+  "author": "ForkRecipe Kitchen",
+  "title": "Saumure de poulet frite",
+  "description": "Un bain de babeurre tanné et épicé qui pénètre profondément dans le poulet pendant 12 à 24 heures, tendressant les fibres musculaires et construisant une base assaisonnée qui porte tout le chemin vers l'os.",
+  "cuisine": "Américain",
+  "culture": "Sud",
+  "category": "condiments",
+  "tags": [
+    "saumure",
+    "beurre",
+    "sud",
+    "Poulet frit",
+    "marinade"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "720 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 7,
+    "sour": 6,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "brine_mixture",
-      instructions: "Pour the buttermilk into a large bowl or container. Add the kosher salt and whisk until fully dissolved — undissolved salt will create salty pockets in the finished chicken rather than even seasoning throughout. Add the hot sauce, smoked paprika, garlic powder, onion powder, and black pepper, and whisk until uniform. Bruise the thyme sprigs between your palms to release the essential oils before adding them.",
-      visualCue: {
-        primaryTarget: "A uniformly pale-orange to rose-colored liquid, evenly tinted by the paprika. No white salt crystals visible at the bottom of the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Salt crystals are still visible at the bottom of the bowl. Spices appear as dry clumps on the surface.", action: "Whisk more vigorously for 30 seconds. If the salt is very coarse, let it sit 2 minutes and whisk again." },
-          { state: "Perfect",   description: "Smooth, uniform, faintly orange brine. Tastes aggressively salty and tangy with a back-note of heat. That assertiveness is correct — it is diluted by the chicken.", action: "Add the chicken pieces and submerge fully." },
-          { state: "Overdone",  description: "N/A — you cannot over-mix a brine. However, if you accidentally double the salt, dilute with more buttermilk now.", action: "Add buttermilk in equal parts to halve the salt concentration." },
-        ],
-      },
-      feelCue: "Taste a small amount on the back of your hand — it should hit you as noticeably saltier than you would want food to taste, which is correct. A brine this thick should feel like cold, liquid yogurt.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Lait de boucherie",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "yogourt de lait entier clair éclairci avec de l'eau 1:1"
+      ]
     },
     {
-      nodeId: "step_2", action: "Marinate",
-      inputs: ["brine_mixture"],
-      outputState: "brined_chicken",
-      instructions: "Add the chicken pieces (typically a cut-up 1.5 kg bird or equivalent parts). Press each piece under the brine and turn to coat. If using a zip-lock bag, remove the air before sealing so every surface is in contact with brine. Refrigerate for a minimum of 8 hours; 12–24 hours is ideal. Do not brine for more than 24 hours — the acids will begin to denature the surface proteins and make the coating slippery.",
-      visualCue: {
-        primaryTarget: "All chicken pieces are fully submerged with no portions sticking out above the brine line. The brine has taken on a faint pink tint from the raw meat.",
-        spectrum: [
-          { state: "Underdone", description: "Some chicken pieces are floating with dry skin above the brine level. Uneven coverage.", action: "Weigh the chicken down with a plate or transfer to a zip-lock bag so all surfaces contact the liquid." },
-          { state: "Perfect",   description: "Chicken fully submerged. After 12+ hours in the fridge, the surface of the meat will look slightly white and opaque, signaling protein denaturation from the acids — this is correct.", action: "Remove from brine, shake off excess (do not rinse), and proceed to dredging." },
-          { state: "Overdone",  description: "Chicken has brined more than 30 hours. The surface proteins are mushy and slick, and the coating will slide off during frying.", action: "Proceed to dredge immediately. Add 10% more flour to the dredge to help it adhere. The texture will suffer but the flavor is fine." },
-        ],
-      },
-      feelCue: "After the full brine time, the raw chicken should feel noticeably more tender and juicy to the touch compared to fresh chicken. The surface will feel slightly tacky from the thickened buttermilk — this is the adhesive layer the flour dredge grabs.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel de mer fin (réduire de 20%)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Rest",
-      inputs: ["brined_chicken"],
-      outputState: "tempered_brined_chicken",
-      instructions: "Remove the chicken from the brine and place on a wire rack set over a sheet pan. Do not rinse. Allow to rest at room temperature for 20–30 minutes before dredging. Cold chicken brought straight from the brine to hot oil causes two problems: the outside fries before the inside cooks through, and the temperature drop in the oil slows browning. Room-temperature chicken fries more evenly.",
-      visualCue: {
-        primaryTarget: "The chicken surface looks dull and slightly matte as the excess brine drips away. Edges of the skin begin to dry and tighten slightly.",
-        spectrum: [
-          { state: "Underdone", description: "Brine is still dripping heavily from the pieces. The surface looks wet and glossy.", action: "Give it more time on the rack. Pat the thickest pieces lightly with a paper towel if you are in a hurry." },
-          { state: "Perfect",   description: "Surface is tacky rather than wet. The brine has formed a thin, slightly sticky coating that will bond to the flour dredge. Pieces are cool but no longer cold to the touch.", action: "Proceed directly to the seasoned flour dredge." },
-          { state: "Overdone",  description: "Chicken has sat at room temperature for more than 45 minutes (food safety concern above 4 C).", action: "Proceed to dredging and frying immediately. Do not return to the fridge at this point." },
-        ],
-      },
-      feelCue: "Press the surface of a thigh piece — the brine coating should feel like thin, slightly sticky paste rather than a wet liquid film. That tackiness is the protein-lactic acid matrix that makes the crust bond.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "sauce chaude (cristal ou Frank)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "saumure jalapeño marinée"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika doux"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poudre d'ail",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "2 girofles d'ail frais, cassé"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poudre d'oignon",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "thym séché (utiliser la moitié de la quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre noir, grossièrement moulu",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "brine_mixture",
+      "instructions": "Verser le babeurre dans un grand bol ou un grand récipient. Ajouter le sel casher et fouetter jusqu'à ce qu'il soit complètement dissous — le sel non dissous créera des poches salées dans le poulet fini plutôt que d'assaisonner. Ajouter la sauce chaude, le paprika fumé, la poudre d'ail, la poudre d'oignon et le poivre noir, et fouetter jusqu'à uniforme. Bruser le thym entre vos paumes pour libérer les huiles essentielles avant de les ajouter.",
+      "visualCue": {
+        "primaryTarget": "Un liquide uniformément orange pâle à rose teinté par le paprika. Pas de cristaux de sel blanc visibles au fond du bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cristaux de sel sont encore visibles au fond du bol. Les épices apparaissent comme des amas secs à la surface.",
+            "action": "Frottez plus vigoureusement pendant 30 secondes. Si le sel est très grossier, laissez-le reposer 2 minutes et fouetter à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, uniforme, saumure légèrement orange. Goûte agressivement salée et tannante avec une note de chaleur. Cette affirmation est correcte — elle est diluée par le poulet.",
+            "action": "Ajouter les morceaux de poulet et submerger complètement."
+          },
+          {
+            "state": "Overdone",
+            "description": "S/O — Vous ne pouvez pas trop mélanger une saumure. Cependant, si vous doublez accidentellement le sel, diluer avec plus de beurre maintenant.",
+            "action": "Ajouter le babeurre en parties égales pour réduire de moitié la concentration de sel."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite quantité sur le dos de votre main — il devrait vous frapper aussi nettement plus salé que vous voudriez de la nourriture à goûter, ce qui est correct. Une saumure aussi épaisse devrait ressembler à du yogourt liquide et froid."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "brine_mixture"
+      ],
+      "outputState": "brined_chicken",
+      "instructions": "Ajouter les morceaux de poulet (généralement un oiseau coupé de 1,5 kg ou des parties équivalentes). Appuyez sur chaque pièce sous la saumure et tournez en couche. Si vous utilisez un sac à fermeture éclair, retirez l'air avant de sceller afin que chaque surface soit en contact avec la saumure. Réfrigérer pendant au moins 8 heures; 12 à 24 heures est idéal. Ne saumurez pas pendant plus de 24 heures — les acides commenceront à dénaturer les protéines de surface et à rendre le revêtement glissant.",
+      "visualCue": {
+        "primaryTarget": "Tous les morceaux de poulet sont entièrement submergés sans qu'il y ait de portion au-dessus de la ligne de saumure. La saumure a pris une faible teinte rose de la viande crue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Certains morceaux de poulet flottent avec une peau sèche au-dessus du niveau de la saumure. Une couverture inégale.",
+            "action": "Peser le poulet avec une assiette ou le transférer dans un sac à fermeture éclair pour que toutes les surfaces contactent le liquide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Poulet entièrement submergé. Après plus de 12 heures au réfrigérateur, la surface de la viande sera légèrement blanche et opaque, signalant la dénaturation des protéines à partir des acides — c'est exact.",
+            "action": "Retirer de la saumure, secouer l'excès (ne pas rincer) et procéder au dragage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poulet a brûlé plus de 30 heures. Les protéines de surface sont musquées et lissées, et le revêtement glisse pendant la friture.",
+            "action": "Passez immédiatement à la drague. Ajouter 10% de farine de plus à la drague pour l'aider à adhérer. La texture va souffrir mais la saveur est bonne."
+          }
+        ]
+      },
+      "feelCue": "Après la pleine saumure, le poulet cru devrait se sentir nettement plus tendre et juteux au toucher que le poulet frais. La surface se sentira légèrement piquante à partir du babeurre épaissé — c'est la couche adhésive que la drague de farine prend."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Repos",
+      "inputs": [
+        "brined_chicken"
+      ],
+      "outputState": "tempered_brined_chicken",
+      "instructions": "Retirez le poulet de la saumure et placez-le sur une grille en fil sur une casserole. Ne pas rincer. Laisser reposer à température ambiante de 20 à 30 minutes avant le dragage. Le poulet froid apporté directement de la saumure à l'huile chaude provoque deux problèmes : les frites extérieures avant que l'intérieur ne cuise, et la chute de température dans l'huile ralentit le brunissement. Des frites de poulet à température ambiante plus uniformément.",
+      "visualCue": {
+        "primaryTarget": "La surface du poulet semble terne et légèrement mate lorsque l'excès de saumure s'écoule. Les bords de la peau commencent à sécher et à serrer légèrement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La saumure coule encore fortement des morceaux. La surface semble humide et brillante.",
+            "action": "Donnez-lui plus de temps sur le rack. Patez les pièces les plus épaisses légèrement avec une serviette en papier si vous êtes pressé."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est collante plutôt que humide. La saumure a formé un mince revêtement légèrement collant qui se lie à la drague de farine. Les pièces sont fraîches mais plus froides au toucher.",
+            "action": "Passer directement à la drague de farine assaisonnée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poulet est resté à la température ambiante pendant plus de 45 minutes (préoccupation en matière de salubrité des aliments au-dessus de 4 °C).",
+            "action": "Procédez immédiatement au dragage et à la friture. Ne retournez pas au réfrigérateur."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la surface d'un morceau de cuisse — le revêtement en saumure doit se sentir comme une pâte mince et légèrement collante plutôt qu'un film liquide humide. Cette tactosité est la matrice d'acide protéique-lactique qui fait la liaison croûte."
+    }
+  ]
 };

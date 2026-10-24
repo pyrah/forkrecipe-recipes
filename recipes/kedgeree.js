@@ -1,107 +1,263 @@
 export default {
-  repoId: "master_british_kedgeree_001",
-  parentRepoId: null,
-  slug: "kedgeree",
-  author: "ForkRecipe Kitchen",
-
-  title: "Kedgeree",
-  description: "The British breakfast that never quite forgot it was Indian — smoked haddock and basmati rice perfumed with curry leaf and cardamom, topped with soft-boiled eggs and parsley, a colonial collision that became its own distinct thing.",
-  cuisine: "British",
-  culture: "Anglo-Indian",
-  category: "seafood",
-
-  tags: ["kedgeree", "smoked haddock", "rice", "british", "breakfast", "anglo-indian", "eggs"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-
-  stars: 980,
-  forks: 82,
-  contributors: 24,
-  license: "CC-BY-SA",
-  createdAt: "2025-01-05",
-  updatedAt: "2025-05-11",
-
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 1, umami: 4, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Undyed smoked haddock fillet",           ratioValue: 100, defaultUnit: "parts", substitutions: ["smoked cod", "kippered herring"] },
-    { ingId: "ing_02", role: "Starch",    name: "Basmati rice (rinsed)",                  ratioValue: 80,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Protein",   name: "Eggs (soft-boiled, halved)",             ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Dairy",     name: "Full-fat milk (for poaching haddock)",   ratioValue: 60,  defaultUnit: "parts", substitutions: ["water"] },
-    { ingId: "ing_05", role: "Fat",       name: "Unsalted butter",                        ratioValue: 15,  defaultUnit: "parts", substitutions: ["ghee"] },
-    { ingId: "ing_06", role: "Allium",    name: "Yellow onion (finely diced)",            ratioValue: 40,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Mild curry powder (Madras-style)",       ratioValue: 5,   defaultUnit: "parts", substitutions: ["garam masala + turmeric"] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Cardamom pods and bay leaf",             ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Herb",      name: "Flat-leaf parsley (chopped)",            ratioValue: 5,   defaultUnit: "parts", substitutions: ["coriander for a more Indian style"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Black pepper (freshly ground)",          ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_british_kedgeree_001",
+  "parentRepoId": null,
+  "slug": "kedgeree",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kedgeree",
+  "description": "Le petit déjeuner britannique qui n'a jamais complètement oublié, c'était l'indienne, l'aiglefin fumé et le riz basmati parfumé de feuilles de curry et de cardamome, surmonté d'œufs et de persil, une collision coloniale qui est devenue sa propre chose distincte.",
+  "cuisine": "Anglais",
+  "culture": "Anglo-Indien",
+  "category": "seafood",
+  "tags": [
+    "kedgeree",
+    "d'aiglefin fumé",
+    "riz",
+    "britanniques",
+    "Petit déjeuner",
+    "anglais",
+    "œufs"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 980,
+  "forks": 82,
+  "contributors": 24,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-01-05",
+  "updatedAt": "2025-05-11",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Poach",
-      inputs: ["ing_01", "ing_04"],
-      outputState: "poached_haddock",
-      instructions: "Place smoked haddock in a wide, shallow pan, skin side down. Pour milk over to nearly cover. Add a bay leaf and a few peppercorns. Bring to a gentle simmer over medium heat — do not boil. Poach for 8-10 minutes until the fish turns opaque and flakes easily. Remove fish to a plate. Reserve the poaching milk — it carries smokiness and salt that will season the rice. When fish is cool enough to handle, remove the skin and flake into large, irregular pieces.",
-      visualCue: {
-        primaryTarget: "Fish is uniformly opaque and ivory-white throughout. The flesh flakes into large, natural pieces when a fork is pressed gently against the thickest part.",
-        spectrum: [
-          { state: "Underdone", description: "The center of the fish is still translucent grey and resists flaking. The flesh is rubbery.", action: "Continue poaching 3-4 more minutes. The milk should be at a gentle simmer, not a rolling boil." },
-          { state: "Perfect",   description: "Fully opaque, natural flake, moist. Skin releases cleanly. Large pieces hold together when lifted.", action: "Remove from milk immediately and reserve the poaching liquid." },
-          { state: "Overdone",  description: "Fish is breaking apart in the milk. Pieces are dry and crumble into small fragments.", action: "Remove immediately and handle carefully. The fish will still work but the large-flake texture is lost." },
-        ],
-      },
-      feelCue: "A properly poached haddock flake should feel moist and slightly firm between your fingers — it resists breaking into small pieces, giving way at natural grain lines instead.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filet d'aiglefin fumé non teint",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "morue fumée",
+        "hareng kippé"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "spiced_onion_base",
-      instructions: "Melt butter in a wide, heavy pot over medium heat. Add onion and cook for 10 minutes until soft and golden. Add crushed cardamom pods, bay leaf, and curry powder. Stir for 1-2 minutes until the spices are fragrant and have bloomed in the butter. The onion should be soft and perfumed with curry, cardamom, and the faint sweetness of cooked allium. Remove bay leaf and any large cardamom pieces before adding rice.",
-      visualCue: {
-        primaryTarget: "Onion is golden and soft, coated in deep yellow-orange curry butter. The spices are fragrant and well distributed. The pot smells warmly of curry and cardamom.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still translucent and sharp-smelling. Curry powder looks pale and raw.", action: "Cook 3-5 more minutes. The spices need the onion to fully soften first." },
-          { state: "Perfect",   description: "Golden, jammy, uniformly yellow from curry. Deep, warm aromatic smell — spiced but not harsh.", action: "Add rice and stir to coat." },
-          { state: "Overdone",  description: "Curry powder is scorching and the smell is acrid. Onion is very brown.", action: "Add a splash of poaching milk immediately to stop the spices burning." },
-        ],
-      },
-      feelCue: "Bloomed curry in butter has a warm, round fragrance rather than a raw, sharp one — it smells like the inside of a good restaurant rather than an open spice jar.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Riz basmati (rincé)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["spiced_onion_base", "ing_02", "ing_04"],
-      outputState: "cooked_spiced_rice",
-      instructions: "Add the rinsed rice to the pot and stir to coat in the spiced butter. Pour in 300ml of the reserved poaching milk (topped up with water if needed). Bring to a boil, reduce heat to very low, and cover tightly. Cook for 12 minutes without lifting the lid. Remove from heat and let steam, covered, for 8 minutes. The rice should be fully cooked, fragrant with spice, and slightly yellow from the curry.",
-      visualCue: {
-        primaryTarget: "Rice is uniformly cooked, fluffy, and yellow-gold from the curry. A fork drawn through leaves distinct grain channels. No pooling liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Rice is still chalky at the center. Steam channels are absent or sparse. A chewy, starchy bite.", action: "Replace the lid and steam 5 more minutes over the lowest possible heat." },
-          { state: "Perfect",   description: "Fluffy, separated, golden-yellow grains. Clean and fragrant. Fork slides through without resistance.", action: "Gently fold in the haddock pieces." },
-          { state: "Overdone",  description: "Rice has clumped and the base layer is sticky. The poaching milk has overcooked and the bottom is scorching.", action: "Remove from heat immediately. Spoon from the center of the pot." },
-        ],
-      },
-      feelCue: "Lifting the lid of properly cooked kedgeree rice releases a plume of cardamom-curry steam that smells like morning in a different century.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Œufs (doux, coupés en deux)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Fold",
-      inputs: ["cooked_spiced_rice", "poached_haddock", "ing_03", "ing_09", "ing_10"],
-      outputState: "finished_kedgeree",
-      instructions: "Gently fold the haddock flakes into the rice using a wide spatula, working in broad, careful motions to keep the fish in large pieces. Add the soft-boiled eggs (halved or quartered) and scatter chopped parsley over the top. Season with black pepper — the smoked fish will have contributed significant salt, so taste before adding any. Serve directly from the pot with butter on the side.",
-      visualCue: {
-        primaryTarget: "Golden rice with large ivory fish flakes, vivid green parsley, and the golden yolk of a soft-boiled egg visible throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Haddock and rice are in separate layers. The parsley and eggs haven't been added.", action: "Fold gently but completely. Every spoonful should contain both rice and fish." },
-          { state: "Perfect",   description: "Uniformly distributed golden rice with large, moist fish flakes and visible egg halves. The whole dish is fragrant and vibrant.", action: "Serve immediately in warm bowls." },
-          { state: "Overdone",  description: "Haddock has broken into very small flakes from over-stirring. The egg yolks have crumbled into the rice.", action: "Serve anyway. The flavor is intact — only the texture of the fish has changed." },
-        ],
-      },
-      feelCue: "A properly made kedgeree smells of smoked fish, warm spice, and fresh parsley — three things that have no obvious business being together, yet sit in perfect harmony.",
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Lait entier (pour l'aiglefin braconnier)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ghee"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Oignon jaune (en dés)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poudre de curry légère (style Madras)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "garam masala + curcuma"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Pousses de cardamome et feuilles de laurier",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Persil à feuilles plates (choupé)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "coriandre pour un style plus indien"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Poivre noir (fraîchir)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Pochette",
+      "inputs": [
+        "ing_01",
+        "ing_04"
+      ],
+      "outputState": "poached_haddock",
+      "instructions": "Placer l'aiglefin fumé dans une grande casserole peu profonde, côté peau vers le bas. Verser le lait sur presque couvert. Ajouter une feuille de laurier et quelques grains de poivre. Porter à feu doux à feu moyen — ne pas faire bouillir. Pocher pendant 8-10 minutes jusqu'à ce que le poisson devienne opaque et flocon facilement. Retirez le poisson dans une assiette. Réservez le lait de braconnage — il porte de la fumée et du sel qui assaisonneront le riz. Lorsque le poisson est assez frais pour être manipulé, retirez la peau et flocez-le en gros morceaux irréguliers.",
+      "visualCue": {
+        "primaryTarget": "Le poisson est uniformément opaque et blanc ivoire. La chair s'éclabousse en gros morceaux naturels lorsqu'une fourchette est pressée doucement contre la partie la plus épaisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre du poisson est encore gris translucide et résiste aux flocons. La chair est caoutchouteuse.",
+            "action": "Continuez à braconner 3-4 minutes de plus. Le lait doit mijoter doucement, et non pas faire bouillir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement opaque, flocons naturels, humide. La peau se libère proprement. Les grandes pièces se tiennent ensemble lorsqu'elles sont levées.",
+            "action": "Retirer immédiatement du lait et réserver le liquide de braconnage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson se brise dans le lait. Les morceaux sont secs et s'écroulent en petits fragments.",
+            "action": "Retirer immédiatement et manipuler soigneusement. Le poisson fonctionnera encore, mais la texture de gros flocons est perdue."
+          }
+        ]
+      },
+      "feelCue": "Un flocon d'aiglefin bien poché devrait se sentir humide et légèrement ferme entre les doigts — il résiste à la rupture en petits morceaux, laissant place à des lignes de grains naturelles."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "spiced_onion_base",
+      "instructions": "Faire fondre le beurre dans un grand pot lourd à feu moyen. Ajouter l'oignon et cuire 10 minutes jusqu'à ce qu'il soit doux et doré. Ajouter les gousses de cardamome concassées, la feuille de laurier et la poudre de curry. Incorporer 1-2 minutes jusqu'à ce que les épices soient parfumées et ont fleuri dans le beurre. L'oignon doit être doux et parfumé avec le curry, la cardamome et la légère douceur de l'allium cuit. Enlever la feuille de laurier et les grosses pièces de cardamome avant d'ajouter du riz.",
+      "visualCue": {
+        "primaryTarget": "L'oignon est doré et doux, recouvert de beurre de curry jaune-orange profond. Les épices sont parfumées et bien distribuées. La casserole sent chaudement le curry et la cardamome.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore translucide et aiguisé. La poudre de curry semble pâle et crue.",
+            "action": "Faire cuire 3-5 minutes de plus. Les épices ont besoin de l'oignon pour adoucir complètement d'abord."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or, jammy, uniformément jaune du curry. Une odeur aromatique profonde et chaude, épicée mais pas dure.",
+            "action": "Ajouter le riz et mélanger pour enrober."
+          },
+          {
+            "state": "Overdone",
+            "description": "La poudre de curry brûle et l'odeur est acride. L'oignon est très brun.",
+            "action": "Ajouter immédiatement un jet de lait de braconnage pour arrêter la combustion des épices."
+          }
+        ]
+      },
+      "feelCue": "Le curry fleuri dans le beurre a une fragrance ronde et chaude plutôt qu'une fragrance crue et tranchante — il sent l'intérieur d'un bon restaurant plutôt qu'un pot d'épices ouvert."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "spiced_onion_base",
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "cooked_spiced_rice",
+      "instructions": "Ajouter le riz rincé dans la casserole et mélanger pour enrober le beurre épicé. Verser 300 ml du lait de braconnage réservé (rempli d'eau si nécessaire). Porter à ébullition, réduire le feu à très faible et couvrir soigneusement. Cuire 12 minutes sans lever le couvercle. Retirer du feu et laisser la vapeur couverte pendant 8 minutes. Le riz doit être entièrement cuit, parfumé d'épices et légèrement jaune du curry.",
+      "visualCue": {
+        "primaryTarget": "Le riz est uniformément cuit, moelleux et jaune-or du curry. Une fourchette tirée à travers des canaux de grains distincts. Pas de liquide de mise en commun.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz est toujours crayeux au centre. Les canaux à vapeur sont absents ou clairsemés. Une morsure d'amidon.",
+            "action": "Remplacer le couvercle et la vapeur 5 minutes de plus sur la chaleur la plus basse possible."
+          },
+          {
+            "state": "Perfect",
+            "description": "Grains jaunes dorés, séparés. Propre et parfumé. La fourche glisse sans résistance.",
+            "action": "Plier doucement dans les morceaux d'aiglefin."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz s'est emparé et la couche de base est collante. Le lait de braconnage a trop cuit et le fond brûle.",
+            "action": "Retirer immédiatement du feu. Spoon du centre du pot."
+          }
+        ]
+      },
+      "feelCue": "Lever le couvercle du riz kedgeree bien cuit libère un panache de vapeur cardamome-curry qui sent comme le matin dans un siècle différent."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plier",
+      "inputs": [
+        "cooked_spiced_rice",
+        "poached_haddock",
+        "ing_03",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_kedgeree",
+      "instructions": "Plier doucement les flocons d'aiglefin dans le riz à l'aide d'une large spatule, en travaillant en larges mouvements prudents pour garder le poisson en gros morceaux. Ajouter les œufs mous (chaudés ou en quartiers) et disperser le persil haché sur le dessus. Assaisonner avec du poivre noir — le poisson fumé aura apporté un sel important, alors goûtez avant d'en ajouter. Servir directement de la casserole avec du beurre sur le côté.",
+      "visualCue": {
+        "primaryTarget": "Riz doré avec de grands flocons de poisson ivoire, persil vert vif, et le jaune d'or d'un oeuf doux visible partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'aiglefin et le riz sont en couches séparées. Le persil et les œufs n'ont pas été ajoutés.",
+            "action": "Plier doucement mais complètement. Chaque cuillère doit contenir du riz et du poisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riz doré uniformément distribué avec de grands flocons de poissons humides et des moitiés visibles d'oeufs. Le plat entier est parfumé et vibrant.",
+            "action": "Servir immédiatement dans des bols chauds."
+          },
+          {
+            "state": "Overdone",
+            "description": "Haddock s'est cassé en très petits flocons à la suite d'un surmenage. Les jaunes d'œufs sont tombés dans le riz.",
+            "action": "Servez quand même. La saveur est intacte — seule la texture du poisson a changé."
+          }
+        ]
+      },
+      "feelCue": "Un kedgeree bien fait sent le poisson fumé, l'épice chaude et le persil frais — trois choses qui n'ont pas d'affaires évidentes étant ensemble, tout en étant en parfaite harmonie."
+    }
+  ]
 };

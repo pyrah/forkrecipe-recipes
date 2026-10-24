@@ -1,120 +1,326 @@
 export default {
-  repoId: "master_indian_tandoori_leg_of_lamb_001",
-  parentRepoId: null,
-  slug: "tandoori-leg-of-lamb",
-  author: "ForkRecipe Kitchen",
-  title: "Tandoori Leg of Lamb",
-  description: "A whole bone-in leg scored deep to the bone and packed with two successive spiced yogurt marinades, then roasted at searing heat until the edges are charred and fragrant while the meat inside stays pink and yielding — the grandeur of the tandoor brought home.",
-  cuisine: "Indian",
-  culture: "North Indian Punjabi",
-  category: "proteins",
-  tags: ["lamb", "tandoori", "indian", "punjabi", "roast", "spiced", "yogurt"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "6 hr (marinade)",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 2, sour: 1, bitter: 0, umami: 2, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in leg of lamb (about 2.5 kg)",                  ratioValue: 2500, defaultUnit: "g",  substitutions: ["bone-in shoulder of lamb"] },
-    { ingId: "ing_02", role: "Dairy",     name: "Whole-milk yogurt",                                    ratioValue: 250,  defaultUnit: "g",  substitutions: ["full-fat Greek yogurt"] },
-    { ingId: "ing_03", role: "Acid",      name: "Fresh lemon juice",                                    ratioValue: 40,   defaultUnit: "ml", substitutions: ["lime juice"] },
-    { ingId: "ing_04", role: "Fat",       name: "Neutral oil (vegetable or mustard)",                   ratioValue: 30,   defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Kashmiri red chilli powder",                           ratioValue: 20,   defaultUnit: "g",  substitutions: ["mild paprika + pinch of cayenne"] },
-    { ingId: "ing_06", role: "Spice",     name: "Ground cumin",                                         ratioValue: 8,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Ground coriander",                                     ratioValue: 8,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Garam masala",                                         ratioValue: 6,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Ground turmeric",                                      ratioValue: 4,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_10", role: "Aromatic",  name: "Fresh ginger paste",                                   ratioValue: 30,   defaultUnit: "g",  substitutions: ["1.5 tbsp finely grated fresh ginger"] },
-    { ingId: "ing_11", role: "Allium",    name: "Garlic paste",                                         ratioValue: 25,   defaultUnit: "g",  substitutions: ["6 large cloves, crushed to a paste"] },
-    { ingId: "ing_12", role: "Seasoning", name: "Fine sea salt",                                        ratioValue: 16,   defaultUnit: "g",  substitutions: ["kosher salt"] },
-    { ingId: "ing_13", role: "Fat",       name: "Ghee, for basting",                                    ratioValue: 40,   defaultUnit: "g",  substitutions: ["clarified butter", "unsalted butter"] },
+  "repoId": "master_indian_tandoori_leg_of_lamb_001",
+  "parentRepoId": null,
+  "slug": "tandoori-leg-of-lamb",
+  "author": "ForkRecipe Kitchen",
+  "title": "Jambe d'agneau tandoori",
+  "description": "Une jambe entière à l'os a marqué profondément à l'os et a emballé avec deux marinades de yogourt épicées successives, puis torréfié à la chaleur de la mer jusqu'à ce que les bords soient carbonisés et parfumés pendant que la viande à l'intérieur reste rose et donne — la grandeur de la tangdoor ramené à la maison.",
+  "cuisine": "Indiens",
+  "culture": "Punjabi indien du Nord",
+  "category": "proteins",
+  "tags": [
+    "agneau",
+    "tandoori",
+    "indienne",
+    "punjabi",
+    "rôti",
+    "épicé",
+    "yaourt"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "6 hr (marinade)",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Score",
-      inputs: ["ing_01"],
-      outputState: "scored_lamb",
-      instructions: "Using a sharp, narrow boning knife, make deep slashes all over the leg — 6 to 8 cuts per side, each about 3–4 cm deep and angled to reach as close to the bone as possible. Work methodically: score the top, the underside, and the shank end. The goal is to create as much marinade-to-meat contact as possible and to reduce the effective thickness of the leg for more even cooking. Score through any thick fat cap as well.",
-      visualCue: {
-        primaryTarget: "The leg is covered in deep, gaping slashes every 4–5 cm that you can open with your fingers and see raw red meat inside.",
-        spectrum: [
-          { state: "Underdone", description: "Cuts are shallow — 1 cm or less — cutting only through the fat and the very surface of the meat. The marinade will not penetrate.", action: "Return the knife and cut deeper. Angle the blade toward the bone. The more aggressively you score, the more flavor penetrates." },
-          { state: "Perfect",   description: "Deep, dramatic gashes that open to 2–3 cm wide when the meat is pulled slightly. The bone is visible in at least one or two cuts on each side.", action: "Proceed to the first marinade." },
-          { state: "Overdone",  description: "Cuts are so numerous and deep that the meat is beginning to fall away from the bone in sections.", action: "Tie the leg with kitchen twine in 3–4 places to hold the shape during roasting. The flavour will be exceptional." },
-        ],
-      },
-      feelCue: "You should feel the knife hit and scrape bone on the deepest cuts near the shank and hip socket. If the knife only travels through soft resistance, it has not gone far enough.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Jambe d'agneau désossée (environ 2,5 kg)",
+      "ratioValue": 2500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "épaule d'agneau désossée"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Marinate",
-      inputs: ["scored_lamb", "ing_03", "ing_05", "ing_12"],
-      outputState: "first_marinated_lamb",
-      instructions: "Mix the lemon juice, half the Kashmiri chilli powder, and the salt into a rough paste. Rub this first marinade aggressively all over the lamb — over the surface, and deep into every slash and score with your fingers. This acid-and-salt first marinade begins breaking down the surface proteins and carrying heat deep into the meat. Rest for 30 minutes at room temperature while you prepare the second marinade.",
-      visualCue: {
-        primaryTarget: "The surface of the lamb is evenly coated in a thin red paste, and the incisions are stained deep red-orange.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade is sitting on the surface of the meat rather than being worked in. The cuts have not been filled.", action: "Use your fingers to push the paste deep into every slash. The physical action of pressing is as important as the paste itself." },
-          { state: "Perfect",   description: "Every cut is filled with red paste. The surface is evenly coloured. Lemon and salt smell sharp and bright.", action: "Rest 30 minutes, then apply the second marinade." },
-          { state: "Overdone",  description: "Marinade has been sitting more than 1 hour before the second one is applied — the acid is beginning to denature the surface proteins.", action: "Proceed immediately to the second marinade. The texture may be slightly chalky on the very surface but it will recover in the oven." },
-        ],
-      },
-      feelCue: "The lemon juice will make the surface feel slightly tacky and firm to the touch after 15 minutes — this is the acid beginning to tighten the protein, creating a better base for the yogurt marinade to adhere.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Yogourt de lait entier",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "yogourt grec plein gras"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Marinate",
-      inputs: ["first_marinated_lamb", "ing_02", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "fully_marinated_lamb",
-      instructions: "Whisk together the yogurt, oil, remaining Kashmiri chilli, cumin, coriander, garam masala, turmeric, ginger paste, and garlic paste until smooth and uniformly orange-red. Taste it — it should be bold, fragrant, and slightly salty (the lamb already carries salt from the first marinade). Apply this second marinade all over the lamb, working it deep into every cut and under any loose membrane. Place in a large dish, cover with plastic wrap, and refrigerate for 4–6 hours, or ideally overnight.",
-      visualCue: {
-        primaryTarget: "The lamb is completely encased in a thick orange-red yogurt coat that fills every slash. It looks almost like it has been painted.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade is thin and running off the meat rather than coating it. Yogurt may have been too diluted or cold.", action: "Pat the marinade back on thickly and ensure the yogurt is at room temperature — cold yogurt slides off meat." },
-          { state: "Perfect",   description: "Thick, even, vivid orange-red coating all over the leg. Marinade clings and does not drip when the leg is tilted. Fills all incisions.", action: "Cover and refrigerate 4–6 hours minimum, turning once halfway." },
-          { state: "Overdone",  description: "Lamb has been marinating over 24 hours. The texture of the surface meat will be slightly pasty from yogurt acid.", action: "Bring to room temperature before roasting (2 hours out of fridge). Wipe the very outermost layer of marinade before roasting to prevent burning the yogurt coating." },
-        ],
-      },
-      feelCue: "Press the marinade coating firmly — it should adhere in a thick, paste-like layer and not slide under your fingertip. If it slides, either the surface is too wet or the yogurt is too thin.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 40,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "jus de citron vert"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Roast",
-      inputs: ["fully_marinated_lamb", "ing_13"],
-      outputState: "roasted_lamb",
-      instructions: "Bring the lamb to room temperature 2 hours before cooking. Preheat the oven to 220°C (425°F) with a rack in the upper third. Place the lamb on a wire rack set over a roasting tray (to catch drips and allow air circulation under the meat). Roast at 220°C for 25–30 minutes until the marinade coating is charred and blackened in spots — this char is essential flavour. Meanwhile, heat the ghee in a small pan. After 25 minutes, baste the lamb generously with ghee, then reduce the oven to 180°C (350°F) and continue roasting for 45–60 minutes more (about 20 min per 500g for medium-pink).",
-      visualCue: {
-        primaryTarget: "The marinade crust is charred at the tips and edges of the scored cuts, deep orange-red in the body, and the leg is dark and dramatic-looking. An instant-read thermometer reads 62–65°C at the thickest point away from the bone for medium.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade coating is still orange and soft, not charred. Thermometer reads below 58°C. The meat will be raw-rare near the bone.", action: "Return to 220°C for 10 more minutes then check again. Do not cut into it — you will lose the juices." },
-          { state: "Perfect",   description: "Blackened char at the ridge of every slash, deep amber-to-red body. Thermometer reads 62–65°C (medium-pink). Ghee is caramelised onto the surface.", action: "Remove and rest immediately for 20 minutes, tented loosely with foil." },
-          { state: "Overdone",  description: "Thermometer reads above 75°C. The surface is uniformly dark brown. The meat has pulled back from the bone and the leg looks shrunken.", action: "Remove immediately and rest 20 minutes covered — resting will redistribute the juices. The meat will still be very good." },
-        ],
-      },
-      feelCue: "Press the thickest part of the leg near the hip with a finger — it should give with medium resistance, like pressing the base of your thumb when the hand is relaxed. Firm but not rigid.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile neutre (légume ou moutarde)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Rest",
-      inputs: ["roasted_lamb"],
-      outputState: "rested_tandoori_lamb",
-      instructions: "Transfer the lamb to a cutting board and tent loosely with foil — do not wrap tightly, which traps steam and softens the crust. Rest for 20 minutes minimum. This is not optional: the internal temperature will rise 2–3°C more (carry-over cooking) and the muscle fibres will relax and reabsorb the juices. A leg cut too soon bleeds on the board and the meat is tough. Use the resting time to scrape the roasting tray drippings into a small pot and reduce with a splash of water for a pan sauce.",
-      visualCue: {
-        primaryTarget: "The lamb shows no pink juices running onto the board during the rest. The surface darkens slightly and develops a faint gloss from the resting juices redistributing.",
-        spectrum: [
-          { state: "Underdone", description: "Lamb has rested less than 10 minutes. When cut, vivid pink juices flood the board.", action: "Return the slices to the foil tent and allow to rest another 5 minutes. The quality of the eating is entirely worth the wait." },
-          { state: "Perfect",   description: "After 20 minutes, the board is dry. The leg holds its shape when carved. Juices run clear with a pink blush — not blood.", action: "Carve across the grain in thick slices, working around the bone. Serve with naan, raita, and sliced raw onion." },
-          { state: "Overdone",  description: "Lamb has rested over 40 minutes and is beginning to cool through. The crust has softened significantly.", action: "Carve and serve immediately on warm plates. A drizzle of hot ghee will revive the surface. The flavour is unaffected by extra resting." },
-        ],
-      },
-      feelCue: "When you press the rested leg through the foil, it should feel less springy than when it came out of the oven — the muscle fibres have relaxed and are holding the juices rather than expelling them when squeezed.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poudre de chili rouge cachemiri",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika doux + pincée de Cayenne"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Garam masala",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Pâte de gingembre frais",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1,5 c. à soupe de gingembre frais râpé finement"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Allium",
+      "name": "Pâte d'ail",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": [
+        "6 gros gousses, broyées à la pâte"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 16,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Fat",
+      "name": "Ghee, pour le basting",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "beurre clarifié",
+        "beurre non salé"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Score",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "scored_lamb",
+      "instructions": "À l'aide d'un couteau de désossage étroit et tranchant, faire des fentes profondes sur toute la jambe — 6 à 8 coupes de chaque côté, chacune d'environ 3 à 4 cm de profondeur et d'angle pour atteindre le plus près possible de l'os. Travaillez méthodiquement : marquez le haut, le dessous et la tige. L'objectif est de créer autant de contact marinade-viande que possible et de réduire l'épaisseur efficace de la jambe pour une cuisson plus uniforme. Score à travers n'importe quel bouchon gras épais ainsi.",
+      "visualCue": {
+        "primaryTarget": "La jambe est couverte de fentes creuses profondes tous les 4 à 5 cm que vous pouvez ouvrir avec vos doigts et voir de la viande rouge crue à l'intérieur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les découpes sont peu profondes — 1 cm ou moins — et ne font que traverser la graisse et la surface même de la viande. La marinade ne pénétrera pas.",
+            "action": "Retourne le couteau et coupe plus profondément. Angle la lame vers l'os. Plus vous marquez agressivement, plus la saveur pénètre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des gazes profondes et spectaculaires s'ouvrent jusqu'à 2–3 cm de largeur lorsque la viande est légèrement tirée. L'os est visible dans au moins une ou deux découpes de chaque côté.",
+            "action": "Passez à la première marinade."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les découpes sont si nombreuses et profondes que la viande commence à tomber loin de l'os en sections.",
+            "action": "Attachez la jambe avec la ficelle de cuisine en 3–4 endroits pour tenir la forme pendant la cuisson. La saveur sera exceptionnelle."
+          }
+        ]
+      },
+      "feelCue": "Vous devriez sentir le couteau frapper et gratter l'os sur les coupes les plus profondes près de la tige et de la hanche socket. Si le couteau ne voyage que par une résistance douce, il n'est pas allé assez loin."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "scored_lamb",
+        "ing_03",
+        "ing_05",
+        "ing_12"
+      ],
+      "outputState": "first_marinated_lamb",
+      "instructions": "Mélanger le jus de citron, la moitié de la poudre de chili cachemiri et le sel dans une pâte rugueuse. Frottez cette première marinade agressivement sur tout l'agneau — sur la surface, et profondément dans chaque clique et score avec vos doigts. Cette première marinade acide et sel commence à décomposer les protéines de surface et à transporter la chaleur profondément dans la viande. Reposez-vous 30 minutes à température ambiante pendant que vous préparez la deuxième marinade.",
+      "visualCue": {
+        "primaryTarget": "La surface de l'agneau est uniformément enduite d'une fine pâte rouge, et les incisions sont teintées de rouge-orange profond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Marinade est assise à la surface de la viande plutôt que d'être travaillée. Les coupures n'ont pas été remplies.",
+            "action": "Utilisez vos doigts pour pousser la pâte profondément dans chaque tranche. L'action physique du pressurage est aussi importante que la pâte elle-même."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque coupe est remplie de pâte rouge. La surface est uniformément colorée. Le citron et le sel sentent vif et lumineux.",
+            "action": "Reposez-vous 30 minutes, puis appliquez la deuxième marinade."
+          },
+          {
+            "state": "Overdone",
+            "description": "La marinade a été assise plus d'une heure avant l'application de la seconde, l'acide commence à dénaturer les protéines de surface.",
+            "action": "Passez immédiatement à la deuxième marinade. La texture peut être légèrement crayeuse sur la surface même, mais elle se rétablira au four."
+          }
+        ]
+      },
+      "feelCue": "Le jus de citron fera sentir la surface légèrement collante et ferme au toucher après 15 minutes — c'est l'acide qui commence à serrer la protéine, créant une meilleure base pour la marinade du yogourt à adhérer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Marinaté",
+      "inputs": [
+        "first_marinated_lamb",
+        "ing_02",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "fully_marinated_lamb",
+      "instructions": "fouetter ensemble le yogourt, l'huile, le reste du chili cachemiri, le cumin, la coriandre, le garam masala, le curcuma, la pâte de gingembre et la pâte d'ail jusqu'à ce qu'elle soit lisse et uniformément rouge-orange. Goûtez - il doit être gras, parfumé et légèrement salé (l'agneau porte déjà du sel de la première marinade). Appliquer cette deuxième marinade sur tout l'agneau, la travailler profondément dans chaque coupe et sous toute membrane lâche. Déposer dans un grand plat, couvrir d'enveloppe plastique et réfrigérer pendant 4 à 6 heures, ou idéalement pendant la nuit.",
+      "visualCue": {
+        "primaryTarget": "L'agneau est complètement encastré dans une épaisse couche de yogourt rouge orange qui remplit chaque tranche. On dirait qu'il a été peint.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La marinade est mince et coule de la viande plutôt que de la couvrir. Yogourt peut avoir été trop dilué ou froid.",
+            "action": "Remettez la marinade à l'eau épaisse et assurez-vous que le yogourt est à température ambiante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un revêtement épais, uniforme et rouge-orange vif sur toute la jambe. La marinade s'accroche et ne coule pas lorsque la jambe est inclinée. Il remplit toutes les incisions.",
+            "action": "Couvrir et réfrigérer au minimum 4-6 heures, tourner une fois à mi-chemin."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'agneau marine depuis plus de 24 heures. La texture de la viande de surface sera légèrement pâteuse de l'acide yogourt.",
+            "action": "Porter à la température ambiante avant de rôtir (2 heures hors du réfrigérateur). Essuyer la couche très extrême de marinade avant de rôtir pour éviter de brûler le revêtement de yogourt."
+          }
+        ]
+      },
+      "feelCue": "Appuyez fermement sur le revêtement marinade — il doit adhérer dans une couche épaisse, en pâte et ne pas glisser sous votre bout de doigt. Si elle glisse, soit la surface est trop humide, soit le yogourt est trop mince."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Rôtis",
+      "inputs": [
+        "fully_marinated_lamb",
+        "ing_13"
+      ],
+      "outputState": "roasted_lamb",
+      "instructions": "Amenez l'agneau à température ambiante 2 heures avant la cuisson. Préchauffer le four à 220°C (425°F) avec une grille dans le tiers supérieur. Placer l'agneau sur une grille en fil sur un plateau de grillage (pour attraper les gouttes d'eau et permettre la circulation de l'air sous la viande). Faire cuire à 220°C pendant 25 à 30 minutes jusqu'à ce que le revêtement marinade soit carbonisé et noirci dans les taches — cet omble est une saveur essentielle. Pendant ce temps, chauffer le ghee dans une petite casserole. Après 25 minutes, abreuvez généreusement l'agneau avec du ghee, puis réduisez le four à 180°C (350°F) et continuez le rôtissage pendant 45 à 60 minutes de plus (environ 20 min par 500g pour le rose moyen).",
+      "visualCue": {
+        "primaryTarget": "La croûte de marinade est carbonisée aux extrémités et aux bords des découpes marquées, rouge orangé profond dans le corps, et la jambe est sombre et spectaculaire. Un thermomètre à lecture instantanée lit 62-65°C au point le plus épais de l'os pour le milieu.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le revêtement Marinade est toujours orange et doux, pas carbonisé. Thermomètre se lit sous 58°C. La viande sera cru-rare près de l'os.",
+            "action": "Revenez à 220°C pendant 10 minutes, puis vérifiez à nouveau. Ne le coupez pas — vous perdrez les jus."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'omble noirci à la crête de chaque slash, corps ambre-rouge profond. Thermomètre lit 62-65°C (rose moyenne). Le ghee est caramélisé sur la surface.",
+            "action": "Retirez-vous et reposez-vous immédiatement pendant 20 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Thermomètre se lit au-dessus de 75°C. La surface est uniformément brun foncé. La viande s'est retirée de l'os et la jambe a l'air réduite.",
+            "action": "Retirer immédiatement et reposer 20 minutes couverts — le repos redistribuera les jus. La viande sera encore très bonne."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la partie la plus épaisse de la jambe près de la hanche avec un doigt — il devrait donner avec une résistance moyenne, comme appuyer sur la base de votre pouce quand la main est détendue. Ferme mais pas rigide."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Repos",
+      "inputs": [
+        "roasted_lamb"
+      ],
+      "outputState": "rested_tandoori_lamb",
+      "instructions": "Transférer l'agneau sur une planche à découper et la tente lâchement avec du papier — ne pas envelopper étroitement, ce qui piège la vapeur et adoucit la croûte. Reposez-vous pendant 20 minutes minimum. Ce n'est pas facultatif : la température interne va augmenter de 2 à 3 °C (cuisine carry-over) et les fibres musculaires vont se détendre et réabsorber les jus. Une jambe coupée trop tôt saigne sur la planche et la viande est dure. Utilisez le temps de repos pour racler le plateau de torréfaction qui coule dans une petite casserole et réduire avec un jet d'eau pour une sauce de casserole.",
+      "visualCue": {
+        "primaryTarget": "L'agneau ne montre aucun jus rose courant sur la planche pendant le reste. La surface s'obscurcit légèrement et développe un léger gloss des jus de repos redistribués.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'agneau s'est reposé moins de 10 minutes. Une fois coupés, les jus roses vifs inondent la planche.",
+            "action": "Remettez les tranches à la tente en feuilles et laissez reposer encore 5 minutes. La qualité de l'alimentation vaut la peine d'attendre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 20 minutes, la planche est sèche. La jambe tient sa forme lorsqu'elle est sculptée. Les jus sont limpides avec un blush rose — pas du sang.",
+            "action": "Couper le grain en tranches épaisses, en travaillant autour de l'os. Servir avec du naan, du raita et de l'oignon cru tranché."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'agneau s'est reposé pendant plus de 40 minutes et commence à refroidir. La croûte s'est considérablement adoucie.",
+            "action": "Couper et servir immédiatement sur des assiettes chaudes. Une bruine de ghee chaud ravivera la surface. La saveur n'est pas affectée par un repos supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous pressez la jambe reposée à travers la feuille, elle doit se sentir moins printanière que lorsqu'elle sort du four — les fibres musculaires se sont détendues et tiennent les jus plutôt que de les expulser lorsqu'elles sont pressées."
+    }
+  ]
 };

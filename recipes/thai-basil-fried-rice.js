@@ -1,101 +1,271 @@
 export default {
-  repoId: "master_thai_thai-basil-fried-rice_001",
-  parentRepoId: null,
-  slug: "thai-basil-fried-rice",
-  author: "ForkRecipe Kitchen",
-  title: "Thai Basil Fried Rice (Khao Pad Krapao)",
-  description: "Day-old jasmine rice blasted in a searing wok with ground pork, fish sauce, oyster sauce, and enough Thai chilies to make the kitchen uncomfortable — then buried in an avalanche of holy basil that wilts to a glossy, anise-fragrant blanket. Topped with a fried egg whose lacey crisp edges are as important as the rice itself.",
-  cuisine: "Thai",
-  culture: "Bangkok",
-  category: "grains",
-  tags: ["thai", "fried-rice", "basil", "wok", "quick", "holy-basil", "egg"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 4, sour: 0, bitter: 1, umami: 5, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Day-old cooked jasmine rice (cold, separated)",                     ratioValue: 300, defaultUnit: "g", substitutions: ["cold cooked brown rice"] },
-    { ingId: "ing_02", role: "Protein",   name: "Ground pork (or coarsely hand-chopped pork shoulder)",              ratioValue: 150, defaultUnit: "g", substitutions: ["ground chicken", "ground beef", "extra-firm tofu crumbled"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, rough-minced",                                       ratioValue: 15,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Heat",      name: "Bird's eye chilies (prik kee noo), sliced or smashed (3–6 to taste)", ratioValue: 10, defaultUnit: "g", substitutions: ["serrano peppers", "red jalapeño"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fish sauce (Tiparos or Megachef)",                                  ratioValue: 20,  defaultUnit: "g", substitutions: ["soy sauce (vegan)", "coconut aminos"] },
-    { ingId: "ing_06", role: "Umami",     name: "Oyster sauce",                                                      ratioValue: 20,  defaultUnit: "g", substitutions: ["vegan oyster sauce", "hoisin sauce"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Light soy sauce",                                                   ratioValue: 10,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Neutral oil (vegetable or lard)",                                   ratioValue: 40,  defaultUnit: "g", substitutions: ["rendered pork fat"] },
-    { ingId: "ing_09", role: "Herb",      name: "Holy basil (bai krapao), leaves picked — Italian basil is a poor substitute", ratioValue: 30, defaultUnit: "g", substitutions: ["Thai basil (different flavor profile)", "Italian basil (last resort)"] },
-    { ingId: "ing_10", role: "Protein",   name: "Eggs, for frying (1 per serving)",                                  ratioValue: 2,   defaultUnit: "g", substitutions: [] },
+  "repoId": "master_thai_thai-basil-fried-rice_001",
+  "parentRepoId": null,
+  "slug": "thai-basil-fried-rice",
+  "author": "ForkRecipe Kitchen",
+  "title": "Riz frit de basilic thaïlandais (Khao Pad Krapao)",
+  "description": "Le riz jasmin vieux d'un jour a sauté dans un wok de mer avec du porc moulu, de la sauce de poisson, de la sauce aux huîtres, et assez de chilis thaïlandais pour rendre la cuisine inconfortable — puis enterré dans une avalanche de basilic saint qui se flétrit à une couverture brillante et parfumée d'anis. Garni d'un œuf frit dont les bords croustillants et lactés sont aussi importants que le riz lui-même.",
+  "cuisine": "Thaï",
+  "culture": "Bangkok",
+  "category": "grains",
+  "tags": [
+    "Thaï",
+    "Riz frit",
+    "basilic",
+    "wok",
+    "Vite",
+    "Saint-basile",
+    "œuf"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sear",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_08"],
-      outputState: "cooked_pork_base",
-      instructions: "Heat a wok or large heavy skillet over the highest flame until smoke wisps from the surface — 2 minutes minimum. Add 30 g of the oil and swirl immediately. Add the garlic and chilies all at once and stir-fry for 20 seconds until the garlic is gold and the kitchen fills with a sharp, peppery fragrance. Add the ground pork, breaking it up with a spatula. Let it sear undisturbed for 30 seconds, then break and toss. Cook for 2–3 minutes total until no pink remains and the pork has some golden, crumbly edges rather than being pale and steamed.",
-      visualCue: {
-        primaryTarget: "Pork is golden-brown at the edges with visible caramelization, garlic is amber, chilies have softened and darkened. No pooled liquid in the wok.",
-        spectrum: [
-          { state: "Underdone", description: "Pork is grey, wet, and releasing liquid. Steaming rather than frying. Garlic is still white.", action: "Drain excess liquid by tilting the wok, increase heat, and allow moisture to evaporate before continuing." },
-          { state: "Perfect",   description: "Pork is golden-crusted in places, fragrant and dry. Garlic is toasty amber. Chilies are soft and bright red. Loud sizzle throughout.", action: "Add the seasoning sauces and rice." },
-          { state: "Overdone",  description: "Pork is dried out and chewy, garlic is dark and bitter, edges are black.", action: "Add the rice immediately to stop the cooking and absorb excess char." },
-        ],
-      },
-      feelCue: "The wok should feel hot through an oven mitt held 15 cm above it. The sizzle of pork hitting the surface should be immediate and violent, not gradual.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz jasmin cuit (froid, séparé)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "riz brun cuit à froid"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toss",
-      inputs: ["cooked_pork_base", "ing_01", "ing_05", "ing_06", "ing_07"],
-      outputState: "seasoned_fried_rice",
-      instructions: "Add the cold rice to the wok, breaking up any clumps with the spatula before it hits the heat. Pour the fish sauce, oyster sauce, and soy sauce around the edge of the wok (not directly on the rice) so the sauces hit the hot metal and sizzle. Toss everything together vigorously for 2–3 minutes, pressing the rice flat against the wok surface for 20 seconds at a time to allow contact browning, then tossing to redistribute. The goal is every grain coated and slightly toasted, not steamed.",
-      visualCue: {
-        primaryTarget: "Rice grains are uniformly amber and separate, each glossed with sauce. Visible slight char on individual grains. No wet spots or white grains remaining.",
-        spectrum: [
-          { state: "Underdone", description: "Rice is pale and wet-looking, clumping in the center. Sauces are pooling at the bottom rather than coating the grains.", action: "Increase heat, press rice flat, and let it char undisturbed for 30 seconds before tossing again." },
-          { state: "Perfect",   description: "Every grain is amber-coated, slightly separated, and smells of caramel and fish sauce. A few grains are darker where they touched the wok. The rice is dry enough to hiss when water is sprinkled on it.", action: "Add holy basil leaves." },
-          { state: "Overdone",  description: "Rice is sticking to the wok in a crust and beginning to burn, black specks forming.", action: "Deglaze with a tablespoon of water, scrape the fond into the rice, and serve immediately." },
-        ],
-      },
-      feelCue: "Cold rice in a hot wok should bounce and rattle when you toss the pan — if it slides like porridge, your wok is not hot enough or the rice was too wet.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Porc haché (ou épaule grossièrement coupée à la main)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poulet haché",
+        "boeuf haché",
+        "tofu extra-ferme émietté"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["seasoned_fried_rice", "ing_09"],
-      outputState: "finished_basil_rice",
-      instructions: "Remove the wok from heat. Add all the holy basil leaves at once and fold them through the rice with 4–5 broad strokes of the spatula. The residual heat of the rice and wok will wilt the basil in 20–30 seconds — you want it collapsed and glossy but not black or slimy. Holy basil wilts much faster than Italian basil and turns bitter if overcooked. The leaves should turn a deep, jewel-like green and release a wave of clove-anise fragrance. Taste and adjust with a few drops more fish sauce if needed.",
-      visualCue: {
-        primaryTarget: "Basil leaves are deep emerald-green and collapsed, integrated throughout the rice, releasing a vivid herbal perfume that fills the room.",
-        spectrum: [
-          { state: "Underdone", description: "Leaves are still rigid and bright green, some standing upright in the rice.", action: "Keep folding — the heat in the rice is enough. If leaves remain stiff after 45 seconds, briefly return the wok to low heat." },
-          { state: "Perfect",   description: "Leaves are wilted, deep green, slightly glossy. A clove-pepper-anise smell is unmistakable. Integrated evenly through the rice.", action: "Plate immediately and begin frying the eggs." },
-          { state: "Overdone",  description: "Leaves are black, crispy, or smell burnt and bitter.", action: "If badly burnt, remove the worst pieces. The rice will still be good; the basil flavor has cooked into it." },
-        ],
-      },
-      feelCue: "The wilted holy basil should smell like someone crushed a clove between their fingers — peppery, floral, with a faint anise underpinning that is entirely unlike Italian basil.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles à l'ail, à tête brute",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Fry",
-      inputs: ["ing_10", "ing_08"],
-      outputState: "lacey_fried_eggs",
-      instructions: "In a small wok or skillet, heat the remaining 10 g of oil over high heat until it shimmers and just begins to smoke. Crack eggs into the oil and let them fry undisturbed for 60–90 seconds. The whites should blister and puff immediately on contact, forming golden lacey edges while the yolk stays barely set and glossy. Tilt the pan and baste the yolk with hot oil using a spoon. The egg is done when the white is fully set and golden-fringed, the yolk still deep orange and runny. Serve immediately atop the rice.",
-      visualCue: {
-        primaryTarget: "Egg whites are set but lacey at the frilled edges, golden-crisp in the outer ring, while the yolk is a dome of deep orange, opaque at the rim but still liquid at its crest.",
-        spectrum: [
-          { state: "Underdone", description: "Whites are translucent and jiggly, no lace or color at the edges.", action: "The oil was not hot enough — wait until it shimmers visibly before cracking the egg." },
-          { state: "Perfect",   description: "Whites are fully set with dramatic golden-brown lacey fringe. Yolk is orange and visibly liquid inside. Bottom of the white has a pale golden crust.", action: "Slide onto the rice immediately — do not let it rest in the pan." },
-          { state: "Overdone",  description: "Yolk is pale, hard, and fully set. Whites are deeply brown and chewy.", action: "You've made a different dish — still tasty, but break the yolk over the rice for the best textural experience." },
-        ],
-      },
-      feelCue: "The lacey egg edge should snap when pressed with a spoon but the yolk should give like a water balloon — the contrast between crisp white and liquid yolk is the entire point.",
+      "ingId": "ing_04",
+      "role": "Heat",
+      "name": "Chilies oculaires d'oiseau (quille de porc noo), tranchées ou cassées (3–6 au goût)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivrons serrano",
+        "rouge jalapeño"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "sauce de poisson (Tiparos ou Megachef)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sauce de soja (vegan)",
+        "aminos de coco"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "sauce à l'huître",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sauce à l'huître végétalienne",
+        "sauce hoisine"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "sauce de soja légère",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile neutre (végétable ou saindoux)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gras de porc fondu"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Saint basilic (bai krapao), feuilles cueillies — le basilic italien est un mauvais substitut",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Basilic thaïlandais (différent profil de saveur)",
+        "Basilic italien (dernière station)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Protein",
+      "name": "Oeufs à frire (1 par portion)",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_08"
+      ],
+      "outputState": "cooked_pork_base",
+      "instructions": "Chauffer un wok ou une grande poêle lourde au-dessus de la flamme la plus élevée jusqu'à ce que la fumée s'efface de la surface — 2 minutes minimum. Ajouter 30 g d'huile et tourner immédiatement. Ajouter l'ail et chier à la fois et faire revenir 20 secondes jusqu'à ce que l'ail soit doré et que la cuisine se remplisse d'un parfum piquant et poivré. Ajouter le porc moulu, le casser avec une spatule. Laissez-le semer pendant 30 secondes, puis cassez et lancez. Cuire 2 à 3 minutes au total jusqu'à ce qu'il ne reste pas de rose et que le porc ait des bords dorés et émiettés plutôt que d'être pâle et cuit à la vapeur.",
+      "visualCue": {
+        "primaryTarget": "Le porc est doré-brun aux bords avec caramélisation visible, l'ail est ambre, les chilis ont ramolli et obscurci. Pas de liquide dans le wok.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc est gris, humide et libérant du liquide. La vapeur plutôt que la friture. L'ail est encore blanc.",
+            "action": "Égoutter l'excès de liquide en inclinant le wok, augmenter la chaleur et laisser l'humidité s'évaporer avant de continuer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le porc est rouillé d'or dans les endroits, parfumé et sec. L'ail est ambre grillé. Les piments sont doux et rouge vif. Une grande étourdissement.",
+            "action": "Ajouter les sauces assaisonnement et le riz."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le porc est séché et mâche, l'ail est foncé et amer, les bords sont noirs.",
+            "action": "Ajouter immédiatement le riz pour arrêter la cuisson et absorber l'excès de char."
+          }
+        ]
+      },
+      "feelCue": "Le wok doit se sentir chaud à travers une mitaine de four maintenue à 15 cm au-dessus. Le vertige du porc qui frappe la surface doit être immédiat et violent, et non pas progressif."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Découpe",
+      "inputs": [
+        "cooked_pork_base",
+        "ing_01",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "seasoned_fried_rice",
+      "instructions": "Ajouter le riz froid dans le wok, en brisant les amas avec la spatule avant qu'il ne frappe la chaleur. Verser la sauce de poisson, la sauce aux huîtres et la sauce de soja autour du bord du wok (pas directement sur le riz) afin que les sauces frappent le métal chaud et le grésillement. Mélanger vigoureusement tout pendant 2 à 3 minutes, presser le riz plat contre la surface du wok pendant 20 secondes à la fois pour permettre le brunissement en contact, puis lancer pour redistribuer. L'objectif est chaque grain enduit et légèrement grillé, pas cuit à la vapeur.",
+      "visualCue": {
+        "primaryTarget": "Les grains de riz sont uniformément ambres et séparés, chacun brillant avec de la sauce. Léger omble visible sur les grains individuels. Il ne reste pas de taches humides ou de grains blancs.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz est pâle et humide, en plein centre. Les sauces sont mises en commun au fond plutôt que de couvrir les grains.",
+            "action": "Augmenter la chaleur, presser le riz plat, et laisser l'omble tranquille pendant 30 secondes avant de jeter à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain est recouvert d'ambre, légèrement séparé, et sent le caramel et la sauce de poisson. Quelques grains sont plus foncés où ils ont touché le wok. Le riz est assez sec pour le siffler quand l'eau est saupoudrée.",
+            "action": "Ajouter les feuilles saintes de basilic."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz colle au wok dans une croûte et commence à brûler des taches noires.",
+            "action": "Déglacer avec une cuillère à soupe d'eau, racler le fond dans le riz, et servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Le riz froid dans un wok chaud devrait rebondir et se déchirer lorsque vous lancez la poêle — si elle glisse comme du porridge, votre wok n'est pas assez chaud ou le riz était trop humide."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "seasoned_fried_rice",
+        "ing_09"
+      ],
+      "outputState": "finished_basil_rice",
+      "instructions": "Retirer le wok du feu. Ajouter toutes les feuilles saintes de basilic à la fois et les plier à travers le riz avec 4-5 coups larges de la spatule. La chaleur résiduelle du riz et du wok va flétrir le basilic en 20 à 30 secondes — vous voulez qu'il s'effondre et brillant mais pas noir ou visqueux. Le saint basilic se flétrit beaucoup plus vite que le basilic italien et devient amer s'il est trop cuit. Les feuilles devraient tourner un vert profond, comme un bijou et libérer une vague de girofle-anis parfum. Goûtez et ajustez avec quelques gouttes de sauce de poisson si nécessaire.",
+      "visualCue": {
+        "primaryTarget": "Les feuilles de basilic sont de couleur vert émeraude profonde et s'effondrent, intégrées dans tout le riz, libérant un parfum aux herbes vives qui remplit la pièce.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les feuilles sont encore rigides et vert vif, certaines debout dans le riz.",
+            "action": "Continuez à plier — la chaleur du riz est suffisante. Si les feuilles restent raides après 45 secondes, retournez brièvement le wok à feu doux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les feuilles sont flétries, vert foncé, légèrement luisantes. Une odeur de girofle-poivre-anis est incomparable. Intégré uniformément à travers le riz.",
+            "action": "Assiettez immédiatement et commencez à faire frire les œufs."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les feuilles sont noires, croustillantes ou parfumées et amères.",
+            "action": "S'il est gravement brûlé, retirez les pires morceaux. Le riz sera encore bon; la saveur de basilic y a cuit."
+          }
+        ]
+      },
+      "feelCue": "Le saint basilic flétri doit sentir comme quelqu'un a broyé une girofle entre les doigts, poivrée, florale, avec un léger basilic anisé qui est tout à fait différent du basilic italien."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "ing_10",
+        "ing_08"
+      ],
+      "outputState": "lacey_fried_eggs",
+      "instructions": "Dans un petit wok ou poêle, chauffer le reste de 10 g d'huile à feu vif jusqu'à ce qu'il mijote et commence à fumer. Casser les œufs dans l'huile et laisser les faire frire pendant 60 à 90 secondes. Les blancs doivent blister et souffler immédiatement au contact, formant des bords dorés lactés tandis que le jaune reste à peine fixé et brillant. Incliner la poêle et arroser le jaune d'huile chaude à l'aide d'une cuillère. L'œuf est fait quand le blanc est entièrement serti et doré, le jaune encore orange profond et écoulement. Servir immédiatement au dessus du riz.",
+      "visualCue": {
+        "primaryTarget": "Les blancs d'oeuf sont fixés mais lacés aux bords frisés, dorés dans l'anneau extérieur, tandis que le jaune est un dôme d'orange profonde, opaque au bord mais encore liquide à sa crête.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les blancs sont translucides et jiggly, pas de dentelle ou de couleur aux bords.",
+            "action": "L'huile n'était pas assez chaude — attendez qu'elle mijote visiblement avant de craquer l'œuf."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les blancs sont entièrement sertis d'une spectaculaire frange dentelle dorée-brun. Yolk est orange et visiblement liquide à l'intérieur. Le fond du blanc a une croûte dorée pâle.",
+            "action": "Glissez immédiatement sur le riz — ne le laissez pas reposer dans la poêle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Yolk est pâle, dur, et entièrement réglé. Les blancs sont profondément bruns et mâchent.",
+            "action": "Vous avez fait un plat différent — encore savoureux, mais cassez le jaune sur le riz pour la meilleure expérience texturale."
+          }
+        ]
+      },
+      "feelCue": "Le bord lacé de l'oeuf doit se casser lorsqu'il est pressé avec une cuillère, mais le jaune doit donner comme un ballon d'eau — le contraste entre le jaune blanc et le jaune liquide est le point entier."
+    }
+  ]
 };

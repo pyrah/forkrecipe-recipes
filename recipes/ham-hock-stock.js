@@ -1,96 +1,248 @@
 export default {
-  repoId: "master_american_ham_hock_stock_001",
-  parentRepoId: null,
-  slug: "ham-hock-stock",
-  author: "ForkRecipe Kitchen",
-  title: "Ham Hock Stock",
-  description: "Smoked ham hocks simmered low and slow with aromatics until the liquid turns amber, porky, and faintly sweet — the backbone of collard greens, bean soups, and Southern pots.",
-  cuisine: "American",
-  culture: "American Southern",
-  category: "stocks",
-  tags: ["stock", "american", "pork", "smoked", "southern", "savory"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "3 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 4, sour: 0, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Smoked ham hocks (2–3 whole)",              ratioValue: 60,  defaultUnit: "parts", substitutions: ["smoked pork neck bones", "smoked turkey legs"] },
-    { ingId: "ing_02", role: "Allium",    name: "Yellow onion (quartered, unpeeled)",         ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Celery stalks with leaves",                  ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Garlic cloves (whole, unpeeled)",            ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Bay leaves (dried)",                         ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Black peppercorns (whole)",                  ratioValue: 0.5, defaultUnit: "parts", substitutions: ["red pepper flakes for heat"] },
-    { ingId: "ing_07", role: "Spice",     name: "Dried thyme",                                ratioValue: 0.5, defaultUnit: "parts", substitutions: ["fresh thyme sprigs"] },
-    { ingId: "ing_08", role: "Liquid",    name: "Cold water",                                 ratioValue: 200, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Acid",      name: "Apple cider vinegar (optional, a splash)",   ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_ham_hock_stock_001",
+  "parentRepoId": null,
+  "slug": "ham-hock-stock",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ham Hock Stock",
+  "description": "Les hamacs fumés mijotaient bas et lents avec des arômes jusqu'à ce que le liquide devienne ambre, porcin et légèrement sucré — l'épine dorsale des verts à collier, des soupes de haricots et des pots du Sud.",
+  "cuisine": "Américain",
+  "culture": "Amérique du Sud",
+  "category": "stocks",
+  "tags": [
+    "stock",
+    "américains",
+    "porc",
+    "fumé",
+    "sud",
+    "savoureux"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "3 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Simmer",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "simmering_hock_stock",
-      instructions: "Place the ham hocks in a large, heavy pot and cover with the cold water. Add the quartered onion (skin on — the skin adds color and a gentle sweetness), celery, unpeeled garlic, bay leaves, peppercorns, and thyme. Bring slowly to a bare simmer over medium heat, skimming any grey-brown foam that rises in the first 20 minutes. Reduce to the lowest heat that maintains a gentle simmer — small lazy bubbles breaking the surface every few seconds. A hard boil makes the stock cloudy and can toughen the skin of the hocks. Simmer for 2.5 to 3 hours.",
-      visualCue: {
-        primaryTarget: "A gently simmering amber-gold liquid with wisps of smoke-scented steam, the hocks submerged and beginning to look swollen and softened. The onion has darkened and the celery has turned translucent.",
-        spectrum: [
-          { state: "Underdone", description: "The liquid is still pale, lightly tinted, and the hock skin is still firm and tight. Less than 90 minutes have passed.", action: "Continue simmering. The color and body build dramatically in the second half of the cook as collagen and smoke pigments continue to extract." },
-          { state: "Perfect",   description: "A clear amber stock, deeply aromatic of smoked pork. The skin of the hocks has softened completely and is beginning to pull away from the bone; a poke with a finger finds the meat yielding rather than resistant.", action: "Check if the meat can be pulled from the bone easily. If yes, proceed to straining." },
-          { state: "Overdone",  description: "The meat has completely fallen from the bone, the skin has dissolved into threads, and the stock tastes very salty and one-dimensionally smoky.", action: "Strain promptly and dilute with a small measure of unsalted water to bring the salinity back into balance." },
-        ],
-      },
-      feelCue: "After 2 hours, press the side of the hock with tongs — the skin should give easily under pressure, like a very ripe peach, and the meat beneath should be barely clinging to the bone. The stock should smell of a campfire smokehouse: sweet smoke, rendered pork fat, and the earthiness of the aromatics.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Jarrets de jambon fumé (2–3 entiers)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "os du cou de porc fumé",
+        "cuisses de dinde fumée"
+      ]
     },
     {
-      nodeId: "step_2", action: "Rest",
-      inputs: ["simmering_hock_stock"],
-      outputState: "rested_hock_stock",
-      instructions: "Remove the pot from the heat and let it sit, uncovered, for 30 minutes. This rest serves two purposes: the hocks cool just enough to handle safely, and any remaining sediment settles to the bottom of the pot so the stock strains clearer. While the stock rests, remove the hocks with tongs and set them on a cutting board. Pull the meat from the bones with your fingers or two forks — the meat should slide off in large, silky shreds with almost no resistance. Reserve the shredded meat separately; it is the basis of collard greens, bean soups, or split pea soup.",
-      visualCue: {
-        primaryTarget: "The resting stock is amber and relatively still, with a disc of rendered golden fat floating on the surface and any fine sediment settled quietly at the bottom. The pulled hock meat is soft, yielding, and deeply bronzed from the smoke.",
-        spectrum: [
-          { state: "Underdone", description: "The meat is still clinging to the bone and is difficult to pull — it tears into short, dry pieces rather than sliding off in long shreds.", action: "Return the hocks to the simmering stock for another 30 to 45 minutes before resting again." },
-          { state: "Perfect",   description: "The meat peels away from the bone in long, silky, pull-apart shreds, still moist and full of smoky flavor. The gelatinous skin and collagen layer pulls off in ribbons.", action: "Reserve the meat, discard the bones and skin, and proceed to straining the stock." },
-          { state: "Overdone",  description: "The meat has dissolved into the stock or is watery and structureless — it barely holds together and has lost most of its texture.", action: "The texture is compromised but the flavor is still there; use the shredded meat as a flavoring ingredient rather than a featured component." },
-        ],
-      },
-      feelCue: "The pulled meat should feel silky and moist between your fingers — slightly sticky from the dissolved collagen, and warm with rendered fat. If it feels dry or grainy, it needed more time; if it falls apart at the lightest touch, it had too much.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon jaune (quartier, non pelé)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Strain",
-      inputs: ["rested_hock_stock"],
-      outputState: "strained_hock_stock",
-      instructions: "Set a fine-mesh strainer over a large pot or bowl and ladle the stock through carefully, leaving the last inch of liquid in the pot to keep any settled sediment behind. Discard the spent onion, celery, garlic, peppercorns, and bay leaves. Do not press the solids — there is nothing left to extract. For an especially clear stock, line the strainer with cheesecloth. The stock will have a floating layer of rendered golden pork fat — depending on the recipe, you can skim it (for a lighter stock) or stir it back in (for richness).",
-      visualCue: {
-        primaryTarget: "A clear amber liquid, the color of dark honey or strong black tea with a golden tint. A layer of golden fat floats on the surface. No sediment, no bone fragments, no vegetable pieces.",
-        spectrum: [
-          { state: "Underdone", description: "The stock is still in the pot with spent solids; it has not been strained yet.", action: "Strain now." },
-          { state: "Perfect",   description: "Clear, golden-amber, deeply aromatic stock with a floating disc of rendered pork fat. The flavor is smoky, savory, faintly sweet, and porky with a long, warm finish.", action: "Taste and check salt — ham hocks are typically well-salted and the stock may need no additional seasoning at all." },
-          { state: "Overdone",  description: "The stock is cloudy or murky from sediment that was disturbed when pouring too quickly.", action: "Let the strained stock sit for 10 minutes and then skim from the top carefully; the sediment will settle again and the stock will clarify." },
-        ],
-      },
-      feelCue: "A drop of the strained stock on your lip should feel warm and slightly sticky from dissolved gelatin. The aroma should be complex: the sweetness of rendered pork fat, the dark, woody note of smoke, and a faint caramel sweetness from the onion skin.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri avec feuilles",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Season",
-      inputs: ["strained_hock_stock", "ing_09"],
-      outputState: "finished_ham_hock_stock",
-      instructions: "Taste the stock carefully. It will almost certainly be well-seasoned from the salt already present in the smoked hocks — often no additional salt is needed. If desired, add a small splash of apple cider vinegar to sharpen the sweetness and cut through the richness of the fat; this is a common step in Southern cooking and makes the stock taste brighter and more alive without any apparent sourness. Store refrigerated for up to 5 days or freeze for 3 months. The stock will set to a soft jelly when refrigerated — a sign of excellent gelatin content from the hock skin.",
-      visualCue: {
-        primaryTarget: "The finished stock is a clear, golden-amber, fully seasoned liquid. Chilled, it sets to a soft, quivering amber jelly. Reheated, it flows freely and smells of smoke and pork.",
-        spectrum: [
-          { state: "Underdone", description: "Tastes flat or bland despite the deep color — the smoke and pork flavor is there but somehow muffled and without definition.", action: "Add the apple cider vinegar now: even a teaspoon brightens and lifts the entire profile remarkably. A pinch of salt will also help define the flavors." },
-          { state: "Perfect",   description: "Deep, smoky, faintly sweet, with a rounded savory character and just enough salt to make it taste alive. The vinegar, if used, is imperceptible as sourness but gives the stock a lift and brightness.", action: "Store or use as the liquid for braised greens, bean soups, or as a fortifying addition to any Southern pot." },
-          { state: "Overdone",  description: "The stock is aggressively salty — more than can be balanced by dilution alone. This typically happens when the hocks were very heavily cured.", action: "Dilute with unsalted water in a 1:1 ratio and taste again. Very salty stock is still useful as a concentrated flavoring added in small amounts to season other dishes." },
-        ],
-      },
-      feelCue: "Refrigerate a small ladle overnight. It should set to a firm, sliceable amber jelly — that is bone-and-skin gelatin confirming a successful extraction. Melted between your fingers it should feel warm, silky, and slightly tacky from the collagen.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Gousses d'ail entières, non pelées",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Feuilles de baies séchées",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Maïs de poivre noir (ensemble)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "flocons de poivre rouge pour la chaleur"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Thym séché",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "des brins de thym frais"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 200,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme (facultatif, éclaboussure)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "simmering_hock_stock",
+      "instructions": "Placer les jarrets dans un grand pot lourd et couvrir d'eau froide. Ajouter l'oignon coupé (peau sur laquelle la peau ajoute de la couleur et une douceur), le céleri, l'ail non pelé, les feuilles de laurier, les grains de poivre et le thym. Porter lentement à feu moyen à mijoter nue, en écrémant toute mousse brun-gris qui monte dans les 20 premières minutes. Réduisez à la chaleur la plus basse qui maintient une mijotée douce: de petites bulles paresseuses brisent la surface toutes les quelques secondes. Un ébullition dur rend le stock nuageux et peut durcir la peau des jarrets. Laisser mijoter pendant 2,5 à 3 heures.",
+      "visualCue": {
+        "primaryTarget": "Un liquide d'or ambré mijotant doucement avec des spores de vapeur parfumée à la fumée, les jarrets submergés et commençant à avoir l'air gonflés et adoucis. L'oignon s'est obscurci et le céleri est devenu translucide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore pâle, légèrement teinté, et la peau de jarret est encore ferme et serrée. Moins de 90 minutes ont passé.",
+            "action": "Continuez à mijoter. La couleur et le corps construisent considérablement dans la seconde moitié de la cuisson que le collagène et les pigments de fumée continuent à extraire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un stock d'ambre clair, profondément aromatique de porc fumé. La peau des jarrets s'est complètement adoucie et commence à s'éloigner de l'os; un poke avec un doigt trouve la viande donnant plutôt que résistante.",
+            "action": "Vérifiez si la viande peut être tirée facilement de l'os. Si oui, procéder à des pressions."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande est complètement tombée de l'os, la peau s'est dissoute en fils, et le stock a un goût très salé et un peu fumé.",
+            "action": "Soucher rapidement et diluer avec une petite mesure d'eau non salée pour rétablir l'équilibre de la salinité."
+          }
+        ]
+      },
+      "feelCue": "Après 2 heures, appuyez sur le côté du jarret avec des pinces — la peau devrait donner facilement sous pression, comme une pêche très mûre, et la viande en dessous devrait à peine s'accrocher à l'os. Le stock doit sentir un fumoir de feu de camp: la fumée sucrée, rendu gras de porc, et la terre des aromatiques."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Repos",
+      "inputs": [
+        "simmering_hock_stock"
+      ],
+      "outputState": "rested_hock_stock",
+      "instructions": "Retirer le pot du feu et laisser reposer, à découvert, pendant 30 minutes. Ce reste sert à deux fins : les jarrets refroidissent juste assez pour être manipulés en toute sécurité, et tout sédiment restant se dépose au fond du pot pour que les souches de stock soient plus claires. Pendant que le stock repose, retirer les jarrets avec des pinces et les placer sur une planche à découper. Tirez la viande des os avec vos doigts ou deux fourchettes — la viande devrait glisser en gros morceaux soyeux sans résistance. Réserver la viande déchiquetée séparément; c'est la base des verts à collier, des soupes de haricots ou de la soupe de pois.",
+      "visualCue": {
+        "primaryTarget": "Le stock de repos est ambre et relativement calme, avec un disque de graisse dorée qui flotte à la surface et tout sédiment fin se dépose tranquillement au fond. La viande de jarret tiré est douce, qui donne, et profondément bronzée de la fumée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est toujours accrochée à l'os et est difficile à tirer: elle se déchire en morceaux courts et secs plutôt que de glisser en longues lambeaux.",
+            "action": "Retournez les jarrets au bouillon mijotant pendant 30 à 45 minutes avant de vous reposer."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande s'éloigne de l'os en longues lambeaux soyeuses et soyeuses, encore humides et pleine de saveur fumée. La peau gélatine et la couche de collagène se détachent en rubans.",
+            "action": "Réserver la viande, jeter les os et la peau, et procéder à la déformation du stock."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande s'est dissoute dans le stock ou est aqueuse et sans structure — elle tient à peine ensemble et a perdu la majeure partie de sa texture.",
+            "action": "La texture est compromise mais la saveur est toujours là; utiliser la viande déchiquetée comme ingrédient aromatisant plutôt qu'un composant en vedette."
+          }
+        ]
+      },
+      "feelCue": "La viande tirée doit se sentir soyeuse et humide entre les doigts — légèrement collante du collagène dissous, et chaude avec la graisse rendue. S'il est sec ou granuleux, il lui faut plus de temps; s'il s'effondre au toucher le plus léger, il en a trop."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "rested_hock_stock"
+      ],
+      "outputState": "strained_hock_stock",
+      "instructions": "Placer une souche à mailles fines sur un grand pot ou un grand bol et faire glisser soigneusement le stock, laissant le dernier pouce de liquide dans le pot pour garder tout sédiment réglé derrière. Jeter l'oignon dépensé, le céleri, l'ail, les grains de poivre et les feuilles de laurier. Ne pressez pas les solides — il ne reste plus rien à extraire. Pour un stock particulièrement clair, alignez la passoire avec de l'étoffe de fromage. Le stock aura une couche flottante de gras de porc doré rendu — selon la recette, vous pouvez l'écumer (pour un stock plus léger) ou le remuer (pour la richesse).",
+      "visualCue": {
+        "primaryTarget": "Un liquide ambré clair, la couleur du miel foncé ou un thé noir fort avec une teinte dorée. Une couche de graisse dorée flotte à la surface. Pas de sédiments, pas de fragments d'os, pas de morceaux de légumes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock est toujours dans le pot avec des solides usés; il n'a pas encore été tendu.",
+            "action": "Pente maintenant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Stock clair, doré-ambre, profondément aromatique avec un disque flottant de graisse de porc rendu. La saveur est fumée, salée, légèrement sucrée et porcine avec une longue finale chaude.",
+            "action": "Goûtez et vérifiez le sel — les jarrets de jambon sont généralement bien salés et le stock peut n'avoir besoin d'aucun assaisonnement supplémentaire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock est nuageux ou agité à partir de sédiments qui ont été perturbés en versant trop rapidement.",
+            "action": "Laissez le stock étiré reposer pendant 10 minutes, puis éjaculez soigneusement du haut; les sédiments se déposeront de nouveau et le stock clarifiera."
+          }
+        ]
+      },
+      "feelCue": "Une goutte de la souche de votre lèvre doit se sentir chaude et légèrement collante de la gélatine dissoute. L'arôme doit être complexe: la douceur de la graisse de porc rendu, la note sombre et boisée de la fumée, et une légère douceur caramel de la peau d'oignon."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "strained_hock_stock",
+        "ing_09"
+      ],
+      "outputState": "finished_ham_hock_stock",
+      "instructions": "Goûtez soigneusement le stock. Il sera presque certainement bien assaisonné à partir du sel déjà présent dans les jarrets fumés — souvent pas besoin de sel supplémentaire. Si vous le souhaitez, ajoutez une petite éclaboussure de vinaigre de cidre de pomme pour aiguiser la douceur et couper à travers la richesse de la graisse; c'est une étape commune dans la cuisine du Sud et rend le stock plus lumineux et plus vivant sans aucune amerie apparente. A conserver réfrigéré jusqu'à 5 jours ou geler pendant 3 mois. Le stock se mettra à une gelée molle lorsqu'il sera réfrigéré, signe d'une excellente teneur en gélatine de la peau du jarret.",
+      "visualCue": {
+        "primaryTarget": "Le stock fini est un liquide clair, doré, entièrement assaisonné. Refroidi, il se met à une gelée d'ambre douce et moussante. Réchauffé, il coule librement et sent la fumée et le porc.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Goûte plat ou fade malgré la couleur profonde — la fumée et la saveur de porc est là, mais en quelque sorte étouffée et sans définition.",
+            "action": "Ajoutez maintenant le vinaigre de cidre de pomme : même une cuillère à café éclaircit et soulève le profil entier remarquablement. Une pincée de sel aidera également à définir les saveurs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep, fumé, légèrement sucré, avec un caractère savoureux arrondi et juste assez de sel pour le faire goûter vivant. Le vinaigre, s'il est utilisé, est imperceptible comme amer mais donne au stock un lifting et la luminosité.",
+            "action": "Entreposer ou utiliser comme liquide pour les verts braisés, les soupes de haricots ou comme complément fortifiant à tout pot du Sud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock est fortement salé — plus qu'il ne peut être équilibré par la dilution seule. Cela se produit généralement lorsque les jarrets étaient très fortement guéris.",
+            "action": "Diluer avec de l'eau non salée dans un rapport 1:1 et goûter à nouveau. Le stock très salé est encore utile comme aromatisation concentrée ajoutée en petites quantités à la saison d'autres plats."
+          }
+        ]
+      },
+      "feelCue": "Réfrigérer une petite louche pendant la nuit. Elle devrait être fixée à une gelée ambre ferme et trancheuse, c'est - à - dire à de la gélatine osseuse et de la peau confirmant une extraction réussie. Melé entre les doigts, il doit se sentir chaud, soyeux et légèrement collagène."
+    }
+  ]
 };

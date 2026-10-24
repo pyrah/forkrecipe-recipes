@@ -1,103 +1,278 @@
 export default {
-  repoId: "master_indian_tandoori-marinade_001",
-  parentRepoId: null,
-  slug: "tandoori-marinade",
-  author: "ForkRecipe Kitchen",
-  title: "Tandoori Marinade",
-  description: "The vivid red-orange yogurt marinade that goes on everything from chicken to cauliflower before hitting the grill — lactic acid tenderizing, spices penetrating, and the high heat charring the outside while the inside stays succulent.",
-  cuisine: "Indian",
-  culture: "Punjabi",
-  category: "condiments",
-  tags: ["indian", "marinade", "yogurt", "spiced", "grilled", "red"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 1, umami: 2, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Full-fat plain yogurt, strained (labneh-style)",       ratioValue: 4,    defaultUnit: "parts", substitutions: ["Greek yogurt (do not strain further)"] },
-    { ingId: "ing_02", role: "Allium",    name: "Garlic, minced to a fine paste",                       ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Fresh ginger, minced to a fine paste",                 ratioValue: 0.4,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Acid",      name: "Lemon juice, freshly squeezed",                        ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_05", role: "Spice",     name: "Kashmiri chili powder (for color and mild heat)",      ratioValue: 0.3,  defaultUnit: "parts", substitutions: ["smoked paprika mixed with a pinch of cayenne"] },
-    { ingId: "ing_06", role: "Spice",     name: "Garam masala",                                         ratioValue: 0.2,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Ground cumin",                                         ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Ground coriander",                                     ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Ground turmeric",                                      ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fine salt",                                            ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Fat",       name: "Neutral oil or mustard oil",                           ratioValue: 0.3,  defaultUnit: "parts", substitutions: ["ghee, melted and cooled"] },
-    { ingId: "ing_12", role: "Spice",     name: "Chaat masala",                                         ratioValue: 0.1,  defaultUnit: "parts", substitutions: ["a pinch each of amchur and kala namak"] },
+  "repoId": "master_indian_tandoori-marinade_001",
+  "parentRepoId": null,
+  "slug": "tandoori-marinade",
+  "author": "ForkRecipe Kitchen",
+  "title": "Marinade Tandoori",
+  "description": "La marinade de yogourt rouge vif qui va sur tout, du poulet au chou-fleur avant de frapper le gril — l'acide lactique tendre, les épices pénétrant, et la chaleur élevée carbonisant l'extérieur pendant que l'intérieur reste succulent.",
+  "cuisine": "Indiens",
+  "culture": "Punjabi",
+  "category": "condiments",
+  "tags": [
+    "indienne",
+    "marinade",
+    "yaourt",
+    "épicé",
+    "grillé",
+    "rouge"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12"],
-      outputState: "spice_paste",
-      instructions: "Combine the garlic paste, ginger paste, lemon juice, all the ground spices (Kashmiri chili powder, garam masala, cumin, coriander, turmeric, chaat masala), salt, and oil in a small bowl. Stir vigorously until you have a uniform, smooth paste. The Kashmiri chili is the primary driver of the signature red-orange color; if your Kashmiri chili is from an old batch, add a pinch of beet powder or a touch more chili to compensate. The paste should smell vivid and spiced, not dusty — the oil helps bloom the fat-soluble spice pigments and aroma compounds even before heat is applied.",
-      visualCue: {
-        primaryTarget: "A thick, rust-red to orange paste with no dry pockets of spice; smooth and uniform with the oil distributed throughout; smells sharp with garlic and bright with lemon.",
-        spectrum: [
-          { state: "Underdone", description: "Dry spice clumps still visible; garlic and ginger not fully incorporated; paste is crumbly.", action: "Stir more vigorously; use the back of the spoon to mash and press the paste against the bowl wall until homogeneous." },
-          { state: "Perfect",   description: "Smooth, unified orange-red paste; oil sheen visible throughout; aroma is vivid and complex.", action: "Fold into the yogurt immediately." },
-          { state: "Overdone",  description: "Paste prepared and left exposed to air for over an hour before mixing into yogurt; garlic oxidizes and turns bitter.", action: "Mix into yogurt without delay — the yogurt protects and preserves the garlic's freshness." },
-        ],
-      },
-      feelCue: "Rub a small amount of the paste between your fingers — it should feel smooth and slightly oily, not gritty or powdery. The Kashmiri chili should stain your fingers an immediate, vivid orange-red.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Yogourt plein de matière grasse, de type labneh",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Yogourt grec (ne pas pousser plus loin)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fold",
-      inputs: ["ing_01", "spice_paste"],
-      outputState: "tandoori_marinade",
-      instructions: "Add the strained yogurt to the spice paste and fold together until perfectly uniform — no white streaks of plain yogurt should remain visible. The marinade should turn a homogeneous, vivid orange-red. Use a spatula to fold from the bottom up; avoid whisking, which can thin the yogurt. Taste carefully: it should be intensely flavored, salty, tangy, and very spiced, because the marinade will be used in a thin coating on a large surface area of protein — its flavors must be assertive enough to penetrate.",
-      visualCue: {
-        primaryTarget: "A uniformly orange-red, thick, creamy marinade with no white streaks; it should look like a very thick, vibrant, spiced cream that holds its shape on a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "White yogurt streaks still visible; spice paste sitting in clumps in the base of the yogurt.", action: "Fold more thoroughly — use a figure-eight motion with a wide spatula until perfectly uniform." },
-          { state: "Perfect",   description: "Vivid, uniform orange-red; thick enough to coat protein without sliding off; every element incorporated.", action: "Apply directly to scored protein and marinate." },
-          { state: "Overdone",  description: "Marinade has been whisked rather than folded; texture is thin and watery; will slide off protein during grilling.", action: "Cannot be thickened once thinned — apply it anyway but expect more dripping during the cook." },
-        ],
-      },
-      feelCue: "Coat a finger and hold it up — the marinade should cling for at least 5 seconds before dripping. If it slides off immediately, the yogurt was too thin (not strained enough). A good coating marinade has body.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Ail, haché à une pâte fine",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Marinate",
-      inputs: ["tandoori_marinade"],
-      outputState: "marinated_protein",
-      instructions: "Score the protein to be marinated (chicken thighs, drumsticks, or cauliflower florets) deeply — cuts every 2–3 cm allow the marinade to penetrate to the bone. Apply the marinade liberally, pushing it into every cut and coating all surfaces, under the skin if applicable. For best results, wear gloves to protect your hands from staining. Refrigerate, uncovered, for at least 4 hours for chicken pieces; 8–24 hours for bone-in or large cuts; 30–60 minutes for fish or paneer; 1–2 hours for vegetables. The lactic acid from the yogurt tenderizes while the spices penetrate. Cook on a screaming-hot grill, in a tandoor, or under a very hot broiler until charred and blistered.",
-      visualCue: {
-        primaryTarget: "Protein fully coated in a thick, even layer of orange-red marinade, with marinade pushed into all score marks and coating all surfaces uniformly.",
-        spectrum: [
-          { state: "Underdone", description: "Protein not scored; marinade sitting on the surface without penetrating; coating is patchy.", action: "Score more deeply and massage the marinade in — this step is physical, not just coating." },
-          { state: "Perfect",   description: "Thick, even, vivid orange-red coating with marinade visible deep in the score marks; the protein smells fragrant and the marinade has no wet drip when lifted.", action: "Refrigerate for the minimum marinating time; cook over very high heat." },
-          { state: "Overdone",  description: "Marinated for over 24 hours in yogurt; outer layer of chicken is mushy and the marinade has gone grey.", action: "Scrape off the old marinade, add a fresh thin coat, and cook immediately." },
-        ],
-      },
-      feelCue: "After marinating for 4 hours, press the coated chicken with your finger — the surface should feel tacky and the flesh beneath should yield slightly more than it did raw. That softening is the lactic acid tenderizing at work.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Gingembre frais, haché à une pâte fine",
+      "ratioValue": 0.4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Grill",
-      inputs: ["marinated_protein"],
-      outputState: "finished_tandoori",
-      instructions: "Preheat a grill or grill pan to its absolute maximum — or set the oven broiler to 260°C / 500°F with the rack 10 cm from the element. Shake any excess marinade from the protein (thick clumps of marinade burn before the protein cooks). Place directly over the heat. The goal is violent charring of the marinade — black blisters on the outside while the inside stays juicy. Cook chicken thighs for 8–10 minutes per side; for a broiler, cook 10 minutes, then flip for 5 more. The charred marinade is not a mistake — it is the dish. Those blackened spots taste of roasted spice, smoke, and caramelized dairy.",
-      visualCue: {
-        primaryTarget: "Deep charred black and orange blisters on the exterior; the marinade has caramelized and carbonized in a way that smells of roasted spice and smoke, not acrid burning; the flesh visible in the score cuts is cooked through and glistening.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade is pale orange and barely colored; no char; protein has not reached high enough temperature to trigger the Maillard reaction in the yogurt coating.", action: "Increase heat significantly — tandoori demands extremely high temperatures to work properly." },
-          { state: "Perfect",   description: "Vivid char — black-edged, orange-centered blisters; flesh is cooked through and pulls cleanly from the bone; the scent is addictive — smoky, spiced, and faintly sweet.", action: "Rest for 5 minutes before serving; squeeze fresh lemon over and serve with raita." },
-          { state: "Overdone",  description: "Protein is cooked beyond and dried out internally; char is uniformly black rather than patterned blisters of char and color.", action: "Serve sliced into a wrap or curry to compensate for the dryness." },
-        ],
-      },
-      feelCue: "Press the thickest part of a cooked chicken thigh with a finger — it should feel firm but give slightly, bouncing back under pressure. If it feels very soft and yields without resistance, it needs more time; if it feels hard and does not give at all, it is overcooked.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Jus de citron, fraîchement pressé",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poudre de chili cachemiri (pour la couleur et la chaleur légère)",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika fumé mélangé avec une pincée de Cayenne"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Garam masala",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Huile neutre ou huile de moutarde",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Ghee, fondu et refroidi"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Spice",
+      "name": "Chaat masala",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une pincée d'amchur et de kala namak"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "spice_paste",
+      "instructions": "Mélanger la pâte d'ail, la pâte de gingembre, le jus de citron, toutes les épices moulues (poudre de chili Kashmiri, garam masala, cumin, coriandre, curcuma, chaat masala), le sel et l'huile dans un petit bol. Incorporer vigoureusement jusqu'à ce que vous ayez une pâte uniforme et lisse. Le chili cachemiri est le principal moteur de la couleur orange rouge signature; si votre chili cachemiri est d'un vieux lot, ajoutez une pincée de poudre de betterave ou une touche plus de chili pour compenser. La pâte doit sentir vif et épicé, pas poussiéreux — l'huile aide à fleurir les pigments d'épices solubles dans la graisse et les composés arôme avant même que la chaleur soit appliquée.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, rouge rouille à orange sans poches sèches d'épices; lisse et uniforme avec l'huile distribuée à travers; sent aiguisé avec l'ail et brillant avec le citron.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'épice sèche est encore visible; l'ail et le gingembre ne sont pas entièrement incorporés; la pâte est mijotée.",
+            "action": "Mélanger plus vigoureusement; utiliser le dos de la cuillère pour écraser et presser la pâte contre la paroi du bol jusqu'à ce qu'elle soit homogène."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte lisse, rouge-orange unifiée; reflet d'huile visible à travers; l'arôme est vif et complexe.",
+            "action": "Plier dans le yaourt immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pâte préparée et laissée exposée à l'air pendant plus d'une heure avant de se mélanger au yogourt; l'ail s'oxyde et devient amère.",
+            "action": "Mélanger le yogourt sans tarder — le yogourt protège et préserve la fraîcheur de l'ail."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité de pâte entre vos doigts — elle doit être lisse et légèrement grasse, non pulvérisée ou pulvérisée. Le chili cachemiri devrait tacher vos doigts d'un rouge orange vif immédiat."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "ing_01",
+        "spice_paste"
+      ],
+      "outputState": "tandoori_marinade",
+      "instructions": "Ajouter le yogourt tendu à la pâte d'épices et plier ensemble jusqu'à ce qu'il soit parfaitement uniforme. La marinade doit tourner un rouge orange vif homogène. Utilisez une spatule pour plier du bas vers le haut; évitez le fouet, qui peut mincer le yogourt. Goûtez soigneusement: il doit être intensément aromatisé, salé, tanné et très épicé, car la marinade sera utilisée dans un mince revêtement sur une grande surface de protéines — ses saveurs doivent être suffisamment affirmées pour pénétrer.",
+      "visualCue": {
+        "primaryTarget": "Une marinade uniformément rouge-orange, épaisse, crémeuse sans stries blanches; il devrait ressembler à une crème très épaisse, vibrante et épicée qui tient sa forme sur une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries de yogourts blancs sont encore visibles; pâte d'épices assise dans des touffes à la base du yogourt.",
+            "action": "Plier plus soigneusement — utiliser une figure-huit mouvement avec une large spatule jusqu'à ce que parfaitement uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vivide, uniforme orange-rouge; assez épais pour enrober les protéines sans glisser; chaque élément incorporé.",
+            "action": "Appliquer directement sur les protéines marquées et mariner."
+          },
+          {
+            "state": "Overdone",
+            "description": "La marinade a été fouettée plutôt que pliée; la texture est mince et aqueuse; elle glisse sur les protéines pendant le grillage.",
+            "action": "Ne peut pas être épaissi une fois éclairci — appliquez - le de toute façon, mais attendez - vous à plus goutte à goutte pendant la cuisson."
+          }
+        ]
+      },
+      "feelCue": "Enrobez un doigt et maintenez-le. La marinade doit s'accrocher pendant au moins 5 secondes avant de dégoutter. S'il glisse immédiatement, le yogourt est trop mince (pas assez tendu). Une bonne marinade de revêtement a le corps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Marinaté",
+      "inputs": [
+        "tandoori_marinade"
+      ],
+      "outputState": "marinated_protein",
+      "instructions": "Score la protéine à mariner profondément ( cuisses de poulet, pilons ou fleurs de chou-fleur) — coupes tous les 2-3 cm permettent à la marinade de pénétrer dans l'os. Appliquer généreusement la marinade, la pousser dans chaque coupe et enrober toutes les surfaces, sous la peau, le cas échéant. Pour de meilleurs résultats, portez des gants pour protéger vos mains contre les taches. Réfrigérer, à découvert, pendant au moins 4 heures pour les morceaux de poulet; 8 à 24 heures pour les découpes osseuses ou grandes; 30 à 60 minutes pour le poisson ou la pane; 1 à 2 heures pour les légumes. L'acide lactique du yogourt est sensible tandis que les épices pénètrent. Cuire sur un gril chaud, dans un tandoor ou sous un gril très chaud jusqu'à ce qu'il soit carbonisé et cloqué.",
+      "visualCue": {
+        "primaryTarget": "Protéines entièrement recouvertes d'une couche épaisse et uniforme de marinade rouge-orange, avec marinade poussée dans toutes les marques et enrobant uniformément toutes les surfaces.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Protéines non marquées; marinade assise sur la surface sans pénétration; revêtement patchy.",
+            "action": "Scorez plus profondément et massez la marinade dans — cette étape est physique, pas seulement le revêtement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Revêtement épais, même vif orange-rouge avec marinade visible profondément dans les marques de score; la protéine sent l'odorat et la marinade n'a pas de goutte d'eau lorsqu'elle est levée.",
+            "action": "Réfrigérer pour le temps minimum de marinage; cuire à feu très élevé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mariné pendant plus de 24 heures dans le yogourt; la couche externe du poulet est musquée et la marinade est devenue grise.",
+            "action": "Gratter la vieille marinade, ajouter une fine couche fraîche et cuire immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Après avoir mariné pendant 4 heures, pressez le poulet enduit avec votre doigt — la surface doit être collante et la chair en dessous doit produire un peu plus qu'elle ne l'était cru. Cet adoucissement est la sensibilité à l'acide lactique au travail."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Grille",
+      "inputs": [
+        "marinated_protein"
+      ],
+      "outputState": "finished_tandoori",
+      "instructions": "Préchauffer un gril ou un gril à son maximum absolu — ou régler le gril à 260°C / 500°F avec le support à 10 cm de l'élément. Agiter tout excès de marinade de la protéine (brûlures épaisses de marinade avant que la protéine ne cuit). Placez directement sur la chaleur. Le but est l'ombrage violent de la marinade — les cloques noires à l'extérieur tandis que l'intérieur reste juteux. Cuire les cuisses de poulet de 8 à 10 minutes de chaque côté; faire cuire 10 minutes, puis retourner 5 minutes de plus. La marinade carbonisée n'est pas une erreur, c'est le plat. Ces taches noircies ont un goût d'épices grillées, de fumée et de lait caramélisé.",
+      "visualCue": {
+        "primaryTarget": "Blistettes noires et orange carbonées profondes à l'extérieur; la marinade a caramélisé et carbonisé d'une manière qui sent l'épice torréfié et la fumée, non la combustion acride; la chair visible dans les coupes est cuite et scintillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La marinade est orange pâle et à peine colorée; pas d'omble; la protéine n'a pas atteint une température suffisamment élevée pour déclencher la réaction de Maillard dans le revêtement de yaourt.",
+            "action": "Augmentez considérablement la chaleur — le tandoori exige des températures extrêmement élevées pour fonctionner correctement."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'omble vivide — blister noir, centré sur l'orange; la chair est cuite et tire proprement de l'os; le parfum est addictif — fumé, épicé et légèrement sucré.",
+            "action": "Reposez-vous 5 minutes avant de servir; pressez le citron frais et servez avec de la raita."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les protéines sont cuites au-delà et séchées à l'intérieur; l'omble de fontaine est uniformément noir plutôt que des blisters à motifs d'omble et de couleur.",
+            "action": "Servir en tranches dans un enveloppement ou un curry pour compenser la sécheresse."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la partie la plus épaisse d'une cuisse de poulet cuite avec un doigt — elle doit se sentir ferme mais donner légèrement, rebondissant en arrière sous pression. Si elle se sent très douce et donne sans résistance, elle a besoin de plus de temps; si elle se sent difficile et ne donne pas du tout, elle est trop cuite."
+    }
+  ]
 };

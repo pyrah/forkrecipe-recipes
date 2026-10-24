@@ -1,101 +1,232 @@
 export default {
-  repoId: "master_swedish_kladdkaka_001",
-  parentRepoId: null,
-  slug: "kladdkaka",
-  author: "ForkRecipe Kitchen",
-
-  title: "Kladdkaka",
-  description: "A Swedish fudge cake deliberately baked underdone — the edges set into a thin, crackled crust while the center remains dense, gooey, and almost raw-textured, eaten cold from the fridge with a dusting of icing sugar and a cloud of whipped cream.",
-  cuisine: "Swedish",
-  culture: "Scandinavian",
-  category: "desserts",
-
-  tags: ["vegetarian", "swedish", "chocolate", "fudgy", "scandinavian", "baking"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "1 hour 30 min",
-  ratioSystem: "bakers_percentage",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 4, salty: 1, sour: 0, bitter: 3, umami: 0, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",                        ratioValue: 100, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener",  name: "Granulated sugar",                         ratioValue: 250, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_03", role: "Spice",      name: "Unsweetened cocoa powder (Dutch-process)", ratioValue: 60,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine salt",                                ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Binder",     name: "Eggs (large)",                             ratioValue: 100, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",        name: "Unsalted butter, melted and cooled",       ratioValue: 120, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Vanilla extract",                          ratioValue: 3,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",    name: "Icing sugar (powdered sugar), for serving", ratioValue: 10, defaultUnit: "%", substitutions: [] },
+  "repoId": "master_swedish_kladdkaka_001",
+  "parentRepoId": null,
+  "slug": "kladdkaka",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kladdkaka",
+  "description": "Un gâteau au fudge suédois a délibérément cuit sous-done — les bords ont mis dans une croûte fine et craquelée tandis que le centre reste dense, goeey, et presque texturé brut, mangé froid du réfrigérateur avec une poussière de sucre glace et un nuage de crème fouettée.",
+  "cuisine": "Suédois",
+  "culture": "Scandinave",
+  "category": "desserts",
+  "tags": [
+    "végétarien",
+    "suédois",
+    "chocolat",
+    "Fudgy",
+    "scandinave",
+    "Cuisson"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "1 hour 30 min",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 3,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "dry_mixture",
-      instructions: "Sift flour, cocoa powder, and salt into a mixing bowl. Add the sugar and whisk together until uniformly blended — the mixture will be dark and slightly fluffy. There should be no visible pockets of plain flour or lumps of cocoa.",
-      visualCue: {
-        primaryTarget: "Uniformly dark brown powder with no streaks. Light and airy from the sifting. Cohesive when pinched.",
-        spectrum: [
-          { state: "Underdone", description: "Visible pale flour streaks or dark cocoa lumps in the mixture.", action: "Whisk for another minute, pressing any lumps through with the whisk." },
-          { state: "Perfect",   description: "Even dark color, no lumps, smells deeply of cocoa and caramel sugar.", action: "Add wet ingredients." },
-          { state: "Overdone",  description: "Cannot over-mix dry ingredients — proceed.", action: "Proceed." },
-        ],
-      },
-      feelCue: "Pinch a small amount — the dry mixture should clump briefly then fall apart, like good loose soil. The cocoa should be fully visible as a uniform dark-brown coloring.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["dry_mixture", "ing_05", "ing_06", "ing_07"],
-      outputState: "kladdkaka_batter",
-      instructions: "Make a well in the center of the dry ingredients. Add eggs, melted (but not hot) butter, and vanilla. Stir together with a wooden spoon or spatula until just combined — stop the moment no dry flour is visible. The batter will be thick, dark, and glossy. Do not use an electric mixer; the goal is zero air in this batter.",
-      visualCue: {
-        primaryTarget: "A dense, very dark brown batter that flows slowly and reluctantly off the spoon. Glossy, heavy, and shiny — like very thick chocolate sauce.",
-        spectrum: [
-          { state: "Underdone", description: "Dry pockets of flour still visible at the bottom or edges of the bowl.", action: "Fold gently with the spatula to incorporate — do not stir vigorously." },
-          { state: "Perfect",   description: "Uniformly dark and glossy. No dry spots. Thick enough to hold a slow mound when dropped from a spoon.", action: "Pour into the prepared pan immediately." },
-          { state: "Overdone",  description: "Batter looks airy or lighter — eggs have been over-worked and introduced air.", action: "Proceed; it will still be gooey in the center after baking, just fractionally less fudgy." },
-        ],
-      },
-      feelCue: "Tilt the bowl — the batter should move very slowly, like cold honey. It should feel heavy and resistant, nothing like a normal cake batter.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 250,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["kladdkaka_batter"],
-      outputState: "baked_kladdkaka",
-      instructions: "Pour the batter into a buttered and cocoa-dusted 20 cm (8 inch) springform pan. Bake at 175 C (350 F) for exactly 15–17 minutes. The kladdkaka is done when the edges are set, crackled, and firm, and the center still wobbles dramatically — like a set crème brûlée — when the pan is gently shaken. A skewer will come out coated in fudgy batter from the center, and that is correct.",
-      visualCue: {
-        primaryTarget: "A crackled, firm crust around the outer 4 cm of the cake. The center still moves as a single liquid mass when nudged. The surface is matte and slightly domed.",
-        spectrum: [
-          { state: "Underdone", description: "The entire cake jiggles including the edges. The surface looks wet and liquid.", action: "Return to oven for 3–4 more minutes and watch closely — the window between underdone and perfect is narrow." },
-          { state: "Perfect",   description: "Set, crackled edges. Wobbly center. A toothpick in the outer third comes out clean; in the center it comes out fudgy.", action: "Cool in the pan at room temperature, then refrigerate for at least 1 hour before serving." },
-          { state: "Overdone",  description: "The center no longer wobbles. Skewer comes out clean from the middle.", action: "It is now a very moist chocolate cake, not a kladdkaka — serve with cream and call it what it is." },
-        ],
-      },
-      feelCue: "Hold the oven rack and give the pan the gentlest possible side-to-side shake — you should see a slow, synchronized ripple travel across the center. If the edges ripple, it needs more time; if nothing moves, it is over.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Poudre de cacao non sucrée (procédé néerlandais)",
+      "ratioValue": 60,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Chill",
-      inputs: ["baked_kladdkaka", "ing_08"],
-      outputState: "finished_kladdkaka",
-      instructions: "Cool completely in the pan at room temperature — at least 30 minutes — before refrigerating. The fudgy center sets as it cools but remains dense and sticky. Refrigerate for at least 1 hour; cold kladdkaka is the correct serving temperature. Release the springform, dust the top heavily with icing sugar through a sieve, and serve in thin wedges with lightly whipped cream.",
-      visualCue: {
-        primaryTarget: "A flat-topped, crackled cake with a white snowfall of icing sugar. The cross-section shows a thin set crust giving way immediately to a dark, dense, barely-set center.",
-        spectrum: [
-          { state: "Underdone", description: "Center is still liquid and pours off the cut face — still too warm.", action: "Refrigerate for another 30 minutes." },
-          { state: "Perfect",   description: "Cold, firm on the outside, fudge-dense on the inside. A spoon dragged through leaves a clean gouge that very slowly fills in.", action: "Dust with icing sugar and serve." },
-          { state: "Overdone",  description: "Cake has hardened entirely — cuts like a brownie all the way through.", action: "Warm individual slices for 10 seconds in the microwave to restore some gooeyness." },
-        ],
-      },
-      feelCue: "A finished cold kladdkaka should feel almost dense enough to be a truffle in your mouth — fudgy but not greasy, cohesive but not rubbery. It should dissolve slowly on the tongue rather than chewing.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Œufs (gros)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé fondu et refroidi",
+      "ratioValue": 120,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Extrait de vanille",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Sucre écrémé (sucre pulvérisé), pour servir",
+      "ratioValue": 10,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "dry_mixture",
+      "instructions": "Farine tamisée, poudre de cacao et sel dans un bol à mélanger. Ajouter le sucre et fouetter ensemble jusqu'à mélanger uniformément — le mélange sera sombre et légèrement moelleux. Il ne devrait pas y avoir de poches visibles de farine ordinaire ou de morceaux de cacao.",
+      "visualCue": {
+        "primaryTarget": "Poudre brun foncé uniforme sans stries. Léger et aéré du crible. Cohésif quand pincée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries de farine pâle visible ou des morceaux de cacao foncé dans le mélange.",
+            "action": "Frottez encore une minute, appuyez sur n'importe quel morceau avec le fouet."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même la couleur foncée, sans bosses, sent profondément le cacao et le sucre de caramel.",
+            "action": "Ajouter les ingrédients humides."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ne peut pas trop mélanger les ingrédients secs — procéder.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "Pincez une petite quantité — le mélange sec devrait s'effondrer brièvement puis s'effondrer, comme un bon sol en vrac. Le cacao doit être entièrement visible comme une coloration brun foncé uniforme."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "dry_mixture",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "kladdkaka_batter",
+      "instructions": "Faites un puits au centre des ingrédients secs. Ajouter les œufs, le beurre fondu (mais pas chaud) et la vanille. Mélanger avec une cuillère en bois ou une spatule jusqu'à ce qu'elle soit simplement combinée. La pâte sera épaisse, sombre et brillante. N'utilisez pas de mélangeur électrique; l'objectif est zéro air dans cette pâte.",
+      "visualCue": {
+        "primaryTarget": "Une pâte brune dense et très foncée qui coule lentement et à contrecœur de la cuillère. Gloire, lourde et brillante, comme une sauce au chocolat très épaisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poches sèches de farine encore visibles au fond ou aux bords du bol.",
+            "action": "Plier doucement avec la spatule à incorporer — ne pas remuer vigoureusement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toujours sombre et brillant. Pas de taches sèches. Assez épais pour tenir un monticule lent lorsqu'il est tombé d'une cuillère.",
+            "action": "Verser immédiatement dans la casserole préparée."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie semble aérée ou plus légère — les œufs ont été surmenés et introduits dans l'air.",
+            "action": "Procéder; il sera encore gooy dans le centre après la cuisson, juste fractionnellement moins de fumée."
+          }
+        ]
+      },
+      "feelCue": "Inclinez le bol — la pâte doit bouger très lentement, comme le miel froid. Il devrait se sentir lourd et résistant, rien comme une pâte à gâteau normale."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "kladdkaka_batter"
+      ],
+      "outputState": "baked_kladdkaka",
+      "instructions": "Verser la pâte dans une poêle à ressort de 20 cm (8 pouces) beurrée et à poudre de cacao. Cuire au four à 175 C (350 F) pendant exactement 15–17 minutes. Le kladdkaka se fait quand les bords sont fixés, craqués et fermes, et le centre continue de trembler de façon spectaculaire — comme une crème brûlée — quand la poêle est légèrement secouée. Une brochette sortira enduite de pâte fudgy du centre, et c'est exact.",
+      "visualCue": {
+        "primaryTarget": "Une croûte ferme et crépitée autour de l'extérieur, 4 cm du gâteau. Le centre se déplace toujours comme une seule masse de liquide lorsqu'il est bouché. La surface est mate et légèrement bombée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Tous les cakes y compris les bords. La surface semble humide et liquide.",
+            "action": "Retourner au four pour 3 à 4 minutes de plus et regarder de près — la fenêtre entre underdone et parfait est étroite."
+          },
+          {
+            "state": "Perfect",
+            "description": "Réglé, bords cassés. Centre wobble. Un cure-dent dans le tiers extérieur sort propre; au centre il sort flou.",
+            "action": "Laisser refroidir dans la poêle à température ambiante, puis réfrigérer pendant au moins 1 heure avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le centre ne tremble plus. La brochette sort propre du milieu.",
+            "action": "C'est maintenant un gâteau au chocolat très humide, pas un kladdkaka — servir avec de la crème et l'appeler comme il est."
+          }
+        ]
+      },
+      "feelCue": "Tenez la grille du four et donnez à la poêle la plus douce possible agiter côte à côte — vous devriez voir un voyage d'ondulation lent et synchronisé à travers le centre. Si les bords se déchirent, il faut plus de temps; si rien ne bouge, c'est fini."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Refroidissement",
+      "inputs": [
+        "baked_kladdkaka",
+        "ing_08"
+      ],
+      "outputState": "finished_kladdkaka",
+      "instructions": "Laisser refroidir complètement dans la poêle à température ambiante — au moins 30 minutes — avant de réfrigérer. Le centre de fumée se met comme il refroidit mais reste dense et collant. Réfrigérer pendant au moins 1 heure; le kladdkaka froid est la température de service correcte. Relâchez la forme printanière, époussetez fortement le dessus avec du sucre glaçant à travers un tamis et servez dans des coins fins avec de la crème légèrement fouettée.",
+      "visualCue": {
+        "primaryTarget": "Un gâteau plat et crépité avec une chute de neige blanche de sucre glace. La coupe transversale montre une croûte mince qui laisse place immédiatement à un centre sombre, dense et à peine fixé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre est encore liquide et coule du visage coupé — encore trop chaud.",
+            "action": "Réfrigérer encore 30 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Froid, ferme à l'extérieur, fin à l'intérieur. Une cuillère traînée à travers laisse une gouge propre qui se remplit très lentement.",
+            "action": "Poussière avec du sucre glace et servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le gâteau s'est entièrement durci — des coupes comme un brownie jusqu'au bout.",
+            "action": "Chauffer les tranches individuelles pendant 10 secondes dans le micro-ondes pour restaurer un peu de goeyness."
+          }
+        ]
+      },
+      "feelCue": "Un kladdkaka froid fini devrait se sentir presque assez dense pour être une truffe dans votre bouche — flou mais pas gras, cohésif mais pas caoutchouteux. Il devrait se dissoudre lentement sur la langue plutôt que de mâcher."
+    }
+  ]
 };

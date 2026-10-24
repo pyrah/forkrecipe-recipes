@@ -1,104 +1,232 @@
 export default {
-  repoId: "master_mexican_shrimp_aguachile_001",
-  parentRepoId: null,
-  slug: "shrimp-aguachile",
-  author: "ForkRecipe Kitchen",
-
-  title: "Shrimp Aguachile",
-  description: "Sinaloa's answer to ceviche — raw shrimp butterflied and cured for mere minutes in a blast of blended serrano, lime, and cucumber water so vivid and green and shocking it barely qualifies as cooking, yet is unforgettable.",
-  cuisine: "Mexican",
-  culture: "Sinaloan",
-  category: "seafood",
-
-  tags: ["shrimp", "raw", "aguachile", "lime", "serrano", "mexican", "ceviche", "sinaloan"],
-  difficulty: 1,
-  activeTime: "25 min",
-  totalTime: "35 min",
-  ratioSystem: "parts",
-
-  stars: 1430,
-  forks: 118,
-  contributors: 31,
-  license: "CC-BY-SA",
-  createdAt: "2025-01-18",
-  updatedAt: "2025-05-29",
-
-  flavorRadar: { sweet: 1, salty: 3, sour: 5, bitter: 1, umami: 3, heat: 4 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Large raw shrimp (peeled, deveined, butterflied)", ratioValue: 100, defaultUnit: "parts", substitutions: ["scallops, sliced thin"] },
-    { ingId: "ing_02", role: "Acid",      name: "Fresh lime juice (about 8 limes)",                 ratioValue: 60,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Structure", name: "English cucumber (half for aguachile, half sliced for garnish)", ratioValue: 40, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",     name: "Fresh serrano chiles (stems removed)",             ratioValue: 10,  defaultUnit: "parts", substitutions: ["jalapeño for milder heat"] },
-    { ingId: "ing_05", role: "Allium",    name: "White onion (thinly sliced into half-moons)",      ratioValue: 20,  defaultUnit: "parts", substitutions: ["red onion"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine salt",                                        ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Herb",      name: "Fresh cilantro (leaves and thin stems)",           ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_mexican_shrimp_aguachile_001",
+  "parentRepoId": null,
+  "slug": "shrimp-aguachile",
+  "author": "ForkRecipe Kitchen",
+  "title": "Crevettes Aguachile",
+  "description": "La réponse de Sinaloa au ceviche — les crevettes crues au beurre frit et guéri pendant quelques minutes dans une explosion de serrano mélangé, de chaux et d'eau de concombre si vive et verte et choquante qu'elle se qualifie à peine de cuisson, mais c'est inoubliable.",
+  "cuisine": "Mexicain",
+  "culture": "Sinaloan",
+  "category": "seafood",
+  "tags": [
+    "crevettes",
+    "cru",
+    "aguachile",
+    "Chaux",
+    "Serrano",
+    "Mexique",
+    "Ceviche",
+    "Sinaloan"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "25 min",
+  "totalTime": "35 min",
+  "ratioSystem": "parts",
+  "stars": 1430,
+  "forks": 118,
+  "contributors": 31,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-01-18",
+  "updatedAt": "2025-05-29",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 5,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Slice",
-      inputs: ["ing_01"],
-      outputState: "prepared_shrimp",
-      instructions: "Using a sharp knife, butterfly each shrimp by cutting along the back (where the vein ran) almost all the way through, then pressing it open flat. This doubles the surface area exposed to the cure and allows the lime juice to penetrate more quickly and evenly. Arrange the butterflied shrimp in a single layer in a cold, shallow dish. Refrigerate while you prepare the aguachile.",
-      visualCue: {
-        primaryTarget: "Shrimp are flat and symmetrical, open like a book. Flesh is pale, semi-translucent, and uniform — no dark spots or opaque areas.",
-        spectrum: [
-          { state: "Underdone", description: "Shrimp are whole or only partially cut. The cure will not penetrate evenly and curing time doubles.", action: "Continue butterflying. The cut needs to go 80% of the way through." },
-          { state: "Perfect",   description: "Uniformly flat, fully open shrimp with identical thickness throughout. They lie flat naturally.", action: "Refrigerate while making the aguachile." },
-          { state: "Overdone",  description: "Shrimp have been cut all the way through, separating into two pieces.", action: "Proceed — two pieces is not ideal visually but works identically for curing." },
-        ],
-      },
-      feelCue: "Raw butterflied shrimp should feel cold and supple in your hands — firm but yielding, with a natural give, not stiff. Any ammonia smell means they are past their prime; do not proceed.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Grandes crevettes crues (peautées, dépeintes, beurrées)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pétoncles, coupés en tranches"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_06"],
-      outputState: "aguachile_verde",
-      instructions: "Blend half the cucumber (peeled and roughly chopped), all the lime juice, serranos, and salt together in a blender for 60 seconds until completely smooth and vivid green. Strain through a fine sieve, pressing the solids to extract maximum liquid. Discard solids. The aguachile should be intensely green, bracingly acidic, and fiercely hot. Taste it — it should feel aggressive. Adjust heat by adding or removing serrano seeds.",
-      visualCue: {
-        primaryTarget: "A vivid, translucent green liquid that is thin but not watery. The color should be the bright green of a traffic light, not muddy or pale.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is pale green or greenish-yellow. Flavor is mostly lime juice with little chile heat or cucumber freshness.", action: "Blend longer, or add more serrano and fresh cucumber for color and heat." },
-          { state: "Perfect",   description: "Vivid, electric green, translucent, and intensely flavored. Tastes like fire and lime in equal measure.", action: "Pour over shrimp immediately." },
-          { state: "Overdone",  description: "Aguachile has turned dark and oxidized from prolonged blending heat. The color is dull olive.", action: "Strain and use immediately. Keep it cold to minimize further oxidation." },
-        ],
-      },
-      feelCue: "When you taste the aguachile, you should feel the heat of the serrano in your throat within 3 seconds and a rush of salivation from the lime — both simultaneously. If only one, adjust.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Jus de chaux frais (environ 8 chaux)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Marinate",
-      inputs: ["prepared_shrimp", "aguachile_verde"],
-      outputState: "cured_shrimp",
-      instructions: "Pour the aguachile verde over the shrimp, ensuring every piece is fully submerged. The shrimp should cure for exactly 7-10 minutes — the lime juice denatures the proteins in the same way heat would, turning the flesh from translucent grey to opaque white-pink. Do not over-cure. At 10 minutes, the shrimp should be pink-white on the outside but still slightly translucent at the very center — this is the perfect texture. Longer curing produces rubbery, overcooked-tasting shrimp.",
-      visualCue: {
-        primaryTarget: "Shrimp have turned pink-white from the edges inward. The exposed butterflied surfaces are fully opaque but the very center retains a faint translucency.",
-        spectrum: [
-          { state: "Underdone", description: "Shrimp are still mostly grey and translucent throughout. Texture is too raw and slippery.", action: "Cure 3-4 more minutes. The lime acid must denature the exterior protein." },
-          { state: "Perfect",   description: "Pink-white exterior graduating to a faint translucent center. Flesh is firm but yielding — like a medium-cooked shrimp.", action: "Remove immediately from the aguachile and arrange on plates." },
-          { state: "Overdone",  description: "Shrimp are uniformly opaque white and have begun to contract and curl tightly. Texture is rubbery.", action: "Serve immediately. The texture will not improve, but the flavor is still good." },
-        ],
-      },
-      feelCue: "A properly cured aguachile shrimp should feel firm but not bouncy when you pick it up — spring back is the enemy. If it feels like a rubber eraser, it has over-cured.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Concombre anglais (la moitié pour l'aguachile, la moitié pour la garniture)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["cured_shrimp", "ing_05", "ing_07", "ing_03"],
-      outputState: "finished_aguachile",
-      instructions: "Arrange the cured shrimp on a cold, flat plate. Drape thinly sliced onion half-moons over the shrimp. Layer cucumber slices around the plate. Spoon 2-3 tablespoons of the aguachile verde over everything. Scatter cilantro leaves. Serve immediately with tostadas or thick tortilla chips on the side. The dish should be cold, bright, and served instantly — aguachile waits for no one.",
-      visualCue: {
-        primaryTarget: "A jewel-bright plate: pink shrimp, green aguachile, white onion, green cucumber, and vivid cilantro against a cold white dish. Everything glistens.",
-        spectrum: [
-          { state: "Underdone", description: "Plating is rushed and the elements are piled rather than arranged. The aguachile pool is too deep.", action: "Spread the shrimp into a single layer. The dish should lie flat — aguachile is theater." },
-          { state: "Perfect",   description: "Individual shrimp visible, vegetables artfully placed, aguachile pooled around rather than over. Vivid colors contrast dramatically.", action: "Serve within 2 minutes." },
-          { state: "Overdone",  description: "The shrimp have sat in the aguachile on the plate for more than 5 minutes and have continued cooking from the acid.", action: "Serve immediately. Instruct guests to eat without delay." },
-        ],
-      },
-      feelCue: "The finished plate smells of wet lime, fresh green chile, and the faint ocean sweetness of shrimp — clean, cold, and dangerously alive.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Chiles de serrano frais (tiges enlevées)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jalapeño pour une chaleur plus légère"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon blanc (finement coupé en demi-lunes)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon rouge"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Coriandre fraîche (feuilles et tiges minces)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Tranche",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "prepared_shrimp",
+      "instructions": "À l'aide d'un couteau tranchant, papillonz chaque crevette en coupant le long du dos (où la veine a couru) presque tout le chemin à travers, puis appuyez dessus ouvrir plat. Cela double la surface exposée au remède et permet au jus de chaux de pénétrer plus rapidement et uniformément. Disposer les crevettes au beurre en une seule couche dans un plat froid et peu profond. Réfrigérer pendant que vous préparez l'aguachile.",
+      "visualCue": {
+        "primaryTarget": "Les crevettes sont plates et symétriques, ouvertes comme un livre. La chair est pâle, semi-translucide et uniforme — pas de taches foncées ni de zones opaques.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont entières ou seulement partiellement coupées. Le remède ne pénétrera pas uniformément et le temps de guérison double.",
+            "action": "Continuez à papillonner. La coupe doit faire 80 % du chemin."
+          },
+          {
+            "state": "Perfect",
+            "description": "De façon uniforme plat, crevettes entièrement ouvertes d'une épaisseur identique. Ils sont à plat naturellement.",
+            "action": "Réfrigérer tout en faisant l'aguachile."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes ont été coupées jusqu'au bout, se séparant en deux morceaux.",
+            "action": "Procéder — deux pièces ne sont pas visuellement idéales, mais fonctionnent de façon identique pour guérir."
+          }
+        ]
+      },
+      "feelCue": "Les crevettes crues au beurre frit devraient se sentir froides et souples dans vos mains, fermes mais qui donnent, avec un don naturel, pas raides. Toute odeur d'ammoniaque signifie qu'ils sont dépassés leur prime; ne pas procéder."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "aguachile_verde",
+      "instructions": "Mélanger la moitié du concombre (peeled et grossièrement haché), tout le jus de lime, le serranos et le sel dans un mélangeur pendant 60 secondes jusqu'à ce que le vert soit complètement lisse et vif. Plongez dans un tamis fin, pressez les solides pour extraire le maximum de liquide. Jetez les solides. L'aguachile doit être intensément vert, extrêmement acide et extrêmement chaud. Goûtez - le — il devrait se sentir agressif. Régler la chaleur en ajoutant ou en enlevant les graines de serrano.",
+      "visualCue": {
+        "primaryTarget": "Un liquide vert vif et translucide, mince mais non aqueux. La couleur doit être le vert vif d'un feu de circulation, pas boueux ou pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est vert pâle ou jaune verdâtre. L'arôme est surtout le jus de lime avec peu de chaleur de chile ou de fraîcheur de concombre.",
+            "action": "Mélanger plus longtemps, ou ajouter plus de serrano et de concombre frais pour la couleur et la chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vivant, vert électrique, translucide et intensément aromatisé. Goûte comme le feu et la chaux en mesure égale.",
+            "action": "Verser sur les crevettes immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'aguachile est devenu sombre et oxydé par une chaleur de mélange prolongée. La couleur est olive terne.",
+            "action": "Soucher et utiliser immédiatement. Garder le froid pour minimiser l'oxydation."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous goûtez l'aguachile, vous devez sentir la chaleur du serrano dans votre gorge en 3 secondes et une poussée de salivation de la chaux — les deux simultanément. Si une seule, ajustez."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Marinaté",
+      "inputs": [
+        "prepared_shrimp",
+        "aguachile_verde"
+      ],
+      "outputState": "cured_shrimp",
+      "instructions": "Verser la verde aguachile sur les crevettes, en veillant à ce que chaque pièce soit entièrement submergée. La crevette devrait guérir pendant exactement 7-10 minutes — le jus de lime dénature les protéines de la même manière que la chaleur, faisant passer la chair de gris translucide à blanc-rose opaque. Ne pas trop guérir. A 10 minutes, les crevettes devraient être blanches-roses à l'extérieur, mais encore légèrement translucides au centre, c'est la texture parfaite. Un durcissement plus long produit des crevettes caoutchouteuses et surcuites.",
+      "visualCue": {
+        "primaryTarget": "Les crevettes sont devenues rose-blanches des bords vers l'intérieur. Les surfaces exposées sont entièrement opaques mais le centre conserve une faible translucidité.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont encore généralement grises et translucides. La texture est trop brute et glissante.",
+            "action": "Cure encore 3-4 minutes. L'acide de chaux doit dénaturer la protéine extérieure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Extérieur rose-blanc sortant vers un centre faible translucide. La chair est ferme, mais elle donne, comme une crevette à cuisson moyenne.",
+            "action": "Retirer immédiatement de l'aguachile et arranger sur les plaques."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes sont uniformément blanches opaques et ont commencé à se contracter et à se boucler étroitement. La texture est caoutchouteuse.",
+            "action": "Servir immédiatement. La texture ne s'améliorera pas, mais la saveur est encore bonne."
+          }
+        ]
+      },
+      "feelCue": "Une crevette aguachile bien guérie devrait se sentir ferme, mais pas généreuse quand vous la ramassez — le printemps est l'ennemi. Si c'est comme une gomme en caoutchouc, elle est surchargée."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "cured_shrimp",
+        "ing_05",
+        "ing_07",
+        "ing_03"
+      ],
+      "outputState": "finished_aguachile",
+      "instructions": "Disposer les crevettes sur une assiette plate et froide. Drapez les demi-lunes d'oignon coupées finement sur les crevettes. Coucher les tranches de concombre autour de l'assiette. Spoon 2-3 cuillères à soupe de la verde aguachile sur tout. Des feuilles de coriandre. Servir immédiatement avec des tostadas ou des croustilles de tortilla épaisses sur le côté. Le plat doit être froid, lumineux et servi instantanément — l'aguachile n'attend personne.",
+      "visualCue": {
+        "primaryTarget": "Une assiette de bijou : crevettes roses, aguachile vert, oignon blanc, concombre vert, et coriandre vive contre un plat blanc froid. Tout brille.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le revêtement est précipité et les éléments sont empilés plutôt que disposés. La piscine d'aguachile est trop profonde.",
+            "action": "Étendre les crevettes en une seule couche. Le plat devrait être plat: l'aguachile est le théâtre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crevettes individuelles visibles, légumes habilement placés, aguachile baigné autour plutôt que sur. Les couleurs vives contrastent de façon spectaculaire.",
+            "action": "Servir dans les 2 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes se sont assises dans l'aguachile sur l'assiette pendant plus de 5 minutes et ont continué à cuire à partir de l'acide.",
+            "action": "Servir immédiatement. Instruisez les clients à manger sans délai."
+          }
+        ]
+      },
+      "feelCue": "L'assiette finie sent la chaux humide, le chile vert frais et la douceur de l'océan des crevettes — propre, froide et dangereusement vivante."
+    }
+  ]
 };

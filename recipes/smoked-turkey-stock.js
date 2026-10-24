@@ -1,118 +1,300 @@
 export default {
-  repoId: "master_american_smoked_turkey_stock_001",
-  parentRepoId: null,
-  slug: "smoked-turkey-stock",
-  author: "ForkRecipe Kitchen",
-  title: "Smoked Turkey Stock",
-  description: "Deeply smoky, golden stock from turkey carcass or smoked wings — the most underused cooking liquid in the American kitchen, extraordinary in gravies, risottos, and braised greens.",
-  cuisine: "American",
-  culture: "American Thanksgiving",
-  category: "stocks",
-  tags: ["american", "turkey", "stock", "smoked", "thanksgiving", "gluten-free"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "4 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 2, sour: 0, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Smoked turkey carcass (broken into pieces) or smoked turkey wings (1.5 kg)", ratioValue: 1500, defaultUnit: "g",  substitutions: ["smoked turkey legs", "roasted turkey carcass (less smoke)"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Cold water",                                                                   ratioValue: 3500, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "White onion, quartered",                                                       ratioValue: 250,  defaultUnit: "g",  substitutions: ["leek, white and light green parts"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Celery stalks with leaves, broken in half",                                    ratioValue: 150,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Carrot, halved lengthwise",                                                    ratioValue: 150,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, smashed",                                                       ratioValue: 4,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_07", role: "Acid",      name: "Apple cider vinegar",                                                          ratioValue: 30,   defaultUnit: "ml", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Bay leaves",                                                                   ratioValue: 3,    defaultUnit: "leaves", substitutions: [] },
-    { ingId: "ing_09", role: "Herb",      name: "Fresh thyme sprigs",                                                           ratioValue: 5,    defaultUnit: "sprigs", substitutions: ["1 tsp dried thyme"] },
-    { ingId: "ing_10", role: "Herb",      name: "Fresh sage leaves",                                                            ratioValue: 6,    defaultUnit: "leaves", substitutions: ["3 dried sage leaves"] },
-    { ingId: "ing_11", role: "Spice",     name: "Black peppercorns",                                                            ratioValue: 1,    defaultUnit: "tsp",    substitutions: [] },
+  "repoId": "master_american_smoked_turkey_stock_001",
+  "parentRepoId": null,
+  "slug": "smoked-turkey-stock",
+  "author": "ForkRecipe Kitchen",
+  "title": "Stock de dinde fumée",
+  "description": "Profondément fumé, le stock d'or de la carcasse de dinde ou des ailes fumées — le liquide de cuisson le plus mal utilisé dans la cuisine américaine, extraordinaire en graviers, risottos et verts braisés.",
+  "cuisine": "Américain",
+  "culture": "American Thanksgiving",
+  "category": "stocks",
+  "tags": [
+    "américains",
+    "dinde",
+    "stock",
+    "fumé",
+    "Action de grâces",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "4 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_03", "ing_04", "ing_05"],
-      outputState: "roasted_vegetables",
-      instructions: "Preheat the oven to 220°C (425°F). Spread the quartered onion, celery, and carrot on a dry sheet pan in a single layer. Roast for 15-20 minutes until the vegetables have taken on golden-brown color on their cut faces and the onion edges are lightly charred. Do not oil them — dry roasting concentrates their natural sugars and adds caramel depth to the stock without adding fat. The char on the onion specifically contributes color and a gentle bitterness that balances the smoke.",
-      visualCue: {
-        primaryTarget: "Vegetables show golden-brown to caramelized edges. Onion edges are faintly charred. Celery has wilted and taken on golden patches. The sheet pan smells of toasted allium.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are barely coloured — still pale and bright. No caramelization.", action: "Return to the oven for another 5-7 minutes. The Maillard reaction on these vegetables is the primary colour source for the final stock." },
-          { state: "Perfect",   description: "Deep golden-brown on all cut faces, with darkened edges on the onion. The carrot looks slightly shrunken. The pan bottom has dark, sticky residue — deglaze this into the stock pot.", action: "Transfer vegetables to the stockpot and deglaze the pan with 120ml of water." },
-          { state: "Overdone",  description: "Vegetables are burnt — deeply black, with a sharp, acrid smell.", action: "Discard and use raw vegetables instead. Burnt vegetables will make the stock taste bitter and metallic." },
-        ],
-      },
-      feelCue: "When you press a roasted onion quarter against the sheet pan with a spatula, it should give a faint hiss and stick slightly — the natural sugars have caramelized to a golden stickiness.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Carcasse de dinde fumée (brochée en morceaux) ou ailes de dinde fumée (1,5 kg)",
+      "ratioValue": 1500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cuisses de dinde fumée",
+        "carcasse de dinde grillée (moins de fumée)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["roasted_vegetables", "ing_01", "ing_02", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "simmering_stock",
-      instructions: "Place the smoked turkey pieces in the stockpot with the roasted vegetables. Add the cold water, garlic, apple cider vinegar, bay leaves, thyme, sage, and peppercorns. The vinegar is essential: it draws calcium and collagen from the turkey bones, enriching the body of the stock without adding any detectable acidity in the final product. Bring slowly to a bare simmer over medium heat — 25-30 minutes. Immediately reduce to the lowest possible heat. Maintain at 85-90°C for 3 to 3.5 hours.",
-      visualCue: {
-        primaryTarget: "A steady gentle simmer — small bubbles rising slowly and lazily from the bones. The stock is a rich, warm amber-gold with a visible smoky haze. The kitchen smells of hickory, sage, and roasted turkey.",
-        spectrum: [
-          { state: "Underdone", description: "After 2 hours the broth is pale gold and thin. The turkey aroma is faint.", action: "Continue simmering — turkey collagen requires time. The colour and body will deepen significantly in the last hour." },
-          { state: "Perfect",   description: "After 3.5 hours, stock is a deep, warm amber with a slight haze from dissolved collagen. Turkey pieces easily pull apart with tongs. The surface has a golden shimmer of rendered fat.", action: "Skim surface fat, remove turkey, and strain." },
-          { state: "Overdone",  description: "Maintained at a rolling boil — stock is murky, grey-gold, and greasy. Fat has emulsified into the broth.", action: "Strain through fine cheesecloth and chill overnight — the congealed fat disc can still be removed, and the flavour is not lost even if the clarity is." },
-        ],
-      },
-      feelCue: "After 2 hours, insert tongs into the pot and squeeze a turkey bone — if the cartilage at the joint has begun to soften and yield, you are on the right track; cartilage dissolving into gelatin is what gives the stock its body.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 3500,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Skim",
-      inputs: ["simmering_stock"],
-      outputState: "skimmed_stock",
-      instructions: "During the first 30-45 minutes of simmering, grey-brown foam and fat will rise to the surface. Skim it off every 10-15 minutes with a wide, flat spoon or ladle, dragging it to the edge of the pot where it collects. After the first hour, skim only the golden fat that pools in still corners of the pot surface. Do not over-skim — the fat carries flavor and will be removed in quantity after chilling.",
-      visualCue: {
-        primaryTarget: "The stock surface is calm and mostly clear, with only a faint shimmer of golden fat. No grey foam or brown coagulated protein visible.",
-        spectrum: [
-          { state: "Underdone", description: "Grey foam still prominent on the surface. Brown protein clumps floating freely.", action: "Continue skimming every 10 minutes. Use a wide, flat ladle and a bowl of cold water to rinse it between passes." },
-          { state: "Perfect",   description: "Surface is clear with only a thin golden film of turkey fat. The stock below is visibly amber and clear. Skimming is now complete.", action: "Maintain the simmer, undisturbed, for the remaining cooking time." },
-          { state: "Overdone",  description: "Skimmed so aggressively that even the aromatic fat has been removed and the surface looks almost like water — no shimmer.", action: "A small amount of surface fat is beneficial — it carries fat-soluble flavor compounds from the smoke. Leave it alone." },
-        ],
-      },
-      feelCue: "Touch the back of your skimming spoon to the surface and lift — if grey foam clings in a ring around the spoon edge, there is still protein coagulate to remove. If only clear golden liquid clings, skimming is done.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon blanc, quartiers",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "parties de poireau, blanc et vert clair"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Strain",
-      inputs: ["skimmed_stock"],
-      outputState: "strained_stock",
-      instructions: "Remove the large turkey pieces from the pot with tongs. Ladle the stock through a fine-mesh sieve lined with a double layer of damp cheesecloth into a large, clean pot or bowl. Press gently on the spent vegetables to extract their liquid, but do not force the vegetable pulp through. Reserve any turkey meat that has pulled clean from the bones — it will have given most of its flavour to the stock, but is excellent for a hash or pot pie filling.",
-      visualCue: {
-        primaryTarget: "Clear amber-gold stock, free of particles. Holds a faint smoky haze from the dissolved smoke compounds — this is desirable and will not disappear in straining.",
-        spectrum: [
-          { state: "Underdone", description: "Stock still has visible vegetable matter and small bone fragments.", action: "Re-strain through fresh cheesecloth." },
-          { state: "Perfect",   description: "Golden, slightly hazy (from gelatin, not particulate), warm and fragrant with smoke and herbs. A tablespoon cooled briefly on a chilled plate should thicken slightly at room temperature.", action: "Cool and skim fat, or use immediately." },
-          { state: "Overdone",  description: "Pressed vegetables so hard the sieve is pushing through green-grey vegetable pulp.", action: "Discard the pulp-contaminated portion and re-strain the rest. Spent vegetables after 4 hours of simmering are bitter — keep them out." },
-        ],
-      },
-      feelCue: "Rub a few drops of strained warm stock between your fingers and let them air-dry for 10 seconds — the slight tackiness left behind is dissolved collagen, the hallmark of a well-made stock that will gel when cold.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri avec feuilles, cassées en deux",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Chill",
-      inputs: ["strained_stock"],
-      outputState: "finished_smoked_turkey_stock",
-      instructions: "Cool the strained stock rapidly over an ice bath, stirring occasionally. Refrigerate uncovered until completely cold — at least 4 hours, preferably overnight. A solid disc of pale golden turkey fat will form on the surface. Lift it off in one piece and discard or reserve for cooking vegetables. The de-fatted stock beneath should be a lightly gelled, clear amber liquid. Use within 4 days or freeze in 500ml portions for up to 4 months.",
-      visualCue: {
-        primaryTarget: "After chilling, a solid golden fat disc sits atop a firmly gelled, amber-coloured stock. The gel should wobble visibly when the container is shaken.",
-        spectrum: [
-          { state: "Underdone", description: "Fat has not fully solidified — only partial congealing at the edges. Stock is cold but not gelled.", action: "Refrigerate for another 4 hours. A gel that does not set is still good stock — it simply has a lower gelatin content; it will still be excellent in use." },
-          { state: "Perfect",   description: "Fat disc lifts cleanly in one piece. Stock beneath is a firm, wobbling jelly. Deep amber, clear, with a smoky warmth to its aroma even cold.", action: "Store refrigerated 4 days or freeze. Reheat gently to liquefy." },
-          { state: "Overdone",  description: "Frozen solid before de-fatting. Fat is locked within the ice.", action: "Thaw slowly in the refrigerator over 24 hours. Layers will re-separate and fat can be lifted cleanly." },
-        ],
-      },
-      feelCue: "Pierce the cold jelly with a finger and feel the resistance — a stock with good gelatin content should feel like a softly set jello. The richer the wobble, the more body it will lend to every dish it enters.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Carotte, coupée en deux dans le sens de la longueur",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Girofles d'ail brisées",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 3,
+      "defaultUnit": "leaves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 5,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "1 c. à thé de thym séché"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Feuilles de sauge fraîches",
+      "ratioValue": 6,
+      "defaultUnit": "leaves",
+      "substitutions": [
+        "3 feuilles de sauge séchées"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Maïs de poivre noir",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "roasted_vegetables",
+      "instructions": "Préchauffer le four à 220°C (425°F). Étaler l'oignon en quartiers, le céleri et la carotte sur une plaque sèche en une seule couche. Faire cuire pendant 15-20 minutes jusqu'à ce que les légumes aient pris la couleur dorée-brun sur leurs faces coupées et les bords de l'oignon sont légèrement carbonisés. Ne les huilez pas — la torréfaction sèche concentre leurs sucres naturels et ajoute de la profondeur de caramel au stock sans ajouter de graisse. L'omble sur l'oignon contribue spécifiquement à la couleur et à une légère amertume qui équilibre la fumée.",
+      "visualCue": {
+        "primaryTarget": "Les légumes montrent des bords dorés à caramélisés. Les bords de l'oignon sont légèrement carbonisés. Celery a flétri et pris sur des taches dorées. La plaque sent l'allium grillé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont à peine colorés, encore pâles et brillants. Pas de caramélisation.",
+            "action": "Retourner au four 5-7 minutes de plus. La réaction de Maillard sur ces légumes est la principale source de couleur pour le stock final."
+          },
+          {
+            "state": "Perfect",
+            "description": "De couleur dorée sur toutes les faces coupées, avec des bords foncés sur l'oignon. La carotte semble légèrement réduite. Le fond de la poêle a des résidus sombres et collants — déglacez - les dans la marmite.",
+            "action": "Transférer les légumes dans la réserve et déglacer la poêle avec 120 ml d'eau."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont brûlés — profondément noirs, avec une odeur aiguë et acride.",
+            "action": "Jetez et utilisez plutôt des légumes crus. Les légumes brûlés rendront le stock amer et métallique."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous pressez un quart d'oignon torréfié contre la poêle avec une spatule, il devrait donner un léger sifflement et coller légèrement — les sucres naturels ont caramélisé à un collant doré."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "roasted_vegetables",
+        "ing_01",
+        "ing_02",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "simmering_stock",
+      "instructions": "Placez les morceaux de dinde fumée dans la réserve avec les légumes rôtis. Ajouter l'eau froide, l'ail, le vinaigre de cidre de pomme, les feuilles de laurier, le thym, la sauge et les grains de poivre. Le vinaigre est essentiel : il puise du calcium et du collagène dans les os de la dinde, enrichissant le corps du stock sans ajouter d'acidité détectable dans le produit final. Porter lentement à feu moyen à une mijoter nue — 25-30 minutes. Réduire immédiatement à la chaleur la plus faible possible. Maintenir à 85-90°C pendant 3 à 3,5 heures.",
+      "visualCue": {
+        "primaryTarget": "Une mijote douce et régulière: de petites bulles s'élèvent lentement et paresseusement des os. Le stock est riche en or ambré chaud avec une brume fumée visible. La cuisine sent le hickory, la sauge et la dinde rôtie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 2 heures, le bouillon est d'or pâle et mince. L'arôme de dinde est faible.",
+            "action": "Continuer à mijoter — le collagène de dinde nécessite du temps. La couleur et le corps s'approfondiront considérablement dans la dernière heure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 3,5 heures, le stock est un ambre profond et chaud avec une légère brume de collagène dissous. Les morceaux de dinde se détachent facilement avec des pinces. La surface a un éclat doré de graisse rendue.",
+            "action": "Graisses superficielles écrémées, enlever la dinde et la souche."
+          },
+          {
+            "state": "Overdone",
+            "description": "Maintenance à un ébullition laminable — le matériel est moulu, gris-or et gras. La graisse est émulsifiée dans le bouillon.",
+            "action": "Enfilez-vous dans la fine nappe de fromage et refroidissez-vous toute la nuit — le disque de graisse congelé peut encore être enlevé, et la saveur n'est pas perdue même si la clarté est."
+          }
+        ]
+      },
+      "feelCue": "Après 2 heures, insérez des pinces dans la casserole et pressez un os de dinde — si le cartilage à l'articulation a commencé à s'assouplir et à céder, vous êtes sur la bonne voie; le cartilage se dissolvant en gélatine est ce qui donne au stock son corps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Abat-jour",
+      "inputs": [
+        "simmering_stock"
+      ],
+      "outputState": "skimmed_stock",
+      "instructions": "Au cours des 30-45 premières minutes de mousse brun-gris et de graisse qui mijoteront, monteront à la surface. Enlevez-le toutes les 10-15 minutes avec une large cuillère ou une louche plate, en la faisant glisser jusqu'au bord de la casserole où elle recueille. Après la première heure, écumer seulement la graisse dorée qui se trouve dans les coins tranquilles de la surface du pot. Ne pas trop patiner — la graisse porte saveur et sera enlevée en quantité après le refroidissement.",
+      "visualCue": {
+        "primaryTarget": "La surface du stock est calme et généralement claire, avec seulement un léger éclat de graisse dorée. Pas de mousse grise ou de protéine brune coagulée visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mousse grise encore en évidence sur la surface. Les protéines brunes flottent librement.",
+            "action": "Continuer à écumer toutes les 10 minutes. Utilisez une large louche plate et un bol d'eau froide pour le rincer entre les passes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est claire avec seulement un mince film doré de graisse de dinde. Le stock ci-dessous est visiblement ambre et clair. L'écrémage est maintenant terminé.",
+            "action": "Maintenez le mijoter, non perturbé, pour le temps de cuisson restant."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'écume si agressive que même la graisse aromatique a été enlevée et que la surface ressemble presque à de l'eau — pas de frisson.",
+            "action": "Une petite quantité de graisse de surface est bénéfique — elle transporte des composés de saveur soluble dans le gras de la fumée. Laisse tomber."
+          }
+        ]
+      },
+      "feelCue": "Touchez l'arrière de votre cuillère à écrémage à la surface et soulevez - si la mousse grise s'accroche dans un anneau autour du bord de la cuillère, il y a encore des protéines coagulées à enlever. Si seulement le liquide doré s'accroche, l'écumage est fait."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Poignée",
+      "inputs": [
+        "skimmed_stock"
+      ],
+      "outputState": "strained_stock",
+      "instructions": "Retirer les gros morceaux de dinde de la casserole avec des pinces. Déposer le bouillon dans un tamis à mailles fines doublé d'une double couche de cheesewapp humide dans un grand pot ou un bol propre. Appuyez doucement sur les légumes usés pour extraire leur liquide, mais ne forcez pas la pulpe végétale. Réservez toute viande de dinde qui a tiré propre des os — il aura donné la plus grande partie de son goût au stock, mais est excellent pour un haschisch ou de la tarte en pot.",
+      "visualCue": {
+        "primaryTarget": "Stock d'or ambré clair, exempt de particules. Tenir une faible brume fumée des composés de fumée dissous — c'est souhaitable et ne disparaîtra pas dans la pression.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock contient encore de la matière végétale visible et de petits fragments osseux.",
+            "action": "Retransformez-vous à travers la nappe fraîche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or, légèrement trouble (à partir de gélatine, pas de particules), chaud et parfumé avec de la fumée et des herbes. Une cuillère à soupe refroidie brièvement sur une plaque réfrigérée devrait s'épaissir légèrement à température ambiante.",
+            "action": "Laisser refroidir et écrémer la graisse, ou utiliser immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Légumes pressés si dur que le tamis pousse à travers la pulpe de légumes gris vert.",
+            "action": "Jeter la partie contaminée par la pulpe et reformer le reste. Au bout de 4 heures de mijotage, les légumes sont amers."
+          }
+        ]
+      },
+      "feelCue": "Frottez quelques gouttes de bouillon chaud tendu entre vos doigts et laissez-les sécher à l'air pendant 10 secondes — la légère tacticité laissée derrière est le collagène dissous, la marque d'un bouillon bien fait qui gelera à froid."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Refroidissement",
+      "inputs": [
+        "strained_stock"
+      ],
+      "outputState": "finished_smoked_turkey_stock",
+      "instructions": "Refroidir rapidement le stock tendu sur un bain de glace, en remuant occasionnellement. Réfrigérer à découvert jusqu'à ce qu'il soit complètement froid — au moins 4 heures, de préférence une nuit. Un disque solide de graisse de dinde dorée pâle se formera à la surface. Soulevez-le en une seule pièce et jetez ou réservez pour les légumes de cuisson. Le stock dégraissé ci-dessous doit être légèrement gelé et transparent. Utiliser dans les 4 jours ou congeler dans des portions de 500ml pendant 4 mois.",
+      "visualCue": {
+        "primaryTarget": "Après le refroidissement, un disque de graisse dorée se trouve au sommet d'un stock fortement gelé et de couleur ambre. Le gel doit trembler visiblement lorsque le récipient est secoué.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La graisse n'a pas été complètement solidifiée — seule une congélation partielle aux bords. Le stock est froid mais pas gelé.",
+            "action": "Réfrigérer encore 4 heures. Un gel qui ne sert pas est encore un bon stock — il a simplement une teneur en gélatine inférieure; il sera encore excellent en utilisation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le disque gras se lève proprement en une seule pièce. Stock en dessous est une gelée ferme, wobbling. Ambre profonde, claire, avec une chaleur fumée à son arôme même froid.",
+            "action": "A conserver réfrigéré 4 jours ou congeler. Réchauffer doucement à liquéfier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Solide congelé avant dégraissage. La graisse est enfermée dans la glace.",
+            "action": "Dégelez lentement au réfrigérateur pendant 24 heures. Les couches seront re-séparées et la graisse peut être levée proprement."
+          }
+        ]
+      },
+      "feelCue": "Piercez la gelée froide avec un doigt et sentez la résistance — un stock avec une bonne teneur en gélatine devrait se sentir comme un jello doux. Plus le wobble est riche, plus il prêtera à chaque plat qu'il entre."
+    }
+  ]
 };

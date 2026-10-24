@@ -1,96 +1,259 @@
 export default {
-  repoId: "master_mediterranean_whole_roasted_cauliflower_001",
-  parentRepoId: null,
-  slug: "roasted-cauliflower",
-  author: "ForkRecipe Kitchen",
-  title: "Whole Roasted Cauliflower",
-  description: "A whole head braised tender in salted, lemony water, then bronzed in the oven under a coat of olive oil until the curds turn nutty-sweet and the crown crisps into shattering, caramelized florets — served as a centerpiece, carved at the table like a roast.",
-  cuisine: "Mediterranean",
-  culture: "Eastern Mediterranean",
-  category: "vegetables",
-  tags: ["cauliflower", "roasted", "mediterranean", "vegetarian", "vegan", "centerpiece"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "1 hour 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 1, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Whole cauliflower head (leaves trimmed, stem cut flat)", ratioValue: 100, defaultUnit: "parts", substitutions: ["Romanesco", "two small heads"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Kosher salt (for the blanching water)", ratioValue: 6, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Citrus",    name: "Lemon (half juiced, half for serving)", ratioValue: 8, defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_04", role: "Fat",       name: "Extra-virgin olive oil", ratioValue: 20, defaultUnit: "parts", substitutions: ["melted ghee for a richer crust"] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves (grated to a paste)", ratioValue: 4, defaultUnit: "parts", substitutions: ["confit garlic"] },
-    { ingId: "ing_06", role: "Spice",     name: "Ground cumin", ratioValue: 2, defaultUnit: "parts", substitutions: ["caraway"] },
-    { ingId: "ing_07", role: "Spice",     name: "Smoked paprika", ratioValue: 2, defaultUnit: "parts", substitutions: ["sweet paprika", "Aleppo pepper"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Flaky sea salt and black pepper (to finish)", ratioValue: 1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Garnish",   name: "Chopped parsley and toasted pine nuts", ratioValue: 4, defaultUnit: "parts", substitutions: ["mint and toasted almonds", "pomegranate seeds"] },
+  "repoId": "master_mediterranean_whole_roasted_cauliflower_001",
+  "parentRepoId": null,
+  "slug": "roasted-cauliflower",
+  "author": "ForkRecipe Kitchen",
+  "title": "Choux-fleurs rôtis entiers",
+  "description": "Une tête entière braisée tendre dans de l'eau salée et citronnée, puis bronzée dans le four sous une couche d'huile d'olive jusqu'à ce que les caillés deviennent sucrés aux noix et la couronne croustillante en fleurets brisés et caramélisés — servit de pièce centrale, sculptée à la table comme un rôti.",
+  "cuisine": "Méditerranée",
+  "culture": "Méditerranée orientale",
+  "category": "vegetables",
+  "tags": [
+    "chou-fleur",
+    "grillés",
+    "méditerranéen",
+    "végétarien",
+    "végétalien",
+    "pièce centrale"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "1 hour 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Blanch",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "parcooked_cauliflower",
-      instructions: "Bring a large, deep pot of water to a rolling boil and season it aggressively with the kosher salt and the juice of half the lemon — it should taste like seawater. Lower the trimmed whole head in stem-side down, cover, and simmer 8 to 12 minutes. This seasons the cauliflower to its core and softens the dense stem so it cooks through before the surface scorches in the oven. Lift it out carefully with two slotted spoons or a spider and set it stem-down on a rack to drain and steam-dry completely.",
-      visualCue: {
-        primaryTarget: "The head has dulled from chalk-white to a faint ivory and a paring knife slides into the core stem with light resistance, like a barely-done potato.",
-        spectrum: [
-          { state: "Underdone", description: "A knife meets a hard, crunchy core at the stem and the florets still feel rigid and squeaky.", action: "Simmer another few minutes. The stem must yield or the center will be raw when the outside is browned." },
-          { state: "Perfect",   description: "A blade meets gentle, even resistance at the core and the florets feel tender but still fully intact and holding their shape.", action: "Drain stem-down on a rack and let it steam-dry for several minutes — surface moisture is the enemy of browning." },
-          { state: "Overdone",  description: "Florets are slumping, the head feels loose and waterlogged, and pieces break away when lifted.", action: "Handle very gently and drain longer. It will still roast beautifully — just expect a softer, more spoonable result than a carvable one." },
-        ],
-      },
-      feelCue: "Lifted from the water the head should feel heavy and supple, not stiff. Let it sit until it stops steaming and the surface looks matte and dry to the touch — wet curds will steam instead of brown.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Tête entière de chou-fleur (feuilles coupées, tige coupée à plat)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Romanesco",
+        "deux petites têtes"
+      ]
     },
     {
-      nodeId: "step_2", action: "Coat",
-      inputs: ["parcooked_cauliflower", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "dressed_cauliflower",
-      instructions: "Whisk the olive oil with the garlic paste, cumin, and smoked paprika into a loose, rust-colored slurry. Set the drained head in an oven-proof skillet or on a lined sheet and massage the spiced oil over every surface, working it down into the crevices between florets and over the cut stem. Be generous — the oil is both the seasoning and the frying medium that crisps the crown.",
-      visualCue: {
-        primaryTarget: "The whole head glistens an even terracotta-red, with oil pooled slightly in the folds and no dry, pale patches showing through.",
-        spectrum: [
-          { state: "Underdone", description: "Chalky white gaps show between florets and the spice rub sits only on the domed top.", action: "Tilt the head and brush oil into the seams and underside. Uncoated spots stay pale and bland in the oven." },
-          { state: "Perfect",   description: "A uniform glossy, spice-stained coat clings to the entire surface, from crown to stem, and the kitchen smells of toasted cumin.", action: "Set it crown-up in the pan and move straight to the oven." },
-          { state: "Overdone",  description: "Oil runs off in a puddle around the base and the rub looks washed-out and pale.", action: "Pour off excess oil and add another light dusting of paprika and cumin directly onto the wet surface." },
-        ],
-      },
-      feelCue: "The surface should feel slick and fully saturated under your fingers, the rub gripping rather than sliding off. The raw garlic and smoked paprika should smell vivid and sharp — they mellow and sweeten in the heat.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel casher (pour l'eau blanchissante)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Roast",
-      inputs: ["dressed_cauliflower"],
-      outputState: "roasted_cauliflower",
-      instructions: "Roast in a hot oven at 220C / 425F for 30 to 40 minutes, basting once or twice with the oil that collects in the pan. The Maillard browning turns the surface curds deeply golden and concentrates the sugars into a nutty, almost popcorn sweetness. The head is done when the crown is bronzed and crackly and a skewer slides through the center without resistance.",
-      visualCue: {
-        primaryTarget: "A burnished mahogany-gold dome with crisp, lacquered floret tips and a few dark, blistered edges, while the interior is meltingly soft.",
-        spectrum: [
-          { state: "Underdone", description: "The surface is pale gold and still soft, with no crisp edges or browning on the floret tips.", action: "Return to the oven and raise the heat if needed. Color is flavor here — push it well past blond." },
-          { state: "Perfect",   description: "Deep golden-brown all over with shatter-crisp tips, the odd charred edge, and a skewer gliding through the center with no resistance.", action: "Pull it now, squeeze over the remaining lemon, and rest five minutes before carving." },
-          { state: "Overdone",  description: "Large patches have gone past brown to bitter black and acrid smoke is rising from the pan.", action: "Remove immediately and trim the scorched tips. A cooler oven and a tent of foil will save the next one." },
-        ],
-      },
-      feelCue: "Tap the crown — it should sound and feel crisp, the tips snapping slightly, while a skewer through the heart meets the soft give of butter. The aroma turns sweet and toasty, the raw-garlic edge long gone.",
+      "ingId": "ing_03",
+      "role": "Citrus",
+      "name": "Citron (à moitié jus, moitié pour servir)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
     },
     {
-      nodeId: "step_4", action: "Finish",
-      inputs: ["roasted_cauliflower", "ing_03", "ing_08", "ing_09"],
-      outputState: "finished_roasted_cauliflower",
-      instructions: "Transfer the rested head to a warm platter. Squeeze over the juice of the remaining lemon half, scatter with flaky salt and a few grinds of black pepper, then shower with chopped parsley and toasted pine nuts. Bring it whole to the table and carve into thick wedges from the crown down through the tender stem, spooning the spiced pan oil over each portion.",
-      visualCue: {
-        primaryTarget: "A glistening bronze head bright with green herbs and golden pine nuts, cutting into wedges that hold together from crisp crown to soft, seasoned core.",
-        spectrum: [
-          { state: "Underdone", description: "The cauliflower tastes flat and one-note, with no brightness cutting the richness of the oil.", action: "Add more lemon and flaky salt right at the table — the acid and crunch wake the whole dish up." },
-          { state: "Perfect",   description: "Each wedge is crisp-edged and creamy-centered, savory and lightly smoky, lifted by lemon and salt and finished with fresh herbs and crunch.", action: "Serve at once while the crown is still crackling, with the pan oil spooned over." },
-          { state: "Overdone",  description: "The head has cooled and gone soft and oily, the crisp crown turned chewy.", action: "Flash it back into a hot oven for a few minutes to re-crisp, then re-dress with fresh lemon and herbs." },
-        ],
-      },
-      feelCue: "The first cut should give a faint crackle at the crown then yield to a soft, steamy interior. On the palate it runs nutty and savory, brightened by lemon, with the pine nuts adding a buttery crunch against the tender curds.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Ghee fondu pour une croûte plus riche"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Girofles d'ail (grâce à une pâte)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "confit ail"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Caravane"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika doux",
+        "Poivre d'Alep"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel de mer et poivre noir (pour finir)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Garnish",
+      "name": "Persil coupé et noix de pin grillées",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Amandes à la menthe et grillées",
+        "graines de grenade"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Blanch",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "parcooked_cauliflower",
+      "instructions": "Portez un grand pot d'eau profond à ébullition et assaisonner avec agressivité avec le sel casher et le jus de la moitié du citron — il devrait goûter comme de l'eau de mer. Abaissez la tête entière parée dans le bas de la tige, couvrez et laissez mijoter 8 à 12 minutes. Le chou-fleur est ainsi adouci et la tige dense est adoucie, ce qui lui permet de cuire avant que la surface ne brûle au four. Soulevez-le soigneusement avec deux cuillères à fentes ou une araignée et placez-le sur une grille pour égoutter et sécher à la vapeur complètement.",
+      "visualCue": {
+        "primaryTarget": "La tête s'est émoussée de blanc craie à un ivoire faible et un couteau à parure glisse dans la tige du noyau avec une résistance légère, comme une pomme de terre à peine cuite.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Un couteau rencontre un noyau dur et croquant à la tige et les fleurs se sentent encore rigides et sournoises.",
+            "action": "Laisser mijoter encore quelques minutes. La tige doit produire ou le centre sera brut lorsque l'extérieur est bruni."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une lame rencontre une résistance douce, même au cœur et les fleurs se sentent tendres mais toujours intactes et tiennent leur forme.",
+            "action": "Égoutter la tige sur une grille et la laisser sécher à la vapeur pendant plusieurs minutes — l'humidité de surface est l'ennemi du brunissement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les fleurs sont en train de s'effondrer, la tête se sent lâche et arrosée, et les morceaux se brisent quand ils sont levés.",
+            "action": "Manipuler très doucement et égoutter plus longtemps. Il rôtira encore magnifiquement — il suffit d'attendre un résultat plus doux et plus cuillerable qu'un résultat carvable."
+          }
+        ]
+      },
+      "feelCue": "Soulevée de l'eau, la tête doit se sentir lourde et souple, pas raide. Laissez - le s'asseoir jusqu'à ce qu'il cesse de chauffer et que la surface soit mate et sèche au toucher."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Manteau",
+      "inputs": [
+        "parcooked_cauliflower",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "dressed_cauliflower",
+      "instructions": "fouetter l'huile d'olive avec la pâte d'ail, le cumin et le paprika fumé dans un lisier de couleur rouille. Placer la tête égouttée dans une poêle à l'épreuve du four ou sur une feuille doublée et masser l'huile épicée sur toutes les surfaces, en l'ouvrant dans les crevasses entre les fleurs et sur la tige coupée. Soyez généreux — l'huile est à la fois l'assaisonnement et le milieu de friture qui croustille la couronne.",
+      "visualCue": {
+        "primaryTarget": "Toute la tête brille d'un rouge-terracotta, avec de l'huile légèrement piquée dans les plis et pas de taches sèches et pâles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des espaces blancs grisâtres montrent entre les fleurons et le frotte d'épices qui ne se trouve que sur le dessus en forme de dôme.",
+            "action": "Inclinez la tête et brossez l'huile dans les coutures et sous le côté. Les taches non enrobées restent pâles et fadent au four."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un manteau uniforme brillant, teint d'épices, s'accroche à toute la surface, de la couronne à la tige, et la cuisine sent le cumin grillé.",
+            "action": "Placez-la dans la casserole et déplacez-la directement au four."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'huile s'écoule dans une flaque autour de la base et le frottement semble lavé et pâle.",
+            "action": "Verser l'excès d'huile et ajouter une autre légère poussière de paprika et de cumin directement sur la surface humide."
+          }
+        ]
+      },
+      "feelCue": "La surface doit se sentir lissée et complètement saturée sous vos doigts, la griffe plutôt que de glisser. L'ail cru et le paprika fumé doivent sentir vif et vif, ils se mêlent et s'édulcorent dans la chaleur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Rôtis",
+      "inputs": [
+        "dressed_cauliflower"
+      ],
+      "outputState": "roasted_cauliflower",
+      "instructions": "Faire cuire dans un four chaud à 220C / 425F pendant 30 à 40 minutes, en baissant une ou deux fois avec l'huile qui s'accumule dans la poêle. Le brunissement Maillard transforme la courge de surface profondément dorée et concentre les sucres en une douceur de noix, presque popcorn. La tête est faite lorsque la couronne est bronzée et craquelée et qu'une brochette glisse au centre sans résistance.",
+      "visualCue": {
+        "primaryTarget": "Un dôme d'acajou doré bruni avec des bouts de fleuret laqués et quelques bords sombres et blisters, tandis que l'intérieur est fondu en douceur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est en or pâle et encore douce, sans bords croustillants ni brunissement sur les extrémités du fleuron.",
+            "action": "Retourner au four et lever la chaleur si nécessaire. La couleur est la saveur ici — poussez-la bien passé blond."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep golden-brown partout avec des bouts de crevasses, l'étrange bord carbonisé, et une brochette planant à travers le centre sans résistance.",
+            "action": "Tirez-le maintenant, pressez sur le citron restant et reposez-vous cinq minutes avant de tailler."
+          },
+          {
+            "state": "Overdone",
+            "description": "De grandes taches sont passées de brun à noir amer et la fumée acride se lève de la poêle.",
+            "action": "Retirer immédiatement et couper les bouts brûlés. Un four plus frais et une tente d'aluminium sauveront le prochain."
+          }
+        ]
+      },
+      "feelCue": "Tapez sur la couronne — il doit sembler et se sentir croquant, les bouts se cassent légèrement, tandis qu'une brochette à travers le cœur rencontre la douceur de donner du beurre. L'arôme devient sucré et grillé, le bord de l'ail brut a longtemps disparu."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "roasted_cauliflower",
+        "ing_03",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "finished_roasted_cauliflower",
+      "instructions": "Transférer la tête reposée dans un plateau chaud. Pressez sur le jus de la moitié restante du citron, dispersez avec du sel feuilleté et quelques moulures de poivre noir, puis douchez avec du persil haché et des noix de pin grillées. Portez le tout à la table et découpez les coins épais de la couronne à travers la tige tendre, en cuillant l'huile de poêle épicée sur chaque portion.",
+      "visualCue": {
+        "primaryTarget": "Une tête en bronze brillant aux herbes vertes et aux pignons de pin dorés, coupant en coins qui tiennent ensemble de la couronne croustillante au noyau doux et assaisonné.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le chou-fleur a un goût plat et une note, sans éclats coupant la richesse de l'huile.",
+            "action": "Ajouter plus de citron et de sel feuilleté à la table — l'acide et la croûte réveillent tout le plat."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque coin est broyé et crémeux, salé et légèrement fumé, levé par le citron et le sel et fini avec des herbes fraîches et croquant.",
+            "action": "Servir à la fois pendant que la couronne est encore crépitante, avec l'huile de poêle cuillerée."
+          },
+          {
+            "state": "Overdone",
+            "description": "La tête s'est refroidie et est devenue douce et grasse, la couronne croquante est devenue mâcheuse.",
+            "action": "Retournez-la dans un four chaud pendant quelques minutes pour re-crisp, puis ré-habiller avec du citron frais et des herbes."
+          }
+        ]
+      },
+      "feelCue": "La première coupe devrait donner un léger craquement à la couronne puis donner à un intérieur doux et vapeur. En bouche, il fait vibrer les noix et les savoureux, illuminés par le citron, les pignons ajoutant une croûte beurreuse contre les cords tendres."
+    }
+  ]
 };

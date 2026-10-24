@@ -1,82 +1,203 @@
 export default {
-  repoId: "master_chinese_steamed_egg_custard_001",
-  parentRepoId: null,
-  slug: "steamed-egg-custard",
-  author: "ForkRecipe Kitchen",
-  title: "Chinese Steamed Egg Custard (Zheng Dan)",
-  description: "A bowl of silken egg custard steamed to an almost impossible smoothness — the surface unmarked and mirror-flat, trembling at the slightest touch like chilled panna cotta, finished with a dark cascade of soy and sesame oil that pools in the spoon-made craters and perfumes each bite. It is the quietest, most demanding dish in Chinese home cooking, where the enemy is heat and impatience.",
-  cuisine: "Chinese",
-  culture: "Chinese",
-  category: "eggs",
-  tags: ["eggs", "custard", "steamed", "silky", "healthy", "simple", "cantonese", "homestyle"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Eggs, large",                                ratioValue: 3,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_02", role: "Liquid",    name: "Warm stock or water (40°C / 105°F)",         ratioValue: 360,  defaultUnit: "ml",    substitutions: ["dashi for a Japanese-inflected version"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Light soy sauce (for custard)",              ratioValue: 8,    defaultUnit: "ml",    substitutions: ["salt (0.5 tsp)"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine salt",                                  ratioValue: 2,    defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_05", role: "Fat",       name: "Sesame oil (for finishing)",                 ratioValue: 5,    defaultUnit: "ml",    substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Light soy sauce (for finishing)",            ratioValue: 10,   defaultUnit: "ml",    substitutions: ["aged soy sauce"] },
-    { ingId: "ing_07", role: "Garnish",   name: "Scallion, finely minced",                   ratioValue: 10,   defaultUnit: "g",     substitutions: ["chives"] },
+  "repoId": "master_chinese_steamed_egg_custard_001",
+  "parentRepoId": null,
+  "slug": "steamed-egg-custard",
+  "author": "ForkRecipe Kitchen",
+  "title": "Oeufs à vapeur chinois (Zheng Dan)",
+  "description": "Un bol de crème d'oeufs soyeux s'est cuit à la vapeur jusqu'à une douceur presque impossible — la surface non marquée et plate, tremblant au moindre toucher comme la panna cotta réfrigérée, fini avec une cascade sombre d'huile de soja et de sésame qui se déverse dans les cratères faits à la cuillère et parfume chaque bouchée. C'est le plat le plus calme, le plus exigeant dans la cuisine maison chinoise, où l'ennemi est la chaleur et l'impatience.",
+  "cuisine": "Chinois",
+  "culture": "Chinois",
+  "category": "eggs",
+  "tags": [
+    "œufs",
+    "Coutard",
+    "vapeur",
+    "soyeux",
+    "sain",
+    "simple",
+    "cantonais",
+    "style maison"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "strained_egg_mixture",
-      instructions: "Crack the eggs into a bowl and beat them gently with chopsticks or a fork — not aggressively, as you would scrambled eggs. You want to break the yolks and combine them with the whites, but you do not want to incorporate air. Air bubbles are the enemy of a smooth custard — they rise to the surface during steaming and set into pits and craters that destroy the mirror-flat surface you are working toward. Once the eggs are combined, add the warm stock or water gradually while stirring. The liquid must be warm — around 40°C — not hot or cold. Cold liquid will lower the mixture temperature and slow setting; hot liquid will begin to cook the eggs before they go into the steamer. Add the soy sauce and salt. Now strain the entire mixture through a fine-mesh sieve into your serving bowl. This catches the chalazae (the white twisted egg cords), any unbroken egg white strands, and any surface foam. Pour slowly, then tap the bowl firmly on the counter to pop any remaining surface bubbles. Use a paper towel to gently blot any stubborn foam. The egg-to-liquid ratio of 1 egg to 120 ml liquid is the formula for silken texture — do not alter it.",
-      visualCue: {
-        primaryTarget: "A pale, uniform, pale-yellow liquid with no visible bubbles on the surface and no streaks of unmixed white or dark yolk. The surface should be completely still and flat.",
-        spectrum: [
-          { state: "Underdone", description: "The surface is covered in small foam bubbles from over-beating or pouring too fast. Streaks of white are visible — the eggs are not fully combined.", action: "Strain again through the sieve and blot the surface with a paper towel or kitchen tissue laid flat and peeled off. Wait 2 minutes before steaming." },
-          { state: "Perfect",   description: "Clear pale yellow, completely still surface, no bubbles, no streaks. When the bowl is gently tilted, the liquid moves as a single sheet.", action: "Cover with plastic wrap or a plate before steaming to prevent water condensation from dripping onto the surface." },
-          { state: "Overdone",  description: "Not applicable at this stage — you cannot over-mix the liquid itself. However, if the stock is too hot (above 60°C) the eggs will have begun to coagulate — the mixture will look slightly lumpy or pale.", action: "Cool the stock before combining, or begin again with room-temperature water." },
-        ],
-      },
-      feelCue: "Run your finger through the strained mixture — it should feel thin and completely smooth, with no texture. If you feel any stringiness or gelatinous lumps, strain again. The liquid should be indistinguishable in feel from warm, thin soup.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Oeufs grands",
+      "ratioValue": 3,
+      "defaultUnit": "whole",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Steam",
-      inputs: ["strained_egg_mixture"],
-      outputState: "steamed_custard",
-      instructions: "Set up your steamer with water already at a gentle simmer — not a vigorous boil. This is the most critical distinction in the entire recipe. Violent boiling creates steam that is too hot and too turbulent, causing the egg proteins to over-set rapidly into a grainy, pitted, almost scrambled texture. A gentle simmer produces steady, moderate steam that sets the custard slowly from the outside in. Place the covered bowl on the steamer rack. Reduce the heat so the simmer is barely audible — you should hear a soft, steady murmur rather than aggressive bubbling. Steam for 10–12 minutes for a 3-egg custard in a bowl about 15 cm wide. Check at the 10-minute mark by gently nudging the bowl — the custard should be set at the edges and jiggle as one piece in the center, like a just-set panna cotta. If the center is still liquid, cover and steam for another 2 minutes. If you do not have a steamer with adjustable heat, place a chopstick under the lid to allow steam to escape and reduce the internal temperature.",
-      visualCue: {
-        primaryTarget: "A pale ivory-yellow, completely smooth, mirror-flat surface with no pitting, no bubbling marks, no holes. The surface should look like porcelain glaze.",
-        spectrum: [
-          { state: "Underdone", description: "The center is visibly liquid — it sloshes when you nudge the bowl. The edges are set but the center is still raw.", action: "Cover and steam for another 2 minutes. The custard sets quickly once the center temperature reaches 70°C." },
-          { state: "Perfect",   description: "The entire surface is set and matte — no liquid movement visible. When gently nudged, the whole bowl jiggles as one cohesive unit, like gelatin. The surface is unmarked, smooth, and pale ivory.", action: "Remove from the steamer immediately and let rest 1 minute before finishing." },
-          { state: "Overdone",  description: "Surface shows small holes and craters from boiling (the egg has cooked too fast). Texture may be grainy or pitted rather than silken. The surface looks like a lunar landscape rather than still water.", action: "The flavor is fine but the texture is lost. Still add the soy and sesame oil finish and serve — next time use a gentler simmer." },
-        ],
-      },
-      feelCue: "The bowl should feel solidly warm when you pick it up, not scalding — that moderate heat is the gentle setting temperature that produces silk rather than scramble. Listen to your steamer throughout: if the boiling intensifies, crack the lid.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Stock chaud ou eau (40°C / 105°F)",
+      "ratioValue": 360,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "dashi pour une version japonaise"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Finish",
-      inputs: ["steamed_custard", "ing_05", "ing_06", "ing_07"],
-      outputState: "finished_steamed_egg_custard",
-      instructions: "Uncover the custard and work quickly, because this is delicate and best eaten within 5 minutes of finishing. Drizzle the light soy sauce in a thin stream around the perimeter of the custard first, letting it pool around the edges, then move to the center. The cool soy will pool in a dark ring against the ivory surface. Add the sesame oil in a few small drops — it should bead on the surface before spreading slowly. Scatter the minced scallions in a small mound at the center. The contrast of textures and temperatures — warm silken custard, cool fragrant soy, raw scallion — is the entire eating experience. Some cooks add a few drops of premium aged soy or a thin stream of chili oil if desired. Serve immediately in the bowl it was steamed in, with a small spoon. The correct way to eat it is to break the surface gently, scoop from beneath, and let the custard, soy, and scallion come up together on the spoon.",
-      visualCue: {
-        primaryTarget: "An ivory-pale custard surface with a dark wreath of soy sauce pooling around the edges and center, tiny beads of golden sesame oil, and a bright green tuft of scallion at the center.",
-        spectrum: [
-          { state: "Underdone", description: "Soy sauce applied but immediately absorbed — the surface looks uniformly brown without the two-tone contrast of pale custard and dark soy.", action: "This means the custard is slightly under-set and the surface is still porous. It will taste fine — serve immediately." },
-          { state: "Perfect",   description: "The soy sits as a distinct dark pool at the surface, not absorbed, beading against the smooth custard. Sesame oil forms small golden beads. The scallion is bright green. The bowl smells of sesame, soy, and cooked egg.", action: "Serve within 5 minutes while the custard is at its silkiest." },
-          { state: "Overdone",  description: "The surface has developed a skin from sitting too long after steaming before the finish was applied. The soy pools on the skin rather than the custard.", action: "Gently pierce the skin at one edge to break it and apply the finishing ingredients — the custard underneath is still correct." },
-        ],
-      },
-      feelCue: "Scoop a spoonful from an unbroken section of the custard — it should come up in a smooth, quivering sheet that barely holds its shape on the spoon, trembling like chilled tofu. If it comes up in firm, rubbery curds, it steamed too hot.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sauce de soja léger (pour la crème)",
+      "ratioValue": 8,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sel (0,5 c. à thé)"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile de sésame (pour finition)",
+      "ratioValue": 5,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sauce de soja légère (pour la finition)",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce de soja vieillie"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Échalote, finement hachée",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "ruches"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "strained_egg_mixture",
+      "instructions": "Casser les œufs dans un bol et les battre doucement avec des baguettes ou une fourchette — pas agressivement, comme vous le feriez brouillé des œufs. Vous voulez briser les jaunes et les combiner avec les blancs, mais vous ne voulez pas incorporer l'air. Les bulles d'air sont l'ennemi d'une crème lisse — elles s'élèvent à la surface pendant la vapeur et se jettent dans des fosses et des cratères qui détruisent la surface du miroir que vous travaillez vers. Une fois les œufs combinés, ajouter progressivement le bouillon chaud ou l'eau en remuant. Le liquide doit être chaud — environ 40°C — et non chaud ou froid. Le liquide froid abaissera la température du mélange et le réglage lent; le liquide chaud commencera à cuire les œufs avant qu'ils ne pénètrent dans le vapeur. Ajouter la sauce soja et le sel. Maintenant, filtrez le mélange entier à travers un tamis à mailles fines dans votre bol de service. Cela capture les chalazae (les cordons d'œufs blancs tordus), les brins blancs d'oeufs non brisés et toute mousse de surface. Verser lentement, puis tapoter fermement le bol sur le comptoir pour faire sauter les bulles de surface restantes. Utilisez une serviette en papier pour éponger doucement toute mousse tenace. Le rapport oeuf-liquide de 1 oeuf à 120 ml de liquide est la formule pour la texture soyeuse — ne l'altérez pas.",
+      "visualCue": {
+        "primaryTarget": "Un liquide pâle, uniforme, jaune pâle, sans bulles visibles à la surface et sans stries de jaune blanc ou foncé non mélangé. La surface doit être complètement plate et immobile.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est recouverte de petites bulles de mousse provenant d'un battement excessif ou d'un déversement trop rapide. Des taches de blanc sont visibles — les œufs ne sont pas complètement combinés.",
+            "action": "Plongez à nouveau dans le tamis et épluchez la surface avec une serviette en papier ou un tissu de cuisine posé à plat et épluché. Attendez 2 minutes avant la vapeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Jaune pâle clair, complètement en surface, pas de bulles, pas de stries. Lorsque le bol est légèrement incliné, le liquide se déplace en une seule feuille.",
+            "action": "Couvrir d'un enveloppement en plastique ou d'une plaque avant la vapeur pour empêcher la condensation de l'eau de couler sur la surface."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sans objet à ce stade — vous ne pouvez pas trop mélanger le liquide lui-même. Toutefois, si le stock est trop chaud (au-dessus de 60°C), les œufs auront commencé à coaguler — le mélange aura l'air légèrement grumeux ou pâle.",
+            "action": "Laisser refroidir le stock avant de le combiner ou recommencer avec de l'eau à température ambiante."
+          }
+        ]
+      },
+      "feelCue": "Passez votre doigt à travers le mélange tendu — il devrait se sentir mince et complètement lisse, sans texture. Si vous ressentez des ficelles ou des grumeaux gélatineux, reformez. Le liquide doit être indistinguable dans la sensation de la soupe chaude et fine."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "vapeur",
+      "inputs": [
+        "strained_egg_mixture"
+      ],
+      "outputState": "steamed_custard",
+      "instructions": "Installez votre vapeur avec de l'eau déjà à un mijoter doux — pas un ébullition vigoureux. C'est la distinction la plus critique dans toute la recette. L'ébullition violente crée de la vapeur qui est trop chaude et trop turbulente, ce qui fait que les protéines d'oeufs se superposent rapidement dans une texture granuleuse, piquée, presque brouillée. Un mijot doux produit une vapeur régulière et modérée qui met la crème lentement de l'extérieur. Placez le bol couvert sur le porte-vapeur. Réduisez la chaleur de sorte que la mijoter est à peine audible — vous devriez entendre un murmure doux et constant plutôt que des bulles agressives. Steam pendant 10-12 minutes pour une crème 3 œufs dans un bol d'environ 15 cm de large. Vérifiez à la marque de 10 minutes en nouant doucement le bol — la crème doit être fixée aux bords et faire un tour au centre, comme une panna cotta. Si le centre est encore liquide, couvrir et vapeur pendant encore 2 minutes. Si vous n'avez pas de vapeur à chaleur réglable, placez une baguette sous le couvercle pour permettre à la vapeur de s'échapper et de réduire la température interne.",
+      "visualCue": {
+        "primaryTarget": "Une surface jaune ivoire pâle, complètement lisse, plane miroir sans piqûre, sans marques de bulles, sans trous. La surface devrait ressembler à un glaçage en porcelaine.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre est visiblement liquide — il slothes quand vous coupez le bol. Les bords sont fixés mais le centre est encore brut.",
+            "action": "Couvrir et vapeur encore 2 minutes. La crème se met rapidement quand la température centrale atteint 70°C."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toute la surface est réglée et mate — aucun mouvement liquide visible. Lorsqu'il est légèrement bouché, le bol entier se fige comme une unité cohésive, comme la gélatine. La surface est non marquée, lisse et ivoire pâle.",
+            "action": "Retirer immédiatement du vapeur et laisser reposer 1 minute avant de terminer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface montre de petits trous et des cratères de l'ébullition (l'œuf a cuit trop vite). La texture peut être granuleuse ou piquée plutôt que soyeuse. La surface ressemble à un paysage lunaire plutôt qu'à de l'eau morte.",
+            "action": "La saveur est bonne mais la texture est perdue. Ajoutez encore la finale d'huile de soja et de sésame et servez - la prochaine fois utilisez une mijoter plus douce."
+          }
+        ]
+      },
+      "feelCue": "Le bol doit se sentir bien chaud quand vous le ramassez, et non pas scalper — que la chaleur modérée est la température de réglage douce qui produit de la soie plutôt que brouillé. Écoutez votre vapeur : si l'ébullition s'intensifie, fissurez le couvercle."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Finition",
+      "inputs": [
+        "steamed_custard",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "finished_steamed_egg_custard",
+      "instructions": "Découvrez la crème et travaillez vite, car c'est délicat et mieux mangé dans les 5 minutes suivant la fin. Arrosez la sauce de soja légère dans un ruisseau mince autour du périmètre de la crème d'abord, la laissant baignée autour des bords, puis passez au centre. Le soya frais se retrouvera dans un anneau sombre contre la surface de l'ivoire. Ajouter l'huile de sésame dans quelques petites gouttes — il faut la perler à la surface avant de s'étendre lentement. Dispersez les pétoncles hachés dans un petit monticule au centre. Le contraste des textures et des températures — crème soyeuse chaude, soja parfumé frais, pétoncle cru — est l'expérience alimentaire complète. Certains cuisiniers ajoutent quelques gouttes de soja vieilli ou un mince jet d'huile de chili si désiré. Servir immédiatement dans le bol, avec une petite cuillère. La bonne façon de la manger est de briser la surface doucement, de scoop de dessous, et de laisser la crème, le soja, et l'échon monter ensemble sur la cuillère.",
+      "visualCue": {
+        "primaryTarget": "Une surface de crème ivoire-pâle avec une couronne sombre de sauce de soja qui se mêle autour des bords et du centre, de minuscules perles d'huile de sésame dorée, et une touffe vert vif de pétoncle au centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sauce de soja appliquée mais immédiatement absorbée – la surface semble uniformément brune sans le contraste bicolore de crème pâle et de soja foncé.",
+            "action": "Cela signifie que la crème est légèrement sous-vêtue et que la surface est encore poreuse. Il aura un bon goût — servir immédiatement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le soja se trouve comme une piscine sombre distincte à la surface, non absorbée, perlée contre la crème lisse. L'huile de sésame forme de petites perles dorées. Le pétoncle est vert vif. Le bol sent le sésame, le soja et l'œuf cuit.",
+            "action": "Servir en 5 minutes tandis que la crème est à sa plus soyeuse."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface a développé une peau assise trop longtemps après la vapeur avant l'application de la finition. Les piscines de soja sur la peau plutôt que la crème.",
+            "action": "Percez doucement la peau à un seul bord pour la briser et appliquez les ingrédients de finition — la crème en dessous est toujours correcte."
+          }
+        ]
+      },
+      "feelCue": "Faites une cuillère dans une partie non cassée de la crème — elle devrait apparaître dans une feuille lisse et frémissante qui tient à peine sa forme sur la cuillère, tremblant comme du tofu réfrigéré. S'il se présente dans des cords fermes et caoutchouteux, il était trop chaud."
+    }
+  ]
 };

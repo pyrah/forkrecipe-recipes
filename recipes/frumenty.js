@@ -1,95 +1,246 @@
 export default {
-  repoId: "master_medieval-european_frumenty_001",
-  parentRepoId: null,
-  slug: "frumenty",
-  author: "ForkRecipe Kitchen",
-  title: "Frumenty",
-  description: "The great wheat pottage of the medieval table — cracked wheat soaked and seethed until it bursts and goes glutinous, then enriched with milk, gilded with saffron, and bound at the last with egg yolks into a thick, golden, spoon-coating porridge served beside venison or fish.",
-  cuisine: "Medieval European",
-  culture: "Anglo-Norman",
-  category: "grains",
-  tags: ["frumenty", "medieval", "pottage", "wheat", "saffron", "historical"],
-  difficulty: 2,
-  activeTime: "40 min",
-  totalTime: "12 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 2, salty: 1, sour: 0, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Whole wheat berries, cracked (bulgur or cracked wheat)", ratioValue: 100, defaultUnit: "parts", substitutions: ["pearled spelt", "coarse cracked emmer"] },
-    { ingId: "ing_02", role: "Solvent",    name: "Water, for the first seething",                          ratioValue: 400, defaultUnit: "parts", substitutions: ["light meat or almond broth"] },
-    { ingId: "ing_03", role: "Dairy",      name: "Whole milk",                                             ratioValue: 250, defaultUnit: "parts", substitutions: ["almond milk for a fasting-day version"] },
-    { ingId: "ing_04", role: "Binder",     name: "Egg yolks",                                              ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",      name: "Saffron threads",                                        ratioValue: 1,   defaultUnit: "parts", substitutions: ["a pinch of turmeric for color only"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine salt",                                              ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Sweetener",  name: "Honey or sugar",                                         ratioValue: 12,  defaultUnit: "parts", substitutions: ["omit for a savory pottage"] },
-    { ingId: "ing_08", role: "Fat",        name: "Butter",                                                 ratioValue: 15,  defaultUnit: "parts", substitutions: ["beef marrow for a richer feast-day dish"] },
+  "repoId": "master_medieval-european_frumenty_001",
+  "parentRepoId": null,
+  "slug": "frumenty",
+  "author": "ForkRecipe Kitchen",
+  "title": "Frruity",
+  "description": "Le grand pot de blé de la table médiévale — le blé fissuré trempé et vulgaire jusqu'à ce qu'il éclate et va glutineux, puis enrichi avec du lait, doré avec du safran, et lié enfin avec des jaunes d'oeufs dans un épais porridge doré enrobé de cuillère servi à côté de la venison ou du poisson.",
+  "cuisine": "Moyen Âge",
+  "culture": "Anglo-Norman",
+  "category": "grains",
+  "tags": [
+    "Frais",
+    "médiévale",
+    "pottage",
+    "blé",
+    "safran",
+    "historique"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "40 min",
+  "totalTime": "12 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Soak",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "swelled_wheat",
-      instructions: "Pick over the cracked wheat and rinse it under cold water until the runoff is mostly clear. Cover it generously with cold water — using about half the seething water — and leave it overnight, 8 to 12 hours, in a cool place. Medieval cooks did this to begin the long softening that makes the grain 'burst'; the cold soak hydrates the wheat to its center so it will swell and split rather than staying hard at the heart.",
-      visualCue: {
-        primaryTarget: "Grains have plumped to nearly double their dry size, paled, and softened, with the soak water gone thick and cloudy with released starch.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are barely swollen and still hard and translucent at the center when bitten.", action: "Keep soaking. Old or very coarse wheat needs the full overnight; cold kitchens need longer still." },
-          { state: "Perfect",   description: "Grains are visibly fattened and opaque, dent easily under a fingernail, and the water is milky with starch.", action: "Drain off the soaking water and move to the seething with fresh liquid." },
-          { state: "Overdone",  description: "The soak smells sour or faintly fermented and the surface is foamy — it sat too long in a warm room.", action: "Rinse very thoroughly and proceed if only faintly off; discard and restart if clearly sour." },
-        ],
-      },
-      feelCue: "A soaked grain should crush between thumb and finger with a soft, mealy give rather than a hard crack. The drained wheat feels slick and heavy from the starch it has taken on.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Graines de froment entier, craquées (blé de bourgeon ou craqué)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "épeautre perlé",
+        "Emmère craquée grossière"
+      ]
     },
     {
-      nodeId: "step_2", action: "Simmer",
-      inputs: ["swelled_wheat", "ing_02", "ing_06"],
-      outputState: "burst_wheat",
-      instructions: "Put the drained wheat in a heavy pot with the rest of the water and the salt. Bring to a boil, then drop to the lowest steady simmer and cook gently, stirring now and again so it does not catch, for 45 to 60 minutes. This is the 'seething' the old recipes demand: cook until the grains split open and shed their starch into the liquid, turning the whole pot thick and glutinous. Top up with a little hot water if it tightens before the wheat is fully burst.",
-      visualCue: {
-        primaryTarget: "Most grains have burst their hulls and curled open, suspended in a thick, sticky, porridge-like liquid that a spoon leaves a slow-closing trail through.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are tender outside but still firm and distinct, and the liquid is thin and watery with little body.", action: "Keep simmering low and stir more often. The pottage thickens only once the grains rupture and release their starch." },
-          { state: "Perfect",   description: "The wheat has split and gone creamy-soft, and the pot has bound into a loose, glossy porridge that mounds softly on a spoon.", action: "Lower the heat to a bare murmur and add the milk." },
-          { state: "Overdone",  description: "The mixture is stiff and pasty, sticking to the bottom and threatening to scorch.", action: "Stir in hot water to loosen it and scrape the base; lower the heat before continuing." },
-        ],
-      },
-      feelCue: "The spoon should drag with real resistance through a sticky, gluey mass — that pull is the burst starch and the sign the seething is done. The steam smells warmly of cooked wheat, like fresh bread crust.",
+      "ingId": "ing_02",
+      "role": "Solvent",
+      "name": "Eau, pour la première fois",
+      "ratioValue": 400,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bouillon de viande légère ou d'amande"
+      ]
     },
     {
-      nodeId: "step_3", action: "Steep",
-      inputs: ["burst_wheat", "ing_03", "ing_05"],
-      outputState: "gilded_pottage",
-      instructions: "Crumble the saffron threads between your fingers and steep them in a spoonful of the warm milk for a few minutes until it stains a deep orange-gold. Stir this and the rest of the milk into the burst wheat over low heat. Let it barely simmer for 10 to 15 minutes, stirring, so the milk is drawn in and the whole pot turns silky and an even saffron yellow. Keep it well below a hard boil or the milk may catch and split.",
-      visualCue: {
-        primaryTarget: "A smooth, even golden pottage the warm color of old gold, thick but still pourably soft, with the saffron color fully bloomed throughout.",
-        spectrum: [
-          { state: "Underdone", description: "The milk sits pale and loose on top, the color is patchy, and the pottage tastes thin and milky rather than wheaten.", action: "Keep stirring over low heat until the milk is absorbed and the color runs even. Give the saffron a few more minutes to bloom." },
-          { state: "Perfect",   description: "A uniform golden, glossy pottage that coats the spoon and falls from it in a soft, slow ribbon, smelling honeyed and faintly of saffron.", action: "Pull the pot off the direct heat and prepare to temper in the yolks." },
-          { state: "Overdone",  description: "The milk has scorched at the base or curdled into fine grains, and the pottage smells of burnt dairy.", action: "Stop heating at once, pour into a clean pot leaving the scorched layer behind, and loosen with a little fresh warm milk." },
-        ],
-      },
-      feelCue: "It should feel velvety and unbroken when stirred, with no graininess of split milk. The kitchen takes on the unmistakable hay-and-honey scent of bloomed saffron.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 250,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "lait d'amande pour une version à jeun"
+      ]
     },
     {
-      nodeId: "step_4", action: "Temper",
-      inputs: ["gilded_pottage", "ing_04", "ing_07", "ing_08"],
-      outputState: "finished_frumenty",
-      instructions: "Beat the egg yolks loose in a bowl. Off the boil, ladle a little of the hot pottage into the yolks while whisking hard to warm them gently, then pour the warmed yolks back into the pot, stirring constantly. Return it to the gentlest heat and cook, stirring without stop, for 2 to 3 minutes until it visibly thickens — never let it boil, or the yolks will scramble. Stir in the honey and the butter to finish, taste for salt, and serve hot beside venison, mutton, or a poached fish.",
-      visualCue: {
-        primaryTarget: "A rich, glossy, deep-gold pottage thick enough to mound on a spoon and hold its shape briefly, with a satiny sheen from the yolks and butter.",
-        spectrum: [
-          { state: "Underdone", description: "The pottage is still loose and slack and slides flat off the spoon, tasting milky rather than rich.", action: "Keep stirring over very low heat a minute or two more — the yolks thicken only as they warm. Do not rush it onto higher heat." },
-          { state: "Perfect",   description: "Thickened to a glossy, spoon-coating cream that draws a clean line when you run a finger across the back of the spoon. Tastes rich, gently sweet, and golden with saffron.", action: "Take it off the heat at once and serve hot; it firms further as it stands." },
-          { state: "Overdone",  description: "Fine curdled flecks have appeared and the texture has gone grainy — the yolks have overheated and scrambled.", action: "Pull from the heat instantly and beat hard, or pass through a sieve to smooth it; serve promptly before it sets further." },
-        ],
-      },
-      feelCue: "Watch for the moment it stops feeling watery against the spoon and begins to drag with a custardy heaviness — that is the yolk setting. It should taste round and rich, the honey a soft background note, never cloying.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Jaunes d'œuf",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Fils de safran",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une pincée de curcuma pour la couleur seulement"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Miel ou sucre",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omit pour un potage salé"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Beurre",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moelle de boeuf pour un plat de fête plus riche"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "swelled_wheat",
+      "instructions": "Récupérer le blé fissuré et le rincer sous l'eau froide jusqu'à ce que le ruissellement soit généralement clair. Couvrez - le généreusement avec de l'eau froide — en utilisant environ la moitié de l'eau de suintement — et laissez - la toute la nuit, de 8 à 12 heures, dans un endroit frais. Les cuisiniers médiévaux ont fait cela pour commencer le long adoucissement qui fait le grain 'bouffée'; le froid hydrate le blé à son centre afin qu'il gonfle et se divise plutôt que de rester dur au cœur.",
+      "visualCue": {
+        "primaryTarget": "Les grains ont plu à presque doubler leur taille sèche, palmés et adoucis, avec l'eau imbibée est devenue épaisse et trouble avec l'amidon libéré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont à peine gonflés et encore durs et translucides au centre quand mordus.",
+            "action": "Continuez à tremper. Le blé vieux ou très grossier a besoin de toute la nuit; les cuisines froides ont besoin de plus de temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont visiblement engraissés et opaques, dentelés facilement sous un ongle, et l'eau est laiteuse avec de l'amidon.",
+            "action": "Égoutter de l'eau de trempage et se déplacer à la suintement avec du liquide frais."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'imprégnation sent l'odeur aigre ou légèrement fermentée et la surface est mousseuse, elle est trop longtemps assise dans une pièce chaude.",
+            "action": "Rincer très soigneusement et procéder si seulement faiblement; jeter et redémarrer si nettement aigre."
+          }
+        ]
+      },
+      "feelCue": "Un grain imbibé devrait écraser entre le pouce et le doigt avec un doux, farineux donner plutôt qu'une fissure dure. Le blé drainé se sent lisse et lourd de l'amidon qu'il a pris."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "swelled_wheat",
+        "ing_02",
+        "ing_06"
+      ],
+      "outputState": "burst_wheat",
+      "instructions": "Mettez le blé égoutté dans un pot lourd avec le reste de l'eau et le sel. Porter à ébullition, puis laisser mijoter au plus bas et cuire doucement, en remuant de temps en temps, pour ne pas attraper, pendant 45 à 60 minutes. C'est ce que demandent les anciennes recettes : cuire jusqu'à ce que les grains s'ouvrent et verser leur amidon dans le liquide, en transformant le pot entier épais et glutineux. Garnir d'un peu d'eau chaude si elle se resserre avant que le blé n'éclate complètement.",
+      "visualCue": {
+        "primaryTarget": "La plupart des grains ont éclaté leur coque et se sont enroulés ouverts, suspendus dans un liquide épais, collant, semblable à du porridge qu'une cuillère laisse un sentier à fermeture lente.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont tendres à l'extérieur mais toujours fermes et distincts, et le liquide est mince et aqueux avec peu de corps.",
+            "action": "Continuer à mijoter et remuer plus souvent. Le potage ne s'épaissit qu'une fois les grains rompus et libèrent leur amidon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le blé s'est fendu et est devenu crémeux-douce, et le pot s'est lié dans un porridge souple et brillant qui fond doucement sur une cuillère.",
+            "action": "Abaissez la chaleur dans un murmure nu et ajoutez le lait."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est rigide et pâteux, collé au fond et menaçant de brûler.",
+            "action": "Incorporer l'eau chaude pour la desserrer et racler la base; baisser la chaleur avant de continuer."
+          }
+        ]
+      },
+      "feelCue": "La cuillère doit glisser avec une vraie résistance à travers une masse collante et collante — qui tire est l'amidon d'éclatement et le signe est fait. La vapeur sent chaudement le blé cuit, comme la croûte de pain frais."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Streep",
+      "inputs": [
+        "burst_wheat",
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "gilded_pottage",
+      "instructions": "Frottez les fils de safran entre vos doigts et trempez-les dans une cuillère de lait chaud pendant quelques minutes jusqu'à ce qu'il tache un orangé profond. Incorporer ceci et le reste du lait dans le blé à feu doux. Laissez mijoter à peine 10 à 15 minutes, en remuant, de sorte que le lait est tiré dans et que tout le pot devient soyeux et même jaune safran. Gardez-le bien en dessous d'un ébullition difficile ou le lait peut attraper et se diviser.",
+      "visualCue": {
+        "primaryTarget": "Un potage lisse, même doré, la couleur chaude de l'or ancien, épais mais toujours souple, avec la couleur safran entièrement fleuri.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait est pâle et lâche sur le dessus, la couleur est patchy, et le pottage a un goût mince et laiteux plutôt que de blé.",
+            "action": "Continuez à remuer à feu doux jusqu'à ce que le lait soit absorbé et que la couleur soit uniforme. Donnez encore quelques minutes au safran pour fleurir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un potage uniforme doré et brillant qui enveloppe la cuillère et en tombe dans un ruban doux et lent, sentant le miel et peu de safran.",
+            "action": "Tirez le pot de la chaleur directe et préparez-vous à tempérer dans les jaunes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait a été brûlé à la base ou caillé en grains fins, et les odeurs de pottage des produits laitiers brûlés.",
+            "action": "Arrêtez de chauffer immédiatement, versez dans un pot propre laissant la couche brûlée derrière, et desserrez avec un peu de lait chaud frais."
+          }
+        ]
+      },
+      "feelCue": "Il doit se sentir velouté et intact lorsqu'il est agité, sans grain de lait fractionné. La cuisine prend l'odeur incomparable de foin et de miel de safran fleuri."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Température",
+      "inputs": [
+        "gilded_pottage",
+        "ing_04",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_frumenty",
+      "instructions": "Battre les jaunes d'œufs dans un bol. Hors de l'ébullition, déposer un peu de pot chaud dans les jaunes tout en fouettant dur pour les réchauffer doucement, puis verser les jaunes chauds dans le pot, en remuant constamment. Retournez-le à feu doux et faites cuire, en remuant sans arrêt, pendant 2 à 3 minutes jusqu'à ce qu'il épaississe visiblement — ne le laissez jamais bouillir, ou les jaunes vont se brouiller. Incorporer le miel et le beurre pour finir, goûter au sel et servir chaud à côté de la venison, du mouton ou d'un poisson poché.",
+      "visualCue": {
+        "primaryTarget": "Un potage riche, brillant, d'or profond assez épais pour marmonner sur une cuillère et tenir sa forme brièvement, avec un reflet satiné des jaunes et du beurre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le potage est encore lâche et lâche et glisse à plat de la cuillère, en dégustant la laiteuse plutôt que riche.",
+            "action": "Continuez à remuer à feu très doux une minute ou deux de plus — les jaunes ne s'épaississent qu'au chaud. Ne le précipitez pas sur une chaleur plus élevée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaissée à une crème brillante, enrobée de cuillère qui dessine une ligne propre lorsque vous lancez un doigt sur l'arrière de la cuillère. Goûte riche, doux et doré au safran.",
+            "action": "Enlevez-le de la chaleur à la fois et servez chaud; il pousse plus loin en l'état."
+          },
+          {
+            "state": "Overdone",
+            "description": "De fines taches caillées sont apparues et la texture est devenue granuleuse — les jaunes ont surchauffé et brouillé.",
+            "action": "Tirez de la chaleur instantanément et battez fort, ou passez à travers un tamis pour l'alléger; servez rapidement avant qu'il ne se mette plus loin."
+          }
+        ]
+      },
+      "feelCue": "Veillez sur le moment où il cesse de sentir l'eau contre la cuillère et commence à glisser avec une lourdeur de crème — c'est-à-dire le réglage jaune. Il devrait goûter rond et riche, le miel une note de fond douce, jamais cloître."
+    }
+  ]
 };

@@ -1,79 +1,174 @@
 export default {
-  repoId: "master_japanese_dashishiitake_001",
-  parentRepoId: null,
-  slug: "dashi-shiitake",
-  author: "ForkRecipe Kitchen",
-  title: "Shiitake Dashi",
-  description: "Amber-clear vegan dashi cold-steeped from dried shiitake — deep, earthy umami with a clean finish that makes kombu dashi taste brash by comparison. The backbone of shojin ryori and vegetarian Japanese cooking.",
-  cuisine: "Japanese",
-  culture: "Vegetarian Washoku",
-  category: "stocks",
-  tags: ["dashi", "vegan", "japanese", "umami", "shiitake", "vegetarian", "shojin", "cold-steep"],
-  difficulty: 1,
-  activeTime: "5 min",
-  totalTime: "8 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 1, sour: 0, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",     name: "Dried whole shiitake mushrooms",    ratioValue: 30,  defaultUnit: "g",   substitutions: ["dried porcini (different character)"] },
-    { ingId: "ing_02", role: "Hydration", name: "Cold filtered water",               ratioValue: 1,   defaultUnit: "L",   substitutions: [] },
-    { ingId: "ing_03", role: "Glutamate", name: "Kombu (optional, 5cm piece)",       ratioValue: 5,   defaultUnit: "g",   substitutions: ["dried kelp"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt (for finishing)",     ratioValue: 2,   defaultUnit: "g",   substitutions: ["light soy sauce (adds colour)"] },
+  "repoId": "master_japanese_dashishiitake_001",
+  "parentRepoId": null,
+  "slug": "dashi-shiitake",
+  "author": "ForkRecipe Kitchen",
+  "title": "Shiitake Dashi",
+  "description": "Dashi vegan clair ambre à l'aide de shiitake séché — umami terreux profond avec une finition propre qui rend kombu dashi goût brash en comparaison. L'épine dorsale de la cuisine japonaise shojin ryori et végétarienne.",
+  "cuisine": "Japonais",
+  "culture": "Washoku végétarien",
+  "category": "stocks",
+  "tags": [
+    "Dashi",
+    "végétalien",
+    "Japonais",
+    "umami",
+    "shiitake",
+    "végétarien",
+    "shojin",
+    "froid et profond"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "5 min",
+  "totalTime": "8 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Infuse",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "cold_steeped_dashi",
-      instructions: "Gently wipe the shiitake caps with a dry cloth to remove any dust — do not wash them, as water dilutes the surface glutamates. Place shiitake (and kombu, if using) in a glass jar or non-reactive container and cover with the cold filtered water. Seal and refrigerate for a minimum of 8 hours and up to 24. The cold extraction draws out guanylate compounds that heat would destroy, producing a cleaner, more complex umami than any quick hot-steep method.",
-      visualCue: {
-        primaryTarget: "After 8 hours the water has become a deep amber to pale brown, clear enough to read text through, with a faint forest-floor fragrance when the lid is lifted.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is still nearly clear — pale gold at most — after only 3–4 hours. The umami extraction is incomplete.", action: "Return to the refrigerator. Shiitake dashi cannot be rushed — cold steeping below 10°C needs at least 8 hours." },
-          { state: "Perfect",   description: "Rich amber, completely clear, with a woodsy-sweet fragrance. The mushrooms have doubled in size and feel plump and yielding.", action: "Remove mushrooms (squeeze them gently — the liquid matters) and proceed to heating." },
-          { state: "Overdone",  description: "After 48+ hours at room temperature: bitter, muddy, slightly fermented smell.", action: "Refrigerated cold-steep can go 24 hours safely. If left at room temperature beyond 12 hours, discard and restart." },
-        ],
-      },
-      feelCue: "Lift a rehydrated shiitake and press it between two fingers — it should feel plump and give like a wet sponge, releasing amber liquid when squeezed. Reserve these mushrooms for miso soup, rice dishes, or braising.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "Champignons shiitake entiers séchés",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "porcin séché (différent caractère)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["cold_steeped_dashi"],
-      outputState: "heated_dashi",
-      instructions: "Transfer the cold-steeped liquid to a small saucepan. Warm over low heat, watching closely. Bring to 60–70°C — just below a simmer, where wisps of steam rise and small bubbles form at the bottom of the pan, but the surface remains still. Hold at this temperature for 5 minutes. Never allow it to boil: a full boil drives off volatile aromatics, makes the dashi cloudy, and introduces a harsh, bitter note from guanylate breakdown.",
-      visualCue: {
-        primaryTarget: "Tiny stationary bubbles dot the pan bottom. Steam rises in lazy wisps. The colour deepens very slightly to a warmer amber. The surface is completely calm.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is barely warm. Steam is not rising. Less than 60°C.", action: "Increase heat slightly. Use a thermometer if unsure — this step rewards precision." },
-          { state: "Perfect",   description: "60–70°C. Calm surface, fine bubbles on the pot bottom, steady gentle steam. Smells warmly of mushroom and sea.", action: "Proceed to straining within 5 minutes." },
-          { state: "Overdone",  description: "A full rolling simmer or boil. Surface is turbulent. Broth has turned cloudy.", action: "Remove from heat immediately. Allow to cool slightly. The dashi is still usable but will be less refined." },
-        ],
-      },
-      feelCue: "Hold your hand a few centimetres above the surface — you should feel gentle warmth but not a blast of steam. A temperature where you could keep your wrist in the liquid for three full seconds before pulling back.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau filtrée à froid",
+      "ratioValue": 1,
+      "defaultUnit": "L",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Strain",
-      inputs: ["heated_dashi", "ing_04"],
-      outputState: "shiitake_dashi",
-      instructions: "Line a fine-mesh strainer with a damp muslin cloth and set it over a clean bowl. Ladle the dashi through gently — pouring from height aerates it and diminishes delicacy. Discard any sediment remaining in the muslin. Season with a pinch of salt, taste, and adjust. The dashi should taste clean, deeply savory, and slightly sweet with a long, gentle finish. Use immediately, or refrigerate for up to 4 days.",
-      visualCue: {
-        primaryTarget: "A sparkling, jewel-clear amber liquid, free of any cloudiness or particle. Colour resembles weak amber tea.",
-        spectrum: [
-          { state: "Underdone", description: "Dashi is cloudy or murky. Sediment visible when held to light.", action: "Pass through the strainer a second time. If still cloudy, the liquid may have been boiled too hard in step 2." },
-          { state: "Perfect",   description: "Crystal-clear amber. A spoon moved through it leaves no trail. Tastes clean and profoundly savoury with no bitterness.", action: "Season minimally and use. The shiitake mushrooms, now fully rehydrated, are ready for miso soup or simmered dishes." },
-          { state: "Overdone",  description: "Dashi tastes bitter or astringent after seasoning.", action: "Add a small piece of fresh kombu and let it steep cold in the finished dashi for 30 minutes — kombu softens bitterness. Taste again before using." },
-        ],
-      },
-      feelCue: "Taste a warm spoonful: the flavour should bloom slowly and linger — a mellow, woody richness rather than the sharp iodine hit of katsuobushi dashi. The finish should be sweet and clean, not bitter.",
+      "ingId": "ing_03",
+      "role": "Glutamate",
+      "name": "Kombu (facultatif, 5cm pièce)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "varech séché"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (pour finition)",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sauce soya légère (ajouter la couleur)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Infuse",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "cold_steeped_dashi",
+      "instructions": "essuyer délicatement les bouchons de shiitake avec un chiffon sec pour enlever toute poussière — ne pas les laver, car l'eau dilue les glutamates de surface. Placer le shiitake (et le kombu, s'il l'utilise) dans un pot en verre ou un contenant non réactif et couvrir d'eau filtrée froide. Sceller et réfrigérer pendant au moins 8 heures et jusqu'à 24 heures. L'extraction à froid dégage des composés de guanylate que la chaleur détruit, produisant un umami plus propre et plus complexe que toute méthode rapide à chaud.",
+      "visualCue": {
+        "primaryTarget": "Après 8 heures, l'eau est devenue un ambre profond à brun pâle, assez clair pour lire le texte, avec un léger parfum de sol forestier quand le couvercle est levé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore presque clair — de l'or pâle au plus — après seulement 3-4 heures. L'extraction de l'umami est incomplète.",
+            "action": "Retournez au réfrigérateur. Le dashi chiitake ne peut pas être précipité — le froid en dessous de 10°C nécessite au moins 8 heures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche ambre, complètement clair, avec un parfum boisé-doux. Les champignons ont doublé de taille et se sentent plombés et productifs.",
+            "action": "Retirer les champignons (les presser doucement — le liquide est important) et procéder au chauffage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après 48 heures et plus à température ambiante : odeur amère, boueuse, légèrement fermentée.",
+            "action": "Le froid réfrigéré peut durer 24 heures en toute sécurité. S'il est laissé à température ambiante au-delà de 12 heures, jeter et redémarrer."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un shiitake réhydraté et appuyez-le entre deux doigts — il devrait se sentir plumé et donner comme une éponge humide, libérant du liquide ambre lorsqu'il est pressé. Réservez ces champignons pour la soupe miso, les plats de riz, ou le braisage."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "cold_steeped_dashi"
+      ],
+      "outputState": "heated_dashi",
+      "instructions": "Transférer le liquide à froid dans une petite casserole. Chauffer à feu doux, surveiller attentivement. Portez à 60-70°C — juste au-dessous d'une mijoteuse, où s'élèvent des spores de vapeur et de petites bulles se forment au fond de la casserole, mais la surface reste immobile. Maintenez cette température pendant 5 minutes. Ne la laissez jamais bouillir : un ébullition complet entraîne des aromatiques volatils, rend le dashi trouble, et introduit une note dure et amère de la panne de guanylate.",
+      "visualCue": {
+        "primaryTarget": "Petites bulles stationnaires pointent le fond de la poêle. La vapeur s'élève en paresseux. La couleur s'approfondit très légèrement jusqu'à un ambre plus chaud. La surface est complètement calme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est à peine chaud. La vapeur ne se lève pas. Moins de 60°C.",
+            "action": "Augmenter légèrement la chaleur. Utilisez un thermomètre si vous n'êtes pas sûr — cette étape récompense la précision."
+          },
+          {
+            "state": "Perfect",
+            "description": "60-70°C. Surface calme, fines bulles sur le fond du pot, vapeur douce et stable. Sentez chaudement de champignon et de mer.",
+            "action": "Procéder à la déformation dans les 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Faire mijoter ou bouillir. La surface est agitée. Broth est devenu nuageux.",
+            "action": "Retirer immédiatement du feu. Laisser refroidir légèrement. Le dashi est encore utilisable mais sera moins raffiné."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main à quelques centimètres au - dessus de la surface — vous devriez sentir une chaleur douce, mais pas un souffle de vapeur. Une température où vous pourriez garder votre poignet dans le liquide pendant trois secondes complètes avant de tirer en arrière."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "heated_dashi",
+        "ing_04"
+      ],
+      "outputState": "shiitake_dashi",
+      "instructions": "Étaler une passoire fine avec un chiffon de mousseline humide et la placer sur un bol propre. Déposer le dashi en douceur — verser de hauteur l'aérer et diminuer la délicatesse. Jeter tout sédiment restant dans le muslin. Assaisonner avec une pincée de sel, goûter et ajuster. Le dashi doit avoir un goût propre, profondément salé et légèrement sucré avec une finale longue et douce. Utiliser immédiatement ou réfrigérer jusqu'à 4 jours.",
+      "visualCue": {
+        "primaryTarget": "Un liquide ambré brillant et clair, exempt de toute nuance ou particule. La couleur ressemble à un thé ambre faible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Dashi est trouble ou trouble. Sédiment visible lorsqu'il est tenu à la lumière.",
+            "action": "Passez à travers la souche une deuxième fois. Si le liquide est encore nuageux, il se peut qu'il ait été bouilli trop fort à l'étape 2."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre cristalline. Une cuillère déplacée à travers elle ne laisse aucune trace. Goûte propre et profondément salé sans amertume.",
+            "action": "Assaisonner au minimum et utiliser. Les champignons shiitake, maintenant entièrement réhydratés, sont prêts pour la soupe miso ou les plats mijotés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dashi goûte amer ou astringent après assaisonnement.",
+            "action": "Ajoutez un petit morceau de kombu frais et laissez le froid raide dans le dashi fini pendant 30 minutes — kombu adoucit l'amertume. Goûtez encore avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillère chaude : la saveur doit fleurir lentement et s'attarder — une richesse boisée et moelleuse plutôt que le coup aigu d'iode de katsuobushi dashi. La finale doit être douce et propre, pas amère."
+    }
+  ]
 };

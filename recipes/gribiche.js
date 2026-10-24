@@ -1,101 +1,266 @@
 export default {
-  repoId: "master_french_gribiche_001",
-  parentRepoId: null,
-  slug: "gribiche",
-  author: "ForkRecipe Kitchen",
-  title: "Sauce Gribiche",
-  description: "A cold French sauce built on hard-boiled egg yolks emulsified like a mayonnaise, then tumbled with capers, cornichons, and a tangle of fine herbs — briny, bright, and satisfyingly textured.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "sauces",
-  tags: ["french", "cold-sauce", "eggs", "capers", "herbs", "bistro", "classic"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 4, sour: 3, bitter: 1, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Hard-boiled eggs (large)",                 ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Binder",    name: "Dijon mustard",                             ratioValue: 8,   defaultUnit: "parts", substitutions: ["whole-grain mustard"] },
-    { ingId: "ing_03", role: "Acid",      name: "White wine vinegar",                        ratioValue: 15,  defaultUnit: "parts", substitutions: ["Champagne vinegar"] },
-    { ingId: "ing_04", role: "Fat",       name: "Neutral oil (sunflower or grapeseed)",      ratioValue: 75,  defaultUnit: "parts", substitutions: ["light olive oil"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Capers, rinsed and roughly chopped",        ratioValue: 15,  defaultUnit: "parts", substitutions: ["caper berries, sliced thin"] },
-    { ingId: "ing_06", role: "Acid",      name: "Cornichons, finely sliced into rounds",     ratioValue: 20,  defaultUnit: "parts", substitutions: ["small dill pickles"] },
-    { ingId: "ing_07", role: "Herb",      name: "Flat-leaf parsley, finely chopped",         ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh tarragon, finely chopped",            ratioValue: 5,   defaultUnit: "parts", substitutions: ["dried tarragon (use half)"] },
-    { ingId: "ing_09", role: "Herb",      name: "Fresh chervil, finely chopped",             ratioValue: 5,   defaultUnit: "parts", substitutions: ["extra flat-leaf parsley"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fine sea salt",                             ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_gribiche_001",
+  "parentRepoId": null,
+  "slug": "gribiche",
+  "author": "ForkRecipe Kitchen",
+  "title": "Gribiche de sauce",
+  "description": "Une sauce française froide construite sur des jaunes d'œufs durs émulsifiés comme une mayonnaise, puis trempés de câpres, de cornichons et d'un enchevêtrement d'herbes fines — brillamment brillamment, brillants et texturés.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "sauces",
+  "tags": [
+    "français",
+    "Sauce froide",
+    "œufs",
+    "Câpres",
+    "herbes",
+    "bistrot",
+    "classique"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Boil",
-      inputs: ["ing_01"],
-      outputState: "hard_boiled_eggs",
-      instructions: "Lower eggs gently into boiling water and cook for exactly 11 minutes. Transfer immediately to an ice bath for 5 minutes — this stops carryover cooking and makes peeling easier. Peel under cold running water. Halve each egg and carefully lift the yolks out whole. Set the whites aside on a cutting board. The yolks should be fully set but still waxy in the center, not chalky or crumbly.",
-      visualCue: {
-        primaryTarget: "Yolk is a uniform pale gold throughout, with no grey-green ring at the edge and no translucent wet center.",
-        spectrum: [
-          { state: "Underdone", description: "The yolk has a translucent, jammy orange core that hasn't fully set. The white may still be slightly soft near the yolk.", action: "Return eggs to simmering water for 2 more minutes, then plunge back into the ice bath." },
-          { state: "Perfect",   description: "Yolk is fully set and waxy, pale yellow-gold throughout, with a slightly powdery, almost crumbly exterior when pressed lightly.", action: "Proceed to separate and sieve the yolks; chop the whites into rough 5 mm pieces and reserve." },
-          { state: "Overdone",  description: "Yolk is completely dry and mealy with a telltale grey-green sulfurous ring at the edge. Smells faintly of hard-boiled excess.", action: "The sauce will still work, but the emulsion will be slightly grainier. Proceed and whisk vigorously to smooth it out." },
-        ],
-      },
-      feelCue: "Press a peeled egg firmly between thumb and index finger — it should yield without shattering, dense and slightly springy, not spongy or wet-soft inside.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Oeufs durs (gros)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Emulsify",
-      inputs: ["hard_boiled_eggs", "ing_02", "ing_03", "ing_10"],
-      outputState: "yolk_emulsion",
-      instructions: "Press the egg yolks through a fine-mesh sieve into a bowl, or mash them very thoroughly with a fork until absolutely no lumps remain — any lump will create a grainy break-point in the emulsion. Add the Dijon mustard and white wine vinegar. Season with salt. Whisk vigorously until the mixture is smooth, thick, and completely homogeneous — it will look like a very stiff, pale-yellow paste.",
-      visualCue: {
-        primaryTarget: "A smooth, cohesive pale-yellow paste with no visible yolk lumps, thick enough to mound on a spoon without sagging.",
-        spectrum: [
-          { state: "Underdone", description: "Lumps of yolk are still visible throughout the paste. The mixture is uneven in color and texture.", action: "Pass through the sieve again, or continue mashing and whisking. Lumps will create broken spots in the finished emulsion." },
-          { state: "Perfect",   description: "Completely smooth, uniform pale-gold paste. It holds its shape on a whisk but drops slowly when the whisk is inverted. No graininess whatsoever.", action: "Begin adding oil drop by drop while whisking constantly." },
-          { state: "Overdone",  description: "Over-whisked before any oil was added — the paste looks thin and wet, as though it has already started to separate.", action: "Add a pinch more mustard and a few more drops of vinegar and continue whisking to re-tighten before adding oil." },
-        ],
-      },
-      feelCue: "Run a finger through the paste — it should drag cleanly like thick hummus, leaving a distinct trail with defined edges that hold their shape for several seconds.",
+      "ingId": "ing_02",
+      "role": "Binder",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moutarde à grains entiers"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Whisk",
-      inputs: ["yolk_emulsion", "ing_04"],
-      outputState: "gribiche_base",
-      instructions: "Working exactly as for a mayonnaise: begin adding the neutral oil in a thin, steady trickle while whisking constantly. The first 30 ml is critical — add it drop by drop to establish the emulsion. Once the mixture turns thick and opaque and the whisk leaves furrow-marks, you can add the remaining oil in a thin, steady stream. Total whisking time is 3–4 minutes. Do not rush the oil addition.",
-      visualCue: {
-        primaryTarget: "A thick, creamy, ivory-yellow emulsion that holds stiff peaks on the whisk and doesn't flow when the bowl is tilted — identical in body to a firm mayonnaise.",
-        spectrum: [
-          { state: "Underdone", description: "Oil is pooling on the surface or the sauce looks broken — a slick, greasy yellow puddle with white curds.", action: "Stop adding oil immediately. Whisk a fresh egg yolk with a pinch of mustard in a clean bowl, then slowly whisk the broken sauce back into it to rescue the emulsion." },
-          { state: "Perfect",   description: "The emulsion is opaque, creamy, and stiff. When a spoon is drawn through it, the furrow holds clean, sharp edges for several seconds.", action: "The base is ready. Fold in the garnishes in the next step." },
-          { state: "Overdone",  description: "Too much oil added too quickly — the emulsion has become waxy and solid, or it has broken under the weight of excess fat.", action: "Whisk in a teaspoon of cold water or vinegar to loosen. If broken, restart with a fresh egg yolk as above." },
-        ],
-      },
-      feelCue: "The resistance on the whisk should build noticeably as the emulsion tightens — by the end it takes real physical effort to drag the whisk through the sauce.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vinaigre de Champagne"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Fold",
-      inputs: ["gribiche_base", "hard_boiled_eggs", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "sauce_gribiche",
-      instructions: "Finely chop the reserved egg whites to a rough 5 mm dice — not a fine mince, you want texture. Using a rubber spatula, fold the chopped egg whites, capers, cornichon rounds, parsley, tarragon, and chervil into the emulsion base. Fold gently with a scooping motion from the bottom of the bowl — you want even distribution without deflating the sauce. Taste and correct: more vinegar if it needs lift, more salt if it tastes flat. Serve at room temperature within an hour of making.",
-      visualCue: {
-        primaryTarget: "An ivory-cream sauce visibly studded with green herb flecks, white egg pieces, dark caper rounds, and pale cornichon discs — distinctly textured, not smooth.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is uniform and creamy with garnishes barely visible, clumped at the surface rather than distributed throughout the base.", action: "Continue folding — make sure the spatula reaches the bottom of the bowl on each stroke. Rotate the bowl as you fold." },
-          { state: "Perfect",   description: "Every spoonful shows a mosaic of herbs, capers, cornichons, and egg white pieces distributed evenly through the creamy, mustard-scented base.", action: "Rest at room temperature for 10 minutes to let the flavors meld before serving alongside poached fish, cold meats, or asparagus." },
-          { state: "Overdone",  description: "The sauce has been stirred rather than folded — the texture has become homogeneous and paste-like, the egg whites disintegrated into the base.", action: "The flavor will be excellent. Serve as-is, or fold in a few extra chopped egg whites to restore textural contrast." },
-        ],
-      },
-      feelCue: "The finished sauce should coat the back of a spoon heavily and hold the herb pieces in suspension — not watery, not stiff, somewhere between a loose mayonnaise and a thick ravigote.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile neutre (fleur de soleil ou graines de raisin)",
+      "ratioValue": 75,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile d'olive légère"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Câpres, rincées et hachées approximativement",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "baies de câpres, coupées en tranches"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Cornichons, tranchés finement en rondelles",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "petits cornichons d'aneth"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, haché finement",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Estragon frais, haché finement",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Estragon séché (utiliser moitié)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Cerveau frais, finement haché",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "persil extra-plat"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "hard_boiled_eggs",
+      "instructions": "Abaissez les œufs doucement dans l'eau bouillante et faites cuire exactement 11 minutes. Transférez immédiatement dans un bain de glace pendant 5 minutes, ce qui arrête la cuisson et facilite le pelage. Peler sous l'eau froide courante. Couper chaque œuf et lever soigneusement les jaunes entiers. Mettez les blancs de côté sur une planche à découper. Les jaunes doivent être entièrement fixés mais toujours cireux au centre, et non crayeux ou miettes.",
+      "visualCue": {
+        "primaryTarget": "Yolk est un or pâle uniforme dans l'ensemble, sans anneau gris-vert au bord et sans centre humide translucide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le jaune a un noyau orange translucide et jammy qui n'a pas été complètement réglé. Le blanc peut encore être légèrement doux près du jaune.",
+            "action": "Retournez les oeufs à l'eau mijotante pendant 2 minutes, puis plongez dans le bain de glace."
+          },
+          {
+            "state": "Perfect",
+            "description": "Yolk est entièrement serti et cireux, jaune pâle-or dans l'ensemble, avec un extérieur légèrement poudreux, presque miettes lorsqu'il est pressé légèrement.",
+            "action": "Procéder à la séparation et au tamisage des jaunes; couper les blancs en morceaux bruts de 5 mm et réserver."
+          },
+          {
+            "state": "Overdone",
+            "description": "Yolk est complètement sec et farineux avec un anneau sulfureux gris-vert à l'extrémité. Ça sent peu l'excès dur.",
+            "action": "La sauce fonctionnera encore, mais l'émulsion sera légèrement plus granuleuse. Continuez et fouettez vigoureusement pour l'aplanir."
+          }
+        ]
+      },
+      "feelCue": "Appuyez fermement sur un œuf pelé entre le pouce et l'index — il doit céder sans éclater, dense et légèrement sprinté, pas spongieux ou humide à l'intérieur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Émulsifier",
+      "inputs": [
+        "hard_boiled_eggs",
+        "ing_02",
+        "ing_03",
+        "ing_10"
+      ],
+      "outputState": "yolk_emulsion",
+      "instructions": "Appuyez sur les jaunes d'œufs à travers un tamis à mailles fines dans un bol, ou mâchez-les très soigneusement avec une fourchette jusqu'à ce qu'il ne reste absolument plus de grumeaux. Ajouter la moutarde de Dijon et le vinaigre blanc. Assaisonner de sel. fouetter vigoureusement jusqu'à ce que le mélange soit lisse, épais et complètement homogène — il ressemblera à une pâte très raide, jaune pâle.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse et cohésive jaune pâle sans grumeaux de jaune visible, assez épaisse pour se poser sur une cuillère sans relâcher.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les lumps de jaune sont encore visibles dans toute la pâte. Le mélange est inégal dans la couleur et la texture.",
+            "action": "Passer à nouveau dans le tamis, ou continuer à battre et fouetter. Lumps créera des taches cassées dans l'émulsion finie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, pâte d'or pâle uniforme. Il tient sa forme sur un fouet mais tombe lentement lorsque le fouet est inversé. Pas de grain.",
+            "action": "Commencez à ajouter de l'huile goutte à goutte tout en fouettant constamment."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a l'air mince et humide, comme si elle avait déjà commencé à se séparer.",
+            "action": "Ajouter une pincée plus de moutarde et quelques gouttes de vinaigre et continuer à fouetter pour re-resserrer avant d'ajouter de l'huile."
+          }
+        ]
+      },
+      "feelCue": "Exécutez un doigt dans la pâte — il devrait glisser proprement comme un hummus épais, laissant un sentier distinct avec des bords définis qui maintiennent leur forme pendant plusieurs secondes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "yolk_emulsion",
+        "ing_04"
+      ],
+      "outputState": "gribiche_base",
+      "instructions": "Travailler exactement comme pour une mayonnaise : commencer à ajouter l'huile neutre dans un filet mince et stable tout en fouettant constamment. Le premier 30 ml est critique — ajoutez-le goutte à goutte pour établir l'émulsion. Une fois que le mélange devient épais et opaque et que les feuilles de fouet marquent le sillon, vous pouvez ajouter le reste de l'huile dans un cours d'eau mince et stable. Le temps de sifflement total est de 3 à 4 minutes. Ne précipitez pas l'addition de pétrole.",
+      "visualCue": {
+        "primaryTarget": "Une émulsion épaisse, crémeuse, jaune ivoire qui tient des pics raides sur le fouet et ne coule pas lorsque le bol est incliné — identique dans le corps à une mayonnaise ferme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'huile est mise en commun à la surface ou la sauce a l'air cassée — une flaque jaune lisse et grasse avec des caillés blancs.",
+            "action": "Arrêtez d'ajouter de l'huile immédiatement. fouetter un jaune d'oeuf frais avec une pincée de moutarde dans un bol propre, puis fouetter lentement la sauce cassée pour y sauver l'émulsion."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'émulsion est opaque, crémeuse et raide. Lorsqu'une cuillère est tirée à travers elle, le sillon tient les bords propres et tranchants pendant plusieurs secondes.",
+            "action": "La base est prête. Plier dans les garnitures dans la prochaine étape."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop d'huile ajoutée trop rapidement — l'émulsion est devenue cireuse et solide, ou elle a cassé sous le poids de l'excès de graisse.",
+            "action": "fouetter dans une cuillère à café d'eau froide ou de vinaigre pour se détendre. Si elle est cassée, recommencer avec un jaune d'œuf frais comme ci-dessus."
+          }
+        ]
+      },
+      "feelCue": "La résistance sur le fouet doit se construire de façon remarquable, car l'émulsion se serre — à la fin, il faut un effort physique réel pour faire glisser le fouet dans la sauce."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plier",
+      "inputs": [
+        "gribiche_base",
+        "hard_boiled_eggs",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "sauce_gribiche",
+      "instructions": "Hacher finement les blancs d'oeufs réservés à un dés de 5 mm rugueux — pas une fine menthe, vous voulez de la texture. À l'aide d'une spatule en caoutchouc, plier les blancs d'oeufs hachés, les câpres, les rondelles de cornichon, le persil, l'estragon et le cerveau dans la base de l'émulsion. Plier délicatement avec un mouvement d'écopage du fond du bol — vous voulez une distribution uniforme sans déflatter la sauce. Boucher et corriger: plus de vinaigre si elle a besoin de lever, plus de sel si elle a un goût plat. Servir à température ambiante dans l'heure qui suit la fabrication.",
+      "visualCue": {
+        "primaryTarget": "Une sauce ivoire-crème visiblement clouée avec des paillettes d'herbes vertes, des morceaux d'œufs blancs, des rondelles de câpres foncées et des disques de cornichon pâles – nettement texturés, non lisses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est uniforme et crémeuse avec des garnitures à peine visibles, empilées à la surface plutôt que distribuées dans toute la base.",
+            "action": "Continuez à plier — assurez-vous que la spatule atteint le fond du bol à chaque course. Faites tourner le bol comme vous piez."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque cuillère montre une mosaïque d'herbes, de câpres, de cornichons et de morceaux blancs d'oeuf distribués uniformément à travers la base crémeuse et parfumée de moutarde.",
+            "action": "Reposez-vous à température ambiante pendant 10 minutes pour laisser les saveurs se fondre avant de servir avec du poisson poché, des viandes froides ou des asperges."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été brassée plutôt que pliée — la texture est devenue homogène et pâteuse, les blancs d'œufs se sont désintégrés dans la base.",
+            "action": "La saveur sera excellente. Servir comme-est, ou plier dans quelques blancs d'oeufs hachés supplémentaires pour restaurer le contraste textural."
+          }
+        ]
+      },
+      "feelCue": "La sauce finie devrait enrober fortement l'arrière d'une cuillère et tenir les morceaux d'herbe en suspension — pas aqueux, pas raide, quelque part entre une mayonnaise lâche et une épaisse ravigote."
+    }
+  ]
 };

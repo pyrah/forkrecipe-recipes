@@ -1,74 +1,153 @@
 export default {
-  repoId: "master_japanese_matcha_ceremonial_001",
-  parentRepoId: null,
-  slug: "matcha-ceremonial",
-  author: "ForkRecipe Kitchen",
-  title: "Ceremonial Matcha",
-  description: "The heart of the Japanese tea ceremony — ceremonial-grade matcha sifted fine, whisked with a bamboo chasen in just-below-boiling water into a bowl of vibrant, vegetal green with a cap of fine, persistent foam. Sweet and savoury at once, it tastes of the shaded tea field in early spring.",
-  cuisine: "Japanese",
-  culture: "Japanese Tea Ceremony (Chado)",
-  category: "beverages",
-  tags: ["beverage", "japanese", "matcha", "tea", "vegan", "gluten-free", "dairy-free"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 0, sour: 0, bitter: 2, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Ceremonial-grade matcha (sifted)",      ratioValue: 2,  defaultUnit: "g",  substitutions: ["high-quality culinary matcha for a more robust, slightly more bitter result"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Water at 75–80°C (just off the boil)",  ratioValue: 70, defaultUnit: "ml", substitutions: ["spring water is ideal — highly chlorinated tap water dulls the flavour"] },
+  "repoId": "master_japanese_matcha_ceremonial_001",
+  "parentRepoId": null,
+  "slug": "matcha-ceremonial",
+  "author": "ForkRecipe Kitchen",
+  "title": "Cérémonial Matcha",
+  "description": "Le cœur de la cérémonie du thé japonais — matcha de qualité cérémonielle tamisé fin, fouetté avec un bambou poursuite dans l'eau juste-en-dessous-boulant dans un bol de vert vif et végétal avec un chapeau de mousse fine et persistante. Douce et salée à la fois, elle goûte au champ de thé ombragé au début du printemps.",
+  "cuisine": "Japonais",
+  "culture": "Cérémonie de thé japonais (Chado)",
+  "category": "beverages",
+  "tags": [
+    "boisson",
+    "Japonais",
+    "matcha",
+    "thé",
+    "végétalien",
+    "Sans gluten",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Warm",
-      inputs: ["ing_02"],
-      outputState: "warmed_chawan",
-      instructions: "Pour a small amount of the 80°C water into the chawan (tea bowl) and swirl it around to preheat the vessel. Tip the water out and dry the bowl thoroughly with a clean cloth. A cold bowl will instantly drop the water temperature and prevent the foam from forming properly. While you work, let the just-boiled water rest uncovered in the kettle or a jug for 2 to 3 minutes to reach the target temperature of 75–80°C — an instant-read thermometer is helpful, but the moment active boiling stops and the first wisps of rising steam soften, you are close.",
-      visualCue: {
-        primaryTarget: "A dry, warm ceramic bowl — touch the outside and it should feel pleasantly warm, not neutral or cold.",
-        spectrum: [
-          { state: "Underdone", description: "The bowl is still cool to the touch and the warm water has been tipped out too quickly.", action: "Add the hot water again and hold it in the bowl for 20 seconds before drying — it needs to absorb the heat." },
-          { state: "Perfect",   description: "The outside of the bowl feels consistently warm when you cup it in both hands, and the interior is completely dry with no condensation.", action: "Proceed to sifting immediately — the bowl is ready for the matcha." },
-          { state: "Overdone",  description: "Water too hot (still boiling) was used; the bowl is uncomfortably hot to hold.", action: "Let the bowl cool to warm-to-comfortable and let your water cool another minute before proceeding — above 85°C turns matcha bitter." },
-        ],
-      },
-      feelCue: "Cup the bowl in both hands the way you would receive it at a tea ceremony. The ceramic should feel like a warm stone — present but gentle.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Cérémonial-grade matcha (soufflé)",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "matcha culinaire de haute qualité pour un résultat plus robuste et légèrement plus amer"
+      ]
     },
     {
-      nodeId: "step_2", action: "Sift",
-      inputs: ["ing_01"],
-      outputState: "sifted_matcha",
-      instructions: "Measure 2 g of matcha (about one heaped chashaku scoop, or one level teaspoon) and pass it through a very fine sieve directly into the warmed, dry chawan. Matcha clumps on contact with humidity, and unsifted matcha whisked into water produces lumps that float stubbornly on the surface rather than dispersing into foam. Use the back of a small spoon to press the powder through if it resists. The sifted matcha should settle in the bowl as a thin, even, vivid green layer with no visible clumps.",
-      visualCue: {
-        primaryTarget: "A thin, even dusting of vivid emerald-green powder on the floor of the bowl — fine as eyeshadow, with no white or yellow-tinged clumps.",
-        spectrum: [
-          { state: "Underdone", description: "Large clumps have passed through the sieve unbroken and sit in the bowl like small green pebbles.", action: "Press them firmly through the sieve with a spoon or use a finer mesh. Clumps will not dissolve in the whisk step." },
-          { state: "Perfect",   description: "An even, perfectly smooth layer of fine green powder, the colour a clear, saturated jade-green — no yellow or brown tinge.", action: "Add the water in a thin, careful stream immediately." },
-          { state: "Overdone",  description: "The powder has been exposed to heat or humidity and has taken on a dull, slightly brownish tinge.", action: "The matcha is past its peak but still drinkable. Store all remaining matcha sealed and refrigerated to slow further oxidation." },
-        ],
-      },
-      feelCue: "Tap the sieve gently — the powder should fall through freely, as fine and weightless as talc. Resistance means the mesh is blocked or the matcha is clumping from moisture.",
-    },
-    {
-      nodeId: "step_3", action: "Whisk",
-      inputs: ["sifted_matcha", "ing_02"],
-      outputState: "finished_matcha",
-      instructions: "Pour the 80°C water in a thin, slow stream over the matcha, aiming for the side of the bowl rather than directly onto the powder to avoid splashing. Take the chasen (bamboo whisk) and, holding the bowl steady with one hand, whisk in a rapid W or M motion across the surface — not circular, which creates large bubbles — moving the wrist quickly from side to side. Whisk for 20 to 30 seconds until a layer of fine, tight, uniform foam covers the entire surface. The bowl should stay still; only the wrist moves. Lift the chasen gently at the end to avoid leaving a hole in the foam.",
-      visualCue: {
-        primaryTarget: "A rich, opaque jade-green liquid with an even cap of fine, tight, light-coloured foam that completely covers the surface and holds without immediately collapsing.",
-        spectrum: [
-          { state: "Underdone", description: "The surface shows large, uneven bubbles with patches of dark, un-foamed liquid visible beneath. The matcha is not yet fully dissolved.", action: "Whisk faster and more vigorously in the W motion for another 15 seconds, focusing on the patches without foam." },
-          { state: "Perfect",   description: "A complete, uniform cap of small, uniform, cream-coloured bubbles sits over the vivid green liquid below. Lifting the chasen draws a thin foam thread that holds briefly before breaking. The colour is a clear, saturated green.", action: "Set the chasen aside gently and drink at once — foam is at its best in the first 90 seconds." },
-          { state: "Overdone",  description: "The foam has collapsed into large, flat bubbles and the surface looks greenish-brown and oily from over-whisking with water that was too hot.", action: "Drink immediately regardless — the taste is largely unaffected even if the aesthetics are not ideal. Use cooler water next time." },
-        ],
-      },
-      feelCue: "The chasen should move fast enough to feel slight resistance from the liquid — a soft, swishing drag, never a heavy stir. When you lift it, the tines should come away clean, not trailing thick green threads.",
-    },
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau à 75-80°C (juste à ébullition)",
+      "ratioValue": 70,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "l'eau de source est idéale — l'eau du robinet fortement chlorée ternit la saveur"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Chaleur",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "warmed_chawan",
+      "instructions": "Verser une petite quantité d'eau de 80 °C dans le chawan (boulon de thé) et le tourner autour pour préchauffer le navire. Arroser l'eau et bien sécher le bol avec un chiffon propre. Un bol froid fera chuter instantanément la température de l'eau et empêchera la mousse de se former correctement. Pendant que vous travaillez, laissez l'eau juste bouillie reposer à découvert dans la bouilloire ou une cruche pendant 2 à 3 minutes pour atteindre la température cible de 75 à 80°C — un thermomètre à lecture instantanée est utile, mais le moment où l'ébullition active s'arrête et les premières lueurs de vapeur montante s'adoucissent, vous êtes proche.",
+      "visualCue": {
+        "primaryTarget": "Un bol de céramique sec et chaud – touchez l'extérieur et il doit se sentir agréablement chaud, pas neutre ou froid.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bol est encore frais au toucher et l'eau chaude a été déversée trop rapidement.",
+            "action": "Ajoutez encore l'eau chaude et maintenez-la dans le bol pendant 20 secondes avant de sécher."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'extérieur du bol se sent constamment chaud lorsque vous le coupez dans les deux mains, et l'intérieur est complètement sec sans condensation.",
+            "action": "Passer immédiatement au crible: le bol est prêt pour le matcha."
+          },
+          {
+            "state": "Overdone",
+            "description": "On a utilisé de l'eau trop chaude (toujours bouillante); le bol est incomfortablement chaud à tenir.",
+            "action": "Laissez le bol refroidir à chaud-à-confortable et laissez votre eau refroidir encore une minute avant de continuer — au-dessus de 85°C devient matcha amer."
+          }
+        ]
+      },
+      "feelCue": "Coupez le bol dans les deux mains comme vous le recevriez lors d'une cérémonie de thé. La céramique doit se sentir comme une pierre chaude — présente mais douce."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sift",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "sifted_matcha",
+      "instructions": "Mesurer 2 g de matcha (environ une boule de chashaku ou une cuillère à café de niveau) et la passer à travers un tamis très fin directement dans le chawan sec chaud. Le Matcha s'agrippe au contact de l'humidité, et le matcha non tamisé fouetté dans l'eau produit des bosses qui flottent obstinément à la surface plutôt que de se disperser en mousse. Utilisez l'arrière d'une petite cuillère pour presser la poudre si elle résiste. Le matcha tamisé doit se déposer dans le bol comme une couche mince, uniforme, vert vif sans empiècements visibles.",
+      "visualCue": {
+        "primaryTarget": "Une fine poudre de couleur vert émeraude sur le sol du bol, fine comme un fard à paupières, sans croûtes blanches ou jaunes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De grands taillis sont passés par le tamis intact et s'assoient dans le bol comme de petits cailloux verts.",
+            "action": "Appuyez fermement sur le tamis avec une cuillère ou utilisez une maille plus fine. Les griffes ne se dissoudront pas à l'étape du fouet."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une couche uniforme, parfaitement lisse de poudre verte fine, la couleur un vert jade clair, saturé — pas de teinte jaune ou brun.",
+            "action": "Ajouter immédiatement l'eau dans un cours d'eau mince et prudent."
+          },
+          {
+            "state": "Overdone",
+            "description": "La poudre a été exposée à la chaleur ou à l'humidité et a pris une teinte légèrement brunâtre.",
+            "action": "Le matcha a dépassé son sommet, mais toujours buvable. Conserver tous les matcha restants scellés et réfrigérés pour ralentir l'oxydation."
+          }
+        ]
+      },
+      "feelCue": "Tapez doucement le tamis — la poudre doit tomber librement, aussi fine et sans poids que le talc. La résistance signifie que le maillage est bloqué ou que le matcha s'accroche à l'humidité."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "sifted_matcha",
+        "ing_02"
+      ],
+      "outputState": "finished_matcha",
+      "instructions": "Verser l'eau à 80°C dans un cours d'eau mince et lent sur le matcha, en ciblant le côté du bol plutôt que directement sur la poudre pour éviter les éclaboussures. Prendre la chassen (volaille de bambou) et, en tenant le bol stable d'une main, fouetter dans un mouvement rapide W ou M à travers la surface — non circulaire, qui crée de grandes bulles — en déplaçant le poignet rapidement de côté en côté. fouetter pendant 20 à 30 secondes jusqu'à ce qu'une couche de mousse fine, serrée et uniforme couvre toute la surface. Le bol doit rester immobile; seul le poignet bouge. Soulevez doucement la chasse à la fin pour éviter de laisser un trou dans la mousse.",
+      "visualCue": {
+        "primaryTarget": "Un liquide riche et opaque vert jade avec un bouchon uniforme de mousse fine, serrée, de couleur claire qui recouvre complètement la surface et tient sans s'effondrer immédiatement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface présente de grandes bulles inégales avec des taches de liquide sombre et sans mousse visibles en dessous. Le matcha n'est pas encore complètement dissous.",
+            "action": "fouetter plus rapidement et plus vigoureusement dans le mouvement W pendant encore 15 secondes, en se concentrant sur les patchs sans mousse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un chapeau complet et uniforme de petites bulles uniformes de couleur crème se trouve sur le liquide vert vif ci-dessous. Levant la chasse dessine un mince fil de mousse qui tient brièvement avant de casser. La couleur est un vert clair et saturé.",
+            "action": "Mettez la chasse de côté doucement et buvez à la fois — la mousse est à son meilleur dans les 90 premières secondes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La mousse s'est effondrée dans de grandes bulles plates et la surface a l'air brun verdâtre et huileuse du sursaut avec de l'eau trop chaude.",
+            "action": "Boire immédiatement indépendamment — le goût n'est en grande partie pas affecté même si l'esthétique n'est pas idéale. Utilisez de l'eau plus fraîche la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "La chasse devrait se déplacer assez vite pour sentir une légère résistance du liquide — une traînée douce et enflammée, jamais un remuement lourd. Lorsque vous le soulevez, les dents devraient sortir propres, et non les fils verts épais."
+    }
+  ]
 };

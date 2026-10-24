@@ -1,92 +1,171 @@
 export default {
-  repoId: "master_korean_fermented_black_garlic_001",
-  parentRepoId: null,
-  slug: "fermented-black-garlic",
-  author: "ForkRecipe Kitchen",
-  title: "Black Garlic",
-  description: "Whole heads of garlic held at 60°C in a humid environment for 40 days while the Maillard reaction and enzymatic browning work in slow motion, transforming the acrid, sharp allicin of raw garlic into something miraculous: soft, jet-black cloves tasting of balsamic vinegar, tamarind, molasses, and roasted garlic all at once, with none of the harshness and a staggering umami depth. Time is the only ingredient.",
-  cuisine: "Korean",
-  culture: "East Asian",
-  category: "fermented",
-  tags: ["fermented", "condiment", "korean", "umami", "vegan", "gluten-free"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "40 day",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 1, sour: 2, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Whole garlic heads, unpeeled, dry, with no cuts or blemishes", ratioValue: 6, defaultUnit: "heads", substitutions: ["large solo garlic (single-clove garlic) for easier peeling after processing"] },
+  "repoId": "master_korean_fermented_black_garlic_001",
+  "parentRepoId": null,
+  "slug": "fermented-black-garlic",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ail noir",
+  "description": "Des têtes entières d'ail maintenues à 60°C dans un environnement humide pendant 40 jours tandis que la réaction de Maillard et le brunissement enzymatique fonctionnent au ralenti, transformant l'allicine acride et aiguë de l'ail cru en quelque chose de miraculeux : girofle doux, noir-jet dégustation de vinaigre balsamique, tamarin, mélasse, et ail rôti tout à la fois, sans la dureté et la profondeur étourdissante de l'umami. Le temps est le seul ingrédient.",
+  "cuisine": "Coréen",
+  "culture": "Asie de l ' Est",
+  "category": "fermented",
+  "tags": [
+    "fermenté",
+    "condiment",
+    "coréen",
+    "umami",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "40 day",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Select and dry",
-      inputs: ["ing_01"],
-      outputState: "prepped_garlic",
-      instructions: "Select firm, dense garlic heads with no soft spots, mold, or exposed cloves. Cure from any farm moisture is essential: garlic that is too wet will rot rather than Maillard at low temperatures. If your garlic is freshly harvested, cure it in a dry, ventilated spot for 1 to 2 weeks before starting. Store-bought garlic is typically already cured and ready. Do not peel, cut, oil, or salt the heads — they go in completely dry and completely whole, in their papery skins. The skins trap moisture released by the cloves, creating the humid micro-environment that drives the slow Maillard reaction inside the head. Trim only any long, dry root hairs if they are untidy, without cutting into the base.",
-      visualCue: {
-        primaryTarget: "Firm, dry, whole garlic heads with intact papery skins, no soft spots, no green shoots emerging from the tops, and no visible mold or dark spots on the outer skin.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic heads that are damp, freshly harvested without curing, or have soft spots suggesting moisture inside.", action: "Cure uncured garlic in a dry, well-ventilated spot for 1 to 2 weeks before processing. Discard any heads with mold — they will contaminate your batch." },
-          { state: "Perfect",   description: "Completely dry, firm heads that crackle slightly when you press the papery skin. No movement of moisture inside. The outer skin is papery and rustles when handled.", action: "Arrange in the rice cooker or dedicated appliance on its warm setting, and begin the 40-day process." },
-          { state: "Overdone",  description: "Peeled garlic cloves placed directly in the vessel, or heads that have been cut in half for speed.", action: "Use whole unpeeled heads only. Exposed cloves will dry out, harden, and over-brown without developing the characteristic soft, jammy interior texture of proper black garlic." },
-        ],
-      },
-      feelCue: "Squeeze a head gently: it should resist with no give, feeling dense and hard. A head that yields softly to pressure has moisture inside that suggests potential rot rather than successful Maillard transformation.",
-    },
-    {
-      nodeId: "step_2",
-      action: "Set up low heat",
-      inputs: ["prepped_garlic"],
-      outputState: "arranged_for_aging",
-      instructions: "Place the whole garlic heads in a rice cooker set to 'warm' (which maintains 55 to 65°C), a slow cooker on its lowest setting, or a purpose-built black garlic fermenter. The target temperature is 60°C (140°F) — hot enough to drive the Maillard reaction and enzymatic browning over days and weeks, but cool enough that the garlic does not cook or dehydrate. Arrange the heads in a single layer with space between them for air circulation. Do not add any water, oil, or other ingredients. The heads should not touch the sides or each other. Set a date 40 days from today. Tape a note to the appliance: do not open unnecessarily for the first two weeks.",
-      visualCue: {
-        primaryTarget: "Whole garlic heads arranged loosely in a warm appliance, the lid on, with a faint sweet-savory aroma already beginning to develop within the first 24 hours — a hint of what 40 days of Maillard reaction smell like.",
-        spectrum: [
-          { state: "Underdone", description: "Appliance temperature is below 55°C, or the heads are touching and stacked tightly, restricting air circulation and creating uneven temperature zones.", action: "Verify temperature with a probe thermometer — the warm setting on some rice cookers runs as low as 45°C, which is insufficient. Use a slow cooker on low, or a dedicated fermenter with temperature control." },
-          { state: "Perfect",   description: "Steady 58 to 63°C around the garlic heads, confirmed with a thermometer. Heads not touching walls or each other. A faint sweet smell begins within 24 hours.", action: "Close the lid and begin timing. The first week will produce the strongest, most pungent aroma — this is normal." },
-          { state: "Overdone",  description: "Temperature set too high, above 70°C: the garlic will cook rapidly and dry out rather than undergoing the slow Maillard transformation.", action: "The result will be caramelized rather than properly black, with a drier texture and more one-dimensional flavor. For a true black garlic, always use a thermometer to confirm you are in the 58 to 65°C range." },
-        ],
-      },
-      feelCue: "After 24 hours with the lid on, carefully lift it and bring your hand close — you should feel a moist, warm, very gentle heat, like a greenhouse in summer. That trapped humidity is essential: dry heat produces caramelized garlic, not black garlic.",
-    },
-    {
-      nodeId: "step_3",
-      action: "Age for 40 days",
-      inputs: ["arranged_for_aging"],
-      outputState: "black_garlic_aging",
-      instructions: "Maintain 58 to 65°C continuously for 40 days. This is not a fermentation in the microbial sense — no bacteria or yeasts are involved — but a very long, sustained Maillard reaction and enzymatic browning process. Resist the urge to check frequently: each time you lift the lid you release trapped humidity and slow the process. Check every 7 days with a quick thermometer probe and visual inspection only. At day 10 the outer skins will have darkened and the smell will be intensely savory-sweet, like soy sauce meets caramel. At day 20 the cloves will be soft enough to press through the skin. At day 30 the color seen through a crack will be dark brown to black. At day 40, the heads are complete.",
-      visualCue: {
-        primaryTarget: "At 40 days: outer skins deeply browned, almost blackened and papery-crisp. When a clove is peeled, it is jet-black, shiny, and soft — the consistency of a soft dried fruit.",
-        spectrum: [
-          { state: "Underdone", description: "At 30 days: cloves are dark brown but still firm when pressed through the skin, or the center of the head is still tan or golden.", action: "Continue aging another 7 to 10 days. The very center of a head of black garlic is always the last to blacken — pull a single clove at day 30 and taste it; if still sharp and pungent, it needs more time." },
-          { state: "Perfect",   description: "At 40 days: cloves are uniformly jet-black and glossy when peeled, with the consistency of a soft date or prune. They taste complex — sweet, sour, umami, and faintly caramel — with none of the sharpness of raw garlic. The aroma is of balsamic vinegar, tamarind, and roasted garlic simultaneously.", action: "Remove from the appliance and allow to cool completely to room temperature before peeling or storing." },
-          { state: "Overdone",  description: "Left beyond 50 days at temperature: cloves have dried out to a harder, denser texture and the flavor has shifted from complex to simply very sweet and one-dimensional.", action: "Still edible and useful. Over-aged black garlic is excellent minced into sauces or dissolved into dressings — the hard texture matters less when it is being incorporated rather than eaten whole." },
-        ],
-      },
-      feelCue: "At day 40, press a clove through the skin firmly with your thumb: it should yield completely and ooze slightly, with a texture between a very ripe fig and a softened date. If it pushes back firmly, give it another week.",
-    },
-    {
-      nodeId: "step_4",
-      action: "Rest and store",
-      inputs: ["black_garlic_aging"],
-      outputState: "finished_black_garlic",
-      instructions: "Remove the finished heads from the appliance and leave them at room temperature, uncovered, for 24 to 48 hours. This resting and drying step is critical: the outer skins will continue to desiccate and the cloves will firm up slightly to a perfect chewy-soft consistency — the flavor deepens further during this rest as the residual sugars continue to react. After resting, store the whole heads, peeled or unpeeled, in an airtight container in the refrigerator for up to 3 months, or in the freezer for up to 1 year. They can be used whole in pasta, smashed into butter, blended into aioli, dissolved into risotto, or simply eaten as they are with bread and olive oil.",
-      visualCue: {
-        primaryTarget: "After the 48-hour rest: outer skins papery and completely dry; inner cloves jet-black, glossy, and chewy-soft, with a complex sweet-umami-sour aroma every time the container is opened.",
-        spectrum: [
-          { state: "Underdone", description: "Skipped the rest period: cloves are still slightly sticky and too moist, with a softer texture than ideal.", action: "Leave uncovered at room temperature for the full 48 hours. The rest period completes the transformation — rushing it produces black garlic with a slightly mushy, underfinished quality." },
-          { state: "Perfect",   description: "Cloves are uniformly jet-black, slightly glossy, and yielding to a firm bite with a chewy-soft texture — not sticky, not dry. The flavor is a seamless chord of sweet, sour, umami, and caramel with a long, warm finish and no garlic sharpness at all.", action: "Store refrigerated and use within 3 months. Peel as needed." },
-          { state: "Overdone",  description: "Left uncovered at room temperature for more than 4 days during the rest: the cloves have dried and hardened to a chewy-tough texture.", action: "Mince or chop finely before using — the flavor is intact and concentrated; the texture is the only casualty. Or rehydrate briefly in warm water before use." },
-        ],
-      },
-      feelCue: "Peel a clove from a properly rested head: it should lift cleanly from the papery skin without sticking, feeling like a slightly firm jelly-fruit candy. Bite through it: soft resistance, then collapse, releasing a complex flavor that coats the entire palate and lingers for minutes.",
-    },
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Têtes entières d'ail, non pelées, sèches, sans coupure ni défaut",
+      "ratioValue": 6,
+      "defaultUnit": "heads",
+      "substitutions": [
+        "large ail seul (ail à simple gout) pour faciliter le pelage après transformation"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sélectionner et sécher",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "prepped_garlic",
+      "instructions": "Sélectionnez des têtes d'ail fermes et denses sans taches molles, sans moisissure, ni gousses exposées. Il est essentiel de guérir de toute humidité de la ferme : l'ail trop humide pourrira plutôt que Maillard à basse température. Si votre ail est fraîchement récolté, le guérir dans un endroit sec et ventilé pendant 1 à 2 semaines avant de commencer. L'ail acheté en magasin est généralement déjà guéri et prêt. Ne pelez pas, coupez, huilez ou salez les têtes — elles sont complètement sèches et entières, dans leurs peaux de papier. Les peaux piègent l'humidité libérée par les girofles, créant le micro-environnement humide qui provoque la lente réaction de Maillard à l'intérieur de la tête. Couper seulement les poils de racines longs et secs s'ils sont délassés, sans couper dans la base.",
+      "visualCue": {
+        "primaryTarget": "Têtes d'ail fermes, sèches et entières avec des peaux papeuses intactes, pas de taches molles, pas de pousses vertes sortant du dessus, et pas de moisissure visible ou de taches foncées sur la peau externe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Têtes d'ail qui sont humides, fraîchement récoltées sans durcir, ou ont des taches molles suggérant l'humidité à l'intérieur.",
+            "action": "Prélever l'ail non durci dans un endroit sec et bien ventilé pendant 1 à 2 semaines avant la transformation. Jetez les têtes avec du moule — elles contamineront votre lot."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement sec, tête ferme qui craque légèrement lorsque vous appuyez sur la peau papier. Aucun mouvement d'humidité à l'intérieur. La peau externe est papier et rougit lorsqu'elle est manipulée.",
+            "action": "Disposer dans la cuisinière à riz ou l'appareil dédié sur son réglage chaud, et commencer le processus de 40 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Gousses d'ail pelées placées directement dans le récipient, ou têtes coupées en deux pour la vitesse.",
+            "action": "N'utilisez que des têtes entières. Les gousses exposées sèchent, durcissent et surbrondent sans développer la texture intérieure douce et jammy caractéristique de l'ail noir."
+          }
+        ]
+      },
+      "feelCue": "Pressez doucement la tête : elle doit résister sans donner, se sentir dense et dure. Une tête qui donne doucement à la pression a de l'humidité à l'intérieur qui suggère la pourriture potentielle plutôt que la transformation réussie de Maillard."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mettre en place une faible chaleur",
+      "inputs": [
+        "prepped_garlic"
+      ],
+      "outputState": "arranged_for_aging",
+      "instructions": "Placer les têtes entières d'ail dans une cuisinière de riz à «chauffer» (qui maintient 55 à 65°C), une cuisinière lente sur son réglage le plus bas, ou un fermenteur à l'ail noir conçu spécialement. La température cible est de 60°C (140°F) – assez chaude pour provoquer la réaction de Maillard et le brunissement enzymatique au cours des jours et des semaines, mais assez froide pour que l'ail ne cuit ni ne déshydrate. Disposer les têtes en une seule couche avec de l'espace entre elles pour la circulation de l'air. Ne pas ajouter d'eau, d'huile ou d'autres ingrédients. Les têtes ne doivent pas toucher les côtés ou les autres. Fixez une date dans 40 jours. Tapez une note sur l'appareil : ne pas ouvrir inutilement pendant les deux premières semaines.",
+      "visualCue": {
+        "primaryTarget": "Têtes d'ail entières disposées de façon lâche dans un appareil chaud, le couvercle sur, avec un léger arôme sucré-savori qui commence déjà à se développer dans les 24 premières heures — un soupçon de ce que les 40 jours de la réaction de Maillard sentent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La température de l'appareil est inférieure à 55 °C, ou les têtes sont serrées et empilées, limitant la circulation de l'air et créant des zones de température inégales.",
+            "action": "Vérifier la température à l'aide d'un thermomètre à sonde — le réglage chaud sur certaines cuisinières de riz est aussi bas que 45°C, ce qui est insuffisant. Utilisez une cuisinière lente à basse température ou un fermenteur dédié avec contrôle de température."
+          },
+          {
+            "state": "Perfect",
+            "description": "Suspendu de 58 à 63°C autour des têtes d'ail, confirmé par un thermomètre. Têtes ne touchant pas les murs ou l'autre. Une faible odeur sucrée commence dans les 24 heures.",
+            "action": "Fermez le couvercle et commencez le timing. La première semaine produira l'arôme le plus puissant et le plus piquant — c'est normal."
+          },
+          {
+            "state": "Overdone",
+            "description": "Température trop élevée, supérieure à 70°C : l'ail cuit rapidement et sèche plutôt que de subir la lente transformation de Maillard.",
+            "action": "Le résultat sera caramélisé plutôt que correctement noir, avec une texture plus sèche et plus de saveur unidimensionnelle. Pour un vrai ail noir, utilisez toujours un thermomètre pour confirmer que vous êtes dans la gamme de 58 à 65°C."
+          }
+        ]
+      },
+      "feelCue": "Après 24 heures avec le couvercle, levez - le soigneusement et fermez - vous la main; vous devriez sentir une chaleur humide, chaude, très douce, comme une serre en été. Cette humidité piégée est essentielle : la chaleur sèche produit de l'ail caramélisé, pas de l'ail noir."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Âge pendant 40 jours",
+      "inputs": [
+        "arranged_for_aging"
+      ],
+      "outputState": "black_garlic_aging",
+      "instructions": "Maintenir de 58 à 65°C en continu pendant 40 jours. Il ne s'agit pas d'une fermentation au sens microbien — pas de bactéries ou de levures — mais d'une réaction très longue et soutenue de Maillard et d'un processus de brunissement enzymatique. Résistez à l'envie de vérifier fréquemment : chaque fois que vous soulevez le couvercle, vous relâchez l'humidité piégée et ralentissez le processus. Vérifiez tous les 7 jours avec une sonde de thermomètre rapide et une inspection visuelle seulement. Au jour 10, les peaux extérieures s'obscurciront et l'odeur sera intensement salée, comme la sauce soja rencontre le caramel. Au jour 20, les girofles seront assez douces pour appuyer sur la peau. Au jour 30, la couleur vue à travers une fissure sera brun foncé à noir. Au jour 40, les têtes sont complètes.",
+      "visualCue": {
+        "primaryTarget": "À 40 jours : peaux extérieures profondément dorées, presque noircies et encres-papiers. Lorsqu'un girofle est pelé, il est noir-jet, brillant et doux — la consistance d'un fruit séché doux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "À 30 jours : les gousses sont brun foncé mais encore fermes lorsqu'elles sont pressées à travers la peau, ou le centre de la tête est encore bronzé ou doré.",
+            "action": "Continuer à vieillir encore 7 à 10 jours. Le centre même d'une tête d'ail noir est toujours le dernier à noircir — tirez un seul girofle au jour 30 et goûtez-le; si encore aiguisé et piquant, il a besoin de plus de temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "À 40 jours : les gousses sont uniformément noir-jet et brillant lorsqu'elles sont pelées, avec la consistance d'une date ou d'un pruneau. Ils ont un goût complexe — doux, aigre, umami et peu caramel — sans la netteté de l'ail cru. L'arôme est de vinaigre balsamique, de tamarin et d'ail rôti simultanément.",
+            "action": "Retirer de l'appareil et laisser refroidir complètement à la température ambiante avant de peler ou de stocker."
+          },
+          {
+            "state": "Overdone",
+            "description": "Laisser au-delà de 50 jours à température : les gousses ont séché à une texture plus dure et plus dense et la saveur est passée de complexe à simplement très douce et unidimensionnelle.",
+            "action": "Toujours comestible et utile. L'ail noir surâgé est excellent haché dans des sauces ou dissous dans des vinaigrettes — la texture dure est moins importante lorsqu'il est incorporé plutôt que mangé entier."
+          }
+        ]
+      },
+      "feelCue": "Au jour 40, pressez fermement une girofle à travers la peau avec le pouce : elle doit se former complètement et faire un peu mousser, avec une texture entre une figues très mûres et une date adoucie. Si elle repousse fermement, donnez-lui une autre semaine."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos et magasin",
+      "inputs": [
+        "black_garlic_aging"
+      ],
+      "outputState": "finished_black_garlic",
+      "instructions": "Retirer les têtes finies de l'appareil et les laisser à température ambiante, à découvert, pendant 24 à 48 heures. Cette étape de repos et de séchage est critique : les peaux extérieures continueront à se dessécher et les gousses s'affermissent légèrement à une consistance mâcheuse-douce parfaite – la saveur s'approfondit au cours de ce repos alors que les sucres résiduels continuent à réagir. Après le repos, conserver la tête entière, pelée ou non, dans un récipient hermétique au réfrigérateur pendant 3 mois au maximum, ou au congélateur pendant 1 an au maximum. Ils peuvent être utilisés entiers dans les pâtes, écrasés dans le beurre, mélangés dans l'aioli, dissous dans le risotto, ou simplement consommés comme ils sont avec du pain et de l'huile d'olive.",
+      "visualCue": {
+        "primaryTarget": "Après le repos de 48 heures: les peaux extérieures sont papeuses et complètement sèches; les gousses intérieures sont noir-jet, brillant, et moelleux-doux, avec un arôme doux-umami-sour complexe chaque fois que le récipient est ouvert.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Passé la période de repos : les gousses sont encore légèrement collantes et trop humides, avec une texture plus douce que idéale.",
+            "action": "Laisser à découvert à température ambiante pendant 48 heures. La période de repos complète la transformation — en se précipitant, elle produit de l'ail noir d'une qualité légèrement musquée et sous-finie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les vêtements sont uniformément noir-jet, légèrement brillants, et donnent à une morsure ferme avec une texture molle et mâcheuse — pas collante, pas sèche. La saveur est un accord sans soudure de doux, aigre, umami, et caramel avec une longue finale chaude et aucune netteté d'ail du tout.",
+            "action": "A conserver réfrigéré et utiliser dans les 3 mois. Peler au besoin."
+          },
+          {
+            "state": "Overdone",
+            "description": "A découvert à température ambiante pendant plus de 4 jours durant le reste : les gousses ont séché et durci jusqu'à une texture mâcheuse.",
+            "action": "Mincez ou hachez finement avant d'utiliser — la saveur est intacte et concentrée; la texture est la seule victime. Ou réhydratez brièvement dans de l'eau chaude avant utilisation."
+          }
+        ]
+      },
+      "feelCue": "Peler une girofle d'une tête bien reposée : elle devrait se soulever proprement de la peau papier sans coller, se sentant comme un bonbon de gelée légèrement ferme. Bite à travers elle: résistance douce, puis s'effondrer, libérant une saveur complexe qui enveloppe toute la bouche et s'attarde pendant des minutes."
+    }
+  ]
 };

@@ -1,96 +1,212 @@
 export default {
-  repoId: "master_armenian_lavash_001",
-  parentRepoId: null,
-  slug: "lavash",
-  author: "ForkRecipe Kitchen",
-  title: "Armenian Lavash",
-  description: "Papery-thin flatbread baked in seconds on a scorching stone or griddle until blistered and charred in spots — it crackles dry as it cools but stays supple if kept wrapped, and becomes pliable again with a breath of moisture.",
-  cuisine: "Armenian",
-  culture: "Armenian Highland",
-  category: "breads",
-  tags: ["lavash", "armenian", "flatbread", "thin-bread", "unleavened", "griddle-bread"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "All-purpose flour",              ratioValue: 100, defaultUnit: "%", substitutions: ["bread flour (slightly chewier)"] },
-    { ingId: "ing_02", role: "Hydration", name: "Warm water (40 C)",              ratioValue: 55,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fine salt",                      ratioValue: 1.5, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Garnish",   name: "Sesame seeds (optional topping)",ratioValue: 2,   defaultUnit: "%", substitutions: ["nigella seeds", "poppy seeds"] },
-    { ingId: "ing_05", role: "Fat",       name: "Neutral vegetable oil",          ratioValue: 2,   defaultUnit: "%", substitutions: ["olive oil"] },
+  "repoId": "master_armenian_lavash_001",
+  "parentRepoId": null,
+  "slug": "lavash",
+  "author": "ForkRecipe Kitchen",
+  "title": "Lavasch arménien",
+  "description": "Le pain plat à la fine feuille a été cuit en quelques secondes sur une pierre ou une grille brûlante jusqu'à ce qu'il soit blister et carbonisé dans des taches — il craque comme il refroidit, mais reste souple s'il est maintenu enveloppé, et devient à nouveau souple avec un souffle d'humidité.",
+  "cuisine": "Arménien",
+  "culture": "Hauts plateaux arméniens",
+  "category": "breads",
+  "tags": [
+    "laves",
+    "Arménien",
+    "Pain plat",
+    "pain mince",
+    "sans levain",
+    "pain à bille"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_05"],
-      outputState: "lavash_dough",
-      instructions: "Combine flour and salt in a bowl. Add warm water and oil. Mix with your hand until a cohesive, firm dough forms — lavash is a lean, unleavened dough, and it should be noticeably stiffer than bread dough. It should clear the bowl sides and not stick to your hands when handled with any pressure. Knead briefly in the bowl for 2–3 minutes to bring it together. The dough will feel tough and resistant — this is correct. High-gluten development is what allows it to stretch paper-thin without tearing.",
-      visualCue: {
-        primaryTarget: "A smooth, firm ball that holds its shape completely without spreading. Stiffer than pizza dough — closer to pasta dough in firmness.",
-        spectrum: [
-          { state: "Underdone", description: "Wet and slack; sticks to hands; won't hold a ball shape; flour not fully incorporated.", action: "Add flour 1 tablespoon at a time. Lavash dough should be firm, not soft." },
-          { state: "Perfect",   description: "Firm, smooth, slightly tacky but not sticky. Holds its shape. Resists denting when pressed. Smells cleanly of flour.", action: "Cover and rest 1 hour to develop gluten and relax the dough." },
-          { state: "Overdone",  description: "Very stiff and crumbly — dough cracks or crumbles when folded.", action: "Add warm water 1 teaspoon at a time until pliable and cohesive." },
-        ],
-      },
-      feelCue: "Lavash dough should feel like well-made pasta dough — firm enough to hold its shape, smooth enough that it doesn't tear when you press your thumb in, and decidedly stiffer than any bread dough.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de pain (légèrement mâcher)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Rest",
-      inputs: ["lavash_dough"],
-      outputState: "rested_dough",
-      instructions: "Wrap the dough tightly in plastic wrap or cover the bowl with a damp towel. Rest at room temperature for 60 minutes. This rest is essential: without it the gluten is too tense and elastic to roll thin — it will spring back and resist every pass of the rolling pin. After an hour the gluten relaxes completely and the dough will stretch effortlessly to paper-thin without tearing.",
-      visualCue: {
-        primaryTarget: "Dough has relaxed visibly — it is slightly flatter, less springy. When you press a finger in, the indent does not spring back immediately.",
-        spectrum: [
-          { state: "Underdone", description: "After only 20 minutes the dough is still springy and firm — it resists when you try to stretch a small piece.", action: "Wait the full 60 minutes. Gluten relaxation is the whole point of this rest." },
-          { state: "Perfect",   description: "Poke leaves a slow-returning indent. A small piece pulled by hand can be stretched 10 cm without tearing. Surface is smooth and matte.", action: "Divide into 6–8 pieces and begin rolling." },
-          { state: "Overdone",  description: "After 3+ hours at room temperature the dough is very slack and floppy — nearly impossible to pick up without tearing.", action: "Chill briefly in the refrigerator 10 minutes to firm up. It will roll fine once slightly cool." },
-        ],
-      },
-      feelCue: "Rested lavash dough should feel like room-temperature modeling clay — firm but no longer resistant. Pull a small piece and it stretches into a ribbon before tearing, rather than snapping back.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau chaude (40 C)",
+      "ratioValue": 55,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Shape",
-      inputs: ["rested_dough", "ing_04"],
-      outputState: "rolled_lavash",
-      instructions: "Divide the dough into 6–8 equal pieces. On a lightly floured surface, use a thin rolling pin to roll each piece as thin as humanly possible — you are aiming for 1–2 mm or less, roughly the thickness of a playing card. Roll from the center out, rotating 90 degrees after each pass. The lavash is thin enough when you can see the outline of your hand through it when held up to light. Scatter sesame seeds evenly over the surface and roll over them once lightly to press in. If rolling in batches, keep unrolled pieces covered to prevent drying.",
-      visualCue: {
-        primaryTarget: "Near-translucent sheets — you can see the shadows of your fingers through the dough when held up to light. Sesame seeds pressed into the surface without tearing the dough.",
-        spectrum: [
-          { state: "Underdone", description: "Sheet is 4–5 mm thick, opaque, and doughy. It won't blister and char properly in the oven — it will bake like a soft flatbread, not a crisp lavash.", action: "Continue rolling with firm, even pressure. Use a long, thin rolling pin for leverage." },
-          { state: "Perfect",   description: "Nearly translucent, thinner than 2 mm. Holds together with no tears. Sesame seeds embedded flush with the surface. The sheet feels almost delicate to the touch.", action: "Bake immediately on a preheated stone or griddle — do not let it dry out." },
-          { state: "Overdone",  description: "Sheet has torn in multiple places; holes visible from aggressive rolling.", action: "Patch by folding the torn areas over themselves and rolling lightly. The folded spots will just be thicker." },
-        ],
-      },
-      feelCue: "A properly rolled lavash sheet should feel like heavy tissue paper — almost without weight in your hands, impossibly thin but still holding together. It sags on the edges when you lift it.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["rolled_lavash"],
-      outputState: "finished_lavash",
-      instructions: "Preheat a baking stone, cast-iron griddle, or heavy skillet over high heat for at least 10 minutes — or heat an oven to its maximum with a stone inside. The cooking surface must be aggressively hot. Drape a lavash sheet directly onto the hot surface. It will blister and bubble in under 60 seconds. When the bottom shows charred spots and the edges curl slightly, flip with tongs and cook 20–30 seconds more on the second side. Remove immediately. Stack cooked lavash and cover with a towel — they will steam-soften into pliable sheets. For crisp lavash, leave uncovered to air-dry.",
-      visualCue: {
-        primaryTarget: "Blistered and charred in irregular spots on both sides, pale tan between the darker patches. Edges may curl slightly. The bread is very thin and lightweight.",
-        spectrum: [
-          { state: "Underdone", description: "Pale throughout, no blistering, doughy and thick-feeling. Took longer than 90 seconds — the surface was not hot enough.", action: "Flip and cook longer. Increase heat for the next sheet. A cold surface cannot make lavash." },
-          { state: "Perfect",   description: "Mottled pale and dark, char spots distributed across the surface, lightweight and crisp or pliable depending on how it's kept. Smells of toasted grain and sesame.", action: "Stack under a towel for pliable lavash or spread on a rack for crisp lavash." },
-          { state: "Overdone",  description: "More than half the surface is black and bitter-smelling; the bread is acrid.", action: "Reduce heat slightly for subsequent sheets. Some char is desirable — the difference between 'charred' and 'burnt' is the dominant flavor." },
-        ],
-      },
-      feelCue: "A freshly baked lavash should feel incredibly light — almost like holding a large leaf. Crisp lavash crackles when bent. Covered-and-steamed lavash is soft and drapes over your hand like a handkerchief.",
+      "ingId": "ing_04",
+      "role": "Garnish",
+      "name": "Graines de sésame",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Graines de nigella",
+        "graines de pavot"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile végétale neutre",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Huile d'olive"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "lavash_dough",
+      "instructions": "Mélanger la farine et le sel dans un bol. Ajouter l'eau chaude et l'huile. Mélangez avec votre main jusqu'à ce qu'une pâte cohésive et ferme forme — la lave est une pâte maigre, sans levain, et elle doit être nettement plus rigide que la pâte à pain. Il devrait nettoyer les côtés du bol et ne pas coller à vos mains lorsqu'il est manipulé avec une pression quelconque. Agenouiller brièvement dans le bol pendant 2 à 3 minutes pour le rassembler. La pâte se sentira dure et résistante — c'est exact. Le développement à haute teneur en gluten lui permet d'étirer le papier-mince sans déchirer.",
+      "visualCue": {
+        "primaryTarget": "Une balle lisse et ferme qui tient sa forme complètement sans s'étendre. Plus forte que la pâte à pizza, plus proche de la pâte aux pâtes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mouiller et relâcher; coller aux mains; ne pas tenir une forme de boule; farine pas entièrement incorporée.",
+            "action": "Ajouter la farine 1 cuillère à soupe à la fois. La pâte de lavah doit être ferme, pas molle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ferme, lisse, légèrement collant mais pas collant. Il tient sa forme. Résiste à la bosse lorsqu'il est pressé. Sens propre de la farine.",
+            "action": "Couvrir et reposer 1 heure pour développer le gluten et détendre la pâte."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très raide et friable — la pâte se fissure ou s'écroule lorsqu'elle est repliée.",
+            "action": "Ajouter l'eau chaude 1 cuillère à café à la fois jusqu'à ce qu'elle soit souple et cohésive."
+          }
+        ]
+      },
+      "feelCue": "La pâte de lavasch devrait se sentir comme de la pâte de pâtes bien faite — assez ferme pour tenir sa forme, suffisamment lisse pour qu'elle ne déchire pas quand vous appuyez sur votre pouce, et résolument plus raide que n'importe quelle pâte à pain."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Repos",
+      "inputs": [
+        "lavash_dough"
+      ],
+      "outputState": "rested_dough",
+      "instructions": "Enveloppez fermement la pâte dans un emballage en plastique ou recouvrez le bol d'une serviette humide. Reposez à température ambiante pendant 60 minutes. Ce repos est essentiel: sans lui, le gluten est trop tendu et élastique pour rouler finement — il va retomber et résister à chaque passage de l'épingle. Au bout d'une heure, le gluten se détend complètement et la pâte s'étire sans effort au papier-mince sans déchirer.",
+      "visualCue": {
+        "primaryTarget": "Dough a visiblement détendu — il est légèrement flatteur, moins printanier. Lorsque vous appuyez sur un doigt, le tiret ne ressort pas immédiatement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après seulement 20 minutes, la pâte est toujours printanière et ferme — elle résiste lorsque vous essayez d'étirer une petite pièce.",
+            "action": "Attendez 60 minutes. La relaxation au gluten est tout le point de ce repos."
+          },
+          {
+            "state": "Perfect",
+            "description": "Poke laisse un tiret qui retourne lentement. Une petite pièce tirée à la main peut être étirée 10 cm sans déchirer. La surface est lisse et mate.",
+            "action": "Divisez en 6–8 pièces et commencez à rouler."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après 3 heures et plus à température ambiante, la pâte est très molle et molle, presque impossible à ramasser sans déchirer.",
+            "action": "Refroidir brièvement au réfrigérateur pendant 10 minutes. Il roulera fin une fois légèrement frais."
+          }
+        ]
+      },
+      "feelCue": "La pâte de lave reposée doit se sentir comme de l'argile de modélisation à température ambiante, ferme mais non plus résistante. Tirez une petite pièce et elle s'étire dans un ruban avant de déchirer, plutôt que de se casser en arrière."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "rested_dough",
+        "ing_04"
+      ],
+      "outputState": "rolled_lavash",
+      "instructions": "Divisez la pâte en 6–8 morceaux égaux. Sur une surface légèrement farinée, utilisez une fine goupille de laminage pour rouler chaque pièce aussi fin que possible humainement — vous visez 1–2 mm ou moins, à peu près l'épaisseur d'une carte à jouer. Roulez depuis le centre, en tournant à 90 degrés après chaque passage. La lave est assez mince quand vous pouvez voir le contour de votre main à travers elle lorsqu'il est tenu à la lumière. Éparpiller les graines de sésame uniformément sur la surface et les rouler une fois légèrement pour les presser. Si laminage en lots, garder les pièces non laminées recouvertes pour éviter le séchage.",
+      "visualCue": {
+        "primaryTarget": "Feuilles presque translucides — Vous pouvez voir les ombres de vos doigts à travers la pâte lorsqu'ils sont tenus à la lumière. Semences de sésame pressées dans la surface sans déchirer la pâte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Feuille de 4 à 5 mm d'épaisseur, opaque et pâteuse. Il ne fera pas de blister et de char correctement dans le four — il fera cuire comme un pain plat doux, pas une lave croustillante.",
+            "action": "Continuer à rouler avec une pression ferme et uniforme. Utilisez un laminoir long et fin pour le levier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Presque translucide, plus mince que 2 mm. Se tient ensemble sans larmes. Graines de sésame intégrées à la surface. La feuille est presque délicate au toucher.",
+            "action": "Cuire immédiatement sur une pierre ou une grille préchauffée — ne la laissez pas sécher."
+          },
+          {
+            "state": "Overdone",
+            "description": "La feuille a été déchirée en plusieurs endroits; des trous visibles du laminage agressif.",
+            "action": "Repliez les zones déchirées et roulez légèrement. Les taches pliées seront juste plus épaisses."
+          }
+        ]
+      },
+      "feelCue": "Une feuille de lave bien roulée devrait se sentir comme du papier de tissu lourd — presque sans poids dans vos mains, incroyablement mince mais toujours en tenant ensemble. Il saigne sur les bords quand vous le soulevez."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "rolled_lavash"
+      ],
+      "outputState": "finished_lavash",
+      "instructions": "Préchauffer une pierre cuite, une grille en fonte ou une poêle lourde à feu vif pendant au moins 10 minutes — ou chauffer un four à son maximum avec une pierre à l'intérieur. La surface de cuisson doit être très chaude. Drapez une feuille de lave directement sur la surface chaude. Il va blister et buller en moins de 60 secondes. Lorsque le fond montre des taches carbonisées et que les bords se recroquevillent légèrement, retourner avec des pinces et cuire de 20 à 30 secondes de plus sur le deuxième côté. Supprimer immédiatement. Piquer les laves cuites et couvrir d'une serviette — elles seront souvent vapeur dans des draps souples. Pour les laves croustillantes, laisser à découvert à sec à l'air.",
+      "visualCue": {
+        "primaryTarget": "Blister et carbonisé dans des taches irrégulières des deux côtés, bronzage pâle entre les taches plus foncées. Les bords peuvent se courber légèrement. Le pain est très mince et léger.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pale tout au long, pas de cloques, pâteux et épais. Il a fallu plus de 90 secondes — la surface n'était pas assez chaude.",
+            "action": "Flip et cuire plus longtemps. Augmenter la chaleur pour la feuille suivante. Une surface froide ne peut pas faire de lave."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les taches d'omble sont pâles et foncées, réparties à la surface, légères et croustillantes ou pliables selon la façon dont elles sont conservées. Des odeurs de grain grillé et de sésame.",
+            "action": "Empiler sous une serviette pour laves souples ou étaler sur un rack pour laves croustillantes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus de la moitié de la surface est noire et amère; le pain est acride.",
+            "action": "Réduire légèrement la chaleur pour les feuilles suivantes. Un peu d'omble est souhaitable — la différence entre «charre» et «brûlure» est la saveur dominante."
+          }
+        ]
+      },
+      "feelCue": "Une lave fraîchement cuite devrait se sentir incroyablement légère — presque comme tenir une grande feuille. La lave de Crisp craque quand elle est pliée. La lave couverte et à vapeur est douce et drape sur votre main comme un mouchoir."
+    }
+  ]
 };

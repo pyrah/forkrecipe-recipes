@@ -1,96 +1,256 @@
 export default {
-  repoId: "master_greek_spanakopita_001",
-  parentRepoId: null,
-  slug: "spanakopita",
-  author: "ForkRecipe Kitchen",
-  title: "Spanakopita (Greek Spinach Pie)",
-  description: "Crisp, golden phyllo pastry layered with a filling of wilted spinach, crumbled feta, dill and egg — each shattering, paper-thin sheet giving way to the creamy, herby, salty filling within. The kind of pie that disappears the moment it reaches the table.",
-  cuisine: "Greek",
-  culture: "Greek",
-  category: "vegetables",
-  tags: ["greek", "spinach", "feta", "phyllo", "vegetarian"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 4, sour: 1, bitter: 1, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Phyllo dough (fresh or fully thawed)",        ratioValue: 400,  defaultUnit: "g",    substitutions: ["homemade hand-stretched phyllo if skilled"] },
-    { ingId: "ing_02", role: "Structure",  name: "Fresh spinach (or frozen 500g, fully thawed and squeezed)", ratioValue: 1000, defaultUnit: "g", substitutions: ["Swiss chard", "a mix of spinach and chard"] },
-    { ingId: "ing_03", role: "Dairy",      name: "Feta cheese, crumbled",                       ratioValue: 400,  defaultUnit: "g",    substitutions: ["a mix of feta and ricotta for a creamier filling"] },
-    { ingId: "ing_04", role: "Binder",     name: "Eggs, beaten",                                ratioValue: 3,    defaultUnit: "eggs", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",     name: "Spring onions (scallions), thinly sliced",    ratioValue: 4,    defaultUnit: "stalks", substitutions: ["1 small leek, sliced"] },
-    { ingId: "ing_06", role: "Herb",       name: "Fresh dill, roughly chopped",                 ratioValue: 30,   defaultUnit: "g",    substitutions: ["flat-leaf parsley", "a mix of dill and mint"] },
-    { ingId: "ing_07", role: "Fat",        name: "Olive oil or melted unsalted butter (for brushing)", ratioValue: 120, defaultUnit: "ml", substitutions: ["a mix of both for richer flavour"] },
-    { ingId: "ing_08", role: "Spice",      name: "Freshly ground black pepper",                 ratioValue: 2,    defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_09", role: "Spice",      name: "Freshly grated nutmeg",                       ratioValue: 1,    defaultUnit: "pinch", substitutions: [] },
+  "repoId": "master_greek_spanakopita_001",
+  "parentRepoId": null,
+  "slug": "spanakopita",
+  "author": "ForkRecipe Kitchen",
+  "title": "Spanakopita (Pie aux épinards grecs)",
+  "description": "Crisp, pâte phyllo dorée recouverte d'un remplissage d'épinards flétris, de feta émietté, d'aneth et d'oeufs — chaque bris, feuille de papier-fin donnant place à la crème, herby, remplissage salé à l'intérieur. Le genre de tarte qui disparaît au moment où il atteint la table.",
+  "cuisine": "Grec",
+  "culture": "Grec",
+  "category": "vegetables",
+  "tags": [
+    "grec",
+    "épinards",
+    "Féta",
+    "phyllo",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Prepare filling",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_08", "ing_09"],
-      outputState: "filling",
-      instructions: "If using fresh spinach, wilt it in a dry pan or with a splash of water over high heat until completely collapsed, then tip into a colander and cool. When cool enough to handle, squeeze the spinach in your fists — hard, relentlessly, handful by handful — until almost no water comes out. This is the most critical step in the recipe: residual spinach water makes the filling wet, turns the phyllo soggy, and ruins the finished pie. A kilogram of raw spinach will reduce to about 200g of dry, dark-green paste. Transfer to a large bowl and coarsely chop. Add the crumbled feta, beaten eggs, spring onions, dill, black pepper and nutmeg. Mix together with a fork until cohesive — the filling should look like a rough, green-flecked, salty mixture, not a smooth paste. Taste (carefully — the feta is already salty) and add more pepper or dill as needed. Set aside.",
-      visualCue: {
-        primaryTarget: "A rough, cohesive filling — dark green spinach, crumbled white feta and flecks of dill — that holds together when you press it in your palm without weeping any liquid.",
-        spectrum: [
-          { state: "Underdone", description: "The mixture is wet and pooling — liquid has gathered at the bottom of the bowl and the filling won't hold together. The eggs have not had time to bind it.", action: "Squeeze more spinach and drain off the liquid. Add an extra tablespoon of crumbled feta or a handful of breadcrumbs to absorb excess moisture before proceeding." },
-          { state: "Perfect",   description: "The filling is dense, moist but not wet, holding its shape when pressed. The feta is distributed in visible chunks and the dill is fragrant. No liquid pools.", action: "Proceed directly to assembly — the filling is ready." },
-          { state: "Overdone",  description: "The filling has been over-worked into a homogeneous paste with no visible texture, the feta fully broken down.", action: "The texture is lost but the flavour is fine. Proceed — the pie will taste good even if the cross-section looks more uniform." },
-        ],
-      },
-      feelCue: "A handful of the filling pressed into a ball should just hold together, with the feta crumbles providing resistance and the spinach threading through it. If your palm is wet after pressing, squeeze more spinach.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Pâte de phyllo (fraîche ou entièrement dégelée)",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "phyllo fait maison à la main s'il est qualifié"
+      ]
     },
     {
-      nodeId: "step_2", action: "Layer phyllo base",
-      inputs: ["ing_01", "ing_07"],
-      outputState: "phyllo_base",
-      instructions: "Preheat the oven to 190°C / 375°F. Brush a 30×22cm (or equivalent) baking pan generously with oil or melted butter. Work with phyllo quickly — it dries and tears within minutes of exposure to air; keep the stack covered with a damp towel between sheets. Lay the first sheet of phyllo in the pan, letting the excess hang over the edges. Brush the entire surface generously with oil or butter, reaching all the way to the edges and corners. Lay another sheet perpendicular to the first, brush again. Repeat this layering and brushing process until you have used roughly half the phyllo sheets (8–10 sheets depending on thickness). The fat between each layer is what creates the shatter-crisp, separated layers of the finished crust — do not skimp.",
-      visualCue: {
-        primaryTarget: "A glistening, translucent stack of phyllo in the pan, the sheets barely distinguishable as individual layers, each one evenly sheened with oil — no dry, pale or torn patches.",
-        spectrum: [
-          { state: "Underdone", description: "Some sheets are barely brushed and show dry, matte patches, or several sheets are layered together unbrused, sticking as a block.", action: "Lift the sheets carefully and brush the areas missed. Ungreased sheets bond together and form a thick, doughy layer rather than a crisp one." },
-          { state: "Perfect",   description: "Each sheet is evenly glistening, the stack translucent and gossamer-thin, the fat distributed across every centimetre of surface.", action: "Spoon in the filling and proceed to the top crust." },
-          { state: "Overdone",  description: "The sheets are dripping and oil is pooling in the base of the pan — each layer has been heavily over-oiled and the phyllo is saturated.", action: "Pour off excess oil from the pan before adding the filling. The crust will be greasy rather than crisp if flooded with fat." },
-        ],
-      },
-      feelCue: "Run your palm lightly over the top sheet — it should feel smooth, cool and uniformly slick, like tissue paper coated in a thin film of oil, with no dry crinkle where a spot has been missed.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Épinards frais (ou congelés 500g, entièrement dégelés et pressés)",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Fard suisse",
+        "un mélange d'épinards et de vergers"
+      ]
     },
     {
-      nodeId: "step_3", action: "Fill and top",
-      inputs: ["phyllo_base", "filling", "ing_01", "ing_07"],
-      outputState: "assembled_spanakopita",
-      instructions: "Spread the filling evenly across the phyllo base using a spatula, pressing it into an even layer and tucking it into the corners. Fold the overhanging phyllo edges inward over the filling — they will form part of the top crust. Now layer the remaining phyllo sheets over the top in the same oiled fashion, sheet by sheet, each one brushed generously. Fold or tuck the overhanging top sheets under the pie to form a neat border. Brush the entire top surface very generously with oil. Score the top layers only with a sharp knife in the portion sizes you want before baking — the classic diamond or square patterns — cutting through only the top 4–5 sheets, not all the way through to the filling. This prevents the crust from shattering uncontrollably when you cut after baking.",
-      visualCue: {
-        primaryTarget: "A snugly filled pan with a neatly tucked, glistening phyllo top — the scored diamond pattern visible as hairline incisions across the gleaming surface.",
-        spectrum: [
-          { state: "Underdone", description: "The filling bulges in the center with the phyllo pulled tight over it, or the top sheets are uneven and bunched at one end.", action: "Press the filling to an even thickness and smooth the top phyllo flat by pressing gently with the palm before scoring." },
-          { state: "Perfect",   description: "Flat, evenly filled, with glistening top sheets that follow the filling's surface, the scored lines showing cleanly through the top layers.", action: "Bake immediately at the preheated oven temperature." },
-          { state: "Overdone",  description: "The knife has been pressed all the way through to the filling, letting filling seep up through the scored channels and preventing the top from crisping.", action: "Score very lightly on the next pie. The cuts only need to penetrate the top 3–4 sheets — the idea is to pre-cut the crust, not the filling." },
-        ],
-      },
-      feelCue: "The assembled pie should feel solid and flat under your palm — the filling dense enough to support the top sheets without them dipping. The top should feel smooth and taut, not rucked or loose.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Fromage feta, émietté",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "un mélange de feta et de ricotta pour un remplissage plus crémeux"
+      ]
     },
     {
-      nodeId: "step_4", action: "Bake",
-      inputs: ["assembled_spanakopita"],
-      outputState: "finished_spanakopita",
-      instructions: "Bake at 190°C / 375°F for 45–55 minutes until the top is a deep, even golden-brown across its entire surface. Rotate the pan once at the halfway mark to ensure even browning. The pie is done when the scored lines have opened up and the phyllo between them has puffed and crisped, the edges are a slightly darker amber, and the kitchen smells of buttered pastry and herbs. Rest for at least 10 minutes before cutting along the pre-scored lines — the filling needs a moment to firm from liquid-eggy to sliceable. Serve warm or at room temperature; it is equally magnificent both ways.",
-      visualCue: {
-        primaryTarget: "A uniformly deep golden-brown top, the scored diamonds clearly delineated and puffed open, with slightly darker amber edges and a shatteringly crisp surface.",
-        spectrum: [
-          { state: "Underdone", description: "The top is pale golden or ivory, the phyllo still slightly soft and not shattering when pressed. The filling may still be loose.", action: "Return to the oven for another 10 minutes. Pale phyllo is not yet crisp and the filling will not have set fully." },
-          { state: "Perfect",   description: "Deep, even golden-brown, the diamond sections risen and crisp, the edges crisped to amber. A tap on the surface sounds hollow. The filling is fully set and slices cleanly.", action: "Rest 10 minutes then cut along the scored lines. Each portion should lift out cleanly with visible layers." },
-          { state: "Overdone",  description: "The top is darkening to a burnt brown-black and the phyllo is crumbling and powdery rather than crisp.", action: "Tent with foil immediately and reduce heat to 160°C for remaining time. Check for burnt spots that must be trimmed before serving." },
-        ],
-      },
-      feelCue: "Tap the surface of the baked pie — it should sound hollow and crackle faintly under the knuckle, like a drum skin. Cut a corner piece and listen for the shatter of phyllo. Each bite should give first crunch then yield to the creamy, salty, herby filling.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Oeufs battus",
+      "ratioValue": 3,
+      "defaultUnit": "eggs",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignons de printemps (épitons), tranchés finement",
+      "ratioValue": 4,
+      "defaultUnit": "stalks",
+      "substitutions": [
+        "1 petit poireau, tranché"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Diluant frais, approximativement haché",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Persil à feuilles plates",
+        "un mélange d'aneth et de menthe"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive ou beurre non salé fondu (pour brossage)",
+      "ratioValue": 120,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "un mélange des deux pour une saveur plus riche"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Noix de muscade fraîchement râpée",
+      "ratioValue": 1,
+      "defaultUnit": "pinch",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparer le remplissage",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "filling",
+      "instructions": "Si vous utilisez des épinards frais, flétrissez-les dans une casserole sèche ou avec une éclaboussure d'eau à feu vif jusqu'à ce qu'ils s'effondrent complètement, puis aspirez dans une calandre et refroidissez. Lorsque vous êtes assez frais pour manipuler, pressez les épinards dans vos poings — dur, sans relâche, poignée à poignée — jusqu'à ce qu'aucune eau ne sorte. C'est l'étape la plus critique de la recette: l'eau résiduelle d'épinards rend le remplissage humide, fait tourner le phyllo soggy et ruine la tarte finie. Un kilogramme d'épinards crus réduira à environ 200g de pâte sèche vert foncé. Transférer dans un grand bol et hacher grossièrement. Ajouter le feta émietté, les œufs battus, les oignons de printemps, l'aneth, le poivre noir et la muscade. Mélanger avec une fourche jusqu'à ce qu'elle soit cohésive — le remplissage doit ressembler à un mélange rugueux, vert, salé, pas à une pâte lisse. Goûtez (proscieusement — le feta est déjà salé) et ajoutez plus de poivre ou d'aneth au besoin. Mettez de côté.",
+      "visualCue": {
+        "primaryTarget": "Un remplissage rugueux et cohésif — épinards vert foncé, feta blanc émietté et flocons d'aneth — qui se tient ensemble lorsque vous le pressez dans votre paume sans pleurer de liquide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est humide et pooling – le liquide s'est recueilli au fond du bol et le remplissage ne tiendra pas ensemble. Les œufs n'ont pas eu le temps de les lier.",
+            "action": "Pressez plus d'épinards et égouttez le liquide. Ajouter une cuillère à soupe supplémentaire de feta émietté ou une poignée de chapelure pour absorber l'excès d'humidité avant de procéder."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le remplissage est dense, humide mais pas humide, tenant sa forme lorsqu'il est pressé. Le feta est distribué en morceaux visibles et l'aneth est parfumé. Pas de bassin liquide.",
+            "action": "Aller directement à l'assemblage — le remplissage est prêt."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage a été surtravaillé dans une pâte homogène sans texture visible, le feta complètement décomposé.",
+            "action": "La texture est perdue mais la saveur est fine. Procéder — la tarte sera bonne même si la coupe transversale semble plus uniforme."
+          }
+        ]
+      },
+      "feelCue": "Une poignée de remplissage pressée dans une boule devrait juste tenir ensemble, avec les miettes feta fournissant la résistance et le filetage des épinards à travers elle. Si votre paume est mouillée après avoir pressé, pressez plus d'épinards."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Base de la couche phyllo",
+      "inputs": [
+        "ing_01",
+        "ing_07"
+      ],
+      "outputState": "phyllo_base",
+      "instructions": "Préchauffer le four à 190°C / 375°F. Badigeonner une poêle de 30×22cm (ou équivalent) généreusement avec de l'huile ou du beurre fondu. Travailler avec du phyllo rapidement — il sèche et pleure dans les minutes d'exposition à l'air; garder la pile couverte avec une serviette humide entre les feuilles. Placez la première feuille de phyllo dans la casserole, laissant l'excédent accrocher sur les bords. Badigeonner généreusement toute la surface d'huile ou de beurre, jusqu'aux bords et aux coins. Poser une autre feuille perpendiculaire au premier, brosser à nouveau. Répétez ce processus de stratification et de brossage jusqu'à ce que vous ayez utilisé environ la moitié des feuilles de phyllo (8 à 10 feuilles selon l'épaisseur). La graisse entre chaque couche est ce qui crée la déchirure, couches séparées de la croûte finie — ne pas esquiver.",
+      "visualCue": {
+        "primaryTarget": "Une pile de phyllo translucide scintillante dans la poêle, les feuilles à peine reconnaissables comme des couches individuelles, chacune uniformément recouverte d'huile — pas de taches sèches, pâles ou déchirées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Certaines feuilles sont à peine brossées et montrent des taches sèches, mates, ou plusieurs feuilles sont mises en couches non ensanglantées, collant comme un bloc.",
+            "action": "Soulevez soigneusement les draps et brossez les zones manquées. Les feuilles non graissées se collent et forment une couche épaisse et pâteuse plutôt qu'une couche croquante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque feuille est uniformément scintillement, la pile translucide et gossamer-fin, la graisse répartie sur chaque centimètre de surface.",
+            "action": "Spoon dans le remplissage et passer à la croûte supérieure."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les feuilles coulent et l'huile s'accumule dans la base de la casserole. Chaque couche est fortement sur huilée et le phyllo est saturé.",
+            "action": "Verser l'excédent d'huile de la casserole avant d'ajouter le remplissage. La croûte sera grasse plutôt que croustillante si elle est inondée de graisse."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre paume légèrement sur la feuille supérieure — elle devrait être lisse, fraîche et uniformément lissée, comme du papier de tissu recouvert d'un mince film d'huile, sans ride sèche où une tache a été manquée."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Remplir et en haut",
+      "inputs": [
+        "phyllo_base",
+        "filling",
+        "ing_01",
+        "ing_07"
+      ],
+      "outputState": "assembled_spanakopita",
+      "instructions": "Étendre le remplissage uniformément sur la base du phyllo en utilisant une spatule, le presser dans une couche uniforme et le mettre dans les coins. Pliez les bords de phyllo en surplomb vers l'intérieur sur le remplissage — ils feront partie de la croûte supérieure. Maintenant, couchez les feuilles de phyllo restantes sur le dessus de la même façon huilée, feuille par feuille, chacune brossée généreusement. Plier ou coller les feuilles de dessus en surplomb sous la tarte pour former une bordure soignée. Badigeonner l'ensemble de la surface supérieure très généreusement d'huile. Ne marquer les couches supérieures qu'avec un couteau tranchant dans les tailles de portions que vous voulez avant de cuire — le diamant classique ou les motifs carrés — couper à travers seulement les 4–5 feuilles du haut, pas tout le chemin jusqu'au remplissage. Cela empêche la croûte de se briser incontrôlablement lorsque vous coupez après la cuisson.",
+      "visualCue": {
+        "primaryTarget": "Une poêle bien remplie avec un haut de phyllo bien cousu et brillant — le motif de diamant marqué visible comme des incisions de la ligne de cheveux sur la surface éblouissante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les boulons de remplissage au centre avec le phyllo tiré serré dessus, ou les feuilles supérieures sont inégales et groupées à une extrémité.",
+            "action": "Appuyez sur le remplissage à une épaisseur uniforme et lissez le dessus phyllo plat en appuyant doucement sur la paume avant de marquer."
+          },
+          {
+            "state": "Perfect",
+            "description": "À plat, uniformément rempli, avec des feuilles de dessus scintillantes qui suivent la surface du remplissage, les lignes marquées montrant clairement à travers les couches supérieures.",
+            "action": "Cuire immédiatement à la température préchauffée du four."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le couteau a été pressé jusqu'au remplissage, laissant le remplissage s'écouler à travers les canaux marqués et empêchant le dessus de croustiller.",
+            "action": "Score très légèrement sur la prochaine tarte. Les découpes ne doivent pénétrer que dans les 3–4 feuilles du haut — l'idée est de pré-découper la croûte, pas le remplissage."
+          }
+        ]
+      },
+      "feelCue": "La tarte assemblée doit se sentir solide et plate sous votre paume — le remplissage assez dense pour supporter les feuilles du haut sans qu'elles trempent. Le haut doit se sentir lisse et tendu, pas rougi ou lâche."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "assembled_spanakopita"
+      ],
+      "outputState": "finished_spanakopita",
+      "instructions": "Cuire à 190°C / 375°F pendant 45 à 55 minutes jusqu'à ce que le sommet soit profond, même doré sur toute sa surface. Faire tourner la poêle une fois à mi-chemin pour assurer un brunissement uniforme. La tarte est faite lorsque les lignes marquées ont ouvert et le phyllo entre eux a gonflé et croustillé, les bords sont un peu plus foncé ambre, et les odeurs de cuisine de pâtisserie beurrée et d'herbes. Reposez-vous au moins 10 minutes avant de couper le long des lignes pré-correspondantes — le remplissage a besoin d'un moment pour fermer de l'éggy liquide à la tranche. Servir chaud ou à température ambiante ; il est également magnifique dans les deux sens.",
+      "visualCue": {
+        "primaryTarget": "Haut d'or-brun uniformément profond, les diamants marqués clairement délimités et gonflés, avec des bords légèrement plus foncés et une surface éclatante et croquante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le dessus est d'or pâle ou ivoire, le phyllo est encore légèrement doux et ne se brise pas lorsqu'il est pressé. Le remplissage peut encore être lâche.",
+            "action": "Retourner au four encore 10 minutes. Le phyllo pâle n'est pas encore croustillant et le remplissage ne sera pas complètement réglé."
+          },
+          {
+            "state": "Perfect",
+            "description": "De profondeur, même dorée, les sections de diamant se sont levées et croustillantes, les bords broyés à l'ambre. Un robinet sur la surface semble creux. Le remplissage est entièrement réglé et tranche proprement.",
+            "action": "Reposez-vous 10 minutes, puis coupez le long des lignes. Chaque portion doit se lever proprement avec des couches visibles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le dessus s'obscurcit jusqu'à un brun-noir brûlé et le phyllo s'écroule et poudré plutôt que croquant.",
+            "action": "Tenter immédiatement avec du papier et réduire la chaleur à 160°C pour le temps restant. Vérifiez les taches brûlées qui doivent être parées avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Tapez sur la surface de la tarte cuite — elle doit sembler creuse et craqueler légèrement sous le joint, comme une peau de tambour. Coupez une pièce d'angle et écoutez la rupture du phyllo. Chaque morsure doit donner d'abord croquant puis céder à la crème, salé, herby remplissage."
+    }
+  ]
 };

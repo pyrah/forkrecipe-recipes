@@ -1,109 +1,265 @@
 export default {
-  repoId: "master_french_espagnole_001",
-  parentRepoId: null,
-  slug: "espagnole",
-  author: "ForkRecipe Kitchen",
-  title: "Sauce Espagnole",
-  description: "One of the grand mother sauces of French cuisine — a deeply browned roux loosened with veal stock, weighted with caramelized mirepoix and tomato, then simmered for hours and skimmed to a glossy mahogany. The foundation from which demi-glace and a hundred meat sauces descend.",
-  cuisine: "French",
-  culture: "Classical",
-  category: "sauces",
-  tags: ["sauce", "french", "mother-sauce", "brown-sauce", "stock"],
-  difficulty: 4,
-  activeTime: "1 hour",
-  totalTime: "4 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2025-06-09",
-  updatedAt: "2025-06-09",
-  flavorRadar: { sweet: 1, salty: 2, sour: 1, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Brown stock (veal)",                 ratioValue: 12, defaultUnit: "parts", substitutions: ["brown beef stock", "rich chicken stock"] },
-    { ingId: "ing_02", role: "Fat",        name: "Clarified butter",                   ratioValue: 1,  defaultUnit: "parts", substitutions: ["rendered beef fat", "neutral oil"] },
-    { ingId: "ing_03", role: "Structure",  name: "All-purpose flour",                  ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Mirepoix (onion, carrot, celery)",   ratioValue: 2,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Umami",      name: "Tomato paste",                       ratioValue: 0.5, defaultUnit: "parts", substitutions: ["crushed tomato (reduced)"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine sea salt",                      ratioValue: 0.1, defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Bouquet garni",                      ratioValue: 0.1, defaultUnit: "parts", substitutions: ["thyme, bay, parsley stems tied in cheesecloth"] },
+  "repoId": "master_french_espagnole_001",
+  "parentRepoId": null,
+  "slug": "espagnole",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Espagnole",
+  "description": "Une des sauces de la grande mère de la cuisine française, un roux profondément bruni desserré de veau, pondéré avec du mirepoïx caramélisé et de la tomate, puis mijoté pendant des heures et écrémé en acajou brillant. La fondation d'où descendent les demi-glaces et cent sauces à la viande.",
+  "cuisine": "Français",
+  "culture": "Classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "mère-sauce",
+    "sauce brune",
+    "stock"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hour",
+  "totalTime": "4 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-06-09",
+  "updatedAt": "2025-06-09",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Caramelize",
-      inputs: ["ing_04", "ing_02"],
-      outputState: "browned_mirepoix",
-      instructions: "Melt about a third of the clarified butter in a heavy-bottomed pot over medium heat. Add the mirepoix and cook, stirring occasionally, until the onions have gone past translucent and the whole mixture is deeply browned and sweet-smelling — 12 to 18 minutes. Let the natural sugars in the carrot and onion caramelize against the pan; the fond that builds on the bottom is flavor you want.",
-      visualCue: {
-        primaryTarget: "Mirepoix softened and collapsed, edges of onion turned golden-amber, with a rust-colored fond forming on the pan bottom. The kitchen smells sweet and savory, like roasting vegetables.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are translucent and limp but still pale — no color, no fond on the pan, and the smell is raw and grassy.", action: "Raise the heat slightly and keep cooking. Browning is where the depth comes from; do not rush past this stage." },
-          { state: "Perfect",   description: "Onions are amber at the edges, carrots glisten and have softened, and a brown fond clings to the bottom of the pot. The aroma is sweet, nutty, and savory.", action: "Push the mirepoix to the side and add the remaining butter to the cleared space to begin the roux." },
-          { state: "Overdone",  description: "Vegetables are blackening, the fond on the pan has gone from brown to black, and there is an acrid, scorched smell.", action: "Lower the heat immediately. If the fond is truly burnt and bitter, deglaze with a splash of stock, wipe the pot, and start the mirepoix again — burnt fond will taint the whole sauce." },
-        ],
-      },
-      feelCue: "The vegetables should sizzle steadily, not violently. When you drag a spoon across the bottom, you should feel the sticky drag of fond, not a smooth slick of fat.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Stock brun (veau)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "viande bovine brune",
+        "de poulet riche"
+      ]
     },
     {
-      nodeId: "step_2", action: "Toast",
-      inputs: ["browned_mirepoix", "ing_02", "ing_03"],
-      outputState: "brown_roux",
-      instructions: "With the remaining clarified butter melted in the cleared part of the pot, sprinkle in the flour and stir it into a paste. Cook the roux slowly, stirring almost constantly, watching it move through blond to peanut-butter and on toward a deep chestnut brown. This can take 10 to 20 minutes. It will smell increasingly nutty and toasty — like baking pie crust. Go low and patient; a brown roux is one careless minute from burnt.",
-      visualCue: {
-        primaryTarget: "A loose, pourable paste the color of milk chocolate or dark peanut butter, smelling distinctly of toasted nuts and warm bread. It moves in slow ripples when you stir.",
-        spectrum: [
-          { state: "Underdone", description: "Roux is pale blond or tan, smells of raw flour or merely of butter. Thickening power is high but flavor is flat.", action: "Keep cooking and stirring over low-medium heat. A brown roux must develop real color and a toasty aroma to belong in espagnole." },
-          { state: "Perfect",   description: "Deep peanut-butter to chestnut brown, glossy, fluid, with a pronounced toasted-nut and baked-bread smell. No black flecks.", action: "Add the tomato paste and continue to the pinçage." },
-          { state: "Overdone",  description: "Roux has darkened to coffee-black, throws off an acrid, burnt smell, and you can see scorched black specks throughout.", action: "Discard it and start over with fresh butter and flour. Burnt roux is bitter and loses its thickening power — there is no rescuing it." },
-        ],
-      },
-      feelCue: "The roux should feel like loose, warm sand turning to smooth mud as it cooks — gritty at first, then silky. Listen for a soft, steady sizzle; a sharp crackle means the heat is too high.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre clarifié",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gras de boeuf fondu",
+        "huile neutre"
+      ]
     },
     {
-      nodeId: "step_3", action: "Caramelize",
-      inputs: ["brown_roux", "ing_05"],
-      outputState: "pincage",
-      instructions: "Stir the tomato paste into the roux and mirepoix and cook it out for 3 to 5 minutes — this is the pinçage. Keep it moving over medium heat until the paste loses its raw, bright-red look, darkens to a brick-rust color, and smells sweet and concentrated rather than sharp and tinny. Cooking the tomato now removes its raw acidity and builds another layer of caramelized depth.",
-      visualCue: {
-        primaryTarget: "The tomato paste has darkened from bright red to a deep brick-rust, coating the roux and vegetables, and smells sweet, deep, and slightly caramelized rather than sharp.",
-        spectrum: [
-          { state: "Underdone", description: "Tomato paste is still bright, orange-red, and smells sharp, raw, and metallic.", action: "Keep cooking and stirring for another couple of minutes. Raw tomato paste will leave a tinny, acidic edge in the finished sauce." },
-          { state: "Perfect",   description: "The mixture is a uniform brick-rust brown, the tomato smell has turned sweet and roasted, and a deeper fond has built on the pan.", action: "Whisk in the brown stock to loosen everything." },
-          { state: "Overdone",  description: "Tomato has gone dark brown to black and smells scorched and bitter.", action: "Pull the pot off the heat at once and add the stock immediately to stop the cooking. If the burnt smell is strong, it is better to begin again." },
-        ],
-      },
-      feelCue: "The paste will stiffen and grow tacky, pulling away from the bottom of the pot in a cohesive mass before it darkens. That drag and the deepening color tell you the raw acid has cooked off.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Whisk",
-      inputs: ["pincage", "ing_01", "ing_07"],
-      outputState: "loose_espagnole",
-      instructions: "Pour in the brown stock a few ladles at a time, whisking hard after each addition to work out lumps before adding more. Once it is all in and smooth, drop in the bouquet garni. Bring it up to a bare simmer, whisking as it thickens so the roux does not catch and scorch on the bottom.",
-      visualCue: {
-        primaryTarget: "A smooth, lump-free, thin-bodied brown sauce just coming to a simmer, the color of strong tea, with the bouquet garni bobbing at the surface.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is full of flour lumps, or stock has been added too fast so it sits thin and broken with a skin of roux floating on top.", action: "Whisk vigorously to break up the lumps; if needed, pass through a sieve. Add remaining stock more slowly, whisking constantly." },
-          { state: "Perfect",   description: "Glossy, uniform, and lump-free, lightly napping the whisk as it warms, simmering gently with the bouquet garni steeping.", action: "Lower to the gentlest simmer and begin the long skim-and-reduce." },
-          { state: "Overdone",  description: "The bottom has scorched while whisking, sending up a burnt smell and dark specks into the sauce.", action: "Stop whisking the bottom, carefully pour the sauce into a clean pot without scraping the scorched layer, and continue from there." },
-        ],
-      },
-      feelCue: "As the stock goes in, the heavy paste should slacken into a fluid sauce under the whisk — first ribbony, then thin. It should feel like it has fully relaxed, with no tight clumps caught in the wires.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Mirepoix (oignon, carotte, céleri)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Simmer",
-      inputs: ["loose_espagnole", "ing_06"],
-      outputState: "finished_espagnole",
-      instructions: "Hold the sauce at the barest simmer for 2 to 3 hours, stirring now and then. Throughout, skim the fat and grey froth that collect on the surface with a ladle, nudging the pot half off the burner so impurities gather on one side for easier skimming. Season with salt toward the end. When it has reduced by roughly a third and coats a spoon, strain out the solids and bouquet garni through a fine sieve.",
-      visualCue: {
-        primaryTarget: "A clear, glossy, deep-mahogany sauce that lightly coats the back of a spoon, reduced by about a third, with a clean surface free of fat and scum.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still thin and watery, pale brown, and runs straight off a spoon without coating it. The surface is greasy and cloudy.", action: "Keep simmering and skimming. Espagnole needs time for the flavors to marry, the body to build, and the impurities to rise and be removed." },
-          { state: "Perfect",   description: "Deep mahogany, glossy and clean, coating the back of a spoon so a finger drawn through leaves a clear line. Tastes round, savory, and deep with no raw flour or harsh tomato.", action: "Strain through a fine sieve, season to taste, and use as a base or reserve for demi-glace." },
-          { state: "Overdone",  description: "Sauce has reduced too far — thick, sludgy, and overly salty or bitter, pulling away from the sides of the pot.", action: "Whisk in a little more warm brown stock to bring it back to a proper nappe consistency and rebalance the seasoning." },
-        ],
-      },
-      feelCue: "A finished espagnole drawn across a spoon should leave a clean, lasting trail — the nappe. The surface should look polished, not slick with fat, and the long simmer should fill the kitchen with a deep, roasted, beefy aroma.",
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates écrasées (réduites)"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Bouquet garni",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym, laurier, persil, tiges attachées en tissu de fromage"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Caramélisation",
+      "inputs": [
+        "ing_04",
+        "ing_02"
+      ],
+      "outputState": "browned_mirepoix",
+      "instructions": "Faire fondre environ un tiers du beurre clarifié dans un pot à fond lourd à feu moyen. Ajouter le mirepoïx et cuire, en remuant occasionnellement, jusqu'à ce que les oignons aient dépassé le translucide et que le mélange entier soit profondément doré et sucré — 12 à 18 minutes. Laissez les sucres naturels dans la carotte et l'oignon caraméliser contre la poêle; le fond qui construit sur le fond est saveur que vous voulez.",
+      "visualCue": {
+        "primaryTarget": "Mirepoix ramolli et effondré, bords d'oignon doré-ambre, avec un fond de couleur rouille formant sur le fond de la poêle. La cuisine sent doux et salé, comme les légumes rôtis.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont translucides et boiteux, mais encore pâles — pas de couleur, pas d'affection pour la poêle, et l'odeur est crue et herbacée.",
+            "action": "Levez légèrement la chaleur et faites cuire. Browning est d'où vient la profondeur; ne vous précipitez pas au-delà de cette étape."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont ambres aux bords, les carottes scintillent et se ramollissent, et un fond brun s'accroche au fond du pot. L'arôme est doux, noisette et salé.",
+            "action": "Poussez le mirepix sur le côté et ajoutez le beurre restant à l'espace dégagé pour commencer le roux."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont noircis, le fond de la poêle est passé du brun au noir, et il y a une odeur acride et brûlée.",
+            "action": "Baissez immédiatement la chaleur. Si le fond est vraiment brûlé et amer, déglacer avec un éclat de bouillon, essuyer le pot, et recommencer le mirepoïx — le fond brûlé va taper toute la sauce."
+          }
+        ]
+      },
+      "feelCue": "Les légumes doivent étourdir régulièrement, pas violemment. Lorsque vous faites glisser une cuillère à travers le fond, vous devriez sentir la traînée collante de l'affection, pas une lisse lisse de graisse."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "browned_mirepoix",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "brown_roux",
+      "instructions": "Avec le reste du beurre clarifié fondu dans la partie défrichée de la casserole, saupoudrer de farine et le remuer dans une pâte. Cuire le roux lentement, en remuant presque constamment, en le regardant passer à travers blond à cacahuète-beurre et sur un brun marron profond. Cela peut prendre 10 à 20 minutes. Elle sent de plus en plus la noix et le toast, comme la pâte à tarte. Aller bas et patient; un roux brun est une minute insouciante de brûlé.",
+      "visualCue": {
+        "primaryTarget": "Une pâte molle et versable de la couleur du chocolat au lait ou du beurre d'arachide foncé, sentant distinctement les noix grillées et le pain chaud. Il se déplace lentement en agitant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Roux est blond pâle ou bronzé, sent la farine crue ou simplement le beurre. Le pouvoir épaississant est élevé, mais la saveur est plate.",
+            "action": "Continuez à cuire et à remuer à feu doux. Un roux brun doit développer une couleur réelle et un arôme grillé pour appartenir à l'espagnole."
+          },
+          {
+            "state": "Perfect",
+            "description": "Beurre d'arachide profonde à marron brun, brillant, fluide, avec une odeur prononcée de noix grillées et de pain au four. Pas de taches noires.",
+            "action": "Ajouter la pâte de tomate et continuer au pinçage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Roux a obscurci au noir de café, jette une odeur acride, brûlée, et vous pouvez voir des taches noires brûlées partout.",
+            "action": "Jetez-le et recommencez avec du beurre frais et de la farine. Burnt roux est amer et perd son pouvoir épaississant — il n'y a pas de sauvetage."
+          }
+        ]
+      },
+      "feelCue": "Le roux devrait se sentir comme du sable lâche et chaud qui se tourne vers la boue lisse pendant qu'il cuit — gris au début, puis soyeux. Écoutez un étourdissement doux et régulier; un craquement aigu signifie que la chaleur est trop élevée."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Caramélisation",
+      "inputs": [
+        "brown_roux",
+        "ing_05"
+      ],
+      "outputState": "pincage",
+      "instructions": "Incorporer la pâte de tomate dans le roux et le mirépoïx et la faire cuire 3 à 5 minutes – c'est le pinçage. Gardez-le en mouvement à feu moyen jusqu'à ce que la pâte perde son aspect brut, rouge vif, s'assombrit à une couleur de rouille de brique, et sent doux et concentré plutôt que vif et teinté. La cuisson de la tomate enlève maintenant son acidité brute et construit une autre couche de profondeur caramélisée.",
+      "visualCue": {
+        "primaryTarget": "La pâte de tomate s'est assombrie du rouge vif à une rouille de brique profonde, enrobant le roux et les légumes, et sent doux, profond et légèrement caramélisé plutôt que vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte de tomate est encore brillante, rouge-orange, et sent vif, cru et métallique.",
+            "action": "Continuer la cuisson et remuer encore quelques minutes. La pâte de tomate crue laissera un teint, le bord acide dans la sauce finie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le mélange est un brun brique-rouille uniforme, l'odeur de tomate est devenue sucrée et torréfié, et un fond plus profond a construit sur la poêle.",
+            "action": "Whisk in the Brown Stock pour tout desserrer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La tomate est devenue brune foncée à noire et sent la brûlure et l'amertume.",
+            "action": "Retirer immédiatement la casserole du feu et ajouter immédiatement le bouillon pour arrêter la cuisson. Si l'odeur brûlée est forte, il vaut mieux recommencer."
+          }
+        ]
+      },
+      "feelCue": "La pâte se raidit et s'épaissit, s'éloignant du fond du pot dans une masse cohésive avant de s'assombrir. Cette traînée et la couleur approfondissement vous disent que l'acide brut a cuit."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Whisk",
+      "inputs": [
+        "pincage",
+        "ing_01",
+        "ing_07"
+      ],
+      "outputState": "loose_espagnole",
+      "instructions": "Verser dans le bouillon brun quelques louches à la fois, en fouettant dur après chaque addition pour obtenir des morceaux avant d'ajouter plus. Une fois que tout est dans et lisse, déposer dans le bouquet garni. Portez-le à un mijot nu, fouettant comme il s'épaissit pour que le roux ne s'attrape pas et ne scorte pas sur le fond.",
+      "visualCue": {
+        "primaryTarget": "Une sauce brune lisse, sans grumeaux, mince, qui vient à la mijoter, la couleur du thé fort, avec le bouquet garni en saillie à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est pleine de morceaux de farine, ou le stock a été ajouté trop vite, donc il est mince et cassé avec une peau de roux flottant sur le dessus.",
+            "action": "fouetter vigoureusement pour briser les morceaux; si nécessaire, passer à travers un tamis. Ajouter le reste plus lentement, fouetter constamment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, uniforme et sans grumeaux, enroulant légèrement le fouet lorsqu'il se réchauffe, mijotant doucement avec le bouquet garni raide.",
+            "action": "Abaissez jusqu'à la plus douce mijoter et commencez la longue écrémage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le fond a brûlé tout en fouettant, en envoyant une odeur brûlée et des taches sombres dans la sauce.",
+            "action": "Arrêtez de fouetter le fond, versez soigneusement la sauce dans un pot propre sans racler la couche brûlée, et continuez à partir de là."
+          }
+        ]
+      },
+      "feelCue": "Au fur et à mesure que le bouillon entre, la pâte lourde doit se relâcher dans une sauce fluide sous le fouet — d'abord rubanée, puis fine. Il devrait avoir l'impression qu'il a complètement détendu, sans accrocs serrés pris dans les fils."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "loose_espagnole",
+        "ing_06"
+      ],
+      "outputState": "finished_espagnole",
+      "instructions": "Tenez la sauce à mijoter pendant 2 à 3 heures, en remuant de temps en temps. Pendant tout ce temps, arrosez la graisse et la mousse grise qui s'accumulent à la surface avec une louche, enlevant le pot à moitié du brûleur, de sorte que les impuretés s'accumulent d'un côté pour faciliter l'écumage. Assaisonner de sel vers la fin. Lorsqu'il a réduit d'environ un tiers et enrobe une cuillère, étirer les solides et le bouquet garnir à travers un tamis fin.",
+      "visualCue": {
+        "primaryTarget": "Une sauce limpide, brillante et mahoganie profonde qui enrobe légèrement l'arrière d'une cuillère, réduite d'environ un tiers, avec une surface propre exempte de graisse et de souillure.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore mince et aqueuse, brun pâle, et coule directement sur une cuillère sans la couvrir. La surface est grasse et nuageuse.",
+            "action": "Continuez à mijoter et à écrémer. Espagnole a besoin de temps pour les saveurs à se marier, le corps à construire, et les impuretés à se lever et être enlevé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Acajou profond, brillant et propre, enrobant le dos d'une cuillère de sorte qu'un doigt tiré à travers laisse une ligne claire. Goûte rond, salé et profond sans farine crue ni tomate dure.",
+            "action": "Plongez dans un tamis fin, assaisonner au goût, et utiliser comme base ou réserve pour le demi-glace."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a diminué trop loin — épaisse, lugubre, trop salée ou amère, s'éloignant des côtés du pot.",
+            "action": "fouetter un peu plus chaudement le bouillon brun pour le ramener à une bonne consistance et rééquilibrer l'assaisonnement."
+          }
+        ]
+      },
+      "feelCue": "Un espagnole fini tiré à travers une cuillère devrait laisser un sentier propre et durable — la nappe. La surface doit avoir l'air polie, non lissée de graisse, et la longue mijote doit remplir la cuisine d'un arôme profond, torréfié et boeuf."
+    }
+  ]
 };

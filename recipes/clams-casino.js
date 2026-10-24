@@ -1,79 +1,206 @@
 export default {
-  repoId: "master_american_clams_casino_001",
-  parentRepoId: null,
-  slug: "clams-casino",
-  author: "ForkRecipe Kitchen",
-  title: "Clams Casino",
-  description: "Rhode Island's proudest bar snack: littleneck clams half-shelled and loaded with a smoky mix of bacon, sweet pepper, and butter, then broiled until the clam liquor bubbles and the bacon edges crisp to a dark, salty crunch.",
-  cuisine: "American",
-  culture: "Rhode Island",
-  category: "seafood",
-  tags: ["clams", "casino", "american", "appetizer", "baked", "bacon", "seafood", "rhode island"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 5, sour: 0, bitter: 0, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Littleneck clams (24 clams)",          ratioValue: 24, defaultUnit: "whole", substitutions: ["cherrystone clams (halve the quantity)"] },
-    { ingId: "ing_02", role: "Inosinate", name: "Thick-cut bacon, finely diced",        ratioValue: 0.5, defaultUnit: "parts", substitutions: ["pancetta", "lardons"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Green bell pepper, finely diced",      ratioValue: 0.25, defaultUnit: "parts", substitutions: ["red bell pepper", "poblano"] },
-    { ingId: "ing_04", role: "Allium",    name: "Shallots, minced",                     ratioValue: 0.15, defaultUnit: "parts", substitutions: ["white onion"] },
-    { ingId: "ing_05", role: "Fat",       name: "Unsalted butter, softened",            ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Crushed red pepper flakes",            ratioValue: 1, defaultUnit: "pinch", substitutions: ["cayenne"] },
-    { ingId: "ing_07", role: "Garnish",   name: "Lemon wedges",                         ratioValue: 4, defaultUnit: "wedges", substitutions: [] },
+  "repoId": "master_american_clams_casino_001",
+  "parentRepoId": null,
+  "slug": "clams-casino",
+  "author": "ForkRecipe Kitchen",
+  "title": "Clams Casino",
+  "description": "Le bar le plus fier de Rhode Island : les palourdes à petit cou à moitié coquillées et chargées d'un mélange fumé de bacon, de poivre sucré et de beurre, puis grillées jusqu'à ce que les bulles de liqueur de palourde et les bords de bacon croquant à une croûte sombre et salée.",
+  "cuisine": "Américain",
+  "culture": "Île Rhode",
+  "category": "seafood",
+  "tags": [
+    "Palourdes",
+    "casino",
+    "américains",
+    "Apéritif",
+    "cuits",
+    "bacon",
+    "Produits de la mer",
+    "rhode île"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 5,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Sauté",
-      inputs: ["ing_02", "ing_03", "ing_04"],
-      outputState: "casino_stuffing",
-      instructions: "In a skillet over medium heat, cook the diced bacon until the fat has rendered and the edges begin to crisp — about 5 minutes. Do not cook to full crispness; it will finish under the broiler. Add the diced pepper and shallots and cook another 3 minutes until softened. Remove from heat. Stir in the softened butter and red pepper flakes. The mixture will look loose and greasy — correct.",
-      visualCue: {
-        primaryTarget: "A glossy, russet-colored mixture of semi-cooked bacon, soft green pepper, and translucent shallot, bound in a butter glaze.",
-        spectrum: [
-          { state: "Underdone", description: "Bacon is still pale and flabby. Shallots are raw and sharp. No rendered fat.", action: "Continue cooking over medium heat — the fat from the bacon is the cooking medium for the vegetables." },
-          { state: "Perfect",   description: "Bacon is lightly golden at the edges but still pliable. Pepper and shallot are completely soft and sweet. Mixture smells of caramelized pork and sweet pepper.", action: "Remove from heat and stir in butter." },
-          { state: "Overdone",  description: "Bacon is fully crispy and the pepper and shallot are browning at the edges.", action: "Remove from heat immediately — they will cook again under the broiler." },
-        ],
-      },
-      feelCue: "The stuffing should feel loose and slightly oily when you press a spoon through it — it needs to stay moist enough to baste the clam as it broils.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Palourdes à petit cou (24 palourdes)",
+      "ratioValue": 24,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Palourdes de cerise (réduire de moitié la quantité)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Peel",
-      inputs: ["ing_01"],
-      outputState: "shucked_clams",
-      instructions: "Scrub the clams under cold water to remove grit. Shuck each clam: hold it in a folded towel, insert an oyster or clam knife at the hinge, twist to pop, then slide the knife along the top shell to sever the muscle. Discard the top shell. Sever the bottom adductor muscle to loosen the clam in the shell but leave it resting in the cupped bottom shell. Reserve all the clam liquor that pools in the shell.",
-      visualCue: {
-        primaryTarget: "Clams sitting whole in the bottom shell, surrounded by a small pool of clear, salty liquor. Shells are level and unbroken.",
-        spectrum: [
-          { state: "Underdone", description: "Clam is still attached to the bottom shell by the muscle. It will shrink and pull tight during broiling.", action: "Run the knife under the clam body and sever the connection to the shell." },
-          { state: "Perfect",   description: "Clam sits free in the shell, glistening in its liquor. Edges are intact, not torn.", action: "Arrange on a foil-lined broiler tray and top with stuffing." },
-          { state: "Overdone",  description: "Clam liquor has been lost or spilled. Shell has cracked.", action: "Add a small splash of white wine to replace the lost liquor before stuffing." },
-        ],
-      },
-      feelCue: "A properly shucked clam should slide slightly in its shell when you tilt it — loose, not glued down, sitting in a little puddle of its own brine.",
+      "ingId": "ing_02",
+      "role": "Inosinate",
+      "name": "Bacon épais coupé, finement coupé en dés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pancetta",
+        "lardons"
+      ]
     },
     {
-      nodeId: "step_3", action: "Bake",
-      inputs: ["shucked_clams", "casino_stuffing", "ing_05", "ing_06"],
-      outputState: "finished_clams_casino",
-      instructions: "Preheat the broiler to high. Arrange the shucked clams on a foil-lined baking sheet; crumple the foil into ridges to keep the shells level. Place a generous teaspoon of the casino stuffing on top of each clam, mounding it slightly. Broil 4–6 inches from the heating element for 4–6 minutes, until the clam edges curl, the liquor bubbles, and the bacon on top is deeply golden and just starting to crisp at the edges. Watch constantly — broilers vary wildly.",
-      visualCue: {
-        primaryTarget: "Clam edges have curled inward. The stuffing on top is golden-brown with dark, crispy bacon edges. Each shell holds a small pool of bubbling, creamy clam liquor.",
-        spectrum: [
-          { state: "Underdone", description: "Clams are still flat and raw-looking. Stuffing is warm but not browned. Liquor is cold.", action: "Move the tray closer to the broiler element and give another 2 minutes." },
-          { state: "Perfect",   description: "Clam edges are curled, slightly firmed. Stuffing is bronzed and the bacon edges are crisp. Liquor is bubbling. The whole thing smells of the sea and smoked pork.", action: "Serve immediately with lemon wedges." },
-          { state: "Overdone",  description: "Clam edges have retracted fully and the meat is shrunken, rubbery, and dry. Bacon is black.", action: "Serve anyway — a squeeze of lemon and some butter from the topping will restore some moisture." },
-        ],
-      },
-      feelCue: "Watch the clam edge rather than the clock: the moment the outer rim curls up like the brim of a tiny hat, the clam is done. Every second after that is overcooking.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "poivron vert, finement coupé en dés",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivron rouge",
+        "poblano"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalotes hachées",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon blanc"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "flocons de poivre rouge concassé",
+      "ratioValue": 1,
+      "defaultUnit": "pinch",
+      "substitutions": [
+        "cayenne"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Coins de citron",
+      "ratioValue": 4,
+      "defaultUnit": "wedges",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "casino_stuffing",
+      "instructions": "Dans une poêle à feu moyen, faire cuire le bacon en dés jusqu'à ce que la graisse se soit fondue et que les bords commencent à croquer — environ 5 minutes. Ne pas cuire à la croustillante; il finira sous la grille. Ajouter le poivre en dés et les échalotes et cuire encore 3 minutes jusqu'à ramollir. Retirer du feu. Incorporer le beurre adouci et les flocons de poivre rouge. Le mélange aura l'air lâche et gras — correct.",
+      "visualCue": {
+        "primaryTarget": "Un mélange de lard semi-cuit, de poivre vert doux et d'échalote translucide de couleur russé brillant, lié dans une glaçure de beurre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bacon est encore pâle et fragile. Les échalotes sont crues et pointues. Pas de graisse.",
+            "action": "Continuer la cuisson à feu moyen: la graisse du bacon est le moyen de cuisson des légumes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bacon est légèrement doré aux bords, mais toujours souple. Poivre et échalote sont complètement doux et doux. Mélanger les odeurs de porc caramélisé et de poivre sucré.",
+            "action": "Retirer du feu et mélanger le beurre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bacon est entièrement croustillant et le poivre et l'échalote brunissent aux bords.",
+            "action": "Retirer immédiatement du feu — ils cuireont à nouveau sous la grille."
+          }
+        ]
+      },
+      "feelCue": "La farce devrait se sentir lâche et légèrement grasse lorsque vous appuyez sur une cuillère à travers elle — elle doit rester suffisamment humide pour abaisser la palourde pendant qu'elle grille."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Peler",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "shucked_clams",
+      "instructions": "Frotter les palourdes sous l'eau froide pour enlever le grain. Coupez chaque palourde : maintenez-la dans une serviette pliée, insérez un couteau d'huître ou de palourde à la charnière, tournez pour sauter, puis glissez le couteau le long de la coquille supérieure pour couper le muscle. Jetez la coque supérieure. Couper le muscle adducteur du bas pour desserrer la palourde dans la coquille, mais laisser reposer dans la coquille du bas en coupe. Réserve toute la liqueur de palourde qui coule dans la coquille.",
+      "visualCue": {
+        "primaryTarget": "Clams assis entier dans la coquille inférieure, entouré d'une petite piscine de liqueur claire et salée. Les coquilles sont planes et intactes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Clam est toujours attaché à la coquille inférieure par le muscle. Il rétrécira et s'attachera pendant le gril.",
+            "action": "Exécutez le couteau sous le corps de la palourde et coupez le lien avec la coquille."
+          },
+          {
+            "state": "Perfect",
+            "description": "Clam est assis libre dans la coquille, il brille dans sa liqueur. Les bords sont intacts, pas déchirés.",
+            "action": "Placez-vous sur un plateau de grille-croûte doublé d'une feuille et garnissez-vous de farce."
+          },
+          {
+            "state": "Overdone",
+            "description": "La liqueur de clam a été perdue ou renversée. Shell a craqué.",
+            "action": "Ajouter une petite éclaboussure de vin blanc pour remplacer la liqueur perdue avant de farcir."
+          }
+        ]
+      },
+      "feelCue": "Une palourde bien secouée devrait glisser légèrement dans sa coquille quand vous l'inclinez — lâche, non collée, assise dans une petite flaque de sa propre saumure."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "shucked_clams",
+        "casino_stuffing",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "finished_clams_casino",
+      "instructions": "Préchauffer le poulet à haute température. Arrangez les palourdes sur une plaque de cuisson doublée de feuilles de papier; écrasez la feuille en crêtes pour maintenir le niveau des coquilles. Déposez une généreuse cuillère à café du casino farcissant sur chaque palourde, la tondant légèrement. Faire griller de 4 à 6 pouces de l'élément chauffant pendant 4 à 6 minutes, jusqu'à ce que les bords de la palourde se bouclent, que les bulles de liqueur et le bacon sur le dessus soient profondément dorés et commencent simplement à croquer aux bords. Veillez constamment — les poulets à griller varient sauvagement.",
+      "visualCue": {
+        "primaryTarget": "Les bords de clams se sont enroulés vers l'intérieur. La farce sur le dessus est dorée-brun avec des bords foncés et croustillants de bacon. Chaque coquille contient une petite piscine de liqueur de palourde crémeuse et bouillonnante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les clams sont encore plats et bruts. La farce est chaude mais pas dorée. L'alcool est froid.",
+            "action": "Déplacez le plateau plus près de l'élément grilleur et donnez encore 2 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords de clam sont enroulés, légèrement raffermis. Les bords du bacon sont croustillants. L'alcool bouillonne. Tout ça sent la mer et le porc fumé.",
+            "action": "Servir immédiatement avec des quartiers de citron."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords du clam se sont complètement rétractés et la viande est réduite, caoutchouteuse et sèche. Bacon est noir.",
+            "action": "Servir de toute façon — une pression de citron et un peu de beurre de la garniture restaureront une certaine humidité."
+          }
+        ]
+      },
+      "feelCue": "Regardez le bord de la palourde plutôt que l'horloge : au moment où le bord extérieur se recroquevèle comme le bord d'un petit chapeau, la palourde est faite. Chaque seconde après, c'est trop cuit."
+    }
+  ]
 };

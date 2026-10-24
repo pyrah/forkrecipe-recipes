@@ -1,79 +1,172 @@
 export default {
-  repoId: "master_vietnamese_vietnamesedicedcoffee_001",
-  parentRepoId: null,
-  slug: "vietnamese-iced-coffee",
-  author: "ForkRecipe Kitchen",
-  title: "Cà Phê Sữa Đá",
-  description: "A Vietnamese iced coffee made with a drip phin filter, dark-roasted Robusta coffee dripping slowly into a thick layer of sweetened condensed milk, then poured over a glass crammed with ice — rich, sweet, and intensely caffeinated.",
-  cuisine: "Vietnamese",
-  culture: "Southern Vietnamese",
-  category: "beverages",
-  tags: ["beverage", "vegetarian", "dairy", "coffee", "vietnamese", "iced", "sweet"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 0, sour: 1, bitter: 3, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Vietnamese dark-roast coffee, coarsely ground (Trung Nguyên or Café Du Monde)", ratioValue: 20, defaultUnit: "g",  substitutions: ["any coarse-ground dark-roast with chicory"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Hot water, just off boil (92–96°C)",                                              ratioValue: 90, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener", name: "Sweetened condensed milk",                                                         ratioValue: 30, defaultUnit: "ml", substitutions: ["oat condensed milk for dairy-free"] },
-    { ingId: "ing_04", role: "Liquid",    name: "Ice cubes, large",                                                                 ratioValue: 6,  defaultUnit: "cubes", substitutions: ["crushed ice for a slushier drink"] },
+  "repoId": "master_vietnamese_vietnamesedicedcoffee_001",
+  "parentRepoId": null,
+  "slug": "vietnamese-iced-coffee",
+  "author": "ForkRecipe Kitchen",
+  "title": "Cà Phê S.a.",
+  "description": "Un café glacé vietnamien fait à l'aide d'un filtre à phin à goutte, un café Robusta rouillé sombre coulant lentement dans une épaisse couche de lait condensé sucré, puis versé sur un verre entaché de glace — riche, doux et intensément caféiné.",
+  "cuisine": "Vietnamiens",
+  "culture": "Sud du Vietnam",
+  "category": "beverages",
+  "tags": [
+    "boisson",
+    "végétarien",
+    "laitière",
+    "café",
+    "vietnamese",
+    "glacé",
+    "doux"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 0,
+    "sour": 1,
+    "bitter": 3,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Assemble",
-      inputs: ["ing_03"],
-      outputState: "prepped_glass",
-      instructions: "Spoon the sweetened condensed milk into the bottom of a short, heat-resistant glass or directly into the phin filter's receiving cup. The condensed milk goes in first — this is not negotiable — so the hot coffee drips directly through it, beginning to dissolve and integrate before you stir. You want that visible layer of dense white beneath amber coffee, both for aesthetic reasons and to allow you to calibrate sweetness by how thoroughly you stir before icing.",
-      visualCue: {
-        primaryTarget: "A thick, ivory-white pool of condensed milk at the bottom of the glass, undisturbed.",
-        spectrum: [
-          { state: "Underdone", description: "Too little condensed milk — a thin smear at the bottom that will not give the characteristic sweetness.", action: "Add more. The classic ratio is approximately 1 part condensed milk to 3 parts brewed coffee." },
-          { state: "Perfect",   description: "A generous, viscous white layer 1–1.5 cm deep that clings to the glass walls when tilted.", action: "Set the phin filter on top and add coffee grounds." },
-          { state: "Overdone",  description: "Too much condensed milk — the drink will be cloyingly sweet and thick.", action: "Spoon out excess. Adjust to taste for next time." },
-        ],
-      },
-      feelCue: "The condensed milk should pour slowly, like thick honey, pooling rather than spreading instantly across the bottom.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Café vietnamien à rôtis foncés (Trung Nguyên ou Café Du Monde)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "n'importe quel sol grossier cast sombre avec chicorée"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Infuse",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "brewed_coffee",
-      instructions: "Assemble the phin filter: screw the inner press plate loosely onto the filter chamber, load the coffee grounds, and give the press plate one quarter-turn to compress slightly — not tightly, as the water needs to drip, not gush. Place the filter over the glass. Pour just enough hot water (about 10 ml) to pre-wet the grounds and let them bloom for 30 seconds. Then fill the chamber with the remaining water. The coffee should drip at a rate of one drop per second — 4 to 5 minutes for the full brew. Too fast means the grounds are too coarse or the press too loose; too slow means too fine or too tightly pressed. A 4-minute drip into the condensed milk produces a concentrated, almost syrupy coffee.",
-      visualCue: {
-        primaryTarget: "A steady drip of dark amber coffee falling through the filter at roughly one drop per second, with a growing pool of deep brown liquid atop the white condensed milk.",
-        spectrum: [
-          { state: "Underdone", description: "Coffee is dripping rapidly in a thin stream rather than individual drops — will be weak and under-extracted.", action: "Tighten the press plate slightly. If already brewing, finish quickly and note for next time." },
-          { state: "Perfect",   description: "Individual drops falling at 1-per-second cadence. The collected coffee beneath is a rich dark amber, nearly opaque. Aroma is chocolatey and slightly smoky.", action: "Allow to finish dripping completely before stirring." },
-          { state: "Overdone",  description: "Coffee has stopped dripping entirely after only a few drops — grounds packed too tightly.", action: "Loosen the press plate by half a turn. If irretrievably stuck, pour a small amount of hot water over the top to help it move." },
-        ],
-      },
-      feelCue: "The steam rising from the phin should carry a full, roasted-chicory aroma — dark and slightly earthy, not acidic or light.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau chaude, juste hors ébullition (92-96°C)",
+      "ratioValue": 90,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Chill",
-      inputs: ["brewed_coffee", "ing_04"],
-      outputState: "finished_ca_phe_sua_da",
-      instructions: "Once all the coffee has dripped through, stir the hot coffee and condensed milk vigorously until the condensed milk has fully dissolved and the mixture is a single dark-tan color. Do not skip the stir — undissolved condensed milk will clump around the ice. Load a second tall glass with ice cubes, filling it to the brim. Pour the hot sweet coffee over the ice all at once from a height. It will hiss and froth dramatically. Drink immediately with a straw, stirring as you go.",
-      visualCue: {
-        primaryTarget: "A glass filled with ice clouded by swirls of dark tan coffee fading to pale gold where the ice melts into it — two-toned and steaming faintly above the ice.",
-        spectrum: [
-          { state: "Underdone", description: "The coffee hasn't been fully stirred with the condensed milk — pale white streaks visible at the bottom of the ice glass.", action: "Stir with the straw until color is uniform. Undissolved condensed milk sinks and makes the last sip unpleasantly sweet." },
-          { state: "Perfect",   description: "A uniform caramel-brown coffee cascading over ice. The ice cracks audibly when the hot coffee hits. The glass fogs. Steam rises.", action: "Drink immediately." },
-          { state: "Overdone",  description: "Coffee was allowed to cool before pouring over ice — no dramatic hiss, and the ice doesn't crack and cloud properly.", action: "The flavor is the same. The theatre is lost. Next time pour while hot." },
-        ],
-      },
-      feelCue: "The first sip through the straw should be intensely cold, almost shockingly so, with the sweetness of condensed milk cutting through the bitter roast — refreshing and rich at once.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Lait condensé sucré",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Lait condensé d'avoine pour les produits laitiers"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "cubes de glace, grands",
+      "ratioValue": 6,
+      "defaultUnit": "cubes",
+      "substitutions": [
+        "glace concassée pour une boisson slushier"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Assemblage",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "prepped_glass",
+      "instructions": "Verser le lait condensé sucré dans le fond d'un verre court résistant à la chaleur ou directement dans la tasse de réception du filtre à phine. Le lait condensé va d'abord — ce n'est pas négociable — donc le café chaud coule directement à travers lui, commençant à se dissoudre et à s'intégrer avant de remuer. Vous voulez cette couche visible de blanc dense sous le café ambre, à la fois pour des raisons esthétiques et pour vous permettre de calibrer la douceur par la façon dont vous remuez soigneusement avant le glaçage.",
+      "visualCue": {
+        "primaryTarget": "Une épaisse piscine blanc ivoire de lait condensé au fond du verre, non perturbée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Trop peu de lait condensé — un mince frottis au fond qui ne donnera pas la douceur caractéristique.",
+            "action": "Ajouter plus. Le rapport classique est d'environ 1 partie de lait condensé à 3 parties de café brassé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une couche blanche visqueuse généreuse de 1 à 1,5 cm de profondeur qui s'accroche aux parois vitrées lorsqu'elle est inclinée.",
+            "action": "Mettre le filtre à phin sur le dessus et ajouter le fond de café."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de lait condensé — la boisson sera grasse et épaisse.",
+            "action": "Épargnez l'excès. Ajuster au goût pour la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Le lait condensé doit verser lentement, comme du miel épais, au lieu de se répandre instantanément dans le fond."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Infuse",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "brewed_coffee",
+      "instructions": "Assembler le filtre à phin: visser la plaque de presse intérieure de façon lâche sur la chambre du filtre, charger le fond de café, et donner à la plaque de presse un quart de tour pour compresser légèrement — pas serré, car l'eau doit couler, pas bouillir. Placez le filtre sur le verre. Verser juste assez d'eau chaude (environ 10 ml) pour pré-humidifier le terrain et laisser fleurir pendant 30 secondes. Puis remplissez la chambre avec l'eau restante. Le café doit couler à un rythme d'une goutte par seconde — 4 à 5 minutes pour le brassage complet. Trop rapide signifie que le terrain est trop grossier ou la presse trop lâche; trop lent signifie trop fin ou trop serré. Une goutte d'eau de 4 minutes dans le lait condensé produit un café concentré presque sirupeux.",
+      "visualCue": {
+        "primaryTarget": "Une goutte régulière de café ambre sombre tombant à travers le filtre à environ une goutte par seconde, avec un bassin croissant de liquide brun profond au sommet du lait condensé blanc.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le café coule rapidement dans un cours d'eau mince plutôt que dans des gouttes individuelles — il sera faible et sous-extractible.",
+            "action": "Resserrer légèrement la plaque de presse. Si déjà brasser, terminer rapidement et noter pour la prochaine fois."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les gouttes individuelles tombent à une cadence par seconde. Le café recueilli en dessous est un riche ambre sombre, presque opaque. L'arôme est chocolaté et légèrement fumé.",
+            "action": "Laisser finir le dégouttage complètement avant de remuer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après quelques gouttes seulement, le café s'est arrêté de dégoutter complètement — les sols sont trop serrés.",
+            "action": "Enlevez la plaque de presse d'un demi-tour. Si elle est irrémédiablement collée, verser une petite quantité d'eau chaude sur le dessus pour l'aider à bouger."
+          }
+        ]
+      },
+      "feelCue": "La vapeur qui s'élève du phin doit porter un arôme de chocorie rôti, foncé et légèrement terreux, non acide ou léger."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Refroidissement",
+      "inputs": [
+        "brewed_coffee",
+        "ing_04"
+      ],
+      "outputState": "finished_ca_phe_sua_da",
+      "instructions": "Une fois que tout le café a coulé à travers, remuer vigoureusement le café chaud et le lait condensé jusqu'à ce que le lait condensé ait complètement dissous et que le mélange soit d'une seule couleur tane foncée. Ne sautez pas l'agitation — le lait condensé non dissous s'écrasera autour de la glace. Chargez un deuxième grand verre avec des glaçons, en le remplissant au bord. Verser le café sucré chaud sur la glace à la fois à partir d'une hauteur. Il sifflera et frethra de façon spectaculaire. Buvez immédiatement avec une paille, en remuant au fur et à mesure.",
+      "visualCue": {
+        "primaryTarget": "Un verre rempli de glace baignée de tourbillons de café tan foncé qui s'estompe jusqu'à l'or pâle où la glace fond en elle, à deux tons et qui s'évapore faiblement au - dessus de la glace.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le café n'a pas été complètement agité avec le lait condensé — des stries blanches pâles visibles au fond du verre glacé.",
+            "action": "Incorporer la paille jusqu'à ce que la couleur soit uniforme. Le lait condensé non dissous coule et rend la dernière gorgée désagréablement sucrée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un café brun caramel uniforme en cascade sur la glace. La glace craque audiblement quand le café chaud frappe. Les brouillards de verre. La vapeur monte.",
+            "action": "Buvez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le café a été laissé refroidir avant de verser sur la glace — pas de sifflement dramatique, et la glace ne craque et ne nuage pas correctement.",
+            "action": "La saveur est la même. Le théâtre est perdu. La prochaine fois, verser chaud."
+          }
+        ]
+      },
+      "feelCue": "La première gorgée à travers la paille devrait être intensément froide, presque choquante, avec la douceur du lait condensé coupant à travers le rôti amer — rafraîchissant et riche à la fois."
+    }
+  ]
 };

@@ -1,127 +1,328 @@
 export default {
-  repoId: "master_afghan_mantu_001",
-  parentRepoId: null,
-  slug: "mantu",
-  author: "ForkRecipe Kitchen",
-  title: "Mantu",
-  description: "Afghan steamed dumplings filled with spiced ground beef and caramelized onion, served over a pool of split-pea sauce and tangy yogurt, then crowned with dried mint and a blushing thread of tomato.",
-  cuisine: "Afghan",
-  culture: "Central Asian",
-  category: "proteins",
-  tags: ["dumplings", "beef", "afghan", "steamed", "yogurt"],
-  difficulty: 4,
-  activeTime: "90 min",
-  totalTime: "3 hours",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 5, sour: 4, bitter: 1, umami: 7, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",                         ratioValue: 6,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Hydration",  name: "Warm water",                                ratioValue: 2.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Fine sea salt (for dough)",                 ratioValue: 0.15,defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Protein",    name: "Ground beef (20% fat)",                     ratioValue: 5,   defaultUnit: "parts", substitutions: ["ground lamb"] },
-    { ingId: "ing_05", role: "Allium",     name: "Yellow onion, finely diced",                ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",      name: "Ground coriander",                          ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",      name: "Ground cumin",                              ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",      name: "Cayenne pepper",                            ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning",  name: "Fine sea salt (for filling)",               ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Dairy",      name: "Full-fat plain yogurt",                     ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Allium",     name: "Garlic, minced",                            ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_12", role: "Herb",       name: "Dried mint",                                ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_afghan_mantu_001",
+  "parentRepoId": null,
+  "slug": "mantu",
+  "author": "ForkRecipe Kitchen",
+  "title": "Mantou",
+  "description": "Des boulettes à la vapeur afghanes remplies de boeuf haché épicé et d'oignon caramélisé, servies sur une piscine de sauce au pois fendue et de yogourt tanné, ensuite couronnées de menthe séchée et d'un fil de tomate rougissant.",
+  "cuisine": "Afghans",
+  "culture": "Asie centrale",
+  "category": "proteins",
+  "tags": [
+    "boulettes",
+    "boeuf",
+    "afghan",
+    "vapeur",
+    "yaourt"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "90 min",
+  "totalTime": "3 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 5,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 7,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Knead",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "rested_dough",
-      instructions: "Combine flour and salt, make a well, and pour in the warm water gradually, mixing with a fork until a shaggy dough forms. Turn onto a work surface and knead for 8-10 minutes until smooth, elastic, and not sticky. Mantu dough should be slightly stiffer than pasta dough — it needs to hold its pleats under the pressure of steaming. Form into a ball, cover tightly with plastic wrap, and rest for at least 45 minutes.",
-      visualCue: {
-        primaryTarget: "A smooth, taut dough ball that springs back slowly when indented — slightly stiffer than an earlobe.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is shaggy, tears when pulled, and sticks to hands.", action: "Knead for another 3-5 minutes, adding flour by the teaspoon only if essential." },
-          { state: "Perfect",   description: "Smooth, slightly tacky but not sticky. When you pull a piece, it stretches without immediately tearing. Springs back halfway when poked.", action: "Cover and rest 45 minutes minimum." },
-          { state: "Overdone",  description: "Dough is very firm and has become elastic and resistant — snaps back instantly.", action: "Rest covered for 30 minutes. Over-kneaded gluten needs time to relax before rolling." },
-        ],
-      },
-      feelCue: "After kneading, press your thumb into the center — it should leave a clean indent that slowly fills back halfway over about 10 seconds. That slow recovery is the gluten working.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Sauté",
-      inputs: ["ing_05", "ing_04", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "cooked_filling",
-      instructions: "In a wide skillet, cook the diced onion in a small amount of oil over medium heat, stirring frequently, for 15-20 minutes until deeply caramelized and sweet — golden-brown, not pale. Add the ground beef, breaking it into fine crumbles, and cook until no pink remains. Add the spices and salt, stir for 2 minutes, then taste. The filling should be highly seasoned, as the dumpling dough dilutes the flavor. Spread on a plate to cool completely before filling.",
-      visualCue: {
-        primaryTarget: "A dark, fragrant filling of fine-crumbled beef and deep golden onion — no pink meat, no pooled oil.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are pale and translucent; beef is just-cooked without any browning. The filling will taste bland inside the wrapper.", action: "Cook longer over medium heat. The caramelization of the onion is essential to the sweetness of mantu." },
-          { state: "Perfect",   description: "Onions are deeply golden-brown. Beef is fully cooked with some slightly crisp edges. Spices smell toasted and warm.", action: "Spread to cool. Do not fill dumplings with warm filling — it steams the dough from inside." },
-          { state: "Overdone",  description: "Onions are starting to char and the beef is dry.", action: "Add a tablespoon of water to the pan, stir, and remove from heat." },
-        ],
-      },
-      feelCue: "Press the filling between your fingers — it should hold together slightly when pressed (from the fat) but crumble apart freely. No pink, no raw smell.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau chaude",
+      "ratioValue": 2.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Roll",
-      inputs: ["rested_dough"],
-      outputState: "cut_wrappers",
-      instructions: "Divide the rested dough into manageable portions. On a lightly floured surface, roll each portion as thin as possible — aim for 2mm, almost translucent. Cut into squares of 8-10cm. Mantu wrappers are slightly thicker than Chinese dumpling wrappers to withstand steaming, but thin enough to be delicate. Keep cut wrappers under a damp cloth.",
-      visualCue: {
-        primaryTarget: "Thin, even squares of dough that flex and drape when lifted, with slight translucency.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is thick and opaque — more than 3mm. Cooked mantu will have a doughy, bread-like wrapper.", action: "Roll thinner. Use a long pasta-style rolling pin and roll from the center outward." },
-          { state: "Perfect",   description: "Thin and slightly translucent when held to the light, but not paper-thin — it should not tear when folded. Even thickness across the square.", action: "Keep under damp cloth and fill promptly." },
-          { state: "Overdone",  description: "Dough rolled too thin — tearing when handled.", action: "Set these aside for irregular dumplings. Re-roll the scraps slightly thicker." },
-        ],
-      },
-      feelCue: "Lift a wrapper and drape it over your hand — it should fall with its own weight and cling softly to your palm, like a silk handkerchief.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (pour pâte)",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Fold",
-      inputs: ["cut_wrappers", "cooked_filling"],
-      outputState: "formed_mantu",
-      instructions: "Place a generous teaspoon of cooled filling in the center of each square — do not overfill or the pleats will split. The traditional mantu fold: bring all four corners up to meet at the top, then pinch the four seams shut, creating a 'four-petal' shape with a gathered top. Press the seams firmly so no steam can escape during cooking. Place formed mantu on a lightly oiled surface.",
-      visualCue: {
-        primaryTarget: "Compact, well-sealed square parcels with four pleated seams meeting at a gathered top — like a small wrapped gift.",
-        spectrum: [
-          { state: "Underdone", description: "Seams are not firmly sealed — gaps visible when the dumpling is gently squeezed.", action: "Wet your fingertip with water and re-press the seam firmly. Unsealed mantu burst open in the steamer." },
-          { state: "Perfect",   description: "Firm, compact parcels with all seams tightly pinched. They hold their shape when placed on the tray. A slight dome from the filling.", action: "Place on oiled steamer basket immediately." },
-          { state: "Overdone",  description: "Wrappers have dried out from sitting too long — they are cracking at the pleats.", action: "Brush with water to rehydrate the dough, then re-seal the cracked areas." },
-        ],
-      },
-      feelCue: "Squeeze a formed mantu very gently — if it feels firm and yields only slightly, the filling is correct. If it feels flabby or the seams gap, there is too much air inside.",
+      "ingId": "ing_04",
+      "role": "Protein",
+      "name": "Boeuf haché (20% de matières grasses)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "agneau haché"
+      ]
     },
     {
-      nodeId: "step_5", action: "Simmer",
-      inputs: ["ing_10", "ing_11", "ing_12"],
-      outputState: "garlic_yogurt_sauce",
-      instructions: "Stir together the yogurt, minced garlic, and a pinch of salt in a small saucepan. Warm very gently over the lowest possible heat, stirring constantly — yogurt must never boil or it will curdle. The goal is warmed through, not hot: 40-45 C (104-113 F). Taste and adjust salt. The sauce should be pourable and smooth.",
-      visualCue: {
-        primaryTarget: "A warm, smooth, ivory-white sauce that pours in a thin, even stream.",
-        spectrum: [
-          { state: "Underdone", description: "Yogurt is still cold and thick — it will chill the mantu immediately.", action: "Warm further over the lowest heat, stirring constantly." },
-          { state: "Perfect",   description: "Warm to the touch, fluid, no graininess. Smells gently of garlic and clean dairy.", action: "Keep warm off the heat until the mantu are steamed." },
-          { state: "Overdone",  description: "Yogurt has curdled — grainy, separated, with whey pooling.", action: "There is no recovery for curdled yogurt sauce. Start fresh, keeping temperature below a simmer." },
-        ],
-      },
-      feelCue: "Dip a finger — the yogurt sauce should feel warm but not hot, the way you would test baby formula temperature on your wrist.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon jaune, en dés",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_6", action: "Poach",
-      inputs: ["formed_mantu"],
-      outputState: "finished_mantu",
-      instructions: "Oil the steamer basket generously to prevent sticking. Place mantu with space between each — they expand as they steam. Steam over vigorously boiling water for 20-22 minutes until the wrappers are translucent and cooked through, not gummy. To serve: spread warmed garlic yogurt on the plate, arrange the steamed mantu on top, and finish with a drizzle of olive oil, a shower of dried mint, and optionally a spoonful of tomato-based chili oil. The mantu arrive at the table glistening.",
-      visualCue: {
-        primaryTarget: "Translucent, glistening dumplings with no white floury spots — fully cooked wrapper that clings to the filling.",
-        spectrum: [
-          { state: "Underdone", description: "Wrapper is still white and slightly opaque, with a raw-flour taste when bitten.", action: "Steam for 3-5 more minutes. Check the water level — it may have run low." },
-          { state: "Perfect",   description: "Wrappers are fully translucent and glossy with steam. The filling inside has set and holds the shape. A bite reveals juicy, fragrant beef within.", action: "Serve immediately over yogurt sauce with mint and olive oil." },
-          { state: "Overdone",  description: "Wrappers have become very soft and are beginning to split — over-steamed.", action: "Serve immediately and handle gently. The flavor is still excellent." },
-        ],
-      },
-      feelCue: "A properly steamed mantu pressed gently between finger and thumb should give with slight resistance then feel soft — the wrapper should cling to your finger for a moment.",
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (à remplir)",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Dairy",
+      "name": "Yogourt plein gras",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Herb",
+      "name": "menthe séchée",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Agenouillement",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "rested_dough",
+      "instructions": "Mélanger la farine et le sel, faire un puits, et verser progressivement dans l'eau chaude, en mélangeant avec une fourchette jusqu'à ce qu'une pâte chaotique se forme. Tourner sur une surface de travail et pétrir pendant 8-10 minutes jusqu'à ce que lisse, élastique et non collant. La pâte à mantu doit être légèrement plus rigide que la pâte à pâtes; elle doit tenir ses plis sous la pression de la vapeur. Formez-vous en boule, couvrez-vous fermement d'enveloppe en plastique et reposez-vous pendant au moins 45 minutes.",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte lisse et tendue qui ressort lentement lorsqu'elle est dentelée, légèrement plus raide qu'un lobe d'oreille.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est lugubre, les larmes quand on la tire et les colle aux mains.",
+            "action": "Agenouiller encore 3-5 minutes, ajouter la farine par la cuillère à café seulement si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, légèrement collant mais pas collant. Lorsque vous tirez une pièce, elle s'étire sans se déchirer immédiatement. Il ressort à mi-chemin quand il a sauté.",
+            "action": "Couvrir et reposer 45 minutes minimum."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dough est très ferme et est devenu élastique et résistant — se ressort instantanément.",
+            "action": "Repos couvert pendant 30 minutes. Le gluten surcollé a besoin de temps pour se détendre avant de rouler."
+          }
+        ]
+      },
+      "feelCue": "Après le pétrissage, appuyez sur votre pouce dans le centre — il devrait laisser un tiret propre qui se remplit lentement vers la moitié sur environ 10 secondes. Cette lente récupération est le gluten qui fonctionne."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_05",
+        "ing_04",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "cooked_filling",
+      "instructions": "Dans une poêle large, cuire l'oignon coupé en dés dans une petite quantité d'huile à feu moyen, en remuant fréquemment, pendant 15-20 minutes jusqu'à ce qu'il soit profondément caramélisé et doux — doré brun, pas pâle. Ajouter le boeuf haché, le casser en miettes fines, et cuire jusqu'à ce qu'il ne reste pas de rose. Ajouter les épices et le sel, remuer 2 minutes, puis goûter. Le remplissage doit être très assaisonné, car la pâte à diluer dilue la saveur. Étaler sur une plaque pour refroidir complètement avant le remplissage.",
+      "visualCue": {
+        "primaryTarget": "Un remplissage sombre et parfumé de boeuf fin et d'oignon d'or profond — pas de viande rose, pas d'huile de piscine.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont pâles et translucides; le boeuf est juste cuit sans brunissement. Le remplissage aura un goût fade à l'intérieur de l'emballage.",
+            "action": "Cuire plus longtemps à feu moyen. La caramélisation de l'oignon est essentielle à la douceur du mantu."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont profondément dorés. Le boeuf est entièrement cuit avec quelques bords légèrement croustillants. Les épices sentent grillées et chaudes.",
+            "action": "Étendre pour refroidir. Ne pas remplir les boulettes de remplissage chaud — il vapeur la pâte de l'intérieur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oignons commencent à carboniser et le boeuf est sec.",
+            "action": "Ajouter une cuillère à soupe d'eau dans la poêle, remuer et retirer de la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le remplissage entre les doigts — il devrait se tenir légèrement lorsqu'il est pressé (à partir de la graisse) mais s'effondrer librement. Pas de rose, pas d'odeur crue."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Rouleaux",
+      "inputs": [
+        "rested_dough"
+      ],
+      "outputState": "cut_wrappers",
+      "instructions": "Divisez la pâte reposée en portions gérables. Sur une surface légèrement farinée, rouler chaque portion aussi mince que possible – viser 2mm, presque translucide. Couper en carrés de 8-10cm. Les emballages mantu sont légèrement plus épais que les emballages chinois pour résister à la vapeur, mais assez fins pour être délicats. Gardez les emballages coupés sous un chiffon humide.",
+      "visualCue": {
+        "primaryTarget": "Mince, même les carrés de pâte qui fléchissent et draper lorsqu'ils sont levés, avec une légère translucidité.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est épaisse et opaque — plus de 3 mm. Le mantu cuit aura un emballage pâteux, comme du pain.",
+            "action": "Plus mince. Utilisez un long rouleau de style pâtes et rouler du centre vers l'extérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mince et légèrement translucide lorsqu'elle est fixée à la lumière, mais non au papier-fin — elle ne doit pas se déchirer lorsqu'elle est repliée. Même l'épaisseur sur le carré.",
+            "action": "Conserver sous un chiffon humide et remplir rapidement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Toux roulée trop fine — déchirure lorsqu'elle est manipulée.",
+            "action": "Mettez ça de côté pour les boulettes irrégulières. Rerouler les débris légèrement plus épais."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un emballage et drapé sur votre main — il devrait tomber avec son propre poids et s'accrocher doucement à votre paume, comme un mouchoir en soie."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plier",
+      "inputs": [
+        "cut_wrappers",
+        "cooked_filling"
+      ],
+      "outputState": "formed_mantu",
+      "instructions": "Placez une généreuse cuillère à café de remplissage refroidi au centre de chaque carré — ne pas remplir trop ou les plis se diviseront. Le pli mantu traditionnel : porter les quatre coins pour se retrouver en haut, puis pincer les quatre coutures fermées, créant une forme « quatre-pétales » avec un sommet assemblé. Appuyez fermement sur les coutures pour éviter la vapeur pendant la cuisson. Placer le mantu formé sur une surface légèrement huilée.",
+      "visualCue": {
+        "primaryTarget": "Des parcelles carrées compactes et bien scellées avec quatre coutures plissées se rencontrent à un sommet, comme un petit cadeau emballé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coutures ne sont pas bien scellées — des trous visibles lorsque le bouleau est légèrement pressé.",
+            "action": "Mouillez votre bout de doigt avec de l'eau et pressez fermement la couture. Le mantu non scellé s'ouvre dans le vapeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des parcelles fermes et compactes avec toutes les coutures serrées. Ils tiennent leur forme lorsqu'ils sont placés sur le plateau. Un léger dôme du remplissage.",
+            "action": "Placez immédiatement sur le panier à vapeur huilé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les enrouleurs se sont asséchés trop longtemps — ils craquent sur les plis.",
+            "action": "Badigeonner d'eau pour réhydrater la pâte, puis refermer les zones fissurées."
+          }
+        ]
+      },
+      "feelCue": "Pressez un mantu formé très doucement — s'il se sent ferme et ne produit que légèrement, le remplissage est correct. S'il se sent flasque ou que les coutures s'entremêlent, il y a trop d'air à l'intérieur."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "garlic_yogurt_sauce",
+      "instructions": "Incorporer le yaourt, l'ail haché et une pincée de sel dans une petite casserole. Chauffer très doucement sur le feu le plus bas possible, en remuant constamment — le yogourt ne doit jamais bouillir ou il sera caillé. Le but est chaud, pas chaud : 40-45 C (104-113 F). Goûtez et ajustez le sel. La sauce doit être versable et lisse.",
+      "visualCue": {
+        "primaryTarget": "Une sauce chaude, douce, blanc ivoire qui verse dans un ruisseau mince et uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le yogourt est encore froid et épais, il refroidira le mantu immédiatement.",
+            "action": "Chauffer plus loin sur la chaleur la plus basse, en remuant constamment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaud au toucher, fluide, pas de grain. Sensation d'ail et de lait propre.",
+            "action": "Gardez le feu au chaud jusqu'à ce que les mantus soient cuits à la vapeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le yogourt s'est cambriolé — grainé, séparé, avec lactosérum.",
+            "action": "Il n'y a pas de récupération pour la sauce au yaourt caillé. Commencer frais, garder la température au-dessous d'un mijot."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt — la sauce yogourt devrait se sentir chaud mais pas chaud, la façon dont vous testeriez la température de la formule pour bébé sur votre poignet."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Pochette",
+      "inputs": [
+        "formed_mantu"
+      ],
+      "outputState": "finished_mantu",
+      "instructions": "Huiler généreusement le panier de vapeur pour éviter de coller. Placez le mantu avec de l'espace entre chacun — ils s'étendent à mesure qu'ils s'évaporent. Au-dessus de l'eau bouillante pendant 20-22 minutes jusqu'à ce que les emballages soient translucides et cuits à travers, pas gommés. Pour servir: étaler le yaourt d'ail chaud sur l'assiette, arranger le mantu vapeur sur le dessus, et terminer avec un filet d'huile d'olive, une douche de menthe séchée, et en option une cuillère d'huile de chili à base de tomate. Le mantu arrive à la table scintillement.",
+      "visualCue": {
+        "primaryTarget": "Des boulettes translucides et scintillantes, sans taches farineuses blanches, entièrement cuites, qui s'accrochent au remplissage.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'enveloppe est encore blanche et légèrement opaque, avec un goût de fleur crue en morsure.",
+            "action": "Steam pendant 3-5 minutes. Vérifiez le niveau d'eau — il peut avoir couru bas."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les enrouleurs sont entièrement translucides et brillants avec de la vapeur. Le remplissage à l'intérieur a réglé et tient la forme. Une bouchée révèle un bœuf juteux et parfumé à l'intérieur.",
+            "action": "Servir immédiatement sur la sauce au yaourt avec de la menthe et de l'huile d'olive."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les rappeurs sont devenus très mous et commencent à se diviser — surchargés.",
+            "action": "Servir immédiatement et manipuler doucement. La saveur est toujours excellente."
+          }
+        ]
+      },
+      "feelCue": "Un mantu à la vapeur bien pressé doucement entre le doigt et le pouce devrait donner avec une légère résistance puis se sentir doux — l'emballage devrait s'accrocher à votre doigt pendant un moment."
+    }
+  ]
 };

@@ -1,73 +1,142 @@
 export default {
-  repoId: "master_french_clarified_butter_001",
-  parentRepoId: null,
-  slug: "clarified-butter",
-  author: "ForkRecipe Kitchen",
-  title: "Clarified Butter",
-  description: "Whole butter gently rendered until it splits into three: a raft of foam, a pool of clear gold, and a sediment of toasted milk solids. Strain off the pure butterfat and you gain a clear, nutty fat that sears without burning and keeps for months — push it a few minutes further and you are most of the way to ghee.",
-  cuisine: "French",
-  culture: "Classical",
-  category: "condiments",
-  tags: ["clarified-butter", "french", "fat", "ghee", "rendered", "high-smoke-point"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 1, salty: 0, sour: 0, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat", name: "Unsalted butter (good quality, high butterfat)", ratioValue: 100, defaultUnit: "%", substitutions: ["cultured butter for a deeper, tangier note", "European-style 84% butterfat butter"] },
+  "repoId": "master_french_clarified_butter_001",
+  "parentRepoId": null,
+  "slug": "clarified-butter",
+  "author": "ForkRecipe Kitchen",
+  "title": "Beurre clarifié",
+  "description": "Beurre entier rendu délicatement jusqu'à ce qu'il se divise en trois : un radeau de mousse, une piscine d'or clair et un sédiment de solides de lait grillé. Retirez-vous de la pure graisse de beurre et vous gagnez une graisse claire et noisette qui se couche sans brûler et se conserve pendant des mois — poussez-la quelques minutes plus loin et vous êtes la plupart du chemin à ghee.",
+  "cuisine": "Français",
+  "culture": "Classique",
+  "category": "condiments",
+  "tags": [
+    "butter clarifié",
+    "français",
+    "matières grasses",
+    "ghee",
+    "rendu",
+    "haut point de fumée"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Melt",
-      inputs: ["ing_01"],
-      outputState: "melted_butter",
-      instructions: "Cut the butter into even chunks and place in a heavy-bottomed saucepan over the lowest steady heat. Let it melt slowly without stirring — you want it to come apart gently, not boil. As it melts, the butter separates into three layers: a thin white foam of whey proteins rising to the top, a thick clear-yellow layer of butterfat in the middle, and the heavier milk solids (casein and lactose) sinking to the bottom. Do not rush this with high heat or you will scorch the solids before the fat is clear.",
-      visualCue: {
-        primaryTarget: "A fully liquid pot with a distinct white foam capping a deepening pool of translucent yellow fat, the bottom just beginning to look granular.",
-        spectrum: [
-          { state: "Underdone", description: "Chunks of solid butter still float in a cloudy, uniform melt with no visible separation into layers.", action: "Keep the heat low and steady and give it a few more minutes. Resist stirring — agitation keeps the solids suspended and slows the split." },
-          { state: "Perfect", description: "Everything is melted, a foamy white raft sits on top, and the middle layer is clearly yellow and translucent. No browning at the bottom yet.", action: "Hold at a bare simmer and move to skimming and rendering." },
-          { state: "Overdone", description: "The melt is bubbling hard and the foam is breaking up and spitting, with the bottom darkening fast.", action: "Pull off the heat immediately and let it settle. If the bottom has only lightly tanned, proceed; the flavor will lean toward ghee." },
-        ],
-      },
-      feelCue: "The pot should be near-silent — just a soft, occasional bubble, not a rolling boil. It smells sweetly of warm cream and butter, with no scorched edge.",
-    },
-    {
-      nodeId: "step_2", action: "Render",
-      inputs: ["melted_butter"],
-      outputState: "rendered_butterfat",
-      instructions: "Keep the butter at a bare simmer for 8 to 12 minutes. The water in the butter (about 15 to 18 percent of its weight) boils off, the bubbling quiets, and the foam on top thins. Skim away the white foam with a spoon as it accumulates so it doesn't fall back in. The middle layer turns from cloudy to brilliantly clear gold, and the milk solids on the bottom settle and slowly toast. For pure clarified butter, stop while the solids are pale; for a ghee-like depth, let them turn a light hazelnut brown and the kitchen fill with a nutty aroma.",
-      visualCue: {
-        primaryTarget: "A still, glass-clear pool of gold you can see the bottom of, the surface nearly free of foam, with settled solids ranging from cream to light tan.",
-        spectrum: [
-          { state: "Underdone", description: "The fat is still hazy or milky and the surface bubbles vigorously with steam — there is plenty of water left to drive off.", action: "Keep simmering and skimming. Cloudiness means water and suspended proteins remain; clarity comes only once the water has boiled away." },
-          { state: "Perfect", description: "The fat is transparent and luminous, the bubbling has slowed to a faint sizzle, and the solids at the bottom are settled and pale gold to light brown.", action: "Pull from the heat at once and let it rest a minute so the last solids drop. Move to straining." },
-          { state: "Overdone", description: "The solids are dark brown to black and the fat smells acrid and bitter rather than nutty.", action: "Strain immediately to stop the cooking and salvage what you can, but expect a scorched flavor. Next time pull it a minute or two sooner." },
-        ],
-      },
-      feelCue: "Listen for the bubbling to quiet from a busy fizz to an occasional pop — that hush is the water leaving. The smell shifts from plain warm cream toward toasted nuts and popcorn as the solids brown.",
-    },
-    {
-      nodeId: "step_3", action: "Strain",
-      inputs: ["rendered_butterfat"],
-      outputState: "clarified_butter",
-      instructions: "Let the pot rest off the heat for a minute so the remaining solids settle. Line a fine-mesh sieve with a few layers of damp cheesecloth (or a coffee filter) set over a clean, dry, heatproof jar. Pour the butterfat through slowly, leaving the toasted sediment behind in the pot — tilt and stop pouring before the dregs slide in. The cloth catches the last fine particles and any skimmed foam. What lands in the jar is clear, golden clarified butter. Cool to room temperature, then cap; it keeps for weeks at room temperature and many months refrigerated, where it sets to a firm, pale, grainy solid.",
-      visualCue: {
-        primaryTarget: "A jar of flawlessly clear, deep-gold fat with no visible specks or cloudiness, and a dry pan of spent brown solids left behind.",
-        spectrum: [
-          { state: "Underdone", description: "The strained fat carries visible flecks of solids or looks slightly cloudy in the jar.", action: "Strain again through fresh damp cheesecloth or a coffee filter. Any solids left in shorten shelf life and can scorch when you cook with it later." },
-          { state: "Perfect", description: "Crystal-clear golden fat in the jar, free of particles, with a clean nutty aroma and the sediment fully captured by the cloth.", action: "Let it cool and set, then cap and store. Use it for high-heat searing and sautéing where whole butter would burn." },
-          { state: "Overdone", description: "You poured too far and dark sediment has slipped into the jar, muddying the fat.", action: "Re-strain the whole jar through a fresh filter to pull the solids back out and restore clarity." },
-        ],
-      },
-      feelCue: "Pour in a slow, steady stream and you'll feel the moment the thin clear fat gives way to the heavier dregs at the bottom — stop there. Cooled and set, good clarified butter feels firm and slightly grainy, breaking with a clean, waxy snap.",
-    },
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Beurre non salé (bonne qualité, matières grasses élevées)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "beurre cultivé pour une note plus profonde et plus tangente",
+        "Beurre à 84% de beurre de type européen"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire fondre",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "melted_butter",
+      "instructions": "Couper le beurre en morceaux et placer dans une casserole à fond lourd sur le feu le plus bas. Laissez-le fondre lentement sans remuer — vous voulez qu'il se sépare doucement, pas bouillir. À mesure qu'il fond, le beurre se sépare en trois couches : une mince mousse blanche de protéines de lactosérum montant jusqu'au sommet, une épaisse couche jaune clair de matière grasse du beurre au milieu, et les solides de lait plus lourds (caséine et lactose) couler au fond. Ne précipitez pas cela avec une chaleur élevée ou vous brûlerez les solides avant que la graisse soit claire.",
+      "visualCue": {
+        "primaryTarget": "Un pot entièrement liquide avec une mousse blanche distincte enveloppant un bassin de graisse jaune translucide, le fond commence à peine à paraître granulaire.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux de beurre solide flottent encore dans une fonte nuageuse et uniforme sans séparation visible en couches.",
+            "action": "Gardez la chaleur basse et stable et donnez-lui quelques minutes de plus. Résistez à remuer — l'agitation maintient les solides suspendus et ralentit la division."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tout est fondu, un radeau blanc mousseux est posé sur le dessus, et la couche médiane est clairement jaune et translucide. Pas encore de brunissement en bas.",
+            "action": "Tenez-vous à un mijot nu et déplacez-vous vers l'écumage et le rendu."
+          },
+          {
+            "state": "Overdone",
+            "description": "La fonte est dure et la mousse se brise et crache, le fond s'assombrissant rapidement.",
+            "action": "Retirez immédiatement la chaleur et laissez-la reposer. Si le fond n'a bronzé que légèrement, procédez; la saveur s'appuiera vers le ghee."
+          }
+        ]
+      },
+      "feelCue": "Le pot devrait être presque silencieux — juste une bulle douce et occasionnelle, pas un ébullition. Il sent la crème et le beurre chauds, sans bord brûlé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rendu",
+      "inputs": [
+        "melted_butter"
+      ],
+      "outputState": "rendered_butterfat",
+      "instructions": "Conserver le beurre à mijoter pendant 8 à 12 minutes. L'eau dans le beurre (environ 15 à 18 pour cent de son poids) se dégage, le bouillonnement se calme, et la mousse sur les minces. Éliminez la mousse blanche avec une cuillère car elle s'accumule pour ne pas retomber. La couche médiane tourne de l'or nuageux à l'or brillamment clair, et le lait solide sur le fond se dépose et toast lentement. Pour le beurre pur éclairci, arrêtez-vous pendant que les solides sont pâles; pour une profondeur de ghee, laissez-les tourner un brun noisette clair et la cuisine remplir d'un arôme de noix.",
+      "visualCue": {
+        "primaryTarget": "Une piscine d'or calme et limpide, vous pouvez voir le fond de, la surface presque libre de mousse, avec des solides stabilisés allant de la crème au bronzage léger.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La graisse est encore trouble ou laiteuse et la surface bulle vigoureusement avec de la vapeur — il reste beaucoup d'eau à chasser.",
+            "action": "Continuez à mijoter et à écrémer. Nuageuse signifie que l'eau et les protéines en suspension demeurent; la clarté ne vient qu'une fois que l'eau a bouilli."
+          },
+          {
+            "state": "Perfect",
+            "description": "La graisse est transparente et lumineuse, le bouillonnement a ralenti jusqu'à un léger étourdissement, et les solides au fond sont fixés et l'or pâle au brun clair.",
+            "action": "Tirez immédiatement de la chaleur et laissez reposer une minute pour que les derniers solides tombent. Allez à la pression."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les solides sont brun foncé à noir et la graisse sent acre et amer plutôt que noisette.",
+            "action": "Soulevez immédiatement pour arrêter la cuisson et récupérer ce que vous pouvez, mais attendez une saveur brûlée. La prochaine fois, tirez une minute ou deux plus tôt."
+          }
+        ]
+      },
+      "feelCue": "Écoutez le bouillonnement pour vous calmer d'un fizz occupé à une pop occasionnelle — que c'est l'eau qui part. L'odeur passe de la crème chaude à la noix grillée et le popcorn que les solides brun."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "rendered_butterfat"
+      ],
+      "outputState": "clarified_butter",
+      "instructions": "Laisser reposer la casserole pendant une minute afin que les solides restants se déposent. Déposer un tamis à mailles fines avec quelques couches de tissu de fromage humide (ou un filtre à café) sur un pot propre, sec et résistant à la chaleur. Versez la graisse de beurre lentement, laissant les sédiments grillés derrière dans le pot — inclinez et arrêtez de verser avant que les filets glissent. Le tissu capture les dernières particules fines et toute mousse écrémée. Ce qui atterrit dans le pot est clair, beurre éclairci doré. Refroidir jusqu'à la température ambiante, puis le chapeau; il se conserve pendant des semaines à la température ambiante et plusieurs mois réfrigérés, où il se met à un solide ferme, pâle, granuleux.",
+      "visualCue": {
+        "primaryTarget": "Un bocal de graisse d'or profond, sans tache visible ni nuage, et une casserole sèche de solides bruns usés laissés derrière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La graisse tendue porte des taches visibles de solides ou semble légèrement trouble dans le pot.",
+            "action": "Plongez à nouveau dans une nappe fraîche humide ou un filtre à café. Tous les solides laissés dans la durée de conservation raccourcissent et peuvent brûler quand vous cuisinez avec plus tard."
+          },
+          {
+            "state": "Perfect",
+            "description": "Graisses dorées cristallines dans le pot, exemptes de particules, avec un arôme de noix propre et les sédiments entièrement capturés par le tissu.",
+            "action": "Laisser refroidir et mettre, puis chapeau et stocker. Utilisez-le pour l'échauffement et la cuisson où le beurre entier brûlerait."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez versé trop loin et les sédiments sombres ont glissé dans le pot, bouillant la graisse.",
+            "action": "Reformer l'ensemble du pot à travers un filtre frais pour retirer les solides et restaurer la clarté."
+          }
+        ]
+      },
+      "feelCue": "Versez dans un cours d'eau lent et stable et vous sentirez le moment où la fine graisse claire cède la place aux dregs plus lourds au fond — arrêtez-vous là. Refroidie et sertie, le bon beurre clarifié se sent ferme et légèrement grainé, rompant avec un éclat propre et cireux."
+    }
+  ]
 };

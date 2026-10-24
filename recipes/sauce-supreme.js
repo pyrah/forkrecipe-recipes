@@ -1,104 +1,240 @@
 export default {
-  repoId: "fork_french_supreme_001",
-  parentRepoId: "master_french_veloute_001",
-  slug: "sauce-supreme",
-  parentSlug: "veloute",
-  author: "ForkRecipe Kitchen",
-  title: "Sauce Suprême",
-  description: "A chicken velouté reduced with cream until it turns lush, ivory, and glossy, then mounted with cold butter for a mirror shine. The supreme of the white sauces — built for poached chicken, supreme of fowl, and anything that wants to taste of pure, silken poultry.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "sauces",
-  tags: ["sauce", "french", "daughter-sauce", "cream", "poultry"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2025-06-09",
-  updatedAt: "2025-06-09",
-  forkNote: "A chicken velouté reduced with cream until lush and glossy — the supreme of white sauces, classic over poultry.",
-  changes: {
-    ingredientsAdded: 2,
-    ingredientsRemoved: 0,
-    ingredientsModified: 1,
-    stepsAdded: 1,
-    stepsRemoved: 0,
-    stepsModified: 1,
+  "repoId": "fork_french_supreme_001",
+  "parentRepoId": "master_french_veloute_001",
+  "slug": "sauce-supreme",
+  "parentSlug": "veloute",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Suprême",
+  "description": "Un velours de poulet réduit avec de la crème jusqu'à ce qu'il devienne luxuriant, ivoire et brillant, puis monté avec du beurre froid pour un miroir brillant. Le suprême des sauces blanches — construit pour le poulet poché, le suprême de la volaille, et tout ce qui veut goûter de la volaille pure et soyeuse.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "fille-sauce",
+    "crème",
+    "volailles"
+  ],
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-06-09",
+  "updatedAt": "2025-06-09",
+  "forkNote": "Un velouté de poulet réduit à la crème jusqu'à ce que luxuriant et brillant – le suprême des sauces blanches, classique sur la volaille.",
+  "changes": {
+    "ingredientsAdded": 2,
+    "ingredientsRemoved": 0,
+    "ingredientsModified": 1,
+    "stepsAdded": 1,
+    "stepsRemoved": 0,
+    "stepsModified": 1
   },
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "White chicken stock",       ratioValue: 12, defaultUnit: "parts", substitutions: ["white veal stock"] },
-    { ingId: "ing_02", role: "Fat",       name: "Unsalted butter",           ratioValue: 1,  defaultUnit: "parts", substitutions: ["clarified butter"] },
-    { ingId: "ing_03", role: "Structure", name: "All-purpose flour",         ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",             ratioValue: 0.1, defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_05", role: "Spice",     name: "White pepper",              ratioValue: 0.02, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Dairy",     name: "Heavy cream",               ratioValue: 4,  defaultUnit: "parts", substitutions: ["crème fraîche"] },
-    { ingId: "ing_10", role: "Fat",       name: "Butter (cold, to mount/finish)", ratioValue: 1, defaultUnit: "parts", substitutions: [] },
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
+    {
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Poulet blanc",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "viande bovine blanche"
+      ]
+    },
+    {
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre clarifié"
+      ]
+    },
+    {
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poivre blanc",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Crème fraîche"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Beurre (froid, pour monter/finir)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
-  processNodes: [
+  "processNodes": [
     {
-      nodeId: "step_1", action: "Toast",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "blond_roux",
-      instructions: "Melt the butter over medium-low heat until it foams without browning, then whisk in the flour. Cook, stirring, 4 to 6 minutes until the raw-flour smell turns to toasted hazelnut and the paste is pale straw — a blond roux.",
-      visualCue: {
-        primaryTarget: "A loose, glossy, pale-straw paste that moves like wet sand and smells of warm toasted nuts.",
-        spectrum: [
-          { state: "Underdone", description: "Bright white and pasty, still smelling of raw flour.", action: "Stir over the heat another minute until the color shifts to faint straw and the smell turns nutty." },
-          { state: "Perfect",   description: "Even pale straw, smooth and fluid, faintly nutty. Bubbles lazily at the edges.", action: "Pull from the heat and ready the warm chicken stock." },
-          { state: "Overdone",  description: "Gone golden-brown and strongly toasted.", action: "Start over for a true blond — a browned roux would muddy the clean ivory this sauce wants." },
-        ],
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "blond_roux",
+      "instructions": "Faire fondre le beurre à feu moyen-doux jusqu'à ce qu'il mousse sans brunir, puis fouetter dans la farine. Cuire en remuant, 4 à 6 minutes jusqu'à ce que l'odeur de la farine brute se transforme en noisette grillée et que la pâte soit de la paille pâle — un roux blond.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lâche, brillante et à paille pâle qui se déplace comme du sable humide et sent les noix grillées chaudes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Blanc vif et pâteux, sent toujours la farine crue.",
+            "action": "Mélanger sur la chaleur encore une minute jusqu'à ce que la couleur se déplace pour évanouir la paille et l'odeur devient noisette."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même la paille pâle, lisse et fluide, légèrement noisette. Bubbles paresseux aux bords.",
+            "action": "Tirez du feu et préparez le bouillon de poulet chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Glissé doré-brun et fortement grillé.",
+            "action": "Recommencer pour une vraie blonde — un roux brun ferait bouillir l'ivoire propre que cette sauce veut."
+          }
+        ]
       },
-      feelCue: "The whisk drags through a soft, fluid paste with almost no resistance — if it balls up dry, there is too much flour.",
+      "feelCue": "Le fouet traîne à travers une pâte douce et fluide sans résistance. S'il se met à sécher, il y a trop de farine."
     },
     {
-      nodeId: "step_2", action: "Whisk",
-      inputs: ["blond_roux", "ing_01"],
-      outputState: "loose_veloute",
-      instructions: "Off the heat, whisk the warm white chicken stock into the roux in three or four additions, letting each disappear before the next. Return to medium heat, bring to a gentle boil whisking, then drop to a bare simmer and skim until the surface runs clean.",
-      visualCue: {
-        primaryTarget: "A smooth, lump-free, pale ivory chicken velouté, glossy, with a bright clean surface after skimming.",
-        spectrum: [
-          { state: "Underdone", description: "Thin and watery, surface still throwing gray foam.", action: "Simmer and skim a few minutes longer — the body builds and the foam stops surfacing with time." },
-          { state: "Perfect",   description: "Smooth, glossy, pale ivory; lightly coats the whisk; surface clear between skims.", action: "Pour in the cream and begin reducing." },
-          { state: "Overdone",  description: "Gluey and paste-thick before the cream is even in.", action: "Whisk in a little warm stock to loosen it before adding the cream." },
-        ],
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "blond_roux",
+        "ing_01"
+      ],
+      "outputState": "loose_veloute",
+      "instructions": "Hors du feu, fouetter le bouillon de poulet blanc chaud dans le roux en trois ou quatre ajouts, laissant chacun disparaître avant le suivant. Retourner à feu moyen, porter à ébullition douce, puis laisser mijoter à nu et écrémer jusqu'à ce que la surface soit propre.",
+      "visualCue": {
+        "primaryTarget": "Un poulet ivoire pâle, lisse, sans morceaux, brillant, avec une surface claire et propre après écrémage.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mince et aqueuse, la surface jette encore de la mousse grise.",
+            "action": "Laisser mijoter et écrémer quelques minutes de plus — le corps se construit et la mousse cesse de faire surface avec le temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, lustré, ivoire pâle; enrobe légèrement le fouet; surface claire entre les écumes.",
+            "action": "Verser la crème et commencer à réduire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Collez et collez-la avant que la crème ne soit même dedans.",
+            "action": "fouetter dans un peu de bouillon chaud pour le desserrer avant d'ajouter la crème."
+          }
+        ]
       },
-      feelCue: "Feel the gentle thickening grab the whisk as it boils — that grab is the starch setting. The simmer should be a lazy blip, never a rolling boil.",
+      "feelCue": "Sentez que l'épaississement doux attrape le fouet à mesure qu'il bouillit — c'est l'amidon qui sert. La mijoter doit être un blip paresseux, jamais un ébullition."
     },
     {
-      nodeId: "step_3", action: "Reduce",
-      inputs: ["loose_veloute", "ing_09"],
-      outputState: "reduced_supreme",
-      instructions: "Pour the heavy cream into the simmering velouté. Reduce gently over medium-low heat, stirring often and scraping the bottom, until the sauce is enriched, ivory, and thick enough to coat the back of a spoon. This cream reduction is what turns a plain velouté into a suprême — expect to lose roughly a third of the volume.",
-      visualCue: {
-        primaryTarget: "A glossy, ivory sauce reduced until it nappes a spoon — draw a finger across the coated spoon and the line holds clean without flooding back. It falls from the spoon in slow, heavy ribbons.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is pale and loose, runs off the spoon in a thin sheet, tastes more of cream than concentrated chicken.", action: "Keep reducing at a gentle simmer, stirring, until the volume drops and the flavor concentrates." },
-          { state: "Perfect",   description: "Rich ivory, glossy, coats a spoon in a clean nappe. Tastes deeply of chicken rounded by cream.", action: "Pull off the heat to mount with cold butter." },
-          { state: "Overdone",  description: "Reduced too far — heavy, sticky, beginning to catch and brown on the pan bottom, edges turning tan.", action: "Whisk in a splash of warm stock or cream at once to loosen, and lower the heat before it scorches." },
-        ],
+      "nodeId": "step_3",
+      "action": "Réduire",
+      "inputs": [
+        "loose_veloute",
+        "ing_09"
+      ],
+      "outputState": "reduced_supreme",
+      "instructions": "Verser la crème lourde dans le velours mijotant. Réduire doucement à feu moyen-doux, en remuant souvent et en grattant le fond, jusqu'à ce que la sauce soit enrichie, l'ivoire et assez épaisse pour enrober l'arrière d'une cuillère. Cette réduction de crème est ce qui transforme un velouté uni en suprême — s'attend à perdre environ un tiers du volume.",
+      "visualCue": {
+        "primaryTarget": "Une sauce ivoire brillante réduit jusqu'à ce qu'elle nappe une cuillère — tirez un doigt sur la cuillère enduite et la ligne tient propre sans inonder. Il tombe de la cuillère dans des rubans lents et lourds.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est pâle et lâche, sort de la cuillère dans une mince feuille, goûte plus de crème que le poulet concentré.",
+            "action": "Continuer à réduire à mijoter doucement, en remuant, jusqu'à ce que le volume tombe et que la saveur se concentre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche ivoire, brillant, enrobe une cuillère dans une serviette propre. Goûte profondément de poulet arrondi à la crème.",
+            "action": "Tirez le feu pour monter avec du beurre froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "Réduit trop loin — lourd, collant, commençant à attraper et brunir sur le fond de la poêle, bords tournant bronzant.",
+            "action": "fouetter dans un jet de bouillon chaud ou de crème à la fois pour se détendre, et baisser la chaleur avant qu'elle scorse."
+          }
+        ]
       },
-      feelCue: "Stir and you feel the sauce thicken under the spoon and start to whisper against the pan bottom — that drag tells you it is nearly reduced. It smells of concentrated roast-chicken richness.",
+      "feelCue": "Mélanger et vous sentez la sauce épaissir sous la cuillère et commencer à murmurer contre le fond de la poêle — qui traîne vous dit qu'il est presque réduit. Il sent la richesse concentrée de poulet rôti."
     },
     {
-      nodeId: "step_4", action: "Mount",
-      inputs: ["reduced_supreme", "ing_10", "ing_04", "ing_05"],
-      outputState: "finished_supreme",
-      instructions: "Off the heat, whisk in the cold butter a cube at a time, swirling the pan, letting each piece melt into the sauce before adding the next (monter au beurre). This gives the suprême its mirror gloss and a final velvet richness. Season with salt and a touch of white pepper. Keep it warm but never let it boil after mounting, or the butter will split.",
-      visualCue: {
-        primaryTarget: "A flawless, mirror-glossy ivory sauce, thick and lush, that coats poached chicken in a clinging, satiny sheet. The surface shines; it falls from the spoon in heavy, glossy ribbons.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce looks matte and flat — the butter has not yet been worked in, or only partly.", action: "Keep whisking in cold butter off the heat, cube by cube, until the surface turns glossy and the sauce thickens slightly." },
-          { state: "Perfect",   description: "High-shine, ivory, velvety; clings to a spoon and to chicken alike; tastes round, rich, and clean.", action: "Serve immediately over poultry — it is at its best the moment it is finished." },
-          { state: "Overdone",  description: "Sauce has been boiled or overheated after mounting — it looks oily and broken, with a slick of fat separating out.", action: "Pull off the heat and whisk in a splash of cold cream or a few drops of cold water to bring the emulsion back together." },
-        ],
+      "nodeId": "step_4",
+      "action": "Monter",
+      "inputs": [
+        "reduced_supreme",
+        "ing_10",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "finished_supreme",
+      "instructions": "Hors du feu, fouetter dans le beurre froid un cube à la fois, tourbillonner la poêle, laisser chaque morceau fondre dans la sauce avant d'ajouter le suivant (monter au beurre). Cela donne au suprême son miroir brillant et une richesse finale en velours. Assaisonner de sel et une touche de poivre blanc. Gardez-le au chaud, mais ne le laissez jamais bouillir après le montage, ou le beurre se fendra.",
+      "visualCue": {
+        "primaryTarget": "Une sauce d'ivoire sans défaut, avec un miroir brillant, épaisse et luxuriante, qui enrobe le poulet poché dans une feuille collante et satinée. La surface brille; elle tombe de la cuillère dans des rubans lourds et brillants.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce semble mate et plate — le beurre n'a pas encore été travaillé, ou seulement partiellement.",
+            "action": "Continuez à fouetter dans le beurre froid hors du feu, cube par cube, jusqu'à ce que la surface devienne brillante et que la sauce épaississe légèrement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Haut de gamme, ivoire, velours; s'accroche à une cuillère et au poulet; goût rond, riche et propre.",
+            "action": "Servir immédiatement sur la volaille — c'est à son meilleur au moment où elle est terminée."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été bouillie ou surchauffée après le montage — elle a l'air grasse et cassée, avec une fine graisse qui se sépare.",
+            "action": "Tirez le feu et fouettez dans une éclaboussure de crème froide ou quelques gouttes d'eau froide pour ramener l'émulsion ensemble."
+          }
+        ]
       },
-      feelCue: "As the cold butter melts in, the sauce visibly tightens and gleams under the whisk and feels heavier and silkier on the spoon. It should pour like warm satin, never greasy.",
-    },
-  ],
+      "feelCue": "Au fur et à mesure que le beurre froid fond, la sauce se resserre visiblement sous le fouet et se sent plus lourde et plus soyeuse sur la cuillère. Il devrait verser comme du satin chaud, jamais gras."
+    }
+  ]
 };

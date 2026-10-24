@@ -1,82 +1,198 @@
 export default {
-  repoId: "master_italian_bruschetta_pomodoro_001",
-  parentRepoId: null,
-  slug: "bruschetta-pomodoro",
-  author: "ForkRecipe Kitchen",
-  title: "Bruschetta al Pomodoro",
-  description: "Toasted bread rubbed with raw garlic, piled with ripe tomatoes macerated with basil and olive oil — the truest test of your tomatoes and your olive oil, requiring nothing to improve on either.",
-  cuisine: "Italian",
-  culture: "Roman / Central Italian",
-  category: "condiments",
-  tags: ["tomato", "bread", "italian", "antipasto", "summer"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 3, bitter: 1, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Sourdough or ciabatta (sliced 2 cm thick)",           ratioValue: 100, defaultUnit: "parts", substitutions: ["Tuscan unsalted bread", "baguette"] },
-    { ingId: "ing_02", role: "Base",      name: "Very ripe tomatoes (San Marzano, Roma, or vine-ripe)", ratioValue: 80,  defaultUnit: "parts", substitutions: ["cherry tomatoes, halved", "heirloom tomatoes"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves (halved, raw, for rubbing)",            ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Extra-virgin olive oil (best quality)",               ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh basil leaves (torn, not cut)",                  ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Flaky sea salt (Maldon or Sicilian)",                 ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Acid",      name: "Red wine vinegar (optional, just a few drops)",       ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_bruschetta_pomodoro_001",
+  "parentRepoId": null,
+  "slug": "bruschetta-pomodoro",
+  "author": "ForkRecipe Kitchen",
+  "title": "Bruschetta al Pomodoro",
+  "description": "Le pain grillé frotté avec de l'ail cru, empilé de tomates mûres macérées avec du basilic et de l'huile d'olive — le test le plus vrai de vos tomates et de votre huile d'olive, ne nécessitant rien d'améliorer non plus.",
+  "cuisine": "Italien",
+  "culture": "Roman / Italien central",
+  "category": "condiments",
+  "tags": [
+    "tomates",
+    "pain",
+    "Italien",
+    "antipasto",
+    "été"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Marinate",
-      inputs: ["ing_02", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "macerated_tomatoes",
-      instructions: "Core the tomatoes and hand-crush or dice roughly into 1–2 cm chunks — leave the seeds and juice in if they smell good; discard the watery liquid if the tomatoes are very large. Combine in a bowl with the torn basil, a generous pinch of flaky salt, the olive oil, and the optional drops of red wine vinegar. Toss gently and leave to macerate at room temperature for exactly 10–15 minutes — no longer. The salt draws juice from the tomatoes to form a light, emulsified dressing; too long and the tomatoes become waterlogged.",
-      visualCue: {
-        primaryTarget: "Tomato pieces gleaming with olive oil; pooled pink-red juice in the bottom of the bowl; basil vivid green and beginning to darken very slightly at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "No liquid has pooled; tomatoes are dry and the basil has not wilted at all; flavors are not yet married.", action: "Wait another 5 minutes; do not skip the macerating time." },
-          { state: "Perfect",   description: "A few tablespoons of tomato-olive oil liquid in the bowl; tomatoes look juicy and glistening; basil is vivid but barely softened; smell is sweet, acidic, and grassy.", action: "Toast the bread immediately and assemble." },
-          { state: "Overdone",  description: "Tomatoes have released excessive liquid and look waterlogged; basil is dark and limp; acidity is sharp.", action: "Drain some of the excess liquid but not all — a little juice is essential for the toast to absorb." },
-        ],
-      },
-      feelCue: "Lift a piece of macerated tomato — it should feel slightly heavier than raw tomato, yielding at the edges, and leave a slick of fragrant olive oil and juice on your fingers.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Soudough ou ciabatta (collé 2 cm d'épaisseur)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pain non salé toscan",
+        "baguette"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Grill",
-      inputs: ["ing_01"],
-      outputState: "toasted_bread",
-      instructions: "Grill the bread slices on a ridged grill pan over high heat, or under a hot broiler, or directly on the embers of a wood fire if available — the char is the point. Cook 1–2 minutes per side until deeply golden-brown with clear grill marks and a hard, crispy texture all the way through. The exterior should be almost crunchy; the interior still has a slight chew. Remove from the heat and immediately, while scorching hot, rub the cut face of a garlic clove across the rough, toasted surface — rub once, firmly. The garlic will grate itself against the rough texture; rub only once per slice or it becomes overpowering.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown toast with clear, dark grill marks; hard and crisp when tapped; surface visibly roughened from the heat, ready to catch the garlic.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold, still soft in the center; surface is not yet rough and toasty.", action: "Return to the grill for another minute; bruschetta needs firm, crunchy toast that can hold tomato without going soggy immediately." },
-          { state: "Perfect",   description: "Deep golden, almost charred at the ridges; snaps cleanly if broken; surface is rough and slightly gritty from toasting.", action: "Rub with garlic immediately while hot and top with tomatoes." },
-          { state: "Overdone",  description: "Black grill marks covering most of the surface; bitter char taste throughout.", action: "Scrape the blackest bits lightly with a knife; a little char is authentic, a lot is not." },
-        ],
-      },
-      feelCue: "Perfectly toasted bruschetta bread should feel rigid and light in your hand — if it flexes or feels dense, it needed more time on the grill.",
+      "ingId": "ing_02",
+      "role": "Base",
+      "name": "Tomates très mûres (San Marzano, Roma ou mûre de vigne)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates cerises, coupées en deux",
+        "tomates héritières"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["toasted_bread", "ing_03", "macerated_tomatoes"],
-      outputState: "finished_bruschetta",
-      instructions: "Rub the hot toast with the cut face of a garlic clove using one firm swipe — once only. Spoon the macerated tomatoes generously onto each slice, including the pooled olive oil and tomato juices from the bowl. The bread should be loaded: Italians do not make dainty bruschetta. Finish with one more drizzle of raw extra-virgin olive oil and an extra pinch of flaky salt. Eat immediately — within 2–3 minutes of assembly. Bruschetta waits for no one: after 5 minutes the toast softens and the dish is lost.",
-      visualCue: {
-        primaryTarget: "Tomatoes piled generously over golden toast; pink-red juices beginning to soak into the bread's crust; olive oil glistening; basil bright green against the red.",
-        spectrum: [
-          { state: "Underdone", description: "Tomatoes placed sparingly; toast still looks dry; no juice soaking in; garlic not rubbed.", action: "Add more tomatoes and their juice; apply the garlic rub if not done." },
-          { state: "Perfect",   description: "Loaded with tomatoes; edges of the toast beginning to absorb the juice while the center stays crunchy; olive oil glistens; the first bite gives a crunch followed by a burst of sweet, acid tomato.", action: "Eat immediately." },
-          { state: "Overdone",  description: "Toast has fully softened from the tomato juice; bread is soggy and collapses when lifted.", action: "This is a timing failure — reassemble on fresh toast. The tomatoes are still good." },
-        ],
-      },
-      feelCue: "The first bite of a perfect bruschetta delivers an audible crunch followed instantly by the cold, sweet rush of tomato and olive oil — the contrast of crisp-hot toast and room-temperature fruit is the whole dish.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles à l'ail (chaudées, brutes, pour frotter)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge (meilleure qualité)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Feuilles de basilic fraîches (tornées, non coupées)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel de mer blanc (Maldon ou sicilien)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Vin rouge (en option, quelques gouttes seulement)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_02",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "macerated_tomatoes",
+      "instructions": "Noyez les tomates et écrasez ou désez à la main environ en morceaux de 1 à 2 cm — laissez les graines et le jus s'ils sentent bon; jetez le liquide aqueux si les tomates sont très grandes. Mélanger dans un bol avec le basilic déchiré, une pincée généreuse de sel flocé, l'huile d'olive et les gouttes optionnelles de vinaigre de vin rouge. Jeter doucement et laisser macérer à température ambiante pendant exactement 10-15 minutes — pas plus. Le sel tire le jus des tomates pour former une vinaigrette légère et émulsifiée; trop longue et les tomates deviennent waterlogged.",
+      "visualCue": {
+        "primaryTarget": "Morceaux de tomates brillants à l'huile d'olive; jus rose-rouge poêlé dans le fond du bol; basilic vert vif et commençant à s'assombrir très légèrement aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Aucun liquide n'a été mis en commun; les tomates sont sèches et le basilic n'a pas flétri du tout; les saveurs ne sont pas encore mariées.",
+            "action": "Attendez encore 5 minutes; ne sautez pas le temps de macération."
+          },
+          {
+            "state": "Perfect",
+            "description": "Quelques cuillères à soupe de liquide d'huile d'olive de tomate dans le bol; les tomates ont l'air juteuses et brillantes; le basilic est vif mais à peine adouci; l'odeur est douce, acide et herbacée.",
+            "action": "Faire griller le pain immédiatement et assembler."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tomates ont libéré un liquide excessif et ont l'air déchiquetées; le basilic est sombre et boiteux; l'acidité est nette.",
+            "action": "Égoutter une partie de l'excès de liquide mais pas la totalité — un peu de jus est essentiel pour que le toast absorbe."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un morceau de tomate macérée — il doit se sentir légèrement plus lourd que la tomate crue, donnant aux bords, et laisser une léchée d'huile d'olive parfumée et de jus sur vos doigts."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Grille",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "toasted_bread",
+      "instructions": "Faire griller les tranches de pain sur une grille à feu vif, ou sous une grille chaude, ou directement sur les braises d'un feu de bois si disponible — l'omble est le point. Cuire de 1 à 2 minutes de chaque côté jusqu'à ce qu'il soit profondément doré-brun avec des marques claires et une texture dure et croustillante. L'extérieur devrait être presque croquant; l'intérieur a encore une petite mâche. Retirer du feu et frotter immédiatement la face coupée d'une gousse d'ail sur la surface rugueuse et grillée — frotter une fois fermement. L'ail se râpe contre la texture rugueuse; frotter seulement une fois par tranche ou il devient trop puissant.",
+      "visualCue": {
+        "primaryTarget": "Toast doré-brun profond avec des marques de grill clair et foncé; dur et croustillant quand tapoté; surface visiblement rugueuse du feu, prête à attraper l'ail.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle, encore doux au centre; la surface n'est pas encore rugueuse et grillée.",
+            "action": "Retourner au grill pour une minute de plus; le brunchetta a besoin d'un toast ferme et croustillant qui peut tenir la tomate sans se faire bousculer immédiatement."
+          },
+          {
+            "state": "Perfect",
+            "description": "D'or profond, presque carbonisé sur les crêtes; craque proprement s'il est cassé; la surface est rugueuse et légèrement gribouillée par le toast.",
+            "action": "Ajouter immédiatement l'ail au chaud et garnir de tomates."
+          },
+          {
+            "state": "Overdone",
+            "description": "Marques de grill noir couvrant la plus grande partie de la surface; goût d'omble amer à travers.",
+            "action": "Frapper les morceaux les plus noirs légèrement avec un couteau; un peu d'omble est authentique, beaucoup ne l'est pas."
+          }
+        ]
+      },
+      "feelCue": "Le pain bruschetta parfaitement grillé devrait se sentir rigide et léger dans votre main — s'il fléchit ou se sent dense, il a besoin de plus de temps sur le grill."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "toasted_bread",
+        "ing_03",
+        "macerated_tomatoes"
+      ],
+      "outputState": "finished_bruschetta",
+      "instructions": "Frottez le toast chaud avec la face coupée d'une gousse d'ail à l'aide d'une seule fois. Déposer généreusement les tomates macérées sur chaque tranche, y compris l'huile d'olive mise en commun et les jus de tomate du bol. Le pain doit être chargé: les Italiens ne font pas de bruschetta dainty. Terminer avec une autre bruine d'huile d'olive extra vierge brute et une pincée supplémentaire de sel flocé. Mangez immédiatement — dans les 2-3 minutes suivant l'assemblage. Bruschetta n'attend personne : après 5 minutes, le toast s'adoucit et le plat est perdu.",
+      "visualCue": {
+        "primaryTarget": "Tomates empilées généreusement sur des toasts dorés; jus de rose-rouge qui commencent à tremper dans la croûte du pain; huile d'olive scintillement; basilic vert vif contre le rouge.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Tomates placées parcimonieusement; toast encore à l'air sec; pas de trempage de jus; ail non frotté.",
+            "action": "Ajouter plus de tomates et leur jus; appliquer le frotter d'ail si ce n'est pas fait."
+          },
+          {
+            "state": "Perfect",
+            "description": "Charge de tomates; les bords du toast commencent à absorber le jus tandis que le centre reste croquant; l'huile d'olive brille; la première bouchée donne une croûte suivie d'une explosion de tomates douces et acides.",
+            "action": "Mangez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le toast s'est complètement adouci à partir du jus de tomate; le pain est soyeux et s'effondre lorsqu'il est soulevé.",
+            "action": "Il s'agit d'une panne de temps — se réunir sur un toast frais. Les tomates sont toujours bonnes."
+          }
+        ]
+      },
+      "feelCue": "La première bouchée d'un bruschetta parfait délivre un crunch audible suivi instantanément par la vague froide et sucrée de tomates et d'huile d'olive.Le contraste entre toast chaud et fruits à température ambiante est le plat entier."
+    }
+  ]
 };

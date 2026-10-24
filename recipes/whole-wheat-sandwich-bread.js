@@ -1,104 +1,232 @@
 export default {
-  repoId: "master_american_whole_wheat_sandwich_001",
-  parentRepoId: null,
-  slug: "whole-wheat-sandwich-bread",
-  author: "ForkRecipe Kitchen",
-
-  title: "Whole Wheat Sandwich Bread",
-  description: "A tender, slightly sweet whole-grain loaf built for the everyday sandwich — soft enough to compress under a knife without tearing, with just enough whole wheat earthiness to make you feel like you've done something right.",
-  cuisine: "American",
-  culture: "Home Baking",
-  category: "breads",
-
-  tags: ["whole-wheat", "sandwich", "everyday", "loaf", "soft", "home-baking"],
-  difficulty: 2,
-  activeTime: "40 min",
-  totalTime: "3 hr 30 min",
-  ratioSystem: "parts",
-
-  stars: 982,
-  forks: 112,
-  contributors: 41,
-  license: "CC-BY-SA",
-  createdAt: "2024-12-01",
-  updatedAt: "2025-02-20",
-
-  flavorRadar: { sweet: 2, salty: 2, sour: 1, bitter: 1, umami: 1, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Whole wheat flour",                    ratioValue: 50,  defaultUnit: "parts", substitutions: ["white whole wheat flour"] },
-    { ingId: "ing_02", role: "Structure",  name: "All-purpose flour",                    ratioValue: 50,  defaultUnit: "parts", substitutions: ["bread flour"] },
-    { ingId: "ing_03", role: "Hydration",  name: "Warm water (105°F)",                   ratioValue: 72,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Leavener",   name: "Instant dry yeast",                    ratioValue: 1.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Honey",                                ratioValue: 4,   defaultUnit: "parts", substitutions: ["maple syrup", "sugar"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine salt",                            ratioValue: 1.8, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",        name: "Neutral oil (canola or sunflower)",     ratioValue: 3,   defaultUnit: "parts", substitutions: ["melted butter"] },
+  "repoId": "master_american_whole_wheat_sandwich_001",
+  "parentRepoId": null,
+  "slug": "whole-wheat-sandwich-bread",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pain de sandwich au blé entier",
+  "description": "Un pain tendre et légèrement sucré à grains entiers construit pour le sandwich quotidien – assez doux pour compresser sous un couteau sans déchirer, avec juste assez de terre de blé entier pour vous faire sentir comme si vous aviez fait quelque chose de bien.",
+  "cuisine": "Américain",
+  "culture": "Chez soi",
+  "category": "breads",
+  "tags": [
+    "blé entier",
+    "sandwich",
+    "tous les jours",
+    "pain",
+    "doux",
+    "à domicile"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "40 min",
+  "totalTime": "3 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 982,
+  "forks": 112,
+  "contributors": 41,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-12-01",
+  "updatedAt": "2025-02-20",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "soaked_flour",
-      instructions: "Combine both flours with the warm water and mix until no dry flour remains. Cover and rest for 20 minutes. This brief soaker hydrates the bran in the whole wheat flour, giving it time to absorb water and soften the sharp bran edges that would otherwise cut through the gluten network and produce a dense, crumbly loaf. Whole wheat bran is hygroscopic — pre-hydrating it dramatically improves the final crumb's tenderness.",
-      visualCue: {
-        primaryTarget: "A rough, uniformly moist dough mass with no dry spots. Color will be medium brown from the whole wheat.",
-        spectrum: [
-          { state: "Underdone", description: "Dry flour patches still visible. Mixture is not fully combined.", action: "Mix another minute by hand, ensuring all flour is moistened." },
-          { state: "Perfect",   description: "Uniform moist dough. No dry patches. Rough surface with slight tackiness. Ready for the rest period.", action: "Cover and rest 20 minutes before adding yeast and other ingredients." },
-          { state: "Overdone",  description: "Over-mixed before adding other ingredients — no real harm done at this stage.", action: "Proceed to add remaining ingredients." },
-        ],
-      },
-      feelCue: "The soaked flour should feel like cool, damp modeling clay — dense and uniform. Press it and it should hold an impression without springing back at all. The whole wheat adds a slightly gritty texture at this stage.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de blé entier",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "farine de blé blanc entier"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Knead",
-      inputs: ["soaked_flour", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "developed_sandwich_dough",
-      instructions: "Add yeast, honey, salt, and oil to the soaked flour mixture. Mix on low in a stand mixer until combined, then increase to medium and knead for 8–10 minutes. The dough will be softer and stickier than white bread dough due to the whole wheat's lower gluten yield. Resist adding extra flour — a slightly tacky dough produces a moister, more tender loaf. The dough is ready when it passes a rough windowpane: thin enough to see light, even if it tears slightly.",
-      visualCue: {
-        primaryTarget: "A soft, slightly tacky dough that cleans the bowl after kneading. Smoother than when started but still somewhat rough-surfaced.",
-        spectrum: [
-          { state: "Underdone", description: "Tears immediately when stretched. Rough and uneven. Won't hold a ball shape.", action: "Continue kneading on medium for 3–5 more minutes." },
-          { state: "Perfect",   description: "Soft, tacky but not sticky. Clears bowl sides. Stretches 3–4cm before tearing — not a full windowpane but close.", action: "Proof in oiled bowl until doubled, about 60–90 minutes." },
-          { state: "Overdone",  description: "Tight, fighting the hook. Feels warm.", action: "Rest 10 minutes and proceed." },
-        ],
-      },
-      feelCue: "Whole wheat sandwich dough should feel softer and slightly stickier than pure white bread dough — like soft putty with just a hint of graininess from the bran. It should stick just faintly to your hand when you touch it but release cleanly.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "farine de pain"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Shape",
-      inputs: ["developed_sandwich_dough"],
-      outputState: "shaped_loaf",
-      instructions: "After doubling, punch down the dough and turn onto a lightly floured surface. Pat into a rectangle roughly the width of your 9×5 loaf pan. Fold the two short ends toward the center, then roll the dough away from you into a tight cylinder. Pinch the seam closed. Place seam-side down in a greased 9×5 pan. The cylinder should fill the pan 60–70% full. Cover and proof until the crown rises 2–3cm above the pan rim, about 45–60 minutes at 75°F.",
-      visualCue: {
-        primaryTarget: "The dough crown sits 2–3cm above the pan rim, slightly domed and airy when shaken. When poked, the indent springs back halfway in 3 seconds.",
-        spectrum: [
-          { state: "Underdone", description: "Crown still level with or below the rim. Dough feels dense when jiggled.", action: "Continue proofing in a warm spot, covered." },
-          { state: "Perfect",   description: "Crown domed 2–3cm above the rim. Airy jiggle. Poke springs back halfway slowly.", action: "Bake at 375°F for 30–35 minutes." },
-          { state: "Overdone",  description: "Crown peeking 5+ cm above the rim, sagging slightly over the sides.", action: "Bake immediately. The crust will dome less in the oven but the bread will still be fine." },
-        ],
-      },
-      feelCue: "Before baking, the proofed loaf should feel like a very full water balloon — taut and airy, yielding to the slightest touch but holding its shape overall. The dough surface should feel dry and warm from proofing.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau chaude (105°F)",
+      "ratioValue": 72,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["shaped_loaf"],
-      outputState: "finished_sandwich_bread",
-      instructions: "Bake at 375°F (190°C) for 30–35 minutes until the top is deep golden brown and the internal temperature reaches 190–195°F (88–90°C). An instant-read thermometer is the most reliable test. Cool in the pan for 10 minutes, then unmold and cool completely on a wire rack — at least 1 hour. The crumb sets as it cools; slicing early produces a gummy texture and compresses the slices permanently.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown top crust, slightly pulled away from the pan sides. Internal temperature 190–195°F. Bottom taps hollow.",
-        spectrum: [
-          { state: "Underdone", description: "Pale top. Internal temp below 185°F. The loaf sounds dense when tapped. May collapse slightly when removed from pan.", action: "Return to oven for 8 more minutes, tent with foil to prevent further browning." },
-          { state: "Perfect",   description: "Deep golden dome. Internal 190°F. Hollow knock. When sliced after cooling, the crumb is tender and slightly moist without being gummy.", action: "Cool fully on a wire rack before slicing." },
-          { state: "Overdone",  description: "Dark brown top, deep amber sides. Internal over 200°F. Crumb may be dry.", action: "Cool and slice — it will make excellent toast." },
-        ],
-      },
-      feelCue: "After cooling for an hour, the loaf should feel light and springy when squeezed gently from the sides. The crust will be firm but not hard. When sliced, each piece should hold its shape without crumbling or compressing — the test of a great sandwich bread.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "levure sèche instantanée",
+      "ratioValue": 1.2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Chérie",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sirop d'érable",
+        "sucre"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1.8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile neutre (canola ou tournesol)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre fondu"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "soaked_flour",
+      "instructions": "Mélanger les deux farines avec l'eau chaude et mélanger jusqu'à ce qu'aucune farine sèche ne reste. Couvrir et se reposer pendant 20 minutes. Ce court soaker hydrate le son dans la farine de blé entier, lui donnant le temps d'absorber l'eau et adoucir les bords aigus du son qui autrement couperaient à travers le réseau de gluten et produire un pain dense et friable. Le son de blé entier est hygroscopique — pré-hydratant, il améliore considérablement la sensibilité de la miette finale.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rugueuse et uniformément humide sans taches sèches. La couleur sera moyennement brune du blé entier.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La farine sèche est encore visible. Le mélange n'est pas entièrement combiné.",
+            "action": "Mélanger une autre minute à la main, en veillant à ce que toute la farine soit humidifiée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte humide uniforme. Pas de taches sèches. Surface dure avec légèreté. Prêt pour le repos.",
+            "action": "Couvrir et reposer 20 minutes avant d'ajouter la levure et d'autres ingrédients."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmélangé avant d'ajouter d'autres ingrédients — aucun mal réel n'a été fait à ce stade.",
+            "action": "Ajouter le reste des ingrédients."
+          }
+        ]
+      },
+      "feelCue": "La farine trempée devrait être comme de l'argile fraîche et humide, dense et uniforme. Appuyez dessus et il devrait retenir une impression sans retomber du tout. Le blé entier ajoute une texture légèrement granuleuse à ce stade."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Agenouillement",
+      "inputs": [
+        "soaked_flour",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "developed_sandwich_dough",
+      "instructions": "Ajouter la levure, le miel, le sel et l'huile au mélange de farine trempée. Mélanger en bas dans un mélangeur jusqu'à ce qu'il soit combiné, puis augmenter à moyen et pétrir pendant 8-10 minutes. La pâte sera plus douce et plus collante que la pâte à pain blanche en raison du faible rendement en gluten du blé entier. Résistez à ajouter de la farine supplémentaire — une pâte légèrement collante produit un pain plus humide et plus tendre. La pâte est prête quand elle passe une vitre rugueuse : assez mince pour voir la lumière, même si elle déchire légèrement.",
+      "visualCue": {
+        "primaryTarget": "Une pâte douce et légèrement collante qui nettoie le bol après le pétrissage. Plus lisse qu'au début, mais encore un peu rugueuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Larmes immédiatement lorsqu'elles sont tendues. Dure et inégale. Ne tiendra pas une forme de balle.",
+            "action": "Continuer à pétrir sur le milieu pendant 3 à 5 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Douce, collante mais pas collante. Efface les côtés du bol. Attachez 3-4cm avant de déchirer — pas une fenêtre complète mais fermez.",
+            "action": "Preuve dans un bol huilé jusqu'à doublé, environ 60 à 90 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Je me bats contre le crochet. Ça fait chaud.",
+            "action": "Reposez-vous 10 minutes et continuez."
+          }
+        ]
+      },
+      "feelCue": "La pâte sandwiche au blé entier devrait être plus douce et légèrement plus collante que la pâte à pain blanche pure, comme du mastic doux avec un soupçon de grain du son. Il devrait coller légèrement à votre main quand vous le touchez mais relâchez-le proprement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "developed_sandwich_dough"
+      ],
+      "outputState": "shaped_loaf",
+      "instructions": "Après avoir doublé, frappez la pâte et tournez sur une surface légèrement farinée. Plongez dans un rectangle à peu près la largeur de votre poêle à pain 9×5. Plier les deux bouts courts vers le centre, puis rouler la pâte loin de vous dans un cylindre serré. Pincez la couture fermée. Placer le bord de la couture dans une casserole graissée 9×5. Le cylindre doit remplir la casserole de 60 à 70 %. Couvrez et étalez jusqu'à ce que la couronne s'élève de 2 à 3 cm au-dessus de la jante, environ 45 à 60 minutes à 75°F.",
+      "visualCue": {
+        "primaryTarget": "La couronne de pâte est située de 2 à 3 cm au-dessus du bord de la poêle, légèrement bombée et aérée lorsqu'elle est secouée. Lorsqu'il est poché, le tiret ressort à mi-chemin en 3 secondes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Couronne toujours à niveau avec ou sous la jante. La toux est dense quand elle est jiggée.",
+            "action": "Continuer la mise à l'épreuve dans un endroit chaud, couvert."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couronne bombée 2–3cm au-dessus de la jante. Un coup d'air. Poke revient lentement.",
+            "action": "Cuire à 375°F pendant 30 à 35 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Crown regardant 5 + cm au-dessus de la jante, se collant légèrement sur les côtés.",
+            "action": "Faites cuire immédiatement. La croûte dômera moins dans le four, mais le pain sera encore bien."
+          }
+        ]
+      },
+      "feelCue": "Avant la cuisson, le pain éprouvé doit se sentir comme un ballon d'eau très plein — tendu et aéré, donnant au moindre toucher mais tenant sa forme globale. La surface de la pâte doit se sentir sèche et chaude à partir de l'épreuve."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "shaped_loaf"
+      ],
+      "outputState": "finished_sandwich_bread",
+      "instructions": "Cuire au four à 375°F (190°C) pendant 30 à 35 minutes jusqu'à ce que le dessus soit doré et que la température interne atteigne 190 à 195°F (88 à 90°C). Un thermomètre à lecture instantanée est le test le plus fiable. Laisser refroidir dans la casserole pendant 10 minutes, puis démolder et refroidir complètement sur un support de fil — au moins 1 heure. La miette se met à refroidir; la coupe précoce produit une texture gommante et compresse les tranches de façon permanente.",
+      "visualCue": {
+        "primaryTarget": "Une croûte bien dorée, légèrement retirée des côtés de la poêle. Température intérieure 190-195°F. Des robinets creux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Haut pâle. Température intérieure inférieure à 185°F. Le pain semble dense quand il est tapé. Peut s'effondrer légèrement lorsqu'il est retiré de la poêle.",
+            "action": "Retourner au four 8 minutes de plus, tenter avec du papier pour éviter un brunissement supplémentaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dôme d'or profond. Interne 190°F. Un coup creux. En tranches après refroidissement, la miette est tendre et légèrement humide sans être gommée.",
+            "action": "Refroidir complètement sur une grille avant de trancher."
+          },
+          {
+            "state": "Overdone",
+            "description": "Haut brun foncé, côtés ambrés profonds. Interne sur 200°F. La croûte peut être sèche.",
+            "action": "Refroidir et couper — il fera un excellent toast."
+          }
+        ]
+      },
+      "feelCue": "Après avoir refroidi pendant une heure, le pain doit se sentir léger et printanier lorsqu'il est pressé doucement des côtés. La croûte sera ferme mais pas dure. Lorsqu'elle est coupée, chaque pièce doit tenir sa forme sans s'effondrer ni se comprimer — l'épreuve d'un grand pain sandwich."
+    }
+  ]
 };

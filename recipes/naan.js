@@ -1,127 +1,329 @@
 export default {
-  repoId: "master_indian_naan_001",
-  parentRepoId: null,
-  slug: "naan",
-  author: "ForkRecipe Kitchen",
-  title: "Naan",
-  description: "The tandoor classic, coaxed onto a home stovetop — a yogurt-and-yeast dough slapped thin, blistered black-and-gold over screaming cast iron, and finished with a slick of garlic-butter and a torn handful of coriander. Soft, chewy, charred, and pillowed with steam.",
-  cuisine: "Indian",
-  culture: "Punjabi",
-  category: "breads",
-  tags: ["naan", "indian", "flatbread", "yeasted", "tandoor", "yogurt"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "3 hours",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 1, salty: 2, sour: 2, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Bread flour (or all-purpose)",        ratioValue: 100, defaultUnit: "%", substitutions: ["maida (Indian refined flour)"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Whole-milk yogurt (full-fat, plain)", ratioValue: 35,  defaultUnit: "%", substitutions: ["thinned Greek yogurt"] },
-    { ingId: "ing_03", role: "Liquid",     name: "Warm milk or water",                  ratioValue: 25,  defaultUnit: "%", substitutions: ["warm water"] },
-    { ingId: "ing_04", role: "Leavener",   name: "Instant yeast",                       ratioValue: 1,   defaultUnit: "%", substitutions: ["active dry yeast (bloom first)"] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Sugar",                               ratioValue: 2,   defaultUnit: "%", substitutions: ["honey"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine sea salt",                       ratioValue: 1.8, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",        name: "Neutral oil or ghee",                 ratioValue: 6,   defaultUnit: "%", substitutions: ["softened butter"] },
-    { ingId: "ing_08", role: "Fat",        name: "Ghee or melted butter (for finishing)", ratioValue: 8, defaultUnit: "%", substitutions: ["clarified butter"] },
-    { ingId: "ing_09", role: "Allium",     name: "Garlic, finely minced",               ratioValue: 3,   defaultUnit: "%", substitutions: ["nigella (kalonji) seeds for a seeded naan"] },
-    { ingId: "ing_10", role: "Garnish",    name: "Fresh coriander, chopped",            ratioValue: 2,   defaultUnit: "%", substitutions: ["nigella seeds", "flaky salt"] },
+  "repoId": "master_indian_naan_001",
+  "parentRepoId": null,
+  "slug": "naan",
+  "author": "ForkRecipe Kitchen",
+  "title": "Naan",
+  "description": "Le classique tandoor, coaxé sur une cuisinière à la maison — un yogourt-and-yeast pâte giflé mince, blister noir-and-or sur hurlant fonte, et fini avec une paille d'ail-butter et une poignée déchirée de coriandre. Doucement, mâcher, carbonisé et oreiller à la vapeur.",
+  "cuisine": "Indiens",
+  "culture": "Punjabi",
+  "category": "breads",
+  "tags": [
+    "naan",
+    "indienne",
+    "Pain plat",
+    "levures",
+    "Tangle",
+    "yaourt"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "3 hours",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "shaggy_dough",
-      instructions: "Whisk the instant yeast and sugar into the warm milk and let it sit a minute. In a large bowl, combine the flour and salt, then make a well and add the yeast-milk, the yogurt, and the oil. Mix with a spoon, then your hand, until no dry flour remains and a rough, sticky mass comes together. The yogurt's acidity and the milk sugars are what give naan its tang and its quick-browning crust, so don't substitute them away lightly.",
-      visualCue: {
-        primaryTarget: "A shaggy, tacky, slightly sticky ball that has pulled together with no dry floury patches left in the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Dry flour still streaks the bottom of the bowl and the dough cracks apart rather than holding.", action: "Dribble in warm water a teaspoon at a time until everything hydrates into one mass. Naan dough should be wetter than you expect." },
-          { state: "Perfect",   description: "A cohesive, rough ball that sticks lightly to your fingers and the bowl but pulls cleanly off a wet hand. Soft and slack, not stiff.", action: "Turn out and knead, or just rest five minutes and knead in the bowl." },
-          { state: "Overdone",  description: "The dough is a loose, soupy batter that won't hold any shape.", action: "Work in flour a tablespoon at a time until it firms into a sticky-but-handleable dough." },
-        ],
-      },
-      feelCue: "The dough should feel tacky and alive against your palm, clinging just enough to tug back when you pull your hand away. It smells faintly sour from the yogurt and sweet from the warm milk.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain (ou tout usage)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "(farine raffinée indienne)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Knead",
-      inputs: ["shaggy_dough"],
-      outputState: "smooth_dough",
-      instructions: "Knead on a lightly oiled surface for 8 to 10 minutes (or 5 minutes in a stand mixer with the dough hook) until the dough turns smooth, supple, and elastic. Resist adding much flour — keep your hands and the bench lightly oiled instead, so the dough stays soft. You are building just enough gluten for the bread to puff and tear into chew without going tough.",
-      visualCue: {
-        primaryTarget: "A smooth, satiny, slightly tacky ball that springs back slowly when pressed and passes a loose windowpane — stretching thin without immediately ripping.",
-        spectrum: [
-          { state: "Underdone", description: "The surface is still lumpy and rough, and a poke leaves a dent that doesn't recover. Pulled thin, it tears at once.", action: "Keep kneading a few more minutes. The dough will transform from raggy to silky fairly suddenly near the end." },
-          { state: "Perfect",   description: "Smooth and elastic with a faint sheen; pressed, it springs back halfway. A stretched piece thins to translucency before tearing.", action: "Round into a ball, oil lightly, and set to rise." },
-          { state: "Overdone",  description: "By hand this is nearly impossible, but with a machine the dough can go slack, shiny, and start to tear in strings.", action: "Stop immediately and let it rest 15 minutes; the gluten will relax and re-tighten on its own." },
-        ],
-      },
-      feelCue: "Properly kneaded naan dough feels like a soft, warm earlobe — smooth, springy, and faintly tacky, with no stickiness sticking to your fingers when you let go.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Yogourt de lait entier (graisse pleine, ordinaire)",
+      "ratioValue": 35,
+      "defaultUnit": "%",
+      "substitutions": [
+        "yogourt grec éclairci"
+      ]
     },
     {
-      nodeId: "step_3", action: "Proof",
-      inputs: ["smooth_dough"],
-      outputState: "risen_dough",
-      instructions: "Place the dough in a lightly oiled bowl, cover, and leave somewhere warm to rise until roughly doubled — about 1 to 2 hours depending on your kitchen. A full, slow rise deepens flavour, so don't rush it with too much heat. When risen, gently deflate, divide into 6 to 8 equal pieces, round each into a ball, and rest them covered for another 15 minutes so the gluten relaxes and the dough rolls out without fighting back.",
-      visualCue: {
-        primaryTarget: "A puffy, domed dough roughly doubled in size, webbed with bubbles underneath, that holds a slow-filling dent when poked.",
-        spectrum: [
-          { state: "Underdone", description: "The dough has barely grown and springs straight back when poked, with few bubbles.", action: "Give it more time and warmth. A cool kitchen can easily double the rise time — patience makes lighter naan." },
-          { state: "Perfect",   description: "Nearly doubled, domed, and jiggly, with visible bubbles; a poked dent fills back in slowly and only partway.", action: "Deflate gently, divide, ball up, and rest the portions before rolling." },
-          { state: "Overdone",  description: "The dough has crested and collapsed, smells sharply sour and boozy, and the surface is slack and pocked.", action: "Knock it back firmly, reshape, and proceed — it will still bake well, just with a tangier, more fermented flavour." },
-        ],
-      },
-      feelCue: "A well-proofed dough feels light and airy in the hand, almost weightless for its size, and sighs softly when you press the gas out of it.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Lait chaud ou eau chaude",
+      "ratioValue": 25,
+      "defaultUnit": "%",
+      "substitutions": [
+        "eau chaude"
+      ]
     },
     {
-      nodeId: "step_4", action: "Shape",
-      inputs: ["risen_dough"],
-      outputState: "stretched_naan",
-      instructions: "Set a heavy cast-iron skillet or tawa over high heat for a full 5 minutes until it is smoking-hot — this is your stand-in for the tandoor. Meanwhile, on a lightly floured surface, roll or stretch each ball into a teardrop or oval about 5 to 6 inches long and a generous 3 to 4 millimetres thick, leaving it slightly thicker than a tortilla. Don't roll it paper-thin; naan needs body to puff. Brush the top lightly with water just before it hits the pan — the moisture helps it grip and steam.",
-      visualCue: {
-        primaryTarget: "An uneven teardrop of dough, thicker in the middle and tapering at the edges, supple and stretchy with a few small surface bubbles.",
-        spectrum: [
-          { state: "Underdone", description: "Rolled too thick and small, the naan stays dense and doughy and won't blister well.", action: "Stretch it out a little thinner and wider; aim for an oval roughly the length of your hand." },
-          { state: "Perfect",   description: "An irregular teardrop with a bit of thickness left in it, soft and pliable, dotted with tiny gas bubbles.", action: "Brush the top with water and lay it onto the screaming-hot pan." },
-          { state: "Overdone",  description: "Stretched too thin and translucent, with holes torn through it.", action: "Pinch the holes shut or gather and re-ball the dough, rest a few minutes, and roll again more gently." },
-        ],
-      },
-      feelCue: "The stretched dough should feel cool, soft, and a touch elastic, tugging back gently as you pull it wider. You'll hear the pan ripple with heat the instant a drop of water flicked onto it skitters and vanishes.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": [
+        "levure sèche active (bloom d'abord)"
+      ]
     },
     {
-      nodeId: "step_5", action: "Sear",
-      inputs: ["stretched_naan"],
-      outputState: "blistered_naan",
-      instructions: "Lay the naan wet-side-down onto the dry, smoking pan. Within a minute it will balloon up with steam and the underside will char in dark spots — cover with a lid for 30 seconds to trap heat and encourage the puff. When the top is bubbling and the bottom is blistered black-and-gold, flip and cook the second side 30 to 60 seconds until spotted too. For an even more tandoor-like char, hold the puffed naan with tongs directly over an open gas flame for a few seconds. Keep finished breads wrapped in a towel to stay soft.",
-      visualCue: {
-        primaryTarget: "A dramatically puffed, leopard-spotted flatbread — charred dark in patches, golden between them, soft and steaming inside.",
-        spectrum: [
-          { state: "Underdone", description: "The naan lies flat and pale with no spots, and the surface still looks raw and doughy.", action: "The pan isn't hot enough — let it reheat, and don't move the naan; give it time to puff and colour before flipping." },
-          { state: "Perfect",   description: "Big steam bubbles, deep charred spots ringed with gold on both sides, and a soft, pliable bread that folds without cracking.", action: "Pull it off, brush at once with the garlic-ghee, and wrap warm." },
-          { state: "Overdone",  description: "The naan is stiff, uniformly dark-to-black, and crackly rather than soft.", action: "It's gone past pliable into crisp — still tasty torn into pieces, but lower the heat and shorten the time on the next one." },
-        ],
-      },
-      feelCue: "Listen for the sizzle-and-hiss the second the dough touches metal, then watch it dome and tremble with trapped steam. A perfect naan flexes softly when you fold it; a tap on the bottom sounds dry and toasted, not wet.",
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Chérie"
+      ]
     },
     {
-      nodeId: "step_6", action: "Finish",
-      inputs: ["blistered_naan", "ing_08", "ing_09", "ing_10"],
-      outputState: "finished_naan",
-      instructions: "Warm the ghee or melted butter with the minced garlic just until fragrant — don't brown the garlic. The moment each naan comes off the heat, brush it generously with the garlic-ghee so it soaks into the hot, open crumb, then scatter with chopped coriander. Serve immediately, stacked and wrapped in a clean towel to hold their softness and steam.",
-      visualCue: {
-        primaryTarget: "A glistening, garlic-flecked naan, the butter pooling in its charred craters, strewn with bright green coriander.",
-        spectrum: [
-          { state: "Underdone", description: "The bread looks dull and dry, the butter sitting on top without sinking in.", action: "Brush while it's piping hot so the fat melts into the crumb — cold naan won't drink it up the same way." },
-          { state: "Perfect",   description: "Glossy and fragrant, the garlic-butter absorbed into a soft, blistered surface and freckled with herbs.", action: "Stack, wrap in a towel, and serve at once alongside curry or dal." },
-          { state: "Overdone",  description: "The naan is sodden and greasy, slick with pooled butter it can't absorb.", action: "Ease off the brush on the next one — a light sweep is plenty. Blot the excess and serve." },
-        ],
-      },
-      feelCue: "The finished naan should feel soft, warm, and supple, releasing a wave of toasted garlic and butter as you tear it. The crumb pulls apart in steamy, chewy strands rather than crumbling.",
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.8,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile neutre ou ghee",
+      "ratioValue": 6,
+      "defaultUnit": "%",
+      "substitutions": [
+        "beurre ramolli"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Beurre fondu (pour finissage)",
+      "ratioValue": 8,
+      "defaultUnit": "%",
+      "substitutions": [
+        "beurre clarifié"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Allium",
+      "name": "Ail, finement haché",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": [
+        "graines de nigella (calonji) pour un naan ensemencé"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Coriandre fraîche, hachée",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Graines de nigella",
+        "Sel flocé"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "shaggy_dough",
+      "instructions": "fouetter la levure instantanée et le sucre dans le lait chaud et laisser reposer une minute. Dans un grand bol, mélanger la farine et le sel, puis faire un puits et ajouter le lait de levure, le yogourt et l'huile. Mélanger avec une cuillère, puis votre main, jusqu'à ce qu'il ne reste plus de farine sèche et qu'une masse rugueuse et collante se combine. L'acidité du yogourt et les sucres de lait sont ce qui donne à naan son tang et sa croûte de croissance rapide, alors ne les remplacez pas légèrement.",
+      "visualCue": {
+        "primaryTarget": "Une boule chaotique, tacky, légèrement collante qui s'est tirée ensemble sans laisser de taches farinées sèches dans le bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La farine sèche stries toujours le fond du bol et la pâte se disloque plutôt que de tenir.",
+            "action": "Dribblez dans l'eau chaude une cuillère à café à la fois jusqu'à ce que tout s'hydrate en une seule masse. La pâte de Naan devrait être plus humide que prévu."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une boule cohésive et rugueuse qui colle légèrement aux doigts et au bol, mais qui tire proprement d'une main mouillée. Douce et molle, pas raide.",
+            "action": "Il s'avère et pétrir, ou juste reposer cinq minutes et pétrir dans le bol."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est une pâte molle et soupeuse qui ne tient aucune forme.",
+            "action": "Travaillez dans la farine une cuillère à soupe à la fois jusqu'à ce qu'elle s'enfonce dans une pâte collante mais maniable."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir collante et vivante contre votre paume, s'accrocher juste assez pour tirer en arrière quand vous retirez votre main. Il sent légèrement amer du yogourt et doux du lait chaud."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Agenouillement",
+      "inputs": [
+        "shaggy_dough"
+      ],
+      "outputState": "smooth_dough",
+      "instructions": "Agenouillez sur une surface légèrement huilée pendant 8 à 10 minutes (ou 5 minutes dans un mélangeur avec le crochet de pâte) jusqu'à ce que la pâte devienne lisse, souple et élastique. Résistez à ajouter beaucoup de farine — gardez vos mains et le banc légèrement huilé à la place, de sorte que la pâte reste douce. Vous construisez juste assez de gluten pour que le pain puisse souffler et se déchirer en mâcher sans être dur.",
+      "visualCue": {
+        "primaryTarget": "Une balle lisse, satinée, légèrement collante, qui ressort lentement lorsqu'elle est pressée et passe une vitre lâche, s'étirant mince sans se déchirer immédiatement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est encore bosselée et rugueuse, et un poke laisse une bosse qui ne se rétablit pas. Tiré mince, il déchire immédiatement.",
+            "action": "Continuez à pétrir encore quelques minutes. La pâte se transformera de racy à soyeux assez soudainement près de la fin."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux et élastique avec un léger reflet; pressé, il ressort à mi-chemin. Une pièce étirée s'amincit à la translucidité avant de déchirer.",
+            "action": "Tourner dans une boule, huiler légèrement, et se mettre à monter."
+          },
+          {
+            "state": "Overdone",
+            "description": "À la main, c'est presque impossible, mais avec une machine la pâte peut se relâcher, briller, et commencer à se déchirer en cordes.",
+            "action": "Arrêtez immédiatement et laissez reposer 15 minutes; le gluten se détendrea et se refermera seul."
+          }
+        ]
+      },
+      "feelCue": "Une pâte naan bien pétrie ressemble à un lobe d'oreille doux et chaud — lisse, printanière et légèrement collante, sans collant aux doigts lorsque vous lâchez."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Preuve",
+      "inputs": [
+        "smooth_dough"
+      ],
+      "outputState": "risen_dough",
+      "instructions": "Placer la pâte dans un bol légèrement huilé, couvrir et laisser quelque part au chaud pour se lever jusqu'à ce qu'elle ait pratiquement doublé — environ 1 à 2 heures selon votre cuisine. Une montée pleine et lente approfondit la saveur, alors ne la précipitez pas avec trop de chaleur. En levant, dégonflez doucement, divisez en 6 à 8 morceaux égaux, autour chacun dans une boule, et reposez-les couverts pendant encore 15 minutes afin que le gluten se détende et la pâte se roule sans se battre.",
+      "visualCue": {
+        "primaryTarget": "Une pâte gonflée et dôme a grosso modo doublée de la taille, avec des bulles en dessous, qui tient une bosselure lente lorsqu'elle est cuite.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte a à peine grandi et ressort tout droit lorsqu'elle est cuite, avec peu de bulles.",
+            "action": "Donne-lui plus de temps et de chaleur. Une cuisine fraîche peut facilement doubler le temps de montée — la patience rend Naan plus léger."
+          },
+          {
+            "state": "Perfect",
+            "description": "Presque doublé, bombé, et jiggly, avec des bulles visibles; une bosse se remplit lentement et seulement en partie.",
+            "action": "Déflacez doucement, divisez, billez et reposez les portions avant de rouler."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a cramponné et s'est effondrée, sent fortement aigre et boueux, et la surface est molle et pochée.",
+            "action": "Recollez-le fermement, reformez-le et continuez — il fera encore bien cuire, juste avec une saveur plus tangente et plus fermentée."
+          }
+        ]
+      },
+      "feelCue": "Une pâte bien protégée se sent légère et aérée dans la main, presque sans poids pour sa taille, et soupire doucement lorsque vous pressez le gaz hors de lui."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Forme",
+      "inputs": [
+        "risen_dough"
+      ],
+      "outputState": "stretched_naan",
+      "instructions": "Réglez une poêle en fonte lourde ou un tawa à feu vif pendant 5 minutes jusqu'à ce qu'il soit chaud au fumage. Pendant ce temps, sur une surface légèrement farinée, rouler ou étirer chaque boule dans une goutte lacrymogène ou ovale d'environ 5 à 6 pouces de long et une généreuse 3 à 4 millimètres d'épaisseur, la laissant légèrement plus épaisse qu'une tortilla. Ne roulez pas le papier-mince; naan a besoin de corps pour souffler. Badigeonner légèrement le haut de l'eau juste avant qu'il frappe la casserole — l'humidité l'aide à saisir et à vapeur.",
+      "visualCue": {
+        "primaryTarget": "Une goutte de pâte inégale, plus épaisse au milieu et s'amenuisant aux bords, souple et extensible avec quelques petites bulles de surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Roulé trop épais et petit, le naan reste dense et pâteux et ne va pas bien clocher.",
+            "action": "Étirez-le un peu plus fin et plus large; visez un ovale à peu près la longueur de votre main."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une goutte lacrymogène irrégulière avec un peu d'épaisseur laissée en elle, douce et souple, parsemée de minuscules bulles de gaz.",
+            "action": "Badigeonner le dessus d'eau et le poser sur la poêle chaude."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop mince et translucide, avec des trous déchirés.",
+            "action": "Pincez les trous fermés ou ramassez et re-ballez la pâte, reposez-vous quelques minutes, et roulez encore plus doucement."
+          }
+        ]
+      },
+      "feelCue": "La pâte étirée doit se sentir fraîche, douce, et un toucher élastique, se remorquant doucement en la tirant plus large. Vous entendrez l'ondulation de la poêle avec la chaleur à l'instant une goutte d'eau s'est éclaboussée et disparaît."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Sear",
+      "inputs": [
+        "stretched_naan"
+      ],
+      "outputState": "blistered_naan",
+      "instructions": "Placez le naan côté humide sur la casserole sèche et fumante. En moins d'une minute, il s'envolera avec de la vapeur et le dessous s'carbonera dans des taches sombres — couvrir avec un couvercle pendant 30 secondes pour piéger la chaleur et encourager la bouffée. Lorsque le haut est bouillonnant et que le bas est blister noir et or, retourner et cuire le deuxième côté 30 à 60 secondes jusqu'à ce qu'il soit repéré aussi. Pour un char encore plus tandoor, tenez le naan gonflé avec des pinces directement sur une flamme de gaz ouverte pendant quelques secondes. Gardez les pains finis enveloppés dans une serviette pour rester doux.",
+      "visualCue": {
+        "primaryTarget": "Un pain plat fulgurant, tacheté de léopard, carbonisé dans des taches sombres, doré entre elles, doux et à l'intérieur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le naan est plat et pâle sans taches, et la surface semble toujours crue et pâteuse.",
+            "action": "La poêle n'est pas assez chaude — laissez-la réchauffer, et ne bougez pas le naan; donnez-lui le temps de souffler et de colorer avant de retourner."
+          },
+          {
+            "state": "Perfect",
+            "description": "Grandes bulles de vapeur, taches carbonisées profondes sonnées d'or des deux côtés, et un pain souple et souple qui se plie sans craquelure.",
+            "action": "Tirez-le, brossez immédiatement avec l'ail-ghee, et enveloppez au chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le naan est raide, uniformément sombre à noir, et craquant plutôt que doux.",
+            "action": "Il est passé au-delà pliable en croustillant — encore savoureux déchiré en morceaux, mais baisser la chaleur et raccourcir le temps sur le prochain."
+          }
+        ]
+      },
+      "feelCue": "Écoutez le sizzle-and-hiss la seconde la pâte touche le métal, puis regardez le dôme et trembler avec la vapeur piégée. Un naan parfait se fléchit doucement quand on le plie; un robinet sur le fond semble sec et grillé, pas mouillé."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Finition",
+      "inputs": [
+        "blistered_naan",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_naan",
+      "instructions": "Chauffer le ghee ou le beurre fondu avec l'ail haché jusqu'à ce qu'il soit parfumé — ne pas faire revenir l'ail. Le moment où chaque naan sort du feu, le brosser généreusement avec l'ail-ghee afin qu'il trempe dans la miette chaude et ouverte, puis disperser avec la coriandre hachée. Servir immédiatement, empilé et enveloppé dans une serviette propre pour tenir leur douceur et la vapeur.",
+      "visualCue": {
+        "primaryTarget": "Un naan à l'ail brillant, le beurre pooling dans ses cratères carbonisés, parsemé de coriandre vert vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pain semble terne et sec, le beurre assis sur le dessus sans couler dedans.",
+            "action": "Badigeonner pendant qu'il fait chaud pour que la graisse fond dans la miette — le naan froid ne la boira pas de la même façon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire et parfumée, le beurre d'ail absorbé dans une surface molle et blister et roussée d'herbes.",
+            "action": "Empiler, envelopper une serviette et servir à la fois avec le curry ou le dal."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le naan est sodden et gras, lissé avec du beurre baumé qu'il ne peut absorber.",
+            "action": "Soulagez le pinceau sur le prochain — un léger balayage est beaucoup. Bloquez l'excès et servez."
+          }
+        ]
+      },
+      "feelCue": "Le naan fini devrait se sentir doux, chaud et souple, libérant une vague d'ail grillé et de beurre pendant que vous le déchirez. La miette se détache en brins boueux et mâchés plutôt que de s'effondrer."
+    }
+  ]
 };

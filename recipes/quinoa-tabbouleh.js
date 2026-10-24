@@ -1,83 +1,249 @@
 export default {
-  repoId: "master_levantine_quinoa_tabbouleh_001",
-  parentRepoId: null,
-  slug: "quinoa-tabbouleh",
-  author: "ForkRecipe Kitchen",
-  title: "Quinoa Tabbouleh",
-  description: "A gluten-free riff on the Levantine herb salad — cooked quinoa standing in for bulgur, but the spirit kept luminously intact: mostly flat-leaf parsley and fresh mint, punctuated by sweet tomato and cool cucumber, all dressed generously in sharp lemon and grassy olive oil.",
-  cuisine: "Middle Eastern",
-  culture: "Levantine",
-  category: "grains",
-  tags: ["middle-eastern", "levantine", "salad", "quinoa", "gluten-free", "vegan", "dairy-free"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "40 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 2, sour: 4, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "White quinoa",                    ratioValue: 150,  defaultUnit: "g",   substitutions: ["tricolor quinoa", "fine bulgur wheat for the original"] },
-    { ingId: "ing_02", role: "Herb",       name: "Flat-leaf parsley, finely chopped", ratioValue: 80,  defaultUnit: "g",  substitutions: ["curly parsley at a stretch, but flat-leaf is correct"] },
-    { ingId: "ing_03", role: "Herb",       name: "Fresh mint leaves, finely chopped", ratioValue: 20,  defaultUnit: "g",  substitutions: ["spearmint preferred over peppermint"] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Ripe tomatoes, seeded and finely diced", ratioValue: 300, defaultUnit: "g", substitutions: ["cherry tomatoes, quartered"] },
-    { ingId: "ing_05", role: "Aromatic",   name: "Persian or English cucumber, finely diced", ratioValue: 200, defaultUnit: "g", substitutions: ["Lebanese cucumber"] },
-    { ingId: "ing_06", role: "Allium",     name: "Scallions (spring onions), thinly sliced", ratioValue: 4, defaultUnit: "whole", substitutions: ["a small amount of very finely minced white onion"] },
-    { ingId: "ing_07", role: "Acid",       name: "Fresh lemon juice",               ratioValue: 60,   defaultUnit: "ml",  substitutions: ["white wine vinegar in an emergency"] },
-    { ingId: "ing_08", role: "Fat",        name: "Extra-virgin olive oil",          ratioValue: 60,   defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning",  name: "Fine sea salt",                   ratioValue: 6,    defaultUnit: "g",   substitutions: ["kosher salt"] },
-    { ingId: "ing_10", role: "Spice",      name: "Freshly ground black pepper",     ratioValue: 2,    defaultUnit: "g",   substitutions: ["white pepper"] },
-    { ingId: "ing_11", role: "Hydration",  name: "Cold water (for cooking quinoa)", ratioValue: 300,  defaultUnit: "ml",  substitutions: [] },
+  "repoId": "master_levantine_quinoa_tabbouleh_001",
+  "parentRepoId": null,
+  "slug": "quinoa-tabbouleh",
+  "author": "ForkRecipe Kitchen",
+  "title": "Quinoa Tabbouleh",
+  "description": "Un riff sans gluten sur la salade d'herbe de Levantine — quinoa cuit debout pour le bulgur, mais l'esprit maintenu lumineusement intact: principalement du persil à feuilles plates et de la menthe fraîche, ponctué de tomates douces et de concombre frais, le tout généreusement vêtu de citron vif et d'huile d'olive herbacée.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Levantine",
+  "category": "grains",
+  "tags": [
+    "Moyen-Orient",
+    "lévantine",
+    "salade",
+    "quinoa",
+    "Sans gluten",
+    "végétalien",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "40 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Rinse and cook",
-      inputs: ["ing_01", "ing_11"],
-      outputState: "cooked_quinoa",
-      instructions: "Rinse the quinoa under cold running water for a full 60 seconds in a fine-mesh sieve, rubbing the grains between your palms. This removes the bitter saponin coating. Combine with the water in a small saucepan and bring to a boil over medium heat. Reduce to the lowest simmer, cover, and cook 12–14 minutes until all water is absorbed. Remove from heat and let steam, covered, for 5 minutes. Then tip onto a large tray or baking sheet and spread into a thin layer to cool completely to room temperature — adding warm quinoa to the salad will wilt the herbs and cook the vegetables.",
-      visualCue: {
-        primaryTarget: "Each grain of quinoa should have its tiny tail — the germ — spiraled out and visible, like a small white curl around the seed. The grain is fully cooked when the tail is unfurled and the grain is translucent rather than opaque.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are opaque and chalky at the center and the tail has not fully spiraled. The texture is crunchy and unpleasant.", action: "Add 2 tablespoons of water, re-cover, and cook 3 more minutes." },
-          { state: "Perfect",   description: "Every grain is translucent with its white tail curled neatly around it. The quinoa is fluffy and light with a gentle nuttiness. No water remains in the pan.", action: "Spread on a tray and leave to cool fully — at least 15 minutes — before assembling." },
-          { state: "Overdone",  description: "Grains have burst and turned mushy, the germ indistinguishable. The texture is wet and porridge-like.", action: "Spread very thin on a tray and refrigerate — cooling sometimes firms up slightly overcooked quinoa enough to use." },
-        ],
-      },
-      feelCue: "Cooled quinoa should feel light and dry to the touch, individual grains separate when you run a finger through them. Any clumping means it went into the bowl still warm.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Quinoa blanc",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "quinoa tricolore",
+        "bourdons fins pour l'original"
+      ]
     },
     {
-      nodeId: "step_2", action: "Prep herbs and vegetables",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "chopped_salad_components",
-      instructions: "The knife work here makes or breaks tabbouleh. Strip the parsley leaves from their stems (save stems for stock) and chop very finely — almost to a near-paste in texture, not a rough chop. The mint should be treated the same way. Dice the seeded tomatoes and cucumber to a uniformly fine dice, roughly 5mm. Slice the scallions thinly, including most of the green tops. Tabbouleh is a parsley salad with other ingredients; if the quinoa is dominant, you've made a grain bowl. Parsley should be the visual and volumetric majority.",
-      visualCue: {
-        primaryTarget: "A pile of vivid emerald-green parsley and mint, finely and uniformly chopped with no long stems, alongside neat ruby tomato dice and pale cucumber cubes, all of similar small size.",
-        spectrum: [
-          { state: "Underdone", description: "The parsley is roughly torn or coarsely chopped in uneven pieces. The tomato has been left in large wedges.", action: "Go back and chop finer — the texture of tabbouleh depends on fine, even cuts throughout." },
-          { state: "Perfect",   description: "The herbs look almost like bright green sand — very fine, clinging together slightly from their own moisture. Tomato and cucumber are tidy, matching dice.", action: "Combine all prepared vegetables with the cooled quinoa." },
-          { state: "Overdone",  description: "You over-chopped the parsley into a wet, dark-green paste that's releasing liquid and beginning to oxidize.", action: "Use it as-is but dress and serve immediately — it won't hold." },
-        ],
-      },
-      feelCue: "Pinch a small amount of the chopped parsley — it should feel slightly damp from its own moisture and cling together loosely without releasing pools of liquid.",
+      "ingId": "ing_02",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, haché finement",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "persil bouclé à l'étirement, mais feuille plate est correcte"
+      ]
     },
     {
-      nodeId: "step_3", action: "Dress and rest",
-      inputs: ["cooked_quinoa", "chopped_salad_components", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "finished_quinoa_tabbouleh",
-      instructions: "In a large bowl, combine the cooled quinoa with the chopped herbs, tomatoes, cucumber and scallions. Drizzle over the lemon juice and olive oil, season with salt and pepper, and toss gently but thoroughly. Taste and adjust — authentic tabbouleh is assertively lemony and well-salted; it should make your eyes water slightly with the brightness of lemon. Let rest at room temperature for 10–15 minutes before serving — this brief rest allows the quinoa to absorb the dressing and the flavors to marry.",
-      visualCue: {
-        primaryTarget: "A vivid green salad flecked with red tomato and white quinoa, glistening with olive oil. The parsley should remain bright emerald, not yellowed or wilted.",
-        spectrum: [
-          { state: "Underdone", description: "The salad looks dry and the dressing sits in a pool at the bottom rather than coating the ingredients.", action: "Toss more thoroughly, then taste — it likely needs more salt and lemon to lift the flavor." },
-          { state: "Perfect",   description: "Every piece glistens. The herbs are vibrant green. The lemon and olive oil are absorbed into the quinoa and the first bite is bright, herby and sharp with lemon.", action: "Serve at room temperature, with warm flatbread alongside." },
-          { state: "Overdone",  description: "The salad was dressed too far in advance; the herbs have wilted and gone dark and the tomatoes have released so much water it has become soupy.", action: "Drain excess liquid from the bottom of the bowl and serve quickly — tabbouleh should be made day-of." },
-        ],
-      },
-      feelCue: "A good tabbouleh should feel light and cool — refreshing rather than filling. The quinoa gives a very subtle bite but should never feel grainy or starchy against the lush herbs.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Feuilles de menthe fraîches, hachées finement",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "menthe poivrée préférée à la menthe poivrée"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Tomates de ripe, ensemencées et en dés",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates cerises, en quartiers"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Concombre persan ou anglais, finement coupé en dés",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Concombre libanais"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Échalons (oignons de printemps), tranchés finement",
+      "ratioValue": 4,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "une petite quantité d'oignon blanc très finement haché"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de vin blanc en urgence"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivre blanc"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Hydration",
+      "name": "Eau froide (pour la cuisson du quinoa)",
+      "ratioValue": 300,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rincer et cuire",
+      "inputs": [
+        "ing_01",
+        "ing_11"
+      ],
+      "outputState": "cooked_quinoa",
+      "instructions": "Rincer le quinoa sous l'eau froide courante pendant 60 secondes dans un tamis à mailles fines, frotter les grains entre vos palmiers. Cela élimine le revêtement amer de la saponine. Mélanger avec l'eau dans une petite casserole et porter à ébullition à feu moyen. Réduire jusqu'à ce que l'eau mijote le moins, couvrir et cuire de 12 à 14 minutes jusqu'à ce que toute l'eau soit absorbée. Retirer du feu et laisser la vapeur couverte pendant 5 minutes. Conseillez ensuite sur un grand plateau ou une plaque de cuisson et étalez-vous dans une fine couche pour refroidir complètement à la température ambiante - ajouter le quinoa chaud à la salade va flétrir les herbes et cuire les légumes.",
+      "visualCue": {
+        "primaryTarget": "Chaque grain de quinoa devrait avoir sa petite queue — le germe — en spirale et visible, comme une petite boucle blanche autour de la graine. Le grain est entièrement cuit lorsque la queue est défournée et le grain est translucide plutôt que opaque.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont opaques et crayeux au centre et la queue n'a pas complètement spirale. La texture est croquante et désagréable.",
+            "action": "Ajouter 2 cuillères à soupe d'eau, recouvrir et cuire encore 3 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain est translucide avec sa queue blanche enroulée soigneusement autour. Le quinoa est moelleux et léger avec une douceur de noix. Aucune eau ne reste dans la casserole.",
+            "action": "Étaler sur un plateau et laisser refroidir complètement — au moins 15 minutes — avant d'être assemblé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains ont éclaté et se sont musqués, le germe est indistinguable. La texture est humide et de type porridge.",
+            "action": "Répartir très fin sur un plateau et réfrigérer — le refroidissement permet parfois de faire monter le quinoa légèrement trop cuit pour l'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Le quinoa refroidi doit se sentir léger et sec au toucher, les grains individuels se séparent lorsque vous les traversez. Tout accrochage signifie qu'il est entré dans le bol encore chaud."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Préparation d'herbes et de légumes",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "chopped_salad_components",
+      "instructions": "Le couteau fait ou casse le tabou. Enlevez les feuilles de persil de leurs tiges (sauvegarder les tiges pour le bouillon) et hachez très finement — presque jusqu'à un quasi-collé en texture, pas une côte rugueuse. La menthe doit être traitée de la même façon. Couper les tomates ensemencées et le concombre en dés uniformément fins, d'environ 5 mm. Couper finement les pétoncles, y compris la plupart des dessus verts. Tabbouleh est une salade de persil avec d'autres ingrédients; si le quinoa est dominant, vous avez fait un bol de grain. Le persil doit être la majorité visuelle et volumétrique.",
+      "visualCue": {
+        "primaryTarget": "Un tas de persil vert émeraude vif et de menthe, finement et uniformément hachés sans longues tiges, aux côtés de dés de tomates rubis soignés et de cubes de concombre pâle, tous de petite taille semblables.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le persil est approximativement déchiré ou grossièrement haché en morceaux irréguliers. La tomate a été laissée dans de grands coins.",
+            "action": "Retourner et hacher plus fin — la texture du tabouleh dépend de la finesse, même les coupes à travers."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les herbes ressemblent presque à du sable vert vif — très fin, s'accrochant légèrement à leur propre humidité. La tomate et le concombre sont rangés, assortis de dés.",
+            "action": "Mélanger tous les légumes préparés avec le quinoa refroidi."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez excédé le persil dans une pâte humide et vert foncé qui libère du liquide et commence à s'oxyder.",
+            "action": "Utilisez-le comme-est mais habillez-vous et servez immédiatement — il ne tiendra pas."
+          }
+        ]
+      },
+      "feelCue": "Pincez une petite quantité de persil haché — il devrait se sentir légèrement humide de sa propre humidité et s'accrocher de façon lâche sans relâcher les réserves de liquide."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Robe et repos",
+      "inputs": [
+        "cooked_quinoa",
+        "chopped_salad_components",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_quinoa_tabbouleh",
+      "instructions": "Dans un grand bol, mélanger le quinoa refroidi avec les herbes hachées, les tomates, le concombre et les oignons. Arroser le jus de citron et l'huile d'olive, assaisonner de sel et de poivre, et mélanger doucement mais soigneusement. Goûtez et ajustez - le tabouleh authentique est fortement citronné et bien salé; il devrait faire vos yeux arroser légèrement avec la luminosité du citron. Laisser reposer à température ambiante 10-15 minutes avant de servir — ce bref repos permet au quinoa d'absorber la vinaigrette et les saveurs de se marier.",
+      "visualCue": {
+        "primaryTarget": "Une salade verte éclatante avec de la tomate rouge et du quinoa blanc, scintillant avec de l'huile d'olive. Le persil doit rester émeraude, non jaunâtre ni flétri.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La salade a l'air sèche et la vinaigrette est assise dans une piscine au fond plutôt que d'enrober les ingrédients.",
+            "action": "Dégustez plus soigneusement, puis goûtez - il a probablement besoin de plus de sel et de citron pour soulever la saveur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque pièce brille. Les herbes sont vert vif. Le citron et l'huile d'olive sont absorbés dans le quinoa et la première bouchée est brillante, herbie et pointue avec du citron.",
+            "action": "Servir à température ambiante, avec du pain plat chaud à côté."
+          },
+          {
+            "state": "Overdone",
+            "description": "La salade était habillée trop loin à l'avance; les herbes se sont flétries et sont devenues sombres et les tomates ont libéré tellement d'eau qu'elles sont devenues soupeuses.",
+            "action": "Égoutter l'excès de liquide du fond de la cuvette et servir rapidement."
+          }
+        ]
+      },
+      "feelCue": "Un bon tabouleh devrait se sentir léger et frais — rafraîchissant plutôt que de se remplir. Le quinoa donne une bouchée très subtile mais ne devrait jamais se sentir grainé ou féculent contre les herbes luxuriantes."
+    }
+  ]
 };

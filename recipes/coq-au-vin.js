@@ -1,128 +1,335 @@
 export default {
-  repoId: "master_french_coq_au_vin_001",
-  parentRepoId: null,
-  slug: "coq-au-vin",
-  author: "ForkRecipe Kitchen",
-  title: "Coq au Vin",
-  description: "The farmhouse classic of old France — chicken slowly braised in a whole bottle of red wine until the meat falls from the bone, lifted by smoky lardons, glazed pearl onions and earthy mushrooms, all bound into a deep, wine-dark sauce that smells of the cellar and the forest at once.",
-  cuisine: "French",
-  culture: "Burgundian",
-  category: "proteins",
-  tags: ["braise", "french", "chicken", "red-wine", "coq-au-vin", "bistro"],
-  difficulty: 3,
-  activeTime: "55 min",
-  totalTime: "2 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Chicken, bone-in (legs & thighs, patted dry)",       ratioValue: 100, defaultUnit: "parts", substitutions: ["whole chicken, jointed", "rooster (traditional)"] },
-    { ingId: "ing_02", role: "Fat",       name: "Smoked lardons (or thick-cut bacon, diced)",         ratioValue: 14,  defaultUnit: "parts", substitutions: ["pancetta"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Dry red wine (Pinot Noir, full bottle)",             ratioValue: 95,  defaultUnit: "parts", substitutions: ["Beaujolais", "any dry red"] },
-    { ingId: "ing_04", role: "Liquid",    name: "Chicken stock (warm)",                               ratioValue: 30,  defaultUnit: "parts", substitutions: ["veal stock"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Carrot, onion & celery (mirepoix, diced)",           ratioValue: 22,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic (crushed)",                                   ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Umami",     name: "Tomato paste",                                       ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Binder",    name: "Plain flour",                                        ratioValue: 5,   defaultUnit: "parts", substitutions: ["beurre manié at the finish"] },
-    { ingId: "ing_09", role: "Herb",      name: "Bouquet garni (thyme, bay, parsley stalks)",         ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Garnish",   name: "Pearl onions & button mushrooms (glazed in butter)", ratioValue: 32,  defaultUnit: "parts", substitutions: ["shallots", "cremini"] },
-    { ingId: "ing_11", role: "Seasoning", name: "Sea salt & black pepper",                            ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_coq_au_vin_001",
+  "parentRepoId": null,
+  "slug": "coq-au-vin",
+  "author": "ForkRecipe Kitchen",
+  "title": "Coq au Vin",
+  "description": "La ferme classique de la vieille France — le poulet braisé lentement dans une bouteille entière de vin rouge jusqu'à ce que la viande tombe de l'os, soulevé par des lardons fumés, des oignons de perles glacés et des champignons terreux, tous liés dans une sauce profonde et foncée qui sent la cave et la forêt à la fois.",
+  "cuisine": "Français",
+  "culture": "Burgundian",
+  "category": "proteins",
+  "tags": [
+    "braise",
+    "français",
+    "poulet",
+    "Vin rouge",
+    "Coq-au-vin",
+    "bistrot"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "55 min",
+  "totalTime": "2 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Render",
-      inputs: ["ing_02"],
-      outputState: "rendered_lardons",
-      instructions: "In a heavy Dutch oven over medium heat, cook the lardons in a dry pot until the fat renders out and the dice turn golden and crisp, 6-8 minutes. Lift them out with a slotted spoon and reserve, leaving the smoky rendered fat behind to brown the chicken. Don't let the fat smoke and scorch.",
-      visualCue: {
-        primaryTarget: "Crisp golden lardons sitting in a shallow pool of clear, faintly amber fat that smells of smoke and bacon.",
-        spectrum: [
-          { state: "Underdone", description: "Lardons are pale and floppy, much of the fat still white and unrendered, the pot nearly dry.", action: "Keep cooking gently — the fat you need to brown the chicken hasn't come out yet." },
-          { state: "Perfect",   description: "Crisp golden dice, a generous slick of rendered fat, a clean smoky aroma with no acridity.", action: "Remove the lardons and brown the chicken in the fat." },
-          { state: "Overdone",  description: "Lardons are dark brown and brittle; the fat is browning and starting to smoke with a sharp, burnt smell.", action: "Pull the pot off the heat to cool a moment; if the fat smells scorched, wipe it out and add a little oil." },
-        ],
-      },
-      feelCue: "Listen for a steady, gentle sizzle — not a violent spit. The kitchen fills with the smell of bacon, warm and sweet, never sharp.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Poulet, désossé (jambes et cuisses, galettes sèches)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poulet entier, jointure",
+        "coqs (traditionnels)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Sear",
-      inputs: ["rendered_lardons", "ing_01", "ing_11"],
-      outputState: "browned_chicken",
-      instructions: "Raise the heat to medium-high. Season the bone-dry chicken generously with salt and pepper. Brown the pieces skin-side down in the hot fat without crowding, until the skin is deep golden and releases cleanly, about 5 minutes, then turn and colour the other side. Work in batches if needed; crowding steams the skin pale. Remove the chicken and set aside with the lardons.",
-      visualCue: {
-        primaryTarget: "Skin is burnished deep gold and crisp, the pot floor painted with a sticky brown fond, the meat still raw at the centre.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is pale and flabby and sticks to the pot; the chicken sits in a simmering puddle instead of sizzling.", action: "The pan is too cool or crowded. Raise the heat, give the pieces room, and wait until they sizzle hard and release before turning." },
-          { state: "Perfect",   description: "Deep golden, crisp skin that lifts cleanly from the pot; the fond is dark amber and fragrant, not black.", action: "Set the chicken aside and soften the aromatics in the fond." },
-          { state: "Overdone",  description: "Skin is blackening and the fond on the pot floor is turning bitter and carbon-dark.", action: "Lower the heat immediately. If the fond is truly burnt, deglaze with a splash of wine and wipe it out before continuing." },
-        ],
-      },
-      feelCue: "The skin should hiss the moment it hits the fat and grip the pot — that grip is the crust forming. When it lets go on its own, it's ready to turn.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Lardons fumés (ou bacon épais coupé en dés)",
+      "ratioValue": 14,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pancetta"
+      ]
     },
     {
-      nodeId: "step_3", action: "Sweat",
-      inputs: ["browned_chicken", "ing_05", "ing_06", "ing_07"],
-      outputState: "softened_base",
-      instructions: "Lower the heat to medium. Add the mirepoix to the pot and cook in the chicken fat until softened and lightly caramelised, 8-10 minutes, scraping the fond loose as the vegetables release moisture. Stir in the garlic and tomato paste and cook until the paste darkens from bright red to brick and smells toasty, about 2 minutes.",
-      visualCue: {
-        primaryTarget: "Vegetables soft and glistening, onion translucent, and the tomato paste fried to a rusty brick colour that coats everything.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables still firm and pale; tomato paste is bright red and smells raw and sharp.", action: "Keep cooking and stirring — the paste needs to fry until it loses its raw, tinny edge." },
-          { state: "Perfect",   description: "Mirepoix is soft and golden at the edges, garlic fragrant, paste darkened to brick with a sweet, roasted aroma.", action: "Dust in the flour to build the thickener." },
-          { state: "Overdone",  description: "Vegetables are scorching and the paste is turning black and acrid, sticking hard to the pot.", action: "Pull off the heat and deglaze at once with a little wine to lift the fond before it burns bitter." },
-        ],
-      },
-      feelCue: "Stir often and feel the bottom of the pot — the spoon should drag through softening vegetables, not skate over a dry, sticking crust. The smell shifts from raw onion to sweet and roasted.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Vin rouge sec (Pinot Noir, bouteille pleine)",
+      "ratioValue": 95,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Beaujolais",
+        "tout rouge sec"
+      ]
     },
     {
-      nodeId: "step_4", action: "Deglaze",
-      inputs: ["softened_base", "ing_08", "ing_03"],
-      outputState: "wine_base",
-      instructions: "Sprinkle the flour over the vegetables and stir for 1-2 minutes to cook out the raw taste. Pour in the entire bottle of red wine, scraping the pot floor to dissolve all the fond. Bring to a brisk simmer and let it reduce by about a third, 8-10 minutes — this burns off the harsh alcohol and concentrates the wine into a true sauce base.",
-      visualCue: {
-        primaryTarget: "The wine has darkened from purple to deep garnet, lightly thickened by the flour, with a clean winey aroma and no raw alcohol sting.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is thin, pale purple, and the vapour stings your nose with raw alcohol.", action: "Keep it at a brisk simmer — reduce further until the harsh fumes soften into a mellow, fruity smell." },
-          { state: "Perfect",   description: "Reduced by about a third, glossy and deep garnet, lightly napping the spoon, smelling of warm fruit rather than spirit.", action: "Return the chicken and lardons and add the stock and bouquet garni." },
-          { state: "Overdone",  description: "Liquid has reduced to a thick, dark syrup and tastes sharply concentrated, almost bitter.", action: "Loosen it with a splash of the stock before it tightens further, and taste for over-concentration." },
-        ],
-      },
-      feelCue: "Lean over the pot and breathe in — when the nose-prickling alcohol gives way to a soft, fruity warmth, the wine is ready to carry the braise.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Poulet (chaud)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Viande bovine"
+      ]
     },
     {
-      nodeId: "step_5", action: "Braise",
-      inputs: ["wine_base", "ing_04", "ing_09"],
-      outputState: "braised_chicken",
-      instructions: "Return the chicken and lardons to the pot along with any juices, settling the pieces skin-side up. Pour in enough warm stock to come most of the way up the chicken and tuck in the bouquet garni. Bring to a bare simmer, then cover and transfer to a 160°C / 325°F oven (or hold the gentlest stovetop simmer). Cook for 1 to 1.25 hours until the meat is fork-tender and pulling from the bone.",
-      visualCue: {
-        primaryTarget: "The meat yields easily and slips from the bone, the sauce is rich and lightly thickened, and the surface barely trembles with the occasional lazy bubble.",
-        spectrum: [
-          { state: "Underdone", description: "Meat is still firm and clings tight to the bone; the sauce is thin and the wine tastes flat and unmarried.", action: "Cover and keep braising — another 20-30 minutes melts the connective tissue and marries the flavours." },
-          { state: "Perfect",   description: "Meat pulls from the bone at the nudge of a fork but still holds together; the sauce coats a spoon and tastes deep and unified.", action: "Lift out the chicken, discard the bouquet garni, and finish the garnish and sauce." },
-          { state: "Overdone",  description: "Meat is shredding into dry threads and falling apart; the sauce has cooked down too far and turned salty.", action: "Stop cooking immediately; loosen the sauce with a little stock and handle the fragile chicken gently." },
-        ],
-      },
-      feelCue: "Slide a fork into a thigh — at the right point the meat slumps off the bone like soft butter but the piece still holds its shape. Keep the simmer barely moving; a hard boil dries the meat.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Carotte, oignon et céleri (mirepoix, en dés)",
+      "ratioValue": 22,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_6", action: "Glaze & Finish",
-      inputs: ["braised_chicken", "ing_10", "ing_11"],
-      outputState: "finished_coq_au_vin",
-      instructions: "While the chicken rests, sauté the pearl onions and mushrooms in a little butter until golden and glazed. If the braising sauce is thin, lift out the chicken and simmer the sauce uncovered to reduce, skimming any fat from the surface. Fold the chicken, lardons, onions and mushrooms back into the sauce, warm through gently, and correct the seasoning. Rest 10 minutes off the heat before serving.",
-      visualCue: {
-        primaryTarget: "A glossy, wine-dark sauce naps the chicken and vegetables, just thick enough to coat the back of a spoon and hold a clean line when you draw a finger through it.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is watery and slides straight off the meat; the onions and mushrooms are pale and bland.", action: "Lift out the solids and reduce the sauce further; brown the garnish more deeply before folding it back in." },
-          { state: "Perfect",   description: "Sauce is glossy and lightly syrupy, clinging to every piece; onions glazed and tender, mushrooms golden and savoury, seasoning balanced.", action: "Rest briefly and serve over potato purée, buttered noodles, or crusty bread." },
-          { state: "Overdone",  description: "Sauce has reduced to a sticky, over-salted glaze that gums the spoon and dulls the wine's brightness.", action: "Loosen with a splash of warm stock and brighten with a few drops of the cooking wine; taste and re-balance the salt." },
-        ],
-      },
-      feelCue: "Drag a spoon across the sauce — it should leave a slowly closing trail, not a permanent dry channel. The finished dish smells of wine, smoke and forest mushrooms all at once, with no single note shouting over the others.",
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Ail (crus)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Binder",
+      "name": "Farine pure",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre manié à l'arrivée"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Bouquet garni (thyme, baie, tiges de persil)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Oignons perlés et champignons boutons (émaillés dans du beurre)",
+      "ratioValue": 32,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalotes",
+        "crémini"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel de mer & poivre noir",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rendu",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "rendered_lardons",
+      "instructions": "Dans un four hollandais lourd à feu moyen, faire cuire les lardons dans une casserole sèche jusqu'à ce que la graisse se rende et que les dés deviennent dorés et croustillants, 6-8 minutes. Soulevez-les avec une cuillère à fente et réservez, laissant la graisse fumée rendue derrière pour faire brunir le poulet. Ne laisse pas la fumée et la brûlure.",
+      "visualCue": {
+        "primaryTarget": "Crisp lardons dorés assis dans une piscine peu profonde de graisse claire et légèrement ambre qui sent la fumée et le bacon.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les lardons sont pâles et moelleux, une grande partie de la graisse encore blanche et non livrée, le pot presque sec.",
+            "action": "Continuez à cuisiner doucement — la graisse dont vous avez besoin pour brunir le poulet n'est pas encore sorti."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crisp dés d'or, une généreuse lécherette de gras rendu, un arôme fumé propre et sans acridité.",
+            "action": "Retirer les lardons et faire revenir le poulet dans la graisse."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les lardons sont brun foncé et cassants; la graisse est brune et commence à fumer avec une odeur vive et brûlée.",
+            "action": "Tirez le pot du feu pour refroidir un moment; si la graisse sent brûlé, essuyez-le et ajoutez un peu d'huile."
+          }
+        ]
+      },
+      "feelCue": "Écoutez un étourdissement doux et régulier — pas une crache violente. La cuisine se remplit de l'odeur de bacon, chaud et doux, jamais pointu."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "rendered_lardons",
+        "ing_01",
+        "ing_11"
+      ],
+      "outputState": "browned_chicken",
+      "instructions": "Augmenter le feu à moyen-élevé. Assaisonner généreusement le poulet désossé avec du sel et du poivre. Faire revenir les morceaux de la peau dans la graisse chaude sans encombrer, jusqu'à ce que la peau soit en or profond et libère proprement, environ 5 minutes, puis tourner et colorer l'autre côté. Travaillez en lots si nécessaire; encombrer la peau est pâle. Retirer le poulet et réserver avec les lardons.",
+      "visualCue": {
+        "primaryTarget": "La peau est brulée d'or profond et croquante, le sol en pot peint avec un fond brun collant, la viande encore crue au centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est pâle et flasque et colle au pot; le poulet est assis dans une flaque mijotante au lieu de grincer.",
+            "action": "La casserole est trop fraîche ou trop bondée. Levez la chaleur, donnez de la place aux pièces et attendez qu'elles s'étournent et relâchent avant de tourner."
+          },
+          {
+            "state": "Perfect",
+            "description": "D'or profond, la peau croustillante qui se lève proprement du pot; le fond est foncé ambre et parfumé, pas noir.",
+            "action": "Réserver le poulet et adoucir les arômes dans le fond."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau est noircie et le fond du pot devient amer et noir de carbone.",
+            "action": "Baissez immédiatement la chaleur. Si le fond est vraiment brûlé, déglacer avec un jet de vin et l'essuyer avant de continuer."
+          }
+        ]
+      },
+      "feelCue": "La peau doit siffler au moment où elle frappe la graisse et s'accroche au pot — cette prise est la croûte qui se forme. Quand il laisse aller tout seul, il est prêt à tourner."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sueur",
+      "inputs": [
+        "browned_chicken",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "softened_base",
+      "instructions": "Baisser le feu à moyen. Ajouter le mirepix dans la casserole et cuire dans la graisse de poulet jusqu'à ce qu'elle soit adoucie et légèrement caramélisée, de 8 à 10 minutes, en grattant le fond en vrac lorsque les légumes libèrent l'humidité. Incorporer l'ail et la pâte de tomate et cuire jusqu'à ce que la pâte s'assombrisse du rouge vif à la brique et sente grillé, environ 2 minutes.",
+      "visualCue": {
+        "primaryTarget": "Légumes doux et brillants, oignon translucide, et la pâte de tomate frit à une couleur brique rouillée qui enveloppe tout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Légumes encore fermes et pâles; la pâte de tomate est rouge vif et sent cru et vif.",
+            "action": "Continuez à cuisiner et à remuer — la pâte a besoin d'agglomérer jusqu'à ce qu'elle perde son bord brut et teinté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mirepoix est doux et doré aux bords, parfumé d'ail, pâte foncée à la brique avec un arôme doux et rôti.",
+            "action": "Poussière dans la farine pour construire l'épaississant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes brûlent et la pâte devient noire et acride, collant dur à la casserole.",
+            "action": "Tirez le feu et déglacez à la fois avec un peu de vin pour soulever le fond avant qu'il brûle amer."
+          }
+        ]
+      },
+      "feelCue": "Mélanger souvent et sentir le fond de la casserole — la cuillère doit glisser à travers les légumes adoucissants, pas patiner sur une croûte sèche et collante. L'odeur passe de l'oignon cru à l'oignon sucré et rôti."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Déglacement",
+      "inputs": [
+        "softened_base",
+        "ing_08",
+        "ing_03"
+      ],
+      "outputState": "wine_base",
+      "instructions": "Saupoudrer la farine sur les légumes et remuer 1 à 2 minutes pour faire cuire le goût cru. Verser toute la bouteille de vin rouge, racler le plancher de pot pour dissoudre tout le fond. Portez à frémir et laissez-le réduire d'environ un tiers, 8-10 minutes — ce qui brûle l'alcool dur et concentre le vin dans une vraie base de sauce.",
+      "visualCue": {
+        "primaryTarget": "Le vin s'est obscurci du pourpre au grenat profond, légèrement épaissi par la farine, avec un arôme vineux propre et sans piqûre d'alcool cru.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est mince, violet pâle, et la vapeur pique votre nez avec de l'alcool cru.",
+            "action": "Conservez-le à une fraiche mijotée — réduisez encore jusqu'à ce que les fumées dures s'adoucissent dans une odeur moelleuse et fruitée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Diminution d'environ un tiers, grenat brillant et profond, légèrement croustillant la cuillère, sentant des fruits chauds plutôt que de l'esprit.",
+            "action": "Retournez le poulet et les lardons et ajoutez le bouillon et le bouquet garni."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide est réduit à un sirop épais et foncé et a un goût fortement concentré, presque amer.",
+            "action": "Déposez-le avec un éclaboussure du stock avant qu'il ne se resserre davantage et goûtez à la surconcentration."
+          }
+        ]
+      },
+      "feelCue": "Penchez-vous sur le pot et respirez — lorsque l'alcool piquant du nez laisse place à une chaleur douce et fruitée, le vin est prêt à porter le braise."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Brise",
+      "inputs": [
+        "wine_base",
+        "ing_04",
+        "ing_09"
+      ],
+      "outputState": "braised_chicken",
+      "instructions": "Retournez le poulet et les lardons dans la casserole avec tous les jus, en réglant les morceaux côté peau. Verser suffisamment de bouillon chaud pour monter le poulet et le mettre dans le bouquet garni. Porter à une mijoter nue, puis couvrir et transférer à un four à 160°C / 325°F (ou tenir la mijoteuse la plus douce de la cuisinière). Cuire 1 à 1,25 heures jusqu'à ce que la viande soit tendre à fourche et tirer de l'os.",
+      "visualCue": {
+        "primaryTarget": "La viande produit facilement et glisse de l'os, la sauce est riche et légèrement épaissie, et la surface tremble à peine avec la bulle paresseuse occasionnelle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est encore ferme et s'accroche à l'os; la sauce est fine et le vin a un goût plat et non marié.",
+            "action": "Couvrir et continuer à faire du braisage — encore 20-30 minutes fond le tissu conjonctif et épouse les saveurs."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande tire de l'os au bout d'une fourchette mais tient toujours ensemble; la sauce enrobe une cuillère et goûte profond et unifié.",
+            "action": "Soulevez le poulet, jetez le bouquet garni et terminez la garniture et la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande est déchiquetée en fils secs et s'effondre; la sauce a cuit trop loin et est devenue salée.",
+            "action": "Arrêter immédiatement la cuisson; desserrer la sauce avec un peu de bouillon et manipuler le poulet fragile en douceur."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une fourchette dans la cuisse — au point droit, la viande s'écroule comme du beurre doux, mais la pièce conserve sa forme. Gardez la mijoter à peine en mouvement; une ébullition dure sèche la viande."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Glace et finition",
+      "inputs": [
+        "braised_chicken",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "finished_coq_au_vin",
+      "instructions": "Pendant que le poulet repose, faire sauter les oignons perlés et les champignons dans un peu de beurre jusqu'à ce qu'ils soient dorés et glacés. Si la sauce de cuisson est mince, lever le poulet et laisser mijoter la sauce à découvert pour réduire, en écrémant toute graisse de la surface. Repliez le poulet, les lardons, les oignons et les champignons dans la sauce, chauffez doucement et corrigez l'assaisonnement. Reposez-vous 10 minutes avant de servir.",
+      "visualCue": {
+        "primaryTarget": "Une sauce brillante et foncée since le poulet et les légumes, juste assez épais pour envelopper l'arrière d'une cuillère et tenir une ligne propre quand vous tirez un doigt à travers elle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est aqueuse et glisse directement de la viande; les oignons et les champignons sont pâles et fade.",
+            "action": "Soulevez les solides et réduisez la sauce plus loin; colorez la garniture plus profondément avant de la replier."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est lustrée et légèrement sirupeuse, attachée à chaque morceau; oignons glacés et tendres, champignons dorés et salés, assaisonnement équilibrés.",
+            "action": "Reposez-vous brièvement et servez-vous sur la purée de pommes de terre, les nouilles beurrées ou le pain croustillant."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est réduite à une glaçure collante et sursautée qui gomme la cuillère et émousse la luminosité du vin.",
+            "action": "Allongez-vous avec un jet de bouillon chaud et égayer avec quelques gouttes de vin de cuisson; goûtez et rééquilibrez le sel."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère à travers la sauce — elle devrait laisser un sentier qui se ferme lentement, et non un canal sec permanent. Le plat fini sent le vin, la fumée et les champignons de la forêt tout à la fois, sans aucune note criant sur les autres."
+    }
+  ]
 };

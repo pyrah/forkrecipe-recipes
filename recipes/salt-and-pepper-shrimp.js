@@ -1,87 +1,230 @@
 export default {
-  repoId: "master_chinese_salt_and_pepper_shrimp_001",
-  parentRepoId: null,
-  slug: "salt-and-pepper-shrimp",
-  author: "ForkRecipe Kitchen",
-
-  title: "Salt and Pepper Shrimp",
-  description: "Cantonese wok-fried whole shell-on shrimp that arrive at the table crackling and fragrant — the shells fried to a shattering crunch you eat whole, the flesh beneath barely cooked and sweet, buried under a confetti of garlic, scallion, and white pepper.",
-  cuisine: "Chinese",
-  culture: "Cantonese",
-  category: "seafood",
-
-  tags: ["seafood", "wok", "cantonese", "fried", "shrimp", "garlic"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "weight",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 1, salty: 4, sour: 0, bitter: 1, umami: 4, heat: 3 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",    name: "Large shell-on, head-on shrimp (prawns), deveined",          ratioValue: 600, defaultUnit: "g", substitutions: ["large tiger prawns"] },
-    { ingId: "ing_02", role: "Starch",     name: "Cornstarch (cornflour)",                                     ratioValue: 40,  defaultUnit: "g", substitutions: ["potato starch"] },
-    { ingId: "ing_03", role: "Fat",        name: "Neutral oil, for wok-frying",                                ratioValue: 500, defaultUnit: "ml", substitutions: ["sunflower oil"] },
-    { ingId: "ing_04", role: "Allium",     name: "Garlic cloves, finely minced",                               ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",     name: "Spring onions (scallions), thinly sliced",                   ratioValue: 40,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Heat",       name: "Fresh red chillies, thinly sliced (optional but traditional)", ratioValue: 15, defaultUnit: "g", substitutions: ["dried chilli flakes"] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Fine sea salt",                                              ratioValue: 6,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",      name: "Ground white pepper",                                        ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",      name: "Five-spice powder",                                          ratioValue: 2,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Fat",        name: "Sesame oil, to finish",                                      ratioValue: 5,   defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_chinese_salt_and_pepper_shrimp_001",
+  "parentRepoId": null,
+  "slug": "salt-and-pepper-shrimp",
+  "author": "ForkRecipe Kitchen",
+  "title": "Crevettes de sel et de poivre",
+  "description": "Des crevettes entières de wok frites cantonaises qui arrivent à la table crépitantes et parfumées — les coquilles frites à une croûte éclatante que vous mangez entière, la chair sous à peine cuite et sucrée, enterrée sous des confettis d'ail, d'échon et de poivre blanc.",
+  "cuisine": "Chinois",
+  "culture": "Cantonais",
+  "category": "seafood",
+  "tags": [
+    "Produits de la mer",
+    "wok",
+    "cantonais",
+    "frits",
+    "crevettes",
+    "Ail"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Season",
-      inputs: ["ing_01", "ing_02", "ing_07", "ing_08", "ing_09"],
-      outputState: "coated_shrimp",
-      instructions: "Pat the shrimp completely dry with kitchen paper — any surface moisture will cause the oil to spit violently and prevent the shell from crisping. Toss in the cornstarch to coat very lightly — just enough for a barely-there dusting, not a thick batter. Mix in half the salt, white pepper, and the five-spice.",
-      visualCue: {
-        primaryTarget: "Shrimp coated in seasoned cornstarch",
-        spectrum: [
-          { state: "Underdone", description: "Shrimp are still visibly wet. Cornstarch is clumping in wet patches.", action: "Pat drier and toss again. Wet shrimp will steam instead of fry." },
-          { state: "Perfect",   description: "Each shrimp has a very faint, even white dusting — barely visible but present. The shells feel slightly tacky to the touch. No clumping.", action: "Fry immediately — the cornstarch will absorb moisture quickly and become gluey if left." },
-          { state: "Overdone",  description: "Shrimp are heavily coated in thick cornstarch — more like a battered prawn.", action: "Shake off excess vigorously. A thin coating is the goal, not a coating." },
-        ],
-      },
-      feelCue: "A coated shrimp should feel dry and very slightly powdery on the outside — not slippery or wet. The shell should already feel slightly rigid from the starch.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Grandes crevettes (pâtes), décortiquées",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "grandes crevettes tigre"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fry",
-      inputs: ["ing_03", "coated_shrimp"],
-      outputState: "fried_shrimp",
-      instructions: "Heat the oil in a wok over the highest possible heat to 190 C (375 F). Fry the shrimp in batches — 8–10 at a time — for exactly 60–75 seconds. The shells will sizzle aggressively and turn bright orange-red. Remove with a spider and drain on a rack. Do not over-fry — the shrimp continue cooking from residual heat.",
-      visualCue: {
-        primaryTarget: "Shrimp in the hot oil",
-        spectrum: [
-          { state: "Underdone", description: "Shells are pink but still translucent in places. The shrimp float limply in the oil. 60 seconds have not elapsed.", action: "Hold longer — but watch carefully. The window between raw and overcooked shrimp is only 30 seconds." },
-          { state: "Perfect",   description: "Shells are a vivid, even orange-red and have crisped visibly — you can hear them crackle faintly when lifted from the oil. The shrimp have curled into a tight C shape. Heads (if on) are golden and fragrant.", action: "Remove immediately and drain. Proceed to the wok-toss step while oil is still hot." },
-          { state: "Overdone",  description: "Shells are beginning to darken toward red-brown. The shrimp have tightened into a very tight curl and feel firm.", action: "Remove immediately. The flesh inside may be slightly overcooked but the shell will still crisp." },
-        ],
-      },
-      feelCue: "Pick up a fried shrimp by the tail — it should feel surprisingly light and rigid, the shell almost papery-crisp. When you bite the shell, it should shatter with a very audible crunch.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Farine de maïs",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "fécule de pomme de terre"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Toss",
-      inputs: ["fried_shrimp", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_10"],
-      outputState: "finished_salt_and_pepper_shrimp",
-      instructions: "Pour off most of the frying oil, leaving about 1 tablespoon in the wok. Return to high heat. Add the garlic, most of the spring onion, and sliced chilli. Stir-fry for 30 seconds until the garlic is golden and fragrant. Add the fried shrimp back to the wok and toss furiously for 30 seconds to coat with the aromatic mixture. Season with remaining salt and white pepper. Drizzle with sesame oil and toss once more. Serve immediately, garnished with remaining spring onion.",
-      visualCue: {
-        primaryTarget: "Shrimp with aromatics in the wok",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is still pale and raw-smelling. The aromatics have not had time to bloom.", action: "Toss over high heat for another 30 seconds — the garlic needs to turn golden to lose its rawness." },
-          { state: "Perfect",   description: "Garlic is golden and fragrant. Each shrimp is glossy with sesame oil and flecked with crisped garlic, green scallion, and chilli. The shells remain audibly crisp. The wok smells of toasted garlic, sesame, and white pepper.", action: "Plate immediately and serve at the table without delay." },
-          { state: "Overdone",  description: "Garlic has darkened to very dark brown or black. Bitter, acrid smell in the wok.", action: "Remove the dark garlic pieces if possible. The bitterness will dominate the dish if left." },
-        ],
-      },
-      feelCue: "Eat one shrimp immediately from the wok — the shell should shatter between your teeth with a distinct crack, revealing sweet, barely-cooked flesh beneath. If the shell is soft and leathery, the oil was not hot enough.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile neutre, pour friture de wok",
+      "ratioValue": 500,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile de tournesol"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail, finement hachées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignons de printemps (épitons), tranchés finement",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Heat",
+      "name": "Frissons rouges frais, tranchés finement (facultatif mais traditionnel)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "flocons de piment séchés"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre blanc moulu",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Poudre de cinqpices",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile de sésame, pour finir",
+      "ratioValue": 5,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saison",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "coated_shrimp",
+      "instructions": "Les crevettes sont complètement sèches avec du papier de cuisine — toute humidité de surface fera cracher violemment l'huile et empêchera la coquille de se croquer. Tuer dans la fécule de maïs pour enrober très légèrement — juste assez pour une poussière à peine là, pas une pâte épaisse. Mélanger la moitié du sel, le poivre blanc et le cinq-pice.",
+      "visualCue": {
+        "primaryTarget": "Crevettes enrobées de fécule de maïs assaisonnée",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont encore visiblement humides. La fécule de maïs est entachée de taches humides.",
+            "action": "Pat sèche et lance encore. Les crevettes mouillées vont s'évaporer au lieu d'agglomérer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque crevette a une poussière blanche très faible, à peine visible mais présente. Les coquilles se sentent légèrement collantes au toucher. Pas d'embrouille.",
+            "action": "Faire frire immédiatement — la fécule de maïs absorbera rapidement l'humidité et deviendra collante si elle reste."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes sont fortement recouvertes d'amidon de maïs épais, plus comme une crevette battue.",
+            "action": "Agiter vigoureusement l'excès. Un mince revêtement est le but, pas un revêtement."
+          }
+        ]
+      },
+      "feelCue": "Une crevette enrobée doit se sentir sèche et très légèrement poudreuse à l'extérieur, non glissante ni mouillée. La coquille doit déjà se sentir légèrement rigide de l'amidon."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "ing_03",
+        "coated_shrimp"
+      ],
+      "outputState": "fried_shrimp",
+      "instructions": "Chauffer l'huile dans un wok sur la plus haute chaleur possible à 190 C (375 F). Faire frire les crevettes en lots — de 8 à 10 à la fois — pendant exactement 60 à 75 secondes. Les coquilles s'étourdiront agressivement et tourneront en rouge orange vif. Retirer avec une araignée et égoutter sur une grille. Ne pas surfricher — les crevettes continuent à cuire à partir de la chaleur résiduelle.",
+      "visualCue": {
+        "primaryTarget": "Crevettes dans l'huile chaude",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coquilles sont roses mais toujours translucides dans les endroits. Les crevettes flottent lentement dans l'huile. 60 secondes ne se sont pas écoulées.",
+            "action": "Tenez plus longtemps, mais regardez attentivement. La fenêtre entre crevettes crues et surcuites n'est que de 30 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les coquilles sont vives, même orange-rouge et ont croustillé visiblement — vous pouvez les entendre craquer faiblement lorsqu'elles sont levées de l'huile. Les crevettes sont en forme de C serrée. Les têtes (si on) sont dorées et parfumées.",
+            "action": "Retirer immédiatement et égoutter. Passez à l'étape wok-toss alors que l'huile est encore chaude."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les coquilles commencent à s'assombrir vers le brun rouge. Les crevettes se sont serrées dans une boucle très serrée et se sentent fermes.",
+            "action": "Supprimer immédiatement. La chair à l'intérieur peut être légèrement surcuite mais la coquille sera encore croquante."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une crevette frite par la queue — elle devrait se sentir étonnamment légère et rigide, la coquille presque papier-crisp. Quand vous mordez la coquille, elle devrait se briser avec une croûte très audible."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Découpe",
+      "inputs": [
+        "fried_shrimp",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_10"
+      ],
+      "outputState": "finished_salt_and_pepper_shrimp",
+      "instructions": "Verser la majeure partie de l'huile de friture, laissant environ 1 cuillère à soupe dans le wok. Revenez à la chaleur élevée. Ajouter l'ail, la plupart de l'oignon de printemps et le piment tranché. Faire frire pendant 30 secondes jusqu'à ce que l'ail soit doré et parfumé. Ajouter les crevettes frites au wok et jeter furieusement pendant 30 secondes pour enrober le mélange aromatique. Assaisonner avec le reste du sel et le poivre blanc. Arroser d'huile de sésame et jeter une fois de plus. Servir immédiatement, garni d'oignon de printemps restant.",
+      "visualCue": {
+        "primaryTarget": "Crevettes aromatiques dans le wok",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est encore pâle et frais. Les aromatiques n'ont pas eu le temps de fleurir.",
+            "action": "Verser à feu vif pendant encore 30 secondes — l'ail doit devenir doré pour perdre sa brutité."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'ail est doré et parfumé. Chaque crevette est brillante avec de l'huile de sésame et tachetée d'ail croustillant, d'échalon vert et de piment. Les coquilles restent audiblement croquantes. Le wok sent l'ail grillé, le sésame et le poivre blanc.",
+            "action": "Assortir immédiatement et servir à la table sans délai."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est brun foncé ou noir. Une odeur amère et acride dans le wok.",
+            "action": "Retirer les morceaux d'ail foncé si possible. L'amertume dominera le plat s'il reste."
+          }
+        ]
+      },
+      "feelCue": "Mangez une crevette immédiatement du wok — la coquille devrait se briser entre vos dents avec une fissure distincte, révélant la chair douce et à peine cuite en dessous. Si la coquille est douce et coriace, l'huile n'était pas assez chaude."
+    }
+  ]
 };

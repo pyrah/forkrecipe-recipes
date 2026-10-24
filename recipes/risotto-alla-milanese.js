@@ -1,117 +1,294 @@
 export default {
-  repoId: "master_italian_risottoallamialanese_001",
-  parentRepoId: null,
-  slug: "risotto-alla-milanese",
-  author: "ForkRecipe Kitchen",
-  title: "Risotto alla Milanese",
-  description: "Saffron-gilded Arborio rice from Milan's kitchens, finished with bone marrow and a snowfall of aged Parmigiano — each spoonful a trembling wave of all'onda creaminess.",
-  cuisine: "Italian",
-  culture: "Milanese",
-  category: "grains",
-  tags: ["grains", "gluten-free", "saffron", "italian", "risotto", "milanese", "dairy"],
-  difficulty: 3,
-  activeTime: "35 min",
-  totalTime: "50 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 0, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Carnaroli or Arborio rice",              ratioValue: 320,  defaultUnit: "g",   substitutions: ["Vialone Nano"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Beef or veal broth, kept at a simmer",   ratioValue: 1200, defaultUnit: "ml",  substitutions: ["chicken broth"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Saffron threads",                        ratioValue: 0.4,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_04", role: "Allium",   name: "White onion, finely minced",              ratioValue: 80,   defaultUnit: "g",   substitutions: ["shallots"] },
-    { ingId: "ing_05", role: "Fat",       name: "Unsalted butter, cold, divided",         ratioValue: 80,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_06", role: "Protein",   name: "Bone marrow, soaked and cleaned",        ratioValue: 60,   defaultUnit: "g",   substitutions: ["extra butter for a vegetarian version"] },
-    { ingId: "ing_07", role: "Solvent",   name: "Dry white wine",                         ratioValue: 120,  defaultUnit: "ml",  substitutions: ["dry vermouth"] },
-    { ingId: "ing_08", role: "Dairy",     name: "Parmigiano-Reggiano, finely grated",     ratioValue: 80,   defaultUnit: "g",   substitutions: ["Grana Padano"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine sea salt",                          ratioValue: 5,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning", name: "White pepper, freshly ground",           ratioValue: 1,    defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_italian_risottoallamialanese_001",
+  "parentRepoId": null,
+  "slug": "risotto-alla-milanese",
+  "author": "ForkRecipe Kitchen",
+  "title": "Risotto alla Milanese",
+  "description": "Riz Arborio doré safran des cuisines de Milan, fini avec de la moelle osseuse et une chute de neige de Parmigiano vieilli — chaque cuillère à soupe une vague tremblante de toute 'onda crémeux.",
+  "cuisine": "Italien",
+  "culture": "Milanais",
+  "category": "grains",
+  "tags": [
+    "grains",
+    "Sans gluten",
+    "safran",
+    "Italien",
+    "Risotto",
+    "Milanese",
+    "laitière"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "35 min",
+  "totalTime": "50 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Infuse",
-      inputs: ["ing_03", "ing_02"],
-      outputState: "saffron_broth",
-      instructions: "Dissolve the saffron threads in 60 ml of hot broth and let steep for at least 10 minutes while you prepare the soffritto. Keep the remaining broth warm (not boiling) in a small saucepan beside the stove — it must be hot when added to the rice, never cold.",
-      visualCue: {
-        primaryTarget: "Broth turns a vivid deep amber-orange and smells floral and metallic.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is still pale yellow; saffron threads are intact and not releasing color.", action: "Warm the broth slightly more and allow 5 more minutes of steeping." },
-          { state: "Perfect",   description: "Broth is a rich, glowing orange-gold. Threads have lost their shape and given all their color.", action: "Set aside and keep warm. Begin the soffritto." },
-          { state: "Overdone",  description: "Broth has reduced through long heating; flavor is concentrated to the point of bitterness.", action: "Add a splash of fresh broth to dilute before using." },
-        ],
-      },
-      feelCue: "The steeping broth should fill the kitchen with a faintly honeyed, almost medicinal fragrance — that is pure saffron releasing its crocin.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz de Carnaroli ou Arborio",
+      "ratioValue": 320,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Violone Nano"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_04", "ing_05", "ing_06"],
-      outputState: "soffritto",
-      instructions: "Melt 40g of the butter with the bone marrow in a wide, heavy-based pan over medium-low heat. The marrow will melt into the butter, enriching it with collagen and beefy depth. Add the minced onion and cook gently, stirring often, for 8–10 minutes until fully translucent and soft — never brown. Season lightly with salt.",
-      visualCue: {
-        primaryTarget: "Onion is completely transparent, collapsed into a soft mass, no raw or golden edges.",
-        spectrum: [
-          { state: "Underdone", description: "Onion still has white, opaque sections and smells raw and sharp.", action: "Lower the heat and give it 3–4 more minutes — impatience here means harsh flavors in the finished risotto." },
-          { state: "Perfect",   description: "Onion has melted into a soft, ivory-translucent mass in the golden butter-marrow fat. Smells sweet and mild.", action: "Add the rice immediately." },
-          { state: "Overdone",  description: "Onion edges are turning gold or brown; the pan smells nutty rather than sweet.", action: "Deglaze with a splash of wine quickly and reduce the heat — the slight caramelization will add sweetness, not disaster." },
-        ],
-      },
-      feelCue: "The fat in the pan should look like liquid gold — buttery and glistening — and the kitchen should smell of sweet, yielding onion.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Bouillon de boeuf ou de veau, conservé à la mijotée",
+      "ratioValue": 1200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "bouillon de poulet"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Toast",
-      inputs: ["soffritto", "ing_01", "ing_07"],
-      outputState: "toasted_rice",
-      instructions: "Add the rice to the soffritto and stir constantly for 2 minutes over medium heat until each grain is coated in fat and the tips begin to turn translucent. You will hear a faint crackling. Pour in the white wine all at once — it will hiss and steam violently. Stir until the wine is fully absorbed and no alcoholic smell remains, about 2 minutes.",
-      visualCue: {
-        primaryTarget: "Rice grains have a translucent halo around a white chalky center, glistening with fat.",
-        spectrum: [
-          { state: "Underdone", description: "Grains look fully white and opaque, not yet coated in fat. Wine is still visible as a puddle.", action: "Continue stirring and absorbing — the wine must be completely gone before adding broth." },
-          { state: "Perfect",   description: "Each grain shimmers with fat; the wine has absorbed completely and the alcoholic bite has cooked off. A faint crackle when stirred.", action: "Begin adding the hot broth one ladle at a time." },
-          { state: "Overdone",  description: "Rice is beginning to stick to the pan and smells of dry, toasty starch. Wine has long gone.", action: "Add the first ladle of hot broth immediately — the rice is at the edge but salvageable." },
-        ],
-      },
-      feelCue: "If you bite a grain at this stage, it should feel chalky-hard at the center but slippery with fat on the outside — perfect for slow, even hydration.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Fils de safran",
+      "ratioValue": 0.4,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["toasted_rice", "saffron_broth", "ing_09"],
-      outputState: "cooked_risotto",
-      instructions: "Add the hot broth ladle by ladle (about 120ml per addition), stirring constantly and waiting until each ladleful is absorbed before adding the next. Add the saffron broth in the middle of cooking (around the 8-minute mark) to fix the color into every grain. Continue adding broth and stirring for 16–18 minutes total until the rice is al dente — tender but with the faintest bite at the core. Remove from heat 1 minute before the rice is fully done.",
-      visualCue: {
-        primaryTarget: "Rice flows like a slow wave (all'onda) when the pan is shaken; deep golden-yellow throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Rice is chalky and grainy at the center; the mixture sits stiffly in the pan.", action: "Continue adding broth and stirring — it needs 2–3 more minutes and another ladle." },
-          { state: "Perfect",   description: "Rice is creamy and flowing, liquid gold in color, with a subtle resistance at the center of each grain. Moves like lava when the pan tilts.", action: "Remove from heat immediately and proceed to mantecatura." },
-          { state: "Overdone",  description: "Rice has blown out — grains are fully soft with no resistance, and the mixture is gummy rather than flowing.", action: "Serve immediately before it sets; skip the resting step." },
-        ],
-      },
-      feelCue: "Stir with authority — the constant motion coaxes starch from the rice into the liquid, building that characteristic creamy wave with no cream needed.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc, finement haché",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Échalotes"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Mount",
-      inputs: ["cooked_risotto", "ing_05", "ing_08", "ing_10"],
-      outputState: "finished_risotto_alla_milanese",
-      instructions: "Off the heat, add the remaining 40g cold butter cut into cubes and the Parmigiano-Reggiano. Beat vigorously with a wooden spoon or shake the pan with authority for 1–2 minutes (mantecatura) to emulsify the fat into the starch and create a glossy, creamy sauce. Season with white pepper and salt. Cover the pan and rest for 1 minute — this is the all'onda moment. Serve immediately in warmed bowls.",
-      visualCue: {
-        primaryTarget: "Risotto flows off the spoon in a slow, glossy ribbon, saffron-gold and trembling.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is visibly separate, floating in pools on a stiff, grainy surface.", action: "Beat more vigorously off the heat — the emulsion needs mechanical energy, not more heat." },
-          { state: "Perfect",   description: "A unified, glossy, flowing mass. No visible fat separation. Deep golden color. Smells of saffron, butter, and aged cheese.", action: "Serve within 2 minutes — risotto waits for no one." },
-          { state: "Overdone",  description: "Risotto has seized into a solid, gluey mass after sitting too long post-mantecatura.", action: "Stir in a small splash of hot broth to loosen; it will not be perfect but will recover." },
-        ],
-      },
-      feelCue: "The finished risotto should pour from the spoon like a slow, heavy wave — if it holds a peak, add another splash of warm broth and beat again.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé, froid, divisé",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "moelle osseuse, trempée et nettoyée",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "beurre supplémentaire pour une version végétarienne"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Solvent",
+      "name": "Vin blanc sec",
+      "ratioValue": 120,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vermouth sec"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Dairy",
+      "name": "Parmigiano-Reggiano, finement râpé",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Grana Padano"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Poivre blanc, fraîchement moulu",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Infuse",
+      "inputs": [
+        "ing_03",
+        "ing_02"
+      ],
+      "outputState": "saffron_broth",
+      "instructions": "Dissoudre les fils de safran dans 60 ml de bouillon chaud et laisser tremper pendant au moins 10 minutes pendant que vous préparez le soffritto. Conserver le bouillon restant au chaud (sans bouillir) dans une petite casserole à côté du poêle — il doit être chaud lorsqu'il est ajouté au riz, jamais froid.",
+      "visualCue": {
+        "primaryTarget": "Broth transforme un orange-ambre profond vif et sent floral et métallique.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le papillon est encore jaune pâle; les fils de safran sont intacts et ne libèrent pas de couleur.",
+            "action": "Chauffer un peu plus le bouillon et laisser 5 minutes de plus de trempe."
+          },
+          {
+            "state": "Perfect",
+            "description": "Broth est un riche or orange brillant. Les fils ont perdu leur forme et ont donné toute leur couleur.",
+            "action": "Réserver et garder au chaud. Commencez le soffritto."
+          },
+          {
+            "state": "Overdone",
+            "description": "Broth a diminué par le chauffage long; la saveur est concentrée au point d'amertume.",
+            "action": "Ajouter une touche de bouillon frais pour diluer avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon raide doit remplir la cuisine d'un parfum légèrement miellé, presque médicinal, c'est - à - dire du safran pur qui libère sa crocine."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "soffritto",
+      "instructions": "Faire fondre 40g de beurre avec la moelle osseuse dans une poêle large à base lourde à feu moyen-doux. La moelle fondra dans le beurre et l'enrichira de collagène et de profondeur. Ajouter l'oignon haché et cuire doucement, en remuant souvent, pendant 8 à 10 minutes jusqu'à ce qu'il soit entièrement translucide et doux — ne jamais brunir. Assaisonner légèrement avec du sel.",
+      "visualCue": {
+        "primaryTarget": "L'oignon est complètement transparent, effondré dans une masse molle, sans bords crus ou dorés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon a encore des sections blanches, opaques et sent cru et vif.",
+            "action": "Abaissez la chaleur et donnez-lui 3-4 minutes de plus — l'impatience ici signifie des saveurs dures dans le risotto fini."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon a fondu en une masse douce et translucide d'ivoire dans la graisse dorée de la bruyère au beurre. Ça sent doux et doux.",
+            "action": "Ajouter le riz immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords de l'oignon deviennent dorés ou bruns; la poêle sent la noix plutôt que douce.",
+            "action": "Déglacer avec un jet de vin rapidement et réduire la chaleur — la légère caramélisation ajoutera de la douceur, et non du désastre."
+          }
+        ]
+      },
+      "feelCue": "La graisse de la poêle doit ressembler à de l'or liquide — beurreux et brillants — et la cuisine doit sentir de l'oignon sucré."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Toast",
+      "inputs": [
+        "soffritto",
+        "ing_01",
+        "ing_07"
+      ],
+      "outputState": "toasted_rice",
+      "instructions": "Ajouter le riz au soffritto et remuer constamment pendant 2 minutes à feu moyen jusqu'à ce que chaque grain soit enrobé de graisse et que les bouts commencent à devenir translucides. Vous entendrez un léger craquement. Verser le vin blanc tout d'un coup — il sifflera et s'évaporera violemment. Incorporer jusqu'à ce que le vin soit complètement absorbé et qu'aucune odeur alcoolique ne subsiste, environ 2 minutes.",
+      "visualCue": {
+        "primaryTarget": "Les grains de riz ont un halo translucide autour d'un centre blanc crayeux, scintillant avec de la graisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont entièrement blancs et opaques, pas encore enduits de graisse. Le vin est encore visible comme une flaque.",
+            "action": "Continuez à remuer et à absorber — le vin doit être complètement parti avant d'ajouter du bouillon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain mijote de graisse; le vin s'est complètement absorbé et la bouchée alcoolique a cuit. Un léger craquement lorsqu'il est agité.",
+            "action": "Commencez à ajouter le bouillon chaud une louche à la fois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz commence à coller à la poêle et sent l'amidon sec et grillé. Le vin est parti depuis longtemps.",
+            "action": "Ajouter immédiatement la première louche de bouillon chaud — le riz est au bord mais récupérable."
+          }
+        ]
+      },
+      "feelCue": "Si vous mordez un grain à ce stade, il doit se sentir crayeux-dur au centre mais glissant avec de la graisse à l'extérieur — parfait pour l'hydratation lente, même."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "toasted_rice",
+        "saffron_broth",
+        "ing_09"
+      ],
+      "outputState": "cooked_risotto",
+      "instructions": "Ajouter la louche de bouillon chaud par louche (environ 120ml par addition), en remuant constamment et en attendant que chaque louche soit absorbée avant d'ajouter la suivante. Ajouter le bouillon de safran au milieu de la cuisson (environ 8 minutes) pour fixer la couleur dans chaque grain. Continuer à ajouter du bouillon et à remuer pendant 16–18 minutes jusqu'à ce que le riz soit al dente — tendre mais avec la morsure la plus faible au cœur. Retirer du feu 1 minute avant que le riz ne soit complètement cuit.",
+      "visualCue": {
+        "primaryTarget": "Le riz coule comme une onde lente (all'onda) lorsque la poêle est secouée; jaune d'or profond partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz est crayeux et granuleux au centre; le mélange est solidement assis dans la poêle.",
+            "action": "Continuer à ajouter du bouillon et à remuer — il faut 2 à 3 minutes de plus et une autre louche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le riz est crémeux et fluide, l'or liquide en couleur, avec une résistance subtile au centre de chaque grain. Déplace comme de la lave quand la casserole bascule.",
+            "action": "Retirer immédiatement du feu et passer à la mantecatura."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz a soufflé — les grains sont entièrement mous sans résistance, et le mélange est gommant plutôt que fluide.",
+            "action": "Servir immédiatement avant qu'il ne se pose; sauter l'étape de repos."
+          }
+        ]
+      },
+      "feelCue": "Mélanger avec autorité — l'amidon de mouvement constant coaxe du riz dans le liquide, construisant cette vague crémeuse caractéristique sans crème nécessaire."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Monter",
+      "inputs": [
+        "cooked_risotto",
+        "ing_05",
+        "ing_08",
+        "ing_10"
+      ],
+      "outputState": "finished_risotto_alla_milanese",
+      "instructions": "Hors du feu, ajoutez le reste du beurre froid de 40g coupé en cubes et le Parmigiano-Reggiano. Battre vigoureusement avec une cuillère en bois ou agiter la poêle avec autorité pendant 1 à 2 minutes (mantecatura) pour émulsifier la graisse dans l'amidon et créer une sauce brillante et crémeuse. Assaisonner de poivre blanc et de sel. Couvrez la casserole et reposez-vous pendant 1 minute — c'est le moment tout 'onda. Servir immédiatement dans des bols chauds.",
+      "visualCue": {
+        "primaryTarget": "Risotto coule de la cuillère dans un ruban lent et brillant, safran-or et tremblant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est visiblement séparé, flottant dans les piscines sur une surface rigide et granuleuse.",
+            "action": "Battre plus vigoureusement la chaleur — l'émulsion a besoin d'énergie mécanique, pas plus de chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une masse unifiée, brillante et fluide. Pas de séparation visible des graisses. Couleur dorée profonde. Parfums de safran, de beurre et de fromage vieilli.",
+            "action": "Servir dans les 2 minutes — risotto n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Risotto s'est emparé d'une masse solide et collante après s'être assis trop longtemps après la mantecatura.",
+            "action": "Incorporer un peu de bouillon chaud pour se détendre; il ne sera pas parfait mais se rétablira."
+          }
+        ]
+      },
+      "feelCue": "Le risotto fini devrait verser de la cuillère comme une vague lente et lourde — si elle tient un pic, ajouter une autre éclaboussure de bouillon chaud et battre à nouveau."
+    }
+  ]
 };

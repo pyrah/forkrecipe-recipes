@@ -1,82 +1,207 @@
 export default {
-  repoId: "master_thai_namprikpao_001",
-  parentRepoId: null,
-  slug: "nam-prik-pao",
-  author: "ForkRecipe Kitchen",
-  title: "Nam Prik Pao",
-  description: "Thai roasted chili paste — each ingredient char-roasted individually before being ground together into a dark, smoky, sweet-savoury jam that smells of campfire and caramelised shallot. The backbone of tom yum, the secret in pad thai, and remarkable on plain rice by itself.",
-  cuisine: "Thai",
-  culture: "Central Thai",
-  category: "condiments",
-  tags: ["chili-paste", "roasted", "thai", "condiment", "umami", "smokery", "tom-yum", "jar"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 3, sour: 1, bitter: 2, umami: 4, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",       name: "Dried long red chilies, stemmed and seeded", ratioValue: 2, defaultUnit: "parts", substitutions: ["guajillo chili for milder version"] },
-    { ingId: "ing_02", role: "Allium",     name: "Shallots, unpeeled",                ratioValue: 2,   defaultUnit: "parts", substitutions: ["red onion quarters"] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves, unpeeled",           ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Umami",      name: "Dried shrimp",                      ratioValue: 0.5, defaultUnit: "parts", substitutions: ["dried mushroom powder for vegetarian"] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fish sauce",                        ratioValue: 0.5, defaultUnit: "parts", substitutions: ["light soy sauce"] },
-    { ingId: "ing_06", role: "Sweetener",  name: "Palm sugar or brown sugar",         ratioValue: 0.5, defaultUnit: "parts", substitutions: ["coconut sugar"] },
-    { ingId: "ing_07", role: "Fat",        name: "Neutral oil",                       ratioValue: 1,   defaultUnit: "parts", substitutions: ["coconut oil"] },
+  "repoId": "master_thai_namprikpao_001",
+  "parentRepoId": null,
+  "slug": "nam-prik-pao",
+  "author": "ForkRecipe Kitchen",
+  "title": "Nam Prik Pao",
+  "description": "Pâte de chili torréfié thaïlandaise — chaque ingrédient grillé individuellement avant d'être broyé ensemble dans une confiture sombre, fumée et sucrée qui sent le feu de camp et l'échalote caramélisée. L'épine dorsale du tom yum, le secret en pad thai, et remarquable sur le riz uni par lui-même.",
+  "cuisine": "Thaï",
+  "culture": "Centre thaïlandais",
+  "category": "condiments",
+  "tags": [
+    "piment-collé",
+    "grillés",
+    "Thaï",
+    "condiment",
+    "umami",
+    "fumeur",
+    "Tom-Yum",
+    "pot"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 4,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "roasted_aromatics",
-      instructions: "Roast each ingredient separately in a dry wok or skillet over medium-high heat, turning occasionally. Chilies: 3–4 minutes until fragrant and slightly puffed, not burnt. Shallots (unpeeled): 8–10 minutes until the outer skins are charred black and the interior is soft. Garlic (unpeeled): 6–8 minutes until the skins are blackened and the cloves soft. Cool, then peel shallots and garlic — the charred outer skins are discarded but their flavour has penetrated the flesh.",
-      visualCue: {
-        primaryTarget: "Chilies dark reddish-brown and fragrant. Shallots and garlic with blackened outer skins, soft interiors when squeezed.",
-        spectrum: [
-          { state: "Underdone", description: "Shallot and garlic skins are pale tan, not charred. The interior will be raw-tasting and sharp.", action: "Continue roasting on higher heat — the char on the skin is what transfers a smoky depth to the peeled flesh inside." },
-          { state: "Perfect",   description: "Chili skins are dark and papery, smelling of smoke. Shallot and garlic skins are blackened in patches; the flesh inside is soft and sweet.", action: "Cool completely before peeling and grinding." },
-          { state: "Overdone",  description: "Chilies are uniformly black and smell of ash. Shallot flesh has also charred through.", action: "Discard the most severely burnt chilies. Lightly charred chili interiors are fine; fully carbonised are bitter beyond recovery." },
-        ],
-      },
-      feelCue: "Squeeze a roasted shallot through its skin — it should pop out like a soft, warm, fragrant paste. If it is still firm and resists, it needs more time.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Piments rouges longs séchés, ensemencés",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chili guajillo pour version plus douce"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Pound",
-      inputs: ["roasted_aromatics", "ing_04"],
-      outputState: "rough_paste",
-      instructions: "Peel the roasted shallots and garlic. Place in a mortar with the roasted chilies and dried shrimp. Pound firmly, working the dried shrimp in first (they take the longest), then the garlic, then shallots, then chilies. Pound until a rough, fragrant paste forms — some texture is correct for this style. Alternatively pulse in a food processor to a chunky consistency.",
-      visualCue: {
-        primaryTarget: "A dark, rust-brown chunky paste with visible shrimp fragments and chili skins. Smells deeply smoky and sweet.",
-        spectrum: [
-          { state: "Underdone", description: "Dried shrimp still in distinct pieces. Shallots not yet incorporated. The paste looks lumpy and incoherent.", action: "Continue pounding — the shrimp must break down fully or the final paste will taste uneven." },
-          { state: "Perfect",   description: "Coarse, dark paste with uniform texture. Smoky-sweet smell. Shrimp has fully incorporated, tinting the paste a warm rust-brown.", action: "Fry the paste in oil." },
-          { state: "Overdone",  description: "Over-pounded to a smooth, aerated paste.", action: "Fine — it will fry into a glossy jam regardless of the texture going in." },
-        ],
-      },
-      feelCue: "A small amount held up between two fingers should stretch slightly before breaking, held together by the natural oils and moisture of the roasted aromatics.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Échalotes, non pelées",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "quartiers d'oignon rouge"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["rough_paste", "ing_07", "ing_05", "ing_06"],
-      outputState: "finished_nam_prik_pao",
-      instructions: "Heat oil in a wok or saucepan over medium-low heat. Add the paste and fry, stirring constantly, for 8–10 minutes until the paste darkens, the moisture evaporates, and the oil begins to visibly separate from the solids. Add fish sauce and palm sugar. Stir and continue frying for 3–4 more minutes until the sugar caramelises and the paste smells complex, sweet, and deeply smoky. Cool and store in a jar — the flavour improves over 24 hours.",
-      visualCue: {
-        primaryTarget: "A very dark, almost-black jam with a glossy surface and oil pooling around the edges. Colour of bittersweet chocolate.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is still reddish-brown with moisture evident. The oil has not separated. Smells raw and sharp.", action: "Continue frying on medium-low — patience is required. The transformation happens slowly." },
-          { state: "Perfect",   description: "Deep mahogany-brown to near-black. Glossy and jam-like. Oil pools at the edge of the paste. The smell is smoky, sweet, and complex.", action: "Cool and jar. The paste will keep refrigerated for up to 3 months." },
-          { state: "Overdone",  description: "Black and bitter. Burning, acrid smell.", action: "Discard the darkest scrapings from the bottom. The bulk may still be usable if it was not scorched through." },
-        ],
-      },
-      feelCue: "A small amount smeared on a plate should hold a slight peak for a second before slowly spreading — glossy and jammy, not runny, not stiff.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail, non pelées",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Crevettes séchées",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poudre de champignons séchés pour végétarien"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sauce de poisson",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja légère"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Sucre de palme ou cassonade",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sucre de coco"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Huile de coco"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "roasted_aromatics",
+      "instructions": "Faire cuire chaque ingrédient séparément dans un wok sec ou une poêle à feu moyen-élevé, en tournant occasionnellement. Chiles: 3-4 minutes jusqu'à ce que parfumé et légèrement gonflé, non brûlé. Échalotes (non pelées) : de 8 à 10 minutes jusqu'à ce que les peaux extérieures soient carbonisées en noir et que l'intérieur soit doux. Ail (non pelé) : 6-8 minutes jusqu'à ce que les peaux soient noircies et que les gousses soient douces. Refroidir, puis peler les échalotes et l'ail — les peaux extérieures carbonisées sont jetées mais leur saveur a pénétré la chair.",
+      "visualCue": {
+        "primaryTarget": "Chiles brun-rougeâtre foncé et parfumé. Échalotes et ail avec des peaux extérieures noircies, intérieurs doux quand pressés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les peaux d'échalote et d'ail sont bronzées, non carbonisées. L'intérieur sera rafraîchissant.",
+            "action": "Continuer à rôtir à plus forte chaleur — l'omble sur la peau est ce qui transfère une profondeur fumée à la chair pelée à l'intérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les peaux de Chili sont sombres et papeuses, sentant la fumée. Les peaux d'échalote et d'ail sont noircies en tranches; la chair intérieure est douce et douce.",
+            "action": "Refroidir complètement avant de peler et de broyer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les chilis sont uniformément noirs et l'odeur des cendres. La chair des échalotes s'est carbonisée.",
+            "action": "Jeter les chilis les plus gravement brûlés. Les intérieurs de chili légèrement carbonés sont fins; ils sont entièrement carbonisés au-delà de la récupération."
+          }
+        ]
+      },
+      "feelCue": "Pressez une échalote torréfié à travers sa peau — elle devrait jaillir comme une pâte douce, chaude et parfumée. Si elle est encore ferme et résiste, elle a besoin de plus de temps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Livre",
+      "inputs": [
+        "roasted_aromatics",
+        "ing_04"
+      ],
+      "outputState": "rough_paste",
+      "instructions": "Peler les échalotes grillées et l'ail. Déposer dans un mortier les chilis rôtis et les crevettes séchées. Pound fermement, en travaillant les crevettes séchées d'abord (ils prennent le plus longtemps), puis l'ail, puis les échalotes, puis les chiles. Pound jusqu'à ce qu'une pâte brute et parfumée forme — une certaine texture est correcte pour ce style. Alternativement, l'impulsion dans un robot alimentaire à une consistance assez épaisse.",
+      "visualCue": {
+        "primaryTarget": "Une pâte sombre et brun rouille avec des fragments visibles de crevettes et des peaux de chili. Ça sent profondément fumé et doux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Crevettes séchées encore en morceaux distincts. Échalotes non encore incorporées. La pâte a l'air bosselée et incohérente.",
+            "action": "Continuer à frapper — les crevettes doivent se décomposer complètement ou la pâte finale aura un goût inégal."
+          },
+          {
+            "state": "Perfect",
+            "description": "Coeurs, pâte foncée avec texture uniforme. Smoky-douce odeur. La crevette a entièrement incorporé, teintant la pâte un brun rouille chaud.",
+            "action": "Faire revenir la pâte dans l'huile."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sur-livrer à une pâte lisse et aérée.",
+            "action": "Très bien — il va frire dans une confiture brillante indépendamment de la texture entrant."
+          }
+        ]
+      },
+      "feelCue": "Une petite quantité retenue entre deux doigts devrait s'étirer légèrement avant de se briser, maintenue ensemble par les huiles naturelles et l'humidité des aromatiques grillés."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "rough_paste",
+        "ing_07",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "finished_nam_prik_pao",
+      "instructions": "Chauffer l'huile dans un wok ou une casserole à feu moyen-doux. Ajouter la pâte et faire frire en remuant constamment pendant 8-10 minutes jusqu'à ce que la pâte s'assombrisse, que l'humidité s'évapore et que l'huile commence à se séparer visiblement des solides. Ajouter la sauce de poisson et le sucre de palme. Incorporer et continuer à frire pendant 3 à 4 minutes jusqu'à ce que les caramélises de sucre et la pâte sentent complexe, sucrée et profondément fumée. Laisser refroidir et conserver dans un bocal — la saveur s'améliore sur 24 heures.",
+      "visualCue": {
+        "primaryTarget": "Une confiture très foncée, presque noire, avec une surface brillante et de l'huile qui pool autour des bords. Couleur du chocolat doux amer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore brun rougeâtre avec une humidité évidente. L'huile n'est pas séparée. Sens brut et vif.",
+            "action": "Continuez à frire sur moyenne-faible — la patience est nécessaire. La transformation se produit lentement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep acajou brun à presque noir. Gloire et jam. Piscines d'huile au bord de la pâte. L'odeur est fumée, douce et complexe.",
+            "action": "Cool et jar. La pâte restera réfrigérée jusqu'à 3 mois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Noir et amer. Brûlure, odeur acride.",
+            "action": "Jeter les raclures les plus sombres du fond. La masse peut encore être utilisable si elle n'a pas été brûlée."
+          }
+        ]
+      },
+      "feelCue": "Une petite quantité frottée sur une plaque devrait maintenir un léger pic pendant une seconde avant de s'étendre lentement — brillant et embrouillé, non écoulement, non raide."
+    }
+  ]
 };

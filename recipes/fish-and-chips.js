@@ -1,112 +1,300 @@
 export default {
-  repoId: "master_british_fishandchips_001",
-  parentRepoId: null,
-  slug: "fish-and-chips",
-  author: "ForkRecipe Kitchen",
-  title: "Beer-Battered Fish and Chips",
-  description: "Thick fillets of cod sheathed in a shattering, golden-crisp beer batter that balloons and blisters in the hot fat — while inside, the fish steams to a tender, sweet flake — served with malt-vinegar-doused fat chips that are fluffy within and bronzed without.",
-  cuisine: "British",
-  culture: "English",
-  category: "seafood",
-  tags: ["fish and chips", "british", "beer batter", "cod", "fried", "chips", "pub"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "1 hour 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 1, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Thick cod fillets (skin removed), 200 g each",                ratioValue: 100, defaultUnit: "parts", substitutions: ["haddock", "pollock", "hake"] },
-    { ingId: "ing_02", role: "Structure", name: "Plain (all-purpose) flour",                                    ratioValue: 60,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Leavener",  name: "Baking powder",                                               ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",    name: "Ice-cold lager or pale ale",                                   ratioValue: 60,  defaultUnit: "parts", substitutions: ["ice-cold sparkling water (for alcohol-free)"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",                                               ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Structure", name: "Plain flour (for dusting the fish)",                           ratioValue: 15,  defaultUnit: "parts", substitutions: ["rice flour (yields a crisper finish)"] },
-    { ingId: "ing_07", role: "Starch",    name: "Maris Piper or King Edward potatoes, peeled and cut into 1.5 cm batons", ratioValue: 200, defaultUnit: "parts", substitutions: ["russet potatoes", "Yukon Gold"] },
-    { ingId: "ing_08", role: "Fat",       name: "Beef dripping or neutral frying oil (enough to deep fry)",    ratioValue: 500, defaultUnit: "parts", substitutions: ["lard", "sunflower oil", "peanut oil"] },
-    { ingId: "ing_09", role: "Acid",      name: "Malt vinegar, for serving",                                   ratioValue: 5,   defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Flaky sea salt, for finishing",                               ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_british_fishandchips_001",
+  "parentRepoId": null,
+  "slug": "fish-and-chips",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poissons et copeaux de bière",
+  "description": "Des filets épais de morue fourrés dans une pâte à bière golden-crisp qui éclate et qui fait des ballons et des cloques dans la graisse chaude — alors qu'à l'intérieur, le poisson s'évapore à une fine et douce flocons — servis avec des croustilles de graisse malt-vine-douce qui sont molles à l'intérieur et bronzées sans.",
+  "cuisine": "Anglais",
+  "culture": "changements climatiques",
+  "category": "seafood",
+  "tags": [
+    "poissons et copeaux",
+    "britanniques",
+    "pâte à bière",
+    "morue",
+    "frits",
+    "puces",
+    "pub"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "1 hour 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Blanch",
-      inputs: ["ing_07", "ing_08"],
-      outputState: "par_fried_chips",
-      instructions: "Cut the potatoes into thick, irregular batons — chip shop chips are never perfect rectangles. The variation in thickness gives you a range of textures from pure-crunchy thinner pieces to fluffy-centered thicker ones. Rinse the cut chips in cold water for 5 minutes to remove excess surface starch (which causes sticking and uneven browning), then dry thoroughly with clean kitchen towels — any residual water causes dangerous oil spatter. Heat the frying oil or dripping in a deep, heavy pot to exactly 140 C (285 F). Fry the chips in batches for 5–6 minutes — they will be soft, pale, and just barely beginning to color at the edges. They must not brown at this stage. Lift out with a spider or slotted spoon and drain on a rack. At this stage you have par-cooked chips; they can sit at room temperature for up to 1 hour before the second fry.",
-      visualCue: {
-        primaryTarget: "Soft, slightly translucent chips that yield to gentle pressure, pale blond with no color, just starting to form a barely visible skin.",
-        spectrum: [
-          { state: "Underdone", description: "Chips are still raw at the center — a bite reveals a hard, chalky, uncooked interior.", action: "Return to the 140 C oil for 2–3 more minutes. Use a thermometer — temperature accuracy matters here." },
-          { state: "Perfect",   description: "Completely tender throughout when pierced with a thin knife. Pale gold skin just forming. Smells of sweet cooked potato.", action: "Drain on a rack and rest. Proceed to the batter while they cool." },
-          { state: "Overdone",  description: "Chips are beginning to turn golden in the first fry — they will burn in the second fry before the center heats through.", action: "Lower oil temperature to 130 C for the next batch. Proceed with the gold chips first and watch the second fry time carefully." },
-        ],
-      },
-      feelCue: "A par-fried chip should squash flat when pressed between your palms with moderate pressure — fully yielding, like cooked potato mash — with no hard center resistance.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filets épais de morue (peau enlevée), 200 g chacun",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "l'aiglefin",
+        "Pollock",
+        "Merlu"
+      ]
     },
     {
-      nodeId: "step_2", action: "Mix",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "beer_batter",
-      instructions: "In a large cold bowl (chill it in the freezer for 10 minutes), combine the flour, baking powder, and salt. Make a well in the center and pour in the ice-cold beer in one go. Whisk briskly until just combined — the batter should be slightly lumpy, like thick pancake batter. A few visible flour streaks are fine and even desirable; overworking the batter develops gluten, which makes it dense and rubbery rather than light and shattering. The beer provides carbonation (bubbles expand in the hot oil, creating a lacey, open crust) and the alcohol lowers the boiling point of water in the batter, helping it set faster and crisp sooner. If the batter feels too thick to pour in a thin, even coating, add 1–2 tablespoons more ice-cold beer. Keep the batter cold until the moment of frying.",
-      visualCue: {
-        primaryTarget: "A pourable, pale batter the consistency of thick double cream — no large dry lumps, but with small streaks of flour still visible and gentle small bubbles on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Batter is extremely thick and pasty, with large pockets of dry flour — will coat unevenly and create thick doughy patches.", action: "Whisk in cold beer one tablespoon at a time until pourable but still coats the back of a spoon thickly." },
-          { state: "Perfect",   description: "Thick enough to coat a finger in a thin, even curtain without running off instantly. Small bubbles on the surface, a few small lumps. Very cold.", action: "Use immediately — do not rest the batter or the bubbles will dissipate." },
-          { state: "Overdone",  description: "Batter is thin and watery — runs off the fish leaving a translucent skin that will produce a flat, non-puffy crust.", action: "Whisk in a tablespoon of flour at a time until the right consistency is restored. Keep cold." },
-        ],
-      },
-      feelCue: "Dip a clean finger and let the batter run — it should fall off in a thin, opaque curtain that takes about 3 seconds to run to the fingertip, not instantly dripping off like water.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Farine pure (toute destination)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Fry",
-      inputs: ["ing_01", "ing_06", "beer_batter", "ing_08"],
-      outputState: "battered_fish",
-      instructions: "Raise the oil temperature to 190 C (375 F). Pat the cod fillets completely dry — moisture prevents the batter from adhering. Dust each fillet in plain flour, shaking off any excess (this gives the batter a surface to grip). Dip one fillet into the beer batter, letting the excess drip for 2 seconds, then lower it slowly into the hot oil, holding it just beneath the surface for 5 seconds before releasing — this sets a thin exterior crust that prevents the fillet from sinking to the pan bottom and sticking. Fry for 4–5 minutes (for a 200 g fillet) until the batter is a deep, even amber-gold. Do not crowd the pot — fry maximum two fillets at a time or the oil temperature will drop and the batter will absorb oil and go greasy. Remove with a spider and drain on a rack, never on paper towels (which create steam and soften the crust).",
-      visualCue: {
-        primaryTarget: "An even, blistered, amber-gold crust with a lacey, irregular surface — no pale patches, no dark spots, the batter fully puffed and set.",
-        spectrum: [
-          { state: "Underdone", description: "Batter is pale gold and slightly soft when tapped with a spoon. The crust has not fully set and will be doughy inside.", action: "Return to the oil. The fish is not yet done — undercooked batter is worse than undercooked fish." },
-          { state: "Perfect",   description: "Deep amber-gold, shatteringly crisp when tapped, blistered and puffed with a slightly irregular, lacey surface. Steam venting from the top of the fillet.", action: "Drain on a rack. Salt immediately with flaky sea salt while still blistering hot." },
-          { state: "Overdone",  description: "Batter is a dark brown bordering on burnt, with a bitter, scorched note. Interior fish may be dry.", action: "Drain immediately. Trim the darkest portions. The fish inside is likely fine — test before discarding." },
-        ],
-      },
-      feelCue: "Tap the battered fillet with a fingernail — at the right moment it rings like thin pottery: hard and hollow-sounding, not soft and dull. That crack is your signal.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Fry",
-      inputs: ["par_fried_chips", "ing_08"],
-      outputState: "finished_chips",
-      instructions: "While the fish drains, raise the oil to 190 C (375 F) — the same temperature as the fish, but the second fry of the chips is where the magic happens. Fry the par-cooked chips in batches for 3–4 minutes until they are a deep golden brown with a crisp, blistered exterior. The par-frying already cooked the interior fully, so this second fry is entirely about crust formation — you are dehydrating the surface and driving the Maillard reaction. Do not walk away: at 190 C the chips go from golden to burnt within 90 seconds. Remove when deeply golden and drain on a rack.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown chips with a blistered, matte crust and a small amount of steam venting from the cut faces.",
-        spectrum: [
-          { state: "Underdone", description: "Chips are pale gold and still slightly soft on the exterior — they will go limp within minutes.", action: "Return to the oil for 90 more seconds and watch closely." },
-          { state: "Perfect",   description: "Deep honey-to-amber gold, matte rather than glossy, with a visible crust that crackles when the chip is flexed. Steam from the interior means the inside is hot and fluffy.", action: "Drain, salt immediately, serve within 3 minutes." },
-          { state: "Overdone",  description: "Dark brown with a bitter, acrid note. Exterior may have gone from crisp to hard and tooth-breaking.", action: "Drain and salt generously — salt mitigates bitterness. Trim the most burnt individual batons." },
-        ],
-      },
-      feelCue: "A perfect chip flexes very slightly without breaking — the crust crackles but the interior stays soft. If it is entirely rigid, it has been fried to a uniform crunch, which means the interior is dry rather than fluffy.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Lager glacé ou ale pâle",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau gazeuse glacée (sans alcool)"
+      ]
     },
     {
-      nodeId: "step_5", action: "Season",
-      inputs: ["battered_fish", "finished_chips", "ing_09", "ing_10"],
-      outputState: "finished_fish_and_chips",
-      instructions: "Salt the chips and fish immediately while they are blistering hot — salt adheres only to a hot, fat-coated surface. Serve the fish draped across a pile of chips on a sheet of the traditional newspaper-substitute greaseproof paper, or on warm plates. Put the malt vinegar on the table and let people apply their own: the correct amount of vinegar to fish and chips is entirely personal and fiercely debated in Britain. Serve with tartar sauce, mushy peas, or both. Eat within 5 minutes — the batter crust is at its maximum crunch for only a brief window before the steam from the fish within softens it from inside.",
-      visualCue: {
-        primaryTarget: "Golden-sheened fish beside deep amber chips, salt crystals catching the light, the whole thing steaming gently.",
-        spectrum: [
-          { state: "Underdone", description: "Everything looks pale and unappetizing. Oil-soaked batter that has not crisped properly.", action: "Temperature of the frying oil was too low — it must reach 190 C for proper crust formation." },
-          { state: "Perfect",   description: "Deep golden batter, crackling audibly when tapped, chips golden and steaming. The kitchen smells of hot beef fat and the sea.", action: "Apply salt and vinegar immediately. Eat without delay." },
-          { state: "Overdone",  description: "Everything has sat too long — batter has softened from steam, chips have gone limp and cold.", action: "Return chips to the fryer at 190 C for 90 seconds. There is no rescue for soft batter — avoid this situation by serving immediately." },
-        ],
-      },
-      feelCue: "Bite through the batter: the initial crack should be audible — a clean, glassy shatter — then give way to the moist, delicate, sweet fish within. If the batter tears rather than shatters, the oil was not hot enough.",
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Structure",
+      "name": "Farine pure (pour la poussière du poisson)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "farine de riz (rend un fini plus croquant)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Starch",
+      "name": "Pommes de terre Maris Piper ou King Edward, pelées et coupées en bâtons de 1,5 cm",
+      "ratioValue": 200,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pommes de terre roussettes",
+        "Or du Yukon"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile de friture neutre (assez à friture profonde)",
+      "ratioValue": 500,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Saindoux",
+        "huile de tournesol",
+        "huile d'arachide"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "vinaigre de malt, pour servir",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel de mer, pour finition",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Blanch",
+      "inputs": [
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "par_fried_chips",
+      "instructions": "Coupez les pommes de terre en bâtons épais et irréguliers — les croustilles ne sont jamais des rectangles parfaits. La variation de l'épaisseur vous donne une gamme de textures allant des pièces plus minces pures aux plus épaisses. Rincer les croustilles dans de l'eau froide pendant 5 minutes pour éliminer l'excès d'amidon de surface (ce qui provoque un collage et un brunissement inégal), puis bien sécher avec des serviettes de cuisine propres. Chauffer l'huile de friture ou dans un pot profond et lourd à exactement 140 C (285 F). Faire frire les copeaux par lots pendant 5 à 6 minutes — ils seront doux, pâles et commenceront à peine à colorier aux bords. Ils ne doivent pas brunir à ce stade. Soulevez avec une araignée ou une cuillère à fente et égouttez sur un rack. A ce stade, vous avez des frites par-cuites ; elles peuvent s'asseoir à température ambiante jusqu'à 1 heure avant la deuxième frite.",
+      "visualCue": {
+        "primaryTarget": "Des copeaux doux, légèrement translucides qui donnent à une pression douce, blond pâle sans couleur, qui commencent juste à former une peau à peine visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les croustilles sont toujours crues au centre — une bouchée révèle un intérieur dur, crayeux et non cuit.",
+            "action": "Retournez à l'huile de 140 C pour 2 à 3 minutes de plus. Utilisez un thermomètre — la précision de la température est importante ici."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement tendre quand percé avec un couteau mince. Peau d'or pâle qui se forme. Des odeurs de patate cuite sucrée.",
+            "action": "Égoutter sur un rack et se reposer. Passez à la pâte pendant qu'ils refroidissent."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les puces commencent à devenir dorées dans la première frite — elles brûleront dans la seconde frite avant que le centre ne se réchauffe.",
+            "action": "Baisser la température de l'huile à 130 °C pour le prochain lot. Procédez d'abord avec les copeaux d'or et regardez soigneusement la deuxième cuisson."
+          }
+        ]
+      },
+      "feelCue": "Une puce par frite devrait s'aplatir lorsqu'elle est pressée entre vos paumes avec une pression modérée — en plein rendement, comme la purée de pommes de terre cuites — sans résistance au centre dur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "beer_batter",
+      "instructions": "Dans un grand bol froid (refroidir au congélateur pendant 10 minutes), mélanger la farine, la poudre à pâte et le sel. Faites un puits au centre et versez la bière glacée en un seul coup. fouetter modérément jusqu'à ce qu'il soit simplement combiné — la pâte doit être légèrement grumelée, comme la pâte à crêpes épaisse. Quelques stries de farine visibles sont fines et même désirables; le surmenage de la pâte développe du gluten, ce qui la rend dense et caoutchouteux plutôt que léger et éclatant. La bière fournit de la carbonation (les bulles s'étendent dans l'huile chaude, créant une croûte lacée et ouverte) et l'alcool abaisse le point d'ébullition de l'eau dans la pâte, ce qui l'aide à fixer plus rapidement et plus rapidement. Si la pâte est trop épaisse pour être versée dans un mince revêtement, ajoutez 1 à 2 cuillères à soupe de bière froide. Gardez la pâte froide jusqu'au moment de la friture.",
+      "visualCue": {
+        "primaryTarget": "Une pâte pâle versable la consistance de la double crème épaisse — pas de grosses boules sèches, mais avec de petites stries de farine encore visibles et de petites bulles douces à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La batterie est extrêmement épaisse et pâteuse, avec de grandes poches de farine sèche — elle sera recouverte de façon inégale et créera d'épais patchs de pâte.",
+            "action": "Dans une bière froide, fouetter une cuillère à soupe à la fois jusqu'à ce qu'elle soit versable, mais enrober l'arrière d'une cuillère de façon épaisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Assez épais pour mettre un doigt dans un rideau mince, même sans s'enfuir instantanément. Petites bulles à la surface, quelques petites bosses. Très froid.",
+            "action": "Utilisez immédiatement — ne reposez pas la pâte ou les bulles se dissiperont."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batteuse est mince et aqueuse; elle sort du poisson en laissant une peau translucide qui produira une croûte plate et non puffe.",
+            "action": "fouetter dans une cuillère à soupe de farine à la fois jusqu'à ce que la bonne consistance soit rétablie. Garder froid."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt propre et laissez courir la pâte — elle devrait tomber dans un rideau mince et opaque qui prend environ 3 secondes pour courir jusqu'au bout des doigts, pas se déverser instantanément comme de l'eau."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "ing_01",
+        "ing_06",
+        "beer_batter",
+        "ing_08"
+      ],
+      "outputState": "battered_fish",
+      "instructions": "Augmenter la température de l'huile à 190 C (375 F). Patientez les filets de morue complètement secs — l'humidité empêche la pâte d'adhérer. Poussez chaque filet dans de la farine ordinaire, en agitant tout excès (ce qui donne à la pâte une surface à saisir). Déposer un filet dans la pâte à bière, laisser l'excès couler pendant 2 secondes, puis le baisser lentement dans l'huile chaude, le tenir juste sous la surface pendant 5 secondes avant de relâcher – ce qui établit une fine croûte extérieure qui empêche le filet de couler au fond de la poêle et de coller. Faire frire pendant 4 à 5 minutes (pour un filet de 200 g) jusqu'à ce que la pâte soit profonde, voire ambrée. Ne pas fouler le pot — faire frire au maximum deux filets à la fois ou la température de l'huile tombera et la pâte absorbera l'huile et deviendra grasse. Retirer avec une araignée et égoutter sur un support, jamais sur des serviettes en papier (qui créent de la vapeur et adoucissent la croûte).",
+      "visualCue": {
+        "primaryTarget": "Une croûte uniforme, blister, dorée, avec une surface laceuse et irrégulière — pas de taches pâles, pas de taches sombres, la pâte est entièrement gonflée et sertie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La batte est d'or pâle et légèrement douce lorsqu'elle est tapée avec une cuillère. La croûte n'a pas été entièrement réglée et sera pâteuse à l'intérieur.",
+            "action": "Retournez à l'huile. Le poisson n'est pas encore cuit — la pâte non cuite est pire que le poisson non cuit."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep ambre-or, éclatantement croustillant quand tapoté, blister et gonflé avec une surface légèrement irrégulière, lactée. Évacuation de vapeur depuis le haut du filet.",
+            "action": "Égoutter sur une grille. Saler immédiatement avec du sel de mer flocé tout en blister encore chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batte est brun foncé bordant sur brûlé, avec une note amère et brûlée. Le poisson intérieur peut être sec.",
+            "action": "Égoutter immédiatement. Coupez les parties les plus sombres. Le poisson à l'intérieur est probablement fin — essai avant le rejet."
+          }
+        ]
+      },
+      "feelCue": "Tapez le filet battu avec un ongle — au bon moment, il sonne comme de la poterie fine: dur et creux, pas doux et terne. Cette fissure est votre signal."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "par_fried_chips",
+        "ing_08"
+      ],
+      "outputState": "finished_chips",
+      "instructions": "Tandis que le poisson s'écoule, porter l'huile à 190 C (375 F) — la même température que le poisson, mais la deuxième friture est là où se produit la magie. Faire frire les copeaux par-cuits en lots pendant 3-4 minutes jusqu'à ce qu'ils soient un brun doré profond avec un extérieur croustillant et blister. La friture par friture déjà cuit l'intérieur complètement, donc cette deuxième friture est entièrement sur la formation de croûte — vous déshydratez la surface et conduisez la réaction Maillard. Ne partez pas : à 190°C, les copeaux vont de l'or au feu en 90 secondes. Retirez quand vous êtes profondément doré et égouttez sur un rack.",
+      "visualCue": {
+        "primaryTarget": "Copeaux dorés profonds avec une croûte mate et une petite quantité de vapeur provenant des faces coupées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les croustilles sont d'or pâle et encore légèrement douces à l'extérieur — elles seront boiteuses en quelques minutes.",
+            "action": "Retourner à l'huile pendant 90 secondes et surveiller de près."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or miel-ambre profond, mat plutôt que brillant, avec une croûte visible qui craque lorsque la puce est fléchie. La vapeur de l'intérieur signifie que l'intérieur est chaud et moelleux.",
+            "action": "Égoutter, saler immédiatement, servir dans les 3 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé avec une note amère et acride. L'extérieur est peut-être passé de croquants à durs et de déchirures.",
+            "action": "Égoutter et saler généreusement — le sel diminue l'amertume. Coupez les bâtons les plus brûlés."
+          }
+        ]
+      },
+      "feelCue": "Une puce parfaite se fléchit très légèrement sans se briser – la croûte craque mais l'intérieur reste doux. S'il est entièrement rigide, il a été frit à une croûte uniforme, ce qui signifie que l'intérieur est sec plutôt que moelleux."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Saison",
+      "inputs": [
+        "battered_fish",
+        "finished_chips",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_fish_and_chips",
+      "instructions": "Saler immédiatement les croustilles et les poissons pendant qu'elles sont chaudes; le sel n'adhère qu'à une surface chaude recouverte de graisse. Servir le poisson drapé sur une pile de copeaux sur une feuille du papier traditionnel de remplacement du journal ou sur des assiettes chaudes. Mettez le vinaigre de malt sur la table et laissez les gens appliquer leur propre: la bonne quantité de vinaigre pour les poissons et les chips est entièrement personnelle et farouchement débattue en Grande-Bretagne. Servir avec la sauce tartare, les pois musqués ou les deux. Mangez dans les 5 minutes — la croûte de pâte est à sa croûte maximale pour seulement une courte fenêtre avant que la vapeur du poisson à l'intérieur l'adoucisse de l'intérieur.",
+      "visualCue": {
+        "primaryTarget": "Poisson doré à côté de copeaux d'ambre profonds, cristaux de sel attrapant la lumière, le tout s'échauffant doucement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Tout semble pâle et inappétissant. Pâte imbibée d'huile qui n'a pas bien croqué.",
+            "action": "La température de l'huile de friture était trop basse — elle doit atteindre 190 °C pour la formation adéquate de la croûte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte d'or profond, craquelante audiblement quand tapotée, copeaux dorés et vapeur. La cuisine sent la graisse de boeuf chaud et la mer.",
+            "action": "Appliquer immédiatement le sel et le vinaigre. Mangez sans tarder."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tout est resté trop longtemps — la pâte s'est adoucie de la vapeur, les copeaux sont devenus boiteux et froids.",
+            "action": "Retourner les jetons à la friteuse à 190 C pendant 90 secondes. Il n'y a pas de secours pour la pâte molle — évitez cette situation en servant immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Bite à travers la pâte: la fissure initiale doit être audible — un éclat propre et vitreux — puis laisser place au poisson humide, délicat et doux à l'intérieur. Si la pâte déchire plutôt que se brise, l'huile n'était pas assez chaude."
+    }
+  ]
 };

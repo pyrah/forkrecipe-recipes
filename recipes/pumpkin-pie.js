@@ -1,104 +1,238 @@
 export default {
-  repoId: "master_american_pumpkin_pie_001",
-  parentRepoId: null,
-  slug: "pumpkin-pie",
-  author: "ForkRecipe Kitchen",
-
-  title: "Pumpkin Pie",
-  description: "A silky, trembling custard of pumpkin and warm spice set in a buttery, shatteringly crisp crust — the pie that makes an entire holiday smell like cinnamon and brown sugar from the moment it goes into the oven.",
-  cuisine: "American",
-  culture: "American",
-  category: "desserts",
-
-  tags: ["american", "pumpkin", "pie", "thanksgiving", "dessert"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "parts",
-
-  stars: 1756,
-  forks: 162,
-  contributors: 20,
-  license: "CC-BY-SA",
-  createdAt: "2024-10-01",
-  updatedAt: "2025-10-22",
-
-  flavorRadar: { sweet: 3, salty: 1, sour: 0, bitter: 1, umami: 0, heat: 1 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "9-inch pie shell, par-baked (homemade or store-bought)", ratioValue: 30, defaultUnit: "parts", substitutions: ["graham cracker crust", "gingersnap crust"] },
-    { ingId: "ing_02", role: "Starch",    name: "Pumpkin puree, canned (not pie filling)",               ratioValue: 60, defaultUnit: "parts", substitutions: ["roasted butternut squash puree", "kabocha squash puree"] },
-    { ingId: "ing_03", role: "Dairy",     name: "Heavy cream",                                            ratioValue: 25, defaultUnit: "parts", substitutions: ["evaporated milk (more traditional)", "coconut cream"] },
-    { ingId: "ing_04", role: "Binder",    name: "Large eggs (2 whole + 1 yolk)",                         ratioValue: 15, defaultUnit: "parts", substitutions: ["3 whole eggs (less rich)"] },
-    { ingId: "ing_05", role: "Sweetener", name: "Dark brown sugar",                                      ratioValue: 20, defaultUnit: "parts", substitutions: ["granulated sugar", "maple syrup (reduce cream slightly)"] },
-    { ingId: "ing_06", role: "Spice",     name: "Pumpkin pie spice (cinnamon, ginger, nutmeg, clove, allspice)", ratioValue: 2, defaultUnit: "parts", substitutions: ["individual spices blended fresh"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Kosher salt and vanilla extract",                       ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_pumpkin_pie_001",
+  "parentRepoId": null,
+  "slug": "pumpkin-pie",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tarte de citrouille",
+  "description": "Une crème soyeuse et tremblante de citrouille et d'épices chaudes serties d'une croûte beurreuse et croustillante, la tarte qui fait sentir toute une fête comme la cannelle et le sucre brun dès qu'elle entre au four.",
+  "cuisine": "Américain",
+  "culture": "Américain",
+  "category": "desserts",
+  "tags": [
+    "américains",
+    "Citrouille",
+    "tarte",
+    "Action de grâces",
+    "dessert"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 1756,
+  "forks": 162,
+  "contributors": 20,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-10-01",
+  "updatedAt": "2025-10-22",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Par-bake crust",
-      inputs: ["ing_01"],
-      outputState: "par_baked_crust",
-      instructions: "If using a raw pie shell, line it with parchment and fill with pie weights or dried beans. Bake at 190°C for 15 minutes. Remove weights and parchment and bake a further 5 minutes until the base is just set and dry, but not browned. This par-baking prevents the classic soggy bottom. Cool slightly before filling.",
-      visualCue: {
-        primaryTarget: "The crust bottom looks dry and matte — no raw, doughy sheen. The edges are barely starting to turn a light golden color.",
-        spectrum: [
-          { state: "Underdone", description: "Crust bottom still looks wet and shiny. Raw dough visible. It will turn soggy under the wet pumpkin filling.", action: "Return to oven for 3–5 more minutes. The base must look dry and slightly set before you pour in the custard." },
-          { state: "Perfect",   description: "Base is dry and matte-looking with very light color at the edges. The dough no longer looks raw. Cool to the touch.", action: "Reduce oven to 165°C and fill with custard." },
-          { state: "Overdone",  description: "Crust is already golden-brown and baked through before the custard has even been added. It will over-brown significantly during the filled bake.", action: "Tent the edges with foil strips during the custard bake to prevent burning." },
-        ],
-      },
-      feelCue: "Press the base of the par-baked crust gently with a finger — it should feel firm and dry, not soft or give way. The edges should feel set but pale, not crumbly or crisp.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Coquille à tarte de 9 pouces, par-cuite (fait maison ou achetée au magasin)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "croûte de cracker graham",
+        "croûte de gingembre"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Make pumpkin custard",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "pumpkin_custard",
-      instructions: "In a large bowl, whisk together the pumpkin puree and brown sugar until no lumps remain. Add the spice blend, salt, and vanilla and whisk to combine. In a separate bowl, whisk the eggs and extra yolk until smooth, then add the heavy cream and whisk to combine. Pour the egg-cream mixture into the pumpkin mixture and whisk until completely smooth. Do not over-whisk or you will incorporate air that causes cracking during baking.",
-      visualCue: {
-        primaryTarget: "A smooth, uniform, deep orange custard that flows like thick cream. No lumps, no bubbles on the surface, uniform in color throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Lumps of unmixed pumpkin or undissolved brown sugar visible. The mixture looks streaky — orange swirls in a lighter background.", action: "Whisk more gently until uniform. Strain through a fine-mesh sieve if lumps persist — pumpkin custard should be silky-smooth." },
-          { state: "Perfect",   description: "Smooth, deep orange, flowing custard. No lumps. When you hold a whisk above it, the custard falls in a smooth ribbon, not in drops.", action: "Strain through a sieve for extra smoothness, then pour into the par-baked crust." },
-          { state: "Overdone",  description: "The custard has lots of bubbles on the surface from vigorous whisking. These bubbles will set into the pie and create an uneven, pockmarked surface.", action: "Let the custard stand for 5 minutes to allow most bubbles to dissipate before pouring. Or torch the surface briefly after pouring into the shell." },
-        ],
-      },
-      feelCue: "Run a clean finger through the custard and taste — you should taste earthy pumpkin, warm spice in this order: cinnamon, then ginger warmth, then a distant heat from clove. If one spice dominates, the blend is off.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "purée de citrouille, en conserve (non farcie)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "purée de courges à beurre grillée",
+        "purée de courge kabocha"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fill and bake",
-      inputs: ["par_baked_crust", "pumpkin_custard"],
-      outputState: "baked_pumpkin_pie",
-      instructions: "Pour the custard into the par-baked shell, filling to within 5mm of the top edge. Tent the crust edges with foil or a pie shield. Bake at 165°C for 50–60 minutes until the edges of the custard are set but the center 5cm still jiggles when the pie is gently shaken. Remove and cool completely at room temperature for 2 hours, then refrigerate.",
-      visualCue: {
-        primaryTarget: "The custard surface is set and matte with a slight dome. The edges are completely firm. The center 5cm jiggles as a single mass — like jello — when the pan is gently shaken.",
-        spectrum: [
-          { state: "Underdone", description: "The center half of the pie is still liquid and moves like water when shaken, not as a single jiggly mass. The surface looks wet and shiny throughout.", action: "Return to oven for 5–10 minute intervals. Check often — the window between underdone and overdone is narrow." },
-          { state: "Perfect",   description: "Edges are completely set and matte. The center 5cm jiggles as one unified mass. A paring knife inserted 2cm from the edge comes out clean, but the very center still looks underdone. Trust the jiggle.", action: "Remove immediately. The center will finish cooking from carryover heat." },
-          { state: "Overdone",  description: "The entire pie is firm, even the center. The surface has cracked across the middle. The edges may be puffed and separating from the crust.", action: "Cool and refrigerate — cracked pies still taste good. Cover cracks with whipped cream. Next time, pull 10 minutes earlier and trust carryover heat." },
-        ],
-      },
-      feelCue: "Gently shake the pie pan while it's still in the oven — rest your fingertips on the rack and tilt slightly. The center should move as a single disc, not as a liquid wave. The moment you feel one unified jiggle rather than a liquid slosh, pull it.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "lait évaporé (plus traditionnel)",
+        "crème de coco"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Cool and set",
-      inputs: ["baked_pumpkin_pie"],
-      outputState: "set_pumpkin_pie",
-      instructions: "Cool the pie on a wire rack at room temperature for 2 full hours. Do not refrigerate immediately — rapid temperature change causes cracking. After 2 hours, refrigerate uncovered for at least 2 hours before slicing. The filling must be completely cold before cutting — warm pumpkin pie filling is still technically liquid and will collapse when cut.",
-      visualCue: {
-        primaryTarget: "After cooling, the custard surface is completely matte, slightly shrunk from the edges, and firm with a very slight bounce when tapped. The pie holds its shape when sliced.",
-        spectrum: [
-          { state: "Underdone", description: "Pie was cut while still warm — the custard collapses out from the slice, pooling on the plate. Surface looks wet in the cut.", action: "Refrigerate the remaining pie and serve the collapsed slice as a 'deconstructed' portion. Slice cold next time." },
-          { state: "Perfect",   description: "Cold pie slices cleanly, holding its triangular shape. Cut edge is smooth and firm, showing the deep orange custard and flaky crust at the base.", action: "Serve with whipped cream." },
-          { state: "Overdone",  description: "Pie has been refrigerated for more than 2 days. The crust is slightly soft from moisture migration. The custard surface may have a slight sheen.", action: "Serve anyway — flavor is unaffected. Next time, store covered loosely with plastic wrap, not sealed, to reduce moisture condensation." },
-        ],
-      },
-      feelCue: "Press the center of the cooled pie gently with one finger — it should spring back immediately with a faint bounce, like pressing a firm cheek. If it holds a dent, it needs more time in the refrigerator.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Gros œufs (2 entiers + 1 jaune)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "3 œufs entiers (moins riches)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre brun foncé",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre granulé",
+        "sirop d'érable (réduire légèrement la crème)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Epices à tarte à la citrouille (cinnamon, gingembre, muscade, girofle, tousspices)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "épices individuelles mélangées fraîches"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel casher et extrait de vanille",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Pâte à soupe",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "par_baked_crust",
+      "instructions": "Si vous utilisez une coquille de tarte crue, garnissez-la de parchemin et remplissez-la de poids de tarte ou de haricots secs. Cuire à 190°C pendant 15 minutes. Retirer les poids et le parchemin et cuire 5 minutes de plus jusqu'à ce que la base soit juste réglée et sèche, mais non dorée. Ce par-baking empêche le bas de soggy classique. Laisser refroidir légèrement avant le remplissage.",
+      "visualCue": {
+        "primaryTarget": "Le fond de la croûte a l'air sec et mat — pas d'éclats crus et pâteux. Les bords commencent à peine à tourner une couleur dorée claire.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le fond en croûte semble encore humide et brillant. Pâte brute visible. Il va devenir soyeux sous le remplissage humide de citrouille.",
+            "action": "Retourner au four 3 à 5 minutes de plus. La base doit avoir l'air sèche et légèrement réglée avant de verser dans la crème."
+          },
+          {
+            "state": "Perfect",
+            "description": "La base est sèche et mate avec une couleur très claire aux bords. La pâte n'a plus l'air crue. Du calme.",
+            "action": "Réduire le four à 165°C et le remplir de crème."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est déjà dorée et cuite au four avant même que la crème n'ait été ajoutée. Il sera sur-brun significativement pendant le four rempli.",
+            "action": "Tentez les bords avec des bandes de feuilles pendant la cuisson de la crème afin d'éviter toute brûlure."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur la base de la croûte par-cuite avec un doigt — il doit se sentir ferme et sec, pas doux ou céder. Les bords doivent se sentir fixés mais pâles, pas émiettés ou croquants."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Faire de la crème de citrouille",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "pumpkin_custard",
+      "instructions": "Dans un grand bol, fouetter ensemble la purée de citrouille et le sucre brun jusqu'à ce qu'il ne reste plus de morceaux. Ajouter le mélange d'épices, le sel, la vanille et fouetter pour mélanger. Dans un bol séparé, fouetter les œufs et le jaune supplémentaire jusqu'à ce qu'ils soient lisses, ajouter la crème lourde et fouetter pour mélanger. Verser le mélange oeuf-crème dans le mélange de citrouille et fouetter jusqu'à ce qu'il soit complètement lisse. N'exagérez pas ou vous incorporerez de l'air qui provoque des fissures pendant la cuisson.",
+      "visualCue": {
+        "primaryTarget": "Une crème orange profonde lisse et uniforme qui coule comme de la crème épaisse. Pas de bosses, pas de bulles à la surface, de couleur uniforme partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Lumps de citrouille non mélangée ou de sucre brun non dissous visibles. Le mélange semble strié — l'orange tourne dans un fond plus léger.",
+            "action": "fouetter plus doucement jusqu'à uniforme. S'écarter d'un tamis à mailles fines si les bosses persistent — la crème de citrouille doit être soyeuse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, orange foncé, crème douce. Pas de bosses. Lorsque vous tenez un fouet au-dessus, la crème tombe dans un ruban lisse, pas dans des gouttes.",
+            "action": "Plonger dans un tamis pour obtenir une douceur supplémentaire, puis verser dans la croûte par-cuite."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème a beaucoup de bulles à la surface du fouet vigoureux. Ces bulles seront placées dans la tarte et créeront une surface inégale, marquée par des pockmarks.",
+            "action": "Laisser reposer la crème pendant 5 minutes pour permettre à la plupart des bulles de se dissiper avant de verser. Ou torchez brièvement la surface après avoir coulé dans la coquille."
+          }
+        ]
+      },
+      "feelCue": "Passez un doigt propre à travers la crème et goûtez — vous devriez goûter citrouille terreuse, épices chaudes dans cet ordre: cannelle, puis chaleur de gingembre, puis une chaleur éloignée de la girofle. Si une épice domine, le mélange est coupé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Remplir et cuire",
+      "inputs": [
+        "par_baked_crust",
+        "pumpkin_custard"
+      ],
+      "outputState": "baked_pumpkin_pie",
+      "instructions": "Verser la crème dans la coquille par-cuite, remplir à moins de 5 mm du bord supérieur. Tentez les bords de la croûte avec du papier ou un bouclier à tarte. Cuire au four à 165°C pendant 50 à 60 minutes jusqu'à ce que les bords de la crème soient fixés, mais le centre de 5cm continue de grignoter lorsque la tarte est légèrement secouée. Retirer et refroidir complètement à température ambiante pendant 2 heures, puis réfrigérer.",
+      "visualCue": {
+        "primaryTarget": "La surface de la crème est réglée et mate avec un léger dôme. Les bords sont complètement fermes. Le centre de 5cm se fige en une seule masse — comme le jello — lorsque la poêle est légèrement secouée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La moitié centrale de la tarte est encore liquide et se déplace comme de l'eau lorsqu'elle est secouée, pas comme une seule masse jiggly. La surface a l'air humide et brillante.",
+            "action": "Retourner au four pendant 5-10 minutes. Vérifiez souvent — la fenêtre entre le sous - et le sur-dos est étroite."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords sont complètement fixés et mats. Le centre de 5cm est une masse unifiée. Un couteau à parure inséré 2cm du bord sort propre, mais le centre même semble encore sous-doré. Faites confiance au puzzle.",
+            "action": "Supprimer immédiatement. Le centre terminera la cuisson à partir de la chaleur de transport."
+          },
+          {
+            "state": "Overdone",
+            "description": "Toute la tarte est ferme, même le centre. La surface a craqué au milieu. Les bords peuvent être gonflés et séparés de la croûte.",
+            "action": "Refroidir et réfrigérer: les tartes craquelées ont encore bon goût. Couvrir les fissures avec de la crème fouettée. La prochaine fois, tirez 10 minutes plus tôt et faites confiance à la chaleur de report."
+          }
+        ]
+      },
+      "feelCue": "Agiter délicatement la poêle à tarte pendant qu'elle est encore au four — reposez le bout des doigts sur la grille et penchez légèrement. Le centre doit se déplacer comme un seul disque, pas comme une vague liquide. Au moment où vous vous sentez un joggle unifié plutôt qu'un slosh liquide, tirez-le."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Frais et réglé",
+      "inputs": [
+        "baked_pumpkin_pie"
+      ],
+      "outputState": "set_pumpkin_pie",
+      "instructions": "Laisser refroidir la tarte sur une grille à température ambiante pendant 2 heures complètes. Ne pas réfrigérer immédiatement — un changement rapide de température provoque des fissures. Après 2 heures, réfrigérer à découvert pendant au moins 2 heures avant de trancher. Le remplissage doit être complètement froid avant la coupe — le remplissage à la citrouille chaude est encore techniquement liquide et s'effondrera lorsqu'il sera coupé.",
+      "visualCue": {
+        "primaryTarget": "Après refroidissement, la surface de la crème est complètement mate, légèrement rétrécie des bords, et ferme avec un très léger rebond en tapotant. La tarte tient sa forme lorsqu'elle est coupée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La tarte était coupée alors qu'elle était encore chaude — la crème s'effondre de la tranche, en piqué sur l'assiette. La surface semble mouillée dans la coupe.",
+            "action": "Réfrigérer le reste de la tarte et servir la tranche effondrée comme portion « déconstruite ». Tranche froide la prochaine fois."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des tranches de tarte froides, tenant sa forme triangulaire. Le bord coupé est lisse et ferme, ce qui montre la croûte rouge foncée et flocée à la base.",
+            "action": "Servir avec de la crème fouettée."
+          },
+          {
+            "state": "Overdone",
+            "description": "La tarte est réfrigérée depuis plus de 2 jours. La croûte est légèrement molle à cause de la migration de l'humidité. La surface de la crème peut avoir un léger éclat.",
+            "action": "Servir de toute façon — la saveur n'est pas affectée. La prochaine fois, entreposez-le de façon lâche avec un enveloppement en plastique, non scellé, pour réduire la condensation d'humidité."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur le centre de la tarte refroidie d'un doigt — il devrait revenir immédiatement avec un léger rebond, comme appuyer sur une joue ferme. Si elle tient une bosse, elle a besoin de plus de temps au réfrigérateur."
+    }
+  ]
 };

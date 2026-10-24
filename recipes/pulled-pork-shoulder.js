@@ -1,113 +1,303 @@
 export default {
-  repoId: "master_american_pulled_pork_shoulder_001",
-  parentRepoId: null,
-  slug: "pulled-pork-shoulder",
-  author: "ForkRecipe Kitchen",
-  title: "Pulled Pork Shoulder",
-  description: "A pork shoulder rubbed with spices, smoked low and slow for hours until the bark is mahogany and the interior pulls apart in long, silky, juicy threads with zero effort.",
-  cuisine: "American",
-  culture: "American BBQ",
-  category: "proteins",
-  tags: ["pulled-pork", "bbq", "american", "slow-cooked", "smoky", "gluten-free"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "14 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 1, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in pork shoulder (Boston butt, 2–2.5 kg)", ratioValue: 100, defaultUnit: "parts", substitutions: ["boneless pork shoulder, netting removed"] },
-    { ingId: "ing_02", role: "Spice",     name: "Smoked paprika",                                 ratioValue: 4,   defaultUnit: "parts", substitutions: ["sweet paprika + a drop of liquid smoke"] },
-    { ingId: "ing_03", role: "Spice",     name: "Ground cumin",                                   ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",     name: "Freshly ground black pepper (coarse)",            ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Garlic powder",                                  ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Onion powder",                                   ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Cayenne pepper",                                 ratioValue: 0.5, defaultUnit: "parts", substitutions: ["chipotle powder for more smoke"] },
-    { ingId: "ing_08", role: "Sweetener", name: "Dark brown sugar",                               ratioValue: 3,   defaultUnit: "parts", substitutions: ["light brown sugar", "muscovado"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine salt (kosher or sea salt)",                 ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Liquid",    name: "Apple cider vinegar (for spritzing)",            ratioValue: 5,   defaultUnit: "parts", substitutions: ["apple juice", "water"] },
-    { ingId: "ing_11", role: "Aromatic",  name: "Hardwood chunks (oak, hickory, or apple wood)",  ratioValue: 6,   defaultUnit: "parts", substitutions: ["wood chips, soaked 30 min for gas grills"] },
+  "repoId": "master_american_pulled_pork_shoulder_001",
+  "parentRepoId": null,
+  "slug": "pulled-pork-shoulder",
+  "author": "ForkRecipe Kitchen",
+  "title": "Épaule de porc tiré",
+  "description": "Une épaule de porc frotté avec des épices, fumé bas et lent pendant des heures jusqu'à ce que l'écorce soit acajou et l'intérieur se sépare en longs fils soyeux et juteux avec aucun effort.",
+  "cuisine": "Américain",
+  "culture": "BBQ américain",
+  "category": "proteins",
+  "tags": [
+    "pulvérulent",
+    "bbq",
+    "américains",
+    "cuits lentement",
+    "fumée",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "14 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Cure",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "rubbed_shoulder",
-      instructions: "Mix all the spices, sugar, and salt together into a uniform rub. Pat the pork shoulder completely dry with paper towels — surface moisture prevents the rub from adhering and forms steam instead of bark during cooking. Apply the rub in a thick, generous, even layer across every surface of the shoulder, pressing and patting it in firmly. Do not neglect any surface, including the fat cap and under any folds. Wrap the rubbed shoulder in plastic wrap or place in a large zipper bag and refrigerate for at least 8 hours, ideally overnight (12 hours). The salt in the rub draws out moisture, dissolves into a brine, and is reabsorbed — seasoning the meat deeply rather than just the surface.",
-      visualCue: {
-        primaryTarget: "The rubbed shoulder is completely coated in a dark, rust-red rub — no bare patches, no pooled rub at the bottom. After resting, the surface looks slightly damp as the salt has drawn moisture to the surface and the rub has begun to adhere.",
-        spectrum: [
-          { state: "Underdone", description: "The rub is thin, applied in a light dusting that barely covers the surface. The pork fat is still clearly visible through the coating and the rub will not form a proper bark during cooking.", action: "Apply more rub generously. You want a thick, encrusting layer that makes the shoulder look like it has been dredged in spiced earth." },
-          { state: "Perfect",   description: "A thick, even, dark rust-red coat across every surface. The shoulder looks almost black from the combination of paprika and dark brown sugar. The rub sticks without clumping or sliding off.", action: "Wrap and refrigerate for at least 8 hours before smoking." },
-          { state: "Overdone",  description: "The rub has been applied in such a thick, crusty layer that it is beginning to fall off in clumps and the underlying fat is not visible. The salt ratio may overwhelm the meat.", action: "Brush off the most excessive accumulations and proceed. A slightly heavy rub is far better than a light one." },
-        ],
-      },
-      feelCue: "Press your palm flat against the rubbed surface — the rub should feel gritty and slightly moist from the sugars, and it should cling to your skin when you lift your hand. If it feels powdery and dry and does not adhere, add a very thin brushing of neutral oil to the surface before applying the rub.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Épaule de porc désossée (dos de Boston, 2 à 2,5 kg)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "épaule de porc désossée, filet enlevé"
+      ]
     },
     {
-      nodeId: "step_2", action: "Smoke",
-      inputs: ["rubbed_shoulder", "ing_11"],
-      outputState: "smoked_shoulder",
-      instructions: "Set up the smoker or grill for indirect heat at a stable temperature of 107 to 120 C / 225 to 250 F. This is the low-and-slow window — above 135 C / 275 F the exterior dries before the interior collagen has had time to dissolve. Add hardwood chunks to the fire: oak and hickory are traditional for a bold, Southern BBQ character; apple and cherry are milder and pair beautifully with pork's sweetness. Place the shoulder fat-cap side up on the grate over the indirect zone. Smoke for 6 to 8 hours, maintaining the temperature window and adding wood as needed. Spritz with apple cider vinegar every 90 minutes after the first 3 hours to keep the surface moist and promote bark formation without washing the rub away.",
-      visualCue: {
-        primaryTarget: "After 6 to 7 hours, the bark is a deep, cracked mahogany — nearly black in the thicker areas, caramelized and lacquered-looking. The fat cap is translucent and rendered. White smoke drifts from the vents rather than thick billowing blue-grey smoke.",
-        spectrum: [
-          { state: "Underdone", description: "The surface is still mostly red-orange from the paprika, with no crust and no significant darkening. Less than 4 hours have passed and the bark has not formed yet.", action: "Maintain the temperature and continue smoking. Bark typically begins forming after 4 to 5 hours. Do not raise the temperature to speed things up." },
-          { state: "Perfect",   description: "A hard, crackling, mahogany bark that does not give when pressed. The shoulder has stalled (the temperature plateau, typically at 68 to 74 C / 155 to 165 F) and then powered through. The internal temperature should be approaching 88 C / 190 F.", action: "Check the internal temperature and begin the wrap phase if the bark is fully formed and the internal temperature is between 74 and 82 C / 165 to 180 F." },
-          { state: "Overdone",  description: "Thick, black, and acrid-smelling smoke has been present throughout — a sign of incomplete combustion. The bark has become bitter rather than savory from the creosote in the smoke.", action: "Open the vents to improve combustion and reduce fuel, aiming for thin, blue-white smoke. The bark may carry some bitterness — rest and pulling will distribute it and moderate its impact." },
-        ],
-      },
-      feelCue: "After 6 hours, knock on the bark with your knuckle — it should make a hollow, hard sound, like knocking on wood, not a wet, dull thud. The bark should feel completely dry and hard, like a crust. If it flexes or dents under your finger, it is not yet fully formed.",
+      "ingId": "ing_02",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika doux + une goutte de fumée liquide"
+      ]
     },
     {
-      nodeId: "step_3", action: "Braise",
-      inputs: ["smoked_shoulder", "ing_10"],
-      outputState: "wrapped_shoulder",
-      instructions: "Once the bark is fully formed and the internal temperature is between 74 and 82 C / 165 and 180 F, wrap the shoulder tightly in two layers of heavy-duty foil (the Texas Crutch). Add a small splash of apple cider vinegar into the foil before sealing. Return to the smoker at the same temperature. The foil traps moisture and steam, rapidly converting remaining collagen to gelatin and driving the internal temperature through the stall. Cook until the internal temperature reaches 95 to 97 C / 203 to 207 F — the bone-probe temperature. At this temperature, the probe or a skewer should slide into the meat with the resistance of soft butter.",
-      visualCue: {
-        primaryTarget: "The foil package is tightly sealed. On unwrapping, the shoulder has softened visibly — the bark has relaxed slightly from the steam, the fat is completely rendered and trembling, and liquid has collected in the bottom of the foil package.",
-        spectrum: [
-          { state: "Underdone", description: "The internal temperature is still below 90 C / 195 F and a probe or skewer meets distinct resistance in the thickest part. The shoulder does not wobble when you shake the rack.", action: "Return to the heat. The collagen has not yet fully converted. The shoulder may sit in the stall for another 1 to 2 hours before the temperature rises again — this is normal, do not raise the heat." },
-          { state: "Perfect",   description: "Internal temperature at 95 to 97 C / 203 to 207 F and a probe slides in and out with no resistance — like pushing through soft peanut butter. The shoulder wobbles visibly when you shake the rack. The bone will feel loose in the meat.", action: "Remove from heat and move to the rest phase immediately." },
-          { state: "Overdone",  description: "The internal temperature has exceeded 100 C / 212 F and the meat is beginning to dry out — the muscle fibers have contracted and squeezed out the moisture beyond recovery.", action: "Pull immediately and serve quickly; the meat may still be acceptable but will lack the full succulence of a properly cooked shoulder." },
-        ],
-      },
-      feelCue: "Shake the foil package gently while it is on the grate — a perfectly cooked shoulder wobbles and jiggles with an almost liquid quality, the internal structure having fully given way. If it feels solid and unmoving, it needs more time. When you unwrap it, liquid should pool in the foil — that is the rendered collagen, and you should pour it back over the meat.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Rest",
-      inputs: ["wrapped_shoulder"],
-      outputState: "rested_shoulder",
-      instructions: "Transfer the wrapped shoulder (still in its foil) to a clean, empty cooler. Close the cooler and rest for a minimum of 1 hour, ideally 2 hours. This rest is not optional — it is what transforms the shoulder from simply cooked to superlative. During the rest, the internal temperature equalizes, the muscle fibers relax and reabsorb their juices, and the collagen that converted to gelatin coats every fiber, making the final pull glossy and self-saucing. A properly rested shoulder held in a cooler maintains temperature for up to 4 hours, so you can rest it comfortably while preparing everything else.",
-      visualCue: {
-        primaryTarget: "On unwrapping after the rest, the shoulder looks deflated and soft, the bark slightly steamed from the foil. The bone can be pulled free with two fingers and almost no effort — it slides out cleanly.",
-        spectrum: [
-          { state: "Underdone", description: "The shoulder was rested for less than 30 minutes and is still steaming when unwrapped. The juices run clear and watery when cut — they have not had time to reabsorb.", action: "Re-wrap and continue resting. The difference in juiciness between a 30-minute and a 2-hour rest is dramatic." },
-          { state: "Perfect",   description: "The bark has tightened back slightly after resting and the shoulder holds its shape when unwrapped. The bone pulls free cleanly. The juices released during the rest have pooled in the foil as a thick, gelatinous, mahogany liquid.", action: "Unwrap over a tray to catch the juices and begin pulling immediately." },
-          { state: "Overdone",  description: "Rested too long (more than 4 hours in the cooler) and the shoulder has dropped below safe serving temperature and is cold to the touch.", action: "Return to the oven or smoker at 120 C / 250 F for 30 minutes to bring it back to serving temperature before pulling." },
-        ],
-      },
-      feelCue: "Touch the bark after the rest — it should have firmed back from the steamed texture it had immediately after unwrapping from foil. It should feel slightly crisp at the surface but give way immediately underneath. The meat below the bark should feel soft and yielding, like clay.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Season",
-      inputs: ["rested_shoulder"],
-      outputState: "finished_pulled_pork",
-      instructions: "Pull the pork using two forks or your hands (with clean heat-resistant gloves). Start from the bone and work outward, pulling the meat apart into long, natural strands — follow the grain of the muscle. Avoid chopping or shredding too finely; long, silky strands are the ideal. Pour the collected resting juices over the pulled meat and toss to coat. Chop the darkest pieces of bark into small bits and fold them through the pulled meat — these dark, intensely flavored bits are called 'burnt ends adjacent' and are prized for the concentrated spice-smoke flavor they add to the final mix. Taste and add salt or a splash of apple cider vinegar if needed.",
-      visualCue: {
-        primaryTarget: "A pile of long, glistening, mahogany-to-bronze threads of pulled pork, with darker bits of bark distributed throughout. The meat looks moist and self-saucing from the rendered fat and gelatin coating every fiber.",
-        spectrum: [
-          { state: "Underdone", description: "The meat is still in chunks rather than pulling into strands — it is resistant to pulling and requires significant force. It is not done.", action: "Do not pull yet. Return any uncooperative sections to the oven at 120 C / 250 F for 30 to 45 minutes, wrapped, and try again." },
-          { state: "Perfect",   description: "The meat pulls apart effortlessly into long, natural strands with the lightest touch, each strand glistening with rendered fat. Bark bits mixed through add dark, caramelized intensity. The pile holds moisture and does not look dry.", action: "Serve in sandwiches, bowls, or tacos. The fat and gelatin will keep the pulled pork moist for hours at room temperature on a tray." },
-          { state: "Overdone",  description: "The meat has shredded to a mushy, paste-like consistency — the fibers have broken down entirely and the texture is more akin to tinned meat than pulled pork.", action: "Serve it as-is but sauce generously to compensate for the lost texture. Avoid this by pulling promptly and not overcooking past 97 C / 207 F." },
-        ],
-      },
-      feelCue: "Take a strand of pulled pork and stretch it gently between your fingers — a perfect piece should elongate a little before tearing cleanly, like pulling apart a piece of cooked fish. It should feel slick and slightly tacky from the dissolved collagen, not dry or stringy.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poudre d'ail",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poudre d'oignon",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poudre de chipotle pour plus de fumée"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Sucre brun foncé",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun léger",
+        "muscovado"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin (salon casher ou sel de mer)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Liquid",
+      "name": "vinaigre de cidre de pomme (pour le spritzing)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de pomme",
+        "eau"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Aromatic",
+      "name": "Morceaux de bois franc (poêle, hickory ou bois de pomme)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "copeaux de bois trempés 30 min pour grilles à gaz"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Cure",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "rubbed_shoulder",
+      "instructions": "Mélanger toutes les épices, le sucre et le sel dans un mélange uniforme. Patientez l'épaule de porc complètement sèche avec des serviettes en papier — l'humidité de surface empêche le frottement d'adhérer et forme de la vapeur au lieu de l'écorce pendant la cuisson. Appliquer le frotter dans une couche épaisse, généreuse, uniforme sur chaque surface de l'épaule, le presser et le patter fermement. Ne négligez aucune surface, y compris le bouchon de graisse et sous les plis. Enveloppez l'épaule frottée dans une enveloppe plastique ou placez-la dans un grand sac à glissière et réfrigérez-le pendant au moins 8 heures, idéalement pendant la nuit (12 heures). Le sel de la bruine dégage l'humidité, se dissout en saumure et est réabsorbé, assaisonnant la viande profondément plutôt que simplement la surface.",
+      "visualCue": {
+        "primaryTarget": "L'épaule frottée est complètement enduite d'un frottis noir et rouge rouille: pas de taches nues, pas de frottis enroulé au fond. Après le repos, la surface semble légèrement humide car le sel a attiré l'humidité à la surface et le frottement a commencé à adhérer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le frottage est mince, appliqué dans une légère poussière qui recouvre à peine la surface. La graisse de porc est encore clairement visible à travers le revêtement et le frottage ne formera pas une écorce appropriée pendant la cuisson.",
+            "action": "Appliquer plus de frotter généreusement. Vous voulez une couche épaisse et encroûtante qui donne l'apparence que l'épaule a été draguée dans la terre épicée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une couche épaisse, uniforme, rouge rouille foncé sur chaque surface. L'épaule est presque noire de la combinaison du paprika et du sucre brun foncé. Les bâtons de frotter sans accroupir ou glisser.",
+            "action": "Enrouler et réfrigérer pendant au moins 8 heures avant de fumer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le frottage a été appliqué dans une couche si épaisse et si croustillante qu'il commence à tomber en touffes et que la graisse sous-jacente n'est pas visible. Le rapport sel peut submerger la viande.",
+            "action": "Badigeonner les accumulations les plus excessives et procéder. Un frottage légèrement lourd est bien mieux qu'un frottage léger."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur votre paume à plat contre la surface frottée — le frottage devrait être sec et légèrement humide des sucres, et il devrait s'accrocher à votre peau lorsque vous levez la main. Si elle se sent poudreuse et sèche et ne adhère pas, ajouter un brossage très fin de l'huile neutre à la surface avant d'appliquer le frottage."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fumée",
+      "inputs": [
+        "rubbed_shoulder",
+        "ing_11"
+      ],
+      "outputState": "smoked_shoulder",
+      "instructions": "Mettre en place le fumeur ou la grille pour la chaleur indirecte à une température stable de 107 à 120 C / 225 à 250 F. C'est la fenêtre basse et basse — au-dessus de 135 C / 275 F le sèche-linge extérieur avant que le collagène intérieur ait eu le temps de se dissoudre. Ajoutez des morceaux de bois franc au feu : le chêne et l'hickory sont traditionnels pour un BBQ sudiste audacieux ; les pommes et les cerises sont plus douces et s'accordent avec la douceur du porc. Placer le côté de l'épaule sur la grille au-dessus de la zone indirecte. Fumer pendant 6 à 8 heures, maintenir la fenêtre de température et ajouter du bois au besoin. Spritz au vinaigre de cidre de pomme toutes les 90 minutes après les 3 premières heures pour maintenir la surface humide et favoriser la formation d'écorce sans laver le frottage.",
+      "visualCue": {
+        "primaryTarget": "Après 6 à 7 heures, l'écorce est une acajou profonde et fissurée, presque noire dans les zones plus épaisses, caramélisée et laquée. Le bouchon est translucide et rendu. La fumée blanche dérive des évents plutôt qu'une épaisse fumée grise bleue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est encore principalement rouge-orange du paprika, sans croûte et sans assombrissement significatif. Moins de 4 heures se sont écoulées et l'écorce n'est pas encore formée.",
+            "action": "Maintenir la température et continuer à fumer. L'écorce commence généralement à se former après 4 à 5 heures. Ne pas augmenter la température pour accélérer les choses."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une écorce dure, crépitante et acajoue qui ne donne pas lorsqu'elle est pressée. L'épaule a décroché (le plateau de température, généralement de 68 à 74 °C / 155 à 165 °F) puis est passée à travers. La température interne devrait approcher 88 C/190 F.",
+            "action": "Vérifiez la température interne et commencez la phase d'enroulement si l'écorce est entièrement formée et la température interne est entre 74 et 82 C / 165 à 180 F."
+          },
+          {
+            "state": "Overdone",
+            "description": "La fumée épaisse, noire et d'odeur d'acre a été présente tout au long de la journée, signe d'une combustion incomplète. L'écorce est devenue amère plutôt que salée de la créosote dans la fumée.",
+            "action": "Ouvrez les évents pour améliorer la combustion et réduire le carburant, en visant la fumée mince, bleu-blanc. L'écorce peut porter une certaine amertume: le repos et la traction la distribueront et en atténueront l'impact."
+          }
+        ]
+      },
+      "feelCue": "Au bout de 6 heures, frappez l'écorce à l'aide de votre pinceau — il devrait faire un son creux, dur, comme frapper sur le bois, pas un bourbier humide et terne. L'écorce doit se sentir complètement sèche et dure, comme une croûte. Si elle se fléchit ou se dente sous votre doigt, elle n'est pas encore complètement formée."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "smoked_shoulder",
+        "ing_10"
+      ],
+      "outputState": "wrapped_shoulder",
+      "instructions": "Une fois que l'écorce est entièrement formée et que la température interne est comprise entre 74 et 82 C/ 165 et 180 F, enveloppez fermement l'épaule en deux couches de feuille lourde (le Texas Crutch). Ajouter une petite éclaboussure de vinaigre de cidre de pomme dans la feuille avant de sceller. Retourner au fumeur à la même température. La feuille piège l'humidité et la vapeur, convertissant rapidement le collagène restant en gélatine et conduisant la température interne à travers le décrochage. Cuire jusqu'à ce que la température interne atteigne 95 à 97 C / 203 à 207 F — la température de la sonde osseuse. À cette température, la sonde ou une brochette doit glisser dans la viande avec la résistance du beurre mou.",
+      "visualCue": {
+        "primaryTarget": "L'emballage en feuilles est bien scellé. Lors du déballage, l'épaule s'est adoucie visiblement — l'écorce s'est légèrement détendu de la vapeur, la graisse est complètement rendue et tremblante, et le liquide a été recueilli dans le fond de l'emballage en feuilles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La température interne est encore inférieure à 90 C / 195 F et une sonde ou une brochette rencontre une résistance distincte dans la partie la plus épaisse. L'épaule ne tremble pas quand vous secouez la grille.",
+            "action": "Retourne à la chaleur. Le collagène n'a pas encore complètement converti. L'épaule peut rester dans le décrochage pendant encore 1 à 2 heures avant que la température ne reprenne — c'est normal, ne pas augmenter la chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Température interne de 95 à 97 C / 203 à 207 F et une sonde glisse à l'intérieur et à l'extérieur sans résistance — comme pousser à travers le beurre d'arachide doux. L'épaule oscille visiblement quand vous secouez la grille. L'os se sentira lâche dans la viande.",
+            "action": "Retirer du feu et passer à la phase de repos immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La température interne a dépassé 100 °C / 212 °F et la viande commence à se sécher — les fibres musculaires ont contracté et pressé l'humidité au-delà de la récupération.",
+            "action": "Tirez immédiatement et servez rapidement; la viande peut encore être acceptable, mais manquera de la pleine succulence d'une épaule bien cuite."
+          }
+        ]
+      },
+      "feelCue": "Agiter doucement l'emballage de papier pendant qu'il est sur la grille — une épaule parfaitement cuite oscille et se glissade avec une qualité presque liquide, la structure interne ayant complètement cédé. Si elle se sent solide et immuable, elle a besoin de plus de temps. Lorsque vous l'enroulez, le liquide doit être mis dans la feuille, c'est - à - dire le collagène rendu, et vous devriez le verser sur la viande."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "wrapped_shoulder"
+      ],
+      "outputState": "rested_shoulder",
+      "instructions": "Transférer l'épaule enveloppée (toujours dans sa feuille) dans un refroidisseur propre et vide. Fermez la glacière et reposez-vous pendant au moins 1 heure, idéalement 2 heures. Ce repos n'est pas facultatif — c'est ce qui transforme l'épaule simplement cuite en superlative. Pendant le reste, la température interne s'égalise, les fibres musculaires se détendent et réabsorbent leurs jus, et le collagène qui se convertit en gélatine enveloppe chaque fibre, rendant la traction finale brillante et auto-saucissante. Une épaule correctement reposée maintenue dans un refroidisseur maintient la température jusqu'à 4 heures, de sorte que vous pouvez le reposer confortablement tout en préparant tout le reste.",
+      "visualCue": {
+        "primaryTarget": "Lors du déballage après le reste, l'épaule a l'air dégonflée et molle, l'écorce légèrement bouillie du papier. L'os peut être tiré libre avec deux doigts et presque aucun effort — il glisse proprement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'épaule s'est reposée pendant moins de 30 minutes et est toujours à la vapeur lorsqu'elle est déballée. Les jus sont limpides et arrosés lorsqu'ils sont coupés — ils n'ont pas eu le temps de se réabsorber.",
+            "action": "Recapturez et continuez à vous reposer. La différence de jutosité entre 30 minutes et 2 heures de repos est dramatique."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'écorce s'est légèrement resserrée après le repos et l'épaule tient sa forme lorsqu'elle est déballée. L'os est dégagé. Les jus libérés pendant le reste ont été mis en commun dans la feuille sous forme de liquide acajou épais et gélatineux.",
+            "action": "Déposez sur un plateau pour attraper les jus et commencer à tirer immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Reposé trop longtemps (plus de 4 heures dans le refroidisseur) et l'épaule a chuté sous la température de service sûre et est froid au toucher.",
+            "action": "Retourner au four ou au fumeur à 120 C / 250 F pendant 30 minutes pour le ramener à la température de service avant de tirer."
+          }
+        ]
+      },
+      "feelCue": "Touchez l'écorce après le reste – elle aurait dû se raffermir de la texture vapeur qu'elle avait immédiatement après avoir déballé de la feuille. Il devrait se sentir légèrement croquant à la surface mais laisser place immédiatement en dessous. La viande en dessous de l'écorce doit se sentir douce et productive, comme l'argile."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Saison",
+      "inputs": [
+        "rested_shoulder"
+      ],
+      "outputState": "finished_pulled_pork",
+      "instructions": "Tirez le porc à l'aide de deux fourchettes ou de vos mains (avec des gants propres résistants à la chaleur). Commencer par l'os et travailler vers l'extérieur, retirer la viande dans de longs brins naturels — suivre le grain du muscle. Évitez de couper ou de déchiqueter trop finement; les longs brins soyeux sont l'idéal. Verser les jus de repos recueillis sur la viande retirée et jeter pour enrober. Couper les morceaux d'écorce les plus foncés en petits morceaux et les plier à travers la viande tirée — ces morceaux foncés, intensément aromatisés sont appelés « bouts brûlés adjacents » et sont prisés pour la saveur épicée-fumeuse concentrée qu'ils ajoutent au mélange final. Goûtez et ajoutez du sel ou une touche de vinaigre de cidre de pomme si nécessaire.",
+      "visualCue": {
+        "primaryTarget": "Un tas de longs fils d'acajou à bronzé de porc tiré, avec des morceaux d'écorce plus foncés répartis dans l'ensemble. La viande semble humide et auto-saucissante à partir de la graisse rendue et le revêtement de gélatine chaque fibre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est encore en morceaux plutôt que de tirer en brins — elle est résistante à tirer et nécessite une force importante. Ce n'est pas fait.",
+            "action": "Ne tirez pas encore. Retourner les sections non-coopératives au four à 120 °C / 250 °F pendant 30 à 45 minutes, envelopper et réessayer."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande se détache sans effort en longs brins naturels avec le toucher le plus léger, chaque brin scintille avec la graisse rendue. Les morceaux d'écorce mélangés à travers ajouter l'intensité sombre et caramélisée. La pile retient l'humidité et ne semble pas sèche.",
+            "action": "Servir dans des sandwichs, des bols ou des tacos. La graisse et la gélatine garderont le porc tiré humide pendant des heures à température ambiante sur un plateau."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande a été déchiquetée à une consistance musclée et pâteuse – les fibres se sont entièrement décomposées et la texture est plus assimilable à la viande étamée que le porc tiré.",
+            "action": "Servir comme-est mais la sauce généreusement pour compenser la texture perdue. Évitez cela en tirant rapidement et sans trop cuire après 97 C / 207 F."
+          }
+        ]
+      },
+      "feelCue": "Prenez un brin de porc tiré et étirez - le doucement entre vos doigts — une pièce parfaite devrait s'allonger un peu avant de déchirer proprement, comme enlevant un morceau de poisson cuit. Il doit se sentir lissé et légèrement collagène dissous, non sec ou à cordes."
+    }
+  ]
 };

@@ -1,98 +1,272 @@
 export default {
-  repoId: "master_international_mushroom_stock_001",
-  parentRepoId: null,
-  slug: "mushroom-stock",
-  author: "ForkRecipe Kitchen",
-  title: "Mushroom Stock",
-  description: "A vegan umami stock built from dried mushrooms, aromatics, and kombu — dark amber and deeply savory, with a clean, forest-floor earthiness that enriches soups, risottos, and braises.",
-  cuisine: "International",
-  culture: "International",
-  category: "stocks",
-  tags: ["stock", "vegan", "vegetarian", "mushroom", "umami", "gluten-free"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",     name: "Dried porcini mushrooms",                  ratioValue: 5,   defaultUnit: "parts", substitutions: ["dried morels", "dried matsutake"] },
-    { ingId: "ing_02", role: "Umami",     name: "Dried shiitake mushrooms",                 ratioValue: 5,   defaultUnit: "parts", substitutions: ["dried oyster mushrooms"] },
-    { ingId: "ing_03", role: "Glutamate", name: "Kombu (dried kelp), wiped clean",          ratioValue: 2,   defaultUnit: "parts", substitutions: ["1 tsp white miso stirred in at the end"] },
-    { ingId: "ing_04", role: "Allium",    name: "Yellow onion (halved, unpeeled)",          ratioValue: 10,  defaultUnit: "parts", substitutions: ["leek whites"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Celery stalks with leaves",                ratioValue: 6,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Garlic cloves (crushed, unpeeled)",        ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Herb",      name: "Fresh thyme sprigs",                       ratioValue: 1,   defaultUnit: "parts", substitutions: ["dried thyme"] },
-    { ingId: "ing_08", role: "Spice",     name: "Black peppercorns (lightly cracked)",      ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine salt",                                ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Liquid",    name: "Cold water",                               ratioValue: 200, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Acid",      name: "Soy sauce (optional, to finish)",          ratioValue: 1,   defaultUnit: "parts", substitutions: ["tamari for strict gluten-free"] },
+  "repoId": "master_international_mushroom_stock_001",
+  "parentRepoId": null,
+  "slug": "mushroom-stock",
+  "author": "ForkRecipe Kitchen",
+  "title": "Stock de champignons",
+  "description": "Un stock d'umami végétalien construit à partir de champignons séchés, aromatiques et kombu — ambre foncé et profondément salé, avec une terre propre, plancher de forêt qui enrichit les soupes, risottos et braises.",
+  "cuisine": "internationaux relatifs",
+  "culture": "internationaux relatifs",
+  "category": "stocks",
+  "tags": [
+    "stock",
+    "végétalien",
+    "végétarien",
+    "champignon",
+    "umami",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Infuse",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_10"],
-      outputState: "cold_infused_base",
-      instructions: "Combine the dried porcini, dried shiitake, and kombu in a large pot and pour over the cold water. Leave to cold-infuse at room temperature for at least 30 minutes, or refrigerate overnight for a deeper, cleaner result. Cold-steeping draws out the glutamates gently, without the bitterness that rapid boiling can extract from dried mushrooms. The kombu should soften from a rigid black sheet to a supple, slippery frond — pull it out before the stock comes to a boil, as it turns bitter and slimy if cooked at a hard simmer.",
-      visualCue: {
-        primaryTarget: "After 30 minutes at room temperature, the water has turned a rich amber-brown and smells of forest floor and the sea. The mushrooms have swollen and softened; the kombu has relaxed from a stiff sheet to a pliant ribbon.",
-        spectrum: [
-          { state: "Underdone", description: "The water is barely tinted, the mushrooms still stiff and papery, the kombu unchanged. Little umami has been released yet.", action: "Allow more time for the cold infusion — at least 20 more minutes. Warmth helps; set the pot over very low heat to bring to a gentle warmth without boiling." },
-          { state: "Perfect",   description: "The liquid is dark amber, the mushrooms are fully rehydrated and tender, and the kombu is softened and slippery to the touch. The aroma is earthy, briny, and savory.", action: "Remove the kombu now, before applying heat. Add the aromatics and bring to a gentle simmer." },
-          { state: "Overdone",  description: "Kombu has been left in too long and has begun to dissolve at the edges, releasing a slimy texture and a sharp oceanic bitterness into the water.", action: "Remove the kombu immediately and taste the liquid. If bitterness is noticeable but mild, proceed — it will be diluted once the stock is finished. If strongly bitter, discard the kombu and compensate with a teaspoon of white miso stirred in at the very end." },
-        ],
-      },
-      feelCue: "Run the kombu between your fingers — it should feel like wet, slippery leather, pliable but intact, not dissolving or breaking apart. The water should feel silky, not thick.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "Champignons de porcins séchés",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Morilles séchées",
+        "Matsutake séché"
+      ]
     },
     {
-      nodeId: "step_2", action: "Simmer",
-      inputs: ["cold_infused_base", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "simmering_stock",
-      instructions: "Remove and reserve the kombu. Add the halved onion (with its papery skin — the skin deepens the color to a rich amber), the celery, crushed garlic, thyme, and cracked peppercorns. Bring to a bare simmer over medium heat — small bubbles rising steadily, the surface trembling but not churning. Simmer for 45 minutes. Do not boil hard: mushroom stocks turn muddy, bitter, and gritty at a rolling boil. A gentle simmer keeps the stock clear and the flavor clean.",
-      visualCue: {
-        primaryTarget: "A dark amber, barely moving liquid with wisps of steam rising from the surface. The mushrooms have collapsed fully and the onion has softened and opened. The color is a deep, rich brown like black tea brewed strong.",
-        spectrum: [
-          { state: "Underdone", description: "The stock is still pale amber and slightly watery — the aromatics have not had time to release their full flavor. Less than 30 minutes have passed.", action: "Continue simmering. The depth of flavor builds noticeably in the final 20 minutes as the onion and celery contribute their sweetness." },
-          { state: "Perfect",   description: "Dark, clear amber liquid that smells of earth, fresh herbs, and a faint mineral sweetness. Drawn across a spoon, it runs clean without any sediment. The surface is barely disturbed — a bubble every second or two.", action: "Remove from the heat and let it rest 10 minutes before straining, so the sediment settles." },
-          { state: "Overdone",  description: "Stock has reduced by more than a quarter, the color is almost black, and the aroma has a sharp bitter edge. The mushrooms smell faintly of rubber from overcooking.", action: "Dilute with a small measure of hot water, taste, and check that the bitterness is mild. Strain promptly without further reduction." },
-        ],
-      },
-      feelCue: "The pot should produce a gentle, rhythmic plop every few seconds — not a hard boil. Lay your hand above the surface: you should feel a steady warmth, not a blast of scalding steam. This stock needs patience, not aggression.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Champignons shiitake séchés",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "champignons huîtres séchés"
+      ]
     },
     {
-      nodeId: "step_3", action: "Strain",
-      inputs: ["simmering_stock"],
-      outputState: "strained_mushroom_stock",
-      instructions: "Line a fine-mesh strainer with a piece of cheesecloth or a clean kitchen cloth and set it over a large bowl or pot. Ladle the stock through gently — do not press or squeeze the spent mushrooms and vegetables, as pressing forces bitter, starchy solids through and clouds the stock. Discard the spent solids. You can chop the rehydrated porcini and shiitake that plumped back up during cooking and use them in another dish — they are still full of flavor.",
-      visualCue: {
-        primaryTarget: "The strained stock is a clear, deep amber — the color of strong, unsweetened iced tea — with no floating particles or sediment when poured into a glass.",
-        spectrum: [
-          { state: "Underdone", description: "Stock is still in the pot, unstrainerred, with spent solids settling at the bottom.", action: "Strain now before the stock cools further and the settled solids are disturbed." },
-          { state: "Perfect",   description: "Clear dark amber, no clouding, no sediment. The aroma is earth, herbs, and a clean brine from the kombu. It gleams when held to the light.", action: "Season with salt and the optional soy sauce; store or use immediately." },
-          { state: "Overdone",  description: "Stock is murky or opaque, with fine mushroom grit and sediment throughout — it was pressed through the strainer or the cloth was too coarse.", action: "Pass through a paper coffee filter or a double-layered cheesecloth to clarify. It will take time but the result will be acceptably clear." },
-        ],
-      },
-      feelCue: "A drop of the stock on your tongue should register immediately as savory — a clean umami hit that spreads across the sides of the tongue and lingers. It should taste alive and earthy, not flat or watery.",
+      "ingId": "ing_03",
+      "role": "Glutamate",
+      "name": "Kombu (poule séchée), propre",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1 c. à thé blanc miso remué à la fin"
+      ]
     },
     {
-      nodeId: "step_4", action: "Season",
-      inputs: ["strained_mushroom_stock", "ing_09", "ing_11"],
-      outputState: "finished_mushroom_stock",
-      instructions: "Taste the stock and season with fine salt, starting conservatively — most applications will add more seasoning from other ingredients. If using soy sauce, add it now: just a small amount deepens the umami and adds a warm, caramel complexity without making the stock taste Asian. It is optional but recommended for applications where color is not a concern. Store the finished stock in the refrigerator for up to 5 days, or freeze in measured portions for up to 3 months.",
-      visualCue: {
-        primaryTarget: "A finished mushroom stock is a clear, gleaming, dark amber liquid. In a white bowl it looks like a deeply colored consommé — translucent rather than opaque, with a slight sheen.",
-        spectrum: [
-          { state: "Underdone", description: "Tastes flat and unseasoned — the umami is present but muffled, with no definition or lift.", action: "Add salt gradually, tasting after each pinch. The salt acts as a flavor amplifier for the glutamates: even a small amount dramatically brings the earthiness forward." },
-          { state: "Perfect",   description: "Clean, deep, savory — with an earthy mushroom character, a faint mineral sweetness, and a long, satisfying umami finish that coats the back of the throat. Salt is just enough to balance, not to dominate.", action: "Use immediately or store. Excellent as a base for risotto, ramen, braises, gravies, and sauces." },
-          { state: "Overdone",  description: "Over-salted or over-reduced — tastes sharp and aggressive, with a bitterness that bites on the finish.", action: "Dilute with unsalted water to tame the seasoning, or balance with a small measure of the cold water used in the original infusion." },
-        ],
-      },
-      feelCue: "The stock should feel light and clean on the palate — nothing lingers unpleasantly. The aftertaste is a deep, satisfying earthiness, like the smell of a forest after rain. If there is a bitter or metallic finish, the kombu was left in too long or the stock was boiled rather than simmered.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon jaune (chaud, non pelé)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Blancs poireaux"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri avec feuilles",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Gousses d'ail (crues, non pelées)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym séché"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Maïs de poivre noir (légèrement craqué)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 200,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "sauce soja (facultatif, à finir)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari pour un strict sans gluten"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Infuse",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_10"
+      ],
+      "outputState": "cold_infused_base",
+      "instructions": "Mélanger le porcin séché, le shiitake séché et le kombu dans un grand pot et verser sur l'eau froide. Laisser infuser à froid à température ambiante pendant au moins 30 minutes ou réfrigérer pendant la nuit pour obtenir un résultat plus profond et plus propre. Les glutamates s'éteignent à froid en douceur, sans l'amertume que l'ébullition rapide peut extraire des champignons séchés. Le kombu devrait s'adoucir d'une feuille noire rigide à une fronde souple et glissante — le sortir avant que le stock ne vienne à ébullition, car il devient amer et visqueux si cuit à un mijot dur.",
+      "visualCue": {
+        "primaryTarget": "Après 30 minutes à température ambiante, l'eau a transformé un riche brun-ambre et sent le sol forestier et la mer. Les champignons ont enflé et adouci; le kombu s'est détendu d'une feuille raide à un ruban pliant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est à peine teintée, les champignons encore raides et papiers, le kombu inchangé. Le petit umami a été libéré.",
+            "action": "Laisser plus de temps pour la perfusion froide — au moins 20 minutes de plus. La chaleur aide; placer le pot sur une chaleur très basse pour apporter une chaleur douce sans bouillir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le liquide est ambre foncé, les champignons sont complètement réhydratés et tendres, et le kombu est adouci et glissant au toucher. L'arôme est terreux, brillant et salé.",
+            "action": "Retirer le kombu maintenant, avant d'appliquer la chaleur. Ajouter les aromatiques et laisser mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Kombu a été laissé trop longtemps et a commencé à se dissoudre aux bords, libérant une texture visqueuse et une amertume océanique aiguë dans l'eau.",
+            "action": "Retirer immédiatement le kombu et goûter le liquide. Si l'amertume est perceptible mais légère, procédez — elle sera diluée une fois le stock terminé. S'il est fortement amer, jetez le kombu et compensez avec une cuillère à café de miso blanc remué à la fin."
+          }
+        ]
+      },
+      "feelCue": "Courez le kombu entre vos doigts — il devrait se sentir comme un cuir mouillé, glissant, souple mais intact, sans se dissoudre ni se briser. L'eau devrait se sentir soyeuse, pas épaisse."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "cold_infused_base",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "simmering_stock",
+      "instructions": "Retirer et réserver le kombu. Ajouter l'oignon à moitié (avec sa peau papier — la peau approfondit la couleur à un ambre riche), le céleri, l'ail écrasé, le thym et les grains de poivre cassés. Portez - vous à feu moyen à feu nu: de petites bulles s'élèvent régulièrement, la surface tremble mais ne gronde pas. Laisser mijoter 45 minutes. Ne pas faire bouillir dur : les stocks de champignons deviennent boueux, amers et gritty à un ébullition enrouleur. Un mijot doux maintient le stock clair et la saveur propre.",
+      "visualCue": {
+        "primaryTarget": "Un liquide ambre foncé, à peine en mouvement, avec de la vapeur qui monte de la surface. Les champignons se sont complètement effondrés et l'oignon s'est adouci et ouvert. La couleur est un brun profond, riche comme le thé noir brassé fort.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock est encore pâle ambre et légèrement aqueux — les aromatiques n'ont pas eu le temps de libérer toute leur saveur. Moins de 30 minutes ont passé.",
+            "action": "Continuez à mijoter. La profondeur de la saveur se construit sensiblement dans les 20 dernières minutes que l'oignon et le céleri contribuent à leur douceur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide ambré sombre et clair qui sent la terre, les herbes fraîches et une légère douceur minérale. Tiré à travers une cuillère, il fonctionne propre sans aucun sédiment. La surface est à peine perturbée — une bulle chaque seconde ou deux.",
+            "action": "Retirer du feu et laisser reposer 10 minutes avant la déformation, de sorte que les sédiments se déposent."
+          },
+          {
+            "state": "Overdone",
+            "description": "Stock a diminué de plus d'un quart, la couleur est presque noire, et l'arôme a un tranchant amer. Les champignons sentent peu le caoutchouc de la cuisson excessive.",
+            "action": "Diluer avec une petite mesure d'eau chaude, le goût, et vérifier que l'amertume est douce. Soucher rapidement sans autre réduction."
+          }
+        ]
+      },
+      "feelCue": "Le pot devrait produire une patte douce et rythmique toutes les quelques secondes — et non un ébullition dur. Placez votre main au-dessus de la surface : vous devriez sentir une chaleur constante, pas une explosion de vapeur d'échouement. Ce stock a besoin de patience, pas d'agression."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "simmering_stock"
+      ],
+      "outputState": "strained_mushroom_stock",
+      "instructions": "Déposer une souche fine avec un morceau de fromage ou un chiffon de cuisine propre et le placer sur un grand bol ou une casserole. Placez le bouillon en douceur — ne pressez pas ou ne pressez pas les champignons et les légumes usés, car la pression force les solides amers et féculents à travers le bouillon. Jetez les solides usés. Vous pouvez hacher les porcines réhydratés et les shiitake qui ont repris pendant la cuisson et les utiliser dans un autre plat — ils sont encore pleins de saveur.",
+      "visualCue": {
+        "primaryTarget": "Le stock tendu est un ambre clair et profond, la couleur d'un thé glacé fort et non sucré, sans particules flottantes ni sédiments lorsqu'il est versé dans un verre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le stock est toujours dans le pot, non entraîné, avec des solides usés se trouvant au fond.",
+            "action": "La souche maintenant avant que le stock se refroidit davantage et les solides installés sont perturbés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre foncé clair, pas de nuages, pas de sédiments. L'arôme est la terre, les herbes, et une saumure propre du kombu. Il brille lorsqu'il est tenu à la lumière.",
+            "action": "Assaisonner de sel et de sauce de soja en option; conserver ou utiliser immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock est moulu ou opaque, avec de l'asphalte et des sédiments de champignons fins, il a été pressé à travers la souche ou le tissu était trop grossier.",
+            "action": "Passer à travers un filtre à café en papier ou une nappe de fromage double couche pour clarifier. Cela prendra du temps, mais le résultat sera acceptablement clair."
+          }
+        ]
+      },
+      "feelCue": "Une goutte du stock sur votre langue devrait s'enregistrer immédiatement comme savore — un coup d'umami propre qui s'étend sur les côtés de la langue et persiste. Il doit goûter vivant et terreux, pas plat ou aqueux."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "strained_mushroom_stock",
+        "ing_09",
+        "ing_11"
+      ],
+      "outputState": "finished_mushroom_stock",
+      "instructions": "Goûtez le stock et assaisonnez avec du sel fin, en commençant avec prudence — la plupart des applications ajouteront plus d'assaisonnement à partir d'autres ingrédients. Si vous utilisez de la sauce de soja, ajoutez-le maintenant: juste une petite quantité approfondit l'umami et ajoute une complexité chaude, caramel sans faire le goût de stock asiatique. Il est facultatif mais recommandé pour les applications où la couleur n'est pas une préoccupation. Conserver le stock fini au réfrigérateur jusqu'à 5 jours ou geler en portions mesurées jusqu'à 3 mois.",
+      "visualCue": {
+        "primaryTarget": "Un champignon fini est un liquide ambré clair, brillant et foncé. Dans un bol blanc, il ressemble à un consommé profondément coloré, translucide plutôt qu'opaque, avec un léger éclat.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Goûte plat et sans saison — l'umami est présent mais étouffé, sans définition ni ascenseur.",
+            "action": "Ajouter graduellement le sel, goûter après chaque pince. Le sel agit comme un amplificateur de saveur pour les glutamates: même une petite quantité apporte dramatiquement la terre vers l'avant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Propre, profond, salé — avec un caractère champignon terreux, une légère douceur minérale, et une longue finale umami satisfaisante qui enveloppe l'arrière de la gorge. Le sel suffit à équilibrer, pas à dominer.",
+            "action": "Utiliser immédiatement ou conserver. Excellent comme base pour risotto, ramen, braises, gravies et sauces."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sur-salé ou sur-réduit — goût aigu et agressif, avec une amertume qui mord à la finale.",
+            "action": "Diluer avec de l'eau non salée pour apprivoiser l'assaisonnement, ou équilibrer avec une petite mesure de l'eau froide utilisée dans la perfusion originale."
+          }
+        ]
+      },
+      "feelCue": "Le stock doit se sentir léger et propre en bouche — rien ne reste désagréable. L'arrière-goût est une terre profonde et satisfaisante, comme l'odeur d'une forêt après la pluie. S'il y a une finale amère ou métallique, le kombu a été laissé trop longtemps ou le stock a été bouilli plutôt que mijoté."
+    }
+  ]
 };

@@ -1,98 +1,272 @@
 export default {
-  repoId: "master_lebanese_shakshuka_001",
-  parentRepoId: null,
-  slug: "shakshuka",
-  author: "ForkRecipe Kitchen",
-  title: "Shakshuka",
-  description: "Eggs poached into a slow-simmered tangle of sweet peppers, onion, and garlic in a tomato sauce warmed with cumin and paprika — the whites set and the yolks left molten, each one nested in its own bright-red crater, scattered with parsley and torn into with hot flatbread.",
-  cuisine: "Tunisian",
-  culture: "Maghrebi",
-  category: "eggs",
-  tags: ["shakshuka", "tunisian", "eggs", "tomato", "brunch", "one-pan", "vegetarian"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 1, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Extra-virgin olive oil",            ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Aromatic",  name: "Yellow onion, finely diced",        ratioValue: 80,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Red bell pepper, diced",            ratioValue: 100, defaultUnit: "parts", substitutions: ["mix of red and green peppers"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves, sliced",             ratioValue: 12,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground cumin",                      ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Sweet paprika",                     ratioValue: 4,   defaultUnit: "parts", substitutions: ["pimentón dulce"] },
-    { ingId: "ing_07", role: "Heat",      name: "Aleppo pepper (or pinch chili flake)", ratioValue: 3, defaultUnit: "parts", substitutions: ["Maraş biber", "cayenne, used sparingly"] },
-    { ingId: "ing_08", role: "Umami",     name: "Whole peeled tomatoes, hand-crushed", ratioValue: 400, defaultUnit: "parts", substitutions: ["ripe fresh tomatoes, grated"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine sea salt",                     ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Protein",   name: "Eggs (large, fresh, cold)",         ratioValue: 4,   defaultUnit: "eggs",  substitutions: [] },
-    { ingId: "ing_11", role: "Garnish",   name: "Flat-leaf parsley, chopped",        ratioValue: 8,   defaultUnit: "parts", substitutions: ["cilantro", "crumbled feta"] },
+  "repoId": "master_lebanese_shakshuka_001",
+  "parentRepoId": null,
+  "slug": "shakshuka",
+  "author": "ForkRecipe Kitchen",
+  "title": "Shakshuka",
+  "description": "Les œufs pochés dans un enchevêtrement mijoté lentement de poivrons doux, d'oignons et d'ail dans une sauce tomate tiède au cumin et au paprika — les blancs se tissent et les jaunes restent fondus, chacun dans son propre cratère rouge vif, dispersé avec du persil et déchiré avec du pain plat chaud.",
+  "cuisine": "Tunisien",
+  "culture": "Maghrebi",
+  "category": "eggs",
+  "tags": [
+    "Shakshuka",
+    "Tunisien",
+    "œufs",
+    "tomates",
+    "brunch",
+    "1 pan",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Sweat",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "softened_vegetables",
-      instructions: "Warm the olive oil in a wide, heavy skillet over medium heat. Add the diced onion and bell pepper with a pinch of salt and cook gently, stirring now and then, for 10 to 12 minutes. You are not browning them — you are coaxing out sweetness. Let them soften and slump until the onion is translucent and the pepper has gone limp and glossy. This unhurried base is what separates a deep shakshuka from a watery one.",
-      visualCue: {
-        primaryTarget: "Onions are translucent and beginning to turn pale gold at the edges; peppers are soft, slack, and shining with oil, with no raw crunch left.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are still white and opaque and the peppers snap when stirred. The mixture smells sharp and raw.", action: "Lower the heat if it is browning too fast, and keep cooking. Patience here builds the sauce's sweetness." },
-          { state: "Perfect",   description: "A soft, glistening tangle — onions clear and just-golden, peppers fully tender. The pan smells sweet and mellow.", action: "Add the garlic and spices and proceed to bloom them." },
-          { state: "Overdone",  description: "Onions and peppers are deeply browned, dry, or catching at the pan's edges and tasting bitter.", action: "Pull off the heat, add a splash of water to deglaze, and scrape up the bottom before continuing — discard if scorched black." },
-        ],
-      },
-      feelCue: "The vegetables should fall softly off the spoon with no resistance, and the kitchen should smell sweet rather than sharp. The oil pools clear and golden around them.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Bloom",
-      inputs: ["softened_vegetables", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "spiced_base",
-      instructions: "Push the vegetables to one side, add the sliced garlic to the bare oil, and cook for under a minute until fragrant but not colored. Stir in the cumin, paprika, and Aleppo pepper and toast them in the hot oil for 30 to 60 seconds, stirring constantly. Blooming the spices in fat unlocks their aroma and rounds off any dusty rawness — but they scorch in an instant, so keep everything moving.",
-      visualCue: {
-        primaryTarget: "The spices darken a shade and turn glossy as they soak up the oil, and a warm, earthy aroma of cumin and paprika rises sharply from the pan.",
-        spectrum: [
-          { state: "Underdone", description: "The spices sit dry and powdery on top, smelling faint and floury, and the garlic is still stark white.", action: "Give it another 20 to 30 seconds, stirring, until the spices wet through and bloom fragrant." },
-          { state: "Perfect",   description: "Spices are darkened, slick, and intensely aromatic; garlic is fragrant and just turning blond.", action: "Immediately add the tomatoes to stop the spices cooking further." },
-          { state: "Overdone",  description: "The spices and garlic are browning to bitterness and the pan smells acrid and smoky.", action: "Add the tomatoes at once to cool the pan. If the bitterness is strong, a pinch of sugar later will help mask it." },
-        ],
-      },
-      feelCue: "This is the loudest 45 seconds of the recipe — work fast, nose over the pan. The moment the spices smell toasty and full, the tomatoes go in.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "Oignon jaune, en dés",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Reduce",
-      inputs: ["spiced_base", "ing_08", "ing_09"],
-      outputState: "tomato_sauce",
-      instructions: "Pour in the hand-crushed tomatoes with their juice and add the salt. Stir, scraping up anything stuck to the pan, and bring to a lively simmer. Cook 10 to 15 minutes, stirring occasionally, until the sauce thickens, darkens from orange-red to brick, and the oil begins to separate and pool at the edges. Taste and adjust salt — the sauce should be assertively seasoned, since the eggs are bland. The texture you want is a loose stew that holds a momentary trough when you drag a spoon through it.",
-      visualCue: {
-        primaryTarget: "A glossy, brick-red sauce thick enough that a spoon dragged across the pan leaves a brief channel before it fills back in, with olive oil weeping at the rim.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is thin, bright orange, and watery, sloshing freely and filling a dragged channel instantly.", action: "Keep simmering, raising the heat a little, until it reduces and deepens in color. Watery sauce won't cradle the eggs." },
-          { state: "Perfect",   description: "Thick, jammy, and brick-colored, holding a brief trough when parted; the flavor is deep, tangy, and well-salted.", action: "Lower to a gentle simmer and make wells for the eggs." },
-          { state: "Overdone",  description: "The sauce is pasty and dry, sticking and threatening to scorch, with no liquid left to poach the eggs.", action: "Stir in a few tablespoons of water to loosen it back to a spoonable sauce before adding the eggs." },
-        ],
-      },
-      feelCue: "Listen for the simmer to change from a watery splatter to a thick, lazy blooping. When the oil separates out and rings the edge of the pan red-orange, the sauce is ready.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Poivre rouge, coupé en dés",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Mélange de poivrons rouges et verts"
+      ]
     },
     {
-      nodeId: "step_4", action: "Poach",
-      inputs: ["tomato_sauce", "ing_10", "ing_11"],
-      outputState: "finished_shakshuka",
-      instructions: "Lower the heat to a bare simmer. Use the back of a spoon to make a shallow well for each egg, spacing them around the pan, and crack an egg into each well — crack into a cup first if you're nervous about shells. Spoon a little sauce over the whites only, leaving the yolks bare. Cover and cook 6 to 9 minutes, checking often, until the whites are just set but the yolks still wobble. Kill the heat the moment they're there; carryover will keep cooking them. Shower with parsley, grind over black pepper, and bring the pan straight to the table with warm bread.",
-      visualCue: {
-        primaryTarget: "Whites are fully opaque and set with no clear, jiggly patches, while the yolks sit raised and glossy, trembling like jelly when the pan is nudged.",
-        spectrum: [
-          { state: "Underdone", description: "The whites are still translucent, loose, and watery, sliding when the pan is tipped.", action: "Re-cover and cook another minute or two, checking frequently — set whites should be matte-white, not clear." },
-          { state: "Perfect",   description: "Whites are tender and just-firm, yolks domed and liquid beneath a glossy skin and wobbling when shaken.", action: "Remove from heat at once and garnish — the eggs finish setting in the residual heat of the pan." },
-          { state: "Overdone",  description: "Yolks have gone pale, firm, and matte, no longer wobbling, and the whites are rubbery.", action: "There's no reversing a set yolk — serve as is. Next time pull the pan a full minute earlier and trust carryover." },
-        ],
-      },
-      feelCue: "Nudge the pan: perfect yolks shiver like soft jelly while the whites stay put. A finger pressed gently beside a yolk should meet firm white that springs back, with the molten yolk shifting just underneath.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Girofles d'ail, tranchés",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Paprika doux",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "de l'eau"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Heat",
+      "name": "Poivre d'Alep (ou pincer le flocon de chili)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Biber Maraş",
+        "cayenne, utilisée avec parcimonie"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "Tomates entières pelées, concassées à la main",
+      "ratioValue": 400,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates fraîches mûres, râpées"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Protein",
+      "name": "Oeufs (grands, frais, froids)",
+      "ratioValue": 4,
+      "defaultUnit": "eggs",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Persil à feuilles plates, haché",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "coriandre",
+        "Féta émietté"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sueur",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "softened_vegetables",
+      "instructions": "Chauffer l'huile d'olive dans une grande poêle lourde à feu moyen. Ajouter l'oignon en dés et le poivron avec une pincée de sel et cuire doucement, en remuant de temps en temps, pendant 10 à 12 minutes. Vous n'êtes pas en train de les brunir, vous êtes en train d'exacerber la douceur. Qu'ils se ramollissent et s'affaissent jusqu'à ce que l'oignon soit translucide et que le poivre soit limpide et brillant. Cette base non pressée sépare une shakshuka profonde d'une base aqueuse.",
+      "visualCue": {
+        "primaryTarget": "Les oignons sont translucides et commencent à tourner en or pâle aux bords; les poivrons sont doux, lâches et brillants avec de l'huile, sans croûte brute.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont encore blancs et opaques et les poivrons craquent lorsqu'ils sont remués. Le mélange sent vif et cru.",
+            "action": "Abaissez la chaleur si elle brunit trop vite et continuez à cuisiner. La patience ici construit la douceur de la sauce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un enchevêtrement doux et scintillant — oignons clairs et simplement dorés, poivrons entièrement tendres. La poêle sent doux et moelleux.",
+            "action": "Ajouter l'ail et les épices et procéder à leur floraison."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oignons et les poivrons sont profondément dorés, secs ou capturés aux bords de la poêle et goûtent l'amertume.",
+            "action": "Retirez la chaleur, ajoutez une éclaboussure d'eau pour déglacer, et grattez le fond avant de continuer — jetez si brûlé noir."
+          }
+        ]
+      },
+      "feelCue": "Les légumes doivent tomber doucement de la cuillère sans résistance, et la cuisine doit sentir doux plutôt que vif. Les piscines d'huile sont claires et dorées autour d'elles."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bloom",
+      "inputs": [
+        "softened_vegetables",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "spiced_base",
+      "instructions": "Poussez les légumes d'un côté, ajoutez l'ail tranché à l'huile nue, et faites cuire sous une minute jusqu'à ce que parfumé mais non coloré. Incorporer le cumin, le paprika et le poivre d'Alep et les faire griller dans l'huile chaude pendant 30 à 60 secondes, en remuant constamment. La floraison des épices dans les graisses déverrouille leur arôme et élimine toute pulvérisation poussiéreuse — mais elles brûlent en un instant, alors continuez à tout bouger.",
+      "visualCue": {
+        "primaryTarget": "Les épices s'assombrissent d'une nuance et deviennent brillantes pendant qu'elles absorbent l'huile, et un arôme chaud et terreux de cumin et de paprika s'élève brusquement de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les épices sont sèches et poudreuses sur le dessus, sentant faible et farineux, et l'ail est encore blanc vif.",
+            "action": "Donnez-lui encore 20 à 30 secondes, en remuant, jusqu'à ce que les épices mouillent et fleurissent parfumée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les épices sont foncées, lissées et intensément aromatiques; l'ail est parfumé et devient tout simplement blond.",
+            "action": "Ajouter immédiatement les tomates pour arrêter la cuisson des épices."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les épices et l'ail brunissent à l'amertume et la poêle sent l'acre et la fumée.",
+            "action": "Ajouter les tomates à la fois pour refroidir la poêle. Si l'amertume est forte, une pincée de sucre plus tard aidera à le masquer."
+          }
+        ]
+      },
+      "feelCue": "C'est le plus fort 45 secondes de la recette — travailler vite, le nez sur la poêle. Au moment où les épices sentent grillées et pleines, les tomates entrent."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Réduire",
+      "inputs": [
+        "spiced_base",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "tomato_sauce",
+      "instructions": "Verser les tomates broyées à la main avec leur jus et ajouter le sel. Mélanger, gratter tout ce qui est collé à la poêle et laisser mijoter. Cuire de 10 à 15 minutes, en remuant occasionnellement, jusqu'à ce que la sauce s'épaississe, s'obscurcit de rouge orangé à brique, et l'huile commence à se séparer et à s'accumuler aux bords. Goûtez et ajustez le sel — la sauce doit être assaisonnée avec assurance, car les œufs sont fade. La texture que vous voulez est un ragoût lâche qui tient un creux momentané quand vous faites glisser une cuillère à travers elle.",
+      "visualCue": {
+        "primaryTarget": "Une sauce rouge brique brillante assez épaisse qu'une cuillère traînée à travers la poêle laisse un court canal avant qu'il ne se remplisse, avec de l'huile d'olive pleurant au bord.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est mince, orange vif, et aqueuse, slossant librement et remplissant instantanément un canal traîné.",
+            "action": "Continuer à mijoter, en soulevant un peu la chaleur, jusqu'à ce qu'elle diminue et approfondisse en couleur. La sauce aqueuse ne fera pas les œufs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, confiture et couleur brique, tenant un court creux lorsqu'il est séparé; la saveur est profonde, tannante et bien salée.",
+            "action": "Abaissez à mijoter doucement et faites des puits pour les œufs."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est pâteuse et sèche, collante et menaçante de brûler, sans laisser de liquide pour pocher les œufs.",
+            "action": "Incorporer quelques cuillerées à soupe d'eau pour les rajouter à une sauce à cuiller avant d'ajouter les œufs."
+          }
+        ]
+      },
+      "feelCue": "Écoutez le mijoter pour passer d'un éclaboussure aqueuse à un blooping épais et paresseux. Lorsque l'huile se sépare et sonne le bord de la poêle rouge-orange, la sauce est prête."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Pochette",
+      "inputs": [
+        "tomato_sauce",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "finished_shakshuka",
+      "instructions": "Abaissez la chaleur jusqu'à ce qu'elle mijote. Utilisez l'arrière d'une cuillère pour faire un puits peu profond pour chaque oeuf, les espacer autour de la casserole, et casser un oeuf dans chaque puits — fissurez dans une tasse d'abord si vous êtes nerveux au sujet des coquilles. Spoon un peu de sauce sur les blancs seulement, laissant les jaunes nus. Couvrez et faites cuire 6 à 9 minutes, en vérifiant souvent, jusqu'à ce que les blancs soient juste mis, mais les jaunes continuent à trembler. Tuez la chaleur dès qu'ils sont là; le transport continuera à les cuisiner. Douche avec persil, moudre sur poivre noir, et porter la poêle directement à la table avec du pain chaud.",
+      "visualCue": {
+        "primaryTarget": "Les blancs sont complètement opaques et sans taches claires, tandis que les jaunes sont levés et brillants, tremblant comme de la gelée quand la poêle est bouchée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les blancs sont encore translucides, lâches et aqueux, coulissants lorsque la poêle est inclinée.",
+            "action": "Récupérer et cuire encore une minute ou deux, en vérifiant fréquemment — les blancs doivent être blancs mats, et non clairs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les blancs sont tendres et juste-fermes, les jaunes bombés et liquides sous une peau brillante et oscillent lorsqu'ils sont secoués.",
+            "action": "Retirer du feu à la fois et garnir — les œufs finissent par mettre la chaleur résiduelle de la poêle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les jaunes sont devenus pâles, fermes et mates, ils ne tremblent plus, et les blancs sont caoutchouteux.",
+            "action": "Il n'y a pas d'inversion d'un jaune set — servez comme il est. La prochaine fois, tirez la casserole une minute plus tôt et faites confiance au report."
+          }
+        ]
+      },
+      "feelCue": "Poussez la poêle : les jaunes parfaits frissonnent comme de la gelée douce pendant que les blancs restent en place. Un doigt pressé doucement à côté d'un jaune devrait rencontrer un blanc ferme qui ressort, le jaune fondu se déplaçant juste en dessous."
+    }
+  ]
 };

@@ -1,99 +1,281 @@
 export default {
-  repoId: "master_lebanese_falafel_001",
-  parentRepoId: null,
-  slug: "falafel",
-  author: "ForkRecipe Kitchen",
-  title: "Falafel",
-  description: "The Levantine street-corner standard — dried chickpeas never cooked, only soaked and ground raw with herbs and spice into a damp green rubble, then fried hard so the crust shatters into a craggy mahogany shell and the inside steams open soft, bright, and grassy.",
-  cuisine: "Lebanese",
-  culture: "Levantine",
-  category: "proteins",
-  tags: ["falafel", "lebanese", "chickpea", "fried", "mezze", "vegan", "street-food"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "24 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 1, umami: 1, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried chickpeas (NEVER canned or cooked)", ratioValue: 100, defaultUnit: "parts", substitutions: ["half dried split fava beans for a Levantine ta'ameya blend"] },
-    { ingId: "ing_02", role: "Herb",       name: "Flat-leaf parsley (leaves and tender stems)", ratioValue: 18, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Herb",       name: "Cilantro (leaves and tender stems)", ratioValue: 12, defaultUnit: "parts", substitutions: ["more parsley if cilantro is divisive"] },
-    { ingId: "ing_04", role: "Allium",     name: "Yellow onion, roughly chopped", ratioValue: 15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",     name: "Garlic cloves", ratioValue: 6, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",      name: "Ground cumin", ratioValue: 2, defaultUnit: "parts", substitutions: ["freshly toasted and ground cumin seed"] },
-    { ingId: "ing_07", role: "Spice",      name: "Ground coriander", ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Heat",       name: "Cayenne or Aleppo pepper", ratioValue: 0.5, defaultUnit: "parts", substitutions: ["pinch of black pepper for no heat"] },
-    { ingId: "ing_09", role: "Seasoning",  name: "Fine sea salt", ratioValue: 2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Leavener",   name: "Baking soda", ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Starch",     name: "Toasted sesame seeds (for rolling)", ratioValue: 4, defaultUnit: "parts", substitutions: ["omit"] },
-    { ingId: "ing_12", role: "Fat",        name: "Neutral oil for deep-frying", ratioValue: 200, defaultUnit: "parts", substitutions: ["sunflower or canola oil"] },
+  "repoId": "master_lebanese_falafel_001",
+  "parentRepoId": null,
+  "slug": "falafel",
+  "author": "ForkRecipe Kitchen",
+  "title": "Falafel",
+  "description": "Le Levantine street-corner standard — pois chiches séchés jamais cuits, seulement trempés et broyés crus avec des herbes et des épices dans des décombres verts humides, puis frits dur afin que la croûte se brise dans une coquille d'acajou et les vapeurs intérieures s'ouvrent doux, lumineux et herbacé.",
+  "cuisine": "Libanais",
+  "culture": "Levantine",
+  "category": "proteins",
+  "tags": [
+    "falafel",
+    "lébanèse",
+    "pois chiches",
+    "frits",
+    "mezze",
+    "végétalien",
+    "Produits de la rue"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "24 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Soak",
-      inputs: ["ing_01"],
-      outputState: "soaked_chickpeas",
-      instructions: "Cover the dried chickpeas with cold water by at least three inches — they triple in size — and soak 18 to 24 hours, changing the water once if your kitchen is warm. This is the one non-negotiable rule of falafel: the chickpeas are NEVER cooked. They rehydrate to just-tender raw, and that raw starch is what binds the fritter without flour or egg. Do not use canned or boiled chickpeas; they turn to mush in the oil and fall apart.",
-      visualCue: {
-        primaryTarget: "Chickpeas have swollen to two to three times their dry size, plump and smooth-skinned, but a split one is still chalky-pale and firm at the center — clearly raw.",
-        spectrum: [
-          { state: "Underdone", description: "Chickpeas are small, hard, and wrinkled; a split one is dense and glassy.", action: "Keep soaking. Old or cold-soaked chickpeas need the full 24 hours — undersoaked beans grind to gravel and stay raw-hard in the fry." },
-          { state: "Perfect",   description: "Plump, fully rehydrated, and easily split in two with a thumbnail, the interior matte and chalk-white. They snap rather than smear.", action: "Drain very thoroughly and spread on a towel — surface water in the grind makes a wet, sloppy mix that won't hold." },
-          { state: "Overdone",  description: "Chickpeas smell sour or fermented and the water is foamy; they soaked too long warm.", action: "If only faintly sour, rinse hard and proceed. If clearly fermented, discard — sour beans ruin the batch." },
-        ],
-      },
-      feelCue: "A properly soaked raw chickpea splits with a soft, firm SNAP and feels cool and starchy, never soft or pasty. The drained beans should rattle dryly when you shake the colander.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Pois chiches séchés (JAMAIS en conserve ou cuits)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fèves de fève à moitié séchées pour un mélange de levantine ta'ameya"
+      ]
     },
     {
-      nodeId: "step_2", action: "Grind",
-      inputs: ["soaked_chickpeas", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "falafel_paste",
-      instructions: "In a food processor, combine the drained raw chickpeas, parsley, cilantro, onion, garlic, cumin, coriander, cayenne, and salt. Pulse — do not puree — scraping down repeatedly, until the mixture is a damp, uniform, bright-green rubble the texture of coarse wet sand or couscous. You are looking for grind, not paste: it should be fine enough to clump when squeezed but still show distinct grains. Stop the moment it holds together.",
-      visualCue: {
-        primaryTarget: "A vivid green, evenly fine crumble — like damp coarse cornmeal flecked with herb — that packs into a ball when pressed in your fist and holds the shape.",
-        spectrum: [
-          { state: "Underdone", description: "Big chunks of unbroken chickpea remain and the mix slides apart instead of clumping when squeezed.", action: "Pulse more and scrape down the sides. Coarse grind means crumbly fritters that disintegrate in the oil." },
-          { state: "Perfect",   description: "Uniformly fine, sandy, and cohesive; a squeezed handful holds its shape with a slightly tacky surface and visible herb flecks throughout.", action: "Stop. Chill the mix 30 to 60 minutes so it firms and hydrates evenly before shaping." },
-          { state: "Overdone",  description: "The mixture has gone smooth, gummy, and pale like hummus, weeping liquid.", action: "Over-ground paste fries dense and heavy. Fold in a spoonful of fresh coarse-ground chickpeas to rebuild texture if you can, or accept a denser fritter." },
-        ],
-      },
-      feelCue: "Squeeze a handful: it should hold its shape with a faint, tacky resistance and leave your palm green and damp but not wet. It smells sharply of raw onion, garlic, and cut grass.",
+      "ingId": "ing_02",
+      "role": "Herb",
+      "name": "Persil à feuilles plates (feuilles et tiges tendres)",
+      "ratioValue": 18,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Shape",
-      inputs: ["falafel_paste", "ing_10", "ing_11"],
-      outputState: "shaped_falafel",
-      instructions: "Just before frying — not before — sprinkle the baking soda over the chilled mix and work it in quickly; it lightens the interior and gives a crisper crust, but it loses lift if it sits. Form walnut-sized balls or little patties, pressing firmly so they hold, then roll the surface in toasted sesame seeds. Add the soda at the last minute: mixed in early it activates and goes flat, and the fritters fry leaden.",
-      visualCue: {
-        primaryTarget: "Tight, crack-free balls or thick discs about 1.5 inches across, surface lightly crusted in sesame, holding their shape without slumping on the tray.",
-        spectrum: [
-          { state: "Underdone", description: "The mix won't cohere and the balls crack and crumble at the edges as you shape them.", action: "The grind was too coarse or too dry — pulse a portion finer, or add a teaspoon of water or chickpea flour to bind, then re-test." },
-          { state: "Perfect",   description: "Smooth, firm fritters that hold a clean round and feel cool and dense in the hand, surface evenly studded with sesame.", action: "Fry immediately while the baking soda is freshly active and the fritters are cold." },
-          { state: "Overdone",  description: "The shaped fritters are wet and slumping, leaving a damp smear on the tray.", action: "The paste is too loose; chill longer to firm, or work in a little chickpea flour. Wet fritters spit and break apart in the oil." },
-        ],
-      },
-      feelCue: "A good fritter feels cold, heavy, and packed, like damp sand pressed in a fist. It should hold a firm ridge when you press the edge with a fingernail without crumbling.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Cilantro (feuilles et tiges tendres)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "plus de persil en cas de coriandre"
+      ]
     },
     {
-      nodeId: "step_4", action: "Fry",
-      inputs: ["shaped_falafel", "ing_12"],
-      outputState: "finished_falafel",
-      instructions: "Heat the oil to 175°C / 350°F — hot enough that a pinch of mix sizzles instantly and floats. Fry the fritters in batches without crowding, turning once, for 3 to 4 minutes until deep mahogany-brown and crackly all over. Too cool and they drink oil and stay greasy and raw; too hot and the crust burns before the raw center cooks through. Drain on a rack, salt lightly while hot, and serve at once with tahini sauce, pickles, and warm bread.",
-      visualCue: {
-        primaryTarget: "A deep, even mahogany-brown craggy crust that crackles audibly when pressed; split open, the interior is steaming, fluffy, and bright green — fully set, never raw-pasty.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold and soft, the fritter sits low in the oil and the interior is dense, doughy, and rawly herbaceous when bitten.", action: "Raise the oil temperature and fry longer. Pale falafel are greasy and undercooked at the core — they must reach deep brown." },
-          { state: "Perfect",   description: "Dark, rugged, and crisp-shelled, floating high in the oil with a steady stream of fine bubbles; the inside is light, moist, and vividly green.", action: "Lift to a rack, season with a little salt, and eat hot — the crust softens fast once it cools." },
-          { state: "Overdone",  description: "Near-black and acrid, with a hard, hollow, dried-out interior.", action: "Drop the oil temperature for the next batch and pull them sooner. Burnt falafel taste bitter — the rest can be salvaged crumbled into a salad." },
-        ],
-      },
-      feelCue: "A finished falafel is light for its size and the crust gives a brittle crackle and shatters under a thumb; steam and a grassy, cumin-warm aroma rush out as it splits open.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon jaune, haché approximativement",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "graines de cumin fraîchement grillées et moulues"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Heat",
+      "name": "Poivre de Cayenne ou d'Alep",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pincée de poivre noir sans chaleur"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Leavener",
+      "name": "Soda au four",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Starch",
+      "name": "Graines de sésame grillées (pour laminage)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omit"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Fat",
+      "name": "Huile neutre pour friture profonde",
+      "ratioValue": 200,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile de tournesol ou de canola"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "soaked_chickpeas",
+      "instructions": "Couvrez les pois chiches secs d'au moins trois pouces d'eau froide — ils triplent — et trempez de 18 à 24 heures, en changeant l'eau une fois si votre cuisine est chaude. C'est la seule règle non négociable du falafel : les pois chiches ne sont JAMAIS cuits. Ils réhydratent à juste-tendre cru, et cette amidon brut est ce qui lie la friteuse sans farine ou oeuf. Ne pas utiliser de pois chiches en conserve ou bouillis; ils se transforment en bouillis dans l'huile et s'effondrent.",
+      "visualCue": {
+        "primaryTarget": "Les pois chiches ont enflé jusqu'à deux à trois fois leur taille sèche, lustré et à la peau lisse, mais l'un d'eux est encore crayeux-pale et ferme au centre — clairement cru.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pois chiches sont petits, durs et ridés; un pois fendus est dense et vitreux.",
+            "action": "Continuez à tremper. Les pois chiches vieux ou trempés à froid ont besoin d'une période complète de 24 heures — les haricots trempés moulussent au gravier et restent crus dans les frites."
+          },
+          {
+            "state": "Perfect",
+            "description": "Plume, entièrement réhydratée, et facilement divisée en deux avec une vignette, l'intérieur mat et blanc craie. Ils claquent plutôt que de frotter.",
+            "action": "Égoutter très soigneusement et s'étendre sur une serviette — l'eau de surface dans la mouture fait un mélange humide et glissant qui ne tiendra pas."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pois chiches sentent l'odeur aigre ou fermentée et l'eau est mousseuse; ils sont trempés trop longtemps au chaud.",
+            "action": "Si seulement légèrement amer, rincez fort et continuez. S'il est clairement fermenté, jeter — les haricots acides ruinent le lot."
+          }
+        ]
+      },
+      "feelCue": "Un pois chiche cru bien trempé se divise avec un SNAP doux et ferme et se sent frais et amidon, jamais doux ou pasté. Les haricots drainés devraient se déchirer sèchement quand vous secouez la calandre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Grind",
+      "inputs": [
+        "soaked_chickpeas",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "falafel_paste",
+      "instructions": "Dans un robot culinaire, combiner les pois chiches, persil, coriandre, oignon, ail, cumin, coriandre, cayenne et sel. Pulse — ne pas purifier — grattant à plusieurs reprises, jusqu'à ce que le mélange soit un décombre humide, uniforme, vert brillant la texture de sable ou couscous humides grossiers. Vous êtes à la recherche de broyage, pas de pâte: il devrait être assez fin pour s'accrocher quand pressé mais toujours montrer des grains distincts. Arrête le moment où ça se tient.",
+      "visualCue": {
+        "primaryTarget": "Un crumble vert vif, d'une finesse égale — comme un gros grain de maïs humide, flanqué d'herbe — qui se range dans une boule lorsqu'il est pressé dans le poing et tient la forme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De gros morceaux de pois chiches non cassés restent et le mélange glisse à l'écart au lieu de s'écraser lorsqu'il est pressé.",
+            "action": "Pulse plus et racler les côtés. Le broyage grossier signifie des friseuses qui se désintègrent dans l'huile."
+          },
+          {
+            "state": "Perfect",
+            "description": "Fine, sablonneuse et cohésive; une poignée pressée tient sa forme avec une surface légèrement collante et des flocons d'herbe visibles partout.",
+            "action": "Arrête. Refroidissez le mélange de 30 à 60 minutes afin qu'il se ferme et s'hydrate uniformément avant de façonner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est devenu doux, gommant et pâle comme l'hummus, l'eau qui pleure.",
+            "action": "Pâte de frites denses et lourdes. Plier dans une cuillère de pois chiches frais et grossiers pour reconstruire la texture si vous le pouvez, ou accepter une friteuse plus dense."
+          }
+        ]
+      },
+      "feelCue": "Pressez une poignée : elle doit tenir sa forme avec une faible résistance et laisser votre palmier vert et humide mais pas humide. Il sent fortement l'oignon cru, l'ail et l'herbe coupée."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "falafel_paste",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "shaped_falafel",
+      "instructions": "Juste avant de frire — pas avant — saupoudrer le bicarbonate de soude sur le mélange réfrigéré et le travailler rapidement; il allège l'intérieur et donne une croûte plus croustillante, mais il perd l'ascenseur s'il est assis. Formez des boules de noix ou de petites galettes, appuyez fermement pour les tenir, puis roulez la surface dans des graines de sésame grillées. Ajouter le soda à la dernière minute : mélangé tôt, il s'active et s'aplatit, et les frites frisent le plomb.",
+      "visualCue": {
+        "primaryTarget": "Balles serrées, sans fissures ou disques épais d'environ 1,5 pouces, surface légèrement encroûtée en sésame, tenant leur forme sans s'effondrer sur le plateau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange ne cohere pas et les boules craquent et s'effondrent aux bords pendant que vous les formez.",
+            "action": "La mouture était trop grossière ou trop sèche — poussez une portion plus fine, ou ajoutez une cuillère à café d'eau ou de farine de pois chiche pour se lier, puis re-test."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des beignets lisses et fermes qui tiennent un rond propre et se sentent frais et dense dans la main, surface uniformément clouée de sésame.",
+            "action": "Faire frire immédiatement pendant que le bicarbonate de soude est fraîchement actif et que les friteuses sont froides."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes en forme sont humides et s'effondrent, laissant un frottis humide sur le plateau.",
+            "action": "La pâte est trop lâche; refroidir plus longtemps à fermer, ou travailler dans un peu de farine de pois chiches. Les beignets mouillés crachent et se brisent dans l'huile."
+          }
+        ]
+      },
+      "feelCue": "Un bon friser se sent froid, lourd, et emballé, comme du sable humide pressé dans un poing. Il devrait tenir une crête ferme lorsque vous appuyez sur le bord avec un ongle sans s'effondrer."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "shaped_falafel",
+        "ing_12"
+      ],
+      "outputState": "finished_falafel",
+      "instructions": "Chauffer l'huile à 175°C / 350°F — assez chaud pour qu'une pincée de mélange s'échauffe instantanément et flotte. Faire frire les frites en lots sans encombrer, en tournant une fois, pendant 3 à 4 minutes jusqu'à ce que l'acajou-brun profond et craquelé partout. Trop frais et ils boivent de l'huile et restent gras et crus; trop chaud et la croûte brûle avant que le centre cru ne cuise. Égoutter sur une grille, saler légèrement pendant qu'il fait chaud et servir à la fois avec de la sauce tahini, des cornichons et du pain chaud.",
+      "visualCue": {
+        "primaryTarget": "Une croûte profonde, même brune d'acajou, qui craque audiblement lorsqu'elle est pressée; scintillante, l'intérieur est à la vapeur, moelleux et vert vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle et doux, le friser est bas dans l'huile et l'intérieur est dense, pâteux et cruellement herbacé quand mordu.",
+            "action": "Relever la température de l'huile et faire frire plus longtemps. Les falafels pâles sont gras et peu cuits au cœur — ils doivent atteindre le brun profond."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dark, robuste et croustillant, flottant haut dans l'huile avec un flux constant de fines bulles; l'intérieur est léger, humide, et vivement vert.",
+            "action": "Soulevez - vous sur une grille, assaisonnez - la d'un peu de sel et mangez chaud; la croûte s'adoucit rapidement une fois refroidie."
+          },
+          {
+            "state": "Overdone",
+            "description": "Proche noir et acride, avec un intérieur dur, creux, sec.",
+            "action": "Baissez la température de l'huile pour le prochain lot et tirez-les plus tôt. Le falafel brûlé goût amer — le reste peut être récupéré émietté dans une salade."
+          }
+        ]
+      },
+      "feelCue": "Un falafel fini est léger pour sa taille et la croûte donne un crépitement fragile et se brise sous un pouce; vapeur et un arôme herbacé chaud au cumin se précipitent alors qu'il s'ouvre."
+    }
+  ]
 };

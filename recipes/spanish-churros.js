@@ -1,114 +1,307 @@
 export default {
-  repoId: "master_spanish_spanishchurros_001",
-  parentRepoId: null,
-  slug: "spanish-churros",
-  author: "ForkRecipe Kitchen",
-  title: "Churros with Chocolate Dipping Sauce",
-  description: "Crisp ridged batons of hot fried choux dough, deeply golden and shattering at the bite, dunked into a thick, dark Spanish-style drinking chocolate.",
-  cuisine: "Spanish",
-  culture: "Madrileño",
-  category: "desserts",
-  tags: ["dessert", "vegetarian", "dairy", "fried", "churros", "chocolate", "spanish"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 1, sour: 0, bitter: 2, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Hydration",  name: "Water",                              ratioValue: 240, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter",                    ratioValue: 60,  defaultUnit: "g", substitutions: ["neutral oil"] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Fine salt",                          ratioValue: 3,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Sweetener",  name: "Caster sugar (in dough)",            ratioValue: 10,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Structure",  name: "All-purpose flour",                  ratioValue: 150, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",        name: "Neutral oil for frying",             ratioValue: 700, defaultUnit: "ml", substitutions: ["sunflower oil", "vegetable oil"] },
-    { ingId: "ing_07", role: "Sweetener",  name: "Caster sugar (for coating)",         ratioValue: 60,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",      name: "Ground cinnamon (for coating)",      ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Umami",      name: "Dark chocolate (70%), chopped",      ratioValue: 100, defaultUnit: "g", substitutions: ["milk chocolate"] },
-    { ingId: "ing_10", role: "Dairy",      name: "Whole milk",                         ratioValue: 200, defaultUnit: "ml", substitutions: ["oat milk"] },
-    { ingId: "ing_11", role: "Sweetener",  name: "Caster sugar (for chocolate sauce)", ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_12", role: "Starch",     name: "Cornstarch",                         ratioValue: 10,  defaultUnit: "g", substitutions: [] },
+  "repoId": "master_spanish_spanishchurros_001",
+  "parentRepoId": null,
+  "slug": "spanish-churros",
+  "author": "ForkRecipe Kitchen",
+  "title": "Churros avec sauce au chocolat",
+  "description": "Des bâtons à crêtes Crisp de pâte chaude frite, profondément dorée et brisée à la morsure, trempés dans un épais et sombre chocolat de style espagnol.",
+  "cuisine": "Espagnol",
+  "culture": "Mandrileño",
+  "category": "desserts",
+  "tags": [
+    "dessert",
+    "végétarien",
+    "laitière",
+    "frits",
+    "Churros",
+    "chocolat",
+    "Espagnol"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Boil",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "churro_base_liquid",
-      instructions: "Combine water, butter, salt, and sugar in a medium saucepan. Bring to a rolling boil over medium-high heat, stirring to ensure the butter is fully melted. Every granule of sugar and crystal of salt must be dissolved before the flour goes in — the liquid must be at a full boil, not just simmering.",
-      visualCue: {
-        primaryTarget: "A rapidly boiling liquid, fully clear with no sugar crystals visible. Fat fully melted and incorporated.",
-        spectrum: [
-          { state: "Underdone", description: "Only simmering at the edges. Butter partially melted. Sugar granules still visible.", action: "Increase heat and wait for a full, rolling boil before adding flour." },
-          { state: "Perfect",   description: "Vigorous full boil, clear liquid with no crystals, fully emulsified fat. Violent bubbling across the entire surface.", action: "Remove from heat immediately and add all the flour at once." },
-          { state: "Overdone",  description: "Liquid has reduced significantly — too long at the boil. Volume is noticeably less.", action: "Add a tablespoon or two of water to restore original volume, then boil again." },
-        ],
-      },
-      feelCue: "The moment the butter melts fully and you can smell a faint sweetness, the liquid is ready — a rolling boil with uniform bubbles across the surface.",
+      "ingId": "ing_01",
+      "role": "Hydration",
+      "name": "Eau",
+      "ratioValue": 240,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Mix",
-      inputs: ["churro_base_liquid", "ing_05"],
-      outputState: "churro_dough",
-      instructions: "Remove the boiling liquid from heat. Add all the flour at once and stir immediately and vigorously with a wooden spoon. The dough will come together almost instantly into a rough, shaggy ball. Return to low heat and cook, stirring and pressing constantly, for 2-3 minutes until the dough pulls away from the sides cleanly and a dry film forms on the pan bottom. The dough must be dried out slightly — this is what makes churros crisp. Transfer to a piping bag fitted with a large star tip (1.5-2cm).",
-      visualCue: {
-        primaryTarget: "A smooth, stiff, non-sticky ball of dough that pulls cleanly from the pan and holds its shape.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still shaggy and sticks to the pan and spoon. Wet patches visible. Has not fully come together.", action: "Continue cooking and stirring on low heat. The dough needs more moisture driven off." },
-          { state: "Perfect",   description: "Smooth, stiff ball that pulls cleanly away from the pan walls. A dry, thin film coats the pan bottom. Dough does not stick to the spoon when pressed. Has a faint cooked-flour aroma.", action: "Pipe immediately into the hot oil. Dough must go in hot — it relaxes as it cools." },
-          { state: "Overdone",  description: "Dough is grey-tinged, very stiff, and beginning to smell of overcooked flour.", action: "Pipe immediately — it will still work but the churros may be denser." },
-        ],
-      },
-      feelCue: "The finished dough should feel like firm, hot Play-Doh — stiff enough to hold a star shape when piped, smooth enough to flow through the tip without tearing.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile neutre"
+      ]
     },
     {
-      nodeId: "step_3", action: "Fry",
-      inputs: ["churro_dough", "ing_06"],
-      outputState: "fried_churros",
-      instructions: "Heat the frying oil to 180°C (355°F) in a deep pan. Pipe 15-20cm lengths of dough directly into the hot oil, using scissors to cut each churro free from the piping bag. Fry in batches of 4-5 without crowding for 3-4 minutes, turning once, until deeply golden on all sides. The ridges from the star tip should be the darkest points. Remove with a slotted spoon and drain briefly on paper towels.",
-      visualCue: {
-        primaryTarget: "Deep, even golden-brown churros with crisply defined ridges. No pale patches or raw-looking sides.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold with soft, yielding exterior. Doughy and pale at the ridge tips. Oil not hot enough — churros will be greasy.", action: "Increase oil temperature. Remove and test one: it should be crisp and hollow-sounding when tapped." },
-          { state: "Perfect",   description: "Deep, even golden-brown all over. Ridges are dark and crisp. The churro feels light and rigid. Makes a faint crackling sound when moved. Inside is soft and airy.", action: "Drain and toss immediately in cinnamon sugar while still hot." },
-          { state: "Overdone",  description: "Dark brown to burnt, especially at the ridges. Bitter aroma. Very hard exterior.", action: "Reduce oil temperature by 10°C. The star ridges burn faster than the body — keep a close watch." },
-        ],
-      },
-      feelCue: "A perfect churro should feel rigid and crisp when you press the ridges lightly — not give at all like dough. It rattles slightly when shaken.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Season",
-      inputs: ["fried_churros", "ing_07", "ing_08"],
-      outputState: "sugared_churros",
-      instructions: "Combine the caster sugar and ground cinnamon in a shallow bowl or on a plate. Toss the hot churros in the cinnamon sugar immediately after draining — while still hot, so the sugar adheres to the surface. Roll each churro to coat all sides.",
-      visualCue: {
-        primaryTarget: "Uniformly cinnamon-sugar coated churros with a speckled russet crust on top of the golden fried exterior.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar has not adhered — it falls off in clumps because the churros have cooled too much.", action: "Toss again and press the sugar into the surface. For cold churros, lightly brush with melted butter before rolling in sugar." },
-          { state: "Perfect",   description: "Even, speckled coating of cinnamon sugar across every surface of the warm churro. Sugar has dissolved slightly into the hot surface fat.", action: "Serve immediately alongside the warm chocolate sauce." },
-          { state: "Overdone",  description: "Too much sugar applied, creating a very thick crust that falls off in sheets.", action: "Shake off the excess. Only a thin, even coating is needed." },
-        ],
-      },
-      feelCue: "The churro should feel warm and slightly gritty from the sugar coating — the sugar has slightly melted into the surface but not dissolved completely.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre de ricin (en pâte)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Simmer",
-      inputs: ["ing_09", "ing_10", "ing_11", "ing_12"],
-      outputState: "thick_chocolate_sauce",
-      instructions: "Whisk the cornstarch into 3 tablespoons of the cold milk until smooth. Heat the remaining milk with the sugar in a small saucepan over medium heat. Add the chopped dark chocolate and whisk constantly until melted and smooth. Add the cornstarch slurry and continue whisking over medium heat until the sauce thickens to the consistency of a pourable custard — about 3-4 minutes. The sauce should be thick enough to coat a spoon heavily and not run off immediately when the spoon is tilted.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, deeply dark chocolate sauce that coats the back of a spoon and falls in slow, heavy drops.",
-        spectrum: [
-          { state: "Underdone", description: "Thin and milky, falls off the spoon immediately in a stream. Not enough cornstarch thickening has occurred.", action: "Continue whisking over medium heat. The sauce thickens rapidly near the boiling point." },
-          { state: "Perfect",   description: "Thick, glossy, dark brown. Falls off a spoon in slow, heavy sheets. Coats the back of the spoon and a finger swiped across leaves a clean line. Steaming and fragrant.", action: "Pour into a warm cup for dunking. Keep warm over very low heat." },
-          { state: "Overdone",  description: "Sauce has become stiff and is pulling from the pan in a solid mass. Too much starch has set.", action: "Remove from heat, add 2-3 tbsp of warm milk, and whisk vigorously to thin." },
-        ],
-      },
-      feelCue: "The chocolate sauce should pour like thick cream — not quite flowing freely, but not needing to be spooned. It leaves a visible trail on the surface when drizzled.",
+      "ingId": "ing_05",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile neutre pour friture",
+      "ratioValue": 700,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile de tournesol",
+        "huile végétale"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre de ricin (pour revêtement)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Cannelle au sol (pour revêtement)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Umami",
+      "name": "Chocolat noir (70%), haché",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "chocolat au lait"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Lait d'avoine"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Sweetener",
+      "name": "Sucre de castre (pour sauce au chocolat)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Starch",
+      "name": "Farine de maïs",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "churro_base_liquid",
+      "instructions": "Mélanger l'eau, le beurre, le sel et le sucre dans une casserole moyenne. Porter à ébullition à feu moyen-vif, en remuant pour s'assurer que le beurre est complètement fondu. Chaque granule de sucre et de cristal de sel doit être dissous avant l'entrée de la farine — le liquide doit être à ébullition complète, et non à mijoter.",
+      "visualCue": {
+        "primaryTarget": "Un liquide à bouillir rapidement, complètement clair, sans cristaux de sucre visibles. Graisse complètement fondue et incorporée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Seulement mijoter aux bords. Beurre partiellement fondu. Les granules de sucre sont encore visibles.",
+            "action": "Augmentez la chaleur et attendez un ébullition complet et enroulez avant d'ajouter de la farine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bouillir vif, liquide transparent sans cristaux, graisse entièrement émulsifiée. Violent bouillonnement sur toute la surface.",
+            "action": "Retirer immédiatement du feu et ajouter toute la farine à la fois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide a considérablement diminué — trop longtemps à l'ébullition. Le volume est nettement inférieur.",
+            "action": "Ajouter une cuillère à soupe ou deux d'eau pour restaurer le volume original, puis faire bouillir à nouveau."
+          }
+        ]
+      },
+      "feelCue": "Au moment où le beurre fond complètement et que vous pouvez sentir une légère douceur, le liquide est prêt — un ébullition avec des bulles uniformes à la surface."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "churro_base_liquid",
+        "ing_05"
+      ],
+      "outputState": "churro_dough",
+      "instructions": "Retirer le liquide bouillant du feu. Ajouter toute la farine à la fois et remuer immédiatement et vigoureusement avec une cuillère en bois. La pâte se retrouvera presque instantanément dans une boule rugueuse et chaotique. Revenez à feu doux et faites cuire, en remuant et en pressant constamment, pendant 2-3 minutes jusqu'à ce que la pâte s'éloigne proprement des côtés et qu'un film sec se forme sur le fond de la poêle. La pâte doit être légèrement séchée — c'est ce qui rend les churros croustillants. Transfert dans un sac de tuyauterie muni d'une grande pointe étoile (1,5-2cm).",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte lisse, rigide et non collante qui tire proprement de la poêle et tient sa forme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est encore chaotique et colle à la poêle et à la cuillère. Patchs humides visibles. Il ne s'est pas pleinement réuni.",
+            "action": "Continuer la cuisson et remuer à feu doux. La pâte a besoin de plus d'humidité."
+          },
+          {
+            "state": "Perfect",
+            "description": "Balle lisse et raide qui tire proprement loin des murs de la poêle. Un film mince et sec enveloppe le fond de la poêle. La toux ne colle pas à la cuillère lorsqu'elle est pressée. A un faible arôme de farine cuite.",
+            "action": "Pipe immédiatement dans l'huile chaude. La toux doit se réchauffer, elle se détend en refroidissant."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est grisée, très raide, et commence à sentir la farine trop cuite.",
+            "action": "Tuyau immédiatement — il fonctionnera encore mais les churros peuvent être plus denses."
+          }
+        ]
+      },
+      "feelCue": "La pâte finie doit se sentir ferme et chaude Play-Doh — assez raide pour tenir une étoile quand piped, assez lisse pour couler à travers l'extrémité sans déchirer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "churro_dough",
+        "ing_06"
+      ],
+      "outputState": "fried_churros",
+      "instructions": "Chauffer l'huile de friture à 180°C (355°F) dans une poêle profonde. Pipe 15-20cm longueurs de pâte directement dans l'huile chaude, à l'aide de ciseaux pour couper chaque churro libre du sac de tuyauterie. Faire frire en lots de 4-5 sans fouler pendant 3-4 minutes, en tournant une fois, jusqu'à ce que profondément doré de tous les côtés. Les crêtes de la pointe de l'étoile devraient être les points les plus sombres. Retirer avec une cuillère à fentes et égoutter brièvement sur les serviettes en papier.",
+      "visualCue": {
+        "primaryTarget": "Des churros profonds, même brun doré, avec des crêtes clairement définies. Pas de taches pâles ou de côtés bruts.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle avec de l'extérieur doux et productif. Doughy et pâle à l'extrémité de la crête. L'huile n'est pas assez chaude — les churros seront gras.",
+            "action": "Augmenter la température de l'huile. Retirez et testez-en un : il doit être croustillant et creux en tapotant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep, même brun doré partout. Les crêtes sont sombres et croquantes. Le churro est léger et rigide. Fait un léger bruit de craquelage quand il est déplacé. L'intérieur est doux et aéré.",
+            "action": "Égoutter et jeter immédiatement dans le sucre de cannelle tout en restant chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé à brûler, surtout aux crêtes. Un arôme amer. Extérieur très dur.",
+            "action": "Réduire la température de l'huile de 10°C. Les arêtes des étoiles brûlent plus vite que le corps — surveillez de près."
+          }
+        ]
+      },
+      "feelCue": "Un churro parfait devrait se sentir rigide et croustillant lorsque vous appuyez légèrement sur les crêtes — ne pas donner du tout comme de la pâte. Il se déchire légèrement lorsqu'il est secoué."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "fried_churros",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "sugared_churros",
+      "instructions": "Mélanger le sucre de roulette et la cannelle moulue dans un bol peu profond ou sur une assiette. Mettre les churros chauds dans le sucre de cannelle immédiatement après avoir drainé — tout en étant encore chaud, de sorte que le sucre adhère à la surface. Roulez chaque churro pour enrober tous les côtés.",
+      "visualCue": {
+        "primaryTarget": "Des churros enduits de cannelle-sucre avec une croûte de russet tachetée sur le dessus de l'extérieur doré frit.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sucre n'a pas adhéré — il tombe en gouffres parce que les churros ont trop refroidi.",
+            "action": "Rejeter et presser le sucre dans la surface. Pour les churros froids, brosser légèrement avec le beurre fondu avant de rouler dans le sucre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même un revêtement tacheté de sucre de cannelle sur chaque surface du churro chaud. Le sucre s'est légèrement dissous dans la graisse de surface chaude.",
+            "action": "Servir immédiatement à côté de la sauce au chocolat chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de sucre appliqué, créant une croûte très épaisse qui tombe en feuilles.",
+            "action": "Éliminez l'excès. Seul un revêtement mince et uniforme est nécessaire."
+          }
+        ]
+      },
+      "feelCue": "Le churro doit se sentir chaud et légèrement gras du revêtement de sucre — le sucre a légèrement fondu dans la surface, mais pas complètement dissous."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "thick_chocolate_sauce",
+      "instructions": "fouetter la fécule de maïs dans 3 cuillères à soupe de lait froid jusqu'à ce qu'elle soit lisse. Chauffer le reste du lait avec le sucre dans une petite casserole à feu moyen. Ajouter le chocolat noir haché et fouetter constamment jusqu'à ce que fondu et lisse. Ajouter la fécule de maïs et continuer à fouetter à feu moyen jusqu'à ce que la sauce s'épaississe à la consistance d'une crème versable — environ 3-4 minutes. La sauce doit être assez épaisse pour enrober une cuillère fortement et ne pas s'écouler immédiatement lorsque la cuillère est inclinée.",
+      "visualCue": {
+        "primaryTarget": "Une sauce au chocolat épais, brillant et profondément sombre qui enveloppe l'arrière d'une cuillère et tombe dans des gouttes lentes et lourdes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mince et laiteuse, tombe de la cuillère immédiatement dans un ruisseau. L'épaississement de la fécule de maïs n'est pas suffisant.",
+            "action": "Continuer à fouetter à feu moyen. La sauce s'épaissit rapidement près du point d'ébullition."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, brillant, brun foncé. Il tombe d'une cuillère dans des draps lents et lourds. Enrober l'arrière de la cuillère et un doigt balayé à travers laisse une ligne propre. La vapeur et parfumée.",
+            "action": "Verser dans une tasse chaude pour le dunking. Garder au chaud à feu très doux."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est devenue raide et tire de la poêle dans une masse solide. Trop d'amidon.",
+            "action": "Retirer du feu, ajouter 2-3 c. à soupe de lait chaud et fouetter vigoureusement à mince."
+          }
+        ]
+      },
+      "feelCue": "La sauce au chocolat doit verser comme de la crème épaisse — pas tout à fait fluide librement, mais pas besoin d'être cuillé. Il laisse un sentier visible à la surface lorsqu'il est bruissé."
+    }
+  ]
 };

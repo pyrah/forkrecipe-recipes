@@ -1,111 +1,284 @@
 export default {
-  repoId: "master_vietnamese_pho-broth_001",
-  parentRepoId: null,
-  slug: "pho-broth",
-  author: "ForkRecipe Kitchen",
-  title: "Pho Broth",
-  description: "The soul of pho bo — beef bones simmered for hours into a crystal-clear amber broth, perfumed with charred onion and ginger and a fistful of toasted spice, then balanced on a knife's edge of fish sauce. Clean, aromatic, and deceptively deep.",
-  cuisine: "Vietnamese",
-  culture: "Hanoi",
-  category: "stocks",
-  tags: ["pho", "vietnamese", "beef", "broth", "stock", "aromatic"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "6 hours",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 2, salty: 4, sour: 0, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Beef marrow and knuckle bones",            ratioValue: 100, defaultUnit: "%",  substitutions: ["oxtail", "beef leg bones"] },
-    { ingId: "ing_02", role: "Protein",     name: "Beef brisket or chuck (whole piece)",      ratioValue: 30,  defaultUnit: "%",  substitutions: ["beef shank"] },
-    { ingId: "ing_03", role: "Allium",      name: "Yellow onions (halved, charred)",          ratioValue: 12,  defaultUnit: "%",  substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",    name: "Fresh ginger (whole, charred)",            ratioValue: 6,   defaultUnit: "%",  substitutions: [] },
-    { ingId: "ing_05", role: "Spice",       name: "Whole spice (star anise, cinnamon stick, cloves, coriander seed, fennel seed)", ratioValue: 2, defaultUnit: "%", substitutions: ["pho spice blend"] },
-    { ingId: "ing_06", role: "Umami",       name: "Fish sauce (nuoc mam)",                    ratioValue: 4,   defaultUnit: "%",  substitutions: ["light soy sauce"] },
-    { ingId: "ing_07", role: "Sweetener",   name: "Yellow rock sugar",                        ratioValue: 2,   defaultUnit: "%",  substitutions: ["palm sugar", "granulated sugar"] },
-    { ingId: "ing_08", role: "Seasoning",   name: "Fine sea salt",                            ratioValue: 1,   defaultUnit: "%",  substitutions: [] },
-    { ingId: "ing_09", role: "Solvent",     name: "Cold water",                               ratioValue: 600, defaultUnit: "%",  substitutions: [] },
+  "repoId": "master_vietnamese_pho-broth_001",
+  "parentRepoId": null,
+  "slug": "pho-broth",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pho Broth",
+  "description": "L'âme du pho bo — des os de bœuf mijotés pendant des heures dans un bouillon ambre cristallin, parfumé d'oignon carbonisé et de gingembre et un poing d'épices grillées, puis équilibré sur le bord d'un couteau de sauce de poisson. Propre, aromatique, et trompeur profondément.",
+  "cuisine": "Vietnamiens",
+  "culture": "Hanoï",
+  "category": "stocks",
+  "tags": [
+    "pho",
+    "vietnamese",
+    "boeuf",
+    "bouillon",
+    "stock",
+    "aromatiques"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "6 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Parboil",
-      inputs: ["ing_01", "ing_02", "ing_09"],
-      outputState: "blanched_bones",
-      instructions: "Cover the bones and meat with cold water in a large pot and bring to a rolling boil over high heat. Boil hard for 5-7 minutes — a gray, foamy scum will erupt to the surface. Dump everything into a colander, discard the cloudy water, and scrub each bone under running water to remove every trace of coagulated blood and grit. This brutal first wash is the single most important step for a clear broth.",
-      visualCue: {
-        primaryTarget: "Bones are clean and pale, free of any clinging brown or gray matter. The scrubbed pot is rinsed of all scum before the real simmer begins.",
-        spectrum: [
-          { state: "Underdone", description: "Bones still have dark red blood pockets in the marrow channels and brown film clinging to the joints.", action: "Return to the boil and keep blanching — the scum is still actively forming. Scrub more vigorously." },
-          { state: "Perfect",   description: "Bones are uniformly pale and clean. The rinse water runs clear off them. No foam left clinging.", action: "Return the clean bones and meat to a clean pot with fresh cold water." },
-          { state: "Overdone",  description: "You have boiled so long the meat is gray and waterlogged — but the bones are clean.", action: "No harm done for the broth; the bones are the point here. Proceed." },
-        ],
-      },
-      feelCue: "The water should smell raw and metallic as the blood releases — that is exactly the off-note you are removing now so the final broth smells only of beef and spice.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "moelle de boeuf et os de mèche",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "queue d'ox",
+        "os des jambes de boeuf"
+      ]
     },
     {
-      nodeId: "step_2", action: "Char",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "charred_aromatics",
-      instructions: "Hold the halved onions and whole ginger directly over an open flame, or place cut-side down in a dry cast-iron skillet over high heat. Char until the surfaces are blackened and blistered, 8-10 minutes, turning so every face takes color. Don't be timid — you want genuine black char, not just golden. Rinse off any loose ash under the tap and leave the rest.",
-      visualCue: {
-        primaryTarget: "Onion halves and ginger are deeply blackened on every surface, soft and collapsing slightly, releasing a sweet, smoky, almost barbecue aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Surfaces are golden or lightly browned with no true black. The aroma is raw and sharp rather than smoky-sweet.", action: "Keep them on the heat — the smoky depth of pho comes entirely from real char. Push past golden into black." },
-          { state: "Perfect",   description: "Blistered black skin, sweet caramelized smell, ginger fragrant and softened. A few translucent layers showing through the char.", action: "Rinse off loose ash and add to the broth." },
-          { state: "Overdone",  description: "Fully incinerated to gray ash all the way through, with an acrid, bitter smell.", action: "Discard the ashed pieces and re-char fresh onion and ginger — burnt-through aromatics will turn the broth bitter." },
-        ],
-      },
-      feelCue: "The kitchen should smell like a grill, not a campfire. Sweet smoke means you are there; harsh, throat-catching smoke means it is tipping into burnt.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Poitrine de boeuf ou rondelle (pièce entière)",
+      "ratioValue": 30,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Jarret de bœuf"
+      ]
     },
     {
-      nodeId: "step_3", action: "Toast",
-      inputs: ["ing_05"],
-      outputState: "toasted_spice",
-      instructions: "Toast the star anise, cinnamon, cloves, coriander, and fennel in a dry skillet over medium heat, shaking constantly, for 3-4 minutes until fragrant and the seeds begin to pop. Don't let them smoke. Tie the spices in a small muslin bag or cheesecloth bundle so they can be lifted out cleanly later.",
-      visualCue: {
-        primaryTarget: "Spices are warm, glossy with their own released oils, and intensely fragrant — sweet cinnamon and licorice anise filling the room. Coriander and fennel have darkened a shade.",
-        spectrum: [
-          { state: "Underdone", description: "Spices smell flat and dusty; the seeds are still pale and silent in the pan.", action: "Keep toasting and shaking — you are waiting for the first crackle and the bloom of aroma." },
-          { state: "Perfect",   description: "Loud fragrance, a few popping seeds, spices a shade darker and oily-looking.", action: "Tip into a spice bag and tie it shut." },
-          { state: "Overdone",  description: "Wisps of smoke, an acrid edge cutting through the sweetness, cloves turning black.", action: "Discard and re-toast fresh — scorched spice makes a harsh, medicinal broth." },
-        ],
-      },
-      feelCue: "Toasting wakes the volatile oils — you should be able to smell the spice bag from across the room before it ever touches the water.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignons jaunes (chaudés, carbonisés)",
+      "ratioValue": 12,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Simmer",
-      inputs: ["blanched_bones", "charred_aromatics", "toasted_spice", "ing_09"],
-      outputState: "infused_broth",
-      instructions: "Cover the clean bones and meat with fresh cold water and bring to a bare simmer — never a boil. Add the charred onion and ginger and the spice bag. Hold at the gentlest simmer, surface barely shivering, for 4-6 hours. Skim foam and surface fat patiently every 20-30 minutes for the first hour. Pull the brisket out at 90 minutes once it is tender (save it for slicing into the bowls); let the bones keep going. Top up with hot water if the level drops below the bones.",
-      visualCue: {
-        primaryTarget: "A clear, glistening amber broth with only a lazy bubble or two breaking the surface every few seconds. A thin sheen of golden fat, the rest skimmed away. Deep beefy-spiced aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is pale, thin, and watery-tasting; it smells of spice but has no beefy body or backbone yet.", action: "Keep simmering. Collagen and flavor need hours — there is no shortcut. Make sure the spice bag is still in." },
-          { state: "Perfect",   description: "Glossy, clear amber. Lips feel slightly sticky from gelatin. The broth tastes profoundly of beef wrapped in warm spice and sweet char.", action: "Remove the spice bag, onion, ginger, and bones. Strain through a fine sieve." },
-          { state: "Overdone",  description: "Broth has gone cloudy and the spice has turned overpowering and bitter, dominating the beef.", action: "A hard boil emulsified the fat — cloudiness can't be undone, but pull the spice bag now and dilute with hot water to tame the spice." },
-        ],
-      },
-      feelCue: "Touch a cooled spoonful to your lips — when it feels faintly tacky and your lips want to stick together, the bones have given up their gelatin and the broth has body.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Gingembre frais (entièrement carbonisé)",
+      "ratioValue": 6,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Season",
-      inputs: ["infused_broth", "ing_06", "ing_07", "ing_08"],
-      outputState: "finished_broth",
-      instructions: "Return the strained broth to the pot over low heat. Season with fish sauce, rock sugar, and salt, adding in stages and tasting as you go. The goal is a savory broth with a whisper of sweetness and a deep umami hum — it should taste slightly stronger than you'd sip on its own, because rice noodles and raw beef will dilute it in the bowl. Adjust until balanced.",
-      visualCue: {
-        primaryTarget: "A clear, deeply savory amber broth that smells of beef, anise, and char, with a clean fish-sauce funk lingering underneath and the sugar rounding every edge.",
-        spectrum: [
-          { state: "Underdone", description: "Broth tastes flat, watery, or one-dimensionally beefy — the savory depth and roundness aren't there.", action: "Add fish sauce a tablespoon at a time for umami and salt; add rock sugar in small pieces to round it. Taste between each." },
-          { state: "Perfect",   description: "Savory-forward with a balanced backbone, a faint sweetness, and a long umami finish. Tastes assertive in the spoon, knowing noodles will mellow it.", action: "Ladle over rice noodles, raw sliced beef, and herbs. Serve screaming hot." },
-          { state: "Overdone",  description: "Aggressively salty or sharply fishy, with the fish sauce shouting over the beef.", action: "Add hot water (or unsalted reserved broth) to dilute, then re-balance with a touch of sugar. Salt can't be removed, only diluted." },
-        ],
-      },
-      feelCue: "Season for the bowl, not the spoon — the broth should taste a notch too bold on its own, because the cold noodles and raw beef you pour it over will pull it right into balance.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Epices entières (anis étoilé, bâton de cannelle, girofles, graines de coriandre, graines de fenouil)",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "mélange d'épices"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "sauce de poisson (nuoc mam)",
+      "ratioValue": 4,
+      "defaultUnit": "%",
+      "substitutions": [
+        "sauce soja légère"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre de roche jaune",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "sucre de palme",
+        "sucre granulé"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Solvent",
+      "name": "Eau froide",
+      "ratioValue": 600,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Feuilles",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_09"
+      ],
+      "outputState": "blanched_bones",
+      "instructions": "Couvrir les os et la viande d'eau froide dans une grande casserole et porter à un ébullition à feu vif. Faire bouillir pendant 5 à 7 minutes — une écume grise et mousseuse éclatera à la surface. Déposer tout dans une calandre, jeter l'eau trouble, et frotter chaque os sous l'eau courante pour enlever toute trace de sang coagulé et de grain. Ce premier lavage brutal est l'étape la plus importante pour un bouillon clair.",
+      "visualCue": {
+        "primaryTarget": "Les os sont propres et pâles, exempts de toute matière brune ou grise. La casserole frottée est rincée de toutes les ordures avant que la vraie mijot commence.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les os ont encore des poches de sang rouge foncé dans les canaux médullaires et un film brun accroché aux articulations.",
+            "action": "Revenez à l'ébullition et continuez à blanchir — la racaille continue de se former activement. Frottez plus vigoureusement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les os sont uniformément pâles et propres. L'eau de rinçage les libère. Pas de mousse qui s'accroche.",
+            "action": "Retournez les os et la viande propres dans une casserole propre à l'eau froide fraîche."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tu as fait bouillir si longtemps la viande est grise et saupoudrée, mais les os sont propres.",
+            "action": "Pas de mal pour le bouillon; les os sont le point ici. Continuez."
+          }
+        ]
+      },
+      "feelCue": "L'eau doit sentir cru et métallique que le sang libère — c'est exactement la note que vous retirez maintenant, de sorte que le bouillon final sent seulement du boeuf et des épices."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Objet",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "charred_aromatics",
+      "instructions": "Maintenez les demi-oignons et le gingembre entier directement sur une flamme ouverte, ou placez le côté coupé dans une poêle en fonte sèche à feu vif. Char jusqu'à ce que les surfaces soient noircies et cloquées, 8-10 minutes, tournant ainsi chaque visage prend de la couleur. Ne soyez pas timide, vous voulez du char noir authentique, pas seulement de l'or. Rincer toute cendre libre sous le robinet et laisser le reste.",
+      "visualCue": {
+        "primaryTarget": "Les moitiés de l'oignon et le gingembre sont profondément noircis sur chaque surface, doux et s'effondrent légèrement, libérant un arôme doux, fumé, presque barbecue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les surfaces sont dorées ou légèrement dorées sans véritable noir. L'arôme est brut et vif plutôt que fumé-douce.",
+            "action": "Maintenez-les sur la chaleur — la profondeur fumée de pho provient entièrement de l'omble véritable. Poussez l'or passé dans le noir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Peau noire grillée, odeur caramélisée sucrée, gingembre parfumé et adouci. Quelques couches translucides montrant à travers l'omble.",
+            "action": "Rincer les cendres et ajouter au bouillon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Entièrement incinérée à la cendre grise tout au long de la traversée, avec une odeur amère et amère.",
+            "action": "Jeter les morceaux d'asphalte et re-char oignon frais et gingembre — les aromatiques brûlés feront tourner le bouillon amer."
+          }
+        ]
+      },
+      "feelCue": "La cuisine doit sentir comme un grill, pas un feu de camp. La fumée douce signifie que vous êtes là; la fumée dure et accrocheuse de la gorge signifie qu'elle se jette dans le feu."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Toast",
+      "inputs": [
+        "ing_05"
+      ],
+      "outputState": "toasted_spice",
+      "instructions": "Faire cuire l'anis étoile, la cannelle, les girofles, la coriandre et le fenouil dans une poêle sèche à feu moyen, en tremblant constamment pendant 3-4 minutes jusqu'à ce que les graines commencent à s'odorer et que les graines commencent à éclater. Ne les laissez pas fumer. Attachez les épices dans un petit sac de mousseline ou un paquet de fromage afin qu'elles puissent être levées proprement plus tard.",
+      "visualCue": {
+        "primaryTarget": "Les épices sont chaudes, brillantes avec leurs propres huiles libérées, et intensément parfumées — cannelle douce et anis de réglisse remplissant la pièce. La coriandre et le fenouil ont obscurci une ombre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les épices sentent plat et poussiéreux; les graines sont encore pâles et silencieuses dans la poêle.",
+            "action": "Continuez à griller et à trembler — vous attendez le premier crépitement et la floraison de l'arôme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Parfum loud, quelques graines éclatantes, épices une ombre plus foncée et huileuse.",
+            "action": "Astuce dans un sac d'épices et attache-le fermé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Wisps de fumée, un bord acride coupant à travers la douceur, girofles devenant noir.",
+            "action": "Jeter et re-toast frais — épice brûlée fait un bouillon dur et médicinal."
+          }
+        ]
+      },
+      "feelCue": "Toasting réveille les huiles volatiles — vous devriez pouvoir sentir le sac d'épices de l'autre côté de la pièce avant qu'il ne touche jamais l'eau."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "blanched_bones",
+        "charred_aromatics",
+        "toasted_spice",
+        "ing_09"
+      ],
+      "outputState": "infused_broth",
+      "instructions": "Couvrez les os et la viande propres avec de l'eau froide fraîche et faites mijoter à nu — jamais ébullition. Ajouter l'oignon carbonisé et le gingembre et le sac d'épices. Maintenez à la plus douce mijoter, surface à peine frissonnante, pendant 4-6 heures. Mousse d'écrémage et graisse de surface toutes les 20-30 minutes pendant la première heure. Tirez la poitrine à 90 minutes une fois qu'elle est tendre (sauvez-la pour la trancher dans les bols); laissez les os continuer. Garnir d'eau chaude si le niveau tombe sous les os.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon ambré clair et brillant avec seulement une bulle paresseuse ou deux brisant la surface toutes les quelques secondes. Un mince éclat de graisse dorée, le reste s'enfuit. Arôme profond et épicé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon est pâle, mince et aqueux; il sent l'épice, mais n'a pas encore de corps ou de colonne vertébrale.",
+            "action": "Continuez à mijoter. Collagène et goût ont besoin d'heures — il n'y a pas de raccourci. Assurez-vous que le sac d'épices est toujours dedans."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, ambre clair. Les lèvres se sentent légèrement collantes de la gélatine. Le bouillon goûte profondément de bœuf enveloppé d'épices chaudes et d'omble doux.",
+            "action": "Retirer le sac d'épices, l'oignon, le gingembre et les os. Plongez dans un bon tamis."
+          },
+          {
+            "state": "Overdone",
+            "description": "Broth est devenu nuageux et l'épice est devenue trop puissante et amère, dominant le boeuf.",
+            "action": "Un ébullition dur a émulsifié la graisse — le trouble ne peut pas être défait, mais tirer le sac d'épices maintenant et diluer avec de l'eau chaude pour apprivoiser l'épice."
+          }
+        ]
+      },
+      "feelCue": "Touchez une cuillère refroidie à vos lèvres — quand elle se sent légèrement collante et que vos lèvres veulent rester ensemble, les os ont abandonné leur gélatine et le bouillon a le corps."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Saison",
+      "inputs": [
+        "infused_broth",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_broth",
+      "instructions": "Retourner le bouillon tendu dans le pot à feu doux. Assaisonner avec de la sauce de poisson, du sucre de roche et du sel, en ajoutant par étapes et en dégustant au fur et à mesure. Le but est un bouillon salé avec un murmure de douceur et un umami profond hum — il devrait goûter un peu plus fort que vous siroter sur son propre, parce que les nouilles de riz et le boeuf cru le diluera dans le bol. Régler jusqu'à équilibrer.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon d'ambre clair et profondément salé qui sent le bœuf, l'anis et l'omble, avec un funk propre au poisson qui reste sous et le sucre arrondi à chaque bord.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le broth a un goût plat, aqueux ou unidimensionnel : la profondeur et la rondeur savoureuses ne sont pas là.",
+            "action": "Ajouter la sauce de poisson une cuillère à soupe à la fois pour l'umami et le sel; ajouter le sucre de roche en petits morceaux pour le arrondir. Goûtez entre chacun."
+          },
+          {
+            "state": "Perfect",
+            "description": "Savory-avant avec une colonne vertébrale équilibrée, une douceur faible, et une longue finale umami. Goûte affirmée dans la cuillère, sachant que les nouilles vont la fondre.",
+            "action": "Déposer sur les nouilles de riz, le boeuf haché cru et les herbes. Servez les cris chauds."
+          },
+          {
+            "state": "Overdone",
+            "description": "Agressivement salé ou fortement poissonneux, la sauce de poisson criant sur le boeuf.",
+            "action": "Ajouter l'eau chaude (ou le bouillon réservé non salé) pour diluer, puis rééquilibrer avec une touche de sucre. Le sel ne peut pas être enlevé, seulement dilué."
+          }
+        ]
+      },
+      "feelCue": "Assaisonner pour le bol, pas la cuillère — le bouillon devrait goûter un encoche trop gras sur lui-même, parce que les nouilles froides et le boeuf cru que vous versez dessus le tirera droit dans l'équilibre."
+    }
+  ]
 };

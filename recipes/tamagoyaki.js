@@ -1,97 +1,220 @@
 export default {
-  repoId: "master_japanese_tamagoyaki_001",
-  parentRepoId: null,
-  slug: "tamagoyaki",
-  author: "ForkRecipe Kitchen",
-  title: "Tamagoyaki",
-  description: "Layers of dashi-seasoned egg rolled into a compact golden rectangle — sweet, delicate, and precisely disciplined. The benchmark of a Japanese breakfast and bento box.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "eggs",
-  tags: ["japanese", "eggs", "tamagoyaki", "bento", "breakfast", "dashi", "rolled-omelette"],
-  difficulty: 3,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 3, salty: 2, sour: 0, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Eggs (large, fresh)",                                            ratioValue: 4,    defaultUnit: "eggs",  substitutions: [] },
-    { ingId: "ing_02", role: "Liquid",    name: "Dashi stock (ichiban dashi or hondashi dissolved in water)",     ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["light chicken stock (less traditional)"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Soy sauce (usukuchi light soy preferred)",                       ratioValue: 0.08, defaultUnit: "parts", substitutions: ["tamari for gluten-free"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Mirin (hon-mirin, not mirin-style seasoning)",                   ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener", name: "Caster sugar",                                                   ratioValue: 0.08, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Neutral oil (rice bran or sunflower)",                           ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_japanese_tamagoyaki_001",
+  "parentRepoId": null,
+  "slug": "tamagoyaki",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tamagoyaki",
+  "description": "Des couches d'oeufs dashi-assaisonnés roulés dans un rectangle d'or compact — doux, délicat, et précisément discipliné. La référence d'un petit déjeuner japonais et bento box.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "eggs",
+  "tags": [
+    "Japonais",
+    "œufs",
+    "Tamagoyaki",
+    "bento",
+    "Petit déjeuner",
+    "Dashi",
+    "Emelette laminée"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "seasoned_egg_mixture",
-      instructions: "Crack the eggs into a spouted bowl or large measuring jug. Add the dashi, soy sauce, mirin, and sugar. Using a pair of hashi (chopsticks) or a fork held flat, cut through the eggs with a slicing motion rather than beating — the goal is a fully combined, streak-free mixture with no visible strings of egg white, but minimal air bubbles. Foam in the mixture will create unsightly holes in the finished roll. Pour the mixture through a fine-mesh sieve to remove any chalazae and remaining lumps. The mixture should be pale golden, uniform, and still.",
-      visualCue: {
-        primaryTarget: "A translucent golden liquid in the jug — uniform in colour, with no streaks of clear egg white and no foam on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Clear egg white streaks still visible running through the yellow mixture. Thick, ropy chalazae still present. Mixture is not uniform.", action: "Continue the cutting-stroke mixing until the streaks disappear. Do not beat vigorously — a streak-free result matters more than a frothy one." },
-          { state: "Perfect",   description: "Uniform pale gold throughout, completely smooth. Almost no bubbles on the surface. Smells gently sweet and faintly of dashi.", action: "Strain through a sieve if you have one, then pour into a spouted jug for controlled pouring — this is the practical move that separates a neat roll from a ragged one." },
-          { state: "Overdone",  description: "Mixture has been vigorously beaten and is full of foam — a thick frothy head has formed. The surface looks like cappuccino.", action: "Let it sit for 5 minutes to settle, or skim the foam with a spoon. Bubbles in the egg mixture produce holes in the omelette layers." },
-        ],
-      },
-      feelCue: "Dip a finger — the mixture should feel barely thicker than water, with no stickiness and no graininess from undissolved sugar.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Oeufs (gros, frais)",
+      "ratioValue": 4,
+      "defaultUnit": "eggs",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Fry",
-      inputs: ["seasoned_egg_mixture", "ing_06"],
-      outputState: "first_egg_layer",
-      instructions: "Heat a rectangular tamagoyaki pan (or a small non-stick skillet) over medium heat. Dip a folded piece of kitchen paper into the oil and wipe the pan in an even, thin coat — no pooling oil. Pour in roughly one-third of the egg mixture, tilting the pan to coat the entire surface in a thin, even layer. Wait for the surface to turn from glossy-wet to barely set and just matte — still slightly moist at the centre but no longer fluid. Using hashi or a flat spatula, begin rolling the omelette from the far end toward you in 3 or 4 short folds, pressing each fold gently but firmly. Push the completed roll to the far end of the pan.",
-      visualCue: {
-        primaryTarget: "A small, tight log of golden egg at the far end of the pan — layered at the edges, with a pale golden exterior and no browning.",
-        spectrum: [
-          { state: "Underdone", description: "The surface is still very wet and glossy when rolling begins. The egg tears as you try to roll it, folding unevenly and leaking liquid egg.", action: "Wait longer. The surface must change from shiny-wet to just-matte before rolling. A 10-second wait is the difference between a clean roll and a scrambled mess." },
-          { state: "Perfect",   description: "Surface is just set — matte, not shiny, with a slight jiggle at the very centre. Rolls easily without tearing, the layers compressing cleanly into a neat log. No browning visible.", action: "Push the roll to the far end of the pan and wipe the exposed pan surface with oiled paper before adding the next portion." },
-          { state: "Overdone",  description: "Egg has set fully to a dry, firm sheet — no jiggle at all, or worse, golden-brown colour appearing at the bottom. Roll is stiff when folded.", action: "Lower the heat. Dry egg sheets make a tough, rubbery tamagoyaki. The residual heat in the pan is almost always enough — reduce flame to low-medium." },
-        ],
-      },
-      feelCue: "Gently press the rolled log with a spatula — it should give softly, like a rolled towel, with a little spring but no hardness.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Stock de Dashi (chiban dashi ou hondashi dissous dans l'eau)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Poulet léger (moins traditionnel)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["first_egg_layer", "seasoned_egg_mixture"],
-      outputState: "tamagoyaki_roll",
-      instructions: "Wipe the exposed pan surface with oiled kitchen paper and pour in another third of the egg mixture, lifting the existing roll slightly to let raw egg flow underneath it. Wait for the new layer to reach that same barely-set, just-matte surface state. Roll the entire log back over the new layer — the new egg adheres to the log and builds another layer. Push the growing roll back to the far end. Repeat with the final third of the egg mixture. Each layer should be thin, even, and barely cooked before rolling so the roll stays tender throughout.",
-      visualCue: {
-        primaryTarget: "A growing rectangular log of golden layers, each new pour building thickness — visible layer lines at the ends when viewed from the side.",
-        spectrum: [
-          { state: "Underdone", description: "New egg layers are too wet when rolled over. The roll is beginning to unravel because the layers haven't set enough to grip each other. Raw egg is leaking from the seams.", action: "Wait an extra 5–10 seconds for each new pour before rolling. The layers must be just-set enough to bind without being so cooked they become dry sheets." },
-          { state: "Perfect",   description: "A plump, even log with cleanly compressed layer lines visible at the ends. Golden-yellow throughout, uniformly pale with no browning. The roll holds its shape when the pan is tilted.", action: "Remove from heat. The tamagoyaki finishes cooking from its own residual heat." },
-          { state: "Overdone",  description: "The exterior of the roll has developed a brown spotted crust from contact with a pan that was too hot. Roll is misshapen — one side thicker than the other.", action: "Reduce heat immediately for subsequent layers. Shaping in the bamboo mat may rescue the appearance but not the texture of any browned exterior." },
-        ],
-      },
-      feelCue: "Press the length of the roll gently — it should feel uniformly springy along its entire length, like a soft sponge. Hard spots mean thick, over-cooked patches inside.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sauce de soja (sukuchi léger préféré)",
+      "ratioValue": 0.08,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari pour sans gluten"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Press",
-      inputs: ["tamagoyaki_roll"],
-      outputState: "finished_tamagoyaki",
-      instructions: "Roll the hot tamagoyaki in a clean bamboo sushi mat or a sheet of cling film, squeezing gently but firmly into a tight rectangular log. Fold in the ends of the mat and press to square off the corners. Let it rest for 3–5 minutes — the steam inside continues cooking and the shape sets. Slice into 2–3 cm rounds to reveal the spiral cross-section inside. Serve immediately or at room temperature.",
-      visualCue: {
-        primaryTarget: "A firm, rectangular golden log that holds its shape when unwrapped. Slices reveal a clean spiral of golden yellow layers.",
-        spectrum: [
-          { state: "Underdone", description: "The roll flattens and spreads when the mat is removed — it hasn't set from steam and residual heat. Layers separate when sliced.", action: "Re-wrap and squeeze more firmly, then wait a further 3 minutes. The interior needs time to finish cooking from its own heat." },
-          { state: "Perfect",   description: "Holds a crisp rectangular form when unwrapped. Slices cleanly into rounds. The spiral of golden layers is clearly visible. Exterior is uniformly pale gold, interior tender and custardy.", action: "Slice and serve within 30 minutes of making for the best texture." },
-          { state: "Overdone",  description: "Log is very firm with a tight, almost rubbery texture. No tenderness in the centre layers. Slices hold their shape but feel like dense compressed egg.", action: "It is still edible but over-compressed. Next time press more gently and for less time — tamagoyaki should be tender, not firm." },
-        ],
-      },
-      feelCue: "Hold a slice between two fingers — it should yield with gentle pressure, tender and yielding like warm butter cake, not rubbery like a hard-boiled egg.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Mirin (Hon-mirin, pas assaisonnement mirin-style)",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 0.08,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile neutre (bron de riz ou tournesol)",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "seasoned_egg_mixture",
+      "instructions": "Casser les œufs dans un bol ou un grand pot de mesure. Ajouter le dashi, la sauce soja, le mirin et le sucre. À l'aide d'une paire de hachi (choppicks) ou d'une fourche maintenue à plat, couper à travers les œufs avec un mouvement de coupe plutôt que de battre — le but est un mélange entièrement combiné, sans stries sans cordes visibles de blanc d'oeuf, mais des bulles d'air minimales. La mousse dans le mélange créera des trous inesthétiques dans le rouleau fini. Verser le mélange à l'aide d'un tamis à mailles fines pour enlever les chalazae et les morceaux restants. Le mélange doit être d'or pâle, uniforme et immobile.",
+      "visualCue": {
+        "primaryTarget": "Un liquide doré translucide dans la cruche, de couleur uniforme, sans stries de blanc d'œuf clair et sans mousse à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries blanches d'œufs claires sont encore visibles dans le mélange jaune. Un chalazae épais et coquin encore présent. Le mélange n'est pas uniforme.",
+            "action": "Continuer le mélange de coupe jusqu'à ce que les stries disparaissent. Ne pas battre vigoureusement — un résultat sans stries importe plus qu'un résultat mousseux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme or pâle, complètement lisse. Presque aucune bulle à la surface. Sent doucement doux et faiblement de dashi.",
+            "action": "Plongez dans un tamis si vous en avez un, puis versez-le dans une cruche à bec pour les verser de façon contrôlée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a été vigoureusement battu et est plein de mousse — une épaisse tête mousseuse s'est formée. La surface ressemble à du cappuccino.",
+            "action": "Laissez-le reposer pendant 5 minutes pour se poser, ou éjaculez la mousse avec une cuillère. Les bulles dans le mélange d'oeufs produisent des trous dans les couches d'omelette."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt — le mélange doit être à peine plus épais que l'eau, sans collants et sans grain de sucre non dissous."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "seasoned_egg_mixture",
+        "ing_06"
+      ],
+      "outputState": "first_egg_layer",
+      "instructions": "Chauffer une poêle à tamagoyaki rectangulaire (ou une petite poêle antiadhésive) à feu moyen. Déposer un morceau de papier de cuisine plié dans l'huile et essuyer la poêle dans une couche mince et uniforme, sans huile de mise en commun. Verser environ un tiers du mélange d'oeufs, en inclinant la poêle pour enrober toute la surface dans une couche mince et uniforme. Attendez que la surface tourne de brillant-humide à à peine réglée et juste mate — encore légèrement humide au centre mais plus fluide. À l'aide d'un hachi ou d'une spatule plate, commencez à rouler l'omelette de l'extrémité vers vous en 3 ou 4 plis courts, en pressant chaque plis doucement mais fermement. Poussez le rouleau terminé jusqu'au bout de la casserole.",
+      "visualCue": {
+        "primaryTarget": "Un petit morceau d'œuf d'or serré à l'extrémité la plus éloignée de la poêle, superposé aux bords, avec un extérieur doré pâle et sans brunissement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est encore très humide et brillante lorsque le roulement commence. L'oeuf se déchire alors que vous essayez de le rouler, se repliant inégalement et l'oeuf liquide qui fuit.",
+            "action": "Attendez encore. La surface doit passer de brillant-humide à juste-matte avant de rouler. Une attente de 10 secondes est la différence entre un rouleau propre et un désordre brouillé."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est juste mise — mate, pas brillante, avec un léger coup au centre. Roule facilement sans déchirer, les couches compressant proprement dans un log soigné. Pas de brunissement visible.",
+            "action": "Poussez le rouleau jusqu'à l'extrémité de la casserole et essuyez la surface exposée avec du papier huilé avant d'ajouter la partie suivante."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oeuf est entièrement fixé à une feuille sèche et ferme, sans crosse, ou pire, de couleur dorée-brun apparaissant au fond. Le rouleau est rigide lorsqu'il est plié.",
+            "action": "Baissez la chaleur. Les feuilles d'oeufs secs font un tamagoyaki dur et caoutchouteux. La chaleur résiduelle dans la poêle est presque toujours suffisante – réduire la flamme à faible-moyenne."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur la bûche roulée avec une spatule — elle devrait donner doucement, comme une serviette roulée, avec un peu de ressort mais pas de dureté."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "first_egg_layer",
+        "seasoned_egg_mixture"
+      ],
+      "outputState": "tamagoyaki_roll",
+      "instructions": "Essuyez la surface exposée de la casserole avec du papier de cuisine huilé et versez dans un autre tiers du mélange d'oeufs, soulevant légèrement le rouleau existant pour laisser couler l'oeuf cru en dessous. Attendez que la nouvelle couche atteigne le même état de surface à peine fixé, juste-matte. Roulez le log entier sur la nouvelle couche — le nouvel oeuf adhère au log et construit une autre couche. Poussez le rouleau qui pousse jusqu'au bout. Répéter avec le dernier tiers du mélange d'oeufs. Chaque couche doit être mince, uniforme et à peine cuite avant de rouler afin que le rouleau reste tendre tout au long.",
+      "visualCue": {
+        "primaryTarget": "Un log rectangulaire croissant de couches dorées, chaque nouvelle épaisseur de construction verse — des lignes de couches visibles aux extrémités lorsqu'on les regarde du côté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De nouvelles couches d'oeufs sont trop humides lorsqu'elles sont roulées. Le rouleau commence à se déferler parce que les couches n'ont pas suffisamment défini pour s'accrocher. L'oeuf cru fuit des coutures.",
+            "action": "Attendez 5-10 secondes de plus pour chaque nouvelle coulée avant de rouler. Les couches doivent être suffisamment bien fixées pour se lier sans être cuites ainsi, elles deviennent des feuilles sèches."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une bûche, même log avec des lignes de couche complètement comprimées visibles aux extrémités. Jaune doré, uniformément pâle, sans brunissement. Le rouleau tient sa forme lorsque la poêle est inclinée.",
+            "action": "Retirer du feu. Le tamagoyaki termine la cuisson à partir de sa propre chaleur résiduelle."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'extérieur du rouleau a développé une croûte tachetée brune du contact avec une poêle trop chaude. Le rouleau est mishapen — un côté plus épais que l'autre.",
+            "action": "Réduire immédiatement la chaleur pour les couches suivantes. La façonnage dans le tapis de bambou peut sauver l'apparence mais pas la texture de tout extérieur bruni."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur la longueur du rouleau — il doit se sentir uniformément printanier sur toute sa longueur, comme une éponge douce. Les taches dures signifient des taches épaisses et surcuites à l'intérieur."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Appuyez sur",
+      "inputs": [
+        "tamagoyaki_roll"
+      ],
+      "outputState": "finished_tamagoyaki",
+      "instructions": "Rouler le tamagoyaki chaud dans un tapis de sushi de bambou propre ou une feuille de film de collage, serrer doucement mais fermement dans une bille rectangulaire serrée. Plier dans les extrémités du tapis et presser pour éloigner les coins. Laisser reposer 3-5 minutes — la vapeur intérieure continue la cuisson et les ensembles de forme. Couper en rondelles de 2 à 3 cm pour révéler la section transversale en spirale à l'intérieur. Servir immédiatement ou à température ambiante.",
+      "visualCue": {
+        "primaryTarget": "Un rondin d'or rectangulaire ferme qui tient sa forme lorsqu'il est déballé. Les tranches révèlent une spirale propre de couches jaunes dorées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le rouleau s'aplatit et s'étend lorsque le tapis est enlevé — il n'a pas mis de vapeur et de chaleur résiduelle. Les calques se séparent en tranches.",
+            "action": "Re-emballer et serrer plus fermement, puis attendre encore 3 minutes. L'intérieur a besoin de temps pour terminer la cuisson à partir de sa propre chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tient une forme rectangulaire croustillante lors du déballage. Slices propres en rondelles. La spirale des couches dorées est clairement visible. L'extérieur est uniformément doré pâle, tendre et crépuscule.",
+            "action": "Couper et servir dans les 30 minutes suivant la fabrication de la meilleure texture."
+          },
+          {
+            "state": "Overdone",
+            "description": "Log est très ferme avec une texture serrée, presque caoutchouteuse. Pas de sensibilité dans les couches centrales. Les tranches tiennent leur forme mais se sentent comme un oeuf comprimé dense.",
+            "action": "Il est encore comestible mais surcomprimé. La prochaine fois, appuyez plus doucement et pour moins de temps — tamagoyaki devrait être tendre, pas ferme."
+          }
+        ]
+      },
+      "feelCue": "Maintenez une tranche entre deux doigts — il doit donner avec une pression douce, tendre et donnant comme un gâteau au beurre chaud, pas caoutchouteux comme un œuf dur."
+    }
+  ]
 };

@@ -1,116 +1,242 @@
 export default {
-  repoId: "fork_sourdough_pizzadough_001",
-  slug: "sourdough-pizza-dough",
-  parentRepoId: "master_neapolitan_pizzadough_001",
-  parentSlug: "neapolitan-pizza-dough",
-  author: "ForkRecipe Kitchen",
-  title: "Sourdough Pizza Dough",
-  description: "A naturally leavened variant that swaps commercial yeast for a mature sourdough starter. Longer ferment, deeper flavor, more open crumb. The tang is a feature, not a bug.",
-  cuisine: "Italian",
-  culture: "Neapolitan",
-  category: "breads",
-  tags: ["dough", "sourdough", "fermented", "pizza", "wild-yeast"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "36 hours",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-04-20",
-  updatedAt: "2024-10-15",
-  forkNote: "Replaced commercial yeast with sourdough starter. Longer ferment, more complex flavor, slightly tangier crumb.",
-  changes: {
-    ingredientsAdded: 1,
-    ingredientsRemoved: 1,
-    ingredientsModified: 1,
-    stepsAdded: 1,
-    stepsRemoved: 0,
-    stepsModified: 3,
+  "repoId": "fork_sourdough_pizzadough_001",
+  "slug": "sourdough-pizza-dough",
+  "parentRepoId": "master_neapolitan_pizzadough_001",
+  "parentSlug": "neapolitan-pizza-dough",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sourdough Pizza Dough",
+  "description": "Une variante naturellement levée qui échange la levure commerciale pour un démarreur aurifère mature. Ferment plus long, saveur plus profonde, miettes plus ouvertes. Le tang est une fonctionnalité, pas un bug.",
+  "cuisine": "Italien",
+  "culture": "Napolitaine",
+  "category": "breads",
+  "tags": [
+    "pâte",
+    "Pâtes alimentaires",
+    "fermenté",
+    "pizza",
+    "wild-yeast"
+  ],
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "36 hours",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-04-20",
+  "updatedAt": "2024-10-15",
+  "forkNote": "Remplace la levure commerciale par un démarreur aurifère. Ferment plus long, saveur plus complexe, miettes légèrement plus tangentes.",
+  "changes": {
+    "ingredientsAdded": 1,
+    "ingredientsRemoved": 1,
+    "ingredientsModified": 1,
+    "stepsAdded": 1,
+    "stepsRemoved": 0,
+    "stepsModified": 3
   },
-  flavorRadar: { sweet: 2, salty: 5, sour: 6, bitter: 1, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "00 flour", ratioValue: 1.00, defaultUnit: "g", substitutions: ["bread flour", "tipo 0"] },
-    { ingId: "ing_02", role: "Hydration", name: "Water (cool)", ratioValue: 0.65, defaultUnit: "g", substitutions: ["filtered water"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fine sea salt", ratioValue: 0.028, defaultUnit: "g", substitutions: ["kosher salt"] },
-    { ingId: "ing_05", role: "Leavener", name: "Mature sourdough starter", ratioValue: 0.20, defaultUnit: "g", substitutions: [] },
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 5,
+    "sour": 6,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
+    {
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "00 farine",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "farine de pain",
+        "tipo 0"
+      ]
+    },
+    {
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau (froid)",
+      "ratioValue": 0.65,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau filtrée"
+      ]
+    },
+    {
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.028,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "Démarrage à l'aurore mature",
+      "ratioValue": 0.2,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
-  processNodes: [
+  "processNodes": [
     {
-      nodeId: "step_1", action: "Hydrate",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "shaggy_mass",
-      instructions: "Combine flour and water. Mix until no dry flour remains. Do not add starter yet — let the flour hydrate alone.",
-      visualCue: {
-        primaryTarget: "A rough, shaggy mass with no dry patches. Wetter than the yeasted version.",
-        spectrum: [
-          { state: "Underdone", description: "Dry pockets visible at the bottom.", action: "Add a tablespoon of water and mix again." },
-          { state: "Perfect", description: "Shaggy, sticky, no dry flour. Wetter than you'd expect.", action: "Cover and autolyse." },
-          { state: "Overdone", description: "Soupy — too much water.", action: "Add flour a tablespoon at a time." },
-        ],
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "shaggy_mass",
+      "instructions": "Mélanger la farine et l'eau. Mélanger jusqu'à ce qu'aucune farine sèche ne reste. N'ajoutez pas encore de entrée — laissez la farine s'hydrater.",
+      "visualCue": {
+        "primaryTarget": "Une masse rugueuse et chaotique sans taches sèches. Plus humide que la version levure.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poches sèches visibles en bas.",
+            "action": "Ajouter une cuillère à soupe d'eau et mélanger à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Shaggy, collant, pas de farine sèche. C'est plus humide que prévu.",
+            "action": "Couvre et autolyse."
+          },
+          {
+            "state": "Overdone",
+            "description": "Soupy — trop d'eau.",
+            "action": "Ajouter la farine une cuillère à soupe à la fois."
+          }
+        ]
       },
-      feelCue: "Wetter and stickier than yeasted dough. It should cling to your hands like wet clay.",
+      "feelCue": "Plus humide et plus collante que la pâte à levure. Il devrait s'accrocher à vos mains comme de l'argile humide."
     },
     {
-      nodeId: "step_2", action: "Autolyse",
-      inputs: ["shaggy_mass"],
-      outputState: "rested_dough",
-      instructions: "Cover and let the dough rest for 45-60 minutes. The flour absorbs water and gluten organizes without work.",
-      visualCue: {
-        primaryTarget: "Dough has smoothed out, lost its ragged edges, feels more cohesive.",
-        spectrum: [
-          { state: "Underdone", description: "Still rough and shaggy.", action: "Wait another 20 minutes." },
-          { state: "Perfect", description: "Smooth, extensible, tears less when pulled.", action: "Add starter and salt." },
-          { state: "Overdone", description: "Starting to ferment on its own (bubbles).", action: "Add starter and salt immediately." },
-        ],
+      "nodeId": "step_2",
+      "action": "Autolyse",
+      "inputs": [
+        "shaggy_mass"
+      ],
+      "outputState": "rested_dough",
+      "instructions": "Couvrir et laisser reposer la pâte pendant 45-60 minutes. La farine absorbe l'eau et le gluten s'organise sans travail.",
+      "visualCue": {
+        "primaryTarget": "La toux s'est lissée, a perdu ses bords déchiquetés, se sent plus cohésive.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours dur et louche.",
+            "action": "Attendez encore 20 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lisses, extensibles, larmes moins lorsqu'elles sont tirées.",
+            "action": "Ajouter entrée et sel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Commençant à fermenter seul (boubles).",
+            "action": "Ajouter immédiatement le démarreur et le sel."
+          }
+        ]
       },
-      feelCue: "Silky compared to the shaggy start. Stretches without snapping.",
+      "feelCue": "Silky par rapport au départ louche. Les étriers sans craquer."
     },
     {
-      nodeId: "step_3", action: "Fold",
-      inputs: ["rested_dough", "ing_05", "ing_03"],
-      outputState: "developed_dough",
-      instructions: "Add the starter and salt. Squeeze through the dough to distribute, then perform 4 sets of stretch-and-folds at 30-minute intervals.",
-      visualCue: {
-        primaryTarget: "After 4 fold sets: dough holds shape, surface is smooth, you can see air bubbles through the side of the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Tears when stretched, flattens immediately.", action: "Add another fold set and wait 30 minutes." },
-          { state: "Perfect", description: "Jiggles when you shake the bowl. Stretches into a thin window.", action: "Begin bulk ferment." },
-          { state: "Overdone", description: "Tight and springy, won't stretch.", action: "Skip the next fold set. Let it relax." },
-        ],
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "rested_dough",
+        "ing_05",
+        "ing_03"
+      ],
+      "outputState": "developed_dough",
+      "instructions": "Ajouter le démarreur et le sel. Pressez à travers la pâte pour la distribuer, puis effectuez 4 séries de stretch-and-folds à intervalles de 30 minutes.",
+      "visualCue": {
+        "primaryTarget": "Après 4 jeux de plis : la pâte tient forme, la surface est lisse, vous pouvez voir des bulles d'air à travers le côté du bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Larmes lorsqu'elles sont tendues, aplatissent immédiatement.",
+            "action": "Ajouter un autre jeu de plis et attendre 30 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Jiggles quand vous secouez le bol. S'étire dans une fenêtre mince.",
+            "action": "Commencez le ferment en vrac."
+          },
+          {
+            "state": "Overdone",
+            "description": "Serré et printanier, ne s'étire pas.",
+            "action": "Passez le prochain pli. Détends-toi."
+          }
+        ]
       },
-      feelCue: "Each fold set should feel easier than the last. By the fourth, the dough feels like stretching warm mozzarella.",
+      "feelCue": "Chaque ensemble de plis doit se sentir plus facile que le dernier. Au quatrième moment, la pâte ressemble à de la mozzarella chaude."
     },
     {
-      nodeId: "step_4", action: "Ferment",
-      inputs: ["developed_dough"],
-      outputState: "bulk_dough",
-      instructions: "Cover. Bulk ferment at room temperature for 6-10 hours (or overnight in the fridge). The dough should grow 50-75%, not double.",
-      visualCue: {
-        primaryTarget: "Grown 50-75%, domed surface with visible bubbles, slightly sour aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Barely risen, dense, no bubbles.", action: "Move to a warmer spot and wait." },
-          { state: "Perfect", description: "Puffy, domed, jiggly, smells like yogurt and flour.", action: "Shape into balls." },
-          { state: "Overdone", description: "Collapsed, very sour, sticky and slack.", action: "Shape gently. The pizza will be tangier but still good." },
-        ],
+      "nodeId": "step_4",
+      "action": "Ferment",
+      "inputs": [
+        "developed_dough"
+      ],
+      "outputState": "bulk_dough",
+      "instructions": "Couvre-toi. Ferment en vrac à température ambiante pendant 6-10 heures (ou nuit au réfrigérateur). La pâte doit pousser de 50 à 75 %, pas doubler.",
+      "visualCue": {
+        "primaryTarget": "Grandit de 50 à 75 %, surface bombée avec des bulles visibles, arôme légèrement acide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "A peine relevé, dense, pas de bulles.",
+            "action": "Passez à un endroit plus chaud et attendez."
+          },
+          {
+            "state": "Perfect",
+            "description": "Puffy, dôme, jiggly, sent le yogourt et la farine.",
+            "action": "Forme en boules."
+          },
+          {
+            "state": "Overdone",
+            "description": "Effondré, très aigre, collant et lâche.",
+            "action": "Formez doucement. La pizza sera plus tangente mais toujours bonne."
+          }
+        ]
       },
-      feelCue: "Smells like yogurt and fresh bread. A poke returns very slowly — much slower than yeasted dough.",
+      "feelCue": "Ça sent le yaourt et le pain frais. Un poke revient très lentement — beaucoup plus lentement que la pâte à levures."
     },
     {
-      nodeId: "step_5", action: "Shape",
-      inputs: ["bulk_dough"],
-      outputState: "balled_doughs",
-      instructions: "Divide into portions. Pre-shape into rounds, rest 15 minutes, then shape into tight balls. Refrigerate for 12-24 hours before using.",
-      visualCue: {
-        primaryTarget: "Smooth, taut balls with slight wobble. Surface may show tiny fermentation blisters.",
-        spectrum: [
-          { state: "Underdone", description: "Seams visible, not holding shape.", action: "Rest 10 minutes, reshape." },
-          { state: "Perfect", description: "Taut, smooth, slight jiggle. Blisters forming on the surface.", action: "Refrigerate and use within 48 hours." },
-          { state: "Overdone", description: "Surface tearing, exposing sticky interior.", action: "Rest and reshape gently with wet hands." },
-        ],
+      "nodeId": "step_5",
+      "action": "Forme",
+      "inputs": [
+        "bulk_dough"
+      ],
+      "outputState": "balled_doughs",
+      "instructions": "Divisez en portions. Pré-former en rondelles, reposer 15 minutes, puis former en boules serrées. Réfrigérer pendant 12-24 heures avant utilisation.",
+      "visualCue": {
+        "primaryTarget": "Des boules lisses et tendues, légèrement agitées. La surface peut présenter de minuscules cloques de fermentation.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Semelles visibles, sans tenir la forme.",
+            "action": "Reposez-vous 10 minutes, remodelez."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tait, doux, léger. Plaquettes formant sur la surface.",
+            "action": "Réfrigérer et utiliser dans les 48 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "La déchirure de surface, exposant l'intérieur collant.",
+            "action": "Repose-toi et remodele doucement avec les mains mouillées."
+          }
+        ]
       },
-      feelCue: "Lighter and more airy than yeasted dough. The surface feels like a water balloon — taut but delicate.",
-    },
-  ],
+      "feelCue": "Plus léger et plus aéré que la pâte à levure. La surface ressemble à un ballon d'eau, tendu mais délicat."
+    }
+  ]
 };

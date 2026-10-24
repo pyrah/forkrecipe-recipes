@@ -1,97 +1,222 @@
 export default {
-  repoId: "master_peruvian_aji-amarillo-paste_001",
-  parentRepoId: null,
-  slug: "aji-amarillo-paste",
-  author: "ForkRecipe Kitchen",
-  title: "Ají Amarillo Paste",
-  description: "Peru's essential sunshine-yellow chili paste — fresh ají amarillo peppers blanched to tame their heat, then blended to a vivid, tropical-fruity, moderately spicy paste that defines the flavor of Peruvian cuisine.",
-  cuisine: "Peruvian",
-  culture: "Lima",
-  category: "condiments",
-  tags: ["peruvian", "chili", "aji-amarillo", "paste", "fruity", "spicy"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 1, sour: 1, bitter: 1, umami: 1, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",      name: "Fresh ají amarillo peppers (or jarred, drained)",    ratioValue: 500, defaultUnit: "g", substitutions: ["habanero with less heat blanching", "frozen ají amarillo"] },
-    { ingId: "ing_02", role: "Allium",    name: "White onion, roughly chopped",                       ratioValue: 100, defaultUnit: "g", substitutions: ["shallot"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves",                                      ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Neutral vegetable oil",                              ratioValue: 30,  defaultUnit: "g", substitutions: ["sunflower oil", "canola oil"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",                                      ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Liquid",    name: "Water (for blanching)",                              ratioValue: 2000, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_peruvian_aji-amarillo-paste_001",
+  "parentRepoId": null,
+  "slug": "aji-amarillo-paste",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ají Amarillo Paste",
+  "description": "Pâte essentielle de chili jaune soleil du Pérou — poivrons ají amarillo frais blanchis pour apprivoiser leur chaleur, puis mélangés à une pâte vive, tropicale-fruitée, modérément épicée qui définit la saveur de la cuisine péruvienne.",
+  "cuisine": "Pérou",
+  "culture": "Lima",
+  "category": "condiments",
+  "tags": [
+    "périuvien",
+    "Chili",
+    "Aji-amarillo",
+    "pâte",
+    "fruité",
+    "épicé"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 1,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Prep",
-      inputs: ["ing_01"],
-      outputState: "prepped_peppers",
-      instructions: "Working with gloves to protect your hands from the capsaicin, stem each ají amarillo and slice it lengthwise. Scrape out and discard the seeds and inner white membrane with a small spoon — this is where most of the capsaicin is concentrated. The flesh itself is moderately fruity-hot; removing seeds and membrane drops the heat from face-punching to assertive-pleasant. If the peppers are jarred, simply drain them, rinse once under cold water, and slice open to check for seeds to remove. You'll notice the vivid, saturated orange-yellow color of the flesh — this is annatto and capsanthin, and it's what will give your finished paste its extraordinary color.",
-      visualCue: {
-        primaryTarget: "Clean, flat, seedless pepper halves with vivid golden-orange flesh, free of seed pockets or white rib, laid open on the board like small boats.",
-        spectrum: [
-          { state: "Underdone", description: "Seed cavity not fully cleaned; white membrane still attached in thick strips.", action: "Scrape more thoroughly — the membrane left behind will add a pithy bitterness and extra heat that makes the paste uneven." },
-          { state: "Perfect",   description: "Clean orange flesh, no seeds, membrane pared back to a thin translucent layer. Brilliant gold color. Hands stained yellow-orange if not gloved.", action: "Set aside and bring blanching water to a boil." },
-          { state: "Overdone",  description: "Peppers cut into too-small pieces or the flesh itself scored and damaged, losing juice onto the board.", action: "No issue — proceed to blanching; the juice can be saved and added to the blend." },
-        ],
-      },
-      feelCue: "The raw pepper flesh should feel firm and slightly waxy, like a sweet pepper, with a faint resinous stickiness from the natural oils. If your fingers tingle through the gloves, the peppers are especially hot — plan for an extra blanching cycle.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Poivrons ají amarillo frais (ou jarré, égoutté)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "habanero avec moins de chaleur",
+        "ají amarillo congelé"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blanch",
-      inputs: ["prepped_peppers", "ing_06"],
-      outputState: "blanched_peppers",
-      instructions: "Bring a large pot of unsalted water to a rolling boil. Drop the cleaned pepper halves in and blanch for exactly 3 minutes, then lift them out with a spider or slotted spoon and drain. Return fresh cold water to the pot (or use a second pot), bring it back to a boil, and blanch the peppers a second time for another 3 minutes. This double-blanching draws out a significant portion of the volatile capsaicin and the slight bitterness of the raw pith while preserving the vivid color and fruity-tropical character of the pepper. Taste a small piece after the second blanch: it should be pleasantly fruity-hot, not eye-watering. If it's still excessively hot, blanch a third time in fresh water. The bright orange-yellow color may deepen slightly to a richer gold.",
-      visualCue: {
-        primaryTarget: "Softened, slightly translucent pepper halves in a vivid, deep golden-orange, yielding when pressed, no longer raw-tasting when nibbled.",
-        spectrum: [
-          { state: "Underdone", description: "Still firm and raw-tasting; heat is face-searing rather than lively and assertive; color is still bright but the flesh hasn't softened.", action: "Blanch again in fresh boiling water for another 3 minutes; taste again." },
-          { state: "Perfect",   description: "Peppers are softened to a tender bite, color a deep saturated gold-orange, flavor fruity and warm rather than aggressively hot. They smell like a tropical fruit with a hint of chili.", action: "Drain thoroughly and allow to cool briefly before blending." },
-          { state: "Overdone",  description: "Peppers are mushy, color has shifted to a duller, washed-out yellow, and the flavor has become flat and bland — the blanching leached out the character along with the heat.", action: "Proceed with blending — the paste will still be useful, just add more fresh chili or chili flake to rebuild heat and a squeeze of citrus to brighten." },
-        ],
-      },
-      feelCue: "Pick up a blanched pepper half and press it between your fingers — it should yield softly without tearing apart, holding its shape but with the resistance of cooked rather than raw flesh. The juice on your fingers should smell like tropical fruit, not raw capsaicin.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon blanc, grossièrement haché",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Échalote"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Saute",
-      inputs: ["blanched_peppers", "ing_02", "ing_03", "ing_04"],
-      outputState: "cooked_aromatics",
-      instructions: "Heat the vegetable oil in a small skillet over medium heat. Add the roughly chopped white onion and cook, stirring occasionally, for 6–8 minutes until it is soft, translucent, and lightly golden at the edges. Add the garlic cloves and cook for another 2 minutes, stirring, until the garlic is soft and fragrant but not browned. Add the drained, blanched ají amarillo peppers and stir to combine. Cook together for 3–4 minutes more, allowing the peppers, onion, and garlic to meld their flavors in the oil. The pan will smell intensely of the yellow pepper's fruity, warm character — a smell that is unmistakably Peruvian.",
-      visualCue: {
-        primaryTarget: "A pan of deeply colored golden-orange pepper pieces with soft, lightly golden onion and fragrant garlic, everything glistening in oil and unified by 3 minutes of shared cooking.",
-        spectrum: [
-          { state: "Underdone", description: "Onion still raw and translucent-white, garlic raw and sharp, peppers not yet integrated with the fat.", action: "Keep cooking over medium heat — the onion needs to be fully sweet and soft before blending, or the paste will taste raw and sharp." },
-          { state: "Perfect",   description: "Onion is sweet, soft, and golden; garlic is fragrant; peppers are moist and glistening in the oil. The pan smells fruity, savory, and warmly spiced.", action: "Let cool for 5 minutes, then blend." },
-          { state: "Overdone",  description: "Onion and garlic have browned and begun to caramelize, adding a roasted sweetness that competes with the clean fruity pepper character.", action: "A little browning is acceptable — reduce the heat, add a splash of water to halt further cooking, and proceed." },
-        ],
-      },
-      feelCue: "Press a piece of the cooked onion with the back of your spoon — it should flatten and melt without resistance, giving off a sweet rather than sharp smell. That sweetness is the sign that the onion's sugars have caramelized gently and are ready to become background depth in the paste.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Blend",
-      inputs: ["cooked_aromatics", "ing_05"],
-      outputState: "finished_aji_amarillo_paste",
-      instructions: "Transfer the contents of the pan — peppers, onion, garlic, and all the aromatic oil — into a blender. Add the salt. Blend on high speed for 90 seconds, stopping once to scrape down the sides. Blend until you have a completely smooth, vivid, deeply golden-orange paste with no visible pepper skin or onion pieces. Taste for salt. Transfer to a clean jar; a thin layer of oil poured over the surface before sealing will prevent oxidation. The paste keeps refrigerated for two weeks and frozen for three months. At its best, this paste smells like mango and chili and sunshine, and it defines the flavor of lomo saltado, causa, and ají de gallina.",
-      visualCue: {
-        primaryTarget: "A smooth, velvety, intensely saturated golden-orange paste — the color of a tropical sunset — with a glossy surface and no visible skin or texture.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is still chunky with visible pepper skin and onion pieces; color is not fully uniform.", action: "Blend for another 60 seconds on high speed, stopping to scrape the sides; a high-powered blender makes a significant difference here." },
-          { state: "Perfect",   description: "Perfectly smooth, deeply golden-orange, glossy, and intensely fragrant — fruity, warm, gently savory. Coats a spoon in an even, vivid layer.", action: "Jar immediately with oil on the surface. Use as a marinade, sauce base, or condiment." },
-          { state: "Overdone",  description: "Paste is thin and liquid from over-blending, which has generated heat and added excess air; color has lightened to a paler yellow and the paste smells slightly cooked.", action: "Return to the saucepan and reduce over medium heat, stirring constantly, until the paste thickens back to a spreadable consistency." },
-        ],
-      },
-      feelCue: "Dab a small amount of the paste on the inside of your wrist — it should feel silky and smooth, like a skin lotion, with no granular or fibrous texture. After a moment, the warmth of your skin will pull up the fragrance: that burst of tropical fruit laced with warm chili is the hallmark of a proper ají amarillo paste.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile végétale neutre",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile de tournesol",
+        "huile de canola"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Eau (pour blanchir)",
+      "ratioValue": 2000,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "prepped_peppers",
+      "instructions": "Travaillant avec des gants pour protéger vos mains de la capsaïcine, enfilez chaque ají amarillo et coupez-le dans le sens de la longueur. Écraser et jeter les graines et la membrane blanche interne avec une petite cuillère — c'est là que la majeure partie de la capsaïcine est concentrée. La chair elle-même est modérément fruitée-chaud; enlevant les graines et la membrane, on perd la chaleur de la perforation du visage à l'assertive-plaisante. Si les poivrons sont en jarre, il suffit de les égoutter, de les rincer une fois sous l'eau froide et de trancher pour vérifier si les graines doivent être enlevées. Vous remarquerez la couleur jaune orange vif et saturé de la chair — c'est l'annatto et la capsanthine, et c'est ce qui donnera à votre pâte finie sa couleur extraordinaire.",
+      "visualCue": {
+        "primaryTarget": "Des moitiés de poivre propre, plat et sans pépins avec une chair dorée-orange vive, sans poches de graines ou côtes blanches, ouvertes sur le bord comme de petits bateaux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La cavité des graines n'est pas complètement nettoyée; la membrane blanche est toujours attachée en bandes épaisses.",
+            "action": "Scrape plus soigneusement — la membrane laissée derrière ajoutera une amertume et une chaleur supplémentaire qui rend la pâte inégale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Nettoyez la chair orange, pas de graines, la membrane est revenue à une fine couche translucide. Brillante couleur or. Les mains tachées jaune-orange si non gantées.",
+            "action": "Réserver et porter l'eau blanchissante à ébullition."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les poivrons sont coupés en morceaux trop petits ou la chair elle-même a marqué et endommagé, perdant du jus sur la planche.",
+            "action": "Aucun problème — procéder à la blanchissage; le jus peut être sauvegardé et ajouté au mélange."
+          }
+        ]
+      },
+      "feelCue": "La chair de poivre cru doit se sentir ferme et légèrement cireuse, comme un poivre doux, avec un léger collant résineux des huiles naturelles. Si vos doigts fourmillent à travers les gants, les poivrons sont particulièrement chauds — plan pour un cycle de blanchage supplémentaire."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Blanch",
+      "inputs": [
+        "prepped_peppers",
+        "ing_06"
+      ],
+      "outputState": "blanched_peppers",
+      "instructions": "Portez une grande casserole d'eau non salée à ébullition. Déposer les moitiés de poivre nettoyées et blanchir pendant exactement 3 minutes, puis les soulever avec une araignée ou une cuillère à fente et égoutter. Retournez de l'eau fraîche froide dans la casserole (ou utilisez une deuxième casserole), ramenez-la à ébullition et blanchissez les poivrons une seconde fois pendant 3 minutes. Ce double blanchissage dégage une partie importante de la capsaïcine volatile et la légère amertume de la pointe brute tout en préservant la couleur vive et le caractère fruité-tropical du poivre. Goûtez un petit morceau après le second blanch : il devrait être agréablement fruité-chaud, pas l'arrosage des yeux. S'il fait encore trop chaud, blanchissez une troisième fois en eau douce. La couleur jaune orange vif peut s'approfondir légèrement à un or plus riche.",
+      "visualCue": {
+        "primaryTarget": "Doux, légèrement translucide, les moitiés de poivre dans un orangé doré vif et profond, donnant quand pressé, ne goûtant plus cru quand grignoté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours ferme et rafraîchissante ; la chaleur est plus piquante que vive et affirmée ; la couleur est encore brillante mais la chair n'a pas ramolli.",
+            "action": "Blanchis encore dans de l'eau bouillante fraîche pendant 3 minutes; goûtez encore."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les poivrons sont adoucis à une bouchée tendre, colorent un or-orange saturé profond, goût fruité et chaud plutôt que agressivement chaud. Ils sentent comme un fruit tropical avec un soupçon de chili.",
+            "action": "Égoutter soigneusement et laisser refroidir brièvement avant de mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les poivrons sont musqués, la couleur s'est déplacée vers un jaune plus terne, lavé, et la saveur est devenue plate et fade — la blanchure a lixivié le personnage avec la chaleur.",
+            "action": "Procéder au mélange — la pâte sera encore utile, il suffit d'ajouter plus de chili frais ou de flocons de chili pour reconstruire la chaleur et une pression d'agrumes pour éclaircir."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une moitié de poivre blanchi et pressez - la entre vos doigts; elle doit céder doucement sans se déchirer, en tenant sa forme mais avec la résistance de la chair cuite plutôt que crue. Le jus sur les doigts doit sentir comme des fruits tropicaux, pas de la capsaïcine crue."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saute",
+      "inputs": [
+        "blanched_peppers",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "cooked_aromatics",
+      "instructions": "Chauffer l'huile végétale dans une petite poêle à feu moyen. Ajouter l'oignon blanc haché approximativement et cuire, en remuant occasionnellement, pendant 6 à 8 minutes jusqu'à ce qu'il soit doux, translucide et légèrement doré aux bords. Ajouter les gousses d'ail et cuire encore 2 minutes, en remuant, jusqu'à ce que l'ail soit doux et parfumé mais non doré. Ajouter les poivrons ají amarillo égouttés, blanchis et mélanger. Cuire ensemble 3 à 4 minutes de plus, permettant aux poivrons, à l'oignon et à l'ail de fondre leurs saveurs dans l'huile. La poêle sentira intensément le caractère fruité et chaud du poivre jaune, une odeur qui est indéniablement péruvienne.",
+      "visualCue": {
+        "primaryTarget": "Une casserole de morceaux de poivre doré-orange profondément colorés avec un oignon doux, légèrement doré et de l'ail parfumé, tout resplendissant dans l'huile et unifié par 3 minutes de cuisson partagée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon encore cru et blanc translucide, l'ail cru et aiguisé, les poivrons ne sont pas encore intégrés à la graisse.",
+            "action": "Conservez la cuisson à feu moyen – l'oignon doit être entièrement sucré et doux avant le mélange, ou la pâte aura un goût cru et vif."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon est doux, doux et doré; l'ail est parfumé; les poivrons sont humides et scintillent dans l'huile. La poêle sent le fruité, le salé et les épices chaudes.",
+            "action": "Laisser refroidir pendant 5 minutes, puis mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon et l'ail ont bruni et commencé à caraméliser, ajoutant une douceur torréfié qui rivalise avec le caractère de poivre fruité propre.",
+            "action": "Un peu de brunissement est acceptable — réduire la chaleur, ajouter une éclaboussure d'eau pour arrêter la cuisson et continuer."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau de l'oignon cuit avec l'arrière de votre cuillère — il devrait s'aplatir et fondre sans résistance, donnant une odeur douce plutôt que nette. Cette douceur est le signe que les sucres de l'oignon ont caramélisé doucement et sont prêts à devenir fond profondeur dans la pâte."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mélange",
+      "inputs": [
+        "cooked_aromatics",
+        "ing_05"
+      ],
+      "outputState": "finished_aji_amarillo_paste",
+      "instructions": "Transférer le contenu de la poêle — poivrons, oignon, ail et toute l'huile aromatique — dans un mélangeur. Ajouter le sel. Mélanger à grande vitesse pendant 90 secondes, s'arrêtant une fois pour racler les côtés. Mélanger jusqu'à ce que vous ayez une pâte entièrement lisse, vive, profondément dorée-orange sans peau de poivre visible ou de morceaux d'oignon. Goûtez au sel. Transférer dans un pot propre; une fine couche d'huile versée sur la surface avant l'étanchéité empêchera l'oxydation. La pâte reste réfrigérée pendant deux semaines et congelée pendant trois mois. Au mieux, cette pâte sent la mangue, le chili et le soleil, et elle définit la saveur de lomo salado, causa et ají de gallina.",
+      "visualCue": {
+        "primaryTarget": "Une pâte dorée-orange lisse, veloutée et intensément saturée, la couleur d'un coucher de soleil tropical, avec une surface brillante et aucune peau ou texture visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore épaisse avec une peau de poivre visible et des morceaux d'oignon; la couleur n'est pas entièrement uniforme.",
+            "action": "Mélanger encore 60 secondes à grande vitesse, en s'arrêtant pour gratter les côtés; un mélangeur à haute puissance fait une différence importante ici."
+          },
+          {
+            "state": "Perfect",
+            "description": "Parfaitement lisse, profondément doré-orange, brillant et intensément parfumé – fruité, chaud, délicatement salé. Coats une cuillère dans une couche uniforme, vif.",
+            "action": "Garnir immédiatement avec de l'huile à la surface. Utiliser comme marinade, base de sauce ou condiment."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est fine et liquide due à la surchauffe, qui a généré de la chaleur et ajouté un excès d'air; la couleur s'est allégée à un jaune pâle et la pâte sent légèrement cuit.",
+            "action": "Retournez à la casserole et réduisez à feu moyen, en remuant constamment, jusqu'à ce que la pâte s'épaississe à une consistance extensible."
+          }
+        ]
+      },
+      "feelCue": "Déposez une petite quantité de pâte à l'intérieur de votre poignet – elle doit être soyeuse et lisse, comme une lotion de peau, sans texture granulaire ou fibreuse. Au bout d'un moment, la chaleur de votre peau va arracher le parfum : cette explosion de fruits tropicaux lacés de chili chaud est la marque d'une bonne pâte ají amarillo."
+    }
+  ]
 };

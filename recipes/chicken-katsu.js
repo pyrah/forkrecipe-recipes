@@ -1,97 +1,256 @@
 export default {
-  repoId: "master_japanese_chicken_katsu_001",
-  parentRepoId: null,
-  slug: "chicken-katsu",
-  author: "ForkRecipe Kitchen",
-  title: "Chicken Katsu",
-  description: "Chicken thighs pounded to an even thickness, coated in panko breadcrumbs, and shallow-fried until deep golden — shatteringly crisp exterior, moist interior — served with tonkatsu sauce.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "proteins",
-  tags: ["katsu", "japanese", "chicken", "fried", "breaded", "panko"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Boneless, skin-on chicken thighs (or skinless)",       ratioValue: 100, defaultUnit: "parts", substitutions: ["boneless chicken breast, pounded thin"] },
-    { ingId: "ing_02", role: "Starch",    name: "Plain (all-purpose) flour",                            ratioValue: 15,  defaultUnit: "parts", substitutions: ["rice flour"] },
-    { ingId: "ing_03", role: "Binder",    name: "Whole eggs, beaten",                                   ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Structure", name: "Panko breadcrumbs (Japanese-style, coarse)",            ratioValue: 25,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",       name: "Neutral oil for shallow frying (rice bran or canola)", ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine salt and white pepper",                           ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Umami",     name: "Worcestershire sauce (for tonkatsu sauce base)",       ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Sweetener", name: "Ketchup (for tonkatsu sauce base)",                    ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Umami",     name: "Oyster sauce",                                         ratioValue: 3,   defaultUnit: "parts", substitutions: ["hoisin sauce"] },
-    { ingId: "ing_10", role: "Garnish",   name: "Shredded green cabbage, to serve",                     ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_japanese_chicken_katsu_001",
+  "parentRepoId": null,
+  "slug": "chicken-katsu",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poulet Katsu",
+  "description": "Les cuisses de poulet pillées à une épaisseur uniforme, enrobées de chapelures panko, et frites peu profondes jusqu'à ce qu'elles soient d'or profond — extérieur croustillant et humide — servies avec de la sauce tonkatsu.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "proteins",
+  "tags": [
+    "katsu",
+    "Japonais",
+    "poulet",
+    "frits",
+    "panées",
+    "Panko"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Pound",
-      inputs: ["ing_01", "ing_06"],
-      outputState: "pounded_chicken",
-      instructions: "If using skin-on thighs, leave the skin on — it fries up into a crackling layer that contrasts beautifully with the panko crust. Open the thigh flat and trim any large pockets of fat from the interior that would not render during shallow frying. Place between two sheets of plastic wrap and pound gently with the flat face of a meat mallet from the center outward until the thigh is an even 1.5 cm thickness throughout — thick patches will not cook through by the time the crust reaches full color. Season both sides with fine salt and white pepper immediately before dredging.",
-      visualCue: {
-        primaryTarget: "A flat, even chicken thigh of uniform 1.5 cm thickness, with no dramatically thick or thin patches. The skin, if present, is intact and smooth rather than torn.",
-        spectrum: [
-          { state: "Underdone", description: "Thick ridge in the center or uneven lumps — the center muscle is still significantly thicker than the edges.", action: "Focus mallet blows on the thick areas. Work slowly — chicken tears more easily than pork." },
-          { state: "Perfect",   description: "Uniform 1.5 cm throughout. Skin intact. Smooth surface that will hold the dredge evenly.", action: "Season immediately and begin dredging." },
-          { state: "Overdone",  description: "Chicken has been pounded to 8–10 mm and is tearing — the muscle fibers are separating and there are visible holes.", action: "Proceed — thin katsu fries slightly faster and is still delicious. Adjust fry time down by 1 minute per side." },
-        ],
-      },
-      feelCue: "Press across the surface with two fingers: even pressure should produce even give throughout. A spot that bounces back harder than the surrounding area is still too thick.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "cuisses de poulet désossées, sans peau (ou sans peau)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poitrine de poulet désossée, pillée"
+      ]
     },
     {
-      nodeId: "step_2", action: "Make tonkatsu sauce",
-      inputs: ["ing_07", "ing_08", "ing_09"],
-      outputState: "tonkatsu_sauce",
-      instructions: "Combine the Worcestershire sauce, ketchup, and oyster sauce in a small bowl. Stir well to combine. Taste — the sauce should be sweet, tangy, and deeply savory with a slight fermented undertone. Adjust ratios to personal taste: more Worcestershire for depth and tang, more ketchup for sweetness and body, a touch more oyster sauce for umami. This is a quick approximation of commercial Bull-Dog sauce. Allow to sit for 5 minutes for the flavors to integrate.",
-      visualCue: {
-        primaryTarget: "A dark brown, glossy sauce about the consistency of thin ketchup — pourable but not watery. The aroma is tangy, sweet, and umami-rich simultaneously.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce tastes thin and one-dimensional — predominantly ketchup without depth.", action: "Add more Worcestershire sauce and oyster sauce. The Worcestershire is the backbone that gives it complexity." },
-          { state: "Perfect",   description: "Balanced sweet-sour-savory-umami. It tastes rich and slightly caramelized even at room temperature, with a pleasant tang.", action: "Set aside. It is ready immediately and needs no cooking." },
-          { state: "Overdone",  description: "The sauce is too sharp and vinegary — Worcestershire has dominated.", action: "Add more ketchup to balance sweetness and body against the acidity." },
-        ],
-      },
-      feelCue: "Dip a fingertip — it should leave a thin, glossy coat that clings for a moment before dripping off. If it slides off instantly, it needs more body (more ketchup). If it doesn't drip at all, thin with a drop of water.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Farine pure (toute destination)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Farine de riz"
+      ]
     },
     {
-      nodeId: "step_3", action: "Bread and fry",
-      inputs: ["pounded_chicken", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "fried_katsu",
-      instructions: "Set up three shallow dishes: flour, beaten egg, and panko. Dredge each thigh in flour, patting off every trace of excess. Dip into beaten egg, letting the excess drip for 2 seconds. Press firmly into the panko, then flip and press again — unlike schnitzel, katsu benefits from a thick, pressed panko coating that builds a robust, shattering crust rather than a delicate one. The coating should be visibly thick. Heat oil to 170°C / 340°F in a heavy pan — enough oil to come halfway up the thigh. Fry skin-side down (or top-side down) for 4 minutes until deep golden. Flip carefully and fry 3 minutes on the second side until deep golden and the thickest part reads 74°C / 165°F. Drain on a rack.",
-      visualCue: {
-        primaryTarget: "Deep golden-amber panko crust, uniformly colored across the entire surface. The crust looks thick and robust, with the irregular pointed tips of the panko crumbs clearly visible as individual golden spires.",
-        spectrum: [
-          { state: "Underdone", description: "Panko is pale yellow and still looks raw and white in the recesses. The oil sizzle is sluggish.", action: "Check oil temperature — it may have dropped below 160°C. Allow to recover and continue frying. The crust will color quickly once temperature returns." },
-          { state: "Perfect",   description: "Deep, rich golden-amber with the individual panko crumbs forming a spiky, three-dimensional surface. The chicken feels firm and springy through the crust when gently pressed. Interior reads 74°C.", action: "Remove and drain upright on a rack for 1 minute before slicing." },
-          { state: "Overdone",  description: "Panko is uniformly deep brown and the recesses are starting to blacken. The oil may be smoking and the crumbs smell sharp.", action: "Remove immediately. Slice quickly to release steam and prevent carryover cooking. The chicken will be dry but safe." },
-        ],
-      },
-      feelCue: "Press the katsu gently through the crust — it should spring back firmly but not feel hard as a rock. A slight give tells you the chicken inside is cooked and juicy, not still raw and yielding.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Oeufs entiers battus",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Slice and plate",
-      inputs: ["fried_katsu", "tonkatsu_sauce", "ing_10"],
-      outputState: "finished_chicken_katsu",
-      instructions: "Rest the fried katsu on the rack for 2 minutes — this allows the crust to set and the interior to equilibrate. Using a sharp, heavy knife with one clean downward press per cut (not a sawing motion, which tears the crust), slice into 2–3 cm strips across the width, keeping the slices in the original shape of the thigh. Reassemble the sliced pieces on the cutting board and slide as a unit onto warmed plates beside a mound of shredded cabbage. Drizzle tonkatsu sauce across the slices or serve alongside for dipping.",
-      visualCue: {
-        primaryTarget: "Evenly sliced strips showing a white, moist, juicy interior against the thick golden panko crust. The crust has not shattered or separated from the chicken in the slicing.",
-        spectrum: [
-          { state: "Underdone", description: "Interior is pink or raw-looking at the center when sliced. The juices run pink.", action: "Return the slices skin-down to the hot oil for 2 more minutes. Thin slices will cook through quickly from residual heat." },
-          { state: "Perfect",   description: "White, juicy interior with slight glistening from fat. Golden crust remains intact on each slice. Tonkatsu sauce drizzled creates an aromatic sweet-savory steam.", action: "Serve immediately with rice and miso soup." },
-          { state: "Overdone",  description: "Interior is dry and white throughout with no visible moisture. Crust may have separated from the meat during slicing.", action: "Serve with extra tonkatsu sauce. The thick panko crust traps steam and katsu is rarely as dry as it appears — taste before writing it off." },
-        ],
-      },
-      feelCue: "Pick up a slice by pinching the crust between your thumb and forefinger: a perfect katsu slice holds together — the crust grips the chicken. If the crust slides off, the egg wash was too thin or the dredge was improperly ordered.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Panko chapelures (de style japonais, grossières)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile neutre pour friture peu profonde (synthétisé ou canola)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin et poivre blanc",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "sauce Worcestershire (pour base de sauce tonkatsu)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Ketchup (pour base de sauce tonkatsu)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Umami",
+      "name": "sauce à l'huître",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce hoisine"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Choux verts éraflés, à servir",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_01",
+        "ing_06"
+      ],
+      "outputState": "pounded_chicken",
+      "instructions": "Si vous utilisez des cuisses sur la peau, laissez la peau sur - elle frire dans une couche crépitante qui contraste magnifiquement avec la croûte de panko. Ouvrez la cuisse à plat et garnissez toutes les grandes poches de graisse de l'intérieur qui ne rendraient pas pendant la friture peu profonde. Placez entre deux feuilles d'enveloppe plastique et livrez doucement avec la face plane d'un maillet de viande du centre vers l'extérieur jusqu'à ce que la cuisse soit d'une épaisseur égale à 1,5 cm. Assaisonner les deux côtés de sel fin et de poivre blanc immédiatement avant le dragage.",
+      "visualCue": {
+        "primaryTarget": "Une cuisse plate, même de poulet d'épaisseur uniforme de 1,5 cm, sans taches considérablement épaisses ou minces. La peau, si elle est présente, est intacte et lisse plutôt que déchirée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Une crête épaisse dans le centre ou des bosses inégales — le muscle central est encore significativement plus épais que les bords.",
+            "action": "Le maillet de concentration souffle sur les zones épaisses. Travaillez lentement — le poulet déchire plus facilement que le porc."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme de 1,5 cm. Peau intacte. Surface lisse qui tiendra la drague uniformément.",
+            "action": "Assaisonner immédiatement et commencer le dragage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poulet a été pilonné à 8-10 mm et est en train de déchirer — les fibres musculaires se séparent et il y a des trous visibles.",
+            "action": "Procéder — les frites fines katsu sont légèrement plus rapides et sont toujours délicieuses. Régler le temps d'alevage de 1 minute par côté."
+          }
+        ]
+      },
+      "feelCue": "Appuyez à travers la surface avec deux doigts : même la pression devrait produire même donner à travers. Un endroit qui rebondit plus fort que les environs est encore trop épais."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Faire de la sauce tonkatsu",
+      "inputs": [
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "tonkatsu_sauce",
+      "instructions": "Mélanger la sauce Worcestershire, le ketchup et la sauce huître dans un petit bol. Bien mélanger. Bouche: la sauce doit être sucrée, acidulée et profondément salée avec un léger sous-ton fermenté. Ajuster les rapports au goût personnel : plus Worcestershire pour la profondeur et le tang, plus de ketchup pour la douceur et le corps, une touche plus de sauce huître pour l'umami. C'est une approximation rapide de la sauce commerciale Bull-Dog. Laissez reposer pendant 5 minutes pour les saveurs à intégrer.",
+      "visualCue": {
+        "primaryTarget": "Une sauce brun foncé, brillant sur la consistance du ketchup fin — versable mais pas aqueuse. L'arôme est tannant, doux et riche en umami simultanément.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a un goût fin et unidimensionnel — principalement ketchup sans profondeur.",
+            "action": "Ajouter la sauce Worcestershire et la sauce huître. Le Worcestershire est l'épine dorsale qui lui donne la complexité."
+          },
+          {
+            "state": "Perfect",
+            "description": "Équilibré douceur-sour-savour-umami. Il a un goût riche et légèrement caramélisé, même à température ambiante, avec un tang agréable.",
+            "action": "Mettez de côté. Il est prêt immédiatement et n'a pas besoin de cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est trop nette et vinaigreuse — Worcestershire a dominé.",
+            "action": "Ajouter plus de ketchup pour équilibrer la douceur et le corps contre l'acidité."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt — il devrait laisser une couche mince et brillante qui s'accroche un moment avant de dégoutter. Si elle glisse instantanément, elle a besoin de plus de corps (plus de ketchup). S'il ne coule pas du tout, mince avec une goutte d'eau."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Pain et frites",
+      "inputs": [
+        "pounded_chicken",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "fried_katsu",
+      "instructions": "Installez trois plats peu profonds : farine, œuf battu et panko. Dressez chaque cuisse dans de la farine, en tapant chaque trace d'excès. Plongez dans l'œuf battu, laissant l'excès s'écouler pendant 2 secondes. Appuyez fermement dans le panko, puis basculez et pressez à nouveau — contrairement à schnitzel, katsu bénéficie d'un revêtement panko épais et pressé qui construit une croûte robuste et éclatante plutôt que délicate. Le revêtement doit être visiblement épais. Chauffer l'huile à 170°C / 340°F dans une poêle lourde — assez d'huile pour monter à mi-hauteur. Faire frire la peau vers le bas (ou vers le haut vers le bas) pendant 4 minutes jusqu'à ce qu'elle soit bien dorée. Plongez soigneusement et faites frire 3 minutes sur le second côté jusqu'à ce que la partie la plus épaisse soit d'or profond. Égoutter sur une grille.",
+      "visualCue": {
+        "primaryTarget": "Croûte panko dorée profonde, uniformément colorée sur toute la surface. La croûte semble épaisse et robuste, avec les extrémités pointues irrégulières des miettes panko clairement visibles comme des flèches d'or individuelles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Panko est jaune pâle et semble encore cru et blanc dans les recoins. Le tourbeau d'huile est paresseux.",
+            "action": "Vérifiez la température de l'huile — elle peut avoir chuté sous 160°C. Laisser revenir et continuer à frire. La croûte colorera rapidement une fois la température revenue."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep, riche or-ambre avec les miettes individuelles panko formant une surface spiky, tridimensionnelle. Le poulet se sent ferme et printanier dans la croûte lorsqu'il est pressé doucement. L'intérieur lit 74°C.",
+            "action": "Retirer et égoutter debout sur une grille pendant 1 minute avant de trancher."
+          },
+          {
+            "state": "Overdone",
+            "description": "Panko est uniformément brun foncé et les recoins commencent à noircir. L'huile peut être de fumer et les miettes sentent vif.",
+            "action": "Supprimer immédiatement. Couper rapidement pour libérer de la vapeur et éviter la cuisson. Le poulet sera sec mais sûr."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur le katsu à travers la croûte — il devrait revenir fermement mais ne pas se sentir dur comme une pierre. Une légère donne vous indique que le poulet à l'intérieur est cuit et juteux, pas encore cru et rendement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Tranche et plaque",
+      "inputs": [
+        "fried_katsu",
+        "tonkatsu_sauce",
+        "ing_10"
+      ],
+      "outputState": "finished_chicken_katsu",
+      "instructions": "Reposez le katsu frit sur la grille pendant 2 minutes, ce qui permet à la croûte de se fixer et à l'intérieur d'équilibrer. À l'aide d'un couteau tranchant et lourd avec une pression vers le bas propre par coupe (pas un mouvement de sciage, qui déchire la croûte), couper en bandes de 2 à 3 cm sur toute la largeur, en maintenant les tranches dans la forme originale de la cuisse. Rassemblez les morceaux tranchés sur la planche à découper et glissez-les sur des assiettes chaudes à côté d'un monticule de chou déchiqueté. Arroser la sauce tonkatsu sur les tranches ou servir à tremper.",
+      "visualCue": {
+        "primaryTarget": "Des bandes uniformément tranchées montrant un intérieur blanc, humide et juteux contre l'épais panko doré. La croûte n'a pas été brisée ou séparée du poulet dans la coupe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'intérieur est rose ou cru au centre lorsqu'il est tranché. Les jus sont roses.",
+            "action": "Retournez les tranches de peau vers l'huile chaude pendant 2 minutes. Des tranches minces feront cuire rapidement à partir de la chaleur résiduelle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Intérieur blanc et juteux avec un léger reflet de graisse. La croûte dorée reste intacte sur chaque tranche. La sauce Tonkatsu drizzled crée une vapeur aromatique sucrée et salée.",
+            "action": "Servir immédiatement avec du riz et de la soupe miso."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'intérieur est sec et blanc, sans humidité visible. La croûte peut s'être séparée de la viande pendant le slice.",
+            "action": "Servir avec de la sauce tonkatsu supplémentaire. L'épaisse croûte panko piège la vapeur et le katsu est rarement aussi sec qu'il paraît — goût avant de l'écrire."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une tranche en pinçant la croûte entre le pouce et l'index : une tranche de katsu parfaite tient ensemble — la croûte saisit le poulet. Si la croûte glisse, le lavage des œufs est trop fin ou la drague est mal ordonnée."
+    }
+  ]
 };

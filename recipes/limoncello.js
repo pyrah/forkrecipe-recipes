@@ -1,95 +1,202 @@
 export default {
-  repoId: "master_italian_limoncello_001",
-  parentRepoId: null,
-  slug: "limoncello",
-  author: "ForkRecipe Kitchen",
-  title: "Limoncello",
-  description: "Lemon zest steeped in near-pure alcohol for a month until every aromatic oil is extracted and the spirit glows a supernatural yellow, then sweetened with cold sugar syrup and diluted to a silky, icy liqueur that tastes of the Amalfi coast in a frozen glass. Patience is the only ingredient you cannot buy.",
-  cuisine: "Italian",
-  culture: "Southern Italian",
-  category: "beverages",
-  tags: ["beverage", "italian", "liqueur", "lemon", "vegan", "gluten-free", "no-cook"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "30 days",
-  ratioSystem: "parts",
-  stars: 1640,
-  forks: 127,
-  contributors: 33,
-  license: "CC-BY-SA",
-  createdAt: "2026-02-15",
-  updatedAt: "2026-02-15",
-  flavorRadar: { sweet: 4, salty: 0, sour: 3, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Citrus",    name: "Organic (unwaxed) lemons",             ratioValue: 8,    defaultUnit: "whole", substitutions: ["Sorrento lemons (traditional and superior)"] },
-    { ingId: "ing_02", role: "Solvent",   name: "Grain alcohol (95% ABV, Everclear)", ratioValue: 500,  defaultUnit: "ml", substitutions: ["190-proof neutral spirit", "high-proof vodka (less efficient extraction)"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Granulated white sugar",               ratioValue: 400,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Hydration", name: "Filtered water (for syrup)",           ratioValue: 500,  defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_italian_limoncello_001",
+  "parentRepoId": null,
+  "slug": "limoncello",
+  "author": "ForkRecipe Kitchen",
+  "title": "Limoncello",
+  "description": "Zeste de citron imprégné d'alcool presque pur pendant un mois jusqu'à ce que chaque huile aromatique soit extraite et que l'esprit brille d'un jaune surnaturel, puis sucré avec du sirop de sucre froid et dilué dans une liqueur glacée soyeuse qui goûte de la côte amalfitaine dans un verre congelé. La patience est le seul ingrédient que vous ne pouvez pas acheter.",
+  "cuisine": "Italien",
+  "culture": "Sud de l ' Italie",
+  "category": "beverages",
+  "tags": [
+    "boisson",
+    "Italien",
+    "liqueur",
+    "citron",
+    "végétalien",
+    "Sans gluten",
+    "pas de cuisson"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "30 days",
+  "ratioSystem": "parts",
+  "stars": 1640,
+  "forks": 127,
+  "contributors": 33,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-02-15",
+  "updatedAt": "2026-02-15",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 0,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Zest",
-      inputs: ["ing_01"],
-      outputState: "lemon_zest",
-      instructions: "Scrub the lemons under hot water to remove any wax or residue. Using a vegetable peeler or microplane, remove only the bright yellow outer zest — avoid any white pith, which is intensely bitter. The strips should be thin, flexible, and almost translucent. If any white pith is visible on the back of a strip, use a paring knife to scrape it clean. You are only after the oil-rich yellow layer.",
-      visualCue: {
-        primaryTarget: "Underside of zest strips",
-        spectrum: [
-          { state: "Underdone", description: "Strips are thick and stiff, with visible white pith on the inner surface.", action: "Scrape the white pith away with a paring knife. Even a small amount of pith will add perceptible bitterness to the final liqueur." },
-          { state: "Perfect",   description: "Strips are thin, bright yellow, and slightly flexible. The inner surface is clean white-to-yellow with no pith. When bent, they release a mist of aromatic oil you can smell from 30 cm away.", action: "Add to the spirit jar immediately." },
-          { state: "Overdone",  description: "Strips are very thin, borderline sheer, and the white layer beneath the flesh is now exposed on the lemon.", action: "Stop zesting this lemon — you have reached the pith. Move to the next." },
-        ],
-      },
-      feelCue: "Bend a zest strip sharply — you should see and smell a tiny spray of essential oil released from the cells, the scent hitting you like a burst of cold sunshine.",
+      "ingId": "ing_01",
+      "role": "Citrus",
+      "name": "Citrons biologiques (non épilés)",
+      "ratioValue": 8,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Citrons Sorrento (traditionnels et supérieurs)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Infuse",
-      inputs: ["lemon_zest", "ing_02"],
-      outputState: "lemon_infused_spirit",
-      instructions: "Place all the zest in a clean, sealable glass jar. Pour the grain alcohol over the zest — it will immediately begin turning yellow as the essential oils dissolve in the alcohol. Seal tightly and store at room temperature in a dark place for 20–30 days. Shake gently every few days. The color will deepen from pale straw to a vivid, electric yellow over the first two weeks, then plateau. Taste: it should be intensely lemony, fiercely alcoholic, and slightly sweet.",
-      visualCue: {
-        primaryTarget: "Spirit color at day 7 vs day 21",
-        spectrum: [
-          { state: "Underdone", description: "Spirit is pale yellow at day 14. Aroma is present but mild. The zest strips are still plump and yellow.", action: "Continue infusing. The extraction is incomplete. The zest should look bleached and spent by day 20." },
-          { state: "Perfect",   description: "Spirit is a vivid, electric yellow — almost neon. Zest strips are pale, nearly white, and have given all their color and oil to the alcohol. Smells intensely of lemon oil.", action: "Strain out the zest through a fine-mesh sieve. Discard the spent zest." },
-          { state: "Overdone",  description: "Spirit has been infusing for 60+ days. Color may have mellowed and a faint bitterness has developed from prolonged contact.", action: "Strain immediately and proceed. Blending with simple syrup will help balance any bitterness." },
-        ],
-      },
-      feelCue: "Rub a drop of the infused spirit between your fingers and smell — it should release a powerful, clean burst of lemon oil with almost no other note. If it smells primarily of alcohol with just a hint of lemon, it needs more time.",
+      "ingId": "ing_02",
+      "role": "Solvent",
+      "name": "Alcool céréalier (95% ABV, Everclear)",
+      "ratioValue": 500,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "190-proof esprit neutre",
+        "vodka haute résistance (extraction moins efficace)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Dissolve",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "simple_syrup",
-      instructions: "Combine the sugar and water in a saucepan over medium heat. Stir constantly until the sugar is completely dissolved — about 3–5 minutes. Do not let it boil vigorously or the syrup will reduce and change in character. Remove from heat and cool to room temperature completely before combining with the alcohol — adding warm syrup to alcohol causes the volatile aromatics to flash off.",
-      visualCue: {
-        primaryTarget: "Syrup clarity in pan",
-        spectrum: [
-          { state: "Underdone", description: "Syrup looks milky or cloudy. Sugar granules visible at the bottom of the pan.", action: "Continue stirring over medium heat. The solution must be completely clear before removing from heat." },
-          { state: "Perfect",   description: "Syrup is completely clear, with the viscosity slightly greater than water. No granules visible when the spoon is lifted.", action: "Remove from heat and cool completely before adding to the infused spirit." },
-          { state: "Overdone",  description: "Syrup has boiled and reduced. It is thick and sticky — you have begun making candy.", action: "Add more water and stir over low heat to bring back to the correct consistency." },
-        ],
-      },
-      feelCue: "Dip a finger into the cooled syrup — it should feel silky and slightly viscous, leaving a thin, sweet film that doesn't feel sticky, just smooth.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre blanc granulé",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Blend",
-      inputs: ["lemon_infused_spirit", "simple_syrup"],
-      outputState: "finished_limoncello",
-      instructions: "Combine the strained infused spirit with the completely cooled simple syrup. Stir well. The mixture will turn slightly cloudy as the water content interacts with the essential oils — this is the 'louche' effect, and it is normal. Bottle in clean glass bottles and store in the freezer. Limoncello must be served ice-cold, directly from the freezer, in frozen glasses. It will not freeze solid due to its alcohol content.",
-      visualCue: {
-        primaryTarget: "Color and clarity of combined limoncello",
-        spectrum: [
-          { state: "Underdone", description: "Spirit and syrup appear separated — the alcohol sits on top of the syrup. Not yet blended.", action: "Stir more thoroughly. The two will combine with vigorous stirring." },
-          { state: "Perfect",   description: "Unified, vivid golden-yellow liqueur with a slight cloudiness from the essential oils. Smells powerfully of fresh lemon. The color should be opaque-translucent, like sunshine through a frosted window.", action: "Bottle immediately and freeze for at least 24 hours before first serving." },
-          { state: "Overdone",  description: "Limoncello is very sweet with insufficient lemon character. Too much syrup was added.", action: "Add more of the infused spirit in 50 ml increments and stir. Taste for balance after each addition." },
-        ],
-      },
-      feelCue: "Pour a few drops on your wrist from the frozen bottle — the cold should hit your skin first, then a clean, oily lemon scent should follow. If it smells primarily sweet, the syrup ratio is off.",
-    },
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Eau filtrée (pour sirop)",
+      "ratioValue": 500,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Zeste",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "lemon_zest",
+      "instructions": "Frotter les citrons sous l'eau chaude pour enlever toute cire ou résidu. À l'aide d'un éplucher végétal ou d'un microplan, n'enlevez que le zeste extérieur jaune vif — évitez toute piqûre blanche, intensément amère. Les bandes doivent être minces, flexibles et presque translucides. Si une pointe blanche est visible à l'arrière d'une bande, utilisez un couteau pour la racler. Vous êtes seulement après la couche jaune riche en huile.",
+      "visualCue": {
+        "primaryTarget": "Sous les bandes zestes",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les bandes sont épaisses et raides, avec une pointe blanche visible sur la surface intérieure.",
+            "action": "Enlevez la patte blanche avec un couteau. Même une petite quantité de piquant ajoutera de l'amertume perceptible à la liqueur finale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bandes sont minces, jaune vif et légèrement flexibles. La surface intérieure est propre, blanche à jaune, sans piquant. Lorsqu'ils sont pliés, ils libèrent une brume d'huile aromatique que vous pouvez sentir à partir de 30 cm de distance.",
+            "action": "Ajouter immédiatement au pot à alcool."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bandes sont très minces, borderline, et la couche blanche sous la chair est maintenant exposée sur le citron.",
+            "action": "Arrêtez de zester ce citron — vous avez atteint la pointe. Passez au suivant."
+          }
+        ]
+      },
+      "feelCue": "Pliez une bande de zeste brusquement — vous devriez voir et sentir un vaporisateur minuscule d'huile essentielle libérée des cellules, l'odeur vous frappant comme un éclat de soleil froid."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Infuse",
+      "inputs": [
+        "lemon_zest",
+        "ing_02"
+      ],
+      "outputState": "lemon_infused_spirit",
+      "instructions": "Placez tout le zeste dans un pot en verre propre et scellable. Verser l'alcool de grain sur le zeste — il commencera immédiatement à devenir jaune lorsque les huiles essentielles se dissoudreont dans l'alcool. Sceller étroitement et conserver à température ambiante dans un endroit sombre pendant 20 à 30 jours. Agiter doucement tous les quelques jours. La couleur va s'approfondir de la paille pâle à un jaune vif et électrique au cours des deux premières semaines, puis plateau. Bouche : il doit être fortement citronné, farouchement alcoolique et légèrement sucré.",
+      "visualCue": {
+        "primaryTarget": "Couleur de l'esprit au jour 7 vs jour 21",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'esprit est jaune pâle au jour 14. L'arôme est présent mais doux. Les bandes de zestes sont encore collantes et jaunes.",
+            "action": "Continuez à infuser. L'extraction est incomplète. Le zeste devrait paraître blanchi et passé au jour 20."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'esprit est un jaune vif et électrique, presque néon. Les bandes zestes sont pâles, presque blanches, et ont donné toute leur couleur et l'huile à l'alcool. Sensation intense d'huile de citron.",
+            "action": "Étendez le zeste à travers un tamis à mailles fines. Jetez le zeste dépensé."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'esprit a infusé pendant plus de 60 jours. La couleur peut s'être membrée et une faible amertume s'est développée à partir d'un contact prolongé.",
+            "action": "Soulevez immédiatement et continuez. Mélanger avec du sirop simple aidera à équilibrer toute amertume."
+          }
+        ]
+      },
+      "feelCue": "Frotter une goutte de l'esprit infusé entre les doigts et l'odeur — il devrait libérer un éclat puissant et propre d'huile de citron avec presque aucune autre note. S'il sent surtout l'alcool avec un soupçon de citron, il faut plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Dissoudre",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "simple_syrup",
+      "instructions": "Mélanger le sucre et l'eau dans une casserole à feu moyen. Incorporer constamment jusqu'à ce que le sucre soit complètement dissous — environ 3-5 minutes. Ne la laissez pas bouillir vigoureusement ou le sirop réduira et changera de caractère. Retirer de la chaleur et refroidir complètement à la température ambiante avant de combiner avec l'alcool — ajouter du sirop chaud à l'alcool provoque les aromatiques volatils à éclater.",
+      "visualCue": {
+        "primaryTarget": "Clarté du sirop dans la casserole",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sirop semble laiteux ou nuageux. Granulés de sucre visibles au fond de la poêle.",
+            "action": "Continuer à remuer à feu moyen. La solution doit être complètement limpide avant de sortir de la chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le sirop est complètement clair, avec une viscosité légèrement supérieure à celle de l'eau. Pas de granules visibles lorsque la cuillère est levée.",
+            "action": "Retirer du feu et refroidir complètement avant d'ajouter à l'esprit infusé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sirop a bouilli et réduit. Il est épais et collant — vous avez commencé à faire des bonbons.",
+            "action": "Ajouter plus d'eau et remuer à feu doux pour ramener à la bonne consistance."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt dans le sirop refroidi — il devrait sentir soyeux et légèrement visqueux, laissant un mince film doux qui ne se sent pas collant, juste lisse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mélange",
+      "inputs": [
+        "lemon_infused_spirit",
+        "simple_syrup"
+      ],
+      "outputState": "finished_limoncello",
+      "instructions": "Combiner l'esprit infusé et le sirop simple complètement refroidi. Bien mélanger. Le mélange devient légèrement nuageux à mesure que la teneur en eau interagit avec les huiles essentielles — c'est l'effet 'louche', et c'est normal. Bouteille dans des bouteilles en verre propre et conserver au congélateur. Limoncello doit être servi en glaçon, directement du congélateur, dans des verres surgelés. Il ne gelera pas solide en raison de sa teneur en alcool.",
+      "visualCue": {
+        "primaryTarget": "Couleur et clarté de limoncello combiné",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'alcool et le sirop apparaissent séparés — l'alcool est assis sur le dessus du sirop. Pas encore mélangé.",
+            "action": "Remuer plus soigneusement. Les deux se combineront avec un brassage vigoureux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une liqueur dorée-jaune, unifiée, avec un léger nuage des huiles essentielles. Ça sent le citron frais. La couleur doit être opaque-translucide, comme le soleil à travers une fenêtre givrée.",
+            "action": "Bouteille immédiatement et congeler au moins 24 heures avant la première prise."
+          },
+          {
+            "state": "Overdone",
+            "description": "Limoncello est très doux avec un caractère citronné insuffisant. Trop de sirop a été ajouté.",
+            "action": "Ajouter plus de l'esprit infusé en incréments de 50 ml et remuer. Goûtez pour l'équilibre après chaque ajout."
+          }
+        ]
+      },
+      "feelCue": "Versez quelques gouttes sur votre poignet à partir de la bouteille congelée — le froid devrait frapper votre peau d'abord, puis un parfum de citron propre et huileux devrait suivre. S'il sent surtout sucré, le taux de sirop est désactivé."
+    }
+  ]
 };

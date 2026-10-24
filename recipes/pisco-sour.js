@@ -1,81 +1,196 @@
 export default {
-  repoId: "master_peruvian_piscosour_001",
-  parentRepoId: null,
-  slug: "pisco-sour",
-  author: "ForkRecipe Kitchen",
-  title: "Pisco Sour",
-  description: "Peru's national cocktail — a dry, citrus-bright pisco shaken hard with fresh lime juice, simple syrup, and raw egg white until it froths into a cloud, served in a chilled coupe with three drops of Angostura bitters bleeding into the foam.",
-  cuisine: "Peruvian",
-  culture: "Lima",
-  category: "beverages",
-  tags: ["beverage", "gluten-free", "pisco", "peruvian", "cocktail", "egg-white", "citrus"],
-  difficulty: 2,
-  activeTime: "8 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 0, sour: 4, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Solvent",    name: "Peruvian pisco (quebranta or acholado)", ratioValue: 60,  defaultUnit: "ml", substitutions: ["Chilean pisco (fruitier)", "unaged brandy as a last resort"] },
-    { ingId: "ing_02", role: "Acid",       name: "Fresh lime juice (key lime preferred)",  ratioValue: 30,  defaultUnit: "ml", substitutions: ["fresh lemon juice"] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Simple syrup (1:1 sugar:water)",         ratioValue: 22,  defaultUnit: "ml", substitutions: ["gomme syrup for extra body"] },
-    { ingId: "ing_04", role: "Binder",     name: "Egg white, fresh (one egg)",             ratioValue: 30,  defaultUnit: "ml", substitutions: ["aquafaba (chickpea water) for vegan"] },
-    { ingId: "ing_05", role: "Garnish",    name: "Angostura bitters",                       ratioValue: 3,   defaultUnit: "drops", substitutions: ["Amargo Chuncho bitters (more authentic)"] },
-    { ingId: "ing_06", role: "Liquid",     name: "Ice cubes (for shaking)",                ratioValue: 1,   defaultUnit: "handful", substitutions: [] },
+  "repoId": "master_peruvian_piscosour_001",
+  "parentRepoId": null,
+  "slug": "pisco-sour",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pisco Sour",
+  "description": "Le cocktail national du Pérou — un pisco sec, agrumes-brillant agité avec du jus de lime frais, du sirop simple et du blanc d'œuf cru jusqu'à ce qu'il gèle dans un nuage, servi dans un coupé réfrigéré avec trois gouttes d'Angostura amer saignant dans la mousse.",
+  "cuisine": "Pérou",
+  "culture": "Lima",
+  "category": "beverages",
+  "tags": [
+    "boisson",
+    "Sans gluten",
+    "Pisco",
+    "périuvien",
+    "cocktail",
+    "blanc-œuf",
+    "agrumes"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "8 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whip",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "dry_shaken_base",
-      instructions: "Combine the pisco, lime juice, simple syrup, and egg white in a cocktail shaker with no ice. This is the 'dry shake' — shaking without ice to build a preliminary foam from the egg white protein before dilution with ice. Shake as hard and as long as you can for 30–45 seconds. The shaker will feel almost impossible to open from the vacuum. The egg white requires the heat and full force of this dry shake to denature and foam — a half-hearted shake produces a thin, watery foam cap that collapses in seconds.",
-      visualCue: {
-        primaryTarget: "When the shaker is briefly opened, the contents appear thick and foamy — visibly increased in volume and a paler color than when it went in.",
-        spectrum: [
-          { state: "Underdone", description: "The liquid is still thin and unfrothy, smelling strongly of raw egg. The dry shake was too short or too gentle.", action: "Close and shake harder for another 20 seconds. The foam needs sustained force to form." },
-          { state: "Perfect",   description: "The mix has thickened noticeably and a persistent foam is visible when the lid is briefly loosened. Volume has increased. Smells citrusy and slightly eggy.", action: "Add ice and shake again." },
-          { state: "Overdone",  description: "Not possible to over-dry-shake. Continue with confidence.", action: "Proceed to the ice shake." },
-        ],
-      },
-      feelCue: "The shaker should rattle very little compared to a normal wet shake — the foam-thickened liquid doesn't slosh; it churns. Your arms should feel the effort.",
+      "ingId": "ing_01",
+      "role": "Solvent",
+      "name": "Pisco péruvien (quebranta ou acholado)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Pisco chilien (fruitier)",
+        "brandy non vieilli en dernier recours"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Chill",
-      inputs: ["dry_shaken_base", "ing_06"],
-      outputState: "chilled_cocktail",
-      instructions: "Add a generous scoop of ice cubes to the shaker containing the dry-shaken base. Shake vigorously again for 15–20 seconds. This second shake chills, dilutes, and further aerates the cocktail. The colder temperature helps set the foam into a more stable structure. The shaker will frost over on the outside — this is your cue that the drink is cold enough.",
-      visualCue: {
-        primaryTarget: "The outside of the shaker is frosted white with condensation and feels very cold — near-frozen to the touch.",
-        spectrum: [
-          { state: "Underdone", description: "The shaker is cold but not frosted. The drink inside is not cold enough and will melt the ice too fast in the glass.", action: "Shake for another 10 seconds." },
-          { state: "Perfect",   description: "The shaker is frosted and feels near-frozen. When you shake near your ear, the ice sounds dense and compact — little slosh.", action: "Strain immediately into the chilled coupe." },
-          { state: "Overdone",  description: "Over-dilution from shaking too long with ice — the drink tastes watery and pale.", action: "Use more ice next time and shorter second shake. The dry shake does the heavy lifting." },
-        ],
-      },
-      feelCue: "The shaker should feel uncomfortably cold to hold with bare hands — the metal contracts in your grip. That is the right temperature.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Jus de chaux frais (choix de chaux clé)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "jus de citron frais"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Strain",
-      inputs: ["chilled_cocktail", "ing_05"],
-      outputState: "finished_pisco_sour",
-      instructions: "Double-strain the cocktail through a Hawthorne strainer and a fine-mesh sieve into a chilled coupe glass — the fine strainer catches ice shards that would crater the foam. Pour from a low height so the foam lands cleanly on top rather than splashing against the sides. The foam should dome slightly above the rim of the glass. Immediately add three drops of Angostura bitters to the center of the foam. Use a cocktail pick or toothpick to drag the drops through the foam in a spiral or line — the bitters bloom in the white foam like ink in water, creating the classic pisco sour pattern.",
-      visualCue: {
-        primaryTarget: "A pale gold cocktail visible through the glass, topped by a thick, slightly domed white foam with three dark amber bitters drops arranged on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "The foam is thin, barely 3 mm, and already dissolving. Bitters drops are sinking through it.", action: "The dry shake was insufficient. Serve as is — the flavor is correct, just the texture is compromised." },
-          { state: "Perfect",   description: "A firm, dense white foam dome at least 1 cm thick, holding the bitters drops on its surface like ink on velvet. The foam does not dissolve for 3–4 minutes.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Too much foam has formed, overflowing the glass. The cocktail to foam ratio is off.", action: "Gently lift the foam layer with a spoon if needed, or serve in a larger glass." },
-        ],
-      },
-      feelCue: "The foam should feel like stiff whipped cream on the tongue — airy and immediate — followed by the sharp hit of lime, the dry warmth of pisco, and a whisper of bitters on the finish.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sirop simple (1:1 sucre: eau)",
+      "ratioValue": 22,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sirop de gomme pour corps supplémentaire"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Blanc d'œuf, frais (un œuf)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "aquafaba (eau de pois chiche) pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Garnish",
+      "name": "Agostura amers",
+      "ratioValue": 3,
+      "defaultUnit": "drops",
+      "substitutions": [
+        "Amargo Chuncho amers (plus authentique)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Glaçons (pour trembler)",
+      "ratioValue": 1,
+      "defaultUnit": "handful",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whip",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "dry_shaken_base",
+      "instructions": "Mélanger le pisco, le jus de lime, le sirop simple et le blanc d'œuf dans un shaker sans glace. C'est le « sec sec » — agiter sans glace pour construire une mousse préliminaire à partir de la protéine blanche d'oeuf avant dilution avec de la glace. Agiter aussi fort et aussi longtemps que possible pendant 30 à 45 secondes. Le shaker se sentira presque impossible à ouvrir du vide. Le blanc d'œuf nécessite la chaleur et la pleine force de ce tremblement sec pour dénaturation et mousse — un tremblement à demi-coeur produit un mince bouchon en mousse aqueuse qui s'effondre en quelques secondes.",
+      "visualCue": {
+        "primaryTarget": "Lorsque le shaker est brièvement ouvert, le contenu apparaît épais et mousseux — visiblement augmenté en volume et une couleur plus pâle que quand il est entré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore mince et sans odeur, sentant fortement l'oeuf cru. La secousse était trop courte ou trop douce.",
+            "action": "Fermez et secouez plus fort pendant encore 20 secondes. La mousse a besoin de force soutenue pour se former."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le mélange s'est épaissi sensiblement et une mousse persistante est visible lorsque le couvercle est brièvement desserré. Le volume a augmenté. Ça sent les agrumes et légèrement les œufs.",
+            "action": "Ajouter la glace et agiter à nouveau."
+          },
+          {
+            "state": "Overdone",
+            "description": "Il n'est pas possible d'écraser. Continuez avec confiance.",
+            "action": "Passez à la glace."
+          }
+        ]
+      },
+      "feelCue": "Le shaker devrait hocher très peu par rapport à un shake humide normal — le liquide épaissi en mousse ne s'enlise pas; il vomit. Vos bras devraient sentir l'effort."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Refroidissement",
+      "inputs": [
+        "dry_shaken_base",
+        "ing_06"
+      ],
+      "outputState": "chilled_cocktail",
+      "instructions": "Ajouter une grosse boule de glaçons au shaker contenant la base sèche. Agiter vigoureusement pendant 15 à 20 secondes. Cette deuxième secousse refroidit, dilue et aérera davantage le cocktail. La température plus froide aide à placer la mousse dans une structure plus stable. Le shaker gèlera à l'extérieur — c'est votre signal que la boisson est assez froide.",
+      "visualCue": {
+        "primaryTarget": "L'extérieur du shaker est blanc givré avec condensation et se sent très froid — presque congelé au toucher.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le shaker est froid mais pas givré. La boisson à l'intérieur n'est pas assez froide et va fondre la glace trop vite dans le verre.",
+            "action": "Agiter encore 10 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le shaker est gelé et se sent presque congelé. Lorsque vous secouez près de votre oreille, la glace semble dense et compacte — peu de slosh.",
+            "action": "Plongez immédiatement dans le coupé réfrigéré."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sur-dilution due au tremblement trop long avec de la glace — la boisson a un goût aqueux et pâle.",
+            "action": "Utilisez plus de glace la prochaine fois et plus courte seconde secousse. La secousse fait le levage lourd."
+          }
+        ]
+      },
+      "feelCue": "Le shaker devrait se sentir mal à l'aise à tenir à mains nues — le métal se contracte dans votre adhérence. C'est la bonne température."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "chilled_cocktail",
+        "ing_05"
+      ],
+      "outputState": "finished_pisco_sour",
+      "instructions": "Double-entraînez le cocktail à travers une passoire Hawthorne et un tamis à mailles fines dans un verre coupé réfrigéré — la passoire fine capture des durs de glace qui cratèreraient la mousse. Verser à partir d'une hauteur basse afin que la mousse atterrisse proprement sur le dessus plutôt que d'éclabousser sur les côtés. La mousse doit dômer légèrement au-dessus du bord du verre. Ajouter immédiatement trois gouttes d'Angostura amer au centre de la mousse. Utilisez un cueil à cocktail ou un cure-dent pour faire glisser les gouttes à travers la mousse en spirale ou en ligne — les amères fleurissent dans la mousse blanche comme l'encre dans l'eau, créant le motif classique pisco aigre.",
+      "visualCue": {
+        "primaryTarget": "Un cocktail en or pâle visible à travers le verre, surmonté d'une épaisse mousse blanche légèrement bombée avec trois gouttes d'ambre foncé disposées à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La mousse est mince, à peine 3 mm, et déjà dissolue. Des gouttes d'amers coulent à travers elle.",
+            "action": "La secousse était insuffisante. Servir tel quel — la saveur est correcte, juste la texture est compromise."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un dôme en mousse blanche ferme et dense d'au moins 1 cm d'épaisseur, tenant les amères gouttes sur sa surface comme l'encre sur le velours. La mousse ne se dissout pas pendant 3-4 minutes.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de mousse s'est formée, débordant le verre. Le rapport cocktail/écume est éteint.",
+            "action": "Relever doucement la couche de mousse avec une cuillère si nécessaire, ou servir dans un verre plus grand."
+          }
+        ]
+      },
+      "feelCue": "La mousse doit se sentir comme de la crème fouettée raide sur la langue — aérée et immédiate — suivie par le coup aigu de la chaux, la chaleur sèche du pisco, et un murmure d'amertume sur la finale."
+    }
+  ]
 };

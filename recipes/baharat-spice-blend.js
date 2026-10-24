@@ -1,84 +1,205 @@
 export default {
-  repoId: "master_middle_eastern_baharat_spice_blend_001",
-  parentRepoId: null,
-  slug: "baharat-spice-blend",
-  author: "ForkRecipe Kitchen",
-
-  title: "Baharat Seven-Spice Blend",
-  description: "The Levantine pantry cornerstone: seven spices — allspice, coriander, cumin, cinnamon, black pepper, nutmeg, and clove — toasted and ground together into a warm, complex powder that perfumes rice, lamb, chickpeas, and soups with the particular depth that is instantly recognizable as the Arab kitchen.",
-  cuisine: "Middle Eastern",
-  culture: "Levantine",
-  category: "condiments",
-
-  tags: ["vegan", "gluten-free", "middle-eastern", "levantine", "spice-blend", "seasoning"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "weight",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 2, salty: 0, sour: 0, bitter: 2, umami: 1, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Spice",    name: "Allspice berries (whole)",     ratioValue: 30, defaultUnit: "g", substitutions: ["ground allspice (use 2 tsp less)"] },
-    { ingId: "ing_02", role: "Spice",    name: "Coriander seeds (whole)",      ratioValue: 20, defaultUnit: "g", substitutions: ["ground coriander"] },
-    { ingId: "ing_03", role: "Spice",    name: "Cumin seeds (whole)",          ratioValue: 20, defaultUnit: "g", substitutions: ["ground cumin"] },
-    { ingId: "ing_04", role: "Spice",    name: "Cinnamon stick (broken)",      ratioValue: 15, defaultUnit: "g", substitutions: ["ground cinnamon (1.5 tsp)"] },
-    { ingId: "ing_05", role: "Spice",    name: "Black peppercorns (whole)",    ratioValue: 15, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",    name: "Whole nutmeg (grated fresh)",  ratioValue: 5,  defaultUnit: "g", substitutions: ["pre-ground nutmeg"] },
-    { ingId: "ing_07", role: "Spice",    name: "Cloves (whole)",               ratioValue: 5,  defaultUnit: "g", substitutions: ["ground cloves (use half)"] },
+  "repoId": "master_middle_eastern_baharat_spice_blend_001",
+  "parentRepoId": null,
+  "slug": "baharat-spice-blend",
+  "author": "ForkRecipe Kitchen",
+  "title": "Mélange baharat à sept rayons",
+  "description": "La pierre angulaire du garde-manger Levantine : sept épices – allspice, coriandre, cumin, cannelle, poivre noir, muscade et girofle – grillées et broyées ensemble dans une poudre chaude et complexe qui parfume le riz, l'agneau, les pois chiches et les soupes avec la profondeur particulière qui est immédiatement reconnaissable comme la cuisine arabe.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Levantine",
+  "category": "condiments",
+  "tags": [
+    "végétalien",
+    "Sans gluten",
+    "Moyen-Orient",
+    "lévantine",
+    "d'épices",
+    "assaisonnement"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 1,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_07"],
-      outputState: "toasted_whole_spices",
-      instructions: "Place allspice, coriander, cumin, broken cinnamon pieces, black peppercorns, and cloves in a dry skillet (do not add the nutmeg — it is too oily and will scorch). Toast over medium heat, stirring constantly, for 3–5 minutes. The spices are ready when they turn one shade darker, small wisps of smoke begin to rise, and the kitchen fills with a deep, warm aroma. Transfer immediately to a plate to cool — leaving them in the hot pan will over-cook them.",
-      visualCue: {
-        primaryTarget: "Spices are one shade darker than when they started. A thin curl of smoke rising from the pan. The aroma has shifted from raw and dusty to deep, warm, and volatile.",
-        spectrum: [
-          { state: "Underdone", description: "Spices look and smell the same as when raw — flat, dusty, not fragrant.", action: "Continue toasting over medium heat — the oils need to warm. Move them constantly." },
-          { state: "Perfect",   description: "Allspice is deeply aromatic. Coriander crackles slightly. Cumin is nutty and golden. A whisper of smoke. Everything smells alive.", action: "Pour onto a cool plate immediately — do not leave in the pan." },
-          { state: "Overdone",  description: "Spices are very dark, almost black. Acrid, harsh, smoky smell.", action: "Discard — there is no recovery from over-toasted spices. They will taste bitter and harsh in every dish." },
-        ],
-      },
-      feelCue: "Pick up a toasted allspice berry and break it between your teeth — it should release a burst of warm, complex aroma: clove, pepper, and cinnamon all at once. If it tastes flat or raw, it needs more time. If it tastes harsh, it went too far.",
+      "ingId": "ing_01",
+      "role": "Spice",
+      "name": "Graines de grêle",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "en poudre (utiliser 2 c. à thé moins)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["toasted_whole_spices", "ing_06"],
-      outputState: "baharat_blend",
-      instructions: "Allow the toasted spices to cool completely before grinding — hot spices release steam in the grinder and produce clumped, wet powder. Transfer to a spice grinder or powerful blender. Grate fresh nutmeg directly into the grinder. Grind in 10-second pulses until the blend is a uniform, fine powder — no visible whole spice pieces remaining. Pass through a fine sieve if any coarse pieces persist.",
-      visualCue: {
-        primaryTarget: "A uniform, fine, warm reddish-brown powder — the color of terra cotta — with no visible whole spice fragments. When pinched, it holds briefly then releases, like fine sand.",
-        spectrum: [
-          { state: "Underdone", description: "Coarse pieces of allspice or cinnamon still visible. Uneven texture.", action: "Return to grinder and pulse 5–10 more times. Sieve and re-grind any coarse material." },
-          { state: "Perfect",   description: "Fine, uniform, reddish-brown powder. Flows like silk. Smells intensely of all seven spices in harmony — warm, complex, deep.", action: "Transfer to an airtight jar immediately." },
-          { state: "Overdone",  description: "Ground so long the spices have heated again from the grinder friction and clumped into a paste.", action: "Spread on a plate to cool and dry, then break apart and sieve." },
-        ],
-      },
-      feelCue: "Rub a pinch between your fingers — the powder should feel feather-light and slightly oily from the spice oils, coating your fingers in a warm, fragrant film. The smell should be so strong it is almost physical — a wave of warmth.",
+      "ingId": "ing_02",
+      "role": "Spice",
+      "name": "Graines de coriandre (ensemble)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Coriandre terrestre"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Set",
-      inputs: ["baharat_blend"],
-      outputState: "finished_baharat",
-      instructions: "Transfer immediately to a small airtight jar — glass is preferred over plastic, as the volatile oils will slowly absorb into plastic over time. Label with the date. Store in a cool, dark cupboard away from the stove. Use within 2 months for maximum potency; the blend fades quickly once ground. To use: add 1–2 teaspoons per 500 g of meat or 200 g of rice, stirred in during the cooking of the aromatics.",
-      visualCue: {
-        primaryTarget: "A sealed jar of warm reddish-brown powder that colors the glass orange at the sides. When the jar is briefly opened, a wave of warm spice aroma escapes.",
-        spectrum: [
-          { state: "Underdone", description: "Blend has not been stored promptly and is already losing aroma after 10 minutes open on the counter.", action: "Seal immediately. Exposure to air, light, and heat rapidly degrades volatile compounds." },
-          { state: "Perfect",   description: "Well-sealed jar. The blend smells intense when opened — complex, warm, unmistakably Middle Eastern. The color is vivid.", action: "Store and use within 2 months." },
-          { state: "Overdone",  description: "Blend is more than 3 months old — smells faint, flat, dusty.", action: "Toast a fresh batch — spice blends are not expensive to make and fresh is transformative compared to old." },
-        ],
-      },
-      feelCue: "Open the jar after storing for one day and smell from 15 cm away — you should be able to smell the blend clearly without putting your nose to the jar. If you need to press your nose in to detect it, the spices were not toasted properly or the jar is not sealed tightly.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Graines de cumin entières",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cumin de fond"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Bâton de cannelle (broché)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cannelle au sol (1,5 c. à thé)"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Maïs de poivre noir (ensemble)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Noix de muscade entières (fraîchies)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "noix de muscade avant le sol"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Vêtements entiers",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "girofles du sol (utiliser la moitié)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "toasted_whole_spices",
+      "instructions": "Mettre tous les espices, la coriandre, le cumin, les morceaux de cannelle cassés, les grains de poivre noir et les girofles dans une poêle sèche (n'ajoutez pas la muscade — elle est trop grasse et va brûler). Faire cuire à feu moyen, en remuant constamment, pendant 3 à 5 minutes. Les épices sont prêtes lorsqu'elles deviennent plus sombres, de petites lucarnes de fumée commencent à se lever, et la cuisine se remplit d'un arôme profond et chaud. Transférer immédiatement dans une assiette pour refroidir — les laisser dans la poêle chaude les surcuire.",
+      "visualCue": {
+        "primaryTarget": "Les épices sont plus foncées qu'au début. Une mince boucle de fumée montant de la poêle. L'arôme est passé de cru et poussiéreux à profond, chaud et volatil.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les épices ont l'air et l'odeur même que lorsqu'elles sont crues — plates, poussiéreuses, non parfumées.",
+            "action": "Continuer à griller à feu moyen — les huiles doivent être chaudes. Déplacez-les constamment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Allspice est profondément aromatique. La coriandre craque légèrement. La cumin est noisette et dorée. Un murmure de fumée. Tout sent vivant.",
+            "action": "Verser immédiatement sur une assiette fraîche — ne pas laisser dans la poêle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les épices sont très sombres, presque noires. Une odeur d'acride, dure et fumée.",
+            "action": "Jeter — il n'y a pas de récupération d'épices surchargées. Ils goûteront amer et dur dans chaque plat."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une baie grillée et cassez-la entre les dents – elle devrait libérer un éclat d'arôme chaud et complexe : girofle, poivre et cannelle. Si elle a un goût plat ou brut, elle a besoin de plus de temps. Si c'est dur, ça va trop loin."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "toasted_whole_spices",
+        "ing_06"
+      ],
+      "outputState": "baharat_blend",
+      "instructions": "Laisser refroidir complètement les épices grillées avant de les broyer — les épices chaudes libèrent de la vapeur dans le broyeur et produisent de la poudre mouillée. Transférer dans un broyeur d'épices ou un mélangeur puissant. Râper la noix de muscade fraîche directement dans le broyeur. Graisser dans des impulsions de 10 secondes jusqu'à ce que le mélange soit une poudre uniforme et fine — il ne reste pas de morceaux entiers visibles d'épices. Passer à travers un tamis fin si des morceaux grossiers persistent.",
+      "visualCue": {
+        "primaryTarget": "Une poudre uniforme, fine et chaude brun rougeâtre — la couleur de la terre cuite — sans fragments d'épices entiers visibles. Lorsqu'elle est pincée, elle tient brièvement puis libère, comme du sable fin.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Morceaux grossiers d'aspice ou de cannelle encore visibles. Une texture inégale.",
+            "action": "Revenez à la meuleuse et poussez encore 5 à 10 fois. Siégeez et rongez tout matériau grossier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Fin, uniforme, poudre brun rougeâtre. Ça coule comme de la soie. Ça sent intensément les sept épices en harmonie: chaudes, complexes, profondes.",
+            "action": "Transférer immédiatement dans un pot hermétique."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mouiller si longtemps les épices ont réchauffé de la friction du broyeur et se sont empilées dans une pâte.",
+            "action": "Étaler sur une assiette pour refroidir et sécher, puis casser et tamiser."
+          }
+        ]
+      },
+      "feelCue": "Frottez une pincée entre vos doigts — la poudre devrait sentir la lumière des plumes et légèrement huileux des huiles d'épices, enrobant vos doigts dans un film chaud et parfumé. L'odeur doit être si forte qu'elle est presque physique — une vague de chaleur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Jeu",
+      "inputs": [
+        "baharat_blend"
+      ],
+      "outputState": "finished_baharat",
+      "instructions": "Transférer immédiatement dans un petit pot hermétique — le verre est préféré au plastique, car les huiles volatiles s'absorbent lentement dans le plastique au fil du temps. Étiquette avec la date. Conserver dans un placard frais et sombre, loin du poêle. Utiliser dans les 2 mois pour une puissance maximale; le mélange s'estompe rapidement une fois moulu. À utiliser: ajouter 1 à 2 cuillères à café par 500 g de viande ou 200 g de riz, brassé pendant la cuisson des aromatiques.",
+      "visualCue": {
+        "primaryTarget": "Un pot scellé de poudre brun rougeâtre chaude qui colore le verre orange sur les côtés. Lorsque le pot est brièvement ouvert, une vague d'arôme d'épices chaudes s'échappe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange n'a pas été stocké rapidement et perd déjà de l'arôme après 10 minutes d'ouverture sur le comptoir.",
+            "action": "Scellez immédiatement. L'exposition à l'air, à la lumière et à la chaleur dégrade rapidement les composés volatils."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bocal bien scellé. Le mélange sent intense lorsqu'il est ouvert: complexe, chaud, incomparablement moyen-oriental. La couleur est vive.",
+            "action": "Conserver et utiliser dans les 2 mois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a plus de 3 mois — sent faible, plat, poussiéreux.",
+            "action": "Toast un lot frais — les mélanges d'épices ne sont pas coûteux à faire et frais est transformateur par rapport à vieux."
+          }
+        ]
+      },
+      "feelCue": "Ouvrez le pot après avoir entreposé pendant une journée et sentir à partir de 15 cm de distance — vous devriez pouvoir sentir clairement le mélange sans mettre votre nez dans le pot. Si vous devez presser votre nez pour le détecter, les épices n'ont pas été grillées correctement ou le pot n'est pas hermétiquement scellé."
+    }
+  ]
 };

@@ -1,104 +1,296 @@
 export default {
-  repoId: "master_cuban_black_bean_soup_001",
-  parentRepoId: null,
-  slug: "black-bean-soup",
-  author: "ForkRecipe Kitchen",
-  title: "Cuban Black Bean Soup",
-  description: "Dense, midnight-black bean soup perfumed with cumin, oregano, and a sofrito of onion, pepper, and garlic — finished with a splash of vinegar that makes the whole pot sing, served over white rice with a cool spoonful of sour cream.",
-  cuisine: "Cuban",
-  culture: "Cuban",
-  category: "grains",
-  tags: ["black-beans", "soup", "cuban", "sofrito", "caribbean", "vegan-option", "one-pot"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "3 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 2, sour: 2, bitter: 0, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Dried black beans, soaked overnight",  ratioValue: 2,    defaultUnit: "parts", substitutions: ["canned black beans, drained (reduce cook time to 30 min)"] },
-    { ingId: "ing_02", role: "Allium",    name: "White onion, diced",                   ratioValue: 1,    defaultUnit: "parts", substitutions: ["yellow onion"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Green bell pepper, diced",             ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves, minced",                ratioValue: 0.2,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground cumin",                         ratioValue: 0.08, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Herb",      name: "Dried oregano",                        ratioValue: 0.04, defaultUnit: "parts", substitutions: ["fresh oregano, doubled"] },
-    { ingId: "ing_07", role: "Herb",      name: "Bay leaf",                             ratioValue: 0.01, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Olive oil",                            ratioValue: 0.25, defaultUnit: "parts", substitutions: ["lard (traditional)"] },
-    { ingId: "ing_09", role: "Acid",      name: "Apple cider vinegar",                  ratioValue: 0.1,  defaultUnit: "parts", substitutions: ["sherry vinegar", "red wine vinegar"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Salt",                                 ratioValue: 0.06, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Sweetener", name: "Sugar",                                ratioValue: 0.02, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_12", role: "Starch",    name: "White rice, cooked, to serve",         ratioValue: 1,    defaultUnit: "parts", substitutions: ["cauliflower rice"] },
-    { ingId: "ing_13", role: "Dairy",     name: "Sour cream, to serve",                 ratioValue: 0.2,  defaultUnit: "parts", substitutions: ["crema", "plain yogurt"] },
+  "repoId": "master_cuban_black_bean_soup_001",
+  "parentRepoId": null,
+  "slug": "black-bean-soup",
+  "author": "ForkRecipe Kitchen",
+  "title": "Soupe de haricots noirs cubains",
+  "description": "Soupe de fèves dense, noire de minuit parfumée de cumin, d'origan et d'un sofrito d'oignon, de poivre et d'ail – finie avec une touche de vinaigre qui fait chanter toute la casserole, servie sur du riz blanc avec une cuillère fraîche de crème aigre.",
+  "cuisine": "Cubains",
+  "culture": "Cubains",
+  "category": "grains",
+  "tags": [
+    "Haricots noirs",
+    "Soupe",
+    "Cubains",
+    "sofrito",
+    "Caribbean",
+    "option végétalienne",
+    "un seul pot"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_07"],
-      outputState: "cooked_beans",
-      instructions: "Drain the soaked black beans and transfer to a large heavy pot. Add half the diced onion, half the diced green pepper, and the bay leaf. Cover with cold water by 7 cm. Bring to a rolling boil, skimming any grey foam that rises in the first 10 minutes. Reduce to a steady simmer. Cook for 1.5–2 hours until the beans are completely, entirely soft — almost velvet-tender. The pot liquid will have turned a deep, inky purple-black. Do not add salt until the beans are fully tender (early salting toughens the skins). Reserve all the cooking liquid.",
-      visualCue: {
-        primaryTarget: "Completely soft black beans swimming in a deep, inky-purple-black cooking liquid. The liquid should be visibly thick and opaque with dissolved bean starch.",
-        spectrum: [
-          { state: "Underdone", description: "Beans still firm and slightly chalky in the center when bitten. The cooking liquid is still dark red rather than near-black. A starchy, flat taste.", action: "Continue simmering. Black beans are unforgiving — even slightly undercooked beans will remain hard in the soup. Add more water if the level drops below the beans." },
-          { state: "Perfect",   description: "A bean squeezed between thumb and forefinger collapses to a smooth, velvety paste with zero resistance. The cooking liquid is near-black and coats the spoon visibly.", action: "Proceed to make the sofrito. Leave the beans in their liquid over very low heat." },
-          { state: "Overdone",  description: "Most beans have dissolved into the liquid. The pot is very thick and almost solid. Very few whole beans remain.", action: "The soup will be very smooth — almost a puree — which is actually delicious. Proceed. Thin with water if needed." },
-        ],
-      },
-      feelCue: "Taste the cooking liquid at 90 minutes — it should coat your tongue like a thin velvet, with an earthy, mineral depth. If it tastes thin and watery, the beans need more time and the water level was too high.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Haricots noirs séchés, trempés pendant la nuit",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "haricots noirs en conserve, égouttés (réduire le temps de cuisson à 30 min)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_08", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "sofrito",
-      instructions: "In a separate skillet, warm the olive oil over medium heat. Add the remaining onion and green pepper. Cook for 8–10 minutes, stirring occasionally, until the onion is soft and translucent with golden edges. Add the garlic and cook 1 more minute. Add the ground cumin and dried oregano, stir for 30 seconds until fragrant. This is the sofrito — the aromatic base that will give the soup its Cuban identity. It should smell deeply savory and warm, like the best Cuban kitchen imaginable.",
-      visualCue: {
-        primaryTarget: "Softened, golden-edged onion and pepper with garlic and spices fully bloomed. The oil in the pan should be deeply colored with the cumin and oregano.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are still pale and slightly crunchy. The raw onion smell is dominant. The spices have not had time to bloom in the fat.", action: "Cook longer on medium heat. The sofrito must be fully cooked before it meets the beans — raw onion in the finished soup is a flaw." },
-          { state: "Perfect",   description: "Onions are soft and golden. The garlic is fragrant and has just turned golden at the edges. The cumin and oregano have bloomed in the oil and the pan smells complex, savory, and warm.", action: "Ladle 3–4 spoonfuls of the cooked black beans and their liquid into the sofrito and mash them with a fork." },
-          { state: "Overdone",  description: "Garlic has turned dark brown. A bitter smell from the spices.", action: "Remove from heat immediately. Discard any truly burnt garlic. The sofrito is still usable if the bitterness is not extreme." },
-        ],
-      },
-      feelCue: "A properly cooked sofrito makes the whole kitchen smell like it has been cooking something wonderful all day — a warm, complex smell of cumin, sweet onion, and olive oil that has no sharp or raw edge.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon blanc, coupé en dés",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["cooked_beans", "sofrito", "ing_10"],
-      outputState: "thick_black_bean_soup",
-      instructions: "Ladle about 3–4 large spoonfuls of cooked beans and their liquid into the sofrito pan. Using a potato masher or fork, mash these beans vigorously into the sofrito until you have a thick, dark paste. This is the classic Cuban thickening technique — the mashed bean paste will naturally thicken the whole soup. Pour the sofrito-bean paste back into the main bean pot. Add salt. Stir everything together thoroughly. Alternatively, use an immersion blender to blend about one-quarter of the soup directly in the pot, leaving the remaining three-quarters whole for texture. Bring back to a simmer.",
-      visualCue: {
-        primaryTarget: "A thick, near-black soup with visible whole beans in a dense, creamy base. The consistency should be much thicker than a broth but loose enough to pour.",
-        spectrum: [
-          { state: "Underdone", description: "The soup is thin and watery, more like a dark broth than a bean soup. Whole beans float in liquid rather than being suspended in a thick base.", action: "Mash more beans into the sofrito and return them to the pot. Simmer uncovered 15 more minutes to reduce and thicken." },
-          { state: "Perfect",   description: "The soup is dense, dark, and coats a spoon in a thick, even film. Whole beans are distributed throughout a creamy, dark base. The smell is cumin, oregano, and earth.", action: "Add the vinegar, sugar, and proceed to the final seasoning." },
-          { state: "Overdone",  description: "The soup has reduced to a very thick, almost solid paste. It barely pours from the ladle.", action: "Add hot water or bean cooking liquid, stir vigorously, and simmer 5 minutes to incorporate. Thin gradually until it reaches a pourable but thick consistency." },
-        ],
-      },
-      feelCue: "The finished soup base should feel like thick velvet on the spoon — not watery, not paste, but densely liquid, coating the back of a spoon in a substantial, even layer that holds its shape for 3–4 seconds before beginning to drip.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Poivre vert, coupé en dés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Season",
-      inputs: ["thick_black_bean_soup", "ing_09", "ing_11", "ing_12", "ing_13"],
-      outputState: "finished_black_bean_soup",
-      instructions: "Add the apple cider vinegar and sugar to the simmering soup. The vinegar is not optional — it cuts through the density and lifts the entire flavour profile. The sugar balances the acid. Stir and taste. Adjust salt, vinegar, and sugar in small increments until the soup has a rounded, slightly tangy depth — savory, earthy, with a bright acid finish. Simmer together 15 more minutes to marry the flavours. To serve, place a mound of white rice in each bowl and ladle the black bean soup around and over it. Finish with a generous spoonful of cold sour cream and offer hot sauce at the table.",
-      visualCue: {
-        primaryTarget: "A deep, glossy, near-black soup surrounding white rice, with a cool white cloud of sour cream. The contrast of near-black and pure white is the visual signature of the dish.",
-        spectrum: [
-          { state: "Underdone", description: "The vinegar has not been added yet. The soup tastes flat, one-dimensional, and only earthy. No brightness.", action: "Add the vinegar and sugar. Taste again. The transformation when the vinegar hits the soup is immediate and dramatic." },
-          { state: "Perfect",   description: "The soup is richly savory with a bright, tangy finish from the vinegar. The sweetness rounds the acid. The rice absorbs the dark broth at the edges. The sour cream melts into cool swirls.", action: "Serve immediately." },
-          { state: "Overdone",  description: "The vinegar dominates. The soup tastes sharp and sour, not rounded and complex.", action: "Add a pinch of sugar, a pinch of salt, and a ladleful of hot water. Stir and simmer 5 minutes to mellow the acid." },
-        ],
-      },
-      feelCue: "The moment you add the vinegar to the hot soup, lean over the pot and breathe in — the sharp, fermented note of the vinegar lifting from the earthy bean steam is the smell of Cuban cooking getting its soul. If that smell does not make your mouth water, the beans need more salt.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 0.08,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Origan séché",
+      "ratioValue": 0.04,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Origan frais, doublé"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Feuille de la baie",
+      "ratioValue": 0.01,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "saindoux (traditionnel)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de sherry",
+        "vinaigre de vin rouge"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 0.06,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Starch",
+      "name": "Riz blanc, cuit, à servir",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "riz chou-fleur"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Dairy",
+      "name": "Crème aigre, pour servir",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Créma",
+        "yogourt ordinaire"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_07"
+      ],
+      "outputState": "cooked_beans",
+      "instructions": "Égoutter les haricots noirs trempés et les transférer dans un grand pot lourd. Ajouter la moitié de l'oignon en dés, la moitié du poivre vert en dés et la feuille de laurier. Couvrir d'eau froide de 7 cm. Porter à ébullition, écrémer toute mousse grise qui monte dans les 10 premières minutes. Réduire en mijotant régulièrement. Cuire de 1,5 à 2 heures jusqu'à ce que les haricots soient complètement tendres, presque en velours. Le liquide de pot aura tourné un profond, enky violet-noir. Ne pas ajouter de sel jusqu'à ce que les haricots soient complètement tendres (le sel précoce durcit les peaux). Réserver tout le liquide de cuisson.",
+      "visualCue": {
+        "primaryTarget": "Fèves noires complètement douces nageant dans un liquide de cuisson profond, pourpre-noir. Le liquide doit être visiblement épais et opaque avec de l'amidon de haricots dissous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Haricots encore fermes et légèrement crayeux au centre quand mordu. Le liquide de cuisson est encore rouge foncé plutôt que presque noir. Un goût amidon, plat.",
+            "action": "Continuez à mijoter. Les haricots noirs sont impitoyables — même les haricots légèrement mal cuits resteront durs dans la soupe. Ajouter plus d'eau si le niveau tombe sous les haricots."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un haricot pressé entre le pouce et l'index s'effondre à une pâte lisse et veloutée avec une résistance nulle. Le liquide de cuisson est presque noir et enveloppe la cuillère visiblement.",
+            "action": "Faites le sofrito. Laisser les haricots dans leur liquide à feu très doux."
+          },
+          {
+            "state": "Overdone",
+            "description": "La plupart des haricots se sont dissous dans le liquide. Le pot est très épais et presque solide. Il reste très peu de haricots entiers.",
+            "action": "La soupe sera très douce, presque pure, ce qui est vraiment délicieux. Continuez. Arroser d'eau si nécessaire."
+          }
+        ]
+      },
+      "feelCue": "Goûtez le liquide de cuisson à 90 minutes — il devrait envelopper votre langue comme un fin velours, avec une profondeur terreuse et minérale. S'il a un goût mince et aqueux, les haricots ont besoin de plus de temps et le niveau d'eau était trop élevé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_08",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "sofrito",
+      "instructions": "Dans une poêle séparée, chauffer l'huile d'olive à feu moyen. Ajouter le reste de l'oignon et le poivre vert. Cuire de 8 à 10 minutes en remuant occasionnellement, jusqu'à ce que l'oignon soit doux et translucide avec des bords dorés. Ajouter l'ail et cuire encore 1 minute. Ajouter le cumin moulu et l'origan séché, remuer pendant 30 secondes jusqu'à parfumer. C'est le sofrito, la base aromatique qui donnera à la soupe son identité cubaine. Il devrait sentir profondément salé et chaud, comme la meilleure cuisine cubaine imaginable.",
+      "visualCue": {
+        "primaryTarget": "L'oignon et le poivre assouplis et dorés avec de l'ail et des épices sont entièrement fleuris. L'huile dans la poêle doit être profondément colorée avec le cumin et l'origan.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont encore pâles et légèrement croquants. L'odeur d'oignon brut est dominante. Les épices n'ont pas eu le temps de fleurir dans la graisse.",
+            "action": "Cuire plus longtemps à feu moyen. Le sofrito doit être entièrement cuit avant de rencontrer les haricots — l'oignon cru dans la soupe finie est un défaut."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont doux et dorés. L'ail est parfumé et vient de devenir doré aux bords. Le cumin et l'origan ont fleuri dans l'huile et la poêle sent complexe, salé et chaud.",
+            "action": "Louche 3-4 cuillères des haricots noirs cuits et leur liquide dans le sofrito et les écraser avec une fourchette."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est devenu brun foncé. Une odeur amère des épices.",
+            "action": "Retirer immédiatement du feu. Jetez tout ail vraiment brûlé. Le sofrito est encore utilisable si l'amertume n'est pas extrême."
+          }
+        ]
+      },
+      "feelCue": "Un sofrito bien cuit fait sentir toute la cuisine comme il a cuisiné quelque chose de merveilleux toute la journée — une odeur chaude et complexe de cumin, d'oignon doux et d'huile d'olive qui n'a pas de bord vif ou brut."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "cooked_beans",
+        "sofrito",
+        "ing_10"
+      ],
+      "outputState": "thick_black_bean_soup",
+      "instructions": "Déposer environ 3 à 4 grandes cuillères de haricots cuits et leur liquide dans la poêle à sofrito. À l'aide d'une purée de pommes de terre ou d'une fourchette, écrasez vigoureusement ces haricots dans la sofrito jusqu'à ce que vous ayez une pâte épaisse et foncée. C'est la technique d'épaississement cubaine classique : la pâte de haricots en purée épaissira naturellement toute la soupe. Verser la pâte de soja dans le pot de haricots principal. Ajouter le sel. Bien mélanger. Alternativement, utiliser un mélangeur d'immersion pour mélanger environ un quart de la soupe directement dans la casserole, laissant les trois quarts restants entiers pour la texture. Ramène-toi à la mijotée.",
+      "visualCue": {
+        "primaryTarget": "Une soupe épaisse, presque noire avec des haricots entiers visibles dans une base dense et crémeuse. La consistance doit être beaucoup plus épaisse qu'un bouillon mais suffisamment lâche pour verser.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La soupe est mince et aqueuse, plus comme un bouillon foncé qu'une soupe de haricots. Les haricots entiers flottent dans le liquide plutôt que d'être suspendus dans une base épaisse.",
+            "action": "Mash plus de haricots dans le sofrito et les rendre dans le pot. Laisser mijoter à découvert 15 minutes de plus pour réduire et épaissir."
+          },
+          {
+            "state": "Perfect",
+            "description": "La soupe est dense, sombre, et enrobe une cuillère dans un film épais et même. Les haricots entiers sont distribués dans une base crémeuse et sombre. L'odeur est le cumin, l'origan et la terre.",
+            "action": "Ajouter le vinaigre, le sucre et procéder à l'assaisonnement final."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe a été réduite à une pâte très épaisse, presque solide. Il coule à peine de la louche.",
+            "action": "Ajouter l'eau chaude ou le liquide de cuisson des haricots, remuer vigoureusement et laisser mijoter 5 minutes pour incorporer. Finir graduellement jusqu'à ce qu'il atteigne une consistance versable mais épaisse."
+          }
+        ]
+      },
+      "feelCue": "La base de soupe finie devrait se sentir comme du velours épais sur la cuillère — pas aqueux, pas pâte, mais densément liquide, enrobant le dos d'une cuillère dans une couche substantielle, même qui tient sa forme pendant 3-4 secondes avant de commencer à couler."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "thick_black_bean_soup",
+        "ing_09",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "finished_black_bean_soup",
+      "instructions": "Ajouter le vinaigre de cidre de pomme et le sucre à la soupe mijotée. Le vinaigre n'est pas facultatif — il coupe à travers la densité et soulève tout le profil de saveur. Le sucre équilibre l'acide. Mélanger et goûter. Ajustez le sel, le vinaigre et le sucre en petites tranches jusqu'à ce que la soupe ait une profondeur arrondie, légèrement tannante, salée, terreuse, avec un fini acide brillant. Laisser mijoter 15 minutes de plus pour épouser les saveurs. Pour servir, placez un monticule de riz blanc dans chaque bol et louchez la soupe de haricots noirs autour et au-dessus. Finissez avec une généreuse cuillère de crème aigre froide et offrez de la sauce chaude à table.",
+      "visualCue": {
+        "primaryTarget": "Une soupe profonde, brillante, presque noire autour du riz blanc, avec un nuage blanc frais de crème aigre. Le contraste du blanc presque noir et pur est la signature visuelle du plat.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le vinaigre n'a pas encore été ajouté. La soupe a un goût plat, unidimensionnel et seulement terreux. Pas de luminosité.",
+            "action": "Ajouter le vinaigre et le sucre. Goûte encore. La transformation lorsque le vinaigre frappe la soupe est immédiate et dramatique."
+          },
+          {
+            "state": "Perfect",
+            "description": "La soupe est richement savoureuse avec une finale brillante et tannante du vinaigre. La douceur arrondit l'acide. Le riz absorbe le bouillon noir aux bords. La crème aigre fond en tourbillons frais.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le vinaigre domine. La soupe a un goût aigu et aigre, non arrondi et complexe.",
+            "action": "Ajouter une pincée de sucre, une pincée de sel et une louche d'eau chaude. Incorporer et laisser mijoter 5 minutes pour adoucir l'acide."
+          }
+        ]
+      },
+      "feelCue": "Au moment où vous ajoutez le vinaigre à la soupe chaude, penchez - vous au - dessus de la casserole et respirez - la note aiguë et fermentée du vinaigre qui se lève de la vapeur de haricots de terre est l'odeur de la cuisine cubaine qui reçoit son âme. Si cette odeur ne rend pas votre eau de bouche, les haricots ont besoin de plus de sel."
+    }
+  ]
 };

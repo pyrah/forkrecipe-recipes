@@ -1,106 +1,257 @@
 export default {
-  repoId: "master_thai_green_papaya_salad_001",
-  parentRepoId: null,
-  slug: "green-papaya-salad",
-  author: "ForkRecipe Kitchen",
-
-  title: "Som Tam (Green Papaya Salad)",
-  description: "Pounded and bruised in a clay mortar, shredded green papaya transforms into a vivid, dripping tangle where every strand carries sour lime, salty fish sauce, and enough chili heat to turn the tips of your ears red.",
-  cuisine: "Thai",
-  culture: "Isan Thai",
-  category: "vegetables",
-
-  tags: ["thai", "salad", "papaya", "vegan", "spicy"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-
-  stars: 1924,
-  forks: 221,
-  contributors: 30,
-  license: "CC-BY-SA",
-  createdAt: "2024-07-03",
-  updatedAt: "2025-05-18",
-
-  flavorRadar: { sweet: 2, salty: 3, sour: 4, bitter: 0, umami: 2, heat: 4 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Green (unripe) papaya, peeled and shredded into matchsticks", ratioValue: 100, defaultUnit: "parts", substitutions: ["green mango", "kohlrabi", "jicama"] },
-    { ingId: "ing_02", role: "Heat",       name: "Thai bird's eye chilies (2-5, adjust to tolerance)",          ratioValue: 3,   defaultUnit: "parts", substitutions: ["serrano chilies"] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves",                                               ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Acid",       name: "Fresh lime juice (from 2-3 limes)",                          ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fish sauce (or soy sauce for vegan)",                        ratioValue: 8,   defaultUnit: "parts", substitutions: ["light soy + MSG for vegan"] },
-    { ingId: "ing_06", role: "Sweetener",  name: "Palm sugar, shaved (or brown sugar)",                        ratioValue: 5,   defaultUnit: "parts", substitutions: ["coconut sugar", "brown sugar"] },
-    { ingId: "ing_07", role: "Protein",    name: "Dried shrimp (kung haeng) — optional for Isan style",        ratioValue: 6,   defaultUnit: "parts", substitutions: ["omit for vegetarian"] },
-    { ingId: "ing_08", role: "Structure",  name: "Cherry tomatoes, halved",                                    ratioValue: 20,  defaultUnit: "parts", substitutions: ["regular tomato, quartered"] },
-    { ingId: "ing_09", role: "Structure",  name: "Long beans or green beans, cut into 3cm pieces",             ratioValue: 15,  defaultUnit: "parts", substitutions: ["snap peas"] },
+  "repoId": "master_thai_green_papaya_salad_001",
+  "parentRepoId": null,
+  "slug": "green-papaya-salad",
+  "author": "ForkRecipe Kitchen",
+  "title": "Som Tam (Salade de papaye verte)",
+  "description": "Pounded et meurtris dans un mortier d'argile, la papaye verte déchiquetée se transforme en un enchevêtrement vif et goutte à goutte où chaque brin porte de la chaux aigre, de la sauce de poisson salée, et assez de chaleur de chili pour rendre les bouts de vos oreilles rouges.",
+  "cuisine": "Thaï",
+  "culture": "Isan Thai",
+  "category": "vegetables",
+  "tags": [
+    "Thaï",
+    "salade",
+    "papaye",
+    "végétalien",
+    "épicé"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 1924,
+  "forks": 221,
+  "contributors": 30,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-07-03",
+  "updatedAt": "2025-05-18",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Pound aromatics",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "pounded_aromatics",
-      instructions: "In a large clay or stone mortar, add chilies and garlic. Pound with the pestle until broken down into a coarse paste — not smooth, but no large chunks. The breaking of the cells releases volatile compounds that make the salad fragrant and permeating. A wooden salad bowl and spoon cannot replicate this; the mortar is not optional.",
-      visualCue: {
-        primaryTarget: "Garlic and chilies are bruised and broken, releasing oils — you should see a slightly moist, fragrant paste with visible texture.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is still in whole pieces; chilies are cracked but not broken open.", action: "Continue pounding — 15-20 firm strikes with the pestle." },
-          { state: "Perfect",   description: "Coarse paste — garlic mashed to a pulp with some fibrous bits, chilies split and releasing orange-red oil. Smells sharply of raw garlic and chili.", action: "Add long beans and tomatoes." },
-          { state: "Overdone",  description: "Smooth, wet paste with no texture — the garlic bitterness is overextracted.", action: "This is fine; the flavors will balance once the dressing is added." },
-        ],
-      },
-      feelCue: "Your eyes should be watering slightly from the volatile chili compounds released into the air — that's the mortar working correctly.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Papaya verte (non mûre), pelée et déchiquetée en allumettes",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mangue verte",
+        "KOHLRABI",
+        "Jicama"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Bruise vegetables",
-      inputs: ["pounded_aromatics", "ing_08", "ing_09"],
-      outputState: "bruised_vegetables",
-      instructions: "Add long beans and cherry tomatoes to the mortar. Use the pestle to bruise them — press and lightly pound the tomatoes until they release juice, and crack the beans open slightly. Then use a large spoon to toss everything together. The mortar technique simultaneously bruises and dresses — the vegetables should crack open, not disintegrate.",
-      visualCue: {
-        primaryTarget: "Tomatoes are lightly crushed and releasing red juice; long beans are cracked at intervals but still hold their shape.",
-        spectrum: [
-          { state: "Underdone", description: "Tomatoes are intact with no juice released; beans are whole and impermeable — they won't absorb the dressing.", action: "Bruise more firmly with the pestle, pressing down rather than striking." },
-          { state: "Perfect",   description: "Tomatoes are split and juicy, long beans cracked in several places. The bottom of the mortar has a puddle of mixed tomato juice and chili-garlic paste.", action: "Add papaya and dressing." },
-          { state: "Overdone",  description: "Tomatoes are completely mashed into pulp; beans are mushy — texture is lost.", action: "Continue with the recipe. The sauce will be thicker and more tomato-forward." },
-        ],
-      },
-      feelCue: "Press a bruised bean between your fingers — it should flex and bend without snapping, meaning it's cracked open but still has structural integrity.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Chilies oculaires thaïes (2-5, ajuster à la tolérance)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "serrano chilies"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mix dressing",
-      inputs: ["ing_04", "ing_05", "ing_06"],
-      outputState: "som_tam_dressing",
-      instructions: "In a small bowl, combine lime juice, fish sauce, and palm sugar. Stir until sugar dissolves. Taste — it should be aggressively sour with a savory backbone and a subtle sweetness. This dressing ratio is a starting point; adjust to your preference before adding to the salad. In Thailand, som tam is adjusted to order at the mortar.",
-      visualCue: {
-        primaryTarget: "Clear golden dressing with dissolved sugar — no crystals visible.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar granules still visible at the bottom of the bowl.", action: "Stir more vigorously or warm briefly in the microwave for 5 seconds." },
-          { state: "Perfect",   description: "Fully dissolved, smooth, bright yellow-gold. Tastes sour-first, savory-second, barely sweet. The lime aroma is vivid.", action: "Pour over the papaya." },
-          { state: "Overdone",  description: "Not applicable for a cold dressing, but if the ratio is wrong — too sweet or too salty — adjust now before adding to the papaya, which is hard to fix once combined.", action: "Adjust with more lime juice or fish sauce as needed." },
-        ],
-      },
-      feelCue: "Taste the dressing alone — it should be too much of everything, which is correct, because the green papaya is very neutral and will absorb and temper all the flavors.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Toss and serve",
-      inputs: ["ing_01", "ing_07", "bruised_vegetables", "som_tam_dressing"],
-      outputState: "finished_som_tam",
-      instructions: "Add shredded papaya and dried shrimp to the mortar. Pour dressing over the top. Using both the pestle (lightly) and a large spoon, toss and bruise everything together for 1-2 minutes — simultaneously mixing and pressing to help the papaya absorb the dressing. Taste, adjust, and serve immediately alongside sticky rice.",
-      visualCue: {
-        primaryTarget: "Papaya strands are glistening with dressing, slightly wilted but still with crunch — vivid white-green against red tomato and orange dried shrimp.",
-        spectrum: [
-          { state: "Underdone", description: "Papaya strands are still dry and pale; dressing pools at the bottom of the mortar rather than clinging to the papaya.", action: "Continue tossing and lightly pounding for another minute; the papaya needs to be slightly bruised to absorb." },
-          { state: "Perfect",   description: "Every papaya strand glistens with dressing and has absorbed the lime-sour flavor. Crunch is present but slightly yielded. Colors are vivid. The smell is lime, fish sauce, and chili.", action: "Plate and serve immediately." },
-          { state: "Overdone",  description: "Papaya has wilted to limpness; texture is lost and the salad looks waterlogged.", action: "Serve immediately regardless — wilted som tam is still delicious, just softer. Next time, serve faster after mixing." },
-        ],
-      },
-      feelCue: "Grab a pinch of dressed papaya — it should feel cool and crisp with a slight moisture, the papaya releasing a small amount of juice when squeezed but not turning to mush.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Jus de chaux frais (à partir de 2-3 chaux)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "sauce de poisson (ou sauce de soja pour végétalien)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "soja léger + MSG pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Sucre de palme, rasé (ou cassonade)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sucre de coco",
+        "sucre brun"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Protein",
+      "name": "Crevettes séchées (kung haeng) — en option pour le style Isan",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omit pour végétarien"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Structure",
+      "name": "Tomates cerises, coupées en deux",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Tomates régulières, classées"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Structure",
+      "name": "Haricots longs ou haricots verts, coupés en morceaux de 3 cm",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Faire craquer les pois"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre aromatiques",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "pounded_aromatics",
+      "instructions": "Dans un grand mortier d'argile ou de pierre, ajouter les piments et l'ail. Pound avec le pestle jusqu'à ce qu'il se décompose en pâte grossière — pas lisse, mais pas de gros morceaux. La rupture des cellules libère des composés volatils qui rendent la salade parfumée et imprégnante. Un saladier et une cuillère en bois ne peuvent pas reproduire cela; le mortier n'est pas facultatif.",
+      "visualCue": {
+        "primaryTarget": "L'ail et les piments sont meurtris et cassés, libérant des huiles — vous devriez voir une pâte légèrement humide et parfumée avec une texture visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est toujours en morceaux entiers; les piments sont fissurés mais non cassés.",
+            "action": "Continuer à frapper — 15-20 grèves fermes avec le pestle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte grossière — purée d'ail à une pulpe avec des morceaux fibreux, des chilis fendus et libérant de l'huile rouge-orange. Sensation d'ail cru et de chili.",
+            "action": "Ajouter les haricots longs et les tomates."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pâte douce et humide sans texture: l'amertume à l'ail est surextractible.",
+            "action": "C'est très bien, les saveurs seront équilibrées une fois la vinaigrette ajoutée."
+          }
+        ]
+      },
+      "feelCue": "Vos yeux devraient être légèrement arrosés à partir des composés volatils de chili libérés dans l'air — c'est le mortier qui fonctionne correctement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Légumes bleus",
+      "inputs": [
+        "pounded_aromatics",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "bruised_vegetables",
+      "instructions": "Ajouter les haricots longs et les tomates cerises au mortier. Utilisez le pestle pour les ecchymoses — pressez et tapez légèrement les tomates jusqu'à ce qu'elles libèrent du jus, et fissurez légèrement les haricots. Ensuite, utilisez une grande cuillère pour jeter tout ensemble. La technique du mortier en même temps meurtrissures et robes — les légumes doivent s'ouvrir et ne pas se désintégrer.",
+      "visualCue": {
+        "primaryTarget": "Les tomates sont légèrement broyées et libèrent du jus rouge; les haricots longs sont fissurés à intervalles mais conservent leur forme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tomates sont intactes sans jus libéré; les haricots sont entiers et imperméables — ils n'absorbent pas la vinaigrette.",
+            "action": "Bruser plus fermement avec le pilon, presser vers le bas plutôt que frapper."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tomates sont fendues et juteuses, de longs haricots fêlés en plusieurs endroits. Le fond du mortier a une flaque de jus de tomate mélangé et de pâte chili-ail.",
+            "action": "Ajouter la papaye et la vinaigrette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tomates sont complètement broyées en pulpe; les haricots sont musqués — la texture est perdue.",
+            "action": "Continuez avec la recette. La sauce sera plus épaisse et plus tomate."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un haricot meurtri entre les doigts — il doit fléchir et plier sans se casser, ce qui signifie qu'il est ouvert mais a encore l'intégrité structurelle."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélanger la vinaigrette",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "som_tam_dressing",
+      "instructions": "Dans un petit bol, mélanger le jus de lime, la sauce de poisson et le sucre de palme. Incorporer jusqu'à dissolution du sucre. Goûter — il doit être amer avec agressivité avec une colonne vertébrale salée et une douceur subtile. Ce ratio de vinaigrette est un point de départ; ajuster à votre préférence avant d'ajouter à la salade. En Thaïlande, le tampon som est ajusté à l'ordre au mortier.",
+      "visualCue": {
+        "primaryTarget": "Une vinaigrette dorée claire avec du sucre dissous — aucun cristal visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des granules de sucre encore visibles au fond du bol.",
+            "action": "Incorporer plus vigoureusement ou réchauffer brièvement le micro-ondes pendant 5 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement dissout, lisse, doré jaune vif. Goûte aigre-première, savoureuse-seconde, à peine sucré. L'arôme de chaux est vif.",
+            "action": "Verser sur la papaye."
+          },
+          {
+            "state": "Overdone",
+            "description": "Non applicable pour une vinaigrette froide, mais si le rapport est incorrect — trop sucré ou trop salé — ajuster maintenant avant d'ajouter à la papaye, qui est difficile à fixer une fois combiné.",
+            "action": "Ajuster avec plus de jus de lime ou de sauce de poisson au besoin."
+          }
+        ]
+      },
+      "feelCue": "Goûtez la vinaigrette seule — elle devrait être trop de tout, ce qui est correct, car la papaye verte est très neutre et absorbera et tempérera toutes les saveurs."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Verser et servir",
+      "inputs": [
+        "ing_01",
+        "ing_07",
+        "bruised_vegetables",
+        "som_tam_dressing"
+      ],
+      "outputState": "finished_som_tam",
+      "instructions": "Ajouter la papaye déchiquetée et les crevettes séchées au mortier. Verser la vinaigrette sur le dessus. En utilisant à la fois le pestle (légèrement) et une grande cuillère, jetez et ecchymosez tout ensemble pendant 1 à 2 minutes — en mélangeant et en appuyant simultanément pour aider la papaye à absorber la vinaigrette. Goûtez, ajustez et servez immédiatement le riz collant.",
+      "visualCue": {
+        "primaryTarget": "Les brins de papaye scintillent avec de la vinaigrette, légèrement flétris, mais encore avec de la croûte – vert blanc vif contre la tomate rouge et les crevettes séchées à l'orange.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les brins de papaye sont encore secs et pâles; les bassins de pansement au fond du mortier plutôt que de s'accrocher à la papaye.",
+            "action": "Continuez à jeter et à frapper légèrement pendant une autre minute; la papaye doit être légèrement meurtrie pour absorber."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque brin de papaye brille avec la vinaigrette et a absorbé la saveur de chaux-sour. La croûte est présente mais légèrement produite. Les couleurs sont vives. L'odeur est la chaux, la sauce de poisson et le chili.",
+            "action": "Assortir et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La papaye s'est flétrie jusqu'au limon; la texture est perdue et la salade a l'air waterlogged.",
+            "action": "Servir immédiatement, quelle que soit sa forme, le tam est toujours délicieux, juste plus doux. La prochaine fois, servir plus vite après le mélange."
+          }
+        ]
+      },
+      "feelCue": "Prenez une pincée de papaye habillée — il devrait se sentir frais et croustillant avec une légère humidité, la papaye libérant une petite quantité de jus lorsqu'elle est pressée mais ne se tournant pas à la bouillie."
+    }
+  ]
 };

@@ -1,116 +1,267 @@
 export default {
-  repoId: "master_french_dacquoise_001",
-  parentRepoId: null,
-  slug: "dacquoise",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Hazelnut Dacquoise",
-  description: "Crisp, cloud-light meringue discs bolstered by toasted hazelnut flour, layered with praline buttercream — crunchy at the edges, chewy at the center, and with a richness that slowly gives way to the clean lift of whipped sugar.",
-  cuisine: "French",
-  culture: "French",
-  category: "desserts",
-  tags: ["dacquoise", "meringue", "hazelnut", "french", "gluten-free", "layer-cake", "pastry"],
-  difficulty: 4,
-  activeTime: "60 min",
-  totalTime: "4 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 5, salty: 1, sour: 0, bitter: 2, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Egg whites (large, room temperature, no trace of yolk)", ratioValue: 6, defaultUnit: "whites", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener", name: "Caster sugar",                                           ratioValue: 150, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Structure", name: "Hazelnut flour (toasted, skins-on ground hazelnut)",     ratioValue: 150, defaultUnit: "g", substitutions: ["almond flour"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Icing (powdered) sugar",                                 ratioValue: 100, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",                                          ratioValue: 1,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Unsalted butter (softened, for praline buttercream)",    ratioValue: 250, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Sweetener", name: "Praline paste (hazelnut, store-bought or home-made)",   ratioValue: 120, defaultUnit: "g", substitutions: ["smooth peanut butter for a different register"] },
-    { ingId: "ing_08", role: "Binder",    name: "Egg yolks (for pâte à bombe base)",                     ratioValue: 3,   defaultUnit: "yolks", substitutions: [] },
+  "repoId": "master_french_dacquoise_001",
+  "parentRepoId": null,
+  "slug": "dacquoise",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Noisette Dacquoise",
+  "description": "Crisp, disque de meringue bleuté soutenu par la farine de noisette grillée, en couches de crème au beurre de praline – croquant aux bords, croustillant au centre, et avec une richesse qui laisse lentement place à la levée propre du sucre fouetté.",
+  "cuisine": "Français",
+  "culture": "Français",
+  "category": "desserts",
+  "tags": [
+    "dacquoise",
+    "meringue",
+    "Noisette",
+    "français",
+    "Sans gluten",
+    "cake-couche",
+    "pâtisserie"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "60 min",
+  "totalTime": "4 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_03"],
-      outputState: "toasted_hazelnut_flour",
-      instructions: "If starting from whole hazelnuts: roast at 175 C (350 F) for 12-15 minutes, rub in a kitchen towel to remove skins, then pulse in a food processor with the icing sugar until fine but not paste. If using pre-ground hazelnut flour: spread on a tray and toast at 160 C for 8-10 minutes, stirring once, until fragrant and lightly golden. Cool completely before using.",
-      visualCue: {
-        primaryTarget: "Fine, dry hazelnut flour with a warm tan color — visibly darker than raw, with small golden-brown flecks. The smell is rich, nutty, and warm.",
-        spectrum: [
-          { state: "Underdone", description: "Flour is still pale ivory. The raw, slightly bitter smell of untoasted nuts remains.", action: "Return to the oven for 3-5 more minutes, watching closely." },
-          { state: "Perfect",   description: "Golden-tan color with dark flecks from toasted skins. Fills the kitchen with a warm, roasty hazelnut aroma. Dry to the touch.", action: "Cool to room temperature before folding into meringue — hot flour will deflate the whites instantly." },
-          { state: "Overdone",  description: "Dark brown, approaching burnt. Bitter rather than nutty smell.", action: "Discard and re-toast with a new batch — burnt hazelnut flour ruins the dacquoise with bitterness." },
-        ],
-      },
-      feelCue: "Properly toasted hazelnut flour pinched between two fingers feels dry and light, releasing an immediate wave of roasted nut smell — like freshly ground espresso, but warmer.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Blancs d'oeufs (large, température ambiante, aucune trace de jaune)",
+      "ratioValue": 6,
+      "defaultUnit": "whites",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Whip",
-      inputs: ["ing_01", "ing_02", "ing_05"],
-      outputState: "stiff_meringue",
-      instructions: "In a scrupulously clean, dry bowl, whip egg whites with salt on medium speed until frothy and opaque. Increase to medium-high and add caster sugar one tablespoon at a time over 3-4 minutes. Continue whipping until the meringue is stiff, very glossy, and the sugar is completely dissolved (rub between fingertips — no grittiness). The meringue should stand in firm peaks that do not droop at all.",
-      visualCue: {
-        primaryTarget: "Bright white, glossy meringue that stands in firm, upright peaks — the peak curls back slightly but the body holds completely rigid. Looks like polished white satin.",
-        spectrum: [
-          { state: "Underdone", description: "Peaks fold over softly and the meringue feels gritty when rubbed — undissolved sugar. The meringue looks dull and slightly wet.", action: "Continue whipping on medium-high for 2-3 more minutes. Test for dissolved sugar by rubbing between finger and thumb." },
-          { state: "Perfect",   description: "Firm, glossy, and completely smooth. Stiff peaks stand upright without drooping. No grittiness. When the bowl is tipped, the meringue does not slide.", action: "Fold in the hazelnut mixture immediately." },
-          { state: "Overdone",  description: "Meringue is dry, lumpy, and no longer glossy. It looks like fluffy cotton wool and tears when lifted.", action: "Unfortunately cannot be recovered — over-whipped whites produce a dacquoise that crumbles rather than having the characteristic chewy-crisp bite." },
-        ],
-      },
-      feelCue: "Rub a small amount of meringue between your index finger and thumb — it should feel silky-smooth and cool, with zero graininess. Any trace of sugar crystals means another two minutes of whipping.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["stiff_meringue", "toasted_hazelnut_flour", "ing_04"],
-      outputState: "dacquoise_batter",
-      instructions: "Sift icing sugar over the toasted hazelnut flour and stir to combine. Working quickly, fold the hazelnut mixture into the meringue in three additions using a large metal spoon or flat spatula. Cut through the center, sweep under, and flip — do not stir in circles. The mixture will deflate somewhat; this is expected. Stop when no streaks of white meringue are visible.",
-      visualCue: {
-        primaryTarget: "A thick, spoonable batter of pale beige color — darker than pure meringue, lighter than the hazelnut flour alone. Holds a shape when dolloped but is not stiff.",
-        spectrum: [
-          { state: "Underdone", description: "White meringue streaks still visible throughout. The batter is still two-toned when scooped.", action: "Three more deliberate cuts-and-folds. Work decisively but not hastily." },
-          { state: "Perfect",   description: "Uniform pale-beige color. The batter holds a soft mound when spooned but slowly levels out over 10 seconds.", action: "Pipe or spread into circles immediately — the batter deflates if left waiting." },
-          { state: "Overdone",  description: "Batter has become runny and spreads immediately flat on the spoon. The meringue structure has been destroyed.", action: "Spread immediately in thin layers and bake as-is — the dacquoise will be denser but still edible." },
-        ],
-      },
-      feelCue: "Each fold should meet light resistance and then yield softly — the rhythm is slow and deliberate, like turning over a large dune of snow without collapsing it.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine de noisettes",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Farine d'amande"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["dacquoise_batter"],
-      outputState: "baked_dacquoise_discs",
-      instructions: "Preheat oven to 150 C (300 F) fan. Draw three 20cm circles on baking paper, flip the paper over. Pipe or spread the batter evenly within the circles to about 1.5cm thick. Bake 30-35 minutes until lightly golden on the surface and firm to the touch. Turn off the oven and prop the door open 2cm; leave the dacquoise inside for 30 minutes to dry out slowly. This gives the characteristic dry crust with chewy interior.",
-      visualCue: {
-        primaryTarget: "Pale ivory-beige discs with a dry, lightly golden surface. The edges are slightly darker. The surface should feel firm and papery when tapped — not sticky.",
-        spectrum: [
-          { state: "Underdone", description: "Surface is still tacky and yields to light finger pressure like a marshmallow. The dacquoise will stick to the paper when peeled.", action: "Return to the oven for 5-8 more minutes and then rest in the open oven again." },
-          { state: "Perfect",   description: "Light golden surface, paper-dry to the touch. Lifts cleanly from baking paper. The underside has a thin caramel-brown crust. Smells of toasted hazelnut and sugar.", action: "Cool completely on a rack before layering — warm dacquoise absorbs moisture from the cream and softens." },
-          { state: "Overdone",  description: "Surface is deeply golden-brown and the edges are dark. The disc has flattened and is fully dry and brittle throughout with no chew.", action: "Use immediately — over-baked dacquoise becomes very brittle and the layers will shatter when cut." },
-        ],
-      },
-      feelCue: "A properly dried dacquoise sounds hollow when tapped — a light, dry click rather than a dull thud. The underside should peel away from the paper with a satisfying snap at the edges.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre (poncelé)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Cream",
-      inputs: ["ing_06", "ing_07", "ing_08"],
-      outputState: "praline_buttercream",
-      instructions: "Beat softened butter until very pale and fluffy, about 5 minutes. In a separate bowl, whisk egg yolks until pale. Make a pâte à bombe: boil caster sugar with a little water to 121 C (250 F) soft-ball stage, then pour slowly onto whisking yolks. Whip until cool. Beat the pâte à bombe into the butter gradually, then beat in the praline paste. The buttercream should be smooth, pipeable, and hold a firm peak. Assemble the dacquoise: dacquoise disc, buttercream, dacquoise, buttercream, dacquoise. Chill 1 hour before cutting.",
-      visualCue: {
-        primaryTarget: "Pale caramel-golden buttercream that holds clean, defined peaks when the paddle is lifted. Smooth and silky with no visible butter lumps or air pockets.",
-        spectrum: [
-          { state: "Underdone", description: "Buttercream looks broken and curdled — yellow butter chunks floating in liquid. The butter was too cold when added to the warm pâte à bombe.", action: "Continue beating on medium speed. It will emulsify as the temperature equilibrates. If still broken after 5 minutes, gently warm the bowl with a hair dryer while beating." },
-          { state: "Perfect",   description: "Creamy, smooth, holds a firm ribbon. Golden from the praline paste. Tastes of hazelnut caramel and butter.", action: "Use immediately or refrigerate, beating briefly again before use." },
-          { state: "Overdone",  description: "Greasy, grainy texture. The buttercream has been beaten too long and the butter has separated to the edges.", action: "Refrigerate 20 minutes and beat again on medium speed to re-emulsify." },
-        ],
-      },
-      feelCue: "Properly made praline buttercream should feel like cool, thick velvet on the spatula — it holds a clean groove when dragged, and the praline gives a faint grittiness that melts instantly on the tongue.",
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé (doublé, pour crème de beurre de praline)",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Pâte de praline (hazelnut, magasin acheté ou maison)",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "beurre d'arachide lisse pour un registre différent"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Binder",
+      "name": "Jaunes d'œufs (pour pâte à bombe)",
+      "ratioValue": 3,
+      "defaultUnit": "yolks",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "toasted_hazelnut_flour",
+      "instructions": "Si à partir de noisettes entières: rôtir à 175 C (350 F) pendant 12-15 minutes, frotter dans une serviette de cuisine pour enlever les peaux, puis l'impulsion dans un robot alimentaire avec le sucre glaçant jusqu'à fin mais pas de pâte. Si vous utilisez de la farine de noisette pré-moulue : étaler sur un plateau et faire griller à 160 C pendant 8-10 minutes, en remuant une fois, jusqu'à odorat et légèrement doré. Laisser refroidir complètement avant utilisation.",
+      "visualCue": {
+        "primaryTarget": "Farine de noisette fine et sèche de couleur bronzée chaude, visiblement plus foncée que crue, avec de petites taches dorées. L'odeur est riche, noisette et chaude.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La farine est encore de l'ivoire pâle. L'odeur crue et légèrement amère des noix intactes reste.",
+            "action": "Retourner au four 3-5 minutes de plus, en regardant attentivement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur dorée avec des taches foncées de peaux grillées. Remplit la cuisine d'un arôme de noisette chaud et rôti. Sécher au toucher.",
+            "action": "Laisser refroidir à température ambiante avant de se plier en meringue — la farine chaude dégonflera instantanément les blancs."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé, en approche brûlée. Une odeur amère plutôt que noisette.",
+            "action": "La farine de noisette brûlée détruit le dacquoise avec amertume."
+          }
+        ]
+      },
+      "feelCue": "La farine de noisette bien grillée, pincée entre deux doigts, est sèche et légère, ce qui libère une vague immédiate d'odeur de noisette rôtie, comme l'espresso fraîchement moulu, mais plus chaude."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whip",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_05"
+      ],
+      "outputState": "stiff_meringue",
+      "instructions": "Dans un bol soigneusement propre et sec, fouetter les blancs d'oeufs avec du sel à vitesse moyenne jusqu'à ce qu'ils soient mousseux et opaques. Augmenter à moyenne-élevée et ajouter le sucre de castre une cuillère à soupe à la fois sur 3-4 minutes. Continuez à fouetter jusqu'à ce que la meringue soit raide, très brillante, et que le sucre soit complètement dissous (rub entre les doigts — pas de graisse). La meringue devrait se tenir dans des sommets fermes qui ne s'enfoncent pas du tout.",
+      "visualCue": {
+        "primaryTarget": "Blanc brillant, meringue brillant qui se tient dans des pics fermes, droits — le pic se recourbe légèrement mais le corps reste complètement rigide. On dirait du satin blanc poli.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pics se plient doucement et la meringue se sent mal en frottant — du sucre non dissous. La meringue semble terne et légèrement humide.",
+            "action": "Continuer à fouetter sur moyenne-élevé pendant 2-3 minutes de plus. Tester le sucre dissous en frottant entre le doigt et le pouce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ferme, brillant et complètement lisse. Les pics raides se tiennent debout sans s'enfoncer. Pas de grittness. Lorsque le bol est renversé, la meringue ne glisse pas.",
+            "action": "Pliez immédiatement dans le mélange de noisettes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le meringue est sec, grumeux et n'est plus brillant. On dirait de la laine de coton et des larmes lorsqu'elles sont levées.",
+            "action": "Malheureusement, il n'est pas possible de récupérer — les blancs trop fouettés produisent un dacquoise qui s'émiette plutôt que d'avoir la morsure caractéristique de la croûte."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité de meringue entre votre index et le pouce — il devrait se sentir soyeux et frais, avec zéro grain. Toute trace de cristaux de sucre signifie encore deux minutes de fouettage."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "stiff_meringue",
+        "toasted_hazelnut_flour",
+        "ing_04"
+      ],
+      "outputState": "dacquoise_batter",
+      "instructions": "Givrer le sucre sur la farine de noisette grillée et mélanger. Travailler rapidement, plier le mélange de noisettes dans la meringue en trois ajouts à l'aide d'une grande cuillère en métal ou d'une spatule plate. Coupez à travers le centre, balayez et retournez — ne remuez pas en cercles. Le mélange se dégonflera quelque peu, ce qui est attendu. Arrêtez quand aucune stries de meringue blanche ne sont visibles.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse à cuiller de couleur beige pâle, plus foncée que la meringue pure, plus légère que la farine de noisette seule. Tient une forme lorsqu'elle est dollopée mais n'est pas raide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries de meringue blanches encore visibles. La pâte est encore à deux tons quand elle est écopée.",
+            "action": "Trois autres coupures délibérées. Travaillez de manière décisive mais pas à la hâte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur beige pâle uniforme. La pâte tient un monticule doux lorsqu'elle est cuillé mais s'éteint lentement pendant 10 secondes.",
+            "action": "Tuyauter ou se répandre immédiatement dans les cercles — la pâte dégonfle si elle reste en attente."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le battement est devenu liquide et se répand immédiatement à plat sur la cuillère. La structure meringuée a été détruite.",
+            "action": "Étendre immédiatement en couches minces et cuire comme si — le dacquoise sera plus dense mais toujours comestible."
+          }
+        ]
+      },
+      "feelCue": "Chaque pli doit répondre à la résistance de la lumière et ensuite se produire doucement — le rythme est lent et délibéré, comme retourner une grande dune de neige sans l'effondrer."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "dacquoise_batter"
+      ],
+      "outputState": "baked_dacquoise_discs",
+      "instructions": "Préchauffer le four à 150 C (300 F) ventilateur. Dessiner trois cercles de 20 cm sur du papier à cuisson, retourner le papier. Piper ou étaler la pâte uniformément dans les cercles à environ 1,5 cm d'épaisseur. Cuire 30-35 minutes jusqu'à ce que la surface soit légèrement dorée et ferme au toucher. Éteignez le four et installez la porte ouverte 2cm; laissez le dacquoise à l'intérieur pendant 30 minutes pour sécher lentement. Cela donne la croûte sèche caractéristique à l'intérieur mâché.",
+      "visualCue": {
+        "primaryTarget": "Disques ivoire beige pâle avec une surface sèche légèrement dorée. Les bords sont légèrement plus foncés. La surface doit être ferme et papier lorsqu'elle est tapée, et non collante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est encore tacky et donne à la légère pression des doigts comme un guimauve. La dacquoise collera au papier une fois pelé.",
+            "action": "Revenez au four 5-8 minutes de plus et reposez-vous ensuite dans le four ouvert."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface dorée claire, papier sec au toucher. Soulève proprement du papier de cuisson. Le dessous a une fine croûte brun caramel. Des odeurs de noisettes grillées et de sucre.",
+            "action": "Refroidir complètement sur un rack avant de superposer — le dacquoise chaud absorbe l'humidité de la crème et adoucit."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface est profondément dorée et les bords sont sombres. Le disque s'est aplati et est entièrement sec et fragile, sans mâcher.",
+            "action": "Utiliser immédiatement — la dacquoise surcuite devient très fragile et les couches se briseront lorsqu'elles seront coupées."
+          }
+        ]
+      },
+      "feelCue": "Une dacquoise bien séchée semble creuse lorsqu'elle est tapotée — un clic léger et sec plutôt qu'un bruit terne. La face inférieure doit se détacher du papier avec une touche satisfaisante aux bords."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Crème",
+      "inputs": [
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "praline_buttercream",
+      "instructions": "Battre le beurre ramolli jusqu'à très pâle et moelleux, environ 5 minutes. Dans un bol séparé, fouetter les jaunes d'œufs jusqu'à ce qu'ils soient pâles. Faire une pâte à bombe : faire bouillir le sucre de roulette avec un peu d'eau jusqu'à 121 C (250 F) étape de balle molle, puis verser lentement sur les jaunes fouettants. Whip jusqu'à ce que ça refroidisse. Battre progressivement la pâte à bomber dans le beurre, puis battre dans la pâte de praline. La crème au beurre doit être lisse, pipeable, et tenir un pic ferme. Assemblez le dacquoise : disque dacquoise, crème au beurre, dacquoise, crème au beurre, dacquoise. Refroidir 1 heure avant de couper.",
+      "visualCue": {
+        "primaryTarget": "Pale caramel-golde crème au beurre qui tient propre, des pics définis lorsque la pagaie est levée. Doux et soyeux sans morceaux de beurre visible ni poches d'air.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème de beurre a l'air cassée et caillée: des morceaux de beurre jaune flottant dans du liquide. Le beurre était trop froid lorsqu'il était ajouté à la pâte à bombe chaude.",
+            "action": "Continuez à battre à vitesse moyenne. Il émulsifiera à mesure que la température s'équilibre. Si elle est toujours cassée après 5 minutes, réchauffez doucement le bol avec un sèche-cheveux tout en battant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crémeux, doux, tient un ruban ferme. Or de la pâte de praline. Goûts de caramel de noisette et de beurre.",
+            "action": "Utiliser immédiatement ou réfrigérer, battre brièvement avant utilisation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Graisse, texture granuleuse. La crème au beurre a été battue trop longtemps et le beurre s'est séparé des bords.",
+            "action": "Réfrigérer 20 minutes et battre à nouveau à vitesse moyenne pour réémulsionner."
+          }
+        ]
+      },
+      "feelCue": "La crème au beurre de praline bien faite devrait être fraîche et épaisse sur la spatule; elle tient une rainure propre lorsqu'elle est traînée, et la praline donne un léger gras qui fond instantanément sur la langue."
+    }
+  ]
 };

@@ -1,138 +1,296 @@
 export default {
-  repoId: "master_french_macarons_001",
-  parentRepoId: null,
-  slug: "macarons",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-
-  title: "French Macarons",
-  description: "Gossamer almond shells that shatter at the tooth then melt into a chewy, jammy core — the product of aged egg whites, a precise batter, and the ruthless alchemy of the macaronage.",
-  cuisine: "French",
-  culture: "Parisian",
-  category: "desserts",
-
-  tags: ["gluten-free", "french", "almond", "meringue", "sandwich-cookie", "baking", "patisserie"],
-  difficulty: 5,
-  activeTime: "60 min",
-  totalTime: "3 hr",
-  ratioSystem: "weight",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 5, salty: 1, sour: 1, bitter: 0, umami: 0, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Almond flour (blanched, super-fine)", ratioValue: 100, defaultUnit: "g", substitutions: ["hazelnut flour for a praline variant"] },
-    { ingId: "ing_02", role: "Sweetener",  name: "Icing sugar (powdered sugar, sifted)", ratioValue: 100, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Protein",    name: "Aged egg whites (room temperature)", ratioValue: 75,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Sweetener",  name: "Caster sugar (fine granulated)",     ratioValue: 75,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Liquid",     name: "Water (for sugar syrup)",             ratioValue: 25,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine sea salt",                       ratioValue: 1,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",        name: "Unsalted butter (softened, for filling)", ratioValue: 80, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Sweetener",  name: "Icing sugar (for buttercream filling)", ratioValue: 160, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_french_macarons_001",
+  "parentRepoId": null,
+  "slug": "macarons",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Macarons français",
+  "description": "Les coquilles d'amande de Gossamer qui se brisent à la dent puis fondent dans un noyau de confiture, le produit des blancs d'œuf vieillis, une pâte précise, et l'alchimie impitoyable du macaronage.",
+  "cuisine": "Français",
+  "culture": "Parisien",
+  "category": "desserts",
+  "tags": [
+    "Sans gluten",
+    "français",
+    "Amandes",
+    "meringue",
+    "Cookie sandwich",
+    "Cuisson",
+    "pâtisserie"
   ],
-
-  processNodes: [
+  "difficulty": 5,
+  "activeTime": "60 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 1,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "tant_pour_tant",
-      instructions: "Pulse almond flour and icing sugar together in a food processor for 30 seconds to eliminate any lumps and evenly combine. Sift through a fine-mesh sieve. Discard any large almond pieces that won't pass. The mixture should feel like talc — if it clumps, your almond flour is too moist; spread it on a sheet tray and dry in a 100 C oven for 10 minutes.",
-      visualCue: {
-        primaryTarget: "A perfectly uniform, fluffy, off-white powder with no lumps, no coarse almond slivers, no icing-sugar clumps.",
-        spectrum: [
-          { state: "Underdone", description: "Coarse almond pieces or visible sugar lumps remain after sifting.", action: "Re-process and re-sift. Lumps prevent a smooth shell surface." },
-          { state: "Perfect",   description: "Silky, dusty powder that cascades through the sieve without effort. Consistent pale cream colour.", action: "Set aside and prepare the Italian meringue." },
-          { state: "Overdone",  description: "Mixture looks oily and clumped — almond fat has been released by over-processing.", action: "Discard and start with fresh almond flour. Once oily, it cannot be corrected." },
-        ],
-      },
-      feelCue: "Rub a pinch between your fingers — it should feel like smooth face powder, with no graininess and no oily residue.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine d'amande (blanchie, super fine)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Farine de noisettes pour une variante de praline"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whip",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "italian_meringue",
-      instructions: "Cook caster sugar and water in a small saucepan to 118 C (soft-ball stage), without stirring. Meanwhile, whip the aged egg whites with salt to soft peaks on medium speed. When the syrup hits 118 C, increase mixer to high and pour the syrup in a thin, steady stream down the bowl wall (not onto the whisk). Whip on high for 8-10 minutes until the bowl is no longer hot to the touch and the meringue is stiff and glossy.",
-      visualCue: {
-        primaryTarget: "A stiff, brilliant white meringue that forms sharp, upright peaks. The bowl should feel no warmer than body temperature.",
-        spectrum: [
-          { state: "Underdone", description: "Peaks flop over softly. Meringue feels warm. Surface is still slightly grainy from undissolved sugar.", action: "Continue whipping on high — the meringue must cool and reach full stiffness before macaronage." },
-          { state: "Perfect",   description: "Peaks are stiff and slightly curled at the very tip. Meringue is silky-smooth and brilliant. When you lift the whisk, a beak forms and holds.", action: "Begin macaronage immediately while meringue is still at its peak." },
-          { state: "Overdone",  description: "Meringue looks curdled, watery, or separating at the bowl edges. Peaks are crumbly, not silky.", action: "Overwhipped meringue cannot be fixed — start again. The macarons will spread and crack." },
-        ],
-      },
-      feelCue: "Press the meringue between your thumb and forefinger — it should feel like satin, completely smooth, with zero graininess. If you feel sugar crystals, whip longer.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre écrémé (sucre pulvérisé, criblé)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["tant_pour_tant", "italian_meringue"],
-      outputState: "macaron_batter",
-      instructions: "Add the tant-pour-tant to the Italian meringue in two additions. Macaronage: using a wide rubber spatula, fold by pressing the batter flat against the side of the bowl, then scooping from the bottom and folding over. Work decisively — this is not a gentle fold. You are deliberately deflating the meringue to achieve the correct flow. Perform roughly 40-50 strokes. Stop when the batter flows from the spatula in a thick, continuous ribbon that disappears back into the bowl within 10 seconds.",
-      visualCue: {
-        primaryTarget: "A flowing, lava-like batter. When the spatula is lifted and batter falls, it forms a thick continuous ribbon that ribbon folds back and becomes smooth within 10 seconds.",
-        spectrum: [
-          { state: "Underdone", description: "Batter is stiff and lumpy. When spatula is lifted it breaks off in clumps rather than ribboning.", action: "Continue folding — under-macaronaged batter makes lumpy, peaked shells." },
-          { state: "Perfect",   description: "Thick flowing lava. Ribbon disappears back to a smooth surface in 8-10 seconds. Batter is shiny and flows uniformly.", action: "Transfer to a piping bag and pipe immediately." },
-          { state: "Overdone",  description: "Batter is runny, spreads immediately when the spatula is lifted. No ribbon forms — it just pours.", action: "Over-macaronaged batter cannot be saved. The shells will spread flat. Start again." },
-        ],
-      },
-      feelCue: "When you scoop a spatula-full and let it fall back into the bowl, it should flow off the spatula in a wide, glossy cascade, not drip in individual drops.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Blancs d'œuf vieillis (température ambiante)",
+      "ratioValue": 75,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["macaron_batter"],
-      outputState: "macaron_shells",
-      instructions: "Pipe 3.5 cm rounds onto silicone-mat-lined baking sheets, spacing 3 cm apart. Tap the sheet firmly on the counter 3-4 times to release large air bubbles. Let rest at room temperature for 30-45 minutes until the surface forms a dry skin — it should not stick to your fingertip. Bake one sheet at a time at 150 C (fan-forced) for 14-16 minutes. Shells are done when they slide cleanly off the mat with no resistance at the base.",
-      visualCue: {
-        primaryTarget: "Smooth, matte-surfaced domes with a ruffled 'foot' (pied) around the base and no cracks on the crown.",
-        spectrum: [
-          { state: "Underdone", description: "Shells stick to the mat. The foot is there but the base is still soft and comes away in pieces.", action: "Return to the oven for 2 more minutes. A proper shell releases cleanly when the mat is peeled back." },
-          { state: "Perfect",   description: "Smooth, uncracked dome. A proud, even foot. The shell slides off the mat cleanly when cool. Hollow sound when tapped.", action: "Cool fully on the mat before filling — minimum 30 minutes." },
-          { state: "Overdone",  description: "Shells are ivory or tan on top, not pale — the almond is browning. Texture will be dry and crumbly.", action: "Reduce oven temperature by 5 C next batch. Overly browned shells lose their chew." },
-        ],
-      },
-      feelCue: "Tap a cooled shell on its back — it should sound faintly hollow like a tiny ceramic bead, not dull and dense. Press the side gently: it should give slightly, like pressing a firm grape.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre de ricin (fin granulé)",
+      "ratioValue": 75,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Cream",
-      inputs: ["ing_07", "ing_08"],
-      outputState: "buttercream",
-      instructions: "Beat the softened butter alone for 3 minutes until very pale and fluffy. Add icing sugar in three additions, beating for 1 minute between each. The finished buttercream should be smooth, ivory, and stiff enough to hold a peak but soft enough to pipe easily. Add 1 tsp of vanilla or other flavouring, and a pinch of salt to balance.",
-      visualCue: {
-        primaryTarget: "Very pale, almost white buttercream that holds a stiff, smooth peak. No graininess visible.",
-        spectrum: [
-          { state: "Underdone", description: "Buttercream looks yellow and grainy — butter not yet fully aerated, sugar not fully incorporated.", action: "Beat for 2 more minutes. Properly creamed butter is nearly white, not yellow." },
-          { state: "Perfect",   description: "Pale ivory, silky-smooth, holds shape when piped. Springs back when pressed with a fingertip.", action: "Transfer to a piping bag and fill the macaron shells." },
-          { state: "Overdone",  description: "Buttercream looks curdled or soupy — either over-beaten or butter was too warm.", action: "Chill the bowl in the fridge for 10 minutes, then re-beat. If soupy, the butter was too hot — chill until firm and retry." },
-        ],
-      },
-      feelCue: "Taste a small amount — it should dissolve smoothly on the tongue with no graininess. If you can feel sugar crystals, beat longer.",
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau (pour le sirop de sucre)",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_6",
-      action: "Assemble",
-      inputs: ["macaron_shells", "buttercream"],
-      outputState: "finished_macarons",
-      instructions: "Match shells by size into pairs. Pipe a generous, even disc of buttercream onto the flat side of one shell, leaving a 2 mm border. Sandwich with its pair and press gently until the filling reaches the edge. Refrigerate, uncovered, for 24 hours — this is the 'maturation' step. The moisture from the filling softens the shell interior to its characteristic chewy texture. Bring to room temperature for 20 minutes before serving.",
-      visualCue: {
-        primaryTarget: "Uniform, neat sandwiches with filling visible in an even ring at the edge. Shells are smooth and uncracked.",
-        spectrum: [
-          { state: "Underdone", description: "Filling is squeezed to one side, sandwich is lopsided. Filling visible unevenly at edges.", action: "Apply filling more centrally next time. Gently press again to even out." },
-          { state: "Perfect",   description: "Filling forms a neat, even halo at the equator. Top and bottom shells aligned. Sandwich feels substantial but not heavy.", action: "Refrigerate for 24 hours to mature before serving." },
-          { state: "Overdone",  description: "Too much filling applied — it bulges beyond the shell edges and the sandwich feels cumbersome.", action: "Scrape back some filling and re-press. Ratio should be roughly 1:1 shell:filling by volume." },
-        ],
-      },
-      feelCue: "After 24 hours in the refrigerator, the macaron should yield to gentle pressure with a slight resistance — the shell exterior is still faintly crisp but the interior has softened to a chew that gives like a ripe fig.",
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Beurre non salé (doublé, pour le remplissage)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Sucre-circulation (pour la préparation de crème au beurre)",
+      "ratioValue": 160,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "tant_pour_tant",
+      "instructions": "Pulse la farine d'amande et le sucre glaçant ensemble dans un robot alimentaire pendant 30 secondes pour éliminer les morceaux et combiner uniformément. Passer à travers un tamis à mailles fines. Jeter les grosses amandes qui ne passeront pas. Le mélange doit se sentir comme du talc — si il s'agrippe, votre farine d'amande est trop humide; étalez-le sur un plateau de tôle et séchez-le dans un four 100 C pendant 10 minutes.",
+      "visualCue": {
+        "primaryTarget": "Une poudre parfaitement uniforme, moelleuse, blanc cassé, sans grumeaux, sans amandes grossières, sans givre-sucre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux d'amande grossière ou des morceaux de sucre visibles restent après le tamisage.",
+            "action": "Re-processus et re-sift. Les lumps empêchent une surface lisse de la coque."
+          },
+          {
+            "state": "Perfect",
+            "description": "Poudre soyeuse et poussiéreuse qui traverse le tamis sans effort. Couleur crème pâle constante.",
+            "action": "Réserver et préparer la meringue italienne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a l'air huileux et empilé — la graisse d'amande a été libérée par surtraitement.",
+            "action": "Jeter et commencer avec de la farine d'amande fraîche. Une fois huileux, il ne peut être corrigé."
+          }
+        ]
+      },
+      "feelCue": "Frottez une pincée entre vos doigts — elle devrait ressembler à de la poudre de visage lisse, sans grain et sans résidu huileux."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whip",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "italian_meringue",
+      "instructions": "Faire cuire le sucre de roulette et l'eau dans une petite casserole à 118 C (étape de boule molle), sans remuer. Pendant ce temps, fouetter les blancs d'œuf vieillis avec du sel à des pics doux à vitesse moyenne. Lorsque le sirop atteint 118 C, augmenter le mélangeur à haute et verser le sirop dans un flux mince et stable sur la paroi du bol (pas sur le fouet). Battre haut pendant 8-10 minutes jusqu'à ce que le bol ne soit plus chaud au toucher et que la meringue soit raide et brillante.",
+      "visualCue": {
+        "primaryTarget": "Une meringue blanche raide et brillante qui forme des pics droits et pointus. Le bol ne doit pas se sentir plus chaud que la température du corps.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pics flottent doucement. Meringue se sent chaud. La surface est encore légèrement granuleuse à partir de sucre non dissous.",
+            "action": "Continuez à fouetter en haut — la meringue doit refroidir et atteindre toute la raideur avant le macaronage."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pics sont raides et légèrement enroulés à l'extrémité même. Meringue est soyeuse et brillante. Quand vous levez le fouet, un bec se forme et tient.",
+            "action": "Commencez le macaronage immédiatement alors que la meringue est encore à son apogée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Meringue a l'air caillé, aqueux ou séparé aux bords du bol. Les pics sont friables, pas soyeux.",
+            "action": "La meringue dépassée ne peut être réparée — recommencez. Les macarons vont se propager et craquer."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la meringue entre votre pouce et l'index — il devrait se sentir comme satin, complètement lisse, avec zéro grain. Si vous sentez des cristaux de sucre, fouettez plus longtemps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "tant_pour_tant",
+        "italian_meringue"
+      ],
+      "outputState": "macaron_batter",
+      "instructions": "Ajoutez le tant-pour-tant à la meringue italienne en deux ajouts. Macaronage : à l'aide d'une large spatule en caoutchouc, plier en pressant la pâte à plat sur le côté du bol, puis s'écoper du bas et se replier. Travaillez de manière décisive — ce n'est pas un pli doux. Vous dégonflez délibérément la meringue pour obtenir le bon flux. Effectuez environ 40-50 coups. Arrêtez lorsque la pâte coule de la spatule dans un ruban épais et continu qui disparaît dans le bol en 10 secondes.",
+      "visualCue": {
+        "primaryTarget": "Une pâte qui coule comme de la lave. Lorsque la spatule est levée et que la pâte tombe, elle forme un épais ruban continu que le ruban se replie et devient lisse en 10 secondes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les battements sont raides et bosseux. Lorsque la spatule est levée, elle se brise en touffes plutôt qu'en ruban.",
+            "action": "Continuer le pliage — la pâte sous-macaronnée fait des coquilles bosselées."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une lave épaisse. Le ruban disparaît à la surface lisse en 8-10 secondes. Le battement est brillant et coule uniformément.",
+            "action": "Transférer immédiatement dans un sac et un tuyau."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le battement est écoulement, se propage immédiatement lorsque la spatule est levée. Il n'y a pas de ruban, il ne fait que verser.",
+            "action": "La pâte surmacaronnée ne peut être sauvée. Les coquillages s'étaleront à plat. Recommence."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous écoper une spatule pleine et la laisser retomber dans le bol, il devrait couler de la spatule dans une large cascade brillante, pas gouttes individuelles."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "macaron_batter"
+      ],
+      "outputState": "macaron_shells",
+      "instructions": "Tuyau de 3,5 cm sur des plaques de cuisson doublées de silicone, espacé de 3 cm. Appuyez fermement sur la feuille sur le compteur 3-4 fois pour libérer de grandes bulles d'air. Laissez reposer à température ambiante pendant 30-45 minutes jusqu'à ce que la surface forme une peau sèche — elle ne doit pas coller à votre bout des doigts. Cuire une feuille à la fois à 150 °C (façon forcée) pendant 14-16 minutes. Les coquilles sont faites lorsqu'elles glissent proprement du tapis sans résistance à la base.",
+      "visualCue": {
+        "primaryTarget": "Dômes lisses, à surface mate, avec un « pied » (pied) volant autour de la base et sans fissures sur la couronne.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coquilles s'accrochent au tapis. Le pied est là, mais la base est encore douce et sort en morceaux.",
+            "action": "Retourner au four 2 minutes de plus. Une coquille appropriée se libère proprement lorsque le tapis est épluché."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dôme lisse et sans fissure. Un pied fier, même. La coquille glisse proprement du tapis quand elle est fraîche. Son creux quand tapoté.",
+            "action": "Laisser refroidir complètement sur le tapis avant de le remplir au minimum 30 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les coquilles sont ivoire ou bronzées sur le dessus, pas pâles; l'amande est brune. La texture sera sèche et friable.",
+            "action": "Réduire la température du four de 5 °C prochain lot. Des coquilles trop brunes perdent leur mâche."
+          }
+        ]
+      },
+      "feelCue": "Tapez une coquille refroidie sur son dos — elle devrait sembler légèrement creuse comme une petite perle en céramique, non terne et dense. Appuyez doucement sur le côté : il devrait donner légèrement, comme presser un raisin ferme."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Crème",
+      "inputs": [
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "buttercream",
+      "instructions": "Battre le beurre ramolli seul pendant 3 minutes jusqu'à ce qu'il soit très pâle et moelleux. Ajouter le sucre glace en trois additions, battre pendant 1 minute entre chacune. La crème au beurre finie doit être lisse, ivoire et assez rigide pour tenir un pic mais assez souple pour être facile à piper. Ajouter 1 c. à thé de vanille ou d'autres arômes, et une pincée de sel pour équilibrer.",
+      "visualCue": {
+        "primaryTarget": "Très pâle, presque blanche crème au beurre qui tient un pic raide et lisse. Pas de grain visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Buttercream a l'air jaune et granuleux — beurre non encore entièrement aéré, sucre non entièrement incorporé.",
+            "action": "Battre encore 2 minutes. Le beurre bien crème est presque blanc, pas jaune."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'ivoire pâle, soyeux, tient forme lorsqu'il est en pipe. Respire lorsqu'il est pressé avec un bout de doigt.",
+            "action": "Transférer dans un sac de tuyauterie et remplir les coquilles de macaron."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème-beurre a l'air frisée ou soupeuse — le beurre était trop chaud.",
+            "action": "Laisser refroidir le bol dans le réfrigérateur pendant 10 minutes, puis battre à nouveau. Si le beurre était boueux, il était trop chaud — refroidir jusqu'à ce qu'il soit ferme et réessayer."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite quantité — il devrait se dissoudre sans problème sur la langue sans grain. Si vous pouvez sentir des cristaux de sucre, battre plus longtemps."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Assemblage",
+      "inputs": [
+        "macaron_shells",
+        "buttercream"
+      ],
+      "outputState": "finished_macarons",
+      "instructions": "Faire correspondre les coquilles par taille en paires. Pipez un généreux disque de crème à beurre sur le côté plat d'une coquille, laissant une bordure de 2 mm. Sandwich avec sa paire et appuyez doucement jusqu'à ce que le remplissage atteigne le bord. Réfrigérer, à découvert, pendant 24 heures — c'est l'étape de «maturation». L'humidité du remplissage adoucit l'intérieur de la coque à sa texture caractéristique mâcheuse. Porter à température ambiante pendant 20 minutes avant de servir.",
+      "visualCue": {
+        "primaryTarget": "Des sandwichs uniformes et soignés avec remplissage visible dans un anneau uniforme au bord. Les coquilles sont lisses et non craquées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le remplissage est pressé d'un côté, le sandwich est décalé. Remplir de façon inégale les bords.",
+            "action": "Appliquer le remplissage plus central la prochaine fois. Appuyez à nouveau doucement sur pour sortir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le remplissage forme un halo propre, même à l'équateur. Coquilles supérieures et inférieures alignées. Sandwich se sent important mais pas lourd.",
+            "action": "Réfrigérer pendant 24 heures jusqu'à maturité avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de remplissage appliqué - il déborde au-delà des bords de la coquille et le sandwich se sent encombrant.",
+            "action": "Retirez un peu de remplissage et répressez. Le rapport devrait être d'environ 1:1 shell:fulling par volume."
+          }
+        ]
+      },
+      "feelCue": "Après 24 heures au réfrigérateur, le macaron doit céder à une pression douce avec une légère résistance — l'extérieur de la coquille est encore légèrement croquant mais l'intérieur s'est adouci à une mâche qui donne comme une figues mûres."
+    }
+  ]
 };

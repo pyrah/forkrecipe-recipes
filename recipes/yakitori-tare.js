@@ -1,80 +1,185 @@
 export default {
-  repoId: "master_japanese_yakitori-tare_001",
-  parentRepoId: null,
-  slug: "yakitori-tare",
-  author: "ForkRecipe Kitchen",
-  title: "Yakitori Tare",
-  description: "The dark, glossy soy-mirin glaze that defines yakitori — reduced to a lacquer that caramelizes on each pass over charcoal, building layer on layer of sweet-savory depth.",
-  cuisine: "Japanese",
-  culture: "Tokyo",
-  category: "condiments",
-  tags: ["japanese", "sauce", "glaze", "chicken", "grilling", "make-ahead"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 4, sour: 0, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Seasoning", name: "Soy sauce (koikuchi, standard dark soy)",        ratioValue: 4, defaultUnit: "parts", substitutions: ["tamari (gluten-free)"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Mirin (hon-mirin, real fermented)",               ratioValue: 4, defaultUnit: "parts", substitutions: ["sweet sherry + a pinch of sugar"] },
-    { ingId: "ing_03", role: "Solvent",   name: "Sake (dry cooking sake or drinkable)",            ratioValue: 2, defaultUnit: "parts", substitutions: ["dry sherry", "dry vermouth"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Sugar (white cane or light brown)",               ratioValue: 1, defaultUnit: "parts", substitutions: ["rock sugar"] },
-    { ingId: "ing_05", role: "Umami",     name: "Chicken bones or chicken wings (for body)",       ratioValue: 2, defaultUnit: "pieces", substitutions: [] },
+  "repoId": "master_japanese_yakitori-tare_001",
+  "parentRepoId": null,
+  "slug": "yakitori-tare",
+  "author": "ForkRecipe Kitchen",
+  "title": "Yakitori Tare",
+  "description": "La glaçure sombre et brillante de soya-mirin qui définit yakitori - réduit à une laque qui caramélise sur chaque passage sur le charbon de bois, en construisant une couche de profondeur sucrée-savoureuse.",
+  "cuisine": "Japonais",
+  "culture": "Tokyo",
+  "category": "condiments",
+  "tags": [
+    "Japonais",
+    "sauce",
+    "glaçure",
+    "poulet",
+    "grillage",
+    "marque à l'avance"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Combine and add bones",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "raw_tare_mixture",
-      instructions: "In a small, heavy saucepan combine the soy sauce, mirin, sake, and sugar. Add the chicken bones or wings — these will render collagen into the tare as it reduces, giving it a glossy, lip-sticking body that plain soy-mirin reduction cannot achieve. Stir the sugar to distribute it. Set over medium heat and bring slowly to a simmer, stirring until the sugar has completely dissolved. You will notice the liquid becoming more fragrant as the sake alcohol begins to cook off, shifting from boozy to sweetly savory.",
-      visualCue: {
-        primaryTarget: "A dark amber liquid at a gentle simmer, with the sugar fully dissolved — no gritty texture when a spoon is drawn across the bottom of the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar is still granular and the liquid is cold or barely warm — gritty when a spoon scrapes the pan bottom.", action: "Stir continuously over medium heat until no grittiness can be felt and the liquid is at a clear simmer." },
-          { state: "Perfect",   description: "Smooth, glossy, uniformly dark amber liquid at a gentle bubble, smelling of caramel, soy, and sweet rice wine.", action: "Reduce heat to medium-low and begin the long reduction phase." },
-          { state: "Overdone",  description: "Sugar has begun to caramelize on the sides of the pan in dark patches before the tare is reduced — heat was too high.", action: "Lower heat immediately, stir the dark patches back in (they add depth, not burnt flavor, at this stage), and continue." },
-        ],
-      },
-      feelCue: "Drag a clean spoon across the bottom of the pan — you should feel no graininess whatsoever. The liquid should flow smoothly off the spoon like warm, thin syrup.",
+      "ingId": "ing_01",
+      "role": "Seasoning",
+      "name": "Sauce soja (koikuchi, soja foncé standard)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari (sans gluten)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Reduce",
-      inputs: ["raw_tare_mixture"],
-      outputState: "reduced_tare",
-      instructions: "Maintain a steady medium-low simmer, uncovered, for 25–30 minutes, stirring occasionally. The liquid will gradually deepen from amber to a dark mahogany and the surface will shift from a lively rolling bubble to a slower, thicker, more reluctant boil as the sugars concentrate. Watch the sides of the pan: a ring of syrupy residue will form and darken — this is normal. Keep the heat low enough that it never boils hard, which can make the tare grainy. The tare is reduced enough when it has lost roughly half its original volume.",
-      visualCue: {
-        primaryTarget: "A dark mahogany liquid that sheets off a spoon in a wide, slow ribbon rather than dripping in drops — thick but still pourable when hot.",
-        spectrum: [
-          { state: "Underdone", description: "Still thin and drips off the spoon in a stream rather than a sheet — the sugars haven't concentrated enough to give the lacquer-coat quality at high heat.", action: "Continue reducing. Test by dipping a spoon and letting it cool for 10 seconds — only then will the thickness be apparent." },
-          { state: "Perfect",   description: "Sheets off a cool spoon in a slow, wide, glossy ribbon. A drop on a cold plate sets to a sticky, glossy dot within seconds. Dark mahogany, deeply aromatic.", action: "Remove the bones, strain, and cool. The tare will thicken more as it cools — aim for maple-syrup consistency when hot." },
-          { state: "Overdone",  description: "Tare has reduced beyond syrup to a thick, dark, semi-solid that sets stiff on a cold plate and smells of scorched caramel.", action: "Add 1–2 tablespoons of water or soy sauce and stir over low heat to loosen. Better to under-reduce and dip more frequently than to scorch." },
-        ],
-      },
-      feelCue: "Pinch a tiny amount between two fingertips and rub — you should feel a short, sticky pull before the fingers separate cleanly. That stickiness is the concentrated Maillard sugars that will caramelize beautifully on each pass over charcoal.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Mirin (Hon-mirin, vraiment fermenté)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sucré + une pincée de sucre"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Strain and cool",
-      inputs: ["reduced_tare", "ing_05"],
-      outputState: "finished_yakitori_tare",
-      instructions: "Remove the chicken bones with tongs and discard them — they've done their collagen work. Pour the hot tare through a fine-mesh strainer into a heatproof jar or container, pressing on any solids. Let it cool to room temperature; it will thicken noticeably as it cools to a consistency between maple syrup and molasses. Store in the fridge, where it keeps indefinitely. At service, reheat in a small saucepan or simply let it come to room temperature — cold tare is too thick to coat evenly. To use: dip skewers into the tare pot and return to the grill, repeating 3–4 times to build up layers of glaze.",
-      visualCue: {
-        primaryTarget: "A cool, dark-mahogany tare with a slow, glossy pour — thick enough to coat the back of a spoon with a mirror finish, thin enough to flow when tipped.",
-        spectrum: [
-          { state: "Underdone", description: "Tare is thin and pale when cool, barely coating the spoon — will burn off on the grill before building any lacquer.", action: "Return to the pan and reduce further until the coating test is passed. A thin tare dries out on the grill instead of caramelizing." },
-          { state: "Perfect",   description: "Rich mahogany, slow-pouring syrup with a glossy mirror surface. Coats a spoon completely, and runs off the tip in a single thick thread that coils when it hits the surface.", action: "Jar and store. Use at room temperature or slightly warm for best flow." },
-          { state: "Overdone",  description: "Nearly solid when cool, cannot be poured without warming — has gone past the ideal reduction point.", action: "Thin with a tablespoon of soy sauce or mirin, warm gently, and stir until smooth." },
-        ],
-      },
-      feelCue: "Dip a clean finger and hold it up — the tare should drape and fall in a single, slow, unbroken thread. If it falls in drops, reduce more. If it sets like candy on your finger, thin it. The right tare feels as sticky as warm honey, not candy.",
+      "ingId": "ing_03",
+      "role": "Solvent",
+      "name": "Saucisse (sèche-cuisson ou boisson)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec",
+        "Vermouth sec"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre (cane blanche ou brun clair)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre de roche"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Ossements ou ailes de poulet (pour le corps)",
+      "ratioValue": 2,
+      "defaultUnit": "pieces",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélanger et ajouter les os",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "raw_tare_mixture",
+      "instructions": "Dans une petite casserole lourde, mélanger la sauce soja, le mirin, le saké et le sucre. Ajouter les os ou les ailes de poulet — ceux-ci rendront le collagène dans la tare comme il le réduit, lui donnant un corps brillant, rouge à lèvres que la réduction du sourire de soja ne peut pas atteindre. Mélanger le sucre pour le distribuer. Mettre à feu moyen et laisser mijoter lentement, en remuant jusqu'à ce que le sucre soit complètement dissous. Vous remarquerez que le liquide devient plus parfumé alors que l'alcool de saké commence à cuire, passant de boozy à sucrément salé.",
+      "visualCue": {
+        "primaryTarget": "Un liquide ambré foncé à mijoter doucement, le sucre étant entièrement dissous, sans texture sèche lorsqu'une cuillère est tirée sur le fond de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sucre est encore granulaire et le liquide est froid ou à peine chaud.",
+            "action": "Incorporer continuellement à feu moyen jusqu'à ce qu'on ne sente pas de graisse et que le liquide mijote."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide ambré lisse, brillant, uniformément foncé à une bulle douce, sentant le caramel, le soja et le vin de riz doux.",
+            "action": "Réduire le feu à moyen-doux et commencer la phase de réduction longue."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sucre a commencé à caraméliser sur les côtés de la poêle en taches sombres avant que la tare soit réduite — la chaleur était trop élevée.",
+            "action": "Baissez immédiatement la chaleur, remuez les taches sombres (ils ajoutent de la profondeur, pas de saveur brûlée, à ce stade), et continuez."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère propre sur le fond de la casserole — vous ne devriez pas ressentir de grain. Le liquide doit s'écouler doucement de la cuillère comme du sirop chaud et mince."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Réduire",
+      "inputs": [
+        "raw_tare_mixture"
+      ],
+      "outputState": "reduced_tare",
+      "instructions": "Maintenir une mijotée moyennement basse, à découvert, pendant 25 à 30 minutes, en remuant occasionnellement. Le liquide va progressivement s'amplifier de l'ambre à une acajou sombre et la surface passera d'une bulle de roulement vive à une ébullition plus lente, plus épaisse, plus réticente que les sucres se concentrent. Surveillez les côtés de la poêle : un anneau de résidus sirupeux va se former et s'assombrir, c'est normal. Garder la chaleur suffisamment basse pour qu'elle ne fasse jamais bouillir dur, ce qui peut rendre l'ivraie granuleuse. La tare est suffisamment réduite lorsqu'elle a perdu environ la moitié de son volume initial.",
+      "visualCue": {
+        "primaryTarget": "Un liquide d'acajou foncé qui recouvre une cuillère dans un ruban large et lent plutôt que de couler dans des gouttes — épais mais toujours versable quand chaud.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Encore minces et gouttes de la cuillère dans un ruisseau plutôt qu'une feuille — les sucres n'ont pas assez concentré pour donner la qualité de laque à feu vif.",
+            "action": "Continuez à réduire. Tester en trempant une cuillère et la laisser refroidir pendant 10 secondes — seulement alors l'épaisseur sera apparente."
+          },
+          {
+            "state": "Perfect",
+            "description": "Déposer une cuillère fraîche dans un ruban lent, large et brillant. Une goutte sur une plaque froide se met à un point collant et brillant en quelques secondes. Acajou foncé, profondément aromatique.",
+            "action": "Enlevez les os, souchez et refroidissez. La tare s'épaissira davantage à mesure qu'elle refroidit, en vue de la consistance du sirop d'érable à chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tare a réduit au-delà du sirop à un épais, sombre, semi-solide qui fixe raide sur une assiette froide et des odeurs de caramel brûlé.",
+            "action": "Ajouter 1 à 2 cuillères à soupe d'eau ou de sauce de soja et remuer à feu doux pour se détendre. Mieux vaut sous-réduire et tremper plus fréquemment qu'à brûler."
+          }
+        ]
+      },
+      "feelCue": "Pincez une petite quantité entre deux bouts de doigts et frottez — vous devriez sentir une traction courte et collante avant que les doigts se séparent proprement. Ce collant est le concentré de sucres Maillard qui caramélise magnifiquement sur chaque passage sur le charbon."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Frais et frais",
+      "inputs": [
+        "reduced_tare",
+        "ing_05"
+      ],
+      "outputState": "finished_yakitori_tare",
+      "instructions": "Enlevez les os de poulet avec des pinces et jetez - ils ont fait leur travail de collagène. Verser la tare chaude dans un pot ou un contenant résistant à la chaleur, en appuyant sur les solides. Laisser refroidir à la température ambiante; il s'épaissira nettement car il refroidit à une consistance entre le sirop d'érable et la mélasse. Conserver au réfrigérateur, où il se conserve indéfiniment. Au service, réchauffer dans une petite casserole ou simplement laisser venir à la température ambiante — la tare froide est trop épaisse pour enrober uniformément. Pour l'utiliser : tremper les brochettes dans la tare et retourner au grill, en répétant 3 à 4 fois pour créer des couches de glaçure.",
+      "visualCue": {
+        "primaryTarget": "Une tare fraîche, mahogany foncée avec une goutte lente et brillante — assez épaisse pour enrober l'arrière d'une cuillère d'une finition miroir, assez fine pour s'écouler lorsqu'elle est renversée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La tare est fine et pâle lorsqu'elle est fraîche, enrobant à peine la cuillère — elle brûlera sur la grille avant de construire la laque.",
+            "action": "Retournez dans la casserole et réduisez encore jusqu'à ce que l'essai de revêtement soit réussi. Une fine tare sèche sur le grill au lieu de caraméliser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche en acajou, sirop à cuiller lente avec une surface miroir brillante. Enrober une cuillère complètement, et s'écouler de l'extrémité dans un seul fil épais qui se serpente quand il atteint la surface.",
+            "action": "Jar et magasin. Utiliser à température ambiante ou légèrement chaud pour un meilleur débit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Presque solide quand frais, ne peut pas être versé sans réchauffement — a dépassé le point de réduction idéal.",
+            "action": "Arroser d'une cuillère à soupe de sauce soja ou de mirin, réchauffer doucement et remuer jusqu'à ce qu'elle soit lisse."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt propre et maintenez - la tare doit draper et tomber dans un seul fil, lent et non brisé. S'il tombe en gouttes, réduire davantage. S'il met comme des bonbons sur ton doigt, mince-le. La tare droite est aussi collante que le miel chaud, pas les bonbons."
+    }
+  ]
 };

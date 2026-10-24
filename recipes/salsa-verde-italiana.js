@@ -1,101 +1,255 @@
 export default {
-  repoId: "master_italian_salsa_verde_italiana_001",
-  parentRepoId: null,
-  slug: "salsa-verde-italiana",
-  author: "ForkRecipe Kitchen",
-  title: "Salsa Verde Italiana",
-  description: "Italy's original green sauce — not blended, not cooked, but hand-chopped into a rough, punchy condiment of parsley, capers, anchovies, and lemon, held together in good olive oil, that carries the combined savory force of the entire Ligurian kitchen in a single spoonful.",
-  cuisine: "Italian",
-  culture: "Northern Italian",
-  category: "condiments",
-  tags: ["italian", "condiment", "parsley", "caper", "anchovy", "green", "no-cook"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 3, sour: 2, bitter: 1, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Herb",     name: "Fresh flat-leaf parsley (leaves and fine stems)", ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Umami",    name: "Capers (salt-packed, rinsed; or brine-packed, drained)", ratioValue: 2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Umami",    name: "Anchovy fillets (oil-packed, drained)",           ratioValue: 1,   defaultUnit: "parts", substitutions: ["2 tsp miso + 1 tsp nori flakes for vegetarian"] },
-    { ingId: "ing_04", role: "Allium",   name: "Garlic cloves",                                   ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Citrus",   name: "Fresh lemon juice",                               ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Citrus",   name: "Lemon zest (from 1 lemon)",                      ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",      name: "Best-quality extra-virgin olive oil",              ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Binder",   name: "Dijon mustard",                                   ratioValue: 0.5, defaultUnit: "parts", substitutions: ["grain mustard for texture"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine salt",                                      ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",    name: "Freshly ground black pepper",                     ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_salsa_verde_italiana_001",
+  "parentRepoId": null,
+  "slug": "salsa-verde-italiana",
+  "author": "ForkRecipe Kitchen",
+  "title": "Salsa Verde Italiana",
+  "description": "La sauce verte d'origine de l'Italie — non mélangée, non cuite, mais collée à la main dans un condiment brut et poinçonné de persil, de câpres, d'anchois et de citron, tenu ensemble dans une bonne huile d'olive, qui porte la force savoureuse combinée de toute la cuisine ligurienne dans une seule cuillère.",
+  "cuisine": "Italien",
+  "culture": "Nord italien",
+  "category": "condiments",
+  "tags": [
+    "Italien",
+    "condiment",
+    "persil",
+    "Câpres",
+    "anchois",
+    "vert",
+    "pas de cuisson"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Chop",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "chopped_solids",
-      instructions: "This sauce must be hand-chopped — not blended, not food-processed. Working on a clean board, roughly chop the parsley leaves and fine stems together until they are finely minced but still have texture, not a wet paste. Chop the capers coarsely; if they are large salt-packed capers, cut them in half or thirds. Lay the anchovy fillets flat and chop them into a rough paste — they will almost dissolve under the knife. Mince the garlic very finely, or press it through a garlic press. Combine everything on the board and run a rocking knife through the combined pile 20-30 times until the mixture is cohesive but visibly rough — every component still identifiable but working as a whole.",
-      visualCue: {
-        primaryTarget: "A rough, fragrant mound of green-flecked mixture — parsley the dominant presence, with visible pale caper pieces and the anchovy reduced to near-invisible minced shreds throughout. The pile should look textured and rustic, never smooth.",
-        spectrum: [
-          { state: "Underdone", description: "The components are barely mixed — large parsley leaves, whole capers, and visible anchovy fillets still separate on the board.", action: "Continue chopping in a rocking motion with a large chef's knife, working across the pile repeatedly. The repeated chopping integrates and mingles everything without destroying individual textures." },
-          { state: "Perfect",   description: "A uniformly minced but still-textured pile — the parsley is fully chopped to a fine mince, the capers are roughly cut into 2-3 pieces each, and the anchovy has essentially dissolved into the parsley. The entire pile smells intensely herbal and savory-salty.", action: "Scrape into a bowl. Add the mustard, lemon, and oil. Proceed." },
-          { state: "Overdone",  description: "The mixture has turned into a green paste from over-chopping — the parsley has released so much liquid it is wet and staining the board, and all textural distinction has been lost.", action: "You have made a pesto-adjacent purée. It will taste fine but is no longer salsa verde in texture. Use as is, or accept the difference." },
-        ],
-      },
-      feelCue: "Run your fingers through the chopped mixture — it should feel like damp, coarsely ground herbs: each piece distinct but the whole cohesive enough to clump lightly when pressed. No large stalks should remain.",
+      "ingId": "ing_01",
+      "role": "Herb",
+      "name": "Persil frais à feuilles plates (feuilles et tiges fines)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Season",
-      inputs: ["chopped_solids", "ing_08", "ing_05", "ing_06"],
-      outputState: "dressed_verde",
-      instructions: "Scrape the chopped mixture into a bowl. Add the Dijon mustard and work it into the herbs with a spoon — the mustard acts as a binder, helping the olive oil cling to the parsley rather than pooling at the bottom of the bowl. Stir in the lemon juice and lemon zest. Taste at this stage, before the oil goes in: the mixture should taste intensely salty from the anchovies and capers (this will be attenuated by the oil), aggressively lemon-bright, and herbal-green. If it tastes flat, add more lemon or a tiny pinch of salt.",
-      visualCue: {
-        primaryTarget: "The chopped herbs and capers glistening lightly with lemon juice, bound by a pale smear of mustard throughout. The mixture is still dry-ish and crumbly, not yet saucy.",
-        spectrum: [
-          { state: "Underdone", description: "Mustard is still visible in a single streak rather than integrated throughout. Lemon has not been fully worked in and pools at the bottom of the bowl.", action: "Stir more vigorously to fully integrate the mustard and lemon into the herb mixture before adding oil." },
-          { state: "Perfect",   description: "Everything is evenly distributed — the mustard is no longer visible as a separate element but is coating the herb pieces. The mixture smells of lemon and parsley, sharp and herbal. It tastes aggressively salty-bright.", action: "Fold in the olive oil. Proceed." },
-          { state: "Overdone",  description: "Too much lemon juice has made the mixture watery and the parsley has begun to go dull and slightly gray from the acid.", action: "Drain off excess lemon juice and compensate for the brightness loss with a small addition of zest, which carries lemon aroma without additional liquid." },
-        ],
-      },
-      feelCue: "Press a small amount of the herb mixture between your fingers after adding the mustard and lemon — it should clump slightly and feel lightly sticky, like damp coffee grounds, rather than falling apart as dry loose herbs.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Capeurs (emballés, rincés ou saumurés, égouttés)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["dressed_verde", "ing_07", "ing_09", "ing_10"],
-      outputState: "rested_salsa_verde",
-      instructions: "Stream the olive oil over the herb mixture in a slow, steady pour while stirring constantly with a fork or spoon. The oil does not need to emulsify here — this is an oil-based suspension, not a creamy emulsion — but it should be evenly distributed so every parsley piece is coated and glistening. Season with a small pinch of salt (the anchovies and capers are already aggressively salty — taste before adding) and black pepper. Stir well and then rest the salsa verde uncovered at room temperature for at least 15 minutes before serving — this rest allows the lemon to mellow, the anchovy to integrate fully, and the oil to absorb some of the parsley's green flavor.",
-      visualCue: {
-        primaryTarget: "A loose, glistening, bright-green sauce — every herb piece coated in golden oil, the whole looking vivid and alive. It should flow slowly when the bowl is tilted, not pool like water.",
-        spectrum: [
-          { state: "Underdone", description: "The oil sits on top of the herbs in a separate layer, or there is too little oil and the mixture is dry and crumbly rather than saucy.", action: "Stir more vigorously and add oil gradually until every piece of herb is fully coated and the sauce flows loosely when the bowl is tilted." },
-          { state: "Perfect",   description: "A bright, glistening, deeply green sauce with a loose, flowing texture — it pours off a spoon in a quick drizzle and leaves a rich green stain on whatever it touches. The flavor is assertively herbal, salty, lemony, and savory.", action: "Rest 15 minutes before serving. The sauce is at its peak immediately after this rest; serve the same day." },
-          { state: "Overdone",  description: "Too much oil has made the sauce thin and oily, with the herbs swimming in a pool of green-tinted olive oil — the herb-to-oil ratio is lost.", action: "Add more finely chopped parsley to re-balance the ratio. The sauce can absorb significantly more herb if needed." },
-        ],
-      },
-      feelCue: "Spoon a small amount onto a white plate and tilt the plate — the sauce should flow and spread, leaving vivid green oil trails behind it. If it sits in a fixed mound, it needs more oil. If it flows like water, it needs more herb.",
+      "ingId": "ing_03",
+      "role": "Umami",
+      "name": "Filets d'anchois (emballés à l'huile, égouttés)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "2 c. à thé miso + 1 c. à thé nori flakes pour végétarien"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Rest",
-      inputs: ["rested_salsa_verde"],
-      outputState: "finished_salsa_verde_italiana",
-      instructions: "Allow the sauce to rest at room temperature for 15 minutes minimum — 30 minutes is better. During this time, the acid from the lemon softens the raw edge of the garlic and fully wilts the anchovy into the oil, creating a more cohesive flavor rather than identifiable separate components. Taste once more after resting and adjust: the salsa verde should taste punchy, herbal, savory, and bright — assertive enough to stand alongside a fatty bollito misto or a charred grilled steak. If the flavors have muted during resting, brighten with a final squeeze of lemon.",
-      visualCue: {
-        primaryTarget: "After resting, the color is slightly deeper and the herbs have absorbed some oil, making the sauce slightly thicker and more cohesive than immediately after mixing. The aroma is more integrated — less sharp garlic-forward, more of a unified herbal-savory impression.",
-        spectrum: [
-          { state: "Underdone", description: "Just mixed and served immediately — the garlic is harsh, the anchovy is still a detectable separate note, and the oil and herbs have not fully combined.", action: "The sauce is not ruined, but let it rest. Fifteen minutes is a minimum for the salsa verde to become more than the sum of its parts." },
-          { state: "Perfect",   description: "After resting, the sauce tastes rounded and assertive: herbal, lemony, savory-deep from the anchovy and capers, with the garlic present but not harsh. All components have merged into a cohesive whole.", action: "Serve alongside grilled meat, poached fish, bollito misto, or roasted vegetables." },
-          { state: "Overdone",  description: "Left uncovered for more than 2 hours at room temperature — the parsley is beginning to oxidize to olive-drab, the lemon juice has lost its brightness, and the garlic has mellowed past savory into muted.", action: "Add fresh chopped parsley and a squeeze of lemon just before serving to restore vibrancy." },
-        ],
-      },
-      feelCue: "Dip a piece of bread into the rested salsa verde — every bite should deliver an immediate herbal-salty punch followed by the savory depth of the anchovy and the bright clean lift of lemon. If the bread tastes mostly of oil, the herb-to-oil balance needs adjusting.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Citrus",
+      "name": "Jus de citron frais",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Citrus",
+      "name": "Zeste de citron (à partir de 1 citron)",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge de meilleure qualité",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Binder",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moutarde de grain pour la texture"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Chop",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "chopped_solids",
+      "instructions": "Cette sauce doit être emballée à la main — non mélangée, non transformée en aliments. Travaillant sur une planche propre, hacher grossièrement les feuilles de persil et les tiges fines ensemble jusqu'à ce qu'elles soient finement hachées, mais ont encore de la texture, pas une pâte humide. Couper grossièrement les câpres; s'il s'agit de gros câpres salins, les couper en deux ou en trois. Placez les filets d'anchois à plat et les hacher dans une pâte rugueuse — ils vont presque se dissoudre sous le couteau. Arrosez l'ail très finement, ou pressez-le par une presse à l'ail. Combinez tout sur la planche et lancez un couteau à bascule à travers la pile combinée 20-30 fois jusqu'à ce que le mélange soit cohésif mais visiblement rugueux — chaque composant reste identifiable mais fonctionne dans son ensemble.",
+      "visualCue": {
+        "primaryTarget": "Un monticule rugueux et parfumé de mélange à mailles vertes - persil la présence dominante, avec des morceaux de câpres pâles visibles et l'anchois réduit à des morceaux hachés presque invisibles partout. La pile devrait être texturée et rustique, jamais lisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les composants sont à peine mélangés — de grandes feuilles de persil, des câpres entiers et des filets anchois visibles encore séparés sur la planche.",
+            "action": "Continuer à couper un mouvement de basculement avec le couteau d'un grand chef, en travaillant à plusieurs reprises sur la pile. La coupe répétée intègre et mélange tout sans détruire les textures individuelles."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pile uniformément hachée mais encore texturée — le persil est entièrement haché à une fine menthe, les câpres sont approximativement coupés en 2-3 morceaux chacun, et l'anchois s'est essentiellement dissous dans le persil. Toute la pile sent intensément les herbes et le sel salé.",
+            "action": "Dans un bol. Ajouter la moutarde, le citron et l'huile. Continuez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange s'est transformé en pâte verte à partir du suremballage — le persil a libéré tellement de liquide qu'il est mouillé et tache la planche, et toute distinction textuelle a été perdue.",
+            "action": "Vous avez fait une purée pesto-adjacent. Il aura un bon goût mais n'est plus salsa verde dans la texture. Utiliser tel quel, ou accepter la différence."
+          }
+        ]
+      },
+      "feelCue": "Passez vos doigts à travers le mélange haché — il devrait se sentir comme des herbes humides et grossièrement broyées: chaque pièce distincte mais l'ensemble assez cohésif pour s'accrocher légèrement en appuyant. Aucune grande tige ne doit rester."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "chopped_solids",
+        "ing_08",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "dressed_verde",
+      "instructions": "Gratter le mélange haché dans un bol. Ajouter la moutarde de Dijon et la travailler dans les herbes à l'aide d'une cuillère — la moutarde agit comme un liant, aidant l'huile d'olive à s'accrocher au persil plutôt que de se mettre au fond du bol. Incorporer le jus de citron et le zeste de citron. Goûtez à ce stade, avant l'entrée de l'huile: le mélange doit goûter intensément salé des anchois et des câpres (cela sera atténué par l'huile), agressivement citron-brillant, et vert-herbe. Si le goût est plat, ajoutez plus de citron ou une petite pincée de sel.",
+      "visualCue": {
+        "primaryTarget": "Les herbes hachées et les câpres scintillent légèrement avec du jus de citron, liés par un frottis pâle de moutarde partout. Le mélange est encore sec et émietté, pas encore salé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La moutarde est encore visible en une seule stries plutôt qu'intégrée dans l'ensemble. Le citron n'a pas été entièrement travaillé et les piscines au fond du bol.",
+            "action": "Incorporer plus vigoureusement la moutarde et le citron dans le mélange d'herbes avant d'ajouter de l'huile."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tout est uniformément distribué — la moutarde n'est plus visible en tant qu'élément séparé, mais elle recouvre les morceaux d'herbe. Le mélange sent le citron et le persil, vif et à base de plantes. Il a un goût agressif et salé.",
+            "action": "Plier dans l'huile d'olive. Continuez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de jus de citron a rendu le mélange aqueux et le persil a commencé à devenir terne et légèrement gris de l'acide.",
+            "action": "Égoutter l'excès de jus de citron et compenser la perte de luminosité avec un petit ajout de zeste, qui porte l'arôme de citron sans liquide supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une petite quantité du mélange d'herbes entre vos doigts après avoir ajouté la moutarde et le citron — il devrait grincer légèrement et se sentir légèrement collant, comme un fond de café humide, plutôt que de tomber comme des herbes sèches lâches."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "dressed_verde",
+        "ing_07",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "rested_salsa_verde",
+      "instructions": "Faites passer l'huile d'olive sur le mélange d'herbes dans un verser lentement et régulièrement tout en remuant constamment avec une fourchette ou une cuillère. L'huile n'a pas besoin d'émulsionner ici — il s'agit d'une suspension à base d'huile, pas d'émulsion crémeuse — mais elle devrait être répartie uniformément de sorte que chaque morceau de persil soit enduit et éblouissant. Assaisonner avec une petite pincée de sel (les anchois et les câpres sont déjà fortement salés — goût avant ajout) et poivre noir. Bien mélanger puis reposer la salsa verde à la température ambiante pendant au moins 15 minutes avant de servir — ce reste permet au citron de se moeller, à l'anchois de s'intégrer pleinement et à l'huile d'absorber une partie de la saveur verte du persil.",
+      "visualCue": {
+        "primaryTarget": "Une sauce souple, scintillante et vert vif — chaque pièce d'herbe enrobée d'huile d'or, l'ensemble semble vif et vivant. Il doit s'écouler lentement lorsque le bol est incliné, pas la piscine comme l'eau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'huile est assise sur le dessus des herbes dans une couche séparée, ou il y a trop peu d'huile et le mélange est sec et mijoté plutôt que saucy.",
+            "action": "Mélanger plus vigoureusement et ajouter progressivement de l'huile jusqu'à ce que chaque morceau d'herbe soit entièrement enduit et que la sauce s'écoule librement lorsque le bol est incliné."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce brillante, scintillante, profondément verte, avec une texture lâche et fluide, elle verse une cuillère dans une bruine rapide et laisse une riche tache verte sur tout ce qu'elle touche. La saveur est affirmée à base de plantes, salées, citronnées et salées.",
+            "action": "Reposez-vous 15 minutes avant de servir. La sauce est à son apogée immédiatement après ce repos; servir le même jour."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop d'huile a rendu la sauce mince et grasse, avec les herbes nageant dans une piscine d'huile d'olive teinte de vert - le rapport herb-to-huile est perdu.",
+            "action": "Ajouter plus finement le persil haché pour rééquilibrer le rapport. La sauce peut absorber significativement plus d'herbe si nécessaire."
+          }
+        ]
+      },
+      "feelCue": "Déposer une petite quantité sur une assiette blanche et l'incliner — la sauce devrait s'écouler et s'étendre, laissant derrière elle des traces d'huile verte vive. Si elle est assise dans un monticule fixe, elle a besoin de plus d'huile. Si elle coule comme de l'eau, elle a besoin de plus d'herbe."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "rested_salsa_verde"
+      ],
+      "outputState": "finished_salsa_verde_italiana",
+      "instructions": "Laisser reposer la sauce à température ambiante pendant 15 minutes minimum — 30 minutes est mieux. Pendant ce temps, l'acide du citron adoucit le bord brut de l'ail et flétrit complètement l'anchois dans l'huile, créant une saveur plus cohérente plutôt que des composants distincts identifiables. Goûtez une fois de plus après le repos et ajustez-vous : la salsa verde doit goûter poinçonné, herbacé, salé et lumineux – suffisamment affirmé pour se tenir à côté d'un bollito gras misto ou d'un steak grillé carbonisé. Si les saveurs ont changé pendant le repos, illuminer avec une touche finale de citron.",
+      "visualCue": {
+        "primaryTarget": "Après le repos, la couleur est légèrement plus profonde et les herbes ont absorbé un peu d'huile, rendant la sauce légèrement plus épaisse et plus cohésive que immédiatement après le mélange. L'arôme est plus intégré — moins aiguisé vers l'ail, plus d'une impression unique à base de plantes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Juste mélangé et servi immédiatement — l'ail est dur, l'anchois est encore une note séparée détectable, et l'huile et les herbes n'ont pas complètement combiné.",
+            "action": "La sauce n'est pas ruinée, mais laissez-la reposer. Quinze minutes est un minimum pour que la salsa verde devienne plus que la somme de ses parties."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après le repos, la sauce a un goût arrondi et affirmé : herboristerie, citronnée, salée-profonde de l'anchois et des câpres, avec l'ail présent mais pas dur. Tous les composants ont fusionné en un tout cohérent.",
+            "action": "Servir avec de la viande grillée, du poisson poché, du bollito misto ou des légumes rôtis."
+          },
+          {
+            "state": "Overdone",
+            "description": "A découvert pendant plus de 2 heures à température ambiante — le persil commence à s'oxyder en olive-drabe, le jus de citron a perdu sa luminosité, et l'ail s'est mêlé du passé en muette.",
+            "action": "Ajouter le persil frais haché et un peu de citron juste avant de servir pour restaurer la vivacité."
+          }
+        ]
+      },
+      "feelCue": "Plongez un morceau de pain dans la salsa verde reposée — chaque morsure devrait donner un coup immédiat de sel à base de plantes, suivi de la profondeur savoureuse de l'anchois et de la liftée claire du citron. Si le pain a surtout un goût d'huile, l'équilibre de l'herbe à l'huile doit être ajusté."
+    }
+  ]
 };

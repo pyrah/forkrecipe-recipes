@@ -1,107 +1,323 @@
 export default {
-  repoId: "master_ukrainian_borscht_001",
-  parentRepoId: null,
-  slug: "borscht",
-  author: "ForkRecipe Kitchen",
-  title: "Ukrainian Borscht",
-  description: "Ukraine's emblematic ruby-red beet soup — roasted beets braised with cabbage, potato, and carrot in a tangy tomato broth, finished with a swirl of smetana and a shower of fresh dill, the color a deep, glorious crimson.",
-  cuisine: "Ukrainian",
-  culture: "Ukrainian",
-  category: "vegetables",
-  tags: ["ukrainian", "beet", "cabbage", "vegetable-soup", "hearty", "sour-cream", "eastern-european"],
-  difficulty: 2,
-  activeTime: "40 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 3, sour: 3, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Raw red beets, medium, scrubbed",               ratioValue: 500, defaultUnit: "g",  substitutions: ["golden beets (colour will be pale but flavour identical)"] },
-    { ingId: "ing_02", role: "Structure",  name: "Green or white cabbage, finely shredded",       ratioValue: 300, defaultUnit: "g",  substitutions: ["Savoy cabbage"] },
-    { ingId: "ing_03", role: "Structure",  name: "Waxy potatoes, peeled and cut into 2 cm cubes", ratioValue: 300, defaultUnit: "g",  substitutions: ["yellow-fleshed potatoes"] },
-    { ingId: "ing_04", role: "Structure",  name: "Carrots, peeled and grated or cut into matchsticks", ratioValue: 150, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Onion, finely diced",                            ratioValue: 150, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, minced",                          ratioValue: 20,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Umami",     name: "Tomato paste",                                   ratioValue: 60,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Structure", name: "Whole peeled tomatoes (canned) or 3 fresh ripe tomatoes, chopped", ratioValue: 200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Liquid",    name: "Beef or vegetable stock",                        ratioValue: 1800, defaultUnit: "ml", substitutions: ["water (add more seasoning)"] },
-    { ingId: "ing_10", role: "Fat",       name: "Sunflower or neutral oil",                       ratioValue: 40,  defaultUnit: "ml", substitutions: ["lard (traditional)", "unsalted butter"] },
-    { ingId: "ing_11", role: "Acid",      name: "Apple cider vinegar or red wine vinegar",        ratioValue: 20,  defaultUnit: "ml", substitutions: ["fresh lemon juice"] },
-    { ingId: "ing_12", role: "Sweetener", name: "Caster sugar",                                   ratioValue: 10,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_13", role: "Seasoning", name: "Fine sea salt and black pepper",                 ratioValue: 12,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_14", role: "Herb",      name: "Fresh dill, roughly chopped",                    ratioValue: 20,  defaultUnit: "g",  substitutions: ["flat-leaf parsley"] },
-    { ingId: "ing_15", role: "Dairy",     name: "Smetana or sour cream, for serving",             ratioValue: 100, defaultUnit: "ml", substitutions: ["crème fraîche", "full-fat Greek yogurt"] },
-    { ingId: "ing_16", role: "Herb",      name: "Bay leaves",                                     ratioValue: 2,   defaultUnit: "whole", substitutions: [] },
+  "repoId": "master_ukrainian_borscht_001",
+  "parentRepoId": null,
+  "slug": "borscht",
+  "author": "ForkRecipe Kitchen",
+  "title": "Borscht ukrainien",
+  "description": "Soupe emblématique de betterave rouge rubis de l'Ukraine: betteraves grillées braisées de chou, de pomme de terre et de carotte dans un bouillon de tomate tannée, finie par un tourbillon de smetana et une douche d'aneth fraîche, la couleur un cramoisi profond et glorieux.",
+  "cuisine": "Ukrainien",
+  "culture": "Ukrainien",
+  "category": "vegetables",
+  "tags": [
+    "ukrainien",
+    "betterave",
+    "Choux",
+    "Soupe de légumes",
+    "coeurux",
+    "crème sure",
+    "Europe orientale"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "40 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_01"],
-      outputState: "roasted_beets",
-      instructions: "Preheat the oven to 200°C (400°F). Wrap the whole, unpeeled beets tightly in aluminum foil and roast directly on the oven rack for 45–60 minutes, depending on size (pierce with a skewer to test — it should slide in with no resistance). Let cool in the foil for 15 minutes. The skins will slip off effortlessly with a paper towel or gloved hand. Grate two-thirds of the roasted beets on the large holes of a box grater; cut the remaining third into small cubes. Roasting — rather than boiling raw beets — concentrates their sweetness and earthy flavour and is the difference between a flat borscht and a magnificent one. Save all the roasting juices from the foil.",
-      visualCue: {
-        primaryTarget: "Dark ruby-red beets that yield completely to a skewer with no resistance. The skin wrinkles and peels away in sheets with zero effort.",
-        spectrum: [
-          { state: "Underdone", description: "Beets still feel hard when pierced with a skewer. The center offers a distinct, raw resistance.", action: "Return to the oven for 15 more minutes and re-test. Undercooked beets will not grate properly and will be tough in the soup." },
-          { state: "Perfect",   description: "Completely yielding to the skewer, skins slipping off like paper. Flesh is deeply coloured, almost jammy at the edges of the foil packet.", action: "Cool slightly, peel, then grate and dice as directed. Reserve all juices from the foil." },
-          { state: "Overdone",  description: "Beets have shriveled significantly and feel very dense, dry, and collapsed.", action: "Proceed — overroasted beets taste very sweet and intensely concentrated. The soup will be sweeter; balance with more vinegar." },
-        ],
-      },
-      feelCue: "Squeeze a still-warm roasted beet gently through the foil: it should feel like a very ripe peach — firm skin over a yielding, giving interior. You should feel it give with very light pressure.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Betteraves rouges crues, moyennes, frottées",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "betteraves dorées (la couleur sera pâle mais la saveur identique)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_05", "ing_06", "ing_04", "ing_07", "ing_08", "ing_10"],
-      outputState: "soffritto_base",
-      instructions: "In a large, heavy soup pot, heat the oil over medium heat. Add the diced onion and a pinch of salt and soften for 7–8 minutes until translucent and sweet-smelling, stirring occasionally. Add the carrot and cook for 3 more minutes. Add the garlic and cook for 1 minute until fragrant. Add the tomato paste and fry it into the vegetables for 2 minutes, stirring constantly — it should darken and begin to stick before you deglaze. Add the canned tomatoes, crushing them with your hand as you add them. Cook for 5 minutes, breaking them down. The base should smell sweet, rich, and deeply tomato-forward.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, brick-red paste of softened vegetables that clings to the pot and smells of caramelized onion and concentrated tomato.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still white and raw-smelling. Tomato paste is not caramelized — it looks orange and raw.", action: "Cook longer over medium heat. Browning the tomato paste is essential: the Maillard reaction in tomato paste adds depth that raw paste cannot." },
-          { state: "Perfect",   description: "Onion is golden and sweet. Carrot is softened. Tomato paste has darkened to a brick-red and smells caramelized. Tomatoes are broken down to a rough sauce.", action: "Add the stock, bring to a boil, and add the remaining vegetables." },
-          { state: "Overdone",  description: "Onion is dark brown and bitter. Tomato paste has scorched to a black film at the base of the pot.", action: "Scrape out scorched bits if possible and deglaze with a splash of stock. Scorched tomato paste can turn the entire soup bitter." },
-        ],
-      },
-      feelCue: "Drag a wooden spoon through the base: it should leave a clean trail on the pot bottom that closes slowly — thick, yielding, and slightly sticky to the spoon.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Choux verts ou blancs, finement déchiquetés",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Choux savoyards"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["soffritto_base", "ing_09", "ing_03", "ing_02", "ing_16", "ing_13"],
-      outputState: "simmered_borscht_base",
-      instructions: "Pour in the stock, add the bay leaves, and bring to a boil. Add the potato cubes and season generously with salt. Simmer for 10 minutes until the potatoes are half-cooked. Add the shredded cabbage and continue simmering for 10 more minutes — the cabbage should be tender but still have a faint, pleasant bite. Do not overcook the cabbage to mush. While the vegetables simmer, taste the broth constantly: adjust salt, and think about the balance of sweet and sour you are building toward.",
-      visualCue: {
-        primaryTarget: "A rich, cloudy, rust-red broth with chunks of potato and shreds of cabbage visible, gently simmering with steady small bubbles across the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Potatoes are still hard at the center when pierced with a fork. Cabbage still squeaks when chewed.", action: "Continue simmering. Add 5 more minutes and re-test both vegetables — they must be tender before the beets go in." },
-          { state: "Perfect",   description: "Potato yields to a fork but holds its cube shape. Cabbage is tender with just a hint of firmness. Broth is rich, red-tinged from the tomato base.", action: "Add the roasted beets now, followed by the vinegar and sugar." },
-          { state: "Overdone",  description: "Potato has broken apart and begun to dissolve, thickening the broth. Cabbage is completely limp and grey-olive in colour.", action: "Proceed — the dissolved potato will thicken the borscht slightly, which some prefer. The colour will be less vibrant." },
-        ],
-      },
-      feelCue: "Spear a potato cube with a fork: it should slide on and off the fork tines with a gentle resistance — yielding at the edges but not collapsing in the center. If it slides off the fork on its own, it is overcooked.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Pommes de terre, pelées et coupées en cubes de 2 cm",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pommes de terre à chair jaune"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["simmered_borscht_base", "roasted_beets", "ing_11", "ing_12", "ing_14", "ing_15"],
-      outputState: "finished_borscht",
-      instructions: "Add the grated and diced roasted beets (and their reserved foil juices) to the simmering pot. Stir in the vinegar and sugar. The borscht will immediately turn a stunning, brilliant crimson — a colour no raw beet soup achieves. Simmer for just 5 minutes; long cooking after the beets are added causes the colour to fade toward brown. Taste: it should be deeply sweet-earthy from the beet, brightly sour from the vinegar, and rich and salty. Adjust all three. Remove from heat. Ladle into deep bowls. Finish each bowl with a generous tablespoon of smetana and a heavy shower of fresh dill. Serve with dark rye bread.",
-      visualCue: {
-        primaryTarget: "A deep, glorious crimson soup — almost jewel-like — with visible chunks of beet, potato, and cabbage, crowned with a pool of white smetana that bleeds into a pink swirl, and emerald dill scattered across the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Soup is a muddy orange-red, not crimson. The beet flavour is faint, buried under the tomato and stock.", action: "Add more grated roasted beet and a splash of the foil juices. Simmer 3 more minutes. The colour should bloom almost immediately when more beet is added." },
-          { state: "Perfect",   description: "Electric, luminous crimson that coats the back of a spoon a vivid ruby-red. Earthy-sweet beet balanced by bright acid and rich savory stock. Fresh dill and smetana visible.", action: "Serve immediately. Borscht tastes even better the next day once the flavours marry overnight." },
-          { state: "Overdone",  description: "Soup has been simmered too long after the beets were added — the colour has shifted to a dull brown-red and the beet flavour is flat and cooked out.", action: "Add a small amount of freshly grated raw beet, stir, and do not simmer further — the raw beet will bleed in its brilliant colour within minutes off the heat." },
-        ],
-      },
-      feelCue: "The perfect bowl should register several sensations in sequence: the bright, herbaceous cold of the fresh dill piercing through the steam, the cool silk of the smetana dissolving into the hot broth as you stir, and then the earthy, sweet-sour warmth of the borscht itself — grounding and complex.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Carottes, pelées et râpées ou coupées en allumettes",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon, finement coupé",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Structure",
+      "name": "Tomates entières pelées (en conserve) ou 3 tomates fraîches mûres, hachées",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Liquid",
+      "name": "Viande bovine ou végétale",
+      "ratioValue": 1800,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau (ajouter plus d'assaisonnement)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Tournesol ou huile neutre",
+      "ratioValue": 40,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "saindoux (traditionnel)",
+        "beurre non salé"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme ou vinaigre de vin rouge",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "jus de citron frais"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre noir",
+      "ratioValue": 12,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Herb",
+      "name": "Diluant frais, approximativement haché",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Persil à feuilles plates"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Dairy",
+      "name": "Smetana ou crème sure, pour servir",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Crème fraîche",
+        "yogourt grec plein gras"
+      ]
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Herb",
+      "name": "Feuilles de baies",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "roasted_beets",
+      "instructions": "Préchauffer le four à 200°C (400°F). Envelopper l'ensemble des betteraves non pelées étroitement dans du papier d'aluminium et rôtir directement sur la grille du four pendant 45 à 60 minutes, selon la taille (pierce avec une brochette à tester — il devrait glisser dans sans résistance). Laisser refroidir le papier pendant 15 minutes. Les peaux glissent sans effort avec une serviette en papier ou une main gantée. Râper les deux tiers des betteraves grillées sur les grands trous d'un grater de boîte; couper le tiers restant en petits cubes. Au lieu de faire bouillir les betteraves crues, le rôti concentre leur douceur et leur saveur terreuse. Sauvegardez tous les jus de torréfaction de la feuille.",
+      "visualCue": {
+        "primaryTarget": "Betteraves foncées rouge rubis qui donnent complètement à une brochette sans résistance. La peau se plie et s'enroule en feuilles sans effort.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les betteraves se sentent toujours dures lorsqu'elles sont percées avec une brochette. Le centre offre une résistance distincte et brute.",
+            "action": "Retourner au four 15 minutes de plus et faire un nouveau test. Les betteraves mal cuites ne seront pas bien grattées et seront difficiles dans la soupe."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement vers la brochette, les peaux glissent comme du papier. La chair est profondément colorée, presque jammy aux bords du paquet de feuilles.",
+            "action": "Laisser refroidir légèrement, peler, puis griller et dés comme indiqué. Réserver tous les jus du papier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les betteraves ont considérablement rétréci et se sentent très denses, sèches et effondrées.",
+            "action": "Procéder — les betteraves surchauffées ont un goût très doux et intensément concentré. La soupe sera plus douce; équilibre avec plus de vinaigre."
+          }
+        ]
+      },
+      "feelCue": "Pressez délicatement une betterave torréfié encore chaude à travers la feuille: elle doit se sentir comme une pêche très mûre — une peau ferme sur un rendement, donnant l'intérieur. Vous devriez sentir qu'il donne avec une pression très légère."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_04",
+        "ing_07",
+        "ing_08",
+        "ing_10"
+      ],
+      "outputState": "soffritto_base",
+      "instructions": "Dans une grande casserole lourde, chauffer l'huile à feu moyen. Ajouter l'oignon en dés et une pincée de sel et adoucir pendant 7 à 8 minutes jusqu'à ce que translucide et sucrée, en remuant occasionnellement. Ajouter la carotte et cuire encore 3 minutes. Ajouter l'ail et cuire 1 minute jusqu'à parfumer. Ajouter la pâte de tomate et la faire frire dans les légumes pendant 2 minutes, en remuant constamment — il devrait s'assombrir et commencer à coller avant de déglacer. Ajouter les tomates en conserve, les écraser avec votre main. Cuire 5 minutes, les casser. La base doit sentir doux, riche et profondément tomate-avant.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, brillante et rouge brique de légumes adoucis qui s'accroche à la casserole et sent l'oignon caramélisé et la tomate concentrée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore blanc et frais. La pâte de tomate n'est pas caramélisée — elle semble orange et crue.",
+            "action": "Cuire plus longtemps à feu moyen. Le brunissement de la pâte de tomate est essentiel : la réaction de Maillard dans la pâte de tomate ajoute de la profondeur que la pâte brute ne peut pas."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon est doré et doux. La carotte est ramollie. La pâte de tomate s'est assombrie à un rouge brique et sent le caramélisé. Les tomates sont cassées dans une sauce rugueuse.",
+            "action": "Ajouter le bouillon, porter à ébullition et ajouter les légumes restants."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon est brun foncé et amer. La pâte de tomate a brûlé un film noir à la base du pot.",
+            "action": "Écraser les morceaux brûlés si possible et déglacer avec un jet de stock. La pâte de tomate brûlée peut rendre la soupe entière amère."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère en bois à travers la base: elle devrait laisser un sentier propre sur le fond du pot qui se ferme lentement — épais, donnant, et légèrement collant à la cuillère."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "soffritto_base",
+        "ing_09",
+        "ing_03",
+        "ing_02",
+        "ing_16",
+        "ing_13"
+      ],
+      "outputState": "simmered_borscht_base",
+      "instructions": "Verser le bouillon, ajouter les feuilles de laurier et porter à ébullition. Ajouter les cubes de pommes de terre et assaisonner généreusement de sel. Laisser mijoter 10 minutes jusqu'à ce que les pommes de terre soient mi-cuites. Ajouter le chou déchiqueté et continuer à mijoter 10 minutes de plus — le chou devrait être tendre mais avoir encore une morsure faible et agréable. Ne pas trop cuire le chou. Pendant que les légumes mijotent, goûtez le bouillon constamment: ajustez le sel, et pensez à l'équilibre de la douceur et de l'aurore que vous construisez vers.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon riche, nuageux, rouge rouille avec des morceaux de pommes de terre et des morceaux de chou visibles, mijotant doucement avec de petites bulles stables à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pommes de terre sont encore dures au centre lorsqu'elles sont percées d'une fourchette. Le chou craque quand il est mâché.",
+            "action": "Continuez à mijoter. Ajouter 5 minutes de plus et tester à nouveau les deux légumes — ils doivent être tendres avant que les betteraves entrent."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pomme de terre donne à une fourchette mais tient sa forme cube. Le chou est tendre avec un soupçon de fermeté. Le broth est riche, rougeté de la base de la tomate.",
+            "action": "Ajoutez maintenant les betteraves grillées, puis le vinaigre et le sucre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pomme de terre s'est brisée et a commencé à se dissoudre, épaississant le bouillon. Le chou est complètement boiteux et gris-olive.",
+            "action": "Procéder — la pomme de terre dissoute épaissira légèrement le borscht, que certains préfèrent. La couleur sera moins vibrante."
+          }
+        ]
+      },
+      "feelCue": "Lancer un cube de pomme de terre avec une fourchette: il devrait glisser sur et hors des dents de fourchette avec une résistance douce — donnant aux bords mais pas s'effondrer au centre. S'il glisse de sa propre fourche, il est trop cuit."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "simmered_borscht_base",
+        "roasted_beets",
+        "ing_11",
+        "ing_12",
+        "ing_14",
+        "ing_15"
+      ],
+      "outputState": "finished_borscht",
+      "instructions": "Ajouter les betteraves râpées et coupées en dés (et leurs jus de feuilles réservés) dans le pot à mijoter. Incorporer le vinaigre et le sucre. La borscht va immédiatement tourner un superbe et brillant pourpre — une couleur sans la soupe de betterave crue. Laisser mijoter pendant seulement 5 minutes; une longue cuisson après l'ajout des betteraves fait disparaître la couleur vers le brun. Bouche: il doit être profondément doux-terreux de la betterave, vivement aigre du vinaigre, riche et salé. Ajustez les trois. Retirer du feu. Déposer dans des bols profonds. Finissez chaque bol avec une généreuse cuillère à soupe de smetana et une douche d'aneth fraîche. Servir avec du pain de seigle foncé.",
+      "visualCue": {
+        "primaryTarget": "Une soupe crimson profonde et glorieuse, presque comme un bijou, avec des morceaux visibles de betteraves, de pommes de terre et de chou, couronnée d'un bassin de smetana blanche qui saigne dans un tourbillon rose, et d'ane émeraude dispersée à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La soupe est un rouge-orange boueux, pas pourpre. La saveur de betterave est faible, enfouie sous la tomate et le bouillon.",
+            "action": "Ajouter plus de betterave rôtie râpée et une touche de jus de feuille. Faites mijoter 3 minutes de plus. La couleur devrait fleurir presque immédiatement lorsqu'on ajoute plus de betteraves."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crimson électrique et lumineux qui enveloppe l'arrière d'une cuillère d'un rouge rubis vif. Betterave douce-terrestre équilibrée par l'acide vif et riche stock salé. Diluant frais et smetana visibles.",
+            "action": "Servir immédiatement. Borscht goûte encore mieux le lendemain une fois que les saveurs se marient la nuit."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe a été mijotée trop longtemps après l'ajout des betteraves — la couleur est passée à un rouge brun terne et la saveur de la betterave est plate et cuite.",
+            "action": "Ajouter une petite quantité de betterave crue fraîchement râpée, remuer et ne pas mijoter davantage — la betterave crue saignera dans sa couleur brillante en quelques minutes hors du feu."
+          }
+        ]
+      },
+      "feelCue": "Le bol parfait devrait enregistrer plusieurs sensations en séquence: le froid herbacé et lumineux de l'aneth fraîche perçant à travers la vapeur, la soie fraîche de la smetana se dissolvant dans le bouillon chaud que vous remuez, et puis la chaleur terreuse, douce-sour du borscht lui-même — mise à la terre et complexe."
+    }
+  ]
 };

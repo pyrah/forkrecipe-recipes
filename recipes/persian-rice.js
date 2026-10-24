@@ -1,80 +1,179 @@
 export default {
-  repoId: "master_iranian_persianrice_001",
-  parentRepoId: null,
-  slug: "persian-rice",
-  author: "ForkRecipe Kitchen",
-  title: "Persian Chelo Rice with Tahdig",
-  description: "The crown jewel of the Iranian table — long-grain basmati parboiled, drained, and steam-finished over a shield of butter and potato that becomes the tahdig: an impossibly crisp, golden-amber crust that is the most fought-over piece on any Persian platter.",
-  cuisine: "Iranian",
-  culture: "Persian",
-  category: "grains",
-  tags: ["grains", "iranian", "persian", "rice", "saffron", "tahdig", "gluten-free"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "90 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Basmati rice (aged, long-grain)",      ratioValue: 500,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_02", role: "Seasoning", name: "Fine sea salt (for soaking and parboiling)", ratioValue: 30, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Fat",       name: "Unsalted butter or vegetable oil",     ratioValue: 60,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Saffron strands (bloomed in hot water)", ratioValue: 0.5, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Structure", name: "Medium potato (peeled, sliced 5mm)",   ratioValue: 200,  defaultUnit: "g",  substitutions: ["thin lavash bread", "sliced pita"] },
+  "repoId": "master_iranian_persianrice_001",
+  "parentRepoId": null,
+  "slug": "persian-rice",
+  "author": "ForkRecipe Kitchen",
+  "title": "Riz chilo persan avec Tahdig",
+  "description": "Le joyau de la couronne de la table iranienne, la basmati à grains longs par huilée, drainée et finie à la vapeur sur un bouclier de beurre et de pomme de terre qui devient le tahdig : une croûte dorée incroyablement croustillante qui est la pièce la plus battue sur n'importe quel plateau persan.",
+  "cuisine": "Iranien",
+  "culture": "Perse",
+  "category": "grains",
+  "tags": [
+    "grains",
+    "Iranien",
+    "persienne",
+    "riz",
+    "safran",
+    "Tahdig",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "90 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Soak",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "soaked_rice",
-      instructions: "Rinse the basmati in cold water until the water runs clear — at least 5-6 rinses. Soak in cold water with 1 tablespoon of salt for 30 minutes minimum (up to 4 hours). The soaking hydrates the grain, which allows it to elongate dramatically during steaming. Drain and rinse once more.",
-      visualCue: {
-        primaryTarget: "Rice grains that have visibly swollen and appear slightly translucent, with the water from the final rinse running clear with no starch cloudiness.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still opaque white, hard when bitten. Water is still milky with starch.", action: "Soak for another 30 minutes. Unsoaked basmati will not elongate and the tahdig method will produce uneven results." },
-          { state: "Perfect",   description: "Grains have lengthened slightly, feel firmer but slightly springy, and the rinse water is clear. A bitten grain is almost tender at the outside but still firm at the core.", action: "Parboil immediately." },
-          { state: "Overdone",  description: "Grains have soaked for 6+ hours and are very soft, easily crushed. The outside is waterlogged.", action: "Proceed but reduce the parboiling time significantly — these grains will cook faster." },
-        ],
-      },
-      feelCue: "Squeeze a soaked grain between your fingernails — it should offer distinct resistance at the core but yield at the outer edge. Still firm, but no longer hard.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz basmati (âgé, à grains longs)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Boil",
-      inputs: ["soaked_rice"],
-      outputState: "parboiled_rice",
-      instructions: "Bring a large pot of heavily salted water to a rolling boil (should taste like seawater). Add the drained rice. Parboil uncovered for exactly 5-7 minutes, stirring gently once. A grain is ready when it has elongated and is tender at the outside but still has a firm, white core when bitten — like pasta 2 minutes before al dente. Drain immediately into a sieve and rinse with cold water to stop cooking. The rice is only half done at this point.",
-      visualCue: {
-        primaryTarget: "Long, elegant grains that have elongated and whitened throughout, still holding their shape cleanly but bending slightly rather than snapping when curved between finger and thumb.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are very firm throughout. Snaps rather than bends. Still opaque and starchy-tasting.", action: "Return to the boiling water for another 2 minutes. The grain must be half-cooked before steaming." },
-          { state: "Perfect",   description: "Grains are elongated, bright white, and bend without snapping. The outside is tender but the centre has a visible white opaque core when bitten.", action: "Drain immediately in a sieve and rinse with cold water." },
-          { state: "Overdone",  description: "Grains are fully cooked and soft all the way through. They will become mushy during steaming.", action: "Proceed very quickly to the steaming step — reduce steam time to 20-25 minutes." },
-        ],
-      },
-      feelCue: "Pinch a grain between two fingers after parboiling — the outside should feel smooth and tender, but applying pressure from both sides should reveal a firm, chalky resistance at the centre.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (pour trempe et parboulage)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Steam",
-      inputs: ["parboiled_rice", "ing_03", "ing_04", "ing_05"],
-      outputState: "finished_persian_rice",
-      instructions: "Melt the butter in a heavy-bottomed non-stick pot over medium-high. Layer sliced potato in a single even layer on the bottom. Mound the parboiled rice on top in a gentle pyramid — do not press it. Drizzle the bloomed saffron over the top third. Wrap the pot lid in a clean cloth to absorb condensation, place on tight. Cook on medium-high for 3 minutes, then reduce to the lowest possible heat. Steam for 35-45 minutes. To serve: invert the entire pot onto a serving platter so the golden tahdig comes out on top.",
-      visualCue: {
-        primaryTarget: "When inverted: a dome of elongated, separate, steamed rice grains with a vivid saffron-gold crown, surrounded at the base by a perfectly golden, intact potato tahdig.",
-        spectrum: [
-          { state: "Underdone", description: "Potato tahdig is pale and has not crisped. When inverted, it sticks to the pan and tears. Grains are still slightly firm.", action: "Return to medium heat, covered, for 10 more minutes. The tahdig needs colour and the grains need more steam time." },
-          { state: "Perfect",   description: "Golden-amber potato tahdig that releases in a single intact layer when the pot is inverted. Grains are separate, elongated (up to 3x their dry length), and fluffy — each grain distinct and not sticky.", action: "Serve the tahdig as the centrepiece and the rice mounded alongside." },
-          { state: "Overdone",  description: "Tahdig is dark brown to black. Burnt potato smell. Some grains may be slightly dry.", action: "Serve the rice, discard the burned tahdig layer. Salvage by adding a drizzle of melted saffron butter over the plated rice." },
-        ],
-      },
-      feelCue: "After inverting, press one corner of the tahdig — it should crackle and sound hollow, like pressing through a thin layer of fried food. If it feels soft and flexible, it is not done.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé ou huile végétale",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Filets de safran (fromés dans l'eau chaude)",
+      "ratioValue": 0.5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Structure",
+      "name": "Pommes de terre moyennes (peautées, coupées en tranches de 5 mm)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pain laves mince",
+        "pita tranché"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "soaked_rice",
+      "instructions": "Rincer le basmati dans de l'eau froide jusqu'à ce que l'eau soit claire — au moins 5-6 rinçages. Faire tremper dans l'eau froide avec 1 cuillerée à soupe de sel pendant 30 minutes minimum (jusqu'à 4 heures). Le trempage hydrate le grain, ce qui lui permet d'allonger considérablement pendant la vapeur. Égoutter et rincer une fois de plus.",
+      "visualCue": {
+        "primaryTarget": "Les grains de riz qui ont visiblement gonflés et semblent légèrement translucides, l'eau provenant du rinçage final étant claire et sans nuage d'amidon.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore blancs opaques, durs quand mordus. L'eau est encore laiteuse avec de l'amidon.",
+            "action": "Laisser tremper encore 30 minutes. Les basmati non souillés ne s'allongeront pas et la méthode tahdig produira des résultats inégaux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains s'allongent légèrement, se sentent plus fermes mais légèrement printaniers, et l'eau de rinçage est claire. Un grain mordu est presque tendre à l'extérieur mais toujours ferme au cœur.",
+            "action": "Faire bouillir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains sont trempés pendant plus de 6 heures et sont très doux, facilement broyés. L'extérieur est arrosé.",
+            "action": "Continuez mais réduisez considérablement le temps de parboulage — ces grains cuireont plus vite."
+          }
+        ]
+      },
+      "feelCue": "Serrez un grain imbibé entre vos ongles – il devrait offrir une résistance distincte au cœur, mais donner au bord extérieur. Toujours ferme, mais plus difficile."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bouillir",
+      "inputs": [
+        "soaked_rice"
+      ],
+      "outputState": "parboiled_rice",
+      "instructions": "Porter un grand pot d'eau fortement salée à ébullition (doit avoir un goût d'eau de mer). Ajouter le riz égoutté. Parboil découvert pendant 5-7 minutes exactement, en remuant doucement une fois. Un grain est prêt lorsqu'il est allongé et tendre à l'extérieur, mais il a un noyau blanc ferme quand il est mordu — comme les pâtes 2 minutes avant al dente. Égoutter immédiatement dans un tamis et rincer à l'eau froide pour arrêter la cuisson. Le riz n'est qu'à moitié fait à ce stade.",
+      "visualCue": {
+        "primaryTarget": "Des grains longs et élégants qui se sont allongés et blanchis dans l'ensemble, tenant toujours leur forme propre mais pliant légèrement au lieu de craquer lorsqu'ils sont incurvés entre le doigt et le pouce.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les céréales sont très fermes. Des snaps plutôt que des virages. Toujours opaque et féculent.",
+            "action": "Retournez à l'eau bouillante encore 2 minutes. Le grain doit être mi-cuit avant la vapeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont allongés, blancs vifs et plissés sans éclat. L'extérieur est tendre mais le centre a un noyau opaque blanc visible lorsqu'il est mordu.",
+            "action": "Égoutter immédiatement dans un tamis et rincer à l'eau froide."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains sont entièrement cuits et tendres. Ils deviendront musqués pendant la vapeur.",
+            "action": "Passez très rapidement à l'étape de vapeur — réduisez le temps de vapeur à 20-25 minutes."
+          }
+        ]
+      },
+      "feelCue": "Pincez un grain entre deux doigts après le parboulement — l'extérieur doit se sentir lisse et tendre, mais appliquer la pression des deux côtés doit révéler une résistance ferme et crayeuse au centre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "vapeur",
+      "inputs": [
+        "parboiled_rice",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "finished_persian_rice",
+      "instructions": "Faire fondre le beurre dans un pot anti-adhésif à fond lourd sur un pot moyen-élevé. Coucher la pomme de terre tranchée en une seule couche uniforme sur le fond. Enfoncez le riz séché sur le dessus dans une pyramide douce — ne le pressez pas. Arrosez le safran fleuri au-dessus du tiers supérieur. Envelopper le couvercle du pot dans un chiffon propre pour absorber la condensation, placer sur serré. Cuire à feu moyen-élevé pendant 3 minutes, puis réduire au minimum. Steam pendant 35-45 minutes. Pour servir : inverser le pot entier sur un plateau de service afin que le tahdig doré ressorte sur le dessus.",
+      "visualCue": {
+        "primaryTarget": "Inversé : un dôme de grains de riz allongés, séparés, cuits à la vapeur avec une couronne d'or safran vif, entouré à la base par un tahdig parfaitement doré et intact.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le tahdig de la pomme de terre est pâle et n'a pas de croustillant. Lorsqu'il est inversé, il colle à la poêle et larmes. Les grains sont encore légèrement fermes.",
+            "action": "Retour à feu moyen, couvert, pour 10 minutes de plus. Le tahdig a besoin de couleur et les grains ont besoin de plus de temps de vapeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tahdig de pomme de terre dorée-ambre qui libère dans une seule couche intacte lorsque le pot est inversé. Les grains sont séparés, allongés (jusqu'à 3x de leur longueur sèche) et moelleux — chaque grain est distinct et non collant.",
+            "action": "Servir le tahdig comme pièce maîtresse et le riz bombé à côté."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tahdig est brun foncé à noir. Une odeur de pomme de terre brûlée. Certains grains peuvent être légèrement secs.",
+            "action": "Servir le riz, jeter la couche de tahdig brûlée. Saluvage en ajoutant un filet de beurre de safran fondu sur le riz plaqué."
+          }
+        ]
+      },
+      "feelCue": "Après avoir inversé, appuyez sur un coin du tahdig — il devrait craquer et sonner creux, comme presser à travers une fine couche de nourriture frite. S'il est doux et flexible, il n'est pas fait."
+    }
+  ]
 };

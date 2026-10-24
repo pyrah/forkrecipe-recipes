@@ -1,90 +1,196 @@
 export default {
-  repoId: "master_german_germansauerkraut_001",
-  parentRepoId: null,
-  slug: "german-sauerkraut",
-  author: "ForkRecipe Kitchen",
-  title: "German Sauerkraut",
-  description: "White cabbage and salt — nothing else — massaged until the cabbage surrenders its own brine, then sealed below the surface for weeks while wild bacteria transform it into something sharply sour, deeply funky, and alive with probiotics.",
-  cuisine: "German",
-  culture: "German",
-  category: "fermented",
-  tags: ["fermented", "vegan", "gluten-free", "cabbage", "german", "lacto", "probiotic"],
-  difficulty: 1,
-  activeTime: "30 min",
-  totalTime: "21 days",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 4, sour: 5, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "White cabbage (head, outer leaves reserved)", ratioValue: 1000, defaultUnit: "g", substitutions: ["savoy cabbage", "red cabbage"] },
-    { ingId: "ing_02", role: "Seasoning",  name: "Non-iodized fine sea salt",                   ratioValue: 20,   defaultUnit: "g", substitutions: ["kosher salt — iodized salt inhibits fermentation"] },
-    { ingId: "ing_03", role: "Spice",      name: "Caraway seeds (optional)",                    ratioValue: 5,    defaultUnit: "g", substitutions: ["juniper berries", "fennel seeds"] },
+  "repoId": "master_german_germansauerkraut_001",
+  "parentRepoId": null,
+  "slug": "german-sauerkraut",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauerkraut allemand",
+  "description": "Le chou blanc et le sel — rien d'autre — massé jusqu'à ce que le chou abandonne sa propre saumure, puis scellé sous la surface pendant des semaines tandis que les bactéries sauvages le transforment en quelque chose de fortement aigre, profondément funky, et vivant avec des probiotiques.",
+  "cuisine": "Allemand",
+  "culture": "Allemand",
+  "category": "fermented",
+  "tags": [
+    "fermenté",
+    "végétalien",
+    "Sans gluten",
+    "Choux",
+    "allemand",
+    "lacto",
+    "probiotique"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "30 min",
+  "totalTime": "21 days",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 5,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Slice",
-      inputs: ["ing_01"],
-      outputState: "shredded_cabbage",
-      instructions: "Remove and reserve the outer leaves (2-3) of the cabbage — these will be used to cover the ferment. Quarter the cabbage, remove the core, and shred as thinly as possible — ideally 2-3mm — using a mandoline or sharp knife. Thin shreds ferment more evenly and have a better final texture than thick chunks. Weigh the shredded cabbage after removing the core and outer leaves.",
-      visualCue: {
-        primaryTarget: "Uniform, paper-thin shreds of pale white cabbage with no thick core pieces.",
-        spectrum: [
-          { state: "Underdone", description: "Thick, uneven shreds mixed with large chunks. Core pieces still present.", action: "Re-shred the thicker pieces. Core pieces ferment unevenly and remain crunchy." },
-          { state: "Perfect",   description: "Uniform, thin shreds of 2-3mm. The pile is light and airy. No core pieces.", action: "Transfer to a large bowl and add the salt." },
-          { state: "Overdone",  description: "Shreds are so thin they are almost translucent and beginning to bruise from the knife.", action: "Handle gently. Very thin shreds will still ferment perfectly but may be softer in texture." },
-        ],
-      },
-      feelCue: "The shredded cabbage should feel dry and slightly waxy before salting — each strand independent and spring.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Choux blancs (tête, feuilles extérieures réservées)",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Choux savoy",
+        "chou rouge"
+      ]
     },
     {
-      nodeId: "step_2", action: "Cure",
-      inputs: ["shredded_cabbage", "ing_02", "ing_03"],
-      outputState: "salted_cabbage_with_brine",
-      instructions: "Sprinkle the salt evenly over the shredded cabbage and add the caraway seeds if using. Let the salt rest on the cabbage for 3-5 minutes — you will see moisture beginning to appear. Then massage vigorously with clean hands, squeezing and crushing the cabbage repeatedly. Work the entire mass for 10-15 minutes until the cabbage has released a significant amount of brine — enough to pool in the bottom of the bowl. The cabbage should have wilted to roughly half its original volume.",
-      visualCue: {
-        primaryTarget: "Wilted, translucent cabbage strands sitting in a puddle of their own brine. Volume has roughly halved.",
-        spectrum: [
-          { state: "Underdone", description: "Only a few drops of liquid at the bottom. Cabbage is still crunchy and opaque. Volume has barely reduced.", action: "Massage for another 5-10 minutes. Be firm — you are bruising the cell walls to release moisture." },
-          { state: "Perfect",   description: "A significant pool of clear brine at the bottom of the bowl. Cabbage has wilted to about half its original volume. Strands are translucent and limp. When a handful is squeezed, brine streams out.", action: "Pack into a clean jar immediately, pressing down firmly." },
-          { state: "Overdone",  description: "Cabbage is mushy and fragmented. Too much physical bruising has broken the strands.", action: "Pack it anyway. The texture will be softer but the flavor development will be identical." },
-        ],
-      },
-      feelCue: "Squeeze a handful firmly — brine should run freely between your fingers like squeezing a wet sponge. If you're only getting drops, keep massaging.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel de mer fin non iodé",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher — sel iodé inhibe la fermentation"
+      ]
     },
     {
-      nodeId: "step_3", action: "Press",
-      inputs: ["salted_cabbage_with_brine"],
-      outputState: "packed_raw_sauerkraut",
-      instructions: "Pack the salted cabbage into a clean 1-liter jar or fermentation crock, one handful at a time, pressing firmly with your fist after each addition to compact it and drive the brine upward. Pour any brine remaining in the bowl over the packed cabbage. Lay the reserved outer leaves flat over the surface to create a physical barrier. Use a weight (a small jar filled with water, a zip-lock bag of brine, or a fermentation weight) to keep everything submerged below the brine. The brine MUST cover all the cabbage — any cabbage exposed to air will not ferment properly. Leave 5cm of headspace.",
-      visualCue: {
-        primaryTarget: "Tightly packed cabbage fully submerged under a clear brine with outer leaf caps and a weight in place.",
-        spectrum: [
-          { state: "Underdone", description: "Loosely packed cabbage with air pockets. Some cabbage sits above the brine level.", action: "Press down much harder. Pack in smaller batches and use more fist pressure to expel air and raise the brine." },
-          { state: "Perfect",   description: "Dense, uniform pack with brine covering the cabbage by at least 1cm. The outer leaf cap is flat and the weight holds it down. No visible air bubbles in the mass.", action: "Cover with a cloth or a lid left ajar and leave at room temperature." },
-          { state: "Overdone",  description: "Jar is filled to the very top — no headspace. Brine will overflow as fermentation produces CO2.", action: "Transfer some cabbage to a second jar, maintaining the brine-cover ratio." },
-        ],
-      },
-      feelCue: "Press the packed cabbage with a clean fist — brine should rise above the level of the weight, then settle back as you release. That rising brine is your success signal.",
-    },
-    {
-      nodeId: "step_4", action: "Ferment",
-      inputs: ["packed_raw_sauerkraut"],
-      outputState: "finished_sauerkraut",
-      instructions: "Ferment at room temperature, ideally 18-22°C (65-72°F), for 1-4 weeks. Check daily for the first week: press the cabbage back under the brine, skim any white film from the surface (this is harmless kahm yeast — remove it), and burp any gas buildup. After 3-5 days, tiny bubbles will appear and the brine will go slightly cloudy — fermentation is active. Taste daily from day 7. At 1 week the sauerkraut will be lightly sour and still crunchy. At 2 weeks it develops more complexity. At 3-4 weeks it is deeply sour, complex, and fully mature. Refrigerate when it reaches your preferred flavor, where it will keep for months.",
-      visualCue: {
-        primaryTarget: "Cloudy brine with fine bubbles rising through it. Cabbage has taken on a yellow-white tint. The jar smells of sharp acetic acid and lactic fermentation.",
-        spectrum: [
-          { state: "Underdone", description: "Clear brine. No bubbles. Cabbage still raw-smelling. No sourness in the taste — just salty raw cabbage.", action: "Ensure the temperature is above 18°C and the cabbage is fully submerged. Active fermentation should start within 24-48 hours." },
-          { state: "Perfect",   description: "Brine is distinctly cloudy. Fine bubbles visible. Aroma is pleasant, sour, and funky — unmistakably sauerkraut. Taste is tart, salty, and crunchy. No off-putting smells (mold, putrefaction).", action: "Refrigerate at this point for a lightly fermented product, or continue for deeper flavor." },
-          { state: "Overdone",  description: "Very aggressively sour, almost acidic-tasting. Cabbage is soft and almost mushy. Brine is very cloudy.", action: "Refrigerate immediately. Very sour sauerkraut is still excellent and keeps well — the flavor just won't develop further significantly." },
-        ],
-      },
-      feelCue: "Open the jar after 3 days — you should hear a faint hiss and smell a clean, pleasantly sour aroma. Press the cabbage and feel fine bubbles releasing. Any off-smells beyond pleasant sourness (mold, putrefaction, rottenness) are a sign to discard.",
-    },
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Graines de carvi (facultatif)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "baies de genièvre",
+        "graines de fenouil"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Tranche",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "shredded_cabbage",
+      "instructions": "Retirer et réserver les feuilles extérieures (2-3) du chou — celles-ci seront utilisées pour couvrir le ferment. Quartez le chou, retirez le noyau et déchiquetez le plus fin possible — idéalement 2-3mm — en utilisant une mandoline ou un couteau tranchant. Les râpes minces ferment plus uniformément et ont une meilleure texture finale que les morceaux épais. Peser le chou déchiqueté après avoir enlevé le noyau et les feuilles extérieures.",
+      "visualCue": {
+        "primaryTarget": "Des morceaux uniformes de chou blanc pâle et fin, sans morceaux épais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Déchiquetées épaisses et inégales mélangées à de gros morceaux. Les pièces de base sont toujours présentes.",
+            "action": "Reformer les morceaux plus épais. Les pièces de base ferment inégalement et restent croquantes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des lambeaux uniformes et fins de 2-3mm. La pile est légère et aérée. Pas de morceaux de cœur.",
+            "action": "Transférer dans un grand bol et ajouter le sel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les chrysalides sont si minces qu'ils sont presque translucides et commencent à être meurtris par le couteau.",
+            "action": "Poignez doucement. Les lambeaux très fins seront encore fermentés parfaitement mais peuvent être plus doux dans la texture."
+          }
+        ]
+      },
+      "feelCue": "Le chou déchiqueté doit se sentir sec et légèrement cireux avant de saler — chaque brin indépendant et printemps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Cure",
+      "inputs": [
+        "shredded_cabbage",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "salted_cabbage_with_brine",
+      "instructions": "Saupoudrer le sel uniformément sur le chou déchiqueté et ajouter les graines de carvi si vous l'utilisez. Laissez reposer le sel sur le chou pendant 3-5 minutes — vous verrez apparaître l'humidité. Puis masser vigoureusement avec des mains propres, presser et écraser le chou à plusieurs reprises. Travaillez toute la masse pendant 10-15 minutes jusqu'à ce que le chou ait libéré une quantité importante de saumure — assez pour mettre en réserve dans le fond du bol. Le chou aurait dû flétrir jusqu'à environ la moitié de son volume initial.",
+      "visualCue": {
+        "primaryTarget": "Des brins de chou translucides, enroulés dans une flaque de saumure. Le volume a environ diminué de moitié.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Seulement quelques gouttes de liquide au fond. Le chou est toujours croquant et opaque. Le volume a à peine diminué.",
+            "action": "Massage pendant encore 5-10 minutes. Soyez fermes — vous ecchymosez les parois cellulaires pour libérer l'humidité."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un bassin important de saumure claire au fond du bol. Le chou a flétri jusqu'à environ la moitié de son volume original. Les brins sont translucides et boiteux. Quand une poignée est pressée, la saumure coule.",
+            "action": "Emballez dans un pot propre immédiatement, en appuyant fermement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le chou est musqué et fragmenté. Trop de bleus physiques ont brisé les brins.",
+            "action": "Fais-le quand même. La texture sera plus douce mais le développement de la saveur sera identique."
+          }
+        ]
+      },
+      "feelCue": "Pressez fermement une poignée — la saumure devrait s'écouler librement entre vos doigts, comme si vous tapiez une éponge mouillée. Si vous n'obtenez que des gouttes, continuez à masser."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Appuyez sur",
+      "inputs": [
+        "salted_cabbage_with_brine"
+      ],
+      "outputState": "packed_raw_sauerkraut",
+      "instructions": "Emballez le chou salé dans un pot propre de 1 litre ou une croûte de fermentation, une poignée à la fois, appuyez fermement avec votre poing après chaque ajout pour le compacter et faire monter la saumure. Verser toute saumure restante dans le bol sur le chou emballé. Placer les feuilles extérieures réservées à plat sur la surface pour créer une barrière physique. Utilisez un poids (un petit pot rempli d'eau, un sac de saumure zippée ou un poids de fermentation) pour garder tout immergé sous la saumure. La saumure DOIT couvrir tout le chou — tout chou exposé à l'air ne ferment pas correctement. Laisser 5cm de l'espace de tête.",
+      "visualCue": {
+        "primaryTarget": "Choux hermétiquement emballés entièrement immergés sous une saumure claire avec des capuchons de feuilles et un poids en place.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Choux légèrement emballés avec des poches d'air. Certains choux sont au-dessus de la saumure.",
+            "action": "Appuyez beaucoup plus fort. Emballage en petits lots et utiliser plus de pression de poing pour expulser l'air et élever la saumure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Conditionnement dense et uniforme avec saumure couvrant le chou d'au moins 1 cm. Le capuchon extérieur est plat et le poids le retient. Aucune bulle d'air visible dans la masse.",
+            "action": "Couvrir d'un chiffon ou d'un couvercle laissé en jarre et laisser à température ambiante."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pot est rempli jusqu'au sommet, sans espace de tête. La saumure déborde à mesure que la fermentation produit du CO2.",
+            "action": "Transférer un peu de chou dans un second pot, en maintenant le ratio saumure-couverture."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le chou emballé avec un poing propre — la saumure devrait monter au-dessus du niveau du poids, puis se déposer en arrière lorsque vous relâchez. Cette saumure montante est votre signal de succès."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Ferment",
+      "inputs": [
+        "packed_raw_sauerkraut"
+      ],
+      "outputState": "finished_sauerkraut",
+      "instructions": "Ferment à température ambiante, idéalement de 18-22°C (65-72°F), pendant 1 à 4 semaines. Vérifiez chaque jour pendant la première semaine : pressez le chou sous la saumure, écrémez n'importe quel film blanc de la surface (c'est une levure inoffensive de kahm – le retirer), et faites bouillir toute accumulation de gaz. Après 3-5 jours, de minuscules bulles apparaîtront et la saumure sera légèrement trouble — la fermentation est active. Goûtez tous les jours du jour 7. À 1 semaine, la choucroute sera légèrement aigre et encore croquante. A 2 semaines, il développe plus de complexité. À 3-4 semaines, il est profondément aigre, complexe et parfaitement mature. Réfrigérer quand il atteint votre saveur préférée, où il conservera pendant des mois.",
+      "visualCue": {
+        "primaryTarget": "Saumure nuageuse avec de fines bulles qui s'élèvent à travers elle. Le chou a pris une teinte jaune-blanc. Le pot sent l'acide acétique aigu et la fermentation lactique.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Saumure claire. Pas de bulles. Les choux sont encore frais. Pas d'aurore dans le goût — juste du chou cru salé.",
+            "action": "Assurez-vous que la température est supérieure à 18°C et que le chou est complètement submergé. La fermentation active doit commencer dans les 24-48 heures."
+          },
+          {
+            "state": "Perfect",
+            "description": "La saumure est nettement trouble. De belles bulles visibles. L'aroma est agréable, aigre et funky — sans aucun doute de la choucroute. Le goût est tarte, salé et croquant. Pas d'odeurs défectueuses (molle, putréfaction).",
+            "action": "Réfrigérer à ce point pour un produit légèrement fermenté, ou continuer pour une saveur plus profonde."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très agressivement aigre, presque acide. Le chou est doux et presque moelleux. La saumure est très nuageuse.",
+            "action": "Réfrigérer immédiatement. La choucroute très aigre est encore excellente et se maintient bien — la saveur ne va tout simplement pas se développer plus considérablement."
+          }
+        ]
+      },
+      "feelCue": "Ouvrez le pot après 3 jours — vous devriez entendre un sifflement faible et sentir un arôme propre, agréablement aigre. Appuyez sur le chou et sentir de fines bulles libérer. Tout désodorisant au-delà de l'auresse agréable (molle, putréfaction, pourriture) est un signe à jeter."
+    }
+  ]
 };

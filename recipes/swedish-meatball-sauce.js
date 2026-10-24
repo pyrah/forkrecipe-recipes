@@ -1,78 +1,209 @@
 export default {
-  repoId: "master_scandinavian_swedish-meatball-sauce_001",
-  parentRepoId: null,
-  slug: "swedish-meatball-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Swedish Meatball Sauce",
-  description: "A pale, velvet-smooth pan sauce built from browned meatball fond and rich beef stock, finished with cream and a whisper of soy — the kind of sauce that turns a plate of meatballs into something you want to eat with a spoon.",
-  cuisine: "Scandinavian",
-  culture: "Swedish",
-  category: "sauces",
-  tags: ["cream", "beef stock", "swedish", "meatball", "sauce"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 5, sour: 1, bitter: 1, umami: 6, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",        name: "Unsalted butter",                          ratioValue: 10, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Starch",     name: "Plain flour",                              ratioValue: 10, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",     name: "Beef stock (good quality, low-sodium)",    ratioValue: 80, defaultUnit: "parts", substitutions: ["chicken stock"] },
-    { ingId: "ing_04", role: "Dairy",      name: "Double cream (or heavy cream)",            ratioValue: 40, defaultUnit: "parts", substitutions: ["sour cream for tang"] },
-    { ingId: "ing_05", role: "Umami",      name: "Soy sauce",                                ratioValue: 2,  defaultUnit: "parts", substitutions: ["Worcestershire sauce"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine sea salt",                            ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",      name: "Ground white pepper",                      ratioValue: 0.5, defaultUnit: "parts", substitutions: ["black pepper"] },
-    { ingId: "ing_08", role: "Garnish",    name: "Dijon mustard",                            ratioValue: 2,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_scandinavian_swedish-meatball-sauce_001",
+  "parentRepoId": null,
+  "slug": "swedish-meatball-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce suédoise aux boulettes de viande",
+  "description": "Une sauce à la poêle pâle et moelleuse à base de boulettes de viande brunes et de boeuf riche, finie avec de la crème et un murmure de soja — le genre de sauce qui transforme une assiette de boulettes de viande en quelque chose que vous voulez manger avec une cuillère.",
+  "cuisine": "Scandinave",
+  "culture": "Suédois",
+  "category": "sauces",
+  "tags": [
+    "crème",
+    "viande bovine",
+    "suédois",
+    "boule de viande",
+    "sauce"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 5,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 6,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Melt",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "pale_roux",
-      instructions: "In the same pan used to fry the meatballs (do not clean it — the fond is flavor), melt the butter over medium heat. Once the butter is foaming, add all the flour at once and stir constantly with a wooden spoon or whisk. Cook the roux for exactly 2 minutes, stirring continuously, until it smells of cooked biscuit or shortbread — not raw flour. The roux should look pale blond and have the consistency of wet sand.",
-      visualCue: {
-        primaryTarget: "Pale blond roux coating the pan bottom evenly, smelling of cooked wheat and butter — a clean, toasty scent with no raw flour note.",
-        spectrum: [
-          { state: "Underdone", description: "Roux is white and pasty. The raw flour smell is still dominant.", action: "Cook for another 60 seconds, stirring constantly. The flour proteins must be cooked before adding liquid or the sauce will taste chalky." },
-          { state: "Perfect",   description: "Pale blond, the color of light sand. Smells toasty and nutty. The pan bottom is evenly coated.", action: "Begin adding stock gradually, whisking constantly." },
-          { state: "Overdone",  description: "Roux has darkened to golden-brown. Will add nutty flavor but less thickening power.", action: "Proceed — the sauce will still be excellent, just with a slightly nuttier, darker profile." },
-        ],
-      },
-      feelCue: "The roux should look like wet sand and smell like warm shortbread — that toasty, floury scent signals the starch granules have been properly coated in fat and are ready to absorb liquid.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Whisk",
-      inputs: ["pale_roux", "ing_03"],
-      outputState: "veloute_base",
-      instructions: "Add the beef stock gradually — start with just a splash (about 50ml), whisking vigorously to incorporate it completely into the roux before adding more. Once the first addition is smooth, add the stock in a thin, steady stream, whisking constantly to prevent lumps. Bring to a simmer over medium heat, stirring frequently, and cook for 5 minutes until the sauce has thickened to a consistency that coats the back of a spoon. It will look thin — it will thicken further when the cream is added.",
-      visualCue: {
-        primaryTarget: "Smooth, glossy, pale brown sauce with no lumps, coating the back of a spoon in a thin but visible layer. A line drawn through it with a finger holds briefly.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery. Does not coat a spoon. Flour taste is still present.", action: "Continue simmering for 3-5 more minutes, stirring frequently, to cook out the starch and reduce slightly." },
-          { state: "Perfect",   description: "Smooth sauce that coats a spoon lightly. No lumps. A line drawn with a finger on the back of the spoon holds for 2-3 seconds.", action: "Add cream and seasonings." },
-          { state: "Overdone",  description: "Sauce has become very thick and gloopy. It plops off the spoon in clumps.", action: "Add a splash more stock and whisk to loosen. The cream will also thin it slightly." },
-        ],
-      },
-      feelCue: "Run your finger across the back of a sauce-coated spoon — you should feel a slight resistance and the line should hold cleanly. A watery sauce will flood back instantly; an over-thick sauce will feel glue-like.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Farine pure",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["veloute_base", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "finished_swedish_sauce",
-      instructions: "Reduce heat to medium-low. Add the double cream and stir to combine — the sauce will thin slightly, then thicken as it simmers. Add the soy sauce, white pepper, and Dijon mustard. Stir well. Taste and adjust salt. Simmer gently for 3-5 minutes until the sauce is thick enough to coat meatballs generously — it should fall in a slow, heavy ribbon from a spoon. Do not boil vigorously after adding cream or it may separate. Keep warm on very low heat with a lid ajar until serving.",
-      visualCue: {
-        primaryTarget: "Creamy, pale ivory-brown sauce with a glossy sheen. Falls in a thick, slow ribbon from a spoon. Uniform color with no cream streaks.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and cream has not been fully incorporated. It looks separated or streaky.", action: "Stir constantly over medium-low heat for another 2 minutes until the sauce is homogeneous and thickened." },
-          { state: "Perfect",   description: "Smooth, glossy, and thick enough to coat meatballs without running off immediately. Tastes balanced — rich, savory, faintly sweet. White pepper warmth at the finish.", action: "Add meatballs and serve immediately, or keep warm on very low heat." },
-          { state: "Overdone",  description: "Sauce has reduced too far and is very thick and gloopy. Cream may have separated (grainy texture, yellow fat globules).", action: "If too thick, whisk in a splash of stock. If the cream has broken, whisk vigorously off the heat while adding a tablespoon of cold cream." },
-        ],
-      },
-      feelCue: "Drag a silicone spatula through the sauce — it should leave a clean channel that slowly fills back in over 3-4 seconds. The sauce should smell of rich beef stock, cream, and a faint savory-sweet note from the soy.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Stock de boeuf (bonne qualité, faible teneur en sodium)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bouillon de poulet"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Double crème (ou crème lourde)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème aigre pour tang"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce Worcestershire"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre blanc moulu",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre noir"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire fondre",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "pale_roux",
+      "instructions": "Dans la même casserole utilisée pour faire frire les boulettes de viande (ne pas nettoyer — le fond est saveur), faire fondre le beurre à feu moyen. Une fois le beurre moussant, ajouter toute la farine à la fois et remuer constamment avec une cuillère en bois ou fouetter. Cuire le roux pendant 2 minutes exactement, en remuant continuellement, jusqu'à ce qu'il sente le biscuit cuit ou le pain court — pas la farine crue. Le roux devrait avoir l'air blond pâle et avoir la consistance du sable humide.",
+      "visualCue": {
+        "primaryTarget": "Rouge blond pâle enrobant uniformément le fond de la poêle, sentant le blé cuit et le beurre — un parfum propre et grillé sans note de farine crue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Roux est blanc et pâteux. L'odeur de farine brute est toujours dominante.",
+            "action": "Cuire encore 60 secondes, en remuant constamment. Les protéines de farine doivent être cuites avant d'ajouter du liquide ou la sauce aura un goût crayeux."
+          },
+          {
+            "state": "Perfect",
+            "description": "blond pâle, la couleur du sable clair. Ça sent le toast et la noix. Le fond de la poêle est uniformément recouvert.",
+            "action": "Commencez à ajouter du stock progressivement, en fouettant constamment."
+          },
+          {
+            "state": "Overdone",
+            "description": "Roux est devenu brun doré. Cela ajoutera une saveur de noix mais moins de puissance épaississante.",
+            "action": "Continuez — la sauce sera toujours excellente, juste avec un profil légèrement plus noisette, plus foncé."
+          }
+        ]
+      },
+      "feelCue": "Le roux doit ressembler à du sable humide et sentir comme du pain court chaud — que l'odeur grillée et farineuse signale que les granules d'amidon ont été correctement enrobés de graisse et sont prêts à absorber le liquide."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "pale_roux",
+        "ing_03"
+      ],
+      "outputState": "veloute_base",
+      "instructions": "Ajouter le stock de boeuf progressivement — commencer par une simple éclaboussure (environ 50ml), fouetter vigoureusement pour l'incorporer complètement dans le roux avant d'ajouter davantage. Une fois le premier ajout lisse, ajouter le stock dans un cours d'eau mince et stable, fouettant constamment pour éviter les bosses. Porter à mijoter à feu moyen, en remuant fréquemment et cuire 5 minutes jusqu'à ce que la sauce s'épaississe à une consistance qui enveloppe l'arrière d'une cuillère. Il aura l'air mince — il s'épaissira encore plus quand la crème sera ajoutée.",
+      "visualCue": {
+        "primaryTarget": "Doux, brillant, brun pâle sans grumeaux, enrobant le dos d'une cuillère dans une couche mince mais visible. Une ligne tracée à travers elle avec un doigt tient brièvement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse. N'enfile pas une cuillère. Le goût de la farine est toujours présent.",
+            "action": "Continuer à mijoter pendant 3 à 5 minutes, en remuant fréquemment, pour faire cuire l'amidon et réduire légèrement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sauce lisse qui enveloppe légèrement une cuillère. Pas de bosses. Une ligne tracée avec un doigt sur le dos de la cuillère tient pendant 2-3 secondes.",
+            "action": "Ajouter la crème et les assaisonnements."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est devenue très épaisse et glacée. Il déboîte la cuillère en touffes.",
+            "action": "Ajouter un éclaboussure plus de stock et fouetter pour se détendre. La crème l'amincira également légèrement."
+          }
+        ]
+      },
+      "feelCue": "Passez votre doigt sur l'arrière d'une cuillère enrobée de sauce — vous devriez sentir une légère résistance et la ligne doit tenir proprement. Une sauce aqueuse s'arrosera instantanément; une sauce trop épaisse se sentira comme de la colle."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "veloute_base",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_swedish_sauce",
+      "instructions": "Réduire le feu à moyen-doux. Ajouter la double crème et mélanger – la sauce s'amincit légèrement, puis épaissit en mijotant. Ajouter la sauce soja, le poivre blanc et la moutarde de Dijon. Bien mélanger. Goûtez et ajustez le sel. Laisser mijoter doucement pendant 3-5 minutes jusqu'à ce que la sauce soit suffisamment épaisse pour enrober généreusement les boulettes de viande. Ne pas faire bouillir vigoureusement après avoir ajouté de la crème ou il peut se séparer. Conserver au chaud à feu très doux avec un couvercle enjar jusqu'à ce qu'il serve.",
+      "visualCue": {
+        "primaryTarget": "sauce crémeuse, brun ivoire pâle avec un éclat brillant. Elle tombe dans un ruban épais et lent d'une cuillère. Couleur uniforme sans stries crème.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et la crème n'a pas été entièrement incorporée. Il semble séparé ou strié.",
+            "action": "Incorporer constamment à feu moyen-doux pendant 2 minutes jusqu'à ce que la sauce soit homogène et épaissie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, brillant et assez épais pour enrober les boulettes de viande sans s'enfuir immédiatement. Goûts équilibrés — riches, salés, légèrement sucrés. Chaleur de poivre blanc à la finale.",
+            "action": "Ajouter les boulettes de viande et servir immédiatement, ou garder au chaud à feu très doux."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite trop loin et est très épaisse et givrée. La crème peut s'être séparée (texture de la graine, globules jaunes).",
+            "action": "Si elle est trop épaisse, fouetter dans un éclat de bouillon. Si la crème a cassé, fouetter vigoureusement le feu tout en ajoutant une cuillère à soupe de crème froide."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une spatule de silicone dans la sauce — elle devrait laisser un canal propre qui se remplit lentement en plus de 3-4 secondes. La sauce doit sentir le stock de bœuf riche, la crème, et une note peu salée du soja."
+    }
+  ]
 };

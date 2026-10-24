@@ -1,98 +1,230 @@
 export default {
-  repoId: "master_american_newyorkbagels_001",
-  parentRepoId: null,
-  slug: "new-york-bagels",
-  author: "ForkRecipe Kitchen",
-  title: "New York Bagels",
-  description: "Dense, chewy, irreducibly satisfying — the NY bagel's singular texture comes from a high-gluten dough, an overnight cold retard, and a malt-spiked boil before baking, producing a crust that snaps under the knife and a crumb that resists all impostors.",
-  cuisine: "American",
-  culture: "New York Jewish",
-  category: "breads",
-  tags: ["bread", "vegan", "boiled", "chewy", "new-york"],
-  difficulty: 4,
-  activeTime: "60 min",
-  totalTime: "18 hours",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 2, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "High-gluten bread flour (14% protein)", ratioValue: 100,  defaultUnit: "%", substitutions: ["bread flour (13% protein — slightly less chew)"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Cold water",                             ratioValue: 55,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Fine sea salt",                          ratioValue: 2,    defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Sweetener",  name: "Barley malt syrup (dough)",              ratioValue: 1.5,  defaultUnit: "%", substitutions: ["brown sugar", "honey"] },
-    { ingId: "ing_05", role: "Leavener",   name: "Instant yeast",                          ratioValue: 0.5,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Sweetener",  name: "Barley malt syrup (boil water)",         ratioValue: 30,   defaultUnit: "g per liter", substitutions: ["brown sugar", "baked baking soda (1 tbsp per liter)"] },
-    { ingId: "ing_07", role: "Garnish",    name: "Everything bagel seasoning or sesame/poppy seeds", ratioValue: 20, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_american_newyorkbagels_001",
+  "parentRepoId": null,
+  "slug": "new-york-bagels",
+  "author": "ForkRecipe Kitchen",
+  "title": "New York Bagels",
+  "description": "La texture singulière du bagel de NY provient d'une pâte à haute teneur en gluten, d'un retard de la nuit au froid et d'un ébullition au malt-épicé avant la cuisson, produisant une croûte qui se brise sous le couteau et une miette qui résiste à tous les imposteurs.",
+  "cuisine": "Américain",
+  "culture": "Juif de New York",
+  "category": "breads",
+  "tags": [
+    "pain",
+    "végétalien",
+    "bouillie",
+    "Mâche",
+    "nouveau-né"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "60 min",
+  "totalTime": "18 hours",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "bagel_dough",
-      instructions: "Combine flour, salt, yeast, and malt syrup. Add cold water (cold water slows fermentation and improves texture). Mix until a very stiff, dry-looking dough forms — bagel dough is noticeably stiffer than any other bread dough, with only 55% hydration. Knead vigorously for 12–15 minutes by hand (or 10 minutes on medium in a stand mixer) until the dough is satiny smooth and extremely tight. Divide into 8 portions (about 110 g each).",
-      visualCue: {
-        primaryTarget: "An extremely stiff, smooth dough that barely sticks to anything. Noticeably harder than standard bread dough.",
-        spectrum: [
-          { state: "Underdone", description: "Rough surface, tears rather than stretches, still slightly sticky.", action: "Continue kneading. High-gluten flour takes longer to fully develop — the payoff is the chew." },
-          { state: "Perfect",   description: "Satiny smooth, very firm. A small piece stretches into a thin sheet before tearing. The dough feels almost rubbery from the gluten network.", action: "Shape immediately while the gluten is warm and pliable." },
-          { state: "Overdone",  description: "Dough is tearing when folded back on itself. Very hot (above 28 C).", action: "Rest 15 minutes covered — over-kneaded high-gluten dough can become glassy and tear-prone." },
-        ],
-      },
-      feelCue: "Bagel dough should feel like a stress ball — firm and dense, not pillowy. When you press your thumb in, it springs back immediately with almost no yield.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain à haute teneur en gluten (14 % de protéines)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de pain (13 % de protéines — un peu moins de mâcher)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Shape",
-      inputs: ["bagel_dough"],
-      outputState: "shaped_bagels",
-      instructions: "Shape each portion into a tight ball, then use the thumb-through method: press both thumbs through the center of the ball and stretch the ring to 8–9 cm diameter with a 3 cm hole (the hole shrinks during proofing and baking). Alternatively, roll each ball into a 25 cm rope and join the ends with a 3 cm overlap, pressing firmly and rolling the seam against the work surface to seal. Place on parchment-lined trays dusted with cornmeal or semolina. Refrigerate uncovered overnight (12–16 hours).",
-      visualCue: {
-        primaryTarget: "Even rings with a 3 cm hole and a uniform rope diameter. The seam, if rolled, should be invisible.",
-        spectrum: [
-          { state: "Underdone", description: "Hole is too small (under 2 cm) or irregular. Dough still rough at the seam.", action: "Stretch the ring gently between two fingers. Roll the seam junction more firmly on the counter." },
-          { state: "Perfect",   description: "Even, symmetrical rings with a visible 3 cm hole. Surface is smooth and tight. Seam completely invisible.", action: "Refrigerate uncovered on a semolina-dusted tray for 12–16 hours." },
-          { state: "Overdone",  description: "Ring is misshapen, thick on one side and paper-thin on the other. Hole is enormous.", action: "Roll the ring into a ball and reshape — the dough tolerates reshaping well at this stage." },
-        ],
-      },
-      feelCue: "The shaped ring should feel like a small rubber band — uniform tension all the way around, firm and springy, not floppy or asymmetric.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau froide",
+      "ratioValue": 55,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Boil",
-      inputs: ["shaped_bagels", "ing_06"],
-      outputState: "boiled_bagels",
-      instructions: "Remove bagels from refrigerator. Float test: drop one bagel in cold water — it should float within 10 seconds. If it sinks, let the batch proof at room temperature for 30 more minutes. Bring a wide pot of water to a rolling boil. Add barley malt syrup. Boil bagels 2–3 at a time for 60 seconds per side (softer) or 90 seconds per side (chewier, more authentic). Remove with a spider or slotted spoon, drain, then immediately press the wet top into seeds or seasoning.",
-      visualCue: {
-        primaryTarget: "Bagels that have swollen noticeably during boiling, with a slightly translucent, glossy surface when removed.",
-        spectrum: [
-          { state: "Underdone", description: "Bagels sank and haven't floated. The surface looks the same after boiling as before.", action: "They were under-proofed. Proof at room temperature 30 minutes longer. Boil again — this step is forgiving." },
-          { state: "Perfect",   description: "Bagels puffed slightly during boiling. The surface has turned semi-translucent and slightly shiny. They feel slightly firmer to the touch.", action: "Drain, seed immediately, and bake within 5 minutes." },
-          { state: "Overdone",  description: "Wrinkled, waterlogged. The surface looks puckered and pale. Over-boiled.", action: "Bake anyway — they will still be edible. Reduce boiling time to 45 seconds per side next time." },
-        ],
-      },
-      feelCue: "The boiled bagel feels denser and slightly slimy — the gelatinized outer layer is what creates the classic chewy crust after baking. It should feel heavier than before boiling.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["boiled_bagels", "ing_07"],
-      outputState: "finished_bagels",
-      instructions: "Bake on a parchment-lined tray (or preheated baking stone) at 230 C (450 F) for 18–22 minutes until deeply golden-brown with no pale patches. Rotate the tray at 10 minutes. The bagels will darken significantly in the final 3 minutes. Cool on a wire rack for at least 15 minutes before cutting — the crumb is still setting.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown all over with toasted, slightly darker seeds. The glossy surface from boiling has become a matte, crackling crust.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold, soft crust. Seeds look raw. The crust yields when squeezed.", action: "Return to oven — pale bagels lack the snap and chew that define the style." },
-          { state: "Perfect",   description: "Rich amber-brown, seeds toasted. The crust snaps when tapped with a fingernail. The bottom is evenly browned and dry.", action: "Cool on a rack. Bagels are best same-day but freeze beautifully if sliced first." },
-          { state: "Overdone",  description: "Very dark, seeds starting to burn. A slight bitterness from the malt.", action: "Remove immediately. Trim darkest areas if desired. The interior crumb is very forgiving of overbaking." },
-        ],
-      },
-      feelCue: "A properly baked bagel feels heavy for its size — knock it on the counter and it makes a satisfying thud, not the hollow echo of bread. That density is the entire point.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sirop de malt d'orge (dough)",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "sucre brun",
+        "Chérie"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 0.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Sirop de malt d'orge (eau bouillante)",
+      "ratioValue": 30,
+      "defaultUnit": "g per liter",
+      "substitutions": [
+        "sucre brun",
+        "bicarbonate de soude (1 c. à soupe par litre)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Tout assaisonnement bagel ou graines de sésame/poppy",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "bagel_dough",
+      "instructions": "Mélanger la farine, le sel, la levure et le sirop de malt. Ajouter de l'eau froide (l'eau froide ralentit la fermentation et améliore la texture). Mélanger jusqu'à ce qu'une pâte très rigide et à l'aspect sec se forme — la pâte bagel est nettement plus rigide que toute autre pâte à pain, avec seulement 55 % d'hydratation. Agenouillez vigoureusement de 12 à 15 minutes à la main (ou 10 minutes à la moyenne dans un mélangeur) jusqu'à ce que la pâte soit satinée lisse et extrêmement serrée. Divisez en 8 portions (environ 110 g chacune).",
+      "visualCue": {
+        "primaryTarget": "Une pâte très raide et lisse qui colle à peine à n'importe quoi. Plus difficile que la pâte à pain standard.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Surface dure, larmes plutôt qu'étirées, encore légèrement collante.",
+            "action": "Continuez à pétrir. La farine à haute teneur en gluten prend plus de temps à se développer complètement — le gain est la mâche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Satiné doux, très ferme. Une petite pièce s'étire dans une mince feuille avant de déchirer. La pâte est presque caoutchouteuse du réseau de gluten.",
+            "action": "Formez immédiatement pendant que le gluten est chaud et souple."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux se déchire lorsqu'elle est repliée sur elle-même. Très chaud (au-dessus de 28°C).",
+            "action": "Reposer 15 minutes couvert — la pâte à haute teneur en gluten surcollée peut devenir vitreuse et sujette aux déchirures."
+          }
+        ]
+      },
+      "feelCue": "La pâte de bagel doit se sentir comme une boule de stress — ferme et dense, pas oreiller. Lorsque vous appuyez sur votre pouce, il ressort immédiatement avec presque aucun rendement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Forme",
+      "inputs": [
+        "bagel_dough"
+      ],
+      "outputState": "shaped_bagels",
+      "instructions": "Formez chaque portion en une boule serrée, puis utilisez la méthode à travers le pouce : pressez les deux pouces à travers le centre de la boule et étirez l'anneau de 8 à 9 cm de diamètre avec un trou de 3 cm (le trou se rétrécit lors de l'épreuve et de la cuisson). Alternativement, rouler chaque boule dans une corde de 25 cm et joindre les extrémités avec un chevauchement de 3 cm, appuyer fermement et rouler la couture contre la surface de travail pour sceller. Placer sur des plateaux parcheminés avec de la farine de maïs ou de la semoule. Réfrigérer à découvert toute la nuit (12-16 heures).",
+      "visualCue": {
+        "primaryTarget": "Même des anneaux avec un trou de 3 cm et un diamètre uniforme de corde. La couture, si elle est roulée, doit être invisible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le trou est trop petit (moins de 2 cm) ou irrégulier. Toux encore rude à la couture.",
+            "action": "Étendez doucement l'anneau entre deux doigts. Roulez la jonction de couture plus fermement sur le comptoir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même des anneaux symétriques avec un trou visible de 3 cm. Surface lisse et serrée. Seam complètement invisible.",
+            "action": "Réfrigérer à découvert sur un plateau à poudre de semoule pendant 12-16 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'anneau est mishapen, épais d'un côté et le papier-fin de l'autre. Le trou est énorme.",
+            "action": "Roulez l'anneau dans une boule et remodelez - la pâte tolère bien le remodelage à ce stade."
+          }
+        ]
+      },
+      "feelCue": "L'anneau en forme doit se sentir comme une petite bande de caoutchouc — tension uniforme tout autour, ferme et printanière, non floppée ou asymétrique."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Bouillir",
+      "inputs": [
+        "shaped_bagels",
+        "ing_06"
+      ],
+      "outputState": "boiled_bagels",
+      "instructions": "Retirer les bagels du réfrigérateur. Test de flottaison: déposer un bagel dans l'eau froide — il doit flotter dans les 10 secondes. Si elle coule, laissez la preuve du lot à température ambiante pendant 30 minutes de plus. Portez une grande casserole d'eau à ébullition. Ajouter le sirop de malt d'orge. Faire bouillir les bagels 2–3 à la fois pendant 60 secondes de chaque côté (plus doux) ou 90 secondes de chaque côté (plus authentique). Retirer avec une araignée ou une cuillère à fente, égoutter, puis presser immédiatement le dessus humide dans les graines ou l'assaisonnement.",
+      "visualCue": {
+        "primaryTarget": "Bagels qui ont enflé de façon notable pendant l'ébullition, avec une surface légèrement translucide et brillante lorsqu'ils sont enlevés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Bagels a coulé et n'a pas flotté. La surface est la même après avoir bouilli.",
+            "action": "Ils étaient sous-protégés. Preuve à la température ambiante 30 minutes de plus. Faites bouillir à nouveau — cette étape est pardonnante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bagels légèrement gonflés pendant l'ébullition. La surface est devenue semi-translucide et légèrement brillante. Ils se sentent légèrement plus fermes au toucher.",
+            "action": "Égoutter, semer immédiatement et cuire en 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ridé, arrosé. La surface a l'air puant et pâle. Surchauffé.",
+            "action": "Faire cuire de toute façon — ils seront encore comestibles. Réduire le temps d'ébullition à 45 secondes de chaque côté la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Le bagel bouilli se sent plus dense et légèrement visqueux — la couche externe gélatinisée est ce qui crée la croûte à croûte classique après cuisson. Il devrait se sentir plus lourd qu'avant de bouillir."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "boiled_bagels",
+        "ing_07"
+      ],
+      "outputState": "finished_bagels",
+      "instructions": "Cuire sur un plateau parcheminé (ou en pierre préchauffée) à 230 °C (450 °F) pendant 18 à 22 minutes jusqu'à ce qu'il soit profondément doré, sans taches pâles. Faites tourner le plateau à 10 minutes. Les bagels s'assombriront significativement dans les 3 dernières minutes. Laisser refroidir sur une grille pendant au moins 15 minutes avant de couper — la miette est encore en place.",
+      "visualCue": {
+        "primaryTarget": "De couleur dorée foncée avec des graines légèrement plus foncées. La surface brillante de l'ébullition est devenue une croûte mate et crépitante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle, croûte douce. Les graines ont l'air crues. La croûte donne quand elle est pressée.",
+            "action": "Retourner au four — les bagels pâles manquent de la touche et de la mâche qui définissent le style."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche ambre-brun, graines grillées. La croûte craque lorsqu'elle est tapée d'un ongle. Le fond est uniformément bruni et sec.",
+            "action": "Du calme sur une grille. Les bagels sont les mieux le même jour, mais congelent magnifiquement s'ils sont tranchés en premier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très sombre, les graines commencent à brûler. Une légère amertume du malt.",
+            "action": "Supprimer immédiatement. Trim zones les plus sombres si désiré. La miette intérieure est très pardonnante de surprendre."
+          }
+        ]
+      },
+      "feelCue": "Un bagel bien cuit se sent lourd pour sa taille — frapper sur le comptoir et il fait un bruit satisfaisant, pas l'écho creux du pain. Cette densité est tout le point."
+    }
+  ]
 };

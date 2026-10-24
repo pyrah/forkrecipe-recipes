@@ -1,102 +1,280 @@
 export default {
-  repoId: "master_filipino_sinigang_na_hipon_001",
-  parentRepoId: null,
-  slug: "sinigang-na-hipon",
-  author: "ForkRecipe Kitchen",
-  title: "Sinigang na Hipon",
-  description: "Philippines' definitive sour broth — head-on shrimp simmered with kangkong, tomatoes, daikon, and eggplant in a tamarind-bright soup that is at once light, tart, and deeply satisfying.",
-  cuisine: "Filipino",
-  culture: "Filipino",
-  category: "seafood",
-  tags: ["gluten-free", "filipino"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 3, sour: 4, bitter: 0, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Large raw shrimp, head-on and shell-on",             ratioValue: 500, defaultUnit: "g",  substitutions: ["shell-on shrimp, headless", "prawns"] },
-    { ingId: "ing_02", role: "Acid",      name: "Tamarind paste (or 1 packet sinigang mix)",           ratioValue: 60,  defaultUnit: "g",  substitutions: ["fresh tamarind pulp (100 g)", "sampaloc mix"] },
-    { ingId: "ing_03", role: "Allium",    name: "White onion, quartered",                              ratioValue: 1,   defaultUnit: "medium", substitutions: ["red onion"] },
-    { ingId: "ing_04", role: "Umami",     name: "Ripe tomatoes, quartered",                            ratioValue: 3,   defaultUnit: "medium", substitutions: ["canned whole tomatoes (200 g)"] },
-    { ingId: "ing_05", role: "Structure", name: "Daikon radish, sliced 1 cm rounds",                   ratioValue: 200, defaultUnit: "g",  substitutions: ["watermelon radish"] },
-    { ingId: "ing_06", role: "Structure", name: "Japanese eggplant, sliced into chunks",               ratioValue: 200, defaultUnit: "g",  substitutions: ["globe eggplant"] },
-    { ingId: "ing_07", role: "Herb",      name: "Water spinach (kangkong) or baby spinach",            ratioValue: 150, defaultUnit: "g",  substitutions: ["bok choy", "regular spinach"] },
-    { ingId: "ing_08", role: "Heat",      name: "Long green chiles (siling haba)",                     ratioValue: 2,   defaultUnit: "whole", substitutions: ["serrano pepper", "banana pepper"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fish sauce (patis)",                                  ratioValue: 30,  defaultUnit: "ml", substitutions: ["soy sauce", "salt to taste"] },
-    { ingId: "ing_10", role: "Liquid",    name: "Water",                                               ratioValue: 1.5, defaultUnit: "liters", substitutions: ["light fish stock"] },
-    { ingId: "ing_11", role: "Seasoning", name: "Fine sea salt",                                       ratioValue: 4,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_filipino_sinigang_na_hipon_001",
+  "parentRepoId": null,
+  "slug": "sinigang-na-hipon",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sinigang na Hipon",
+  "description": "Bouillon aigre définitif des Philippines: crevettes à la tête mijotées de kangkong, de tomates, de daikon et d'aubergines dans une soupe au tamarin-brillante qui est à la fois légère, goudronneuse et profondément satisfaisante.",
+  "cuisine": "Philippine",
+  "culture": "Philippine",
+  "category": "seafood",
+  "tags": [
+    "Sans gluten",
+    "Filipino"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Boil",
-      inputs: ["ing_10", "ing_03", "ing_04"],
-      outputState: "aromatic_broth",
-      instructions: "Bring the water to a rolling boil in a large pot. Add the quartered onion and tomatoes. Boil vigorously for 8–10 minutes, pressing the tomatoes against the side of the pot occasionally with the back of a spoon to help them break down and release their juices into the water. The tomatoes are not just aromatic — they provide body and sweetness that frames the sour tamarind. The broth will turn a faint pinkish-orange as they dissolve.",
-      visualCue: {
-        primaryTarget: "Broth is faintly pink-orange from dissolved tomato. Onion has softened and is beginning to fall apart at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Tomatoes are still firm and whole, floating intact. Broth is clear. The sweetness and body they provide have not yet entered the liquid.", action: "Continue boiling and press tomatoes against the pot wall to speed their breakdown." },
-          { state: "Perfect",   description: "Tomatoes have collapsed into the broth, leaving soft skin behind. Onion layers have separated and softened. Broth is lightly colored and smells sweet and vegetal.", action: "Add the tamarind and hard vegetables." },
-          { state: "Overdone",  description: "Broth is reducing and becoming too concentrated. Water level has dropped significantly.", action: "Add a splash more water to restore volume. Sinigang should be a light broth, not a dense stew." },
-        ],
-      },
-      feelCue: "The broth at this stage should taste almost sweet from the tomatoes — barely salted, thin, and clean. The tamarind will transform it completely.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Grandes crevettes crues, tête-à-tête et coquillages",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "crevettes sans tête",
+        "crevettes"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["aromatic_broth", "ing_02", "ing_05", "ing_06"],
-      outputState: "soured_broth",
-      instructions: "Add the tamarind paste (or sinigang mix) and stir until fully dissolved. Taste the broth — it should be bracingly, pleasantly sour. Add the daikon rounds and eggplant chunks. Adjust the heat to a gentle simmer and cook for 10–12 minutes until the daikon is just tender when pierced with a chopstick. The eggplant will absorb the sour broth and become silky. Sinigang's sourness should make you pucker slightly but not wince.",
-      visualCue: {
-        primaryTarget: "Broth is a translucent amber-brown from the tamarind. Daikon has turned from white to a faint cream. Eggplant has darkened and softened.",
-        spectrum: [
-          { state: "Underdone", description: "Daikon is still snappy and resists a chopstick. The sourness of the broth is very sharp and raw-tasting — the vegetables have not yet absorbed it.", action: "Simmer 4 more minutes. The vegetables round out the tamarind as they soften." },
-          { state: "Perfect",   description: "Daikon yields to a chopstick with light pressure but holds its shape. Eggplant is silky and has taken on the sour broth's color. The acidity has mellowed into a rounded, bright tartness.", action: "Add the shrimp." },
-          { state: "Overdone",  description: "Daikon has become mushy and broken apart. Eggplant has dissolved into the broth, making it cloudy. The sour note has faded to flat.", action: "Add shrimp immediately and serve as soon as they are cooked — do not continue simmering." },
-        ],
-      },
-      feelCue: "A spoonful of broth at this stage should make the back of your jaw ache pleasantly — that is the tamarind doing its work.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Pâte de tamarin (ou mélange de siniang de 1 paquet)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pulpe de tamarin frais (100 g)",
+        "mélange de sampaloc"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Poach",
-      inputs: ["soured_broth", "ing_01", "ing_08"],
-      outputState: "cooked_shrimp",
-      instructions: "Add the head-on shrimp and the whole green chiles to the simmering broth. The shrimp go in raw and cook quickly — 3–5 minutes depending on size. The heads will leach their coral-orange fat directly into the broth, enriching it with umami. Do not overcook: shrimp tighten quickly and become rubbery beyond 5 minutes. Watch them change color and remove from heat the moment the last one turns fully pink.",
-      visualCue: {
-        primaryTarget: "Every shrimp is uniformly coral-pink on the shell. The flesh visible at the head-joint is opaque white. The broth has taken on a deeper orange tint from the head fat.",
-        spectrum: [
-          { state: "Underdone", description: "Shrimp are still partially grey-translucent. The flesh is soft and jelly-like at the center. Head fat has not yet fully released.", action: "Simmer 1–2 more minutes and check again." },
-          { state: "Perfect",   description: "Shells are fully coral-pink. Flesh is just opaque throughout. The broth has brightened with a faint orange tint from the head fat. Tails are curled into a gentle arc.", action: "Add the leafy greens and season." },
-          { state: "Overdone",  description: "Shrimp have curled tightly into a C or O shape. The flesh is dense and slightly dry when bitten. Shells are pulling away from the flesh.", action: "Serve immediately. Continuing to cook makes them progressively more rubbery — get them in bowls now." },
-        ],
-      },
-      feelCue: "Lift a shrimp and bend it gently — a perfectly cooked shrimp flexes at the middle rather than snapping stiff or flopping completely limp.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon blanc, quartiers",
+      "ratioValue": 1,
+      "defaultUnit": "medium",
+      "substitutions": [
+        "oignon rouge"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Season",
-      inputs: ["cooked_shrimp", "ing_07", "ing_09", "ing_11"],
-      outputState: "finished_sinigang",
-      instructions: "Add the water spinach (or spinach) leaves and stems to the pot. They will wilt in 1–2 minutes — stalks first, leaves last. Season the broth with fish sauce and salt, adding them gradually and tasting after each addition. The final flavor profile should be bright and sour as the dominant note, with a salty umami backbone from the fish sauce and shrimp heads, and a background sweetness from the tomatoes. Serve immediately in deep bowls with steamed white rice on the side.",
-      visualCue: {
-        primaryTarget: "Bright green wilted greens throughout the bowl. Clear, amber broth. Pink shrimp visible through the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Greens are still stiff and dark, stems uncooked. Fish sauce not yet added — broth tastes flat and under-seasoned.", action: "Cook 1 more minute then add fish sauce and salt to taste." },
-          { state: "Perfect",   description: "Greens are bright green and just wilted — stems tender, leaves collapsed but not grey. Broth is brightly sour, savory, and clean. The sourness hits first, the umami follows.", action: "Serve immediately in deep bowls alongside rice." },
-          { state: "Overdone",  description: "Greens have turned grey-green and are beginning to break apart. Broth smells cooked and flat, with less sour brightness.", action: "Serve immediately. Add a small squeeze of tamarind paste to the bowl when serving to restore brightness." },
-        ],
-      },
-      feelCue: "The finished broth should taste like a cool splash of rain — simultaneously refreshing and nourishing, with an acidic brightness that opens the palate.",
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Tomates ripées, en quartiers",
+      "ratioValue": 3,
+      "defaultUnit": "medium",
+      "substitutions": [
+        "tomates entières en conserve (200 g)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Structure",
+      "name": "Radis Daikon, tranches de 1 cm",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "radis de pastèque"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Structure",
+      "name": "Aubergines japonaises, coupées en morceaux",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "aubergines mondiales"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Épinards d'eau (kangkong) ou petits épinards",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Bok choy",
+        "épinards réguliers"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Heat",
+      "name": "Pilosités vertes longues (haba en lin)",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "poivre de serrano",
+        "Poivre de banane"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "sauce de poisson (pâtes)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce de soja",
+        "sel au goût"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 1.5,
+      "defaultUnit": "liters",
+      "substitutions": [
+        "stocks de poissons légers"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_10",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "aromatic_broth",
+      "instructions": "Portez l'eau à ébullition dans un grand pot. Ajouter l'oignon et les tomates. Faire bouillir vigoureusement pendant 8 à 10 minutes, en pressant parfois les tomates contre le côté de la casserole avec le dos d'une cuillère pour les aider à se décomposer et à libérer leur jus dans l'eau. Les tomates ne sont pas seulement aromatiques — elles fournissent corps et douceur qui cadrent le tamarin aigre. Le bouillon va tourner un peu rose-orange au fur et à mesure qu'ils se dissolvent.",
+      "visualCue": {
+        "primaryTarget": "Le papillon est faiblement rose-orange de la tomate dissoute. L'oignon s'est adouci et commence à s'effondrer aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tomates sont toujours fermes et entières, flottant intactes. C'est clair. La douceur et le corps qu'ils fournissent ne sont pas encore entrés dans le liquide.",
+            "action": "Continuer à bouillir et presser les tomates contre la paroi du pot pour accélérer leur dégradation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tomates se sont effondrées dans le bouillon, laissant la peau douce derrière. Les couches d'oignon se sont séparées et ramollies. Broth est légèrement coloré et sent doux et végétal.",
+            "action": "Ajouter le tamarin et les légumes durs."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le papillon diminue et devient trop concentré. Le niveau de l'eau a considérablement baissé.",
+            "action": "Ajoutez une éclaboussure plus d'eau pour restaurer le volume. Sinigang doit être un bouillon léger, pas un ragoût dense."
+          }
+        ]
+      },
+      "feelCue": "À ce stade, le bouillon devrait goûter presque sucré des tomates, à peine salées, minces et propres. Le tamarin le transformera complètement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "aromatic_broth",
+        "ing_02",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "soured_broth",
+      "instructions": "Ajouter la pâte de tamarin (ou mélange de siniang) et remuer jusqu'à dissolution complète. Goûtez le bouillon — il doit être amer et ardem. Ajouter les rondelles de daikon et les morceaux d'aubergines. Ajuster le feu à mijoter doucement et cuire 10 à 12 minutes jusqu'à ce que le daikon soit tendre lorsqu'il est percé avec une baguette. L'aubergine absorbera le bouillon acide et deviendra soyeuse. L'aurorité de Sinigang devrait vous faire sucer légèrement mais pas de treuil.",
+      "visualCue": {
+        "primaryTarget": "Broth est un brun-ambre translucide du tamarin. Daikon s'est transformé en crème blanche. L'aubergine a obscurci et adouci.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Daikon est toujours agité et résiste à une baguette. L'aurore du bouillon est très nette et rafraîchissante — les légumes ne l'ont pas encore absorbée.",
+            "action": "Faites mijoter 4 minutes de plus. Les légumes complètent le tamarin en ramollissant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Daikon se livre à une baguette avec une légère pression mais conserve sa forme. L'aubergine est soyeuse et a pris la couleur du bouillon aigre. L'acidité s'est membrée en une tarte ronde et brillante.",
+            "action": "Ajouter les crevettes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Daikon est devenu musqué et brisé. L'aubergine s'est dissoute dans le bouillon, ce qui le rend nuageux. La note aigre s'estompée.",
+            "action": "Ajouter les crevettes immédiatement et servir dès qu'elles sont cuites."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère de bouillon à ce stade devrait faire mal à l'arrière de votre mâchoire agréablement — c'est le tamarin faisant son travail."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Pochette",
+      "inputs": [
+        "soured_broth",
+        "ing_01",
+        "ing_08"
+      ],
+      "outputState": "cooked_shrimp",
+      "instructions": "Ajouter les crevettes et les chiles verts entiers au bouillon mijotant. Les crevettes sont crues et cuisent rapidement — 3-5 minutes selon la taille. Les têtes vont lécher leur graisse corallienne-orange directement dans le bouillon, l'enrichir avec l'umami. Ne pas trop cuire : les crevettes se serrent rapidement et deviennent caoutchouteuses au-delà de 5 minutes. Regardez-les changer de couleur et retirer de la chaleur au moment où le dernier tourne entièrement rose.",
+      "visualCue": {
+        "primaryTarget": "Chaque crevette est uniformément corallienne sur la coquille. La chair visible à l'articulation de la tête est blanche opaque. Le bouillon a pris une teinte orange plus profonde de la graisse de la tête.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont encore partiellement translucides. La chair est douce et gelée au centre. La graisse de la tête n'est pas encore complètement libérée.",
+            "action": "Laisser mijoter encore 1-2 minutes et vérifier à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les coquilles sont entièrement coralliennes. La chair est opaque. Le bouillon s'est éclairci avec une faible teinte orange de la graisse de la tête. Les queues sont enroulées dans un arc doux.",
+            "action": "Ajouter les feuilles vertes et assaisonner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes se sont serrées en C ou en O. La chair est dense et légèrement sèche quand mordue. Les coquilles s'éloignent de la chair.",
+            "action": "Servir immédiatement. Continuer à cuisiner les rend progressivement plus caoutchouteux — les mettre dans des bols maintenant."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une crevette et pliez-la délicatement — une crevette parfaitement cuite se fléchit au milieu plutôt que de se casser raide ou de flipper complètement boiteux."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "cooked_shrimp",
+        "ing_07",
+        "ing_09",
+        "ing_11"
+      ],
+      "outputState": "finished_sinigang",
+      "instructions": "Ajouter les feuilles d'épinards d'eau (ou épinards) et les tiges au pot. Ils se fanent en 1-2 minutes — les tiges d'abord, les feuilles durent. Assaisonner le bouillon avec de la sauce de poisson et du sel, les ajouter graduellement et goûter après chaque ajout. Le profil final de la saveur doit être brillant et aigre comme la note dominante, avec une colonne vertébrale umami salée de la sauce de poisson et les têtes de crevettes, et une douceur de fond des tomates. Servir immédiatement dans des bols profonds avec du riz blanc à la vapeur sur le côté.",
+      "visualCue": {
+        "primaryTarget": "Vert vif flétris dans tout le bol. Dégagez, bouillon ambre. Crevettes roses visibles à travers la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les verts sont encore raides et sombres, les tiges non cuites. sauce de poisson non encore ajoutée — le bouillon a un goût plat et sous-assaisonné.",
+            "action": "Cuire 1 minute de plus puis ajouter la sauce de poisson et le sel au goût."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les verts sont vert vif et simplement flétris — les tiges sont tendres, les feuilles s'effondrent mais pas le gris. Le bouillon est légèrement aigre, salé et propre. L'auresse frappe d'abord, l'umami suit.",
+            "action": "Servir immédiatement dans des bols profonds aux côtés du riz."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les verts sont devenus gris-vert et commencent à se briser. Le bouillon sent cuit et plat, avec moins de luminosité aigre.",
+            "action": "Servir immédiatement. Ajouter une petite pression de pâte de tamarin dans le bol pour restaurer la luminosité."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon fini devrait avoir le goût d'une pluie fraîche, rafraîchissante et nourrissante, avec une luminosité acide qui ouvre le palais."
+    }
+  ]
 };

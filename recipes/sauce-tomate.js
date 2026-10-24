@@ -1,110 +1,273 @@
 export default {
-  repoId: "master_french_saucetomate_001",
-  parentRepoId: null,
-  slug: "sauce-tomate",
-  author: "ForkRecipe Kitchen",
-  title: "Sauce Tomate (Classical French)",
-  description: "The Escoffier mother sauce — not a quick marinara. Tomatoes melted into rendered pork fat and mirepoix, moistened with white stock, scented with a bouquet garni, simmered slow until jammy, then passed to a smooth, velvety, deeply rounded red sauce.",
-  cuisine: "French",
-  culture: "Classical",
-  category: "sauces",
-  tags: ["sauce", "french", "mother-sauce", "tomato", "escoffier", "classical"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "2 hours 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2025-06-09",
-  updatedAt: "2025-06-09",
-  flavorRadar: { sweet: 3, salty: 2, sour: 3, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",     name: "Ripe tomatoes (or canned San Marzano)", ratioValue: 8,   defaultUnit: "parts", substitutions: ["good quality whole peeled plum tomatoes"] },
-    { ingId: "ing_02", role: "Fat",       name: "Salt pork or butter",                   ratioValue: 1,   defaultUnit: "part",  substitutions: ["unsalted butter", "pancetta", "rendered bacon"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Mirepoix (onion, carrot, celery)",      ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic",                                ratioValue: 0.2, defaultUnit: "part",  substitutions: [] },
-    { ingId: "ing_05", role: "Liquid",    name: "White stock",                           ratioValue: 4,   defaultUnit: "parts", substitutions: ["light chicken stock", "veal stock"] },
-    { ingId: "ing_06", role: "Sweetener", name: "Pinch of sugar",                        ratioValue: 0.1, defaultUnit: "part",  substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Salt",                                  ratioValue: 0.2, defaultUnit: "part",  substitutions: [] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Bouquet garni",                         ratioValue: 1,   defaultUnit: "bundle", substitutions: ["thyme, bay, parsley stems tied in leek green"] },
+  "repoId": "master_french_saucetomate_001",
+  "parentRepoId": null,
+  "slug": "sauce-tomate",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Tomate",
+  "description": "La sauce mère Escoffier — pas une marinara rapide. Les tomates fondues en graisse de porc et en mirpoix, humidifiées de blanc, parfumées d'un bouquet garni, mijotées lentement jusqu'au confiture, passent ensuite à une sauce rouge lisse, veloutée et arrondie.",
+  "cuisine": "Français",
+  "culture": "Classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "mère-sauce",
+    "tomates",
+    "prix",
+    "classique"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "2 hours 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-06-09",
+  "updatedAt": "2025-06-09",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Render",
-      inputs: ["ing_02"],
-      outputState: "rendered_fat",
-      instructions: "Dice the salt pork small and set it in a heavy-bottomed pot over low-medium heat (or simply melt the butter). Let it render slowly without browning, drawing the fat out clear and the scraps to a pale gold. You want a film of clean fat coating the pot, not a fry.",
-      visualCue: {
-        primaryTarget: "A shallow pool of clear, golden fat across the pot bottom. Pork scraps have shrunk and turned the palest gold; the fat shimmers but does not smoke.",
-        spectrum: [
-          { state: "Underdone", description: "Pork is still pink and rubbery, little fat in the pot, surface looks dry.", action: "Lower the heat and keep going — rendering is patient work. Stir so nothing sticks." },
-          { state: "Perfect",   description: "Fat runs clear and golden, scraps are pale and crisp at the edges, the pot smells gently of pork, not of frying.", action: "Proceed to sweat the mirepoix in this fat." },
-          { state: "Overdone",  description: "Scraps are dark brown, fat is browning, an acrid frying smell rises.", action: "Pull from the heat at once and lift out the darkest scraps. Browned fat will dull the sauce — proceed gently from here." },
-        ],
-      },
-      feelCue: "The fat should move like thin oil when you tip the pot, and the smell is warm and porky — never sharp or toasted. If using butter, listen for a quiet, even sizzle, not a furious one.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "Tomates de ripe (ou en conserve San Marzano)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates entières pelées de bonne qualité"
+      ]
     },
     {
-      nodeId: "step_2", action: "Sweat",
-      inputs: ["rendered_fat", "ing_03", "ing_04"],
-      outputState: "sweated_aromatics",
-      instructions: "Add the finely cut mirepoix and the garlic to the fat. Sweat over low-medium heat, stirring often, until the onion turns translucent and the whole pot softens and goes silent of its raw bite. Do not let it color — this is a foundation, not a fond.",
-      visualCue: {
-        primaryTarget: "Mirepoix gone soft and glassy, onions translucent, carrots brightened and yielding, everything slick with fat. No browning anywhere.",
-        spectrum: [
-          { state: "Underdone", description: "Onion still white and opaque, vegetables stiff and crunchy, the pot smells raw and oniony.", action: "Keep sweating with a lid ajar to trap gentle steam. Stir so the bottom layer does not catch." },
-          { state: "Perfect",   description: "Onions are translucent and limp, garlic is fragrant and sweet, the mirepoix glistens and the raw smell has given way to a soft, sweet aroma.", action: "Add the tomatoes and the pinch of sugar." },
-          { state: "Overdone",  description: "Edges of onion and garlic have browned and the garlic smells sharp and toasted.", action: "Lower the heat immediately and add the tomatoes now — their liquid will arrest the browning. Browned garlic turns bitter, so move quickly." },
-        ],
-      },
-      feelCue: "Drag the spoon across the bottom — the vegetables should part softly with no resistance and no crackle. The kitchen should smell sweet and round, not pungent.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Sel de porc ou de beurre",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "beurre non salé",
+        "Pancetta",
+        "bacon rendu"
+      ]
     },
     {
-      nodeId: "step_3", action: "Reduce",
-      inputs: ["sweated_aromatics", "ing_01", "ing_06"],
-      outputState: "tomato_base",
-      instructions: "Add the chopped tomatoes (crush canned ones by hand) and the pinch of sugar to correct their acidity. Raise the heat to a lively simmer and cook down, stirring as it thickens, until the watery tomato has collapsed into a thick, jammy base and the bright raw smell turns deep and sweet.",
-      visualCue: {
-        primaryTarget: "A thick, brick-red mass that mounds on the spoon and pulls away from the sides of the pot. The thin tomato water has cooked off; oil begins to bead at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Tomatoes are loose and soupy, pale orange-red, still smelling green and sharply acidic. A spoon dragged through fills back instantly.", action: "Keep reducing over a steady simmer. The flavor cannot round out until the excess water is gone." },
-          { state: "Perfect",   description: "Deep brick-red and jammy, mounding on the spoon, leaving a clean trail when scraped across the pot. The smell has turned sweet, concentrated, and savory.", action: "Moisten with the white stock and add the bouquet garni." },
-          { state: "Overdone",  description: "The base is darkening, sticking and scorching on the bottom, with a caught, toasted edge to the smell.", action: "Stop stirring up the scorched layer — do not scrape it in. Pour the stock in now and transfer to a clean pot if the bottom has truly caught." },
-        ],
-      },
-      feelCue: "The base resists the spoon and clings to it in a glossy clump. When you smell over the pot the sharp raw-tomato note is gone, replaced by something sweet, deep, and almost jam-like.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Mirepoix (oignon, carotte, céleri)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Simmer",
-      inputs: ["tomato_base", "ing_05", "ing_08", "ing_07"],
-      outputState: "simmered_tomate",
-      instructions: "Pour in the white stock, tuck in the bouquet garni, and season lightly with salt (go easy if you used salt pork). Bring to the barest simmer and hold it there, partially covered, for an hour and a half or more, skimming the fat and scum that gather at the surface. The sauce should ripple, never boil.",
-      visualCue: {
-        primaryTarget: "A gently rippling, deepening red sauce, clear of foam and surface fat from regular skimming, thickened enough to lightly coat a spoon. The bouquet garni has steeped its perfume through.",
-        spectrum: [
-          { state: "Underdone", description: "Thin and watery, tasting of separate parts — stock here, tomato there — with a greasy film and grey scum riding the top.", action: "Keep it at a slow simmer and skim patiently. Time married with skimming is what fuses and clarifies the sauce." },
-          { state: "Perfect",   description: "Glossy, unified deep red, lightly napping the back of a spoon. The surface is clean and the flavor tastes whole — rounded, savory, gently sweet, with the herb perfume woven through.", action: "Remove the bouquet garni and pass the sauce." },
-          { state: "Overdone",  description: "Reduced too far and heavy, edges of the pot crusting dark, the sauce tasting concentrated and dull with a flat over-cooked note.", action: "Loosen with a splash more warm stock and pull it off the heat. Pass it promptly before it tightens further." },
-        ],
-      },
-      feelCue: "Only the occasional slow bubble should break the surface — a true simmer, never a boil. Each pass of the skimming ladle should come up with less fat and foam than the last, the surface growing cleaner and glossier.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Aile",
+      "ratioValue": 0.2,
+      "defaultUnit": "part",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Pass",
-      inputs: ["simmered_tomate"],
-      outputState: "finished_tomate",
-      instructions: "Discard the bouquet garni and the pork scraps. Pass the sauce through a food mill or push it through a fine sieve with a ladle, working the solids until only dry skins and fibre remain behind. Return it to the heat, taste, and adjust salt and the pinch of sugar to balance the acidity into a smooth, velvety sauce.",
-      visualCue: {
-        primaryTarget: "A uniformly smooth, glossy, lacquer-red sauce with no visible fibre, skin, or pulp — velvety enough to coat the back of a spoon and hold a clean line drawn through it with a finger.",
-        spectrum: [
-          { state: "Underdone", description: "The passed sauce is still flecked with skin and stringy fibre, or it runs thin and watery through the mill.", action: "Pass it again through a finer screen, or reduce briefly to bring it back to a napping body. Press the solids harder to claim the pulp still clinging to the skins." },
-          { state: "Perfect",   description: "Flawlessly smooth and velvety, deep glossy red, coating the spoon and holding a drawn line. Balanced — sweet, savory, and gently acidic all at once.", action: "Hold warm over a water bath, or cool and store. It is finished." },
-          { state: "Overdone",  description: "Over-worked through the mill it has gone pasty and dull, or over-reduced after passing it has turned thick and gluey.", action: "Whisk in a little warm stock to bring back a pourable, glossy body, then re-check the seasoning." },
-        ],
-      },
-      feelCue: "Drawn across a plate the sauce should leave a clean, glossy ribbon that holds its shape. On the tongue it is silken and round, with no graininess — the acidity present but tamed, the whole thing rich and complete.",
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Stock blanc",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Poulet léger",
+        "Viande bovine"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Pince de sucre",
+      "ratioValue": 0.1,
+      "defaultUnit": "part",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 0.2,
+      "defaultUnit": "part",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Bouquet garni",
+      "ratioValue": 1,
+      "defaultUnit": "bundle",
+      "substitutions": [
+        "thym, laurier, persil tiges liées en vert poireau"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rendu",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "rendered_fat",
+      "instructions": "Couper le petit porc salé et le mettre dans un pot à fond lourd à feu doux (ou simplement faire fondre le beurre). Qu'il se rende lentement sans brunir, en tirant le gras clair et les débris à un or pâle. Vous voulez un film de graisse propre enrobant le pot, pas une frite.",
+      "visualCue": {
+        "primaryTarget": "Un bassin peu profond de graisse claire et dorée sur le fond du pot. Les morceaux de porc ont rétréci et tourné l'or le plus pâle; la graisse mijote mais ne fume pas.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc est encore rose et caoutchouteux, peu de graisse dans le pot, la surface semble sèche.",
+            "action": "Baissez la chaleur et continuez — rendre le travail patient. Remuer pour que rien ne colle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les graisses sont limpides et dorées, les morceaux sont pâles et croustillants aux bords, la casserole sent doucement le porc, pas la friture.",
+            "action": "Continuez à transpirer le mirpoix dans cette graisse."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les éclats sont brun foncé, la graisse est brune, une odeur de friture acride s'élève.",
+            "action": "Tirez immédiatement de la chaleur et soulevez les débris les plus sombres. Les graisses brunes assombriront la sauce."
+          }
+        ]
+      },
+      "feelCue": "La graisse doit se déplacer comme de l'huile fine quand vous boutez le pot, et l'odeur est chaude et porcine — jamais pointue ou grillée. Si vous utilisez du beurre, écoutez un silence, même des étourdissements, pas un furieux."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sueur",
+      "inputs": [
+        "rendered_fat",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "sweated_aromatics",
+      "instructions": "Ajouter le mirépoix finement coupé et l'ail à la graisse. Sweat à feu doux-moyen, en remuant souvent, jusqu'à ce que l'oignon devienne translucide et que le pot entier s'adoucisse et reste silencieux de sa bouchée crue. Ne le laissez pas colorer — c'est une fondation, pas un amour.",
+      "visualCue": {
+        "primaryTarget": "Mirepoix est devenu doux et vitreux, les oignons translucides, les carottes illuminés et donnant, tout est léché de graisse. Pas de brunissement nulle part.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon encore blanc et opaque, les légumes raides et croquants, le pot sent cru et l'oignon.",
+            "action": "Continuer à transpirer avec un couvercle ajar pour piéger la vapeur douce. Incorporer pour que la couche inférieure ne capture pas."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont translucides et limoneux, l'ail est parfumé et doux, le mirépoïx glisse et l'odeur crue a cédé la place à un arôme doux et doux.",
+            "action": "Ajouter les tomates et la pincée de sucre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords d'oignon et d'ail ont bruni et l'ail sent aiguisé et grillé.",
+            "action": "Abaissez immédiatement la chaleur et ajoutez les tomates maintenant — leur liquide arrêtera le brunissement. L'ail bruni devient amer, alors bougez vite."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser la cuillère sur le fond — les légumes doivent se séparer doucement sans résistance et sans craquelure. La cuisine doit sentir douce et ronde, pas piquante."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Réduire",
+      "inputs": [
+        "sweated_aromatics",
+        "ing_01",
+        "ing_06"
+      ],
+      "outputState": "tomato_base",
+      "instructions": "Ajouter les tomates hachées (en conserve) et la pincée de sucre pour corriger leur acidité. Augmentez le feu jusqu'à ce qu'il mijote et faites cuire, en remuant à mesure qu'il s'épaississe, jusqu'à ce que la tomate aqueuse s'effondre dans une base épaisse et jammy et que l'odeur vive et crue devienne profonde et douce.",
+      "visualCue": {
+        "primaryTarget": "Une masse épaisse et rouge brique qui monte sur la cuillère et s'éloigne des côtés du pot. La fine eau de tomate a cuit; l'huile commence à être perlée aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tomates sont molles et soupeuses, rouge-orange pâle, encore vertes et fortement acides. Une cuillère traînée à travers se remplit instantanément.",
+            "action": "Continuer à réduire au-dessus d'une mijot régulière. La saveur ne peut s'achever jusqu'à ce que l'excès d'eau soit parti."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep brique-rouge et jammy, bourdonnant sur la cuillère, laissant un sentier propre quand gratté à travers le pot. L'odeur est devenue sucrée, concentrée et salée.",
+            "action": "Mouiller avec le bouillon blanc et ajouter le bouquet garni."
+          },
+          {
+            "state": "Overdone",
+            "description": "La base est assombrie, collante et brûlante sur le fond, avec un bord pris, grillé à l'odeur.",
+            "action": "Arrêtez de remuer la couche brûlée — ne la grattez pas. Verser le stock maintenant et transférer dans un pot propre si le fond a vraiment pris."
+          }
+        ]
+      },
+      "feelCue": "La base résiste à la cuillère et s'accroche à elle dans une fourche brillante. Lorsque vous sentez au-dessus du pot, la note brute-tomate est partie, remplacée par quelque chose de doux, profond, et presque comme de la confiture."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "tomato_base",
+        "ing_05",
+        "ing_08",
+        "ing_07"
+      ],
+      "outputState": "simmered_tomate",
+      "instructions": "Verser dans le bouillon blanc, mettre dans le bouquet garni, et assaisonner légèrement avec du sel (aller facile si vous avez utilisé le porc salé). Portez à la frémissante et maintenez-la là, partiellement couverte, pendant une heure et demie ou plus, en écumant la graisse et la souillure qui se rassemblent à la surface. La sauce doit s'arroser, ne jamais bouillir.",
+      "visualCue": {
+        "primaryTarget": "Une sauce rouge approfondissement, lisse de mousse et de graisse de surface d'un écrémage régulier, assez épaisse pour enrober légèrement une cuillère. Le bouquet garni a imprégné son parfum.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mince et aqueuse, dégustation de pièces séparées — le stock ici, la tomate là — avec un film gras et de lard gris sur le dessus.",
+            "action": "Gardez-le à mijoter lentement et patinez patiemment. Temps marié avec écrémage est ce qui fusionne et clarifie la sauce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, rouge profond unifié, lécher légèrement l'arrière d'une cuillère. La surface est propre et le goût est entier — arrondi, salé, doux, avec le parfum d'herbe tissé.",
+            "action": "Retirer le bouquet garni et passer la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Réduit trop loin et lourd, bords de la croûte de pot sombre, la dégustation de sauce concentrée et terne avec une note plate surcuite.",
+            "action": "Déplacez-vous avec un bouillon plus chaud et tirez-le de la chaleur. Passez-le rapidement avant qu'il ne se resserre davantage."
+          }
+        ]
+      },
+      "feelCue": "Seule la bulle lente occasionnelle devrait briser la surface — un vrai mijoter, jamais un ébullition. Chaque passe de la louche d'écumage devrait se présenter avec moins de graisse et de mousse que le dernier, la surface de croissance plus propre et brillant."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Passer",
+      "inputs": [
+        "simmered_tomate"
+      ],
+      "outputState": "finished_tomate",
+      "instructions": "Jeter le bouquet garni et les morceaux de porc. Passer la sauce à travers un moulin à nourriture ou la pousser à travers un tamis fin avec une louche, travailler les solides jusqu'à ce que seules les peaux sèches et les fibres restent derrière. Retournez-le à la chaleur, goûtez et ajustez le sel et la pincée de sucre pour équilibrer l'acidité dans une sauce douce et veloutée.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lisse, brillante et laquée, sans fibre visible, sans peau ni pulpe, suffisamment veloutée pour enrober l'arrière d'une cuillère et tenir une ligne propre tirée à travers elle avec un doigt.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce passe est encore flanquée de peau et de fibres à cordes, ou elle est mince et aqueuse à travers le moulin.",
+            "action": "Passez-le à nouveau à travers un écran plus fin, ou réduisez brièvement pour le ramener à un corps de nichons. Appuyez plus fort sur les solides pour réclamer la pulpe qui s'accroche encore aux peaux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Parfaitement lisse et velouté, rouge brillant profond, enrobant la cuillère et tenant une ligne dessinée. Équilibré: doux, salé et légèrement acide.",
+            "action": "Tenez au chaud au-dessus d'un bain d'eau, ou refroidissez et entreposez. C'est fini."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmené dans le moulin, il est devenu pâteux et terne, ou surréduit après le passage, il est devenu épais et collant.",
+            "action": "Whisk dans un peu de stock chaud pour ramener un corps versable et brillant, puis revérifier l'assaisonnement."
+          }
+        ]
+      },
+      "feelCue": "Tiré sur une assiette, la sauce devrait laisser un ruban propre et brillant qui tient sa forme. Sur la langue il est soyeux et rond, sans grain — l'acidité présente mais apprivoisée, toute la chose riche et complète."
+    }
+  ]
 };

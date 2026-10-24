@@ -1,105 +1,259 @@
 export default {
-  repoId: "fork_french_soubise_001",
-  parentRepoId: "master_french_bechamel_001",
-  slug: "soubise",
-  parentSlug: "bechamel",
-  author: "ForkRecipe Kitchen",
-  title: "Sauce Soubise",
-  description: "Béchamel turned silken and sweet by a purée of onions sweated low and slow until they surrender all their bite. Pale, glossy, faintly perfumed — the classic partner to roast meats, eggs, and anything that wants a soft allium hum.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "sauces",
-  tags: ["sauce", "french", "onion", "mother-sauce-derivative", "purée"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "55 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2025-06-09",
-  updatedAt: "2025-06-09",
-  forkNote: "Béchamel enriched with a silky purée of slow-sweated onions — classic with roast meats and eggs.",
-  changes: {
-    ingredientsAdded: 2,
-    ingredientsRemoved: 0,
-    ingredientsModified: 0,
-    stepsAdded: 1,
-    stepsRemoved: 0,
-    stepsModified: 1,
+  "repoId": "fork_french_soubise_001",
+  "parentRepoId": "master_french_bechamel_001",
+  "slug": "soubise",
+  "parentSlug": "bechamel",
+  "author": "ForkRecipe Kitchen",
+  "title": "Soubis de sauce",
+  "description": "Béchamel devient soyeux et doux par une purée d'oignons transpirant bas et lent jusqu'à ce qu'ils abandonnent toute leur morsure. Pale, brillant, légèrement parfumé — le partenaire classique pour rôtir les viandes, les œufs, et tout ce qui veut un doux allium hum.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "oignon",
+    "mère-sauce-dérivée",
+    "purée"
+  ],
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "55 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-06-09",
+  "updatedAt": "2025-06-09",
+  "forkNote": "Béchamel enrichi d'une purée soyeuse d'oignons sucrés lentement, classique avec des viandes rôties et des œufs.",
+  "changes": {
+    "ingredientsAdded": 2,
+    "ingredientsRemoved": 0,
+    "ingredientsModified": 0,
+    "stepsAdded": 1,
+    "stepsRemoved": 0,
+    "stepsModified": 1
   },
-  flavorRadar: { sweet: 3, salty: 2, sour: 0, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",      name: "Whole milk (warmed)",            ratioValue: 10,  defaultUnit: "parts", substitutions: ["2% milk", "half-and-half for richer sauce"] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter",                ratioValue: 1,   defaultUnit: "part",  substitutions: ["clarified butter"] },
-    { ingId: "ing_03", role: "Structure",  name: "All-purpose flour",              ratioValue: 1,   defaultUnit: "part",  substitutions: ["Wondra for a lump-proof sauce"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                  ratioValue: 0.2, defaultUnit: "part",  substitutions: ["kosher salt"] },
-    { ingId: "ing_05", role: "Spice",      name: "Freshly grated nutmeg",          ratioValue: 0.02,defaultUnit: "part",  substitutions: ["a pre-grated pinch, in a pinch"] },
-    { ingId: "ing_06", role: "Spice",      name: "White pepper",                   ratioValue: 0.04,defaultUnit: "part",  substitutions: ["black pepper if you don't mind the specks"] },
-    { ingId: "ing_10", role: "Allium",     name: "Yellow onions (finely sliced)",  ratioValue: 8,   defaultUnit: "parts", substitutions: ["white onions", "sweet onions for a milder sauce"] },
-    { ingId: "ing_11", role: "Fat",        name: "Butter (for sweating onions)",   ratioValue: 1,   defaultUnit: "part",  substitutions: ["a neutral oil for a cleaner finish"] },
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
+    {
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Lait entier (chauffé)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "2% lait",
+        "moitié-moitié pour une sauce plus riche"
+      ]
+    },
+    {
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "beurre clarifié"
+      ]
+    },
+    {
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "Wondera pour une sauce à l'épreuve des grumeaux"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.2,
+      "defaultUnit": "part",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Noix de muscade fraîchement râpée",
+      "ratioValue": 0.02,
+      "defaultUnit": "part",
+      "substitutions": [
+        "une pincée pré-gérée, dans une pincée"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poivre blanc",
+      "ratioValue": 0.04,
+      "defaultUnit": "part",
+      "substitutions": [
+        "poivre noir si ça ne vous dérange pas les taches"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Allium",
+      "name": "Oignons jaunes (finement tranchés)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignons blancs",
+        "oignons doux pour une sauce plus douce"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Beurre (pour les oignons transpirants)",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "une huile neutre pour une finition plus propre"
+      ]
+    }
   ],
-  processNodes: [
+  "processNodes": [
     {
-      nodeId: "step_1", action: "Sweat the onions",
-      inputs: ["ing_10", "ing_11", "ing_04"],
-      outputState: "sweated_onions",
-      instructions: "Melt the butter over low heat, add the sliced onions and a pinch of salt, and cover with a lid or a cartouche. Sweat them gently for 20-30 minutes, stirring now and then, until completely meltingly soft and translucent. This is sweating, not sautéing — the onions must NOT take on any color, or the finished sauce will turn gray and taste of fried onion instead of sweet.",
-      visualCue: {
-        primaryTarget: "A heap of slumped, glassy onions, almost jammy, fully translucent with not a fleck of gold anywhere, sitting in a pool of clear butter.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are still white, crisp at the edges, and smell sharp and raw when you lean in.", action: "Lower the heat, re-cover, and keep sweating — they need time to break down and lose their bite entirely." },
-          { state: "Perfect",   description: "Onions have collapsed into a soft, translucent, almost spoonable mass, sweet-smelling and entirely without color.", action: "They are ready to meet the béchamel." },
-          { state: "Overdone",  description: "Edges have turned gold or brown and the kitchen smells of fried onions — the sauce would be tinted and savory rather than pale and sweet.", action: "For a pure white soubise, start the onions over. Otherwise accept a darker, caramel-tinged sauce." },
-        ],
+      "nodeId": "step_1",
+      "action": "Sueurs des oignons",
+      "inputs": [
+        "ing_10",
+        "ing_11",
+        "ing_04"
+      ],
+      "outputState": "sweated_onions",
+      "instructions": "Faire fondre le beurre à feu doux, ajouter les oignons tranchés et une pincée de sel, et couvrir d'un couvercle ou d'une cartouche. Pliez-les doucement pendant 20-30 minutes, en remuant de temps en temps, jusqu'à ce que la fusion soit complètement douce et translucide. C'est transpirant, pas savourant — les oignons ne doivent pas prendre de couleur, ou la sauce finie deviendra grise et le goût d'oignon frit au lieu de sucré.",
+      "visualCue": {
+        "primaryTarget": "Un tas d'oignons gorgés, glacés, presque jammy, entièrement translucides avec pas un paquet d'or nulle part, assis dans une piscine de beurre clair.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont encore blancs, croquants aux bords, et sentent vifs et crus lorsque vous vous penchez.",
+            "action": "Abaissez la chaleur, recouvrez-vous et continuez à transpirer — ils ont besoin de temps pour se briser et perdre leur morsure entièrement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons se sont effondrés dans une masse douce, translucide, presque cuillerée, sucrée et entièrement sans couleur.",
+            "action": "Ils sont prêts à rencontrer le béchamel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords ont tourné l'or ou le brun et les odeurs de cuisine des oignons frits — la sauce serait teintée et salée plutôt que pâle et douce.",
+            "action": "Pour un pur soubis blanc, recommencez les oignons. Sinon, accepter une sauce au caramel plus foncée."
+          }
+        ]
       },
-      feelCue: "The pan should whisper, not sizzle. The onions feel like they're dissolving against the spoon, and the aroma is gently sweet — never the sharp hit of browning.",
+      "feelCue": "La casserole devrait chuchoter, pas étourdir. Les oignons ont l'impression de se dissoudre contre la cuillère, et l'arôme est doux, jamais le coup aigu du brunissement."
     },
     {
-      nodeId: "step_2", action: "Cook the roux",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "white_roux",
-      instructions: "In a separate pan, melt the butter until foaming but not browning, whisk in the flour, and cook 2-3 minutes over medium-low heat to a pale white roux, stirring constantly. Keep it white to protect the sauce's delicate color.",
-      visualCue: {
-        primaryTarget: "A smooth, pale paste the color of wet sand, loosening as it cooks and smelling faintly of pie crust — no color.",
-        spectrum: [
-          { state: "Underdone", description: "The paste smells raw and floury with no aroma rising from the pan.", action: "Keep stirring another minute to cook off the raw flour." },
-          { state: "Perfect",   description: "Loose, gently bubbling, the color of bone, smelling of warm shortcrust.", action: "It is ready for the milk." },
-          { state: "Overdone",  description: "Tanned to blond and smelling nutty.", action: "Start over — a white roux keeps the soubise pale and clean." },
-        ],
+      "nodeId": "step_2",
+      "action": "Cuire le roux",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "white_roux",
+      "instructions": "Dans une casserole séparée, faire fondre le beurre jusqu'à ce qu'il mousse mais ne brunisse pas, fouetter dans la farine et cuire 2-3 minutes à feu moyen-doux à un roux blanc pâle, en remuant constamment. Gardez-le blanc pour protéger la couleur délicate de la sauce.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse et pâle de la couleur du sable humide, desserrant comme il cuisine et sentant faiblement la croûte de tarte — pas de couleur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte sent cru et farineux sans arôme de la poêle.",
+            "action": "Continuez à remuer encore une minute pour faire cuire la farine crue."
+          },
+          {
+            "state": "Perfect",
+            "description": "Plongée, bouillonnant doucement, la couleur de l'os, sentant la croûte courte chaude.",
+            "action": "Il est prêt pour le lait."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tanné à blond et sentant la noix.",
+            "action": "Recommencer — un roux blanc garde la soubise pâle et propre."
+          }
+        ]
       },
-      feelCue: "The roux drags against the whisk like thick batter, then relaxes. It hisses softly and never crackles.",
+      "feelCue": "Le roux traîne contre le fouet comme une pâte épaisse, puis se détend. Il siffle doucement et ne craque jamais."
     },
     {
-      nodeId: "step_3", action: "Build the béchamel",
-      inputs: ["white_roux", "ing_01", "ing_05", "ing_06"],
-      outputState: "nappe_bechamel",
-      instructions: "Stream in the warm milk, whisking constantly, then simmer gently 8-10 minutes to a nappe consistency that coats the back of a spoon. Season with nutmeg and white pepper. Keep it on the thicker side — the watery onions will loosen the final purée.",
-      visualCue: {
-        primaryTarget: "A smooth, glossy béchamel that coats the spoon; a finger drawn through the coating leaves a clean channel that holds.",
-        spectrum: [
-          { state: "Underdone", description: "Thin and watery, running off the spoon, the channel closing instantly.", action: "Simmer longer, whisking, to gelatinize the starch and drive off water." },
-          { state: "Perfect",   description: "Velvety and thick enough to nappe, falling from the whisk in a smooth ribbon.", action: "Tip in the sweated onions." },
-          { state: "Overdone",  description: "Gluey and stiff, mounding like paste with a dull surface.", action: "Whisk in a splash of warm milk to loosen — the onions will thin it further, so don't over-correct." },
-        ],
+      "nodeId": "step_3",
+      "action": "Construire le béchamel",
+      "inputs": [
+        "white_roux",
+        "ing_01",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "nappe_bechamel",
+      "instructions": "Rincer le lait chaud, fouetter constamment, puis laisser mijoter doucement 8-10 minutes jusqu'à une consistance de nappe qui enveloppe l'arrière d'une cuillère. Assaisonner de muscade et de poivre blanc. Gardez-le sur le côté plus épais — les oignons aqueux vont desserrer la purée finale.",
+      "visualCue": {
+        "primaryTarget": "Un béchamel lisse et brillant qui enveloppe la cuillère; un doigt tiré à travers le revêtement laisse un canal propre qui tient.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mince et aqueuse, sortant de la cuillère, le canal se fermant instantanément.",
+            "action": "Laisser mijoter plus longtemps, fouetter, gélatiniser l'amidon et sortir de l'eau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Velours et assez épais pour napper, tombant du fouet dans un ruban lisse.",
+            "action": "Conseil dans les oignons transpirés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Colle et raide, collant comme de la pâte avec une surface terne.",
+            "action": "Whisk dans un jet de lait chaud pour se détendre — les oignons vont l'amincir davantage, alors ne pas trop corriger."
+          }
+        ]
       },
-      feelCue: "The whisk meets steady, even resistance and the sauce blurps lazily with slow, heavy bubbles, smelling of sweet cooked milk.",
+      "feelCue": "Le fouet rencontre une résistance constante, et la sauce s'estompe paresseusement avec des bulles lentes et lourdes, sentant le lait cuit sucré."
     },
     {
-      nodeId: "step_4", action: "Purée and pass",
-      inputs: ["nappe_bechamel", "sweated_onions"],
-      outputState: "finished_soubise",
-      instructions: "Stir the sweated onions into the béchamel and simmer together a few minutes to marry. Purée smooth with a blender or immersion blender, then pass through a fine sieve for the silkiest texture — push the purée through with a ladle and discard any fibers left behind. Taste and adjust salt; finish with a knob of butter for gloss if you like.",
-      visualCue: {
-        primaryTarget: "A pale ivory, utterly smooth purée with no fibers or flecks, glossy and pourable, sheeting off the spoon and smelling sweetly of soft onion and cream.",
-        spectrum: [
-          { state: "Underdone", description: "Grainy or fibrous, with visible bits of onion and a rough texture on the tongue.", action: "Blend longer and pass again through the sieve until perfectly smooth — soubise should be seamless." },
-          { state: "Perfect",   description: "Silken and uniform, pale and glossy, with a gentle sweet-onion perfume and a clean, balanced finish. Coats the spoon evenly.", action: "Serve warm over roast meats, eggs, or vegetables." },
-          { state: "Overdone",  description: "Over-reduced and stiff after blending, or split and oily from too-aggressive boiling once the onions went in.", action: "Whisk in warm milk to loosen a thick purée; for a split sauce, blend in a splash of cold milk to bring it back together." },
-        ],
+      "nodeId": "step_4",
+      "action": "Purée et passe",
+      "inputs": [
+        "nappe_bechamel",
+        "sweated_onions"
+      ],
+      "outputState": "finished_soubise",
+      "instructions": "Incorporer les oignons transpirés dans le béchamel et mijoter ensemble quelques minutes pour se marier. Purée lisse avec un mélangeur ou un mélangeur d'immersion, puis passer à travers un tamis fin pour la texture la plus soyeuse – pousser la purée à travers avec une louche et jeter toutes les fibres laissées derrière. Goûtez et ajustez le sel; terminez avec un bouton de beurre pour le brillant si vous voulez.",
+      "visualCue": {
+        "primaryTarget": "Un ivoire pâle, purée tout à fait lisse, sans fibres ni paillettes, brillant et versable, drapant la cuillère et sentant douxment l'oignon et la crème.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Graineux ou fibreux, avec des morceaux visibles d'oignon et une texture rugueuse sur la langue.",
+            "action": "Mélanger plus longtemps et passer à nouveau à travers le tamis jusqu'à ce qu'il soit parfaitement lisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Silence et uniforme, pâle et brillant, avec un doux parfum d'oignon doux et une finale propre et équilibrée. Enrober la cuillère uniformément.",
+            "action": "Servir au chaud sur les viandes, oeufs ou légumes rôtis."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surréduit et raide après mélange, ou fendue et huileuse à partir de bouillie trop agressive une fois les oignons entrés.",
+            "action": "fouetter dans du lait chaud pour dénouer une épaisse purée; pour une sauce fractionnée, mélanger dans un jet de lait froid pour le ramener ensemble."
+          }
+        ]
       },
-      feelCue: "The blended sauce feels weightless and silky off the spoon. Passed through the sieve, not a single fiber should drag — it should pour like pale, warm cream.",
-    },
-  ],
+      "feelCue": "La sauce mélangée est sans poids et soyeuse sur la cuillère. Passé à travers le tamis, pas une seule fibre ne devrait glisser — il devrait verser comme une crème pâle et chaude."
+    }
+  ]
 };

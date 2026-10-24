@@ -1,96 +1,215 @@
 export default {
-  repoId: "master_italian_semifreddo_001",
-  parentRepoId: null,
-  slug: "semifreddo",
-  author: "ForkRecipe Kitchen",
-  title: "Semifreddo al Limone",
-  description: "Italy's answer to frozen mousse — a pillow of whipped cream and meringue suspended in gentle cold, sliced to reveal a cross-section of pale gold lemon cream that yields instantly on the tongue and vanishes without a trace of ice.",
-  cuisine: "Italian",
-  culture: "Italian",
-  category: "desserts",
-  tags: ["dessert", "frozen", "italian", "lemon", "mousse", "cream", "summer", "no-churn"],
-  difficulty: 3,
-  activeTime: "35 min",
-  totalTime: "5 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 0, sour: 3, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Double cream (heavy cream, 35%+ fat)",   ratioValue: 400, defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_02", role: "Binder",    name: "Eggs, separated",                        ratioValue: 4,   defaultUnit: "ea",  substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener", name: "Caster sugar",                           ratioValue: 150, defaultUnit: "g",   substitutions: ["golden caster sugar"] },
-    { ingId: "ing_04", role: "Acid",      name: "Unwaxed lemons, zest and juice",         ratioValue: 2,   defaultUnit: "ea",  substitutions: ["blood orange (milder, beautiful colour)"] },
-    { ingId: "ing_05", role: "Garnish",   name: "Candied lemon peel or fresh berries",    ratioValue: 50,  defaultUnit: "g",   substitutions: ["toasted pistachios", "dark chocolate shavings"] },
+  "repoId": "master_italian_semifreddo_001",
+  "parentRepoId": null,
+  "slug": "semifreddo",
+  "author": "ForkRecipe Kitchen",
+  "title": "Semifreddo al Limone",
+  "description": "La réponse de l'Italie à la mousse congelée — un oreiller de crème fouettée et de meringue en suspension dans un doux froid, tranché pour révéler une coupe transversale de crème de citron d'or pâle qui donne instantanément sur la langue et disparaît sans trace de glace.",
+  "cuisine": "Italien",
+  "culture": "Italien",
+  "category": "desserts",
+  "tags": [
+    "dessert",
+    "congelés",
+    "Italien",
+    "citron",
+    "mousse",
+    "crème",
+    "été",
+    "Sans objet"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "35 min",
+  "totalTime": "5 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 0,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_02", "ing_03", "ing_04"],
-      outputState: "lemon_zabaglione",
-      instructions: "Place the egg yolks, caster sugar, lemon zest and lemon juice in a heatproof bowl set over a pan of gently simmering water. Whisk vigorously and continuously for 8–10 minutes until the mixture is very thick, pale and has tripled in volume — it should hold a thick ribbon for several seconds when the whisk is lifted. This is the zabaglione base. Remove from the heat and continue whisking until the bowl feels cool to the touch. The cooking stabilises the yolks so the semifreddo stays aerated when frozen.",
-      visualCue: {
-        primaryTarget: "Pale yellow, thick and voluminous — the whisk leaves a distinct trail that holds for 3–4 seconds before dissolving. The bowl feels no more than body-warm.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is still thin and liquid. Pale yellow but no increase in volume. Ribbon dissolves instantly.", action: "Continue whisking over the heat — the yolks need sustained gentle heat to cook and aerate simultaneously." },
-          { state: "Perfect",   description: "Thick, pale, voluminous. The ribbon test holds clearly. Smells of cooked lemon and egg. Bowl is warm but not hot.", action: "Remove from heat and whisk until cool before folding." },
-          { state: "Overdone",  description: "Small curds of cooked egg are visible. Mixture is grainy or lumpy.", action: "Strain through a fine sieve immediately — small curds can be rescued if caught early. Larger curds mean starting again." },
-        ],
-      },
-      feelCue: "Dip a finger into the zabaglione — it should coat your finger in a thick, velvety layer that holds its shape without dripping, like a warm custard.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Double crème (crème lourde, 35%+ gras)",
+      "ratioValue": 400,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Whip",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "whipped_components",
-      instructions: "In two separate bowls: whip the cold double cream to soft peaks — it should hold a shape but still be silky and flowing, not stiff. In a separate grease-free bowl, whisk the egg whites with a pinch of salt until they hold firm, glossy peaks. Do not overwhip either — both should be airy and light, not stiff and dry. Keep both chilled until needed.",
-      visualCue: {
-        primaryTarget: "Cream holds a soft peak that bends gracefully at the tip. Whites hold a firm peak with a slight bend — glossy and smooth, not dry.",
-        spectrum: [
-          { state: "Underdone", description: "Cream barely thickened — pours rather than mounds. Whites are frothy and liquid.", action: "Continue whipping both — a few more minutes with a cold bowl will bring cream to the right stage." },
-          { state: "Perfect",   description: "Cream: soft, billowy, holds a peak that curves gently. Whites: glossy, firm, peaks stand with a slight hook at the tip.", action: "Fold immediately into the zabaglione before either loses structure." },
-          { state: "Overdone",  description: "Cream has become grainy and stiff — beginning to separate toward butter. Whites are dry and clumping.", action: "Over-whipped cream cannot be corrected. Whites: add one un-beaten white and fold gently to loosen." },
-        ],
-      },
-      feelCue: "Run a spatula through the cream — it should leave a clean, defined furrow that holds its edges but the cream on either side is clearly light and airy, not dense.",
+      "ingId": "ing_02",
+      "role": "Binder",
+      "name": "Œufs séparés",
+      "ratioValue": 4,
+      "defaultUnit": "ea",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["lemon_zabaglione", "whipped_components"],
-      outputState: "semifreddo_base",
-      instructions: "First fold the whipped whites into the cooled zabaglione in two additions, using a large spatula with a cut-and-lift motion. Then fold in the whipped cream in two additions. Be gentle and decisive — the goal is to retain as much air as possible while achieving a fully uniform, streak-free mixture. The finished base should be light, mousse-like and pale yellow. Pour into a loaf tin lined with two layers of clingfilm, with plenty of overhang on all sides.",
-      visualCue: {
-        primaryTarget: "Pale yellow, mousse-like and airy. No white streaks from the cream or whites. The surface holds its mounded shape when the spatula is lifted.",
-        spectrum: [
-          { state: "Underdone", description: "White streaks of cream or whites still visible in the yellow base. Mixture is marbled and uneven.", action: "One or two more careful folds — stop immediately when streaks disappear." },
-          { state: "Perfect",   description: "Uniform pale yellow throughout, airy and voluminous. Slightly thicker than double cream but clearly not dense. Smells of fresh lemon cream.", action: "Pour into prepared tin, fold clingfilm over the top and freeze." },
-          { state: "Overdone",  description: "Mixture has deflated back to a dense, heavy consistency. Volume has reduced noticeably.", action: "Proceed — the semifreddo will freeze dense rather than light and mousse-like. Still pleasant but less ethereal." },
-        ],
-      },
-      feelCue: "Scoop a spoonful of the base and let it fall — it should flow in one slow, thick pour and settle with a slight dome, like soft-set custard, not like liquid cream.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Sucre caster doré"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Freeze",
-      inputs: ["semifreddo_base", "ing_05"],
-      outputState: "finished_semifreddo",
-      instructions: "Fold the clingfilm over the surface to seal completely. Freeze for a minimum of 4 hours, preferably overnight. To serve: unwrap, invert onto a chilled serving plate and peel off the clingfilm. The semifreddo should hold its shape cleanly and be easy to slice with a warm knife. Decorate the top with candied lemon peel or fresh berries. Slice into 2–3 cm portions and serve immediately — it softens quickly at room temperature.",
-      visualCue: {
-        primaryTarget: "A firm, pale yellow loaf that holds its shape perfectly when inverted and sliced. Cut surface is smooth and even, not icy or coarse.",
-        spectrum: [
-          { state: "Underdone", description: "Interior is still soft and mousse-like when sliced — has not frozen fully. Collapses on the plate.", action: "Return to the freezer for at least 2 more hours. A fully frozen semifreddo is firm but not rock-hard." },
-          { state: "Perfect",   description: "Slices cleanly with a warm knife, holding its shape on the plate. Cut surface is smooth, pale and matte — no ice crystals visible. Melts on the tongue immediately without any cold shock.", action: "Decorate and serve immediately. Semifreddo is best consumed within 30 seconds of slicing." },
-          { state: "Overdone",  description: "Rock-hard — knife struggles to cut and surface shows large ice crystal formation. Gritty on the tongue.", action: "Allow to temper at room temperature for 8–10 minutes before slicing. The ideal serving temperature is -8 C, not -18 C." },
-        ],
-      },
-      feelCue: "Press the back of a spoon against a freshly cut surface — it should yield smoothly and leave a shallow impression, then hold that shape without the surface cracking or crumbling.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Citrons, zestes et jus non épilés",
+      "ratioValue": 2,
+      "defaultUnit": "ea",
+      "substitutions": [
+        "orangé sanguin (milder, belle couleur)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Garnish",
+      "name": "Peau de citron confite ou baies fraîches",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Pistaches grillées",
+        "copeaux de chocolat noir"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "lemon_zabaglione",
+      "instructions": "Mettre les jaunes d'œufs, le sucre de castre, le zeste de citron et le jus de citron dans un bol thermofuge sur une casserole d'eau mijotante. fouetter vigoureusement et continuellement de 8 à 10 minutes jusqu'à ce que le mélange soit très épais, pâle et triple en volume — il devrait tenir un ruban épais pendant plusieurs secondes lorsque le fouet est levé. C'est la base de la zabaglione. Retirer du feu et continuer à fouetter jusqu'à ce que le bol se sente frais au toucher. La cuisson stabilise les jaunes de sorte que le semi-freddo reste aéré lorsqu'il est congelé.",
+      "visualCue": {
+        "primaryTarget": "Jaune pâle, épais et volumineux — le fouet laisse un sentier distinct qui tient pendant 3-4 secondes avant de se dissoudre. Le bol ne se sent pas plus chaud que le corps.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est encore mince et liquide. Jaune pâle mais pas d'augmentation du volume. Le ruban se dissout instantanément.",
+            "action": "Continuer à fouetter sur la chaleur — les jaunes ont besoin d'une chaleur douce soutenue pour cuire et aérer simultanément."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, pâle, volumineux. Le test du ruban tient clairement. Des odeurs de citron et d'oeuf cuits. Le bol est chaud mais pas chaud.",
+            "action": "Retirer du feu et fouetter jusqu'à refroidir avant de plier."
+          },
+          {
+            "state": "Overdone",
+            "description": "De petits oeufs cuits sont visibles. Le mélange est granuleux ou grumelé.",
+            "action": "Plongez immédiatement dans un tamis fin — de petits caillés peuvent être sauvés s'ils sont capturés tôt. Plus gros, ça veut dire recommencer."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt dans la zabaglione — il devrait envelopper votre doigt d'une couche épaisse et veloutée qui tient sa forme sans dégoutter, comme une crème chaude."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whip",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "whipped_components",
+      "instructions": "Dans deux bols séparés: fouetter la crème double froide aux pics doux — il devrait tenir une forme mais être toujours soyeux et fluide, pas raide. Dans un bol séparé sans graisse, fouetter les blancs d'oeufs avec une pincée de sel jusqu'à ce qu'ils tiennent fermes et brillants pics. Ne pas déborder non plus — les deux doivent être aérés et légers, non rigides et secs. Conserver les deux au frais jusqu'à ce que nécessaire.",
+      "visualCue": {
+        "primaryTarget": "La crème tient un pic doux qui s'incline gracieusement au bout. Les blancs tiennent un pic ferme avec un léger virage — brillant et lisse, non sec.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème à peine épaissie: elle verse plutôt que les monticules. Les blancs sont mousseux et liquides.",
+            "action": "Continuez à fouetter les deux — quelques minutes de plus avec un bol froid apportera de la crème à la bonne étape."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crème : douce, bouillante, tient un pic qui tourne doucement. Blancs : brillants, fermes, les pics se tiennent avec un léger crochet à l'extrémité.",
+            "action": "Plier immédiatement dans la zabaglione avant de perdre la structure."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème est devenue granuleuse et raide, et commence à se séparer vers le beurre. Les blancs sont secs et entassés.",
+            "action": "La crème trop fouettée ne peut être corrigée. Blancs : ajouter un blanc non battu et plier doucement pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "Exécutez une spatule à travers la crème – elle devrait laisser un sillon propre et défini qui tient ses bords, mais la crème de chaque côté est clairement légère et aérée, pas dense."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "lemon_zabaglione",
+        "whipped_components"
+      ],
+      "outputState": "semifreddo_base",
+      "instructions": "D'abord plier les blancs fouettés dans la zabaglione refroidie en deux ajouts, en utilisant une grande spatule avec un mouvement de coupe et de levage. Puis plier dans la crème fouettée en deux ajouts. Soyez doux et décisif — l'objectif est de conserver autant d'air que possible tout en réalisant un mélange entièrement uniforme et exempt de stries. La base finie doit être légère, de type mousse et jaune pâle. Verser dans une boîte de pain doublée de deux couches de film collant, avec beaucoup de surplomb de tous les côtés.",
+      "visualCue": {
+        "primaryTarget": "Jaune pâle, mousse et aéré. Pas de stries blanches de la crème ou des blancs. La surface tient sa forme bombée lorsque la spatule est levée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries blanches de crème ou de blanc encore visibles dans la base jaune. Le mélange est marbré et inégal.",
+            "action": "Un ou deux plis plus prudents — arrêtez immédiatement quand les stries disparaissent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme jaune pâle, aéré et volumineux. Un peu plus épais que la crème double mais clairement pas dense. Des odeurs de crème de citron fraîche.",
+            "action": "Verser dans de l'étain préparé, plier le film sur le dessus et congeler."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a dégonflé à une consistance dense et lourde. Le volume a sensiblement diminué.",
+            "action": "Procéder — le semifreddo gèlera dense plutôt que léger et mousseux. Toujours agréable mais moins éthéré."
+          }
+        ]
+      },
+      "feelCue": "Coupez une cuillère de la base et laissez-la tomber — elle doit couler dans une goutte lente, épaisse et se déposer avec un léger dôme, comme la crème molle, pas comme la crème liquide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Gel",
+      "inputs": [
+        "semifreddo_base",
+        "ing_05"
+      ],
+      "outputState": "finished_semifreddo",
+      "instructions": "Pliez le film de collage sur la surface pour sceller complètement. Geler au moins 4 heures, de préférence pendant la nuit. Pour servir : déballer, retourner sur une assiette de service réfrigérée et éplucher le film de collage. Le semifreddo doit tenir sa forme propre et être facile à trancher avec un couteau chaud. Décorer le plateau avec de la peau de citron confite ou des baies fraîches. Couper en portions de 2 à 3 cm et servir immédiatement — il adoucit rapidement à température ambiante.",
+      "visualCue": {
+        "primaryTarget": "Un pain jaune pâle ferme qui tient parfaitement sa forme lorsqu'il est inversé et tranché. La surface de coupe est lisse et uniforme, pas glacée ou grossière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'intérieur est encore doux et mousseux lorsqu'il est tranché — il n'a pas complètement congelé. Ça s'effondre sur la plaque.",
+            "action": "Retourner au congélateur pendant au moins 2 heures de plus. Un semifreddo entièrement congelé est ferme, mais pas dur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couper proprement avec un couteau chaud, en tenant sa forme sur l'assiette. La surface coupée est lisse, pâle et mate — aucun cristal de glace visible. Il fond immédiatement sur la langue sans aucun choc froid.",
+            "action": "Décorer et servir immédiatement. Semifreddo est mieux consommé dans les 30 secondes suivant la coupe."
+          },
+          {
+            "state": "Overdone",
+            "description": "La roche dure — le couteau lutte pour couper et la surface montre une grande formation de cristal de glace. Gritty sur la langue.",
+            "action": "Laisser refroidir à température ambiante pendant 8-10 minutes avant de trancher. La température de service idéale est de -8 C, pas -18 C."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur l'arrière d'une cuillère contre une surface fraîchement coupée — elle devrait se produire en douceur et laisser une impression peu profonde, puis maintenez cette forme sans que la surface ne craque ou ne s'effondre."
+    }
+  ]
 };

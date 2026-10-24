@@ -1,109 +1,292 @@
 export default {
-  repoId: "master_thai_tom_kha_gai_001",
-  parentRepoId: null,
-  slug: "tom-kha-gai",
-  author: "ForkRecipe Kitchen",
-
-  title: "Tom Kha Gai",
-  description: "A silken, ivory broth of coconut milk infused with the floral heat of galangal and the citrus perfume of lemongrass — rich enough to coat a spoon, yet bright with lime and fish sauce. Torn mushrooms and tender chicken poach gently in the heat, absorbing the broth's layered warmth.",
-  cuisine: "Thai",
-  culture: "Central Thai",
-  category: "stocks",
-
-  tags: ["soup", "thai", "coconut", "galangal", "chicken", "lemongrass", "kaffir-lime"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 2, salty: 3, sour: 3, bitter: 1, umami: 3, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Coconut milk, full-fat, unsweetened",     ratioValue: 400, defaultUnit: "ml",   substitutions: ["coconut cream diluted 1:1 with water"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Chicken stock, light (or water)",          ratioValue: 300, defaultUnit: "ml",   substitutions: ["vegetable stock"] },
-    { ingId: "ing_03", role: "Protein",   name: "Chicken thigh, boneless, skinless, sliced 5mm", ratioValue: 250, defaultUnit: "g", substitutions: ["chicken breast (drier)", "firm tofu"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Galangal, fresh, sliced 3mm (not ginger)", ratioValue: 30,  defaultUnit: "g",   substitutions: ["frozen galangal (acceptable)"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Lemongrass stalks, bruised and cut into 5cm pieces", ratioValue: 2, defaultUnit: "stalks", substitutions: ["lemongrass paste 1 tbsp (weaker aroma)"] },
-    { ingId: "ing_06", role: "Herb",      name: "Kaffir lime leaves (makrut lime), torn",  ratioValue: 6,   defaultUnit: "leaves", substitutions: ["lime zest strips (inferior)"] },
-    { ingId: "ing_07", role: "Umami",     name: "Fish sauce (Tiparos or Megachef)",         ratioValue: 30,  defaultUnit: "ml",   substitutions: ["light soy sauce + pinch salt"] },
-    { ingId: "ing_08", role: "Acid",      name: "Lime juice, freshly squeezed",             ratioValue: 30,  defaultUnit: "ml",   substitutions: [] },
-    { ingId: "ing_09", role: "Protein",   name: "Oyster mushrooms (or straw mushrooms), torn", ratioValue: 100, defaultUnit: "g", substitutions: ["button mushrooms quartered"] },
-    { ingId: "ing_10", role: "Spice",     name: "Fresh Thai bird chilies, lightly bruised (do not split)", ratioValue: 3, defaultUnit: "whole", substitutions: ["1/2 tsp chili flakes added at the end"] },
-    { ingId: "ing_11", role: "Herb",      name: "Fresh cilantro (coriander), leaves and fine stems", ratioValue: 10, defaultUnit: "g", substitutions: ["Thai basil"] },
-    { ingId: "ing_12", role: "Sweetener", name: "Palm sugar (or light brown sugar)",        ratioValue: 10,  defaultUnit: "g",   substitutions: ["coconut sugar"] },
+  "repoId": "master_thai_tom_kha_gai_001",
+  "parentRepoId": null,
+  "slug": "tom-kha-gai",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tom Kha Gai",
+  "description": "Un bouillon de lait de coco soyeux et ivoire infusé de la chaleur florale du galangal et du parfum d'agrumes de la citronnelle, assez riche pour enrober une cuillère, mais brillant avec de la chaux et de la sauce de poisson. Torn champignons et poulet tendre braconner doucement dans la chaleur, en absorbant la chaleur en couches du bouillon.",
+  "cuisine": "Thaï",
+  "culture": "Centre thaïlandais",
+  "category": "stocks",
+  "tags": [
+    "Soupe",
+    "Thaï",
+    "noix de coco",
+    "Galangal",
+    "poulet",
+    "citronnelle",
+    "Kaffir-lime"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Infuse",
-      inputs: ["ing_01", "ing_02", "ing_04", "ing_05", "ing_06", "ing_10"],
-      outputState: "infused_broth",
-      instructions: "Pour the coconut milk and chicken stock into a medium saucepan. Add the sliced galangal, bruised lemongrass pieces, torn kaffir lime leaves, and the lightly bruised (but whole) bird chilies. Bring to a gentle simmer over medium heat — never a rolling boil, which will break the coconut milk and make it grainy and oily. Simmer for 10 minutes, pressing the aromatics down occasionally with a spoon. The broth should carry a complex floral fragrance: the soap-citrus of kaffir lime, the hot-gingery punch of galangal, the lemon-grass green of the stalks. Do not remove the aromatics yet — they will steep through the entire cooking process and are removed before serving, not before. The chilies are left whole so they release mild background heat without the piercing intensity of split or chopped chili.",
-      visualCue: {
-        primaryTarget: "An ivory-white broth with a gentle quiver of movement at the surface — small bubbles drifting up at the edges, not a central boil.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is still cold and the aromatics have not released their oils. It smells faintly of coconut milk only — no galangal heat, no lemongrass fragrance.", action: "Increase heat slightly and allow 5 more minutes. The galangal fragrance should be detectable before you add the protein." },
-          { state: "Perfect",   description: "The broth is a soft, creamy ivory and smells intensely of galangal and kaffir lime. Small fat droplets may be visible on the surface. The bird chilies have swelled slightly.", action: "Add mushrooms and chicken now." },
-          { state: "Overdone",  description: "The coconut milk has separated — you can see a slick of yellowish coconut oil on the surface and the broth looks curdled and grainy rather than silky.", action: "Reduce heat to low and whisk gently to re-emulsify. Adding a splash of cold coconut milk can help bring it back, but work quickly — continued heat will make it worse." },
-        ],
-      },
-      feelCue: "Lean over the pot and breathe: the steam should carry a floral, almost soapy lemongrass fragrance that tingles the back of your throat with the galangal's quiet heat — like inhaling through a Thai kitchen window.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Lait de coco, plein gras, non sucré",
+      "ratioValue": 400,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "crème de coco diluée 1:1 avec de l'eau"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["infused_broth", "ing_03", "ing_09"],
-      outputState: "cooked_soup",
-      instructions: "Add the torn oyster mushrooms to the simmering broth and stir gently. After 1 minute, slide in the sliced chicken thigh pieces, spreading them through the broth so they cook evenly. Maintain a gentle simmer — barely trembling at the surface. Cook the chicken for 5 to 7 minutes, stirring once or twice, until the slices are opaque all the way through with no pink remaining. Chicken thigh at this thickness finishes in the time it takes the broth to return to temperature after the cold protein goes in. The mushrooms will soften and absorb the coconut broth. Do not increase the heat to rush this step — aggressive heat toughens the chicken and breaks the coconut base.",
-      visualCue: {
-        primaryTarget: "Chicken slices are uniformly white-opaque throughout. Mushrooms are silky and slightly translucent, collapsed softly into the broth.",
-        spectrum: [
-          { state: "Underdone", description: "Chicken has a pink blush at the center when a thick slice is pressed open with a spoon. The flesh has a raw, dense look.", action: "Continue simmering for 2 more minutes. Thigh meat is forgiving — it will not dry out quickly." },
-          { state: "Perfect",   description: "Chicken is fully opaque, white to its center. It separates easily when pressed with a spoon. Mushrooms have absorbed broth and look glossy and tender.", action: "Season with fish sauce, lime juice, and palm sugar immediately." },
-          { state: "Overdone",  description: "Chicken slices are pulling apart into stringy fibres and the mushrooms have become completely soft and waterlogged.", action: "Season and serve at once — prolonged heat will continue to degrade both protein and mushrooms." },
-        ],
-      },
-      feelCue: "A piece of properly cooked chicken thigh, lifted on a spoon, should yield with gentle pressure — soft and juicy, not firm. The surrounding broth should coat the back of the spoon in a thin, creamy film.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Stock de poulet, léger (ou eau)",
+      "ratioValue": 300,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "stock de légumes"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Season",
-      inputs: ["cooked_soup", "ing_07", "ing_08", "ing_12"],
-      outputState: "seasoned_soup",
-      instructions: "Add the fish sauce, palm sugar, and lime juice off heat or over the lowest flame. Stir to dissolve the sugar. Taste and adjust — tom kha gai should be simultaneously rich (coconut), sour (lime), salty (fish sauce), with background sweetness (palm sugar) and slow heat (galangal and chili). Start with the listed quantities and adjust in small increments. The lime goes in last and must not boil after adding — boiling destroys its bright top note and turns it bitter. The correct flavor is silky-rich on the palate immediately, then sour and bright mid-palate, then a long trailing warmth from the galangal. If it tastes flat, it needs more lime; if it tastes harsh, it needs more palm sugar.",
-      visualCue: {
-        primaryTarget: "Broth is a smooth, uniform ivory-cream with a subtle golden tinge from the galangal and chili. No visible curdling or oil slicks.",
-        spectrum: [
-          { state: "Underdone", description: "The broth tastes of coconut milk and stock but lacks brightness or complexity. The fish sauce and lime have not been added.", action: "Add fish sauce, lime, and palm sugar in the proportions listed, then taste and adjust." },
-          { state: "Perfect",   description: "The broth delivers a layered rolling flavor: creamy and rich, then sour and bright, then slowly warming from galangal. It is impossible to taste any single ingredient in isolation.", action: "Ladle into bowls over the aromatics (which remain but are not eaten) and garnish." },
-          { state: "Overdone",  description: "The broth tastes harshly sour or aggressively salty — lime or fish sauce was added too heavily.", action: "Balance with a small addition of coconut milk and palm sugar to round the edges." },
-        ],
-      },
-      feelCue: "The finished broth on a tasting spoon should feel silky and coating, like thin cream — not watery, not grainy. The lime's acid should make the edges of your tongue tingle slightly, while the galangal's heat settles warmly at the back of your throat.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "cuisse de poulet, désossée, sans peau, tranchée 5mm",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poitrine de poulet",
+        "tofu ferme"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["seasoned_soup", "ing_11"],
-      outputState: "finished_tom_kha_gai",
-      instructions: "Ladle the soup into deep bowls, ensuring each bowl gets equal portions of chicken, mushrooms, and broth. The aromatics — galangal, lemongrass, kaffir lime leaves, and bird chilies — remain in the bowl for visual beauty and ongoing aroma but are pushed to the side and not eaten. Scatter fresh cilantro leaves over the top of each bowl. Serve immediately while the broth is steaming. Provide a small spoon for the broth and chopsticks or a fork for the solids. At the table, diners may squeeze additional lime over their bowl. The soup does not improve on standing — the lime becomes bitter, the coconut milk may separate, and the chicken turns rubbery.",
-      visualCue: {
-        primaryTarget: "A beautiful ivory bowl with visible golden-white chicken, dark-gold mushrooms, and green cilantro scattered on a silky cream surface.",
-        spectrum: [
-          { state: "Underdone", description: "The bowl looks pale and unadorned — no garnish, no color contrast.", action: "Add the cilantro immediately. The visual contrast is part of the eating experience." },
-          { state: "Perfect",   description: "Steaming ivory broth, tender chicken and soft mushrooms visible below the surface, bright green cilantro floating on top. The galangal and lemongrass pieces rest at the edge of the bowl.", action: "Serve within 2 minutes of ladling." },
-          { state: "Overdone",  description: "The soup has been held too long and a ring of coconut oil has formed at the surface rim. Cilantro has wilted into the broth.", action: "Skim the oil with a spoon, add fresh cilantro, and serve." },
-        ],
-      },
-      feelCue: "When you lift the bowl to your lips, the steam should carry the full aromatic profile — lemongrass, kaffir lime, galangal — before you taste a single drop. That fragrant cloud is the soup announcing itself.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Galangal, frais, tranché 3mm (pas gingembre)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "galangal congelé (acceptable)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Pâtes de citronnelle, meurtris et coupées en morceaux de 5 cm",
+      "ratioValue": 2,
+      "defaultUnit": "stalks",
+      "substitutions": [
+        "pâte de citronnelle 1 c. à soupe (arôme plus faible)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Feuilles de chaux kaffir (chaux makrut), déchirées",
+      "ratioValue": 6,
+      "defaultUnit": "leaves",
+      "substitutions": [
+        "Bandes de zeste de chaux (inférieures)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "sauce de poisson (Tiparos ou Megachef)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce soja légère + pincée sel"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "Jus de lime fraîchement pressé",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Protein",
+      "name": "Champignons d'huître (ou champignons de paille), déchirés",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "champignons à bouton coupés"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Chilies d'oiseaux frais thaïlandais, légèrement meurtris (ne pas diviser)",
+      "ratioValue": 3,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "1/2 c. à thé de piments ajoutés à la fin"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Herb",
+      "name": "Coriandre fraîche, feuilles et tiges fines",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Basilic thaïlandais"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Sweetener",
+      "name": "Sucre de palme (ou sucre brun léger)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Sucre de coco"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Infuse",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_10"
+      ],
+      "outputState": "infused_broth",
+      "instructions": "Verser le lait de coco et le bouillon de poulet dans une casserole moyenne. Ajouter les tranches de galangal, les morceaux de citronnelle meurtris, les feuilles de lime kaffir déchirées et les piments d'oiseaux légèrement meurtris (mais entiers). Portez à feu doux à feu moyen — jamais un ébullition qui brisera le lait de coco et le rendra grainé et huileux. Laisser mijoter pendant 10 minutes, presser parfois les aromatiques avec une cuillère. Le bouillon doit porter une fragrance florale complexe : le soap-citrus de la chaux kaffir, le punch chaud du galangal, le vert citronné des tiges. N'enlevez pas encore les aromatiques — ils vont s'enfoncer tout au long de la cuisson et sont enlevés avant de servir, pas avant. Les piments sont laissés entiers de sorte qu'ils libèrent une légère chaleur de fond sans l'intensité perçante du chili fendu ou haché.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon blanc ivoire avec un doux carquois de mouvement à la surface — de petites bulles dérivent aux bords, pas un ébullition central.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon est encore froid et les aromatiques n'ont pas libéré leurs huiles. Il sent peu le lait de coco seulement — pas de chaleur galangale, pas de parfum de citronnelle.",
+            "action": "Augmenter légèrement la chaleur et laisser 5 minutes de plus. Le parfum galangal doit être détectable avant d'ajouter la protéine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bouillon est un ivoire doux et crémeux et sent intensément la chaux galangale et kaffir. De petites gouttelettes de graisse peuvent être visibles à la surface. Les piments d'oiseau ont légèrement gonflé.",
+            "action": "Ajouter les champignons et le poulet maintenant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait de coco s'est séparé — vous pouvez voir une léchée d'huile de coco jaunâtre à la surface et le bouillon semble caillé et grainé plutôt que soyeux.",
+            "action": "Réduire la chaleur à faible et fouetter doucement pour réémulsionner. L'ajout d'un éclaboussure de lait de coco froid peut aider à le ramener, mais travailler rapidement — la chaleur continue le rendra pire."
+          }
+        ]
+      },
+      "feelCue": "Penchez-vous sur le pot et respirez : la vapeur doit porter un parfum floral, presque savonneuse, de citronnelle qui accroche l'arrière de votre gorge à la chaleur tranquille du galangal, comme l'inhalation par une fenêtre de cuisine thaïlandaise."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "infused_broth",
+        "ing_03",
+        "ing_09"
+      ],
+      "outputState": "cooked_soup",
+      "instructions": "Ajouter les champignons d'huîtres déchirés au bouillon mijotant et remuer doucement. Après 1 minute, glissez dans les morceaux de cuisse de poulet tranchés, les étalant à travers le bouillon afin qu'ils cuisent uniformément. Maintenez une mijotée douce — à peine tremblant à la surface. Cuire le poulet pendant 5 à 7 minutes, en remuant une ou deux fois, jusqu'à ce que les tranches soient opaques jusqu'à ce qu'il ne reste plus de rose. La cuisse de poulet à cette épaisseur se termine dans le temps qu'il faut au bouillon pour revenir à la température après l'entrée de la protéine froide. Les champignons ramolliront et absorberont le bouillon de noix de coco. N'augmentez pas la chaleur pour précipiter cette étape — la chaleur agressive durcit le poulet et brise la base de la noix de coco.",
+      "visualCue": {
+        "primaryTarget": "Les tranches de poulet sont uniformément blanches-opaques partout. Les champignons sont soyeux et légèrement translucides, s'affaissent doucement dans le bouillon.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le poulet a un blush rose au centre quand une grosse tranche est pressée ouverte avec une cuillère. La chair a un aspect brut et dense.",
+            "action": "Continuer à mijoter pendant 2 minutes. La viande haute est pardonnante — elle ne s'asséchera pas rapidement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le poulet est complètement opaque, blanc à son centre. Il se sépare facilement lorsqu'il est pressé avec une cuillère. Les champignons ont absorbé le bouillon et semblent brillants et tendres.",
+            "action": "Assaisonner avec de la sauce de poisson, du jus de lime et du sucre de palme immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tranches de poulet se séparent en fibres à cordes et les champignons sont devenus complètement mous et arrosés.",
+            "action": "Assaisonner et servir à la fois — la chaleur prolongée continuera de dégrader les protéines et les champignons."
+          }
+        ]
+      },
+      "feelCue": "Un morceau de cuisse de poulet bien cuite, relevé sur une cuillère, doit produire avec une pression douce — douce et juteuse, non ferme. Le bouillon environnant devrait enrober l'arrière de la cuillère dans un film mince et crémeux."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "cooked_soup",
+        "ing_07",
+        "ing_08",
+        "ing_12"
+      ],
+      "outputState": "seasoned_soup",
+      "instructions": "Ajouter la sauce de poisson, le sucre de palme et le jus de lime hors feu ou au-dessus de la flamme la plus basse. Mélanger pour dissoudre le sucre. Goût et ajustez - Tom kha gai doit être simultanément riche (coconut), aigre (lime), salé (sauce de poisson), avec douceur de fond (sucre de palm) et chaleur lente (galangal et chili). Commencez par les quantités énumérées et ajustez en petits incréments. La chaux va en dernier et ne doit pas bouillir après l'ajout — bouillir détruit sa note supérieure brillante et la rend amère. La saveur correcte est soyeuse-riche en bouche immédiatement, puis aigre et lumineux milieu-palais, puis une longue chaleur traînante du galangal. Si elle a un goût plat, elle a besoin de plus de chaux; si elle a un goût dur, elle a besoin de plus de sucre de palme.",
+      "visualCue": {
+        "primaryTarget": "Broth est une crème d'ivoire lisse et uniforme avec une teinte dorée subtile du galangal et du chili. Pas de courbure visible ou de marées d'huile.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon goûte le lait de coco et le stock mais manque de luminosité ou de complexité. La sauce de poisson et la chaux n'ont pas été ajoutées.",
+            "action": "Ajouter la sauce de poisson, la chaux et le sucre de palme dans les proportions indiquées, puis goûter et ajuster."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bouillon offre une saveur de laminage en couches: crémeux et riche, puis aigre et lumineux, puis se réchauffe lentement du galangal. Il est impossible de goûter un ingrédient isolé.",
+            "action": "Déposer dans des bols sur les aromatiques (qui restent mais ne sont pas mangés) et garnir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon a un goût fortement aigre ou fortement salé: de la chaux ou de la sauce de poisson a été ajoutée trop fortement.",
+            "action": "Équilibre avec un petit ajout de lait de coco et de sucre de palme pour arrondir les bords."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon fini sur une cuillère à dégustation doit se sentir soyeux et enduit, comme de la crème fine — pas aqueuse, pas granuleuse. L'acide de la chaux devrait rendre les bords de votre langue légèrement teintés, tandis que la chaleur du galangal se calme chaudement à l'arrière de votre gorge."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "seasoned_soup",
+        "ing_11"
+      ],
+      "outputState": "finished_tom_kha_gai",
+      "instructions": "Déposer la soupe dans des bols profonds, en veillant à ce que chaque bol reçoive des portions égales de poulet, de champignons et de bouillon. Les aromates — galangales, citronnelle, feuilles de chaux kaffir et piments d'oiseaux — restent dans le bol pour la beauté visuelle et l'arôme continu mais sont poussés sur le côté et ne sont pas mangés. Scatter les feuilles de coriandre fraîche sur le dessus de chaque bol. Servir immédiatement pendant la cuisson du bouillon. Fournissez une petite cuillère pour le bouillon et les baguettes ou une fourchette pour les solides. À table, les diners peuvent presser de la chaux supplémentaire sur leur bol. La soupe ne s'améliore pas en position debout: la chaux devient amère, le lait de coco peut se séparer et le poulet devient caoutchouteux.",
+      "visualCue": {
+        "primaryTarget": "Un beau bol d'ivoire avec un poulet blanc doré visible, des champignons d'or foncé et une coriandre verte éparpillée sur une surface crème soyeuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bol a l'air pâle et sans décor — pas de garniture, pas de contraste de couleur.",
+            "action": "Ajouter la coriandre immédiatement. Le contraste visuel fait partie de l'expérience alimentaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bouillon d'ivoire à la vapeur, poulet tendre et champignons doux visibles sous la surface, coriandre vert vif flottant sur le dessus. Les morceaux de galangal et de citronnelle reposent au bord du bol.",
+            "action": "Servir dans les 2 minutes suivant l'enroulement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe a été maintenue trop longtemps et un anneau d'huile de noix de coco s'est formé au bord de la surface. Cilantro s'est flétri dans le bouillon.",
+            "action": "Écraser l'huile avec une cuillère, ajouter la coriandre fraîche et servir."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous soulevez le bol sur vos lèvres, la vapeur doit porter le profil aromatique complet — citronnelle, citron vert, galangal — avant de goûter une seule goutte. Ce nuage parfumé est la soupe qui s'annonce."
+    }
+  ]
 };

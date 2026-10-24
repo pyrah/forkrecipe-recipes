@@ -1,127 +1,304 @@
-// Thiéboudienne — Senegal's national dish, a monument of one-pot cooking.
-// Author: SpiceTrader
-
 export default {
-  repoId: "master_west_african_thieboudienne_001",
-  parentRepoId: null,
-  slug: "thieboudienne",
-  author: "ForkRecipe Kitchen",
-
-  title: "Thiéboudienne (Senegalese Fish & Rice)",
-  description: "Senegal's national dish is a lesson in architectural patience: fish stuffed with a paste of parsley, chili, and garlic, braised in a tomato-onion stock alongside whole vegetables, then the stock used to cook rice until it, too, absorbs every layer of flavor — and a smoky crust forms at the bottom as the final, prized reward.",
-  cuisine: "West African",
-  culture: "Senegalese",
-  category: "seafood",
-
-  tags: ["senegalese", "fish", "rice", "tomato", "one-pot"],
-  difficulty: 4,
-  activeTime: "1 hr",
-  totalTime: "2 hrs",
-  ratioSystem: "parts",
-
-  stars: 1340,
-  forks: 122,
-  contributors: 17,
-  license: "CC-BY-SA",
-  createdAt: "2025-01-20",
-  updatedAt: "2026-04-05",
-
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 0, umami: 5, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole firm fish (thiof, snapper, grouper), scored and cleaned", ratioValue: 8, defaultUnit: "parts", substitutions: ["sea bass", "large mullet"] },
-    { ingId: "ing_02", role: "Starch",    name: "Long-grain parboiled rice, rinsed",                             ratioValue: 6, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Tomato paste",                                                  ratioValue: 2, defaultUnit: "parts", substitutions: ["fresh tomatoes, blended and reduced"] },
-    { ingId: "ing_04", role: "Allium",    name: "Yellow onion, one half sliced, one half in stuffing paste",     ratioValue: 2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Flat-leaf parsley, for stuffing paste",                         ratioValue: 0.5, defaultUnit: "parts", substitutions: ["cilantro"] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, for stuffing paste",                             ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Scotch bonnet pepper, halved",                                  ratioValue: 0.5, defaultUnit: "parts", substitutions: ["habanero"] },
-    { ingId: "ing_08", role: "Structure", name: "Root vegetables: cassava, carrot, turnip, eggplant",            ratioValue: 5, defaultUnit: "parts", substitutions: ["sweet potato, carrot, zucchini"] },
-    { ingId: "ing_09", role: "Fat",       name: "Vegetable oil",                                                 ratioValue: 2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning", name: "Salt, black pepper, seasoning cube (Maggi)",                   ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Umami",     name: "Fermented locust beans (netetou) or dried shrimp",             ratioValue: 0.5, defaultUnit: "parts", substitutions: ["fish sauce, used sparingly"] },
+  "repoId": "master_west_african_thieboudienne_001",
+  "parentRepoId": null,
+  "slug": "thieboudienne",
+  "author": "ForkRecipe Kitchen",
+  "title": "Thiéboudienne (poissons et riz sénégalais)",
+  "description": "Le plat national du Sénégal est une leçon de patience architecturale : le poisson farci d'une pâte de persil, de chili et d'ail, braisé dans un stock d'oignons de tomates aux côtés de légumes entiers, puis le stock utilisé pour cuire le riz jusqu'à ce qu'il absorbe toutes les couches de saveur, et une croûte fumée se forme en bas comme la récompense finale et précieuse.",
+  "cuisine": "Afrique de l ' Ouest",
+  "culture": "Sénégal",
+  "category": "seafood",
+  "tags": [
+    "sénégales",
+    "poissons",
+    "riz",
+    "tomates",
+    "un seul pot"
   ],
-
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hr",
+  "totalTime": "2 hrs",
+  "ratioSystem": "parts",
+  "stars": 1340,
+  "forks": 122,
+  "contributors": 17,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-01-20",
+  "updatedAt": "2026-04-05",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Stuff and prepare fish",
-      inputs: ["ing_01", "ing_05", "ing_06", "ing_04", "ing_10"],
-      outputState: "stuffed_fish",
-      instructions: "Blend the parsley, garlic, half the onion, half the scotch bonnet, salt, and pepper into a coarse green paste — this is the rof stuffing. Stuff the rof paste into the score marks of the fish, pressing it firmly into the cuts so the paste fills the incisions. Also rub a thin layer over the fish exterior. Let rest for 15 minutes. This step is the singular flavor signature of thiéboudienne — the rof perfumes the flesh from within as the fish braises.",
-      visualCue: {
-        primaryTarget: "Score marks are visibly packed with dark green paste. The fish exterior has a thin, even coating. The rof is inside and on the fish, not pooled around it.",
-        spectrum: [
-          { state: "Underdone", description: "Rof paste is sitting on the surface only, not packed into the score marks. It will wash off during braising rather than penetrating the flesh.", action: "Use your fingers to push the paste firmly into each cut. Make the cuts deeper if needed — they should reach almost to the bone." },
-          { state: "Perfect",   description: "Every score mark is filled flush with green rof paste. The fish exterior has a thin, uniform green coating. Paste is firm and packed, not runny.", action: "Let rest 15 minutes then proceed to frying." },
-          { state: "Overdone",  description: "Too much rof applied — thick clumps are falling off the fish. The paste will burn in the pan before the fish is seared.", action: "Scrape excess to a thin, even layer. A thin coat is all that is needed; the interior stuffing carries the primary flavor." },
-        ],
-      },
-      feelCue: "Press the rof-packed score marks with your fingertip — the paste should feel firmly embedded, not yielding or loose. Bring the fish to your nose: you should smell parsley and garlic immediately.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Poisson entier ferme (twof, snapper, mérou), marqué et nettoyé",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bar de mer",
+        "gros mulet"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear fish and build base",
-      inputs: ["stuffed_fish", "ing_03", "ing_04", "ing_09", "ing_11", "ing_07"],
-      outputState: "tomato_broth_with_fish",
-      instructions: "Heat oil in a large, wide pot over medium-high heat. Fry the stuffed fish for 3 minutes per side until the exterior is golden and the rof has crisped slightly. Remove the fish and set aside. In the same pot, fry the remaining sliced onion until golden. Add the tomato paste and fry, stirring, for 10 minutes until it darkens and the oil separates. Add the locust beans or dried shrimp and the remaining scotch bonnet half. Add enough water to cover all vegetables and fish (about 1.5 liters). Return the fish to the pot and bring to a simmer.",
-      visualCue: {
-        primaryTarget: "The tomato base has darkened to a deep burnt-orange and the oil has clearly separated around the pot edges. The stock is a rich amber-red, deeply aromatic.",
-        spectrum: [
-          { state: "Underdone", description: "Tomato paste is still bright red and raw-tasting. The oil has not separated and the base is wet and thin. Raw tomato acidity will dominate the final dish.", action: "Continue frying the tomato paste. This step requires patience — 10 minutes of active frying is the minimum." },
-          { state: "Perfect",   description: "Deep orange-red base with oil clearly separated at the edges. The pot smells of caramelized tomato, onion, and a deep savory note from the locust beans.", action: "Add water, return fish, and bring to a simmer to cook the fish and vegetables." },
-          { state: "Overdone",  description: "Tomato paste is dark brown with a bitter, acrid smell. Small black bits visible.", action: "Deglaze with water immediately. Taste the resulting liquid — if too bitter, add a pinch of sugar and proceed." },
-        ],
-      },
-      feelCue: "The aroma rising from the pot at this stage should be deeply complex — caramelized tomato, sweet onion, and the pungent, fermented depth of the locust beans all layered and distinct, yet harmonious.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Riz à grains longs, rincé",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Braise fish and vegetables",
-      inputs: ["tomato_broth_with_fish", "ing_08"],
-      outputState: "braised_fish_and_vegetables",
-      instructions: "Add the root vegetables (cassava, carrot, turnip, eggplant) to the pot around the fish. Bring to a gentle simmer, cover, and cook for 20–25 minutes until the fish is cooked through and the vegetables are tender. As elements finish cooking, remove them to a serving platter and keep warm — the cassava and turnip take longer than the eggplant. Reserve ALL the braising stock — it is the most important ingredient in the dish.",
-      visualCue: {
-        primaryTarget: "Fish flesh is fully opaque and flakes at the thickest part of the spine when pressed. Vegetables yield to a knife with no resistance. The braising stock is deeply colored and rich.",
-        spectrum: [
-          { state: "Underdone", description: "Fish flesh is still translucent near the spine. Carrots and cassava resist a knife. Braising liquid looks thin.", action: "Cover and simmer for another 10 minutes. Root vegetables often take longer than expected — check them individually." },
-          { state: "Perfect",   description: "Fish flakes cleanly at the spine with gentle pressure. All vegetables yield fully to a knife. Stock is deeply flavored and richly colored — almost like a consommé-rich broth.", action: "Remove fish and all vegetables to a platter. Strain and reserve every drop of stock for the rice." },
-          { state: "Overdone",  description: "Fish has broken apart in the pot. Vegetables are very soft and some are beginning to dissolve. The stock has reduced significantly.", action: "Carefully scoop out the fish in pieces. Add water to bring the stock volume back up to the amount needed for the rice." },
-        ],
-      },
-      feelCue: "Taste a spoonful of the braising stock — it should be deeply savory, tasting of fish, tomato, and a complex background of fermented locust beans. This is the soul of the dish; it should make you want to drink it.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Pâte de tomates",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates fraîches, mélangées et réduites"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Cook rice in fish stock",
-      inputs: ["braised_fish_and_vegetables", "ing_02", "ing_10"],
-      outputState: "cooked_thieb_rice",
-      instructions: "Measure the braising stock — you need a ratio of about 1.5 parts stock to 1 part rice. Top up with water if necessary and season the stock well (it should taste slightly salty). Bring the stock to a boil in the wide pot, add the rinsed rice, and stir once. Reduce heat to low. Cover with foil then lid (the tight steam seal from the jollof technique). Cook for 25–30 minutes until all liquid is absorbed and the rice is tender. Then uncover and increase heat for 3–5 minutes to develop the crust.",
-      visualCue: {
-        primaryTarget: "Rice is fully cooked and uniformly orange-red from the stock. The surface is dotted with burst steam bubbles. The bottom crust crackles audibly when the pot is shaken.",
-        spectrum: [
-          { state: "Underdone", description: "Rice grains have a hard white center when bitten. Some liquid still pooled around the edges of the foil.", action: "Re-seal and cook for 5–8 more minutes. The tight seal is critical — steam escaping means uneven cooking." },
-          { state: "Perfect",   description: "Uniformly cooked, richly flavored rice in a warm amber color. Grains are separate and fluffy. The base of the pot crackles like caramel when shaken — the crust has formed.", action: "Remove from heat, rest 2 minutes. Serve rice with fish and vegetables arranged on top." },
-          { state: "Overdone",  description: "Rice is mushy and clumping. Crust has burned beyond smokiness to bitterness.", action: "Scoop the upper rice immediately, leaving the burned crust. Spread on a wide plate to stop cooking. Taste the crust before deciding whether to serve it." },
-        ],
-      },
-      feelCue: "Scrape the bottom of the pot with a spoon after the crust step — it should release in firm, caramelized chips that smell of toasted rice and spiced fish stock, not scorched or acrid.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon jaune, à moitié tranché, à moitié en pâte farcie",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Plate and serve",
-      inputs: ["cooked_thieb_rice", "braised_fish_and_vegetables"],
-      outputState: "finished_thieboudienne",
-      instructions: "Traditionally, thiéboudienne is served on a large communal platter: mound the rice in the center, arrange the fish on top (keeping it as whole as possible even if it has broken during cooking), and distribute the vegetables around the rice. Place the crust chips alongside or on top as a crispy bonus. Spoon any remaining braising liquid over the fish. Serve with lime wedges and a side of fermented onion-and-mustard dibi sauce if available.",
-      visualCue: {
-        primaryTarget: "A mountain of amber-red rice with a whole fish (or large pieces) on top, surrounded by richly colored root vegetables. The crust pieces are dark orange-brown, visible and appealing.",
-        spectrum: [
-          { state: "Underdone", description: "The presentation is complete but the rice is still pale and the fish looks dry. The dish hasn't come together visually or aromatically.", action: "This is a plating note, not a cooking note — return to the previous step and check the rice and fish temperature and seasoning before serving." },
-          { state: "Perfect",   description: "The platter is visually striking — deep warm colors, the fish as the centerpiece, vegetables like jewels around it. The kitchen smells of the sea, tomato, and toasted rice all at once.", action: "Serve at the table and let guests dig in communally." },
-          { state: "Overdone",  description: "Fish has fully broken down into flakes scattered throughout the rice rather than sitting as a centerpiece. Vegetables have dissolved.", action: "Stir everything together into a more rustic presentation — it will taste identical, just less majestic. Present with the crust prominently." },
-        ],
-      },
-      feelCue: "Stand over the finished platter and breathe in — the aroma should be like standing at a Senegalese coastal market: sea salt, wood smoke, caramelized tomato, and something fermented and deep that you cannot quite name but cannot stop smelling.",
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, pour pâte de farce",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "coriandre"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Girofles d'ail, pour pâte de farce",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre de bonnet écossais, coupé en deux",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "habanero"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Structure",
+      "name": "Légumes-racines: manioc, carottes, navets, aubergines",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "patates douces, carottes, courgettes"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile végétale",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel, poivre noir, cube assaisonnement (Maggi)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Umami",
+      "name": "Caroubes fermentées (netetou) ou crevettes séchées",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce de poisson, utilisée avec parcimonie"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Farcir et préparer le poisson",
+      "inputs": [
+        "ing_01",
+        "ing_05",
+        "ing_06",
+        "ing_04",
+        "ing_10"
+      ],
+      "outputState": "stuffed_fish",
+      "instructions": "Mélanger le persil, l'ail, la moitié de l'oignon, la moitié du bonnet de scotch, le sel et le poivre dans une pâte verte grossière — c'est la farce rof. Placer la pâte de rof dans les marques de score du poisson, le presser fermement dans les coupes afin que la pâte remplisse les incisions. En outre frotter une fine couche sur l'extérieur du poisson. Laisser reposer 15 minutes. Cette étape est la signature de la saveur singulière de la thiéboudienne — le rof parfume la chair de l'intérieur comme les braises de poisson.",
+      "visualCue": {
+        "primaryTarget": "Les marques sont visiblement emballées avec de la pâte vert foncé. L'extérieur du poisson a un revêtement mince et uniforme. Le rof est à l'intérieur et sur le poisson, pas mis en commun autour.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est assise sur la surface seulement, pas emballée dans les marques de score. Il se lavera au cours de la cuisson plutôt que de pénétrer la chair.",
+            "action": "Utilisez vos doigts pour pousser fermement la pâte dans chaque coupe. Rendre les coupes plus profondes si nécessaire — elles devraient atteindre presque l'os."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque marque de score est remplie de pâte de rof verte. L'extérieur du poisson a un revêtement vert mince et uniforme. La pâte est ferme et emballée, pas runny.",
+            "action": "Laisser reposer 15 minutes puis procéder à la friture."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de trombes appliquées — des touffes épaisses tombent du poisson. La pâte brûlera dans la poêle avant que le poisson ne soit séché.",
+            "action": "Grattez l'excès à une couche mince et uniforme. Une mince couche est tout ce qui est nécessaire; la farce intérieure porte la saveur primaire."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur les marques de pointage de rof-packed avec votre bout de doigt — la pâte doit se sentir fermement intégrée, ne pas céder ou lâche. Apportez le poisson à votre nez : vous devriez sentir le persil et l'ail immédiatement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear poisson et construire base",
+      "inputs": [
+        "stuffed_fish",
+        "ing_03",
+        "ing_04",
+        "ing_09",
+        "ing_11",
+        "ing_07"
+      ],
+      "outputState": "tomato_broth_with_fish",
+      "instructions": "Chauffer l'huile dans un grand pot à feu moyen-vif. Faire frire le poisson farci pendant 3 minutes de chaque côté jusqu'à ce que l'extérieur soit doré et que le rof ait légèrement croqué. Retirer le poisson et réserver. Dans le même pot, faire frire le reste de l'oignon tranché jusqu'à ce qu'il soit doré. Ajouter la pâte de tomate et faire frire, en remuant, pendant 10 minutes jusqu'à ce qu'elle s'assombrisse et que l'huile se sépare. Ajouter les caroubes ou les crevettes séchées et la moitié restante du capot scotch. Ajouter suffisamment d'eau pour couvrir tous les légumes et poissons (environ 1,5 litre). Retournez le poisson dans le pot et faites mijoter.",
+      "visualCue": {
+        "primaryTarget": "La base de la tomate s'est foncée jusqu'à un orangé profond brûlé et l'huile s'est clairement séparée autour des bords du pot. Le stock est riche en ambre rouge, profondément aromatique.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte de tomate est encore rouge vif et goûtée crue. L'huile n'est pas séparée et la base est humide et mince. L'acidité de la tomate brute dominera le plat final.",
+            "action": "Continuer à faire frire la pâte de tomate. Cette étape exige de la patience — 10 minutes de friture active est le minimum."
+          },
+          {
+            "state": "Perfect",
+            "description": "Base rouge-orange profonde avec huile clairement séparée aux bords. Le pot sent la tomate caramélisée, l'oignon et une note savoureuse profonde des caroubes.",
+            "action": "Ajouter l'eau, retourner le poisson et laisser mijoter pour cuire le poisson et les légumes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte de tomate est brun foncé avec une odeur amère et acride. Petits morceaux noirs visibles.",
+            "action": "Déglacer avec de l'eau immédiatement. Goûtez le liquide qui en résulte — si trop amer, ajoutez une pincée de sucre et continuez."
+          }
+        ]
+      },
+      "feelCue": "L'arôme qui s'élève de la casserole à ce stade devrait être profondément complexe: tomate caramélisée, oignon doux, et la profondeur piquante et fermentée des caroubes toutes stratifiées et distinctes, mais harmonieuses."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poissons et légumes braisés",
+      "inputs": [
+        "tomato_broth_with_fish",
+        "ing_08"
+      ],
+      "outputState": "braised_fish_and_vegetables",
+      "instructions": "Ajouter les légumes-racines (cassave, carottes, navets, aubergines) dans le pot autour du poisson. Faire mijoter, couvrir et cuire 20 à 25 minutes jusqu'à ce que le poisson soit cuit et que les légumes soient tendres. Lorsque les éléments terminent la cuisson, retirez-les dans un plateau de service et gardez-les au chaud — le manioc et le navet prennent plus de temps que l'aubergine. Réserver TOUS les bouillons — c'est l'ingrédient le plus important du plat.",
+      "visualCue": {
+        "primaryTarget": "La chair de poisson est complètement opaque et s'étale à la partie la plus épaisse de la colonne vertébrale lorsqu'elle est pressée. Les légumes donnent à un couteau sans résistance. Le stock de braises est profondément coloré et riche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La chair de poisson est toujours translucide près de la colonne vertébrale. Les carottes et le manioc résistent à un couteau. Le liquide de braisage semble mince.",
+            "action": "Couvrir et laisser mijoter encore 10 minutes. Les légumes-racines prennent souvent plus de temps que prévu — vérifiez-les individuellement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les poissons flocent proprement à la colonne vertébrale avec une pression douce. Tous les légumes donnent entièrement à un couteau. Le stock est profondément aromatisé et richement coloré, presque comme un bouillon riche en consommés.",
+            "action": "Retirer le poisson et tous les légumes dans un plateau. Soucher et réserver chaque goutte de stock pour le riz."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson s'est cassé dans le pot. Les légumes sont très doux et certains commencent à se dissoudre. Le stock a considérablement diminué.",
+            "action": "Découpez soigneusement le poisson en morceaux. Ajouter de l'eau pour ramener le volume du stock à la quantité nécessaire pour le riz."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillerée au bouillon — il devrait être profondément salé, la dégustation de poisson, de tomate, et un fond complexe de caroubes fermentées. C'est l'âme du plat; il devrait vous faire vouloir le boire."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire le riz en stock de poisson",
+      "inputs": [
+        "braised_fish_and_vegetables",
+        "ing_02",
+        "ing_10"
+      ],
+      "outputState": "cooked_thieb_rice",
+      "instructions": "Mesurez le stock de culture — vous avez besoin d'un rapport d'environ 1,5 partie de stock à une partie de riz. Garnir d'eau si nécessaire et bien assaisonner le stock (il devrait avoir un goût légèrement salé). Porter le bouillon à ébullition dans la grande casserole, ajouter le riz rincé et remuer une fois. Réduire la chaleur à faible. Couvrir avec du papier et le couvercle (le joint à vapeur serré de la technique jollof). Cuire de 25 à 30 minutes jusqu'à ce que tout le liquide soit absorbé et que le riz soit tendre. Ensuite, découvrez et augmentez la chaleur pendant 3 à 5 minutes pour développer la croûte.",
+      "visualCue": {
+        "primaryTarget": "Le riz est entièrement cuit et uniformément orange-rouge du stock. La surface est parsemée de bulles de vapeur. La croûte inférieure craque audiblement lorsque le pot est secoué.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains de riz ont un centre blanc dur quand mordu. Certains liquides sont encore enroulés autour des bords de la feuille.",
+            "action": "Resceller et cuire encore 5 à 8 minutes. Le joint serré est critique: la vapeur qui s'échappe signifie une cuisson inégale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un riz uniformément cuit, richement aromatisé dans une couleur ambre chaude. Les grains sont séparés et moelleux. La base du pot craque comme le caramel en cas de tremblement — la croûte s'est formée.",
+            "action": "Retirer du feu, reposer 2 minutes. Servir le riz avec du poisson et des légumes disposés sur le dessus."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz est musqué et entassant. La croûte a brûlé au-delà de l'amertume.",
+            "action": "Coupez le riz supérieur immédiatement, en laissant la croûte brûlée. Étaler sur une large assiette pour arrêter la cuisson. Goûtez la croûte avant de décider s'il faut la servir."
+          }
+        ]
+      },
+      "feelCue": "Grattez le fond de la casserole avec une cuillère après l'étape de la croûte — elle devrait libérer dans des chips fermes caramélisés qui sentent le riz grillé et le stock de poisson épicé, non brûlés ni acrides."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Assiette et service",
+      "inputs": [
+        "cooked_thieb_rice",
+        "braised_fish_and_vegetables"
+      ],
+      "outputState": "finished_thieboudienne",
+      "instructions": "Traditionnellement, la thiéboudienne est servie sur un grand plateau communal : fonder le riz au centre, arranger le poisson sur le dessus (le garder le plus complet possible même si elle a cassé pendant la cuisson), et distribuer les légumes autour du riz. Placez les croustilles à côté ou sur le dessus comme un bonus croustillant. Déposer tout liquide de braisage restant sur le poisson. Servir avec des quartiers de chaux et un côté de sauce dibi fermentée à l'oignon et au moutarde si disponible.",
+      "visualCue": {
+        "primaryTarget": "Une montagne de riz rouge-ambre avec un poisson entier (ou de grandes pièces) sur le dessus, entouré de légumes-racines richement colorés. Les morceaux de croûte sont brun-orange foncé, visibles et attrayants.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La présentation est complète mais le riz est encore pâle et le poisson semble sec. Le plat ne s'est pas réuni visuellement ou aromatiquement.",
+            "action": "Il s'agit d'une note de plat, et non d'une note de cuisson — revenez à l'étape précédente et vérifiez la température du riz et du poisson et l'assaisonnement avant de servir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le plateau est visuellement frappant — couleurs chaudes profondes, le poisson comme la pièce centrale, légumes comme des bijoux autour. La cuisine sent la mer, la tomate et le riz grillé.",
+            "action": "Servir à la table et laisser les invités creuser en commun."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les poissons se sont complètement décomposés en flocons dispersés dans le riz plutôt que d'être assis comme pièce maîtresse. Les légumes se sont dissous.",
+            "action": "Mélangez tout ensemble dans une présentation plus rustique — il aura un goût identique, juste moins majestueux. Présent avec la croûte bien en vue."
+          }
+        ]
+      },
+      "feelCue": "Tenez-vous au-dessus du plateau fini et respirez - l'arôme devrait être comme se tenir sur un marché côtier sénégalais: sel de mer, fumée de bois, tomate caramélisée, et quelque chose de fermenté et profond que vous ne pouvez pas tout à fait nommer mais ne peut pas arrêter de sentir."
+    }
+  ]
 };

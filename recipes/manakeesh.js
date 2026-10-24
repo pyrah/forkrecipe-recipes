@@ -1,115 +1,270 @@
 export default {
-  repoId: "master_lebanese_manakeesh_001",
-  parentRepoId: null,
-  slug: "manakeesh",
-  author: "ForkRecipe Kitchen",
-  title: "Manakeesh",
-  description: "Lebanon's beloved morning flatbread — pillowy yeasted dough flattened into rounds and painted with a paste of za'atar and olive oil, then baked until the edges crisp and the herb-oil bubbles into a fragrant, dark-green crust.",
-  cuisine: "Lebanese",
-  culture: "Levantine",
-  category: "breads",
-  tags: ["lebanese", "flatbread", "za-atar", "breakfast", "street-food"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 2, umami: 1, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",                         ratioValue: 100, defaultUnit: "%", substitutions: ["bread flour", "tipo 00"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Warm water (38-40 C)",                       ratioValue: 60,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_03", role: "Fat",        name: "Extra-virgin olive oil",                    ratioValue: 8,   defaultUnit: "%", substitutions: ["neutral oil"] },
-    { ingId: "ing_04", role: "Leavener",   name: "Instant yeast",                              ratioValue: 1.5, defaultUnit: "%", substitutions: ["active dry yeast (proof first)"] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine sea salt",                              ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Sweetener",  name: "Sugar",                                      ratioValue: 1,   defaultUnit: "%", substitutions: ["honey (same weight)"] },
-    { ingId: "ing_07", role: "Spice",      name: "Za'atar spice blend",                       ratioValue: 30,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",        name: "Extra-virgin olive oil (for the topping)",  ratioValue: 20,  defaultUnit: "%", substitutions: [] },
+  "repoId": "master_lebanese_manakeesh_001",
+  "parentRepoId": null,
+  "slug": "manakeesh",
+  "author": "ForkRecipe Kitchen",
+  "title": "Manakeesh",
+  "description": "Le pain plat du matin bien-aimé du Liban — pâte de levure d'oreiller aplatie en rondelles et peinte avec une pâte de za'atar et d'huile d'olive, puis cuite jusqu'à ce que les bords croustillants et les bulles d'huile d'herbe dans une croûte parfumée et vert foncé.",
+  "cuisine": "Libanais",
+  "culture": "Levantine",
+  "category": "breads",
+  "tags": [
+    "lébanèse",
+    "Pain plat",
+    "za-atar",
+    "Petit déjeuner",
+    "Produits de la rue"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 2,
+    "umami": 1,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix dough",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "shaggy_dough",
-      instructions: "In a large bowl, combine warm water, sugar, and yeast. Stir and let sit for 5 minutes if using active dry yeast (instant can go straight in with the flour). Add flour, salt, and olive oil. Mix with your hand or a wooden spoon until no dry flour remains and a shaggy, cohesive dough forms. The dough should be soft, slightly tacky, and pull together into one mass. Turn out onto an unfloured surface and knead for 6–8 minutes until smooth and elastic. The dough should not stick aggressively to the surface — a light tack is correct.",
-      visualCue: {
-        primaryTarget: "A smooth, slightly tacky ball of dough that springs back when poked. The surface is soft and slightly shiny from the olive oil. No dry patches, no tears.",
-        spectrum: [
-          { state: "Underdone", description: "Rough, shaggy, and pulling apart when stretched. Dry flour still visible. Tears rather than stretches.", action: "Knead for 3 more minutes. The gluten network is not yet developed — the dough needs more working to become extensible and smooth." },
-          { state: "Perfect",   description: "Smooth, supple, slightly tacky surface. Pulls away cleanly from the work surface with each push. Springs back when poked.", action: "Form into a ball, oil the bowl lightly, cover, and let rise in a warm spot." },
-          { state: "Overdone",  description: "Dough is tight, rubbery, and resists every stretch. Bounces back aggressively when poked — over-kneaded gluten.", action: "Let it rest uncovered on the bench for 15 minutes to relax before rounding and proofing. Over-kneaded dough bakes fine, just needs rest." },
-        ],
-      },
-      feelCue: "Take a small piece of dough and stretch it gently between two hands — after proper kneading it should stretch into a thin, semi-transparent membrane without tearing. This windowpane test confirms gluten development.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de pain",
+        "tipo 00"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Proof",
-      inputs: ["shaggy_dough"],
-      outputState: "proofed_dough",
-      instructions: "Form the dough into a smooth ball, place in a lightly oiled bowl, and cover with a damp cloth or plastic wrap. Proof in a warm spot (28–32 C) for 45–60 minutes, until doubled in size. Street bakers in Beirut do a single warm rise at 40 C for 30 minutes; home bakers can also proof in a cold fridge overnight for a better flavour and a slower rise. The dough is ready when it looks puffy and jiggly and a finger poke leaves a slow-filling indent.",
-      visualCue: {
-        primaryTarget: "A rounded, dome-shaped mass that has clearly doubled in volume — the dough fills the bowl where before it sat in the bottom third. The surface is smooth and slightly translucent where large bubbles push outward.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is barely 25% larger. Dense, heavy, resistant when poked — the finger indent fills back immediately. Smells only of flour and yeast, not yet fermented.", action: "Cover and wait. A cold room stalls yeast dramatically. Move the bowl to a warmer location: on top of the oven, in a turned-off oven with just the light on, or in a bowl of warm water." },
-          { state: "Perfect",   description: "Doubled, jiggly, dome-topped, and smelling lightly of beer and fresh bread. A poke leaves a slow-filling dimple that returns about halfway in 5 seconds.", action: "Divide and shape immediately — the dough is at peak gas retention and will spread beautifully." },
-          { state: "Overdone",  description: "The dome has collapsed back into a flat, spreading mass. The dough smells sharply alcoholic. The surface may be slightly sticky and clings to the bowl.", action: "Deflate, reshape, and bake as soon as possible. Overproofed manakeesh will still taste good — sour and complex — but will be harder to shape thinly without tearing." },
-        ],
-      },
-      feelCue: "Press a floured fingertip 1 cm into the proofed dough and watch the indent. It should fill back slowly, about halfway in 5 seconds, then stop. This is the perfect gas-retention moment — the gluten is relaxed but the yeast hasn't exhausted the sugar.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau chaude (38-40 C)",
+      "ratioValue": 60,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Make topping",
-      inputs: ["ing_07", "ing_08"],
-      outputState: "zaatar_paste",
-      instructions: "Combine za'atar spice blend and olive oil in a small bowl and stir into a thick, spreadable paste. The ratio should be roughly 3 parts za'atar to 2 parts oil — thick enough to coat a spoon and not run freely, but fluid enough to spread easily without tearing the dough. Taste the paste: it should be assertively herby, sour, and savory. Add more za'atar if it tastes only of oil; add more oil if it clumps dryly. Let the paste rest for 2 minutes for the herbs to hydrate slightly.",
-      visualCue: {
-        primaryTarget: "A thick, dark olive-green paste that falls from a spoon in a slow, lumpy drizzle rather than flowing like a liquid. The sesame seeds are visible throughout, suspended in the herb-oil.",
-        spectrum: [
-          { state: "Underdone", description: "Too much oil — the paste runs freely and pools on the surface. It will slide off the dough and puddle at the edges rather than coating the bread.", action: "Add more za'atar a teaspoon at a time until the paste thickens to the right consistency. You need it to hold its position on the dough." },
-          { state: "Perfect",   description: "Spreadable but not runny — applies like a thick jam. Clings to the back of a spoon. The oil coats the herbs without drowning them.", action: "Use immediately. The paste settles if left too long — stir before spreading on each round." },
-          { state: "Overdone",  description: "Too much za'atar — the paste is dry and crumbly, stiff on the spoon, and will tear the dough surface when spread.", action: "Stir in more olive oil a teaspoon at a time until spreadable. The za'atar should be well-wetted with oil for even cooking." },
-        ],
-      },
-      feelCue: "Spread a small amount on the back of your hand with a butter knife — it should glide smoothly and leave a uniform, fragrant green-red coating, not drag and clump. The hand should smell like an herb garden after rain.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 8,
+      "defaultUnit": "%",
+      "substitutions": [
+        "huile neutre"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Shape and top",
-      inputs: ["proofed_dough", "zaatar_paste"],
-      outputState: "topped_manakeesh",
-      instructions: "Preheat your oven to its maximum temperature — 250–270 C — with a baking stone or heavy baking sheet on the center rack for at least 30 minutes. Divide the proofed dough into equal balls (about 150 g each for individual portions). On a lightly floured surface, press and stretch each ball into a round disc 5–6 mm thick and roughly 20 cm in diameter. The edge should be slightly thicker than the center. Spoon 2–3 tablespoons of za'atar paste onto the center of each round and use the back of the spoon to spread it to within 1 cm of the edge in an even layer.",
-      visualCue: {
-        primaryTarget: "A thin, round disc of dough with a generous, even layer of dark green za'atar paste covering the surface to within 1 cm of the edge. The dough edge is a bare, pale rim that will puff and brown as it bakes.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is only 1 cm thick and hasn't been spread thin. The za'atar paste is in a blob in the center rather than spread evenly. The round is misshapen and thick.", action: "Press and stretch more aggressively — use the knuckles of both hands to stretch from the center outward. Spread the topping to the edge before baking." },
-          { state: "Perfect",   description: "5–6 mm thin round, even za'atar coverage right to the edge, a bare rim. The whole piece is about the size of a salad plate.", action: "Transfer to a hot baking stone or sheet immediately — the dough will begin to relax and puff slightly on the bench." },
-          { state: "Overdone",  description: "Dough has been stretched paper-thin and tears through in the center. Za'atar paste applied so thick it's mounded at the center.", action: "Gently press the tear together and use less topping. A mound of za'atar paste will be raw and oily in the center while the edges burn." },
-        ],
-      },
-      feelCue: "Lift the topped manakeesh by the edge — it should flex but not droop completely through; a little sag is fine, but if it stretches and tears under its own weight, the dough is too thin. The za'atar layer should feel slightly tacky to a fingertip pressed on it, not wet.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "levure sèche active (proof first)"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Bake",
-      inputs: ["topped_manakeesh"],
-      outputState: "finished_manakeesh",
-      instructions: "Slide the topped manakeesh onto the screaming-hot baking stone or preheated sheet. Bake at maximum oven heat for 6–8 minutes, until the edges are golden-brown and crisped, the za'atar paste is bubbling and fragrant, and the underside is golden-brown and pulls away from the surface with a crunch. The za'atar topping will darken noticeably — this is expected and correct. Serve immediately: manakeesh is a bread that must be eaten hot, folded in half like a soft taco, and consumed within minutes of baking.",
-      visualCue: {
-        primaryTarget: "Golden-brown, slightly charred edges. The za'atar topping is a deep, glistening dark green — bubbly at the edges where the oil has toasted into the bread. The underside is firm and crisp, not pale or soft.",
-        spectrum: [
-          { state: "Underdone", description: "Edges are pale blond, the za'atar topping looks wet and raw, and the underside is soft and white. The bread bends without resistance.", action: "Return to the oven for 2–3 more minutes. Manakeesh needs high heat quickly — a hot oven is non-negotiable for a crunchy edge and properly cooked topping." },
-          { state: "Perfect",   description: "Golden-brown rim, fragrant dark green topping with bubbled oil at the edges, crisp underside that lifts cleanly from the stone. The kitchen smells of toasted thyme and olive oil.", action: "Remove and serve immediately, folded in half or flat with fresh tomatoes and white cheese tucked inside." },
-          { state: "Overdone",  description: "The edges are dark brown to black, the za'atar topping has gone from green to near-black with a sharp, burnt herb smell rather than a toasty one.", action: "Trim the burnt edge with a knife or scissors. The center is likely fine. A splash of fresh lemon juice on the too-dark topping helps cut the bitterness." },
-        ],
-      },
-      feelCue: "Pick up the baked manakeesh by its edge — it should be crisp enough to hold its shape horizontally for a few seconds before bending. Fold it in half to eat: the inside should steam gently against your hand, the za'atar paste fragrant and warm, the edge crackling satisfyingly between your teeth.",
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": [
+        "miel (même poids)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Mélange d'épices Za'atar",
+      "ratioValue": 30,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge (pour la garniture)",
+      "ratioValue": 20,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélanger la pâte",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "shaggy_dough",
+      "instructions": "Dans un grand bol, mélanger l'eau chaude, le sucre et la levure. Incorporer et laisser reposer pendant 5 minutes si vous utilisez une levure sèche active (l'instant peut entrer directement avec la farine). Ajouter la farine, le sel et l'huile d'olive. Mélanger avec votre main ou une cuillère en bois jusqu'à ce qu'aucune farine sèche ne reste et qu'une pâte chaotique et cohésive se forme. La pâte doit être douce, légèrement collante et s'assembler en une seule masse. Se tourner sur une surface non nourrie et pétrir pendant 6-8 minutes jusqu'à ce que lisse et élastique. La pâte ne doit pas s'accrocher agressivement à la surface — une prise légère est correcte.",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte lisse et légèrement piquante qui ressort quand elle est cuite. La surface est douce et légèrement brillante à partir de l'huile d'olive. Pas de taches sèches, pas de larmes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Rough, shaggy, et de se séparer quand étiré. Farine sèche encore visible. Des larmes plutôt que des étirements.",
+            "action": "Agenouillez encore 3 minutes. Le réseau de gluten n'est pas encore développé — la pâte a besoin de plus de travail pour devenir extensible et lisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface lisse, souple, légèrement collante. Éloignez-vous proprement de la surface de travail à chaque poussée. Les ressorts sont en marche.",
+            "action": "Formez-vous en boule, huilez légèrement le bol, couvrez et laissez-le monter dans un endroit chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est serrée, caoutchouteuse et résiste à chaque étirement. Il rebondit agressivement quand il était poché — du gluten surcollé.",
+            "action": "Laisser reposer sur le banc pendant 15 minutes pour se détendre avant d'arrondir et d'arrondir. De la pâte trop pétrie, il faut se reposer."
+          }
+        ]
+      },
+      "feelCue": "Prendre un petit morceau de pâte et l'étirer délicatement entre deux mains — après le pétrir correctement devrait s'étirer dans une membrane mince, semi-transparente sans déchirer. Ce test de vitre confirme le développement du gluten."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Preuve",
+      "inputs": [
+        "shaggy_dough"
+      ],
+      "outputState": "proofed_dough",
+      "instructions": "Former la pâte dans une boule lisse, placer dans un bol légèrement huilé, et couvrir avec un chiffon humide ou un enveloppement plastique. Preuve dans un endroit chaud (28–32 C) pendant 45–60 minutes, jusqu'à doublé en taille. Les boulangers de rue à Beyrouth font une seule montée chaude à 40 C pendant 30 minutes; les boulangers à domicile peuvent également prouver dans un réfrigérateur froid une nuit pour une meilleure saveur et une montée plus lente. La pâte est prête quand elle a l'air gonflée et jiggly et qu'un poke du doigt laisse un tiret de remplissage lent.",
+      "visualCue": {
+        "primaryTarget": "Une masse arrondie en forme de dôme qui a clairement doublé en volume — la pâte remplit le bol où avant il était assis dans le tiers inférieur. La surface est lisse et légèrement translucide où les grosses bulles poussent vers l'extérieur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est à peine 25 % plus grosse. Sensé, lourd, résistant lorsqu'il est poché — le doigt se remplit immédiatement. Sens seulement de farine et de levure, pas encore fermenté.",
+            "action": "Couvrez et attendez. Une chambre froide étouffe la levure de façon spectaculaire. Déplacez le bol à un endroit plus chaud: sur le dessus du four, dans un four éteint avec juste la lumière allumée, ou dans un bol d'eau chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Double, jiggly, surmonté de dôme, et sentant légèrement la bière et le pain frais. Un poke laisse une fossette à remplissage lent qui revient à mi-chemin en 5 secondes.",
+            "action": "Divisez et formez immédiatement — la pâte est au pic de rétention de gaz et se répandra magnifiquement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le dôme s'est effondré dans une masse plate et étendue. La pâte sent fortement l'alcool. La surface peut être légèrement collante et s'accrocher au bol.",
+            "action": "Défendre, remodeler et cuire dès que possible. Les manakeesh surprotégées auront encore un bon goût — aigre et complexe — mais il sera plus difficile de se former finement sans déchirer."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un bout de doigt fariné 1 cm dans la pâte étagée et regardez le tiret. Il devrait se remplir lentement, environ à mi-parcours en 5 secondes, puis s'arrêter. C'est le moment parfait de rétention de gaz — le gluten est détendu mais la levure n'a pas épuisé le sucre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Faire la garniture",
+      "inputs": [
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "zaatar_paste",
+      "instructions": "Mélanger le mélange d'épices za'atar et l'huile d'olive dans un petit bol et remuer dans une pâte épaisse et extensible. Le rapport doit être d'environ 3 parties za'atar à 2 parties d'huile — assez épais pour enrober une cuillère et ne pas courir librement, mais suffisamment fluide pour se propager facilement sans déchirer la pâte. Goûtez la pâte : elle doit être astreinte, aigre et salée. Ajouter plus de za'atar s'il n'a que du goût d'huile; ajouter plus d'huile s'il tombe sèchement. Laisser reposer la pâte pendant 2 minutes pour que les herbes s'hydratent légèrement.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse et vert olive foncé qui tombe d'une cuillère dans une bruine lente et grumelée plutôt que de couler comme un liquide. Les graines de sésame sont visibles partout, suspendues dans l'huile d'herbe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Trop d'huile — la pâte coule librement et se déverse à la surface. Il glissera de la pâte et flattera aux bords plutôt que de couvrir le pain.",
+            "action": "Ajouter plus de za'atar une cuillère à café à la fois jusqu'à ce que la pâte épaississe à la bonne consistance. Vous en avez besoin pour tenir sa position sur la pâte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Spreadable, mais pas écoulement — s'applique comme une confiture épaisse. Clings à l'arrière d'une cuillère. L'huile enveloppe les herbes sans les noyer.",
+            "action": "À utiliser immédiatement. La pâte se dépose si elle reste trop longtemps — remuer avant de s'étendre sur chaque tour."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de za'atar — la pâte est sèche et émiettée, raide sur la cuillère, et déchire la surface de la pâte lorsqu'elle est étalée.",
+            "action": "Incorporer plus d'huile d'olive une cuillère à café à la fois jusqu'à ce qu'elle soit extensible. Le za'atar doit être bien mouillé avec de l'huile pour même cuisiner."
+          }
+        ]
+      },
+      "feelCue": "Étalez une petite quantité sur le dos de votre main avec un couteau à beurre — il doit glisser en douceur et laisser un revêtement uniforme, parfumé vert-rouge, ne pas glisser et se serrer. La main devrait sentir comme un jardin d'herbes après la pluie."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Forme et dessus",
+      "inputs": [
+        "proofed_dough",
+        "zaatar_paste"
+      ],
+      "outputState": "topped_manakeesh",
+      "instructions": "Préchauffez votre four à sa température maximale — 250-270 C — avec une pierre ou une plaque de cuisson lourde sur le support central pendant au moins 30 minutes. Divisez la pâte éprouvée en boules égales (environ 150 g chacune pour les portions individuelles). Sur une surface légèrement farineuse, pressez et étirez chaque boule dans un disque rond de 5 à 6 mm d'épaisseur et d'environ 20 cm de diamètre. Le bord doit être légèrement plus épais que le centre. Spoon 2-3 cuillères à soupe de za'atar coller au centre de chaque tour et utiliser le dos de la cuillère pour l'étendre à moins de 1 cm du bord dans une couche uniforme.",
+      "visualCue": {
+        "primaryTarget": "Un mince disque rond de pâte avec une couche généreuse et uniforme de pâte za'atar vert foncé couvrant la surface à moins de 1 cm du bord. Le bord de la pâte est un bord nu et pâle qui souffle et brun pendant qu'il fait cuire.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux n'a que 1 cm d'épaisseur et n'a pas été étendue. La pâte za'atar est dans un blob au centre plutôt que de s'étendre uniformément. La ronde est malsaine et épaisse.",
+            "action": "Appuyez et étirez de manière plus agressive — utilisez les articulations des deux mains pour s'étirer du centre vers l'extérieur. Étendre la garniture sur le bord avant de cuire."
+          },
+          {
+            "state": "Perfect",
+            "description": "5–6 mm de longueur ronde, même la couverture za'atar droite sur le bord, une jante nue. Toute la pièce est de la taille d'une assiette de salade.",
+            "action": "Transférer immédiatement dans une pierre ou une feuille de cuisson chaude — la pâte commencera à se détendre et à souffler légèrement sur le banc."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dough a été allongé papier-mince et déchire au centre. La pâte de Za'atar appliquée si épaisse qu'elle est bombée au centre.",
+            "action": "Appuyez doucement sur la déchirure et utilisez moins de garniture. Un monticule de pâte za'atar sera brut et huileux au centre pendant que les bords brûlent."
+          }
+        ]
+      },
+      "feelCue": "Soulevez le manakeesh surmonté par le bord — il devrait fléchir mais pas s'enfoncer complètement à travers; un peu de sag est bien, mais s'il s'étire et se déchire sous son propre poids, la pâte est trop fine. La couche za'atar doit se sentir légèrement collante à un bout de doigt appuyé dessus, pas mouillé."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "topped_manakeesh"
+      ],
+      "outputState": "finished_manakeesh",
+      "instructions": "Faites glisser le manakeesh sur la pierre de cuisson chaude ou la feuille préchauffée. Cuire au four pendant 6 à 8 minutes, jusqu'à ce que les bords soient dorés et croustillés, que la pâte za'atar soit bouillonnante et parfumée, et que le dessous soit doré et s'éloigne de la surface avec une croûte. La garniture de za'atar va s'assombrir sensiblement — cela est attendu et correct. Servir immédiatement: manakeesh est un pain qui doit être mangé chaud, plié en deux comme un taco doux, et consommé en quelques minutes de cuisson.",
+      "visualCue": {
+        "primaryTarget": "Arêtes dorées, légèrement carbonisées. La garniture za'atar est d'un vert foncé brillant profond, pétillant aux bords où l'huile a grillé dans le pain. Le dessous est ferme et croquant, pas pâle ou doux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les bords sont blond pâle, la garniture za'atar semble humide et crue, et le dessous est doux et blanc. Le pain fléchit sans résistance.",
+            "action": "Retourner au four 2–3 minutes de plus. Manakeesh a besoin de chaleur élevée rapidement — un four chaud est non négociable pour un bord croquant et une garniture bien cuite."
+          },
+          {
+            "state": "Perfect",
+            "description": "Rebord doré-brun, garniture parfumée vert foncé avec de l'huile bulleuse aux bords, le dessous croquant qui soulève proprement de la pierre. La cuisine sent le thym grillé et l'huile d'olive.",
+            "action": "Retirer et servir immédiatement, plié en deux ou à plat avec des tomates fraîches et du fromage blanc cousu à l'intérieur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont brun foncé à noir, la garniture za'atar est passée du vert au presque noir avec une odeur d'herbe vive et brûlée plutôt qu'une odeur grillée.",
+            "action": "Coupez le bord brûlé avec un couteau ou des ciseaux. Le centre est probablement bien. Une éclaboussure de jus de citron frais sur la garniture trop foncée aide à couper l'amertume."
+          }
+        ]
+      },
+      "feelCue": "Ramassez le manakeesh cuit par son bord — il devrait être assez croustillant pour tenir sa forme horizontalement pendant quelques secondes avant de plier. Pliez-le en deux pour manger : l'intérieur doit cuire doucement contre votre main, la pâte za'atar parfumée et chaude, le bord craquelant de manière satisfaisante entre vos dents."
+    }
+  ]
 };

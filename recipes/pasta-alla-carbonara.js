@@ -1,114 +1,260 @@
 export default {
-  repoId: "master_italian_pasta-alla-carbonara_001",
-  parentRepoId: null,
-  slug: "pasta-alla-carbonara",
-  author: "ForkRecipe Kitchen",
-  title: "Pasta alla Carbonara",
-  description: "Rome's most demanding pasta — spaghetti cloaked in a trembling, egg-yolk-rich sauce that exists in the razor-thin margin between silky cream and scrambled catastrophe, punctuated by shards of crisped guanciale and a snowfall of aged Pecorino.",
-  cuisine: "Italian",
-  culture: "Roman",
-  category: "grains",
-  tags: ["pasta", "egg", "guanciale", "roman", "cheese"],
-  difficulty: 3,
-  activeTime: "25 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 7, sour: 1, bitter: 2, umami: 8, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Spaghetti or rigatoni",                          ratioValue: 4,    defaultUnit: "parts", substitutions: ["tonnarelli", "mezze maniche"] },
-    { ingId: "ing_02", role: "Protein",   name: "Guanciale (cured pork cheek), cut into lardons", ratioValue: 1.5,  defaultUnit: "parts", substitutions: ["pancetta tesa (not smoked)"] },
-    { ingId: "ing_03", role: "Binder",    name: "Egg yolks (4 per 400g pasta)",                   ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Binder",    name: "Whole egg (1 per 400g pasta)",                   ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Dairy",     name: "Pecorino Romano, finely grated",                 ratioValue: 1,    defaultUnit: "parts", substitutions: ["50/50 Pecorino and Parmigiano-Reggiano"] },
-    { ingId: "ing_06", role: "Spice",     name: "Black pepper, coarsely ground and toasted",      ratioValue: 0.1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Liquid",    name: "Pasta cooking water, starchy and salted",        ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_pasta-alla-carbonara_001",
+  "parentRepoId": null,
+  "slug": "pasta-alla-carbonara",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pasta alla Carbonara",
+  "description": "Les pâtes les plus exigeantes de Rome — les spaghettis enveloppés d'une sauce tremblante, riche en œuf-jaune qui existe dans la marge rasoir-mince entre la crème soyeuse et la catastrophe brouillée, ponctuée par des éclats de guanciale croustillante et une chute de neige de vieux Pecorino.",
+  "cuisine": "Italien",
+  "culture": "Romain",
+  "category": "grains",
+  "tags": [
+    "pâtes",
+    "œuf",
+    "guanciale",
+    "romaine",
+    "fromage"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "25 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 7,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 8,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Render",
-      inputs: ["ing_02"],
-      outputState: "rendered_guanciale",
-      instructions: "Place the guanciale lardons in a cold, dry skillet — no oil. Start over medium-low heat and cook slowly for 8-12 minutes, turning occasionally. The fat must render gently; high heat will make the exterior tough before the interior fat has melted. Cook until the fat is fully translucent and the meat portions are crisp and golden at the edges. Remove the pan from the heat and use a slotted spoon to transfer the guanciale to a paper towel briefly, then return to the pan with all the rendered fat. The pan and fat must be warm but not hot when the sauce is made.",
-      visualCue: {
-        primaryTarget: "Lardons that are golden-amber and crisp at the edges, with translucent rendered fat pooling in the pan. The fat is clear and shimmering, not dark or smoking.",
-        spectrum: [
-          { state: "Underdone", description: "Fat is still white and opaque. Meat is soft and chewy throughout with no crisp edge.", action: "Continue on medium-low heat. The fat must be fully rendered before the meat crisps." },
-          { state: "Perfect",   description: "Edges are deep golden and crisp; the interior portions are still slightly tender. Fat in the pan is clear, golden, and fragrant with pork sweetness.", action: "Remove from heat. Keep the pan warm — it will be needed for the sauce." },
-          { state: "Overdone",  description: "Guanciale is uniformly dark brown and hard throughout. Fat has begun to smoke and smells burnt.", action: "Remove immediately. If the fat is not burnt, it can still be used. Let the pan cool more before adding the egg mixture." },
-        ],
-      },
-      feelCue: "The rendered fat should smell sweet and clean — like warm pork candy, not acrid. The guanciale pieces should click lightly against the pan, not squish.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Spaghetti ou rigatoni",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Tonnarelli",
+        "mezze maniché"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "carbonara_sauce_base",
-      instructions: "While the guanciale renders, combine the egg yolks and whole egg in a bowl large enough to eventually hold all the pasta. Add half the finely grated Pecorino and a generous amount of freshly coarsely ground black pepper. Whisk vigorously until the mixture is smooth, thick, and pale yellow — the consistency of heavy cream. It should fall from the whisk in a thick, continuous ribbon. Do not add salt — the guanciale fat and Pecorino provide all the salt this dish needs.",
-      visualCue: {
-        primaryTarget: "A thick, smooth, pale yellow cream with the consistency of heavy cream or loose custard. Falls from the whisk in a thick ribbon.",
-        spectrum: [
-          { state: "Underdone", description: "Egg yolks and cheese are not fully incorporated — white streaks of cheese are still visible in the yellow base.", action: "Whisk more vigorously. The friction of whisking begins to emulsify the mixture." },
-          { state: "Perfect",   description: "Uniform pale yellow, thick, creamy consistency. Cheese is fully incorporated. Falls from the whisk in a slow, heavy ribbon.", action: "Set aside near the stove. It needs to be room temperature when it meets the pasta." },
-          { state: "Overdone",  description: "Over-whisked; mixture is frothy with large air bubbles.", action: "Let it rest and the foam will settle. This is not a problem." },
-        ],
-      },
-      feelCue: "The sauce base should feel almost like thick yogurt when stirred with a spoon — there should be resistance when you drag it across the bowl.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Guanciale ( joue de porc guérie), coupée en lardons",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pancetta tesa (non fumé)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Boil",
-      inputs: ["ing_01", "ing_07"],
-      outputState: "al_dente_pasta",
-      instructions: "Cook the pasta in a large pot of well-salted water (the water should taste pleasantly salty, like a mild sea). Cook to 1 full minute less than the package's al dente time — it will finish cooking in the sauce off-heat. Before draining, scoop out at least 1 cup (240ml) of pasta cooking water — this cloudy, starchy water is the linchpin of the sauce. Drain the pasta but do not rinse.",
-      visualCue: {
-        primaryTarget: "Pasta that is just barely underdone — firm with a very faint white line when bitten through. It will finish in the sauce.",
-        spectrum: [
-          { state: "Underdone", description: "Significant white core when bitten. Still chalky and floury tasting.", action: "Cook for another 30 seconds and check again. The pasta needs to be almost done before it leaves the water." },
-          { state: "Perfect",   description: "Barely underdone — tender exterior, slight firmness throughout, tiny white thread at the center. The pasta has absorbed flavor from the salty water.", action: "Reserve the pasta water immediately, then drain and transfer to the pan." },
-          { state: "Overdone",  description: "Fully soft with no resistance. Will turn completely soft in the final sauce step.", action: "Move quickly through the remaining steps — do not let this pasta cool." },
-        ],
-      },
-      feelCue: "Bite a strand against your front tooth — you should feel a firm 'snap' through about 80% of the thickness, then a last thin thread of resistance. That thread is the margin between al dente and overcooked.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Jaunes d'œuf (4 pour 400 g de pâtes)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Toss",
-      inputs: ["al_dente_pasta", "rendered_guanciale"],
-      outputState: "pasta_with_guanciale",
-      instructions: "Transfer the drained pasta directly to the pan with the guanciale and its rendered fat over medium heat. Toss vigorously for 30 seconds, making sure every strand is coated in pork fat and has had contact with the hot pan. This step flavors the pasta before the egg sauce arrives. Add 2-3 tablespoons of the reserved pasta water to the pan and toss again — the starch in the water begins building the emulsion.",
-      visualCue: {
-        primaryTarget: "Pasta shiny and evenly coated in rendered guanciale fat. Each strand glistens. Guanciale pieces are distributed throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Pasta looks dry and mat. Fat has not coated the strands. Guanciale all sitting at the bottom.", action: "Toss more actively — lift and toss rather than just stirring. Add a splash more pasta water." },
-          { state: "Perfect",   description: "Every strand coated and glistening. Steam rising. Guanciale evenly distributed. Pan is hot but not screaming.", action: "Remove the pan from the heat before adding the egg sauce." },
-          { state: "Overdone",  description: "Pan is too hot and the pasta is beginning to dry out and stick.", action: "Add pasta water and immediately remove from heat. The pan must cool before the egg sauce goes in." },
-        ],
-      },
-      feelCue: "The pasta should sound like a quiet, moist sizzle as it tosses in the fat — not a hard sear. If you hear crackle or see smoke, the pan is too hot for the egg sauce.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Oeuf entier (1 pour 400 g de pâtes)",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Emulsify",
-      inputs: ["pasta_with_guanciale", "carbonara_sauce_base", "ing_07"],
-      outputState: "finished_carbonara",
-      instructions: "This is the critical step. Remove the pan from the heat entirely and let it rest 30 seconds off the burner. Pour the egg-cheese mixture over the pasta, and immediately begin tossing vigorously with tongs while simultaneously adding pasta water a tablespoon at a time. The residual heat from the pasta and pan will gently set the eggs into a sauce — but only if you keep moving. The pasta water both lubricates the sauce and prevents the eggs from scrambling by distributing heat. Aim for a consistency between thick cream and loose custard — it should flow when the pan is tilted but cling to every strand. Add the remaining Pecorino in two additions, tossing between each. Taste and adjust pepper.",
-      visualCue: {
-        primaryTarget: "A glossy, creamy, pale-yellow sauce that clings to every strand of pasta and flows slowly when the pan is tilted. No visible curds. No pooling liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery. Egg has not emulsified — it runs freely to the bottom of the pan. The pasta looks undressed.", action: "Toss more vigorously and move the pan back over a very low flame for 10 seconds, tossing constantly. The starchy pasta water will help bind." },
-          { state: "Perfect",   description: "Thick, glossy, uniform pale-yellow cream coating every strand. Flows like heavy cream when tilted. No liquid pooling at the base of the pan.", action: "Plate immediately in warm bowls and serve." },
-          { state: "Overdone",  description: "Visible yellow curds. Sauce has scrambled and separated. Liquid has pooled at the base.", action: "You cannot unscramble eggs, but the flavor is intact. Toss in a generous splash of hot pasta water off-heat and keep moving — the starch can partially re-emulsify mild scrambling." },
-        ],
-      },
-      feelCue: "Tilt the pan — the dressed pasta should slowly slide as one cohesive mass, not separate into pasta strands swimming in liquid. It should feel and look like a single, glossy entity.",
+      "ingId": "ing_05",
+      "role": "Dairy",
+      "name": "Pecorino Romano, finement râpé",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "50/50 Pecorino et Parmigiano-Reggiano"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poivre noir, grossièrement moulu et grillé",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Liquid",
+      "name": "Eau de cuisson des pâtes, féculente et salée",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rendu",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "rendered_guanciale",
+      "instructions": "Placez les lardons guanciaux dans une poêle froide et sèche, sans huile. Commencez à feu moyen-doux et faites cuire lentement pendant 8-12 minutes, en tournant occasionnellement. La graisse doit rendre doucement; la chaleur élevée rendra l'extérieur difficile avant que la graisse intérieure ait fondu. Cuire jusqu'à ce que la graisse soit entièrement translucide et que les portions de viande soient croustillantes et dorées aux bords. Retirer la poêle de la chaleur et utiliser une cuillère à fentes pour transférer la guanciale dans une serviette en papier brièvement, puis revenir à la poêle avec toute la graisse rendue. La poêle et la graisse doivent être chaudes mais pas chaudes lorsque la sauce est faite.",
+      "visualCue": {
+        "primaryTarget": "Les lardons sont dorés-ambres et croustillants aux bords, avec des gras translucides dans la poêle. La graisse est claire et chatoyante, pas sombre ou de fumer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La graisse est encore blanche et opaque. La viande est douce et mâcheuse, sans bord croustillant.",
+            "action": "Continuer à feu moyen-doux. La graisse doit être entièrement rendue avant les croustilles de viande."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords sont d'or profond et croustillants; les parties intérieures sont encore légèrement tendres. La graisse dans la poêle est claire, dorée et parfumée avec de la douceur de porc.",
+            "action": "Retirer du feu. Gardez la poêle au chaud — elle sera nécessaire pour la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le guanciale est uniformément brun foncé et dur partout. La graisse a commencé à fumer et les odeurs brûlées.",
+            "action": "Supprimer immédiatement. Si la graisse n'est pas brûlée, elle peut encore être utilisée. Laisser refroidir la poêle avant d'ajouter le mélange d'oeufs."
+          }
+        ]
+      },
+      "feelCue": "La graisse rendue doit sentir doux et propre — comme les bonbons de porc chauds, pas acride. Les pièces de la guanciale doivent cliquer légèrement contre la poêle, et non contre le calmar."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "carbonara_sauce_base",
+      "instructions": "Alors que la guanciale rend, combiner les jaunes d'œufs et l'œuf entier dans un bol assez grand pour éventuellement tenir toutes les pâtes. Ajouter la moitié du Pecorino finement râpé et une généreuse quantité de poivre noir fraîchement broyé. fouetter vigoureusement jusqu'à ce que le mélange soit lisse, épais et jaune pâle — la consistance de la crème lourde. Il devrait tomber du fouet dans un ruban épais et continu. Ne pas ajouter de sel — la graisse guanciale et Pecorino fournissent tout le sel dont ce plat a besoin.",
+      "visualCue": {
+        "primaryTarget": "Une crème épaisse, lisse, jaune pâle avec la consistance de crème lourde ou crème molle. Des chutes du fouet dans un ruban épais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les jaunes d'œufs et le fromage ne sont pas entièrement incorporés — des traces blanches de fromage sont encore visibles dans la base jaune.",
+            "action": "Plus vigoureusement. La friction du fouet commence à émulsifier le mélange."
+          },
+          {
+            "state": "Perfect",
+            "description": "Consistance uniforme jaune pâle, épaisse, crémeuse. Le fromage est entièrement incorporé. Des chutes du fouet dans un ruban lent et lourd.",
+            "action": "Réserver près du poêle. Il doit être à température ambiante quand il rencontre les pâtes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est mousseux avec de grandes bulles d'air.",
+            "action": "Laissez reposer la mousse. Ce n'est pas un problème."
+          }
+        ]
+      },
+      "feelCue": "La base de la sauce doit se sentir presque comme un yogourt épais lorsqu'elle est brassée avec une cuillère — il devrait y avoir une résistance lorsque vous la faites glisser dans le bol."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01",
+        "ing_07"
+      ],
+      "outputState": "al_dente_pasta",
+      "instructions": "Cuire les pâtes dans un grand pot d'eau bien salée (l'eau doit goûter agréablement salée, comme une mer douce). Cuire à 1 minute de moins que le temps d'al dente de l'emballage — il finira la cuisson dans la sauce hors-chauffe. Avant de les égoutter, arrosez au moins une tasse (240ml) d'eau de cuisson des pâtes – cette eau trouble et fébrile est le pivot de la sauce. Égoutter les pâtes mais ne pas rincer.",
+      "visualCue": {
+        "primaryTarget": "Pasta qui est à peine sous -done — ferme avec une ligne blanche très faible quand mordu. Il finira dans la sauce.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Un noyau blanc important quand mordu. Dégustation toujours crayeuse et farineuse.",
+            "action": "Cuire encore 30 secondes et revérifier. Les pâtes doivent être presque faites avant de quitter l'eau."
+          },
+          {
+            "state": "Perfect",
+            "description": "À peine sous -dos: tendre extérieur, légère fermeté dans l'ensemble, minuscule fil blanc au centre. Les pâtes ont absorbé la saveur de l'eau salée.",
+            "action": "Réserver l'eau de pâtes immédiatement, puis égoutter et transférer dans la casserole."
+          },
+          {
+            "state": "Overdone",
+            "description": "Entièrement doux sans résistance. Sera complètement doux dans l'étape finale de la sauce.",
+            "action": "Passez rapidement à travers les étapes restantes — ne laissez pas ces pâtes refroidir."
+          }
+        ]
+      },
+      "feelCue": "Agiter un brin contre votre dent avant — vous devriez sentir un « snap » ferme à travers environ 80% de l'épaisseur, puis un dernier fil mince de résistance. Ce fil est la marge entre al dente et trop cuit."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Découpe",
+      "inputs": [
+        "al_dente_pasta",
+        "rendered_guanciale"
+      ],
+      "outputState": "pasta_with_guanciale",
+      "instructions": "Transférer les pâtes égouttées directement dans la poêle avec la guanciale et sa graisse fondue à feu moyen. Mélanger vigoureusement pendant 30 secondes, en s'assurant que chaque brin est recouvert de graisse de porc et a eu un contact avec la poêle chaude. Cette étape aromatise les pâtes avant l'arrivée de la sauce aux œufs. Ajouter 2-3 cuillerées à soupe de l'eau de pâtes réservée à la casserole et jeter à nouveau — l'amidon dans l'eau commence à construire l'émulsion.",
+      "visualCue": {
+        "primaryTarget": "Pâtes brillantes et uniformément recouvertes de graisse guanciale rendue. Chaque brin brille. Les pièces de Guanciale sont distribuées partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pâtes ont l'air sèches et nattes. Le gras n'a pas recouvert les brins. Guanciale est assise en bas.",
+            "action": "Jeter plus activement — soulever et jeter plutôt que simplement remuer. Ajoutez un peu plus d'eau pour pâtes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque brin recouvert et scintillement. La vapeur s'élève. Guanciale uniformément distribuée. Pan est chaud mais pas criant.",
+            "action": "Retirer la poêle du feu avant d'ajouter la sauce aux œufs."
+          },
+          {
+            "state": "Overdone",
+            "description": "La poêle est trop chaude et les pâtes commencent à sécher et à coller.",
+            "action": "Ajouter l'eau de pâtes et retirer immédiatement de la chaleur. La poêle doit refroidir avant l'entrée de la sauce aux œufs."
+          }
+        ]
+      },
+      "feelCue": "Les pâtes doivent sonner comme un étourdissement doux et humide, car elles se jettent dans la graisse, et non comme une couche dure. Si vous entendez du craquelin ou de la fumée, la poêle est trop chaude pour la sauce aux œufs."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Émulsifier",
+      "inputs": [
+        "pasta_with_guanciale",
+        "carbonara_sauce_base",
+        "ing_07"
+      ],
+      "outputState": "finished_carbonara",
+      "instructions": "C'est l'étape critique. Retirez entièrement la poêle du feu et laissez reposer 30 secondes du brûleur. Verser le mélange de fromage aux oeufs sur les pâtes et commencer immédiatement à jeter vigoureusement avec des pinces tout en ajoutant simultanément des pâtes d'eau à soupe à la fois. La chaleur résiduelle des pâtes et de la poêle placera délicatement les œufs dans une sauce — mais seulement si vous continuez à bouger. L'eau de pâtes lubrifie la sauce et empêche les œufs de se brouiller en distribuant la chaleur. Visez une consistance entre la crème épaisse et la crème molle – elle doit couler lorsque la poêle est inclinée mais s'accroche à chaque brin. Ajouter le Pecorino restant en deux ajouts, en jetant entre chacun. Goûtez et ajustez le poivre.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lustrée, crémeuse et jaune pâle qui s'accroche à chaque brin de pâtes et coule lentement lorsque la poêle est inclinée. Pas de courbure visible. Pas de liquide de mise en commun.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse. L'oeuf n'a pas été émulsifié — il court librement au fond de la poêle. Les pâtes sont déshabillées.",
+            "action": "Déplacer plus vigoureusement la poêle sur une flamme très basse pendant 10 secondes, en jetant constamment. L'eau de pâtes amylacées aidera à se lier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, brillant, uniforme crème jaune pâle revêtement chaque brin. Il coule comme de la crème lourde lorsqu'il est incliné. Pas de mise en commun de liquide à la base de la casserole.",
+            "action": "Assortir immédiatement dans des bols chauds et servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Cords jaunes visibles. La sauce est brouillée et séparée. Liquid s'est mis à la base.",
+            "action": "Vous ne pouvez pas défaire les œufs, mais la saveur est intacte. Mélanger dans une généreuse éclaboussure d'eau chaude de pâtes hors de la chaleur et continuer à bouger — l'amidon peut partiellement réémulsionner légèrement brouillage."
+          }
+        ]
+      },
+      "feelCue": "Inclinez la poêle — les pâtes habillées doivent lentement glisser comme une masse cohésive, non séparée en brins de pâtes nageant dans le liquide. Ça devrait ressembler à une seule entité brillante."
+    }
+  ]
 };

@@ -1,102 +1,279 @@
 export default {
-  repoId: "master_thai_thailarb_001",
-  parentRepoId: null,
-  slug: "thai-larb",
-  author: "ForkRecipe Kitchen",
-  title: "Thai Larb Gai",
-  description: "Quick-cooked minced chicken tossed with toasted rice powder, lime, fish sauce, and an avalanche of fresh herbs — bright, sharp, and texturally alive.",
-  cuisine: "Thai",
-  culture: "Isan/Northern Thai",
-  category: "proteins",
-  tags: ["chicken", "thai", "salad", "herbs", "spicy", "larb", "isan", "gluten-free"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 3, sour: 4, bitter: 1, umami: 3, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Ground chicken (or hand-minced thigh meat)",      ratioValue: 400,  defaultUnit: "g",  substitutions: ["ground pork", "ground duck", "firm tofu crumbled"] },
-    { ingId: "ing_02", role: "Starch",    name: "Raw glutinous (sticky) rice, uncooked",           ratioValue: 30,   defaultUnit: "g",  substitutions: ["raw jasmine rice (less nutty but functional)"] },
-    { ingId: "ing_03", role: "Acid",      name: "Fresh lime juice",                                ratioValue: 45,   defaultUnit: "ml", substitutions: ["tamarind water (less bright, more complex)"] },
-    { ingId: "ing_04", role: "Umami",     name: "Fish sauce",                                      ratioValue: 30,   defaultUnit: "ml", substitutions: ["soy sauce + pinch of MSG for vegan"] },
-    { ingId: "ing_05", role: "Spice",     name: "Dried chili flakes (prik bon), or to taste",     ratioValue: 5,    defaultUnit: "g",  substitutions: ["fresh bird's eye chili, minced"] },
-    { ingId: "ing_06", role: "Allium",    name: "Shallots, thinly sliced into rings",              ratioValue: 60,   defaultUnit: "g",  substitutions: ["red onion, thinly sliced"] },
-    { ingId: "ing_07", role: "Herb",      name: "Fresh mint leaves, torn",                         ratioValue: 20,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh cilantro, roughly chopped",                 ratioValue: 15,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Allium",    name: "Scallions, thinly sliced",                        ratioValue: 3,    defaultUnit: "pcs", substitutions: [] },
-    { ingId: "ing_10", role: "Aromatic",  name: "Lemongrass, tender inner stalk only, minced",    ratioValue: 15,   defaultUnit: "g",  substitutions: ["lemongrass paste (1 tsp)"] },
-    { ingId: "ing_11", role: "Sweetener", name: "Sugar (optional balance)",                        ratioValue: 3,    defaultUnit: "g",  substitutions: ["palm sugar"] },
+  "repoId": "master_thai_thailarb_001",
+  "parentRepoId": null,
+  "slug": "thai-larb",
+  "author": "ForkRecipe Kitchen",
+  "title": "Thai Larb Gai",
+  "description": "Poulet haché cuit rapidement jeté avec de la poudre de riz grillée, de la chaux, de la sauce de poisson, et une avalanche d'herbes fraîches – vives, vives et texturales.",
+  "cuisine": "Thaï",
+  "culture": "Isan/Thaïlandais du Nord",
+  "category": "proteins",
+  "tags": [
+    "poulet",
+    "Thaï",
+    "salade",
+    "herbes",
+    "épicé",
+    "larbes",
+    "estan",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_02"],
-      outputState: "toasted_rice_powder",
-      instructions: "Place the raw glutinous rice in a dry wok or heavy skillet over medium heat. Toast, stirring constantly, for 5–8 minutes until each grain turns golden-brown and the kitchen fills with a popcorn-like, nutty fragrance. Do not walk away — the transition from golden to burnt takes seconds. Transfer to a mortar or spice grinder and grind to a coarse powder (the texture of fine breadcrumbs). This powder is the secret texture of larb: it absorbs the dressing and gives the dish its characteristic sandy bite.",
-      visualCue: {
-        primaryTarget: "Evenly golden-brown grains with no pale centers remaining. A column of nutty, popcorn-scented steam rises from the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still white or only lightly blond. Aroma is raw, starchy, faintly chalky.", action: "Continue toasting over medium heat, stirring constantly. You need full golden-brown color for the flavor to develop." },
-          { state: "Perfect",   description: "All grains a deep, even golden-amber. Smell is intensely nutty and popcorn-like with no raw note. One or two grains have just begun to show the first hint of darker browning.", action: "Transfer immediately to the mortar — the residual pan heat will over-toast if left." },
-          { state: "Overdone",  description: "Grains are dark brown or mahogany with a bitter, acrid smell. Smoke visible.", action: "Discard and start over — burnt rice powder makes the whole dish bitter. Reduce heat for the next batch." },
-        ],
-      },
-      feelCue: "Ground powder should feel like fine sand between your fingers — slightly gritty, dry, and warm. No damp clumping.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Poulet haché (ou viande de cuisse hachée à la main)",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "porc haché",
+        "canard moulu",
+        "tofu ferme émietté"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_01"],
-      outputState: "cooked_chicken",
-      instructions: "Heat a wok over high heat until smoking. Add the ground chicken with no oil — the natural fat in the meat is sufficient and oil would cause steaming. Break the meat apart rapidly with a spatula, spreading it thin across the hot wok surface. Cook until just no longer pink, about 3–4 minutes. Do not cook through completely — the residual heat and lime acid will finish it. The goal is barely cooked, still juicy chicken.",
-      visualCue: {
-        primaryTarget: "Chicken is pale ivory-white throughout with the barest hint of golden-brown on some pieces. No pink remaining, but no deep browning either.",
-        spectrum: [
-          { state: "Underdone", description: "Pink or translucent flesh visible in the center of the crumbles. Raw chicken texture.", action: "Continue over high heat for another 90 seconds, spreading thin." },
-          { state: "Perfect",   description: "Uniformly white and just cooked, still glistening with its own fat. Not browned. Juicy. Smells clean and meaty.", action: "Remove from heat immediately. Move quickly — it will continue cooking from residual heat." },
-          { state: "Overdone",  description: "Dry, crumbly, slightly golden. Moisture has evaporated. Some pieces sticking to the wok.", action: "The larb will be less juicy. Compensate with extra lime juice and fish sauce in the toss." },
-        ],
-      },
-      feelCue: "A morsel pressed between your fingers should feel tender and moist, not rubbery or crumbly. It should fall apart easily but hold its shape when picked up.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Riz glutineux brut (collant), non cuit",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "riz jasmin cru (moins de noix mais fonctionnel)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Season",
-      inputs: ["cooked_chicken", "ing_03", "ing_04", "ing_05", "ing_11"],
-      outputState: "dressed_chicken",
-      instructions: "Working while the chicken is still very hot (the heat helps the dressing penetrate), add fish sauce, lime juice, dried chili flakes, and sugar. Toss vigorously. Taste immediately — the balance is the dish. It should hit sour first, then salty, then heat building at the back of the throat. Adjust: more lime for brightness, more fish sauce for depth, more chili for fire.",
-      visualCue: {
-        primaryTarget: "The chicken has absorbed the dressing and glistens. The surface looks moist rather than wet. Chili flakes are evenly distributed.",
-        spectrum: [
-          { state: "Underdone", description: "Dressing is pooling in the bottom of the bowl rather than coating the meat. Pale and under-seasoned.", action: "Toss more aggressively and add a touch more fish sauce to help emulsification." },
-          { state: "Perfect",   description: "Each piece of chicken is coated and glistening. The liquid is absorbed, not pooled. The aroma is sharp lime and fermented fish, both distinct.", action: "Add herbs and rice powder immediately while still hot." },
-          { state: "Overdone",  description: "Too much liquid has been added — the bowl is soupy. Flavors are diluted.", action: "Add extra rice powder (it will absorb the excess) and taste again for seasoning." },
-        ],
-      },
-      feelCue: "Smell the bowl — it should hit you with bright citrus first, then the deep funk of fish sauce underneath, then the heat of the chili rising into your sinuses. If any single note dominates, rebalance.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau de tamarin (moins brillant, plus complexe)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Toss",
-      inputs: ["dressed_chicken", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "toasted_rice_powder"],
-      outputState: "finished_larb",
-      instructions: "Fold in the shallots, mint, cilantro, scallion, and minced lemongrass. Scatter the toasted rice powder over the top and fold in gently — you want it distributed but not completely buried. Taste one final time. Serve immediately on a plate lined with cabbage leaves, with extra mint and raw vegetables on the side. Larb deteriorates quickly as the herbs wilt and the rice powder hydrates — this is a dish that lives in the moment.",
-      visualCue: {
-        primaryTarget: "A vibrant, herb-strewn mound of chicken. Mint leaves still bright green, shallot rings still slightly translucent and crisp. Rice powder visible as a sandy dusting on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Herbs barely mixed in, sitting on top. Rice powder not distributed.", action: "Fold more thoroughly with two spoons, lifting from the bottom." },
-          { state: "Perfect",   description: "Every element integrated but identifiable. Green herbs bright, shallots crisp, rice powder sandy throughout, chicken glistening.", action: "Serve within 3 minutes for peak texture." },
-          { state: "Overdone",  description: "Herbs have wilted to dark green. Rice powder has fully absorbed the dressing and made the texture wet and heavy.", action: "Scatter a fresh handful of mint over the top and serve — it won't be the same, but it helps." },
-        ],
-      },
-      feelCue: "Scoop a bite — you should feel the slight crunch of raw shallot, the soft juicy chicken, and the sandy grit of rice powder all in a single mouthful. The mint leaves should feel cool and papery, not limp.",
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Sauce de poisson",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce soja + pincée de MSG pour végétalien"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Flacons de chili séchés ou au goût",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "chili des yeux d'oiseau frais, haché"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Échalotes, tranchées finement en anneaux",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon rouge, tranché finement"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Feuilles fraîches de menthe, déchirées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Coriandre fraîche, grossièrement hachée",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Allium",
+      "name": "Échalons, tranchés finement",
+      "ratioValue": 3,
+      "defaultUnit": "pcs",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Lémonnelle, seule tige interne tendre, hachée",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâte de citronnelle (1 c. à thé)"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Sweetener",
+      "name": "Sucre (solde facultatif)",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre de palme"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "toasted_rice_powder",
+      "instructions": "Placer le riz glutineux cru dans un wok sec ou une poêle lourde à feu moyen. Toast, en remuant constamment, pendant 5 à 8 minutes jusqu'à ce que chaque grain devienne doré et que la cuisine se remplisse d'un parfum de popcorn et de noix. Ne partez pas — la transition de l'or au feu prend quelques secondes. Transférer dans un broyeur de mortier ou d'épices et broyer dans une poudre grossière (la texture de la chapelure fine). Cette poudre est la texture secrète du larbe : elle absorbe la vinaigrette et donne au plat sa morsure sablonneuse caractéristique.",
+      "visualCue": {
+        "primaryTarget": "Grains dorés sans centres pâles. Une colonne de vapeur parfumée de pop-corn se lève de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore blancs ou seulement légèrement blonds. L'arôme est cru, fébrile, légèrement crayeux.",
+            "action": "Continuer à griller à feu moyen, en remuant constamment. Vous avez besoin de couleur dorée pour la saveur à développer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les grains sont profonds, même dorés. L'odeur est intensément noisette et popcorn-comme sans note brute. Un ou deux grains viennent de montrer le premier soupçon de brunissement plus foncé.",
+            "action": "Transférez immédiatement dans le mortier — la chaleur résiduelle de la poêle sera surchargée si elle est laissée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains sont brun foncé ou acajou avec une odeur amère et acride. Fumée visible.",
+            "action": "Jeter et recommencer à zéro — la poudre de riz brûlé rend le plat entier amer. Réduire la chaleur pour le prochain lot."
+          }
+        ]
+      },
+      "feelCue": "La poudre de terre doit se sentir comme du sable fin entre les doigts, légèrement sec, sec et chaud. Pas d'embrouille humide."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "cooked_chicken",
+      "instructions": "Chauffer un wok à feu vif jusqu'à ce qu'il fume. Ajouter le poulet moulu sans huile — la graisse naturelle de la viande est suffisante et l'huile causerait de la vapeur. Séparer rapidement la viande avec une spatule, la répandre mince sur la surface du wok chaud. Cuire jusqu'à ce qu'il ne soit plus rose, environ 3-4 minutes. Ne pas cuire complètement — la chaleur résiduelle et l'acide de chaux finiront. Le but est à peine cuit, le poulet encore juteux.",
+      "visualCue": {
+        "primaryTarget": "Le poulet est blanc ivoire pâle dans l'ensemble avec un soupçon de brun doré sur certains morceaux. Pas de rose restant, mais pas de brunissement profond non plus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "chair rose ou translucide visible au centre des miettes. Une texture de poulet cru.",
+            "action": "Continuer sur feu vif pendant encore 90 secondes, étaler mince."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement blanc et juste cuit, illuminant encore avec sa propre graisse. Pas doré. Juteux. Sens propre et charnu.",
+            "action": "Retirer immédiatement du feu. Déplacez-vous rapidement — il continuera à cuire à partir de la chaleur résiduelle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sécher, miettes, légèrement dorées. L'humidité s'est évaporée. Des morceaux collés au wok.",
+            "action": "Le larb sera moins juteux. Compensez le jus de lime et la sauce de poisson dans le toss."
+          }
+        ]
+      },
+      "feelCue": "Un morceau pressé entre les doigts doit se sentir tendre et humide, pas caoutchouteux ou émietté. Il devrait s'effondrer facilement mais tenir sa forme lorsqu'il est ramassé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "cooked_chicken",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_11"
+      ],
+      "outputState": "dressed_chicken",
+      "instructions": "Travailler pendant que le poulet est encore très chaud (la chaleur aide à pénétrer la vinaigrette), ajouter la sauce de poisson, le jus de lime, les flocons de chili séchés et le sucre. Jetez vigoureusement. Goûtez immédiatement — l'équilibre est le plat. Il devrait d'abord frapper le aigre, puis le sel, puis chauffer le bâtiment à l'arrière de la gorge. Ajuster : plus de chaux pour la luminosité, plus de sauce poisson pour la profondeur, plus de chili pour le feu.",
+      "visualCue": {
+        "primaryTarget": "Le poulet a absorbé la vinaigrette et brille. La surface semble humide plutôt que humide. Les flocons de Chili sont également distribués.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La vinaigrette est mise en commun dans le fond du bol plutôt que d'enrober la viande. Pale et sous saison.",
+            "action": "Mélanger plus agressivement et ajouter une touche plus de sauce de poisson pour aider l'émulsion."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque morceau de poulet est enduit et scintillement. Le liquide est absorbé, non mis en commun. L'arôme est de la chaux vive et des poissons fermentés, les deux distincts.",
+            "action": "Ajouter les herbes et la poudre de riz immédiatement tout en restant chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de liquide a été ajouté — le bol est soupeux. Les arômes sont dilués.",
+            "action": "Ajouter de la poudre de riz supplémentaire (il absorbera l'excès) et goûter à nouveau pour l'assaisonnement."
+          }
+        ]
+      },
+      "feelCue": "Sentez le bol — il devrait vous frapper avec des agrumes brillants d'abord, puis le funk profond de la sauce de poisson en dessous, puis la chaleur du chili montant dans vos sinus. Si une seule note domine, rééquilibrer."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Découpe",
+      "inputs": [
+        "dressed_chicken",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "toasted_rice_powder"
+      ],
+      "outputState": "finished_larb",
+      "instructions": "Pliez dans les échalotes, la menthe, la coriandre, l'échon et la citronnelle hachée. Dispersez la poudre de riz grillée sur le dessus et pliez-la doucement — vous voulez qu'elle soit distribuée mais pas complètement enterrée. Goûtez une dernière fois. Servir immédiatement sur une assiette garnie de feuilles de chou, avec de la menthe et des légumes crus sur le côté. Les larves se détériorent rapidement à mesure que les herbes se flétrissent et que la poudre de riz s'hydrate.",
+      "visualCue": {
+        "primaryTarget": "Un monticule de poulet vibrant et éparpillé. Feuilles de menthe vert clair, anneaux d'échalote encore légèrement translucides et croquants. Poudre de riz visible comme une poussière sablonneuse à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Herbes à peine mélangées, assises sur le dessus. Poudre de riz non distribuée.",
+            "action": "Plier plus soigneusement avec deux cuillères, lever du bas."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque élément intégré mais identifiable. Herbes vertes brillantes, échalotes croustillantes, poudre de riz sablonneuse dans l'ensemble, éblouissement de poulet.",
+            "action": "Servir en 3 minutes pour obtenir une texture maximale."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les herbes se sont flétries au vert foncé. La poudre de riz a complètement absorbé la vinaigrette et rendu la texture humide et lourde.",
+            "action": "Éparpiller une poignée de menthe fraîche sur le dessus et servir — ce ne sera pas la même chose, mais ça aide."
+          }
+        ]
+      },
+      "feelCue": "Faites une bouchée — vous devriez sentir le léger croûte d'échalote crue, le poulet doux et juteux, et le grain de sable de poudre de riz en une seule bouche. Les feuilles de menthe doivent être fraîches et papier, et non boiteuses."
+    }
+  ]
 };

@@ -1,120 +1,363 @@
 export default {
-  repoId: "master_french_prawnbisque_001",
-  parentRepoId: null,
-  slug: "prawn-bisque",
-  author: "ForkRecipe Kitchen",
-  title: "Classic Prawn Bisque",
-  description: "A velvety coral-colored soup built from roasted prawn shells flambéed with cognac, simmered with mirepoix and tomato into a concentrated crustacean essence, then finished with cream until it flows like silk — rich, deeply saline, and perfumed with the sea.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "seafood",
-  tags: ["bisque", "prawn", "french", "cream soup", "shellfish", "cognac", "classical"],
-  difficulty: 4,
-  activeTime: "50 min",
-  totalTime: "2 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 4, sour: 1, bitter: 1, umami: 5, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Inosinate", name: "Raw prawn shells and heads (from 500 g whole prawns)",   ratioValue: 100, defaultUnit: "parts", substitutions: ["mixed crustacean shells"] },
-    { ingId: "ing_02", role: "Protein",   name: "Whole raw prawns, peeled (flesh reserved for garnish)", ratioValue: 60,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Fat",       name: "Unsalted butter",                                       ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Yellow onion, finely diced",                            ratioValue: 25,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Celery stalks, finely diced",                           ratioValue: 12,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Carrot, finely diced",                                  ratioValue: 12,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Allium",    name: "Garlic cloves, smashed",                                ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Umami",     name: "Tomato paste",                                          ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Solvent",   name: "Cognac",                                                ratioValue: 10,  defaultUnit: "parts", substitutions: ["dry sherry", "Calvados"] },
-    { ingId: "ing_10", role: "Liquid",    name: "Dry white wine",                                        ratioValue: 25,  defaultUnit: "parts", substitutions: ["dry vermouth"] },
-    { ingId: "ing_11", role: "Liquid",    name: "Fish stock or water",                                   ratioValue: 150, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_12", role: "Herb",      name: "Bay leaves",                                            ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_13", role: "Herb",      name: "Fresh thyme sprigs",                                    ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_14", role: "Spice",     name: "Black peppercorns",                                     ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_15", role: "Dairy",     name: "Double cream (heavy cream)",                            ratioValue: 40,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_16", role: "Seasoning", name: "Fine sea salt and white pepper",                        ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_17", role: "Garnish",   name: "Chives, finely cut",                                   ratioValue: 2,   defaultUnit: "parts", substitutions: ["flat-leaf parsley, chiffonade"] },
-    { ingId: "ing_18", role: "Spice",     name: "Cayenne pepper, a pinch",                               ratioValue: 0.2, defaultUnit: "parts", substitutions: ["piment d'Espelette"] },
+  "repoId": "master_french_prawnbisque_001",
+  "parentRepoId": null,
+  "slug": "prawn-bisque",
+  "author": "ForkRecipe Kitchen",
+  "title": "Bisque de crevette classique",
+  "description": "Soupe veloutée de couleur corail, construite à partir de coquilles de crevette grillées, flammées de cognac, mirépoix et tomate dans une essence de crustacés concentrés, puis finie avec de la crème jusqu'à ce qu'elle coule comme de la soie – riche, profondément saline, parfumée avec la mer.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "seafood",
+  "tags": [
+    "bisque",
+    "crevette",
+    "français",
+    "soupe à la crème",
+    "crustacés",
+    "Cognac",
+    "classique"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "50 min",
+  "totalTime": "2 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Roast",
-      inputs: ["ing_01", "ing_03"],
-      outputState: "roasted_shells",
-      instructions: "Heat a large, heavy-based pot over high heat until smoking. Add half the butter and, when it foams and subsides, add all the prawn shells and heads in a single layer. Press them down firmly with a wooden spoon and do not stir for 60 seconds. The shells will turn vivid coral-red and the tomalley in the heads will burst into fragrant orange fat. Stir and press repeatedly for 4–5 minutes, crushing the heads to release every drop of their orange coral. You are building the bisque's characteristic coral color and deep crustacean flavor entirely at this stage — pale, unroasted shells make a pale, insipid bisque. The pot bottom should develop a golden-orange fond.",
-      visualCue: {
-        primaryTarget: "Shells are uniformly bright coral-red, heads crushed open and releasing orange coral oil; pan bottom coated in fragrant orange fond.",
-        spectrum: [
-          { state: "Underdone", description: "Shells are still pink-grey with very little color change. Heads not yet burst and releasing their oil.", action: "Increase heat to maximum and press harder on the shells. They need high heat to roast, not steam." },
-          { state: "Perfect",   description: "Every shell is vivid coral-red. Orange coral oil coats the pan in a fragrant, shimmering layer. Kitchen smells intensely of roasted ocean.", action: "Add the mirepoix and continue building the base." },
-          { state: "Overdone",  description: "Shells are blackening at the edges, smell slightly bitter and burnt rather than sweet and ocean-like.", action: "Add mirepoix immediately to cool the pan and proceed. Trim the most charred shells from the pot." },
-        ],
-      },
-      feelCue: "The pop of a prawn head splitting open under your spoon — releasing a burst of hot, scented coral oil — is the sound and feel of the bisque's flavor being born.",
+      "ingId": "ing_01",
+      "role": "Inosinate",
+      "name": "Coquilles et têtes de crevettes brutes (à partir de 500 g de crevettes entières)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "coquilles de crustacés mélangés"
+      ]
     },
     {
-      nodeId: "step_2", action: "Sauté",
-      inputs: ["roasted_shells", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "bisque_soffritto",
-      instructions: "Add the remaining butter to the pot with the roasted shells. Add the finely diced onion, celery, carrot, and garlic all at once. Sauté, stirring frequently, for 5–6 minutes until the vegetables are completely softened and beginning to turn golden — they need to be truly soft before the liquid goes in, as the short simmering time won't cook them further. Add the tomato paste and cook, pressing and stirring, for 3–4 minutes until it darkens from bright red to brick-red (the pinçage). This caramelization of the tomato paste is essential — it adds sweetness and body, and removes the harsh raw-tomato note.",
-      visualCue: {
-        primaryTarget: "Dark brick-red tomato paste coating golden vegetables and orange-stained shells; a fragrant, sticky fond on the pot bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Tomato paste is still bright red and raw-smelling; vegetables are barely softened.", action: "Continue cooking over medium heat, pressing the paste constantly until it darkens." },
-          { state: "Perfect",   description: "Paste has shifted to brick-red, fond forming on the pot bottom, vegetables completely soft. Sweet, caramel-tomato aroma.", action: "Deglaze with cognac immediately." },
-          { state: "Overdone",  description: "Paste has darkened to near-black, bitter smoke rising, fond burning on the pot bottom.", action: "Deglaze immediately with cognac and white wine, scraping hard. Accept a slightly more bitter undertone." },
-        ],
-      },
-      feelCue: "The mixture should cling to the spoon with a short, jam-like pull when lifted — not sliding off like a thin liquid, not sticking hard in a paste. That resistance is the caramelized tomato paste binding everything.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Crevettes entières crues, pelées (flèches réservées à la garniture)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Deglaze",
-      inputs: ["bisque_soffritto", "ing_09", "ing_10", "ing_11", "ing_12", "ing_13", "ing_14"],
-      outputState: "simmering_bisque",
-      instructions: "Remove the pot briefly from heat. Add the cognac and tilt the pot to ignite over a gas flame, or simply return to high heat and let it reduce vigorously for 2 minutes — the alcohol must be cooked off entirely. Scrape every bit of the caramelized fond from the pot bottom with a wooden spoon. Add the white wine and reduce by half over high heat. Add the fish stock or water, bay leaves, thyme, and peppercorns. Bring to a bare simmer. Cook at a gentle simmer for exactly 25 minutes — never boil a shellfish stock hard, as bitter compounds extract from the shells beyond this point. At 25 minutes the stock should be a deep coral-amber and smell intensely of the sea.",
-      visualCue: {
-        primaryTarget: "A deep coral-amber liquid simmering lazily, the shells and vegetables completely submerged, with a light fat sheen on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "After 25 minutes the liquid still looks pale and smells mostly of vegetables, not shellfish.", action: "Simmer for 5–10 more minutes but do not exceed 35 minutes total from when the liquid was added." },
-          { state: "Perfect",   description: "Deep coral-amber, intensely fragrant, with a light orange fat sheen from the prawn coral. A spoonful tastes richly of the sea with a sweet, caramel note.", action: "Strain immediately — do not continue simmering." },
-          { state: "Overdone",  description: "Bisque base has simmered more than 35 minutes — a slightly chalky, mineral bitterness has developed from the shells.", action: "Strain immediately and add a larger amount of cream than planned to round off the bitterness." },
-        ],
-      },
-      feelCue: "Taste a spoonful of the simmering base — it should taste like the sea distilled: round, savory, sweet, and intensely shellfish without any sharpness or bitterness.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Blend",
-      inputs: ["simmering_bisque"],
-      outputState: "blended_bisque",
-      instructions: "Remove the pot from heat. Using a spider or slotted spoon, fish out and discard the bay leaves and thyme sprigs. Pour everything else — shells, vegetables, and all liquid — into a high-powered blender in batches. Blend each batch on maximum power for 60 seconds. The shells will be completely pulverized into the liquid, adding body and the maximum extraction of their flavor. Pass the blended bisque through a fine-mesh strainer set over a clean pot, pressing very firmly on the solids with the back of a ladle to extract every drop. Discard the fibrous shell remnants in the strainer. The strained bisque should be smooth, velvety, and the color of a coral sunset — no grit or shell fragments.",
-      visualCue: {
-        primaryTarget: "A smooth, coral-pink to amber liquid passing cleanly through the strainer, no visible shell fragments, glossy and lightly viscous.",
-        spectrum: [
-          { state: "Underdone", description: "Bisque is passing through the strainer with large shell fragments — blender was not powerful enough or blend time was too short.", action: "Return the solids to the blender with a small amount of liquid and blend on maximum speed for a full 2 minutes." },
-          { state: "Perfect",   description: "Silky smooth, coral to amber, the strainer holding only dry, powdery shell residue. Rich, concentrated, glossy.", action: "Return strained bisque to the pot and add cream." },
-          { state: "Overdone",  description: "Over-blended and too much air incorporated — bisque is frothy and foamy.", action: "Allow to settle for 5 minutes, then skim the foam before adding cream." },
-        ],
-      },
-      feelCue: "Rub a drop of strained bisque between your fingers — it should feel silky and faintly coating, like a very thin cream, with absolutely no grittiness from shell fragments.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Oignon jaune, en dés",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Reduce",
-      inputs: ["blended_bisque", "ing_15", "ing_02", "ing_16", "ing_18"],
-      outputState: "finished_prawn_bisque",
-      instructions: "Return the strained bisque to a medium pot over medium heat. Add the double cream and bring to a gentle simmer. Reduce, stirring occasionally, for 5–8 minutes until the bisque coats the back of a spoon in a thin, even layer — this is the nappe consistency. Meanwhile, in a separate small pan, quickly sauté the reserved whole prawn flesh in butter for 90 seconds until just pink and cooked — do not overcook. Season the finished bisque with sea salt, white pepper, and a pinch of cayenne. Taste carefully: the bisque should taste of sweet cream and concentrated ocean, with a lingering savory finish. Ladle into warm bowls, arrange 2–3 sautéed whole prawns in the center of each bowl, and scatter the chives. Serve with crusty bread.",
-      visualCue: {
-        primaryTarget: "A pale coral to salmon-pink soup of silky consistency with a glossy surface sheen, parting on the spoon's back to reveal a thin, even film.",
-        spectrum: [
-          { state: "Underdone", description: "Bisque is still thin and watery, runs off the back of the spoon in a thin sheet with no coating ability.", action: "Continue simmering for 3–5 more minutes to concentrate." },
-          { state: "Perfect",   description: "Coats the back of a spoon in a thin, uniform pink veil. A finger drawn across leaves a clean line. Silky, rich, coral-colored, deeply saline and sweet.", action: "Season, add the prawn garnish, and serve immediately." },
-          { state: "Overdone",  description: "Bisque has become very thick and the cream has reduced too far — it tastes dense and almost cloying, with a slightly grainy texture.", action: "Thin with hot fish stock or water, 1 tablespoon at a time, whisking to reincorporate. Adjust seasoning." },
-        ],
-      },
-      feelCue: "Pour a stream of finished bisque from a spoon back into the pot — it should fall in a smooth, liquid arc, not in thick globs. The sound is a soft, continuous flow, not a heavy splat.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri, en dés",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Carotte en dés",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Girofles d'ail brisées",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Solvent",
+      "name": "Cognac",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec",
+        "Calvados"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Liquid",
+      "name": "Vin blanc sec",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vermouth sec"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Liquid",
+      "name": "Stocks ou eaux de poissons",
+      "ratioValue": 150,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Herb",
+      "name": "Feuilles de baies",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Spice",
+      "name": "Maïs de poivre noir",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Dairy",
+      "name": "Double crème (crème lourde)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre blanc",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_17",
+      "role": "Garnish",
+      "name": "Poêles, finement coupées",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "persil à feuilles plates, mousseline"
+      ]
+    },
+    {
+      "ingId": "ing_18",
+      "role": "Spice",
+      "name": "Poivre Cayenne, une pincée",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "piment d'Espelette"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01",
+        "ing_03"
+      ],
+      "outputState": "roasted_shells",
+      "instructions": "Chauffer un grand pot à base lourde à feu vif jusqu'à ce qu'il fume. Ajouter la moitié du beurre et, lorsqu'il mousse et s'abaisse, ajouter toutes les coquilles et les têtes de crevettes en une seule couche. Appuyez fermement avec une cuillère en bois et ne remuez pas pendant 60 secondes. Les coquillages se transformeront en rouge corallien vif et le tomalley dans la tête éclatera en gras orange parfumé. Mélanger et presser à plusieurs reprises pendant 4 à 5 minutes, écraser les têtes pour libérer chaque goutte de leur corail orange. Vous construisez entièrement à ce stade la couleur corallienne caractéristique du bisque et la saveur de crustacés profonds — des coquilles pâles et non grillées font un bisque pâle et insipide. Le fond de pot devrait développer un fond doré-orange.",
+      "visualCue": {
+        "primaryTarget": "Les coquilles sont uniformément rouge corail, tête écrasée ouverte et libérant l'huile de corail orange; fond de poêle enrobé d'une couleur orange parfumée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coquilles sont encore rose-gris avec très peu de changement de couleur. Les têtes n'éclatent pas encore et libèrent leur huile.",
+            "action": "Augmentez la chaleur au maximum et appuyez plus fort sur les coquilles. Ils ont besoin de chaleur élevée pour rôtir, pas de vapeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque coquille est rouge corail vif. L'huile de corail orange enveloppe la poêle d'une couche parfumée et chatoyante. La cuisine sent intensément l'océan rôti.",
+            "action": "Ajouter le mirepix et continuer à construire la base."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les coquilles sont noircies aux bords, sentent légèrement amers et brûlés plutôt que doux et comme l'océan.",
+            "action": "Ajouter le mirepix immédiatement pour refroidir la poêle et procéder. Couper les coquilles les plus carbonisées du pot."
+          }
+        ]
+      },
+      "feelCue": "L'éclat d'une tête de crevette qui s'ouvre sous votre cuillère, libérant un éclat d'huile de corail chaude et parfumée, est le son et la sensation de la saveur du bisque qui naît."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "roasted_shells",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "bisque_soffritto",
+      "instructions": "Ajouter le reste du beurre dans la casserole avec les coquilles grillées. Ajouter l'oignon finement coupé, le céleri, la carotte et l'ail en même temps. Saupoudrer, en remuant fréquemment, pendant 5 à 6 minutes jusqu'à ce que les légumes soient complètement adoucis et commencent à devenir dorés — ils doivent être vraiment doux avant que le liquide ne pénètre, car le court temps de cuisson ne les fera pas cuire plus loin. Ajouter la pâte de tomate et cuire, presser et remuer pendant 3-4 minutes jusqu'à ce qu'elle s'assombrisse du rouge vif au rouge brique (le pinçage). Cette caramélisation de la pâte de tomate est essentielle — elle ajoute douceur et corps, et enlève la dure note de la tomate crue.",
+      "visualCue": {
+        "primaryTarget": "Pâte de tomate rouge brique foncée enrobant des légumes dorés et des coquilles de couleur orange; un fond parfumé et collant sur le fond du pot.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte de tomates est encore rouge vif et à l'odeur crue; les légumes sont à peine adoucis.",
+            "action": "Continuer la cuisson à feu moyen, en appuyant constamment sur la pâte jusqu'à ce qu'elle s'assombrisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte s'est déplacée vers le rouge brique, l'affection se formant sur le fond de la casserole, les légumes complètement doux. Doux arôme de caramel-tomate.",
+            "action": "Déglacer avec du cognac immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte s'est assombrie jusqu'à une fumée amère presque noire qui s'élève et s'est mise à brûler le fond du pot.",
+            "action": "Déglacer immédiatement avec du cognac et du vin blanc, grattage dur. Acceptez un sous-ton légèrement plus amer."
+          }
+        ]
+      },
+      "feelCue": "Le mélange doit s'accrocher à la cuillère avec une courte attraction en forme de confiture lorsqu'il est soulevé — ne pas glisser comme un liquide mince, ne pas coller dur dans une pâte. Cette résistance est la pâte de tomate caramélisée liant tout."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Déglacement",
+      "inputs": [
+        "bisque_soffritto",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13",
+        "ing_14"
+      ],
+      "outputState": "simmering_bisque",
+      "instructions": "Retirer brièvement la casserole du feu. Ajouter le cognac et incliner le pot pour s'enflammer au-dessus d'une flamme à gaz, ou simplement revenir à feu vif et le laisser réduire vigoureusement pendant 2 minutes — l'alcool doit être entièrement cuit. Grattez chaque morceau du fond caramélisé avec une cuillère en bois. Ajouter le vin blanc et réduire de moitié à feu vif. Ajouter le stock de poisson ou l'eau, les feuilles de laurier, le thym et les grains de poivre. Amenez-vous à un mijot nu. Faire mijoter à feu doux pendant exactement 25 minutes — ne jamais faire bouillir dur un stock de mollusques, car les composés amers extraitent des coquilles au-delà de ce point. À 25 minutes, le stock doit être un corallien-ambre profond et sentir intensément la mer.",
+      "visualCue": {
+        "primaryTarget": "Un liquide corallien-ambre profond mijotant paresseusement, les coquillages et les légumes complètement submergés, avec un léger éclat de graisse à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 25 minutes, le liquide semble encore pâle et sent surtout les légumes, pas les mollusques.",
+            "action": "Laisser mijoter de 5 à 10 minutes de plus, mais ne pas dépasser 35 minutes de plus que lorsque le liquide a été ajouté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep coral-amber, intensément parfumé, avec un léger éclat de graisse orange provenant du corail de crevette. Une cuillerée goûte richement de la mer avec une note douce et caramel.",
+            "action": "Peau immédiatement — ne continuez pas à mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "La base bisque a mijoté plus de 35 minutes — une amertume minérale légèrement crayeuse s'est développée à partir des coquilles.",
+            "action": "Retirez immédiatement et ajoutez une plus grande quantité de crème que prévu pour compléter l'amertume."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillerée de la base mijotante — elle doit goûter comme la mer distillée: ronde, salée, douce, et intensément coquillage sans aucune netteté ni amertume."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mélange",
+      "inputs": [
+        "simmering_bisque"
+      ],
+      "outputState": "blended_bisque",
+      "instructions": "Retirer la casserole du feu. À l'aide d'une araignée ou d'une cuillère à fente, pêchez et jetez les feuilles de laurier et les brins de thym. Versez tout le reste — coquilles, légumes et tout le liquide — dans un mélangeur à haute puissance en lots. Mélanger chaque lot sur une puissance maximale pendant 60 secondes. Les coquilles seront complètement pulvérisées dans le liquide, ajoutant corps et l'extraction maximale de leur saveur. Passez la bisque mélangée à travers une passoire fine sur un pot propre, en appuyant très fermement sur les solides avec le dos d'une louche pour extraire chaque goutte. Jeter les restes fibreux de la coquille dans la passoire. Le bisque tendu doit être lisse, velouté et la couleur d'un coucher de soleil de corail — pas de fragments de grain ou de coquille.",
+      "visualCue": {
+        "primaryTarget": "Un liquide lisse, corallien à jaune-auto qui passe à travers la passoire, sans fragments visibles, brillant et légèrement visqueux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Bisque passe à travers la souche avec de gros fragments de coquille — le mélangeur n'était pas assez puissant ou le temps de mélange était trop court.",
+            "action": "Retourner les solides dans le mélangeur avec une petite quantité de liquide et mélanger à vitesse maximale pendant 2 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Silky lisse, corail à ambre, la souche ne tenant que des résidus secs et poudreux. Riche, concentré, brillant.",
+            "action": "Retournez le bisque tendu dans la casserole et ajoutez de la crème."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surblended et trop d'air incorporé — bisque est mousseux et mousseux.",
+            "action": "Laisser reposer pendant 5 minutes, puis écumer la mousse avant d'ajouter de la crème."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte de bisque tendue entre vos doigts – elle doit se sentir soyeuse et légèrement enrobée, comme une crème très fine, sans aucune graisse des fragments de coquille."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Réduire",
+      "inputs": [
+        "blended_bisque",
+        "ing_15",
+        "ing_02",
+        "ing_16",
+        "ing_18"
+      ],
+      "outputState": "finished_prawn_bisque",
+      "instructions": "Retourner la bisque tendue dans un pot moyen à feu moyen. Ajouter la double crème et laisser mijoter. Réduire, en remuant occasionnellement, pendant 5 à 8 minutes jusqu'à ce que la bisque recouvre l'arrière d'une cuillère dans une couche mince et uniforme — c'est la consistance de la nappe. Pendant ce temps, dans une petite casserole séparée, faire sauter rapidement la chair de crevette entière réservée dans le beurre pendant 90 secondes jusqu'à ce que juste rose et cuit — ne pas trop cuire. Assaisonner le bisque fini avec du sel de mer, du poivre blanc et une pincée de Cayenne. Goûtez avec soin : la bisque doit goûter de la crème douce et de l'océan concentré, avec une finale savore persistante. Déposer dans des bols chauds, arranger 2 à 3 crevettes entières sautées au centre de chaque bol et disperser la ciboulette. Servir avec du pain croustillant.",
+      "visualCue": {
+        "primaryTarget": "Une soupe de corail pâle à saumon rose de consistance soyeuse avec une surface brillante, se séparant sur le dos de la cuillère pour révéler un mince, même film.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Bisque est encore mince et aqueuse, sort de l'arrière de la cuillère dans une mince feuille sans capacité de revêtement.",
+            "action": "Continuer à mijoter pendant 3 à 5 minutes pour se concentrer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Enrober le dos d'une cuillère dans un voile rose mince et uniforme. Un doigt tiré à travers laisse une ligne propre. Soyeux, riche, corallien, profondément salin et doux.",
+            "action": "Assaisonner, ajouter la garniture de crevette et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Bisque est devenu très épais et la crème a diminué trop loin — il a un goût dense et presque cloiant, avec une texture légèrement grainée.",
+            "action": "Arroser de poisson chaud ou d'eau, 1 cuillère à soupe à la fois, fouetter pour se réincorporer. Réglez l'assaisonnement."
+          }
+        ]
+      },
+      "feelCue": "Verser un jet de bisque fini d'une cuillère dans le pot — il devrait tomber dans un arc lisse et liquide, et non dans des glabres épaisses. Le son est un flux doux et continu, et non pas un épais splat."
+    }
+  ]
 };

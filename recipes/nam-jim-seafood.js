@@ -1,65 +1,164 @@
 export default {
-  repoId: "master_thai_nam-jim-seafood_001",
-  parentRepoId: null,
-  slug: "nam-jim-seafood",
-  author: "ForkRecipe Kitchen",
-  title: "Nam Jim Seafood Sauce",
-  description: "Thailand's electrifying raw dipping sauce for grilled seafood — pounded garlic, fresh chili, and coriander root let loose in a sharply sour, intensely herbaceous fish-sauce-and-lime mix.",
-  cuisine: "Thai",
-  culture: "Central Thai",
-  category: "condiments",
-  tags: ["thai", "seafood-sauce", "spicy", "sour", "raw", "fresh", "vegan"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 4, sour: 5, bitter: 1, umami: 3, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Allium",    name: "Garlic cloves, peeled",                          ratioValue: 2,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Heat",      name: "Bird's eye chilies (prik kii nuu), stems removed", ratioValue: 3, defaultUnit: "parts", substitutions: ["serrano chili (milder)", "dried chili flakes (1 part)"] },
-    { ingId: "ing_03", role: "Herb",      name: "Coriander roots, scraped clean (or stems)",      ratioValue: 1,  defaultUnit: "parts", substitutions: ["coriander stems, doubled in quantity"] },
-    { ingId: "ing_04", role: "Acid",      name: "Fresh lime juice",                               ratioValue: 4,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fish sauce",                                     ratioValue: 2,  defaultUnit: "parts", substitutions: ["soy sauce + pinch of MSG for vegan"] },
-    { ingId: "ing_06", role: "Sweetener", name: "Palm sugar or white sugar",                      ratioValue: 1,  defaultUnit: "parts", substitutions: ["honey"] },
+  "repoId": "master_thai_nam-jim-seafood_001",
+  "parentRepoId": null,
+  "slug": "nam-jim-seafood",
+  "author": "ForkRecipe Kitchen",
+  "title": "Nam Jim Sauce de fruits de mer",
+  "description": "La sauce à tremper crue électrifiante de la Thaïlande pour les fruits de mer grillés - l'ail fourré, le chili frais et la racine de la coriandre laissent libre dans un mélange de poisson-sauce-lime fortement aigre et herbacé.",
+  "cuisine": "Thaï",
+  "culture": "Centre thaïlandais",
+  "category": "condiments",
+  "tags": [
+    "Thaï",
+    "Saucisse de fruits de mer",
+    "épicé",
+    "acide",
+    "cru",
+    "frais",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 5,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Pound",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "aromatic_paste",
-      instructions: "In a granite mortar, combine the garlic cloves, bird's eye chilies, and coriander roots. Begin by pounding the garlic first — it takes the most force. Once the garlic is a rough, juicy smear, add the coriander roots and pound again. Finally add the chilies. Work them all together with a circular grinding motion, alternating between pounding down and scraping the sides inward with a spoon. The goal is a coarse, wet paste — not a smooth puree. You want visible threads of coriander root, small flecks of chili skin, and a slightly chunky garlic base. The oils released by pounding are fundamentally different from those released by cutting: they are brighter, more volatile, and more intensely fragrant.",
-      visualCue: {
-        primaryTarget: "A coarse, bright green-flecked paste with visible chili seeds, garlic juices pooled at the base of the mortar, and a nearly overwhelming fragrance of raw garlic, lime-bright chili, and earthy coriander.",
-        spectrum: [
-          { state: "Underdone", description: "The ingredients are bruised but not broken down — large pieces of garlic are still visible and the coriander is in long strands rather than a paste.", action: "Continue pounding. If the garlic is jumping around, add a pinch of salt as an abrasive to grip the ingredients against the mortar." },
-          { state: "Perfect",   description: "A cohesive, rough paste: garlic fully broken to a juicy smear, chili broken but with seeds still visible, coriander fibers integrated. The raw heat hits you the moment you lean over the mortar.", action: "Add the liquid ingredients directly into the mortar and stir to combine." },
-          { state: "Overdone",  description: "The paste has been pounded to an ultra-smooth puree with no visible texture. The chili seeds are entirely ground in.", action: "The sauce will still taste good but will be more emulsified and slightly less vibrant on the plate. For next time, stop at the coarse stage." },
-        ],
-      },
-      feelCue: "After the first few pounds, rub a tiny bit of the paste on the back of your wrist — the garlic should already sting the skin very faintly. That prickling is the allicin releasing, which is the same compound that makes the sauce electric on the palate.",
+      "ingId": "ing_01",
+      "role": "Allium",
+      "name": "Giroves d'ail, pelées",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Season",
-      inputs: ["aromatic_paste", "ing_04", "ing_05", "ing_06"],
-      outputState: "finished_nam_jim",
-      instructions: "Add the palm sugar directly to the mortar and pound briefly to break it into the paste — it needs to fully dissolve, not just sit as lumps. Then pour in the lime juice and fish sauce. Stir with a spoon to combine everything, tasting as you go. The sequence of flavors in a properly balanced nam jim seafood should be: sour first and loudest, then salty, then sweet as a background that keeps the acid from being harsh, then a building heat that arrives last and lingers. Adjust lime for more sour, fish sauce for more salt, sugar to soften harshness. This sauce should be bold to the point of almost-too-much — it is meeting grilled seafood that can take it.",
-      visualCue: {
-        primaryTarget: "A thin, bright green-flecked sauce with a golden tinge from the dissolved palm sugar and visible chili seeds and coriander fragments suspended in a clear, vibrant liquid.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce tastes flat and one-dimensional — only the acid stands out because the sugar has not dissolved and the fish sauce is not fully integrated.", action: "Pound the sugar into the paste more aggressively before adding the liquids, and stir for at least 30 seconds after combining to help the sugar dissolve in the lime juice." },
-          { state: "Perfect",   description: "All four flavors are simultaneous: the sourness makes you salivate, the salt focuses the flavor, the sweetness rounds the edges, and the heat glows behind the other three. The coriander fragrance is vivid and green.", action: "Serve immediately — lime juice oxidizes quickly and the fresh fragrance is at its best within the first 30 minutes." },
-          { state: "Overdone",  description: "Too much fish sauce dominates: the sauce smells and tastes almost exclusively of fermented anchovy with no sour brightness cutting through.", action: "Add more lime juice to re-establish the acid-to-salt ratio. Add a pinch of sugar to restore the balance. Taste carefully and add in small increments." },
-        ],
-      },
-      feelCue: "Take a small sip from a spoon and hold it on your tongue for 3 full seconds. The sour should announce itself immediately at the sides of the tongue. If you mainly feel heat, add more lime. If you mainly feel salt, add more lime and a pinch of sugar. If you mainly feel sweet, add a few drops more fish sauce.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Chilies oculaires (prik kii nuu), tiges enlevées",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "serrano chili (milder)",
+        "flocons de chili séchés (1 partie)"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Racines de coriandre, raclées propres (ou tiges)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tiges de coriandre, doublées en quantité"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sauce de poisson",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja + pincée de MSG pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Sucre de palme ou sucre blanc",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Chérie"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "aromatic_paste",
+      "instructions": "Dans un mortier de granit, combiner les gousses d'ail, les piments oculaires des oiseaux et les racines de coriandre. Commencez par frapper l'ail en premier — il faut le plus de force. Une fois l'ail rugueux et juteux, ajoutez les racines de coriandre et livrez à nouveau. Enfin ajouter les piments. Travaillez-les tous ensemble avec un mouvement de meulage circulaire, alternant entre le pilonnage et le grattage des côtés vers l'intérieur avec une cuillère. Le but est une pâte grossière et humide, pas une purée lisse. Vous voulez des fils visibles de racine de coriandre, de petits flocons de peau de chili, et une base d'ail légèrement chunky. Les huiles libérées par battage sont fondamentalement différentes de celles libérées par coupe : elles sont plus brillantes, plus volatiles et plus intensément parfumées.",
+      "visualCue": {
+        "primaryTarget": "Pâte grossière, de couleur vert vif, avec des graines de chili visibles, des jus d'ail mis à la base du mortier et un parfum presque écrasant d'ail cru, de chili lime-brillant et de coriandre terreuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les ingrédients sont ecchymosés mais non décomposés — de grands morceaux d'ail sont encore visibles et la coriandre est en longs brins plutôt qu'en pâte.",
+            "action": "Continuez à frapper. Si l'ail saute, ajoutez une pincée de sel comme abrasif pour saisir les ingrédients contre le mortier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte cohésive et rugueuse : l'ail entièrement cassé à un frottis juteux, le chili cassé mais avec des graines encore visibles, fibres de coriandre intégrées. La chaleur brute vous frappe dès que vous vous penchez sur le mortier.",
+            "action": "Ajouter les ingrédients liquides directement dans le mortier et mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a été clouée à une purée ultra-lisse sans texture visible. Les graines de chili sont entièrement broyées.",
+            "action": "La sauce sera encore bonne mais sera plus émulsifiée et légèrement moins vibrante sur l'assiette. Pour la prochaine fois, arrêtez-vous au stade grossier."
+          }
+        ]
+      },
+      "feelCue": "Après les quelques premiers livres, frottez une petite partie de la pâte sur le dos de votre poignet — l'ail devrait déjà piquer la peau très faiblement. Ce piquant est l'allicine qui libère, qui est le même composé qui rend la sauce électrique en bouche."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "aromatic_paste",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "finished_nam_jim",
+      "instructions": "Ajoutez le sucre de palme directement au mortier et livrez brièvement pour le casser dans la pâte — il doit se dissoudre complètement, et non pas simplement s'asseoir en morceaux. Verser ensuite le jus de lime et la sauce de poisson. Mélanger avec une cuillère pour tout combiner, en dégustant au fur et à mesure. La séquence des saveurs dans un nam jim bien équilibré fruits de mer devrait être: aigre d'abord et le plus fort, puis salé, puis doux comme un fond qui empêche l'acide d'être dur, puis une chaleur de bâtiment qui arrive en dernier et s'attarde. Ajuster la chaux pour plus d'amer, la sauce de poisson pour plus de sel, le sucre pour adoucir la dureté. Cette sauce devrait être audacieuse au point de presque-trop-much — c'est la rencontre de fruits de mer grillés qui peut la prendre.",
+      "visualCue": {
+        "primaryTarget": "Sauce fine, de couleur vert vif avec une teinte dorée du sucre de palme dissous et des graines de chili visibles et des fragments de coriandre suspendus dans un liquide clair et vibrant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a un goût plat et unidimensionnel — seul l'acide se distingue parce que le sucre n'a pas dissout et que la sauce de poisson n'est pas complètement intégrée.",
+            "action": "Pound le sucre dans la pâte plus agressive avant d'ajouter les liquides, et remuer pendant au moins 30 secondes après avoir combiné pour aider le sucre à se dissoudre dans le jus de chaux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les quatre saveurs sont simultanées: l'auresse vous fait saliver, le sel concentre la saveur, la douceur arrondit les bords, et la chaleur brille derrière les trois autres. Le parfum de la coriandre est vif et vert.",
+            "action": "Servir immédiatement — le jus de lime s'oxyde rapidement et le parfum frais est à son meilleur dans les 30 premières minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de sauce de poisson domine : la sauce sent et goûte presque exclusivement d'anchois fermenté sans éclat acide.",
+            "action": "Ajouter plus de jus de lime pour rétablir le rapport acide-sel. Ajoutez une pincée de sucre pour rétablir l'équilibre. Goûtez soigneusement et ajoutez en petits incréments."
+          }
+        ]
+      },
+      "feelCue": "Prenez une petite gorgée d'une cuillère et maintenez-la sur votre langue pendant 3 secondes complètes. Le aigre doit s'annoncer immédiatement aux côtés de la langue. Si vous sentez principalement la chaleur, ajoutez plus de chaux. Si vous sentez principalement du sel, ajoutez plus de chaux et une pincée de sucre. Si vous vous sentez surtout sucré, ajoutez quelques gouttes de sauce de poisson."
+    }
+  ]
 };

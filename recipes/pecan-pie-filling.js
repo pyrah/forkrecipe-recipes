@@ -1,107 +1,262 @@
 export default {
-  repoId: "master_american_pecan-pie-filling_001",
-  parentRepoId: null,
-  slug: "pecan-pie-filling",
-  author: "ForkRecipe Kitchen",
-  title: "Pecan Pie Filling",
-  description: "A deep amber, caramel-scented custard bound with corn syrup and whole eggs, poured over toasted pecans that rise to the surface and lacquer to a glossy, crackle-topped crown.",
-  cuisine: "American",
-  culture: "Southern",
-  category: "desserts",
-  tags: ["pecan", "corn syrup", "southern", "pie", "sweet"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "75 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 10, salty: 3, sour: 0, bitter: 2, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Sweetener", name: "Dark corn syrup",                     ratioValue: 4,   defaultUnit: "parts", substitutions: ["golden syrup (less sweet, more complex)"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Dark brown sugar, packed",            ratioValue: 2,   defaultUnit: "parts", substitutions: ["light brown sugar (less molasses depth)"] },
-    { ingId: "ing_03", role: "Binder",    name: "Large eggs, room temperature",        ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter, melted and cooled",  ratioValue: 1,   defaultUnit: "parts", substitutions: ["browned butter for nuttier depth"] },
-    { ingId: "ing_05", role: "Protein",   name: "Pecan halves",                        ratioValue: 5,   defaultUnit: "parts", substitutions: ["walnuts (more bitter, less rich)"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine kosher salt",                    ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Pure vanilla extract",                ratioValue: 0.2, defaultUnit: "parts", substitutions: ["bourbon (same quantity, more adult flavor)"] },
+  "repoId": "master_american_pecan-pie-filling_001",
+  "parentRepoId": null,
+  "slug": "pecan-pie-filling",
+  "author": "ForkRecipe Kitchen",
+  "title": "Remplissage de la tarte aux pois",
+  "description": "Une crème ambrée, parfumée au caramel, liée au sirop de maïs et aux œufs entiers, versé sur des pacanes grillées qui s'élèvent à la surface et laque sur une couronne brillante et recouverte de craquelin.",
+  "cuisine": "Américain",
+  "culture": "Sud",
+  "category": "desserts",
+  "tags": [
+    "pécan",
+    "sirop de maïs",
+    "sud",
+    "tarte",
+    "doux"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "75 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 10,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Toast",
-      inputs: ["ing_05"],
-      outputState: "toasted_pecans",
-      instructions: "Spread the pecan halves on a dry sheet pan in a single layer. Roast at 175 C (350 F) for 8–10 minutes, stirring once halfway through. You are not just toasting for color — you are driving off moisture so the nuts stay crisp through a long bake inside a wet custard.",
-      visualCue: {
-        primaryTarget: "Pecans are uniformly one shade deeper — a warm, reddish-brown rather than the pale tan they started as. The kitchen smells of warm butter and caramel.",
-        spectrum: [
-          { state: "Underdone", description: "Nuts are still pale and smell raw and green. No color change on the flat faces.", action: "Return to the oven for 3 more minutes. Watch closely — they go from underdone to overdone quickly." },
-          { state: "Perfect",   description: "Deeply fragrant, mahogany-tinged, and oily on the surface. A broken half reveals a consistently toasted interior, not just a toasted skin.", action: "Remove and cool completely on the pan before using." },
-          { state: "Overdone",  description: "Nuts are dark brown to black at the edges. The smell is bitter and acrid rather than caramel-sweet.", action: "Discard and start again — burnt pecans will ruin the finished pie with persistent bitterness." },
-        ],
-      },
-      feelCue: "A perfectly toasted pecan snaps cleanly when broken and feels dry between the fingers — no waxy raw fat. Rub one between your palms; the released oil should smell immediately of caramel, not raw nut.",
+      "ingId": "ing_01",
+      "role": "Sweetener",
+      "name": "Sirop de maïs foncé",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sirop d'or (moins sucré, plus complexe)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_04", "ing_06", "ing_07"],
-      outputState: "syrup_base",
-      instructions: "In a large bowl, whisk together the dark corn syrup, brown sugar, melted (not hot) butter, salt, and vanilla until the sugar has partially dissolved and the mixture is uniform in color. The butter must be cooled to below 50 C or it will begin to cook the eggs when they are added. Rub a drop between your fingers — you should not feel undissolved sugar crystals, though some is acceptable at this stage.",
-      visualCue: {
-        primaryTarget: "A deep amber, glossy liquid with no visible butter separation. The brown sugar streaks have been whisked into a uniform dark caramel color.",
-        spectrum: [
-          { state: "Underdone", description: "Brown sugar is still in visible lumps or unmixed streaks. Butter is floating on the surface.", action: "Whisk vigorously for another 30 seconds. Slightly warm the bowl from underneath if the sugar is very cold and crystalline." },
-          { state: "Perfect",   description: "Glossy, uniformly dark amber with no visible streaks. Falls off the whisk in a smooth, unbroken ribbon.", action: "Add eggs one at a time and continue." },
-          { state: "Overdone",  description: "N/A — you cannot over-mix this stage. However, if the bowl still feels very hot from the butter, wait for it to cool further before adding eggs.", action: "Set the bowl in a cold-water bath for 3–4 minutes to cool before adding eggs." },
-        ],
-      },
-      feelCue: "The mixture should feel like liquid caramel — slightly tacky on the fingertips, with the dense, viscous drag of a syrup rather than the thin slip of water.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre brun foncé, emballé",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun clair (moins de mélasse)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Whisk",
-      inputs: ["syrup_base", "ing_03"],
-      outputState: "filling_batter",
-      instructions: "Add the eggs one at a time, whisking each in fully before adding the next. Do not beat aggressively — you are incorporating eggs, not building foam. Excess air creates a soufflé-like filling that puffs and cracks dramatically in the oven. Whisk gently, just until each egg is fully absorbed and the mixture is homogeneous.",
-      visualCue: {
-        primaryTarget: "A smooth, homogeneous, pourable batter that is a uniform deep amber-brown with no egg streaks. No foam or bubbles on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Visible yellow streaks of egg yolk running through the dark syrup. The mixture looks marbled.", action: "Continue whisking gently until fully uniform — marbling means uneven custard set." },
-          { state: "Perfect",   description: "Smooth, deep amber, with a satiny surface and very few bubbles. Pours evenly off a spoon in a steady stream.", action: "Pour over the toasted pecans in the unbaked pie shell." },
-          { state: "Overdone",  description: "The batter is frothy and full of fine bubbles from over-whisking. The surface looks like beaten egg white foam.", action: "Let sit 10 minutes for the foam to settle before baking — bubbles baked in will create a spongy, airy texture instead of dense custard." },
-        ],
-      },
-      feelCue: "Dip a fingertip in — the batter coats your finger like warm honey, neither too thin (watery) nor too thick (caramel-stiff). It should drip off your raised finger in a slow, unbroken thread.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Gros œufs, température ambiante",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Assemble",
-      inputs: ["filling_batter", "toasted_pecans"],
-      outputState: "unbaked_pie",
-      instructions: "Arrange the toasted pecan halves in concentric circles in an unbaked 9-inch pie shell, flat side down, covering the entire bottom. Pour the filling batter gently over them — the pecans will float up and redistribute. Do not try to hold them in place; they will self-arrange as they bake. Fill to within 1 cm of the crust rim.",
-      visualCue: {
-        primaryTarget: "Pecans are floating near the surface in an even layer, partly submerged in the amber filling. The shell is filled to just below the rim with no gaps.",
-        spectrum: [
-          { state: "Underdone", description: "Shell is less than 75% full. Too few pecans — the nut-to-custard ratio will be wrong.", action: "Add more filling or more pecans. Do not exceed the rim." },
-          { state: "Perfect",   description: "Pecans form a nearly continuous, overlapping layer just below the surface of the filling. Filling reaches within 5–8 mm of the crust edge.", action: "Bake immediately at 175 C (350 F)." },
-          { state: "Overdone",  description: "Filling is at or over the rim of the shell. Risk of overflow in the oven.", action: "Carefully remove a small amount of filling with a spoon. Place a sheet pan on the rack below as a catch." },
-        ],
-      },
-      feelCue: "Tilt the dish gently — the filling should move slowly and settle with a slight tremor, like panna cotta before it is set. If it sloshes freely, it has not been mixed thickly enough.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé fondu et refroidi",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre bruni pour une profondeur plus grande"
+      ]
     },
     {
-      nodeId: "step_5", action: "Bake",
-      inputs: ["unbaked_pie"],
-      outputState: "baked_pie",
-      instructions: "Bake at 175 C (350 F) on the lower-middle rack for 50–60 minutes. Shield the crust edge with foil or a pie shield after the first 20 minutes. The custard sets from the outside inward — the edges will firm up while the center still appears liquid. Do not overbake waiting for the center to set firm in the oven; it will finish cooking off-heat.",
-      visualCue: {
-        primaryTarget: "The pecan top is a deep, lacquered mahogany. The edges of the filling are fully set. The center wobbles like gelatin — a slow, unified wobble across the whole pie, not a liquid splash.",
-        spectrum: [
-          { state: "Underdone", description: "The center wobbles loosely and independently like a raw egg, and the filling looks opaque and bubbling.", action: "Bake 5 more minutes and re-check. Use a thermometer — the center should reach 85 C (185 F)." },
-          { state: "Perfect",   description: "Edges are firm and matte. Center has a slow, jiggly wobble that moves the whole pie as one mass. Pecans are deeply lacquered and fragrant.", action: "Cool completely on a wire rack — minimum 2 hours — before slicing." },
-          { state: "Overdone",  description: "Filling has puffed up beyond the crust edge and cracked across the surface. The custard has scrambled rather than set smoothly.", action: "Allow to cool — the filling will deflate and the cracks may close slightly. The texture will be grainy, but the flavor is usually still good." },
-        ],
-      },
-      feelCue: "Place your palm 5 cm above the center of the pie — you should feel strong residual heat radiating upward. The smell should be intensely caramel-sweet with toasted nut, not eggy or sulfurous.",
+      "ingId": "ing_05",
+      "role": "Protein",
+      "name": "moitiés de pécan",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Noix (plus amères, moins riches)"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel casher fin",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Extrait de vanille pure",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bourbon (même quantité, plus de saveur adulte)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_05"
+      ],
+      "outputState": "toasted_pecans",
+      "instructions": "Étendre les moitiés de pécan sur une plaque sèche en une seule couche. Faire cuire à 175 C (350 F) pendant 8-10 minutes, en remuant une fois à mi-chemin. Vous ne faites pas que griller pour la couleur — vous chassez l'humidité pour que les noix restent croustillantes à travers un long four à l'intérieur d'une crème humide.",
+      "visualCue": {
+        "primaryTarget": "Les pécans sont uniformément une ombre plus profonde — un brun rougeâtre chaud plutôt que le bronzage pâle qu'ils ont commencé comme. La cuisine sent le beurre chaud et le caramel.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les noix sont encore pâles et sentent crus et verts. Pas de changement de couleur sur les faces plates.",
+            "action": "Retourner au four 3 minutes de plus. Regardez de près — ils vont de sous - mort à surdosé rapidement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Profondément parfumé, acajou et huileux à la surface. Une moitié cassée révèle un intérieur régulièrement grillé, pas seulement une peau grillée.",
+            "action": "Retirer et refroidir complètement sur la casserole avant utilisation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les noix sont brun foncé à noir aux bords. L'odeur est amère et acride plutôt que caramel-sweet.",
+            "action": "Jeter et recommencer — les pacanes brûlées ruineront la tarte finie avec une amertume persistante."
+          }
+        ]
+      },
+      "feelCue": "Une noix de pécan parfaitement grillée s'éclate proprement lorsqu'elle est cassée et sèche entre les doigts, sans graisse brute cireuse. Frottez-en un entre vos paumes; l'huile libérée doit sentir immédiatement du caramel, pas des noix crues."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "syrup_base",
+      "instructions": "Dans un grand bol, fouetter ensemble le sirop de maïs foncé, le sucre brun, le beurre fondu (pas chaud), le sel et la vanille jusqu'à ce que le sucre soit partiellement dissous et que le mélange soit de couleur uniforme. Le beurre doit être refroidi à moins de 50 °C ou il commencera à cuire les œufs lorsqu'ils seront ajoutés. Frottez une goutte entre vos doigts — vous ne devriez pas sentir des cristaux de sucre non dissous, bien que certains soient acceptables à ce stade.",
+      "visualCue": {
+        "primaryTarget": "Un liquide ambre profond et brillant sans séparation visible du beurre. Les stries de sucre brun ont été fouettées dans une couleur uniforme caramel foncé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sucre brun est encore dans les morceaux visibles ou les stries non mélangées. Le beurre flotte à la surface.",
+            "action": "Frottez vigoureusement pendant 30 secondes. Chauffer légèrement le bol de dessous si le sucre est très froid et cristallin."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, uniformément foncé ambre sans stries visibles. Il tombe du fouet dans un ruban lisse et intact.",
+            "action": "Ajouter les œufs un à la fois et continuer."
+          },
+          {
+            "state": "Overdone",
+            "description": "S/O — vous ne pouvez pas trop mélanger cette étape. Cependant, si le bol est encore très chaud à partir du beurre, attendez qu'il refroidisse avant d'ajouter des œufs.",
+            "action": "Mettre le bol dans un bain d'eau froide pendant 3-4 minutes pour refroidir avant d'ajouter des œufs."
+          }
+        ]
+      },
+      "feelCue": "Le mélange doit se sentir comme du caramel liquide — légèrement collant au bout des doigts, avec la traînée dense et visqueuse d'un sirop plutôt que le mince glissement d'eau."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "syrup_base",
+        "ing_03"
+      ],
+      "outputState": "filling_batter",
+      "instructions": "Ajouter les œufs un à la fois, en fouettant chacun complètement avant d'ajouter le suivant. Ne battez pas agressivement — vous incorporez des œufs, pas de la mousse de construction. L'excès d'air crée un remplissage ressemblant à du soufflé qui souffle et craque de façon spectaculaire dans le four. fouetter doucement, juste jusqu'à ce que chaque oeuf soit complètement absorbé et que le mélange soit homogène.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse, homogène, versable qui est un brun-ambre profond uniforme sans stries d'oeufs. Pas de mousse ou de bulles à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries jaunes visibles de jaune d'œuf qui traversent le sirop foncé. Le mélange a l'air marbré.",
+            "action": "Continuez à fouetter doucement jusqu'à ce qu'il soit entièrement uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre lisse, profond, avec une surface satinée et très peu de bulles. Verse uniformément une cuillère dans un ruisseau stable.",
+            "action": "Verser sur les pacanes grillées dans la coquille de tarte non cuite."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est mousseuse et pleine de fines bulles de sursaut. La surface ressemble à de la mousse blanche d'œuf battue.",
+            "action": "Laisser reposer 10 minutes pour que la mousse se dépose avant de cuire — les bulles cuites dans créeront une texture spongieuse et aérée au lieu de crème dense."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt dans — la pâte enveloppe votre doigt comme du miel chaud, ni trop mince (eau) ni trop épais (caramel-stide). Il devrait couler de votre doigt levé dans un fil lent et ininterrompu."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "filling_batter",
+        "toasted_pecans"
+      ],
+      "outputState": "unbaked_pie",
+      "instructions": "Disposer les moitiés de pécan grillées dans des cercles concentriques dans une coquille de tarte de 9 pouces non cuite, côté plat vers le bas, couvrant tout le fond. Versez la pâte de remplissage doucement sur eux — les pacanes flotteront et redistribueront. N'essayez pas de les tenir en place; ils s'arrangeront comme ils font cuire. Remplir à moins de 1 cm du bord de la croûte.",
+      "visualCue": {
+        "primaryTarget": "Les pécans flottent près de la surface dans une couche uniforme, partiellement submergée dans le remplissage ambre. La coque est remplie juste en dessous de la jante sans ouverture.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Shell est moins de 75% plein. Trop peu de pécans — le rapport noix-à-garde sera faux.",
+            "action": "Ajouter plus de remplissage ou plus de pécans. Ne pas dépasser la jante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pécans forment une couche presque continue qui se chevauche juste sous la surface du remplissage. Le remplissage atteint 5 à 8 mm du bord de la croûte.",
+            "action": "Cuire immédiatement à 175 °C (350 °F)."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage est sur le bord de la coque. Risque de débordement dans le four.",
+            "action": "Retirer soigneusement une petite quantité de remplissage avec une cuillère. Placez une plaque sur le support ci-dessous comme une prise."
+          }
+        ]
+      },
+      "feelCue": "Inclinez le plat doucement — le remplissage doit se déplacer lentement et se déposer avec un léger tremblement, comme le panna cotta avant qu'il ne soit réglé. S'il s'enroule librement, il n'a pas été mélangé assez épais."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "unbaked_pie"
+      ],
+      "outputState": "baked_pie",
+      "instructions": "Faire cuire à 175 °C (350 °F) sur le support intermédiaire inférieur pendant 50 à 60 minutes. Bouclier le bord de la croûte avec du papier ou un bouclier à tarte après les 20 premières minutes. Les ensembles de crème de l'extérieur vers l'intérieur — les bords vont se raffermir tandis que le centre apparaît encore liquide. Ne pas trop cuire en attendant que le centre se ferme dans le four; il finira la cuisson hors-chauffage.",
+      "visualCue": {
+        "primaryTarget": "Le haut de pacane est une acajou laquée profonde. Les bords du remplissage sont entièrement réglés. Le centre oscille comme de la gélatine — un tourbillon lent et unifié à travers toute la tarte, pas une éclaboussure liquide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre oscille de façon lâche et indépendante comme un œuf cru, et le remplissage semble opaque et bouillonnant.",
+            "action": "Cuire encore 5 minutes et revérifier. Utilisez un thermomètre — le centre devrait atteindre 85 C (185 F)."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords sont fermes et mats. Le centre a un vagabond lent qui déplace toute la tarte comme une masse. Les pécans sont laqués profondément et parfumés.",
+            "action": "Laisser refroidir complètement sur une grille — au moins 2 heures — avant de trancher."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage a gonflé au-delà du bord de la croûte et s'est fendu à travers la surface. La crème a brouillé au lieu de se mettre en douceur.",
+            "action": "Laisser refroidir — le remplissage se dégonfle et les fissures peuvent se refermer légèrement. La texture sera granuleuse, mais la saveur est généralement encore bonne."
+          }
+        ]
+      },
+      "feelCue": "Placez votre paume 5 cm au-dessus du centre de la tarte — vous devriez sentir une forte chaleur résiduelle rayonnant vers le haut. L'odeur doit être intensément caramel-sweet avec des noix grillées, pas oeufs ou sulfureux."
+    }
+  ]
 };

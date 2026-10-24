@@ -1,98 +1,276 @@
 export default {
-  repoId: "master_american_eggs_benedict_001",
-  parentRepoId: null,
-  slug: "eggs-benedict",
-  author: "ForkRecipe Kitchen",
-  title: "Eggs Benedict",
-  description: "The Sunday-brunch apex — softly poached eggs draped over crisped Canadian bacon and toasted English muffin halves, drowned in a warm golden hollandaise sharpened with lemon. Three separate techniques — emulsion, poach, toast — synchronized into one showy plate.",
-  cuisine: "American",
-  culture: "New York",
-  category: "eggs",
-  tags: ["eggs", "brunch", "american", "new-york", "hollandaise"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 1, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",    name: "Large eggs (for poaching)",        ratioValue: 4,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_02", role: "Protein",    name: "Canadian bacon or back bacon",     ratioValue: 4,    defaultUnit: "slices", substitutions: ["Serrano ham", "smoked salmon for Eggs Royale"] },
-    { ingId: "ing_03", role: "Structure",  name: "English muffins, split",           ratioValue: 2,    defaultUnit: "whole", substitutions: ["toasted sourdough rounds", "brioche halves"] },
-    { ingId: "ing_04", role: "Binder",     name: "Egg yolks (for hollandaise)",      ratioValue: 3,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",        name: "Clarified butter (warm)",          ratioValue: 200,  defaultUnit: "ml",  substitutions: ["whole melted butter — harder to emulsify but doable"] },
-    { ingId: "ing_06", role: "Acid",       name: "Fresh lemon juice",                ratioValue: 15,   defaultUnit: "ml",  substitutions: ["white wine vinegar"] },
-    { ingId: "ing_07", role: "Acid",       name: "White wine vinegar (for poaching)", ratioValue: 30,  defaultUnit: "ml",  substitutions: ["any light vinegar"] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Fine sea salt",                    ratioValue: 5,    defaultUnit: "g",   substitutions: ["kosher salt"] },
-    { ingId: "ing_09", role: "Spice",      name: "White pepper",                     ratioValue: 1,    defaultUnit: "g",   substitutions: ["black pepper if specks are acceptable"] },
-    { ingId: "ing_10", role: "Spice",      name: "Cayenne pepper, pinch",            ratioValue: 0.5,  defaultUnit: "g",   substitutions: ["smoked paprika for color"] },
-    { ingId: "ing_11", role: "Hydration",  name: "Water (for poaching)",             ratioValue: 1500, defaultUnit: "ml",  substitutions: [] },
+  "repoId": "master_american_eggs_benedict_001",
+  "parentRepoId": null,
+  "slug": "eggs-benedict",
+  "author": "ForkRecipe Kitchen",
+  "title": "Œufs Benoît",
+  "description": "L'apex du dimanche – des oeufs légèrement pochés sur du bacon canadien croustillant et des moitiés de muffins anglais grillés, noyés dans un chaud hollandaise doré aiguisé au citron. Trois techniques distinctes, l'émulsion, le poach, le toast, se sont synchronisées en une seule assiette.",
+  "cuisine": "Américain",
+  "culture": "New York",
+  "category": "eggs",
+  "tags": [
+    "œufs",
+    "brunch",
+    "américains",
+    "nouveau-né",
+    "hollandaise"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Emulsify",
-      inputs: ["ing_04", "ing_05", "ing_06", "ing_08", "ing_09", "ing_10"],
-      outputState: "hollandaise",
-      instructions: "Make the hollandaise first — it will hold warm while you poach. Place a large bowl over a pot of barely simmering water (the bottom of the bowl must not touch the water). Add the egg yolks and a tablespoon of water. Whisk constantly and vigorously, moving the bowl on and off the heat so the yolks warm gently rather than scramble — 3–5 minutes until they become thick, pale and ribbon-like and you can see the bottom of the bowl through the whisk trails. Remove from the heat. Begin adding the warm clarified butter in a thin, slow drizzle, whisking constantly. The sauce will emulsify and thicken with each addition. Once half the butter is in and the sauce looks thick and glossy, you can add the rest in a faster stream. Season with lemon juice, salt, white pepper and cayenne. Keep warm by setting the bowl over the pot of hot (but not simmering) water with the heat off.",
-      visualCue: {
-        primaryTarget: "A thick, pale golden sauce that falls from the whisk in a smooth, continuous ribbon. It should coat the back of a spoon thickly and hold a finger-drawn channel without closing.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is thin and pourable, pooling immediately off the spoon. The yolks were not cooked enough before the butter was added.", action: "Return to the bain marie over very gentle heat and whisk constantly until it thickens — do not boil or it will curdle." },
-          { state: "Perfect",   description: "Thick, glossy and pale gold. Falls from the spoon in a slow, unbroken stream. Tastes rich and buttery with a bright lemon edge.", action: "Keep warm over the off-heat bain marie and move to poaching." },
-          { state: "Overdone",  description: "The sauce has broken — it looks greasy and curdled, the butter separated in yellow puddles.", action: "Whisk a fresh egg yolk in a clean warm bowl, then very slowly drizzle in the broken sauce, whisking constantly — the new yolk can re-emulsify the broken sauce." },
-        ],
-      },
-      feelCue: "When you lift the whisk and trace a figure-8 in the yolk mixture, the figure should hold for a full second before dissolving — that is the ribbon stage, the right moment to begin adding butter.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Gros œufs (pour le braconnage)",
+      "ratioValue": 4,
+      "defaultUnit": "whole",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Poach",
-      inputs: ["ing_11", "ing_07", "ing_01"],
-      outputState: "poached_eggs",
-      instructions: "Fill a wide, shallow saucepan with water to a depth of about 8cm. Add the white wine vinegar (it helps the whites cohere) and bring to a bare simmer — 82–85°C, just below a boil with small bubbles rising from the bottom, not a rolling boil. Crack each egg into a small cup. Stir the water gently to create a slow vortex and slip the egg into the center — the swirling water wraps the white around the yolk. Cook 3–4 minutes for a runny yolk. Lift with a slotted spoon and touch the white — it should be fully set but the yolk should wobble like a water balloon. Drain on a folded towel. If making all four at once, use a wide pan and work quickly. You can keep poached eggs in warm water up to 30 minutes.",
-      visualCue: {
-        primaryTarget: "A compact, oval poached egg with a fully opaque white that is smooth rather than ragged, and a visible dome of soft, liquid yolk beneath the surface.",
-        spectrum: [
-          { state: "Underdone", description: "The white is still translucent and jellylike around the yolk. The egg collapses and spreads when lifted.", action: "Return to the water for another 60–90 seconds and test again." },
-          { state: "Perfect",   description: "The white is fully set and opaque, just firm enough to hold its shape. The yolk moves like liquid under gentle pressure of the spoon. The egg holds together elegantly.", action: "Drain and plate immediately or hold in warm (not hot) water." },
-          { state: "Overdone",  description: "The yolk has set solid and the white is rubbery and pulling away from it. The egg looks puffed and dry.", action: "Serve quickly — overcooked poached eggs are still edible, just cut into them before serving so no one is surprised." },
-        ],
-      },
-      feelCue: "When you cradle a perfect poached egg in a slotted spoon, it should feel heavy and liquid in the center — like a small water balloon enclosed in a thin rubber shell. Firmness at the white edges, yielding at the yolk center.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Bacon canadien ou lard arrière",
+      "ratioValue": 4,
+      "defaultUnit": "slices",
+      "substitutions": [
+        "Jambon de Serrano",
+        "saumon fumé pour oeufs Royale"
+      ]
     },
     {
-      nodeId: "step_3", action: "Sear",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "toasted_base",
-      instructions: "While the eggs poach, heat a dry pan or griddle over medium-high heat. Sear the Canadian bacon slices for 2 minutes per side until lightly caramelized at the edges and warmed through. Simultaneously toast the English muffin halves — cut-side down in the same pan, or under a broiler — until golden and slightly crisp at the surface. The slight crunch of the muffin is structural: it prevents the egg's liquid yolk from immediately soaking through and making a soggy base.",
-      visualCue: {
-        primaryTarget: "Canadian bacon with light caramelized edges. English muffin halves golden-brown and slightly crisp on the cut face with the characteristic nooks and crannies catching the heat unevenly.",
-        spectrum: [
-          { state: "Underdone", description: "The bacon is pallid and soft, barely warmed. The muffin is blond and chewy with no crunch.", action: "Return to the heat — a minute more each side for the bacon, and longer under the broiler for the muffin." },
-          { state: "Perfect",   description: "Bacon has light mahogany caramelized edges and is warm through. Muffin is golden-brown with some darker blistered spots where the nooks caught the heat.", action: "Plate immediately: muffin first, then bacon, then egg, then hollandaise." },
-          { state: "Overdone",  description: "The bacon is dry and chewy with very dark crispy edges. The muffin is hard and brittle rather than crunchy.", action: "Use as-is — Benedict is forgiving. The hollandaise will soften everything." },
-        ],
-      },
-      feelCue: "Press the toasted muffin half cut-side up — it should offer a faint crackling resistance at the surface before giving way to a soft interior. That textural contrast is what it is there for.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Muffins anglais, cassés",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Tours aurifères grillés",
+        "moitiés de brioche"
+      ]
     },
     {
-      nodeId: "step_4", action: "Assemble",
-      inputs: ["toasted_base", "poached_eggs", "hollandaise"],
-      outputState: "finished_eggs_benedict",
-      instructions: "Work quickly — everything should be hot simultaneously. Place two toasted muffin halves on each plate, cut-side up. Layer a slice of warm Canadian bacon on each half. Use a slotted spoon to carefully lift a poached egg, dab the bottom briefly on a folded kitchen towel to remove excess water, and set one egg on each bacon slice. Spoon hollandaise generously over each egg — it should pool around the base and cascade down the muffin. Finish with a dusting of cayenne or paprika. Serve with no delay.",
-      visualCue: {
-        primaryTarget: "A composed stack: golden muffin, mahogany bacon, white-domed egg, golden hollandaise cascading down the sides, and a faint blush of red cayenne on top.",
-        spectrum: [
-          { state: "Underdone", description: "The hollandaise is thin and runs off entirely. The egg white looks ragged and pale. The muffin is still soft.", action: "Re-toast the muffin and thicken the hollandaise before reassembling." },
-          { state: "Perfect",   description: "Every component is hot. The hollandaise is thick enough to cling to the egg and cascade slowly. Cut into the egg and the yolk runs golden into the sauce below.", action: "Eat immediately. This dish does not age gracefully." },
-          { state: "Overdone",  description: "Everything sat assembled for 5 minutes — the muffin is soggy, the yolk has set from residual heat, and the hollandaise has cooled into a thick paste.", action: "Speed is the whole game. Next time stagger the cooking so everything finishes at once." },
-        ],
-      },
-      feelCue: "Cut straight through the center of the stack with the side of a fork — the resistance should go: slight crunch of muffin, yielding bacon, and then the pop of the yolk breaking open to flood everything below with warm golden liquid.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Jaunes d'œufs (pour hollandaise)",
+      "ratioValue": 3,
+      "defaultUnit": "whole",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre clarifié (chaud)",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "beurre fondu entier — plus dur à émulsifier mais faisable"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Vin blanc (pour le braconnage)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre léger"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Poivre blanc",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivre noir si les taches sont acceptables"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Poivre Cayenne, pincer",
+      "ratioValue": 0.5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika fumé pour la couleur"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Hydration",
+      "name": "Eau (pour le braconnage)",
+      "ratioValue": 1500,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Émulsifier",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "hollandaise",
+      "instructions": "Faites d'abord l'hollandaise — il tiendra chaud pendant que vous braconnez. Placez un grand bol sur un pot d'eau à peine mijotante (le fond du bol ne doit pas toucher l'eau). Ajouter les jaunes d'œufs et une cuillère à soupe d'eau. Whisk constamment et vigoureusement, en déplaçant le bol sur et hors de la chaleur de sorte que les jaunes réchauffent doucement plutôt que brouillé — 3-5 minutes jusqu'à ce qu'ils deviennent épais, pâles et ruban-comme et vous pouvez voir le fond du bol à travers les sentiers de fouet. Retirer du feu. Commencer à ajouter le beurre clarifié chaud dans une bruine mince et lente, en fouettant constamment. La sauce émulsifiera et épaissira avec chaque addition. Une fois la moitié du beurre entré et la sauce est épaisse et brillante, vous pouvez ajouter le reste dans un ruisseau plus rapide. Assaisonner de jus de citron, sel, poivre blanc et cayenne. Gardez au chaud en plaçant le bol sur le pot d'eau chaude (mais pas mijotante) avec le feu.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse et dorée qui tombe du fouet dans un ruban lisse et continu. Il devrait envelopper l'arrière d'une cuillère de façon épaisse et tenir un canal tiré du doigt sans fermer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et versable, en piqué immédiatement de la cuillère. Les jaunes n'étaient pas assez cuits avant l'ajout du beurre.",
+            "action": "Retourner au bain marie à feu très doux et fouetter constamment jusqu'à ce qu'il s'épaississe — ne pas bouillir ou il sera caillé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, brillant et or pâle. Des chutes de la cuillère dans un ruisseau lent et intact. Goûte riche et beurré avec un bord citron clair.",
+            "action": "Gardez-vous au chaud sur le bain marin hors-chauffage et passer au braconnage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est cassée — elle a l'air grasse et caillée, le beurre se sépare en flaques jaunes.",
+            "action": "fouetter un jaune d'œuf frais dans un bol propre et chaud, puis arroser très lentement dans la sauce cassée, fouetter constamment — le nouveau jaune peut réémulsionner la sauce cassée."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous soulevez le fouet et tracez une figure-8 dans le mélange de jaune, la figure doit tenir pendant une seconde avant de se dissoudre — c'est-à-dire le stade du ruban, le bon moment pour commencer à ajouter du beurre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Pochette",
+      "inputs": [
+        "ing_11",
+        "ing_07",
+        "ing_01"
+      ],
+      "outputState": "poached_eggs",
+      "instructions": "Remplissez une grande casserole peu profonde d'eau à une profondeur d'environ 8cm. Ajouter le vinaigre de vin blanc (il aide les blancs à cocher) et laisser mijoter à nu — 82-85°C, juste en dessous d'un ébullition avec de petites bulles montant du fond, pas un ébullition enrouleur. Casser chaque oeuf dans une petite tasse. Mélangez l'eau doucement pour créer un vortex lent et glissez l'œuf au centre. L'eau tourbillonnante enveloppe le blanc autour du jaune. Cuire de 3 à 4 minutes pour un jaune. Soulevez avec une cuillère à fentes et touchez le blanc — il devrait être entièrement réglé, mais le jaune devrait wobble comme un ballon d'eau. Égoutter sur une serviette pliée. Si vous faites les quatre à la fois, utilisez une grande casserole et travaillez rapidement. Vous pouvez garder les œufs pochés dans de l'eau chaude jusqu'à 30 minutes.",
+      "visualCue": {
+        "primaryTarget": "Un œuf poché ovale compact avec un blanc entièrement opaque qui est lisse plutôt qu'attaché, et un dôme visible de jaune liquide doux sous la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le blanc est encore translucide et gelée autour du jaune. L'œuf s'effondre et se propage lorsqu'il est levé.",
+            "action": "Retournez à l'eau pendant 60 à 90 secondes et testez à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le blanc est entièrement réglé et opaque, juste assez ferme pour tenir sa forme. Le jaune se déplace comme du liquide sous une légère pression de la cuillère. L'œuf se tient élégamment.",
+            "action": "Égoutter et déposer immédiatement ou tenir dans de l'eau chaude (pas chaude)."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le jaune est solide et le blanc est caoutchouteux et s'en écarte. L'œuf semble gonflé et sec.",
+            "action": "Servir rapidement — les œufs pochés trop cuits sont encore comestibles, juste coupés en eux avant de servir, donc personne n'est surpris."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous bercez un parfait œuf poché dans une cuillère à fentes, il devrait sentir lourd et liquide au centre — comme un petit ballon d'eau enfermé dans une mince coquille en caoutchouc. La fermeté aux bords blancs, donnant au centre du jaune."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sear",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "toasted_base",
+      "instructions": "Pendant que les œufs braconnent, faire chauffer une poêle sèche ou une grille à feu moyen-élevé. Semer les tranches de bacon canadiennes pendant 2 minutes de chaque côté jusqu'à ce qu'elles soient légèrement caramélisées aux bords et réchauffées. Porter simultanément les moitiés du muffin anglais — coupées dans la même casserole ou sous un grille-pain — jusqu'à ce qu'elles soient dorées et légèrement croustillantes à la surface. La légère croûte du muffin est structurelle : elle empêche le jaune liquide de l'œuf de s'imprégner immédiatement et de faire une base de soggy.",
+      "visualCue": {
+        "primaryTarget": "Bacon canadien aux bords caramélisés légers. Le muffin anglais demi-brun doré et légèrement croquant sur le visage coupé avec les coins caractéristiques et les crannies attraper la chaleur inégalement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bacon est pâle et doux, à peine chauffé. Le muffin est blond et mâche sans croquant.",
+            "action": "Revenez à la chaleur — une minute de plus de chaque côté pour le bacon, et plus longtemps sous la grille pour le muffin."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bacon a des bords acajou clair caramélisé et est chaud à travers. Muffin est doré-brun avec quelques taches plus sombres blisters où les coins ont pris la chaleur.",
+            "action": "Assiette immédiatement : muffin d'abord, puis bacon, puis oeuf, puis hollandaise."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bacon est sec et mâcheux avec des bords croustillants très foncés. Le muffin est dur et fragile plutôt que croquant.",
+            "action": "Benedict est pardonneur. L'hollandaise va tout adoucir."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le muffin grillé à moitié coupé vers le haut — il devrait offrir une faible résistance au craquage à la surface avant de céder la place à un intérieur doux. Ce contraste textural est ce pour quoi il est là."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "toasted_base",
+        "poached_eggs",
+        "hollandaise"
+      ],
+      "outputState": "finished_eggs_benedict",
+      "instructions": "Travaillez rapidement — tout devrait être chaud simultanément. Placez deux moitiés de muffins grillés sur chaque assiette, coupez-la. Coucher une tranche de bacon canadien chaud sur chaque moitié. Utilisez une cuillère à fentes pour soulever soigneusement un œuf poché, poser brièvement le fond sur une serviette de cuisine pliée pour enlever l'excès d'eau, et placer un oeuf sur chaque tranche de bacon. Spoon hollandaise généreusement sur chaque œuf — il devrait baigner autour de la base et cascader le muffin. Terminer avec une poussière de Cayenne ou de paprika. Servir sans retard.",
+      "visualCue": {
+        "primaryTarget": "Une pile composée : muffin doré, bacon acajou, oeuf à dominance blanche, hollandaise dorée en cascade sur les côtés, et un léger roulis de cayenne rouge sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'hollandaise est mince et s'écoule entièrement. Le blanc d'œuf semble rampé et pâle. Le muffin est encore doux.",
+            "action": "Retrousser le muffin et épaissir le hollandaise avant de se réassembler."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque composant est chaud. L'hollandaise est assez épaisse pour s'accrocher lentement à l'œuf et à la cascade. Couper dans l'œuf et le jaune coule doré dans la sauce ci-dessous.",
+            "action": "Mangez immédiatement. Ce plat ne vieillit pas avec grâce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tout ce qui est assis est assemblé pendant 5 minutes — le muffin est soyeux, le jaune est alimenté par la chaleur résiduelle, et le hollandaise s'est refroidi en pâte épaisse.",
+            "action": "La vitesse est tout le jeu. La prochaine fois, étranglez la cuisson pour que tout se termine immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Coupez tout droit à travers le centre de la pile avec le côté d'une fourchette — la résistance devrait aller: un léger croûte de muffin, donnant du bacon, et puis la pop du jaune cassé ouvert pour inonder tout en bas avec un liquide doré chaud."
+    }
+  ]
 };

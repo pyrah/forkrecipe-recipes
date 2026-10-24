@@ -1,77 +1,153 @@
 export default {
-  repoId: "master_japanese_dashi_niboshi_001",
-  parentRepoId: null,
-  slug: "dashi-niboshi",
-  author: "ForkRecipe Kitchen",
-  title: "Niboshi Dashi (Dried Sardine Dashi)",
-  description: "A bold, mineral dashi of niboshi — dried baby anchovies or sardines that have been gutted to remove the bitterness lurking in their entrails, then cold-started in water and slowly coaxed to a near-simmer to draw out their full inosinate depth. Darker, more assertive, and more rustic than ichiban dashi, this is the stock behind miso soup in fishing villages, behind the deep-flavored broths of izakayas, behind anything that needs the sea to speak loudly.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "stocks",
-  tags: ["stock", "japanese", "dashi", "seafood", "gluten-free", "dairy-free"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 2, sour: 0, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Inosinate", name: "Niboshi (dried sardines or baby anchovies), heads and entrails removed", ratioValue: 30, defaultUnit: "g", substitutions: ["iriko (slightly smaller dried anchovies)", "katsuobushi for a cleaner flavor"] },
-    { ingId: "ing_02", role: "Solvent",   name: "Cold filtered water",                                                    ratioValue: 1000, defaultUnit: "g", substitutions: ["spring water"] },
+  "repoId": "master_japanese_dashi_niboshi_001",
+  "parentRepoId": null,
+  "slug": "dashi-niboshi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Niboshi Dashi (Sardine séchée Dashi)",
+  "description": "Un dashi minéral et audacieux de niboshi — des anchois ou des sardines séchés qui ont été vidés pour éliminer l'amertume qui se cache dans leurs entrailles, puis ont commencé à froid dans l'eau et se sont lentement emparés d'un mijot pour en tirer toute leur profondeur inosinée. Plus sombre, plus affirmé et plus rustique que l'ichiban dashi, c'est le stock derrière la soupe miso dans les villages de pêche, derrière les bouillons aromatisés d'izakayas, derrière tout ce qui a besoin de la mer pour parler fort.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "stocks",
+  "tags": [
+    "stock",
+    "Japonais",
+    "Dashi",
+    "Produits de la mer",
+    "Sans gluten",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Prepare niboshi",
-      inputs: ["ing_01"],
-      outputState: "cleaned_niboshi",
-      instructions: "Pinch the head off each dried sardine between thumb and index finger and discard it — this alone removes much of the bitterness. Then split each body lengthwise with your thumbnail and lift out the dark entrails (the tiny gut strip running along the backbone). Not all cooks perform both steps; removing only the heads is the minimum. Removing the entrails as well yields a rounder, less bitter, more refined dashi. Do this dry, before any water touches the fish, as wet niboshi are harder to split cleanly. Some cooks also toast the cleaned niboshi in a dry pan for 1 to 2 minutes over medium heat to deepen the flavor — this is optional but adds a pleasant nutty dimension.",
-      visualCue: {
-        primaryTarget: "Small, pale-tan dried fish, headless and split, with the thin dark gut strip removed, looking clean and uniform. The aroma should smell of dried fish and ocean, not rancid or sour.",
-        spectrum: [
-          { state: "Underdone", description: "Whole niboshi with heads and entrails intact; bitter compounds are still present.", action: "Remove heads and at minimum pinch out the dark gut strip before proceeding — bitterness from the entrails cannot be cooked away once it is in the water." },
-          { state: "Perfect",   description: "Headless, gut-free fish smelling clean and oceanic, slightly toasted if you chose that step, dry and ready for the cold water.", action: "Place directly in cold water to begin the cold-start extraction." },
-          { state: "Overdone",  description: "Over-toasted to dark brown in the dry pan, smelling charred rather than toasty.", action: "Discard burned niboshi — they will make the dashi bitter. Use fresh niboshi without toasting." },
-        ],
-      },
-      feelCue: "The cleaned, dry niboshi should feel light and brittle between your fingers, snapping cleanly. If they bend without breaking they have absorbed moisture and may be stale — the dashi will be weaker and more bitter from degraded inosinate.",
+      "ingId": "ing_01",
+      "role": "Inosinate",
+      "name": "Niboshi (sardines séchées ou anchois pour bébés), têtes et entrailles enlevées",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "iriko (un peu plus petit anchois séchés)",
+        "katsuobushi pour une saveur plus propre"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Cold steep",
-      inputs: ["cleaned_niboshi", "ing_02"],
-      outputState: "steeping_niboshi",
-      instructions: "Place the cleaned niboshi in a saucepan and pour over the cold water. Let them soak for 20 to 30 minutes at room temperature — this cold-start pre-soak hydrates the fish and begins the extraction gently, which helps the inosinate compounds release at low temperatures rather than all at once when heat is applied. Do not skip this step if time allows; it measurably improves the cleanness of the finished dashi. After soaking, you will see the water begin to turn a pale, milky-gold as the first compounds dissolve.",
-      visualCue: {
-        primaryTarget: "After 20 to 30 minutes, the water has turned a pale straw-gold, the niboshi have visibly swollen and softened, and the aroma has shifted from dry fish to a faint, clean oceanic smell.",
-        spectrum: [
-          { state: "Underdone", description: "Skipped the soak entirely; cold niboshi dropped straight into hot water. The extraction will be less controlled and potentially more bitter.", action: "At minimum, allow a 10-minute soak even if time is short. The cold soak is the difference between controlled and hasty extraction." },
-          { state: "Perfect",   description: "Water visibly tinted gold, niboshi swollen and supple when pressed, water smelling of clean sea air and dried fish. Ready to heat.", action: "Move the pot to the stove and begin warming over medium-low heat." },
-          { state: "Overdone",  description: "Left to soak for more than 2 hours at room temperature without refrigerating; the extraction has begun fermenting slightly, producing a sour edge.", action: "If soaking longer than 1 hour, refrigerate. Cold-steep can go overnight in the refrigerator without problem." },
-        ],
-      },
-      feelCue: "After the soak, press a niboshi between your fingers: it should yield, feeling plump and damp rather than rigid. The water around it should feel slightly slippery — the first proteins and fats beginning to dissolve.",
-    },
-    {
-      nodeId: "step_3",
-      action: "Heat and strain",
-      inputs: ["steeping_niboshi"],
-      outputState: "finished_niboshi_dashi",
-      instructions: "Set the pan over medium-low heat and bring the contents slowly to 80 to 85°C (175 to 185°F) — just below a simmer, where the surface shimmers and small bubbles appear at the edges but the center is still. This temperature range extracts the inosinate and the savory amino acids from the fish without crossing the threshold where bitterness compounds dissolve into the water. Maintain this temperature for 10 to 12 minutes. Do not let it boil. Remove from heat and immediately strain through a fine-mesh sieve lined with cheesecloth, pressing the niboshi lightly. Discard the spent fish. The finished dashi will keep 2 days refrigerated.",
-      visualCue: {
-        primaryTarget: "A clear, pale amber to golden-brown liquid, steaming but not simmering, with a clean oceanic and faintly mineral aroma. Held to light it should be translucent, not murky.",
-        spectrum: [
-          { state: "Underdone", description: "The dashi is barely warm, pale, and thin, smelling mostly of dried fish with little depth — the inosinate has not fully extracted.", action: "Continue warming slowly toward 80 to 85°C, checking with a thermometer. If you don't have one, wait until the surface shimmers and edges just begin to bubble." },
-          { state: "Perfect",   description: "Pale gold to amber, clear, steaming steadily, with a savory, mineral, oceanic aroma. On the palate it delivers a firm, assertive umami with a slight mineral bite that distinguishes niboshi dashi from all other dashis.", action: "Strain immediately and use. Season with soy and mirin for miso soup, or use unseasoned as a cooking liquid." },
-          { state: "Overdone",  description: "Brought to a full boil; the dashi has gone cloudy and bitter, with a harsh, fishy aftertaste.", action: "Strain immediately into a clean pot and add a 5 cm piece of kombu; steep for 10 minutes off heat. The kombu's glutamate can buffer and mellow a slightly over-extracted niboshi dashi." },
-        ],
-      },
-      feelCue: "Test the temperature by holding your hand 10 cm above the surface — you should feel a steady, gentle warmth. If the surface is roiling and steam is billowing, you have overshot; pull the pan off the heat immediately and let it cool 2 minutes before straining.",
-    },
+      "ingId": "ing_02",
+      "role": "Solvent",
+      "name": "Eau filtrée à froid",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau de source"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparer les niboshi",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "cleaned_niboshi",
+      "instructions": "Pincez la tête sur chaque sardine séchée entre le pouce et l'index et jetez - cela seul enlève une grande partie de l'amertume. Puis divisez chaque corps dans le sens de la longueur avec votre vignette et soulevez les entrailles sombres (la petite bande intestinale qui coule le long de l'épine dorsale). Tous les cuisiniers n'effectuent pas les deux étapes; le retrait des têtes est le minimum. Enlever les entrailles donne aussi un dashi plus rond, moins amer, plus raffiné. Faites ceci sec, avant que l'eau touche le poisson, car les niboshi humides sont plus difficiles à diviser proprement. Certains cuisinent également toast le niboshi nettoyé dans une casserole sèche pendant 1 à 2 minutes à feu moyen pour approfondir la saveur — c'est optionnel mais ajoute une agréable dimension noix.",
+      "visualCue": {
+        "primaryTarget": "Petit poisson séché à l'eau pâle, sans tête et fendue, avec la fine bande d'intestin foncé enlevée, propre et uniforme. L'arôme doit sentir le poisson séché et l'océan, pas rancissement ou amer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Niboshi entier avec têtes et entrailles intactes; des composés amers sont encore présents.",
+            "action": "Enlevez les têtes et pincez au minimum la bande sombre de l'intestin avant de procéder — l'amertume des entrailles ne peut être cuite une fois dans l'eau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Poisson sans tête, sans intestin, sentant propre et océanique, légèrement grillé si vous choisissez cette étape, sec et prêt pour l'eau froide.",
+            "action": "Placez directement dans l'eau froide pour commencer l'extraction à froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surchauffé à brun foncé dans la poêle sèche, sentant carbonisé plutôt que grillé.",
+            "action": "Jetez les niboshi brûlés — ils rendront les dashi amers. Utilisez du niboshi frais sans toast."
+          }
+        ]
+      },
+      "feelCue": "Les niboshi nettoyés et secs devraient se sentir légers et cassants entre vos doigts, en cassant proprement. S'ils se plient sans se briser, ils ont absorbé de l'humidité et peuvent rester dans l'impasse, le dashi sera plus faible et plus amer de l'inosinate dégradé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Froide raide",
+      "inputs": [
+        "cleaned_niboshi",
+        "ing_02"
+      ],
+      "outputState": "steeping_niboshi",
+      "instructions": "Placer le niboshi nettoyé dans une casserole et verser sur l'eau froide. Laissez-les tremper pendant 20 à 30 minutes à température ambiante — ce pré-soleil de démarrage à froid hydrate le poisson et commence l'extraction doucement, ce qui aide les composés inosinés à se libérer à basse température plutôt que tous à la fois quand la chaleur est appliquée. Ne sautez pas cette étape si le temps le permet ; elle améliore sensiblement la propreté du dashi fini. Après avoir trempé, vous verrez que l'eau commence à tourner un or pâle et laiteux lorsque les premiers composés se dissolvent.",
+      "visualCue": {
+        "primaryTarget": "Après 20 à 30 minutes, l'eau a tourné une paille pâle, les niboshi ont visiblement gonflé et adouci, et l'arôme est passé du poisson sec à une odeur océanique faible et propre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sauté complètement la trempe; le niboshi froid est tombé directement dans l'eau chaude. L'extraction sera moins contrôlée et potentiellement plus amère.",
+            "action": "Au minimum, laisser tremper 10 minutes même si le temps est court. Le trempage à froid est la différence entre l'extraction contrôlée et rapide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Eau visiblement teintée d'or, niboshi gonflé et souple lorsqu'il est pressé, eau qui sent l'air pur de la mer et poisson séché. Prêt à chauffer.",
+            "action": "Déplacez le pot vers le poêle et commencez à chauffer à feu moyen-doux."
+          },
+          {
+            "state": "Overdone",
+            "description": "Laisser tremper plus de 2 heures à température ambiante sans réfrigérer; l'extraction a commencé à fermenter légèrement, produisant un bord aigre.",
+            "action": "Si vous trempez plus d'une heure, réfrigérer. Le froid peut passer la nuit au réfrigérateur sans problème."
+          }
+        ]
+      },
+      "feelCue": "Après l'imprégnation, appuyez sur un niboshi entre les doigts : il devrait céder, se sentir plumé et humide plutôt que rigide. L'eau qui l'entoure doit se sentir légèrement glissante, les premières protéines et graisses commençant à se dissoudre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Chaleur et déformation",
+      "inputs": [
+        "steeping_niboshi"
+      ],
+      "outputState": "finished_niboshi_dashi",
+      "instructions": "Réglez la poêle à feu moyen-doux et portez lentement le contenu à 80 à 85°C (175 à 185°F) – juste en dessous d'une mijote, où la surface mijote et de petites bulles apparaissent aux bords, mais le centre est encore. Cette plage de température extrait l'inosinate et les acides aminés salés du poisson sans franchir le seuil où les composés d'amertume se dissolvent dans l'eau. Maintenir cette température pendant 10 à 12 minutes. Ne le laissez pas bouillir. Retirer du feu et passer immédiatement à travers un tamis à mailles fines doublé de linge de fromage, en appuyant légèrement sur le niboshi. Jetez le poisson usé. Le dashi fini gardera 2 jours réfrigérés.",
+      "visualCue": {
+        "primaryTarget": "Un liquide clair, jaune-ambre à brun doré, vapeur mais pas mijotant, avec un arôme océanique propre et légèrement minéral. L'allumer doit être translucide, et non trouble.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le dashi est à peine chaud, pâle et mince, sentant surtout le poisson séché avec peu de profondeur — l'inosinate n'a pas été complètement extrait.",
+            "action": "Continuer le réchauffement lentement vers 80 à 85°C, en vérifiant avec un thermomètre. Si vous n'en avez pas, attendez que la surface mijote et que les bords commencent à buller."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or pâle à l'ambre, clair, à la vapeur régulièrement, avec un arôme salé, minéral, océanique. En bouche, il délivre un umami ferme et affirmé avec une légère morsure minérale qui distingue niboshi dashi de tous les autres dashis.",
+            "action": "Soudure immédiatement et utiliser. Assaisonner avec du soja et du mirin pour la soupe miso, ou utiliser sans saison comme liquide de cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brûlé à ébullition; le dashi est devenu nuageux et amer, avec un arrière-goût rude et poissonneux.",
+            "action": "Penchez immédiatement dans un pot propre et ajoutez un morceau de kombu de 5 cm; raide pendant 10 minutes hors du feu. Le glutamate du kombu peut tamponner et adoucir un niboshi dashi légèrement surextrait."
+          }
+        ]
+      },
+      "feelCue": "Testez la température en tenant votre main 10 cm au - dessus de la surface — vous devriez sentir une chaleur douce et régulière. Si la surface est enroulée et que la vapeur est en bouillie, vous avez une overshot; retirez immédiatement la poêle de la chaleur et laissez refroidir 2 minutes avant de la forcer."
+    }
+  ]
 };

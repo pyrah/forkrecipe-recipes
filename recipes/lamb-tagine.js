@@ -1,121 +1,333 @@
 export default {
-  repoId: "master_moroccan_lambtagine_001",
-  parentRepoId: null,
-  slug: "lamb-tagine",
-  author: "ForkRecipe Kitchen",
-  title: "Moroccan Lamb Tagine with Preserved Lemon and Olives",
-  description: "Bone-in lamb shoulder braised for two hours in a perfumed cloud of ras el hanout, saffron, and ginger until it falls apart in the hand — then finished with the sharp salinity of preserved lemon and the brine of cracked green olives.",
-  cuisine: "Moroccan",
-  culture: "Marrakchi",
-  category: "proteins",
-  tags: ["lamb", "moroccan", "tagine", "braised", "saffron", "preserved-lemon", "olives", "marrakech"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "3 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 1, umami: 3, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in lamb shoulder, cut into 5cm pieces", ratioValue: 1200, defaultUnit: "g",   substitutions: ["bone-in lamb neck", "bone-in goat shoulder"] },
-    { ingId: "ing_02", role: "Allium",    name: "White onion, coarsely grated",               ratioValue: 200,  defaultUnit: "g",   substitutions: ["yellow onion"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, minced to paste",             ratioValue: 4,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",     name: "Ras el hanout",                              ratioValue: 12,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground ginger",                              ratioValue: 5,    defaultUnit: "g",   substitutions: ["fresh ginger, grated"] },
-    { ingId: "ing_06", role: "Spice",     name: "Ground turmeric",                            ratioValue: 3,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Saffron threads",                            ratioValue: 0.3,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_08", role: "Acid",      name: "Preserved lemon rind, pith removed, finely sliced", ratioValue: 1, defaultUnit: "quarter", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Cracked green olives (picholine or Castelvetrano)", ratioValue: 80, defaultUnit: "g", substitutions: ["Moroccan beldi olives"] },
-    { ingId: "ing_10", role: "Herb",      name: "Fresh cilantro, roughly torn",               ratioValue: 20,   defaultUnit: "g",   substitutions: ["flat-leaf parsley"] },
-    { ingId: "ing_11", role: "Herb",      name: "Flat-leaf parsley, roughly torn",            ratioValue: 20,   defaultUnit: "g",   substitutions: ["fresh cilantro"] },
-    { ingId: "ing_12", role: "Fat",       name: "Extra-virgin olive oil",                     ratioValue: 45,   defaultUnit: "ml",  substitutions: ["argan oil for serving"] },
-    { ingId: "ing_13", role: "Liquid",    name: "Water or light chicken stock",               ratioValue: 200,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_14", role: "Seasoning", name: "Fine sea salt",                              ratioValue: 8,    defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_moroccan_lambtagine_001",
+  "parentRepoId": null,
+  "slug": "lamb-tagine",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tagine d'agneau marocain avec citron et olives conservés",
+  "description": "L'épaule d'agneau ossée braisée pendant deux heures dans un nuage parfumé de ras el hanout, de safran et de gingembre jusqu'à ce qu'elle tombe à la main, puis finie avec la salinité aiguë du citron conservé et la saumure d'olives vertes craquelées.",
+  "cuisine": "Maroc",
+  "culture": "Marrakchi",
+  "category": "proteins",
+  "tags": [
+    "agneau",
+    "Maroc",
+    "Tagine",
+    "braisés",
+    "safran",
+    "conserve de citron",
+    "olives",
+    "Marrakech"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Bloom",
-      inputs: ["ing_07", "ing_13"],
-      outputState: "saffron_water",
-      instructions: "Crumble the saffron threads between your fingers directly into a small bowl. Pour 3 tablespoons (45ml) of just-boiled water over them and stir. Let steep for at least 15 minutes — the liquid will turn a vivid amber-gold and smell floral and honeyed. This blooming step extracts the picrocrocin and safranal compounds that give saffron its colour and fragrance, which dissolve far more completely in hot water than in oil or cold liquid. Reserve the remaining liquid as cooking water.",
-      visualCue: {
-        primaryTarget: "After 15 minutes: a vivid amber-gold liquid with a distinctly floral, hay-like fragrance. The threads have lightened to a pale orange-yellow.",
-        spectrum: [
-          { state: "Underdone", description: "After 5 minutes: liquid is still pale yellow, barely tinted. Colour and aroma extraction is minimal.", action: "Wait the full 15 minutes. Heat accelerates the release — if the water has cooled too much, add a splash of boiling water." },
-          { state: "Perfect",   description: "Vivid amber-gold, deeply fragrant. Threads are spent and pale. A drop on white paper shows a rich golden stain.", action: "Set aside and begin browning the lamb." },
-          { state: "Overdone",  description: "Impossible to over-bloom saffron in water — it can only be over-exposed to high heat during cooking, which damages the aroma.", action: "Proceed. The saffron water can steep for up to an hour with no downside." },
-        ],
-      },
-      feelCue: "Dip a fingertip into the saffron water and rub — it should stain your skin immediately and lastingly, a warm golden-orange that smells floral and faintly medicinal.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Epaule d'agneau désossée, coupée en morceaux de 5 cm",
+      "ratioValue": 1200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cou d'agneau osseux",
+        "épaule de chèvre"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["ing_01", "ing_12", "ing_14"],
-      outputState: "browned_lamb",
-      instructions: "Heat the olive oil in a wide tagine base or heavy casserole over medium-high heat. Season the lamb pieces with salt. Working in two or three batches — never crowd the pan — sear the lamb on all cut sides until deeply mahogany-brown. Each piece needs 3–4 minutes undisturbed per side. Resist the urge to move the meat: it will release when the crust has formed. This browning is not about cooking the lamb through — it is about building the deep, caramelised fond that becomes the flavour foundation of the entire braise.",
-      visualCue: {
-        primaryTarget: "Lamb pieces with a deep mahogany-brown crust on all cut surfaces. A golden-brown fond on the pan bottom — not black, not pale.",
-        spectrum: [
-          { state: "Underdone", description: "Lamb is grey and steamed rather than browned. Pale surface, no crust, the meat stuck and tore when moved.", action: "The pan was crowded or not hot enough. Dry the lamb pieces and sear in smaller batches over higher heat." },
-          { state: "Perfect",   description: "Rich, dark mahogany crust on all surfaces. A fragrant golden fond on the pot bottom. The kitchen smells of caramelised meat and olive oil.", action: "Remove browned pieces to a plate and sear the remaining batches." },
-          { state: "Overdone",  description: "Lamb is blackened on the outside and the fond is dark brown and acrid-smelling.", action: "Reduce heat immediately. Deglaze the pan with a splash of water and discard the darkest liquid before building the braise." },
-        ],
-      },
-      feelCue: "Lift a browned lamb piece — the crust should feel firm and dry, not soft and slippery. A deep mahogany sear feels slightly rough under the fingers, like toasted bread.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon blanc, râpé grossièrement",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Braise",
-      inputs: ["browned_lamb", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "saffron_water"],
-      outputState: "braised_lamb",
-      instructions: "In the same pot, add the grated onion and garlic paste over medium heat. Cook, stirring, for 5 minutes until the onion has softened and most of its moisture has evaporated — it should look jammy rather than watery. Add the ras el hanout, ginger, and turmeric; stir for 1 minute until the spices are fragrant and coating the onion. Return all the browned lamb to the pot, nestling the pieces tightly together. Pour in the saffron water and the remaining liquid. Bring to a gentle simmer, cover tightly, and cook on the lowest possible heat for 2 hours. Check and stir every 30 minutes, ensuring the bottom is not scorching.",
-      visualCue: {
-        primaryTarget: "After 2 hours: a deep amber-red sauce clinging to tender lamb. The sauce has reduced by about a third and looks glossy. The lamb should be yielding at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "After 1 hour: lamb is still firm and resists a knife. Sauce is thin and watery. The meat pulls away from the bone but fibres are still tough.", action: "Re-cover and continue braising. Lamb shoulder needs a full 2 hours — in a real tagine over low charcoal, even longer." },
-          { state: "Perfect",   description: "Lamb is profoundly tender — it yields to a spoon and the bone pulls free easily. Sauce is glossy and coating, deep golden-amber from the saffron and turmeric. Smells of saffron, warm spice, and caramelised meat.", action: "Uncover the pot and add preserved lemon and olives for the final reduction." },
-          { state: "Overdone",  description: "Lamb has completely dissolved into the sauce. Liquid has reduced to a thick paste. Smell is slightly scorched.", action: "Add hot water to loosen, reduce heat to the absolute minimum, and stir gently to prevent further sticking." },
-        ],
-      },
-      feelCue: "Press a piece of braised lamb with a spoon after 90 minutes — it should yield completely, feeling soft as ripe Brie rather than the springy resistance of undercooked meat.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Giroves d'ail hachées à pâte",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["braised_lamb", "ing_08", "ing_09"],
-      outputState: "reduced_tagine",
-      instructions: "Add the sliced preserved lemon rind and the cracked green olives. Stir gently to distribute — the lemon and olives are fragile. Uncover the pot and increase heat slightly to a medium simmer. Cook for a further 15–20 minutes, stirring occasionally, until the sauce has reduced to a glossy, coating consistency. The preserved lemon will mellow and perfume the sauce with a complex floral-salty citrus note. Taste: if too salty (the olives and lemon add significant sodium), do not add more salt; instead add a pinch of sugar or a splash of water.",
-      visualCue: {
-        primaryTarget: "A glossy, lightly reduced sauce with visible flecks of pale preserved lemon and rounds of olive. The sauce should coat the back of a spoon and fall in thick drops, not run.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still thin and watery. Preserved lemon and olives are distinct and separate from the sauce — not yet integrated.", action: "Continue reducing uncovered. Stir gently and taste — the lemon needs at least 10 minutes to soften and perfume the braise." },
-          { state: "Perfect",   description: "Glossy, coating sauce with the preserved lemon flavour woven throughout. Olives are plump and have softened slightly. The tagine smells of saffron, lemon, and olive brine.", action: "Proceed to finishing with fresh herbs." },
-          { state: "Overdone",  description: "Sauce has reduced to a thick, salty paste and the lemon has become very bitter from over-reduction.", action: "Add hot water and stir vigorously. Taste for bitterness before adding more lemon." },
-        ],
-      },
-      feelCue: "Drag a spoon through the sauce — it should leave a clean trail that holds for 2–3 seconds before the sauce closes back in. If it runs immediately, reduce further.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Le Président",
+      "ratioValue": 12,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Season",
-      inputs: ["reduced_tagine", "ing_10", "ing_11"],
-      outputState: "lamb_tagine",
-      instructions: "Remove from heat. Taste for salt, acid, and depth — adjust with a final pinch of salt or a drop of lemon juice if needed. Scatter the torn cilantro and flat-leaf parsley generously over the surface. Serve directly from the pot at the table. Eat with crusty bread or couscous, using the bread to scoop — never a fork. The lamb should fall into the sauce when a spoon touches it.",
-      visualCue: {
-        primaryTarget: "A landscape of amber sauce, tender lamb, pale preserved lemon, and green olives under a generous scatter of bright green herbs.",
-        spectrum: [
-          { state: "Underdone", description: "Herbs added while the tagine is still at a hard boil — they've wilted into khaki rags. The freshness is gone.", action: "Add herbs only off the heat. If already wilted, add a fresh handful right before serving." },
-          { state: "Perfect",   description: "Bright green cilantro and parsley against the deep amber sauce. Herbs look freshly torn. The fragrance when you lean over the pot combines saffron, preserved lemon, herb, and lamb.", action: "Serve immediately from the pot." },
-          { state: "Overdone",  description: "Too much herb has been added — the tagine smells more like tabbouleh than a braise.", action: "Balance by scooping some herb off the top before serving. The dish should smell of lamb first, herbs second." },
-        ],
-      },
-      feelCue: "Scoop a piece of lamb with a spoon — it should offer no resistance and settle back into the sauce under its own weight. The sauce on the spoon should coat your lips lightly, like a loose veloutine.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Gingembre moulu",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gingembre frais, râpé"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Fils de safran",
+      "ratioValue": 0.3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "Ronde de citron conservée, épilée, tranchée finement",
+      "ratioValue": 1,
+      "defaultUnit": "quarter",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Olives vertes craquées (picholine ou Castelvetrano)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "olives beldi marocaines"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Coriandre fraîche, grossièrement déchirée",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Persil à feuilles plates"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, approximativement déchiré",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "coriandre fraîche"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile d'argan pour servir"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Liquid",
+      "name": "Eau ou bouillon de poulet léger",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bloom",
+      "inputs": [
+        "ing_07",
+        "ing_13"
+      ],
+      "outputState": "saffron_water",
+      "instructions": "Crumblez les fils de safran entre vos doigts directement dans un petit bol. Verser 3 cuillères à soupe (45ml) d'eau juste bouillie sur elles et remuer. Laisser raide pendant au moins 15 minutes — le liquide tournera un or ambre vif et sentira floral et miellé. Cette étape de floraison extrait la picrocrocine et les composés safranaux qui donnent au safran sa couleur et sa fragrance, qui se dissolvent beaucoup plus complètement dans l'eau chaude que dans l'huile ou le liquide froid. Réserver le liquide restant comme eau de cuisson.",
+      "visualCue": {
+        "primaryTarget": "Après 15 minutes : un liquide ambré-or vif avec un parfum très floral, semblable au foin. Les fils sont allégés à un jaune orange pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 5 minutes : le liquide est encore jaune pâle, à peine teinté. L'extraction de la couleur et de l'arôme est minimale.",
+            "action": "Attendez 15 minutes. La chaleur accélère la libération — si l'eau a trop refroidi, ajoutez une éclaboussure d'eau bouillante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vivide ambre-or, profondément parfumée. Les fils sont épuisés et pâles. Une goutte sur le papier blanc montre une riche tache dorée.",
+            "action": "Réserver et commencer à brunir l'agneau."
+          },
+          {
+            "state": "Overdone",
+            "description": "Impossible de surbrilonner le safran dans l'eau — il ne peut être surexposé à la chaleur élevée pendant la cuisson, ce qui endommage l'arôme.",
+            "action": "Continuez. L'eau de safran peut descendre jusqu'à une heure sans inconvénient."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt dans l'eau de safran et frottez - il doit tacher votre peau immédiatement et durablement, un orange doré chaud qui sent floral et faiblement médicinal."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "ing_01",
+        "ing_12",
+        "ing_14"
+      ],
+      "outputState": "browned_lamb",
+      "instructions": "Chauffer l'huile d'olive dans une large base de tagine ou une casserole lourde à feu moyen-vif. Assaisonner les morceaux d'agneau avec du sel. Travailler en deux ou trois lots — ne jamais fouler la poêle — saisir l'agneau sur tous les côtés coupés jusqu'à ce que profondément acajou-brun. Chaque pièce a besoin de 3-4 minutes non perturbé par côté. Résistez à l'envie de déplacer la viande : elle se libérera lorsque la croûte se sera formée. Ce brunissement n'est pas une question de cuisson de l'agneau, c'est une question de construction d'un fond caramélisé profond qui devient le fondement du braise entier.",
+      "visualCue": {
+        "primaryTarget": "Morceaux d'agneau avec une croûte acajou-brun profonde sur toutes les surfaces coupées. Un amour doré sur le fond de la poêle — pas noir, pas pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'agneau est gris et cuit à la vapeur plutôt que bruni. Surface pâle, pas de croûte, la viande collée et déchirée lorsqu'elle est déplacée.",
+            "action": "La casserole était bondée ou pas assez chaude. Sécher les morceaux d'agneau et les saisir en petits lots à feu plus élevé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche, croûte d'acajou foncée sur toutes les surfaces. Un parfum doré sur le fond du pot. La cuisine sent la viande caramélisée et l'huile d'olive.",
+            "action": "Retirer les morceaux brunis dans une assiette et saisir les lots restants."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'agneau est noirci à l'extérieur et le fond est brun foncé et acride-smelling.",
+            "action": "Réduire immédiatement la chaleur. Déglacer la poêle avec un jet d'eau et jeter le liquide le plus sombre avant de construire le braise."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un morceau d'agneau bruni — la croûte doit être ferme et sèche, non molle et glissante. Une couche d'acajou profonde se sent légèrement rugueuse sous les doigts, comme du pain grillé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "browned_lamb",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "saffron_water"
+      ],
+      "outputState": "braised_lamb",
+      "instructions": "Dans la même casserole, ajouter l'oignon râpé et la pâte d'ail à feu moyen. Cuire en remuant pendant 5 minutes jusqu'à ce que l'oignon se ramollisse et que la majeure partie de son humidité s'évapore. Ajouter le ras el hanout, le gingembre et le curcuma; remuer pendant 1 minute jusqu'à ce que les épices soient parfumées et enrober l'oignon. Retournez tous les agneaux brunis dans le pot, en les baissant étroitement. Verser l'eau de safran et le liquide restant. Porter à mijoter doucement, couvrir soigneusement et cuire sur le feu le plus bas possible pendant 2 heures. Vérifiez et remuez toutes les 30 minutes, en veillant à ce que le fond ne brûle pas.",
+      "visualCue": {
+        "primaryTarget": "Après 2 heures : une sauce rouge-ambre profonde s'accroche à l'agneau tendre. La sauce a diminué d'environ un tiers et semble brillante. L'agneau doit se déposer aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 1 heure: l'agneau est encore ferme et résiste à un couteau. La sauce est fine et aqueuse. La viande s'éloigne de l'os mais les fibres sont encore dures.",
+            "action": "Récupérer et continuer à faire du louage. L'épaule d'agneau a besoin de 2 heures complètes — dans un vrai tagine sur le bas charbon, encore plus longtemps."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'agneau est profondément tendre — il donne à une cuillère et l'os tire facilement. La sauce est brillante et enduite, d'or-ambre profond du safran et du curcuma. Des odeurs de safran, d'épices chaudes et de viande caramélisée.",
+            "action": "Découvrez le pot et ajoutez le citron et les olives conservés pour la réduction finale."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'agneau est complètement dissous dans la sauce. Le liquide est réduit à une pâte épaisse. L'odeur est légèrement brûlée.",
+            "action": "Ajouter l'eau chaude pour se détendre, réduire la chaleur au minimum absolu, et remuer doucement pour éviter d'autres collages."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau d'agneau braisé avec une cuillère après 90 minutes — il devrait donner complètement, se sentir doux comme le Brie mûr plutôt que la résistance printanière de la viande sous-cuite."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "braised_lamb",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "reduced_tagine",
+      "instructions": "Ajouter la croûte de citron et les olives vertes craquelées. Mélanger doucement à distribuer – le citron et les olives sont fragiles. Découvrez la casserole et augmentez légèrement à mijoter. Cuire encore 15 à 20 minutes, en remuant occasionnellement, jusqu'à ce que la sauce ait réduit à une consistance de revêtement brillante. Le citron conservé moellera et parfumera la sauce avec une note d'agrumes floral-sel complexe. Bouche: Si trop salé (les olives et le citron ajoutent du sodium significatif), n'ajoutez pas plus de sel; ajoutez plutôt une pincée de sucre ou une éclaboussure d'eau.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lustrée, légèrement réduite avec des taches visibles de citron pâle conservé et des ronds d'olive. La sauce doit enrober l'arrière d'une cuillère et tomber dans des gouttes épaisses, pas courir.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore fine et aqueuse. Le citron et les olives conservés sont distincts et séparés de la sauce — pas encore intégrés.",
+            "action": "Continuer à réduire à découvert. Mélanger doucement et goûter — le citron a besoin d'au moins 10 minutes pour adoucir et parfumer le braise."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sauce brillante, enrobée de l'arôme de citron conservé tissée. Les olives sont ramollies et légèrement ramollies. Le tagine sent le safran, le citron et la saumure d'olive.",
+            "action": "Terminer avec des herbes fraîches."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite à une pâte épaisse et salée et le citron est devenu très amer par sur-réduction.",
+            "action": "Ajouter l'eau chaude et remuer vigoureusement. Goûtez à l'amertume avant d'ajouter plus de citron."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère dans la sauce — elle devrait laisser une piste propre qui tient pendant 2-3 secondes avant que la sauce se referme. Si elle fonctionne immédiatement, réduisez encore."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Saison",
+      "inputs": [
+        "reduced_tagine",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "lamb_tagine",
+      "instructions": "Retirer du feu. Goûtez au sel, à l'acide et à la profondeur — ajustez avec une dernière pincée de sel ou une goutte de jus de citron si nécessaire. Dispersez généreusement la coriandre déchirée et le persil à feuilles plates sur la surface. Servir directement de la casserole à la table. Mangez avec du pain croustillant ou du couscous, en utilisant le pain pour croquer — jamais une fourchette. L'agneau devrait tomber dans la sauce quand une cuillère la touche.",
+      "visualCue": {
+        "primaryTarget": "Un paysage de sauce ambre, d'agneau tendre, de citron pâle et d'olives vertes sous une généreuse dispersion d'herbes vertes vives.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les herbes ajoutées alors que le tagine est encore à ébullition dure — elles se sont flétries dans des chiffons kakis. La fraîcheur a disparu.",
+            "action": "Ajouter les herbes seulement de la chaleur. Si vous avez déjà flétri, ajoutez une poignée fraîche juste avant de servir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Coriandre et persil vert vif contre la sauce ambre profonde. Les herbes semblent fraîchement déchirées. Le parfum lorsque vous vous penchez sur le pot combine le safran, le citron conservé, l'herbe et l'agneau.",
+            "action": "Servir immédiatement du pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop d'herbes ont été ajoutées — le tagine sent plus comme tabouleh qu'un braise.",
+            "action": "Équilibre en arrachant un peu d'herbe sur le dessus avant de servir. Le plat doit sentir l'agneau d'abord, les herbes ensuite."
+          }
+        ]
+      },
+      "feelCue": "Couper un morceau d'agneau avec une cuillère — il ne devrait pas offrir de résistance et revenir dans la sauce sous son propre poids. La sauce sur la cuillère devrait enrober vos lèvres légèrement, comme une veloutine lâche."
+    }
+  ]
 };

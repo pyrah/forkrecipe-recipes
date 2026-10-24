@@ -1,78 +1,163 @@
 export default {
-  repoId: "master_french_brown-butter_001",
-  parentRepoId: null,
-  slug: "brown-butter",
-  author: "ForkRecipe Kitchen",
-  title: "Brown Butter (Beurre Noisette)",
-  description: "The nutty, toasted transformation of ordinary butter — milk solids cook past the point of foam and settle to hazelnut-brown sediment while the fat turns a deep gold, the whole thing smelling unmistakably of toasted hazelnuts and caramel.",
-  cuisine: "French",
-  culture: "French",
-  category: "condiments",
-  tags: ["french", "butter", "nutty", "condiment", "sauce-base", "quick"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 2, sour: 0, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Unsalted butter",                      ratioValue: 100, defaultUnit: "g",  substitutions: ["salted butter (omit any added salt)"] },
-    { ingId: "ing_02", role: "Acid",      name: "Fresh lemon juice (optional, for arresting)",  ratioValue: 3,   defaultUnit: "g",  substitutions: ["white wine vinegar"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Flaky sea salt (optional finish)",      ratioValue: 0.5, defaultUnit: "g",  substitutions: ["fine sea salt"] },
+  "repoId": "master_french_brown-butter_001",
+  "parentRepoId": null,
+  "slug": "brown-butter",
+  "author": "ForkRecipe Kitchen",
+  "title": "Beurre brun (Beurre Noisette)",
+  "description": "La transformation de la noix, grillée, du beurre ordinaire — les solides de lait font cuire au-delà du point de mousse et s'installent dans les sédiments brun noisette tandis que la graisse devient un or profond, tout ce qui sent sans équivoque les noisettes grillées et le caramel.",
+  "cuisine": "Français",
+  "culture": "Français",
+  "category": "condiments",
+  "tags": [
+    "français",
+    "beurre",
+    "Noix",
+    "condiment",
+    "sauce-base",
+    "Vite"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Melt",
-      inputs: ["ing_01"],
-      outputState: "melted_foaming_butter",
-      instructions: "Cut the butter into even cubes and place in a light-coloured stainless-steel or enamel saucepan — never a dark pan, because you need to see the colour of the milk solids clearly. Set over medium heat. As the butter melts, it will begin to foam vigorously: this is water boiling off. Swirl the pan gently every 30 seconds rather than stirring, which can prevent even browning. The foam will rise, subside slightly, then rise again into a second foam — this second foam is the signal that the water is nearly gone and browning is about to begin. Watch the pan intently from this moment.",
-      visualCue: {
-        primaryTarget: "Butter fully melted, foaming steadily in a single vigorous layer. The liquid beneath the foam is clear yellow-gold, not yet brown. A faint nutty scent is just beginning to emerge.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is only partially melted, still showing white chunks. Foam is thin and translucent.", action: "Continue heating on medium. Do not rush by raising the heat — uneven heat causes the edges to burn before the centre browns." },
-          { state: "Perfect",   description: "Fully melted, butter vigorously foaming with a clear gold base below. The foam begins to subside slightly, indicating the water is nearly cooked off.", action: "Reduce heat very slightly and watch for the second foam and the appearance of brown sediment below." },
-          { state: "Overdone",  description: "Foam has disappeared entirely and the butter is already deep amber — browning happened under the foam without warning.", action: "You may still be salvageable: immediately remove from heat, swirl, and pour off into a bowl. Check for bitterness before using." },
-        ],
-      },
-      feelCue: "The saucepan handle should be warm but comfortable. The sound of the butter should progress from a loud, wet sizzle to a quieter, drier crackling — that quiet crackle is the water nearly gone, your cue to watch closely.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "beurre salé (comprimer tout sel ajouté)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Caramelize",
-      inputs: ["melted_foaming_butter"],
-      outputState: "browned_butter",
-      instructions: "Once the second foam appears, tilt the pan and peer through the foam at the bottom of the pan: small golden-brown specks should be forming on the floor of the pan — these are the milk solids caramelising. Swirl constantly now. The colour will progress from cream to tan to hazelnut in a matter of seconds. The moment the specks reach a deep amber-hazelnut colour and the kitchen fills with the unmistakable scent of roasted hazelnuts, remove the pan from the heat. Carryover heat will continue cooking the butter for 30 seconds off the stove.",
-      visualCue: {
-        primaryTarget: "The foam has thinned to reveal a deep amber-gold liquid below with dark golden-brown specks — noisette — evenly distributed across the pan floor. The aroma is unmistakably of toasted hazelnuts and caramel.",
-        spectrum: [
-          { state: "Underdone", description: "Specks are pale yellow or cream coloured. Butter smells of cooked butter but not yet nuts. Flavour is mild and lacks the toasted complexity.", action: "Return to heat and continue swirling. The transition to perfect hazelnut happens quickly from this point." },
-          { state: "Perfect",   description: "Specks are the colour of hazelnuts — a warm amber-brown, not dark brown. Liquid is deep gold. The smell is powerfully nutty, sweet, and slightly caramelised.", action: "Immediately pour into a cold bowl to stop cooking, or add lemon juice directly in the pan to arrest it." },
-          { state: "Overdone",  description: "Specks have turned dark brown to black, the liquid is very dark amber, and the smell has shifted from nutty to sharp and bitter. The butter has crossed into beurre noir.", action: "If it smells bitter and acrid, discard and start again. If only slightly over, pour immediately and taste — a mildly dark batch can still work in robust applications like brown butter vinaigrette." },
-        ],
-      },
-      feelCue: "Smell is your primary sense here: the shift from 'cooked butter' to 'roasted hazelnuts' is sudden and unmistakable, like the moment a piece of toast crosses from pale to golden. Trust your nose more than your eyes.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Jus de citron frais (facultatif, pour l'arrêt)",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Finish",
-      inputs: ["browned_butter", "ing_02", "ing_03"],
-      outputState: "finished_brown_butter",
-      instructions: "Pour the browned butter immediately into a cool, heatproof bowl to arrest the cooking — the pan is still very hot and will continue to darken the solids if you leave them in it. If using as a sauce immediately, squeeze in the lemon juice now; it stops cooking instantly and adds a bright lift that cuts the richness. Season with flaky salt if desired. The brown milk-solid sediment is the most flavourful part — do not strain it out unless the recipe specifically requires clarified brown butter. Use immediately while warm and fluid, or let cool to a golden paste for pastry applications.",
-      visualCue: {
-        primaryTarget: "A deep amber-gold liquid in a cool bowl, with a settled layer of toasty hazelnut-brown sediment at the bottom. The surface shimmers gold and smells overwhelmingly of roasted hazelnuts.",
-        spectrum: [
-          { state: "Underdone", description: "Poured too early — butter is golden but specks are cream-coloured and the nutty aroma is faint. It is essentially just clarified butter.", action: "Pour it back into the pan and continue cooking briefly. The milk solids have not caramelised yet." },
-          { state: "Perfect",   description: "Deep gold, with amber sediment, aromas of roasted nuts and caramel. Tastes nutty, rich, and slightly sweet with no bitterness.", action: "Use immediately or cool and refrigerate for up to 2 weeks." },
-          { state: "Overdone",  description: "Very dark with black specks; a bitter, acrid edge dominates the hazelnut scent.", action: "If only mildly bitter, balance with extra lemon and use in small quantities. If very bitter, discard — burnt butter ruins delicate preparations." },
-        ],
-      },
-      feelCue: "Dip a spoon and let a drop fall onto your wrist: it should feel hot but not violent, and the aroma that rises should be all hazelnut and caramel. If you smell any hint of smoke or plastic, the butter went too far.",
-    },
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel de mer aplati (finition facultative)",
+      "ratioValue": 0.5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel de mer fin"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire fondre",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "melted_foaming_butter",
+      "instructions": "Coupez le beurre en cubes et placez-le dans une casserole en acier inoxydable ou émail de couleur claire – jamais une poêle sombre, car vous devez voir clairement la couleur des solides de lait. Régler à feu moyen. Au fur et à mesure que le beurre fond, il commence à mousser vigoureusement : c'est de l'eau bouillante. Tourner doucement la poêle toutes les 30 secondes au lieu de remuer, ce qui peut empêcher le brunissement. La mousse s'élèvera légèrement, puis reprendra dans une deuxième mousse.Cette deuxième mousse est le signal que l'eau est presque partie et que le brunissement est sur le point de commencer. Regardez attentivement la casserole dès maintenant.",
+      "visualCue": {
+        "primaryTarget": "Beurre entièrement fondu, mousser régulièrement dans une seule couche vigoureuse. Le liquide sous la mousse est clair jaune-or, pas encore brun. Un léger parfum de noix commence à peine à émerger.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre n'est que partiellement fondu, toujours avec des morceaux blancs. La mousse est mince et transparente.",
+            "action": "Continuer le chauffage sur moyenne. Ne vous précipitez pas en soulevant la chaleur — une chaleur inégale fait brûler les bords avant que le centre brunisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement fondu, le beurre mousse vigoureusement avec une base en or clair ci-dessous. La mousse commence à diminuer légèrement, indiquant que l'eau est presque cuite.",
+            "action": "Réduire très légèrement la chaleur et surveiller la deuxième mousse et l'apparence des sédiments bruns ci-dessous."
+          },
+          {
+            "state": "Overdone",
+            "description": "La mousse a complètement disparu et le beurre est déjà ambre profond — le brunissement s'est produit sous la mousse sans avertissement.",
+            "action": "Vous pouvez encore être récupérable : retirer immédiatement de la chaleur, tourbillonner et verser dans un bol. Vérifiez l'amertume avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "La poignée de la casserole doit être chaude mais confortable. Le bruit du beurre devrait passer d'un étourdissement fort et humide à un crépitement plus calme et plus sec — ce crépitement calme est l'eau presque disparue, votre signal de regarder de près."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Caramélisation",
+      "inputs": [
+        "melted_foaming_butter"
+      ],
+      "outputState": "browned_butter",
+      "instructions": "Une fois que la deuxième mousse apparaît, inclinez la casserole et faites-la passer par la mousse au fond de la casserole : de petites taches dorées doivent se former sur le sol de la casserole — ce sont les solides de lait caramélisant. Courir constamment maintenant. La couleur passera de la crème au bronzage en quelques secondes. Au moment où les taches atteignent une couleur ambrée-hazelnut profonde et la cuisine se remplit de l'odeur incomparable des noisettes grillées, retirer la poêle de la chaleur. La chaleur de report continuera à cuire le beurre pendant 30 secondes hors du poêle.",
+      "visualCue": {
+        "primaryTarget": "La mousse s'est éclaircie pour révéler un liquide d'or ambré profond en dessous avec des taches brunes d'or foncées — bruitette — réparties uniformément sur le plancher de la casserole. L'arôme est incomparablement de noisettes grillées et de caramel.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les taches sont de couleur jaune pâle ou crème. Beurre sent le beurre cuit mais pas encore les noix. La saveur est douce et manque de complexité grillée.",
+            "action": "Retourner à la chaleur et continuer à tourner. La transition vers la noisette parfaite se produit rapidement à partir de ce point."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les mouches sont de couleur noisette, un brun-ambre chaud, pas brun foncé. Le liquide est en or profond. L'odeur est puissantement noisette, douce et légèrement caramélisée.",
+            "action": "Verser immédiatement dans un bol froid pour arrêter la cuisson, ou ajouter le jus de citron directement dans la poêle pour l'arrêter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les mouches sont devenues brunes foncées et noires, le liquide est très foncé et l'odeur est passée de la noix à l'amère. Le beurre a traversé le beurre noir.",
+            "action": "S'il sent amer et acride, jetez-le et recommencez. Si seulement légèrement sur, verser immédiatement et goûter — un lot légèrement sombre peut encore fonctionner dans des applications robustes comme la vinaigrette au beurre brun."
+          }
+        ]
+      },
+      "feelCue": "L'odeur est votre sens principal ici : le passage du « beurre cuit » aux « noisettes grillées » est soudain et indiscutable, comme au moment où un morceau de toast passe de pâle à dorée. Faites confiance à votre nez plus que vos yeux."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Finition",
+      "inputs": [
+        "browned_butter",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "finished_brown_butter",
+      "instructions": "Verser immédiatement le beurre brun dans un bol frais et résistant à la chaleur pour arrêter la cuisson — la poêle est encore très chaude et continuera à noircir les solides si vous les laissez dedans. Si vous utilisez comme sauce immédiatement, pressez dans le jus de citron maintenant; il arrête la cuisson instantanément et ajoute un ascenseur lumineux qui coupe la richesse. Assaisonner de sel si désiré. Le sédiment lait-solide brun est la partie la plus parfumée — ne pas l'extirper à moins que la recette exige spécifiquement du beurre brun clarifié. Utilisez immédiatement pendant que vous êtes chaud et fluide, ou laissez refroidir à une pâte dorée pour les applications de pâtisserie.",
+      "visualCue": {
+        "primaryTarget": "Un liquide ambre-or profond dans un bol frais, avec une couche de sédiment brun noisette grillé au fond. La surface mijote l'or et sent la plupart des noisettes grillées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Versé trop tôt — le beurre est doré mais les taches sont de couleur crème et l'arôme de noix est faible. C'est essentiellement du beurre clarifié.",
+            "action": "Versez-le dans la poêle et continuez à cuire brièvement. Les solides de lait n'ont pas encore caramélisé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or profond, avec sédiments ambres, arômes de noix grillées et de caramel. Goûte à la noix, riche et légèrement sucré sans amertume.",
+            "action": "Utiliser immédiatement ou refroidir et réfrigérer jusqu'à 2 semaines."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très foncé avec des taches noires ; un bord amer et acride domine le parfum de noisette.",
+            "action": "Si seulement légèrement amer, équilibrez avec le citron supplémentaire et utilisez en petites quantités. S'il est très amer, jetez - le beurre brûlé ruine les préparations délicates."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère et laissez tomber une goutte sur votre poignet: il doit sentir chaud mais pas violent, et l'arôme qui s'élève doit être toute la noisette et le caramel. Si vous sentez un soupçon de fumée ou de plastique, le beurre est allé trop loin."
+    }
+  ]
 };

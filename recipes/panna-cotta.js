@@ -1,95 +1,248 @@
 export default {
-  repoId: "master_italian_panna_cotta_001",
-  parentRepoId: null,
-  slug: "panna-cotta",
-  author: "ForkRecipe Kitchen",
-  title: "Panna Cotta",
-  description: "Piedmont's 'cooked cream' at its purest — cream barely warmed with vanilla and just enough gelatin to hold a trembling, barely-there set that quivers when the plate is nudged and collapses on the tongue into a cool wash of sweet milk.",
-  cuisine: "Italian",
-  culture: "Piedmontese",
-  category: "desserts",
-  tags: ["panna-cotta", "italian", "piedmont", "custard", "vanilla", "gelatin", "make-ahead"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "5 hours",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 3, salty: 1, sour: 1, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Heavy cream (35% fat)",            ratioValue: 500, defaultUnit: "g", substitutions: ["replace up to 150g with whole milk for a lighter set"] },
-    { ingId: "ing_02", role: "Dairy",      name: "Whole milk",                        ratioValue: 150, defaultUnit: "g", substitutions: ["buttermilk for a tangier panna cotta"] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Caster sugar",                      ratioValue: 70,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Vanilla bean, split and scraped",   ratioValue: 1,   defaultUnit: "g", substitutions: ["1 tsp vanilla bean paste", "finely pared lemon zest for a citrus version"] },
-    { ingId: "ing_05", role: "Binder",     name: "Sheet gelatin (gold, 200 bloom)",   ratioValue: 6,   defaultUnit: "g", substitutions: ["powdered gelatin, same weight, bloomed in 30g cold water"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine sea salt",                     ratioValue: 1,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Acid",       name: "Crème fraîche or plain yogurt (optional, off-heat)", ratioValue: 60, defaultUnit: "g", substitutions: ["mascarpone for a richer, denser finish"] },
-    { ingId: "ing_08", role: "Garnish",    name: "Macerated berries or fruit coulis", ratioValue: 80,  defaultUnit: "g", substitutions: ["caramel", "passion-fruit pulp", "balsamic-roasted strawberries"] },
+  "repoId": "master_italian_panna_cotta_001",
+  "parentRepoId": null,
+  "slug": "panna-cotta",
+  "author": "ForkRecipe Kitchen",
+  "title": "Panna Cotta",
+  "description": "La 'crème cuite' du Piémont à son plus pur — crème à peine chauffée à la vanille et juste assez de gélatine pour tenir une frémissante, à peine là-bas secoue quand l'assiette est bouchée et s'effondre sur la langue dans un lavage frais de lait sucré.",
+  "cuisine": "Italien",
+  "culture": "Piémontais",
+  "category": "desserts",
+  "tags": [
+    "Panna-cotta",
+    "Italien",
+    "piémont",
+    "Coutard",
+    "vanille",
+    "gélatine",
+    "marque à l'avance"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "5 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Bloom",
-      inputs: ["ing_05"],
-      outputState: "bloomed_gelatin",
-      instructions: "Submerge the gelatin sheets one at a time in a bowl of cold water so they don't stick together, and leave them to soften for 5 to 10 minutes. Cold water is essential — warm water dissolves the surface and you lose gelatin. The sheets will go limp and fully pliable. Lift them out and gently squeeze away the excess water; you want the swollen sheet, not the soaking liquid. (For powdered gelatin, sprinkle it over 30g cold water and let it absorb into a firm sponge.)",
-      visualCue: {
-        primaryTarget: "Sheets are completely floppy and translucent, like wet cling film, with no firm or cloudy patches left.",
-        spectrum: [
-          { state: "Underdone", description: "Sheets are still stiff at the edges or have opaque, leathery spots that haven't taken up water.", action: "Leave them another minute or two in the cold water until uniformly soft and clear." },
-          { state: "Perfect",   description: "Sheets are fully limp, glassy, and slippery, holding together when lifted. Squeezed gently, they shed a little water and feel like soft jelly.", action: "Set the squeezed gelatin aside and warm the cream." },
-          { state: "Overdone",  description: "Sheets have begun to dissolve and break apart in the water, leaving a slick, milky bloom liquid.", action: "Gelatin left far too long loses strength. If they're merely soft and mostly intact, proceed; if they've genuinely disintegrated, start with fresh sheets." },
-        ],
-      },
-      feelCue: "A properly bloomed sheet feels cool, slick, and elastic — it drapes over your fingers and stretches slightly without tearing.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Crème lourde (35% de matières grasses)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "remplacer jusqu'à 150g par du lait entier pour un ensemble plus léger"
+      ]
     },
     {
-      nodeId: "step_2", action: "Infuse",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_06"],
-      outputState: "warm_infused_cream",
-      instructions: "Combine the cream, milk, sugar, and salt in a heavy saucepan. Scrape the vanilla seeds into the pot and drop in the empty pod. Warm over medium-low heat, stirring to dissolve the sugar, until the mixture is steaming and barely trembling at the edges — about 65 to 75°C. Do NOT boil; panna cotta is cooked cream, not custard, and you only need enough heat to dissolve the sugar and later melt the gelatin. The lower the temperature, the cleaner and milkier the final flavor. Pull it off the heat the moment fine wisps of steam rise and tiny bubbles ring the pan.",
-      visualCue: {
-        primaryTarget: "A glossy, steaming cream with the sugar fully dissolved and a faint shimmer at the surface — no rolling bubbles, just the first stir of movement at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "The cream is only lukewarm, sugar grains still grate against the spoon on the pan bottom, and no steam rises.", action: "Keep warming gently and stirring; gelatin needs the cream warm (above ~50°C) to melt cleanly, and undissolved sugar will leave a gritty set." },
-          { state: "Perfect",   description: "Steaming, sugar fully dissolved, surface trembling but not bubbling. A drawn finger leaves a clear, smooth track on the back of a spoon.", action: "Take off the heat now and stir in the gelatin." },
-          { state: "Overdone",  description: "The cream has come to a full boil, climbing the pan, and smells faintly cooked or has formed a skin.", action: "A brief boil is recoverable — strain out any skin and let it cool a minute before adding gelatin, but expect a slightly cooked, less fresh flavor." },
-        ],
-      },
-      feelCue: "The kitchen fills with warm vanilla and sweet dairy; the cream feels silky and just too hot to keep a fingertip in. It should smell of fresh milk, never of scorch.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "babeurre pour un panna cotta tangier"
+      ]
     },
     {
-      nodeId: "step_3", action: "Temper",
-      inputs: ["warm_infused_cream", "bloomed_gelatin", "ing_07"],
-      outputState: "set_base",
-      instructions: "Off the heat, lift out the vanilla pod. Add the squeezed gelatin to the hot cream and whisk gently until it disappears completely — it dissolves almost instantly in the warm liquid; if you see any thread or lump, the cream has cooled too far, so warm it briefly. For a tangy panna cotta, whisk in the crème fraîche or yogurt now, once the base has cooled to barely warm so the acid doesn't curdle. Strain the base through a fine sieve into a jug to catch any undissolved gelatin or skin. Let it cool, stirring occasionally, until it thickens to the texture of unset cream and the vanilla seeds stay suspended rather than sinking.",
-      visualCue: {
-        primaryTarget: "A smooth, pourable, lump-free base, lightly thickened so a coating clings to the spoon and the vanilla flecks hang evenly throughout rather than dropping to the bottom.",
-        spectrum: [
-          { state: "Underdone", description: "The base is thin and hot, and the vanilla seeds all sink to the bottom within seconds.", action: "Keep cooling and stirring (an ice-water bath speeds it up). Pouring it hot leaves all the seeds pooled at one end of the finished panna cotta." },
-          { state: "Perfect",   description: "Cool but still fluid, faintly thickened, vanilla seeds drifting in suspension. No visible gelatin lumps when poured in a thin stream.", action: "Pour into ramekins or glasses and chill." },
-          { state: "Overdone",  description: "The base has set in the jug or gone lumpy and streaky as the gelatin began to gel against the cold sides.", action: "Warm the jug gently over a bowl of hot water and whisk smooth again, then strain and pour quickly before it re-sets." },
-        ],
-      },
-      feelCue: "Drag a spoon through the cooling base — it should leave a track that fills back slowly, the first sign the gelatin is taking hold. It should feel cool and silky, no grain of undissolved gelatin against the tongue.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 70,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Set",
-      inputs: ["set_base", "ing_08"],
-      outputState: "finished_panna_cotta",
-      instructions: "Divide the base among lightly oiled ramekins (for unmolding) or serving glasses. Tap each to settle out air bubbles, then chill uncovered until the surface skins, then cover and chill at least 4 hours, ideally overnight. To unmold, dip a ramekin briefly in hot water, run a fingertip around the rim to break the seal, invert onto a plate and give a firm shake until it drops with a soft slap. Serve cold with macerated berries, coulis, or caramel pooled around the base. The whole point is the wobble: it should tremble like a struck drum, not stand up stiff.",
-      visualCue: {
-        primaryTarget: "A glossy, domed panna cotta that holds its shape on the plate but shivers and sways visibly when the plate is tapped, with a clean, smooth, unmarked surface.",
-        spectrum: [
-          { state: "Underdone", description: "It slumps or pools on the plate and won't hold a dome — the center is still liquid under a thin set skin.", action: "It needs more time, or more gelatin next batch. Chill longer; if it still won't hold, serve it in the glass as a soft-set cream rather than unmolding." },
-          { state: "Perfect",   description: "Just-set: stands as a soft dome, jiggles all the way through when nudged, and a spoon slips in with almost no resistance, the surface healing smooth behind it.", action: "Plate with fruit or sauce and serve cold." },
-          { state: "Overdone",  description: "Firm and rubbery — it holds a sharp edge, bounces back from a spoon, and feels springy rather than melting.", action: "Too much gelatin or too long a set. There's no fixing this batch (eat it anyway), but next time cut the gelatin by a quarter for that signature quiver." },
-        ],
-      },
-      feelCue: "On the tongue it should barely exist — a cool, creamy weight that melts to liquid milk in a second or two with no chew, no skin, no rubber. If you have to chew it, it's over-set.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Haricots de vanille, fendus et raclés",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 c. à thé de vanille",
+        "zeste de citron finement blanchi pour une version d'agrumes"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Feuille gélatine (or, 200 fleurs)",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gélatine en poudre, même poids, fleuri dans 30g d'eau froide"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Crème fraîche ou yogourt ordinaire (facultatif, hors chauffage)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Mascarpone pour une finition plus riche et plus dense"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Coulis de fruits ou de baies macérées",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Caramel",
+        "pulpe passion-fruit",
+        "fraises grillées à la balsamique"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bloom",
+      "inputs": [
+        "ing_05"
+      ],
+      "outputState": "bloomed_gelatin",
+      "instructions": "Submerger les feuilles de gélatine une à la fois dans un bol d'eau froide afin qu'elles ne collent pas ensemble, et les laisser adoucir pendant 5 à 10 minutes. L'eau froide est essentielle: l'eau chaude dissout la surface et vous perdez la gélatine. Les draps seront limpides et entièrement pliables. Soulevez-les et pressez doucement l'excès d'eau; vous voulez la feuille gonflée, et non le liquide absorbant. (Pour la gélatine en poudre, arrosez-la sur 30 g d'eau froide et laissez-la absorber dans une éponge ferme.)",
+      "visualCue": {
+        "primaryTarget": "Les feuilles sont complètement molles et translucides, comme le film de collage humide, sans taches fermes ou nuageuses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les feuilles sont toujours rigides aux bords ou ont des taches opaques et sinueuses qui n'ont pas pris de l'eau.",
+            "action": "Laissez-les encore une minute ou deux dans l'eau froide jusqu'à ce qu'ils soient uniformément doux et clairs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les feuilles sont complètement limpides, vitreuses et glissantes, tenant ensemble lorsqu'elles sont levées. Doucement pressés, ils versent un peu d'eau et se sentent comme de la gelée douce.",
+            "action": "Réserver la gélatine pressée et réchauffer la crème."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les feuilles ont commencé à se dissoudre et à se décomposer dans l'eau, laissant un liquide lissé et laiteux.",
+            "action": "La gélatine est restée trop longtemps sans force. S'ils sont simplement doux et presque intacts, procédez; s'ils ont réellement désintégré, commencez par des draps frais."
+          }
+        ]
+      },
+      "feelCue": "Une feuille bien fleurie se sent fraîche, lissée et élastique – elle s'étend sur les doigts et s'étire légèrement sans déchirer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Infuse",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "warm_infused_cream",
+      "instructions": "Mélanger la crème, le lait, le sucre et le sel dans une casserole lourde. Grattez les graines de vanille dans le pot et déposez-les dans la capsule vide. Chauffer à feu moyen-doux, en remuant pour dissoudre le sucre, jusqu'à ce que le mélange s'échauffe et tremble à peine aux bords — environ 65 à 75°C. Ne pas faire bouillir; le panna cotta est de la crème cuite, pas de la crème, et vous n'avez besoin que de suffisamment de chaleur pour dissoudre le sucre et ensuite faire fondre la gélatine. Plus la température est basse, plus la saveur finale est propre et laiteuse. Tirez-le de la chaleur au moment où de fines escargots de vapeur se lèvent et de minuscules bulles sonnent la casserole.",
+      "visualCue": {
+        "primaryTarget": "Une crème brillante et vapeur avec le sucre complètement dissout et un léger frisson à la surface — pas de bulles de roulement, juste le premier mouvement aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème n'est que tiède, les grains de sucre sont encore en râpe contre la cuillère sur le fond de la poêle, et aucune vapeur ne monte.",
+            "action": "Gardez le réchauffement doucement et en remuant; la gélatine a besoin de la crème chaude (au-dessus de ~50°C) pour fondre proprement, et le sucre non dissout laissera un set gritty."
+          },
+          {
+            "state": "Perfect",
+            "description": "La vapeur, le sucre complètement dissous, la surface tremble mais ne bouillonne pas. Un doigt tiré laisse une trace claire et lisse à l'arrière d'une cuillère.",
+            "action": "Enlevez maintenant la chaleur et remuez la gélatine."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème est arrivée à ébullition complète, grimpant la poêle et sent légèrement cuit ou a formé une peau.",
+            "action": "Un court ébullition est récupérable: épuisez n'importe quelle peau et laissez-la refroidir une minute avant d'ajouter de la gélatine, mais attendez - vous à une saveur légèrement cuite, moins fraîche."
+          }
+        ]
+      },
+      "feelCue": "La cuisine se remplit de vanille chaude et de lait doux; la crème est soyeuse et juste trop chaude pour garder un bout de doigt. Ça doit sentir du lait frais, jamais de la brûlure."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Température",
+      "inputs": [
+        "warm_infused_cream",
+        "bloomed_gelatin",
+        "ing_07"
+      ],
+      "outputState": "set_base",
+      "instructions": "Hors de la chaleur, soulevez la capsule de vanille. Ajouter la gélatine pressée à la crème chaude et fouetter doucement jusqu'à ce qu'elle disparaisse complètement — elle se dissout presque instantanément dans le liquide chaud; si vous voyez un fil ou une masse, la crème s'est refroidie trop loin, si bien le réchauffer brièvement. Pour une panna cotta acidulée, fouetter dans la crème fraîche ou le yogourt maintenant, une fois la base refroidie à à peine tiède pour que l'acide ne courge pas. Placer la base à travers un tamis fin dans une cruche pour attraper toute gélatine ou peau non dissoute. Laisser refroidir, en remuant de temps en temps, jusqu'à ce qu'il épaississe à la texture de la crème non set et que les graines de vanille restent suspendues plutôt que de couler.",
+      "visualCue": {
+        "primaryTarget": "Une base lisse, versable, sans grumeaux, légèrement épaissie, de sorte qu'un revêtement s'accroche à la cuillère et que les taches de vanille s'accrochent uniformément tout au long plutôt que de tomber au fond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La base est mince et chaude, et les graines de vanille coulent toutes au fond en quelques secondes.",
+            "action": "Continuez à refroidir et à remuer (un bain d'eau glacée accélère). Le verser chaud laisse toutes les graines réunies à une extrémité de la panna cotta finie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cool mais encore fluide, peu épaississant, les graines de vanille dérivent en suspension. Aucune masse de gélatine visible lorsqu'elle est versée dans un cours d'eau mince.",
+            "action": "Verser dans des ramequins ou des verres et refroidir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La base s'est posée dans la cruche ou est partie grumelée et striée alors que la gélatine commençait à geler contre les côtés froids.",
+            "action": "Chauffer délicatement la cruche sur un bol d'eau chaude et fouetter à nouveau lisse, puis tendre et verser rapidement avant qu'elle ne se répète."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère à travers la base de refroidissement — elle devrait laisser une piste qui se remplit lentement, le premier signe que la gélatine prend possession. Il devrait se sentir frais et soyeux, aucun grain de gélatine non dissoute contre la langue."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Jeu",
+      "inputs": [
+        "set_base",
+        "ing_08"
+      ],
+      "outputState": "finished_panna_cotta",
+      "instructions": "Divisez la base entre les ramequins légèrement huilés (pour le démolage) ou les verres de service. Tapez chacun pour régler les bulles d'air, puis refroidissez à découvert jusqu'à ce que les peaux de surface, puis couvrez et refroidissez au moins 4 heures, idéalement pendant la nuit. Pour démoudre, tremper un ramekin brièvement dans l'eau chaude, courir un bout de doigt autour du bord pour briser le joint, inverser sur une assiette et donner un secousse ferme jusqu'à ce qu'il tombe avec une gifle douce. Servir au froid avec des baies macérées, des coulis ou du caramel baigné autour de la base. Tout le point est le frottement: il devrait trembler comme un tambour frappé, pas se tenir debout raide.",
+      "visualCue": {
+        "primaryTarget": "Un panna cotta brillant et bombé qui tient sa forme sur la plaque mais tremble et s'écarte visiblement lorsque la plaque est tapée, avec une surface propre, lisse et non marquée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il s'effondre ou s'abaisse sur l'assiette et ne tient pas un dôme — le centre est encore liquide sous une peau mince.",
+            "action": "Il lui faut plus de temps, ou plus de gélatine. Refroidir plus longtemps; si elle ne tient toujours pas, servir dans le verre comme une crème douce-set plutôt que de démouler."
+          },
+          {
+            "state": "Perfect",
+            "description": "Just-set: se tient comme un dôme doux, sillonne tout le chemin à travers quand nudgé, et une cuillère glisse dans avec presque aucune résistance, la surface de guérison lisse derrière elle.",
+            "action": "Assiette de fruits ou de sauce et servir à froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ferme et caoutchouteux — il tient un bord tranchant, rebondit d'une cuillère, et se sent printanier plutôt que fondant.",
+            "action": "Trop de gélatine ou trop long. Il n'y a pas de fixation de ce lot (le manger de toute façon), mais la prochaine fois couper la gélatine d'un quart pour ce carquois signature."
+          }
+        ]
+      },
+      "feelCue": "Sur la langue il devrait à peine exister — un poids frais et crémeux qui fond au lait liquide en une seconde ou deux sans mâcher, sans peau, sans caoutchouc. Si tu dois le mâcher, c'est trop."
+    }
+  ]
 };

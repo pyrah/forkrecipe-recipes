@@ -1,99 +1,244 @@
 export default {
-  repoId: "master_american_eggs_benedict_casserole_001",
-  parentRepoId: null,
-  slug: "eggs-benedict-casserole",
-  author: "ForkRecipe Kitchen",
-  title: "Eggs Benedict Casserole",
-  description: "All the components of Eggs Benedict — toasted English muffin, Canadian bacon, egg — layered in a baking dish and baked ahead, then topped with easy blender hollandaise. Brunch for a crowd without the panic.",
-  cuisine: "American",
-  culture: "American Brunch",
-  category: "eggs",
-  tags: ["eggs", "brunch", "casserole", "make-ahead", "hollandaise", "american", "bacon"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "9 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 4, sour: 2, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "English muffins, split and torn into pieces",  ratioValue: 100, defaultUnit: "parts", substitutions: ["brioche", "sourdough"] },
-    { ingId: "ing_02", role: "Protein",   name: "Canadian bacon, sliced",                       ratioValue: 60,  defaultUnit: "parts", substitutions: ["ham", "prosciutto"] },
-    { ingId: "ing_03", role: "Protein",   name: "Whole eggs (for custard)",                     ratioValue: 80,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Dairy",     name: "Whole milk",                                   ratioValue: 50,  defaultUnit: "parts", substitutions: ["oat milk"] },
-    { ingId: "ing_05", role: "Binder",    name: "Egg yolks (for hollandaise)",                  ratioValue: 25,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Unsalted butter, clarified and hot",           ratioValue: 55,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Acid",      name: "Fresh lemon juice",                            ratioValue: 8,   defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_08", role: "Spice",     name: "Cayenne pepper",                               ratioValue: 1,   defaultUnit: "parts", substitutions: ["white pepper"] },
+  "repoId": "master_american_eggs_benedict_casserole_001",
+  "parentRepoId": null,
+  "slug": "eggs-benedict-casserole",
+  "author": "ForkRecipe Kitchen",
+  "title": "Oeufs Benedict Casserole",
+  "description": "Tous les composants des oeufs Benedict — muffins anglais grillés, bacon canadien, œuf — étaient superposés dans un plat à cuisson et cuits en avant, puis surmontés d'un mélangeur facile de hollandaise. Brunch pour une foule sans panique.",
+  "cuisine": "Américain",
+  "culture": "Brunch américain",
+  "category": "eggs",
+  "tags": [
+    "œufs",
+    "brunch",
+    "casserole",
+    "marque à l'avance",
+    "hollandaise",
+    "américains",
+    "bacon"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "9 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Assemble",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "layered_base",
-      instructions: "Butter a 9×13-inch (23×33 cm) baking dish. Spread the torn English muffin pieces across the base in an even layer. Tuck Canadian bacon slices throughout and between the muffin pieces — aim for even distribution so every serving gets both bread and meat.",
-      visualCue: {
-        primaryTarget: "An interlocked mosaic of golden muffin pieces and pink-edged bacon that covers the dish base completely with no large gaps.",
-        spectrum: [
-          { state: "Underdone", description: "Large gaps in the muffin layer; bacon is clumped in one area.", action: "Redistribute — tuck smaller pieces into the gaps and spread the bacon slices evenly. The custard needs something to soak into." },
-          { state: "Perfect",   description: "Dense, even layer with muffin pieces slightly overlapping and bacon distributed throughout. The dish base is fully covered.", action: "Proceed to pour the custard over the top." },
-          { state: "Overdone",  description: "Muffin pieces are packed so tightly the custard will pool on top rather than penetrating.", action: "Loosen and slightly separate the pieces with your fingers — the custard must flow between them." },
-        ],
-      },
-      feelCue: "Shake the dish gently — the layered bread should shift slightly as a loose mosaic, not sit in a rigid, compressed block.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Muffins anglais, coupés et déchirés en morceaux",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "brioche",
+        "Pâtes alimentaires"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["ing_03", "ing_04", "layered_base"],
-      outputState: "soaked_casserole",
-      instructions: "In a large bowl, whisk together the whole eggs and milk until fully combined and pale yellow, about 1 minute. Season with a pinch of salt. Pour the custard evenly over the layered casserole, pressing the muffin pieces gently down to submerge. Cover tightly with plastic wrap and refrigerate at least 8 hours or overnight.",
-      visualCue: {
-        primaryTarget: "A uniform pale-yellow custard that has fully soaked into every piece of bread — no dry white patches visible. The surface is level.",
-        spectrum: [
-          { state: "Underdone", description: "Dry white spots on the muffin tops. Custard pooled at the bottom of the dish only.", action: "Press all pieces down firmly with a spatula until submerged. Add a splash more milk if the custard falls short." },
-          { state: "Perfect",   description: "Every piece is visibly saturated. Custard sits level at the surface of the bread layer. Color is uniform pale yellow with no dry patches.", action: "Cover and refrigerate overnight. The long rest allows the bread to fully absorb the custard and the flavors to meld." },
-          { state: "Overdone",  description: "Bread has turned to mush and lost its structure — the custard ratio was too high or the soak too long.", action: "Bake it as-is. The texture will be more like a savory bread pudding — still delicious, just denser and more custardy." },
-        ],
-      },
-      feelCue: "Press a piece of soaked muffin with your finger — it should feel saturated like a wet sponge, soft but not yet disintegrating.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Bacon canadien, tranché",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jambon",
+        "prosciutto"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["soaked_casserole"],
-      outputState: "baked_casserole",
-      instructions: "Remove casserole from the refrigerator 30 minutes before baking. Preheat the oven to 175 °C (350 °F). Cover the dish with foil and bake 35 minutes, then uncover and bake a further 15–20 minutes until the top is golden and the custard is set — a knife inserted in the center should come out clean.",
-      visualCue: {
-        primaryTarget: "A golden-crusted top with muffin edges browned and slightly crisped, and the custard set firm with no liquid movement when the pan is jostled.",
-        spectrum: [
-          { state: "Underdone", description: "The surface is pale and wet. Custard moves as liquid when the pan is shaken.", action: "Return uncovered for 5–10 more minutes. Check center with a knife — the blade should emerge clean, not eggy." },
-          { state: "Perfect",   description: "Top is evenly golden with crisp-edged muffin pieces. Casserole is firm and set throughout. A knife comes out clean with no wet egg on the blade.", action: "Rest 5 minutes before cutting. Make the hollandaise now." },
-          { state: "Overdone",  description: "Edges are dark brown, surface is dry and cracked, eggy smell has turned sulphurous.", action: "Cover immediately to trap steam and soften the top. The hollandaise will mask dryness when spooned generously over each portion." },
-        ],
-      },
-      feelCue: "Press the center with a spatula — it should feel solid and spring back slightly, with no liquid seeping around the edges of your press.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Oeufs entiers (pour la crème)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Blend",
-      inputs: ["ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "hollandaise_sauce",
-      instructions: "Place egg yolks, lemon juice, and cayenne in a blender. Blend on medium 20 seconds until pale and frothy. With the blender running on low, pour the hot clarified butter in a thin, steady stream through the feed hole. The sauce will thicken visibly as the butter emulsifies. Season with salt. Use immediately — hollandaise does not hold well.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, pale-yellow sauce that coats a spoon and holds a ribbon when drizzled back into the blender.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery. Butter has not emulsified and is floating in yellow pools.", action: "The butter was added too fast. Try again with fresh yolks — blend vigorously and add butter one teaspoon at a time to rebuild the emulsion." },
-          { state: "Perfect",   description: "Thick, glossy, opaque pale yellow. Drips slowly from a spoon and holds a mounded shape for a few seconds. Tastes richly buttery with a bright lemon edge.", action: "Serve immediately, spooned generously over each portion of casserole." },
-          { state: "Overdone",  description: "Sauce is thick and grainy with a scrambled-egg texture — the yolks overcooked from butter that was too hot.", action: "The hollandaise is broken. Whisk in 1–2 ice cubes one at a time and blend again — sometimes it recovers. Otherwise, a simple lemon-butter is a faster rescue." },
-        ],
-      },
-      feelCue: "A properly emulsified hollandaise should feel like warm heavy cream on the palate — unctuous but not greasy, with no gritty or oily separation on the tongue.",
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Lait d'avoine"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Jaunes d'œufs (pour hollandaise)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé, clarifié et chaud",
+      "ratioValue": 55,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre blanc"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Assemblage",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "layered_base",
+      "instructions": "Beurre un plat de cuisson de 23×33 cm (9×13 pouces). Répartir les morceaux de muffins anglais déchirés sur la base dans une couche uniforme. Tuck tranches de bacon canadien tout au long et entre les morceaux de muffin — viser la distribution uniforme afin que chaque portion obtient à la fois du pain et de la viande.",
+      "visualCue": {
+        "primaryTarget": "Une mosaïque entrecoupée de morceaux de muffins dorés et de bacon rose qui recouvre la base du plat complètement sans grands espaces.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De grandes lacunes dans la couche de muffin; le bacon est empilé dans une zone.",
+            "action": "Redistribuer — placer les petits morceaux dans les trous et répartir les tranches de bacon uniformément. La crème a besoin de quelque chose."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dense, même couche avec des morceaux de muffin se chevauchant légèrement et bacon distribué partout. La base du plat est entièrement couverte.",
+            "action": "Verser la crème sur le dessus."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les morceaux de muffins sont emballés de façon si serrée que la crème sera mise sur le dessus plutôt que pénétrante.",
+            "action": "Loyer et séparer légèrement les morceaux avec vos doigts — la crème doit couler entre eux."
+          }
+        ]
+      },
+      "feelCue": "Agiter délicatement le plat — le pain en couches doit se déplacer légèrement comme une mosaïque lâche, et non s'asseoir dans un bloc rigide et comprimé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "layered_base"
+      ],
+      "outputState": "soaked_casserole",
+      "instructions": "Dans un grand bol, fouetter ensemble les œufs entiers et le lait jusqu'à ce qu'ils soient entièrement combinés et jaune pâle, environ 1 minute. Assaisonner avec une pincée de sel. Verser la crème uniformément sur la casserole en couches, presser doucement les morceaux de muffin pour les submerger. Couvrir soigneusement d'une enveloppe en plastique et réfrigérer au moins 8 heures ou toute la nuit.",
+      "visualCue": {
+        "primaryTarget": "Une crème jaune pâle uniforme qui a complètement trempé dans chaque morceau de pain — pas de taches blanches sèches visibles. La surface est plane.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des taches blanches sèches sur le dessus des muffins. Custard pooled au fond du plat seulement.",
+            "action": "Appuyez fermement sur toutes les pièces avec une spatule jusqu'à ce qu'elle soit immergée. Ajoutez un peu plus de lait si la crème est courte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque pièce est visiblement saturée. Custard est assis à la surface de la couche de pain. La couleur est jaune pâle uniforme sans taches sèches.",
+            "action": "Couvrir et réfrigérer pendant la nuit. Le long reste permet au pain d'absorber complètement la crème et les saveurs à fondre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pain s'est transformé en bouillie et a perdu sa structure — le rapport de crème était trop élevé ou l'imprégnation trop longue.",
+            "action": "Fais-le cuire comme ça. La texture sera plus comme un pudding de pain salé — encore délicieux, juste plus dense et plus crépuscule."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau de muffin trempé avec votre doigt — il devrait se sentir saturé comme une éponge humide, doux mais pas encore désintégrant."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "soaked_casserole"
+      ],
+      "outputState": "baked_casserole",
+      "instructions": "Retirer la casserole du réfrigérateur 30 minutes avant la cuisson. Préchauffer le four à 175 °C (350 °F). Couvrir le plat d'une feuille d'aluminium et cuire 35 minutes, puis découvrir et cuire 15 à 20 minutes de plus jusqu'à ce que le dessus soit doré et que la crème soit posée.",
+      "visualCue": {
+        "primaryTarget": "Un plateau doré aux bords de muffins brunis et légèrement croustillé, et la crème se ferme sans mouvement liquide lorsque la poêle est bouchée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est pâle et humide. Custard se déplace comme liquide lorsque la poêle est secouée.",
+            "action": "Retour découvert pendant 5-10 minutes de plus. Vérifiez le centre avec un couteau — la lame devrait émerger propre, pas l'œuf."
+          },
+          {
+            "state": "Perfect",
+            "description": "Top est également doré avec des morceaux de muffins à bords croustillants. Casserole est ferme et sertie partout. Un couteau sort propre sans oeuf mouillé sur la lame.",
+            "action": "Reposez-vous 5 minutes avant de couper. Faites le hollandaise maintenant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont brun foncé, la surface est sèche et fissurée, l'odeur des oeufs est devenue sulfureuse.",
+            "action": "Couvrir immédiatement pour piéger la vapeur et adoucir le dessus. L'hollandaise masquera la sécheresse lorsqu'elle sera généreusement cuite sur chaque portion."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le centre avec une spatule — elle devrait se sentir solide et ressortre légèrement, sans infiltration de liquide autour des bords de votre presse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mélange",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "hollandaise_sauce",
+      "instructions": "Mettre les jaunes d'œufs, le jus de citron et la cayenne dans un mélangeur. Mélanger 20 secondes de longueur moyenne jusqu'à ce qu'il soit pâle et mousseux. Lorsque le mélangeur tourne à basse température, verser le beurre clarifié chaud dans un cours d'eau mince et stable à travers le trou d'alimentation. La sauce s'épaissira visiblement à mesure que le beurre émulsifie. Assaisonner de sel. Utiliser immédiatement — l'hollandaise ne tient pas bien.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse, brillante, jaune pâle qui enrobe une cuillère et tient un ruban lorsqu'il est ramené dans le mélangeur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse. Le beurre n'est pas émulsifié et flotte dans des bassins jaunes.",
+            "action": "Le beurre a été ajouté trop vite. Essayez encore avec des jaunes frais — mélangez vigoureusement et ajoutez du beurre une cuillère à café à la fois pour reconstruire l'émulsion."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, brillant, jaune pâle opaque. Drips lentement d'une cuillère et tient une forme bombée pendant quelques secondes. Goûte richement au beurre avec un bord citronné vif.",
+            "action": "Servir immédiatement, cuire généreusement sur chaque portion de casserole."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est épaisse et granuleuse avec une texture d'œuf brouillé — les jaunes trop cuits à partir de beurre trop chaud.",
+            "action": "L'hollandaise est cassée. Whisk dans 1–2 glaçons un à la fois et mélanger à nouveau — parfois il se rétablit. Sinon, un simple beurre de citron est un sauvetage plus rapide."
+          }
+        ]
+      },
+      "feelCue": "Une hollandaise correctement émulsifiée devrait se sentir comme une crème chaude et lourde en bouche — onctueuse mais pas grasse, sans séparation grasse ou grasse sur la langue."
+    }
+  ]
 };

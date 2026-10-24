@@ -1,98 +1,278 @@
 export default {
-  repoId: "master_mexican_arroz_rojo_001",
-  parentRepoId: null,
-  slug: "arroz-rojo",
-  author: "ForkRecipe Kitchen",
-  title: "Arroz Rojo (Mexican Red Rice)",
-  description: "Mexico's indispensable side dish — long-grain rice toasted in oil until each grain turns a pale blond, then simmered in a blended tomato, garlic and onion sauce until the grains are individually coral-red, fluffy and separate, perfumed with cumin.",
-  cuisine: "Mexican",
-  culture: "Mexican",
-  category: "grains",
-  tags: ["mexican", "rice", "side-dish", "vegan", "gluten-free", "dairy-free"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "40 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 2, sour: 1, bitter: 0, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Long-grain white rice",           ratioValue: 300,  defaultUnit: "g",   substitutions: ["medium-grain for a slightly stickier result"] },
-    { ingId: "ing_02", role: "Aromatic",   name: "Plum tomatoes",                   ratioValue: 3,    defaultUnit: "whole", substitutions: ["200ml canned crushed tomatoes"] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves",                   ratioValue: 2,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",     name: "White onion, quarter",            ratioValue: 0.25, defaultUnit: "whole", substitutions: ["yellow onion"] },
-    { ingId: "ing_05", role: "Liquid",     name: "Chicken or vegetable broth",      ratioValue: 600,  defaultUnit: "ml",  substitutions: ["water plus 1 tsp bouillon powder"] },
-    { ingId: "ing_06", role: "Heat",       name: "Serrano chile",                   ratioValue: 1,    defaultUnit: "whole", substitutions: ["jalapeño for less heat", "omit for mild"] },
-    { ingId: "ing_07", role: "Aromatic",   name: "Carrot, peeled and diced small",  ratioValue: 1,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_08", role: "Protein",    name: "Frozen peas",                     ratioValue: 60,   defaultUnit: "g",   substitutions: ["fresh peas", "corn kernels"] },
-    { ingId: "ing_09", role: "Fat",        name: "Vegetable oil",                   ratioValue: 30,   defaultUnit: "ml",  substitutions: ["sunflower oil", "lard for a more traditional flavor"] },
-    { ingId: "ing_10", role: "Spice",      name: "Ground cumin",                    ratioValue: 2,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning",  name: "Fine sea salt",                   ratioValue: 7,    defaultUnit: "g",   substitutions: ["kosher salt"] },
+  "repoId": "master_mexican_arroz_rojo_001",
+  "parentRepoId": null,
+  "slug": "arroz-rojo",
+  "author": "ForkRecipe Kitchen",
+  "title": "Arroz Rojo (riz rouge mexicain)",
+  "description": "L'indispensable plat d'accompagnement du Mexique — riz à grains longs grillé à l'huile jusqu'à ce que chaque grain devienne blond pâle, puis mijoté dans une tomate mélangée, l'ail et la sauce à l'oignon jusqu'à ce que les grains soient individuellement rouge corail, moelleux et séparés, parfumés de cumin.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain",
+  "category": "grains",
+  "tags": [
+    "Mexique",
+    "riz",
+    "side-dish",
+    "végétalien",
+    "Sans gluten",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "40 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Blend",
-      inputs: ["ing_02", "ing_03", "ing_04"],
-      outputState: "tomato_puree",
-      instructions: "Combine the tomatoes, garlic, and onion quarter in a blender with 100ml of the broth and blitz to a completely smooth purée. You should have approximately 350ml of liquid. The raw purée will be bright orange-red; it will deepen during cooking. Set aside.",
-      visualCue: {
-        primaryTarget: "A smooth, vibrant orange-red liquid with no visible tomato chunks, seeds broken down, the consistency of thin pasta sauce.",
-        spectrum: [
-          { state: "Underdone", description: "Chunks of onion or tomato skin are still visible floating in the purée.", action: "Blend another 30 seconds and pass through a coarse sieve if needed." },
-          { state: "Perfect",   description: "Uniformly smooth and pourable, faintly orange-pink. It smells of raw tomato and garlic.", action: "Set aside — it goes into the rice after the toasting step." },
-          { state: "Overdone",  description: "The purée was blended so long it is warm and frothy.", action: "Let it settle for a moment before adding — no real harm done." },
-        ],
-      },
-      feelCue: "Dip a finger and taste the raw purée — it should taste vividly of fresh tomato with a sharp garlic bite. This rawness will cook out into sweetness.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Riz blanc à grains longs",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "grain moyen pour un résultat légèrement plus collant"
+      ]
     },
     {
-      nodeId: "step_2", action: "Toast",
-      inputs: ["ing_09", "ing_01"],
-      outputState: "toasted_rice",
-      instructions: "Heat the oil in a wide, heavy-bottomed pot or Dutch oven over medium-high heat until shimmering. Add the dry (unrinsed) rice all at once and stir constantly with a wooden spoon for 4–6 minutes. The grains will gradually turn from white to pale blond, then to a warm golden color. Do not walk away — toasting is what keeps Mexican rice grains separate rather than clumping. The room will fill with a nutty, popcorn-like aroma.",
-      visualCue: {
-        primaryTarget: "Grains are uniformly pale golden — the color of raw sesame seeds — with some beginning to show faint tan edges. The pot smells of dry, nutty warmth.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still chalky-white and opaque with no color change. They smell of raw starch.", action: "Keep stirring over the heat — the toasting is what prevents the finished rice from being gummy and pasty." },
-          { state: "Perfect",   description: "Grains are evenly golden-blond with some slightly darker tan edges. They clatter and hiss and smell of warm popcorn and nuttiness.", action: "Add the diced carrot and serrano, stir for 30 seconds, then pour in the tomato purée — it will spatter, so stand back." },
-          { state: "Overdone",  description: "Several grains have turned deep brown and smell of burnt starch.", action: "Reduce heat immediately. A few dark grains are fine; if the majority are brown, discard and start over — burned rice will taste bitter all the way through." },
-        ],
-      },
-      feelCue: "Shake the pot and listen — toasted grains rattle and skitter freely, while untoasted rice sits heavy and quiet. The weight of the pot feels lighter as moisture cooks off.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "Tomates plumées",
+      "ratioValue": 3,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "tomates concassées en conserve de 200 ml"
+      ]
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["toasted_rice", "tomato_puree", "ing_05", "ing_06", "ing_07", "ing_10", "ing_11"],
-      outputState: "cooking_rice",
-      instructions: "Add the carrot and serrano chile to the toasted rice and stir for 30 seconds. Pour in the tomato purée — it will hiss and spatter as it hits the hot oil — and stir immediately to coat all the grains. Add the remaining broth, cumin, and salt. Bring to a boil, stirring once, then reduce to the lowest possible heat, cover tightly, and cook undisturbed for 18–20 minutes.",
-      visualCue: {
-        primaryTarget: "As the broth is absorbed the rice should be steaming, the color transforming from bright red to a deep coral-orange as each grain drinks in the tomato sauce.",
-        spectrum: [
-          { state: "Underdone", description: "After 18 minutes the lid still shows heavy condensation and broth is visible bubbling in the pot.", action: "Re-seal and cook 3–5 more minutes on the lowest heat." },
-          { state: "Perfect",   description: "Steam has stopped rising from under the lid. When you carefully lift a corner, the liquid is absorbed and the grains look swollen and separate, deep coral-red.", action: "Remove from heat and let rest without opening for 5 minutes." },
-          { state: "Overdone",  description: "A scorched smell rises and you can hear cracking from the bottom. The lid is dry.", action: "Remove from heat immediately. The bottom layer may be crispy — scrape it away and serve the rest, which will likely be fine." },
-        ],
-      },
-      feelCue: "The moment the rapid bubbling under the lid quiets to an occasional soft hiss, the rice is almost done — that is the sound of steam replacing liquid as the dominant heat transfer. Trust it.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 2,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Finish",
-      inputs: ["cooking_rice", "ing_08"],
-      outputState: "finished_arroz_rojo",
-      instructions: "Remove from heat. Scatter the frozen peas over the surface, re-cover, and let rest 5 minutes — the residual steam will thaw and warm the peas without cooking them to mush. Then use a fork to fluff gently from the edges inward, pulling the grains apart. Remove the serrano chile before serving if desired. Taste for salt.",
-      visualCue: {
-        primaryTarget: "Individual coral-red grains, fully separate and lightly glossy, with bright green peas distributed throughout and visible flecks of carrot.",
-        spectrum: [
-          { state: "Underdone", description: "Some grains are still clumped and the peas are still frozen-cold in the center.", action: "Add 2 tablespoons of water around the edges, re-cover, and return to the lowest heat for 5 more minutes." },
-          { state: "Perfect",   description: "Each grain is individual, deeply colored and fully cooked with no raw center. The peas are bright green and just tender. The rice smells of cumin, tomato and warmth.", action: "Serve immediately alongside beans, tacos, or grilled meat." },
-          { state: "Overdone",  description: "The grains are clumped together and some have broken into starchy fragments. The peas have gone khaki-drab.", action: "Serve warm — the flavor is still excellent even if the texture is softer than ideal." },
-        ],
-      },
-      feelCue: "Fork a small mound and feel it — the grains should skitter off the tines cleanly, each one distinct, with just enough moisture to feel tender without any wet stickiness.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc, quart",
+      "ratioValue": 0.25,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Bouillon de poulet ou de légumes",
+      "ratioValue": 600,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau plus 1 c. à thé bouillon poudre"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Heat",
+      "name": "Le chile de Serrano",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "jalapeño pour moins de chaleur",
+        "omit pour léger"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Carotte, pelée et coupée en dés",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Protein",
+      "name": "Pois congelés",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pois frais",
+        "Maïs décortiqué"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile végétale",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile de tournesol",
+        "saindoux pour une saveur plus traditionnelle"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 7,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "tomato_puree",
+      "instructions": "Mélanger les tomates, l'ail et le quart d'oignon dans un mélangeur avec 100 ml de bouillon et blitz à une purée complètement lisse. Vous devez avoir environ 350 ml de liquide. La purée brute sera rouge-orange vif ; elle s'approfondira pendant la cuisson. Mettez de côté.",
+      "visualCue": {
+        "primaryTarget": "Un liquide doux, rouge-orange vif, sans morceaux visibles de tomate, des graines cassées, la consistance de la sauce fine aux pâtes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux d'oignon ou de peau de tomate sont encore visibles flottant dans la purée.",
+            "action": "Mélanger encore 30 secondes et passer à travers un tamis grossier si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement lisse et versable, légèrement orange-rose. Ça sent la tomate crue et l'ail.",
+            "action": "Mettez de côté — il va dans le riz après l'étape de toast."
+          },
+          {
+            "state": "Overdone",
+            "description": "La purée a été mélangée si longtemps qu'elle est chaude et mousseuse.",
+            "action": "Qu'elle se contente d'ajouter un instant — aucun mal réel."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt et goûtez à la purée crue – elle devrait goûter vifment de la tomate fraîche avec une bouchée d'ail pointue. Cette crudité fera cuire dans la douceur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "ing_09",
+        "ing_01"
+      ],
+      "outputState": "toasted_rice",
+      "instructions": "Chauffer l'huile dans une grande casserole à fond lourd ou dans un four hollandais à feu moyen-vif jusqu'à ce qu'elle mijote. Ajouter le riz sec (non rincé) tout à la fois et remuer constamment avec une cuillère en bois pendant 4-6 minutes. Les grains vont progressivement passer du blanc au blond pâle, puis à une couleur dorée chaude. Ne t'en va pas — le toast est ce qui maintient les grains de riz mexicains séparés plutôt que d'empiler. La chambre se remplira d'un arôme de popcorn noisette.",
+      "visualCue": {
+        "primaryTarget": "Les grains sont uniformément dorés pâles — la couleur des graines de sésame crues — et certains commencent à montrer de légers bords de bronzage. La casserole sent la chaleur sèche et noisette.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont toujours blancs crayeux et opaques sans changement de couleur. Ils sentent l'amidon cru.",
+            "action": "Continuez à remuer sur le feu — le toast empêche le riz fini d'être gommé et pâteux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont uniformément dorés avec des bords légèrement plus foncés. Ils battent et sifflent et sentent le pop-corn chaud et la noix.",
+            "action": "Ajouter la carotte coupée en dés et le serrano, remuer pendant 30 secondes, puis verser dans la purée de tomate — il éclaboussera, alors reculez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plusieurs grains sont devenus brun foncé et l'odeur de l'amidon brûlé.",
+            "action": "Réduire immédiatement la chaleur. Quelques grains foncés sont fins; si la majorité d'entre eux sont bruns, jetez et recommencez — le riz brûlé aura un goût amer."
+          }
+        ]
+      },
+      "feelCue": "Secouez la marmite et écoutez — les grains grillés se déchirent et scatter librement, tandis que le riz n'est pas mangé est lourd et calme. Le poids de la casserole est plus léger que l'humidité."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "toasted_rice",
+        "tomato_puree",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "cooking_rice",
+      "instructions": "Ajouter la carotte et le piment serrano au riz grillé et remuer pendant 30 secondes. Verser dans la purée de tomate — elle siffle et éclabousse lorsqu'elle touche l'huile chaude — et remuer immédiatement pour enrober tous les grains. Ajouter le bouillon restant, le cumin et le sel. Porter à ébullition, en remuant une fois, puis réduire au plus bas feu possible, couvrir soigneusement et cuire pendant 18 à 20 minutes.",
+      "visualCue": {
+        "primaryTarget": "Comme le bouillon est absorbé le riz doit être à la vapeur, la couleur se transformant du rouge vif à un profond corail-orange que chaque grain boit dans la sauce tomate.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 18 minutes, le couvercle affiche encore une forte condensation et le bouillon est visible bouillonnant dans le pot.",
+            "action": "Resceller et cuire de 3 à 5 minutes de plus sur le feu le plus bas."
+          },
+          {
+            "state": "Perfect",
+            "description": "La vapeur a cessé de monter sous le couvercle. Lorsque vous soulevez soigneusement un coin, le liquide est absorbé et les grains semblent gonflés et séparés, corallien-rouge profond.",
+            "action": "Retirer du feu et laisser reposer sans ouverture pendant 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Une odeur brûlée se lève et vous pouvez entendre craquer du fond. Le couvercle est sec.",
+            "action": "Retirer immédiatement du feu. La couche inférieure peut être croustillante, la racler et servir le reste, ce qui sera probablement bien."
+          }
+        ]
+      },
+      "feelCue": "Au moment où le bouillonnement rapide sous le couvercle se calme à un sifflement parfois doux, le riz est presque fait — c'est le bruit de vapeur remplaçant le liquide comme le transfert de chaleur dominant. Fais-le confiance."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "cooking_rice",
+        "ing_08"
+      ],
+      "outputState": "finished_arroz_rojo",
+      "instructions": "Retirer du feu. Éparpiller les pois congelés sur la surface, les recouvrir et laisser reposer 5 minutes — la vapeur résiduelle dégelera et réchauffera les pois sans les faire bouillir. Ensuite, utilisez une fourchette pour glisser doucement des bords vers l'intérieur, en écartant les grains. Retirer le piment serrano avant de servir si désiré. Goûtez au sel.",
+      "visualCue": {
+        "primaryTarget": "Grains individuels rouge corail, entièrement séparés et légèrement brillants, avec des pois vert vif répartis dans des taches de carottes visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Certains grains sont encore entassés et les pois sont encore congelés au centre.",
+            "action": "Ajouter 2 cuillerées à soupe d'eau autour des bords, recouvrir et revenir à la chaleur la plus basse pendant 5 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain est individuel, profondément coloré et entièrement cuit sans centre brut. Les pois sont vert vif et juste tendre. Le riz sent le cumin, la tomate et la chaleur.",
+            "action": "Servir immédiatement aux côtés des haricots, des tacos ou de la viande grillée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains sont entassés ensemble et certains se sont cassés en fragments d'amidon. Les pois sont devenus kaki-drab.",
+            "action": "Servir chaud — la saveur est toujours excellente même si la texture est plus douce que idéale."
+          }
+        ]
+      },
+      "feelCue": "Fourchez un petit monticule et sentez - le: les grains doivent se détacher des dents proprement, chacun distinct, avec juste assez d'humidité pour se sentir tendre sans aucun collant humide."
+    }
+  ]
 };

@@ -1,115 +1,275 @@
 export default {
-  repoId: "master_british_englishmuffin_001",
-  parentRepoId: null,
-  slug: "english-muffin",
-  author: "ForkRecipe Kitchen",
-  title: "English Muffin",
-  description: "Nook-and-cranny griddle muffins cooked low and slow on a cast-iron surface until the crust is golden and matte — fork-split to reveal a lacey, irregular interior that soaks up butter on contact and browns to a deep caramel under the broiler.",
-  cuisine: "British",
-  culture: "English",
-  category: "breads",
-  tags: ["english-muffin", "british", "breakfast", "griddle-bread", "nooks-and-crannies", "semolina"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "3 hr",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 2, salty: 3, sour: 0, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "All-purpose flour",               ratioValue: 100, defaultUnit: "%", substitutions: ["bread flour (chewier nooks)"] },
-    { ingId: "ing_02", role: "Dairy",     name: "Whole milk, warmed to 38 C",      ratioValue: 45,  defaultUnit: "%", substitutions: ["oat milk", "2% milk"] },
-    { ingId: "ing_03", role: "Hydration", name: "Warm water (40 C)",               ratioValue: 20,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Leavener",  name: "Instant yeast",                   ratioValue: 1.5, defaultUnit: "%", substitutions: ["active dry yeast (dissolve first)"] },
-    { ingId: "ing_05", role: "Fat",       name: "Unsalted butter, softened",       ratioValue: 5,   defaultUnit: "%", substitutions: ["neutral oil"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine salt",                        ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Sweetener", name: "Granulated sugar",                ratioValue: 3,   defaultUnit: "%", substitutions: ["honey"] },
-    { ingId: "ing_08", role: "Starch",    name: "Fine semolina or cornmeal, for dusting", ratioValue: 3, defaultUnit: "%", substitutions: ["coarse rice flour"] },
+  "repoId": "master_british_englishmuffin_001",
+  "parentRepoId": null,
+  "slug": "english-muffin",
+  "author": "ForkRecipe Kitchen",
+  "title": "Muffin anglais",
+  "description": "Nook-and-creanny griddle muffins cuits bas et lent sur une surface en fonte jusqu'à ce que la croûte soit dorée et mate — à la fourche-split pour révéler un intérieur lace et irrégulier qui absorbe le beurre au contact et brunit à un caramel profond sous le grilleur.",
+  "cuisine": "Anglais",
+  "culture": "changements climatiques",
+  "category": "breads",
+  "tags": [
+    "muffin anglais",
+    "britanniques",
+    "Petit déjeuner",
+    "pain à bille",
+    "Nooks-and-crannies",
+    "sémoline"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "muffin_dough",
-      instructions: "Combine warm milk, warm water, sugar, and instant yeast in a large bowl. Stir and let sit 5 minutes until slightly foamy. Add softened butter and salt. Add flour all at once and mix with a wooden spoon until a shaggy dough forms, then switch to your hand. English muffin dough is notably wetter and softer than typical bread dough — it should be slightly stickier than pizza dough. The high hydration is what creates the characteristic open, lacey interior. Do not add flour to make it easier to handle.",
-      visualCue: {
-        primaryTarget: "A soft, slightly sticky ball that holds its shape but clings to the bowl. Noticeably wetter than you might expect for a bread dough.",
-        spectrum: [
-          { state: "Underdone", description: "Pours rather than holds a shape; flour not fully incorporated; wet batter-like consistency.", action: "Add flour 1 tablespoon at a time. The dough should be sticky but shapeable — not pourable." },
-          { state: "Perfect",   description: "Soft, slightly sticky ball. Pulls away from the bowl but sticks to your hand until you flick. Smells of warm milk and yeast.", action: "Knead briefly until smooth and begin the first proof." },
-          { state: "Overdone",  description: "Stiff and dry — added too much flour. Will not produce the characteristic open crumb.", action: "Add warm water 1 tablespoon at a time and knead it in until the dough softens." },
-        ],
-      },
-      feelCue: "English muffin dough should feel as soft as a baby's cheek — impossibly soft, slightly warm from the milk, and just barely sticky. Resist every urge to add more flour.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de pain"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Proof",
-      inputs: ["muffin_dough"],
-      outputState: "risen_dough",
-      instructions: "Knead the dough on a lightly oiled surface (not floured — oil keeps it extensible) for 5 minutes until smooth and elastic. Place in a lightly oiled bowl, cover with plastic wrap, and let rise in a warm spot (26–28 C) for 60–75 minutes until doubled. English muffin dough rises quickly due to its enriched hydration and warm milk — check early. While it rises, line two baking sheets with parchment and dust generously with fine semolina or cornmeal.",
-      visualCue: {
-        primaryTarget: "Dough has doubled, the surface is domed, and the bowl shows clear expansion marks. Jiggling the bowl makes the mass quiver slightly.",
-        spectrum: [
-          { state: "Underdone", description: "Less than 50% growth after 60 minutes. Dense, tight, not jiggly.", action: "Move to a warmer spot and wait. Check in 15-minute increments." },
-          { state: "Perfect",   description: "Clearly doubled, smooth dome, slight jiggle. Poke with a floured finger leaves a dimple that springs back slowly halfway.", action: "Turn out gently and begin cutting or shaping the muffins." },
-          { state: "Overdone",  description: "Dough has collapsed, strong alcohol smell, very jiggly and fragile.", action: "Proceed immediately to shaping. Muffins will still have good flavor and nooks, though slightly denser." },
-        ],
-      },
-      feelCue: "Properly proofed English muffin dough is incredibly fragile — handle it with light, confident touches rather than squeezing or gripping. It should feel airy and almost liquid beneath a thin, taut surface skin.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Lait entier, chauffé à 38 C",
+      "ratioValue": 45,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Lait d'avoine",
+        "2% lait"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Shape",
-      inputs: ["risen_dough", "ing_08"],
-      outputState: "shaped_rounds",
-      instructions: "Dust the work surface generously with semolina. Turn the risen dough out without punching it down — you want to preserve as many bubbles as possible. Pat gently to an even 2 cm thick rectangle; do not use a rolling pin. Using a 8–9 cm round cutter, press straight down without twisting and cut as many rounds as possible. Lay each cut round on the semolina-dusted parchment and dust the tops generously with more semolina. Gather scraps, fold gently, rest 5 minutes, and cut again. The semolina coating is essential: it is the visual and textural signature of an English muffin and prevents sticking on the griddle.",
-      visualCue: {
-        primaryTarget: "Even rounds 8–9 cm across and 2 cm tall, heavily dusted on top and bottom with semolina. The cut edges should show a slightly open, bubbly structure.",
-        spectrum: [
-          { state: "Underdone", description: "Rounds are irregular in shape or very thin — dough was not patted to an even 2 cm before cutting.", action: "Re-flatten scraps to an even 2 cm and re-cut. Even thickness is important for uniform griddle-cooking." },
-          { state: "Perfect",   description: "Even round discs, 2 cm thick, generously coated in semolina. The cut face shows small bubbles from the fermentation — the beginning of the nook structure.", action: "Cover loosely and let rest and puff for 30 minutes before griddle-cooking." },
-          { state: "Overdone",  description: "Rounds have been handled too much and collapsed — they look flat and deflated with no visible internal structure.", action: "Let them rest covered 45 minutes. Some gas will redevelop during the second proof." },
-        ],
-      },
-      feelCue: "Freshly cut English muffin rounds feel buoyant — pick one up and it feels lighter than its size suggests. The sides are soft and give gently under your fingers without losing their circular shape.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau chaude (40 C)",
+      "ratioValue": 20,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Rest",
-      inputs: ["shaped_rounds"],
-      outputState: "proofed_rounds",
-      instructions: "Cover the shaped rounds loosely with a cloth or inverted sheet pan. Rest at room temperature for 30 minutes. The rounds will puff slightly and feel distinctly airier. This second proof develops the final structure and allows the gluten to relax enough that the muffins won't spring back aggressively on the griddle. The semolina coating will absorb a little moisture from the dough and firm up slightly, which helps it adhere.",
-      visualCue: {
-        primaryTarget: "Rounds have puffed noticeably — visibly taller and more rounded on top. The semolina coating appears slightly matte and drier than just after cutting.",
-        spectrum: [
-          { state: "Underdone", description: "Rounds look identical to when they were cut — flat and not puffed. Dough is still cold or room temperature was too cold.", action: "Wait the full 30 minutes in a warmer spot. Cutting and handling expels gas that needs to redevelop." },
-          { state: "Perfect",   description: "Noticeably puffed, visibly taller. Pressing lightly reveals a springy, air-filled interior. Semolina coating is matte and dry-looking.", action: "Griddle-cook immediately while the second proof is at its peak." },
-          { state: "Overdone",  description: "Rounds are very puffy after 60+ minutes — may be fragile and difficult to flip without deflating.", action: "Cook immediately, being very gentle when turning. The texture may be slightly uneven but the flavor will be excellent." },
-        ],
-      },
-      feelCue: "Proofed muffin rounds should feel like small, fragile soufflés — press one very gently with a single finger and feel it push back with a small, definite resistance. Too much pressure will deflate it.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "levure sèche active (dissoudre d'abord)"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Fry",
-      inputs: ["proofed_rounds"],
-      outputState: "finished_english_muffins",
-      instructions: "Heat a cast-iron griddle or heavy skillet over medium-low heat for 3 minutes — no oil or butter needed, the semolina coating prevents sticking and creates the characteristic matte, dry crust. Place rounds semolina-side down, leaving room between them. Cook 6–7 minutes on the first side without moving — resist lifting to check too early, as this disrupts the crust formation. The muffin should release naturally when ready. Flip and cook 6–7 minutes on the second side. The muffins should feel firm when pressed from the sides and sound slightly hollow when tapped on top. Cool on a wire rack; split with a fork — never cut with a knife. The fork-splitting tears the crumb along its natural air pockets, creating the signature ragged nook structure.",
-      visualCue: {
-        primaryTarget: "Even, matte, golden-tan crust on both flat sides — not pale, not dark brown. Sides are pale and slightly soft. Tapping the top produces a hollow sound.",
-        spectrum: [
-          { state: "Underdone", description: "Pale cream-colored crust on the bottom after 6 minutes; dough still feels squishy when pressed from the sides; tapping the top sounds dense.", action: "Lower heat slightly and cook longer — the interior needs to set before the crust will properly color." },
-          { state: "Perfect",   description: "Even golden-tan crust on both flat faces, sides pale and slightly springy, hollow sound when tapped. Fork-split to reveal the distinctive lacey, irregular interior.", action: "Cool 5 minutes, then split with a fork to expose the nooks. Toast immediately or store in an airtight bag." },
-          { state: "Overdone",  description: "Dark brown or nearly black flat faces with a bitter, toasted smell. Interior may still be slightly doughy if heat was too high and the outside cooked faster than the inside.", action: "Split one to check. If the interior is gummy, finish in a 160 C oven for 5–8 minutes." },
-        ],
-      },
-      feelCue: "A finished English muffin feels firm but with a slight give when squeezed from the sides — like a firm sponge, not a brick. Fork-split one and press your thumb into the exposed crumb: it should spring back from a million tiny air pockets all at once.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "huile neutre"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Starch",
+      "name": "Semoule fine ou farine de maïs, pour la poussière",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de riz grossière"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "muffin_dough",
+      "instructions": "Mélanger le lait chaud, l'eau chaude, le sucre et la levure instantanée dans un grand bol. Incorporer et laisser reposer 5 minutes jusqu'à légèrement mousseux. Ajouter le beurre ramolli et le sel. Ajouter la farine à la fois et mélanger avec une cuillère en bois jusqu'à ce qu'une pâte chaotique se forme, puis passer à la main. La pâte à muffin anglaise est particulièrement plus humide et plus douce que la pâte à pain typique. La forte hydratation est ce qui crée l'intérieur caractéristique ouvert, lacéré. Ne pas ajouter de farine pour faciliter la manipulation.",
+      "visualCue": {
+        "primaryTarget": "Une boule douce et légèrement collante qui tient sa forme mais s'accroche au bol. Plus humide que ce que vous pensez pour une pâte à pain.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Verse plutôt que de tenir une forme; la farine n'est pas entièrement incorporée; la consistance en pâte humide.",
+            "action": "Ajouter la farine 1 cuillère à soupe à la fois. La pâte doit être collante mais façonnable — non versable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Balle douce et légèrement collante. Éloignez-vous du bol, mais collez-vous à la main jusqu'à ce que vous flissez. Des odeurs de lait chaud et de levure.",
+            "action": "Agenouillez brièvement jusqu'à ce qu'il soit lisse et commencez la première preuve."
+          },
+          {
+            "state": "Overdone",
+            "description": "Stiff et sec — ajouté trop de farine. Ne produira pas la miette ouverte caractéristique.",
+            "action": "Ajouter l'eau chaude 1 cuillère à soupe à la fois et la pétrir jusqu'à ce que la pâte ramollisse."
+          }
+        ]
+      },
+      "feelCue": "La pâte de muffin anglaise devrait être aussi douce que la joue d'un bébé — incroyablement douce, légèrement chaude du lait et à peine collante. Résistez à chaque envie d'ajouter plus de farine."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Preuve",
+      "inputs": [
+        "muffin_dough"
+      ],
+      "outputState": "risen_dough",
+      "instructions": "Aplatissez la pâte sur une surface légèrement huilée (non farinée – l'huile la maintient extensible) pendant 5 minutes jusqu'à ce qu'elle soit lisse et élastique. Placer dans un bol légèrement huilé, couvrir d'enveloppe en plastique et laisser monter dans un endroit chaud (26–28 C) pendant 60–75 minutes jusqu'à doubler. La pâte de muffin anglaise s'élève rapidement en raison de son hydratation enrichie et de son lait chaud. Tandis qu'il monte, lignez deux plaques de cuisson avec le parchemin et la poussière généreusement avec la semoule fine ou la farine de maïs.",
+      "visualCue": {
+        "primaryTarget": "La toux a doublé, la surface est bombée, et le bol montre des marques d'expansion claires. Le jogging du bol rend le carquois de masse légèrement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Croissance inférieure à 50% après 60 minutes. Sensé, serré, pas rigolo.",
+            "action": "Passez à un endroit plus chaud et attendez. Vérifiez en incréments de 15 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dôme nettement doublé, lisse, léger. Poke avec un doigt fariné laisse une fossette qui ressort lentement à mi-chemin.",
+            "action": "S'en tirer doucement et commencer à couper ou façonner les muffins."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux s'est effondrée, une forte odeur d'alcool, très jiggly et fragile.",
+            "action": "Continuez immédiatement à façonner. Les muffins auront encore une bonne saveur et des coins, bien que légèrement plus dense."
+          }
+        ]
+      },
+      "feelCue": "La pâte de muffin anglaise est incroyablement fragile, bien éprouvée, car elle est faite avec des touches légères et confiantes plutôt que de serrer ou de grincer. Il doit se sentir aéré et presque liquide sous une peau mince et taupe."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "risen_dough",
+        "ing_08"
+      ],
+      "outputState": "shaped_rounds",
+      "instructions": "Poussez généreusement la surface de travail avec de la semoule. Éteignez la pâte levée sans la frapper vers le bas — vous voulez conserver autant de bulles que possible. Patientez doucement jusqu'à un rectangle d'épaisseur égale de 2 cm; n'utilisez pas de laminoir. À l'aide d'une coupe ronde de 8 à 9 cm, appuyez tout droit sans torsion et coupez autant de rondelles que possible. Déposer chaque coupe sur le parchemin à la semolina et épousseter généreusement le dessus avec plus de semolina. Recueillir les débris, plier doucement, reposer 5 minutes et couper à nouveau. Le revêtement semoule est essentiel : il s'agit de la signature visuelle et textuelle d'un muffin anglais et empêche de coller sur la grille.",
+      "visualCue": {
+        "primaryTarget": "Même des rondelles de 8 à 9 cm de long et de 2 cm de haut, fortement dépoussiérées sur le dessus et le bas avec de la semoule. Les bords coupés doivent présenter une structure légèrement ouverte et bubble.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les ronds sont irréguliers ou très fins — la pâte n'a pas été galbée à 2 cm avant la coupe.",
+            "action": "Regonfler les débris à 2 cm et les couper. Même l'épaisseur est importante pour la cuisson uniforme des grilles."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même des disques ronds, d'une épaisseur de 2 cm, généreusement recouverts de semoule. La taille coupée montre de petites bulles de la fermentation — le début de la structure du coin.",
+            "action": "Couvrir lâchement et laisser reposer et bouffer pendant 30 minutes avant de faire cuire les filets."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les rondelles ont été trop manipulées et s'est effondrées — elles semblent plates et dégonflées sans structure interne visible.",
+            "action": "Laissez-les se reposer pendant 45 minutes. Certains gaz seront réaménagés lors de la deuxième épreuve."
+          }
+        ]
+      },
+      "feelCue": "Les rondelles de muffins anglais fraîchement coupées se sentent flottantes — prenez-en une et elle se sent plus légère que sa taille ne le suggère. Les côtés sont doux et donnent doucement sous vos doigts sans perdre leur forme circulaire."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "shaped_rounds"
+      ],
+      "outputState": "proofed_rounds",
+      "instructions": "Couvrez les rondelles en forme de façon lâche avec un chiffon ou une plaque inversée. Reposez à température ambiante pendant 30 minutes. Les rondelles souffleront légèrement et se sentiront nettement plus aérées. Cette seconde preuve développe la structure finale et permet au gluten de se détendre suffisamment pour que les muffins ne ressortent pas agressivement sur la grille. Le revêtement de semoule absorbera un peu d'humidité de la pâte et se raffermira légèrement, ce qui l'aidera à adhérer.",
+      "visualCue": {
+        "primaryTarget": "Les ronds ont beaucoup gonflé — visiblement plus haut et plus arrondi sur le dessus. Le revêtement en semoule semble légèrement mat et plus sec qu'après la coupe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les ronds semblent identiques à ceux qui ont été coupés — plats et non gonflés. La toux est encore froide ou la température ambiante était trop froide.",
+            "action": "Attendez 30 minutes dans un endroit plus chaud. La coupe et la manutention expulsent les gaz qui doivent être réaménagés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Étonnamment gonflé, visiblement plus grand. Presser légèrement révèle un intérieur printanier et rempli d'air. Le revêtement en sémolina est mat et sec.",
+            "action": "La deuxième preuve est à son apogée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les ronds sont très gonflés après plus de 60 minutes — peut être fragile et difficile à retourner sans dégonfler.",
+            "action": "Cuire immédiatement, être très doux en tournant. La texture peut être légèrement inégale, mais la saveur sera excellente."
+          }
+        ]
+      },
+      "feelCue": "Les rondelles de muffins prouvées doivent se sentir comme de petits soufflés fragiles — pressez l'un très doucement avec un seul doigt et sentez-le repousser avec une petite résistance précise. Trop de pression la dégonflera."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Fry",
+      "inputs": [
+        "proofed_rounds"
+      ],
+      "outputState": "finished_english_muffins",
+      "instructions": "Chauffer une grille en fonte ou une poêle lourde à feu moyen-doux pendant 3 minutes — sans huile ni beurre nécessaire, le revêtement de semoule empêche le collage et crée la croûte mate et sèche caractéristique. Placez les rondelles côté semoule vers le bas, laissant la place entre eux. Cuire de 6 à 7 minutes du premier côté sans bouger — résistez à soulever pour vérifier trop tôt, car cela perturbe la formation de la croûte. Le muffin doit se libérer naturellement quand il est prêt. Fliper et cuire 6 à 7 minutes sur le deuxième côté. Les muffins doivent se sentir fermes lorsqu'ils sont pressés des côtés et sonner légèrement creux lorsqu'ils sont tapés sur le dessus. Refroidir sur un support de fil; diviser avec une fourchette — ne jamais couper avec un couteau. La fourche déchire la miette le long de ses poches d'air naturel, créant ainsi la structure caractéristique de l'insecte.",
+      "visualCue": {
+        "primaryTarget": "Même la croûte mate et dorée des deux côtés plats n'est pas pâle, ni brun foncé. Les côtés sont pâles et légèrement doux. Le tapotage du haut produit un son creux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Une croûte de couleur crème pâle sur le fond après 6 minutes; la pâte est encore squishy lorsqu'elle est pressée des côtés; le taraudage semble dense.",
+            "action": "Baissez légèrement la chaleur et faites cuire plus longtemps – l'intérieur doit être réglé avant que la croûte ne colore correctement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même la croûte dorée sur les deux faces plates, les côtés pâles et légèrement printaniers, son creux quand tapoté. La fourche scindée pour révéler la dentelle caractéristique, l'intérieur irrégulier.",
+            "action": "Laisser refroidir 5 minutes, puis diviser avec une fourchette pour exposer les coins. Servir immédiatement ou conserver dans un sac hermétique."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des visages plats brun foncé ou presque noirs avec une odeur amère et grillée. L'intérieur peut encore être légèrement pâteux si la chaleur était trop élevée et l'extérieur cuit plus rapidement que l'intérieur.",
+            "action": "Séparez-en un pour vérifier. Si l'intérieur est gommé, terminer dans un four 160 C pendant 5 à 8 minutes."
+          }
+        ]
+      },
+      "feelCue": "Un muffin anglais fini se sent ferme, mais avec un léger donner quand il est pressé des côtés — comme une éponge ferme, pas une brique. Fixez-en un et appuyez sur votre pouce dans la miette exposée : il devrait revenir d'un million de petites poches d'air tout à la fois."
+    }
+  ]
 };

@@ -1,95 +1,251 @@
 export default {
-  repoId: "master_thai_peanut_sauce_001",
-  parentRepoId: null,
-  slug: "peanut-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Peanut Sauce",
-  description: "Nam jim satay, the way it should be — dry-roasted peanuts pounded coarse, simmered with cracked red curry paste in split coconut cream until the oil rises red and slick, then balanced sharp-sweet-salty with tamarind, palm sugar, and fish sauce into a glossy, nutty dip that clings to charred skewers.",
-  cuisine: "Thai",
-  culture: "Central Thai",
-  category: "sauces",
-  tags: ["peanut", "satay", "thai", "nam-jim", "coconut", "dipping-sauce"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 3, salty: 3, sour: 2, bitter: 1, umami: 4, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Raw skinless peanuts",            ratioValue: 100, defaultUnit: "parts", substitutions: ["unsalted dry-roasted peanuts (skip the roasting step)"] },
-    { ingId: "ing_02", role: "Spice",     name: "Thai red curry paste (krueng gaeng phed)", ratioValue: 35, defaultUnit: "parts", substitutions: ["Massaman curry paste for a milder, warmer note", "homemade pounded paste"] },
-    { ingId: "ing_03", role: "Fat",       name: "Coconut cream (thick, top of the can)", ratioValue: 120, defaultUnit: "parts", substitutions: ["full-fat coconut milk reduced harder to split"] },
-    { ingId: "ing_04", role: "Liquid",    name: "Coconut milk (or water)",          ratioValue: 80,  defaultUnit: "parts", substitutions: ["unsalted chicken or vegetable stock", "plain water"] },
-    { ingId: "ing_05", role: "Acid",      name: "Tamarind paste (seedless, sour)",  ratioValue: 25,  defaultUnit: "parts", substitutions: ["fresh lime juice added off the heat"] },
-    { ingId: "ing_06", role: "Sweetener", name: "Palm sugar (shaved)",              ratioValue: 30,  defaultUnit: "parts", substitutions: ["light brown sugar"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fish sauce",                       ratioValue: 18,  defaultUnit: "parts", substitutions: ["light soy sauce for a vegetarian version"] },
-    { ingId: "ing_08", role: "Garnish",   name: "Toasted peanuts, roughly chopped", ratioValue: 12,  defaultUnit: "parts", substitutions: ["fried shallots", "sliced fresh red chili"] },
+  "repoId": "master_thai_peanut_sauce_001",
+  "parentRepoId": null,
+  "slug": "peanut-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce aux arachides",
+  "description": "Nam jim satay, la façon dont il devrait être — cacahuètes grillées à sec poêlées grossièrement, mijotées avec de la pâte de curry rouge fissurée dans la crème de noix de coco fendue jusqu'à ce que l'huile augmente rouge et lissée, puis équilibrées sales-doux avec tamarin, sucre de palme, et sauce de poisson dans une trempe brillante et noisette qui s'accroche aux brochettes carbonisées.",
+  "cuisine": "Thaï",
+  "culture": "Centre thaïlandais",
+  "category": "sauces",
+  "tags": [
+    "arachide",
+    "satay",
+    "Thaï",
+    "nam-jim",
+    "noix de coco",
+    "trempage-sauce"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Roast",
-      inputs: ["ing_01"],
-      outputState: "pounded_peanuts",
-      instructions: "Dry-roast the raw peanuts in a heavy pan over medium-low heat, shaking constantly, 8 to 12 minutes, until golden and fragrant with dark freckling. Let them cool completely — they crisp as they cool. Pound in a granite mortar (or pulse in a processor) to a coarse rubble: about two-thirds gritty meal and one-third pea-sized pieces. You want texture, not peanut butter; over-grinding releases oil and turns the sauce pasty and flat.",
-      visualCue: {
-        primaryTarget: "Peanuts are evenly honey-gold with scattered toasty-brown spots, smelling deeply nutty and almost popcorn-sweet, and the pounded result is a coarse two-tone rubble of meal and crunchy bits.",
-        spectrum: [
-          { state: "Underdone", description: "Peanuts are still pale and taste raw and beany, with no roasted aroma. Pounded, they smell green.", action: "Keep roasting and stirring over low heat — color and aroma develop slowly. Raw peanut flavor will dull the whole sauce." },
-          { state: "Perfect",   description: "Golden with brown freckles, snapping crisp when bitten, smelling like roasted nuts. The pound yields gritty meal studded with crunchy fragments.", action: "Set aside. Reserve a small handful coarsely chopped for the final garnish." },
-          { state: "Overdone",  description: "Peanuts are scorched dark brown to black and smell acrid and bitter; pounded, they weep oil into a sludge.", action: "Discard burnt nuts — bitterness carries straight through the sauce. If only the pound went oily, stir in a spoon of the dry meal to bring back texture." },
-        ],
-      },
-      feelCue: "A properly roasted peanut snaps cleanly between the teeth, never bends. Under the pestle it should crack and crumble dry, not smear; the moment it starts to slick the mortar with oil, stop.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Cacahuètes crues sans peau",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Cacahuètes grillées à l'état sec, non salées (skiper l'étape de torréfaction)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Fry",
-      inputs: ["ing_03", "ing_02"],
-      outputState: "fried_paste",
-      instructions: "Put the thick coconut cream alone in a wide pan over medium heat and let it bubble and reduce, stirring, 4 to 6 minutes, until it 'cracks' — the cream splits and a slick of clear oil pools at the edges. Stir in the red curry paste and fry it in that coconut oil, pressing and turning, 3 to 5 minutes, until the raw garlic-and-galangal smell cooks off and the oil glows red and aromatic. This frying of the paste (pad prik gaeng) is what builds depth; skip it and the sauce tastes flat and dusty.",
-      visualCue: {
-        primaryTarget: "A thick, brick-red paste sizzling in a visible pool of glossy orange-red oil that has separated from the solids, smelling fragrant and toasty with no harsh raw-spice edge.",
-        spectrum: [
-          { state: "Underdone", description: "The coconut is still soupy and white and hasn't split; the paste sits in liquid and smells sharply raw.", action: "Keep cooking over medium heat and be patient — the cream must reduce and crack before the paste can fry. Lower the heat if it threatens to scorch." },
-          { state: "Perfect",   description: "Glossy red oil has separated and the paste is thick, darkened, and intensely aromatic, sizzling rather than boiling.", action: "Proceed immediately to add the peanuts and liquid before the paste catches." },
-          { state: "Overdone",  description: "The paste is dry, dark, and sticking, with a burnt, bitter smell starting to rise from the pan.", action: "Pull off the heat at once and add the coconut milk to stop the cooking. If it tastes scorched, start the paste again — burn doesn't wash out." },
-        ],
-      },
-      feelCue: "Listen for the change from a wet rolling boil to a sharp, oily sizzle — that crackle is the cream splitting. The paste should leave a clean trail when you drag the spoon, and the kitchen should smell of toasted chili and galangal, not acrid smoke.",
+      "ingId": "ing_02",
+      "role": "Spice",
+      "name": "Pâte de curry rouge thaïlandaise (krueng gaeng phed)",
+      "ratioValue": 35,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pâte de curry Massaman pour une note plus douce et plus chaude",
+        "pâte cuite maison"
+      ]
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["fried_paste", "pounded_peanuts", "ing_04"],
-      outputState: "peanut_base",
-      instructions: "Stir the pounded peanuts into the fried paste so every grain is coated in the red oil, then pour in the coconut milk (or water). Bring to a gentle simmer and cook 8 to 12 minutes, stirring often as the peanuts drink the liquid and thicken the sauce. It will go from loose to luxuriously thick; thin with a splash more coconut milk or water whenever it gets too tight to fall off the spoon. The peanut starch and oil now carry the chili heat and give the sauce its body.",
-      visualCue: {
-        primaryTarget: "A thick, terracotta-colored sauce, slightly grainy from the peanuts, with beads of red oil glistening on the surface and a slow, lava-like blup as it simmers.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is thin and watery, the peanuts loose and the flavors not yet melded; it tastes of separate parts.", action: "Keep simmering to let the peanuts swell and thicken and the flavors marry. Resist over-thinning early." },
-          { state: "Perfect",   description: "Thick enough to coat the spoon and mound softly, glossy with surfaced oil, the peanut and chili flavors now reading as one.", action: "Move to the final seasoning — tamarind, palm sugar, and fish sauce." },
-          { state: "Overdone",  description: "The sauce is stiff and claggy, almost a paste, threatening to catch on the pan bottom.", action: "Loosen with coconut milk or warm water a splash at a time, stirring, until it flows again. Lower the heat to stop it sticking." },
-        ],
-      },
-      feelCue: "Drag the spoon across the pan — when it leaves a slow-closing channel that shows the base for a beat, the body is right. It should feel velvety with a pleasant peanut grit, never gluey.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Crème de coco (épaisseur, dessus de la boîte)",
+      "ratioValue": 120,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "lait de coco plein gras réduit plus difficile à fractionner"
+      ]
     },
     {
-      nodeId: "step_4", action: "Balance",
-      inputs: ["peanut_base", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "finished_peanut_sauce",
-      instructions: "Off a vigorous simmer, stir in the tamarind, palm sugar, and fish sauce. Let it melt together for a minute, then taste and tune: it should hit sweet first, then salty and sour close behind, with the chili heat blooming at the back. Adjust in small amounts — palm sugar to round, tamarind to brighten, fish sauce to deepen — until no single note dominates. Loosen to a thick-but-pourable dipping consistency. Spoon into a bowl, scatter the reserved chopped peanuts over the top, and serve warm with grilled satay.",
-      visualCue: {
-        primaryTarget: "A glossy, deep russet-brown sauce that ribbons thickly off the spoon and slowly settles flat, an oil sheen on top and a crown of chopped peanuts catching the light.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce tastes flat or one-dimensional — overly nutty, or sharp from raw fish sauce, with the sweet-sour balance not yet locked in.", action: "Add palm sugar and tamarind in small increments, tasting between each. Sweet and sour together are what make it sing; under-seasoned satay sauce tastes muddy." },
-          { state: "Perfect",   description: "Balanced and rounded — sweet, salty, and sour layered over deep roasted peanut and chili, thick enough to cling to a skewer without sliding off.", action: "Garnish with chopped peanuts and serve warm. It thickens as it cools, so leave it a touch loose." },
-          { state: "Overdone",  description: "The sauce is cloyingly sweet or aggressively salty, or so thick it sits in a stiff clump.", action: "Pull it back with a squeeze of lime or a little tamarind for sweetness, water for salt, and loosen with coconut milk. Re-taste until balanced." },
-        ],
-      },
-      feelCue: "A correct satay sauce coats the back of a spoon and drips slowly, with that characteristic grainy-silky peanut texture. On the tongue the sweetness should arrive first and the heat last; if it tastes flat, it usually wants tamarind and salt, not more sugar.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Lait de coco (ou eau)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Stocks non salés de poulet ou de légumes",
+        "eau pure"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Pâte de tamarin (sans graines, aigre)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de lime frais ajouté à la chaleur"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Sucre de palme (séparé)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun léger"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sauce de poisson",
+      "ratioValue": 18,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja légère pour une version végétarienne"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Cacahuètes grillées, hachées à peu près",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalotes frites",
+        "piment rouge frais tranché"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "pounded_peanuts",
+      "instructions": "Faire griller les arachides crues dans une poêle lourde à feu moyen-doux, en tremblant constamment, de 8 à 12 minutes, jusqu'à ce qu'elles soient dorées et parfumées avec des taches de rousseur foncées. Laissez - les refroidir complètement — ils sont croustillants. Pound dans un mortier de granit (ou impulsion dans un processeur) à un gravat grossier: environ deux tiers de farine de gritty et un tiers de pièces de taille de pois. Vous voulez de la texture, pas du beurre de cacahuètes ; le surgissement libère de l'huile et transforme la sauce pâteuse et plate.",
+      "visualCue": {
+        "primaryTarget": "Les arachides sont uniformément dorées avec des taches brunes grillées éparses, sentant profondément la noix et presque le popcorn sucré, et le résultat battu est un gros gravat de deux tons de farine et de morceaux croquants.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les arachides sont encore pâles et ont un goût cru et de beany, sans arôme grillé. Pounded, ils sentent le vert.",
+            "action": "Continuez à rôtir et à remuer à feu doux — la couleur et l'arôme se développent lentement. Le goût cru d'arachide va ternir la sauce entière."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or avec des taches de rousseur brunes, craquer croustillant quand mordu, sentant comme des noix grillées. La livre donne des farines gritty cloutées de fragments croquants.",
+            "action": "Mettez de côté. Réserver une petite poignée grossièrement hachée pour la garniture finale."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les arachides sont brûlées brun foncé à noir et sentent l'acridité et l'amertume.",
+            "action": "Jeter les noix brûlées — l'amertume porte tout droit dans la sauce. Si seulement la livre est devenue grasse, remuez une cuillère du repas sec pour ramener la texture."
+          }
+        ]
+      },
+      "feelCue": "Une cacahuète bien torréfié se met entre les dents et ne se penche jamais. Sous le pilon, il devrait craquer et s'essuyer, pas se frotter; au moment où il commence à lécher le mortier avec de l'huile, arrêter."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "ing_03",
+        "ing_02"
+      ],
+      "outputState": "fried_paste",
+      "instructions": "Mettre l'épaisse crème de noix de coco seule dans une grande casserole à feu moyen et la laisser buller et réduire, en remuant, de 4 à 6 minutes, jusqu'à ce qu'il 'cracks' — la crème se divise et une léchée d'huile claire aux bords. Incorporer la pâte de curry rouge et la faire frire dans cette huile de noix de coco, presser et tourner, 3 à 5 minutes, jusqu'à ce que l'odeur brute d'ail et de galangal se consume et que l'huile brille rouge et aromatique. Cette friture de la pâte (pad prik gaeng) est ce qui construit la profondeur; sautez-la et la sauce goûte plat et poussiéreux.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse et rouge brique dans une piscine visible d'huile rouge-orange brillante qui s'est séparée des solides, sentant parfumé et grillé sans bord dur d'épices brutes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La noix de coco est encore soupeuse et blanche et n'a pas fendue; la pâte est assise dans du liquide et sent fortement cru.",
+            "action": "Conservez la cuisson à feu moyen et soyez patient – la crème doit réduire et craquer avant que la pâte puisse frire. Baissez la chaleur si elle menace de brûler."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'huile rouge brillante s'est séparée et la pâte est épaisse, foncée, intensément aromatique, étourdissante plutôt que bouillante.",
+            "action": "Continuez immédiatement à ajouter les arachides et le liquide avant les prises de pâte."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est sèche, sombre et collante, avec une odeur brûlée et amère qui commence à se lever de la poêle.",
+            "action": "Retirer immédiatement le feu et ajouter le lait de coco pour arrêter la cuisson. S'il a un goût brûlé, recommencez la pâte."
+          }
+        ]
+      },
+      "feelCue": "Écoutez le passage d'un ébullition humide à un étourdissement vif et huileux — ce craquelin est le fractionnement de la crème. La pâte devrait laisser un sentier propre quand vous faites glisser la cuillère, et la cuisine devrait sentir du chili grillé et galangal, pas de la fumée acride."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "fried_paste",
+        "pounded_peanuts",
+        "ing_04"
+      ],
+      "outputState": "peanut_base",
+      "instructions": "Incorporer les cacahuètes piquées dans la pâte frite afin que chaque grain soit enduit dans l'huile rouge, puis verser dans le lait de coco (ou l'eau). Porter à mijoter doucement et cuire de 8 à 12 minutes, en remuant souvent lorsque les arachides boivent le liquide et épaississent la sauce. Il ira de lâche à luxueusement épais; mince avec un éclaboussure plus de lait de coco ou d'eau chaque fois qu'il devient trop serré pour tomber de la cuillère. L'amidon et l'huile d'arachide portent maintenant la chaleur de chili et donnent à la sauce son corps.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse, de couleur terre cuite, légèrement grainée des arachides, avec des perles d'huile rouge scintillent à la surface et un blup lent, semblable à de la lave, au fur et à mesure qu'elle mijote.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse, les cacahuètes lâches et les saveurs non encore mélangées; il goûte de parties séparées.",
+            "action": "Continuez à mijoter pour laisser les cacahuètes gonfler et épaissir et les saveurs se marier. Résiste trop tôt."
+          },
+          {
+            "state": "Perfect",
+            "description": "Assez épais pour enrober la cuillère et le monticule doucement, brillant avec de l'huile superficielle, les saveurs d'arachide et de chili maintenant lisant comme un.",
+            "action": "Passer à l'assaisonnement final — tamarin, sucre de palme et sauce de poisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est raide et farcie, presque une pâte, menaçant de prendre sur le fond de la poêle.",
+            "action": "Allongez-vous avec du lait de coco ou de l'eau chaude à la fois, en remuant, jusqu'à ce qu'il coule à nouveau. Baissez la chaleur pour l'arrêter de coller."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser la cuillère à travers la poêle — quand elle laisse un canal à fermeture lente qui montre la base pour un battement, le corps est juste. Il devrait se sentir velouté avec un grain d'arachide agréable, jamais collant."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Solde",
+      "inputs": [
+        "peanut_base",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_peanut_sauce",
+      "instructions": "Ajouter une mijotée vigoureuse, mélanger le tamarin, le sucre de palme et la sauce de poisson. Laissez fondre ensemble pendant une minute, puis goûtez et assaisonnez: il devrait frapper sucré d'abord, puis salé et aigrer près derrière, avec la chaleur de chili fleurissant à l'arrière. Ajuster en petites quantités — sucre de palme à rond, tamarin à éclaircir, sauce de poisson à approfondir — jusqu'à ce qu'aucune note ne domine. Plongez jusqu'à une consistance de trempe épaisse mais puante. Spoon dans un bol, disperser les cacahuètes hachées réservées sur le dessus, et servir chaud avec satay grillé.",
+      "visualCue": {
+        "primaryTarget": "Une sauce brun russé brillant et profond qui rubane épaissement de la cuillère et s'installe lentement à plat, un éclat d'huile sur le dessus et une couronne d'arachides hachées attraper la lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a un goût plat ou unidimensionnel – trop de noix, ou tranchant de la sauce de poisson crue, avec l'équilibre sucré-sour pas encore verrouillé.",
+            "action": "Ajouter le sucre de palme et le tamarin en petits morceaux, goûter entre chacun. Doucement et aigrent ensemble sont ce qui le fait chanter; sauce satay sous-saison goût boueux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Équilibré et arrondi: doux, salé et aigre, recouvert d'arachide et de chili torréfié, suffisamment épais pour s'accrocher à une brochette sans glisser.",
+            "action": "Garnir d'arachides hachées et servir au chaud. Il s'épaissit comme il refroidit, alors laisse-lui un toucher lâche."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est coiffantement douce ou agressivement salée, ou si épaisse qu'elle est assise dans une masse raide.",
+            "action": "Retirez-le avec une touche de citron vert ou un peu de tamarin pour la douceur, de l'eau pour le sel et desserrez avec du lait de coco. Reprendre le goût jusqu'à équilibrer."
+          }
+        ]
+      },
+      "feelCue": "Une bonne sauce satay enveloppe le dos d'une cuillère et s'égoutte lentement, avec cette texture grainée-silky caractéristique. Sur la langue la douceur doit arriver en premier et la chaleur dure; si elle a un goût plat, elle veut généralement tamarin et sel, pas plus de sucre."
+    }
+  ]
 };

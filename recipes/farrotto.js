@@ -1,125 +1,313 @@
 export default {
-  repoId: "master_italian_farrotto_001",
-  parentRepoId: null,
-  slug: "farrotto",
-  author: "ForkRecipe Kitchen",
-
-  title: "Farrotto al Parmigiano",
-  description: "Farro risotto — pearled farro cooked risotto-style, ladleful by ladleful, until it reaches a creamy, gloriously al dente texture with more chew and nuttiness than Arborio could ever offer, finished with the classic mantecatura of cold butter and parmesan.",
-  cuisine: "Italian",
-  culture: "Northern Italian",
-  category: "grains",
-
-  tags: ["vegetarian", "italian", "farro", "risotto-style", "parmesan"],
-  difficulty: 2,
-  activeTime: "35 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 0, salty: 3, sour: 1, bitter: 0, umami: 3, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Pearled farro (farro perlato)",               ratioValue: 300, defaultUnit: "g",   substitutions: ["semi-pearled farro (add 10 min to cooking)", "spelt berries (add 15 min)"] },
-    { ingId: "ing_02", role: "Allium",     name: "White onion (finely diced)",                  ratioValue: 120, defaultUnit: "g",   substitutions: ["shallots (2 large)"] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves (minced)",                      ratioValue: 2,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Solvent",    name: "Dry white wine",                              ratioValue: 120, defaultUnit: "ml",  substitutions: ["dry vermouth", "extra stock + 1 tsp white wine vinegar"] },
-    { ingId: "ing_05", role: "Liquid",     name: "Warm vegetable or chicken stock",             ratioValue: 1200, defaultUnit: "ml", substitutions: ["water in an emergency — season well"] },
-    { ingId: "ing_06", role: "Fat",        name: "Unsalted butter (cold, cubed, divided)",      ratioValue: 80,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Dairy",      name: "Parmesan (finely grated on a microplane)",   ratioValue: 80,  defaultUnit: "g",   substitutions: ["Grana Padano", "Pecorino Romano (saltier — adjust seasoning)"] },
-    { ingId: "ing_08", role: "Herb",       name: "Fresh thyme sprigs",                          ratioValue: 4,   defaultUnit: "sprigs", substitutions: ["dried thyme (1 tsp)"] },
-    { ingId: "ing_09", role: "Fat",        name: "Extra-virgin olive oil",                      ratioValue: 30,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning",  name: "Fine salt",                                   ratioValue: 6,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning",  name: "Black pepper (freshly ground)",               ratioValue: 2,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_12", role: "Citrus",     name: "Lemon zest",                                  ratioValue: 1,   defaultUnit: "tsp", substitutions: [] },
+  "repoId": "master_italian_farrotto_001",
+  "parentRepoId": null,
+  "slug": "farrotto",
+  "author": "ForkRecipe Kitchen",
+  "title": "Farrocto al Parmigiano",
+  "description": "Le risotto de Farro — de style risotto perlé, ladleful by ladleful, jusqu'à ce qu'il atteigne une texture crémeuse, glorieusement al dente avec plus de mâcher et de noix que Arborio n'a jamais pu offrir, fini avec la mantecatura classique de beurre froid et de parmesan.",
+  "cuisine": "Italien",
+  "culture": "Nord italien",
+  "category": "grains",
+  "tags": [
+    "végétarien",
+    "Italien",
+    "Farro",
+    "style risotto",
+    "parmesan"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "35 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_09", "ing_06", "ing_02", "ing_03", "ing_08"],
-      outputState: "soffritto",
-      instructions: "In a wide, heavy-bottomed saucepan or braiser, warm the olive oil and 20 g of the butter together over medium-low heat. Add the onion, garlic, and thyme sprigs with a pinch of salt. Cook gently, stirring often, for 8-10 minutes until the onion is completely soft, translucent, and yielding — it should have absolutely no color. This is the soffritto; it provides the sweet, aromatic backbone of the farrotto and must be cooked low and slow so the natural sugars develop without caramelizing.",
-      visualCue: {
-        primaryTarget: "Onion is translucent, very soft, glistening in butter and oil, and completely colorless. Garlic is soft and fragrant. Thyme is wilted.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still opaque and has a slight crunch. Raw garlic smell.", action: "Lower the heat and continue cooking. A soffritto cooked too fast produces a harsh, sharp flavor rather than the gentle sweetness needed here." },
-          { state: "Perfect",   description: "Onion is completely translucent, soft, and yielding to the spoon with no resistance. No browning anywhere. Smells sweet and gentle.", action: "Add the farro and toast immediately." },
-          { state: "Overdone",  description: "The onion edges are beginning to turn golden. The butter smells slightly nutty.", action: "Reduce heat immediately. Light golden tint is acceptable but the dish will be slightly less delicate — proceed." },
-        ],
-      },
-      feelCue: "The soffritto should feel almost melting when you press a piece of onion against the side of the pot with your spoon — completely without resistance, like pressing warm butter.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farro perlé (farro perlato)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Farro semi-pair (ajouter 10 min à la cuisson)",
+        "baies d'épeautre (ajouter 15 min)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toast",
-      inputs: ["ing_01", "soffritto"],
-      outputState: "toasted_farro",
-      instructions: "Add the pearled farro to the soffritto and stir to coat every grain in the butter and oil mixture. Raise the heat to medium. Toast the farro, stirring constantly, for 2 minutes until the grains look slightly shiny and smell of warm, nutty grain — like a mild popcorn aroma. This coating step is not strictly necessary for farro as it is for Arborio (which would absorb too much fat), but it perfumes the grain and adds a subtle depth to the finished dish.",
-      visualCue: {
-        primaryTarget: "Farro grains look slightly shiny and translucent at the edges. The pot smells of warm, toasted grain and butter.",
-        spectrum: [
-          { state: "Underdone", description: "Farro looks chalky and matte with no sheen. No toasted aroma.", action: "Continue toasting for another minute, stirring constantly over medium heat." },
-          { state: "Perfect",   description: "Grains glisten with fat, slightly translucent at the edges, and smell gently of toasted grain without any color change.", action: "Add the white wine immediately." },
-          { state: "Overdone",  description: "Farro has begun to turn golden and smells noticeably nutty.", action: "Add the wine at once to arrest the toasting. The extra nuttiness is pleasant but do not take it further." },
-        ],
-      },
-      feelCue: "Stir the toasted farro and listen — it should make a dry, slightly glassy sound as the fat-coated grains whisper against each other, not the wet clump of raw grain.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon blanc (en dés)",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Échalotes (2 grandes)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Deglaze",
-      inputs: ["toasted_farro", "ing_04"],
-      outputState: "wine_absorbed_farro",
-      instructions: "Pour the white wine into the hot pot all at once — it will hiss and steam dramatically. Stir constantly until the wine is almost entirely absorbed, about 2-3 minutes. This step does three things: it deglazes any savory bits from the bottom of the pot, adds acidity that will balance the richness of butter and parmesan at the end, and begins the process of coaxing starch from the farro to build the creamy sauce. The smell of raw alcohol should cook off completely before you add the first ladleful of stock.",
-      visualCue: {
-        primaryTarget: "The wine has been absorbed and the pot smells of wine fragrance without raw alcohol. The farro looks slightly glossy and the pot bottom is clean.",
-        spectrum: [
-          { state: "Underdone", description: "The wine is still visibly pooled and you can smell raw alcohol sharply.", action: "Continue stirring over medium heat until the wine is fully absorbed and the raw alcohol smell is gone." },
-          { state: "Perfect",   description: "Wine is absorbed, pot bottom is clear. Farro looks glossy. The smell is of white wine reduction — fruity and acidic without sharpness.", action: "Begin adding stock one ladle at a time." },
-          { state: "Overdone",  description: "The wine has reduced so much that the farro is starting to stick and sizzle at the bottom.", action: "Add the first ladle of stock immediately and scrape the bottom clean." },
-        ],
-      },
-      feelCue: "When you drag a spoon through the farro after the wine has absorbed, a brief, clean channel should appear before the mixture slowly flows back — this is the first sign of the starch beginning to release.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail (mincées)",
+      "ratioValue": 2,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["wine_absorbed_farro", "ing_05", "ing_10"],
-      outputState: "cooked_farrotto",
-      instructions: "Keep the stock warm in a separate saucepan — cold stock would arrest the cooking and cool the farro unevenly. Add the stock one ladle (about 100-120 ml) at a time, stirring almost constantly and waiting until each addition is nearly absorbed before adding the next. Maintain a steady, active simmer throughout — never a rolling boil, never a static pool. After 25-30 minutes the farro should be al dente: tender on the outside with a slight, satisfying chew at the center. Season with salt partway through. The risotto base will look quite loose and soupy when done — this is correct; the mantecatura will tighten it.",
-      visualCue: {
-        primaryTarget: "Farro grains are al dente — tender exterior with a faint chew at the center. The base is creamy and flows slowly when the pot is tipped, like a very loose porridge.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still quite firm throughout with a starchy, chalky center.", action: "Continue adding stock ladle by ladle and cooking. Farro is more forgiving than Arborio — it will not turn to mush quickly." },
-          { state: "Perfect",   description: "Grains are tender with a distinct but pleasant chew. The base is creamy from released starch and flows when the pot is shaken. Smells nutty and savory.", action: "Remove from heat immediately and proceed to mantecatura." },
-          { state: "Overdone",  description: "Grains are fully soft with no textural distinction. The base is very thick, almost pasty.", action: "Proceed to mantecatura immediately, being gentle. Add a splash more stock if the base is too thick to flow." },
-        ],
-      },
-      feelCue: "Taste a grain of farro when you think it is ready — the outside should yield like a cooked pasta grain while the very center offers a gentle resistance, that satisfying al dente bite.",
+      "ingId": "ing_04",
+      "role": "Solvent",
+      "name": "Vin blanc sec",
+      "ratioValue": 120,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vermouth sec",
+        "stock supplémentaire + 1 c. à thé vinaigre de vin blanc"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Mount",
-      inputs: ["cooked_farrotto", "ing_06", "ing_07", "ing_11", "ing_12"],
-      outputState: "finished_farrotto",
-      instructions: "Remove the pot from heat completely. This is the mantecatura — the Italian method of emulsifying fat into a risotto off-heat to create a creamy, unified sauce. Add the remaining cold butter cubes (60 g) and all the parmesan at once. Shake the pot vigorously in an elliptical motion while simultaneously stirring with a spoon — the goal is to emulsify the cold butter and cheese into the hot, starchy base without breaking the emulsion. Add the lemon zest and black pepper. Let the farrotto rest, uncovered, for exactly 2 minutes. It should look glossy, creamy, and fluid — not stiff. Serve in warmed bowls immediately.",
-      visualCue: {
-        primaryTarget: "Glossy, flowing, creamy farrotto that moves lazily when the pot is tilted — the all'onda (wave) test. Not stiff, not soupy: it ripples.",
-        spectrum: [
-          { state: "Underdone", description: "The butter and cheese are not fully incorporated — you can see pools of melted butter separating from the grain base.", action: "Continue stirring and shaking vigorously. The emulsion needs agitation to form — lazy stirring will break it." },
-          { state: "Perfect",   description: "The farrotto is glossy and unified, flowing with a single slow wave when the pot is tilted. Cheese and butter are invisible — absorbed into a creamy sauce that coats every grain.", action: "Rest 2 minutes and serve in warmed bowls immediately." },
-          { state: "Overdone",  description: "The farrotto is stiff and clumping — it has been stirred too long or the heat was left on during mantecatura.", action: "Add a small ladleful of warm stock and stir vigorously to loosen. Serve immediately." },
-        ],
-      },
-      feelCue: "The mantecatura is complete when the farrotto coats the back of a spoon in a thin, creamy, uniform film — drag your finger through it and the line should hold cleanly for 3 seconds before slowly closing.",
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Légumes et poulets chauds",
+      "ratioValue": 1200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau en cas d'urgence — puits de saison"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé (froid, cube, divisé)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Parmesan (finement râpé sur un microplan)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Grana Padano",
+        "Pecorino Romano (saltier — ajuster l'assaisonnement)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 4,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "Thym séché (1 c. à thé)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Poivre noir (fraîchir)",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Citrus",
+      "name": "Zeste de citron",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_09",
+        "ing_06",
+        "ing_02",
+        "ing_03",
+        "ing_08"
+      ],
+      "outputState": "soffritto",
+      "instructions": "Dans une grande casserole ou un brasseur à fond lourd, chauffer l'huile d'olive et 20 g de beurre ensemble à feu moyen-doux. Ajouter l'oignon, l'ail et le thym avec une pincée de sel. Cuire doucement, en remuant souvent, pendant 8 à 10 minutes jusqu'à ce que l'oignon soit complètement doux, translucide et productif — il ne devrait avoir absolument aucune couleur. C'est le soffritto; il fournit l'épine dorsale douce et aromatique du farrotto et doit être cuit bas et lent de sorte que les sucres naturels se développent sans caramélisation.",
+      "visualCue": {
+        "primaryTarget": "L'oignon est translucide, très doux, brillant dans le beurre et l'huile, et complètement incolore. L'ail est doux et parfumé. Le thym est flétri.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore opaque et a une légère croûte. Une odeur d'ail cru.",
+            "action": "Abaissez la chaleur et continuez la cuisson. Un soffritto cuit trop vite produit une saveur dure et nette plutôt que la douceur nécessaire ici."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon est complètement translucide, doux et donne à la cuillère sans résistance. Pas de brunissement nulle part. Ça sent doux et doux.",
+            "action": "Ajouter le farro et le toast immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords de l'oignon commencent à devenir dorés. Le beurre sent légèrement la noix.",
+            "action": "Réduire immédiatement la chaleur. Une teinte dorée légère est acceptable, mais le plat sera légèrement moins délicat."
+          }
+        ]
+      },
+      "feelCue": "Le soffritto devrait se sentir presque fondre lorsque vous pressez un morceau d'oignon contre le côté de la casserole avec votre cuillère — complètement sans résistance, comme presser le beurre chaud."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "ing_01",
+        "soffritto"
+      ],
+      "outputState": "toasted_farro",
+      "instructions": "Ajouter le farro perlé au soffritto et mélanger pour enrober chaque grain dans le mélange de beurre et d'huile. Relever le feu à moyen. Faites cuire le farro, en remuant constamment, pendant 2 minutes jusqu'à ce que les grains semblent légèrement brillants et l'odeur de grains chauds et noisette — comme un doux arôme de popcorn. Cette étape de revêtement n'est pas strictement nécessaire pour le farro comme pour Arborio (qui absorberait trop de graisse), mais il parfume le grain et ajoute une profondeur subtile au plat fini.",
+      "visualCue": {
+        "primaryTarget": "Les grains de Farro sont légèrement brillants et translucides aux bords. La casserole sent le grain chaud, grillé et le beurre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Farro a l'air crayeux et mat sans éclat. Pas d'arôme grillé.",
+            "action": "Continuer à griller pendant une minute, en remuant constamment à feu moyen."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains scintillent avec de la graisse, légèrement translucide aux bords, et sentent doucement les grains grillés sans aucun changement de couleur.",
+            "action": "Ajouter immédiatement le vin blanc."
+          },
+          {
+            "state": "Overdone",
+            "description": "Farro a commencé à devenir doré et sent la noix.",
+            "action": "Ajouter le vin à la fois pour arrêter le toast. La noisette supplémentaire est agréable mais ne la prenez pas plus loin."
+          }
+        ]
+      },
+      "feelCue": "Mélanger le farro grillé et écouter — il devrait faire un son sec, légèrement vitreux que les grains enrobés de graisse murmurent l'un contre l'autre, et non l'entaille humide de grain cru."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Déglacement",
+      "inputs": [
+        "toasted_farro",
+        "ing_04"
+      ],
+      "outputState": "wine_absorbed_farro",
+      "instructions": "Versez le vin blanc dans la casserole tout d'un coup, il sifflera et s'évaporera de façon spectaculaire. Incorporer constamment jusqu'à ce que le vin soit presque entièrement absorbé, environ 2-3 minutes. Cette étape fait trois choses : elle déglace tous les morceaux salés du fond du pot, ajoute de l'acidité qui équilibrera la richesse du beurre et du parmesan à la fin, et commence le processus de coaxing de l'amidon du farro pour construire la sauce crémeuse. L'odeur d'alcool cru doit être complètement cuite avant d'ajouter la première louche de stock.",
+      "visualCue": {
+        "primaryTarget": "Le vin a été absorbé et le pot sent le parfum du vin sans alcool cru. Le farro semble légèrement brillant et le fond du pot est propre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le vin est encore visiblement mis en commun et vous pouvez sentir l'alcool brut fortement.",
+            "action": "Continuer à remuer à feu moyen jusqu'à ce que le vin soit complètement absorbé et que l'odeur d'alcool brut soit disparue."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le vin est absorbé, le fond en pot est clair. Farro a l'air brillant. L'odeur est de réduction de vin blanc — fruité et acide sans netteté.",
+            "action": "Commencez à ajouter du stock une louche à la fois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le vin a tellement diminué que le farro commence à coller et à étourdir au fond.",
+            "action": "Ajouter immédiatement la première louche de stock et racler le fond propre."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous faites glisser une cuillère dans le farro après l'absorption du vin, un canal court et propre doit apparaître avant que le mélange ne revienne lentement — c'est le premier signe de l'amidon qui commence à se libérer."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "wine_absorbed_farro",
+        "ing_05",
+        "ing_10"
+      ],
+      "outputState": "cooked_farrotto",
+      "instructions": "Gardez le stock au chaud dans une casserole séparée — le stock froid arrêterait la cuisson et refroidirait le farro de façon inégale. Ajouter le stock une louche (environ 100-120 ml) à la fois, en remuant presque constamment et en attendant que chaque ajout soit presque absorbé avant d'ajouter le prochain. Maintenez une mijotée régulière et active tout au long de votre vie — jamais un ébullition, jamais un bassin statique. Après 25-30 minutes, le farro doit être al dente: tendre à l'extérieur avec une légère, satisfaisante mâche au centre. Assaisonner de sel. La base du risotto aura l'air assez lâche et soupeuse lorsqu'elle sera faite — c'est exact; la mantecatura le serrera.",
+      "visualCue": {
+        "primaryTarget": "Les grains de Farro sont al dente — tendre extérieur avec un léger mâcher au centre. La base est crémeuse et coule lentement quand le pot est renversé, comme un porridge très lâche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore assez fermes tout au long avec un centre féculent et crayeux.",
+            "action": "Continuer à ajouter de la louche par la louche et la cuisson. Farro est plus indulgent qu'Arborio — il ne se tournera pas pour se bousculer rapidement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont tendres avec une mâche distincte mais agréable. La base est crémeuse de l'amidon libéré et coule lorsque le pot est secoué. Ça sent la noix et la savoureuse.",
+            "action": "Retirer immédiatement du feu et passer à la mantecatura."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains sont entièrement mous sans distinction textuelle. La base est très épaisse, presque pâteuse.",
+            "action": "Aller à la mantecatura immédiatement, être doux. Ajouter un éclaboussure plus de stock si la base est trop épaisse pour s'écouler."
+          }
+        ]
+      },
+      "feelCue": "Goûtez un grain de farro quand vous pensez qu'il est prêt — l'extérieur devrait donner comme un grain de pâtes cuites tandis que le centre offre une résistance douce, qui satisfait al dente morsure."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Monter",
+      "inputs": [
+        "cooked_farrotto",
+        "ing_06",
+        "ing_07",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "finished_farrotto",
+      "instructions": "Retirer complètement la casserole du feu. C'est la mantecatura — la méthode italienne d'émulsion des graisses dans un risotto hors-chauffe pour créer une sauce crémeuse et unifiée. Ajouter les cubes de beurre froid restants (60 g) et tous les parmesan à la fois. Agiter vigoureusement le pot dans un mouvement elliptique tout en remuant simultanément avec une cuillère — le but est d'émulsionner le beurre froid et le fromage dans la base chaude et féculente sans briser l'émulsion. Ajouter le zeste de citron et le poivre noir. Laissez reposer le farrotto, découvert, pendant exactement 2 minutes. Il devrait avoir l'air brillant, crémeux et fluide, et non rigide. Servir dans des bols chauds immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Farrotto brillant, coulant et crémeux qui se déplace paresseusement lorsque le pot est incliné — le test de toute l'onde. Pas raide, pas boueux : il se déchire.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre et le fromage ne sont pas entièrement incorporés — vous pouvez voir des piscines de beurre fondu se séparer de la base de grain.",
+            "action": "Continuez à remuer et agiter vigoureusement. L'émulsion a besoin d'agitation pour se former: un remuant paresseux le brisera."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le farrotto est brillant et unifié, coulant avec une seule onde lente lorsque le pot est incliné. Le fromage et le beurre sont invisibles — absorbés dans une sauce crémeuse qui enrobe chaque grain.",
+            "action": "Reposez-vous 2 minutes et servez dans des bols chauds immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le farrotto est raide et entassant — il a été agité trop longtemps ou la chaleur a été laissée pendant la mantecatura.",
+            "action": "Ajouter une petite louche de bouillon chaud et remuer vigoureusement pour se détendre. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "La mantecatura est complète lorsque le farrotto enveloppe l'arrière d'une cuillère dans un film mince, crémeux, uniforme — faites glisser votre doigt à travers elle et la ligne doit tenir propre pendant 3 secondes avant de fermer lentement."
+    }
+  ]
 };

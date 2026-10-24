@@ -1,101 +1,260 @@
 export default {
-  repoId: "master_brazilian_shrimp_moqueca_001",
-  parentRepoId: null,
-  slug: "shrimp-moqueca",
-  author: "ForkRecipe Kitchen",
-  title: "Moqueca de Camarão",
-  description: "A Bahian seafood stew of shrimp in a coconut milk and palm oil (dendê) base with tomatoes, peppers, and cilantro — warm, tropical, and impossible to eat quietly.",
-  cuisine: "Brazilian",
-  culture: "Bahia, Brazil",
-  category: "seafood",
-  tags: ["shrimp", "brazilian", "coconut", "palm oil", "seafood"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "35 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 0, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Large shrimp (peeled and deveined, tails on)", ratioValue: 100, defaultUnit: "parts", substitutions: ["fish fillets (cod, tilapia)", "scallops"] },
-    { ingId: "ing_02", role: "Acid",      name: "Fresh lime juice",                             ratioValue: 8,   defaultUnit: "parts", substitutions: ["lemon juice"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Garlic cloves (minced)",                       ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Yellow onion (thinly sliced into rings)",      ratioValue: 25,  defaultUnit: "parts", substitutions: ["red onion"] },
-    { ingId: "ing_05", role: "Base",      name: "Ripe tomatoes (sliced into rounds)",           ratioValue: 30,  defaultUnit: "parts", substitutions: ["canned whole tomatoes"] },
-    { ingId: "ing_06", role: "Base",      name: "Green and red bell peppers (sliced into rings)", ratioValue: 25, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Liquid",    name: "Full-fat coconut milk",                        ratioValue: 60,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Dendê (red palm oil, unrefined)",              ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Herb",      name: "Fresh cilantro (leaves and tender stems)",     ratioValue: 6,   defaultUnit: "parts", substitutions: ["flat-leaf parsley"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fine salt",                                    ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_brazilian_shrimp_moqueca_001",
+  "parentRepoId": null,
+  "slug": "shrimp-moqueca",
+  "author": "ForkRecipe Kitchen",
+  "title": "Moqueca de Camarão",
+  "description": "Un ragoût de fruits de mer bahaï de crevettes dans une base de lait de coco et d'huile de palme (dendê) avec des tomates, des poivrons et de la coriandre — chaud, tropical et impossible à manger tranquillement.",
+  "cuisine": "Brésil",
+  "culture": "Bahia, Brésil",
+  "category": "seafood",
+  "tags": [
+    "crevettes",
+    "Brésilien",
+    "noix de coco",
+    "huile de palme",
+    "Produits de la mer"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "35 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Marinate",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_10"],
-      outputState: "marinated_shrimp",
-      instructions: "Toss the shrimp with the lime juice, minced garlic, and a generous pinch of salt. Cover and refrigerate for 15–20 minutes. Do not marinate longer than 30 minutes — the lime acid will begin to cook the shrimp and toughen them.",
-      visualCue: {
-        primaryTarget: "Shrimp slightly opaque and pink at the very edges from the lime, but still grey and translucent in the center.",
-        spectrum: [
-          { state: "Underdone", description: "Shrimp still fully grey and raw; lime and garlic aroma not yet absorbed.", action: "Marinate the remaining time." },
-          { state: "Perfect",   description: "Edges of shrimp are faintly pink from acid exposure; they smell bright and citrusy with garlic. Still pliable.", action: "Remove from fridge and build the stew base." },
-          { state: "Overdone",  description: "Shrimp are opaque and curled tightly from over-marination; texture may be rubbery after cooking.", action: "Proceed immediately and cook briefly — they will still be edible." },
-        ],
-      },
-      feelCue: "Marinated shrimp should feel cool and slick, the lime juice slightly tacky on your fingers, with a sharp citrus and garlic aroma that makes you salivate.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Grandes crevettes (peautées et dépeintes, queues sur)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "filets de poissons (cod, tilapia)",
+        "pétoncles"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Layer",
-      inputs: ["ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "stew_base",
-      instructions: "In a wide, heavy clay pot (or a wide skillet), layer the ingredients in order without stirring: first a thin drizzle of dendê oil, then rings of onion, then tomato slices, then bell pepper rings. Pour the coconut milk evenly over everything, then drizzle the remaining dendê over the top. The color of the dendê will turn the stew a vivid orange-gold. Season with salt. Do not stir — the layering is deliberate.",
-      visualCue: {
-        primaryTarget: "Vivid orange-gold liquid surrounding colorful layers of tomato and pepper rings. The dendê oil is visible on the surface as orange pools.",
-        spectrum: [
-          { state: "Underdone", description: "Coconut milk still white and the dendê not yet mixed in; layers look dry at the top.", action: "Ensure dendê is drizzled over the top layer before heating." },
-          { state: "Perfect",   description: "The pot looks like a cross-section of a tropical garden — orange liquid, red and green pepper rings, white onion, red tomato. Ready to bring to heat.", action: "Place over medium heat and bring to a simmer." },
-          { state: "Overdone",  description: "You stirred it all together — the layers are lost.", action: "The flavor will be the same; proceed." },
-        ],
-      },
-      feelCue: "The dendê oil at room temperature has the consistency of coconut oil — semi-solid and waxy. It will melt and bloom into deep orange the moment it hits heat.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de citron"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["stew_base"],
-      outputState: "simmered_base",
-      instructions: "Place the pot over medium heat, cover, and bring to a gentle simmer. Cook for 8–10 minutes, partially covered, until the vegetables are just tender and the broth has turned uniformly orange from the dendê and coconut milk blending together. Shake the pot occasionally rather than stirring to keep the layers somewhat intact.",
-      visualCue: {
-        primaryTarget: "A vibrantly orange broth with softened pepper and tomato rings visible. Steam rising steadily from the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Broth still pale — dendê and coconut milk have not fully combined. Vegetables are firm.", action: "Continue simmering and shake the pot to encourage mixing." },
-          { state: "Perfect",   description: "Broth is a deep, even orange. Peppers and onion are softened but not mushy. Smell is deeply tropical — coconut, dendê, and tomato.", action: "Add the shrimp." },
-          { state: "Overdone",  description: "Vegetables are very soft and have broken down into the broth. Broth looks murky.", action: "Proceed — the flavor will be even richer." },
-        ],
-      },
-      feelCue: "The kitchen should smell like a beach shack in Salvador — sweet coconut, earthy palm oil, and sautéed tomato all at once.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Gousses d'ail (mincées)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Poach",
-      inputs: ["simmered_base", "marinated_shrimp", "ing_09"],
-      outputState: "finished_moqueca",
-      instructions: "Add the marinated shrimp in a single layer over the simmered vegetable base. Cover and cook for 3–4 minutes on medium heat — no more. The shrimp are done the moment they are pink and just opaque throughout. Scatter half the cilantro into the pot. Taste the broth and adjust salt and lime. Finish with remaining cilantro. Serve directly from the pot with white rice and farofa (toasted cassava flour) alongside.",
-      visualCue: {
-        primaryTarget: "Shrimp are pink and C-shaped throughout, resting on the orange broth. No grey patches. Cilantro is bright green on top.",
-        spectrum: [
-          { state: "Underdone", description: "Shrimp are still translucent and grey in the center; they feel soft and squishy.", action: "Cover and cook 1 more minute. Check again immediately." },
-          { state: "Perfect",   description: "All shrimp are opaque, uniformly pink, and have curled into a gentle C shape. They spring back when pressed. Broth is vivid orange.", action: "Serve immediately — shrimp continue cooking in residual heat." },
-          { state: "Overdone",  description: "Shrimp are tightly curled into O shapes and feel rubbery. They will be chewy.", action: "Serve immediately and move faster next time — reduce cook time to 2.5 minutes." },
-        ],
-      },
-      feelCue: "A perfectly cooked shrimp should snap slightly when bitten — a brief resistance before yielding, never rubbery or soft. The broth should coat your lips with a rich, oily sweetness.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon jaune (finement tranché en anneaux)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon rouge"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Base",
+      "name": "Tomates de ripe (découpées en rondelles)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates entières en conserve"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Base",
+      "name": "poivrons verts et rouges (en rondelles)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Liquid",
+      "name": "Lait de coco plein gras",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Dendê (huile de palme rouge, non raffinée)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Coriandre fraîche (feuilles et tiges tendres)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Persil à feuilles plates"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_10"
+      ],
+      "outputState": "marinated_shrimp",
+      "instructions": "Mélanger les crevettes avec le jus de lime, l'ail haché et une pincée généreuse de sel. Couvrir et réfrigérer pendant 15 à 20 minutes. Ne pas mariner plus de 30 minutes — l'acide chaux commencera à cuire les crevettes et à les durcir.",
+      "visualCue": {
+        "primaryTarget": "Crevette légèrement opaque et rose aux bords mêmes de la chaux, mais toujours gris et translucide au centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Crevettes encore entièrement grises et crues; arôme de chaux et d'ail non encore absorbé.",
+            "action": "Faites mariner le temps restant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords des crevettes sont légèrement roses à cause de leur exposition à l'acide; ils sentent l'ail vif et agrumes. Toujours souple.",
+            "action": "Retirer du réfrigérateur et construire la base de ragoût."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes sont opaques et serrées à la suite d'une surmarination; la texture peut être caoutchouteuse après cuisson.",
+            "action": "Continuez immédiatement et faites cuire brièvement — ils seront encore comestibles."
+          }
+        ]
+      },
+      "feelCue": "Les crevettes marinées doivent se sentir fraîches et lissées, le jus de lime légèrement collant sur les doigts, avec un arôme d'agrumes et d'ail vif qui vous fait saliver."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Calque",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "stew_base",
+      "instructions": "Dans une grande casserole d'argile lourde (ou une grande poêle), recouvrir les ingrédients sans remuer : d'abord un mince filet d'huile dendê, puis des anneaux d'oignon, puis des tranches de tomate, puis des anneaux de poivron. Verser le lait de coco uniformément sur tout, puis arroser le reste dendê sur le dessus. La couleur du dendê transformera le ragoût en or orange vif. Assaisonner de sel. Ne remuez pas — la couche est délibérée.",
+      "visualCue": {
+        "primaryTarget": "Liquide orange-or vif entourant les couches colorées des anneaux de tomates et de poivre. L'huile dendê est visible en surface sous forme de piscines orange.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait de coco est encore blanc et le dendê n'est pas encore mélangé; les couches sont sèches en haut.",
+            "action": "Assurez-vous que dendê est traîné sur la couche supérieure avant le chauffage."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le pot ressemble à une coupe transversale d'un jardin tropical: anneaux de poivre rouge et vert, oignon blanc, tomate rouge. Prêt à chauffer.",
+            "action": "Mettre à feu moyen et laisser mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez tout agité ensemble — les couches sont perdues.",
+            "action": "La saveur sera la même; procéder."
+          }
+        ]
+      },
+      "feelCue": "L'huile dendê à température ambiante a la consistance de l'huile de coco — semi-solide et cireuse. Il fondra et fleurira en orange profond au moment où il touchera la chaleur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "stew_base"
+      ],
+      "outputState": "simmered_base",
+      "instructions": "Placer le pot à feu moyen, couvrir et laisser mijoter. Cuire de 8 à 10 minutes, partiellement couvert, jusqu'à ce que les légumes soient tendres et que le bouillon soit uniformément orange du dendê et du lait de coco qui se mélangent. Agiter le pot à l'occasion plutôt que de remuer pour maintenir les couches un peu intactes.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon orange vif avec du poivre ramolli et des anneaux de tomate visibles. La vapeur monte régulièrement de la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth encore pâle — dendê et lait de coco ne sont pas complètement combinés. Les légumes sont fermes.",
+            "action": "Continuer à mijoter et agiter le pot pour encourager le mélange."
+          },
+          {
+            "state": "Perfect",
+            "description": "Broth est un profond, même orange. Les poivrons et l'oignon sont adoucis mais pas musclés. L'odeur est profondément tropicale — noix de coco, dendê et tomate.",
+            "action": "Ajouter les crevettes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont très mous et se décomposent en bouillon. Broth a l'air bizarre.",
+            "action": "Continuez — la saveur sera encore plus riche."
+          }
+        ]
+      },
+      "feelCue": "La cuisine doit sentir comme une cabane de plage au Salvador: noix de coco douce, huile de palme terreuse et tomate sautée tout à la fois."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Pochette",
+      "inputs": [
+        "simmered_base",
+        "marinated_shrimp",
+        "ing_09"
+      ],
+      "outputState": "finished_moqueca",
+      "instructions": "Ajouter les crevettes marinées en une seule couche sur la base de légumes mijotés. Couvrir et cuire 3-4 minutes à feu moyen — pas plus. Les crevettes sont faites dès qu'elles sont roses et opaques. Dispersez la moitié de la coriandre dans le pot. Goûtez le bouillon et ajustez le sel et la chaux. Terminer avec la coriandre restante. Servir directement de la casserole avec du riz blanc et du farofa (farine de manioc grillée) à côté.",
+      "visualCue": {
+        "primaryTarget": "Les crevettes sont roses et en forme de C, reposant sur le bouillon orange. Pas de taches grises. Cilantro est vert vif sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont toujours translucides et grises au centre ; elles se sentent douces et squishy.",
+            "action": "Couvrir et cuire encore 1 minute. Vérifiez à nouveau immédiatement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toutes les crevettes sont opaques, uniformément roses, et se sont recourbées en forme douce de C. Ils ressortent quand ils sont pressés. Broth est orange vif.",
+            "action": "Servir immédiatement — les crevettes continuent à cuire à la chaleur résiduelle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes sont étroitement enroulées en O et se sentent caoutchouteuses. Ils vont mâcher.",
+            "action": "Servir immédiatement et se déplacer plus vite la prochaine fois — réduire le temps de cuisson à 2,5 minutes."
+          }
+        ]
+      },
+      "feelCue": "Une crevette parfaitement cuite devrait craquer légèrement lorsqu'elle est mordue — une résistance brève avant de céder, jamais caoutchouteuse ou molle. Le bouillon devrait envelopper vos lèvres d'une douceur riche et grasse."
+    }
+  ]
 };

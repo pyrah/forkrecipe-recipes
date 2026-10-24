@@ -1,95 +1,249 @@
 export default {
-  repoId: "master_ancient-roman_moretum_001",
-  parentRepoId: null,
-  slug: "moretum",
-  author: "ForkRecipe Kitchen",
-  title: "Moretum",
-  description: "The peasant's breakfast of the Appendix Vergiliana — pungent green garlic and sharp herbs pounded in a mortar with salty cheese until they bind into a single fragrant ball, slackened with oil and a splash of vinegar into a rough, biting spread for coarse country bread.",
-  cuisine: "Ancient Roman",
-  culture: "Latin",
-  category: "condiments",
-  tags: ["roman", "ancient", "moretum", "garlic", "cheese", "pesto", "mortar", "vegetarian"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 0, salty: 4, sour: 2, bitter: 2, umami: 3, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Allium",     name: "Garlic cloves (the poem's four heads — fresh, pungent)", ratioValue: 30, defaultUnit: "parts", substitutions: ["young green garlic for a milder, grassier bite"] },
-    { ingId: "ing_02", role: "Seasoning",  name: "Coarse sea salt",                       ratioValue: 4,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Herb",       name: "Fresh celery leaf (apium)",             ratioValue: 12, defaultUnit: "parts", substitutions: ["lovage leaf", "flat-leaf parsley"] },
-    { ingId: "ing_04", role: "Herb",       name: "Fresh coriander leaf",                  ratioValue: 8,  defaultUnit: "parts", substitutions: ["more parsley"] },
-    { ingId: "ing_05", role: "Heat",       name: "Fresh rue, leaves only (use sparingly)", ratioValue: 2,  defaultUnit: "parts", substitutions: ["a pinch of arugula for a peppery edge if rue is unavailable"] },
-    { ingId: "ing_06", role: "Dairy",      name: "Aged hard sheep's-milk cheese, grated (pecorino)", ratioValue: 100, defaultUnit: "parts", substitutions: ["aged caciocavallo", "well-aged caciotta"] },
-    { ingId: "ing_07", role: "Acid",       name: "Wine vinegar",                          ratioValue: 6,  defaultUnit: "parts", substitutions: ["red-wine vinegar", "verjus"] },
-    { ingId: "ing_08", role: "Fat",        name: "Olive oil",                             ratioValue: 18, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_ancient-roman_moretum_001",
+  "parentRepoId": null,
+  "slug": "moretum",
+  "author": "ForkRecipe Kitchen",
+  "title": "Moretum",
+  "description": "Le petit déjeuner du paysan de l'Annexe Vergiliana — l'ail vert piquant et les herbes pointues pilonnés dans un mortier avec du fromage salé jusqu'à ce qu'ils se lient dans une seule boule parfumée, se relâchent avec de l'huile et une éclaboussure de vinaigre dans un dur, mordant pour le pain de campagne grossier.",
+  "cuisine": "Ancien romain",
+  "culture": "Latin",
+  "category": "condiments",
+  "tags": [
+    "romaine",
+    "anciens",
+    "mortum",
+    "Ail",
+    "fromage",
+    "pesto",
+    "mortier",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Pound",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "garlic_paste",
-      instructions: "Peel the garlic and drop it into a heavy mortar with the coarse salt. The salt is both seasoning and abrasive: its crystals tear the garlic cells open and stop the cloves from skidding under the pestle. Pound with a firm circular grind — not a stamp — until the garlic breaks down to a wet, smooth, ivory paste with no visible chunks. The poem's Simylus weeps at the fumes; expect a sharp sting in the nose.",
-      visualCue: {
-        primaryTarget: "A smooth, glistening, pale paste pooling at the bottom of the mortar, with the salt fully dissolved into it and no recognizable pieces of clove.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is mashed but still lumpy, with pale chunks rolling away from the pestle and skidding on the stone.", action: "Keep grinding in slow circles and press the pestle's weight down. If it keeps sliding, add a few more grains of salt for grip." },
-          { state: "Perfect",   description: "A uniform, slick paste that coats the mortar walls and smells aggressively of raw garlic. It smears flat with no resistance.", action: "Stop here and add the herbs — overworking now only sharpens the burn." },
-          { state: "Overdone",  description: "The paste has gone thin, almost watery, and smells acrid and hot rather than pungent.", action: "Move straight on; the cheese and herbs will absorb the excess moisture and tame the harshness." },
-        ],
-      },
-      feelCue: "The pestle should glide once the cloves give way, the paste tacky and cool against the stone. Your eyes will water — that is the sign the garlic's oils have been fully released.",
+      "ingId": "ing_01",
+      "role": "Allium",
+      "name": "Girofles d'ail (les quatre têtes du poème — frais, piquants)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jeune ail vert pour une bouchée plus douce, plus herbacée"
+      ]
     },
     {
-      nodeId: "step_2", action: "Pound",
-      inputs: ["garlic_paste", "ing_03", "ing_04", "ing_05"],
-      outputState: "green_paste",
-      instructions: "Add the celery leaf and coriander, then just a few leaves of rue — it is intensely bitter and the poem warns to hold back its 'biting power.' Pound them into the garlic, grinding the leaves against the grit until they bruise, darken, and release their oils, streaking the paste a deep mottled green. Work them in fully so no whole leaf survives. A safety note: rue is potent — use only a few leaves, and avoid it entirely if pregnant or trying to conceive, as it can act as a uterine stimulant; skin contact with the fresh plant in sunlight can also cause photosensitivity.",
-      visualCue: {
-        primaryTarget: "A dense, dark-green herb paste flecked with paler garlic, fragrant and faintly bitter, with the leaves entirely crushed into the mass.",
-        spectrum: [
-          { state: "Underdone", description: "Whole and half leaves are still visible, sitting on top of the garlic rather than blended in, and the green is patchy and bright.", action: "Keep pounding and scrape down the sides. The leaves must be bruised, not merely chopped, to give up their aroma." },
-          { state: "Perfect",   description: "A cohesive deep-green paste with a savory, herbal, slightly bitter scent and no intact leaves.", action: "Proceed to fold in the cheese." },
-          { state: "Overdone",  description: "The paste smells harshly bitter and tastes medicinal — too much rue has been worked in.", action: "Add an extra spoonful of grated cheese in the next step to mute the bitterness; in future use even less rue." },
-        ],
-      },
-      feelCue: "The aroma shifts from pure garlic to a green, grassy bitterness as the leaves break. The paste should feel slightly looser and wetter from the herbs' juices.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sels de mer grossiers",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Fold",
-      inputs: ["green_paste", "ing_06"],
-      outputState: "cohesive_ball",
-      instructions: "Add the grated aged cheese a large handful at a time, pounding and folding it into the green paste. As Virgil's poem describes, the mass will resist and crumble at first, then suddenly catch and pull together — the cheese's fat and protein binding the herbs and garlic into one body. Keep working until it forms a single rough ball that lifts cleanly from the mortar in one piece.",
-      visualCue: {
-        primaryTarget: "A single cohesive, marbled green-and-cream ball clinging together in the mortar, no longer loose or crumbly, holding its shape when nudged.",
-        spectrum: [
-          { state: "Underdone", description: "The mixture is dry and crumbly, breaking into clumps that won't gather, with dry pockets of unmoistened cheese.", action: "Keep pounding and pressing; the friction warms the cheese's fat and helps it bind. A few drops of oil now will help it come together." },
-          { state: "Perfect",   description: "One smooth, marbled ball that holds together and pulls cleanly off the pestle, smelling of sharp cheese, garlic, and herbs at once.", action: "Slacken it with vinegar and oil to the spreading consistency you want." },
-          { state: "Overdone",  description: "The ball has gone greasy and slick, weeping oil from the cheese where it was overworked and warmed too much.", action: "Stop pounding immediately and add the vinegar to tighten and brighten it; serve at cool room temperature." },
-        ],
-      },
-      feelCue: "Watch for the moment of binding — the loose rubble suddenly grabs and rolls into a ball under the pestle. It should feel firm, tacky, and unified, like a stiff dough.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Feuille de céleri frais (apium)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Feuilles de lièvre",
+        "Persil à feuilles plates"
+      ]
     },
     {
-      nodeId: "step_4", action: "Mount",
-      inputs: ["cohesive_ball", "ing_07", "ing_08"],
-      outputState: "finished_moretum",
-      instructions: "Sprinkle in the wine vinegar and pour in the olive oil, then grind and stir them through until the stiff ball loosens into a thick, spreadable paste. Taste and balance: it should be loud and assertive — sharply garlicky, salty from the cheese, sour from the vinegar, with a bitter green undertone. Scrape it out and roll into a rough mound. Serve at room temperature smeared thickly on coarse, warm country bread.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, mottled-green spread that holds soft peaks and ribbons slowly off a spoon, with oil just visible at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Still stiff and ball-like, too dense to spread and tasting flat without the brightening acid.", action: "Add a little more vinegar and oil and work it in until it spreads easily and the flavor sharpens." },
-          { state: "Perfect",   description: "A cohesive, spreadable paste with a satiny sheen that catches the bread without tearing it, tasting balanced — pungent, salty, sour, and green.", action: "Mound it up and serve at once with warm bread; it is best fresh, while the garlic is at its brightest." },
-          { state: "Overdone",  description: "The spread has gone slack and oily, with free oil pooling and a flat, greasy mouthfeel.", action: "Pound in a little more grated cheese to reabsorb the oil and rebuild body, then re-balance with a touch of salt." },
-        ],
-      },
-      feelCue: "The spread should pull at a knife with a slight tack, then release smoothly onto the bread. On the tongue it hits hot and sharp from the garlic first, then settles into salty cheese and a clean vinegar tang.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Feuille de coriandre fraîche",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "plus de persil"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Heat",
+      "name": "Rue fraîche, feuilles seulement (utiliser parcimonieusement)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une pincée de roquette pour un bord poivré si rue n'est pas disponible"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Fromage du mouton dur, râpé (pécorino)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "caciocavallo âgé",
+        "Caciotta bien vieilli"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Vinaigre",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin rouge",
+        "versus"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 18,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "garlic_paste",
+      "instructions": "Peler l'ail et le déposer dans un mortier lourd avec le sel grossier. Le sel est assaisonné et abrasif : ses cristaux déchirent les cellules d'ail et empêchent les girofles de déraper sous le pestle. Pound avec une mouture circulaire ferme — pas un timbre — jusqu'à ce que l'ail se décompose en pâte d'ivoire humide, lisse et sans morceaux visibles. Simylus du poème pleure aux fumées; attendez-vous à une piqûre pointue dans le nez.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse, scintillante, pâle qui s'accumule au fond du mortier, le sel y étant complètement dissous et aucun morceau de girofle reconnaissable.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est massé mais encore grumelé, avec des morceaux pâles qui s'éloignent du pestle et dérapent sur la pierre.",
+            "action": "Maintenez le broyage dans les cercles lents et appuyez sur le poids du pestle. S'il continue à glisser, ajouter quelques grains de sel pour l'adhérence."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte uniforme et lisse qui enveloppe les murs de mortier et sent agressivement l'ail cru. Il s'affaiblit sans résistance.",
+            "action": "Arrêtez ici et ajoutez les herbes — le surmenage ne fait qu'affiner la brûlure."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est devenue mince, presque aqueuse, et sent acride et chaud plutôt que piquante.",
+            "action": "Avancez tout droit; le fromage et les herbes absorberont l'excès d'humidité et dompteront la dureté."
+          }
+        ]
+      },
+      "feelCue": "Le peste doit glisser une fois que les gousses cèdent, la pâte est collante et refroidie contre la pierre. Vos yeux vont arroser — c'est le signe que les huiles d'ail ont été complètement libérées."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Livre",
+      "inputs": [
+        "garlic_paste",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "green_paste",
+      "instructions": "Ajouter la feuille de céleri et la coriandre, puis quelques feuilles de rue — il est intensément amer et le poème avertit de retenir son « pouvoir bitissant ». Pound eux dans l'ail, broyant les feuilles contre le grain jusqu'à ce qu'ils contusent, s'assombrissent, et relâchent leurs huiles, striant la pâte un vert tacheté profond. Travaillez-les pleinement pour qu'aucune feuille entière ne survive. Une note de sécurité: la rue est puissante — utiliser seulement quelques feuilles, et l'éviter entièrement si enceinte ou essayer de concevoir, car il peut agir comme un stimulant utérin; le contact de la peau avec la plante fraîche au soleil peut également causer la photosensibilité.",
+      "visualCue": {
+        "primaryTarget": "Une pâte dense, vert foncé, pétrie d'ail plus pâle, parfumée et légèrement amère, les feuilles étant entièrement broyées dans la masse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les feuilles entières et demi sont encore visibles, assises sur l'ail plutôt que mélangées, et le vert est patchy et lumineux.",
+            "action": "Continuez à frapper et à gratter les côtés. Les feuilles doivent être meurtries, pas simplement hachées, pour renoncer à leur arôme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte cohésive de couleur vert profond avec une plante salée, un parfum légèrement amer et aucune feuille intacte.",
+            "action": "Continuer à plier dans le fromage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte sent l'amertume et le goût médicinal — trop de rue a été travaillé.",
+            "action": "Ajouter une cuillère supplémentaire de fromage râpé dans l'étape suivante pour réduire l'amertume; à l'avenir utiliser encore moins rue."
+          }
+        ]
+      },
+      "feelCue": "L'arôme passe de l'ail pur à une amertume verte et herbacée au moment où les feuilles se brisent. La pâte devrait se sentir légèrement plus lâche et plus humide à partir des jus d'herbes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "green_paste",
+        "ing_06"
+      ],
+      "outputState": "cohesive_ball",
+      "instructions": "Ajouter le fromage vieilli râpé une grande poignée à la fois, le frapper et le plier dans la pâte verte. Comme le décrit le poème de Virgil, la masse résistera et s'écroulera d'abord, puis s'emparera et se ressaisira soudainement — la graisse et les protéines du fromage liant les herbes et l'ail dans un seul corps. Continuez à travailler jusqu'à ce qu'il forme une seule balle rugueuse qui se soulève proprement du mortier en une seule pièce.",
+      "visualCue": {
+        "primaryTarget": "Une seule boule de couleur verte et crème marbrée, qui s'accroche dans le mortier, ne se détache plus ou ne s'émiette plus, tenant sa forme lorsqu'elle est bouchée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est sec et émietté, se cassant en touffes qui ne se rassemblent pas, avec des poches sèches de fromage non hydraté.",
+            "action": "Continuez à frapper et presser; la friction réchauffe la graisse du fromage et l'aide à se lier. Quelques gouttes d'huile vont maintenant l'aider à se réunir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une boule lisse et marbrée qui tient ensemble et tire proprement du pestle, sentant du fromage aigu, de l'ail et des herbes à la fois.",
+            "action": "Éliminez-le avec du vinaigre et de l'huile à la consistance de propagation que vous voulez."
+          },
+          {
+            "state": "Overdone",
+            "description": "La boule est devenue grasse et lissée, en pleurant l'huile du fromage où elle était trop travaillée et trop chaude.",
+            "action": "Arrêtez de frapper immédiatement et ajoutez le vinaigre pour le serrer et l'éclaircir; servez à température ambiante fraîche."
+          }
+        ]
+      },
+      "feelCue": "Surveillez le moment de la fixation: les décombres lâches s'attrapent soudainement et se roulent dans une boule sous le pestle. Il devrait se sentir ferme, collant et unifié, comme une pâte raide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Monter",
+      "inputs": [
+        "cohesive_ball",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_moretum",
+      "instructions": "Saupoudrer le vinaigre de vin et verser dans l'huile d'olive, puis moudre et remuer jusqu'à ce que la boule raide se détache dans une pâte épaisse et extensible. Goût et équilibre: il doit être fort et affirmé — fortement ailky, salé du fromage, aigre du vinaigre, avec un sous-ton vert amer. Déchirez-le et roulez dans un monticule rugueux. Servir à la température de la pièce abondamment sur du pain de campagne grossier et chaud.",
+      "visualCue": {
+        "primaryTarget": "Une propagation épaisse, brillante, vert tacheté qui retient les pics doux et les rubans lentement sur une cuillère, avec de l'huile juste visible aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours raide et comme une boule, trop dense pour s'étendre et déguster à plat sans l'acide brillant.",
+            "action": "Ajouter un peu plus de vinaigre et d'huile et le travailler jusqu'à ce qu'il se propage facilement et la saveur aiguise."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte cohésive et tartinable avec un éclat satiné qui attrape le pain sans le déchirer, en dégustant équilibré: piquant, salé, aigre et vert.",
+            "action": "Monter et servir à la fois avec du pain chaud; il est meilleur frais, tandis que l'ail est à son plus brillant."
+          },
+          {
+            "state": "Overdone",
+            "description": "La tartinade est devenue molle et grasse, avec un bain d'huile libre et une sensation de bouche plate et grasse.",
+            "action": "Pound dans un peu plus de fromage râpé pour réabsorber l'huile et reconstruire le corps, puis rééquilibrer avec une touche de sel."
+          }
+        ]
+      },
+      "feelCue": "La tartinade doit tirer sur un couteau avec un léger tack, puis relâcher doucement sur le pain. Sur la langue il frappe chaud et tranchant de l'ail d'abord, puis se dépose dans le fromage salé et un tang de vinaigre propre."
+    }
+  ]
 };

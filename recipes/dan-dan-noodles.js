@@ -1,105 +1,309 @@
 export default {
-  repoId: "master_chinese_dan_dan_noodles_001",
-  parentRepoId: null,
-  slug: "dan-dan-noodles",
-  author: "ForkRecipe Kitchen",
-  title: "Dan Dan Noodles",
-  description: "Thin wheat noodles arrive buried under a thick, sesame-dark sauce that carries the mala numbing heat of Sichuan peppercorn alongside a crispy, caramelized pork mince that is almost more condiment than protein. Each toss of the bowl releases a wave of sesame paste, chili oil, and fermented vegetable brine that smells like a Chengdu street corner at noon.",
-  cuisine: "Chinese",
-  culture: "Sichuan",
-  category: "grains",
-  tags: ["sichuan", "noodles", "pork", "sesame", "spicy", "mala", "street-food", "dan-dan"],
-  difficulty: 3,
-  activeTime: "35 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 4, sour: 2, bitter: 1, umami: 5, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Fresh thin wheat noodles (or dried Chinese noodles)", ratioValue: 200,  defaultUnit: "g",   substitutions: ["spaghetti", "soba noodles"] },
-    { ingId: "ing_02", role: "Protein",    name: "Ground pork (20% fat)",                               ratioValue: 150,  defaultUnit: "g",   substitutions: ["ground turkey", "finely diced mushrooms (vegan)"] },
-    { ingId: "ing_03", role: "Fat",        name: "Sesame paste (Chinese zhima jiang)",                  ratioValue: 40,   defaultUnit: "g",   substitutions: ["tahini mixed with a few drops of toasted sesame oil"] },
-    { ingId: "ing_04", role: "Fat",        name: "Chili oil with sediment (la you)",                    ratioValue: 30,   defaultUnit: "ml",  substitutions: ["sambal oelek mixed with neutral oil"] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Light soy sauce",                                     ratioValue: 25,   defaultUnit: "ml",  substitutions: ["tamari"] },
-    { ingId: "ing_06", role: "Acid",       name: "Chinkiang black vinegar",                             ratioValue: 15,   defaultUnit: "ml",  substitutions: ["rice vinegar"] },
-    { ingId: "ing_07", role: "Umami",      name: "Yibin ya cai (Sichuan preserved mustard greens), rinsed and chopped", ratioValue: 30, defaultUnit: "g", substitutions: ["zha cai", "kimchi squeezed dry"] },
-    { ingId: "ing_08", role: "Spice",      name: "Sichuan peppercorns, toasted and ground to powder",   ratioValue: 4,    defaultUnit: "g",   substitutions: ["Sichuan peppercorn oil"] },
-    { ingId: "ing_09", role: "Seasoning",  name: "Doubanjiang",                                         ratioValue: 15,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_10", role: "Allium",     name: "Garlic, minced",                                      ratioValue: 3,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_11", role: "Fat",        name: "Neutral oil",                                         ratioValue: 20,   defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_12", role: "Liquid",     name: "Hot noodle cooking water (reserved)",                 ratioValue: 60,   defaultUnit: "ml",  substitutions: ["hot chicken stock"] },
-    { ingId: "ing_13", role: "Sweetener",  name: "Granulated sugar",                                    ratioValue: 5,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_14", role: "Garnish",    name: "Scallions, thinly sliced",                            ratioValue: 20,   defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_chinese_dan_dan_noodles_001",
+  "parentRepoId": null,
+  "slug": "dan-dan-noodles",
+  "author": "ForkRecipe Kitchen",
+  "title": "Dan Dan Nouilles",
+  "description": "Les nouilles de blé mince arrivent enterrées sous une sauce épaisse, sésame-dark qui porte la chaleur engourdissante mala du maïs poivré Sichuan aux côtés d'une menthe de porc croustillante et caramélisée qui est presque plus condiment que la protéine. Chaque toss du bol libère une vague de pâte de sésame, d'huile de chili et de saumure végétale fermentée qui sent comme un coin de rue de Chengdu à midi.",
+  "cuisine": "Chinois",
+  "culture": "Sichuan",
+  "category": "grains",
+  "tags": [
+    "Sichuan",
+    "nouilles",
+    "porc",
+    "sésame",
+    "épicé",
+    "mala",
+    "Produits de la rue",
+    "Dan-dan"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "35 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sear",
-      inputs: ["ing_11", "ing_02", "ing_09", "ing_10", "ing_07"],
-      outputState: "crispy_pork_topping",
-      instructions: "Heat a wok over high heat until wisps of smoke appear at the rim. Add the neutral oil and swirl to coat the surface. Add the ground pork in a single flat layer — resist the urge to stir. Let it cook undisturbed for 60–90 seconds until the bottom develops a crust and begins to release from the wok. Now break it apart and continue cooking, stirring occasionally, until the pork is cooked through and the pieces are individually caramelized and a little crispy — 4–5 minutes total. Push the pork to the sides of the wok. Add the doubanjiang to the hot center and fry it for 60 seconds, stirring, until it darkens and releases its red oil. Add the minced garlic and stir everything together for 30 seconds. Add the rinsed ya cai (or substitute preserved vegetable) and toss together with the pork and paste for 1 minute. The goal is crispy, concentrated, fragrant mince — not moist and soft. Every piece should be individually browned, almost crunchy at the edges, and deeply savory from the fermented paste. This is a topping and a seasoning, not a protein main.",
-      visualCue: {
-        primaryTarget: "Dry, irregular, dark brown pork crumbles with crisped edges, flecked with red doubanjiang oil and small pieces of dark preserved vegetable. Should look like a very concentrated, crumbly taco filling.",
-        spectrum: [
-          { state: "Underdone", description: "Pork is still grey and moist, clumping together in soft masses. No browning visible. Doubanjiang is raw and bright red.", action: "Increase heat to high and spread the pork in a thin layer. Cook without stirring for 90 seconds, then break apart and continue." },
-          { state: "Perfect",   description: "Individually browned crumbles with crispy edges, coated in dark reddish-brown doubanjiang. The preserved vegetable is fragrant and beginning to crisp. The wok smells of browned meat and fermented chili.", action: "Remove from heat and set aside. The pork will crisp further as it rests." },
-          { state: "Overdone",  description: "Pork is hard and black at the edges, acrid. The preserved vegetable has turned dark and bitter.", action: "If just barely overdone, add a tablespoon of soy sauce and toss to rehydrate the surface. If burnt, discard and start again — the bitterness cannot be corrected." },
-        ],
-      },
-      feelCue: "Scoop a small amount of the finished pork topping onto a spoon and let it fall back into the wok — each piece should fall separately, not in clumps. It should sound like gravel hitting a bowl, not a soft plop. That dryness is the goal.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Nouilles fraîches de blé mince (ou nouilles chinoises séchées)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Spaghetti",
+        "nouilles soba"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Boil",
-      inputs: ["ing_01"],
-      outputState: "cooked_noodles",
-      instructions: "Bring a large pot of unsalted water to a vigorous rolling boil. Cook the noodles according to their type: fresh noodles need only 60–90 seconds; dried thin wheat noodles typically take 3–4 minutes. Test constantly in the last 30 seconds by pulling a strand out and biting through it — you want it cooked through but still with a very slight resistance at the center, slightly firmer than you would eat it plain, because the sauce will continue softening the noodles as you toss them. Before draining, ladle out approximately 100 ml of the cloudy, starchy cooking water and set it aside — this is the binder that will loosen your sauce to the right coating consistency. Drain the noodles quickly, shaking the colander hard to remove as much water as possible. Do not rinse. A rinsed noodle refuses to hold sauce.",
-      visualCue: {
-        primaryTarget: "Cooked noodles that look plump and slightly shiny from the starch. When you hold a strand up it should drape with weight rather than hanging stiff, but it should not lump or stick to itself immediately.",
-        spectrum: [
-          { state: "Underdone", description: "Noodles have a white, uncooked core visible when bitten through. They feel stiff and resist the bite with a chalky snap.", action: "Return to the boiling water for another 30–60 seconds and test again." },
-          { state: "Perfect",   description: "Fully cooked through with a barely perceptible firmness at the very center. Strands are pliable and slick. When a strand is held up and bitten it gives cleanly with no chalk or tug.", action: "Drain immediately and toss with sauce before the noodles cool and stick." },
-          { state: "Overdone",  description: "Noodles are soft throughout with no resistance, and strands are clumping together into ropes. They feel slippery and heavy.", action: "Drain immediately — they will be acceptable but the texture under the sauce will be muddy. Do not overcook next time." },
-        ],
-      },
-      feelCue: "The water should be at a furious boil before you add the noodles — if you drop them into a timid simmer they will stick to each other and to the pot. Stir vigorously in the first 30 seconds to separate every strand.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Porc haché (20 % de matières grasses)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "dinde hachée",
+        "Champignons en dés (végétaux)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_08", "ing_12", "ing_13"],
-      outputState: "dan_dan_sauce",
-      instructions: "In each serving bowl, combine the sesame paste, chili oil (with its red sediment), soy sauce, black vinegar, Sichuan pepper powder, and sugar. Add 2–3 tablespoons of hot noodle cooking water and whisk with a fork or chopstick until the sauce is smooth, homogeneous, and pourable — the sesame paste tends to seize and clump with cold liquids, so the hot starchy water is essential to emulsify it. The finished sauce should be the consistency of heavy cream: fluid but coat the inside of the bowl. Taste it now — it should be intensely seasoned, almost too salty, too spicy, too nutty when tasted alone. It will come into balance once it coats a full portion of noodles. Adjust accordingly: more vinegar for brightness, more chili oil for heat, more sesame paste for richness, more cooking water to loosen.",
-      visualCue: {
-        primaryTarget: "A dark, glossy, homogeneous sauce — deep reddish-brown from the chili oil, with a matte richness from the sesame paste. It should coat the bowl evenly when swirled and flow slowly back to the center.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is lumpy or split — sesame paste floating in clumps separate from the chili oil. The hot water was not added or not enough.", action: "Add another tablespoon of hot water and whisk vigorously for 30 seconds until smooth." },
-          { state: "Perfect",   description: "Smooth, emulsified, deep reddish-brown. When you tilt the bowl, the sauce moves as one uniform mass. Smells of toasted sesame, chili, and vinegar all at once.", action: "Add the cooked noodles immediately and toss." },
-          { state: "Overdone",  description: "Sauce is too thin and watery — too much water was added. It will not cling to the noodles and will pool at the bottom.", action: "Add another spoonful of sesame paste and toss vigorously — the paste will absorb the excess water and re-thicken." },
-        ],
-      },
-      feelCue: "Dip a chopstick into the sauce and hold it horizontally — the sauce should drip slowly, in thick, reluctant drops, not run freely. That viscosity means it will cling to every strand rather than pooling at the bowl bottom.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Pâte de sésame (chinois zhima jiang)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tahini mélangé avec quelques gouttes d'huile de sésame grillée"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Toss",
-      inputs: ["cooked_noodles", "dan_dan_sauce", "crispy_pork_topping", "ing_14"],
-      outputState: "plated_dan_dan_noodles",
-      instructions: "Add the hot, drained noodles directly into the sauce bowl. Spoon a generous mound of the crispy pork topping onto the noodles without mixing it in yet. Scatter the scallion rings on top. At the table, instruct your diner to toss everything vigorously with chopsticks for 30 seconds before eating — the tossing distributes the sauce evenly, incorporates the pork into every strand, and emulsifies the last of the residual noodle starch into the sauce. This is the 'dan dan' motion the dish is named for: the bouncing, carrying-pole rhythm of street vendors who shook their portable noodle buckets to coat each serving. Each mouthful should deliver noodle, sauce, and pork in roughly equal amounts. Serve immediately — this dish waits for no one.",
-      visualCue: {
-        primaryTarget: "Before tossing: a bowl of noodles crowned with a dark mound of pork and red chili oil pooling at the edges. After tossing: every strand coated in a glossy, dark reddish-brown sauce, with pork crumbles distributed throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Noodles at the bottom are undressed and pale — the sauce has been absorbed only by the top layer. The bowl smells of sauce but the noodles taste bland.", action: "Continue tossing with chopsticks until every strand glistens and no pale noodle is visible." },
-          { state: "Perfect",   description: "Every strand is uniformly coated — glossy, reddish-brown, slick. Pork crumbles are evenly distributed. A single chopstick-lift should bring up coated noodles, pork, and sauce all together.", action: "Eat immediately, before the noodles absorb the sauce and become clumped." },
-          { state: "Overdone",  description: "The noodles have been sitting too long after tossing — they have absorbed all the sauce and are clumping into a dense, dry mass.", action: "Add a splash of sesame oil or chili oil and toss again to re-lubricate." },
-        ],
-      },
-      feelCue: "When you toss a good dan dan, you should be able to hear the noodles swish and hiss against the ceramic bowl — that is the sauce coating each strand under friction. If it makes no sound and everything just slides around, the sauce is too thin.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile de Chili avec sédiments (la vous)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sambal oelek mélangé à de l'huile neutre"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "sauce de soja légère",
+      "ratioValue": 25,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Vinaigre noir Chinkiang",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de riz"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "Yibin ya cai (verts de moutarde conservés au sichuan), rincés et hachés",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Caï",
+        "kimchi pressé à sec"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Sichuan grains de poivre, grillés et moulus à la poudre",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Huile de maïs poivré sichuan"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Doubanjiang",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 3,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Liquid",
+      "name": "Eau chaude de cuisson des nouilles (réservée)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "bouillon de poulet chaud"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Garnish",
+      "name": "Échalons, tranchés finement",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_11",
+        "ing_02",
+        "ing_09",
+        "ing_10",
+        "ing_07"
+      ],
+      "outputState": "crispy_pork_topping",
+      "instructions": "Chauffer un wok à feu vif jusqu'à ce qu'une pointe de fumée apparaisse au bord. Ajouter l'huile neutre et le tourbillon pour enrober la surface. Ajoutez le porc moulu dans une seule couche plate — résistez à l'envie de remuer. Laissez cuire pendant 60 à 90 secondes jusqu'à ce que le fond développe une croûte et commence à se libérer du wok. Découpez-le et continuez à cuisiner, en remuant occasionnellement, jusqu'à ce que le porc soit cuit et que les morceaux soient caramélisés individuellement et un peu croustillants — 4-5 minutes au total. Poussez le porc sur les côtés du wok. Ajouter le doubanjiang au centre chaud et le faire frire pendant 60 secondes, en remuant, jusqu'à ce qu'il s'assombrisse et libère son huile rouge. Ajouter l'ail haché et mélanger pendant 30 secondes. Ajouter le cai rincé (ou le substitut de légumes conservés) et mélanger avec le porc et coller 1 minute. Le but est croustillant, concentré, parfumé, pas humide et doux. Chaque morceau doit être bruni individuellement, presque croquant aux bords, et profondément salé à partir de la pâte fermentée. C'est une garniture et un assaisonnement, pas une protéine principale.",
+      "visualCue": {
+        "primaryTarget": "Sécheresse, irrégulière, brun foncé miettes de porc aux bords croustillants, tachetée d'huile rouge duubanjiang et de petits morceaux de légumes conservés foncés. Ça devrait ressembler à un remplissage très concentré et friable.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc est encore gris et humide, s'agrippant en masse molle. Pas de brunissement visible. Doubanjiang est cru et rouge vif.",
+            "action": "Augmenter la chaleur et répartir le porc en couche mince. Cuire sans remuer pendant 90 secondes, puis casser et continuer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des miettes individuelles aux bords croustillants, enrobées de doubanjiang brun rougeâtre foncé. Le légume conservé est parfumé et commence à croquer. Le wok sent la viande brune et le chili fermenté.",
+            "action": "Retirer du feu et réserver. Le porc croquera plus loin comme il repose."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le porc est dur et noir aux bords, acride. Le légume conservé est devenu sombre et amer.",
+            "action": "Si à peine surdosé, ajouter une cuillère à soupe de sauce soja et mélanger pour réhydrater la surface. En cas de brûlure, jetez et recommencez — l'amertume ne peut être corrigée."
+          }
+        ]
+      },
+      "feelCue": "Versez une petite quantité de porc fini sur une cuillère et laissez-la retomber dans le wok — chaque morceau devrait tomber séparément, et non pas dans des touffes. Ça devrait sonner comme du gravier frappant un bol, pas une patte molle. Cette sécheresse est le but."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "cooked_noodles",
+      "instructions": "Portez un grand pot d'eau non salée à un ébullition vigoureux. Cuire les nouilles selon leur type : les nouilles fraîches n'ont besoin que de 60 à 90 secondes ; les nouilles de blé mince séchées prennent généralement 3 à 4 minutes. Testez constamment dans les 30 dernières secondes en tirant un brin et en le mordant — vous voulez qu'il soit cuit à travers, mais avec une très légère résistance au centre, légèrement plus ferme que vous le mangeriez uni, parce que la sauce continuera à adoucir les nouilles pendant que vous les lancez. Avant de les égoutter, arrosez environ 100 ml de l'eau de cuisson nuageuse et féculente et réservez - c'est le liant qui va détacher votre sauce à la bonne consistance du revêtement. Égoutter les nouilles rapidement, agiter la calandre difficile à enlever le plus d'eau possible. Ne pas rincer. Une nouille rincée refuse de tenir la sauce.",
+      "visualCue": {
+        "primaryTarget": "Nouilles cuites qui ont l'air pulvérisées et légèrement brillantes de l'amidon. Lorsque vous maintenez un brin vers le haut, il devrait draper avec du poids plutôt que de suspendre raide, mais il ne devrait pas gronder ou s'en tenir à lui-même immédiatement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les nouilles ont un noyau blanc non cuit visible lorsqu'elles sont mordues. Ils se sentent raides et résistent à la morsure avec une touche crayeuse.",
+            "action": "Retournez à l'eau bouillante pendant 30 à 60 secondes et testez à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement cuit avec une fermeté à peine perceptible au centre. Les brins sont souples et lisses. Lorsqu'un brin est retenu et mordu, il donne proprement sans craie ni remorqueur.",
+            "action": "Égoutter immédiatement et mélanger avec de la sauce avant que les nouilles refroidissent et collent."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles sont douces tout au long sans résistance, et les brins s'agrippent en cordes. Ils se sentent glissants et lourds.",
+            "action": "Égoutter immédiatement — ils seront acceptables mais la texture sous la sauce sera boueuse. Ne pas trop cuire la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "L'eau doit être à ébullition furieuse avant d'ajouter les nouilles — si vous les déposez dans une mijotée timide, ils se colleront l'un à l'autre et au pot. Mélanger vigoureusement dans les 30 premières secondes pour séparer chaque brin."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_08",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "dan_dan_sauce",
+      "instructions": "Dans chaque bol, mélanger la pâte de sésame, l'huile de chili (avec ses sédiments rouges), la sauce soja, le vinaigre noir, la poudre de poivre Sichuan et le sucre. Ajouter 2 à 3 cuillerées à soupe d'eau chaude de cuisson de nouilles et fouetter avec une fourchette ou une baguette jusqu'à ce que la sauce soit lisse, homogène et versable — la pâte de sésame a tendance à saisir et à empiler avec des liquides froids. La sauce finie doit être la consistance de la crème lourde: liquide mais enrober l'intérieur du bol. Goûtez - le maintenant — il devrait être assaisonné intensément, presque trop salé, trop épicé, trop noisette quand goûté seul. Il sera équilibré une fois qu'il enrobera une portion complète de nouilles. Ajuster en conséquence : plus de vinaigre pour la luminosité, plus d'huile de chili pour la chaleur, plus de pâte de sésame pour la richesse, plus d'eau de cuisson pour se détendre.",
+      "visualCue": {
+        "primaryTarget": "Une sauce foncée, brillante, homogène – brun rougeâtre profond de l'huile de chili, avec une richesse mate de la pâte de sésame. Il devrait enrober le bol uniformément en tourbillonnant et revenir lentement au centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est grumelée ou fendue, la pâte de sésame flottant dans des touffes séparées de l'huile de chili. L'eau chaude n'a pas été ajoutée ou pas assez.",
+            "action": "Ajouter une autre cuillère à soupe d'eau chaude et fouetter vigoureusement pendant 30 secondes jusqu'à ce que lisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, émulsifié, brun rougeâtre profond. Lorsque vous penchez le bol, la sauce se déplace comme une masse uniforme. Des odeurs de sésame grillé, de chili et de vinaigre.",
+            "action": "Ajouter immédiatement les nouilles cuites et mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est trop fine et aqueuse — trop d'eau a été ajoutée. Il ne s'accrochera pas aux nouilles et se regroupera en bas.",
+            "action": "Ajouter une autre cuillerée de pâte de sésame et remuer vigoureusement: la pâte absorbera l'excès d'eau et ré-échauffera."
+          }
+        ]
+      },
+      "feelCue": "Plongez une baguette dans la sauce et maintenez-la horizontalement — la sauce doit couler lentement, dans des gouttes épaisses et réticentes, sans courir librement. Cette viscosité signifie qu'elle s'accrochera à chaque brin plutôt qu'au fond du bol."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Découpe",
+      "inputs": [
+        "cooked_noodles",
+        "dan_dan_sauce",
+        "crispy_pork_topping",
+        "ing_14"
+      ],
+      "outputState": "plated_dan_dan_noodles",
+      "instructions": "Ajouter les nouilles chaudes et drainées directement dans le bol de sauce. Couvrir les nouilles sans les mélanger. Dispersez les anneaux de pétoncle sur le dessus. À table, demandez à votre diner de jeter vigoureusement tout avec des baguettes pendant 30 secondes avant de manger — le lancer distribue la sauce uniformément, incorpore le porc dans chaque brin, et émulsifie la dernière de l'amidon de nouilles résiduelle dans la sauce. C'est le mouvement 'dan dan' que le plat est nommé pour : le rythme rebondissant, porteur-pole des vendeurs de rue qui ont secoué leurs seaux de nouilles portables pour enrober chaque portion. Chaque bouchée doit livrer des nouilles, de la sauce et du porc en quantités à peu près égales. Servir immédiatement — ce plat n'attend personne.",
+      "visualCue": {
+        "primaryTarget": "Avant de jeter : un bol de nouilles couronnées d'un monticule sombre de porc et d'huile de chili rouge baignant aux bords. Après le jet : chaque brin recouvert d'une sauce brun rougeâtre foncé brillante, avec des miettes de porc distribuées dans l'ensemble.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les nouilles en bas sont déshabillées et pâles — la sauce n'a été absorbée que par la couche supérieure. Le bol sent la sauce mais les nouilles goûtent mal.",
+            "action": "Continuez à jeter avec des baguettes jusqu'à ce que chaque brin scintille et qu'aucune nouille pâle ne soit visible."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque brin est uniformément recouvert — brillant, brun rougeâtre, lissé. Les miettes de porc sont distribuées uniformément. Un seul lifting de baguettes devrait apporter des nouilles enrobées, du porc et de la sauce.",
+            "action": "Mangez immédiatement, avant que les nouilles n'absorbent la sauce et deviennent entassés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles ont été assises trop longtemps après avoir jeté — elles ont absorbé toute la sauce et s'agrippent dans une masse dense et sèche.",
+            "action": "Ajouter une éclaboussure d'huile de sésame ou d'huile de chili et mélanger à nouveau pour relubrifier."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous lancez un bon dan dan, vous devriez être en mesure d'entendre les nouilles swish et siffler contre le bol en céramique — c'est-à-dire la sauce enrobant chaque brin sous friction. S'il ne fait pas de bruit et que tout glisse, la sauce est trop fine."
+    }
+  ]
 };

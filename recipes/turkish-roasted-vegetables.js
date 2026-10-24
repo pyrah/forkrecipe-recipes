@@ -1,87 +1,250 @@
 export default {
-  repoId: "master_turkish_roastedvegetables_001",
-  parentRepoId: null,
-  slug: "turkish-roasted-vegetables",
-  author: "ForkRecipe Kitchen",
-  title: "Turkish Roasted Vegetables with Pomegranate",
-  description: "Roasted zucchini, eggplant, and red pepper dressed with pomegranate molasses and fresh herbs — caramelized edges, sweet-tart dressing, and the tang of yogurt beneath.",
-  cuisine: "Turkish",
-  culture: "Anatolian",
-  category: "vegetables",
-  tags: ["turkish", "anatolian", "roasted", "pomegranate", "yogurt", "vegan", "mezze", "sumac"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 2, salty: 2, sour: 3, bitter: 1, umami: 1, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Zucchini (courgette), cut into 3 cm cubes",    ratioValue: 300, defaultUnit: "g",  substitutions: ["yellow squash"] },
-    { ingId: "ing_02", role: "Structure", name: "Globe eggplant, cut into 3 cm cubes",           ratioValue: 300, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_03", role: "Structure", name: "Red bell pepper, cut into 3 cm strips",         ratioValue: 200, defaultUnit: "g",  substitutions: ["roasted jarred peppers"] },
-    { ingId: "ing_04", role: "Allium",    name: "Red onion, cut into wedges",                    ratioValue: 150, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves, unpeeled",                       ratioValue: 4,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Olive oil",                                     ratioValue: 60,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_07", role: "Acid",      name: "Pomegranate molasses",                          ratioValue: 25,  defaultUnit: "ml", substitutions: ["balsamic glaze + squeeze of lemon"] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh mint leaves, torn",                       ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Herb",      name: "Flat-leaf parsley, roughly chopped",            ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Ground sumac",                                  ratioValue: 6,   defaultUnit: "g",  substitutions: ["extra pomegranate molasses + lemon zest"] },
-    { ingId: "ing_11", role: "Seasoning", name: "Fine salt",                                     ratioValue: 8,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_12", role: "Dairy",     name: "Turkish-style thick yogurt (süzme yoğurt)",     ratioValue: 200, defaultUnit: "g",  substitutions: ["Greek yogurt"] },
+  "repoId": "master_turkish_roastedvegetables_001",
+  "parentRepoId": null,
+  "slug": "turkish-roasted-vegetables",
+  "author": "ForkRecipe Kitchen",
+  "title": "Légumes grillés turcs à la grenade",
+  "description": "Les courgettes grillées, les aubergines et les poivrons rouges, vêtus de mélasse de grenade et d'herbes fraîches — bords caramélisés, vinaigrette à la sauce sucrée, et le tang de yogourt en dessous.",
+  "cuisine": "Turquie",
+  "culture": "Anatolien",
+  "category": "vegetables",
+  "tags": [
+    "turc",
+    "anatolien",
+    "grillés",
+    "grenade",
+    "yaourt",
+    "végétalien",
+    "mezze",
+    "Sumac"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_11"],
-      outputState: "caramelized_roasted_vegetables",
-      instructions: "Preheat oven to 220°C (430°F) with a large sheet tray inside. Toss all cut vegetables and the unpeeled garlic cloves with the olive oil and salt in a large bowl. Spread in a single layer on the hot tray — crowding causes steaming. Roast for 25–30 minutes, turning once halfway, until the edges are deeply caramelized and the zucchini and eggplant have collapsed and charred in patches.",
-      visualCue: {
-        primaryTarget: "Deeply browned edges and caramelized surfaces on all vegetables. Eggplant cubes have collapsed and are golden-dark. Peppers are charred and blistered at the edges. Onion wedges are dark and sweet-smelling.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are pale and steaming. Zucchini is still rigid. No browning on any surface.", action: "Raise the heat to 230°C and spread further apart. The tray was likely overcrowded — use two trays if needed." },
-          { state: "Perfect",   description: "Caramelized edges throughout. Eggplant and zucchini have a slight char on the cut surfaces. Peppers blister. The tray has golden fond underneath the vegetables.", action: "Remove from oven and dress while still warm." },
-          { state: "Overdone",  description: "Some vegetables are very dark and beginning to harden. Fond on the pan is black and acrid.", action: "Salvage the well-roasted pieces and discard the burnt ones. Deglaze the tray with a spoonful of water to capture any good fond." },
-        ],
-      },
-      feelCue: "A piece of eggplant should yield immediately to gentle pressure from a fork — collapsing rather than bouncing back, sweet-smelling and soft all the way through.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Zucchini (courgette), coupé en cubes de 3 cm",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "courge jaune"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toss",
-      inputs: ["caramelized_roasted_vegetables", "ing_07", "ing_10", "ing_08", "ing_09"],
-      outputState: "dressed_roasted_vegetables",
-      instructions: "While the vegetables are still warm, squeeze the roasted garlic from their skins directly over the vegetables and stir gently to break them into the mix. Drizzle the pomegranate molasses over and sprinkle the sumac. Toss gently to coat without breaking up the vegetables further. Scatter the fresh mint and parsley. Taste for salt and acidity — the dressing should be assertively tart.",
-      visualCue: {
-        primaryTarget: "Warm vegetables are coated in a dark, sweet-tart glaze with vivid green herbs scattered throughout. Each piece glistens with the combined pomegranate and olive oil.",
-        spectrum: [
-          { state: "Underdone", description: "Pomegranate molasses is sitting in a dark puddle at the bottom rather than coating the vegetables. Herbs are unmixed.", action: "Toss more actively and add a tablespoon of the vegetable juices from the tray to help emulsify the dressing." },
-          { state: "Perfect",   description: "Each vegetable piece is lightly glazed with the deep red-brown molasses. Sumac gives a purplish dusting to the surfaces. Herbs are vibrant and just wilting at the edges.", action: "Serve over or alongside the yogurt immediately." },
-          { state: "Overdone",  description: "Tossing has broken the vegetables into mush. The dish has lost its textural distinction.", action: "Serve as a warm relish rather than a side — spread the yogurt on the plate and spoon the vegetable mixture over as a thick, rustic topping." },
-        ],
-      },
-      feelCue: "The dressed vegetables should feel warm and slightly sticky with the molasses — pick up a piece of eggplant and it should carry a glistening coating that doesn't drip.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Aubergines Globe, coupées en cubes de 3 cm",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["dressed_roasted_vegetables", "ing_12"],
-      outputState: "finished_turkish_roasted_vegetables",
-      instructions: "Spread the cold yogurt in a generous layer on the base of a wide serving plate, creating a swoosh with the back of a spoon. Pile the warm dressed vegetables directly onto the yogurt. The contrast of cold, tangy yogurt and warm, sweet-tart vegetables is the heart of the dish. Serve immediately.",
-      visualCue: {
-        primaryTarget: "White yogurt forms a cool cloud beneath jewel-toned, caramelized vegetables dotted with vivid herbs. The pomegranate-dark glaze bleeds slightly into the white yogurt at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Yogurt and vegetables are mixed together rather than layered — the visual and textural contrast is lost.", action: "If possible, serve again with yogurt spread beneath. If already mixed, it still tastes right." },
-          { state: "Perfect",   description: "Distinct layers: cold white yogurt below, glossy warm vegetables above, herbs on top. The diner mixes as they eat, discovering new ratios of cool-tart-sweet in each bite.", action: "Serve immediately while the temperature contrast is alive." },
-          { state: "Overdone",  description: "Yogurt has warmed through and lost its cool contrast. The dish looks uniform.", action: "Add a fresh spoonful of cold yogurt to the center just before serving." },
-        ],
-      },
-      feelCue: "The first spoonful should deliver cool, creamy resistance from the yogurt giving way to soft, charred vegetable — two temperatures in a single mouthful is the point.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "poivron rouge, coupé en bandes de 3 cm",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivrons grillés en jarre"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon rouge, coupé en quartiers",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail, non pelées",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Mélasses de grenade",
+      "ratioValue": 25,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "glaçure balsamique + pression de citron"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Feuilles fraîches de menthe, déchirées",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Sumac au sol",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "mélasse de grenade supplémentaire + zeste de citron"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Dairy",
+      "name": "Yogourt épais de style turc (süzme yoğurt)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Yogourt grec"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_11"
+      ],
+      "outputState": "caramelized_roasted_vegetables",
+      "instructions": "Préchauffer le four à 220°C (43°F) avec un grand plateau en tôle à l'intérieur. Mélanger tous les légumes coupés et les gousses d'ail non pelées avec l'huile d'olive et saler dans un grand bol. Étendez - vous en une seule couche sur le plateau chaud: l'engorgement provoque la vapeur. Faire cuire de 25 à 30 minutes, en tournant une fois à mi-chemin, jusqu'à ce que les bords soient profondément caramélisés et que les courgettes et les aubergines se soient effondrées et carbonisées en morceaux.",
+      "visualCue": {
+        "primaryTarget": "Des bords très brunis et des surfaces caramélisées sur tous les légumes. Les cubes d'aubergine se sont effondrés et sont dorés. Les poivrons sont carbonisés et cloqués aux bords. Les coins d'oignon sont sombres et sucrés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont pâles et à la vapeur. Zucchini est toujours rigide. Pas de brunissement sur aucune surface.",
+            "action": "Levez la chaleur à 230°C et écartez-vous. Le plateau était probablement surpeuplé — utilisez deux plateaux si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bords caramélisés partout. Les aubergines et les courgettes ont un léger omble sur les surfaces coupées. Plaquette thermoformée. Le plateau est doré sous les légumes.",
+            "action": "Retirer du four et habiller tout en restant chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Certains légumes sont très foncés et commencent à durcir. Le fond de la casserole est noir et acride.",
+            "action": "Sauver les morceaux bien cuits et jeter les morceaux brûlés. Déglacer le plateau avec une cuillerée d'eau pour capturer tout bon goût."
+          }
+        ]
+      },
+      "feelCue": "Un morceau d'aubergine doit immédiatement céder à la pression douce d'une fourche, qui s'effondre plutôt que de rebondir en arrière, d'une odeur sucrée et d'une douceur totale."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Découpe",
+      "inputs": [
+        "caramelized_roasted_vegetables",
+        "ing_07",
+        "ing_10",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "dressed_roasted_vegetables",
+      "instructions": "Alors que les légumes sont encore chauds, pressez l'ail rôti de leur peau directement sur les légumes et remuez doucement pour les casser dans le mélange. Arrosez la mélasse de grenade et saupoudrez le sumac. Mélanger doucement pour enrober les légumes sans les casser davantage. Dispersez la menthe fraîche et le persil. Goût pour le sel et l'acidité — la vinaigrette doit être acidulée.",
+      "visualCue": {
+        "primaryTarget": "Les légumes chauds sont enrobés d'une glaçure foncée et douce aux herbes vertes vives dispersées dans tout le pays. Chaque pièce brille avec la grenade combinée et l'huile d'olive.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La mélasse de grenade est assise dans une flaque sombre au fond plutôt que de couvrir les légumes. Les herbes ne sont pas mélangées.",
+            "action": "Mélanger plus activement et ajouter une cuillère à soupe des jus de légumes du plateau pour aider à émulsifier la vinaigrette."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque pièce végétale est légèrement vitrée avec la mélasse rouge-brun profonde. Sumac donne une poussière pourpre aux surfaces. Les herbes sont vibrantes et se flétrissent aux bords.",
+            "action": "Servir immédiatement sur ou à côté du yaourt."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tossing a cassé les légumes en bouillie. Le plat a perdu sa distinction textuelle.",
+            "action": "Servir comme un relish chaud plutôt qu'un côté — étaler le yaourt sur l'assiette et cuillerer le mélange de légumes sur comme une garniture épaisse et rustique."
+          }
+        ]
+      },
+      "feelCue": "Les légumes habillés devraient se sentir chauds et légèrement collants avec la mélasse — ramasser un morceau d'aubergine et porter un revêtement brillant qui ne coule pas."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "dressed_roasted_vegetables",
+        "ing_12"
+      ],
+      "outputState": "finished_turkish_roasted_vegetables",
+      "instructions": "Étendre le yaourt froid dans une couche généreuse sur la base d'une large assiette de service, créant un swoosh avec le dos d'une cuillère. Pilez les légumes chauds sur le yaourt. Le contraste entre le yogourt froid, tanné et les légumes chauds et sucrés est au cœur du plat. Servir immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Le yogourt blanc forme un nuage frais sous des légumes caramélisés, imprégnés d'herbes vives. La glaçure de grenade sombre saigne légèrement dans le yogourt blanc aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les yogourts et les légumes sont mélangés plutôt qu'en couches — le contraste visuel et textural est perdu.",
+            "action": "Si possible, servir à nouveau avec du yogourt étalé sous. Si déjà mélangé, il a encore bon goût."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couches distinctes : yaourt blanc froid ci-dessous, légumes chauds brillants au-dessus, herbes sur le dessus. Le diner se mélange en mangeant, découvrant de nouveaux ratios de fraîcheur-tart-doux dans chaque bouchée.",
+            "action": "Servir immédiatement pendant que le contraste de température est vivant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le yogourt s'est réchauffé et a perdu son contraste. Le plat a l'air uniforme.",
+            "action": "Ajouter une cuillère fraîche de yogourt froid au centre juste avant de servir."
+          }
+        ]
+      },
+      "feelCue": "La première cuillère devrait fournir une résistance fraîche et crémeuse du yogourt donnant place à des légumes doux et carbonisés — deux températures dans une seule bouche sont le point."
+    }
+  ]
 };

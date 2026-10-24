@@ -1,115 +1,267 @@
 export default {
-  repoId: "master_spanish_gambas_al_ajillo_001",
-  parentRepoId: null,
-  slug: "gambas-al-ajillo",
-  author: "ForkRecipe Kitchen",
-  title: "Gambas al Ajillo",
-  description: "Spain's most seductive tapa — prawns seared in an inferno of olive oil, garlic, and dried chile until the shells spit and sizzle, eaten straight from the clay cazuela with torn bread to drag through the garlicky oil.",
-  cuisine: "Spanish",
-  culture: "Spanish",
-  category: "seafood",
-  tags: ["gluten-free", "spanish", "tapas"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 2, sour: 1, bitter: 0, umami: 3, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Raw prawns, shell-on and deveined",       ratioValue: 400, defaultUnit: "g",   substitutions: ["large shrimp", "langoustine tails"] },
-    { ingId: "ing_02", role: "Fat",       name: "Extra-virgin olive oil",                  ratioValue: 100, defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic, thinly sliced",                   ratioValue: 6,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Heat",      name: "Dried guindilla peppers or red chile",    ratioValue: 2,   defaultUnit: "whole", substitutions: ["pinch of cayenne", "dried árbol chiles"] },
-    { ingId: "ing_05", role: "Solvent",   name: "Dry sherry (fino or manzanilla)",         ratioValue: 60,  defaultUnit: "ml",  substitutions: ["dry white wine"] },
-    { ingId: "ing_06", role: "Herb",      name: "Fresh flat-leaf parsley, roughly chopped", ratioValue: 15,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Acid",      name: "Fresh lemon juice",                       ratioValue: 15,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine sea salt",                           ratioValue: 4,   defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_spanish_gambas_al_ajillo_001",
+  "parentRepoId": null,
+  "slug": "gambas-al-ajillo",
+  "author": "ForkRecipe Kitchen",
+  "title": "Gambas al Ajillo",
+  "description": "La tapa la plus séduisante d'Espagne — les crevettes cousues dans un inferno d'huile d'olive, d'ail et de chile séché jusqu'à ce que les coquilles crachent et sizzle, mangées directement de la cazuela d'argile avec du pain déchiré pour traîner à travers l'huile ailky.",
+  "cuisine": "Espagnol",
+  "culture": "Espagnol",
+  "category": "seafood",
+  "tags": [
+    "Sans gluten",
+    "Espagnol",
+    "Tapas"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Heat",
-      inputs: ["ing_02"],
-      outputState: "smoking_oil",
-      instructions: "Pour the olive oil into a cazuela, heavy skillet, or cast-iron pan. Set over the highest heat your stove allows. Wait patiently — the oil needs to be genuinely ripping hot, shimmering and almost smoking, before anything else goes in. A thermometer reads around 180 C (356 F). This extreme heat is not optional: it's what causes the prawns to sear rather than steam, and the garlic to perfume rather than burn.",
-      visualCue: {
-        primaryTarget: "Oil shimmers in fast, rippling currents across the entire surface. A wisp of smoke appears at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Oil sits still and glossy. No shimmer. Dropping in garlic now will produce bitter, raw-tasting garlic oil.", action: "Continue heating. Do not rush — medium heat yields a steamed, not seared, result." },
-          { state: "Perfect",   description: "Oil dances and shimmers visibly. A drop of water flicked in erupts immediately. Faint wisps of smoke rise from the pan edge.", action: "Add garlic and chile immediately." },
-          { state: "Overdone",  description: "Heavy, continuous smoke. Oil smells acrid rather than grassy.", action: "Remove pan from heat for 30 seconds, then return to medium-high. Olive oil above 210 C degrades in flavor." },
-        ],
-      },
-      feelCue: "Hold your palm two inches above the oil — you should be able to feel the heat pulsing upward within a second.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Crevettes crues, décortiquées et décortiquées",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "grandes crevettes",
+        "queues langoustines"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["smoking_oil", "ing_03", "ing_04"],
-      outputState: "aromatic_oil",
-      instructions: "Add the sliced garlic and whole dried chiles to the blazing oil in one confident movement. They will spit and sizzle violently — this is correct. Swirl the pan or use a wooden spoon to keep the garlic in constant motion. The window is narrow: you want the garlic golden at the edges, just slightly translucent at the center, with a nutty fragrance rising from the pan. About 30–45 seconds total.",
-      visualCue: {
-        primaryTarget: "Garlic slices are pale gold at the edges, cream-white at center. Chiles have darkened to a deeper brick red. A nutty, sweet aroma fills the kitchen.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is still pale white and raw-smelling. No color has developed. The oil has not yet taken on its garlic character.", action: "Swirl continuously for 15 more seconds over high heat." },
-          { state: "Perfect",   description: "Garlic is golden-edged, fragrant, and just beginning to crisp at the very tips. Chiles are darkened and aromatic. The oil has turned a warm, amber-tinted gold.", action: "Add prawns immediately — do not wait." },
-          { state: "Overdone",  description: "Garlic is brown and smells bitter. The oil tastes acrid. Discard and start over — burnt garlic will make the entire dish bitter.", action: "Discard the contents, wipe the pan, and begin again." },
-        ],
-      },
-      feelCue: "Listen: the sizzle should be loud and aggressive. If it sounds like quiet bubbling, your heat is too low.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Sear",
-      inputs: ["aromatic_oil", "ing_01", "ing_08"],
-      outputState: "seared_prawns",
-      instructions: "Season the prawns lightly with salt, then add them to the pan in a single layer. Do not crowd — if your pan is small, work in two batches. The prawns must make contact with the hot oil, not with each other. Let them sear undisturbed for 60–90 seconds until the underside has turned coral-pink and opaque halfway up the flesh. The shells should be starting to char at the edges. Then flip each prawn.",
-      visualCue: {
-        primaryTarget: "The underside is fully pink and opaque. The shell has blistered and crisped at the edges. The top is still translucent grey-pink.",
-        spectrum: [
-          { state: "Underdone", description: "Flesh is still completely translucent and grey. Shells have not changed color. No char on the shell edges.", action: "Leave undisturbed for another 30–45 seconds — resist the urge to move them." },
-          { state: "Perfect",   description: "Flesh is pink and opaque from the base up to the mid-point. Shells have begun to brown and blister. Juices pool around each prawn.", action: "Flip each prawn to finish cooking on the second side." },
-          { state: "Overdone",  description: "Flesh is fully opaque and contracting. Shells are very dark. Prawns are beginning to curl tightly.", action: "Get them out immediately — overcooked prawns go rubbery within 30 seconds." },
-        ],
-      },
-      feelCue: "A properly seared prawn resists the spatula briefly, then releases cleanly. If it sticks, it is not ready to flip.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Ail, tranché finement",
+      "ratioValue": 6,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Deglaze",
-      inputs: ["seared_prawns", "ing_05"],
-      outputState: "glazed_prawns",
-      instructions: "Flip all prawns, then immediately pour in the dry sherry. The pan will roar and steam dramatically. The alcohol will flare briefly if you are on a gas stove — this is fine. Swirl the pan to dissolve the caramelized fond from the bottom and coat the prawns. Cook for 30 seconds more until the prawns are fully pink and the sherry has reduced to a glossy emulsion in the oil.",
-      visualCue: {
-        primaryTarget: "Prawns are fully pink and curled into a gentle C shape. The sauce is a glossy, emulsified amber clinging to each prawn.",
-        spectrum: [
-          { state: "Underdone", description: "Prawns are still grey in patches. Sauce is very loose and watery — sherry has not reduced.", action: "Cook 20 more seconds over high heat, swirling constantly." },
-          { state: "Perfect",   description: "Every prawn is uniformly pink and curled, just lightly firm to the touch. Sauce is a reduced, aromatic glossy syrup coating everything.", action: "Remove from heat and finish immediately." },
-          { state: "Overdone",  description: "Prawns are tightly coiled and rubbery. Sauce has reduced to almost nothing and begins to smell bitter.", action: "Remove from heat and serve immediately — the sauce can be rescued with a small splash of sherry added off the heat." },
-        ],
-      },
-      feelCue: "Prod a prawn gently with your fingertip — it should feel like the fleshy base of your thumb when relaxed, not hard and rubbery.",
+      "ingId": "ing_04",
+      "role": "Heat",
+      "name": "Poivrons ou piments rouges séchés",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "pincée de Cayenne",
+        "piments secs"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Finish",
-      inputs: ["glazed_prawns", "ing_06", "ing_07"],
-      outputState: "finished_gambas",
-      instructions: "Off the heat, squeeze the lemon juice directly over the prawns and scatter the chopped parsley. Swirl the pan once more to combine. The acid from the lemon will cut through the richness of the oil and lift the entire dish. Transfer immediately to a warmed cazuela or serve directly from the pan — gambas al ajillo must arrive at the table still sizzling, with the garlicky oil pooled at the bottom for bread.",
-      visualCue: {
-        primaryTarget: "Bright green parsley flecks contrast with coral-pink prawns bathed in golden, fragrant oil.",
-        spectrum: [
-          { state: "Underdone", description: "Dish looks heavy and monochrome — no green, no brightness. Parsley not yet added.", action: "Add parsley and lemon and serve. These are non-negotiable for balance." },
-          { state: "Perfect",   description: "Vivid parsley against pink prawns. Oil pools at the base of the pan, amber and glistening. A clean citrus note cuts through the garlic richness when you lean over the dish.", action: "Serve immediately — these seconds matter." },
-          { state: "Overdone",  description: "Parsley has wilted into dull green from residual heat. Lemon has lost its brightness. Dish smells only of cooked garlic.", action: "Serve anyway. The flavor is still excellent — next time, add parsley at the very last second." },
-        ],
-      },
-      feelCue: "The pan should hiss faintly when you squeeze in the lemon — if it is silent, the pan has cooled too much and you have lost the window for sizzling service.",
+      "ingId": "ing_05",
+      "role": "Solvent",
+      "name": "Sherry sec (fino ou manzanilla)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vin blanc sec"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Persil frais à feuilles plates, approximativement haché",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Chaleur",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "smoking_oil",
+      "instructions": "Verser l'huile d'olive dans un cazuela, une poêle lourde ou une poêle en fonte. Réglez sur la plus haute chaleur possible votre poêle. Attendez patiemment — l'huile doit vraiment se déchirer chaud, chatoyant et presque fumer, avant que rien d'autre n'entre. Un thermomètre lit environ 180 C (356 F). Cette chaleur extrême n'est pas facultative : c'est ce qui fait que les crevettes s'aspirent plutôt que de la vapeur et que l'ail se parfume plutôt que de brûler.",
+      "visualCue": {
+        "primaryTarget": "L'huile mijote dans des courants rapides, qui se déchirent sur toute la surface. Une lueur de fumée apparaît aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'huile reste immobile et brillante. Pas de frisson. La goutte d'ail va maintenant produire de l'huile d'ail amère et brute.",
+            "action": "Continuez le chauffage. Ne vous précipitez pas: la chaleur moyenne donne un résultat à la vapeur et non pas à la mer."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'huile danse et brille visiblement. Une goutte d'eau s'efface immédiatement. Les fêlures de fumée s'élèvent du bord de la poêle.",
+            "action": "Ajouter l'ail et le chile immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Une forte fumée continue. L'huile sent l'acride plutôt que l'herbe.",
+            "action": "Retirer la poêle du feu pendant 30 secondes, puis revenir à moyenne-élevée. L'huile d'olive au-dessus de 210 C se dégrade en saveur."
+          }
+        ]
+      },
+      "feelCue": "Maintenez votre palmier à deux pouces au - dessus de l'huile — vous devriez pouvoir sentir la chaleur s'élever en une seconde."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "smoking_oil",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "aromatic_oil",
+      "instructions": "Ajouter l'ail tranché et les chiles entiers séchés à l'huile de cuisson dans un mouvement confiant. Ils cracheront et frémiront violemment — c'est exact. Faire pivoter la poêle ou utiliser une cuillère en bois pour maintenir l'ail en mouvement constant. La fenêtre est étroite: vous voulez l'ail doré aux bords, juste légèrement translucide au centre, avec un parfum de noix qui s'élève de la poêle. Au total, 30 à 45 secondes.",
+      "visualCue": {
+        "primaryTarget": "Les tranches d'ail sont d'or pâle aux bords, blanc crème au centre. Les Chiliens ont foncé jusqu'à un rouge brique plus profond. Un arôme doux et noisette remplit la cuisine.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est encore blanc pâle et parfumé. Aucune couleur n'a été développée. L'huile n'a pas encore pris son caractère d'ail.",
+            "action": "Tourner en continu pendant 15 secondes de plus à feu vif."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'ail est bordé d'or, parfumé, et commence juste à croquer aux pointes mêmes. Les Chiliens sont foncés et aromatiques. L'huile a transformé un or chaud, teinté d'ambre.",
+            "action": "Ajouter immédiatement des crevettes — n'attendez pas."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est brun et sent amer. L'huile a un goût acride. Jeter et recommencer: l'ail brûlé rendra le plat entier amer.",
+            "action": "Jeter le contenu, essuyer la casserole et recommencer."
+          }
+        ]
+      },
+      "feelCue": "Écoute : le vertige devrait être fort et agressif. Si ça sonne comme un bouillonnement silencieux, votre chaleur est trop faible."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sear",
+      "inputs": [
+        "aromatic_oil",
+        "ing_01",
+        "ing_08"
+      ],
+      "outputState": "seared_prawns",
+      "instructions": "Assaisonner les crevettes légèrement avec du sel, puis les ajouter à la poêle en une seule couche. Ne foulez pas — si votre poêle est petit, travaillez en deux lots. Les crevettes doivent entrer en contact avec l'huile chaude, pas entre elles. Laissez-les semer sans gêne pendant 60 à 90 secondes jusqu'à ce que le dessous ait tourné corallien et opaque à mi-chemin de la chair. Les coquilles devraient commencer à s'ombrer aux bords. Puis retournez chaque crevette.",
+      "visualCue": {
+        "primaryTarget": "Le dessous est entièrement rose et opaque. La coquille a été cloquée et croustillée aux bords. Le haut est toujours transparent gris-rose.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La chair est toujours complètement translucide et grise. Les coquilles n'ont pas changé de couleur. Pas de char sur les bords de la coquille.",
+            "action": "Laisser tranquille pendant 30 à 45 secondes — résister à l'envie de les déplacer."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair est rose et opaque de la base jusqu'au point médian. Les coquilles ont commencé à brunir et à blister. Les jus se rassemblent autour de chaque crevette.",
+            "action": "Flip chaque crevette pour terminer la cuisson sur le deuxième côté."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair est totalement opaque et sous-jacente. Les coquilles sont très sombres. Les crevettes commencent à se boucler étroitement.",
+            "action": "Sortez - les immédiatement — les crevettes trop cuites sont caoutchouteuses en 30 secondes."
+          }
+        ]
+      },
+      "feelCue": "Une crevette bien cousue résiste brièvement à la spatule, puis libère proprement. S'il colle, il n'est pas prêt à retourner."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Déglacement",
+      "inputs": [
+        "seared_prawns",
+        "ing_05"
+      ],
+      "outputState": "glazed_prawns",
+      "instructions": "Flip toutes les crevettes, puis verser immédiatement dans le sherry sec. La poêle rugira et s'échauffera de façon spectaculaire. L'alcool s'allumera brièvement si vous êtes sur un poêle à gaz — c'est bien. Tourner la poêle pour dissoudre le fond caramélisé et enrober les crevettes. Faire cuire 30 secondes de plus jusqu'à ce que les crevettes soient entièrement roses et que le sherry soit réduit à une émulsion brillante dans l'huile.",
+      "visualCue": {
+        "primaryTarget": "Les crevettes sont entièrement roses et enroulées en forme douce de C. La sauce est un ambre brillant et émulsifié accroché à chaque crevette.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont encore grises dans les taches. La sauce est très lâche et aqueuse — le sherry n'a pas diminué.",
+            "action": "Cuire encore 20 secondes à feu vif, en tourbillonnant constamment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque crevette est uniformément rose et enroulée, juste légèrement ferme au toucher. La sauce est un sirop brillant aromatique réduit qui recouvre tout.",
+            "action": "Retirer du feu et terminer immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes sont enroulées et caoutchouteuses. La sauce s'est réduite à presque rien et commence à sentir amer.",
+            "action": "Retirer du feu et servir immédiatement — la sauce peut être sauvée avec une petite éclaboussure de sherry ajouté du feu."
+          }
+        ]
+      },
+      "feelCue": "Prod une crevette doucement avec votre bout de doigt — il devrait se sentir comme la base charnue de votre pouce quand détendue, pas dur et caoutchouteux."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Finition",
+      "inputs": [
+        "glazed_prawns",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "finished_gambas",
+      "instructions": "Hors du feu, pressez le jus de citron directement sur les crevettes et dispersez le persil haché. Tourner la poêle une fois de plus pour la combiner. L'acide du citron coupera à travers la richesse de l'huile et soulèvera le plat entier. Transférer immédiatement dans un cazuela chaud ou servir directement de la poêle — gambas al ajillo doit arriver à la table encore grésillante, avec l'huile ailky mise au fond pour le pain.",
+      "visualCue": {
+        "primaryTarget": "Les taches de persil vert vif contrastent avec les crevettes coralliennes baignées d'huile dorée et parfumée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le plat a l'air lourd et monochrome — pas de vert, pas de luminosité. Le persil n'est pas encore ajouté.",
+            "action": "Ajouter le persil et le citron et servir. Ils ne sont pas négociables pour l'équilibre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Persil vif contre les crevettes roses. Piscines d'huile à la base de la casserole, ambre et scintillant. Une note d'agrumes propre coupe la richesse en ail lorsque vous vous penchez sur le plat.",
+            "action": "Servir immédiatement — ces secondes comptent."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le persil s'est flétri en vert terne à cause de la chaleur résiduelle. Le citron a perdu sa luminosité. Le plat sent seulement l'ail cuit.",
+            "action": "Servez quand même. La saveur est encore excellente — la prochaine fois, ajouter le persil à la dernière seconde."
+          }
+        ]
+      },
+      "feelCue": "La poêle doit siffler faiblement quand vous pressez dans le citron — si elle est silencieuse, la poêle a trop refroidi et vous avez perdu la fenêtre pour le service de grésillement."
+    }
+  ]
 };

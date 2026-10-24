@@ -1,81 +1,221 @@
 export default {
-  repoId: "master_portuguese_piri-piri-sauce_001",
-  parentRepoId: null,
-  slug: "piri-piri-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Piri Piri Sauce",
-  description: "A vivid, oil-bright red sauce from the African bird's eye chili — simultaneously fiery and fruity, with a lemon-garlic sharpness that makes grilled chicken sing and your lips tingle long after the last bite.",
-  cuisine: "Portuguese",
-  culture: "Portuguese",
-  category: "condiments",
-  tags: ["piri piri", "chili", "portuguese", "hot sauce", "vegan"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 4, sour: 5, bitter: 2, umami: 3, heat: 9 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",       name: "Bird's eye chilies (fresh or dried and rehydrated), stems removed", ratioValue: 4, defaultUnit: "parts", substitutions: ["Thai bird chilies", "dried piri piri peppers"] },
-    { ingId: "ing_02", role: "Aromatic",   name: "Red bell pepper, roughly chopped and roasted", ratioValue: 2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves, peeled", ratioValue: 1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Acid",       name: "Fresh lemon juice", ratioValue: 1, defaultUnit: "parts", substitutions: ["lime juice"] },
-    { ingId: "ing_05", role: "Acid",       name: "Red wine vinegar", ratioValue: 0.5, defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_06", role: "Fat",        name: "Neutral oil (sunflower or light olive)", ratioValue: 3, defaultUnit: "parts", substitutions: ["extra-virgin olive oil for a more robust flavor"] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Fine sea salt", ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Herb",       name: "Fresh oregano leaves (or 0.5 tsp dried)", ratioValue: 0.3, defaultUnit: "parts", substitutions: ["fresh thyme"] },
-    { ingId: "ing_09", role: "Spice",      name: "Sweet smoked paprika", ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_portuguese_piri-piri-sauce_001",
+  "parentRepoId": null,
+  "slug": "piri-piri-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Piri Piri",
+  "description": "Une sauce rouge vive et huileuse du chili des yeux de l'oiseau africain — simultanément feu et fruité, avec une netteté citron-ail qui fait chanter le poulet grillé et vos lèvres fourmillent longtemps après la dernière bouchée.",
+  "cuisine": "Portugais",
+  "culture": "Portugais",
+  "category": "condiments",
+  "tags": [
+    "Piri piri",
+    "Chili",
+    "portugais",
+    "sauce chaude",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 5,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 9
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Roast",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "charred_aromatics",
-      instructions: "Place the red bell pepper pieces and whole garlic cloves on a baking tray under a very hot broiler (240C/460F) or directly over a gas flame using tongs. Roast until the pepper skin is blackened and blistered in patches and the garlic is golden-brown and soft inside. The pepper takes 10-15 minutes, the garlic 8-10 minutes. Transfer to a bowl, cover with cling film, and steam for 5 minutes. Peel the pepper skin off — the char and steam loosens it.",
-      visualCue: {
-        primaryTarget: "Pepper skin is 50-60% blackened with blistered, collapsed flesh beneath. Garlic is golden-brown and yielding.",
-        spectrum: [
-          { state: "Underdone", description: "Pepper skin has only softened but not blistered. Garlic is still firm and pungent-raw.", action: "Return to the broiler for 3-5 more minutes. A fully hot broiler is essential." },
-          { state: "Perfect",   description: "Pepper is dramatically blistered with char in patches. Flesh is soft and collapsing. Garlic is fragrant and yielding when pressed.", action: "Steam in the covered bowl then peel the pepper before blending." },
-          { state: "Overdone",  description: "Pepper is entirely black throughout. Garlic is deeply browned with bitter notes.", action: "Use anyway but reduce the quantity slightly. The bitterness will be offset by lemon and vinegar." },
-        ],
-      },
-      feelCue: "Press the pepper through the film — it should collapse immediately, completely soft with no resistance. The garlic clove should yield like a cooked potato.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Chilies oculaires d'oiseaux (fraîches ou séchées et réhydratées), tiges enlevées",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Piments d'oiseaux thaïlandais",
+        "poivrons piri séchés"
+      ]
     },
     {
-      nodeId: "step_2", action: "Blend",
-      inputs: ["ing_01", "charred_aromatics", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "blended_piri_piri",
-      instructions: "Combine the chilies, peeled roasted pepper, roasted garlic, lemon juice, vinegar, oil, salt, oregano, and paprika in a blender or food processor. Blend on high for 2 minutes until completely smooth and emulsified. If the sauce is too thick, add a tablespoon of water and blend again. Taste carefully — the heat will be significant. Adjust with more lemon for brightness or more salt for depth.",
-      visualCue: {
-        primaryTarget: "A vivid brick-red, glossy, smooth sauce that pours in a fluid stream with a slight emulsified opacity from the oil.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce has visible chili skin pieces and a chunky texture. Oil not emulsified — floating in pools.", action: "Blend for another 60 seconds on the highest setting. A tamper helps with thick sauces." },
-          { state: "Perfect",   description: "Silky, bright red, uniformly colored with a slight sheen from emulsified oil. Flows off a spoon in a smooth sheet. Complex on the tongue — heat, acid, smoke.", action: "Taste and adjust seasoning, then use or jar up." },
-          { state: "Overdone",  description: "Sauce is pale orange-pink from over-blending with air, or the oil has broken and separated on the surface.", action: "Let it rest 2 minutes. If broken, add a splash of lemon juice and briefly re-blend." },
-        ],
-      },
-      feelCue: "Place a drop on your wrist — within 5 seconds you should feel a spreading heat that intensifies to a clean burn, not a dull ache. Sharp, not heavy.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "poivron rouge, haché et rôti",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["blended_piri_piri"],
-      outputState: "finished_piri_piri_sauce",
-      instructions: "For a cooked piri piri (preferred for marinating and shelf stability): pour the blended sauce into a small saucepan and simmer over low heat for 8-10 minutes, stirring occasionally. Cooking mellows the raw chili edge, deepens the roasted pepper flavor, and extends refrigerator life to 2 weeks. For a fresh, vibrant table sauce, skip this step and use raw. Cool completely before jarring.",
-      visualCue: {
-        primaryTarget: "The sauce darkens very slightly and the surface becomes more glossy as it cooks. Aroma shifts from raw to deeply roasted and complex.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still bubbling vigorously and smells very raw and sharp. Oil starting to separate at the edges.", action: "Reduce heat to the lowest setting and stir. A gentle simmer, not a boil." },
-          { state: "Perfect",   description: "Surface is barely moving — a gentle shimmer rather than a boil. Color has deepened. Aroma is rounded, smoky, fruity. No raw chili sharpness.", action: "Cool and jar. Keeps refrigerated for up to 2 weeks." },
-          { state: "Overdone",  description: "Sauce has reduced too much and is thick, sticky, and very dark. Has a slight caramelized note.", action: "Thin with a tablespoon of water and stir in a squeeze of fresh lemon to brighten." },
-        ],
-      },
-      feelCue: "After cooling, rub a drop between your fingers — it should feel silky and oily with a faint lingering heat spreading across the fingertips.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Giroves d'ail, pelées",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de citron vert"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "vinaigre de vin rouge",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile neutre (fleur de soleil ou olive légère)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile d'olive extra vierge pour une saveur plus robuste"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Feuilles d'origan fraîches (ou 0,5 c. à thé séchées)",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym frais"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Paprika fumé doux",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "charred_aromatics",
+      "instructions": "Placez les morceaux de poivron rouge et les gousses entières d'ail sur un plateau de cuisson sous un grille-croûte très chaud (240C/460F) ou directement sur une flamme de gaz à l'aide de pinces. Faire rôtir jusqu'à ce que la peau du poivre soit noircie et blister dans des patchs et que l'ail soit doré et doux à l'intérieur. Le poivre prend 10-15 minutes, l'ail 8-10 minutes. Transférer dans un bol, couvrir de film de collage et vapeur pendant 5 minutes. Éplucher la peau de poivre — l'omble et la vapeur la détachent.",
+      "visualCue": {
+        "primaryTarget": "La peau de poivre est de 50 à 60 % noircie avec des cloques, chair effondrée en dessous. L'ail est brun doré et donne.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau de poivre n'a adouci que mais n'a pas été cloquée. L'ail est toujours ferme et ramoneur.",
+            "action": "Retourner à la grille pour 3-5 minutes de plus. Un poulet à griller entièrement chaud est essentiel."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pepper est considérablement cloqué avec de l'omble dans les patchs. La chair est douce et s'effondre. L'ail est parfumé et donne en pression.",
+            "action": "Steam dans le bol couvert puis éplucher le poivre avant de mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poivre est entièrement noir partout. L'ail est profondément doré avec des notes amères.",
+            "action": "Utilisez de toute façon mais réduisez légèrement la quantité. L'amertume sera compensée par le citron et le vinaigre."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le poivre à travers le film — il devrait s'effondrer immédiatement, complètement doux sans résistance. La gousse d'ail doit produire comme une pomme de terre cuite."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "charred_aromatics",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "blended_piri_piri",
+      "instructions": "Mélanger les piments, le poivre rôti pelé, l'ail rôti, le jus de citron, le vinaigre, l'huile, le sel, l'origan et le paprika dans un mélangeur ou un robot culinaire. Mélanger en haut pendant 2 minutes jusqu'à ce qu'il soit complètement lisse et émulsifié. Si la sauce est trop épaisse, ajouter une cuillère à soupe d'eau et mélanger à nouveau. Goûtez soigneusement — la chaleur sera importante. Régler avec plus de citron pour la luminosité ou plus de sel pour la profondeur.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lustrée, lustrée, rouge brique vive qui verse dans un flux fluide avec une légère opacité émulsifiée de l'huile.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a des morceaux de peau de chili visibles et une texture épaisse. Huile non émulsifiée — flottant dans des bassins.",
+            "action": "Mélanger encore 60 secondes sur le réglage le plus haut. Une manipulation aide avec des sauces épaisses."
+          },
+          {
+            "state": "Perfect",
+            "description": "Soyeux, rouge vif, uniformément coloré avec un léger reflet d'huile émulsifiée. Il coule d'une cuillère dans une feuille lisse. Complexe sur la langue: chaleur, acide, fumée.",
+            "action": "Goûtez et assaisonnez, puis utilisez ou jarrez."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est rose-orange pâle de surbrillance d'air, ou l'huile s'est cassée et séparée à la surface.",
+            "action": "Laissez reposer 2 minutes. Si elle est cassée, ajouter une éclaboussure de jus de citron et régénérer brièvement."
+          }
+        ]
+      },
+      "feelCue": "Placez une goutte sur votre poignet — dans les 5 secondes, vous devriez sentir une chaleur de propagation qui s'intensifie à une brûlure propre, et non une douleur terne. Sharp, pas lourd."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "blended_piri_piri"
+      ],
+      "outputState": "finished_piri_piri_sauce",
+      "instructions": "Pour un piri piri cuit (préféré pour la marinade et la stabilité du plateau): verser la sauce mélangée dans une petite casserole et laisser mijoter à feu doux pendant 8-10 minutes, en remuant occasionnellement. La cuisson adoucit le bord cru du chili, approfondit la saveur de poivre rôti et prolonge la durée de vie du réfrigérateur jusqu'à 2 semaines. Pour une sauce de table fraîche et vibrante, sautez cette étape et utilisez cru. Refroidir complètement avant de jarrer.",
+      "visualCue": {
+        "primaryTarget": "La sauce s'assombrit très légèrement et la surface devient plus brillante à mesure qu'elle cuit. L'arôme passe de brut à profondément torréfié et complexe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce continue de bouillonner vigoureusement et sent très cru et vif. Huile commençant à se séparer aux bords.",
+            "action": "Réduire la chaleur au réglage le plus bas et remuer. Une mijote douce, pas un ébullition."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est à peine en mouvement — un doux éclat plutôt qu'un ébullition. La couleur s'est approfondie. L'arôme est arrondi, fumé, fruité. Pas de piment brut.",
+            "action": "Cool et jar. Conserver au réfrigérateur jusqu'à 2 semaines."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a trop diminué et est épaisse, collante et très sombre. A une note légèrement caramélisée.",
+            "action": "Arroser d'une cuillerée à soupe d'eau et remuer le citron frais pour l'éclairer."
+          }
+        ]
+      },
+      "feelCue": "Après avoir refroidi, frottez une goutte entre vos doigts — il devrait se sentir soyeux et huileux avec une faible chaleur persistante s'étendant sur le bout des doigts."
+    }
+  ]
 };

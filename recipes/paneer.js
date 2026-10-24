@@ -1,95 +1,204 @@
 export default {
-  repoId: "master_indian_paneer_001",
-  parentRepoId: null,
-  slug: "paneer",
-  author: "ForkRecipe Kitchen",
-  title: "Paneer (Fresh Indian Cheese)",
-  description: "Whole milk curdled at the precise moment with lemon juice, drained through muslin, and pressed under weight into a firm, yielding block of fresh white cheese — mild, clean, and with a characteristic squeak against the teeth. The foundational protein of Indian vegetarian cooking, made in 90 minutes from two ingredients.",
-  cuisine: "Indian",
-  culture: "North Indian",
-  category: "proteins",
-  tags: ["indian", "cheese", "fresh-cheese", "milk", "lemon", "vegetarian", "gluten-free", "base"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 1, sour: 1, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",  name: "Whole milk (at least 3.5% fat — do not use UHT)",          ratioValue: 2000, defaultUnit: "g", substitutions: ["buffalo milk (richer, firmer paneer — traditional)", "full-fat goat milk"] },
-    { ingId: "ing_02", role: "Acid",   name: "Fresh lemon juice (strained, no pips)",                    ratioValue: 50,   defaultUnit: "g", substitutions: ["white wine vinegar (30g)", "citric acid solution (10g citric acid in 50ml water)"] },
-    { ingId: "ing_03", role: "Liquid", name: "Cold water (for rinsing curds)",                           ratioValue: 500,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt (optional, worked in before pressing)",   ratioValue: 5,    defaultUnit: "g", substitutions: [] },
+  "repoId": "master_indian_paneer_001",
+  "parentRepoId": null,
+  "slug": "paneer",
+  "author": "ForkRecipe Kitchen",
+  "title": "Paneer (Fresh Indian Cheese)",
+  "description": "Lait entier caillé au moment précis avec du jus de citron, drainé à travers la mousseline, et pressé sous le poids dans un bloc ferme, donnant un bloc de fromage blanc frais — doux, propre, et avec une trempe caractéristique contre les dents. La protéine fondamentale de la cuisine végétarienne indienne, faite en 90 minutes à partir de deux ingrédients.",
+  "cuisine": "Indiens",
+  "culture": "Inde du Nord",
+  "category": "proteins",
+  "tags": [
+    "indienne",
+    "fromage",
+    "fromage frais",
+    "lait",
+    "citron",
+    "végétarien",
+    "Sans gluten",
+    "base"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 1,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Heat",
-      inputs: ["ing_01"],
-      outputState: "hot_milk",
-      instructions: "Pour the milk into a large, heavy-bottomed pot. Place over medium heat and bring slowly to just below boiling — 88 to 90°C (190 to 194°F). Stir occasionally to prevent scorching on the bottom. Watch carefully: this is the most critical temperature window. You want the milk almost boiling — small bubbles rising rapidly and aggressively from the bottom, steam rising, and the surface beginning to tremble and foam — but not a rolling boil. A rolling boil will cause the milk solids to scorch and give the paneer a slightly bitter, cooked-milk flavour. A thermometer is strongly recommended.",
-      visualCue: {
-        primaryTarget: "Milk is steaming heavily. Fine bubbles rising vigorously from the base and sides. The surface is beginning to foam and tremble at the edges. Not yet a full rolling boil.",
-        spectrum: [
-          { state: "Underdone", description: "Milk is hot but only a few small bubbles rising lazily. Surface is still. At this temperature the acid will not curdle the milk effectively.", action: "Continue heating on medium. Do not rush by raising heat to high — scorching ruins the paneer." },
-          { state: "Perfect",   description: "Vigorous bubbling from the base, steam rolling off the surface, foam forming at the edges. 88–90°C on a thermometer.", action: "Remove from heat and add acid immediately." },
-          { state: "Overdone",  description: "Full rolling boil, milk is overflowing or has scorched on the bottom.", action: "Remove from heat immediately. Smell the bottom — if scorched, do not scrape. Pour carefully into a clean pot, leaving the scorched bottom behind." },
-        ],
-      },
-      feelCue: "Hold your hand 20 cm above the pot — you should feel significant warmth radiating upward, and see a continuous plume of steam. The kitchen will smell strongly of hot, sweet milk.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Lait entier (au moins 3,5 % de matières grasses — ne pas utiliser d'UHT)",
+      "ratioValue": 2000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "lait de bison (plus riche, plus ferme — traditionnel)",
+        "lait de chèvre plein gras"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Acid",
-      inputs: ["hot_milk", "ing_02"],
-      outputState: "curdled_milk",
-      instructions: "Remove the pot from the heat. Pour the lemon juice in a slow, steady stream around the perimeter of the hot milk while stirring very gently — two or three slow stirs. Within 30 to 60 seconds, the milk will begin to separate into white curds and yellowish-green whey. Once the separation begins, stop stirring — agitation at this stage makes the curds tough and rubbery. If the milk has not fully separated after 90 seconds (large areas of still-white, un-curdled milk visible), add another tablespoon of lemon juice and stir gently once. Allow the curds to sit undisturbed in the whey for 5 minutes — this rest develops their structure.",
-      visualCue: {
-        primaryTarget: "Clear yellowish-green whey with white, cauliflower-like curds floating in it. The separation should be clean and complete — very little white colour remaining in the liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Milk looks slightly curdled at the surface but the majority is still white and milky. Whey is still pale and opaque.", action: "Add another tablespoon of acid, stir once, and wait 90 seconds more." },
-          { state: "Perfect",   description: "Clear, yellow-green whey with all the white solids clumped into distinct, pearly curds. A clean separation — the 'breaking' of the milk.", action: "Rest 5 minutes undisturbed then drain." },
-          { state: "Overdone",  description: "You added too much acid — curds are very fine and crumbly, whey is very acidic-smelling.", action: "Proceed — the paneer will be more crumbly but still usable. Rinse very thoroughly under cold water to remove excess acid." },
-        ],
-      },
-      feelCue: "Smell the whey — it should smell mildly of lemon and milk, pleasantly fresh, not aggressively sour. If it smells harsh and very acidic you have used too much acid for the next batch.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "vinaigre de vin blanc (30g)",
+        "solution d'acide citrique (10g d'acide citrique dans 50ml d'eau)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Strain",
-      inputs: ["curdled_milk", "ing_03", "ing_04"],
-      outputState: "drained_curds",
-      instructions: "Line a colander with two layers of cheesecloth or a clean, thin cotton cloth. Pour the curds and whey slowly into the lined colander — pouring fast causes fine curds to escape through the cloth. Gather the cloth around the curds and rinse the curds gently with cold water to wash off the lemon acid — this prevents the paneer from being sour and firms the texture. If seasoning, sprinkle the salt over the curds and work in gently with clean hands before gathering the cloth. Twist the cloth into a tight ball and squeeze firmly to remove as much whey as possible. The curds should now be a compact, uniformly white mass.",
-      visualCue: {
-        primaryTarget: "A compact ball of curds in the cloth — white, not yellowish, with the cloth showing dark patches from expressed whey. The curds hold together when the cloth is squeezed.",
-        spectrum: [
-          { state: "Underdone", description: "Curds are still very loose and watery. Whey dripping out freely when the cloth is barely squeezed.", action: "Squeeze more firmly. The majority of whey needs to be expelled before pressing." },
-          { state: "Perfect",   description: "Curds hold together as a cohesive mass when you press through the cloth. Whey expressed is now just a trickle, not a stream.", action: "Shape into a disc and press under weight." },
-          { state: "Overdone",  description: "Curds have been squeezed so vigorously they are compacting but also very dry and crumbly.", action: "Proceed to pressing — the panel will be slightly dry but still usable." },
-        ],
-      },
-      feelCue: "Press the cloth-wrapped curds in your two palms — you should feel the curds shift and compact as a unified mass, not slosh or separate. The cloth should feel hot and wet but no longer dripping freely.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau froide (pour le rinçage)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Press",
-      inputs: ["drained_curds"],
-      outputState: "finished_paneer",
-      instructions: "Shape the drained curds into a flat disc or block while still in the cloth. Place on a flat surface, fold the cloth neatly over the top, and place a heavy weight on top — a cast-iron pan, a pot of water, or a 2 kg weight. Press for 45 to 60 minutes at room temperature. The longer and heavier the press, the firmer the paneer. After pressing, unwrap and submerge in cold water for 10 minutes — this is the secret step that gives the paneer its characteristic clean, white colour and firms the texture. Pat dry and use immediately, or refrigerate in cold water for up to 4 days.",
-      visualCue: {
-        primaryTarget: "A firm, white block with a smooth surface and clean right-angle edges where the cloth has pressed it. When sliced, the interior is uniform white with a fine, dense grain.",
-        spectrum: [
-          { state: "Underdone", description: "Paneer is still soft and crumbly — it breaks apart when you try to cut it. Moisture still visible in the interior.", action: "Re-wrap and press for another 30 minutes under heavier weight." },
-          { state: "Perfect",   description: "Firm block that holds its shape when cut. Slices cleanly with a knife with a slight squeak of the cheese against the blade. Bright white. Faintly squeaks against the teeth.", action: "Submerge in cold water 10 minutes, then cut and use or refrigerate." },
-          { state: "Overdone",  description: "Paneer is very dense and dry, with a tough, grainy texture. Has been over-pressed.", action: "Soak in warm water for 15 minutes before cooking — this softens the texture substantially." },
-        ],
-      },
-      feelCue: "Tap the surface of pressed paneer with a finger — it should produce a dull thud, not a hollow sound or a soft give. Squeeze a corner gently between two fingers: it should feel like firm tofu, resilient and dry, returning to shape after the pressure is released.",
-    },
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (facultatif, travaillé avant pressage)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Chaleur",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "hot_milk",
+      "instructions": "Verser le lait dans une grande casserole à fond lourd. Mettre à feu moyen et porter lentement à un peu moins d'ébullition — 88 à 90°C (190 à 194°F). Incorporer occasionnellement pour éviter les brûlures au fond. Regardez attentivement : c'est la fenêtre de température la plus critique. Vous voulez que le lait soit presque bouillant — de petites bulles s'élevant rapidement et agressivement du fond, de la vapeur s'élevant, et la surface commençant à trembler et à mousser — mais pas un ébullition. Un ébullition en rouleau fera brûler les solides de lait et donnera au paneer un goût de lait légèrement amer et cuit. Un thermomètre est fortement recommandé.",
+      "visualCue": {
+        "primaryTarget": "Le lait est en pleine vapeur. De fines bulles s'élèvent vigoureusement de la base et des côtés. La surface commence à mousser et trembler aux bords. Pas encore un ébullition complet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait est chaud mais seulement quelques petites bulles s'élèvent paresseusement. La surface est toujours là. À cette température, l'acide ne sert pas efficacement le lait.",
+            "action": "Continuer le chauffage sur moyenne. Ne vous précipitez pas en soulevant la chaleur jusqu'à la hauteur, ce qui atténue la vitre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des bulles vigoureuses de la base, de la vapeur qui roulent sur la surface, de la mousse se formant aux bords. 88-90°C sur un thermomètre.",
+            "action": "Retirer du feu et ajouter l'acide immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "ébullition complète, le lait déborde ou a brûlé sur le fond.",
+            "action": "Retirer immédiatement du feu. Sentez le fond — s'il est brûlé, ne grattez pas. Verser soigneusement dans un pot propre, laissant le fond brûlé derrière."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main à 20 cm au-dessus du pot — vous devriez sentir une chaleur importante rayonner vers le haut, et voir un panache continu de vapeur. La cuisine sentira fortement le lait chaud et sucré."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Acides",
+      "inputs": [
+        "hot_milk",
+        "ing_02"
+      ],
+      "outputState": "curdled_milk",
+      "instructions": "Retirer la casserole du feu. Verser le jus de citron dans un ruisseau lent et stable autour du périmètre du lait chaud en remuant très doucement — deux ou trois brassages lents. Dans les 30 à 60 secondes, le lait commencera à se séparer en caillés blancs et en lactosérum vert jaunâtre. Une fois la séparation commencée, arrêtez de remuer — l'agitation à ce stade rend le caillé dur et caoutchouteux. Si le lait n'est pas complètement séparé après 90 secondes (de grandes zones de lait blanc non durci visibles), ajouter une autre cuillère à soupe de jus de citron et remuer doucement une fois. Laisser les caillés s'asseoir dans le lactosérum pendant 5 minutes — ce reste développe leur structure.",
+      "visualCue": {
+        "primaryTarget": "Lactosérum vert jaunâtre clair avec des caillés blanc, ressemblant à du chou-fleur qui flottent dedans. La séparation doit être propre et complète — très peu de couleur blanche restant dans le liquide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait semble légèrement caillé à la surface, mais la majorité est encore blanche et laiteuse. La laine est encore pâle et opaque.",
+            "action": "Ajouter une autre cuillère à soupe d'acide, remuer une fois et attendre 90 secondes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lactosérum clair, vert-jaune, avec tous les solides blancs empilés en caillés nacrés distincts. Une séparation propre — la « rupture » du lait.",
+            "action": "Reposez 5 minutes non perturbées puis égouttez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez ajouté trop d'acide — les caillés sont très fins et miettes, le lactosérum est très acide.",
+            "action": "Continuez — le panneau sera plus friable mais toujours utilisable. Rincer très soigneusement sous l'eau froide pour éliminer l'excès d'acide."
+          }
+        ]
+      },
+      "feelCue": "Sentez le lactosérum — il doit sentir légèrement le citron et le lait, agréablement frais, pas agressivement aigre. S'il sent dur et très acide, vous avez utilisé trop d'acide pour le prochain lot."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "curdled_milk",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "drained_curds",
+      "instructions": "Étaler une calandre avec deux couches de tissu de fromage ou un tissu de coton mince et propre. Verser lentement les caillés et lactosérums dans la calandre doublée — verser rapidement fait échapper les caillés fins à travers le tissu. Rassemblez le tissu autour du caillé et rincer doucement le caillé avec de l'eau froide pour laver l'acide du citron, ce qui empêche le panneau d'être aigre et raffermit la texture. En cas d'assaisonnement, saupoudrer le sel sur les caillés et travailler doucement avec des mains propres avant de ramasser le tissu. Tordre le chiffon dans une balle serrée et serrer fermement pour enlever le plus de lactosérum possible. Le caillé devrait maintenant être une masse compacte, uniformément blanche.",
+      "visualCue": {
+        "primaryTarget": "Une boule compacte de caillés dans le tissu — blanc, non jaunâtre, avec le tissu montrant des taches sombres de lactosérum exprimé. Les caillés se tiennent ensemble lorsque le tissu est pressé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les courbures sont encore très lâches et aqueuses. La laine coule librement quand le tissu est à peine pressé.",
+            "action": "Serrez plus fermement. La majorité du lactosérum doit être expulsée avant d'être pressée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les courbes se tiennent ensemble comme une masse cohésive lorsque vous appuyez à travers le tissu. Le whey exprimé n'est maintenant qu'un filet, pas un ruisseau.",
+            "action": "Formez un disque et appuyez sous le poids."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les courbures ont été pressées si vigoureusement qu'elles sont compactantes mais aussi très sèches et friables.",
+            "action": "Continuer à appuyer — le panneau sera légèrement sec mais toujours utilisable."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur les cords recouverts de tissu dans vos deux paumes — vous devriez sentir les cords se déplacer et compacter comme une masse unifiée, pas slosh ou séparé. Le tissu doit se sentir chaud et humide mais ne plus couler librement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Appuyez sur",
+      "inputs": [
+        "drained_curds"
+      ],
+      "outputState": "finished_paneer",
+      "instructions": "Formez les cords drainés en un disque ou un bloc plat tout en restant dans le tissu. Placer sur une surface plane, plier le tissu soigneusement sur le dessus, et placer un poids lourd sur le dessus — une casserole en fonte, un pot d'eau, ou un poids de 2 kg. Appuyez de 45 à 60 minutes à température ambiante. Plus la presse est longue et lourde, plus la vitre est ferme. Après avoir pressé, déballé et immergé dans de l'eau froide pendant 10 minutes, c'est l'étape secrète qui donne au panneau sa couleur propre et blanche caractéristique et raffermit la texture. Laisser sécher et utiliser immédiatement, ou réfrigérer dans l'eau froide jusqu'à 4 jours.",
+      "visualCue": {
+        "primaryTarget": "Un bloc blanc ferme avec une surface lisse et des bords d'angle droit propres où le tissu l'a pressé. En tranches, l'intérieur est blanc uniforme avec un grain fin et dense.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Paneer est encore doux et friable — il se casse quand vous essayez de le couper. L'humidité est toujours visible à l'intérieur.",
+            "action": "Recapturer et presser encore 30 minutes sous un poids plus lourd."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bloc ferme qui tient sa forme lors de la coupe. Couper proprement avec un couteau avec une légère pression du fromage contre la lame. Blanc vif. Crache mal contre les dents.",
+            "action": "Submerger à l'eau froide 10 minutes, puis couper et utiliser ou réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Paneer est très dense et sec, avec une texture dure et granuleuse. Il a été trop pressé.",
+            "action": "Faire tremper dans l'eau chaude pendant 15 minutes avant la cuisson, ce qui adoucit considérablement la texture."
+          }
+        ]
+      },
+      "feelCue": "Tapez la surface de la vitre pressée avec un doigt — il devrait produire un bruit terne, pas un son creux ou un doux donner. Pressez doucement un coin entre deux doigts : il devrait se sentir ferme tofu, résistant et sec, retournant à la forme après le relâchement de la pression."
+    }
+  ]
 };

@@ -1,103 +1,320 @@
 export default {
-  repoId: "master_kashmiri_lamb_rogan_josh_001",
-  parentRepoId: null,
-  slug: "lamb-rogan-josh",
-  author: "ForkRecipe Kitchen",
-  title: "Lamb Rogan Josh",
-  description: "The crown jewel of Kashmiri wazwan cooking — bone-in lamb slow-braised in a brick-red gravy built from Kashmiri chilis, yogurt, and a regiment of whole spices, arriving at the table deeply fragrant and moderately spiced, with a silky, enveloping sauce that coats the meat in shades of rust and crimson.",
-  cuisine: "Indian",
-  culture: "Kashmiri",
-  category: "proteins",
-  tags: ["rogan-josh", "kashmiri", "lamb", "curry", "braise", "indian", "whole-spices", "yogurt"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "2 hr 30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 4, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Lamb shoulder or neck (bone-in, cut into 5cm pieces)", ratioValue: 800,  defaultUnit: "g", substitutions: ["goat (bone-in)", "lamb leg pieces"] },
-    { ingId: "ing_02", role: "Fat",       name: "Ghee (or neutral oil)",                                ratioValue: 50,   defaultUnit: "g", substitutions: ["clarified butter"] },
-    { ingId: "ing_03", role: "Spice",     name: "Dried Kashmiri chilis (whole, stemmed and seeded)",    ratioValue: 12,   defaultUnit: "g", substitutions: ["2 tbsp Kashmiri chili powder", "mild paprika + cayenne (2:1) for color and heat"] },
-    { ingId: "ing_04", role: "Spice",     name: "Kashmiri chili powder (for the gravy base)",          ratioValue: 8,    defaultUnit: "g", substitutions: ["sweet paprika + cayenne (3:1)"] },
-    { ingId: "ing_05", role: "Spice",     name: "Bay leaves (Indian tejpatta, or standard bay)",       ratioValue: 2,    defaultUnit: "leaves", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Black cardamom pods (badi elaichi, cracked)",         ratioValue: 3,    defaultUnit: "pods", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Green cardamom pods (hari elaichi, lightly cracked)", ratioValue: 5,    defaultUnit: "pods", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Cloves (whole)",                                      ratioValue: 5,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Black peppercorns",                                   ratioValue: 8,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Cinnamon stick (5cm piece)",                          ratioValue: 1,    defaultUnit: "piece", substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Fennel seeds (saunf)",                                ratioValue: 5,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_12", role: "Spice",     name: "Dried ginger powder (sonth)",                         ratioValue: 4,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_13", role: "Dairy",     name: "Full-fat yogurt (whisked smooth)",                    ratioValue: 150,  defaultUnit: "g", substitutions: ["labneh thinned with a little water"] },
-    { ingId: "ing_14", role: "Allium",    name: "Asafoetida (hing, a pinch — traditional Kashmiri Pandit version has no onion or garlic)", ratioValue: 0.5, defaultUnit: "g", substitutions: ["omit for the Muslim wazwan version, which adds onion and garlic"] },
-    { ingId: "ing_15", role: "Liquid",    name: "Warm water or light stock",                           ratioValue: 200,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_16", role: "Seasoning", name: "Fine sea salt",                                       ratioValue: 8,    defaultUnit: "g", substitutions: [] },
+  "repoId": "master_kashmiri_lamb_rogan_josh_001",
+  "parentRepoId": null,
+  "slug": "lamb-rogan-josh",
+  "author": "ForkRecipe Kitchen",
+  "title": "Lamb Rogan Josh",
+  "description": "Le joyau de la couronne de la cuisine kashmiri wazwan - l'agneau ossé lent-brasé dans une sauce rouge brique construite de chilis cachemiri, yogourt, et un régiment d'épices entières, arrivant à la table profondément parfumé et modérément épicé, avec une sauce soyeuse et enveloppante qui enveloppe la viande dans des nuances de rouille et de crimson.",
+  "cuisine": "Indiens",
+  "culture": "Cachemire",
+  "category": "proteins",
+  "tags": [
+    "ROMAN-JOSH",
+    "Autres",
+    "agneau",
+    "curry",
+    "braise",
+    "indienne",
+    "épis entiers",
+    "yaourt"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "2 hr 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Bloom",
-      inputs: ["ing_02", "ing_03", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_14"],
-      outputState: "bloomed_spice_oil",
-      instructions: "Heat the ghee in a heavy-bottomed pot over medium heat until shimmering. Add the whole dried Kashmiri chilis and all the whole spices — bay leaves, both cardamoms, cloves, peppercorns, and cinnamon — along with a pinch of asafoetida if using. Stir and fry for 60 to 90 seconds until the spices swell, the cardamom skins begin to puff slightly, the dried chilis darken, and the ghee runs a deep, reddish-orange from the chili oils. The kitchen should fill with a perfumed, resinous spice aroma — warm, complex, and almost incense-like. This blooming of whole spices in hot fat is called tarka or chaunk and is the structural foundation of the entire dish.",
-      visualCue: {
-        primaryTarget: "The ghee has turned a vivid, deep reddish-orange from the Kashmiri chili oils; the whole spices look bloomed and slightly swollen, the bay leaves have darkened and curled at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Ghee is still pale yellow, the spices look unchanged, and little fragrance has been released.", action: "The heat is too low or time too short. Keep stirring over medium heat until the chili oil colors the fat visibly." },
-          { state: "Perfect",   description: "Ghee is vivid red-orange, the kitchen smells of warm cardamom and chili, and the cloves and peppercorns have visibly bloomed.", action: "Add the lamb and sear immediately — the spices will continue blooming in contact with the meat." },
-          { state: "Overdone",  description: "Spices are beginning to smoke and smell bitter; cloves and peppercorns darkened beyond their natural color.", action: "Pull the pot from the heat immediately and let it cool 30 seconds before adding the lamb." },
-        ],
-      },
-      feelCue: "Lean carefully over the pot and breathe in — properly bloomed Kashmiri spices smell like a mountain monastery at dawn: deeply resinous, warm, and slightly smoky from the cardamom. If it stings your eyes, the heat is too high.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Épaule ou cou d'agneau (en morceaux de 5 cm)",
+      "ratioValue": 800,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Chèvre (en os)",
+        "morceaux de jambe d'agneau"
+      ]
     },
     {
-      nodeId: "step_2", action: "Sear",
-      inputs: ["bloomed_spice_oil", "ing_01", "ing_16"],
-      outputState: "browned_lamb",
-      instructions: "Season the lamb pieces with salt. Add them to the pot in the spice-infused ghee and cook over medium-high heat, turning occasionally, until browned on all sides, 8 to 10 minutes. Do not crowd — work in batches if necessary. The red ghee will stain the meat a deep rust color as it browns. The lamb should develop a visible crust on each side; the fond on the pot floor will turn dark and aromatic. This browning step is not about deep Maillard color (the red ghee masks the color development), but about driving off surface moisture and developing body in the eventual sauce.",
-      visualCue: {
-        primaryTarget: "Lamb pieces are coated in an even rust-red color from the Kashmiri chili ghee, with a visible crust on exposed surfaces; the pot bottom carries a dark, fragrant fond.",
-        spectrum: [
-          { state: "Underdone", description: "Lamb is still pale beneath the chili oil and sits in liquid rather than sizzling; the pieces are steaming and the fond is minimal.", action: "Raise the heat and space the pieces further apart — reduce to batches so each piece has hot, dry fat to sear in." },
-          { state: "Perfect",   description: "Firm, rust-colored crust, the lamb pieces releasing clean from the pot floor. The fond is dark and aromatic, not burnt.", action: "Begin adding the yogurt in stages to build the gravy." },
-          { state: "Overdone",  description: "The spices on the pot floor have burned to bitter carbon, the ghee is smoking dark, and the lamb smells acrid rather than aromatic.", action: "Deglaze immediately with a splash of water, lower the heat, and continue — the bitter fond will integrate as a background note if not too extreme." },
-        ],
-      },
-      feelCue: "The lamb should hiss assertively in the red ghee and not be movable for the first 2 minutes — that grip means a crust is forming. Forced movement before release tears the developing crust and leaches moisture.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Ghee (ou huile neutre)",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "beurre clarifié"
+      ]
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["browned_lamb", "ing_04", "ing_11", "ing_12", "ing_13", "ing_15"],
-      outputState: "braised_rogan_josh",
-      instructions: "Lower the heat to medium-low. Add the Kashmiri chili powder, fennel seeds, and dried ginger to the pot and stir for 1 minute in the fat around the lamb. Then add the whisked yogurt 2 to 3 tablespoons at a time, stirring vigorously after each addition so the yogurt is fully incorporated into the ghee before the next addition — this prevents the yogurt from curdling into grainy lumps in the hot fat. Add the warm water or stock, stir well, and bring to a gentle simmer. Cover and braise on the lowest heat for 1.5 to 2 hours until the lamb is very tender and pulling away from the bone.",
-      visualCue: {
-        primaryTarget: "A deep, glossy brick-red to rust-colored sauce in which the lamb is barely submerged, with an oil slick of red-tinted ghee visible at the edges, and slow, lazy bubbles rising at the surface.",
-        spectrum: [
-          { state: "Underdone", description: "The yogurt has split into white curds in a thin, grainy liquid; the lamb is still tough and resists a fork.", action: "Stir vigorously to break the curds back in; if severely split, add a splash of water and blend with an immersion blender briefly. The graininess should smooth with continued simmering." },
-          { state: "Perfect",   description: "A silky, unified rust-red gravy that clings to the lamb; the fat has separated slightly to the surface in the characteristic 'oil on top' of a well-cooked South Asian curry, and the meat yields completely at the bone.", action: "Taste, adjust salt, and finish with a few whole black cardamom crushed for freshness." },
-          { state: "Overdone",  description: "Lamb has disintegrated and the sauce has reduced to a thick paste, over-salty and overly concentrated.", action: "Add warm water a splash at a time to loosen; taste and adjust salt. Handle the meat gently to preserve what texture remains." },
-        ],
-      },
-      feelCue: "When the yogurt is properly incorporated, the sauce should feel silky and coating on the stirring spoon, never grainy. The smell after 90 minutes of braising — deep lamb fat, Kashmiri chili, fennel, cardamom — should be warmly enveloping, like a spice bazaar on a cold mountain morning.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Chilis Cachemireis séchés (gros, ensemencés et ensemencés)",
+      "ratioValue": 12,
+      "defaultUnit": "g",
+      "substitutions": [
+        "2 c. à soupe de chili cachemiri en poudre",
+        "paprika doux + Cayenne (2:1) pour la couleur et la chaleur"
+      ]
     },
     {
-      nodeId: "step_4", action: "Finish",
-      inputs: ["braised_rogan_josh"],
-      outputState: "finished_lamb_rogan_josh",
-      instructions: "Uncover the pot for the last 15 minutes to reduce the sauce slightly and concentrate the flavors. The sauce should be glossy and clingy — if it's too thin, simmer uncovered until it thickens to nap a spoon. Taste and adjust salt. Fish out and discard the large whole spices (bay leaves, cinnamon, the largest cardamom pods) before serving, or warn your guests. The finished curry should have a bright red-orange oil glistening at the surface — this is the maα (ghee separating back out), a sign of a properly cooked South Asian curry. Serve with steamed rice (Kashmiri basmati) or warm naan.",
-      visualCue: {
-        primaryTarget: "A glossy, brick-red curry with a slick of aromatic red ghee at the surface, tender lamb pieces still on the bone, smelling of Kashmiri spice and slow-cooked meat.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery with a flat taste; the red oil has not separated from the gravy, and the spice flavors haven't fully melded.", action: "Simmer uncovered longer, stirring occasionally. Rogan josh needs the water to cook off fully for the sauce to mature." },
-          { state: "Perfect",   description: "Glossy, thick sauce with the characteristic red oil at the surface, deeply aromatic and moderately spiced, with fall-off-the-bone tender lamb.", action: "Serve immediately with basmati rice and a cooling raita." },
-          { state: "Overdone",  description: "Oil has completely separated out in a thick, greasy layer and the solid mass beneath is dry and over-reduced.", action: "Stir in a splash of warm water and let it emulsify back together briefly over low heat." },
-        ],
-      },
-      feelCue: "Properly finished rogan josh should coat a spoon in a smooth, slightly oily, dark-red film. The aroma should arrive in layers: first the warmth of the red chili, then fennel and cardamom, then the deep animal richness of the slow-braised lamb underneath.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Poudre de chili cachemiri (pour la base de la sauce)",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika doux + Cayenne (3:1)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Feuilles de la baie (Tejpatta indienne, ou baie standard)",
+      "ratioValue": 2,
+      "defaultUnit": "leaves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Gousses de cardamome noir (badi elaichi, fissurées)",
+      "ratioValue": 3,
+      "defaultUnit": "pods",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Gousses de cardamome vert (hari elaichi, légèrement craquées)",
+      "ratioValue": 5,
+      "defaultUnit": "pods",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Vêtements entiers",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Maïs de poivre noir",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Bâton de cannelle (5cm pièce)",
+      "ratioValue": 1,
+      "defaultUnit": "piece",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Graines de fenouil (saunf)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Spice",
+      "name": "Poudre de gingembre séchée",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Dairy",
+      "name": "Yogourt plein gras (moulu doux)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "labneh éclairci avec un peu d'eau"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Allium",
+      "name": "Asafoetida (hing, une pincée – la version traditionnelle cachemiri Pandit n'a ni oignon ni ail)",
+      "ratioValue": 0.5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "omit pour la version wazwan musulmane, qui ajoute l'oignon et l'ail"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Liquid",
+      "name": "Eau chaude ou matière légère",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bloom",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_14"
+      ],
+      "outputState": "bloomed_spice_oil",
+      "instructions": "Chauffer le ghee dans un pot à fond lourd à feu moyen jusqu'à ce qu'il mijote. Ajouter le chilis du Cachemir et toutes les épices — feuilles de laurier, cardamomes, girofles, grains de poivre et cannelle — avec une pincée d'asafoetida s'il l'utilise. Mélanger et faire frire pendant 60 à 90 secondes jusqu'à ce que les épices gonflent, que les peaux de cardamome commencent à souffler légèrement, que le chilis séché s'assombrisse, et que le ghe coule un profond, rouge-orange des huiles de chili. La cuisine doit se remplir d'un arôme parfumé d'épices résineuses — chaud, complexe et presque comme de l'encens. Cette floraison d'épices entières dans la graisse chaude est appelée tarka ou chaunk et est le fondement structurel de tout le plat.",
+      "visualCue": {
+        "primaryTarget": "Le ghee a tourné un orange rougeâtre vif et profond des huiles de chili cachemiri; toutes les épices semblent fleuries et légèrement gonflées, les feuilles de laurier ont obscurci et frisé aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le ghee est encore jaune pâle, les épices n'ont pas l'air modifiées, et peu de parfum a été libéré.",
+            "action": "La chaleur est trop faible ou le temps trop court. Continuez à remuer à feu moyen jusqu'à ce que l'huile de chili colore visiblement la graisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le Ghee est rouge-orange vif, la cuisine sent la cardamome et le chili chauds, et les girofles et les grains de poivre ont visiblement fleuri.",
+            "action": "Ajouter immédiatement l'agneau et les épices en contact avec la viande."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les épices commencent à fumer et à sentir amer; les girofles et les grains de poivre s'assombrissent au-delà de leur couleur naturelle.",
+            "action": "Tirez immédiatement la casserole du feu et laissez refroidir 30 secondes avant d'ajouter l'agneau."
+          }
+        ]
+      },
+      "feelCue": "Penchez - vous soigneusement sur le pot et respirez - les épices cachemiriennes bien fleuries sentent comme un monastère de montagne à l'aube: profondément résineux, chaud et légèrement fumé de la cardamome. Si elle pique vos yeux, la chaleur est trop élevée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "bloomed_spice_oil",
+        "ing_01",
+        "ing_16"
+      ],
+      "outputState": "browned_lamb",
+      "instructions": "Assaisonner les morceaux d'agneau avec du sel. Ajoutez-les dans le ghee infusé d'épices et faites cuire à feu moyen-vif, en tournant occasionnellement, jusqu'à ce qu'ils soient dorés de tous les côtés, de 8 à 10 minutes. Ne pas fouler — travailler en lots si nécessaire. Le ghee rouge tachera la viande d'une couleur de rouille profonde comme il brunit. L'agneau doit développer une croûte visible de chaque côté; le fond du pot devient sombre et aromatique. Cette étape de brunissement n'est pas à propos de la couleur profonde Maillard (le ghee rouge masque le développement de la couleur), mais à propos de chasser l'humidité de surface et de développer le corps dans la sauce éventuelle.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux d'agneau sont enduits d'une couleur rouge rouille du ghee chili cachemiri, avec une croûte visible sur les surfaces exposées; le fond de pot porte un fond sombre et parfumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'agneau est encore pâle sous l'huile de chili et s'assied dans le liquide plutôt que le grésillement; les morceaux sont en vapeur et le fond est minimal.",
+            "action": "Élevez la chaleur et espacez les morceaux plus à l'écart — réduisez les lots afin que chaque morceau ait chaud, gras sec à saisir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte ferme, de couleur rouille, les morceaux d'agneau libèrent le sol propre du pot. Le fond est sombre et aromatique, pas brûlé.",
+            "action": "Commencez à ajouter le yogourt par étapes pour construire la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les épices sur le plancher de pot ont brûlé à du carbone amer, le ghee fume sombre, et l'agneau sent acride plutôt que aromatique.",
+            "action": "Déglacer immédiatement avec une éclaboussure d'eau, baisser la chaleur, et continuer — le fond de teint amer s'intégrera si ce n'est trop extrême."
+          }
+        ]
+      },
+      "feelCue": "L'agneau doit siffler avec assurance dans le ghêtre rouge et ne pas être mobile pendant les 2 premières minutes — cela signifie qu'une croûte se forme. Mouvement forcé avant de relâcher déchire la croûte en développement et lèche l'humidité."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "browned_lamb",
+        "ing_04",
+        "ing_11",
+        "ing_12",
+        "ing_13",
+        "ing_15"
+      ],
+      "outputState": "braised_rogan_josh",
+      "instructions": "Abaissez le feu à moyen-doux. Ajouter la poudre de chili cachemiri, les graines de fenouil et le gingembre séché dans le pot et remuer 1 minute dans la graisse autour de l'agneau. Ajouter ensuite le yogourt fouetté 2 à 3 cuillères à soupe à la fois, en remuant vigoureusement après chaque addition de sorte que le yogourt est entièrement incorporé dans le ghee avant l'ajout suivant, ce qui empêche le yogourt de se caresser en grumeaux dans la graisse chaude. Ajouter l'eau chaude ou le bouillon, bien remuer et laisser mijoter. Couvrir et brasser sur le feu le plus bas pendant 1,5 à 2 heures jusqu'à ce que l'agneau soit très tendre et s'éloigne de l'os.",
+      "visualCue": {
+        "primaryTarget": "Une sauce profonde, rouge brique brillante à couleur rouille dans laquelle l'agneau est à peine submergé, avec une léchée d'huile de ghe teinté rouge visible aux bords, et des bulles lentes et paresseuses montant à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le yogourt s'est divisé en caillés blancs dans un liquide fin et granuleux; l'agneau est encore dur et résiste à une fourchette.",
+            "action": "Mélanger vigoureusement pour briser les caillés; si vous les divisez fortement, ajouter une éclaboussure d'eau et mélanger brièvement avec un mélangeur d'immersion. La graine devrait être lisse avec une mijotation continue."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce soyeuse, rouge rouille unifiée qui s'accroche à l'agneau; la graisse s'est légèrement séparée à la surface dans l'huile caractéristique sur le dessus d'un curry sud-asiatique bien cuit, et la viande donne complètement à l'os.",
+            "action": "Goûtez, ajustez le sel et terminez avec un peu de cardamome noir entier écrasé pour la fraîcheur."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'agneau s'est désintégré et la sauce a été réduite à une pâte épaisse, sur-sel et trop concentrée.",
+            "action": "Ajouter de l'eau tiède une éclaboussure à la fois pour se détendre; goûter et ajuster le sel. Poignez la viande doucement pour préserver la texture qui reste."
+          }
+        ]
+      },
+      "feelCue": "Lorsque le yogourt est correctement incorporé, la sauce doit se sentir soyeuse et enrobée sur la cuillère en remuant, jamais granuleuse. L'odeur après 90 minutes de braisage — gras d'agneau profond, chili cachemirien, fenouil, cardamome — devrait être chaudement enveloppante, comme un bazar d'épices le matin d'une montagne froide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "braised_rogan_josh"
+      ],
+      "outputState": "finished_lamb_rogan_josh",
+      "instructions": "Découvrez la casserole pendant les 15 dernières minutes pour réduire légèrement la sauce et concentrer les saveurs. La sauce doit être brillante et collante — si elle est trop fine, mijoter à découvert jusqu'à ce qu'elle épaississe pour faire une sieste. Goûtez et ajustez le sel. Poissonr et jeter les grandes épices entières (feuilles de baie, cannelle, les plus grandes gousses de cardamome) avant de servir, ou avertir vos invités. Le curry fini devrait avoir une huile rouge-orange éclatante à la surface — c'est le maα (ghee se séparant en arrière), un signe d'un curry sud-asiatique bien cuit. Servir avec du riz à la vapeur (Kashmiri basmati) ou du naan chaud.",
+      "visualCue": {
+        "primaryTarget": "Un curry rouge brique brillant avec un léché de rouge aromatique à la surface, de tendres morceaux d'agneau encore sur l'os, sentant l'épice cachemirienne et la viande cuite lentement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse avec un goût plat; l'huile rouge n'a pas séparé de la sauce, et les arômes d'épices n'ont pas complètement fondu.",
+            "action": "Laisser mijoter plus longtemps, en remuant occasionnellement. Rogan Josh a besoin de l'eau pour cuisiner complètement pour la sauce à maturité."
+          },
+          {
+            "state": "Perfect",
+            "description": "sauce épaisse et brillante avec l'huile rouge caractéristique à la surface, profondément aromatique et modérément épicée, avec agneau tendre à la chute.",
+            "action": "Servir immédiatement avec du riz basmati et un raita rafraîchissant."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'huile est complètement séparée dans une couche épaisse et grasse et la masse solide est sèche et surréduite.",
+            "action": "Incorporer un peu d'eau tiède et la laisser émulsifier brièvement à feu doux."
+          }
+        ]
+      },
+      "feelCue": "Le josh rogan bien fini devrait enrober une cuillère dans un film lisse, légèrement huileux, rouge foncé. L'arôme doit arriver en couches: d'abord la chaleur du chili rouge, puis le fenouil et la cardamome, puis la richesse animale profonde de l'agneau à bec lent en dessous."
+    }
+  ]
 };

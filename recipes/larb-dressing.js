@@ -1,82 +1,202 @@
 export default {
-  repoId: "master_thai_larb-dressing_001",
-  parentRepoId: null,
-  slug: "larb-dressing",
-  author: "ForkRecipe Kitchen",
-  title: "Larb Dressing",
-  description: "The punchy, toasted-rice-thickened dressing of Lao-Thai larb — fish sauce, lime, dried chili, and khao kua (toasted rice powder) stirred together, giving the finished salad its signature nutty crunch and herbal punch.",
-  cuisine: "Thai",
-  culture: "Lao / Northern Thai",
-  category: "condiments",
-  tags: ["thai", "lao", "meat-salad", "toasted-rice", "herb", "sour", "spicy"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 4, sour: 4, bitter: 1, umami: 3, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Raw glutinous rice (for toasting)",             ratioValue: 2,  defaultUnit: "parts", substitutions: ["raw jasmine rice (slightly different flavor)"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Fish sauce",                                    ratioValue: 3,  defaultUnit: "parts", substitutions: ["soy sauce + pinch of MSG for vegan version"] },
-    { ingId: "ing_03", role: "Acid",      name: "Fresh lime juice",                              ratioValue: 3,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Heat",      name: "Dried red chili flakes (prik bon), coarsely ground", ratioValue: 1, defaultUnit: "parts", substitutions: ["fresh bird's eye chili, minced (double the quantity)"] },
-    { ingId: "ing_05", role: "Sweetener", name: "White sugar or palm sugar",                     ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Herb",      name: "Fresh mint leaves, roughly torn",               ratioValue: 1,  defaultUnit: "parts", substitutions: ["Vietnamese mint (rau ram)"] },
-    { ingId: "ing_07", role: "Herb",      name: "Fresh coriander, leaves and tender stems",      ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_thai_larb-dressing_001",
+  "parentRepoId": null,
+  "slug": "larb-dressing",
+  "author": "ForkRecipe Kitchen",
+  "title": "Dressage de la feuille",
+  "description": "La vinaigrette poinçonnée, grillée au riz épais de la lao-thaï – sauce de poisson, chaux, chili séché, et kao kua (poudre de riz grillée) se mélangent, donnant à la salade finie sa croûte aux noix et son poinçon à base de plantes.",
+  "cuisine": "Thaï",
+  "culture": "Lao / Nord de la Thaïlande",
+  "category": "condiments",
+  "tags": [
+    "Thaï",
+    "Lao",
+    "salade de viande",
+    "Barbecue grillée",
+    "herbe",
+    "acide",
+    "épicé"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_01"],
-      outputState: "toasted_rice_powder",
-      instructions: "Place the raw glutinous rice in a dry wok or heavy skillet over medium heat. Stir constantly with a wooden spoon — the rice must move at all times or it burns in patches. Toast for 8–12 minutes until every grain has turned a deep golden-brown, the color of dark caramel. The kitchen will smell of popcorn and toasted nuts. Remove immediately to a plate to stop carryover cooking. Once completely cool, transfer to a mortar or spice grinder and grind to a coarse powder — the texture should be like coarse cornmeal, not fine flour. A few larger fragments are desirable. This powder, khao kua, is what gives larb its signature nutty crunch and acts as a light thickener for the dressing.",
-      visualCue: {
-        primaryTarget: "Every grain of rice is a deep, even golden-brown — the color of a toasted hazelnut skin — with no pale or white patches. The aroma is powerfully nutty and toasty.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still pale gold or cream-colored and the kitchen smells of warm raw rice rather than toasted grain. The grains bounce when they hit the pan — they haven't begun to caramelize.", action: "Continue toasting. Underdone khao kua tastes starchy and raw in the finished larb and provides no nutty flavor. Turn the heat up one notch and keep stirring." },
-          { state: "Perfect",   description: "Deep amber-brown grains, uniform in color, smelling powerfully of toasted grain and mild caramel. When you grind a few between your fingers they smell like buttered popcorn.", action: "Transfer to a cool plate immediately — the pan retains heat and will continue cooking the rice if it stays in it. Let cool completely before grinding." },
-          { state: "Overdone",  description: "Grains have gone mahogany-dark, some approaching black, and the smell has a sharp, acrid burnt note underneath the toasty one.", action: "Discard if more than a quarter of the grains are black — the bitter burnt flavor will permeate the entire larb. Start again and pull the rice 30 seconds earlier." },
-        ],
-      },
-      feelCue: "After grinding, pinch a small amount of the powder and rub it between your fingers — it should feel gritty like fine-ground pepper and leave a tan, dry stain, not an oily smear. Hold a pinch under your nose: you should get an almost biscuity warmth, clean and nutty, before the lime and fish sauce are added.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz glutineux cru (pour toast)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "riz jasmin cru (arôme légèrement différent)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["toasted_rice_powder", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "larb_dressing_base",
-      instructions: "In a mixing bowl, combine the fish sauce and lime juice, then add the sugar and stir until dissolved. Taste the base: it should be aggressively sour and salty in roughly equal measure, with the sweet just barely perceptible as a rounding note. Add the dried chili flakes and stir in. Finally, stir in about half the toasted rice powder — the dressing will immediately begin to thicken slightly and take on a golden hue. Reserve the remaining half to be added over the warm meat just before serving, where it provides the most distinct crunch.",
-      visualCue: {
-        primaryTarget: "A thin, golden-brown dressing with visible flecks of red dried chili and tan rice powder suspended throughout, smelling sour and nutty simultaneously.",
-        spectrum: [
-          { state: "Underdone", description: "The dressing is very thin and the chili and rice powder have sunk to the bottom. The sugar is sitting undissolved as a visible layer.", action: "Stir more vigorously. The sugar must dissolve before the rice powder goes in, otherwise the dressing will taste unevenly sweet." },
-          { state: "Perfect",   description: "A cohesive, slightly thickened dressing with even distribution of rice powder and chili. It smells sharply sour with a deep nutty base and glows a warm amber-gold.", action: "Taste for balance: it should be boldly sour, salty, slightly hot, and just barely sweet. Toss over meat immediately or store covered in the refrigerator for up to 4 hours — the rice powder will continue to thicken the dressing as it sits." },
-          { state: "Overdone",  description: "Too much rice powder has been added all at once and the dressing has seized into a thick, pasty sludge rather than a pourable dressing.", action: "Thin with a squeeze of lime juice and a splash more fish sauce. Add the rice powder in stages to control the consistency going forward." },
-        ],
-      },
-      feelCue: "Coat the back of a spoon and hold it horizontal — the dressing should drip off in a thin, steady stream, slightly thicker than water but nowhere near syrupy. That light body is what allows it to coat every surface of the meat without pooling.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sauce de poisson",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja + pincée de MSG pour version végétalienne"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Toss",
-      inputs: ["larb_dressing_base", "ing_06", "ing_07"],
-      outputState: "finished_larb_dressing",
-      instructions: "Add the torn mint leaves and coriander to the dressing. Toss briefly — they should be lightly coated rather than submerged. This dressing is meant to be tossed over freshly cooked, still-warm larb meat (minced pork, chicken, or beef) the moment it comes off the heat. The residual warmth of the meat slightly wilts the herbs, bruises them just enough to release their fragrance, and the warm fat in the meat emulsifies lightly with the lime juice. Sprinkle the remaining reserved rice powder over the top of the plated larb at the very end for maximum crunch. Serve immediately.",
-      visualCue: {
-        primaryTarget: "Bright green herb leaves — some whole, some lightly torn — suspended in the golden-brown dressing, with the mint's vivid green contrasting against the amber liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Herbs are still whole and rigid, sitting on top of the dressing rather than being incorporated. They haven't released any fragrance.", action: "Toss the dressing more actively so the herbs are evenly coated. They do not need to be bruised — just coated." },
-          { state: "Perfect",   description: "Herbs are lightly coated and just beginning to soften where they contact the acid in the lime juice. The mint fragrance is vivid and cool against the sour base.", action: "Toss over warm larb meat immediately and scatter the remaining rice powder over the top. The warmth of the meat does the final work." },
-          { state: "Overdone",  description: "Herbs have been sitting in the acidic dressing too long and are now olive-drab and limp, the mint fragrance replaced by a cooked, dull green smell.", action: "Add a small handful of fresh herb at the very end to restore the brightness. Make the dressing and add the herbs no more than 5 minutes before serving." },
-        ],
-      },
-      feelCue: "Tear a mint leaf and hold it between your fingers alongside a pinch of the fish sauce-lime mixture — the sharpness of the acid should set off the cooling menthol of the mint in a way that makes you want to eat the whole bowl at once. That tension is the essence of larb.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Heat",
+      "name": "flocons de chili rouges séchés (bon de porc), grossièrement moulus",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chili des yeux d'oiseau frais, haché (double quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre blanc ou de palme",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Feuilles fraîches de menthe, grossièrement déchirées",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "menthe vietnamienne (rau ram)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Coriandre fraîche, feuilles et tiges tendres",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "toasted_rice_powder",
+      "instructions": "Placer le riz glutineux cru dans un wok sec ou une poêle lourde à feu moyen. Remuer constamment avec une cuillère en bois — le riz doit se déplacer en tout temps ou il brûle dans des patchs. Faire cuire de 8 à 12 minutes jusqu'à ce que chaque grain devienne brun-or profond, la couleur du caramel foncé. La cuisine sent le pop-corn et les noix grillées. Retirez immédiatement dans une assiette pour arrêter la cuisson. Une fois complètement refroidie, transférer dans un mortier ou un broyeur d'épices et moudre dans une poudre grossière — la texture doit être comme de la farine de maïs grossière, et non de la farine fine. Quelques fragments plus gros sont souhaitables. Cette poudre, khao kua, est ce qui donne à la larbe sa croûte de noix signature et agit comme un épaississant léger pour la vinaigrette.",
+      "visualCue": {
+        "primaryTarget": "Chaque grain de riz est un grain profond, même brun doré — la couleur d'une peau de noisette grillée — sans taches pâles ou blanches. L'arôme est puissant et grillé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore d'or pâle ou de couleur crème et la cuisine sent le riz cru chaud plutôt que le grain grillé. Les grains rebondissent quand ils frappent la poêle — ils n'ont pas commencé à caraméliser.",
+            "action": "Continuez à griller. Underdone khao kua goûte de l'amidon et cru dans le larb fini et ne fournit aucune saveur de noix. Faites chauffer un cran et continuez à remuer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Grains foncés brun-ambre, de couleur uniforme, sentant fortement le grain grillé et le caramel doux. Quand vous moudrez quelques-uns entre vos doigts, ils sentent le popcorn beurré.",
+            "action": "Transférer immédiatement dans une assiette fraîche — la poêle conserve la chaleur et continuera à cuire le riz s'il y reste. Laisser refroidir complètement avant de broyer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains sont devenus noir d'acajou, certains s'approchant, et l'odeur a une note vive et acride brûlée sous le toast.",
+            "action": "Jeter si plus d'un quart des grains sont noirs — la saveur amère brûlée imprégnera tout le larbin. Recommence et tire le riz 30 secondes plus tôt."
+          }
+        ]
+      },
+      "feelCue": "Après le broyage, pincez une petite quantité de poudre et frottez - la entre vos doigts; elle doit être sèche comme du poivre fin et laisser une tache sèche et bronzée, et non un frottis huileux. Tenez une pincée sous votre nez: vous devriez obtenir une chaleur presque biscuit, propre et noisette, avant l'ajout de la chaux et de la sauce de poisson."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "toasted_rice_powder",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "larb_dressing_base",
+      "instructions": "Dans un bol à mélanger, mélanger la sauce de poisson et le jus de lime, puis ajouter le sucre et remuer jusqu'à dissolution. Goûtez la base : elle doit être agressivement aigre et salée dans une mesure à peu près égale, avec le doux à peine perceptible comme une note arrondie. Ajouter les flocons de chili séchés et remuer. Enfin, remuez environ la moitié de la poudre de riz grillée — la vinaigrette commencera immédiatement à s'épaissir légèrement et à prendre une teinte dorée. Réserver la moitié restante à ajouter sur la viande chaude juste avant de servir, où il fournit la croûte la plus distincte.",
+      "visualCue": {
+        "primaryTarget": "Un pansement fin, doré-brun avec des taches visibles de chili séché rouge et de poudre de riz tan en suspension, sentant l'aurore et la noix simultanément.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La vinaigrette est très fine et le chili et la poudre de riz ont coulé au fond. Le sucre est assis non dissout comme une couche visible.",
+            "action": "Remuer plus vigoureusement. Le sucre doit se dissoudre avant l'entrée de la poudre de riz, sinon la vinaigrette aura un goût inégalement sucré."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une vinaigrette cohésive, légèrement épaissie avec une distribution uniforme de poudre de riz et de chili. Il sent fortement amer avec une base de noix profonde et illumine un or ambré chaud.",
+            "action": "Goût pour l'équilibre : il devrait être grasement aigre, salé, légèrement chaud et à peine sucré. Jetez la viande immédiatement ou conservez-la au réfrigérateur jusqu'à 4 heures – la poudre de riz continuera d'épaissir la vinaigrette pendant qu'elle est assise."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de poudre de riz a été ajouté à la fois et la vinaigrette a saisi dans une boue épaisse et pâteuse plutôt qu'une vinaigrette versable.",
+            "action": "Finir avec une pression de jus de lime et une éclaboussure plus de sauce de poisson. Ajouter la poudre de riz par étapes pour contrôler la cohérence à l'avenir."
+          }
+        ]
+      },
+      "feelCue": "Enrober l'arrière d'une cuillère et la tenir horizontalement — la vinaigrette devrait s'écouler dans un cours d'eau mince et stable, légèrement plus épais que l'eau, mais pas près du sirop. Ce corps léger est ce qui lui permet de couvrir chaque surface de la viande sans mise en commun."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Découpe",
+      "inputs": [
+        "larb_dressing_base",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "finished_larb_dressing",
+      "instructions": "Ajouter les feuilles de menthe déchirées et la coriandre dans la vinaigrette. Toss brièvement — ils devraient être légèrement revêtus plutôt que submergés. Cette vinaigrette est destinée à être jetée sur de la viande fraîchement cuite, encore tiède (porc haché, poulet ou boeuf) au moment où elle sort du feu. La chaleur résiduelle de la viande flétrit légèrement les herbes, les ecchymose juste assez pour libérer leur parfum, et la graisse chaude dans la viande émulsifie légèrement avec le jus de lime. Saupoudrer le reste de la poudre de riz réservée sur le dessus de la larbe plaquée à la fin pour une croûte maximale. Servir immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Feuilles d'herbes vert vif — certaines entières, légèrement déchirées — suspendues dans la vinaigrette dorée, avec le vert vif de la menthe qui contraste avec le liquide ambre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les herbes sont toujours entières et rigides, assises sur le dessus de la vinaigrette plutôt que d'être incorporées. Ils n'ont pas publié de parfum.",
+            "action": "Mélanger la vinaigrette plus activement afin que les herbes soient uniformément enduites. Ils n'ont pas besoin d'être meurtris — simplement revêtus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les herbes sont légèrement enduites et commencent tout juste à ramollir là où elles contactent l'acide dans le jus de chaux. Le parfum de menthe est vif et frais contre la base aigre.",
+            "action": "Verser immédiatement sur la viande de larbe chaude et disperser le reste de la poudre de riz sur le dessus. La chaleur de la viande fait le travail final."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les herbes ont été assises dans la vinaigrette acide trop longtemps et sont maintenant olive-drabe et boiteux, le parfum de menthe remplacé par une odeur vert terne cuite.",
+            "action": "Ajouter une petite poignée d'herbe fraîche à la fin pour restaurer la luminosité. Faire la vinaigrette et ajouter les herbes au plus 5 minutes avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Enfilez une feuille de menthe et maintenez-la entre vos doigts à côté d'une pincée du mélange sauce-lime de poisson - la netteté de l'acide devrait déclencher le menthol refroidissant de la menthe d'une manière qui vous donne envie de manger tout le bol à la fois. Cette tension est l'essence même du larbin."
+    }
+  ]
 };

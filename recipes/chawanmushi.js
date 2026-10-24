@@ -1,99 +1,245 @@
 export default {
-  repoId: "master_japanese_chawanmushi_001",
-  parentRepoId: null,
-  slug: "chawanmushi",
-  author: "ForkRecipe Kitchen",
-  title: "Chawanmushi",
-  description: "Silky Japanese steamed egg custard set with ichiban dashi — so delicate it barely holds its form, trembling when the cup is tilted, filled with shrimp and mitsuba.",
-  cuisine: "Japanese",
-  culture: "Kyoto",
-  category: "eggs",
-  tags: ["japanese", "egg", "steamed", "dashi", "elegant"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Eggs (large, room temperature)",                 ratioValue: 3,   defaultUnit: "eggs",  substitutions: [] },
-    { ingId: "ing_02", role: "Liquid",    name: "Ichiban dashi (warm, not hot)",                  ratioValue: 1.5, defaultUnit: "cups",  substitutions: ["kombu dashi (vegan)", "light chicken stock"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Soy sauce (light, usukuchi preferred)",          ratioValue: 1,   defaultUnit: "tsp",   substitutions: ["tamari"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Mirin (hon-mirin)",                              ratioValue: 1,   defaultUnit: "tsp",   substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",                                  ratioValue: 0.25, defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_06", role: "Protein",   name: "Raw shrimp (peeled, deveined, tail on)",         ratioValue: 6,   defaultUnit: "pieces", substitutions: ["scallop slices", "chicken breast, thin strips"] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Kamaboko (fish cake), sliced",                   ratioValue: 4,   defaultUnit: "slices", substitutions: ["shiitake mushroom caps"] },
-    { ingId: "ing_08", role: "Garnish",   name: "Mitsuba (Japanese parsley) or trefoil, leaves",  ratioValue: 6,   defaultUnit: "sprigs", substitutions: ["watercress leaves", "flat-leaf parsley", "chervil"] },
+  "repoId": "master_japanese_chawanmushi_001",
+  "parentRepoId": null,
+  "slug": "chawanmushi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Chawanmushi",
+  "description": "Coutard d'œufs à la vapeur soyeux japonais serti d'ichiban dashi — si délicat qu'il tient à peine sa forme, tremblant quand la tasse est inclinée, remplie de crevettes et de mitsuba.",
+  "cuisine": "Japonais",
+  "culture": "Kyoto",
+  "category": "eggs",
+  "tags": [
+    "Japonais",
+    "œuf",
+    "vapeur",
+    "Dashi",
+    "élégant"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Beat and strain egg mixture",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "strained_egg_dashi",
-      instructions: "Beat the eggs gently with chopsticks or a fork in a cutting, slicing motion — do not whisk vigorously. The goal is to break the yolks and blend the whites and yolks into a uniform mixture without incorporating any air, which would create bubbles in the steamed custard. In a separate bowl or jug, combine the warm dashi, soy sauce, mirin, and salt and stir to blend. Pour the seasoned dashi into the beaten eggs gradually, stirring gently as you pour. The dashi-to-egg ratio of roughly 2.5:1 by volume is what produces the barely-set, trembling consistency — more egg and the custard becomes firm; less and it won't set. Strain the entire mixture through a fine-mesh sieve into a pouring jug, pressing the chalazae through with a spoon, then strain once more through cheesecloth if possible for an impeccably smooth result.",
-      visualCue: {
-        primaryTarget: "A perfectly smooth, pale golden liquid with no visible bubbles, no white streaks, and no foam — uniform from top to bottom when the jug is gently swirled.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture has visible white streaks of unblended albumen, undissolved salt crystals are visible, and the surface is foamy with air bubbles.", action: "Strain again through a fine sieve and pop any remaining bubbles with a paper towel pressed gently to the surface. Bubbles in the mixture become holes in the custard." },
-          { state: "Perfect",   description: "Smooth, shimmering, uniformly pale gold. Flows silently off a spoon in a thin, even sheet. No foam, no streaks, no particles.", action: "Pour into the prepared cups immediately and proceed. Do not let the mixture sit long, as the egg proteins will begin to coagulate at the bottom." },
-          { state: "Overdone",  description: "Egg mixture has been left standing and a thin, slightly coagulated layer has formed at the bottom of the jug.", action: "Stir gently to re-incorporate and strain once more before pouring into cups. Pour cups immediately after." },
-        ],
-      },
-      feelCue: "Rub a drop of the strained mixture between your fingers: you should feel absolute smoothness, like cold cream. Any graininess is undissolved seasoning; any stringiness is unstrained egg cord. Both will mar the finished custard.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Oeufs (large, température ambiante)",
+      "ratioValue": 3,
+      "defaultUnit": "eggs",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Prepare fillings and cups",
-      inputs: ["ing_06", "ing_07"],
-      outputState: "loaded_cups",
-      instructions: "Divide the shrimp and kamaboko slices evenly among 4 chawanmushi cups (or any deep, heatproof cups or ramekins with lids). Arrange them with some care — in traditional service, the shrimp curl attractively against the cup wall where they can be seen through the custard once it sets, acting as a visual indicator of quality. If using shiitake, place them cap-side down. Leave space at the top — fill cups only to 80% capacity, as the custard needs room to set without touching the lid. Do not add the mitsuba yet; it will go on just before serving.",
-      visualCue: {
-        primaryTarget: "Cups with the fillings arranged in an attractive, non-crowded pattern, filling no more than one-third of the cup's height.",
-        spectrum: [
-          { state: "Underdone", description: "Fillings are raw and unprepped — shrimp still undeveined, shiitake uncleaned, added in a messy heap rather than arranged.", action: "Chawanmushi is an elegant dish — the presentation of the filling matters. Arrange neatly; the custard will set around the filling as a transparent window into the cup's interior." },
-          { state: "Perfect",   description: "Two to three items per cup, arranged intentionally, with the shrimp curved nicely and the kamaboko placed flat. The cups look like they have been staged before the custard enters.", action: "Pour the strained egg mixture over the fillings slowly, ideally through the back of a spoon to minimize disturbance and bubbles." },
-          { state: "Overdone",  description: "Cups are overfilled with fillings, leaving little room for custard — the set chawanmushi will be mostly filling with thin veins of custard rather than a unified, delicate dish.", action: "Remove some filling. The fillings should accent the custard, not crowd it out." },
-        ],
-      },
-      feelCue: "Hold an empty cup in your palm and feel its weight — chawanmushi cups are intentionally light. The filling inside should not make the cup feel front-heavy when tilted. A well-loaded cup feels balanced, not top-heavy.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Ichiban dashi (chaud, pas chaud)",
+      "ratioValue": 1.5,
+      "defaultUnit": "cups",
+      "substitutions": [
+        "kombu dashi (vegan)",
+        "Poulet léger"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Pour and steam",
-      inputs: ["strained_egg_dashi", "loaded_cups"],
-      outputState: "steamed_chawanmushi",
-      instructions: "Pour the strained egg mixture slowly into each cup over the back of a spoon to prevent disturbing the fillings or creating bubbles. Fill to about 1 cm below the rim. Skim any bubbles off the surface with a paper towel or the edge of a spoon — any bubble on the surface will leave a crater when it pops during steaming. Cover each cup with its lid (or foil wrapped tight). Place in a bamboo steamer or a pot with a steaming rack. Steam over medium-low heat — not a rolling boil, just a gentle, steady steam. A violent boil will cause the custard to cook too fast at the edges, creating a pocked, spongy texture called 'su' (holes). Steam for 12–15 minutes. Check at 12 minutes: the custard should tremble as a single unit when gently shaken, with the center just barely set.",
-      visualCue: {
-        primaryTarget: "A smooth, pale ivory-gold surface on the set custard, with no surface holes or bubbles, and a uniform, barely-set trembling when the cup is gently moved.",
-        spectrum: [
-          { state: "Underdone", description: "Custard is still liquid in the center — waves move independently across the surface when shaken, and a skewer inserted in the center comes out coated in liquid egg.", action: "Re-cover and steam for 3 more minutes. Check again with the shake test. Over-steaming is a worse outcome than the short additional time." },
-          { state: "Perfect",   description: "The surface is smooth and ivory, trembling as one single mass when tilted — not waves, but a single unified wobble, like cold firm jelly. A skewer inserted pulls out clean or with just a small amount of clear liquid.", action: "Remove immediately from the steamer. Set any longer and the silky texture is gone. The residual heat in the cup will continue to set the center." },
-          { state: "Overdone",  description: "The surface has visible pitting and holes (su), the custard has pulled away from the sides of the cup, and the texture is grainy and slightly rubbery — it has been overcooked and the proteins have over-tightened.", action: "Nothing to restore. Serve topped generously with garnish to disguise the pitting. Next time: lower the steam temperature and check earlier." },
-        ],
-      },
-      feelCue: "Hold the cup steady in your palm and give it a single firm quarter-turn and stop — you want the custard to tremble and then settle immediately, like a snow globe after one shake. If it sloshes liquidly, it needs more time. If it barely moves, it is overcooked.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "sauce soja (légère, préférée des usukuchis)",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "tamari"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish and serve",
-      inputs: ["steamed_chawanmushi", "ing_08"],
-      outputState: "finished_chawanmushi",
-      instructions: "Remove the cups from the steamer and let them sit for 2 minutes — the custard will firm the final degree of setting from residual heat. Remove the lids and add 1–2 mitsuba sprigs to each cup, pressing the stems gently into the custard surface so they stand slightly upright. Serve immediately in the cup, with small spoons. Chawanmushi is eaten with a spoon by breaking through the smooth surface and scooping custard and filling together. It is served hot in winter and chilled (cold chawanmushi requires a firmer egg ratio) in summer. The mitsuba will wilt quickly — serve without delay.",
-      visualCue: {
-        primaryTarget: "A pale ivory custard surface with the green mitsuba leaves pressed in, the cup still steaming gently, the shrimp visible as a warm pink curve through the sides of the custard.",
-        spectrum: [
-          { state: "Underdone", description: "Custard is still liquid in the center when the garnish is added and it flows to the edges when tilted — the garnish sinks.", action: "Return the cup to the steamer (without the mitsuba) for another 3 minutes and check again." },
-          { state: "Perfect",   description: "The mitsuba stands gently in the barely-firm surface, the custard is still warm and steaming, and the shrimp is visible as a pink arc through the translucent wall of egg dashi. Perfect.", action: "Serve within 5 minutes. Chawanmushi at its peak is served moments out of the steamer." },
-          { state: "Overdone",  description: "Custard has been left to cool and has set stiff, shrinking from the cup walls, with a watery liquid pooling around the edges.", action: "Serve as-is — it is still delicious, just not at its ethereal best. Pour off any weeping liquid before presenting." },
-        ],
-      },
-      feelCue: "Break the surface with a spoon: you should feel only the gentlest resistance, like breaking through the skin of a very ripe peach. The interior should yield without any spring-back — just quietly collapsing into a soft, silky cloud that slides off the spoon rather than holding its shape.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Mirin (Hon-mirin)",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Crevettes crues (peautées, dépeintes, queue sur)",
+      "ratioValue": 6,
+      "defaultUnit": "pieces",
+      "substitutions": [
+        "tranches de pétoncle",
+        "poitrine de poulet, fines bandes"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Kamaboko (gâteau de poisson), tranché",
+      "ratioValue": 4,
+      "defaultUnit": "slices",
+      "substitutions": [
+        "casquettes de champignons shiitake"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Mitsuba ( persil japonais) ou trèfle, feuilles",
+      "ratioValue": 6,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "Feuilles de cresson",
+        "Persil à feuilles plates",
+        "Cerveau"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange d'oeufs de battre et de souche",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "strained_egg_dashi",
+      "instructions": "Battre les œufs doucement avec des baguettes ou une fourchette dans un mouvement de coupe et de coupe — ne pas fouetter vigoureusement. Le but est de briser les jaunes et de mélanger les blancs et les jaunes dans un mélange uniforme sans incorporer d'air, ce qui créerait des bulles dans la crème vapeur. Dans un bol ou un pot séparé, mélanger le dashi chaud, la sauce soja, le mirin et le sel et mélanger. Versez le dashi assaisonné dans les œufs battus progressivement, en remuant doucement pendant que vous versez. Le rapport dashi-to-egg d'environ 2,5:1 par volume est ce qui produit la consistance tremblante à peine fixée — plus d'œuf et la crème devient ferme; moins et il ne sera pas réglé. Placer le mélange entier à travers un tamis à mailles fines dans une cruche à verser, presser le chalazae à l'aide d'une cuillère, puis filtrer une fois de plus à travers la nappe si possible pour un résultat impeccablement lisse.",
+      "visualCue": {
+        "primaryTarget": "Un liquide parfaitement lisse, doré pâle, sans bulles visibles, sans stries blanches et sans mousse, uniforme de haut en bas lorsque la cruche est légèrement tourbillonnée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange a des stries blanches visibles d'albumen non mélangé, des cristaux de sel non dissous sont visibles, et la surface est mousseuse avec des bulles d'air.",
+            "action": "Enfilez à nouveau à travers un tamis fin et pop toutes les bulles restantes avec une serviette en papier pressé doucement à la surface. Les bulles dans le mélange deviennent des trous dans la crème."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, chatoyant, or uniformément pâle. Elle coule silencieusement d'une cuillère dans une fine feuille uniforme. Pas de mousse, pas de stries, pas de particules.",
+            "action": "Verser dans les tasses préparées immédiatement et procéder. Ne laissez pas le mélange reposer longtemps, car les protéines d'oeufs commenceront à coaguler au fond."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange d'oeufs a été laissé debout et une fine couche légèrement coagulée s'est formée au fond du pot.",
+            "action": "Mélanger délicatement pour réintégrer et resserrer une fois de plus avant de verser dans des tasses. Verser les tasses immédiatement après."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte du mélange tendu entre vos doigts : vous devriez sentir une douceur absolue, comme de la crème froide. Toute graine est assaisonnement non dissout; toute corde à cordes est un cordon d'oeufs non entraîné. Les deux vont écraser la crème finie."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Préparer les garnitures et les tasses",
+      "inputs": [
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "loaded_cups",
+      "instructions": "Divisez les crevettes et les tranches de kamaboko uniformément parmi 4 tasses de chawanmushi (ou tout autre tasse ou ramequins résistants à la chaleur avec couvercles). Arrangez-les avec un certain soin — dans le service traditionnel, la crevette s'enroule attrayantement contre le mur de la tasse où ils peuvent être vus à travers la crème une fois qu'il se met, agissant comme un indicateur visuel de qualité. Si vous utilisez shiitake, placez-les côté culot vers le bas. Laisser de l'espace en haut — remplir les tasses jusqu'à 80% de capacité, car la crème a besoin d'espace pour mettre sans toucher le couvercle. N'ajoutez pas encore la mitsuba, elle continuera juste avant de servir.",
+      "visualCue": {
+        "primaryTarget": "Coupes avec les garnitures disposées dans un motif attrayant, non encombré, ne remplissant pas plus d'un tiers de la hauteur de la coupe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les garnitures sont crues et non préparées: crevettes encore non dévêtues, shiitake impures, ajoutées dans un tas désordonné plutôt que disposées.",
+            "action": "Chawanmushi est un plat élégant, la présentation des matières de remplissage. Arrangez-vous bien; la crème se place autour du remplissage comme une fenêtre transparente dans l'intérieur de la tasse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deux à trois articles par tasse, disposés intentionnellement, avec les crevettes bien courbées et le kamaboko placé plat. Les tasses ont l'air d'avoir été mises en scène avant l'entrée de la crème.",
+            "action": "Verser lentement le mélange d'oeufs sur les garnitures, idéalement à travers le dos d'une cuillère pour minimiser les perturbations et les bulles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tasses sont remplies de garnitures, laissant peu de place à la crème – le set chawanmushi se remplira principalement de fines veines de crème plutôt qu'un plat unifié et délicat.",
+            "action": "Enlevez un peu de remplissage. Les garnitures devraient mettre l'accent sur la crème, et non sur la foule."
+          }
+        ]
+      },
+      "feelCue": "Tenez une tasse vide dans votre paume et sentez son poids — les tasses de chawanmushi sont intentionnellement légères. Le remplissage à l'intérieur ne devrait pas faire la tasse se sentir devant-lourd quand incliné. Une tasse bien chargée se sent équilibrée, pas très lourde."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Verser et vapeur",
+      "inputs": [
+        "strained_egg_dashi",
+        "loaded_cups"
+      ],
+      "outputState": "steamed_chawanmushi",
+      "instructions": "Verser lentement le mélange d'oeufs tendus dans chaque tasse sur l'arrière d'une cuillère pour éviter de perturber les garnitures ou de créer des bulles. Remplir à environ 1 cm sous la jante. Essuyez toutes les bulles de la surface avec une serviette en papier ou le bord d'une cuillère — toute bulle de la surface laissera un cratère quand il éclatera pendant la vapeur. Couvrir chaque tasse de son couvercle (ou feuille enveloppée). Placer dans un vapeur de bambou ou dans une casserole avec une grille à vapeur. Steam à feu moyen-doux — pas un ébullition, juste une vapeur douce et régulière. Un ébullition violent fera cuire la crème trop vite aux bords, créant une texture piquée et spongieuse appelée 'su' (trous). Steam pendant 12-15 minutes. Vérifiez à 12 minutes: la crème doit trembler en une seule unité lorsqu'elle est légèrement secouée, le centre étant à peine réglé.",
+      "visualCue": {
+        "primaryTarget": "Une surface lisse et dorée en ivoire pâle sur la crème, sans trous de surface ni bulles, et un tremblement uniforme et à peine fixé lorsque la coupe est légèrement déplacée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Custard est encore liquide au centre — les vagues se déplacent indépendamment à la surface lorsqu'elles sont agitées, et une brochette insérée au centre sort enrobée d'œuf liquide.",
+            "action": "Récupérer et vapeur pendant 3 minutes. Vérifiez encore avec le test de tremblement. Le sursaut est un résultat pire que le court délai supplémentaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est lisse et ivoire, tremblant comme une seule masse lorsqu'elle est inclinée — non pas des vagues, mais un seul wobble unifié, comme la gelée froide ferme. Une brochette insérée sort propre ou avec une petite quantité de liquide transparent.",
+            "action": "Retirer immédiatement du vapeur. Réglez plus longtemps et la texture soyeuse disparaît. La chaleur résiduelle dans la tasse continuera de placer le centre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface a des piqûres visibles et des trous (su), la crème s'est retirée des côtés de la coupe, et la texture est granuleuse et légèrement caoutchouteuse — elle a été trop cuite et les protéines ont été trop serrées.",
+            "action": "Rien à restaurer. Servir généreusement garni pour déguiser le pitting. La prochaine fois : baissez la température de la vapeur et vérifiez plus tôt."
+          }
+        ]
+      },
+      "feelCue": "Maintenez la coupe stable dans votre paume et donnez-lui un quart de tour ferme et arrêtez - vous voulez que la crème tremble et se dépose immédiatement, comme une boule de neige après avoir agité. Si elle s'efface liquidement, il lui faut plus de temps. Si elle bouge à peine, elle est trop cuite."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir et servir",
+      "inputs": [
+        "steamed_chawanmushi",
+        "ing_08"
+      ],
+      "outputState": "finished_chawanmushi",
+      "instructions": "Enlevez les tasses du vapeur et laissez-les reposer pendant 2 minutes — la crème ferme le dernier degré de réglage de la chaleur résiduelle. Enlevez les couvercles et ajoutez 1–2 brins mitsuba à chaque tasse, pressez doucement les tiges dans la surface crème afin qu'elles soient légèrement droites. Servir immédiatement dans la tasse, avec de petites cuillères. Chawanmushi est mangé avec une cuillère en brisant la surface lisse et scooping crème et se remplir ensemble. Il est servi chaud en hiver et réfrigéré (chawanmushi froid nécessite un ratio d'oeufs plus ferme) en été. Les mitsuba se faneront rapidement — serviront sans tarder.",
+      "visualCue": {
+        "primaryTarget": "Une surface de crème d'ivoire pâle avec les feuilles mitsuba vertes pressées, la tasse encore en vapeur doucement, les crevettes visibles comme une courbe rose chaude à travers les côtés de la crème.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Custard est encore liquide au centre lorsque la garniture est ajoutée et il s'écoule vers les bords lorsqu'il est incliné — la garniture coule.",
+            "action": "Retournez la tasse au vapeur (sans mitsuba) pour encore 3 minutes et vérifiez à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "La mitsuba se tient doucement dans la surface à peine ferme, la crème est encore chaude et en vapeur, et la crevette est visible comme un arc rose à travers la paroi translucide de l'œuf dashi. Parfait.",
+            "action": "Servir dans les 5 minutes. Chawanmushi à son sommet est servi moments hors du vapeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Custard a été laissé à refroidir et a mis raide, rétrécissant des parois de la tasse, avec un liquide aqueux pooling autour des bords.",
+            "action": "Servir tel quel — il est encore délicieux, mais pas à son meilleur éthéré. Verser tout liquide qui pleure avant de le présenter."
+          }
+        ]
+      },
+      "feelCue": "Brisez la surface avec une cuillère : vous ne devez sentir que la plus douce résistance, comme briser la peau d'une pêche très mûre. L'intérieur devrait céder sans aucun ressort — simplement s'effondrer tranquillement dans un nuage doux et soyeux qui glisse de la cuillère plutôt que de tenir sa forme."
+    }
+  ]
 };

@@ -1,83 +1,213 @@
 export default {
-  repoId: "master_italian_salsa_verde_001",
-  parentRepoId: null,
-  slug: "salsa-verde-italian",
-  author: "ForkRecipe Kitchen",
-  title: "Italian Salsa Verde",
-  description: "A Milanese herb sauce of pounded parsley, anchovy, capers, and garlic loosened with olive oil and red wine vinegar — raw, immediate, and loud enough to cut through the richest braised meats.",
-  cuisine: "Italian",
-  culture: "Milanese/Lombard",
-  category: "sauces",
-  tags: ["italian", "herb-sauce", "cold-sauce", "anchovy", "capers", "parsley", "milanese"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 3, sour: 2, bitter: 2, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Herb",      name: "Flat-leaf parsley, leaves only",              ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Umami",     name: "Anchovy fillets in oil, drained",             ratioValue: 40,  defaultUnit: "parts", substitutions: ["anchovy paste (use half the quantity)"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Capers, rinsed (salt-packed preferred)",      ratioValue: 30,  defaultUnit: "parts", substitutions: ["caper berries, roughly halved"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves",                               ratioValue: 15,  defaultUnit: "parts", substitutions: ["roasted garlic for a milder result"] },
-    { ingId: "ing_05", role: "Acid",      name: "Red wine vinegar",                            ratioValue: 30,  defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_06", role: "Fat",       name: "Extra-virgin olive oil",                      ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Binder",    name: "Dijon mustard",                               ratioValue: 10,  defaultUnit: "parts", substitutions: ["whole-grain mustard"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine sea salt",                               ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_salsa_verde_001",
+  "parentRepoId": null,
+  "slug": "salsa-verde-italian",
+  "author": "ForkRecipe Kitchen",
+  "title": "Salsa Verde italienne",
+  "description": "Une sauce à l'herbe milanaise de persil, d'anchois, de câpres et d'ail desserré d'huile d'olive et de vinaigre de vin rouge — cru, immédiat et assez fort pour couper à travers les viandes braisées les plus riches.",
+  "cuisine": "Italien",
+  "culture": "Milanais/Lombard",
+  "category": "sauces",
+  "tags": [
+    "Italien",
+    "herbe-sauce",
+    "Sauce froide",
+    "anchois",
+    "Câpres",
+    "persil",
+    "Milanese"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Pound",
-      inputs: ["ing_04", "ing_08"],
-      outputState: "garlic_paste",
-      instructions: "Place the garlic cloves in a mortar with the salt. Pound in a circular motion, scraping down the walls periodically, until you have a smooth, sticky, slightly translucent paste with no visible garlic chunks remaining. The salt acts as an abrasive — use it generously from the start. This takes about 2 minutes of sustained work. If using a knife instead: mince the garlic fine, then use the flat of the blade to smear it across the board, scraping and repeating until it forms a paste.",
-      visualCue: {
-        primaryTarget: "A smooth, pale-cream paste with the faint translucency of raw garlic, no fibrous strands, and a piercing raw-garlic scent.",
-        spectrum: [
-          { state: "Underdone", description: "Coarse garlic pieces still clearly visible. The paste is chunky and wet, not yet cohesive.", action: "Continue pounding. Tilt the mortar to corral the escaping pieces; pound from different angles to break them down evenly." },
-          { state: "Perfect",   description: "Completely smooth, sticky paste that clings to the pestle in strings when lifted and releases cleanly. No sharp-edged or fibrous pieces remain.", action: "Add anchovy fillets, capers, and mustard to the mortar and continue." },
-          { state: "Overdone",  description: "The garlic has become a watery liquid — all cellular structure obliterated, clear liquid pooling in the bowl of the mortar.", action: "This is fine for salsa verde. The garlic flavor will be maximally pungent but slightly less complex. Proceed." },
-        ],
-      },
-      feelCue: "The paste should cling to the pestle like a tacky adhesive — lift the pestle slowly and it comes away trailing strings of garlic before releasing with a small snap.",
+      "ingId": "ing_01",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, feuilles seulement",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Pound",
-      inputs: ["garlic_paste", "ing_02", "ing_03", "ing_07"],
-      outputState: "herb_paste_base",
-      instructions: "Add the anchovy fillets to the garlic paste and pound until they completely dissolve into the base — the anchovies should vanish, leaving no visible flesh, only a deeper savory color and scent. Add the capers and pound until they are crushed but retain some rough texture: you want fragments, not obliteration. Add the Dijon mustard and stir it through with the pestle. Taste: it should be intensely savory, salty, and punchy.",
-      visualCue: {
-        primaryTarget: "A dark, glistening, rough-textured paste with visible caper fragments. No anchovy pieces identifiable — they should have fully dissolved into the garlic base.",
-        spectrum: [
-          { state: "Underdone", description: "Anchovy fillets still visible as distinct pink or grey pieces. Capers still whole. The paste lacks cohesion.", action: "Continue pounding with patience — anchovies need sustained pressure to break down. Another 60 seconds of consistent work." },
-          { state: "Perfect",   description: "Anchovies are invisible, fully absorbed. Capers are crushed into rough, dark-green fragments. The paste is cohesive, dark, glossy, and deeply savory.", action: "Add the chopped parsley and proceed to assemble the finished sauce." },
-          { state: "Overdone",  description: "The mixture is completely smooth — all texture lost, capers obliterated into the paste.", action: "The flavor will be excellent; the sauce will simply be smoother. Proceed — the parsley will restore some texture." },
-        ],
-      },
-      feelCue: "Taste a small amount on your fingertip — it should hit in distinct waves: first salt and sharp raw garlic, then a round, deep savory cushion from the anchovy, then a brief brine snap from the capers.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Filets d'anchois dans l'huile, égouttés",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pâte d'anchois (utiliser la moitié de la quantité)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["herb_paste_base", "ing_01", "ing_05", "ing_06"],
-      outputState: "salsa_verde_italiana",
-      instructions: "Stack the parsley leaves and chop them very finely with a sharp chef's knife — do not use a food processor, which bruises the parsley and turns it grey within minutes. Aim for a near-mince. Add the chopped parsley to the mortar paste and fold together with the pestle. Loosen with red wine vinegar and olive oil, adding each in alternating small additions while tasting after each — the oil brings body and rounds the flavors; the vinegar keeps it alive. The final consistency should be spoonable and flowing, not stiff like a paste and not watery like a dressing.",
-      visualCue: {
-        primaryTarget: "A vivid, intense green sauce with a clearly visible herb texture, flecks of caper and dark anchovy paste throughout, and a sheen from the olive oil — pourable in a slow, thick ribbon.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is thick and paste-like, clumping on a spoon. The herbs are coarsely chopped and dominate the texture; flavors taste raw and harsh.", action: "Chop the parsley more finely, and add olive oil a tablespoon at a time, stirring well after each addition until the sauce loosens to a pouring consistency." },
-          { state: "Perfect",   description: "The sauce pours slowly from a spoon in an unbroken, heavy ribbon. The color is vivid green, the surface glossy, and texture shows clear parsley specks among the caper fragments.", action: "Taste once more for salt — the anchovies and capers carry most of the salt, so add carefully. Serve within the hour to preserve the herb color." },
-          { state: "Overdone",  description: "The sauce is too thin and oily. The parsley has oxidized from vibrant green to dull army-green.", action: "Pound or chop in a fistful of fresh parsley to restore body and color. A small piece of torn day-old bread pounded into the base will also absorb excess oil and add textural body." },
-        ],
-      },
-      feelCue: "The sauce should feel alive on the tongue — raw garlic bites cleanly at the back of the throat, anchovy provides a cushion of umami that lingers, the capers snap with brine, and the parsley fades last with a vegetal freshness.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Récipients, rincés (favorisé pour le sel)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "baies de câpres, environ coupées en deux"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ail rôti pour un résultat plus doux"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "vinaigre de vin rouge",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Binder",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moutarde à grains entiers"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_04",
+        "ing_08"
+      ],
+      "outputState": "garlic_paste",
+      "instructions": "Placez les gousses d'ail dans un mortier avec le sel. Pound dans un mouvement circulaire, grattant les murs périodiquement, jusqu'à ce que vous ayez une pâte lisse, collante, légèrement translucide, sans morceaux d'ail visible restant. Le sel agit comme abrasif — utilisez - le généreusement dès le départ. Cela prend environ 2 minutes de travail soutenu. Si l'on utilise un couteau à la place : hacher l'ail fin, puis utiliser le plat de la lame pour le frotter à travers la planche, racler et répéter jusqu'à ce qu'il forme une pâte.",
+      "visualCue": {
+        "primaryTarget": "Une pâte de crème pâle et lisse avec une faible translucidité de l'ail cru, pas de brins fibreux et une odeur d'ail cru perçant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Morceaux d'ail grossiers encore clairement visibles. La pâte est épaisse et humide, pas encore cohésive.",
+            "action": "Continuez à frapper. Inclinez le mortier pour corraler les morceaux qui s'échappent; livrez sous différents angles pour les briser uniformément."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, pâte collante qui s'accroche au pilon dans les cordes lorsqu'il est levé et libère proprement. Il ne reste pas de morceaux fibreux ou tranchants.",
+            "action": "Ajouter les filets d'anchois, les câpres et la moutarde au mortier et continuer."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est devenu un liquide aqueux — toute la structure cellulaire est effacée et le liquide est mis dans le bol du mortier.",
+            "action": "C'est bon pour la salsa verde. La saveur d'ail sera maximalement piquante mais légèrement moins complexe. Continuez."
+          }
+        ]
+      },
+      "feelCue": "La pâte devrait s'accrocher au pâté comme un adhésif collant — soulevez le pâté lentement et il s'en dégage des ficelles d'ail qui traînent avant de se libérer avec un petit coup."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Livre",
+      "inputs": [
+        "garlic_paste",
+        "ing_02",
+        "ing_03",
+        "ing_07"
+      ],
+      "outputState": "herb_paste_base",
+      "instructions": "Ajoutez les filets d'anchois à la pâte d'ail et livrez jusqu'à ce qu'ils se dissolvent complètement dans la base – les anchois devraient disparaître, ne laissant aucune chair visible, seulement une couleur et un parfum plus profonds. Ajouter les câpres et la livre jusqu'à ce qu'ils soient écrasés mais conserver une texture rugueuse: vous voulez des fragments, pas l'effacement. Ajouter la moutarde de Dijon et la remuer avec le pilon. Bouche : il doit être intensément salé, salé et poinçonné.",
+      "visualCue": {
+        "primaryTarget": "Une pâte foncée, scintillante, à texture rugueuse avec des fragments visibles de câpres. Pas de morceaux d'anchois identifiables — ils auraient dû être complètement dissous dans la base de l'ail.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Filets d'anchois encore visibles en pièces roses ou grises distinctes. C'est toujours complet. La pâte manque de cohésion.",
+            "action": "Continuez à frapper avec patience — les anchois ont besoin d'une pression soutenue pour se briser. Encore 60 secondes de travail cohérent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les anchois sont invisibles, totalement absorbés. Les câpres sont écrasés en fragments bruts, vert foncé. La pâte est cohésive, sombre, brillante et profondément salée.",
+            "action": "Ajouter le persil haché et assembler la sauce finie."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est complètement lisse — toute texture perdue, câpres effacés dans la pâte.",
+            "action": "La saveur sera excellente ; la sauce sera tout simplement plus lisse. Procéder — le persil restaurera une certaine texture."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite quantité sur votre bout de doigt — il devrait frapper dans des vagues distinctes: d'abord sel et ail cru vif, puis un coussin rond, savoureux profond de l'anchois, puis un bref coup de saumure des câpres."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "herb_paste_base",
+        "ing_01",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "salsa_verde_italiana",
+      "instructions": "Empilez les feuilles de persil et hachez-les très finement avec le couteau d'un chef tranchant — n'utilisez pas de robot culinaire qui écrase le persil et le rend gris en quelques minutes. Visez un peu. Ajouter le persil haché à la pâte de mortier et plier avec le pilon. Loyer avec du vinaigre de vin rouge et de l'huile d'olive, en ajoutant chacun en alternance de petits ajouts pendant la dégustation après chaque — l'huile apporte le corps et arrondit les saveurs; le vinaigre le maintient en vie. La consistance finale doit être cuillable et fluide, non raide comme une pâte et non aqueuse comme une vinaigrette.",
+      "visualCue": {
+        "primaryTarget": "Une sauce verte vive et intense avec une texture d'herbe clairement visible, des flocons de câpres et de pâte d'anchois foncés partout, et un éclat de l'huile d'olive — versable dans un ruban lent et épais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est épaisse et pâteuse, grondant sur une cuillère. Les herbes sont grossièrement hachées et dominent la texture; les saveurs ont un goût cru et dur.",
+            "action": "Couper le persil plus finement, et ajouter une cuillère à soupe d'huile d'olive à la fois, en remuant bien après chaque addition jusqu'à ce que la sauce se détache à une consistance versante."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce verse lentement d'une cuillère dans un ruban lourd et non cassé. La couleur est vert vif, la surface brillante, et la texture montre des taches de persil claires parmi les fragments de câpres.",
+            "action": "Goûtez encore une fois pour le sel — les anchois et les câpres portent la plupart du sel, ajoutez donc soigneusement. Servir dans l'heure pour préserver la couleur des herbes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est trop fine et grasse. Le persil s'est oxydé de vert vif à vert-armée terne.",
+            "action": "Pound ou hacher dans un poing de persil frais pour restaurer le corps et la couleur. Un petit morceau de pain d'un jour déchiré pilonné dans la base absorbera également l'excès d'huile et ajoutera le corps textural."
+          }
+        ]
+      },
+      "feelCue": "La sauce doit se sentir vivante sur la langue — l'ail cru mord proprement à l'arrière de la gorge, l'anchois fournit un coussin d'umami qui s'attarde, les câpres s'éclatent avec de la saumure, et le persil s'estompe avec une fraîcheur végétale."
+    }
+  ]
 };

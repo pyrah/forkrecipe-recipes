@@ -1,84 +1,216 @@
 export default {
-  repoId: "master_french_rouille_001",
-  parentRepoId: null,
-  slug: "rouille",
-  author: "ForkRecipe Kitchen",
-  title: "Rouille",
-  description: "Provence's vivid rust-red saffron-and-garlic aioli — the essential companion to bouillabaisse, smeared thickly on grilled croutons and set afloat in the broth until it melts into the soup in golden ribbons.",
-  cuisine: "French",
-  culture: "Provençal",
-  category: "condiments",
-  tags: ["condiments", "french", "provencal", "aioli", "saffron", "bouillabaisse", "gluten-free"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "20 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 2, sour: 1, bitter: 0, umami: 1, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Egg yolks",                              ratioValue: 2,   defaultUnit: "pcs", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Extra-virgin olive oil",                 ratioValue: 150, defaultUnit: "ml",  substitutions: ["50/50 olive oil and neutral oil for milder flavor"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves",                          ratioValue: 4,   defaultUnit: "pcs", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Saffron threads",                        ratioValue: 0.3, defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_05", role: "Liquid",    name: "Hot water (for saffron)",                ratioValue: 15,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_06", role: "Heat",      name: "Piment d'Espelette or cayenne",          ratioValue: 2,   defaultUnit: "g",   substitutions: ["hot smoked paprika"] },
-    { ingId: "ing_07", role: "Acid",      name: "Lemon juice",                            ratioValue: 10,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine sea salt",                          ratioValue: 3,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_09", role: "Aromatic",  name: "Roasted red pepper (jarred), drained",   ratioValue: 30,  defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_french_rouille_001",
+  "parentRepoId": null,
+  "slug": "rouille",
+  "author": "ForkRecipe Kitchen",
+  "title": "Rouille",
+  "description": "L'aioli au safran et à l'ail rouge rouille vif de Provence, compagnon essentiel de la bouillabaisse, frotté épais sur des croûtons grillés et mis à flot dans le bouillon jusqu'à ce qu'il fonde dans la soupe en rubans dorés.",
+  "cuisine": "Français",
+  "culture": "Provençal",
+  "category": "condiments",
+  "tags": [
+    "condiments",
+    "français",
+    "d ' origine",
+    "Aïoli",
+    "safran",
+    "bouillabaisse",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "20 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Steep",
-      inputs: ["ing_04", "ing_05"],
-      outputState: "saffron_infusion",
-      instructions: "Crumble saffron threads between your fingers into the hot water. Steep for 10 minutes until the water turns a vivid burnt-orange and the threads become translucent. This infusion is what colors and perfumes the rouille — do not skip or rush it.",
-      visualCue: {
-        primaryTarget: "Water turned deep amber-orange, saffron threads now pale and translucent after surrendering their color.",
-        spectrum: [
-          { state: "Underdone", description: "Water only faintly yellow, threads still bright red-orange. Not enough steep time.", action: "Wait the full 10 minutes." },
-          { state: "Perfect",   description: "Water deeply golden-orange. Threads translucent and faded. Smells floral, honeyed, and slightly metallic.", action: "Proceed to the mortar." },
-          { state: "Overdone",  description: "Saffron has over-steeped and turned slightly bitter and medicinal.", action: "Still usable — dilute the infusion with a teaspoon more water." },
-        ],
-      },
-      feelCue: "Rub a thread between two fingers — when the color transfers strongly to your skin, the threads have given their color to the water.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Jaunes d'œuf",
+      "ratioValue": 2,
+      "defaultUnit": "pcs",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Pound",
-      inputs: ["ing_03", "ing_08"],
-      outputState: "garlic_paste",
-      instructions: "In a large mortar, pound garlic cloves with a pinch of salt into a completely smooth paste. The salt acts as an abrasive, tearing apart the cells. Grind in a circular motion, pressing and dragging the pestle. The paste should be completely smooth — no chunks — as any unbroken garlic cell will not emulsify properly.",
-      visualCue: {
-        primaryTarget: "A completely smooth, white garlic paste — almost liquid, sticky, with no chunks.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic still in small pieces, not fully broken down.", action: "Continue pounding and grinding. Add another pinch of salt as abrasive." },
-          { state: "Perfect",   description: "Completely smooth, sticky, nearly fluid. Forms a thin film on the mortar walls. Aggressively garlicky aroma.", action: "Add roasted pepper and yolks." },
-          { state: "Overdone",  description: "You cannot over-pound garlic paste — keep going.", action: "Proceed." },
-        ],
-      },
-      feelCue: "Press your fingertip into the paste — it should be sticky and creamy, with no graininess. If you feel any fiber or crunch, keep pounding.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 150,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "50/50 huile d'olive et huile neutre pour une saveur plus douce"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Emulsify",
-      inputs: ["garlic_paste", "ing_09", "ing_06", "ing_01", "saffron_infusion", "ing_02", "ing_07"],
-      outputState: "finished_rouille",
-      instructions: "Add roasted pepper and Espelette to the garlic paste and pound to a smooth paste. Work in egg yolks and all of the saffron infusion. Begin adding olive oil, drop by drop at first, pounding and stirring constantly. As an emulsion forms and the mixture thickens, you can add oil in a thin stream. Finish with lemon juice. The rouille should be thick enough to hold its shape on a spoon — significantly thicker than mayonnaise.",
-      visualCue: {
-        primaryTarget: "A vivid rust-red to deep orange mayo — thick, glossy, holding a mound. The saffron and pepper give it an unmistakably dramatic color.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and greasy — emulsion hasn't fully formed yet.", action: "Continue adding oil drop by drop while stirring constantly. The emulsion will form." },
-          { state: "Perfect",   description: "Thick, glossy, rust-red. Holds its shape on a spoon. Smells of garlic, saffron, and pepper simultaneously. Tastes rich, garlicky, with a warm heat finish.", action: "Serve alongside bouillabaisse or spread on grilled croutons." },
-          { state: "Overdone",  description: "Rouille has broken — yellow oil pooling around the sides.", action: "Start with a fresh yolk in a clean bowl, then slowly whisk in the broken rouille as you would oil." },
-        ],
-      },
-      feelCue: "Spread a teaspoon on bread — it should sit on the surface without running, thick enough to require spreading with a knife.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 4,
+      "defaultUnit": "pcs",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Fils de safran",
+      "ratioValue": 0.3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau chaude (pour safran)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Heat",
+      "name": "Piment d'Espelette ou cayenne",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika fumé chaud"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Jus de citron",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Poivre rouge rôti (jarred), égoutté",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Streep",
+      "inputs": [
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "saffron_infusion",
+      "instructions": "Crumble les fils de safran entre les doigts dans l'eau chaude. Plongez pendant 10 minutes jusqu'à ce que l'eau tourne un orange vif brûlé et que les fils deviennent translucides. Cette infusion est ce que les couleurs et parfume le rouille — ne sautez pas ou ne précipitez pas.",
+      "visualCue": {
+        "primaryTarget": "L'eau est devenue ambre-orange profonde, fils de safran maintenant pâle et translucide après avoir cédé leur couleur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau n'est que faiblement jaune, les fils sont encore rouge-orange. Pas assez de temps.",
+            "action": "Attendez les 10 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "De l'eau bien dorée. Des fils translucides et fanés. Sens floral, miellé et légèrement métallique.",
+            "action": "Allez au mortier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le safran est surtendu et légèrement amer et médicinal.",
+            "action": "Toujours utilisable — diluer la perfusion avec une cuillère à café plus d'eau."
+          }
+        ]
+      },
+      "feelCue": "Frotter un fil entre deux doigts — lorsque la couleur se transfère fortement à votre peau, les fils ont donné leur couleur à l'eau."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Livre",
+      "inputs": [
+        "ing_03",
+        "ing_08"
+      ],
+      "outputState": "garlic_paste",
+      "instructions": "Dans un grand mortier, livrez des gousses d'ail avec une pincée de sel dans une pâte complètement lisse. Le sel agit comme un abrasif, déchirant les cellules. Plonger dans un mouvement circulaire, presser et traîner le pestle. La pâte doit être complètement lisse — pas de morceaux — car toute cellule d'ail intacte ne sera pas émulsifier correctement.",
+      "visualCue": {
+        "primaryTarget": "Une pâte d'ail blanche complètement lisse, presque liquide, collante, sans morceaux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est toujours en petits morceaux, pas complètement décomposé.",
+            "action": "Continuer à frapper et à broyer. Ajouter une autre pincée de sel comme abrasif."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, collant, presque fluide. Forme un mince film sur les murs de mortier. Arôme ailé agressif.",
+            "action": "Ajouter le poivre rôti et les jaunes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous ne pouvez pas trop livres de pâte d'ail — continuez.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur votre bout de doigt dans la pâte — elle devrait être collante et crémeuse, sans grain. Si vous sentez une fibre ou une croûte, continuez à frapper."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Émulsifier",
+      "inputs": [
+        "garlic_paste",
+        "ing_09",
+        "ing_06",
+        "ing_01",
+        "saffron_infusion",
+        "ing_02",
+        "ing_07"
+      ],
+      "outputState": "finished_rouille",
+      "instructions": "Ajouter le poivre torréfié et l'espélette à la pâte d'ail et verser dans une pâte lisse. Travaillez dans les jaunes d'œufs et toute la perfusion de safran. Commencer à ajouter de l'huile d'olive, laisser tomber au début, frapper et remuer constamment. Comme une émulsion se forme et le mélange s'épaissit, vous pouvez ajouter de l'huile dans un cours d'eau mince. Terminer avec du jus de citron. La rouille doit être assez épaisse pour tenir sa forme sur une cuillère, nettement plus épaisse que la mayonnaise.",
+      "visualCue": {
+        "primaryTarget": "Un mayo rouge rouille vif à orange profond — épais, brillant, tenant un monticule. Le safran et le poivre lui donnent une couleur spectaculaire.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et grasse — l'émulsion n'a pas encore été complètement formée.",
+            "action": "Continuer à ajouter l'huile goutte à goutte en remuant constamment. L'émulsion se formera."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, brillant, rouge rouille. Il tient sa forme sur une cuillère. sent l'ail, le safran et le poivre simultanément. Goûte riche, ailky, avec une finale chaude.",
+            "action": "Servir aux côtés de la bouillabaisse ou étaler sur les croûtons grillés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Rouille s'est cassée — l'huile jaune se déverse sur les côtés.",
+            "action": "Commencez par un jaune frais dans un bol propre, puis fouettez lentement dans la rouille cassée comme vous voulez huiler."
+          }
+        ]
+      },
+      "feelCue": "Étendre une cuillère à café sur du pain — elle doit s'asseoir à la surface sans courir, assez épaisse pour nécessiter une propagation avec un couteau."
+    }
+  ]
 };

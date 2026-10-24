@@ -1,117 +1,294 @@
 export default {
-  repoId: "master_thai_pad_see_ew_001",
-  parentRepoId: null,
-  slug: "pad-see-ew",
-  author: "ForkRecipe Kitchen",
-  title: "Pad See Ew",
-  description: "Wide flat rice noodles stir-fried at ferocious wok heat with egg, Chinese broccoli, and sweet soy sauce until lightly charred — a dish that lives or dies by the 'wok hei' smoky breath of the fire.",
-  cuisine: "Thai",
-  culture: "Thai-Chinese",
-  category: "grains",
-  tags: ["noodles", "thai", "stir-fried", "soy sauce", "egg"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 4, sour: 0, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Fresh wide rice noodles (sen yai, 2-3 cm wide)",      ratioValue: 100, defaultUnit: "parts", substitutions: ["dried wide rice noodles (soaked and boiled)"] },
-    { ingId: "ing_02", role: "Protein",   name: "Chicken breast or thigh (thin sliced) or firm tofu",  ratioValue: 40,  defaultUnit: "parts", substitutions: ["pork, beef, or shrimp"] },
-    { ingId: "ing_03", role: "Protein",   name: "Eggs (large)",                                         ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Herb",      name: "Gai lan (Chinese broccoli, cut in 5 cm lengths)",      ratioValue: 35,  defaultUnit: "parts", substitutions: ["broccoli florets + stems", "broccolini"] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves (minced)",                               ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Sweetener", name: "Kecap manis or dark sweet soy sauce",                  ratioValue: 10,  defaultUnit: "parts", substitutions: ["dark soy sauce + 1 tsp sugar"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Oyster sauce",                                          ratioValue: 8,   defaultUnit: "parts", substitutions: ["vegetarian oyster sauce"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Light soy sauce",                                       ratioValue: 5,   defaultUnit: "parts", substitutions: ["fish sauce"] },
-    { ingId: "ing_09", role: "Fat",       name: "Neutral oil (high smoke point — canola or grapeseed)", ratioValue: 12,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Sweetener", name: "Sugar (pinch for sauce balance)",                      ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_thai_pad_see_ew_001",
+  "parentRepoId": null,
+  "slug": "pad-see-ew",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pad Voir Ew",
+  "description": "Larges nouilles plates de riz sautées à la chaleur féroce wok avec l'oeuf, le brocoli chinois, et la sauce de soja sucrée jusqu'à ce que légèrement carbonisé — un plat qui vit ou meurt par le souffle fumant 'wok hei' du feu.",
+  "cuisine": "Thaï",
+  "culture": "Thai-Chinois",
+  "category": "grains",
+  "tags": [
+    "nouilles",
+    "Thaï",
+    "sautés",
+    "sauce de soja",
+    "œuf"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Season",
-      inputs: ["ing_02", "ing_07", "ing_08"],
-      outputState: "marinated_protein",
-      instructions: "Slice the chicken into thin, even pieces no more than 5 mm thick. Toss with half the oyster sauce and half the light soy sauce. Rest at room temperature for 10 minutes. Separately, mix the remaining oyster sauce, light soy sauce, dark sweet soy (kecap manis), and sugar in a small bowl to create the stir-fry sauce. If using fresh rice noodles that are refrigerator-cold, separate them gently by hand and bring to room temperature — cold noodles will drop the wok temperature dramatically and result in steaming rather than charring.",
-      visualCue: {
-        primaryTarget: "Chicken slices are uniformly coated in a thin, dark glaze. Sauce bowl is a smooth, dark brown liquid. Noodles are separated into individual wide sheets.",
-        spectrum: [
-          { state: "Underdone", description: "Chicken is still dry and uncoated. Noodles are a cold, stuck mass from the refrigerator.", action: "Toss chicken more thoroughly. Pull noodles apart by hand gently — do not tear — and leave at room temperature 15 minutes." },
-          { state: "Perfect",   description: "Chicken is coated and the sauce bowl smells deeply savory and sweet. Noodles are pliable and separate with gentle handling.", action: "Set up your mise en place: everything must be within arm's reach before the wok goes on the heat." },
-          { state: "Overdone",  description: "Chicken has marinated too long (over 30 minutes) and the soy sauce has begun to firm the surface.", action: "Proceed — the texture will be slightly firmer but flavor is enhanced." },
-        ],
-      },
-      feelCue: "The noodles at room temperature should feel silky and slightly sticky — they should separate with gentle persuasion, not force. Tearing means they are still too cold.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Nouilles de riz (en yai, 2-3 cm de large)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Nouilles de riz larges séchées (poêlées et bouillies)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["marinated_protein", "ing_05", "ing_09"],
-      outputState: "seared_protein",
-      instructions: "Heat the wok over the highest heat your stove produces until it smokes visibly. Add half the oil and the minced garlic — it should sizzle and turn golden within 15 seconds. Add the chicken immediately and spread into a single layer. Let it sit undisturbed for 60 seconds to develop a sear, then toss. Cook until just cooked through, about 2 to 3 minutes total. Remove the chicken from the wok and set aside. The wok must be back at maximum heat before adding noodles.",
-      visualCue: {
-        primaryTarget: "Chicken pieces have golden-brown sear marks on at least one side. No pink visible. Garlic is golden but not dark brown.",
-        spectrum: [
-          { state: "Underdone", description: "Chicken is gray and steamed-looking, no browning. Wok was not hot enough.", action: "Remove chicken. Reheat wok to smoking before continuing. Work in smaller batches." },
-          { state: "Perfect",   description: "Chicken has caramelized edges and a golden-brown crust where it contacted the wok. Garlic is fragrant and golden.", action: "Remove from wok. Return wok to maximum heat before adding noodles." },
-          { state: "Overdone",  description: "Chicken is tough and dry. Garlic is dark brown and acrid.", action: "Discard the garlic and use the chicken as-is — over-cooked chicken in pad see ew is a common imperfection and largely forgiven by the noodle sauce." },
-        ],
-      },
-      feelCue: "The moment the chicken hits the wok, there should be a roar of sizzling and a billow of fragrant smoke. Any tepid response means the wok is too cold for this dish.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Poitrine ou cuisse de poulet (mince tranchée) ou tofu ferme",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "porc, bœuf ou crevette"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["ing_01", "ing_04", "ing_09"],
-      outputState: "charred_noodles",
-      instructions: "Return the wok to maximum heat and add the remaining oil. Add the separated rice noodles in a single layer as much as possible. DO NOT stir for 60 to 90 seconds — let them sit directly against the wok to char and blister slightly. Then add the gai lan pieces. Toss everything together 3 to 4 times with long chopsticks or a wok spatula. Push everything to one side of the wok.",
-      visualCue: {
-        primaryTarget: "Noodles have slight dark char spots and blistered areas where they contacted the wok. Gai lan is vivid green and slightly wilted at the leaf ends, stems still crisp.",
-        spectrum: [
-          { state: "Underdone", description: "Noodles are pale white with no char. Gai lan is raw-bright and rigid. No wok hei smoke aroma.", action: "Let the noodles sit without stirring for another 30 to 60 seconds on maximum heat." },
-          { state: "Perfect",   description: "Noodles have dark, caramelized blisters where they touched the metal. Gai lan stems are bright and just tender. The kitchen smells of that distinctive sweet, smoky wok hei.", action: "Push to sides and add the egg." },
-          { state: "Overdone",  description: "Noodles are scorched throughout, not spotted — a pervasive bitter char taste.", action: "Add the sauce and egg immediately to absorb and balance the bitterness." },
-        ],
-      },
-      feelCue: "At this heat, the wok should feel like standing near a campfire. The sound is a continuous roar. When noodles stick momentarily and then release with the spatula, that brief sticking is the char forming — do not fight it.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Œufs (gros)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Fold",
-      inputs: ["charred_noodles", "ing_03"],
-      outputState: "noodles_with_egg",
-      instructions: "Clear a space in the center of the wok and crack the eggs directly into it. Let them set for 10 to 15 seconds until the whites are just opaque at the edges, then scramble them lightly with the spatula. Before they are fully set, fold the noodles over the egg and toss together so the soft curds distribute through the noodles. The egg should be cooked but still soft — not dry scrambled egg shreds.",
-      visualCue: {
-        primaryTarget: "Large, soft yellow egg curds visibly woven through the dark noodles. The egg is set but still glossy — not dried or crumbled.",
-        spectrum: [
-          { state: "Underdone", description: "Egg is still wet and translucent, sliding around rather than being integrated.", action: "Allow 15 more seconds of cooking before folding — the egg needs to set slightly to integrate." },
-          { state: "Perfect",   description: "Soft golden egg curds distributed throughout, just set. The noodles have absorbed some egg and appear silky.", action: "Add the sauce and return the chicken." },
-          { state: "Overdone",  description: "Egg is dry, small, crumbly brown specks throughout the noodles. Rubbery and unpleasant.", action: "Proceed — add the sauce quickly to add moisture back." },
-        ],
-      },
-      feelCue: "The egg in the wok should set with a gentle, yielding resistance — not the rubbery bounce of an overcooked egg. The curds should hold their shape when tossed but still feel silky.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Gai lan (brocoli chinois, coupé en longueurs de 5 cm)",
+      "ratioValue": 35,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fleurs de brocoli + tiges",
+        "broccolini"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Toss",
-      inputs: ["noodles_with_egg", "seared_protein", "ing_06", "ing_07", "ing_08"],
-      outputState: "finished_pad_see_ew",
-      instructions: "Pour the prepared sauce over the noodles and egg. Return the seared chicken to the wok. Toss everything together vigorously for 60 seconds until the sauce has coated every component and the noodles look uniformly dark and glossy. Taste and adjust — pad see ew should be predominantly sweet from the dark soy with a savory backbone. Plate immediately; the noodles clump as they cool.",
-      visualCue: {
-        primaryTarget: "Uniformly dark, glossy noodles with visible char spotting. Gai lan is emerald-green and tender. Egg and chicken are integrated throughout. The surface shines.",
-        spectrum: [
-          { state: "Underdone", description: "Pale areas of noodle remain — sauce not fully distributed. Chicken and noodles are in separate clusters.", action: "Toss more vigorously and add 1 tablespoon of water if noodles are sticking and clumping." },
-          { state: "Perfect",   description: "Every element is uniformly coated in the sweet, dark sauce. The dish smells of wok smoke, sweet soy, and slightly charred noodle. The color is a deep, matte mahogany.", action: "Plate immediately and serve with white pepper and dried chili flakes on the side." },
-          { state: "Overdone",  description: "Noodles have broken into small pieces from over-tossing. Clumped and sticky.", action: "Serve immediately — further tossing makes it worse. No rescue available." },
-        ],
-      },
-      feelCue: "Lift a bundle of noodles with chopsticks — they should drape and fall in wide, separate sheets rather than clumping. The surfaces will feel slightly tacky from the sweet soy glaze, not gluey.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail (mincées)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Manis de kécap ou sauce de soja sucré foncé",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja foncé + 1 c. à thé sucre"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "sauce à l'huître",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce végétarienne aux huîtres"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "sauce de soja légère",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce de poisson"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile neutre (haute fumée — canola ou graines de raisin)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Sweetener",
+      "name": "Sucre (pouce pour équilibrer la sauce)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saison",
+      "inputs": [
+        "ing_02",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "marinated_protein",
+      "instructions": "Couper le poulet en morceaux minces, même de 5 mm d'épaisseur. Ajouter la moitié de la sauce huître et la moitié de la sauce soja légère. Reposez-vous à température ambiante pendant 10 minutes. Mélanger séparément la sauce à l'huître restante, la sauce au soja léger, le soja doux foncé (kecap manis) et le sucre dans un petit bol pour créer la sauce à sauté. Si l'on utilise des nouilles fraîches de riz qui sont froides au réfrigérateur, les séparer doucement à la main et les amener à la température ambiante, les nouilles froides chuteront la température du wok de façon spectaculaire et se traduiront par la vapeur plutôt que par l'épuisement.",
+      "visualCue": {
+        "primaryTarget": "Les tranches de poulet sont uniformément recouvertes d'un glaçage mince et foncé. Le bol de sauce est un liquide lisse et brun foncé. Les nouilles sont séparées en larges feuilles individuelles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le poulet est encore sec et non couché. Les nouilles sont une masse froide et coincée du réfrigérateur.",
+            "action": "Jetez le poulet plus soigneusement. Tirez les nouilles à la main doucement — ne déchirez pas — et laissez à température ambiante 15 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le poulet est enduit et le bol de sauce sent profondément salé et sucré. Les nouilles sont souples et séparées par une manipulation douce.",
+            "action": "Configurez votre mise en place : tout doit être à portée de main avant que le wok ne se met en chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poulet a mariné trop longtemps (plus de 30 minutes) et la sauce soja a commencé à raffermir la surface.",
+            "action": "Procéder — la texture sera légèrement plus ferme mais la saveur est améliorée."
+          }
+        ]
+      },
+      "feelCue": "Les nouilles à température ambiante devraient se sentir soyeuses et légèrement collantes; elles devraient se séparer avec une légère persuasion et non avec force. Ils sont encore trop froids."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "marinated_protein",
+        "ing_05",
+        "ing_09"
+      ],
+      "outputState": "seared_protein",
+      "instructions": "Chauffer le wok sur la chaleur la plus élevée que votre poêle produit jusqu'à ce qu'il fume visiblement. Ajouter la moitié de l'huile et l'ail haché — il doit faire un tour de tour et d'or en 15 secondes. Ajouter immédiatement le poulet et le répartir en une seule couche. Laissez-le reposer pendant 60 secondes pour développer une couture, puis lancez. Cuire jusqu'à ce qu'il soit cuit, environ 2 à 3 minutes au total. Retirer le poulet du wok et réserver. Le wok doit être de retour à la chaleur maximale avant d'ajouter des nouilles.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux de poulet ont des marques dorées sur au moins un côté. Pas de rose visible. L'ail est doré mais pas brun foncé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le poulet est gris et à la vapeur, sans brunissement. Wok n'était pas assez chaud.",
+            "action": "Enlevez le poulet. Réchauffer le wok au tabac avant de continuer. Travaillez en petits lots."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le poulet a des bords caramélisés et une croûte dorée où il a contacté le wok. L'ail est parfumé et doré.",
+            "action": "Retirer du wok. Retournez le wok à la chaleur maximale avant d'ajouter des nouilles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poulet est dur et sec. L'ail est brun foncé et acride.",
+            "action": "Jeter l'ail et utiliser le poulet tel qu'il est — le poulet surcuit dans le tampon voir ew est une imperfection commune et largement pardonné par la sauce aux nouilles."
+          }
+        ]
+      },
+      "feelCue": "Au moment où le poulet frappe le wok, il devrait y avoir un rugissement de grésillement et une bouffée de fumée parfumée. Toute réponse tiède signifie que le wok est trop froid pour ce plat."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "ing_01",
+        "ing_04",
+        "ing_09"
+      ],
+      "outputState": "charred_noodles",
+      "instructions": "Retourner le wok à la chaleur maximale et ajouter le reste d'huile. Ajouter les nouilles de riz séparées dans une seule couche autant que possible. NE PAS remuer pendant 60 à 90 secondes — laissez-les s'asseoir directement contre le wok à l'omble et blister légèrement. Ajoutez ensuite les morceaux de gai lan. Mélangez tout 3 à 4 fois avec de longues baguettes ou une spatule wok. Poussez tout d'un côté du wok.",
+      "visualCue": {
+        "primaryTarget": "Les nouilles ont de légères taches d'omble foncé et des zones cloquées où elles ont contacté le wok. Gai lan est vert vif et légèrement flétri aux extrémités des feuilles, les tiges sont encore croquantes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les nouilles sont blanches pâles sans omble. Gai lan est brut-brillant et rigide. Pas d'arôme de fumée de wok hei.",
+            "action": "Laisser les nouilles s'asseoir sans remuer encore 30 à 60 secondes sur la chaleur maximale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les nouilles ont des cloques sombres et caramélisées où elles ont touché le métal. Les tiges de Gai lan sont lumineuses et juste tendres. La cuisine sent ce doux et fumé hei distinctif.",
+            "action": "Poussez sur les côtés et ajoutez l'œuf."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles sont brûlées dans l'ensemble, et non tachetées — un goût d'omble amer omniprésent.",
+            "action": "Ajouter immédiatement la sauce et l'oeuf pour absorber et équilibrer l'amertume."
+          }
+        ]
+      },
+      "feelCue": "À cette chaleur, le wok devrait se sentir près d'un feu de camp. Le son est un rugissement continu. Quand les nouilles collent momentanément et se libèrent avec la spatule, ce court collage est l'omble formant — ne le combattez pas."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plier",
+      "inputs": [
+        "charred_noodles",
+        "ing_03"
+      ],
+      "outputState": "noodles_with_egg",
+      "instructions": "Videz un espace au centre du wok et crevez les œufs directement dans celui-ci. Laissez les régler pendant 10 à 15 secondes jusqu'à ce que les blancs soient juste opaques aux bords, puis brouillez-les légèrement avec la spatule. Avant qu'ils ne soient entièrement réglés, plier les nouilles sur l'oeuf et mélanger pour que les cords doux distribuent à travers les nouilles. L'oeuf doit être cuit mais encore doux — pas des morceaux d'oeuf brouillés secs.",
+      "visualCue": {
+        "primaryTarget": "Larges caillés d'oeufs jaune doux tissés visiblement à travers les nouilles foncées. L'œuf est serti mais encore brillant — pas séché ni émietté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oeuf est encore humide et translucide, glissant autour plutôt que d'être intégré.",
+            "action": "Laisser 15 secondes de plus de cuisson avant le pliage – l'oeuf doit être légèrement réglé pour s'intégrer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cords d'oeufs d'or tendres distribués dans l'ensemble, simplement sertis. Les nouilles ont absorbé un peu d'oeuf et semblent soyeuses.",
+            "action": "Ajouter la sauce et retourner le poulet."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oeuf est sec, petit, brun émietté, dans les nouilles. Caoutchouc et désagréable.",
+            "action": "Continuer — ajouter la sauce rapidement pour rajouter l'humidité."
+          }
+        ]
+      },
+      "feelCue": "L'œuf dans le wok doit être fixé avec une résistance douce et induisante, et non le rebond caoutchouteux d'un œuf surcuit. Les caillés doivent tenir leur forme lorsqu'ils sont jetés mais se sentent encore soyeux."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Découpe",
+      "inputs": [
+        "noodles_with_egg",
+        "seared_protein",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_pad_see_ew",
+      "instructions": "Verser la sauce préparée sur les nouilles et les œufs. Retournez le poulet au wok. Mélangez tout vigoureusement pendant 60 secondes jusqu'à ce que la sauce ait enrobé chaque composant et que les nouilles soient uniformément sombres et brillantes. Goûtez et ajustez-vous – le paillasson voit que l'oe doit être surtout sucré du soja foncé avec une colonne vertébrale savorieuse. Assortiment immédiat; les nouilles s'agrippent en refroidissant.",
+      "visualCue": {
+        "primaryTarget": "Nouilles uniformément sombres et brillantes avec taches d'omble visible. Gai lan est vert émeraude et tendre. Les œufs et le poulet sont intégrés dans l'ensemble. La surface brille.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il reste des zones pâles de nouilles — sauce non entièrement distribuée. Le poulet et les nouilles sont en grappes distinctes.",
+            "action": "Verser plus vigoureusement et ajouter 1 cuillerée à soupe d'eau si les nouilles collent et s'agrippent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque élément est uniformément enduit dans la sauce douce et foncée. Le plat sent la fumée de wok, le soya sucré et les nouilles légèrement carbonisées. La couleur est une acajou profonde et mate.",
+            "action": "Assortir immédiatement et servir avec du poivre blanc et des flocons de chili séchés sur le côté."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles se sont cassées en petits morceaux à la suite d'un trop-tout. Frappé et collant.",
+            "action": "Servir immédiatement — le jeter encore plus tard l'aggrave. Aucun sauvetage disponible."
+          }
+        ]
+      },
+      "feelCue": "Soulevez un paquet de nouilles avec des baguettes — elles devraient draper et tomber dans de larges feuilles séparées plutôt que d'empiler. Les surfaces se sentiront légèrement collantes à partir de la glaçure douce de soja, pas collante."
+    }
+  ]
 };

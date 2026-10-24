@@ -1,112 +1,294 @@
 export default {
-  repoId: "master_french_souffle_au_fromage_001",
-  parentRepoId: null,
-  slug: "souffle-au-fromage",
-  author: "ForkRecipe Kitchen",
-  title: "Cheese Soufflé",
-  description: "A trembling column of Gruyère and Parmesan that rises from its ramekin like a crown — its crust cracks to reveal a molten, eggy interior threaded with nutmeg and sharp cheese.",
-  cuisine: "French",
-  culture: "Parisian",
-  category: "eggs",
-  tags: ["french", "souffle", "cheese", "technique", "eggs"],
-  difficulty: 5,
-  activeTime: "45 min",
-  totalTime: "1 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 2, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Unsalted butter (plus extra for greasing)",  ratioValue: 30,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Structure", name: "All-purpose flour",                          ratioValue: 25,  defaultUnit: "g", substitutions: ["rice flour (gluten-free)"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Whole milk (warm)",                          ratioValue: 200, defaultUnit: "g", substitutions: ["half-and-half"] },
-    { ingId: "ing_04", role: "Dairy",     name: "Gruyère (finely grated)",                   ratioValue: 80,  defaultUnit: "g", substitutions: ["Comté", "Emmental"] },
-    { ingId: "ing_05", role: "Umami",     name: "Parmesan (finely grated, plus extra for dusting)", ratioValue: 20, defaultUnit: "g", substitutions: ["Grana Padano"] },
-    { ingId: "ing_06", role: "Protein",   name: "Egg yolks (large)",                         ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Binder",    name: "Egg whites (large, at room temperature)",   ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fine sea salt",                             ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Freshly grated nutmeg",                     ratioValue: 1,   defaultUnit: "g", substitutions: ["ground mace"] },
-    { ingId: "ing_10", role: "Spice",     name: "Cayenne pepper (pinch)",                    ratioValue: 0.5, defaultUnit: "g", substitutions: ["white pepper"] },
+  "repoId": "master_french_souffle_au_fromage_001",
+  "parentRepoId": null,
+  "slug": "souffle-au-fromage",
+  "author": "ForkRecipe Kitchen",
+  "title": "Fromage soufflé",
+  "description": "Une colonne tremblante de Gruyère et de Parmesan qui s'élève de son ramekin comme une couronne — sa croûte craque pour révéler un intérieur fondu, oeufé fileté de muscade et de fromage aiguisé.",
+  "cuisine": "Français",
+  "culture": "Parisien",
+  "category": "eggs",
+  "tags": [
+    "français",
+    "soufflé",
+    "fromage",
+    "technique",
+    "œufs"
   ],
-  processNodes: [
+  "difficulty": 5,
+  "activeTime": "45 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Prep",
-      inputs: ["ing_01", "ing_05"],
-      outputState: "prepared_ramekins",
-      instructions: "Preheat oven to 190 C (375 F) with a rack in the lower third. Generously butter four 200 ml ramekins, coating the sides with upward strokes. Dust the interior of each with finely grated Parmesan, tilting and tapping to coat evenly, then knock out any excess. Place on a baking sheet and refrigerate until the base is ready — cold walls help the soufflé grip and climb.",
-      visualCue: {
-        primaryTarget: "Ramekin walls show a uniform, fine yellow-white coat of Parmesan with no bare patches. The butter should be matte and firm, not wet.",
-        spectrum: [
-          { state: "Underdone", description: "Patches of bare glass visible through the Parmesan coating.", action: "Re-butter the bare spots and dust again — the soufflé will stick without full coverage." },
-          { state: "Perfect",   description: "The inside of each ramekin is entirely coated in a dry, even golden-white layer. No pooled butter at the base.", action: "Return to the fridge and begin the béchamel base." },
-          { state: "Overdone",  description: "Thick clumps of Parmesan have formed at the bottom from excess.", action: "Tap out the excess firmly before chilling — a thick layer can inhibit the upward climb." },
-        ],
-      },
-      feelCue: "Run your fingertip around the inside — it should feel like fine, dry sandpaper. If your finger comes away greasy with loose cheese, the ramekin is over-coated.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Beurre non salé (plus supplément pour graissage)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_06", "ing_04", "ing_08", "ing_09", "ing_10"],
-      outputState: "cheese_base",
-      instructions: "Melt butter in a heavy saucepan over medium heat. Add flour all at once and stir vigorously for 90 seconds until the roux smells of cooked pastry but is still pale. Pull the pan from heat and pour in the warm milk in one steady stream, whisking constantly to prevent lumps. Return to medium heat and whisk until the béchamel thickens to a stiff, glossy paste — it should pull away from the pan walls. Remove from heat. Beat in the egg yolks one at a time, then fold in both cheeses, salt, nutmeg, and cayenne. Cover the surface with plastic wrap and keep warm.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, deep-golden paste that holds a peak when you lift the spatula — dense enough to mound on itself, not dribble.",
-        spectrum: [
-          { state: "Underdone", description: "Still loose and pourable. Egg yolks aren't fully incorporated — streaky yellow visible.", action: "Return to low heat and stir constantly for another 2 minutes until it thickens and coheres." },
-          { state: "Perfect",   description: "The base falls from a spatula in a thick, slow ribbon and immediately holds its shape. Cheese is fully melted; surface is smooth and shiny.", action: "Remove from heat, press plastic wrap directly on the surface, and proceed to whipping whites." },
-          { state: "Overdone",  description: "Grainy surface; base is curdling or has dry egg deposits around the edges.", action: "The yolks scrambled — whisk in a tablespoon of cold milk off heat to smooth it before proceeding. The soufflé will be slightly denser." },
-        ],
-      },
-      feelCue: "A wooden spoon dragged across the base of the pan should leave a clean line that holds for several seconds — if it flows immediately to fill the gap, simmer longer.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": [
+        "farine de riz (sans gluten)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Whip",
-      inputs: ["ing_07", "ing_08"],
-      outputState: "stiff_whites",
-      instructions: "Ensure the bowl and whisk are perfectly clean and grease-free. Add a tiny pinch of salt to the egg whites. Whip on medium speed until foamy, then increase to high and whip until stiff, glossy peaks form. The whites should hold their shape firmly when the whisk is inverted but the very tips may curl ever so slightly — this is perfect. Do not whip to dry, dull peaks.",
-      visualCue: {
-        primaryTarget: "Bright, white, billowing peaks that stand up firmly when the whisk is lifted and gleam like satin in good light.",
-        spectrum: [
-          { state: "Underdone", description: "Peaks flop over immediately. Surface looks wet and loose. Bowl tilted 90 degrees causes whites to slide.", action: "Keep whipping on high for another minute and test again." },
-          { state: "Perfect",   description: "Peaks hold completely upright with only the faintest curl at the very tip. Surface shines like marshmallow fluff. Inverted bowl stays put.", action: "Fold immediately into the warm cheese base — whites deflate if left to stand." },
-          { state: "Overdone",  description: "Whites look dry, chalky, and grainy. They clump on the whisk in dense masses and have lost their sheen.", action: "The soufflé can still work, but the final texture will be drier. Add one additional yolk to the base to compensate for lost lift." },
-        ],
-      },
-      feelCue: "A properly whipped white is cool, stiff, and completely odorless. It should feel like shaving foam — dense, light, and not remotely wet against the back of your hand.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Lait entier (chauffé)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "moitié et moitié"
+      ]
     },
     {
-      nodeId: "step_4", action: "Fold",
-      inputs: ["stiff_whites", "cheese_base"],
-      outputState: "souffle_batter",
-      instructions: "Stir a large spoonful (about one-quarter) of the stiff whites vigorously into the warm cheese base to lighten it. This sacrificial spoonful opens the texture. Using a wide spatula, gently fold the remaining whites into the base in three additions: cut down through the center, sweep along the bottom, and roll up the sides, rotating the bowl a quarter turn after each stroke. Stop the instant no white streaks remain. Every unnecessary fold costs lift.",
-      visualCue: {
-        primaryTarget: "A pale, voluminous batter with a faint marbled quality — barely uniform, still airy, no heavy streaks of base visible.",
-        spectrum: [
-          { state: "Underdone", description: "Large white pockets of unincorporated whites remain. The batter looks two-toned.", action: "Give it two or three more careful folds — the whites will collapse if baked unmixed." },
-          { state: "Perfect",   description: "Uniformly pale gold, light as mousse. The batter holds its volume and mounds softly in the bowl.", action: "Spoon immediately into prepared ramekins and bake without delay." },
-          { state: "Overdone",  description: "Batter has deflated visibly. It's denser, darker, and no longer holds a mound — it spreads flat in the bowl.", action: "Bake it anyway. The soufflé will rise less dramatically but will still be edible." },
-        ],
-      },
-      feelCue: "The batter should feel impossibly light on the spatula — almost weightless. If it feels heavy and dense like scrambled eggs, the whites were over-folded.",
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Gruyère (finement râpé)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Comté",
+        "Emmental"
+      ]
     },
     {
-      nodeId: "step_5", action: "Bake",
-      inputs: ["souffle_batter", "prepared_ramekins"],
-      outputState: "finished_souffle",
-      instructions: "Fill each prepared ramekin to within 1 cm of the rim. Run your thumb around the inside lip of each ramekin to create a shallow groove — this guides the soufflé to rise straight up rather than mushrooming to one side. Bake at 190 C (375 F) for 12–14 minutes without opening the oven door. Serve immediately the moment they come out — a soufflé waits for no one.",
-      visualCue: {
-        primaryTarget: "Each soufflé has risen 3–4 cm above the ramekin rim, forming a golden-brown dome with a lightly cracked top. The sides of the dome are firm; the very center jiggles very slightly when the oven rack is gently nudged.",
-        spectrum: [
-          { state: "Underdone", description: "Soufflés have risen but the entire top jiggles dramatically and the surface looks pale and almost wet.", action: "Close the oven gently and bake 2 more minutes — do not slam the door or the soufflés will collapse." },
-          { state: "Perfect",   description: "Crowns are deeply golden with cracked tops. The outer 1 cm is set and firm; the inner core moves slightly — a creamy, lava-like center. Interior is custardy and molten.", action: "Race to the table. Every second counts." },
-          { state: "Overdone",  description: "Soufflés have risen and are now beginning to pull away from the edges. The dome is very dark and domed surface has collapsed inward.", action: "Serve immediately as a 'fallen soufflé' — the flavor is identical, only the drama is lost." },
-        ],
-      },
-      feelCue: "The ramekin should be too hot to hold comfortably with bare hands, and when you bring it to nose level you'll be hit with a wave of nutty, browning cheese and eggy steam — that smell is your cue to run to the table.",
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Parmesan (finement râpé, plus supplément pour la poussière)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Grana Padano"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Jaunes d'œufs (grandes)",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Binder",
+      "name": "Blancs d'oeufs (grands, à température ambiante)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Noix de muscade fraîchement râpée",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "masse au sol"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Poivre de Cayenne (pinche)",
+      "ratioValue": 0.5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivre blanc"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation",
+      "inputs": [
+        "ing_01",
+        "ing_05"
+      ],
+      "outputState": "prepared_ramekins",
+      "instructions": "Préchauffer le four à 190 C (375 F) avec une grille dans le tiers inférieur. Beurrer généreusement quatre ramequins de 200 ml, enrober les côtés de coups vers le haut. Poussez l'intérieur de chacun avec le parmesan finement râpé, basculer et tapoter pour enrober uniformément, puis abattre tout excès. Placer sur une plaque de cuisson et réfrigérer jusqu'à ce que la base soit prête.",
+      "visualCue": {
+        "primaryTarget": "Les murs de Ramekin montrent une couche uniforme et fine de parmesan blanc-jaune sans taches nues. Le beurre doit être mat et ferme, pas humide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Patches de verre nu visibles par le revêtement parmesan.",
+            "action": "Re-beurrer les taches nues et la poussière à nouveau — le soufflé restera sans couverture complète."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'intérieur de chaque ramekin est entièrement recouvert d'une couche sèche, même blanche dorée. Pas de beurre à la base.",
+            "action": "Retourner au réfrigérateur et commencer la base de béchamel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des touffes épaisses de parmesan se sont formées au fond de l'excès.",
+            "action": "Éteignez l'excès fermement avant de refroidir — une couche épaisse peut inhiber la montée vers le haut."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre bout de doigt autour de l'intérieur — il devrait se sentir comme du papier de sable fin et sec. Si votre doigt sort gras avec du fromage lâche, le ramekin est sur-enrobé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_06",
+        "ing_04",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "cheese_base",
+      "instructions": "Faire fondre le beurre dans une casserole lourde à feu moyen. Ajouter la farine en même temps et remuer vigoureusement pendant 90 secondes jusqu'à ce que le roux sente la pâte cuite mais soit encore pâle. Tirer la poêle de la chaleur et verser dans le lait chaud dans un cours d'eau constant, fouetter constamment pour éviter les grumeaux. Retourner à feu moyen et fouetter jusqu'à ce que le béchamel s'épaississe à une pâte rigide et brillante — il devrait s'éloigner des parois de la poêle. Retirer du feu. Battre dans les jaunes d'œufs un à la fois, puis plier dans les deux fromages, sel, muscade et cayenne. Couvrir la surface de l'enveloppe plastique et garder au chaud.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, brillante et d'or profond qui tient un pic lorsque vous soulevez la spatule — assez dense pour se masturber sur elle-même, pas dribble.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours lâche et versable. Les jaunes d'oeufs ne sont pas entièrement incorporés — jaune strié visible.",
+            "action": "Retourner à feu doux et remuer constamment pendant 2 minutes jusqu'à ce qu'il épaississe et cohère."
+          },
+          {
+            "state": "Perfect",
+            "description": "La base tombe d'une spatule dans un ruban épais et lent et tient immédiatement sa forme. Le fromage est entièrement fondu; la surface est lisse et brillante.",
+            "action": "Retirer du feu, presser l'enveloppe plastique directement sur la surface, et procéder au fouettage des blancs."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surface grainée; la base est caillée ou présente des dépôts d'oeufs secs autour des bords.",
+            "action": "Les jaunes brouillaient — fouetter dans une cuillère à soupe de lait froid hors de la chaleur pour le lisser avant de procéder. Le soufflé sera légèrement plus dense."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère en bois traînée à la base de la poêle devrait laisser une ligne propre qui tient pendant plusieurs secondes — si elle coule immédiatement pour combler l'écart, laisser mijoter plus longtemps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whip",
+      "inputs": [
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "stiff_whites",
+      "instructions": "Assurez-vous que le bol et le fouet sont parfaitement propres et sans graisse. Ajouter une petite pincée de sel aux blancs d'œufs. Frottez à vitesse moyenne jusqu'à ce que la mousse soit mousseuse, puis augmentez à haute et fouettez jusqu'à ce que des pics raides et brillants se forment. Les blancs doivent tenir leur forme fermement lorsque le fouet est inversé, mais les bouts peuvent se boucler si légèrement — c'est parfait. Ne pas fouetter pour sécher, pics ternes.",
+      "visualCue": {
+        "primaryTarget": "Des pics lumineux, blancs et enflammés qui se dressent fermement lorsque le fouet est levé et brillent comme du satin en bonne lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pics s'envolent immédiatement. La surface semble mouillée et lâche. Le bol incliné à 90 degrés fait glisser les blancs.",
+            "action": "Continuez à fouetter haut pendant une minute et testez à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pics tiennent complètement debout avec seulement la plus faible boucle à l'extrémité même. La surface brille comme des paillettes de guimauve. Le bol inversé reste mis.",
+            "action": "Pliez immédiatement dans la base chaude du fromage — les blancs déflatent s'ils restent debout."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les blancs ont l'air secs, crayeux et granuleux. Ils s'accrochent au fouet en masse dense et ont perdu leur éclat.",
+            "action": "Le soufflé peut encore fonctionner, mais la texture finale sera plus sèche. Ajouter un jaune supplémentaire à la base pour compenser la perte de levage."
+          }
+        ]
+      },
+      "feelCue": "Un blanc bien fouetté est frais, raide et complètement inodore. Il devrait se sentir comme de la mousse de rasage — dense, léger, et pas à distance mouillé contre le dos de votre main."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Plier",
+      "inputs": [
+        "stiff_whites",
+        "cheese_base"
+      ],
+      "outputState": "souffle_batter",
+      "instructions": "Incorporer vigoureusement une grande cuillère (environ un quart) des blancs raides dans la base chaude du fromage pour l'alléger. Cette cuillère sacrificielle ouvre la texture. À l'aide d'une large spatule, plier délicatement les blancs restants dans la base en trois ajouts : couper à travers le centre, balayer le bas, et rouler les côtés, tournant le bol un quart de tour après chaque course. Arrêtez l'instant où il ne reste pas de stries blanches. Chaque pli inutile coûte l'ascenseur.",
+      "visualCue": {
+        "primaryTarget": "Une pâte pâle et volumineuse de faible qualité marbrée — à peine uniforme, encore aérée, pas de stries lourdes de base visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De grandes poches blanches de blancs non incorporés restent. La pâte a l'air à deux tons.",
+            "action": "Donnez - lui deux ou trois plis plus prudents: les blancs s'effondreront s'ils sont cuits sans mélange."
+          },
+          {
+            "state": "Perfect",
+            "description": "Léger comme la mousse. La pâte tient son volume et les monticules doucement dans le bol.",
+            "action": "Spoon immédiatement dans les ramequins préparés et cuire sans tarder."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie s'est dégonflée visiblement. Il est plus dense, plus foncé, et ne tient plus de monticule — il s'étend à plat dans le bol.",
+            "action": "Faites cuire quand même. Le soufflé augmentera moins considérablement mais sera encore comestible."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit sentir la lumière sur la spatule, presque sans poids. S'il est lourd et dense comme des œufs brouillés, les blancs sont surpliés."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "souffle_batter",
+        "prepared_ramekins"
+      ],
+      "outputState": "finished_souffle",
+      "instructions": "Remplir chaque ramekin préparé à moins de 1 cm de la jante. Courez votre pouce autour de la lèvre intérieure de chaque ramekine pour créer une rainure peu profonde, ce qui guide le soufflé à se lever droit vers le haut plutôt que de se déplacer d'un côté. Cuire à 190 °C (375 F) pendant 12 à 14 minutes sans ouvrir la porte du four. Servir immédiatement dès qu'ils sortent — un soufflé n'attend personne.",
+      "visualCue": {
+        "primaryTarget": "Chaque soufflé s'est levé de 3 à 4 cm au-dessus du bord du ramekin, formant un dôme doré-brun avec un dessus légèrement fissuré. Les côtés de la coupole sont fermes; le centre très court très légèrement lorsque la grille du four est légèrement bouchée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les soufflés se sont levés, mais tout le haut s'est considérablement serré et la surface semble pâle et presque humide.",
+            "action": "Fermez doucement le four et faites cuire 2 minutes de plus — ne claquez pas la porte ou les soufflés s'effondreront."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les couronnes sont profondément dorées avec des dessus fêlés. L'extérieur de 1 cm est fixé et ferme; le noyau intérieur se déplace légèrement — un centre crémeux, semblable à de la lave. L'intérieur est crépuscule et fondu.",
+            "action": "Course à la table. Chaque seconde compte."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les soufflés se sont levés et commencent maintenant à s'éloigner des bords. Le dôme est très sombre et la surface bombée s'est effondrée vers l'intérieur.",
+            "action": "Servir immédiatement comme un soufflé fallen — la saveur est identique, seul le drame est perdu."
+          }
+        ]
+      },
+      "feelCue": "Le ramekin devrait être trop chaud pour tenir confortablement avec les mains nues, et quand vous l'amener au niveau du nez, vous serez frappé avec une vague de noix, de fromage brunissant et de vapeur d'oeuf — cette odeur est votre signal pour courir à la table."
+    }
+  ]
 };

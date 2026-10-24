@@ -1,86 +1,181 @@
 export default {
-  repoId: "master_ukrainian_beet_kvass_001",
-  parentRepoId: null,
-  slug: "beet-kvass",
-  author: "ForkRecipe Kitchen",
-
-  title: "Beet Kvass",
-  description: "Raw beet cubes submerged in salt brine, left to ferment in a dark corner for a week — the result is a deeply ruby, probiotic tonic with an earthy sweetness and a clean lactic tang that borscht cooks have been sipping for generations.",
-  cuisine: "Eastern European",
-  culture: "Ukrainian",
-  category: "beverages",
-
-  tags: ["kvass", "beet", "fermented", "ukrainian", "probiotic", "beverage"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "7 days 15 min",
-  ratioSystem: "parts",
-
-  stars: 680,
-  forks: 42,
-  contributors: 14,
-  license: "CC-BY-SA",
-  createdAt: "2025-01-20",
-  updatedAt: "2025-06-05",
-
-  flavorRadar: { sweet: 2, salty: 3, sour: 4, bitter: 1, umami: 2, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Raw beets (washed, unpeeled, cubed 2cm)", ratioValue: 100, defaultUnit: "parts", substitutions: ["golden beets (milder)", "Chioggia beets"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Non-chlorinated water (filtered or boiled and cooled)", ratioValue: 200, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning", name: "Non-iodized salt (sea salt or kosher)",   ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves (peeled, optional)",        ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Caraway seeds (optional)",                ratioValue: 2,   defaultUnit: "parts", substitutions: ["dill seeds", "black pepper"] },
+  "repoId": "master_ukrainian_beet_kvass_001",
+  "parentRepoId": null,
+  "slug": "beet-kvass",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kvass de betteraves",
+  "description": "Des cubes de betteraves crues immergés dans la saumure de sel, laissés à fermenter dans un coin sombre pendant une semaine — le résultat est un tonique profondément rubis, probiotique avec une douceur terreuse et un tang lactique propre que les cuisiniers de borscht sirotent depuis des générations.",
+  "cuisine": "Europe orientale",
+  "culture": "Ukrainien",
+  "category": "beverages",
+  "tags": [
+    "Autres",
+    "betterave",
+    "fermenté",
+    "ukrainien",
+    "probiotique",
+    "boisson"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "7 days 15 min",
+  "ratioSystem": "parts",
+  "stars": 680,
+  "forks": 42,
+  "contributors": 14,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-01-20",
+  "updatedAt": "2025-06-05",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Dissolve",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "brine",
-      instructions: "Dissolve the salt in the water, stirring until completely clear with no visible crystals. Non-iodized salt is essential — iodine kills the beneficial lactobacillus bacteria that drive the fermentation. Non-chlorinated water matters equally: tap water with chlorine will inhibit fermentation. Use filtered water, or boil tap water and cool it completely before use. The brine concentration here (approximately 2% by weight) is below pickling strength, allowing fermentation rather than simply preservation.",
-      visualCue: {
-        primaryTarget: "Completely clear water with no visible salt crystals remaining. Water should look identical to plain water.",
-        spectrum: [
-          { state: "Underdone", description: "Salt crystals are still visible at the bottom of the container. Not fully dissolved.", action: "Stir more vigorously. Salt must be completely dissolved before adding beets — undissolved salt sits at the bottom and doesn't protect the beets above it." },
-          { state: "Perfect",   description: "Completely clear, salt fully dissolved. A drop tasted is distinctly but pleasantly salty — like mild seawater.", action: "Add the beets and aromatics." },
-          { state: "Overdone",  description: "Added too much salt — brine tastes aggressively salty, more than twice the salinity of seawater.", action: "Dilute with more water. A 2% brine allows fermentation; higher concentrations only pickle." },
-        ],
-      },
-      feelCue: "Dip a clean finger in the brine and taste — it should be clearly salty but not overwhelming. Think mineral water at the beach, not mouthwash.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Betteraves crues (lavées, non pelées, cubes de 2 cm)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "betteraves dorées",
+        "Betteraves chioggia"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Press",
-      inputs: ["brine", "ing_01", "ing_04", "ing_05"],
-      outputState: "packed_kvass_jar",
-      instructions: "Cube the unpeeled beets into roughly 2cm pieces — peeling is not necessary and the skin carries wild yeast and bacteria that help kickstart fermentation. Pack the beet cubes tightly into a clean, wide-mouth jar along with the garlic and caraway seeds if using. Pour the salt brine over to completely submerge all the beets. The beets must remain below the brine surface at all times. If they float, weigh them down with a small jar of water or a clean stone. Leave 3–4cm of headspace for fermentation activity.",
-      visualCue: {
-        primaryTarget: "Beets are tightly packed, fully submerged in clear brine. No beet surfaces are exposed to air.",
-        spectrum: [
-          { state: "Underdone", description: "Beet cubes are floating above the brine line. Air-exposed surfaces will develop mold.", action: "Add more brine if needed, then weigh down the beets with something clean and heavy." },
-          { state: "Perfect",   description: "All beet surfaces are submerged. Brine is clear. Jar is full to within 3–4cm of the lid.", action: "Cover loosely and begin fermentation." },
-          { state: "Overdone",  description: "Jar is filled to the very top with no headspace.", action: "Remove some brine — the fermentation will produce CO2 gas and expand, and an overfull jar will overflow messily." },
-        ],
-      },
-      feelCue: "The packed jar should feel heavy and dense in your hands — a good sign that the beets are packed efficiently and the brine is filling all the gaps.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau non chlorée (filtrée ou bouillie et refroidie)",
+      "ratioValue": 200,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Ferment",
-      inputs: ["packed_kvass_jar"],
-      outputState: "finished_beet_kvass",
-      instructions: "Cover the jar with a cloth secured with a rubber band, or a loose lid — it should allow gas to escape but keep contaminants out. Store at room temperature (18–22°C) out of direct light for 5–7 days. After 24 hours you should see small bubbles at the brine surface. Skim any white foam that forms on top — this is harmless kahm yeast, not mold. By day 5, the brine will be a vivid, deep ruby-red and the flavor will be earthy, sweet, and pleasantly sour. Strain into bottles and refrigerate. The cold halts fermentation and preserves the tonic for 4–6 weeks.",
-      visualCue: {
-        primaryTarget: "After 5–7 days: vivid, translucent ruby-red brine. Small bubbles visible in the liquid when the jar is gently tilted. Beet cubes have lightened slightly in color as pigment has leached into the brine.",
-        spectrum: [
-          { state: "Underdone", description: "After 3 days, brine is pale pink-red and still smells mainly of raw beet and salt. No sour note. Few bubbles.", action: "Wait 2 more days. Fermentation speed depends on temperature — cooler kitchens take longer." },
-          { state: "Perfect",   description: "Deep ruby-red, visibly bubbly when tilted. The brine smells earthy and tangy — fermented beet rather than raw beet. A sip is pleasantly sour, earthy, and savory.", action: "Strain and refrigerate." },
-          { state: "Overdone",  description: "Fermented past 10 days at room temperature — brine is very dark and intensely sour, nearly vinegary. Beet cubes are pale and spent.", action: "Use in smaller amounts and dilute with water. Excellent as a salad dressing base or added to borscht for sourness." },
-        ],
-      },
-      feelCue: "Lean close to the jar on day 3 and tilt slightly — you should hear the faint hiss of escaping CO2 and smell the first sweet-sour note that tells you the lactobacillus has taken hold.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel non iodé (sel de mer ou casher)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Girofles à l'ail (peautés, facultatifs)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Graines de carvi (facultatif)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "graines d'aneth",
+        "poivre noir"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Dissoudre",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "brine",
+      "instructions": "Dissoudre le sel dans l'eau en remuant jusqu'à ce qu'il soit complètement clair sans cristaux visibles. Le sel non iodé est essentiel: l'iode tue les bactéries lactobacillus bénéfiques qui alimentent la fermentation. L'eau non chlorée est également importante : l'eau du robinet avec le chlore inhibera la fermentation. Utilisez de l'eau filtrée ou faites bouillir l'eau du robinet et refroidissez-la complètement avant utilisation. La concentration de saumure ici (environ 2 % en poids) est inférieure à la résistance au décapage, permettant la fermentation plutôt que la simple conservation.",
+      "visualCue": {
+        "primaryTarget": "Eau complètement limpide sans cristaux de sel visibles. L'eau devrait être identique à l'eau pure.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cristaux de sel sont encore visibles au fond du contenant. Pas complètement dissous.",
+            "action": "Remuer plus vigoureusement. Le sel doit être complètement dissous avant d'ajouter des betteraves — le sel non dissous se trouve au fond et ne protège pas les betteraves au-dessus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement clair, sel complètement dissous. Une goutte goûtée est nettement mais agréablement salée, comme l'eau de mer douce.",
+            "action": "Ajouter les betteraves et les aromatiques."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ajouté trop de sel — la saumure a un goût fortement salé, plus du double de la salinité de l'eau de mer.",
+            "action": "Diluer avec plus d'eau. Une saumure de 2 % permet la fermentation; des concentrations plus élevées ne font que du cornichon."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt propre dans la saumure et le goût — il devrait être clairement salé mais pas écrasant. Pensez à l'eau minérale à la plage, pas au bain de bouche."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Appuyez sur",
+      "inputs": [
+        "brine",
+        "ing_01",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "packed_kvass_jar",
+      "instructions": "Couper les betteraves non pelées en morceaux d'environ 2 cm — le pelage n'est pas nécessaire et la peau porte des levures sauvages et des bactéries qui aident à démarrer la fermentation. Emballez les cubes de betteraves bien dans un pot à large bouche propre avec l'ail et les graines de carvi si vous les utilisez. Verser la saumure pour submerger complètement toutes les betteraves. Les betteraves doivent rester en tout temps sous la saumure. S'ils flottent, les peser avec un petit pot d'eau ou une pierre propre. Laisser 3-4cm d'espace de tête pour l'activité de fermentation.",
+      "visualCue": {
+        "primaryTarget": "Les betteraves sont bien emballées, entièrement submergées en saumure claire. Aucune surface de betterave n'est exposée à l'air.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cubes de betterave flottent au-dessus de la ligne de saumure. Les surfaces exposées à l'air développeront des moisissures.",
+            "action": "Ajouter plus de saumure si nécessaire, puis peser les betteraves avec quelque chose de propre et lourd."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toutes les surfaces de betteraves sont submergées. La saumure est claire. Le pot est plein à 3-4cm du couvercle.",
+            "action": "Couvrir librement et commencer la fermentation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Jar est rempli jusqu'au sommet sans espace de tête.",
+            "action": "Enlevez une saumure — la fermentation produira du gaz CO2 et se développera, et un pot trop plein débordera de désordre."
+          }
+        ]
+      },
+      "feelCue": "Le pot emballé doit se sentir lourd et dense dans vos mains — un bon signe que les betteraves sont emballées efficacement et la saumure remplit toutes les lacunes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ferment",
+      "inputs": [
+        "packed_kvass_jar"
+      ],
+      "outputState": "finished_beet_kvass",
+      "instructions": "Couvrir le bocal d'un chiffon fixé à l'aide d'une bande de caoutchouc, ou d'un couvercle lâche — il devrait permettre au gaz de s'échapper mais garder les contaminants dehors. Entreposer à température ambiante (18–22°C) hors de la lumière directe pendant 5–7 jours. Après 24 heures, vous devriez voir de petites bulles à la surface de la saumure. Skim n'importe quelle mousse blanche qui se forme sur le dessus — c'est la levure de kahm inoffensive, pas la moisissure. Au jour 5, la saumure sera un rouge rubis vif et profond et la saveur sera terreuse, douce et agréablement aigre. Plonger dans les bouteilles et réfrigérer. Le froid arrête la fermentation et conserve le tonique pendant 4-6 semaines.",
+      "visualCue": {
+        "primaryTarget": "Après 5 à 7 jours : saumure rouge rubis vif et translucide. Petites bulles visibles dans le liquide lorsque le pot est légèrement incliné. Les cubes de betteraves se sont légèrement allégés en couleur, le pigment ayant été lixivié dans la saumure.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 3 jours, la saumure est rose-rouge pâle et sent encore principalement la betterave crue et le sel. Pas de note aigre. Quelques bulles.",
+            "action": "Attendez encore 2 jours. La vitesse de fermentation dépend de la température — les cuisines plus froides prennent plus de temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Rouge rubis profond, visiblement bubble quand incliné. La saumure sent la terre et la brume: la betterave fermentée plutôt que la betterave crue. Une gorgée est agréablement aigre, terreuse et salée.",
+            "action": "Soucher et réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Fermenté au cours des 10 derniers jours à température ambiante — la saumure est très foncée et très aigre, presque vinaigreuse. Les cubes de betteraves sont pâles et épuisés.",
+            "action": "Utiliser en petites quantités et diluer avec l'eau. Excellent comme une base de vinaigrette à salade ou ajouté à borscht pour l'auresse."
+          }
+        ]
+      },
+      "feelCue": "Penchez-vous près du pot le jour 3 et penchez légèrement — vous devriez entendre le sifflement faible de l'évasion de CO2 et sentir la première note douce-sour qui vous dit que la lactobacillus a pris place."
+    }
+  ]
 };

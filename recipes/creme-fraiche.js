@@ -1,74 +1,155 @@
 export default {
-  repoId: "master_french_creme_fraiche_001",
-  parentRepoId: null,
-  slug: "creme-fraiche",
-  author: "ForkRecipe Kitchen",
-  title: "Crème Fraîche",
-  description: "Heavy cream inoculated with buttermilk or a spoonful of live culture, left at room temperature for 12–24 hours until it thickens to a tangy, silky, spoonable cream that holds without breaking when heated.",
-  cuisine: "French",
-  culture: "Norman",
-  category: "condiments",
-  tags: ["creme-fraiche", "french", "cultured-cream", "condiment", "dairy", "vegetarian"],
-  difficulty: 1,
-  activeTime: "5 min",
-  totalTime: "16 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 0, sour: 3, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",  name: "Heavy cream (at least 35% fat, not ultra-pasteurised)", ratioValue: 100, defaultUnit: "parts", substitutions: ["double cream (UK)", "whipping cream (lower fat, thinner result)"] },
-    { ingId: "ing_02", role: "Acid",   name: "Cultured buttermilk (live cultures)",                   ratioValue: 10,  defaultUnit: "parts", substitutions: ["plain live-culture yogurt", "sour cream", "existing crème fraîche as a starter"] },
+  "repoId": "master_french_creme_fraiche_001",
+  "parentRepoId": null,
+  "slug": "creme-fraiche",
+  "author": "ForkRecipe Kitchen",
+  "title": "Crème Fraîche",
+  "description": "Crème lourde inoculée avec du babeurre ou une cuillerée de culture vivante, laissée à température ambiante de 12 à 24 heures jusqu'à ce qu'elle épaississe à une crème tannante, soyeuse et cuillerée qui tient sans casser lorsqu'elle est chauffée.",
+  "cuisine": "Français",
+  "culture": "Pays-Bas",
+  "category": "condiments",
+  "tags": [
+    "crème-fraîche",
+    "français",
+    "crème cultivée",
+    "condiment",
+    "laitière",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "5 min",
+  "totalTime": "16 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 0,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Combine",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "inoculated_cream",
-      instructions: "Pour the heavy cream into a clean glass jar or bowl. Add the buttermilk and stir gently with a clean spoon for 20 seconds — just enough to distribute the cultures evenly throughout the cream. Do not whip or aerate; you are introducing live bacteria, not incorporating air. Ultra-pasteurised cream has been heated to a point that destroys the lipids needed for the cultures to grip, which is why it must be avoided.",
-      visualCue: {
-        primaryTarget: "A smooth, ivory-white cream with no visible separation between the buttermilk and cream. It pours like a thick liquid, showing no signs of thickening yet.",
-        spectrum: [
-          { state: "Underdone", description: "Buttermilk is sitting as a white, watery layer on top rather than integrating — you can see the two liquids clearly separated.", action: "Stir more thoroughly for another 30 seconds with a clean spoon to distribute the cultures." },
-          { state: "Perfect",   description: "A uniform, slightly thickened cream with a clean, fresh dairy smell. No visible separation. The cultures are now distributed and the fermentation can begin.", action: "Cover loosely with a clean cloth or plastic wrap (not airtight) and leave at room temperature." },
-          { state: "Overdone",  description: "Not applicable at the mix stage — there is no way to over-mix at this point beyond introducing too much air.", action: "Proceed to fermentation; any bubbles from over-stirring will dissipate as the cream thickens." },
-        ],
-      },
-      feelCue: "The mixture should feel smooth and even on the spoon with no grainy patches or visible curdling — the buttermilk is fully incorporated when the consistency is completely uniform.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Crème lourde (au moins 35 % de matières grasses, non pasteurisées)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème double (Royaume-Uni)",
+        "crème fouettée (faible graisse, résultat plus mince)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Ferment",
-      inputs: ["inoculated_cream"],
-      outputState: "fermenting_creme_fraiche",
-      instructions: "Cover the jar loosely — not airtight, as the cultures need to breathe — and leave it in a warm spot at room temperature, ideally 20 to 24 C / 68 to 75 F. Check it after 12 hours. In warm kitchens it may be done in 12 hours; in cooler kitchens it can take up to 24. You are waiting for the cream to thicken to a spoonable, semi-solid consistency and develop a mild, pleasant tang. Do not stir during fermentation.",
-      visualCue: {
-        primaryTarget: "The cream has set to a thick, spoonable consistency — when you tilt the jar it moves as a single mass rather than sloshing. The surface is smooth and white, possibly with a very slight ivory tint.",
-        spectrum: [
-          { state: "Underdone", description: "Still liquid and pourable — the jar sloshes freely when tilted. Tastes like fresh cream with only a faint hint of tang.", action: "Replace the cover and leave for another 4 to 8 hours. If your kitchen is very cool, place the jar near a warm spot — on top of the fridge, near a pilot light, or in an oven with only the light on." },
-          { state: "Perfect",   description: "Thick, spoonable, and gently tangy — it moves as a mass when you tilt the jar and holds a shape briefly when spooned. The flavour is creamy, rich, and pleasantly sour without being acidic.", action: "Refrigerate immediately to halt the fermentation. It will thicken a little further as it chills." },
-          { state: "Overdone",  description: "Very thick, almost curd-like with visible liquid whey separating around the edges. Tastes sharply sour, almost like sour cream or yogurt rather than crème fraîche.", action: "Still usable — drain the whey and whisk the curd smooth. It is richer and more sour than ideal, but excellent stirred into soups or baked goods." },
-        ],
-      },
-      feelCue: "After 12 hours, tilt the jar slowly. If the cream barely moves and the surface has a gentle wobble rather than a slosh, the cultures have done their work. If your spoon meets the clean resistance of set cream rather than running clean through liquid, you are there.",
-    },
-    {
-      nodeId: "step_3", action: "Chill",
-      inputs: ["fermenting_creme_fraiche"],
-      outputState: "finished_creme_fraiche",
-      instructions: "Transfer the crème fraîche to the refrigerator, loosely covered. It will firm further over the next 2 to 4 hours as the cold halts the bacterial activity and the fat crystallises slightly. The finished product keeps for 1 to 2 weeks in the refrigerator. To make the next batch, reserve a tablespoon as your starter in place of the buttermilk — the cultures regenerate indefinitely with each batch.",
-      visualCue: {
-        primaryTarget: "A thick, smooth, ivory-white cream that holds its shape on a spoon and falls in slow, soft folds. It has the consistency of a soft, rich Greek yogurt but with a finer, silkier texture.",
-        spectrum: [
-          { state: "Underdone", description: "Still loose and pourable from the refrigerator. The cultures did not have enough time or warmth to set the cream.", action: "Return to room temperature for another 4 to 6 hours, then refrigerate again." },
-          { state: "Perfect",   description: "Thick, spoonable, silky, and tangy. It falls from the spoon in a slow, even sheet. Taste is rich, clean, and gently sour — like cream that has grown up. It will not split or curdle when stirred into a hot sauce.", action: "Use as is, or season with salt for a savoury application. Stir into soups, pasta, or spoon over tarts and berries." },
-          { state: "Overdone",  description: "Grainy or separated with visible whey pooling — over-fermented and close to becoming sour cream or a soft cheese.", action: "Whisk smooth and drain any excess whey. Use immediately rather than storing, or use in baking where texture is less critical." },
-        ],
-      },
-      feelCue: "A spoonful of perfect crème fraîche should feel silky and slightly resistant as you scoop — not fluffy or airy, not dense and rubber-like. It should coat the back of the spoon in an even, creamy layer that does not break or weep.",
-    },
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Beurre cultivé (cultures vivantes)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "yaourt de culture vivante",
+        "crème aigre",
+        "la crème fraîche existante comme entrée"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Combiner",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "inoculated_cream",
+      "instructions": "Verser la crème lourde dans un pot ou un bol en verre propre. Ajouter le babeurre et remuer doucement avec une cuillère propre pendant 20 secondes — juste assez pour répartir uniformément les cultures dans toute la crème. Ne pas fouetter ou aérer; vous introduisez des bactéries vivantes, sans incorporer l'air. La crème ultra-pasteurisée a été chauffée à un point qui détruit les lipides nécessaires pour que les cultures s'y accrochent, c'est pourquoi il faut l'éviter.",
+      "visualCue": {
+        "primaryTarget": "Une crème lisse, blanc ivoire sans séparation visible entre le babeurre et la crème. Il verse comme un liquide épais, ne montrant aucun signe d'épaississement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait de beurre est assis comme une couche blanche et aqueuse sur le dessus plutôt que d'intégrer — vous pouvez voir les deux liquides clairement séparés.",
+            "action": "Mélanger plus soigneusement pendant encore 30 secondes avec une cuillère propre pour distribuer les cultures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une crème uniforme, légèrement épaissie avec une odeur propre et fraîche. Pas de séparation visible. Les cultures sont maintenant distribuées et la fermentation peut commencer.",
+            "action": "Couvrir lâchement d'un chiffon propre ou d'une enveloppe plastique (non hermétique) et laisser à température ambiante."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ne s'applique pas au stade du mélange — il n'y a pas moyen de trop mélanger à ce stade au-delà de l'introduction d'un excès d'air.",
+            "action": "Procéder à la fermentation; toutes les bulles provenant de l'enrobage se dissipent lorsque la crème s'épaissit."
+          }
+        ]
+      },
+      "feelCue": "Le mélange doit se sentir lisse et même sur la cuillère sans taches granuleuses ni caillé visible — le babeurre est entièrement incorporé lorsque la consistance est complètement uniforme."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Ferment",
+      "inputs": [
+        "inoculated_cream"
+      ],
+      "outputState": "fermenting_creme_fraiche",
+      "instructions": "Couvrez le pot de façon lâche — pas hermétique, car les cultures doivent respirer — et laissez-le dans un endroit chaud à température ambiante, idéalement de 20 à 24 °C / 68 à 75 °F. Vérifiez-le après 12 heures. Dans les cuisines chaudes, il peut être fait en 12 heures; dans les cuisines plus froides, il peut prendre jusqu'à 24. Vous attendez que la crème s'épaississe à une consistance semi-solide et développe un tang doux et agréable. Ne pas remuer pendant la fermentation.",
+      "visualCue": {
+        "primaryTarget": "La crème a une consistance épaisse et cuillerable — lorsque vous inclinez le pot, elle se déplace en une seule masse plutôt que de sloffer. La surface est lisse et blanche, peut-être avec une très légère teinte d'ivoire.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours liquide et versable — le pot s'incline librement lorsqu'il est incliné. Goûte comme de la crème fraîche avec seulement un léger soupçon de tang.",
+            "action": "Remplacer la housse et laisser 4 à 8 heures de plus. Si votre cuisine est très fraîche, placez le pot près d'un endroit chaud — sur le dessus du réfrigérateur, près d'une lampe pilote, ou dans un four avec seulement la lumière allumée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, cuilleré et légèrement tanné — il se déplace comme une masse lorsque vous inclinez le pot et tient une forme brièvement quand cuilleré. La saveur est crémeuse, riche et agréablement aigre sans être acide.",
+            "action": "Réfrigérer immédiatement pour arrêter la fermentation. Il s'épaissira un peu plus loin pendant qu'il refroidit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très épais, presque caillé avec un lactosérum liquide visible qui se sépare autour des bords. Goûte fortement aigre, presque comme la crème aigre ou le yaourt plutôt que la crème fraîche.",
+            "action": "Encore utilisable: égouttez le lactosérum et fouettez le caillé lisse. Il est plus riche et plus aigre que l'idéal, mais excellent agité dans les soupes ou les produits de boulangerie."
+          }
+        ]
+      },
+      "feelCue": "Après 12 heures, inclinez le pot lentement. Si la crème bouge à peine et que la surface a un doux frottement plutôt qu'un slosh, les cultures ont fait leur travail. Si votre cuillère rencontre la résistance propre de la crème de set plutôt que de courir propre dans le liquide, vous êtes là."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Refroidissement",
+      "inputs": [
+        "fermenting_creme_fraiche"
+      ],
+      "outputState": "finished_creme_fraiche",
+      "instructions": "Transférer la crème fraîche au réfrigérateur, de façon lâche. Il se raffermira plus loin au cours des 2 à 4 prochaines heures lorsque le froid arrêtera l'activité bactérienne et que la graisse se cristallisera légèrement. Le produit fini se conserve 1 à 2 semaines au réfrigérateur. Pour faire le prochain lot, réservez une cuillère à soupe à la place du babeurre, les cultures se régénèrent indéfiniment avec chaque lot.",
+      "visualCue": {
+        "primaryTarget": "Une crème épaisse, lisse, blanc ivoire qui tient sa forme sur une cuillère et tombe dans des plis doux et lents. Il a la consistance d'un yogourt grec doux et riche mais avec une texture plus fine et plus soyeuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours libre et versable du réfrigérateur. Les cultures n'avaient pas assez de temps ni de chaleur pour mettre la crème.",
+            "action": "Retourner à la température ambiante pendant 4 à 6 heures, puis réfrigérer à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, cuilleré, soyeux et tanné. Il tombe de la cuillère dans une feuille lente et uniforme. Le goût est riche, propre et doux — comme la crème qui a grandi. Il ne se fendra pas ou ne courbera pas lorsqu'il sera mélangé dans une sauce chaude.",
+            "action": "Utiliser tel quel, ou assaisonner avec du sel pour une application salée. Incorporer les soupes, les pâtes ou la cuillère sur les tartes et les baies."
+          },
+          {
+            "state": "Overdone",
+            "description": "Graineux ou séparé avec un mélange visible de lactosérum — surfermenté et proche de devenir de la crème aigre ou un fromage mou.",
+            "action": "fouetter lisse et égoutter tout excès de lactosérum. Utiliser immédiatement plutôt que de stocker, ou utiliser dans la cuisson où la texture est moins critique."
+          }
+        ]
+      },
+      "feelCue": "Une cuillerée de crème fraîche parfaite doit se sentir soyeuse et légèrement résistante car vous écoper — pas moelleuse ou aérée, pas dense et en caoutchouc. Il devrait enrober le dos de la cuillère dans une couche uniforme et crémeuse qui ne se brise pas ou ne pleure pas."
+    }
+  ]
 };

@@ -1,80 +1,185 @@
 export default {
-  repoId: "master_levantine_labneh_001",
-  parentRepoId: null,
-  slug: "labneh",
-  author: "ForkRecipe Kitchen",
-  title: "Labneh (48-Hour Strained Yogurt Cheese)",
-  description: "Whole-milk yogurt hung in cheesecloth for two days while gravity and time do the only real work — the whey drips away, the cultures concentrate, and what remains is a tangy, creamy, spreadable cheese with the body of cream cheese and a flavor all its own.",
-  cuisine: "Levantine",
-  culture: "Lebanese",
-  category: "condiments",
-  tags: ["yogurt", "cheese", "fermented", "strained", "levantine", "lebanese", "vegetarian", "gluten-free"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "48 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 4, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Full-fat plain yogurt (no gelatin or stabilizers)", ratioValue: 1000, defaultUnit: "g",    substitutions: ["Greek yogurt (will finish in 12-24 hrs instead of 48)"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Fine sea salt",                                     ratioValue: 5,    defaultUnit: "g",    substitutions: ["kosher salt"] },
-    { ingId: "ing_03", role: "Fat",       name: "Extra-virgin olive oil (to serve)",                 ratioValue: 3,    defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_04", role: "Herb",      name: "Fresh mint or dried thyme (to serve)",              ratioValue: 1,    defaultUnit: "tbsp", substitutions: ["za'atar blend"] },
-    { ingId: "ing_05", role: "Garnish",   name: "Flaky sea salt (to serve)",                         ratioValue: 0.5,  defaultUnit: "tsp",  substitutions: ["Aleppo pepper flakes"] },
+  "repoId": "master_levantine_labneh_001",
+  "parentRepoId": null,
+  "slug": "labneh",
+  "author": "ForkRecipe Kitchen",
+  "title": "Labneh (fromage de yaourt entraîné 48 heures)",
+  "description": "Le yogourt de lait entier est suspendu dans une nappe de fromage pendant deux jours alors que la gravité et le temps font le seul vrai travail: le lactosérum s'écoule, les cultures se concentrent, et ce qui reste est un fromage tanné, crémeux, à tartiner avec le corps du fromage à la crème et une saveur toute propre.",
+  "cuisine": "Levantine",
+  "culture": "Libanais",
+  "category": "condiments",
+  "tags": [
+    "yaourt",
+    "fromage",
+    "fermenté",
+    "tendues",
+    "lévantine",
+    "lébanèse",
+    "végétarien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "48 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "salted_yogurt",
-      instructions: "Check your yogurt's ingredient list: it must contain only milk and live cultures — no gelatin, pectin, starch, or 'natural flavors'. These stabilizers bind the water in the yogurt and prevent it from draining, giving you a rubbery, wet result after 48 hours of effort. In a large bowl, stir the salt thoroughly into the yogurt. The salt serves two purposes: it flavors the labneh directly and draws out water through osmosis, accelerating the draining process. Stir for a full 60 seconds until the salt is completely dissolved — you should not be able to feel any grains when you rub a small amount between your fingers. The mixture will immediately loosen slightly as the salt begins drawing water out.",
-      visualCue: {
-        primaryTarget: "A uniformly smooth yogurt with no visible salt crystals. The texture is slightly looser than when you started — the salt has begun pulling water from the curds.",
-        spectrum: [
-          { state: "Underdone", description: "You can feel or see salt crystals in the yogurt. Some areas are saltier than others.", action: "Stir another 30 seconds. The salt must be fully dissolved before straining — undissolved salt crystals make uneven final seasoning." },
-          { state: "Perfect",   description: "Smooth, uniform, slightly thinner than whole yogurt. No grittiness when a fingerful is rubbed between fingers. The salt smell is present but not sharp.", action: "Transfer immediately to the cheesecloth-lined strainer." },
-          { state: "Overdone",  description: "You've over-salted — the yogurt tastes aggressively salty before any draining. Remember it will concentrate during straining.", action: "There is no easy fix — dilute with a tablespoon of unsalted yogurt and re-stir. Always measure salt precisely for labneh." },
-        ],
-      },
-      feelCue: "Salted yogurt rubbed between your fingers should feel completely smooth with no gritty friction — silky, cool, uniformly liquid, with a clean dairy smell that has taken on the faintest mineral edge from the salt.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Yogourt à base de matières grasses (pas de gélatine ou de stabilisateurs)",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Yogourt grec (finira dans 12-24 heures au lieu de 48)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Strain",
-      inputs: ["salted_yogurt"],
-      outputState: "hanging_labneh",
-      instructions: "Line a fine mesh strainer or colander with a double layer of dampened cheesecloth (or a clean, thin linen towel). Set it over a deep bowl that can catch at least 400 ml of liquid — the bowl must not touch the strainer's bottom, so the whey drips freely. Pour the salted yogurt into the center of the cheesecloth. Gather the four corners and tie them together with kitchen twine. You can let the bundle hang over the bowl by tying the twine to a wooden spoon rested across the bowl's rim, or simply place the strainer and bowl in the refrigerator uncovered. Refrigerator straining is safer for food safety and gives a more controlled pace — 24 hours for a soft, spreadable labneh, 36 hours for a thicker, ball-able labneh, 48 hours for labneh firm enough to roll into spheres and preserve in oil.",
-      visualCue: {
-        primaryTarget: "After 24 hours: the cheesecloth bundle is heavy and taut, dripping steadily. The bowl below contains pale, watery whey — 200-400 ml. The bundle, when pressed, feels significantly firmer than raw yogurt.",
-        spectrum: [
-          { state: "Underdone", description: "Less than 150 ml of whey in the bowl after 24 hours. The bundle still feels slack and yogurt-soft. The labneh will be too loose to spread without running.", action: "The yogurt may have contained stabilizers. Continue straining — check at 36 and 48 hours. Place in the coldest part of the refrigerator." },
-          { state: "Perfect",   description: "After 48 hours: 350-450 ml of pale whey collected. The bundle feels firm and the labneh holds its molded shape when unwrapped. The color is bright white. The taste is clean and tangy.", action: "Unwrap and use immediately or refrigerate for up to 2 weeks." },
-          { state: "Overdone",  description: "Strained beyond 72 hours: the labneh has become very firm and crumbly, almost feta-like. The taste is sharply sour and the texture is dry rather than creamy.", action: "Mix in a tablespoon of olive oil to restore creaminess. Roll into balls and preserve in olive oil — this is a traditional storage method." },
-        ],
-      },
-      feelCue: "Check the bundle by pressing it gently from the outside of the cheesecloth at the 24-hour mark: it should feel like a very firm custard or dense cream cheese, yielding to light pressure but not oozing. After 48 hours it should have the resistance of a firm ball of fresh mozzarella.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Garnish",
-      inputs: ["hanging_labneh", "ing_03", "ing_04", "ing_05"],
-      outputState: "finished_labneh",
-      instructions: "Unwrap the labneh carefully from the cheesecloth and place it on a wide, shallow plate. Use the back of a spoon to spread it outward in a sweeping motion, creating a roughly circular mound with a thick ridge around the edge and a slight depression in the center — this is the traditional presentation that holds pools of olive oil. Drizzle olive oil generously into the center well and across the surface. Scatter the chopped herbs and flaky salt over the top. Serve at room temperature with warm flatbread, raw vegetables, olives, and other mezze. Labneh stored plain (without garnish) keeps refrigerated for 2 weeks; rolled into balls and submerged in olive oil with herbs, it keeps for up to a month.",
-      visualCue: {
-        primaryTarget: "A bright white mound with a shining pool of olive oil at the center. The surface is smooth where spread and rough where the cheesecloth left its texture. Herbs and salt are scattered naturally, not arranged.",
-        spectrum: [
-          { state: "Underdone", description: "The labneh is too soft to hold its mounded shape and spreads flat immediately, like loose Greek yogurt. It looks sloppy on the plate.", action: "The labneh needed more straining time. Return it to the cheesecloth for another 6-8 hours. It can still be served — present it in a small bowl instead." },
-          { state: "Perfect",   description: "Holds a defined shape when spooned. Smooth, white, and cool-looking. The olive oil pools visibly rather than absorbing immediately. The taste is tangy, rich, and creamy with a pleasant long sourness.", action: "Serve at room temperature within 2 hours, or refrigerate and bring back to room temp before serving." },
-          { state: "Overdone",  description: "The labneh is stiff and crumbly — it breaks rather than spreading. Rolling it has left cracks and it looks chalky rather than creamy.", action: "Blend in a tablespoon of olive oil with a fork until smooth. The texture corrects easily." },
-        ],
-      },
-      feelCue: "Room-temperature labneh pressed with a clean finger should resist gently then yield smoothly — like very cold butter that has warmed just enough. The smell is clean and sour, like cultured cream, with the olive oil adding a grassy, fruity top note.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge (à servir)",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Thym frais ou séché (à servir)",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Mélange za'atar"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Garnish",
+      "name": "Sel de mer (à servir)",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "Alep flocons de poivre"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "salted_yogurt",
+      "instructions": "Consultez la liste des ingrédients de votre yaourt : il ne doit contenir que du lait et des cultures vivantes — pas de gélatine, de pectine, d'amidon ou de «arômes naturels». Ces stabilisateurs lient l'eau dans le yogourt et l'empêchent de s'égoutter, vous donnant un résultat caoutchouteux et humide après 48 heures d'effort. Dans un grand bol, mélanger soigneusement le sel dans le yogourt. Le sel sert deux buts : il aromatise directement le labneh et puise de l'eau par osmose, accélérant le processus de drainage. Agiter pendant 60 secondes jusqu'à ce que le sel soit complètement dissous — vous ne devriez pas pouvoir sentir de grains lorsque vous frottez une petite quantité entre vos doigts. Le mélange se détachera immédiatement légèrement lorsque le sel commencera à puiser de l'eau.",
+      "visualCue": {
+        "primaryTarget": "Un yogourt uniformément lisse sans cristaux de sel visibles. La texture est un peu plus lâche que lorsque vous avez commencé — le sel a commencé à tirer de l'eau du caillé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Vous pouvez sentir ou voir des cristaux de sel dans le yaourt. Certaines régions sont plus salées que d'autres.",
+            "action": "Remuer encore 30 secondes. Le sel doit être complètement dissous avant d'être soumis à des pressions; les cristaux de sel non dissous font un assaisonnement final inégal."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, uniforme, légèrement plus mince que le yogourt entier. Pas de grittness quand un doigt est frotté entre les doigts. L'odeur de sel est présente mais pas nette.",
+            "action": "Transférer immédiatement dans la passoire à fromage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez sursauté — le yaourt a un goût fortement salé avant tout égouttage. Souvenez-vous qu'il se concentrera pendant la pression.",
+            "action": "Il n'y a pas de solution facile — diluée avec une cuillère à soupe de yogourt non salé et de ré-stir. Toujours mesurer le sel précisément pour labneh."
+          }
+        ]
+      },
+      "feelCue": "Le yogourt salé frotté entre les doigts doit se sentir complètement lisse sans frictions atroces — soyeuses, froides, uniformément liquides, avec une odeur laitière propre qui a pris le bord minéral le plus faible du sel."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Poignée",
+      "inputs": [
+        "salted_yogurt"
+      ],
+      "outputState": "hanging_labneh",
+      "instructions": "Étaler une souche ou une calandre à mailles fines avec une double couche de linge de fromage humide (ou une serviette de lin fine et propre). Placez-le sur un bol profond qui peut capturer au moins 400 ml de liquide — le bol ne doit pas toucher le fond de la passoire, de sorte que le lactosérum coule librement. Verser le yogourt salé au centre de la nappe de fromage. Rassemblez les quatre coins et attachez-les ensemble avec la ficelle de cuisine. Vous pouvez laisser le paquet accrocher au-dessus du bol en attachant la ficelle à une cuillère en bois posée sur le bord du bol, ou simplement placer la souche et le bol dans le réfrigérateur découvert. La pression du réfrigérateur est plus sûre pour la sécurité alimentaire et donne un rythme plus contrôlé — 24 heures pour un labneh doux et extensible, 36 heures pour un labneh plus épais et balable, 48 heures pour un labneh assez ferme pour rouler dans les sphères et conserver dans l'huile.",
+      "visualCue": {
+        "primaryTarget": "Au bout de 24 heures : le paquet de cheesewapp est lourd et tendu, dégoulinant régulièrement. Le bol ci-dessous contient 200-400 ml de lactosérum aqueux pâle. Le paquet, lorsqu'il est pressé, se sent nettement plus ferme que le yogourt cru.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Moins de 150 ml de lactosérum dans le bol après 24 heures. Le faisceau se sent encore lâche et yogourt-soft. Le labneh sera trop lâche pour se propager sans courir.",
+            "action": "Le yaourt peut avoir contenu des stabilisateurs. Continuer la pression — vérifier à 36 et 48 heures. Placer dans la partie la plus froide du réfrigérateur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 48 heures : 350-450 ml de lactosérum pâle collecté. Le faisceau se sent ferme et le labneh conserve sa forme moulée lorsqu'il est déballé. La couleur est blanche. Le goût est propre et tannant.",
+            "action": "Déposer et utiliser immédiatement ou réfrigérer jusqu'à 2 semaines."
+          },
+          {
+            "state": "Overdone",
+            "description": "Formé au-delà de 72 heures : le labneh est devenu très ferme et friable, presque feta-like. Le goût est fortement aigre et la texture est sèche plutôt que crémeuse.",
+            "action": "Mélanger une cuillère à soupe d'huile d'olive pour restaurer la crémosité. Rouler dans les boules et conserver dans l'huile d'olive — c'est une méthode de stockage traditionnelle."
+          }
+        ]
+      },
+      "feelCue": "Vérifiez le paquet en le pressant doucement de l'extérieur de la nappe à la marque de 24 heures: il devrait se sentir comme un fromage crème très ferme ou dense, donnant à la légère pression mais ne pas operer. Après 48 heures il devrait avoir la résistance d'une boule ferme de mozzarella fraîche."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Garnir",
+      "inputs": [
+        "hanging_labneh",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "finished_labneh",
+      "instructions": "Déposez soigneusement la labneh de la nappe de fromage et placez-la sur une plaque large et peu profonde. Utilisez le dos d'une cuillère pour l'étendre vers l'extérieur dans un mouvement balayant, créant un monticule à peu près circulaire avec une crête épaisse autour du bord et une légère dépression au centre - c'est la présentation traditionnelle qui tient des piscines d'huile d'olive. Arrosez généreusement l'huile d'olive dans le centre bien et à travers la surface. Dispersez les herbes hachées et salez-les sur le dessus. Servir à température ambiante avec du pain plat chaud, des légumes crus, des olives et d'autres mezze. Labneh entreposée sans garniture conserve réfrigérée pendant 2 semaines; roulée en boules et immergée dans l'huile d'olive avec des herbes, elle conserve jusqu'à un mois.",
+      "visualCue": {
+        "primaryTarget": "Un monticule blanc brillant avec une piscine brillante d'huile d'olive au centre. La surface est lisse où tartinée et rugueuse où l'étoffe a laissé sa texture. Les herbes et le sel sont éparpillés naturellement, non disposés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La labneh est trop molle pour tenir sa forme bombée et s'étale immédiatement, comme le yogourt grec lâche. Ça a l'air bâclé sur l'assiette.",
+            "action": "La labneh avait besoin de plus de temps. Retournez-la dans la nappe de fromage pour 6-8 heures de plus. Il peut encore être servi — le présenter dans un petit bol à la place."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tient une forme définie lorsqu'il est cuillé. Doux, blanc et cool. L'huile d'olive s'accumule visiblement plutôt que d'absorber immédiatement. Le goût est acidulé, riche et crémeux avec une agréable longue ameresse.",
+            "action": "Servir à la température ambiante dans les 2 heures, ou réfrigérer et ramener à la température ambiante avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La labneh est raide et émiettée — elle se brise plutôt que de s'étendre. La rouler a laissé des fissures et il semble crayeux plutôt que crémeux.",
+            "action": "Mélanger une cuillère à soupe d'huile d'olive avec une fourchette jusqu'à ce qu'elle soit lisse. La texture se corrige facilement."
+          }
+        ]
+      },
+      "feelCue": "Le labneh à température ambiante pressé d'un doigt propre devrait résister en douceur, puis produire en douceur — comme du beurre très froid qui s'est suffisamment réchauffé. L'odeur est propre et aigre, comme la crème cultivée, avec l'huile d'olive ajoutant une note supérieure herbacée et fruitée."
+    }
+  ]
 };

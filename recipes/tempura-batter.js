@@ -1,96 +1,214 @@
 export default {
-  repoId: "master_japanese_tempura_batter_001",
-  parentRepoId: null,
-  slug: "tempura-batter",
-  author: "ForkRecipe Kitchen",
-  title: "Tempura Batter",
-  description: "A barely-mixed slurry of ice-cold water and low-protein flour — intentionally lumpy, dangerously thin, and used immediately before gluten can form. In oil heated to exactly the right temperature, it sets into a crust so light and translucent it barely seems to exist, yet shatters at the bite to reveal whatever was inside.",
-  cuisine: "Japanese",
-  culture: "Edo-era Tokyo",
-  category: "sauces",
-  tags: ["japanese", "tempura", "batter", "fry", "technique", "gluten-adaptable"],
-  difficulty: 3,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 1, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Cake flour or low-protein soft flour (sifted)", ratioValue: 100, defaultUnit: "g", substitutions: ["50g plain flour + 50g cornstarch for extra lightness", "rice flour for gluten-free"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Ice-cold water (with ice cubes in the jug)", ratioValue: 160, defaultUnit: "g", substitutions: ["sparkling mineral water (adds CO2 bubbles for extra lift)"] },
-    { ingId: "ing_03", role: "Binder",     name: "Egg yolk (1 large, cold)", ratioValue: 18, defaultUnit: "g", substitutions: ["omit for a lighter, more translucent batter"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt", ratioValue: 2, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",        name: "Neutral frying oil (rice bran, sunflower, or canola)", ratioValue: 1000, defaultUnit: "g", substitutions: ["clean lard at 180 C for a richer crust"] },
+  "repoId": "master_japanese_tempura_batter_001",
+  "parentRepoId": null,
+  "slug": "tempura-batter",
+  "author": "ForkRecipe Kitchen",
+  "title": "Batterie Tempura",
+  "description": "Un lisier à peine mélangé d'eau froide et de farine à faible teneur en protéines — intentionnellement grumelé, dangereusement mince, et utilisé immédiatement avant la formation du gluten. Dans l'huile chauffée à exactement la bonne température, il se met dans une croûte si légère et translucide qu'il semble à peine exister, mais se brise à la morsure pour révéler ce qui était à l'intérieur.",
+  "cuisine": "Japonais",
+  "culture": "Edo-ère Tokyo",
+  "category": "sauces",
+  "tags": [
+    "Japonais",
+    "tempura",
+    "pâte",
+    "frites",
+    "technique",
+    "adaptable au gluten"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Chill",
-      inputs: ["ing_02"],
-      outputState: "iced_water",
-      instructions: "Fill a tall jug with cold water and add a generous handful of ice cubes. Measure 160g of this ice-cold water — include small slivers of ice if they fall in. The water temperature should be at or below 4 C. Cold water is the most critical variable in tempura: it slows gluten development (since gluten forms faster in warm water) and keeps the batter in a state of perpetual instability until it hits the hot oil. Place the jug in the freezer for 5 minutes if your tap water is not cold enough.",
-      visualCue: {
-        primaryTarget: "Water that is visibly cold — condensation on the outside of the jug, ice slivers drifting in the liquid, temperature at or near freezing.",
-        spectrum: [
-          { state: "Underdone", description: "Water is cool but not icy — around 15 C. No condensation.", action: "Add more ice and wait 3 minutes. Tempura made with insufficiently cold water will be gluey and thick." },
-          { state: "Perfect",   description: "Jug has condensation; water temperature is 2-4 C; ice slivers remain floating.", action: "Measure immediately and proceed to mixing. Speed is now critical." },
-          { state: "Overdone",  description: "Water is partially frozen — too thick to pour easily.", action: "Let it sit at room temperature for 60 seconds and stir. You need a liquid, not a slush." },
-        ],
-      },
-      feelCue: "Touch the outside of the jug — it should feel like a cold windowpane in winter, distinctly chilling rather than merely cool.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de gâteau ou farine molle à faible teneur en protéines",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "50g de farine plate + 50g de fécule de maïs pour une légèreté supplémentaire",
+        "farine de riz sans gluten"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["ing_03", "iced_water"],
-      outputState: "egg_water",
-      instructions: "Beat the cold egg yolk lightly in a bowl with chopsticks — just 3 or 4 strokes, enough to break it. Pour in the ice-cold water and stir with a single chopstick or the handle of a spoon, just enough to combine. Do not whisk. The goal is a yolk-streaked water, not a smooth emulsion — the streaks of yolk create micro-pockets of richness in the final crust.",
-      visualCue: {
-        primaryTarget: "A pale yellow water with distinct visible streaks of yolk that have not fully dispersed — like a very dilute egg drop soup before cooking.",
-        spectrum: [
-          { state: "Underdone", description: "Yolk is still sitting as a whole broken dome on top of the water.", action: "Give two more gentle stirs with a chopstick to distribute." },
-          { state: "Perfect",   description: "Yolk is dispersed in long, pale-gold ribbons through the water. Not emulsified — still streaky and inhomogeneous.", action: "Proceed immediately to adding flour. Every second matters from here." },
-          { state: "Overdone",  description: "Yolk and water are fully emulsified into a uniform pale liquid.", action: "Still usable — the crust will be slightly less lacy but still light. Proceed with urgency." },
-        ],
-      },
-      feelCue: "The egg water should feel indistinguishable from very cold water on the fingertips — you are not trying to build body, only to slightly enrich a cold liquid.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau froide (avec glaçons dans la cruche)",
+      "ratioValue": 160,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau minérale pétillante (ajoute des bulles de CO2 pour le levage supplémentaire)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["ing_01", "ing_04", "egg_water"],
-      outputState: "tempura_batter",
-      instructions: "Sift the flour and salt into the egg water all at once. Using chopsticks (not a whisk), stir with large, lazy figure-eight strokes — no more than 10 to 12 strokes. The batter should remain visibly lumpy with pockets of dry flour still floating on the surface. This restraint is the entire technique: every additional stir develops gluten and moves you toward a heavy, doughy batter that fries like calamari rings rather than light tempura. Use immediately — the batter deteriorates in minutes as gluten continues to develop even when unstirred. Keep the bowl over or within the tray of ice to maintain temperature.",
-      visualCue: {
-        primaryTarget: "A thin, pale yellow batter full of visible lumps and streaks of dry flour — it looks unfinished and wrong. When a skewer is dipped in and lifted, the batter drips off in a thin, irregular sheet.",
-        spectrum: [
-          { state: "Underdone", description: "Large clumps of dry flour on top that haven't been incorporated at all — more dry than wet.", action: "Two or three more gentle strokes to wet the remaining dry pockets. Do not overmix to compensate." },
-          { state: "Perfect",   description: "Thin, lumpy, and visually under-mixed. Drips in a thin sheet from a skewer with visible lumps passing through. Temperature still feels cold when you touch the bowl.", action: "Use within 5 minutes. Dip ingredients in a thin coat only — the batter should barely cling." },
-          { state: "Overdone",  description: "Batter is smooth, uniform, and somewhat viscous — it coats a skewer thickly and drips in a slow, rope-like stream. Gluten has developed.", action: "You cannot undo gluten development. Make the best of it: fry immediately at the correct temperature and accept a slightly thicker, chewier crust." },
-        ],
-      },
-      feelCue: "The batter should feel ice-cold on your fingertips and drip off them almost as freely as water — if it drapes and clings in sheets, it has been over-mixed or is too warm.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Jaune d'oeuf (1 grand, froid)",
+      "ratioValue": 18,
+      "defaultUnit": "g",
+      "substitutions": [
+        "omit pour une pâte plus légère et plus translucide"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Fry",
-      inputs: ["tempura_batter", "ing_05"],
-      outputState: "finished_tempura",
-      instructions: "Heat the frying oil in a heavy-bottomed pot or wok to 175-180 C — use a thermometer. Dip the ingredient (shrimp, sweet potato, broccoli, etc.) briefly in a light dusting of dry flour, shake off the excess, then dip into the cold batter and lower immediately into the oil. Fry in small batches — crowding drops the oil temperature catastrophically. Fry until the batter is set and pale gold, about 2 to 3 minutes. The key visual cue is when the furious initial bubbling subsides to a quieter, more intermittent sizzle. Remove with a spider strainer and drain vertically on a wire rack, never flat on paper towels (which steam the crust soft). Serve within 2 minutes.",
-      visualCue: {
-        primaryTarget: "A pale, almost translucent golden crust with irregular, airy bubbles across the surface — no thick, smooth-skinned coating, but an open, lacy texture like frozen sea spray.",
-        spectrum: [
-          { state: "Underdone", description: "Batter is pale white, still looks raw. Bubbles are violent and the crust has not set. It tears off when you try to lift the piece.", action: "Return to the oil and do not agitate — let the crust set for 30 more seconds before touching." },
-          { state: "Perfect",   description: "Pale amber-gold with a distinctly airy, blistered surface. Sizzling has subsided to occasional pops. Lifts cleanly from the oil with a spider strainer.", action: "Transfer to a wire rack. Serve within 2 minutes with tentsuyu dipping broth or just sea salt." },
-          { state: "Overdone",  description: "Crust is deeply golden, almost brown. The light, translucent quality is gone — it looks opaque and uniform.", action: "The tempura is still crisp but the delicate flavour of the coating is compromised. Reduce temperature by 5 C for the next batch." },
-        ],
-      },
-      feelCue: "Listen to the oil — fresh tempura sounds like a sustained roar of a fast-flowing river. When that roar subsides to scattered pops, the piece is done. Trust your ears before your eyes.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile de friture neutre (bron de riz, tournesol ou canola)",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pur saindoux à 180 °C pour une croûte plus riche"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Refroidissement",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "iced_water",
+      "instructions": "Remplissez une grande cruche d'eau froide et ajoutez une généreuse poignée de glaçons. La mesure 160g de cette eau froide-glace comprend de petits morceaux de glace s'ils tombent. La température de l'eau doit être inférieure ou égale à 4 °C. L'eau froide est la variable la plus critique de tempura : elle ralentit le développement du gluten (puisque le gluten se forme plus rapidement dans l'eau chaude) et maintient la pâte dans un état d'instabilité perpétuelle jusqu'à ce qu'elle touche l'huile chaude. Placez la cruche au congélateur pendant 5 minutes si l'eau du robinet n'est pas assez froide.",
+      "visualCue": {
+        "primaryTarget": "Eau visiblement froide: condensation à l'extérieur de la cruche, écoulement de glace dans le liquide, température à ou près de la congélation.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est fraîche, mais pas glacée — vers 15°C. Pas de condensation.",
+            "action": "Ajouter plus de glace et attendre 3 minutes. La tempura faite avec de l'eau trop froide sera collante et épaisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le jug a une condensation; la température de l'eau est de 2-4 C; les lions de glace restent flottants.",
+            "action": "Mesurer immédiatement et procéder au mélange. La vitesse est maintenant critique."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'eau est partiellement congelée — trop épaisse pour se verser facilement.",
+            "action": "Laisser reposer à température ambiante pendant 60 secondes et remuer. Vous avez besoin d'un liquide, pas d'un liquide."
+          }
+        ]
+      },
+      "feelCue": "Touchez l'extérieur de la cruche — il devrait se sentir comme une vitre froide en hiver, nettement froid plutôt que simplement frais."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_03",
+        "iced_water"
+      ],
+      "outputState": "egg_water",
+      "instructions": "Battre légèrement le jaune d'œuf froid dans un bol avec des baguettes — seulement 3 ou 4 coups, assez pour le casser. Verser dans l'eau glacée et remuer avec une seule baguette ou la poignée d'une cuillère, juste assez pour se combiner. Ne fouettez pas. L'objectif est d'avoir de l'eau écailleuse de jaune, et non une émulsion lisse; les stries de jaune créent des micro-poches de richesse dans la croûte finale.",
+      "visualCue": {
+        "primaryTarget": "Une eau jaune pâle avec des stries visibles distinctes de jaune qui n'ont pas complètement dispersé — comme une soupe à goutte d'oeufs très diluée avant la cuisson.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Yolk est toujours assis comme un dôme cassé sur le dessus de l'eau.",
+            "action": "Donnez deux autres bras doux avec une baguette à distribuer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le jaune est dispersé dans de longs rubans d'or pâle à travers l'eau. Non émulsifié — encore strié et inhomogène.",
+            "action": "Continuer immédiatement à ajouter de la farine. Chaque seconde compte d'ici."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les jaunes et l'eau sont complètement émulsifiés dans un liquide pâle uniforme.",
+            "action": "Toujours utilisable — la croûte sera un peu moins molle mais encore légère. Procédez d'urgence."
+          }
+        ]
+      },
+      "feelCue": "L'eau de l'œuf doit se sentir indistinguable de l'eau très froide au bout des doigts — vous n'essayez pas de construire le corps, seulement pour enrichir légèrement un liquide froid."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_04",
+        "egg_water"
+      ],
+      "outputState": "tempura_batter",
+      "instructions": "Faites tremper la farine et le sel dans l'eau de l'œuf en même temps. À l'aide de baguettes (pas un fouet), remuer avec de grandes figures paresseuses de huit coups — pas plus de 10 à 12 coups. La pâte doit rester visiblement grumelée avec des poches de farine sèche qui flottent encore à la surface. Cette contrainte est toute la technique : chaque agit supplémentaire développe du gluten et vous déplace vers une pâte lourde et pâteuse qui frite comme des anneaux de calamar plutôt que de tempura légère. Utiliser immédiatement — la pâte se détériore en quelques minutes car le gluten continue de se développer, même s'il n'est pas mis au rebut. Conserver le bol sur ou dans le plateau de glace pour maintenir la température.",
+      "visualCue": {
+        "primaryTarget": "Une pâte jaune pâle et mince, pleine de morceaux visibles et de stries de farine sèche — elle semble inachevée et fausse. Lorsqu'une brochette est trempée et levée, la pâte s'écoule dans une mince feuille irrégulière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De grandes touffes de farine sèche sur le dessus qui n'ont pas été incorporées du tout — plus sèches que humides.",
+            "action": "Deux ou trois coups plus doux pour humidifier les poches sèches restantes. Ne pas trop mélanger pour compenser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mince, bosselée et visuellement mal mélangée. Drips dans une mince feuille d'une brochette avec des bosses visibles passant par. La température est encore froide lorsque vous touchez le bol.",
+            "action": "Utiliser dans les 5 minutes. Plonger les ingrédients dans une mince couche seulement — la pâte devrait à peine s'accrocher."
+          },
+          {
+            "state": "Overdone",
+            "description": "La patte est lisse, uniforme et quelque peu visqueuse; elle enrobe une brochette épaissement et coule dans un ruisseau lent, semblable à une corde. Le gluten s'est développé.",
+            "action": "Vous ne pouvez pas annuler le développement du gluten. Tirez le meilleur parti de ce produit : faire frire immédiatement à la température correcte et accepter une croûte plus épaisse et plus croustillante."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir froide au bout des doigts et les égoutter presque aussi librement que l'eau — si elle drape et s'accroche dans des draps, elle a été trop mélangée ou trop chaude."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "tempura_batter",
+        "ing_05"
+      ],
+      "outputState": "finished_tempura",
+      "instructions": "Chauffer l'huile de friture dans un pot ou un wok à fond lourd à 175-180 C — utilisez un thermomètre. Plongez brièvement l'ingrédient (crevettes, patates douces, brocolis, etc.) dans une légère poussière de farine sèche, secouez l'excédent, puis trempez dans la pâte froide et baissez immédiatement dans l'huile. Faire frire en petits lots — l'engorgement diminue la température de l'huile de façon catastrophique. Faire frire jusqu'à ce que la pâte soit sertie et dorée, environ 2 à 3 minutes. Le signal visuel clé est quand le bouillonnement initial furieux s'abaisse à un étourdissement plus calme et intermittent. Retirer avec une souche d'araignée et égoutter verticalement sur un support de fil, jamais plat sur des serviettes en papier (qui vapeur la croûte douce). Servir dans les 2 minutes.",
+      "visualCue": {
+        "primaryTarget": "Une croûte dorée pâle, presque translucide, avec des bulles irrégulières et aérées à travers la surface — pas de revêtement épais, à la peau lisse, mais une texture ouverte, lacy comme un vaporisateur de mer congelé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La batte est blanche pâle, elle a toujours l'air crue. Les bulles sont violentes et la croûte n'a pas été mise. Ça déchire quand tu essaies de soulever la pièce.",
+            "action": "Retourner à l'huile et ne pas agiter — laisser la croûte se régler pendant 30 secondes avant de toucher."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre pâle-or avec une surface nettement aérée, blister. Le grésillement s'est apaisé à l'occasion. Soulève proprement de l'huile avec une souche d'araignée.",
+            "action": "Transférez-le sur une grille. Servir en 2 minutes avec un bouillon de trempe de tentesuyu ou juste du sel de mer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est profondément dorée, presque brune. La qualité légère et translucide a disparu — elle semble opaque et uniforme.",
+            "action": "La tempura est encore croquante mais la saveur délicate du revêtement est compromise. Réduire la température de 5 C pour le prochain lot."
+          }
+        ]
+      },
+      "feelCue": "Écoutez l'huile: la tempura fraîche ressemble à un rugissement soutenu d'une rivière qui coule rapidement. Lorsque ce rugissement s'abaisse à des pops dispersés, la pièce est faite. Faites confiance à vos oreilles devant vos yeux."
+    }
+  ]
 };

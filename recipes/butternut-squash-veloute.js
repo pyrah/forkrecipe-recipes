@@ -1,103 +1,284 @@
 export default {
-  repoId: "master_french_butternut_squash_veloute_001",
-  parentRepoId: null,
-  slug: "butternut-squash-veloute",
-  author: "ForkRecipe Kitchen",
-  title: "Butternut Squash Veloute",
-  description: "A silken, autumn-gold soup of roasted butternut squash blended with a lightly spiced vegetable stock into a velvet puree, finished with cream and a thread of brown butter — rich and sweet but balanced by a whisper of nutmeg and white pepper.",
-  cuisine: "French",
-  culture: "French",
-  category: "vegetables",
-  tags: ["squash", "veloute", "french", "soup", "vegetarian"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 3, sour: 0, bitter: 1, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Butternut squash, peeled, seeded, and diced",    ratioValue: 800,  defaultUnit: "g",    substitutions: ["kabocha squash", "pumpkin"] },
-    { ingId: "ing_02", role: "Allium",     name: "Shallots, roughly sliced",                        ratioValue: 3,    defaultUnit: "shallots", substitutions: ["half a small onion"] },
-    { ingId: "ing_03", role: "Allium",     name: "Garlic cloves, unpeeled",                         ratioValue: 2,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",     name: "Vegetable stock, hot",                            ratioValue: 800,  defaultUnit: "ml",   substitutions: ["chicken stock"] },
-    { ingId: "ing_05", role: "Dairy",      name: "Heavy cream",                                     ratioValue: 80,   defaultUnit: "ml",   substitutions: ["creme fraiche", "coconut cream for vegan"] },
-    { ingId: "ing_06", role: "Fat",        name: "Unsalted butter",                                 ratioValue: 40,   defaultUnit: "g",    substitutions: ["olive oil"] },
-    { ingId: "ing_07", role: "Fat",        name: "Olive oil (for roasting)",                        ratioValue: 2,    defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",      name: "Freshly grated nutmeg",                           ratioValue: 0.25, defaultUnit: "tsp",  substitutions: ["ground nutmeg"] },
-    { ingId: "ing_09", role: "Seasoning",  name: "White pepper, freshly ground",                    ratioValue: 0.25, defaultUnit: "tsp",  substitutions: ["black pepper"] },
-    { ingId: "ing_10", role: "Seasoning",  name: "Fine salt",                                       ratioValue: 1.5,  defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_11", role: "Garnish",    name: "Pepitas (toasted pumpkin seeds)",                 ratioValue: 2,    defaultUnit: "tbsp", substitutions: ["hazelnuts, toasted and crushed"] },
-    { ingId: "ing_12", role: "Garnish",    name: "Creme fraiche or a drizzle of cream",             ratioValue: 1,    defaultUnit: "tbsp", substitutions: [] },
+  "repoId": "master_french_butternut_squash_veloute_001",
+  "parentRepoId": null,
+  "slug": "butternut-squash-veloute",
+  "author": "ForkRecipe Kitchen",
+  "title": "Veloute de squash à beurre",
+  "description": "Soupe soyeuse, dorée à l'automne, de courges de beurre grillées mélangées à un stock de légumes légèrement épicés dans une purée de velours, finie avec de la crème et un fil de beurre brun — riche et doux mais équilibré par un murmure de muscade et de poivre blanc.",
+  "cuisine": "Français",
+  "culture": "Français",
+  "category": "vegetables",
+  "tags": [
+    "squash",
+    "velouté",
+    "français",
+    "Soupe",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_07", "ing_10"],
-      outputState: "roasted_squash",
-      instructions: "Preheat oven to 200 C (400 F). Spread the diced squash, sliced shallots, and unpeeled garlic cloves on a large baking sheet. Drizzle generously with olive oil and season with salt. Toss to coat. Roast for 25 to 30 minutes, turning once at halfway, until the squash is deeply caramelized on the cut surfaces and completely tender.",
-      visualCue: {
-        primaryTarget: "Squash cubes are amber-orange to deep golden-brown on their cut faces, with caramelized edges. Shallots are wilted and slightly charred. The sheet pan has a golden fond.",
-        spectrum: [
-          { state: "Underdone", description: "Squash is still pale orange, soft but not caramelized. No browning on the cut faces.", action: "Return to the oven — the caramelization built here is the primary flavor driver of the soup. Raw squash makes a flat, thin-tasting velouté." },
-          { state: "Perfect",   description: "Deep golden-amber squash with dark caramel on the corners and edges. Squash yields completely to a fork. Shallots are jammy. Smell is of burnt sugar and roasted starch.", action: "Squeeze the garlic from its skin and transfer everything — including any pan juices — to a blender or pot." },
-          { state: "Overdone",  description: "Dark brown to black on the edges, dry and leathery on some pieces. Some fond has scorched.", action: "Discard any truly blackened pieces. The rest will still be flavorful — the soup will just be more bitter and smoky." },
-        ],
-      },
-      feelCue: "A skewer should pierce the center of the largest squash cube with zero resistance. If you feel any stiffness, return the tray to the oven.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Courge de butternut, pelée, ensemencée et coupée en dés",
+      "ratioValue": 800,
+      "defaultUnit": "g",
+      "substitutions": [
+        "squash kabocha",
+        "Citrouille"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["roasted_squash", "ing_04"],
-      outputState: "rough_puree",
-      instructions: "Squeeze the roasted garlic cloves from their skins into a blender. Add all the roasted squash and shallots. Pour in half the hot stock. Blend on high until completely smooth, adding more stock until you reach a pourable but thick consistency. Pass through a fine-mesh sieve if you want the most refined texture.",
-      visualCue: {
-        primaryTarget: "A thick, uniformly smooth, deep-amber puree. No chunks, no fiber threads. Flows steadily from a ladle.",
-        spectrum: [
-          { state: "Underdone", description: "Still chunky with visible squash pieces. The color is streaky — paler where squash is unblended.", action: "Blend longer. Add stock in increments to help the blender circulate." },
-          { state: "Perfect",   description: "Completely uniform, rich amber, flowing smoothly from the blender. Tastes intensely of roasted squash with a deep, sweet complexity.", action: "Transfer to a saucepan and warm over low heat." },
-          { state: "Overdone",  description: "The puree has been blended so long it is airy and foamy. Volume has increased and the color is lighter.", action: "Let settle off heat for a few minutes before proceeding. The foam will subside." },
-        ],
-      },
-      feelCue: "Run the blended puree across your tongue — it should feel completely smooth, like warm velvet, with no fiber or grit at any point.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Échalotes, coupées en tranches",
+      "ratioValue": 3,
+      "defaultUnit": "shallots",
+      "substitutions": [
+        "moitié un petit oignon"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["rough_puree", "ing_08", "ing_09", "ing_10"],
-      outputState: "seasoned_veloute",
-      instructions: "Pour the puree into a medium saucepan over low heat. Stir in the remaining hot stock to adjust consistency — the final soup should flow like heavy cream, not sit like a stiff porridge. Season carefully with salt, white pepper, and freshly grated nutmeg. Simmer on the lowest heat for 5 minutes, stirring, to marry the flavors.",
-      visualCue: {
-        primaryTarget: "A smooth, flowing, deep-amber soup, gently steaming but not boiling. Consistency is between heavy cream and a thin porridge.",
-        spectrum: [
-          { state: "Underdone", description: "The soup is still very thick and sits in the pot like a paste. It does not flow freely when the pot is tilted.", action: "Add more hot stock in 100 ml increments, stirring, until it moves fluidly." },
-          { state: "Perfect",   description: "The soup flows when the pot is tilted, coating the sides in a thin, even film. Tastes deeply of squash, with nutmeg warmth and clean seasoning.", action: "Stir in the cream and make the brown butter." },
-          { state: "Overdone",  description: "The soup is so thin and watery it tastes diluted. The squash flavor has been washed out.", action: "Simmer uncovered on medium heat for 10 minutes to reduce and concentrate." },
-        ],
-      },
-      feelCue: "The soup should feel silky and substantive on the tongue — rich, not watery. Taste it warm: the nutmeg should register as a pleasant warmth in the back of the throat, not a distinct flavor.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail, non pelées",
+      "ratioValue": 2,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Mount",
-      inputs: ["seasoned_veloute", "ing_05", "ing_06"],
-      outputState: "finished_squash_veloute",
-      instructions: "Stir the heavy cream into the hot soup off the heat and taste once more for seasoning. In a small saucepan, melt the butter over medium heat, swirling the pan. Continue cooking until the butter solids turn nut-brown and the butter smells of toasted hazelnuts — about 3 minutes. Pour immediately into a small bowl. Ladle the soup into warmed bowls, drizzle with a thread of brown butter, and finish with toasted pepitas and a dot of crème fraîche.",
-      visualCue: {
-        primaryTarget: "Burnished amber soup in a warmed bowl. A dark, nutty-brown butter drizzle spiraling over the surface. Green pepitas and a white crème fraîche dot for contrast.",
-        spectrum: [
-          { state: "Underdone", description: "The butter is pale gold and still smells milky. No nuttiness.", action: "Return to heat and continue cooking — beurre noisette needs those brown milk solids for its signature hazelnut fragrance." },
-          { state: "Perfect",   description: "The butter is amber-brown with dark specks of caramelized milk solids. Smells intensely of toasted hazelnuts and caramel. Poured in a fine thread, it leaves a dark ring on the soup.", action: "Serve immediately before the butter solidifies." },
-          { state: "Overdone",  description: "The butter is dark brown to black and smells bitter and acrid — beurre noir, not beurre noisette.", action: "Discard and start over with fresh butter. Beurre noir will make the soup taste burnt." },
-        ],
-      },
-      feelCue: "The finished soup should feel luxuriously smooth on the palate — the cream and brown butter add a roundness that makes the soup seem thicker than it actually is.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Stock de légumes, chaud",
+      "ratioValue": 800,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "bouillon de poulet"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Dairy",
+      "name": "Crème lourde",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "crème fraîche",
+        "crème de noix de coco pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive (à rôtir)",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Noix de muscade fraîchement râpée",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "noix de muscade"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Poivre blanc, fraîchement moulu",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "poivre noir"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Pepitas (graines de citrouille grillées)",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "noisettes grillées et concassées"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Garnish",
+      "name": "Creme fraise ou une bruine de crème",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_07",
+        "ing_10"
+      ],
+      "outputState": "roasted_squash",
+      "instructions": "Préchauffer le four à 200 C (400 F). Étendre la courge en dés, les échalotes en tranches et les gousses d'ail non pelées sur une grande plaque de cuisson. Arroser généreusement d'huile d'olive et assaisonner de sel. Mets-toi à manteaur. Faire cuire 25 à 30 minutes, tourner une fois à mi-chemin, jusqu'à ce que la courge soit profondément caramélisée sur les surfaces coupées et complètement tendre.",
+      "visualCue": {
+        "primaryTarget": "Les cubes de courges sont orange ambre à brun doré profond sur leurs faces coupées, avec des bords caramélisés. Les échalotes sont flétries et légèrement carbonisées. La casserole a un fond doré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La courge est encore orange pâle, douce mais non caramélisée. Pas de brunissement sur les visages coupés.",
+            "action": "Retourner au four — la caramélisation construite ici est le principal moteur de saveur de la soupe. La courge crue fait un velouté plat et fin."
+          },
+          {
+            "state": "Perfect",
+            "description": "Courge dorée profonde avec caramel foncé sur les coins et les bords. La courge donne complètement à une fourchette. Les échalotes sont jammy. L'odeur est de sucre brûlé et d'amidon rôti.",
+            "action": "Pressez l'ail de sa peau et transférez tout — y compris tout jus de casserole — dans un mélangeur ou une casserole."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé à noir sur les bords, sec et cuir sur certains morceaux. Un peu d'affection a brûlé.",
+            "action": "Jeter les pièces vraiment noircies. Le reste sera encore savoureux — la soupe sera juste plus amère et fumée."
+          }
+        ]
+      },
+      "feelCue": "Une brochette devrait percer le centre du plus grand cube de courge avec une résistance nulle. Si vous ressentez une raideur, retournez le plateau au four."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "roasted_squash",
+        "ing_04"
+      ],
+      "outputState": "rough_puree",
+      "instructions": "Pressez les gousses d'ail grillées de leur peau dans un mélangeur. Ajouter toute la courge rôtie et les échalotes. Verser la moitié du stock chaud. Mélanger sur haute jusqu'à ce que complètement lisse, ajouter plus de stock jusqu'à ce que vous atteignez une consistance versable mais épaisse. Passez à travers un tamis à mailles fines si vous voulez la texture la plus raffinée.",
+      "visualCue": {
+        "primaryTarget": "Une purée épaisse, uniformément lisse, d'ambre profonde. Pas de morceaux, pas de fils de fibres. Il coule régulièrement d'une louche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours brouillé avec des morceaux de courges visibles. La couleur est striée — plus pâle où la courge n'est pas mélangée.",
+            "action": "Mélanger plus longtemps. Ajouter le stock par paliers pour aider le mélangeur à circuler."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement uniforme, riche ambre, qui coule en douceur du mélangeur. Goûte intensément de courges grillées avec une complexité profonde et douce.",
+            "action": "Transférer dans une casserole et chauffer à feu doux."
+          },
+          {
+            "state": "Overdone",
+            "description": "La purée a été mélangée si longtemps qu'elle est aérée et mousseuse. Le volume a augmenté et la couleur est plus légère.",
+            "action": "Laisser reposer la chaleur quelques minutes avant de continuer. La mousse va tomber."
+          }
+        ]
+      },
+      "feelCue": "Exécutez la purée mélangée à travers votre langue — elle devrait se sentir complètement lisse, comme du velours chaud, sans fibre ni grain à aucun moment."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "rough_puree",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "seasoned_veloute",
+      "instructions": "Verser la purée dans une casserole moyenne à feu doux. Incorporer le reste du bouillon chaud pour ajuster la consistance — la soupe finale doit couler comme de la crème lourde, pas s'asseoir comme un porridge raide. Assaisonner soigneusement de sel, de poivre blanc et de muscade fraîchement râpée. Laisser mijoter au feu le plus bas pendant 5 minutes, en remuant, pour épouser les saveurs.",
+      "visualCue": {
+        "primaryTarget": "Soupe lisse, fluide et ambre profonde, légèrement bouillante mais sans bouillir. La cohérence est entre la crème lourde et un porridge mince.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La soupe est encore très épaisse et est assise dans le pot comme une pâte. Il ne coule pas librement lorsque le pot est incliné.",
+            "action": "Ajouter plus de bouillon chaud en incréments de 100 ml, en remuant, jusqu'à ce qu'il se déplace fluidement."
+          },
+          {
+            "state": "Perfect",
+            "description": "La soupe coule lorsque le pot est incliné, enrobant les côtés dans un film mince, même. Goûte profondément de courges, avec chaleur de muscade et assaisonnement propre.",
+            "action": "Incorporer la crème et faire le beurre brun."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe est si fine et aqueuse qu'elle a un goût dilué. La saveur de courge a été lavée.",
+            "action": "Laisser mijoter à feu moyen pendant 10 minutes pour réduire et concentrer."
+          }
+        ]
+      },
+      "feelCue": "La soupe devrait se sentir soyeuse et substantielle sur la langue — riche, pas aqueuse. Goûtez-le au chaud : la muscade doit s'inscrire comme une chaleur agréable à l'arrière de la gorge, pas comme une saveur distincte."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Monter",
+      "inputs": [
+        "seasoned_veloute",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "finished_squash_veloute",
+      "instructions": "Incorporer la crème lourde dans la soupe chaude du feu et goûter une fois de plus pour l'assaisonnement. Dans une petite casserole, faire fondre le beurre à feu moyen, en tourbillonnant la casserole. Continuer la cuisson jusqu'à ce que les solides de beurre deviennent brun-noix et que le beurre sente les noisettes grillées — environ 3 minutes. Verser immédiatement dans un petit bol. Déposer la soupe dans des bols chauds, arroser avec un fil de beurre brun, et terminer avec des pepitas grillés et un point de crème fraîche.",
+      "visualCue": {
+        "primaryTarget": "Soupe ambre brûlée dans un bol chaud. Un bruissement noir-brun au beurre qui s'enroule sur la surface. Pepitas verts et une crème fraîche blanche point pour le contraste.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est d'or pâle et sent toujours le lait. Pas de folie.",
+            "action": "Retourner à la chaleur et continuer à cuisiner - beurre bruittte a besoin de ces solides de lait brun pour son parfum de noisette signature."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le beurre est brun-ambre avec des taches foncées de solides de lait caramélisé. Sensation intense de noisettes grillées et de caramel. Versé dans un fil fin, il laisse un anneau sombre sur la soupe.",
+            "action": "Servir immédiatement avant que le beurre se solidifie."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre est brun foncé à noir et sent amer et acride — beurre noir, pas beurre bruit.",
+            "action": "Jeter et recommencer avec du beurre frais. Beurre noir fera brûler le goût de la soupe."
+          }
+        ]
+      },
+      "feelCue": "La soupe finie devrait se sentir luxueusement lisse en bouche — la crème et le beurre brun ajoutent une rondeur qui rend la soupe plus épaisse qu'elle ne l'est réellement."
+    }
+  ]
 };

@@ -1,101 +1,260 @@
 export default {
-  repoId: "master_french_frenchratatouille_001",
-  parentRepoId: null,
-  slug: "french-ratatouille",
-  author: "ForkRecipe Kitchen",
-  title: "Provençal Ratatouille",
-  description: "Summer's abundance — eggplant, zucchini, tomato, and pepper — slow-roasted with olive oil and thyme until each vegetable concentrates into a jewel-bright, silky confit that no longer tastes of individual parts.",
-  cuisine: "French",
-  culture: "Provençal",
-  category: "vegetables",
-  tags: ["vegetable", "vegan", "gluten-free", "french", "provencal", "summer"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "2 hours",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 2, sour: 2, bitter: 1, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Eggplant (aubergine), cut into 2cm cubes",     ratioValue: 400, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_02", role: "Structure", name: "Zucchini, cut into 2cm half-moons",             ratioValue: 300, defaultUnit: "g",  substitutions: ["yellow squash"] },
-    { ingId: "ing_03", role: "Structure", name: "Red bell pepper, cut into 2cm pieces",          ratioValue: 200, defaultUnit: "g",  substitutions: ["yellow pepper"] },
-    { ingId: "ing_04", role: "Structure", name: "Ripe plum tomatoes, roughly chopped",           ratioValue: 400, defaultUnit: "g",  substitutions: ["good-quality canned tomatoes"] },
-    { ingId: "ing_05", role: "Allium",   name: "Yellow onion, diced",                            ratioValue: 200, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Allium",   name: "Garlic cloves, minced",                          ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Fat",      name: "Extra-virgin olive oil",                         ratioValue: 80,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_08", role: "Herb",     name: "Fresh thyme sprigs",                             ratioValue: 6,   defaultUnit: "g",  substitutions: ["1 tsp dried thyme"] },
-    { ingId: "ing_09", role: "Herb",     name: "Fresh basil, torn",                              ratioValue: 10,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_10", role: "Seasoning","name": "Salt and black pepper",                        ratioValue: 8,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_french_frenchratatouille_001",
+  "parentRepoId": null,
+  "slug": "french-ratatouille",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ratatouille provençale",
+  "description": "L'été, l'aubergine, la courgette, la tomate et le poivre sont abondants; l'huile d'olive et le thym sont grillés lentement jusqu'à ce que chaque légume se concentre dans un confit brillant et soyeux qui n'a plus le goût des parties individuelles.",
+  "cuisine": "Français",
+  "culture": "Provençal",
+  "category": "vegetables",
+  "tags": [
+    "légumes",
+    "végétalien",
+    "Sans gluten",
+    "français",
+    "d ' origine",
+    "été"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "2 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Season",
-      inputs: ["ing_01", "ing_10"],
-      outputState: "salted_eggplant",
-      instructions: "Toss the eggplant cubes with 1 teaspoon of salt in a colander. Set over a bowl and let sit for 30 minutes. The salt will draw excess moisture from the eggplant — you will see small beads of liquid form on the surface. After 30 minutes, pat thoroughly dry with paper towels. Dry eggplant roasts; wet eggplant steams. This step is the difference between silky, caramelized eggplant and spongy, pallid cubes.",
-      visualCue: {
-        primaryTarget: "Beads of moisture on the surface of the eggplant cubes. The cubes may have softened slightly and taken on a slight sheen.",
-        spectrum: [
-          { state: "Underdone", description: "After only 10 minutes, little or no moisture has appeared.", action: "Continue salting. Give it the full 30 minutes. Eggplant releases moisture slowly." },
-          { state: "Perfect",   description: "Visible moisture beads all over the surface. When pressed with a paper towel, the towel dampens. The cubes feel slightly more pliable.", action: "Pat dry thoroughly and proceed to roasting." },
-          { state: "Overdone",  description: "After more than 1 hour the eggplant has become very soft and collapsed.", action: "Pat dry and proceed. The eggplant will be more tender but still good in the final dish." },
-        ],
-      },
-      feelCue: "Pick up a salted eggplant cube — it should feel slightly denser than a raw cube, and the surface should feel clammy rather than dry. After patting, it should feel dry and firm.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Aubergine, coupée en cubes de 2 cm",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_05", "ing_06", "ing_03", "ing_07", "ing_08"],
-      outputState: "aromatic_base",
-      instructions: "In a large, heavy oven-safe pot or Dutch oven, heat 40ml of the olive oil over medium heat. Add the onion and cook for 8 minutes until soft and translucent. Add the garlic and thyme and cook for 1 minute. Add the red pepper and cook for another 5 minutes until beginning to soften. This aromatic base will season the entire ratatouille from within.",
-      visualCue: {
-        primaryTarget: "Onions are soft and translucent. Peppers are slightly softened but still holding their shape.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are still opaque and crunchy. Garlic smells raw.", action: "Continue cooking. Raw onion will give the ratatouille a harsh quality." },
-          { state: "Perfect",   description: "Onions are translucent and sweet-smelling. Garlic is fragrant and golden at the edges. Peppers have begun to soften.", action: "Add the tomatoes and proceed." },
-          { state: "Overdone",  description: "Onions are browning. Garlic is very dark.", action: "Reduce heat and add the tomatoes immediately to stop the browning." },
-        ],
-      },
-      feelCue: "Crush a piece of cooked onion between two fingers — it should yield completely with no crunch, like softened wax.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Zucchini, coupé en demi-lunes de 2 cm",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "courge jaune"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["aromatic_base", "ing_04", "salted_eggplant", "ing_02", "ing_07", "ing_10"],
-      outputState: "assembled_ratatouille",
-      instructions: "Add the chopped tomatoes to the pot and cook for 5 minutes to break them down. Add the dried eggplant cubes and zucchini. Drizzle with the remaining 40ml of olive oil, season with salt and pepper. Stir gently to combine. The vegetables should be crowded but just fitting. Bring to a simmer, then transfer to a 160°C (320°F) oven, uncovered. Roast for 60–75 minutes, stirring gently once or twice, until all the vegetables are very soft, their edges are beginning to caramelize, and the liquid has reduced to a concentrated, oily sauce.",
-      visualCue: {
-        primaryTarget: "After 75 minutes, the vegetables have softened dramatically. The tomatoes have broken down into a thick, rich sauce coating the other vegetables. Edges are slightly caramelized.",
-        spectrum: [
-          { state: "Underdone", description: "After 45 minutes the zucchini is still bright green and the eggplant resists a spoon. The liquid is still watery.", action: "Continue roasting. All the vegetables need to reach complete softness." },
-          { state: "Perfect",   description: "All vegetables are very soft and silky. The tomatoes have completely broken down. The edges of the eggplant and zucchini show slight caramelization. The olive oil has separated and pools around the vegetables in golden puddles.", action: "Remove from oven, tear in basil, and adjust seasoning." },
-          { state: "Overdone",  description: "Vegetables have begun to disintegrate and the bottom of the pot is beginning to scorch.", action: "Remove from oven immediately. Stir gently from the bottom. The ratatouille may be more of a puree, which is still excellent." },
-        ],
-      },
-      feelCue: "Press a piece of eggplant with the back of a spoon — it should collapse immediately with no resistance, like pressing into wet clay.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "poivron rouge, coupé en morceaux de 2cm",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivre jaune"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["assembled_ratatouille", "ing_09"],
-      outputState: "finished_ratatouille",
-      instructions: "Remove from the oven and let the ratatouille rest for 10 minutes — it improves significantly as the flavors meld. Tear in the fresh basil and stir gently. Taste for seasoning. Ratatouille is excellent hot, at room temperature, or cold from the refrigerator. It improves the next day as the flavors continue to integrate.",
-      visualCue: {
-        primaryTarget: "A jewel-bright medley of deep red, dark green, and soft purple, unified by a thick, oily tomato sauce. Vivid green basil throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are still separate-looking and the sauce is thin.", action: "Return to the oven for 15 more minutes." },
-          { state: "Perfect",   description: "A cohesive, silky medley where the vegetables are distinct but unified by the sauce. The basil is bright green and fragrant. The olive oil is visible as golden pools.", action: "Serve or cool and refrigerate." },
-          { state: "Overdone",  description: "The ratatouille has reduced to a dry paste with little sauce remaining.", action: "Add a drizzle of good olive oil and a splash of water. Stir gently. The flavor is actually excellent — concentrated and rich." },
-        ],
-      },
-      feelCue: "The ratatouille should feel rich and coating on the tongue — the olive oil carrying the concentrated vegetable sweetness. It should not feel watery or thin.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Tomates de prunes, hachées approximativement",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates en conserve de bonne qualité"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon jaune en dés",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 c. à thé de thym séché"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Basilic frais, déchiré",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel et poivre noir",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saison",
+      "inputs": [
+        "ing_01",
+        "ing_10"
+      ],
+      "outputState": "salted_eggplant",
+      "instructions": "Jeter les cubes d'aubergine avec 1 cuillère à café de sel dans une colander. Placer sur un bol et laisser reposer 30 minutes. Le sel tirera l'excès d'humidité de l'aubergine — vous verrez de petites perles de forme liquide sur la surface. Après 30 minutes, tapotez soigneusement avec des serviettes en papier. Torréfits d'aubergines secs; vapeurs d'aubergines humides. Cette étape est la différence entre les aubergines soyeuses, caramélisées et les cubes pallidés spongieux.",
+      "visualCue": {
+        "primaryTarget": "Perles d'humidité à la surface des cubes d'aubergine. Les cubes peuvent avoir légèrement ramolli et pris un léger éclat.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après seulement 10 minutes, peu ou pas d'humidité est apparue.",
+            "action": "Continuez à saler. Donnez-lui 30 minutes. L'aubergine libère l'humidité lentement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Perles d'humidité visibles sur toute la surface. Lorsqu'elle est pressée avec une serviette en papier, la serviette est amortie. Les cubes se sentent légèrement plus souples.",
+            "action": "Sécher abondamment et procéder à la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après plus d'une heure, l'aubergine est devenue très molle et s'est effondrée.",
+            "action": "Pat sèche et continue. L'aubergine sera plus tendre mais toujours bonne dans le plat final."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un cube d'aubergine salé — il devrait se sentir légèrement plus dense qu'un cube cru, et la surface devrait se sentir palpitante plutôt que sèche. Après avoir patté, il devrait se sentir sec et ferme."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_03",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "aromatic_base",
+      "instructions": "Dans un grand four ou un four hollandais, chauffer 40 ml d'huile d'olive à feu moyen. Ajouter l'oignon et cuire pendant 8 minutes jusqu'à ce qu'il soit doux et translucide. Ajouter l'ail et le thym et cuire 1 minute. Ajouter le poivron rouge et cuire encore 5 minutes jusqu'à ce qu'il commence à ramollir. Cette base aromatique va assaisonner toute la ratatouille de l'intérieur.",
+      "visualCue": {
+        "primaryTarget": "Les oignons sont doux et translucides. Les poivrons sont légèrement ramollis mais conservent leur forme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont encore opaques et croquants. L'ail sent cru.",
+            "action": "Continuez à cuisiner. L'oignon cru donnera à la ratatouille une qualité dure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont translucides et sucrés. L'ail est parfumé et doré aux bords. Les poivrons commencent à ramollir.",
+            "action": "Ajouter les tomates et poursuivre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oignons brunissent. L'ail est très sombre.",
+            "action": "Réduire le feu et ajouter les tomates immédiatement pour arrêter le brunissement."
+          }
+        ]
+      },
+      "feelCue": "Écraser un morceau d'oignon cuit entre deux doigts — il devrait donner complètement sans croûte, comme de la cire ramollie."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "aromatic_base",
+        "ing_04",
+        "salted_eggplant",
+        "ing_02",
+        "ing_07",
+        "ing_10"
+      ],
+      "outputState": "assembled_ratatouille",
+      "instructions": "Ajouter les tomates hachées dans la casserole et cuire 5 minutes pour les décomposer. Ajouter les cubes d'aubergine et les courgettes séchées. Arroser les 40 ml restants d'huile d'olive, saler et poivrer. Mélanger doucement. Les légumes devraient être encombrés mais juste adaptés. Porter à mijoter, puis transférer à un four à 160°C (32°F) à découvert. Faire cuire pendant 60 à 75 minutes, en remuant doucement une ou deux fois, jusqu'à ce que tous les légumes soient très doux, que leurs bords commencent à caraméliser et que le liquide soit réduit à une sauce concentrée et huileuse.",
+      "visualCue": {
+        "primaryTarget": "Après 75 minutes, les légumes ont considérablement ramolli. Les tomates se décomposent en une sauce épaisse et riche enrobant les autres légumes. Les bords sont légèrement caramélisés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 45 minutes, les courgettes sont encore vert vif et l'aubergine résiste à une cuillère. Le liquide est encore aqueux.",
+            "action": "Continuez à rôtir. Tous les légumes doivent atteindre une douceur complète."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les légumes sont très doux et soyeux. Les tomates ont complètement cassé. Les bords de l'aubergine et des courgettes montrent une légère caramélisation. L'huile d'olive s'est séparée des légumes en flaques dorées.",
+            "action": "Retirer du four, déchirer le basilic et ajuster l'assaisonnement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes ont commencé à se désintégrer et le fond du pot commence à brûler.",
+            "action": "Retirer immédiatement du four. Mélanger doucement du bas. La ratatouille peut être plus d'une purée, qui est encore excellente."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau d'aubergine avec l'arrière d'une cuillère — il devrait s'effondrer immédiatement sans résistance, comme presser dans l'argile humide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "assembled_ratatouille",
+        "ing_09"
+      ],
+      "outputState": "finished_ratatouille",
+      "instructions": "Retirer du four et laisser reposer la ratatouille pendant 10 minutes – elle s'améliore significativement à mesure que les saveurs se mélangent. Ajouter le basilic frais et remuer doucement. Goût pour l'assaisonnement. Ratatouille est excellent chaud, à température ambiante, ou froid du réfrigérateur. Il améliore le lendemain comme les saveurs continuent à intégrer.",
+      "visualCue": {
+        "primaryTarget": "Un medley de bijoux de couleur rouge foncé, vert foncé et violet doux, unifié par une sauce tomate épaisse et grasse. Basilic vert vif tout le long.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont encore à l'aspect séparé et la sauce est fine.",
+            "action": "Retourner au four pendant 15 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un medley cohésif et soyeux où les légumes sont distincts mais unifiés par la sauce. Le basilic est vert vif et parfumé. L'huile d'olive est visible sous forme de piscines dorées.",
+            "action": "Servir ou refroidir et réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La ratatouille est réduite à une pâte sèche avec peu de sauce restante.",
+            "action": "Ajouter une bruine d'huile d'olive et un jet d'eau. Mélangez doucement. La saveur est en fait excellente — concentrée et riche."
+          }
+        ]
+      },
+      "feelCue": "La ratatouille doit se sentir riche et enrobée sur la langue, l'huile d'olive portant la douceur végétale concentrée. Il ne doit pas se sentir aqueux ou mince."
+    }
+  ]
 };

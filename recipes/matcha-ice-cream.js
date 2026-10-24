@@ -1,97 +1,224 @@
 export default {
-  repoId: "master_japanese_matcha_ice_cream_001",
-  parentRepoId: null,
-  slug: "matcha-ice-cream",
-  author: "ForkRecipe Kitchen",
-  title: "Matcha Ice Cream",
-  description: "Ceremonial-grade Uji matcha — astringent, vegetal, the colour of moss after rain — churned into a rich custard base until it freezes into a bittersweet cream that coats the tongue in green tea tannins before the dairy sweetness follows. The tension between bitter and sweet is what makes this ice cream feel like it belongs in a tea ceremony, not just a dessert bowl.",
-  cuisine: "Japanese",
-  culture: "Uji, Kyoto",
-  category: "desserts",
-  tags: ["japanese", "matcha", "ice-cream", "green-tea", "uji", "dessert", "no-churn-adaptable"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "5 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 0, sour: 0, bitter: 3, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Whole milk", ratioValue: 240, defaultUnit: "g", substitutions: ["oat milk (texture will be slightly icier)"] },
-    { ingId: "ing_02", role: "Dairy",     name: "Heavy cream (35%+ fat)", ratioValue: 360, defaultUnit: "g", substitutions: ["coconut cream for dairy-free (distinct flavour)"] },
-    { ingId: "ing_03", role: "Protein",   name: "Egg yolks (5 large)", ratioValue: 90, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Sweetener", name: "Caster sugar", ratioValue: 150, defaultUnit: "g", substitutions: ["light muscovado (adds a molasses note that competes with matcha)"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Ceremonial-grade matcha powder (Uji preferred)", ratioValue: 20, defaultUnit: "g", substitutions: ["culinary grade matcha (use 25g; flavour is coarser and more bitter)", "premium culinary grade (25g)"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Flaky sea salt (a small pinch)", ratioValue: 1, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_japanese_matcha_ice_cream_001",
+  "parentRepoId": null,
+  "slug": "matcha-ice-cream",
+  "author": "ForkRecipe Kitchen",
+  "title": "Crème glacée Matcha",
+  "description": "Ceremonial-grade Uji matcha — astringent, végétal, la couleur de la mousse après la pluie — a coulé dans une riche base de crème jusqu'à ce qu'il gèle dans une crème sucrée amère qui enveloppe la langue dans des tannins de thé vert avant que la douceur laitière suit. La tension entre amer et doux est ce qui fait que cette crème glacée se sent comme si elle appartenait à une cérémonie de thé, pas seulement un bol de dessert.",
+  "cuisine": "Japonais",
+  "culture": "Uji, Kyoto",
+  "category": "desserts",
+  "tags": [
+    "Japonais",
+    "matcha",
+    "glaces",
+    "thé vert",
+    "uj",
+    "dessert",
+    "Non adapté"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "5 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 3,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_05", "ing_01"],
-      outputState: "matcha_milk",
-      instructions: "Sift the matcha powder into a wide, shallow bowl to break up any clumps — matcha is finely milled and prone to lumping. Add 3 tablespoons (about 45g) of the measured whole milk, warm but not hot (around 60 C). Using a bamboo chasen (matcha whisk) or a small balloon whisk, whisk the matcha and milk in rapid 'M'-and 'W'-shaped strokes until a smooth, lump-free paste forms. Add the remaining milk gradually, whisking to maintain smoothness. Matcha paste must be completely homogeneous before being added to the custard — a single undissolved lump will leave a bitter green streak in the finished ice cream.",
-      visualCue: {
-        primaryTarget: "A vivid, uniformly green liquid with no lighter or darker patches, no floating clumps, and a thin layer of fine foam from the whisking.",
-        spectrum: [
-          { state: "Underdone", description: "Small dark green lumps visible floating in the milk. Streaks of unmixed powder on the bowl sides.", action: "Continue whisking in the 'W' pattern — undissolved matcha will not dissolve once added to the custard and will create bitter flecks." },
-          { state: "Perfect",   description: "Uniformly vivid green throughout, thin foam on top, no lumps. Smells of fresh-cut grass, seaweed, and milk.", action: "Add to the remaining cream and heat for the custard base." },
-          { state: "Overdone",  description: "You over-whisked and the milk is now very foamy — difficult to weigh and will add air to the custard.", action: "Let stand 2 minutes for foam to subside before proceeding." },
-        ],
-      },
-      feelCue: "Run the back of a spoon through the matcha milk — it should leave a clean, vivid jade-green channel that holds its edges for 2 seconds before the milk flows back. No streaks, no islands of darker powder.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 240,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Lait d'avoine (la texture sera légèrement plus agréable)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "yolk_mixture",
-      instructions: "In a medium heatproof bowl, whisk the egg yolks and caster sugar together vigorously for about 2 minutes until the mixture has turned pale, noticeably thickened, and falls from the whisk in a slow, wide ribbon. This is the ribbon stage — it indicates that enough air and emulsification have occurred to give the custard body. The yolks will be ready when they have doubled in volume, turned from deep orange to pale cream-yellow, and the ribbon holds on the surface for 3 seconds before sinking. This step also helps buffer the yolks against scrambling when the hot matcha milk is added.",
-      visualCue: {
-        primaryTarget: "A pale, airy, cream-coloured foam that falls from the whisk in a thick, slow ribbon and holds a trail on the surface of the bowl for 2 to 3 seconds.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is still yellow and liquid — has not changed in colour or volume. Falls from the whisk in an immediate drip.", action: "Continue whisking — the sugar has not yet fully dissolved into the yolks and the mixture will be thin if used now." },
-          { state: "Perfect",   description: "Pale cream-yellow, doubled in volume, ribbon holds 3 seconds. A lifted spoonful falls back in a folded pattern rather than dissolving immediately.", action: "Have the matcha milk heating and tempering tools ready — this should be used quickly while airy." },
-          { state: "Overdone",  description: "Mixture is white, very stiff, and has begun to grain or separate.", action: "Warm the bowl briefly over a pan of hot water and whisk again to re-combine. The slight over-beating is inconsequential for the final custard." },
-        ],
-      },
-      feelCue: "Dip your finger in — it should taste intensely sweet and eggy, coating your fingertip in a thin film. The texture under your finger should feel like very loose, aerated condensed milk.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Crème lourde (35%+ gras)",
+      "ratioValue": 360,
+      "defaultUnit": "g",
+      "substitutions": [
+        "crème de noix de coco sans lait (arôme distinct)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Temper",
-      inputs: ["matcha_milk", "ing_02", "yolk_mixture", "ing_06"],
-      outputState: "matcha_custard",
-      instructions: "Combine the matcha milk and remaining heavy cream in a medium saucepan. Heat over medium heat, stirring occasionally, until the mixture just begins to steam and small bubbles appear at the edge — about 75 C. Do not boil. Slowly pour about one-third of the hot matcha cream into the yolk mixture while whisking constantly — this is tempering: gradually raising the egg temperature to prevent scrambling. Pour the tempered yolk mixture back into the saucepan with the remaining hot cream. Cook over medium-low heat, stirring constantly with a silicone spatula in figure-eight patterns and scraping the bottom and corners, until the custard reaches 82 C and coats the back of a spoon cleanly. Add the pinch of salt. Immediately strain through a fine-mesh sieve into a clean bowl set over an ice bath.",
-      visualCue: {
-        primaryTarget: "A thick, vivid green custard that coats the spatula in a distinct, opaque film — running a finger across the back leaves a clean line that holds without dripping.",
-        spectrum: [
-          { state: "Underdone", description: "Custard is thin and drips freely off the spatula. Line drawn on the back disappears in less than 1 second. Temperature is below 79 C.", action: "Continue cooking, stirring constantly. Custard thickens suddenly in the 80-82 C range — be ready." },
-          { state: "Perfect",   description: "Nappe consistency — spatula coating holds a clean line for 5+ seconds. Temperature 82 C. Deep jade green throughout. Smells of grassy matcha and cream.", action: "Strain immediately through a fine sieve into a bowl over an ice bath. Stir to cool, then refrigerate until completely cold before churning." },
-          { state: "Overdone",  description: "Scrambled green egg visible — small curds forming. Grainy texture. Temperature above 85 C.", action: "Strain through a very fine sieve immediately — the curdled proteins will be caught. Blend the strained custard with a hand blender to restore smoothness. Slightly less rich than ideal but usable." },
-        ],
-      },
-      feelCue: "Run your finger across the back of the custard-coated spoon — if the line stays crisp and doesn't fill in when you tip the spoon, the custard is ready. If it floods back across your finger, keep cooking.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Jaunes d'oeufs (5 grandes)",
+      "ratioValue": 90,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Freeze",
-      inputs: ["matcha_custard"],
-      outputState: "finished_matcha_ice_cream",
-      instructions: "Cool the custard base completely over the ice bath, stirring occasionally, then refrigerate for at least 2 hours or overnight until it is thoroughly chilled — around 4 C. Churn in an ice cream machine according to the manufacturer's instructions until the ice cream is the consistency of thick, scoopable soft-serve (about 20 to 25 minutes). Transfer to a chilled container, press parchment paper directly onto the surface to prevent ice crystal formation, and freeze for at least 3 hours before scooping. For a no-churn version: whip 200g of the heavy cream to medium peaks separately, fold into the chilled custard, and freeze in a loaf pan for 5 hours.",
-      visualCue: {
-        primaryTarget: "A deep, matte jade-green ice cream with a dense, smooth texture that holds a scoop shape cleanly — not icy or crystalline, but velvety and opaque.",
-        spectrum: [
-          { state: "Underdone", description: "Ice cream is still soft and pale — melts immediately when scooped, has a liquid core. Not enough freezing time.", action: "Return to the freezer for another hour. The custard ratio is high and needs full freezing time to set." },
-          { state: "Perfect",   description: "Scoops cleanly with a warm scoop, holds its round shape for 60+ seconds at room temperature before softening, and the interior is uniformly dense with no icy cores or white frost patches.", action: "Serve immediately in chilled bowls. Pairs with sesame brittle, sweet red bean (anko), or mochi." },
-          { state: "Overdone",  description: "Ice cream is rock-hard — a warm scoop drags rather than curls. Icy, crystalline shards visible on the cut face.", action: "Transfer to the refrigerator for 15 minutes to temper. Icy texture can indicate the base was too diluted or the cream fat percentage was too low." },
-        ],
-      },
-      feelCue: "Take a tiny taste straight from the churning bowl before the final freeze — it should taste exactly like how a Japanese teahouse smells: intensely vegetal green tea, slightly bitter, with the cream coming in as a soft landing on the finish.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "muscoudo léger (ajoute une note de mélasse qui concurrence le matcha)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Poudre de matcha de qualité cérémonielle (Uji préféré)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "matcha culinaire (utiliser 25g; la saveur est plus grossière et plus amère)",
+        "grade culinaire de qualité supérieure (25g)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel de mer (une petite pincée)",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_05",
+        "ing_01"
+      ],
+      "outputState": "matcha_milk",
+      "instructions": "Sirotez la poudre de matcha dans un bol large et peu profond pour briser n'importe quelle touffe. Ajouter 3 cuillères à soupe (environ 45g) de lait entier mesuré, chaud mais pas chaud (environ 60 C). À l'aide d'un fouet en bambou (matcha whisk) ou d'un petit fouet en ballon, fouetter le matcha et le lait dans des traits rapides en forme de 'M' et 'W' jusqu'à ce qu'une pâte lisse et sans morceaux se forme. Ajouter le lait restant progressivement, fouetter pour maintenir la douceur. La pâte de Matcha doit être complètement homogène avant d'être ajoutée à la crème – une seule masse non dissoute laissera une stries vert amère dans la crème glacée finie.",
+      "visualCue": {
+        "primaryTarget": "Un liquide vif, uniformément vert, sans taches plus claires ou plus foncées, sans empiècements flottants, et une fine couche de mousse fine du fouet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Petits morceaux vert foncé visibles flottant dans le lait. Streaks de poudre non mélangée sur les côtés du bol.",
+            "action": "Continuez à fouetter dans le motif 'W' — le matcha non dissous ne se dissoudra pas une fois ajouté à la crème et créera des taches amères."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vert uniformément vif dans l'ensemble, mousse fine sur le dessus, pas de bosses. Des odeurs d'herbe fraîchement coupée, d'algues et de lait.",
+            "action": "Ajouter à la crème restante et chauffer pour la base de crème."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez trop fouetté et le lait est maintenant très mousseux — difficile à peser et ajoutera de l'air à la crème.",
+            "action": "Laisser reposer 2 minutes pour que la mousse s'abaisse avant de continuer."
+          }
+        ]
+      },
+      "feelCue": "Exécutez l'arrière d'une cuillère dans le lait de matcha — il devrait laisser un canal vert jade propre et vif qui retient ses bords pendant 2 secondes avant que le lait ne revienne. Pas de stries, pas d'îles de poudre plus foncée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "yolk_mixture",
+      "instructions": "Dans un bol moyennement résistant à la chaleur, fouetter vigoureusement les jaunes d'œufs et le sucre de roulette pendant environ 2 minutes jusqu'à ce que le mélange soit devenu pâle, épaississant sensiblement, et tombe du fouet dans un ruban lent et large. C'est l'étape du ruban — elle indique qu'il y a eu suffisamment d'air et d'émulsion pour donner le corps de la crème. Les jaunes seront prêts lorsqu'ils auront doublé en volume, tournés d'orange profonde à jaune crème pâle, et le ruban se maintient à la surface pendant 3 secondes avant de couler. Cette étape aide également à tamponner les jaunes contre le brouillage lorsque le lait chaud de matcha est ajouté.",
+      "visualCue": {
+        "primaryTarget": "Une mousse pâle, aérée et de couleur crème qui tombe du fouet dans un ruban épais et lent et tient une trace à la surface du bol pendant 2 à 3 secondes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est encore jaune et liquide — il n'a pas changé de couleur ni de volume. Des chutes du fouet dans une goutte d'eau immédiate.",
+            "action": "Continuez à fouetter — le sucre n'a pas encore complètement dissous dans les jaunes et le mélange sera mince si utilisé maintenant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Jaune crème pâle, doublé en volume, ruban tient 3 secondes. Une cuillère levée tombe dans un motif replié plutôt que de se dissoudre immédiatement.",
+            "action": "Préparez les outils de chauffage et de tempérage du lait de matcha, qui doivent être utilisés rapidement et aérés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est blanc, très raide, et a commencé à grainer ou à se séparer.",
+            "action": "Chauffer brièvement le bol sur une casserole d'eau chaude et fouetter de nouveau pour recombiner. Le léger surbattement n'a pas d'incidence pour la custarde finale."
+          }
+        ]
+      },
+      "feelCue": "Plongez dans le doigt — il doit goûter intensément sucré et oeuf, enrobant votre bout de doigt dans un mince film. La texture sous votre doigt doit se sentir comme du lait condensé très lâche et aéré."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Température",
+      "inputs": [
+        "matcha_milk",
+        "ing_02",
+        "yolk_mixture",
+        "ing_06"
+      ],
+      "outputState": "matcha_custard",
+      "instructions": "Mélanger le lait de matcha et le reste de la crème lourde dans une casserole moyenne. Chauffer à feu moyen, en remuant occasionnellement, jusqu'à ce que le mélange commence à vapeur et que de petites bulles apparaissent au bord — environ 75 °C. Ne pas faire bouillir. Versez lentement environ un tiers de la crème chaude de matcha dans le mélange de jaune tout en fouettant constamment — c'est le tempérament: élever graduellement la température de l'oeuf pour éviter les brouillages. Verser le mélange de jaune trempé dans la casserole avec la crème chaude restante. Cuire à feu moyen-doux, en remuant constamment avec une spatule de silicone dans la figure-huit motifs et en grattant le fond et les coins, jusqu'à ce que la crème atteigne 82 C et enrobe l'arrière d'une cuillère proprement. Ajouter la pincée de sel. Empruntez immédiatement un tamis à mailles fines dans un bol propre placé sur un bain de glace.",
+      "visualCue": {
+        "primaryTarget": "Une crème verte épaisse et vive qui enrobe la spatule dans un film distinct et opaque — courir un doigt dans le dos laisse une ligne propre qui tient sans goutter.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le custard est mince et coule librement de la spatule. La ligne tracée sur le dos disparaît en moins d'une seconde. La température est inférieure à 79 °C.",
+            "action": "Continuer la cuisson en remuant constamment. Custard s'épaissit soudainement dans la gamme 80-82 C — soyez prêt."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cohérence de la nappe — le revêtement de la spatule tient une ligne propre pendant 5+ secondes. Température 82 C. Vert jade profond. Des odeurs de matcha herbacé et de crème.",
+            "action": "Plongez immédiatement à travers un tamis fin dans un bol sur un bain de glace. Mélanger pour refroidir, puis réfrigérer jusqu'à ce qu'il soit complètement froid avant de grincer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Oeuf vert brouillé visible — petit caillé formant. Une texture grainée. Température supérieure à 85 °C.",
+            "action": "Plongez immédiatement dans un tamis très fin — les protéines caillées seront capturées. Mélanger la crème tendue avec un mélangeur à main pour restaurer la douceur. Un peu moins riche que l'idéal mais utilisable."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre doigt sur l'arrière de la cuillère enrobée de crème — si la ligne reste croustillante et ne se remplit pas lorsque vous pointez la cuillère, la crème est prête. Si elle se renverse de l'autre côté du doigt, continuez à cuisiner."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Gel",
+      "inputs": [
+        "matcha_custard"
+      ],
+      "outputState": "finished_matcha_ice_cream",
+      "instructions": "Laisser refroidir complètement la base de crème au-dessus du bain de glace, en remuant occasionnellement, puis réfrigérer pendant au moins 2 heures ou toute la nuit jusqu'à ce qu'elle soit complètement réfrigérée — environ 4 C. Churn dans une machine à crème glacée selon les instructions du fabricant jusqu'à ce que la crème glacée soit la consistance d'un service doux épais et écorcable (environ 20 à 25 minutes). Transférer dans un contenant réfrigéré, presser le papier parchemin directement sur la surface pour empêcher la formation de cristaux de glace et congeler pendant au moins 3 heures avant d'écoper. Pour une version sans chunn: fouet 200g de la crème lourde à pics moyens séparément, plier dans la crème fraîche, et congeler dans une poêle à pain pendant 5 heures.",
+      "visualCue": {
+        "primaryTarget": "Une crème glacée jade-verte profonde et mate avec une texture dense et lisse qui tient une forme de scoop propre — pas glacé ou cristallin, mais velouté et opaque.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème glacée est encore douce et pâle: elle fond immédiatement lorsqu'elle est écopée, elle a un noyau liquide. Pas assez de temps de congélation.",
+            "action": "Retourner au congélateur pour une autre heure. Le rapport custard est élevé et nécessite un temps de congélation complet à régler."
+          },
+          {
+            "state": "Perfect",
+            "description": "Scoops propre avec une boule chaude, tient sa forme ronde pendant 60+ secondes à la température ambiante avant d'adoucir, et l'intérieur est uniformément dense avec pas de carottes glacées ou de taches de gel blanc.",
+            "action": "Servir immédiatement dans des bols réfrigérés. Paire de sésame cassant, de haricots rouges doux (anko), ou de mochi."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème glacée est rocailleuse — un scoop chaud traîne plutôt que des boucles. Morceaux cristallins glacés visibles sur la face coupée.",
+            "action": "Transférer au réfrigérateur pendant 15 minutes pour tempérer. La texture glacée peut indiquer que la base était trop diluée ou que le pourcentage de graisse crème était trop faible."
+          }
+        ]
+      },
+      "feelCue": "Prenez un petit goût directement dans le bol fouettant avant le gel final — il devrait goûter exactement comme une maison de thé japonaise sent: thé vert intensement végétal, légèrement amer, avec la crème entrant comme un atterrissage doux sur la finale."
+    }
+  ]
 };

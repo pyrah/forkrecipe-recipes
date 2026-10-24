@@ -1,117 +1,334 @@
 export default {
-  repoId: "master_egyptian_koshari_001",
-  parentRepoId: null,
-  slug: "egyptian-koshari",
-  author: "ForkRecipe Kitchen",
-  title: "Egyptian Koshari",
-  description: "Cairo's beloved street food: a dramatic assembly of rice, brown lentils, and short macaroni crowned with crackling fried onions, then doused at the table with a fiery spiced tomato sauce and sharp garlicky vinegar.",
-  cuisine: "Egyptian",
-  culture: "Egyptian",
-  category: "grains",
-  tags: ["koshari", "egyptian", "vegan", "street-food", "lentils", "rice", "pasta"],
-  difficulty: 3,
-  activeTime: "1 hr",
-  totalTime: "1 hr 45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 3, bitter: 1, umami: 3, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Long-grain white rice",                    ratioValue: 50, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Protein",    name: "Brown or green lentils",                   ratioValue: 50, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Starch",     name: "Short macaroni or ditalini",               ratioValue: 30, defaultUnit: "parts", substitutions: ["elbow macaroni"] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Yellow onions, large (for frying)",        ratioValue: 80, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",        name: "Neutral oil (for frying onions)",          ratioValue: 40, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Structure",  name: "Canned crushed tomatoes",                  ratioValue: 80, defaultUnit: "parts", substitutions: ["fresh tomatoes, peeled and crushed"] },
-    { ingId: "ing_07", role: "Allium",     name: "Garlic cloves (for sauce, minced)",        ratioValue: 6,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",      name: "Ground cumin (for sauce)",                 ratioValue: 2,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",      name: "Ground coriander (for sauce)",             ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Heat",       name: "Dried chili flakes or shatta sauce",       ratioValue: 2,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Acid",       name: "Red wine vinegar (for sauce)",             ratioValue: 8,  defaultUnit: "parts", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_12", role: "Allium",     name: "Garlic cloves (for vinegar, minced)",      ratioValue: 3,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_13", role: "Fat",        name: "Olive oil (for sauce base)",               ratioValue: 5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_14", role: "Seasoning",  name: "Fine sea salt",                            ratioValue: 3,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_15", role: "Starch",     name: "Vermicelli noodles (broken, toasted)",     ratioValue: 10, defaultUnit: "parts", substitutions: ["fine fideos"] },
+  "repoId": "master_egyptian_koshari_001",
+  "parentRepoId": null,
+  "slug": "egyptian-koshari",
+  "author": "ForkRecipe Kitchen",
+  "title": "Koshari égyptien",
+  "description": "La nourriture de rue bien-aimée du Caire : un assemblage dramatique de riz, de lentilles brunes et de macaronis courts couronnés d'oignons frits crépitants, puis consommés à table avec une sauce tomate épicée ardente et du vinaigre ailky aiguisé.",
+  "cuisine": "Égyptienne",
+  "culture": "Égyptienne",
+  "category": "grains",
+  "tags": [
+    "kashari",
+    "Égyptienne",
+    "végétalien",
+    "Produits de la rue",
+    "lentilles",
+    "riz",
+    "pâtes"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "1 hr",
+  "totalTime": "1 hr 45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Simmer",
-      inputs: ["ing_02"],
-      outputState: "cooked_lentils",
-      instructions: "Rinse lentils and place in a saucepan with cold water to cover by 5cm. Bring to a boil, reduce to a steady simmer. Cook 20–25 minutes until just tender — they should hold their shape completely but have no chalkiness at the center when bitten. Drain, season lightly with salt, and set aside.",
-      visualCue: {
-        primaryTarget: "Lentils have swollen and turned from grey-green to a uniform olive-brown. The skins are intact — no splitting.",
-        spectrum: [
-          { state: "Underdone", description: "Lentils are firm and chalky in the center. A bitten lentil shows a pale raw core.", action: "Return to the simmer for another 5 minutes and test again." },
-          { state: "Perfect",   description: "Completely tender throughout, intact skins, holding their round shape. Earthy, pleasantly starchy on the tongue.", action: "Drain well and season." },
-          { state: "Overdone",  description: "Lentils are split, mushy, or dissolving. They will not provide distinct texture in the final dish.", action: "Proceed — they will still contribute flavor. In future, check 5 minutes earlier." },
-        ],
-      },
-      feelCue: "Bite a lentil in half — the cross-section should be the same color throughout, no pale inner ring, with a texture like a firm-cooked chickpea.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz blanc à grains longs",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Fry",
-      inputs: ["ing_04", "ing_05"],
-      outputState: "crispy_onions",
-      instructions: "Slice onions very thinly and uniformly (use a mandoline or patient knife work — 2mm). Heat neutral oil to 170°C (340°F) in a wide pan (enough oil to submerge the onions — at least 2cm deep). Fry onions in batches, stirring occasionally, until deeply golden-brown and visibly crisp, 12–18 minutes per batch. They continue to darken after removal — pull them at amber, not brown. Drain on paper towels and salt immediately.",
-      visualCue: {
-        primaryTarget: "Deep amber-golden rings, visibly dried and crisp. The oil has stopped loudly sputtering — water has fully evaporated from the onions.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are golden but still limp and oily — they will not crisp on the plate. Sputtering still vigorous.", action: "Continue frying — the transition from limp to crisp is abrupt. Give them another 3 minutes." },
-          { state: "Perfect",   description: "Amber-brown, visibly dry and light. They crunch when pressed between fingers. Smell is caramelized and sweet.", action: "Remove with a spider, drain, salt immediately while hot." },
-          { state: "Overdone",  description: "Dark brown approaching black. Bitter, acrid smell. They will taste of burnt sugar.", action: "Discard this batch. The oil temperature was too high or the batch too large — adjust before the next batch." },
-        ],
-      },
-      feelCue: "Lift a few onion strands and press them between your fingertips — they should shatter and crumble, completely dry, with zero oily give.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Lentilles brunes ou vertes",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["ing_13", "ing_07", "ing_06", "ing_08", "ing_09", "ing_10", "ing_14"],
-      outputState: "tomato_sauce",
-      instructions: "In a separate saucepan, heat olive oil over medium heat. Add minced garlic for the sauce and cook until golden, 1–2 minutes. Add cumin, coriander, and chili flakes; bloom for 30 seconds. Add crushed tomatoes and salt. Simmer over medium-low heat, stirring occasionally, for 20–25 minutes until the sauce has thickened to a loose, concentrated paste and the raw tomato taste is gone. Separately, mix minced raw garlic with red wine vinegar and a pinch of salt for the toum el-khal (garlic vinegar).",
-      visualCue: {
-        primaryTarget: "Tomato sauce has reduced by about one-third, is deeply colored, and the surface has a subtle sheen from the oil separating slightly. No raw acidic smell.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still thin and watery with a sharp raw tomato acidity.", action: "Continue simmering uncovered. Concentrated, sweet tomato flavor only comes with time." },
-          { state: "Perfect",   description: "Thick, glossy, deeply red-orange. Sweet and spiced with a background heat. Holds a slight mound when spooned.", action: "Keep warm." },
-          { state: "Overdone",  description: "Sauce has become very thick, sticky, and is beginning to catch on the pot bottom. Slightly caramelized edge.", action: "Add a small splash of water and stir vigorously." },
-        ],
-      },
-      feelCue: "Run a spoon through the sauce — it should leave a trail that fills back very slowly, like a sauce with body, not a thin liquid.",
+      "ingId": "ing_03",
+      "role": "Starch",
+      "name": "Macaronis courts ou ditalini",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "macaroni du coude"
+      ]
     },
     {
-      nodeId: "step_4", action: "Simmer",
-      inputs: ["ing_01", "ing_15"],
-      outputState: "rice_and_vermicelli",
-      instructions: "Rinse rice until water runs clear. In a medium saucepan over medium heat, toast broken vermicelli in a dry pan (or in 1 tsp oil) until golden. Add rice and toast 1 minute more. Add water (1.75x the volume of rice + vermicelli combined) and salt. Bring to a boil, stir once, cover tightly, reduce to the lowest heat. Cook 17 minutes, then rest off heat for 5 minutes. Fluff with a fork.",
-      visualCue: {
-        primaryTarget: "Dry, separate grains of rice interspersed with golden-brown vermicelli strands. Steam holes visible on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Rice grains are slightly firm with a tiny chalky center.", action: "Cover again and steam off-heat for another 5 minutes." },
-          { state: "Perfect",   description: "Fluffy, separate rice with toasted golden vermicelli throughout. Grains are fully cooked but not sticky.", action: "Fluff and hold for assembly." },
-          { state: "Overdone",  description: "Rice is mushy and sticky, vermicelli has dissolved into the mass.", action: "Spread on a tray to cool and dry before assembling — the individual textures are critical to koshari's appeal." },
-        ],
-      },
-      feelCue: "The cooked vermicelli should be just visible as distinct golden threads woven through the fluffy rice — not dissolved, not crunchy, but tender with a hint of nuttiness.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Oignons jaunes, gros (pour la friture)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Assemble",
-      inputs: ["rice_and_vermicelli", "cooked_lentils", "ing_03", "crispy_onions", "tomato_sauce", "ing_12", "ing_11"],
-      outputState: "koshari",
-      instructions: "Cook macaroni in well-salted boiling water until just al dente. Drain. To assemble: layer the bottom of a deep bowl with rice-vermicelli, then lentils, then macaroni. Top with a generous handful of crispy fried onions. At the table, ladle tomato sauce liberally over the top and add a spoonful of garlic vinegar. The correct eating order is to mix everything together.",
-      visualCue: {
-        primaryTarget: "A high, textured mound: pale rice base, darker lentils, ivory pasta, crowned with a dark amber lacework of crispy onions. Three sauces in vessels on the side.",
-        spectrum: [
-          { state: "Underdone", description: "One or more components is undercooked or the assembly has no structural contrast — everything the same color or texture.", action: "Ensure each element is fully cooked and seasoned independently before assembly." },
-          { state: "Perfect",   description: "Each component is distinct in texture and color. The fried onions shatter under the spoon. The tomato sauce stains and coats everything below it.", action: "Serve immediately — the crispy onions soften quickly once sauced." },
-          { state: "Overdone",  description: "Assembled too far in advance — onions have gone limp from steam, tomato sauce has soaked everything to one uniform wet mass.", action: "Serve onions and sauces on the side for guests to add themselves, always." },
-        ],
-      },
-      feelCue: "The first spoonful should contain four distinct textures simultaneously — the yielding lentil, the slight chew of pasta, the soft rice, and the shatter of fried onion — all unified by the tangy, spiced sauce.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile neutre (pour les oignons frits)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Structure",
+      "name": "Tomates concassées en conserve",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates fraîches, pelées et broyées"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Gousses d'ail (pour sauce hachée)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Cumin moulu (pour sauce)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Coriandre moulue (pour sauce)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Heat",
+      "name": "Flacons de chili séchés ou sauce shatta",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "Vin rouge (pour la sauce)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Allium",
+      "name": "Gousses d'ail (pour vinaigre haché)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Fat",
+      "name": "Huile d'olive (pour la base de sauce)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Starch",
+      "name": "Nouilles Vermicelli (brochées, grillées)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "fidéos fins"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "cooked_lentils",
+      "instructions": "Rincer les lentilles et déposer dans une casserole à l'eau froide pour couvrir de 5cm. Porter à ébullition, laisser mijoter régulièrement. Cuire de 20 à 25 minutes jusqu'à ce qu'ils soient tendres — ils doivent tenir leur forme complètement mais n'ont pas de craie au centre lorsqu'ils sont mordus. Égoutter, assaisonner légèrement de sel et réserver.",
+      "visualCue": {
+        "primaryTarget": "Les lentilles ont gonflé et sont passées du vert gris au brun olive uniforme. Les peaux sont intactes — pas de division.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les lentilles sont fermes et crayeuses au centre. Une lentille mordue montre un noyau bleu pâle.",
+            "action": "Retourner à la mijoter encore 5 minutes et tester à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement tendres à travers les peaux intactes, tenant leur forme ronde. Terreux, agréablement féculent sur la langue.",
+            "action": "Drainez bien et assaisonnez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les lentilles sont divisées, musquées ou dissolues. Ils ne fourniront pas de texture distincte dans le plat final.",
+            "action": "Procéder — ils contribueront encore à la saveur. À l'avenir, vérifiez 5 minutes plus tôt."
+          }
+        ]
+      },
+      "feelCue": "Couper une lentille en deux — la coupe transversale doit être de la même couleur dans l'ensemble, sans anneau intérieur pâle, avec une texture comme un pois chiche ferme."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "crispy_onions",
+      "instructions": "Couper les oignons très finement et uniformément (utiliser un couteau à la mandoline ou au patient — 2mm). Chauffer l'huile neutre à 170°C (340°F) dans une grande casserole (assez d'huile pour submerger les oignons – au moins 2cm de profondeur). Faire frire les oignons par lots, en remuant occasionnellement, jusqu'à ce qu'ils soient profondément dorés et visiblement croquants, 12–18 minutes par lot. Ils continuent à s'assombrir après leur enlèvement — les tirer à l'ambre, et non au brun. Égoutter immédiatement sur les serviettes en papier et le sel.",
+      "visualCue": {
+        "primaryTarget": "Anneaux ambre-goldés profonds, visiblement secs et croustillants. L'huile s'est arrêtée avec une forte saillie: l'eau s'est complètement évaporée des oignons.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont dorés, mais encore boiteux et gras — ils ne croqueront pas sur l'assiette. Saupoudrer encore vigoureux.",
+            "action": "Continuer à frire — la transition entre le limon et le croustillant est brusque. Donne-leur encore 3 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre-brun, visiblement sec et léger. Ils craquent quand ils sont pressés entre les doigts. L'odeur est caramélisée et sucrée.",
+            "action": "Retirer avec une araignée, égoutter, saler immédiatement pendant la chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé approchant noir. Une odeur amère et acride. Ils goûteront au sucre brûlé.",
+            "action": "Jetez ce lot. La température de l'huile était trop élevée ou le lot trop grand — ajuster avant le prochain lot."
+          }
+        ]
+      },
+      "feelCue": "Soulevez quelques brins d'oignon et pressez - les entre vos doigts — ils devraient se briser et s'effondrer, complètement secs, sans donner d'huile."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_13",
+        "ing_07",
+        "ing_06",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_14"
+      ],
+      "outputState": "tomato_sauce",
+      "instructions": "Dans une casserole séparée, faire chauffer l'huile d'olive à feu moyen. Ajouter l'ail haché pour la sauce et cuire jusqu'à ce qu'il soit doré, de 1 à 2 minutes. Ajouter le cumin, la coriandre et les flocons de chili; fleurir pendant 30 secondes. Ajouter les tomates concassées et le sel. Laisser mijoter à feu moyen-doux, en remuant occasionnellement, pendant 20 à 25 minutes jusqu'à ce que la sauce s'épaississe à une pâte molle et concentrée et que le goût cru de la tomate soit disparu. Mélanger séparément l'ail cru haché avec du vinaigre de vin rouge et une pincée de sel pour le toum el-khal ( vinaigre d'ail).",
+      "visualCue": {
+        "primaryTarget": "La sauce tomate a diminué d'environ un tiers, est profondément colorée, et la surface a un reflet subtil de l'huile se séparant légèrement. Pas d'odeur acide crue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore mince et aqueuse avec une acidité brute de tomate.",
+            "action": "Continuez à mijoter à découvert. Concentré, saveur de tomate douce vient seulement avec le temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, brillant, profondément rouge-orange. Doux et épicé avec une chaleur de fond. Tient un léger monticule lorsqu'il est cuillé.",
+            "action": "Restez au chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est devenue très épaisse, collante, et commence à attraper sur le fond du pot. Bord légèrement caramélisé.",
+            "action": "Ajouter un petit jet d'eau et remuer vigoureusement."
+          }
+        ]
+      },
+      "feelCue": "Passez une cuillère dans la sauce — elle devrait laisser un sentier qui se remplit très lentement, comme une sauce avec le corps, pas un liquide mince."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_15"
+      ],
+      "outputState": "rice_and_vermicelli",
+      "instructions": "Rincer le riz jusqu'à ce que l'eau coule. Dans une casserole moyenne à feu moyen, faire griller les vermicelles cassées dans une casserole sèche (ou dans 1 c. à thé d'huile) jusqu'à ce qu'elles soient dorées. Ajouter le riz et le toast 1 minute de plus. Ajouter l'eau (1,75x le volume de riz + vermicelli combiné) et le sel. Porter à ébullition, remuer une fois, couvrir soigneusement, réduire au feu le plus bas. Cuire 17 minutes, puis reposer le feu pendant 5 minutes. Fluff avec une fourchette.",
+      "visualCue": {
+        "primaryTarget": "Grains de riz secs et séparés entrecoupés de brins vermicelli dorés. Trous à vapeur visibles sur la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains de riz sont légèrement fermes avec un petit centre crayeux.",
+            "action": "Couvrez encore et faites chauffer la vapeur pendant encore 5 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riz moelleux, séparé avec vermicelle dorée grillée. Les grains sont entièrement cuits mais pas collants.",
+            "action": "Flûte et tenir pour montage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz est musclé et collant, les vermicelles se sont dissoutes dans la masse.",
+            "action": "Répartir sur un plateau pour refroidir et sécher avant de l'assembler — les textures individuelles sont essentielles à l'attrait de kochari."
+          }
+        ]
+      },
+      "feelCue": "Les vermicelles cuites doivent être juste visibles comme des fils dorés distincts tissés à travers le riz moelleux — non dissous, non croquants, mais tendres avec un soupçon de noix."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Assemblage",
+      "inputs": [
+        "rice_and_vermicelli",
+        "cooked_lentils",
+        "ing_03",
+        "crispy_onions",
+        "tomato_sauce",
+        "ing_12",
+        "ing_11"
+      ],
+      "outputState": "koshari",
+      "instructions": "Faire cuire les macaronis dans de l'eau bouillante bien salée jusqu'à ce que l'al dente soit juste. Égoutter. A assembler : coucher le fond d'un bol profond avec du riz-vermicelli, puis des lentilles, puis des macaronis. Garnir d'une généreuse poignée d'oignons frits croustillants. A la table, ajouter une cuillère de vinaigre d'ail. Le bon ordre de manger est de tout mélanger.",
+      "visualCue": {
+        "primaryTarget": "Un monticule élevé et texturé : base de riz pâle, lentilles plus foncées, pâtes ivoire, couronnées d'une dentelle ambre foncée d'oignons croustillants. Trois sauces dans les récipients sur le côté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Un ou plusieurs composants sont sous-cuits ou l'assemblage n'a pas de contraste structurel — tout est de même couleur ou texture.",
+            "action": "Assurez-vous que chaque élément est entièrement cuit et assaisonné indépendamment avant l'assemblage."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque composant est distinct en texture et en couleur. Les oignons frits éclatent sous la cuillère. La sauce tomate tache et enveloppe tout en dessous.",
+            "action": "Servir immédiatement — les oignons croustillants adoucissent rapidement une fois sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Assemblé trop loin à l'avance — les oignons sont passés de la vapeur à la vapeur, la sauce tomate a tout trempé à une masse humide uniforme.",
+            "action": "Servir les oignons et les sauces sur le côté pour les invités à s'ajouter, toujours."
+          }
+        ]
+      },
+      "feelCue": "La première cuillerée doit contenir quatre textures distinctes simultanément: la lentille qui donne, la légère mâche des pâtes, le riz doux et la fracturation de l'oignon frit, toutes unifiées par la sauce piquante et épicée."
+    }
+  ]
 };

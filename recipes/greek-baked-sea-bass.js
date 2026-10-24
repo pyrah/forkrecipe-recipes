@@ -1,86 +1,240 @@
 export default {
-  repoId: "master_greek_greekbakedseabass_001",
-  parentRepoId: null,
-  slug: "greek-baked-sea-bass",
-  author: "ForkRecipe Kitchen",
-  title: "Greek Baked Sea Bass (Lavraki Plaki)",
-  description: "A whole sea bass laid on a bed of tomatoes, onions, and potatoes, drowned in olive oil and white wine, and baked low and slow until everything is silky and the fish falls from the bone at a glance.",
-  cuisine: "Greek",
-  culture: "Greek",
-  category: "seafood",
-  tags: ["seafood", "gluten-free", "greek", "sea-bass", "tomato", "herb", "baked"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "1 hour 10 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 1, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole sea bass (lavraki), 1–1.2kg, cleaned", ratioValue: 1100, defaultUnit: "g", substitutions: ["branzino", "sea bream"] },
-    { ingId: "ing_02", role: "Fat",       name: "Extra-virgin olive oil",                ratioValue: 100,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_03", role: "Base",      name: "Ripe tomatoes, sliced",                 ratioValue: 400,  defaultUnit: "g",   substitutions: ["one 400g tin whole tomatoes, drained"] },
-    { ingId: "ing_04", role: "Allium",   name: "White onions, sliced into rings",        ratioValue: 200,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_05", role: "Allium",   name: "Garlic cloves, thinly sliced",           ratioValue: 4,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_06", role: "Structure", name: "Waxy potatoes, peeled and sliced 5mm",  ratioValue: 300,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Acid",      name: "Dry white wine",                        ratioValue: 100,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh flat-leaf parsley",               ratioValue: 20,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_09", role: "Herb",      name: "Fresh thyme sprigs",                    ratioValue: 4,    defaultUnit: "sprigs", substitutions: ["dried thyme"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fine sea salt and freshly ground black pepper", ratioValue: 10, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_11", role: "Acid",      name: "Lemon, sliced into rounds",             ratioValue: 1,    defaultUnit: "whole", substitutions: [] },
+  "repoId": "master_greek_greekbakedseabass_001",
+  "parentRepoId": null,
+  "slug": "greek-baked-sea-bass",
+  "author": "ForkRecipe Kitchen",
+  "title": "Bass grec de mer cuite (Lavraki Plaki)",
+  "description": "Un bar tout entier posé sur un lit de tomates, d'oignons et de pommes de terre, noyé dans l'huile d'olive et le vin blanc, et cuit bas et lent jusqu'à ce que tout soit soyeux et le poisson tombe de l'os en un coup d'œil.",
+  "cuisine": "Grec",
+  "culture": "Grec",
+  "category": "seafood",
+  "tags": [
+    "Produits de la mer",
+    "Sans gluten",
+    "grec",
+    "base maritime",
+    "tomates",
+    "herbe",
+    "cuits"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "1 hour 10 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_06", "ing_04", "ing_03", "ing_05", "ing_02", "ing_07", "ing_09", "ing_10"],
-      outputState: "vegetable_bed",
-      instructions: "Preheat the oven to 180°C (350°F). In a large roasting dish or oven-safe skillet, layer the potato slices across the bottom. Add the onion rings, tomato slices, and garlic over the top. Season generously with salt and pepper. Pour 60ml of olive oil and the white wine over the vegetables. Add the thyme sprigs. Bake for 25 minutes until the potatoes have begun to soften and the tomatoes are beginning to collapse. The preliminary bake ensures the potatoes are cooked through — they need more time than the fish.",
-      visualCue: {
-        primaryTarget: "Potatoes are semi-tender and the tomatoes have collapsed, releasing their juices into a fragrant, wine-scented base.",
-        spectrum: [
-          { state: "Underdone", description: "Potatoes are still firm and raw at the center; tomatoes barely softened.", action: "Continue baking for 10 more minutes before adding the fish." },
-          { state: "Perfect",   description: "Potatoes yield to a knife tip but hold their shape. Tomatoes are collapsing and juicy. Onions are translucent and soft.", action: "Lay the scored fish on top of the vegetable bed." },
-          { state: "Overdone",  description: "Potatoes are very soft and the tomato juices have reduced to a dry, concentrated layer.", action: "Add 100ml of hot water before placing the fish to restore moisture." },
-        ],
-      },
-      feelCue: "The vegetable bed should smell of baking wine and tomato — sweet, acidic, and warm — filling the kitchen before the fish even arrives.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Bars entiers (lavraki), 1–1,2 kg, nettoyés",
+      "ratioValue": 1100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "branzino",
+        "brème de mer"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Bake",
-      inputs: ["vegetable_bed", "ing_01", "ing_11", "ing_08", "ing_02", "ing_10"],
-      outputState: "finished_greek_sea_bass",
-      instructions: "Score the fish 3 times on each side. Season inside and out with salt and pepper. Stuff the cavity with parsley, lemon rounds, and a drizzle of olive oil. Lay the fish on top of the partially cooked vegetable bed. Drizzle the remaining olive oil over the fish. Arrange the remaining lemon rounds on top. Return to the oven for 30–35 minutes until the fish is cooked through. Spoon the pan juices over the fish twice during cooking.",
-      visualCue: {
-        primaryTarget: "Fish skin is golden and slightly blistered; score cuts have opened and reveal opaque, white flesh. Pan juices are bubbling around the fish.",
-        spectrum: [
-          { state: "Underdone", description: "Score cuts are still closed; flesh inside the body cavity looks translucent pink.", action: "Return for 10 more minutes. Test with a skewer at the thickest point — it should pass through without resistance." },
-          { state: "Perfect",   description: "Skin is golden with lightly blistered patches. Score cuts gape open with white, opaque flesh. The fish lifts cleanly from the backbone when tested with a spoon.", action: "Rest 5 minutes and serve directly from the roasting dish." },
-          { state: "Overdone",  description: "Fish is pulling away from the bones spontaneously; flesh looks dry at the surface.", action: "Serve immediately with extra pan juices ladled over to restore moisture." },
-        ],
-      },
-      feelCue: "The fish is done when you can slide a fork into the thickest score cut and feel it yield completely with no resistance — like pushing through warm butter.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["finished_greek_sea_bass", "ing_08"],
-      outputState: "plated_lavraki_plaki",
-      instructions: "Bring the entire roasting dish to the table — this is the way plaki is served. Scatter fresh parsley over the top. Each person takes a portion of fish and a spoonful of the vegetables and fragrant pan juices beneath. Serve with crusty bread to mop up the juices.",
-      visualCue: {
-        primaryTarget: "Golden fish resting on a bed of collapsed tomatoes and tender potatoes, with a pool of olive oil and tomato juices surrounding it all.",
-        spectrum: [
-          { state: "Underdone", description: "Juices are thin and watery; the dish looks unfinished and underdressed.", action: "Return to a 200°C oven for 5 minutes uncovered to concentrate the pan juices." },
-          { state: "Perfect",   description: "Pan juices are a deep, brick-orange color and slightly thick — a natural sauce. Fish is golden, vegetables are tender and glossy.", action: "Serve directly at the table." },
-          { state: "Overdone",  description: "Pan juices have dried completely; the vegetables are sticking to the pan.", action: "Add a splash of warm water, scrape up the fond, and pour over the fish as a sauce." },
-        ],
-      },
-      feelCue: "The pan juices should taste simultaneously of olive oil, tomato sweetness, white wine acidity, and the clean mineral note of the sea bass — a simple but complete sauce that needs nothing added.",
+      "ingId": "ing_03",
+      "role": "Base",
+      "name": "Tomates ripées, coupées en tranches",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "une tomate entière de 400 g d'étain, égouttée"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignons blancs, tranchés en rondelles",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Girofles à l'ail, tranchés finement",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Structure",
+      "name": "Pommes de terre, pelées et coupées en tranches",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "Vin blanc sec",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Persil frais à feuilles plates",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 4,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "Thym séché"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre noir fraîchement moulu",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "Citron, tranché en rondelles",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_06",
+        "ing_04",
+        "ing_03",
+        "ing_05",
+        "ing_02",
+        "ing_07",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "vegetable_bed",
+      "instructions": "Préchauffer le four à 180°C (350°F). Dans un grand plat torréfié ou une poêle au four, planter les tranches de pommes de terre sur le fond. Ajouter les anneaux d'oignon, les tranches de tomates et l'ail au-dessus. Assaisonner généreusement de sel et de poivre. Verser 60 ml d'huile d'olive et le vin blanc sur les légumes. Ajouter les brins de thym. Cuire au four pendant 25 minutes jusqu'à ce que les pommes de terre commencent à ramollir et que les tomates commencent à s'effondrer. La cuisson préliminaire garantit que les pommes de terre sont cuites — elles ont besoin de plus de temps que les poissons.",
+      "visualCue": {
+        "primaryTarget": "Les pommes de terre sont semi-tendantes et les tomates se sont effondrées, libérant leur jus dans une base parfumée et parfumée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pommes de terre sont encore fermes et crues au centre; les tomates sont à peine adoucies.",
+            "action": "Continuer la cuisson pendant 10 minutes avant d'ajouter le poisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pommes de terre donnent à une pointe de couteau mais tiennent leur forme. Les tomates s'effondrent et juteuses. Les oignons sont translucides et doux.",
+            "action": "Posez le poisson marqué sur le lit de légumes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pommes de terre sont très molles et les jus de tomates sont réduits à une couche sèche et concentrée.",
+            "action": "Ajouter 100 ml d'eau chaude avant de placer le poisson pour restaurer l'humidité."
+          }
+        ]
+      },
+      "feelCue": "Le lit de légumes doit sentir le vin de cuisson et la tomate — sucrée, acide et chaude — remplir la cuisine avant même l'arrivée du poisson."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Cuire",
+      "inputs": [
+        "vegetable_bed",
+        "ing_01",
+        "ing_11",
+        "ing_08",
+        "ing_02",
+        "ing_10"
+      ],
+      "outputState": "finished_greek_sea_bass",
+      "instructions": "Noter le poisson 3 fois de chaque côté. Assaisonner à l'intérieur et à l'extérieur avec du sel et du poivre. Remplis la cavité de persil, de rondelles de citron et d'un filet d'huile d'olive. Posez le poisson sur le lit de légumes partiellement cuit. Faire revenir le reste de l'huile d'olive sur le poisson. Disposer les autres rondelles de citron sur le dessus. Retourner au four de 30 à 35 minutes jusqu'à ce que le poisson soit cuit. Déposer deux fois le jus de cuisson sur le poisson.",
+      "visualCue": {
+        "primaryTarget": "La peau de poisson est dorée et légèrement cloquée; les coupes de pointes ont ouvert et révèlent une chair blanche opaque. Les jus de pan bouillonnent autour du poisson.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coupures sont toujours fermées; la chair à l'intérieur de la cavité corporelle semble rose translucide.",
+            "action": "Retournez 10 minutes de plus. Testez avec une brochette au point le plus épais — elle devrait passer sans résistance."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est dorée avec des patchs légèrement cloqués. Coupes de scores ouvertes avec la chair blanche et opaque. Le poisson se soulève proprement de l'épine dorsale lorsqu'il est testé avec une cuillère.",
+            "action": "Reposez-vous 5 minutes et servez directement à partir du plat."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson s'éloigne spontanément des os; la chair semble sèche à la surface.",
+            "action": "Servir immédiatement avec des jus de casserole supplémentaires en lambeaux pour restaurer l'humidité."
+          }
+        ]
+      },
+      "feelCue": "Le poisson est fait quand vous pouvez glisser une fourchette dans la coupe la plus épaisse et sentir qu'il donne complètement sans résistance — comme pousser à travers le beurre chaud."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "finished_greek_sea_bass",
+        "ing_08"
+      ],
+      "outputState": "plated_lavraki_plaki",
+      "instructions": "Apportez l'ensemble du plat rôti à la table — c'est ainsi que le plat est servi. Éparpiller du persil frais sur le dessus. Chaque personne prend une portion de poisson et une cuillère des légumes et des jus de poêle parfumés en dessous. Servir avec du pain croustillant pour éponger les jus.",
+      "visualCue": {
+        "primaryTarget": "Poisson doré reposant sur un lit de tomates effondrées et de pommes de terre tendres, avec une piscine d'huile d'olive et des jus de tomate qui l'entourent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les jus sont minces et aqueux; le plat semble inachevé et sous-vêtus.",
+            "action": "Retourner à un four à 200 °C pendant 5 minutes à découvert pour concentrer les jus de poêle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les jus de pan sont de couleur profonde, orange brique et légèrement épais — une sauce naturelle. Le poisson est doré, les légumes sont tendres et brillants.",
+            "action": "Servir directement à la table."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les jus de casserole ont séché complètement; les légumes s'y collent.",
+            "action": "Ajouter une éclaboussure d'eau chaude, gratter le fond et verser le poisson comme sauce."
+          }
+        ]
+      },
+      "feelCue": "Les jus de casserole doivent goûter simultanément de l'huile d'olive, de la douceur tomate, de l'acidité du vin blanc et de la note minérale propre du bar, une sauce simple mais complète qui n'a besoin de rien ajouté."
+    }
+  ]
 };

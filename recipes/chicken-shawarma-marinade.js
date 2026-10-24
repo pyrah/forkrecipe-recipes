@@ -1,96 +1,266 @@
 export default {
-  repoId: "master_levantine_chicken-shawarma-marinade_001",
-  parentRepoId: null,
-  slug: "chicken-shawarma-marinade",
-  author: "ForkRecipe Kitchen",
-  title: "Chicken Shawarma Marinade",
-  description: "A deep rust-colored paste of warm spices, garlic, and yogurt that seeps into chicken overnight — by morning the meat is stained and fragrant, promising the char and complexity of a rotisserie without the spit.",
-  cuisine: "Levantine",
-  culture: "Levantine Street Food",
-  category: "condiments",
-  tags: ["marinade", "shawarma", "chicken", "spice", "lebanese"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "8 hours",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 5, sour: 4, bitter: 2, umami: 4, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",      name: "Full-fat plain yogurt",           ratioValue: 4,   defaultUnit: "parts", substitutions: ["coconut yogurt for dairy-free"] },
-    { ingId: "ing_02", role: "Fat",        name: "Extra-virgin olive oil",           ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Acid",       name: "Fresh lemon juice",               ratioValue: 1.5, defaultUnit: "parts", substitutions: ["red wine vinegar"] },
-    { ingId: "ing_04", role: "Allium",     name: "Garlic cloves, minced to paste",  ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",      name: "Ground cumin",                    ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",      name: "Ground coriander",                ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",      name: "Smoked paprika",                  ratioValue: 0.5, defaultUnit: "parts", substitutions: ["sweet paprika"] },
-    { ingId: "ing_08", role: "Spice",      name: "Ground turmeric",                 ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",      name: "Ground cinnamon",                 ratioValue: 0.15,defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",      name: "Cayenne pepper",                  ratioValue: 0.15,defaultUnit: "parts", substitutions: ["Aleppo pepper flakes (double the quantity)"] },
-    { ingId: "ing_11", role: "Seasoning",  name: "Fine sea salt",                   ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_levantine_chicken-shawarma-marinade_001",
+  "parentRepoId": null,
+  "slug": "chicken-shawarma-marinade",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poulet marinade de Shawarma",
+  "description": "Une pâte de couleur rouille profonde d'épices chaudes, d'ail et de yaourt qui s'infiltre dans le poulet pendant la nuit — le matin la viande est teintée et parfumée, promettant l'omble et la complexité d'une rotisserie sans la cracher.",
+  "cuisine": "Levantine",
+  "culture": "Levantine Street Food",
+  "category": "condiments",
+  "tags": [
+    "marinade",
+    "Shawarma",
+    "poulet",
+    "épice",
+    "lébanèse"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "8 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 5,
+    "sour": 4,
+    "bitter": 2,
+    "umami": 4,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Bloom",
-      inputs: ["ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "bloomed_spices",
-      instructions: "Measure all ground spices into a small dry skillet. Place over medium heat and stir constantly with a wooden spoon for 60-90 seconds until the spices are fragrant and just beginning to smoke at the edges. This blooming step wakes up the volatile aromatic compounds. Remove from heat the moment you smell a warm, toasty depth — not a burnt edge.",
-      visualCue: {
-        primaryTarget: "The spice blend has shifted from raw powder to a darker, richer shade, and the kitchen fills with a deep, warm fragrance.",
-        spectrum: [
-          { state: "Underdone", description: "Spices smell raw and flat — like dry powder rather than toasted warmth.", action: "Return to heat and stir constantly for another 30 seconds." },
-          { state: "Perfect",   description: "A wave of warm, complex fragrance fills the kitchen. Spices are a shade darker and beginning to move in the pan from the heat.", action: "Immediately tip into the mixing bowl to stop cooking." },
-          { state: "Overdone",  description: "Acrid, sharp smoke with a bitter edge. Some spices are black at the pan edges.", action: "Discard and start fresh — burnt spices will make the entire marinade bitter. The raw extra 60 seconds is never worth skipping." },
-        ],
-      },
-      feelCue: "Wave your hand over the pan and the warm spice fragrance should hit you immediately — cumin-forward, then the cinnamon sweetness underneath.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Yogourt plein gras",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "yaourt de noix de coco sans lait"
+      ]
     },
     {
-      nodeId: "step_2", action: "Mince",
-      inputs: ["ing_04", "ing_11"],
-      outputState: "garlic_paste",
-      instructions: "Mince the garlic very fine, then sprinkle the salt over it and use the flat of your knife to smear and drag it into a smooth paste. The salt draws out moisture and the mechanical action breaks down the cell walls, releasing allicin for maximum punch. The paste should be cohesive enough to lift on the knife blade without crumbling.",
-      visualCue: {
-        primaryTarget: "A smooth, wet, slightly sticky white paste — no visible chunks.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is minced but not yet a paste — chunks remain.", action: "Continue dragging with the knife flat. It takes 2-3 minutes of patient work." },
-          { state: "Perfect",   description: "A cohesive paste that smells pungent and sharp, holding together like a thick cream.", action: "Add to the bowl with the spices." },
-          { state: "Overdone",  description: "Garlic paste is gluey and extremely pungent from over-working.", action: "Use a slightly smaller quantity — a little over-worked garlic paste goes further." },
-        ],
-      },
-      feelCue: "The paste should feel slightly warm from the knife-work friction and smell aggressively sharp — this pungency mellows overnight in the marinade.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "bloomed_spices", "garlic_paste"],
-      outputState: "finished_marinade",
-      instructions: "Combine the yogurt, olive oil, and lemon juice in a bowl. Add the bloomed spices and garlic paste. Whisk vigorously until completely smooth and uniformly colored — a deep rust-orange paste with no white streaks of yogurt or dark pockets of spice. Taste: it should be aggressively seasoned, since it will coat several pounds of chicken. Adjust lemon and salt.",
-      visualCue: {
-        primaryTarget: "A smooth, thick, deep rust-orange paste — uniform in color, glossy, with the consistency of a thick smoothie.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of white yogurt and dark pockets of spice are still visible.", action: "Whisk more vigorously, ensuring you reach the bottom and edges of the bowl." },
-          { state: "Perfect",   description: "Uniformly rust-red, thick, fragrant. A spoon dragged through it leaves a clean furrow that holds its shape.", action: "Apply to chicken and refrigerate for at least 2 hours, ideally overnight." },
-          { state: "Overdone",  description: "Over-whisking has separated the yogurt and the marinade looks grainy.", action: "Add a tablespoon of cold water and whisk briefly to re-emulsify." },
-        ],
-      },
-      feelCue: "Dip a finger and taste — the heat from cayenne should bloom after 2-3 seconds, the sourness of lemon should be immediate, and the cinnamon should be a quiet undertone.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin rouge"
+      ]
     },
     {
-      nodeId: "step_4", action: "Marinate",
-      inputs: ["finished_marinade"],
-      outputState: "marinated_chicken",
-      instructions: "Score chicken thighs (skin-on or skinless) several times through the thickest part with a sharp knife. Apply the marinade to every surface, pressing it into the cuts. Place in a zip-lock bag or sealed container. Refrigerate for a minimum of 2 hours, maximum 24 hours. Beyond 24 hours the acid breaks down the meat texture. Remove from fridge 30 minutes before cooking.",
-      visualCue: {
-        primaryTarget: "Chicken is evenly coated in a deep rust-orange layer with no bare patches; the cuts are filled with marinade.",
-        spectrum: [
-          { state: "Underdone", description: "Chicken has been in the marinade less than 2 hours — the flavor will not have penetrated the meat.", action: "Return to the fridge. 2 hours is the minimum; overnight gives far superior results." },
-          { state: "Perfect",   description: "After overnight marination, the surface has turned a deeper, almost brick-red. The meat smells of warm spice when the bag is opened.", action: "Remove from fridge 30 minutes before cooking. Cook under a hot grill or in a very hot pan until charred at the edges." },
-          { state: "Overdone",  description: "Marinated more than 24 hours — the acid has begun to denature the surface proteins, giving a slightly grainy or mushy outer layer.", action: "Cook immediately and do not marinate this long in future. The flavor will be excellent." },
-        ],
-      },
-      feelCue: "After overnight marination, press a coated piece of chicken — the marinade should have dried slightly on the surface, forming a sticky, fragrant crust that will caramelize beautifully under heat.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Giroves d'ail hachées à pâte",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika doux"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Alep flocons de poivre (double quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bloom",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "bloomed_spices",
+      "instructions": "Mesurer toutes les épices broyées dans une petite poêle sèche. Placer sur feu moyen et remuer constamment avec une cuillère en bois pendant 60-90 secondes jusqu'à ce que les épices soient parfumées et commencent juste à fumer aux bords. Cette étape de floraison réveille les composés aromatiques volatils. Retirer du feu le moment où vous sentez une profondeur chaude et grillée — pas un bord brûlé.",
+      "visualCue": {
+        "primaryTarget": "Le mélange d'épices est passé de la poudre crue à une teinte plus foncée et plus riche, et la cuisine se remplit d'un parfum profond et chaleureux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les épices sentent crus et plats, comme la poudre sèche plutôt que la chaleur grillée.",
+            "action": "Retourner à la chaleur et remuer constamment pendant encore 30 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une vague de parfums chauds et complexes remplit la cuisine. Les épices sont une ombre plus foncée et commencent à se déplacer dans la poêle à partir de la chaleur.",
+            "action": "Astucez immédiatement dans le bol de mélange pour arrêter la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Une fumée acérée et amère. Certaines épices sont noires aux bords de la poêle.",
+            "action": "Jeter et commencer frais — les épices brûlées rendront toute la marinade amère. L'extra brut 60 secondes ne vaut jamais la peine de sauter."
+          }
+        ]
+      },
+      "feelCue": "Vaporisez votre main sur la poêle et le parfum d'épices chaudes devrait vous frapper immédiatement — cumin-avant, puis la douceur de cannelle en dessous."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mince",
+      "inputs": [
+        "ing_04",
+        "ing_11"
+      ],
+      "outputState": "garlic_paste",
+      "instructions": "Arrosez l'ail très fin, puis saupoudrez le sel dessus et utilisez le plat de votre couteau pour frotter et le faire glisser dans une pâte lisse. Le sel dégage de l'humidité et l'action mécanique décompose les parois cellulaires, libérant l'allicine pour un poinçon maximum. La pâte doit être suffisamment cohésive pour soulever la lame du couteau sans s'effondrer.",
+      "visualCue": {
+        "primaryTarget": "Une pâte blanche lisse, humide et légèrement collante — pas de morceaux visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est haché mais pas encore une pâte — il reste des morceaux.",
+            "action": "Continuez à traîner avec le couteau à plat. Il faut 2-3 minutes de travail."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte cohésive qui sent le piquant et le tranchant, tenant ensemble comme une crème épaisse.",
+            "action": "Ajouter au bol les épices."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte d'ail est collante et extrêmement piquante du surmenage.",
+            "action": "Utilisez une quantité légèrement plus petite — un peu plus de pâte d'ail travaillée va plus loin."
+          }
+        ]
+      },
+      "feelCue": "La pâte devrait se sentir légèrement chaude à cause de la friction au couteau-travail et sentir agressivement aiguisée — cette puanteur se rafraîchit toute la nuit dans la marinade."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "bloomed_spices",
+        "garlic_paste"
+      ],
+      "outputState": "finished_marinade",
+      "instructions": "Mélanger le yaourt, l'huile d'olive et le jus de citron dans un bol. Ajouter les épices fleuries et la pâte d'ail. fouetter vigoureusement jusqu'à ce qu'il soit complètement lisse et uniformément coloré — une pâte orangée de rouille profonde sans stries blanches de yogourt ou de poches foncées d'épices. Bouche: il doit être assaisonné agressivement, car il enrobera plusieurs livres de poulet. Ajuster le citron et le sel.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse, épaisse, orangée de rouille profonde — uniforme en couleur, brillante, avec la consistance d'un smoothie épais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des éclats de yogourt blanc et des poches sombres d'épices sont encore visibles.",
+            "action": "fouetter plus vigoureusement, vous assurant d'atteindre le fond et les bords du bol."
+          },
+          {
+            "state": "Perfect",
+            "description": "Rouge rouille uniforme, épais, parfumé. Une cuillère traînée à travers elle laisse un sillon propre qui tient sa forme.",
+            "action": "Appliquer sur le poulet et réfrigérer pendant au moins 2 heures, idéalement toute la nuit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sursaut a séparé le yogourt et la marinade semble granuleuse.",
+            "action": "Ajouter une cuillère à soupe d'eau froide et fouetter brièvement pour réémulsionner."
+          }
+        ]
+      },
+      "feelCue": "Plonger le doigt et le goût — la chaleur de Cayenne devrait fleurir après 2-3 secondes, l'aurore du citron devrait être immédiate, et la cannelle devrait être un sous - ton calme."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Marinaté",
+      "inputs": [
+        "finished_marinade"
+      ],
+      "outputState": "marinated_chicken",
+      "instructions": "Score cuisses de poulet (sur peau ou sans peau) plusieurs fois à travers la partie la plus épaisse avec un couteau tranchant. Appliquer la marinade sur chaque surface, la presser dans les découpes. Placer dans un sac à fermeture éclair ou un contenant scellé. Réfrigérer pendant au moins 2 heures, au maximum 24 heures. Au-delà de 24 heures, l'acide décompose la texture de la viande. Retirer du réfrigérateur 30 minutes avant la cuisson.",
+      "visualCue": {
+        "primaryTarget": "Le poulet est également recouvert d'une couche orangée-rouille profonde sans taches nues; les découpes sont remplies de marinade.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le poulet a été dans la marinade moins de 2 heures — la saveur n'aura pas pénétré la viande.",
+            "action": "Retournez au frigo. 2 heures est le minimum; la nuit donne des résultats nettement supérieurs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après une nuit de marination, la surface est devenue plus profonde, presque rouge brique. La viande sent l'épice chaude quand le sac est ouvert.",
+            "action": "Retirer du réfrigérateur 30 minutes avant la cuisson. Cuire sous une grille chaude ou dans une poêle très chaude jusqu'à ce que les bords soient carbonisés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mariné plus de 24 heures — l'acide a commencé à dénaturé les protéines de surface, donnant une couche externe légèrement granuleuse ou musquée.",
+            "action": "Cuire immédiatement et ne pas mariner aussi longtemps à l'avenir. La saveur sera excellente."
+          }
+        ]
+      },
+      "feelCue": "Après la matinée de la nuit, pressez un morceau de poulet enduit — la marinade aurait dû sécher légèrement à la surface, formant une croûte collante et parfumée qui caramélisera magnifiquement sous la chaleur."
+    }
+  ]
 };

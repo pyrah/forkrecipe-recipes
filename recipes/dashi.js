@@ -1,90 +1,193 @@
 export default {
-  repoId: "master_japanese_dashi_001",
-  parentRepoId: null,
-  slug: "dashi",
-  author: "ForkRecipe Kitchen",
-  title: "Dashi (Kombu and Katsuobushi)",
-  description: "Japan's foundational stock: kombu cold-steeped in water overnight then slowly warmed to just below a boil, finished with a single bloom of bonito flakes that are never stirred, only steeped and strained — producing a broth of crystalline clarity, profound umami depth, and ocean-breath delicacy.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "stocks",
-  tags: ["dashi", "japanese", "kombu", "bonito", "stock", "umami", "washoku"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "8 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 0, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",     name: "Dried kombu (dashi-grade, not shredded)",              ratioValue: 3,   defaultUnit: "parts", substitutions: ["dried kelp — avoid kombu with white powder washed off, that's the umami"] },
-    { ingId: "ing_02", role: "Inosinate", name: "Katsuobushi (high-grade hana katsuo bonito flakes)",   ratioValue: 5,   defaultUnit: "parts", substitutions: ["saba (mackerel) flakes for stronger flavor", "niboshi (dried sardines) for earthy dashi"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Cold filtered water",                                  ratioValue: 100, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_japanese_dashi_001",
+  "parentRepoId": null,
+  "slug": "dashi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Dashi (Kombu et Katsuobushi)",
+  "description": "Le stock de base du Japon : le kombu est trempé dans l'eau pendant la nuit puis lentement réchauffé à un peu en dessous d'un ébullition, fini par une seule floraison de flocons de bonite qui ne sont jamais agités, seulement trempés et tendus — produisant un bouillon de clarté cristalline, de profondeur profonde de l'umami, et de délicatesse de la respiration océanique.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "stocks",
+  "tags": [
+    "Dashi",
+    "Japonais",
+    "kombu",
+    "Nom de famille",
+    "stock",
+    "umami",
+    "washoku"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "8 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Steep",
-      inputs: ["ing_01", "ing_03"],
-      outputState: "cold_kombu_water",
-      instructions: "Gently wipe the kombu surface with a barely damp cloth to remove any surface debris — do not wash it. The white powder on the surface (mannitol) is umami; do not remove it. Place kombu in a pot with cold filtered water. Cover and steep in the refrigerator overnight, or a minimum of 3 hours at room temperature. The cold steep extracts the complex polysaccharides and glutamates from the kombu without the bitterness that comes from heating. The water will turn a pale, clear gold.",
-      visualCue: {
-        primaryTarget: "After steeping, the water is a clear, pale golden-green color. The kombu has expanded and darkened from its dried state, becoming pliable and leathery.",
-        spectrum: [
-          { state: "Underdone", description: "Water is still clear and colorless. Kombu looks unchanged.", action: "The steep time was insufficient. Continue steeping — kombu extraction is slow at cold temperatures. Minimum 3 hours, overnight is ideal." },
-          { state: "Perfect",   description: "Water is a clear, delicate golden-green. Kombu has expanded and feels rubbery-leathery when pinched. The water smells faintly of the sea.", action: "Proceed to warm the kombu water." },
-          { state: "Overdone",  description: "Steeped for more than 24 hours at room temperature — the kombu may have begun to ferment and the water has a slightly sour edge.", action: "Proceed but taste carefully. The flavor may have developed an off-note — if so, start again." },
-        ],
-      },
-      feelCue: "After overnight steeping, the kombu should feel like soft leather — flexible and pliable, not brittle. Rub a corner between your fingers: the surface should feel slightly slippery from the extracted polysaccharides. The cold water should smell clean and faintly oceanic.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "Kombu séché (de qualité dashi, non déchiqueté)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "varech séché — éviter kombu avec poudre blanche lavée, c'est l'umami"
+      ]
     },
     {
-      nodeId: "step_2", action: "Heat",
-      inputs: ["cold_kombu_water"],
-      outputState: "warmed_kombu_dashi",
-      instructions: "Place the pot over medium-low heat. Slowly bring the water to temperature, watching carefully — the goal is to reach 60–65°C (140–150°F) and hold it there for 10 minutes. Do not let it boil. Boiling extracts bitter compounds from the kombu. Use a thermometer. Alternatively: watch for the first small bubbles forming at the bottom of the pot and on the kombu surface — these appear at approximately 60°C. Remove the kombu before the water reaches 70°C.",
-      visualCue: {
-        primaryTarget: "The pot is at a gentle 60–65°C: very small bubbles just beginning to form and rise from the bottom. The liquid is steaming gently. The kombu is releasing thin, silky threads of dissolved polysaccharides.",
-        spectrum: [
-          { state: "Underdone", description: "Water is warm but not yet showing any bubbles. Temperature is below 55°C. The kombu is not yet contributing significantly.", action: "Continue warming slowly. This gentle extraction phase is the most important step for clean dashi — do not rush it." },
-          { state: "Perfect",   description: "Small, sparse bubbles forming at the bottom and sides. The water is steaming. The kombu is fully pliable and releasing thin, clear strands. Temperature is between 60–65°C.", action: "Hold at this temperature for 10 minutes, then remove the kombu." },
-          { state: "Overdone",  description: "The water has reached a full or near boil. Larger bubbles are visible and the kombu has been boiling.", action: "Remove the kombu immediately. The dashi will have a slightly bitter, seaweedy edge — it is still usable for miso soup or braised dishes but lacks the crystalline delicacy of perfect ichiban dashi." },
-        ],
-      },
-      feelCue: "Hold your hand 15cm above the pot — at 60°C you should feel a gentle, sustained warmth but not an aggressive heat. The steam should be light and continuous but not vigorous. A kitchen thermometer is the most reliable tool here; cooking by feel alone requires experience with dashi.",
+      "ingId": "ing_02",
+      "role": "Inosinate",
+      "name": "Katsuobushi (flacons de katsuo de haute qualité)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "saba (Mackerel) flocons pour une saveur plus forte",
+        "niboshi (sardines séchées) pour dashi terreux"
+      ]
     },
     {
-      nodeId: "step_3", action: "Infuse",
-      inputs: ["warmed_kombu_dashi", "ing_02"],
-      outputState: "bonito_dashi",
-      instructions: "Remove the kombu (reserve it for making niban dashi or braised kombu dishes). Bring the kombu water to just under a boil — you want to see rolling movement at the surface but not a full boil. Remove from heat entirely. Add all the katsuobushi at once. Do not stir. Allow the bonito flakes to bloom and sink naturally — this takes 2–3 minutes. The flakes will first float, absorb liquid and darken, then slowly sink to the bottom as they give up their inosinate.",
-      visualCue: {
-        primaryTarget: "Bonito flakes have transitioned from floating dry flakes to sinking, dark, saturated masses. Most flakes have settled to the bottom of the pot within 3 minutes.",
-        spectrum: [
-          { state: "Underdone", description: "Flakes are still mostly floating, pale, and clearly not yet saturated. Less than 1 minute has passed.", action: "Wait — do not stir. Stirring makes the dashi cloudy and can release bitter compounds. Watch and be patient." },
-          { state: "Perfect",   description: "Flakes have darkened, become heavy with absorbed liquid, and sunk or are sinking to the bottom. The dashi has taken on a warm amber color.", action: "Strain immediately — do not let the bonito steep beyond 3 minutes or the dashi becomes fishy and harsh." },
-          { state: "Overdone",  description: "Bonito flakes have steeped for more than 5 minutes. The dashi is darker than pale amber and smells strongly and unpleasantly of fish.", action: "Strain now and discard the bonito. The dashi has over-extracted. For future use in cooked dishes (ramen, braised dishes) this is acceptable; for delicate clear soups it will be too strong." },
-        ],
-      },
-      feelCue: "Watch the moment the katsuobushi hit the hot water — the flakes will dance and writhe for a moment from the convection currents, then gradually still. The room should fill with a clean, marine, gently smoky aroma, like the ocean and a campfire simultaneously.",
-    },
-    {
-      nodeId: "step_4", action: "Strain",
-      inputs: ["bonito_dashi"],
-      outputState: "dashi",
-      instructions: "Line a fine-mesh sieve with a clean cheesecloth or coffee filter. Pour the dashi through slowly without pressing the solids — pressing extracts bitter compounds. Let it drain freely. The finished ichiban dashi (first draw) should be a clear, golden-amber liquid of profound depth. Discard the spent katsuobushi or reserve for making furikake rice seasoning. Use dashi immediately or refrigerate for up to 3 days. Do not freeze — freezing breaks down the delicate glutamate and inosinate compounds and dulls the flavor.",
-      visualCue: {
-        primaryTarget: "A crystal-clear, warm golden-amber liquid that allows you to see clearly through to the bottom of the bowl. No cloudiness, no floating particles, no foam.",
-        spectrum: [
-          { state: "Underdone", description: "Dashi is slightly cloudy with fine particles from the bonito.", action: "Re-strain through a coffee filter and do not press the solids — let gravity do the work over 10 minutes." },
-          { state: "Perfect",   description: "Completely clear, golden, and clean. The color resembles good green tea or pale amber. Sipped, it has immediate, clean umami depth — a flavor that seems to come from everywhere at once and fill the whole mouth.", action: "Use within 3 days. Perfect for miso soup, chawanmushi, udon broth, ramen base, sauces, and glazes." },
-          { state: "Overdone",  description: "Dashi is dark amber-brown and smells assertively fishy. Over-steeped bonito.", action: "Dilute with additional hot water to taste. Even an over-steeped dashi can be salvaged for use in bold dishes like yakitori glaze or teriyaki sauce where its flavor will be subsumed." },
-        ],
-      },
-      feelCue: "Dip a clean finger into the finished dashi and taste it on its own, at room temperature. Perfect dashi should feel almost weightless on the tongue — no heaviness, no stickiness — but the umami should linger and swell for 10–15 seconds after swallowing, coating the entire back of the palate with a gentle, ocean-fresh savoriness.",
-    },
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau filtrée à froid",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Streep",
+      "inputs": [
+        "ing_01",
+        "ing_03"
+      ],
+      "outputState": "cold_kombu_water",
+      "instructions": "essuyer délicatement la surface du kombu avec un chiffon à peine humide pour enlever les débris de surface — ne la lavez pas. La poudre blanche à la surface (mannitol) est umami; ne la retirez pas. Placer le kombu dans une casserole avec de l'eau filtrée froide. Couvrir et tremper au réfrigérateur pendant la nuit, ou au moins 3 heures à température ambiante. Le froid abrupt extrait les polysaccharides complexes et les glutamates du kombu sans l'amertume qui vient du chauffage. L'eau deviendra un or clair et pâle.",
+      "visualCue": {
+        "primaryTarget": "Après le trempement, l'eau est d'une couleur claire, pâle doré-vert. Le kombu s'est élargi et s'est obscurci de son état sec, devenant souple et cuireux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est encore claire et incolore. Kombu semble inchangé.",
+            "action": "Le temps escarpé était insuffisant. Continuer à tremper — l'extraction du kombu est lente à froid. Au moins 3 heures, la nuit est idéale."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'eau est un vert doré clair et délicat. Kombu s'est élargi et se sent caoutchouteux-cuir quand pincée. L'eau sent peu la mer.",
+            "action": "Continuer à chauffer l'eau de kombu."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plongé pendant plus de 24 heures à la température ambiante — le kombu a peut - être commencé à fermenter et l'eau a un bord légèrement aigre.",
+            "action": "Continuez mais goûtez bien. La saveur peut avoir développé un hors-note — si oui, recommencer."
+          }
+        ]
+      },
+      "feelCue": "Après la nuit, le kombu devrait se sentir comme du cuir souple — souple et souple, non fragile. Frottez un coin entre les doigts : la surface doit être légèrement glissante à partir des polysaccharides extraits. L'eau froide doit sentir propre et peu océanique."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Chaleur",
+      "inputs": [
+        "cold_kombu_water"
+      ],
+      "outputState": "warmed_kombu_dashi",
+      "instructions": "Placez le pot à feu moyen-doux. Portez lentement l'eau à température, en regardant attentivement — le but est d'atteindre 60-65°C (140-150°F) et de la maintenir là pendant 10 minutes. Ne le laissez pas bouillir. Extraits de bouillir des composés amers du kombu. Utilisez un thermomètre. Sinon, veillez à ce que les premières petites bulles se forment au fond du pot et sur la surface du kombu — celles-ci apparaissent à environ 60°C. Retirer le kombu avant que l'eau atteigne 70°C.",
+      "visualCue": {
+        "primaryTarget": "Le pot est à 60-65°C : de très petites bulles commencent juste à se former et à s'élever du bas. Le liquide s'évapore doucement. Le kombu libère des fils minces et soyeux de polysaccharides dissous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est chaude mais ne montre pas encore de bulles. La température est inférieure à 55°C. Le kombu ne contribue pas encore de façon significative.",
+            "action": "Continuez à vous réchauffer lentement. Cette phase d'extraction douce est l'étape la plus importante pour le dashi propre — ne le précipitez pas."
+          },
+          {
+            "state": "Perfect",
+            "description": "Petites bulles clairsemées se formant au fond et aux côtés. L'eau est en vapeur. Le kombu est entièrement souple et libérant des brins minces et clairs. La température est comprise entre 60 et 65°C.",
+            "action": "Maintenez cette température pendant 10 minutes, puis retirez le kombu."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'eau a atteint une ébullition complète ou proche. De plus grandes bulles sont visibles et le kombu a bouilli.",
+            "action": "Enlevez immédiatement le kombu. Le dashi aura un bord légèrement amer et algue — il est encore utilisable pour la soupe miso ou les plats braisés mais manque de la délicatesse cristalline du dashi ichiban parfait."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main à 15 cm au-dessus de la casserole — à 60°C, vous devriez sentir une chaleur douce et soutenue, mais pas une chaleur agressive. La vapeur doit être légère et continue, mais pas vigoureuse. Un thermomètre de cuisine est l'outil le plus fiable ici; cuisiner par le sentiment seul nécessite l'expérience avec dashi."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Infuse",
+      "inputs": [
+        "warmed_kombu_dashi",
+        "ing_02"
+      ],
+      "outputState": "bonito_dashi",
+      "instructions": "Retirez le kombu (réservez-le pour faire des plats de niban dashi ou de kombu braisé). Portez l'eau de kombu juste sous un ébullition — vous voulez voir le mouvement de roulement à la surface, mais pas un ébullition complet. Retirer complètement du feu. Ajoutez tout le katsuobushi à la fois. Ne remuez pas. Laisser les flocons de bonite fleurir et couler naturellement — cela prend 2–3 minutes. Les flocons flottent d'abord, absorbent le liquide et s'assombrissent, puis s'enfoncent lentement vers le bas en abandonnant leur inosinate.",
+      "visualCue": {
+        "primaryTarget": "Les flocons de Bonito sont passés de flocons secs flottants à des masses sombres et saturées. La plupart des flocons se sont installés au fond du pot en 3 minutes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les flocons sont encore principalement flottants, pâles et clairement pas encore saturés. Moins d'une minute s'est écoulée.",
+            "action": "Attendez — ne remuez pas. Stirring rend le dashi nuageux et peut libérer des composés amers. Regardez et soyez patient."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les flocons s'obscurcissent, deviennent lourds avec du liquide absorbé et sont coulés ou tombent au fond. Le dashi a pris une couleur ambre chaude.",
+            "action": "La souche immédiatement — ne laissez pas le bonito raide au-delà de 3 minutes ou le dashi devient pêcheur et dur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les flocons de Bonito sont trempés pendant plus de 5 minutes. Le dashi est plus foncé que l'ambre pâle et sent fortement et désagréablement le poisson.",
+            "action": "Retirez-vous et jetez le bonito. Le dashi a surextracté. Pour une utilisation future dans les plats cuits (ramen, plats braisés), cela est acceptable; pour les soupes délicates claires, il sera trop fort."
+          }
+        ]
+      },
+      "feelCue": "Regardez le moment où le katsuobushi a frappé l'eau chaude — les flocons danseront et s'endormiront un moment des courants de convection, puis peu à peu. La chambre devrait se remplir d'un arôme propre, marin, doucement fumé, comme l'océan et un feu de camp simultanément."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Poignée",
+      "inputs": [
+        "bonito_dashi"
+      ],
+      "outputState": "dashi",
+      "instructions": "Déposer un tamis à mailles fines avec un filtre à fromage ou à café propre. Verser le dashi lentement sans presser les solides — presser les extraits de composés amers. Laissez-la s'écouler librement. Le dashi d'ichiban fini (premier tirage) devrait être un liquide clair et doré de profondeur profonde. Jeter le katsuobushi dépensé ou réserver pour faire de l'assaisonnement de riz furikake. Utiliser dashi immédiatement ou réfrigérer jusqu'à 3 jours. Ne pas congeler — la congélation décompose le glutamate délicat et les composés inosinate et terne la saveur.",
+      "visualCue": {
+        "primaryTarget": "Un liquide d'ambre doré clair cristallin et chaud qui vous permet de voir clairement jusqu'au fond du bol. Pas de nuages, pas de particules flottantes, pas de mousse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Dashi est légèrement nuageux avec de fines particules du bonito.",
+            "action": "Reformer à travers un filtre à café et ne pas presser les solides — laissez la gravité faire le travail pendant 10 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement clair, doré et propre. La couleur ressemble à un bon thé vert ou ambre pâle. Situé, il a immédiatement, la profondeur de l'umami propre — une saveur qui semble venir de partout à la fois et remplir toute la bouche.",
+            "action": "Utiliser dans les 3 jours. Parfait pour la soupe miso, le chawanmushi, le bouillon d'Udon, la base de ramen, les sauces et les glaçures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dashi est brun-ambre foncé et sent la pêche. Bonito démesuré.",
+            "action": "Diluer avec de l'eau chaude supplémentaire au goût. Même un dashi sur-tendu peut être récupéré pour être utilisé dans des plats audacieux comme le glaçage yakitori ou la sauce teriyaki où sa saveur sera subsumée."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt propre dans le dashi fini et goûtez-le seul, à température ambiante. Le dashi parfait devrait se sentir presque sans poids sur la langue — pas de lourdeur, pas de collant — mais l'umami devrait s'attarder et gonfler pendant 10 à 15 secondes après avoir avalé, enrobant tout le dos de la bouche d'une douce et fraîche saveur océanique."
+    }
+  ]
 };

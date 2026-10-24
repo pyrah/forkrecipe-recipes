@@ -1,97 +1,227 @@
 export default {
-  repoId: "master_italian_polenta_001",
-  parentRepoId: null,
-  slug: "polenta",
-  author: "ForkRecipe Kitchen",
-  title: "Polenta",
-  description: "Coarse cornmeal stirred into a slow whirlpool until the grains burst, swell, and pull away from the pot in a single glossy mass — patient, golden, and finished with a knot of butter and a storm of cheese.",
-  cuisine: "Italian",
-  culture: "Friulian",
-  category: "grains",
-  tags: ["polenta", "italian", "cornmeal", "porridge", "comfort", "technique"],
-  difficulty: 2,
-  activeTime: "45 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 2, salty: 3, sour: 0, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Water (or half water, half milk)",        ratioValue: 500, defaultUnit: "parts", substitutions: ["light chicken stock", "whole milk"] },
-    { ingId: "ing_02", role: "Starch",     name: "Stone-ground coarse cornmeal (polenta)",  ratioValue: 100, defaultUnit: "parts", substitutions: ["polenta taragna (corn + buckwheat)", "medium-grind cornmeal"] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Fine sea salt",                           ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",        name: "Unsalted butter",                         ratioValue: 12,  defaultUnit: "parts", substitutions: ["extra-virgin olive oil"] },
-    { ingId: "ing_05", role: "Umami",      name: "Parmigiano-Reggiano (finely grated)",     ratioValue: 15,  defaultUnit: "parts", substitutions: ["Grana Padano", "aged Montasio"] },
-    { ingId: "ing_06", role: "Dairy",      name: "Whole milk (to finish, optional)",        ratioValue: 30,  defaultUnit: "parts", substitutions: ["heavy cream"] },
+  "repoId": "master_italian_polenta_001",
+  "parentRepoId": null,
+  "slug": "polenta",
+  "author": "ForkRecipe Kitchen",
+  "title": "Polenta",
+  "description": "La farine de maïs s'émousse dans un tourbillon lent jusqu'à ce que les grains éclatent, gonflent et s'éloignent du pot en une seule masse brillante — patiente, dorée, et finie par un noeud de beurre et une tempête de fromage.",
+  "cuisine": "Italien",
+  "culture": "Friulian",
+  "category": "grains",
+  "tags": [
+    "polenta",
+    "Italien",
+    "farine de maïs",
+    "porridge",
+    "confort",
+    "technique"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "45 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Season the water",
-      inputs: ["ing_01", "ing_03"],
-      outputState: "salted_water",
-      instructions: "Pour the water into a heavy-bottomed pot — copper or thick-clad steel holds heat best and resists scorching. Add the salt and bring to a bare simmer over medium heat. The water should be hot and lazily steaming, with small bubbles trembling at the edges, NOT at a rolling boil. A violent boil flings cornmeal everywhere and seizes it into lumps.",
-      visualCue: {
-        primaryTarget: "Wisps of steam rise steadily and a few small bubbles break the surface near the rim. The salt has fully dissolved and the water moves with a slow, glassy convection.",
-        spectrum: [
-          { state: "Underdone", description: "Water is warm but still, no steam, salt grains visible on the bottom.", action: "Keep heating and stir once to dissolve the salt before adding cornmeal." },
-          { state: "Perfect",   description: "Hot, gently steaming, a quiet shimmer of small bubbles around the edge — a 'smiling' simmer, not a boil.", action: "Begin streaming in the cornmeal." },
-          { state: "Overdone",  description: "Rolling, splashing boil with large bubbles bursting across the whole surface.", action: "Lower the heat and let it settle for 30 seconds before adding the cornmeal, or it will spit and clump." },
-        ],
-      },
-      feelCue: "Hold your hand over the pot — you should feel soft, even warmth and hear a faint hiss, not the loud rumble of a hard boil.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Eau (ou moitié eau, moitié lait)",
+      "ratioValue": 500,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Poulet léger",
+        "lait entier"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Rain in the cornmeal",
-      inputs: ["salted_water", "ing_02"],
-      outputState: "incorporated_slurry",
-      instructions: "Stir the simmering water into a slow whirlpool with a whisk. While it spins, add the cornmeal in a thin, steady rain from your fist — never dump it. Whisk constantly as you pour so each grain disperses before the next lands. Once all the cornmeal is in, switch to a sturdy wooden spoon. The mixture will look loose and milky, like thin cream.",
-      visualCue: {
-        primaryTarget: "A smooth, lump-free, pourable slurry the color of pale custard. The whisk leaves momentary trails that fill back in instantly.",
-        spectrum: [
-          { state: "Underdone", description: "Visible lumps or a dry skin of cornmeal floating on top; the meal was added too fast or the whisk stopped moving.", action: "Whisk hard to break up clumps now, while it is still thin — lumps set permanently once it thickens." },
-          { state: "Perfect",   description: "Uniform, silky, and just-pourable. No dry pockets, no lumps, a faint sweet corn aroma rising.", action: "Reduce heat to low and settle in for the slow cook." },
-          { state: "Overdone",  description: "Already stiff and gluey before any real cooking, because too much meal went in too soon.", action: "Whisk in a splash of hot water to loosen it back to a pourable slurry." },
-        ],
-      },
-      feelCue: "The whisk should move freely with almost no resistance — like stirring loose batter. If it drags this early, you've added the cornmeal too quickly.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Farine de maïs grossière en pierre (polenta)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "polenta taragna (corn + sarrasin)",
+        "farine de maïs moyenne"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Cook low and slow",
-      inputs: ["incorporated_slurry"],
-      outputState: "cooked_polenta",
-      instructions: "Drop the heat to its lowest setting so the polenta blips rather than boils — a thick bubble should heave up and burst every few seconds, like a slow mud pot. Cook 35-45 minutes, stirring every few minutes with the wooden spoon, scraping the bottom and corners to prevent scorching. The polenta is done when the grains have lost all grittiness and the mass pulls cleanly away from the sides of the pot as you stir.",
-      visualCue: {
-        primaryTarget: "Thick, glossy, deep-gold polenta that mounds on the spoon and pulls away from the pot wall in a single sheet, briefly exposing the bottom before flowing back.",
-        spectrum: [
-          { state: "Underdone", description: "Still soupy and pale; a spoonful rubbed on the lip of the pot feels sandy and gritty between the teeth.", action: "Keep cooking — the grains need more time and water to fully gelatinize. Add a splash of hot water if it thickens before the grit is gone." },
-          { state: "Perfect",   description: "Spoon stands a moment before slowly falling. The polenta tastes sweet and smooth with no graininess, and the surface glistens. It sheets off the pot wall.", action: "Mantecatura — stir in the butter and cheese." },
-          { state: "Overdone",  description: "Stiff, dry, and pasty, cracking at the edges of the pot, possibly with a scorched smell from the bottom.", action: "Stir in hot water or milk a little at a time to bring back a soft, flowing texture; do not scrape up any burnt layer." },
-        ],
-      },
-      feelCue: "The stir gets heavier minute by minute — at the start the spoon glides, near the end it leaves a clean valley that holds for a second before closing. That fading trail is your timer.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Mantecatura",
-      inputs: ["cooked_polenta", "ing_04", "ing_05", "ing_06"],
-      outputState: "finished_polenta",
-      instructions: "Off the heat, beat in the cold butter and grated Parmigiano, stirring vigorously until both melt into a glossy, unified cream. For a soft, spoonable polenta, loosen with the warm milk until it slumps slowly off the spoon. Taste and adjust salt. Serve at once in warm, shallow bowls — polenta stiffens fast as it cools.",
-      visualCue: {
-        primaryTarget: "Lustrous, smooth, pale-gold polenta that flows in a slow ribbon and settles into a flat pool, with a rich, buttery sheen on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Butter and cheese sit in visible streaks; the polenta looks dull and matte rather than glossy.", action: "Keep beating — the fat needs to emulsify into the starch. A splash of hot milk helps it come together." },
-          { state: "Perfect",   description: "Glossy and flowing, holding a soft mound that slowly relaxes flat. Buttery and savory, with the Parmigiano humming in the background.", action: "Plate immediately in warmed bowls." },
-          { state: "Overdone",  description: "Thick, stiff, and pasty, holding a hard shape and turning gummy as it sits.", action: "Beat in more hot milk or water to restore the flow — soft polenta should pour, not stand." },
-        ],
-      },
-      feelCue: "On the tongue it should be velvety and clean, never grainy or chalky. If it coats your palate like paste, loosen it with hot liquid; if it pools like soup, give it a minute to set.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile d'olive extra vierge"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Parmigiano-Reggiano (finement râpé)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Grana Padano",
+        "ans Montasio"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Lait entier (pour finir, en option)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème lourde"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Assaisonner l'eau",
+      "inputs": [
+        "ing_01",
+        "ing_03"
+      ],
+      "outputState": "salted_water",
+      "instructions": "Versez l'eau dans un pot à fond lourd — le cuivre ou l'acier épais tient le mieux la chaleur et résiste à l'incinération. Ajouter le sel et laisser mijoter à feu moyen. L'eau doit être chaude et paresseusement vapeur, avec de petites bulles tremblant aux bords, PAS à un ébullition. Un ébullition violent fait des flings de maïs partout et les saisit en morceaux.",
+      "visualCue": {
+        "primaryTarget": "Les vagues de vapeur augmentent régulièrement et quelques petites bulles brisent la surface près du bord. Le sel s'est complètement dissous et l'eau se déplace avec une convection lente et vitreuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est chaude mais quand même, pas de vapeur, les grains de sel visibles sur le fond.",
+            "action": "Gardez le chauffage et remuez une fois pour dissoudre le sel avant d'ajouter de la farine de maïs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaud, mijotant doucement, un léger éclat de petites bulles autour du bord — un mijot « souriant », pas un ébullition.",
+            "action": "Commence à rouler dans la farine de maïs."
+          },
+          {
+            "state": "Overdone",
+            "description": "Roulement, éclaboussure avec de grandes bulles éclatant sur toute la surface.",
+            "action": "Abaissez la chaleur et laissez-la reposer pendant 30 secondes avant d'ajouter la farine de maïs, ou elle crache et s'agrippe."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main sur le pot — vous devriez vous sentir doux, même la chaleur et entendre un sifflement faible, et non le grondement fort d'un ébullition dur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Pluie dans la farine de maïs",
+      "inputs": [
+        "salted_water",
+        "ing_02"
+      ],
+      "outputState": "incorporated_slurry",
+      "instructions": "Incorporer l'eau mijotante dans un tourbillon lent avec un fouet. Pendant qu'il tourne, ajoutez la farine de maïs dans une pluie mince et régulière de votre poing — ne la jetez jamais. Whisk constamment pendant que vous versez ainsi chaque grain se disperse avant les prochaines terres. Une fois que toutes les farines de maïs sont entrées, passer à une cuillère en bois robuste. Le mélange sera lâche et laiteux, comme de la crème fine.",
+      "visualCue": {
+        "primaryTarget": "Un lisier lisse, sans morceaux, versable, de couleur crème pâle. Le fouet laisse des sentiers momentanés qui se remplissent instantanément.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des grumeaux visibles ou une peau sèche de farine de maïs flottant sur le dessus; le repas a été ajouté trop vite ou le fouet a cessé de bouger.",
+            "action": "Il est difficile de se briser, alors qu'il est encore mince."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme, soyeuse et juste-pure. Pas de poches sèches, pas de grumeaux, un léger arôme de maïs sucré qui monte.",
+            "action": "Réduisez la chaleur à faible et déposez-la pour la cuisson lente."
+          },
+          {
+            "state": "Overdone",
+            "description": "Déjà raide et collant avant toute vraie cuisson, parce que trop de repas est entré trop tôt.",
+            "action": "fouetter dans une éclaboussure d'eau chaude pour la desserrer vers un lisier versable."
+          }
+        ]
+      },
+      "feelCue": "Le fouet doit se déplacer librement avec presque aucune résistance, comme remuer la pâte. Si ça traîne si tôt, vous avez ajouté la farine de maïs trop rapidement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Faire cuire lentement",
+      "inputs": [
+        "incorporated_slurry"
+      ],
+      "outputState": "cooked_polenta",
+      "instructions": "Baissez la chaleur à son réglage le plus bas afin que la polenta blips plutôt que bouillir — une bulle épaisse devrait se lever et éclater toutes les quelques secondes, comme un pot de boue lent. Cuire 35-45 minutes, en remuant toutes les quelques minutes avec la cuillère en bois, en grattant le fond et les coins pour éviter les brûlures. La polenta est faite lorsque les grains ont perdu toute graisse et la masse tire proprement loin des côtés du pot que vous remuez.",
+      "visualCue": {
+        "primaryTarget": "Polenta épaisse, brillante et d'or profond qui fond sur la cuillère et s'éloigne de la paroi du pot en une seule feuille, exposant brièvement le fond avant de s'écouler.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours soupeux et pâle; une cuillère frottée sur la lèvre du pot sent sablonneux et gritté entre les dents.",
+            "action": "Continuez à cuisiner: les grains ont besoin de plus de temps et d'eau pour se gélatiniser complètement. Ajoutez une éclaboussure d'eau chaude si elle s'épaissit avant que le grain ne soit parti."
+          },
+          {
+            "state": "Perfect",
+            "description": "Spoon se tient un moment avant de tomber lentement. La polenta a un goût doux et doux sans grain, et la surface brille. Ça dérape du mur de pot.",
+            "action": "Mantecatura — mélanger le beurre et le fromage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Fendue, sèche et pâteuse, craquelant aux bords du pot, éventuellement avec une odeur brûlée du fond.",
+            "action": "Incorporer l'eau chaude ou le lait un peu à la fois pour ramener une texture douce et fluide; ne grattez aucune couche brûlée."
+          }
+        ]
+      },
+      "feelCue": "L'agitation devient plus lourde minute par minute — au début la cuillère glisse, près de l'extrémité il laisse une vallée propre qui tient une seconde avant de fermer. Cette piste est votre minuterie."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mantecatura",
+      "inputs": [
+        "cooked_polenta",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "finished_polenta",
+      "instructions": "Hors du feu, battre dans le beurre froid et râpé Parmigiano, en remuant vigoureusement jusqu'à ce que les deux fondent dans une crème brillante et unifiée. Pour une polenta douce à cuiller, desserrer avec le lait chaud jusqu'à ce qu'il s'effondre lentement de la cuillère. Goûtez et ajustez le sel. Servir à la fois dans des bols chauds et peu profonds — la polenta raidit rapidement au moment où elle refroidit.",
+      "visualCue": {
+        "primaryTarget": "Polenta lustrée, lisse et dorée qui coule dans un ruban lent et s'installe dans une piscine plate, avec un éclat riche et beurreux à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Beurre et fromage s'assoient dans des stries visibles; la polenta est terne et mate plutôt que brillante.",
+            "action": "Continuez à battre — la graisse doit être émulsifiée dans l'amidon. Un jet de lait chaud l'aide à se réunir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire et fluide, tenant un monticule doux qui se détend lentement à plat. Buttery et savory, avec le Parmigiano en arrière-plan.",
+            "action": "Assiette immédiatement dans des bols chauds."
+          },
+          {
+            "state": "Overdone",
+            "description": "Épaisseur, raide et pâteux, tenant une forme dure et tournant le chewing-gum comme il est assis.",
+            "action": "Battre dans du lait plus chaud ou de l'eau pour restaurer l'écoulement — la polenta douce devrait verser, pas rester debout."
+          }
+        ]
+      },
+      "feelCue": "Sur la langue il devrait être velouté et propre, jamais grainé ou crayeux. S'il enrobe votre palais comme de la pâte, desserrez-le avec du liquide chaud; s'il pool comme de la soupe, donnez-lui une minute à mettre."
+    }
+  ]
 };

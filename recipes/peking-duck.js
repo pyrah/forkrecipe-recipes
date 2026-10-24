@@ -1,100 +1,247 @@
 export default {
-  repoId: "master_chinese_pekingduck_001",
-  parentRepoId: null,
-  slug: "peking-duck",
-  author: "ForkRecipe Kitchen",
-  title: "Peking Duck",
-  description: "The pinnacle of Chinese roast cookery — a whole duck air-dried over 24 hours, lacquered with maltose and soy until the skin shatters at a touch, the fat rendered completely away beneath a burnished mahogany shell.",
-  cuisine: "Chinese",
-  culture: "Beijing",
-  category: "proteins",
-  tags: ["protein", "chinese", "duck", "roasted", "peking", "crispy-skin"],
-  difficulty: 5,
-  activeTime: "1 hour",
-  totalTime: "30 hours",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 3, sour: 0, bitter: 0, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole Pekin duck (2.2–2.5 kg), cleaned", ratioValue: 2300, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener", name: "Maltose syrup",                ratioValue: 60,   defaultUnit: "g",  substitutions: ["honey (less viscous)"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Shaoxing rice wine",           ratioValue: 30,   defaultUnit: "ml", substitutions: ["dry sherry"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Light soy sauce",              ratioValue: 30,   defaultUnit: "ml", substitutions: ["tamari (gluten-free)"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Boiling water (for blanching)", ratioValue: 2000, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Five-spice powder",            ratioValue: 5,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine salt",                    ratioValue: 10,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Fresh ginger, sliced",         ratioValue: 20,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Allium",    name: "Spring onion, cut into lengths", ratioValue: 30, defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_chinese_pekingduck_001",
+  "parentRepoId": null,
+  "slug": "peking-duck",
+  "author": "ForkRecipe Kitchen",
+  "title": "Canard à Pékin",
+  "description": "Le pinacle de la cuisine rôtie chinoise — un canard entier séché à l'air pendant 24 heures, laqué de maltose et de soja jusqu'à ce que la peau éclate au toucher, la graisse rendue complètement sous une coquille d'acajou brûlée.",
+  "cuisine": "Chinois",
+  "culture": "Pékin",
+  "category": "proteins",
+  "tags": [
+    "protéine",
+    "Chinois",
+    "canard",
+    "grillés",
+    "Piège",
+    "peau croustillante"
   ],
-  processNodes: [
+  "difficulty": 5,
+  "activeTime": "1 hour",
+  "totalTime": "30 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Prep",
-      inputs: ["ing_01", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "seasoned_duck",
-      instructions: "Mix five-spice and salt. Remove the neck and giblets. Dry the duck cavity thoroughly with paper towels. Rub the five-spice-salt mixture inside the cavity. Stuff the cavity with ginger and spring onion. Truss the opening with a skewer. Using a bicycle pump or air compressor nozzle inserted under the skin at the neck opening, inflate the skin away from the breast — this separates subcutaneous fat from flesh, the key to shatteringly crisp skin.",
-      visualCue: {
-        primaryTarget: "The duck's breast skin should look visibly puffed and separated from the meat beneath, like a small pillow.",
-        spectrum: [
-          { state: "Underdone", description: "Skin still lies flat against the flesh — the air didn't penetrate far enough.", action: "Re-insert the nozzle at the neck and pump slowly while pressing the neck skin closed around it. Work air toward the legs too." },
-          { state: "Perfect",   description: "The breast skin has separated visibly, the thigh skin looks taut. The duck looks inflated and round, not flat.", action: "Move immediately to blanching." },
-          { state: "Overdone",  description: "Skin has torn in a spot where too much pressure built up.", action: "Patch with a toothpick to hold the skin. The tear will seal during drying and roasting." },
-        ],
-      },
-      feelCue: "When you press the inflated breast skin, it should feel like a ripe grape — taut and springy, with a distinct air pocket between your finger and the meat beneath.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Canard entier (2,2 à 2,5 kg), nettoyé",
+      "ratioValue": 2300,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Blanch",
-      inputs: ["seasoned_duck", "ing_05"],
-      outputState: "blanched_duck",
-      instructions: "Hold the duck over a large pot or wok by its trussed neck. Ladle boiling water slowly and evenly over the entire skin surface for 2–3 minutes — the skin will tighten and turn opaque white. This opens the pores and tightens the protein matrix, allowing better lacquer adhesion and a crisper final skin.",
-      visualCue: {
-        primaryTarget: "The skin transforms from pale ivory to tight, opaque white all over, pulling slightly away from the legs.",
-        spectrum: [
-          { state: "Underdone", description: "Patches of skin still look loose, yellowish, and slightly translucent.", action: "Continue ladling boiling water, focusing on the pale patches." },
-          { state: "Perfect",   description: "Uniformly tightened, white, and visibly contracting. The duck now looks leaner.", action: "Allow to drain well before lacquering." },
-          { state: "Overdone",  description: "Skin is starting to cook through and blister from too much boiling water.", action: "Move quickly to lacquering. The skin will still crisp in the oven." },
-        ],
-      },
-      feelCue: "After blanching, the skin should feel like taut parchment when you run a finger along the breast — stiff and papery, not soft.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sirop de maltose",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "miel (moins visqueux)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Glaze",
-      inputs: ["blanched_duck", "ing_02", "ing_03", "ing_04"],
-      outputState: "lacquered_duck",
-      instructions: "Warm the maltose in a small pan over very low heat until it just flows. Stir in the Shaoxing wine and soy sauce to make a lacquer. Brush a thin, even coat over the entire duck skin. Hang the duck in a cool, airy spot (or in front of a fan) and repeat the lacquering every 4 hours for a total of 3–4 coats over 24 hours. The skin must be fully dry between coats. This is non-negotiable — moisture trapped under the lacquer steams the skin during roasting instead of crisping it.",
-      visualCue: {
-        primaryTarget: "After 24 hours, the duck skin should look dark amber-mahogany, dry as drum skin, and slightly tacky to the touch.",
-        spectrum: [
-          { state: "Underdone", description: "The skin is pale golden and still feels soft or leathery. Only one or two coats applied.", action: "Continue drying and apply more lacquer coats. Do not roast until the skin is tight and dark amber." },
-          { state: "Perfect",   description: "Deep mahogany-brown, uniformly dry, and tight. Tapping the breast makes a faintly hollow sound. No sticky patches.", action: "Proceed to roasting at high heat." },
-          { state: "Overdone",  description: "Lacquer has built up unevenly — thick, almost black patches alternating with lighter areas.", action: "Use a clean brush to lightly redistribute before the final drying hour. Uneven color is cosmetic but uneven crisping is not." },
-        ],
-      },
-      feelCue: "The dried lacquered skin should feel like stiff vinyl — smooth, cool, and completely inelastic. If it bends slightly under your fingers, it needs another hour of drying.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Vin de riz shaoxant",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sherry sec"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Roast",
-      inputs: ["lacquered_duck"],
-      outputState: "roasted_duck",
-      instructions: "Preheat oven to 220 C (430 F). Place the duck breast-side down on a wire rack set over a deep tray with 2 cm of water beneath (to catch dripping fat and prevent smoking). Roast 25 minutes. Flip to breast-side up, increase to 240 C (465 F), and roast a further 20–25 minutes until the skin is shatteringly crisp and deeply lacquered.",
-      visualCue: {
-        primaryTarget: "Glistening mahogany skin with a lacquer-mirror sheen, bubbled and blistered at the high points of the breast. The drip tray below should hold a pool of clear rendered fat.",
-        spectrum: [
-          { state: "Underdone", description: "Skin looks matte and dark but has not bubbled or blistered. It flexes when pressed.", action: "Increase oven to 250 C and roast a further 10 minutes, watching closely." },
-          { state: "Perfect",   description: "Bubbled, blistered, shatteringly brittle skin. Tapping with a spoon produces a sharp 'click'. Deep mahogany with golden-amber highlights where the fat pooled.", action: "Rest for 5 minutes, then carve skin and meat separately." },
-          { state: "Overdone",  description: "Skin has blackened and the lacquer has burned to a bitter char.", action: "Use a sharp knife to scrape the blackened top layer away — the layer beneath is often still good. Serve immediately." },
-        ],
-      },
-      feelCue: "Tap the finished duck skin with a fingernail — it should produce a sharp, resonant click, like tapping the back of a phone. If it sounds dull, it needs more time at high heat.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "sauce de soja légère",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari (sans gluten)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau bouillante (pour blanchir)",
+      "ratioValue": 2000,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poudre de cinqpices",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Gingembre frais, tranché",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Allium",
+      "name": "Oignon de printemps, coupé en longueurs",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation",
+      "inputs": [
+        "ing_01",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "seasoned_duck",
+      "instructions": "Mélanger cinq épices et sel. Enlever le cou et les abats. Sécher soigneusement la cavité du canard avec des serviettes en papier. Frotter le mélange de sel à cinqpices à l'intérieur de la cavité. Remplis la cavité de gingembre et d'oignon de printemps. Coupe l'ouverture avec une brochette. À l'aide d'une pompe à vélo ou d'une buse de compresseur d'air insérée sous la peau à l'ouverture du cou, gonflez la peau loin du sein, ce qui sépare la graisse sous-cutanée de la chair, la clé pour briser la peau croustillante.",
+      "visualCue": {
+        "primaryTarget": "La peau de poitrine du canard doit avoir l'air visiblement gonflée et séparée de la viande en dessous, comme un petit oreiller.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est toujours à plat contre la chair — l'air n'a pas pénétré assez loin.",
+            "action": "Réinsérer la buse au cou et pomper lentement tout en appuyant sur la peau du cou fermée autour. Travailler de l'air vers les jambes aussi."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau de la poitrine s'est séparée visiblement, la peau de la cuisse semble tendue. Le canard semble gonflé et rond, pas plat.",
+            "action": "Déplacez-vous immédiatement pour blanchir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau a déchiré dans un endroit où trop de pression s'est accumulée.",
+            "action": "Patch avec un cure-dent pour tenir la peau. La déchirure scellera pendant le séchage et la torréfaction."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous appuyez sur la peau gonflée de la poitrine, il doit se sentir comme un raisin mûr — tendu et printanier, avec une poche d'air distincte entre votre doigt et la viande en dessous."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Blanch",
+      "inputs": [
+        "seasoned_duck",
+        "ing_05"
+      ],
+      "outputState": "blanched_duck",
+      "instructions": "Tenez le canard au-dessus d'un grand pot ou wok par son cou trussé. Faire bouillir l'eau lentement et uniformément sur toute la surface de la peau pendant 2 à 3 minutes – la peau se serrera et deviendra blanche opaque. Cela ouvre les pores et resserre la matrice protéique, permettant une meilleure adhérence de la laque et une peau finale plus croustillante.",
+      "visualCue": {
+        "primaryTarget": "La peau passe de l'ivoire pâle à un blanc serré et opaque, tout en s'éloignant légèrement des jambes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau a toujours l'air lâche, jaunâtre et légèrement translucide.",
+            "action": "Continuer l'eau bouillante, en se concentrant sur les taches pâles."
+          },
+          {
+            "state": "Perfect",
+            "description": "resserré uniformément, blanc et visiblement contrasté. Le canard semble maintenant plus maigre.",
+            "action": "Laissez bien égoutter avant la laquage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau commence à cuire à travers et blister à partir de trop d'eau bouillante.",
+            "action": "Passez rapidement au laquage. La peau sera encore croquante au four."
+          }
+        ]
+      },
+      "feelCue": "Après avoir blanchi, la peau doit se sentir comme du parchemin tat quand vous lancez un doigt le long de la poitrine — raide et papier, pas doux."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Glace",
+      "inputs": [
+        "blanched_duck",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "lacquered_duck",
+      "instructions": "Chauffer le maltose dans une petite poêle à feu très doux jusqu'à ce qu'il coule. Incorporer le vin Shaoxing et la sauce soja pour faire une laque. Badigeonner une fine, même couche sur toute la peau de canard. Suspendre le canard dans un endroit frais et aéré (ou devant un ventilateur) et répéter le laquage toutes les 4 heures pour un total de 3 à 4 couches sur 24 heures. La peau doit être entièrement sèche entre les couches. C'est non négociable: l'humidité piégée sous la laque vaporise la peau au lieu de la croustiller.",
+      "visualCue": {
+        "primaryTarget": "Après 24 heures, la peau de canard doit avoir l'air d'ambre foncée-mahogany, sèche comme peau de tambour, et légèrement collante au toucher.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est d'or pâle et reste douce ou sinueuse. Seulement une ou deux couches appliquées.",
+            "action": "Continuer à sécher et appliquer plus de laques. Ne pas rôtir jusqu'à ce que la peau soit serrée et foncée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep acajou brun, uniformément sec et serré. Cacher la poitrine fait un son légèrement creux. Pas de taches collantes.",
+            "action": "Passer à la torréfaction à feu vif."
+          },
+          {
+            "state": "Overdone",
+            "description": "Laque s'est construite de façon inégale — des plaques épaisses presque noires alternant avec des zones plus légères.",
+            "action": "Utilisez un pinceau propre pour redistribuer légèrement avant l'heure de séchage finale. Une couleur inégale est cosmétique, mais un croustillant inégal n'est pas."
+          }
+        ]
+      },
+      "feelCue": "La peau laquée séchée doit se sentir comme du vinyle rigide — lisse, frais et complètement inélastique. Si elle se penche légèrement sous vos doigts, il faut encore une heure de séchage."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Rôtis",
+      "inputs": [
+        "lacquered_duck"
+      ],
+      "outputState": "roasted_duck",
+      "instructions": "Préchauffer le four à 220 C (430 F). Placez la poitrine du canard vers le bas sur un porte-fils placé sur un plateau profond avec 2 cm d'eau sous (pour attraper la graisse qui coule et empêcher de fumer). 25 minutes. Plongez jusqu'à la poitrine, augmentez jusqu'à 240 C (465 F) et faites rôtir encore 20 à 25 minutes jusqu'à ce que la peau soit croustillante et laquée profondément.",
+      "visualCue": {
+        "primaryTarget": "Peau d'acajou glissée avec un éclat de laque-miroir, bublée et cloquée aux points élevés du sein. Le bac à goutte d'eau ci-dessous devrait contenir une réserve de gras rendu transparent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau a l'air mate et foncée, mais elle n'a ni bulle ni cloque. Il fléchit lorsqu'il est pressé.",
+            "action": "Augmenter le four à 250 C et faire rôtir encore 10 minutes, en regardant attentivement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Peau bouillie, blister, fracassante. Le tapotage à l'aide d'une cuillère produit un « clic » aigu. Acajou profond avec des reflets dorés-ambre où la graisse a mis en commun.",
+            "action": "Reposez-vous 5 minutes, puis découpez la peau et la viande séparément."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau a noirci et la laque a brûlé à un omble amer.",
+            "action": "Utilisez un couteau tranchant pour racler la couche supérieure noircie, la couche inférieure est souvent encore bonne. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Tapotez la peau de canard finie avec un ongle — il devrait produire un clic vif et résonnant, comme tapoter l'arrière d'un téléphone. Si ça a l'air terne, il faut plus de temps à haute chaleur."
+    }
+  ]
 };

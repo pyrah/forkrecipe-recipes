@@ -1,98 +1,234 @@
 export default {
-  repoId: "master_german_pumpernickel_001",
-  parentRepoId: null,
-  slug: "pumpernickel",
-  author: "ForkRecipe Kitchen",
-  title: "German Pumpernickel",
-  description: "Dense, midnight-dark, and profoundly complex — this Westphalian rye brick steams for sixteen hours until every grain is saturated with malt depth, subtle sourdough tang, and an undercurrent of dark chocolate and coffee that has no parallel in other breads.",
-  cuisine: "German",
-  culture: "Westphalian",
-  category: "breads",
-  tags: ["pumpernickel", "german", "rye", "dark-bread", "sourdough", "steamed", "westphalian"],
-  difficulty: 4,
-  activeTime: "30 min",
-  totalTime: "24 hr",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 2, salty: 3, sour: 3, bitter: 3, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Coarse rye meal (pumpernickel grind)", ratioValue: 100, defaultUnit: "%", substitutions: ["whole rye flour (denser result)"] },
-    { ingId: "ing_02", role: "Starch",    name: "Whole rye berries (soaked overnight)", ratioValue: 30,  defaultUnit: "%", substitutions: ["cracked rye"] },
-    { ingId: "ing_03", role: "Hydration", name: "Boiling water",                        ratioValue: 90,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Leavener",  name: "Rye sourdough starter (100% hydration)",ratioValue: 20, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine salt",                            ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Caraway seeds",                        ratioValue: 1,   defaultUnit: "%", substitutions: ["fennel seeds", "anise seeds"] },
-    { ingId: "ing_07", role: "Sweetener", name: "Dark malt extract or blackstrap molasses", ratioValue: 5, defaultUnit: "%", substitutions: ["treacle", "dark barley malt syrup"] },
+  "repoId": "master_german_pumpernickel_001",
+  "parentRepoId": null,
+  "slug": "pumpernickel",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pumpernickel allemand",
+  "description": "Dense, sombre de minuit et profondément complexe — cette brique de seigle westphalien s'éteint pendant seize heures jusqu'à ce que chaque grain soit saturé de profondeur de malt, de subtils armoiries et d'un sous - courant de chocolat noir et de café qui n'a pas de parallèle dans d'autres pains.",
+  "cuisine": "Allemand",
+  "culture": "Westphalien",
+  "category": "breads",
+  "tags": [
+    "pumpernickel",
+    "allemand",
+    "seigle",
+    "pain noir",
+    "Pâtes alimentaires",
+    "vapeur",
+    "westphalien"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "30 min",
+  "totalTime": "24 hr",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 3,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "soaked_grain",
-      instructions: "In a large heatproof bowl, combine the coarse rye meal and the pre-soaked whole rye berries. Pour the boiling water over both and stir vigorously until the rye meal has absorbed all the water. The mixture will look like a very thick, sticky porridge — almost like wet concrete. Cover tightly and let stand at room temperature for 1 hour. This scalding step gelatinizes the rye starches, kickstarts enzymatic breakdown of the complex rye sugars that become the bread's distinctive malt-dark sweetness, and softens the whole berries.",
-      visualCue: {
-        primaryTarget: "After 1 hour: a thick, dark, uniform mass that has absorbed all the water. No pools of standing liquid. Rye berries visible throughout like small dark pearls.",
-        spectrum: [
-          { state: "Underdone", description: "Still watery — standing liquid on the surface, rye meal not fully hydrated, coarse granules still gritty.", action: "Stir vigorously and wait another 30 minutes — the rye meal needs time to absorb fully." },
-          { state: "Perfect",   description: "Dark, thick, uniform porridge. No standing water. Whole rye berries distributed evenly throughout. Has a faint, toasted-rye smell.", action: "Cool to below 35 C before adding the sourdough starter." },
-          { state: "Overdone",  description: "Mass is very dense and has stiffened into a paste that barely stirs. Almost cold.", action: "Proceed — this is normal. Add a small amount of water (5%) if the starter won't incorporate." },
-        ],
-      },
-      feelCue: "The soaked grain mass should feel like cold, dense porridge — thick enough to mound on a spoon without running, with the faint rough texture of the rye berries throughout.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de seigle grossière",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de seigle entière (résultat du dénateur)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["soaked_grain", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "pumpernickel_dough",
-      instructions: "Once the soaked grain has cooled to below 35 C (check with your wrist), add the rye sourdough starter, salt, caraway seeds, and dark malt extract or molasses. Stir everything together vigorously with a heavy wooden spoon or stiff spatula until completely uniform. This is not a dough in the conventional sense — there is no gluten network to develop. It is a thick, dense batter that barely holds a shape. The color will be very dark brown. Taste: it should be savory, subtly sweet, malty, and smell complex.",
-      visualCue: {
-        primaryTarget: "A uniform dark-brown mass — every dark ingredient blended in without visible streaks of lighter rye meal or lighter starter. Dense enough to hold a mound when dropped from a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Paler streaks of starter or unmixed rye meal visible; malt extract has not fully incorporated; dough looks marbled.", action: "Continue mixing vigorously until completely uniform in color." },
-          { state: "Perfect",   description: "Uniformly very dark brown, almost black-brown. Dense but stirrable. Smells of rye, caraway, and dark malt. Tastes deeply savory with a background sweetness.", action: "Transfer immediately to a loaf tin and proceed to baking." },
-          { state: "Overdone",  description: "You have overmixed with a machine and the mass has become slightly aerated or stringy. Unlikely by hand.", action: "Proceed — minor overmixing doesn't harm pumpernickel, which has no gluten structure to damage." },
-        ],
-      },
-      feelCue: "Pumpernickel dough feels impossibly dense and sticky — it clings to your spoon in long, reluctant threads and takes real effort to stir. If your arm is tired, you're doing it right.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Baies entières de seigle",
+      "ratioValue": 30,
+      "defaultUnit": "%",
+      "substitutions": [
+        "seigle fissuré"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Shape",
-      inputs: ["pumpernickel_dough"],
-      outputState: "packed_loaf",
-      instructions: "Line a small loaf tin (approximately 20 x 10 cm) with parchment on all sides. Grease the parchment lightly. Spoon the pumpernickel dough into the tin, pressing firmly into the corners with a wet spatula or wet hands to eliminate air pockets. Smooth the top flat. Tap the tin firmly on the counter several times to release trapped bubbles. The tin should be filled to within 1 cm of the top. Cover tightly with an oiled piece of foil, crimped tightly around the rim to trap steam during baking.",
-      visualCue: {
-        primaryTarget: "A smooth, flat-topped dark mass filling the tin to within 1 cm of the rim. No visible air holes or craters in the surface. Foil seal is tight.",
-        spectrum: [
-          { state: "Underdone", description: "Air pockets visible on the surface; corners are not fully filled; the top surface is uneven with craters.", action: "Press the surface smooth with a wet spatula and tap the tin again to settle the dough." },
-          { state: "Perfect",   description: "Smooth, flat, matte-black surface filling the tin evenly. Foil crimped tight. The tin feels heavy for its size.", action: "Place in a water bath or steam oven and bake at 120 C (250 F) for 16 hours." },
-          { state: "Overdone",  description: "You've overfilled the tin — dough is level with or above the rim and will overflow during baking.", action: "Remove a spoonful or two, then seal with foil and proceed." },
-        ],
-      },
-      feelCue: "When you press the pumpernickel dough into the tin, it feels like pressing very dense, cold clay — it holds the indentation of your fingers and does not spring back at all.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau bouillante",
+      "ratioValue": 90,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["packed_loaf"],
-      outputState: "finished_pumpernickel",
-      instructions: "Preheat the oven to 120 C (250 F). Place the covered loaf tin inside a deep roasting pan. Pour boiling water into the roasting pan to reach halfway up the sides of the loaf tin — this creates the steam environment essential for pumpernickel. Bake covered with foil for 16 hours. Yes, sixteen hours. The low heat and steam slowly caramelize the rye sugars through the Maillard reaction and enzymatic browning — this is what creates the characteristic near-black color and complex, malt-chocolate flavor without any added colorants. After 16 hours, remove the foil, raise oven to 180 C (350 F), and bake uncovered for 30 minutes to set the crust. Cool completely in the tin before unmolding. Slice paper-thin — pumpernickel is best the day after baking.",
-      visualCue: {
-        primaryTarget: "After 16 hours under foil: the loaf has shrunk slightly from the tin walls and the surface is very dark brown, almost black. After the uncovered 30-minute finish: a firm, very dark crust with a matte surface.",
-        spectrum: [
-          { state: "Underdone", description: "After 16 hours the loaf center still feels soft and wet when pressed; internal temp below 95 C; the color is more dark-brown than near-black.", action: "Return covered at 120 C for another 2–4 hours. Pumpernickel cannot be rushed." },
-          { state: "Perfect",   description: "Near-black exterior, firm throughout when pressed. Internal temp 96–98 C. When unmolded and sliced, the crumb is dense, moist, and very dark — the color of dark chocolate. Rye berries visible as slightly paler dots.", action: "Cool completely — ideally overnight — before slicing. Wrap in paper and serve in thin slices." },
-          { state: "Overdone",  description: "Crust is charred or cracked; edges have dried to a hard, brittle shell.", action: "Trim the dried edges. The interior is almost certainly perfect — pumpernickel's dense structure protects it from overbaking." },
-        ],
-      },
-      feelCue: "A finished pumpernickel loaf feels like a dense, moist brick — far heavier than a wheat bread of the same size. Slice it paper-thin with a sharp serrated knife: each slice should flex slightly rather than crumble.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "Démarrage au sarcophage (hydratation 100%)",
+      "ratioValue": 20,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Graines de Carave",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": [
+        "graines de fenouil",
+        "graines d'anis"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Extrait de malt foncé ou mélasse de strap noir",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Treacle",
+        "sirop de malt d'orge foncée"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "soaked_grain",
+      "instructions": "Dans un grand bol résistant à la chaleur, combiner le seigle grossier et les baies de seigle entier pré-soufflées. Verser l'eau bouillante sur les deux et remuer vigoureusement jusqu'à ce que le seigle ait absorbé toute l'eau. Le mélange ressemblera à un porridge très épais et collant, presque comme du béton humide. Couvrir soigneusement et laisser reposer à température ambiante pendant 1 heure. Cette étape d'échaudage gélatinise les amidons de seigle, déclenche une dégradation enzymatique des sucres de seigle complexes qui deviennent la douceur distinctive malt-dark du pain, et adoucit les baies entières.",
+      "visualCue": {
+        "primaryTarget": "Après 1 heure: une masse épaisse, sombre et uniforme qui a absorbé toute l'eau. Pas de réservoir de liquide debout. Des baies de seigle visibles comme de petites perles foncées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours aqueux — liquide debout à la surface, farine de seigle pas complètement hydratée, granules grossiers encore gris.",
+            "action": "Remuer vigoureusement et attendre encore 30 minutes — le repas de seigle a besoin de temps pour absorber complètement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un porridge sombre, épais et uniforme. Pas d'eau. Des baies entières de seigle réparties uniformément. Il a une odeur faible et grillée.",
+            "action": "Laisser refroidir à moins de 35 °C avant d'ajouter le démarreur aurifère."
+          },
+          {
+            "state": "Overdone",
+            "description": "La masse est très dense et s'est raidie dans une pâte qui remue à peine. Presque froid.",
+            "action": "Continuez — c'est normal. Ajoutez une petite quantité d'eau (5 %) si le démarreur ne l'intègre pas."
+          }
+        ]
+      },
+      "feelCue": "La masse de grain trempée devrait se sentir comme un porridge froid et dense — assez épais pour se poser sur une cuillère sans courir, avec la faible texture rugueuse des baies de seigle partout."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "soaked_grain",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "pumpernickel_dough",
+      "instructions": "Une fois que le grain trempé est refroidi à moins de 35 C (vérifiez avec votre poignet), ajoutez le seigle augure, sel, graines de carvi et extrait de malt foncé ou mélasse. Mélangez tout vigoureusement avec une cuillère en bois lourde ou une spatule rigide jusqu'à ce qu'elle soit complètement uniforme. Ce n'est pas une pâte au sens conventionnel — il n'y a pas de réseau de gluten à développer. C'est une pâte épaisse et dense qui tient à peine une forme. La couleur sera très brun foncé. Bouche: il doit être savoureux, subtilement sucré, malté et complexe d'odeur.",
+      "visualCue": {
+        "primaryTarget": "Une masse brun foncé uniforme — chaque ingrédient foncé mélangé sans stries visibles de farine de seigle plus léger ou de démarreur plus léger. Assez dense pour tenir un monticule quand il est tombé d'une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Paler stries de seigle ou de seigle non mélangé visible; extrait de malt n'a pas entièrement incorporé; pâte semble marbrée.",
+            "action": "Continuer à mélanger vigoureusement jusqu'à ce que la couleur soit complètement uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement brun très foncé, presque brun noir. Sensé mais émouvant. Des odeurs de seigle, de carafe et de malt foncé. Goûte profondément salé avec une douceur de fond.",
+            "action": "Transférer immédiatement dans une boîte de pain et procéder à la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez trop mélangé avec une machine et la masse est devenue légèrement aérée ou à cordes. Peu à la main.",
+            "action": "Procéder — le surmélange mineur ne nuit pas au pumpernickel, qui n'a pas de structure de gluten endommager."
+          }
+        ]
+      },
+      "feelCue": "Pumpernickel pâte se sent incroyablement dense et collant — il s'accroche à votre cuillère dans des fils longs, réticents et prend un réel effort pour remuer. Si votre bras est fatigué, vous le faites bien."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "pumpernickel_dough"
+      ],
+      "outputState": "packed_loaf",
+      "instructions": "Ligner une petite boîte de pain (environ 20 x 10 cm) avec du parchemin de tous les côtés. Graissez légèrement le parchemin. Placez la pâte de pumpernickel dans l'étain, appuyez fermement dans les coins avec une spatule humide ou des mains mouillées pour éliminer les poches d'air. Aplatissez le plateau. Appuyez fermement sur l'étain sur le comptoir plusieurs fois pour libérer des bulles piégées. L'étain doit être rempli à moins de 1 cm du dessus. Couvrir étroitement avec un morceau de papier d'aluminium huilé, sertir étroitement autour de la jante pour emprisonner la vapeur pendant la cuisson.",
+      "visualCue": {
+        "primaryTarget": "Une masse sombre lisse et plane qui remplit l'étain à moins de 1 cm de la jante. Aucun trou ou cratère d'air visible dans la surface. Le joint est serré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poches d'air visibles sur la surface; les coins ne sont pas complètement remplis; la surface supérieure est inégale avec les cratères.",
+            "action": "Appuyez sur la surface lisse avec une spatule humide et tapez à nouveau l'étain pour déposer la pâte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface lisse, plate, mate-noire remplissant l'étain uniformément. Foil incrusté serré. L'étain est lourd pour sa taille.",
+            "action": "Placer dans un bain d'eau ou un four à vapeur et cuire à 120 C (250 F) pendant 16 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez surchargé l'étain — la pâte est de niveau avec ou au-dessus du bord et débordera pendant la cuisson.",
+            "action": "Retirer une cuillère ou deux, puis sceller avec du papier et procéder."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous pressez la pâte de pumpernickel dans l'étain, il se sent comme presser de l'argile très dense et froide — il retient l'indentation de vos doigts et ne ressort pas du tout."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "packed_loaf"
+      ],
+      "outputState": "finished_pumpernickel",
+      "instructions": "Préchauffer le four à 120 C (250 F). Placez la boîte de pain couverte dans une poêle à rôtir profonde. Verser l'eau bouillante dans la rôtissoire pour atteindre la moitié des côtés de l'étain à pain, ce qui crée l'environnement de vapeur essentiel pour le pumpernickel. Cuire couvert de papier pendant 16 heures. Oui, seize heures. La faible chaleur et la vapeur caramélisent lentement les sucres de seigle à travers la réaction Maillard et le brunissement enzymatique — c'est ce qui crée la couleur presque noire caractéristique et complexe, saveur malt-chocolate sans aucun colorant ajouté. Après 16 heures, retirer la feuille, relever le four à 180 C (350 F), et cuire à découvert pendant 30 minutes pour régler la croûte. Laisser refroidir complètement dans l'étain avant de se démouler. Couper le papier-mince — le pompernickel est le meilleur jour après la cuisson.",
+      "visualCue": {
+        "primaryTarget": "Au bout de 16 heures sous la feuille : le pain s'est légèrement rétréci des parois en étain et la surface est brun foncé, presque noire. Après la finition à découvert de 30 minutes : une croûte ferme et très sombre avec une surface mate.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Au bout de 16 heures, le centre du pain est encore doux et humide lorsqu'il est pressé; la température intérieure est inférieure à 95 °C; la couleur est plus foncée que presque noire.",
+            "action": "Retour couvert à 120 C pendant 2 à 4 heures. Pumpernickel ne peut pas être précipité."
+          },
+          {
+            "state": "Perfect",
+            "description": "Extérieur presque noir, ferme tout en étant pressé. Température interne 96–98 C. Lorsqu'elle n'est pas mélangée et tranchée, la miette est dense, humide et très foncée, la couleur du chocolat noir. Des baies de seigle visibles comme des points légèrement plus pâles.",
+            "action": "Refroidir complètement — idéalement pendant la nuit — avant de couper. Envelopper le papier et servir en tranches fines."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est carbonisée ou fissurée; les bords sont séchés à une coquille dure et fragile.",
+            "action": "Coupez les bords secs. L'intérieur est presque certainement parfait — la structure dense du pumpernickel le protège du surchauffe."
+          }
+        ]
+      },
+      "feelCue": "Un pain de pompernickel fini ressemble à une brique dense et humide, beaucoup plus lourd qu'un pain de blé de la même taille. Couper le papier-mince avec un couteau dentelé tranchant : chaque tranche doit fléchir légèrement au lieu de s'effondrer."
+    }
+  ]
 };

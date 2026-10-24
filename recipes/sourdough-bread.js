@@ -1,112 +1,242 @@
 export default {
-  repoId: "master_american_sourdough_001",
-  parentRepoId: null,
-  slug: "sourdough-bread",
-  author: "ForkRecipe Kitchen",
-  title: "Rustic Sourdough Loaf",
-  description: "A hearty open-crumb sourdough with a shattering mahogany crust — built on wild fermentation, cold time, and the living tang of an active starter. The crumb is irregular and custardy; the crust sings as it cools.",
-  cuisine: "American",
-  culture: "Pacific Northwest",
-  category: "breads",
-  tags: ["sourdough", "bread", "fermented", "wild-yeast", "artisan", "dutch-oven"],
-  difficulty: 3,
-  activeTime: "1 hr",
-  totalTime: "36 hr",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 3, sour: 4, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Bread flour (12.5% protein)",               ratioValue: 100, defaultUnit: "%", substitutions: ["all-purpose flour", "tipo 0"] },
-    { ingId: "ing_02", role: "Hydration", name: "Cool filtered water (22 C)",                 ratioValue: 75,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_03", role: "Leavener",  name: "Active sourdough starter (100% hydration)", ratioValue: 20,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                              ratioValue: 2,   defaultUnit: "%", substitutions: ["kosher salt"] },
-    { ingId: "ing_05", role: "Starch",    name: "Rice flour (for dusting banneton)",          ratioValue: 5,   defaultUnit: "%", substitutions: ["semolina"] },
+  "repoId": "master_american_sourdough_001",
+  "parentRepoId": null,
+  "slug": "sourdough-bread",
+  "author": "ForkRecipe Kitchen",
+  "title": "Mousse rustique sourde",
+  "description": "Un arbustif à chapelure ouverte, avec une croûte d'acajou qui se brise, construit sur la fermentation sauvage, le temps froid et la forme vivante d'un démarreur actif. La miette est irrégulière et crépuscule; la croûte chante en refroidissant.",
+  "cuisine": "Américain",
+  "culture": "Pacifique Nord-Ouest",
+  "category": "breads",
+  "tags": [
+    "Pâtes alimentaires",
+    "pain",
+    "fermenté",
+    "wild-yeast",
+    "artisan",
+    "duvet"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "1 hr",
+  "totalTime": "36 hr",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Autolyse",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "autolyse_dough",
-      instructions: "Combine bread flour and cool water in a large bowl. Stir with wet hands or a dough whisk until absolutely no dry flour remains — scrape the bowl bottom. The dough will be rough and shaggy. Cover tightly with a damp towel or plastic wrap and rest for 45 minutes. During this rest, flour proteins absorb water and gluten begins organizing without any kneading effort. Do not add starter or salt yet.",
-      visualCue: {
-        primaryTarget: "After 45 minutes the dough has smoothed and relaxed. The surface holds a gentle dome and looks cohesive rather than ragged.",
-        spectrum: [
-          { state: "Underdone", description: "Surface still crumbly and dry; tears when stretched even a few inches; dry flour visible at the bowl seam.", action: "Wet your hand, mix more thoroughly, and rest another 20 minutes — the flour hasn't fully absorbed the water." },
-          { state: "Perfect",   description: "Uniformly damp and cohesive. Stretches 10–15 cm without tearing. Has a faint, clean wheat aroma.", action: "Add starter and salt and proceed to the lamination fold." },
-          { state: "Overdone",  description: "Dough feels tight and slightly warm; a faint sour smell signals fermentation has already begun.", action: "Proceed immediately — do not let the autolyse exceed 90 minutes without starter." },
-        ],
-      },
-      feelCue: "After the autolyse the dough should feel like cool, soft clay — it yields to pressure without tearing and leaves a slow-fading fingerprint when poked.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain (12,5% de protéines)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Farine polyvalente",
+        "tipo 0"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fold",
-      inputs: ["autolyse_dough", "ing_03", "ing_04"],
-      outputState: "mixed_dough",
-      instructions: "Wet the work surface lightly. Pour the active starter over the autolyse dough; scatter the salt on top. Perform a lamination fold: stretch the dough out into a wide, thin rectangle, fold it into thirds like a letter, then fold into thirds again the other direction. Gather back into the bowl. This weaves the starter and salt into every gluten layer in one pass. Then perform one set of stretch-and-folds to unify the mass.",
-      visualCue: {
-        primaryTarget: "No visible white salt crystals or starter streaks. Dough has a uniform, slightly silkier surface than after autolyse.",
-        spectrum: [
-          { state: "Underdone", description: "White salt crystals still dotting the surface; paler starter ribbons visible as unmixed streaks.", action: "Continue folding with wet hands until the dough looks uniform in color." },
-          { state: "Perfect",   description: "Uniform pale color throughout, slightly sticky but cohesive, dough springs back slowly when poked. Smells mildly sour from the starter.", action: "Return to the covered bowl and begin bulk fermentation." },
-          { state: "Overdone",  description: "Dough has become tight and warm, begins tearing at the edges of the lamination.", action: "Rest uncovered 10 minutes to relax the gluten before continuing." },
-        ],
-      },
-      feelCue: "The dough will resist the stretch at first, then give way into a silky, extensible sheet. You should be able to pull it thin enough to see light through it before folding.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau fraîche filtrée (22 C)",
+      "ratioValue": 75,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Ferment",
-      inputs: ["mixed_dough"],
-      outputState: "bulk_dough",
-      instructions: "Cover the bowl and bulk ferment at room temperature (21–23 C / 70–73 F) for 4–5 hours. During the first 2 hours perform four sets of stretch-and-folds, one set every 30 minutes. For each set: wet your hand, grab one side of the dough, pull up as high as it will stretch without tearing, fold over the center. Rotate 90 degrees and repeat four times total. After the last set, leave completely undisturbed for the remainder of the bulk.",
-      visualCue: {
-        primaryTarget: "Dough has increased 70–80% in volume. The surface is domed and airy, with a visible network of small bubbles along the bowl wall. The dough jiggles like soft jello when the bowl is shaken gently.",
-        spectrum: [
-          { state: "Underdone", description: "Minimal rise, no bubbles visible along the bowl wall, dough feels cool and dense. No jiggle.", action: "Move to a warmer location — 24 C is ideal. Extend bulk by 1–2 hours and watch for the jiggle." },
-          { state: "Perfect",   description: "Dome visible from above, bubbles trace the bowl wall, dough pulls away from the bowl cleanly and shows a web of gluten when a portion is stretched.", action: "Tip gently onto a lightly floured surface and pre-shape without degassing." },
-          { state: "Overdone",  description: "Dome has collapsed, surface is sticky and glistening, sharp alcohol smell. Large gas pockets have burst.", action: "Shape immediately and reduce cold proof to 8 hours. The loaf will be very sour but still delicious." },
-        ],
-      },
-      feelCue: "At the end of bulk, a handful of dough lifted from the bowl should drape in long, lazy ribbons rather than snapping. It feels airy — almost like handling warm foam wrapped in silk.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "Démarrage actif à l'aurore (hydratation à 100%)",
+      "ratioValue": 20,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Shape",
-      inputs: ["bulk_dough", "ing_05"],
-      outputState: "shaped_loaf",
-      instructions: "Dust a round banneton generously with rice flour. Tip the bulk dough onto a bare, unfloured work surface. Pre-shape: fold the edges in toward the center, flip seam-side down, and drag the ball gently across the table surface to build tension. Cover and rest 20 minutes. Final shape: flip the round, stretch to a loose oval, fold the far third to center, the near third over that, then roll toward you with both hands tucked under to tighten. Place seam-side up in the banneton. Cover with plastic and refrigerate 12–16 hours.",
-      visualCue: {
-        primaryTarget: "A taut, smooth dome sitting high in the banneton, with a clearly sealed seam facing up. The surface has enough tension that it holds its shape without spreading.",
-        spectrum: [
-          { state: "Underdone", description: "Loaf is slack and spreading laterally instead of rising. Seam is loose or opening.", action: "Reshape: use a bench scraper to fold the dough back under itself and tighten." },
-          { state: "Perfect",   description: "Drum-tight surface that springs back immediately when lightly poked with a floured finger. Seam sealed. Rice flour visible as a fine white dusting.", action: "Cover and refrigerate overnight for the cold proof." },
-          { state: "Overdone",  description: "Visible rips or tears in the outer skin from pulling too aggressively during shaping.", action: "Gently press tears closed. The oven spring will seal minor damage." },
-        ],
-      },
-      feelCue: "A correctly shaped loaf feels like a taut, filled balloon under your palm — it pushes back with quiet resistance. If your hand sinks in without resistance, the shaping has no tension.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "sel casher"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Bake",
-      inputs: ["shaped_loaf"],
-      outputState: "finished_sourdough",
-      instructions: "One hour before baking, preheat a Dutch oven with its lid on at 260 C (500 F). Score the cold loaf with a lame or razor blade: a single confident slash at 30–45 degrees to the surface, about 1 cm deep. Lift from the banneton using a parchment sling and lower into the screaming-hot Dutch oven. Bake covered 20 minutes — steam from the cold dough lets the loaf spring and bloom. Remove the lid, lower heat to 230 C (450 F), and bake 22–27 minutes more until deeply caramel-brown.",
-      visualCue: {
-        primaryTarget: "A mahogany crust with a dramatic ear lifted along the score line and pale blistered patches where the crust thinned during oven spring. Tapping the bottom produces a deep, hollow knock.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is pale gold; ear has barely risen; tapping the bottom sounds dense and thuddy. Loaf feels slightly soft when squeezed.", action: "Return lid-off for another 5–10 minutes and probe — internal temperature should reach 96–98 C." },
-          { state: "Perfect",   description: "Deep mahogany with blistered lighter patches, a pronounced ear, hollow thud on the bottom. Internal temp 96–98 C (205–208 F).", action: "Cool on a wire rack at least 1 hour before slicing — the crumb is still setting inside." },
-          { state: "Overdone",  description: "Nearly black crust, bitter-charred smell, crust pulling away from the crumb at the sides.", action: "Cool normally. The interior is almost certainly fine. Trim the darkest edges with a bread knife." },
-        ],
-      },
-      feelCue: "The moment it leaves the Dutch oven the crust sings — a musical crackle and tick as it contracts in the cooler air. If it's silent, the crust hasn't set; if it's loud and sustained, it's perfect.",
-    },
+      "ingId": "ing_05",
+      "role": "Starch",
+      "name": "Farine de riz (pour la poudre de banneton)",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "sémoline"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Autolyse",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "autolyse_dough",
+      "instructions": "Mélanger la farine de pain et l'eau fraîche dans un grand bol. Mélanger avec des mains mouillées ou une pâte fouetter jusqu'à ce qu'il ne reste absolument pas de farine sèche — racler le fond du bol. La pâte sera rugueuse et louche. Couvrir soigneusement avec une serviette humide ou une enveloppe en plastique et reposer pendant 45 minutes. Pendant ce repos, les protéines de farine absorbent l'eau et le gluten commence à s'organiser sans aucun effort de pétrissage. N'ajoutez pas encore de entrée ou de sel.",
+      "visualCue": {
+        "primaryTarget": "Après 45 minutes, la pâte a lissé et détendu. La surface tient un dôme doux et a l'air cohésif plutôt que rabâché.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Surface encore émiettée et sèche; larmes quand étirée même quelques pouces; farine sèche visible à la couture du bol.",
+            "action": "Mouiller votre main, mélanger plus soigneusement et reposer encore 20 minutes — la farine n'a pas complètement absorbé l'eau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformément humide et cohésif. Attaches 10-15 cm sans déchirement. Il a un faible arôme de blé propre.",
+            "action": "Ajouter le démarreur et le sel et procéder au plis de laminage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est serrée et légèrement chaude; une faible odeur acide signale déjà une fermentation.",
+            "action": "Continuez immédiatement — ne laissez pas l'autolyse dépasser 90 minutes sans démarreur."
+          }
+        ]
+      },
+      "feelCue": "Après l'autolyse, la pâte doit se sentir comme de l'argile douce et fraîche — elle donne à la pression sans déchirer et laisse une empreinte lente lorsqu'elle est cuite."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "autolyse_dough",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "mixed_dough",
+      "instructions": "Mouiller légèrement la surface du travail. Versez le démarreur actif sur la pâte autolyse; dispersez le sel sur le dessus. Effectuez un pli de laminage : étirez la pâte dans un rectangle large et mince, repliez-la en tiers comme une lettre, puis repliez-la en tiers dans l'autre sens. Remontez dans le bol. Cela tisse le démarreur et le sel dans chaque couche de gluten en un seul passage. Ensuite, exécutez un ensemble d'étirements pour unifier la masse.",
+      "visualCue": {
+        "primaryTarget": "Pas de cristaux de sel blanc visibles ni de stries de départ. La toux a une surface uniforme, légèrement plus soyeuse qu'après autolyse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des cristaux de sel blanc parsèment encore la surface; des rubans de départ plus pâles visibles comme des stries non mélangées.",
+            "action": "Continuer à plier avec les mains mouillées jusqu'à ce que la pâte semble uniforme en couleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur pâle uniforme dans l'ensemble, légèrement collante mais cohésive, la pâte ressort lentement lorsqu'elle est cuite. Ça sent légèrement acide depuis le début.",
+            "action": "Retournez dans le bol couvert et commencez la fermentation en vrac."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est devenue serrée et chaude, commence à se déchirer aux bords de la lamination.",
+            "action": "Repos à découvert 10 minutes pour détendre le gluten avant de continuer."
+          }
+        ]
+      },
+      "feelCue": "La pâte résistera d'abord à l'étirement, puis cédera la place dans une feuille soyeuse et extensible. Vous devriez être en mesure de tirer assez mince pour voir la lumière à travers elle avant de plier."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ferment",
+      "inputs": [
+        "mixed_dough"
+      ],
+      "outputState": "bulk_dough",
+      "instructions": "Couvrir le bol et le ferment en vrac à température ambiante (21–23 C / 70–73 F) pendant 4–5 heures. Au cours des 2 premières heures, effectuer quatre jeux de stretch-and-folds, un jeu toutes les 30 minutes. Pour chaque set: mouiller votre main, saisir un côté de la pâte, tirer aussi haut qu'il s'étire sans déchirer, plier sur le centre. Rotation de 90 degrés et répéter quatre fois au total. Après le dernier set, laisser complètement intact pour le reste de la masse.",
+      "visualCue": {
+        "primaryTarget": "Dough a augmenté de 70 à 80 % en volume. La surface est bombée et aérée, avec un réseau visible de petites bulles le long de la paroi du bol. La pâte grince comme le jello doux quand le bol est secoué doucement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Élevée minimale, pas de bulles visibles le long de la paroi du bol, la pâte est fraîche et dense. Pas d'embrouille.",
+            "action": "Passez à un endroit plus chaud — 24 C est idéal. Étendre le volume de 1 à 2 heures et surveiller le gabarit."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dôme visible d'en haut, bulles tracent la paroi du bol, la pâte s'éloigne du bol proprement et montre une toile de gluten quand une portion est étirée.",
+            "action": "Astucez doucement sur une surface légèrement farinée et préformez sans dégazage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dome s'est effondré, la surface est collante et scintille, l'odeur d'alcool vif. De grandes poches de gaz ont explosé.",
+            "action": "Formez immédiatement et réduisez l'épreuve de froid à 8 heures. Le pain sera très aigre mais toujours délicieux."
+          }
+        ]
+      },
+      "feelCue": "À la fin de l'enrobage, une poignée de pâte levée dans le bol devrait draper dans de longs rubans paresseux plutôt que de se casser. Il se sent aéré — presque comme la manipulation de mousse chaude enveloppée de soie."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Forme",
+      "inputs": [
+        "bulk_dough",
+        "ing_05"
+      ],
+      "outputState": "shaped_loaf",
+      "instructions": "Poussez généreusement une banane ronde avec de la farine de riz. Astucez la pâte en vrac sur une surface de travail nue et intacte. Pré-forme : plier les bords vers le centre, retourner la couture vers le bas, et faire glisser la balle doucement sur la surface de la table pour construire la tension. Couvrir et reposer 20 minutes. Forme finale: retourner le rond, s'étirer à un ovale lâche, plier le tiers au centre, le tiers près sur celui, puis rouler vers vous avec les deux mains cousues sous pour serrer. Placez le bord de la couture dans le pavillon. Couvrir de plastique et réfrigérer 12-16 heures.",
+      "visualCue": {
+        "primaryTarget": "Un dôme lisse et tendu, assis haut dans le banneton, avec une couture clairement scellée vers le haut. La surface a suffisamment de tension qu'elle conserve sa forme sans s'étendre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pain se relâche et se répand latéralement au lieu de se lever. La couture est lâche ou ouverte.",
+            "action": "Reformage: utilisez un racleur de banc pour plier la pâte sous elle-même et serrer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface étanche au tambour qui ressort immédiatement lorsqu'il est légèrement poché avec un doigt fariné. Seam scellé. Farine de riz visible comme une fine poussière blanche.",
+            "action": "Couvrir et réfrigérer pendant la nuit pour la preuve du froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les déchirures visibles ou les déchirures dans la peau externe de tirer trop agressivement pendant la formation.",
+            "action": "Les larmes de presse se ferment. Le ressort du four scellera des dommages mineurs."
+          }
+        ]
+      },
+      "feelCue": "Un pain bien façonné se sent comme un ballon tendu, rempli sous votre paume — il repousse avec une résistance silencieuse. Si votre main coule sans résistance, la forme n'a pas de tension."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "shaped_loaf"
+      ],
+      "outputState": "finished_sourdough",
+      "instructions": "Une heure avant la cuisson, préchauffer un four hollandais avec son couvercle à 260 C (500 F). Score le pain froid avec une lame de rasoir ou de lame boiteuse : une seule barre oblique de 30 à 45 degrés par rapport à la surface, d'environ 1 cm de profondeur. Soulevez du banneton à l'aide d'une élingue parcheminée et vers le bas dans le four hollandais chaud. Cuire couvert 20 minutes — la vapeur de la pâte froide laisse le pain jaillir et fleurir. Retirez le couvercle, réduisez le feu à 230 C (450 F) et faites cuire de 22 à 27 minutes de plus jusqu'à ce qu'il soit profondément caramel-brun.",
+      "visualCue": {
+        "primaryTarget": "Une croûte d'acajou avec une oreille dramatique levée le long de la ligne de score et des taches pâles blister où la croûte s'éclaircit au printemps du four. Le tapotage du fond produit un coup profond et creux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est d'or pâle; l'oreille est à peine levée; le fond de l'oreille semble dense et touffu. Le pain est légèrement doux lorsqu'il est pressé.",
+            "action": "Rabattre le couvercle pendant 5 à 10 minutes et sonder — la température interne devrait atteindre 96 à 98 °C."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'acajou profond avec des taches plus légères, une oreille prononcée, un bruit creux sur le fond. Température interne 96–98 C (205–208 F).",
+            "action": "Refroidir sur une grille au moins 1 heure avant de trancher — la miette est toujours à l'intérieur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Croûte presque noire, odeur amère-charrée, croûte s'éloignant de la miette sur les côtés.",
+            "action": "Refroidir normalement. L'intérieur est presque certainement bien. Trim les bords les plus sombres avec un couteau à pain."
+          }
+        ]
+      },
+      "feelCue": "Dès qu'il quitte le four hollandais, la croûte chante — un crack et une tique musicale qui se contracte dans l'air frais. Si elle est silencieuse, la croûte n'a pas été réglée; si elle est forte et soutenue, elle est parfaite."
+    }
+  ]
 };

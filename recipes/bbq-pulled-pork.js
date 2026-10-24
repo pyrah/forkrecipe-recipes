@@ -1,120 +1,271 @@
 export default {
-  repoId: "master_american_bbq_pulled_pork_001",
-  parentRepoId: null,
-  slug: "bbq-pulled-pork",
-  author: "ForkRecipe Kitchen",
-
-  title: "BBQ Pulled Pork",
-  description: "A pork shoulder rubbed in brown sugar and smoked paprika, smoked low and slow until collagen surrenders into silk and the bark turns black-mahogany — pulled apart with two forks into shaggy, smoke-perfumed strands that need nothing more than a bun and maybe some slaw.",
-  cuisine: "American",
-  culture: "Southern BBQ",
-  category: "proteins",
-
-  tags: ["southern", "bbq", "pork", "slow-cooked", "smoky"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "8 hrs",
-  ratioSystem: "parts",
-
-  stars: 4102,
-  forks: 489,
-  contributors: 43,
-  license: "CC-BY-SA",
-  createdAt: "2024-02-01",
-  updatedAt: "2026-01-17",
-
-  flavorRadar: { sweet: 3, salty: 4, sour: 2, bitter: 1, umami: 4, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in pork shoulder (Boston butt), 2–3 kg",   ratioValue: 100, defaultUnit: "parts", substitutions: ["boneless pork shoulder", "pork picnic"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Brown sugar, packed",                            ratioValue: 8,   defaultUnit: "parts", substitutions: ["turbinado sugar", "honey (apply after rub)"] },
-    { ingId: "ing_03", role: "Spice",     name: "Smoked paprika",                                 ratioValue: 5,   defaultUnit: "parts", substitutions: ["sweet paprika plus liquid smoke", "ancho chili powder"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Kosher salt",                                    ratioValue: 4,   defaultUnit: "parts", substitutions: ["coarse sea salt"] },
-    { ingId: "ing_05", role: "Spice",     name: "Black pepper, garlic powder, onion powder, cayenne (equal parts)", ratioValue: 6, defaultUnit: "parts", substitutions: ["all-purpose BBQ rub"] },
-    { ingId: "ing_06", role: "Acid",      name: "Apple cider vinegar",                            ratioValue: 10,  defaultUnit: "parts", substitutions: ["white wine vinegar", "distilled white vinegar"] },
-    { ingId: "ing_07", role: "Sweetener", name: "Prepared BBQ sauce (for serving)",               ratioValue: 15,  defaultUnit: "parts", substitutions: ["vinegar-based Carolina sauce", "mustard-based SC sauce"] },
+  "repoId": "master_american_bbq_pulled_pork_001",
+  "parentRepoId": null,
+  "slug": "bbq-pulled-pork",
+  "author": "ForkRecipe Kitchen",
+  "title": "Porc pulvérisé au barbecue",
+  "description": "Une épaule de porc frottée à la cassonade et au paprika fumé, fumée basse et lente jusqu'à ce que le collagène se rende en soie et que l'écorce se transforme en mahoganie noire.",
+  "cuisine": "Américain",
+  "culture": "BBQ Sud",
+  "category": "proteins",
+  "tags": [
+    "sud",
+    "bbq",
+    "porc",
+    "cuits lentement",
+    "fumée"
   ],
-
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "8 hrs",
+  "ratioSystem": "parts",
+  "stars": 4102,
+  "forks": 489,
+  "contributors": 43,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-02-01",
+  "updatedAt": "2026-01-17",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Rub and rest",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "rubbed_pork",
-      instructions: "Combine brown sugar, smoked paprika, salt, and spice mix in a bowl. Pat the pork shoulder completely dry with paper towels. Apply the rub all over the shoulder — every surface, including the crevices around the bone. Press firmly so the rub adheres. Wrap tightly in plastic wrap and refrigerate for at least 4 hours, ideally overnight. The salt will draw moisture to the surface and then reabsorb it, seasoning deep into the meat.",
-      visualCue: {
-        primaryTarget: "The pork shoulder is uniformly coated in a dark rust-red rub with no bare patches. After resting, moisture beads on the surface as the salt draws liquid out.",
-        spectrum: [
-          { state: "Underdone", description: "Rub is patchy — bare pork visible in the crevices and on flat surfaces. Sugar looks dusty and hasn't adhered.", action: "Press the rub in more firmly with your hands. The fat cap needs extra attention — score it lightly first so the rub penetrates." },
-          { state: "Perfect",   description: "Even, dark rust-red coating on every surface. Rub is adhered, not falling off. After resting, the exterior looks slightly moist — the brine cycle has started.", action: "Proceed to smoking when ready." },
-          { state: "Overdone",  description: "Pork has been refrigerated more than 48 hours with the rub — the exterior has started to cure and the outermost layer of meat has a hammy, cured texture.", action: "Proceed. Very long rubs are fine — the flavor will be intense. The smoke will balance the saltiness." },
-        ],
-      },
-      feelCue: "Press the rub firmly into the pork — you should feel some tackiness as the sugar slightly dissolves and binds. If the rub falls off when you tilt the shoulder, press harder or add a light brush of mustard as a binder.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "épaule de porc désossée (dos de Boston), de 2 à 3 kg",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "épaule de porc désossée",
+        "pique-nique de porc"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Smoke low and slow",
-      inputs: ["rubbed_pork"],
-      outputState: "smoked_pork",
-      instructions: "Set up your smoker or oven at 107–121°C. For smokers, use hickory, apple, or cherry wood. Place pork fat-cap up. Smoke for 5–6 hours, maintaining temperature, until an instant-read thermometer reads 74°C internally. Spritz with apple cider vinegar every 90 minutes to keep the bark moist and add tang. The bark will form and harden during this phase — do not wrap yet.",
-      visualCue: {
-        primaryTarget: "After 5–6 hours, the exterior has formed a dark mahogany-to-black bark — a thick, crackling crust. An internal temperature of 74°C is reached.",
-        spectrum: [
-          { state: "Underdone", description: "Bark is still soft and reddish-brown, not the deep mahogany-black of true bark. Surface feels tacky and moist rather than firm. Internal temp below 74°C.", action: "Continue smoking. The bark formation between 68–79°C is where the Maillard reaction is most intense. Do not rush or increase temperature." },
-          { state: "Perfect",   description: "Bark is deep mahogany-black, firm to the touch, and slightly crackled. Smells intensely of smoke and caramelized sugar. Internal temp is 74°C.", action: "Wrap tightly in butcher paper or foil (the Texas Crutch) to power through the stall." },
-          { state: "Overdone",  description: "Bark is charred and black throughout, not just dark mahogany. Bitter smell. Some areas may have cracked and dried out.", action: "Wrap immediately in foil to halt further bark development. The interior will likely still be excellent." },
-        ],
-      },
-      feelCue: "Knock on the bark with your knuckle — it should sound hollow and feel firm, like knocking on wood, not soft and giving like touching raw meat. This is the moment it sounds and feels like BBQ.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre brun, emballé",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre turbinado",
+        "miel (appliquer après frotter)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Wrap and push through the stall",
-      inputs: ["smoked_pork", "ing_06"],
-      outputState: "stalled_pork",
-      instructions: "When the internal temperature stalls between 65–74°C (the infamous BBQ 'stall' caused by evaporative cooling), tightly wrap the pork in two layers of butcher paper or heavy foil. Add a splash of apple cider vinegar inside the wrap. Return to the smoker or move to a 135°C oven. Cook until the internal temperature reaches 93–96°C, approximately 2–3 more hours.",
-      visualCue: {
-        primaryTarget: "The thermometer is steadily climbing past 88°C. The wrapped package feels heavy and slightly jiggly — liquids have pooled inside the wrap.",
-        spectrum: [
-          { state: "Underdone", description: "Temperature has stalled between 65–74°C for more than 90 minutes. The thermometer barely moves. This is normal — do not panic or raise temperature dramatically.", action: "This is exactly why you wrap. The stall can last 2+ hours without wrapping. Wrap now if you haven't." },
-          { state: "Perfect",   description: "Internal temperature is climbing steadily and has reached 93–96°C. The wrapped pork jiggles when shaken — the collagen has converted to gelatin.", action: "Rest for at least 1 hour in the wrap before pulling." },
-          { state: "Overdone",  description: "Temperature exceeded 99°C. Fat has fully rendered and the meat may have started to dry out in the center even though it jiggles.", action: "Rest immediately — do not continue cooking. The rest period will help redistribute what moisture remains." },
-        ],
-      },
-      feelCue: "When you unwrap and probe the meat with a thermometer or skewer, it should slide in with no resistance at all — like pushing through softened butter. Any resistance means the collagen is not fully converted.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika sucré plus fumée liquide",
+        "poudre d'ancho chili"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Rest",
-      inputs: ["stalled_pork"],
-      outputState: "rested_pork",
-      instructions: "Remove the wrapped pork from heat when it reaches 93–96°C. Without unwrapping, wrap the entire package in a towel and place in a cooler for at least 1 hour, up to 4 hours. This rest is not optional — it allows the temperature to equalize throughout the shoulder and lets the gelatin re-set, which means juicier, more cohesive pulled pork.",
-      visualCue: {
-        primaryTarget: "The exterior of the cooler-wrapped package is still warm to the touch after 1 hour. When opened, steam rises gently and juices have pooled in the wrap.",
-        spectrum: [
-          { state: "Underdone", description: "Pork was only rested for 20 minutes. The center is noticeably hotter than the outside. Juices run heavily when pulling begins.", action: "You can proceed, but the texture will be slightly less cohesive. Resting truly matters here — plan your timing better next cook." },
-          { state: "Perfect",   description: "After 1+ hours, the internal temp has equalized across the shoulder. Steam rises gently when opened. Bone wiggles freely when you grab it.", action: "Begin pulling." },
-          { state: "Overdone",  description: "Pork has cooled below 55°C after too long a rest. It has started to firm up as the gelatin re-sets at lower temperatures.", action: "Warm briefly in a 150°C oven still in its wrap for 20 minutes before pulling." },
-        ],
-      },
-      feelCue: "Grip the exposed bone and wiggle — in properly cooked pulled pork, the bone should slide free with a gentle twist, with almost no resistance. If it feels locked, the collagen needs more time.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel de mer grossier"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Pull and serve",
-      inputs: ["rested_pork", "ing_07"],
-      outputState: "finished_pulled_pork",
-      instructions: "Unwrap the pork over a large pan to catch all the juices. Using two forks or heat-resistant gloves, pull the meat apart into shaggy strands. Discard any large pieces of pure fat. Pour some of the collected pan juices back over the pulled pork to keep it moist. Serve with BBQ sauce on the side — never mix it in, so diners can control their sauce level.",
-      visualCue: {
-        primaryTarget: "Long, shaggy strands of pork that separate easily with a fork. Dark bark pieces distributed throughout the pulled meat. Pork is glistening with rendered juices.",
-        spectrum: [
-          { state: "Underdone", description: "Meat tears in large, intact chunks rather than separating into strands. Resistance when pulling. Collagen is not fully dissolved.", action: "If internal temp was below 93°C, return to heat. If time-constrained, chop with a cleaver — it won't be pulled pork but it will be edible." },
-          { state: "Perfect",   description: "Meat pulls into long, silky strands with minimal resistance. Dark bark pieces mixed throughout. The entire mass glistens with juices.", action: "Moisten with pan juices. Serve with sauce on the side." },
-          { state: "Overdone",  description: "Meat is dry and shreds into dust-dry fibers rather than moist strands. Virtually no visible juice.", action: "Toss with a mixture of pan juices, apple cider vinegar, and a splash of BBQ sauce. Let it absorb for 5 minutes before serving." },
-        ],
-      },
-      feelCue: "Run your fingers through the pulled pork — the strands should feel silky and slightly sticky from gelatin, not dry or stringy. A piece of bark pressed between fingers should crumble slightly under pressure.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poivre noir, poudre d'ail, poudre d'oignon, Cayenne (parties égales)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "frotter le barbecue tout usage"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc",
+        "vinaigre blanc distillé"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "sauce barbecue préparée (pour servir)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce à base de vinaigre Carolina",
+        "sauce SC à base de moutarde"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Ruber et se reposer",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "rubbed_pork",
+      "instructions": "Mélanger le sucre brun, le paprika fumé, le sel et le mélange d'épices dans un bol. Patientez l'épaule de porc complètement sèche avec des serviettes en papier. Appliquez le frottage sur toute l'épaule — chaque surface, y compris les crevasses autour de l'os. Appuyez fermement pour que le frotte adhère. Enveloppez bien l'enveloppe plastique et réfrigérez pendant au moins 4 heures, idéalement pendant la nuit. Le sel attirera l'humidité à la surface, puis la réabsorbera, assaisonnement profond dans la viande.",
+      "visualCue": {
+        "primaryTarget": "L'épaule de porc est uniformément enrobée d'un frottage rouge rouille foncé sans taches nues. Après le repos, des perles d'humidité sur la surface lorsque le sel tire du liquide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le rubis est patché — porc nu visible dans les crevasses et sur les surfaces planes. Le sucre a l'air poussiéreux et n'a pas adhéré.",
+            "action": "Appuyez plus fermement sur les mains. Le bouchon de graisse a besoin d'une plus grande attention — marquer légèrement d'abord afin que le frotte pénètre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même un revêtement rouge rouille foncé sur chaque surface. Rub est respecté, pas tombé. Après le repos, l'extérieur semble légèrement humide — le cycle de la saumure a commencé.",
+            "action": "Continuez à fumer quand vous êtes prêt."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le porc a été réfrigéré plus de 48 heures avec le frottage — l'extérieur a commencé à guérir et la couche extérieure de viande a une texture hammée et guérie.",
+            "action": "Continuez. De très longs frottes sont fines — la saveur sera intense. La fumée équilibrera le sel."
+          }
+        ]
+      },
+      "feelCue": "Appuyez fermement sur le frotter dans le porc — vous devriez sentir un peu d'embout car le sucre se dissout légèrement et se lie. Si le frottement tombe lorsque vous inclinez l'épaule, appuyez plus fort ou ajoutez une brosse légère de moutarde comme liant."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fumée faible et lente",
+      "inputs": [
+        "rubbed_pork"
+      ],
+      "outputState": "smoked_pork",
+      "instructions": "Configurez votre fumeur ou votre four à 107-121°C. Pour les fumeurs, utilisez du hickory, de la pomme ou du bois de cerise. Faites monter la graisse de porc. Fumer de 5 à 6 heures, en maintenant la température, jusqu'à ce qu'un thermomètre à lecture instantanée lise 74°C en interne. Spitz avec du vinaigre de cidre de pomme toutes les 90 minutes pour garder l'écorce humide et ajouter du tang. L'écorce se formera et durcira pendant cette phase — ne vous enveloppez pas encore.",
+      "visualCue": {
+        "primaryTarget": "Après 5 à 6 heures, l'extérieur a formé une écorce sombre d'acajou à noir, une croûte épaisse et crépitante. Une température interne de 74°C est atteinte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'écorce est encore molle et brun rougeâtre, pas l'acajou-noir profond de l'écorce véritable. La surface est collante et humide plutôt que ferme. Température intérieure inférieure à 74°C.",
+            "action": "Continuez à fumer. La formation d'écorce entre 68 et 79°C est l'endroit où la réaction de Maillard est la plus intense. Ne pas précipiter ou augmenter la température."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'écorce est acajou-noir profond, ferme au toucher, et légèrement craqué. Sensation intense de fumée et de sucre caramélisé. La température interne est de 74°C.",
+            "action": "Enveloppez bien le papier de boucher ou le papier d'aluminium (le Texas Crutch) pour alimenter le décrochage."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'écorce est carbonisée et noire partout, pas seulement l'acajou foncé. Une odeur amère. Certaines zones ont peut-être craqué et séché.",
+            "action": "Enroulez immédiatement dans la feuille pour arrêter le développement de l'écorce. L'intérieur sera probablement encore excellent."
+          }
+        ]
+      },
+      "feelCue": "Frappez sur l'écorce avec votre joint — il devrait sembler creux et se sentir ferme, comme frapper sur le bois, pas doux et donner comme toucher la viande crue. C'est le moment où ça sonne et se sent comme un barbecue."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Envelopper et pousser à travers le décrochage",
+      "inputs": [
+        "smoked_pork",
+        "ing_06"
+      ],
+      "outputState": "stalled_pork",
+      "instructions": "Lorsque la température interne se situe entre 65 et 74 °C (le fameux barbecue 'stall' causé par le refroidissement par évaporation), envelopper étroitement le porc dans deux couches de papier boucher ou de feuille lourde. Ajouter une touche de vinaigre de cidre de pomme dans l'enveloppe. Retourner au fumeur ou passer à un four de 135 °C. Cuire jusqu'à ce que la température interne atteigne 93–96°C, soit environ 2–3 heures de plus.",
+      "visualCue": {
+        "primaryTarget": "Le thermomètre monte régulièrement au-delà de 88°C. L'emballage emballé est lourd et légèrement jiggly — les liquides se sont mis à l'intérieur de l'enveloppe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La température est restée entre 65 et 74 °C pendant plus de 90 minutes. Le thermomètre bouge à peine. C'est normal, ne paniquez pas et n'augmentez pas la température de façon spectaculaire.",
+            "action": "C'est exactement pour ça que vous vous enroulez. Le décrochage peut durer 2 heures et plus sans emballer. Enroulez maintenant si vous ne l'avez pas fait."
+          },
+          {
+            "state": "Perfect",
+            "description": "La température intérieure monte régulièrement et atteint 93–96°C. Quand le porc est secoué, le collagène s'est converti en gélatine.",
+            "action": "Reposez-vous au moins 1 heure dans l'enveloppe avant de tirer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La température dépassait 99°C. La graisse a rendu et la viande a peut-être commencé à sécher au centre même si elle grouille.",
+            "action": "Reposez-vous immédiatement — ne continuez pas à cuisiner. La période de repos aidera à redistribuer ce qui reste d'humidité."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous déballez et sonnez la viande avec un thermomètre ou une brochette, elle doit glisser dans le corps sans aucune résistance, comme pousser à travers le beurre ramolli. Toute résistance signifie que le collagène n'est pas complètement converti."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "stalled_pork"
+      ],
+      "outputState": "rested_pork",
+      "instructions": "Retirer le porc emballé du feu lorsqu'il atteint 93–96°C. Sans déballage, enveloppez l'ensemble du colis dans une serviette et placez-le dans une glacière pendant au moins 1 heure, jusqu'à 4 heures. Ce repos n'est pas facultatif — il permet à la température d'égaliser tout au long de l'épaule et laisse la gélatine se remettre en place, ce qui signifie plus juteux et plus cohésif porc tiré.",
+      "visualCue": {
+        "primaryTarget": "L'extérieur de l'emballage enrobé de froid est encore chaud au toucher après 1 heure. Lorsqu'elle est ouverte, la vapeur s'élève doucement et les jus sont mis dans l'enveloppe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc n'a été reposé que 20 minutes. Le centre est nettement plus chaud que l'extérieur. Les jus courent fortement quand le tir commence.",
+            "action": "Vous pouvez continuer, mais la texture sera légèrement moins cohésive. Le repos est vraiment important ici — planifier votre prochaine cuisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 1+ heures, la température interne s'est égale à travers l'épaule. La vapeur se lève doucement lorsqu'elle est ouverte. Les os volent librement quand vous les prenez.",
+            "action": "Commencez à tirer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le porc a refroidi en dessous de 55°C après trop longtemps de repos. Il a commencé à se raffermir à mesure que la gélatine se rétablit à des températures plus basses.",
+            "action": "Chauffer brièvement dans un four à 150°C pendant 20 minutes avant de tirer."
+          }
+        ]
+      },
+      "feelCue": "Poignez l'os exposé et remuez — dans le porc tiré correctement cuit, l'os doit glisser libre avec une torsion douce, avec presque aucune résistance. S'il se sent verrouillé, le collagène a besoin de plus de temps."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Tirer et servir",
+      "inputs": [
+        "rested_pork",
+        "ing_07"
+      ],
+      "outputState": "finished_pulled_pork",
+      "instructions": "Déposez le porc sur une grande casserole pour attraper tous les jus. À l'aide de deux fourchettes ou de gants résistants à la chaleur, détachez la viande dans des brins chassants. Jetez tous les gros morceaux de graisse pure. Versez une partie des jus de cuisson sur le porc tiré pour le garder humide. Servir avec de la sauce barbecue sur le côté — ne jamais la mélanger, donc les diners peuvent contrôler leur niveau de sauce.",
+      "visualCue": {
+        "primaryTarget": "De longs brins de porc qui se séparent facilement avec une fourchette. Morceaux d'écorce foncés répartis dans toute la viande tirée. Le porc brille avec des jus rendus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Larmes de viande dans de gros morceaux intacts plutôt que de se séparer en brins. Résistance en tirant. Le collagène n'est pas complètement dissous.",
+            "action": "Si la température interne était inférieure à 93°C, retourner à la chaleur. Si le temps est limité, hacher avec un cleaver — il ne sera pas tiré de porc mais il sera comestible."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande tire dans de longs brins soyeux avec une résistance minimale. Morceaux d'écorce foncés mélangés. Toute la masse brille avec des jus.",
+            "action": "Hydrater avec des jus de cuisson. Servir avec de la sauce sur le côté."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande est sèche et déchiquete en fibres sèches de poussière plutôt qu'en brins humides. Pratiquement pas de jus visible.",
+            "action": "Mélanger avec un mélange de jus de casserole, vinaigre de cidre de pomme et une touche de sauce barbecue. Laisser absorber pendant 5 minutes avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Passez vos doigts à travers le porc tiré — les brins doivent se sentir soyeux et légèrement collants de la gélatine, pas secs ou à cordes. Un morceau d'écorce pressé entre les doigts devrait tomber légèrement sous pression."
+    }
+  ]
 };

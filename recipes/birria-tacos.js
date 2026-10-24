@@ -1,117 +1,289 @@
 export default {
-  repoId: "master_mexican_birria_tacos_001",
-  parentRepoId: null,
-  slug: "birria-tacos",
-  author: "ForkRecipe Kitchen",
-  title: "Birria Tacos (Tacos de Birria)",
-  description: "Beef short ribs braised low and slow in a smoke-dark consommé of guajillo, ancho, and árbol chiles — the broth so richly gelatinous it fries to a lacquer when the tortilla hits the pan. Each taco is a double-dip affair: dunk the corn tortilla in the consommé, load it with shredded beef and Oaxacan cheese, then sear it until the outside blisters and the cheese melts into the meat.",
-  cuisine: "Mexican (Jalisco)",
-  culture: "Jalisciense",
-  category: "proteins",
-  tags: ["beef", "tacos", "braise", "chiles", "mexican", "jalisco", "consomme", "gluten-free"],
-  difficulty: 4,
-  activeTime: "1 hr",
-  totalTime: "5 hr",
-  ratioSystem: "parts",
-  stars: 1847,
-  forks: 134,
-  contributors: 42,
-  license: "CC-BY-SA",
-  createdAt: "2026-01-15",
-  updatedAt: "2026-01-15",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 2, umami: 5, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Beef short ribs (bone-in)",         ratioValue: 100, defaultUnit: "parts", substitutions: ["beef chuck", "goat leg"] },
-    { ingId: "ing_02", role: "Spice",     name: "Guajillo chiles, stemmed and seeded", ratioValue: 8,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Spice",     name: "Ancho chiles, stemmed and seeded",    ratioValue: 4,  defaultUnit: "parts", substitutions: ["pasilla chiles"] },
-    { ingId: "ing_04", role: "Spice",     name: "Árbol chiles, stemmed",               ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Roma tomatoes, halved",               ratioValue: 15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "White onion, quartered",              ratioValue: 10, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Garlic cloves",                       ratioValue: 3,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Mexican cinnamon stick (canela)",     ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Dried Mexican oregano",               ratioValue: 0.5, defaultUnit: "parts", substitutions: ["marjoram"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fine sea salt",                       ratioValue: 2,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_mexican_birria_tacos_001",
+  "parentRepoId": null,
+  "slug": "birria-tacos",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tacos de Birria (Tacos de Birria)",
+  "description": "Des côtes courtes de boeuf braisaient bas et lents dans un mélange de guajillo, d'anchois et de árbol chiles, le bouillon si richement gélatineux qu'il frit en laque lorsque la tortilla frappe la poêle. Chaque taco est une affaire à deux gouttes : tremper la tortilla de maïs dans le consommé, la charger avec du boeuf déchiqueté et du fromage Oaxacan, puis la saisir jusqu'à ce que les cloques extérieures et le fromage fondent dans la viande.",
+  "cuisine": "Mexicain (Jalisco)",
+  "culture": "Jalisciense",
+  "category": "proteins",
+  "tags": [
+    "boeuf",
+    "tacos",
+    "braise",
+    "les chiles",
+    "Mexique",
+    "Jalisco",
+    "Consommation",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hr",
+  "totalTime": "5 hr",
+  "ratioSystem": "parts",
+  "stars": 1847,
+  "forks": 134,
+  "contributors": 42,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-01-15",
+  "updatedAt": "2026-01-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 5,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_02", "ing_03", "ing_04"],
-      outputState: "toasted_chiles",
-      instructions: "Heat a dry comal or cast-iron skillet over medium heat. Press each chile flat against the surface for 10–15 seconds per side, until it softens and smells deeply fragrant — like raisins and leather — with the faintest wisp of smoke. Immediately transfer to a bowl and cover with boiling water. Weight them down with a plate and soak for 20 minutes until completely pliable.",
-      visualCue: {
-        primaryTarget: "Chiles should be deeply pliable and a shade darker, the surface faintly blistered but not charred.",
-        spectrum: [
-          { state: "Underdone", description: "Chiles are still stiff and papery. The bowl of soaking water is barely tinted.", action: "Return each chile to the comal for another 5–8 seconds per side." },
-          { state: "Perfect",   description: "Chiles are supple and pliant. Soaking water is brick-red. The kitchen smells of dried fruit and warm smoke.", action: "Drain chiles, reserving 1 cup soaking liquid. Proceed to blending." },
-          { state: "Overdone",  description: "Black spots cover the chile skin. Soaking water smells acrid and bitter.", action: "Discard blackened chiles — they will make the entire sauce bitter. Use untoasted chiles soaked only in boiling water." },
-        ],
-      },
-      feelCue: "A properly toasted chile is as supple as a piece of soft leather and releases a warm, nutty aroma the moment it touches the hot pan.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Côtes courtes de boeuf",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mandrin de boeuf",
+        "jambe de chèvre"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Roast",
-      inputs: ["ing_05", "ing_06", "ing_07"],
-      outputState: "charred_aromatics",
-      instructions: "On the same dry comal or skillet over high heat, place tomato halves cut-side down, onion quarters, and garlic cloves (unpeeled). Char until the tomatoes are blackened in spots and juices have caramelized, about 8 minutes. Turn everything once. The garlic skins will blister and the onion edges will go dark amber. Do not rush — this char is the flavor backbone of the consommé.",
-      visualCue: {
-        primaryTarget: "Deep char marks on tomatoes. Onion edges blackened. Garlic skins blistered and papery.",
-        spectrum: [
-          { state: "Underdone", description: "Tomatoes are just steaming, no char visible. Onion is softening but pale.", action: "Increase heat. Leave everything untouched for at least 4 more minutes." },
-          { state: "Perfect",   description: "Tomatoes have distinct black patches and collapsed flesh. Onion edges are dark amber to black. Garlic skins are charred and papery.", action: "Remove from heat. Peel garlic. Transfer everything to the blender." },
-          { state: "Overdone",  description: "All aromatics are uniformly black and acrid. Smoke is excessive.", action: "Discard the batch. The bitterness will not cook out of a fully burnt aromatics base." },
-        ],
-      },
-      feelCue: "You want the comal screaming hot so that the moisture is driven out and caramelization, not steaming, does the work — the tomatoes should hiss and spit when they first make contact.",
+      "ingId": "ing_02",
+      "role": "Spice",
+      "name": "Chiles de Guajillo, pédés et ensemencés",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["toasted_chiles", "charred_aromatics", "ing_08", "ing_09", "ing_10"],
-      outputState: "birria_chile_paste",
-      instructions: "Drain the rehydrated chiles, reserving the soaking liquid. Peel the garlic. Combine chiles, charred aromatics, cinnamon, oregano, and salt in a blender. Add 1 cup of the reserved chile soaking liquid (taste it first — if it is bitter, use plain water instead). Blend on high for 90 seconds until completely smooth. The sauce should pour like heavy cream. Pass through a medium strainer, pressing the solids.",
-      visualCue: {
-        primaryTarget: "A deep brick-red, almost mahogany sauce that coats a spoon thickly with no visible chile skin fragments.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is grainy. Chile skins are visible as specks. The mixture barely pours.", action: "Blend for another 60 seconds. Add a splash more liquid to help the blades catch." },
-          { state: "Perfect",   description: "Sauce pours smoothly, coats a spoon in a deep red-brown layer, and passes through the strainer with very little solid waste.", action: "Season with salt and proceed to braising." },
-          { state: "Overdone",  description: "Sauce is thin and watery from over-blending with too much liquid. Color is pale orange.", action: "It will reduce during the braise. Add only enough water to the pot to cover the meat." },
-        ],
-      },
-      feelCue: "When you drag a finger through the sauce on the back of the spoon, the line should hold for a full 3 seconds before the edges begin to creep back.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Chiles anchos, épinés et ensemencés",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Chiles de pasilla"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Braise",
-      inputs: ["ing_01", "birria_chile_paste"],
-      outputState: "braised_birria",
-      instructions: "Season short ribs aggressively with salt. In a large Dutch oven or heavy pot, brown the ribs in batches over high heat — 4 minutes per side until deeply seared. Pour in the chile paste and enough water to just cover the meat (about 4–5 cups). Bring to a boil, then reduce to the lowest simmer. Partially cover and cook for 3.5–4 hours, until the meat falls from the bone with no resistance. Skim fat from the surface every 45 minutes — that skimmed fat is gold; reserve it for frying the tortillas.",
-      visualCue: {
-        primaryTarget: "Meat should slide off the bone under the gentlest pressure. The consommé is deeply red, glossy, and visibly reduced.",
-        spectrum: [
-          { state: "Underdone", description: "Meat resists when pulled with tongs. Still has pink-grey interior. Consommé is thin.", action: "Continue braising, checking every 30 minutes. The collagen has not yet converted to gelatin." },
-          { state: "Perfect",   description: "Short ribs yield at a touch. The surrounding consommé is thick enough to coat a ladle and wobbles like loose jello when the pot is jostled.", action: "Remove meat, shred it, discard bones. Season consommé to taste." },
-          { state: "Overdone",  description: "Meat has disintegrated into dry shreds. Fat has separated and floats as a thick orange slick.", action: "Skim the fat layer, shred the meat gently, add a cup of water to the consommé and taste for balance." },
-        ],
-      },
-      feelCue: "The consommé should be rich enough that a spoonful cools to a soft gel on a cold plate — that trembling wobble tells you the collagen has done its work.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Chiles d'arbol, en tige",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Assemble",
-      inputs: ["braised_birria"],
-      outputState: "finished_birria_tacos",
-      instructions: "Heat a comal or griddle over medium-high heat. Brush or spread the reserved skimmed chile fat over the surface. Dip a corn tortilla in the warm consommé for 3–4 seconds — it should emerge a deep brick red. Lay it on the comal. Pile one side with shredded birria meat and a fistful of quesillo (Oaxacan cheese). Fold the tortilla over and press gently. Cook for 90 seconds per side, until the outside crisps and the cheese has melted into the meat. Serve with a ramekin of hot consommé for dipping, diced white onion, and cilantro.",
-      visualCue: {
-        primaryTarget: "Tacos are lacquered a deep mahogany with crisp, blistered edges. Cheese is fully melted. Consommé glistens in the ramekin.",
-        spectrum: [
-          { state: "Underdone", description: "Tortilla is still soft and floppy. Cheese hasn't melted. No audible sizzle.", action: "Press the taco down with a spatula. Wait another 60 seconds on each side." },
-          { state: "Perfect",   description: "Taco is rigid and lacquered. A faint crackle is audible when the spatula presses it. The first cheese strings appear at the seam.", action: "Plate immediately, consommé on the side." },
-          { state: "Overdone",  description: "Tortilla has burned to a crisp and snaps rather than folds. Cheese has charred at the edges.", action: "Reduce heat. The comal is too hot — dip a fresh tortilla and proceed." },
-        ],
-      },
-      feelCue: "The finished taco should feel rigid and crackle faintly when lifted — the outside a thin, brittle shell that shatters to reveal the molten, brothy interior.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Tomates roms, coupées en deux",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Oignon blanc, quartiers",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Gousses d'ail",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Stick de cannelle mexicaine (canelle)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Origan mexicain séché",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Marjoram"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "toasted_chiles",
+      "instructions": "Chauffer une poêle en comal sec ou en fonte à feu moyen. Appuyez sur chaque chile plat contre la surface pendant 10 à 15 secondes de chaque côté, jusqu'à ce qu'il adoucisse et sente profondément parfumé — comme les raisins secs et le cuir — avec la plus faible touche de fumée. Transférer immédiatement dans un bol et couvrir d'eau bouillante. Peser avec une assiette et tremper pendant 20 minutes jusqu'à ce qu'il soit complètement souple.",
+      "visualCue": {
+        "primaryTarget": "Les Chiliens devraient être profondément pliables et une ombre plus foncée, la surface légèrement cloquée mais pas carbonisée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les Chiliens sont encore raides et papiers. Le bol d'eau imbibée est à peine teinté.",
+            "action": "Retourner chaque chile dans le comal pendant 5 à 8 secondes de chaque côté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les Chiliens sont souples et solidaires. L'eau qui sème est rouge brique. La cuisine sent les fruits secs et la fumée chaude.",
+            "action": "Égoutter les chiles, réserver 1 tasse liquide de trempage. Procéder au mélange."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des taches noires recouvrent la peau de chile. L'eau qui sème sent acre et amère.",
+            "action": "Jeter les chiles noircis — ils rendront la sauce entière amère. Utiliser des chiles non grillés trempés uniquement dans l'eau bouillante."
+          }
+        ]
+      },
+      "feelCue": "Un chile bien grillé est aussi souple qu'un morceau de cuir doux et libère un arôme chaud et noisette au moment où il touche la poêle chaude."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "charred_aromatics",
+      "instructions": "Sur le même comal sec ou poêle à feu vif, placer les moitiés de tomates coupées, les quartiers d'oignon et les gousses d'ail (non pelées). Char jusqu'à ce que les tomates soient noircies dans les taches et les jus ont caramélisé, environ 8 minutes. Tourne tout une fois. Les peaux d'ail seront cloquées et les bords de l'oignon iront en ambre foncé. Ne vous précipitez pas — cet omble est l'épine dorsale de la saveur du consommé.",
+      "visualCue": {
+        "primaryTarget": "Des marques de char sur les tomates. Bords d'oignon noircis. Peaux d'ail blister et papier.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tomates sont juste à la vapeur, pas d'omble visible. L'oignon est ramolli mais pâle.",
+            "action": "Augmenter la chaleur. Laissez tout intact pendant au moins 4 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tomates ont des taches noires distinctes et une chair effondrée. Les bords de l'oignon sont foncés, ambrés ou noirs. Les peaux d'ail sont carbonisées et papier.",
+            "action": "Retirer du feu. Peler l'ail. Transférez tout au mélangeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tous les aromatiques sont uniformément noirs et acrides. La fumée est excessive.",
+            "action": "Jetez le lot. L'amertume ne fera pas cuire à partir d'une base aromatique entièrement brûlée."
+          }
+        ]
+      },
+      "feelCue": "Vous voulez que le comal crie chaud pour que l'humidité soit chassée et la caramélisation, non la vapeur, fait le travail — les tomates doivent siffler et cracher quand ils entrent en contact."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "toasted_chiles",
+        "charred_aromatics",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "birria_chile_paste",
+      "instructions": "Égoutter les chiles réhydratés, réserver le liquide absorbant. Peler l'ail. Mélanger les chiles, les aromatiques carbonés, la cannelle, l'origan et le sel dans un mélangeur. Ajouter 1 tasse du liquide de trempage réservé (dégustez-le d'abord — s'il est amer, utilisez plutôt de l'eau pure). Mélanger en haut pendant 90 secondes jusqu'à ce qu'il soit complètement lisse. La sauce doit verser comme de la crème lourde. Passer à travers un filtre moyen, presser les solides.",
+      "visualCue": {
+        "primaryTarget": "Une sauce rouge brique profonde, presque acajou qui enveloppe une cuillère épaissement sans fragments de peau de chile visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est granuleuse. Les peaux du Chili sont visibles comme des taches. Le mélange se déverse à peine.",
+            "action": "Mélanger encore 60 secondes. Ajoutez un peu plus de liquide pour aider les lames à attraper."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce verse en douceur, enrobe une cuillère dans une couche rouge-brun profonde, et passe à travers la passoire avec très peu de déchets solides.",
+            "action": "Assaisonner de sel et faire cuire."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est fine et aqueuse par excès de liquide. La couleur est orange pâle.",
+            "action": "Il réduira pendant le brasage. Ajouter seulement assez d'eau dans le pot pour couvrir la viande."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous faites glisser un doigt dans la sauce à l'arrière de la cuillère, la ligne doit tenir pendant 3 secondes avant que les bords commencent à glisser en arrière."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Brise",
+      "inputs": [
+        "ing_01",
+        "birria_chile_paste"
+      ],
+      "outputState": "braised_birria",
+      "instructions": "Assaisonner les côtes courtes agressivement avec du sel. Dans un grand four hollandais ou un pot lourd, faire revenir les côtes par lots à feu vif — 4 minutes de chaque côté jusqu'à ce qu'elles soient profondément séchées. Verser la pâte de chile et suffisamment d'eau pour couvrir la viande (environ 4-5 tasses). Porter à ébullition, puis laisser mijoter au plus bas. Couvrir et cuire partiellement pendant 3,5 à 4 heures, jusqu'à ce que la viande tombe de l'os sans résistance. Graisse écrémée de la surface toutes les 45 minutes — cette graisse écrémée est de l'or; réservez-la pour faire frire les tortillas.",
+      "visualCue": {
+        "primaryTarget": "La viande doit glisser de l'os sous la pression la plus douce. Le consommé est profondément rouge, brillant et visiblement réduit.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande résiste lorsqu'elle est tirée avec des pinces. L'intérieur est encore gris rose. Consommé est mince.",
+            "action": "Continuez à braquer, à vérifier toutes les 30 minutes. Le collagène n'a pas encore été transformé en gélatine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les côtes courtes donnent à coup sûr. Le consommé qui l'entoure est assez épais pour enrober une louche et agiter comme un jello lâche quand le pot est bouché.",
+            "action": "Retirer la viande, la déchiqueter, jeter les os. Saison conseillée au goût."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande s'est désintégrée dans des lambeaux secs. Le gras s'est séparé et flotte sous forme de lécher épais orange.",
+            "action": "Abattez la couche grasse, déchiquetez la viande doucement, ajoutez une tasse d'eau au consommé et goûtez pour l'équilibre."
+          }
+        ]
+      },
+      "feelCue": "Le consommé devrait être assez riche pour qu'une cuillère se refroidisse à un gel doux sur une assiette froide, ce qui tremble vous dit que le collagène a fait son travail."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Assemblage",
+      "inputs": [
+        "braised_birria"
+      ],
+      "outputState": "finished_birria_tacos",
+      "instructions": "Chauffer un comal ou une grille à feu moyen-élevé. Badigeonner ou étaler la graisse de chile écrémé réservée sur la surface. Plongez une tortilla de maïs dans le consommé chaud pendant 3-4 secondes — il devrait émerger une brique rouge profonde. Pose ça sur le comal. Pile un côté avec de la viande de birria déchiquetée et un poing de quesillo (fromage Oaxacan). Repliez la tortilla et appuyez doucement. Cuire 90 secondes par côté, jusqu'à ce que les croustillants extérieurs et le fromage aient fondu dans la viande. Servir avec un ramekin de consommé chaud pour tremper, dés d'oignon blanc et de coriandre.",
+      "visualCue": {
+        "primaryTarget": "Tacos sont laqués une acajou profonde avec des bords croustillants et blisters. Le fromage est complètement fondu. Consommé brille dans le ramekin.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Tortilla est encore molle et molle. Le fromage n'a pas fondu. Pas de vertige sonore.",
+            "action": "Appuyez sur le taco avec une spatule. Attendez encore 60 secondes de chaque côté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Taco est rigide et laqué. Un léger craquement est audible lorsque la spatule la presse. Les premières ficelles de fromage apparaissent à la couture.",
+            "action": "Assiette immédiatement, consommé sur le côté."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tortilla a brûlé à un croustillant et craque plutôt que des plis. Le fromage est carbonisé aux bords.",
+            "action": "Réduire la chaleur. Le comal est trop chaud — trempez une tortilla fraîche et continuez."
+          }
+        ]
+      },
+      "feelCue": "Le taco fini doit se sentir rigide et craquer faiblement lorsqu'il est soulevé — l'extérieur une mince coquille fragile qui se brise pour révéler l'intérieur fondu et bouillonnant."
+    }
+  ]
 };

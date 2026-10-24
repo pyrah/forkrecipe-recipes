@@ -1,88 +1,208 @@
 export default {
-  repoId: "master_british_roasted_root_vegetables_001",
-  parentRepoId: null,
-  slug: "roasted-root-vegetables",
-  author: "ForkRecipe Kitchen",
-
-  title: "Roasted Root Vegetables",
-  description: "Parsnips, carrots, and beetroot — peeled and cut to size, tossed in a generous coat of oil, and roasted at high heat until their sugars have caramelized to a deep, bittersweet char — the most honest and satisfying way to eat the vegetables of an English autumn.",
-  cuisine: "British",
-  culture: "British",
-  category: "vegetables",
-
-  tags: ["roasted", "vegetable", "british", "parsnip", "carrot", "beetroot", "vegan", "side"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-
-  stars: 1102,
-  forks: 98,
-  contributors: 31,
-  license: "CC-BY-SA",
-  createdAt: "2025-02-10",
-  updatedAt: "2025-06-01",
-
-  flavorRadar: { sweet: 4, salty: 2, sour: 0, bitter: 2, umami: 1, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Parsnips (peeled, halved lengthwise)",      ratioValue: 40, defaultUnit: "parts", substitutions: ["celeriac", "turnip"] },
-    { ingId: "ing_02", role: "Structure", name: "Carrots (peeled, halved or quartered lengthwise)", ratioValue: 30, defaultUnit: "parts", substitutions: ["rainbow carrots"] },
-    { ingId: "ing_03", role: "Structure", name: "Beetroot (peeled, cut into wedges)",        ratioValue: 30, defaultUnit: "parts", substitutions: ["golden beetroot", "swede"] },
-    { ingId: "ing_04", role: "Fat",       name: "Sunflower or vegetable oil",                ratioValue: 6,  defaultUnit: "parts", substitutions: ["duck fat or goose fat for superior results"] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh thyme sprigs and bay leaves",         ratioValue: 2,  defaultUnit: "parts", substitutions: ["fresh rosemary"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Flaky sea salt and black pepper",           ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Sweetener", name: "Honey or maple syrup (for glazing)",        ratioValue: 2,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_british_roasted_root_vegetables_001",
+  "parentRepoId": null,
+  "slug": "roasted-root-vegetables",
+  "author": "ForkRecipe Kitchen",
+  "title": "Légumes-racines grillés",
+  "description": "Des panais, des carottes et des betteraves, épluchées et coupées en taille, jetées dans une généreuse couche d'huile et grillées à feu vif jusqu'à ce que leurs sucres aient caramélisé en un char doux et amer, la façon la plus honnête et la plus satisfaisante de manger les légumes d'un automne anglais.",
+  "cuisine": "Anglais",
+  "culture": "Anglais",
+  "category": "vegetables",
+  "tags": [
+    "grillés",
+    "légumes",
+    "britanniques",
+    "panais",
+    "Carotte",
+    "betterave",
+    "végétalien",
+    "côté"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 1102,
+  "forks": 98,
+  "contributors": 31,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-02-10",
+  "updatedAt": "2025-06-01",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Prep vegetables",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_06"],
-      outputState: "prepped_roots",
-      instructions: "Peel all vegetables. Cut into pieces of approximately equal size and similar surface area so they roast at the same rate — this is the single most important prep step. Parsnips halved lengthwise; carrots halved or quartered depending on size; beetroot into 6–8 wedges. Toss in a large bowl with the oil, coating every surface — do not season with salt yet, as salt draws moisture and creates steam in the early roasting stage.",
-      visualCue: {
-        primaryTarget: "Uniformly sized pieces across all three vegetable types, each surface glistening with an even coat of oil. The pieces should look roughly the same size when mounded together.",
-        spectrum: [
-          { state: "Underdone", description: "Pieces are of vastly different sizes — some large beetroot wedges alongside thin carrot strips.", action: "Re-cut the oversized pieces to match the smaller ones. Uneven sizes guarantee some pieces will burn while others undercook." },
-          { state: "Perfect",   description: "Consistent size throughout. Even oil coat on every face. The vegetables look plump and glistening.", action: "Spread onto the roasting tray immediately." },
-          { state: "Overdone",  description: "Vegetables have been sitting in oil for too long and some pieces appear waterlogged.", action: "Proceed — the oil absorption won't significantly affect the result." },
-        ],
-      },
-      feelCue: "Pick up a piece of oiled parsnip — it should feel slick and the oil should not drip off when held for 5 seconds. The cut surfaces should feel smooth and slightly tacky from the oil.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Parsnips (peeled, demi-longueur)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "céleriac",
+        "navets"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Roast",
-      inputs: ["prepped_roots", "ing_05"],
-      outputState: "roasting_roots",
-      instructions: "Preheat the oven to 220°C (430°F) with a large, heavy roasting tray inside. The preheated tray is essential — vegetables placed in a cold tray steam rather than roast. Spread the vegetables in a single layer with the cut sides down, with space between each piece — touching vegetables steam each other. Scatter thyme and bay leaves throughout. Roast for 25 minutes without opening the oven.",
-      visualCue: {
-        primaryTarget: "After 25 minutes, the cut sides in contact with the tray should show deep caramelization — golden to dark-brown. The vegetables are beginning to shrink and the edges have started to color.",
-        spectrum: [
-          { state: "Underdone", description: "After 25 minutes, the cut sides are pale and the vegetables look steamed — no caramelization visible.", action: "The tray was likely not hot enough or the oven temperature was too low. Turn up to 230°C and return to oven." },
-          { state: "Perfect",   description: "Cut sides are deeply golden to brown with distinct caramelization. The kitchen smells of caramelized carrot and earthy beetroot. Parsnips at the tips are beginning to char.", action: "Turn pieces over, season with salt, and return to oven." },
-          { state: "Overdone",  description: "The cut surfaces have blackened and the vegetables are beginning to shrink dramatically.", action: "Remove immediately and serve. Deeply caramelized root vegetables are still delicious even at the border of charred." },
-        ],
-      },
-      feelCue: "Open the oven after 25 minutes and you should hear a steady, moderate sizzle from every piece. The released steam should carry the sweet smell of caramelizing parsnip and carrot sugars.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Carottes (peautées, coupées en deux ou en quatre dans le sens de la longueur)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "carottes arc-en-ciel"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Glaze",
-      inputs: ["roasting_roots", "ing_07", "ing_06"],
-      outputState: "finished_roasted_roots",
-      instructions: "Turn each piece over to expose an unbrowned side. Season now with flaky sea salt and black pepper. Drizzle honey or maple syrup over the pieces in the tray. Return to the oven for 15–20 more minutes until everything is tender, deeply caramelized, and the honey has darkened and concentrated. The sugar in the glaze accelerates the Maillard reaction on the freshly exposed surfaces.",
-      visualCue: {
-        primaryTarget: "Deep amber-brown caramelization on multiple sides, with the honey glaze forming a shiny, dark, concentrated coat on the exposed surfaces. Parsnip tips may be very dark — this is desirable.",
-        spectrum: [
-          { state: "Underdone", description: "Pale second side with honey not yet caramelized — it looks pale and liquid on the surface.", action: "Return to the oven. The honey needs heat to concentrate and caramelize." },
-          { state: "Perfect",   description: "Multiple deep-caramelized sides. Honey has darkened and adhered to the vegetables, forming a sticky, shiny coat. Parsnip tips are dark, almost charred. A fork passes through all pieces with almost no resistance.", action: "Serve immediately from the tray." },
-          { state: "Overdone",  description: "Honey has burnt to a black, bitter film and the vegetables are very dark and dry.", action: "Remove immediately. Scrape off the worst of the burnt honey. The underlying vegetable may still be excellent." },
-        ],
-      },
-      feelCue: "Press a parsnip with the back of a fork — it should yield completely with a slight give, like pressing into firm butter. The honey glaze on the surface should feel tacky and slightly sticky, not wet.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Racines de betteraves (peautées, coupées en quartiers)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "betterave dorée",
+        "Suède"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile de tournesol ou de légumes",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gras de canard ou d'oie pour des résultats supérieurs"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Fils de thym frais et feuilles de laurier",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "romarin frais"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel de mer et poivre noir",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Miel ou sirop d'érable (pour vitrage)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation de légumes",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "prepped_roots",
+      "instructions": "Peler tous les légumes. Couper en morceaux d'une taille approximativement égale et d'une surface similaire, de sorte qu'ils rôtissent au même rythme — c'est l'étape de préparation la plus importante. Les parsnips sont coupés en deux dans le sens de la longueur; les carottes sont coupées en deux ou en quatre selon la taille; la betterave est formée de 6 à 8 coins. Dans un grand bol, mélanger l'huile, enrober toutes les surfaces — ne pas encore assaisonner de sel, car le sel puise l'humidité et crée de la vapeur au début de la cuisson.",
+      "visualCue": {
+        "primaryTarget": "Des morceaux de taille uniforme dans les trois types de légumes, chaque surface scintille avec une couche d'huile uniforme. Les pièces doivent avoir à peu près la même taille lorsqu'elles sont assemblées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pièces sont de tailles très différentes — quelques grands coins de betterave à côté de fines bandes de carottes.",
+            "action": "Recoupez les pièces surdimensionnées pour correspondre aux plus petites. Des tailles inégales garantissent que certaines pièces brûleront tandis que d'autres seront cuites."
+          },
+          {
+            "state": "Perfect",
+            "description": "Taille constante. Même un manteau d'huile sur chaque visage. Les légumes ont l'air grincheux et éblouissants.",
+            "action": "Étaler immédiatement sur le plateau de cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont assis dans de l'huile depuis trop longtemps et certains morceaux semblent recouverts d'eau.",
+            "action": "Procéder — l'absorption d'huile n'affectera pas significativement le résultat."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un morceau de panais huilé — il devrait se sentir lissé et l'huile ne devrait pas couler lorsqu'elle est retenue pendant 5 secondes. Les surfaces coupées doivent être lisses et légèrement collantes à partir de l'huile."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rôtis",
+      "inputs": [
+        "prepped_roots",
+        "ing_05"
+      ],
+      "outputState": "roasting_roots",
+      "instructions": "Préchauffer le four à 220°C (43°F) avec un grand plateau de torréfaction lourd à l'intérieur. Le plateau préchauffé est essentiel: les légumes sont placés dans un plateau froid plutôt que dans un rôti. Étendre les légumes en une seule couche avec les côtés coupés vers le bas, avec de l'espace entre chaque pièce — toucher les légumes se vapeur. Scatter le thym et les feuilles de laurier. Faire cuire 25 minutes sans ouvrir le four.",
+      "visualCue": {
+        "primaryTarget": "Après 25 minutes, les côtés coupés en contact avec le plateau doivent montrer une caramélisation profonde, dorée à brun foncé. Les légumes commencent à rétrécir et les bords ont commencé à colorier.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 25 minutes, les côtés coupés sont pâles et les légumes semblent à la vapeur, sans caramélisation visible.",
+            "action": "Le plateau n'était probablement pas assez chaud ou la température du four était trop basse. Monter à 230°C et retourner au four."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les côtés coupés sont profondément dorés à bruns avec une caramélisation distincte. La cuisine sent la carotte caramélisée et la betterave terreuse. Les parsnips aux pourboires commencent à ombrager.",
+            "action": "Retourner les morceaux, assaisonner de sel et retourner au four."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les surfaces coupées ont noirci et les légumes commencent à se rétrécir considérablement.",
+            "action": "Retirer immédiatement et servir. Les légumes-racines fortement caramélisés sont toujours délicieux même à la limite du carbonisé."
+          }
+        ]
+      },
+      "feelCue": "Ouvrir le four après 25 minutes et entendre un étourdissement régulier et modéré de chaque pièce. La vapeur libérée doit porter l'odeur douce du panais caramélisant et des sucres de carottes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Glace",
+      "inputs": [
+        "roasting_roots",
+        "ing_07",
+        "ing_06"
+      ],
+      "outputState": "finished_roasted_roots",
+      "instructions": "Tourner chaque pièce pour exposer un côté non-brown. Assaisonner maintenant de sel de mer et de poivre noir. Arrosez le miel ou le sirop d'érable sur les morceaux du plateau. Retourner au four encore 15 à 20 minutes jusqu'à ce que tout soit tendre, profondément caramélisé, et le miel s'est obscurci et concentré. Le sucre dans la glaçure accélère la réaction de Maillard sur les surfaces fraîchement exposées.",
+      "visualCue": {
+        "primaryTarget": "Caramélisation ambrée profonde sur plusieurs côtés, avec la glaçure de miel formant une couche brillante, foncée et concentrée sur les surfaces exposées. Les bouts de panais peuvent être très sombres — c'est souhaitable.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pale deuxième face avec le miel pas encore caramélisé — il semble pâle et liquide à la surface.",
+            "action": "Retournez au four. Le miel a besoin de chaleur pour se concentrer et caraméliser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Plusieurs côtés caramélisés profonds. Le miel a obscurci et adhéré aux légumes, formant une couche collante et brillante. Les bouts de parsnip sont sombres, presque carbonisés. Une fourche traverse toutes les pièces sans résistance.",
+            "action": "Servir immédiatement du plateau."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le miel a brûlé à un film noir et amer et les légumes sont très sombres et secs.",
+            "action": "Supprimer immédiatement. Écrase le pire du miel brûlé. Le légume sous-jacent peut encore être excellent."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un panais à l'arrière d'une fourchette — il devrait produire complètement avec un léger rendement, comme en appuyant sur du beurre ferme. La glaçure de miel sur la surface doit se sentir collante et légèrement collante, pas humide."
+    }
+  ]
 };

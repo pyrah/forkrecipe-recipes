@@ -1,104 +1,241 @@
 export default {
-  repoId: "master_italian_wild_mushroom_risotto_001",
-  parentRepoId: null,
-  slug: "wild-mushroom-risotto",
-  author: "ForkRecipe Kitchen",
-
-  title: "Wild Mushroom Risotto",
-  description: "Carnaroli rice coaxed ladle by ladle into a mantecatura of Parmigiano and butter, laced throughout with porcini and the dark, resinous perfume of forest fungi — a dish that rewards patience with an almost liquid, wave-like consistency.",
-  cuisine: "Italian",
-  culture: "Northern Italian",
-  category: "grains",
-
-  tags: ["italian", "risotto", "mushroom", "parmesan", "vegetarian"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "55 min",
-  ratioSystem: "parts",
-
-  stars: 2751,
-  forks: 318,
-  contributors: 42,
-  license: "CC-BY-SA",
-  createdAt: "2024-02-15",
-  updatedAt: "2026-01-08",
-
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 1, umami: 5, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Carnaroli or Arborio rice",                              ratioValue: 100, defaultUnit: "parts", substitutions: ["Vialone Nano"] },
-    { ingId: "ing_02", role: "Umami",      name: "Mixed wild mushrooms (porcini, chanterelle, cremini), sliced", ratioValue: 80, defaultUnit: "parts", substitutions: ["dried porcini rehydrated", "shiitake"] },
-    { ingId: "ing_03", role: "Liquid",     name: "Warm vegetable or light chicken stock",                  ratioValue: 400, defaultUnit: "parts", substitutions: ["mushroom soaking liquid + stock"] },
-    { ingId: "ing_04", role: "Allium",     name: "Shallots, finely diced",                                 ratioValue: 20,  defaultUnit: "parts", substitutions: ["white onion"] },
-    { ingId: "ing_05", role: "Fat",        name: "Unsalted butter, cold, cubed",                           ratioValue: 20,  defaultUnit: "parts", substitutions: ["high-quality olive oil for vegan"] },
-    { ingId: "ing_06", role: "Dairy",      name: "Parmigiano-Reggiano, finely grated",                     ratioValue: 25,  defaultUnit: "parts", substitutions: ["Grana Padano", "Pecorino Romano"] },
-    { ingId: "ing_07", role: "Solvent",    name: "Dry white wine",                                         ratioValue: 30,  defaultUnit: "parts", substitutions: ["dry vermouth", "extra stock"] },
+  "repoId": "master_italian_wild_mushroom_risotto_001",
+  "parentRepoId": null,
+  "slug": "wild-mushroom-risotto",
+  "author": "ForkRecipe Kitchen",
+  "title": "Champignons sauvages Risotto",
+  "description": "La louche de riz Carnaroli coaxed louche par louche dans une mantecatura de Parmigiano et de beurre, lacé tout au long avec des porcines et le parfum sombre et résineux de champignons forestiers — un plat qui récompense la patience avec une consistance presque liquide, comme onde.",
+  "cuisine": "Italien",
+  "culture": "Nord italien",
+  "category": "grains",
+  "tags": [
+    "Italien",
+    "Risotto",
+    "champignon",
+    "parmesan",
+    "végétarien"
   ],
-
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "55 min",
+  "ratioSystem": "parts",
+  "stars": 2751,
+  "forks": 318,
+  "contributors": 42,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-02-15",
+  "updatedAt": "2026-01-08",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sear",
-      inputs: ["ing_02", "ing_05"],
-      outputState: "seared_mushrooms",
-      instructions: "In a wide pan over high heat, melt a small knob of butter until foaming subsides. Add mushrooms in a single layer and cook without moving for 2–3 minutes until deeply browned. Season with salt, toss once, and cook 1 minute more. Remove and set aside. The mushrooms must be seared separately to drive off moisture and develop flavour — adding them directly to the risotto results in grey, steamed fungi.",
-      visualCue: {
-        primaryTarget: "Mushrooms carry a deep mahogany crust on their flat faces, have reduced by about a third, and smell intensely of roasted forest floor.",
-        spectrum: [
-          { state: "Underdone", description: "Mushrooms are pale and wet, liquid pooling in the pan. They look steamed rather than seared.", action: "Increase heat and stop stirring. Moisture must evaporate before browning can occur." },
-          { state: "Perfect",   description: "Deep brown on cut surfaces, shrunken and firm. Rich, nutty, earthy aroma fills the kitchen.", action: "Season, remove from heat, and set aside." },
-          { state: "Overdone",  description: "Mushrooms are very dark and beginning to crisp at the edges. Smell is nearly burnt.", action: "Remove immediately. They will still flavour the risotto but add a slightly bitter note." },
-        ],
-      },
-      feelCue: "Cooked mushrooms should feel firm and meaty under a spoon — nothing like the slippery, soft texture they started with. Pressing one should yield a dense, almost leather-like resistance.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz de Carnaroli ou Arborio",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Violone Nano"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toast",
-      inputs: ["ing_01", "ing_04", "ing_05"],
-      outputState: "toasted_rice",
-      instructions: "In a heavy-bottomed wide pot over medium heat, melt half the butter and soften the shallots for 3–4 minutes until translucent. Add the dry rice and stir constantly for 2 minutes until every grain is coated in fat and the grains turn from chalky white to slightly translucent at the edges. You should hear a gentle clicking sound as the grains catch the bottom. This tostatura is essential — it seals the starch so the rice absorbs liquid gradually rather than all at once.",
-      visualCue: {
-        primaryTarget: "Rice grains are shiny with fat and slightly translucent at their edges. A faint nutty aroma rises and the grains click against the pan when stirred.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still uniformly chalky white. The raw starch smell persists.", action: "Continue toasting, stirring constantly. Under-toasted rice absorbs liquid too quickly and turns mushy." },
-          { state: "Perfect",   description: "Grains glisten, edges have gone translucent, and a faint toasty aroma is present. A grain squeezed between fingers still feels hard at its core.", action: "Add the white wine." },
-          { state: "Overdone",  description: "Grains are turning golden-brown and some are beginning to pop. The shallots are catching.", action: "Add the wine immediately to stop the heat. The rice will still be usable but will take slightly less liquid." },
-        ],
-      },
-      feelCue: "The dry rice should click audibly against the metal pot as you stir — a subtle, pebbly rhythm that signals the grains are toasted and ready to drink wine.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Champignons sauvages mélangés (porcini, chanterelle, crémini), tranchés",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "porcin séché réhydraté",
+        "shiitake"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Deglaze and build",
-      inputs: ["toasted_rice", "ing_07", "ing_03"],
-      outputState: "built_risotto",
-      instructions: "Pour the white wine into the toasted rice and stir vigorously. Cook until fully absorbed, about 2 minutes. Then add warm stock one ladle at a time (roughly 100ml), stirring constantly and waiting for each addition to be almost fully absorbed before adding the next. Keep the stock hot in a separate saucepan throughout. This process takes 18–20 minutes total — do not rush it with large additions of cold stock.",
-      visualCue: {
-        primaryTarget: "After each ladle, the liquid reduces to leave the rice creamy and barely fluid, the starch forming a milky slick between the grains.",
-        spectrum: [
-          { state: "Underdone", description: "After 18 minutes, rice is still very firm and chalky at the centre when bitten. Starch suspension looks watery.", action: "Continue adding stock and stirring. The rice will tell you when it is ready — tasting is the only reliable test." },
-          { state: "Perfect",   description: "Rice is al dente — yielding at the outside with a tiny, pleasant resistance at the very centre. The mixture flows and spreads slowly when the pot is shaken, like lava. Starch is thick and creamy between grains.", action: "Remove from heat and mantecate immediately." },
-          { state: "Overdone",  description: "Rice has no texture — each grain is soft all the way through and is beginning to break apart. The starch is glue-like and heavy.", action: "Remove from heat now. Add a small ladle of hot stock to loosen. Proceed to mantecatura — the butter will improve the texture." },
-        ],
-      },
-      feelCue: "Tasting at the 18-minute mark: the grain should offer a tiny, toothsome pop of resistance at the very centre — not raw hardness, not soft uniformity, but a distinct, pleasant nub of starch.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Légumes chauds ou poulets légers",
+      "ratioValue": 400,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "liquide de trempage des champignons + stock"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Mount",
-      inputs: ["built_risotto", "seared_mushrooms", "ing_05", "ing_06"],
-      outputState: "finished_risotto",
-      instructions: "Remove the pot from the heat entirely. Add the seared mushrooms, then vigorously stir in the cold cubed butter and the grated Parmigiano all at once, using a wooden spoon or silicone spatula in a rapid figure-eight motion for 1–2 minutes. This mantecatura is what creates the signature wave-like, all'onda consistency. The cold butter emulsifies with the starchy cooking liquid into a glossy, rich sauce. Serve immediately on warm (not hot) plates.",
-      visualCue: {
-        primaryTarget: "The risotto moves as a single, glossy wave when the pot is shaken. It spreads slowly across a warm plate to form a thin, creamy disc rather than sitting in a mound.",
-        spectrum: [
-          { state: "Underdone", description: "Risotto sits in a tight mound on the plate and does not spread. The butter has not fully emulsified and pools separately.", action: "Stir more vigorously and add a tiny splash of warm stock — the emulsion needs both energy and water to form." },
-          { state: "Perfect",   description: "A gentle shake of the plate sends the risotto rippling outward in a slow, glossy wave. The surface is shiny and uniform. It settles to about 1.5cm deep.", action: "Serve within two minutes before the starch sets." },
-          { state: "Overdone",  description: "Risotto has cooled too long and is now thick and gluey, setting into a mass as it cools. The starch has gelled.", action: "Add a small ladle of hot stock and stir over low heat briefly. Serve immediately — risotto waits for no one." },
-        ],
-      },
-      feelCue: "The finished risotto should have the fluidity of loose porridge and a glossiness like polished stone — when a spoonful is lifted and dropped, it should fall in slow, reluctant curtains, not land with a thud.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalotes coupées en dés",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon blanc"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé, froid, cubes",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile d'olive de haute qualité pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Parmigiano-Reggiano, finement râpé",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Grana Padano",
+        "Pecorino Romano"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Solvent",
+      "name": "Vin blanc sec",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vermouth sec",
+        "stock supplémentaire"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_02",
+        "ing_05"
+      ],
+      "outputState": "seared_mushrooms",
+      "instructions": "Dans une grande casserole à feu vif, faire fondre un petit bouton de beurre jusqu'à ce que la mousse s'abaisse. Ajouter les champignons en une seule couche et cuire sans bouger pendant 2 à 3 minutes jusqu'à ce qu'ils soient profondément dorés. Assaisonner de sel, mélanger une fois et cuire encore 1 minute. Retirer et réserver. Les champignons doivent être séchés séparément pour chasser l'humidité et développer de la saveur — les ajouter directement au risotto donne des champignons gris à vapeur.",
+      "visualCue": {
+        "primaryTarget": "Les champignons portent une croûte d'acajou profonde sur leur visage plat, ont diminué d'environ un tiers, et sentent intensément le sol forestier rôti.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les champignons sont pâles et mouillés, dans la poêle. Ils ont l'air à la vapeur plutôt que de mer.",
+            "action": "Augmentez la chaleur et arrêtez de remuer. L'humidité doit s'évaporer avant le brunissement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Brun foncé sur les surfaces coupées, rétrécies et fermes. Un arôme riche et terreux remplit la cuisine.",
+            "action": "Assaisonner, retirer de la chaleur et réserver."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les champignons sont très foncés et commencent à croquer aux bords. L'odeur est presque brûlée.",
+            "action": "Supprimer immédiatement. Ils vont encore aromatiser le risotto mais ajouter une note légèrement amère."
+          }
+        ]
+      },
+      "feelCue": "Les champignons cuits doivent se sentir fermes et charnus sous une cuillère — rien de tel que la texture douce et glissante avec laquelle ils ont commencé. La pression devrait donner une résistance dense, presque comme du cuir."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "ing_01",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "toasted_rice",
+      "instructions": "Dans un pot large à fond lourd à feu moyen, faire fondre la moitié du beurre et adoucir les échalotes pendant 3 à 4 minutes jusqu'à translucide. Ajouter le riz sec et remuer constamment pendant 2 minutes jusqu'à ce que chaque grain soit enrobé de graisse et que les grains passent de blanc crayeux à légèrement translucide aux bords. Vous devriez entendre un son en clic doux que les grains attraper le fond. Cette tostatura est essentielle — elle scelle l'amidon de sorte que le riz absorbe progressivement le liquide plutôt que tout à la fois.",
+      "visualCue": {
+        "primaryTarget": "Les grains de riz sont brillants avec de la graisse et légèrement translucides à leurs bords. Un léger arôme de noix s'élève et les grains cliquent contre la poêle lorsqu'elle est agitée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore uniformément blancs crayeux. L'odeur d'amidon brut persiste.",
+            "action": "Continuer à griller, en remuant constamment. Le riz sous-toasté absorbe trop rapidement le liquide et devient musqué."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains brillent, les bords sont translucides, et un léger arôme grillé est présent. Un grain pressé entre les doigts se sent encore dur à son cœur.",
+            "action": "Ajouter le vin blanc."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains deviennent dorés et certains commencent à éclater. Les échalotes capturent.",
+            "action": "Ajouter immédiatement le vin pour arrêter la chaleur. Le riz sera encore utilisable mais prendra un peu moins de liquide."
+          }
+        ]
+      },
+      "feelCue": "Le riz sec doit cliquer audiblement contre la casserole en métal que vous remuez — un rythme subtil et cailloux qui indique que les grains sont grillés et prêts à boire du vin."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Déglacer et construire",
+      "inputs": [
+        "toasted_rice",
+        "ing_07",
+        "ing_03"
+      ],
+      "outputState": "built_risotto",
+      "instructions": "Verser le vin blanc dans le riz grillé et remuer vigoureusement. Cuire jusqu'à absorption complète, environ 2 minutes. Ajouter ensuite le bouillon chaud une louche à la fois (environ 100ml), en remuant constamment et en attendant que chaque ajout soit presque complètement absorbé avant d'ajouter le prochain. Conserver le bouillon chaud dans une casserole séparée. Ce processus prend 18-20 minutes au total — ne le précipitez pas avec de grands ajouts de stock froid.",
+      "visualCue": {
+        "primaryTarget": "Après chaque louche, le liquide réduit pour laisser le riz crémeux et à peine fluide, l'amidon formant une lécherette laiteuse entre les grains.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 18 minutes, le riz est encore très ferme et crayeux au centre quand il est mordu. La suspension étoilée semble aqueuse.",
+            "action": "Continuer d'ajouter du stock et de remuer. Le riz vous dira quand il sera prêt — la dégustation est le seul test fiable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le riz est al dente — donnant à l'extérieur avec une petite résistance agréable au centre. Le mélange coule et se répand lentement lorsque le pot est secoué, comme la lave. L'amidon est épais et crémeux entre les grains.",
+            "action": "Retirer immédiatement du feu et mantequer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz n'a pas de texture — chaque grain est doux tout au long du parcours et commence à se briser. L'amidon est collant et lourd.",
+            "action": "Retirer du feu maintenant. Ajouter une petite louche de bouillon chaud pour se détendre. Passer à la mantecatura — le beurre améliorera la texture."
+          }
+        ]
+      },
+      "feelCue": "Dégustation à la marque de 18 minutes: le grain devrait offrir une petite quantité de résistance de dentifrice au centre même — pas une dureté brute, pas une uniformité douce, mais un nube distinct et agréable d'amidon."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Monter",
+      "inputs": [
+        "built_risotto",
+        "seared_mushrooms",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "finished_risotto",
+      "instructions": "Retirer complètement la casserole du feu. Ajouter les champignons séchés, puis remuer vigoureusement le beurre glacé et le Parmigiano râpé tout d'un coup, en utilisant une cuillère en bois ou une spatule de silicone dans une figure-huit mouvement rapide pendant 1–2 minutes. Cette mantecatura est ce qui crée la signature comme onde, la consistance tout 'onda. Le beurre froid émulsifie avec le liquide de cuisson féculent dans une sauce riche et brillante. Servir immédiatement sur des assiettes chaudes (pas chaudes).",
+      "visualCue": {
+        "primaryTarget": "Le risotto se déplace comme une seule vague brillante quand le pot est secoué. Elle s'étend lentement sur une assiette chaude pour former un disque mince et crémeux plutôt que de s'asseoir dans un monticule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Risotto est assis dans un monticule serré sur l'assiette et ne se propage pas. Le beurre n'est pas complètement émulsifié et les piscines sont séparées.",
+            "action": "Mélanger plus vigoureusement et ajouter une petite éclaboussure de bouillon chaud — l'émulsion a besoin d'énergie et d'eau pour se former."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un doux tremblement de la plaque envoie le risotto se déchirer vers l'extérieur dans une vague lente et brillante. La surface est brillante et uniforme. Il s'installe à environ 1,5cm de profondeur.",
+            "action": "Servir dans les deux minutes avant les ensembles d'amidon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Risotto a refroidi trop longtemps et est maintenant épais et collant, se plaçant dans une masse comme il refroidit. L'amidon est gelé.",
+            "action": "Ajouter une petite louche de bouillon chaud et remuer brièvement à feu doux. Servir immédiatement — le risotto n'attend personne."
+          }
+        ]
+      },
+      "feelCue": "Le risotto fini devrait avoir la fluidité du porridge lâche et un brillant comme la pierre polie — quand une cuillère est levée et larguée, il devrait tomber dans des rideaux lents et réticents, pas atterrir avec un thoud."
+    }
+  ]
 };

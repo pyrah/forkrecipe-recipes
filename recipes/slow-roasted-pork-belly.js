@@ -1,111 +1,282 @@
 export default {
-  repoId: "master_chinese_slow_roasted_pork_belly_001",
-  parentRepoId: null,
-  slug: "slow-roasted-pork-belly",
-  author: "ForkRecipe Kitchen",
-  title: "Cantonese Roast Pork Belly",
-  description: "A slab of skin-on pork belly cured with five-spice, roasted low then blasted high, until the skin shatters into crackling and the fat beneath trembles like set custard.",
-  cuisine: "Chinese",
-  culture: "Cantonese",
-  category: "proteins",
-  tags: ["pork-belly", "chinese", "cantonese", "roasted", "crispy-skin", "siu-yuk"],
-  difficulty: 4,
-  activeTime: "30 min",
-  totalTime: "26 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 4, sour: 0, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Skin-on pork belly (2–2.5 kg, even thickness, skin scored)",   ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Spice",     name: "Chinese five-spice powder",                                    ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fine salt (for the flesh side)",                               ratioValue: 2,   defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Coarse salt (for the skin — the desiccant crust)",            ratioValue: 4,   defaultUnit: "parts", substitutions: ["flaky sea salt"] },
-    { ingId: "ing_05", role: "Sweetener", name: "Sugar",                                                        ratioValue: 1,   defaultUnit: "parts", substitutions: ["honey (brush on flesh only)"] },
-    { ingId: "ing_06", role: "Umami",     name: "Soy sauce or fermented red tofu (nam yu)",                     ratioValue: 3,   defaultUnit: "parts", substitutions: ["dark soy sauce"] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Garlic (minced) and ginger (grated)",                          ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Solvent",   name: "Shaoxing rice wine",                                           ratioValue: 3,   defaultUnit: "parts", substitutions: ["dry sherry"] },
-    { ingId: "ing_09", role: "Acid",      name: "White rice vinegar (brushed on skin before roasting)",         ratioValue: 2,   defaultUnit: "parts", substitutions: ["apple cider vinegar"] },
+  "repoId": "master_chinese_slow_roasted_pork_belly_001",
+  "parentRepoId": null,
+  "slug": "slow-roasted-pork-belly",
+  "author": "ForkRecipe Kitchen",
+  "title": "Porc rôti cantonais Belly",
+  "description": "Une dalle de peau sur le ventre de porc guéri avec cinq-pices, torréfié bas puis torréfié haut, jusqu'à ce que la peau se brise en craquelure et la graisse sous tremble comme la crème cuite.",
+  "cuisine": "Chinois",
+  "culture": "Cantonais",
+  "category": "proteins",
+  "tags": [
+    "de porc",
+    "Chinois",
+    "cantonais",
+    "grillés",
+    "peau croustillante",
+    "Siu-yuk"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "30 min",
+  "totalTime": "26 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Cure",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "cured_pork_belly",
-      instructions: "Score the skin in a 1 cm cross-hatch with a sharp knife — cut through the skin but not the fat. Mix five-spice, fine salt, sugar, soy sauce, garlic, ginger, and Shaoxing wine into a paste. Rub this paste aggressively into the flesh side and down into the score lines, keeping the skin side completely dry. Place skin-side up on a wire rack set over a tray. Refrigerate uncovered for at least 12 hours and up to 24 hours. The cold, dry air of the fridge is doing critical work: it desiccates the skin, turning it papery and taut. That dryness is what allows it to blister and shatter rather than turn rubbery under heat.",
-      visualCue: {
-        primaryTarget: "After 12 hours: a slab with deep mahogany flesh beneath the rack and a skin that has turned pale, dry, tight, and matte — almost papery. The score lines are visible and dry.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is still moist and slightly tacky; the cure has not dried the surface. Less than 12 hours elapsed.", action: "Return uncovered to the fridge. Every hour of additional drying makes a real difference to the final crackling." },
-          { state: "Perfect",   description: "Skin is drum-taut, bone-dry, and slightly translucent at the score lines. The flesh side smells spiced and savory, the skin side has no moisture when touched.", action: "The pork is ready to roast. Remove from the fridge 30 minutes before the oven to take the chill off the meat." },
-          { state: "Overdone",  description: "Skin is extremely papery and the score lines have opened widely — this is fine and actually beneficial. The flesh may have dried at the very surface.", action: "Proceed. The flesh side drying slightly is not a problem; the fat layer insulates the interior from overcooking." },
-        ],
-      },
-      feelCue: "Run your fingertip across the skin after the overnight rest: it should feel like dry paper or very thin parchment — no give, no moisture, no stickiness. If it springs back or feels damp at all, it needs more time uncovered in the fridge.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Skin-on porc ventre (2–2,5 kg, même épaisseur, peau marquée)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Roast",
-      inputs: ["cured_pork_belly", "ing_09"],
-      outputState: "slow_roasted_belly",
-      instructions: "Brush the skin with rice vinegar and immediately place in an oven preheated to 150 C / 300 F, skin-side up on the rack over a tray of water (the water catches dripping fat and adds steam, which keeps the meat moist while the skin stays dry above). Roast for 1 hour 30 minutes to 2 hours until the meat is rendered and yielding and the skin has turned translucent and tight. The skin will not look like crackling yet — it will be smooth, glassy, and taut. That is correct.",
-      visualCue: {
-        primaryTarget: "After slow roasting: the skin is uniform, glassy, and pale — like a tightly stretched membrane. The flesh has pulled back slightly from the score lines and the fat beneath is soft and quivering when the tray is shaken.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is still opaque white and the score lines have not opened. The fat beneath is still firm when pressed through the skin.", action: "Continue roasting. The fat needs time to render completely before the blast of high heat." },
-          { state: "Perfect",   description: "Glassy, slightly amber skin, translucent at the scored lines. When you shake the tray, the slab shudders — the fat underneath is fully liquid. Meat pulls apart at the score seams.", action: "Remove from the oven, brush the skin once more with vinegar, and prepare for the high-heat blast." },
-          { state: "Overdone",  description: "Skin has begun to blister and bubble before the high-heat stage — the oven is too hot or the water has evaporated from the drip pan.", action: "Remove immediately and proceed to the blast step. The skin will still finish well; it has just started the puffing process early." },
-        ],
-      },
-      feelCue: "Press the skin with the back of a finger (careful — it is very hot): it should feel firm but hollow underneath, like pressing on an air-inflated pillow rather than dense meat. The fat has liquefied and the skin is detaching from the layer below.",
+      "ingId": "ing_02",
+      "role": "Spice",
+      "name": "Poudre de cinq épices chinoise",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Blast (high heat)",
-      inputs: ["slow_roasted_belly"],
-      outputState: "crackled_pork_belly",
-      instructions: "Increase the oven to maximum — 240–250 C / 460–480 F or grill/broiler setting. Remove the water tray. Position the pork skin-side up, close to the top element. Roast for 20–30 minutes, watching constantly. The skin will erupt into crackling in stages — small blisters appear first, then spread, then merge into a uniform, raised, craggy surface. Rotate the tray if one side is blistering faster than the other. Pull the moment the entire skin has puffed uniformly and turned golden-orange. Any pale, unblistered patch means another 3–5 minutes.",
-      visualCue: {
-        primaryTarget: "A uniform, raised, amber-to-gold crust of thousands of tiny blisters covering the entire skin surface. The slab looks dramatically larger than before the blast — the puffed skin is standing away from the fat beneath. It sounds hollow when knocked.",
-        spectrum: [
-          { state: "Underdone", description: "Patches of smooth, glassy, unblistered skin remain. The crackling looks uneven — some areas puffed, others flat.", action: "Continue at full heat, checking every 3–4 minutes. Rotate the tray to even the heat. Unblistered patches just need more time." },
-          { state: "Perfect",   description: "Every centimetre of skin has puffed into amber crackling. The surface is uniformly craggy, hollow to the knock, and deep golden. The fat beneath is quivering and the score lines have spread open.", action: "Remove from the oven and rest uncovered for 10 minutes before cutting — this stabilises the crackling." },
-          { state: "Overdone",  description: "Areas of the skin have gone very dark brown, hardened, or blackened. The crackling looks scorched rather than puffed.", action: "Cut away the darkest sections. The puffed crackling around them is still excellent; the darkened bits will taste bitter and leathery." },
-        ],
-      },
-      feelCue: "Knock the back of a spoon on the finished crackling: you want a hollow, resonant knock — like tapping a drum. A dull thud means it has not puffed fully; a hollow pop means it is done. Do not touch it with your bare finger immediately from the oven — it will brand you.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin (pour le côté chair)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
     },
     {
-      nodeId: "step_4", action: "Rest",
-      inputs: ["crackled_pork_belly"],
-      outputState: "rested_pork_belly",
-      instructions: "Rest the slab uncovered at room temperature for 10–15 minutes. Resting allows the fat and meat to firm slightly so that cutting does not crush the crackling or smear the fat into a mush. Do not cover — any trapped steam will immediately soften the skin you just worked so hard to achieve.",
-      visualCue: {
-        primaryTarget: "The crackling is still golden and rigid, no signs of softening. When you press it at the edge, it does not yield — the skin is like dry ceramic, not leather.",
-        spectrum: [
-          { state: "Underdone", description: "Rested less than 5 minutes — the fat and meat are still too liquid to slice cleanly, and the crackling is at peak fragility while hot.", action: "Wait. Cutting immediately compresses the crackling rather than splitting it." },
-          { state: "Perfect",   description: "Still warm through, crackling rigid, fat just beginning to firm at the surface. Cuts cleanly with a heavy knife without shattering or tearing.", action: "Slice through the crackling with a firm, confident downward press — do not saw. Each cut yields a shattering crack." },
-          { state: "Overdone",  description: "Rested too long (more than 30 minutes): the fat has set hard and white. The crackling is still intact but the fat is cold and unpleasant.", action: "Reheat briefly in a hot oven (220 C / 430 F, 5 minutes) to re-melt the fat. The crackling will tolerate a short reheat." },
-        ],
-      },
-      feelCue: "Run your knuckle along the crackling surface: it should feel rigid and dry, not flexing or springing. If it flexes even slightly, the skin has started softening from residual steam — serve immediately.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel grossier (pour la peau — la croûte desséchante)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sel de mer flocé"
+      ]
     },
     {
-      nodeId: "step_5", action: "Slice",
-      inputs: ["rested_pork_belly"],
-      outputState: "finished_siu_yuk",
-      instructions: "Place skin-side up. With a large, heavy cleaver or chef's knife, cut into 3–4 cm squares or 1.5 cm slices with decisive, downward strokes — no sawing. The crackling will shatter at each cut, revealing layers: amber-orange crisped skin, a thin white fat cap below, then the meat. Arrange cut-side up on a warm platter to show the layers. Serve with hoisin sauce, sliced scallions, and steamed rice or congee.",
-      visualCue: {
-        primaryTarget: "Cross-sections showing four distinct layers: shattering amber crackling, a 5–10 mm layer of pearlescent, trembling fat, a layer of meat, and another fat layer below. The cut edges of the fat are glossy and quivering.",
-        spectrum: [
-          { state: "Underdone", description: "The fat layers are white and solid rather than translucent and trembling. Meat is tough. The fat did not render fully during the slow roast.", action: "Serve anyway — the crackling is the hero. But for next time, extend the slow roast by 30 minutes." },
-          { state: "Perfect",   description: "The crackling shatters audibly at the knife. The fat beneath is gelatinous, translucent, and jiggles slightly — like set panna cotta. The meat pulls apart in tender strands.", action: "Serve immediately. The crackling begins to soften within 15–20 minutes of cutting, so time the meal to eat directly after slicing." },
-          { state: "Overdone",  description: "The crackling has shattered so completely from over-blasting that slicing it breaks the pieces into fragments. Fat is rendered too far and the cut edge is dry.", action: "Gather the crackling fragments and scatter them over rice as a topping. The meat and fat beneath are still delicious." },
-        ],
-      },
-      feelCue: "Each piece of pork belly should feel substantial but not heavy in your hand — the crackling dry and rigid on top, the fat and meat below still warm and yielding. The moment you bite down, the skin should shatter instantly with no resistance, the fat melt on the tongue, and the meat offer a clean, tender chew.",
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "miel (brosse sur la chair seulement)"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "sauce soja ou tofu rouge fermenté (nam yu)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce de soja foncé"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Ail (minced) et gingembre (gras)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Solvent",
+      "name": "Vin de riz shaoxant",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "vinaigre de riz blanc (brûlé sur la peau avant la torréfaction)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de cidre de pomme"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Cure",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "cured_pork_belly",
+      "instructions": "Découpez la peau dans un hachage croisé de 1 cm avec un couteau tranchant — coupez la peau mais pas la graisse. Mélanger le sel fin, le sucre, la sauce soja, l'ail, le gingembre et le vin Shaoxing dans une pâte. Frottez cette pâte agressivement dans le côté chair et vers le bas dans les lignes de score, gardant le côté peau complètement sec. Placez le côté peau sur un support de fil placé sur un plateau. Réfrigérer à découvert pendant au moins 12 heures et jusqu'à 24 heures. L'air froid et sec du réfrigérateur fait un travail critique : il déshydrate la peau, la transforme en papier et en tat. Cette sécheresse est ce qui lui permet de blister et de briser plutôt que de devenir caoutchouteux sous la chaleur.",
+      "visualCue": {
+        "primaryTarget": "Après 12 heures: une dalle avec une chair acajou profonde sous la grille et une peau qui est devenue pâle, sèche, serrée et mate — presque papier. Les lignes de score sont visibles et sèches.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore humide et légèrement collante; le remède n'a pas séché la surface. Moins de 12 heures se sont écoulées.",
+            "action": "Retour à découvert au frigo. Chaque heure de séchage supplémentaire fait une vraie différence au craquage final."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est drum-taut, désossée et légèrement translucide aux lignes de score. Le côté chair sent épicé et salé, le côté peau n'a pas d'humidité lorsqu'il est touché.",
+            "action": "Le porc est prêt à rôtir. Retirer du réfrigérateur 30 minutes avant le four pour enlever la viande."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau est extrêmement papereuse et les lignes de score ont largement ouvert — c'est bien et vraiment bénéfique. La chair peut avoir séché à la surface même.",
+            "action": "Continuez. Le séchage du côté chair n'est pas un problème; la couche de graisse isole l'intérieur de la cuisson excessive."
+          }
+        ]
+      },
+      "feelCue": "Passez votre bout de doigt sur la peau après le repos de la nuit: il devrait sentir comme du papier sec ou un parchemin très mince — pas de donner, pas d'humidité, pas de collants. S'il ressort ou se sent humide du tout, il faut plus de temps découvert dans le réfrigérateur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rôtis",
+      "inputs": [
+        "cured_pork_belly",
+        "ing_09"
+      ],
+      "outputState": "slow_roasted_belly",
+      "instructions": "Badigeonner la peau avec du vinaigre de riz et placer immédiatement dans un four préchauffé à 150 C / 300 F, côté peau sur le support sur un plateau d'eau (l'eau capte la graisse et ajoute de la vapeur, ce qui maintient la viande humide pendant que la peau reste sèche au-dessus). Faire cuire pendant 1 heure 30 minutes à 2 heures jusqu'à ce que la viande soit rendue et livrée et que la peau soit devenue translucide et serrée. La peau n'aura pas encore l'air de craqueler — elle sera lisse, vitreuse et tendue. C'est exact.",
+      "visualCue": {
+        "primaryTarget": "Après une torréfaction lente: la peau est uniforme, vitreuse et pâle, comme une membrane serrée. La chair s'est légèrement retirée des lignes de score et la graisse inférieure est douce et tremblante lorsque le plateau est secoué.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore blanc opaque et les lignes de score n'ont pas ouvert. La graisse inférieure est encore ferme lorsqu'elle est pressée à travers la peau.",
+            "action": "Continuez à rôtir. La graisse a besoin de temps pour rendre complètement avant l'explosion de chaleur élevée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Peau verreuse, légèrement ambre, translucide aux lignes marquées. Lorsque vous secouez le plateau, la dalle tremble — la graisse en dessous est entièrement liquide. La viande se sépare aux coutures.",
+            "action": "Retirer du four, brosser la peau une fois de plus avec du vinaigre et préparer l'explosion à haute chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau a commencé à blister et à buller avant le stade à haute chaleur — le four est trop chaud ou l'eau s'est évaporée de la cuvette.",
+            "action": "Retirer immédiatement et passer à l'étape de l'explosion. La peau finira toujours bien; elle vient de commencer le processus de bouffage tôt."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la peau avec le dos d'un doigt (attention – il est très chaud): il doit se sentir ferme mais creux en dessous, comme presser sur un oreiller gonflé à l'air plutôt que de la viande dense. La graisse est liquéfiée et la peau se détache de la couche inférieure."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Blast (chaleur élevée)",
+      "inputs": [
+        "slow_roasted_belly"
+      ],
+      "outputState": "crackled_pork_belly",
+      "instructions": "Augmenter le four jusqu'à un maximum de 240–250 C / 460–480 F ou grille/broilleur. Enlevez le bac à eau. Positionner la peau de porc vers le haut, près de l'élément supérieur. Faire cuire pendant 20 à 30 minutes, en regardant constamment. La peau éclatera en craquant par étapes — de petites cloques apparaissent d'abord, puis s'étendent, puis se fusionnent dans une surface uniforme, relevée, frénétique. Rotation du plateau si un côté est blister plus rapidement que l'autre. Tirez le moment où toute la peau a gonflé uniformément et est devenue dorée-orange. Tout dispositif transdermique pâle et non tacheté signifie encore 3 à 5 minutes.",
+      "visualCue": {
+        "primaryTarget": "Une croûte uniforme, relevée, ambre à or de milliers de petites cloques couvrant toute la surface de la peau. La dalle a l'air considérablement plus grande qu'avant l'explosion — la peau gonflée se tient loin de la graisse en dessous. Ça semble creux quand on frappe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il reste des patchs de peau lisse, vitreuse et non blister. Les craquelures semblent inégales — certaines zones gonflées, d'autres plates.",
+            "action": "Continuer à feu plein, vérifier toutes les 3-4 minutes. Rotation du plateau à même la chaleur. Les patchs non brouillés ont juste besoin de plus de temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque centimètre de peau s'est gonflé dans le craquage ambre. La surface est uniformément enroulée, creuse au coup, et en or profond. La graisse en dessous est frémissante et les lignes de score se sont répandues.",
+            "action": "Retirer du four et reposer à découvert pendant 10 minutes avant de couper, ce qui stabilise le craquage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les zones de la peau sont devenues très brun foncé, durcies ou noircies. Le crépitement semble brûlé plutôt que gonflé.",
+            "action": "Coupez les sections les plus sombres. Le craquage gonflé autour d'eux est encore excellent; les morceaux obscurcis auront un goût amer et cuireux."
+          }
+        ]
+      },
+      "feelCue": "Frappez l'arrière d'une cuillère sur le craquage fini: vous voulez un coup creux et résonnant — comme tapoter un tambour. Un thud terne signifie qu'il n'a pas soufflé complètement; un pop creux signifie qu'il est fait. Ne le touchez pas avec votre doigt nu immédiatement du four — il vous marquera."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "crackled_pork_belly"
+      ],
+      "outputState": "rested_pork_belly",
+      "instructions": "Reposez la dalle à la température ambiante pendant 10-15 minutes. Le repos permet à la graisse et à la viande de se raffermir légèrement de sorte que la coupe n'écrase pas le craquage ou frotter la graisse dans une mousse. Ne pas couvrir — toute vapeur piégée va immédiatement adoucir la peau que vous venez de travailler si dur à atteindre.",
+      "visualCue": {
+        "primaryTarget": "Le crépitement est encore doré et rigide, aucun signe d'adoucissement. Lorsque vous appuyez sur le bord, il ne donne pas — la peau est comme de la céramique sèche, pas du cuir.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Reposé moins de 5 minutes — la graisse et la viande sont encore trop liquides pour être tranchés proprement, et le craquage est à la pointe de la fragilité alors qu'il fait chaud.",
+            "action": "Attendez. La coupe compresse immédiatement le craquage plutôt que de le diviser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toujours chaud à travers, crépitant rigide, graisse qui commence juste à raffermir à la surface. Couper proprement avec un couteau lourd sans éclater ni déchirer.",
+            "action": "Slice à travers le craquement avec une presse ferme et confiante vers le bas — ne voient pas. Chaque coupe donne une fissure éclatante."
+          },
+          {
+            "state": "Overdone",
+            "description": "Reposé trop longtemps (plus de 30 minutes): la graisse a mis dur et blanc. Le craquage est toujours intact mais la graisse est froide et désagréable.",
+            "action": "Réchauffer brièvement dans un four chaud (220 C / 430 F, 5 minutes) pour refondre la graisse. Le craquage tolérera un réchauffage court."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre mèche le long de la surface de craquage : elle doit se sentir rigide et sèche, non fléchissante ou jaillissante. Si elle fléchit même légèrement, la peau a commencé à s'adoucir à la vapeur résiduelle — servir immédiatement."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Tranche",
+      "inputs": [
+        "rested_pork_belly"
+      ],
+      "outputState": "finished_siu_yuk",
+      "instructions": "Placez la peau vers le haut. À l'aide d'un grand couteau à clivage ou d'un couteau de chef lourd, coupé en carrés de 3 à 4 cm ou en tranches de 1,5 cm avec des traits décisifs vers le bas, sans sciage. Le craquage se brisera à chaque coupe, révélant des couches: peau ambrée-orange croustillante, un mince bouchon de graisse blanche en dessous, puis la viande. Disposer le côté coupé sur un plateau chaud pour montrer les couches. Servir avec de la sauce hoisine, des oignons verts tranchés et du riz ou des conges.",
+      "visualCue": {
+        "primaryTarget": "Des coupes transversales montrant quatre couches distinctes : un craquage ambré éclatant, une couche de 5 à 10 mm de nacré, de la graisse tremblante, une couche de viande et une autre couche de graisse en dessous. Les bords coupés de la graisse sont brillants et frémissants.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les couches de graisse sont blanches et solides plutôt que translucides et tremblantes. La viande est dure. La graisse n'a pas rendu complètement pendant le rôti lent.",
+            "action": "Servir de toute façon — le crépitement est le héros. Mais pour la prochaine fois, prolonger le rôti lentement de 30 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le craquement éclate audiblement au couteau. La graisse inférieure est gélatineuse, translucide et légèrement jiggle, comme le panna cotta. La viande se sépare en brins tendres.",
+            "action": "Servir immédiatement. Le craquage commence à s'adoucir dans les 15 à 20 minutes suivant la coupe, donc le repas doit être mangé directement après la coupe."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le craquage s'est si complètement effondré qu'il a coupé les morceaux en fragments. La graisse est rendue trop loin et le bord coupé est sec.",
+            "action": "Rassemblez les fragments crépitants et dispersez-les sur le riz comme garniture. La viande et la graisse sont encore délicieuses."
+          }
+        ]
+      },
+      "feelCue": "Chaque morceau du ventre de porc doit se sentir important mais pas lourd dans votre main — le craquelin sec et rigide sur le dessus, la graisse et la viande en dessous encore chaud et donnant. Au moment où vous mordez, la peau doit se briser instantanément sans résistance, la graisse fond sur la langue, et la viande offre une mâche propre et tendre."
+    }
+  ]
 };

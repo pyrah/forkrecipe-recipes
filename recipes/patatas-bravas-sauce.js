@@ -1,97 +1,255 @@
 export default {
-  repoId: "master_spanish_patatas-bravas-sauce_001",
-  parentRepoId: null,
-  slug: "patatas-bravas-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Patatas Bravas Sauce",
-  description: "A bold, paprika-red sauce with the smoky ferocity of dried chilis and the cool, garlic-sharp counterpoint of aioli — each bite of potato arrives in two temperatures, two textures, two temperaments.",
-  cuisine: "Spanish",
-  culture: "Madrid",
-  category: "sauces",
-  tags: ["spicy tomato", "aioli", "spanish", "tapas", "vegetarian"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "35 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 5, sour: 3, bitter: 2, umami: 5, heat: 7 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",        name: "Extra-virgin olive oil", ratioValue: 3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Allium",     name: "Garlic cloves, finely minced", ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Spice",      name: "Sweet smoked paprika (pimentón dulce)", ratioValue: 1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",      name: "Hot smoked paprika (pimentón picante)", ratioValue: 0.5, defaultUnit: "parts", substitutions: ["cayenne, use half the quantity"] },
-    { ingId: "ing_05", role: "Structure",  name: "Crushed canned tomatoes", ratioValue: 8, defaultUnit: "parts", substitutions: ["fresh tomatoes, grated on a box grater"] },
-    { ingId: "ing_06", role: "Acid",       name: "Sherry vinegar", ratioValue: 0.5, defaultUnit: "parts", substitutions: ["red wine vinegar"] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Fine sea salt", ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Sweetener",  name: "Granulated sugar", ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Dairy",      name: "Full-fat mayonnaise (for aioli layer)", ratioValue: 4, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Acid",       name: "Fresh lemon juice", ratioValue: 0.25, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_spanish_patatas-bravas-sauce_001",
+  "parentRepoId": null,
+  "slug": "patatas-bravas-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce de bravas Patatas",
+  "description": "Une sauce rouge- paprika audacieuse avec la férocité fumée du chilis séché et le contrepoint frais à l'ail de l'aioli – chaque bouchée de pomme de terre arrive à deux températures, deux textures, deux tempéraments.",
+  "cuisine": "Espagnol",
+  "culture": "Espagne",
+  "category": "sauces",
+  "tags": [
+    "tomates épicées",
+    "Aïoli",
+    "Espagnol",
+    "Tapas",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "35 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 5,
+    "sour": 3,
+    "bitter": 2,
+    "umami": 5,
+    "heat": 7
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Bloom",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "bloomed_paprika_base",
-      instructions: "Warm the olive oil in a small saucepan over medium-low heat. Add the minced garlic and cook for 60-90 seconds, stirring constantly, until it is fragrant and just starting to turn golden at the edges — not browned. Remove from heat and immediately add both paprikas. Stir vigorously for 30 seconds; the residual heat will bloom the spices without burning them. Burning paprika is irreversible and produces a sharp, acrid bitterness.",
-      visualCue: {
-        primaryTarget: "The oil is stained a deep brick-red, the paprika fully wetted and fragrant. Garlic is gold at the edges but not brown.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is translucent and raw-smelling. Paprika sits in clumps, not fully dispersed in the oil.", action: "Return to low heat for 30 more seconds, stirring constantly." },
-          { state: "Perfect",   description: "Oil is vivid orange-red, uniformly tinted. Smells of sweet smoke, toasted spice, and gentle garlic.", action: "Add the tomatoes immediately to halt cooking." },
-          { state: "Overdone",  description: "Garlic is brown or the paprika smells sharp and acrid. Dark flecks in the oil.", action: "Discard and start over — burnt paprika ruins the entire sauce and cannot be fixed." },
-        ],
-      },
-      feelCue: "Hold your palm over the pan — you should feel warmth but not scorching heat. The spices should hiss gently when they hit the oil, not snap and spit.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Simmer",
-      inputs: ["bloomed_paprika_base", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "bravas_sauce",
-      instructions: "Add the crushed tomatoes, sherry vinegar, salt, and sugar to the saucepan. Stir to combine with the bloomed paprika base. Bring to a gentle simmer over medium heat, then reduce to low. Cook uncovered for 15-20 minutes, stirring occasionally, until the sauce has thickened to a loose paste that mounds slightly on a spoon and no longer tastes raw.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, deep-red sauce that coats the back of a spoon and leaves a clean line when you draw a finger across it.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still thin and watery. Tomatoes taste bright and raw. Surface bubbles actively.", action: "Continue simmering. Stir more frequently to prevent sticking on the bottom." },
-          { state: "Perfect",   description: "Sauce pulls away from the sides of the pan when stirred. Spoon-dragged line holds clean for 3 seconds. Flavor is deep, smoky, and balanced.", action: "Taste and adjust — more vinegar for brightness, sugar to tame acidity. Cool slightly before serving." },
-          { state: "Overdone",  description: "Sauce is very thick and dark, sticking aggressively to the pan. May have a slightly caramelized or bitter edge.", action: "Thin with a splash of water and stir vigorously over low heat to reincorporate." },
-        ],
-      },
-      feelCue: "Drag a wooden spoon across the bottom of the pan — if the sauce closes back slowly over 2-3 seconds, it is ready. A rapid flood means it needs more time.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Gousses d'ail, finement hachées",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Blend",
-      inputs: ["bravas_sauce"],
-      outputState: "smooth_bravas_sauce",
-      instructions: "For a restaurant-smooth sauce, carefully transfer the warm sauce to a blender and blend on high for 60 seconds until completely smooth. Alternatively, use an immersion blender directly in the pan. This is optional — the sauce is excellent either chunky or smooth — but the smooth version clings better to fried potatoes.",
-      visualCue: {
-        primaryTarget: "A uniformly glossy, deeply coloured sauce with no visible tomato seeds or skin fragments.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce has a rough, granular texture. Tomato skin pieces visible.", action: "Blend longer. If using an immersion blender, move it through the whole volume of sauce." },
-          { state: "Perfect",   description: "Sauce runs off the blender in a smooth, shining sheet. Rich, even color throughout.", action: "Return to the pan to reheat gently before serving, or cool and refrigerate." },
-          { state: "Overdone",  description: "Sauce has been over-blended and is now frothy and pale from aeration.", action: "Let it rest for 5 minutes. The foam will settle and the color will deepen again." },
-        ],
-      },
-      feelCue: "Run a finger across the back of a spoon — it should feel completely smooth, like painted lacquer, with no grit or texture.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Paprika fumé doux (pimentón dulce)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Season",
-      inputs: ["ing_09", "ing_10", "ing_02"],
-      outputState: "quick_aioli",
-      instructions: "For the aioli layer: stir the mayonnaise with a small additional minced garlic clove and the fresh lemon juice until smooth. Taste — it should be sharp with garlic, bright with lemon, and creamy. This is a shortcut aioli; for the full version, emulsify from egg yolk. Refrigerate until service.",
-      visualCue: {
-        primaryTarget: "A thick, pale cream with tiny garlic flecks, glossy and smooth throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic and lemon are not fully incorporated. Streaks of plain mayo visible.", action: "Stir more vigorously for another 30 seconds." },
-          { state: "Perfect",   description: "Uniform, ivory-white, sharply garlicky with a bright lemon lift. Holds a soft peak when dragged.", action: "Cover and refrigerate until needed." },
-          { state: "Overdone",  description: "Too much lemon has thinned the mayo to a runny consistency.", action: "Stir in a spoonful of fresh mayo to rebalance the texture." },
-        ],
-      },
-      feelCue: "The aioli should fall from a spoon in a thick, slow ribbon — substantial enough to pool on the sauce without immediately sinking.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Paprika fumé à chaud (pimentón picante)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Cayenne, utilisez la moitié de la quantité"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Structure",
+      "name": "Tomates en conserve concassées",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates fraîches, râpées sur une boîte"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "vinaigre de sherry",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin rouge"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Dairy",
+      "name": "Mayonnaise pleine matière grasse (pour couche d'aioli)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bloom",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "bloomed_paprika_base",
+      "instructions": "Chauffer l'huile d'olive dans une petite casserole à feu moyen-doux. Ajouter l'ail haché et cuire pendant 60-90 secondes, en remuant constamment, jusqu'à ce qu'il soit parfumé et commence juste à tourner doré aux bords — non doré. Retirer du feu et ajouter immédiatement les deux paprikas. Agiter vigoureusement pendant 30 secondes; la chaleur résiduelle fleurira les épices sans les brûler. Le paprika brûlant est irréversible et produit une amertume aiguë.",
+      "visualCue": {
+        "primaryTarget": "L'huile est teinte d'un rouge brique profond, le paprika entièrement mouillé et parfumé. L'ail est doré aux bords, mais pas brun.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est translucide et frais. Paprika est assis dans des touffes, pas complètement dispersé dans l'huile.",
+            "action": "Retourner à feu doux pendant 30 secondes, en remuant constamment."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'huile est rouge-orange vif, uniformément teintée. Des odeurs de fumée douce, d'épices grillées et d'ail doux.",
+            "action": "Ajouter immédiatement les tomates pour arrêter la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est brun ou le paprika sent aiguisé et acride. Des taches sombres dans l'huile.",
+            "action": "Jeter et recommencer — le paprika brûlé détruit toute la sauce et ne peut être réparé."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre paume au - dessus de la poêle — vous devriez sentir la chaleur, mais pas la chaleur brûlante. Les épices doivent siffler doucement quand elles frappent l'huile, et non pas cracher."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "bloomed_paprika_base",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "bravas_sauce",
+      "instructions": "Ajouter les tomates concassées, le vinaigre de sherry, le sel et le sucre dans la casserole. Mélanger avec la base de paprika fleurie. Faire mijoter légèrement à feu moyen, puis réduire à faible. Cuire à découvert pendant 15 à 20 minutes, en remuant de temps en temps, jusqu'à ce que la sauce s'épaississe à une pâte molle qui fond légèrement sur une cuillère et ne goûte plus cru.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse, brillante et rouge foncé qui enveloppe l'arrière d'une cuillère et laisse une ligne propre quand vous tirez un doigt dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore fine et aqueuse. Les tomates ont un goût vif et cru. Des bulles de surface activement.",
+            "action": "Continuez à mijoter. Mélanger plus souvent pour éviter de coller sur le fond."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce s'éloigne des côtés de la poêle lorsqu'elle est remuée. La ligne draguée spoon tient propre pendant 3 secondes. L'arôme est profond, fumé et équilibré.",
+            "action": "Goûtez et ajustez - plus de vinaigre pour la luminosité, le sucre pour apprivoiser l'acidité. Laisser refroidir légèrement avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est très épaisse et sombre, collant agressivement à la poêle. Peut avoir un bord légèrement caramélisé ou amer.",
+            "action": "Arroser d'une éclaboussure d'eau et remuer vigoureusement à feu doux pour réintégrer."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère en bois sur le fond de la casserole — si la sauce se referme lentement sur 2-3 secondes, elle est prête. Une crue rapide nécessite plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "bravas_sauce"
+      ],
+      "outputState": "smooth_bravas_sauce",
+      "instructions": "Pour une sauce au restaurant-smooth, transférez soigneusement la sauce tiède dans un mélangeur et mélangez-la haut pendant 60 secondes jusqu'à ce qu'elle soit complètement lisse. Alternativement, utiliser un mélangeur d'immersion directement dans la casserole. C'est facultatif — la sauce est excellente, soit molle, soit lisse — mais la version lisse s'accroche mieux aux pommes de terre frites.",
+      "visualCue": {
+        "primaryTarget": "Une sauce uniformément brillante, de couleur profonde sans graines de tomate ni fragments de peau visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a une texture rugueuse et granuleuse. Morceaux de peau de tomate visibles.",
+            "action": "Mélanger plus longtemps. Si vous utilisez un mélangeur d'immersion, déplacez-le dans tout le volume de la sauce."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce sort du mélangeur dans une feuille lisse et brillante. Riche, même la couleur partout.",
+            "action": "Retourner dans la poêle pour réchauffer doucement avant de servir, ou refroidir et réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été surchargée et est maintenant mousseuse et pâle de l'aération.",
+            "action": "Laisser reposer 5 minutes. La mousse s'installera et la couleur s'approfondira à nouveau."
+          }
+        ]
+      },
+      "feelCue": "Exécutez un doigt sur l'arrière d'une cuillère — il devrait se sentir complètement lisse, comme la laque peinte, sans grain ni texture."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "ing_09",
+        "ing_10",
+        "ing_02"
+      ],
+      "outputState": "quick_aioli",
+      "instructions": "Pour la couche d'aioli : remuer la mayonnaise avec une petite gousse d'ail hachée et le jus de citron frais jusqu'à ce qu'elle soit lisse. Boucher — il doit être aiguisé avec l'ail, brillant avec le citron, et crémeux. C'est un aioli raccourci; pour la version complète, émulsifier à partir du jaune d'œuf. Réfrigérer jusqu'au service.",
+      "visualCue": {
+        "primaryTarget": "Une crème épaisse et pâle avec de minuscules taches d'ail, brillante et lisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail et le citron ne sont pas entièrement incorporés. Streaks de mayo clair visible.",
+            "action": "Mélanger plus vigoureusement pendant 30 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme, blanc ivoire, fortement ailé avec un lifting citron clair. Prend un pic doux quand traîné.",
+            "action": "Couvrir et réfrigérer jusqu'à ce que nécessaire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de citron a éclairci la mayo à une consistance d'écoulement.",
+            "action": "Incorporer une cuillère de mayo frais pour rééquilibrer la texture."
+          }
+        ]
+      },
+      "feelCue": "L'aioli doit tomber d'une cuillère dans un ruban épais et lent, suffisamment substantiel pour se mettre sur la sauce sans sombrer immédiatement."
+    }
+  ]
 };

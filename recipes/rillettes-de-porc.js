@@ -1,97 +1,222 @@
 export default {
-  repoId: "master_french_rillettes_de_porc_001",
-  parentRepoId: null,
-  slug: "rillettes-de-porc",
-  author: "ForkRecipe Kitchen",
-  title: "Rillettes de Porc",
-  description: "Pork shoulder cooked for hours in its own melting fat until every fiber surrenders, then shredded by hand and packed into crocks with enough fat to preserve it. Spread thickly on cold bread, it is the most honest thing in the French charcuterie tradition.",
-  cuisine: "French",
-  culture: "Tourangeau",
-  category: "proteins",
-  tags: ["french", "pork", "charcuterie", "confit", "spread", "slow-cook", "Loire"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "5 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 4, sour: 0, bitter: 0, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Pork shoulder, skin-on, cut into 5 cm cubes",  ratioValue: 1500, defaultUnit: "g",      substitutions: ["pork belly", "pork cheek"] },
-    { ingId: "ing_02", role: "Fat",       name: "Lard or pork fat",                              ratioValue: 300,  defaultUnit: "g",      substitutions: ["duck fat"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Bouquet garni (bay, thyme, parsley stems)",     ratioValue: 1,    defaultUnit: "bundle", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",     name: "Quatre épices (white pepper, nutmeg, ginger, clove)", ratioValue: 4, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",                                 ratioValue: 18,   defaultUnit: "g",      substitutions: [] },
-    { ingId: "ing_06", role: "Liquid",    name: "Dry white wine",                                ratioValue: 150,  defaultUnit: "ml",     substitutions: ["dry cider"] },
+  "repoId": "master_french_rillettes_de_porc_001",
+  "parentRepoId": null,
+  "slug": "rillettes-de-porc",
+  "author": "ForkRecipe Kitchen",
+  "title": "Rillettes de Porc",
+  "description": "L'épaule de porc cuite pendant des heures dans sa propre graisse de fusion jusqu'à ce que chaque fibre se rende, puis déchiquetée à la main et emballée dans des crevettes avec suffisamment de graisse pour la préserver. Répartir abondamment sur du pain froid, c'est la chose la plus honnête de la tradition charcuterie française.",
+  "cuisine": "Français",
+  "culture": "Tourangeau",
+  "category": "proteins",
+  "tags": [
+    "français",
+    "porc",
+    "charcuterie",
+    "confit",
+    "Étendue",
+    "Cuisson lente",
+    "Loire"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "5 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Season",
-      inputs: ["ing_01", "ing_05", "ing_04"],
-      outputState: "seasoned_pork",
-      instructions: "Toss the pork cubes with the salt and quatre épices in a large bowl, coating every surface. The salt ratio is 12 g per kg of meat — precise seasoning is critical since the rillettes will be eaten cold and unseasoned fat is bland. If time allows, cover and refrigerate overnight to let the cure penetrate. Minimum 2 hours.",
-      visualCue: {
-        primaryTarget: "Each pork cube is coated in a visible seasoning film. The salt will begin drawing moisture to the surface, creating a light brine.",
-        spectrum: [
-          { state: "Underdone", description: "Seasoning is only on the surface and has not been allowed to penetrate. The pork looks dry and spice-dusted.", action: "Allow more resting time — 2 hours minimum, overnight ideal. The salt needs time to migrate inward." },
-          { state: "Perfect",   description: "After at least 2 hours, the surface looks slightly damp from drawn moisture. The spices smell warm and aromatic when the bowl is covered and lifted.", action: "Proceed to slow cooking." },
-          { state: "Overdone",  description: "The salt has been left more than 24 hours and the pork surface looks leathery and very firm.", action: "Rinse lightly, pat dry, and proceed. The meat will still yield in the long cook but may be slightly firmer in texture." },
-        ],
-      },
-      feelCue: "After the resting period, press a cube — it should feel denser and slightly more yielding than fresh pork, as the salt has begun to break down the muscle proteins at the surface.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Epaule de porc, peau coupée en cubes de 5 cm",
+      "ratioValue": 1500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "ventre de porc",
+        "joue de porc"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Braise",
-      inputs: ["seasoned_pork", "ing_02", "ing_03", "ing_06"],
-      outputState: "braised_pork",
-      instructions: "Place the seasoned pork in a heavy cast-iron or enamel pot. Add the lard, bouquet garni, and white wine. The fat should come roughly halfway up the pork. Cook in a 130 C (265 F) oven, uncovered, for 3.5–4.5 hours, turning the pork pieces gently every hour. The liquid will reduce and the fat will become clear. The pot should maintain a very lazy bubble — almost no movement at the surface.",
-      visualCue: {
-        primaryTarget: "The fat is clear, golden, and barely shimmering. The pork pieces look collapsed, deeply browned at the edges, and are beginning to shred when prodded with a fork.",
-        spectrum: [
-          { state: "Underdone", description: "Pork cubes still hold their shape firmly. Pulling with two forks meets resistance. The fat still contains white moisture.", action: "Continue cooking. Under-cooked rillettes will have a coarse, chewy texture. The collagen hasn't converted yet." },
-          { state: "Perfect",   description: "The pork falls apart when a fork is pressed against a cube. The fat is clean and golden. The pan smells deeply of pork and thyme. Any connective tissue has dissolved into the fat.", action: "Remove from oven and begin shredding while still warm." },
-          { state: "Overdone",  description: "Pork has disintegrated completely and the fat is beginning to darken. The edges of the pot are very brown.", action: "Remove immediately. The texture may be slightly mushy but the flavour is fine. Shred and pot as normal." },
-        ],
-      },
-      feelCue: "Reach in with two forks and pull at a cube — it should separate into long fibers with the lightest pressure, like warm pulled cotton. If it resists, it needs more time.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Lard ou graisse de porc",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gras de canard"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["braised_pork"],
-      outputState: "shredded_rillettes",
-      instructions: "Remove the bouquet garni and lift the pork pieces into a large bowl with a slotted spoon, reserving all the cooking fat. While the pork is still warm, use two forks to pull it apart into long, rough fibers — not a fine paste, but coarse shreds where individual fibers are visible. Ladle enough of the warm, strained cooking fat back over the shredded meat to moisten it generously and bind it into a spreadable mass. Taste and adjust salt. It should taste aggressively seasoned.",
-      visualCue: {
-        primaryTarget: "Rough, golden-tinged pork fibers moistened with clear fat. The mixture is cohesive but coarse — pressed into a crock, it shows visible texture, not a smooth paste.",
-        spectrum: [
-          { state: "Underdone", description: "The shreds are too long and the mixture is stringy and loose. It falls apart rather than binding.", action: "Add more warm fat and fold again. The fat is the binder — the mixture should hold its shape when pressed." },
-          { state: "Perfect",   description: "Rough, golden fibers bound in clear fat. Pressed in a spoon, it holds its shape. Individual shreds are visible. Tastes rich, porcine, and well-seasoned.", action: "Pack into sterilized crocks immediately." },
-          { state: "Overdone",  description: "You have over-worked the shreds and produced a smooth, mousse-like paste.", action: "The flavour is unchanged but the traditional coarse texture is lost. It is now something closer to pâté — serve it as such." },
-        ],
-      },
-      feelCue: "Take a large pinch of the mixture and press it between your fingers — it should hold together in a compact plug of fibers, then break apart cleanly when pulled. If it crumbles to dry powder, add more fat.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Bouquet garni (baie, thym, tiges de persil)",
+      "ratioValue": 1,
+      "defaultUnit": "bundle",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Set",
-      inputs: ["shredded_rillettes"],
-      outputState: "finished_rillettes_de_porc",
-      instructions: "Pack the rillettes firmly into sterilized glass crocks or ramekins, pressing down to eliminate air pockets. Pour a thin layer of the remaining strained fat over the top — this is the preserving seal. Allow to cool to room temperature, then refrigerate uncovered until the fat cap has set completely. Once set, the rillettes will keep refrigerated for 2 weeks. Serve at room temperature with crusty bread and cornichons.",
-      visualCue: {
-        primaryTarget: "A pale ivory-gold fat cap has set solid over the top of the crock. No air pockets visible at the sides. The surface is flat and opaque.",
-        spectrum: [
-          { state: "Underdone", description: "Fat cap is still liquid or semi-liquid. The rillettes beneath are not fully set.", action: "Refrigerate longer. The fat cap must be solid to seal out air and prevent oxidation." },
-          { state: "Perfect",   description: "The fat cap is completely opaque and solid. It is pale gold and has contracted slightly from the sides of the crock, creating a clean seal. The rillettes beneath are firm but spreadable.", action: "Seal with a lid and refrigerate. Remove from refrigerator 30 minutes before serving to allow the fat to soften." },
-          { state: "Overdone",  description: "The fat cap has been in the refrigerator so long it has turned very white and waxy.", action: "This is fine — it is still preserving the meat beneath. Scoop it off to serve and discard or incorporate it back into the rillettes." },
-        ],
-      },
-      feelCue: "Press the fat cap gently with a fingertip — it should be solid and unyielding, like cold lard. No give or jiggle. Beneath it, the rillettes should be firm but not rock-hard — you should be able to press a thumb in with moderate effort.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Quatre épices (poivre blanc, muscade, gingembre, girofle)",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 18,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Vin blanc sec",
+      "ratioValue": 150,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "cidre sec"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saison",
+      "inputs": [
+        "ing_01",
+        "ing_05",
+        "ing_04"
+      ],
+      "outputState": "seasoned_pork",
+      "instructions": "Mélanger les cubes de porc avec le sel et le quarte d'épices dans un grand bol, enrobant chaque surface. Le rapport sel est de 12 g par kg de viande — un assaisonnement précis est essentiel car les rillettes seront consommées froidement et les graisses non assaisonnées sont molles. Si le temps le permet, couvrir et réfrigérer pendant la nuit pour laisser pénétrer le remède. Minimum 2 heures.",
+      "visualCue": {
+        "primaryTarget": "Chaque cube de porc est recouvert d'un film d'assaisonnement visible. Le sel commencera à attirer l'humidité à la surface, créant ainsi une saumure légère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'assaisonnement est seulement à la surface et n'a pas été autorisé à pénétrer. Le porc a l'air sec et épicé.",
+            "action": "Laisser plus de temps de repos — 2 heures minimum, idéal pour la nuit. Le sel a besoin de temps pour migrer vers l'intérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après au moins 2 heures, la surface semble légèrement humide par l'humidité tirée. Les épices sentent chaud et aromatique quand le bol est couvert et levé.",
+            "action": "Aller à la cuisson lente."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sel a été laissé plus de 24 heures et la surface de porc semble cuir et très ferme.",
+            "action": "Rincer légèrement, tapoter et poursuivre. La viande continuera à produire dans la longue cuisson, mais peut être légèrement plus ferme dans la texture."
+          }
+        ]
+      },
+      "feelCue": "Après la période de repos, appuyez sur un cube — il doit se sentir plus dense et légèrement plus productif que le porc frais, car le sel a commencé à décomposer les protéines musculaires à la surface."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Brise",
+      "inputs": [
+        "seasoned_pork",
+        "ing_02",
+        "ing_03",
+        "ing_06"
+      ],
+      "outputState": "braised_pork",
+      "instructions": "Placez le porc assaisonné dans un pot de fonte ou d'émail lourd. Ajouter le saindoux, le bouquet garni et le vin blanc. La graisse devrait venir à peu près à la moitié du porc. Cuire dans un four de 130 C (265 F), à découvert, pendant 3,5 à 4,5 heures, en faisant tourner les morceaux de porc doucement toutes les heures. Le liquide sera réduit et la graisse deviendra claire. Le pot devrait maintenir une bulle très paresseuse — presque aucun mouvement à la surface.",
+      "visualCue": {
+        "primaryTarget": "La graisse est claire, dorée et à peine chatoyante. Les morceaux de porc ont l'air effondrés, profondément dorés aux bords, et commencent à déchiqueter lorsqu'ils sont plissés d'une fourchette.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cubes de porc conservent leur forme. Tirer avec deux fourchettes répond à la résistance. La graisse contient encore de l'humidité blanche.",
+            "action": "Continuez à cuisiner. Les rillettes sous-cuites auront une texture grossière et mâcheuse. Le collagène ne s'est pas encore converti."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le porc s'effondre lorsqu'une fourchette est pressée contre un cube. La graisse est propre et dorée. La poêle sent profondément le porc et le thym. Tout tissu conjonctif s'est dissous dans la graisse.",
+            "action": "Retirer du four et commencer à déchiqueter tout en restant chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le porc s'est complètement désintégré et la graisse commence à s'assombrir. Les bords du pot sont très bruns.",
+            "action": "Supprimer immédiatement. La texture peut être légèrement musclée, mais la saveur est fine. Shred et pot comme d'habitude."
+          }
+        ]
+      },
+      "feelCue": "Atteindre avec deux fourchettes et tirer à un cube — il devrait se séparer en fibres longues avec la pression la plus légère, comme le coton tiré chaud. S'il résiste, il lui faut plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "braised_pork"
+      ],
+      "outputState": "shredded_rillettes",
+      "instructions": "Retirer le bouquet garni et lever les morceaux de porc dans un grand bol avec une cuillère à fentes, en réservant toute la graisse de cuisson. Alors que le porc est encore chaud, utilisez deux fourchettes pour le séparer en longues fibres rugueuses — pas une pâte fine, mais des lambeaux grossiers où les fibres individuelles sont visibles. Déposer suffisamment de graisse chaude et tendue sur la viande déchiquetée pour l'humidifier généreusement et la lier à une masse extensible. Goûtez et ajustez le sel. Il devrait avoir un goût assaisonné.",
+      "visualCue": {
+        "primaryTarget": "Fibres de porc rugueuses et dorées humidifiées de graisse claire. Le mélange est cohésif mais grossier — pressé dans une roche, il montre une texture visible, pas une pâte lisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les lambeaux sont trop longs et le mélange est rigide et lâche. Il s'effondre plutôt que de se lier.",
+            "action": "Ajouter plus de gras chaud et plier à nouveau. La graisse est le liant — le mélange doit tenir sa forme lorsqu'il est pressé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Fibres d'or rugueuses attachées à la graisse claire. Pressé dans une cuillère, il tient sa forme. Les morceaux individuels sont visibles. Goûte riche, porcin et bien assaisonné.",
+            "action": "Emballez immédiatement dans des crevettes stérilisées."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez surmené les lambeaux et produit une pâte lisse et mousseuse.",
+            "action": "La saveur est inchangée mais la texture grossière traditionnelle est perdue. C'est maintenant quelque chose de plus proche du pâté, le servir en tant que tel."
+          }
+        ]
+      },
+      "feelCue": "Prenez une grande pincée du mélange et appuyez-le entre vos doigts — il devrait tenir ensemble dans un bouchon compact de fibres, puis se séparer proprement quand tiré. Si elle s'écroule en poudre sèche, ajouter plus de graisse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Jeu",
+      "inputs": [
+        "shredded_rillettes"
+      ],
+      "outputState": "finished_rillettes_de_porc",
+      "instructions": "Emballez les rillettes fermement dans des crevettes ou des ramequins en verre stérilisé, en appuyant vers le bas pour éliminer les poches d'air. Versez une fine couche de la graisse tendue restante sur le dessus — c'est le sceau de préservation. Laisser refroidir jusqu'à température ambiante, puis réfrigérer à découvert jusqu'à ce que le bouchon de graisse soit complètement réglé. Une fois réglées, les rillettes resteront réfrigérées pendant 2 semaines. Servir à température ambiante avec du pain croustillant et des cornichons.",
+      "visualCue": {
+        "primaryTarget": "Une casquette de gras ivoire-or pâle a posé solide sur le dessus de la roche. Pas de poches d'air visibles sur les côtés. La surface est plate et opaque.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouchon est encore liquide ou semi-liquide. Les rillettes ci-dessous ne sont pas entièrement réglées.",
+            "action": "Réfrigérer plus longtemps. Le bouchon de graisse doit être solide pour sceller l'air et empêcher l'oxydation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bouchon est complètement opaque et solide. Il est d'or pâle et s'est légèrement contracté des côtés de la roche, créant ainsi un sceau propre. Les rillettes en dessous sont fermes mais extensibles.",
+            "action": "Sceller avec un couvercle et réfrigérer. Retirer du réfrigérateur 30 minutes avant de servir pour permettre à la graisse de ramollir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouchon de graisse a été au réfrigérateur si longtemps qu'il est devenu très blanc et cireux.",
+            "action": "C'est bien, il conserve encore la viande en dessous. Découpez-le pour servir et jetez-le ou incorporez-le dans les rillettes."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur le bouchon gras avec un bout de doigt — il doit être solide et inébranlable, comme le saindoux froid. Pas de gâchis. En dessous, les rillettes devraient être fermes, mais pas rocailleuses — vous devriez pouvoir appuyer sur un pouce avec un effort modéré."
+    }
+  ]
 };

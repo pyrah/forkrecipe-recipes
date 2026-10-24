@@ -1,92 +1,208 @@
 export default {
-  repoId: "master_lebanese_toum_001",
-  parentRepoId: null,
-  slug: "toum",
-  author: "ForkRecipe Kitchen",
-  title: "Toum",
-  description: "An entire head of garlic emulsified with oil, lemon, and ice water drop by drop into a billowing, bright-white garlic mousse — intensely pungent yet creamy and light, slathered on grilled meats and wraps.",
-  cuisine: "Lebanese",
-  culture: "Lebanese",
-  category: "condiments",
-  tags: ["toum", "lebanese", "garlic", "sauce", "condiment", "vegan", "gluten-free"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 1, sour: 2, bitter: 1, umami: 1, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",      name: "Garlic cloves (peeled, green germ removed)",    ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Neutral oil (sunflower or light vegetable oil)", ratioValue: 100, defaultUnit: "parts", substitutions: ["light olive oil (not extra-virgin, which can turn bitter at speed)"] },
-    { ingId: "ing_03", role: "Citrus",    name: "Fresh lemon juice (strained)",                  ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",    name: "Ice water (very cold, with ice cubes nearby)",  ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine salt",                                     ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_lebanese_toum_001",
+  "parentRepoId": null,
+  "slug": "toum",
+  "author": "ForkRecipe Kitchen",
+  "title": "Total",
+  "description": "Toute une tête d'ail émulsifiée avec de l'huile, du citron et de l'eau glacée goutte à goutte dans une mousse d'ail bouffante et blanc vif – intensément piquante mais crémeuse et légère, enrobée de viandes grillées et d'enveloppes.",
+  "cuisine": "Libanais",
+  "culture": "Libanais",
+  "category": "condiments",
+  "tags": [
+    "Total",
+    "lébanèse",
+    "Ail",
+    "sauce",
+    "condiment",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Prep",
-      inputs: ["ing_01"],
-      outputState: "prepped_garlic",
-      instructions: "Peel all the garlic cloves. Halve each clove lengthwise and use the tip of a paring knife to remove the green germ running through the centre — this is the most important step in making toum that doesn't taste bitter or leave a harsh aftertaste. The germ contains sulfurous compounds that intensify acridly when processed at high speed. Some cooks skip this step; your toum will still emulsify but will taste sharper and more aggressive. Spread the halved cloves on a clean, dry surface.",
-      visualCue: {
-        primaryTarget: "Peeled garlic halves, each with a clean cavity where the germ was removed. The flesh is a clean, ivory-white with no green tinge.",
-        spectrum: [
-          { state: "Underdone", description: "Green germs still in place — visible as a green-yellow shoot inside each halved clove.", action: "Use the knife tip to flick the germ out of the channel. Even partial removal improves the final toum significantly." },
-          { state: "Perfect",   description: "Clean ivory-white garlic halves, germ-free, with a sharp, clean garlic scent — not yet the cooked sweetness, but not acrid either.", action: "Proceed to the mortar or food processor for initial mince." },
-          { state: "Overdone",  description: "You have smashed or bruised the garlic rather than cutting cleanly — the cloves are releasing liquid and sticky enzymes early.", action: "Proceed anyway — the paste will still emulsify; work quickly before the exposed garlic begins to oxidize." },
-        ],
-      },
-      feelCue: "The clove should feel firm and dry, not moist or slippery. Wet garlic has already begun enzymatic browning — dried-out, firm cloves emulsify more successfully than older ones.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Girofles à l'ail (peau, germe vert enlevé)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Mince",
-      inputs: ["prepped_garlic", "ing_05"],
-      outputState: "garlic_paste",
-      instructions: "Place the garlic halves and salt in a food processor. Process for 30 seconds, scraping down the sides every 10 seconds, until the garlic is very finely minced and beginning to form a coarse paste. The salt acts as an abrasive and helps break down the cellular structure before the oil is added. The garlic should look like a fine, wet, slightly sticky mince — not a smooth paste yet, but uniformly broken down. Ensure the bowl and blade are completely dry before this step.",
-      visualCue: {
-        primaryTarget: "A fine, moist, ivory-white garlic mince that clings to the bowl in a thin, even coat rather than collecting as dry pellets. It smells intensely of freshly cut garlic.",
-        spectrum: [
-          { state: "Underdone", description: "Large chunks of garlic remaining — the paste will have an uneven consistency when the oil is added and emulsification will be incomplete.", action: "Continue processing, scraping the bowl frequently, until the mince is completely uniform." },
-          { state: "Perfect",   description: "A fine, sticky, uniform mince that holds together when pressed and pulls away from the bowl cleanly. The aroma is sharp and clean, filling the kitchen.", action: "Begin adding the liquids immediately — do not let the garlic paste sit and oxidize." },
-          { state: "Overdone",  description: "The garlic has turned grey or the paste has become watery from over-processing releasing too much moisture.", action: "Drain any pooled liquid before adding oil, and work as quickly as possible." },
-        ],
-      },
-      feelCue: "Press a small amount between your thumb and fingertip — it should feel like fine, wet sand, just beginning to pack together into a cohesive paste, not slippery or liquid.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile neutre (huile de tournesol ou huile végétale légère)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile d'olive légère (pas extra-vierge, qui peut devenir amère à la vitesse)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Emulsify",
-      inputs: ["garlic_paste", "ing_02", "ing_03", "ing_04"],
-      outputState: "emulsifying_toum",
-      instructions: "With the food processor running, begin adding the oil in an absolutely tiny stream — a thin trickle, not a pour. Alternate between oil and lemon juice every 30 to 45 seconds, adding ice water when the emulsion looks tight or is struggling to absorb more oil. The total process takes 8 to 12 minutes of continuous processing. The garlic's natural alliinase and stabilising compounds form the emulsifying matrix — there is no egg, no mustard. The emulsion is fragile and temperature-sensitive: keep it cold by working quickly and using ice water. If the mixture looks greasy or separated at any point, stop adding oil and process on while adding a tablespoon of ice water.",
-      visualCue: {
-        primaryTarget: "A billowing, pure white, marshmallow-soft mousse that has more than doubled in volume and looks almost like stiffly whipped cream. It is completely opaque and brilliant white.",
-        spectrum: [
-          { state: "Underdone", description: "The mixture looks creamy-beige and slightly loose, more like a thick dressing than a mousse. The garlic has not yet captured enough oil to form a stable foam.", action: "Continue adding oil in a fine trickle, alternating with lemon juice, processing continuously. The transformation from thick paste to mousse happens gradually and then suddenly." },
-          { state: "Perfect",   description: "A stiff, snowy-white, pillowing mousse that barely moves when you tip the processor bowl. It looks impossibly light for something made from raw garlic and oil — the emulsion is fully formed and stable.", action: "Taste for salt and lemon, adjust, then transfer to a jar. Do not over-process further." },
-          { state: "Overdone",  description: "The emulsion has broken — the mousse has collapsed into a greasy, separated, curdled-looking mess with pools of oil visible.", action: "Do not discard: add a tablespoon of ice water and process on high for 30 seconds, then try adding one more tablespoon of ice water. A broken toum can sometimes be rescued by this method. If it refuses to re-emulsify, strain the solids and use the garlic oil for cooking." },
-        ],
-      },
-      feelCue: "Scrape a small amount onto a fingertip — if the emulsion is holding, it should feel cool, airy, and light, like a very thick cream. If it feels oily or heavy, you have added oil too fast and are close to breaking the emulsion.",
+      "ingId": "ing_03",
+      "role": "Citrus",
+      "name": "Jus de citron frais",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Season",
-      inputs: ["emulsifying_toum"],
-      outputState: "finished_toum",
-      instructions: "Taste the toum and adjust with more lemon juice or salt. The garlic bite should be fierce but not acrid — the emulsification process changes the character of the garlic, making it simultaneously more intense in flavour and somehow less sharp on the palate than raw garlic eaten directly. The lemon should be present as a brightness, not a sourness. Transfer to a clean glass jar. The toum keeps in the refrigerator for up to 4 weeks and remains stable — the cold causes it to firm slightly further, to the consistency of soft lard.",
-      visualCue: {
-        primaryTarget: "A jar of bright white, light, airy garlic mousse that holds its shape when spooned and is completely opaque. The surface is smooth and matte.",
-        spectrum: [
-          { state: "Underdone", description: "Tastes harsh and aggressively raw — the garlic is too dominant and the acid hasn't balanced it. The aftertaste burns.", action: "Add more lemon juice a teaspoon at a time, processing briefly after each addition, until the garlic bite becomes more rounded." },
-          { state: "Perfect",   description: "Pungent yet creamy; intensely garlicky but without the harsh raw bite. The lemon is there as a high note. Spread on toasted bread it is revelatory — rich, sharp, and weightless simultaneously.", action: "Refrigerate and use generously: on shawarma, grilled chicken, roasted vegetables, or as a dip." },
-          { state: "Overdone",  description: "Too much lemon has made it taste acidic and thin rather than garlicky and rich. The white colour may have taken on a slightly yellowish tinge from excess acid.", action: "Balance by processing in another teaspoon of neutral oil and a pinch of salt to round out the acidity." },
-        ],
-      },
-      feelCue: "Toum should feel impossibly light for what it is — scoop some on a spoon and it should barely register as weight. It should not feel greasy or coating on the palate, despite being mostly oil. That lightness is the whole point.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Eau glacée (très froide, avec glaçons à proximité)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "prepped_garlic",
+      "instructions": "Peler tous les gousses d'ail. Coupez chaque girofle dans le sens de la longueur et utilisez l'extrémité d'un couteau pour enlever le germe vert qui traverse le centre — c'est l'étape la plus importante pour faire du toum qui ne goûte pas amer ou laisser un arrière-goût dur. Le germe contient des composés sulfureux qui s'intensifient acredly lorsqu'ils sont traités à grande vitesse. Certains cuisiniers sautent cette étape; votre toum sera encore émulsifier, mais aura un goût plus net et plus agressif. Étendre les girofles à moitié sur une surface propre et sèche.",
+      "visualCue": {
+        "primaryTarget": "Des moitiés d'ail pelées, chacune avec une cavité propre où le germe a été enlevé. La chair est propre, blanc ivoire sans teinte verte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Germes verts encore en place — visibles comme une pousse jaune vert à l'intérieur de chaque girofle à moitié.",
+            "action": "Utilisez l'extrémité du couteau pour sortir le germe du canal. Même le retrait partiel améliore significativement le toum final."
+          },
+          {
+            "state": "Perfect",
+            "description": "Nettoyez les moitiés d'ail blanc ivoire, sans germe, avec une odeur d'ail nette et propre — pas encore la douceur cuite, mais pas acride non plus.",
+            "action": "Passer au mortier ou au robot culinaire pour la vis initiale."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez écrasé ou meurtri l'ail plutôt que de couper proprement — les gousses libèrent tôt des enzymes liquides et collantes.",
+            "action": "Procéder de toute façon — la pâte sera encore émulsifier; travailler rapidement avant que l'ail exposé commence à s'oxyder."
+          }
+        ]
+      },
+      "feelCue": "La girofle doit se sentir ferme et sèche, pas humide ou glissante. L'ail humide a déjà commencé à brunir enzymatique — les gousses sèches et fermes émulsifient plus efficacement que les plus anciennes."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mince",
+      "inputs": [
+        "prepped_garlic",
+        "ing_05"
+      ],
+      "outputState": "garlic_paste",
+      "instructions": "Placer les moitiés d'ail et saler dans un robot alimentaire. Procéder pendant 30 secondes, en grattant les côtés toutes les 10 secondes, jusqu'à ce que l'ail soit très finement haché et commence à former une pâte grossière. Le sel agit comme un abrasif et aide à décomposer la structure cellulaire avant l'addition de l'huile. L'ail doit ressembler à une menthe fine, humide, légèrement collante — pas encore une pâte lisse, mais uniformément cassée. Assurez-vous que le bol et la lame sont complètement secs avant cette étape.",
+      "visualCue": {
+        "primaryTarget": "Une fine menthe d'ail blanc d'ivoire, humide, qui s'accroche au bol dans une couche mince et uniforme plutôt que de la collectionner comme granulés secs. Il sent intensément l'ail fraîchement coupé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "De gros morceaux d'ail restant — la pâte aura une consistance inégale lorsque l'huile sera ajoutée et l'émulsion sera incomplète.",
+            "action": "Continuer le traitement, grattant fréquemment le bol, jusqu'à ce que la menthe soit complètement uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une menthe fine, collante et uniforme, qui tient bon lorsqu'elle est pressée et s'éloigne proprement du bol. L'arôme est net et propre, remplissant la cuisine.",
+            "action": "Commencez à ajouter les liquides immédiatement — ne laissez pas la pâte d'ail s'asseoir et s'oxyder."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est devenu gris ou la pâte est devenue aqueuse à cause du surtraitement libérant trop d'humidité.",
+            "action": "Égoutter tout liquide mis en commun avant d'ajouter de l'huile et travailler le plus rapidement possible."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une petite quantité entre votre pouce et le bout des doigts — il devrait se sentir comme du sable fin, humide, juste commencer à se rassembler dans une pâte cohésive, pas glissante ou liquide."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Émulsifier",
+      "inputs": [
+        "garlic_paste",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "emulsifying_toum",
+      "instructions": "Avec le processeur alimentaire en marche, commencez à ajouter l'huile dans un flux absolument minuscule — un filet mince, pas une goutte. Alternez entre l'huile et le jus de citron toutes les 30 à 45 secondes, ajoutant de l'eau glacée lorsque l'émulsion semble serrée ou peine à absorber plus d'huile. Le processus total prend 8 à 12 minutes de traitement continu. L'alliinase naturelle et les composés stabilisants de l'ail forment la matrice émulsifiante — il n'y a pas d'œuf, pas de moutarde. L'émulsion est fragile et sensible à la température : gardez-la froide en travaillant rapidement et en utilisant de l'eau glacée. Si le mélange a l'air gras ou séparé à n'importe quel point, arrêtez d'ajouter de l'huile et de le traiter tout en ajoutant une cuillère à soupe d'eau glacée.",
+      "visualCue": {
+        "primaryTarget": "Une mousse bouffante, blanche pure, molle de guimauve qui a plus que doublé en volume et ressemble presque à de la crème fouettée raide. Il est complètement opaque et blanc brillant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange semble crémeux-beige et légèrement lâche, plus comme un pansement épais qu'une mousse. L'ail n'a pas encore capturé assez d'huile pour former une mousse stable.",
+            "action": "Continuer à ajouter de l'huile dans un fin filet, en alternance avec du jus de citron, en traitement continu. La transformation d'une pâte épaisse en mousse se produit graduellement puis subitement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une mousse d'oreiller raide, blanche-neige, qui bouge à peine quand on pointe le bol du processeur. Il semble incroyablement léger pour quelque chose fait d'ail brut et d'huile — l'émulsion est entièrement formée et stable.",
+            "action": "Goûtez au sel et au citron, ajustez, puis transférez dans un pot. Ne pas trop traiter."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'émulsion s'est brisée — la mousse s'est effondrée dans un gâchis gras, séparé, à l'aspect caillé avec des piscines d'huile visibles.",
+            "action": "Ne pas jeter : ajouter une cuillerée à soupe d'eau glacée et traiter à haute température pendant 30 secondes, puis essayer d'ajouter une cuillerée à soupe d'eau glacée. Un toum cassé peut parfois être sauvé par cette méthode. S'il refuse de réémulsionner, écraser les solides et utiliser l'huile d'ail pour la cuisson."
+          }
+        ]
+      },
+      "feelCue": "Grattez une petite quantité sur un bout de doigt — si l'émulsion tient, elle devrait se sentir fraîche, aérée et légère, comme une crème très épaisse. Si elle se sent grasse ou lourde, vous avez ajouté de l'huile trop vite et êtes près de briser l'émulsion."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "emulsifying_toum"
+      ],
+      "outputState": "finished_toum",
+      "instructions": "Goûtez le toum et ajustez avec plus de jus de citron ou de sel. La morsure d'ail doit être farouche mais non acride — le processus d'émulsion change le caractère de l'ail, le rendant simultanément plus intense en saveur et quelque peu moins aiguisé en bouche que l'ail cru consommé directement. Le citron doit être présent comme une luminosité, pas une ameresse. Transférer dans un pot en verre propre. Le toum se maintient au réfrigérateur jusqu'à 4 semaines et reste stable — le froid le pousse légèrement plus loin, à la consistance du saindoux doux.",
+      "visualCue": {
+        "primaryTarget": "Un pot de mousse d'ail blanc vif, léger et aéré qui tient sa forme lorsqu'il est cuillé et est complètement opaque. La surface est lisse et mate.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Goûte rude et agressivement cru – l'ail est trop dominant et l'acide ne l'a pas équilibré. L'arrière-goût brûle.",
+            "action": "Ajouter plus de jus de citron une cuillère à café à la fois, traiter brièvement après chaque ajout, jusqu'à ce que la bouchée d'ail devienne plus arrondie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Plongée mais crémeuse ; intensément ailée mais sans la bouchée crue dure. Le citron est là comme une note élevée. Étaler sur le pain grillé, il est revealatoire — riche, tranchant et sans poids simultanément.",
+            "action": "Réfrigérer et utiliser généreusement : sur le shawarma, le poulet grillé, les légumes rôtis ou comme trempette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de citron l'a fait goûter acide et mince plutôt qu'ailky et riche. La couleur blanche peut avoir pris une teinte légèrement jaunâtre de l'excès d'acide.",
+            "action": "Équilibrez par transformation dans une autre cuillère à café d'huile neutre et une pincée de sel pour compléter l'acidité."
+          }
+        ]
+      },
+      "feelCue": "Toum doit sentir la lumière impossible pour ce qu'il est — prendre quelques - uns sur une cuillère et il devrait à peine enregistrer comme poids. Il ne doit pas se sentir gras ou enduit en bouche, bien qu'étant principalement huile. Cette légèreté est tout le point."
+    }
+  ]
 };

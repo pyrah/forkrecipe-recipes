@@ -1,67 +1,187 @@
 export default {
-  repoId: "master_thai_thainamjimjaew_001",
-  parentRepoId: null,
-  slug: "thai-nam-jim-jaew",
-  author: "ForkRecipe Kitchen",
-  title: "Thai Nam Jim Jaew",
-  description: "A sticky, dark, intensely flavored Thai dipping sauce for grilled meats — fish sauce and lime juice threaded with tamarind, dried chili, and the decisive crunch of toasted rice powder that thickens it into something between a sauce and a condiment.",
-  cuisine: "Thai",
-  culture: "Isaan",
-  category: "condiments",
-  tags: ["condiment", "vegan", "gluten-free", "thai", "fish-sauce", "lime", "roasted-rice"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 4, sour: 4, bitter: 1, umami: 4, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",     name: "Fish sauce (Tiparos or Megachef)",       ratioValue: 45,  defaultUnit: "ml", substitutions: ["soy sauce + pinch of MSG for vegan"] },
-    { ingId: "ing_02", role: "Acid",      name: "Fresh lime juice",                        ratioValue: 45,  defaultUnit: "ml", substitutions: ["tamarind water for a deeper sour note"] },
-    { ingId: "ing_03", role: "Acid",      name: "Tamarind concentrate",                    ratioValue: 15,  defaultUnit: "ml", substitutions: ["extra lime juice (less complexity)"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Palm sugar or light brown sugar",         ratioValue: 20,  defaultUnit: "g",  substitutions: ["honey added off-heat"] },
-    { ingId: "ing_05", role: "Heat",      name: "Dried Thai chili flakes (prik bon)",      ratioValue: 8,   defaultUnit: "g",  substitutions: ["dried red pepper flakes (less aromatic)"] },
-    { ingId: "ing_06", role: "Starch",    name: "Raw white rice (for toasting)",           ratioValue: 20,  defaultUnit: "g",  substitutions: ["store-bought khao khua (toasted rice powder) — skip step 1"] },
-    { ingId: "ing_07", role: "Allium",    name: "Shallots, finely sliced",                 ratioValue: 30,  defaultUnit: "g",  substitutions: ["red onion, soaked in cold water 5 min to soften harshness"] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh cilantro leaves and tender stems",  ratioValue: 10,  defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_thai_thainamjimjaew_001",
+  "parentRepoId": null,
+  "slug": "thai-nam-jim-jaew",
+  "author": "ForkRecipe Kitchen",
+  "title": "Thaïlande Nam Jim Jaew",
+  "description": "Une sauce thaïlandaise collante, foncée, intensément aromatisée pour les viandes grillées — sauce de poisson et jus de citron vert fileté de tamarin, de chili séché, et la croûte décisive de poudre de riz grillé qui l'épaissit entre une sauce et un condiment.",
+  "cuisine": "Thaï",
+  "culture": "Isaan",
+  "category": "condiments",
+  "tags": [
+    "condiment",
+    "végétalien",
+    "Sans gluten",
+    "Thaï",
+    "poisson-sauce",
+    "Chaux",
+    "Riz rôti"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_06"],
-      outputState: "toasted_rice_powder",
-      instructions: "Place the raw white rice in a dry skillet or wok over medium-low heat. Toast, shaking the pan constantly, for 5–8 minutes until the rice turns an even golden-tan, like light caramel — every grain should be colored. The kitchen will smell of toasted popcorn and nutty warmth. Transfer to a mortar and pound to a coarse powder — not as fine as flour, but without whole grains. This khao khua is the signature element of Isaan cooking: it adds nuttiness, subtle crunch, and acts as a light thickener for the sauce.",
-      visualCue: {
-        primaryTarget: "Golden-tan rice grains, uniformly colored without burnt spots, pounded to a coarse, sandy powder with some larger fragments.",
-        spectrum: [
-          { state: "Underdone", description: "The rice is still white and uncolored with no nutty aroma. It will taste starchy and raw in the sauce.", action: "Continue toasting. The color must develop all the way through — no white centers." },
-          { state: "Perfect",   description: "Uniformly pale golden-brown. Smells nutty and lightly smoky. When pounded, produces a coarse, fragrant powder the color of light sand.", action: "Pound to a coarse powder and set aside." },
-          { state: "Overdone",  description: "Some grains are dark brown and the powder smells of burnt popcorn.", action: "Discard the dark grains before pounding. Or proceed — a few dark grains add a subtle smokiness that some prefer." },
-        ],
-      },
-      feelCue: "Correctly toasted rice feels drier and lighter between the fingers than raw rice — less starchy, more hollow. When pressed between thumb and forefinger it should crumble easily.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "sauce de poisson (Tiparos ou Megachef)",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce soja + pincée de MSG pour végétalien"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["toasted_rice_powder", "ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_07", "ing_08"],
-      outputState: "finished_nam_jim_jaew",
-      instructions: "Dissolve the palm sugar in the fish sauce and lime juice by stirring — if the sugar is in a hard block, grate or shave it first. Add the tamarind concentrate and stir to combine. Add the dried chili flakes, shallot slices, and toasted rice powder. Stir well. Add the cilantro last. Taste and adjust: the sauce should hit salty first, then sour, then sweet, then heat — the four pillars of Isaan seasoning. It should be just thick enough to cling to meat when drizzled, aided by the rice powder. Let it rest 5 minutes before serving so the rice powder absorbs the liquid and the shallots slightly pickle.",
-      visualCue: {
-        primaryTarget: "A dark, mahogany-brown sauce with visible shallot rings, green cilantro, and a slightly sandy texture from the rice powder — pourable but slightly thickened.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is thin as water, the sugar unmelted, and the rice powder floating on top rather than integrated.", action: "Stir vigorously and allow 5 minutes for the rice powder to hydrate and the sugar to dissolve." },
-          { state: "Perfect",   description: "A dark, complex sauce just thickened by the rice powder, with visible shallot, chili, and herb. Smells sour, umami, and aromatic. Coats the back of a spoon lightly.", action: "Serve immediately or within 2 hours. The sauce does not keep well refrigerated as the rice powder continues to thicken it." },
-          { state: "Overdone",  description: "Sat too long — the rice powder has over-absorbed the liquid and the sauce has turned to a thick paste or the herbs have wilted.", action: "Add a few drops of lime juice and fish sauce to loosen. Serve immediately." },
-        ],
-      },
-      feelCue: "The sauce should feel slightly gritty from the rice powder — that sandy texture against the tongue is the authentic signature of Isaan cooking, not a flaw.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau de tamarin pour une note aigre plus profonde"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Concentré de tamarin",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "jus de chaux supplémentaire (moins de complexité)"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre de palme ou sucre brun léger",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "miel ajouté hors-chauffe"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Heat",
+      "name": "Flacons de chili thaïlandais séchés (bon de porc)",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": [
+        "flocons de poivre rouge séché (moins aromatique)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Starch",
+      "name": "Riz blanc cru (pour grillé)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "khoo khua acheté en magasin (gravure de riz en poudre) — saut 1"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Échalotes, coupées finement",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon rouge, trempé dans de l'eau froide 5 min pour adoucir la dureté"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Feuilles de coriandre fraîches et tiges tendres",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_06"
+      ],
+      "outputState": "toasted_rice_powder",
+      "instructions": "Placer le riz blanc cru dans une poêle sèche ou wok à feu moyen-doux. Faire cuire, agiter constamment la poêle, pendant 5 à 8 minutes, jusqu'à ce que le riz tourne un tank d'or, comme du caramel léger, chaque grain doit être coloré. La cuisine sentira le popcorn grillé et la chaleur des noix. Transférer au mortier et à la livre dans une poudre grossière, non pas aussi fine que la farine, mais sans grains entiers. Ce khua khao est l'élément phare de la cuisine Isaan : il ajoute de la noix, une croûte subtile et agit comme un épaississant léger pour la sauce.",
+      "visualCue": {
+        "primaryTarget": "Grains de riz dorés, uniformément colorés sans taches brûlées, piqués à une poudre sablonneuse grossière avec quelques fragments plus grands.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz est encore blanc et décoloré sans arôme de noix. Il aura un goût fébrile et cru dans la sauce.",
+            "action": "Continuez à griller. La couleur doit se développer jusqu'au bout — pas de centres blancs."
+          },
+          {
+            "state": "Perfect",
+            "description": "De couleur dorée uniformément pâle. Ça sent la noix et légèrement fumé. Une fois battu, produit une poudre grossière et parfumée de la couleur du sable léger.",
+            "action": "Pound à une poudre grossière et réserver."
+          },
+          {
+            "state": "Overdone",
+            "description": "Certains grains sont brun foncé et la poudre sent le popcorn brûlé.",
+            "action": "Jeter les grains noirs avant de frapper. Ou continuez — quelques grains foncés ajoutent une subtile fumée que certains préfèrent."
+          }
+        ]
+      },
+      "feelCue": "Le riz grillé est plus sec et plus léger entre les doigts que le riz cru, moins féculent, plus creux. Lorsqu'il est pressé entre le pouce et l'index, il doit s'effondrer facilement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "toasted_rice_powder",
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_nam_jim_jaew",
+      "instructions": "Dissoudre le sucre de palme dans la sauce de poisson et le jus de lime en remuant — si le sucre est dans un bloc dur, griller ou raser d'abord. Ajouter le concentré de tamarin et mélanger. Ajouter les flocons de chili séchés, les tranches d'échalote et la poudre de riz grillé. Bien mélanger. Ajoutez la coriandre en dernier. Goûtez et ajustez : la sauce doit d'abord être salée, puis aigrer, puis sucrée, puis chauffer — les quatre piliers de l'assaisonnement d'Isaan. Il devrait être juste assez épais pour s'accrocher à la viande lorsqu'il est arrosé, aidé par la poudre de riz. Laisser reposer 5 minutes avant de servir afin que la poudre de riz absorbe le liquide et les échalotes légèrement cornichons.",
+      "visualCue": {
+        "primaryTarget": "Une sauce brun acajou foncé avec des anneaux d'échalote visibles, une coriandre verte et une texture légèrement sablonneuse de la poudre de riz — versable mais légèrement épaissie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est mince comme de l'eau, le sucre non fondu, et la poudre de riz flottant sur le dessus plutôt que intégré.",
+            "action": "Incorporer vigoureusement et laisser 5 minutes pour que la poudre de riz s'hydrate et que le sucre se dissout."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce sombre et complexe, juste épaissie par la poudre de riz, avec échalote visible, chili et herbe. Ça sent le aigre, l'umami et l'aromatique. Enrober légèrement l'arrière d'une cuillère.",
+            "action": "Servir immédiatement ou dans les 2 heures. La sauce ne se conserve pas bien au réfrigérateur car la poudre de riz continue de l'épaissir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sat trop longtemps — la poudre de riz a sur-absorbé le liquide et la sauce s'est transformée en pâte épaisse ou les herbes se sont flétries.",
+            "action": "Ajouter quelques gouttes de jus de lime et de sauce de poisson pour se détendre. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "La sauce doit se sentir légèrement râpée de la poudre de riz — cette texture sablonneuse contre la langue est la signature authentique de la cuisson Isaan, pas une faille."
+    }
+  ]
 };

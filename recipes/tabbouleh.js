@@ -1,100 +1,248 @@
 export default {
-  repoId: "master_lebanese_tabbouleh_001",
-  parentRepoId: null,
-  slug: "tabbouleh",
-  author: "ForkRecipe Kitchen",
-  title: "Lebanese Tabbouleh",
-  description: "A salad of the finest-chopped flat-leaf parsley with just enough bulgur to catch the lemon juice and olive oil — bright, herb-forward, and electric with acid, meant to be scooped with torn romaine or little gem leaves.",
-  cuisine: "Lebanese",
-  culture: "Lebanese",
-  category: "grains",
-  tags: ["tabbouleh", "parsley", "bulgur", "lebanese", "salad", "vegan", "summer", "mezze"],
-  difficulty: 1,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 2, sour: 4, bitter: 2, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Flat-leaf parsley, stems discarded",  ratioValue: 4,    defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Starch",     name: "Fine bulgur wheat (No.1 grade)",      ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["coarse bulgur soaked 30 min"] },
-    { ingId: "ing_03", role: "Base",       name: "Ripe tomatoes, very finely diced",    ratioValue: 2,    defaultUnit: "parts", substitutions: ["cherry tomatoes, quartered"] },
-    { ingId: "ing_04", role: "Acid",       name: "Fresh lemon juice",                   ratioValue: 1.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",        name: "Extra-virgin olive oil",              ratioValue: 0.75, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Herb",       name: "Fresh mint leaves, finely chopped",   ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Allium",     name: "Scallion or white onion, very finely sliced", ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Salt",                                ratioValue: 0.04, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",      name: "Black pepper, freshly ground",        ratioValue: 0.01, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_lebanese_tabbouleh_001",
+  "parentRepoId": null,
+  "slug": "tabbouleh",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tabbouleh libanais",
+  "description": "Une salade de persil plat aux feuilles minces avec juste assez de bulgur pour attraper le jus de citron et l'huile d'olive - brillant, herbe-avant, et électrique avec de l'acide, destiné à être écopé avec la romaine déchirée ou de petites feuilles de gemme.",
+  "cuisine": "Libanais",
+  "culture": "Libanais",
+  "category": "grains",
+  "tags": [
+    "Tabouleh",
+    "persil",
+    "bulgur",
+    "lébanèse",
+    "salade",
+    "végétalien",
+    "été",
+    "mezze"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 4,
+    "bitter": 2,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Soak",
-      inputs: ["ing_02", "ing_04"],
-      outputState: "soaked_bulgur",
-      instructions: "Place the fine bulgur in a small bowl. Pour about half the lemon juice directly over it and stir to wet every grain. Fine bulgur rehydrates entirely without heat — the acid in the lemon juice softens it in 15 minutes while simultaneously seasoning it and reducing its raw, starchy edge. Do not add water. Set aside at room temperature while you prepare the herbs and vegetables. After 15 minutes, squeeze the bulgur in your fist to check that it has softened completely. If still gritty, add another splash of lemon and wait 5 more minutes.",
-      visualCue: {
-        primaryTarget: "Plump, lemon-scented bulgur that has absorbed the juice and swollen to nearly twice its dry volume, with a color shift from pale gold to warm amber.",
-        spectrum: [
-          { state: "Underdone", description: "Bulgur still feels gritty and crunchy when pressed. The lemon juice has pooled at the bottom of the bowl rather than being absorbed.", action: "Stir to redistribute the liquid and wait another 5–10 minutes. Add a very small additional splash of lemon if there is none left to absorb." },
-          { state: "Perfect",   description: "Bulgur has swollen and absorbed all the lemon juice. Pressing a handful together it holds its shape briefly then crumbles. It smells of lemon and grain.", action: "The bulgur is ready. Complete the herb preparation and proceed to combine." },
-          { state: "Overdone",  description: "Bulgur is very wet and mushy, having soaked too long or in too much liquid. It is collapsing rather than holding its form.", action: "Squeeze the excess liquid from the bulgur in a clean cloth before combining. In tabbouleh, the bulgur must never dominate — it is a textural accent, not a base." },
-        ],
-      },
-      feelCue: "Properly soaked fine bulgur feels slightly damp and compact when pressed in your palm — it clumps briefly and then crumbles. It should have no crunch whatsoever. If you hear or feel any grit when you press it, it needs more time.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Persil à feuilles plates, tiges éliminées",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Chop",
-      inputs: ["ing_01", "ing_03", "ing_06", "ing_07"],
-      outputState: "chopped_herbs_and_veg",
-      instructions: "This is the defining technique of tabbouleh: the parsley must be chopped by hand, not in a food processor. A food processor bruises the leaves and releases water that will make the salad wet and dark. Take a large bunch of dry, dry parsley (wash and spin-dry thoroughly beforehand). Gather the leaves tightly and use a sharp heavy knife to rock-chop them into the finest possible mince — almost a dust. The goal is a cloud-light herb mass, not a wet paste. Separately, dice the tomatoes very finely (no larger than 5 mm) and salt them in a colander for 5 minutes, then press out as much juice as possible. Finely chop the mint and slice the scallion paper-thin.",
-      visualCue: {
-        primaryTarget: "A mound of vivid green, dry, feather-light chopped parsley. Individual pieces should be tiny — 2–3 mm at most. No wet clumps, no dark bruised patches.",
-        spectrum: [
-          { state: "Underdone", description: "Parsley is in large, roughly torn pieces or coarsely chopped. The texture is leafy and bulky.", action: "Continue chopping. Tabbouleh is a test of knife discipline — the parsley must be fine enough that you can barely see the individual pieces." },
-          { state: "Perfect",   description: "The parsley is a fine, dry, brilliant-green mince. Lifted in your hand it feels almost weightless. There are no wet or dark patches.", action: "Combine with the tomato, mint, and scallion immediately. Do not let the chopped parsley sit — it will oxidize and darken." },
-          { state: "Overdone",  description: "The parsley has been chopped so fine that it is wet and paste-like. A wet, grassy juice is seeping out.", action: "Dry the paste in a clean towel, squeezing gently. In future, stop chopping when the pieces are 2–3 mm and the herb still looks dry and vivid." },
-        ],
-      },
-      feelCue: "Properly chopped tabbouleh parsley should feel like very fine green snow in your hand — dry, airy, and barely heavier than the air around it. When you press a handful together and release it, it should fall apart immediately rather than clinging.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Blé bourdon fin (no 1)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bulgur grossier trempé 30 min"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Toss",
-      inputs: ["soaked_bulgur", "chopped_herbs_and_veg", "ing_04", "ing_05", "ing_08", "ing_09"],
-      outputState: "dressed_tabbouleh",
-      instructions: "Combine the soaked bulgur, finely chopped parsley, drained tomato, mint, and scallion in a large bowl. Pour the remaining lemon juice over everything, followed by the olive oil. Season with salt and freshly ground black pepper. Toss gently but thoroughly with two large spoons or with clean hands. Taste immediately: tabbouleh should be aggressively bright and acidic — the lemon should be the first and last thing you taste. If it tastes flat or dull, it needs more lemon juice and salt. Adjust until the acid makes your mouth water.",
-      visualCue: {
-        primaryTarget: "A vivid, emerald-green salad glistening with lemon juice and olive oil. The bulgur is barely visible within the herb mass — this is correct. The tomato provides small dots of red throughout.",
-        spectrum: [
-          { state: "Underdone", description: "The salad looks dry and the herbs are not evenly coated in dressing. Individual components look separate and unintegrated.", action: "Toss more vigorously and add a bit more lemon juice. The dressing should touch every leaf." },
-          { state: "Perfect",   description: "The tabbouleh glistens with dressing. The parsley is the dominant visual and flavor element — you see green, not bulgur. The smell is bright, citrusy, and herbaceous.", action: "Rest for 10–15 minutes before serving to allow the bulgur to absorb any remaining liquid and the flavors to meld." },
-          { state: "Overdone",  description: "The salad is waterlogged — a pool of green-tinted liquid at the bottom of the bowl. The parsley has wilted and darkened.", action: "Drain the excess liquid by tilting the bowl and spooning it off. Serve immediately. In future, make sure the tomatoes are well-drained before adding." },
-        ],
-      },
-      feelCue: "A properly dressed tabbouleh should taste so brightly acidic that it makes the glands under your jaw tighten with saliva. If you are not wincing slightly at the first taste, add more lemon. Then add a pinch more salt to balance it.",
+      "ingId": "ing_03",
+      "role": "Base",
+      "name": "Tomates ripées, très finement coupées en dés",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates cerises, en quartiers"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Rest",
-      inputs: ["dressed_tabbouleh"],
-      outputState: "finished_tabbouleh",
-      instructions: "Cover and rest the tabbouleh at room temperature for 10–15 minutes before serving. This short rest allows the bulgur to absorb the last of the dressing, the tomatoes to release a final exchange of juice into the salad, and the mint and scallion flavors to integrate with the parsley. Taste once more before serving and adjust acid and salt a final time. Serve piled on a flat plate surrounded by whole romaine or little gem lettuce leaves for scooping. Tabbouleh does not keep well — serve the day it is made.",
-      visualCue: {
-        primaryTarget: "A mound of vivid green, glistening tabbouleh with a uniform coating of dressing and no pooled liquid at the base.",
-        spectrum: [
-          { state: "Underdone", description: "The bulgur still has a faint raw starchiness. The flavors taste separate — you taste parsley, then lemon, then oil as distinct elements rather than a unified whole.", action: "Rest another 5–10 minutes. The rest is not just resting — it is the final stage of the recipe." },
-          { state: "Perfect",   description: "The flavors have melded into a unified whole. The acid, herb, and grain are inseparable. The color is vivid emerald-green and the salad glistens evenly from edge to center.", action: "Serve immediately on a flat platter with lettuce leaves." },
-          { state: "Overdone",  description: "The salad has sat for over an hour. The parsley has darkened and wilted. The tomatoes have continued to release juice and the salad is now quite wet.", action: "Drain, refresh with a little fresh chopped parsley and a squeeze of lemon, and serve at once. Do not refrigerate tabbouleh — cold kills the brightness entirely." },
-        ],
-      },
-      feelCue: "At its best, a leaf scoop of tabbouleh should hit the palate as a burst of cold, electric acid, warm herb, and a faint nuttiness from the bulgur — all in one clean, sharp mouthful. Every bite should make you want another immediately.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 0.75,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Feuilles de menthe fraîches, hachées finement",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Échalote ou oignon blanc, très finement tranché",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 0.04,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Poivre noir, fraîchement moulu",
+      "ratioValue": 0.01,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "soaked_bulgur",
+      "instructions": "Dans un petit bol, déposer le boulgur fin. Verser environ la moitié du jus de citron directement dessus et remuer pour humidifier chaque grain. Le bulgur fin réhydrate entièrement sans chaleur — l'acide dans le jus de citron l'adoucit en 15 minutes tout en l'assaisonnant simultanément et en réduisant son bord cru et féculent. Ne pas ajouter d'eau. Réserver à la température ambiante pendant que vous préparez les herbes et les légumes. Après 15 minutes, pressez le boulgur dans votre poing pour vérifier qu'il s'est adouci complètement. Si encore gritty, ajouter une autre touche de citron et attendre 5 minutes de plus.",
+      "visualCue": {
+        "primaryTarget": "La prune, parfumée au citron, qui a absorbé le jus et gonflé à presque deux fois son volume sec, avec un changement de couleur de l'or pâle à l'ambre chaud.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le Bulgur se sent encore grignoté et croquant lorsqu'il est pressé. Le jus de citron a été mis en commun au fond du bol plutôt que d'être absorbé.",
+            "action": "Mélanger pour redistribuer le liquide et attendre encore 5-10 minutes. Ajouter une petite éclaboussure supplémentaire de citron s'il n'y en a plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bulgur a gonflé et absorbé tout le jus de citron. Presser une poignée ensemble, il tient sa forme brièvement puis s'écroule. Ça sent le citron et le grain.",
+            "action": "Le boulgur est prêt. Terminer la préparation de l'herbe et procéder à la combinaison."
+          },
+          {
+            "state": "Overdone",
+            "description": "Bulgur est très humide et musqué, ayant trempé trop longtemps ou dans trop de liquide. Il s'effondre plutôt que de tenir sa forme.",
+            "action": "Presser l'excès de liquide du boulgur dans un chiffon propre avant de le combiner. Dans le tabouleh, le bulgur ne doit jamais dominer — c'est un accent textural, pas une base."
+          }
+        ]
+      },
+      "feelCue": "Le bulgur fin bien trempé se sent légèrement humide et compact lorsqu'il est pressé dans la paume — il s'accroche brièvement puis s'effondre. Il ne devrait pas y avoir de crise. Si vous entendez ou ressentez du mal quand vous appuyez dessus, il faut plus de temps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Chop",
+      "inputs": [
+        "ing_01",
+        "ing_03",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "chopped_herbs_and_veg",
+      "instructions": "C'est la technique qui définit le tabouleh : le persil doit être haché à la main, et non dans un robot alimentaire. Un robot alimentaire écrase les feuilles et libère de l'eau qui rendra la salade humide et sombre. Prenez un gros bouquet de persil sec et sec (lavez-le et séchez-le bien avant). Rassemblez bien les feuilles et utilisez un couteau lourd tranchant pour les enfoncer dans la plus fine mèche possible — presque une poussière. Le but est une masse d'herbes nuageuses, pas une pâte humide. Séparément, désez les tomates très finement (pas plus de 5 mm) et salez-les dans une calandre pendant 5 minutes, puis pressez autant de jus que possible. Hacher finement la menthe et trancher le papier pétoncle.",
+      "visualCue": {
+        "primaryTarget": "Un monticule de persil haché vif vert, sec, clair plume. Les pièces individuelles devraient être minuscules — de 2 à 3 mm au maximum. Pas d'embouts mouillés, pas de taches sombres.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le persil est en gros morceaux ou grossièrement haché. La texture est feuillue et volumineuse.",
+            "action": "Continuez à couper. Tabbouleh est un test de la discipline des couteaux — le persil doit être assez fin pour que vous puissiez à peine voir les pièces individuelles."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le persil est fin, sec, vert brillant. Levée dans votre main, elle est presque sans poids. Il n'y a pas de taches humides ou sombres.",
+            "action": "Combiner immédiatement avec la tomate, la menthe et le pétoncle. Ne laissez pas le persil haché s'asseoir — il s'oxydera et s'assombrira."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le persil a été haché si fin qu'il est humide et pâteux. Un jus d'herbe humide s'échappe.",
+            "action": "Sécher la pâte dans une serviette propre, en taillant doucement. A l'avenir, arrêtez de couper les morceaux de 2 à 3 mm et l'herbe semble encore sèche et vive."
+          }
+        ]
+      },
+      "feelCue": "Le persil de tabouleh bien haché devrait se sentir comme de la neige verte très fine dans la main — sèche, aérée et à peine plus lourde que l'air qui l'entoure. Lorsque vous appuyez sur une poignée ensemble et le relâchez, il devrait tomber en morceaux immédiatement plutôt que de s'accrocher."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Découpe",
+      "inputs": [
+        "soaked_bulgur",
+        "chopped_herbs_and_veg",
+        "ing_04",
+        "ing_05",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "dressed_tabbouleh",
+      "instructions": "Mélanger le bulgur trempé, le persil finement haché, la tomate drainée, la menthe et l'échon dans un grand bol. Verser le jus de citron restant sur tout, puis l'huile d'olive. Assaisonner de sel et de poivre noir fraîchement moulu. Mélanger doucement mais soigneusement avec deux grandes cuillères ou avec des mains propres. Goûtez immédiatement : le tabouleh doit être agressif et acide, le citron doit être la première et la dernière chose que vous goûtez. Si le goût est plat ou terne, il faut plus de jus de citron et de sel. Ajustez jusqu'à ce que l'acide fasse votre eau buccale.",
+      "visualCue": {
+        "primaryTarget": "Une salade vive et vert émeraude scintille avec du jus de citron et de l'huile d'olive. Le bulgur est à peine visible à l'intérieur de la masse de l'herbe — c'est exact. La tomate fournit de petits points de rouge partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La salade semble sèche et les herbes ne sont pas uniformément enrobées dans la vinaigrette. Les composants individuels semblent séparés et non intégrés.",
+            "action": "Ajouter un peu plus de jus de citron. La vinaigrette doit toucher toutes les feuilles."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le tabouleh brille avec la vinaigrette. Le persil est l'élément visuel et de saveur dominant — vous voyez vert, pas le bulgur. L'odeur est vive, agrumes et herbacée.",
+            "action": "Reposez-vous 10 à 15 minutes avant de servir pour permettre au bulgur d'absorber tout liquide restant et les saveurs à fondre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La salade est bordée d'eau, un bassin de liquide vert au fond du bol. Le persil s'est flétri et obscurci.",
+            "action": "Égoutter l'excès de liquide en inclinant le bol et en le cuillerant. Servir immédiatement. À l'avenir, assurez-vous que les tomates sont bien drainées avant de les ajouter."
+          }
+        ]
+      },
+      "feelCue": "Un tabouleh bien habillé doit avoir un goût tellement acide qu'il rend les glandes sous votre mâchoire serrées par la salive. Si vous ne gagnez pas légèrement au premier goût, ajoutez plus de citron. Puis ajouter une pincée plus de sel pour équilibrer."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "dressed_tabbouleh"
+      ],
+      "outputState": "finished_tabbouleh",
+      "instructions": "Couvrir et reposer le tabouleh à température ambiante pendant 10-15 minutes avant de servir. Ce court repos permet au bulgur d'absorber le dernier de la vinaigrette, aux tomates de libérer un échange final de jus dans la salade, et aux saveurs de menthe et de pétoncle à intégrer au persil. Goûtez encore une fois avant de servir et ajustez l'acide et salez une dernière fois. Servir empilé sur une assiette plate entourée de toute la romaine ou de petites feuilles de laitue gemme pour scooping. Tabbouleh ne se tient pas bien — servez le jour où il est fait.",
+      "visualCue": {
+        "primaryTarget": "Un monticule de tabouleh, vert vif, avec un revêtement uniforme de pansement et sans liquide à la base.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bulgur a encore un faible amidon brut. Les saveurs ont un goût séparé: vous goûtez le persil, puis le citron, puis l'huile comme éléments distincts plutôt qu'un tout unifié.",
+            "action": "Reposez-vous encore 5-10 minutes. Le reste ne se contente pas de se reposer, c'est l'étape finale de la recette."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les saveurs se sont fusionnées en un tout unifié. L'acide, l'herbe et le grain sont inséparables. La couleur est vert émeraude vif et la salade brille uniformément du bord au centre.",
+            "action": "Servir immédiatement sur un plateau plat avec des feuilles de laitue."
+          },
+          {
+            "state": "Overdone",
+            "description": "La salade est assise depuis plus d'une heure. Le persil est obscurci et flétri. Les tomates ont continué à libérer du jus et la salade est maintenant assez humide.",
+            "action": "Égoutter, rafraîchir avec un peu de persil frais haché et une pression de citron, et servir immédiatement. Ne réfrigérez pas le tabouleh — le froid tue entièrement la luminosité."
+          }
+        ]
+      },
+      "feelCue": "À son meilleur, une boule de taboule devrait frapper le palais comme une explosion d'acide froid, électrique, d'herbe chaude, et une légère noisette du bulgur — le tout en une bouche propre et tranchante. Chaque morsure devrait vous faire en vouloir un autre immédiatement."
+    }
+  ]
 };

@@ -1,105 +1,299 @@
 export default {
-  repoId: "master_thai_thaipadthai_001",
-  parentRepoId: null,
-  slug: "thai-pad-thai",
-  author: "ForkRecipe Kitchen",
-  title: "Thai Pad Thai",
-  description: "Wok-charred rice noodles with shrimp, slippery egg, and the sweet-sour punch of tamarind, finished with a heap of bean sprouts and roasted peanuts — every strand tasting of wok hei.",
-  cuisine: "Thai",
-  culture: "Central Thai",
-  category: "seafood",
-  tags: ["seafood", "gluten-free", "thai", "noodle", "shrimp", "tamarind", "wok"],
-  difficulty: 3,
-  activeTime: "25 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 4, sour: 3, bitter: 1, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Dried sen lek rice noodles (3mm wide)", ratioValue: 200,  defaultUnit: "g",   substitutions: ["rice stick noodles"] },
-    { ingId: "ing_02", role: "Protein",   name: "Raw shrimp, peeled and deveined",       ratioValue: 200,  defaultUnit: "g",   substitutions: ["tofu for vegetarian", "chicken"] },
-    { ingId: "ing_03", role: "Binder",    name: "Eggs",                                  ratioValue: 2,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_04", role: "Sweetener", name: "Tamarind paste (from concentrate)",     ratioValue: 40,   defaultUnit: "g",   substitutions: ["3 tbsp lime juice + 1 tbsp brown sugar"] },
-    { ingId: "ing_05", role: "Umami",     name: "Fish sauce",                            ratioValue: 30,   defaultUnit: "ml",  substitutions: ["soy sauce"] },
-    { ingId: "ing_06", role: "Sweetener", name: "Palm sugar or brown sugar",             ratioValue: 25,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Fat",       name: "Vegetable oil or lard",                 ratioValue: 45,   defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_08", role: "Allium",   name: "Garlic cloves, minced",                  ratioValue: 3,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_09", role: "Allium",   name: "Shallots, thinly sliced",                ratioValue: 40,   defaultUnit: "g",   substitutions: ["red onion"] },
-    { ingId: "ing_10", role: "Structure", name: "Bean sprouts",                          ratioValue: 100,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_11", role: "Garnish",  name: "Roasted peanuts, roughly chopped",       ratioValue: 40,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_12", role: "Garnish",  name: "Green onions, cut into 2cm pieces",      ratioValue: 30,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_13", role: "Acid",     name: "Lime wedges",                            ratioValue: 1,    defaultUnit: "lime", substitutions: [] },
-    { ingId: "ing_14", role: "Umami",    name: "Dried shrimp (kung haeng)",              ratioValue: 20,   defaultUnit: "g",   substitutions: ["extra fish sauce"] },
+  "repoId": "master_thai_thaipadthai_001",
+  "parentRepoId": null,
+  "slug": "thai-pad-thai",
+  "author": "ForkRecipe Kitchen",
+  "title": "Thaï Pad Thaï",
+  "description": "Des nouilles de riz charriées de Wok avec des crevettes, des oeufs glissants et le punch de tamarin, ont fini avec un tas de germes de haricots et d'arachides grillées — chaque brin de dégustation de wok hei.",
+  "cuisine": "Thaï",
+  "culture": "Centre thaïlandais",
+  "category": "seafood",
+  "tags": [
+    "Produits de la mer",
+    "Sans gluten",
+    "Thaï",
+    "nouilles",
+    "crevettes",
+    "Tamarin",
+    "wok"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "25 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 4,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01"],
-      outputState: "soaked_noodles",
-      instructions: "Place the dried rice noodles in a large bowl and cover with room-temperature water. Soak for 25–30 minutes until pliable and flexible but still slightly firm — they should bend without snapping but still have a distinct resistance when bitten. Drain well. Do not soak in boiling water: boiling softens the noodles too much before they hit the wok, and they will turn to mush under wok heat.",
-      visualCue: {
-        primaryTarget: "Noodles are pliable and bend easily in a U-shape without cracking, but resist when bent past 90 degrees.",
-        spectrum: [
-          { state: "Underdone", description: "Noodles snap when bent. Still opaque white. 10 more minutes needed.", action: "Continue soaking in room-temperature water." },
-          { state: "Perfect",   description: "Noodles are translucent and flexible but have a firm bite at the center. Drain immediately.", action: "Drain and use within 15 minutes — soaked noodles continue to soften." },
-          { state: "Overdone",  description: "Noodles are fully soft and limp, bending in any direction with no resistance. They will disintegrate in the wok.", action: "Cook them very briefly — 30 seconds maximum in the wok, add sauce quickly to arrest further cooking." },
-        ],
-      },
-      feelCue: "A properly soaked pad thai noodle should feel like a firm leather strap — flexible but with spine, not like a wet ribbon.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Nouilles de riz sen lek séchées (3mm de large)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Nouilles à bâton de riz"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["ing_04", "ing_05", "ing_06"],
-      outputState: "pad_thai_sauce",
-      instructions: "In a small saucepan, combine the tamarind paste, fish sauce, and palm sugar. Heat over medium heat, stirring until the sugar dissolves completely and the sauce is uniform. Taste: it should be a balanced blend of sour, salty, and sweet — adjust with more tamarind for sour, fish sauce for salty, or sugar for sweet. The balance should lean slightly sweet-sour.",
-      visualCue: {
-        primaryTarget: "Dark brown, glossy sauce with no visible sugar crystals. The consistency of a thin, pourable caramel.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar crystals still visible; sauce has two distinct textures.", action: "Continue stirring over low heat until fully dissolved." },
-          { state: "Perfect",   description: "Uniform dark-brown sauce that tastes balanced: sour front, sweet middle, salty finish. Pours like soy sauce.", action: "Set aside at room temperature — it will keep for weeks." },
-          { state: "Overdone",  description: "Sauce has reduced too far and is becoming candy-thick.", action: "Add 1 tbsp of water and stir to loosen." },
-        ],
-      },
-      feelCue: "Dip your finger: the pad thai sauce should hit three notes in sequence — sour, sweet, then a long salty finish. Any one note dominating means the balance is off.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Crevettes crues, pelées et décortiquées",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tofu pour végétarien",
+        "poulet"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sauté",
-      inputs: ["ing_07", "ing_08", "ing_09", "ing_14", "ing_02"],
-      outputState: "cooked_shrimp_aromatics",
-      instructions: "Heat a wok over the highest heat possible until it smokes. Add the oil. When the oil shimmers and wisps of smoke appear, add the garlic and shallots — they should sizzle immediately and vigorously. Stir-fry for 30 seconds. Add the dried shrimp if using, toss 15 seconds. Add the raw shrimp in a single layer. Cook 1 minute without moving, then toss. The shrimp should be nearly cooked through but not quite.",
-      visualCue: {
-        primaryTarget: "Shrimp are pink on the outside, barely translucent at the thickest point. Aromatics are lightly golden and fragrant.",
-        spectrum: [
-          { state: "Underdone", description: "Shrimp are still grey and translucent. Aromatics smell raw.", action: "Cook 30 more seconds over maximum heat." },
-          { state: "Perfect",   description: "Shrimp are 80% pink with a faintly translucent core. Aromatics are golden and the wok smells of wok hei — smoky and savory.", action: "Push to the sides and add the noodles." },
-          { state: "Overdone",  description: "Shrimp have fully curled and gone rubbery before the noodles are added.", action: "Remove and add back at the very end to avoid overcooking further." },
-        ],
-      },
-      feelCue: "The wok should roar with sizzling when the ingredients hit — if it doesn't, the heat is insufficient and the dish will be oily rather than wok-charred.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Oeufs",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Toss",
-      inputs: ["cooked_shrimp_aromatics", "soaked_noodles", "pad_thai_sauce", "ing_03", "ing_10", "ing_11", "ing_12"],
-      outputState: "finished_pad_thai",
-      instructions: "Add the drained noodles to the wok. Pour the pad thai sauce over. Toss constantly for 1–2 minutes. Push everything to one side, crack the eggs into the empty side, and scramble quickly until barely set, then fold into the noodles. Add the bean sprouts and green onions, toss twice, and serve immediately. Garnish with peanuts. Serve with extra fish sauce, chili flakes, sugar, and lime wedges at the table.",
-      visualCue: {
-        primaryTarget: "Noodles are evenly coated in a caramel-brown glaze, with visible pieces of egg, pink shrimp, and flecks of green onion throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Noodles are pale and insufficiently coated in sauce. Egg is still wet and runny.", action: "Toss over maximum heat for 1 more minute — the noodles need direct wok contact to char slightly." },
-          { state: "Perfect",   description: "Noodles are deeply golden-brown with occasional charred edges, sauce is glossy and evenly distributed, egg is in golden ribbons. Smells of wok hei and tamarind.", action: "Plate immediately and add garnishes." },
-          { state: "Overdone",  description: "Noodles are sticking and breaking into short segments; sauce has completely absorbed and the wok is dry and scorching.", action: "Add a splash of water and toss quickly to release. Plate immediately." },
-        ],
-      },
-      feelCue: "The finished pad thai should steam aggressively when plated — the heat, the tamarind, and the wok char all arriving in one cloud of fragrance that is sour, smoky, and deeply savory at once.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Pâte de tamarin (à base de concentré)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "3 c. à soupe de jus de lime + 1 c. à soupe de sucre brun"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Sauce de poisson",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce de soja"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Sucre de palme ou cassonade",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile végétale ou saindoux",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 3,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Allium",
+      "name": "Échalotes, tranchées finement",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon rouge"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Structure",
+      "name": "Choux de haricots",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Cacahuètes grillées, hachées approximativement",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Garnish",
+      "name": "Oignons verts coupés en morceaux de 2 cm",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Acid",
+      "name": "Coins de chaux",
+      "ratioValue": 1,
+      "defaultUnit": "lime",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Umami",
+      "name": "Crevettes séchées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sauce de poisson supplémentaire"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "soaked_noodles",
+      "instructions": "Placer les nouilles de riz séchées dans un grand bol et couvrir d'eau à température ambiante. Tremper de 25 à 30 minutes jusqu'à ce qu'ils soient souples et souples, mais encore légèrement fermes. Drainez bien. Ne trempez pas dans l'eau bouillante : le bouillonnement adoucit trop les nouilles avant qu'elles ne frappent le wok, et elles vont se transformer en bouillir sous la chaleur du wok.",
+      "visualCue": {
+        "primaryTarget": "Les nouilles sont pliables et se plient facilement en U sans craquelure, mais résistent quand elles sont pliées à 90 degrés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les nouilles se cassent quand elles sont pliées. Toujours blanc opaque. Encore 10 minutes.",
+            "action": "Continuer à tremper dans l'eau à température ambiante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les nouilles sont translucides et flexibles, mais ont une bouchée ferme au centre. Égoutter immédiatement.",
+            "action": "Égoutter et utiliser en moins de 15 minutes — les nouilles trempées continuent de ramollir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles sont entièrement molles et molles, se pliant dans n'importe quelle direction sans résistance. Ils vont se désintégrer dans le wok.",
+            "action": "Cuire très brièvement — 30 secondes maximum dans le wok, ajouter la sauce rapidement pour arrêter la cuisson."
+          }
+        ]
+      },
+      "feelCue": "Une nouille thaï bien trempée doit se sentir comme un bracelet en cuir ferme — flexible mais avec la colonne vertébrale, pas comme un ruban mouillé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "pad_thai_sauce",
+      "instructions": "Dans une petite casserole, mélanger la pâte de tamarin, la sauce de poisson et le sucre de palme. Chauffer à feu moyen, en remuant jusqu'à ce que le sucre se dissout complètement et que la sauce soit uniforme. Bouche: Il doit être un mélange équilibré de aigre, salé et sucré — ajuster avec plus de tamarin pour aigre, sauce de poisson pour salé, ou sucre pour sucré. L'équilibre devrait s'appuyer légèrement sur la saveur douce.",
+      "visualCue": {
+        "primaryTarget": "Sauce brun foncé et brillant sans cristaux de sucre visibles. La consistance d'un caramel mince et versable.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Cristaux de sucre encore visibles; la sauce a deux textures distinctes.",
+            "action": "Continuer à remuer à feu doux jusqu'à dissolution complète."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce brun foncé uniforme qui a un goût équilibré : sur le devant, doux au milieu, salé. Il verse comme de la sauce de soja.",
+            "action": "Réserver à la température ambiante — elle se conservera pendant des semaines."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite trop loin et est en train de devenir d'épaisseur de bonbons.",
+            "action": "Ajouter 1 c. à soupe d'eau et remuer pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "Plongez le doigt : la sauce thai doit toucher trois notes en séquence – aigre, doux, puis une longue finale salée. Toute note dominant signifie que l'équilibre est annulé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_14",
+        "ing_02"
+      ],
+      "outputState": "cooked_shrimp_aromatics",
+      "instructions": "Chauffer un wok sur la plus haute chaleur possible jusqu'à ce qu'il fume. Ajouter l'huile. Lorsque l'huile mijote et que les flocons de fumée apparaissent, ajouter l'ail et les échalotes — elles doivent étourdir immédiatement et vigoureusement. Faire frire 30 secondes. Ajouter les crevettes séchées en cas d'utilisation, lancer 15 secondes. Ajouter les crevettes crues en une seule couche. Cuire 1 minute sans bouger, puis lancer. Les crevettes devraient être presque cuites mais pas tout à fait.",
+      "visualCue": {
+        "primaryTarget": "Les crevettes sont roses à l'extérieur, à peine translucides au point le plus épais. L'aromatisme est légèrement doré et parfumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crevette est encore grise et translucide. L'aromatisme sent cru.",
+            "action": "Faire cuire 30 secondes de plus sur la chaleur maximale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les crevettes sont rose à 80% avec un noyau faiblement translucide. L'aromatisme est doré et les odeurs de wok hei — fumé et salé.",
+            "action": "Poussez sur les côtés et ajoutez les nouilles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes ont été entièrement enroulées et caoutchouteuses avant d'ajouter les nouilles.",
+            "action": "Retirer et ajouter à la fin pour éviter de trop cuire."
+          }
+        ]
+      },
+      "feelCue": "Le wok doit rugir avec le grésillement quand les ingrédients frappent — si ce n'est pas, la chaleur est insuffisante et le plat sera huileux plutôt que wok-charred."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Découpe",
+      "inputs": [
+        "cooked_shrimp_aromatics",
+        "soaked_noodles",
+        "pad_thai_sauce",
+        "ing_03",
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "finished_pad_thai",
+      "instructions": "Ajouter les nouilles égouttées au wok. Verser la sauce thai. Jetez constamment pendant 1-2 minutes. Poussez tout d'un côté, fendez les œufs dans le côté vide, et brouillez rapidement jusqu'à ce qu'ils soient à peine fixés, puis repliez-vous dans les nouilles. Ajouter les pousses de haricots et les oignons verts, mélanger deux fois et servir immédiatement. Garnir de cacahuètes. Servir avec de la sauce de poisson, des flocons de chili, du sucre et des quartiers de chaux à table.",
+      "visualCue": {
+        "primaryTarget": "Les nouilles sont également enrobées d'un glaçure brun caramel, avec des morceaux visibles d'œuf, de crevettes roses et des flecks d'oignon vert.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les nouilles sont pâles et insuffisamment enrobées de sauce. L'oeuf est encore humide et arrosé.",
+            "action": "Verser sur la chaleur maximale pendant 1 minute de plus — les nouilles ont besoin d'un contact direct avec le charbon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les nouilles sont profondément dorées avec des bords carbonisés occasionnels, la sauce est brillante et uniformément distribuée, l'oeuf est en rubans dorés. Des odeurs de wok hei et de tamarin.",
+            "action": "Plaquer immédiatement et ajouter les garnitures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles collent et se brisent en segments courts; la sauce est complètement absorbée et le wok est sec et brûlant.",
+            "action": "Ajouter un jet d'eau et jeter rapidement pour libérer. Tout de suite."
+          }
+        ]
+      },
+      "feelCue": "Le tampon fini thai devrait vapeur agressivement quand plaqué — la chaleur, le tamarin, et le wok char arrivent tous dans un nuage de parfum qui est aigre, fumé, et profondément salé à la fois."
+    }
+  ]
 };

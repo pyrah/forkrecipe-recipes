@@ -1,92 +1,209 @@
 export default {
-  repoId: "master_indian_southindianidlibatter_001",
-  parentRepoId: null,
-  slug: "south-indian-idli-batter",
-  author: "ForkRecipe Kitchen",
-  title: "South Indian Idli Batter",
-  description: "Parboiled rice and split black lentils, soaked separately and ground to a silky batter, then left overnight to ferment until airy and slightly sour — the foundation of idli, dosa, and uttapam across South India.",
-  cuisine: "Indian",
-  culture: "Tamil Nadu / Karnataka",
-  category: "fermented",
-  tags: ["fermented", "vegan", "gluten-free", "rice", "lentil", "indian", "idli"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "16 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 2, sour: 3, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Idli rice (parboiled short-grain rice)", ratioValue: 3,   defaultUnit: "parts", substitutions: ["regular parboiled rice", "idli rava (rice semolina)"] },
-    { ingId: "ing_02", role: "Protein",    name: "Urad dal (split black gram, husked)",    ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning",  name: "Non-iodized salt",                       ratioValue: 1.5, defaultUnit: "tsp per cup of batter", substitutions: [] },
-    { ingId: "ing_04", role: "Hydration",  name: "Cold water (for grinding)",              ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Leavener",   name: "Fenugreek seeds (methi)",                ratioValue: 0.25,defaultUnit: "tsp per cup of urad", substitutions: [] },
+  "repoId": "master_indian_southindianidlibatter_001",
+  "parentRepoId": null,
+  "slug": "south-indian-idli-batter",
+  "author": "ForkRecipe Kitchen",
+  "title": "Idli Batter des Indiens du Sud",
+  "description": "Riz par huilé et lentilles noires fractionnées, trempées séparément et broyées à une pâte soyeuse, puis laissées la nuit au ferment jusqu'à ce qu'elles soient aérées et légèrement acides — la fondation de l'idli, dosa et uttapam à travers l'Inde du Sud.",
+  "cuisine": "Indiens",
+  "culture": "Tamil Nadu / Karnataka",
+  "category": "fermented",
+  "tags": [
+    "fermenté",
+    "végétalien",
+    "Sans gluten",
+    "riz",
+    "lentilles",
+    "indienne",
+    "idli"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "16 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Hydrate",
-      inputs: ["ing_01", "ing_02", "ing_05"],
-      outputState: "soaked_grains",
-      instructions: "Rinse the rice 3-4 times until the water runs clear. Rinse the urad dal and fenugreek seeds together 2-3 times. Soak them in separate bowls of cold water for 6-8 hours (or overnight). Keep the bowls in a cool spot — not refrigerated. The soaking water should cover the grains by at least 5cm as they will swell significantly. The fenugreek seeds soak with the urad dal. After soaking, drain each bowl but reserve the urad dal soaking water separately — it contains wild yeasts and bacteria that help fermentation.",
-      visualCue: {
-        primaryTarget: "Plump, swollen grains — rice has turned from translucent to opaque white; urad dal has almost doubled in size and turned very white.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still firm and have barely swelled. Rice is still glassy. Urad dal is not yet doubled.", action: "Soak for at least 2 more hours. The grains must be fully hydrated for smooth grinding." },
-          { state: "Perfect",   description: "Rice has turned opaque and swollen, each grain feeling soft when pressed. Urad dal is plump, white, doubled in volume, and a grain splits easily between fingernails. Fenugreek seeds have swelled slightly.", action: "Drain and grind separately." },
-          { state: "Overdone",  description: "Soaked for 24+ hours — grains smell slightly sour and fermentation has already begun in the water.", action: "Drain immediately and use. Pre-fermented soaking water can be used to aid the main fermentation." },
-        ],
-      },
-      feelCue: "A soaked urad dal grain pressed between fingernails should split cleanly with no resistance — fully soft and yielding throughout.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Riz d'Idli (riz à grains courts décortiqués)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "riz séché régulier",
+        "idli rava (riz semoule)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Blend",
-      inputs: ["soaked_grains", "ing_04"],
-      outputState: "ground_batter",
-      instructions: "Grind the urad dal and fenugreek seeds first in a wet grinder or high-powered blender with the reserved soaking water (or cold water), adding water tablespoon by tablespoon. Grind for 20-30 minutes in a wet grinder (or 5-10 minutes in a high-speed blender) until the batter is completely smooth, extremely fine, and very fluffy — it should have a whipped, airy quality from the air incorporation during grinding. The traditional wet grinder stone generates minimal heat and grinds ultra-fine. Transfer to a large bowl. Then grind the soaked rice with cold water until smooth but slightly grainy — just a bit of texture is desirable in idli rice batter. Combine both batters and mix well.",
-      visualCue: {
-        primaryTarget: "Two combined batters: the urad dal portion is snow-white, fluffy, and airy; the rice portion is cream-colored and slightly grainy. Together they form a smooth, pourable batter.",
-        spectrum: [
-          { state: "Underdone", description: "Urad dal batter is not airy or white — it looks grey and dense. Rice batter has very visible coarse grain. Batter feels gritty and heavy.", action: "Grind for longer. Urad dal must be ground to a very fine, light foam-like consistency. Add water gradually to facilitate grinding." },
-          { state: "Perfect",   description: "Urad dal batter is white, airy, almost fluffy — it falls off the spoon in light dollops. Rice batter is smooth with only a faint texture. Combined batter is uniform, creamy-white, and pourable, not too thick and not watery.", action: "Add salt, stir well, and ferment." },
-          { state: "Overdone",  description: "Batter is very thin and watery from too much water being added during grinding.", action: "The batter will still ferment and work, but the idli will be very flat and slightly rubbery. Use less water next time." },
-        ],
-      },
-      feelCue: "Rub the urad dal batter between your fingers — it should feel silky smooth, with zero graininess. Like the finest foam.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Urad dal (gras noir cassé, décortiqué)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Ferment",
-      inputs: ["ground_batter", "ing_03"],
-      outputState: "fermented_idli_batter",
-      instructions: "Stir the salt into the combined batter thoroughly — salt helps control unwanted bacteria during fermentation. The batter should be of a consistency that falls off a spoon in a thick ribbon. Transfer to a large container (the batter will roughly double in volume during fermentation — the container must be large enough). Cover loosely with a lid or cloth. Leave in a warm place — 28-32°C (82-90°F) is ideal. In Indian summer climates this happens overnight (8-12 hours). In cooler climates it may take 16-24 hours. The oven with only the light on (around 27°C) works well in cool kitchens. Fermentation is complete when the batter has risen significantly, looks fluffy and aerated, has a pleasant sour smell, and tiny bubbles are visible throughout.",
-      visualCue: {
-        primaryTarget: "Risen, aerated batter that has at least doubled in volume with visible bubbles throughout and a slightly domed surface.",
-        spectrum: [
-          { state: "Underdone", description: "Batter has barely risen. No visible bubbles. Still smells like raw grain and salt. The surface is flat and dense.", action: "Move to a warmer location. Fermentation requires warmth — below 24°C it will be very slow or may not start." },
-          { state: "Perfect",   description: "Batter has roughly doubled or more. Surface is domed and aerated. Fine bubbles visible throughout. Smells pleasantly sour and slightly yeasty — like a mild sourdough. The batter is noticeably lighter in texture and pours fluffy.", action: "Stir gently from the bottom and use immediately, or refrigerate for up to 3-4 days." },
-          { state: "Overdone",  description: "Batter smells aggressively alcoholic and very sour. Has risen, peaked, and collapsed. Liquidy on top.", action: "Stir well. The batter is over-fermented but can still make decent idli. Use for dosa (crepes) which are better with sour batter." },
-        ],
-      },
-      feelCue: "Stir the fermented batter from the bottom — it should feel airy and lighter than before fermentation, almost like stirring foam. It should release a faint fizz and a pleasant clean-sour aroma.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel non iodé",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp per cup of batter",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Steam",
-      inputs: ["fermented_idli_batter"],
-      outputState: "finished_idli",
-      instructions: "Grease the idli molds lightly with oil. Gently stir the batter from the bottom without deflating it too much. Ladle batter into each mold, filling about three-quarters full — they will expand during steaming. Steam over vigorously boiling water for 10-12 minutes. Do not lift the lid during steaming. The idli are done when a toothpick inserted in the center comes out clean and the surface is set and slightly dry. Unmold immediately after 2 minutes of cooling by running a wet spoon around each idli. They should pop out cleanly.",
-      visualCue: {
-        primaryTarget: "Perfectly round, white, slightly domed idli with a smooth surface. No sticking to the mold.",
-        spectrum: [
-          { state: "Underdone", description: "Idli are soft and sticky, collapsing when touched. Toothpick comes out wet. Interior is gummy and raw-smelling.", action: "Return to the steamer for 3-5 more minutes with the lid on. Maintain vigorous steam throughout." },
-          { state: "Perfect",   description: "Idli are soft but set — they hold their shape when unmolded and have a smooth, slightly dry surface. Toothpick is clean. Interior is spongy and white with a pleasant mild sour flavor. They release from the mold cleanly.", action: "Serve immediately with sambar and coconut chutney." },
-          { state: "Overdone",  description: "Idli are dry and slightly hard on the surface. Interior is slightly dense.", action: "Cover with a damp cloth immediately. They soften as they rest. Over-steaming typically means over-fermented batter or excessive heat." },
-        ],
-      },
-      feelCue: "A perfect idli should feel soft and yielding but not wet when touched — like a dense cloud. It should spring back very slightly when pressed gently.",
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Eau froide (à broyer)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "Graines de fénugreek (méthies)",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp per cup of urad",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_05"
+      ],
+      "outputState": "soaked_grains",
+      "instructions": "Rincer le riz 3-4 fois jusqu'à ce que l'eau soit claire. Rincer les graines d'urad et de fenugrec ensemble 2-3 fois. Les tremper dans des bols d'eau froide séparés pendant 6-8 heures (ou toute la nuit). Conserver les bols dans un endroit frais — pas réfrigéré. L'eau de trempage devrait couvrir les grains d'au moins 5cm car ils gonfleront significativement. Les graines de fenugrec s'imprégnent de l'urad dal. Après le trempage, égouttez chaque bol mais réservez l'eau de trempage de l'urad dal séparément — il contient des levures sauvages et des bactéries qui aident à la fermentation.",
+      "visualCue": {
+        "primaryTarget": "Graines de pruneaux, gonflées — le riz est passé du translucide au blanc opaque; l'urad dal a presque doublé en taille et est devenu très blanc.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore fermes et ont à peine gonflé. Le riz est encore vitreux. Urad dal n'est pas encore doublé.",
+            "action": "Faire tremper au moins 2 heures de plus. Les grains doivent être entièrement hydratés pour un broyage lisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le riz est devenu opaque et gonflé, chaque grain se sent doux lorsqu'il est pressé. Urad dal est plumé, blanc, doublé en volume, et un grain se divise facilement entre les ongles. Les graines de Fenugreek ont légèrement gonflé.",
+            "action": "Égoutter et broyer séparément."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trempage pendant plus de 24 heures — les grains sentent légèrement acide et la fermentation a déjà commencé dans l'eau.",
+            "action": "Égoutter immédiatement et utiliser. L'eau préfermentée peut être utilisée pour faciliter la fermentation principale."
+          }
+        ]
+      },
+      "feelCue": "Un grain de dal d'urad trempé pressé entre les ongles doit se diviser proprement sans résistance — entièrement mou et donnant partout."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "soaked_grains",
+        "ing_04"
+      ],
+      "outputState": "ground_batter",
+      "instructions": "Mouiller d'abord les graines d'urad dal et de fenugrec dans un broyeur humide ou un mélangeur à haute puissance avec l'eau de trempage réservée (ou l'eau froide), en ajoutant la cuillère à soupe d'eau par la cuillère à soupe. Mouiller de 20 à 30 minutes dans un broyeur humide (ou de 5 à 10 minutes dans un mélangeur à grande vitesse) jusqu'à ce que la pâte soit complètement lisse, extrêmement fine et très moelleuse. La pierre de broyeur humide traditionnelle génère peu de chaleur et broie ultra-fine. Transférer dans un grand bol. Puis moudre le riz trempé avec de l'eau froide jusqu'à ce qu'il soit lisse mais légèrement grainé. Mélanger les deux pâtes et bien mélanger.",
+      "visualCue": {
+        "primaryTarget": "Deux pâtes combinées : la portion de l'urad dal est blanche-neige, molle et aérée; la portion de riz est de couleur crème et légèrement grainée. Ensemble, ils forment une pâte lisse et versable.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte à dal d'Urad n'est ni aérée ni blanche — elle semble grise et dense. La pâte à riz a un grain grossier très visible. Le battement est lourd.",
+            "action": "Grincer plus longtemps. Urad dal doit être moulu à une très fine consistance de mousse légère. Ajouter de l'eau graduellement pour faciliter le broyage."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte à dal d'Urad est blanche, aérée, presque moelleuse, elle tombe de la cuillère dans des poupées légères. La pâte à riz est lisse avec une texture faible. La pâte combinée est uniforme, blanc crémeux et versable, pas trop épaisse et pas aqueuse.",
+            "action": "Ajouter le sel, bien remuer et fermenter."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie est très fine et aqueuse à partir de trop d'eau ajoutée lors du broyage.",
+            "action": "La pâte sera encore fermentée et travaillée, mais l'idli sera très plat et légèrement caoutchouteux. Utilisez moins d'eau la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Frottez la pâte de l'urade entre vos doigts — elle devrait être lisse et soyeuse, sans grain. Comme la meilleure mousse."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ferment",
+      "inputs": [
+        "ground_batter",
+        "ing_03"
+      ],
+      "outputState": "fermented_idli_batter",
+      "instructions": "Incorporer soigneusement le sel dans la pâte combinée — le sel aide à contrôler les bactéries indésirables pendant la fermentation. La pâte doit être d'une consistance qui tombe d'une cuillère dans un ruban épais. Transférer dans un grand contenant (la pâte doublera à peu près en volume pendant la fermentation — le contenant doit être assez grand). Couvrir lâchement avec un couvercle ou un chiffon. Laisser dans un endroit chaud — 28-32°C (82-90°F) est idéal. Dans les climats d'été indiens, cela se produit toute la nuit (8-12 heures). Dans les climats plus froids, cela peut prendre 16-24 heures. Le four avec seulement la lumière allumée (environ 27°C) fonctionne bien dans les cuisines fraîches. La fermentation est complète lorsque la pâte s'est considérablement relevée, qu'elle a l'air molle et aérée, qu'elle a une agréable odeur aigre et que de minuscules bulles sont visibles partout.",
+      "visualCue": {
+        "primaryTarget": "Risen, pâte aérée qui a au moins doublé en volume avec des bulles visibles à travers et une surface légèrement bombée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le battement est à peine levé. Pas de bulles visibles. Ça sent toujours le grain cru et le sel. La surface est plate et dense.",
+            "action": "Déplacez-vous dans un endroit plus chaud. La fermentation nécessite de la chaleur — en dessous de 24°C, elle sera très lente ou peut ne pas commencer."
+          },
+          {
+            "state": "Perfect",
+            "description": "La batterie a pratiquement doublé ou plus. La surface est bombée et aérée. De belles bulles visibles dans l'ensemble. Ça sent agréablement aigre et légèrement leveux, comme un méné doux. La pâte est nettement plus légère dans la texture et verse fluffy.",
+            "action": "Mélanger doucement du fond et utiliser immédiatement, ou réfrigérer jusqu'à 3-4 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Batter sent l'alcool agressif et très aigre. Il est monté, a culminé et s'est effondré. Liquide sur le dessus.",
+            "action": "Bien mélanger. La pâte est surfermentée mais peut encore faire un idli décent. Utiliser pour les dosa (crépes) qui sont mieux avec la pâte aigre."
+          }
+        ]
+      },
+      "feelCue": "Mélanger la pâte fermentée du fond — elle doit se sentir aérée et plus légère qu'avant la fermentation, presque comme de la mousse en remuant. Il devrait libérer un léger fizz et un agréable arôme propre."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "vapeur",
+      "inputs": [
+        "fermented_idli_batter"
+      ],
+      "outputState": "finished_idli",
+      "instructions": "Graisser les moules idli légèrement avec de l'huile. Mélanger doucement la pâte du bas sans la dégonfler trop. La pâte à louche dans chaque moule, en remplissant environ trois quarts de plein — ils vont s'étendre pendant la vapeur. Chauffer vigoureusement sur l'eau bouillante pendant 10-12 minutes. Ne pas soulever le couvercle pendant la vapeur. L'idli est fait quand un cure-dent inséré au centre sort propre et la surface est réglée et légèrement sèche. Démoudre immédiatement après 2 minutes de refroidissement en faisant tourner une cuillère humide autour de chaque idli. Ils devraient sortir proprement.",
+      "visualCue": {
+        "primaryTarget": "Parfaitement rond, blanc, légèrement bombé idli avec une surface lisse. Pas de colle au moule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les Idli sont doux et collants, s'effondrent quand ils sont touchés. Le pick-dent sort mouillé. L'intérieur est gommy et grignotant.",
+            "action": "Retournez au vapeur pendant 3-5 minutes avec le couvercle allumé. Maintenir la vapeur vigoureuse tout au long."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les idli sont mous, mais set, ils tiennent leur forme lorsqu'ils ne sont pas moulés et ont une surface lisse et légèrement sèche. C'est propre. L'intérieur est spongieux et blanc avec une agréable saveur douce aigre. Ils libèrent du moule proprement.",
+            "action": "Servir immédiatement avec du sambar et du chutney à la noix de coco."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les idli sont secs et légèrement durs à la surface. L'intérieur est légèrement dense.",
+            "action": "Couvrir immédiatement d'un chiffon humide. Ils s'adoucissent comme ils se reposent. Le surchauffe signifie généralement une pâte surfermentée ou une chaleur excessive."
+          }
+        ]
+      },
+      "feelCue": "Un idli parfait devrait se sentir doux et productif mais pas mouillé quand il est touché — comme un nuage dense. Il doit revenir très légèrement lorsqu'il est pressé doucement."
+    }
+  ]
 };

@@ -1,110 +1,272 @@
 export default {
-  repoId: "master_french_chocolate_mousse_001",
-  parentRepoId: null,
-  slug: "chocolate-mousse",
-  author: "ForkRecipe Kitchen",
-  title: "Chocolate Mousse",
-  description: "The classic mousse au chocolat — bittersweet chocolate enriched with egg yolks, then lifted by a glossy meringue and softly whipped cream into a cloud that holds a swooped peak yet dissolves the instant it touches the tongue. Dark, deep, and barely sweet.",
-  cuisine: "French",
-  culture: "Parisian",
-  category: "desserts",
-  tags: ["mousse", "chocolate", "french", "egg", "dessert", "no-bake"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "4 hours",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 2, salty: 1, sour: 0, bitter: 3, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Bittersweet chocolate, 64–70% (finely chopped)", ratioValue: 200, defaultUnit: "g", substitutions: ["a blend of 70% and 55% for a rounder finish"] },
-    { ingId: "ing_02", role: "Fat",       name: "Unsalted butter (soft, cubed)", ratioValue: 40, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Binder",    name: "Egg yolks (room temperature)", ratioValue: 80, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Structure", name: "Egg whites (room temperature)", ratioValue: 120, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener", name: "Caster sugar (for the meringue)", ratioValue: 60, defaultUnit: "g", substitutions: ["superfine sugar"] },
-    { ingId: "ing_06", role: "Dairy",     name: "Heavy cream, 35% fat (cold)", ratioValue: 120, defaultUnit: "g", substitutions: ["crème fraîche, softly whipped, for a tangy edge"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine sea salt", ratioValue: 1, defaultUnit: "g", substitutions: ["flaky salt, to finish"] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Pure vanilla extract", ratioValue: 3, defaultUnit: "g", substitutions: ["a splash of dark rum, Cognac, or strong espresso"] },
+  "repoId": "master_french_chocolate_mousse_001",
+  "parentRepoId": null,
+  "slug": "chocolate-mousse",
+  "author": "ForkRecipe Kitchen",
+  "title": "Mousse de chocolat",
+  "description": "La mousse au chocolat classique — chocolat doux amer enrichi de jaunes d'oeufs, puis soulevé par une meringue brillante et crème fouettée doucement dans un nuage qui tient un pic brouillé mais dissout l'instant où il touche la langue. Ténébreux, profond et à peine doux.",
+  "cuisine": "Français",
+  "culture": "Parisien",
+  "category": "desserts",
+  "tags": [
+    "mousse",
+    "chocolat",
+    "français",
+    "œuf",
+    "dessert",
+    "Pas de cuisson"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "4 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 3,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Melt",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "melted_chocolate",
-      instructions: "Set the chopped chocolate and butter in a bowl over a pan of barely steaming water — the bowl should not touch the water. Stir gently and let them melt together into a single, glossy mass. Pull the bowl off the heat the moment the last shards disappear; chocolate scorches and grain the instant it overheats. Let it cool to just warm to the touch, around 40°C, before anything else goes in.",
-      visualCue: {
-        primaryTarget: "A smooth, mirror-glossy chocolate that ribbons off the spatula and falls back into itself without a trace of unmelted fleck.",
-        spectrum: [
-          { state: "Underdone", description: "Tiny solid bits still cling to the spatula and the surface looks dull and granular.", action: "Keep stirring off the heat — residual warmth usually finishes it. Return to the steam only briefly if it stalls." },
-          { state: "Perfect",   description: "Uniformly fluid, deeply shiny, and warm but not hot to a fingertip. It coats the spatula in a thin, even sheet.", action: "Set aside to cool to body temperature before folding in the yolks." },
-          { state: "Overdone",  description: "The chocolate looks thick, matte, and grainy, or has split into a greasy puddle with dark specks — it overheated and seized.", action: "Whisk in a teaspoon of hot water at a time to bring a seized mass back; if scorched and bitter, start over." },
-        ],
-      },
-      feelCue: "Dip a fingertip — it should feel warm, never hot. The kitchen smells of pure cocoa with no acrid, burnt edge.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Chocolat amer doux, 64 à 70 % (finement haché)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "un mélange de 70% et 55% pour un fini plus rond"
+      ]
     },
     {
-      nodeId: "step_2", action: "Temper",
-      inputs: ["melted_chocolate", "ing_03", "ing_08", "ing_07"],
-      outputState: "chocolate_base",
-      instructions: "Whisk the egg yolks, vanilla, and salt together, then whisk them into the warm (not hot) chocolate in one go. The mixture will thicken and pull together into a dense, deeply shiny paste — almost like a soft ganache. Work quickly and confidently; if the chocolate is too hot the yolks will scramble, and if it sits too long it stiffens. You want a base that is supple and pourable, ready to receive air.",
-      visualCue: {
-        primaryTarget: "A thick, satiny, near-black base that falls in a heavy, glossy ribbon and smells intensely of chocolate.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of loose yolk still marble the chocolate and the mixture looks uneven.", action: "Whisk a few seconds more until completely homogeneous, but stop the moment it is uniform." },
-          { state: "Perfect",   description: "A uniform, glossy, supple paste with the sheen of melted satin. It holds a slow ribbon on the surface before sinking in.", action: "Set aside at room temperature while you whip the meringue and cream — do not chill it or it will set too firm to fold." },
-          { state: "Overdone",  description: "The base has stiffened into a dull, claggy mass, or shows tiny scrambled flecks of cooked yolk.", action: "If merely stiff, warm gently over steam to loosen. If the yolks scrambled, strain through a sieve and accept a slightly less rich result." },
-        ],
-      },
-      feelCue: "The whisk meets sudden resistance as the yolks bind the chocolate — that thickening is the sign it has come together. It should taste bittersweet and round, just shy of bitter.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé (doux, cubes)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Whip",
-      inputs: ["ing_04", "ing_05"],
-      outputState: "french_meringue",
-      instructions: "In a spotlessly clean, grease-free bowl, whip the egg whites until frothy, then rain in the caster sugar a spoonful at a time as you beat. Continue to a soft, glossy meringue that holds a peak which curls gently at the tip. Stop short of stiff and dry — an over-beaten meringue turns grainy and refuses to fold in smoothly, leaving white specks through the mousse.",
-      visualCue: {
-        primaryTarget: "A billowy, glossy meringue that holds a soft peak with a tip that bends over on itself like a wave about to break.",
-        spectrum: [
-          { state: "Underdone", description: "The whites are foamy and loose; peaks collapse back into the surface and the sugar feels gritty.", action: "Keep whipping to dissolve the sugar and build structure until soft peaks form." },
-          { state: "Perfect",   description: "Smooth, shiny, and thick, holding a peak that curls gently at the tip. Rubbed between fingers it feels silky, with no sugar grit.", action: "Use immediately — meringue weeps and deflates if it sits." },
-          { state: "Overdone",  description: "The meringue looks dry, cottony, and dull, breaking into clumps rather than a smooth mass.", action: "Whisk in an extra spoonful of un-whipped white to bring it back, or re-whip a fresh white and fold a little in." },
-        ],
-      },
-      feelCue: "Rub a dab between two fingers — no sugar grain should remain. Lift the whisk and the peak should nod over softly rather than stand stiff and pointed.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Jaunes d'œufs (température ambiante)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Whip",
-      inputs: ["ing_06"],
-      outputState: "whipped_cream",
-      instructions: "Whip the cold cream to soft, droopy peaks — barely past pourable, what the French call 'à la chantilly molle'. It should mound but still flow when the bowl is tilted. Stop early; cream that is whipped stiff makes a heavy, buttery mousse and risks turning grainy when folded.",
-      visualCue: {
-        primaryTarget: "Softly thickened cream that leaves a slow-fading trail from the whisk and folds over itself in lazy mounds.",
-        spectrum: [
-          { state: "Underdone", description: "The cream is barely thickened and still pours in a stream.", action: "Whip a few seconds more, watching closely — it firms up fast at this stage." },
-          { state: "Perfect",   description: "Soft, billowy mounds that just hold their shape and droop at the peak. The whisk leaves a soft, slowly closing trail.", action: "Fold in immediately while it is loose and supple." },
-          { state: "Overdone",  description: "The cream is stiff, clumpy, and looks slightly grainy or dull — on the edge of butter.", action: "Whisk in a splash of fresh cold cream to loosen it back to a smooth, soft texture." },
-        ],
-      },
-      feelCue: "The cream should still wobble and flow when you tilt the bowl. Stop the moment it holds a soft shape; another ten seconds and it stiffens.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Blancs d'oeufs (température ambiante)",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Fold",
-      inputs: ["chocolate_base", "french_meringue", "whipped_cream"],
-      outputState: "finished_mousse",
-      instructions: "First whisk a third of the meringue vigorously into the chocolate base to slacken it — this sacrificial third makes the rest fold in without deflating. Then add the remaining meringue and the whipped cream together and fold with a large spatula, cutting down through the center, sweeping along the bowl, and turning over, rotating the bowl as you go. Stop the instant no streaks remain. Spoon into glasses or a serving bowl and chill at least 3 to 4 hours, or overnight, until set but still pillowy.",
-      visualCue: {
-        primaryTarget: "A uniform, airy, mocha-dark mousse with no marbling of white, that mounds softly and holds the swoop of a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Pale streaks and ribbons of meringue and cream still run through the dark base.", action: "Fold a few more gentle strokes — but chase out the last faint streaks rather than over-working it." },
-          { state: "Perfect",   description: "Evenly colored, light, and voluminous, dropping from the spatula in a soft, aerated mound that holds its shape.", action: "Portion immediately and chill to set — handling it longer knocks the air out." },
-          { state: "Overdone",  description: "The mousse looks dense, deflated, and slack, with a soupy, liquid edge — it was over-folded and the air collapsed.", action: "There is no full recovery, but chilling will still firm it; next time fold less and stop at the first uniform color." },
-        ],
-      },
-      feelCue: "Each fold should feel light, the spatula meeting almost no resistance as the mass stays buoyant. Set, a spoonful should give a faint resistance then collapse instantly into silk on the tongue — bittersweet, cool, and clean-finishing.",
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre de castre (pour la meringue)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre superfin"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Crème lourde, 35% de matières grasses (froid)",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "crème fraîche, légèrement fouettée, pour un bord acidulé"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Sel flocé, pour finir"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Extrait de vanille pure",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "un jet de rhum foncé, de cognac ou d'espresso fort"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire fondre",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "melted_chocolate",
+      "instructions": "Mettre le chocolat haché et le beurre dans un bol sur une casserole d'eau à peine bouillante — le bol ne doit pas toucher l'eau. Mélanger doucement et les laisser fondre ensemble en une seule masse brillante. Tirez le bol de la chaleur au moment où les derniers shards disparaissent; le chocolat grince et graine l'instant où il surchauffe. Laisser refroidir pour simplement réchauffer au toucher, autour de 40°C, avant qu'il n'y ait autre chose.",
+      "visualCue": {
+        "primaryTarget": "Un chocolat lisse, brillant et miroir qui rubane la spatule et retombe en lui-même sans trace de flocons non fondus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les petits morceaux solides s'accrochent encore à la spatule et la surface semble terne et granuleuse.",
+            "action": "Continuez à remuer la chaleur — la chaleur résiduelle la finit habituellement. Revenez à la vapeur seulement brièvement si elle s'arrête."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un liquide uniforme, profondément brillant, et chaud mais pas chaud à un bout de doigt. Il enveloppe la spatule d'une mince feuille uniforme.",
+            "action": "Réserver pour refroidir à la température du corps avant de plier dans les jaunes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le chocolat a l'air épais, mat et granuleux, ou s'est divisé en une flaque grasse aux taches foncées, il a surchauffé et saisi.",
+            "action": "fouetter dans une cuillère à café d'eau chaude à la fois pour ramener une masse saisie; si brûlée et amère, recommencer."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt — il devrait se sentir chaud, jamais chaud. La cuisine sent le cacao pur sans acride, sans bord brûlé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Température",
+      "inputs": [
+        "melted_chocolate",
+        "ing_03",
+        "ing_08",
+        "ing_07"
+      ],
+      "outputState": "chocolate_base",
+      "instructions": "fouetter les jaunes d'œufs, la vanille et le sel ensemble, puis les fouetter dans le chocolat chaud (pas chaud) d'un seul coup. Le mélange s'épaissira et se rassemblera dans une pâte dense et profondément brillante, presque comme une ganache douce. Travaillez rapidement et avec confiance; si le chocolat est trop chaud, les jaunes se brouilleront, et s'il reste trop longtemps, il se raidit. Vous voulez une base souple et versable, prête à recevoir de l'air.",
+      "visualCue": {
+        "primaryTarget": "Une base épaisse, satinée et presque noire qui tombe dans un lourd ruban brillant et sent intensément le chocolat.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Streaks de jaune lâche encore marbre le chocolat et le mélange semble inégal.",
+            "action": "fouetter encore quelques secondes jusqu'à ce qu'il soit complètement homogène, mais arrêter le moment où il est uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte uniforme, brillante et souple avec le reflet de satin fondu. Il tient un ruban lent sur la surface avant de sombrer.",
+            "action": "Réserver à température ambiante pendant que vous fouettez la meringue et la crème — ne la refroidissez pas ou elle sera trop ferme pour plier."
+          },
+          {
+            "state": "Overdone",
+            "description": "La base s'est raidie dans une masse épaisse, enlacée, ou montre de minuscules taches brouillées de jaune cuit.",
+            "action": "S'il est simplement raide, chauffer doucement sur la vapeur pour se détendre. Si les jaunes brouillaient, filtrez un tamis et acceptez un résultat légèrement moins riche."
+          }
+        ]
+      },
+      "feelCue": "Le fouet rencontre une résistance soudaine alors que les jaunes lient le chocolat — que l'épaississement est le signe qu'il s'est réuni. Il devrait goûter amer doux et rond, juste timide de l'amertume."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whip",
+      "inputs": [
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "french_meringue",
+      "instructions": "Dans un bol impeccablement propre, sans graisse, fouetter les blancs d'œufs jusqu'à ce qu'ils soient mousseux, puis pleuvoir dans le sucre de castre une cuillère à la fois que vous battez. Continuez jusqu'à une meringue douce et brillante qui tient un pic qui se boucle doucement à l'extrémité. S'arrêter à court de raide et sec — une meringue surbattue devient granuleuse et refuse de se plier en douceur, laissant des taches blanches à travers la mousse.",
+      "visualCue": {
+        "primaryTarget": "Une meringue bouffante et brillante qui tient un pic doux avec une pointe qui se penche sur elle-même comme une vague sur le point de se casser.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les blancs sont mousseux et lâches; les pics s'effondrent à nouveau dans la surface et le sucre est gris.",
+            "action": "Continuez à fouetter pour dissoudre le sucre et construire la structure jusqu'à ce que des pics mous se forment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, brillant et épais, tenant un pic qui se boucle doucement à l'extrémité. Rubbé entre les doigts, il est soyeux, sans grain de sucre.",
+            "action": "Utiliser immédiatement — meringue pleure et dégonfle s'il est assis."
+          },
+          {
+            "state": "Overdone",
+            "description": "La meringue semble sèche, cotonneuse et terne, se cassant en touffes plutôt qu'en masse lisse.",
+            "action": "fouetter dans une cuillère supplémentaire de blanc non fouetté pour le rapporter, ou de nouveau fouetter un blanc frais et plier un peu dedans."
+          }
+        ]
+      },
+      "feelCue": "Frottez un brin entre les deux doigts — aucun grain de sucre ne doit rester. Soulevez le fouet et le pic doit faire un clin d'œil doux plutôt que de rester raide et pointu."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Whip",
+      "inputs": [
+        "ing_06"
+      ],
+      "outputState": "whipped_cream",
+      "instructions": "Frotter la crème froide à des pics mous et drapés — à peine passés versables, ce que les Français appellent 'à la chantilly molle'. Il devrait buter mais coule quand le bol est incliné. Arrêtez-vous tôt; la crème qui est fouettée raide fait une mousse lourde et beurreuse et risque de tourner granuleux quand plié.",
+      "visualCue": {
+        "primaryTarget": "Crème légèrement épaissie qui laisse une trace lente du fouet et se replie sur elle-même dans des monticules paresseux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème est à peine épaissie et coule encore dans un ruisseau.",
+            "action": "Encore quelques secondes, en observant de près — elle se fait rapidement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des monticules moelleux qui tiennent leur forme et s'enfoncent au sommet. Le fouet laisse une piste douce et lentement fermée.",
+            "action": "Plier immédiatement pendant qu'il est lâche et souple."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème est raide, maladroite, et semble légèrement granuleuse ou terne, sur le bord du beurre.",
+            "action": "fouetter dans une éclaboussure de crème fraîche froide pour le desserrer à une texture lisse et douce."
+          }
+        ]
+      },
+      "feelCue": "La crème devrait encore wobble et s'écouler lorsque vous inclinez le bol. Arrêtez le moment où il tient une forme douce; dix secondes de plus et il se raidit."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Plier",
+      "inputs": [
+        "chocolate_base",
+        "french_meringue",
+        "whipped_cream"
+      ],
+      "outputState": "finished_mousse",
+      "instructions": "D'abord fouetter un tiers de la meringue vigoureusement dans la base de chocolat pour la relâcher — ce tiers sacrificiel fait le reste se replier sans dégonfler. Ajoutez ensuite le reste de la meringue et la crème fouettée ensemble et pliez avec une grande spatule, coupant à travers le centre, balayant le bol, et retournant, tournant le bol au fur et à mesure que vous allez. Arrêtez l'instant où il ne reste plus de stries. Déposer dans des verres ou un bol de service et refroidir au moins 3 à 4 heures, ou toute la nuit, jusqu'à ce qu'ils soient fixés mais toujours oreillers.",
+      "visualCue": {
+        "primaryTarget": "Une mousse uniforme, aérée, moka-dark sans marbrure de blanc, qui mue doucement et tient le coup d'une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries pâles et des rubans de meringue et de crème traversent encore la base sombre.",
+            "action": "Plier quelques coups plus doux — mais chasser les dernières petites stries plutôt que de les surmener."
+          },
+          {
+            "state": "Perfect",
+            "description": "De couleur uniforme, léger et volumineux, tombant de la spatule dans un monticule doux et aéré qui tient sa forme.",
+            "action": "Portion immédiatement et refroidir à mettre — la manutention plus longtemps fait tomber l'air."
+          },
+          {
+            "state": "Overdone",
+            "description": "La mousse a l'air dense, dégonflée et molle, avec un bord liquide et soupeux — elle était surpliée et l'air s'est effondré.",
+            "action": "Il n'y a pas de récupération complète, mais le refroidissement le raffermira encore; la prochaine fois plier moins et s'arrêter à la première couleur uniforme."
+          }
+        ]
+      },
+      "feelCue": "Chaque pli devrait sentir la lumière, la spatule ne rencontrant presque aucune résistance car la masse reste flottante. Ensemble, une cuillère devrait donner une faible résistance puis s'effondrer instantanément dans la soie sur la langue — doux amer, frais et finissant propre."
+    }
+  ]
 };

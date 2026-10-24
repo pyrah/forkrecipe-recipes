@@ -1,84 +1,215 @@
 export default {
-  repoId: "master_salvadorian_curtido_001",
-  parentRepoId: null,
-  slug: "curtido",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Curtido",
-  description: "El Salvador's answer to sauerkraut — lightly fermented green cabbage with carrot and oregano, bright with vinegar, with just enough tang and crunch to cut through a pupusa's richness and make every bite taste fresher than the last.",
-  cuisine: "Salvadorian",
-  culture: "Salvadorian",
-  category: "fermented",
-  tags: ["curtido", "salvadorian", "fermented", "cabbage", "vegan", "gluten-free", "condiment", "pupusa"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "24 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 2, sour: 4, bitter: 0, umami: 0, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Green cabbage, cored and finely shredded",           ratioValue: 4,   defaultUnit: "cups (packed)", substitutions: ["napa cabbage"] },
-    { ingId: "ing_02", role: "Structure", name: "Carrot, peeled and julienned or grated",              ratioValue: 1,   defaultUnit: "large", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "White onion, thinly sliced into half-moons",          ratioValue: 0.5, defaultUnit: "medium onion", substitutions: ["red onion"] },
-    { ingId: "ing_04", role: "Acid",      name: "White vinegar (or apple cider vinegar)",              ratioValue: 0.5, defaultUnit: "cup", substitutions: ["rice wine vinegar"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Boiling water",                                       ratioValue: 0.5, defaultUnit: "cup", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt",                                       ratioValue: 1.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_07", role: "Herb",      name: "Dried Mexican oregano",                               ratioValue: 1,   defaultUnit: "tsp", substitutions: ["fresh oregano (doubled amount)"] },
-    { ingId: "ing_08", role: "Spice",     name: "Red pepper flakes or dried chile de árbol, crumbled", ratioValue: 0.5, defaultUnit: "tsp", substitutions: ["fresh serrano, minced"] },
+  "repoId": "master_salvadorian_curtido_001",
+  "parentRepoId": null,
+  "slug": "curtido",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Curtido",
+  "description": "La réponse du Salvador à la choucroute — chou vert légèrement fermenté avec la carotte et l'origan, brillant avec le vinaigre, avec juste assez de tang et de croquant pour couper la richesse d'une pupusa et rendre chaque bouchée plus fraîche que la dernière.",
+  "cuisine": "Salvadorien",
+  "culture": "Salvadorien",
+  "category": "fermented",
+  "tags": [
+    "curtido",
+    "salvadorien",
+    "fermenté",
+    "Choux",
+    "végétalien",
+    "Sans gluten",
+    "condiment",
+    "pupusa"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "24 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 4,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blanch",
-      inputs: ["ing_01", "ing_05"],
-      outputState: "wilted_cabbage",
-      instructions: "Place shredded cabbage in a large bowl. Pour the boiling water over the cabbage, toss to coat, and let it sit for 3 minutes. Drain immediately and rinse under cold water to stop any cooking. The goal is just-wilted cabbage — still crunchy but pliable, with the raw-vegetal harshness softened.",
-      visualCue: {
-        primaryTarget: "Cabbage has lost its stiff rigidity and gone slightly translucent at the cut edges while remaining pale green. It piles loosely rather than standing up in stiff shreds.",
-        spectrum: [
-          { state: "Underdone", description: "Cabbage is still raw and very stiff. The boiling water didn't penetrate. It will be too crunchy and slow to absorb the brine.", action: "Pour more boiling water over and let sit 2 more minutes before draining." },
-          { state: "Perfect",   description: "Slightly softened but still holding a definite crunch. The translucent green of wilted cabbage. Pliable but not limp.", action: "Rinse with cold water to stop the wilting and drain well before combining." },
-          { state: "Overdone",  description: "Cabbage has gone limp, olive-drab, and wet — it was left too long in hot water or the water was too voluminous.", action: "Drain very well, squeeze out excess water with your hands, and proceed. The texture will be softer than ideal, but the curtido will still be good." },
-        ],
-      },
-      feelCue: "Grab a small handful of the drained cabbage and squeeze — it should give freely without crunch but then spring back partially, like squeezing a slightly damp sponge. No water should drip out without squeezing.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Choux verts, décortiqués et finement broyés",
+      "ratioValue": 4,
+      "defaultUnit": "cups (packed)",
+      "substitutions": [
+        "Choux de napa"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toss",
-      inputs: ["wilted_cabbage", "ing_02", "ing_03", "ing_04", "ing_06", "ing_07", "ing_08"],
-      outputState: "assembled_curtido",
-      instructions: "In a large bowl, combine the wilted cabbage, julienned carrot, and sliced onion. Pour over the vinegar and sprinkle on the salt, dried oregano, and pepper flakes. Toss thoroughly with clean hands or tongs until everything is evenly combined and the vegetables are coated. Taste and adjust: it should be clearly tart, lightly salty, and have a herbal oregano warmth.",
-      visualCue: {
-        primaryTarget: "A colorful, evenly combined slaw — pale green cabbage threaded with bright orange carrot and white onion rings, glistening with a light vinegar coat. The oregano flecks are evenly distributed.",
-        spectrum: [
-          { state: "Underdone", description: "The carrot and onion are pooled at the bottom, the vinegar has not coated the cabbage. The mixture looks dry on top.", action: "Toss more thoroughly, lifting from the bottom and turning over the top. Use your hands for the most thorough mixing." },
-          { state: "Perfect",   description: "Every shred of cabbage and every carrot stick is glistening. The vegetables are evenly distributed throughout. It smells of vinegar, oregano, and fresh vegetables.", action: "Pack into a jar or container and refrigerate for at least 1 hour, ideally overnight." },
-          { state: "Overdone",  description: "The salt has drawn so much water from the vegetables that the mixture is swimming in liquid and the cabbage looks very limp and pale.", action: "Drain the excess liquid, add a tablespoon of fresh vinegar, and refrigerate. The curtido will be softer but still good." },
-        ],
-      },
-      feelCue: "Toss the curtido and then smell your hands — you should catch a bright hit of oregano and vinegar together, a combination that smells clean and sharp, like the counter of a very good pupusería.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Carottes pelées et juliennes ou râpées",
+      "ratioValue": 1,
+      "defaultUnit": "large",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Ferment",
-      inputs: ["assembled_curtido"],
-      outputState: "finished_curtido",
-      instructions: "Pack the curtido tightly into a clean jar, pressing down so the vegetables are submerged in their own released liquid (or under the vinegar brine). Cover loosely — not airtight — and leave at room temperature for 12-24 hours. This brief room-temperature rest jumpstarts a very light lacto-fermentation that adds just a touch of natural tang beyond the vinegar. Then refrigerate. It is ready to eat right away but improves dramatically overnight. Keeps for 2 weeks refrigerated.",
-      visualCue: {
-        primaryTarget: "After 24 hours total (room temp + fridge): the cabbage is pale, slightly translucent, and well-compressed. The liquid in the jar has gone from clear to a slightly cloudy, pale amber. The smell is sharply vinegary with a warm oregano note.",
-        spectrum: [
-          { state: "Underdone", description: "Still bright white with raw cabbage crunch and no tanginess beyond the added vinegar. The flavors haven't melded.", action: "Leave at room temperature for the full 24 hours, then refrigerate. The transformation is in time, not technique." },
-          { state: "Perfect",   description: "Pale, translucent, well-compressed cabbage. Tangy, bright, herbal, with a clean crunch that gives almost no resistance. The liquid is slightly cloudy and deeply flavored. Tastes essential alongside a pupusa.", action: "Refrigerate and use within 2 weeks." },
-          { state: "Overdone",  description: "Left at room temperature for 3+ days: very sour and funky, onions have softened to mush, vinegar has been overwhelmed by lactic acid tang. The smell is powerful.", action: "Still edible — curtido can ferment all the way to a sauerkraut-style preserve. Drain and serve as a more aggressively fermented condiment, or use in cooked dishes." },
-        ],
-      },
-      feelCue: "Pinch a strand of curtido from the jar after a day — it should snap cleanly with a small crunch, not squish between your fingers. Hold it to the light: the translucency of just-fermented cabbage is distinctly different from raw, with a watercolor quality at the edges.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon blanc, finement coupé en demi-lunes",
+      "ratioValue": 0.5,
+      "defaultUnit": "medium onion",
+      "substitutions": [
+        "oignon rouge"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "vinaigre blanc (ou vinaigre de cidre de pomme)",
+      "ratioValue": 0.5,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "vinaigre de vin de riz"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau bouillante",
+      "ratioValue": 0.5,
+      "defaultUnit": "cup",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Origan mexicain séché",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "Origan frais (montant double)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "flocons de poivre rouge ou chile de árbol séché, émietté",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "serrano frais, haché"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Blanch",
+      "inputs": [
+        "ing_01",
+        "ing_05"
+      ],
+      "outputState": "wilted_cabbage",
+      "instructions": "Mettre le chou déchiqueté dans un grand bol. Verser l'eau bouillante sur le chou, mélanger pour enrober et laisser reposer 3 minutes. Égoutter immédiatement et rincer sous l'eau froide pour arrêter toute cuisson. L'objectif est le chou nauséabonde, toujours croustillant mais souple, avec la dureté végétale crue adoucie.",
+      "visualCue": {
+        "primaryTarget": "Le chou a perdu sa rigidité raide et est allé légèrement translucide aux bords de coupe tout en restant vert pâle. Elle s'empile de façon lâche plutôt que de se tenir debout en morceaux raides.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le chou est toujours cru et très raide. L'eau bouillante n'a pas pénétré. Il sera trop croquant et lent pour absorber la saumure.",
+            "action": "Verser plus d'eau bouillante et laisser reposer encore 2 minutes avant de s'égoutter."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légèrement adouci mais tenant toujours une croûte définitive. Le vert translucide du chou flétri. Pliable mais pas boiteux.",
+            "action": "Rincer avec de l'eau froide pour arrêter le flétrissement et bien égoutter avant de combiner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le chou est devenu boiteux, olive-drabe et humide — il a été laissé trop longtemps dans l'eau chaude ou l'eau était trop volumineuse.",
+            "action": "Égoutter très bien, presser l'excès d'eau avec vos mains, et procéder. La texture sera plus douce que idéale, mais le curtido sera encore bon."
+          }
+        ]
+      },
+      "feelCue": "Prenez une petite poignée de chou égoutté et pressez — il devrait donner librement sans croûte mais puis ressortent partiellement, comme serrer une éponge légèrement humide. L'eau ne doit pas couler sans serrer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Découpe",
+      "inputs": [
+        "wilted_cabbage",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "assembled_curtido",
+      "instructions": "Dans un grand bol, mélanger le chou flétri, la carotte julienne et l'oignon tranché. Verser sur le vinaigre et saupoudrer de sel, d'origan séché et de flocons de poivre. Mélanger soigneusement avec des mains ou des pinces propres jusqu'à ce que tout soit uniformément combiné et que les légumes soient enduits. Goûtez et ajustez : il doit être nettement tart, légèrement salé, et avoir une chaleur d'origane à base de plantes.",
+      "visualCue": {
+        "primaryTarget": "Une griffe colorée, uniformément combinée — chou vert pâle fileté de carottes orange vif et de rondelles d'oignon blanc, scintillement avec une légère couche de vinaigre. Les taches d'origan sont également distribuées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La carotte et l'oignon sont mis en commun au fond, le vinaigre n'a pas enrobé le chou. Le mélange semble sec sur le dessus.",
+            "action": "Jeter plus soigneusement, soulever du bas et tourner sur le dessus. Utilisez vos mains pour le mélange le plus complet."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque morceau de chou et chaque bâton de carottes brille. Les légumes sont distribués uniformément. Il sent le vinaigre, l'origan et les légumes frais.",
+            "action": "Conditionner dans un pot ou un contenant et réfrigérer pendant au moins 1 heure, idéalement pendant la nuit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sel a attiré tellement d'eau des légumes que le mélange nage dans le liquide et le chou semble très boiteux et pâle.",
+            "action": "Égoutter l'excès de liquide, ajouter une cuillère à soupe de vinaigre frais et réfrigérer. Le curtido sera plus doux mais toujours bon."
+          }
+        ]
+      },
+      "feelCue": "Jetez le curtido et puis sentez vos mains — vous devriez attraper un coup lumineux d'origan et de vinaigre ensemble, une combinaison qui sent propre et tranchant, comme le comptoir d'un très bon pupusería."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ferment",
+      "inputs": [
+        "assembled_curtido"
+      ],
+      "outputState": "finished_curtido",
+      "instructions": "Emballez fermement le curtido dans un pot propre, en pressant vers le bas afin que les légumes soient immergés dans leur propre liquide libéré (ou sous la saumure de vinaigre). Couvrez-vous librement — non hermétiquement — et laissez-les à température ambiante pendant 12 à 24 heures. Ce bref repos à température ambiante commence par une lactofermentation très légère qui ajoute une touche de tang naturel au-delà du vinaigre. Puis réfrigérer. Il est prêt à manger tout de suite mais s'améliore considérablement du jour au lendemain. Conserve pendant 2 semaines au réfrigérateur.",
+      "visualCue": {
+        "primaryTarget": "Après 24 heures au total (temps de la chambre + réfrigérateur): le chou est pâle, légèrement translucide et bien comprimé. Le liquide dans le pot est passé de clair à légèrement nuageux, ambre pâle. L'odeur est fortement vinaigreuse avec une note d'origan chaude.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours blanc brillant avec croûte de chou cru et sans tangent au vinaigre ajouté. Les saveurs n'ont pas fondu.",
+            "action": "Laisser à température ambiante pendant 24 heures, puis réfrigérer. La transformation est dans le temps, pas dans la technique."
+          },
+          {
+            "state": "Perfect",
+            "description": "Choux pâle, translucide, bien comprimé. Tangy, brillant, à base de plantes, avec un croquant propre qui ne donne presque aucune résistance. Le liquide est légèrement nuageux et aromatisé. Goûte essentielle à côté d'une pupusa.",
+            "action": "Réfrigérer et utiliser dans les 2 semaines."
+          },
+          {
+            "state": "Overdone",
+            "description": "A gauche à température ambiante pendant 3+ jours : très aigre et funky, les oignons se sont adoucis, le vinaigre a été submergé par un tang acide lactique. L'odeur est puissante.",
+            "action": "Encore comestible — le curtido peut fermenter jusqu'à une conserve de type choucroute. Égoutter et servir de condiment plus fermenté, ou utiliser dans les plats cuits."
+          }
+        ]
+      },
+      "feelCue": "Pincez un brin de curtido dans le bocal après une journée – il devrait se casser proprement avec une petite croûte, et non entre les doigts. Tenez-le à la lumière : la translucidité du chou juste-fermenté est distinctement différente de celle du chou cru, avec une qualité aquarelle aux bords."
+    }
+  ]
 };

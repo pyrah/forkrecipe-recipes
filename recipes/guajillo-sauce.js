@@ -1,102 +1,277 @@
 export default {
-  repoId: "master_mexican_guajillo_sauce_001",
-  parentRepoId: null,
-  slug: "guajillo-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Guajillo Enchilada Sauce",
-  description: "Dried guajillo chiles soaked and blended with charred tomato and garlic into a smooth, bright brick-red sauce — the classic vehicle for enchiladas, lacquering each rolled tortilla in a color that looks like sunset and tastes of dried cherries, mild heat, and something faintly tannic and beautiful.",
-  cuisine: "Mexican",
-  culture: "Central Mexican",
-  category: "sauces",
-  tags: ["enchilada", "guajillo", "mexican", "chile", "sauce", "tomato"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 2, sour: 2, bitter: 2, umami: 3, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Spice",     name: "Dried guajillo chiles, stemmed, seeded",  ratioValue: 8,   defaultUnit: "whole", substitutions: ["New Mexico chiles"] },
-    { ingId: "ing_02", role: "Spice",     name: "Dried ancho chile, stemmed, seeded",       ratioValue: 1,   defaultUnit: "whole", substitutions: ["mulato chile"] },
-    { ingId: "ing_03", role: "Structure", name: "Roma tomatoes, halved",                   ratioValue: 3,   defaultUnit: "whole", substitutions: ["400g canned whole tomatoes"] },
-    { ingId: "ing_04", role: "Allium",    name: "White onion, quartered",                  ratioValue: 0.5, defaultUnit: "medium", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves, unpeeled",                 ratioValue: 4,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_06", role: "Liquid",    name: "Chicken or vegetable stock",              ratioValue: 500, defaultUnit: "ml", substitutions: ["water"] },
-    { ingId: "ing_07", role: "Spice",     name: "Cumin seeds, toasted",                   ratioValue: 0.5, defaultUnit: "tsp", substitutions: ["ground cumin (1/4 tsp)"] },
-    { ingId: "ing_08", role: "Herb",      name: "Dried Mexican oregano",                  ratioValue: 1,   defaultUnit: "tsp", substitutions: ["marjoram"] },
-    { ingId: "ing_09", role: "Acid",      name: "Cider vinegar",                           ratioValue: 1,   defaultUnit: "tbsp", substitutions: ["white vinegar"] },
-    { ingId: "ing_10", role: "Fat",       name: "Lard or neutral oil",                    ratioValue: 2,   defaultUnit: "tbsp", substitutions: ["olive oil"] },
-    { ingId: "ing_11", role: "Seasoning", name: "Kosher salt",                            ratioValue: 1.5, defaultUnit: "tsp", substitutions: ["sea salt"] },
+  "repoId": "master_mexican_guajillo_sauce_001",
+  "parentRepoId": null,
+  "slug": "guajillo-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Guajillo Enchilada",
+  "description": "Des chiles de guajillo séchés trempés et mélangés avec de la tomate carbonisée et de l'ail dans une sauce lisse et rouge brique vive — le véhicule classique pour les enchiladas, laquage chaque tortilla roulée dans une couleur qui ressemble au coucher du soleil et goûts de cerises séchées, chaleur douce, et quelque chose de légèrement tannique et beau.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain central",
+  "category": "sauces",
+  "tags": [
+    "enchilada",
+    "Guajillo",
+    "Mexique",
+    "Chile",
+    "sauce",
+    "tomates"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "toasted_soaked_chiles",
-      instructions: "Heat a dry comal or cast-iron skillet over medium-high heat until very hot. Working one at a time, press each guajillo and ancho chile flat on the dry surface with a spatula for 10 to 15 seconds per side. Guajillos have thin flesh and toast quickly — watch for the color to shift from flat brick-red to a deeper reddish-brown with a few blistered spots. You are listening as much as watching: a properly toasting chile makes a faint papery crackling sound as the moisture in the flesh volatilizes. The ancho is thicker and more forgiving — 15 seconds per side, until darkened and pliable. The instant you smell a clean, sweet dried-fruit and mild smoke aroma — like dark raisins warming on a stove — remove the chiles from the heat. Transfer immediately to a heatproof bowl and pour over 2.5 cups of very hot (not boiling) water. Weigh the chiles down with a small plate so they are fully submerged. Soak for 20 to 25 minutes. The water will turn a brilliant brick-red. Drain and reserve the soaking liquid.",
-      visualCue: {
-        primaryTarget: "Chiles are reddish-brown and pliable, not stiff. Soaking water is vivid brick-red, nearly opaque. A soaked guajillo bends in half without tearing.",
-        spectrum: [
-          { state: "Underdone", description: "Chiles are still stiff and brittle, unchanged in color. Soaking water is pale pink rather than brick-red. The aroma is flat and dusty.", action: "The comal was not hot enough. Reheat and press the chiles for longer — real contact with a very hot dry surface is essential for flavor development." },
-          { state: "Perfect",   description: "Chiles are deeply reddish-brown, pliable, and emit a warm dried-fruit and mild smoke aroma. After soaking, completely soft and the water is a deep brick-red that stains easily.", action: "Drain and proceed to charring the vegetables and blending." },
-          { state: "Overdone",  description: "Chiles are uniformly black and smell of ash and carbon. Soaking water is very dark and tastes intensely bitter.", action: "Discard and start again. Burned guajillos ruin the sauce. Their bitterness cannot be balanced — it is the wrong kind of bitter." },
-        ],
-      },
-      feelCue: "A soaked guajillo should feel like a piece of soft, wet chamois cloth — pliable, cool, and substantial. Squeeze a soaked chile gently: if it still feels stiff or has hard patches, return it to the hot water for more time.",
+      "ingId": "ing_01",
+      "role": "Spice",
+      "name": "Chiles de guajillo séchés, ensemencés",
+      "ratioValue": 8,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Nouveau-Mexique"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Roast",
-      inputs: ["ing_03", "ing_04", "ing_05"],
-      outputState: "charred_vegetables",
-      instructions: "On the same dry comal over high heat, char the tomato halves cut-side down until the surface is deeply blistered and black — do not move them while they char, 5 to 7 minutes. Flip and char the skin side for 2 to 3 more minutes. The tomatoes will collapse and their juices will caramelize on the pan. Char the onion quarters until their cut faces are deeply blackened, and char the unpeeled garlic cloves until their skins are black and the flesh inside is soft and golden. All this char is intentional — it provides the deep color and complex, rounded flavor that distinguishes a cooked enchilada sauce from a raw one. Remove from heat. Peel the garlic from its charred skins. Transfer everything, including all accumulated juices and any caramelized tomato solids, to the blender.",
-      visualCue: {
-        primaryTarget: "Tomatoes are collapsed with heavily charred black surfaces on one or both sides, flesh jammy and deep red-orange. Onions have blackened edges. Garlic has charred skin but soft, golden interior.",
-        spectrum: [
-          { state: "Underdone", description: "Tomatoes are still intact with only light browning. No charring. The vegetables look roasted, not charred. The flavor will be one-dimensional.", action: "Return to high heat and leave undisturbed for longer. The char requires direct contact with a very hot surface — do not move the vegetables while they are charring." },
-          { state: "Perfect",   description: "Tomatoes have collapsed, skin is heavily blackened and blistered, flesh is jammy and deep orange. Garlic squeezes from its skin as a soft golden paste. The kitchen smells of caramelized tomato and clean char.", action: "Transfer to the blender with the soaked chiles." },
-          { state: "Overdone",  description: "Tomatoes are completely incinerated — all flesh is black, no red flesh remaining. Garlic has turned to ash inside its skin.", action: "Salvage any tomatoes with remaining red flesh. Add a fresh raw tomato to the blender to compensate for the lost tomato flavor." },
-        ],
-      },
-      feelCue: "Pick up a charred tomato half: the skin should feel papery and dry, but beneath it the flesh should feel soft and yielding, like a hot water balloon barely held together. That tension — the dry char exterior and the molten interior — is what you want.",
+      "ingId": "ing_02",
+      "role": "Spice",
+      "name": "Chiles anchos séchés, ensemencés",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Mulato chile"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["toasted_soaked_chiles", "charred_vegetables", "ing_06", "ing_07", "ing_08", "ing_09", "ing_11"],
-      outputState: "blended_sauce",
-      instructions: "Combine the drained soaked chiles (use 3 tablespoons of the reserved soaking liquid), charred tomatoes, charred onion and garlic, stock, toasted cumin, dried oregano, vinegar, and salt in a blender. Blend on high for 2 full minutes until completely smooth. The sauce will be very thick and a vivid brick-red-orange. Strain through a medium-mesh sieve into a bowl, pressing with a spoon to extract all liquid. Taste the strained sauce: it should be bright, fruity, moderately spicy, and faintly tannic, with the charred vegetables providing a round, deep undertone. This blended, strained base is ready to fry in oil to deepen its flavor and round out its rawness.",
-      visualCue: {
-        primaryTarget: "Smooth, vivid brick-red sauce that pours freely. No visible skin fragments. After straining, the sauce is silky and uniform in color.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is grainy with visible chile skin and seed fragments. Color is patchy and uneven.", action: "Blend longer on high speed. Strain through a finer sieve if texture remains grainy." },
-          { state: "Perfect",   description: "Completely smooth, brilliant brick-red sauce. Tastes of dried cherry, mild chile heat, and a round smoky depth. No graininess.", action: "Fry in lard to finish." },
-          { state: "Overdone",  description: "Over-blended and aerated — paler in color with a foamy surface.", action: "Let it rest and settle for 5 minutes before frying." },
-        ],
-      },
-      feelCue: "Rub a drop of the blended sauce between your fingers — it should feel slick and smooth, leaving a vivid brick-red stain that does not wash off easily. Any graininess you feel means more blending is needed.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Tomates roms, coupées en deux",
+      "ratioValue": 3,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "400g de tomates entières en conserve"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Fry",
-      inputs: ["blended_sauce", "ing_10"],
-      outputState: "finished_guajillo_sauce",
-      instructions: "Heat the lard or oil in a wide saucepan or skillet over medium-high heat until nearly smoking. Stand back and pour the blended guajillo sauce into the hot fat all at once — it will spatter aggressively and make a loud, sustained hissing sound as the moisture hits the hot fat. Stir immediately and cook, stirring frequently with a long-handled spoon, for 5 to 8 minutes. During this time the sauce will darken in color, thicken slightly, and the raw, sharp notes will transform into something deeper and more rounded. The fat will begin to separate at the edges — a ring of glossy red-tinted oil appearing at the perimeter of the sauce. This is the moment to stop: the sauce is ready when the fat separates and the aroma has shifted from raw chile to a deeper, more complex roasted smell. The finished sauce is ready to use as an enchilada sauce: dip rolled tortillas briefly in it, pour it over assembled enchiladas, or use it as a braising liquid for chicken or pork.",
-      visualCue: {
-        primaryTarget: "Slightly darkened, thickened sauce with visible fat separation at the edges. Color has deepened to a rich, darker brick-red. Pours off a spoon in a steady, somewhat thick ribbon.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce looks the same as before frying — no darkening, no fat separation, and the flavor still has a sharp, raw edge from the chiles.", action: "Continue frying over higher heat. The sputtering sound should continue throughout — if it stops early, the sauce may be too cold or the fat too little." },
-          { state: "Perfect",   description: "Sauce has darkened slightly and thickened. Fat has separated at the edges, forming a visible ring of glossy red-tinted oil. Flavor is deep, rounded, and complex — fruity chile, mild char, and a warm, integrated spice. No rawness.", action: "Use immediately or cool and refrigerate for up to 5 days. The sauce deepens further after resting." },
-          { state: "Overdone",  description: "Sauce has reduced too far and is very thick, almost paste-like. Color is very dark. The bottom of the pan shows scorching.", action: "Transfer to a clean pan immediately. Thin with stock or water, 2 tablespoons at a time, stirring over low heat until the desired consistency returns." },
-        ],
-      },
-      feelCue: "The fried guajillo sauce should pour off a wooden spoon in a steady, even ribbon — not a drip, not a gush, but a smooth, controlled flow that coats the spoon in an even, opaque layer of brick-red. Dip a piece of tortilla in: the sauce should cling to every surface without running immediately off.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc, quartiers",
+      "ratioValue": 0.5,
+      "defaultUnit": "medium",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail, non pelées",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Stocks de poulet ou de légumes",
+      "ratioValue": 500,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Graines de cumin grillées",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "cumin au sol (1/4 c. à thé)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Origan mexicain séché",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "Marjoram"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "vinaigre de cidre",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "vinaigre blanc"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Lard ou huile neutre",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "sel de mer"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "toasted_soaked_chiles",
+      "instructions": "Chauffer une poêle en comal sec ou en fonte à feu moyen-vif jusqu'à très chaud. Travaillant un à la fois, pressez chaque guajillo et chaque chile ancho à plat sur la surface sèche avec une spatule pendant 10 à 15 secondes de chaque côté. Les Guajillos ont de la chair mince et toast rapidement — veillez à ce que la couleur passe d'un rouge brique plat à un brun rougeâtre plus profond avec quelques taches cloquées. Vous écoutez autant que regarder : un chile bien grillé fait un léger bruit de craquelures sur papier que l'humidité de la chair se volatilise. L'ancho est plus épais et plus indulgent — 15 secondes de chaque côté, jusqu'à ce qu'il soit obscurci et pliable. À l'instant où vous sentez un fruit sec propre et doux et un arôme de fumée doux, comme le réchauffement des raisins secs foncés sur un poêle, retirez les piments de la chaleur. Transférer immédiatement dans un bol thermofuge et verser plus de 2,5 tasses d'eau très chaude (pas bouillante). Peser les chiles avec une petite assiette pour qu'ils soient complètement submergés. Faire tremper 20 à 25 minutes. L'eau fera un brillant rouge brique. Égoutter et réserver le liquide absorbant.",
+      "visualCue": {
+        "primaryTarget": "Les Chiliens sont brun-rougeâtre et pliables, pas raides. L'eau qui sème est rouge brique vif, presque opaque. Un guajillo trempé plie en deux sans déchirer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les Chiliens sont encore raides et cassants, de couleur inchangée. L'eau de trempe est rose pâle plutôt que rouge brique. L'arôme est plat et poussiéreux.",
+            "action": "Le comal n'était pas assez chaud. Réchauffer et presser les chiles plus longtemps — un véritable contact avec une surface sèche très chaude est essentiel au développement de la saveur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les Chiliens sont profondément brun rougeâtre, pliables, et émettent un arôme chaud de fruits secs et de fumée douce. Après tremper, complètement doux et l'eau est un rouge-brique profond qui tache facilement.",
+            "action": "Égoutter les légumes et les mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les Chiliens sont uniformément noirs et ont une odeur de cendres et de carbone. L'eau de trempe est très sombre et goûte intensément amer.",
+            "action": "Jeter et recommencer. Les guajillos brûlés ruinent la sauce. Leur amertume ne peut être équilibrée — c'est le mauvais genre d'amertume."
+          }
+        ]
+      },
+      "feelCue": "Un guajillo trempé doit se sentir comme un morceau de tissu chamois doux et humide — souple, frais et substantiel. Pressez doucement un piment trempé: si il se sent encore raide ou a des taches dures, retournez-le à l'eau chaude pour plus de temps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "charred_vegetables",
+      "instructions": "Sur le même comal sec à feu vif, l'omble de tomate est coupé en moitiés jusqu'à ce que la surface soit profondément cloquée et noire — ne les déplacez pas pendant qu'ils sont d'omble de 5 à 7 minutes. Flip et charrer le côté de la peau 2 à 3 minutes de plus. Les tomates s'effondreront et leurs jus caraméliseront sur la poêle. Char les quartiers d'oignon jusqu'à ce que leurs faces coupées soient profondément noircies, et char les gousses d'ail non pelées jusqu'à ce que leurs peaux soient noires et que la chair à l'intérieur soit douce et dorée. Tout cet omble est intentionnel — il fournit la couleur profonde et complexe, saveur arrondie qui distingue une sauce enchilada cuite d'une sauce crue. Retirer du feu. Peler l'ail de ses peaux carbonisées. Transférer tout, y compris tous les jus accumulés et tous les solides de tomates caramélisées, au mélangeur.",
+      "visualCue": {
+        "primaryTarget": "Les tomates sont effondrées avec des surfaces noires fortement carbonisées d'un côté ou des deux côtés, des confitures de chair et un orangé rouge profond. Les oignons ont des bords noircis. L'ail a la peau carbonisée mais doux, intérieur doré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tomates sont toujours intactes avec seulement un brunissement léger. Pas de charring. Les légumes semblent rôtis, pas carbonisés. La saveur sera unidimensionnelle.",
+            "action": "Retour à la chaleur élevée et laisser non perturbé pour plus longtemps. L'omble nécessite un contact direct avec une surface très chaude — ne déplacez pas les légumes pendant qu'ils sont ombrageux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tomates se sont effondrées, la peau est fortement noircie et cloquée, la chair est jammée et l'orange profonde. L'ail se presse de sa peau comme une pâte d'or douce. La cuisine sent la tomate caramélisée et l'omble propre.",
+            "action": "Transférer au mélangeur avec les chiles trempés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tomates sont complètement incinérées: toute chair est noire, il ne reste plus de chair rouge. L'ail s'est transformé en cendres dans sa peau.",
+            "action": "Sauver les tomates avec la chair rouge restante. Ajouter une tomate crue fraîche au mélangeur pour compenser la saveur de tomate perdue."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une moitié de tomate carbonisée: la peau doit se sentir papereuse et sèche, mais sous elle la chair doit se sentir douce et céder, comme un ballon d'eau chaude à peine tenu ensemble. Cette tension — l'extérieur sec et l'intérieur fondu — est ce que vous voulez."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "toasted_soaked_chiles",
+        "charred_vegetables",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_11"
+      ],
+      "outputState": "blended_sauce",
+      "instructions": "Mélanger les chiles trempés égouttés (utiliser 3 cuillères à soupe du liquide de trempage réservé), les tomates carbonisées, l'oignon carbonisé et l'ail, le bouillon, le cumin grillé, l'origan séché, le vinaigre et le sel dans un mélangeur. Mélanger à la hauteur pendant 2 minutes complètes jusqu'à ce que complètement lisse. La sauce sera très épaisse et une brique-rouge-orange vive. Plongez dans un tamis à mailles moyennes dans un bol, pressez avec une cuillère pour extraire tout le liquide. Goûtez la sauce tendue : elle doit être lumineuse, fruitée, modérément épicée et légèrement tannique, les légumes carbonisés offrant un sous-ton rond et profond. Cette base mélangée et tendue est prête à frire dans l'huile pour approfondir sa saveur et compléter sa brutité.",
+      "visualCue": {
+        "primaryTarget": "Sauce lisse, rouge brique vive qui verse librement. Pas de fragments de peau visibles. Après la déformation, la sauce est soyeuse et uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est granuleuse avec une peau de chile visible et des fragments de graines. La couleur est inégale et inégale.",
+            "action": "Mélanger plus longtemps à haute vitesse. Plongez dans un tamis plus fin si la texture reste granuleuse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, brillante sauce rouge brique. Goûts de cerise séchée, feu doux de chile, et une profondeur fumée ronde. Pas de grain.",
+            "action": "Faire frire dans le saindoux pour finir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmené et aéré — plus pâle en couleur avec une surface mousseuse.",
+            "action": "Laisser reposer et reposer 5 minutes avant de frire."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte de la sauce mélangée entre vos doigts – elle devrait se sentir lisse et lisse, laissant une tache rouge brique vive qui ne se lave pas facilement. Tout grain que vous ressentez signifie plus de mélange est nécessaire."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "blended_sauce",
+        "ing_10"
+      ],
+      "outputState": "finished_guajillo_sauce",
+      "instructions": "Chauffer le saindoux ou l'huile dans une large casserole ou poêle à feu moyen-vif jusqu'à ce qu'il fume presque. Reculez et versez la sauce guajillo mélangée dans la graisse chaude tout à la fois — il éclaboussera agressivement et fera un bruit fort et soutenu sifflant que l'humidité frappe la graisse chaude. Mélanger immédiatement et cuire, en remuant fréquemment avec une cuillère à main longue, pendant 5 à 8 minutes. Pendant ce temps, la sauce s'assombrira de couleur, s'épaissit légèrement, et les notes brutes et nettes se transformeront en quelque chose de plus profond et plus arrondi. La graisse commencera à se séparer aux bords, un anneau d'huile rouge brillant apparaissant au périmètre de la sauce. C'est le moment de s'arrêter : la sauce est prête quand la graisse se sépare et l'arôme est passé du chile brut à une odeur torréfié plus profonde et plus complexe. La sauce finie est prête à être utilisée comme sauce enchilada : tremper les tortillas roulées brièvement, les verser sur les enchiladas assemblées, ou l'utiliser comme liquide de cuisson pour le poulet ou le porc.",
+      "visualCue": {
+        "primaryTarget": "Sauce légèrement foncée, épaissie avec séparation visible des graisses aux bords. La couleur s'est approfondie jusqu'à un riche rouge brique plus foncé. Verse une cuillère dans un ruban un peu épais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a l'air la même qu'avant la friture — pas d'assombrissement, pas de séparation des graisses, et la saveur a encore un bord vif et brut des chiles.",
+            "action": "Continuer à frire à feu plus vif. Le bruit d'aspersion devrait se poursuivre tout au long de la journée — si elle s'arrête tôt, la sauce peut être trop froide ou la graisse trop peu."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est légèrement foncée et épaissie. Le gras s'est séparé aux bords, formant un anneau visible d'huile rouge brillant. L'arôme est profond, arrondi et complexe: le chile fruité, l'omble doux et une épice chaude et intégrée. Pas de brutalité.",
+            "action": "Utiliser immédiatement ou refroidir et réfrigérer jusqu'à 5 jours. La sauce s'approfondit encore après le repos."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite trop loin et est très épaisse, presque pâteuse. La couleur est très sombre. Le fond de la poêle montre une brûlure.",
+            "action": "Transférer immédiatement dans une casserole propre. Finissez avec du bouillon ou de l'eau, 2 cuillères à soupe à la fois, en remuant à feu doux jusqu'à ce que la consistance désirée revienne."
+          }
+        ]
+      },
+      "feelCue": "La sauce guajillo frite doit verser une cuillère en bois dans un ruban régulier et uniforme — pas une goutte d'eau, pas un gush, mais un flux lisse et contrôlé qui enveloppe la cuillère dans une couche uniforme et opaque de brique-rouge. Arrosez un morceau de tortilla : la sauce doit s'accrocher à chaque surface sans s'écouler immédiatement."
+    }
+  ]
 };

@@ -1,98 +1,233 @@
 export default {
-  repoId: "master_indian_kulfi_001",
-  parentRepoId: null,
-  slug: "kulfi",
-  author: "ForkRecipe Kitchen",
-  title: "Kulfi",
-  description: "The ancient frozen dessert of the Subcontinent — whole milk reduced low and slow to a thick, fudgy paste, then sweetened with condensed milk and shot through with cardamom, saffron, and crushed pistachios before being set in conical molds.",
-  cuisine: "Indian",
-  culture: "North Indian",
-  category: "desserts",
-  tags: ["desserts", "indian", "frozen", "dairy", "cardamom", "saffron", "gluten-free"],
-  difficulty: 2,
-  activeTime: "45 min",
-  totalTime: "8 hours",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 0, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Whole milk (full fat)",              ratioValue: 1000, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_02", role: "Dairy",     name: "Sweetened condensed milk",           ratioValue: 200,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener", name: "Caster sugar",                       ratioValue: 60,   defaultUnit: "g",  substitutions: ["palm sugar"] },
-    { ingId: "ing_04", role: "Spice",     name: "Green cardamom pods (seeds ground)", ratioValue: 8,    defaultUnit: "whole", substitutions: ["ground cardamom"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Saffron strands",                    ratioValue: 0.5,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Dairy",     name: "Double cream",                       ratioValue: 100,  defaultUnit: "ml", substitutions: ["heavy cream"] },
-    { ingId: "ing_07", role: "Garnish",   name: "Unsalted pistachios (chopped fine)", ratioValue: 40,   defaultUnit: "g",  substitutions: ["blanched almonds"] },
+  "repoId": "master_indian_kulfi_001",
+  "parentRepoId": null,
+  "slug": "kulfi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kulfi",
+  "description": "L'ancien dessert congelé du Sous-continent — le lait entier réduit à une pâte épaisse et fugace, puis sucrée avec du lait condensé, puis transpercée de cardamome, de safran et de pistaches broyées avant d'être mise dans des moules coniques.",
+  "cuisine": "Indiens",
+  "culture": "Inde du Nord",
+  "category": "desserts",
+  "tags": [
+    "desserts",
+    "indienne",
+    "congelés",
+    "laitière",
+    "Cardamome",
+    "safran",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "45 min",
+  "totalTime": "8 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Infuse",
-      inputs: ["ing_01", "ing_05"],
-      outputState: "saffron_milk",
-      instructions: "Warm 3 tablespoons of the milk to just below a simmer. Crumble the saffron strands into the warm milk and let steep for 20 minutes — the liquid will turn a deep copper-gold. Reserve. In the remaining milk, heat over medium flame, stirring with a heavy wooden spoon to prevent scorching on the base of the pan.",
-      visualCue: {
-        primaryTarget: "A small bowl of intensely golden, perfumed milk — almost orange at the edges. The colour should be deep and uniform, not pale.",
-        spectrum: [
-          { state: "Underdone", description: "Milk is barely tinted a pale yellow. Saffron has not released its full colour or flavour.", action: "Steep longer — saffron needs at least 15 minutes in warm (not boiling) liquid to fully bloom." },
-          { state: "Perfect",   description: "Rich copper-gold, the liquid smells floral and slightly medicinal. A few strands have uncurled and turned from red to orange.", action: "Set aside until the milk reduction is complete." },
-          { state: "Overdone",  description: "Milk was too hot and the saffron has given a slightly bitter, acrid note.", action: "Use it anyway — the bitterness will be diluted in the final quantity of milk, but add less saffron next time." },
-        ],
-      },
-      feelCue: "The saffron-steeped milk should smell like a warm summer meadow — floral, slightly honeyed, with a distant earthy depth. If it smells flat, it hasn't steeped long enough.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Lait entier (graisse pleine)",
+      "ratioValue": 1000,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Reduce",
-      inputs: ["ing_01", "ing_03", "ing_04"],
-      outputState: "reduced_milk",
-      instructions: "Heat the whole milk over medium-high in a wide, heavy-bottomed pan. Stir frequently with a silicone spatula, scraping the sides and base. As it reduces, lower the heat. Add the sugar and ground cardamom when the milk has reduced by half. Continue to cook, stirring constantly, until the mixture has reduced to roughly one-third of its original volume — about 30-35 minutes. It should coat the back of a spoon thickly.",
-      visualCue: {
-        primaryTarget: "A pale-ivory, thick, creamy paste that coats the spatula in a 3mm layer and falls in slow, wide sheets — not drops.",
-        spectrum: [
-          { state: "Underdone", description: "Still quite liquid, pours easily, runs off the spoon quickly. A line drawn through the coating on the spoon does not hold.", action: "Continue cooking. The reduction must be patient — rushing with high heat causes scorching." },
-          { state: "Perfect",   description: "Thick as evaporated milk with body. A line drawn through the spoon coating holds its shape for 3 seconds. Ivory-white with a faint caramel note.", action: "Remove from heat, stir in condensed milk and saffron milk, then cream." },
-          { state: "Overdone",  description: "Grainy, beginning to caramelise at the edges. Smells of cooked milk protein and butterscotch.", action: "Remove from heat immediately and strain through a fine sieve. The caramel note will be pleasant in the finished kulfi." },
-        ],
-      },
-      feelCue: "Dip a clean finger — the reduced milk should feel thick and slightly sticky, like condensed milk diluted by half. It should coat your finger without dripping off immediately.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Lait condensé sucré",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["reduced_milk", "saffron_milk", "ing_02", "ing_06", "ing_07"],
-      outputState: "kulfi_mixture",
-      instructions: "Remove the reduced milk from the heat. Stir in the saffron milk, condensed milk, and double cream. Mix well until completely uniform in colour — a warm gold with flecks of pistachio throughout. Taste for sweetness and adjust. Reserve a few pinches of pistachio for garnish.",
-      visualCue: {
-        primaryTarget: "A warm, amber-gold mixture with a velvety, unified texture — no separate layers of cream or milk visible.",
-        spectrum: [
-          { state: "Underdone", description: "Condensed milk sits as a separate, darker band. The mixture is not homogeneous.", action: "Stir vigorously for another 2 minutes until fully combined." },
-          { state: "Perfect",   description: "Uniform golden colour, creamy consistency, flecked with green pistachios. Sweet, aromatic, slightly thicker than heavy cream.", action: "Pour into kulfi molds and freeze." },
-          { state: "Overdone",  description: "Mixture is grainy or has curdled — the reduced milk may have been too hot when the cream was added.", action: "Blend briefly with a stick blender until smooth." },
-        ],
-      },
-      feelCue: "The mixture should feel significantly heavier than plain cream when you swirl it in the bowl — dense and slow-moving, with a slight resistance that speaks to all the reduced milk solids.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre de palme"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Freeze",
-      inputs: ["kulfi_mixture"],
-      outputState: "finished_kulfi",
-      instructions: "Pour the mixture into kulfi molds, small metal cups, or an ice cube tray. Cover tightly with foil and insert a wooden stick through the foil before it sets. Freeze for at least 6 hours, ideally overnight. Unmold by running the outside of the mold under warm water for 10 seconds and inverting onto a plate.",
-      visualCue: {
-        primaryTarget: "A solid, dense, pale-gold cone or cylinder with a dry surface that releases cleanly from the mold with no tearing or cracking.",
-        spectrum: [
-          { state: "Underdone", description: "Soft in the centre when pressed. The stick pulls out with no resistance. Surface is icy and wet rather than dry and firm.", action: "Return to the freezer for at least 2 more hours. Kulfi is denser than ice cream and takes longer to freeze through." },
-          { state: "Perfect",   description: "Rock-solid all the way through, ivory-gold colour, pistachio flecks visible. Releases from the mold with a clean pop. The surface is dry and frost-free.", action: "Serve immediately on a plate, garnished with the reserved pistachios and a pinch of extra saffron." },
-          { state: "Overdone",  description: "Extremely hard, difficult to bite, and has developed a rim of large ice crystals on the surface.", action: "Rest at room temperature for 3-4 minutes before serving. The dense fat content means it softens quickly once out of the freezer." },
-        ],
-      },
-      feelCue: "Unlike ice cream, kulfi should feel almost solid all the way through when you push the stick through — no soft give in the centre. Its density is its virtue.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Gousses de cardamome vert",
+      "ratioValue": 8,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "Cardamome au sol"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Fils de safran",
+      "ratioValue": 0.5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Double crème",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "crème lourde"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Pistaches non salées (amende d'emballage)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Amandes blanchies"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Infuse",
+      "inputs": [
+        "ing_01",
+        "ing_05"
+      ],
+      "outputState": "saffron_milk",
+      "instructions": "Chauffer 3 cuillerées à soupe de lait pour laisser mijoter. Faire fondre les brins de safran dans le lait chaud et laisser tremper pendant 20 minutes — le liquide va tourner un cuivre-or profond. Réserve. Dans le reste du lait, chauffer sur feu moyen, en remuant avec une cuillère en bois lourde pour éviter les brûlures à la base de la poêle.",
+      "visualCue": {
+        "primaryTarget": "Un petit bol de lait intensément doré et parfumé, presque orange aux bords. La couleur doit être profonde et uniforme, non pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait est à peine teinté de jaune pâle. Safran n'a pas libéré toute sa couleur ni sa saveur.",
+            "action": "Plus longtemps, le safran a besoin d'au moins 15 minutes dans un liquide chaud (non bouillant) pour fleurir complètement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche en or de cuivre, le liquide sent floral et légèrement médicinal. Quelques brins sont incurvés et sont passés du rouge à l'orange.",
+            "action": "Réserver jusqu'à ce que la réduction du lait soit complète."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait était trop chaud et le safran a donné une note légèrement amère et acride.",
+            "action": "Utilisez-le de toute façon — l'amertume sera diluée dans la quantité finale de lait, mais ajouter moins de safran la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Le lait au safran doit sentir comme une prairie d'été chaude — florale, légèrement miellée, avec une profondeur terreuse lointaine. S'il sent plat, il n'est pas assez trempé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Réduire",
+      "inputs": [
+        "ing_01",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "reduced_milk",
+      "instructions": "Chauffer l'ensemble du lait à feu moyen-élevé dans une grande poêle à fond lourd. Mélanger fréquemment avec une spatule de silicone, grattant les côtés et la base. Alors qu'il diminue, baissez la chaleur. Ajouter le sucre et la cardamome au sol lorsque le lait a diminué de moitié. Continuer à cuire en remuant constamment jusqu'à ce que le mélange ait réduit à environ un tiers de son volume d'origine, soit environ 30 à 35 minutes. Il devrait envelopper l'arrière d'une cuillère.",
+      "visualCue": {
+        "primaryTarget": "Une pâte crémeuse, épaisse et pâle qui enveloppe la spatule d'une couche de 3 mm et tombe dans des feuilles lentes et larges — et non des gouttes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours assez liquide, verse facilement, s'échappe rapidement de la cuillère. Une ligne tirée à travers le revêtement sur la cuillère ne tient pas.",
+            "action": "Continuez à cuisiner. La réduction doit être patiente — se précipiter avec une chaleur élevée provoque des brûlures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais comme du lait évaporé avec du corps. Une ligne tirée à travers le revêtement de la cuillère conserve sa forme pendant 3 secondes. Blanc-ivoire avec une faible note de caramel.",
+            "action": "Retirer du feu, mélanger le lait condensé et le lait de safran, puis la crème."
+          },
+          {
+            "state": "Overdone",
+            "description": "Graineux, commençant à caraméliser aux bords. Des odeurs de protéines de lait cuites et de beurre.",
+            "action": "Retirer immédiatement du feu et filtrer dans un tamis fin. La note de caramel sera agréable dans le kulfi fini."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt propre — le lait réduit doit se sentir épais et légèrement collant, comme du lait condensé dilué de moitié. Il devrait enrober votre doigt sans vous égoutter immédiatement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "reduced_milk",
+        "saffron_milk",
+        "ing_02",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "kulfi_mixture",
+      "instructions": "Retirer le lait réduit du feu. Incorporer le lait de safran, le lait condensé et la double crème. Bien mélanger jusqu'à ce que la couleur soit complètement uniforme — un or chaud avec des taches de pistaches. Goûtez à la douceur et ajustez. Réserver quelques pincées de pistaches pour garnir.",
+      "visualCue": {
+        "primaryTarget": "Un mélange chaud d'or ambré avec une texture veloutée et unie — pas de couches séparées de crème ou de lait visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait condensé est une bande séparée, plus foncée. Le mélange n'est pas homogène.",
+            "action": "Mélanger vigoureusement pendant 2 minutes jusqu'à ce qu'il soit complètement combiné."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur dorée uniforme, consistance crémeuse, tachetée de pistaches vertes. Doux, aromatique, légèrement plus épais que la crème lourde.",
+            "action": "Verser dans des moules kulfi et congeler."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est granuleux ou a caillé — le lait réduit peut avoir été trop chaud lorsque la crème a été ajoutée.",
+            "action": "Mélanger brièvement avec un mélangeur de bâtons jusqu'à ce qu'il soit lisse."
+          }
+        ]
+      },
+      "feelCue": "Le mélange doit se sentir significativement plus lourd que la crème pure lorsque vous le tourbillonnez dans le bol — dense et lent, avec une légère résistance qui parle à tous les solides de lait réduits."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Gel",
+      "inputs": [
+        "kulfi_mixture"
+      ],
+      "outputState": "finished_kulfi",
+      "instructions": "Verser le mélange dans des moules kulfi, des petites tasses métalliques ou un plateau de glaçons. Couvrir soigneusement avec du papier et insérer un bâton en bois dans le papier avant qu'il ne se déroule. Geler pendant au moins 6 heures, idéalement pendant la nuit. Démoudre en courant l'extérieur du moule sous l'eau chaude pendant 10 secondes et inverser sur une plaque.",
+      "visualCue": {
+        "primaryTarget": "Un cône ou un cylindre solide, dense et pâle, avec une surface sèche qui libère proprement du moule sans déchirement ni fissuration.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Doucement au centre quand pressé. Le bâton sort sans résistance. La surface est glacée et humide plutôt que sèche et ferme.",
+            "action": "Retourner au congélateur pendant au moins 2 heures de plus. Kulfi est plus dense que la crème glacée et prend plus de temps à geler."
+          },
+          {
+            "state": "Perfect",
+            "description": "Solide-roche jusqu'au bout, couleur or ivoire, pistaches visibles. Rejets du moule avec une pop propre. La surface est sèche et sans gel.",
+            "action": "Servir immédiatement sur une assiette, garnie des pistaches réservées et une pincée de safran supplémentaire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Extrêmement dur, difficile à mordre, et a développé un bord de grands cristaux de glace à la surface.",
+            "action": "Reposez-vous à température ambiante pendant 3-4 minutes avant de servir. La teneur en gras dense signifie qu'elle adoucit rapidement une fois sortie du congélateur."
+          }
+        ]
+      },
+      "feelCue": "Contrairement à la crème glacée, le kulfi devrait se sentir presque solide tout au long de la course lorsque vous poussez le bâton à travers — pas de donner doux dans le centre. Sa densité est sa vertu."
+    }
+  ]
 };

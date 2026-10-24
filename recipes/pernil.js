@@ -1,120 +1,295 @@
 export default {
-  repoId: "master_caribbean_pernil_001",
-  parentRepoId: null,
-  slug: "pernil",
-  author: "ForkRecipe Kitchen",
-
-  title: "Pernil (Puerto Rican Slow-Roasted Pork Shoulder)",
-  description: "A bone-in pork shoulder buried in garlic-sazón adobo and marinated for 24 hours, then roasted low and slow until the meat is fall-apart tender — then blasted high to transform the thick skin into the crunchy, shattering cuerito that is the most coveted part of the entire dish.",
-  cuisine: "Caribbean",
-  culture: "Puerto Rican",
-  category: "proteins",
-
-  tags: ["puerto-rican", "pork", "slow-roasted", "adobo", "cuerito", "caribbean", "holiday"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "10 hours",
-  ratioSystem: "weight",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 1, salty: 4, sour: 2, bitter: 1, umami: 4, heat: 1 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in pork shoulder (picnic or Boston butt), skin-on", ratioValue: 3500, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Allium",    name: "Garlic cloves",                     ratioValue: 40,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Spice",     name: "Dried oregano",                     ratioValue: 12,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                     ratioValue: 30,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Black pepper, coarsely ground",     ratioValue: 8,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Acid",      name: "White wine vinegar",                ratioValue: 45,   defaultUnit: "g", substitutions: ["distilled white vinegar", "sour orange juice"] },
-    { ingId: "ing_07", role: "Fat",       name: "Olive oil",                         ratioValue: 40,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Sazón (with achiote/culantro blend)",ratioValue: 12,   defaultUnit: "g", substitutions: ["smoked paprika + cumin"] },
-    { ingId: "ing_09", role: "Spice",     name: "Ground cumin",                      ratioValue: 6,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Aromatic",  name: "Fresh cilantro with stems, roughly chopped", ratioValue: 20, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning", name: "Coarse sea salt (for skin)",        ratioValue: 20,   defaultUnit: "g", substitutions: [] },
+  "repoId": "master_caribbean_pernil_001",
+  "parentRepoId": null,
+  "slug": "pernil",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pernil (Épaule puertoricaine de porc roulée lentement)",
+  "description": "Une épaule de porc désossée enterrée dans l'ail-sazón adobo et marinée pendant 24 heures, puis torréfié bas et lent jusqu'à ce que la viande soit tendre à l'automne - puis soufflée haut pour transformer la peau épaisse en la cuerito croquante et éclatante qui est la partie la plus convoitée de tout le plat.",
+  "cuisine": "Caraïbes",
+  "culture": "Portoricain",
+  "category": "proteins",
+  "tags": [
+    "puerto-rican",
+    "porc",
+    "torréfié lentement",
+    "Adobo",
+    "cuerito",
+    "Caribbean",
+    "jour férié"
   ],
-
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "10 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "adobo_paste",
-      instructions: "Using a pilón (mortar and pestle) or food processor, pound the garlic, oregano, salt, pepper, and cumin to a rough paste. Add vinegar and olive oil and mix to a thick, pungent adobo. Stir in the sazón and cilantro. The paste should be thick enough to press into incisions without falling out.",
-      visualCue: {
-        primaryTarget: "A thick, rough orange-yellow paste flecked with oregano and cilantro. Strong garlic and herb aroma. Thick enough to hold its shape on a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is still chunky and not fully incorporated into a paste.", action: "Pound or process more. Garlic lumps burn in the oven and taste acrid." },
-          { state: "Perfect",   description: "Smooth-ish paste with some texture. Vivid orange from sazón. Pungently garlicky and herbal.", action: "Apply immediately to the pork." },
-          { state: "Overdone",  description: "N/A — raw paste.", action: "Proceed." },
-        ],
-      },
-      feelCue: "The adobo should feel thick enough to mound on a spoon — if it slides off immediately, it's too thin and will run out of the incisions rather than staying in place.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Epaule de porc désossée (pique ou butte de Boston), avec peau",
+      "ratioValue": 3500,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Marinate",
-      inputs: ["ing_01", "adobo_paste", "ing_11"],
-      outputState: "marinated_pernil",
-      instructions: "Score the skin in a crosshatch pattern, cutting through skin and fat but not meat. Using a thin, sharp knife, make 20–30 deep incisions all over the meat (under and around the skin flap) and push a generous amount of adobo into each with your finger. Rub remaining adobo all over the meat. Rub coarse salt all over the skin only. Place in a roasting pan, skin-side up, uncovered, in the refrigerator for 24–36 hours.",
-      visualCue: {
-        primaryTarget: "After marination, the skin is dry and pale, the crosshatch cuts clearly visible. The meat visible around the skin edges has darkened from the adobo.",
-        spectrum: [
-          { state: "Underdone", description: "Marinated less than 8 hours. Adobo flavor will be surface-only, not deep.", action: "The 24-hour minimum is essential for a shoulder this large. Plan ahead." },
-          { state: "Perfect",   description: "Skin is dry and matte after 24 hours. Crosshatch cuts are dry at the edges. The exposed meat is deeply stained with the adobo paste.", action: "Remove from fridge 1 hour before roasting." },
-          { state: "Overdone",  description: "Marinated beyond 48 hours.", action: "Still excellent — pernil is very forgiving on marination time." },
-        ],
-      },
-      feelCue: "After 24 hours, drag a finger across the skin — it should feel completely dry, like thick paper. Any moisture means the skin won't crackle properly.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Roast",
-      inputs: ["marinated_pernil"],
-      outputState: "slow_roasted_pernil",
-      instructions: "Place pork skin-side up on a rack in a deep roasting pan. Add 2 cups of water to the pan bottom. Cover tightly with foil. Roast at 160 C (325 F) for 5–6 hours (approximately 1.5 hours per kilogram). The pork is done when an instant-read thermometer reads 90 C (195 F) at the thickest part — this temperature ensures all collagen has converted to gelatin.",
-      visualCue: {
-        primaryTarget: "After 5 hours, lifting the foil reveals a shoulder that has visibly contracted and slumped. The skin looks pale and steamed. Juices in the pan are rich and fragrant.",
-        spectrum: [
-          { state: "Underdone", description: "Internal temperature below 85 C. Meat still holds its shape firmly and doesn't shred easily.", action: "Continue roasting. Do not rush — the collagen conversion is temperature-dependent, not time-dependent." },
-          { state: "Perfect",   description: "Meat falls in large shreds when probed with a fork. The bone can be wiggled freely. Juices run clear. Internal temp 90–95 C.", action: "Remove foil and blast the skin at high heat." },
-          { state: "Overdone",  description: "Meat has dried at the edges from oven heat despite the foil. Has lost some juiciness.", action: "Baste with the pan drippings and proceed to high-heat crisping immediately." },
-        ],
-      },
-      feelCue: "After 5 hours, press the shoulder through the foil with your hand — it should feel like a pillow of rendered fat and tender meat, completely yielding. No resistance means the collagen has done its work.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Origan séché",
+      "ratioValue": 12,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["slow_roasted_pernil"],
-      outputState: "finished_pernil",
-      instructions: "Remove the foil and increase oven to 230 C (450 F). Roast uncovered for 30–45 minutes, watching constantly, until the skin bubbles and shatters into golden cuerito (crackling). Rotate the pan every 10 minutes. The skin should go from pale and steamed to blistered and golden — listen for the crackling, popping sound.",
-      visualCue: {
-        primaryTarget: "The skin is a uniform golden-mahogany, completely blistered and puffed into individual crackling bubbles. It looks like a vast, crispy expanse of golden domes across the shoulder.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is still pale and chewy. Bubbles haven't formed in sections.", action: "Continue at high heat. If uneven, rotate the pan more frequently." },
-          { state: "Perfect",   description: "The entire skin surface is golden and blistered. Tapping with a knuckle makes a hollow crackle. The most coveted part of the dish — distribute fairly.", action: "Rest 15 minutes before carving." },
-          { state: "Overdone",  description: "Skin is very dark brown and edges are burning. Bitter smell.", action: "Tent loosely with foil and remove from oven immediately. Trim the darkest edges." },
-        ],
-      },
-      feelCue: "Tap the cuerito — it should sound like knocking on a hard-boiled egg shell, dry and resonant. Any soft, dull tapping sound means there are pockets that haven't crisped.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Rest",
-      inputs: ["finished_pernil"],
-      outputState: "rested_plated_pernil",
-      instructions: "Rest uncovered for 15 minutes. Carve by pulling the meat in large chunks with two forks — pernil should not be sliced, it should be pulled. Keep the cuerito intact and break it into pieces separately, distributing equitably. Serve with arroz con gandules and tostones.",
-      visualCue: {
-        primaryTarget: "Pulled pork in large, juicy shreds, dark with adobo. Broken cuerito pieces are golden-mahogany, shattering when pressed. Pan drippings are rich and orange-tinted.",
-        spectrum: [
-          { state: "Underdone", description: "Meat is sliced rather than pulled — holds together in firm chunks rather than yielding to forks.", action: "If meat needs slicing, return to the oven at 160 C for 30 more minutes." },
-          { state: "Perfect",   description: "Meat pulls in long, moist, fragrant shreds. Cuerito is golden and shatters. The pan drippings, drizzled over the meat, are the best sauce possible.", action: "Serve." },
-          { state: "Overdone",  description: "Cuerito has gone soft from the resting steam.", action: "Blast under the broiler for 2 minutes to re-crisp before serving." },
-        ],
-      },
-      feelCue: "The rested meat should pull apart in long shreds with essentially no resistance from two forks — if you have to tug hard, the shoulder needed another 30 minutes in the oven.",
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Poivre noir, grossièrement moulu",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 45,
+      "defaultUnit": "g",
+      "substitutions": [
+        "vinaigre blanc distillé",
+        "jus d'orange aigre"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Sazón (avec mélange achiote/culantro)",
+      "ratioValue": 12,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika fumé + cumin"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Coriandre fraîche aux tiges, hachée approximativement",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel de mer grossier (pour la peau)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "adobo_paste",
+      "instructions": "À l'aide d'un pilón (mortaire et peste) ou d'un robot culinaire, livrez l'ail, l'origan, le sel, le poivre et le cumin à une pâte brute. Ajouter le vinaigre et l'huile d'olive et mélanger à un adobo épais et piquant. Incorporer le sazón et la coriandre. La pâte doit être assez épaisse pour être enfoncée dans des incisions sans tomber.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, jaune-orange rugueuse, tachetée d'origan et de coriandre. Ail fort et arôme d'herbe. Assez épais pour tenir sa forme sur une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est toujours chunky et n'est pas complètement incorporé dans une pâte.",
+            "action": "Pound ou plus. Les morceaux d'ail brûlent au four et goûtent acrides."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte lisse avec un peu de texture. Une orange vive de sazón. De l'ail et des herbes.",
+            "action": "Appliquer immédiatement sur le porc."
+          },
+          {
+            "state": "Overdone",
+            "description": "S.O. — pâte brute.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "L'adobo doit se sentir assez épais pour se poser sur une cuillère — s'il glisse immédiatement, il est trop mince et va manquer des incisions plutôt que de rester en place."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "adobo_paste",
+        "ing_11"
+      ],
+      "outputState": "marinated_pernil",
+      "instructions": "Noter la peau dans un motif de croisement, couper la peau et la graisse mais pas la viande. À l'aide d'un couteau fin et tranchant, faire 20 à 30 incisions profondes sur toute la viande (sous et autour du rabat de peau) et pousser une quantité généreuse d'adobo dans chacun avec votre doigt. Frotter le reste de l'adobo sur toute la viande. Frotter le sel grossier sur toute la peau. Placer dans une poêle, côté peau, à découvert, au réfrigérateur pendant 24 à 36 heures.",
+      "visualCue": {
+        "primaryTarget": "Après la marination, la peau est sèche et pâle, les coupes croisées sont clairement visibles. La viande visible autour des bords de la peau est obscurcie depuis l'adobo.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Marié moins de 8 heures. La saveur d'Adobo ne sera qu'en surface, pas profonde.",
+            "action": "Le minimum de 24 heures est essentiel pour une épaule aussi grande. Planifiez-vous."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est sèche et mate après 24 heures. Les coupes croisées sont sèches aux bords. La viande exposée est profondément teintée avec la pâte d'adobo.",
+            "action": "Retirer du réfrigérateur 1 heure avant la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Marié au-delà de 48 heures.",
+            "action": "Toujours excellent — le pernil est très indulgent sur le temps de la mariation."
+          }
+        ]
+      },
+      "feelCue": "Au bout de 24 heures, faites glisser un doigt sur la peau — il devrait se sentir complètement sec, comme du papier épais. Toute humidité signifie que la peau ne craquera pas correctement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Rôtis",
+      "inputs": [
+        "marinated_pernil"
+      ],
+      "outputState": "slow_roasted_pernil",
+      "instructions": "Placer le côté peau de porc sur un rack dans une poêle à rôtir profonde. Ajouter 2 tasses d'eau au fond de la casserole. Couvrir soigneusement avec du papier. Faire rôtir à 160 C (325 F) pendant 5 à 6 heures (environ 1,5 heure par kilogramme). Le porc se fait lorsqu'un thermomètre à lecture instantanée lit 90 C (195 F) à la partie la plus épaisse — cette température assure que tout le collagène a été transformé en gélatine.",
+      "visualCue": {
+        "primaryTarget": "Après 5 heures, le lever révèle une épaule qui s'est visiblement contractée et s'est effondrée. La peau a l'air pâle et vapeur. Les jus dans la casserole sont riches et parfumés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Température intérieure inférieure à 85 C. La viande conserve sa forme fermement et ne déchiquete pas facilement.",
+            "action": "Continuez à rôtir. Ne vous précipitez pas — la conversion du collagène dépend de la température, et non du temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande tombe en gros morceaux lorsqu'elle est sonnée à l'aide d'une fourchette. L'os peut être wiggged librement. Les jus sont dégagés. Température interne 90-95 C.",
+            "action": "Retirer le papier et faire sauter la peau à feu vif."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande a séché aux bords de la chaleur du four malgré la feuille. Il a perdu un peu de jutosité.",
+            "action": "Badigeonner avec les gouttes d'eau de la casserole et procéder à un croustillant à haute chaleur immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Au bout de 5 heures, pressez l'épaule à travers la feuille de votre main — il devrait se sentir comme un oreiller de graisse fondue et de viande tendre, donnant complètement. Aucune résistance ne signifie que le collagène a fait son travail."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "slow_roasted_pernil"
+      ],
+      "outputState": "finished_pernil",
+      "instructions": "Retirer la feuille et augmenter le four à 230 C (450 F). Rôtir à découvert pendant 30 à 45 minutes, en observant constamment, jusqu'à ce que la peau bulle et se brise en cuerito doré. Faites tourner la poêle toutes les 10 minutes. La peau doit passer de pâle et vapeur à blister et dorée — écoutez le son crépitant et éclatant.",
+      "visualCue": {
+        "primaryTarget": "La peau est un uniforme mahogany doré, complètement cloquée et gonflée dans des bulles craquantes individuelles. Il ressemble à une vaste étendue croustillante de dômes dorés à travers l'épaule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore pâle et mâcheuse. Les bulles ne se sont pas formées en sections.",
+            "action": "Continuer à feu vif. En cas d'inégalité, faire tourner la poêle plus fréquemment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toute la surface de la peau est dorée et cloquée. Taper avec un noeud fait un craquement creux. La partie la plus convoitée du plat — distribuer équitablement.",
+            "action": "Reposez-vous 15 minutes avant la sculpture."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau est brun très foncé et les bords brûlent. Une odeur amère.",
+            "action": "Tente lâchement avec du papier et retirer immédiatement du four. Coupez les bords les plus sombres."
+          }
+        ]
+      },
+      "feelCue": "Tapez sur le cuerito — il devrait sonner comme frapper sur une coquille d'oeuf dur, sèche et résonante. Tout son doux et terne signifie qu'il y a des poches qui ne sont pas croquées."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Repos",
+      "inputs": [
+        "finished_pernil"
+      ],
+      "outputState": "rested_plated_pernil",
+      "instructions": "Repos à découvert pendant 15 minutes. Couper en tirant la viande en gros morceaux avec deux fourchettes — le pernil ne doit pas être tranché, il doit être tiré. Garder la cuerito intacte et la casser séparément, en la distribuant équitablement. Servir avec arroz con gandoles et tostones.",
+      "visualCue": {
+        "primaryTarget": "Poulet de porc en gros morceaux juteux, foncé avec adobo. Les morceaux de cuerito brisés sont dorés-mahogany, éclatant quand pressé. Les gouttes de pan sont riches et teintées d'orange.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est coupée au lieu d'être extraite — elle se tient en morceaux fermes plutôt que de céder à la fourchette.",
+            "action": "Si la viande doit être coupée, retourner au four à 160 °C pendant 30 minutes supplémentaires."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande tire dans des lambeaux longs, humides, parfumés. Cuerito est doré et brisé. Les gouttes d'eau de la casserole, arrosées sur la viande, sont la meilleure sauce possible.",
+            "action": "Servez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Cuerito est devenu doux de la vapeur de repos.",
+            "action": "Mettre le gril à l'eau pendant 2 minutes avant de recommencer à servir."
+          }
+        ]
+      },
+      "feelCue": "La viande reposée devrait se détacher en longs morceaux sans résistance de deux fourchettes, si vous devez tirer fort, l'épaule a besoin de 30 minutes au four."
+    }
+  ]
 };

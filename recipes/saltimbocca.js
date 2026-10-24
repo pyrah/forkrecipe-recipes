@@ -1,99 +1,246 @@
 export default {
-  repoId: "master_italian_saltimbocca_001",
-  parentRepoId: null,
-  slug: "saltimbocca",
-  author: "ForkRecipe Kitchen",
-  title: "Saltimbocca alla Romana",
-  description: "Veal escalopes blanketed with prosciutto and sage, sautéed in butter until the ham crackles and the white wine pan sauce clings to every fold.",
-  cuisine: "Italian",
-  culture: "Roman",
-  category: "proteins",
-  tags: ["veal", "italian", "roman", "prosciutto", "sage", "pan-sauce", "quick"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 4, sour: 1, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Veal escalopes (noce or fesa), 150 g each",   ratioValue: 300,  defaultUnit: "g",  substitutions: ["chicken breast pounded thin", "pork loin escalopes"] },
-    { ingId: "ing_02", role: "Protein",   name: "Prosciutto crudo, sliced paper-thin",          ratioValue: 60,   defaultUnit: "g",  substitutions: ["speck", "San Daniele prosciutto"] },
-    { ingId: "ing_03", role: "Herb",      name: "Fresh sage leaves (2–3 per escalope)",         ratioValue: 8,    defaultUnit: "pcs", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter",                              ratioValue: 40,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Solvent",   name: "Dry white wine (Frascati or Pinot Grigio)",    ratioValue: 80,   defaultUnit: "ml", substitutions: ["dry vermouth", "dry Marsala (changes character)"] },
-    { ingId: "ing_06", role: "Starch",    name: "All-purpose flour, for dusting",               ratioValue: 20,   defaultUnit: "g",  substitutions: ["rice flour for gluten-free"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine sea salt",                                ratioValue: 2,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "White pepper, freshly ground",                 ratioValue: 1,    defaultUnit: "g",  substitutions: ["black pepper"] },
+  "repoId": "master_italian_saltimbocca_001",
+  "parentRepoId": null,
+  "slug": "saltimbocca",
+  "author": "ForkRecipe Kitchen",
+  "title": "Saltimbocca alla Romana",
+  "description": "Escalopes de veau recouvertes de prosciutto et de sauge, sautées dans du beurre jusqu'à ce que le jambon craque et la sauce à vin blanc s'accroche à chaque pli.",
+  "cuisine": "Italien",
+  "culture": "Romain",
+  "category": "proteins",
+  "tags": [
+    "Viande bovine",
+    "Italien",
+    "romaine",
+    "prosciutto",
+    "Sauge",
+    "pan-sauce",
+    "Vite"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Pound",
-      inputs: ["ing_01"],
-      outputState: "thin_escalopes",
-      instructions: "Place each veal escalope between two sheets of plastic wrap. Using the flat face of a meat mallet or the bottom of a heavy pan, pound with firm, even strokes from the center outward — not vertical blows that tear the meat, but angled slides that stretch the fibers. Target 5–6 mm thickness, roughly even across the whole escalope. Season lightly with white pepper only — the prosciutto will provide all the salt needed.",
-      visualCue: {
-        primaryTarget: "Translucent pale pink escalopes of even thickness. The surface has a slightly rough, matte texture from the pounding. No holes or tears.",
-        spectrum: [
-          { state: "Underdone", description: "Uneven surface with thick ridges. Center still 1 cm+, edges thin and ragged. Will cook unevenly.", action: "Continue pounding from the thick center outward, working with the grain of the meat." },
-          { state: "Perfect",   description: "Even 5–6 mm throughout. Pale pink, slightly translucent at the thinnest point. Surface has a pleasingly roughened texture that will grip the flour.", action: "Lay flat and prepare the prosciutto-sage topping." },
-          { state: "Overdone",  description: "Holes torn through the escalope. Meat has shredded at the edges.", action: "Overlap torn sections and press together — the prosciutto will hold them. Very thin sections may cook too fast; watch carefully." },
-        ],
-      },
-      feelCue: "The pounded escalope should feel almost like a piece of chamois leather — supple, thin, and slightly resistant to tearing. No part should feel thick and stiff when you fold it.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Escalopes de veau (noce ou fesa), 150 g chacune",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poitrine de poulet pillée mince",
+        "Escalopes des longes de porc"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Assemble",
-      inputs: ["thin_escalopes", "ing_02", "ing_03", "ing_06", "ing_07"],
-      outputState: "assembled_saltimbocca",
-      instructions: "Lay 2–3 sage leaves flat on the top (smooth) side of each escalope. Drape one or two slices of prosciutto over to cover the sage and the entire escalope surface — the ham must extend slightly beyond the meat edges. Secure with one or two wooden toothpicks pierced at an angle through ham, sage, and meat. Season the underside (veal side) very lightly with salt only. Dust the veal side in flour and pat off all excess — you want a gossamer coating, not a thick crust.",
-      visualCue: {
-        primaryTarget: "A neat parcel: prosciutto smooth on top, sage sandwiched between, toothpicks horizontal and flush. The floured veal underside looks matte and dry with no wet patches.",
-        spectrum: [
-          { state: "Underdone", description: "Prosciutto bunching up and pulling away from the edges. Sage not secured. Excess flour coating that looks thick and doughy.", action: "Re-drape the prosciutto and add a toothpick at each edge. Pat the flour firmly to knock off any excess." },
-          { state: "Perfect",   description: "Prosciutto flat and taut against the veal. Sage visible as a green shadow through the translucent ham. Flour coating is so thin it barely shows.", action: "Refrigerate for 10 minutes to firm up before searing — cold prosciutto holds better in the pan." },
-          { state: "Overdone",  description: "Over-floured — thick white coating visible, wet in patches where it has absorbed moisture from the meat.", action: "Pat vigorously to remove excess. Thick flour coats cook to a gummy paste, not a crisp crust." },
-        ],
-      },
-      feelCue: "Lift an assembled escalope — it should feel light and flat with the prosciutto fitting like a second skin. Press the ham edge: it should adhere rather than slide.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Prosciutto crudo, en tranches de papier-fin",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tache",
+        "San Daniele prosciutto"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sauté",
-      inputs: ["assembled_saltimbocca", "ing_04"],
-      outputState: "sauteed_saltimbocca",
-      instructions: "Heat a large stainless or carbon steel pan over medium-high heat. Add butter and let it foam and subside — when the first wisps of color appear in the butter, it is ready. Place escalopes prosciutto-side down. Press them flat with a spatula for the first 10 seconds to ensure full contact. Cook prosciutto-side for 2–3 minutes until the ham crackles and has rendered its fat into the butter. Flip and cook the veal side for just 60–90 seconds — veal is lean and overcooks in moments.",
-      visualCue: {
-        primaryTarget: "Prosciutto side: golden-copper and slightly crinkled at the edges, having rendered its fat. Veal side: barely golden, still showing pale color in the center.",
-        spectrum: [
-          { state: "Underdone", description: "Prosciutto is still floppy and pale pink. No crisping, no fat rendering. Sage not yet fragrant.", action: "Continue — you need 1–2 more minutes of contact heat. Ensure pan is truly hot before adding the next batch." },
-          { state: "Perfect",   description: "Prosciutto edges are deeply golden and crinkled-crisp, releasing a nutty-salty aroma. The sage leaves beneath have turned translucent jade. The veal side is just barely seared.", action: "Transfer to a warm plate. Remove toothpicks." },
-          { state: "Overdone",  description: "Prosciutto is dark brown and chewy-hard. Veal has become dry and fibrous. Pan butter has burnt.", action: "Salvage with extra sauce. Wipe the pan, add fresh butter, and deglaze more gently." },
-        ],
-      },
-      feelCue: "Press the center of a cooking escalope — it should feel like a firm but yielding pillow, not rigid. The prosciutto side should crackle slightly when you press it, like stiff paper.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Feuilles fraîches de sauge (2–3 par escalope)",
+      "ratioValue": 8,
+      "defaultUnit": "pcs",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Deglaze",
-      inputs: ["sauteed_saltimbocca", "ing_05", "ing_04"],
-      outputState: "finished_saltimbocca",
-      instructions: "Remove the escalopes to a warm plate. Over high heat, pour the wine into the still-hot pan and immediately scrape up the browned bits from the base — these are the flavor. Let the wine reduce by half, about 90 seconds of vigorous bubbling. Remove from heat, add a cold knob of butter, and swirl constantly until the sauce becomes glossy and emulsified. Pour over the escalopes immediately. The dish is best eaten within 3 minutes of plating.",
-      visualCue: {
-        primaryTarget: "A thin, glossy amber pan sauce with no separation. It coats the back of a spoon and falls in a slow ribbon, not a splash.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is watery and thin, wine flavor raw and sharp. Not yet reduced. Pooling on the plate rather than coating.", action: "Return to high heat for another 30–45 seconds. Do not add butter until the wine has concentrated." },
-          { state: "Perfect",   description: "Reduced to a light syrup, deeply golden with a rounded wine aroma. Butter has emulsified into a glossy, just-cohesive sauce.", action: "Pour immediately over the escalopes — the sauce breaks and loses its emulsion as it cools." },
-          { state: "Overdone",  description: "Sauce reduced too far and is sticky, bordering on caramel. Flavor is sharp and one-dimensional.", action: "Add a tablespoon of cold water and swirl — this will thin it back toward a sauce consistency." },
-        ],
-      },
-      feelCue: "Dip a spoon into the finished sauce and turn it over — it should coat the metal in a thin, even film that holds for 2–3 seconds before starting to run. If it sheets off instantly, it needs more reduction.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Solvent",
+      "name": "Vin blanc sec (Frascati ou Pinot Grigio)",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vermouth sec",
+        "Marsala sec (changement de caractère)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Starch",
+      "name": "Farine à usage général, pour la dépoussiérage",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "farine de riz sans gluten"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre blanc, fraîchement moulu",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivre noir"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "thin_escalopes",
+      "instructions": "Placez chaque escalope de veau entre deux feuilles d'enveloppe plastique. En utilisant la face plate d'un maillet de viande ou le fond d'une poêle lourde, livrez avec ferme, même les coups du centre vers l'extérieur — non pas des coups verticaux qui déchirent la viande, mais des toboggans inclinés qui étirent les fibres. Cibler de 5 à 6 mm d'épaisseur, à peu près même sur toute l'escalope. Assaisonner légèrement avec du poivre blanc seulement — le prosciutto fournira tout le sel nécessaire.",
+      "visualCue": {
+        "primaryTarget": "Escalopes translucides rose pâle d'épaisseur uniforme. La surface a une texture légèrement rugueuse et mate du pilonnage. Pas de trous ni de larmes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Surface inégale avec des crêtes épaisses. Centrer encore 1 cm+, les bords minces et raclés. Elle cuisine mal.",
+            "action": "Continuer à frapper du centre épais vers l'extérieur, en travaillant avec le grain de la viande."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même 5 à 6 mm. Rose pâle, légèrement translucide au point le plus mince. La surface a une texture agréablement rugueuse qui va saisir la farine.",
+            "action": "Poser à plat et préparer la garniture de prosciutto-sage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trous déchirés par l'escalope. La viande a été déchiquetée aux bords.",
+            "action": "Surplombez les sections déchirées et appuyez ensemble — le prosciutto les tiendra. Les sections très fines peuvent cuire trop vite; veillez bien."
+          }
+        ]
+      },
+      "feelCue": "L'escalope piquée devrait ressembler presque à un morceau de cuir chamois — souple, mince et légèrement résistant à la déchirure. Aucune partie ne doit se sentir épaisse et raide lorsque vous la pliez."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Assemblage",
+      "inputs": [
+        "thin_escalopes",
+        "ing_02",
+        "ing_03",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "assembled_saltimbocca",
+      "instructions": "Placer 2 à 3 feuilles de sauge à plat sur le côté supérieur de chaque escalope. Drapez une ou deux tranches de prosciutto pour couvrir la sauge et toute la surface de l'escalope — le jambon doit s'étendre légèrement au-delà des bords de la viande. Sécuriser avec un ou deux cure-dents en bois percés à un angle à travers le jambon, la sauge et la viande. Assaisonner le dessous (côté veau) très légèrement avec du sel seulement. Poussez le côté veau dans la farine et arrosez tout excès — vous voulez un revêtement de gossamer, pas une croûte épaisse.",
+      "visualCue": {
+        "primaryTarget": "Une parcelle soignée : prosciutto lisse sur le dessus, sauge sandwichée entre les cure-dents horizontaux et flush. Le veau fariné semble mat et sec sans tache humide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le prosciutto se rassemble et s'éloigne des bords. Sauge non sécurisée. Excédent de revêtement de farine qui semble épais et pâteux.",
+            "action": "Retirez le prosciutto et ajoutez un cure-dent à chaque bord. Patientez fermement la farine pour éliminer tout excès."
+          },
+          {
+            "state": "Perfect",
+            "description": "Prosciutto plat et tendu contre le veau. Sauge visible comme une ombre verte à travers le jambon translucide. Le revêtement de la farine est si mince qu'il est à peine visible.",
+            "action": "Réfrigérer pendant 10 minutes avant la mise en mer, le prosciutto froid tient mieux dans la poêle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Suralimenté — revêtement blanc épais visible, humide dans des zones où il a absorbé l'humidité de la viande.",
+            "action": "Pat vigoureusement pour éliminer l'excès. Les couches de farine épaisse font cuire à une pâte gommée, pas une croûte croustillante."
+          }
+        ]
+      },
+      "feelCue": "Soulever un escalope assemblé — il devrait se sentir léger et plat avec le prosciutto en forme de seconde peau. Appuyez sur le bord du jambon : il devrait adhérer plutôt que de glisser."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saucisse",
+      "inputs": [
+        "assembled_saltimbocca",
+        "ing_04"
+      ],
+      "outputState": "sauteed_saltimbocca",
+      "instructions": "Chauffer une grande poêle en acier inoxydable ou au carbone à feu moyen-élevé. Ajoutez le beurre et laissez-le mousser et laisser tomber — quand les premières lucarnes de couleur apparaissent dans le beurre, il est prêt. Placez les escalopes côté prosciutto vers le bas. Appuyez sur eux à plat avec une spatule pendant les 10 premières secondes pour assurer un contact complet. Faire cuire le prosciutto pendant 2 à 3 minutes jusqu'à ce que le jambon craque et qu'il ait rendu sa graisse dans le beurre. Flip et cuire le côté veau pendant seulement 60 à 90 secondes — le veau est maigre et surcuit en quelques instants.",
+      "visualCue": {
+        "primaryTarget": "Côté prosciutto : Cuivre doré et légèrement rincé aux bords, ayant rendu sa graisse. Côté veau : à peine doré, toujours pâle au centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le prosciutto est encore flopé et rose pâle. Pas de croustillant, pas de gras. Sauge pas encore parfumée.",
+            "action": "Continuez — vous avez besoin de 1 à 2 minutes de plus de chaleur de contact. Assurez-vous que la poêle est vraiment chaude avant d'ajouter le prochain lot."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords du prosciutto sont profondément dorés et rincés, libérant un arôme de noix-sel. Les feuilles de sauge en dessous ont changé de jade translucide. Le côté veau est tout juste à peine merdé.",
+            "action": "Transférer dans une assiette chaude. Enlever les cure-dents."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le prosciutto est brun foncé et dur à mâcher. Le veau est devenu sec et fibreux. Le beurre de pan a brûlé.",
+            "action": "Saluvage avec sauce supplémentaire. Essuyer la poêle, ajouter le beurre frais et déglacer plus doucement."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le centre d'un escalope de cuisson — il devrait se sentir comme un oreiller ferme mais donnant, pas rigide. Le côté prosciutto devrait craquer légèrement lorsque vous appuyez dessus, comme du papier rigide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Déglacement",
+      "inputs": [
+        "sauteed_saltimbocca",
+        "ing_05",
+        "ing_04"
+      ],
+      "outputState": "finished_saltimbocca",
+      "instructions": "Retirez les escalopes dans une assiette chaude. À feu vif, versez le vin dans la poêle encore chaude et grattez immédiatement les morceaux brunis de la base — voilà la saveur. Laisser le vin réduire de moitié, environ 90 secondes de bouillonnement vigoureux. Retirer du feu, ajouter un bouton froid de beurre et tourner constamment jusqu'à ce que la sauce soit brillante et émulsifiée. Versez sur les escalopes immédiatement. Le plat est mieux mangé dans les 3 minutes suivant le placage.",
+      "visualCue": {
+        "primaryTarget": "Une sauce ambre fine et brillante sans séparation. Elle enveloppe l'arrière d'une cuillère et tombe dans un ruban lent, pas une éclaboussure.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est aqueuse et fine, saveur de vin crue et nette. Pas encore réduit. Mise en commun sur la plaque plutôt que sur le revêtement.",
+            "action": "Revenez à la chaleur élevée pendant 30 à 45 secondes. N'ajoutez pas de beurre tant que le vin n'est pas concentré."
+          },
+          {
+            "state": "Perfect",
+            "description": "Réduit à un sirop léger, profondément doré avec un arôme de vin arrondi. Le beurre s'est émulsionné dans une sauce cohésive brillante.",
+            "action": "Verser immédiatement sur les escalopes — la sauce casse et perd son émulsion en refroidissant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sauce réduite trop loin et collante, bordant le caramel. L'arôme est aigu et unidimensionnel.",
+            "action": "Ajouter une cuillère à soupe d'eau froide et faire un tourbillon, ce qui l'éclaircira vers une consistance de sauce."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère dans la sauce finie et retournez-la – elle devrait enrober le métal dans un film mince, même qui tient pendant 2-3 secondes avant de commencer à courir. S'il s'enlève instantanément, il faut plus de réduction."
+    }
+  ]
 };

@@ -1,101 +1,271 @@
 export default {
-  repoId: "master_malaysian_nasilemak_001",
-  parentRepoId: null,
-  slug: "nasi-lemak",
-  author: "ForkRecipe Kitchen",
-  title: "Nasi Lemak",
-  description: "Malaysia's national morning: jasmine rice cooked in coconut milk with pandan leaf until each grain is individually rich and perfumed, served with a deep, caramelised sambal, crunchy fried anchovies, and roasted peanuts — an architecture of contrasts in a single bowl.",
-  cuisine: "Malaysian",
-  culture: "Malay",
-  category: "grains",
-  tags: ["rice", "coconut", "sambal", "anchovies", "peanuts", "malaysian", "breakfast"],
-  difficulty: 3,
-  activeTime: "35 min",
-  totalTime: "1 hour",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 4, sour: 2, bitter: 1, umami: 3, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Jasmine rice, rinsed",             ratioValue: 4,   defaultUnit: "parts", substitutions: ["long-grain rice"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Full-fat coconut milk",            ratioValue: 2,   defaultUnit: "parts", substitutions: ["coconut cream thinned with water"] },
-    { ingId: "ing_03", role: "Aromatic",   name: "Pandan leaves, knotted",           ratioValue: 0.1, defaultUnit: "parts", substitutions: ["a drop of pandan extract"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine salt",                        ratioValue: 0.05,defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Protein",    name: "Dried anchovies (ikan bilis)",      ratioValue: 1,   defaultUnit: "parts", substitutions: ["dried shrimp"] },
-    { ingId: "ing_06", role: "Protein",    name: "Roasted peanuts",                  ratioValue: 1,   defaultUnit: "parts", substitutions: ["roasted cashews"] },
-    { ingId: "ing_07", role: "Heat",       name: "Dried red chilies, soaked and blended", ratioValue: 0.5, defaultUnit: "parts", substitutions: ["sambal oelek"] },
-    { ingId: "ing_08", role: "Allium",     name: "Shallots, blended",                ratioValue: 0.5, defaultUnit: "parts", substitutions: ["red onion"] },
-    { ingId: "ing_09", role: "Fat",        name: "Neutral oil",                      ratioValue: 0.3, defaultUnit: "parts", substitutions: ["coconut oil"] },
-    { ingId: "ing_10", role: "Sweetener",  name: "Palm sugar (gula Melaka)",         ratioValue: 0.2, defaultUnit: "parts", substitutions: ["brown sugar", "dark muscovado"] },
+  "repoId": "master_malaysian_nasilemak_001",
+  "parentRepoId": null,
+  "slug": "nasi-lemak",
+  "author": "ForkRecipe Kitchen",
+  "title": "Nasi Lemak",
+  "description": "Le matin national malaisien : du riz jasmin cuit dans du lait de coco à la feuille de pandane jusqu'à ce que chaque grain soit individuellement riche et parfumé, servi avec un sambal profond caramélisé, des anchois croustillants frits et des arachides grillées, une architecture de contrastes dans un seul bol.",
+  "cuisine": "Malaisien",
+  "culture": "Malay",
+  "category": "grains",
+  "tags": [
+    "riz",
+    "noix de coco",
+    "sambal",
+    "anchois",
+    "Cacahuètes",
+    "Malaysian",
+    "Petit déjeuner"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "35 min",
+  "totalTime": "1 hour",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "coconut_rice",
-      instructions: "Combine rinsed rice, coconut milk, pandan leaves, and salt in a heavy saucepan. Add enough water so the total liquid sits exactly 1.5 cm above the rice surface. Bring to a boil over medium heat, stir once, then immediately reduce to the lowest possible heat, cover tightly, and cook for 12 minutes. Remove from heat and steam, undisturbed, for 10 more minutes. Remove pandan before serving.",
-      visualCue: {
-        primaryTarget: "Grains are separate, glossy, and slightly translucent at the edges. A faint coconut-pandan scent fills the room.",
-        spectrum: [
-          { state: "Underdone", description: "Rice is chalky and hard at the centre. Liquid still visible on top.", action: "Replace lid and cook 5 more minutes on lowest heat, then re-steam." },
-          { state: "Perfect",   description: "Each grain separate and slightly sticky, glistening with coconut fat. No liquid remains. The pan smells of warm pandan and coconut cream.", action: "Fluff with a fork and rest 5 minutes before serving." },
-          { state: "Overdone",  description: "Bottom layer is stuck and browning. Grains at top are mushy.", action: "Scrape the soft top layer into a serving dish. The bottom crust (kerak) is actually prized — a bonus, not a failure." },
-        ],
-      },
-      feelCue: "A grain pressed between thumb and finger should collapse without resistance but leave a clean, dry smear — not a wet paste.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz jasmin, rincé",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "riz à grains longs"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fry",
-      inputs: ["ing_09", "ing_05"],
-      outputState: "crispy_anchovies",
-      instructions: "Heat oil in a wok until shimmering (about 175 C). Add dried anchovies in a single layer and fry, stirring constantly, for 3–5 minutes until deep golden and crunchy throughout. Remove with a slotted spoon and drain on paper. They will continue to crisp as they cool. In the same oil, fry peanuts for 2 minutes until golden. Drain separately.",
-      visualCue: {
-        primaryTarget: "Anchovies are uniform deep gold, curled, dry, and audibly crunchy when tapped with a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Anchovies are pale and flexible, bending without snapping. Still taste fishy and raw.", action: "Return to oil for 1–2 more minutes — they need to fully dehydrate." },
-          { state: "Perfect",   description: "Deep amber, completely rigid, shattering when bitten. Savory-sweet fried fish smell.", action: "Drain immediately — they brown quickly from residual heat." },
-          { state: "Overdone",  description: "Dark brown, bitter, burnt-fish smell.", action: "Discard. They will make the dish unpleasantly bitter. Start a fresh batch." },
-        ],
-      },
-      feelCue: "Pick up a single anchovy and bend it — at perfect doneness it snaps clean, like a pretzel stick, with no bend at all.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Lait de coco plein gras",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème de coco éclaircie avec de l'eau"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Caramelize",
-      inputs: ["ing_09", "ing_07", "ing_08", "ing_10"],
-      outputState: "sambal",
-      instructions: "In the same wok (add oil if needed), fry blended shallots and chili paste over medium heat, stirring constantly, for 12–15 minutes. The paste will sputter, darken, and shrink dramatically. Add palm sugar and continue to cook, scraping the bottom, for 5 more minutes until the sambal is very dark brick-red, glossy, and the oil has separated back to the surface. Season with salt and a small squeeze of tamarind if available.",
-      visualCue: {
-        primaryTarget: "A deep, glossy brick-red paste that holds its shape on a spoon and has visible oil glistening around the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is still wet-looking and orange. Smells raw and sharp. Watery liquid still cooking off.", action: "Continue on medium heat, stirring constantly — the colour change happens in the last few minutes." },
-          { state: "Perfect",   description: "Dark, jammy, brick-red with black edges at the pan. Oil pools around the sambal. Sweet, spicy, caramel smell.", action: "Remove from heat and taste for salt and sugar balance." },
-          { state: "Overdone",  description: "Very dark, almost black, sharp bitter burnt-chili smell.", action: "Add a tablespoon of water and a pinch of sugar and stir over low heat to bring it back from the edge." },
-        ],
-      },
-      feelCue: "A spoonful dropped on a cold plate should hold a mound for a moment before very slowly spreading — it should not run or pool immediately.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Feuilles de pandan, nouées",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une goutte d'extrait de pandan"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["coconut_rice", "sambal", "crispy_anchovies", "ing_06"],
-      outputState: "finished_nasi_lemak",
-      instructions: "Mound coconut rice in the centre of a banana leaf or plate. Add a generous spoonful of sambal alongside. Scatter fried anchovies and roasted peanuts over and around. Classic accompaniments include half a hard-boiled egg and sliced cucumber. Serve immediately — the contrast of hot rice, room-temperature sambal, and crunchy toppings is the point.",
-      visualCue: {
-        primaryTarget: "White rice mound flanked by dark brick-red sambal, golden anchovies, and pale peanuts — a complete tonal spectrum on one plate.",
-        spectrum: [
-          { state: "Underdone", description: "Sambal is too wet and soaks into the rice before eating. Anchovies have gone soft.", action: "Next time, keep sambal and toppings completely separate until the moment of serving." },
-          { state: "Perfect",   description: "Each component is distinct — soft rice, glossy sambal that stays put, shatteringly crunchy anchovies, firm peanuts.", action: "Serve." },
-          { state: "Overdone",  description: "Left assembled too long — all components have merged into a single soggy mass.", action: "For catering, keep components separate and assemble to order." },
-        ],
-      },
-      feelCue: "Drag a spoon through the assembled plate — rice should be yielding, sambal should resist and stay put, and the anchovies should crunch audibly when compressed.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Protein",
+      "name": "Anchovies séchées (ikan bilis)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crevettes séchées"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Cacahuètes grillées",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "noix de cajou grillées"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Heat",
+      "name": "Piments rouges séchés, trempés et mélangés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sambal oelek"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Échalotes, mélangées",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon rouge"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Huile de coco"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Sweetener",
+      "name": "Sucre de palme (gula Melaka)",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun",
+        "muscovado foncé"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "coconut_rice",
+      "instructions": "Mélanger le riz rincé, le lait de coco, les feuilles de pandan et le sel dans une casserole lourde. Ajouter suffisamment d'eau pour que le liquide total se trouve exactement à 1,5 cm au-dessus de la surface du riz. Porter à ébullition à feu moyen, remuer une fois, puis réduire immédiatement au plus bas feu possible, couvrir soigneusement et cuire 12 minutes. Retirer du feu et de la vapeur, non perturbé, pendant 10 minutes de plus. Retirer le pandan avant de servir.",
+      "visualCue": {
+        "primaryTarget": "Les grains sont séparés, brillants et légèrement translucides aux bords. Un faible parfum de noix de coco-pandan remplit la pièce.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz est crayeux et dur au centre. Liquide encore visible sur le dessus.",
+            "action": "Remplacez le couvercle et faites cuire 5 minutes de plus à feu minimum, puis rééquipez."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain se sépare et légèrement collant, scintille avec de la graisse de noix de coco. Aucun liquide ne reste. La poêle sent le pandan chaud et la crème de coco.",
+            "action": "Arroser avec une fourchette et reposer 5 minutes avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La couche inférieure est collée et brunie. Les grains en haut sont moelleux.",
+            "action": "Gratter la couche supérieure douce dans un plat de service. La croûte inférieure (kerak) est en fait prisée — un bonus, pas un échec."
+          }
+        ]
+      },
+      "feelCue": "Un grain pressé entre le pouce et le doigt devrait s'effondrer sans résistance, mais laisser un frottis propre et sec — pas une pâte humide."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "ing_09",
+        "ing_05"
+      ],
+      "outputState": "crispy_anchovies",
+      "instructions": "Chauffer l'huile dans un wok jusqu'à ce qu'elle mijote (environ 175 C). Ajouter les anchois séchés en une seule couche et faire frire, en remuant constamment, pendant 3 à 5 minutes jusqu'à ce qu'ils soient dorés et croquants. Retirer avec une cuillère à fentes et égoutter sur du papier. Ils continueront à croquer à mesure qu'ils refroidiront. Dans la même huile, faire frire les cacahuètes pendant 2 minutes jusqu'à ce qu'elles soient dorées. Égoutter séparément.",
+      "visualCue": {
+        "primaryTarget": "Les anchois sont uniformes en or profond, enroulés, secs et audiquement croquants lorsqu'ils sont tapés avec une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les anchois sont pâles et flexibles, pliant sans craquer. Toujours goûteux et cru.",
+            "action": "Retourner à l'huile pendant 1 à 2 minutes de plus — ils doivent complètement déshydrater."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profond, complètement rigide, éclatant quand mordu. Une odeur de poisson frit.",
+            "action": "Égoutter immédiatement — ils brunissent rapidement de la chaleur résiduelle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé, amer, odeur de poisson brûlé.",
+            "action": "Jetez. Ils rendront le plat désagréablement amer. Commencez un nouveau lot."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une seule anchois et pliez - à la fin parfaite, il claque propre, comme un bretzel stick, sans plissement du tout."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Caramélisation",
+      "inputs": [
+        "ing_09",
+        "ing_07",
+        "ing_08",
+        "ing_10"
+      ],
+      "outputState": "sambal",
+      "instructions": "Dans le même wok (ajouter de l'huile si nécessaire), faire revenir les échalotes mélangées et la pâte de chili à feu moyen, en remuant constamment pendant 12 à 15 minutes. La pâte crachera, s'assombrira et se rétrécira considérablement. Ajouter le sucre de palme et continuer à cuire, grattant le fond, pendant 5 minutes jusqu'à ce que le sambal soit très foncé rouge brique, brillant, et l'huile a séparé à la surface. Assaisonner avec du sel et une petite pression de tamarin si disponible.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rouge brique profonde et brillante qui tient sa forme sur une cuillère et a l'huile visible scintille autour des bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore humide et orange. Sens brut et vif. Un liquide aqueux continue de cuisiner.",
+            "action": "Continuer à feu moyen en remuant constamment — le changement de couleur se produit dans les dernières minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dark, jammy, rouge brique avec des bords noirs à la poêle. Des piscines pétrolières autour du sambal. Douce, épicée, odeur de caramel.",
+            "action": "Retirer du feu et goûter au sel et à l'équilibre sucre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très foncé, presque noir, amer vif odeur de chili brûlé.",
+            "action": "Ajouter une cuillère à soupe d'eau et une pincée de sucre et remuer à feu doux pour la ramener du bord."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère qui tombe sur une assiette froide devrait tenir un monticule un instant avant de s'étendre très lentement — il ne devrait pas courir ou s'accumuler immédiatement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "coconut_rice",
+        "sambal",
+        "crispy_anchovies",
+        "ing_06"
+      ],
+      "outputState": "finished_nasi_lemak",
+      "instructions": "Riz de coco fondu au centre d'une feuille de banane ou d'une assiette. Ajouter une cuillère généreuse de sambal à côté. Des anchois frits et des cacahuètes grillées. Les accompagnements classiques comprennent un demi-œuf dur et du concombre tranché. Servir immédiatement — le contraste entre le riz chaud, le sambal à température ambiante et les garnitures croquantes est le point.",
+      "visualCue": {
+        "primaryTarget": "Le monticule de riz blanc flanqué de sambal rouge brique foncé, d'anchois dorés et de cacahuètes pâles — un spectre tonal complet sur une assiette.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sambal est trop humide et trempe dans le riz avant de manger. Les anchois sont devenus mous.",
+            "action": "La prochaine fois, gardez le sambal et les garnitures complètement séparées jusqu'au moment de servir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque composant est distinct: riz doux, sambal brillant qui reste mis, anchois croustillants et fermes.",
+            "action": "Servez."
+          },
+          {
+            "state": "Overdone",
+            "description": "A gauche, trop longtemps — tous les composants se sont fusionnés en une seule masse de gazon.",
+            "action": "Pour la restauration, gardez les composants séparés et assemblez sur commande."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère dans l'assiette assemblée — le riz doit être livré, le sambal doit résister et rester mis, et les anchois doivent croquer audiblement en cas de compression."
+    }
+  ]
 };

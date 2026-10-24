@@ -1,90 +1,194 @@
 export default {
-  repoId: "master_continental_homemade_yogurt_001",
-  parentRepoId: null,
-  slug: "yogurt",
-  author: "ForkRecipe Kitchen",
-  title: "Homemade Yogurt",
-  description: "Whole milk scalded, cooled to blood heat, and seeded with a spoonful of live culture, then left to sleep in its own warmth until it sets into a trembling, tangy custard — pure white, clean-smelling, and faintly sweet, the everyday miracle of two ingredients turning into one.",
-  cuisine: "Continental",
-  culture: "Central European",
-  category: "fermented",
-  tags: ["yogurt", "fermented", "cultured-dairy", "probiotic", "two-ingredient", "vegetarian"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "10 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 1, salty: 0, sour: 3, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",    name: "Whole milk (not ultra-pasteurized)", ratioValue: 100, defaultUnit: "parts", substitutions: ["2% milk for a thinner set", "goat's milk for a tangier, softer curd"] },
-    { ingId: "ing_02", role: "Binder",  name: "Plain live-culture yogurt (active cultures, as starter)", ratioValue: 4, defaultUnit: "parts", substitutions: ["a freeze-dried yogurt culture sachet (follow packet dose)"] },
-    { ingId: "ing_03", role: "Dairy",   name: "Nonfat dry milk powder (optional, for a thicker set)", ratioValue: 3, defaultUnit: "parts", substitutions: ["omit for a looser, pourable yogurt"] },
+  "repoId": "master_continental_homemade_yogurt_001",
+  "parentRepoId": null,
+  "slug": "yogurt",
+  "author": "ForkRecipe Kitchen",
+  "title": "Yogurt fait maison",
+  "description": "Le lait entier scaldé, refroidi à la chaleur du sang et ensemencé d'une cuillerée de culture vivante, puis laissé dormir dans sa propre chaleur jusqu'à ce qu'il se mette en une crème tremblante, tannante — blanc pur, propre et légèrement sucré, le miracle quotidien de deux ingrédients se transformant en un seul.",
+  "cuisine": "Continental",
+  "culture": "Europe centrale",
+  "category": "fermented",
+  "tags": [
+    "yaourt",
+    "fermenté",
+    "culture-dairy",
+    "probiotique",
+    "deux ingrédients",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "10 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 0,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Scald",
-      inputs: ["ing_01", "ing_03"],
-      outputState: "scalded_milk",
-      instructions: "Whisk the optional milk powder into the cold milk to dissolve any lumps, then pour into a heavy-bottomed pot. Heat over medium, stirring often and scraping the bottom so it doesn't catch, until the milk reaches 180 to 185°F (82 to 85°C) — just below a boil, with steam rising and a fine ring of foam at the edge. Hold it there for 5 minutes. This step is not about killing bacteria; it denatures the whey proteins so they cross-link into a thick, set curd instead of a thin, weepy one.",
-      visualCue: {
-        primaryTarget: "Wisps of steam lift off a glassy surface, a delicate skin starts to form at the rim, and the first tiny bubbles break at the edges without a rolling boil.",
-        spectrum: [
-          { state: "Underdone", description: "The milk is warm but flat and silent, no steam or foam, well under 180°F on the thermometer.", action: "Keep heating and stirring. Don't rush the heat too high or the bottom scorches — medium is right." },
-          { state: "Perfect",   description: "Steady steam, a foamy ring around the edge, and the thermometer parked at 180 to 185°F. The milk smells faintly sweet and cooked, like the top of warm rice pudding.", action: "Hold 5 minutes at temperature, then pull off the heat to cool." },
-          { state: "Overdone",  description: "The milk has boiled over or a tough, leathery skin and browned, scorched bits have formed on the bottom.", action: "Strain out the skin and do NOT scrape the scorched bottom into the pot. A faint cooked note is fine; an acrid burnt one will carry through, so if badly scorched, start over." },
-        ],
-      },
-      feelCue: "Drag the spoon across the bottom — at temperature you'll feel it just starting to grip and thicken almost imperceptibly. The smell shifts from raw and milky to sweet and cooked.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Lait entier (non pasteurisé)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "2% de lait pour un ensemble plus mince",
+        "Lait de chèvre pour un caillé plus tangier et plus doux"
+      ]
     },
     {
-      nodeId: "step_2", action: "Temper",
-      inputs: ["scalded_milk"],
-      outputState: "cooled_milk",
-      instructions: "Cool the milk to 110 to 115°F (43 to 46°C) — body temperature, warm but not hot to a clean fingertip. Stir gently now and then to keep a thick skin from forming, or set the pot in an ice-water bath to speed it up. This window matters: hotter than about 120°F kills the culture, cooler than 105°F and it works sluggishly or not at all. If a skin did form, lift it off so it doesn't make lumps.",
-      visualCue: {
-        primaryTarget: "The milk is still and warm with no steam, sitting steadily at 110 to 115°F on the thermometer.",
-        spectrum: [
-          { state: "Underdone", description: "Still steaming, thermometer above 120°F. Too hot to seed.", action: "Wait, or use an ice bath. Adding culture now will scald the bacteria and the yogurt won't set." },
-          { state: "Perfect",   description: "No steam, the pot's side is comfortably warm to hold, thermometer at 110 to 115°F.", action: "Move quickly to seed it with the starter before it cools further." },
-          { state: "Overdone",  description: "The milk has dropped below 105°F and feels only lukewarm.", action: "Gently rewarm over low heat back into the window, stirring constantly, then proceed. Cool milk just ferments slowly rather than failing." },
-        ],
-      },
-      feelCue: "A drop on the inside of your wrist should feel pleasantly warm like a baby's bottle — never hot. If it stings, it's too hot; if you barely feel it, it's too cool.",
+      "ingId": "ing_02",
+      "role": "Binder",
+      "name": "Yogourt des cultures vivantes pures (cultures actives, comme point de départ)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "un sachet de culture de yogourt lyophilisé (suivre la dose du paquet)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Inoculate",
-      inputs: ["cooled_milk", "ing_02"],
-      outputState: "seeded_milk",
-      instructions: "Make sure the starter yogurt is fresh and labeled with live or active cultures. Whisk it together with a cup of the warm milk in a small bowl until completely smooth and lump-free, then stir that slurry back into the pot and whisk thoroughly so the culture is evenly dispersed. Don't overdo the starter — a little goes a long way, and too much actually crowds the bacteria and gives a sourer, thinner result.",
-      visualCue: {
-        primaryTarget: "A uniform, slightly frothy, pure-white milk with no streaks or floating clumps of starter — every spoonful looks identical.",
-        spectrum: [
-          { state: "Underdone", description: "Visible ribbons or blobs of thick starter still float in thinner milk; it isn't evenly mixed.", action: "Whisk again. Uneven seeding sets unevenly, leaving thin and thick patches in the final yogurt." },
-          { state: "Perfect",   description: "Smooth, homogeneous, faintly foamy warm milk that smells fresh and lightly tangy from the starter.", action: "Pour into clean jars or a container and move to the incubation step right away." },
-          { state: "Overdone",  description: "The mixture looks broken or slightly curdled at the edges.", action: "The milk was likely still too hot. Whisk smooth and proceed anyway; it may set softer than ideal." },
-        ],
-      },
-      feelCue: "The slurry-first method is the key — mixing starter into a little milk before the whole pot prevents clumps. The milk still feels reassuringly warm to the jar's touch as you fill it.",
-    },
-    {
-      nodeId: "step_4", action: "Incubate",
-      inputs: ["seeded_milk"],
-      outputState: "finished_yogurt",
-      instructions: "Hold the seeded milk at a steady 105 to 115°F (40 to 46°C) for 6 to 10 hours, undisturbed — in a turned-off oven with the light on, a cooler packed with warm water jars, a wrapped warm pot, or a yogurt maker. Do not move, stir, or jostle it while it sets; agitation breaks the forming curd. Start checking at 6 hours: tip the jar gently and watch for a clean set. Longer means thicker and tangier. When it's set to your taste, refrigerate at least 4 hours to firm it fully and stop the souring. For Greek-style, line a sieve with cloth and drain the chilled yogurt 1 to 2 hours.",
-      visualCue: {
-        primaryTarget: "Tilted gently, the yogurt pulls away from the side in one trembling mass like soft custard, holding its shape, with maybe a thin film of clear yellow-green whey pooling at the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Tilting the jar, the contents still slosh as thin, soupy milk that hasn't gelled. Little to no tang.", action: "Keep incubating and check hourly. A weak set means low temperature, a stale starter, or simply more time needed — warmth and patience usually fix it." },
-          { state: "Perfect",   description: "A clean, wobbling gel that holds a spoon's impression, smelling pleasantly sour and tasting bright and tangy with a creamy finish.", action: "Refrigerate at once for at least 4 hours. Chilling firms the curd and locks in the flavor; save a few spoonfuls as the starter for your next batch." },
-          { state: "Overdone",  description: "Sharply, mouth-puckeringly sour with lots of separated whey and possibly a slightly grainy, cracked, or curdled surface.", action: "It's over-fermented but perfectly safe — stir the whey back in and use it for cooking, smoothies, or marinades. Next time, incubate cooler or for fewer hours." },
-        ],
-      },
-      feelCue: "Resist the urge to peek and prod — a single nudge in the first hours can wreck the set. Properly done, a spoon stands a moment before sinking, and the curd parts with a soft, custardy cleave rather than a watery slosh.",
-    },
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Lait sec non gras en poudre (facultatif, pour un ensemble plus épais)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omettre pour un yaourt plus lâche et versable"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Écaillé",
+      "inputs": [
+        "ing_01",
+        "ing_03"
+      ],
+      "outputState": "scalded_milk",
+      "instructions": "fouetter le lait en poudre facultatif dans le lait froid pour dissoudre les morceaux, puis verser dans une casserole à fond lourd. Chauffer à feu moyen, en remuant souvent et en grattant le fond de sorte qu'il ne capture pas, jusqu'à ce que le lait atteigne 180 à 185°F (82 à 85°C) – juste en dessous d'un ébullition, avec la vapeur montante et un fin anneau de mousse au bord. Attendez 5 minutes. Cette étape ne consiste pas à tuer des bactéries; elle dénature les protéines de lactosérum, de sorte qu'elles se recoupent en un épais caillé au lieu d'un mince, pleureux.",
+      "visualCue": {
+        "primaryTarget": "Les essoufflements de vapeur lèvent une surface vitreuse, une peau délicate commence à se former au bord, et les premières petites bulles se brisent aux bords sans ébullition.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait est chaud mais plat et silencieux, sans vapeur ni mousse, bien sous 180°F sur le thermomètre.",
+            "action": "Continuez à chauffer et à remuer. Ne pressez pas la chaleur trop élevée ou les brûlures du fond — le milieu est juste."
+          },
+          {
+            "state": "Perfect",
+            "description": "Steady vapeur, un anneau mousseux autour du bord, et le thermomètre garé à 180 à 185°F. Le lait sent légèrement sucré et cuit, comme le haut du pudding de riz chaud.",
+            "action": "Tenez 5 minutes à la température, puis retirez la chaleur pour refroidir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait a bouilli ou une peau coriace et brune, des morceaux brûlés se sont formés sur le fond.",
+            "action": "Écraser la peau et NE PAS gratter le fond brûlé dans le pot. Une faible note cuite est bonne; un acride brûlé, il passera à travers, donc si mal brûlé, recommencer."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser la cuillère sur le fond — à la température, vous sentirez qu'il commence juste à s'accrocher et épaissir presque imperceptiblement. L'odeur passe de cru et laiteux à sucré et cuit."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Température",
+      "inputs": [
+        "scalded_milk"
+      ],
+      "outputState": "cooled_milk",
+      "instructions": "Laisser refroidir le lait à 110 à 115°F (43 à 46°C) – température corporelle, chaud mais pas chaud à un bout propre. Mélanger doucement de temps en temps pour empêcher une peau épaisse de se former, ou mettre le pot dans un bain d'eau glacée pour l'accélérer. Cette fenêtre est importante : plus chaude qu'environ 120°F tue la culture, plus froide que 105°F et fonctionne lentement ou pas du tout. Si une peau s'est formée, retirez-la pour ne pas faire de grumeaux.",
+      "visualCue": {
+        "primaryTarget": "Le lait est immobile et chaud sans vapeur, assis régulièrement à 110 à 115°F sur le thermomètre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours à vapeur, thermomètre au-dessus de 120°F. Trop chaud pour semer.",
+            "action": "Attendez, ou utilisez un bain de glace. L'ajout de culture va écraser les bactéries et le yogourt ne sera pas réglé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pas de vapeur, le côté du pot est confortablement chaud à tenir, thermomètre à 110 à 115°F.",
+            "action": "Déplacez-vous rapidement pour le semer avec le démarreur avant de refroidir davantage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait a chuté en dessous de 105°F et ne sent que tiède.",
+            "action": "Réchauffez doucement à feu doux dans la fenêtre, en remuant constamment, puis continuez. Le lait frais se ferment lentement plutôt que d'échouer."
+          }
+        ]
+      },
+      "feelCue": "Une goutte à l'intérieur de votre poignet devrait se sentir agréablement chaud comme la bouteille d'un bébé — jamais chaud. Si ça pique, c'est trop chaud; si tu le sens à peine, c'est trop cool."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Inoculer",
+      "inputs": [
+        "cooled_milk",
+        "ing_02"
+      ],
+      "outputState": "seeded_milk",
+      "instructions": "Assurez-vous que le yaourt de départ est frais et étiqueté avec des cultures vivantes ou actives. Dans un petit bol, fouettez-le avec une tasse de lait chaud jusqu'à ce qu'il soit complètement lisse et sans grumeaux, puis remuez-le dans le pot et fouettez soigneusement afin que la culture soit uniformément dispersée. N'exagèrez pas le démarrage — un peu va loin, et trop en fait foule les bactéries et donne un résultat plus aigre et plus mince.",
+      "visualCue": {
+        "primaryTarget": "Un lait uniforme, légèrement mousseux, blanc pur, sans stries ni touffes flottantes d'entrée — chaque cuillère semble identique.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des rubans visibles ou des blobs d'entrée épaisse flottent encore dans le lait mince; il n'est pas uniformément mélangé.",
+            "action": "Encore du fouet. L'ensemencement est inégal, laissant des taches fines et épaisses dans le yaourt final."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lait chaud lisse, homogène et peu mousseux qui sent frais et légèrement tannant de l'entrée.",
+            "action": "Verser dans des pots propres ou un contenant et passer immédiatement à l'étape d'incubation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange semble cassé ou légèrement caillé aux bords.",
+            "action": "Le lait était probablement encore trop chaud. Whisk lisse et continuer de toute façon; il peut mettre plus doux que l'idéal."
+          }
+        ]
+      },
+      "feelCue": "La première méthode de lisier est la clé: mélanger le démarreur dans un peu de lait avant que le pot entier n'empêche les touffes. Le lait se sent encore réconfortant au toucher du pot quand vous le remplissez."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Incuber",
+      "inputs": [
+        "seeded_milk"
+      ],
+      "outputState": "finished_yogurt",
+      "instructions": "Maintenez le lait ensemencé à une température constante de 105 à 115°F (40 à 46°C) pendant 6 à 10 heures, non perturbé — dans un four allumé avec la lumière allumée, dans une glacière remplie de pots d'eau chaude, dans une casserole chaude enveloppée ou dans un yaourt. Ne bougez pas, ne remuez pas, ne le bousculez pas pendant qu'il se met; l'agitation brise le caillé de formation. Commencez à vérifier à 6 heures: Conseillez doucement le pot et regardez pour un ensemble propre. Plus long signifie plus épais et plus tangent. Quand c'est à votre goût, réfrigérez-le au moins 4 heures pour le raffermir complètement et arrêter les averses. Pour le style grec, lisez un tamis avec du tissu et égouttez le yaourt réfrigéré de 1 à 2 heures.",
+      "visualCue": {
+        "primaryTarget": "Tilted doucement, le yogourt s'éloigne du côté dans une masse tremblante comme la crème douce, tenant sa forme, avec peut-être un mince film de lactosérum clair jaune-vert pooling à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Tilting le bocal, le contenu se perd toujours comme du lait mince et soupeux qui n'a pas gelé. Petit à petit.",
+            "action": "Continuez à incuber et vérifiez l'heure. Un jeu faible signifie une basse température, un démarrage inexistant, ou tout simplement plus de temps nécessaire — la chaleur et la patience le réparent habituellement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un gel wobbling propre qui conserve l'impression d'une cuillère, sentant agréablement amer et goûtant lumineux et tannant avec une finale crémeuse.",
+            "action": "Réfrigérer à la fois pendant au moins 4 heures. Refroidir les firmes le caillé et les verrous dans la saveur; économiser quelques cuillères comme le démarreur pour votre prochain lot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Amer avec beaucoup de lactosérum séparé et peut-être une surface légèrement grainée, fissurée ou courbée.",
+            "action": "Il est surfermenté mais parfaitement sûr — remuez le lactosérum et utilisez-le pour la cuisson, les smoothies ou les marinades. La prochaine fois, incubez le refroidisseur ou pendant moins d'heures."
+          }
+        ]
+      },
+      "feelCue": "Résistez à l'envie de jeter un coup d'œil et de prod — un seul coup de pouce dans les premières heures peut détruire l'ensemble. Bien fait, une cuillère se tient un moment avant de couler, et les parties caillées avec un clivage doux et custaminé plutôt qu'un slosh aqueux."
+    }
+  ]
 };

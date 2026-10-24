@@ -1,87 +1,191 @@
 export default {
-  repoId: "master_chinese_pork_bone_broth_001",
-  parentRepoId: null,
-  slug: "pork-bone-broth",
-  author: "ForkRecipe Kitchen",
-
-  title: "Pork Bone Broth",
-  description: "A Cantonese broth of crystalline clarity and extraordinary depth, achieved by blancing bones meticulously and simmering at the precise point where convection lifts collagen but never clouds the liquid — the restraint is the technique.",
-  cuisine: "Chinese",
-  culture: "Cantonese",
-  category: "stocks",
-
-  tags: ["broth", "pork", "cantonese", "chinese", "stock", "collagen", "slow-cook"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "5 hr",
-  ratioSystem: "parts",
-
-  stars: 1124,
-  forks: 88,
-  contributors: 36,
-  license: "CC-BY-SA",
-  createdAt: "2024-12-10",
-  updatedAt: "2025-05-20",
-
-  flavorRadar: { sweet: 1, salty: 1, sour: 0, bitter: 0, umami: 5, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Pork neck bones or knuckles (split)", ratioValue: 50, defaultUnit: "parts", substitutions: ["pork spare ribs", "pork trotters"] },
-    { ingId: "ing_02", role: "Protein",   name: "Pork back ribs (for gelatin)",         ratioValue: 20, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",    name: "Cold water",                           ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Fresh ginger (thick slices, unpeeled)", ratioValue: 5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Spring onion / scallion (whole)",      ratioValue: 3,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Solvent",   name: "Shaoxing rice wine",                   ratioValue: 4,  defaultUnit: "parts", substitutions: ["dry sherry"] },
+  "repoId": "master_chinese_pork_bone_broth_001",
+  "parentRepoId": null,
+  "slug": "pork-bone-broth",
+  "author": "ForkRecipe Kitchen",
+  "title": "Broth de porc",
+  "description": "Un bouillon cantonais d'une clarté cristalline et d'une profondeur extraordinaire, obtenu en blanchissant méticuleusement les os et en mijotant au point précis où la convection soulève le collagène, mais ne trouble jamais le liquide.",
+  "cuisine": "Chinois",
+  "culture": "Cantonais",
+  "category": "stocks",
+  "tags": [
+    "bouillon",
+    "porc",
+    "cantonais",
+    "Chinois",
+    "stock",
+    "collagène",
+    "Cuisson lente"
   ],
-
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "5 hr",
+  "ratioSystem": "parts",
+  "stars": 1124,
+  "forks": 88,
+  "contributors": 36,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-12-10",
+  "updatedAt": "2025-05-20",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blanch",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "blanched_bones",
-      instructions: "Place all bones in a large pot and cover with cold water. Bring to a full boil over high heat and boil vigorously for 5 minutes. You will see large quantities of grey scum (blood proteins and impurities) accumulate on the surface. Drain the bones and rinse each one individually under cold running water, removing all grey deposits. Also scrub the pot clean. This blanching step is the single most important technique for achieving clear, clean-tasting Cantonese broth — skipping it results in murky, gamy-smelling stock.",
-      visualCue: {
-        primaryTarget: "After blanching and rinsing, bones should be visibly clean and slightly pink with no grey-brown deposits clinging to them.",
-        spectrum: [
-          { state: "Underdone", description: "Bones still have grey-brown scum attached. The boil did not last long enough to fully purge the blood proteins.", action: "Boil another 3–5 minutes and rinse thoroughly again." },
-          { state: "Perfect",   description: "Clean, pinkish-white bones. No visible scum. Boiling water was grey and murky — that murk is now discarded. Bones smell clean and faintly porky.", action: "Transfer to a clean pot and begin the long, slow simmer." },
-          { state: "Overdone",  description: "Bones boiled too long in the blanch (15+ minutes) — some collagen has already released into the murky water.", action: "Rinse well and proceed. The broth will still be excellent." },
-        ],
-      },
-      feelCue: "Run your fingers along a blanched, rinsed bone — it should feel smooth and clean, with no sticky or slippery deposits. The bone surface should feel almost chalky in spots where the marrow has started to melt out.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Ossements du cou de porc ou mandrins",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "côtes de porc",
+        "Trotters de porc"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["blanched_bones", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "simmered_broth",
-      instructions: "Return the rinsed bones to the clean pot. Cover with fresh cold water and bring to a gentle simmer over medium heat. As it approaches simmer, skim any remaining foam from the surface. Add ginger slices, whole scallions, and Shaoxing wine. Reduce to the lowest possible simmer — the surface should show lazy ripples and occasional bubbles at the edges, but never a rolling boil. A boiling stock becomes cloudy; a simmering stock stays clear. Maintain this temperature for 3.5–4 hours.",
-      visualCue: {
-        primaryTarget: "A golden-amber broth with lazy surface ripples and edge-only bubble activity. The liquid should be increasingly golden and translucent, never grey or murky.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is still very pale and thin at 2 hours. Flavor is light and watery. Gelatin not yet extracted.", action: "Continue simmering. Pork collagen needs minimum 3 hours at a gentle simmer." },
-          { state: "Perfect",   description: "Golden amber, clear or near-clear. Lazy surface movement only. Tastes deeply porky and round. When a small amount is cooled on a spoon and refrigerated, it sets to a light jelly.", action: "Strain and season." },
-          { state: "Overdone",  description: "Broth has been boiling rather than simmering — it is grey and murky. Or simmered so long it has reduced by more than half.", action: "Strain immediately. The flavor will be good even if the clarity is gone. Use for braising rather than clear soups." },
-        ],
-      },
-      feelCue: "After 3 hours of proper simmering, the broth should smell like concentrated, sweet pork — a clean, almost caramel-like umami aroma with the ginger providing a warm green note. No gaminess, no liver-like odors. If it smells gamy, the blanching was insufficient.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Côtes arrière de porc (pour la gélatine)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Strain",
-      inputs: ["simmered_broth"],
-      outputState: "finished_pork_bone_broth",
-      instructions: "Remove the bones with tongs and discard. Line a fine-mesh strainer with a single layer of cheesecloth. Strain the broth slowly, without pressing. Allow to cool slightly, then refrigerate uncovered for 1–2 hours until the fat solidifies on the surface as a cream-colored cap. Remove the solidified fat layer. The broth beneath should be clear, golden, and slightly gelatinous when cold. Season with salt only at the point of use, never in the base stock.",
-      visualCue: {
-        primaryTarget: "After defatting, the chilled broth should be clear and golden, with a slight wobble when the container is shaken — indicating adequate gelatin content.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is thin and watery when cold — does not gel. Color is pale. Flavor is light. Insufficient collagen was extracted.", action: "Return to the pot and simmer an additional hour. Add a split pig's foot if available for gelatin boost." },
-          { state: "Perfect",   description: "Clear, golden broth. Gels to a soft jello when cold — holds its shape when spooned but melts immediately when warmed. Tastes clean, deep, and savory.", action: "Store up to 5 days refrigerated or 3 months frozen." },
-          { state: "Overdone",  description: "Broth gels into a very firm, dense block when cold. Very concentrated.", action: "This is a bonus — dilute 1:1 with water when using. It is essentially a demi-glace." },
-        ],
-      },
-      feelCue: "Spoon a small amount of the chilled, set broth — it should tremble like firm gelatin when the spoon is shaken and melt immediately on contact with your warm tongue. A broth with good gelatin feels silky and rich rather than watery, coating the inside of your mouth with a pleasant, lingering savory weight.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Gingembre frais (en tranches épaisses, non pelées)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon de printemps / pétoncle (ensemble)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Solvent",
+      "name": "Vin de riz shaoxant",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Blanch",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "blanched_bones",
+      "instructions": "Placer tous les os dans une grande casserole et couvrir d'eau froide. Porter à ébullition à feu vif et faire bouillir vigoureusement pendant 5 minutes. Vous verrez de grandes quantités de scum gris (protéines sanguines et impuretés) s'accumuler à la surface. Égoutter les os et les rincer individuellement sous l'eau froide, en enlevant tous les dépôts gris. Nettoie aussi le pot. Cette étape de blanchiment est la technique la plus importante pour obtenir un bouillon cantonais clair et propre.",
+      "visualCue": {
+        "primaryTarget": "Après blanchage et rinçage, les os doivent être visiblement propres et légèrement roses, sans dépôts brun-gris qui s'accrochent à eux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les os sont encore attachés à des ordures brun-gris. L'ébullition n'a pas duré assez longtemps pour purger complètement les protéines sanguines.",
+            "action": "Faites bouillir encore 3 à 5 minutes et rincez à nouveau soigneusement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des os propres, blancs rosés. Pas de racaille visible. L'eau bouillante était grise et trouble — ce museau est maintenant jeté. Les os sentent propre et légèrement porcin.",
+            "action": "Transférer dans un pot propre et commencer à mijoter lentement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des os bouillis trop longtemps dans la blanche (15+ minutes) — un certain collagène s'est déjà libéré dans l'eau trouble.",
+            "action": "Rincez bien et continuez. Le bouillon sera toujours excellent."
+          }
+        ]
+      },
+      "feelCue": "Courez vos doigts le long d'un os blanchi et rincé. Il doit se sentir lisse et propre, sans dépôts collants ou glissants. La surface osseuse devrait se sentir presque crayeuse dans les endroits où la moelle a commencé à fondre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "blanched_bones",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "simmered_broth",
+      "instructions": "Retournez les os rincés dans le pot propre. Couvrir d'eau froide fraîche et laisser mijoter doucement à feu moyen. À l'approche de mijoter, écumer toute mousse restante de la surface. Ajouter les tranches de gingembre, les pétoncles entiers et le vin Shaoxing. Réduisez à la plus basse mijotée possible — la surface doit montrer des ondulations paresseuses et des bulles occasionnelles aux bords, mais jamais un ébullition. Un stock bouillant devient nuageux; un stock mijotant reste clair. Maintenir cette température de 3,5 à 4 heures.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon doré-ambre avec des ondulations de surface paresseuses et une activité de bulles uniquement bord. Le liquide doit être de plus en plus doré et translucide, jamais gris ou gris.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le papillon est encore très pâle et mince à 2 heures. Le goût est léger et aqueux. Gélatine non encore extraite.",
+            "action": "Continuez à mijoter. Le collagène de porc a besoin d'au moins 3 heures à mijoter doucement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre dorée, claire ou presque claire. Mouvement superficiel paresseux seulement. Goûte profondément porcin et rond. Lorsqu'une petite quantité est refroidie sur une cuillère et réfrigérée, elle se met à une gelée légère.",
+            "action": "La souche et la saison."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon a bouilli au lieu de mijoter, il est gris et gris. Ou mijoté si longtemps, il a diminué de plus de la moitié.",
+            "action": "Sourire immédiatement. La saveur sera bonne même si la clarté est disparue. Utiliser pour le braisage plutôt que des soupes claires."
+          }
+        ]
+      },
+      "feelCue": "Après 3 heures de cuisson correcte, le bouillon doit sentir comme du porc concentré et sucré — un umami propre et presque caramel avec le gingembre apportant une note verte chaude. Pas de gamines, pas d'odeurs de foie. Si ça sent le gamy, le blanching était insuffisant."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "simmered_broth"
+      ],
+      "outputState": "finished_pork_bone_broth",
+      "instructions": "Retirer les os avec des pinces et jeter. Déposer une souche fine avec une seule couche de cheesewet. Retirez le bouillon lentement, sans presser. Laisser refroidir légèrement, puis réfrigérer à découvert pendant 1 à 2 heures jusqu'à ce que la graisse se solidifie sur la surface sous la forme d'un capuchon de couleur crème. Enlever la couche de graisse solidifiée. Le bouillon doit être clair, doré et légèrement gélatineux lorsqu'il est froid. Assaisonner avec du sel seulement au point d'utilisation, jamais dans le stock de base.",
+      "visualCue": {
+        "primaryTarget": "Après le dégraissage, le bouillon réfrigéré doit être clair et doré, avec un léger frottement lorsque le récipient est secoué, ce qui indique une teneur adéquate en gélatine.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon est mince et aqueux quand il est froid — ne gel pas. La couleur est pâle. Le goût est léger. Un collagène insuffisant a été extrait.",
+            "action": "Retournez dans la casserole et laissez mijoter une heure supplémentaire. Ajoutez un pied de porc si disponible pour booster la gélatine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un bouillon d'or clair. Gels à un jello doux quand il fait froid — tient sa forme quand cuilleré mais fond immédiatement lorsqu'il est chaud. Bouche propre, profond et salé.",
+            "action": "Conserver jusqu'à 5 jours réfrigérés ou 3 mois congelés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les gels de bronzage dans un bloc très ferme et dense quand il fait froid. Très concentré.",
+            "action": "C'est un bonus — diluer 1:1 avec de l'eau lors de l'utilisation. C'est essentiellement une demi-glace."
+          }
+        ]
+      },
+      "feelCue": "Spoon une petite quantité de bouillon réfrigéré, il devrait trembler comme de la gélatine ferme quand la cuillère est secouée et fondre immédiatement au contact de votre langue chaude. Un bouillon avec une bonne gélatine se sent soyeux et riche plutôt qu'aqueux, enrobant l'intérieur de votre bouche d'un poids salé agréable et persistant."
+    }
+  ]
 };

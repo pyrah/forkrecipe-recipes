@@ -1,77 +1,196 @@
 export default {
-  repoId: "master_american_key-lime-curd_001",
-  parentRepoId: null,
-  slug: "key-lime-curd",
-  author: "ForkRecipe Kitchen",
-  title: "Key Lime Curd",
-  description: "A pale, sun-yellow curd with the floral, nearly tropical tartness of true key limes — thickened slowly over a double boiler until it coats a spoon like liquid satin.",
-  cuisine: "American",
-  culture: "Floridian",
-  category: "desserts",
-  tags: ["key lime", "curd", "tart", "florida", "vegetarian"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "40 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 6, salty: 2, sour: 9, bitter: 2, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Acid",      name: "Fresh key lime juice (about 12–15 key limes)", ratioValue: 2, defaultUnit: "parts", substitutions: ["Persian lime juice (less floral, still excellent)"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Granulated white sugar",                ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Binder",    name: "Large whole eggs",                      ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Binder",    name: "Large egg yolks",                       ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",       name: "Unsalted butter, cold, cubed",          ratioValue: 2,   defaultUnit: "parts", substitutions: ["coconut oil (slightly different flavor, still works)"] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Key lime zest (from juiced limes)",     ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine salt (pinch)",                     ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_key-lime-curd_001",
+  "parentRepoId": null,
+  "slug": "key-lime-curd",
+  "author": "ForkRecipe Kitchen",
+  "title": "Clef de lime",
+  "description": "Un caillé jaune-soleil pâle avec la tarte florale, presque tropicale, de vraies chaux clés, s'épaississait lentement sur une double chaudière jusqu'à ce qu'elle enveloppe une cuillère comme du satin liquide.",
+  "cuisine": "Américain",
+  "culture": "Floridienne",
+  "category": "desserts",
+  "tags": [
+    "chaux clé",
+    "curd",
+    "tarte",
+    "Floride",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "40 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 6,
+    "salty": 2,
+    "sour": 9,
+    "bitter": 2,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_06", "ing_07"],
-      outputState: "curd_base",
-      instructions: "In the top bowl of a double boiler (or a heatproof bowl that fits snugly over a saucepan), whisk together the key lime juice, sugar, whole eggs, yolks, zest, and salt until the sugar shows signs of dissolving and the mixture is uniformly combined. There should be no unincorporated yolk streaks. Do not begin heating yet — the pre-mix ensures even cooking and prevents the eggs on the hot bowl bottom from scrambling before the sugar dissolves.",
-      visualCue: {
-        primaryTarget: "A pale, uniform pale-yellow liquid with no visible streaks of egg white or yolk. Zest distributed throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Yellow yolk streaks are visible running through the lighter egg white. Sugar is still largely undissolved.", action: "Whisk more vigorously for another 30 seconds." },
-          { state: "Perfect",   description: "Smooth, uniform, thin pale-yellow liquid. Zest is distributed evenly. The mixture falls off the whisk in a thin, even sheet.", action: "Set over a pot of barely simmering water (double boiler) and begin cooking." },
-          { state: "Overdone",  description: "N/A at this stage — you cannot overcook before applying heat.", action: "Proceed to the double boiler." },
-        ],
-      },
-      feelCue: "The mixture should feel like very thin custard — slightly thicker than water from the dissolved sugar, with the oiliness of the yolks barely detectable. The lime juice should make your mouth water from the aroma alone.",
+      "ingId": "ing_01",
+      "role": "Acid",
+      "name": "Jus de citron vert frais (environ 12 à 15 citron vert)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Jus de lime perse (moins floral, encore excellent)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Heat",
-      inputs: ["curd_base"],
-      outputState: "thickened_curd",
-      instructions: "Place the bowl over a pot with 3–4 cm of barely simmering water — the bowl must not touch the water surface. Cook over medium-low heat, stirring constantly with a heatproof spatula or whisk, making sure to scrape the sides and bottom of the bowl. The curd will thicken gradually over 10–15 minutes. It is done when it coats the back of a spoon and holds a line drawn through it. Do not rush this with higher heat — scrambled eggs are irreversible.",
-      visualCue: {
-        primaryTarget: "The curd has thickened to the consistency of lemon curd or thin pudding. It coats a spoon in a continuous layer and a finger drawn through that layer holds a clean edge for 3–4 seconds.",
-        spectrum: [
-          { state: "Underdone", description: "Still thin and watery. Runs off the spoon like juice. No spoon-coating.", action: "Continue stirring over the double boiler. Check that the water below is actually simmering." },
-          { state: "Perfect",   description: "Coats a metal spoon and holds a clean line. The color has shifted from pale yellow to a slightly deeper, more opaque yellow. Steam rising from the surface. Internal temperature is approximately 77–80 C (170–176 F).", action: "Remove from heat immediately and add the cold butter." },
-          { state: "Overdone",  description: "Small white flecks or lumps are appearing — the eggs are scrambling. The surface has gone grainy rather than smooth.", action: "Remove from heat immediately and pour through a fine-mesh strainer. Press hard on the solids. The curd may still be usable if caught early." },
-        ],
-      },
-      feelCue: "Hold the back of the spoon up and blow across it — a properly thickened curd should dimple and wrinkle where the breath hits it rather than running freely. The steam coming off the bowl should smell purely of lime with a rich, eggy sweetness beneath.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre blanc granulé",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Mount",
-      inputs: ["thickened_curd", "ing_05"],
-      outputState: "finished_curd",
-      instructions: "Remove the bowl from the heat. Add the cold butter cubes all at once and stir in vigorous circles until every cube has melted completely into the curd. The cold butter lowers the temperature, stops the cooking, and emulsifies into the curd to create a glossy, rich texture. Strain the finished curd through a fine-mesh strainer into a clean bowl to remove the zest and any stray egg solids. Press plastic wrap directly onto the surface of the curd (touching it completely) to prevent a skin forming. Refrigerate until cold and set.",
-      visualCue: {
-        primaryTarget: "Glossy, smooth, deeply yellow-green curd with a rich sheen from the emulsified butter. Pours in slow, heavy ribbons.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is not fully incorporated — visible butter pools or a slick separate layer on top.", action: "Continue stirring off heat until all butter is melted and absorbed." },
-          { state: "Perfect",   description: "Uniformly glossy, deeply colored, and smooth after straining. Thick enough to mound slightly on a spoon before slowly flowing.", action: "Press plastic wrap to the surface and refrigerate for a minimum of 2 hours." },
-          { state: "Overdone",  description: "Curd appears broken — grainy with butter separation. The eggs scrambled slightly before the butter went in.", action: "Blend with an immersion blender for 30 seconds. Most broken curds can be rescued this way into a smooth, emulsified texture." },
-        ],
-      },
-      feelCue: "Dab a small amount on your lower lip — it should feel like touching cool, heavy silk. If it feels grainy or gritty against your lip, the eggs scrambled and the curd needs straining or blending. The flavor should be aggressively tart with a sustained, rich creaminess that follows.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Gros œufs entiers",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Grand jaune d'œuf",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé, froid, cubes",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile de coco (arôme légèrement différent, fonctionne encore)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Zeste de chaux clé (à partir de chaux jus)",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin (pinche)",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "curd_base",
+      "instructions": "Dans le bol supérieur d'une double chaudière (ou d'un bol résistant à la chaleur qui s'adapte bien sur une casserole), fouetter ensemble le jus de chaux clé, le sucre, les œufs entiers, les jaunes, le zeste et le sel jusqu'à ce que le sucre montre des signes de dissolution et le mélange est uniformément combiné. Il ne devrait pas y avoir de stries jaunes non incorporées. Ne commencez pas encore à chauffer — le prémélange assure une cuisson uniforme et empêche les œufs sur le fond du bol chaud de se brouiller avant que le sucre se dissout.",
+      "visualCue": {
+        "primaryTarget": "Un liquide jaune pâle uniforme sans stries visibles de blanc d'œuf ou de jaune. Zest distribué partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries jaunes sont visibles à travers le blanc d'œuf plus léger. Le sucre est encore largement non dissous.",
+            "action": "Frottez plus vigoureusement pendant 30 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide lisse, uniforme et mince jaune pâle. Zest est distribué uniformément. Le mélange tombe du fouet dans une mince feuille uniforme.",
+            "action": "Réglez-vous sur une casserole d'eau à peine mijotante (double chaudière) et commencez la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "S/O à ce stade — vous ne pouvez pas trop cuire avant d'appliquer la chaleur.",
+            "action": "Passez à la double chaudière."
+          }
+        ]
+      },
+      "feelCue": "Le mélange doit se sentir comme de la crème très fine — légèrement plus épaisse que l'eau du sucre dissous, avec l'huile des jaunes à peine décelables. Le jus de lime doit faire votre eau de bouche à partir de l'arôme seul."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Chaleur",
+      "inputs": [
+        "curd_base"
+      ],
+      "outputState": "thickened_curd",
+      "instructions": "Placez le bol sur un pot de 3 à 4 cm d'eau à peine mijotée — le bol ne doit pas toucher la surface de l'eau. Cuire à feu moyen-doux, en remuant constamment avec une spatule ou un fouet thermofuge, en veillant à gratter les côtés et le fond du bol. Le caillé s'épaissit graduellement pendant 10 à 15 minutes. Il est fait quand il enrobe le dos d'une cuillère et tient une ligne tirée à travers elle. Ne précipitez pas cela avec plus de chaleur — les œufs brouillés sont irréversibles.",
+      "visualCue": {
+        "primaryTarget": "Le caillé s'est épaissi à la consistance du caillé de citron ou du pudding fin. Il enveloppe une cuillère dans une couche continue et un doigt tiré à travers cette couche tient un bord propre pendant 3-4 secondes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours mince et aqueux. Il coule de la cuillère comme du jus. Pas de revêtement à la cuillère.",
+            "action": "Continuer à remuer sur la double chaudière. Vérifiez que l'eau ci-dessous mijote."
+          },
+          {
+            "state": "Perfect",
+            "description": "Coats une cuillère en métal et tient une ligne propre. La couleur est passée du jaune pâle à un jaune légèrement plus profond, plus opaque. La vapeur s'élève de la surface. La température interne est d'environ 77–80 °C (170–176 °F).",
+            "action": "Retirer immédiatement du feu et ajouter le beurre froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "De petites taches blanches ou des grumeaux apparaissent — les œufs brouillent. La surface est devenue granuleuse plutôt que lisse.",
+            "action": "Retirer immédiatement du feu et verser à travers une grille fine. Appuyez fort sur les solides. Le caillé peut être encore utilisable si pris tôt."
+          }
+        ]
+      },
+      "feelCue": "Maintenez l'arrière de la cuillère et soufflez à travers elle — un caillé correctement épaissé devrait s'écrouler et rider là où le souffle le frappe plutôt que de courir librement. La vapeur qui sort du bol doit sentir uniquement de la chaux avec une douceur riche et oeuvrée en dessous."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Monter",
+      "inputs": [
+        "thickened_curd",
+        "ing_05"
+      ],
+      "outputState": "finished_curd",
+      "instructions": "Retirer le bol du feu. Ajouter les cubes de beurre froid tous à la fois et remuer dans des cercles vigoureux jusqu'à ce que chaque cube ait complètement fondu dans le caillé. Le beurre froid abaisse la température, arrête la cuisson et émulsifie dans le caillé pour créer une texture brillante et riche. Placer le caillé fini dans un bol propre pour enlever le zeste et les solides d'oeufs errants. Appuyez sur l'enveloppe en plastique directement sur la surface du caillé (le toucher complètement) pour éviter la formation d'une peau. Réfrigérer jusqu'à froid et régler.",
+      "visualCue": {
+        "primaryTarget": "Cord brillant, lisse, vert-jaune profond avec un éclat riche du beurre émulsifié. Verse lentement des rubans lourds.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre n'est pas entièrement incorporé — des piscines de beurre visibles ou une couche séparée sur le dessus.",
+            "action": "Continuer à remuer le feu jusqu'à ce que tout le beurre soit fondu et absorbé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lustré uniformément, de couleur profonde et lisse après déformation. Assez épais pour passer légèrement sur une cuillère avant de s'écouler lentement.",
+            "action": "Presser l'enveloppe plastique sur la surface et réfrigérer pendant au moins 2 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Cord apparaît cassé — grainé avec séparation du beurre. Les œufs brouillaient légèrement avant l'entrée du beurre.",
+            "action": "Mélanger avec un mélangeur d'immersion pendant 30 secondes. La plupart des caillés cassés peuvent ainsi être sauvés dans une texture lisse et émulsifiée."
+          }
+        ]
+      },
+      "feelCue": "Dab une petite quantité sur votre lèvre inférieure — il devrait sentir comme toucher la soie fraîche et lourde. S'il se sent grainé ou gritté contre votre lèvre, les œufs brouillés et le caillé a besoin de pression ou de mélange. La saveur doit être agressivement goudronnée avec une onctuosité soutenue et riche qui suit."
+    }
+  ]
 };

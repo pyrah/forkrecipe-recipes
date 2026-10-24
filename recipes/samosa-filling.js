@@ -1,94 +1,256 @@
 export default {
-  repoId: "master_indian_samosa_filling_001",
-  parentRepoId: null,
-  slug: "samosa-filling",
-  author: "ForkRecipe Kitchen",
-
-  title: "Samosa Filling",
-  description: "Fluffy mashed potato and sweet green peas coarsely folded with a crackling bloom of cumin, coriander seed, ginger, and green chili — the filling that has made samosas irresistible for centuries, fragrant and slightly drier than you expect so it holds its shape inside the crisp pastry shell without steaming it soft. Every bite releases warm spiced starch and a bright herbal finish.",
-  cuisine: "Indian",
-  culture: "North Indian",
-  category: "vegetables",
-
-  tags: ["samosa", "potato", "peas", "vegetarian", "street food", "snack", "filling"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 1, umami: 2, heat: 3 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Waxy potatoes (Yukon Gold or similar), boiled whole and peeled", ratioValue: 500, defaultUnit: "g",    substitutions: ["sweet potato for a sweeter variation"] },
-    { ingId: "ing_02", role: "Starch",    name: "Green peas (fresh shelled or frozen, thawed)",                   ratioValue: 100, defaultUnit: "g",    substitutions: [] },
-    { ingId: "ing_03", role: "Fat",       name: "Neutral oil or ghee",                                             ratioValue: 2,   defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Cumin seeds",                                                     ratioValue: 1,   defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Coriander seeds, lightly crushed in a mortar",                   ratioValue: 1,   defaultUnit: "tsp",  substitutions: ["1/2 tsp ground coriander"] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Fresh ginger, finely grated",                                    ratioValue: 1,   defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_07", role: "Heat",      name: "Green chilies (serrano or Thai), finely minced",                 ratioValue: 2,   defaultUnit: "whole", substitutions: ["1/4 tsp cayenne"] },
-    { ingId: "ing_08", role: "Spice",     name: "Ground coriander",                                               ratioValue: 1,   defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Amchur (dried mango powder)",                                    ratioValue: 1,   defaultUnit: "tsp",  substitutions: ["1 tsp lemon juice (add at the end)"] },
-    { ingId: "ing_10", role: "Spice",     name: "Garam masala",                                                   ratioValue: 0.5, defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Ground turmeric",                                                ratioValue: 0.25, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_12", role: "Seasoning", name: "Salt",                                                           ratioValue: 1,   defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_13", role: "Herb",      name: "Fresh cilantro leaves and tender stems, finely chopped",         ratioValue: 3,   defaultUnit: "tbsp", substitutions: [] },
+  "repoId": "master_indian_samosa_filling_001",
+  "parentRepoId": null,
+  "slug": "samosa-filling",
+  "author": "ForkRecipe Kitchen",
+  "title": "Remplissage de Samosa",
+  "description": "La purée de pommes de terre et les pois verts doux, grossièrement pliés avec une floraison de cumin, de coriandre, de gingembre et de chili vert, le remplissage qui a rendu les samosas irrésistibles pendant des siècles, parfumés et légèrement plus secs que vous ne l'attendiez, maintient donc sa forme à l'intérieur de la coquille de pâtisserie croquante sans la faire bouillir. Chaque morsure libère de l'amidon épicé chaud et une finition à base de plantes brillantes.",
+  "cuisine": "Indiens",
+  "culture": "Inde du Nord",
+  "category": "vegetables",
+  "tags": [
+    "samosa",
+    "pommes de terre",
+    "pois",
+    "végétarien",
+    "Alimentation de rue",
+    "collation",
+    "remplissage"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Boil",
-      inputs: ["ing_01"],
-      outputState: "boiled_potatoes",
-      instructions: "Cover the whole, unpeeled potatoes with cold water in a pot. Bring to a boil over high heat, then reduce to a steady simmer and cook until a thin knife slides through the center with zero resistance — about 20–25 minutes depending on size. Do not rush with high heat or the skins will split and the potatoes will absorb too much water. Drain and immediately peel while hot — the skins slip off easily and the potato flesh sheds moisture better when peeled warm. Spread the peeled potatoes on a tray and leave them uncovered for 5 minutes to steam-dry. Then roughly crush them with a fork or your hands into a mix of small chunks and larger broken pieces. Do not mash smooth — the filling needs texture. Some pieces of potato 1–2 cm across are desirable.",
-      visualCue: {
-        primaryTarget: "Roughly broken, dry-looking potato pieces of varying sizes, mostly 0.5–2 cm. No smooth mashed sections. The surface looks fluffy and slightly chalky, not wet or glossy.",
-        spectrum: [
-          { state: "Underdone", description: "Potato centers are still firm and resist the fork. The flesh looks waxy and translucent rather than fluffy and opaque.", action: "Return to simmering water for another 5 minutes. Test again from the center." },
-          { state: "Perfect",   description: "Fluffy, dry, breaks easily in the hand into irregular chunks. The color is pale yellow-white and opaque. No waxy look.", action: "Steam-dry on a tray and begin the spice temper immediately." },
-          { state: "Overdone",  description: "Potato has become waterlogged and falls apart completely when crushed. Sticks to itself in a sticky mass.", action: "Spread on a wide tray and dry in a 150 C (300 F) oven for 10 minutes to drive off excess moisture before adding to the filling." },
-        ],
-      },
-      feelCue: "A perfectly cooked potato should crumble and fall apart at a light press, with a dry, powdery break. If it squashes into a sticky paste, it needs to dry out further. If it bounces back, it needs more cooking.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Pommes de terre de cire (Yukon Gold ou similaires), entières bouillies et pelées",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "patate douce pour une variation plus douce"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "bloomed_spices",
-      instructions: "Heat the oil or ghee in a wide pan over medium-high heat. Add the cumin seeds and crushed coriander seeds together — they should sizzle immediately and begin crackling. Let them bloom for about 30–40 seconds until the cumin turns a deep chestnut brown. Do not stop here — add the minced ginger and green chili and stir for 1 minute until the raw ginger smell softens to a sweet, fragrant note. Add the ground coriander, amchur, garam masala, and turmeric. Stir constantly for 60 seconds, scraping the bottom — the ground spices will form a thick, fragrant paste in the fat. This step, called the tadka or bhuna, is critical: the oil carries fat-soluble spice compounds directly into the potato and peas at the moment of contact. If your spice paste smells warm and rounded, with no raw edge, it is ready.",
-      visualCue: {
-        primaryTarget: "A dark, golden-red spice paste in the pan with visible whole cumin and coriander seeds, slightly darkened ginger threads, and a ring of clear oil around the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Ground spices are still dry-looking and separate from the oil, sitting on top rather than blooming into a paste. The smell is powdery and raw.", action: "Add a teaspoon of water and stir vigorously — the steam will help the spices absorb and cook. Continue for another minute." },
-          { state: "Perfect",   description: "A unified, glossy, dark paste that moves as a single mass. Smells of toasted cumin and warm, bright coriander. The fat glistens around the edges.", action: "Add the peas and potatoes immediately." },
-          { state: "Overdone",  description: "Spices are dark brown or black, the pan is smoking, and the smell is bitter and acrid. The ground spice paste has scorched.", action: "Discard and start fresh. Burnt spices will make the entire filling bitter — there is no recovery." },
-        ],
-      },
-      feelCue: "The kitchen should smell like a spice market at this point — toasty, warm, and complex, with the sharp green note of the chili cutting through. The pan hisses when you drag a spoon across the bottom.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Pois verts (écossés ou congelés, dégelés)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Toss",
-      inputs: ["bloomed_spices", "boiled_potatoes", "ing_02", "ing_12", "ing_13"],
-      outputState: "finished_samosa_filling",
-      instructions: "Add the frozen or fresh peas directly to the spiced fat in the pan. Stir and cook for 2 minutes — the peas will warm through and absorb the spiced oil. Add the crushed potatoes all at once and fold everything together using a wide spatula or wooden spoon, working from the bottom of the pan and turning the mixture over itself. You want to evenly coat every piece of potato and pea in the spice blend without turning the mixture into a smooth mash — the filling should retain texture, with visible pieces of potato and peas throughout. Season with salt and stir. Off the heat, fold in the fresh cilantro. Taste: the filling should be intensely flavored — boldly salty, bright with amchur's sour note, and warmly spiced throughout. It needs to be seasoned aggressively because the pastry shell will dilute the intensity. Allow the filling to cool completely before enclosing in pastry — warm filling will steam the pastry and make it soggy.",
-      visualCue: {
-        primaryTarget: "A fragrant, textured mixture of golden-spiced potato chunks and vivid green peas, uniformly coated in a rust-orange spice blend. Cilantro flecks visible throughout. No smooth, paste-like mashed sections.",
-        spectrum: [
-          { state: "Underdone", description: "Spice coating is not uniform — pale potato pieces are visible next to very dark ones. The peas are still separate and pale. The filling tastes bland in spots.", action: "Fold more thoroughly, making sure each piece contacts the spiced fat. Cook for 2 more minutes on medium heat." },
-          { state: "Perfect",   description: "Every piece is uniformly spiced and tinted orange-gold. Texture is varied and interesting. The smell is bright, complex, and deeply appetizing. Fills the mouth with warmth.", action: "Spread on a tray and cool completely before using as samosa filling." },
-          { state: "Overdone",  description: "The mixture has been stirred too aggressively and is now a smooth, pasty mash. Texture is uniform and the peas are broken.", action: "The flavor is identical — proceed. The mashed consistency will still work as a filling, though the eating experience is less varied." },
-        ],
-      },
-      feelCue: "A finished spoonful of samosa filling should feel slightly dry and crumbly in the hand — not wet, not sticky. It should hold a shape when pressed but crumble at a firm push. That dry texture is what prevents the samosa pastry from becoming soggy during frying.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile neutre ou ghee",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Graines de cumin",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Graines de coriandre, légèrement broyées dans un mortier",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "1/2 cuillerée au sol"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Gingembre frais, râpé finement",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Heat",
+      "name": "Piments verts (serrano ou thaï), finement hachés",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "1/4 tsp cayenne"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Amchur (poudre de mangue séchée)",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "1 c. à thé jus de citron (ajouter à la fin)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Garam masala",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Herb",
+      "name": "Feuilles de coriandre fraîches et tiges tendres, finement hachées",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "boiled_potatoes",
+      "instructions": "Couvrir l'ensemble des pommes de terre non pelées d'eau froide dans une casserole. Porter à ébullition à feu vif, puis laisser mijoter régulièrement et cuire jusqu'à ce qu'un couteau mince glisse au centre avec une résistance nulle — environ 20 à 25 minutes selon la taille. Ne vous précipitez pas avec une chaleur élevée ou les peaux se fendront et les pommes de terre absorberont trop d'eau. Égoutter et éplucher immédiatement pendant qu'il fait chaud — les peaux s'échappent facilement et la chair de pomme de terre verse mieux l'humidité lorsqu'elle est pelée au chaud. Étendre les pommes de terre pelées sur un plateau et les laisser à découvert pendant 5 minutes pour sécher à la vapeur. Puis écrasez-les à peu près avec une fourchette ou vos mains dans un mélange de petits morceaux et de morceaux plus gros cassés. Ne pas mash lisse — le remplissage a besoin de texture. Certains morceaux de pomme de terre de 1 à 2 cm de diamètre sont souhaitables.",
+      "visualCue": {
+        "primaryTarget": "Des morceaux de pommes de terre à l'aspect sec et à peu près cassés de différentes tailles, principalement de 0,5 à 2 cm. Pas de coupe lisse. La surface est moelleuse et légèrement crayeuse, pas humide ou brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les centres de pommes de terre sont encore fermes et résistent à la fourchette. La chair est cireuse et translucide plutôt que molle et opaque.",
+            "action": "Retourner à l'eau mijotante pendant encore 5 minutes. Testez encore du centre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Courbé, sec, se brise facilement dans la main en morceaux irréguliers. La couleur est jaune-blanc pâle et opaque. Pas de regard cireux.",
+            "action": "Sécher à la vapeur sur un plateau et commencer immédiatement l'épice."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pomme de terre est devenue arrosée et s'effondre complètement lorsqu'elle est écrasée. Se colle à elle-même dans une masse collante.",
+            "action": "Étaler sur un plateau large et sécher dans un four de 150 C (300 F) pendant 10 minutes pour éliminer l'excès d'humidité avant d'ajouter au remplissage."
+          }
+        ]
+      },
+      "feelCue": "Une pomme de terre parfaitement cuite doit s'effondrer et tomber à la pression légère, avec une pause sèche et poudreuse. Si elle s'écrase dans une pâte collante, elle doit sécher davantage. Si ça rebondit, il lui faut plus de cuisine."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "bloomed_spices",
+      "instructions": "Chauffer l'huile ou le ghee dans une poêle large à feu moyen-vif. Ajouter les graines de cumin et les graines de coriandre concassées ensemble — elles doivent cracher immédiatement et commencer à craquer. Laissez-les fleurir environ 30 à 40 secondes jusqu'à ce que le cumin devienne brun marron foncé. Ne vous arrêtez pas ici — ajoutez le gingembre haché et le chili vert et remuez pendant 1 minute jusqu'à ce que l'odeur crue du gingembre s'adoucisse à une note sucrée et parfumée. Ajouter la coriandre, l'amchur, le garam masala et le curcuma. Mélanger constamment pendant 60 secondes, racler le fond — les épices moulues formeront une pâte épaisse et parfumée dans la graisse. Cette étape, appelée tadka ou bhuna, est critique : l'huile transporte des composés d'épices solubles dans le gras directement dans la pomme de terre et les pois au moment du contact. Si votre pâte d'épices sent chaud et arrondi, sans bord brut, elle est prête.",
+      "visualCue": {
+        "primaryTarget": "Une pâte d'épices rouge doré foncé dans la poêle avec des graines de cumin et de coriandre, des fils de gingembre légèrement foncés et un anneau d'huile claire autour des bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les épices broyées sont encore sèches et séparées de l'huile, assises sur le dessus plutôt que de fleurir en pâte. L'odeur est poudreuse et crue.",
+            "action": "Ajouter une cuillère à café d'eau et remuer vigoureusement — la vapeur aidera les épices à absorber et à cuire. Continuez encore une minute."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte unie, brillante et sombre qui se déplace en une seule masse. Des odeurs de cumin grillé et de coriandre chaude et lumineuse. La graisse brille autour des bords.",
+            "action": "Ajouter immédiatement les pois et les pommes de terre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les épices sont brun foncé ou noir, la poêle fume, et l'odeur est amère et acride. La pâte d'épices a été brûlée.",
+            "action": "Jeter et commencer frais. Les épices brûlées rendront amer tout le remplissage — il n'y a pas de rétablissement."
+          }
+        ]
+      },
+      "feelCue": "La cuisine doit sentir comme un marché d'épices à ce point - toast, chaud, et complexe, avec la note vert vif de la coupe de chili. La poêle siffle quand tu traînes une cuillère sur le fond."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Découpe",
+      "inputs": [
+        "bloomed_spices",
+        "boiled_potatoes",
+        "ing_02",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "finished_samosa_filling",
+      "instructions": "Ajouter les pois frais ou congelés directement à la graisse épicée dans la poêle. Mélanger et cuire pendant 2 minutes – les pois se réchaufferont et absorberont l'huile épicée. Ajouter les pommes de terre concassées à la fois et plier tout ensemble à l'aide d'une large spatule ou d'une cuillère en bois, travailler du fond de la poêle et tourner le mélange sur elle-même. Vous voulez enrober uniformément chaque morceau de pomme de terre et de pois dans le mélange d'épices sans transformer le mélange en une masse lisse — le remplissage doit conserver la texture, avec des morceaux visibles de pomme de terre et de pois partout. Assaisonner de sel et remuer. Hors de la chaleur, plier dans la coriandre fraîche. Bouche: le remplissage doit être intensément aromatisé — audacieusement salé, lumineux avec la note aigre de l'amchur, et chaudement épicé tout au long. Il doit être assaisonné agressivement parce que la coquille de pâtisserie va diluer l'intensité. Laissez le remplissage refroidir complètement avant de l'enfermer dans la pâtisserie — le remplissage chaud va chauffer la pâtisserie et la faire mousser.",
+      "visualCue": {
+        "primaryTarget": "Un mélange parfumé et texturé de morceaux de pommes de terre épicés d'or et de pois verts vifs, uniformément enrobé d'un mélange d'épices rouille-orange. Cilantro est visible partout. Pas de morceaux de pâte lisse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La couche d'épice n'est pas uniforme: les morceaux de pomme de terre pâle sont visibles à côté des morceaux très sombres. Les pois sont encore séparés et pâles. Le remplissage a un goût fade dans les taches.",
+            "action": "Plier plus soigneusement, en s'assurant que chaque pièce contacte la graisse épicée. Cuire encore 2 minutes à feu moyen."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque pièce est uniformément épicée et teintée d'or orange. La texture est variée et intéressante. L'odeur est lumineuse, complexe et très appétissante. Remplit la bouche de chaleur.",
+            "action": "Étaler sur un plateau et refroidir complètement avant d'utiliser comme remplissage samosa."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a été agité de manière trop agressive et est maintenant un mash lisse et pasty. La texture est uniforme et les pois sont cassés.",
+            "action": "La saveur est identique — procéder. La consistance en purée fonctionnera toujours comme un remplissage, bien que l'expérience alimentaire soit moins variée."
+          }
+        ]
+      },
+      "feelCue": "Une cuillerée finie de samosa doit se sentir légèrement sèche et émiettée dans la main — non mouillée, non collante. Il devrait tenir une forme lorsqu'il est pressé mais s'effondrer à une poussée ferme. Cette texture sèche empêche la pâtisserie samosa de devenir soyeuse pendant la friture."
+    }
+  ]
 };

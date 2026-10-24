@@ -1,86 +1,188 @@
 export default {
-  repoId: "master_french_chocolate_ganache_001",
-  parentRepoId: null,
-  slug: "chocolate-ganache",
-  author: "ForkRecipe Kitchen",
-
-  title: "Dark Chocolate Ganache",
-  description: "Cream and chocolate collapse into each other in a glossy, jet-black emulsion that clings to a spoon like liquid velvet. At room temperature it pours like a mirror glaze; chilled, it sets to a truffle-firm fudge you can slice clean.",
-  cuisine: "French",
-  culture: "Pâtisserie",
-  category: "desserts",
-
-  tags: ["chocolate", "ganache", "french", "pastry", "no-bake", "glaze", "truffle"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 3, salty: 1, sour: 1, bitter: 4, umami: 1, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Dark chocolate (70% cacao), finely chopped", ratioValue: 2, defaultUnit: "parts", substitutions: ["60% bittersweet chocolate", "milk chocolate (reduce cream by 20%)"] },
-    { ingId: "ing_02", role: "Dairy",      name: "Heavy cream (36% fat)", ratioValue: 1, defaultUnit: "parts", substitutions: ["full-fat coconut cream for vegan version"] },
-    { ingId: "ing_03", role: "Fat",        name: "Unsalted butter, room temperature, cubed", ratioValue: 0.1, defaultUnit: "parts", substitutions: ["cold-pressed coconut oil"] },
-    { ingId: "ing_04", role: "Sweetener",  name: "Light corn syrup (for gloss and shelf life)", ratioValue: 0.05, defaultUnit: "parts", substitutions: ["glucose syrup", "honey"] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Flaky sea salt", ratioValue: 0.005, defaultUnit: "parts", substitutions: ["smoked salt"] },
+  "repoId": "master_french_chocolate_ganache_001",
+  "parentRepoId": null,
+  "slug": "chocolate-ganache",
+  "author": "ForkRecipe Kitchen",
+  "title": "Chocolat noir Ganache",
+  "description": "La crème et le chocolat s'effondrent l'un dans l'autre dans une émulsion noire brillante qui s'accroche à une cuillère comme du velours liquide. À la température ambiante, il verse comme un miroir glaçure; réfrigéré, il se sert d'un caramel à truffe ferme que vous pouvez couper en tranches propres.",
+  "cuisine": "Français",
+  "culture": "Pâtisserie",
+  "category": "desserts",
+  "tags": [
+    "chocolat",
+    "ganache",
+    "français",
+    "pâtisserie",
+    "Pas de cuisson",
+    "glaçure",
+    "truffe"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 1,
+    "bitter": 4,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Melt",
-      inputs: ["ing_02", "ing_04"],
-      outputState: "hot_cream",
-      instructions: "Pour the heavy cream and corn syrup into a small heavy-bottomed saucepan. Set over medium heat and bring to a full simmer — you want small, insistent bubbles breaking across the entire surface, not a rolling boil that would scorch the fat. Watch the edges of the pan: cream scalds quickly once it reaches a gallop. The moment you see a confident simmer with steam rising in a column, remove from heat. The corn syrup dissolves invisibly but is doing important work: it disrupts sugar crystallisation and gives the finished ganache that jewel-like sheen that makes mirror glazes sing. Do not stir once it approaches heat — just watch. Total time on heat: 2–3 minutes.",
-      visualCue: {
-        primaryTarget: "Small bubbles forming a ring around the edge, breaking toward the center. Surface is shimmering and a thin wisp of steam rises steadily.",
-        spectrum: [
-          { state: "Underdone", description: "Cream is warm but flat — no bubbles at the edges, no steam. Chocolate will not melt evenly when poured.", action: "Return to heat for another 60 seconds. The cream must be genuinely hot." },
-          { state: "Perfect",   description: "A confident ring of small bubbles at the edges racing inward. Steam curls up. The cream has just puffed and risen slightly.", action: "Remove from heat immediately and pour over the chocolate." },
-          { state: "Overdone",  description: "A hard rolling boil with large, violent bubbles. The cream is losing water as steam and may scorch.", action: "Remove from heat. Let it settle for 30 seconds before pouring — some water loss is acceptable, the ganache will be slightly firmer." },
-        ],
-      },
-      feelCue: "Hold your hand 10 cm above the pot — you should feel firm, dry heat pushing up, not a moist cloud. That dry radiant heat means the cream is hot enough without having boiled off.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Chocolat noir (70% cacao), finement haché",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "60% chocolat doux amer",
+        "chocolat au lait (réduire la crème de 20%)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Emulsify",
-      inputs: ["hot_cream", "ing_01"],
-      outputState: "emulsified_ganache",
-      instructions: "Place the finely chopped chocolate in a deep, heatproof bowl — a deep bowl concentrates the heat and prevents splashing. Pour the hot cream over the chocolate in one confident pour, making sure all the chocolate is submerged or in contact with the cream. Do not stir yet. Wait 90 seconds, letting the residual heat of the cream melt the chocolate from the outside in. This patience is the secret: if you stir immediately, you introduce cold air before the chocolate has melted, risking a grainy, broken ganache. After 90 seconds, begin stirring with a silicone spatula from the very center of the bowl, making small, tight concentric circles. You will see a glossy, dark emulsion form in the center — keep working outward until the ganache is completely uniform, glossy, and no streaks of cream remain. This should take about 2 minutes of gentle, deliberate stirring.",
-      visualCue: {
-        primaryTarget: "A completely uniform, deeply glossy, dark brown emulsion with no white cream streaks and no visible chocolate chips remaining.",
-        spectrum: [
-          { state: "Underdone", description: "The mixture is streaky — pale cream and dark chocolate have not fully combined. Some chips still visible.", action: "Keep stirring from the center outward. If chips remain after 3 minutes, set the bowl over a pot of barely simmering water for 20 seconds and stir again." },
-          { state: "Perfect",   description: "The ganache is glossy, uniformly dark, and flows slowly off the spatula in a thick, continuous ribbon. It moves like warm fudge sauce.", action: "Add the butter and salt in the next step." },
-          { state: "Overdone",  description: "The ganache looks greasy or grainy — the emulsion has broken. Fat has separated and pools on the surface.", action: "Add a tablespoon of warm cream and whisk vigorously. If still broken, add another tablespoon. The emulsion can almost always be recovered." },
-        ],
-      },
-      feelCue: "Drag the spatula through the center — it should feel like pulling through warm honey, coating the spatula in a smooth layer with no graininess when you rub a small amount between your fingertips.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Crème lourde (36% de matières grasses)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème de noix de coco pleine graisse pour la version végétalienne"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mount",
-      inputs: ["emulsified_ganache", "ing_03", "ing_05"],
-      outputState: "finished_ganache",
-      instructions: "While the ganache is still warm (but not burning hot — ideally around 40°C / 104°F), drop in the room-temperature butter cubes one at a time, stirring each in completely before adding the next. Room-temperature butter is critical: cold butter will not emulsify smoothly and can make the ganache seize. Add the pinch of flaky sea salt and stir it through — the salt performs two functions: it amplifies the chocolate's fruitiness and balances the sweetness so the ganache tastes complex rather than simply sweet. The finished ganache should be poured immediately if using as a glaze, or left at room temperature for 2 hours until it firms to a spreadable truffle consistency. For chocolate truffles, cover and refrigerate for at least 4 hours until scoopable. The ganache keeps at room temperature for 48 hours or refrigerated for two weeks.",
-      visualCue: {
-        primaryTarget: "The ganache deepens in gloss after the butter is incorporated — it should look lacquered, almost wet, and flow slowly off the spatula in a wide, glossy curtain.",
-        spectrum: [
-          { state: "Underdone", description: "The butter has not fully incorporated — the ganache looks pale or slightly mottled where butter pockets remain.", action: "Keep stirring gently. Add butter cubes one at a time, not all at once." },
-          { state: "Perfect",   description: "Deep, mirror-like gloss. The ganache falls off the spatula in a single, slow, unbroken curtain. When a drop lands, it spreads and smooths itself.", action: "Pour immediately as a glaze, or cover and let set for your intended use." },
-          { state: "Overdone",  description: "The ganache has been stirred too vigorously and has cooled and thickened unevenly. Surface looks dull and the texture is lumpy.", action: "Gently reheat over a double boiler, stirring slowly, until fluid and glossy again. Do not overheat." },
-        ],
-      },
-      feelCue: "At the perfect warm temperature, a drop on the inside of your wrist should feel neutral — neither cold nor hot — and it should sit on your skin for 3 seconds before it begins to spread, which tells you the emulsion is stable and the fat is properly distributed.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé, température ambiante, cubed",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile de coco pressée à froid"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sirop de maïs léger (pour le gloss et la durée de conservation)",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sirop de glucose",
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel de mer blanc",
+      "ratioValue": 0.005,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel fumé"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire fondre",
+      "inputs": [
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "hot_cream",
+      "instructions": "Verser la crème lourde et le sirop de maïs dans une petite casserole à fond lourd. Réglez-vous à feu moyen et faites mijoter complètement — vous voulez de petites bulles persistantes qui se brisent sur toute la surface, pas un ébullition qui brûle la graisse. Surveillez les bords de la poêle : la crème s'échaude rapidement une fois qu'elle atteint un galop. Au moment où vous voyez une mijoter confiante avec de la vapeur montant dans une colonne, retirer de la chaleur. Le sirop de maïs se dissout de façon invisible mais fait un travail important : il perturbe la cristallisation du sucre et donne à la ganache finie un éclat de bijou qui fait chanter les glaçures miroirs. Ne remuez pas une fois qu'il approche de la chaleur — veillez simplement. Temps total à la chaleur: 2–3 minutes.",
+      "visualCue": {
+        "primaryTarget": "Petites bulles formant un anneau autour du bord, brisant vers le centre. La surface est chatoyante et une fine vapeur monte régulièrement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème est chaude mais plate — pas de bulles aux bords, pas de vapeur. Le chocolat ne fondra pas uniformément lorsqu'il sera versé.",
+            "action": "Retourner à la chaleur pendant 60 secondes. La crème doit être vraiment chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un anneau confiant de petites bulles aux bords de course vers l'intérieur. La vapeur s'enroule. La crème vient de souffler et de se lever légèrement.",
+            "action": "Retirer immédiatement du feu et verser sur le chocolat."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un ébullition dur avec de grandes bulles violentes. La crème perd de l'eau sous forme de vapeur et peut brûler.",
+            "action": "Retirer du feu. Laisser reposer pendant 30 secondes avant de verser — une certaine perte d'eau est acceptable, la ganache sera légèrement plus ferme."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre main 10 cm au - dessus de la casserole — vous devriez sentir la chaleur ferme et sèche poussant vers le haut, et non un nuage humide. Cette chaleur radieuse sèche signifie que la crème est assez chaude sans avoir bouilli."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Émulsifier",
+      "inputs": [
+        "hot_cream",
+        "ing_01"
+      ],
+      "outputState": "emulsified_ganache",
+      "instructions": "Placez le chocolat finement haché dans un bol profond et résistant à la chaleur — un bol profond concentre la chaleur et empêche les éclaboussures. Verser la crème chaude sur le chocolat en une seule fois, en veillant à ce que tout le chocolat soit immergé ou en contact avec la crème. Ne remuez pas encore. Attendez 90 secondes, laissant la chaleur résiduelle de la crème fondre le chocolat de l'extérieur. Cette patience est le secret: si vous remuez immédiatement, vous introduisez l'air froid avant que le chocolat ait fondu, risquant une ganache granuleuse et cassée. Après 90 secondes, commencez à remuer avec une spatule de silicone du centre du bol, faisant de petits cercles concentriques serrés. Vous verrez une forme d'émulsion foncée et brillante au centre — continuer à travailler vers l'extérieur jusqu'à ce que la ganache soit complètement uniforme, brillante, et il ne reste pas de stries de crème. Cela devrait prendre environ 2 minutes de brassage doux et délibéré.",
+      "visualCue": {
+        "primaryTarget": "Une émulsion complètement uniforme, profondément brillante, brun foncé, sans stries de crème blanche et sans croustilles de chocolat visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est strié — la crème pâle et le chocolat noir n'ont pas été complètement combinés. Certaines puces sont encore visibles.",
+            "action": "Continuez à remuer du centre vers l'extérieur. Si les croustilles restent après 3 minutes, mettre le bol sur un pot d'eau à peine mijotant pendant 20 secondes et remuer à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "La ganache est brillante, uniformément sombre, et coule lentement hors de la spatule dans un ruban épais et continu. Ça bouge comme de la sauce tiède.",
+            "action": "Ajouter le beurre et le sel dans la prochaine étape."
+          },
+          {
+            "state": "Overdone",
+            "description": "La ganache a l'air grasse ou granuleuse, l'émulsion s'est brisée. La graisse s'est séparée et les piscines à la surface.",
+            "action": "Ajouter une cuillère à soupe de crème chaude et fouetter vigoureusement. Si elle est toujours cassée, ajoutez une autre cuillère à soupe. L'émulsion peut presque toujours être récupérée."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser la spatule à travers le centre - il devrait sentir comme tirer à travers le miel chaud, enrober la spatule dans une couche lisse sans graine lorsque vous frottez une petite quantité entre vos doigts."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Monter",
+      "inputs": [
+        "emulsified_ganache",
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "finished_ganache",
+      "instructions": "Alors que la ganache est encore chaude (mais pas brûlante – idéalement autour de 40°C / 104°F), chute dans les cubes de beurre à température ambiante un à la fois, en remuant chacun complètement avant d'ajouter le suivant. Le beurre à température ambiante est critique : le beurre froid n'émulsionnera pas facilement et peut faire saisir le ganache. Ajouter la pincée de sel de mer et le remuer à travers — le sel remplit deux fonctions: il amplifie le fruité du chocolat et équilibre la douceur ainsi le goût complexe de la ganache plutôt que simplement sucré. Le ganache fini doit être versé immédiatement en cas d'utilisation comme glaçure, ou laissé à la température ambiante pendant 2 heures jusqu'à ce qu'il s'engage dans une consistance truffière extensible. Pour les truffes de chocolat, couvrir et réfrigérer pendant au moins 4 heures jusqu'à ce qu'elles soient écorcables. La ganache reste à température ambiante pendant 48 heures ou réfrigérée pendant deux semaines.",
+      "visualCue": {
+        "primaryTarget": "La ganache s'approfondit en brillant après l'incorporation du beurre — elle devrait être laquée, presque humide, et s'écouler lentement hors de la spatule dans un large rideau brillant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre n'a pas été entièrement incorporé — la ganache semble pâle ou légèrement tachetée là où il reste des poches de beurre.",
+            "action": "Continuez à remuer doucement. Ajouter les cubes de beurre un à la fois, pas tous à la fois."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep, miroir-comme brillant. La ganache tombe de la spatule dans un seul rideau, lent et intact. Quand une goutte atterrit, elle se répand et se lisse.",
+            "action": "Verser immédiatement sous forme de glaçure, ou couvrir et laisser régler pour votre utilisation prévue."
+          },
+          {
+            "state": "Overdone",
+            "description": "La ganache a été agitée trop vigoureusement et a refroidi et épaissi inégalement. La surface est terne et la texture est bosselée.",
+            "action": "Réchauffez doucement sur une double chaudière, en remuant lentement, jusqu'à ce que le liquide et le brillant à nouveau. Ne pas surchauffer."
+          }
+        ]
+      },
+      "feelCue": "À la température chaude parfaite, une goutte à l'intérieur de votre poignet devrait se sentir neutre — ni froid ni chaud — et il devrait s'asseoir sur votre peau pendant 3 secondes avant qu'il commence à se répandre, ce qui vous indique l'émulsion est stable et la graisse est correctement distribuée."
+    }
+  ]
 };

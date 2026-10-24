@@ -1,113 +1,252 @@
 export default {
-  repoId: "master_french_paindecampagne_001",
-  parentRepoId: null,
-  slug: "pain-de-campagne",
-  author: "ForkRecipe Kitchen",
-  title: "Pain de Campagne",
-  description: "A classic French country loaf with a burnished flour-dusted crust that shatters at the first cut — mild tang from the sourdough, an open and irregular crumb threaded with the nuttiness of whole wheat and rye.",
-  cuisine: "French",
-  culture: "Lyonnaise",
-  category: "breads",
-  tags: ["pain-de-campagne", "french", "sourdough", "country-bread", "artisan", "mixed-flour"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "18 hr",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Bread flour (T65 or 12% protein)",       ratioValue: 100, defaultUnit: "%", substitutions: ["all-purpose flour"] },
-    { ingId: "ing_02", role: "Structure", name: "Whole wheat flour",                      ratioValue: 18,  defaultUnit: "%", substitutions: ["spelt flour"] },
-    { ingId: "ing_03", role: "Structure", name: "Dark rye flour (T170)",                  ratioValue: 8,   defaultUnit: "%", substitutions: ["whole rye flour"] },
-    { ingId: "ing_04", role: "Hydration", name: "Cool water (22 C)",                      ratioValue: 72,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Leavener",  name: "Active sourdough starter (100% hydration)",ratioValue: 20, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt",                          ratioValue: 2,   defaultUnit: "%", substitutions: ["kosher salt"] },
+  "repoId": "master_french_paindecampagne_001",
+  "parentRepoId": null,
+  "slug": "pain-de-campagne",
+  "author": "ForkRecipe Kitchen",
+  "title": "Douleur de Campagne",
+  "description": "Un pain de campagne français classique avec une croûte de farine brûlée qui éclate à la première coupe – un doux tang du sourd, une miette ouverte et irrégulière filetée de la noix de blé entier et de seigle.",
+  "cuisine": "Français",
+  "culture": "Lyonnaise",
+  "category": "breads",
+  "tags": [
+    "douleur de campagne",
+    "français",
+    "Pâtes alimentaires",
+    "pain de pays",
+    "artisan",
+    "farine mélangée"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "18 hr",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Autolyse",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "autolyse_dough",
-      instructions: "Combine all three flours in a large bowl and whisk briefly to distribute the whole wheat and rye evenly through the bread flour. Add the cool water and mix with wet hands or a stiff spatula until no dry flour remains. The dough will be rough and shaggy — wetter than a simple white loaf because the whole grain flours will continue absorbing water. Cover tightly and rest 45 minutes. No starter, no salt yet. This autolyse allows the whole-grain particles to fully hydrate and the gluten to begin organizing without agitation.",
-      visualCue: {
-        primaryTarget: "After 45 minutes: a dough that has smoothed noticeably. The rough, ragged texture has given way to a cohesive, slightly tacky mass with a domed top.",
-        spectrum: [
-          { state: "Underdone", description: "Still rough and stringy after 45 minutes; tears easily; whole grain particles feel sharp and unmoisturized.", action: "Rest another 20 minutes. Whole wheat and rye absorb water slowly." },
-          { state: "Perfect",   description: "Smooth, cohesive, and stretches a few centimeters without tearing. The dough has a faint, grassy whole-wheat smell. Holds its form in the bowl.", action: "Add starter and salt and perform the lamination fold." },
-          { state: "Overdone",  description: "Dough feels slightly warm and has a mild sourness — fermentation has begun without the starter.", action: "Proceed immediately and reduce bulk fermentation time by 30 minutes." },
-        ],
-      },
-      feelCue: "After the autolyse, the dough should feel noticeably softer than right after mixing — the whole-grain particles have softened and the gluten has begun to organize without any effort from you. It's almost silky.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain (T65 ou 12% de protéines)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Farine polyvalente"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fold",
-      inputs: ["autolyse_dough", "ing_05", "ing_06"],
-      outputState: "mixed_dough",
-      instructions: "Pour the active starter over the autolyse dough; scatter the salt on top. Perform a lamination fold: wet the work surface lightly, spread the dough into a thin rectangle, fold into thirds, then into thirds the other way, gathering it back into the bowl. Follow with one set of stretch-and-folds to fully incorporate everything. The dough will initially feel slack and slippery as the starter makes it wetter — this is correct. The salt will tighten it over the next few hours.",
-      visualCue: {
-        primaryTarget: "Uniform color with no streaks of lighter starter or undissolved salt crystals. Dough has pulled back together into a cohesive mass after the lamination.",
-        spectrum: [
-          { state: "Underdone", description: "Visible white salt streaks; pale starter ribbons not blended in; dough looks marbled.", action: "Continue folding — the salt and starter need complete incorporation before bulk fermentation." },
-          { state: "Perfect",   description: "Uniform throughout. The dough is slack but coherent, springs back slowly when poked. Smells pleasantly sour from the starter.", action: "Cover and begin the bulk fermentation with stretch-and-folds." },
-          { state: "Overdone",  description: "Over-mixed to the point of tearing — the lamination was too aggressive or the dough was too cold.", action: "Rest 20 minutes covered before beginning the stretch-and-fold sets." },
-        ],
-      },
-      feelCue: "Right after incorporation, the dough will feel loose and almost liquid in places — the starter adds hydration. The first stretch-and-fold will already feel slightly more organized than the last.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Farine de blé entier",
+      "ratioValue": 18,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine d'épeautre"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Ferment",
-      inputs: ["mixed_dough"],
-      outputState: "bulk_dough",
-      instructions: "Cover the bowl. Over the next 4 hours, perform four sets of stretch-and-folds, one set every 45–60 minutes. After the last set, leave undisturbed for 1–2 more hours until the bulk is complete. Total bulk fermentation: 5–6 hours at 21–23 C. The pain de campagne benefits from a longer, cooler bulk than a pure white sourdough — the whole grain flours create more complex enzymatic activity and the rye contributes to a mild, approachable tang.",
-      visualCue: {
-        primaryTarget: "60–70% volume increase. The dough is visibly airy, domed at the top, with small bubbles tracing the bowl wall. The surface looks slightly smoother than white sourdough due to the bran from the whole grain flours.",
-        spectrum: [
-          { state: "Underdone", description: "Less than 40% volume increase after 5 hours. Dough is still dense and barely jiggles.", action: "Extend bulk by 1 hour and move to a warmer environment. The whole-grain flours slow fermentation." },
-          { state: "Perfect",   description: "65–70% rise, dome visible, bubbles along the bowl wall, jiggle when shaken. Smells pleasantly sour and nutty.", action: "Proceed to shaping and cold proof." },
-          { state: "Overdone",  description: "Dome has collapsed; surface is sticky and wet; sharp alcohol smell dominant.", action: "Shape immediately and cold proof only 8–10 hours." },
-        ],
-      },
-      feelCue: "At the end of bulk, the dough should feel airy and elastic — it stretches easily into long, lacy strands when you reach in with wet hands. You can see bubbles burst as you lift it.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine de seigle foncé (T170)",
+      "ratioValue": 8,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Farine de seigle entière"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Shape",
-      inputs: ["bulk_dough"],
-      outputState: "shaped_loaf",
-      instructions: "Gently tip the bulk dough onto a lightly floured surface. Pre-shape into a round by folding the edges to the center, then flipping seam-side down. Rest uncovered 20 minutes. Final shape: flip, stretch gently to an oval, fold both sides to center, roll toward you with hands tucked under to build surface tension. For the traditional pain de campagne look, place seam-side down in a banneton heavily dusted with a mix of flour and rye flour. Cold-proof in the refrigerator 10–14 hours. Before baking, dust the top of the loaf (which will be the bottom in the banneton) with more rye flour — it creates the characteristic floury crust.",
-      visualCue: {
-        primaryTarget: "A taut, high-domed round sitting confidently in the banneton, seam tucked underneath and the surface taut enough to resist a gentle poke.",
-        spectrum: [
-          { state: "Underdone", description: "Loaf is spreading laterally, the dome is flat rather than high, seam is visible from the side.", action: "Reshape: use a bench scraper to scoop the dough back and retighten. Work quickly with a confident hand." },
-          { state: "Perfect",   description: "High dome, sealed seam, good surface tension. Flour-dusted surface. Sits tall in the banneton without spreading.", action: "Cover and refrigerate 10–14 hours for the cold retard." },
-          { state: "Overdone",  description: "Surface has torn from excessive tensioning; the gluten skin is visibly damaged.", action: "Fold the tears gently closed and cold proof. The crust will form around the damage." },
-        ],
-      },
-      feelCue: "A well-shaped pain de campagne feels like a firm, filled bean bag — heavy, rounded, and with enough tension that pressing the surface with a fingertip results in a slow return rather than an instant spring-back.",
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Eau fraîche (22 C)",
+      "ratioValue": 72,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Bake",
-      inputs: ["shaped_loaf"],
-      outputState: "finished_pain_de_campagne",
-      instructions: "Preheat a Dutch oven at 250 C (480 F) for 45 minutes. Score the cold loaf with a lame: one central slash or a cross-hatch pattern. Lower into the Dutch oven and bake covered 20 minutes, then uncovered at 220 C (425 F) for 25–30 minutes until the crust is deeply burnished with lighter flour-dusted patches (where the banneton flour didn't caramelize). The rye flour in the crust stays matte and pale against the darker bread flour — this contrast is the visual signature of a pain de campagne.",
-      visualCue: {
-        primaryTarget: "A burnished amber-to-brown crust with patches of pale matte flour-dusting where the banneton pattern transferred. The score has opened dramatically. The crust is deeply caramelized, not pale.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is pale gold, barely caramelized. Tapping the bottom sounds dense. The flour-dust patches may not yet contrast against the crust color.", action: "Bake uncovered another 5–8 minutes at 220 C. Internal temperature should reach 96–98 C." },
-          { state: "Perfect",   description: "Deep amber-brown with visibly lighter flour-dusted patches. Score has bloomed dramatically. Hollow thud on the bottom. The kitchen smells of caramelized wheat and faint sourness.", action: "Cool on a rack at least 1 hour. The mild tang develops fully as the crumb cools." },
-          { state: "Overdone",  description: "Near-black crust, burnt-flour smell, crust is very rigid and pulling away from the crumb.", action: "Cool and trim. The crumb will be excellent regardless." },
-        ],
-      },
-      feelCue: "Fresh from the oven a pain de campagne feels lighter than it looks — the open crumb is full of air pockets. The crust should flex and crackle as it cools on the rack, releasing a series of tiny pops and hisses.",
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "Démarrage actif à l'aurore (hydratation à 100%)",
+      "ratioValue": 20,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "sel casher"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Autolyse",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "autolyse_dough",
+      "instructions": "Mélanger les trois farines dans un grand bol et fouetter brièvement pour distribuer le blé entier et le seigle uniformément à travers la farine de pain. Ajouter l'eau fraîche et mélanger avec les mains mouillées ou une spatule raide jusqu'à ce qu'aucune farine sèche ne reste. La pâte sera rugueuse et chaotique — plus humide qu'un simple pain blanc parce que les farines de grains entiers continueront à absorber de l'eau. Couvrir soigneusement et reposer 45 minutes. Pas d'entrée, pas encore de sel. Cette autolyse permet aux particules de grains entiers d'hydrater complètement et au gluten de commencer à s'organiser sans agitation.",
+      "visualCue": {
+        "primaryTarget": "Après 45 minutes : une pâte qui a lissé sensiblement. La texture rugueuse et râpée a cédé la place à une masse cohésive et légèrement collante avec un sommet en forme de dos.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours rugueux et stringé après 45 minutes; déchire facilement; les particules de grains entiers se sentent vives et non hydratées.",
+            "action": "Reposez-vous encore 20 minutes. Le blé entier et le seigle absorbent l'eau lentement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lisse, cohésif et s'étire quelques centimètres sans déchirer. La pâte a une faible odeur de blé entier. Il tient sa forme dans le bol.",
+            "action": "Ajouter le démarrage et le sel et effectuer le pli de laminage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux se sent légèrement chaude et a une légère amerie — la fermentation a commencé sans entrée.",
+            "action": "Procéder immédiatement et réduire le temps de fermentation en vrac de 30 minutes."
+          }
+        ]
+      },
+      "feelCue": "Après l'autolyse, la pâte devrait se sentir nettement plus douce qu'après le mélange — les particules de grains entiers se sont adoucies et le gluten a commencé à s'organiser sans aucun effort de votre part. C'est presque soyeux."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "autolyse_dough",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "mixed_dough",
+      "instructions": "Versez le démarreur actif sur la pâte autolyse; dispersez le sel sur le dessus. Effectuer un pli de laminage : humidifier légèrement la surface de travail, répartir la pâte dans un mince rectangle, plier en tiers, puis en tiers dans l'autre sens, en la ramenant dans le bol. Suivez avec un ensemble de stretch-and-folds pour intégrer pleinement tout. La pâte se sentira d'abord lâche et glissante comme le démarreur la rend plus humide — c'est exact. Le sel le serrera au cours des prochaines heures.",
+      "visualCue": {
+        "primaryTarget": "Couleur uniforme sans stries de cristaux de sel plus légers ou non dissous. La toux s'est ressaisie dans une masse cohésive après la lamination.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Stries de sel blanc visible; rubans de départ pâles non mélangés; la pâte semble marbrée.",
+            "action": "Continuer le pliage — le sel et le démarreur doivent être complètement incorporés avant la fermentation en vrac."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme. La pâte est molle mais cohérente, ressort lentement lorsqu'elle est cuite. Ça sent agréablement aigre de l'entrée.",
+            "action": "Couvrir et commencer la fermentation en vrac avec des étirements."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmélangé au point de déchirer — la lamination était trop agressive ou la pâte trop froide.",
+            "action": "Reposez-vous 20 minutes avant de commencer les jeux d'étirement."
+          }
+        ]
+      },
+      "feelCue": "Juste après l'incorporation, la pâte se sentira lâche et presque liquide dans les endroits — le démarreur ajoute l'hydratation. Le premier stretch-and-fold se sentira déjà un peu plus organisé que le dernier."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ferment",
+      "inputs": [
+        "mixed_dough"
+      ],
+      "outputState": "bulk_dough",
+      "instructions": "Couvrez le bol. Au cours des 4 prochaines heures, effectuer quatre séries de stretch-and-folds, un ensemble toutes les 45-60 minutes. Après le dernier set, laisser non perturbé pendant 1-2 heures de plus jusqu'à ce que le vrac soit complet. Fermentation totale en vrac: 5–6 heures à 21–23 C. La douleur de campagne bénéficie d'un volume plus long et plus frais qu'un pur aurard blanc — les farines de grains entiers créent une activité enzymatique plus complexe et le seigle contribue à un tang doux et accessible.",
+      "visualCue": {
+        "primaryTarget": "Augmentation en volume de 60 à 70 %. La pâte est visiblement aérée, bombée en haut, avec de petites bulles traçant la paroi du bol. La surface semble légèrement plus lisse que le sarcelle blanc en raison du son des farines de grains entiers.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Augmentation de moins de 40 % du volume après 5 heures. La toux est encore dense et à peine bouchée.",
+            "action": "Étendre le volume de 1 heure et passer à un environnement plus chaud. Les farines entières ralentissent la fermentation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Augmentation de 65 à 70 %, dôme visible, bulles le long de la paroi de la cuvette, saute en cas de tremblement. Ça sent agréablement aigre et noisette.",
+            "action": "Procédez à la mise en forme et à la preuve du froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le dôme s'est effondré; la surface est collante et humide; l'odeur d'alcool vive domine.",
+            "action": "Formez immédiatement et à l'épreuve du froid seulement 8-10 heures."
+          }
+        ]
+      },
+      "feelCue": "A la fin de la pâte en vrac, la pâte doit se sentir aérée et élastique, elle s'étire facilement en longs brins lacés lorsque vous arrivez avec des mains mouillées. Vous pouvez voir des bulles éclater en le soulevant."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Forme",
+      "inputs": [
+        "bulk_dough"
+      ],
+      "outputState": "shaped_loaf",
+      "instructions": "Verser délicatement la pâte en vrac sur une surface légèrement farinée. Pré-former en rond en pliant les bords vers le centre, puis en retournant la couture vers le bas. Repos à découvert 20 minutes. Forme finale: Flip, s'étirer doucement à un ovale, plier les deux côtés au centre, rouler vers vous avec les mains cousues sous pour construire la tension de surface. Pour l'aspect traditionnel de la douleur de campagne, placez le bord de la couture dans une banneton fortement poussiéreuse avec un mélange de farine et de farine de seigle. Cold-proof au réfrigérateur 10–14 heures. Avant de cuire, époussetez le dessus du pain (qui sera le fond de la banneton) avec plus de farine de seigle — il crée la croûte farineuse caractéristique.",
+      "visualCue": {
+        "primaryTarget": "Un rond tat, à haute dominance assis en toute confiance dans le banneton, couture cousue en dessous et la surface assez tat pour résister à un poke doux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pain se répand latéralement, le dôme est plat plutôt que haut, la couture est visible du côté.",
+            "action": "Reformage : utilisez un racleur de banc pour retirer la pâte et la reresser. Travailler rapidement avec une main confiante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dôme élevé, couture scellée, bonne tension de surface. Surface épurée. Il est assis dans le banneton sans s'étendre.",
+            "action": "Couvrir et réfrigérer 10 à 14 heures pour le retard froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface est déchirée par une tension excessive; la peau de gluten est visiblement endommagée.",
+            "action": "Pliez les larmes doucement fermé et la preuve froide. La croûte se formera autour des dégâts."
+          }
+        ]
+      },
+      "feelCue": "Une douleur bien en forme de campagne se sent comme un sac de haricots ferme et rempli — lourd, arrondi, et avec suffisamment de tension qui presse la surface avec un bout de doigt entraîne un retour lent plutôt qu'un ressort-retour instantané."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "shaped_loaf"
+      ],
+      "outputState": "finished_pain_de_campagne",
+      "instructions": "Préchauffer un four hollandais à 250 C (480 F) pendant 45 minutes. Marquer le pain froid avec un lame : une barre oblique centrale ou un motif de coupe croisée. Baisser dans le four hollandais et cuire couvert 20 minutes, puis découvert à 220 C (425 F) pendant 25-30 minutes jusqu'à ce que la croûte soit profondément brûlée avec des taches de farine plus légères (où la farine de banneton n'a pas caramélisé). La farine de seigle dans la croûte reste mate et pâle contre la farine de pain plus foncée — ce contraste est la signature visuelle d'une douleur de campagne.",
+      "visualCue": {
+        "primaryTarget": "Une croûte brunâtre ambrée avec des taches de poudre de farine mate pâle où le patron de banneton a été transféré. Le score s'est ouvert de façon spectaculaire. La croûte est profondément caramélisée, pas pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est d'or pâle, à peine caramélisée. Le tapotage du fond semble dense. Les taches farine-poussière ne contrastent pas encore avec la couleur de la croûte.",
+            "action": "Le four a découvert 5 à 8 minutes à 220 °C. La température interne devrait atteindre 96 à 98 °C."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep ambre-brun avec visiblement des taches de farine plus légères. Le score a considérablement fleuri. Un bruit creux en bas. La cuisine sent le blé caramélisé et l'aurore.",
+            "action": "Laisser refroidir sur une grille au moins 1 heure. Le léger tang se développe complètement à mesure que la miette se refroidit."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte presque noire, l'odeur de farine brûlée, la croûte est très rigide et s'éloigne de la miette.",
+            "action": "Refroidir et couper. La miette sera excellente."
+          }
+        ]
+      },
+      "feelCue": "Au four, la douleur de campagne est plus légère qu'elle n'en a l'air : la miette ouverte est pleine de poches d'air. La croûte devrait fléchir et craqueler pendant qu'elle refroidit sur le rack, libérant une série de minuscules pops et sifflements."
+    }
+  ]
 };

@@ -1,98 +1,231 @@
 export default {
-  repoId: "master_moroccan_preserved_lemons_001",
-  parentRepoId: null,
-  slug: "preserved-lemons",
-  author: "ForkRecipe Kitchen",
-  title: "Preserved Lemons",
-  description: "Whole lemons packed tight in their own juice with coarse salt and spices, sealed in a jar and left for a month — transforming the rind from bitter pith to a silky, mellow, intensely savory and fragrant preserve.",
-  cuisine: "Moroccan",
-  culture: "North African",
-  category: "fermented",
-  tags: ["preserved-lemons", "moroccan", "north-african", "condiment", "fermented", "vegan", "gluten-free"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "30 days",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 5, sour: 3, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Thin-skinned lemons (Meyer or Eureka, unwaxed)",       ratioValue: 100, defaultUnit: "parts", substitutions: ["limes (preserved limes are equally classic in some North African traditions)"] },
-    { ingId: "ing_02", role: "Seasoning",  name: "Coarse non-iodized sea salt or kosher salt",           ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Citrus",     name: "Fresh lemon juice (from additional lemons for brine)", ratioValue: 30,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",      name: "Bay leaves (dried)",                                   ratioValue: 0.5, defaultUnit: "part",  substitutions: [] },
-    { ingId: "ing_05", role: "Spice",      name: "Cinnamon stick (one small piece)",                     ratioValue: 0.3, defaultUnit: "part",  substitutions: [] },
-    { ingId: "ing_06", role: "Spice",      name: "Whole black peppercorns",                              ratioValue: 0.2, defaultUnit: "part",  substitutions: ["coriander seeds", "cardamom pods"] },
-    { ingId: "ing_07", role: "Spice",      name: "Whole cloves (2–3)",                                   ratioValue: 0.1, defaultUnit: "part",  substitutions: ["star anise (half a pod)"] },
+  "repoId": "master_moroccan_preserved_lemons_001",
+  "parentRepoId": null,
+  "slug": "preserved-lemons",
+  "author": "ForkRecipe Kitchen",
+  "title": "Cimons conservés",
+  "description": "Des citrons entiers emballés dans leur propre jus avec du sel grossier et des épices, scellés dans un pot et laissés pendant un mois — transformant la croûte de la moelle amère en une conserve soyeuse, moelleuse, intensément salée et parfumée.",
+  "cuisine": "Maroc",
+  "culture": "Afrique du Nord",
+  "category": "fermented",
+  "tags": [
+    "de conservation",
+    "Maroc",
+    "nord-africain",
+    "condiment",
+    "fermenté",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "30 days",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 5,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Prepare",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "salt_packed_lemons",
-      instructions: "Scrub the lemons thoroughly under warm water to remove any surface wax or pesticide residue — unwaxed lemons are strongly preferred, as the rind is the prize and you want nothing between the salt and the natural lemon oils. Cut each lemon nearly into quarters from the top, stopping 1–2 cm before the base so the lemon holds together in a fan shape. This quartered-but-hinged cut maximizes the surface area exposed to the salt while keeping the lemon whole for an attractive presentation. Pack 1–2 tablespoons of coarse salt generously into the opening of each quartered lemon, pressing the salt into the flesh. The quantity of salt is not negotiable — undersalting will allow harmful bacterial growth rather than the desired fermentation.",
-      visualCue: {
-        primaryTarget: "Each lemon splayed open like a four-petaled flower, densely packed with white coarse salt that is pressed into every crevice of the cut surfaces. The lemon should look almost crystallized at the cut faces.",
-        spectrum: [
-          { state: "Underdone", description: "Too little salt in the cuts — the lemon surfaces are only lightly dusted and the salt has not been pressed into the flesh. Insufficient salt creates conditions for harmful mold rather than safe fermentation.", action: "Open the cuts wider and pack in additional salt. You cannot over-salt at this stage — the lemons will ultimately be rinsed before use, and the salt is the preservation mechanism." },
-          { state: "Perfect",   description: "Every cut surface is thickly coated in salt, pressed into the flesh, with visible salt crystals packed into the opening. When you squeeze the lemon gently, a tiny amount of juice beads at the cut — the salt is already beginning to draw moisture.", action: "Proceed to packing the jar." },
-          { state: "Overdone",  description: "Lemon cut all the way through into four separate quarters — they are no longer held together. Not a catastrophe, but whole-hinged lemons pack more tightly and look more traditional.", action: "Pack the separated quarters into the jar anyway — they will still work perfectly, just with a less traditional appearance." },
-        ],
-      },
-      feelCue: "When you squeeze a salt-packed lemon, it should feel already yielding — more pliable than a fresh lemon, because the salt has begun drawing juice from the flesh. That softening is the start of the preservation process.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Citrons à peau mince (Meyer ou Eureka, non épilés)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chaux (les chaux conservées sont également classiques dans certaines traditions nord-africaines)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Pack",
-      inputs: ["salt_packed_lemons", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "packed_preservation_jar",
-      instructions: "Sterilize a wide-mouth glass jar (large enough to hold all the lemons tightly) by boiling or running through a dishwasher's hot cycle. Place a bay leaf, a small piece of cinnamon, a pinch of peppercorns, and the cloves in the base of the jar. Pack the salt-stuffed lemons into the jar as tightly as possible, squeezing them in and pressing down so the lemons compress and release their juice. Tuck additional spices between the lemons as you layer. Once all lemons are packed, press down firmly with your fist — you want the jar to be so tight the lemons cannot rattle or move. Pour fresh lemon juice over the top until the lemons are fully submerged. If needed, add a small amount of additional salt dissolved in lemon juice. Seal tightly.",
-      visualCue: {
-        primaryTarget: "A tightly packed jar of lemons compressed to the point of releasing visible juice into the jar. The lemon juice rises around and over the packed lemons. The jar looks dense and full, with no air gaps between the lemons.",
-        spectrum: [
-          { state: "Underdone", description: "Lemons packed loosely with empty gaps between them and the jar — they will float above the juice level as it rises, exposing the top lemons to air and potential mold.", action: "Add more lemons (even thin slices can fill gaps), press more firmly, or add a fermentation weight on top before sealing." },
-          { state: "Perfect",   description: "Lemons packed so tightly they can't move. The jar juice level reaches or covers the top lemon. Bay leaves and spices visible between the lemons. The jar lid closes with resistance from the compressed contents.", action: "Seal and store at room temperature or in a cool pantry." },
-          { state: "Overdone",  description: "Jar over-packed and the lid cannot close without crushing the lemons to a broken pulp. While not harmful, a crushed lemon jam rather than whole preserved lemons is the result.", action: "Remove one lemon to allow the lid to close properly. The slightly crushed lemons will still preserve well." },
-        ],
-      },
-      feelCue: "Press the sealed jar down on a countertop and shake gently — you should not hear or feel the lemons shifting. A jar that rattles has loose lemons that will bob above the brine. Re-open and pack more tightly.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sels de mer non iodés grossiers ou kasher",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Cure",
-      inputs: ["packed_preservation_jar"],
-      outputState: "curing_preserved_lemons",
-      instructions: "Store the sealed jar at room temperature (18–24°C / 65–75°F) for 30 days minimum, turning the jar upside down once daily for the first week to redistribute the salt and juices, ensuring all lemon surfaces are bathed in the brine. The lemons will gradually sink as they soften and the juice level will look different from day to day — this is normal. After a week, the turning is less critical, but occasional rotation helps. At 30 days, taste: the rind should be tender, translucent, and mellow — not sharply bitter but savory-salty-fragrant. The flesh is typically discarded when using preserved lemons in cooking; only the rind is used.",
-      visualCue: {
-        primaryTarget: "After 30 days: the lemons have softened and sunk, their rinds translucent and slightly golden-amber from the salt and their own juices. The brine in the jar is now a cloudy, golden syrup — thicker than plain lemon juice.",
-        spectrum: [
-          { state: "Underdone", description: "At 2 weeks, the lemon rinds are still firm and opaque when cut open — they taste sharply bitter and salty rather than mellow and silky. The pith still has its aggressive white bitterness.", action: "Seal and continue curing. Two weeks is the halfway point — the real transformation happens in weeks 3–4. Patience is the only ingredient you need here." },
-          { state: "Perfect",   description: "At 30+ days: the rind is translucent, tender to a clean cut with a knife, and tastes intensely savory-salty-fragrant with only a hint of pleasantly mellow bitterness. The pith has softened from stark white to a gelatinous, mellow texture.", action: "Refrigerate. The preserved lemons are ready to use and will keep refrigerated for 6–12 months." },
-          { state: "Overdone",  description: "Left at room temperature past 60 days — the lemons may develop a very strong, almost fermented-alcoholic brine and the rinds can become mushy rather than silky-firm. The flavor becomes more intensely funky than fragrant.", action: "Transfer to refrigerator immediately. Very over-cured preserved lemons are still useful — particularly in slow braises and stews where the extra fermented depth integrates well." },
-        ],
-      },
-      feelCue: "At 30 days, slice open a preserved lemon: the rind should give to a sharp knife with no resistance and the pith should look translucent-gelatinous rather than chalky-white. Press a small piece between your fingers — it should squish easily, like cooked vegetable, not resist like raw peel.",
+      "ingId": "ing_03",
+      "role": "Citrus",
+      "name": "Jus de citron frais (à partir de citrons supplémentaires pour saumure)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["curing_preserved_lemons"],
-      outputState: "finished_preserved_lemons",
-      instructions: "Once cured, refrigerate the jar. To use: remove a lemon quarter, rinse the salt from the rind under cold water, then scrape away and discard the flesh and pith — only the silky, translucent rind is used. Slice or mince the rind and use in tagines, grain salads, pasta, compound butters, or dressings. The brine in the jar is also excellent: use it as a seasoning salt substitute in sauces and braises. Preserved lemons can transform a dish from good to memorable with just a small amount — their flavor is concentrated, so use with restraint until you understand their potency.",
-      visualCue: {
-        primaryTarget: "A jar of ready-to-use preserved lemons shows translucent, amber-tinted rinds submerged in a thick, golden, cloudy brine. When you remove a quarter and rinse it, the rind should look almost lacquered — sleek and slightly glossy.",
-        spectrum: [
-          { state: "Underdone", description: "The rind, after rinsing, still looks opaque and white in patches — the pith has not fully transformed. The taste is sharp and bitter rather than silky and savory.", action: "Return the lemon to the jar and cure for another 1–2 weeks. Not all lemons soften at the same rate — thin-skinned Meyers preserve faster than thick-skinned Eurekas." },
-          { state: "Perfect",   description: "The rinsed rind is translucent, soft, and fragrant — intensely lemon-forward but with no harsh bite. It smells of concentrated lemon zest and salt. Sliced thin, it dissolves almost on the tongue, releasing a burst of savory lemon flavor.", action: "Use immediately or keep refrigerated. Add to any dish that needs a deep, savory-citrus accent." },
-          { state: "Overdone",  description: "Rind has broken down to a mushy, almost paste-like texture — difficult to slice cleanly. Still flavorful but not the silky strips that make preserved lemons so elegant.", action: "Use as a paste stirred into vinaigrettes, hummus, or compound butter where the texture is irrelevant." },
-        ],
-      },
-      feelCue: "A perfectly preserved lemon rind, pinched: it should feel like a thin piece of silicone — flexible, smooth, slightly waxy, with no grit or roughness from unbroken cell walls. It should slide between your fingers rather than drag.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Feuilles de baies séchées",
+      "ratioValue": 0.5,
+      "defaultUnit": "part",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Bâton de cannelle (une petite pièce)",
+      "ratioValue": 0.3,
+      "defaultUnit": "part",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Grains de poivre noirs entiers",
+      "ratioValue": 0.2,
+      "defaultUnit": "part",
+      "substitutions": [
+        "Graines de coriandre",
+        "Pousses de cardamome"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Girofles entiers (2–3)",
+      "ratioValue": 0.1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "anis des étoiles (une demi-pode)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparer",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "salt_packed_lemons",
+      "instructions": "Frottez soigneusement les citrons sous l'eau chaude pour enlever toute cire de surface ou tout résidu de pesticide — les citrons non dilatés sont fortement préférés, car la croûte est le prix et vous ne voulez rien entre le sel et les huiles de citron naturelles. Couper chaque citron presque en quartiers du haut, en arrêtant 1 à 2 cm avant la base, de sorte que le citron se tient ensemble en forme de ventilateur. Cette coupe quartied-but-hinged maximise la surface exposée au sel tout en conservant le citron entier pour une présentation attrayante. Conditionnez 1 à 2 cuillères à soupe de sel grossier généreusement dans l'ouverture de chaque citron coupé, en pressant le sel dans la chair. La quantité de sel n'est pas négociable — le sous-sel permettra une croissance bactérienne nuisible plutôt que la fermentation souhaitée.",
+      "visualCue": {
+        "primaryTarget": "Chaque citron ouvert comme une fleur à quatre pétales, densément garni de sel grossier blanc qui est pressé dans chaque crevasse des surfaces coupées. Le citron devrait être presque cristallisé sur les faces coupées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Trop peu de sel dans les découpes — les surfaces de citron ne sont que légèrement pulvérisées et le sel n'a pas été pressé dans la chair. Le sel insuffisant crée des conditions pour les moisissures nocives plutôt que la fermentation sûre.",
+            "action": "Ouvrir les coupes plus larges et les emballer en sel supplémentaire. Vous ne pouvez pas surgeler à ce stade — les citrons seront finalement rincés avant utilisation, et le sel est le mécanisme de conservation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque surface coupée est épaissement recouverte de sel, pressée dans la chair, avec des cristaux de sel visibles emballés dans l'ouverture. Lorsque vous pressez doucement le citron, une petite quantité de perles de jus à la coupe — le sel commence déjà à attirer l'humidité.",
+            "action": "Passez à l'emballage du pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Lemon a coupé tout le chemin en quatre quartiers séparés — ils ne sont plus réunis. Ce n'est pas une catastrophe, mais les citrons entiers sont plus serrés et plus traditionnels.",
+            "action": "Emballez les quartiers séparés dans le pot de toute façon — ils fonctionneront toujours parfaitement, juste avec une apparence moins traditionnelle."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous pressez un citron salin, il doit déjà se sentir plus souple qu'un citron frais, parce que le sel a commencé à extraire du jus de chair. Cet adoucissement est le début du processus de préservation."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Boîte",
+      "inputs": [
+        "salt_packed_lemons",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "packed_preservation_jar",
+      "instructions": "Stériliser un pot de verre à large bouche (assez grand pour tenir fermement tous les citrons) en bouillant ou en passant par le cycle chaud d'un lave-vaisselle. Placer une feuille de laurier, un petit morceau de cannelle, une pincée de grains de poivre et les girofles à la base du pot. Conditionnez les citrons salés le plus étroitement possible dans le pot, en les pressant et en les pressant pour que les citrons compressent et libèrent leur jus. Sucez des épices supplémentaires entre les citrons pendant que vous couchez. Une fois que tous les citrons sont emballés, appuyez fermement avec votre poing — vous voulez que le pot soit si serré les citrons ne peuvent pas hocher ou bouger. Verser le jus de citron frais sur le dessus jusqu'à ce que les citrons soient complètement submergés. Au besoin, ajouter une petite quantité de sel supplémentaire dissous dans le jus de citron. Fermez bien.",
+      "visualCue": {
+        "primaryTarget": "Un pot bien emballé de citrons comprimé au point de libérer du jus visible dans le pot. Le jus de citron se lève autour et sur les citrons emballés. Le pot a l'air dense et plein, sans vide d'air entre les citrons.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les citrons emballés avec des espaces vides entre eux et le pot — ils flotteront au-dessus du niveau de jus à mesure qu'il monte, exposant les citrons supérieurs à l'air et aux moisissures potentielles.",
+            "action": "Ajouter plus de citrons (même de fines tranches peuvent combler les vides), presser plus fermement, ou ajouter un poids de fermentation sur le dessus avant de sceller."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les citrons sont si serrés qu'ils ne peuvent pas bouger. Le niveau de jus de pot atteint ou couvre le citron supérieur. Feuilles de baie et épices visibles entre les citrons. Le couvercle du pot se ferme avec une résistance du contenu comprimé.",
+            "action": "Sceller et conserver à température ambiante ou dans un garde-manger frais."
+          },
+          {
+            "state": "Overdone",
+            "description": "Jarre suremballé et le couvercle ne peut pas fermer sans écraser les citrons à une pulpe cassée. Bien qu'il ne soit pas nocif, une confiture de citron concassée plutôt que des citrons entiers conservés en est le résultat.",
+            "action": "Retirer un citron pour permettre au couvercle de bien fermer. Les citrons légèrement broyés conserveront encore bien."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le pot scellé sur le comptoir et agitez doucement — vous ne devriez pas entendre ni sentir les citrons se déplacer. Un bocal qui râle a des citrons lâches qui boberont au-dessus de la saumure. Rouvrir et emballer plus étroitement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cure",
+      "inputs": [
+        "packed_preservation_jar"
+      ],
+      "outputState": "curing_preserved_lemons",
+      "instructions": "Conservez le pot scellé à température ambiante (18–24°C / 65–75°F) pendant 30 jours minimum, en retournant le pot une fois par jour pendant la première semaine pour redistribuer le sel et les jus, en veillant à ce que toutes les surfaces de citron soient baignées dans la saumure. Les citrons s'enfonceront progressivement au fur et à mesure qu'ils s'adoucissent et le niveau de jus sera différent d'un jour à l'autre. Après une semaine, le virage est moins critique, mais la rotation occasionnelle aide. A 30 jours, goût: la croûte doit être tendre, translucide et moelleuse, non pas très amère, mais salée et parfumée. La chair est généralement éliminée lors de la cuisson des citrons conservés; seule la croûte est utilisée.",
+      "visualCue": {
+        "primaryTarget": "Après 30 jours : les citrons se sont ramollis et coulés, leurs croûtes translucides et légèrement dorées du sel et de leurs propres jus. La saumure dans le pot est maintenant un sirop doré nuageux, plus épais que le jus de citron.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "À 2 semaines, les croûtes de citron sont encore fermes et opaques lorsqu'elles sont coupées, elles ont un goût fortement amer et salé plutôt que moelleux et soyeux. La moelle a encore son amertume blanche agressive.",
+            "action": "Scellez et continuez à guérir. Deux semaines, c'est le demi-point — la véritable transformation se produit dans les semaines 3 à 4. La patience est le seul ingrédient dont vous avez besoin ici."
+          },
+          {
+            "state": "Perfect",
+            "description": "À 30+ jours: la croûte est translucide, tendre à une coupe propre avec un couteau, et goûte intensément savore-salé-fragmenté avec seulement un soupçon d'amertume agréablement moelleuse. La pint s'est adoucie du blanc étoilé à une texture gélatineuse et moelleuse.",
+            "action": "Réfrigérer. Les citrons conservés sont prêts à l'emploi et resteront réfrigérés pendant 6 à 12 mois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Laisser à température ambiante 60 jours après — les citrons peuvent développer une saumure très forte, presque fermentée-alcoolique et les croûtes peuvent devenir musquées plutôt que soyeuses. La saveur devient plus intensément funky que parfumée.",
+            "action": "Transférer immédiatement au réfrigérateur. Les citrons conservés sont encore utiles, particulièrement dans les braises lentes et les ragoûts où la profondeur extra fermentée s'intègre bien."
+          }
+        ]
+      },
+      "feelCue": "À 30 jours, découper un citron conservé : la croûte doit donner à un couteau tranchant sans résistance et la pint doit avoir l'air translucide-gélatine plutôt que blanc crayeux. Appuyez sur un petit morceau entre les doigts — il devrait se taper facilement, comme du légume cuit, ne pas résister comme de la peau crue."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "curing_preserved_lemons"
+      ],
+      "outputState": "finished_preserved_lemons",
+      "instructions": "Une fois guéri, réfrigérer le pot. À utiliser: retirer un quart de citron, rincer le sel de la croûte sous l'eau froide, puis racler et jeter la chair et la moelle — seule la croûte soyeuse et translucide est utilisée. Couper ou hacher la croûte et l'utiliser dans les tagines, les salades de grains, les pâtes, les beurres composés ou les vinaigrettes. La saumure dans le pot est également excellente : utilisez-la comme substitut de sel assaisonné dans les sauces et les braises. Les citrons conservés peuvent transformer un plat de bon à mémorable avec juste une petite quantité — leur saveur est concentrée, donc utiliser avec retenue jusqu'à ce que vous comprenez leur puissance.",
+      "visualCue": {
+        "primaryTarget": "Un pot de citrons conservés prêts à l'emploi montre des croûtes translucides teintées d'ambre immergées dans une saumure épaisse, dorée et nuageuse. Lorsque vous retirez un quart et que vous le rincez, la croûte doit avoir l'air presque laquée, lisse et légèrement brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte, après le rinçage, semble encore opaque et blanche dans les taches — la pointe n'a pas complètement transformé. Le goût est vif et amer plutôt que soyeux et salé.",
+            "action": "Retournez le citron dans le pot et guérissez encore 1 à 2 semaines. Tous les citrons ne s'adoucissent pas à la même vitesse — les Meyers à peau mince conservent plus vite que les Eurekas à peau épaisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "La croûte rincée est translucide, douce et parfumée, intensément citronnée mais sans morsure dure. Il sent le zeste de citron concentré et le sel. Séché fin, il se dissout presque sur la langue, libérant un éclat de saveur de citron salé.",
+            "action": "Utiliser immédiatement ou conserver au réfrigérateur. Ajouter à tout plat qui a besoin d'un accent profond, savoureux-citrus."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte s'est brisée jusqu'à une texture musquée, presque pâteuse, difficile à trancher proprement. Toujours savoureux mais pas les bandes soyeuses qui rendent les citrons conservés si élégants.",
+            "action": "Utiliser comme pâte mélangée en vinaigrettes, hummus ou beurre composé lorsque la texture n'est pas pertinente."
+          }
+        ]
+      },
+      "feelCue": "Une croûte de citron parfaitement conservée, pincée : elle doit se sentir comme une fine pièce de silicone – souple, lisse, légèrement cireuse, sans grain ni rugosité des parois cellulaires intactes. Il devrait glisser entre vos doigts plutôt que de glisser."
+    }
+  ]
 };

@@ -1,81 +1,195 @@
 export default {
-  repoId: "master_mexican_hibiscus_agua_fresca_001",
-  parentRepoId: null,
-  slug: "hibiscus-agua-fresca",
-  author: "ForkRecipe Kitchen",
-  title: "Agua de Jamaica",
-  description: "Dried hibiscus flowers steeped in boiling water, strained, sweetened, and served cold — a vivid crimson drink with a tart, floral, cranberry-like sourness and a refreshing finish.",
-  cuisine: "Mexican",
-  culture: "Mexican",
-  category: "beverages",
-  tags: ["hibiscus", "agua-fresca", "mexican", "floral", "tart", "vegan", "gluten-free"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "2 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 0, sour: 4, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Dried hibiscus flowers (Jamaica / roselle calyces)", ratioValue: 1,   defaultUnit: "part",  substitutions: ["hibiscus tea bags (2–3 bags per cup of water)"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Boiling water",                                       ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener", name: "Granulated sugar",                                    ratioValue: 1,   defaultUnit: "part",  substitutions: ["piloncillo (grated)", "agave syrup", "honey"] },
-    { ingId: "ing_04", role: "Citrus",    name: "Fresh lime juice",                                    ratioValue: 0.3, defaultUnit: "part",  substitutions: ["lemon juice"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Additional cold water (for dilution and serving)",    ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Fresh ginger (2–3 thin coins, optional)",             ratioValue: 0,   defaultUnit: "parts", substitutions: ["cinnamon stick"] },
+  "repoId": "master_mexican_hibiscus_agua_fresca_001",
+  "parentRepoId": null,
+  "slug": "hibiscus-agua-fresca",
+  "author": "ForkRecipe Kitchen",
+  "title": "Agua de Jamaïque",
+  "description": "Fleurs d'hibiscus séchées imprégnées d'eau bouillante, tendues, sucrées et servies froides — une boisson pourpre vive avec une acidulée, florale, semblable à une canneberge et une finale rafraîchissante.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain",
+  "category": "beverages",
+  "tags": [
+    "hibiscus",
+    "agua-fresca",
+    "Mexique",
+    "floral",
+    "tarte",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "2 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 0,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Steep",
-      inputs: ["ing_01", "ing_02", "ing_06"],
-      outputState: "hibiscus_concentrate",
-      instructions: "Bring water to a full boil and pour it over the dried hibiscus flowers in a heatproof pot or bowl. Add the ginger coins if using. Steep for 15–20 minutes — the color will transform from deep magenta-red to an inky crimson-purple within the first 5 minutes. Do not steep for much longer than 20 minutes: the floral notes become muddy and the tannic bitterness climbs past pleasant. After steeping, strain out the flowers and ginger through a fine-mesh strainer, pressing the flowers gently with the back of a spoon to extract every last drop of the vivid concentrate.",
-      visualCue: {
-        primaryTarget: "An inky, deep crimson-purple liquid — the color of dark pomegranate juice or a very strong hibiscus tea. It should be visually striking: nearly opaque in the pot but translucent ruby when held up to light.",
-        spectrum: [
-          { state: "Underdone", description: "After only 5 minutes of steeping the water is bright pink-red but thin-tasting — the flowers have not released their full tartness or floral depth. It tastes like colored water.", action: "Steep for the full 15–20 minutes. Check by tasting: it should be aggressively tart and floral, more than you want to drink neat." },
-          { state: "Perfect",   description: "Deep crimson concentrate with a vivid tart aroma — cranberry-floral, slightly tannic. A spoonful tastes sharply sour and very floral. This is concentrate: it will be diluted and sweetened.", action: "Strain immediately and proceed to sweetening while still hot, so the sugar dissolves easily." },
-          { state: "Overdone",  description: "Steeped past 30 minutes — the liquid looks almost black and smells tannic and medicinal rather than floral. The taste is aggressively bitter and the cranberry freshness has faded.", action: "Proceed anyway — the extra dilution in the next step will help. Add sugar generously and dilute more than usual. The floral note is reduced but the tartness remains." },
-        ],
-      },
-      feelCue: "Taste the hot concentrate (carefully, it's hot): it should make your lips and tongue tingle with tartness. If it only tastes mildly fruity, steep longer. The concentrate should be uncomfortably tart neat — it's meant to be diluted.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Fleurs séchées d'hibiscus (Jamaïque / calices de roselle)",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "sacs à thé hibiscus (2–3 sacs par tasse d'eau)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Dissolve",
-      inputs: ["hibiscus_concentrate", "ing_03"],
-      outputState: "sweetened_concentrate",
-      instructions: "While the strained concentrate is still hot, stir in the granulated sugar until completely dissolved. This hot-dissolving step is key — trying to sweeten cold hibiscus with undissolved sugar crystals results in unevenly sweet agua fresca. Start with the stated amount, stir, taste, and add more in small increments. The balance point is personal: some prefer a bracingly tart jamaica with just enough sweetness to cut the edge; others prefer it closer to fruit punch. At this stage the concentrate is still too strong to judge accurately — dilution will change everything.",
-      visualCue: {
-        primaryTarget: "The hot concentrate with sugar fully dissolved is a glossy, deep crimson syrup — slightly more viscous than plain water because of the dissolved sugar. No visible sugar crystals or cloudiness from undissolved particles.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar has not fully dissolved — you can see crystals swirling or settled at the bottom of the pot. The liquid tastes unevenly sweet.", action: "Stir more vigorously while still hot, or return briefly to low heat for 30 seconds to help dissolve. The concentrate should be perfectly homogeneous before diluting." },
-          { state: "Perfect",   description: "Glossy, fully dissolved concentrate that looks uniform and coats a spoon evenly. It smells of hibiscus syrup — jammy and tart and floral. Taste and confirm there is no graininess.", action: "Add lime juice, then dilute with cold water." },
-          { state: "Overdone",  description: "Added so much sugar the concentrate is thick and cloying — it will still be too sweet after dilution. The hibiscus tartness is buried under sweetness.", action: "Reserve some unsweetened hibiscus concentrate (from a new batch or a different pot) and mix it in to re-balance the tartness-to-sweetness ratio." },
-        ],
-      },
-      feelCue: "Stir the hot concentrate against the side of the pot — if you feel the slight resistance of undissolved crystals, keep stirring. Fully dissolved sugar makes the spoon move through the liquid smoothly with no drag from particles.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau bouillante",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Chill",
-      inputs: ["sweetened_concentrate", "ing_04", "ing_05"],
-      outputState: "finished_agua_fresca",
-      instructions: "Stir the lime juice into the warm sweetened concentrate, then pour into a large pitcher and add the cold water for dilution. Stir well and taste: adjust lime, sugar, or water. Refrigerate for at least 1 hour, or place over a bowl of ice to speed-chill. The flavor sharpens and brightens when cold — what tastes almost too tart warm will seem perfectly refreshing at serving temperature. Serve over plenty of ice. Note that hibiscus agua fresca fades from a vivid crimson to a duller brick-red over 24 hours in the refrigerator, but the flavor is unaffected; stir before serving as any cloudiness from settled pigments is purely aesthetic.",
-      visualCue: {
-        primaryTarget: "A vivid, transparent crimson drink when poured over ice — the color of Ruby Red grapefruit juice, somewhere between red and magenta. When you hold the glass to light, it glows an almost jewel-like translucent ruby.",
-        spectrum: [
-          { state: "Underdone", description: "Still warm or only slightly cool — it tastes flat and the tartness feels harsh rather than refreshing. Hibiscus needs to be cold to show its best character.", action: "Refrigerate for the full hour, or speed-chill in an ice bath. Do not serve warm." },
-          { state: "Perfect",   description: "Ice-cold, vivid crimson, bracingly tart-sweet with a floral back note. The lime brightens the hibiscus without tasting distinctly of lime. Each sip leaves the mouth feeling clean and cool. The color is show-stoppingly beautiful in a glass.", action: "Serve at once over ice with a lime wedge on the rim." },
-          { state: "Overdone",  description: "Diluted too much — pale pink and thin-tasting, like slightly flavored water. The tartness and floral character have been washed out.", action: "Make a small fresh batch of concentrate without diluting and stir it in to strengthen the flavor." },
-        ],
-      },
-      feelCue: "Cold agua de Jamaica should feel light and almost effervescent on the palate despite containing no carbonation — the citric and malic acids in the hibiscus create that bright, clean sensation that makes each sip feel like it restores rather than weighs down.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "piloncillo (gâté)",
+        "sirop d'agave",
+        "Chérie"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Citrus",
+      "name": "Jus de chaux frais",
+      "ratioValue": 0.3,
+      "defaultUnit": "part",
+      "substitutions": [
+        "jus de citron"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau froide supplémentaire (pour dilution et service)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Gingembre frais (2–3 pièces fines, en option)",
+      "ratioValue": 0,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bâton de cannelle"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Streep",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_06"
+      ],
+      "outputState": "hibiscus_concentrate",
+      "instructions": "Porter l'eau à ébullition complète et la verser sur les fleurs d'hibiscus séchées dans un pot ou un bol thermofuge. Ajoutez les pièces de gingembre si vous les utilisez. De 15 à 20 minutes, la couleur passera du rouge magenta profond à un violet pourpre inky dans les 5 premières minutes. Ne pas escarper pendant beaucoup plus de 20 minutes : les notes florales deviennent boueuses et l'amertume tannique passe agréablement. Après s'estomper, enfoncer les fleurs et le gingembre à travers une passoire fine, presser doucement les fleurs avec le dos d'une cuillère pour extraire chaque dernière goutte du concentré vif.",
+      "visualCue": {
+        "primaryTarget": "Un liquide pourpre inky et profond, la couleur du jus de grenade foncé ou un thé d'hibiscus très fort. Il doit être visuellement frappant: presque opaque dans le pot mais rubis translucide quand maintenu à la lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après seulement 5 minutes de trempage, l'eau est rouge-rose vif mais fine-tâche — les fleurs n'ont pas libéré toute leur tartness ou leur profondeur florale. C'est comme de l'eau de couleur.",
+            "action": "Accroche-toi pendant 15 à 20 minutes. Vérifiez par dégustation : elle devrait être agressivement tarte et florale, plus que vous voulez boire propre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Concentré cramoisi profond avec un arôme de tarte vif — cranberry-floral, légèrement tannique. Une cuillerée goûte fortement aigre et très florale. C'est du concentré : il sera dilué et sucré.",
+            "action": "La souche immédiatement et procéder à l'édulcorant tout en restant chaud, donc le sucre se dissout facilement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Passé 30 minutes, le liquide a l'air presque noir et sent le tannique et le médicinal plutôt que le floral. Le goût est agressif et la fraîcheur des canneberges s'estompe.",
+            "action": "Continuez quand même — la dilution supplémentaire dans la prochaine étape aidera. Ajouter généreusement le sucre et diluer plus que d'habitude. La note florale est réduite mais la tarte reste."
+          }
+        ]
+      },
+      "feelCue": "Goûtez le concentré chaud (proscieusement, il fait chaud): il devrait faire fourmiller vos lèvres et votre langue avec de la tarte. Si elle a seulement un goût légèrement fruité, raide plus longtemps. Le concentré doit être méticuleusement propre, il est destiné à être dilué."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Dissoudre",
+      "inputs": [
+        "hibiscus_concentrate",
+        "ing_03"
+      ],
+      "outputState": "sweetened_concentrate",
+      "instructions": "Alors que le concentré tendu est encore chaud, remuer le sucre granulé jusqu'à dissolution complète. Cette étape de dissolution à chaud est essentielle — essayer d'édulcorer l'hibiscus froid avec des cristaux de sucre non dissous entraîne une agua fresca inégalement sucrée. Commencez par la quantité indiquée, remuez, goûtez et ajoutez plus en petits incréments. Le point d'équilibre est personnel : certains préfèrent une tarte jamaïque avec juste assez de douceur pour couper le bord ; d'autres préfèrent plus près du punch aux fruits. À ce stade, le concentré est encore trop fort pour être jugé avec précision — la dilution changera tout.",
+      "visualCue": {
+        "primaryTarget": "Le concentré chaud avec du sucre entièrement dissous est un sirop cramoisi brillant et profond, légèrement plus visqueux que l'eau ordinaire à cause du sucre dissous. Pas de cristaux de sucre visibles ou de nuages provenant de particules non dissoutes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sucre n'a pas complètement dissous — vous pouvez voir des cristaux tourbillonner ou se poser au fond du pot. Le liquide a un goût inégalement sucré.",
+            "action": "Mélanger plus vigoureusement tout en restant chaud, ou revenir brièvement à feu doux pendant 30 secondes pour aider à dissoudre. Le concentré doit être parfaitement homogène avant la dilution."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire, concentré entièrement dissous qui semble uniforme et enrobe une cuillère uniformément. Il sent le sirop d'hibiscus — confiture, tarte et floral. Goûtez et confirmez qu'il n'y a pas de grain.",
+            "action": "Ajouter le jus de lime, puis diluer à l'eau froide."
+          },
+          {
+            "state": "Overdone",
+            "description": "En ajoutant tant de sucre, le concentré est épais et bouillant — il sera encore trop doux après dilution. La tarte à l'hibiscus est enterrée sous la douceur.",
+            "action": "Réservez un concentré d'hibiscus non sucré (à partir d'un nouveau lot ou d'un pot différent) et mélangez-le pour rééquilibrer le rapport tartness-sucré."
+          }
+        ]
+      },
+      "feelCue": "Mélanger le concentré chaud contre le côté du pot — si vous sentez la légère résistance des cristaux non dissous, continuez à remuer. Le sucre entièrement dissous fait bouger la cuillère à travers le liquide en douceur sans glisser des particules."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Refroidissement",
+      "inputs": [
+        "sweetened_concentrate",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "finished_agua_fresca",
+      "instructions": "Incorporer le jus de lime dans le concentré sucré chaud, puis verser dans un grand pichet et ajouter l'eau froide pour la dilution. Bien mélanger et goûter : ajuster la chaux, le sucre ou l'eau. Réfrigérer pendant au moins 1 heure, ou placer au-dessus d'un bol de glace pour accélérer le refroidissement. La saveur s'affine et s'éclaircit lorsque le froid — ce qui a un goût presque trop chaud sera tout à fait rafraîchissant à la température de service. Servir sur beaucoup de glace. Notez que l'hibiscus agua fresca s'estompe d'un pourpre vif à un rouge brique plus terne sur 24 heures au réfrigérateur, mais la saveur n'est pas affectée; remuer avant de servir comme un nuage des pigments fixés est purement esthétique.",
+      "visualCue": {
+        "primaryTarget": "Une boisson vive et transparente pour enfants lorsqu'elle est versée sur la glace, la couleur du jus de pamplemousse rouge rubis, quelque part entre le rouge et le magenta. Quand vous tenez le verre à la lumière, il brille un rubis presque comme un bijou translucide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours chaud ou légèrement frais, il a un goût plat et la tarte est dure plutôt que rafraîchissante. Hibiscus doit être froid pour montrer son meilleur personnage.",
+            "action": "Réfrigérer pendant toute l'heure ou refroidir dans un bain de glace. Ne pas servir au chaud."
+          },
+          {
+            "state": "Perfect",
+            "description": "Crimson glacé, vif, tart-sweet avec une note florale. La chaux éclaire l'hibiscus sans goûter distinctement la chaux. Chaque gorgée laisse la bouche propre et fraîche. La couleur est très belle dans un verre.",
+            "action": "Servir immédiatement sur la glace avec un coin de lime sur le bord."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dilué trop — rose pâle et goût mince, comme de l'eau légèrement aromatisée. La tarte et le caractère floral ont été lavés.",
+            "action": "Faites un petit lot frais de concentré sans dilution et remuez-le pour renforcer la saveur."
+          }
+        ]
+      },
+      "feelCue": "Cold agua de Jamaica devrait sentir la lumière et presque effervescent sur le palais malgré ne pas contenir de carbonation — les acides citriques et maliques dans l'hibiscus créent cette sensation lumineuse et propre qui fait chaque gorgée se sentir comme elle restaure plutôt que pèse."
+    }
+  ]
 };

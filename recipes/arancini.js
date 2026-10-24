@@ -1,134 +1,329 @@
 export default {
-  repoId: "master_italian_arancini_001",
-  parentRepoId: null,
-  slug: "arancini",
-  author: "ForkRecipe Kitchen",
-  title: "Arancini al Ragù",
-  description: "Golden, fist-sized spheres of saffron-tinted rice encasing a molten core of slow-cooked meat ragù and stretchy mozzarella — the crust shatters at the first bite, giving way to a steaming, savory interior that Palermo street vendors have perfected for centuries.",
-  cuisine: "Italian",
-  culture: "Sicilian",
-  category: "proteins",
-  tags: ["rice", "fried", "sicilian", "street food", "italian"],
-  difficulty: 4,
-  activeTime: "90 min",
-  totalTime: "4 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 6, sour: 1, bitter: 1, umami: 7, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Carnaroli or Arborio rice",                      ratioValue: 4,    defaultUnit: "parts", substitutions: ["vialone nano"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Warm water or light chicken stock",               ratioValue: 6,    defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Aromatic",   name: "Saffron threads, steeped in 2 tbsp warm water",  ratioValue: 0.01, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Protein",    name: "Ground beef or pork (or mixed)",                  ratioValue: 1,    defaultUnit: "parts", substitutions: ["ground veal"] },
-    { ingId: "ing_05", role: "Allium",     name: "White onion, finely diced",                       ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Umami",      name: "Tomato paste",                                    ratioValue: 0.25, defaultUnit: "parts", substitutions: ["crushed tomatoes, reduced"] },
-    { ingId: "ing_07", role: "Dairy",      name: "Low-moisture mozzarella, cut into 1 cm cubes",   ratioValue: 0.75, defaultUnit: "parts", substitutions: ["caciocavallo"] },
-    { ingId: "ing_08", role: "Binder",     name: "Eggs, beaten",                                   ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Structure",  name: "Fine dried breadcrumbs (pangrattato)",            ratioValue: 2,    defaultUnit: "parts", substitutions: ["panko, pulsed finer"] },
-    { ingId: "ing_10", role: "Fat",        name: "Neutral frying oil (sunflower or peanut)",        ratioValue: 8,    defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning",  name: "Fine sea salt",                                   ratioValue: 0.1,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_arancini_001",
+  "parentRepoId": null,
+  "slug": "arancini",
+  "author": "ForkRecipe Kitchen",
+  "title": "Arancini al Ragù",
+  "description": "Des sphères dorées de riz teinté de safran encaissant un noyau fondu de ragù de viande cuit lentement et de mozzarella extensible — la croûte éclate à la première bouchée, laissant place à un intérieur savoureux et savoureux que les vendeurs de rue de Palerme ont perfectionné pendant des siècles.",
+  "cuisine": "Italien",
+  "culture": "Sicilien",
+  "category": "proteins",
+  "tags": [
+    "riz",
+    "frits",
+    "sicilienne",
+    "Alimentation de rue",
+    "Italien"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "90 min",
+  "totalTime": "4 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 6,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 7,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_11"],
-      outputState: "saffron_rice",
-      instructions: "Combine the rice and warm stock or water in a medium saucepan. Add the saffron water and a generous pinch of salt. Bring to a boil, stir once, then reduce to a low simmer and cover. Cook for 16-18 minutes until all liquid is absorbed. The rice should be slightly firmer than eating-rice — it will continue to absorb and compact as it cools. Immediately spread the rice onto a large rimmed baking sheet in a thin, even layer to cool. Do not cover — you want steam to escape. Let cool completely at room temperature, at least 45 minutes, until the rice is sticky, compact, and cold to the touch. Cold rice is non-negotiable for forming arancini.",
-      visualCue: {
-        primaryTarget: "Vivid golden-yellow rice, evenly cooked with no raw white centers or blown-out grains. When pressed, it sticks together firmly.",
-        spectrum: [
-          { state: "Underdone", description: "Some grains still white at the center. Rice is loose and doesn't stick when pressed.", action: "Add 2 tablespoons more water, cover, and cook on very low heat for 3-4 more minutes." },
-          { state: "Perfect",   description: "Uniformly golden, slightly glossy rice. Every grain is cooked through. Sticks together when pressed between fingers. Cool and compact after resting.", action: "Proceed to making the ragù while the rice cools." },
-          { state: "Overdone",  description: "Rice is mushy and clumps together in paste-like masses. Some grains have split open.", action: "Spread very thinly and let cool completely — mushy rice can still form arancini but will be denser." },
-        ],
-      },
-      feelCue: "Cold, properly cooked arancini rice should feel like damp clay — pliable and sticky, holding a thumb-print cleanly without crumbling.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz de Carnaroli ou Arborio",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "flaconone nano"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["ing_04", "ing_05", "ing_06"],
-      outputState: "ragu_filling",
-      instructions: "Cook the diced onion in a little oil over medium heat until soft and translucent, about 8 minutes. Add the ground meat and cook, breaking it up with a wooden spoon, until no pink remains and the meat is lightly browned in spots, about 10 minutes. Add the tomato paste and stir to coat. Cook for 3 minutes, stirring constantly, until the paste darkens and smells sweet and caramelized. Add a splash of water or wine to deglaze. Season well with salt and pepper. Simmer on low heat for 20 minutes until the mixture is thick, cohesive, and not at all wet — a wet filling will burst the rice shell during frying. Cool completely before filling.",
-      visualCue: {
-        primaryTarget: "A thick, dark, jammy meat mixture. When a spoon is dragged through, the channel holds its shape and doesn't flood with liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Filling is loose and wet. Liquid pools in the spoon-drag channel. Tomato paste still tastes raw.", action: "Continue cooking uncovered to evaporate liquid. The filling must be dry enough to hold its shape." },
-          { state: "Perfect",   description: "Dense, cohesive, and deeply savory. Holds a mound on a spoon. Rich brick-red color with caramelized edges.", action: "Cool completely before filling — hot filling will cook the rice and make it impossible to shape." },
-          { state: "Overdone",  description: "Filling is dry, crumbly, and stuck to the pan. Has begun to scorch.", action: "Add a tablespoon of water and stir vigorously. The filling needs some moisture but not puddles." },
-        ],
-      },
-      feelCue: "The ragù should smell of deeply caramelized tomato — sweetly ferrous, almost chocolate-adjacent. Taste it: it should be boldly seasoned since the plain rice will dilute the flavor.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau chaude ou bouillon de poulet léger",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["saffron_rice", "ing_08"],
-      outputState: "bound_rice",
-      instructions: "Transfer the cold, spread rice to a large bowl. Beat one egg and add it to the rice. Mix thoroughly with your hands until the egg is fully distributed and the rice feels even more cohesive and slightly sticky. This binding step makes the arancini hold their shape during breading and frying. Test by pressing a handful firmly — it should hold a firm ball that doesn't crumble.",
-      visualCue: {
-        primaryTarget: "Uniform golden rice that holds a ball shape when firmly squeezed in the palm, releasing cleanly from the hand.",
-        spectrum: [
-          { state: "Underdone", description: "Rice still crumbles when pressed into a ball. The egg hasn't been fully incorporated.", action: "Mix more thoroughly, making sure the egg reaches every grain. Add half of a second beaten egg if the rice is still too dry." },
-          { state: "Perfect",   description: "Rice holds a firm, dense ball when squeezed in the palm. Releases cleanly from the hand. Golden and slightly glossy from the egg.", action: "Begin forming the arancini." },
-          { state: "Overdone",  description: "Rice is wet and sticky, clinging to hands heavily. Too much egg has been added.", action: "Add a handful of dry breadcrumbs to the rice mixture and mix in — the crumbs will absorb the excess moisture." },
-        ],
-      },
-      feelCue: "Properly bound rice will form a ball in your palm with moderate pressure and peel away from your skin cleanly — it should feel like damp, compacted sand.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Fils de safran, trempés dans 2 c. à soupe d'eau chaude",
+      "ratioValue": 0.01,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Form",
-      inputs: ["bound_rice", "ragu_filling", "ing_07"],
-      outputState: "formed_arancini",
-      instructions: "Wet your hands lightly. Scoop about 100g of rice into one palm and flatten it into a disc roughly 10 cm across. Place a heaped teaspoon of cooled ragù in the center and press a cube of mozzarella alongside it. Carefully cup your hand and bring the edges of the rice disc up and around the filling, pressing firmly to enclose it completely. Use both hands to roll into a tight sphere. Press firmly — any air pocket or thin spot will cause the arancini to burst in the fryer. Repeat. Rest the formed balls on a parchment-lined tray as you go.",
-      visualCue: {
-        primaryTarget: "Smooth, compact spheres with no cracks or thin spots. The filling is completely invisible — fully sealed inside.",
-        spectrum: [
-          { state: "Underdone", description: "Seams are visible or the filling is peeking through a thin spot. Balls feel loose when gently squeezed.", action: "Add more rice to patch any gaps. Press firmly and roll again between both palms." },
-          { state: "Perfect",   description: "Firm, dense spheres with a perfectly smooth exterior. No filling visible. Feels solid and holds its shape when placed on the tray.", action: "Refrigerate the formed balls for 15 minutes before breading — chilling helps them hold." },
-          { state: "Overdone",  description: "Overworked or overfilled balls that are now misshapen or cracked from excess handling.", action: "Reshape gently while cold. Cracked seams can be smoothed by pressing with damp fingertips." },
-        ],
-      },
-      feelCue: "Each formed arancino should feel like a baseball in the hand — dense, heavy, and perfectly round. Shake it gently — you should not feel the filling moving around inside.",
+      "ingId": "ing_04",
+      "role": "Protein",
+      "name": "Boeuf haché ou porc (ou mélange)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "veau haché"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Bread",
-      inputs: ["formed_arancini", "ing_08", "ing_09"],
-      outputState: "breaded_arancini",
-      instructions: "Set up a breading station: beaten egg in one bowl, fine breadcrumbs in another. Roll each arancino first in beaten egg until completely coated, letting the excess drip off. Then roll immediately in the breadcrumbs, pressing firmly on all sides to create a complete, even crust with no bare patches. Roll a second time through egg and breadcrumbs for a double coat — this double layer is the secret to a shatteringly crisp shell that won't crack in the oil. Place on a parchment-lined tray and refrigerate for at least 20 minutes before frying.",
-      visualCue: {
-        primaryTarget: "Completely covered, even sandy crust with no gaps or bare rice showing through. The coating feels dry to the touch and is firmly adhered.",
-        spectrum: [
-          { state: "Underdone", description: "Thin, single coat of breadcrumbs with bare patches showing. The rice is still visible in places.", action: "Re-dip in egg and coat in breadcrumbs a second time. Press firmly." },
-          { state: "Perfect",   description: "Thick, even, double-layer crust that completely hides the rice. Feels dry and sandy to the touch. No soft spots.", action: "Refrigerate for at least 20 minutes to set the coating before frying." },
-          { state: "Overdone",  description: "Crumbs are saturated with egg and forming thick, uneven clumps. Some spots are gummy.", action: "Gently roll off any clumped areas and re-press with fresh dry breadcrumbs." },
-        ],
-      },
-      feelCue: "Run your palm firmly over the breaded surface — it should feel uniformly sandy and dry, like fine-grit sandpaper. Soft or wet spots will rupture in hot oil.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon blanc, finement coupé en dés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_6",
-      action: "Fry",
-      inputs: ["breaded_arancini", "ing_10"],
-      outputState: "finished_arancini",
-      instructions: "Heat the neutral oil in a deep, heavy pot to 175 C (350 F) — use a thermometer. The oil depth should be at least 8 cm to allow the arancini to be submerged. Gently lower 2-3 arancini into the oil at a time — do not crowd the pot, which drops the temperature and causes greasy, pale results. Fry for 4-5 minutes, turning gently with a spider skimmer every 90 seconds to ensure even color on all sides. Remove when deeply golden-brown all over and transfer to a wire rack lined with paper towels. Allow the oil to return to 175 C between batches. Serve within 5 minutes while the cheese is still molten.",
-      visualCue: {
-        primaryTarget: "Deep amber-gold all over, evenly browned with no pale patches. A light crackle when tapped with a finger.",
-        spectrum: [
-          { state: "Underdone", description: "Pale golden-yellow with a soft, slightly greasy crust. The coating hasn't fully crisped.", action: "Return to the oil for another 90 seconds. Ensure the oil is at temperature." },
-          { state: "Perfect",   description: "Deep, even amber-gold on all sides. The crust sounds hollow and crisp when tapped. The interior steams when cut open — mozzarella fully melted.", action: "Drain briefly on a rack and serve within 5 minutes." },
-          { state: "Overdone",  description: "Dark brown to black in spots. A burnt, bitter smell. Crust is very hard.", action: "Remove immediately. The interior may still be good — cut to check. Serve quickly before the crust hardens further." },
-        ],
-      },
-      feelCue: "Listen for a deep, steady sizzle when the arancini enter the oil — a feeble hiss means the oil is too cool and the crust will absorb fat instead of crisping. The sizzle should sound assertive and continuous.",
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates écrasées, réduites"
+      ]
     },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Mozzarella à faible odeur, coupée en cubes de 1 cm",
+      "ratioValue": 0.75,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "caciocavallo"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Binder",
+      "name": "Oeufs battus",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Structure",
+      "name": "Petites chapelures séchées (pangrattato)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "panko, plus fine pulsée"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile de friture neutre (fleur de soleil ou arachide)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_11"
+      ],
+      "outputState": "saffron_rice",
+      "instructions": "Mélanger le riz et le bouillon chaud ou l'eau dans une casserole moyenne. Ajouter l'eau de safran et une pincée généreuse de sel. Porter à ébullition, remuer une fois, puis laisser mijoter et couvrir. Cuire pendant 16-18 minutes jusqu'à ce que tout le liquide soit absorbé. Le riz devrait être un peu plus ferme que le riz-repas, il continuera à absorber et à compacter au moment où il refroidit. Étendre immédiatement le riz sur une grande plaque de cuisson bordée dans une couche mince et uniforme pour refroidir. Ne couvrez pas — vous voulez échapper à la vapeur. Laisser refroidir complètement à température ambiante, au moins 45 minutes, jusqu'à ce que le riz soit collant, compact et froid au toucher. Le riz froid n'est pas négociable pour la formation d'arancini.",
+      "visualCue": {
+        "primaryTarget": "Riz jaune d'or vif, uniformément cuit sans centres blancs crus ni grains soufflés. Lorsqu'elle est pressée, elle tient fermement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Certains grains sont encore blancs au centre. Le riz est lâche et ne colle pas lorsqu'il est pressé.",
+            "action": "Ajouter 2 cuillères à soupe de plus d'eau, couvrir et cuire à feu très doux pendant 3-4 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riz uniformément doré, légèrement brillant. Chaque grain est cuit. Coller en appuyant entre les doigts. Cool et compact après le repos.",
+            "action": "Continuez à faire le ragù pendant que le riz refroidit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz est musqué et s'agrippe dans des masses en pâte. Certains grains s'ouvrent.",
+            "action": "Répartir très finement et laisser refroidir complètement — le riz musqué peut encore former arancini mais sera plus dense."
+          }
+        ]
+      },
+      "feelCue": "Le riz arancini froid et bien cuit doit se sentir comme de l'argile humide, souple et collante, tenant une empreinte de pouce propre sans s'effondrer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "ragu_filling",
+      "instructions": "Cuire l'oignon en dés dans un peu d'huile à feu moyen jusqu'à ce qu'il soit doux et translucide, environ 8 minutes. Ajouter la viande hachée et faire cuire, la casser avec une cuillère en bois, jusqu'à ce qu'il ne reste pas de rose et que la viande soit légèrement dorée dans les taches, environ 10 minutes. Ajouter la pâte de tomate et mélanger pour enrober. Cuire 3 minutes en remuant constamment, jusqu'à ce que la pâte s'assombrisse et sente sucrée et caramélisée. Ajouter un jet d'eau ou de vin pour déglacer. Assaisonner bien avec du sel et du poivre. Laisser mijoter à feu doux pendant 20 minutes jusqu'à ce que le mélange soit épais, cohésif et pas du tout humide. Refroidir complètement avant de remplir.",
+      "visualCue": {
+        "primaryTarget": "Un mélange de viande épaisse, sombre et confitureuse. Quand une cuillère est traînée à travers, le canal tient sa forme et ne inonde pas de liquide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le remplissage est lâche et humide. Des bassins liquides dans le canal à cuillers. La pâte de tomates a encore un goût cru.",
+            "action": "Continuer la cuisson à découvert pour évaporer le liquide. Le remplissage doit être suffisamment sec pour tenir sa forme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sensé, cohésif et profondément salé. Il tient un monticule sur une cuillère. Riche couleur rouge brique aux bords caramélisés.",
+            "action": "Refroidir complètement avant le remplissage — le remplissage chaud fera cuire le riz et le rendra impossible à façonner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage est sec, émietté et collé à la poêle. A commencé à brûler.",
+            "action": "Ajouter une cuillère à soupe d'eau et remuer vigoureusement. Le remplissage a besoin d'humidité mais pas de flaques."
+          }
+        ]
+      },
+      "feelCue": "Le ragù doit sentir la tomate profondément caramélisée — doucement ferreux, presque chocolatée. Goûtez-le: il devrait être assaisonné avec hardiesse puisque le riz uni diluera la saveur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "saffron_rice",
+        "ing_08"
+      ],
+      "outputState": "bound_rice",
+      "instructions": "Transférer le riz froid dans un grand bol. Battre un œuf et l'ajouter au riz. Mélanger soigneusement vos mains jusqu'à ce que l'œuf soit entièrement distribué et que le riz soit encore plus cohésif et légèrement collant. Cette étape de fixation rend les arancini tenir leur forme pendant le panage et la friture. Testez en appuyant fermement sur une poignée — elle devrait tenir une balle ferme qui ne s'écroule pas.",
+      "visualCue": {
+        "primaryTarget": "Riz d'or uniforme qui tient une forme de boule quand fermement pressé dans la paume, libérant proprement de la main.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz s'écroule quand il est pressé dans une boule. L'œuf n'a pas été entièrement incorporé.",
+            "action": "Mélanger plus soigneusement, en veillant à ce que l'œuf atteigne chaque grain. Ajouter la moitié d'un deuxième œuf battu si le riz est encore trop sec."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le riz tient une boule ferme et dense lorsqu'il est pressé dans la paume. Rejets proprement de la main. Or et légèrement brillant de l'œuf.",
+            "action": "Commencez à former les arancini."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz est humide et collant, s'accrochant fortement aux mains. Trop d'oeufs ont été ajoutés.",
+            "action": "Ajoutez une poignée de chapelure sèche au mélange de riz et mélangez - les miettes absorberont l'excès d'humidité."
+          }
+        ]
+      },
+      "feelCue": "Le riz bien lié formera une boule dans votre paume avec une pression modérée et s'éloignera de votre peau proprement — il devrait se sentir humide et compacté."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Formulaire",
+      "inputs": [
+        "bound_rice",
+        "ragu_filling",
+        "ing_07"
+      ],
+      "outputState": "formed_arancini",
+      "instructions": "Les mains mouillées à la légère. Versez environ 100 g de riz dans un seul palmier et aplatissez-le dans un disque d'environ 10 cm. Placez une cuillère à café de ragù refroidie au centre et appuyez sur un cube de mozzarella à côté. Coupez soigneusement votre main et apportez les bords du disque de riz vers le haut et autour de la garniture, appuyez fermement pour l'enfermer complètement. Utilisez les deux mains pour rouler dans une sphère serrée. Appuyez fermement — toute poche d'air ou tache fine fera éclater l'arancini dans la friteuse. Je répète. Reposez les balles formées sur un plateau parcheminé.",
+      "visualCue": {
+        "primaryTarget": "Des sphères lisses et compactes sans fissures ni taches fines. Le remplissage est complètement invisible — entièrement scellé à l'intérieur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les coutures sont visibles ou le remplissage est en train de regarder à travers une tache mince. Les boules se sentent lâches lorsqu'elles sont légèrement pressées.",
+            "action": "Ajouter plus de riz pour combler les lacunes. Appuyez fermement et roulez à nouveau entre les deux palmiers."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des sphères fermes et denses avec un extérieur parfaitement lisse. Aucun remplissage visible. Se sent solide et tient sa forme lorsqu'il est placé sur le plateau.",
+            "action": "Réfrigérer les boules formées pendant 15 minutes avant de les panser."
+          },
+          {
+            "state": "Overdone",
+            "description": "Balles surmenées ou surchargées qui sont maintenant malmenées ou fissurées par un excès de manipulation.",
+            "action": "Reformer doucement pendant le froid. Les coutures craquées peuvent être lissées en appuyant sur des doigts humides."
+          }
+        ]
+      },
+      "feelCue": "Chaque arancino formé devrait se sentir comme un base -ball dans la main — dense, lourd et parfaitement rond. Agiter doucement — vous ne devriez pas sentir le remplissage se déplacer à l'intérieur."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Pain",
+      "inputs": [
+        "formed_arancini",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "breaded_arancini",
+      "instructions": "Installez un poste de panification : oeuf battu dans un bol, chapelure fine dans un autre. Rouler chaque arancino d'abord dans l'oeuf battu jusqu'à ce qu'il soit complètement enduit, laissant l'excès s'écouler. Puis rouler immédiatement dans la chapelure, en appuyant fermement sur tous les côtés pour créer une croûte complète, même sans taches nues. Roulez une deuxième fois à travers l'oeuf et la chapelure pour une double couche — cette double couche est le secret d'une coquille très croustillante qui ne craquera pas dans l'huile. Placer sur un plateau parcheminé et réfrigérer au moins 20 minutes avant de frire.",
+      "visualCue": {
+        "primaryTarget": "Complètement couvert, même la croûte sablonneuse sans trous ni riz nu. Le revêtement est sec au toucher et est fermement respecté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mince, une seule couche de chapelure avec des taches nues montrant. Le riz est encore visible dans les endroits.",
+            "action": "Reprendre l'oeuf et enrober la chapelure une deuxième fois. Appuyez fermement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte double couche épaisse qui cache complètement le riz. Se sent sec et sablonneux au toucher. Pas de taches molles.",
+            "action": "Réfrigérer pendant au moins 20 minutes pour régler le revêtement avant la friture."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les miettes sont saturées d'oeufs et forment des touffes épaisses et inégales. Certaines taches sont gummy.",
+            "action": "Enroulez doucement toutes les zones encombrées et pressez avec de la chapelure fraîche et sèche."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre paume fermement sur la surface panée — elle devrait être uniformément sablonneuse et sèche, comme du papier de sable fin. Des taches molles ou humides se briseront dans l'huile chaude."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Fry",
+      "inputs": [
+        "breaded_arancini",
+        "ing_10"
+      ],
+      "outputState": "finished_arancini",
+      "instructions": "Chauffer l'huile neutre dans un pot profond et lourd à 175 C (350 F) — utiliser un thermomètre. La profondeur de l'huile doit être d'au moins 8 cm pour permettre l'immersion de l'arancini. Baissez doucement 2-3 arancini dans l'huile à la fois — ne pas fouler le pot, qui baisse la température et provoque des résultats gras et pâles. Faites frire 4-5 minutes, en tournant doucement avec une araignée toutes les 90 secondes pour assurer une couleur uniforme de tous les côtés. Retirez-le quand il est profondément doré et transférez-le sur un support en fil doublé de serviettes en papier. Laisser revenir l'huile à 175 C entre les lots. Servir en 5 minutes pendant que le fromage est encore fondu.",
+      "visualCue": {
+        "primaryTarget": "Deep ambre-or partout, uniformément doré sans taches pâles. Un léger craquement lorsque tapoté avec un doigt.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Jaune doré pâle avec une croûte douce et légèrement grasse. Le revêtement n'est pas complètement croustillant.",
+            "action": "Retourner à l'huile pendant 90 secondes. Assurez-vous que l'huile est à température."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même l'or ambré de tous les côtés. La croûte semble creuse et croustillante lorsqu'elle est tapée. La vapeur intérieure s'ouvre lorsque la mozzarella est complètement fondue.",
+            "action": "Égoutter brièvement sur un rack et servir dans les 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Marron foncé à noir dans les taches. Une odeur brûlée et amère. La croûte est très dure.",
+            "action": "Supprimer immédiatement. L'intérieur peut encore être bon — coupé à vérifier. Servir rapidement avant que la croûte ne durcisse davantage."
+          }
+        ]
+      },
+      "feelCue": "Écoutez un étourdissement profond et constant lorsque l'arancini pénètre dans l'huile — un sifflement faible signifie que l'huile est trop froide et la croûte absorbera les graisses au lieu de croustillant. Le étourdissement doit sembler affirmé et continu."
+    }
+  ]
 };

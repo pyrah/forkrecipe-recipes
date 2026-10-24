@@ -1,81 +1,190 @@
 export default {
-  repoId: "master_japanese_japaneseonigiri_001",
-  parentRepoId: null,
-  slug: "japanese-onigiri",
-  author: "ForkRecipe Kitchen",
-  title: "Japanese Onigiri",
-  description: "Warm seasoned rice compressed into a firm triangle, its salty nori exterior crackling at the first bite to reveal a savory filling hidden at the center — Japan's perfect portable meal.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "grains",
-  tags: ["grains", "gluten-free", "rice", "japanese", "onigiri", "portable", "snack"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "50 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Japanese short-grain rice (sushi rice)", ratioValue: 300,  defaultUnit: "g",   substitutions: ["Calrose rice"] },
-    { ingId: "ing_02", role: "Hydration", name: "Water",                                  ratioValue: 360,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fine sea salt (for hands and rice)",     ratioValue: 8,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_04", role: "Umami",     name: "Nori sheets, cut into strips",           ratioValue: 2,    defaultUnit: "sheets", substitutions: [] },
-    { ingId: "ing_05", role: "Protein",   name: "Umeboshi (pickled plum) or tuna mayo",  ratioValue: 40,   defaultUnit: "g",   substitutions: ["salted salmon flakes", "seasoned cod roe"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Soy sauce (for wet hands, optional)",   ratioValue: 5,    defaultUnit: "ml",  substitutions: [] },
+  "repoId": "master_japanese_japaneseonigiri_001",
+  "parentRepoId": null,
+  "slug": "japanese-onigiri",
+  "author": "ForkRecipe Kitchen",
+  "title": "Japonais Onigiri",
+  "description": "Le riz chaud et assaisonné est comprimé dans un triangle ferme, son nori salé crépitant extérieur à la première bouchée pour révéler un remplissage salé caché au centre — le parfait repas portable du Japon.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "grains",
+  "tags": [
+    "grains",
+    "Sans gluten",
+    "riz",
+    "Japonais",
+    "onigiri",
+    "portable",
+    "collation"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "50 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "cooked_rice",
-      instructions: "Rinse the rice until the water runs nearly clear (5–6 rinses). Drain and let the rice sit dry in the pot for 10 minutes — this pre-resting firms the exterior. Add the measured water, cover tightly, and bring to a boil over high heat. As soon as you hear the boiling, reduce to the absolute lowest simmer and cook for 12 minutes. Remove from heat without lifting the lid and steam for 10 minutes. The rice is ready when you open the lid to a puff of steam with no visible water at the surface.",
-      visualCue: {
-        primaryTarget: "Grains are glossy, fully cooked, and slightly sticky, with a clean, sweet fragrance.",
-        spectrum: [
-          { state: "Underdone", description: "Grains still have a chalky, hard center. Surface looks dull.", action: "Re-cover and steam off-heat for another 5 minutes." },
-          { state: "Perfect",   description: "Grains are plump, glossy, and cling together when pressed but individual grains are still distinct. Smells clean and sweet.", action: "Allow to cool slightly until just warm enough to handle (not hot) before shaping." },
-          { state: "Overdone",  description: "Grains have burst and the rice has become very soft and gluey. Bottom layer smells slightly scorched.", action: "Use for onigiri anyway — overcooked rice forms very well, it will just be denser." },
-        ],
-      },
-      feelCue: "Run a rice paddle through the cooked rice from the bottom up — it should fold in clean ribbons that glisten with steam and cling gently without being gummy.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz japonais à grains courts (riz sushi)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Riz de Calrose"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Season",
-      inputs: ["cooked_rice", "ing_03"],
-      outputState: "seasoned_rice",
-      instructions: "While the rice is still warm, turn it into a large flat bowl using a rice paddle. Sprinkle the salt evenly over the surface. Fold the rice using a cutting-and-folding motion (not stirring) to distribute the salt without crushing the grains. Fan or let cool to a temperature where you can comfortably handle it — just above body temperature, around 40°C.",
-      visualCue: {
-        primaryTarget: "Rice grains are evenly distributed, glossy, and slightly separated — no clumps, no dry spots.",
-        spectrum: [
-          { state: "Underdone", description: "Salt is unevenly distributed; some bites will be bland, others too salty.", action: "Fold more times using the cutting motion." },
-          { state: "Perfect",   description: "Every grain glistens slightly and the rice tastes evenly seasoned — mildly salty and sweet at once.", action: "Shape immediately while still warm." },
-          { state: "Overdone",  description: "Rice has been stirred too aggressively and grains have broken and become pasty.", action: "Proceed — the texture is slightly compromised but onigiri will still hold shape." },
-        ],
-      },
-      feelCue: "Warm, properly seasoned rice should feel like a gently damp clay between your palms — yielding but with spring, not wet or gluey.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau",
+      "ratioValue": 360,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Shape",
-      inputs: ["seasoned_rice", "ing_05", "ing_04", "ing_06"],
-      outputState: "finished_onigiri",
-      instructions: "Wet both palms with cold water and rub with a generous pinch of salt — this prevents sticking and adds flavor to the exterior. Take about 120g of warm rice and form a loose ball in one palm. Press a shallow indentation in the center and place your filling (umeboshi, tuna mayo, or salmon flakes) inside. Close the rice around the filling. Cup both hands into a V-shape and press firmly from the sides while rotating, forming a compact triangle with three flat faces and three ridges. Wrap the base with a strip of nori. Repeat for remaining rice and fillings.",
-      visualCue: {
-        primaryTarget: "A firm, compact triangle with flat faces, three defined ridges, and a strip of nori at the base.",
-        spectrum: [
-          { state: "Underdone", description: "Triangle is loose and crumbling; filling falls out when picked up. Rice hasn't compressed enough.", action: "Re-compress with firmer palm pressure — 6–8 decisive squeezes, rotating 120 degrees between each." },
-          { state: "Perfect",   description: "Onigiri holds its triangle shape firmly when picked up, with a slight give when squeezed. Nori adheres cleanly. Filling is centered and invisible.", action: "Serve immediately or wrap tightly in plastic for later." },
-          { state: "Overdone",  description: "Rice has been compressed into a hard, dense block with no lightness. The triangle is too rigid and the rice texture is dense.", action: "Serve immediately — dense onigiri is still delicious, just less elegant." },
-        ],
-      },
-      feelCue: "A well-made onigiri should feel like a firm handshake — solid and confident, but not painfully hard. It should yield slightly when you squeeze without crumbling.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (pour les mains et le riz)",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Feuilles de nori, découpées en bandes",
+      "ratioValue": 2,
+      "defaultUnit": "sheets",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Protein",
+      "name": "Umeboshi (plume pickled) ou mayo de thon",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "flocons de saumon salés",
+        "Oies de morue assaisonnées"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sauce soja (pour les mains mouillées, en option)",
+      "ratioValue": 5,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "cooked_rice",
+      "instructions": "Rincer le riz jusqu'à ce que l'eau soit presque claire (5–6 rinçages). Égoutter et laisser le riz sécher dans la casserole pendant 10 minutes — ce pré-repose ferme l'extérieur. Ajouter l'eau mesurée, couvrir soigneusement et porter à ébullition à feu vif. Dès que vous entendez l'ébullition, réduisez à la plus basse mijoter et faites cuire 12 minutes. Retirer du feu sans soulever le couvercle et la vapeur pendant 10 minutes. Le riz est prêt lorsque vous ouvrez le couvercle à une bouffée de vapeur sans eau visible à la surface.",
+      "visualCue": {
+        "primaryTarget": "Les grains sont brillants, entièrement cuits et légèrement collants, avec un parfum propre et doux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains ont toujours un centre crayeux et dur. La surface est terne.",
+            "action": "Récupérer et éteindre la vapeur pendant encore 5 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont plombés, brillants et s'accrochent lorsqu'ils sont pressés, mais les grains individuels sont encore distincts. Ça sent propre et doux.",
+            "action": "Laisser refroidir légèrement jusqu'à ce qu'il soit juste assez chaud pour manipuler (pas chaud) avant de façonner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains ont explosé et le riz est devenu très doux et collant. La couche inférieure sent légèrement brûlée.",
+            "action": "Utiliser pour onigiri de toute façon — le riz trop cuit forme très bien, il sera juste plus dense."
+          }
+        ]
+      },
+      "feelCue": "Exécutez une pagaie de riz à travers le riz cuit du bas vers le haut - il devrait plier dans des rubans propres qui brillent à la vapeur et s'accrochent doucement sans être gommés."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "cooked_rice",
+        "ing_03"
+      ],
+      "outputState": "seasoned_rice",
+      "instructions": "Alors que le riz est encore chaud, le transformer en un grand bol plat à l'aide d'une pagaie de riz. Saupoudrer le sel uniformément sur la surface. Plier le riz à l'aide d'un mouvement de coupe et de repliage (sans remuer) pour distribuer le sel sans écraser les grains. Le ventilateur ou laisser refroidir à une température où vous pouvez le manipuler confortablement — juste au-dessus de la température du corps, autour de 40°C.",
+      "visualCue": {
+        "primaryTarget": "Les grains de riz sont uniformément distribués, brillants et légèrement séparés — pas d'entailles, pas de taches sèches.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sel est inégalement distribué; certaines morsures seront molles, d'autres trop salées.",
+            "action": "Plier plus de fois en utilisant le mouvement de coupe."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain brille légèrement et le riz a un goût assaisonné, légèrement salé et doux à la fois.",
+            "action": "Formez immédiatement tout en restant chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz a été agité de façon trop agressive et les grains se sont cassés et sont devenus du pâteux.",
+            "action": "Procéder — la texture est légèrement compromise mais l'onigiri restera en forme."
+          }
+        ]
+      },
+      "feelCue": "Le riz chaud et assaisonné doit se sentir comme une argile doucement humide entre vos palmiers — donnant, mais avec le printemps, pas mouillé ou collant."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "seasoned_rice",
+        "ing_05",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "finished_onigiri",
+      "instructions": "Mouiller les deux palmiers avec de l'eau froide et frotter avec une pincée généreuse de sel — cela empêche de coller et ajoute de la saveur à l'extérieur. Prenez environ 120g de riz chaud et formez une boule lâche dans un palmier. Appuyez sur une indentation peu profonde au centre et placez votre remplissage (umeboshi, thon mayo, ou flocons de saumon) à l'intérieur. Fermez le riz autour de la garniture. Coupez les deux mains en forme de V et appuyez fermement sur les côtés tout en tournant, formant un triangle compact avec trois faces plates et trois crêtes. Enveloppez la base avec une bande de nori. Répéter pour le reste du riz et des garnitures.",
+      "visualCue": {
+        "primaryTarget": "Un triangle ferme et compact avec des faces plates, trois crêtes définies, et une bande de nori à la base.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le triangle est lâche et s'effondre; le remplissage tombe quand il est ramassé. Le riz n'a pas assez comprimé.",
+            "action": "Recompresser avec une pression de la paume plus ferme — 6–8 presses décisives, tournant 120 degrés entre chacune."
+          },
+          {
+            "state": "Perfect",
+            "description": "Onigiri tient fermement sa forme triangulaire lorsqu'il est ramassé, avec un léger rendement lorsqu'il est pressé. Nori adhère proprement. Le remplissage est centré et invisible.",
+            "action": "Servir immédiatement ou envelopper soigneusement le produit en plastique pour plus tard."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz a été comprimé dans un bloc dur et dense sans légèreté. Le triangle est trop rigide et la texture du riz est dense.",
+            "action": "Servir immédiatement — onigiri dense est encore délicieux, tout simplement moins élégant."
+          }
+        ]
+      },
+      "feelCue": "Un onigiri bien fait devrait se sentir comme une poignée de main ferme, solide et confiante, mais pas douloureusement dure. Il devrait céder légèrement lorsque vous pressez sans s'effondrer."
+    }
+  ]
 };

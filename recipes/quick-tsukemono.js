@@ -1,97 +1,226 @@
 export default {
-  repoId: "master_japanese_quick-tsukemono_001",
-  parentRepoId: null,
-  slug: "quick-tsukemono",
-  author: "ForkRecipe Kitchen",
-  title: "Quick Shio-Koji Tsukemono",
-  description: "Crisp, lightly salted Japanese quick pickles cured with shio-koji — the enzymes in the rice koji tenderize and season vegetables in hours, not days, with a gentle umami depth.",
-  cuisine: "Japanese",
-  culture: "Kyoto",
-  category: "fermented",
-  tags: ["japanese", "pickles", "fermented", "vegetable", "quick", "vegan"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "2 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Japanese cucumber (or Persian cucumber), sliced on bias", ratioValue: 200, defaultUnit: "g", substitutions: ["daikon radish", "cabbage leaves", "carrot batons"] },
-    { ingId: "ing_02", role: "Structure", name: "Daikon radish, cut into half-moons",                 ratioValue: 150, defaultUnit: "g",  substitutions: ["turnip", "kohlrabi"] },
-    { ingId: "ing_03", role: "Umami",     name: "Shio-koji (salt-fermented rice koji)",               ratioValue: 30,  defaultUnit: "g",  substitutions: ["fine sea salt (use 8g total as straight salt sub)"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                                      ratioValue: 4,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Fresh ginger, julienned fine",                       ratioValue: 10,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Acid",      name: "Rice vinegar",                                       ratioValue: 10,  defaultUnit: "g",  substitutions: ["yuzu juice", "lemon juice"] },
+  "repoId": "master_japanese_quick-tsukemono_001",
+  "parentRepoId": null,
+  "slug": "quick-tsukemono",
+  "author": "ForkRecipe Kitchen",
+  "title": "Quick Shio-Koji Tsukemano",
+  "description": "Crisp, légèrement salés japonais cornichons rapides guéris avec shio-koji — les enzymes dans le riz koji tendreisent et assaisonnent les légumes en heures, pas jours, avec une douce profondeur d'umami.",
+  "cuisine": "Japonais",
+  "culture": "Kyoto",
+  "category": "fermented",
+  "tags": [
+    "Japonais",
+    "cornichons",
+    "fermenté",
+    "légumes",
+    "Vite",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "2 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Prep and salt vegetables",
-      inputs: ["ing_01", "ing_02", "ing_04"],
-      outputState: "salted_vegetables",
-      instructions: "Slice the cucumber on the bias into 5mm-thick ovals — the angled cut increases the surface area exposed to the cure and looks elegant. Cut the daikon into 5mm half-moons. Combine all the prepared vegetables in a mixing bowl, sprinkle with the fine sea salt, and toss gently to distribute. Let them sit for 10 minutes. The initial salt draw is rapid: you will see brine beginning to pool in the bowl within 5 minutes. This step pre-softens the cell walls and removes some bitterness from the daikon, giving the shio-koji a better surface to work with. After 10 minutes, rinse the vegetables briefly under cold water and pat them dry with a clean cloth — you want to remove the harsh drawn liquid before adding the subtler shio-koji.",
-      visualCue: {
-        primaryTarget: "Vegetables are slightly limp and glistening, with a visible puddle of pale liquid in the bowl. The daikon has lost its chalky whiteness and become slightly translucent at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are still rigid and stiff after 5 minutes, with barely any liquid pooling — the salt hasn't had time to draw moisture.", action: "Toss again to make sure salt is coating every piece and wait the full 10 minutes. Cold vegetables from the fridge will take longer to release moisture." },
-          { state: "Perfect",   description: "A visible pool of pale brine in the bowl, vegetables feel softened at the surface but still crisp at the core when bent. The daikon is translucent at the edges.", action: "Rinse briefly, pat dry, and proceed to the shio-koji stage. The core crunch will be preserved; the surface will be receptive to the koji enzymes." },
-          { state: "Overdone",  description: "Vegetables have been sitting in salt for 30+ minutes and are floppy and water-logged, with most of the natural crunch gone.", action: "Rinse thoroughly and squeeze gently to remove excess water. Proceed — the tsukemono will be softer in texture but the flavor will still be good." },
-        ],
-      },
-      feelCue: "Flex a slice of cucumber between your fingers: it should bend about 30 degrees without snapping, but still offer resistance. That's the perfect pre-wilted state — soft enough to absorb the cure, crisp enough to stay satisfying after curing.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Concombre japonais (ou concombre persan), tranché sur biais",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "radis daikon",
+        "Feuilles de chou",
+        "Batons de carottes"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Apply shio-koji cure",
-      inputs: ["salted_vegetables", "ing_03", "ing_05", "ing_06"],
-      outputState: "curing_vegetables",
-      instructions: "In the bowl with the dried vegetables, add the shio-koji, julienned ginger, and rice vinegar. Toss with clean hands, massaging the shio-koji into the vegetables so every surface is coated with the white, paste-like koji. The shio-koji looks like a thick, grain-studded paste — the rice particles are the koji, teeming with protease and amylase enzymes that will break down the vegetable surface proteins and starches, creating depth and umami that straight salt cannot produce. Massage for about 1 minute until the shio-koji is evenly distributed and no white clumps remain. Transfer to a sealable bag or a container with a weight on top.",
-      visualCue: {
-        primaryTarget: "All vegetables evenly coated in a thin, translucent-white shio-koji film, the ginger threads distributed throughout, smelling of fermented rice and fresh vegetable.",
-        spectrum: [
-          { state: "Underdone", description: "Shio-koji is clumped in patches on some vegetables and absent from others — uneven cure will mean some pieces are deeply seasoned and others bland.", action: "Massage more thoroughly. Work the koji into every crevice and curved surface. A bag makes this easier — squeeze from outside the bag." },
-          { state: "Perfect",   description: "A fine, even white-translucent coating on every piece, the ginger threads catching among the vegetable slices. Smells fermented, gently savory, and clean.", action: "Seal or weight and refrigerate. Check at 1 hour and taste — continue curing until the seasoning and texture are to your preference." },
-          { state: "Overdone",  description: "Too much shio-koji applied (more than 15% of vegetable weight) — the pickles will taste aggressively salty and the enzyme activity will begin to over-soften the vegetables.", action: "Rinse under cold water to remove excess koji and taste again. Shio-koji is intensely salty by itself — a little goes a long way." },
-        ],
-      },
-      feelCue: "Rub a koji-coated piece of cucumber between two fingers: the paste should feel slightly grainy and warm from the massage, clinging to the skin of the vegetable. It shouldn't ball up or drip off — just coat, like sunscreen.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Radis Daikon, coupés en demi-lunes",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "navets",
+        "KOHLRABI"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Cure",
-      inputs: ["curing_vegetables"],
-      outputState: "cured_tsukemono",
-      instructions: "Seal the bag or cover the container and press the vegetables flat (use a plate and a heavy jar as a weight if using a bowl). Refrigerate for a minimum of 1 hour, but 2 hours is optimal for this quick style. After 1 hour, taste a piece — the seasoning should be evenly distributed from surface to center, and the vegetables should taste mildly fermented, savory, and gently sweet from the koji's amylase activity. At 2 hours the flavor deepens noticeably; beyond 4 hours the texture begins to soften past ideal crunch, and by 24 hours you have a fuller, more deeply cured tsukemono with less crunch — still delicious but a different product.",
-      visualCue: {
-        primaryTarget: "Translucent-edged vegetables with a white bloom of koji paste still visible on the surface, sitting in a small amount of drawn brine at the bottom of the bag.",
-        spectrum: [
-          { state: "Underdone", description: "After less than 1 hour, the interior of the daikon is still completely white and tastes raw and harsh, with the koji flavor only on the surface.", action: "Continue curing. The enzymes need time to penetrate. The daikon in particular needs the full 2 hours to mellow its sharpness." },
-          { state: "Perfect",   description: "At 1.5–2 hours: translucent-edged vegetables with a savory-sweet, gently umami seasoning throughout, a satisfying crunch at the core, and the brine smells complex and slightly funky in the best way.", action: "Drain the brine, rinse lightly if desired (or leave the koji paste on for stronger flavor), and serve." },
-          { state: "Overdone",  description: "After 6+ hours at room temperature (or 24+ hours in the fridge): vegetables have lost most of their crunch and the flavor has become very assertive, almost mushy, with a pronounced fermented character.", action: "Still edible and delicious, but no longer a crisp quick pickle — serve as a side condiment with rice where the stronger flavor is an asset, not a drawback." },
-        ],
-      },
-      feelCue: "Bite a piece of daikon at the 1.5-hour mark: you should feel a decisive crunch at the center with a soft, yielding surface. The texture should remind you of a crisp raw vegetable that has been somehow simultaneously seasoned all the way through — that paradox is the koji doing its work.",
+      "ingId": "ing_03",
+      "role": "Umami",
+      "name": "Shio-koji (riz fermenté au sel koji)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel de mer fin (utiliser 8g total comme sel droit sous)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Finish and serve",
-      inputs: ["cured_tsukemono"],
-      outputState: "finished_tsukemono",
-      instructions: "Drain the cured vegetables and give them a brief, gentle rinse under cold water to remove excess koji paste and surface salt — this is a matter of taste and presentation. The Japanese convention for tsukemono is to arrange them in a small bowl or on a dish alongside rice, soup, and other dishes, using them as a palate-cleansing accent rather than a main element. Serve at room temperature or lightly chilled. Store remaining tsukemono in the fridge in the brine for up to 3 days — the flavor will continue to develop and deepen each day. By day 3 they will be more assertively fermented and less crisp, which is a different pleasure.",
-      visualCue: {
-        primaryTarget: "A small dish of translucent-edged cucumber and daikon slices, the ginger threads visible, with a light sheen of koji residue and a pale, clean brine.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables still taste raw and the koji seasoning hasn't penetrated — the outside is salty but the inside is bland and harsh.", action: "Return to the bag and cure for another hour. A rushed tsukemono is just salted vegetables, not pickled ones." },
-          { state: "Perfect",   description: "Clean, crisp, evenly seasoned from surface to center, with a delicate fermented sweetness and a mild umami afterglow. The crunch is decisive and satisfying.", action: "Serve immediately or store in a covered container in the fridge. This is the ideal window — enjoy it." },
-          { state: "Overdone",  description: "Vegetables have softened to the texture of canned vegetables — the cell walls have been broken down too far by extended enzyme activity.", action: "Chop finely and mix into a rice bowl, ramen, or use as a base for a quick slaw dressing. Even over-cured tsukemono has vibrant flavor." },
-        ],
-      },
-      feelCue: "Eat one piece alone, without rice or anything else. It should hit four notes in sequence: first a crunch, then salt, then a lingering sweet-savory umami glow, then a clean finish that makes you want another. If any of those four are missing, note which one for next time.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Gingembre frais, julienne fine",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Vinaigre de riz",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Jus de yuzu",
+        "jus de citron"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Légumes frais et salés",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "salted_vegetables",
+      "instructions": "Couper le concombre sur le biais en ovales de 5 mm d'épaisseur – la coupe en angle augmente la surface exposée au remède et semble élégante. Coupez le daikon en demi-lunes de 5mm. Mélanger tous les légumes préparés dans un bol à mélanger, saupoudrer de sel de mer fin et mélanger délicatement pour les distribuer. Laissez-les s'asseoir pendant 10 minutes. Le tirage initial du sel est rapide: vous verrez la saumure commencer à se mettre dans le bol en 5 minutes. Cette étape pré-souvent les parois cellulaires et enlève une certaine amertume du daikon, donnant au shio-koji une meilleure surface pour travailler avec. Après 10 minutes, rincer brièvement les légumes sous l'eau froide et les sécher avec un chiffon propre — vous voulez enlever le liquide dur tiré avant d'ajouter le shio-koji subtil.",
+      "visualCue": {
+        "primaryTarget": "Les légumes sont légèrement boiteux et brillants, avec une flaque visible de liquide pâle dans le bol. Le daikon a perdu sa blancheur crayeuse et devient légèrement translucide aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont encore rigides et raides après 5 minutes, avec à peine n'importe quel bassin liquide — le sel n'a pas eu le temps de tirer l'humidité.",
+            "action": "Jetez à nouveau pour vous assurer que le sel recouvre chaque pièce et attendez les 10 minutes complètes. Les légumes froids du réfrigérateur prendront plus de temps à libérer l'humidité."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un bassin visible de saumure pâle dans le bol, les légumes se sentent adoucis à la surface mais encore croustillants au cœur quand plié. Le daikon est translucide aux bords.",
+            "action": "Rincez brièvement, tapez au sec, et passez à la scène shio-koji. La croûte centrale sera préservée ; la surface sera réceptive aux enzymes koji."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont en saumure depuis plus de 30 minutes et sont flippés et saupoudrés d'eau, la plupart de la croûte naturelle disparue.",
+            "action": "Rincer soigneusement et presser doucement pour enlever l'excès d'eau. Procéder — le tsukemono sera plus doux dans la texture, mais la saveur sera encore bonne."
+          }
+        ]
+      },
+      "feelCue": "Flexez une tranche de concombre entre vos doigts : il doit plier environ 30 degrés sans casser, mais offre toujours une résistance. C'est l'état parfait pré-sauvage — assez doux pour absorber le remède, assez croustillant pour rester satisfaisant après la guérison."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Appliquer le traitement shio-koji",
+      "inputs": [
+        "salted_vegetables",
+        "ing_03",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "curing_vegetables",
+      "instructions": "Dans le bol, ajouter le shio-koji, le gingembre julienne et le vinaigre de riz. Mélanger les mains propres, en massant le shio-koji dans les légumes afin que chaque surface soit recouverte du blanc, comme une pâte koji. Le shio-koji ressemble à une pâte épaisse, céréalière, les particules de riz sont les koji, grouillant d'enzymes protéase et amylase qui décomposent les protéines et les amidons de surface des végétaux, créant de la profondeur et de l'umami que le sel droit ne peut produire. Massage pendant environ 1 minute jusqu'à ce que le shio-koji soit uniformément distribué et qu'il ne reste pas de touffes blanches. Transférer dans un sac scellable ou un contenant avec un poids sur le dessus.",
+      "visualCue": {
+        "primaryTarget": "Tous les légumes sont uniformément recouverts d'un mince film de shio-koji blanc translucide, les fils de gingembre distribués dans tout le pays, sentant le riz fermenté et les légumes frais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Shio-koji est empilé dans des patchs sur certains légumes et absent des autres — un traitement inégal signifiera que certaines pièces sont profondément assaisonnées et d'autres sont molles.",
+            "action": "Massage plus approfondi. Travaillez le koji dans chaque crevasse et la surface courbée. Un sac facilite la tâche: pressez de l'extérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un fin, même blanc-translucide revêtement sur chaque pièce, les fils de gingembre capturent parmi les tranches de légumes. Sensations fermentées, délicatement salées et propres.",
+            "action": "Sceller ou poids et réfrigérer. Vérifiez à 1 heure et le goût — continuer à guérir jusqu'à ce que l'assaisonnement et la texture soient à votre préférence."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de shio-koji appliqués (plus de 15 % du poids des légumes) – les cornichons auront un goût fortement salé et l'activité enzymatique commencera à sursoudre les légumes.",
+            "action": "Rincer sous l'eau froide pour enlever l'excès de koji et goûter à nouveau. Shio-koji est intensément salé par lui-même — un peu va loin."
+          }
+        ]
+      },
+      "feelCue": "Frotter un morceau de concombre enrobé de koji entre deux doigts : la pâte doit se sentir légèrement granuleuse et chaude du massage, s'accrocher à la peau du légume. Il ne devrait pas s'écouler — juste un manteau, comme un écran solaire."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cure",
+      "inputs": [
+        "curing_vegetables"
+      ],
+      "outputState": "cured_tsukemono",
+      "instructions": "Scellez le sac ou couvrez le contenant et pressez les légumes à plat (utilisez une assiette et un pot lourd comme poids si vous utilisez un bol). Réfrigérer pendant au moins 1 heure, mais 2 heures est optimal pour ce style rapide. Après 1 heure, goûtez une pièce — l'assaisonnement doit être uniformément distribué de la surface au centre, et les légumes doivent goûter légèrement fermenté, salé et doucement sucré de l'activité amylase du koji. A 2 heures la saveur s'approfondit de façon notable; au-delà de 4 heures la texture commence à adoucir la croûte idéale passée, et à 24 heures vous avez un tsukemono plus plein, plus profondément guéri avec moins de croûte — encore délicieux mais un produit différent.",
+      "visualCue": {
+        "primaryTarget": "Légumes translucides avec une floraison blanche de pâte koji encore visible à la surface, assis dans une petite quantité de saumure dessinée au fond du sac.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après moins d'une heure, l'intérieur du daikon est encore complètement blanc et goûte cru et dur, avec la saveur koji seulement sur la surface.",
+            "action": "Continuez à guérir. Les enzymes ont besoin de temps pour pénétrer. Le daikon en particulier a besoin de toutes les 2 heures pour assouplir sa netteté."
+          },
+          {
+            "state": "Perfect",
+            "description": "De 1,5 à 2 heures : légumes translucides, sucrés, assaisonnements umami doux tout au long, croûte satisfaisante au cœur, et la saumure sent le plus complexe et légèrement funky.",
+            "action": "Égoutter la saumure, rincer légèrement si désiré (ou laisser la pâte koji sur pour une saveur plus forte), et servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après 6+ heures à température ambiante (ou 24+ heures au réfrigérateur): les légumes ont perdu la plupart de leur croquant et la saveur est devenue très affirmée, presque musclée, avec un caractère fermenté prononcé.",
+            "action": "Toujours comestible et délicieux, mais plus un cornichon rapide croquant — servent de condiment latéral avec le riz où la saveur plus forte est un atout, pas un inconvénient."
+          }
+        ]
+      },
+      "feelCue": "Mordre un morceau de daikon à la marque de 1,5 heure : vous devriez sentir une croûte décisive au centre avec une surface douce et productive. La texture devrait vous rappeler un légume cru croustillant qui a été assaisonné en quelque sorte simultanément tout au long du parcours — ce paradoxe est le koji faisant son travail."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Terminer et servir",
+      "inputs": [
+        "cured_tsukemono"
+      ],
+      "outputState": "finished_tsukemono",
+      "instructions": "Égoutter les légumes guéris et leur donner un rinçage bref et doux sous l'eau froide pour éliminer l'excès de pâte koji et de sel de surface — c'est une question de goût et de présentation. La convention japonaise pour le tsukemono est de les organiser dans un petit bol ou sur un plat avec du riz, de la soupe et d'autres plats, en les utilisant comme un accent de nettoyage du palais plutôt qu'un élément principal. Servir à température ambiante ou légèrement réfrigéré. Conserver le reste du tsukemono dans le réfrigérateur dans la saumure jusqu'à 3 jours – la saveur continuera à se développer et à s'approfondir chaque jour. Au jour 3, ils seront plus fermentés et moins croquants, ce qui est un plaisir différent.",
+      "visualCue": {
+        "primaryTarget": "Un petit plat de tranches de concombre et de daikon translucides, les fils de gingembre visibles, avec un léger éclat de résidus koji et une saumure claire et propre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes ont encore le goût cru et l'assaisonnement koji n'a pas pénétré — l'extérieur est salé mais l'intérieur est fade et rude.",
+            "action": "Retournez dans le sac et guérissez encore une heure. Un tsukemono précipité n'est que des légumes salés, pas marinés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Propre, croustillant, assaisonné uniformément de la surface au centre, avec une délicate douceur fermentée et une légère lueur d'umami. La crise est décisive et satisfaisante.",
+            "action": "Servir immédiatement ou conserver dans un contenant couvert au réfrigérateur. C'est la fenêtre idéale, profitez-en."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes se sont adoucis à la texture des légumes en conserve — les parois cellulaires ont été décomposées trop loin par une activité enzymatique étendue.",
+            "action": "Hacher finement et mélanger dans un bol de riz, ramener ou utiliser comme base pour une vinaigrette rapide. Même le tsukemono sur-curré a une saveur vibrante."
+          }
+        ]
+      },
+      "feelCue": "Mangez un morceau seul, sans riz ou autre chose. Il devrait frapper quatre notes en séquence: d'abord une croûte, puis du sel, puis une lueur d'umami douce-savoureuse persistante, puis une finition propre qui fait que vous voulez une autre. Si l'un de ces quatre est manquant, notez lequel pour la prochaine fois."
+    }
+  ]
 };

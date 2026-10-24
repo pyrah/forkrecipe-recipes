@@ -1,85 +1,230 @@
 export default {
-  repoId: "master_chinese_hong_kong_egg_tarts_001",
-  parentRepoId: null,
-  slug: "hong-kong-egg-tarts",
-  author: "ForkRecipe Kitchen",
-  title: "Hong Kong Egg Tarts (Dan Tat)",
-  description: "A shortcrust shell made with lard shatters at the tooth like a cream cracker, cradling a smooth, barely-set vanilla egg custard that trembles when the plate is moved — the custard surface is completely smooth, not pocked, and tastes clean, faintly sweet, and deeply eggy. These are the reason Cantonese cha chaan teng (tea houses) exist.",
-  cuisine: "Chinese",
-  culture: "Hong Kong Cha Chaan Teng",
-  category: "desserts",
-  tags: ["chinese", "hong-kong", "egg-tart", "pastry", "custard", "dim-sum", "dessert"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 1, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",                            ratioValue: 180, defaultUnit: "g", substitutions: ["cake flour (more tender result)"] },
-    { ingId: "ing_02", role: "Fat",        name: "Lard (chilled)",                               ratioValue: 90,  defaultUnit: "g", substitutions: ["unsalted butter (less flaky)", "shortening"] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Icing sugar (powdered sugar)",                 ratioValue: 40,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Binder",     name: "Egg yolk (for pastry)",                        ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Hydration",  name: "Cold water",                                   ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Protein",    name: "Whole eggs, large",                            ratioValue: 120, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Dairy",      name: "Whole milk",                                   ratioValue: 200, defaultUnit: "g", substitutions: ["evaporated milk for richer flavour"] },
-    { ingId: "ing_08", role: "Sweetener",  name: "Caster sugar",                                 ratioValue: 60,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Aromatic",   name: "Vanilla extract",                              ratioValue: 3,   defaultUnit: "g", substitutions: ["vanilla bean (half pod)"] },
-    { ingId: "ing_10", role: "Seasoning",  name: "Fine salt (pinch)",                            ratioValue: 1,   defaultUnit: "g", substitutions: [] },
+  "repoId": "master_chinese_hong_kong_egg_tarts_001",
+  "parentRepoId": null,
+  "slug": "hong-kong-egg-tarts",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tartes aux oeufs de Hong Kong (Dan Tat)",
+  "description": "Une coque courte en croûte, faite de saindoux, éclate à la dent comme un cracker à la crème, crachant une crème d'oeufs de vanille lisse et à peine sertie qui tremble lorsque l'assiette est déplacée — la surface de la crème est complètement lisse, non pochée, et goûte propre, légèrement sucrée et profondément oeuvrée. C'est la raison pour laquelle le cantonais cha chaan teng (maisons de thé) existe.",
+  "cuisine": "Chinois",
+  "culture": "Hong Kong Cha Chaan Teng",
+  "category": "desserts",
+  "tags": [
+    "Chinois",
+    "hong-kong",
+    "oeuf-tart",
+    "pâtisserie",
+    "Coutard",
+    "dim-sum",
+    "dessert"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Cream",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_01"],
-      outputState: "shortcrust_dough",
-      instructions: "In a bowl, rub the chilled lard into the icing sugar until it resembles fine breadcrumbs — or pulse briefly in a food processor. Add the egg yolk and cold water and mix until the dough just comes together into a smooth, pliable ball. Do not overwork: stop the moment no dry flour remains. Wrap in cling film and refrigerate for 30 minutes. The lard must stay cold to create the characteristic shatteringly flaky texture — butter-based pastry will be softer and more crumbly.",
-      visualCue: {
-        primaryTarget: "A smooth, pale, cohesive dough ball that holds its shape when pressed, with a faintly greasy surface from the lard.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still crumbly and does not hold together when pressed.", action: "Add water half a teaspoon at a time and mix gently until just cohesive." },
-          { state: "Perfect",   description: "Smooth, pliable dough that does not crack at the edges when bent. Slightly cool to the touch.", action: "Wrap and refrigerate for 30 minutes before rolling." },
-          { state: "Overdone",  description: "Dough is warm, very soft, and slightly greasy — lard has melted from handling.", action: "Refrigerate for 45 minutes before rolling — warm lard pastry will shrink badly during baking." },
-        ],
-      },
-      feelCue: "The dough should feel like modelling clay — firm, smooth, and cool — and leave a faint greasy film on your palm from the lard.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 180,
+      "defaultUnit": "g",
+      "substitutions": [
+        "farine de gâteau (plus tendre résultat)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "egg_custard_mixture",
-      instructions: "Whisk the eggs, milk, caster sugar, vanilla, and salt together in a bowl until the sugar is fully dissolved. Strain the mixture through a fine-mesh sieve twice — this removes any coagulated egg protein and air bubbles that would create a pocked, uneven surface on the baked custard. The strained custard should look perfectly smooth and slightly golden. Let it rest for 10 minutes so surface bubbles dissipate.",
-      visualCue: {
-        primaryTarget: "A uniformly pale-golden, silky liquid with no visible bubbles on the surface and no foam.",
-        spectrum: [
-          { state: "Underdone", description: "Surface has a layer of foam and visible bubbles — sugar may not be fully dissolved.", action: "Strain again and let rest 10 more minutes. Run a blowtorch briefly over the surface to pop remaining bubbles." },
-          { state: "Perfect",   description: "Mirror-smooth, pale golden liquid. Completely lump-free. No surface foam.", action: "Fill the shells immediately before more bubbles form." },
-          { state: "Overdone",  description: "Custard has been sitting too long and a skin has formed on the surface.", action: "Strain again before using." },
-        ],
-      },
-      feelCue: "The strained custard should flow off a spoon in a clean, unbroken sheet — any lumps or strings of coagulated egg mean you need to strain again.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Lard (refroidi)",
+      "ratioValue": 90,
+      "defaultUnit": "g",
+      "substitutions": [
+        "beurre non salé (moins de flocons)",
+        "raccourcissement"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["shortcrust_dough", "egg_custard_mixture"],
-      outputState: "finished_egg_tarts",
-      instructions: "Preheat the oven to 200 C (390 F). Roll the chilled dough to 3 mm thickness on a lightly floured surface. Cut rounds and press into 8 cm tart moulds, pressing up the sides evenly and trimming any overhang. Prick the bases lightly with a fork. Fill each shell to 80% capacity with the custard mixture — the custard expands slightly when it sets. Bake on the middle rack for 18 to 22 minutes. For the first 10 minutes, do not open the oven door or the custard will sink. The tarts are done when the pastry is golden and the custard is just set — it should still have a very slight wobble in the centre when nudged.",
-      visualCue: {
-        primaryTarget: "Golden-brown pastry shells with a smooth, barely-trembling custard surface that is uniformly set with no cracks, pocking, or bubbles. The custard surface is a pale ivory-gold.",
-        spectrum: [
-          { state: "Underdone", description: "Custard is still liquid in the centre and sloshes when the tray is moved.", action: "Return to oven for 3 more minutes — check every 60 seconds from this point." },
-          { state: "Perfect",   description: "Custard jiggles gently as a whole, like set jelly, with a smooth unbroken surface. Pastry is golden with no raw patches on the sides.", action: "Cool in the moulds for 10 minutes before unmoulding. Best eaten warm." },
-          { state: "Overdone",  description: "Custard surface has cracked, bubbled, or puffed — it has curdled from excessive heat.", action: "The flavour is fine but the texture is grainy. Serve with discretion. Next time reduce oven temperature by 10 C." },
-        ],
-      },
-      feelCue: "A perfectly baked egg tart, lifted from the mould, should feel solid but give a faint, luxurious jiggle — like a very firm panna cotta — not rigid, not runny.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre écrémé (sucre pulvérisé)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Jaune d'œuf (pour la pâtisserie)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Hydration",
+      "name": "Eau froide",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Oeufs entiers, gros",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "lait évaporé pour une saveur plus riche"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Extrait de vanille",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "haricot vanille (demi-pode)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel fin (pinche)",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Crème",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_01"
+      ],
+      "outputState": "shortcrust_dough",
+      "instructions": "Dans un bol, frotter le saindoux réfrigéré dans le sucre glaçant jusqu'à ce qu'il ressemble à de fines chapelures de pain — ou le faire revenir brièvement dans un robot alimentaire. Ajouter le jaune d'œuf et l'eau froide et mélanger jusqu'à ce que la pâte se combine dans une boule lisse et souple. Ne pas surmener : arrêter le moment où il ne reste pas de farine sèche. Envelopper le film de collage et réfrigérer pendant 30 minutes. Le saindoux doit rester froid pour créer la texture caractéristique et effilée, la pâte à base de beurre sera plus douce et plus friable.",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte lisse, pâle et cohésive qui tient sa forme lorsqu'elle est pressée, avec une surface légèrement grasse du saindoux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est toujours émiettée et ne tient pas debout lorsqu'elle est pressée.",
+            "action": "Ajouter la moitié d'eau une cuillère à café à la fois et mélanger doucement jusqu'à ce que juste cohésif."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte lisse et souple qui ne craque pas aux bords lorsqu'elle est courbée. Un peu frais au toucher.",
+            "action": "Enrouler et réfrigérer pendant 30 minutes avant de rouler."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est chaude, très douce et légèrement grasse — le saindoux a fondu par manipulation.",
+            "action": "Réfrigérer pendant 45 minutes avant de rouler — la pâte tiède se rétrécira fortement pendant la cuisson."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit avoir l'impression de modeler de l'argile — ferme, lisse et fraîche — et laisser un faible film gras sur la paume du saindoux."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "egg_custard_mixture",
+      "instructions": "Dans un bol, fouetter les œufs, le lait, le sucre de castre, la vanille et le sel jusqu'à ce que le sucre soit complètement dissous. Retirez le mélange deux fois dans un tamis à mailles fines, ce qui élimine toute protéine d'oeuf coagulée et toute bulle d'air qui créerait une surface piquée et inégale sur la crème cuite. La crème tendue doit être parfaitement lisse et légèrement dorée. Laisser reposer pendant 10 minutes afin que les bulles de surface se dissipent.",
+      "visualCue": {
+        "primaryTarget": "Un liquide soyeux uniformément doré, sans bulles visibles à la surface et sans mousse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface a une couche de mousse et des bulles visibles — le sucre ne peut pas être complètement dissous.",
+            "action": "Retendez et laissez reposer 10 minutes de plus. Exécutez brièvement une soufflette sur la surface pour faire sauter les bulles restantes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Miroir, liquide doré pâle. Complètement libre. Pas de mousse superficielle.",
+            "action": "Remplissez les coquilles immédiatement avant que d'autres bulles ne se forment."
+          },
+          {
+            "state": "Overdone",
+            "description": "Custard est assis trop longtemps et une peau s'est formée à la surface.",
+            "action": "Retraction avant utilisation."
+          }
+        ]
+      },
+      "feelCue": "La crème tendue devrait s'écouler d'une cuillère dans une feuille propre et non cassée — toute masse ou corde d'oeuf coagulé signifie que vous devez à nouveau la forcer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "shortcrust_dough",
+        "egg_custard_mixture"
+      ],
+      "outputState": "finished_egg_tarts",
+      "instructions": "Préchauffer le four à 200 C (390 F). Rouler la pâte réfrigérée à 3 mm d'épaisseur sur une surface légèrement farinée. Couper les rondelles et presser dans des moules à tarte de 8 cm, presser uniformément les côtés et parer tout surplomb. Piquez les bases légèrement avec une fourchette. Remplissez chaque coquille à 80% de capacité avec le mélange de crème – la crème se développe légèrement lorsqu'elle se met. Cuire sur la grille du milieu pendant 18 à 22 minutes. Pendant les 10 premières minutes, n'ouvrez pas la porte du four ou la crème coulera. Les tartes sont faites quand la pâtisserie est dorée et la crème est juste mise — il devrait encore y avoir un très léger oscillation au centre quand on la pousse.",
+      "visualCue": {
+        "primaryTarget": "Coquilles de pâtisserie dorées avec une surface de crème lisse, à peine tremblante, qui est uniformément réglée sans fissures, picking ou bulles. La surface de la crème est un or ivoire pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Custard est encore liquide au centre et slohes lorsque le plateau est déplacé.",
+            "action": "Retourner au four 3 minutes de plus — vérifier toutes les 60 secondes à partir de ce point."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le custard jongle doucement comme une gelée, avec une surface lisse et intacte. La pâtisserie est dorée sans taches brutes sur les côtés.",
+            "action": "Laisser refroidir dans les moules pendant 10 minutes avant le démouillage. C'est chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface du custard s'est fissurée, bublée ou gonflée — elle s'est asséchée par une chaleur excessive.",
+            "action": "La saveur est fine mais la texture est granuleuse. Servir avec discrétion. La prochaine fois, réduisez la température du four de 10 °C."
+          }
+        ]
+      },
+      "feelCue": "Une tarte aux oeufs parfaitement cuite, levée du moule, devrait se sentir solide mais donner un léger et luxueux joggle — comme une panna cotta très ferme — pas rigide, pas rugueuse."
+    }
+  ]
 };

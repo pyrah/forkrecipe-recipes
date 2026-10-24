@@ -1,79 +1,201 @@
 export default {
-  repoId: "master_french_mayonnaise_001",
-  parentRepoId: null,
-  slug: "mayonnaise",
-  author: "ForkRecipe Kitchen",
-  title: "Mayonnaise",
-  description: "The mother of cold sauces — a single egg yolk coaxed into accepting its own weight many times over in oil, beaten drop by drop into a thick, glossy emulsion that stands in soft peaks, sharpened with mustard, lemon, and just enough salt to make it taste of nothing but itself.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "sauces",
-  tags: ["mayonnaise", "french", "emulsion", "cold-sauce", "mother-sauce", "egg"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 1, salty: 2, sour: 2, bitter: 0, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Binder",     name: "Egg yolk (large, room temperature)", ratioValue: 18,  defaultUnit: "parts", substitutions: ["1 whole egg for a lighter, more pourable sauce"] },
-    { ingId: "ing_02", role: "Seasoning",  name: "Dijon mustard",                      ratioValue: 5,   defaultUnit: "parts", substitutions: ["English mustard powder bloomed in a little water"] },
-    { ingId: "ing_03", role: "Acid",       name: "White wine vinegar",                 ratioValue: 5,   defaultUnit: "parts", substitutions: ["fresh lemon juice"] },
-    { ingId: "ing_04", role: "Fat",        name: "Neutral oil (grapeseed or canola)",  ratioValue: 200, defaultUnit: "parts", substitutions: ["part olive oil for a more assertive sauce"] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine sea salt",                      ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Citrus",     name: "Fresh lemon juice (to finish)",      ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Hydration",  name: "Cold water (as needed to loosen)",   ratioValue: 6,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_mayonnaise_001",
+  "parentRepoId": null,
+  "slug": "mayonnaise",
+  "author": "ForkRecipe Kitchen",
+  "title": "Mayonnaise",
+  "description": "La mère des sauces froides — un jaune d'œuf unique s'est mis à accepter son propre poids plusieurs fois dans l'huile, battu goutte à goutte dans une émulsion épaisse et brillante qui se tient dans des pics doux, aiguisé avec de la moutarde, du citron, et juste assez de sel pour lui faire goûter rien que lui-même.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "sauces",
+  "tags": [
+    "mayonnaise",
+    "français",
+    "émulsion",
+    "Sauce froide",
+    "mère-sauce",
+    "œuf"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_05"],
-      outputState: "seasoned_base",
-      instructions: "Set a medium bowl on a damp folded towel so it cannot spin while you whisk one-handed. Add the egg yolk, mustard, vinegar, and salt and whisk for a full 30 seconds until the mixture is smooth, slightly paler, and slightly thickened. Everything must be at room temperature — a cold yolk emulsifies sluggishly and is far quicker to break. The mustard is not just flavor here: it is a second emulsifier that makes the sauce far more forgiving.",
-      visualCue: {
-        primaryTarget: "A smooth, homogeneous, pale-yellow base with the gloss of the mustard worked fully in and no streaks of separated vinegar pooling at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "The yolk, mustard, and vinegar sit in distinct streaks and the surface looks broken and watery.", action: "Keep whisking another 15 to 20 seconds until it pulls together into one uniform color." },
-          { state: "Perfect",   description: "A single glossy, pale-yellow liquid that coats the whisk in a thin even film and smells sharply of mustard and vinegar.", action: "Begin adding oil — start at a literal drop at a time." },
-          { state: "Overdone",  description: "You cannot really over-mix this step; at most the bowl warms slightly from effort.", action: "Proceed. If the kitchen is hot, the base is fine as-is." },
-        ],
-      },
-      feelCue: "The whisk should move freely with almost no resistance — this is a thin, loose base, not yet a sauce. It will smell bracingly of raw mustard and vinegar.",
+      "ingId": "ing_01",
+      "role": "Binder",
+      "name": "Jaune d'œuf (large, température ambiante)",
+      "ratioValue": 18,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1 œuf entier pour une sauce plus légère et plus versable"
+      ]
     },
     {
-      nodeId: "step_2", action: "Emulsify",
-      inputs: ["seasoned_base", "ing_04"],
-      outputState: "tight_emulsion",
-      instructions: "This is the whole game. Whisking constantly and hard, add the oil drop by drop for the first quarter of it — wait until each addition has fully disappeared before adding more. As the mixture thickens and lightens, you can relax to a thin, steady thread of oil, still whisking without pause. The base is grabbing oil droplets and locking them apart in a network; rush it and the network never forms. By the time the oil is in, you will have a thick, pale, jiggling mound.",
-      visualCue: {
-        primaryTarget: "A thick, opaque, ivory emulsion that mounds on the whisk, holds the marks of the wires, and slowly falls back on itself rather than running.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is still thin, sloshy, and translucent-yellow — the emulsion has not taken hold yet.", action: "Stop adding oil. Whisk hard until what you have visibly thickens, then resume adding oil even more slowly, drop by drop." },
-          { state: "Perfect",   description: "A glossy, billowing, pale ivory mass that holds soft peaks and clings thickly to the whisk. The oil thread vanishes on contact.", action: "Stop adding oil once it is as thick as you want, then move to finishing and seasoning." },
-          { state: "Overdone",  description: "The sauce suddenly turns greasy, curdled, and slick, with free oil weeping out and the structure collapsing — it has broken.", action: "Put a fresh egg yolk (or a teaspoon of mustard and a splash of water) in a clean bowl and whisk the broken sauce into it drop by drop to re-emulsify it." },
-        ],
-      },
-      feelCue: "You will feel the exact moment it 'takes' — the loose slosh under the whisk firms into a heavy, dragging resistance within the first tablespoon or two of oil. From there it only gets thicker and harder to whisk.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Poudre de moutarde anglaise fleurie dans un peu d'eau"
+      ]
     },
     {
-      nodeId: "step_3", action: "Finish",
-      inputs: ["tight_emulsion", "ing_06", "ing_07"],
-      outputState: "finished_mayonnaise",
-      instructions: "Taste the emulsion — it will be flat and oily-rich and need brightening. Whisk in the lemon juice for acidity and lift, then adjust salt. If the mayonnaise is stiffer than you want, or looks dull and greasy, whisk in cold water a few drops at a time: it both loosens the sauce and re-tightens a slightly oily-looking emulsion, restoring the satin sheen. Chill at least an hour before serving; the flavors round out and it firms slightly.",
-      visualCue: {
-        primaryTarget: "A satiny, spoonable, off-white mayonnaise that holds a soft peak, tastes clean and balanced — rich but bright — and shows no beads of free oil on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "It tastes flat, heavy, and one-note, or sits too stiff and claggy on the spoon.", action: "Add lemon juice and salt to taste, then a few drops of cold water to loosen and lighten until it tastes alive and spreads easily." },
-          { state: "Perfect",   description: "Glossy and just firm enough to hold its shape, with a clean balance of richness, acidity, and salt and a faint mustard warmth on the finish.", action: "Cover tightly and refrigerate. Use within three to four days." },
-          { state: "Overdone",  description: "It has gone slack and runny from too much water or lemon, or tastes sharp and sour.", action: "Whisk in a little fresh oil drop by drop to rebuild body, or balance excess acid with a pinch more salt." },
-        ],
-      },
-      feelCue: "A finished spoonful should fall in a soft, glossy dollop and hold a gentle peak. On the tongue it is rich but never greasy, with the acid hitting first and the egg-and-mustard depth lingering behind it.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de citron frais"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile neutre (grape graine ou canola)",
+      "ratioValue": 200,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "partie huile d'olive pour une sauce plus affirmée"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Citrus",
+      "name": "Jus de citron frais (pour finir)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Hydration",
+      "name": "Eau froide (au besoin pour se détendre)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "seasoned_base",
+      "instructions": "Réglez un bol moyen sur une serviette pliée humide afin qu'il ne puisse pas tourner pendant que vous fouettez une main. Ajouter le jaune d'œuf, la moutarde, le vinaigre et le sel et fouetter pendant 30 secondes jusqu'à ce que le mélange soit lisse, légèrement plus pâle et légèrement épaissi. Tout doit être à température ambiante — un jaune froid émulsifie lentement et est beaucoup plus rapide à briser. La moutarde n'est pas seulement une saveur ici : c'est un deuxième émulsifiant qui rend la sauce beaucoup plus indulgente.",
+      "visualCue": {
+        "primaryTarget": "Une base lisse, homogène, jaune pâle avec le gloss de la moutarde a fonctionné pleinement dans et aucune stries de vinaigre séparé pooling aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le jaune, la moutarde et le vinaigre s'assoient dans des stries distinctes et la surface semble cassée et aqueuse.",
+            "action": "Continuez à fouetter encore 15 à 20 secondes jusqu'à ce qu'il se rassemble dans une couleur uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un seul liquide lustré, jaune pâle qui enveloppe le fouet d'un mince film et sent fortement la moutarde et le vinaigre.",
+            "action": "Commencez à ajouter du pétrole — commencez par une baisse littérale à la fois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous ne pouvez pas vraiment trop mélanger cette étape; au plus le bol se réchauffe légèrement de l'effort.",
+            "action": "Continuez. Si la cuisine est chaude, la base est très bien."
+          }
+        ]
+      },
+      "feelCue": "Le fouet doit se déplacer librement avec presque aucune résistance — c'est une base mince, lâche, pas encore une sauce. Elle sent la moutarde crue et le vinaigre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Émulsifier",
+      "inputs": [
+        "seasoned_base",
+        "ing_04"
+      ],
+      "outputState": "tight_emulsion",
+      "instructions": "C'est tout le jeu. Whisking constamment et dur, ajouter la goutte d'huile par goutte pour le premier quart de celui-ci — attendez que chaque ajout ait complètement disparu avant d'ajouter plus. Alors que le mélange s'épaissit et s'éclaircit, vous pouvez vous détendre jusqu'à un fil d'huile mince et stable, toujours fouettant sans pause. La base attrape les gouttelettes d'huile et les verrouille dans un réseau; précipitez-le et le réseau ne se forme jamais. Au moment où l'huile est entrée, vous aurez un monticule épais, pâle et jonglant.",
+      "visualCue": {
+        "primaryTarget": "Une émulsion épaisse, opaque et ivoire qui fond sur le fouet, retient les marques des fils, et retombe lentement sur elle-même plutôt que de courir.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore mince, molle et jaune translucide — l'émulsion n'a pas encore pris place.",
+            "action": "Arrête d'ajouter de l'huile. fouetter dur jusqu'à ce que ce que vous avez visiblement épaississe, puis reprendre l'ajout d'huile encore plus lentement, goutte à goutte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une masse d'ivoire pâle et brillante qui tient des pics doux et s'accroche épaissement au fouet. Le fil d'huile disparaît au contact.",
+            "action": "Arrêtez d'ajouter de l'huile une fois qu'elle est aussi épaisse que vous voulez, puis passez à la finition et assaisonnement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce devient soudainement grasse, caillée et lissée, avec de l'huile libre qui pleure et la structure qui s'effondre — elle a cassé.",
+            "action": "Mettre un jaune d'œuf frais (ou une cuillère à café de moutarde et une éclaboussure d'eau) dans un bol propre et fouetter la sauce cassée dans elle goutte à goutte pour la réémulsionner."
+          }
+        ]
+      },
+      "feelCue": "Vous sentirez exactement le moment où il « prend » — le slosh lâche sous les firmes fouettées dans une résistance lourde et traînante dans la première cuillère à soupe ou deux d'huile. De là, il devient plus épais et plus difficile à fouetter."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Finition",
+      "inputs": [
+        "tight_emulsion",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "finished_mayonnaise",
+      "instructions": "Goûtez l'émulsion — elle sera plate et riche en huile et aura besoin d'éclaircir. fouetter dans le jus de citron pour l'acidité et lever, puis ajuster le sel. Si la mayonnaise est plus raide que vous ne le souhaitez, ou semble terne et grasse, fouetter à l'eau froide quelques gouttes à la fois : elle détend la sauce et re-resserre une émulsion légèrement huileuse, rétablissant l'éclat de satin. Refroidir au moins une heure avant de servir; les saveurs se complètent et il se ferme légèrement.",
+      "visualCue": {
+        "primaryTarget": "Une mayonnaise satinée, cuivrable et blanc cassé qui tient un pic doux, a un goût propre et équilibré — riche mais brillant — et ne montre pas de perles d'huile libre à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Il a un goût plat, lourd et une note, ou s'assied trop raide et serré sur la cuillère.",
+            "action": "Ajouter le jus de citron et le sel au goût, puis quelques gouttes d'eau froide pour se détendre et s'éclaircir jusqu'à ce qu'il goûte vivant et se propage facilement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gloire et juste assez ferme pour tenir sa forme, avec un équilibre net de richesse, d'acidité et de sel et une faible chaleur de moutarde sur la finale.",
+            "action": "Couvrir soigneusement et réfrigérer. Utiliser dans les trois à quatre jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Il est allé lâche et coule de trop d'eau ou de citron, ou goût aigu et aigre.",
+            "action": "fouetter un peu d'huile fraîche goutte par goutte pour reconstruire le corps, ou équilibrer l'excès d'acide avec une pincée plus de sel."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère finie devrait tomber dans une poupée douce et brillante et tenir un pic doux. Sur la langue, il est riche mais jamais gras, l'acide frappant en premier et la profondeur de l'œuf et de la moutarde s'attardant derrière."
+    }
+  ]
 };

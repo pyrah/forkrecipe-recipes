@@ -1,96 +1,210 @@
 export default {
-  repoId: "master_spanish_pil-pil_001",
-  parentRepoId: null,
-  slug: "pil-pil",
-  author: "ForkRecipe Kitchen",
-  title: "Bacalà al Pil-Pil",
-  description: "The Basque art of coaxing salt cod's own gelatin into an emulsified olive-oil sauce — a gentle, circular swirl of the pan builds a creamy, ivory emulsion without a drop of cream or butter, sustained entirely by the fish's own collagen.",
-  cuisine: "Spanish",
-  culture: "Basque",
-  category: "sauces",
-  tags: ["spanish", "basque", "salt-cod", "emulsified-sauce", "olive-oil", "gelatin"],
-  difficulty: 4,
-  activeTime: "30 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 4, sour: 1, bitter: 1, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Desalted salt cod (bacalao), skin-on fillets, soaked 48 hr in cold water", ratioValue: 100, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Extra-virgin olive oil, mild variety",                                       ratioValue: 80,  defaultUnit: "%", substitutions: ["pure olive oil"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, thinly sliced",                                               ratioValue: 10,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Heat",      name: "Dried guindilla chili peppers (or dried cayenne)",                           ratioValue: 3,   defaultUnit: "%", substitutions: ["dried cayenne", "dried bird's eye chili"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt (taste before adding — the cod carries salt)",                 ratioValue: 0.5, defaultUnit: "%", substitutions: [] },
+  "repoId": "master_spanish_pil-pil_001",
+  "parentRepoId": null,
+  "slug": "pil-pil",
+  "author": "ForkRecipe Kitchen",
+  "title": "Bacalà al Pil-Pil",
+  "description": "L'art basque de coaxer la propre gélatine de la morue salée dans une sauce à l'huile d'olive émulsifiée — un doux tourbillon circulaire de la poêle construit une émulation crémeuse d'ivoire sans goutte de crème ou de beurre, soutenue entièrement par le collagène propre au poisson.",
+  "cuisine": "Espagnol",
+  "culture": "Basque",
+  "category": "sauces",
+  "tags": [
+    "Espagnol",
+    "Basque",
+    "morue salée",
+    "émulsionné-sauce",
+    "Huile d'olive",
+    "gélatine"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "30 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Desalt and dry cod",
-      inputs: ["ing_01"],
-      outputState: "dried_cod_fillets",
-      instructions: "If not already desalted, submerge the salt cod in a large bowl of cold water in the refrigerator. Change the water every 8–12 hours for 48 hours. The fish is ready when a small piece tastes pleasantly salty rather than overwhelming. After desalting, remove the fillets from the water and pat them completely dry on multiple layers of paper towel, then leave them uncovered on a rack at room temperature for 20 minutes. This drying step is critical: surface moisture is the enemy of the emulsion — it will cause the gelatin to dilute into water rather than binding with the oil. Run your fingers over the skin; the fillets should feel dry and faintly tacky, not wet.",
-      visualCue: {
-        primaryTarget: "Fillets are pale ivory-white, uniformly moist but not glistening wet. The surface texture is slightly fibrous and the fish holds its shape firmly without being stiff.",
-        spectrum: [
-          { state: "Underdone", description: "Fillets still taste aggressively salty — the water hasn't penetrated to the core. The flesh is dense, almost hard.", action: "Continue soaking with more frequent water changes. A still-salty fillet will make an inedibly salty sauce." },
-          { state: "Perfect",   description: "Pleasantly salty, like well-seasoned fish. Flesh is supple and peels in long, meaty flakes. Surface is dry and faintly tacky.", action: "Pat dry thoroughly and rest on a rack before confiting." },
-          { state: "Overdone",  description: "Fillet tastes bland and waterlogged after too long a soak, and the flesh is soft and starting to fall apart.", action: "Proceed but handle gently. The sauce may need salt added at the finish to compensate." },
-        ],
-      },
-      feelCue: "Run a fingernail lightly along the grain of the flesh — it should separate into clean, long filaments without crumbling. The skin side should feel slightly rubbery and dry, ready to release gelatin without steaming.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Morceaux de morue salée séchée (bacalao), filets de peau trempés 48 heures dans de l'eau froide",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Confit cod in oil",
-      inputs: ["ing_02", "ing_03", "ing_04", "dried_cod_fillets"],
-      outputState: "confited_cod_and_infused_oil",
-      instructions: "In a wide, shallow clay cazuela or heavy skillet, combine the olive oil, sliced garlic, and dried chilis over the lowest possible heat. When the garlic begins to sizzle gently (about 2 minutes), nestle the cod fillets in skin-side up. The oil should never bubble aggressively — it should hover around 60–70C / 140–160F, which is well below a fry. Cook for 12–15 minutes, periodically tilting the pan to baste the fish with the warm oil. You will begin to see small white droplets forming at the edges of the fillets — this is the gelatin leaching from the fish into the oil. This is the raw material for the emulsion. When the fish is just cooked through and beginning to flake, gently remove the fillets with a slotted spatula onto a warm plate. Reserve every drop of the oil with its garlic and gelatin droplets.",
-      visualCue: {
-        primaryTarget: "Small, milky-white droplets of gelatin are visible at the edges of each fillet and scattered through the oil; the garlic has turned pale gold but not brown; fish flesh lifts at the edge in loose, moist flakes.",
-        spectrum: [
-          { state: "Underdone", description: "No white droplets visible yet in the oil; fish is still translucent at the center and the flesh is firm and unyielding.", action: "Continue at the lowest heat. The gelatin needs time and gentle warmth to migrate out of the collagen — do not rush with higher heat." },
-          { state: "Perfect",   description: "White gelatin droplets visible throughout the oil, garlic pale gold, fish just opaque through to the center but still very moist.", action: "Remove fish carefully and begin the emulsification swirl immediately while the oil is still hot." },
-          { state: "Overdone",  description: "Fish has broken into dry flakes, the gelatin has cooked out completely and the oil looks slightly cloudy from over-extraction. Garlic is brown.", action: "The sauce will still emulsify but the fish will have a drier texture. Remove garlic if brown to avoid bitterness." },
-        ],
-      },
-      feelCue: "Nudge the fish gently with a spatula — it should yield and begin to separate at the natural flake lines, but still hold together as one piece. The oil in the pan should feel slightly thicker than when you started, almost silky on a spoon.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge, variété légère",
+      "ratioValue": 80,
+      "defaultUnit": "%",
+      "substitutions": [
+        "huile d'olive pure"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Emulsify",
-      inputs: ["confited_cod_and_infused_oil"],
-      outputState: "pil_pil_sauce",
-      instructions: "This is the defining technique of the dish. With the reserved warm oil still in the pan over the lowest heat, begin moving the pan in slow, continuous circles — tilting it forward, sideways, backward, in a hypnotic, patient swirl. Do not stir, do not whisk. Just swing the pan. As you do this, the gelatin droplets begin to bind with the olive oil, and after 5–10 minutes a pale, creamy emulsion starts forming at the edges of the pan and slowly spreading to the center. The sauce goes from oily to ivory-white and slightly thickened, like a very loose aioli. If at any point it looks like it's about to split — the oil separates from the white mass — add a teaspoon of cold water and slow down the swirl. Taste and adjust salt very carefully. A pil-pil sauce that holds is one of the great quiet miracles of the kitchen.",
-      visualCue: {
-        primaryTarget: "A pale ivory emulsion with a glossy, creamy sheen that coats the bottom of the pan evenly and holds its shape for a second when the pan is still — not a greasy oil with white flecks, but a unified, creamy sauce.",
-        spectrum: [
-          { state: "Underdone", description: "The pan still shows a clear separation between the oily liquid and the white gelatin droplets — no creaminess has formed yet.", action: "Continue swirling patiently. The emulsification typically begins at the 5-minute mark. Make sure the pan is warm but not hot." },
-          { state: "Perfect",   description: "Smooth, pale ivory sauce that trails and drapes when the pan is tilted — looks like a loose cream sauce but contains no cream. Tastes savory, garlicky, faintly oceanic.", action: "Return the cod fillets gently to the sauce skin-side up and serve immediately from the cazuela." },
-          { state: "Overdone",  description: "The emulsion has broken: oil has separated to the top and a dense, rubbery gelatin mass has sunk to the bottom.", action: "Remove from heat. Add 1 tablespoon of cold water and restart the gentle circular swirl away from heat. Most broken pil-pils can be rescued this way — patience is the cure." },
-        ],
-      },
-      feelCue: "Dip a spoon and hold it horizontally — the sauce should coat the back in a layer thick enough to leave an opaque trail when you drag a finger through it. If the oil beads and runs off the spoon, it hasn't emulsified yet. If it coats like cream, you are there.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Girofles à l'ail, tranchés finement",
+      "ratioValue": 10,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Finish and serve",
-      inputs: ["pil_pil_sauce", "ing_05"],
-      outputState: "finished_pil_pil",
-      instructions: "Gently lower the reserved cod fillets back into the emulsified sauce, skin-side up, and tilt the pan to baste them with the sauce. The residual heat of the sauce will warm the fish through without further cooking. Taste the sauce carefully and add a pinch of salt only if needed — the fish and oil will have already contributed significant salt. To serve, bring the cazuela directly to the table. Tear crusty bread and drag it through the ivory sauce. The dish should be served warm, not hot — pil-pil breaks at temperatures above 80C, so never return it to a burner at this stage.",
-      visualCue: {
-        primaryTarget: "Cod fillets resting in a pool of ivory-cream sauce, skin gleaming on top, the sauce quivering slightly when the dish is moved — a dish that looks both rustic and almost impossibly elegant.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is warm but the fish is cold at the center — the heat exchange wasn't long enough.", action: "Let the fillets rest in the warm sauce (off heat) for another 3–4 minutes, tilting the pan to baste continuously." },
-          { state: "Perfect",   description: "Fish is warm throughout, flaking in large, moist chunks at the touch of a fork; sauce is glossy and ivory, pooling around the fish.", action: "Serve immediately in the cazuela with bread." },
-          { state: "Overdone",  description: "Sauce has been returned to active heat and broken — oil pooling, sauce grainy and separated.", action: "Off the heat: add a splash of cold water and swirl patiently to re-emulsify. The broken state is rarely permanent." },
-        ],
-      },
-      feelCue: "Drag a crust of bread through the finished sauce — it should coat the bread in a thick, shiny layer that clings rather than soaks. The flavor on your lips should be oceanic, garlicky, and richly olivey, with a low tingle from the guindilla warming the back of the throat.",
+      "ingId": "ing_04",
+      "role": "Heat",
+      "name": "Piments de piment séchés (ou de Cayenne séchée)",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Cayenne séchée",
+        "chili des yeux d'oiseau séché"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (goût avant addition — le cabillaud porte du sel)",
+      "ratioValue": 0.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Désalt et morue sèche",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "dried_cod_fillets",
+      "instructions": "Si ce n'est pas déjà fait, submerger la morue salée dans un grand bol d'eau froide au réfrigérateur. Changez l'eau toutes les 8-12 heures pendant 48 heures. Le poisson est prêt quand une petite pièce a un goût agréablement salé plutôt qu'écrasant. Après avoir dessalé, retirer les filets de l'eau et les sécher complètement sur plusieurs couches de papier, puis les laisser découverts sur un support à température ambiante pendant 20 minutes. Cette étape de séchage est critique : l'humidité de surface est l'ennemi de l'émulsion, elle fera diluer la gélatine dans l'eau plutôt que de la lier à l'huile. Courrez vos doigts sur la peau; les filets doivent se sentir secs et légèrement collants, non mouillés.",
+      "visualCue": {
+        "primaryTarget": "Les filets sont blancs d'ivoire pâles, uniformément humides, mais pas humides. La texture de surface est légèrement fibreuse et le poisson tient fermement sa forme sans être raide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les filets ont toujours un goût de sel agressif — l'eau n'a pas pénétré au cœur. La chair est dense, presque dure.",
+            "action": "Continuer à tremper avec des changements d'eau plus fréquents. Un filet de sel immobile fera une sauce naturellement salée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Agréablement salé, comme du poisson bien assaisonné. La chair est souple et pele dans de longs flocons de viande. La surface est sèche et légèrement collante.",
+            "action": "Pat bien sécher et reposer sur un rack avant de confiner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le filet a un goût fade et waterlogged après trop longtemps un trempage, et la chair est douce et commence à s'effondrer.",
+            "action": "Continuez, mais gérez doucement. La sauce peut avoir besoin de sel ajouté à la finale pour compenser."
+          }
+        ]
+      },
+      "feelCue": "Exécutez un ongle légèrement le long du grain de la chair — il devrait se séparer en filaments purs et longs sans s'effondrer. Le côté de la peau doit se sentir légèrement caoutchouteux et sec, prêt à libérer la gélatine sans vapeur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Confit la morue dans l'huile",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "dried_cod_fillets"
+      ],
+      "outputState": "confited_cod_and_infused_oil",
+      "instructions": "Dans un large cazuela en argile peu profonde ou une poêle lourde, mélanger l'huile d'olive, l'ail tranché et le chilis séché au plus bas feu possible. Lorsque l'ail commence à frémir doucement (environ 2 minutes), nicher les filets de morue sur la peau. L'huile ne devrait jamais buller agressivement — elle devrait planer autour de 60–70C / 140–160F, qui est bien en dessous d'un alevin. Cuire de 12 à 15 minutes, en inclinant périodiquement la poêle pour assainir le poisson avec l'huile chaude. Vous commencerez à voir de petites gouttelettes blanches se former aux bords des filets — c'est la gélatine qui lessivait du poisson dans l'huile. C'est la matière première de l'émulsion. Lorsque le poisson est simplement cuit et commence à flocer, retirez doucement les filets avec une spatule à fentes sur une assiette chaude. Réserver chaque goutte d'huile avec ses gouttelettes d'ail et de gélatine.",
+      "visualCue": {
+        "primaryTarget": "De petites gouttelettes de gélatine blanc laiteux sont visibles aux bords de chaque filet et dispersées dans l'huile; l'ail est devenu or pâle mais pas brun; la chair de poisson se soulève au bord en flocons lâches et humides.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas encore de gouttelettes blanches visibles dans l'huile; le poisson est encore translucide au centre et la chair est ferme et inébranlable.",
+            "action": "Continuer à la chaleur la plus basse. La gélatine a besoin de temps et de chaleur douce pour migrer hors du collagène — ne vous précipitez pas avec une chaleur plus élevée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des gouttelettes de gélatine blanche visibles dans toute l'huile, de l'ail en or pâle, pêchent simplement opaques au centre mais encore très humides.",
+            "action": "Retirer soigneusement le poisson et commencer l'émulsion tourbillonner immédiatement pendant que l'huile est encore chaude."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson s'est cassé en flocons secs, la gélatine a complètement cuit et l'huile semble légèrement trouble de surextraction. L'ail est brun.",
+            "action": "La sauce émulsionnera encore, mais le poisson aura une texture plus sèche. Retirer l'ail si brun pour éviter l'amertume."
+          }
+        ]
+      },
+      "feelCue": "Mangez doucement le poisson avec une spatule — il devrait céder et commencer à se séparer aux lignes de flocons naturels, mais toujours tenir ensemble comme une seule pièce. L'huile dans la poêle devrait être légèrement plus épaisse que lorsque vous avez commencé, presque soyeuse sur une cuillère."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Émulsifier",
+      "inputs": [
+        "confited_cod_and_infused_oil"
+      ],
+      "outputState": "pil_pil_sauce",
+      "instructions": "C'est la technique de définition du plat. Avec l'huile chaude réservée encore dans la poêle sur la chaleur la plus basse, commencez à déplacer la poêle dans des cercles lents et continus — l'inclinant vers l'avant, latéralement, vers l'arrière, dans un tourbillon patient hypnotique. Ne remuez pas, ne fouettez pas. Il suffit de balancer la casserole. Comme vous le faites, les gouttelettes de gélatine commencent à se lier à l'huile d'olive, et après 5-10 minutes une émulsion pâle et crémeuse commence à se former aux bords de la poêle et à s'étendre lentement au centre. La sauce va de gras à blanc ivoire et légèrement épaissie, comme un aioli très lâche. Si à n'importe quel moment il semble qu'il est sur le point de se diviser — l'huile se sépare de la masse blanche — ajouter une cuillère à café d'eau froide et ralentir le tourbillon. Goûtez et ajustez le sel très soigneusement. Une sauce pil-pil qui tient est l'un des grands miracles tranquilles de la cuisine.",
+      "visualCue": {
+        "primaryTarget": "Une émulsion d'ivoire pâle avec un reflet crémeux et brillant qui enveloppe uniformément le fond de la poêle et maintient sa forme pendant une seconde lorsque la poêle est encore — pas une huile grasse avec des taches blanches, mais une sauce crémeuse unifiée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La casserole montre encore une séparation claire entre le liquide huileux et les gouttelettes de gélatine blanche — aucune crémosité ne s'est encore formée.",
+            "action": "Continuez à tourner patiemment. L'émulsion commence généralement à 5 minutes. Assurez-vous que la poêle est chaude mais pas chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sauce d'ivoire lisse et pâle qui traque et drape lorsque la poêle est inclinée — ressemble à une sauce à la crème lâche mais ne contient pas de crème. Goûte salé, ailé, légèrement océanique.",
+            "action": "Remettre les filets de morue doucement à la peau de la sauce et servir immédiatement à partir de la cazuela."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'émulsion s'est brisée : l'huile s'est séparée du dessus et une masse dense et caoutchouteuse de gélatine a coulé au fond.",
+            "action": "Retirer du feu. Ajouter 1 cuillère à soupe d'eau froide et redémarrer le doux tourbillon circulaire loin de la chaleur. La plupart des pupilles cassées peuvent être sauvées de cette façon — la patience est le remède."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère et maintenez-la horizontalement — la sauce devrait envelopper le dos d'une couche suffisamment épaisse pour laisser une trace opaque lorsque vous faites glisser un doigt à travers elle. Si les perles d'huile et coulent de la cuillère, il n'a pas encore émulsifié. Si c'est comme de la crème, tu es là."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Terminer et servir",
+      "inputs": [
+        "pil_pil_sauce",
+        "ing_05"
+      ],
+      "outputState": "finished_pil_pil",
+      "instructions": "Abaissez délicatement les filets de morue réservés dans la sauce émulsifiée, la peau vers le haut, et inclinez la poêle pour les arroser avec la sauce. La chaleur résiduelle de la sauce réchauffera le poisson sans autre cuisson. Goûtez soigneusement la sauce et n'ajoutez une pincée de sel qu'en cas de besoin — le poisson et l'huile auront déjà apporté un sel important. Pour servir, apportez la cazuela directement à la table. Agiter le pain croustillant et le faire glisser dans la sauce ivoire. Le plat doit être servi chaud et non chaud — le pil-pil se brise à des températures supérieures à 80 °C, donc ne jamais le retourner à un brûleur à ce stade.",
+      "visualCue": {
+        "primaryTarget": "Filets de morue se reposant dans une piscine de sauce ivoire-crème, la peau brille sur le dessus, la sauce vibre légèrement lorsque le plat est déplacé — un plat qui semble à la fois rustique et presque impossiblement élégant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est chaude mais le poisson est froid au centre — l'échange de chaleur n'était pas assez long.",
+            "action": "Laisser reposer les filets dans la sauce tiède (chauffée) pendant encore 3 à 4 minutes, en inclinant la poêle pour s'abaisser continuellement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le poisson est chaud tout au long, en flocant de gros morceaux humides au toucher d'une fourchette; la sauce est brillant et ivoire, baignant autour du poisson.",
+            "action": "Servir immédiatement dans la casuela avec du pain."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est revenue à la chaleur active et cassée — mise en commun de l'huile, sauce grainée et séparée.",
+            "action": "Hors de la chaleur: ajouter une éclaboussure d'eau froide et tourbillonner patiemment pour réémulsionner. L'état brisé est rarement permanent."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une croûte de pain dans la sauce finie — elle devrait enrober le pain dans une couche épaisse et brillante qui s'accroche plutôt que de tremper. La saveur sur vos lèvres devrait être océanique, ailky, et richement olive, avec un faible picotement de la guindilla réchauffer l'arrière de la gorge."
+    }
+  ]
 };

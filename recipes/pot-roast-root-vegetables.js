@@ -1,125 +1,355 @@
 export default {
-  repoId: "master_american_pot_roast_root_vegetables_001",
-  parentRepoId: null,
-  slug: "pot-roast-root-vegetables",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Pot Roast with Root Vegetables",
-  description: "A well-marbled chuck roast seared dark and braised low in red wine and stock until it yields to a spoon, surrounded by carrots, parsnips, and potatoes that drink up the deep, beefy gravy.",
-  cuisine: "American",
-  culture: "American home cooking",
-  category: "proteins",
-  tags: ["beef", "braise", "pot-roast", "sunday-roast", "root-vegetables", "comfort", "home-kitchen", "weekend"],
-  difficulty: 2,
-  activeTime: "45 min",
-  totalTime: "4 hr",
-  ratioSystem: "weight",
-  servings: 6,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Beef chuck roast, boneless (about 1.6 kg), tied",    ratioValue: 1600, defaultUnit: "g",       substitutions: ["bottom round (leaner; can turn dry)", "brisket flat"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Kosher salt",                                        ratioValue: 18,   defaultUnit: "g",       substitutions: [] },
-    { ingId: "ing_03", role: "Spice",     name: "Black pepper, freshly ground",                       ratioValue: 1,    defaultUnit: "tsp",     substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Neutral oil",                                        ratioValue: 30,   defaultUnit: "ml",      substitutions: ["beef tallow"] },
-    { ingId: "ing_05", role: "Allium",    name: "Yellow onions, cut into thick wedges",               ratioValue: 2,    defaultUnit: "whole",   substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic, smashed",                                    ratioValue: 6,    defaultUnit: "cloves",  substitutions: [] },
-    { ingId: "ing_07", role: "Umami",     name: "Tomato paste",                                       ratioValue: 30,   defaultUnit: "g",       substitutions: [] },
-    { ingId: "ing_08", role: "Liquid",    name: "Dry red wine",                                       ratioValue: 240,  defaultUnit: "ml",      substitutions: ["additional stock plus 1 tbsp red wine vinegar"] },
-    { ingId: "ing_09", role: "Liquid",    name: "Beef or chicken stock, low-sodium",                  ratioValue: 480,  defaultUnit: "ml",      substitutions: ["water plus 1 tbsp soy sauce"] },
-    { ingId: "ing_10", role: "Glutamate", name: "Worcestershire sauce",                               ratioValue: 1,    defaultUnit: "tbsp",    substitutions: ["soy sauce"] },
-    { ingId: "ing_11", role: "Herb",      name: "Thyme",                                              ratioValue: 5,    defaultUnit: "sprigs",  substitutions: [] },
-    { ingId: "ing_12", role: "Aromatic",  name: "Bay leaves",                                         ratioValue: 2,    defaultUnit: "leaves",  substitutions: [] },
-    { ingId: "ing_13", role: "Sweetener", name: "Carrots, peeled, cut into 5 cm lengths",             ratioValue: 500,  defaultUnit: "g",       substitutions: [] },
-    { ingId: "ing_14", role: "Aromatic",  name: "Parsnips, peeled, cut into 5 cm lengths",            ratioValue: 300,  defaultUnit: "g",       substitutions: ["turnips, quartered", "celery root, in chunks"] },
-    { ingId: "ing_15", role: "Starch",    name: "Small waxy potatoes, halved",                        ratioValue: 700,  defaultUnit: "g",       substitutions: ["Yukon Golds, cut into 5 cm chunks"] },
-    { ingId: "ing_16", role: "Herb",      name: "Flat-leaf parsley, chopped",                         ratioValue: 10,   defaultUnit: "g",       substitutions: [] },
+  "repoId": "master_american_pot_roast_root_vegetables_001",
+  "parentRepoId": null,
+  "slug": "pot-roast-root-vegetables",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Rôti de pot avec des légumes-racines",
+  "description": "Un poulet bien marbré rôti noir et braisé bas dans le vin rouge et le stock jusqu'à ce qu'il donne à une cuillère, entouré de carottes, de panais, et de pommes de terre qui boivent la sauce profonde et bœuf.",
+  "cuisine": "Américain",
+  "culture": "Cuisine maison américaine",
+  "category": "proteins",
+  "tags": [
+    "boeuf",
+    "braise",
+    "rôtis",
+    "Rôti du dimanche",
+    "les légumes-racines;",
+    "confort",
+    "cuisine maison",
+    "weekend"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "45 min",
+  "totalTime": "4 hr",
+  "ratioSystem": "weight",
+  "servings": 6,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sear",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "seared_chuck",
-      instructions: "Heat the oven to 300°F (150°C). Pat the chuck dry and season all over with 14 g of the salt and the pepper. Heat the oil in a heavy 6–7 qt (6 l) Dutch oven over medium-high heat until shimmering. Sear the roast 4–5 minutes per side, including the edges, until deeply browned all over — about 15–20 minutes total. Transfer to a plate.",
-      visualCue: {
-        primaryTarget: "A dark chestnut-brown crust on every face of the roast.",
-        spectrum: [
-          { state: "Underdone", description: "Surface is grey-tan and damp, with little fond in the pot.", action: "Keep searing; don't move the roast until it lifts freely." },
-          { state: "Perfect",   description: "Deep brown, almost walnut-colored crust with a rich, roasted smell; the pot bottom is glazed with brown fond.", action: "Remove the beef and add the onions." },
-          { state: "Overdone",  description: "Patches of black crust and a burnt smell; the fond is black.", action: "Wipe out the pot before continuing — burnt fond will make the whole braise bitter." },
-        ],
-      },
-      feelCue: "The meat should release from the pot with a gentle nudge when a side is properly seared; if it sticks and tears, give it another minute.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Boeuf rôti, désossé (environ 1,6 kg), attaché",
+      "ratioValue": 1600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "rond inférieur (plus léger; peut tourner à sec)",
+        "poitrine plate"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Deglaze",
-      inputs: ["seared_chuck", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12"],
-      outputState: "braising_pot",
-      instructions: "Lower the heat to medium, add the onions, and cook 5–6 minutes until they pick up color at the edges. Add the garlic and tomato paste and stir 2 minutes until the paste darkens. Pour in the wine, scrape the bottom clean, and simmer 3 minutes. Add the stock, Worcestershire, thyme, and bay leaves, then return the beef and any juices. The liquid should come about halfway up the roast; add water if needed. Bring to a simmer.",
-      visualCue: {
-        primaryTarget: "Beef half-submerged in a dark, gently bubbling liquid, the pot bottom scraped clean.",
-        spectrum: [
-          { state: "Underdone", description: "Fond still stuck to the bottom and the wine smells raw and sharp.", action: "Scrape harder and let the wine simmer another minute or two." },
-          { state: "Perfect",   description: "Liquid is deep ruby-brown, smells of wine and roasted meat, and is at a gentle simmer around the halfway-submerged roast.", action: "Cover and move to the oven." },
-          { state: "Overdone",  description: "The roast is fully submerged — it will boil rather than braise and taste flat.", action: "Ladle out liquid until it reaches halfway; keep the extra to add back later if needed." },
-        ],
-      },
-      feelCue: "The wooden spoon should scrape across a smooth pot bottom with no gritty resistance from stuck-on fond.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 18,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Braise",
-      inputs: ["braising_pot"],
-      outputState: "half_braised_beef",
-      instructions: "Cover tightly and braise in the oven for 2 hours, turning the roast over once at the 1-hour mark. The liquid inside should be barely bubbling; if it's boiling hard, lower the oven to 275°F (135°C).",
-      visualCue: {
-        primaryTarget: "Beef shrunk slightly and darkened, a fork sliding in with moderate resistance.",
-        spectrum: [
-          { state: "Underdone", description: "Beef still feels tight and springy; the fork meets strong resistance.", action: "This is expected at this stage; continue to the vegetables." },
-          { state: "Perfect",   description: "Meat has tightened and started to relax; liquid is lightly bubbling and has thickened a little.", action: "Add the vegetables." },
-          { state: "Overdone",  description: "Liquid has reduced to below a quarter of the roast's height and is scorching at the edges.", action: "Add 240 ml hot water or stock and cover more tightly." },
-        ],
-      },
-      feelCue: "Lifting the lid should release a waft of wine-dark, beefy steam, and the liquid should shiver rather than roll.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Poivre noir, fraîchement moulu",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Braise with vegetables",
-      inputs: ["half_braised_beef", "ing_13", "ing_14", "ing_15", "ing_02"],
-      outputState: "tender_pot_roast",
-      instructions: "Nestle the carrots, parsnips, and potatoes around the beef, pushing them down into the liquid, and sprinkle with the remaining 4 g salt. Cover and return to the oven for 1 hour to 1 hour 15 minutes, until the beef is fork-tender and the vegetables are soft but hold their shape.",
-      visualCue: {
-        primaryTarget: "Beef that pulls apart along its grain with a fork, and vegetables that are tender all the way through.",
-        spectrum: [
-          { state: "Underdone", description: "A fork twisted into the beef meets resistance; slices hold stiffly. Potatoes are hard in the center.", action: "Cover and continue braising, checking every 15 minutes." },
-          { state: "Perfect",   description: "The beef flakes into thick, juicy shreds when a fork is twisted in it; carrots and potatoes offer no resistance to a paring knife but are not falling apart.", action: "Proceed to finishing." },
-          { state: "Overdone",  description: "Beef is dry and stringy at the edges; potatoes are crumbling into the liquid.", action: "Stir the broken potato into the gravy to thicken it; serve beef in chunks with plenty of gravy." },
-        ],
-      },
-      feelCue: "The fork should sink into the roast almost under its own weight and twist free a tender, moist chunk.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "suif de bœuf"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Reduce",
-      inputs: ["tender_pot_roast", "ing_16"],
-      outputState: "pot_roast_dinner",
-      instructions: "Move the beef and vegetables to a platter and tent with foil. Discard the thyme stems and bay leaves. Skim the fat off the braising liquid with a ladle, then simmer it on the stovetop 5–10 minutes until reduced to a light gravy. Taste for salt. Slice or pull the beef into thick pieces, pour over the gravy, and scatter with parsley.",
-      visualCue: {
-        primaryTarget: "A glossy, deep brown gravy that lightly coats the meat and vegetables.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is thin and a layer of fat floats on top.", action: "Skim more fat and keep reducing." },
-          { state: "Perfect",   description: "Gravy is glossy and coats a spoon, tasting rich and well-seasoned.", action: "Serve." },
-          { state: "Overdone",  description: "Gravy is thick and tastes too salty.", action: "Thin with water a spoonful at a time." },
-        ],
-      },
-      feelCue: "The gravy should feel slightly sticky between your fingertips from the gelatin in the chuck.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignons jaunes, coupés en quartiers épais",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Ail, cassé",
+      "ratioValue": 6,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "Pâte de tomates",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Liquid",
+      "name": "Vin rouge sec",
+      "ratioValue": 240,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "stock supplémentaire plus 1 c. à soupe de vinaigre de vin rouge"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Liquid",
+      "name": "Boeuf ou bouillon de poulet, faible teneur en sodium",
+      "ratioValue": 480,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau plus 1 c. à soupe de sauce soja"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Glutamate",
+      "name": "sauce Worcestershire",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "sauce de soja"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Herb",
+      "name": "Thym",
+      "ratioValue": 5,
+      "defaultUnit": "sprigs",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 2,
+      "defaultUnit": "leaves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Sweetener",
+      "name": "Carottes, pelées, coupées en longueurs de 5 cm",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Aromatic",
+      "name": "Panais, pelés, coupés en longueurs de 5 cm",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "navets, coupés en quatre",
+        "racine de céleri, en morceaux"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Starch",
+      "name": "Petites pommes de terre cireuses, coupées en deux",
+      "ratioValue": 700,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Ors du Yukon, coupés en morceaux de 5 cm"
+      ]
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, haché",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "seared_chuck",
+      "instructions": "Chauffer le four à 300 °F (150 °C). Faire sécher le mandrin et assaisonner avec 14 g de sel et de poivre. Chauffer l'huile dans un four hollandais lourd de 6 à 7 qt (6 l) à feu moyen-vif jusqu'à ce qu'elle mijote. Placer le rôti de 4 à 5 minutes de chaque côté, y compris les bords, jusqu'à ce qu'il soit profondément doré — environ 15 à 20 minutes au total. Transférer dans une assiette.",
+      "visualCue": {
+        "primaryTarget": "Une croûte brun marron foncé sur chaque face du rôti.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est gris-tan et humide, avec peu d'affection dans le pot.",
+            "action": "Garder la mer; ne pas déplacer le rôti jusqu'à ce qu'il se soulève librement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Croûte brun foncé, presque couleur noix, avec une odeur riche et torréfié; le fond du pot est glacé d'un goût brun.",
+            "action": "Retirer le boeuf et ajouter les oignons."
+          },
+          {
+            "state": "Overdone",
+            "description": "Patches de croûte noire et une odeur brûlée; le fond est noir.",
+            "action": "Essuyez la marmite avant de continuer — l'affection brûlée rendra toute la braise amère."
+          }
+        ]
+      },
+      "feelCue": "La viande doit se libérer du pot avec un doux coup de nez lorsqu'un côté est bien séché; si elle colle et larmes, donnez-lui une autre minute."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Déglacement",
+      "inputs": [
+        "seared_chuck",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "braising_pot",
+      "instructions": "Abaissez le feu à moyen, ajoutez les oignons et faites cuire 5 à 6 minutes jusqu'à ce qu'ils prennent la couleur aux bords. Ajouter l'ail et la pâte de tomate et remuer 2 minutes jusqu'à ce que la pâte s'assombrisse. Verser le vin, racler le fond propre et laisser mijoter 3 minutes. Ajouter le stock, Worcestershire, le thym et les feuilles de laurier, puis retourner le boeuf et les jus. Le liquide devrait venir à la moitié du rôti; ajouter de l'eau si nécessaire. Faites frémir.",
+      "visualCue": {
+        "primaryTarget": "Boeuf à moitié submergé dans un liquide sombre, légèrement bouillonnant, le fond du pot raclé propre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le fond est toujours collé au fond et le vin sent cru et vif.",
+            "action": "Grattez plus fort et laissez mijoter encore une minute ou deux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le liquide est brun rubis profond, sent le vin et la viande rôtie, et est à un doux mijoter autour du rôti submergé à mi-chemin.",
+            "action": "Couvrir et passer au four."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le rôti est complètement submergé — il fera bouillir plutôt que du braise et du goût plat.",
+            "action": "Retirez le liquide jusqu'à ce qu'il atteigne la moitié; conservez le supplément pour le rajouter plus tard si nécessaire."
+          }
+        ]
+      },
+      "feelCue": "La cuillère en bois devrait racler à travers un fond de pot lisse sans résistance de gritty de fond collé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "braising_pot"
+      ],
+      "outputState": "half_braised_beef",
+      "instructions": "Couvrir soigneusement et brasser au four pendant 2 heures, en retournant le rôti une fois à la marque d'une heure. Le liquide à l'intérieur devrait être à peine bouillonnant; s'il est bouillant dur, baisser le four à 275°F (135°C).",
+      "visualCue": {
+        "primaryTarget": "Le boeuf rétrécit légèrement et s'obscurcit, une fourchette glisse avec une résistance modérée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le boeuf se sent encore serré et printanier; la fourchette rencontre une forte résistance.",
+            "action": "C'est ce que l'on attend à ce stade; continuez jusqu'aux légumes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande s'est resserrée et a commencé à se détendre; le liquide est légèrement bouillonnant et s'est un peu épaissi.",
+            "action": "Ajouter les légumes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide a été réduit à moins d'un quart de la hauteur du rôti et brûle aux bords.",
+            "action": "Ajouter 240 ml d'eau chaude ou de bouillon et couvrir plus étroitement."
+          }
+        ]
+      },
+      "feelCue": "Lever le couvercle devrait libérer une cuillerée de vapeur foncée, et le liquide devrait trembler plutôt que rouler."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Braise aux légumes",
+      "inputs": [
+        "half_braised_beef",
+        "ing_13",
+        "ing_14",
+        "ing_15",
+        "ing_02"
+      ],
+      "outputState": "tender_pot_roast",
+      "instructions": "Nettoyez les carottes, les panais et les pommes de terre autour du boeuf, en les poussant dans le liquide et en saupoudrant de sel de 4 g. Couvrir et retourner au four pendant 1 heure à 1 heure 15 minutes, jusqu'à ce que le boeuf soit tendre à la fourchette et que les légumes soient doux mais tiennent leur forme.",
+      "visualCue": {
+        "primaryTarget": "Boeuf qui se sépare le long de son grain avec une fourchette, et les légumes qui sont tendres tout le chemin à travers.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Une fourche tordue dans le boeuf rencontre la résistance; les tranches tiennent fermement. Les pommes de terre sont dures au centre.",
+            "action": "Couvrez et continuez à braquer, en vérifiant toutes les 15 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le boeuf s'écaille en lambeaux épais et juteux lorsqu'une fourchette y est tordue; les carottes et les pommes de terre n'offrent aucune résistance à un couteau à parure, mais ne s'effondrent pas.",
+            "action": "Terminer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le boeuf est sec et stringé aux bords; les pommes de terre s'écroulent dans le liquide.",
+            "action": "Incorporer la pomme de terre cassée dans la sauce pour l'épaissir; servir le boeuf en morceaux avec beaucoup de sauce."
+          }
+        ]
+      },
+      "feelCue": "La fourchette devrait couler dans le rôti presque sous son propre poids et tordre libre un morceau tendre et humide."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Réduire",
+      "inputs": [
+        "tender_pot_roast",
+        "ing_16"
+      ],
+      "outputState": "pot_roast_dinner",
+      "instructions": "Déplacez le boeuf et les légumes sur un plateau et tente avec du papier. Jeter les tiges de thym et les feuilles de laurier. Essuyez la graisse du liquide de graissage avec une louche, puis laissez-la mijoter sur la cuisinière 5-10 minutes jusqu'à ce qu'elle soit réduite à une légère sauce. Goûtez au sel. Couper ou tirer le bœuf en morceaux épais, verser sur la sauce et disperser avec du persil.",
+      "visualCue": {
+        "primaryTarget": "Une sauce brun foncé brillante qui enrobe légèrement la viande et les légumes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est mince et une couche de graisse flotte sur le dessus.",
+            "action": "Skim plus de graisse et continuer à réduire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gravy est brillant et enrobe une cuillère, dégustation riche et bien assaisonnée.",
+            "action": "Servez."
+          },
+          {
+            "state": "Overdone",
+            "description": "La graisse est épaisse et a un goût trop salé.",
+            "action": "Arroser d'eau une cuillère à la fois."
+          }
+        ]
+      },
+      "feelCue": "La sauce doit se sentir légèrement collante entre les doigts de la gélatine dans le mandrin."
+    }
+  ]
 };

@@ -1,96 +1,216 @@
 export default {
-  repoId: "master_american_fermented_hot_sauce_001",
-  parentRepoId: null,
-  slug: "fermented-hot-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Fermented Hot Sauce",
-  description: "A living hot sauce — fresh cayenne and Fresno chiles lacto-fermented whole in a salt brine for two weeks, then blended with their own lactic acid brine into something bright, funky, and layered in a way that vinegar-spiked hot sauces can never be. The fermentation does not just preserve; it transforms, trading the raw vegetable sharpness for a complex, rounded heat that builds slowly and lingers.",
-  cuisine: "American",
-  culture: "Louisiana",
-  category: "fermented",
-  tags: ["fermented", "hot-sauce", "condiment", "lacto-fermented", "vegan", "gluten-free"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "14 day",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 4, bitter: 1, umami: 1, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",      name: "Fresh cayenne peppers, stems removed",           ratioValue: 250, defaultUnit: "g", substitutions: ["red Fresno", "red jalapeño", "Thai bird chiles for more heat"] },
-    { ingId: "ing_02", role: "Heat",      name: "Fresno or red jalapeño chiles, stems removed",   ratioValue: 100, defaultUnit: "g", substitutions: ["red bell pepper for a milder sauce", "habanero for more heat"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, peeled",                          ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Non-iodized salt (sea salt or kosher, 3% by weight of total vegetable mass)", ratioValue: 11, defaultUnit: "g", substitutions: ["pickling salt — never iodized salt, which inhibits lacto-fermentation"] },
-    { ingId: "ing_05", role: "Solvent",   name: "Filtered water (chlorine-free), enough to submerge", ratioValue: 500, defaultUnit: "g", substitutions: ["spring water"] },
+  "repoId": "master_american_fermented_hot_sauce_001",
+  "parentRepoId": null,
+  "slug": "fermented-hot-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce chaude fermentée",
+  "description": "Une sauce chaude vivante — des chiles frais de cayenne et de fresno entier lacto-fermenté dans une saumure de sel pendant deux semaines, puis mélangé avec leur propre saumure d'acide lactique en quelque chose de lumineux, funky, et stratifié d'une manière que les sauces chaudes au vinaigre épicé ne peut jamais être. La fermentation ne se contente pas de préserver ; elle transforme, échangeant la netteté végétale brute pour une chaleur complexe et arrondie qui se construit lentement et s'attarde.",
+  "cuisine": "Américain",
+  "culture": "Louisiane",
+  "category": "fermented",
+  "tags": [
+    "fermenté",
+    "Sucre chaude",
+    "condiment",
+    "lactofermentés",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "14 day",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Prepare and weigh",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "measured_ingredients",
-      instructions: "Weigh all chiles and garlic together — this is your total vegetable mass. Calculate 3% of this weight in non-iodized salt (e.g., 350 g total vegetables = 10.5 g salt). This 3% salt ratio is the key control: too little salt invites soft-rot bacteria to outcompete the lactobacillus; too much suppresses all microbial activity. Remove the stems from the chiles but keep the seeds — they carry heat, flavor, and beneficial surface microorganisms. There is no need to blanch or cook the chiles. Wear gloves when handling more than a handful of cayennes, and avoid touching your face.",
-      visualCue: {
-        primaryTarget: "A precise pile of vibrant red chiles and garlic on a scale, stems discarded, seeds intact, ready for brining. The chiles should be firm and fresh with glossy skin, not soft or wrinkled.",
-        spectrum: [
-          { state: "Underdone", description: "Stems not removed, salt not yet weighed, or soft/damaged chiles mixed in with fresh ones.", action: "Remove all stems (they can harbor undesirable molds), weigh precisely, and remove any soft, discolored, or moldy peppers. Every pepper must be firm and blemish-free." },
-          { state: "Perfect",   description: "All chiles bright and firm, stems off, garlic peeled, salt precisely measured at 3%. Everything ready to pack into the jar.", action: "Proceed to making the brine and packing the vessel." },
-          { state: "Overdone",  description: "Chiles halved or sliced for speed — this is not wrong but changes the texture of the final sauce.", action: "Whole or halved, both work. Whole peppers take slightly longer to ferment; halved are faster but may produce a slightly rougher-textured sauce after blending." },
-        ],
-      },
-      feelCue: "A fresh cayenne should snap cleanly when bent double and feel turgid, with no give. Any chile that bends without snapping or feels hollow has lost moisture and may harbor surface molds — discard it.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Poivrons frais de Cayenne, tiges enlevées",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Fresno rouge",
+        "rouge jalapeño",
+        "Chiles d'oiseaux thaïlandais pour plus de chaleur"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Brine and pack",
-      inputs: ["measured_ingredients", "ing_05"],
-      outputState: "packed_ferment",
-      instructions: "Dissolve the weighed salt completely in the filtered water to make the brine — stir for a full minute to ensure every grain is dissolved. Pack the chiles and garlic tightly into a clean wide-mouth jar, pushing them firmly to leave as little air space as possible. Pour the brine over the chiles until they are fully submerged, leaving 3 to 4 cm of headspace. Weigh the chiles down below the brine surface using a fermentation weight, a small zip-lock bag filled with brine, or a folded cabbage leaf pressed flat. Any chile exposed to air above the brine surface will mold. Seal with a loose lid or an airlock.",
-      visualCue: {
-        primaryTarget: "A tightly packed jar of vivid red chiles fully submerged in clear, lightly salted brine, with a weight holding them below the surface. The brine should cover everything by at least 1 cm.",
-        spectrum: [
-          { state: "Underdone", description: "Chiles floating above the brine, exposed to air, with no weight keeping them submerged.", action: "Add a weight immediately — a jar filled with water, a sealed bag of brine, or a trimmed vegetable wedge. Exposed chiles will develop surface mold within 2 days." },
-          { state: "Perfect",   description: "All chiles fully submerged, jar packed tightly, headspace appropriate. The brine is clear and smells of salt and fresh chile. The jar is covered but not sealed airtight.", action: "Label with the date and store at room temperature, 18 to 24°C, out of direct sunlight." },
-          { state: "Overdone",  description: "Jar packed so tightly the brine cannot circulate, or sealed completely airtight without an airlock.", action: "Loosen the lid so gas can escape, or add an airlock. A completely sealed jar will build pressure as fermentation produces CO₂ — at minimum it will spray brine; at worst a glass jar can crack." },
-        ],
-      },
-      feelCue: "After packing, press down on the chiles with the back of a spoon — brine should rise and cover the compressed peppers. That hydraulic push confirms adequate liquid for the full ferment.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Chiles fresno ou rouge jalapeño, tiges enlevées",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivron rouge pour une sauce plus douce",
+        "habanero pour plus de chaleur"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Ferment",
-      inputs: ["packed_ferment"],
-      outputState: "fermented_peppers",
-      instructions: "Ferment at room temperature, 18 to 24°C, for 10 to 14 days. In the first 2 to 3 days the brine will turn cloudy and pale as lacto-bacteria multiply — this cloudiness is normal and desirable. You may see small bubbles clinging to the chiles or rising through the brine. Taste the brine daily from day 5 onward: it should progressively shift from salty toward pleasantly sour and tangy. The chiles will fade from vivid red to a duller brick-red as pigments change. Check daily for surface kahm yeast (a flat, white film on the brine surface) — this is harmless; skim it off with a spoon. Any fuzzy, raised, or colored mold means discard the whole batch.",
-      visualCue: {
-        primaryTarget: "Cloudy white brine with small bubbles rising through it, brick-red chiles that have softened slightly, and a tangy-sour fermented aroma replacing the raw sharp heat of fresh chiles.",
-        spectrum: [
-          { state: "Underdone", description: "After 5 days the brine is still clear, barely cloudy, and tastes only salty with little sourness. Very few bubbles visible.", action: "Move the jar somewhere warmer (23 to 26°C). Cooler ferments stall below 18°C. Give it 2 more days and taste again." },
-          { state: "Perfect",   description: "Brine milky-white and sour-tangy, chiles brick-red and yielding when pressed, the whole jar smelling of a funky, sour, herbal ferment. The flavor is complex — heat up front, sour midpalate, savory finish.", action: "Strain and reserve all the brine, then blend the fermented chiles." },
-          { state: "Overdone",  description: "After 21 days or more, the chiles are very soft and the brine is aggressively sour with a flat, one-note acidity that tastes more like cheap vinegar than a complex ferment.", action: "Still edible — blend and taste. Offset the sharpness in the blending step with a pinch of sugar or a drizzle of olive oil." },
-        ],
-      },
-      feelCue: "Squeeze a fully fermented chile through the glass (if in a jar) or through the lid — it should give noticeably, feeling less firm than when it went in. Press a chile with a clean finger: it should yield gently, like a very ripe grape, not be mushy or disintegrated.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Giroves d'ail, pelées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Blend",
-      inputs: ["fermented_peppers"],
-      outputState: "finished_hot_sauce",
-      instructions: "Drain the fermented chiles and garlic into a bowl, reserving ALL of the brine — it is the lactic acid heart of the sauce. Transfer the chiles and garlic to a blender and add enough of the reserved brine to blend smoothly, starting with half and adding more until you reach your preferred consistency. Blend on high for 2 full minutes until completely smooth. Taste and adjust: add more brine for more tang and salt, or a splash of fresh water to mellow it. For a classic Louisiana-style smooth sauce, strain through a fine sieve, pressing the solids; for a chunkier sauce, leave unstrained. Bottle in clean jars or squeeze bottles. The sauce keeps refrigerated for 6 months and continues to develop complexity slowly.",
-      visualCue: {
-        primaryTarget: "A smooth, brick-red to vivid scarlet sauce with a pourable consistency, smelling simultaneously of fresh chiles, lactic sourness, and garlic — bright and alive, not flat.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is gritty and chunky, not fully blended, with visible chile seeds and skin fragments floating in watery brine.", action: "Blend for longer on high speed. Add a little more brine to help the blades engage if the mixture is too thick." },
-          { state: "Perfect",   description: "Completely smooth, deeply red, pourable but not watery. The heat hits the front of the mouth, sourness follows in the midpalate, and a savory, garlicky length carries through the finish. It is alive and layered.", action: "Bottle immediately. The sauce is ready to use; it will mellow and deepen further over the first 2 weeks in the refrigerator." },
-          { state: "Overdone",  description: "The sauce is so thin and watery it runs like colored water off the spoon, or so thick and seedy it is more paste than sauce.", action: "If too thin: strain and reduce briefly in a saucepan over low heat, whisking, until it coats a spoon. If too thick: blend in more brine or water 1 tablespoon at a time." },
-        ],
-      },
-      feelCue: "The finished sauce should cling to the back of a spoon and fall in a slow, even sheet — not drip in drops (too thin) or sit in a mound (too thick). Taste it: the heat should build over 30 seconds rather than spike and fade immediately, which is the hallmark of fermentation-derived complexity.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel non iodé (sel de mer ou casher, 3 % en poids de la masse végétale totale)",
+      "ratioValue": 11,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel de décapage — sel jamais iodé, qui inhibe la lactofermentation"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Solvent",
+      "name": "Eau filtrée (sans chlore), suffisante pour submerger",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau de source"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparer et peser",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "measured_ingredients",
+      "instructions": "Peser tous les chiles et l'ail ensemble — c'est votre masse végétale totale. Calculer 3 % de ce poids dans le sel non iodé (par exemple, 350 g de légumes totaux = 10,5 g de sel). Ce ratio sel de 3% est le principal contrôle: trop peu de sel invite les bactéries àrot mou à surcombattre le lactobacillus; trop supprime toute activité microbienne. Enlevez les tiges des chiles, mais gardez les graines — elles contiennent de la chaleur, de la saveur et des microorganismes de surface bénéfiques. Il n'est pas nécessaire de blanchir ou de faire cuire les chiles. Portez des gants lorsque vous manipulez plus d'une poignée de cayennes et évitez de toucher votre visage.",
+      "visualCue": {
+        "primaryTarget": "Un tas précis de chiles rouges vifs et d'ail à l'échelle, les tiges jetées, les graines intactes, prêtes pour le broyage. Les chiles doivent être fermes et frais avec une peau brillante, non molle ni ridée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tiges ne sont pas enlevées, le sel n'est pas encore pesé, ni les chiles mous/dégradés mélangés avec des chiles frais.",
+            "action": "Enlever toutes les tiges (elles peuvent contenir des moisissures indésirables), peser avec précision et enlever les poivrons mous, décolorés ou moisis. Chaque poivre doit être ferme et sans défaut."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les chiles sont brillants et fermes, les tiges sont coupées, l'ail pelé, le sel est précisément mesuré à 3%. Tout est prêt à être emballé dans le pot.",
+            "action": "Procéder à la fabrication de la saumure et à l'emballage du bateau."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les Chiliens sont coupés en deux ou coupés pour la vitesse — ce n'est pas mal, mais change la texture de la sauce finale.",
+            "action": "Tout ou moitié, les deux travaux. Les poivrons entiers prennent un peu plus de temps à fermenter; la moitié est plus rapide mais peut produire une sauce légèrement plus rugueuse après mélange."
+          }
+        ]
+      },
+      "feelCue": "Une cayenne fraîche devrait se casser proprement quand elle est courbée double et se sentir turgité, sans donner. Tout chile qui se plie sans craquer ou qui se sent creux a perdu de l'humidité et peut contenir des moisissures de surface — jetez - le."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saumure et emballage",
+      "inputs": [
+        "measured_ingredients",
+        "ing_05"
+      ],
+      "outputState": "packed_ferment",
+      "instructions": "Dissoudre complètement le sel pesé dans l'eau filtrée pour faire la saumure — remuer pendant une minute pour s'assurer que chaque grain est dissous. Emballez fermement les piments et l'ail dans un pot à large bouche propre, les poussant fermement pour laisser le moins d'espace possible. Verser la saumure sur les chiles jusqu'à ce qu'ils soient complètement submergés, laissant 3 à 4 cm d'espace de tête. Peser les chiles sous la surface de la saumure en utilisant un poids de fermentation, un petit sac à fermeture éclair rempli de saumure ou une feuille de chou pliée à plat. Tout chile exposé à l'air au-dessus de la surface de la saumure se moulera. Scellez avec un couvercle ou un sas.",
+      "visualCue": {
+        "primaryTarget": "Un pot serré de chiles rouges vifs entièrement immergés dans une saumure claire, légèrement salée, avec un poids les tenant sous la surface. La saumure devrait couvrir tout de 1 cm au moins.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Chilis flottant au-dessus de la saumure, exposés à l'air, sans poids les laissant submergés.",
+            "action": "Ajoutez immédiatement un poids — un pot rempli d'eau, un sac scellé de saumure ou un coin de légumes parés. Les chiles exposés développeront la moisissure de surface dans les 2 jours."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les chiles entièrement immergés, jarres bien emballés, espace tête approprié. La saumure est claire et sent le sel et le chile frais. Le pot est couvert mais non hermétiquement scellé.",
+            "action": "Étiquette avec la date et conserver à température ambiante, de 18 à 24°C, hors du soleil direct."
+          },
+          {
+            "state": "Overdone",
+            "description": "La saumure ne peut pas circuler, ni être complètement étanche sans sa saumure.",
+            "action": "Enlevez le couvercle pour que le gaz puisse s'échapper, ou ajoutez un sas. Un pot complètement scellé va augmenter la pression à mesure que la fermentation produit du CO2 — au minimum il va pulvériser la saumure; au pire un pot de verre peut craquer."
+          }
+        ]
+      },
+      "feelCue": "Après l'emballage, appuyez sur les piments à l'arrière d'une cuillère — la saumure devrait lever et couvrir les poivrons comprimés. Cette poussée hydraulique confirme un liquide adéquat pour le ferment complet."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ferment",
+      "inputs": [
+        "packed_ferment"
+      ],
+      "outputState": "fermented_peppers",
+      "instructions": "Ferment à température ambiante, de 18 à 24°C, pendant 10 à 14 jours. Au cours des 2 à 3 premiers jours, la saumure deviendra nuageuse et pâle au fur et à mesure que les lactobactéries se multiplient. Vous pouvez voir de petites bulles s'accrocher aux chiles ou se lever à travers la saumure. Goûtez la saumure tous les jours à partir du jour 5 : elle devrait progressivement passer de salé à agréablement aigre et tannant. Les chiles vont se faner de rouge vif à un rouge brique plus terne que les pigments changent. Vérifiez chaque jour la levure de kahm de surface (un film blanc plat sur la surface de la saumure) – c'est inoffensif; écrasez-la avec une cuillère. Tout moule flou, relevé ou coloré signifie jeter tout le lot.",
+      "visualCue": {
+        "primaryTarget": "Saumure blanche nuageuse avec de petites bulles montant à travers elle, des chiles rouges briques qui ont légèrement adouci, et un arôme fermenté tanné remplaçant la chaleur vive crue de chiles frais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 5 jours, la saumure est encore claire, à peine nuageuse, et n'a qu'un goût salé avec peu d'aurore. Très peu de bulles visibles.",
+            "action": "Déplacez le pot quelque part plus chaud (23 à 26°C). Les ferments refroidissants se situent au-dessous de 18°C. Donnez-lui 2 jours de plus et goûtez encore."
+          },
+          {
+            "state": "Perfect",
+            "description": "Brine blanc laiteux et aigre-tange, chiles rouge brique et donnant quand pressé, le pot entier sentant un ferment funky, aigre, à base de plantes. La saveur est complexe: chaleur à l'avant, aigre au milieu du palais, finition salée.",
+            "action": "Retirez et réservez toute la saumure, puis mélangez les chiles fermentés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après 21 jours ou plus, les chiles sont très doux et la saumure est agressivement aigre avec une acidité plate d'une note qui a plus un goût de vinaigre bon marché qu'un ferment complexe.",
+            "action": "Toujours comestible — mélange et goût. Couper la netteté dans l'étape de mélange avec une pincée de sucre ou une bruine d'huile d'olive."
+          }
+        ]
+      },
+      "feelCue": "Pressez un chile entièrement fermenté à travers le verre (si dans un bocal) ou à travers le couvercle — il devrait donner nettement, se sentir moins ferme que quand il est entré. Appuyez sur un chile avec un doigt propre: il doit donner doucement, comme un raisin très mûr, ne pas être musclé ou désintégré."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mélange",
+      "inputs": [
+        "fermented_peppers"
+      ],
+      "outputState": "finished_hot_sauce",
+      "instructions": "Égoutter les chiles fermentés et l'ail dans un bol, en réservant TOUS la saumure — c'est le cœur lactique de la sauce. Transférer les chiles et l'ail dans un mélangeur et ajouter suffisamment de la saumure réservée pour se fondre en douceur, en commençant par la moitié et en ajoutant plus jusqu'à ce que vous atteignez votre consistance préférée. Mélanger en haut pendant 2 minutes complètes jusqu'à ce qu'il soit complètement lisse. Goûtez et ajustez : ajoutez plus de saumure pour plus de tang et de sel, ou une éclaboussure d'eau douce pour la moeller. Pour une sauce lisse classique de style Louisiane, filtrez à travers un tamis fin, pressez les solides; pour une sauce plus épaisse, laissez sans entraînement. Bouteille dans des pots propres ou presser les bouteilles. La sauce se conserve au réfrigérateur pendant 6 mois et continue à se développer lentement.",
+      "visualCue": {
+        "primaryTarget": "Une sauce écarlate lisse, rouge brique à vif avec une consistance versable, sentant simultanément des chiles frais, de l'ail lactique et de l'ail – vif et vif, non plat.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est gritty et chunky, pas complètement mélangée, avec des graines de chile visibles et des fragments de peau flottant dans la saumure aqueuse.",
+            "action": "Mélanger plus longtemps à haute vitesse. Ajouter un peu plus de saumure pour aider les lames à s'engager si le mélange est trop épais."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, profondément rouge, versable mais pas aqueuse. La chaleur frappe l'avant de la bouche, l'auresse suit dans le palate moyen, et une longueur salée et ailky porte à travers la finale. Il est vivant et stratifié.",
+            "action": "Bouteille immédiatement. La sauce est prête à l'emploi; elle va se fondre et s'approfondir au cours des 2 premières semaines au réfrigérateur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est si fine et aqueuse qu'elle coule comme de l'eau colorée de la cuillère, ou si épaisse et souillée qu'elle est plus pâteuse que la sauce.",
+            "action": "S'il est trop mince : enfoncer et réduire brièvement dans une casserole à feu doux, fouetter, jusqu'à ce qu'il enrobe une cuillère. Si trop épais : mélanger plus de saumure ou d'eau 1 cuillère à soupe à la fois."
+          }
+        ]
+      },
+      "feelCue": "La sauce finie doit s'accrocher à l'arrière d'une cuillère et tomber dans une feuille lente et uniforme — ne pas couler dans les gouttes (trop minces) ou s'asseoir dans un monticule (trop épaisse). Goûtez-le : la chaleur devrait se construire plus de 30 secondes au lieu d'épiler et de s'estomper immédiatement, ce qui est la marque de la complexité dérivée de la fermentation."
+    }
+  ]
 };

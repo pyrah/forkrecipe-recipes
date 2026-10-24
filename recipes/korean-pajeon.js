@@ -1,100 +1,235 @@
 export default {
-  repoId: "master_korean_pajeon_001",
-  parentRepoId: null,
-  slug: "korean-pajeon",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Korean Pajeon (Scallion Pancake)",
-  description: "A wide, flat pancake of rice flour batter loaded with bundles of whole scallions, fried in a generous pool of oil until the underside is a shatteringly crisp lacework of golden crust and the interior is chewy, savoury, and yielding.",
-  cuisine: "Korean",
-  culture: "Korean",
-  category: "vegetables",
-  tags: ["vegetarian", "korean", "pancake", "scallion", "crispy", "rice-flour"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "35 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 0, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",     name: "Rice flour",                           ratioValue: 60,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Structure",  name: "Plain wheat flour (all-purpose)",      ratioValue: 40,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",     name: "Ice-cold water",                       ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Binder",     name: "Egg",                                  ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Structure",  name: "Scallions (green onions), whole or halved lengthwise", ratioValue: 60, defaultUnit: "parts", substitutions: ["garlic chives"] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine salt",                            ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",        name: "Neutral oil (vegetable or rice bran)", ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Acid",       name: "Soy sauce, rice vinegar, sesame oil, chilli flakes (dipping sauce)", ratioValue: 15, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_korean_pajeon_001",
+  "parentRepoId": null,
+  "slug": "korean-pajeon",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Pajeon coréen",
+  "description": "Un large pancake plat de pâte de farine de riz chargé de paquets d'écailles entières, frit dans une généreuse piscine d'huile jusqu'à ce que le dessous soit une dentelle effroyablement croustillante de croûte dorée et l'intérieur est mâché, salé et donnant.",
+  "cuisine": "Coréen",
+  "culture": "Coréen",
+  "category": "vegetables",
+  "tags": [
+    "végétarien",
+    "coréen",
+    "Crêpe",
+    "scalpel",
+    "croustillant",
+    "farine de riz"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "35 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_06"],
-      outputState: "pajeon_batter",
-      instructions: "Whisk rice flour, all-purpose flour, and salt in a bowl. Add the egg and ice-cold water. Whisk until just combined — a few small lumps are fine. The batter should be thinner than pancake batter, closer to heavy cream in consistency. Cold water is essential: it prevents the glutinous rice flour from becoming gummy.",
-      visualCue: {
-        primaryTarget: "The batter in the bowl",
-        spectrum: [
-          { state: "Underdone", description: "Flour pockets are still dry and the egg is not fully incorporated — the batter will cook unevenly.", action: "Whisk until the batter is uniformly pale and fluid with no dry patches." },
-          { state: "Perfect",   description: "A smooth, fluid, pale-white batter that pours easily from the bowl. A few very small lumps are acceptable — the batter should flow and pool immediately when poured, not plop.", action: "Rest in the refrigerator while you prepare the scallions." },
-          { state: "Overdone",  description: "The batter has thickened to a paste from over-whisking, which developed the gluten and activated the rice starch. It drops in thick ribbons.", action: "Thin with a tablespoon of ice water and stir gently." },
-        ],
-      },
-      feelCue: "Dip two fingers in and lift them — the batter should coat thinly and run off in a steady, thin stream, not hang in thick drops.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Farine de riz",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["pajeon_batter", "ing_05"],
-      outputState: "loaded_batter",
-      instructions: "Add the whole scallions to the batter and fold to coat. For a well-structured pajeon, lay the scallions parallel to each other rather than scattering them randomly — this creates the characteristic striped cross-section when cut. The scallion-to-batter ratio should feel more vegetable than batter: you want the scallions to be the star, barely held together by the batter.",
-      visualCue: {
-        primaryTarget: "The scallion-to-batter ratio",
-        spectrum: [
-          { state: "Underdone", description: "More batter than scallion — the pancake will be thick and doughy, more bread than pajeon.", action: "Add more scallions; cut a few extra and fold them in." },
-          { state: "Perfect",   description: "The scallions are densely packed and the batter barely coats them — you can see scallion through the batter layer when the mixture is spread in the pan.", action: "Pour immediately into a hot oiled pan." },
-          { state: "Overdone",  description: "Not applicable — more scallion is always fine here. Adjust batter if it seems sparse.", action: "Add a small splash more batter to ensure structural integrity." },
-        ],
-      },
-      feelCue: "Tilt the bowl — the mass should move slowly and reluctantly, the scallions binding against each other rather than floating freely in batter.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Farine de blé ordinaire (tout usage)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["loaded_batter", "ing_07"],
-      outputState: "finished_pajeon",
-      instructions: "Heat a generous amount of oil in a wide, heavy skillet (24–26 cm) over medium-high until shimmering. Pour in the scallion batter and spread quickly with a spatula into a round of even thickness — about 7 mm. Cook without touching for 4–5 minutes. Peek at the edge: when the underside is deeply golden, flip using a plate if needed. Fry the second side 3–4 minutes, pressing gently with the spatula for full contact. The pancake should be audibly sizzling the whole time.",
-      visualCue: {
-        primaryTarget: "The underside crust when flipped",
-        spectrum: [
-          { state: "Underdone", description: "The underside is pale gold and still soft — it tears when you try to flip. The centre of the pancake is visibly wet and raw.", action: "Return flat-side down and cook 2 more minutes. The crust must set before the flip." },
-          { state: "Perfect",   description: "A deep amber-to-bronze crust with a lacy, irregular surface where batter seeped between scallion stalks and crisped separately. The edges are deeply coloured and audibly crunchy when tapped with a fingernail. The centre holds together as a single, cohesive pancake.", action: "Fry the second side and cut into wedges." },
-          { state: "Overdone",  description: "The crust has gone past amber to dark brown, with the batter around the scallions beginning to char — acrid rather than sweet.", action: "Flip immediately and reduce the heat for the second side." },
-        ],
-      },
-      feelCue: "Press the centre of the pancake with a spatula — it should feel solid and spring-resistant, not soft and yielding. The edges should be audibly crackling against the oil.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["finished_pajeon", "ing_08"],
-      outputState: "plated_pajeon",
-      instructions: "Whisk together soy sauce, rice vinegar, sesame oil, and a pinch of chilli flakes into a sharp, savoury dipping sauce. Cut the pajeon into wedges or squares with kitchen shears or a sharp knife. Serve immediately — the crust softens within minutes. The dipping sauce should be served cold in a small bowl alongside.",
-      visualCue: {
-        primaryTarget: "The cut cross-section of the pajeon",
-        spectrum: [
-          { state: "Underdone", description: "The interior is white, raw, and wet-looking — the batter hasn't set through.", action: "Return the pieces to the pan, cut side down, for 2 minutes to cook the interior." },
-          { state: "Perfect",   description: "The cross-section shows parallel lines of bright green scallion running through a thin matrix of cream-coloured cooked batter. The outer crust is visibly darker and crisper than the interior. A light steam rises from the cut.", action: "Serve within 5 minutes while the crust is at its peak." },
-          { state: "Overdone",  description: "The scallions inside are army-green and the batter is very dark — the pancake was cooked too long or at too high a temperature.", action: "Serve anyway; the flavour of slightly caramelised scallion is not unpleasant." },
-        ],
-      },
-      feelCue: "The base of a properly fried pajeon taps back like a drum — hollow and resonant, not muffled and soft. That sound means the crust has truly set.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Œuf",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Structure",
+      "name": "Échalons (oignons verts), entiers ou demi-longueur",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ciboulette à l'ail"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile neutre (fourn de riz ou de légumes)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "sauce soja, vinaigre de riz, huile de sésame, flocons de piment (sauce à tremper)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "pajeon_batter",
+      "instructions": "fouetter la farine de riz, la farine tout usage et le sel dans un bol. Ajouter l'œuf et l'eau froide. Whisk jusqu'à ce qu'il soit simplement combiné — quelques petites boules sont bonnes. La pâte doit être plus mince que la pâte à crêpes, plus proche de la crème lourde en consistance. L'eau froide est essentielle : elle empêche la farine de riz glutineuse de devenir gommée.",
+      "visualCue": {
+        "primaryTarget": "La pâte dans le bol",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les poches de farine sont encore sèches et l'œuf n'est pas entièrement incorporé — la pâte cuit de façon inégale.",
+            "action": "fouetter jusqu'à ce que la pâte soit uniformément pâle et fluide sans taches sèches."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte lisse, fluide et blanc pâle qui coule facilement du bol. Quelques petites bosses sont acceptables: la pâte doit s'écouler et s'accumuler immédiatement lorsqu'elle est versée, et non pas la pelure.",
+            "action": "Reposez-vous au réfrigérateur pendant que vous préparez les oignons."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte s'est épaissie jusqu'à une pâte provenant du sursaut, qui a développé le gluten et activé l'amidon de riz. Il tombe dans des rubans épais.",
+            "action": "Finir avec une cuillère à soupe d'eau glacée et remuer doucement."
+          }
+        ]
+      },
+      "feelCue": "Plongez deux doigts et soulevez - les: la pâte doit être mince et s'écouler dans un cours d'eau stable et mince, ne pas accrocher dans des gouttes épaisses."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "pajeon_batter",
+        "ing_05"
+      ],
+      "outputState": "loaded_batter",
+      "instructions": "Ajouter les pétoncles entiers à la pâte et plier pour enrober. Pour un pajeon bien structuré, posez les pétoncles parallèles l'un à l'autre plutôt que de les disperser au hasard, ce qui crée la section transversale caractéristique rayée lors de la coupe. Le rapport écailles-à-battre devrait sentir plus de légumes que de pâte: vous voulez que les écailles soient l'étoile, à peine tenue ensemble par la pâte.",
+      "visualCue": {
+        "primaryTarget": "Le rapport entre le pétoncle et le battement",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Plus de pâte que de pétoncle: la crêpe sera épaisse et pâteuse, plus de pain que le pajeon.",
+            "action": "Ajouter plus de pétoncles; couper quelques extras et les plier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pétoncles sont densément emballés et la pâte les enrobe à peine — on peut voir du pétoncle à travers la couche de pâte lorsque le mélange est répandu dans la poêle.",
+            "action": "Verser immédiatement dans une poêle huilée chaude."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sans objet — plus de pétoncle est toujours bien ici. Réglez la pâte si elle semble clairsemée.",
+            "action": "Ajouter une petite éclaboussure plus de pâte pour assurer l'intégrité structurelle."
+          }
+        ]
+      },
+      "feelCue": "Inclinez le bol — la masse doit se déplacer lentement et à contrecœur, les pétoncles se liant l'un contre l'autre plutôt que de flotter librement en pâte."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "loaded_batter",
+        "ing_07"
+      ],
+      "outputState": "finished_pajeon",
+      "instructions": "Chauffer une quantité généreuse d'huile dans une poêle large et lourde (24–26 cm) sur une poêle de hauteur moyenne jusqu'à ce qu'elle mijote. Verser la pâte à pétoncle et la répartir rapidement avec une spatule dans un rond d'épaisseur égale — environ 7 mm. Cuire sans toucher pendant 4-5 minutes. Peignez au bord : lorsque la face inférieure est profondément dorée, retournez à l'aide d'une assiette si nécessaire. Faire frire le deuxième côté 3-4 minutes, en appuyant doucement avec la spatule pour un contact complet. Le pancake devrait être audiblement étourdissant tout le temps.",
+      "visualCue": {
+        "primaryTarget": "La croûte inférieure lorsqu'elle est retournée",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le dessous est d'or pâle et encore doux — il déchire quand vous essayez de retourner. Le centre du crêpe est visiblement humide et cru.",
+            "action": "Retour à plat et cuire 2 minutes de plus. La croûte doit être mise avant le flip."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte d'ambre à bronze profonde avec une surface lacy et irrégulière où la pâte s'est infiltrée entre les tiges de pétoncle et broyée séparément. Les bords sont profondément colorés et audiquement croquants lorsqu'ils sont tapés avec un ongle. Le centre se tient ensemble comme un seul pancake cohésif.",
+            "action": "Faire frire le deuxième côté et couper en quartiers."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte a passé l'ambre au brun foncé, avec la pâte autour des pétoncles commençant à l'omble — acride plutôt que doux.",
+            "action": "Dépliez immédiatement et réduisez la chaleur pour le second côté."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le centre de la crêpe avec une spatule — elle doit se sentir solide et résistante au ressort, non molle et productive. Les bords doivent se fissurer audiquement contre l'huile."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "finished_pajeon",
+        "ing_08"
+      ],
+      "outputState": "plated_pajeon",
+      "instructions": "Mélanger la sauce soja, le vinaigre de riz, l'huile de sésame et une pincée de piment flocons dans une sauce piquante et salée. Couper le pajeon en coins ou carrés avec des cisailles de cuisine ou un couteau tranchant. Servir immédiatement — la croûte ramollit en quelques minutes. La sauce à tremper doit être servie froidement dans un petit bol à côté.",
+      "visualCue": {
+        "primaryTarget": "La coupe transversale du pajeon",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'intérieur est blanc, cru et humide — la pâte n'a pas traversé.",
+            "action": "Retourner les morceaux dans la poêle, couper le côté vers le bas, pendant 2 minutes pour cuire l'intérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "La coupe transversale montre des lignes parallèles de pétoncle vert vif traversant une mince matrice de pâte cuite de couleur crème. La croûte extérieure est visiblement plus foncée et plus croquante que l'intérieur. Une légère vapeur s'élève de la coupe.",
+            "action": "Servir en 5 minutes pendant que la croûte est à son sommet."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pétoncles à l'intérieur sont vert-armée et la pâte est très sombre — le crêpe a été cuit trop longtemps ou à une température trop élevée.",
+            "action": "Servir de toute façon ; le goût de l'échon légèrement caramélisé n'est pas désagréable."
+          }
+        ]
+      },
+      "feelCue": "La base d'un pajeon bien frit tape comme un tambour — creux et résonant, non étouffé et doux. Ce son signifie que la croûte est vraiment en place."
+    }
+  ]
 };

@@ -1,106 +1,269 @@
 export default {
-  repoId: "fork_french_mornay_001",
-  parentRepoId: "master_french_bechamel_001",
-  slug: "mornay",
-  parentSlug: "bechamel",
-  author: "ForkRecipe Kitchen",
-  title: "Mornay Sauce",
-  description: "Béchamel's richest child: the velvet base melted through with Gruyère and Parmigiano and bound glossy with an egg yolk. This is the sauce under a croque-monsieur's bronzed lid and inside every great gratin.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "sauces",
-  tags: ["sauce", "french", "cheese", "gratin", "mother-sauce-derivative"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2025-06-09",
-  updatedAt: "2025-06-09",
-  forkNote: "Béchamel finished with Gruyère and Parmesan, enriched with an egg yolk — the cheese sauce of gratins and croque-monsieur.",
-  changes: {
-    ingredientsAdded: 3,
-    ingredientsRemoved: 0,
-    ingredientsModified: 0,
-    stepsAdded: 1,
-    stepsRemoved: 0,
-    stepsModified: 1,
+  "repoId": "fork_french_mornay_001",
+  "parentRepoId": "master_french_bechamel_001",
+  "slug": "mornay",
+  "parentSlug": "bechamel",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Mornay",
+  "description": "L'enfant le plus riche de Béchamel : la base de velours fondue avec Gruyère et Parmigiano et liée brillante avec un jaune d'œuf. C'est la sauce sous le couvercle bronzé d'un croque-monsieur et dans chaque grand gratin.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "fromage",
+    "Gratin",
+    "mère-sauce-dérivée"
+  ],
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-06-09",
+  "updatedAt": "2025-06-09",
+  "forkNote": "Béchamel fini avec Gruyère et Parmesan, enrichi d'un jaune d'œuf – la sauce au fromage de gratins et croque-monsieur.",
+  "changes": {
+    "ingredientsAdded": 3,
+    "ingredientsRemoved": 0,
+    "ingredientsModified": 0,
+    "stepsAdded": 1,
+    "stepsRemoved": 0,
+    "stepsModified": 1
   },
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",      name: "Whole milk (warmed)",            ratioValue: 10,  defaultUnit: "parts", substitutions: ["2% milk", "half-and-half for richer sauce"] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter",                ratioValue: 1,   defaultUnit: "part",  substitutions: ["clarified butter"] },
-    { ingId: "ing_03", role: "Structure",  name: "All-purpose flour",              ratioValue: 1,   defaultUnit: "part",  substitutions: ["Wondra for a lump-proof sauce"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                  ratioValue: 0.2, defaultUnit: "part",  substitutions: ["kosher salt"] },
-    { ingId: "ing_05", role: "Spice",      name: "Freshly grated nutmeg",          ratioValue: 0.02,defaultUnit: "part",  substitutions: ["a pre-grated pinch, in a pinch"] },
-    { ingId: "ing_06", role: "Spice",      name: "White pepper",                   ratioValue: 0.04,defaultUnit: "part",  substitutions: ["black pepper if you don't mind the specks"] },
-    { ingId: "ing_07", role: "Dairy",      name: "Gruyère (grated)",               ratioValue: 3,   defaultUnit: "parts", substitutions: ["Comté", "Emmental"] },
-    { ingId: "ing_08", role: "Glutamate",  name: "Parmigiano-Reggiano (grated)",   ratioValue: 1,   defaultUnit: "part",  substitutions: ["Grana Padano", "Pecorino for a sharper edge"] },
-    { ingId: "ing_09", role: "Binder",     name: "Egg yolk",                       ratioValue: 0.5, defaultUnit: "part",  substitutions: ["omit for a lighter, less glossy sauce"] },
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
+    {
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Lait entier (chauffé)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "2% lait",
+        "moitié-moitié pour une sauce plus riche"
+      ]
+    },
+    {
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "beurre clarifié"
+      ]
+    },
+    {
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "Wondera pour une sauce à l'épreuve des grumeaux"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.2,
+      "defaultUnit": "part",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Noix de muscade fraîchement râpée",
+      "ratioValue": 0.02,
+      "defaultUnit": "part",
+      "substitutions": [
+        "une pincée pré-gérée, dans une pincée"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poivre blanc",
+      "ratioValue": 0.04,
+      "defaultUnit": "part",
+      "substitutions": [
+        "poivre noir si ça ne vous dérange pas les taches"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Gruyère (gré)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Comté",
+        "Emmental"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Glutamate",
+      "name": "Parmigiano-Reggiano (grâce)",
+      "ratioValue": 1,
+      "defaultUnit": "part",
+      "substitutions": [
+        "Grana Padano",
+        "Pecorino pour un bord plus net"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Binder",
+      "name": "Jaune d'œuf",
+      "ratioValue": 0.5,
+      "defaultUnit": "part",
+      "substitutions": [
+        "omettre pour une sauce plus légère et moins brillante"
+      ]
+    }
   ],
-  processNodes: [
+  "processNodes": [
     {
-      nodeId: "step_1", action: "Cook the roux",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "white_roux",
-      instructions: "Melt the butter over medium-low heat until it foams but does not brown. Whisk in the flour all at once and cook, stirring constantly, for 2-3 minutes to cook out the raw-flour taste while keeping the roux pale. Keep it white — a Mornay should taste of cheese, not toasted flour.",
-      visualCue: {
-        primaryTarget: "A smooth, pale paste the color of wet sand, loosening as it cooks and smelling faintly of pie crust.",
-        spectrum: [
-          { state: "Underdone", description: "The paste still smells raw and floury, with no aroma rising from the pan.", action: "Keep stirring over the heat another minute to cook off the raw smell." },
-          { state: "Perfect",   description: "Loose and gently bubbling, the color of bone, smelling of warm shortcrust. It moves like lava under the whisk.", action: "It is ready for the milk." },
-          { state: "Overdone",  description: "Tanned to blond and smelling nutty.", action: "Start over for a clean cheese flavor — a toasted roux muddies the Gruyère." },
-        ],
+      "nodeId": "step_1",
+      "action": "Cuire le roux",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "white_roux",
+      "instructions": "Faire fondre le beurre à feu moyen-doux jusqu'à ce qu'il mousse mais ne brunisse pas. fouetter la farine en même temps et cuire en remuant constamment, pendant 2-3 minutes pour faire cuire le goût de la farine crue tout en gardant le roux pâle. Gardez-le blanc — un Mornay devrait goûter du fromage, pas de la farine grillée.",
+      "visualCue": {
+        "primaryTarget": "Une pâte lisse et pâle de la couleur du sable humide, desserrant comme il cuit et sentant faiblement la croûte de tarte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte sent toujours cru et farineux, sans arôme de la poêle.",
+            "action": "Continuez à remuer sur le feu encore une minute pour faire cuire l'odeur crue."
+          },
+          {
+            "state": "Perfect",
+            "description": "Plongée et légèrement bouillonnante, la couleur de l'os, odeur de croûte courte chaude. Ça bouge comme de la lave sous le fouet.",
+            "action": "Il est prêt pour le lait."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tanné à blond et sentant la noix.",
+            "action": "Recommencer pour une saveur de fromage propre – un roux grillé boueux le Gruyère."
+          }
+        ]
       },
-      feelCue: "The roux drags against the whisk like thick batter, then relaxes. It hisses softly and should never crackle.",
+      "feelCue": "Le roux traîne contre le fouet comme une pâte épaisse, puis se détend. Il siffle doucement et ne devrait jamais craquer."
     },
     {
-      nodeId: "step_2", action: "Incorporate",
-      inputs: ["white_roux", "ing_01"],
-      outputState: "loose_bechamel",
-      instructions: "Stream in the warm milk, whisking hard and constantly — the first third slowly to build a smooth paste, then the rest in a steady pour. Constant whisking is what keeps it lump-free.",
-      visualCue: {
-        primaryTarget: "A thin, uniform, lump-free liquid the color of cream, just beginning to steam, with the whisk leaving fading trails.",
-        spectrum: [
-          { state: "Underdone", description: "Lumps of roux bob in thin milk; the sauce looks grainy and broken.", action: "Whisk hard to break them up or pass through a fine sieve before continuing." },
-          { state: "Perfect",   description: "Completely smooth and pourable like heavy cream, with a faint sheen. Whisk trails close slowly.", action: "Bring to a gentle simmer to thicken." },
-          { state: "Overdone",  description: "Milk added too fast and hot has scorched the bottom, flecking the sauce brown.", action: "Pour into a clean pan, leaving the scorched layer behind." },
-        ],
+      "nodeId": "step_2",
+      "action": "Société",
+      "inputs": [
+        "white_roux",
+        "ing_01"
+      ],
+      "outputState": "loose_bechamel",
+      "instructions": "Courir dans le lait chaud, fouettant dur et constamment — le premier tiers lentement pour construire une pâte lisse, puis le reste dans un verser stable. Le sifflement constant est ce qui le garde libre.",
+      "visualCue": {
+        "primaryTarget": "Un liquide mince, uniforme, sans morceaux de la couleur de la crème, juste commencer à vapeur, avec le fouet laissant des sentiers de décoloration.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Lumps de roux bob dans le lait mince; la sauce semble granuleuse et cassée.",
+            "action": "Whisk different pour les briser ou passer par un tamis fin avant de continuer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse et versable comme une crème lourde, avec un léger éclat. Les sentiers de fouet se ferment lentement.",
+            "action": "Porter à un doux mijoter pour épaissir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait ajouté trop vite et chaud a brûlé le fond, flanquant la sauce brune.",
+            "action": "Verser dans une poêle propre, laissant la couche brûlée derrière."
+          }
+        ]
       },
-      feelCue: "Each splash of milk loosens the resistance under the whisk until the thick squelch of paste becomes a soft slosh.",
+      "feelCue": "Chaque éclaboussure de lait relâche la résistance sous le fouet jusqu'à ce que l'épais squuelch de pâte devienne un slosh doux."
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["loose_bechamel"],
-      outputState: "nappe_bechamel",
-      instructions: "Simmer gently 8-10 minutes, whisking often, until the sauce thickens to nappe consistency — thick enough to coat the back of a spoon. Build it slightly thicker than a plain béchamel; the cheese will loosen it later. Season lightly with salt, nutmeg, and white pepper, remembering the cheeses bring their own salt.",
-      visualCue: {
-        primaryTarget: "A glossy, thick sauce that coats the spoon; a finger drawn through leaves a clean channel that holds and does not flood back.",
-        spectrum: [
-          { state: "Underdone", description: "Thin and watery, running off the spoon as the channel closes instantly.", action: "Simmer longer to evaporate water and gelatinize the starch — it must be thick before cheese goes in." },
-          { state: "Perfect",   description: "Velvety and thick enough to nappe, falling from the whisk in a smooth ribbon, the salt restrained.", action: "Pull from the heat and let the bubbling stop before adding cheese." },
-          { state: "Overdone",  description: "Gluey and stiff, mounding like paste, the surface dull.", action: "Whisk in a splash of warm milk to bring back a pourable ribbon." },
-        ],
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "loose_bechamel"
+      ],
+      "outputState": "nappe_bechamel",
+      "instructions": "Laisser mijoter doucement de 8 à 10 minutes, fouettant souvent, jusqu'à ce que la sauce épaississe pour napper la consistance — assez épaisse pour enrober l'arrière d'une cuillère. Construisez-le légèrement plus épais qu'un béchamel uni; le fromage le desserrera plus tard. Assaisonner légèrement de sel, de muscade et de poivre blanc, en se rappelant que les fromages apportent leur propre sel.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse et brillante qui enveloppe la cuillère; un doigt tiré à travers laisse un canal propre qui tient et ne renverse pas.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mince et aqueuse, en courant de la cuillère lorsque le canal se ferme instantanément.",
+            "action": "Laisser mijoter plus longtemps pour évaporer l'eau et gélatiniser l'amidon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Velours et assez épais pour napper, tombant du fouet dans un ruban lisse, le sel retenu.",
+            "action": "Tirez du feu et laissez le bouillonnement s'arrêter avant d'ajouter du fromage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Collée et raide, collante comme de la pâte, la surface est terne.",
+            "action": "fouetter dans un jet de lait chaud pour ramener un ruban versable."
+          }
+        ]
       },
-      feelCue: "The whisk meets steady, even resistance; the sauce blurps lazily with slow, heavy bubbles and smells of sweet cooked milk.",
+      "feelCue": "Le fouet rencontre une résistance constante, même ; la sauce s'épanouit paresseusement avec des bulles lentes et lourdes et des odeurs de lait cuit sucré."
     },
     {
-      nodeId: "step_4", action: "Melt in the cheese",
-      inputs: ["nappe_bechamel", "ing_07", "ing_08", "ing_09", "ing_04"],
-      outputState: "finished_mornay",
-      instructions: "Off the heat — and this matters, because boiling cheese turns greasy and stringy — whisk in the Gruyère and Parmigiano a handful at a time until each melts. Temper the yolk: whisk a ladle of the warm sauce into the yolk, then whisk that back into the pot. The residual heat cooks and thickens the yolk without scrambling it. Adjust salt last.",
-      visualCue: {
-        primaryTarget: "A deeply glossy, lacquered sauce the color of pale straw that falls in a thick, satiny sheet — no oil slick on the surface, no strings trailing the whisk.",
-        spectrum: [
-          { state: "Underdone", description: "Grainy with undissolved cheese, or thin and pale because the yolk hasn't set; cheese clumps cling to the whisk.", action: "Whisk patiently off the heat; if it has cooled too much, return to the gentlest heat for seconds at a time until smooth." },
-          { state: "Perfect",   description: "Uniformly smooth, glossy, and thickened by the yolk — it sheets off the spoon and tastes of nutty Gruyère and savory Parmesan over the cream.", action: "Use immediately over gratins or croques, or hold warm with plastic pressed to the surface." },
-          { state: "Overdone",  description: "Broken and oily, with cheese fat pooling on top and stringy curds — the sauce was too hot, or it boiled.", action: "Pull off heat and whisk in a splash of cold milk to re-emulsify; whisk hard to pull it back together." },
-        ],
+      "nodeId": "step_4",
+      "action": "Faire fondre le fromage",
+      "inputs": [
+        "nappe_bechamel",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_04"
+      ],
+      "outputState": "finished_mornay",
+      "instructions": "Hors de la chaleur — et cela importe, parce que le fromage bouillant devient gras et à cordes — fouetter dans le Gruyère et Parmigiano une poignée à la fois jusqu'à ce que chaque fondu. Tempérer le jaune: fouetter une louche de la sauce tiède dans le jaune, puis fouetter dans le pot. La chaleur résiduelle fait cuire et épaissit le jaune sans le brouiller. Réglez le sel en dernier.",
+      "visualCue": {
+        "primaryTarget": "Une sauce laquée, très brillante, de la couleur de la paille pâle qui tombe dans une épaisse feuille satinée — pas de liquéfaction de l'huile à la surface, pas de ficelles traînant le fouet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Grainé avec du fromage non dissout, ou mince et pâle parce que le jaune n'a pas mis; le fromage s'accroche au fouet.",
+            "action": "Frottez patiemment la chaleur; si elle a trop refroidi, retournez à la chaleur la plus douce pendant quelques secondes à la fois jusqu'à ce qu'elle soit lisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lisse uniformément, brillant et épaissi par le jaune, il recouvre la cuillère et goûte de la noix Gruyère et du parmesan salé sur la crème.",
+            "action": "Utiliser immédiatement sur les gratins ou les croques, ou tenir au chaud avec du plastique pressé à la surface."
+          },
+          {
+            "state": "Overdone",
+            "description": "Broyé et huileux, avec de la graisse de fromage sur le dessus et des caillés à cordes — la sauce était trop chaude ou bouillie.",
+            "action": "Retirez la chaleur et fouettez dans une éclaboussure de lait froid pour réémulsionner; fouettez dur pour le ramener ensemble."
+          }
+        ]
       },
-      feelCue: "As the cheese melts the sauce turns heavier and silkier under the whisk and the aroma blooms — sweet, nutty, savory. It should pour like warm satin, never rubbery or weeping fat.",
-    },
-  ],
+      "feelCue": "Au fur et à mesure que le fromage fond, la sauce devient plus lourde et plus soyeuse sous le fouet et l'arôme fleurit — sucré, noisette, salé. Il doit verser comme du satin chaud, jamais caoutchouteux ou pleurer de graisse."
+    }
+  ]
 };

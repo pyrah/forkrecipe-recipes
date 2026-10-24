@@ -1,83 +1,211 @@
 export default {
-  repoId: "master_japanese_ramen_tare_001",
-  parentRepoId: null,
-  slug: "ramen-tare",
-  author: "ForkRecipe Kitchen",
-  title: "Shoyu Tare — Soy-Based Ramen Seasoning Concentrate",
-  description: "A dark, glossy concentrate of soy sauce, mirin, sake, and aromatics that is reduced to a syrupy, trembling intensity — just a tablespoon of it transforms a bowl of plain broth into a ramen with tidal depth. The kitchen smells like the bottom of a fermenting barrel after a sea storm.",
-  cuisine: "Japanese",
-  culture: "Ramen-ya culture, post-war Tokyo",
-  category: "condiments",
-  tags: ["japanese", "ramen", "tare", "soy", "condiment", "umami", "concentrate"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 5, sour: 1, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",     name: "Tamari soy sauce (or high-quality shoyu)",          ratioValue: 200, defaultUnit: "ml", substitutions: ["dark soy sauce blended 50:50 with light soy"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Mirin (hon-mirin, not mirin-flavored seasoning)",   ratioValue: 100, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_03", role: "Solvent",   name: "Sake (dry, drinking quality)",                      ratioValue: 100, defaultUnit: "ml", substitutions: ["dry Shaoxing wine"] },
-    { ingId: "ing_04", role: "Umami",     name: "Kombu, wiped clean",                                ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Umami",     name: "Dried shiitake mushrooms",                          ratioValue: 20,  defaultUnit: "g",  substitutions: ["dried porcini (2:1 substitute)"] },
-    { ingId: "ing_06", role: "Inosinate", name: "Katsuobushi (bonito flakes)",                       ratioValue: 20,  defaultUnit: "g",  substitutions: ["iriko (dried sardine) for stronger tare"] },
-    { ingId: "ing_07", role: "Allium",    name: "Green onion, green tops only",                      ratioValue: 30,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Ginger, sliced (unpeeled)",                         ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_japanese_ramen_tare_001",
+  "parentRepoId": null,
+  "slug": "ramen-tare",
+  "author": "ForkRecipe Kitchen",
+  "title": "Shoyu Tare — Concentré d'assaisonnement Ramen à base de soja",
+  "description": "Un concentré foncé et brillant de sauce de soja, de mirine, de saké et d'aromates qui est réduit à une intensité sirupeuse et tremblante — juste une cuillère à soupe de celui-ci transforme un bol de bouillon uni en ramen à la profondeur de marée. La cuisine sent le fond d'un baril de ferment après une tempête de mer.",
+  "cuisine": "Japonais",
+  "culture": "Culture Ramen-ya, Tokyo d'après-guerre",
+  "category": "condiments",
+  "tags": [
+    "Japonais",
+    "Ramen",
+    "tare",
+    "soja",
+    "condiment",
+    "umami",
+    "concentré"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 5,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Steep",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "cold_infused_tare",
-      instructions: "Combine the tamari, mirin, sake, kombu, and dried shiitake mushrooms in a glass jar or ceramic bowl. Do not heat yet. Cover and leave at room temperature for a minimum of 4 hours, ideally overnight in the refrigerator. Cold-infusion pulls glutamates (from kombu) and lentinan umami compounds (from shiitake) into the soy base without any heat-induced bitterness. The liquid will darken noticeably and the kombu will swell into a glossy, slippery sheet. The shiitake will absorb liquid and soften. The color should shift from dark brown to almost black with a reddish tint when held to the light. This cold extraction is the difference between a tare with flat salt and one with oceanic depth.",
-      visualCue: {
-        primaryTarget: "The liquid has deepened to near-black with a mahogany edge when backlit. Kombu has expanded to double its dry size, surface turning slightly gelatinous. Shiitake are fully rehydrated and fragrant.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is still thin and bright soy-brown. Kombu is barely swollen. Less than 2 hours of infusion.", action: "Cover and return to refrigerator for at least 2 more hours. Patience here is not optional." },
-          { state: "Perfect",   description: "Near-black liquid with reddish-brown edges. Kombu is plump and gelatinous. Shiitake are fully softened. Aroma is complex: soy, sea, earth.", action: "Proceed to cooking." },
-          { state: "Overdone",  description: "Kombu has become slimy and disintegrating after more than 24 hours at room temperature. Liquid has developed a slightly sour edge.", action: "Remove kombu immediately. The tare is still usable — the sourness will concentrate on reduction. Add 1 tsp sugar to compensate." },
-        ],
-      },
-      feelCue: "The infused liquid should have a faintly syrupy weight when you swirl the container — noticeably thicker than straight soy sauce. The kombu, when lifted, should feel like cold, supple leather.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "sauce de soja tamarie (ou shoyu de haute qualité)",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce de soja foncé mélangée 50:50 avec du soja clair"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["cold_infused_tare", "ing_06", "ing_07", "ing_08"],
-      outputState: "simmered_tare",
-      instructions: "Pour the entire infused mixture into a small saucepan. Add the katsuobushi, green onion tops, and sliced ginger. Bring to a gentle simmer over medium-low heat — you want a quiet, lazy bubble, not a rolling boil. Maintain this simmer for 20 minutes. A hard boil will drive off the delicate volatile aroma compounds that took hours to build during the cold infusion. During the simmer, the katsuobushi will add inosinate (IMP), which synergizes with the glutamate from the kombu to produce a combined umami effect far greater than either alone. The green onion and ginger add a clean, bright aromatic counterpoint to the fermented soy depth. You will see the surface become foamy with a light grey-brown foam — do not skim it aggressively. Light foam is not bitterness here; it is protein from the katsuobushi and contributes body.",
-      visualCue: {
-        primaryTarget: "A slow, quiet simmer with a light foam crown. The liquid has deepened further in color and reduced by about 15–20%. Aromatics are submerged and pale.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is still at the same volume as when you started. The katsuobushi is just beginning to hydrate. Too little simmer time.", action: "Continue simmering. The full 20 minutes is needed for the IMP extraction from the katsuobushi." },
-          { state: "Perfect",   description: "Reduced slightly with a slow bubble. Intense, complex aroma of smoked fish, soy, and caramel mirin. The liquid coats a spoon lightly.", action: "Remove from heat and allow to steep off-heat for 10 minutes before straining." },
-          { state: "Overdone",  description: "Reduced by more than 30%. Liquid is syrupy and very dark. Smells acrid and burnt-sweet.", action: "Add 50 ml of water and 50 ml of fresh soy sauce. Do not continue reducing — bottle and use as-is." },
-        ],
-      },
-      feelCue: "During the simmer, lean over the pot and inhale. The steam should hit you with a dense, almost overwhelming wave of umami — fermented, smoky, sweet. If you pull back instinctively, the tare is working.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Mirin (Hon-mirin, pas assaisonnement au mirin)",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Strain",
-      inputs: ["simmered_tare"],
-      outputState: "finished_tare",
-      instructions: "Remove the saucepan from heat and let the mixture steep off the burner for 10 minutes. The katsuobushi will continue releasing flavor into the cooling liquid. After resting, pass the entire contents through a fine-mesh sieve lined with a single layer of cheesecloth, pressing gently on the solids with the back of a spoon to extract all liquid without forcing bitter particulate through. Do not squeeze the cheesecloth — gravity is your friend here. The strained tare should be a concentrated, near-black syrup with a deep red hue when held to the light. Pour into a clean glass jar and cool completely before sealing. Stored in the refrigerator, tare keeps for 3 months and intensifies in complexity over time. Use 15–20 ml per 350 ml serving bowl of ramen broth, adjusting to taste. The tare should do the heavy lifting — your broth provides the body.",
-      visualCue: {
-        primaryTarget: "A glossy, near-black concentrate that moves like a light syrup when poured — not runny like water, not thick like molasses. When a drop hits a white plate, it spreads into a translucent reddish-brown halo.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid runs freely and has a flat, purely salty flavor without depth. Insufficient reduction.", action: "Return to a gentle simmer for 5 more minutes, then re-strain." },
-          { state: "Perfect",   description: "Slightly syrupy, glossy, almost black. Flavor is intensely savory, sweet, smoky, and oceanic. A small spoonful tastes too strong to eat alone — that is correct.", action: "Cool and bottle. Label with date." },
-          { state: "Overdone",  description: "Thick, sticky, and very dark. Tastes predominantly of sweet burnt sugar rather than savory umami.", action: "Thin with additional fresh soy sauce at a ratio of 1:1. Do not reduce further." },
-        ],
-      },
-      feelCue: "A finished tare coats the inside of a dry glass jar with a translucent film that clings rather than running off immediately. When you open the jar the next day, the aroma should expand into the room — deep, complex, slightly sweet, with a distant note of the sea.",
+      "ingId": "ing_03",
+      "role": "Solvent",
+      "name": "Gâteau (sèche, qualité de boisson)",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vin sec Shaoxing"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Kombu, nettoyé",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Champignons shiitake séchés",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "porcin séché (2:1 substitut)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Inosinate",
+      "name": "Katsuobushi (flacons debonito)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "iriko (sardine séchée) pour une tare plus forte"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Oignon vert, tops verts seulement",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Gingembre tranché (non pelé)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Streep",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "cold_infused_tare",
+      "instructions": "Mélanger les champignons tamari, mirin, saké, kombu et shiitake séchés dans un bocal en verre ou en céramique. Ne chauffez pas encore. Couvrir et laisser à température ambiante pendant au moins 4 heures, idéalement une nuit au réfrigérateur. L'infusion à froid attire les glutamates (du kombu) et les composés de l'umami lentin (du shiitake) dans la base du soja sans aucune amertume induite par la chaleur. Le liquide s'assombrira sensiblement et le kombu gonflera dans une feuille brillante et glissante. Le shiitake absorbera le liquide et ramollira. La couleur devrait passer de brun foncé à presque noir avec une teinte rougeâtre lorsqu'elle est maintenue à la lumière. Cette extraction à froid est la différence entre une tare au sel plat et une tare à profondeur océanique.",
+      "visualCue": {
+        "primaryTarget": "Le liquide s'est approfondi à presque noir avec un bord acajou lorsqu'il est rétroéclairé. Kombu a augmenté pour doubler sa taille sèche, la surface tournant légèrement gélatineux. Le shiitake est complètement réhydraté et parfumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore mince et brillant brun soja. Kombu est à peine gonflé. Moins de 2 heures de perfusion.",
+            "action": "Couvrir et retourner au réfrigérateur pendant au moins 2 heures supplémentaires. La patience ici n'est pas facultative."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide presque noir aux bords brun rougeâtre. Kombu est pluvieux et gélatineux. Le chiitake est complètement ramolli. Aroma est complexe: soja, mer, terre.",
+            "action": "Aller à la cuisine."
+          },
+          {
+            "state": "Overdone",
+            "description": "Kombu est devenu visqueux et désintégré après plus de 24 heures à température ambiante. Liquid a développé un bord légèrement aigre.",
+            "action": "Enlever immédiatement kombu. La tare est encore utilisable — l'aurore se concentrera sur la réduction. Ajouter 1 c. à thé de sucre pour compenser."
+          }
+        ]
+      },
+      "feelCue": "Le liquide infusé doit avoir un poids légèrement sirupeux lorsque vous tourbillonnez le contenant — nettement plus épais que la sauce de soja droite. Le kombu, lorsqu'il est levé, devrait se sentir comme du cuir froid et souple."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "cold_infused_tare",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "simmered_tare",
+      "instructions": "Verser le mélange entier dans une petite casserole. Ajouter le katsuobushi, le dessus d'oignon vert et le gingembre tranché. Portez à un doux mijoter à feu moyen-doux — vous voulez une bulle calme, paresseuse, pas un ébullition. Maintenez cette mijoter pendant 20 minutes. Un ébullition dur permettra de chasser les délicats composés arôme volatils qui ont pris des heures à construire pendant la perfusion froide. Pendant le mijotage, le katsuobushi ajoutera de l'inosinate (IMP), qui se synerge avec le glutamate du kombu pour produire un effet umami combiné beaucoup plus grand que l'un ou l'autre seul. L'oignon vert et le gingembre ajoutent un contrepoint aromatique propre à la profondeur fermentée du soja. Vous verrez la surface devenir mousseux avec une mousse gris-brun clair — ne la skim agressivement. La mousse légère n'est pas de l'amertume ici; elle est une protéine du katsuobushi et contribue au corps.",
+      "visualCue": {
+        "primaryTarget": "Une mijote lente et silencieuse avec une couronne en mousse légère. Le liquide s'est approfondi davantage en couleur et réduit d'environ 15 à 20 %. Les aromatiques sont submergés et pâles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est toujours au même volume que lorsque vous avez commencé. Le katsuobushi commence à peine à s'hydrater. Trop peu de temps.",
+            "action": "Continuez à mijoter. Les 20 minutes complètes sont nécessaires pour l'extraction de l'IMP du katsuobushi."
+          },
+          {
+            "state": "Perfect",
+            "description": "Réduit légèrement avec une bulle lente. Arôme intense et complexe de poisson fumé, de soja et de mirin de caramel. Le liquide enveloppe légèrement une cuillère.",
+            "action": "Retirer du feu et laisser tremper la chaleur pendant 10 minutes avant la déformation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Réduction de plus de 30%. Le liquide est sirupeux et très sombre. Ça sent l'acri et le sucre brûlé.",
+            "action": "Ajouter 50 ml d'eau et 50 ml de sauce de soja frais. Ne continuez pas à réduire — bouteille et utiliser comme tel."
+          }
+        ]
+      },
+      "feelCue": "Pendant la mijotez, penchez-vous sur le pot et inhalez. La vapeur devrait vous frapper avec une vague dense, presque écrasante d'umami — fermenté, fumé, doux. Si vous reculez instinctivement, la tare fonctionne."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "simmered_tare"
+      ],
+      "outputState": "finished_tare",
+      "instructions": "Retirer la casserole du feu et laisser tremper le mélange pendant 10 minutes. Le katsuobushi continuera à libérer la saveur dans le liquide de refroidissement. Après le repos, passer le contenu entier à travers un tamis à mailles fines doublé d'une seule couche de cheesewapp, presser doucement sur les solides avec le dos d'une cuillère pour extraire tout le liquide sans forcer les particules amères à travers. Ne pressez pas le cheesewet — la gravité est votre ami ici. La tare tendue doit être un sirop concentré, presque noir, avec une teinte rouge foncé lorsqu'elle est maintenue à la lumière. Verser dans un pot en verre propre et refroidir complètement avant de sceller. A conserver au réfrigérateur, la tare conserve 3 mois et s'intensifie dans le temps. Utiliser 15 à 20 ml par bol de 350 ml de bouillon ramen, en fonction du goût. La tare devrait faire le levage lourd — votre bouillon fournit le corps.",
+      "visualCue": {
+        "primaryTarget": "Un concentré glacé, presque noir, qui se déplace comme un sirop léger lorsqu'il est versé — pas comme de l'eau, pas comme de la mélasse. Lorsqu'une goutte frappe une plaque blanche, elle se propage dans un halo rouge-brun translucide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide fonctionne librement et a une saveur plate, purement salée sans profondeur. Réduction insuffisante.",
+            "action": "Retourner à une mijoter douce pendant 5 minutes de plus, puis reformer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un peu sirupeux, brillant, presque noir. L'arôme est intensément salé, doux, fumé et océanique. Une petite cuillère a un goût trop fort pour manger seule, c'est exact.",
+            "action": "Cool et bouteille. Étiquette avec date."
+          },
+          {
+            "state": "Overdone",
+            "description": "Épaisseur, collant et très sombre. Goûte principalement de sucre sucré brûlé plutôt que d'umami salé.",
+            "action": "Arroser de sauce de soja frais à un rapport de 1:1. Ne pas réduire davantage."
+          }
+        ]
+      },
+      "feelCue": "Une tare finie enveloppe l'intérieur d'un pot en verre sec d'un film translucide qui s'accroche plutôt que de s'enfuir immédiatement. Lorsque vous ouvrez le pot le lendemain, l'arôme doit s'étendre dans la pièce, profonde, complexe, légèrement sucrée, avec une note lointaine de la mer."
+    }
+  ]
 };

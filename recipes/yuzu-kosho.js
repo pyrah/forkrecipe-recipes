@@ -1,101 +1,204 @@
 export default {
-  repoId: "master_japanese_yuzu_kosho_001",
-  parentRepoId: null,
-  slug: "yuzu-kosho",
-  author: "ForkRecipe Kitchen",
-
-  title: "Yuzu Kosho",
-  description: "Yuzu zest and green chili ground together with salt and left to cure — a Kyushu condiment of almost impossible fragrance, equal parts floral, fiery, and saline, that transforms a simple bowl of noodles or a piece of grilled fish with a single small spoonful.",
-  cuisine: "Japanese",
-  culture: "Kyushu Japanese",
-  category: "condiments",
-
-  tags: ["yuzu", "japanese", "condiment", "chili", "fermented", "kyushu", "citrus"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "7 days 30 min",
-  ratioSystem: "parts",
-
-  stars: 980,
-  forks: 72,
-  contributors: 19,
-  license: "CC-BY-SA",
-  createdAt: "2024-11-25",
-  updatedAt: "2025-06-10",
-
-  flavorRadar: { sweet: 0, salty: 4, sour: 3, bitter: 2, umami: 1, heat: 4 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Citrus",    name: "Fresh yuzu zest (from 6–8 yuzu)",         ratioValue: 100, defaultUnit: "parts", substitutions: ["lemon zest + Meyer lemon zest (combined, less floral)"] },
-    { ingId: "ing_02", role: "Heat",      name: "Green Thai or serrano chilis (stemmed)",   ratioValue: 80,  defaultUnit: "parts", substitutions: ["red chilis (for red yuzu kosho)", "jalapeño (milder)"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fine sea salt (non-iodized)",              ratioValue: 25,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Acid",      name: "Fresh yuzu juice",                         ratioValue: 20,  defaultUnit: "parts", substitutions: ["fresh lemon juice"] },
+  "repoId": "master_japanese_yuzu_kosho_001",
+  "parentRepoId": null,
+  "slug": "yuzu-kosho",
+  "author": "ForkRecipe Kitchen",
+  "title": "Yuzu Kosho",
+  "description": "Yuzu zeste et chili vert moulu avec du sel et laissé pour guérir — un condiment Kyushu de presque impossible parfum, parties égales floral, feu et saline, qui transforme un bol simple de nouilles ou un morceau de poisson grillé avec une seule petite cuillère.",
+  "cuisine": "Japonais",
+  "culture": "Kyushu Japonais",
+  "category": "condiments",
+  "tags": [
+    "Yuzu",
+    "Japonais",
+    "condiment",
+    "Chili",
+    "fermenté",
+    "kyushu",
+    "agrumes"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "7 days 30 min",
+  "ratioSystem": "parts",
+  "stars": 980,
+  "forks": 72,
+  "contributors": 19,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-11-25",
+  "updatedAt": "2025-06-10",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 3,
+    "bitter": 2,
+    "umami": 1,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Zest",
-      inputs: ["ing_01"],
-      outputState: "yuzu_zest",
-      instructions: "Zest the yuzu fruit using a fine microplane grater, working carefully to collect only the colored outer layer and avoid the bitter white pith beneath. A single yuzu yields a relatively small amount of zest — approximately 1–2 teaspoons. The oils in fresh yuzu zest are extraordinarily volatile and fragrant; work quickly and cover the zest as soon as it is collected to preserve those aromatics. If yuzu is not available, a combination of Meyer lemon and grapefruit zest approximates it loosely, though the floral complexity is quite different.",
-      visualCue: {
-        primaryTarget: "Fine, bright yellow-green zest with a distinctly wet, oily appearance from the natural oils released by grating. Intensely fragrant.",
-        spectrum: [
-          { state: "Underdone", description: "Zest pieces are too large and the pith is visible in the mixture — white fragments mixed with yellow.", action: "Grate more finely, applying less pressure to the fruit so you take only the very surface." },
-          { state: "Perfect",   description: "Fine, uniformly yellow-green zest with a wet, oily sheen and an intensely floral, citrus fragrance. No white pith visible.", action: "Cover immediately and move to processing." },
-          { state: "Overdone",  description: "You have pressed the fruit repeatedly over the same section and white pith fragments are appearing in the zest.", action: "Pick out pith fragments with a toothpick, or rotate to a fresh section of fruit. Pith will make the finished yuzu kosho bitter." },
-        ],
-      },
-      feelCue: "The zest should coat your fingers in a faintly oily film that makes your skin smell like no other citrus — floral, almost herbal, with a complex top note that fades within seconds of leaving the skin.",
+      "ingId": "ing_01",
+      "role": "Citrus",
+      "name": "Zeste de yuzu frais (de 6 à 8 yuzu)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "zeste de citron + Zeste de citron Meyer (combiné, moins floral)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mince",
-      inputs: ["ing_02"],
-      outputState: "minced_chili",
-      instructions: "For a traditional yuzu kosho, use a suribachi (Japanese mortar) or, if unavailable, a small food processor. The chilis should be finely minced, retaining most of their seeds for heat. Remove the stem but leave seeds. The finer the mince, the more evenly the heat distributes through the finished paste. If using a knife, mince to an extremely fine, almost paste-like consistency — tiny fragments, not visible chunks.",
-      visualCue: {
-        primaryTarget: "A very fine, wet green mince — almost a paste — with seeds evenly distributed. No large chili pieces remaining.",
-        spectrum: [
-          { state: "Underdone", description: "Chili is still in visible chunks. Uneven mince means uneven heat in the final product.", action: "Continue mincing with a rocking knife motion, gathering and re-mincing until the texture is uniformly fine." },
-          { state: "Perfect",   description: "Fine, wet, almost paste-like mince with seeds throughout. Color is a vivid, bright green.", action: "Combine with zest and salt." },
-          { state: "Overdone",  description: "Chili is a smooth paste with seeds fully broken — some heat may have been lost from the capsaicin volatilizing.", action: "Proceed — the texture is smooth rather than slightly granular, but perfectly usable." },
-        ],
-      },
-      feelCue: "Mince the chili wearing gloves — at this fine a cut, the capsaicin is airborne and will sting eyes and skin. The smell should be a sharp, clean green-chili fragrance.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Vert Thai ou serrano chilis (pilosité)",
+      "ratioValue": 80,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chilis rouge (pour yuzu kosho rouge)",
+        "jalapeño (meilleur)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Pound",
-      inputs: ["yuzu_zest", "minced_chili", "ing_03", "ing_04"],
-      outputState: "yuzu_kosho_paste",
-      instructions: "Combine the yuzu zest, minced chili, and salt in a suribachi or small food processor. Add the yuzu juice. Grind or process until the mixture forms a cohesive, slightly rough paste — the salt draws moisture from both the zest and chili, binding the paste together. Taste: it should be intensely salty, fiercely hot, and vibrantly citrus-forward. Transfer to a small sterilized jar.",
-      visualCue: {
-        primaryTarget: "A bright green, cohesive paste — smooth but slightly textured — that holds its shape when scooped on a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is still loose and the elements haven't coalesced — zest and chili fragments are visible separately.", action: "Continue grinding or processing. The salt needs more time to draw moisture and bind the paste." },
-          { state: "Perfect",   description: "A bright green, uniform paste with a slightly granular texture. Holds on a spoon, smells intensely of yuzu and chili.", action: "Transfer to jar and cure." },
-          { state: "Overdone",  description: "Completely smooth paste with all texture lost and green color beginning to oxidize to olive-drab.", action: "Proceed — it will still taste excellent. Next time, use a mortar rather than a processor for better texture control." },
-        ],
-      },
-      feelCue: "The paste should feel wet and slightly sticky from the citrus oils and chili juice — like a very finely textured, very salty citrus jam that makes your tongue tingle before you even taste it.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (non iodé)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Cure",
-      inputs: ["yuzu_kosho_paste"],
-      outputState: "finished_yuzu_kosho",
-      instructions: "Seal the jar and refrigerate for a minimum of 3 days, ideally 7. During this time, the salt continues to draw moisture, the flavors meld and deepen, and the sharpness of raw chili softens to something more complex. The color will shift from vivid green to a more muted olive-green — this is natural and desirable. Use in tiny amounts: a single teaspoon on grilled chicken, ramen, sashimi, or oysters. Store for up to 3 months refrigerated.",
-      visualCue: {
-        primaryTarget: "After curing, the paste is a deeper, more muted green-gold. The texture is uniform and slightly wetter than when packed. The aroma is deeply complex — floral citrus and chili integrated into one note.",
-        spectrum: [
-          { state: "Underdone", description: "After only 1 day, the paste still tastes of separate raw chili and zest. The flavors haven't integrated.", action: "Reseal and return to the refrigerator. The integration happens between days 3–7." },
-          { state: "Perfect",   description: "After 5–7 days, the flavors are unified: one complex, fiery-floral-salty note. Color is olive-green. The heat has deepened from sharp to slow.", action: "Begin using in very small amounts." },
-          { state: "Overdone",  description: "After 3+ months, the color has turned an olive-brown and the citrus fragrance has faded. The heat and salt remain but the floral note is gone.", action: "Still usable as a chili-salt paste. Add fresh yuzu zest to revive the fragrance." },
-        ],
-      },
-      feelCue: "A fully cured yuzu kosho should smell like distilled citrus and chili — almost perfume-like in its intensity when you unseal the jar in a cool kitchen.",
-    },
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Jus de yuzu frais",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de citron frais"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Zeste",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "yuzu_zest",
+      "instructions": "Zestez le fruit yuzu à l'aide d'une fine grille microplane, en travaillant soigneusement pour recueillir seulement la couche extérieure colorée et éviter la pointe blanche amère sous. Un seul yuzu produit une quantité relativement faible de zeste — environ 1 à 2 cuillères à café. Les huiles de zeste de yuzu frais sont extraordinairement volatiles et parfumées; travailler rapidement et couvrir le zeste dès qu'il est recueilli pour préserver ces aromatiques. Si yuzu n'est pas disponible, une combinaison de citron Meyer et de zeste de pamplemousse l'avoisine peu, bien que la complexité florale soit très différente.",
+      "visualCue": {
+        "primaryTarget": "Zeste fin, vert-jaune vif avec une apparence distinctement humide et huileuse des huiles naturelles libérées par grille. Intensément parfumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux de zeste sont trop grands et la pointe est visible dans le mélange — fragments blancs mélangés au jaune.",
+            "action": "Râper plus finement, appliquer moins de pression sur le fruit afin que vous ne prenez que la surface même."
+          },
+          {
+            "state": "Perfect",
+            "description": "Zeste fin, uniformément jaune-vert avec un reflet humide, huileux et un parfum d'agrumes intensément floral. Aucune tache blanche visible.",
+            "action": "Couvrir immédiatement et passer au traitement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez pressé le fruit à plusieurs reprises au-dessus de la même section et des fragments de poils blancs apparaissent dans le zeste.",
+            "action": "Choisissez des fragments de menthe avec un cure-dent, ou faites pivoter vers une section fraîche de fruits. Pith rendra le yuzu kosho fini amer."
+          }
+        ]
+      },
+      "feelCue": "Le zeste devrait enrober vos doigts dans un film faiblement gras qui fait sentir votre peau comme aucun autre agrumes — floral, presque à base de plantes, avec une note supérieure complexe qui s'estompe quelques secondes après avoir quitté la peau."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mince",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "minced_chili",
+      "instructions": "Pour un yuzu kosho traditionnel, utilisez un suribachi (mortier japonais) ou, s'il n'est pas disponible, un petit robot culinaire. Le chilis doit être finement haché, en conservant la plupart de leurs graines pour la chaleur. Retirer la tige mais laisser les graines. Plus la menthe est fine, plus la chaleur se distribue à travers la pâte finie. Si l'on utilise un couteau, il faut s'affiner à une consistance extrêmement fine, presque en pâte, des fragments minuscules, pas des morceaux visibles.",
+      "visualCue": {
+        "primaryTarget": "Une menthe verte très fine et humide, presque une pâte, avec des graines distribuées uniformément. Il ne reste plus de gros morceaux de chili.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le Chili est toujours en morceaux visibles. Uneven mince signifie une chaleur inégale dans le produit final.",
+            "action": "Continuer à mictionner avec un couteau à bascule, en ramassant et en remuant jusqu'à ce que la texture soit uniformément fine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Fine, humide, presque pâteuse avec des graines. La couleur est un vert vif et lumineux.",
+            "action": "Combiner avec le zeste et le sel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le Chili est une pâte lisse avec des graines complètement cassées — une certaine chaleur peut avoir été perdue du fait de la volatilisation de la capsaïcine.",
+            "action": "Procéder — la texture est lisse plutôt que légèrement granulaire, mais parfaitement utilisable."
+          }
+        ]
+      },
+      "feelCue": "Émincer le chili avec des gants — à cette fine coupe, la capsaïcine est dans l'air et piquera les yeux et la peau. L'odeur doit être un parfum vert-chili vif et propre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Livre",
+      "inputs": [
+        "yuzu_zest",
+        "minced_chili",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "yuzu_kosho_paste",
+      "instructions": "Mélanger le zeste de yuzu, le chili haché et le sel dans un suribachi ou un petit robot alimentaire. Ajouter le jus de yuzu. Graissage ou traitement jusqu'à ce que le mélange forme une pâte cohésive légèrement rugueuse — le sel tire l'humidité du zeste et du chili, liant la pâte ensemble. Bouche : il doit être intensément salé, farouchement chaud et dynamiquement agrumes-avant. Transférer dans un petit pot stérilisé.",
+      "visualCue": {
+        "primaryTarget": "Une pâte verte et cohésive, lisse mais légèrement texturée, qui tient sa forme lorsqu'elle est écopée sur une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est encore lâche et les éléments n'ont pas été fusionnés — les fragments de zeste et de chili sont visibles séparément.",
+            "action": "Continuer le broyage ou le traitement. Le sel a besoin de plus de temps pour attirer l'humidité et lier la pâte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte uniforme vert vif avec une texture légèrement granulaire. Prend une cuillère, sent intensément le yuzu et le chili.",
+            "action": "Transférer dans un pot et guérir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pâte complètement lisse avec toute texture perdue et couleur verte commençant à s'oxyder en olive-drabe.",
+            "action": "Continuez — il aura encore un excellent goût. La prochaine fois, utilisez un mortier plutôt qu'un processeur pour mieux contrôler la texture."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir humide et légèrement collante à partir des huiles d'agrumes et du jus de chili — comme une confiture d'agrumes très finement texturée et très salée qui fait fourmiller votre langue avant même de la goûter."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cure",
+      "inputs": [
+        "yuzu_kosho_paste"
+      ],
+      "outputState": "finished_yuzu_kosho",
+      "instructions": "Scellez le pot et réfrigérez pendant au moins 3 jours, idéalement 7. Pendant ce temps, le sel continue à attirer l'humidité, les saveurs se mélangent et s'approfondissent, et la netteté du chili brut s'adoucit à quelque chose de plus complexe. La couleur passera d'un vert vif à un vert olive plus muté — c'est naturel et désirable. Utilisation en petites quantités : une seule cuillère à café sur poulet grillé, ramen, sashimi ou huîtres. A conserver jusqu'à 3 mois au réfrigérateur.",
+      "visualCue": {
+        "primaryTarget": "Après le durcissement, la pâte est un or vert plus profond, plus muet. La texture est uniforme et légèrement plus humide qu'en emballage. L'arôme est profondément complexe — les agrumes floraux et le chili intégrés dans une seule note.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après seulement 1 jour, la pâte a encore le goût de chili cru et zeste séparés. Les saveurs ne sont pas intégrées.",
+            "action": "Reservoir et retourner au réfrigérateur. L'intégration se produit entre les jours 3 et 7."
+          },
+          {
+            "state": "Perfect",
+            "description": "Après 5-7 jours, les saveurs sont unifiées : une note complexe, de fleur de feu. La couleur est vert olive. La chaleur s'est accrue de vive à lente.",
+            "action": "Commencez à utiliser en très petites quantités."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après 3 mois et plus, la couleur est devenue brun olive et le parfum d'agrumes s'estompe. La chaleur et le sel restent, mais la note florale est partie.",
+            "action": "Toujours utilisable comme pâte de chili-sel. Ajouter le zeste de yuzu frais pour raviver le parfum."
+          }
+        ]
+      },
+      "feelCue": "Un yuzu kosho complètement guéri doit sentir comme des agrumes distillés et du chili — presque comme du parfum dans son intensité quand vous détachez le pot dans une cuisine fraîche."
+    }
+  ]
 };

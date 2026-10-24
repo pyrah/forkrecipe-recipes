@@ -1,121 +1,263 @@
 export default {
-  repoId: "master_american_sourdough_boule_001",
-  parentRepoId: null,
-  slug: "sourdough-boule",
-  author: "ForkRecipe Kitchen",
-  title: "Sourdough Boule",
-  description: "A high-hydration country loaf born of wild yeast and patience — its crust shatters like porcelain, its crumb opens in dramatic, irregular caves that catch butter and hold jam. This is the Pacific Northwest's daily bread: naturally leavened, deeply flavored, unapologetically sour.",
-  cuisine: "American",
-  culture: "Pacific Northwest",
-  category: "breads",
-  tags: ["bread", "sourdough", "naturally-leavened", "vegan"],
-  difficulty: 4,
-  activeTime: "45 min",
-  totalTime: "24 hr",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 2, sour: 3, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Bread flour (12–13% protein)",     ratioValue: 100, defaultUnit: "%", substitutions: ["high-gluten flour", "tipo 0 flour"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Water (room temperature, 72–75°F)", ratioValue: 75,  defaultUnit: "%", substitutions: ["filtered water"] },
-    { ingId: "ing_03", role: "Leavener",   name: "Active sourdough starter (100% hydration)", ratioValue: 20, defaultUnit: "%", substitutions: ["stiff starter at 25%"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                    ratioValue: 2,   defaultUnit: "%", substitutions: ["kosher salt"] },
+  "repoId": "master_american_sourdough_boule_001",
+  "parentRepoId": null,
+  "slug": "sourdough-boule",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sourdough Boule",
+  "description": "Un pain de campagne à forte hydratation né de levures sauvages et de patience — sa croûte se brise comme de la porcelaine, sa miette s'ouvre dans des grottes spectaculaires et irrégulières qui capturent le beurre et tiennent la confiture. C'est le pain quotidien du Pacifique Nord-Ouest : naturellement levain, profondément aromatisé, amer, sans apologétique.",
+  "cuisine": "Américain",
+  "culture": "Pacifique Nord-Ouest",
+  "category": "breads",
+  "tags": [
+    "pain",
+    "Pâtes alimentaires",
+    "levain naturel",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "45 min",
+  "totalTime": "24 hr",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Autolyse",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "autolysed_dough",
-      instructions: "Combine flour and water in a large bowl. Mix by hand until no dry flour remains — this takes about 2 minutes of rough mixing. The dough will be shaggy and rough, almost reluctant. Cover and rest at room temperature for 30–60 minutes. During this rest, the flour's enzymes begin breaking down proteins and starch, and gluten bonds form without any mechanical effort. When you return to the dough, it will have visibly smoothed and relaxed.",
-      visualCue: {
-        primaryTarget: "A rough, uneven mass when you begin — after the rest, the surface is noticeably smoother, the dough slightly domed, with a clean linen smell of wet wheat.",
-        spectrum: [
-          { state: "Underdone", description: "Still ragged and sticky with visible dry patches or a floury smell after the rest.", action: "Give it another 15 minutes covered — the flour needs more time to fully absorb the water before salt is added." },
-          { state: "Perfect",   description: "Cohesive, lightly tacky, and markedly smoother than when you started. When you pull a piece, it stretches in a translucent sheet before tearing.", action: "Add the starter and salt and move to the folding stage." },
-          { state: "Overdone",  description: "The dough has sat too long and is beginning to smell faintly sour, turning slack and almost sticky.", action: "Proceed immediately — the fermentation clock has started early; bulk ferment time will be shorter." },
-        ],
-      },
-      feelCue: "Before the rest it fights you — sticky and unyielding. After, it feels like soft chamois leather: pliable, slightly warm, giving way without sticking to clean hands.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain (12–13% de protéines)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Farine de gluten",
+        "tipo 0 farine"
+      ]
     },
     {
-      nodeId: "step_2", action: "Fold",
-      inputs: ["autolysed_dough", "ing_03", "ing_04"],
-      outputState: "bulk_fermented_dough",
-      instructions: "Add the active starter and scatter the salt over the dough surface. Dimple the salt in with your fingers, then perform a series of 4 stretch-and-folds: wet your hand, reach under one side of the dough, stretch it up until you feel resistance, then fold it over the top. Rotate the bowl 90° and repeat all the way around. Do this for 4 rounds total, spaced 30 minutes apart. After the last fold, let the dough bulk ferment undisturbed at 75–78°F (24–26°C) for a total of 4–5 hours from when starter was added, until it has grown by 50–75% and is visibly bubbly throughout.",
-      visualCue: {
-        primaryTarget: "After the final fold and through the bulk rest: the dough should dome gently in the bowl, with a network of bubbles visible through the walls, smelling pleasantly of yogurt and wheat.",
-        spectrum: [
-          { state: "Underdone", description: "Little volume gain after 5 hours; the dough still looks dense and flat, with few bubbles.", action: "Move the dough to a warmer spot — 78–80°F — and wait another hour. Do not proceed to shaping until you see at least 50% volume increase." },
-          { state: "Perfect",   description: "Dough has grown 50–75%, is domed and jiggly, covered in surface bubbles, and pulls away from the bowl walls cleanly when lifted.", action: "Gently turn onto an unfloured surface for pre-shaping." },
-          { state: "Overdone",  description: "The dome has peaked and begun to collapse; the dough smells sharply acidic and feels slack and almost liquid.", action: "Shape immediately and shorten the final proof — the dough has over-fermented but can still produce good bread if you move quickly." },
-        ],
-      },
-      feelCue: "With each successive fold the dough transforms from a sticky, reluctant mass to something smooth and full of life — by fold 4, it should lift away from the bowl like a warm pillow, light and airy between your palms.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau (température ambiante, 72-75°F)",
+      "ratioValue": 75,
+      "defaultUnit": "%",
+      "substitutions": [
+        "eau filtrée"
+      ]
     },
     {
-      nodeId: "step_3", action: "Shape",
-      inputs: ["bulk_fermented_dough"],
-      outputState: "shaped_boule",
-      instructions: "Turn the dough onto a lightly floured surface. Fold the edges in toward the center, then flip it seam-side down. Using both hands cupped around the dough, drag it toward you across the bench with gentle downward pressure — the friction tightens the surface. Repeat this motion 4–5 times, rotating slightly each pass, until the boule has a taut, smooth top with no tears. Transfer seam-side up into a well-floured banneton (rice flour is ideal) or a flour-dusted bowl lined with a floured tea towel. The boule should hold a round shape and not sag sideways.",
-      visualCue: {
-        primaryTarget: "A smooth, taut hemisphere with a surface that catches the light uniformly — no wrinkles, no tears, no visible seams on the top.",
-        spectrum: [
-          { state: "Underdone", description: "Loose, wrinkled surface with visible folds and the dough spreading sideways as soon as it's placed in the banneton.", action: "Remove from the banneton, flip back onto the bench, and drag again with more deliberate friction. The surface must be taut before retarding." },
-          { state: "Perfect",   description: "A taut dome that holds its shape cleanly, springy to a light touch and with a surface that looks like stretched silk.", action: "Cover with plastic wrap or a shower cap and transfer to the refrigerator." },
-          { state: "Overdone",  description: "The surface has torn — small white tears appear where the gluten gave way during shaping.", action: "Stop shaping immediately, let it rest 20 minutes, then gently re-shape without additional tension. Minor tears will seal in the oven." },
-        ],
-      },
-      feelCue: "The correctly shaped boule should feel like a firm balloon — taut everywhere, springy when you press a finger lightly into the top, with the internal gas just barely contained. If it feels dense and heavy, the shaping is too tight.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "Démarrage actif à l'aurore (hydratation à 100%)",
+      "ratioValue": 20,
+      "defaultUnit": "%",
+      "substitutions": [
+        "démarrage rigide à 25%"
+      ]
     },
     {
-      nodeId: "step_4", action: "Rest",
-      inputs: ["shaped_boule"],
-      outputState: "cold_retarded_boule",
-      instructions: "Refrigerate the shaped boule, covered, for 10–16 hours (overnight is ideal). The cold retard slows fermentation while allowing the sour flavor to develop and the dough to firm up for cleaner scoring. The dough does not need to look dramatically different after retarding — a slight increase in size is normal. Bake directly from the refrigerator without warming to room temperature; the cold dough will score more cleanly.",
-      visualCue: {
-        primaryTarget: "After the cold retard: the boule should look slightly larger than when it went in, with a dry, taut surface from the refrigerator air — not slimy, not collapsed.",
-        spectrum: [
-          { state: "Underdone", description: "The boule is rock-firm with no visible rise and the dough feels very stiff from the cold.", action: "The dough may simply have been too cold — let it sit at room temperature for 30 minutes, but no longer, before scoring and baking." },
-          { state: "Perfect",   description: "A slight increase in size, firm but not rigid to the touch, with a dry outer surface that holds a fingertip impression briefly.", action: "Score and bake immediately from cold — do not temper." },
-          { state: "Overdone",  description: "The boule has over-proofed even in the cold: the surface has cracked or the dough feels soft and presses in without springing back.", action: "Bake immediately, as gently as possible, without expecting dramatic oven spring — the bread will still be good but flat." },
-        ],
-      },
-      feelCue: "Straight from the refrigerator the dough should feel like cold clay — firm, slightly resistant, but not frozen hard. When you press a fingertip into the bottom of the loaf, it leaves a clean impression without flooding back.",
-    },
-    {
-      nodeId: "step_5", action: "Score",
-      inputs: ["cold_retarded_boule"],
-      outputState: "scored_boule",
-      instructions: "Place a Dutch oven in the oven and preheat to 500°F (260°C) for at least 45 minutes. When oven-hot, remove the boule from the refrigerator. Cut a large square of parchment to act as a sling. Flip the cold boule seam-side down onto the parchment. Using a lame or sharp bread knife held at a 30–45° angle, score a single confident arc across the top — the ear — with one continuous stroke. Depth should be about ½ inch (1.2 cm). Additional decorative scores can be added perpendicular, but the main ear is the pressure valve.",
-      visualCue: {
-        primaryTarget: "A clean, decisive cut — the dough opens along the score line immediately, revealing a lighter-colored interior. The edges of the cut curl upward slightly.",
-        spectrum: [
-          { state: "Underdone", description: "The blade dragged and tore, leaving a ragged, uneven gash that has closed back on itself.", action: "With a very cold, very sharp blade held at a steep angle, make one more decisive cut alongside the first. The oven will heal most surface tears." },
-          { state: "Perfect",   description: "A clean arc, 4–5 inches long and ½ inch deep, with curling edges and a visible glimpse of the gassy interior. The dough does not deflate.", action: "Lift using the parchment and lower into the hot Dutch oven." },
-          { state: "Overdone",  description: "You scored too deep — more than ¾ inch — and the dough deflated visibly, collapsing inward along the cut.", action: "Bake anyway; the loaf will still taste excellent, though the oven spring and ear may be reduced." },
-        ],
-      },
-      feelCue: "Score in one stroke with the confidence of a surgeon — hesitation drags the blade and tears. The cold dough offers almost no resistance to a sharp lame: it should feel like cutting through chilled butter.",
-    },
-    {
-      nodeId: "step_6", action: "Bake",
-      inputs: ["scored_boule"],
-      outputState: "finished_sourdough_boule",
-      instructions: "Lower the boule on its parchment into the preheated Dutch oven. Cover with the lid and bake at 500°F for 20 minutes (the steam from the dough creates the oven-spring environment). Remove the lid, drop the temperature to 460°F (238°C), and bake a further 20–25 minutes uncovered until the crust is a deep mahogany-brown. Remove from the Dutch oven and cool on a wire rack for at least 1 hour before cutting — the crumb is still setting up inside.",
-      visualCue: {
-        primaryTarget: "A dramatic, cracked ear standing up from the surface, surrounded by a deep amber-to-mahogany crust that sounds hollow when rapped firmly on the bottom.",
-        spectrum: [
-          { state: "Underdone", description: "The crust is pale amber or golden; the ear has not fully opened; the bottom sounds dull and thuddy rather than hollow.", action: "Return to the oven uncovered for 5–8 more minutes. A fully baked sourdough boule is darker than you think it needs to be." },
-          { state: "Perfect",   description: "Deep mahogany with a dramatically opened ear, visible caramelized blisters across the surface, and a hollow knock on the bottom. The kitchen smells of roasted grain and caramel.", action: "Transfer to a wire rack and resist cutting for at least 1 hour — the inside is still 200°F and the crumb is actively setting." },
-          { state: "Overdone",  description: "The crust is very dark — approaching black at the ear and base — with a bitter, charred smell overriding the bread aroma.", action: "Let it cool completely before tasting. Often only the outermost shell is burnt; the interior remains delicious. Slice off any carbonized crust." },
-        ],
-      },
-      feelCue: "When you lift the finished loaf, it should feel surprisingly light for its size — a sign of good open crumb. The crust, when cool, crackles audibly when squeezed gently, and the bottom sounds hollow like a drum.",
-    },
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": [
+        "sel casher"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Autolyse",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "autolysed_dough",
+      "instructions": "Mélanger la farine et l'eau dans un grand bol. Mélanger à la main jusqu'à ce qu'il ne reste plus de farine sèche, ce qui prend environ 2 minutes de mélange rugueux. La pâte sera chaotique et rugueuse, presque réticente. Couvrir et reposer à température ambiante pendant 30 à 60 minutes. Pendant ce reste, les enzymes de la farine commencent à décomposer les protéines et l'amidon, et les liaisons au gluten se forment sans aucun effort mécanique. Quand vous retournerez à la pâte, il aura visiblement lissé et détendu.",
+      "visualCue": {
+        "primaryTarget": "Une masse rugueuse et inégale lorsque vous commencez — après le reste, la surface est nettement plus lisse, la pâte légèrement bombée, avec une odeur propre de lin de blé humide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours rampé et collant avec des taches sèches visibles ou une odeur farineuse après le reste.",
+            "action": "Donnez-lui encore 15 minutes de couverture — la farine a besoin de plus de temps pour absorber complètement l'eau avant d'ajouter du sel."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cohésif, légèrement collant et nettement plus lisse que lorsque vous avez commencé. Lorsque vous tirez une pièce, elle s'étire dans une feuille translucide avant de déchirer.",
+            "action": "Ajouter le démarreur et le sel et passer à l'étape de pliage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte s'est assise trop longtemps et commence à sentir légèrement aigre, se mouvant et presque collant.",
+            "action": "Procéder immédiatement — l'horloge de fermentation a commencé tôt; le temps de fermentation en vrac sera plus court."
+          }
+        ]
+      },
+      "feelCue": "Avant le reste, il vous combat — collant et inébranlable. Après, il se sent comme du cuir chamois doux : souple, légèrement chaud, laissant place à des mains propres."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "autolysed_dough",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "bulk_fermented_dough",
+      "instructions": "Ajouter le démarreur actif et disperser le sel sur la surface de la pâte. Rincer le sel avec les doigts, puis effectuer une série de 4 stretch-and-folds: mouiller votre main, atteindre sous un côté de la pâte, l'étirer jusqu'à ce que vous ressentiez la résistance, puis le plier sur le dessus. Faites tourner le bol à 90° et répétez tout autour. Faites cela pour 4 tours au total, espacés de 30 minutes. Après le dernier pli, laisser le ferment en vrac de pâte non perturbé à 75–78°F (24–26°C) pendant un total de 4–5 heures à partir de l'ajout du démarreur, jusqu'à ce qu'il ait augmenté de 50–75 % et soit visiblement bouilli.",
+      "visualCue": {
+        "primaryTarget": "Après le pli final et à travers le repos en vrac: la pâte doit dômer doucement dans le bol, avec un réseau de bulles visibles à travers les murs, sentant agréablement le yogourt et le blé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Petit gain de volume après 5 heures; la pâte semble encore dense et plate, avec peu de bulles.",
+            "action": "Déplacez la pâte vers un endroit plus chaud — 78-80°F — et attendez encore une heure. Ne pas procéder à la formation jusqu'à ce que vous voyez au moins 50% d'augmentation de volume."
+          },
+          {
+            "state": "Perfect",
+            "description": "La toux a grandi de 50 à 75 %, est domptée et jiggly, couverte de bulles de surface, et s'éloigne proprement des parois du bol lorsqu'elle est levée.",
+            "action": "Tourner doucement sur une surface non affectée pour pré-former."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le dôme a culminé et a commencé à s'effondrer; la pâte sent fortement acide et se sent lâche et presque liquide.",
+            "action": "Formez immédiatement et raccourcissez la preuve finale — la pâte a surfermenté mais peut encore produire du bon pain si vous bougez rapidement."
+          }
+        ]
+      },
+      "feelCue": "À chaque pli successif, la pâte se transforme d'une masse collante, réticente à quelque chose de lisse et plein de vie — par pli 4, elle devrait s'éloigner du bol comme un oreiller chaud, léger et aéré entre vos paumes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "bulk_fermented_dough"
+      ],
+      "outputState": "shaped_boule",
+      "instructions": "Tournez la pâte sur une surface légèrement farinée. Pliez les bords vers le centre, puis retournez-le côté couture vers le bas. En utilisant les deux mains coupées autour de la pâte, faites le glisser vers vous à travers le banc avec une légère pression vers le bas — la friction resserre la surface. Répétez ce mouvement 4-5 fois, en tournant légèrement chaque passe, jusqu'à ce que la boule ait un sommet lisse et tendu sans larmes. Transférer le bord de la couture dans une banneton bien fermentée (la farine de riz est idéale) ou dans un bol à la farine doublé d'une serviette à thé fariné. La boule doit avoir une forme ronde et ne pas sasser latéralement.",
+      "visualCue": {
+        "primaryTarget": "Un hémisphère lisse et tendu avec une surface qui attrape uniformément la lumière — pas de rides, pas de larmes, pas de coutures visibles sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Surface lisse, ridée avec plis visibles et la pâte s'étendant latéralement dès qu'elle est placée dans le banneton.",
+            "action": "Retirez-vous de la banneton, retournez sur le banc et faites glisser à nouveau avec une friction plus délibérée. La surface doit être tendue avant le retard."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un dôme tendu qui tient sa forme propre, printanière à un toucher léger et avec une surface qui ressemble à de la soie étirée.",
+            "action": "Couvrir avec une enveloppe en plastique ou un capuchon de douche et transférer au réfrigérateur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La surface a déchiré — de petites larmes blanches apparaissent là où le gluten a cédé pendant la formation.",
+            "action": "Arrêtez de façonner immédiatement, laissez reposer 20 minutes, puis reformer doucement sans tension supplémentaire. Des larmes mineures scelleront le four."
+          }
+        ]
+      },
+      "feelCue": "La boule correctement façonnée devrait se sentir comme un ballon ferme — taute partout, printanière lorsque vous appuyez légèrement sur un doigt dans le haut, avec le gaz intérieur à peine contenu. Si elle se sent dense et lourde, la forme est trop serrée."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "shaped_boule"
+      ],
+      "outputState": "cold_retarded_boule",
+      "instructions": "Réfrigérer la boule en forme, couverte, pendant 10 à 16 heures (la nuit est idéale). Le retard froid ralentit la fermentation tout en permettant au goût aigre de se développer et à la pâte de se raffermir pour un score plus propre. La pâte n'a pas besoin d'être radicalement différente après le retard — une légère augmentation de la taille est normale. Cuire directement du réfrigérateur sans réchauffement à la température ambiante; la pâte froide marquera plus proprement.",
+      "visualCue": {
+        "primaryTarget": "Après le froid retard: la boule devrait paraître légèrement plus grande que quand elle est entrée, avec une surface sèche et tendue de l'air du réfrigérateur — pas visqueuse, pas effondrée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La boule est solide, sans élévation visible, et la pâte est très raide du froid.",
+            "action": "La pâte a peut - être été trop froide — laissez - la reposer à température ambiante pendant 30 minutes, mais non plus avant de marquer et de cuire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une légère augmentation de la taille, ferme mais non rigide au toucher, avec une surface extérieure sèche qui tient une impression du bout des doigts brièvement.",
+            "action": "Score et cuire immédiatement à partir du froid — ne pas tempérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La boule est surproofée même au froid : la surface est fissurée ou la pâte est douce et se presse sans retomber.",
+            "action": "Cuire immédiatement, aussi doucement que possible, sans s'attendre à une source de four dramatique — le pain sera encore bon mais plat."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir comme de l'argile froide, ferme, légèrement résistante, mais non congelée. Lorsque vous appuyez sur un bout de doigt dans le fond du pain, il laisse une impression nette sans déborder."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Score",
+      "inputs": [
+        "cold_retarded_boule"
+      ],
+      "outputState": "scored_boule",
+      "instructions": "Placer un four néerlandais au four et préchauffer à 500°F (250°C) pendant au moins 45 minutes. Lorsque le four est chaud, retirer la boule du réfrigérateur. Couper un grand carré de parchemin pour agir comme une élingue. Déposez la bordure de la boule froide sur le parchemin. À l'aide d'un couteau à pain lamellé ou tranchant maintenu à un angle de 30 à 45°, marquez un seul arc de confiance à travers le haut — l'oreille — avec une course continue. La profondeur doit être d'environ 1⁄2 pouce (1,2 cm). Des notes décoratives supplémentaires peuvent être ajoutées perpendiculairement, mais l'oreille principale est la soupape de pression.",
+      "visualCue": {
+        "primaryTarget": "Une coupe nette et décisive – la pâte s'ouvre le long de la ligne de partition immédiatement, révélant un intérieur plus léger. Les bords de la coupe s'enroulent légèrement vers le haut.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La lame s'est traînée et s'est déchirée, laissant une entaille irrégulière qui s'est refermée.",
+            "action": "Avec une lame très froide, très tranchante, maintenue à angle raide, faire une coupe plus décisive à côté de la première. Le four guérira la plupart des larmes de surface."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un arc propre, 4-5 pouces de long et 1⁄2 pouce de profondeur, avec des bords de curling et un aperçu visible de l'intérieur gazeux. La pâte ne dégonfle pas.",
+            "action": "Soulever avec le parchemin et descendre dans le four chaud hollandais."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez marqué trop profond — plus de 3⁄4 de pouce — et la pâte s'est dégonflée visiblement, s'écroulant vers l'intérieur le long de la coupe.",
+            "action": "Cuire de toute façon; le pain sera encore excellent, bien que le ressort du four et l'oreille puissent être réduits."
+          }
+        ]
+      },
+      "feelCue": "Score en un seul coup avec la confiance d'un chirurgien — l'hésitation traîne la lame et les larmes. La pâte froide n'offre presque aucune résistance à un lamellé aigu : elle devrait avoir envie de couper à travers du beurre réfrigéré."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Cuire",
+      "inputs": [
+        "scored_boule"
+      ],
+      "outputState": "finished_sourdough_boule",
+      "instructions": "Abaissez la boule sur son parchemin dans le four hollandais préchauffé. Couvrir avec le couvercle et cuire au four à 500°F pendant 20 minutes (la vapeur de la pâte crée l'environnement de source du four). Retirer le couvercle, laisser tomber la température à 460°F (238°C) et cuire 20 à 25 minutes de plus à découvert jusqu'à ce que la croûte soit un brun acajou profond. Retirer du four néerlandais et laisser refroidir sur une grille pendant au moins 1 heure avant de couper — la miette est encore en place à l'intérieur.",
+      "visualCue": {
+        "primaryTarget": "Une oreille spectaculaire et fissurée debout de la surface, entourée d'une croûte d'ambre profonde à mahoganie qui semble creuse quand rapée fermement sur le fond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est ambre pâle ou dorée; l'oreille n'a pas complètement ouvert; le fond sonne terne et touffu plutôt que creux.",
+            "action": "Retourner au four découvert pendant 5 à 8 minutes de plus. Un bouleau auriculeux entièrement cuit est plus foncé que vous pensez qu'il doit être."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une acajou profonde avec une oreille considérablement ouverte, des cloques caramélisées visibles à travers la surface, et un coup creux sur le fond. La cuisine sent le grain rôti et le caramel.",
+            "action": "Transférer sur une grille et résister à la coupe pendant au moins 1 heure – l'intérieur est toujours à 200°F et la miette est active."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est très foncée, s'approchant du noir à l'oreille et à la base, avec une odeur amère et carbonisée qui domine l'arôme du pain.",
+            "action": "Laisser refroidir complètement avant de déguster. Souvent, seule la coquille extérieure est brûlée; l'intérieur reste délicieux. Couper toute croûte carbonisée."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous soulevez le pain fini, il devrait être étonnamment léger pour sa taille, signe de bonne miette ouverte. La croûte, lorsqu'elle est fraîche, craque audiblement lorsqu'elle est pressée doucement, et le fond semble creux comme un tambour."
+    }
+  ]
 };

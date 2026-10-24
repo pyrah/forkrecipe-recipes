@@ -1,100 +1,254 @@
 export default {
-  repoId: "master_spanish_gazpacho_001",
-  parentRepoId: null,
-  slug: "gazpacho",
-  author: "ForkRecipe Kitchen",
-  title: "Gazpacho Andaluz",
-  description: "Andalusia's legendary chilled raw tomato soup — peak-season tomatoes blended with stale bread, cucumber, pepper, sherry vinegar, and olive oil into a silky, ice-cold soup that pours like velvet.",
-  cuisine: "Spanish",
-  culture: "Andalusian",
-  category: "vegetables",
-  tags: ["spanish", "andalusian", "tomato", "cold-soup", "vegan", "refreshing", "summer"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "3 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 3, sour: 4, bitter: 1, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Ripe plum tomatoes, cored and roughly chopped",  ratioValue: 100, defaultUnit: "%", substitutions: ["vine-ripened tomatoes", "heirloom tomatoes"] },
-    { ingId: "ing_02", role: "Structure",  name: "Cucumber, peeled and seeded",                    ratioValue: 20,  defaultUnit: "%", substitutions: ["English cucumber"] },
-    { ingId: "ing_03", role: "Structure",  name: "Green bell pepper, seeded and roughly chopped",  ratioValue: 15,  defaultUnit: "%", substitutions: ["Italian frying pepper"] },
-    { ingId: "ing_04", role: "Allium",     name: "Garlic cloves",                                  ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Starch",     name: "Stale white bread, crusts removed",              ratioValue: 10,  defaultUnit: "%", substitutions: ["day-old baguette"] },
-    { ingId: "ing_06", role: "Acid",       name: "Sherry vinegar (vinagre de Jerez)",              ratioValue: 5,   defaultUnit: "%", substitutions: ["red wine vinegar", "aged white wine vinegar"] },
-    { ingId: "ing_07", role: "Fat",        name: "Extra-virgin olive oil, plus more to finish",    ratioValue: 15,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Fine sea salt",                                  ratioValue: 1.5, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_09", role: "Hydration",  name: "Ice-cold water",                                 ratioValue: 12,  defaultUnit: "%", substitutions: [] },
+  "repoId": "master_spanish_gazpacho_001",
+  "parentRepoId": null,
+  "slug": "gazpacho",
+  "author": "ForkRecipe Kitchen",
+  "title": "Gazpacho Andaluz",
+  "description": "La légendaire soupe de tomates crues réfrigérée d'Andalousie — tomates de haute saison mélangées avec du pain, du concombre, du poivre, du vinaigre de sherry et de l'huile d'olive dans une soupe soyeuse et froide qui verse comme du velours.",
+  "cuisine": "Espagnol",
+  "culture": "Andalous",
+  "category": "vegetables",
+  "tags": [
+    "Espagnol",
+    "et andalous",
+    "tomates",
+    "Soupe froide",
+    "végétalien",
+    "rafraîchissant",
+    "été"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Soak bread",
-      inputs: ["ing_05", "ing_06", "ing_09"],
-      outputState: "soaked_bread",
-      instructions: "Tear the stale bread into rough chunks and place in a small bowl. Pour the sherry vinegar over it, then add enough of the ice-cold water to barely submerge the bread. Press it under the liquid and leave it to soak for 10 minutes. The bread will swell, absorb the vinegar, and soften into a paste. This pre-soak ensures the vinegar is evenly distributed throughout the soup rather than sitting on top, and gives the bread time to hydrate so it emulsifies cleanly into the blended base. Squeeze the soaked bread gently before adding to the blender — you want saturated, not waterlogged.",
-      visualCue: {
-        primaryTarget: "Bread chunks are swollen, uniformly pale and moist throughout with no dry white crumb remaining at the center, and the surrounding liquid has turned faintly pink from the tomato contact.",
-        spectrum: [
-          { state: "Underdone", description: "Bread is still firm at the core with a dry, white interior — it will blend in as grainy lumps rather than incorporating smoothly.", action: "Press the bread under the liquid and wait another 5 minutes. The bread must be completely saturated before blending." },
-          { state: "Perfect",   description: "Bread is pillowy, uniformly softened, and collapses easily when pressed. It smells of vinegar and faintly of wheat.", action: "Squeeze out excess water and add directly to the blender with the vegetables." },
-          { state: "Overdone",  description: "Bread has dissolved into the liquid, becoming a thin, pale slurry with no structure remaining.", action: "This is still usable — the dissolved bread will still emulsify, though the soup may be slightly thinner. Proceed with blending." },
-        ],
-      },
-      feelCue: "Squeeze a piece between your fingers — it should feel like a wet sponge, yielding completely with no resistant core. Vinegar-scented liquid should run out freely when pressed.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Tomates à la prune, décortiquées et hachées approximativement",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "tomates mûries de vigne",
+        "tomates héritières"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_07", "ing_08", "soaked_bread"],
-      outputState: "rough_gazpacho",
-      instructions: "Combine the chopped tomatoes, cucumber, bell pepper, and garlic in a high-speed blender with the squeezed soaked bread, olive oil, and salt. Blend on high for 90 seconds — the tomatoes will erupt into a frothy, vivid orange-red liquid. Taste and adjust salt. The initial blend will be warm from the motor friction and may look slightly grainy or frothy. This is normal. The key move here is blending the olive oil directly with the vegetables so it emulsifies into the tomato's natural water content — pour it in while the blender is running if your machine allows, which creates a smoother emulsion.",
-      visualCue: {
-        primaryTarget: "A vivid, frothy, orange-red liquid that smells intensely of raw tomato, garlic, and olive oil — the aroma should fill the kitchen with something between a salad and a garden.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is chunky and heterogeneous, with visible pieces of tomato skin and pepper. The blender sounds labored and the mixture doesn't pull toward the center.", action: "Blend for a further 60 seconds on high. If the machine is struggling, add a splash more cold water to loosen the mix." },
-          { state: "Perfect",   description: "A smooth, uniform, deeply colored liquid with fine pink foam on top. Garlic fragrance is present but not sharp — it has mellowed into the tomato.", action: "Proceed directly to straining while the blender is still cold." },
-          { state: "Overdone",  description: "Blended so long that the mixture is hot to the touch and the olive oil has begun to break, turning the liquid greasy and somewhat bitter.", action: "Chill immediately over an ice bath. The emulsion may partially recover as it cools; the flavor loss from heat is largely irreversible, so blend future batches in shorter bursts." },
-        ],
-      },
-      feelCue: "Dip a finger — the liquid should feel faintly slippery from the emulsified olive oil, not watery. Rub it on your palm; it should leave a faint, glossy sheen.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Concombre, pelé et ensemencé",
+      "ratioValue": 20,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Concombre anglais"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Strain",
-      inputs: ["rough_gazpacho"],
-      outputState: "strained_gazpacho",
-      instructions: "Set a fine-mesh strainer over a large bowl and pour the blended soup through in batches. Use a ladle or flexible spatula to press the solids and extract every drop of liquid — the tomato skins and fiber that remain in the strainer are what would make the final soup grainy. Work the back of the ladle in circular motions against the mesh. Discard the pressed solids. The strained soup will look dramatically cleaner, a deep ruby-orange, and silkier than before straining. Taste again and adjust salt and vinegar.",
-      visualCue: {
-        primaryTarget: "The liquid passing through the strainer is a clear, jewel-toned ruby-orange with a uniform, velvety body — no visible tomato skin fragments or fiber in the bowl below.",
-        spectrum: [
-          { state: "Underdone", description: "Soup in the bowl still looks rough and grainy, with orange foam and bits of pepper or skin visible at the surface.", action: "Pass through the strainer a second time, pressing the residual pulp more firmly." },
-          { state: "Perfect",   description: "A silky, clean, deeply colored liquid with a fine, even sheen. A small amount of froth on top is fine — it will settle during chilling.", action: "Cover the bowl and refrigerate immediately." },
-          { state: "Overdone",  description: "Over-pressed, forcing bitter seed oil and dry fiber through the mesh, making the soup taste slightly harsh.", action: "Nothing to correct at this stage, but in future batches stop pressing when resistance becomes very stiff." },
-        ],
-      },
-      feelCue: "Hold a spoonful to the light — it should have the translucency of tomato water, neither opaque like juice nor cloudy like a smoothie. Swirl it; it should coat the spoon in a thin, even film.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "poivron vert, ensemencé et haché grossièrement",
+      "ratioValue": 15,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Poivre à frire italien"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Chill",
-      inputs: ["strained_gazpacho"],
-      outputState: "chilled_gazpacho",
-      instructions: "Cover the bowl tightly and refrigerate for at least 2 hours, preferably 3. The chill is not optional — gazpacho is a fundamentally cold dish and the flavors do not integrate until cold. As it chills, the olive oil emulsion will tighten, the acid will mellow, and the garlic will lose its raw sharpness and become part of the harmonic whole. Before serving, taste again: cold suppresses salt perception, so you will almost certainly need a touch more salt and vinegar at this stage. Serve in chilled bowls with a thread of olive oil, a few drops of extra sherry vinegar, and optional cucumber dice or chopped herbs on top.",
-      visualCue: {
-        primaryTarget: "The soup has deepened to a rich, cold, deep-red with no froth remaining, a uniform silky body, and a faint olive-oil sheen on the surface. It smells of cold tomato and summer.",
-        spectrum: [
-          { state: "Underdone", description: "Still room temperature or just slightly cool — the flavors are raw and separate, and the olive oil floats rather than integrating.", action: "Return to refrigerator. The soup genuinely needs minimum 2 hours at fridge temperature to be its best self." },
-          { state: "Perfect",   description: "Ice-cold throughout, deeply flavored, balanced between sweet tomato, bright acid, and grassy olive oil. Garlic is present but not sharp.", action: "Adjust salt and sherry vinegar, then serve immediately in cold bowls." },
-          { state: "Overdone",  description: "Left in refrigerator more than 24 hours; the garlic has sharpened and the bread has made the soup slightly gluey.", action: "Strain once more if gluey. A fresh splash of sherry vinegar and an extra drizzle of olive oil can revive a slightly over-rested batch." },
-        ],
-      },
-      feelCue: "The finished soup should pour like cold cream — heavier than water, with a slight viscosity from the emulsified oil and bread. It should hit the back of the throat with cold first, then a wave of acid, then the sweet tomato body. Nothing should taste raw or sharp.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Starch",
+      "name": "Pain blanc, croûtes enlevées",
+      "ratioValue": 10,
+      "defaultUnit": "%",
+      "substitutions": [
+        "baguette d'un jour"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "vinaigre de sherry (vinagre de Jerez)",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "vinaigre de vin rouge",
+        "vinaigre blanc vieilli"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge, plus plus à finir",
+      "ratioValue": 15,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Hydration",
+      "name": "Eau froide",
+      "ratioValue": 12,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire tremper le pain",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_09"
+      ],
+      "outputState": "soaked_bread",
+      "instructions": "Appliquez le pain en morceaux et placez-le dans un petit bol. Verser le vinaigre de sherry dessus, puis ajouter suffisamment d'eau glacée pour ne pas plonger le pain. Appuyez dessus sous le liquide et laissez tremper pendant 10 minutes. Le pain gonflera, absorbera le vinaigre et ramollira dans une pâte. Ce pré-soak assure que le vinaigre est uniformément distribué dans toute la soupe plutôt que de s'asseoir sur le dessus, et donne au pain le temps d'hydrater de sorte qu'il émulsifie proprement dans la base mélangée. Pressez doucement le pain trempé avant d'ajouter au mélangeur — vous voulez saturé, pas arrosé.",
+      "visualCue": {
+        "primaryTarget": "Les morceaux de pain sont gonflés, uniformément pâles et humides tout au long, sans miettes blanches sèches qui restent au centre, et le liquide environnant est devenu légèrement rose du contact avec la tomate.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pain est encore ferme au cœur avec un intérieur blanc et sec — il se mélangera comme des grumeaux plutôt que de s'intégrer en douceur.",
+            "action": "Appuyez sur le pain sous le liquide et attendez encore 5 minutes. Le pain doit être complètement saturé avant le mélange."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le pain est oreiller, adouci uniformément et s'effondre facilement lorsqu'il est pressé. Il sent le vinaigre et peu de blé.",
+            "action": "Éteignez l'excès d'eau et ajoutez directement au mélangeur avec les légumes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pain s'est dissous dans le liquide, devenant un lisier mince et pâle, sans structure restante.",
+            "action": "Cela est encore utilisable — le pain dissous sera encore émulsifiant, bien que la soupe puisse être légèrement plus mince. Procéder au mélange."
+          }
+        ]
+      },
+      "feelCue": "Pressez un morceau entre les doigts – il devrait se sentir comme une éponge humide, donnant complètement sans cœur résistant. Le liquide parfumé au vinaigre doit s'écouler librement lorsqu'il est pressé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_07",
+        "ing_08",
+        "soaked_bread"
+      ],
+      "outputState": "rough_gazpacho",
+      "instructions": "Mélanger les tomates hachées, le concombre, le poivron et l'ail dans un mélangeur à grande vitesse avec le pain trempé pressé, l'huile d'olive et le sel. Mélanger à haute intensité pendant 90 secondes — les tomates vont éclater dans un liquide rouge-orange vif mousseux. Goûtez et ajustez le sel. Le mélange initial sera chaud du frottement moteur et peut sembler légèrement granuleux ou mousseux. C'est normal. Le mouvement clé ici est de mélanger l'huile d'olive directement avec les légumes afin qu'il émulsifie dans la teneur en eau naturelle de la tomate — versez-le pendant que le mélangeur fonctionne si votre machine le permet, ce qui crée une émulsion plus lisse.",
+      "visualCue": {
+        "primaryTarget": "Un liquide vif, mousseux, rouge-orange qui sent intensément la tomate crue, l'ail et l'huile d'olive — l'arôme devrait remplir la cuisine de quelque chose entre une salade et un jardin.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est ample et hétérogène, avec des morceaux visibles de peau de tomate et de poivre. Le mélangeur sonne travaillé et le mélange ne tire pas vers le centre.",
+            "action": "Mélanger encore 60 secondes en hauteur. Si la machine est en difficulté, ajoutez une éclaboussure d'eau plus froide pour desserrer le mélange."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un liquide lisse, uniforme, de couleur profonde avec de la mousse rose fine sur le dessus. Le parfum d'ail est présent, mais pas aiguisé, il s'est membré dans la tomate.",
+            "action": "Procéder directement à la déformation pendant que le mélangeur est encore froid."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mélangeé si longtemps que le mélange est chaud au toucher et l'huile d'olive a commencé à se briser, tournant le liquide gras et un peu amer.",
+            "action": "Refroidir immédiatement sur un bain de glace. L'émulsion peut se rétablir partiellement à mesure qu'elle se refroidit; la perte de saveur due à la chaleur est en grande partie irréversible, donc mélanger les futurs lots dans des rafales plus courtes."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt — le liquide doit se sentir légèrement glissant à partir de l'huile d'olive émulsifiée, et non aqueux. Frottez-le sur votre paume; il devrait laisser un éclat léger et brillant."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Poignée",
+      "inputs": [
+        "rough_gazpacho"
+      ],
+      "outputState": "strained_gazpacho",
+      "instructions": "Mettre une souche fine sur un grand bol et verser la soupe mélangée dans des lots. Utilisez une louche ou une spatule souple pour presser les solides et extraire chaque goutte de liquide — les peaux de tomate et les fibres qui restent dans la souche sont ce qui ferait la soupe finale grainée. Tricoter le dos de la louche en mouvements circulaires contre la maille. Jeter les solides pressés. La soupe tendue sera nettement plus propre, un rubis-orange profond et plus soyeuse qu'avant. Goûtez encore et ajustez le sel et le vinaigre.",
+      "visualCue": {
+        "primaryTarget": "Le liquide passant par la passoire est un rubis-orange clair, avec un corps uniforme et velouté — aucun fragment visible de peau de tomate ou de fibre dans le bol ci-dessous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La soupe dans le bol semble encore rugueuse et granuleuse, avec de la mousse orange et des morceaux de poivre ou de peau visibles à la surface.",
+            "action": "Passez une seconde fois à travers le filtre, pressez plus fermement la pulpe résiduelle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un liquide soyeux, propre, de couleur profonde avec une fine, même éclat. Une petite quantité de mousse sur le dessus est bonne — elle se déposera pendant le refroidissement.",
+            "action": "Couvrir le bol et réfrigérer immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surpression, forçant l'huile de graine amère et la fibre sèche à travers le filet, rendant la soupe goût légèrement dure.",
+            "action": "Rien à corriger à ce stade, mais à l'avenir les lots cessent de presser lorsque la résistance devient très raide."
+          }
+        ]
+      },
+      "feelCue": "Tenez une cuillère à la lumière — elle devrait avoir la translucidité de l'eau de tomate, ni opaque comme du jus, ni trouble comme un smoothie. Faites pivoter la cuillère; elle devrait enrober la cuillère dans un film mince, même."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Refroidissement",
+      "inputs": [
+        "strained_gazpacho"
+      ],
+      "outputState": "chilled_gazpacho",
+      "instructions": "Couvrir soigneusement le bol et réfrigérer pendant au moins 2 heures, de préférence 3. Le refroidissement n'est pas facultatif — le gazpacho est un plat fondamentalement froid et les saveurs ne s'intègrent pas avant le froid. Alors qu'il refroidit, l'émulsion d'huile d'olive se serrera, l'acide se moellera, et l'ail perdra sa netteté brute et fera partie de l'ensemble harmonique. Avant de servir, goûtez encore : le froid supprime la perception du sel, donc vous aurez presque certainement besoin d'une touche plus de sel et de vinaigre à ce stade. Servir dans des bols réfrigérés avec un fil d'huile d'olive, quelques gouttes de vinaigre de sherry supplémentaire, et en option des dés de concombre ou des herbes hachées sur le dessus.",
+      "visualCue": {
+        "primaryTarget": "La soupe s'est approfondie jusqu'à un riche, froid, rouge profond, sans mousse restante, un corps soyeux uniforme, et un léger reflet d'huile d'olive à la surface. Ça sent la tomate froide et l'été.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours à température ambiante ou juste légèrement frais — les saveurs sont crues et séparées, et l'huile d'olive flotte plutôt que de s'intégrer.",
+            "action": "Retourner au réfrigérateur. La soupe a vraiment besoin de 2 heures minimum à la température du réfrigérateur pour être son meilleur soi."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ice-froid partout, profondément aromatisé, équilibré entre la tomate douce, l'acide vif et l'huile d'olive herbacée. L'ail est présent mais pas tranchant.",
+            "action": "Ajuster le sel et le vinaigre de sherry, puis servir immédiatement dans des bols froids."
+          },
+          {
+            "state": "Overdone",
+            "description": "Laisser au réfrigérateur plus de 24 heures; l'ail s'est aiguisé et le pain a rendu la soupe légèrement collante.",
+            "action": "Peau encore une fois si collante. Un éclaboussure de vinaigre de sherry et une goutte d'huile d'olive peuvent raviver un lot légèrement sur-reposé."
+          }
+        ]
+      },
+      "feelCue": "La soupe finie doit verser comme de la crème froide — plus lourd que l'eau, avec une légère viscosité de l'huile émulsifiée et du pain. Il devrait frapper l'arrière de la gorge avec froid d'abord, puis une vague d'acide, puis le corps de tomate douce. Rien ne doit goûter cru ou tranchant."
+    }
+  ]
 };

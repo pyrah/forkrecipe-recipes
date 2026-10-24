@@ -1,108 +1,251 @@
 export default {
-  repoId: "master_french_roast-chicken_001",
-  parentRepoId: null,
-  slug: "roast-chicken",
-  author: "ForkRecipe Kitchen",
-  title: "Roast Chicken",
-  description: "The test of a cook, according to every French chef who ever lived — a whole bird, salt, butter, heat, and the nerve to leave it alone while the oven does its work.",
-  cuisine: "French",
-  culture: "French Farmhouse",
-  category: "proteins",
-  tags: ["chicken", "roast", "french", "whole-bird", "classic"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "1.5 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-02-28",
-  updatedAt: "2025-04-05",
-  flavorRadar: { sweet: 1, salty: 4, sour: 0, bitter: 0, umami: 6, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole chicken (1.5-1.8 kg)",  ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Seasoning", name: "Fine sea salt",               ratioValue: 1.5, defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Black pepper (freshly ground)", ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Unsalted butter (softened)",  ratioValue: 3,   defaultUnit: "parts", substitutions: ["duck fat", "olive oil"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Fresh thyme (whole sprigs)",  ratioValue: 1,   defaultUnit: "parts", substitutions: ["rosemary", "tarragon"] },
-    { ingId: "ing_06", role: "Citrus",    name: "Lemon (halved)",             ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_roast-chicken_001",
+  "parentRepoId": null,
+  "slug": "roast-chicken",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poulet rôti",
+  "description": "Le test d'un cuisinier, selon chaque chef français qui a jamais vécu, un oiseau entier, du sel, du beurre, de la chaleur et du nerf pour le laisser tranquille pendant que le four fait son travail.",
+  "cuisine": "Français",
+  "culture": "Ferme française",
+  "category": "proteins",
+  "tags": [
+    "poulet",
+    "rôti",
+    "français",
+    "Oiseaux entiers",
+    "classique"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "1.5 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-02-28",
+  "updatedAt": "2025-04-05",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 6,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Temper and dry",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "tempered_chicken",
-      instructions: "Remove the chicken from the refrigerator 1 hour before roasting. Pat it thoroughly dry inside and out with paper towels. Season generously inside the cavity and over every surface of the skin with salt. Set it on a rack over a tray and let it sit uncovered — the air-drying tightens the skin and the salt draws out surface moisture. Dry skin is the path to crisp skin.",
-      visualCue: {
-        primaryTarget: "The skin is matte, dry to the touch, and has tightened around the bird. Salt crystals are visible on the surface but not pooling in moisture.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is still damp and shiny. Moisture beading on the breast. The bird looks freshly unwrapped.", action: "Pat dry again and wait. In a pinch, a fan or open refrigerator for 30 minutes accelerates drying." },
-          { state: "Perfect",   description: "Skin is papery and taut, pulling slightly against the breast. Dry to the touch everywhere, including the thigh creases and wing pits.", action: "Proceed to butter and season." },
-          { state: "Overdone",  description: "Skin has dried to the point of looking leathery and desiccated. Salt has drawn a significant amount of liquid into the tray.", action: "This only happens with many hours of drying — the bird is fine, and the skin will crisp beautifully." },
-        ],
-      },
-      feelCue: "Drag a fingertip across the breast skin — it should feel like dry parchment, catching slightly on your fingerprint ridges. If your finger slides, moisture remains.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Poulet entier (1,5 à 1,8 kg)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Season and truss",
-      inputs: ["tempered_chicken", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "prepared_chicken",
-      instructions: "Rub the softened butter over the entire surface of the chicken, working it into every crevice — under the wings, between the thighs, and over the back. Season with pepper. Stuff the cavity with the lemon halves and thyme sprigs. Tie the legs together with kitchen twine and tuck the wing tips under the body. The trussing creates a compact shape that roasts evenly.",
-      visualCue: {
-        primaryTarget: "A compact, symmetrical bird coated in a thin, even layer of butter. Legs are crossed and tied. Wings are tucked. The cavity is just peeking open with thyme sprigs visible.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is applied unevenly — thick patches on the breast, bare spots on the thighs and back. Legs are splayed.", action: "Redistribute the butter. Truss the legs — loose legs cook faster than the breast, leading to dry dark meat." },
-          { state: "Perfect",   description: "Uniformly glossy with butter. Compact shape. Legs are snug together, wings tucked. Thyme and lemon visible in the cavity.", action: "Place in a hot oven." },
-          { state: "Overdone",  description: "Too much butter — it is pooling at the bottom and dripping off. The twine is too tight and cutting into the skin.", action: "Let the excess butter drip off. Loosen the twine slightly — it should hold, not strangle." },
-        ],
-      },
-      feelCue: "The trussed chicken should feel firm and compact in your hands, like a rugby ball. If it feels loose and floppy, tighten the truss. The butter should feel like a thin film, not a thick layer.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
     },
     {
-      nodeId: "step_3", action: "Roast",
-      inputs: ["prepared_chicken"],
-      outputState: "roasted_chicken",
-      instructions: "Place the chicken breast-side up in a roasting pan or cast-iron skillet. Roast at 220 C (425 F) for 55-70 minutes, depending on size. Do not open the oven for the first 30 minutes. After that, baste once with the rendered pan juices. The chicken is done when the juices from the thigh run clear and the internal temperature reaches 74 C (165 F) at the thickest part of the thigh.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown skin across the entire bird — evenly colored with darker spots at the wing tips and leg joints. The skin is taut and blistered in places. Pan juices are brown and bubbling.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is pale gold or spotty. Juices from the thigh run pink when pierced. The legs feel stiff when wiggled.", action: "Continue roasting in 10-minute increments. If the breast is browning faster than the legs, tent the breast loosely with foil." },
-          { state: "Perfect",   description: "Uniformly deep golden. Skin crackles when tapped. Thigh juices run clear. Legs wiggle freely in their sockets. Internal temp is 74 C (165 F). The bird smells intensely of roasted butter and thyme.", action: "Remove from oven and rest." },
-          { state: "Overdone",  description: "Skin is dark brown to charred in spots. The bird has shrunk noticeably. Breast meat feels firm and unyielding when pressed.", action: "The dark meat is likely still juicy — serve it first. Slice the breast thinly and serve with pan jus to compensate for dryness." },
-        ],
-      },
-      feelCue: "Wiggle a drumstick — it should move freely in its socket, almost as if it wants to detach. If it resists, the bird needs more time. The kitchen should smell like a Parisian rotisserie — brown butter, roasted herbs, and caramelized skin.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Poivre noir (fraîchir)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Rest",
-      inputs: ["roasted_chicken"],
-      outputState: "rested_chicken",
-      instructions: "Transfer the chicken to a cutting board and tent loosely with foil. Rest for 15-20 minutes. This is not optional — resting allows the juices to redistribute from the exterior back into the center of the meat. A rested chicken loses a tablespoon of juice when carved. An unrested one loses a quarter cup.",
-      visualCue: {
-        primaryTarget: "The bird is relaxed and slightly settled on the board. Only a small pool of clear, golden juice has collected beneath it. The skin is still taut and crisp.",
-        spectrum: [
-          { state: "Underdone", description: "You carved too early — juice is pouring from the cut surfaces. The meat is pale pink at the joint.", action: "Re-assemble the pieces, cover, and wait. Residual heat will finish carrying over." },
-          { state: "Perfect",   description: "When carved, the breast slices are uniformly opaque with a faint blush of pink near the bone. Juices are clear with a golden tint. The meat is moist and clings to itself.", action: "Carve and serve with the pan juices." },
-          { state: "Overdone",  description: "The chicken sat too long — skin has gone soft and leathery. The bird is lukewarm.", action: "Flash it under a hot broiler for 2 minutes to re-crisp the skin before serving." },
-        ],
-      },
-      feelCue: "Press the breast meat through the foil — it should feel like a firm but forgiving cushion, yielding under pressure and slowly springing back. If it feels hard, it is overcooked. If your thumb sinks in without resistance, it is undercooked.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé (doublé)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gras de canard",
+        "Huile d'olive"
+      ]
     },
     {
-      nodeId: "step_5", action: "Carve and serve",
-      inputs: ["rested_chicken"],
-      outputState: "finished_roast_chicken",
-      instructions: "Remove the twine. Separate the legs by cutting through the joint where the thigh meets the body. Separate thigh from drumstick. Carve the breast by slicing along the breastbone, then angling the knife to follow the ribcage. Arrange on a warm platter and spoon the collected pan juices over each piece.",
-      visualCue: {
-        primaryTarget: "Clean, even slices of breast meat with a thin line of crisp golden skin on top. Thigh and drumstick pieces show moist, dark meat pulling slightly from the bone. Pan juices glisten on every surface.",
-        spectrum: [
-          { state: "Underdone", description: "Breast meat is translucent and jiggles. Blood visible at the thigh joint. Juices are pink.", action: "Return the thigh and drumstick to a hot pan for 3-4 minutes. The breast may be fine — check its temperature." },
-          { state: "Perfect",   description: "Breast is opaque white with a blush of pink at the center near the bone. Dark meat is moist and pulls away from the bone in glossy fibers. Every piece glistens with jus.", action: "Bring to the table. This is the definition of Sunday dinner." },
-          { state: "Overdone",  description: "Breast meat is dry, fibrous, and stiff. Dark meat is still acceptable but the breast crumbles when cut.", action: "Drench the breast slices in pan jus. Serve with a sauce — a quick pan sauce with wine, butter, and the thyme from the cavity can rescue even dry chicken." },
-        ],
-      },
-      feelCue: "The knife should glide through the breast with almost no resistance — if you are sawing, the knife is dull or the meat has seized from overcooking. A perfectly rested, properly cooked breast makes a soft, moist sound as the knife passes through, like cutting cold butter.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Thym frais (branches entières)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "romarin",
+        "estragon"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Citrus",
+      "name": "Citron (réchauffé)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Temper et sec",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "tempered_chicken",
+      "instructions": "Retirer le poulet du réfrigérateur 1 heure avant la cuisson. Faites bien sécher à l'intérieur et à l'extérieur avec des serviettes en papier. Assaisonner généreusement à l'intérieur de la cavité et sur chaque surface de la peau avec du sel. Placez-le sur un support sur un plateau et laissez-le s'asseoir à découvert — le séchage à l'air resserre la peau et le sel dégage l'humidité de la surface. La peau sèche est le chemin vers la peau croustillante.",
+      "visualCue": {
+        "primaryTarget": "La peau est mate, sèche au toucher, et s'est serrée autour de l'oiseau. Les cristaux de sel sont visibles à la surface, mais ne se mêlent pas à l'humidité.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore humide et brillante. L'humidité perle sur le sein. L'oiseau a l'air fraîchement déballé.",
+            "action": "Pat sèche encore et attends. Dans une pincée, un ventilateur ou un réfrigérateur ouvert pendant 30 minutes accélère le séchage."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est papereuse et tendue, tirant légèrement sur la poitrine. Sécher au toucher partout, y compris les plis de cuisse et les fosses d'ailes.",
+            "action": "Passer au beurre et assaisonner."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau s'est séchée au point d'avoir l'air coriace et déshydratée. Le sel a attiré une quantité importante de liquide dans le plateau.",
+            "action": "Cela ne se produit qu'avec de nombreuses heures de séchage — l'oiseau est fin, et la peau se croquera magnifiquement."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser un bout de doigt sur la peau de la poitrine — il devrait se sentir comme un parchemin sec, attraper légèrement sur vos empreintes digitales. Si votre doigt glisse, l'humidité reste."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison et truss",
+      "inputs": [
+        "tempered_chicken",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "prepared_chicken",
+      "instructions": "Frottez le beurre ramolli sur toute la surface du poulet, en le travaillant dans chaque crevasse — sous les ailes, entre les cuisses et sur le dos. Assaisonner de poivre. Emportez la cavité avec les moitiés de citron et les brins de thym. Attachez les jambes avec la ficelle de cuisine et collez les bouts de l'aile sous le corps. La fermeture crée une forme compacte qui rôtit uniformément.",
+      "visualCue": {
+        "primaryTarget": "Un oiseau compact et symétrique recouvert d'une fine couche de beurre. Les jambes sont croisées et liées. Les ailes sont coincées. La cavité est juste à regarder ouverte avec des brins de thym visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est appliqué de façon inégale: taches épaisses sur la poitrine, taches nues sur les cuisses et le dos. Les jambes sont escarpées.",
+            "action": "Redistribuer le beurre. Truss les jambes — les jambes lâches cuisinent plus vite que la poitrine, ce qui conduit à la viande foncée sèche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement brillant avec du beurre. Forme compacte. Les jambes sont serrées ensemble, les ailes sont cousues. Thym et citron visibles dans la cavité.",
+            "action": "Mettre dans un four chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de beurre — il se met en commun au fond et coule. La ficelle est trop serrée et coupée dans la peau.",
+            "action": "Laissez couler l'excès de beurre. Enlevez légèrement la ficelle — elle devrait tenir, et non l'étrangler."
+          }
+        ]
+      },
+      "feelCue": "Le poulet trussé devrait se sentir ferme et compact dans vos mains, comme une balle de rugby. S'il se sent lâche et souple, serrez la mousse. Le beurre doit se sentir comme un mince film, pas comme une couche épaisse."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Rôtis",
+      "inputs": [
+        "prepared_chicken"
+      ],
+      "outputState": "roasted_chicken",
+      "instructions": "Placer la poitrine du poulet dans une poêle à rôtir ou en fonte. Faire cuire à 220 C (425 F) pendant 55-70 minutes, selon la taille. Ne pas ouvrir le four pendant les 30 premières minutes. Après cela, bastez une fois avec les jus de poêle rendus. Le poulet se fait lorsque le jus de la cuisse est dégagé et que la température interne atteint 74 C (165 F) à la partie la plus épaisse de la cuisse.",
+      "visualCue": {
+        "primaryTarget": "Peau dorée profonde sur l'ensemble de l'oiseau, uniformément colorée avec des taches plus foncées aux extrémités des ailes et aux articulations des jambes. La peau est tendue et cloquée dans les endroits. Les jus de pan sont bruns et bouillonnants.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est d'or pâle ou tachetée. Les jus de la cuisse sont roses lorsqu'ils sont percés. Les jambes se sentent raides quand elles sont fouettées.",
+            "action": "Continuer la cuisson en tranches de 10 minutes. Si la poitrine est brunie plus rapidement que les jambes, tentez la poitrine avec du papier."
+          },
+          {
+            "state": "Perfect",
+            "description": "De couleur dorée. La peau craque quand elle est tapée. Les jus de cuisse sont dégagés. Les jambes se déplacent librement dans leurs bases. La température interne est de 74 C (165 F). L'oiseau sent intensément le beurre rôti et le thym.",
+            "action": "Retirer du four et se reposer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau est brun foncé à carbonisé dans les taches. L'oiseau a nettement rétréci. La viande de sein est ferme et inépuisable lorsqu'elle est pressée.",
+            "action": "La viande noire est probablement encore juteuse — servez - la d'abord. Couper la poitrine finement et servir avec le jus de poêle pour compenser la sécheresse."
+          }
+        ]
+      },
+      "feelCue": "Percez un pilon — il devrait se déplacer librement dans sa prise, presque comme s'il voulait se détacher. Si elle résiste, l'oiseau a besoin de plus de temps. La cuisine doit sentir comme une rotisserie parisienne: beurre brun, herbes grillées et peau caramélisée."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "roasted_chicken"
+      ],
+      "outputState": "rested_chicken",
+      "instructions": "Transférer le poulet sur une planche à découper et la tente avec du papier. Reposez-vous 15-20 minutes. Ce n'est pas facultatif — le repos permet aux jus de se redistribuer de l'extérieur vers le centre de la viande. Un poulet reposé perd une cuillère à soupe de jus lorsqu'il est sculpté. On perd un quart de tasse.",
+      "visualCue": {
+        "primaryTarget": "L'oiseau est détendu et légèrement installé sur la planche. Seule une petite piscine de jus d'or clair a été recueillie sous elle. La peau est encore tendue et croquante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Vous avez sculpté trop tôt — le jus coule des surfaces coupées. La viande est rose pâle à l'articulation.",
+            "action": "Rassemblez les pièces, couvrez et attendez. La chaleur résiduelle finira par se déplacer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lorsqu'elles sont sculptées, les tranches de poitrine sont uniformément opaques avec un léger roussissement de rose près de l'os. Les jus sont clairs avec une teinte dorée. La viande est humide et s'accroche à elle-même.",
+            "action": "Découper et servir avec les jus de cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poulet est resté trop longtemps — la peau est devenue douce et sinueuse. L'oiseau est tiède.",
+            "action": "Faites-le clignoter sous un gril chaud pendant 2 minutes pour recouvrir la peau avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la viande de poitrine à travers la feuille — il devrait se sentir comme un coussin ferme mais pardonnant, donnant sous pression et jaillissant lentement. Si c'est dur, c'est trop cuit. Si votre pouce s'enfonce sans résistance, il est mal cuit."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Découper et servir",
+      "inputs": [
+        "rested_chicken"
+      ],
+      "outputState": "finished_roast_chicken",
+      "instructions": "Enlevez la ficelle. Séparer les jambes en coupant l'articulation où la cuisse rencontre le corps. Séparer la cuisse du pilon. Couper la poitrine en étirant le long de la poitrine, puis pêcher le couteau pour suivre la cage thoracique. Disposer sur un plateau chaud et cuillerer les jus de poêle collectés sur chaque morceau.",
+      "visualCue": {
+        "primaryTarget": "Nettoyer, même des tranches de viande de poitrine avec une fine ligne de peau dorée croustillante sur le dessus. Les morceaux de cuisse et de pilon montrent une viande humide et foncée qui tire légèrement de l'os. Les jus de pan brillent sur toutes les surfaces.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande de sein est translucide et jongle. Sang visible à l'articulation de la cuisse. Les jus sont roses.",
+            "action": "Retournez la cuisse et le pilon dans une poêle chaude pendant 3-4 minutes. Le sein peut être bien — vérifiez sa température."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le sein est blanc opaque avec un roussissement rose au centre près de l'os. La viande noire est humide et s'éloigne de l'os en fibres brillantes. Chaque pièce brille avec jus.",
+            "action": "Amène-toi à la table. C'est la définition du dîner du dimanche."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande est sèche, fibreuse et raide. La viande noire est toujours acceptable, mais la poitrine s'écroule lorsqu'elle est coupée.",
+            "action": "Drenchez les tranches de poitrine dans le jus de poêle. Servir avec une sauce — une sauce à casserole rapide avec du vin, du beurre, et le thym de la cavité peut sauver même le poulet sec."
+          }
+        ]
+      },
+      "feelCue": "Le couteau devrait glisser à travers la poitrine sans résistance — si vous êtes sciage, le couteau est terne ou la viande a saisi de la cuisson excessive. Une poitrine parfaitement reposée, bien cuite fait un son doux et humide au fur et à mesure que le couteau passe, comme couper le beurre froid."
+    }
+  ]
 };

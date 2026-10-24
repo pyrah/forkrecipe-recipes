@@ -1,96 +1,253 @@
 export default {
-  repoId: "master_mexican_salsa_roja_001",
-  parentRepoId: null,
-  slug: "salsa-roja",
-  author: "ForkRecipe Kitchen",
-  title: "Salsa Roja",
-  description: "Charred Roma tomatoes and dried chilies blended into a smoky, earthy table salsa with a deep roasted backbone and a bright, lingering heat.",
-  cuisine: "Mexican",
-  culture: "Mexican",
-  category: "sauces",
-  tags: ["salsa", "mexican", "roasted", "tomato", "chili", "vegan", "gluten-free"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "35 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 2, sour: 2, bitter: 2, umami: 3, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",      name: "Roma tomatoes (ripe, halved lengthwise)",         ratioValue: 10,  defaultUnit: "parts", substitutions: ["vine-ripe tomatoes", "canned fire-roasted tomatoes"] },
-    { ingId: "ing_02", role: "Heat",      name: "Dried guajillo chilies (stems and seeds removed)", ratioValue: 2,  defaultUnit: "parts", substitutions: ["ancho chili for milder version"] },
-    { ingId: "ing_03", role: "Heat",      name: "Dried árbol chilies (stems removed)",             ratioValue: 1,   defaultUnit: "parts", substitutions: ["cayenne for heat only"] },
-    { ingId: "ing_04", role: "Allium",    name: "White onion, cut into thick wedges",              ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves, unpeeled",                         ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Dried Mexican oregano",                           ratioValue: 0.3, defaultUnit: "parts", substitutions: ["fresh epazote"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine salt",                                       ratioValue: 0.8, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Acid",      name: "Fresh lime juice",                                ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Fat",       name: "Neutral oil (for frying)",                        ratioValue: 1,   defaultUnit: "parts", substitutions: ["lard"] },
+  "repoId": "master_mexican_salsa_roja_001",
+  "parentRepoId": null,
+  "slug": "salsa-roja",
+  "author": "ForkRecipe Kitchen",
+  "title": "Salsa Roja",
+  "description": "Tomates de Charred Roma et chilis séchés mélangés dans une salsa de table fumée et terreuse avec une colonne vertébrale torréfié profonde et une chaleur vive et persistante.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain",
+  "category": "sauces",
+  "tags": [
+    "salsa",
+    "Mexique",
+    "grillés",
+    "tomates",
+    "Chili",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "35 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Char vegetables",
-      inputs: ["ing_01", "ing_04", "ing_05"],
-      outputState: "charred_vegetables",
-      instructions: "Heat a dry comal or heavy cast-iron skillet over high heat until it starts to smoke. Place the tomato halves cut-side down, onion wedges, and unpeeled garlic directly on the dry surface. Do not add oil. Char everything: tomatoes should develop patches of true black on the cut face and the skins should blister and split; onion wedges should char at the edges and soften through; garlic should darken in the peel and feel soft when squeezed. Turn everything once or twice and remove as it reaches the right level of char. The garlic will take about 6-8 minutes, the tomatoes 5-7, the onion 8-10.",
-      visualCue: {
-        primaryTarget: "Tomato cut-faces are a patchwork of charred black, blistered skin, and caramelized red flesh. Onion wedges are softened and blackened at their tips. Garlic peel is dark brown and the cloves inside are golden and soft when squeezed.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are only lightly colored or steam-soft rather than char-roasted. The salsa will lack its characteristic smoky, bitter-sweet backbone.", action: "Return to the comal and press firmly to maximize contact. Resist moving them — the char requires sustained contact with the hot surface." },
-          { state: "Perfect",   description: "All three components carry visible black char alongside caramelized, softened flesh. The kitchen smells of wood smoke and sweet roasted tomato. Peeled garlic cloves are golden and completely soft.", action: "Transfer to a blender or molcajete along with the chili and proceed immediately." },
-          { state: "Overdone",  description: "Tomatoes have collapsed completely and turned to black mush — too charred to provide any tomato body to the salsa.", action: "You can still use them — reduce or omit the salt and add a fresh raw tomato to the blender to restore body and balance the bitterness." },
-        ],
-      },
-      feelCue: "Press a tomato half with a spoon: it should give easily, the flesh soft and steaming beneath a charred exterior. The garlic clove squeezed in its skin should pop out as a golden paste — zero resistance.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Tomates roms (mûres, coupées en deux dans le sens de la longueur)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates mûres de vigne",
+        "tomates cuites au feu en conserve"
+      ]
     },
     {
-      nodeId: "step_2", action: "Toast chilies",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "toasted_chilies",
-      instructions: "On the same hot comal, toast the dried guajillo and árbol chilies. Press each chili flat for 10-15 seconds per side using a spatula — you want them to puff slightly, release a toasted chili fragrance, and develop a few darker spots. Do not char them as heavily as the tomatoes; the goal is to wake up their earthy, fruit-dried flavors and soften them slightly. Once toasted, immediately soak in just-boiled water for 10 minutes to rehydrate before blending. Drain and use as is — no need to strain the soaking liquid away unless it is very bitter.",
-      visualCue: {
-        primaryTarget: "Chilies have puffed slightly and smell toasted and earthy — fragrant like dried fruit and smoke. Their color has deepened to a glossy, dark mahogany. After soaking, they are supple and tear easily.",
-        spectrum: [
-          { state: "Underdone", description: "Chilies are still dusty-smelling and stiff, not puffed or fragrant. They'll taste flat and raw in the finished salsa.", action: "Press them more firmly on the hot comal and wait for the unmistakable toasted chili fragrance before removing." },
-          { state: "Perfect",   description: "Puffed, glossy, fragrant. After soaking, they tear like wet leather — supple with no stiffness. Smell is complex: toasted, smoky, and fruity.", action: "Drain and add to the blender with the charred vegetables." },
-          { state: "Overdone",  description: "Chilies are charred black and smell acrid. The soaking water will be bitterly unpleasant and should be discarded.", action: "Discard and start with fresh chilies — scorched guajillo in particular becomes harshly bitter and cannot be rescued." },
-        ],
-      },
-      feelCue: "A perfectly rehydrated chili folds in your fingers without cracking or tearing — it has the suppleness of a damp cloth and smells simultaneously like raisins, leather, and a distant wood fire.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Piments de guajillo séchés (tiges et graines enlevées)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ancho chili pour version plus légère"
+      ]
     },
     {
-      nodeId: "step_3", action: "Blend",
-      inputs: ["charred_vegetables", "toasted_chilies", "ing_06", "ing_07", "ing_08"],
-      outputState: "blended_salsa",
-      instructions: "Peel the garlic from its charred skins. Add the charred tomatoes (with their skins and any charred bits), onion, garlic, drained chilies, and dried oregano to a blender. Blend at high speed for 30-60 seconds — not too long. A great salsa roja has texture: visible flecks of chili skin, small tomato seed pockets, a slightly coarse consistency. Season with salt and add lime juice. Taste: it should be smoky, deep, and earthy with a bright acid finish and present but not overwhelming heat.",
-      visualCue: {
-        primaryTarget: "A deep brick-red to near-black salsa with a slightly coarse texture and visible flecks of chili skin. It pours in a loose, scoopable stream — not a smooth purée, not a watery broth.",
-        spectrum: [
-          { state: "Underdone", description: "Too coarse and chunky — pieces of onion and tomato are barely broken down, and the sauce lacks cohesion.", action: "Pulse the blender a few more times to break down the larger pieces while maintaining texture." },
-          { state: "Perfect",   description: "Cohesive, slightly coarse, a deep brick-red. It coats a chip evenly and doesn't run off immediately. The color is complex — red, brown, and dark — not flat red.", action: "Proceed to the frying step for the final blooming of flavor." },
-          { state: "Overdone",  description: "Blended to a completely smooth, aerated purée — more like a soup than a salsa. The texture has been lost.", action: "You can still use it as is, but call it salsa taquera rather than salsa roja for honesty." },
-        ],
-      },
-      feelCue: "The blended salsa should feel slightly gritty and substantial when rubbed between fingers — not smooth like a purée, not watery like juice. The heat from the chilies should arrive on the palate 2-3 seconds after tasting, not immediately.",
+      "ingId": "ing_03",
+      "role": "Heat",
+      "name": "Chilies séchées (tiges enlevées)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cayenne pour la chaleur seulement"
+      ]
     },
     {
-      nodeId: "step_4", action: "Fry the salsa",
-      inputs: ["blended_salsa", "ing_09"],
-      outputState: "finished_salsa_roja",
-      instructions: "Heat the oil in a saucepan over medium-high until shimmering. Carefully pour in the blended salsa — it will spit and hiss violently. Stir and fry, letting the salsa sizzle in the hot oil for 3-5 minutes, stirring frequently. This brief frying — called 'freír la salsa' — deepens the color, concentrates the flavor, and integrates the raw edges. The salsa will darken slightly, reduce a little, and develop a more unified, round flavor. Taste again for salt and lime.",
-      visualCue: {
-        primaryTarget: "The salsa has darkened 1-2 shades from blending to a deeper brick-red-brown. It is actively sizzling and sputtering in the oil, and the aroma is roasted and concentrated rather than raw.",
-        spectrum: [
-          { state: "Underdone", description: "The salsa still tastes sharp and raw — the chili and tomato haven't integrated. It looks the same as it did when first blended.", action: "Continue frying — the transformation takes the full 3-5 minutes of active sizzling in hot oil." },
-          { state: "Perfect",   description: "Slightly darker, unified, and round — a single cohesive flavor rather than distinct notes of tomato, chili, and char. The smell is deeply savory and roasted.", action: "Remove from heat, cool slightly, and serve at room temperature as a table salsa or taco condiment." },
-          { state: "Overdone",  description: "Salsa has reduced to a thick paste and is beginning to stick and scorch at the bottom of the pan. The water has cooked off too quickly.", action: "Add a splash of water, stir to deglaze and loosen, and immediately reduce heat." },
-        ],
-      },
-      feelCue: "The frying salsa should gradually quiet down from a violent spitting sizzle to a gentler, slower bubble. When it stops sounding like a rainstorm and begins sounding like a slow simmer, the freír is done.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc, coupé en quartiers épais",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail, non pelées",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Origan mexicain séché",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "épazote frais"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 0.8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile neutre (pour friture)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Saindoux"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Légumes-char",
+      "inputs": [
+        "ing_01",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "charred_vegetables",
+      "instructions": "Chauffer à feu vif une poêle sèche en fonte comale ou lourde jusqu'à ce qu'elle commence à fumer. Déposer les moitiés de tomates coupées, les coins d'oignon et l'ail non pelé directement sur la surface sèche. Ne pas ajouter d'huile. Char tout: les tomates devraient développer des taches de vrai noir sur la face coupée et les peaux devraient blister et fendre; les coins d'oignon devraient char sur les bords et adoucir; l'ail devrait s'assombrir dans la peau et se sentir doux quand pressé. Tourner tout une ou deux fois et enlever comme il atteint le bon niveau de char. L'ail prendra environ 6-8 minutes, les tomates 5-7, l'oignon 8-10.",
+      "visualCue": {
+        "primaryTarget": "Les découpes de tomates sont un patchwork de peau noire carbonisée, cloquée et caramélisée. Les coins d'oignon sont adoucis et noircis à leur extrémité. L'ail est brun foncé et les gousses à l'intérieur sont dorées et douces lorsqu'elles sont pressées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes ne sont que légèrement colorés ou mous à la vapeur plutôt que grillés à l'omble. La salsa manquera de son épine dorsale fumée et douce.",
+            "action": "Revenez au comal et appuyez fermement pour maximiser le contact. Résistez à les déplacer — l'omble nécessite un contact soutenu avec la surface chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les trois composants portent de l'omble noir visible à côté de la chair caramélisée et ramollie. La cuisine sent la fumée de bois et la tomate torréfié. Les gousses d'ail pelées sont dorées et complètement douces.",
+            "action": "Transférer dans un mélangeur ou un molcajete avec le chili et procéder immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tomates se sont complètement effondrées et se sont transformées en bouillies noires — trop carbonisées pour fournir un corps de tomate à la salsa.",
+            "action": "Vous pouvez encore les utiliser — réduire ou omettre le sel et ajouter une tomate fraîche crue au mélangeur pour rétablir le corps et équilibrer l'amertume."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la moitié de la tomate avec une cuillère : elle devrait donner facilement, la chair douce et vapeur sous un extérieur carbonisé. La gousse d'ail pressée dans sa peau doit apparaître comme une pâte dorée — aucune résistance."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Pilies de Toast",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "toasted_chilies",
+      "instructions": "Sur le même comal chaud, toast le guajillo séché et les piments árbol. Appuyez sur chaque plat de chili pendant 10-15 secondes de chaque côté en utilisant une spatule — vous voulez qu'ils bouffent légèrement, relâchez un parfum de chili grillé, et développez quelques taches plus foncées. Ne les charriez pas autant que les tomates; l'objectif est de réveiller leurs saveurs terreuses, séchées aux fruits et de les adoucir légèrement. Une fois grillé, trempez immédiatement dans de l'eau juste bouillie pendant 10 minutes pour réhydrater avant de mélanger. Égoutter et utiliser tel quel — il n'est pas nécessaire d'éloigner le liquide imbibé à moins qu'il ne soit très amer.",
+      "visualCue": {
+        "primaryTarget": "Les chilies ont soufflé légèrement et sentent la terre grillée, parfumée comme des fruits secs et de la fumée. Leur couleur s'est approfondie jusqu'à une acajou sombre et brillante. Après trempe, ils sont souples et déchirent facilement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les chilis sont encore poussiéreux et raides, non gonflés ni parfumés. Ils goûteront plat et cru dans la salsa finie.",
+            "action": "Pressez-les plus fermement sur le comal chaud et attendez le parfum de chili grillé incomparable avant de le retirer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Puffé, brillant, parfumé. Après avoir trempé, ils se déchirent comme du cuir mouillé — souple sans raideur. L'odeur est complexe : grillée, fumée et fruitée.",
+            "action": "Égoutter et ajouter au mélangeur avec les légumes carbonisés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les chilies sont noir carbonisé et sentent l'acride. L'eau de trempage sera amèrement désagréable et devrait être jetée.",
+            "action": "Jeter et commencer par des chilis frais — le guajillo brûlé en particulier devient durement amer et ne peut être sauvé."
+          }
+        ]
+      },
+      "feelCue": "Un chili parfaitement réhydraté se plie dans les doigts sans craquer ni déchirer — il a la souplesse d'un chiffon humide et sent simultanément comme des raisins secs, du cuir et un feu de bois lointain."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "charred_vegetables",
+        "toasted_chilies",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "blended_salsa",
+      "instructions": "Peler l'ail de ses peaux carbonisées. Ajouter les tomates carbonisées (avec leurs peaux et les morceaux carbonisés), l'oignon, l'ail, les chilis égouttés et l'origan séché à un mélangeur. Mélanger à haute vitesse pendant 30-60 secondes — pas trop longtemps. Une grande salsa roja a une texture : des taches visibles de peau de chili, de petites poches de graines de tomate, une consistance légèrement grossière. Assaisonner de sel et ajouter le jus de lime. Bouche : Il doit être fumé, profond et terreux avec une finition acide brillante et présente mais pas une chaleur écrasante.",
+      "visualCue": {
+        "primaryTarget": "Salsa rouge brique profonde à presque noire avec une texture légèrement grossière et des taches visibles de peau de chili. Il se déverse dans un ruisseau lâche et écorcable, pas une purée lisse, pas un bouillon aqueux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Trop grossière et trop épaisse — les morceaux d'oignon et de tomate sont à peine décomposés, et la sauce manque de cohésion.",
+            "action": "Pulse le mélangeur encore quelques fois pour décomposer les pièces plus grandes tout en conservant la texture."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cohésif, légèrement grossier, un rouge-brique profond. Il enveloppe une puce uniformément et ne s'enfuit pas immédiatement. La couleur est complexe — rouge, brun et foncé — pas rouge plat.",
+            "action": "Passer à l'étape de friture pour la floraison finale de saveur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mélange à une purée aérée complètement lisse, plus comme une soupe qu'une salsa. La texture a été perdue.",
+            "action": "Vous pouvez toujours l'utiliser tel quel, mais appelez-le salsa taquera plutôt que salsa roja pour l'honnêteté."
+          }
+        ]
+      },
+      "feelCue": "La salsa mélangée doit se sentir légèrement râpée et substantielle lorsqu'elle est frottée entre les doigts — pas lisse comme une purée, pas aqueuse comme du jus. La chaleur des piments devrait arriver en bouche 2-3 secondes après la dégustation, pas immédiatement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Faire frire la salsa",
+      "inputs": [
+        "blended_salsa",
+        "ing_09"
+      ],
+      "outputState": "finished_salsa_roja",
+      "instructions": "Chauffer l'huile dans une casserole à feu moyen-élevé jusqu'à ce qu'elle mijote. Versez soigneusement la salsa mélangée — elle crachera et sifflera violemment. Mélanger et faire frire, en laissant la salsa tordre dans l'huile chaude pendant 3-5 minutes, en remuant fréquemment. Cette brève friture, appelée « freír la salsa », approfondit la couleur, concentre la saveur et intègre les bords bruts. La salsa va s'assombrir légèrement, réduire un peu, et développer une saveur plus unifiée, ronde. Goûtez encore pour le sel et la chaux.",
+      "visualCue": {
+        "primaryTarget": "La salsa a obscurci 1-2 nuances du mélange à une brique-rouge-brun plus profonde. Elle est activement étourdissante et saupoudrée dans l'huile, et l'arôme est torréfié et concentré plutôt que cru.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La salsa a encore un goût vif et brut, le chili et la tomate n'ont pas été intégrés. Il ressemble à ce qu'il a fait lors du premier mélange.",
+            "action": "Continuer à frire — la transformation prend les 3-5 minutes complètes de grésillage actif dans l'huile chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un peu plus foncé, unifié et rond — une saveur unique et cohésive plutôt que des notes distinctes de tomates, de chili et d'omble. L'odeur est profondément salée et torréfié.",
+            "action": "Retirer du feu, refroidir légèrement et servir à la température ambiante comme salsa de table ou condiment de taco."
+          },
+          {
+            "state": "Overdone",
+            "description": "La salsa a été réduite à une pâte épaisse et commence à coller et à brûler au fond de la poêle. L'eau a cuit trop vite.",
+            "action": "Ajouter une éclaboussure d'eau, remuer pour déglacer et desserrer, et réduire immédiatement la chaleur."
+          }
+        ]
+      },
+      "feelCue": "La salsa à frire devrait progressivement se calmer d'une violente crache à une bulle plus douce et plus lente. Quand il cesse de sonner comme une tempête de pluie et commence à sonner comme une mijote lente, le freír est fait."
+    }
+  ]
 };

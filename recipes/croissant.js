@@ -1,116 +1,268 @@
 export default {
-  repoId: "master_french_croissant_001",
-  parentRepoId: null,
-  slug: "croissant",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "French Laminated Butter Croissant",
-  description: "Three days of chilling and folding trap cold butter between hundreds of dough layers — when baked, the butter steams the layers apart into a shattering, honeycomb crumb with a caramel-lacquered crust that perfumes the kitchen for an hour.",
-  cuisine: "French",
-  culture: "Parisian",
-  category: "breads",
-  tags: ["bread", "pastry", "laminated", "french", "butter", "croissant", "viennoiserie"],
-  difficulty: 5,
-  activeTime: "2 hours",
-  totalTime: "20 hours",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 3, sour: 1, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Strong bread flour (13–14% protein)",      ratioValue: 100, defaultUnit: "%", substitutions: ["T55 French flour"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Cold whole milk",                           ratioValue: 55,  defaultUnit: "%", substitutions: ["water (less rich)"] },
-    { ingId: "ing_03", role: "Sweetener",  name: "Sugar",                                     ratioValue: 10,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine salt",                                 ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Leavener",   name: "Instant yeast",                             ratioValue: 1.5, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",        name: "Unsalted butter (détrempe — dough butter)", ratioValue: 8,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Dairy",      name: "Unsalted European-style butter 84%+ fat (beurrage — lamination butter)", ratioValue: 50, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_08", role: "Protein",    name: "Egg yolk + whole egg for egg wash",         ratioValue: null, defaultUnit: "wash", substitutions: [] },
+  "repoId": "master_french_croissant_001",
+  "parentRepoId": null,
+  "slug": "croissant",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Beurre feuilleté français croissant",
+  "description": "Trois jours de refroidissement et de pliage piègent le beurre froid entre des centaines de couches de pâte — lorsqu'il est cuit, le beurre les sépare en une miette en nid d'abeille avec une croûte de caramel qui parfume la cuisine pendant une heure.",
+  "cuisine": "Français",
+  "culture": "Parisien",
+  "category": "breads",
+  "tags": [
+    "pain",
+    "pâtisserie",
+    "laminés",
+    "français",
+    "beurre",
+    "croissant",
+    "Viennoiserie"
   ],
-  processNodes: [
+  "difficulty": 5,
+  "activeTime": "2 hours",
+  "totalTime": "20 hours",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "detrempe_dough",
-      instructions: "Combine flour, sugar, salt, and yeast (keep salt and yeast on opposite sides of the bowl before mixing). Add cold milk and softened dough butter. Mix with a dough hook on low for 3 minutes, then medium for 4–5 minutes — develop the dough only to moderate gluten strength. Unlike bread dough, you do NOT want fully developed gluten here: a tight, over-kneaded dough will tear during lamination. The détrempe should be smooth, cohesive, and only barely tacky. Shape into a flat rectangle, wrap in plastic, and refrigerate for a minimum of 1 hour (overnight preferred).",
-      visualCue: {
-        primaryTarget: "A smooth, barely tacky rectangle with a matte surface. Does not spring back aggressively when pressed. Has some elasticity but yields.",
-        spectrum: [
-          { state: "Underdone", description: "Shaggy and rough. Tears when you stretch it. Dough has not come together.", action: "Mix for 2 more minutes. The dough must be cohesive before chilling." },
-          { state: "Perfect",   description: "Smooth, uniform, slightly elastic but pliable. Springs back slowly — not snapping. Barely tacky.", action: "Flatten to a 2 cm rectangle, wrap tightly, and refrigerate at least 1 hour." },
-          { state: "Overdone",  description: "Very elastic, snaps back immediately, surface is very smooth and tight.", action: "The gluten is too developed. Rest in the fridge for 2 hours minimum before laminating — a cold rest relaxes it." },
-        ],
-      },
-      feelCue: "The détrempe should feel like soft, cold leather — pliable and smooth, with just enough resistance that you know gluten is present. Not rubbery, not floppy.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain forte (13–14% de protéines)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "T55 Farine française"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Temper",
-      inputs: ["ing_07"],
-      outputState: "butter_block",
-      instructions: "Place the cold lamination butter between two sheets of parchment. Using a rolling pin, beat and roll it into a flat square approximately 18 x 18 cm and exactly 1 cm thick. The butter must be cold but pliable — it should flex without cracking or crumbling. This is the most critical preparation step. Ideal butter temperature is 15–17 C. If the butter is too warm it will smear into the dough; too cold and it will shatter and create holes during lamination, ruining the layers.",
-      visualCue: {
-        primaryTarget: "A flat, even, 18 x 18 cm square of butter that bends slightly without cracking. Edges are clean and the block holds its shape at room temperature for at least 60 seconds.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is very cold and snaps or crumbles when you flex the parchment.", action: "Leave at room temperature 5–10 minutes. Lightly tap with the rolling pin to make it pliable without warming it." },
-          { state: "Perfect",   description: "Butter flexes like cold clay — bends 45 degrees without cracking. Cool to the touch but not hard.", action: "Work quickly. Begin laminating with the détrempe immediately." },
-          { state: "Overdone",  description: "Butter has softened and is greasy, spreading beyond the parchment edges.", action: "Return to the fridge for 10 minutes. Never laminate with warm butter." },
-        ],
-      },
-      feelCue: "Press your fingertip against the butter block — it should leave a clean indent without the butter smearing or sticking. Like pressing into cold wax.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Lait entier froid",
+      "ratioValue": 55,
+      "defaultUnit": "%",
+      "substitutions": [
+        "eau (moins riche)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["detrempe_dough", "butter_block"],
-      outputState: "laminated_dough",
-      instructions: "Roll the chilled détrempe on a lightly floured surface into a rectangle that is exactly twice the width of the butter block and the same height. Place the butter block on one half of the dough. Fold the other half over to encase the butter completely. Press the edges to seal. You have now created the initial butter package. Roll the package carefully, always away from you, into a long rectangle 8–10 mm thick. Work fast and confidently — hesitant rolling causes tearing. Complete 3 book folds (double folds) with 30–60 minutes refrigeration between each fold: after the first fold, wrap and chill for 45 minutes; after the second, chill 30 minutes; after the third, chill for 30 minutes before cutting.",
-      visualCue: {
-        primaryTarget: "After rolling and folding, the dough shows a clean marble-pattern of butter layers when viewed from the cut edge. No butter smearing or bleed-through. Edges stay clean and squared.",
-        spectrum: [
-          { state: "Underdone", description: "Butter has fractured into chunks. You can see large solid butter pieces rather than even layers when you peek at the edge.", action: "The butter was too cold. Chill the dough and let it rest 30 minutes. On the next fold, roll more gently to break up chunks gradually." },
-          { state: "Perfect",   description: "Fine, even layering visible at the cut edge. Dough is cold, firm, rolls smoothly. No butter breaking through the surface.", action: "Chill for the required resting period before the next fold." },
-          { state: "Overdone",  description: "Butter has melted and smeared into the dough — no visible layers, greasy surface, dough looks wet.", action: "The dough is too warm. Chill immediately for 1 hour. If the butter is fully absorbed, the lamination is lost — the croissants will bake without layers." },
-        ],
-      },
-      feelCue: "After each fold, the dough should feel cold, firm, and slightly resistant under the rolling pin — never warm, never soft. If your hand warms the dough through the parchment in less than 30 seconds, it is too warm to work with.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 10,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Shape",
-      inputs: ["laminated_dough"],
-      outputState: "shaped_croissants",
-      instructions: "Roll the fully laminated dough to 4–5 mm thickness in a long rectangle. Cut triangles with a base of 10 cm and sides of 20 cm. Stretch each triangle gently to 25 cm. Starting from the wide base, roll forward firmly without squeezing — the pressure should be confident but never crushing. 7–8 rolls should bring you to the tip. Curve the two ends toward you to create the classic crescent. Place on a parchment-lined pan with the tip tucked underneath (tip touching the pan prevents unrolling during proofing). Space 6 cm apart.",
-      visualCue: {
-        primaryTarget: "A tightly wound crescent with the tip secured underneath. The dough strands wrap visibly around the body, even in thickness from end to end.",
-        spectrum: [
-          { state: "Underdone", description: "Croissant is loosely wound — strands are uneven and the body is thick in the center but thin at the ends.", action: "Unroll and start again. Press from the base and roll with consistent, even pressure." },
-          { state: "Perfect",   description: "Compact, even crescent. Tip is tucked. The multiple dough layers are just barely visible at the cut ends as fine rings.", action: "Egg wash once lightly and let proof at 25–27 C." },
-          { state: "Overdone",  description: "Rolled so tightly the croissant is dense and sausage-like. Layering compressed.", action: "Allow to proof longer — extra proofing time may open the layers back up. They may not shatter as dramatically." },
-        ],
-      },
-      feelCue: "A correctly shaped croissant feels lighter than it should for its size — the laminated layers have air between them. When you lift it, there is almost a papery quality to the outside while the body feels substantial.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Bake",
-      inputs: ["shaped_croissants", "ing_08"],
-      outputState: "finished_croissants",
-      instructions: "Proof shaped croissants at 25–27 C (no warmer — above 29 C the butter melts and the layers collapse) for 2–3 hours until visibly puffed and jiggling when the pan is shaken. They will not double in height — they expand outward and the layering relaxes. Apply egg wash (1 yolk + 1 whole egg, strained) very gently with a brush, avoiding the cut edges (sealing the layers prevents rise). Let rest 10 minutes, apply a second wash. Bake at 190 C (375 F) for 18–22 minutes, rotating once at 10 minutes. The butter must steam the layers apart — this happens in the first 5 minutes.",
-      visualCue: {
-        primaryTarget: "Deep amber-brown with a lacquered gloss. Individual layers are visibly separated and standing at the cut ends. The crescent has expanded and the tail points stick out from a puffy, layered body.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold, no layer separation visible at the ends. Feels soft and yielding — butter has not steamed the layers open.", action: "Bake another 3–5 minutes. Pale croissants are undercooked; their interior will be raw and doughy." },
-          { state: "Perfect",   description: "Rich amber-brown, gloss, clear layer separation at the cut ends showing a honeycomb crumb pattern. The croissant rattles slightly when shaken — hollow sound inside. Shatters when you break it.", action: "Cool 10 minutes on the rack. Eat within 2 hours for maximum shatter." },
-          { state: "Overdone",  description: "Very dark brown, almost burnt on the crescent tips. Bitter caramel smell. Layer ends are crisp-hard.", action: "The interior may still be excellent. Trim the darkest tips. The shatter is now maximum — enjoy immediately." },
-        ],
-      },
-      feelCue: "A perfect croissant breaks with a shattering crunch that sends flakes of laminated crust flying. The interior is a honeycomb of fine, buttery layers — pull one apart and count 27 or more. The smell should be sweet butter, caramel, and bread all at once.",
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé (détempe — beurre à pâte)",
+      "ratioValue": 8,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Dairy",
+      "name": "Beurre non salé de type européen 84%+ matières grasses (beurrage — beurre de laminage)",
+      "ratioValue": 50,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Protein",
+      "name": "Jaune d'œuf + œuf entier pour le lavage des œufs",
+      "ratioValue": null,
+      "defaultUnit": "wash",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "detrempe_dough",
+      "instructions": "Mélanger la farine, le sucre, le sel et la levure (conserver le sel et la levure sur les côtés opposés du bol avant de mélanger). Ajouter le lait froid et le beurre de pâte ramolli. Mélanger avec un crochet de pâte à feu doux pendant 3 minutes, puis de 4 à 5 minutes en moyenne — ne développer la pâte qu'à une résistance modérée au gluten. Contrairement à la pâte à pain, vous ne voulez PAS de gluten entièrement développé ici: une pâte serrée, sur-collée va se déchirer pendant la lamination. La détente doit être lisse, cohésive et à peine piquante. Former en rectangle plat, envelopper en plastique et réfrigérer pendant au moins 1 heure (la nuit préférée).",
+      "visualCue": {
+        "primaryTarget": "Un rectangle lisse, à peine tacky avec une surface mate. Ne ressort pas agressivement quand pressé. A une certaine élasticité mais les rendements.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Shaggy et dur. Des larmes quand vous l'étirez. Dough ne s'est pas réuni.",
+            "action": "Mélanger encore 2 minutes. La pâte doit être cohésive avant de refroidir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, uniforme, légèrement élastique mais souple. Les ressorts reviennent lentement — ne se cassent pas. C'est à peine collant.",
+            "action": "Aplatir jusqu'à un rectangle de 2 cm, envelopper soigneusement et réfrigérer au moins 1 heure."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très élastique, se ressort immédiatement, la surface est très lisse et serrée.",
+            "action": "Le gluten est trop développé. Reposez-vous au réfrigérateur pendant 2 heures au minimum avant de laminer."
+          }
+        ]
+      },
+      "feelCue": "Le détrempe devrait se sentir comme du cuir doux et froid — souple et lisse, avec juste assez de résistance que vous savez que le gluten est présent. Pas caoutchouteux, pas floppy."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Température",
+      "inputs": [
+        "ing_07"
+      ],
+      "outputState": "butter_block",
+      "instructions": "Placez le beurre de lamination à froid entre deux feuilles de parchemin. À l'aide d'un rouleau, battre et rouler dans un carré plat d'environ 18 x 18 cm et exactement 1 cm d'épaisseur. Le beurre doit être froid mais souple, il doit fléchir sans craquer ni s'effondrer. C'est l'étape de préparation la plus critique. La température idéale du beurre est de 15–17 C. Si le beurre est trop chaud, il se frottera dans la pâte; trop froid et il se brisera et créera des trous pendant la laminage, détruisant les couches.",
+      "visualCue": {
+        "primaryTarget": "Un carré plat, même, de 18 x 18 cm de beurre qui plie légèrement sans craquelure. Les bords sont propres et le bloc conserve sa forme à température ambiante pendant au moins 60 secondes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est très froid et craque ou s'émiette lorsque vous fléchissez le parchemin.",
+            "action": "Laisser à température ambiante 5-10 minutes. Tapez légèrement avec le rouleau pour le rendre souple sans le réchauffer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le beurre se fléchit comme de l'argile froide — plie 45 degrés sans craquer. Cool au toucher mais pas dur.",
+            "action": "Travaillez vite. Commencer immédiatement la stratification avec le détrempe."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre s'est adouci et est gras, se répandant au-delà des bords du parchemin.",
+            "action": "Retourner au réfrigérateur pendant 10 minutes. Ne jamais stratifié avec du beurre chaud."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le bout du doigt contre le bloc de beurre — il doit laisser un tiret propre sans que le beurre se frotte ou colle. Comme presser dans de la cire froide."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "detrempe_dough",
+        "butter_block"
+      ],
+      "outputState": "laminated_dough",
+      "instructions": "Rouler le détéré réfrigéré sur une surface légèrement farinée dans un rectangle qui est exactement deux fois la largeur du bloc de beurre et la même hauteur. Placez le bloc de beurre sur la moitié de la pâte. Pliez l'autre moitié pour envelopper complètement le beurre. Appuyez sur les bords pour sceller. Vous avez maintenant créé le paquet initial de beurre. Roulez soigneusement le paquet, toujours loin de vous, dans un long rectangle de 8 à 10 mm d'épaisseur. Travaillez rapidement et en toute confiance. Compléter 3 plis de livre (double plis) avec 30 à 60 minutes de réfrigération entre chaque plis: après le premier plis, envelopper et refroidir pendant 45 minutes; après le second, refroidir 30 minutes; après le troisième, refroidir pendant 30 minutes avant de couper.",
+      "visualCue": {
+        "primaryTarget": "Après le laminage et le pliage, la pâte montre un modèle de marbre propre de couches de beurre vu du bord de coupe. Pas de frottis de beurre ou de saignement. Les bords restent propres et carrés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre s'est fracturé en morceaux. Vous pouvez voir de gros morceaux de beurre massif plutôt que de même les couches quand vous regardez au bord.",
+            "action": "Le beurre était trop froid. Refroidissez la pâte et laissez reposer 30 minutes. Au pli suivant, rouler plus doucement pour casser progressivement les morceaux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Fine, même couche visible au bord de la coupe. La toux est froide, ferme, roule bien. Pas de beurre qui traverse la surface.",
+            "action": "Réfrigérer pour la période de repos requise avant le prochain pli."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre a fondu et a été frotté dans la pâte — aucune couche visible, surface grasse, pâte semble humide.",
+            "action": "La pâte est trop chaude. Refroidir immédiatement pendant 1 heure. Si le beurre est complètement absorbé, la lamination est perdue — les croissants cuireont sans couches."
+          }
+        ]
+      },
+      "feelCue": "Après chaque pli, la pâte doit se sentir froide, ferme et légèrement résistante sous le rouleau — jamais chaude, jamais molle. Si votre main réchauffe la pâte à travers le parchemin en moins de 30 secondes, il est trop chaud pour travailler avec."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Forme",
+      "inputs": [
+        "laminated_dough"
+      ],
+      "outputState": "shaped_croissants",
+      "instructions": "Rouler la pâte entièrement laminée à une épaisseur de 4 à 5 mm dans un long rectangle. Triangles coupés avec une base de 10 cm et des côtés de 20 cm. Étendez chaque triangle doucement jusqu'à 25 cm. En partant de la base large, roulez fermement en avant sans serrer — la pression doit être confiante mais jamais écrasante. 7–8 rouleaux devraient vous amener à la pointe. Courbez les deux bouts vers vous pour créer le croissant classique. Placer sur une poêle parcheminée avec l'extrémité en dessous (en touchant la poêle, on évite de dérouler pendant la mise à l'épreuve). Espace à 6 cm.",
+      "visualCue": {
+        "primaryTarget": "Un croissant serré avec l'extrémité fixée en dessous. Les brins de pâte enveloppent visiblement autour du corps, même en épaisseur de bout en bout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le croissant est légèrement blessé — les brins sont inégaux et le corps est épais au centre, mais mince aux extrémités.",
+            "action": "Déroulez et recommencez. Appuyez sur la base et roulez avec une pression uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Compact, même croissant. Le tuyau est coincé. Les multiples couches de pâte sont à peine visibles aux extrémités de la coupe comme des anneaux fins.",
+            "action": "Lavez légèrement les oeufs et laissez la preuve à 25–27 °C."
+          },
+          {
+            "state": "Overdone",
+            "description": "Rouleau si serré le croissant est dense et semblable à une saucisse. Calque compressée.",
+            "action": "Permettre de prouver plus longtemps — un temps supplémentaire d'épreuve peut ouvrir les couches en arrière. Ils ne se briseront peut-être pas autant."
+          }
+        ]
+      },
+      "feelCue": "Un croissant de forme correcte est plus léger qu'il ne le devrait pour sa taille: les couches stratifiées ont de l'air entre elles. Lorsque vous le soulevez, il y a presque une qualité de papier à l'extérieur tandis que le corps se sent substantiel."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "shaped_croissants",
+        "ing_08"
+      ],
+      "outputState": "finished_croissants",
+      "instructions": "Des croissants en forme de preuve à 25–27 °C (pas plus chaud — au-dessus de 29 °C le beurre fond et les couches s'effondrent) pendant 2–3 heures jusqu'à ce que la poêle soit visiblement gonflée et gigotée lorsque la poêle est secouée. Ils ne doubleront pas en hauteur — ils s'étendent vers l'extérieur et les couches se détendent. Appliquer le lavage des œufs (1 jaune + 1 œuf entier, tendu) très doucement avec un pinceau, en évitant les bords coupés (sceller les couches empêche la montée). Laisser reposer 10 minutes, appliquer un deuxième lavage. Cuire à 190 C (375 F) pendant 18 à 22 minutes, en tournant une fois à 10 minutes. Le beurre doit vaporiser les couches, ce qui se produit dans les 5 premières minutes.",
+      "visualCue": {
+        "primaryTarget": "Deep ambre-brun avec un brillant laqué. Les couches individuelles sont visiblement séparées et debout aux extrémités de coupe. Le croissant s'est élargi et les points de queue sortent d'un corps gonflé et en couches.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle, aucune séparation de couche visible aux extrémités. Sensation de douceur et de rendement — le beurre n'a pas ouvert les couches de vapeur.",
+            "action": "Cuire encore 3-5 minutes. Les croissants pâles sont sous-cuits ; leur intérieur sera cru et pâté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche ambre-brun, brillant, claire séparation de la couche aux extrémités de la coupe montrant un motif en nid d'abeille. Les croûtes sont légèrement secouées, et le son est creux à l'intérieur. Ça tremble quand tu le casses.",
+            "action": "Laisser refroidir 10 minutes sur la grille. Mangez dans les 2 heures pour une rupture maximale."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très brun foncé, presque brûlé sur les extrémités du croissant. Une odeur de caramel amère. Les extrémités des couches sont croustillantes.",
+            "action": "L'intérieur peut encore être excellent. Coupez les pointes les plus sombres. La rupture est maintenant maximale — profitez immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Un croissant parfait se brise avec une croûte éclatante qui envoie des flocons de croûte feuilletée volant. L'intérieur est un nid d'abeilles de fines couches beurrées — en tirer un à part et compter 27 ou plus. L'odeur doit être le beurre sucré, le caramel et le pain tout à la fois."
+    }
+  ]
 };

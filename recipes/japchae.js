@@ -1,121 +1,336 @@
 export default {
-  repoId: "master_korean_japchae_001",
-  parentRepoId: null,
-  slug: "japchae",
-  author: "ForkRecipe Kitchen",
-  title: "Japchae",
-  description: "Silky sweet potato glass noodles tossed with julienned vegetables and soy-marinated beef, glinting under a lacquer of sesame oil and sugar — soft, chewy, and deeply savory with every forkful. Each component is cooked separately and married at the last moment so nothing loses its color or texture.",
-  cuisine: "Korean",
-  culture: "Korean",
-  category: "grains",
-  tags: ["korean", "noodles", "glass-noodles", "beef", "sesame", "stir-fry"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 4, sour: 0, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Dangmyeon (sweet potato glass noodles)", ratioValue: 200, defaultUnit: "g",   substitutions: ["mung bean vermicelli"] },
-    { ingId: "ing_02", role: "Protein",   name: "Beef sirloin or ribeye, julienned",       ratioValue: 150, defaultUnit: "g",   substitutions: ["tofu strips", "mushroom strips"] },
-    { ingId: "ing_03", role: "Umami",     name: "Soy sauce",                                ratioValue: 60,  defaultUnit: "ml",  substitutions: ["tamari"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Sugar",                                    ratioValue: 20,  defaultUnit: "g",   substitutions: ["honey", "mirin"] },
-    { ingId: "ing_05", role: "Fat",       name: "Sesame oil",                               ratioValue: 30,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic, minced",                           ratioValue: 10,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Protein",   name: "Eggs",                                     ratioValue: 2,   defaultUnit: "pcs", substitutions: [] },
-    { ingId: "ing_08", role: "Structure", name: "Spinach, blanched and squeezed",           ratioValue: 100, defaultUnit: "g",   substitutions: ["watercress"] },
-    { ingId: "ing_09", role: "Aromatic",  name: "Shiitake mushrooms, julienned",            ratioValue: 80,  defaultUnit: "g",   substitutions: ["oyster mushrooms", "dried shiitake rehydrated"] },
-    { ingId: "ing_10", role: "Structure", name: "Carrot, julienned",                        ratioValue: 80,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_11", role: "Structure", name: "Red bell pepper, julienned",               ratioValue: 60,  defaultUnit: "g",   substitutions: ["yellow bell pepper"] },
-    { ingId: "ing_12", role: "Fat",       name: "Neutral oil (grapeseed or canola)",        ratioValue: 30,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_13", role: "Garnish",   name: "Toasted sesame seeds",                    ratioValue: 10,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_14", role: "Seasoning", name: "Fine sea salt",                            ratioValue: 5,   defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_korean_japchae_001",
+  "parentRepoId": null,
+  "slug": "japchae",
+  "author": "ForkRecipe Kitchen",
+  "title": "Japchae",
+  "description": "Des nouilles en verre de patate douce soyeuse jetées avec des légumes julienned et du boeuf mariné de soja, scintillent sous une laque d'huile de sésame et de sucre — doux, mâcheux et profondément salés à chaque fourchette. Chaque composant est cuit séparément et marié au dernier moment de sorte que rien ne perd sa couleur ou sa texture.",
+  "cuisine": "Coréen",
+  "culture": "Coréen",
+  "category": "grains",
+  "tags": [
+    "coréen",
+    "nouilles",
+    "nouilles de verre",
+    "boeuf",
+    "sésame",
+    "sauté"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Marinate",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "marinated_beef",
-      instructions: "Julienne the beef into strips roughly 5 cm long and 3 mm thick, cutting against the grain. Combine 2 tablespoons of soy sauce, 1 tablespoon of sugar, 1 tablespoon of sesame oil, and all of the minced garlic in a bowl. Add the beef, toss thoroughly so every strip is coated, and let it sit at room temperature while you prep the other components — at least 15 minutes. The sugar draws out the beef's surface moisture and allows rapid caramelization in the pan. Do not salt additionally; the soy carries all the salinity the beef needs. The strips should smell deeply savory and faintly sweet, with the garlic softening and becoming aromatic as it sits.",
-      visualCue: {
-        primaryTarget: "Beef strips coated in a dark, glossy marinade, beginning to look slightly tacky and deeply colored.",
-        spectrum: [
-          { state: "Underdone", description: "Strips are still pale and the marinade has not been absorbed — they look wet rather than coated.", action: "Toss again and wait an additional 10 minutes; the sugar needs time to osmose into the meat fibers." },
-          { state: "Perfect",   description: "Each strip has a uniform dark mahogany coat, the marinade has tightened into a glaze-like layer, and the bowl has almost no pooled liquid.", action: "Proceed to cook the vegetables while the beef finishes marinating." },
-          { state: "Overdone",  description: "Beef has sat more than an hour and the surface proteins are beginning to look grayish and tight — the soy is over-curing the meat.", action: "Cook immediately; the flavor will still be excellent but the texture will firm up faster in the pan." },
-        ],
-      },
-      feelCue: "The beef strips should feel slightly tacky between your fingers, sticky from the sugar but not slimy — like slicked parchment rather than wet meat.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Dangmyeon (Nouilles sucrées en verre de pomme de terre)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Mung bean vermicelli"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Boil",
-      inputs: ["ing_01"],
-      outputState: "cooked_noodles",
-      instructions: "Bring a large pot of water to a rolling boil. Drop the dangmyeon noodles in without breaking them — they will soften and uncurl on their own. Cook for 6–8 minutes, stirring occasionally to prevent clumping. Taste a noodle: it should be fully translucent all the way through with a pleasantly chewy resistance — not gummy in the center, not mushy. Drain immediately and rinse under cold running water to stop cooking and remove excess starch. Shake the colander hard. While still warm, toss the noodles with 1 tablespoon of soy sauce and 1 teaspoon of sesame oil to season them and prevent them from sticking together. Use kitchen scissors to snip the noodles two or three times — this makes them far easier to toss and eat without losing their essential chew.",
-      visualCue: {
-        primaryTarget: "Noodles fully translucent, uniformly glassy, no chalky-white centers visible when a strand is bitten.",
-        spectrum: [
-          { state: "Underdone", description: "Noodles are still partially opaque — a bite reveals a white, starchy core and the texture is grainy rather than chewy.", action: "Return to the boiling water for 1–2 more minutes and re-test." },
-          { state: "Perfect",   description: "Completely clear and glassy from edge to edge; the noodle is supple, yields with a satisfying spring-back chew, and holds its shape when lifted.", action: "Drain, rinse cold, and season immediately." },
-          { state: "Overdone",  description: "Noodles are swollen, translucent and limp — they elongate without resistance when pulled and clump heavily.", action: "Rinse very cold water aggressively, season immediately, and use quickly; overcooked dangmyeon turns gluey on standing." },
-        ],
-      },
-      feelCue: "A perfectly cooked noodle should bounce back slightly when pressed between thumb and forefinger — elastic like a thin rubber band, not soft like a cooked pasta noodle.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Linge de bœuf ou côtelé, julienned",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Bandes de tofu",
+        "bandes de champignons"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sauté",
-      inputs: ["ing_08", "ing_09", "ing_10", "ing_11", "ing_12", "ing_14"],
-      outputState: "cooked_vegetables",
-      instructions: "Work each vegetable separately — this is the labor of japchae and the source of its beauty. Heat a wok or wide skillet over high heat until it just begins to smoke. Add a teaspoon of neutral oil and stir-fry the carrot julienne for 90 seconds with a pinch of salt; it should still have a slight bite. Remove to a plate. Repeat with the bell pepper (60 seconds — it should stay vivid red), then the shiitake mushrooms (2 minutes, until their edges begin to brown and they smell deeply woody). For the spinach, blanch briefly in salted boiling water, drain, squeeze hard until almost dry, toss with a few drops of sesame oil and a pinch of salt. Cook the eggs as a thin jidan: beat yolks and whites separately if precision matters, cook as two thin omelets, let cool, slice into 5 cm strips. Each vegetable cooked alone retains its individual color, aroma, and texture — cooking them together muds both flavor and appearance.",
-      visualCue: {
-        primaryTarget: "Each vegetable vivid in its own color: orange carrots, red pepper, dark mahogany mushrooms, bright green spinach — a painter's palette on a single plate.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are raw-bright with no caramelized edges; carrots are rigid and the mushrooms smell raw and vegetal.", action: "Return each component to the wok briefly on very high heat." },
-          { state: "Perfect",   description: "Carrots are just tender with a faint crunch; mushrooms are browned at the edges and deeply aromatic; spinach is brilliant green and compact.", action: "Set everything aside and cook the beef." },
-          { state: "Overdone",  description: "Colors have dulled — carrots are orange-brown, bell pepper has gone soft and its skin is wrinkling, mushrooms are completely soft with no caramelization.", action: "Use as-is; the flavor remains but the visual appeal is diminished." },
-        ],
-      },
-      feelCue: "The wok should be so hot that each vegetable hits with a sharp, percussive sizzle — if you hear a slow, wet hiss instead of a crack and spit, the pan is not hot enough.",
+      "ingId": "ing_03",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Sear",
-      inputs: ["marinated_beef", "ing_12"],
-      outputState: "cooked_beef",
-      instructions: "Heat the wok over the highest flame your stove allows until it's visibly shimmering and beginning to smoke. Add a thin film of neutral oil. Spread the marinated beef in a single layer — do not crowd the pan or the meat will steam rather than sear. Cook undisturbed for 60–90 seconds until the bottom develops a dark caramelized crust from the sugar in the marinade. Toss and cook for another 30 seconds. The beef should be just cooked through — in a dish like japchae it should be tender, not stiff. The marinade sugar will char slightly in places, adding a pleasant bitterness that balances the sweetness of the sauce. Work in two batches if the pan is full; a crowded pan steams and the glaze turns into a puddle.",
-      visualCue: {
-        primaryTarget: "Beef strips with deep mahogany-black caramelized edges, glossy and slightly charred at the tips, not gray and steamed.",
-        spectrum: [
-          { state: "Underdone", description: "Strips are gray throughout with no color on their surfaces; the marinade is still wet and pooling in the pan.", action: "Increase heat to maximum and press strips flat to encourage browning." },
-          { state: "Perfect",   description: "Strips have charred, lacquered edges and a rich brown interior; the marinade has reduced to a sticky glaze coating each piece.", action: "Remove from heat and combine with noodles and vegetables." },
-          { state: "Overdone",  description: "Sugar has fully carbonized — strips are very dark and the pan smells of burnt sugar rather than caramelized meat.", action: "Deglaze the pan with a tablespoon of water immediately and scrape; use the beef as-is with extra sauce to balance the bitterness." },
-        ],
-      },
-      feelCue: "The kitchen should fill with a sweet-savory smoke from the caramelizing marinade — that smell of soy and sugar charring at the edges of the pan is the soul of wok-cooked Korean beef.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Chérie",
+        "spirin"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Toss",
-      inputs: ["cooked_noodles", "cooked_vegetables", "cooked_beef", "ing_03", "ing_04", "ing_05", "ing_13"],
-      outputState: "finished_japchae",
-      instructions: "In the largest bowl or the wok itself, combine the seasoned noodles, all the cooked vegetables, and the beef. Drizzle over the remaining soy sauce, sugar, and sesame oil — taste as you go; japchae is meant to be distinctly sweet-savory, so be bold with both the sugar and the soy. Toss everything together gently but thoroughly with tongs or clean hands, lifting from the bottom to distribute everything evenly without breaking the noodles. Taste repeatedly and adjust: more sugar if it lacks warmth, more soy if it's flat, more sesame oil for richness and aroma. Transfer to a serving platter and arrange the egg jidan strips over the top. Scatter sesame seeds liberally. Japchae is excellent at room temperature and actually improves after resting 20 minutes — the noodles absorb the sauce and the flavors marry.",
-      visualCue: {
-        primaryTarget: "A glossy mound of noodles in which threads of color — orange, red, green, dark brown — wind through the translucent glass strands, finished with golden egg strips and a scattering of sesame seeds.",
-        spectrum: [
-          { state: "Underdone", description: "Noodles and vegetables sit side by side without blending; the sauce appears mostly on the noodles and the vegetables are dry.", action: "Toss more vigorously and add an extra teaspoon of sesame oil to help the sauce distribute." },
-          { state: "Perfect",   description: "Every noodle is coated with the sauce and wound through with vegetable and beef; the surface shines with sesame oil and the aroma is deeply sweet, savory, and nutty.", action: "Taste one final time, adjust seasoning, and plate." },
-          { state: "Overdone",  description: "Noodles have clumped together and the vegetables are being crushed; the mixture looks dense and muddy.", action: "Add a small splash of water and sesame oil and toss gently to loosen." },
-        ],
-      },
-      feelCue: "When you lift a forkful, the noodles should drape freely and feel substantial without being heavy — slippery, bouncy strands threaded with color and smelling of toasted sesame.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile de sésame",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Protein",
+      "name": "Oeufs",
+      "ratioValue": 2,
+      "defaultUnit": "pcs",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Structure",
+      "name": "Épinards blanchis et pressés",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cresson d'eau"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Champignons chiitake, julienned",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Champignons d'huître",
+        "shiitake séché réhydraté"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Structure",
+      "name": "Carotte, julienned",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Structure",
+      "name": "poivron rouge, julienned",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivron jaune"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Fat",
+      "name": "Huile neutre (grape graine ou canola)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "marinated_beef",
+      "instructions": "Julienne le bœuf en bandes d'environ 5 cm de long et 3 mm d'épaisseur, coupant contre le grain. Mélanger 2 cuillères à soupe de sauce soja, 1 cuillère à soupe de sucre, 1 cuillère à soupe d'huile de sésame et toute l'ail haché dans un bol. Ajoutez le bœuf, jetez soigneusement chaque bande enduite et laissez-la reposer à température ambiante pendant que vous préparez les autres composants — au moins 15 minutes. Le sucre tire l'humidité de surface du boeuf et permet une caramélisation rapide dans la poêle. Ne salez pas de plus; le soja porte toute la salinité dont le boeuf a besoin. Les bandes doivent sentir profondément salé et légèrement sucré, avec l'ail ramollissant et devenant aromatique comme il est assis.",
+      "visualCue": {
+        "primaryTarget": "Bandes de boeuf recouvertes d'une marinade sombre et brillante, qui commence à avoir l'air légèrement collante et profondément colorée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les bandes sont encore pâles et la marinade n'a pas été absorbée — elles ont l'air mouillées plutôt que revêtues.",
+            "action": "Jetez encore et attendez 10 minutes supplémentaires; le sucre a besoin de temps pour oser dans les fibres de viande."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque bande a une couche d'acajou foncé uniforme, la marinade s'est serrée dans une couche de glaçure, et le bol n'a presque pas de liquide commun.",
+            "action": "Faites cuire les légumes pendant que le bœuf finit la marinade."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le boeuf s'est assis plus d'une heure et les protéines de surface commencent à avoir l'air grisâtres et serrés.",
+            "action": "Cuire immédiatement; la saveur sera encore excellente, mais la texture se raffermira plus rapidement dans la poêle."
+          }
+        ]
+      },
+      "feelCue": "Les bandes de boeuf doivent se sentir légèrement collantes entre les doigts, collantes du sucre mais pas visqueuses — comme le parchemin lissé plutôt que la viande humide."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "cooked_noodles",
+      "instructions": "Portez une grande casserole d'eau à ébullition. Déposez les nouilles du dangmyéon sans les briser, elles s'assoupliront et se décrocheront seules. Cuire de 6 à 8 minutes, en remuant occasionnellement pour éviter les accrochages. Goûtez une nouille: elle devrait être entièrement translucide tout au long avec une résistance agréablement mâchante — pas de gomme au centre, pas de mousse. Égoutter immédiatement et rincer sous l'eau courante froide pour arrêter la cuisson et retirer l'excès d'amidon. Serrez la calandre. Alors qu'il est encore chaud, jeter les nouilles avec 1 cuillère à soupe de sauce soja et 1 cuillère à café d'huile de sésame pour les assaisonner et les empêcher de coller ensemble. Utilisez des ciseaux de cuisine pour couper les nouilles deux ou trois fois, ce qui les rend beaucoup plus faciles à jeter et à manger sans perdre leur mâche essentielle.",
+      "visualCue": {
+        "primaryTarget": "Nouilles entièrement translucides, uniformément vitreuses, sans centre blanc crayeux visible lorsqu'un brin est mordu.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les nouilles sont encore partiellement opaques — une morsure révèle un noyau blanc et amylacé et la texture est granuleuse plutôt que mâcheuse.",
+            "action": "Retourner à l'eau bouillante pendant 1 à 2 minutes de plus et procéder à un nouveau test."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement clair et vitreux d'un bord à l'autre; la nouille est souple, donne une mâche satisfaisante au dos du printemps et tient sa forme lorsqu'elle est levée.",
+            "action": "Égoutter, rincer à froid et assaisonner immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles sont gonflées, translucides et limpides; elles s'allongent sans résistance lorsqu'elles sont tirées et s'agrippent fortement.",
+            "action": "Rincer l'eau très froide de façon agressive, assaisonner immédiatement et utiliser rapidement; le dangmyéon trop cuit devient collant sur pied."
+          }
+        ]
+      },
+      "feelCue": "Une nouille parfaitement cuite devrait rebondir légèrement lorsqu'elle est pressée entre le pouce et l'index — élastique comme une mince bande de caoutchouc, pas douce comme une nouille de pâtes cuites."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_14"
+      ],
+      "outputState": "cooked_vegetables",
+      "instructions": "Travaillez chaque légume séparément — c'est le travail du japchae et la source de sa beauté. Chauffer un wok ou une poêle large à feu vif jusqu'à ce qu'il commence à fumer. Ajouter une cuillère à café d'huile neutre et faire revenir la carotte julienne pendant 90 secondes avec une pincée de sel; il devrait encore avoir une légère bouchée. Retirer dans une assiette. Répéter avec le poivron (60 secondes – il devrait rester rouge vif), puis les shiitake champignons (2 minutes, jusqu'à ce que leurs bords commencent à brunir et ils sentent profondément boisé). Pour les épinards, blanchir brièvement dans l'eau bouillante salée, égoutter, presser dur jusqu'à presque sécher, mélanger avec quelques gouttes d'huile de sésame et une pincée de sel. Cuire les oeufs comme un jidan mince : battre les jaunes et les blancs séparément si la précision compte, cuire comme deux omelettes fines, laisser refroidir, couper en bandes de 5 cm. Chaque légume cuit seul conserve sa couleur, son arôme et sa texture individuelles.",
+      "visualCue": {
+        "primaryTarget": "Chaque légume vif dans sa propre couleur: carottes orange, poivron rouge, champignons acajou foncé, épinards vert vif — une palette de peintre sur une seule assiette.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont crus-brillants sans bords caramélisés; les carottes sont rigides et les champignons sentent crus et végétaux.",
+            "action": "Retournez brièvement chaque composant au wok sur une chaleur très élevée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les carottes sont simplement tendres avec un léger croquant; les champignons sont brunis aux bords et profondément aromatiques; les épinards sont vert brillant et compacts.",
+            "action": "Mettez tout de côté et faites cuire le bœuf."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les couleurs sont ternes — les carottes sont orange-brun, le poivron est devenu doux et sa peau est ridée, les champignons sont complètement doux sans caramélisation.",
+            "action": "Utiliser comme-est; la saveur reste mais l'attrait visuel est diminué."
+          }
+        ]
+      },
+      "feelCue": "Le wok devrait être si chaud que chaque légume frappe avec un étourdissement aigu et percussif — si vous entendez un sifflement lent et humide au lieu d'une fissure et de cracher, la poêle n'est pas assez chaude."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Sear",
+      "inputs": [
+        "marinated_beef",
+        "ing_12"
+      ],
+      "outputState": "cooked_beef",
+      "instructions": "Chauffer le wok au-dessus de la flamme la plus élevée que votre poêle permet jusqu'à ce qu'il mijote visiblement et commence à fumer. Ajouter un mince film d'huile neutre. Étendre le bœuf mariné en une seule couche — ne pas fouler la poêle ou la viande va vapeur plutôt que de semer. Cuire pendant 60 à 90 secondes jusqu'à ce que le fond développe une croûte caramélisée foncée du sucre dans la marinade. Ajouter et cuire encore 30 secondes. La viande de bœuf doit être juste cuite à travers — dans un plat comme le japchae, elle doit être tendre et non rigide. Le sucre marinade sera légèrement charmé dans les endroits, ajoutant une agréable amertume qui équilibre la douceur de la sauce. Travaillez en deux lots si la casserole est pleine; une casserole bondée de vapeurs et la glaçure se transforme en flaque.",
+      "visualCue": {
+        "primaryTarget": "Bandes de boeuf aux bords caramélisés acajou-noir profond, brillant et légèrement carbonisé aux extrémités, non gris et vapeur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les bandes sont grises tout au long, sans couleur sur leur surface; la marinade est encore humide et mise en commun dans la casserole.",
+            "action": "Augmenter la chaleur au maximum et presser les bandes à plat pour encourager le brunissement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bandes ont des bords carbonisés, laqués et un riche intérieur brun; la marinade a réduit à un revêtement collant glacé chaque pièce.",
+            "action": "Retirer du feu et combiner avec des nouilles et des légumes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sucre est entièrement carbonisé — les bandes sont très sombres et la poêle sent le sucre brûlé plutôt que la viande caramélisée.",
+            "action": "Déglacer la poêle avec une cuillère à soupe d'eau immédiatement et racler; utiliser le boeuf comme-est avec de la sauce supplémentaire pour équilibrer l'amertume."
+          }
+        ]
+      },
+      "feelCue": "La cuisine devrait se remplir d'une fumée sucrée de la marinade caramélisante — cette odeur de soja et de sucre carbonisé aux bords de la poêle est l'âme du boeuf coréen cuit au wok."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Découpe",
+      "inputs": [
+        "cooked_noodles",
+        "cooked_vegetables",
+        "cooked_beef",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_13"
+      ],
+      "outputState": "finished_japchae",
+      "instructions": "Dans le plus grand bol ou le wok lui-même, combiner les nouilles assaisonnées, tous les légumes cuits, et le boeuf. Arrosez le reste de la sauce de soja, du sucre et de l'huile de sésame — goût au fur et à mesure que vous y allez; japchae est destiné à être nettement sucré-savori, donc soyez audacieux avec le sucre et le soja. Mélangez tout doucement mais soigneusement avec des pinces ou des mains propres, levant du bas pour distribuer tout uniformément sans casser les nouilles. Goûtez à plusieurs reprises et ajustez : plus de sucre s'il manque de chaleur, plus de soja s'il est plat, plus d'huile de sésame pour la richesse et l'arôme. Transférer dans un plateau de service et arranger les bandes de jidan sur le dessus. Éparpiller libéralement les graines de sésame. Le japchae est excellent à température ambiante et s'améliore après 20 minutes de repos – les nouilles absorbent la sauce et les saveurs se marient.",
+      "visualCue": {
+        "primaryTarget": "Un monticule brillant de nouilles dans lequel des fils de couleur - orange, rouge, vert, brun foncé - soufflent à travers les brins translucides de verre, fini avec des bandes d'oeufs dorés et une dispersion de graines de sésame.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Nouilles et légumes s'assoient côte à côte sans mélange; la sauce apparaît principalement sur les nouilles et les légumes sont secs.",
+            "action": "Mélanger plus vigoureusement et ajouter une cuillère à café supplémentaire d'huile de sésame pour aider la sauce à distribuer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque nouille est enrobée de sauce et enroulée de légumes et de boeuf; la surface brille d'huile de sésame et l'arôme est profondément sucré, salé et noisette.",
+            "action": "Goûtez une dernière fois, assaisonnement et assiette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les nouilles se sont assemblées et les légumes sont écrasés; le mélange semble dense et boueux.",
+            "action": "Ajouter une petite éclaboussure d'eau et d'huile de sésame et remuer doucement pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous soulevez une fourche, les nouilles doivent s'endraper librement et se sentir substantielles sans être lourdes — des brins glissants et rebondissants filetés de couleur et d'odeur de sésame grillé."
+    }
+  ]
 };

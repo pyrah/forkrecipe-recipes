@@ -1,121 +1,331 @@
 export default {
-  repoId: "master_indian_aloo-gobi_001",
-  parentRepoId: null,
-  slug: "aloo-gobi",
-  author: "ForkRecipe Kitchen",
-  title: "Aloo Gobi",
-  description: "The homey Punjabi dry-sautéed curry of potato and cauliflower — both vegetables coated in turmeric and cumin and cooked until tender and speckled golden, with no sauce except the fragrant ghee they were tossed in.",
-  cuisine: "Indian",
-  culture: "Punjabi",
-  category: "vegetables",
-  tags: ["indian", "potato", "cauliflower", "vegan", "dry-curry", "weeknight"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "35 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 2, umami: 1, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Waxy potatoes (Yukon Gold), cut into 2 cm cubes",       ratioValue: 250, defaultUnit: "g", substitutions: ["sweet potato for a sweeter version"] },
-    { ingId: "ing_02", role: "Structure", name: "Cauliflower, cut into small 2–3 cm florets",            ratioValue: 300, defaultUnit: "g", substitutions: ["romanesco", "broccoli"] },
-    { ingId: "ing_03", role: "Fat",       name: "Ghee or neutral oil",                                   ratioValue: 35,  defaultUnit: "g", substitutions: ["coconut oil"] },
-    { ingId: "ing_04", role: "Spice",     name: "Cumin seeds",                                           ratioValue: 5,   defaultUnit: "g", substitutions: ["caraway seeds"] },
-    { ingId: "ing_05", role: "Allium",    name: "Yellow onion, thinly sliced",                           ratioValue: 100, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic, minced",                                        ratioValue: 10,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Fresh ginger, finely grated",                           ratioValue: 8,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Ground turmeric",                                       ratioValue: 3,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Ground coriander",                                      ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Garam masala",                                          ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_11", role: "Heat",      name: "Kashmiri chili powder or mild red chili powder",        ratioValue: 3,   defaultUnit: "g", substitutions: ["sweet paprika with a pinch of cayenne"] },
-    { ingId: "ing_12", role: "Seasoning", name: "Fine salt",                                             ratioValue: 7,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_13", role: "Herb",      name: "Fresh cilantro, roughly chopped",                       ratioValue: 10,  defaultUnit: "g", substitutions: ["flat-leaf parsley"] },
-    { ingId: "ing_14", role: "Acid",      name: "Lemon juice",                                           ratioValue: 8,   defaultUnit: "g", substitutions: ["amchur (dried mango powder)"] },
+  "repoId": "master_indian_aloo-gobi_001",
+  "parentRepoId": null,
+  "slug": "aloo-gobi",
+  "author": "ForkRecipe Kitchen",
+  "title": "Aloo Gobi",
+  "description": "Le chou-fleur de pommes de terre et de choux-fleurs, au Punjabi, maison, est un légume enrobé de curcuma et de cumin et cuit jusqu'à ce qu'il soit tendre et tacheté d'or, sans sauce, à l'exception du ghee parfumé dans lequel il a été jeté.",
+  "cuisine": "Indiens",
+  "culture": "Punjabi",
+  "category": "vegetables",
+  "tags": [
+    "indienne",
+    "pommes de terre",
+    "chou-fleur",
+    "végétalien",
+    "curry sec",
+    "nuit"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "35 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 1,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "aromatic_base",
-      instructions: "Heat the ghee in a wide, heavy skillet or karahi over medium-high heat. Add the cumin seeds — they should sizzle immediately and begin to darken within 30 seconds. Add the sliced onion and cook, stirring frequently, for 8–10 minutes until deep golden and soft. Add the minced garlic and grated ginger and stir for another 60 seconds until the raw smell of the garlic has mellowed to sweet-savory. The entire pan should smell of toasted cumin and caramelizing onion — this is the flavor foundation everything else will absorb.",
-      visualCue: {
-        primaryTarget: "Onion is deeply golden at the edges with some caramelized brown strands; cumin seeds have darkened to a teak-brown and the fat is richly flavored; garlic has softened to translucent.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still pale and limp; cumin seeds are still pale gold; pan smells of raw onion and steam.", action: "Continue cooking over medium-high heat, stirring more frequently." },
-          { state: "Perfect",   description: "Deep amber-gold onion; dark cumin seeds; fragrant, sweet-savory, spiced fat that coats the back of a spoon richly.", action: "Add the spices immediately." },
-          { state: "Overdone",  description: "Onion or cumin has gone dark brown and bitter; oil smells acrid.", action: "Add the vegetables immediately to arrest further cooking; a small amount of bitterness will disperse in the larger dish." },
-        ],
-      },
-      feelCue: "The onion should slip off the back of a spoon with no resistance when pressed — completely soft and yielding. Any crunch or springiness means more cooking time is needed.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Pommes de terre de cire (or yukon), coupées en cubes de 2 cm",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "patate douce pour une version plus sucrée"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Bloom",
-      inputs: ["aromatic_base", "ing_08", "ing_09", "ing_11", "ing_12"],
-      outputState: "spiced_base",
-      instructions: "Add the ground turmeric, ground coriander, and Kashmiri chili powder to the golden onion in the pan. Stir constantly over medium heat for 45–60 seconds, cooking the spices directly in the ghee. The mixture will become very fragrant and stiff; if it begins to stick, add a tablespoon of water and stir to release. Season with salt. The spice paste is ready when the raw dusty aroma of the spices has transformed into a roasted, warm, complex fragrance and the fat has separated slightly at the edges of the paste.",
-      visualCue: {
-        primaryTarget: "A thick, deep orange-gold paste coating the onion; the fat is beginning to separate visibly at the edges; the aroma has gone from raw spice to warm, toasted, and complex.",
-        spectrum: [
-          { state: "Underdone", description: "Spice powder still smells raw and dusty; mixture is moist and not sticking or separating.", action: "Cook another 30 seconds, stirring constantly — the spices need direct contact with hot fat to bloom properly." },
-          { state: "Perfect",   description: "Aromatic, roasted spice paste; turmeric has colored the onion a brilliant gold; fat separates at edges.", action: "Add the potato immediately." },
-          { state: "Overdone",  description: "Paste has turned from orange to dark brown; smells bitter and scorched.", action: "Add a splash of water immediately to halt cooking; rescue what remains by adding the vegetables right away." },
-        ],
-      },
-      feelCue: "Lean over the pan: if you inhale and you can smell the individual spices clearly — the coriander's citrus note, the turmeric's earthiness, the chili's warmth — the bloom is working. A raw dusty smell means they need more time.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Choux-fleurs, coupés en petits fleurons de 2 à 3 cm",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Roumanie",
+        "brocoli"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sauté",
-      inputs: ["spiced_base", "ing_01"],
-      outputState: "spiced_potato",
-      instructions: "Add the potato cubes to the spiced base and toss to coat every surface in the turmeric-orange spice paste. Spread into a single layer and cook over medium-high heat, stirring every 2–3 minutes rather than constantly — this allows the potato to develop golden sear marks rather than just steaming. Cook for 8–10 minutes until the potato cubes are golden on several sides and half-tender when pierced with the tip of a knife. They should still have a little resistance at this stage; they will finish cooking with the cauliflower.",
-      visualCue: {
-        primaryTarget: "Potato cubes are coated in orange-gold spice paste and have developed golden-brown sear marks on their flat cut surfaces; they smell of toasted turmeric and cumin.",
-        spectrum: [
-          { state: "Underdone", description: "Potato cubes are still white inside and offer significant resistance; they have barely colored.", action: "Continue cooking with less frequent stirring to build crust; they need more time before the cauliflower goes in." },
-          { state: "Perfect",   description: "Golden sear marks on flat surfaces; the inside is half-cooked and offers moderate resistance — a knife goes in with effort.", action: "Add the cauliflower now." },
-          { state: "Overdone",  description: "Potato cubes are fully cooked and beginning to break apart.", action: "Add the cauliflower immediately and reduce heat — the potato will continue cooking gently while the cauliflower catches up." },
-        ],
-      },
-      feelCue: "Pierce a potato cube with the tip of a paring knife — you should feel it penetrate the first half easily but encounter real resistance in the second half. That half-cooked state is exactly right for adding the cauliflower.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Ghee ou huile neutre",
+      "ratioValue": 35,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Huile de coco"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Sauté",
-      inputs: ["spiced_potato", "ing_02", "ing_10"],
-      outputState: "cooked_aloo_gobi",
-      instructions: "Add the cauliflower florets to the pan and toss to coat in the spiced ghee. Sprinkle the garam masala over everything now — added at this mid-stage, it blooms gently in the residual fat rather than burning in an empty pan. If the pan looks very dry, add a tablespoon of water and cover with a lid for 3–4 minutes to steam-cook the cauliflower through. Then remove the lid and cook uncovered for another 5 minutes, tossing every 2 minutes, until both the potato and cauliflower are fully tender and the pan is dry — this is a dry curry; no sauce, only fragrant, spiced fat.",
-      visualCue: {
-        primaryTarget: "Both potato and cauliflower are golden-yellow from the turmeric, speckled with golden-brown sear marks, and coated in a dry, fragrant spice paste. Cauliflower florets are just at the edge of browning and fully tender.",
-        spectrum: [
-          { state: "Underdone", description: "Cauliflower is still white inside and has not absorbed the turmeric color evenly; potato is still too firm.", action: "Add a splash of water, cover, and steam for 3 more minutes before uncovering to dry out." },
-          { state: "Perfect",   description: "Uniformly golden, spice-coated vegetables; both fully tender and just beginning to char at the edges; the pan is dry with no pooled liquid.", action: "Remove from heat and finish with lemon and cilantro." },
-          { state: "Overdone",  description: "Cauliflower has collapsed to mush; potato cubes have broken down; the pan contents look like a mash.", action: "Season aggressively and serve — the flavors are still excellent; present as a roughly textured side rather than distinct pieces." },
-        ],
-      },
-      feelCue: "Press a floret of cauliflower against the side of the pan with a spoon — a perfectly cooked floret should yield completely without any crunch, but hold its shape and not smear. It should feel like a firm piece of ripe avocado.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Graines de cumin",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "graines de carvi"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Season",
-      inputs: ["cooked_aloo_gobi", "ing_13", "ing_14"],
-      outputState: "finished_aloo_gobi",
-      instructions: "Remove the pan from the heat. Squeeze the lemon juice over the entire pan and toss immediately — the acid brightens all the spices and cuts through the richness of the ghee. Scatter the fresh cilantro over the top and give one final toss. Taste for salt and add a pinch more if needed. The finished aloo gobi should taste of nothing but the vegetables themselves and the spices — deeply savory, warmly spiced, with a clean lemony lift. Serve immediately with roti or paratha. It does not hold well; the vegetables lose their texture as they sit.",
-      visualCue: {
-        primaryTarget: "A dry, golden, colorful mix of spice-coated potato and cauliflower with bright green cilantro distributed throughout and a glistening sheen of spiced ghee.",
-        spectrum: [
-          { state: "Underdone", description: "No acid added; dish tastes flat and heavy despite the spices; cilantro not yet scattered.", action: "Add the lemon juice and cilantro — the dish is not finished without them." },
-          { state: "Perfect",   description: "Bright, lively, layered — the spiced earthiness of the vegetables, the aromatic warmth of garam masala, a clean citrus sparkle from lemon. Completely dry, no sauce.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Lemon juice added too early and simmered in; the fresh acid character has cooked off and the dish tastes flat.", action: "Add another small squeeze of fresh lemon just before serving." },
-        ],
-      },
-      feelCue: "The finished dish should feel completely dry in the pan — no pooled liquid, just vegetables coated in spiced fat. Lift a piece of potato: it should fall back into the pan cleanly, not drag sauce with it.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon jaune, tranché finement",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Gingembre frais, râpé finement",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Garam masala",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Heat",
+      "name": "Poudre de chili cachemiri ou de chili rouge doux",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika doux avec une pincée de Cayenne"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 7,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Herb",
+      "name": "Coriandre fraîche, grossièrement hachée",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Persil à feuilles plates"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Acid",
+      "name": "Jus de citron",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": [
+        "amchur (poudre de mangue séchée)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "aromatic_base",
+      "instructions": "Chauffer le ghee dans une grande poêle ou un karahi à feu moyen-vif. Ajouter les graines de cumin — elles devraient s'assombrir immédiatement et commencer à s'assombrir en 30 secondes. Ajouter l'oignon tranché et cuire, en remuant fréquemment, pendant 8 à 10 minutes jusqu'à ce qu'il soit bien doré et doux. Ajouter l'ail haché et le gingembre râpé et remuer encore 60 secondes jusqu'à ce que l'odeur brute de l'ail se soit membrée à sucré. Toute la casserole doit sentir le cumin grillé et l'oignon caramélisant — c'est la base de la saveur que tout le reste absorbera.",
+      "visualCue": {
+        "primaryTarget": "L'oignon est profondément doré aux bords avec quelques brins bruns caramélisés; les graines de cumin ont obscurci jusqu'à un brun teck et la graisse est richement aromatisée; l'ail s'est adouci au translucide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore pâle et limpide; les graines de cumin sont encore de l'or pâle; la poêle sent l'oignon cru et la vapeur.",
+            "action": "Continuer la cuisson à feu moyen-vif, en remuant plus fréquemment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Oignon ambré-or profond; graines de cumin foncé; graisse parfumée, sucrée et épicée qui enveloppe l'arrière d'une cuillère richement.",
+            "action": "Ajouter les épices immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon ou le cumin est brun foncé et amer; l'huile sent l'acride.",
+            "action": "Ajouter immédiatement les légumes pour arrêter la cuisson; une petite quantité d'amertume se dispersera dans le plat plus grand."
+          }
+        ]
+      },
+      "feelCue": "L'oignon doit glisser de l'arrière d'une cuillère sans résistance lorsqu'il est pressé — complètement doux et productif. N'importe quelle croûte ou springness signifie plus de temps de cuisson est nécessaire."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bloom",
+      "inputs": [
+        "aromatic_base",
+        "ing_08",
+        "ing_09",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "spiced_base",
+      "instructions": "Ajouter le curcuma moulu, la coriandre moulue et la poudre de chili cachemiri à l'oignon doré dans la casserole. Mélanger constamment à feu moyen pendant 45 à 60 secondes, cuire les épices directement dans le ghee. Le mélange deviendra très parfumé et raide; s'il commence à coller, ajouter une cuillère à soupe d'eau et remuer pour libérer. Assaisonner de sel. La pâte d'épices est prête lorsque l'arôme poussiéreux brut des épices s'est transformé en un parfum torréfié, chaud et complexe et que la graisse s'est légèrement séparée aux bords de la pâte.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse et orangée enrobant l'oignon; la graisse commence à se séparer visiblement aux bords; l'arôme est passé d'épices crues à chaudes, grillées et complexes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La poudre d'épices sent toujours cru et poussiéreux; le mélange est humide et ne colle ni ne se sépare pas.",
+            "action": "Cuire encore 30 secondes, en remuant constamment — les épices ont besoin d'un contact direct avec la graisse chaude pour fleurir correctement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Aromatique, pâte d'épices grillée; curcuma a coloré l'oignon un or brillant; la graisse se sépare aux bords.",
+            "action": "Ajouter immédiatement la pomme de terre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est passée d'orange à brun foncé; elle sent amer et brûlé.",
+            "action": "Ajouter immédiatement un jet d'eau pour arrêter la cuisson; sauver ce qui reste en ajoutant les légumes immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Penchez - vous sur la poêle: si vous inhalez et que vous sentez clairement les épices individuelles — la note d'agrumes de la coriandre, la terre du curcuma, la chaleur du chili — la floraison fonctionne. Une odeur de poussière brute leur demande plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saucisse",
+      "inputs": [
+        "spiced_base",
+        "ing_01"
+      ],
+      "outputState": "spiced_potato",
+      "instructions": "Ajouter les cubes de pomme de terre à la base épicée et mélanger pour enrober chaque surface dans la pâte d'épices d'orange-turcuma. Répartir en une seule couche et cuire à feu moyen-vif, en remuant toutes les 2 à 3 minutes plutôt qu'en permanence, ce qui permet à la pomme de terre de développer des marques dorées plutôt que de simplement cuire à la vapeur. Cuire de 8 à 10 minutes jusqu'à ce que les cubes de pommes de terre soient dorés sur plusieurs côtés et demi-tendre lorsqu'ils sont percés avec l'extrémité d'un couteau. Ils devraient encore avoir un peu de résistance à ce stade; ils finiront la cuisson avec le chou-fleur.",
+      "visualCue": {
+        "primaryTarget": "Les cubes de pommes de terre sont enrobés de pâte d'épices orange-or et ont développé des marques de couture doré-brun sur leurs surfaces planes coupées; ils sentent le curcuma grillé et le cumin.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cubes de pommes de terre sont encore blancs à l'intérieur et offrent une résistance significative; ils ont à peine coloré.",
+            "action": "Continuer la cuisson en remuant moins fréquemment pour construire la croûte; ils ont besoin de plus de temps avant que le chou-fleur entre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des marques dorées sur des surfaces plates; l'intérieur est mi-cuit et offre une résistance modérée — un couteau y va avec effort.",
+            "action": "Ajoutez le chou-fleur maintenant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les cubes de pommes de terre sont entièrement cuits et commencent à se décomposer.",
+            "action": "Ajouter immédiatement le chou-fleur et réduire la chaleur — la pomme de terre continuera à cuire doucement pendant que le chou-fleur rattrape."
+          }
+        ]
+      },
+      "feelCue": "Percez un cube de pomme de terre avec l'extrémité d'un couteau à trier — vous devriez sentir qu'il pénètre facilement la première moitié, mais rencontre une vraie résistance dans la seconde moitié. Cet état mi-cuit est parfait pour ajouter le chou-fleur."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saucisse",
+      "inputs": [
+        "spiced_potato",
+        "ing_02",
+        "ing_10"
+      ],
+      "outputState": "cooked_aloo_gobi",
+      "instructions": "Ajouter les fleurs de chou-fleur dans la poêle et mélanger pour enrober le ghee épicé. Saupoudrer le garam masala sur tout ce qui est maintenant — ajouté à ce milieu de scène, il fleurit doucement dans la graisse résiduelle plutôt que de brûler dans une poêle vide. Si la poêle a l'air très sèche, ajouter une cuillère à soupe d'eau et couvrir d'un couvercle pendant 3-4 minutes pour cuire à la vapeur le chou-fleur. Puis retirez le couvercle et faites cuire à découvert 5 minutes de plus, en jetant toutes les 2 minutes, jusqu'à ce que la pomme de terre et le chou-fleur soient complètement tendres et que la poêle soit sèche.",
+      "visualCue": {
+        "primaryTarget": "La pomme de terre et le chou-fleur sont tous deux jaune-or du curcuma, tachetés de marques dorées et enrobés d'une pâte d'épices sèche et parfumée. Les fleurs de chou-fleur sont juste au bord du brunissement et entièrement tendres.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le chou-fleur est encore blanc à l'intérieur et n'a pas absorbé la couleur curcuma uniformément; la pomme de terre est encore trop ferme.",
+            "action": "Ajouter une éclaboussure d'eau, de couverture et de vapeur pendant 3 minutes avant de découvrir à sécher."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légumes uniformément dorés, enrobés d'épices; à la fois très tendres et qui commencent tout juste à s'ombrager; la poêle est sèche sans liquide en réserve.",
+            "action": "Retirer du feu et finir avec du citron et de la coriandre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le chou-fleur s'est effondré, les cubes de pomme de terre se sont brisés, le contenu de la casserole ressemble à un mash.",
+            "action": "Assaisonner agressivement et servir — les saveurs sont toujours excellentes; présenter comme un côté à peu près texturé plutôt que des morceaux distincts."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un fleuron de chou-fleur sur le côté de la poêle avec une cuillère — un fleuron parfaitement cuit devrait donner complètement sans croûte, mais tenir sa forme et non pas frotter. Il devrait se sentir comme un morceau ferme d'avocat mûr."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Saison",
+      "inputs": [
+        "cooked_aloo_gobi",
+        "ing_13",
+        "ing_14"
+      ],
+      "outputState": "finished_aloo_gobi",
+      "instructions": "Retirer la poêle du feu. Presser le jus de citron sur toute la casserole et jeter immédiatement — l'acide éclaire toutes les épices et coupe à travers la richesse du ghee. Dispersez la coriandre fraîche au-dessus du sommet et donnez une dernière chance. Goûtez au sel et ajoutez une pincée plus si nécessaire. L'aloo gobi fini ne doit goûter que les légumes eux-mêmes et les épices – profondément salés, épicés chaudement, avec un lifting citronné propre. Servir immédiatement avec roti ou paratha. Il ne tient pas bien; les légumes perdent leur texture en s'asseyant.",
+      "visualCue": {
+        "primaryTarget": "Un mélange sec, doré et coloré de pommes de terre et de chou-fleur enrobés d'épices avec une coriandre vert vif distribuée partout et un éclat de ghe épicé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas d'acide ajouté; le plat a un goût plat et lourd malgré les épices; coriandre pas encore dispersée.",
+            "action": "Ajouter le jus de citron et la coriandre — le plat n'est pas fini sans eux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lumineux, vif, en couches: la terre épicée des légumes, la chaleur aromatique du garam masala, un agrumes propre étincelle du citron. Complètement sec, sans sauce.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Jus de citron ajouté trop tôt et mijoté; le caractère acide frais a cuit et le plat goûte plat.",
+            "action": "Ajouter une autre petite pression de citron frais juste avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Le plat fini doit se sentir complètement sec dans la poêle — pas de liquide mis en commun, juste des légumes enrobés de graisse épicée. Soulevez un morceau de pomme de terre: il devrait retomber dans la poêle proprement, pas faire glisser la sauce avec."
+    }
+  ]
 };

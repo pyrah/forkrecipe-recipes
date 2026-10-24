@@ -1,115 +1,273 @@
 export default {
-  repoId: "master_nigerian_egusi_stew_001",
-  parentRepoId: null,
-  slug: "egusi-stew",
-  author: "ForkRecipe Kitchen",
-  title: "Egusi Stew",
-  description: "Ground melon seeds fried in a rich red palm oil base with Scotch bonnet pepper and crayfish, then simmered until they set into a thick, savory stew worthy of a feast — the mother of Nigerian soups.",
-  cuisine: "Nigerian",
-  culture: "Yoruba / West African",
-  category: "proteins",
-  tags: ["stew", "nigerian", "west african", "melon seeds", "pepper soup"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 1, umami: 5, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Beef (short rib or brisket, cut into 5 cm pieces)", ratioValue: 100, defaultUnit: "parts", substitutions: ["goat meat", "smoked catfish", "tofu"] },
-    { ingId: "ing_02", role: "Structure", name: "Ground egusi (dried melon seeds, coarsely milled)",  ratioValue: 40,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Fat",       name: "Red palm oil (unrefined)",                           ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Base",      name: "Pepper base: tomatoes, red bell peppers, Scotch bonnets, onion (blended raw)", ratioValue: 60, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Umami",     name: "Ground crayfish (dried smoked shrimp, powdered)",    ratioValue: 8,   defaultUnit: "parts", substitutions: ["dried shrimp paste", "anchovy paste"] },
-    { ingId: "ing_06", role: "Liquid",    name: "Beef or chicken stock (or meat braising liquid)",    ratioValue: 50,  defaultUnit: "parts", substitutions: ["water"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine salt",                                          ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh spinach or bitter leaf (roughly chopped)",     ratioValue: 20,  defaultUnit: "parts", substitutions: ["frozen spinach", "collard greens"] },
+  "repoId": "master_nigerian_egusi_stew_001",
+  "parentRepoId": null,
+  "slug": "egusi-stew",
+  "author": "ForkRecipe Kitchen",
+  "title": "Égusi ragoût",
+  "description": "Les graines de melon moulues frites dans une riche base d'huile de palme rouge avec du poivre de bonnet écossais et de l'écrevisse, puis mijotées jusqu'à ce qu'elles entrent dans un épais ragoût salé digne d'un festin — la mère des soupes nigérianes.",
+  "cuisine": "Nigérian",
+  "culture": "Yoruba / Afrique de l'Ouest",
+  "category": "proteins",
+  "tags": [
+    "ragoût",
+    "nigérien",
+    "Ouest africain",
+    "graines de melon",
+    "soupe au poivre"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Braise",
-      inputs: ["ing_01", "ing_07"],
-      outputState: "braised_meat",
-      instructions: "Season the beef generously with salt and place in a pot with enough water to barely cover. Bring to a boil, then reduce heat and simmer for 40–50 minutes until tender but not falling apart. Reserve the braising liquid — this is your stock. Set the meat aside.",
-      visualCue: {
-        primaryTarget: "Beef is dark and tender, pulling apart slightly when pressed with tongs but still holding its shape.",
-        spectrum: [
-          { state: "Underdone", description: "Meat is tough and resists a fork; collagen not yet melted.", action: "Continue simmering and check every 10 minutes." },
-          { state: "Perfect",   description: "Meat yields to gentle pressure, cuts cleanly with a spoon edge, and the braising liquid is dark and deeply savory.", action: "Reserve liquid and set meat aside." },
-          { state: "Overdone",  description: "Meat has completely fallen apart into shreds and the liquid looks muddy.", action: "Proceed — shredded beef in egusi stew is acceptable; just fold carefully later." },
-        ],
-      },
-      feelCue: "A properly braised piece should feel like a firm sponge when you press it — it gives and springs back slightly, with juices at the surface.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Boeuf (côte courte ou poitrine, coupé en morceaux de 5 cm)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Viande de chèvre",
+        "Poisson-chat fumé",
+        "tofu"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Reduce",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "fried_pepper_base",
-      instructions: "Heat the palm oil in a heavy-bottomed pot over medium-high heat until it melts and shimmers — do not let it smoke. Add the blended pepper base all at once (it will splatter). Fry, stirring frequently, for 15–20 minutes until the raw tomato smell is gone and the base has reduced by half, darkened to a deep brick red, and the oil has separated back to the surface.",
-      visualCue: {
-        primaryTarget: "Deep brick-red paste with pools of orange palm oil visibly separated on the surface. No longer smells raw; smells roasted and sweet.",
-        spectrum: [
-          { state: "Underdone", description: "Pepper base is still bright red and liquid; raw tomato smell persists. Oil has not separated.", action: "Continue frying on medium-high heat, stirring every minute to prevent scorching." },
-          { state: "Perfect",   description: "Paste is thick and jammy, has reduced to a fraction of its original volume, and the palm oil sits in orange pools on the surface. Tastes rich and slightly sweet.", action: "Add the egusi immediately." },
-          { state: "Overdone",  description: "Base has scorched at the bottom; bitter, acrid smell.", action: "Add a splash of stock to deglaze and lower the heat before proceeding." },
-        ],
-      },
-      feelCue: "The sputtering and aggressive hissing of the wet pepper base will gradually subside into a low, steady gurgle — that change in sound signals that the water has cooked off and the base is properly fried.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Egusi moulu (graines de melon séché, grossièrement moulues)",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["fried_pepper_base", "ing_02"],
-      outputState: "fried_egusi_base",
-      instructions: "Add the ground egusi to the fried pepper base in the pot. Stir vigorously to incorporate. The egusi will absorb the oil and begin to clump and brown against the pot bottom — this is correct and desirable. Stir-fry for 8–10 minutes, scraping the bottom constantly, until the egusi loses its raw floury smell and takes on a nutty, toasted character. It will form loose clumps.",
-      visualCue: {
-        primaryTarget: "Dry-looking, sandy egusi clumps speckled with red pepper. The pot bottom shows golden-brown toasted egusi when scraped.",
-        spectrum: [
-          { state: "Underdone", description: "Egusi still looks pale and pasty; smells raw and starchy.", action: "Continue frying on medium heat, scraping constantly." },
-          { state: "Perfect",   description: "Egusi is golden-tan with darker toasted flecks. Aroma is nutty, like roasted pumpkin seeds. Clumps are dry-ish and hold their shape.", action: "Add the stock and crayfish." },
-          { state: "Overdone",  description: "Egusi has stuck and burnt on the bottom; dark brown and bitter.", action: "Remove from heat, deglaze with stock carefully, and proceed — the burnt layer will not ruin the dish if not scraped up." },
-        ],
-      },
-      feelCue: "The egusi should feel dry and granular when you run your spoon through it, with gentle resistance at the bottom where it has toasted against the pot.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile de palme rouge (non raffinée)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["fried_egusi_base", "ing_05", "ing_06", "braised_meat"],
-      outputState: "simmered_egusi_stew",
-      instructions: "Pour in the stock and add the ground crayfish. Stir to combine — the egusi will hydrate and the stew will thicken. Add the braised meat. Season with salt. Bring to a gentle simmer and cook, partially covered, for 15–20 minutes, stirring every few minutes to prevent the egusi from settling and scorching. The stew is ready when it holds a mounded shape on a spoon.",
-      visualCue: {
-        primaryTarget: "Thick, rust-red stew with visible egusi texture and chunks of meat. A spoon dragged through it leaves a slow-filling channel.",
-        spectrum: [
-          { state: "Underdone", description: "Stew is loose and pourable; egusi has not yet fully hydrated and thickened.", action: "Simmer uncovered for longer, stirring frequently." },
-          { state: "Perfect",   description: "Stew mounds on a spoon and holds briefly. Rich brick-red color. Egusi is fully swollen and nutty. Oil shimmers on the surface.", action: "Add the greens and finish." },
-          { state: "Overdone",  description: "Stew has thickened to a paste; egusi is gummy and dense.", action: "Stir in a few tablespoons of stock or water to loosen." },
-        ],
-      },
-      feelCue: "Stir from the bottom — properly cooked egusi stew has a slightly gritty pull against the spoon, like very thick porridge, and will leave a coating on the spoon.",
+      "ingId": "ing_04",
+      "role": "Base",
+      "name": "Base de poivre: tomates, poivrons rouges, bonnets écossais, oignon (brûlé)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Finish",
-      inputs: ["simmered_egusi_stew", "ing_08"],
-      outputState: "finished_egusi_stew",
-      instructions: "Fold in the chopped greens and stir gently into the stew. Cook for 2–3 more minutes just until wilted — do not overcook; the greens should retain some color and texture. Taste and adjust salt. Serve immediately with pounded yam, eba, fufu, or rice.",
-      visualCue: {
-        primaryTarget: "Dark green wilted greens distributed through the red-orange stew, visible but fully integrated.",
-        spectrum: [
-          { state: "Underdone", description: "Greens are still raw and bright; sitting on top of the stew unintegrated.", action: "Stir in and cook 2 more minutes." },
-          { state: "Perfect",   description: "Greens are dark, wilted, and silky, folded through the stew without losing all of their color.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Greens are khaki-colored and mushy; lost all texture.", action: "The flavor is fine; garnish with a small handful of fresh raw greens for color." },
-        ],
-      },
-      feelCue: "The finished stew should be heavy and viscous when ladled — it falls in a thick, slow ribbon from the spoon, not a pour.",
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Écrevisse au sol (crevettes séchées fumées, en poudre)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pâte de crevette séchée",
+        "pâte d'anchois"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Boeuf ou bouillon de poulet (ou liquide de cuisson de viande)",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Épinards frais ou feuilles amères (approximativement hachés)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "épinards congelés",
+        "Verts à collier"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Brise",
+      "inputs": [
+        "ing_01",
+        "ing_07"
+      ],
+      "outputState": "braised_meat",
+      "instructions": "Assaisonner généreusement le bœuf de sel et le mettre dans une casserole avec assez d'eau pour couvrir à peine. Porter à ébullition, puis réduire le feu et laisser mijoter pendant 40 à 50 minutes jusqu'à tendreté mais sans tomber en morceaux. Réservez le liquide de braisage — c'est votre stock. Mettez la viande de côté.",
+      "visualCue": {
+        "primaryTarget": "La viande de boeuf est sombre et tendre, s'éloignant légèrement lorsqu'elle est pressée avec des pinces, mais tenant toujours sa forme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est dure et résiste à une fourchette; le collagène n'est pas encore fondu.",
+            "action": "Continuer à mijoter et vérifier toutes les 10 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande donne à la pression douce, coupe proprement avec un bord de cuillère, et le liquide de braisage est sombre et profondément salé.",
+            "action": "Réserver le liquide et réserver la viande."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande est complètement tombée en morceaux et le liquide semble boueux.",
+            "action": "Procéder — le bœuf déchiqueté dans le ragoût d'égusi est acceptable; il suffit de plier soigneusement plus tard."
+          }
+        ]
+      },
+      "feelCue": "Une pièce braisée doit se sentir comme une éponge ferme lorsque vous la pressez — elle donne et ressort légèrement, avec des jus à la surface."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Réduire",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "fried_pepper_base",
+      "instructions": "Chauffer l'huile de palme dans un pot à fond lourd à feu moyen-élevé jusqu'à ce qu'elle fonde et mijote — ne la laissez pas fumer. Ajouter la base de poivre mélangée tout à la fois (il éclaboussera). Faire frire, en remuant fréquemment, pendant 15 à 20 minutes jusqu'à ce que l'odeur brute de la tomate soit disparue et que la base ait diminué de moitié, s'assombri à un rouge brique profond, et que l'huile se soit séparée de la surface.",
+      "visualCue": {
+        "primaryTarget": "Pâte rouge brique profonde avec des piscines d'huile de palme orange visiblement séparées à la surface. Plus d'odeurs crues, torréfiés et sucrées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La base du poivre est encore rouge vif et liquide; l'odeur brute de la tomate persiste. L'huile n'est pas séparée.",
+            "action": "Continuer à frire à feu moyen-vif, en remuant chaque minute pour éviter les brûlures."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte est épaisse et jammy, a réduit à une fraction de son volume original, et l'huile de palme se trouve dans les piscines oranges à la surface. Goûte riche et légèrement sucré.",
+            "action": "Ajouter l'egusi immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La base est brûlée au fond; l'odeur amère et acride.",
+            "action": "Ajouter un éclaboussure de stock pour déglacer et baisser la chaleur avant de procéder."
+          }
+        ]
+      },
+      "feelCue": "Le sifflement effréné et agressif de la base de poivre humide s'affaiblira progressivement dans une gourde basse et stable, ce qui changera les signaux sonores que l'eau a cuit et que la base est bien frite."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "fried_pepper_base",
+        "ing_02"
+      ],
+      "outputState": "fried_egusi_base",
+      "instructions": "Ajouter l'egusi moulu à la base de poivre frit dans la casserole. Incorporer vigoureusement. L'egusi absorbera l'huile et commencera à s'écraser et à brunir contre le fond du pot, ce qui est correct et souhaitable. Faire frire 8-10 minutes en grattant constamment le fond, jusqu'à ce que l'egusi perde son odeur de farine brute et prenne un caractère noisette et grillé. Il formera des amas lâches.",
+      "visualCue": {
+        "primaryTarget": "Egusi sec, sablonneux, tacheté de poivre rouge. Le fond de la casserole montre l'egusi grillé doré-brun lorsqu'il est gratté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Egusi semble encore pâle et pâteux; sent cru et féculent.",
+            "action": "Continuer à frire à feu moyen, grattant constamment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Egusi est doré avec des taches grillées plus foncées. L'arôme est noisette, comme les graines de citrouille grillées. Les touffes sont sèches et tiennent leur forme.",
+            "action": "Ajouter le stock et les écrevisses."
+          },
+          {
+            "state": "Overdone",
+            "description": "Egusi a collé et brûlé sur le fond; brun foncé et amer.",
+            "action": "Retirer du feu, déglacer avec le bouillon soigneusement, et procéder — la couche brûlée ne ruinera pas le plat si elle n'est pas raclée."
+          }
+        ]
+      },
+      "feelCue": "L'egusi doit se sentir sec et granuleux lorsque vous passez votre cuillère à travers, avec une douce résistance au fond où il a grillé contre la casserole."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "fried_egusi_base",
+        "ing_05",
+        "ing_06",
+        "braised_meat"
+      ],
+      "outputState": "simmered_egusi_stew",
+      "instructions": "Verser le stock et ajouter les écrevisses. Mélanger — l'égusi s'hydratera et le ragoût s'épaissira. Ajouter la viande braisée. Assaisonner de sel. Porter à mijoter doucement et faire cuire, partiellement couvert, pendant 15 à 20 minutes, en remuant toutes les quelques minutes pour éviter que l'égusi ne se dépose et ne brûle. Le ragoût est prêt lorsqu'il tient une forme butée sur une cuillère.",
+      "visualCue": {
+        "primaryTarget": "Ragoût épais et rouge rouille avec texture égusi visible et morceaux de viande. Une cuillère traînée à travers elle laisse un canal de remplissage lent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le ragoût est lâche et versable; l'égusi n'a pas encore complètement hydraté et épaissi.",
+            "action": "Laisser mijoter à découvert plus longtemps, en remuant fréquemment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ragoûter les monticules sur une cuillère et tenir brièvement. Riche couleur rouge brique. Egusi est complètement gonflé et noisette. L'huile brille à la surface.",
+            "action": "Ajouter les verts et terminer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le ragoût s'est épaissi en pâte; l'égusi est gommé et dense.",
+            "action": "Incorporer quelques cuillères à soupe de bouillon ou d'eau pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "Mélanger du fond — le ragoût d'égusi cuit correctement a un tirage légèrement sec contre la cuillère, comme du porridge très épais, et laissera un revêtement sur la cuillère."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Finition",
+      "inputs": [
+        "simmered_egusi_stew",
+        "ing_08"
+      ],
+      "outputState": "finished_egusi_stew",
+      "instructions": "Plier dans les verts hachés et remuer doucement dans le ragoût. Cuire encore 2 à 3 minutes jusqu'à ce qu'il soit flétri — ne pas trop cuire; les verts devraient conserver une certaine couleur et texture. Goûtez et ajustez le sel. Servir immédiatement avec l'igname, l'éba, le fufu ou le riz.",
+      "visualCue": {
+        "primaryTarget": "Verts flétris vert foncé répartis dans le ragoût rouge-orange, visibles mais entièrement intégrés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les verts sont toujours crus et brillants; assis sur le ragoût non intégré.",
+            "action": "Incorporer et cuire encore 2 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les verts sont sombres, flétris et soyeux, pliés à travers le ragoût sans perdre toute leur couleur.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les verts sont de couleur kaki et musqués; ont perdu toute texture.",
+            "action": "La saveur est fine; garnir avec une petite poignée de verts crus frais pour la couleur."
+          }
+        ]
+      },
+      "feelCue": "Le ragoût fini doit être lourd et visqueux lorsqu'il est lavé; il tombe dans un ruban épais et lent de la cuillère, et non dans une goutte."
+    }
+  ]
 };

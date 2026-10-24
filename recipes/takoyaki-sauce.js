@@ -1,66 +1,180 @@
 export default {
-  repoId: "master_japanese_takoyaki_sauce_001",
-  parentRepoId: null,
-  slug: "takoyaki-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Takoyaki Sauce — Sweet-Savory Osaka Street Sauce",
-  description: "A glossy, dark brown sauce thick enough to cling to a spherical octopus ball without running — simultaneously fruity, tangy, deeply savory, and sweet in the way that only fermented Worcestershire and caramelized tomato can be. Three minutes to make; the taste of standing under festival lights.",
-  cuisine: "Japanese",
-  culture: "Osaka matsuri / street festival culture",
-  category: "condiments",
-  tags: ["japanese", "sauce", "osaka", "takoyaki", "street-food", "condiment", "sweet", "savory"],
-  difficulty: 1,
-  activeTime: "5 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 3, sour: 3, bitter: 1, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",     name: "Worcestershire sauce",                              ratioValue: 60,  defaultUnit: "ml", substitutions: ["Japanese Bull-Dog sauce (preferred if available)"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Oyster sauce",                                      ratioValue: 30,  defaultUnit: "ml", substitutions: ["hoisin sauce (sweeter)", "mushroom oyster sauce (vegan)"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Ketchup",                                           ratioValue: 30,  defaultUnit: "ml", substitutions: ["tomato paste (use 15 ml + 10 ml water)"] },
-    { ingId: "ing_04", role: "Sweetener", name: "Honey",                                             ratioValue: 15,  defaultUnit: "ml", substitutions: ["light brown sugar (1 tbsp)"] },
-    { ingId: "ing_05", role: "Umami",     name: "Soy sauce",                                         ratioValue: 15,  defaultUnit: "ml", substitutions: ["tamari"] },
-    { ingId: "ing_06", role: "Acid",      name: "Rice vinegar",                                      ratioValue: 5,   defaultUnit: "ml", substitutions: ["apple cider vinegar"] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Garlic powder",                                     ratioValue: 1,   defaultUnit: "g",  substitutions: ["0.5 tsp fresh garlic, minced very fine"] },
+  "repoId": "master_japanese_takoyaki_sauce_001",
+  "parentRepoId": null,
+  "slug": "takoyaki-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Takoyaki — Sauce de la rue Osaka sucrée",
+  "description": "Une sauce brun foncé brillant assez épaisse pour s'accrocher à une boule de poulpe sphérique sans courir — simultanément fruitée, tannée, profondément salée, et sucrée de la manière que seule le Worcestershire fermenté et la tomate caramélisée peuvent être. Trois minutes à faire; le goût de se tenir debout sous les lumières du festival.",
+  "cuisine": "Japonais",
+  "culture": "Osaka matsuri / culture du festival de rue",
+  "category": "condiments",
+  "tags": [
+    "Japonais",
+    "sauce",
+    "osaka",
+    "Takoyaki",
+    "Produits de la rue",
+    "condiment",
+    "doux",
+    "savoureux"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "5 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "combined_sauce",
-      instructions: "Combine all ingredients in a small bowl or jar. Whisk vigorously until the honey is fully dissolved and the sauce is uniform. This step requires more than a perfunctory stir — honey tends to clump at the bottom, and garlic powder can form dry lumps that will not dissolve without active agitation. Taste the raw, un-reduced sauce at this stage: it should be sharp, complex, sweet, and noticeably vinegar-forward. The raw balance is intentionally aggressive, because a brief reduction will mellow the harshness and concentrate the umami. The ratio of Worcestershire to oyster sauce to ketchup is what distinguishes a proper takoyaki sauce from a generic sweet-soy glaze — the Worcestershire provides fermented depth and tannic length, the oyster sauce contributes dark sweetness and body, and the ketchup provides tomato acidity and bright color.",
-      visualCue: {
-        primaryTarget: "A dark mahogany-brown, slightly opaque liquid. When you tilt the bowl, it flows smoothly but slightly thicker than water. No streaks of honey or dry garlic powder visible.",
-        spectrum: [
-          { state: "Underdone", description: "Honey is still pooled at the bottom. Garlic powder has formed small dry clumps on the surface.", action: "Whisk more vigorously, focusing on lifting from the bottom. Use a fork if needed." },
-          { state: "Perfect",   description: "Uniformly dark brown, smooth, and glossy. Smells complex: fruity, tangy, savory, and sweet simultaneously.", action: "Transfer to a small saucepan and reduce." },
-          { state: "Overdone",  description: "N/A — over-whisking a cold sauce has no negative effect.", action: "Proceed." },
-        ],
-      },
-      feelCue: "When you dip a finger and taste the combined raw sauce, the first sensation should be bright acidity (vinegar and ketchup), followed by a wave of deep fermented savory (Worcestershire and soy), finishing with honey sweetness that lingers. If any one of these three waves is absent, adjust the relevant ingredient.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "sauce Worcestershire",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce Taureau-Dog japonais (préféré si disponible)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Reduce",
-      inputs: ["combined_sauce"],
-      outputState: "finished_takoyaki_sauce",
-      instructions: "Pour the combined sauce into a small, heavy saucepan. Heat over medium until it reaches a simmer, then reduce to medium-low and simmer gently for 3–4 minutes, stirring constantly with a silicone spatula. The goal is to reduce the sauce by approximately 20% — just enough to thicken it to a consistency that will cling to a spherical ball rather than running off. The ketchup and honey will caramelize slightly, deepening the color from mahogany to near-black and adding a gentle bitterness that balances the sweetness. The aroma will shift: the sharp vinegar notes will soften and be replaced by a more rounded, complex fragrance. Do not over-reduce — if the sauce becomes too thick, it will not coat evenly and will taste cloyingly sweet. Remove from heat while it is still slightly thinner than you want, as it will continue to thicken as it cools. Transfer to a squeeze bottle for service.",
-      visualCue: {
-        primaryTarget: "A deep, near-black sauce with a reddish tint visible at the edges. Flows in a slow, thick ribbon from a spoon. When a drop is placed on a cold plate, it holds a dome rather than spreading flat immediately.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still thin and runs off a spoon quickly. Color has barely deepened. Aroma is still sharp and acidic.", action: "Continue simmering. The full 4 minutes at an active simmer is needed for proper thickening." },
-          { state: "Perfect",   description: "Deep, glossy, near-black. Flows in a slow ribbon from the spoon and coats the back. A drop on a cold plate holds its shape for 3–4 seconds before spreading. Aroma is rounded, deeply sweet-savory.", action: "Remove from heat and cool. Transfer to a squeeze bottle. Keeps refrigerated for 3 weeks." },
-          { state: "Overdone",  description: "Sauce has become very thick and dark — sticky and difficult to pour. Smells of burnt sugar.", action: "Add 1 tbsp of water and stir vigorously over low heat to thin. Do not continue reducing." },
-        ],
-      },
-      feelCue: "When you coat the back of a spoon and draw your finger across it, the line should hold cleanly for 10 seconds without the sauce running into it — the classic nappe test. The sauce should smell of caramelized fruit, smoky Worcestershire, and something pleasantly dark, like molasses.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "sauce à l'huître",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce hoisine (sweeter)",
+        "sauce aux huîtres aux champignons (vegan)"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Ketchup",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "pâte de tomate (utiliser 15 ml + 10 ml d'eau)"
+      ]
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Chérie",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sucre brun clair (1 c. à soupe)"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Vinaigre de riz",
+      "ratioValue": 5,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de cidre de pomme"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Poudre d'ail",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "0,5 c. à thé d'ail frais, haché très fin"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "combined_sauce",
+      "instructions": "Mélanger tous les ingrédients dans un petit bol ou un pot. fouetter vigoureusement jusqu'à ce que le miel soit complètement dissous et que la sauce soit uniforme. Cette étape exige plus qu'un remue-méninges perfunctorieux: le miel tend à s'agglutiner au fond, et la poudre d'ail peut former des morceaux secs qui ne se dissoudront pas sans agitation active. Goûtez la sauce crue et non réduite à ce stade : elle doit être nette, complexe, douce et nettement vinaigre-avant. L'équilibre brut est intentionnellement agressif, parce qu'une brève réduction apaisera la dureté et concentrera l'umami. Le rapport entre la sauce Worcestershire et la sauce à l'huître et le ketchup est ce qui distingue une bonne sauce takoyaki d'une glaçure générique en soie douce. Le Worcestershire fournit une profondeur fermentée et une longueur tannique, la sauce à l'huître contribue à la douceur et au corps foncés, et le ketchup fournit de l'acidité et une couleur vive de tomate.",
+      "visualCue": {
+        "primaryTarget": "Un liquide brun acajou foncé, légèrement opaque. Lorsque vous inclinez le bol, il coule doucement mais légèrement plus épais que l'eau. Pas de stries de miel ou de poudre d'ail sèche visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le miel est encore baigné en bas. La poudre d'ail a formé de petites touffes sèches à la surface.",
+            "action": "Whisk plus vigoureusement, se concentrant sur le levage du bas. Utilisez une fourchette si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniformement brun foncé, lisse et brillant. Complexe odorant : fruité, acidulé, salé et sucré simultanément.",
+            "action": "Transférer dans une petite casserole et réduire."
+          },
+          {
+            "state": "Overdone",
+            "description": "S.O. — le sursaut d'une sauce froide n'a aucun effet négatif.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous trempez un doigt et goûtez à la sauce crue combinée, la première sensation doit être d'acidité vive (vin et ketchup), suivie d'une vague de sauce fermentée profonde (Worcestershire et soja), finissant par une douceur de miel qui persiste. Si l'une de ces trois vagues est absente, ajuster l'ingrédient pertinent."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Réduire",
+      "inputs": [
+        "combined_sauce"
+      ],
+      "outputState": "finished_takoyaki_sauce",
+      "instructions": "Verser la sauce combinée dans une petite casserole lourde. Chauffer à feu moyen jusqu'à ce qu'il atteigne une mijotation, puis réduire à moyen-doux et laisser mijoter doucement pendant 3 à 4 minutes, en remuant constamment avec une spatule de silicone. L'objectif est de réduire la sauce d'environ 20% — juste assez pour l'épaissir à une consistance qui s'accrochera à une boule sphérique plutôt que de s'enfuir. Le ketchup et le miel vont caraméliser légèrement, approfondissement de la couleur de l'acajou au proche noir et ajouter une douce amertume qui équilibre la douceur. L'arôme changera : les notes de vinaigre vif se ramolliront et seront remplacées par un parfum plus arrondi et complexe. Ne pas sur-réduire — si la sauce devient trop épaisse, elle ne s'enrobera pas uniformément et aura un goût cloyant. Retirer du feu alors qu'il est encore légèrement plus mince que vous voulez, car il continuera à épaissir pendant qu'il refroidit. Transfert dans une bouteille de compression pour le service.",
+      "visualCue": {
+        "primaryTarget": "Une sauce profonde, presque noire avec une teinte rougeâtre visible aux bords. Il coule dans un ruban lent et épais d'une cuillère. Lorsqu'une goutte est placée sur une plaque froide, elle tient un dôme plutôt que de s'étendre immédiatement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore mince et sort rapidement d'une cuillère. La couleur a à peine approfondi. L'arôme est encore aigu et acide.",
+            "action": "Continuez à mijoter. La pleine 4 minutes à un mijot actif est nécessaire pour un épaississement approprié."
+          },
+          {
+            "state": "Perfect",
+            "description": "Profond, brillant, presque noir. Il coule dans un ruban lent de la cuillère et enveloppe le dos. Une goutte sur une plaque froide tient sa forme pendant 3-4 secondes avant de s'étendre. L'arôme est arrondi, profondément sucré.",
+            "action": "Retirer du feu et refroidir. Transférer dans une bouteille. Conserver au réfrigérateur pendant 3 semaines."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est devenue très épaisse et sombre — collante et difficile à verser. Des odeurs de sucre brûlé.",
+            "action": "Ajouter 1 c. à soupe d'eau et remuer vigoureusement à feu doux à mince. Ne continuez pas à réduire."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous enrobez l'arrière d'une cuillère et tirez votre doigt dessus, la ligne doit tenir propre pendant 10 secondes sans que la sauce n'y tombe — le test de nappe classique. La sauce doit sentir les fruits caramélisés, le Worcestershire fumé, et quelque chose d'agréablement sombre, comme la mélasse."
+    }
+  ]
 };

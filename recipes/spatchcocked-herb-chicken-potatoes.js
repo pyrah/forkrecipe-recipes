@@ -1,103 +1,268 @@
 export default {
-  repoId: "master_american_spatchcocked_herb_chicken_001",
-  parentRepoId: null,
-  slug: "spatchcocked-herb-chicken-potatoes",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Spatchcocked Herb Chicken with Potatoes",
-  description: "A whole chicken opened flat so it roasts evenly and fast, its skin shattering over garlicky herb butter while the potatoes underneath fry in the dripping schmaltz until crisp-edged and seasoned through.",
-  cuisine: "American",
-  culture: "American home cooking",
-  category: "proteins",
-  tags: ["chicken", "roast", "sunday-roast", "potatoes", "herbs", "one-pan", "home-kitchen", "weekend"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "2 hr 15 min",
-  ratioSystem: "weight",
-  servings: 4,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 0, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Whole chicken (about 2 kg / 4.5 lb), patted dry",   ratioValue: 1,    defaultUnit: "whole",   substitutions: ["two smaller 1.3 kg birds, roasted side by side"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Kosher salt",                                        ratioValue: 22,   defaultUnit: "g",       substitutions: ["fine sea salt (use about 15 g)"] },
-    { ingId: "ing_03", role: "Fat",       name: "Unsalted butter, softened",                          ratioValue: 45,   defaultUnit: "g",       substitutions: ["olive oil (skin browns less deeply)"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic, finely grated",                              ratioValue: 4,    defaultUnit: "cloves",  substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Thyme, leaves stripped",                             ratioValue: 6,    defaultUnit: "sprigs",  substitutions: ["oregano"] },
-    { ingId: "ing_06", role: "Herb",      name: "Rosemary, leaves finely chopped",                    ratioValue: 2,    defaultUnit: "sprigs",  substitutions: ["sage"] },
-    { ingId: "ing_07", role: "Citrus",    name: "Lemon (zest into butter, halves roasted in pan)",    ratioValue: 1,    defaultUnit: "whole",   substitutions: [] },
-    { ingId: "ing_08", role: "Starch",    name: "Yukon Gold potatoes, cut into 4 cm chunks",          ratioValue: 1300, defaultUnit: "g",       substitutions: ["red-skinned potatoes", "fingerlings, halved"] },
-    { ingId: "ing_09", role: "Fat",       name: "Olive oil",                                          ratioValue: 30,   defaultUnit: "ml",      substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Black pepper, freshly ground",                       ratioValue: 0,    defaultUnit: "to taste", substitutions: [] },
+  "repoId": "master_american_spatchcocked_herb_chicken_001",
+  "parentRepoId": null,
+  "slug": "spatchcocked-herb-chicken-potatoes",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Poulet aux herbes spatchcockées avec pommes de terre",
+  "description": "Un poulet entier s'ouvrit à plat pour qu'il rôtisse uniformément et rapidement, sa peau éclatant sur le beurre d'herbe ailky tandis que les pommes de terre en dessous frisaient dans le schmaltz goutte à goutte jusqu'à ce qu'elles soient croustillantes et assaisonnées.",
+  "cuisine": "Américain",
+  "culture": "Cuisine maison américaine",
+  "category": "proteins",
+  "tags": [
+    "poulet",
+    "rôti",
+    "Rôti du dimanche",
+    "pommes de terre",
+    "herbes",
+    "1 pan",
+    "cuisine maison",
+    "weekend"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "2 hr 15 min",
+  "ratioSystem": "weight",
+  "servings": 4,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Spatchcock and dry-brine",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "brined_flat_chicken",
-      instructions: "Set the chicken breast-side down. With sturdy kitchen shears, cut along both sides of the backbone and remove it (save for stock). Flip the bird, splay the legs out, and press firmly on the breastbone with the heel of your hand until you feel it crack and the bird lies flat. Pat dry, then sprinkle about 16 g of the salt evenly over both sides. Refrigerate uncovered on a rack for at least 1 hour, or up to 24 hours for the crispest skin.",
-      visualCue: {
-        primaryTarget: "A bird of even thickness, legs turned outward, breast flattened, skin dry and faintly matte.",
-        spectrum: [
-          { state: "Underdone", description: "Breastbone not cracked — the breast still peaks high above the thighs, which will leave it overcooked by the time the legs are done.", action: "Press harder on the keel with both hands stacked until you hear a crack and the bird relaxes flat." },
-          { state: "Perfect",   description: "Breast and thighs sit at roughly the same height; after resting uncovered the skin looks taut, dry, and slightly translucent over the fat.", action: "Proceed to the herb butter." },
-          { state: "Overdone",  description: "Brined much longer than a day — skin is leathery and the thinnest edges have darkened.", action: "Still usable; skip any further salt on the chicken and rub the butter in generously." },
-        ],
-      },
-      feelCue: "After the dry brine the skin should feel like dry parchment under your fingertips — no tackiness, no beads of moisture.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Poulet entier (environ 2 kg / 4,5 lb), séché",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "deux petits oiseaux de 1,3 kg, rôtis côte à côte"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Butter under the skin",
-      inputs: ["brined_flat_chicken", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_10"],
-      outputState: "buttered_chicken",
-      instructions: "Heat the oven to 450°F (230°C) with a rack in the upper-middle position. Mash the softened butter with the garlic, thyme leaves, rosemary, the zest of the lemon, and plenty of black pepper. Slide your fingers under the skin of the breast and thighs to loosen it without tearing, then push most of the butter underneath and massage it out evenly from the outside. Smear the rest over the skin.",
-      visualCue: {
-        primaryTarget: "An even layer of flecked herb butter visible through the skin, covering breast and thighs.",
-        spectrum: [
-          { state: "Underdone", description: "Butter sits in one lump near the neck opening; the thighs and far breast have none.", action: "Press from outside the skin and slide the butter down toward the legs and across the breast." },
-          { state: "Perfect",   description: "A thin, green-flecked film shows through the skin everywhere, with the skin still intact.", action: "Proceed to the potatoes." },
-          { state: "Overdone",  description: "Skin has torn open across the breast and butter is smeared on the outside only.", action: "Pull the loose skin back over the tear; a few holes will just brown a little unevenly." },
-        ],
-      },
-      feelCue: "The butter should be soft enough to spread like room-temperature cream cheese — if it resists, warm the bowl in your hands for a minute.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 22,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel de mer fin (utiliser environ 15 g)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Roast",
-      inputs: ["buttered_chicken", "ing_08", "ing_09", "ing_02"],
-      outputState: "roasted_chicken_potatoes",
-      instructions: "Toss the potatoes with the olive oil, the remaining salt, and pepper, and spread them in a single layer in a large rimmed sheet pan (about 33 × 46 cm / 13 × 18 in). Nestle the zested lemon, halved, cut-side down among them. Lay the chicken skin-side up on top of the potatoes, legs pointing toward the back of the oven. Roast 45–55 minutes, until the skin is deep golden and an instant-read thermometer in the thickest part of the thigh (not touching bone) reads 165°F (74°C); the breast should read at least 155–160°F (68–71°C).",
-      visualCue: {
-        primaryTarget: "Deep golden, blistered skin, juices running clear from the thigh joint, and potatoes crisp and browned where they touch the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is pale gold and soft; pink juices seep when you pierce between leg and body; thigh reads below 165°F (74°C).", action: "Return to the oven and check every 5 minutes." },
-          { state: "Perfect",   description: "Skin is mahogany-gold and crackled, thigh reads 165°F (74°C), and the potatoes are glossy with fat and browned on their undersides.", action: "Remove from the oven and rest." },
-          { state: "Overdone",  description: "Skin has blackened at the wing tips and the breast reads well above 165°F (74°C); potatoes at the edges are dark and hard.", action: "Rest it anyway and spoon the pan juices over the sliced breast to help it along." },
-        ],
-      },
-      feelCue: "Wiggle a drumstick — it should move loosely in the joint. The skin should crackle audibly when tapped with a spoon.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli",
+      "ratioValue": 45,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile d'olive (la peau brunit moins profondément)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Rest",
-      inputs: ["roasted_chicken_potatoes"],
-      outputState: "carved_chicken_dinner",
-      instructions: "Move the chicken to a cutting board and rest 10–15 minutes. Meanwhile, toss the potatoes in the pan juices and return them to the oven for 5 minutes if they need more crunch. Carve the chicken into legs, thighs, wings, and sliced breast, squeeze the roasted lemon over everything, and serve on top of the potatoes.",
-      visualCue: {
-        primaryTarget: "Breast slices that are moist and glistening, not puddling juice across the board.",
-        spectrum: [
-          { state: "Underdone", description: "Carved immediately — juice floods the board and the slices go dry within minutes.", action: "Wait the full 10 minutes next time; spoon the board juices back over the meat now." },
-          { state: "Perfect",   description: "Slices are glossy and hold their juices; skin stays crisp; potatoes are coated in savory drippings.", action: "Serve." },
-          { state: "Overdone",  description: "Rested 40+ minutes — meat is lukewarm and the skin has softened.", action: "Flash the carved pieces skin-side up under the broiler for a minute." },
-        ],
-      },
-      feelCue: "Pressing a thumb into the rested breast should feel springy and firm, like the fleshy base of your thumb, with no liquid rushing out.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Ail, râpé finement",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Thym, feuilles dépouillées",
+      "ratioValue": 6,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "origan"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Rosaire, feuilles finement hachées",
+      "ratioValue": 2,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "Sauge"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Citrus",
+      "name": "Citron (zest dans le beurre, moitié torréfié dans la poêle)",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Starch",
+      "name": "Yukon Pommes de terre d'or, coupées en morceaux de 4 cm",
+      "ratioValue": 1300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Pommes de terre à peau rouge",
+        "Aiguilles, coupées en deux"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Poivre noir, fraîchement moulu",
+      "ratioValue": 0,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Spatchcock et saumure sèche",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "brined_flat_chicken",
+      "instructions": "Pose la poitrine de poulet. Avec des cisailles de cuisine robustes, couper les deux côtés de l'épine dorsale et l'enlever (enregistrer pour le stock). Dépliez l'oiseau, éjaculez les jambes, et appuyez fermement sur la poitrine avec le talon de votre main jusqu'à ce que vous le sentiez craquer et l'oiseau se couche à plat. Sécher la pate, puis arroser environ 16 g de sel uniformément sur les deux côtés. Réfrigérer à découvert sur une grille pendant au moins 1 heure, ou jusqu'à 24 heures pour la peau la plus croustillante.",
+      "visualCue": {
+        "primaryTarget": "Un oiseau d'épaisseur uniforme, les jambes tournées vers l'extérieur, la poitrine aplatie, la peau sèche et légèrement mate.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'os du sein n'est pas fissuré — la poitrine est encore haut au-dessus des cuisses, ce qui la laissera trop cuite au moment où les jambes sont faites.",
+            "action": "Appuyez plus fort sur la quille avec les deux mains empilées jusqu'à ce que vous entendiez une fissure et l'oiseau se détend à plat."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les seins et les cuisses s'assoient à peu près à la même hauteur; après le repos découvert la peau semble tendue, sèche et légèrement translucide sur la graisse.",
+            "action": "Passez au beurre d'herbe."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brisée beaucoup plus longtemps qu'une journée — la peau est cireuse et les bords les plus fins ont obscurci.",
+            "action": "Toujours utilisable ; sautez tout sel sur le poulet et frottez généreusement le beurre."
+          }
+        ]
+      },
+      "feelCue": "Après la saumure sèche, la peau doit se sentir comme un parchemin sec sous le bout des doigts, sans crosse, sans perles d'humidité."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Beurre sous la peau",
+      "inputs": [
+        "brined_flat_chicken",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_10"
+      ],
+      "outputState": "buttered_chicken",
+      "instructions": "Chauffer le four à 450°F (250°C) avec une grille en position médiane supérieure. Mâcher le beurre ramolli avec l'ail, les feuilles de thym, le romarin, le zeste du citron et beaucoup de poivre noir. Faites glisser vos doigts sous la peau de la poitrine et des cuisses pour le desserrer sans déchirer, puis poussez la plupart du beurre en dessous et massez-le uniformément de l'extérieur. Enlevez le reste sur la peau.",
+      "visualCue": {
+        "primaryTarget": "Une couche uniforme de beurre d'herbe tacheté visible à travers la peau, couvrant la poitrine et les cuisses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Beurre assis dans une masse près de l'ouverture du cou; les cuisses et la poitrine loin n'ont pas.",
+            "action": "Appuyez de l'extérieur de la peau et glissez le beurre vers les jambes et sur la poitrine."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un film mince et vert montre partout la peau, la peau restant intacte.",
+            "action": "Allez aux pommes de terre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau s'est déchirée à travers la poitrine et le beurre est frotté à l'extérieur seulement.",
+            "action": "Retirez la peau lâche sur la déchirure; quelques trous vont juste brunir un peu inégalement."
+          }
+        ]
+      },
+      "feelCue": "Le beurre doit être assez doux pour se répandre comme du fromage à la crème à température ambiante — s'il résiste, réchauffez le bol dans vos mains pendant une minute."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Rôtis",
+      "inputs": [
+        "buttered_chicken",
+        "ing_08",
+        "ing_09",
+        "ing_02"
+      ],
+      "outputState": "roasted_chicken_potatoes",
+      "instructions": "Mélanger les pommes de terre avec l'huile d'olive, le sel restant et le poivre, et les répartir en une seule couche dans une grande poêle à feuilles bordées (environ 33 × 46 cm). Nettoyez le citron zesté, coupé en deux et coupé en deux. Placez la peau de poulet sur le dessus des pommes de terre, les jambes pointées vers l'arrière du four. Faire rôtir 45 à 55 minutes, jusqu'à ce que la peau soit d'or profond et qu'un thermomètre à lecture instantanée dans la partie la plus épaisse de la cuisse (sans toucher l'os) indique 165°F (74°C); lire au moins 155 à 160°F (68 à 71°C).",
+      "visualCue": {
+        "primaryTarget": "Peau d'or profond, blister, jus qui sort de l'articulation de la cuisse et pommes de terre croustillantes et dorées où elles touchent la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est d'or pâle et douce; les jus roses s'infiltrent lorsque vous percez entre la jambe et le corps; la cuisse se situe en dessous de 165°F (74°C).",
+            "action": "Retournez au four et vérifiez toutes les 5 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est acajou-or et crépitée, la cuisse lit 165°F (74°C), et les pommes de terre sont brillantes avec de la graisse et dorées sur leur face inférieure.",
+            "action": "Retirer du four et se reposer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau a noirci au bout des ailes et la poitrine est bien au-dessus de 165°F (74°C); les pommes de terre aux bords sont sombres et durs.",
+            "action": "Repose-le de toute façon et cuillere le jus de poêle sur la poitrine tranchée pour l'aider."
+          }
+        ]
+      },
+      "feelCue": "Percez un pilon — il devrait se déplacer librement dans l'articulation. La peau doit craquer audiquement lorsqu'elle est tapée d'une cuillère."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "roasted_chicken_potatoes"
+      ],
+      "outputState": "carved_chicken_dinner",
+      "instructions": "Déplacez le poulet sur une planche à découper et reposez 10 à 15 minutes. Pendant ce temps, jetez les pommes de terre dans les jus de cuisson et retournez-les au four pendant 5 minutes s'ils ont besoin de plus de croquant. Découpez le poulet en jambes, cuisses, ailes et poitrine coupée, pressez le citron rôti sur tout et servez sur les pommes de terre.",
+      "visualCue": {
+        "primaryTarget": "Les tranches de poitrine qui sont humides et scintillent, pas le jus de pulpe à travers le bord.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Séparé immédiatement — le jus inonde la planche et les tranches sèchent en quelques minutes.",
+            "action": "Attendez les 10 prochaines minutes; cuillerez le jus de planche sur la viande maintenant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tranches sont brillantes et tiennent leurs jus; la peau reste croquante; les pommes de terre sont enrobées de gouttes salées.",
+            "action": "Servez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Reposé 40+ minutes — la viande est tiède et la peau s'est adoucie.",
+            "action": "Faites clignoter les morceaux sculptés côté peau sous le grille-pain pendant une minute."
+          }
+        ]
+      },
+      "feelCue": "Presser un pouce dans la poitrine reposée devrait se sentir printanière et ferme, comme la base charnue de votre pouce, sans liquide se précipitant."
+    }
+  ]
 };

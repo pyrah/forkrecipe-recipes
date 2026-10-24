@@ -1,80 +1,179 @@
 export default {
-  repoId: "master_british_honeycomb_toffee_001",
-  parentRepoId: null,
-  slug: "honeycomb-toffee",
-  author: "ForkRecipe Kitchen",
-  title: "Honeycomb Toffee (Cinder Toffee)",
-  description: "Sugar and golden syrup cooked to the hard-crack stage, then dramatically aerated by a single teaspoon of baking soda that transforms molten candy into a volcanic, rising foam of caramel glass — crunchy, airy, and dangerously addictive, especially when shattered and dipped in dark chocolate.",
-  cuisine: "British",
-  culture: "British",
-  category: "desserts",
-  tags: ["dessert", "candy", "british", "caramel", "vegan", "gluten-free", "toffee"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "1 hr",
-  ratioSystem: "weight",
-  stars: 1720,
-  forks: 148,
-  contributors: 35,
-  license: "CC-BY-SA",
-  createdAt: "2026-02-15",
-  updatedAt: "2026-02-15",
-  flavorRadar: { sweet: 5, salty: 1, sour: 0, bitter: 2, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Sweetener", name: "Granulated white sugar",             ratioValue: 200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener", name: "Golden syrup (or light corn syrup)", ratioValue: 80,  defaultUnit: "g", substitutions: ["light corn syrup", "glucose syrup"] },
-    { ingId: "ing_03", role: "Hydration", name: "Water",                              ratioValue: 60,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_04", role: "Leavener",  name: "Bicarbonate of soda (baking soda)", ratioValue: 8,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",                      ratioValue: 2,   defaultUnit: "g", substitutions: [] },
+  "repoId": "master_british_honeycomb_toffee_001",
+  "parentRepoId": null,
+  "slug": "honeycomb-toffee",
+  "author": "ForkRecipe Kitchen",
+  "title": "Choux d'abeilles",
+  "description": "Sucre et sirop d'or cuits à l'étape du crack dur, puis considérablement aérés par une seule cuillère à café de bicarbonate de soude qui transforme les bonbons fondus en une mousse volcanique montante de verre de caramel — croquant, aéré et dangereusement addictif, surtout lorsqu'ils sont broyés et trempés dans du chocolat noir.",
+  "cuisine": "Anglais",
+  "culture": "Anglais",
+  "category": "desserts",
+  "tags": [
+    "dessert",
+    "bonbons",
+    "britanniques",
+    "Caramel",
+    "végétalien",
+    "Sans gluten",
+    "caramel"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "weight",
+  "stars": 1720,
+  "forks": 148,
+  "contributors": 35,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-02-15",
+  "updatedAt": "2026-02-15",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Dissolve",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "sugar_solution",
-      instructions: "Line a deep baking tray (at least 5 cm sides) with oiled parchment. Place the sugar, golden syrup, and water in a large, deep, heavy-bottomed saucepan — the pan must be at least 4x larger than the mixture, as it will expand violently when the baking soda is added. Stir over medium heat until the sugar dissolves completely. Once dissolved, stop stirring entirely — stirring will cause crystallization. Clip a candy thermometer to the side.",
-      visualCue: {
-        primaryTarget: "Sugar solution clarity before boiling",
-        spectrum: [
-          { state: "Underdone", description: "Sugar granules still visible at the bottom and edges of the pan. Solution is grainy.", action: "Continue stirring over low heat. Every grain must dissolve before increasing the heat." },
-          { state: "Perfect",   description: "Solution is completely clear and smooth — no granules visible. Has the appearance of very pale amber water. The edges are just beginning to bubble.", action: "Stop stirring. Increase heat to medium-high and attach the thermometer." },
-          { state: "Overdone",  description: "Solution was stirred after boiling began. White crystals are forming on the side of the pan — seed crystallization beginning.", action: "Add 1 tbsp of water and stir once to dissolve the crystals, then stop stirring permanently." },
-        ],
-      },
-      feelCue: "Run a clean spoon through the cooled, unboiled solution — it should feel perfectly smooth, like warm water with no grit.",
+      "ingId": "ing_01",
+      "role": "Sweetener",
+      "name": "Sucre blanc granulé",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Caramelize",
-      inputs: ["sugar_solution"],
-      outputState: "hard_crack_caramel",
-      instructions: "Boil the solution without stirring until it reaches 149–154 C (300–310 F) — the hard crack stage. Do not walk away. The temperature rises slowly at first and then accelerates dramatically above 130 C. At the target temperature, the caramel will be a deep amber — the color of very dark honey. Remove immediately from heat. Have the baking soda measured and ready in a small bowl before you start — you will have no time to measure it once the temperature is reached.",
-      visualCue: {
-        primaryTarget: "Caramel color at target temperature",
-        spectrum: [
-          { state: "Underdone", description: "Caramel is pale golden at 140 C. A drop on a cold plate pulls into a pliable thread rather than a hard shard.", action: "Continue cooking without stirring. Hard crack is still 9–14 degrees away." },
-          { state: "Perfect",   description: "Deep amber caramel at 149–154 C. A drop on a cold plate shatters immediately when touched — no pliability whatsoever. Smells intensely of caramel with a faint bitter edge.", action: "Remove from heat immediately. Add salt and baking soda without delay." },
-          { state: "Overdone",  description: "Caramel is very dark brown, approaching black. Acrid smoke is beginning to rise. Temperature above 160 C.", action: "It is too dark. Discard and start over — over-cooked caramel will taste overwhelmingly bitter." },
-        ],
-      },
-      feelCue: "Drop a tiny amount of caramel into cold water — it should instantly harden and shatter like glass when bent. If it bends without breaking, you are not yet at hard crack.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sirop d'or (ou sirop de maïs léger)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sirop de maïs léger",
+        "sirop de glucose"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Bloom",
-      inputs: ["hard_crack_caramel", "ing_04", "ing_05"],
-      outputState: "finished_honeycomb_toffee",
-      instructions: "Working immediately and very quickly, whisk the fine salt and baking soda into the hot caramel. The mixture will react violently — expanding into a massive, hissing, volcanic foam of amber bubbles that rises from the pan. Stop whisking after 3–4 seconds (over-whisking deflates the bubbles) and immediately pour into the prepared tin. Do not spread it — let it flow and settle naturally, preserving the honeycomb structure. Do not touch or disturb it for 30–40 minutes until completely cold and set.",
-      visualCue: {
-        primaryTarget: "Foam expansion and bubble structure during pour",
-        spectrum: [
-          { state: "Underdone", description: "Minimal foaming — the caramel barely expanded. Very few bubbles set in the cooled slab.", action: "The baking soda may have been insufficiently stirred in. Next time, ensure it is fully incorporated in the 3–4 second window." },
-          { state: "Perfect",   description: "A dramatic volcanic expansion — the mixture triples in volume within 2 seconds. The set slab has a beautiful, dense honeycomb of amber bubbles visible from the cut edge. Golden-brown, light, and shattering when tapped.", action: "Shatter into irregular pieces. Dip in tempered dark chocolate for the full experience." },
-          { state: "Overdone",  description: "Foam was disturbed while setting. The honeycomb structure collapsed — the slab is denser and less airy than intended.", action: "Still delicious. Crush completely and use as a topping for ice cream or stir into chocolate." },
-        ],
-      },
-      feelCue: "When completely cold, pick up a piece and tap it firmly against the edge of the tin — it should shatter with a clean, glassy crack and the sound should ring, not thud. The shard should be light almost beyond belief for its size.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "Bicarbonate de soude",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Dissoudre",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "sugar_solution",
+      "instructions": "Étaler un plateau de cuisson profond (au moins 5 cm de côté) avec du parchemin huilé. Placer le sucre, le sirop d'or et l'eau dans une grande casserole profonde à fond lourd — la casserole doit être au moins 4x plus grande que le mélange, car elle va s'étendre violemment lorsque le bicarbonate de soude est ajouté. Incorporer à feu moyen jusqu'à dissolution complète du sucre. Une fois dissous, arrêtez de remuer entièrement. Clipez un thermomètre à bonbons sur le côté.",
+      "visualCue": {
+        "primaryTarget": "Limpidité de la solution de sucre avant ébullition",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des granules de sucre encore visibles au fond et aux bords de la poêle. La solution est granuleuse.",
+            "action": "Continuer à remuer à feu doux. Chaque grain doit se dissoudre avant d'augmenter la chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "La solution est complètement limpide et lisse – pas de granules visibles. A l'apparence d'eau ambre très pâle. Les bords commencent juste à buller.",
+            "action": "Arrête de remuer. Augmenter la chaleur à moyenne-élevée et fixer le thermomètre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La solution a été agitée après le début de l'ébullition. Des cristaux blancs se forment sur le côté de la casserole: la cristallisation des graines commence.",
+            "action": "Ajouter 1 c. à soupe d'eau et remuer une fois pour dissoudre les cristaux, puis arrêter de remuer en permanence."
+          }
+        ]
+      },
+      "feelCue": "Exécutez une cuillère propre dans la solution refroidie et non bouillie — elle devrait se sentir parfaitement lisse, comme de l'eau chaude sans grain."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Caramélisation",
+      "inputs": [
+        "sugar_solution"
+      ],
+      "outputState": "hard_crack_caramel",
+      "instructions": "Faire bouillir la solution sans remuer jusqu'à ce qu'elle atteigne 149-154 C (300-310 F) — le stade de fissure dure. Ne partez pas. La température augmente lentement au début, puis s'accélère considérablement au-dessus de 130 °C. À la température cible, le caramel sera un ambre profond, la couleur du miel très foncé. Retirer immédiatement du feu. Faites mesurer le bicarbonate de soude dans un petit bol avant de commencer — vous n'aurez pas le temps de le mesurer une fois la température atteinte.",
+      "visualCue": {
+        "primaryTarget": "Couleur caramel à la température cible",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Caramel est d'or pâle à 140 °C. Une goutte sur une plaque froide tire dans un fil souple plutôt qu'un dard dur.",
+            "action": "Continuer la cuisson sans remuer. La fissure dure est toujours à 9-14 degrés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Caramel ambré profond à 149-154 C. Une goutte sur une assiette froide se brise immédiatement lorsqu'elle est touchée — aucune pliabilité. Sensation intense de caramel avec un léger bord amer.",
+            "action": "Retirer immédiatement du feu. Ajouter le sel et le bicarbonate de soude sans tarder."
+          },
+          {
+            "state": "Overdone",
+            "description": "Caramel est brun très foncé, proche du noir. La fumée acride commence à augmenter. Température supérieure à 160 C.",
+            "action": "Il fait trop sombre. Jeter et recommencer — le caramel surcuit aura un goût extrêmement amer."
+          }
+        ]
+      },
+      "feelCue": "Déposez une petite quantité de caramel dans l'eau froide — il devrait durcir instantanément et se briser comme du verre quand il est plié. Si elle fléchit sans casser, vous n'êtes pas encore à la fissure."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Bloom",
+      "inputs": [
+        "hard_crack_caramel",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "finished_honeycomb_toffee",
+      "instructions": "Travailler immédiatement et très rapidement, fouetter le sel fin et faire cuire la soude dans le caramel chaud. Le mélange réagira violemment, s'étendant dans une mousse volcanique massive, sifflante, de bulles ambres qui s'élève de la casserole. Arrêtez de fouetter après 3-4 secondes (l'over-whisking dégonfle les bulles) et versez immédiatement dans l'étain préparé. Ne le répandez pas, qu'il coule et s'installe naturellement, en préservant la structure du nid d'abeille. Ne pas le toucher ou le déranger pendant 30 à 40 minutes jusqu'à ce qu'il soit complètement froid et réglé.",
+      "visualCue": {
+        "primaryTarget": "Dilatation de mousse et structure de bulles pendant la coulée",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mousse minimale — le caramel à peine élargi. Très peu de bulles dans la dalle refroidie.",
+            "action": "Le bicarbonate de soude peut avoir été insuffisamment agité. La prochaine fois, assurez-vous qu'il est entièrement incorporé dans la deuxième fenêtre 3–4."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une expansion volcanique spectaculaire — le mélange triple en volume en 2 secondes. La dalle set a un beau nid d'abeille dense de bulles ambre visibles du bord coupé. Golden-brun, lumière, et éclatant quand tapoté.",
+            "action": "En morceaux irréguliers. Plongez dans du chocolat noir trempé pour la pleine expérience."
+          },
+          {
+            "state": "Overdone",
+            "description": "La mousse a été perturbée pendant le réglage. La structure des nids d'abeilles s'est effondrée: la dalle est plus dense et moins aérée que prévu.",
+            "action": "Toujours délicieux. Crusher complètement et utiliser comme garniture pour la crème glacée ou mélanger au chocolat."
+          }
+        ]
+      },
+      "feelCue": "Quand il fait complètement froid, prenez une pièce et tapez - la fermement contre le bord de l'étain — il devrait se briser avec une fissure propre et vitreuse et le son devrait sonner, et non le bruit. Le dard devrait être léger presque au-delà de la croyance pour sa taille."
+    }
+  ]
 };

@@ -1,108 +1,265 @@
 export default {
-  repoId: "master_indonesian_gado-gado-sauce_001",
-  parentRepoId: null,
-  slug: "gado-gado-sauce",
-  author: "ForkRecipe Kitchen",
-
-  title: "Gado-Gado Peanut Sauce",
-  description: "A thick, rust-coloured Javanese peanut sauce with the body of a gravy and the complexity of a curry — ground peanuts loosen in coconut milk to a velvety pour, while galangal, lemongrass, and a spark of bird's eye chili build layered heat that clings to every vegetable and egg it touches.",
-  cuisine: "Indonesian",
-  culture: "Javanese",
-  category: "sauces",
-
-  tags: ["peanut", "indonesian", "satay", "vegan", "spicy"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-
-  // 0–5 scale. Rich, creamy, savoury with moderate heat; low sour and bitter.
-  flavorRadar: { sweet: 3, salty: 3, sour: 2, bitter: 1, umami: 3, heat: 3 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Roasted peanuts (unsalted), skins removed",             ratioValue: 4,   defaultUnit: "parts", substitutions: ["natural peanut butter (no sugar added)"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Full-fat coconut milk",                                 ratioValue: 3,   defaultUnit: "parts", substitutions: ["water (thinner sauce)"] },
-    { ingId: "ing_03", role: "Spice",     name: "Bird's eye chili (2–4 chilies to taste), sliced",      ratioValue: 0.5, defaultUnit: "parts", substitutions: ["red chili flakes"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic (3 cloves), peeled",                            ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Asian shallots (3), peeled",                           ratioValue: 0.5, defaultUnit: "parts", substitutions: ["1/4 small red onion"] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Galangal (2 cm knob), thinly sliced",                  ratioValue: 0.25, defaultUnit: "parts", substitutions: ["fresh ginger (milder)"] },
-    { ingId: "ing_07", role: "Sweetener", name: "Palm sugar (or dark brown sugar)",                     ratioValue: 0.5, defaultUnit: "parts", substitutions: ["coconut sugar"] },
-    { ingId: "ing_08", role: "Acid",      name: "Tamarind paste (or lime juice)",                       ratioValue: 0.5, defaultUnit: "parts", substitutions: ["2 tablespoons lime juice"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Kecap manis (sweet soy sauce)",                        ratioValue: 0.5, defaultUnit: "parts", substitutions: ["soy sauce + 1/4 part honey"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Salt",                                                  ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_indonesian_gado-gado-sauce_001",
+  "parentRepoId": null,
+  "slug": "gado-gado-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce d'arachide Gado-Gado",
+  "description": "Une sauce d'arachide javanaise épaisse, de couleur rouille, avec le corps d'une sauce et la complexité d'un curry — les cacahuètes moulues se détachent dans le lait de noix de coco pour se verser velouté, tandis que le galangal, la citronnelle et une étincelle de chili oculaire d'oiseau construisent une chaleur en couches qui s'accroche à chaque légume et à chaque œuf qu'il touche.",
+  "cuisine": "Indonésien",
+  "culture": "Javanese",
+  "category": "sauces",
+  "tags": [
+    "arachide",
+    "par an",
+    "satay",
+    "végétalien",
+    "épicé"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_01"],
-      outputState: "peanut_paste",
-      instructions: "If using whole roasted peanuts, pulse in a food processor or blender until you reach a coarse, chunky paste — not smooth peanut butter, but not whole peanuts either. You want irregular pieces from coarse sand to small pebble size. This textured paste will give the finished sauce its characteristic rustic body. If using natural peanut butter, skip this step.",
-      visualCue: {
-        primaryTarget: "A dry, sandy peanut paste with visible pieces. No large whole peanuts. Pale golden-tan in colour, intensely fragrant.",
-        spectrum: [
-          { state: "Underdone", description: "Still too many whole or half peanuts. The sauce will have a chunky, uneven texture.", action: "Pulse more in the food processor. Aim for mostly coarse sandy texture with a few small pieces." },
-          { state: "Perfect",   description: "Coarse paste — about the texture of natural crunchy peanut butter. Smells of deep roasted peanut.", action: "Add to the aromatics when the spice paste is ready." },
-          { state: "Overdone",  description: "Peanuts have been blended to a completely smooth paste. The sauce will be thicker and silkier but lose the textural character.", action: "Proceed — smooth sauce is still excellent, it is just a stylistic difference." },
-        ],
-      },
-      feelCue: "Rub a pinch of the peanut paste between your fingers — it should feel gritty and slightly oily, leaving a golden residue. That oil is what makes the sauce rich and glossy.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Cacahuètes grillées (non salées), peaux enlevées",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre d'arachide naturel (sans sucre ajouté)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "spice_paste",
-      instructions: "Combine chilies, garlic, shallots, and galangal in a mortar or small blender. Pound or blend to a coarse paste. A mortar is traditional and gives a more fibrous, aromatic paste with better depth; a blender works fine if you are short on time. The paste should be uniformly pulped — no large chunks of garlic or shallot remaining.",
-      visualCue: {
-        primaryTarget: "A rough, rust-coloured paste with a wet, chunky texture. The smell is pungent with raw garlic, chili heat, and the medicinal warmth of galangal.",
-        spectrum: [
-          { state: "Underdone", description: "Chunky — whole garlic halves and shallot pieces still visible. Will cook unevenly and leave harsh raw-allium pockets.", action: "Pound or blend more until the paste is relatively uniform." },
-          { state: "Perfect",   description: "Coarse but uniform paste. The galangal is fully broken down. The smell is complex and aromatic.", action: "Fry in oil before adding other ingredients." },
-          { state: "Overdone",  description: "Paste is a fine, very wet puree. It will splatter aggressively in hot oil.", action: "Pat dry with a paper towel and proceed with caution when adding to the hot pan." },
-        ],
-      },
-      feelCue: "The raw spice paste should make your eyes water slightly from the chili vapour when you lean close — that pungency will mellow beautifully when fried in oil.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Lait de coco plein gras",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau (sauce fine)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sauté",
-      inputs: ["spice_paste", "ing_07"],
-      outputState: "fried_spice_base",
-      instructions: "Heat 2 tablespoons of neutral oil in a wok or saucepan over medium heat. Add the spice paste and stir-fry for 3–4 minutes until it darkens from pale pink-orange to a deeper rust-red and smells cooked and sweet rather than raw and sharp. Add the palm sugar and stir until melted and incorporated. The paste will begin to caramelise around the edges — this is correct. A properly fried spice base smells fragrant, slightly nutty, and deeply savoury.",
-      visualCue: {
-        primaryTarget: "Paste has darkened to a deep rust-orange. Fat has separated around the edges of the paste (minyak pecah — 'oil breaks'). Smells cooked and sweet.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is still pale and smells raw. Oil has not separated. Less than 2 minutes of cooking.", action: "Continue frying — raw spice paste in the finished sauce will taste harsh and unpleasant." },
-          { state: "Perfect",   description: "Deep rust colour. Oil visibly seeping around the edges of the paste. The smell is rich, nutty, and cooked. The sugar has darkened the paste further.", action: "Add peanut paste, coconut milk, tamarind, kecap manis, and salt." },
-          { state: "Overdone",  description: "Paste is very dark brown and sticking aggressively. Bits are burning on the bottom of the pan.", action: "Add a splash of coconut milk immediately and scrape the bottom. The burnt bits will add complexity if not too dark." },
-        ],
-      },
-      feelCue: "When you add the spice paste to hot oil you should hear a fierce sizzle followed by a fragrant chili-garlic steam — if there is no sizzle, the oil is not hot enough and the paste will stew rather than fry.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Chili oculaire d'oiseau (2-4 piments au goût), tranché",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "flocons de chili rouge"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["fried_spice_base", "peanut_paste", "ing_02", "ing_08", "ing_09", "ing_10"],
-      outputState: "finished_gado_gado_sauce",
-      instructions: "Add the peanut paste to the fried spice base and stir to combine — the mixture will be very thick and dry at this point. Pour in coconut milk gradually, stirring constantly to incorporate the peanut and spice paste. Add tamarind paste, kecap manis, and salt. Bring to a gentle simmer over medium-low heat, stirring frequently to prevent the thick sauce from catching on the bottom. Simmer for 5–8 minutes until the sauce is thick enough to coat the back of a spoon heavily and the oil from the peanuts rises to the surface in golden droplets. Taste and adjust: more palm sugar if too sharp, more tamarind if too sweet, salt to lift the whole.",
-      visualCue: {
-        primaryTarget: "A thick, rust-brown sauce with a velvety, slightly grainy texture. Golden peanut oil droplets visible on the surface. Falls in thick ribbons from a lifted spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is too thin — pours freely. The raw coconut milk flavour is still dominant. The oil has not separated to the top.", action: "Continue simmering uncovered, stirring frequently, for another 3–5 minutes." },
-          { state: "Perfect",   description: "Thick, coating consistency. Deep savoury-sweet flavour with chili warmth. Peanut oil gleaming on top. Balance of sweet, sour, savoury, and heat is harmonious.", action: "Cool slightly before serving. Thin with hot water if needed when serving." },
-          { state: "Overdone",  description: "Sauce has reduced to a very thick, sticky paste that holds its shape. Peanut oil has fully separated into a pool on top.", action: "Thin with coconut milk or hot water, stir vigorously, and simmer briefly to re-emulsify." },
-        ],
-      },
-      feelCue: "Run a finger through a drop of the sauce on the side of the pot — it should leave a clean line that fills in slowly, like condensed mushroom soup. If it fills immediately, cook longer; if it is solid, thin with water.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Ail (3 girofles), pelé",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Échalotes asiatiques (3), pelées",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1/4 petit oignon rouge"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Bouton galangal (2 cm), tranché finement",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gingembre frais"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre de palme (ou sucre brun foncé)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sucre de coco"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "Pâte de tamarin (ou jus de lime)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "2 cuillères à soupe de jus de lime"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Masque de kécap (sauce de soja sucrée)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja + 1/4 de miel"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "peanut_paste",
+      "instructions": "Si vous utilisez des arachides grillées entières, faites du pouls dans un robot culinaire ou un mélangeur jusqu'à ce que vous atteigniez une pâte grossière et épaisse — pas du beurre d'arachide lisse, mais pas des arachides entières non plus. Vous voulez des morceaux irréguliers du sable grossier à petite taille de galets. Cette pâte texturée donnera à la sauce finie son corps rustique caractéristique. Si vous utilisez du beurre d'arachide naturel, sautez cette étape.",
+      "visualCue": {
+        "primaryTarget": "Une pâte d'arachide sèche et sablonneuse avec des morceaux visibles. Pas de gros cacahuètes entières. Teinture dorée pâle, intensément parfumée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Encore trop de cacahuètes. La sauce aura une texture épaisse et inégale.",
+            "action": "Pulse plus dans le robot culinaire. Visez une texture sablonneuse généralement grossière avec quelques petites pièces."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte grossière — sur la texture du beurre d'arachide croquant naturel. Des odeurs de cacahuète torréfié.",
+            "action": "Ajouter aux aromatiques lorsque la pâte d'épices est prête."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les arachides ont été mélangées à une pâte complètement lisse. La sauce sera plus épaisse et plus soyeuse mais perdra le caractère textural.",
+            "action": "Procéder — la sauce lisse est encore excellente, c'est juste une différence stylistique."
+          }
+        ]
+      },
+      "feelCue": "Frottez une pincée de la pâte d'arachide entre vos doigts — elle devrait être sèche et légèrement grasse, laissant un résidu doré. Cette huile rend la sauce riche et brillante."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "spice_paste",
+      "instructions": "Mélanger les chilis, l'ail, les échalotes et le galangal dans un mortier ou un petit mélangeur. Pound ou mélanger à une pâte grossière. Un mortier est traditionnel et donne une pâte plus fibreuse et aromatique avec une meilleure profondeur; un mélangeur fonctionne bien si vous êtes court dans le temps. La pâte doit être uniformément pulvérisée — il ne reste pas de gros morceaux d'ail ou d'échalote.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rugueuse, de couleur rouille, avec une texture humide et épaisse. L'odeur est piquante avec l'ail cru, la chaleur de chili et la chaleur médicinale du galangal.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Choux — moitiés d'ail entier et morceaux d'échalote encore visibles. Se fera cuire inégalement et laisser les poches d'allium cru difficiles.",
+            "action": "Pound ou mélanger plus jusqu'à ce que la pâte soit relativement uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte grossière mais uniforme. Le galangal est complètement détruit. L'odeur est complexe et aromatique.",
+            "action": "Faire revenir l'huile avant d'ajouter d'autres ingrédients."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est une fine purée très humide. Il s'étalera agressivement dans l'huile chaude.",
+            "action": "Séchez-vous avec une serviette en papier et continuez avec prudence lors de l'ajout à la poêle chaude."
+          }
+        ]
+      },
+      "feelCue": "La pâte d'épices crues devrait faire vos yeux arroser légèrement de la vapeur de chili quand vous vous penchez près — que la ponction se rafraîchira très bien quand elle sera frite dans l'huile."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saucisse",
+      "inputs": [
+        "spice_paste",
+        "ing_07"
+      ],
+      "outputState": "fried_spice_base",
+      "instructions": "Chauffer 2 cuillères à soupe d'huile neutre dans un wok ou une casserole à feu moyen. Ajouter la pâte d'épices et faire frire pendant 3-4 minutes jusqu'à ce qu'elle s'assombrisse de rose-orange pâle à un rouge rouille plus profond et sent cuit et doux plutôt que cru et aiguisé. Ajouter le sucre de palme et remuer jusqu'à ce qu'il soit fondu et incorporé. La pâte commencera à caraméliser autour des bords — c'est exact. Une base d'épices bien frite sent l'odeur parfumée, légèrement noisette et profondément salée.",
+      "visualCue": {
+        "primaryTarget": "La pâte s'est obscurcie jusqu'à un orangé-rouille profond. La graisse s'est séparée autour des bords de la pâte (pecah minyak — 'corrosion'). Sensations cuites et douces.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore pâle et sent cru. L'huile n'est pas séparée. Moins de 2 minutes de cuisson.",
+            "action": "Continuer à frire — la pâte d'épices crue dans la sauce finie aura un goût dur et désagréable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur de la rouille profonde. L'huile est visiblement visible autour des bords de la pâte. L'odeur est riche, noisette et cuite. Le sucre a encore obscurci la pâte.",
+            "action": "Ajouter la pâte d'arachide, le lait de coco, le tamarin, le manis du kécap et le sel."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est brun très foncé et colle agressivement. Les bittes brûlent sur le fond de la poêle.",
+            "action": "Ajouter immédiatement un jet de lait de coco et racler le fond. Les morceaux brûlés ajouteront de la complexité sinon trop sombre."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous ajoutez la pâte d'épices à l'huile chaude, vous devriez entendre un étourdissement féroce suivi d'une vapeur de chili-ail parfumée — s'il n'y a pas de étourdissement, l'huile n'est pas assez chaude et la pâte va se rafraîchir plutôt que de faire frire."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "fried_spice_base",
+        "peanut_paste",
+        "ing_02",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_gado_gado_sauce",
+      "instructions": "Ajouter la pâte d'arachide à la base d'épices frites et mélanger — le mélange sera très épais et sec à ce point. Verser graduellement dans le lait de coco, en remuant constamment pour incorporer la pâte d'arachide et d'épices. Ajouter la pâte de tamarin, le manis du kécap et le sel. Porter à mijoter doucement à feu moyen-doux, en remuant fréquemment pour éviter que la sauce épaisse ne s'attrape sur le fond. Laisser mijoter de 5 à 8 minutes jusqu'à ce que la sauce soit assez épaisse pour enrober abondamment l'arrière d'une cuillère et que l'huile des arachides s'élève à la surface en gouttelettes dorées. Goûtez et ajustez : plus de sucre de palme si trop vif, plus de tamarin si trop sucré, sel pour soulever l'ensemble.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse brun rouille avec une texture veloutée et légèrement grainée. Des gouttelettes d'huile d'arachide dorées visibles à la surface. Des chutes dans des rubans épais d'une cuillère levée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est trop fine — verse librement. L'arôme de lait de coco cru est toujours dominant. L'huile n'est pas séparée jusqu'au sommet.",
+            "action": "Continuer à mijoter à découvert, en remuant fréquemment, pendant encore 3 à 5 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, consistance du revêtement. Saveur salée et sucrée avec chaleur de chili. Huile d'arachide glissant sur le dessus. L'équilibre sucré, aigre, salé et chaud est harmonieux.",
+            "action": "Laisser refroidir légèrement avant de servir. Arroser d'eau chaude si nécessaire lors du service."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite à une pâte très épaisse et collante qui tient sa forme. L'huile d'arachide est complètement séparée en une piscine sur le dessus.",
+            "action": "Arroser de lait de coco ou d'eau chaude, remuer vigoureusement et laisser mijoter brièvement pour réémulsionner."
+          }
+        ]
+      },
+      "feelCue": "Passez un doigt à travers une goutte de sauce sur le côté de la casserole — il devrait laisser une ligne propre qui se remplit lentement, comme la soupe de champignons condensés. Si elle se remplit immédiatement, cuire plus longtemps; si elle est solide, mince avec de l'eau."
+    }
+  ]
 };

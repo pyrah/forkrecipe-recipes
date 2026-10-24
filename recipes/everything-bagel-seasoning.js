@@ -1,65 +1,157 @@
 export default {
-  repoId: "master_american_everything_bagel_seasoning_001",
-  parentRepoId: null,
-  slug: "everything-bagel-seasoning",
-  author: "ForkRecipe Kitchen",
-  title: "Everything Bagel Seasoning",
-  description: "The flavors of a New York everything bagel in a jar — sesame, poppy, dried garlic, dried onion, and flaked salt — the most versatile condiment in any pantry.",
-  cuisine: "American",
-  culture: "New York Jewish-American",
-  category: "condiments",
-  tags: ["bagel", "new-york", "seasoning", "sesame", "condiment", "jewish-american", "pantry"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "White sesame seeds",     ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Black sesame seeds",     ratioValue: 50,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Structure", name: "Poppy seeds",            ratioValue: 50,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Dried minced garlic",    ratioValue: 40,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Dried minced onion",     ratioValue: 40,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Flaked sea salt",        ratioValue: 30,  defaultUnit: "parts", substitutions: ["coarse kosher salt"] },
+  "repoId": "master_american_everything_bagel_seasoning_001",
+  "parentRepoId": null,
+  "slug": "everything-bagel-seasoning",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tout l'assaisonnement Bagel",
+  "description": "Les saveurs d'un bagel new - yorkais dans un pot — sésame, pavot, ail séché, oignon séché et sel flocé — le condiment le plus polyvalent de tous les cellier.",
+  "cuisine": "Américain",
+  "culture": "New York Juif-Américain",
+  "category": "condiments",
+  "tags": [
+    "bagel",
+    "nouveau-né",
+    "assaisonnement",
+    "sésame",
+    "condiment",
+    "Juive-américaine",
+    "Cellier"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_01"],
-      outputState: "toasted_white_sesame",
-      instructions: "Place white sesame seeds in a dry, heavy-bottomed skillet over medium heat. Toast, shaking constantly, for 2–3 minutes until they turn light golden and smell warm and nutty. Remove immediately to a wide plate to cool — do not leave them in the hot pan, as residual heat will continue to cook them.",
-      visualCue: {
-        primaryTarget: "Even, light golden sesame seeds with a uniform warm-toast color across the entire pan — no pale white seeds remaining, no dark brown ones either.",
-        spectrum: [
-          { state: "Underdone", description: "Seeds are still white and raw. No aroma detectable. The pan sounds hollow when seeds are shaken across the surface.", action: "Keep toasting over medium heat. Color change starts at the edges and moves inward — tilt the pan frequently for even heat." },
-          { state: "Perfect",   description: "Light gold, warm-nutty aroma filling the kitchen. Seeds click and slide against each other in the pan, drier than before. A few will be very slightly darker.", action: "Pour immediately onto a cool plate. Allow to cool completely before combining with the dried garlic and onion — adding heat to those ingredients will make them bitter." },
-          { state: "Overdone",  description: "Golden-brown to dark brown with a slightly bitter, almost burnt edge in the aroma. Some seeds beginning to pop.", action: "Discard and start again. Bitter toasted sesame will make the entire batch taste acrid. Everything bagel seasoning depends on the sesame being gentle and nutty." },
-        ],
-      },
-      feelCue: "A fully toasted sesame seed feels lighter and drier than a raw one — it will slide freely off your palm, whereas raw seeds have a slight stickiness when you tip your hand.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Graines de sésame blanc",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Toss",
-      inputs: ["toasted_white_sesame", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "everything_seasoning",
-      instructions: "Allow the toasted sesame to cool completely, then combine all six ingredients in a wide jar. Stir well to distribute the ingredients evenly — the black sesame and poppy seeds sink while the dried garlic and onion pieces float, so thorough mixing is needed. Seal and store at room temperature for up to 3 months.",
-      visualCue: {
-        primaryTarget: "A speckled, heterogeneous blend of ivory and black seeds, grey-blue poppy seeds, pale garlic and onion flakes, and glinting salt crystals — a confetti of savory fragments.",
-        spectrum: [
-          { state: "Underdone", description: "Blend looks layered in the jar — dense poppy and sesame at the bottom, garlic and onion floating at the top. Not fully mixed.", action: "Stir from the bottom up, then seal the jar and shake vigorously. It stratifies by density quickly — stir before every use." },
-          { state: "Perfect",   description: "Each spoonful contains all six elements. The smell is savory, garlicky, and faintly toasted — like the hot-from-the-oven crust of an everything bagel.", action: "Seal and store. Shake before each use." },
-          { state: "Overdone",  description: "The salt has clumped against moisture in the jar, forming white crystalline chunks that no longer distribute evenly.", action: "Add a few dry grains of rice to absorb moisture, or spread the blend on a sheet pan for 10 minutes in a 100 °C oven to drive out the damp." },
-        ],
-      },
-      feelCue: "A palmful of everything seasoning should feel dry and freely flowing — the mixed particle sizes give it a pleasant gritty-to-flaky texture, with the salt crystals the largest pieces in the blend.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Graines de sésame noir",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Graines de coquelicots",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Ail haché séché",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Oignon haché séché",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel de mer grillé",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sel casher grossier"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "toasted_white_sesame",
+      "instructions": "Placer les graines de sésame blanc dans une poêle sèche à fond lourd à feu moyen. Secouer constamment pendant 2 à 3 minutes jusqu'à ce qu'ils deviennent dorés et sentent chaud et noisette. Retirer immédiatement dans une plaque large pour refroidir — ne pas les laisser dans la poêle chaude, car la chaleur résiduelle continuera de les cuire.",
+      "visualCue": {
+        "primaryTarget": "Même les graines de sésame d'or clair ayant une couleur uniforme de toast chaud dans toute la casserole — pas de graines blanches pâles, pas de graines brunes foncées non plus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines sont encore blanches et crues. Aucun arôme détectable. La casserole sonne creux quand les graines sont secouées à travers la surface.",
+            "action": "Continuer à griller à feu moyen. Le changement de couleur commence aux bords et se déplace vers l'intérieur — inclinez souvent la poêle pour une chaleur uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or clair, arôme chaud-nourriture remplissant la cuisine. Les graines cliquent et glissent l'une contre l'autre dans la casserole, plus sèche qu'auparavant. Quelques-uns seront très légèrement plus sombres.",
+            "action": "Verser immédiatement sur une assiette fraîche. Laisser refroidir complètement avant de se combiner avec l'ail séché et l'oignon — ajouter de la chaleur à ces ingrédients les rendra amers."
+          },
+          {
+            "state": "Overdone",
+            "description": "Doré brun à brun foncé avec un bord légèrement amer, presque brûlé dans l'arôme. Des graines qui commencent à exploser.",
+            "action": "Jeter et recommencer. Le sésame grillé amère fera le goût entier du lot acride. Tout l'assaisonnement du bagel dépend de la douceur du sésame."
+          }
+        ]
+      },
+      "feelCue": "Une graine de sésame entièrement grillée est plus légère et plus sèche qu'une graine crue; elle glisse librement de votre palmier, tandis que les graines crues ont une légère collance lorsque vous pointez la main."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Découpe",
+      "inputs": [
+        "toasted_white_sesame",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "everything_seasoning",
+      "instructions": "Laisser refroidir complètement le sésame grillé, puis mélanger les six ingrédients dans un grand pot. Bien mélanger pour répartir les ingrédients de façon uniforme — le sésame noir et les graines de pavot coulent tandis que les morceaux d'ail et d'oignon séchés flottent, donc il faut bien mélanger. Sceller et conserver à température ambiante jusqu'à 3 mois.",
+      "visualCue": {
+        "primaryTarget": "Un mélange hétérogène de graines d'ivoire et de graines noires, de graines de pavot bleu gris, de flocons d'ail pâle et d'oignon, et de cristaux de sel brillants — un confetti de fragments salés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange a l'air stratifié dans le pot — le pavot dense et le sésame au fond, l'ail et l'oignon flottant en haut. Pas complètement mélangé.",
+            "action": "Mélanger du bas vers le haut, puis sceller le pot et agiter vigoureusement. Il stratifie par densité rapidement — remuer avant chaque utilisation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque cuillère contient les six éléments. L'odeur est salée, ailée et légèrement grillée, comme la croûte chaude d'un bagel de tout.",
+            "action": "Sceau et magasin. Agiter avant chaque utilisation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sel s'est serré contre l'humidité dans le pot, formant des morceaux cristallins blancs qui ne se distribuent plus uniformément.",
+            "action": "Ajouter quelques grains secs de riz pour absorber l'humidité, ou étaler le mélange sur une casserole pendant 10 minutes dans un four à 100 °C pour chasser l'humidité."
+          }
+        ]
+      },
+      "feelCue": "Une palmeuse de tout assaisonnement doit se sentir sèche et libre de couler — les tailles de particules mélangées lui donnent une texture agréable de gritty-to-flaky, avec les cristaux de sel les plus grands morceaux du mélange."
+    }
+  ]
 };

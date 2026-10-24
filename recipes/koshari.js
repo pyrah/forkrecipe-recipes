@@ -1,138 +1,346 @@
 export default {
-  repoId: "master_egyptian_koshari_001",
-  parentRepoId: null,
-  slug: "koshari",
-  author: "ForkRecipe Kitchen",
-
-  title: "Koshari",
-  description: "Egypt's great street food assembled in layers — lentils, rice, and small pasta in one base, drowned in a fiery spiced tomato sauce, buried under crispy fried onions, and sharpened with a garlic-vinegar dressing — chaotic, cacophonous, and completely irresistible.",
-  cuisine: "Egyptian",
-  culture: "Egyptian",
-  category: "grains",
-
-  tags: ["vegan", "egyptian", "street-food", "lentils", "rice", "pasta"],
-  difficulty: 2,
-  activeTime: "50 min",
-  totalTime: "1 hour 30 min",
-  ratioSystem: "weight",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 1, umami: 3, heat: 3 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Long-grain white rice",                   ratioValue: 200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Protein",   name: "Brown lentils, rinsed",                   ratioValue: 200, defaultUnit: "g", substitutions: ["green lentils"] },
-    { ingId: "ing_03", role: "Structure", name: "Elbow macaroni or ditalini",               ratioValue: 150, defaultUnit: "g", substitutions: ["small shell pasta"] },
-    { ingId: "ing_04", role: "Allium",    name: "Large yellow onions, thinly sliced",       ratioValue: 500, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",       name: "Neutral oil (divided)",                    ratioValue: 100, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Liquid",    name: "Crushed canned tomatoes",                  ratioValue: 400, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Allium",    name: "Garlic cloves, minced",                    ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Ground cumin",                             ratioValue: 8,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Ground coriander",                         ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Heat",      name: "Cayenne pepper",                           ratioValue: 3,   defaultUnit: "g", substitutions: ["chili flakes"] },
-    { ingId: "ing_11", role: "Acid",      name: "White wine vinegar",                       ratioValue: 30,  defaultUnit: "g", substitutions: ["apple cider vinegar"] },
-    { ingId: "ing_12", role: "Seasoning", name: "Fine sea salt",                            ratioValue: 10,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_13", role: "Liquid",    name: "Water or vegetable stock",                 ratioValue: 600, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_egyptian_koshari_001",
+  "parentRepoId": null,
+  "slug": "koshari",
+  "author": "ForkRecipe Kitchen",
+  "title": "Kashari",
+  "description": "La grande nourriture de rue de l'Égypte était rassemblée en couches — lentilles, riz et petites pâtes dans une base, noyée dans une sauce de tomate épicée ardente, enterrée sous des oignons frits croustillants, et aiguisée avec une vinaigrette ail-vine — chaotique, cacophonique et totalement irrésistible.",
+  "cuisine": "Égyptienne",
+  "culture": "Égyptienne",
+  "category": "grains",
+  "tags": [
+    "végétalien",
+    "Égyptienne",
+    "Produits de la rue",
+    "lentilles",
+    "riz",
+    "pâtes"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "50 min",
+  "totalTime": "1 hour 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Boil",
-      inputs: ["ing_02", "ing_13"],
-      outputState: "cooked_lentils",
-      instructions: "Place lentils in a pot, cover with water, bring to a boil and cook for 20 minutes until completely tender but not mushy — each lentil should hold its shape. Drain and season lightly with salt. Set aside.",
-      visualCue: {
-        primaryTarget: "Plump, fully cooked brown lentils that hold their shape. No chalky centers, no split or dissolved grains.",
-        spectrum: [
-          { state: "Underdone", description: "Chalky or crunchy center when bitten.", action: "Cook 5–8 more minutes." },
-          { state: "Perfect",   description: "Completely tender, shape fully retained. Presses easily between fingers to a smooth paste.", action: "Drain and season lightly." },
-          { state: "Overdone",  description: "Lentils have collapsed into a thick soup.", action: "Drain carefully; they can still be used but the koshari base will be less distinct." },
-        ],
-      },
-      feelCue: "Press a lentil between your thumb and forefinger — it should collapse instantly into a smooth, paste-like smear with no granular resistance. That is a properly cooked lentil.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz blanc à grains longs",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_13"],
-      outputState: "cooked_rice",
-      instructions: "Rinse rice until water runs clear. Combine with water in a 1:1.5 ratio in a saucepan. Add a pinch of salt and a teaspoon of oil. Bring to a boil, cover, reduce to minimum heat, and cook 15–18 minutes until liquid is fully absorbed. Rest covered 5 minutes.",
-      visualCue: {
-        primaryTarget: "Fluffy, separate grains of white rice. No visible pooling liquid. Steam vents when lid is lifted.",
-        spectrum: [
-          { state: "Underdone", description: "Chalky, firm rice grains. Liquid still visible.", action: "Replace lid and continue for 5 more minutes." },
-          { state: "Perfect",   description: "Each grain separate and fluffy. Clean and white. Forks apart easily.", action: "Set aside uncovered briefly to release steam." },
-          { state: "Overdone",  description: "Grains are clumped and sticky. Some have opened.", action: "Spread on a tray to cool and dry slightly before using." },
-        ],
-      },
-      feelCue: "Run a fork through the rice — every grain should move independently, bouncing against the tines without clumping or dragging.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Lentilles brunes, rincées",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "lentilles vertes"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Boil",
-      inputs: ["ing_03"],
-      outputState: "cooked_pasta",
-      instructions: "Cook pasta in generously salted boiling water until al dente — just past the point of chalkiness. Drain and toss with a tiny drizzle of oil to prevent clumping. Set aside.",
-      visualCue: {
-        primaryTarget: "Small, evenly cooked pasta pieces with a slight firmness to the bite. Not mushy, not white-centered.",
-        spectrum: [
-          { state: "Underdone", description: "White chalky center when bitten.", action: "Cook 1–2 more minutes." },
-          { state: "Perfect",   description: "Tender, slight bite, no white center. Pasta holds its shape.", action: "Drain and oil lightly." },
-          { state: "Overdone",  description: "Pasta is soft and mushy.", action: "Use quickly; mushy pasta in koshari is not ideal but acceptable — the textures are already mixed." },
-        ],
-      },
-      feelCue: "Bite a piece of pasta — you should feel a very faint resistance at the very center, then a clean, tender yield. That tiny resistance is al dente.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Macaronis ou ditalini d'ormeaux",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâtes de petite coquille"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Fry",
-      inputs: ["ing_04", "ing_05"],
-      outputState: "crispy_fried_onions",
-      instructions: "Heat a generous amount of oil in a wide pan over medium-high heat. Add all the sliced onions and fry, stirring frequently, for 20–25 minutes until the onions are deeply browned, shrunken, and crispy — some edges should be almost charred. Remove with a slotted spoon to a paper towel-lined plate. Season with salt immediately. The onions will crisp further as they cool.",
-      visualCue: {
-        primaryTarget: "Dark mahogany, crispy-edged onion rings and strands. Shrunken to about one-fifth their original volume. Some almost-burnt tips are desirable.",
-        spectrum: [
-          { state: "Underdone", description: "Golden, soft, still limp. Not yet crispy.", action: "Continue frying — koshari onions must be crispy, not caramelized in the mujaddara style." },
-          { state: "Perfect",   description: "Dark brown with very crispy edges. Crunch audible when handled. Deeply savory and slightly bitter.", action: "Remove and season immediately." },
-          { state: "Overdone",  description: "Uniformly black and acrid.", action: "Discard and restart — burnt onions are too bitter to be used as a garnish." },
-        ],
-      },
-      feelCue: "Lift a pinch of fried onions and listen — they should crackle audibly. Drop one on the counter: it should tap, not thud. If it thuds, it is still soft.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Grand oignons jaunes, tranchés finement",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Simmer",
-      inputs: ["ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12"],
-      outputState: "spiced_tomato_sauce",
-      instructions: "In the same pan used for onions, fry garlic in remaining oil for 30 seconds over medium heat until fragrant. Add cumin, coriander, and cayenne and stir for 30 seconds. Add crushed tomatoes, vinegar, and salt. Simmer uncovered for 15–20 minutes until the sauce has thickened and the oil has separated to the surface.",
-      visualCue: {
-        primaryTarget: "A deep, brick-red sauce. Thick enough to coat a spoon. Oil visible as a shimmering layer on top. Sharp vinegar aroma balanced by tomato sweetness.",
-        spectrum: [
-          { state: "Underdone", description: "Thin, watery sauce. Smells raw and acidic.", action: "Simmer uncovered 5–10 more minutes." },
-          { state: "Perfect",   description: "Thick, rich, brick-red. Coats spoon. Spicy, savory, pleasantly sharp.", action: "Taste and adjust salt and vinegar before assembling." },
-          { state: "Overdone",  description: "Very thick, paste-like, darkening. Sticking to pan.", action: "Add a splash of water and stir to loosen." },
-        ],
-      },
-      feelCue: "Taste a spoonful of the sauce — it should punch you immediately with heat and acid, then give way to deep tomato and cumin warmth. It should taste slightly aggressive on its own, as it is meant to season the mild base underneath.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile neutre (divisée)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_6",
-      action: "Assemble",
-      inputs: ["cooked_lentils", "cooked_rice", "cooked_pasta", "crispy_fried_onions", "spiced_tomato_sauce"],
-      outputState: "finished_koshari",
-      instructions: "In individual bowls or a large serving dish: layer rice and lentils together as the base. Add pasta on top. Ladle the tomato sauce generously over everything. Crown with a huge mound of crispy fried onions. Serve the extra tomato sauce and a small dish of white vinegar on the side for individual adjustments. Eat immediately — the crispy onions soften quickly once the sauce hits them.",
-      visualCue: {
-        primaryTarget: "A bowl of chaotic abundance: white and brown grains at the base, red sauce flooding over them, and a dramatic dark-brown onion crown. Vivid and colorful.",
-        spectrum: [
-          { state: "Underdone", description: "The bowl looks dry — insufficient sauce. The flavors won't unify without it.", action: "Add more tomato sauce liberally." },
-          { state: "Perfect",   description: "Sauce soaking into the grains. Crispy onions providing textural contrast. The smell is complex: cumin, tomato, vinegar, and caramel onion all at once.", action: "Eat immediately." },
-          { state: "Overdone",  description: "The bowl has been sitting too long — onions are limp and sauce-soaked. No crunch.", action: "Scatter fresh crispy onions from a reserved batch over the top." },
-        ],
-      },
-      feelCue: "A correctly assembled spoonful should have at least three textures: the soft give of the rice and lentils, the resistance of al dente pasta, and the crunch-giving way of a fried onion. Every bite should be a different combination.",
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Tomates en conserve concassées",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Heat",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "flocons de chili"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "vinaigre de cidre de pomme"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Liquid",
+      "name": "Stocks d'eau ou de légumes",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_02",
+        "ing_13"
+      ],
+      "outputState": "cooked_lentils",
+      "instructions": "Placer les lentilles dans une casserole, couvrir d'eau, porter à ébullition et cuire pendant 20 minutes jusqu'à ce qu'elles soient complètement tendres mais pas musquées. Égoutter et assaisonner légèrement avec du sel. Mettez de côté.",
+      "visualCue": {
+        "primaryTarget": "Plump, lentilles brunes entièrement cuites qui tiennent leur forme. Pas de centres crayeux, pas de grains fendus ou dissous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Centre en croûte ou en croquant quand mordu.",
+            "action": "Cuire encore 5 à 8 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement tendre, forme entièrement retenue. Presse facilement entre les doigts à une pâte lisse.",
+            "action": "Égoutter et assaisonner légèrement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les lentilles se sont effondrées dans une soupe épaisse.",
+            "action": "Drainez soigneusement; ils peuvent encore être utilisés mais la base kochari sera moins distincte."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une lentille entre le pouce et l'index — elle devrait s'effondrer instantanément dans un frottis lisse, semblable à une pâte, sans résistance granulaire. C'est une lentille bien cuite."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_13"
+      ],
+      "outputState": "cooked_rice",
+      "instructions": "Rincer le riz jusqu'à ce que l'eau coule. Mélanger avec de l'eau dans un rapport 1:1,5 dans une casserole. Ajouter une pincée de sel et une cuillère à café d'huile. Porter à ébullition, couvrir, réduire à feu minimum et cuire de 15 à 18 minutes jusqu'à ce que le liquide soit complètement absorbé. Repos couvert 5 minutes.",
+      "visualCue": {
+        "primaryTarget": "Graines de riz blanc. Pas de liquide de mise en commun visible. Évents à vapeur lorsque le couvercle est levé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Chalky, grains de riz fermes. Liquide encore visible.",
+            "action": "Remplacer le couvercle et continuer pendant 5 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain se sépare et est moelleux. Propre et blanc. Les fourches se séparent facilement.",
+            "action": "Réserver à découvert brièvement pour libérer la vapeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains sont entassés et collants. Certains ont ouvert.",
+            "action": "Étaler sur un plateau pour refroidir et sécher légèrement avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Exécutez une fourchette à travers le riz — chaque grain doit se déplacer indépendamment, rebondissant contre les dents sans accroupir ni traîner."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "cooked_pasta",
+      "instructions": "Faire cuire les pâtes dans de l'eau bouillante généreusement salée jusqu'à ce que l'al dente passe au - dessus de la craie. Égoutter et jeter avec une petite bruine d'huile pour éviter les accroupissements. Mettez de côté.",
+      "visualCue": {
+        "primaryTarget": "Petits morceaux de pâtes uniformément cuits avec une légère fermeté à la morsure. Pas musclé, pas au centre blanc.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Centre crayeux blanc quand mordu.",
+            "action": "Cuire encore 1-2 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tendeur, légère morsure, pas de centre blanc. Les pâtes tiennent leur forme.",
+            "action": "Égoutter et huile légèrement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pâtes sont douces et musquées.",
+            "action": "Utilisez rapidement; les pâtes musquées en koshari ne sont pas idéales mais acceptables — les textures sont déjà mélangées."
+          }
+        ]
+      },
+      "feelCue": "Mordre un morceau de pâtes — vous devriez sentir une résistance très faible au centre, puis un rendement propre et tendre. Cette petite résistance est al dente."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "crispy_fried_onions",
+      "instructions": "Chauffer une quantité généreuse d'huile dans une casserole large à feu moyen-vif. Ajouter tous les oignons tranchés et faire frire, en remuant fréquemment, pendant 20 à 25 minutes, jusqu'à ce que les oignons soient profondément dorés, éparpillés et croustillants. Retirer avec une cuillère à fente dans une assiette en papier doublée de serviette. Assaisonner de sel immédiatement. Les oignons croqueront plus loin quand ils refroidiront.",
+      "visualCue": {
+        "primaryTarget": "Acajou foncé, anneaux et brins d'oignon croustillants. Suspendu à environ un cinquième de leur volume original. Certains bouts presque brûlés sont souhaitables.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Doré, doux, toujours boiteux. Pas encore croustillant.",
+            "action": "Continuez à frire: les oignons kashari doivent être croustillants, non caramélisés dans le style mujaddara."
+          },
+          {
+            "state": "Perfect",
+            "description": "Brun foncé avec des bords très croustillants. Croquer audible lorsqu'il est manipulé. Profondément salé et légèrement amer.",
+            "action": "Retirer et assaisonner immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Uniquement noir et acride.",
+            "action": "Jeter et redémarrer — les oignons brûlés sont trop amers pour servir de garniture."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une pincée d'oignons frits et écoutez — ils devraient craquer audiquement. Lâche-en un sur le comptoir : il devrait taper, pas toud. Si ça tord, c'est encore doux."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "spiced_tomato_sauce",
+      "instructions": "Dans la même casserole utilisée pour les oignons, faire revenir l'ail dans le reste de l'huile pendant 30 secondes à feu moyen jusqu'à ce qu'il soit parfumé. Ajouter le cumin, la coriandre et la cayenne et remuer pendant 30 secondes. Ajouter les tomates écrasées, le vinaigre et le sel. Laisser mijoter 15 à 20 minutes jusqu'à ce que la sauce s'épaississe et que l'huile se sépare de la surface.",
+      "visualCue": {
+        "primaryTarget": "Une sauce rouge brique profonde. Assez épais pour enrober une cuillère. Huile visible comme une couche chatoyante sur le dessus. Arôme de vinaigre pointu équilibré par la douceur tomate.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Une sauce fine et aqueuse. Sens cru et acide.",
+            "action": "Laisser mijoter à découvert 5-10 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, riche, rouge brique. Cuillère en manteau. Epicé, salé, agréablement aiguisé.",
+            "action": "Goûtez et ajustez le sel et le vinaigre avant de les assembler."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très épais, en pâte, foncé. Se tenir à la poêle.",
+            "action": "Ajouter un jet d'eau et remuer pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillerée à la sauce — elle devrait vous frapper immédiatement de chaleur et d'acide, puis laisser place à la tomate profonde et à la chaleur du cumin. Il devrait goûter légèrement agressif à lui seul, car il est destiné à assaisonner la base douce en dessous."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Assemblage",
+      "inputs": [
+        "cooked_lentils",
+        "cooked_rice",
+        "cooked_pasta",
+        "crispy_fried_onions",
+        "spiced_tomato_sauce"
+      ],
+      "outputState": "finished_koshari",
+      "instructions": "Dans des bols individuels ou dans un grand plat de service : déposer le riz et les lentilles ensemble comme base. Ajouter les pâtes sur le dessus. Déposer généreusement la sauce tomate sur tout. Couronne avec un énorme monticule d'oignons frits croustillants. Servir la sauce tomate supplémentaire et un petit plat de vinaigre blanc sur le côté pour des ajustements individuels. Mangez immédiatement — les oignons croustillants adoucissent rapidement une fois que la sauce les touche.",
+      "visualCue": {
+        "primaryTarget": "Un bol d'abondance chaotique : grains blancs et bruns à la base, sauce rouge inondant sur eux, et une couronne d'oignon brun foncé spectaculaire. Vivant et coloré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bol semble sec — sauce insuffisante. Les saveurs ne s'uniront pas sans.",
+            "action": "Ajouter plus de sauce tomate généreusement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sauce trempée dans les grains. Des oignons croustillants offrant un contraste textural. L'odeur est complexe : cumin, tomate, vinaigre et oignon caramel tout à la fois.",
+            "action": "Mangez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bol est trop long: les oignons sont boiteux et saupoudrés de sauce. Pas de crise.",
+            "action": "Éparpiller les oignons croustillants frais d'un lot réservé sur le dessus."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère correctement assemblée doit avoir au moins trois textures: le don doux du riz et des lentilles, la résistance des pâtes al dente, et la façon croquante d'un oignon frit. Chaque morsure devrait être une combinaison différente."
+    }
+  ]
 };

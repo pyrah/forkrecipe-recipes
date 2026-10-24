@@ -1,104 +1,291 @@
 export default {
-  repoId: "master_american_red_beans_and_rice_001",
-  parentRepoId: null,
-  slug: "red-beans-and-rice",
-  author: "ForkRecipe Kitchen",
-  title: "New Orleans Red Beans and Rice",
-  description: "Creamy red kidney beans slow-simmered with Andouille sausage, the holy trinity, and a tangle of Creole seasonings — the Monday ritual of New Orleans, a dish of extraordinary comfort from the humblest pantry.",
-  cuisine: "American",
-  culture: "New Orleans Creole",
-  category: "grains",
-  tags: ["beans", "rice", "new-orleans", "creole", "cajun", "andouille", "southern", "one-pot"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "3 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 0, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Dried red kidney beans, soaked overnight", ratioValue: 2,    defaultUnit: "parts", substitutions: ["canned kidney beans (reduce cook time to 30 min)"] },
-    { ingId: "ing_02", role: "Protein",   name: "Andouille sausage, sliced into rounds",    ratioValue: 1,    defaultUnit: "parts", substitutions: ["smoked kielbasa", "smoked sausage"] },
-    { ingId: "ing_03", role: "Allium",    name: "White onion, diced",                       ratioValue: 0.75, defaultUnit: "parts", substitutions: ["yellow onion"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Celery, diced",                            ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Green bell pepper, diced",                 ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, minced",                    ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Herb",      name: "Bay leaves",                               ratioValue: 0.02, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh thyme",                              ratioValue: 0.02, defaultUnit: "parts", substitutions: ["dried thyme, halved quantity"] },
-    { ingId: "ing_09", role: "Spice",     name: "Cayenne pepper",                           ratioValue: 0.02, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Smoked paprika",                           ratioValue: 0.04, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning", name: "Salt",                                     ratioValue: 0.06, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_12", role: "Starch",    name: "Long-grain white rice",                    ratioValue: 1,    defaultUnit: "parts", substitutions: ["parboiled rice"] },
-    { ingId: "ing_13", role: "Fat",       name: "Unsalted butter",                          ratioValue: 0.1,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_red_beans_and_rice_001",
+  "parentRepoId": null,
+  "slug": "red-beans-and-rice",
+  "author": "ForkRecipe Kitchen",
+  "title": "La Nouvelle-Orléans Haricots rouges et riz",
+  "description": "Des haricots rouges crémeux mijotés lentement avec la saucisse d'Andouille, la sainte trinité, et un enchevêtrement d'assaisonnements créoles — le rituel du lundi de la Nouvelle-Orléans, un plat d'un confort extraordinaire de la plus humble cellier.",
+  "cuisine": "Américain",
+  "culture": "Nouvelle-Orléans Créole",
+  "category": "grains",
+  "tags": [
+    "haricots",
+    "riz",
+    "nouveaux-orléens",
+    "créole",
+    "cajun",
+    "etouille",
+    "sud",
+    "un seul pot"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_13", "ing_03", "ing_04", "ing_05", "ing_06", "ing_02"],
-      outputState: "browned_base",
-      instructions: "Melt the butter in a large heavy pot or Dutch oven over medium heat. Add the onion, celery, and green bell pepper — the holy trinity of Creole cooking. Cook, stirring occasionally, for 8–10 minutes until softened and beginning to turn translucent. Add the garlic and cook 1 more minute. Push the vegetables to the sides and add the sliced Andouille sausage in a single layer. Let the sausage brown for 2–3 minutes per side without moving it — you want a rendered crust that will give the beans their smoky depth. Stir everything together.",
-      visualCue: {
-        primaryTarget: "The vegetables are soft and golden at the edges. The sausage rounds have a visible brown crust on at least one side, and the fat they rendered has mingled with the butter.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are still crunchy and pale. Sausage is grey and soft, not browned. The pot smells steamy and raw.", action: "Continue cooking. The fond (the brown bits sticking to the bottom) is flavor — do not deglaze until it has formed properly." },
-          { state: "Perfect",   description: "Onion is translucent and golden. Sausage rounds have a distinct brown crust. The bottom of the pot has a layer of dark, fragrant fond.", action: "Proceed to add the beans, herbs, and spices. The fond will deglaze and color the pot liquor." },
-          { state: "Overdone",  description: "Vegetables are very dark and beginning to char. Sausage has dried out and shrunk significantly.", action: "Deglaze immediately with a cup of water, scraping the bottom. The fond will still contribute flavor. Watch the heat going forward." },
-        ],
-      },
-      feelCue: "The kitchen should smell of rendered pork fat and caramelizing onion. If it smells raw and vegetable-steamy, keep cooking. If it smells nutty and slightly smoky, you are there.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "haricots rouges séchés, trempés pendant la nuit",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "haricots rénaux en conserve (réduire le temps de cuisson à 30 min)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Braise",
-      inputs: ["browned_base", "ing_01", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "creamy_red_beans",
-      instructions: "Add the drained, soaked kidney beans to the pot. Add bay leaves, thyme, cayenne, smoked paprika, and a generous pinch of salt. Cover with cold water by 5 cm. Bring to a boil, then reduce to a gentle simmer. Cook uncovered or loosely covered for 1.5–2 hours, stirring every 20 minutes and adding water to keep the beans just submerged. After 90 minutes, begin mashing a few beans against the side of the pot with the back of a spoon — these crushed beans will thicken the pot liquor to a creamy, gravy-like consistency. Continue until the pot liquid is thick and creamy and the beans are completely tender. Taste for salt, cayenne, and smoke.",
-      visualCue: {
-        primaryTarget: "A thick, creamy, rust-red pot of beans with a gravy-like liquid. The beans should be completely soft but largely intact, swimming in a sauce that coats a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Beans are still slightly firm at the center. The liquid is thin and watery, more like soup than gravy. Colors are pale.", action: "Continue simmering. Mash a few more beans against the side of the pot to thicken the liquid. Add water only if the beans become exposed." },
-          { state: "Perfect",   description: "Beans are fully tender, a few have broken down into the thick gravy. The sauce coats the back of a spoon in a creamy rust-red film. The smell is smoky, savory, and deeply meaty.", action: "Turn off the heat and allow to rest while you cook the rice. The beans will thicken further as they sit." },
-          { state: "Overdone",  description: "Most of the beans have dissolved. The pot is very thick, almost paste-like. Sausage slices have begun to fall apart.", action: "Add hot water to loosen to a pourable consistency. Stir to reintegrate. It will still be excellent — just a bit more unified." },
-        ],
-      },
-      feelCue: "Taste a spoonful of the pot liquor. It should coat your tongue like gravy — viscous, smoky, with a gentle heat that builds at the back of the throat. Thin brothy liquid means more time and more mashing.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Saucisse andouille, coupée en rondelles",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "kielbasa fumé",
+        "Saucisse fumée"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["ing_12", "ing_11"],
-      outputState: "steamed_rice",
-      instructions: "While the beans finish, cook the rice in a separate saucepan. Rinse the rice until the water runs almost clear. Combine with cold water in a 1:1.75 ratio, add a pinch of salt, and bring to a boil. Reduce to the lowest possible heat, cover tightly, and cook for 15 minutes. Remove from heat and rest covered for 10 minutes without lifting the lid. Fluff with a fork. The rice should be separate, fluffy, and dry enough to soak up the bean gravy.",
-      visualCue: {
-        primaryTarget: "Separate, fluffy white grains with no sticking and no visible moisture. Small steam craters dot the surface of the rice.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are chalky and slightly crunchy in the center. Water may still be visible at the bottom of the pot.", action: "Cover and cook 3–5 more minutes on very low heat. Do not lift the lid during cooking — the steam is doing the work." },
-          { state: "Perfect",   description: "Grains are fully cooked, separate, and fluffy. The surface is pocked with steam holes. No water visible. A light, clean rice smell.", action: "Serve immediately with the red beans ladled generously over the top." },
-          { state: "Overdone",  description: "Rice is gummy and clumped. Grains have burst and stuck together. Faint scorched smell from the bottom.", action: "Spread the rice on a plate and fluff gently to release steam. The gummy texture will diminish slightly once the beans coat it." },
-        ],
-      },
-      feelCue: "Properly cooked long-grain rice feels dry and individual when you run a fork through it — each grain distinct, with no paste between them. A single grain pressed between your fingers should feel fully soft but not mushy.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon blanc, coupé en dés",
+      "ratioValue": 0.75,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Season",
-      inputs: ["creamy_red_beans", "steamed_rice"],
-      outputState: "finished_red_beans_and_rice",
-      instructions: "Scoop a mound of fluffy white rice into the center of each bowl. Ladle the red beans and sausage generously over and around the rice so the creamy gravy puddles at the base. The classic ratio is roughly equal parts rice and beans in the bowl. Garnish with sliced scallion and a few dashes of Louisiana hot sauce if desired. The beans will continue to thicken as the dish sits — this is traditional and desirable.",
-      visualCue: {
-        primaryTarget: "A mound of white rice surrounded by a moat of dark, glossy, rust-red beans and sausage. The gravy should pool and spread slowly, not run.",
-        spectrum: [
-          { state: "Underdone", description: "The bean gravy is thin and watery, running off the rice. No visible thickness.", action: "Return the beans to low heat and simmer uncovered another 15 minutes, mashing more beans for body." },
-          { state: "Perfect",   description: "The gravy is thick enough to cling to the rice rather than run through it. The sausage is tender and richly browned. The overall color is a deep, warm rust-red.", action: "Serve with hot sauce and crusty French bread on the side." },
-          { state: "Overdone",  description: "The beans have thickened to a very stiff paste and the bowl looks dry, not saucy.", action: "Stir in a splash of hot water or chicken stock just before serving to loosen the beans to a gravy-like pour." },
-        ],
-      },
-      feelCue: "The finished bowl should feel warming and substantial — the bean gravy coats the tongue with richness, the rice provides starchy support, and the slow heat of cayenne builds in the back of the throat long after the first bite.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Céleri en dés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Poivre vert, coupé en dés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Feuilles de baies",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Thym frais",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thym séché, quantité réduite de moitié"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 0.04,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 0.06,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Starch",
+      "name": "Riz blanc à grains longs",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "riz décortiqué"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_13",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_02"
+      ],
+      "outputState": "browned_base",
+      "instructions": "Faire fondre le beurre dans une grande casserole lourde ou un four hollandais à feu moyen. Ajouter l'oignon, le céleri et le poivron vert, la sainte trinité de la cuisine créole. Cuire, en remuant de temps en temps, de 8 à 10 minutes jusqu'à ce qu'il se ramollisse et commence à devenir translucide. Ajouter l'ail et cuire encore 1 minute. Poussez les légumes sur les côtés et ajoutez la saucisse Andouille tranchée en une seule couche. Laissez la saucisse brunir 2 à 3 minutes de chaque côté sans la déplacer – vous voulez une croûte rendue qui donnera aux haricots leur profondeur fumée. Mélangez tout ensemble.",
+      "visualCue": {
+        "primaryTarget": "Les légumes sont doux et dorés aux bords. Les rondelles de saucisses ont une croûte brun visible sur au moins un côté, et la graisse qu'elles ont rendue a mélangé avec le beurre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont encore croquants et pâles. Saucisse grise et douce, non dorée. La casserole sent la vapeur et la crue.",
+            "action": "Continuez à cuisiner. Le fond (les morceaux bruns collant au fond) est saveur — ne déglacez pas jusqu'à ce qu'il se soit formé correctement."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon est translucide et doré. Les rondelles de saucisses ont une croûte brune distincte. Le fond de la casserole a une couche de parfum foncé.",
+            "action": "Ajouter les haricots, les herbes et les épices. Le fond va déglacer et colorer la liqueur de pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les légumes sont très sombres et commencent à ombrager. Le saucisson s'est asséché et s'est considérablement rétréci.",
+            "action": "Déglacer immédiatement avec une tasse d'eau, racler le fond. Le fond contribuera encore à la saveur. Regardez la chaleur aller de l'avant."
+          }
+        ]
+      },
+      "feelCue": "La cuisine doit sentir la graisse de porc fondue et l'oignon caramélisant. Si ça sent le cru et le légume, continuez à cuisiner. Si ça sent la noix et légèrement fumé, vous êtes là."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Brise",
+      "inputs": [
+        "browned_base",
+        "ing_01",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "creamy_red_beans",
+      "instructions": "Ajouter les haricots égouttés et trempés dans le pot. Ajouter les feuilles de laurier, le thym, la cayenne, le paprika fumé et une généreuse pincée de sel. Couvrir d'eau froide de 5 cm. Porter à ébullition, puis laisser mijoter. Cuire à découvert ou à couvert lâchement pendant 1,5 à 2 heures, en remuant toutes les 20 minutes et en ajoutant de l'eau pour garder les haricots juste submergés. Après 90 minutes, commencez à broyer quelques haricots contre le côté de la casserole avec l'arrière d'une cuillère — ces haricots écrasés épaissiront la liqueur de pot à une consistance crémeuse, semblable à de la sauce. Continuer jusqu'à ce que le liquide de pot soit épais et crémeux et que les haricots soient complètement tendres. Goûtez au sel, à la Cayenne et à la fumée.",
+      "visualCue": {
+        "primaryTarget": "Un pot épais, crémeux, rouge rouille de haricots avec un liquide comme de la sauce. Les haricots doivent être complètement doux mais largement intacts, nager dans une sauce qui enrobe une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les haricots sont encore légèrement fermes au centre. Le liquide est mince et aqueux, plus comme la soupe que la sauce. Les couleurs sont pâles.",
+            "action": "Continuez à mijoter. Mash quelques haricots de plus contre le côté du pot pour épaissir le liquide. Ajouter l'eau seulement si les haricots sont exposés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les haricots sont entièrement tendres, quelques-uns se sont décomposés en sauce épaisse. La sauce enveloppe l'arrière d'une cuillère dans un film rouge rouille crémeuse. L'odeur est fumée, salée et profondément charnue.",
+            "action": "Éteignez le feu et laissez reposer pendant que vous faites cuire le riz. Les haricots s'épaississent encore plus en s'asseyant."
+          },
+          {
+            "state": "Overdone",
+            "description": "La plupart des haricots se sont dissous. Le pot est très épais, presque en pâte. Les tranches de saucisses ont commencé à s'effondrer.",
+            "action": "Ajouter l'eau chaude pour se détendre à une consistance versable. Aspirer pour se réinsérer. Ce sera encore excellent — un peu plus unifié."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillère de la liqueur de pot. Il devrait enrober votre langue comme de la sauce — visqueuse, fumée, avec une chaleur douce qui se construit à l'arrière de la gorge. Le liquide bouillonnant mince signifie plus de temps et plus de masquage."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_12",
+        "ing_11"
+      ],
+      "outputState": "steamed_rice",
+      "instructions": "Pendant que les haricots finissent, cuire le riz dans une casserole séparée. Rincer le riz jusqu'à ce que l'eau soit presque claire. Mélanger avec de l'eau froide dans un rapport 1:1,75, ajouter une pincée de sel et porter à ébullition. Réduire au minimum le feu possible, couvrir soigneusement et cuire 15 minutes. Retirer du feu et reposer couvert pendant 10 minutes sans soulever le couvercle. Fluff avec une fourchette. Le riz devrait être séparé, moelleux et suffisamment sec pour absorber la sauce aux haricots.",
+      "visualCue": {
+        "primaryTarget": "Séparez les grains blancs moelleux sans colle et sans humidité visible. De petits cratères à vapeur pointent la surface du riz.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont crayeux et légèrement croquants au centre. L'eau peut encore être visible au fond du pot.",
+            "action": "Couvrir et cuire encore 3 à 5 minutes à feu très doux. Ne levez pas le couvercle pendant la cuisson — la vapeur fait le travail."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont entièrement cuits, séparés et moelleux. La surface est recouverte de trous de vapeur. Pas d'eau visible. Une odeur de riz propre et légère.",
+            "action": "Servir immédiatement avec les haricots rouges lavés généreusement sur le dessus."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz est gommé. Les grains ont explosé et se sont collés ensemble. Sensation brûlée du fond.",
+            "action": "Étendre le riz sur une assiette et plisser doucement pour libérer la vapeur. La texture gommée diminuera légèrement une fois que les haricots l'enroberont."
+          }
+        ]
+      },
+      "feelCue": "Le riz à grains longs bien cuit est sec et individuel lorsque vous l'avez traversé par une fourchette — chaque grain est distinct, sans pâte entre eux. Un seul grain pressé entre vos doigts doit se sentir complètement doux mais pas musclé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "creamy_red_beans",
+        "steamed_rice"
+      ],
+      "outputState": "finished_red_beans_and_rice",
+      "instructions": "Versez un monticule de riz blanc moelleux au centre de chaque bol. Déposer généreusement les haricots rouges et la saucisse sur et autour du riz afin que la sauce crémeuse flaque à la base. Le rapport classique est à peu près égal parties riz et haricots dans le bol. Garnir de tranches de pétoncle et de quelques morceaux de sauce chaude Louisiane si désiré. Les haricots continueront de s'épaissir au fur et à mesure que le plat s'assoira, ce qui est traditionnel et souhaitable.",
+      "visualCue": {
+        "primaryTarget": "Un monticule de riz blanc entouré d'un douve de haricots foncés, brillants, rouge rouille et saucisse. La sauce devrait s'accumuler et s'étendre lentement, pas courir.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce aux haricots est fine et aqueuse, et coule du riz. Aucune épaisseur visible.",
+            "action": "Retourner les haricots à feu doux et laisser mijoter à découvert encore 15 minutes, en massant plus de haricots pour le corps."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est assez épaisse pour s'accrocher au riz plutôt que de le traverser. La saucisse est tendre et richement dorée. La couleur globale est un rouge rouille profond et chaud.",
+            "action": "Servir avec de la sauce chaude et du pain français croustillant sur le côté."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots s'épaississent jusqu'à une pâte très raide et le bol semble sec, pas savoureux.",
+            "action": "Incorporer un peu d'eau chaude ou de bouillon de poulet juste avant de servir pour desserrer les haricots à une sauce."
+          }
+        ]
+      },
+      "feelCue": "Le bol fini doit se sentir chaud et substantiel — la sauce aux haricots enveloppe la langue avec richesse, le riz fournit un soutien féculent, et la chaleur lente de Cayenne construit dans le dos de la gorge longtemps après la première morsure."
+    }
+  ]
 };

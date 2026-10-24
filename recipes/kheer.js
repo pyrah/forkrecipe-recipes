@@ -1,100 +1,258 @@
 export default {
-  repoId: "master_indian_kheer_001",
-  parentRepoId: null,
-  slug: "kheer",
-  author: "ForkRecipe Kitchen",
-  title: "Rice Kheer",
-  description: "India's ancient milk-rice pudding — short-grain rice simmered slowly in whole milk until it thickens to a creamy porridge, perfumed with cardamom and saffron, finished with toasted pistachios and rose water.",
-  cuisine: "Indian",
-  culture: "North Indian",
-  category: "desserts",
-  tags: ["indian", "rice", "milk", "sweet", "cardamom", "saffron", "dessert"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 1, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Whole milk",                                           ratioValue: 8,    defaultUnit: "parts", substitutions: ["full-fat coconut milk for dairy-free (reduces to faster, richer result)"] },
-    { ingId: "ing_02", role: "Starch",    name: "Short-grain white rice (gobindobhog or arborio), rinsed", ratioValue: 0.5, defaultUnit: "parts", substitutions: ["long-grain basmati, soaked and drained (yields less creaminess)"] },
-    { ingId: "ing_03", role: "Sweetener", name: "White sugar",                                          ratioValue: 0.75, defaultUnit: "parts", substitutions: ["jaggery for a deeper caramel flavor"] },
-    { ingId: "ing_04", role: "Spice",     name: "Green cardamom pods, seeds only, freshly ground",      ratioValue: 0.02, defaultUnit: "parts", substitutions: ["1/4 tsp ground cardamom, pre-ground"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Saffron threads, crumbled",                            ratioValue: 0.002, defaultUnit: "parts", substitutions: ["2 drops of kewra essence for a different floral note"] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Rose water",                                           ratioValue: 0.05, defaultUnit: "parts", substitutions: ["orange blossom water"] },
-    { ingId: "ing_07", role: "Garnish",   name: "Unsalted pistachios, toasted and roughly chopped",     ratioValue: 0.1,  defaultUnit: "parts", substitutions: ["toasted almonds, slivered"] },
-    { ingId: "ing_08", role: "Garnish",   name: "Dried rose petals or edible silver leaf (vark)",       ratioValue: 0.01, defaultUnit: "parts", substitutions: ["a pinch of saffron for garnish"] },
-    { ingId: "ing_09", role: "Fat",       name: "Ghee",                                                 ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_indian_kheer_001",
+  "parentRepoId": null,
+  "slug": "kheer",
+  "author": "ForkRecipe Kitchen",
+  "title": "Riz Kheer",
+  "description": "L'ancien pudding indien au riz au lait — riz à grains courts mijoté lentement dans du lait entier jusqu'à ce qu'il épaississe à un porridge crémeux, parfumé de cardamome et de safran, fini avec des pistaches grillées et de l'eau de rose.",
+  "cuisine": "Indiens",
+  "culture": "Inde du Nord",
+  "category": "desserts",
+  "tags": [
+    "indienne",
+    "riz",
+    "lait",
+    "doux",
+    "Cardamome",
+    "safran",
+    "dessert"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_02", "ing_09"],
-      outputState: "toasted_rice",
-      instructions: "In a heavy-bottomed pot or wide saucepan (preferably with a thick base to prevent scorching), warm the ghee over medium heat. Add the rinsed, drained rice and stir to coat each grain in the fat. Toast the rice gently for 2–3 minutes, stirring constantly, until the grains turn slightly translucent at the edges and the kitchen smells of warm, nutty rice. This brief fat-toast step coats the starch granules in a thin layer of fat, which slows their swelling and helps the rice absorb the milk gradually rather than mushifying all at once.",
-      visualCue: {
-        primaryTarget: "Rice grains are uniformly coated in ghee and slightly translucent at the edges; they glisten but are not browned; the pot smells of warm, buttery rice.",
-        spectrum: [
-          { state: "Underdone", description: "Rice is still fully opaque and chalky; not yet translucent at the edges; no toasty aroma.", action: "Continue stirring over medium heat for another minute or two." },
-          { state: "Perfect",   description: "Grains are glossy, slightly translucent at their edges, smelling warm and nutty — like the beginning of a risotto.", action: "Add the cold milk immediately; the temperature contrast will cause an initial surge of steam." },
-          { state: "Overdone",  description: "Rice grains are turning golden or brown; the ghee is beginning to smoke.", action: "Add cold milk immediately to stop the cooking; the kheer will still work but may have faint toasty notes." },
-        ],
-      },
-      feelCue: "Tilt the pan — the ghee-coated rice should slide smoothly, grain by grain, rather than clumping. Each grain should feel individually coated and separate when dragged across a cool surface.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Lait entier",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "lait de coco plein gras pour les produits laitiers (réduit à plus rapide, plus riche)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["toasted_rice", "ing_01", "ing_05"],
-      outputState: "simmered_kheer",
-      instructions: "Pour the cold milk over the toasted rice and increase heat to bring to a simmer, stirring frequently. Once simmering, crumble the saffron threads directly into the milk. Reduce heat to a gentle, lazy simmer — small bubbles breaking sporadically at the surface, not a rolling boil. Cook uncovered, stirring every 3–4 minutes, for 35–40 minutes. Each time you stir, drag the spoon along the bottom of the pot to prevent the rice from sticking and scorching, which happens quickly with milk. Over this time the milk will reduce by roughly a third, the rice will become completely tender and begin releasing starch, and the whole pot will turn golden from the saffron.",
-      visualCue: {
-        primaryTarget: "A thick, golden-ivory liquid that coats the spoon; rice grains are fully swollen and beginning to break down at the edges; the milk has visibly reduced; the whole pot is perfumed with saffron.",
-        spectrum: [
-          { state: "Underdone", description: "Milk is still very thin and pale; rice is undercooked and separate; cooking time under 25 minutes.", action: "Continue simmering — kheer cannot be rushed. High heat scorches milk; only gentle, patient simmering produces creaminess." },
-          { state: "Perfect",   description: "Cream-colored (deeply golden from saffron) with a nappe consistency; rice fully soft and some grains dissolved; stirs smoothly with a wooden spoon.", action: "Add sugar and aromatics now." },
-          { state: "Overdone",  description: "Milk has reduced so much the kheer is very thick and the rice has turned to pure mush; a skin has formed and possibly scorched on the bottom.", action: "Add a small amount of warm milk to loosen; if scorched, do not scrape the bottom — pour the unscorched portion into a new pot." },
-        ],
-      },
-      feelCue: "Stir and lift the spoon slowly above the pot — the kheer at the right stage should fall in a thick, lazy sheet rather than a thin stream. The bottom of the pot should feel slightly resistant when the spoon drags, suggesting developing body without sticking.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Riz blanc à grains courts (gobindobhog ou arborio), rincé",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "basmati à grains longs, trempés et drainés (rends moins crémeux)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Season",
-      inputs: ["simmered_kheer", "ing_03", "ing_04", "ing_06"],
-      outputState: "flavored_kheer",
-      instructions: "Add the sugar to the simmering kheer and stir to dissolve — the kheer will thin slightly as the sugar melts, which is normal. Continue simmering for another 5 minutes to reintegrate. Remove from heat. Stir in the freshly ground cardamom and rose water off the heat — both are highly volatile aromatics; adding them to a boiling liquid drives off most of their scent. The cardamom should go in 30 seconds before serving if serving warm, or right before chilling if serving cold. Taste and adjust sugar: kheer should be noticeably sweet, as chilling dulls sweetness significantly.",
-      visualCue: {
-        primaryTarget: "A creamy, golden, thick pudding that holds its own for a moment when poured from a spoon before slowly melting back — with a complex floral aroma from cardamom and rose water rising from the pot.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar not yet dissolved; kheer is grainy when tasted; cardamom not yet added.", action: "Stir vigorously for another minute over gentle heat to fully dissolve the sugar." },
-          { state: "Perfect",   description: "Sweet, golden, and aromatic; the saffron's honey-floral note, the cardamom's cooling spice, and the rose water's perfumed sweetness all present but not competing.", action: "Move to the garnish and serve or chill." },
-          { state: "Overdone",  description: "Rose water added to boiling kheer; its delicate aroma has cooked off entirely; the kheer smells flat.", action: "Add another small dash of rose water off the heat right before serving." },
-        ],
-      },
-      feelCue: "Taste the warm kheer — sweetness should register immediately and bloom fully across the tongue. If it tastes only mildly sweet, remember that chilling dulls sweetness by roughly 20%; add more sugar now rather than trying to sweeten a cold pudding.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 0.75,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jaggery pour une saveur de caramel plus profonde"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Chill",
-      inputs: ["flavored_kheer", "ing_07", "ing_08"],
-      outputState: "finished_kheer",
-      instructions: "Pour the kheer into individual serving bowls or a wide, shallow dish. It will thicken considerably as it cools — if serving warm, ladle immediately. For the more traditional cold serving, allow to cool to room temperature, then refrigerate for at least 2 hours. The kheer will thicken to the texture of a creamy custard as it chills. Before serving, scatter the toasted, chopped pistachios over the surface for crunch and color contrast. Add dried rose petals or a few threads of saffron on top. Serve cold, at room temperature, or warm — all three are traditional.",
-      visualCue: {
-        primaryTarget: "A pale golden, creamy, firm-but-yielding pudding surface topped with vibrant green pistachios and the romantic blush of dried rose petals or gleaming silver leaf — it should look festive and rich.",
-        spectrum: [
-          { state: "Underdone", description: "Kheer served warm and still thin; it runs across the plate like milk and does not have the custardy body that makes the dish satisfying.", action: "If a thicker result is desired, chill for 2 hours; the starch gels on cooling to give a proper pudding body." },
-          { state: "Perfect",   description: "Cold kheer is thick, spoonable, aromatic, and deeply satisfying — it holds its shape briefly when scooped but yields immediately to the spoon; studded with crunchy pistachio and perfumed with rose and cardamom.", action: "Serve in chilled bowls for a celebratory presentation." },
-          { state: "Overdone",  description: "Kheer has been refrigerated overnight and has set very firm; the top has dried slightly.", action: "Stir in a spoon of cold milk to loosen and recover the creamy consistency; the flavor will be undiminished." },
-        ],
-      },
-      feelCue: "Scoop a spoon of chilled kheer and hold it upright — it should hold its shape on the spoon for 3–4 seconds before beginning to slide. That moment of holding is the perfect gel from the rice starch meeting the chill of the milk.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Gousses de cardamome vert, graines seulement, fraîchement moulues",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1/4 c. à thé cardamome au sol, avant le sol"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Fils de safran émietté",
+      "ratioValue": 0.002,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "2 gouttes d'essence kewra pour une note florale différente"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Eau de rose",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau de fleur d'orange"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Pistaches non salées, grillées et hachées grossièrement",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Amandes grillées, liquéfiées"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Pétales de roses séchées ou feuilles d'argent comestibles (vark)",
+      "ratioValue": 0.01,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une pincée de safran pour garnir"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Ghee",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_02",
+        "ing_09"
+      ],
+      "outputState": "toasted_rice",
+      "instructions": "Dans un pot à fond lourd ou une casserole large (de préférence avec une base épaisse pour éviter les brûlures), chauffer le ghee à feu moyen. Ajouter le riz rincé, égoutté et mélanger pour enrober chaque grain dans la graisse. Faire cuire le riz doucement pendant 2 à 3 minutes, en remuant constamment, jusqu'à ce que les grains deviennent légèrement translucides aux bords et que la cuisine sente le riz chaud et noisette. Cette petite étape de graisse-toast enrobe les granules d'amidon dans une fine couche de graisse, ce qui ralentit leur gonflement et aide le riz à absorber le lait progressivement plutôt que de le mussifier en même temps.",
+      "visualCue": {
+        "primaryTarget": "Les grains de riz sont uniformément enrobés de ghee et légèrement translucides aux bords; ils brillent mais ne sont pas brunis; le pot sent le riz chaud et beurreux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz est encore complètement opaque et crayeux; pas encore translucide aux bords; pas d'arôme grillé.",
+            "action": "Continuer à remuer à feu moyen pendant une minute ou deux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont brillants, légèrement translucides à leurs bords, sentant chaud et noisette, comme le début d'un risotto.",
+            "action": "Ajouter immédiatement le lait froid; le contraste de température provoquera une poussée initiale de vapeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains de riz deviennent dorés ou bruns; le ghee commence à fumer.",
+            "action": "Ajouter le lait froid immédiatement pour arrêter la cuisson; le kheer fonctionnera encore mais peut avoir de légères notes grillées."
+          }
+        ]
+      },
+      "feelCue": "Inclinez la poêle — le riz enrobé de ghee doit glisser en douceur, grain par grain, plutôt que d'empiler. Chaque grain doit se sentir enduit individuellement et séparé lorsqu'il est traîné sur une surface fraîche."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "toasted_rice",
+        "ing_01",
+        "ing_05"
+      ],
+      "outputState": "simmered_kheer",
+      "instructions": "Verser le lait froid sur le riz grillé et augmenter le feu pour laisser mijoter, en remuant fréquemment. Une fois mijoté, écraser les fils de safran directement dans le lait. Réduisez la chaleur à une mijotée douce et paresseuse: de petites bulles se brisent sporadiquement à la surface, et non un ébullition. Cuire à découvert, en remuant toutes les 3-4 minutes, pendant 35-40 minutes. Chaque fois que vous remuez, faites glisser la cuillère le long du fond du pot pour empêcher le riz de coller et de brûler, ce qui se produit rapidement avec le lait. Pendant ce temps, le lait diminuera d'environ un tiers, le riz deviendra complètement tendre et commencera à libérer de l'amidon, et la casserole entière deviendra dorée du safran.",
+      "visualCue": {
+        "primaryTarget": "Un liquide épais et doré qui enrobe la cuillère; les grains de riz sont enflés et commencent à se décomposer aux bords; le lait est visiblement réduit; toute la casserole est parfumée de safran.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait est encore très mince et pâle; le riz est mal cuit et séparé; le temps de cuisson est inférieur à 25 minutes.",
+            "action": "Continuez à mijoter — le kheer ne peut être précipité. La chaleur élevée brûle le lait; seule une mijotation douce et patiente produit de la crémosité."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur crème (profondement dorée du safran) avec une consistance nappe; riz entièrement doux et quelques grains dissous; remue en douceur avec une cuillère en bois.",
+            "action": "Ajouter le sucre et les aromatiques maintenant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait a tellement réduit le kheer est très épais et le riz s'est transformé en pur mousse; une peau s'est formée et peut-être brûlée sur le fond.",
+            "action": "Ajouter une petite quantité de lait chaud pour se détendre; en cas de brûlure, ne grattez pas le fond — versez la portion non brûlée dans une nouvelle casserole."
+          }
+        ]
+      },
+      "feelCue": "Mélanger et lever lentement la cuillère au-dessus du pot — le kheer à la bonne étape devrait tomber dans une feuille épaisse et paresseuse plutôt qu'un ruisseau mince. Le fond du pot doit se sentir légèrement résistant lorsque la cuillère traîne, suggérant de développer le corps sans coller."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "simmered_kheer",
+        "ing_03",
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "flavored_kheer",
+      "instructions": "Ajouter le sucre au kheer mijotant et remuer pour dissoudre — le kheer s'amincira légèrement lorsque le sucre fondra, ce qui est normal. Continuer à mijoter encore 5 minutes pour se réinsérer. Retirer du feu. Incorporer la cardamome fraîchement moulue et l'eau de rose hors de la chaleur — les deux sont des aromatiques hautement volatiles; les ajouter à un liquide bouillant entraîne la plupart de leur parfum. La cardamome doit aller dans 30 secondes avant de servir si elle sert au chaud, ou juste avant de refroidir si elle sert au froid. Goûtez et ajustez le sucre : le kheer doit être nettement sucré, car la douceur refroidissante est significative.",
+      "visualCue": {
+        "primaryTarget": "Un pudding crémeux, doré, épais qui tient son propre pour un moment quand versé d'une cuillère avant de fondre lentement en arrière — avec un arôme floral complexe de la cardamome et de l'eau de rose montant de la casserole.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sucre non encore dissous; kheer est granuleux au goût; cardamome non encore ajouté.",
+            "action": "Incorporer vigoureusement pendant une autre minute à feu doux pour dissoudre complètement le sucre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Douce, dorée et aromatique; la note de fleur de miel du safran, l'épice de refroidissement du cardamome et la douceur parfumée de l'eau de rose sont toutes présentes mais non concurrentes.",
+            "action": "Passer à la garniture et servir ou refroidir."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'eau de rose ajoutée au kheer bouillant; son arôme délicat a entièrement cuit; le kheer sent plat.",
+            "action": "Ajouter un autre petit trait d'eau de rose juste avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Goûtez le kheer chaud — la douceur doit s'enregistrer immédiatement et fleurir pleinement dans la langue. S'il n'a un goût que légèrement sucré, n'oubliez pas que la douceur glaciale est d'environ 20%; ajoutez plus de sucre maintenant plutôt que d'essayer d'édulcorer un pudding froid."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Refroidissement",
+      "inputs": [
+        "flavored_kheer",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_kheer",
+      "instructions": "Verser le kheer dans des bols individuels ou dans un plat large et peu profond. Elle s'épaissira considérablement à mesure qu'elle refroidit — si elle sert la louche chaude immédiatement. Pour les portions froides plus traditionnelles, laisser refroidir à la température ambiante, puis réfrigérer pendant au moins 2 heures. Le kheer s'épaissira à la texture d'une crème crémeuse pendant qu'il refroidit. Avant de servir, dispersez les pistaches grillées hachées sur la surface pour obtenir un contraste de couleur et de croquant. Ajouter les pétales de rose séchés ou quelques fils de safran sur le dessus. Servir à froid, à température ambiante ou au chaud — tous les trois sont traditionnels.",
+      "visualCue": {
+        "primaryTarget": "Une surface de pudding d'or pâle, crémeuse, ferme, mais d'un rendement élevé, surmontée de pistaches vertes vibrantes et de la bouffée romantique de pétales de roses séchées ou de feuilles argentées brillantes, elle devrait paraître festive et riche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Kheer servi chaud et encore mince; il traverse l'assiette comme du lait et n'a pas le corps de crème qui rend le plat satisfaisant.",
+            "action": "Si un résultat plus épais est souhaité, refroidir pendant 2 heures; les gels d'amidon sur le refroidissement pour donner un corps de pudding approprié."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le kheer froid est épais, cuilleré, aromatique et profondément satisfaisant; il tient sa forme brièvement lorsqu'il est écorcé, mais il donne immédiatement à la cuillère; cloué de pistaches croquantes et parfumé de rose et de cardamome.",
+            "action": "Servir dans des bols réfrigérés pour une présentation de célébration."
+          },
+          {
+            "state": "Overdone",
+            "description": "Kheer a été réfrigéré toute la nuit et a mis très ferme; le dessus a légèrement séché.",
+            "action": "Incorporer une cuillère de lait froid pour se détendre et récupérer la consistance crémeuse; la saveur sera non diminuée."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère de kheer réfrigéré et tenez-la droite; elle devrait tenir sa forme sur la cuillère pendant 3-4 secondes avant de commencer à glisser. Ce moment de détention est le gel parfait de l'amidon de riz qui rencontre le froid du lait."
+    }
+  ]
 };

@@ -1,81 +1,226 @@
 export default {
-  repoId: "master_american_spicedapplebutter_001",
-  parentRepoId: null,
-  slug: "spiced-apple-butter",
-  author: "ForkRecipe Kitchen",
-  title: "Spiced Apple Butter",
-  description: "Granny Smith apples slow-cooked for hours with brown sugar, cinnamon, clove, and nutmeg in apple cider until they collapse and caramelize into a deep, mahogany-brown concentrate — velvety, intensely spiced, and almost impossibly fragrant.",
-  cuisine: "American",
-  culture: "Appalachian",
-  category: "condiments",
-  tags: ["apple butter", "american", "spiced", "spread", "condiment", "autumn", "canning"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "4 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 5, salty: 1, sour: 2, bitter: 1, umami: 0, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Granny Smith apples, peeled, cored, and roughly chopped", ratioValue: 100, defaultUnit: "parts", substitutions: ["Braeburn", "Pink Lady", "Golden Delicious", "mixed varieties"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Fresh apple cider (unfiltered, not apple juice)",          ratioValue: 30,  defaultUnit: "parts", substitutions: ["water + a tablespoon of apple cider vinegar"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Dark brown sugar",                                         ratioValue: 25,  defaultUnit: "parts", substitutions: ["light brown sugar", "coconut sugar"] },
-    { ingId: "ing_04", role: "Spice",     name: "Ground cinnamon",                                          ratioValue: 1.5, defaultUnit: "parts", substitutions: ["cinnamon stick (remove before blending)"] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground cloves",                                            ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Ground nutmeg, freshly grated",                            ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Ground allspice",                                          ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Acid",      name: "Apple cider vinegar",                                      ratioValue: 3,   defaultUnit: "parts", substitutions: ["lemon juice"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine sea salt",                                            ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_spicedapplebutter_001",
+  "parentRepoId": null,
+  "slug": "spiced-apple-butter",
+  "author": "ForkRecipe Kitchen",
+  "title": "Beurre de pomme épicé",
+  "description": "Les pommes de Granny Smith ont cuit lentement pendant des heures avec de la cassonade, de la cannelle, de la girofle et de la muscade dans le cidre de pomme jusqu'à ce qu'elles s'effondrent et caramélisent en un concentré brun acajou profond, velouté, intensément épicé et presque odorant.",
+  "cuisine": "Américain",
+  "culture": "Appalaches",
+  "category": "condiments",
+  "tags": [
+    "beurre de pomme",
+    "américains",
+    "épicé",
+    "Étendue",
+    "condiment",
+    "automne",
+    "Mise en conserve"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "4 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Simmer",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "softened_apples",
-      instructions: "Place the roughly chopped apples and apple cider in a large, wide, heavy-bottomed pot (a Dutch oven or enameled cast-iron braiser is ideal — the wide surface area accelerates evaporation). Bring to a simmer over medium heat, stirring occasionally, until the apples are completely soft and beginning to fall apart — about 25–30 minutes. You are not looking for texture here; the apples must become completely yielding, as they will be blended to a smooth purée. The cider provides both liquid for the initial cooking and a concentrated apple flavor that plain water cannot replicate. As the apples soften, they will release their own juice and the mixture will become more liquid before it begins to reduce.",
-      visualCue: {
-        primaryTarget: "Completely collapsed, soft apple pieces in a pale, frothy, apple-scented liquid — individual pieces yield instantly when pressed with a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Apple pieces still hold their shape, resist the spoon, and have a chalky or starchy center.", action: "Continue simmering with the lid on to create steam and soften the pieces faster." },
-          { state: "Perfect",   description: "Apple pieces completely collapse when pressed with the back of a spoon. The kitchen smells of warm, cooked apple. Liquid is frothy and pale.", action: "Add sugar and spices and begin the long reduction." },
-          { state: "Overdone",  description: "Apple pieces are falling apart but the liquid has already reduced too far and is beginning to stick to the pot bottom.", action: "Add 50 ml of additional cider or water and reduce heat immediately." },
-        ],
-      },
-      feelCue: "Press a piece of apple against the pot side with a wooden spoon — it should smear completely with zero resistance, like pressing softened butter. Any springiness means more cooking time.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Pommes de Granny Smith, pelées, cardées et hachées à peu près",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Braeburn",
+        "Dame rose",
+        "Délicieux doré",
+        "variétés mixtes"
+      ]
     },
     {
-      nodeId: "step_2", action: "Blend",
-      inputs: ["softened_apples", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "spiced_applesauce",
-      instructions: "Add the brown sugar, cinnamon, cloves, nutmeg, allspice, apple cider vinegar, and salt to the softened apples. Stir to combine. Using an immersion blender directly in the pot, blend until completely smooth with no apple skin or chunk remaining. Alternatively, allow to cool slightly and blend in batches in a countertop blender (fill only halfway — hot liquid can erupt). If you prefer a very smooth, glossy butter, pass the blended mixture through a fine-mesh sieve, pressing firmly. Taste the sweetened applesauce base at this point: it will taste flat and too sweet because the sugar has not yet caramelized and concentrated — this is expected and correct. The transformation happens during the long, slow reduction that follows.",
-      visualCue: {
-        primaryTarget: "A smooth, uniform, pale caramel-colored sauce — no lumps, no skin pieces, smelling of cinnamon and apple.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce still has visible apple skin fragments or lumps — blending was insufficient.", action: "Blend for longer and, if needed, pass through a sieve for absolute smoothness." },
-          { state: "Perfect",   description: "Completely smooth, flowing, pale tan to caramel color. Uniform spice fragrance throughout. Falls from the spoon in a smooth, even flow.", action: "Begin the slow reduction over low heat with the lid off." },
-          { state: "Overdone",  description: "Over-blended and very foamy or aerated from the blender — surface covered in froth.", action: "Allow to settle for 10 minutes before beginning the reduction." },
-        ],
-      },
-      feelCue: "Rub a drop between your fingers — completely smooth, no grit, the spice fragrance should cling to your skin strongly. If you can feel any texture at all, blend longer.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Cidre de pomme frais (non filtré, pas jus de pomme)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau + une cuillère à soupe de vinaigre de cidre de pomme"
+      ]
     },
     {
-      nodeId: "step_3", action: "Reduce",
-      inputs: ["spiced_applesauce"],
-      outputState: "finished_spiced_apple_butter",
-      instructions: "With the pot uncovered, reduce the applesauce over the lowest possible heat for 2 to 3 hours, stirring every 10–15 minutes — particularly important in the final hour when the concentration is high and scorching can occur. As the butter reduces, it will pass through several distinct stages: pale caramel (1 hour), golden amber (1.5 hours), deep mahogany-brown (2 hours), and finally the thick, glossy, spreadable consistency of apple butter (2.5–3 hours). You will know it is done when: a spoonful dropped on a cold plate holds its mound shape and does not run; the surface has a glossy, lacquered sheen; and the color is a deep mahogany-brown. The volume will have reduced by roughly half. Transfer to clean jars immediately while still hot.",
-      visualCue: {
-        primaryTarget: "Deep mahogany-brown, glossy, thick enough to hold a ridge when a spoon is dragged across the surface, smelling intensely of caramelized apple and warm spice.",
-        spectrum: [
-          { state: "Underdone", description: "Apple butter is still pale amber or caramel-colored, runs freely off the spoon, and tastes of sweet applesauce rather than concentrated, caramelized apple.", action: "Continue reducing. True apple butter takes patience. Stir more frequently to prevent scorching." },
-          { state: "Perfect",   description: "Deep mahogany, glossy surface, holds its shape on a cold plate, does not run. Fragrance is intensely of cinnamon, clove, and caramelized apple. Tastes complex, deeply sweet with a bright acid finish from the vinegar.", action: "Transfer to jars immediately. Seal and refrigerate up to 1 month, or process in a boiling water bath for shelf storage." },
-          { state: "Overdone",  description: "Apple butter has scorched on the pot bottom — bitter, dark caramel smell, very dark patches visible when stirring.", action: "Transfer immediately to a clean pot without scraping the scorched layer. Taste: if bitterness is not dominant, proceed." },
-        ],
-      },
-      feelCue: "Drag a spoon through the apple butter at the 2.5-hour mark — the channel it leaves should hold perfectly for 10 seconds before slowly beginning to close. If it closes immediately, continue reducing.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre brun foncé",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun léger",
+        "Sucre de coco"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bâton de cannelle (supprimer avant mélange)"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Gousses de terre",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Noix de muscade hachée, fraîchement râpée",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Vers le sol",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de citron"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "softened_apples",
+      "instructions": "Placer les pommes et le cidre de pomme hachés à peu près dans un grand pot à fond lourd (un four hollandais ou un brassoir en fonte émaillé est idéal — la grande surface accélère l'évaporation). Faire mijoter à feu moyen, en remuant occasionnellement, jusqu'à ce que les pommes soient complètement molles et commencent à s'effondrer — environ 25 à 30 minutes. Vous n'êtes pas à la recherche de textures ici ; les pommes doivent devenir complètement céder, car elles seront mélangées à une purée lisse. Le cidre fournit à la fois du liquide pour la cuisson initiale et une saveur de pomme concentrée que l'eau pure ne peut pas reproduire. Au fur et à mesure que les pommes ramollissent, elles libèrent leur propre jus et le mélange devient plus liquide avant qu'il commence à diminuer.",
+      "visualCue": {
+        "primaryTarget": "Complètement effondré, les morceaux de pomme mous dans un liquide pâle, mousseux, parfumé de pomme — les morceaux individuels donnent instantanément lorsqu'ils sont pressés avec une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux de pomme tiennent toujours leur forme, résistent à la cuillère et ont un centre crayeux ou amidon.",
+            "action": "Continuer à mijoter avec le couvercle pour créer de la vapeur et adoucir les morceaux plus rapidement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les morceaux de pomme s'effondrent complètement lorsqu'ils sont pressés à l'arrière d'une cuillère. La cuisine sent la pomme chaude et cuite. Le liquide est mousseux et pâle.",
+            "action": "Ajouter le sucre et les épices et commencer la longue réduction."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les morceaux de pomme tombent, mais le liquide a déjà été réduit trop loin et commence à coller au fond du pot.",
+            "action": "Ajouter 50 ml de cidre ou d'eau supplémentaire et réduire immédiatement la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau de pomme contre le côté pot avec une cuillère en bois — il devrait frotter complètement avec une résistance nulle, comme presser le beurre ramolli. Tout ressort signifie plus de temps de cuisson."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "softened_apples",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "spiced_applesauce",
+      "instructions": "Ajouter la cassonade, la cannelle, les girofles, la muscade, l'Allspice, le vinaigre de cidre de pomme et le sel aux pommes ramollies. Mélanger. À l'aide d'un mélangeur d'immersion directement dans la casserole, mélanger jusqu'à ce qu'il soit complètement lisse, sans peau de pomme ou sans morceaux. Alternativement, laisser refroidir légèrement et mélanger en lots dans un mélangeur de comptoir (remplir seulement à mi - liquide chaud peut éclater). Si vous préférez un beurre très doux et brillant, passez le mélange mélangé dans un tamis à mailles fines, appuyez fermement. Goûtez à la base de pommes sucrées à ce stade: il goûtera plat et trop sucré parce que le sucre n'a pas encore caramélisé et concentré — c'est attendu et correct. La transformation se produit pendant la longue, lente réduction qui suit.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lisse, uniforme, de couleur caramel pâle — pas de grumeaux, pas de morceaux de peau, sentant la cannelle et la pomme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a encore des fragments visibles de peau de pomme ou des morceaux — le mélange était insuffisant.",
+            "action": "Mélanger plus longtemps et, si nécessaire, passer à travers un tamis pour une douceur absolue."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement lisse, fluide, bronzage pâle à couleur caramel. Parfum d'épices uniforme partout. Des chutes de la cuillère dans un flux lisse et uniforme.",
+            "action": "Commencez la réduction lente à feu doux avec le couvercle éteint."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmené et très mousseux ou aéré du mélangeur — surface recouverte de mousse.",
+            "action": "Laisser reposer pendant 10 minutes avant de commencer la réduction."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte entre vos doigts – complètement lisse, sans grain, le parfum d'épice devrait s'accrocher fortement à votre peau. Si vous sentez n'importe quelle texture, mélangez plus longtemps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Réduire",
+      "inputs": [
+        "spiced_applesauce"
+      ],
+      "outputState": "finished_spiced_apple_butter",
+      "instructions": "Avec la casserole à découvert, réduire la pulpe sur la chaleur la plus basse possible pendant 2 à 3 heures, en remuant toutes les 10 à 15 minutes — particulièrement important dans la dernière heure lorsque la concentration est élevée et que la brûlure peut survenir. Au fur et à mesure que le beurre diminue, il passe par plusieurs étapes distinctes : caramel pâle (1 heure), ambre doré (1,5 heure), acajou-brun profond (2 heures), et enfin la consistance épaisse, brillante, tartinable du beurre de pomme (2,5-3 heures). Vous saurez que c'est fait quand: une cuillère lâchée sur une plaque froide tient sa forme de monticule et ne coule pas; la surface a un éclat brillant, laqué; et la couleur est une acajou-brun profonde. Le volume aura diminué d'environ la moitié. Transférer dans des pots propres immédiatement pendant qu'ils sont encore chauds.",
+      "visualCue": {
+        "primaryTarget": "Deep acajou brun, brillant, assez épais pour tenir une crête lorsqu'une cuillère est traînée à la surface, sentant intensément la pomme caramélisée et les épices chaudes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre de pomme est encore jaune-ambre pâle ou caramel, coule librement de la cuillère et goûte de la compote douce plutôt que de la pomme caramélisée concentrée.",
+            "action": "Continuez à réduire. Le vrai beurre de pomme prend patience. Mélanger plus fréquemment pour éviter les brûlures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep acajou, surface brillante, tient sa forme sur une plaque froide, ne fonctionne pas. La fragrance est intensément de cannelle, de girofle et de pomme caramélisée. Goûte complexe, profondément sucré avec un fini acide vif du vinaigre.",
+            "action": "Transférer dans les pots immédiatement. Sceller et réfrigérer jusqu'à 1 mois, ou le traiter dans un bain d'eau bouillante pour l'entreposage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre de pomme a brûlé sur le fond du pot — odeur amère de caramel foncé, taches très foncées visibles en remuant.",
+            "action": "Transférer immédiatement dans un pot propre sans racler la couche brûlée. Bouche : si l'amertume n'est pas dominante, procéder."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère à travers le beurre de pomme à la marque de 2,5 heures — le canal qu'il laisse devrait tenir parfaitement pendant 10 secondes avant de commencer lentement à fermer. Si elle se ferme immédiatement, continuer à réduire."
+    }
+  ]
 };

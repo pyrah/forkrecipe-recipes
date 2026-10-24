@@ -1,92 +1,216 @@
 export default {
-  repoId: "master_british_lemon_posset_001",
-  parentRepoId: null,
-  slug: "lemon-posset",
-  author: "ForkRecipe Kitchen",
-  title: "Lemon Posset",
-  description: "Heavy cream and sugar boiled together and set with nothing but fresh lemon juice — a two-ingredient miracle that turns the acid into a natural gelling agent, producing a wobbling, intensely lemony cream.",
-  cuisine: "British",
-  culture: "British",
-  category: "desserts",
-  tags: ["lemon-posset", "british", "dessert", "cream", "lemon", "no-gelatin", "quick", "gluten-free"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "3 hr 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 0, sour: 4, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",      name: "Double cream (minimum 48% fat)",            ratioValue: 10,  defaultUnit: "parts", substitutions: ["heavy whipping cream (do not substitute single cream — it will not set)"] },
-    { ingId: "ing_02", role: "Sweetener",  name: "Caster sugar",                              ratioValue: 3,   defaultUnit: "parts", substitutions: ["fine granulated sugar"] },
-    { ingId: "ing_03", role: "Citrus",     name: "Fresh lemon juice (strained)",              ratioValue: 2,   defaultUnit: "parts", substitutions: ["yuzu juice (reduce to 1.5 parts)"] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Lemon zest (finely grated)",                ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Garnish",    name: "Shortbread biscuits (for serving)",         ratioValue: 2,   defaultUnit: "parts", substitutions: ["langues de chat", "thin almond tuile"] },
+  "repoId": "master_british_lemon_posset_001",
+  "parentRepoId": null,
+  "slug": "lemon-posset",
+  "author": "ForkRecipe Kitchen",
+  "title": "Lemon Posset",
+  "description": "La crème lourde et le sucre bouillis ensemble et sertis de jus de citron frais — un miracle à deux ingrédients qui transforme l'acide en agent gélifiant naturel, produisant une crème zobante et intensément citronnée.",
+  "cuisine": "Anglais",
+  "culture": "Anglais",
+  "category": "desserts",
+  "tags": [
+    "au citron",
+    "britanniques",
+    "dessert",
+    "crème",
+    "citron",
+    "pas de gélatine",
+    "Vite",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "3 hr 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 0,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Boil",
-      inputs: ["ing_01", "ing_02", "ing_04"],
-      outputState: "boiled_cream",
-      instructions: "Combine the double cream, caster sugar, and lemon zest in a heavy saucepan. Stir over medium heat until the sugar dissolves and the cream begins to simmer. Raise the heat slightly and bring to a full, rolling boil — the cream will bubble up dramatically, so use a pan at least three times the volume of the cream. Boil for exactly 3 minutes, stirring and watching carefully. The rolling boil reduces the cream slightly and concentrates the fat content, which is essential for the setting mechanism. Time this carefully — under 3 minutes and it may not set; over 4-5 minutes and it may taste scorched.",
-      visualCue: {
-        primaryTarget: "A vigorously bubbling cream that has risen in the pan and thickened very slightly compared to its start. It is still ivory-white and should smell of warm cream and lemon zest.",
-        spectrum: [
-          { state: "Underdone", description: "The cream is simmering but not at a full, rolling boil. Bubbles are gentle and do not rise dramatically up the pan sides.", action: "Raise the heat until the cream reaches a full boil — the bubbles should be energetic and the cream should have risen in the pan. Then begin your 3-minute timer." },
-          { state: "Perfect",   description: "Full, rolling boil for 3 minutes. The cream has thickened very slightly — a little more viscous than raw cream. Still bright white and sweet-smelling.", action: "Remove from heat immediately and allow to cool for 2-3 minutes before adding the lemon juice." },
-          { state: "Overdone",  description: "Cream has boiled beyond 4-5 minutes — it looks slightly yellow and smells of caramelised dairy. The fat may have begun to separate.", action: "Proceed with the lemon juice — it will still set but may have a lightly cooked-cream flavour. Monitor more carefully next time." },
-        ],
-      },
-      feelCue: "When you lift the spoon from the boiling cream, the coating on the back should be barely thicker than raw cream — a fraction more viscous, but still fluid. It should flow off cleanly and immediately.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Double crème (minimum 48% de matières grasses)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème fouettée lourde (ne pas remplacer la crème unique — il ne sera pas mis)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Set",
-      inputs: ["boiled_cream", "ing_03"],
-      outputState: "posset_mixture",
-      instructions: "Remove the boiled cream from the heat and allow to cool for 2-3 minutes — it should still be hot but no longer violently boiling. Strain in the fresh lemon juice, stirring as you go. The juice must be freshly squeezed and strained of all pulp and seeds. As the acid meets the hot cream, the mixture will thicken perceptibly within seconds — the protein chains in the cream contract around the fat droplets in the presence of acid, setting the posset without any gelatin. Stir briefly until combined, then pour immediately into serving glasses or ramekins through a fine sieve.",
-      visualCue: {
-        primaryTarget: "The cream thickens noticeably as the lemon juice goes in — you can see the texture change from fluid cream to a thick, pourable, velvety liquid that coats the back of a spoon in an even sheet.",
-        spectrum: [
-          { state: "Underdone", description: "The lemon juice has been added but the cream shows no visible thickening. Still as thin as double cream from the carton.", action: "The cream may not have been hot enough or boiled long enough. Add a squeeze more lemon juice and stir. If it still will not thicken, the fat content of the cream was too low — refrigerate anyway; it may still set partially." },
-          { state: "Perfect",   description: "Visibly thicker after adding the juice — falls off a spoon in a slow, thick stream rather than a fast pour. Colour is bright white with a faint yellow tint from the zest. Smells intensely of fresh lemon.", action: "Pour immediately through a fine sieve into serving glasses. Do not let it sit in the pan — it will continue to set and become harder to pour." },
-          { state: "Overdone",  description: "Cream curdled rather than set — added too much acid or added it when the cream was too hot, causing the proteins to scramble into grainy curds floating in thin yellow liquid.", action: "Blend smooth with an immersion blender — a blended curdled posset is still pleasant. Next time, allow the cream to cool for 3 minutes before adding the acid, and measure the juice precisely." },
-        ],
-      },
-      feelCue: "As you stir in the lemon juice the resistance under the spoon increases perceptibly within 20-30 seconds — the mixture thickening from a liquid to something closer to loose stirred yogurt. This is the acid doing its work.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre granulé fin"
+      ]
     },
     {
-      nodeId: "step_3", action: "Chill",
-      inputs: ["posset_mixture"],
-      outputState: "set_posset",
-      instructions: "Pour the hot posset mixture through a fine-mesh sieve into individual serving glasses or shallow ramekins, filling each to about 1 cm below the rim. Allow to cool at room temperature for 20 minutes, then refrigerate uncovered for at least 3 hours, or overnight. The posset will set from a thick liquid into a firm, trembling cream — fully set but with a delicate wobble. Do not cover while cooling or condensation will drip in and prevent a clean surface.",
-      visualCue: {
-        primaryTarget: "A smooth, perfectly white, slightly domed surface — as clean as a mirror. No bubbles, no skin, no cracks. The posset wobbles as one piece when the glass is moved.",
-        spectrum: [
-          { state: "Underdone", description: "The surface wrinkles when the glass is tilted and the centre is still liquid. Has not chilled long enough.", action: "Return to the refrigerator for at least 1 more hour. The posset needs cold and time to set fully through to the centre." },
-          { state: "Perfect",   description: "Set firm but with a gentle wobble — moves as a whole unit like a firm panna cotta. The surface is clean and white, the texture beneath is silky and dense. A spoon pressed in comes back clean.", action: "Serve chilled with a shortbread biscuit balanced on the rim of the glass." },
-          { state: "Overdone",  description: "Chilled too long — fully set but the surface has developed a very thin skin and the texture throughout is overly firm and waxy rather than trembling.", action: "Still delicious. Cover and consume within 48 hours. A squeeze of fresh lemon on top at the table refreshes the flavour." },
-        ],
-      },
-      feelCue: "When you press the surface of the set posset very gently with the back of a clean spoon, it should give with a slight resistance and spring back — like pressing very cold set cream. It should not be rubbery or grainy.",
+      "ingId": "ing_03",
+      "role": "Citrus",
+      "name": "Jus de citron frais",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de yuzu (réduire à 1,5 partie)"
+      ]
     },
     {
-      nodeId: "step_4", action: "Garnish",
-      inputs: ["set_posset", "ing_05"],
-      outputState: "finished_lemon_posset",
-      instructions: "Just before serving, run a fine-mesh zester over a fresh lemon and scatter a pinch of zest over the white surface of each posset. Press a shortbread biscuit or langue de chat into the edge of each glass at an angle so it rests against the rim like a sail. Serve immediately from the refrigerator — the posset should arrive at the table cold, the contrast between the cold, set cream and the crumbling warm shortbread being the final textural pleasure.",
-      visualCue: {
-        primaryTarget: "A white, smooth posset surface dusted with bright yellow lemon zest, a golden shortbread balanced at the rim. The whole glass looks clean, pale, and precisely composed.",
-        spectrum: [
-          { state: "Underdone", description: "No garnish, served plain. Looks clinical and unfinished. Lacks the visual contrast and lemon-forward aroma cue that tells the diner what they are eating.", action: "Add at minimum a grating of fresh lemon zest — it costs nothing and transforms the presentation and aroma entirely." },
-          { state: "Perfect",   description: "White posset, bright yellow zest, golden biscuit. Cold, set, trembling. The first spoonful is clean and intensely lemony — sharp, rich, and barely sweet.", action: "Serve at once — the shortbread will soften if left touching the posset for more than 5 minutes." },
-          { state: "Overdone",  description: "Garnished too far in advance — the shortbread has absorbed moisture from the posset and gone soft. The zest has dried and curled.", action: "Replace the shortbread with a fresh one and re-grate a pinch of zest. Always garnish to order." },
-        ],
-      },
-      feelCue: "The first contact of the spoon with the set posset should feel like breaking through a very thin, barely-there surface tension — the cream parts cleanly and the spoon slides in with almost no resistance, revealing a silky, dense interior.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Zeste de citron (finement râpé)",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Garnish",
+      "name": "Biscuits à pain court (pour servir)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "langues de chat",
+        "Tuile d'amande mince"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "boiled_cream",
+      "instructions": "Mélanger la double crème, le sucre de castre et le zeste de citron dans une casserole lourde. Incorporer à feu moyen jusqu'à ce que le sucre se dissout et que la crème commence à mijoter. Levez légèrement la chaleur et portez à un ébullition complet, la crème va exploser de façon spectaculaire, donc utilisez une poêle au moins trois fois le volume de la crème. Faire bouillir 3 minutes exactement, en remuant et en regardant attentivement. L'ébullition réduit légèrement la crème et concentre la teneur en matières grasses, essentielle au mécanisme de réglage. Temps ce soigneusement — moins de 3 minutes et il peut ne pas être réglé; plus de 4-5 minutes et il peut goûter brûlé.",
+      "visualCue": {
+        "primaryTarget": "Une crème bouillonnante qui s'est relevée dans la poêle et s'est épaissie très légèrement par rapport à son début. Il est toujours blanc ivoire et doit sentir la crème chaude et le zeste de citron.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème mijote, mais pas à ébullition. Les bulles sont douces et ne s'élèvent pas de façon spectaculaire sur les côtés de la poêle.",
+            "action": "Levez la chaleur jusqu'à ce que la crème atteigne un ébullition complet — les bulles doivent être énergiques et la crème doit avoir levé dans la poêle. Alors commencez votre minuterie de 3 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Plein, faire bouillir pendant 3 minutes. La crème s'est épaissie très légèrement — un peu plus visqueuse que la crème crue. Toujours blanc vif et sucré.",
+            "action": "Retirer immédiatement du feu et laisser refroidir 2-3 minutes avant d'ajouter le jus de citron."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème a bouilli au-delà de 4-5 minutes — elle a l'air légèrement jaune et des odeurs de lait caramélisé. La graisse peut avoir commencé à se séparer.",
+            "action": "Procédez avec le jus de citron — il sera encore en place, mais peut avoir un goût de crème légèrement cuit. Surveillez plus attentivement la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous soulevez la cuillère de la crème bouillante, le revêtement sur le dos doit être à peine plus épais que la crème crue — une fraction plus visqueuse, mais encore fluide. Il doit s'écouler proprement et immédiatement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Jeu",
+      "inputs": [
+        "boiled_cream",
+        "ing_03"
+      ],
+      "outputState": "posset_mixture",
+      "instructions": "Retirer la crème bouillie du feu et laisser refroidir pendant 2-3 minutes — elle devrait encore être chaude mais ne plus bouillir violemment. Peau dans le jus de citron frais, en remuant au fur et à mesure. Le jus doit être fraîchement pressé et pressé de toute la pulpe et des graines. Comme l'acide rencontre la crème chaude, le mélange s'épaissira de façon perceptible en quelques secondes — les chaînes protéiques de la crème se contractent autour des gouttelettes graisseuses en présence d'acide, mettant le posset sans aucune gélatine. Mélanger brièvement jusqu'à combinaison, puis verser immédiatement dans les verres ou les ramequins à travers un tamis fin.",
+      "visualCue": {
+        "primaryTarget": "La crème s'épaissit nettement à mesure que le jus de citron entre en jeu — on peut voir la texture passer d'une crème fluide à un liquide épais, versable et velouté qui enveloppe l'arrière d'une cuillère dans une feuille uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le jus de citron a été ajouté mais la crème ne présente aucun épaississement visible. Toujours aussi mince que la double crème de la boîte.",
+            "action": "La crème n'a peut-être pas été assez chaude ou bouillie assez longtemps. Ajouter un peu plus de jus de citron et remuer. Si elle ne s'épaissit toujours pas, la teneur en matières grasses de la crème était trop faible — réfrigérer de toute façon; elle peut encore se fixer partiellement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Plus épais après avoir ajouté le jus, tombe d'une cuillère dans un cours d'eau lent et épais plutôt qu'une goutte rapide. La couleur est blanche avec une teinte jaune pâle du zeste. Sensation intense de citron frais.",
+            "action": "Verser immédiatement à travers un tamis fin dans des verres de service. Ne le laissez pas s'asseoir dans la poêle — elle continuera à se mettre et à devenir plus difficile à verser."
+          },
+          {
+            "state": "Overdone",
+            "description": "Crème caillé au lieu de se fixer — ajouté trop d'acide ou ajouté lorsque la crème était trop chaude, provoquant les protéines se brouillant dans des caillés granuleux flottant dans un liquide jaune mince.",
+            "action": "Mélanger en douceur avec un mélangeur d'immersion — un posset câblé mélangé est toujours agréable. La prochaine fois, laissez refroidir la crème pendant 3 minutes avant d'ajouter l'acide et mesurez précisément le jus."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous remuez dans le jus de citron, la résistance sous la cuillère augmente de façon perceptible en 20-30 secondes — le mélange s'épaississant d'un liquide à quelque chose de plus proche du yaourt agité. C'est l'acide qui fait son travail."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Refroidissement",
+      "inputs": [
+        "posset_mixture"
+      ],
+      "outputState": "set_posset",
+      "instructions": "Verser le mélange de posset chaud à travers un tamis à mailles fines dans des verres de service individuels ou des ramequins peu profonds, remplir chacun à environ 1 cm sous la jante. Laisser refroidir à température ambiante pendant 20 minutes, puis réfrigérer à découvert pendant au moins 3 heures, ou pendant la nuit. Le posset sera placé d'un liquide épais à une crème ferme et tremblante, entièrement sertie, mais avec un galet délicat. Ne pas couvrir pendant le refroidissement ou la condensation va s'écouler et empêcher une surface propre.",
+      "visualCue": {
+        "primaryTarget": "Une surface lisse, parfaitement blanche, légèrement bombée, aussi propre qu'un miroir. Pas de bulles, pas de peau, pas de fissures. Le posset agite comme une seule pièce lorsque le verre est déplacé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface se ride lorsque le verre est incliné et le centre est encore liquide. Il n'a pas refroidi assez longtemps.",
+            "action": "Retourner au réfrigérateur pendant au moins 1 heure de plus. Le posset a besoin de froid et de temps pour passer entièrement au centre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mettez ferme, mais avec un doux wobble — se déplace comme une unité entière comme une panna cotta ferme. La surface est propre et blanche, la texture inférieure est soyeuse et dense. Une cuillère pressée rentre propre.",
+            "action": "Servir au frais avec un biscuit en pain court équilibré sur le bord du verre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Réfrigéré trop longtemps — entièrement réglé mais la surface a développé une peau très fine et la texture est trop ferme et cireuse plutôt que tremblante.",
+            "action": "Toujours délicieux. Couvrir et consommer dans les 48 heures. Une pression de citron frais sur le dessus à la table rafraîchit le goût."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous appuyez sur la surface de l'ensemble posset très doucement avec le dos d'une cuillère propre, il devrait donner avec une légère résistance et ressort en arrière — comme presser la crème très froide. Il ne devrait pas être caoutchouteux ou granuleux."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "set_posset",
+        "ing_05"
+      ],
+      "outputState": "finished_lemon_posset",
+      "instructions": "Juste avant de servir, lancez un zester de mesh fin sur un citron frais et dispersez une pincée de zeste sur la surface blanche de chaque posset. Appuyez sur un biscuit de pain court ou une langue de chat dans le bord de chaque verre à un angle afin qu'il repose contre le bord comme une voile. Servir immédiatement du réfrigérateur — le posset devrait arriver à la table froide, le contraste entre le froid, la crème set et le pain court chaud effondré étant le plaisir textural final.",
+      "visualCue": {
+        "primaryTarget": "Une surface posset blanche, lisse, avec un zeste de citron jaune vif, un pain court doré équilibré au bord. Tout le verre semble propre, pâle et précisément composé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas de garniture. Ça semble clinique et inachevé. Il manque le contraste visuel et la marque d'arôme citron-avant qui dit au diner ce qu'ils mangent.",
+            "action": "Ajouter au minimum une grille de zeste de citron frais — il ne coûte rien et transforme entièrement la présentation et l'arôme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pousset blanc, zeste jaune vif, biscuit doré. Froid, prêt, tremblant. La première cuillerée est propre et intensément citronnée — tranchante, riche et à peine sucrée.",
+            "action": "Servir à la fois — le pain court s'assouplira s'il est laissé toucher le posset pendant plus de 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Garni trop loin à l'avance — le pain court a absorbé l'humidité du posset et est devenu doux. Le zeste a séché et frisé.",
+            "action": "Remplacez le pain court par un pain frais et regérez une pincée de zeste. Toujours garnir pour commander."
+          }
+        ]
+      },
+      "feelCue": "Le premier contact de la cuillère avec le posset set devrait avoir l'impression de briser une tension de surface très mince et à peine là - les parties de crème proprement et la cuillère glisse dans presque aucune résistance, révélant un intérieur soyeux et dense."
+    }
+  ]
 };

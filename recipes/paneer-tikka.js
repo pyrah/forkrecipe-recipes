@@ -1,96 +1,268 @@
 export default {
-  repoId: "master_indian_paneer-tikka_001",
-  parentRepoId: null,
-  slug: "paneer-tikka",
-  author: "ForkRecipe Kitchen",
-  title: "Paneer Tikka",
-  description: "Cubes of firm paneer and jewel-bright peppers, thickly coated in a spiced yogurt marinade and blistered under high heat until the exterior chars and crackles while the inside stays milky and yielding.",
-  cuisine: "Indian",
-  culture: "Punjabi",
-  category: "proteins",
-  tags: ["paneer", "tikka", "grilled", "indian", "vegetarian"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "75 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 5, sour: 4, bitter: 1, umami: 3, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Paneer, cut into 4cm cubes",        ratioValue: 5,   defaultUnit: "parts", substitutions: ["firm tofu"] },
-    { ingId: "ing_02", role: "Dairy",     name: "Thick full-fat yogurt (hung or Greek)", ratioValue: 2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Spice",     name: "Kashmiri chilli powder",             ratioValue: 0.3, defaultUnit: "parts", substitutions: ["sweet paprika + pinch of cayenne"] },
-    { ingId: "ing_04", role: "Spice",     name: "Garam masala",                       ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground cumin",                       ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Acid",      name: "Fresh lemon juice",                  ratioValue: 0.3, defaultUnit: "parts", substitutions: ["lime juice"] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Garlic-ginger paste (equal parts)",  ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Neutral oil",                        ratioValue: 0.5, defaultUnit: "parts", substitutions: ["melted butter"] },
-    { ingId: "ing_09", role: "Structure", name: "Red and green bell pepper, cubed",   ratioValue: 3,   defaultUnit: "parts", substitutions: ["red onion wedges"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Salt",                               ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Herb",      name: "Fresh coriander and lemon wedges, to serve", ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_indian_paneer-tikka_001",
+  "parentRepoId": null,
+  "slug": "paneer-tikka",
+  "author": "ForkRecipe Kitchen",
+  "title": "Paneer Tikka",
+  "description": "Cubes de paneer ferme et poivrons brillants de bijou, épaisement recouverts d'une marinade de yogourt épicée et blister sous feu vif jusqu'à ce que les chars extérieurs et les craquelins pendant que l'intérieur reste laiteux et donnant.",
+  "cuisine": "Indiens",
+  "culture": "Punjabi",
+  "category": "proteins",
+  "tags": [
+    "panneau",
+    "tikka",
+    "grillé",
+    "indienne",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "75 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 5,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Marinate",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_10"],
-      outputState: "marinated_paneer",
-      instructions: "Pat the paneer cubes completely dry with paper towels — any surface moisture will steam rather than char. In a wide bowl, combine yogurt, Kashmiri chilli, garam masala, cumin, lemon juice, garlic-ginger paste, oil, and salt. Whisk until smooth and deeply red-orange. Add paneer and peppers, turning gently to coat every surface. Refrigerate for at least 45 minutes. Do not marinate more than 4 hours — acid will begin to make the paneer crumbly.",
-      visualCue: {
-        primaryTarget: "Every face of every paneer cube vivid orange-red. No white gaps. Peppers fully coated.",
-        spectrum: [
-          { state: "Underdone", description: "White paneer faces showing through patchy marinade. Oil pooled at the bottom.", action: "Turn pieces again, pressing the marinade firmly onto each exposed face." },
-          { state: "Perfect",   description: "Uniform vivid coating. Marinade thick enough to cling without dripping. Paneer feels slightly tacky.", action: "Cover and refrigerate." },
-          { state: "Overdone",  description: "Paneer left in acidic marinade for over 4 hours. Surface feels crumbly and soft.", action: "Grill promptly. The crumble will crust up under heat, though texture may be softer than ideal." },
-        ],
-      },
-      feelCue: "Pick up a cube — the marinade should stay put and not drip onto your fingers. If it slides off, the yogurt is too thin; whisk in a spoon of yogurt or gram flour to thicken.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Paneer, coupé en cubes de 4 cm",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tofu ferme"
+      ]
     },
     {
-      nodeId: "step_2", action: "Grill",
-      inputs: ["marinated_paneer", "ing_09"],
-      outputState: "charred_tikka",
-      instructions: "Thread paneer and peppers alternately onto metal skewers, leaving small gaps between pieces for even heat. Place under a broiler (grill) on the highest setting, or on a very hot grill pan, or directly on a wire rack over a gas flame. Cook for 5-7 minutes on the first side without moving — you want a genuine char, not a gentle bronze. Turn once and cook for another 4-5 minutes. Brush with any remaining marinade halfway through.",
-      visualCue: {
-        primaryTarget: "Paneer faces are dark mahogany-brown to black at the peaks, still pale cream in the recesses. Pepper skins blistered and blackened in spots.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade is still wet and red. No crust has formed. Paneer sticking to the pan.", action: "Do not touch — give it at least 2 more minutes. It will release when the crust has formed." },
-          { state: "Perfect",   description: "Audible crackle and sizzle. Deep char marks. Marinade dry and crisped to a crust. Paneer releases cleanly.", action: "Turn once and finish the other side. Serve immediately off the skewer." },
-          { state: "Overdone",  description: "Paneer has dried out completely and shrunken. Marinade is uniformly black and bitter.", action: "Remove from heat immediately. Squeeze lemon juice over to counter the bitterness. Serve with plenty of raita." },
-        ],
-      },
-      feelCue: "Slide a spatula under a cube — it should release with a clean snapping sound from the crust. If it tears and drags, the char crust has not formed yet.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Yogourt riche en gras épais (hung ou grec)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Rest",
-      inputs: ["charred_tikka"],
-      outputState: "rested_tikka",
-      instructions: "Remove the skewers from the heat and let the paneer tikka rest off the grill for 2-3 minutes before serving. This brief rest allows the interior, which can get quite hot, to redistribute evenly so the center is warm and yielding rather than rubbery from sudden temperature shock.",
-      visualCue: {
-        primaryTarget: "Steaming gently, char crust looking dry and set rather than glistening.",
-        spectrum: [
-          { state: "Underdone", description: "Interior still feels cold in the center when pressed.", action: "Return to the grill for 2 more minutes, keeping a close watch." },
-          { state: "Perfect",   description: "Warm throughout, crust dry and crackling. Smells of char, spice, and warm milk.", action: "Slide off skewers onto a serving plate." },
-          { state: "Overdone",  description: "Resting too long — tikka has gone cold and the crust has softened from steam.", action: "Flash under the broiler for 60 seconds to re-crisp. Serve immediately." },
-        ],
-      },
-      feelCue: "Press gently on a cube — it should yield softly in the center with just a slight springback. If it feels completely rigid, it has dried out from overcooking.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Poudre de chili cachemiri",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika doux + pincée de Cayenne"
+      ]
     },
     {
-      nodeId: "step_4", action: "Garnish",
-      inputs: ["rested_tikka", "ing_11"],
-      outputState: "finished_paneer_tikka",
-      instructions: "Slide the tikka from the skewers onto a warm serving plate. Scatter torn fresh coriander generously. Arrange lemon wedges around the plate — squeeze at the table, not in the kitchen. The bright acid cuts through the rich spiced marinade. Serve immediately with mint chutney and sliced onion rings.",
-      visualCue: {
-        primaryTarget: "Dark-charred cubes against vivid green coriander and bright lemon-yellow wedges. Contrasting colors — dramatic on the plate.",
-        spectrum: [
-          { state: "Underdone", description: "Tikka plated cold with no garnish. Looks and smells flat.", action: "Always garnish just before serving — coriander wilts within minutes in contact with hot food." },
-          { state: "Perfect",   description: "Steam rising gently. Char crust glistening with the lemon squeeze. Coriander vivid green.", action: "Serve at once." },
-          { state: "Overdone",  description: "Lemon squeezed far in advance — tikka sitting in acid pool and softening.", action: "Provide wedges at the table and let guests squeeze their own." },
-        ],
-      },
-      feelCue: "The plate should feel warm from below. The tikka emits a steady perfume of toasted spice, char, and citrus — the smell alone should draw everyone to the table.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Garam masala",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de citron vert"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Pâte à l'ail-gingembre (pièces égales)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre fondu"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Structure",
+      "name": "poivron rouge et vert, cube",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "coins d'oignon rouge"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Herb",
+      "name": "Coriandre et quartiers de citron frais, à servir",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_10"
+      ],
+      "outputState": "marinated_paneer",
+      "instructions": "Pat les cubes de vitre complètement secs avec des serviettes en papier — toute humidité de surface va vapeur plutôt que l'omble. Dans un grand bol, mélanger le yaourt, le chili cachemiri, le garam masala, le cumin, le jus de citron, la pâte d'ail-gingembre, l'huile et le sel. fouetter jusqu'à ce que l'orange soit lisse et profondément rouge. Ajouter le paneer et les poivrons, tourner doucement pour enrober chaque surface. Réfrigérer pendant au moins 45 minutes. Ne pas mariner plus de 4 heures — l'acide va commencer à faire mijoter la vitre.",
+      "visualCue": {
+        "primaryTarget": "Chaque visage de chaque cube de vitre vif orange-rouge. Pas de blancs. Poivrons entièrement enduits.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Faces blanches de paneer montrant à travers la marinade patchy. L'huile est mise en réserve au fond.",
+            "action": "Retourner les morceaux en appuyant fermement sur chaque face exposée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Revêtement uniforme vif. Marinade assez épaisse pour s'accrocher sans goutter. Paneer se sent légèrement collant.",
+            "action": "Couvrir et réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Paneer laissé en marinade acide pendant plus de 4 heures. La surface est friable et douce.",
+            "action": "Grillez rapidement. La crumble s'écrasera sous la chaleur, bien que la texture puisse être plus douce que l'idéal."
+          }
+        ]
+      },
+      "feelCue": "Prenez un cube — la marinade doit rester en place et ne pas vous égoutter sur les doigts. Si elle glisse, le yogourt est trop mince; fouetter dans une cuillère de yogourt ou de farine de gramme pour épaissir."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Grille",
+      "inputs": [
+        "marinated_paneer",
+        "ing_09"
+      ],
+      "outputState": "charred_tikka",
+      "instructions": "La pane de filetage et les poivrons alternent sur les brochettes métalliques, laissant de petits espaces entre les morceaux pour une chaleur uniforme. Placer sous une grille (grille) sur le réglage le plus haut, ou sur une grille très chaude, ou directement sur une grille sur une flamme de gaz. Cuire 5-7 minutes du premier côté sans bouger — vous voulez un véritable char, pas un doux bronze. Tourner une fois et cuire encore 4-5 minutes. Badigeonner avec toute marinade restante à mi-chemin.",
+      "visualCue": {
+        "primaryTarget": "Les visages des paneers sont brun acajou foncé à noir aux pics, encore crème pâle dans les encastrements. Les peaux de poivre ont été cloquées et noircies dans les taches.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Marinade est encore humide et rouge. Aucune croûte ne s'est formée. Paneer collé à la casserole.",
+            "action": "Ne touchez pas — donnez-lui au moins 2 minutes de plus. Il se libérera quand la croûte se sera formée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Craquant et étourdissement. Des marques de caractères profonds. Marinade sèche et croustillante à la croûte. Paneer se libère proprement.",
+            "action": "Tournez une fois et terminez l'autre côté. Servir immédiatement hors de la brochette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Paneer a complètement séché et s'est rétréci. La marinade est uniformément noire et amère.",
+            "action": "Retirer immédiatement du feu. Pressez le jus de citron pour contrer l'amertume. Servir avec beaucoup de raita."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une spatule sous un cube — elle devrait se libérer avec un son propre de la croûte. Si elle déchire et traîne, la croûte d'omble n'est pas encore formée."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Repos",
+      "inputs": [
+        "charred_tikka"
+      ],
+      "outputState": "rested_tikka",
+      "instructions": "Retirer les brochettes du feu et laisser le paneer tikka reposer la grille pendant 2-3 minutes avant de servir. Ce bref repos permet à l'intérieur, qui peut devenir assez chaud, de se redistribuer uniformément afin que le centre soit chaud et donne plutôt que caoutchouteux du choc soudain de température.",
+      "visualCue": {
+        "primaryTarget": "À la vapeur doucement, la croûte d'omble est sèche et sertie au lieu de briller.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'intérieur se sent toujours froid au centre lorsqu'il est pressé.",
+            "action": "Retourner au grill pour 2 minutes de plus, en gardant une surveillance étroite."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chauffer, sécher la croûte et craqueler. Sens de char, d'épices et de lait chaud.",
+            "action": "Faites glisser les brochettes sur une assiette de service."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le tikka est devenu froid et la croûte s'est adoucie de la vapeur.",
+            "action": "Flash sous le grilleur pendant 60 secondes pour re-crisp. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur un cube — il devrait donner doucement au centre avec un léger ressort. S'il se sent complètement rigide, il a séché de la surcuisson."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "rested_tikka",
+        "ing_11"
+      ],
+      "outputState": "finished_paneer_tikka",
+      "instructions": "Faites glisser le tikka des brochettes sur une assiette chaude. Scatter déchiré la coriandre fraîche généreusement. Disposer les coins de citron autour de l'assiette — pressez à la table, pas dans la cuisine. L'acide brillant coupe à travers la marinade épicée riche. Servir immédiatement avec du chutney à la menthe et des anneaux d'oignon tranchés.",
+      "visualCue": {
+        "primaryTarget": "cubes de couleur foncée contre la coriandre verte vive et les coins jaune citron brillant. Des couleurs contrastées — dramatiques sur la plaque.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Tikka plaqué froid sans garniture. Ça sent bon.",
+            "action": "Garnir toujours juste avant de servir — la coriandre flétrit en quelques minutes en contact avec des aliments chauds."
+          },
+          {
+            "state": "Perfect",
+            "description": "La vapeur monte doucement. La croûte de Char brille avec la pression de citron. Coriandre vert vif.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Lemon pressé loin à l'avance — tikka assis dans la piscine acide et adoucissant.",
+            "action": "Fournissez des coins à la table et laissez les invités serrer leur propre."
+          }
+        ]
+      },
+      "feelCue": "L'assiette doit se sentir chaude d'en bas. Le tikka émet un parfum constant d'épices grillées, d'omble et d'agrumes."
+    }
+  ]
 };

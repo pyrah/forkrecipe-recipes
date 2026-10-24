@@ -1,61 +1,120 @@
 export default {
-  repoId: "master_american_cold_brew_coffee_001",
-  parentRepoId: null,
-  slug: "cold-brew-coffee",
-  author: "ForkRecipe Kitchen",
-  title: "Cold Brew Coffee Concentrate",
-  description: "Coarsely ground coffee steeped cold for 18 hours — no heat, no bitterness, just smooth, rounded coffee that keeps for two weeks and scales to any cup.",
-  cuisine: "American",
-  culture: "American",
-  category: "beverages",
-  tags: ["coffee", "cold-brew", "beverage", "no-cook", "make-ahead", "caffeine"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "18 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 0, sour: 1, bitter: 3, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Coarsely ground coffee",  ratioValue: 100, defaultUnit: "parts", substitutions: ["medium-coarse espresso blend"] },
-    { ingId: "ing_02", role: "Hydration", name: "Cold filtered water",     ratioValue: 400, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_american_cold_brew_coffee_001",
+  "parentRepoId": null,
+  "slug": "cold-brew-coffee",
+  "author": "ForkRecipe Kitchen",
+  "title": "Concentré de café de brasserie froide",
+  "description": "Café moulu grossièrement trempé froid pendant 18 heures — pas de chaleur, pas d'amertume, juste un café lisse et arrondi qui conserve pendant deux semaines et balance à n'importe quelle tasse.",
+  "cuisine": "Américain",
+  "culture": "Américain",
+  "category": "beverages",
+  "tags": [
+    "café",
+    "à froid",
+    "boisson",
+    "pas de cuisson",
+    "marque à l'avance",
+    "caféine"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "18 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 0,
+    "sour": 1,
+    "bitter": 3,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Steep",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "steeping_coffee",
-      instructions: "Combine the coarsely ground coffee and cold filtered water in a large glass jar or pitcher. Stir once with a long spoon to ensure all grounds are wet — any dry clumps floating on top will not extract. Cover loosely with a lid or cloth and refrigerate for 18–24 hours. Do not stir again during steeping.",
-      visualCue: {
-        primaryTarget: "Grounds fully submerged in cold water, with the liquid deepening from pale tan to dark amber-brown as the steep progresses.",
-        spectrum: [
-          { state: "Underdone", description: "Under 18 hours: liquid is pale tan or light brown. Flavor is thin and grassy with prominent sour notes.", action: "Return to the fridge and steep longer — cold brew extracts slowly, and under-extraction produces sour, weak concentrate." },
-          { state: "Perfect",   description: "18–24 hours: liquid is deep mahogany and smells roasty and chocolatey through the grounds, with no harsh or sour top note.", action: "Proceed to strain. Dilute finished concentrate 1:1 with water or milk to serve over ice." },
-          { state: "Overdone",  description: "Over 24 hours: the concentrate tastes bitter and astringent with a flat, papery finish.", action: "Dilute more aggressively — 1 part concentrate to 2 parts water — to pull it back into a drinkable range." },
-        ],
-      },
-      feelCue: "The grounds should feel like coarse wet sand when pinched between wet fingers — if they feel powdery fine, the grind was too small and the concentrate may over-extract.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Café moulu grossièrement",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mélange expresso moyen-courbé"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Strain",
-      inputs: ["steeping_coffee"],
-      outputState: "cold_brew_concentrate",
-      instructions: "Set a fine-mesh strainer over a large bowl or second pitcher and line it with a paper coffee filter or two layers of cheesecloth. Pour the cold brew slowly and let gravity do the work — do not press or squeeze the grounds. The first pour may take 10 minutes. Discard the spent grounds. Transfer the concentrate to a sealed glass bottle and refrigerate.",
-      visualCue: {
-        primaryTarget: "Clear, dark amber concentrate dripping steadily through the filter with no grounds or turbidity visible in the strained liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Strained liquid is murky brown with visible sediment and fine particles suspended throughout.", action: "Re-strain through a fresh paper filter — two passes produce a much cleaner concentrate. Allow gravity drain only; do not press." },
-          { state: "Perfect",   description: "Liquid runs clear and deep amber, almost the color of dark honey when held up to light. No grit visible. Drip rate is slow but steady.", action: "Bottle and refrigerate. Keeps well for 2 weeks." },
-          { state: "Overdone",  description: "You squeezed or pressed the grounds — concentrate is opaque and full of fine particles that also released harsh tannins.", action: "A second slow gravity-strain through a fresh filter will remove most particles. The concentrate may retain some residual bitterness." },
-        ],
-      },
-      feelCue: "Let a drop fall onto your fingertip — it should feel clean and very slightly viscous, like a light syrup. Gritty or sandy texture means it needs another pass through the filter.",
-    },
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau filtrée à froid",
+      "ratioValue": 400,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Streep",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "steeping_coffee",
+      "instructions": "Mélanger le café grossièrement moulu et l'eau filtrée froide dans un grand pot en verre ou un pichet. Mélanger une fois avec une cuillère longue pour s'assurer que tous les terrains sont mouillés — les touffes sèches flottant sur le dessus ne s'extrairont pas. Couvrir avec un couvercle ou un chiffon et réfrigérer pendant 18 à 24 heures. Ne pas remuer à nouveau pendant le trempage.",
+      "visualCue": {
+        "primaryTarget": "Sols entièrement immergés dans l'eau froide, avec le liquide approfondissement du bronzage pâle à brun-ambre foncé au fur et à mesure que les pentes progressent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Moins de 18 heures: le liquide est brun pâle ou brun clair. L'arôme est mince et herbacé avec des notes acides proéminentes.",
+            "action": "Revenez au réfrigérateur et penchez - vous plus longtemps: les extraits de bière froide se font lentement, et la sous - extraction produit des concentrés acides et faibles."
+          },
+          {
+            "state": "Perfect",
+            "description": "18 à 24 heures: liquide est acajou profond et sent rôti et chocolaté à travers le terrain, sans note supérieure dure ou aigre.",
+            "action": "Faites pression. Diluer le concentré fini 1:1 avec de l'eau ou du lait pour servir sur la glace."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus de 24 heures : le concentré a un goût amer et astringent avec un fini plat et papier.",
+            "action": "Diluer de façon plus agressive — une partie se concentre à 2 parties d'eau — pour la ramener dans une gamme potable."
+          }
+        ]
+      },
+      "feelCue": "Le sol doit se sentir comme du sable mouillé grossier lorsqu'il est pincée entre les doigts mouillés — s'il est fin, le broyage est trop petit et le concentré peut sur-extraire."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Poignée",
+      "inputs": [
+        "steeping_coffee"
+      ],
+      "outputState": "cold_brew_concentrate",
+      "instructions": "Placer une passoire fine sur un grand bol ou un deuxième pichet et l'aligner avec un filtre à café en papier ou deux couches d'étoffe de fromage. Verser lentement la bière froide et laisser la gravité faire le travail — ne pas presser ou serrer le terrain. La première goutte peut prendre 10 minutes. Jetez les terrains dépensés. Transférer le concentré dans une bouteille de verre scellée et réfrigérer.",
+      "visualCue": {
+        "primaryTarget": "Un concentré d'ambre clair et foncé coule régulièrement à travers le filtre sans fond ni turbidité visible dans le liquide tendu.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide entraîné est brun foncé avec des sédiments visibles et de fines particules en suspension.",
+            "action": "Reformer à travers un filtre à papier frais — deux passes produisent un concentré beaucoup plus propre. Autoriser le drain de gravité seulement; ne pas appuyer."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'ambre liquide est clair et profond, presque la couleur du miel foncé lorsqu'il est tenu à la lumière. Pas de grain visible. La vitesse d'écoulement est lente mais constante.",
+            "action": "Bouteille et réfrigérer. Se conserve bien pendant 2 semaines."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez pressé ou pressé le terrain — le concentré est opaque et plein de particules fines qui ont également libéré des tanins dures.",
+            "action": "Une seconde phase de gravité lente à travers un filtre frais éliminera la plupart des particules. Le concentré peut conserver une certaine amertume résiduelle."
+          }
+        ]
+      },
+      "feelCue": "Laissez tomber une goutte sur le bout des doigts – elle doit se sentir propre et très légèrement visqueuse, comme un sirop léger. Une texture gritty ou sablonneuse nécessite un autre passage à travers le filtre."
+    }
+  ]
 };

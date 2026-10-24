@@ -1,90 +1,283 @@
 export default {
-  repoId: "master_mexican_chiles_en_nogada_filling_001",
-  parentRepoId: null,
-  slug: "chiles-en-nogada-filling",
-  author: "ForkRecipe Kitchen",
-  title: "Picadillo Filling for Chiles en Nogada",
-  description: "A baroque and beautiful minced pork picadillo woven through with sweet dried fruit, warm spices, and the haunting brightness of fresh peach and pear — the stuffing for Mexico's most celebrated seasonal dish, a recipe that carries August in every bite.",
-  cuisine: "Mexican",
-  culture: "Poblano",
-  category: "proteins",
-  tags: ["picadillo", "chiles-en-nogada", "mexican", "pork", "dried-fruit", "poblano", "celebration"],
-  difficulty: 4,
-  activeTime: "1 hr 30 min",
-  totalTime: "2 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 4, salty: 2, sour: 2, bitter: 1, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Ground pork (not too lean, 80/20)",           ratioValue: 500, defaultUnit: "g", substitutions: ["ground turkey + 1 tbsp lard"] },
-    { ingId: "ing_02", role: "Allium",    name: "White onion, finely diced",                    ratioValue: 1,   defaultUnit: "medium", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, minced",                        ratioValue: 3,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_04", role: "Structure", name: "Ripe tomatoes, peeled, seeded, and diced",     ratioValue: 3,   defaultUnit: "medium", substitutions: ["400g canned fire-roasted tomatoes, drained"] },
-    { ingId: "ing_05", role: "Sweetener", name: "Dried apricots, finely diced",                 ratioValue: 40,  defaultUnit: "g", substitutions: ["dried peaches"] },
-    { ingId: "ing_06", role: "Sweetener", name: "Raisins or dried currants",                    ratioValue: 40,  defaultUnit: "g", substitutions: ["dried cranberries"] },
-    { ingId: "ing_07", role: "Sweetener", name: "Blanched almonds, roughly chopped",            ratioValue: 50,  defaultUnit: "g", substitutions: ["pine nuts"] },
-    { ingId: "ing_08", role: "Sweetener", name: "Fresh peach or pear, peeled and finely diced", ratioValue: 1,  defaultUnit: "medium", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Ground cinnamon (canela)",                     ratioValue: 0.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Ground cloves",                                ratioValue: 0.25, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Ground black pepper",                          ratioValue: 0.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_12", role: "Fat",       name: "Lard or neutral oil",                          ratioValue: 2,   defaultUnit: "tbsp", substitutions: ["olive oil"] },
-    { ingId: "ing_13", role: "Seasoning", name: "Kosher salt",                                  ratioValue: 1.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_14", role: "Herb",      name: "Fresh flat-leaf parsley, finely chopped",      ratioValue: 3,   defaultUnit: "tbsp", substitutions: ["fresh thyme leaves"] },
-    { ingId: "ing_15", role: "Acid",      name: "Sherry vinegar",                               ratioValue: 1,   defaultUnit: "tbsp", substitutions: ["cider vinegar", "lime juice"] },
+  "repoId": "master_mexican_chiles_en_nogada_filling_001",
+  "parentRepoId": null,
+  "slug": "chiles-en-nogada-filling",
+  "author": "ForkRecipe Kitchen",
+  "title": "Picadillo Remplissage pour Chili en Nogada",
+  "description": "Un beau picadillo de porc, baroque et haché, tissé avec des fruits séchés sucrés, des épices chaudes et la brillance hantante de la pêche fraîche et de la poire — la farce pour le plat de saison le plus célèbre du Mexique, une recette qui porte le mois d'août dans chaque bouchée.",
+  "cuisine": "Mexicain",
+  "culture": "Poblano",
+  "category": "proteins",
+  "tags": [
+    "picadillo",
+    "Chiles-en-nogada",
+    "Mexique",
+    "porc",
+    "Fruits secs",
+    "poblano",
+    "célébration"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hr 30 min",
+  "totalTime": "2 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_12", "ing_02", "ing_03"],
-      outputState: "softened_alliums",
-      instructions: "Heat the lard or oil in a large, wide skillet or sauté pan over medium heat. Add the finely diced onion and cook, stirring regularly, for 8 to 10 minutes until completely translucent and beginning to turn golden at the edges. Do not rush this step — the onion must be properly softened to contribute sweetness rather than rawness to the picadillo. In the last 2 minutes, add the minced garlic and stir constantly to prevent it from burning. The garlic should turn pale golden and fragrant — not brown. The mixture should smell sweet and deeply onion-y, with a thread of toasty garlic. If the garlic browns before the onion is soft, reduce the heat. The proper foundation of the picadillo begins here: under-sweated aromatics produce a sharp, harsh filling, while properly softened ones produce a round, sweet base that supports the complexity of the spices and dried fruit.",
-      visualCue: {
-        primaryTarget: "Onion is completely translucent and slightly golden at the edges, volume reduced by about half. Garlic is pale gold and fragrant.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still white and opaque with a crisp texture. Garlic has barely warmed. The aroma is sharp and raw.", action: "Reduce heat slightly and continue cooking. Sweating onions properly takes patience — adding a small pinch of salt will help draw out moisture and speed the process." },
-          { state: "Perfect",   description: "Onion is translucent, jammy, and slightly golden at the edges, completely collapsed from its raw volume. Garlic is pale golden and the aroma is sweet, caramelized, and warm.", action: "Add the ground pork and begin browning." },
-          { state: "Overdone",  description: "Onion has browned heavily or begun to caramelize. Garlic is dark brown and may smell bitter.", action: "Add a splash of water to the pan to halt the browning and deglaze the fond. Continue — the slightly more caramelized flavor can work in the picadillo's complexity." },
-        ],
-      },
-      feelCue: "A properly sweated onion should feel like it has dissolved into the fat — no individual crunch when pressed with a spoon, just a yielding, jammy softness. The pan should smell like a kitchen rather than a raw vegetable.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Porc haché (pas trop maigre, 80/20)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "dinde hachée + 1 c. à soupe de saindoux"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["softened_alliums", "ing_01", "ing_09", "ing_10", "ing_11"],
-      outputState: "browned_pork_base",
-      instructions: "Add the ground pork to the pan, breaking it up immediately into very small pieces with a wooden spoon or a stiff spatula — the goal is the finest possible mince texture. Add the ground cinnamon, cloves, and black pepper directly onto the pork as it hits the pan. Cook over medium-high heat, stirring and breaking up continuously, for 8 to 10 minutes until the pork is completely cooked through and has developed some color and browning rather than just steaming. Picadillo gets its depth from browning — if the pan is overcrowded or the heat too low, the pork will steam in its own moisture and turn grey and flat. If the pan seems crowded, cook the pork in two batches. The fat rendered from the pork will combine with the lard and the spices to create an aromatic base. When the pork is brown and fragrant, reduce the heat to medium.",
-      visualCue: {
-        primaryTarget: "Pork is finely broken up, browned in spots, no pink remaining. Fat in the pan is fragrant with cinnamon and clove. The mixture smells of warm spiced meat.",
-        spectrum: [
-          { state: "Underdone", description: "Pork is grey and steamy, pooling in its own released moisture. No browning. The texture is wet and soft. Spices smell raw and sharp rather than integrated.", action: "Increase heat and stop stirring — let the moisture evaporate and the pork begin to fry in the rendered fat. Stir only to prevent sticking once the pan dries." },
-          { state: "Perfect",   description: "Pork is golden-brown in many spots, completely broken into fine crumbles, no visible pink. The pan is dry or lightly glossy from fat. The aroma is of spiced, browned meat — warm cinnamon and clove woven into the savory pork smell.", action: "Add the tomatoes and cook down." },
-          { state: "Overdone",  description: "Pork has become very dark, dry, and crisp in places — almost jerky-like in texture. Some pieces may be burned.", action: "Add a splash of water to the pan and stir — the moisture will lift the fond and rehydrate the driest pieces. Reduce heat before adding the tomatoes." },
-        ],
-      },
-      feelCue: "Properly browned ground pork sounds different from steaming pork: instead of a wet, spluttering sizzle, there is a quieter, drier, crackling sound as the water cooks off and the fat takes over. That transition in sound is the signal to add the tomatoes.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon blanc, finement coupé en dés",
+      "ratioValue": 1,
+      "defaultUnit": "medium",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["browned_pork_base", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_13", "ing_14", "ing_15"],
-      outputState: "finished_picadillo_filling",
-      instructions: "Add the diced tomatoes to the pork and stir to combine. Cook over medium heat for 5 minutes until the tomatoes have softened and given up their liquid. Add the diced dried apricots, raisins, and chopped almonds, stirring to distribute evenly throughout the meat mixture. Add the diced fresh peach or pear. Season with salt and the sherry vinegar, stirring well. Reduce the heat to medium-low and simmer, stirring occasionally, for 15 to 20 minutes until most of the tomato liquid has evaporated and the mixture is relatively dry — it needs to be dry enough to hold its shape when stuffed into a chile, not wet enough to leak out during plating. The dried fruit will have plumped and become jammy, the fresh fruit will have softened and nearly dissolved into the meat, and the almonds will be just barely tender with a faint crunch. Remove from heat and fold in the fresh parsley. Taste and adjust: the picadillo should be sweet, savory, spiced, and subtly tart all at once — complex enough to be interesting on its own and dramatic enough to hold its own against the walnut cream sauce and the poblano chile.",
-      visualCue: {
-        primaryTarget: "Relatively dry, finely textured meat mixture with visible golden raisin and apricot pieces and almond chunks throughout. Holds its shape when scooped — does not weep liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is still wet and soupy, with visible tomato liquid in the pan. Dried fruit has not yet plumped and the flavors taste separate — pork here, sweet fruit there.", action: "Continue simmering uncovered, stirring frequently, until the liquid has evaporated and the mixture pulls together as a cohesive mass. Do not cover — you need evaporation." },
-          { state: "Perfect",   description: "Mixture holds its shape when pressed with a spoon and does not release liquid when moved to one side of the pan. The flavors are unified — savory, sweet, warm-spiced, and lightly tart. Dried fruit is jammy and plump. Almonds still have a slight crunch.", action: "Cool completely before stuffing into poblano chiles. The picadillo can be made 24 hours ahead and refrigerated — it improves with time." },
-          { state: "Overdone",  description: "Mixture is very dry and stiff, with dried fruit that has caramelized and turned sticky. The pork feels dry and crumbly. It will be difficult to stuff into chiles and will taste heavy.", action: "Add 2 tablespoons of water or stock, stir over low heat, and allow the mixture to rehydrate slightly. The texture will soften and become more cohesive." },
-        ],
-      },
-      feelCue: "The finished picadillo has a complex, layered smell that is unlike almost anything else in Mexican cooking: the warm spice of cinnamon and clove, the sweetness of dried fruit, the savory depth of browned pork, and the green freshness of parsley all competing for your attention simultaneously. Taste a spoonful: the first impression is sweet, then savory, then warm spice on the finish. That sequence — sweet, savory, spice — is what you are aiming for.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 3,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Tomates ripées, pelées, ensemencées et dés",
+      "ratioValue": 3,
+      "defaultUnit": "medium",
+      "substitutions": [
+        "400g de tomates grillées au feu, égouttées"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Abricots séchés, en dés",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Pêches séchées"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Sweetener",
+      "name": "Raisins ou groseilles séchées",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "canneberges séchées"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Amandes blanchies, approximativement hachées",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "noix de pin"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Pêche ou poire fraîche, pelée et coupée en dés",
+      "ratioValue": 1,
+      "defaultUnit": "medium",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Cannelle au sol (canelle)",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Gousses de terre",
+      "ratioValue": 0.25,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Poivre noir moulu",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Fat",
+      "name": "Lard ou huile neutre",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Herb",
+      "name": "Persil frais à feuilles plates, haché finement",
+      "ratioValue": 3,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "feuilles de thym fraîches"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Acid",
+      "name": "vinaigre de sherry",
+      "ratioValue": 1,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "vinaigre de cidre",
+        "jus de citron vert"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_12",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "softened_alliums",
+      "instructions": "Chauffer le saindoux ou l'huile dans une grande poêle ou poêle à feu moyen. Ajouter l'oignon finement coupé et cuire en remuant régulièrement pendant 8 à 10 minutes jusqu'à ce qu'il soit complètement translucide et qu'il commence à devenir doré aux bords. Ne précipitez pas cette étape: l'oignon doit être adouci pour contribuer à la douceur plutôt qu'à la crudité du picadillo. Dans les 2 dernières minutes, ajouter l'ail haché et remuer constamment pour l'empêcher de brûler. L'ail doit devenir doré et parfumé, et non brun. Le mélange doit sentir doux et profondément oignon-y, avec un fil d'ail grillé. Si l'ail brunit avant que l'oignon soit doux, réduisez le feu. La bonne base du picadillo commence ici : les aromatiques sous-sweated produisent un remplissage aigu, dur, tandis que les adoucis correctement produisent une base ronde et douce qui soutient la complexité des épices et des fruits secs.",
+      "visualCue": {
+        "primaryTarget": "L'oignon est complètement translucide et légèrement doré aux bords, volume réduit d'environ la moitié. L'ail est d'or pâle et parfumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore blanc et opaque avec une texture croquante. L'ail a à peine chaud. L'arôme est vif et cru.",
+            "action": "Réduire légèrement la chaleur et poursuivre la cuisson. Il faut faire preuve de patience pour transpirer les oignons, en ajoutant une petite pincée de sel, cela permettra d'éliminer l'humidité et d'accélérer le processus."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon est translucide, jammy et légèrement doré aux bords, complètement effondré de son volume brut. L'ail est d'or pâle et l'arôme est doux, caramélisé et chaud.",
+            "action": "Ajouter le porc moulu et commencer à brunir."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon a fortement bruni ou a commencé à caraméliser. L'ail est brun foncé et peut sentir amer.",
+            "action": "Ajouter une touche d'eau dans la poêle pour arrêter le brunissement et déglacer le fond. Continuer — la saveur légèrement plus caramélisée peut fonctionner dans la complexité du picadillo."
+          }
+        ]
+      },
+      "feelCue": "Un oignon bien transpiré devrait avoir l'impression qu'il s'est dissous dans la graisse — pas de croûte individuelle lorsqu'il est pressé à l'aide d'une cuillère, juste une douceur givrante et jammy. La poêle doit sentir comme une cuisine plutôt qu'un légume cru."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "softened_alliums",
+        "ing_01",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "browned_pork_base",
+      "instructions": "Ajouter le porc moulu dans la poêle, le fractionner immédiatement en très petits morceaux avec une cuillère en bois ou une spatule raide – le but est la meilleure texture de menthe possible. Ajouter la cannelle moulue, les girofles et le poivre noir directement sur le porc pendant qu'il frappe la poêle. Cuire à feu moyen-vif, en remuant et en se brisant continuellement, pendant 8 à 10 minutes jusqu'à ce que le porc soit complètement cuit et qu'il ait développé une certaine couleur et un brunissement plutôt qu'une simple vapeur. Picadillo obtient sa profondeur de brunissement — si la poêle est surpeuplée ou la chaleur trop faible, le porc va vapeur dans sa propre humidité et devient gris et plat. Si la poêle semble bondée, faire cuire le porc en deux lots. La graisse rendue par le porc se combinera avec le saindoux et les épices pour créer une base aromatique. Lorsque le porc est brun et parfumé, réduire le feu à moyen.",
+      "visualCue": {
+        "primaryTarget": "Le porc est finement cassé, bruni dans les taches, pas de rose restant. La graisse dans la poêle est parfumée de cannelle et de girofle. Le mélange sent la viande épicée chaude.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc est gris et vapeur, puisant dans sa propre humidité libérée. Pas de brunissement. La texture est humide et douce. Les épices sentent cru et vif plutôt que intégré.",
+            "action": "Augmentez la chaleur et arrêtez de remuer — laissez l'humidité s'évaporer et le porc commence à frire dans le gras rendu. Mélanger seulement pour éviter de coller une fois la poêle sèche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le porc est doré-brun dans de nombreux endroits, complètement cassé en fines miettes, pas de rose visible. La casserole est sèche ou légèrement brillante à partir de graisse. L'arôme est de viande épicée, brune — cannelle chaude et girofle tissés dans l'odeur salée de porc.",
+            "action": "Ajouter les tomates et faire cuire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le porc est devenu très sombre, sec et croustillant dans les endroits, presque de la texture. Certains morceaux peuvent être brûlés.",
+            "action": "Ajouter une éclaboussure d'eau dans la poêle et remuer — l'humidité soulèvera le fond et réhydratera les morceaux les plus secs. Réduire le feu avant d'ajouter les tomates."
+          }
+        ]
+      },
+      "feelCue": "Le porc moulu bien brunis sonne différent du porc à la vapeur : au lieu d'un étourdissement humide et éclaboussant, il y a un bruit plus calme, plus sec, crépitant que l'eau cuit et la graisse prend le dessus. Cette transition en son est le signal pour ajouter les tomates."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "browned_pork_base",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_13",
+        "ing_14",
+        "ing_15"
+      ],
+      "outputState": "finished_picadillo_filling",
+      "instructions": "Ajouter les tomates en dés au porc et mélanger. Cuire à feu moyen pendant 5 minutes jusqu'à ce que les tomates aient ramolli et abandonné leur liquide. Ajouter les abricots secs en dés, les raisins secs et les amandes hachées, en remuant pour les distribuer uniformément dans le mélange de viande. Ajouter le dés de pêche fraîche ou de poire. Assaisonner de sel et de vinaigre de sherry, en remuant bien. Réduire le feu à moyen-doux et laisser mijoter, en remuant occasionnellement, pendant 15 à 20 minutes jusqu'à ce que la majeure partie du liquide tomate s'évapore et que le mélange soit relativement sec — il doit être suffisamment sec pour tenir sa forme lorsqu'il est farci dans un piment, pas assez humide pour s'échapper pendant le placage. Les fruits séchés auront plumé et deviendront confitureux, les fruits frais auront ramolli et presque dissous dans la viande, et les amandes seront à peine tendres avec un léger croûte. Retirer du feu et plier dans le persil frais. Goûtez et ajustez : le picadillo doit être doux, salé, épicé et subtilement tarte à la fois – assez complexe pour être intéressant à lui seul et assez dramatique pour tenir sa propre contre la sauce à la crème de noix et le chile poblano.",
+      "visualCue": {
+        "primaryTarget": "Mélange de viande relativement sec, finement texturé avec des morceaux visibles de raisins dorés et d'abricot et des morceaux d'amande. Elle tient sa forme lorsqu'elle est écorcée — ne pleure pas de liquide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est encore humide et soupeux, avec un liquide de tomate visible dans la poêle. Les fruits séchés n'ont pas encore plumé et les saveurs se séparent — le porc ici, les fruits sucrés là.",
+            "action": "Continuer à mijoter à découvert, en remuant fréquemment, jusqu'à ce que le liquide s'est évaporé et que le mélange se rassemble comme une masse cohésive. Ne couvrez pas — vous avez besoin d'évaporation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le mélange conserve sa forme lorsqu'il est pressé avec une cuillère et ne libère pas de liquide lorsqu'il est déplacé d'un côté de la poêle. Les saveurs sont unifiées: salées, douces, épicées au chaud et légèrement acidulées. Les fruits séchés sont confitureux et plumés. Les amandes ont encore une légère croûte.",
+            "action": "Refroidir complètement avant de se fourrer dans des chiles poblano. Le picadillo peut être fait 24 heures à l'avance et réfrigéré — il s'améliore avec le temps."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est très sec et raide, avec des fruits secs caramélisés et collants. Le porc est sec et friable. Il sera difficile de se farcir en chiles et aura un goût lourd.",
+            "action": "Ajouter 2 cuillères à soupe d'eau ou de bouillon, remuer à feu doux et laisser le mélange réhydrater légèrement. La texture s'assouplira et deviendra plus cohésive."
+          }
+        ]
+      },
+      "feelCue": "Le picadillo fini a une odeur complexe et en couches qui est contrairement à presque tout autre dans la cuisine mexicaine : l'épice chaude de cannelle et de girofle, la douceur des fruits secs, la profondeur savoureuse du porc brun, et la fraîcheur verte du persil rivalisant pour votre attention simultanément. Goûtez une cuillerée : la première impression est douce, puis salée, puis épicée chaude sur la finale. Cette séquence — douce, salée, épicée — est ce que vous visez."
+    }
+  ]
 };

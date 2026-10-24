@@ -1,104 +1,236 @@
 export default {
-  repoId: "master_vietnamese_banh_mi_pork_001",
-  parentRepoId: null,
-  slug: "banh-mi-pork",
-  author: "ForkRecipe Kitchen",
-
-  title: "Bánh Mì Caramelized Pork",
-  description: "Thin-sliced pork belly lacquered in fish-sauce caramel until the edges blacken and crisp, perfuming the kitchen with burnt sugar and soy — the kind of filling that makes a humble baguette taste like a destination.",
-  cuisine: "Vietnamese",
-  culture: "Saigon",
-  category: "proteins",
-
-  tags: ["vietnamese", "pork", "sandwich", "caramel", "banh-mi"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-
-  stars: 1842,
-  forks: 203,
-  contributors: 18,
-  license: "CC-BY-SA",
-  createdAt: "2024-03-15",
-  updatedAt: "2025-11-02",
-
-  flavorRadar: { sweet: 3, salty: 4, sour: 2, bitter: 0, umami: 4, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Pork belly or pork shoulder, thinly sliced (5mm)", ratioValue: 100, defaultUnit: "parts", substitutions: ["chicken thigh", "tofu"] },
-    { ingId: "ing_02", role: "Sweetener", name: "Granulated sugar (for caramel)",                    ratioValue: 8,   defaultUnit: "parts", substitutions: ["palm sugar", "coconut sugar"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fish sauce (Phu Quoc or Tiparos)",                  ratioValue: 10,  defaultUnit: "parts", substitutions: ["soy sauce + pinch MSG"] },
-    { ingId: "ing_04", role: "Allium",    name: "Shallots, thinly sliced",                           ratioValue: 15,  defaultUnit: "parts", substitutions: ["yellow onion"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Lemongrass, bruised and minced (inner stalk only)", ratioValue: 6,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Black pepper, coarsely cracked",                    ratioValue: 1,   defaultUnit: "parts", substitutions: ["white pepper"] },
-    { ingId: "ing_07", role: "Fat",       name: "Neutral oil (vegetable or sunflower)",               ratioValue: 5,   defaultUnit: "parts", substitutions: ["lard"] },
+  "repoId": "master_vietnamese_banh_mi_pork_001",
+  "parentRepoId": null,
+  "slug": "banh-mi-pork",
+  "author": "ForkRecipe Kitchen",
+  "title": "Bánh Mì Porc caramélisé",
+  "description": "Le ventre fin de porc laqué dans du caramel au poisson-sauce jusqu'à ce que les bords noircissent et croustillants, perfumant la cuisine avec du sucre brûlé et du soja — le genre de remplissage qui rend une baguette humble goût comme une destination.",
+  "cuisine": "Vietnamiens",
+  "culture": "Saigon",
+  "category": "proteins",
+  "tags": [
+    "vietnamese",
+    "porc",
+    "sandwich",
+    "Caramel",
+    "BANH-MI"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 1842,
+  "forks": 203,
+  "contributors": 18,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-03-15",
+  "updatedAt": "2025-11-02",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Marinate",
-      inputs: ["ing_01", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "marinated_pork",
-      instructions: "Combine sliced pork with fish sauce, shallots, lemongrass, and black pepper. Toss to coat every surface thoroughly. Marinate at room temperature for 30 minutes, or refrigerate up to 4 hours. The fish sauce begins drawing moisture out of the meat, concentrating the brine.",
-      visualCue: {
-        primaryTarget: "Pork slices are evenly coated in a glossy amber marinade; shallot and lemongrass cling to each piece.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade pools at the bottom of the bowl; pork surfaces still look dry and raw.", action: "Toss again and let sit another 10 minutes." },
-          { state: "Perfect",   description: "Each slice is uniformly coated and slightly firmed from the salt draw. The liquid has thickened around the edges.", action: "Proceed to the caramel step." },
-          { state: "Overdone",  description: "Pork has been sitting in fish sauce for over 6 hours; the protein is beginning to denature and will be mushy when cooked.", action: "Cook immediately — texture will be slightly softer but flavor is intact." },
-        ],
-      },
-      feelCue: "The pork should feel slightly tacky when you pick up a slice — the fish sauce creates a light brine cure on the surface that will help the caramel adhere.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Porc ventre ou épaule de porc, tranché finement (5mm)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cuisse de poulet",
+        "tofu"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Cook caramel",
-      inputs: ["ing_02", "ing_07"],
-      outputState: "amber_caramel",
-      instructions: "In a wide heavy skillet or wok over medium heat, add oil then sugar in an even layer. Do not stir — let it melt and color. When the edges turn amber, gently swirl the pan. Pull from heat at a deep amber that smells like butterscotch, not burnt coffee. Work fast; caramel moves through its stages in seconds.",
-      visualCue: {
-        primaryTarget: "Liquid sugar is a deep amber-mahogany with no raw white sugar remaining; fragrance is rich butterscotch with a slight smoke.",
-        spectrum: [
-          { state: "Underdone", description: "Sugar is pale gold and still smells sweet; it will produce an insipid, overly sweet coating on the pork.", action: "Continue cooking, swirling the pan gently — another 30-60 seconds." },
-          { state: "Perfect",   description: "Deep amber, just past the color of aged whisky. The smell shifts from candy to butterscotch with a faint bitter edge. Thin wisps of smoke may appear.", action: "Immediately add the pork." },
-          { state: "Overdone",  description: "Near-black with acrid, harsh smoke. The smell is burnt and will make the dish bitter.", action: "Discard and start over. Burnt caramel cannot be saved." },
-        ],
-      },
-      feelCue: "The moment the caramel smells like it could become bitter, it is perfect — that tension between sweet and smoke is the whole point of Vietnamese caramel.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre granulé (pour caramel)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre de palme",
+        "Sucre de coco"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sear",
-      inputs: ["marinated_pork", "amber_caramel"],
-      outputState: "caramelized_pork",
-      instructions: "Add marinated pork to the caramel in a single layer, working quickly. The mixture will spit and bubble violently — step back. Do not stir for the first 90 seconds so a crust can form. Then toss and cook over medium-high for 4-5 minutes total, until edges char and sauce clings like lacquer.",
-      visualCue: {
-        primaryTarget: "Pork edges are charred at the very tips, bodies are deep mahogany, sauce has reduced to a thick glaze coating every surface.",
-        spectrum: [
-          { state: "Underdone", description: "Pork is still pale tan, sauce is loose and watery — the sugars haven't caramelized onto the meat.", action: "Increase heat to high and cook uncovered 2 more minutes, stirring less frequently." },
-          { state: "Perfect",   description: "Edges black-tipped, flesh dark mahogany. Sauce is nearly dry, clinging to each slice in a thick, shiny lacquer. Smoke wisps from the pan.", action: "Remove from heat immediately." },
-          { state: "Overdone",  description: "Everything is charcoal-black and the pan has a thick burnt layer. The pork is dry and bitter throughout.", action: "Salvage the interior pieces; scrape off heavily burnt bits. Add a splash of water and scrape the pan before serving." },
-        ],
-      },
-      feelCue: "The sound should shift from violent bubbling to a tight, rapid crackling — that crackle means the water has cooked off and the sugars are frying directly on the pork.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "sauce de poisson (Phu Quoc ou Tiparos)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja + pincer MSG"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Deglaze and rest",
-      inputs: ["caramelized_pork"],
-      outputState: "finished_banh_mi_pork",
-      instructions: "Remove from heat. Add 2 tablespoons of water to deglaze any stuck caramel from the pan and toss the pork to coat in the loose sauce. Let rest in the pan for 2 minutes — the residual heat melds the glaze and the resting reduces the risk of burning your mouth on the caramelized edges.",
-      visualCue: {
-        primaryTarget: "Each pork slice is coated in a glossy, tight lacquer; the pan has a thin layer of syrupy juices, not dry char.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still very watery after deglazing — the caramel hasn't properly adhered to the meat.", action: "Return to heat for 1 minute, stirring constantly until sauce tightens again." },
-          { state: "Perfect",   description: "Pork is lacquered, glossy, and smells of caramel and fish sauce. The pan sauce is thick enough to coat a spoon.", action: "Pile onto sliced baguette with pickled daikon, cucumber, cilantro, and chilies." },
-          { state: "Overdone",  description: "Deglaze added too much water; pork is swimming in diluted sauce and the lacquer has loosened.", action: "Return to high heat for 2-3 minutes uncovered to re-reduce the sauce." },
-        ],
-      },
-      feelCue: "Pick up a piece — it should feel heavy and dense with glaze, the edges slightly rigid from the caramel crust while the center remains yielding.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalotes, tranchées finement",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Lémon, meurtris et hachés (pâte interne seulement)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poivre noir, grossièrement craqué",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre blanc"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile neutre (légume ou tournesol)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Saindoux"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "marinated_pork",
+      "instructions": "Mélanger le porc tranché avec la sauce au poisson, les échalotes, la citronnelle et le poivre noir. Jeter pour enrober toutes les surfaces. Faire mariner à température ambiante pendant 30 minutes ou réfrigérer jusqu'à 4 heures. La sauce de poisson commence à extraire l'humidité de la viande, en concentrant la saumure.",
+      "visualCue": {
+        "primaryTarget": "Les tranches de porc sont uniformément enrobées d'une marinade ambrée brillante; l'échalote et la citronnelle s'accrochent à chaque morceau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Piscines de marinade au fond du bol; les surfaces de porc semblent encore sèches et crues.",
+            "action": "Jetez encore et laissez reposer encore 10 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque tranche est uniformément enduite et légèrement raffermie à partir de la prise de sel. Le liquide s'est épaissi autour des bords.",
+            "action": "Passez à l'étape caramel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le porc est assis dans la sauce de poisson depuis plus de 6 heures; la protéine commence à dénaturation et sera musquée lorsqu'elle sera cuite.",
+            "action": "Cuire immédiatement — la texture sera légèrement plus douce mais la saveur est intacte."
+          }
+        ]
+      },
+      "feelCue": "Le porc devrait se sentir légèrement collant quand vous ramassez une tranche — la sauce de poisson crée un léger remède pour saumure à la surface qui aidera le caramel à adhérer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Faire cuire le caramel",
+      "inputs": [
+        "ing_02",
+        "ing_07"
+      ],
+      "outputState": "amber_caramel",
+      "instructions": "Dans une grande poêle lourde ou wok à feu moyen, ajouter l'huile puis le sucre dans une couche uniforme. Ne remuez pas — laissez-le fondre et colorer. Lorsque les bords deviennent ambres, tourner doucement la poêle. Tirez de la chaleur à un ambre profond qui sent le beurre de coco, pas le café brûlé. Travaillez vite; caramel passe par ses étapes en quelques secondes.",
+      "visualCue": {
+        "primaryTarget": "Le sucre liquide est un ambre-mahogany profond sans sucre blanc cru restant; le parfum est riche en beurrescotch avec une légère fumée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sucre est d'or pâle et sent encore doux; il produira un revêtement insipide et trop doux sur le porc.",
+            "action": "Continuer la cuisson en faisant tourner doucement la poêle — 30 à 60 secondes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profonde, juste après la couleur du whisky vieilli. L'odeur passe de bonbons à beurrescotch avec un léger bord amer. Une fumée mince peut apparaître.",
+            "action": "Ajouter immédiatement le porc."
+          },
+          {
+            "state": "Overdone",
+            "description": "Presque noir avec de la fumée acride et dure. L'odeur est brûlée et rendra le plat amer.",
+            "action": "Jetez et recommencez. Le caramel brûlé ne peut pas être sauvé."
+          }
+        ]
+      },
+      "feelCue": "Le moment où le caramel sent comme il pourrait devenir amer, il est parfait — cette tension entre le sucre et la fumée est tout le point du caramel vietnamien."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sear",
+      "inputs": [
+        "marinated_pork",
+        "amber_caramel"
+      ],
+      "outputState": "caramelized_pork",
+      "instructions": "Ajouter le porc mariné au caramel en une seule couche, en travaillant rapidement. Le mélange crachera et bullera violemment — reculez. Ne pas remuer pendant les 90 premières secondes afin qu'une croûte puisse se former. Puis jetez et faites cuire à feu moyen-élevé pendant 4-5 minutes au total, jusqu'à ce que les bords de l'omble et de la sauce s'accrochent comme de la laque.",
+      "visualCue": {
+        "primaryTarget": "Les bords de porc sont carbonisés aux extrémités, les corps sont en acajou profond, la sauce a réduit à un épais revêtement de glaçure chaque surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc est encore bronzé, la sauce est molle et aqueuse — les sucres n'ont pas caramélisé sur la viande.",
+            "action": "Augmenter la chaleur à haute et cuire à découvert 2 minutes de plus, en remuant moins fréquemment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bords noir, chair acajou foncé. La sauce est presque sèche, collée à chaque tranche dans une laque épaisse et brillante. Fumeurs de la poêle.",
+            "action": "Retirer immédiatement du feu."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tout est noir de charbon et la poêle a une épaisse couche brûlée. Le porc est sec et amer partout.",
+            "action": "Sauver les pièces intérieures; gratter les morceaux fortement brûlés. Ajouter un jet d'eau et racler la poêle avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Le bruit devrait passer d'un bouillonnement violent à un craquage serré et rapide — ce craquage signifie que l'eau a cuit et que les sucres sont frits directement sur le porc."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Déglacer et se reposer",
+      "inputs": [
+        "caramelized_pork"
+      ],
+      "outputState": "finished_banh_mi_pork",
+      "instructions": "Retirer du feu. Ajouter 2 cuillerées à soupe d'eau pour déglacer tout caramel collé de la casserole et jeter le porc à enrober dans la sauce molle. Laisser reposer dans la poêle pendant 2 minutes — la chaleur résiduelle mélange la glaçure et le repos réduit le risque de brûler votre bouche sur les bords caramélisés.",
+      "visualCue": {
+        "primaryTarget": "Chaque tranche de porc est enduite d'une laque brillante et serrée; la poêle a une fine couche de jus sirupeux, pas d'omble sec.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore très aqueuse après le déglacement — le caramel n'a pas respecté correctement la viande.",
+            "action": "Retourner au feu pendant 1 minute, en remuant constamment jusqu'à ce que la sauce se resserre à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le porc est laqué, brillant et sent le caramel et la sauce de poisson. La sauce est assez épaisse pour enrober une cuillère.",
+            "action": "Pile sur la baguette tranchée avec daikon mariné, concombre, coriandre et chilis."
+          },
+          {
+            "state": "Overdone",
+            "description": "Déglacer ajouté trop d'eau; le porc nage dans la sauce diluée et la laque s'est desserrée.",
+            "action": "Retourner à feu vif pendant 2-3 minutes à découvert pour re-réduire la sauce."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une pièce — elle doit se sentir lourde et dense avec de la glaçure, les bords légèrement rigides de la croûte de caramel tandis que le centre reste productif."
+    }
+  ]
 };

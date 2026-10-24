@@ -1,115 +1,271 @@
 export default {
-  repoId: "master_american_hamhockbroth_001",
-  parentRepoId: null,
-  slug: "ham-hock-broth",
-  author: "ForkRecipe Kitchen",
-  title: "Smoked Ham Hock Broth",
-  description: "Deeply smoky, pork-rich pot liquor simmered low and slow from smoked ham hocks with onion, celery, and a splash of cider vinegar — the essential braising liquid for Southern collards, white beans, and winter greens.",
-  cuisine: "American",
-  culture: "Southern",
-  category: "stocks",
-  tags: ["ham", "pork", "broth", "southern", "smoked", "pot-liquor", "collards", "american"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "3 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 4, sour: 0, bitter: 0, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Smoked ham hock (1–2 whole)",          ratioValue: 900,  defaultUnit: "g",   substitutions: ["smoked pork neck", "smoked turkey legs"] },
-    { ingId: "ing_02", role: "Allium",    name: "White onion, halved through the root",  ratioValue: 1,    defaultUnit: "large", substitutions: ["yellow onion"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Celery stalks with leaves",             ratioValue: 3,    defaultUnit: "stalks", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves, unpeeled and smashed",   ratioValue: 4,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_05", role: "Herb",      name: "Bay leaves",                            ratioValue: 2,    defaultUnit: "leaves", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Black peppercorns",                     ratioValue: 8,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Acid",      name: "Apple cider vinegar",                   ratioValue: 15,   defaultUnit: "ml",  substitutions: ["white wine vinegar"] },
-    { ingId: "ing_08", role: "Hydration", name: "Cold water",                            ratioValue: 3,    defaultUnit: "L",   substitutions: [] },
+  "repoId": "master_american_hamhockbroth_001",
+  "parentRepoId": null,
+  "slug": "ham-hock-broth",
+  "author": "ForkRecipe Kitchen",
+  "title": "Fumée Ham Hock Broth",
+  "description": "Une liqueur de pot très fumée, riche en porc, mijotée avec de l'oignon, du céleri et une éclaboussure de vinaigre de cidre — le liquide essentiel pour les clavards du Sud, les haricots blancs et les verts d'hiver.",
+  "cuisine": "Américain",
+  "culture": "Sud",
+  "category": "stocks",
+  "tags": [
+    "jambon",
+    "porc",
+    "bouillon",
+    "sud",
+    "fumé",
+    "pot-liquor",
+    "Claviers",
+    "américains"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "3 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Rinse",
-      inputs: ["ing_01"],
-      outputState: "rinsed_hock",
-      instructions: "Rinse the ham hock under cold running water, rubbing off any surface brine or packaging residue. Inspect the skin — if it is very dark or has dry patches, scrape lightly with the back of a knife. There is no need to soak smoked hocks unless they are extremely salty (taste a scraping of exposed meat — if nearly inedible, soak in cold water for 1 hour before proceeding). Pat dry.",
-      visualCue: {
-        primaryTarget: "A clean, mahogany-brown smoked hock with no white bloom or brine crust. The skin should look intact.",
-        spectrum: [
-          { state: "Underdone", description: "White salt crystal crust still present on the surface.", action: "Rinse more thoroughly under warm water and rub with your hands until the surface is clean." },
-          { state: "Perfect",   description: "Clean, dry surface. Deep mahogany-brown skin. Smells of hickory smoke and cured pork.", action: "Place in the pot and add all remaining ingredients." },
-          { state: "Overdone",  description: "Skin has been scrubbed away or torn — no real consequence.", action: "Proceed. The collagen below the skin will still enrich the broth." },
-        ],
-      },
-      feelCue: "The skin of a good smoked hock feels slightly tacky and dry — never slimy. Any slipperiness is a spoilage warning; discard and use a fresh hock.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Jambon fumé (1–2 entier)",
+      "ratioValue": 900,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cou de porc fumé",
+        "cuisses de dinde fumée"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Boil",
-      inputs: ["rinsed_hock", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "boiling_broth",
-      instructions: "Place the hock in a large, heavy pot. Add the onion halves (cut-side down for a touch of colour), celery, garlic, bay leaves, peppercorns, and apple cider vinegar. Cover with 3 litres of cold water. Bring to a vigorous boil over high heat. The vinegar serves two purposes: it gently draws calcium from the bone for body, and it brightens the finished broth without being detectible as acidity.",
-      visualCue: {
-        primaryTarget: "A rolling boil with grey-brown foam gathering at the surface edges. The liquid is beginning to take on a pale golden colour.",
-        spectrum: [
-          { state: "Underdone", description: "Water is still cold or barely steaming. Nothing is happening.", action: "Keep heat on high. A cold start is correct — it draws impurities out of the bones slowly." },
-          { state: "Perfect",   description: "A full, active boil. Grey-brown foam forming at the edges. Liquid smells of smoke, pork, and sweet celery.", action: "Skim the foam now before reducing the heat." },
-          { state: "Overdone",  description: "Boiled hard for 20+ minutes without skimming — foam has re-incorporated.", action: "Reduce to a simmer and proceed. The broth will be slightly less clear but not impaired in flavour." },
-        ],
-      },
-      feelCue: "The heat when you lean over the pot should be immediate and significant — you should feel the steam well before your face is close. That's the right boil.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon blanc, coupé en deux dans la racine",
+      "ratioValue": 1,
+      "defaultUnit": "large",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Skim",
-      inputs: ["boiling_broth"],
-      outputState: "skimmed_broth",
-      instructions: "With the broth at a full boil, use a large ladle or spoon to skim away the grey-brown foam that has collected around the edges. Work quickly and methodically, rinsing the ladle between passes. This foam is coagulated blood protein — it is not harmful but adds bitterness and murkiness if left. Once the foam is gone (usually 3–4 skims), the broth is ready to drop to a long, low simmer.",
-      visualCue: {
-        primaryTarget: "A clear surface with no grey or brown foam. The liquid has a warm golden hue and smells clean and smoky.",
-        spectrum: [
-          { state: "Underdone", description: "Grey foam still present around the edges and clinging to the pot walls.", action: "Keep skimming — do not stop until the surface runs clear." },
-          { state: "Perfect",   description: "Surface is clean, warm-golden liquid, vigorously bubbling. No foam in sight.", action: "Reduce heat immediately to the barest simmer." },
-          { state: "Overdone",  description: "Over-zealous skimming removed fat and golden liquid along with the foam.", action: "Proceed. The broth will be slightly leaner but the smoke and pork flavour are still present in the hock." },
-        ],
-      },
-      feelCue: "The foam on the ladle is light and airy with a distinctly metallic smell — nothing like the clean pork fat that will render out later, which smells sweet and smoky.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri avec feuilles",
+      "ratioValue": 3,
+      "defaultUnit": "stalks",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["skimmed_broth"],
-      outputState: "braised_hock",
-      instructions: "Reduce heat to the lowest setting that maintains a bare simmer — just a few lazy bubbles every second, barely disturbing the surface. Cover with the lid ajar. Cook for 2.5 hours. Check every 45 minutes: skim any fat that accumulates (or leave it for a richer broth), and make sure the simmer has not dropped to a full stop or risen to a boil. The hock is done when the skin is completely tender and the meat pulls away from the bone with a gentle tug.",
-      visualCue: {
-        primaryTarget: "A rich, golden-amber broth at a bare simmer. The hock skin has turned from firm to silky and yielding. The celery has almost dissolved.",
-        spectrum: [
-          { state: "Underdone", description: "The skin is still tight on the hock. Meat resists when you try to pull it. Broth tastes thin with smoke up front and no body.", action: "Continue simmering — check in 30-minute increments. Underdone hock broth is just hock broth that needs more time." },
-          { state: "Perfect",   description: "Skin is soft, almost gelatinous to the touch. Meat pulls apart with light pressure. Broth is deep golden, slightly syrupy, intensely smoky and savoury.", action: "Remove hock from pot. Strain broth and pick the meat." },
-          { state: "Overdone",  description: "Hock meat has fallen completely off the bone into the broth. Liquid has reduced below 1.5 litres.", action: "Strain carefully, picking meat from the liquid. Dilute with hot water if too salty. The flavour will be intense — perfect as a braising liquid." },
-        ],
-      },
-      feelCue: "Gently press the hock skin with the back of a spoon after 2 hours — it should indent easily and slowly spring back, like pressing a ripe plum. Hard resistance means more time; no resistance at all means the broth is very done.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Girofles d'ail, non pelées et broyées",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Strain",
-      inputs: ["braised_hock"],
-      outputState: "ham_hock_broth",
-      instructions: "Lift out the hock and set aside on a board to cool slightly. Strain the broth through a fine-mesh strainer into a clean pot or storage container. Taste and adjust salt only if using immediately — if using for collards or beans, season at the end of cooking, as the dish will concentrate the salt further. When the hock is cool enough to handle, pull the meat from the bone and skin, discarding gristle. Reserve the meat for the dish you are cooking, stirring it back in as a garnish.",
-      visualCue: {
-        primaryTarget: "A clear, deep amber-gold broth, lightly coated with a thin ring of golden fat at the edges. Rich with smoke and pork.",
-        spectrum: [
-          { state: "Underdone", description: "Broth looks thin and pale gold. Fat layer is sparse. Tastes watery with smoke but no body.", action: "Return to the pot and reduce by 25% over medium heat. The collagen and gelatin need more time to release." },
-          { state: "Perfect",   description: "Deep amber, with a slight oil slick of golden pork fat at the surface. When chilled, sets into a soft jelly. A spoonful tastes of smoke, pork, and gentle sweetness.", action: "Use in collards, beans, or winter greens. The meat picked from the hock is essential — stir it back in." },
-          { state: "Overdone",  description: "Broth is very dark, very salty, almost like liquid jerky.", action: "Dilute 1:1 with water or unsalted vegetable stock. Taste again before using." },
-        ],
-      },
-      feelCue: "Rub a drop of warm broth between your fingers — it should feel faintly sticky and coating, like the lightest grip of glue. That body is the sign of enough collagen from the hock's trotters.",
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Feuilles de baies",
+      "ratioValue": 2,
+      "defaultUnit": "leaves",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Maïs de poivre noir",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Hydration",
+      "name": "Eau froide",
+      "ratioValue": 3,
+      "defaultUnit": "L",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rincer",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "rinsed_hock",
+      "instructions": "Rincer le jarret sous l'eau froide, frotter toute saumure de surface ou tout résidu d'emballage. Inspectez la peau — si elle est très sombre ou a des taches sèches, grattez légèrement avec le dos d'un couteau. Il n'est pas nécessaire de tremper les jarrets fumés à moins qu'ils ne soient extrêmement salés (dégustez une raclure de viande exposée — si elle est presque non comestible, trempez dans de l'eau froide pendant 1 heure avant de procéder). Pat sèche.",
+      "visualCue": {
+        "primaryTarget": "Un jarret fumé propre, brun acajou, sans fleur blanche ni croûte saumure. La peau doit être intacte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte cristalline blanche est toujours présente à la surface.",
+            "action": "Rincer plus soigneusement sous l'eau chaude et frotter de vos mains jusqu'à ce que la surface soit propre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface propre et sèche. Peau acajou-brun profonde. Sens de fumée hickory et de porc guéri.",
+            "action": "Déposer dans la casserole et ajouter tous les autres ingrédients."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau a été nettoyée ou déchirée — aucune conséquence réelle.",
+            "action": "Continuez. Le collagène sous la peau enrichira encore le bouillon."
+          }
+        ]
+      },
+      "feelCue": "La peau d'un bon jarret fumé est légèrement collante et sèche, jamais visqueuse. Toute glissante est un avertissement de détérioration; jetez et utilisez un jarret frais."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bouillir",
+      "inputs": [
+        "rinsed_hock",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "boiling_broth",
+      "instructions": "Placez le jarret dans un grand pot lourd. Ajouter les moitiés d'oignon (côté coupé pour une touche de couleur), le céleri, l'ail, les feuilles de laurier, les grains de poivre et le vinaigre de cidre de pomme. Couvrir de 3 litres d'eau froide. Porter à ébullition vigoureuse à feu vif. Le vinaigre sert à deux fins : il tire doucement du calcium de l'os pour le corps, et il éclaire le bouillon fini sans être détectable comme acidité.",
+      "visualCue": {
+        "primaryTarget": "Un ébullition en laminage avec de la mousse brun-gris ramassant aux bords de surface. Le liquide commence à prendre une couleur dorée pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est encore froide ou à peine bouillante. Rien ne se passe.",
+            "action": "Gardez la chaleur élevée. Un début de froid est correct — il tire les impuretés des os lentement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une ébullition pleine et active. Mousse grise-brun formant aux bords. Des odeurs liquides de fumée, de porc et de céleri sucré.",
+            "action": "Essuyez la mousse maintenant avant de réduire la chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dur bouilli pendant plus de 20 minutes sans écumage — la mousse a été réintégrée.",
+            "action": "Réduire en mijotant et procéder. Le bouillon sera légèrement moins clair, mais sans altération de la saveur."
+          }
+        ]
+      },
+      "feelCue": "La chaleur lorsque vous vous penchez sur le pot doit être immédiate et significative — vous devriez sentir la vapeur bien avant que votre visage soit proche. C'est le bon ébullition."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Abat-jour",
+      "inputs": [
+        "boiling_broth"
+      ],
+      "outputState": "skimmed_broth",
+      "instructions": "Avec le bouillon à ébullition complète, utilisez une grande louche ou une cuillère pour éloigner la mousse brun-gris qui a recueilli autour des bords. Travailler rapidement et méthodiquement, rincer la louche entre les passages. Cette mousse est une protéine sanguine coagulée — elle n'est pas nocive, mais ajoute de l'amertume et de l'amertume si elle reste. Une fois la mousse disparue (habituellement de 3 à 4 écréms), le bouillon est prêt à laisser mijoter longtemps.",
+      "visualCue": {
+        "primaryTarget": "Une surface claire sans mousse grise ou brune. Le liquide a une teinte dorée chaude et sent propre et fumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mousse grise encore présente autour des bords et collant aux murs de pot.",
+            "action": "Ne vous arrêtez pas jusqu'à ce que la surface soit dégagée."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est propre, liquide d'or chaud, bouillonnant vigoureusement. Pas de mousse en vue.",
+            "action": "Réduire immédiatement le feu jusqu'à ce qu'il mijote."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un écrémage trop zélé a enlevé la graisse et le liquide doré avec la mousse.",
+            "action": "Continuez. Le bouillon sera légèrement plus maigre, mais la fumée et la saveur de porc sont toujours présentes dans le jarret."
+          }
+        ]
+      },
+      "feelCue": "La mousse sur la louche est légère et aérée avec une odeur distinctement métallique — rien de tel que la graisse propre de porc qui va rendre plus tard, qui sent doux et fumé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "skimmed_broth"
+      ],
+      "outputState": "braised_hock",
+      "instructions": "Réduisez la chaleur au réglage le plus bas qui maintient une mijotée nue — juste quelques bulles paresseuses chaque seconde, dérangeant à peine la surface. Couvrir avec le couvercle ajar. Cuire pendant 2,5 heures. Vérifiez toutes les 45 minutes : éjaculez toute matière grasse qui s'accumule (ou laissez-la pour un bouillon plus riche) et assurez-vous que la mijoter n'a pas complètement arrêté ou est montée à ébullition. Le jarret est fait lorsque la peau est complètement tendre et que la viande s'éloigne de l'os avec un remorqueur doux.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon riche en or-ambre à la mijote nue. La peau de jarret est passée de ferme à soyeuse. Le céleri est presque dissous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore serrée sur le jarret. La viande résiste quand vous essayez de la tirer. Broth a un goût mince avec de la fumée à l'avant et aucun corps.",
+            "action": "Continuer à mijoter — vérifier les incréments de 30 minutes. Le bouillon de jarret inférieur est juste le bouillon de jarret qui a besoin de plus de temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est douce, presque gélatineuse au toucher. La viande se sépare avec une légère pression. Le bouillon est d'or profond, légèrement sirupeux, intensément fumé et salé.",
+            "action": "Enlevez le jarret du pot. Mélanger et cueillir la viande."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande hachée est tombée complètement de l'os dans le bouillon. Le liquide a diminué en dessous de 1,5 litre.",
+            "action": "Souchez soigneusement, cueillir de la viande dans le liquide. Diluer à l'eau chaude si trop salée. La saveur sera intense — parfait comme liquide de braisage."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur la peau du jarret avec l'arrière d'une cuillère après 2 heures — il devrait se détacher facilement et lentement en arrière, comme en appuyant sur une prune mûre. La résistance dure signifie plus de temps; aucune résistance ne signifie que le bouillon est très fait."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Poignée",
+      "inputs": [
+        "braised_hock"
+      ],
+      "outputState": "ham_hock_broth",
+      "instructions": "Relever le jarret et réserver sur une planche pour refroidir légèrement. Placer le bouillon dans un pot propre ou un contenant de stockage. Goûtez et ajustez le sel seulement si vous l'utilisez immédiatement — si vous l'utilisez pour les câlins ou les haricots, assaisonnez à la fin de la cuisson, car le plat concentrera le sel plus loin. Lorsque le jarret est assez frais pour être manipulé, tirez la viande de l'os et de la peau, jetant le filet. Réservez la viande pour le plat que vous cuisinez, en la remuant en garniture.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon en or ambré clair et profond, légèrement recouvert d'un mince anneau de graisse dorée aux bords. Riche en fumée et en porc.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth a l'air mince et d'or pâle. La couche grasse est clairsemée. Goûté avec de la fumée mais sans corps.",
+            "action": "Retournez dans le pot et réduisez de 25% à feu moyen. Le collagène et la gélatine ont besoin de plus de temps pour se libérer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profond, avec une légère huile de graisse de porc dorée à la surface. Lorsqu'il est réfrigéré, il se met dans une gelée molle. Un goût de fumée, de porc et de douceur.",
+            "action": "Utiliser dans les cols, haricots ou verts d'hiver. La viande cueillie dans le jarret est essentielle — remuez-la."
+          },
+          {
+            "state": "Overdone",
+            "description": "Broth est très sombre, très salé, presque comme du liquide sec.",
+            "action": "Diluer 1:1 avec de l'eau ou du matériel végétal non salé. Goûtez encore avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte de bouillon chaud entre vos doigts — il devrait se sentir légèrement collant et enduit, comme la plus légère prise de colle. Ce corps est le signe de suffisamment de collagène des trotteurs du jarret."
+    }
+  ]
 };

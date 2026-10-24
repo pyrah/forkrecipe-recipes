@@ -1,121 +1,276 @@
 export default {
-  repoId: "master_german_pretzel_rolls_001",
-  parentRepoId: null,
-  slug: "pretzel-rolls",
-  author: "ForkRecipe Kitchen",
-
-  title: "Pretzel Rolls",
-  description: "German Laugenbrötchen — dense, mahogany-dark rolls submerged in a baked-soda lye bath that turns the outer starch into a crackle-crisp, bitterly savory shell over a chewy, pillowy interior, finished with coarse pretzel salt that glints under kitchen light.",
-  cuisine: "German",
-  culture: "Bavaria",
-  category: "breads",
-
-  tags: ["pretzel", "german", "rolls", "lye", "baking-soda", "savory", "bread"],
-  difficulty: 3,
-  activeTime: "1 hour",
-  totalTime: "3 hours",
-  ratioSystem: "bakers_percentage",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 0, salty: 5, sour: 1, bitter: 2, umami: 2, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Bread flour (12–13% protein)",         ratioValue: 100, defaultUnit: "%", substitutions: ["all-purpose flour (slightly less chew)"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Warm whole milk (38 C)",               ratioValue: 55,  defaultUnit: "%", substitutions: ["water (less tender crumb)"] },
-    { ingId: "ing_03", role: "Leavener",   name: "Instant yeast",                         ratioValue: 1.5, defaultUnit: "%", substitutions: ["active dry yeast (proof first)"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                         ratioValue: 2,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",        name: "Unsalted butter, softened",             ratioValue: 5,   defaultUnit: "%", substitutions: ["lard (more traditional)"] },
-    { ingId: "ing_06", role: "Base",       name: "Baking soda (for the lye bath)",        ratioValue: 12,  defaultUnit: "%", substitutions: ["food-grade lye 3% solution (true Laugengebäck, use with extreme caution)"] },
-    { ingId: "ing_07", role: "Solvent",    name: "Water (for baked-soda bath)",           ratioValue: 500, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",    name: "Coarse pretzel salt (or flaky sea salt)", ratioValue: 1, defaultUnit: "%", substitutions: ["Maldon salt", "coarse kosher salt"] },
+  "repoId": "master_german_pretzel_rolls_001",
+  "parentRepoId": null,
+  "slug": "pretzel-rolls",
+  "author": "ForkRecipe Kitchen",
+  "title": "Rouleaux de bretzel",
+  "description": "Laugenbrötchen allemande — des rouleaux denses, acajou-dark submergés dans un bain de soude cuite qui transforme l'amidon extérieur en un crackle-crisp, coquillage amèrement savore sur un intérieur croustillant, oreiller, fini avec du sel bretzel grossier qui brille sous la lumière de la cuisine.",
+  "cuisine": "Allemand",
+  "culture": "Bavière",
+  "category": "breads",
+  "tags": [
+    "bretzel",
+    "allemand",
+    "rouleaux",
+    "Lys",
+    "Bicarbonate de soude",
+    "savoureux",
+    "pain"
   ],
-
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "1 hour",
+  "totalTime": "3 hours",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 5,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Knead",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "pretzel_dough",
-      instructions: "Combine the flour, yeast, and salt in a large bowl, then add the warm milk. Mix until a rough dough forms, then add the softened butter in pieces. Knead by hand for 10 minutes or in a stand mixer with the dough hook at medium speed for 7 minutes until the dough is smooth, elastic, and only faintly tacky. Pretzel dough is intentionally stiffer than a typical bread dough — the lower hydration is what allows the rolls to hold their shape during the lye bath and develop that distinctive dense, chewy crumb. The dough should pass the windowpane test: stretch a small piece thin and it should be nearly translucent without tearing.",
-      visualCue: {
-        primaryTarget: "A smooth, elastic ball of dough that holds its shape on the counter. Slightly stiffer than sandwich bread dough. Surface is glossy and taut.",
-        spectrum: [
-          { state: "Underdone", description: "Still rough and slightly ragged. Tears when pulled. Doesn't hold a round shape.", action: "Knead for 2–3 more minutes — the gluten needs more development for the rolls to hold their shape in the bath." },
-          { state: "Perfect",   description: "Windowpane test passes. Smooth, elastic, only slightly tacky. Springs back within 2 seconds when poked. Surface looks almost glossy.", action: "Round into a ball and place in an oiled bowl to bulk ferment." },
-          { state: "Overdone",  description: "Very stiff and tight, fighting back when kneaded. Snaps back immediately.", action: "Cover and rest 15 minutes. Over-developed gluten needs time to relax." },
-        ],
-      },
-      feelCue: "Pretzel dough should feel like a firm handshake — not as soft as brioche, not as stiff as pizza dough, but somewhere confidently in between. Pull a piece: it should stretch without effort into a long ribbon before tearing.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de pain (12–13% de protéines)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine tout usage (légèrement moins de mâcher)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Proof",
-      inputs: ["pretzel_dough"],
-      outputState: "risen_pretzel_dough",
-      instructions: "Place the dough in a lightly oiled bowl, cover with plastic wrap, and let it rise at room temperature for 1 to 1.5 hours until 50% larger (not doubled — pretzel dough is kept relatively under-fermented by design). This controlled fermentation keeps the crumb dense and chewy rather than airy. Meanwhile, prepare the baked-soda bath: spread the baking soda on a foil-lined sheet pan and bake at 250 C (480 F) for 1 hour until it turns from white powder to a yellowish crust. Baked soda is significantly more alkaline than regular baking soda and gives a much closer result to a real lye bath.",
-      visualCue: {
-        primaryTarget: "Dough has grown about 50% and feels lighter. Surface is domed and smooth. Not doubled — deliberately under-proofed.",
-        spectrum: [
-          { state: "Underdone", description: "Dough looks and feels identical to when it went in. No growth visible. Firm and dense.", action: "Move to a warmer place and wait. Under-fermented dough produces rolls too dense to enjoy." },
-          { state: "Perfect",   description: "50% larger, feels slightly lighter and airier. A poke leaves a lazy-filling indent.", action: "Divide and shape into rolls while the oven heats and the lye bath is prepared." },
-          { state: "Overdone",  description: "Doubled or more. Smells strongly of yeast. Very soft and gas-filled.", action: "Proceed quickly. Over-fermented pretzel rolls will be softer and more bready — still delicious, but less chewy." },
-        ],
-      },
-      feelCue: "Properly fermented pretzel dough still feels relatively dense and firm compared to a sandwich loaf at the same stage — this is correct. It should feel like a soft stress ball, not a pillow.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Lait entier chaud (38 C)",
+      "ratioValue": 55,
+      "defaultUnit": "%",
+      "substitutions": [
+        "eau (minces miettes tendres)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Shape",
-      inputs: ["risen_pretzel_dough"],
-      outputState: "shaped_rolls",
-      instructions: "Divide the dough into 8 equal pieces (about 80–100 g each for a typical batch from 500 g flour). To shape a round roll: flatten each piece into a disc, fold the edges toward the center all around, then flip it over and roll it under your cupped palm on the counter with firm downward pressure, moving in tight circles. The goal is a taut, smooth ball with a sealed seam on the bottom. Alternatively, score a deep cross on top with a sharp knife or lame after shaping — this gives the classic Laugenbrötchen look. Place shaped rolls seam-side down on a parchment-lined sheet and refrigerate uncovered for 30 minutes — cold rolls hold their shape better during the lye bath.",
-      visualCue: {
-        primaryTarget: "Tight, smooth spheres with a sealed seam on the bottom. No tears or loose dough. Refrigerated rolls are firm and hold their shape when picked up.",
-        spectrum: [
-          { state: "Underdone", description: "Loose, floppy balls with visible seams and tears on the surface. They sag and flatten on the sheet.", action: "Reshape each one — flatten, fold, and re-roll with more downward pressure to build tension." },
-          { state: "Perfect",   description: "Firm, taut balls that hold their round shape when set on the tray. Seam is invisible or sealed tightly.", action: "Refrigerate 30 minutes before the lye bath." },
-          { state: "Overdone",  description: "Shaped rolls are warm and already proofing fast — surface looks puffy and soft.", action: "Get them into the refrigerator immediately to firm up before the lye bath." },
-        ],
-      },
-      feelCue: "A well-shaped pretzel roll should feel solid and taut when squeezed lightly — not springy and puffy, not hard, but like a firmly packed snowball that holds its form.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "levure sèche active (proof first)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Boil in lye bath",
-      inputs: ["shaped_rolls", "ing_06", "ing_07"],
-      outputState: "lye_bathed_rolls",
-      instructions: "Dissolve the baked baking soda in 1 liter of water in a wide, non-reactive pot (stainless steel or enameled — no bare aluminum). Bring to a gentle simmer. Wearing rubber gloves (baked soda solution is still caustic to skin), lower the cold rolls into the simmering bath one or two at a time. Simmer 20–30 seconds per side, turning once. The surface will turn a slightly tan, rubbery, tight skin. Lift out with a slotted spoon or spider and place on a parchment-lined baking sheet. Scatter coarse salt over the tops immediately while the surface is tacky.",
-      visualCue: {
-        primaryTarget: "Each roll emerges from the bath with a tight, slightly tanned, rubbery-looking skin that catches coarse salt immediately and holds it.",
-        spectrum: [
-          { state: "Underdone", description: "Still looks pale and doughy after 15 seconds in the bath. Surface has not tightened.", action: "Leave in the bath a full 30 seconds per side — the alkaline reaction takes time to gelatinize the exterior starch." },
-          { state: "Perfect",   description: "Slightly tan, taut, rubbery surface — looks like a damp chamois skin. Salt sticks immediately. Will turn deep mahogany brown in the oven.", action: "Salt immediately and load into a 220 C (425 F) oven." },
-          { state: "Overdone",  description: "More than 60 seconds in the bath — surface starts to dissolve and becomes slimy or cracked.", action: "Bake it anyway and score deeply before baking to let steam escape. The flavor will be fine; the crust may be irregular." },
-        ],
-      },
-      feelCue: "Fresh from the lye bath, the surface of each roll feels rubbery and slightly slimy under a gloved finger — that gelatinized outer starch is the direct precursor to the crackle-crisp mahogany pretzel shell in the oven.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Bake",
-      inputs: ["lye_bathed_rolls", "ing_08"],
-      outputState: "finished_pretzel_rolls",
-      instructions: "Bake on the upper-middle rack at 220 C (425 F) with no steam for 18–22 minutes until deeply, uniformly dark mahogany-brown — much darker than you would ever take a regular roll. The lye reaction produces the characteristic dark color and bitter-savory flavor as the gelatinized exterior caramelizes aggressively. The coarse salt should be lightly toasted but intact. Let the rolls cool on a rack for at least 15 minutes before eating — the interior crumb needs time to firm up and the crust to crackle fully as it cools.",
-      visualCue: {
-        primaryTarget: "Deep mahogany-brown all over — not golden, not tan, but genuinely dark. Coarse salt glints. The surface is hard and crackle-crisp. The natural splits or scores show an inner pale crumb.",
-        spectrum: [
-          { state: "Underdone", description: "Golden-tan color. The crust is soft and the distinctive pretzel bitterness is missing. Doesn't look like a pretzel.", action: "Return to the oven for 3–5 minutes. Pretzel rolls must be baked much darker than normal bread — you're looking for mahogany, not gold." },
-          { state: "Perfect",   description: "Uniformly dark mahogany with a crackle-hard crust that gives a sharp click when tapped. The kitchen smells of toasted malt and caramelized starch. Coarse salt toasted golden.", action: "Cool on a rack 15 minutes. The crumb will be dense and chewy under the brittle shell." },
-          { state: "Overdone",  description: "Black or very dark brown with a burnt, harsh smell. Salt may be charred.", action: "The outer layer may be discardable; check the interior. If the crumb is good, remove the darkest bits of crust." },
-        ],
-      },
-      feelCue: "Tap the bottom of a pretzel roll: it should sound like tapping a hard stone, not a hollow drum. The crust is its own layer — dense and rigid — and when you tear the roll open, it should resist and then snap apart rather than pull apart.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "saindoux (plus traditionnel)"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Base",
+      "name": "Cuisson de soude (pour le bain de soude)",
+      "ratioValue": 12,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Lycée alimentaire solution de 3% (vraie Laugangebäck, utilisation avec une extrême prudence)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Solvent",
+      "name": "Eau (pour le bain de soude cuit)",
+      "ratioValue": 500,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Sel de bretzel grossier (ou sel de mer flocé)",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Sel de maldon",
+        "Sel casher grossier"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Agenouillement",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "pretzel_dough",
+      "instructions": "Mélanger la farine, la levure et le sel dans un grand bol, puis ajouter le lait chaud. Mélanger jusqu'à ce qu'une pâte brute se forme, puis ajouter le beurre ramolli en morceaux. Agenouillez à la main pendant 10 minutes ou dans un mélangeur de support avec le crochet de pâte à vitesse moyenne pendant 7 minutes jusqu'à ce que la pâte soit lisse, élastique et légèrement collante. La pâte de bretzel est intentionnellement plus rigide qu'une pâte à pain typique — l'hydratation inférieure est ce qui permet aux rouleaux de tenir leur forme pendant le bain de sourcils et de développer cette miettes denses et mâcheuses distinctives. La pâte doit passer l'essai de vitre : étirer une petite pièce mince et être presque translucide sans déchirer.",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte lisse et élastique qui tient sa forme sur le comptoir. Un peu plus rigide que la pâte à pain sandwich. La surface est brillante et tendue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours rugueux et légèrement ravagé. Des larmes quand on les tire. Il n'a pas de forme ronde.",
+            "action": "Agenouillez encore 2 à 3 minutes — le gluten a besoin de plus de développement pour que les rouleaux tiennent leur forme dans le bain."
+          },
+          {
+            "state": "Perfect",
+            "description": "La fenêtre passe. Doux, élastique, légèrement collant. Remonte dans les 2 secondes quand on pique. La surface est presque brillante.",
+            "action": "Tourner dans une boule et placer dans un bol huilé au ferment en vrac."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très raide et serrée, se battant quand elle s'est pétrie. Ça rentre immédiatement.",
+            "action": "Couvrir et reposer 15 minutes. Le gluten sur-développé a besoin de temps pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "La pâte de bretzel doit se sentir comme une poignée de main ferme — pas aussi douce que la brioche, pas aussi raide que la pâte à pizza, mais quelque part avec confiance entre les deux. Tirez une pièce : elle doit s'étirer sans effort dans un long ruban avant de déchirer."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Preuve",
+      "inputs": [
+        "pretzel_dough"
+      ],
+      "outputState": "risen_pretzel_dough",
+      "instructions": "Placer la pâte dans un bol légèrement huilé, couvrir d'enveloppe en plastique, et la laisser monter à température ambiante pendant 1 à 1,5 heures jusqu'à 50% de plus (pas doublé – la pâte de bretzel est maintenue relativement sous-fermentée par conception). Cette fermentation contrôlée maintient la miette dense et mâcheuse plutôt qu'aérée. Pendant ce temps, préparez le bain de soda cuit au four : étalez le bicarbonate de soda sur une plaque d'aluminium et faites cuire à 250 °C (480 °F) pendant 1 heure jusqu'à ce qu'il passe de la poudre blanche à une croûte jaunâtre. Le bicarbonate de soude est significativement plus alcalin que le bicarbonate de soude ordinaire et donne un résultat beaucoup plus proche d'un vrai bain de soude.",
+      "visualCue": {
+        "primaryTarget": "Dough a augmenté d'environ 50% et se sent plus léger. La surface est bombée et lisse. Pas doublé — délibérément sous-estimé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Dough semble et se sent identique à quand il est entré. Aucune croissance visible. Ferme et dense.",
+            "action": "Déplacez-vous dans un endroit plus chaud et attendez. La pâte sous-fermentée produit des rouleaux trop denses pour en profiter."
+          },
+          {
+            "state": "Perfect",
+            "description": "50% de plus, se sent légèrement plus léger et plus aéré. Un poke laisse un tiret paresseux.",
+            "action": "Divisez et formez en rouleaux pendant que le four chauffe et que le bain de lys est préparé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Double ou plus. Ça sent fortement la levure. Très doux et rempli de gaz.",
+            "action": "Continuez vite. Les petits pains de bretzel surfermentés seront plus doux et plus painés, toujours délicieux, mais moins croustillants."
+          }
+        ]
+      },
+      "feelCue": "La pâte de bretzel bien fermentée se sent encore relativement dense et ferme par rapport à un pain sandwich au même stade — c'est exact. Ça devrait être une boule de stress, pas un oreiller."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Forme",
+      "inputs": [
+        "risen_pretzel_dough"
+      ],
+      "outputState": "shaped_rolls",
+      "instructions": "Divisez la pâte en 8 morceaux égaux (environ 80 à 100 g chacun pour un lot typique de 500 g de farine). Pour former un rouleau rond : aplatissez chaque pièce dans un disque, repliez les bords vers le centre tout autour, puis retournez-le et roulez-le sous votre paume en coupe sur le comptoir avec une pression ferme vers le bas, se déplaçant en cercles serrés. Le but est une balle tendue et lisse avec une couture scellée sur le fond. Ou encore, marquer une croix profonde sur le dessus avec un couteau tranchant ou boiteux après la façonnage, ce qui donne le look classique de Laugenbrötchen. Placez les rouleaux en forme sur une feuille doublée de parchemin et réfrigérez à découvert pendant 30 minutes — les rouleaux froids tiennent mieux leur forme pendant le bain de lys.",
+      "visualCue": {
+        "primaryTarget": "Des sphères serrées et lisses avec une couture scellée sur le fond. Pas de larmes ou de pâte. Les rouleaux réfrigérés sont fermes et tiennent leur forme lorsqu'ils sont ramassés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des boules molles avec des coutures visibles et des larmes à la surface. Ils saignent et s'aplatissent sur le drap.",
+            "action": "Reformer chacun — aplatir, plier et rerouler avec plus de pression vers le bas pour renforcer la tension."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des balles fermes et tendues qui tiennent leur forme ronde sur le plateau. La couture est invisible ou hermétique.",
+            "action": "Réfrigérer 30 minutes avant le bain de lys."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les rouleaux en forme sont chauds et déjà à l'épreuve rapide — la surface semble gonflée et douce.",
+            "action": "Mettez-les dans le réfrigérateur immédiatement pour les raffermir avant le bain de lys."
+          }
+        ]
+      },
+      "feelCue": "Un rouleau de bretzel bien en forme devrait se sentir solide et tendu lorsqu'il est pressé à la légère — pas printanier et gonflé, pas dur, mais comme une boule de neige bien emballée qui tient sa forme."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Faire bouillir dans le bain de lys",
+      "inputs": [
+        "shaped_rolls",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "lye_bathed_rolls",
+      "instructions": "Dissoudre le bicarbonate de soude cuit dans 1 litre d'eau dans un grand pot non réactif (acier inoxydable ou émaillé — pas d'aluminium nu). Portez à un doux mijot. Porter des gants en caoutchouc (la solution de soude cuite est encore caustique à la peau), abaisser les rouleaux froids dans le bain mijotant un ou deux à la fois. Laisser mijoter 20 à 30 secondes de chaque côté, tourner une fois. La surface devient légèrement bronzante, caoutchouteuse et serrée. Soulevez avec une cuillère à fente ou une araignée et placez-la sur une plaque de cuisson parcheminée. Dispersez immédiatement du sel grossier sur le dessus pendant que la surface est piquante.",
+      "visualCue": {
+        "primaryTarget": "Chaque rouleau sort du bain avec une peau serrée, légèrement bronzée et caoutchouteuse qui capture immédiatement le sel grossier et la retient.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours pâle et pâteux après 15 secondes dans le bain. La surface n'a pas resserré.",
+            "action": "Laisser dans le bain 30 secondes par côté — la réaction alcaline prend du temps pour gélatiniser l'amidon extérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légèrement bronzé, tendu, caoutchouteux — ressemble à une peau chamois humide. Des bâtons de sel immédiatement. Tournera l'acajou au four.",
+            "action": "Saler immédiatement et charger dans un four de 220 C (425 F)."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus de 60 secondes dans le bain — la surface commence à se dissoudre et devient visqueuse ou fissurée.",
+            "action": "Cuire quand même et marquer profondément avant de cuire pour laisser échapper la vapeur. La saveur sera fine; la croûte peut être irrégulière."
+          }
+        ]
+      },
+      "feelCue": "À l'état frais, la surface de chaque rouleau se sent caoutchouteuse et légèrement visqueuse sous un doigt ganté — que l'amidon externe gélatinisé est le précurseur direct de la coque de bretzel d'acajou de crackle-crisp dans le four."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "lye_bathed_rolls",
+        "ing_08"
+      ],
+      "outputState": "finished_pretzel_rolls",
+      "instructions": "Cuire sur le support du milieu supérieur à 220 °C (425 °F) sans vapeur pendant 18 à 22 minutes jusqu'à ce qu'il y ait un brun acajou profondément, uniformément foncé, beaucoup plus foncé que vous ne le feriez jamais. La réaction de la lysse produit la couleur foncée caractéristique et la saveur amère-savori tandis que la caramélisation extérieure gélatinisée est agressive. Le sel grossier doit être légèrement grillé mais intact. Laisser refroidir les rouleaux sur un rack pendant au moins 15 minutes avant de manger — la miette intérieure a besoin de temps pour se raffermir et la croûte pour craquer complètement pendant qu'elle refroidit.",
+      "visualCue": {
+        "primaryTarget": "Deep acajou-brun partout — pas doré, pas bronzé, mais vraiment sombre. Des reflets de sel grossiers. La surface est dure et crépitante. Les partitions ou partitions naturelles montrent une miette pâle intérieure.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Couleur dorée. La croûte est douce et l'amertume caractéristique du bretzel est absente. Ça ne ressemble pas à un bretzel.",
+            "action": "Retourner au four pendant 3-5 minutes. Les rouleaux de bretzel doivent être cuits beaucoup plus foncés que le pain normal — vous cherchez l'acajou, pas l'or."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une acajou uniformément foncée avec une croûte dure à craqueler qui donne un clic aigu quand tapoté. La cuisine sent le malt grillé et l'amidon caramélisé. Le sel grossier grillé doré.",
+            "action": "Laisser refroidir 15 minutes. La miette sera dense et mâcheuse sous la coque fragile."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun noir ou très foncé avec une odeur brûlée et dure. Le sel peut être carbonisé.",
+            "action": "La couche externe peut être jetable; vérifier l'intérieur. Si la miette est bonne, retirer les morceaux les plus sombres de croûte."
+          }
+        ]
+      },
+      "feelCue": "Tapez sur le fond d'un rouleau de bretzel : il devrait sonner comme taper une pierre dure, pas un tambour creux. La croûte est sa propre couche — dense et rigide — et quand vous déchirez le rouleau ouvert, il doit résister et ensuite se casser au lieu de se séparer."
+    }
+  ]
 };

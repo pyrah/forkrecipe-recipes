@@ -1,133 +1,379 @@
 export default {
-  repoId: "master_italian_osso_buco_001",
-  parentRepoId: null,
-  slug: "osso-buco",
-  author: "ForkRecipe Kitchen",
-  title: "Osso Buco alla Milanese",
-  description: "Milan's great veal braise — cross-cut shanks simmered in white wine and broth until the marrow trembles in its socket and the sauce turns the colour of old amber. A shower of gremolata cut through the richness: raw garlic, lemon zest, and parsley that wake the whole dish up.",
-  cuisine: "Italian",
-  culture: "Milanese",
-  category: "proteins",
-  tags: ["italian", "braise", "veal", "milanese", "gluten-free"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "2 hr 30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Veal osso buco (cross-cut shanks, 4–5 cm thick, tied with kitchen twine)", ratioValue: 1500, defaultUnit: "g",   substitutions: ["pork osso buco", "lamb shanks"] },
-    { ingId: "ing_02", role: "Aromatic",  name: "Carrot (small dice)",                                                       ratioValue: 100,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Celery stalks (small dice)",                                                ratioValue: 80,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "White onion (small dice)",                                                  ratioValue: 120,  defaultUnit: "g",   substitutions: ["yellow onion"] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves (crushed)",                                                   ratioValue: 4,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_06", role: "Liquid",    name: "Dry white wine (Pinot Grigio or Soave)",                                    ratioValue: 250,  defaultUnit: "ml",  substitutions: ["dry vermouth"] },
-    { ingId: "ing_07", role: "Liquid",    name: "Beef or veal stock (warm)",                                                 ratioValue: 500,  defaultUnit: "ml",  substitutions: ["chicken stock"] },
-    { ingId: "ing_08", role: "Starch",    name: "Tomato paste",                                                              ratioValue: 20,   defaultUnit: "g",   substitutions: ["1 ripe plum tomato, crushed"] },
-    { ingId: "ing_09", role: "Herb",      name: "Bay leaf",                                                                  ratioValue: 2,    defaultUnit: "leaves", substitutions: [] },
-    { ingId: "ing_10", role: "Herb",      name: "Fresh thyme sprigs",                                                        ratioValue: 4,    defaultUnit: "sprigs", substitutions: ["dried thyme"] },
-    { ingId: "ing_11", role: "Fat",       name: "Unsalted butter",                                                           ratioValue: 30,   defaultUnit: "g",   substitutions: ["olive oil"] },
-    { ingId: "ing_12", role: "Fat",       name: "Olive oil",                                                                 ratioValue: 30,   defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_13", role: "Seasoning", name: "Fine sea salt and black pepper",                                            ratioValue: 1,    defaultUnit: "to taste", substitutions: [] },
-    { ingId: "ing_14", role: "Citrus",    name: "Lemon zest (finely grated, for gremolata)",                                 ratioValue: 1,    defaultUnit: "lemon", substitutions: [] },
-    { ingId: "ing_15", role: "Herb",      name: "Flat-leaf parsley (finely chopped, for gremolata)",                         ratioValue: 15,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_16", role: "Allium",    name: "Garlic (finely minced, for gremolata)",                                     ratioValue: 1,    defaultUnit: "clove", substitutions: [] },
+  "repoId": "master_italian_osso_buco_001",
+  "parentRepoId": null,
+  "slug": "osso-buco",
+  "author": "ForkRecipe Kitchen",
+  "title": "Osso Buco alla Milanese",
+  "description": "Le grand braise de veau de Milan — jarrets coupés en croix mijotés de vin blanc et de bouillon jusqu'à ce que la moelle tremble dans sa prise et que la sauce transforme la couleur de l'ancienne ambre. Une averse de gremolata coupée à travers la richesse : ail cru, zeste de citron et persil qui réveillent tout le plat.",
+  "cuisine": "Italien",
+  "culture": "Milanais",
+  "category": "proteins",
+  "tags": [
+    "Italien",
+    "braise",
+    "Viande bovine",
+    "Milanese",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "2 hr 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Sear",
-      inputs: ["ing_01", "ing_11", "ing_12", "ing_13"],
-      outputState: "seared_shanks",
-      instructions: "Pat the veal shanks completely dry with paper towel — any surface moisture will steam instead of sear. Season generously on all sides with salt and pepper. Heat the butter and olive oil in a wide, heavy Dutch oven or braiser over medium-high heat until the butter foams and subsides. Sear the shanks flat-side down in batches, never crowding, for 3–4 minutes per side until a deep mahogany crust forms. Turn and sear the bone-edges briefly. Remove and rest on a plate.",
-      visualCue: {
-        primaryTarget: "Each shank wears a dark, even, mahogany crust across both flat faces, and the pot floor is painted with a rich, amber-brown fond.",
-        spectrum: [
-          { state: "Underdone", description: "The meat is pale beige and has released liquid into the pan, which is now simmering rather than searing. No crust visible.", action: "The pan was too cool or too crowded. Remove some pieces, raise heat until the fat shimmers, and wait for the sizzle to sharpen before returning the meat." },
-          { state: "Perfect",   description: "A burnished mahogany crust covers both flat faces; the shank releases cleanly when nudged with tongs. Fond on the pan bottom is dark amber and fragrant.", action: "Remove the shanks and build the soffritto in the same pot." },
-          { state: "Overdone",  description: "The crust has gone dark brown to black and the fond on the pot floor is charring, sending up a bitter, acrid smoke.", action: "Pull the pot off heat immediately. If the fond is scorched rather than caramelised, deglaze with a splash of wine and tip it out before starting the soffritto." },
-        ],
-      },
-      feelCue: "The shank should hiss loudly the moment it touches the fat and resist lifting for the first two minutes — that resistance is the crust bonding to the metal. When it releases freely, it is ready to turn.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Osso buco de veau (jarrets coupés en travers, épais de 4 à 5 cm, attaché avec ficelle de cuisine)",
+      "ratioValue": 1500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "osso buco de porc",
+        "Jarrets d'agneau"
+      ]
     },
     {
-      nodeId: "step_2", action: "Sweat",
-      inputs: ["seared_shanks", "ing_02", "ing_03", "ing_04", "ing_05", "ing_08"],
-      outputState: "softened_soffritto",
-      instructions: "Lower the heat to medium. Add the carrot, celery, and onion to the pot and cook in the remaining fat, scraping up the fond with a wooden spoon as the vegetables release their moisture, for 8–10 minutes until soft and lightly golden at the edges. Add the garlic and tomato paste, stir well, and cook for another 2 minutes until the paste darkens from bright red to a deep brick colour and smells toasty and sweet.",
-      visualCue: {
-        primaryTarget: "The vegetables are completely soft and glistening, the onion translucent and pale gold at the edges. The tomato paste has fried to a rust-brick colour that coats the soffritto.",
-        spectrum: [
-          { state: "Underdone", description: "Onion and celery are still crunchy and pale; the tomato paste is vivid scarlet and smells tinny and raw.", action: "Keep cooking over medium heat — the vegetables need to soften fully or they will remain gritty in the final sauce. The paste needs another minute in the oil to lose its raw sharpness." },
-          { state: "Perfect",   description: "Soffritto is completely soft, sweetly fragrant, with the paste a deep brick coating every piece. Garlic is fragrant but not brown.", action: "Deglaze with the white wine immediately." },
-          { state: "Overdone",  description: "Garlic has turned dark brown and bitter; vegetables are scorching on the bottom with a sharp, burnt-sugar smell.", action: "Deglaze immediately with a splash of wine to arrest the cooking and lift the fond. If the garlic is very dark, fish it out — it will turn the sauce bitter." },
-        ],
-      },
-      feelCue: "Stir the soffritto and feel the resistance under your spoon — it should move through yielding, slippery vegetables with no scraping sensation. The kitchen should fill with a sweet, oniony warmth.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "Carotte (petits dés)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Deglaze",
-      inputs: ["softened_soffritto", "ing_06"],
-      outputState: "wine_base",
-      instructions: "Pour in the white wine all at once and increase the heat to medium-high. Scrape the pot floor vigorously as it comes to a boil, dissolving all the fond into the liquid. Let it reduce by half, about 4–5 minutes, until the raw alcohol smell cooks off and is replaced by a mellow, fruity fragrance.",
-      visualCue: {
-        primaryTarget: "The wine has reduced to roughly half its original volume, turned slightly golden and glossy, and the steam smells of warm fruit and caramelised vegetable rather than raw alcohol.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is still thin and pale gold; the steam stings the nose with sharp alcohol fumes.", action: "Keep it at a brisk simmer — the alcohol must cook off before you add the stock or it will leave a raw, spirity edge in the finished sauce." },
-          { state: "Perfect",   description: "Volume halved, colour deepened to a light amber-gold, and the aroma is mellow and fruity with only a whisper of wine.", action: "Add the warm stock, herbs, and nestle the shanks back in." },
-          { state: "Overdone",  description: "Liquid has reduced to a sticky, concentrated syrup on the pot floor that tastes sharp and sweet.", action: "Add a splash of stock immediately to loosen it before building the braise liquid further." },
-        ],
-      },
-      feelCue: "Lean over the pot and breathe slowly — the moment your eyes stop watering from alcohol fumes and you smell only warm, cooked fruit, the wine is ready.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Célèbres (petits dés)",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Braise",
-      inputs: ["wine_base", "ing_07", "ing_09", "ing_10"],
-      outputState: "braised_shanks",
-      instructions: "Pour in the warm stock and add the bay leaves and thyme, tucking them under the liquid. Nestle the seared shanks back into the pot standing upright, marrow-bone facing up — this keeps the marrow in the socket as it softens. The liquid should come halfway up the shanks. Bring to a bare trembling simmer, cover tightly, and transfer to a 160°C / 325°F oven. Braise for 1 hour 30 minutes to 2 hours, basting the shanks once or twice, until the meat is completely tender and pulling away from the bone at the edges.",
-      visualCue: {
-        primaryTarget: "The meat has shrunk back from the bone, the marrow sits glossy and quivering in its socket, and the sauce is a rich amber-brown that coats a spoon lightly.",
-        spectrum: [
-          { state: "Underdone", description: "The meat is still firm and clinging tightly to the bone; a skewer meets resistance at the thickest point. Sauce is thin and watery.", action: "Cover and return to the oven for another 30 minutes. Collagen requires time — you cannot rush it." },
-          { state: "Perfect",   description: "Meat is yielding and just beginning to pull from the bone at the edges, but still holds together as a whole piece. Marrow is soft and trembling. Sauce is glossy and amber.", action: "Remove from the oven. Lift the shanks gently and reduce the sauce if needed, then finish with gremolata." },
-          { state: "Overdone",  description: "Meat is falling apart in the pot and the sauce has reduced to a salty, gluey concentrate.", action: "Remove the shanks immediately and handle gently. Loosen the sauce with a splash of warm stock and taste carefully for salt before finishing." },
-        ],
-      },
-      feelCue: "Slide a thin knife into the thickest muscle — it should meet no resistance, gliding through as if through soft butter. The marrow should be visibly soft, shimmering in the bone socket.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc (petits dés)",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
     {
-      nodeId: "step_5", action: "Reduce",
-      inputs: ["braised_shanks", "ing_13"],
-      outputState: "finished_sauce",
-      instructions: "Carefully lift the shanks onto a warm plate and cover loosely with foil. Discard the bay leaves and thyme sprigs. Taste the braising liquid and skim any fat floating on the surface. If the sauce is thin, simmer it uncovered over medium heat for 5–10 minutes until it reduces to a coating consistency — it should nappe a spoon with a light, glossy sheen. Season with salt and pepper and remove the twine from the shanks.",
-      visualCue: {
-        primaryTarget: "The sauce is a clear amber-brown with an even gloss, coating the back of a spoon and holding a drawn line for several seconds before slowly closing.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce runs off the spoon like water and tastes thin, with the wine and stock not yet unified.", action: "Simmer uncovered for longer, stirring occasionally. Taste every few minutes — it concentrates quickly at the end." },
-          { state: "Perfect",   description: "A glossy, lightly napping sauce that smells of veal, wine, and sweet vegetables in one complex breath. The line drawn in the spoon-coating holds cleanly.", action: "Spoon over the shanks and shower with gremolata at the table." },
-          { state: "Overdone",  description: "Sauce has reduced to a sticky, sweet glaze that tastes predominantly of salt and caramelised sugars, with the wine buried.", action: "Add warm stock or water a tablespoon at a time until the balance is restored. Taste before each addition." },
-        ],
-      },
-      feelCue: "Dip a spoon and hold it upright — the sauce should coat it smoothly and fall in a slow, steady sheet, not drip in separate drops. It should smell of the whole braise, not any one ingredient.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail (crues)",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
     {
-      nodeId: "step_6", action: "Garnish",
-      inputs: ["finished_sauce", "ing_14", "ing_15", "ing_16"],
-      outputState: "finished_osso_buco",
-      instructions: "Mix the finely grated lemon zest, chopped parsley, and minced garlic together in a small bowl to make the gremolata. It should be combined but not mashed — the texture of each element should remain visible. Spoon the shanks onto plates or saffron risotto, ladle over the sauce, and scatter a generous pinch of gremolata over each shank at the very last moment. Do not stir the gremolata into the braise — its freshness is meant to contrast the richness.",
-      visualCue: {
-        primaryTarget: "The bright green and yellow of the gremolata sits vividly against the dark, mahogany sauce and pale veal meat, and the raw garlic and lemon fragrance lifts sharply over the rich braising steam.",
-        spectrum: [
-          { state: "Underdone", description: "Gremolata added too early or too little — the plate reads as all rich brown with no brightness.", action: "Add more gremolata on top. It is meant to be a generous shower, not a whisper." },
-          { state: "Perfect",   description: "A visible, fragrant confetti of green parsley, yellow zest, and white garlic sits on the dark sauce. The first bite brings richness followed immediately by a bright, citrus-herbal snap.", action: "Serve immediately — gremolata wilts quickly once it hits the hot sauce." },
-          { state: "Overdone",  description: "Gremolata was stirred into the sauce and has wilted, losing all brightness and releasing bitter garlic into the braise.", action: "Make a fresh batch for garnish — the gremolata must go on at the very last moment to do its job." },
-        ],
-      },
-      feelCue: "Taste a pinch of gremolata on its own first — you should get the sharp bite of raw garlic, a clean lemon fragrance, and the grassy freshness of parsley. That contrast is exactly what the dish needs.",
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Vin blanc sec (Pinot Grigio ou Soave)",
+      "ratioValue": 250,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vermouth sec"
+      ]
     },
+    {
+      "ingId": "ing_07",
+      "role": "Liquid",
+      "name": "Viande bovine (chaud)",
+      "ratioValue": 500,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "bouillon de poulet"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Starch",
+      "name": "Pâte de tomates",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 tomate à prune mûre, broyée"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Herb",
+      "name": "Feuille de la baie",
+      "ratioValue": 2,
+      "defaultUnit": "leaves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 4,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "Thym séché"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Huile d'olive"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre noir",
+      "ratioValue": 1,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Citrus",
+      "name": "Zeste de citron (finement râpé, pour gremolata)",
+      "ratioValue": 1,
+      "defaultUnit": "lemon",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Herb",
+      "name": "Persil à feuilles plates (finement haché, pour gremolata)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Allium",
+      "name": "Ail (finement haché, pour gremolata)",
+      "ratioValue": 1,
+      "defaultUnit": "clove",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_01",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "seared_shanks",
+      "instructions": "Patientez les jarrets de veau complètement secs avec une serviette en papier — toute humidité de surface va vapeur au lieu de la mer. Assaisonner généreusement de sel et de poivre sur tous les côtés. Chauffer le beurre et l'huile d'olive dans un four ou un brassage néerlandais large et lourd à feu moyen-vif jusqu'à ce que les mousses de beurre s'abaissent. Semer les jarrets à plat par lots, ne jamais encombrer, pendant 3-4 minutes de chaque côté jusqu'à ce qu'une croûte acajou profonde se forme. Tourner et saisir brièvement les os. Retirer et reposer sur une assiette.",
+      "visualCue": {
+        "primaryTarget": "Chaque tige porte une croûte d'acajou sombre et uniforme sur les deux faces plates, et le plancher en pot est peint avec un riche fond brun-ambre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est beige pâle et a libéré du liquide dans la poêle, qui mijote maintenant plutôt que de semer. Aucune croûte visible.",
+            "action": "La casserole était trop fraîche ou trop bondée. Retirer quelques morceaux, lever le feu jusqu'à ce que la graisse mijote, et attendre que le étourdissement aiguise avant de retourner la viande."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte d'acajou brûlée couvre les deux faces plates; la tige se libère proprement lorsqu'elle est munie de pinces. Le fond de la poêle est ambre foncé et parfumé.",
+            "action": "Retirer les jarrets et construire le soffritto dans le même pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est devenue brun foncé au noir et l'affection sur le plancher de pot est carbonisée, envoyant une fumée amère et acride.",
+            "action": "Tirez immédiatement la casserole hors de la chaleur. Si le fond est brûlé plutôt que caramélisé, déglacer avec une éclaboussure de vin et le pourboire avant de commencer le soffritto."
+          }
+        ]
+      },
+      "feelCue": "La tige doit siffler fort au moment où elle touche la graisse et résiste au levage pendant les deux premières minutes — cette résistance est la croûte qui se lie au métal. Quand il libère librement, il est prêt à tourner."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sueur",
+      "inputs": [
+        "seared_shanks",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_08"
+      ],
+      "outputState": "softened_soffritto",
+      "instructions": "Baisser le feu à moyen. Ajouter la carotte, le céleri et l'oignon dans la casserole et cuire dans la graisse restante, grattant le fond avec une cuillère en bois alors que les légumes libèrent leur humidité, pendant 8-10 minutes jusqu'à ce que doux et légèrement doré aux bords. Ajouter l'ail et la pâte de tomate, bien remuer et cuire encore 2 minutes jusqu'à ce que la pâte s'assombrisse de rouge vif à une couleur brique profonde et sente grillée et sucrée.",
+      "visualCue": {
+        "primaryTarget": "Les légumes sont complètement doux et brillants, l'oignon translucide et l'or pâle aux bords. La pâte de tomate a frit à une couleur de brique rouille qui enrobe le soffritto.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon et le céleri sont encore croquants et pâles; la pâte de tomate est vive écarlate et sent le teint et le cru.",
+            "action": "Conservez la cuisson à feu moyen – les légumes doivent s'assouplir complètement ou ils resteront gras dans la sauce finale. La pâte a besoin d'une autre minute dans l'huile pour perdre sa netteté brute."
+          },
+          {
+            "state": "Perfect",
+            "description": "Soffritto est complètement doux, parfumé, avec la pâte un revêtement en brique profonde chaque pièce. L'ail est parfumé mais pas brun.",
+            "action": "Déglacer avec le vin blanc immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'ail est devenu brun foncé et amer; les légumes brûlent sur le fond avec une odeur de sucre vif et brûlé.",
+            "action": "Déglacer immédiatement avec un jet de vin pour arrêter la cuisson et lever le fond. Si l'ail est très sombre, le poisson dehors — il fera la sauce amère."
+          }
+        ]
+      },
+      "feelCue": "Mélanger le soffritto et sentir la résistance sous votre cuillère — il devrait se déplacer à travers des légumes glissants et à rendement sans sensation de grattage. La cuisine devrait se remplir d'une douce chaleur d'oignon."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Déglacement",
+      "inputs": [
+        "softened_soffritto",
+        "ing_06"
+      ],
+      "outputState": "wine_base",
+      "instructions": "Verser le vin blanc en même temps et augmenter le feu à moyen-élevé. Gratter vigoureusement le plancher de la casserole en arrivant à ébullition, dissoudre tout le fond dans le liquide. Laissez-le réduire de moitié, environ 4-5 minutes, jusqu'à ce que l'odeur d'alcool cru se consume et soit remplacée par un parfum moelleux et fruité.",
+      "visualCue": {
+        "primaryTarget": "Le vin a réduit à environ la moitié de son volume original, légèrement doré et brillant, et la vapeur sent les fruits chauds et les légumes caramélisés plutôt que l'alcool cru.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore mince et d'or pâle; la vapeur pique le nez avec des fumées d'alcool vives.",
+            "action": "Gardez-le à mijoter modérément — l'alcool doit cuire avant d'ajouter le bouillon ou il laissera un bord cru et alcooleux dans la sauce finie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Volume coupé en deux, couleur approfondie à un léger or ambre, et l'arôme est moelleux et fruité avec seulement un murmure de vin.",
+            "action": "Ajoutez le bouillon chaud, les herbes et renichez les jarrets."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide est réduit à un sirop collant et concentré sur le plancher de la casserole qui a un goût vif et sucré.",
+            "action": "Ajouter immédiatement un jet de stock pour le desserrer avant de construire le liquide de brasage plus loin."
+          }
+        ]
+      },
+      "feelCue": "Penchez-vous sur le pot et respirez lentement — au moment où vos yeux cessent d'arroser des fumées d'alcool et que vous sentez seulement des fruits chauds et cuits, le vin est prêt."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Brise",
+      "inputs": [
+        "wine_base",
+        "ing_07",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "braised_shanks",
+      "instructions": "Verser dans le bouillon chaud et ajouter les feuilles de laurier et le thym, les enfiler sous le liquide. Nettoyez les jarrets souillés dans le pot debout, l'os de la moelle vers le haut, ce qui maintient la moelle dans la prise pendant qu'elle s'adoucit. Le liquide devrait monter à mi-chemin. Porter à une mijoteuse nue, couvrir soigneusement, et transférer à un four à 160°C / 325°F. Braser pendant 1 heure 30 minutes à 2 heures, abaisser les jarrets une ou deux fois, jusqu'à ce que la viande soit complètement tendre et s'éloigner de l'os aux bords.",
+      "visualCue": {
+        "primaryTarget": "La viande s'est rétrécie de l'os, la moelle s'assied glossy et vibrant dans sa socket, et la sauce est un riche brun-ambre qui enrobe une cuillère légèrement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande est encore ferme et s'accroche étroitement à l'os; une brochette rencontre une résistance au point le plus épais. La sauce est fine et aqueuse.",
+            "action": "Couvrir et retourner au four pendant 30 minutes. Collagène a besoin de temps — vous ne pouvez pas le précipiter."
+          },
+          {
+            "state": "Perfect",
+            "description": "La viande donne et commence juste à tirer de l'os aux bords, mais tient toujours ensemble comme une pièce entière. Marrow est doux et tremblant. La sauce est brillante et ambre.",
+            "action": "Retirer du four. Soulevez les jarrets doucement et réduisez la sauce si nécessaire, puis terminez avec des gremolata."
+          },
+          {
+            "state": "Overdone",
+            "description": "La viande s'effondre dans la casserole et la sauce est réduite à un concentré salé et collant.",
+            "action": "Retirez immédiatement les jarrets et manipulez doucement. Déposez la sauce avec une touche de bouillon chaud et goûtez soigneusement au sel avant de terminer."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser un couteau fin dans le muscle le plus épais — il ne devrait pas rencontrer de résistance, planant à travers comme si à travers le beurre doux. La moelle doit être visiblement molle, miroitant dans la selle osseuse."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Réduire",
+      "inputs": [
+        "braised_shanks",
+        "ing_13"
+      ],
+      "outputState": "finished_sauce",
+      "instructions": "Soulevez soigneusement les jarrets sur une assiette chaude et couvrez-les de papier. Jeter les feuilles et le thym. Goûtez le liquide de graissage et éjaculez toute graisse flottant sur la surface. Si la sauce est fine, laissez-la mijoter à feu moyen pendant 5-10 minutes jusqu'à ce qu'elle diminue à une consistance de revêtement. Assaisonner de sel et de poivre et retirer la ficelle des jarrets.",
+      "visualCue": {
+        "primaryTarget": "La sauce est un brun-ambre clair avec un brillant uniforme, enrobant l'arrière d'une cuillère et tenant une ligne tracée pendant plusieurs secondes avant de se refermer lentement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce sort de la cuillère comme de l'eau et goûte mince, avec le vin et le stock pas encore unifié.",
+            "action": "Laisser mijoter à découvert plus longtemps, en remuant occasionnellement. Goûtez toutes les quelques minutes — il se concentre rapidement à la fin."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce lustrée, légèrement croustillante qui sent le veau, le vin et les légumes sucrés dans un souffle complexe. La ligne tracée dans le revêtement de la cuillère tient proprement.",
+            "action": "Plongez sur les jarrets et la douche avec gremolata à la table."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite à une glaçure collante et sucrée qui goûte principalement de sel et de sucres caramélisés, le vin étant enterré.",
+            "action": "Ajouter le bouillon chaud ou arroser une cuillère à soupe à la fois jusqu'à ce que l'équilibre soit rétabli. Goûtez avant chaque ajout."
+          }
+        ]
+      },
+      "feelCue": "Plonger une cuillère et la tenir droite — la sauce devrait la mettre en douceur et tomber dans une feuille lente et stable, et ne pas couler dans des gouttes séparées. Il doit sentir tout le braise, pas aucun ingrédient."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Garnir",
+      "inputs": [
+        "finished_sauce",
+        "ing_14",
+        "ing_15",
+        "ing_16"
+      ],
+      "outputState": "finished_osso_buco",
+      "instructions": "Mélanger le zeste de citron finement râpé, le persil haché et l'ail haché ensemble dans un petit bol pour faire la gremolata. Il doit être combiné mais non masqué – la texture de chaque élément doit rester visible. Déposer les jarrets sur les assiettes ou le risotto de safran, déposer sur la sauce et disperser une pincée généreuse de gremolata sur chaque jarret au dernier moment. Ne pas remuer le gremolata dans le braise — sa fraîcheur est destinée à contraster la richesse.",
+      "visualCue": {
+        "primaryTarget": "Le vert vif et le jaune de la gremolata s'assoient vivement contre la sauce acajou foncée et la viande de veau pâle, et le parfum cru d'ail et de citron s'élève brusquement sur la riche vapeur de graissage.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Gremolata ajouté trop tôt ou trop peu — l'assiette se lit comme tout brun riche sans luminosité.",
+            "action": "Ajouter plus de gremolata sur le dessus. Il est censé être une douche généreuse, pas un murmure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un confetti visible et parfumé de persil vert, de zeste jaune et d'ail blanc est posé sur la sauce foncée. La première bouchée apporte de la richesse suivie immédiatement d'un éclat d'agrumes et d'herbes.",
+            "action": "Servir immédiatement — gremolata se flétrit rapidement une fois qu'il touche la sauce chaude."
+          },
+          {
+            "state": "Overdone",
+            "description": "Gremolata a été remué dans la sauce et a flétri, perdant toute luminosité et libérant l'ail amer dans le braise.",
+            "action": "Faites un nouveau lot pour garnir — le gremolata doit continuer au tout dernier moment pour faire son travail."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une pincée de gremolata d'abord – vous devriez obtenir la bouchée d'ail cru, un parfum de citron propre, et la fraîcheur herbacée du persil. Ce contraste est exactement ce dont le plat a besoin."
+    }
+  ]
 };

@@ -1,116 +1,285 @@
 export default {
-  repoId: "master_british_scotch_eggs_001",
-  parentRepoId: null,
-  slug: "scotch-eggs",
-  author: "ForkRecipe Kitchen",
-  title: "Scotch Eggs",
-  description: "Soft-boiled eggs encased in seasoned pork sausage, breaded and deep-fried to a mahogany crust — the perfect portable British snack with a molten golden yolk at the centre.",
-  cuisine: "British",
-  culture: "English",
-  category: "eggs",
-  tags: ["scotch-eggs", "british", "pork", "deep-fried", "picnic", "snack", "soft-boiled"],
-  difficulty: 3,
-  activeTime: "40 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 0, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Eggs, for the centres (large, very fresh)",              ratioValue: 6,    defaultUnit: "eggs",  substitutions: [] },
-    { ingId: "ing_02", role: "Protein",   name: "Good-quality pork sausage meat (or sausages, skinned)",  ratioValue: 5,    defaultUnit: "parts", substitutions: ["half pork, half black pudding for depth"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Dijon mustard, fine salt, and black pepper",             ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["English mustard for more heat"] },
-    { ingId: "ing_04", role: "Herb",      name: "Fresh sage and thyme, finely chopped together",          ratioValue: 0.2,  defaultUnit: "parts", substitutions: ["fresh flat-leaf parsley and chives"] },
-    { ingId: "ing_05", role: "Spice",     name: "Freshly grated nutmeg",                                  ratioValue: 0.05, defaultUnit: "parts", substitutions: ["mace"] },
-    { ingId: "ing_06", role: "Starch",    name: "Plain flour, for dredging",                              ratioValue: 1,    defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Binder",    name: "Eggs, beaten for the coating (2 eggs)",                  ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Starch",    name: "Panko breadcrumbs (Japanese-style for maximum crunch)",  ratioValue: 2,    defaultUnit: "parts", substitutions: ["coarse dried breadcrumbs"] },
-    { ingId: "ing_09", role: "Fat",       name: "Vegetable oil for deep-frying",                          ratioValue: 10,   defaultUnit: "parts", substitutions: ["sunflower oil", "lard (very traditional)"] },
+  "repoId": "master_british_scotch_eggs_001",
+  "parentRepoId": null,
+  "slug": "scotch-eggs",
+  "author": "ForkRecipe Kitchen",
+  "title": "Oeufs écossais",
+  "description": "Oeufs mous enrobés de saucisses de porc assaisonnées, panés et frits à la croûte d'acajou, la collation britannique portable parfaite avec un jaune doré fondu au centre.",
+  "cuisine": "Anglais",
+  "culture": "changements climatiques",
+  "category": "eggs",
+  "tags": [
+    "Œufs de coco",
+    "britanniques",
+    "porc",
+    "frites profondes",
+    "pique-nique",
+    "collation",
+    "huilé doux"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "40 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Boil",
-      inputs: ["ing_01"],
-      outputState: "soft_boiled_eggs",
-      instructions: "Bring a large pot of water to a rolling boil. Gently lower the eggs on a spoon — do not drop them or the shells will crack. Boil for exactly 6 minutes for a runny-firm yolk that will hold together during frying. Transfer immediately to an ice bath — a bowl of water with as much ice as you can spare — and leave for 5 full minutes. The cold stops the carry-over cooking that would ruin the yolk. Peel carefully under cold running water, starting from the wide air-pocket end. The whites will be very delicate.",
-      visualCue: {
-        primaryTarget: "Peeled eggs with firm, completely set whites and a golden-orange yolk that is set at the edges but trembling and gel-like at the centre.",
-        spectrum: [
-          { state: "Underdone", description: "The white is still soft and tears when handling. Yolk is fully liquid and the egg will not survive being wrapped in sausage meat.", action: "At 5 minutes you get a nearly liquid white — if this happens, fry immediately or the egg will be impossible to wrap. Adjust timing to 6 min 30 sec for more substantial whites." },
-          { state: "Perfect",   description: "White is fully set and peels cleanly without tearing. Yolk is deep orange, gel-like, and trembles when the egg is gently shaken — completely set at the surface but flowing inside.", action: "Handle gently — these eggs have delicate whites that bruise easily. Proceed to wrapping within 20 minutes while still cool." },
-          { state: "Overdone",  description: "Yolk is pale yellow, fully set and chalky throughout. A grey-green ring may be forming around the yolk from the sulphur.", action: "A fully cooked yolk inside a Scotch egg is edible but misses the entire point. Next time ice-bath immediately and reduce timing to 6 minutes exactly." },
-        ],
-      },
-      feelCue: "Hold a peeled egg in your palm — it should feel cool and very slightly yielding when you close your fingers, like pressing a water balloon. Solid all the way through means overcooked.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Œufs, pour les centres (grands, très frais)",
+      "ratioValue": 6,
+      "defaultUnit": "eggs",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "seasoned_sausage",
-      instructions: "Combine the sausage meat, mustard, chopped herbs, nutmeg, and a generous seasoning of salt and pepper in a bowl. Mix with your hands until the seasonings are fully incorporated and the mixture feels slightly tacky and cohesive — no streaks of mustard visible. Fry a small nugget in a hot dry pan and taste it: the sausage should be boldly seasoned, herby, and slightly mustardy. Season more aggressively than seems right — the breaded exterior and the bland egg will absorb a lot of that punch.",
-      visualCue: {
-        primaryTarget: "A cohesive, evenly mixed pale-pink sausage paste — no visible streaks of mustard or clumps of herbs, no separate white fat pieces.",
-        spectrum: [
-          { state: "Underdone", description: "Yellow mustard streaks clearly visible through the pork. Herb pieces not yet distributed. Mixture is not yet cohesive.", action: "Continue mixing with your hands. The heat of your hands helps the fat bind the mixture together." },
-          { state: "Perfect",   description: "Completely homogenous pale-pink mixture that peels cleanly away from the bowl sides. Holds a shape when squeezed. Smells herby and mustardy.", action: "Divide into 6 equal portions and flatten each into a thin round before wrapping the eggs." },
-          { state: "Overdone",  description: "You have overworked warm sausage meat until the fat is beginning to separate — the mixture looks greasy and slightly grey.", action: "Chill in the refrigerator for 15 minutes to firm the fat before wrapping the eggs. Cold sausage meat wraps more cleanly and holds its shape." },
-        ],
-      },
-      feelCue: "The sausage mixture should feel like firm playdough — pliable and smooth, holding the impression of your fingers without sticking to them.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Viande de saucisse de porc de bonne qualité (ou saucisses, décortiquées)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moitié porc, moitié pudding noir pour la profondeur"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["soft_boiled_eggs", "seasoned_sausage"],
-      outputState: "wrapped_scotch_eggs",
-      instructions: "Working with one portion of sausage meat at a time, flatten it in your damp palm into a thin, even oval about 3 mm thick. Set a peeled boiled egg in the centre. Bring the edges of the sausage up and around the egg, pressing gently to seal at the top. Work around the egg, ensuring the sausage layer is even all the way around — thin spots will burst open in the fryer. Roll gently between your palms to even out the surface and seal any seams. The finished shape should be a uniform oval with no visible egg beneath.",
-      visualCue: {
-        primaryTarget: "A smooth, evenly wrapped oval of pale sausage with no cracks, seams, or visible egg showing through. All six eggs uniform in size.",
-        spectrum: [
-          { state: "Underdone", description: "Sausage has thin spots where the egg is visible through the meat, or the top seam has not been properly sealed. The sausage layer is uneven — thick on one side and paper-thin on the other.", action: "Pinch and press more sausage over thin spots. Wet hands help prevent sticking. Even thickness is essential — thin spots overcook and burst while thicker sections are still raw." },
-          { state: "Perfect",   description: "A firm, smooth, uniformly thick sausage casing around each egg. No visible cracks. Uniform oval shape across all 6. The seam is fully pressed closed.", action: "Refrigerate for 15 minutes before breading — chilling firms the sausage and makes dredging much tidier." },
-          { state: "Overdone",  description: "Sausage layer is so thick (over 10 mm) that the centre of the meat will not cook through by the time the outside is deep-golden.", action: "Re-wrap using less sausage per egg, aiming for a consistent 5–7 mm layer all around." },
-        ],
-      },
-      feelCue: "Hold a wrapped egg in your hand — it should feel dense and cold, with no soft patches where the sausage is thin. Even firmness all around means even frying.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Moutarde de Dijon, sel fin et poivre noir",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Moutarde anglaise pour plus de chaleur"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Bread",
-      inputs: ["wrapped_scotch_eggs", "ing_06", "ing_07", "ing_08"],
-      outputState: "breaded_scotch_eggs",
-      instructions: "Set up three shallow bowls: one with flour seasoned with salt and pepper, one with the beaten eggs, one with the panko breadcrumbs. Working one at a time, roll a wrapped egg firmly in the flour, patting off any excess (a thick flour coat creates pastiness). Dip in beaten egg, letting any excess drip for 3 seconds. Roll in panko, pressing the crumbs firmly into every surface — no bare patches. For an extra-crunchy crust, repeat the egg-and-panko dip for a second coat. Set on a rack.",
-      visualCue: {
-        primaryTarget: "A completely, evenly coated oval with no bare spots, the golden panko crumbs visibly clinging in an even, slightly textured layer.",
-        spectrum: [
-          { state: "Underdone", description: "Panko has not been pressed firmly and is falling off in patches. Several bare spots of sausage meat visible. The coating will fall off in the hot oil.", action: "Press the crumbs more firmly all over with cupped palms. Re-dip in egg and re-coat in panko any bare areas before the egg dries." },
-          { state: "Perfect",   description: "Complete, even panko coat with good coverage and visible texture. No bare patches. The oval feels slightly heavier and firmer from the coating.", action: "Chill for 10 minutes before frying — a cold, set coating adheres better in the hot oil than a warm, soft one." },
-          { state: "Overdone",  description: "An excessively thick, lumpy coating from too many layers of egg and crumbs — 3 or more coats. The exterior looks bumpy and uneven.", action: "Two coats maximum. A thick coating absorbs too much oil and becomes soggy before the sausage is cooked through." },
-        ],
-      },
-      feelCue: "Squeeze the breaded egg gently — it should feel rigid and fully coated, with no soft yielding spots where crumbs have fallen away to expose sausage.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Sauge fraîche et thym, finement hachés ensemble",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "persil et ciboulette frais à feuilles plates"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Fry",
-      inputs: ["breaded_scotch_eggs", "ing_09"],
-      outputState: "scotch_eggs",
-      instructions: "Heat at least 8 cm of oil in a heavy, deep pot to 170°C (340°F) — slightly cooler than standard frying temperature to allow the thick sausage layer to cook through before the crumbs burn. Carefully lower 2 or 3 eggs at a time (never crowd). Fry for 7–8 minutes, turning every 90 seconds for even colour, until the crust is a deep mahogany-brown and the eggs float freely. Transfer to a wire rack (not paper towels) for 2–3 minutes to let residual heat finish cooking the centre. Test by pressing: the crust should feel rigid, not soft.",
-      visualCue: {
-        primaryTarget: "Deep mahogany-brown Scotch eggs floating in the oil, with an evenly coloured, crackling-crisp exterior. No pale patches.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is pale golden, not yet deep brown. Oil may have been too cool. The sausage layer will still be raw or pink at the centre.", action: "Continue frying. If the oil is cool, the crumbs will absorb fat and become greasy before the sausage is cooked. Verify oil temperature with a probe." },
-          { state: "Perfect",   description: "Deep mahogany brown, floating, turning freely in the oil. Cut open after resting: sausage is fully cooked through with no pink, and the yolk is golden-orange and gel-like at the centre.", action: "Rest on a wire rack for at least 2 minutes before cutting — the yolk continues setting and the crust sets firm off the heat." },
-          { state: "Overdone",  description: "Crust is very dark brown approaching black. A bitter, burnt-crumb smell. The oil temperature was too high or frying time too long.", action: "Remove immediately. The sausage interior and egg are likely still fine — peel off the darkest sections of crust before serving if very burnt." },
-        ],
-      },
-      feelCue: "Tap the Scotch egg with a knuckle immediately out of the fryer — it should sound hollow and sharp, like knocking on pottery. A dull thud means the crust hasn't crisped.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Noix de muscade fraîchement râpée",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Mace"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Starch",
+      "name": "Farine pure, pour dragage",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Binder",
+      "name": "Oeufs battus pour le revêtement (2 œufs)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Starch",
+      "name": "Panko chapelures (de style japonais pour une croûte maximale)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "miettes de pain séchées grossières"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile végétale pour friture profonde",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile de tournesol",
+        "saindoux (très traditionnel)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "soft_boiled_eggs",
+      "instructions": "Portez une grande casserole d'eau à ébullition. Abaissez doucement les œufs sur une cuillère — ne les déposez pas ou les coquilles craqueront. Faire bouillir pendant exactement 6 minutes pour un jaune d'une firme runny qui tiendra pendant la friture. Transférer immédiatement dans un bain de glace — un bol d'eau avec autant de glace que vous pouvez l'épargner — et laisser 5 minutes complètes. Le froid arrête la cuisson qui gâcherait le jaune. Peler soigneusement sous l'eau froide courante, à partir de l'extrémité large de la poche d'air. Les blancs seront très délicats.",
+      "visualCue": {
+        "primaryTarget": "Oeufs épluchés avec des blancs fermes et un jaune d'or-orange qui est fixé aux bords mais tremblant et gel-like au centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le blanc est encore doux et larmes lors de la manipulation. Yolk est entièrement liquide et l'œuf ne survivra pas à être enveloppé dans la viande de saucisse.",
+            "action": "À 5 minutes vous obtenez un blanc presque liquide — si cela se produit, faire frire immédiatement ou l'œuf sera impossible à envelopper. Réglez le timing à 6 min 30 sec pour les blancs plus importants."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le blanc est prêt et pele sans déchirer. Le jaune est d'une couleur orangée profonde, de gel et tremble lorsque l'œuf est légèrement secoué.",
+            "action": "Manipulation douce — ces œufs ont des blancs délicats qui contusent facilement. Procéder à l'emballage dans les 20 minutes, tout en restant frais."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les jaunes sont jaune pâle, entièrement sertis et crayeux. Un anneau vert-gris peut se former autour du jaune à partir du soufre.",
+            "action": "Un jaune entièrement cuit à l'intérieur d'un œuf écossais est comestible mais manque tout le point. La prochaine fois, bain de glace immédiatement et réduire le timing à 6 minutes exactement."
+          }
+        ]
+      },
+      "feelCue": "Tenez un oeuf pelé dans votre paume — il devrait se sentir frais et très légèrement céder quand vous fermez les doigts, comme appuyer sur un ballon d'eau. Solide tout le chemin à travers les moyens trop cuits."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "seasoned_sausage",
+      "instructions": "Mélanger la viande de saucisse, la moutarde, les herbes hachées, la muscade et un assaisonnement généreux de sel et de poivre dans un bol. Mélangez avec vos mains jusqu'à ce que les assaisonnements soient entièrement incorporés et que le mélange se sente légèrement collant et cohésif — aucune stries de moutarde visible. Faire frire une petite pépite dans une poêle sèche chaude et goûter : la saucisse doit être assaisonnée avec hardiesse, herbie et légèrement moutarde. Assaisonner de façon plus agressive qu'il ne semble juste — l'extérieur pané et l'œuf blanc absorberont beaucoup de ce punch.",
+      "visualCue": {
+        "primaryTarget": "Une pâte à saucisses cohésive, uniformément mélangée, à la rose pâle — pas de stries visibles de moutarde ou de grumeaux d'herbes, pas de morceaux de graisse blanche séparés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La moutarde jaune est clairement visible à travers le porc. Pièces de plantes non encore distribuées. Le mélange n'est pas encore cohérent.",
+            "action": "Continuez à mélanger avec vos mains. La chaleur de vos mains aide la graisse à lier le mélange ensemble."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement homogène mélange de rose pâle qui pele proprement les côtés du bol. Prend une forme lorsqu'elle est pressée. Ça sent l'herbe et la moutarde.",
+            "action": "Diviser en 6 portions égales et aplatir chacune en une ronde mince avant d'envelopper les œufs."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez surmené la viande de saucisse chaude jusqu'à ce que la graisse commence à se séparer — le mélange semble gras et légèrement gris.",
+            "action": "Refroidir au réfrigérateur pendant 15 minutes pour fermer la graisse avant d'envelopper les œufs. La viande de saucisse froide enveloppe plus propre et conserve sa forme."
+          }
+        ]
+      },
+      "feelCue": "Le mélange de saucisses doit se sentir comme du charrue ferme — souple et lisse, tenant l'impression de vos doigts sans s'y coller."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "soft_boiled_eggs",
+        "seasoned_sausage"
+      ],
+      "outputState": "wrapped_scotch_eggs",
+      "instructions": "Travaillant avec une portion de viande de saucisse à la fois, aplatissez-la dans votre paume humide dans un mince, même ovale environ 3 mm d'épaisseur. Mettre un oeuf pelé bouilli au centre. Apportez les bords de la saucisse vers le haut et autour de l'œuf, pressez doucement pour sceller le dessus. Travaillez autour de l'œuf, en veillant à ce que la couche de saucisse soit même tout autour — de fines taches s'ouvriront dans la friteuse. Roulez doucement entre vos paumes pour épater la surface et sceller toutes les coutures. La forme finie doit être un ovale uniforme sans oeuf visible en dessous.",
+      "visualCue": {
+        "primaryTarget": "Un ovale lisse et uniformément enveloppé de saucisse pâle sans fissures, coutures ou oeuf visible. Les six œufs sont de taille uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le saucisson a des taches minces où l'oeuf est visible à travers la viande, ou la couture supérieure n'a pas été correctement scellée. La couche de saucisse est inégale — épaisse d'un côté et fine de papier de l'autre.",
+            "action": "Pincez et pressez plus de saucisses sur les petites taches. Les mains mouillées aident à empêcher le collage. Même l'épaisseur est essentielle: les taches minces sont trop cuites et éclatent alors que les sections plus épaisses sont encore crues."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un boyau de saucisse ferme, lisse et uniformément épais autour de chaque œuf. Aucune fissure visible. Forme ovale uniforme sur l'ensemble 6. La couture est complètement pressée.",
+            "action": "Réfrigérer pendant 15 minutes avant le panage — refroidir pousse la saucisse et rend le dragage beaucoup plus doux."
+          },
+          {
+            "state": "Overdone",
+            "description": "La couche de saucisson est si épaisse (plus de 10 mm) que le centre de la viande ne fera pas cuire au moment où l'extérieur est en or profond.",
+            "action": "Re-emballer en utilisant moins de saucisses par œuf, visant une couche de 5 à 7 mm cohérente tout autour."
+          }
+        ]
+      },
+      "feelCue": "Tenez un œuf enveloppé dans votre main — il devrait se sentir dense et froid, sans taches molles où la saucisse est mince. Même la fermeté tout autour signifie même la friture."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Pain",
+      "inputs": [
+        "wrapped_scotch_eggs",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "breaded_scotch_eggs",
+      "instructions": "Mettre en place trois bols peu profonds : un avec de la farine assaisonnée de sel et de poivre, un avec les œufs battus, un avec la chapelure panko. Travailler un à la fois, rouler fermement un œuf enveloppé dans la farine, en tapotant tout excès (un épais manteau de farine crée le pastissivité). Plongez dans l'œuf battu, laissant couler tout excès pendant 3 secondes. Roulez dans le panko, pressez fermement les miettes dans chaque surface — pas de taches nues. Pour une croûte extra-croûte, répétez la trempette d'œuf et de panko pour une deuxième couche. Sur un rack.",
+      "visualCue": {
+        "primaryTarget": "Un ovale entièrement, uniformément enduit sans taches nues, le panko doré s'accroche visiblement dans une couche uniforme légèrement texturée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Panko n'a pas été fermement pressé et tombe dans des patchs. Plusieurs taches nues de viande de saucisse visible. Le revêtement tombera dans l'huile chaude.",
+            "action": "Appuyez plus fermement sur les miettes partout avec des paumes coupées. Reprendre l'oeuf et re-coat dans le panko toutes les zones nues avant que l'oeuf sèche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couvercle panko complet, même avec une bonne couverture et une texture visible. Pas de taches nues. L'ovale est légèrement plus lourd et plus ferme du revêtement.",
+            "action": "Réfrigérer pendant 10 minutes avant de frire — un revêtement froid et set adhère mieux à l'huile chaude qu'à celle chaude et douce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un revêtement trop épais et grumeux de trop de couches d'oeufs et de miettes — 3 couches ou plus. L'extérieur semble bosselé et inégal.",
+            "action": "Deux couches maximum. Un revêtement épais absorbe trop d'huile et devient mousseux avant que la saucisse soit cuite."
+          }
+        ]
+      },
+      "feelCue": "Pressez doucement l'oeuf pané — il doit se sentir rigide et entièrement enduit, sans taches molles qui laissent tomber les miettes pour exposer les saucisses."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Fry",
+      "inputs": [
+        "breaded_scotch_eggs",
+        "ing_09"
+      ],
+      "outputState": "scotch_eggs",
+      "instructions": "Chauffer au moins 8 cm d'huile dans un pot lourd et profond à 170°C (340°F) – une température légèrement plus froide que la température standard pour permettre à la couche épaisse de saucisse de cuire avant que les miettes ne brûlent. Abaissez soigneusement 2 ou 3 œufs à la fois (jamais de foule). Faire frire 7 à 8 minutes, tourner toutes les 90 secondes pour obtenir une couleur uniforme, jusqu'à ce que la croûte soit un brun acajou profond et que les œufs flottent librement. Transférer sur un porte-fils (pas sur des serviettes en papier) pendant 2 à 3 minutes pour laisser la cuisson au centre. Tester en appuyant : la croûte doit être rigide et non molle.",
+      "visualCue": {
+        "primaryTarget": "Oeufs écossais brun acajou profond flottant dans l'huile, avec un extérieur crépitant de couleur uniforme. Pas de tache pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est dorée pâle, pas encore brun foncé. L'huile a peut-être été trop froide. La couche de saucisse sera encore crue ou rose au centre.",
+            "action": "Continuez à frire. Si l'huile est fraîche, les miettes absorberont la graisse et deviendront grasses avant que la saucisse soit cuite. Vérifier la température de l'huile avec une sonde."
+          },
+          {
+            "state": "Perfect",
+            "description": "Marron acajou profond, flottant, tournant librement dans l'huile. Couper après le repos : la saucisse est entièrement cuite sans rose, et le jaune est doré-orange et gelé au centre.",
+            "action": "Reposez-vous sur une grille au moins 2 minutes avant de couper — le jaune continue à se poser et la croûte ferme la chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est brun très foncé et approche du noir. Une odeur amère et brûlée. La température de l'huile était trop élevée ou trop longue.",
+            "action": "Supprimer immédiatement. L'intérieur de la saucisse et l'œuf sont probablement encore fins — éplucher les sections les plus sombres de la croûte avant de servir s'il est très brûlé."
+          }
+        ]
+      },
+      "feelCue": "Tapotez l'œuf écossais avec un joint immédiatement hors de la friteuse — il devrait sembler creux et tranchant, comme frapper sur la poterie. La croûte n'est pas croustillante."
+    }
+  ]
 };

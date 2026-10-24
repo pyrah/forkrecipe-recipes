@@ -1,100 +1,230 @@
 export default {
-  repoId: "master_french_oysters_mignonette_001",
-  parentRepoId: null,
-  slug: "oysters-mignonette",
-  author: "ForkRecipe Kitchen",
-
-  title: "Oysters with Mignonette Granita",
-  description: "French raw oysters served on crushed ice with a mignonette granita — shallot and sherry vinegar frozen into sharp, icy crystals that melt over the cold oyster, heightening the brine without masking it. The simplest luxury in the kitchen.",
-  cuisine: "French",
-  culture: "French",
-  category: "seafood",
-
-  tags: ["gluten-free", "raw", "oyster", "french", "elegant", "appetiser"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "2 hrs 20 min",
-  ratioSystem: "weight",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 0, salty: 4, sour: 4, bitter: 1, umami: 5, heat: 1 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",    name: "Live oysters (Fines de Claire, Belon, or Kumamoto)", ratioValue: 900, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Acid",       name: "Sherry vinegar (Jerez vinegar)",                    ratioValue: 80,  defaultUnit: "ml", substitutions: ["champagne vinegar", "white wine vinegar"] },
-    { ingId: "ing_03", role: "Allium",     name: "Shallots, very finely minced",                      ratioValue: 40,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Coarsely cracked black pepper",                     ratioValue: 3,   defaultUnit: "g", substitutions: ["pink peppercorns, crushed"] },
-    { ingId: "ing_05", role: "Liquid",     name: "Cold water",                                        ratioValue: 20,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Flaky sea salt",                                    ratioValue: 1,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Structure",  name: "Crushed ice, for serving",                          ratioValue: 400, defaultUnit: "g", substitutions: ["coarse rock salt bed"] },
+  "repoId": "master_french_oysters_mignonette_001",
+  "parentRepoId": null,
+  "slug": "oysters-mignonette",
+  "author": "ForkRecipe Kitchen",
+  "title": "Huîtres avec Mignonette Granita",
+  "description": "Des huîtres françaises crues servies sur la glace concassée avec une mignonette granite — vinaigre d'échalote et de sherry congelées dans des cristaux glacés et tranchants qui fondent sur l'huître froide, élevant la saumure sans la masquer. Le luxe le plus simple de la cuisine.",
+  "cuisine": "Français",
+  "culture": "Français",
+  "category": "seafood",
+  "tags": [
+    "Sans gluten",
+    "cru",
+    "huître",
+    "français",
+    "élégant",
+    "Entrée"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "2 hrs 20 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Infuse",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "mignonette_liquid",
-      instructions: "Combine the sherry vinegar, very finely minced shallots, cracked black pepper, and cold water in a small bowl. Stir to combine. Taste: it should be sharply acidic with a pungent shallot note and a flicker of pepper heat. Adjust the balance with a touch more water if very sharp, or an extra pinch of cracked pepper for more heat. The shallots will soften slightly in the vinegar over time.",
-      visualCue: {
-        primaryTarget: "Mignonette liquid",
-        spectrum: [
-          { state: "Underdone", description: "The vinegar is still raw and harsh. The shallots are still raw and aggressive.", action: "Let the mixture rest for 10 minutes before tasting — the shallots need time to macerate and lose some of their raw sharpness." },
-          { state: "Perfect",   description: "A clear, amber liquid with fine shallot pieces that have begun to turn slightly translucent. Smells of vinegar and shallot with a pleasant, clean sharpness. Tastes balanced — tart but not harsh, savoury from the shallot.", action: "Pour into a flat freezer-safe dish and freeze." },
-          { state: "Overdone",  description: "N/A — the mignonette cannot be over-prepared at this stage.", action: "Proceed to freezing." },
-        ],
-      },
-      feelCue: "A drop of mignonette on your wrist should sting slightly from the vinegar and cool from the liquid — together they should feel bracing, not aggressive. That bracing quality is what refreshes the oyster's brine rather than overpowering it.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Huîtres vivantes (Fines de Claire, Belon ou Kumamoto)",
+      "ratioValue": 900,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Freeze",
-      inputs: ["mignonette_liquid"],
-      outputState: "mignonette_granita",
-      instructions: "Pour the mignonette liquid into a wide, shallow freezer-safe dish — the thinner the layer, the faster and more evenly it freezes. Place in the freezer. After 45 minutes, drag a fork across the partially frozen surface to break it into crystals. Repeat every 30 minutes for 2 hours total, until you have a loose, shimmering mass of sharp vinegar-shallot ice crystals.",
-      visualCue: {
-        primaryTarget: "Granita in the freezer dish",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is barely cold and still fully liquid after 45 minutes.", action: "Ensure the freezer is at the correct temperature (-18 C). Check the dish is flat and the layer is thin (no more than 1.5 cm)." },
-          { state: "Perfect",   description: "A loose, dry-looking mound of individual, translucent, amber-coloured ice crystals — like rough pink salt but slightly darker. The crystals fall apart when scraped and melt slowly on the tongue rather than in a single cold rush.", action: "Cover and keep frozen until the moment of serving. It will hold for up to 3 days." },
-          { state: "Overdone",  description: "Frozen into a solid block — not raked into crystals. Will shatter rather than scrape cleanly.", action: "Leave at room temperature for 3 minutes, then scrape vigorously with a fork to break into crystals." },
-        ],
-      },
-      feelCue: "Take a pinch of the finished granita between your fingers — the crystals should be discrete and separate, melting quickly against your warm skin into a cold, sharp, vinegar-scented liquid.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Vinaigre de sherry (vinaigre de Jerez)",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de champagne",
+        "vinaigre de vin blanc"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Peel",
-      inputs: ["ing_01"],
-      outputState: "shucked_oysters",
-      instructions: "Hold each oyster in a folded kitchen towel, flat shell up, hinge toward you. Insert an oyster knife into the hinge at a 45-degree angle. Apply firm, twisting pressure until the hinge pops. Slide the knife along the inner surface of the flat top shell, severing the adductor muscle. Discard the flat top shell. Sever the muscle on the bottom cup shell as well. Check the liquor: it should be clear and faintly salty — milky or muddy liquor means the oyster is stressed. Arrange on the crushed ice immediately.",
-      visualCue: {
-        primaryTarget: "Opened oyster in its cup",
-        spectrum: [
-          { state: "Underdone", description: "The knife is not penetrating the hinge — the oyster is winning. Considerable force is being applied with no movement.", action: "Redirect the knife tip to the very tip of the hinge, precisely where the two shells meet at a point. The hinge is the weakest point; all force should concentrate there." },
-          { state: "Perfect",   description: "Oyster sits in its deep cup surrounded by clear, perfectly clean liquor that smells of the sea. The flesh is cream-grey and firm, with a glistening surface. No shell fragments visible.", action: "Arrange on crushed ice with the cup side down and the opening toward the guest. Do not drain the liquor." },
-          { state: "Overdone",  description: "Shell fragments are floating in the liquor from rough shucking. The muscle has been torn rather than cleanly severed.", action: "Use the knife tip to carefully fish out any shell fragments. If the liquor is very milky or has shell debris, pour most of it away gently — it will not taste good." },
-        ],
-      },
-      feelCue: "Tilt an opened oyster on its shell — the liquor should pool in the deep cup and the flesh should slide slightly but remain attached to the shell. If the liquor runs out immediately, the cup is too shallow or the shell was broken.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Échalotes, très finement hachées",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["shucked_oysters", "mignonette_granita", "ing_07", "ing_06"],
-      outputState: "finished_oysters_mignonette",
-      instructions: "Arrange the shucked oysters in their cups on a large platter of crushed ice — the ice keeps them cold and holds them level. Place a half-teaspoon of mignonette granita on top of each oyster just before serving. Add a tiny pinch of flaky salt if the oysters are very mild. Serve immediately, before the granita melts completely.",
-      visualCue: {
-        primaryTarget: "Dressed oysters on the platter",
-        spectrum: [
-          { state: "Underdone", description: "No granita has been placed yet, or it has all melted. The oysters taste of nothing but raw sea.", action: "Place the granita at the very last moment — it melts fast and the contrast between cold crystal and cold oyster is the point of the dish." },
-          { state: "Perfect",   description: "Each oyster cradles a small mound of amber granita crystals that are just beginning to melt at their edges, releasing a fragrant mist of sherry vinegar and shallot. The visual: cream, grey, and translucent amber on white crushed ice.", action: "Serve immediately. Eat in one motion — lift the shell, tip everything to the back of the tongue, and let the brine, granita, and oyster meet there simultaneously." },
-          { state: "Overdone",  description: "The granita has fully melted and is now just a pool of vinegar liquid on top of the oyster, overpowering the delicate sea flavour.", action: "Tip most of the melted vinegar liquid off each shell before serving. Serve with fresh granita if available." },
-        ],
-      },
-      feelCue: "Tip the oyster to your lips — the first sensation should be cold, then brine, then a sharp, melting crystal that dissolves into the back of the mouth with a clean, acidic shiver. If you are not involuntarily salivating, the granita has not been made sharp enough.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Poivre noir grossièrement craqué",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "grains de poivre roses, broyés"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel de mer blanc",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Structure",
+      "name": "Glaces broyées, pour servir",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "lit de sel de roche grossière"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Infuse",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "mignonette_liquid",
+      "instructions": "Mélanger le vinaigre de sherry, les échalotes très finement hachées, le poivre noir cassé et l'eau froide dans un petit bol. Mélanger. Bouche : il doit être fortement acidulé avec une note d'échalote piquante et une chaleur de poivre. Réglez l'équilibre avec une touche plus d'eau si très tranchante, ou une pincée supplémentaire de poivre fissuré pour plus de chaleur. Les échalotes se ramolliront légèrement dans le vinaigre au fil du temps.",
+      "visualCue": {
+        "primaryTarget": "Mignonette liquide",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le vinaigre est encore cru et dur. Les échalotes sont encore crues et agressives.",
+            "action": "Laisser reposer le mélange 10 minutes avant la dégustation — les échalotes ont besoin de temps pour macérer et perdre une partie de leur netteté brute."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un liquide ambré clair avec de fines échalotes qui ont commencé à tourner légèrement translucide. sent le vinaigre et l'échalote avec une netteté agréable et propre. Goûts équilibrés — tartes mais pas dures, salés de l'échalote.",
+            "action": "Verser dans un plat plat et congeler."
+          },
+          {
+            "state": "Overdone",
+            "description": "S/O — la mignonette ne peut pas être trop préparée à ce stade.",
+            "action": "Passer à la congélation."
+          }
+        ]
+      },
+      "feelCue": "Une goutte de mignonette sur le poignet devrait piquer légèrement du vinaigre et refroidir à partir du liquide — ensemble, ils devraient se sentir accroupis, pas agressifs. Cette qualité d'armature est ce qui rafraîchit la saumure de l'huître plutôt que de la surcharger."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Gel",
+      "inputs": [
+        "mignonette_liquid"
+      ],
+      "outputState": "mignonette_granita",
+      "instructions": "Verser le liquide de la mignonette dans un plat large et peu profond, sans danger pour le congélateur. Placez dans le congélateur. Après 45 minutes, faites glisser une fourchette sur la surface partiellement gelée pour la briser en cristaux. Répétez toutes les 30 minutes pendant 2 heures au total, jusqu'à ce que vous ayez une masse molle et chatoyante de cristaux de glace au vinaigre vif-halogéné.",
+      "visualCue": {
+        "primaryTarget": "Granita dans le plat congélateur",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est à peine froid et encore complètement liquide après 45 minutes.",
+            "action": "S'assurer que le congélateur est à la bonne température (-18 C). Vérifiez que le plat est plat et que la couche est mince (pas plus de 1,5 cm)."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un monticule lâche et sec de cristaux de glace individuels, translucides et de couleur ambre, comme du sel rose rugueux mais légèrement plus foncé. Les cristaux s'effondrent lorsqu'ils sont grattés et fondent lentement sur la langue plutôt que dans une seule ruée vers le froid.",
+            "action": "Couvrir et garder congelé jusqu'au moment de servir. Il tiendra jusqu'à 3 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Congelé dans un bloc solide — non râpé dans des cristaux. Sera brisé plutôt que racler proprement.",
+            "action": "Laisser à température ambiante pendant 3 minutes, puis gratter vigoureusement avec une fourchette pour se casser en cristaux."
+          }
+        ]
+      },
+      "feelCue": "Prenez une pincée de la granite finie entre vos doigts — les cristaux doivent être discrets et séparés, fondre rapidement contre votre peau chaude dans un liquide froid, tranchant, parfumé au vinaigre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Peler",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "shucked_oysters",
+      "instructions": "Tenez chaque huître dans une serviette de cuisine pliée, une coquille plate vers le haut, charnière vers vous. Insérez un couteau à huîtres dans la charnière à un angle de 45 degrés. Appliquer une pression ferme et torsadante jusqu'à ce que la charnière éclate. Glissez le couteau le long de la surface interne de la coque supérieure plane, coupant le muscle adducteur. Jetez la coque plane. Coupez également le muscle sur la coquille de la tasse inférieure. Vérifiez l'alcool: il doit être clair et légèrement salé. Disposer immédiatement sur la glace écrasée.",
+      "visualCue": {
+        "primaryTarget": "Huître ouverte dans sa tasse",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le couteau ne pénètre pas la charnière, l'huître gagne. Une force considérable est appliquée sans mouvement.",
+            "action": "Réorienter l'extrémité du couteau vers l'extrémité même de la charnière, précisément là où les deux coquilles se rencontrent en un point. La charnière est le point le plus faible; toute la force doit se concentrer là."
+          },
+          {
+            "state": "Perfect",
+            "description": "Oyster est assis dans sa coupe profonde entourée d'une liqueur claire et parfaitement propre qui sent la mer. La chair est grise-crème et ferme, avec une surface brillante. Aucun fragment de coque visible.",
+            "action": "Disposer sur la glace écrasée avec le côté de la tasse vers le bas et l'ouverture vers l'invité. Ne videz pas l'alcool."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des fragments de coquillages flottent dans l'alcool à cause d'un shucking brutal. Le muscle a été déchiré plutôt que complètement coupé.",
+            "action": "Utilisez l'embout du couteau pour pêcher soigneusement les fragments de coquille. Si l'alcool est très laiteux ou a des débris de coquille, versez - en la plupart en douceur — il n'aura pas bon goût."
+          }
+        ]
+      },
+      "feelCue": "Tilt une huître ouverte sur sa coquille — la liqueur devrait se mettre dans la coupe profonde et la chair devrait glisser légèrement mais rester attachée à la coquille. Si l'alcool s'épuise immédiatement, la tasse est trop superficielle ou la coquille est cassée."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "shucked_oysters",
+        "mignonette_granita",
+        "ing_07",
+        "ing_06"
+      ],
+      "outputState": "finished_oysters_mignonette",
+      "instructions": "Disposer les huîtres dans leurs tasses sur un grand plateau de glace écrasée — la glace les garde au froid et les maintient à niveau. Placer une demi-flaque de mignonette granita sur chaque huître juste avant de servir. Ajouter une petite pincée de sel si les huîtres sont très douces. Servir immédiatement, avant que la granite ne fonde complètement.",
+      "visualCue": {
+        "primaryTarget": "Huîtres habillées sur le plateau",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Aucune granite n'a encore été placée, ou tout a fondu. Les huîtres ne goûtent que de la mer crue.",
+            "action": "Placez la granite au dernier moment — elle fond rapidement et le contraste entre le cristal froid et l'huître froide est le point du plat."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque huître berce un petit monticule de cristaux de granite ambre qui commencent à peine à fondre à leurs bords, libérant une brume parfumée de vinaigre de sherry et d'échalote. Le visuel : crème, gris et ambre translucide sur glace blanche écrasée.",
+            "action": "Servir immédiatement. Mangez en un seul mouvement — soulevez la coquille, mettez tout à l'arrière de la langue, et laissez la saumure, la granite et l'huître s'y rencontrer simultanément."
+          },
+          {
+            "state": "Overdone",
+            "description": "La granite a complètement fondu et n'est maintenant qu'une piscine de vinaigre liquide sur le dessus de l'huître, emportant la délicate saveur de la mer.",
+            "action": "Conseilnez la plupart du vinaigre fondu liquide de chaque coque avant de servir. Servir avec une granite fraîche si disponible."
+          }
+        ]
+      },
+      "feelCue": "Astucez l'huître à vos lèvres — la première sensation doit être froide, puis saumure, puis un cristal tranchant et fondant qui se dissout dans l'arrière de la bouche avec un frisson propre et acide. Si vous n'êtes pas involontairement salivant, la granite n'a pas été assez nette."
+    }
+  ]
 };

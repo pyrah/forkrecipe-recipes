@@ -1,81 +1,214 @@
 export default {
-  repoId: "master_british_crumpets_001",
-  parentRepoId: null,
-  slug: "crumpets",
-  author: "ForkRecipe Kitchen",
-  title: "Crumpets",
-  description: "Batter-poured rounds cooked in rings on a griddle until a lacework of holes forms on top, leaving a moist, spongy interior and a crisply-toasted base perfect for soaking butter.",
-  cuisine: "British",
-  culture: "British",
-  category: "breads",
-  tags: ["crumpet", "british", "griddle", "breakfast", "yeast"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "2 hr 30 min",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 2, sour: 1, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",                         ratioValue: 100,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_02", role: "Hydration",  name: "Warm water (105°F / 41°C)",                 ratioValue: 80,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_03", role: "Hydration",  name: "Warm whole milk (105°F / 41°C)",            ratioValue: 30,   defaultUnit: "%", substitutions: ["all water for dairy-free"] },
-    { ingId: "ing_04", role: "Leavener",   name: "Instant dry yeast",                         ratioValue: 1.5,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Leavener",   name: "Baking soda",                               ratioValue: 0.5,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine salt",                                 ratioValue: 1.5,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Sweetener",  name: "Sugar",                                     ratioValue: 1,    defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",        name: "Butter (for greasing rings and griddle)",   ratioValue: 3,    defaultUnit: "%", substitutions: ["neutral oil"] },
-    { ingId: "ing_09", role: "Liquid",     name: "Warm water (2 tbsp, for baking soda slurry)", ratioValue: 5, defaultUnit: "%", substitutions: [] },
+  "repoId": "master_british_crumpets_001",
+  "parentRepoId": null,
+  "slug": "crumpets",
+  "author": "ForkRecipe Kitchen",
+  "title": "Crevettes",
+  "description": "Des rondelles cuites en rondelles sur une grille jusqu'à ce qu'une dentelle de trous se forme sur le dessus, laissant un intérieur humide et spongieux et une base croustillante pour tremper le beurre.",
+  "cuisine": "Anglais",
+  "culture": "Anglais",
+  "category": "breads",
+  "tags": [
+    "Carotte",
+    "britanniques",
+    "grille",
+    "Petit déjeuner",
+    "levure"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "2 hr 30 min",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Ferment",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_06", "ing_07"],
-      outputState: "fermented_batter",
-      instructions: "Whisk together the flour, yeast, sugar, and salt in a large bowl. Add the warm water and warm milk and whisk vigorously until you have a very smooth, thick batter with no lumps. The batter at this stage should be notably thicker than pancake batter — more like a thick milkshake. Cover with plastic wrap or a damp cloth and leave to ferment at room temperature for 1–1.5 hours. The batter will rise, become very bubbly and frothy, and the volume will roughly double. The yeast activity is what creates the hole structure: when the batter hits the hot griddle, the CO2 dissolved in it rises and punches through the surface, forming the characteristic crumpet holes.",
-      visualCue: {
-        primaryTarget: "A frothy, actively bubbling batter that has visibly risen in the bowl. Lifting the whisk, the batter falls in thick, bubbly ribbons. The surface should look like a foam of tiny bubbles — a sign of active yeast and sufficient fermentation.",
-        spectrum: [
-          { state: "Underdone", description: "Batter looks flat and dense with no surface bubbles. It has barely risen. The yeast is under-active — either the water was too hot (killed the yeast) or too cold (yeast not activated).", action: "Move to a warmer spot (75–80°F / 24–27°C) and wait another 30–45 minutes. If still flat, the yeast may be dead — start again with fresh yeast." },
-          { state: "Perfect",   description: "Batter has doubled or nearly so, surface is a foam of small bubbles. When stirred, the batter falls from the whisk in bubbly ribbons with visible trapped air. Smells of fresh yeast and faintly tangy.", action: "Dissolve the baking soda in 2 tablespoons of warm water and stir into the batter. Immediately proceed to cooking." },
-          { state: "Overdone",  description: "Batter has over-fermented — it smells aggressively sour or alcoholic, has begun to deflate, and the bubbles have coalesced into large irregular pockets.", action: "Proceed immediately. The crumpets will have an aggressively tangy flavor (not necessarily unpleasant) but the hole structure may be irregular. Reduce fermentation time next batch." },
-        ],
-      },
-      feelCue: "Stir the fermented batter slowly and feel the air trapped in it — the whisk should pull through with the soft resistance of something full of bubbles, like stirring a slightly thick foam. Taste a small amount: it should be yeasty, faintly sour, and alive. Not sour like vinegar but bright and tangy like a young sourdough, with a wheaty backbone.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Dissolve",
-      inputs: ["fermented_batter", "ing_05", "ing_09"],
-      outputState: "cooking_batter",
-      instructions: "Dissolve the baking soda completely in 2 tablespoons of warm water, then stir it into the fermented batter quickly and thoroughly. The baking soda creates an immediate reaction with the acids from the yeast fermentation, producing extra CO2 bubbles — you will see the batter immediately become even frothier. This dual leavening (yeast + baking soda) is what gives crumpets their characteristic deep, open hole structure. Cook within 5–10 minutes of adding the baking soda, while the reaction is still active. The batter at this stage should be thick enough to hold its shape in the ring mold without flowing under the ring, but pourable — about the consistency of slightly-thinned yogurt.",
-      visualCue: {
-        primaryTarget: "A noticeably frothier, more aerated batter after the baking soda addition. Small bubbles cover the entire surface. When you pour a ladleful, it should fall in a thick, bubbly sheet, not a thin stream.",
-        spectrum: [
-          { state: "Underdone", description: "Batter looks unchanged after adding the baking soda — no increase in froth or aeration. The reaction did not occur because the baking soda was not fully dissolved, or there was insufficient acid from fermentation.", action: "Stir more vigorously for 30 seconds. If still flat, proceed anyway — the yeast bubbles alone may produce adequate holes, though they will be smaller." },
-          { state: "Perfect",   description: "Noticeably frothier after the soda addition. Surface covered in small bubbles. Batter pours in a thick, aerated sheet and holds a slight mound in the ladle.", action: "Cook immediately on a preheated, buttered griddle with greased crumpet rings." },
-          { state: "Overdone",  description: "Batter poured too long after adding baking soda — 20+ minutes — and the reaction has dissipated. The batter looks flat again and the soda flavor may be detectable as a slightly metallic taste.", action: "Proceed regardless. The yeast activity will still produce some holes. If the metallic flavor is present, add a few drops of lemon juice to balance the residual alkalinity." },
-        ],
-      },
-      feelCue: "Immediately after stirring in the baking soda, the batter should feel lighter under the ladle — the increased gas makes it almost feathery. Pour a small amount on the back of your hand: it should feel cool and smooth, and the air bubbles should be visible as tiny, tight specks throughout the coating. This aeration is what makes the hole structure possible.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau chaude (105°F / 41°C)",
+      "ratioValue": 80,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Bake",
-      inputs: ["cooking_batter", "ing_08"],
-      outputState: "finished_crumpets",
-      instructions: "Heat a flat griddle or heavy skillet over low-medium heat (325°F / 163°C). Butter the inside of 3.5-inch / 9 cm crumpet rings (or egg rings) generously. Place the rings on the griddle and butter the griddle surface lightly inside each ring. Fill each ring to about two-thirds full with batter — roughly 3–4 tablespoons. The batter should not overflow but should have room to rise. Cook uncovered for 8–12 minutes without disturbing. Within 2–3 minutes the surface will begin to set at the edges while the center remains liquid; over the next several minutes, bubbles will rise through the batter and burst on the surface, forming the characteristic holes. When the entire surface looks set and matte with a defined lacework of holes, and the top looks nearly dry (not shiny), remove the rings with tongs and flip the crumpets. Cook the second side for 1–2 minutes until the base is golden-crisp. Cool on a rack and toast before serving.",
-      visualCue: {
-        primaryTarget: "A fully formed crumpet with a dense lacework of small, distinct holes covering the entire top surface, a matte, set appearance, and a crisply golden bottom. The holes should be clean and open, not collapsed or wet-rimmed.",
-        spectrum: [
-          { state: "Underdone", description: "The top surface still looks shiny and wet in the center. Holes have started to form but many are still open bubbles, not dry holes. The crumpet feels squishy and floppy when you try to remove the ring.", action: "Continue cooking uncovered. Do not rush by raising the heat — higher heat burns the base before the top sets. Patience is the crumpet's requirement. Cook 2–3 more minutes and check again." },
-          { state: "Perfect",   description: "Entire top surface is matte and set, covered in open, clean holes of varying sizes. The ring releases easily and the crumpet holds its shape. Bottom is golden brown when flipped — a firm, toasted base that contrasts with the soft, holey interior.", action: "Flip, cook 1–2 minutes on the top side for a light color, then cool on a rack. Toast before serving." },
-          { state: "Overdone",  description: "Bottom is dark brown or burnt. The crumpet smells of scorched butter. Top surface may be over-set and look almost like a fried egg in texture — solid rather than spongy.", action: "Reduce griddle heat significantly for the next batch. English crumpets need very gentle, sustained heat — not the medium-high heat used for pancakes. If the bottom is merely dark (not burnt), the interior is likely fine; the char can be scraped away." },
-        ],
-      },
-      feelCue: "A properly finished crumpet should feel substantial but yielding when you press the top — like pressing a firm sponge. The base should feel crisp and rigid, with a dry crackle when you press it. When you split or bite into a toasted crumpet, the interior should give with the soft, tender squish of bread soaked in butter — the holes drawing the butter deep inside. That butter absorption is the soul of a good crumpet: without open holes, there is nowhere for the butter to go.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Lait entier chaud (105°F / 41°C)",
+      "ratioValue": 30,
+      "defaultUnit": "%",
+      "substitutions": [
+        "toute l'eau pour les produits laitiers"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "levure sèche instantanée",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "Soda au four",
+      "ratioValue": 0.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Beurre (pour anneaux de graissage et grille)",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": [
+        "huile neutre"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Liquid",
+      "name": "Eau chaude (2 c. à soupe, pour la cuisson du lisier de soude)",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Ferment",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "fermented_batter",
+      "instructions": "Dans un grand bol, fouetter la farine, la levure, le sucre et le sel. Ajouter l'eau chaude et le lait chaud et fouetter vigoureusement jusqu'à ce que vous ayez une pâte très lisse et épaisse sans grumeaux. À ce stade, la pâte doit être nettement plus épaisse que la pâte à crêpes, plutôt qu'un épais milkshake. Couvrir de plastique ou d'un chiffon humide et laisser fermenter à température ambiante pendant 1–1,5 heures. La pâte s'élèvera, deviendra très pétillante et mousseuse, et le volume doublera à peu près. L'activité de levure est ce qui crée la structure du trou : lorsque la pâte frappe la grille chaude, le CO2 qui y est dissous s'élève et percute la surface, formant les trous caractéristiques du croupion.",
+      "visualCue": {
+        "primaryTarget": "Une pâte mousseuse, bouillonnante et active qui s'est visiblement relevée dans le bol. Soulevant le fouet, la pâte tombe dans des rubans épais et pétillants. La surface doit ressembler à une mousse de petites bulles, signe de levure active et de fermentation suffisante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La batterie semble plate et dense sans bulles de surface. Il est à peine monté. La levure est sous-active — soit l'eau était trop chaude (tuée la levure) ou trop froide (le moins bien activée).",
+            "action": "Passez à un endroit plus chaud (75–80°F / 24–27°C) et attendez encore 30–45 minutes. Si elle est encore plate, la levure peut être morte — recommencer avec de la levure fraîche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Batter a doublé ou presque, la surface est une mousse de petites bulles. Lorsqu'elle est agitée, la pâte tombe du fouet dans des rubans bubbles avec de l'air visible piégé. Sens de levure fraîche et légèrement acidulée.",
+            "action": "Dissoudre le bicarbonate de soude dans 2 cuillerées à soupe d'eau chaude et remuer dans la pâte. Procéder immédiatement à la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie a surfermenté — elle sent l'aurore agressive ou l'alcool, a commencé à se dégonfler, et les bulles ont fusionné dans de grandes poches irrégulières.",
+            "action": "Continuez immédiatement. Les croupons auront une saveur agressivement tannante (pas nécessairement désagréable), mais la structure du trou peut être irrégulière. Réduire le temps de fermentation prochain lot."
+          }
+        ]
+      },
+      "feelCue": "Agiter lentement la pâte fermentée et sentir l'air pris au piège. Le fouet devrait s'écouler avec la résistance douce de quelque chose de plein de bulles, comme en remuant une mousse légèrement épaisse. Goûtez une petite quantité : elle doit être levure, légèrement aigre et vivante. Pas comme du vinaigre, mais brillant et tannant comme un jeune sourd, avec une colonne vertébrale de blé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Dissoudre",
+      "inputs": [
+        "fermented_batter",
+        "ing_05",
+        "ing_09"
+      ],
+      "outputState": "cooking_batter",
+      "instructions": "Dissoudre complètement le bicarbonate de soude dans 2 cuillerées à soupe d'eau chaude, puis le remuer rapidement et soigneusement dans la pâte fermentée. Le bicarbonate de soude crée une réaction immédiate avec les acides de la fermentation de levure, produisant des bulles de CO2 supplémentaires — vous verrez la pâte devenir immédiatement encore plus mousseuse. Ce double levain (yeast + bicarbonate de soude) donne aux croumpets leur structure profonde et ouverte caractéristique. Cuire dans les 5 à 10 minutes suivant l'ajout du bicarbonate de soude, alors que la réaction est toujours active. La pâte à ce stade devrait être assez épaisse pour tenir sa forme dans le moule de l'anneau sans couler sous l'anneau, mais versable — sur la consistance du yogourt légèrement fin.",
+      "visualCue": {
+        "primaryTarget": "Une pâte plus mousseuse et plus aérée après l'ajout de bicarbonate de soude. De petites bulles couvrent toute la surface. Quand vous versez un louche, il devrait tomber dans une feuille épaisse, bubble, et non pas un ruisseau mince.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après l'ajout de la bicarbonate de soude — pas d'augmentation de la mousse ou de l'aération. La réaction ne s'est pas produite parce que la bicarbonate de soude n'était pas complètement dissoute ou parce que la fermentation n'avait pas suffisamment d'acide.",
+            "action": "Mélanger plus vigoureusement pendant 30 secondes. Si elles sont encore plates, continuez de toute façon — les bulles de levure seules peuvent produire des trous adéquats, bien qu'elles soient plus petites."
+          },
+          {
+            "state": "Perfect",
+            "description": "Notamment plus frais après l'ajout de soude. Surface couverte de petites bulles. La batterie se déverse dans une épaisse feuille aérée et tient un léger monticule dans la louche.",
+            "action": "Cuire immédiatement sur une grille préchauffée, beurrée, avec des anneaux de croupion graissés."
+          },
+          {
+            "state": "Overdone",
+            "description": "Saupoudrer trop longtemps après avoir ajouté du bicarbonate de soude — 20+ minutes — et la réaction s'est dissipée. La pâte semble à plat et la saveur de soda peut être détectable comme un goût légèrement métallique.",
+            "action": "Continuez. L'activité de levure produira encore quelques trous. Si la saveur métallique est présente, ajoutez quelques gouttes de jus de citron pour équilibrer l'alcalinité résiduelle."
+          }
+        ]
+      },
+      "feelCue": "Immédiatement après avoir remué dans le bicarbonate de soude, la pâte doit se sentir plus légère sous la louche — le gaz augmenté la rend presque plumeuse. Versez une petite quantité sur le dos de votre main : elle doit se sentir fraîche et lisse, et les bulles d'air doivent être visibles comme de petites taches serrées tout au long du revêtement. Cette aération rend la structure du trou possible."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "cooking_batter",
+        "ing_08"
+      ],
+      "outputState": "finished_crumpets",
+      "instructions": "Chauffer une plaque plate ou une poêle lourde à feu moyen (325°F / 163°C). Beurrer l'intérieur de 3,5 pouces / 9 cm anneaux de croupion (ou anneaux d'oeuf) généreusement. Placez les anneaux sur la grille et beurrez la surface de la grille légèrement à l'intérieur de chaque bague. Remplir chaque anneau à environ deux tiers de pâte — environ 3 à 4 cuillères à soupe. La pâte ne devrait pas déborder mais devrait avoir de la place pour se lever. Cuire à découvert pendant 8-12 minutes sans déranger. Dans les 2 à 3 minutes, la surface commence à se fixer aux bords tandis que le centre reste liquide; au cours des quelques minutes suivantes, des bulles se lèvent à travers la pâte et éclatent à la surface, formant les trous caractéristiques. Lorsque la surface entière semble réglée et mate avec une dentelle définie de trous, et le dessus semble presque sec (pas brillant), retirer les anneaux avec des pinces et retourner les croupons. Cuire le deuxième côté pendant 1 à 2 minutes jusqu'à ce que la base soit dorée. Laisser refroidir sur une grille et toast avant de servir.",
+      "visualCue": {
+        "primaryTarget": "Un chapelet entièrement formé avec une dentelle dense de petits trous distincts couvrant toute la surface supérieure, un aspect mat, set et un fond d'or croustillant. Les trous doivent être propres et ouverts, non effondrés ni mouillés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface supérieure semble encore brillante et humide au centre. Les trous ont commencé à se former, mais beaucoup sont encore des bulles ouvertes, pas des trous secs. Le chapelet se sent squishy et floppy lorsque vous essayez de retirer l'anneau.",
+            "action": "Continuer la cuisson à découvert. Ne vous précipitez pas en soulevant la chaleur — une chaleur plus élevée brûle la base avant les ensembles supérieurs. La patience est l'exigence du béguin. Cuire encore 2–3 minutes et revérifier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toute la surface supérieure est mate et sertie, couverte de trous ouverts et propres de différentes tailles. L'anneau se libère facilement et le chapelet tient sa forme. Le fond est doré lorsqu'il est retourné — une base ferme et grillée qui contraste avec l'intérieur doux et troué.",
+            "action": "Flip, faire cuire 1-2 minutes sur le côté supérieur pour une couleur claire, puis refroidir sur un rack. Servir avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le fond est brun foncé ou brûlé. La crotte sent le beurre brûlé. La surface supérieure est peut-être surdimensionnée et ressemble presque à un œuf frit dans sa texture, solide plutôt que spongieux.",
+            "action": "Réduisez significativement la chaleur de la grille pour le prochain lot. Les croupons anglais ont besoin d'une chaleur très douce et soutenue, et non de la chaleur moyenne-élevée utilisée pour les crêpes. Si le fond est simplement sombre (pas brûlé), l'intérieur est probablement bien; l'omble peut être arraché."
+          }
+        ]
+      },
+      "feelCue": "Un chapelet bien fini devrait se sentir substantiel mais céder quand vous appuyez sur le dessus — comme appuyer sur une éponge ferme. La base doit se sentir croustillante et rigide, avec un craquelin sec quand vous appuyez dessus. Lorsque vous vous divisez ou que vous mordez dans un chapelet grillé, l'intérieur doit donner avec le mousqueton tendre et tendre de pain trempé dans du beurre — les trous dessinant le beurre profondément à l'intérieur. L'absorption du beurre est l'âme d'un bon chapelet : sans trous ouverts, il n'y a nulle part où aller le beurre."
+    }
+  ]
 };

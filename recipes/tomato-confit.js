@@ -1,94 +1,237 @@
 export default {
-  repoId: "master_french_tomato_confit_001",
-  parentRepoId: null,
-  slug: "tomato-confit",
-  author: "ForkRecipe Kitchen",
-  title: "Tomato Confit",
-  description: "Halved plum tomatoes slow-roasted with olive oil, garlic, and thyme at a low temperature for hours until they collapse to a jammy, intensely sweet, concentrated paste that bears no resemblance to raw tomato.",
-  cuisine: "French",
-  culture: "Provençal",
-  category: "sauces",
-  tags: ["tomato", "confit", "french", "slow-roasted", "vegan", "gluten-free", "preserve"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "3 hr 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 2, sour: 2, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",      name: "Ripe plum tomatoes (Roma), halved lengthwise",    ratioValue: 100, defaultUnit: "parts", substitutions: ["San Marzano", "cherry tomatoes (halved)"] },
-    { ingId: "ing_02", role: "Fat",       name: "Extra-virgin olive oil",                           ratioValue: 25,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic cloves, unpeeled",                          ratioValue: 6,   defaultUnit: "count", substitutions: [] },
-    { ingId: "ing_04", role: "Herb",      name: "Fresh thyme sprigs",                               ratioValue: 6,   defaultUnit: "count", substitutions: ["fresh rosemary", "dried thyme"] },
-    { ingId: "ing_05", role: "Sweetener", name: "White sugar",                                       ratioValue: 2,   defaultUnit: "parts", substitutions: ["light brown sugar", "honey"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine salt and black pepper",                        ratioValue: 1,   defaultUnit: "parts", substitutions: ["flaky sea salt"] },
-    { ingId: "ing_07", role: "Acid",      name: "Aged balsamic vinegar (a few drops, optional)",    ratioValue: 1,   defaultUnit: "parts", substitutions: ["sherry vinegar"] },
+  "repoId": "master_french_tomato_confit_001",
+  "parentRepoId": null,
+  "slug": "tomato-confit",
+  "author": "ForkRecipe Kitchen",
+  "title": "Confit aux tomates",
+  "description": "Tomates de prune coupées lentement, grillées avec de l'huile d'olive, de l'ail et du thym à basse température pendant des heures jusqu'à ce qu'elles s'effondrent à une pâte concentrée, jammée, intensément sucrée, qui ne ressemble pas à la tomate crue.",
+  "cuisine": "Français",
+  "culture": "Provençal",
+  "category": "sauces",
+  "tags": [
+    "tomates",
+    "confit",
+    "français",
+    "torréfié lentement",
+    "végétalien",
+    "Sans gluten",
+    "préserver"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "3 hr 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Prep",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "prepared_tomatoes",
-      instructions: "Preheat the oven to 110 C / 230 F — low, slow, and patient. Halve the plum tomatoes lengthwise and place cut-side up in a single, tight layer in a roasting dish or on a rimmed baking sheet. They should fit snugly — they will shrink considerably. Scatter the unpeeled garlic cloves and thyme sprigs between the tomatoes. Sprinkle the sugar, salt, and pepper evenly over the cut faces. Drizzle the olive oil over everything generously — the oil must coat every tomato face and pool slightly in the dish; it acts as the confit medium, surrounding the tomatoes in fat and preventing them from drying out instead of concentrating.",
-      visualCue: {
-        primaryTarget: "Rows of bright red tomato halves, cut-side up, glistening with olive oil, evenly seasoned. The garlic cloves and thyme are distributed between them. The dish is full but not overcrowded — each tomato half has its cut face fully exposed.",
-        spectrum: [
-          { state: "Underdone", description: "Tomatoes are stacked or overlapping — they will steam each other and never caramelize. Oil is insufficient and some faces are dry.", action: "Rearrange into a single layer, adding oil if needed. A crowded pan steams; a single layer roasts." },
-          { state: "Perfect",   description: "Single layer, every face shining with oil, sugar and salt visible as a fine crust on each cut surface. Looks like a jewellery tray of rubies.", action: "Slide into the oven. Do not disturb for the first 2 hours." },
-          { state: "Overdone",  description: "Not applicable at prep — proceed.", action: "Slide into the oven." },
-        ],
-      },
-      feelCue: "The tomatoes should feel firm and cool going into the oven — they are raw. By the time they come out, they will feel like deflated wine gums, yielding at the slightest touch: all their water gone, their sugar and umami intensified to a concentration the raw tomato could not hint at.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Tomates à plumes (Roma), coupées en deux dans le sens de la longueur",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "San Marzano",
+        "tomates cerises (chaudées)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Roast",
-      inputs: ["prepared_tomatoes"],
-      outputState: "roasted_tomatoes",
-      instructions: "Roast at 110 C / 230 F for 2 hours 30 minutes to 3 hours, checking every hour. The tomatoes will slowly lose their water, shrink, and intensify. Their color will shift from bright red to a deeper, more muted red-burgundy. The cut faces will begin to wrinkle and caramelize into a sweet, tacky surface while the olive oil in the dish turns fragrant and gold. In the final 30 minutes, the surfaces may start to lightly caramelize at the edges. Do not rush this with higher heat — the concentration must be gradual to avoid drying to leather before the sugars develop.",
-      visualCue: {
-        primaryTarget: "Deeply shrunken, wrinkled, burgundy-red tomato halves — reduced to roughly half their original size. The cut surfaces are caramelized and tacky, the flesh translucent and jammy. The olive oil in the dish is golden and fragrant with thyme and garlic.",
-        spectrum: [
-          { state: "Underdone", description: "Tomatoes have barely shrunk; they are still plump, bright red, and the surface looks wet and raw rather than caramelized and tacky. Less than 1 hour has passed.", action: "Continue roasting. The transformation is dramatic but happens slowly — be patient." },
-          { state: "Perfect",   description: "Shrunk by 50–60%, deeply colored, the cut surfaces caramelized to a sticky, jammy finish. The flesh is entirely translucent. When pressed with a spoon, the tomato yields completely — all resistance gone.", action: "Remove from the oven. Add a drop of aged balsamic over each if using." },
-          { state: "Overdone",  description: "Tomatoes have dried to leathery, shriveled husks — all moisture gone, the edges black and brittle. The oil in the dish has browned and smells slightly bitter.", action: "If only slightly overdone, the tomatoes are still usable as a very concentrated paste stirred through pasta. If fully dried to crisps, they are past saving." },
-        ],
-      },
-      feelCue: "Check a tomato at the 2-hour mark by pressing the edge with the tip of a spoon: the flesh should yield instantly and completely, like pressing a soft gel — no resistance, no bounce, just total collapse. If there is any spring in the flesh, it needs more time.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Cool",
-      inputs: ["roasted_tomatoes", "ing_07"],
-      outputState: "cooled_tomato_confit",
-      instructions: "Remove from the oven and add a drop of balsamic vinegar over each tomato if using — the residual heat will soften its edge and let it meld with the oil. Allow to cool in the dish. As they cool, the tomatoes will firm very slightly and the oil will thicken with their released sugars and pectins. The garlic cloves can be squeezed out of their skins and stored with the tomatoes — they will be soft, sweet, and completely transformed.",
-      visualCue: {
-        primaryTarget: "Cooled, jammy tomato halves in a golden-red oil that has thickened slightly as it cooled, with the balsamic darkening the edges of each tomato. The oil looks like a sauce unto itself.",
-        spectrum: [
-          { state: "Underdone", description: "Still hot from the oven — the oil is very loose and the tomatoes are too soft to handle.", action: "Allow to cool at least 20 minutes before serving or storing." },
-          { state: "Perfect",   description: "Cooled to room temperature: the oil has thickened to a syrup around the tomatoes, which now sit firm enough to lift intact but yield instantly to a fork. They taste intensely of concentrated tomato with a deep sweet-sour-umami complexity.", action: "Serve immediately or store covered in the oil in the fridge for up to 2 weeks." },
-          { state: "Overdone",  description: "Left out for hours; the tomatoes are cold and the oil has solidified.", action: "Warm gently in a low oven or in a warm-water bath before serving." },
-        ],
-      },
-      feelCue: "Lift one confit tomato with a spoon: it should hold together but feel like a soft, filled water balloon — any pressure and it collapses. The oil beneath should flow slowly, thicker than fresh olive oil, carrying the concentrated flavors of hours of slow roasting.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousses d'ail, non pelées",
+      "ratioValue": 6,
+      "defaultUnit": "count",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Store",
-      inputs: ["cooled_tomato_confit"],
-      outputState: "finished_tomato_confit",
-      instructions: "Transfer the tomatoes and all the scented oil to a sterilised jar, ensuring the tomatoes are submerged. The oil is as precious as the tomatoes — use it to dress salads, drizzle over burrata, finish pasta, or brush on grilled bread. Refrigerate and use within 2 weeks. Serve the tomatoes at room temperature or warm for the fullest flavor expression.",
-      visualCue: {
-        primaryTarget: "A jar of deeply colored, jewel-like tomato halves suspended in amber oil infused with thyme and garlic. They look almost too beautiful to eat.",
-        spectrum: [
-          { state: "Underdone", description: "Oil does not cover all the tomatoes — they will develop mold where exposed to air.", action: "Top off with fresh olive oil until all tomatoes are submerged." },
-          { state: "Perfect",   description: "Fully submerged tomatoes in fragrant oil. Refrigerated, they keep beautifully for 2 weeks. Brought to room temperature before eating, they taste far more intensely of tomato than any can or tube could suggest.", action: "Use as a sauce, a topping, a condiment, or an ingredient." },
-          { state: "Overdone",  description: "Stored beyond 2 weeks: the garlic in oil creates a botulism risk if not properly handled and stored cold. The flavor also fades.", action: "Discard after 2 weeks, or freeze portions in oil for longer storage." },
-        ],
-      },
-      feelCue: "A spoonful of the confit oil alone should taste extraordinary — the slow roasting has leached every flavour compound from the tomatoes, garlic, and thyme into it. If the oil tastes flat, the confit needed longer in the oven.",
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Fils de thym frais",
+      "ratioValue": 6,
+      "defaultUnit": "count",
+      "substitutions": [
+        "romarin frais",
+        "Thym séché"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun léger",
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin et poivre noir",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sel de mer flocé"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Acid",
+      "name": "vinaigre balsamique vieilli (quelques gouttes en option)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de sherry"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Préparation",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "prepared_tomatoes",
+      "instructions": "Préchauffer le four à 110 C / 230 F — faible, lent et patient. Couper les tomates à la prune dans le sens de la longueur et placer le côté coupé en une seule couche serrée dans un plat rôti ou sur une plaque de cuisson bordée. Ils doivent s'adapter de façon judicieuse — ils vont diminuer considérablement. Dispersez les gousses d'ail non pelées et le thym entre les tomates. Saupoudrer le sucre, le sel et le poivre uniformément sur les faces coupées. Arrosez généreusement l'huile d'olive sur tout — l'huile doit envelopper chaque visage de tomate et mettre légèrement dans le plat; elle agit comme milieu confit, enveloppant les tomates dans la graisse et les empêchant de sécher au lieu de se concentrer.",
+      "visualCue": {
+        "primaryTarget": "Gammes de moitiés de tomates rouge vif, coupées, scintillantes à l'huile d'olive, assaisonnées uniformément. Les gousses d'ail et le thym sont distribués entre elles. Le plat est plein, mais pas surpeuplé: chaque moitié de tomate a son visage coupé entièrement exposé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tomates sont empilées ou se chevauchent, elles se vaporisent et ne se caramélisent jamais. L'huile est insuffisante et certaines faces sont sèches.",
+            "action": "Réorganiser en une seule couche, en ajoutant de l'huile si nécessaire. Une casserole bondée s'éteint; une seule couche rôtit."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une seule couche, chaque visage brillant avec de l'huile, du sucre et du sel visible comme une fine croûte sur chaque surface coupée. On dirait un plateau de rubis.",
+            "action": "Glissez dans le four. Ne pas déranger pendant les 2 premières heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sans objet à la préparation — procéder.",
+            "action": "Glissez dans le four."
+          }
+        ]
+      },
+      "feelCue": "Les tomates doivent se sentir fermes et refroidies en allant au four — elles sont crues. Quand ils sortiront, ils se sentiront comme des gencives de vin dégonflées, donnant au moindre contact : toute leur eau disparue, leur sucre et leur umami intensifiés à une concentration que la tomate brute ne pouvait pas laisser entendre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rôtis",
+      "inputs": [
+        "prepared_tomatoes"
+      ],
+      "outputState": "roasted_tomatoes",
+      "instructions": "Faire cuire à 110 C/ 230 F pendant 2 heures 30 minutes à 3 heures, en vérifiant chaque heure. Les tomates perdront lentement leur eau, se rétréciront et s'intensifieront. Leur couleur passera de rouge vif à un rouge-burgundy plus profond, plus muet. Les faces coupées commenceront à rider et à caraméliser en une surface douce et collante tandis que l'huile d'olive dans le plat devient parfumée et dorée. Dans les 30 dernières minutes, les surfaces peuvent commencer à caraméliser légèrement aux bords. Ne précipitez pas cela avec une chaleur plus élevée — la concentration doit être progressive pour éviter de sécher au cuir avant que les sucres ne se développent.",
+      "visualCue": {
+        "primaryTarget": "Des moitiés de tomates mûries, ridés et fortement éparpillées, ont été réduites à environ la moitié de leur taille originale. Les surfaces coupées sont caramélisées et collantes, la chair translucide et jammy. L'huile d'olive dans le plat est dorée et parfumée de thym et d'ail.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tomates ont à peine rétréci; elles sont encore plumées, rouge vif, et la surface semble mouillée et crue plutôt que caramélisée et piquante. Moins d'une heure s'est écoulée.",
+            "action": "Continuez à rôtir. La transformation est dramatique mais se produit lentement — soyez patient."
+          },
+          {
+            "state": "Perfect",
+            "description": "Fausses de 50 à 60 %, de couleur profonde, les surfaces coupées caramélisées à une finition collante et jammy. La chair est entièrement translucide. Lorsqu'elle est pressée à l'aide d'une cuillère, la tomate donne complètement — toute résistance disparue.",
+            "action": "Retirer du four. Ajouter une goutte de balsamique vieillie sur chaque utilisation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tomates ont séché jusqu'à ce qu'elles soient sinueuses et sinueuses. L'huile dans le plat a bruni et sent légèrement amer.",
+            "action": "Si ce n'est que légèrement surdosé, les tomates sont encore utilisables comme pâte très concentrée brassée par les pâtes. S'ils sont entièrement séchés aux croustillants, ils sont sauvés."
+          }
+        ]
+      },
+      "feelCue": "Vérifiez une tomate à la marque de 2 heures en appuyant sur le bord avec l'extrémité d'une cuillère: la chair doit donner instantanément et complètement, comme en appuyant sur un gel mou — pas de résistance, pas de rebond, juste effondrement total. S'il y a un ressort dans la chair, il lui faut plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Frais",
+      "inputs": [
+        "roasted_tomatoes",
+        "ing_07"
+      ],
+      "outputState": "cooled_tomato_confit",
+      "instructions": "Retirer du four et ajouter une goutte de vinaigre balsamique sur chaque tomate si elle est utilisée — la chaleur résiduelle va adoucir son bord et laisser fondre avec l'huile. Laisser refroidir dans le plat. À mesure qu'ils refroidissent, les tomates ferment très légèrement et l'huile s'épaissit avec leurs sucres et pectines libérés. Les gousses d'ail peuvent être pressées de leur peau et entreposées avec les tomates — elles seront douces, douces et complètement transformées.",
+      "visualCue": {
+        "primaryTarget": "Refroidie, la tomate jammy se sépare dans une huile rouge dorée qui s'épaissit légèrement à mesure qu'elle refroidit, avec le balsamique obscurcissant les bords de chaque tomate. L'huile ressemble à une sauce.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours chaud du four — l'huile est très lâche et les tomates sont trop molles pour être manipulées.",
+            "action": "Laisser refroidir au moins 20 minutes avant de servir ou de conserver."
+          },
+          {
+            "state": "Perfect",
+            "description": "Refroidie à température ambiante : l'huile s'est épaissie jusqu'à un sirop autour des tomates, qui sont maintenant assez fermes pour soulever intacts mais qui donnent instantanément à une fourchette. Ils goûtent intensément de tomates concentrées avec une profonde complexité sucrée-sour-umami.",
+            "action": "Servir immédiatement ou conserver l'huile dans le réfrigérateur pendant 2 semaines."
+          },
+          {
+            "state": "Overdone",
+            "description": "Laissés pendant des heures; les tomates sont froides et l'huile s'est solidifiée.",
+            "action": "Chauffer doucement dans un four bas ou dans un bain d'eau chaude avant de servir."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une tomate confit avec une cuillère: elle devrait tenir ensemble mais se sentir comme un ballon d'eau doux et rempli — toute pression et elle s'effondre. L'huile en dessous doit couler lentement, plus épais que l'huile d'olive fraîche, portant les saveurs concentrées des heures de torréfaction lente."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "A conserver",
+      "inputs": [
+        "cooled_tomato_confit"
+      ],
+      "outputState": "finished_tomato_confit",
+      "instructions": "Transférer les tomates et toute l'huile parfumée dans un pot stérilisé, en veillant à ce que les tomates soient submergées. L'huile est aussi précieuse que les tomates — utilisez-la pour habiller les salades, arroser sur la burrata, finir les pâtes, ou brosser sur le pain grillé. Réfrigérer et utiliser dans les 2 semaines. Servir les tomates à température ambiante ou les réchauffer pour une expression de saveur complète.",
+      "visualCue": {
+        "primaryTarget": "Un pot de tomates de couleur profonde, comme des bijoux, est suspendu à l'huile d'ambre infusée de thym et d'ail. Ils sont presque trop beaux pour manger.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'huile ne couvre pas toutes les tomates — elles développeront des moisissures lorsqu'elles seront exposées à l'air.",
+            "action": "Garnir d'huile d'olive fraîche jusqu'à ce que toutes les tomates soient submergées."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tomates entièrement immergées dans de l'huile parfumée. Réfrigérés, ils gardent magnifiquement pendant 2 semaines. A la température ambiante avant de manger, ils goûtent beaucoup plus intensément de la tomate que n'importe quelle boîte ou tube pourrait suggérer.",
+            "action": "Utiliser comme sauce, garniture, condiment ou ingrédient."
+          },
+          {
+            "state": "Overdone",
+            "description": "Conservé au-delà de 2 semaines : l'ail dans l'huile crée un risque de botulisme s'il n'est pas bien manipulé et stocké au froid. La saveur se fane aussi.",
+            "action": "Jeter après 2 semaines ou congeler les portions d'huile pour un stockage plus long."
+          }
+        ]
+      },
+      "feelCue": "Une cuillerée d'huile confit seule devrait avoir un goût extraordinaire: la torréfaction lente a lixivié chaque composé de saveur des tomates, de l'ail et du thym. Si l'huile a un goût plat, le confit a besoin de plus longtemps dans le four."
+    }
+  ]
 };

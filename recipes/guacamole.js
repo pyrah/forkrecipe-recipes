@@ -1,78 +1,193 @@
 export default {
-  repoId: "master_mexican_guacamole_001",
-  parentRepoId: null,
-  slug: "guacamole",
-  author: "ForkRecipe Kitchen",
-  title: "Guacamole",
-  description: "The molcajete classic — ripe Hass avocados crushed with a paste of serrano, onion, cilantro and salt, brightened with lime, kept deliberately chunky so every bite carries both buttery flesh and a flash of green heat.",
-  cuisine: "Mexican",
-  culture: "Central Mexican",
-  category: "condiments",
-  tags: ["avocado", "mexican", "dip", "no-cook", "molcajete"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 1, umami: 2, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Ripe Hass avocados (yielding to gentle pressure)", ratioValue: 100, defaultUnit: "parts", substitutions: ["Fuerte avocados"] },
-    { ingId: "ing_02", role: "Allium",    name: "White onion, finely diced",                        ratioValue: 12,  defaultUnit: "parts", substitutions: ["red onion"] },
-    { ingId: "ing_03", role: "Heat",      name: "Serrano chile, minced (seeds for more heat)",      ratioValue: 4,   defaultUnit: "parts", substitutions: ["jalapeño"] },
-    { ingId: "ing_04", role: "Herb",      name: "Fresh cilantro, chopped (leaves and tender stems)", ratioValue: 5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Coarse sea salt",                                  ratioValue: 2,   defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_06", role: "Citrus",    name: "Fresh lime juice",                                 ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_mexican_guacamole_001",
+  "parentRepoId": null,
+  "slug": "guacamole",
+  "author": "ForkRecipe Kitchen",
+  "title": "Guacamole",
+  "description": "La molcajete classique — mûre Hass avocats écrasés avec une pâte de serrano, d'oignon, de coriandre et de sel, illuminé avec de la chaux, gardé délibérément chunky ainsi chaque bouchée porte à la fois la chair beurrée et un éclair de chaleur verte.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain central",
+  "category": "condiments",
+  "tags": [
+    "avocat",
+    "Mexique",
+    "trempette",
+    "pas de cuisson",
+    "molcajete"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Grind",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "chile_paste",
-      instructions: "In a molcajete (or with the flat of a knife on a board), grind half the onion, the serrano, half the cilantro and the salt into a rough, wet paste. The salt acts as an abrasive, breaking down the chile and onion and pulling out their oils. You want a fragrant green slurry, not a smooth puree — a little texture is correct.",
-      visualCue: {
-        primaryTarget: "A coarse, glistening green paste flecked with chile and onion. It smells sharply of raw chile and bright herb, and the salt grains have mostly dissolved into the released juices.",
-        spectrum: [
-          { state: "Underdone", description: "Onion and chile are still in distinct dry pieces, sitting on top of the salt. No moisture has been released and the aroma is faint.", action: "Keep grinding with a firm circular motion. The salt needs time to draw out liquid and break the cell walls." },
-          { state: "Perfect",   description: "A loose, wet paste that holds together when pushed to one side. The chile heat and cilantro perfume hit you when you lean over the bowl.", action: "Proceed to add the avocado." },
-          { state: "Overdone",  description: "Completely smooth, soupy, and homogenous — all texture ground away. The cilantro has gone dark and bruised-tasting.", action: "Accept it; it will still flavor the dish. Next time stop sooner and reserve some onion and cilantro for the finish." },
-        ],
-      },
-      feelCue: "Under the pestle the mixture should go from crunchy and resistant to soft and slick within a minute. Your fingers should smell of chile and lime zest when you are done.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Ripe Hass avocats (rendant à la pression douce)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Fuerte avocats"
+      ]
     },
     {
-      nodeId: "step_2", action: "Fold",
-      inputs: ["chile_paste", "ing_01", "ing_06"],
-      outputState: "crushed_guacamole",
-      instructions: "Halve the avocados, remove the pits, and scoop the flesh into the paste. Add the lime juice. Crush with a fork or the pestle, folding the green paste up through the avocado, but stop while the mixture is still chunky — visible pieces of avocado are the whole point. The lime should go in now so its acid coats the cut flesh and slows browning.",
-      visualCue: {
-        primaryTarget: "Pale-green avocado, partly crushed and partly in soft lumps, streaked with the darker green chile paste. It looks rustic and rough, not whipped, and the surface is moist with lime.",
-        spectrum: [
-          { state: "Underdone", description: "Large unbroken avocado halves slide around the bowl, dry and unseasoned, with the paste pooled underneath.", action: "Cut through the avocado with the edge of the fork a few more times and fold so every piece meets the paste and lime." },
-          { state: "Perfect",   description: "A chunky mash where about half is creamy and half is distinct pieces. Each spoonful holds together but you can still see and bite individual chunks.", action: "Stir in the remaining onion and cilantro." },
-          { state: "Overdone",  description: "Smooth, uniform, and pasty — closer to a spread than a guacamole. The avocado has gone gluey from overworking.", action: "There is no undoing it, but fold in a few cubes of fresh avocado to restore some texture." },
-        ],
-      },
-      feelCue: "The avocado should give like cold butter under the fork — soft but cohesive. If it resists or tastes grassy, the fruit was underripe; if it is watery and gray, it was past its prime.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon blanc, finement coupé en dés",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon rouge"
+      ]
     },
     {
-      nodeId: "step_3", action: "Season and finish",
-      inputs: ["crushed_guacamole", "ing_02", "ing_04"],
-      outputState: "finished_dish",
-      instructions: "Fold in the reserved fresh onion and cilantro for crunch and lift. Taste and correct: more salt to make the flavors pop, more lime if it tastes flat or fatty, more serrano for heat. Serve immediately. If holding, press plastic wrap directly onto the surface so no air reaches it.",
-      visualCue: {
-        primaryTarget: "A vivid, fresh-looking guacamole studded with bright white onion and green cilantro, glossy from the lime, with no gray patches. It mounds softly on a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Tastes flat, fatty, and one-note — the avocado dominates and nothing sparks.", action: "Add salt a pinch at a time and a squeeze of lime, tasting after each, until the flavors snap into focus." },
-          { state: "Perfect",   description: "Balanced and lively: rich avocado lifted by acid, salt, and a clean serrano heat that builds on the finish. Onion and cilantro register in every bite.", action: "Serve at once with warm tortilla chips or tacos." },
-          { state: "Overdone",  description: "Sour and aggressive — too much lime or chile has buried the avocado, or it has been sitting and turned gray and sulfurous.", action: "Mash in another half avocado to mellow and rebalance, then re-season gently." },
-        ],
-      },
-      feelCue: "The first taste should be cool and buttery, then bright, then a slow warmth from the serrano at the back of the throat. It should make you reach for a second chip before you have swallowed the first.",
+      "ingId": "ing_03",
+      "role": "Heat",
+      "name": "Chil Serrano haché (semences pour plus de chaleur)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jalapeño"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Coriandre fraîche, hachée (feuilles et tiges tendres)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sels de mer grossiers",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Citrus",
+      "name": "Jus de chaux frais",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Grind",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "chile_paste",
+      "instructions": "Dans une molcajete (ou avec le plat d'un couteau sur une planche), moudre la moitié de l'oignon, le serrano, la moitié de la coriandre et le sel dans une pâte rugueuse et humide. Le sel agit comme un abrasif, brisant le chile et l'oignon et tirant leurs huiles. Vous voulez un lisier vert parfumé, pas une purée lisse — un peu de texture est correcte.",
+      "visualCue": {
+        "primaryTarget": "Une pâte verte grossière et scintillante flocée de chile et d'oignon. Il sent fortement le chile cru et l'herbe brillante, et les grains de sel se sont pour la plupart dissous dans les jus libérés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon et le piment sont toujours en morceaux secs distincts, assis sur le sel. Aucune humidité n'a été libérée et l'arôme est faible.",
+            "action": "Continuer à broyer avec un mouvement circulaire ferme. Le sel a besoin de temps pour extraire le liquide et briser les parois cellulaires."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte molle et humide qui tient ensemble lorsqu'elle est poussée d'un côté. La chaleur de chile et le parfum de coriandre vous ont frappé quand vous vous penchez sur le bol.",
+            "action": "Passez à l'avocat."
+          },
+          {
+            "state": "Overdone",
+            "description": "Complètement lisses, soupeuses et homogènes — toute texture est à terre. La coriandre est devenue sombre et meurtrie.",
+            "action": "Acceptez-le ; il va encore aromatiser le plat. La prochaine fois, arrêtez-vous plus tôt et réservez de l'oignon et de la coriandre pour l'arrivée."
+          }
+        ]
+      },
+      "feelCue": "Sous le pilon, le mélange doit passer de croquant et résistant à doux et liquéfiant en une minute. Vos doigts devraient sentir le chile et le zeste de citron lorsque vous avez fini."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "chile_paste",
+        "ing_01",
+        "ing_06"
+      ],
+      "outputState": "crushed_guacamole",
+      "instructions": "Coupez les avocats, retirez les fosses et creusez la chair dans la pâte. Ajouter le jus de lime. Écraser à la fourche ou au pestle, plier la pâte verte à travers l'avocat, mais arrêter pendant que le mélange est encore copieux — les morceaux visibles de l'avocat sont tout le point. La chaux devrait entrer maintenant afin que son acide enveloppe la chair coupée et ralentit le brunissement.",
+      "visualCue": {
+        "primaryTarget": "Avocat vert pâle, partiellement broyé et partiellement en morceaux mous, rayé de la pâte de chile vert foncé. Il semble rustique et rugueux, non fouetté, et la surface est humide avec de la chaux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Grand avocat non cassé moitiés glisser autour du bol, sec et non assaisonné, avec la pâte mise en commun en dessous.",
+            "action": "Couper à travers l'avocat avec le bord de la fourchette encore quelques fois et plier ainsi chaque pièce rencontre la pâte et la chaux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un mash chunky où environ la moitié est crémeuse et la moitié est des morceaux distincts. Chaque cuillère tient ensemble, mais vous pouvez encore voir et mordre des morceaux individuels.",
+            "action": "Incorporer le reste de l'oignon et la coriandre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Doux, uniforme et pâteux, plus près d'une propagation qu'un guacamole. L'avocat est devenu collant par surmenage.",
+            "action": "Il n'y a pas de défaire, mais plier dans quelques cubes d'avocat frais pour restaurer une certaine texture."
+          }
+        ]
+      },
+      "feelCue": "L'avocat doit donner comme du beurre froid sous la fourchette, doux mais cohésif. S'il résiste ou goûte à l'herbe, le fruit n'était pas mûr; s'il est aqueux et gris, il était passé à son premier rang."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison et fin",
+      "inputs": [
+        "crushed_guacamole",
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "finished_dish",
+      "instructions": "Plier dans l'oignon frais réservé et la coriandre pour la croûte et l'ascenseur. Bouche et correct: plus de sel pour faire sauter les saveurs, plus de chaux si elle a un goût plat ou gras, plus de serrano pour la chaleur. Servir immédiatement. En cas de maintien, appuyez sur l'enveloppe plastique directement sur la surface pour qu'aucun air ne l'atteigne.",
+      "visualCue": {
+        "primaryTarget": "Un guacamole vif et frais, cloué d'oignon blanc vif et de coriandre verte, brillant de la chaux, sans taches grises. Il fond doucement sur une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Goûte plat, gras, et une note — l'avocat domine et rien ne brille.",
+            "action": "Ajouter le sel une pincée à la fois et une pression de citron vert, goûter après chaque, jusqu'à ce que les saveurs se mettent au point."
+          },
+          {
+            "state": "Perfect",
+            "description": "Équilibré et vif : un avocat riche soulevé par de l'acide, du sel et une chaleur serrano propre qui s'appuie sur la finale. L'oignon et la coriandre s'inscrivent dans chaque bouchée.",
+            "action": "Servir immédiatement avec des croustilles ou des tacos."
+          },
+          {
+            "state": "Overdone",
+            "description": "Souris et agressifs — trop de chaux ou de chile a enterré l'avocat, ou il a été assis et est devenu gris et sulfureux.",
+            "action": "Mash dans un autre demi-avocat pour se mouiller et rééquilibrer, puis ré-saisonner doucement."
+          }
+        ]
+      },
+      "feelCue": "Le premier goût doit être frais et beurreux, puis lumineux, puis une chaleur lente du serrano à l'arrière de la gorge. Il devrait vous faire atteindre pour une seconde puce avant que vous avez avalé la première."
+    }
+  ]
 };

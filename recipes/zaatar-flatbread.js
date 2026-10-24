@@ -1,115 +1,277 @@
 export default {
-  repoId: "master_lebanese_zaatar_flatbread_001",
-  parentRepoId: null,
-  slug: "zaatar-flatbread",
-  author: "ForkRecipe Kitchen",
-  title: "Lebanese Za'atar Flatbread",
-  description: "A dimpled, hand-stretched disk of yeasted dough blanketed in musky dried thyme, sesame, and sumac, then drenched in grassy olive oil before baking — the smell alone will pull your neighbors to the door.",
-  cuisine: "Lebanese",
-  culture: "Levantine",
-  category: "breads",
-  tags: ["flatbread", "lebanese", "zaatar", "olive-oil", "sesame", "levantine", "baking"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "2 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 2, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",                  ratioValue: 3,    defaultUnit: "cups", substitutions: ["bread flour"] },
-    { ingId: "ing_02", role: "Hydration",  name: "Warm water (38-40 C)",               ratioValue: 1,    defaultUnit: "cup",  substitutions: ["filtered water"] },
-    { ingId: "ing_03", role: "Leavener",   name: "Instant yeast",                      ratioValue: 1,    defaultUnit: "tsp",  substitutions: ["active dry yeast (proof first)"] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                      ratioValue: 1,    defaultUnit: "tsp",  substitutions: ["kosher salt"] },
-    { ingId: "ing_05", role: "Fat",        name: "Extra-virgin olive oil (dough)",      ratioValue: 2,    defaultUnit: "tbsp", substitutions: ["neutral oil"] },
-    { ingId: "ing_06", role: "Spice",      name: "Dried za'atar blend (thyme, sumac, sesame)", ratioValue: 4, defaultUnit: "tbsp", substitutions: ["dried thyme with sesame seeds"] },
-    { ingId: "ing_07", role: "Fat",        name: "Extra-virgin olive oil (topping)",   ratioValue: 4,    defaultUnit: "tbsp", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Flaky sea salt (finish)",            ratioValue: 0.5,  defaultUnit: "tsp",  substitutions: ["Maldon salt"] },
+  "repoId": "master_lebanese_zaatar_flatbread_001",
+  "parentRepoId": null,
+  "slug": "zaatar-flatbread",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pain plat de Za'atar libanais",
+  "description": "Un disque de pâte levurée, étiré à la main, en morceaux, recouvert de thym séché, de sésame et de sumac, puis trempé dans de l'huile d'olive herbeuse avant de cuire, l'odeur seule attirera vos voisins à la porte.",
+  "cuisine": "Libanais",
+  "culture": "Levantine",
+  "category": "breads",
+  "tags": [
+    "Pain plat",
+    "lébanèse",
+    "zaatar",
+    "Huile d'olive",
+    "sésame",
+    "lévantine",
+    "Cuisson"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "2 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "shaggy_dough",
-      instructions: "In a large bowl, whisk together the flour, instant yeast, and salt. Make a well in the center, pour in the warm water and olive oil, and stir with a wooden spoon or your hand until the dough comes together into a rough, cohesive mass. The dough will be slightly sticky and uneven — resist adding more flour. Turn it out onto an unfloured surface and knead for 7-8 minutes using the heel of your hand, pushing the dough away from you and folding it back. The friction of the bare counter develops the gluten far better than a floured surface. After 7 minutes the dough should have transformed from sticky resistance to smooth compliance.",
-      visualCue: {
-        primaryTarget: "A smooth, slightly tacky ball that holds its shape, has a gentle sheen from the oil, and rebounds slowly when poked.",
-        spectrum: [
-          { state: "Underdone", description: "The dough tears when pulled and leaves chunks on the counter. Surface looks rough and pockmarked like orange peel.", action: "Keep kneading — 3 more minutes, leaning your full body weight into each push." },
-          { state: "Perfect",   description: "Smooth and supple, like soft chamois leather. The surface is taut and slightly translucent. A windowpane test reveals a thin, stretchy membrane that doesn't tear.", action: "Form into a ball, place in an oiled bowl, and cover with a damp towel." },
-          { state: "Overdone",  description: "The dough is very tight and springs back almost instantly when poked. It feels rubbery rather than elastic.", action: "Cover and rest for 20 minutes — over-kneaded gluten relaxes. It will still make excellent flatbread." },
-        ],
-      },
-      feelCue: "By the end of kneading it should feel like warm earlobe skin — soft, pliable, and just barely yielding under gentle pressure. If your palm comes away clean, the gluten is developed.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 3,
+      "defaultUnit": "cups",
+      "substitutions": [
+        "farine de pain"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Proof",
-      inputs: ["shaggy_dough"],
-      outputState: "risen_dough",
-      instructions: "Place the dough ball in a lightly oiled bowl and turn it once to coat. Cover with a damp kitchen towel or plastic wrap and set it in a warm, draft-free spot — an oven with just the light on (about 27-30 C) is ideal. Let it rise until doubled in size, roughly 60-90 minutes depending on your kitchen temperature. Do not rush this step: the slow fermentation builds the faintly sour, yeasty complexity that makes this flatbread taste like more than flour and water. You'll know it's ready when the dough dome is noticeably higher than the bowl rim and jiggles like gelatin when you gently shake the bowl.",
-      visualCue: {
-        primaryTarget: "The dough has clearly doubled in volume, is domed at the top, and has large bubbles visible through the walls of any clear container.",
-        spectrum: [
-          { state: "Underdone", description: "The dough has grown by only a third. It feels dense and resistant when pressed, and the surface doesn't jiggle.", action: "Return to the warm spot and check again in 20 minutes. If your kitchen is cold, place the covered bowl over a saucepan of warm water." },
-          { state: "Perfect",   description: "Exactly doubled. Pressing a floured finger in 2 cm leaves an indent that slowly springs back halfway. The dough smells of bread and faintly of yogurt.", action: "Divide and shape." },
-          { state: "Overdone",  description: "The dome has collapsed inward. The dough is very slack and smells sharply sour, almost alcoholic.", action: "Gently fold it over on itself once, re-ball, and let it rest 15 minutes before shaping. The flatbread will be a touch more sour and slightly denser — still delicious." },
-        ],
-      },
-      feelCue: "A proofed dough pressed with a wet finger should exhale softly, like pressing on a fresh sponge, and leave a ghost indent that fades in 5 seconds.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau chaude (38-40 C)",
+      "ratioValue": 1,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "eau filtrée"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["ing_06", "ing_07"],
-      outputState: "zaatar_paste",
-      instructions: "While the dough proofs, combine the za'atar blend and olive oil in a small bowl and stir until you have a loose, thick paste, similar in consistency to pesto. The oil should fully saturate every dried herb and sesame seed — you're creating a spreadable slurry, not a dry sprinkle. Taste it: it should be herbaceous, nutty, and faintly sour from the sumac, with a grassy bitterness from the thyme. If your za'atar is very dry, add an extra teaspoon of oil so it spreads without tearing the raw dough. Let the paste sit and meld while the dough finishes proofing.",
-      visualCue: {
-        primaryTarget: "A dark green-brown paste that holds its shape on a spoon but spreads easily. The sesame seeds are fully coated and no dry pockets of herbs remain.",
-        spectrum: [
-          { state: "Underdone", description: "Dry crumbs with pools of oil sitting separately. The herbs haven't absorbed the oil.", action: "Stir vigorously for another minute. The herbs will swell and drink the oil in." },
-          { state: "Perfect",   description: "A uniform, glossy paste. Lifted on a spoon, it flows slowly and holds its shape at the edges.", action: "Cover and set aside at room temperature until the dough is ready." },
-          { state: "Overdone",  description: "The paste has become so thin it is watery — too much oil was added.", action: "Stir in another teaspoon of dried za'atar to re-thicken. The ratio can flex; err toward drier." },
-        ],
-      },
-      feelCue: "The paste should smell powerfully of dried thyme and toasted sesame — earthy, faintly resinous, with a bright citric note from the sumac that hits the back of your nose.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "levure sèche active (proof first)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Shape",
-      inputs: ["risen_dough"],
-      outputState: "shaped_discs",
-      instructions: "Punch the risen dough down gently and turn it out onto a lightly floured surface. Divide into two equal portions (or four for smaller flatbreads). Working one at a time, press each piece into a flat disc with your palm, then use your fingertips — not a rolling pin — to coax it outward, rotating it a quarter turn after each pass. Aim for a roughly round disc 25-30 cm across and about 6 mm thick; slight irregularity is authentic and desirable. If the dough springs back, cover and rest it for 5 minutes, then try again — the gluten is tense and needs to relax. Transfer the shaped discs to parchment-lined baking sheets. Preheat your oven to 230 C (450 F) while you top them.",
-      visualCue: {
-        primaryTarget: "A rough oval or circle about 25-30 cm across, 6 mm thick, with slightly thicker edges and a thin center that you can almost see through when held to the light.",
-        spectrum: [
-          { state: "Underdone", description: "The disc is thick and uniform — closer to a small boule than a flatbread. It will bake up bready rather than crackling and light.", action: "Keep pressing and stretching. The dough has more give than you think — trust the gluten." },
-          { state: "Perfect",   description: "Thin and almost translucent in the center, with a rim about 1 cm thick. Laid flat, it relaxes without springing back.", action: "Proceed directly to topping." },
-          { state: "Overdone",  description: "You've stretched too aggressively and the dough has torn through in one or two places.", action: "Pinch the tears closed and patch by pressing a small piece of raw dough over the hole. The baked result hides these scars under the za'atar paste." },
-        ],
-      },
-      feelCue: "At the correct thickness you can feel the slight resistance of the gluten network — it gives evenly across the whole disc without collapsing into one spot.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "sel casher"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Bake",
-      inputs: ["shaped_discs", "zaatar_paste", "ing_08"],
-      outputState: "finished_zaatar_flatbread",
-      instructions: "Spoon the za'atar paste generously over each disc and spread it to the edges with the back of the spoon, leaving a 1 cm border bare. Scatter flaky salt over the top. Slide the parchment directly onto the oven's lowest rack, or ideally onto a preheated baking steel or stone. Bake at 230 C (450 F) for 8-12 minutes, until the edges are golden brown, the center is set (not doughy), and the za'atar paste smells toasted and intensely fragrant. Watch carefully after the 8-minute mark — the thin center bakes quickly and the difference between perfect and scorched is 90 seconds. Serve immediately or within 20 minutes; the texture is best within the first half hour.",
-      visualCue: {
-        primaryTarget: "Golden-brown puffed edges with darker blistered spots. The center is set and matte, the za'atar paste is darkened and fragrant, and the underside is spotted with charred leopard-print marks.",
-        spectrum: [
-          { state: "Underdone", description: "The edges are pale gold but the center still has a faint raw-dough sheen and yields softly when pressed. The za'atar paste smells of oil and herbs but not of toasting.", action: "Return to the oven for 2-3 more minutes. If the edges are darkening faster than the center, slide the tray to the middle rack." },
-          { state: "Perfect",   description: "The edges are deeply golden and crackle when bent. The underside has dark charred spots. The za'atar paste is fragrant and dry at the surface, not wet or greasy. The flatbread flexes but holds its shape.", action: "Transfer to a cutting board and cut into wedges immediately." },
-          { state: "Overdone",  description: "The edges have darkened to near-black and the za'atar paste has begun to smoke. The center may be stiff and cracker-like.", action: "Trim the burnt edges with kitchen shears. The interior is still edible and the za'atar flavor often intensifies attractively — call it 'twice-baked style'." },
-        ],
-      },
-      feelCue: "Fresh from the oven, the flatbread should crackle audibly when you press a corner — that sound is the crust shattering against the soft interior beneath. The steam carries the perfume of dried thyme, sesame, and olive oil in a single warm gust.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge (dough)",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "huile neutre"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Mélange de za'atar séché (thyme, sumac, sésame)",
+      "ratioValue": 4,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Thym séché avec des graines de sésame"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive extra-vierge (cuisson)",
+      "ratioValue": 4,
+      "defaultUnit": "tbsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel de mer blanc (finish)",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "Sel de maldon"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "shaggy_dough",
+      "instructions": "Dans un grand bol, fouetter la farine, la levure instantanée et le sel. Faites un puits au centre, versez dans l'eau chaude et l'huile d'olive, et remuez avec une cuillère en bois ou votre main jusqu'à ce que la pâte se réunisse dans une masse rugueuse et cohésive. La pâte sera légèrement collante et inégale — résistez à ajouter plus de farine. Tourner sur une surface non nourrie et pétrir pendant 7-8 minutes à l'aide du talon de votre main, pousser la pâte loin de vous et le replier. La friction du comptoir nu développe le gluten bien mieux qu'une surface farinée. Après 7 minutes, la pâte aurait dû passer d'une résistance collante à une conformité lisse.",
+      "visualCue": {
+        "primaryTarget": "Une boule lisse, légèrement tachée, qui tient sa forme, a un reflet doux de l'huile, et rebondit lentement quand on la piqué.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte déchire lorsqu'elle est tirée et laisse des morceaux sur le comptoir. La surface a l'air rugueuse et marquée comme une peau d'orange.",
+            "action": "Continuez à pétrir — 3 minutes de plus, en s'appuyant sur votre poids corporel dans chaque poussée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux et souple, comme du cuir chamois doux. La surface est tendue et légèrement translucide. Un test de vitre révèle une membrane mince et extensible qui ne déchire pas.",
+            "action": "Formez une boule, placez-la dans un bol huilé et couvrez-la d'une serviette humide."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est très serrée et ressort presque instantanément lorsqu'elle est cuite. Il est caoutchouteux plutôt que élastique.",
+            "action": "Couvrez et reposez-vous pendant 20 minutes – le gluten surcollé se détend. Il fera toujours un excellent pain plat."
+          }
+        ]
+      },
+      "feelCue": "À la fin de la pétrissage, il devrait se sentir comme une peau de lobe d'oreille chaude — douce, souple, et à peine céder sous une pression douce. Si votre paume disparaît propre, le gluten est développé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Preuve",
+      "inputs": [
+        "shaggy_dough"
+      ],
+      "outputState": "risen_dough",
+      "instructions": "Placer la boule de pâte dans un bol légèrement huilé et la tourner une fois pour enrober. Couvrir d'une serviette de cuisine humide ou d'une enveloppe en plastique et la placer dans un endroit chaud, sans courants d'air, un four avec juste la lumière allumée (environ 27-30 C) est idéal. Laissez-le monter jusqu'à doubler en taille, environ 60-90 minutes selon la température de votre cuisine. Ne pas précipiter cette étape : la fermentation lente construit la complexité peu aigre et levure qui rend ce pain plat goût plus que la farine et l'eau. Vous saurez qu'il est prêt lorsque le dôme de pâte est nettement plus haut que le bord du bol et que des jiggles comme la gélatine lorsque vous secouez doucement le bol.",
+      "visualCue": {
+        "primaryTarget": "La pâte a clairement doublé en volume, est bombée en haut, et a de grandes bulles visibles à travers les murs de tout récipient transparent.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte n'a augmenté que d'un tiers. Il se sent dense et résistant lorsqu'il est pressé, et la surface ne saute pas.",
+            "action": "Retournez à l'endroit chaud et vérifiez à nouveau dans 20 minutes. Si votre cuisine est froide, placez le bol couvert sur une casserole d'eau chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Exactement doublé. La pression d'un doigt fariné dans 2 cm laisse un tiret qui revient lentement à mi-chemin. La pâte sent le pain et peu de yaourt.",
+            "action": "Divisez et formez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le dôme s'est effondré vers l'intérieur. La pâte est très molle et sent fortement acide, presque alcoolique.",
+            "action": "Plier doucement sur elle-même une fois, re-baller, et laisser reposer 15 minutes avant de façonner. Le pain plat sera une touche plus aigre et légèrement plus dense — encore délicieux."
+          }
+        ]
+      },
+      "feelCue": "Une pâte étagée pressée avec un doigt mouillé doit expirer doucement, comme appuyer sur une éponge fraîche, et laisser un tiret fantôme qui s'estompe en 5 secondes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "zaatar_paste",
+      "instructions": "Alors que la pâte résiste, mélanger le mélange de za'atar et l'huile d'olive dans un petit bol et remuer jusqu'à ce que vous ayez une pâte épaisse et lâche, semblable en consistance au pesto. L'huile devrait saturer complètement toutes les graines d'herbes séchées et de sésame — vous créez un lisier tartinable, pas une saupoudrée sèche. Goûtez-le: il devrait être herbacé, noisette, et légèrement aigre du sumac, avec une amertume herbacée du thym. Si votre za'atar est très sec, ajoutez une cuillère à café supplémentaire d'huile afin qu'il se propage sans déchirer la pâte crue. Laisser la pâte s'asseoir et se fondre pendant que la pâte finit de se poncer.",
+      "visualCue": {
+        "primaryTarget": "Une pâte brun-vert foncé qui tient sa forme sur une cuillère mais se propage facilement. Les graines de sésame sont entièrement enrobées et il ne reste pas de poches sèches d'herbes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des miettes sèches avec des piscines d'huile assises séparément. Les herbes n'ont pas absorbé l'huile.",
+            "action": "Remuer vigoureusement pendant une minute. Les herbes gonfleront et boiront l'huile."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte uniforme et brillante. Soulevée sur une cuillère, elle coule lentement et tient sa forme aux bords.",
+            "action": "Couvrir et réserver à température ambiante jusqu'à ce que la pâte soit prête."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est devenue si fine qu'elle est aqueuse — trop d'huile a été ajoutée.",
+            "action": "Incorporer une autre cuillère à café de za'atar séchée pour le ré-alimenter. Le rapport peut fléchir ; errer vers le sec."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit sentir fortement le thym séché et le sésame grillé — terreux, faiblement résineux, avec une note citrique brillante du sumac qui frappe l'arrière de votre nez."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Forme",
+      "inputs": [
+        "risen_dough"
+      ],
+      "outputState": "shaped_discs",
+      "instructions": "Frappez doucement la pâte levée et tournez-la sur une surface légèrement farinée. Divisez en deux portions égales (ou quatre pour les petits pains plats). Travaillant un à la fois, appuyez sur chaque pièce dans un disque plat avec votre paume, puis utilisez le bout des doigts — et non pas un rouleau — pour l'axer vers l'extérieur, en le tournant un quart de tour après chaque passage. Visez un disque rond de 25-30 cm de diamètre et d'environ 6 mm d'épaisseur; une légère irrégularité est authentique et souhaitable. Si la pâte ressort, couvrez-la et reposez-la pendant 5 minutes, puis essayez à nouveau — le gluten est tendu et doit se détendre. Transférer les disques en forme dans des plaques de cuisson parcheminées. Préchauffez votre four à 230 C (450 F) pendant que vous les recouvrez.",
+      "visualCue": {
+        "primaryTarget": "Un ovale rugueux ou un cercle d'environ 25-30 cm de large, 6 mm d'épaisseur, avec des bords légèrement plus épais et un centre mince que vous pouvez presque voir à travers quand tenu à la lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le disque est épais et uniforme, plus près d'une petite boule qu'un pain plat. Il fera cuire de la pain plutôt que de craqueler et de la lumière.",
+            "action": "Continuez à appuyer et à s'étirer. La pâte a plus de donner que vous ne le pensez — faites confiance au gluten."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mince et presque translucide au centre, avec une jante d'environ 1 cm d'épaisseur. Laid plat, il se détend sans retomber.",
+            "action": "Passez directement à la garniture."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez tendu trop agressivement et la pâte a déchiré à un ou deux endroits.",
+            "action": "Pincez les larmes fermées et patchez en pressant un petit morceau de pâte crue sur le trou. Le résultat cuit cache ces cicatrices sous la pâte de za'atar."
+          }
+        ]
+      },
+      "feelCue": "À l'épaisseur correcte, vous pouvez sentir la légère résistance du réseau de gluten — il donne uniformément sur tout le disque sans s'effondrer en un seul endroit."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "shaped_discs",
+        "zaatar_paste",
+        "ing_08"
+      ],
+      "outputState": "finished_zaatar_flatbread",
+      "instructions": "Déposer généreusement la pâte za'atar sur chaque disque et l'étendre aux bords avec le dos de la cuillère, laissant une bordure de 1 cm nue. Saupoudrer le sel sur le dessus. Faites glisser le parchemin directement sur le support le plus bas du four, ou idéalement sur un acier ou une pierre préchauffé. Cuire au four à 230 C (450 F) pendant 8-12 minutes, jusqu'à ce que les bords soient dorés, le centre est réglé (pas pâteux), et la pâte za'atar sent grillée et intensément parfumée. Regardez attentivement après la marque de 8 minutes — le centre mince se balance rapidement et la différence entre parfait et brûlé est de 90 secondes. Servir immédiatement ou dans les 20 minutes; la texture est la meilleure dans la première demi-heure.",
+      "visualCue": {
+        "primaryTarget": "Bords gonflés dorés-bruns avec des taches plus foncées. Le centre est posé et mat, la pâte za'atar est obscurcie et parfumée, et le dessous est repéré avec des marques de léopard carbonisé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les bords sont d'or pâle mais le centre a encore un peu d'épaisseur brute et donne doucement lorsqu'il est pressé. La pâte de za'atar sent l'huile et les herbes, mais pas le toast.",
+            "action": "Retourner au four 2-3 minutes de plus. Si les bords s'obscurcissent plus rapidement que le centre, glissez le plateau sur la grille centrale."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords sont profondément dorés et crépitent lorsqu'ils sont pliés. Le dessous a des taches foncées carbonisées. La pâte za'atar est parfumée et sèche à la surface, non mouillée ni grasse. Le pain plat fléchit mais tient sa forme.",
+            "action": "Transférer sur une planche à découper et couper en quartiers immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont devenus presque noirs et la pâte de za'atar commence à fumer. Le centre peut être raide et semblable à un craquelin.",
+            "action": "Coupez les bords brûlés avec des cisailles de cuisine. L'intérieur est encore comestible et la saveur za'atar s'intensifie souvent de façon attrayante — l'appeler « style deux fois cuit »."
+          }
+        ]
+      },
+      "feelCue": "À l'état frais du four, le pain plat devrait craquer audiquement lorsque vous appuyez sur un coin — ce bruit est la croûte qui se brise contre l'intérieur doux en dessous. La vapeur transporte le parfum du thym séché, du sésame et de l'huile d'olive dans une seule rafale chaude."
+    }
+  ]
 };

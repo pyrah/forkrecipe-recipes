@@ -1,98 +1,229 @@
 export default {
-  repoId: "master_japanese_tonkotsu_ramen_broth_001",
-  parentRepoId: null,
-  slug: "tonkotsu-ramen-broth",
-  author: "ForkRecipe Kitchen",
-  title: "Tonkotsu Ramen Broth",
-  description: "A bone-white, viscous pork broth coaxed from split trotters and neck bones over 18 hours of rolling heat — collagen-rich, porky, and impossibly creamy without a drop of dairy.",
-  cuisine: "Japanese",
-  culture: "Hakata (Fukuoka)",
-  category: "stocks",
-  tags: ["ramen", "pork", "broth", "japanese", "long-cook", "collagen"],
-  difficulty: 4,
-  activeTime: "45 min",
-  totalTime: "18 hr",
-  ratioSystem: "weight",
-  stars: 2340,
-  forks: 312,
-  contributors: 68,
-  license: "CC-BY-SA",
-  createdAt: "2026-01-15",
-  updatedAt: "2026-01-15",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Pork trotters, split lengthwise",         ratioValue: 1000, defaultUnit: "g",  substitutions: ["pork neck bones"] },
-    { ingId: "ing_02", role: "Protein",   name: "Pork neck bones",                          ratioValue: 1000, defaultUnit: "g",  substitutions: ["pork back bones"] },
-    { ingId: "ing_03", role: "Allium",    name: "Yellow onion, halved and charred",          ratioValue: 200,  defaultUnit: "g",  substitutions: ["leek tops"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Fresh ginger, thick slices, charred",       ratioValue: 60,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves, crushed",                    ratioValue: 30,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Liquid",    name: "Cold water",                                ratioValue: 4000, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine salt (for blanching water)",           ratioValue: 10,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_japanese_tonkotsu_ramen_broth_001",
+  "parentRepoId": null,
+  "slug": "tonkotsu-ramen-broth",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tonkotsu Ramen Broth",
+  "description": "Un bouillon de porc blanc-os, visqueux, coaxié à partir de trotters fendus et d'os du cou pendant 18 heures de chaleur de roulement — riche en collagène, porcin et impossiblement crémeux sans goutte de lait.",
+  "cuisine": "Japonais",
+  "culture": "Hakata (Fukuoka)",
+  "category": "stocks",
+  "tags": [
+    "Ramen",
+    "porc",
+    "bouillon",
+    "Japonais",
+    "Cuisson longue",
+    "collagène"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "45 min",
+  "totalTime": "18 hr",
+  "ratioSystem": "weight",
+  "stars": 2340,
+  "forks": 312,
+  "contributors": 68,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-01-15",
+  "updatedAt": "2026-01-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blanch",
-      inputs: ["ing_01", "ing_02", "ing_07"],
-      outputState: "blanched_bones",
-      instructions: "Place bones in a large stockpot. Cover with cold water and bring to a rapid boil over high heat. Boil hard for 10 minutes — grey-brown scum and impurities will rise aggressively to the surface. Drain completely, then rinse each bone under cold running water, scrubbing off any remaining dark bits with your fingers or a brush. Clean the pot.",
-      visualCue: {
-        primaryTarget: "Rinsed bones that are clean and pale — no grey foam clinging to the marrow cavities or joint surfaces.",
-        spectrum: [
-          { state: "Underdone", description: "Bones are still pink at the joints, substantial grey scum clinging to surfaces.", action: "Rinse more thoroughly and scrape out dark marrow if needed — residue clouds the final broth." },
-          { state: "Perfect",   description: "Bones are uniformly pale ivory. Water runs clear when you rinse them. Marrow cavities are open and cleaned.", action: "Return cleaned bones to the pot with fresh water." },
-          { state: "Overdone",  description: "Bones smell strongly cooked; surface texture feels chalky.", action: "Proceed — the subsequent long simmer will more than compensate." },
-        ],
-      },
-      feelCue: "The water should turn a murky grey-brown within 2 minutes — that visible purge is the reason the blanch step exists.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Trotters de porc, divisés dans le sens de la longueur",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "os du cou de porc"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Roast",
-      inputs: ["ing_03", "ing_04"],
-      outputState: "charred_aromatics",
-      instructions: "Place onion halves and ginger slices cut-side down in a dry cast-iron skillet or directly over a gas burner flame with tongs. Char until the cut surfaces are deeply blackened — nearly burnt. This caramelized bitterness sweetens as it infuses the broth over hours.",
-      visualCue: {
-        primaryTarget: "Cut surfaces are black and carbonized, with a ring of deep amber-brown around the char.",
-        spectrum: [
-          { state: "Underdone", description: "Only lightly browned — translucent onion layers, golden ginger edges.", action: "Return to higher heat; the char is what flavors the broth." },
-          { state: "Perfect",   description: "Jet-black carbon on cut surfaces with sweet, smoky aroma. Edges look nearly burnt but smell of caramel.", action: "Set aside until bones are ready." },
-          { state: "Overdone",  description: "Entirely ash-grey with acrid rather than smoky smell.", action: "Discard and start over with new aromatics — true char is good; ash is not." },
-        ],
-      },
-      feelCue: "The onion should hiss and smoke when it hits the dry pan, and the kitchen should smell of sweet caramelized sugar within 30 seconds.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Ossements du cou de porc",
+      "ratioValue": 1000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "os du dos de porc"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["blanched_bones", "charred_aromatics", "ing_05", "ing_06"],
-      outputState: "developing_broth",
-      instructions: "Return cleaned bones to the pot. Add charred onion, ginger, garlic, and all cold water. Bring to a full, rolling boil over high heat — do not reduce. Maintain a vigorous boil for the first 2 hours; the turbulent water emulsifies the collagen and fat into the opaque white broth characteristic of tonkotsu. After 2 hours, reduce to a strong simmer and cook for 14–16 more hours total, adding boiling water if the level drops below the bones.",
-      visualCue: {
-        primaryTarget: "Broth is opaque white — the color of whole milk — with no visible fat layer separating on top.",
-        spectrum: [
-          { state: "Underdone", description: "Broth is light beige and clear, like a light chicken stock. Has not emulsified yet.", action: "Raise heat; you need that rolling boil to break down the collagen and emulsify the fat." },
-          { state: "Perfect",   description: "Thick, creamy white with tiny bubbles churning the surface. Smells powerfully of pork fat and roasted bone.", action: "Maintain the boil; check water level every 2 hours." },
-          { state: "Overdone",  description: "Broth has reduced past the bones; color turning yellow-grey and slightly scorched.", action: "Add 500g boiling water, reduce heat, and continue — watch more closely from here." },
-        ],
-      },
-      feelCue: "Rub a drop between your fingers after 10 hours — it should feel slick and slightly tacky from dissolved collagen, not watery.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon jaune, coupé en deux et carbonisé",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "haut de poireaux"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Strain",
-      inputs: ["developing_broth"],
-      outputState: "strained_broth",
-      instructions: "After 16–18 hours, strain the broth through a fine-mesh strainer, pressing the solids to extract all liquid. Discard the exhausted bones and aromatics. You should have 2–2.5 liters of thick, white broth. Season to taste with salt or tare at the bowl.",
-      visualCue: {
-        primaryTarget: "Strained broth coats the back of a ladle thickly and drips slowly, like light cream.",
-        spectrum: [
-          { state: "Underdone", description: "Broth runs off the ladle like water. Lacks body and smells thin.", action: "Return to the pot and boil down by 20%, then re-strain." },
-          { state: "Perfect",   description: "Milky white, thick, coats a spoon with a sustained film. Aroma is deep, porky, and slightly sweet from the charred onion.", action: "Cool rapidly in an ice bath, then refrigerate. The broth will gel solid — that is exactly right." },
-          { state: "Overdone",  description: "Broth is very dark and reduced to a paste-like consistency.", action: "Thin with hot water to your preferred richness level." },
-        ],
-      },
-      feelCue: "Cold tonkotsu broth should set to a firm, jiggly pork jelly in the refrigerator — if it stays liquid when cold, the collagen extraction was insufficient.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Gingembre frais, tranches épaisses, carbonisé",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Giroves d'ail écrasées",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 4000,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin (pour blanchir l'eau)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Blanch",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_07"
+      ],
+      "outputState": "blanched_bones",
+      "instructions": "Placer les os dans une grande réserve. Couvrir d'eau froide et porter à ébullition rapide à feu vif. Faire bouillir dur pendant 10 minutes — les taches de couleur grise et les impuretés s'élèveront agressivement à la surface. Égoutter complètement, puis rincer chaque os sous l'eau froide courante, en frottant les morceaux sombres restants avec vos doigts ou une brosse. Nettoyez le pot.",
+      "visualCue": {
+        "primaryTarget": "Les os rincés sont propres et pâles — aucune mousse grise ne s'accroche aux cavités médullaires ou aux surfaces articulaires.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les os sont encore roses aux articulations, les os gris importants s'accrochent aux surfaces.",
+            "action": "Rincer plus soigneusement et racler la moelle noire si nécessaire — les résidus nuagent le bouillon final."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les os sont uniformément d'ivoire pâle. L'eau est libre quand vous les rincer. Les cavités étroites sont ouvertes et nettoyées.",
+            "action": "Retournez les os nettoyés dans la casserole avec de l'eau douce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les os sentent fortement cuits; la texture de surface est crayeuse.",
+            "action": "Procéder — la longue mijoter suivante sera plus que compenser."
+          }
+        ]
+      },
+      "feelCue": "L'eau devrait tourner un gris-brun en 2 minutes — cette purge visible est la raison pour laquelle l'étape blanche existe."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "charred_aromatics",
+      "instructions": "Déposer les moitiés d'oignon et les tranches de gingembre coupées dans une poêle en fonte sèche ou directement sur une flamme de brûleur à gaz avec des pinces. Char jusqu'à ce que les surfaces coupées soient profondément noircies — presque brûlées. Cette amertume caramélisée édulcore le bouillon pendant des heures.",
+      "visualCue": {
+        "primaryTarget": "Les surfaces coupées sont noires et carbonisées, avec un anneau de brun ambré profond autour de l'omble.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Seulement brunis légèrement — couches d'oignon translucides, bords de gingembre doré.",
+            "action": "Retour à la chaleur plus élevée; l'omble est ce qui aromatise le bouillon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Carbone noir sur les surfaces coupées avec un arôme doux et fumé. Les bords semblent presque brûlés mais l'odeur du caramel.",
+            "action": "Réserver jusqu'à ce que les os soient prêts."
+          },
+          {
+            "state": "Overdone",
+            "description": "Entièrement cendre grise avec de l'acride plutôt que de l'odeur fumée.",
+            "action": "Jeter et recommencer avec de nouveaux aromatiques — le vrai char est bon; ce n'est pas le frêne."
+          }
+        ]
+      },
+      "feelCue": "L'oignon doit siffler et fumer quand il frappe la casserole sèche, et la cuisine doit sentir du sucre caramélisé sucré dans les 30 secondes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "blanched_bones",
+        "charred_aromatics",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "developing_broth",
+      "instructions": "Retournez les os nettoyés dans le pot. Ajouter l'oignon carbonisé, le gingembre, l'ail et toute l'eau froide. Porter à ébullition pleine et enroulée à feu vif — ne pas réduire. Maintenir une ébullition vigoureuse pendant les 2 premières heures; l'eau turbulente émulsifie le collagène et la graisse dans le bouillon blanc opaque caractéristique du tonkotu. Après 2 heures, réduire à une forte mijoter et cuire 14 à 16 heures de plus au total, en ajoutant de l'eau bouillante si le niveau tombe sous les os.",
+      "visualCue": {
+        "primaryTarget": "Le bouillon est blanc opaque — la couleur du lait entier — sans couche de graisse visible se séparant sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth est beige léger et clair, comme un bouillon de poulet léger. Pas encore émulsifié.",
+            "action": "Augmentez la chaleur; vous avez besoin que le roulement ébullition pour décomposer le collagène et émulsifier la graisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, blanc crémeux avec de minuscules bulles qui secouent la surface. Sensation puissante de graisse de porc et d'os rôti.",
+            "action": "Maintenir l'ébullition; vérifier le niveau d'eau toutes les 2 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le papillon a diminué au-delà des os; la couleur devient jaune-gris et légèrement brûlée.",
+            "action": "Ajoutez 500 g d'eau bouillante, réduisez la chaleur et continuez."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte entre vos doigts après 10 heures — il devrait se sentir lissé et légèrement collagène dissous, pas aqueux."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Poignée",
+      "inputs": [
+        "developing_broth"
+      ],
+      "outputState": "strained_broth",
+      "instructions": "Au bout de 16 à 18 heures, pressez le bouillon à l'aide d'un filtre à mailles fines, en pressant les solides pour extraire tout le liquide. Jeter les os épuisés et les aromatiques. Vous devriez avoir de 2 à 2,5 litres de bouillon blanc épais. Assaisonner au goût au sel ou à la tare au bol.",
+      "visualCue": {
+        "primaryTarget": "Le bouillon resserré enveloppe l'arrière d'une louche épaissement et coule lentement, comme de la crème légère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Broth s'échappe comme de l'eau. Manque de corps et sent mince.",
+            "action": "Retournez dans la casserole et réduisez de 20%, puis reformez."
+          },
+          {
+            "state": "Perfect",
+            "description": "Blanc laiteux, épais, enveloppe une cuillère d'un film soutenu. L'arôme est profond, porcin et légèrement sucré de l'oignon carbonisé.",
+            "action": "Laisser refroidir rapidement dans un bain de glace, puis réfrigérer. Le bouillon va geler solide — c'est exactement exact."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon est très foncé et réduit à une consistance en pâte.",
+            "action": "Finissez avec de l'eau chaude à votre niveau de richesse préféré."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon de tonkotsu froid doit être fixé à une gelée de porc ferme et jiggly au réfrigérateur — s'il reste liquide à froid, l'extraction du collagène est insuffisante."
+    }
+  ]
 };

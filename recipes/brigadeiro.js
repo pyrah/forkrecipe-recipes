@@ -1,90 +1,210 @@
 export default {
-  repoId: "master_brazilian_brigadeiro_001",
-  parentRepoId: null,
-  slug: "brigadeiro",
-  author: "ForkRecipe Kitchen",
-  title: "Brigadeiro",
-  description: "Brazil's beloved chocolate confection: sweetened condensed milk cooked with butter and cocoa powder until it pulls away from the pan into a glossy, fudge-like mass, then cooled, rolled into spheres, and coated in chocolate sprinkles.",
-  cuisine: "Brazilian",
-  culture: "Brazilian",
-  category: "desserts",
-  tags: ["chocolate", "truffle", "brazilian", "sweet", "quick"],
-  difficulty: 1,
-  activeTime: "25 min",
-  totalTime: "90 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 10, salty: 1, sour: 0, bitter: 3, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Sweetener", name: "Sweetened condensed milk",               ratioValue: 8,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Unsalted butter",                        ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Umami",     name: "Unsweetened Dutch-process cocoa powder", ratioValue: 1.5, defaultUnit: "parts", substitutions: ["natural cocoa powder (slightly more acidic)"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Pinch of fine salt",                     ratioValue: 0.05,defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Garnish",   name: "Chocolate sprinkles (granulado)",        ratioValue: 2,   defaultUnit: "parts", substitutions: ["cocoa powder", "crushed nuts", "shredded coconut"] },
+  "repoId": "master_brazilian_brigadeiro_001",
+  "parentRepoId": null,
+  "slug": "brigadeiro",
+  "author": "ForkRecipe Kitchen",
+  "title": "Brigadeiro",
+  "description": "La confiserie au chocolat bien-aimée du Brésil : lait condensé sucré cuit avec du beurre et du cacao en poudre jusqu'à ce qu'il s'éloigne de la poêle dans une masse brillante, comme du caramel, puis refroidi, roulé dans des sphères, et enduit dans des saupoudrers de chocolat.",
+  "cuisine": "Brésil",
+  "culture": "Brésil",
+  "category": "desserts",
+  "tags": [
+    "chocolat",
+    "truffe",
+    "Brésilien",
+    "doux",
+    "Vite"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "25 min",
+  "totalTime": "90 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 10,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 3,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Melt",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "combined_mixture",
-      instructions: "In a medium heavy-bottomed saucepan (not non-stick — you need to see the color change on the pot bottom), combine the condensed milk, butter, sifted cocoa powder, and salt. Stir together with a heat-proof spatula before turning on the heat, making sure the cocoa is fully incorporated before any heat is applied — this prevents scorching lumps. Place over medium-low heat.",
-      visualCue: {
-        primaryTarget: "A uniform, glossy, deep chocolate-brown mixture with no dry cocoa lumps. The butter is fully integrated — no visible fat separation.",
-        spectrum: [
-          { state: "Underdone", description: "Cocoa powder has dry lumps floating or clumped. Butter is not yet incorporated.", action: "Stir vigorously off heat before turning on the burner. Heat with lumps will cause scorching." },
-          { state: "Perfect",   description: "Completely smooth, glossy, deep brown. Butter fully melted and blended. Smells of rich chocolate.", action: "Begin stirring continuously over medium-low heat." },
-          { state: "Overdone",  description: "Mixture was heated before the cocoa was dissolved — dark brown specks of scorched cocoa visible.", action: "Strain through a fine mesh sieve now before the mixture thickens. Proceed with caution on lower heat." },
-        ],
-      },
-      feelCue: "Before heating, run the spatula across the bottom — it should feel smooth with no grainy resistance from undissolved cocoa.",
+      "ingId": "ing_01",
+      "role": "Sweetener",
+      "name": "Lait condensé sucré",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Caramelize",
-      inputs: ["combined_mixture"],
-      outputState: "brigadeiro_dough",
-      instructions: "Cook the mixture over medium-low heat, stirring continuously with the spatula in long, slow strokes across the entire bottom of the pan — never stop stirring. The mixture will gradually thicken. After 8–12 minutes, it will begin to pull away from the sides and bottom of the pan as you drag the spatula through. This is the critical test: drag a line across the bottom of the pan with your spatula. If the line holds clear for 3 seconds before the mixture flows back together, it is ready. Remove from heat immediately.",
-      visualCue: {
-        primaryTarget: "The mixture has darkened slightly to a deeper chocolate brown. It pulls away from the pan sides and leaves a clean path when the spatula drags across the bottom. The texture has gone from pourable liquid to a thick, fudge-like paste.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is still pourable like chocolate sauce. The line test leaves no clear path — it flows back together instantly.", action: "Continue stirring over medium-low heat. The transformation happens gradually, then suddenly in the last 2 minutes." },
-          { state: "Perfect",   description: "The spatula path holds for 3 seconds. The mixture mounds slightly when the spatula lifts it. It pulls cleanly from the entire pan bottom. Smells of cooked milk and dark chocolate.", action: "Remove from heat immediately and pour onto a greased plate or bowl. Do not scrape the scorched bits from the bottom." },
-          { state: "Overdone",  description: "Mixture is stiff and grainy. It tears rather than flows when the spatula moves. Has the texture of dry fudge.", action: "Add 1 tablespoon of warm cream and stir vigorously off heat to loosen. The texture will recover partially — it may roll slightly sticky." },
-        ],
-      },
-      feelCue: "The sound changes distinctly when brigadeiro is ready — instead of a continuous liquid swish, you hear a slower, heavier scraping sound as the thick mass drags across the pan. Trust your ears.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Cool",
-      inputs: ["brigadeiro_dough"],
-      outputState: "cooled_brigadeiro",
-      instructions: "Pour the cooked mixture onto a greased plate or into a shallow bowl. Do not scrape the pot — the bottom layer that stuck will taste bitter. Spread slightly with the spatula. Let cool completely to room temperature (30 minutes minimum), then refrigerate for at least 30 minutes. Cold brigadeiro is essential for rolling — warm brigadeiro will stick to your hands and cannot form clean spheres. The mixture should be firm enough to scoop and hold its shape.",
-      visualCue: {
-        primaryTarget: "After chilling: a firm, dark chocolate disc that holds its shape when the plate is tilted. Surface is matte rather than glossy. The mixture holds a clean indent when pressed.",
-        spectrum: [
-          { state: "Underdone", description: "Still warm and soft — a finger pressed in leaves a permanent indent and comes away sticky.", action: "Refrigerate for another 20–30 minutes. Patience here prevents a sticky, unworkable mess during rolling." },
-          { state: "Perfect",   description: "Firm but pliable. Holds its shape but yields easily under pressure. Lifts from the plate in a cohesive mass.", action: "Lightly grease hands with butter and begin rolling." },
-          { state: "Overdone",  description: "Rock-solid and difficult to scoop cleanly. Cracks when bent.", action: "Let it sit at room temperature for 10 minutes to soften slightly before rolling." },
-        ],
-      },
-      feelCue: "Press the surface with one fingertip — it should feel like very cold clay: leaves an indent but does not stick to your finger when you pull away.",
+      "ingId": "ing_03",
+      "role": "Umami",
+      "name": "Poudre de cacao non sucrée",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poudre de cacao naturel (un peu plus acide)"
+      ]
     },
     {
-      nodeId: "step_4", action: "Shape",
-      inputs: ["cooled_brigadeiro", "ing_05"],
-      outputState: "finished_brigadeiros",
-      instructions: "Lightly grease your hands with butter. Using a small spoon or melon baller, scoop portions of about 1.5 tablespoons each. Roll each portion between your greased palms in a circular motion, applying gentle, even pressure to form a smooth sphere. Work quickly — the warmth of your hands begins to soften the brigadeiro. Roll each ball immediately in the chocolate sprinkles, pressing gently to adhere, then place in a paper candy cup. If the mixture becomes too soft to roll, chill your hands under cold water and pat dry before continuing.",
-      visualCue: {
-        primaryTarget: "Uniform chocolate spheres about 2.5 cm in diameter, completely coated in brown sprinkles with no bare spots. Smooth, round, and holding their shape at room temperature.",
-        spectrum: [
-          { state: "Underdone", description: "Spheres are irregular with flat bottoms where they rested on the palm. Sprinkles are patchy and sliding off.", action: "Re-roll any misshapen ones between your palms and re-coat. Chill your hands between batches." },
-          { state: "Perfect",   description: "Smooth, round, uniformly coated. Sprinkles are adhered in a dense, even layer. Holds its dome shape without sagging.", action: "Place in paper cups and refrigerate until serving. They keep refrigerated for up to 5 days." },
-          { state: "Overdone",  description: "Mixture is too warm and misshapen — spheres have flattened to discs. Sprinkles are half-embedded rather than coating the surface.", action: "Refrigerate the shaped brigadeiros for 15 minutes to firm them, then re-roll and re-coat." },
-        ],
-      },
-      feelCue: "A properly set brigadeiro rolls between greased palms with gentle resistance — like rolling a firm ball of soft wax. If it sticks heavily to your palm and deforms, it is too warm.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Pince de sel fin",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Garnish",
+      "name": "Saupoudres de chocolat (granulado)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cacao en poudre",
+        "Noix concassées",
+        "noix de coco déchiquetées"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Faire fondre",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "combined_mixture",
+      "instructions": "Dans une casserole moyennement à fond lourd (pas antiadhésive – vous devez voir le changement de couleur sur le fond de la casserole), combiner le lait condensé, le beurre, la poudre de cacao tamisé et le sel. Mélanger avec une spatule résistante à la chaleur avant d'allumer la chaleur, en veillant à ce que le cacao soit complètement incorporé avant d'appliquer la chaleur, ce qui évite les grumeaux. Mettre à feu moyen-doux.",
+      "visualCue": {
+        "primaryTarget": "Un mélange uniforme, brillant et brun chocolat, sans morceaux de cacao secs. Le beurre est entièrement intégré — pas de séparation visible des graisses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La poudre de cacao a des morceaux secs flottants ou entassés. Le beurre n'est pas encore incorporé.",
+            "action": "Mélanger vigoureusement la chaleur avant d'allumer le brûleur. La chaleur avec des grumeaux provoquera des brûlures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, brillant, brun foncé. Beurre complètement fondu et mélangé. Des odeurs de chocolat riche.",
+            "action": "Commencez à remuer continuellement à feu moyen-doux."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a été chauffé avant la dissolution du cacao, des taches brunes foncées de cacao brûlé visibles.",
+            "action": "Plongez dans un tamis à mailles fines avant que le mélange ne s'épaississe. Procédez avec prudence sur une chaleur plus faible."
+          }
+        ]
+      },
+      "feelCue": "Avant de chauffer, faire passer la spatule sur le fond — elle devrait se sentir lisse sans résistance granuleuse du cacao non dissous."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Caramélisation",
+      "inputs": [
+        "combined_mixture"
+      ],
+      "outputState": "brigadeiro_dough",
+      "instructions": "Cuire le mélange à feu moyen-doux, en remuant en continu avec la spatule en coups longs et lents sur l'ensemble du fond de la poêle, sans cesser de remuer. Le mélange s'épaissira progressivement. Après 8 à 12 minutes, il commencera à s'éloigner des côtés et du fond de la poêle en faisant glisser la spatule. C'est le test critique : faites glisser une ligne sur le fond de la poêle avec votre spatule. Si la ligne reste dégagée pendant 3 secondes avant que le mélange ne se recoupe, elle est prête. Retirer immédiatement du feu.",
+      "visualCue": {
+        "primaryTarget": "Le mélange s'est légèrement foncé à un brun chocolat plus profond. Il s'éloigne des côtés de la poêle et laisse un chemin propre lorsque la spatule traîne en bas. La texture est passée d'un liquide versable à une pâte épaisse et fudge.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est encore versable comme la sauce au chocolat. Le test de ligne ne laisse pas de chemin clair, il revient instantanément.",
+            "action": "Continuer à remuer à feu moyen-doux. La transformation se produit progressivement, puis subitement dans les 2 dernières minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le sentier de la spatule dure 3 secondes. Les monticules de mélange se détachent légèrement lorsque la spatule le soulève. Il tire proprement de tout le fond de la poêle. Sens de lait cuit et de chocolat noir.",
+            "action": "Retirer immédiatement du feu et verser sur une plaque ou un bol graissé. Ne grattez pas les morceaux brûlés du bas."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est rigide et granuleux. Il déchire plutôt que coule quand la spatule bouge. A la texture du caramel sec.",
+            "action": "Ajouter 1 cuillère à soupe de crème tiède et remuer vigoureusement le feu pour se détendre. La texture se rétablira partiellement — elle peut rouler légèrement collant."
+          }
+        ]
+      },
+      "feelCue": "Le son change nettement lorsque le brigadeiro est prêt — au lieu d'un liquide continu, on entend un bruit de grattage plus lent et plus lourd lorsque la masse épaisse traîne à travers la casserole. Faites confiance à vos oreilles."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Frais",
+      "inputs": [
+        "brigadeiro_dough"
+      ],
+      "outputState": "cooled_brigadeiro",
+      "instructions": "Verser le mélange cuit sur une plaque graissée ou dans un bol peu profond. Ne grattez pas le pot — la couche inférieure collée aura un goût amer. Étaler légèrement avec la spatule. Laisser refroidir complètement à température ambiante (30 minutes minimum), puis réfrigérer pendant au moins 30 minutes. Cold brigadeiro est essentiel pour rouler — une brigadeiro chaude s'attachera à vos mains et ne peut pas former des sphères propres. Le mélange doit être suffisamment ferme pour scoop et tenir sa forme.",
+      "visualCue": {
+        "primaryTarget": "Après refroidissement : un disque de chocolat noir ferme qui tient sa forme lorsque la plaque est inclinée. La surface est mate plutôt que brillante. Le mélange contient un tiret propre lorsqu'il est pressé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Encore chaud et doux — un doigt pressé dans les feuilles d'un tiret permanent et s'éloigne collant.",
+            "action": "Réfrigérer encore 20 à 30 minutes. La patience ici empêche un gâchis collant et inapplicable pendant le roulement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ferme mais souple. Retient sa forme mais donne facilement sous pression. Soulève de la plaque dans une masse cohésive.",
+            "action": "Graisser légèrement les mains avec du beurre et commencer à rouler."
+          },
+          {
+            "state": "Overdone",
+            "description": "Solide et difficile à nettoyer. Des fissures pliées.",
+            "action": "Laisser reposer à température ambiante pendant 10 minutes pour ramollir légèrement avant de rouler."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la surface avec un bout de doigt — il devrait se sentir comme de l'argile très froide: laisse un tiret mais ne colle pas à votre doigt quand vous tirez."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Forme",
+      "inputs": [
+        "cooled_brigadeiro",
+        "ing_05"
+      ],
+      "outputState": "finished_brigadeiros",
+      "instructions": "Graisser légèrement les mains avec du beurre. À l'aide d'une petite cuillère ou d'une ballette de melon, faites des portions d'environ 1,5 cuillère à soupe chacune. Rouler chaque portion entre vos paumes graissées dans un mouvement circulaire, en appliquant une pression douce, même pour former une sphère lisse. Travaillez vite — la chaleur de vos mains commence à adoucir le brigadeiro. Rouler chaque boule immédiatement dans les saupoudrers de chocolat, presser doucement pour adhérer, puis placer dans une tasse de bonbons en papier. Si le mélange devient trop mou pour rouler, refroidissez vos mains sous l'eau froide et laissez sécher avant de continuer.",
+      "visualCue": {
+        "primaryTarget": "Des sphères de chocolat uniformes d'environ 2,5 cm de diamètre, entièrement recouvertes de saupoudrers bruns sans taches nues. Doux, rond, et tenant leur forme à température ambiante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les sphères sont irrégulières avec des fonds plats où elles reposent sur la paume. Les taches sont irrégulières et glissent.",
+            "action": "Replacez-les entre vos paumes et vos recoins. Refroidissez vos mains entre les lots."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, rond, uniformément revêtu. Les asperges sont respectées dans une couche dense et uniforme. Il tient sa forme de dôme sans s'accrocher.",
+            "action": "Mettre dans des tasses en papier et réfrigérer jusqu'à servir. Ils restent réfrigérés jusqu'à 5 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est trop chaud et malsain — les sphères se sont aplaties sur les disques. Les asperges sont à moitié enrobées plutôt que d'enrober la surface.",
+            "action": "Réfrigérer les brigadeiros en forme pendant 15 minutes pour les raffermir, puis rerouler et re-coat."
+          }
+        ]
+      },
+      "feelCue": "Des rouleaux de brigadeiro bien fixés entre des palmiers graissés avec une résistance douce, comme rouler une boule ferme de cire douce. S'il colle fortement à votre paume et se déforme, il est trop chaud."
+    }
+  ]
 };

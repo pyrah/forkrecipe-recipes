@@ -1,80 +1,207 @@
 export default {
-  repoId: "master_turkish_tarator_001",
-  parentRepoId: null,
-  slug: "tarator",
-  author: "ForkRecipe Kitchen",
-  title: "Tarator",
-  description: "A pale, creamy cold sauce of ground walnuts and tahini emulsified with vinegar and garlic — dense as mayonnaise, nutty and earthy, with a sharp vinegar brightness that cuts through rich fried fish or roasted vegetables.",
-  cuisine: "Turkish",
-  culture: "Levantine",
-  category: "condiments",
-  tags: ["walnut", "garlic", "tahini", "vegan", "cold sauce"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 5, bitter: 3, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Walnut halves, toasted and cooled", ratioValue: 4, defaultUnit: "parts", substitutions: ["blanched almonds for a milder version"] },
-    { ingId: "ing_02", role: "Structure",  name: "Day-old white bread, crusts removed, torn into pieces", ratioValue: 1, defaultUnit: "parts", substitutions: ["breadcrumbs soaked in water"] },
-    { ingId: "ing_03", role: "Fat",        name: "Tahini (well-stirred sesame paste)", ratioValue: 1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",     name: "Garlic cloves, peeled", ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Acid",       name: "White wine vinegar", ratioValue: 1, defaultUnit: "parts", substitutions: ["lemon juice for a brighter version"] },
-    { ingId: "ing_06", role: "Hydration",  name: "Ice-cold water", ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",        name: "Extra-virgin olive oil", ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Fine sea salt", ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_turkish_tarator_001",
+  "parentRepoId": null,
+  "slug": "tarator",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tarateur",
+  "description": "Une sauce froide pâle et crémeuse de noix moulues et de tahini émulsifiée de vinaigre et d'ail — dense comme mayonnaise, noix et terre, avec un éclat de vinaigre vif qui coupe à travers des poissons frits riches ou des légumes rôtis.",
+  "cuisine": "Turquie",
+  "culture": "Levantine",
+  "category": "condiments",
+  "tags": [
+    "Noix",
+    "Ail",
+    "Tahini",
+    "végétalien",
+    "sauce froide"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 5,
+    "bitter": 3,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Toast",
-      inputs: ["ing_01"],
-      outputState: "toasted_walnuts",
-      instructions: "Spread the walnut halves on a dry baking tray and toast at 175C (350F) for 6-8 minutes, or in a dry skillet over medium heat for 4-5 minutes, stirring occasionally. The walnuts are done when they smell deeply nutty and toasty and have darkened slightly. Cool completely before grinding — warm walnuts will turn oily and paste-like too quickly in the processor.",
-      visualCue: {
-        primaryTarget: "Walnuts are lightly darkened — from pale tan to golden-brown — and smell of warm, toasted nuts.",
-        spectrum: [
-          { state: "Underdone", description: "Walnuts are still pale and smell raw. No toasty aroma.", action: "Return to the heat for another 2 minutes, watching closely — walnuts burn quickly." },
-          { state: "Perfect",   description: "Golden-brown with a deep, toasty, nutty aroma. Slightly fragrant of browning. Feel warm and dry.", action: "Spread on a cool surface and let cool completely before processing." },
-          { state: "Overdone",  description: "Walnuts are dark brown with a burnt, bitter smell. Acrid smoke.", action: "Discard and start again — burnt walnut bitterness is irreversible and will dominate the sauce." },
-        ],
-      },
-      feelCue: "Bite one in half — the interior should be golden-tan and smell like warm pastry. Pale ivory interior means underdone; black interior means burnt.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "moitiés de noix grillées et refroidies",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "amandes blanchies pour une version plus douce"
+      ]
     },
     {
-      nodeId: "step_2", action: "Soak",
-      inputs: ["ing_02", "ing_05"],
-      outputState: "soaked_bread",
-      instructions: "Place the torn bread pieces in a small bowl and pour the white wine vinegar over them. Turn to coat and let sit for 3-5 minutes until the bread is fully saturated and falling apart. The vinegar-soaked bread acts both as an emulsifier and as a way to introduce the acid smoothly throughout the sauce rather than in harsh pockets.",
-      visualCue: {
-        primaryTarget: "Bread is fully saturated and collapsing, stained slightly by the vinegar.",
-        spectrum: [
-          { state: "Underdone", description: "Bread still has a dry white center and is only damp on the outside.", action: "Push pieces into the vinegar and wait another 2 minutes." },
-          { state: "Perfect",   description: "Bread collapses completely when pressed and the vinegar has been fully absorbed. No dry interior.", action: "Add directly to the processor without squeezing." },
-          { state: "Overdone",  description: "Bread has dissolved entirely into a vinegar paste.", action: "Perfect — add everything including the liquid to the processor." },
-        ],
-      },
-      feelCue: "Squeeze a piece — it should dissolve between your fingers into a sharp-smelling, wet paste with no dry resistance.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Pain blanc d'un jour, croûtes enlevées, déchirées en morceaux",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chapelures trempées dans l'eau"
+      ]
     },
     {
-      nodeId: "step_3", action: "Blend",
-      inputs: ["toasted_walnuts", "soaked_bread", "ing_03", "ing_04", "ing_06", "ing_07", "ing_08"],
-      outputState: "finished_tarator",
-      instructions: "Combine the cooled toasted walnuts, vinegar-soaked bread, tahini, garlic cloves, and salt in a food processor. Process for 30 seconds until the walnuts are finely ground. With the machine running, add the ice-cold water in a slow stream, then the olive oil. Process until the sauce is smooth, creamy, and homogenous — about 90 seconds total. The cold water is essential: it keeps the walnut oils from separating and produces a stable, mayonnaise-like emulsion. Taste and adjust with more vinegar for sharpness, more water for a looser sauce.",
-      visualCue: {
-        primaryTarget: "A pale beige-cream sauce, smooth and thick, that pours slowly like heavy cream and holds soft mounds when spooned.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is coarse and grainy — walnut pieces still visible. Oil not emulsified, pooling on the surface.", action: "Process for another 60 seconds. Scrape down the sides and blend again." },
-          { state: "Perfect",   description: "Smooth, creamy, pale beige-ivory. Holds its shape briefly when dropped from a spoon. Smells of toasted walnut, sesame, and vinegar. Thick but pourable.", action: "Refrigerate until service. Keeps for 3 days sealed." },
-          { state: "Overdone",  description: "Sauce has turned grey-beige and slightly oily — over-processed walnuts have released too much oil.", action: "Whisk in a tablespoon of cold water to re-emulsify." },
-        ],
-      },
-      feelCue: "A small spoonful on the tongue should be smooth, slightly thick, nutty-bitter from the walnuts, sharp from the vinegar, and leave a sesame-oil warmth at the back of the throat.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Tahini (pâte de sésame bien cirée)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Giroves d'ail, pelées",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de citron pour une version plus lumineuse"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Hydration",
+      "name": "Eau froide",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "toasted_walnuts",
+      "instructions": "Étaler les moitiés de noix sur un plateau de cuisson sec et faire griller à 175C (350F) pendant 6-8 minutes, ou dans une poêle sèche à feu moyen pendant 4-5 minutes, en remuant occasionnellement. Les noix sont cuites lorsqu'elles sentent la noix profonde et grillée et ont légèrement foncé. Laisser refroidir complètement avant le broyage : les noix chaudes deviennent huileuses et collent trop rapidement dans le processeur.",
+      "visualCue": {
+        "primaryTarget": "Les noix sont légèrement foncées — du bronzage pâle au brun doré — et l'odeur de noix chaudes grillées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les noix sont encore pâles et sentent crus. Pas d'arôme grillé.",
+            "action": "Revenez au feu encore 2 minutes, en regardant attentivement — les noix brûlent rapidement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Golden-brun avec un arôme profond, grillé, noix. Un peu parfumé de brunissement. Se sentir chaud et sec.",
+            "action": "Étaler sur une surface fraîche et laisser refroidir complètement avant le traitement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les noix sont brun foncé avec une odeur brûlée et amère. Fumée acride.",
+            "action": "Jeter et recommencer: l'amertume de noix brûlée est irréversible et dominera la sauce."
+          }
+        ]
+      },
+      "feelCue": "Bite un sur deux — l'intérieur devrait être doré-tan et odeur de pâtisserie chaude. Intérieur ivoire pâle signifie sous-doté; intérieur noir signifie brûlé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Trempage",
+      "inputs": [
+        "ing_02",
+        "ing_05"
+      ],
+      "outputState": "soaked_bread",
+      "instructions": "Placez les morceaux de pain déchirés dans un petit bol et versez le vinaigre blanc sur eux. Tourner pour enrober et laisser reposer 3-5 minutes jusqu'à ce que le pain soit complètement saturé et s'effondrer. Le pain au vinaigre agit à la fois comme émulsifiant et comme un moyen d'introduire l'acide en douceur dans la sauce plutôt que dans les poches dures.",
+      "visualCue": {
+        "primaryTarget": "Le pain est complètement saturé et s'effondre, légèrement teinté par le vinaigre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pain a encore un centre blanc sec et est seulement humide à l'extérieur.",
+            "action": "Poussez les morceaux dans le vinaigre et attendez encore 2 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le pain s'effondre complètement lorsqu'il est pressé et le vinaigre est complètement absorbé. Pas d'intérieur sec.",
+            "action": "Ajouter directement au processeur sans serrer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pain s'est entièrement dissous dans une pâte de vinaigre.",
+            "action": "Parfait — ajoutez tout, y compris le liquide, au processeur."
+          }
+        ]
+      },
+      "feelCue": "Pressez une pièce — elle devrait se dissoudre entre vos doigts en une pâte sèche, sans résistance sèche."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "toasted_walnuts",
+        "soaked_bread",
+        "ing_03",
+        "ing_04",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_tarator",
+      "instructions": "Mélanger les noix grillées, le pain au vinaigre, le tahini, les gousses d'ail et le sel dans un robot culinaire. Procéder pendant 30 secondes jusqu'à ce que les noix soient finement broyées. Avec la machine en marche, ajouter l'eau froide dans un ruisseau lent, puis l'huile d'olive. Procéder jusqu'à ce que la sauce soit lisse, crémeuse et homogène — environ 90 secondes au total. L'eau froide est essentielle : elle empêche les huiles de noix de se séparer et produit une émulsion stable et mayonnaise. Goûtez et ajustez avec plus de vinaigre pour la netteté, plus d'eau pour une sauce plus lâche.",
+      "visualCue": {
+        "primaryTarget": "Une sauce beige-crème pâle, lisse et épaisse, qui verse lentement comme de la crème lourde et tient des monticules doux quand cuilleré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est grossière et granuleuse — des morceaux de noix encore visibles. Huile non émulsifiée, mise en commun à la surface.",
+            "action": "Procéder pendant 60 secondes. Grattez les côtés et mélangez à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, crémeux, beige-ivoreux pâle. Il tient sa forme brièvement lorsqu'il est tombé d'une cuillère. Des odeurs de noix grillées, de sésame et de vinaigre. Épais mais versables.",
+            "action": "Réfrigérer jusqu'au service. Garde 3 jours scellés."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est devenue gris beige et légèrement huileuse — les noix trop transformées ont libéré trop d'huile.",
+            "action": "fouetter dans une cuillère à soupe d'eau froide pour réémulsionner."
+          }
+        ]
+      },
+      "feelCue": "Une petite cuillère sur la langue doit être lisse, légèrement épaisse, amère de noix, tranchante du vinaigre, et laisser une chaleur d'huile de sésame à l'arrière de la gorge."
+    }
+  ]
 };

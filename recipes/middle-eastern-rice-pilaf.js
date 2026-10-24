@@ -1,99 +1,247 @@
 export default {
-  repoId: "master_middleeastern_middleeasternricepilaf_001",
-  parentRepoId: null,
-  slug: "middle-eastern-rice-pilaf",
-  author: "ForkRecipe Kitchen",
-  title: "Middle Eastern Rice Pilaf with Vermicelli",
-  description: "Thin vermicelli threads toasted in butter until amber, then cooked with long-grain rice into a fragrant pilaf scattered with golden pine nuts — the backbone of the Levantine table.",
-  cuisine: "Middle Eastern",
-  culture: "Levantine",
-  category: "grains",
-  tags: ["grains", "vegan", "rice", "middle-eastern", "vermicelli", "pine-nut"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "35 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Long-grain white rice (basmati)",        ratioValue: 300,  defaultUnit: "g",   substitutions: ["Egyptian short-grain rice"] },
-    { ingId: "ing_02", role: "Structure", name: "Fine vermicelli noodles, broken",        ratioValue: 60,   defaultUnit: "g",   substitutions: ["angel hair pasta broken into 2cm pieces"] },
-    { ingId: "ing_03", role: "Fat",       name: "Unsalted butter",                        ratioValue: 40,   defaultUnit: "g",   substitutions: ["olive oil for vegan version"] },
-    { ingId: "ing_04", role: "Liquid",    name: "Chicken or vegetable broth",             ratioValue: 550,  defaultUnit: "ml",  substitutions: ["water with a pinch of turmeric"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",                          ratioValue: 8,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_06", role: "Garnish",  name: "Pine nuts",                               ratioValue: 40,   defaultUnit: "g",   substitutions: ["slivered almonds", "toasted pumpkin seeds"] },
-    { ingId: "ing_07", role: "Spice",    name: "Ground allspice (bahar)",                 ratioValue: 2,    defaultUnit: "g",   substitutions: ["mixed spice"] },
-    { ingId: "ing_08", role: "Garnish",  name: "Fresh flat-leaf parsley, chopped",        ratioValue: 10,   defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_middleeastern_middleeasternricepilaf_001",
+  "parentRepoId": null,
+  "slug": "middle-eastern-rice-pilaf",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pilaf de riz du Moyen-Orient avec Vermicelli",
+  "description": "Des fils de vermicelli minces grillés au beurre jusqu'à l'ambre, puis cuits avec du riz à grains longs dans un pilaf parfumé éparpillé de pignons dorés, l'épine dorsale de la table Levantine.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Levantine",
+  "category": "grains",
+  "tags": [
+    "grains",
+    "végétalien",
+    "riz",
+    "Moyen-Orient",
+    "vermicelli",
+    "de pins"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "35 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01"],
-      outputState: "soaked_rice",
-      instructions: "Rinse the rice in several changes of cold water until the water runs clear, releasing excess surface starch that would make the pilaf gluey. Cover with cold water and soak for 20 minutes. Drain thoroughly in a fine-mesh strainer and pat lightly dry — residual moisture will cause the butter to spatter.",
-      visualCue: {
-        primaryTarget: "Water runs clear when poured over rice; grains look white and slightly swollen.",
-        spectrum: [
-          { state: "Underdone", description: "Water still runs milky-white, loaded with surface starch.", action: "Rinse 2–3 more times with cold water, agitating the grains each time." },
-          { state: "Perfect",   description: "Water is nearly clear, grains are slightly translucent at the edges from soaking. Drains freely.", action: "Drain well and proceed to toast the vermicelli." },
-          { state: "Overdone",  description: "Rice has been soaking too long (over 2 hours) and has begun to soften and break.", action: "Drain and reduce cooking time by 2 minutes." },
-        ],
-      },
-      feelCue: "Rinsed, soaked rice should flow through your fingers like fine sand with no stickiness — any tackiness means more rinsing is needed.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz blanc à grains longs (basmati)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Riz égyptien à grains courts"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toast",
-      inputs: ["ing_02", "ing_03", "ing_06"],
-      outputState: "toasted_vermicelli",
-      instructions: "Melt the butter in a heavy-bottomed saucepan over medium heat. Add the pine nuts and toss for 1–2 minutes until golden. Remove with a slotted spoon and set aside — they burn quickly. Add the broken vermicelli to the remaining butter and toss constantly for 3–4 minutes until the noodles turn a deep amber-brown and smell of toasted hazelnuts. This is the defining character of the dish.",
-      visualCue: {
-        primaryTarget: "Vermicelli is a deep, uniform amber-brown — darker than you'd think safe, almost russet.",
-        spectrum: [
-          { state: "Underdone", description: "Vermicelli is still pale or only faintly yellow — it will be flavorless and contribute no nuttiness.", action: "Continue toasting over medium heat, stirring constantly." },
-          { state: "Perfect",   description: "Deep amber to chestnut brown, smells intensely of toasted nuts and butter. Crackles faintly when stirred.", action: "Add the drained rice immediately." },
-          { state: "Overdone",  description: "Vermicelli has gone past brown to black and smells burnt and bitter.", action: "Remove the burnt threads, wipe out the pan, and start again with fresh vermicelli in fresh butter." },
-        ],
-      },
-      feelCue: "The butter in the pan should smell of hazelnut browned butter — nutty and rich, not sharp or acrid — that is the moment to stop and add the rice.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Nouilles vermicelles fines, cassées",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâtes de cheveux d'ange brisées en morceaux de 2cm"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["toasted_vermicelli", "soaked_rice", "ing_04", "ing_05", "ing_07"],
-      outputState: "cooked_pilaf",
-      instructions: "Add the drained rice to the toasted vermicelli and stir to coat in the butter for 1 minute. Pour in the hot broth, add salt and allspice. Stir once. Bring to a boil over high heat, then reduce to the lowest simmer, cover tightly, and cook for 15 minutes. Remove from heat and steam, covered, for 10 minutes. Do not lift the lid during cooking or steaming.",
-      visualCue: {
-        primaryTarget: "Each rice grain is separate and fluffy; amber vermicelli threads are woven throughout without becoming mushy.",
-        spectrum: [
-          { state: "Underdone", description: "Rice still has a chalky bite; wet patches visible on the surface of the pot.", action: "Re-cover and steam off-heat for 5 more minutes — the residual heat will finish the rice." },
-          { state: "Perfect",   description: "Grains are separate, fluffy, and fragrant with allspice. Vermicelli threads are tender but distinct. No liquid at the bottom.", action: "Fluff with a fork and plate." },
-          { state: "Overdone",  description: "Rice grains have blown out and clumped; vermicelli has dissolved into the mass.", action: "Spread on a baking sheet to dry slightly; the flavors are intact even if the texture is softer." },
-        ],
-      },
-      feelCue: "Lift the lid after steaming and take a deep breath — the pilaf should exhale a warm cloud of allspice and toasted butter, the hallmark of a properly rested rice.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile d'olive pour version végétalienne"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["cooked_pilaf", "toasted_vermicelli", "ing_06", "ing_08"],
-      outputState: "finished_rice_pilaf",
-      instructions: "Fluff the pilaf with a fork, turning gently from the bottom up. Mound onto a warmed serving platter. Scatter the reserved golden pine nuts over the top and finish with the chopped parsley. Serve immediately.",
-      visualCue: {
-        primaryTarget: "A mound of amber-flecked white rice crowned with golden pine nuts and bright green parsley.",
-        spectrum: [
-          { state: "Underdone", description: "Pine nuts are pale and mealy rather than golden; they add no flavor.", action: "Toast separately in a dry pan for 1 minute before scattering." },
-          { state: "Perfect",   description: "Golden pine nuts glow against the rice; parsley is vivid green and fresh-smelling. The mound holds its shape but is not compressed.", action: "Serve within 10 minutes for best texture." },
-          { state: "Overdone",  description: "Pilaf has been plated too long; the vermicelli has continued to absorb moisture and the dish looks heavy.", action: "Serve immediately — pilaf is a dish of immediacy." },
-        ],
-      },
-      feelCue: "The finished pilaf should feel light and airy on the serving spoon, each forkful revealing threads of toasted noodle and the occasional crunch of pine nut.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Bouillon de poulet ou de légumes",
+      "ratioValue": 550,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau avec une pincée de curcuma"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Garnish",
+      "name": "Noix de pin",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Amandes liquéfiées",
+        "Graines de citrouille grillées"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Versail au sol (bahar)",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "épices mélangées"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Persil frais à feuilles plates, haché",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "soaked_rice",
+      "instructions": "Rincer le riz dans plusieurs changements d'eau froide jusqu'à ce que l'eau coule clair, libérant de l'amidon de surface excédentaire qui rendrait le pilaf collant. Couvrir d'eau froide et tremper pendant 20 minutes. Égoutter soigneusement dans une passoire à mailles fines et tapoter légèrement à sec — l'humidité résiduelle fera éclabousser le beurre.",
+      "visualCue": {
+        "primaryTarget": "L'eau est claire lorsqu'elle est versée sur du riz; les grains sont blancs et légèrement gonflés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est toujours blanc laiteux, chargée d'amidon de surface.",
+            "action": "Rincer encore 2 à 3 fois à l'eau froide, agiter les grains à chaque fois."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'eau est presque limpide, les grains sont légèrement translucides aux bords du trempage. Draine librement.",
+            "action": "Égoutter bien et faire griller les vermicelles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz est trempé trop longtemps (plus de 2 heures) et a commencé à s'assouplir et à se briser.",
+            "action": "Égoutter et réduire le temps de cuisson de 2 minutes."
+          }
+        ]
+      },
+      "feelCue": "Le riz rincé et trempé doit couler à travers vos doigts comme du sable fin sans collants."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_06"
+      ],
+      "outputState": "toasted_vermicelli",
+      "instructions": "Faire fondre le beurre dans une casserole à fond lourd à feu moyen. Ajouter les pignons et mélanger 1 à 2 minutes jusqu'à ce qu'ils soient dorés. Retirer avec une cuillère à fentes et mettre de côté — ils brûlent rapidement. Ajouter les vermicelles cassées dans le reste du beurre et jeter constamment pendant 3 à 4 minutes jusqu'à ce que les nouilles tournent une profonde ambre-brun et odeur de noisettes grillées. C'est le caractère déterminant du plat.",
+      "visualCue": {
+        "primaryTarget": "Vermicelli est un brun-ambre profond et uniforme, plus sombre que vous ne le pensez, presque roussé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Vermicelli est encore pâle ou seulement légèrement jaune — il sera sans saveur et ne contribue pas à la noix.",
+            "action": "Continuer à griller à feu moyen, en remuant constamment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profonde au marron brun, sent intensément les noix grillées et le beurre. Cracher légèrement lorsqu'il est agité.",
+            "action": "Ajouter immédiatement le riz égoutté."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vermicelli est passé brun à noir et sent brûlé et amer.",
+            "action": "Retirer les fils brûlés, essuyer la poêle et recommencer avec des vermicelles fraîches dans du beurre frais."
+          }
+        ]
+      },
+      "feelCue": "Le beurre dans la poêle doit sentir le beurre brun noisette — noisette et riche, pas vif ou acride — qui est le moment d'arrêter et d'ajouter le riz."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "toasted_vermicelli",
+        "soaked_rice",
+        "ing_04",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "cooked_pilaf",
+      "instructions": "Ajouter le riz égoutté aux vermicelles grillées et mélanger pour enrober le beurre pendant 1 minute. Verser le bouillon chaud, ajouter le sel et l'aspice. Remuer une fois. Porter à ébullition à feu vif, puis laisser mijoter au minimum, couvrir soigneusement et cuire 15 minutes. Retirer du feu et de la vapeur, couvert, pendant 10 minutes. Ne pas soulever le couvercle pendant la cuisson ou la vapeur.",
+      "visualCue": {
+        "primaryTarget": "Chaque grain de riz est séparé et moelleux; les fils vermicelli ambres sont tissés tout au long sans devenir musqués.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz a encore une morsure crayeuse; des taches humides visibles à la surface du pot.",
+            "action": "Récupérer et éteindre la vapeur pendant 5 minutes, la chaleur résiduelle finira le riz."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les grains sont séparés, moelleux et parfumés. Les fils Vermicelli sont tendres mais distincts. Pas de liquide en bas.",
+            "action": "Fluff avec une fourchette et une plaque."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains de riz ont explosé et s'est emparé; vermicelli s'est dissout dans la masse.",
+            "action": "Étaler légèrement sur une plaque de cuisson; les arômes sont intacts même si la texture est plus douce."
+          }
+        ]
+      },
+      "feelCue": "Soulevez le couvercle après la vapeur et respirez profondément — le pilaf devrait exhaler un nuage chaud de toutspice et de beurre grillé, la marque d'un riz bien reposé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "cooked_pilaf",
+        "toasted_vermicelli",
+        "ing_06",
+        "ing_08"
+      ],
+      "outputState": "finished_rice_pilaf",
+      "instructions": "Flûtez le pilaf avec une fourchette, en tournant doucement du bas vers le haut. Sur un plateau de service chaud. Éparpiller les noix de pin doré sur le dessus et finir avec le persil haché. Servir immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Un monticule de riz blanc d'ambre couronné de pignons de pin dorés et de persil vert vif.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les noix de pin sont pâles et farineuses plutôt que dorées; elles n'apportent aucune saveur.",
+            "action": "Servir séparément dans une casserole sèche pendant 1 minute avant de disperser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pignons dorés brillent contre le riz; le persil est vert vif et frais. Le monticule tient sa forme mais n'est pas comprimé.",
+            "action": "Servir en 10 minutes pour une meilleure texture."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pilaf a été plaqué trop longtemps; les vermicelles ont continué à absorber l'humidité et le plat semble lourd.",
+            "action": "Servir immédiatement — le pilaf est un plat d'immédiateté."
+          }
+        ]
+      },
+      "feelCue": "Le pilaf fini doit se sentir léger et aéré sur la cuillère de service, chaque fil de révélation fourchu de nouilles grillées et la croûte occasionnelle de noix de pin."
+    }
+  ]
 };

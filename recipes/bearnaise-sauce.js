@@ -1,101 +1,260 @@
 export default {
-  repoId: "master_french_bearnaisesauce_001",
-  parentRepoId: null,
-  slug: "bearnaise-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Béarnaise Sauce",
-  description: "The definitive steak sauce of classical French cuisine — hollandaise rebuilt on a tarragon-and-shallot reduction, yielding a buttery, anise-scented emulsion that coats a sirloin like liquid silk and survives on the pass long enough to make dinner worth making.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "sauces",
-  tags: ["sauce", "vegetarian", "dairy", "egg", "tarragon", "french", "emulsion"],
-  difficulty: 4,
-  activeTime: "35 min",
-  totalTime: "50 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 3, bitter: 1, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",        name: "Unsalted butter (clarified or whole)", ratioValue: 250, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Protein",    name: "Egg yolks (large)",                    ratioValue: 3,   defaultUnit: "yolks", substitutions: [] },
-    { ingId: "ing_03", role: "Acid",       name: "White wine vinegar",                   ratioValue: 60,  defaultUnit: "ml", substitutions: ["dry white wine + dash of lemon juice"] },
-    { ingId: "ing_04", role: "Acid",       name: "Dry white wine",                       ratioValue: 60,  defaultUnit: "ml", substitutions: ["extra vinegar, diluted 50/50 with water"] },
-    { ingId: "ing_05", role: "Allium",     name: "Shallots, finely minced",              ratioValue: 40,  defaultUnit: "g", substitutions: ["white onion (larger, milder)"] },
-    { ingId: "ing_06", role: "Herb",       name: "Fresh tarragon (divided use)",         ratioValue: 20,  defaultUnit: "g", substitutions: ["dried tarragon (1 tsp for reduction only)"] },
-    { ingId: "ing_07", role: "Spice",      name: "Black peppercorns, coarsely cracked",  ratioValue: 8,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Fine sea salt",                        ratioValue: 3,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Acid",       name: "Lemon juice (for final adjustment)",   ratioValue: 5,   defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_10", role: "Liquid",     name: "Cold water (for thinning reduction)",  ratioValue: 30,  defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_french_bearnaisesauce_001",
+  "parentRepoId": null,
+  "slug": "bearnaise-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Béarnaise",
+  "description": "La sauce au steak définitive de la cuisine française classique — l'hollandaise reconstruite sur une réduction de l'estragon et de l'échalote, donnant une émulsion beurreuse et parfumée d'anis qui enrobe un lingot comme de la soie liquide et survit sur le col assez longtemps pour faire un dîner digne d'intérêt.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "végétarien",
+    "laitière",
+    "œuf",
+    "estragon",
+    "français",
+    "émulsion"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "35 min",
+  "totalTime": "50 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Reduce",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "tarragon_reduction",
-      instructions: "In a small saucepan, combine vinegar, white wine, minced shallots, half the tarragon (roughly chopped, stems included), and cracked peppercorns. Bring to a boil, then reduce over medium heat until only about 2–3 tablespoons of liquid remain — the shallots should look almost jammy and the liquid should be syrupy and fragrant. Strain through a fine-mesh strainer, pressing on the solids. Reserve the strained shallots if you wish to stir them back in later (classic Béarnaise adds them back). Let the reduction cool to room temperature.",
-      visualCue: {
-        primaryTarget: "2–3 tablespoons of dark amber, syrupy liquid with an intensely sharp tarragon-vinegar aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Still thin and watery. More than 4 tablespoons of liquid remain. Smells raw and sharp.", action: "Continue reducing on medium heat. The acidity must concentrate or it will thin the finished sauce." },
-          { state: "Perfect",   description: "Syrupy, almost jammy. Shallots have darkened and look glossy. The liquid is reduced to 2–3 tablespoons and smells intensely of tarragon. Leaves a coating on the spoon.", action: "Strain and cool. This reduction is the backbone of the entire sauce." },
-          { state: "Overdone",  description: "Completely dry — reduction has evaporated. Dark, sticky residue on the pan.", action: "Add 2 tbsp of water and dissolve the residue. Most flavor compounds survive this rescue." },
-        ],
-      },
-      feelCue: "The cooled reduction is sticky on your fingertips — it should feel like diluted honey, pulling slightly as you press your thumb and finger together.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Beurre non salé (clarifié ou entier)",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Melt",
-      inputs: ["ing_01"],
-      outputState: "clarified_butter",
-      instructions: "Gently melt the butter in a small saucepan over low heat without stirring. Skim the white foam from the surface. Carefully pour the clear golden liquid (clarified butter) into a warm jug, leaving the white milky solids behind. The butter should be warm (60–65 C) when you add it to the yolks — warm enough to emulsify, not so hot it scrambles the eggs. If using whole butter (unclarified), the sauce will have more flavor but slightly less stability.",
-      visualCue: {
-        primaryTarget: "Clear, deep golden liquid with a pure, clean buttery aroma. No white solids or foam.",
-        spectrum: [
-          { state: "Underdone", description: "Still white and frothy. Milk solids still suspended, butter not fully separated.", action: "Continue gently on low heat. Do not stir — let gravity separate the layers." },
-          { state: "Perfect",   description: "Completely clear golden liquid above a layer of white milk solids. The foam has been skimmed away. The clarified butter smells pure and nutty.", action: "Keep warm in the jug (60–65 C) until ready to whisk into the yolks." },
-          { state: "Overdone",  description: "Butter has turned brown (beurre noisette). Solids are darkening.", action: "Use beurre noisette if desired — it adds a nutty flavor to béarnaise — or discard and start over for classic." },
-        ],
-      },
-      feelCue: "The clarified butter should be warm but not hot when you dip your finger into it — comfortably warm, like a bath, around 60 C. If it stings, it is too hot for the yolks.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Jaunes d'œufs (grandes)",
+      "ratioValue": 3,
+      "defaultUnit": "yolks",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Whisk",
-      inputs: ["tarragon_reduction", "ing_02", "ing_10"],
-      outputState: "sabayon_base",
-      instructions: "In a round-bottomed stainless steel bowl (or the top of a double boiler), whisk together the strained reduction, egg yolks, and cold water until pale and slightly frothy. Place over a pot of barely simmering water (the bottom of the bowl must not touch the water). Whisk constantly and vigorously in a figure-eight pattern for 3–5 minutes, moving the bowl on and off the heat as needed, until the mixture has thickened to the consistency of lightly whipped cream — when you lift the whisk, a ribbon of yolk falls and holds on the surface for 3 seconds before dissolving.",
-      visualCue: {
-        primaryTarget: "A pale, voluminous, creamy foam that more than doubles in volume and holds a ribbon for 3 seconds.",
-        spectrum: [
-          { state: "Underdone", description: "Still liquid and translucent. Ribbon disappears immediately. No volume increase.", action: "Continue whisking over the bain marie. The yolks need more heat — move the bowl closer to the steam." },
-          { state: "Perfect",   description: "Pale yellow, thick, and foamy. Ribbon holds 3 seconds. The whisk leaves a clear trail through the mixture. Temperature around 68–70 C.", action: "Remove from heat immediately. Begin adding clarified butter in a thin drizzle." },
-          { state: "Overdone",  description: "Scrambled patches appearing. Mixture looks curdled or grainy. Steam rising from the bowl.", action: "Remove from heat immediately and whisk in 1 tbsp cold water. If scrambled, strain through a fine-mesh sieve — may partially recover." },
-        ],
-      },
-      feelCue: "The sabayon should feel thick but airy against the whisk — like thick, warm cream, and the whisk should leave visible trails that slowly fill back in, not disappear instantly.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vin blanc sec + jus de citron"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Emulsify",
-      inputs: ["sabayon_base", "clarified_butter", "ing_06", "ing_08", "ing_09"],
-      outputState: "finished_bearnaise",
-      instructions: "Remove the bowl from the heat. Begin adding the warm clarified butter in a very thin, steady stream while whisking constantly — almost drop by drop for the first 50 ml. As the emulsion establishes, you can increase to a thin drizzle. If the sauce thickens too much and looks greasy, add a teaspoon of warm water and whisk to loosen. Once all butter is incorporated, stir in the remaining fresh tarragon (finely chopped), season with salt and a few drops of lemon juice. Serve immediately or keep warm in the bain marie (no higher than 55 C).",
-      visualCue: {
-        primaryTarget: "A thick, pale golden sauce that coats the back of a spoon without dripping — the consistency of softly whipped cream.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and greasy-looking. Butter pooling on the surface. Not emulsified.", action: "Whisk vigorously. If it won't come together, start with 1 fresh yolk in a clean bowl and whisk the broken sauce into it drop by drop." },
-          { state: "Perfect",   description: "Pale gold, thick, and glossy. Coats a spoon heavily. No separation. Smells of butter, tarragon, and vinegar in perfect balance.", action: "Season, add fresh tarragon, and serve within 20 minutes." },
-          { state: "Overdone",  description: "Sauce is solid and paste-like. Over-emulsified and stiff.", action: "Whisk in warm water a teaspoon at a time until the sauce loosens to the correct coating consistency." },
-        ],
-      },
-      feelCue: "A correctly emulsified béarnaise coats a finger in a thick, smooth layer that holds its edge cleanly — if you lick it and the butter slicks your lips without any acidic bite following, add more lemon juice.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Vin blanc sec",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre supplémentaire, dilué 50/50 avec de l'eau"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Échalotes finement hachées",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon blanc (plus grand, plus doux)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Estragon frais (usage divisé)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "estragon séché (1 c. à thé pour la réduction seulement)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Maïs de poivre noir, grossièrement craqué",
+      "ratioValue": 8,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de citron (pour ajustement final)",
+      "ratioValue": 5,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Liquid",
+      "name": "Eau froide (pour la réduction de l'éclaircie)",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Réduire",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "tarragon_reduction",
+      "instructions": "Dans une petite casserole, mélanger le vinaigre, le vin blanc, les échalotes hachées, la moitié de l'estragon (approximativement haché, tiges incluses) et les grains de poivre fissurés. Porter à ébullition, puis réduire à feu moyen jusqu'à ce qu'il reste environ 2 à 3 cuillerées à soupe de liquide – les échalotes devraient avoir l'air presque jammy et le liquide devrait être sirupeux et parfumé. Strain à travers une souche fine, appuyant sur les solides. Réservez les échalotes tendues si vous souhaitez les remuer plus tard (la Béarnaise classique les rajoute). Laisser refroidir à la température ambiante.",
+      "visualCue": {
+        "primaryTarget": "2 à 3 cuillères à soupe d'ambre foncé, liquide sirupeux avec un arôme intense d'estragon-vinegar.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours mince et aqueux. Plus de 4 cuillerées à soupe de liquide restent. Sens brut et vif.",
+            "action": "Continuer à réduire à feu moyen. L'acidité doit se concentrer ou la sauce finie sera mince."
+          },
+          {
+            "state": "Perfect",
+            "description": "Syrupy, presque jammy. Les échalotes sont foncées et lustrées. Le liquide est réduit à 2-3 cuillerées à soupe et sent intensément l'estragon. Laisse un revêtement sur la cuillère.",
+            "action": "Peau et cool. Cette réduction est l'épine dorsale de toute la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Totalement sec — la réduction s'est évaporée. Résidus sombres et collants sur la poêle.",
+            "action": "Ajouter 2 c. à soupe d'eau et dissoudre le résidu. La plupart des composés de saveur survivent à ce sauvetage."
+          }
+        ]
+      },
+      "feelCue": "La réduction refroidie est collante sur le bout des doigts — elle devrait être comme du miel dilué, tirant légèrement en appuyant sur le pouce et le doigt ensemble."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Faire fondre",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "clarified_butter",
+      "instructions": "Faire fondre doucement le beurre dans une petite casserole à feu doux sans remuer. Écraser la mousse blanche de la surface. Versez soigneusement le liquide doré clair (beurre clarifié) dans une cruche chaude, laissant les solides laiteux blancs derrière. Le beurre doit être chaud (60-65 C) lorsque vous l'ajoutez aux jaunes — assez chaud pour émulsifier, pas si chaud qu'il brouille les œufs. Si vous utilisez du beurre entier (non précisé), la sauce aura plus de saveur mais un peu moins de stabilité.",
+      "visualCue": {
+        "primaryTarget": "Liquide d'or clair et profond avec un arôme pur et propre. Pas de solides blancs ou de mousse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours blanc et mousseux. Le lait est toujours en suspension, le beurre n'est pas complètement séparé.",
+            "action": "Continuer doucement à feu doux. Ne remuez pas — laissez la gravité séparer les couches."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide d'or complètement clair au-dessus d'une couche de solides de lait blanc. La mousse a été écrémée. Le beurre clarifié sent la pureté et la noix.",
+            "action": "Conserver au chaud dans la cruche (60-65 C) jusqu'à ce qu'elle soit prête à fouetter dans les jaunes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre est devenu brun (beurre sonore). Les solides s'assombrissent.",
+            "action": "Utilisez le beurre noisette si désiré — il ajoute une saveur de noix à la béarnaise — ou jetez et recommencez pour le classique."
+          }
+        ]
+      },
+      "feelCue": "Le beurre clarifié doit être chaud mais pas chaud quand vous plongez votre doigt dedans - confortablement chaud, comme un bain, environ 60 C. Si ça pique, il fait trop chaud pour les jaunes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "tarragon_reduction",
+        "ing_02",
+        "ing_10"
+      ],
+      "outputState": "sabayon_base",
+      "instructions": "Dans un bol en acier inoxydable à fond rond (ou sur le dessus d'une double chaudière), fouetter ensemble la réduction tendue, les jaunes d'œufs et l'eau froide jusqu'à ce qu'ils soient pâles et légèrement mousseux. Placer sur un pot d'eau à peine mijotante (le fond du bol ne doit pas toucher l'eau). fouetter constamment et vigoureusement dans une figure-huit pendant 3-5 minutes, en déplaçant le bol sur et hors de la chaleur au besoin, jusqu'à ce que le mélange s'épaississe à la consistance de la crème légèrement fouettée — lorsque vous soulevez le fouet, un ruban de jaune tombe et tient sur la surface pendant 3 secondes avant de se dissoudre.",
+      "visualCue": {
+        "primaryTarget": "Une mousse pâle, volumineuse et crémeuse qui double en volume et tient un ruban pendant 3 secondes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours liquide et translucide. Le ruban disparaît immédiatement. Pas d'augmentation de volume.",
+            "action": "Continuez à fouetter sur le bain marie. Les jaunes ont besoin de plus de chaleur — déplacez le bol plus près de la vapeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Jaune pâle, épais et mousseux. Le ruban tient 3 secondes. Le fouet laisse une trace claire dans le mélange. Température autour de 68–70 C.",
+            "action": "Retirer immédiatement du feu. Commencez à ajouter du beurre clarifié dans une fine bruine."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des patchs brouillés apparaissent. Le mélange semble caillé ou granuleux. La vapeur s'élève du bol.",
+            "action": "Retirer immédiatement du feu et fouetter dans 1 c. à soupe d'eau froide. S'il est brouillé, il peut se rétablir partiellement à travers un tamis à mailles fines."
+          }
+        ]
+      },
+      "feelCue": "Le sabayon devrait se sentir épais mais aéré contre le fouet — comme la crème épaisse et chaude, et le fouet devrait laisser des sentiers visibles qui se remplissent lentement, ne disparaissent pas instantanément."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Émulsifier",
+      "inputs": [
+        "sabayon_base",
+        "clarified_butter",
+        "ing_06",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "finished_bearnaise",
+      "instructions": "Retirer le bol du feu. Commencez à ajouter le beurre clarifié chaud dans un cours d'eau très mince et stable tout en fouettant constamment — presque goutte à goutte pour les 50 premiers ml. Comme l'émulsion l'établit, vous pouvez augmenter jusqu'à une fine bruine. Si la sauce s'épaissit trop et semble grasse, ajouter une cuillère à café d'eau chaude et fouetter pour se détendre. Une fois tout le beurre incorporé, mélanger le reste de l'estragon frais (finement haché), assaisonner de sel et quelques gouttes de jus de citron. Servir immédiatement ou garder au chaud dans le bain marie (pas plus de 55 C).",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse et dorée qui enveloppe l'arrière d'une cuillère sans dégoutter — la consistance de la crème fouettée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et grasse. Beurre à la surface. Pas émulsifié.",
+            "action": "Whisk vigoureusement. S'il ne se réunit pas, commencer par 1 jaune frais dans un bol propre et fouetter la sauce cassée dans elle goutte à goutte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or pâle, épais et brillant. Enrober une cuillère. Pas de séparation. Des odeurs de beurre, d'estragon et de vinaigre en parfait équilibre.",
+            "action": "Assaisonner, ajouter l'estragon frais et servir en 20 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est solide et pâteuse. Sur-émulsionné et raide.",
+            "action": "fouetter dans l'eau chaude une cuillère à café à la fois jusqu'à ce que la sauce s'assouplisse à la bonne consistance du revêtement."
+          }
+        ]
+      },
+      "feelCue": "Une béarnaise correctement émulsifiée enveloppe un doigt d'une couche épaisse et lisse qui retient son bord proprement — si vous le léchez et que le beurre lèche vos lèvres sans mordre acide, ajoutez plus de jus de citron."
+    }
+  ]
 };

@@ -1,80 +1,186 @@
 export default {
-  repoId: "master_thai_thai-milk-tea_001",
-  parentRepoId: null,
-  slug: "thai-milk-tea",
-  author: "ForkRecipe Kitchen",
-  title: "Thai Milk Tea (Cha Yen)",
-  description: "A glass filled with ice and packed with the theatrical drama of condensed milk swirling in amber clouds through intensely brewed spiced orange tea — tannin, cardamom, vanilla, and fat sweetness colliding into one of the world's great iced drinks. The color, an improbable burnt-orange, comes from the tea blend itself and not food coloring, if you source the right leaves.",
-  cuisine: "Thai",
-  culture: "Bangkok Tea Stall",
-  category: "beverages",
-  tags: ["thai", "tea", "iced", "condensed-milk", "beverage", "sweet", "orange-spice"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 5, salty: 0, sour: 0, bitter: 2, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",      name: "Thai tea leaves (Cha Tra Mue brand preferred — orange-spiced blend)", ratioValue: 3, defaultUnit: "parts", substitutions: ["Ceylon tea with 1/4 tsp each: cardamom, vanilla, star anise"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Boiling water (100 C)",                                              ratioValue: 8, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener", name: "Sweetened condensed milk",                                           ratioValue: 2, defaultUnit: "parts", substitutions: ["coconut condensed milk (vegan)", "sweetened oat milk"] },
-    { ingId: "ing_04", role: "Dairy",     name: "Evaporated milk or full-fat coconut milk",                           ratioValue: 1, defaultUnit: "parts", substitutions: ["whole milk", "oat milk for vegan"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Crushed ice, generously packed",                                     ratioValue: 4, defaultUnit: "parts", substitutions: ["ice cubes"] },
+  "repoId": "master_thai_thai-milk-tea_001",
+  "parentRepoId": null,
+  "slug": "thai-milk-tea",
+  "author": "ForkRecipe Kitchen",
+  "title": "Thé thaïlandais au lait (Cha Yen)",
+  "description": "Un verre rempli de glace et rempli du drame théâtral du lait condensé tourbillonnant dans les nuages ambres à travers le thé orange épicé intensément brassé — tanin, cardamome, vanille, et la douceur grasse se percutant dans l'une des grandes boissons glacées du monde. La couleur, un orange brûlé improbable, vient du mélange de thé lui-même et non de coloration alimentaire, si vous source les bonnes feuilles.",
+  "cuisine": "Thaï",
+  "culture": "Stall de thé de Bangkok",
+  "category": "beverages",
+  "tags": [
+    "Thaï",
+    "thé",
+    "glacé",
+    "lait condensé",
+    "boisson",
+    "doux",
+    "Épice orange"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 0,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Steep",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "brewed_thai_tea",
-      instructions: "Measure the Thai tea leaves into a fine-mesh strainer or muslin bag set over a heatproof pitcher or tall glass. Pour the boiling water directly over the tea leaves. Let steep for exactly 5 minutes — no less (the tea will be weak and pale) and no more (it becomes tannic and bitter, though Thai vendors often brew very strong by design). After 5 minutes, remove the strainer and press the leaves firmly with the back of a spoon to extract the last, most concentrated brew. The liquid should be a dramatic, almost improbable burnt orange — darker than any typical orange tea, with a rich spiced aroma of cardamom, star anise, and warm vanilla.",
-      visualCue: {
-        primaryTarget: "A deep burnt-orange to copper-brown liquid, visibly dark and opaque, releasing fragrant steam with a warmly spiced, almost chai-like aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Tea is pale amber or yellow-orange, thin and watery-smelling. No real spice aroma.", action: "Replace the strainer and steep another 2–3 minutes. Make sure water was truly at a boil, not just hot." },
-          { state: "Perfect",   description: "Deep copper-orange, almost opaque. Smells of cardamom and vanilla with a tannin backbone. Tastes very strong, slightly bitter, and spiced — it is meant to be over-brewed by Western standards.", action: "Allow to cool to room temperature or speed-cool over an ice bath." },
-          { state: "Overdone",  description: "Tea is very dark brown, not orange, and smells sharply tannic and astringent. Tastes aggressively bitter.", action: "Add an extra splash of water to dilute, and increase the condensed milk to compensate for the extra bitterness." },
-        ],
-      },
-      feelCue: "The brewed Thai tea should feel velvety on the back of the throat — the tannins coat your mouth like a black tea, but the spices leave a warm, vanilla-tinged trail after swallowing.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Feuilles de thé thaïlandaises (de marque Cha Tra Mue préférées — mélange aux épices oranges)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Thé ceylan avec 1/4 c. à thé chacun: cardamome, vanille, anis étoilé"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Chill",
-      inputs: ["brewed_thai_tea"],
-      outputState: "cooled_thai_tea",
-      instructions: "Allow the brewed tea to cool to room temperature (about 10 minutes) or place the pitcher in a bowl of iced water for 3–5 minutes of rapid chilling. Do not pour hot tea directly over ice — it dilutes the brew and produces a watery drink. The tea must be at room temperature or cooler before it meets the ice. If preparing ahead, the brewed tea keeps refrigerated for up to 3 days and actually improves as the flavors integrate and mellow.",
-      visualCue: {
-        primaryTarget: "Tea has cooled to room temperature. Still the same burnt-orange color, now without steam. No visible condensation on the inside of a cold hand test.",
-        spectrum: [
-          { state: "Underdone", description: "Tea is still hot, steaming, and will melt the ice instantly when poured.", action: "Wait longer — an ice bath is the fastest method. Place the pitcher in a bowl of cold water and stir the tea." },
-          { state: "Perfect",   description: "Tea is cool to the touch on the outside of the pitcher, room temperature or below. Still vividly orange-brown.", action: "Prepare the glasses with condensed milk and ice." },
-          { state: "Overdone",  description: "Tea has been refrigerated and is now very cold — this is fine and actually preferred for efficiency.", action: "Proceed directly to assembly." },
-        ],
-      },
-      feelCue: "Touch the outside of the pitcher with the back of your hand — it should feel cool, not warm. If your hand wants to stay there rather than pull away from heat, the tea is ready.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau bouillante (100 C)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["cooled_thai_tea", "ing_03", "ing_04", "ing_05"],
-      outputState: "finished_thai_milk_tea",
-      instructions: "Spoon 2 tablespoons of sweetened condensed milk into the bottom of a tall glass — this is not optional, it is the structural sweetness of the drink. Pack the glass completely with crushed ice. Pour the cooled tea slowly over the ice, filling the glass to about 2 cm from the top. Finally, pour the evaporated milk or coconut milk over the top from a height so it cascades down the side of the glass in white streams, clouding the orange tea in a slow, beautiful diffusion. Do not stir — present it swirling and let the drinker mix it, or stir at the table. Traditionally served with a straw.",
-      visualCue: {
-        primaryTarget: "A tall glass of brilliantly layered deep orange tea beneath swirling clouds of evaporated milk, condensed milk pooling at the base, ice visible above the tea line.",
-        spectrum: [
-          { state: "Underdone", description: "Condensed milk hasn't been added or evaporated milk was stirred in — drink is uniformly beige-orange and tastes thin.", action: "Add more condensed milk and add the evaporated milk in a slow pour from height for the visual cascade effect." },
-          { state: "Perfect",   description: "Dramatic orange tea, white milk swirling in plumes, condensed milk caramel visible at the base. Tastes sweet, tannin-rich, spiced, and deeply satisfying when stirred together.", action: "Serve immediately with a straw." },
-          { state: "Overdone",  description: "Too much condensed milk makes the drink cloyingly sweet, and the tea flavor is lost.", action: "Add more tea to dilute, or add a squeeze of very light lime juice to cut the sweetness." },
-        ],
-      },
-      feelCue: "The first sip through a straw from the bottom of the glass is pure condensed milk — shocking sweetness. By the third sip, the layers are merging into something complex: tannin, caramel, spice, and fat richness all at once.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Lait condensé sucré",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Lait condensé de noix de coco (vegan)",
+        "lait d'avoine sucré"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Lait évaporé ou lait de coco plein gras",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "lait entier",
+        "Lait d'avoine pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Glaces écrasées, généreusement emballées",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cubes de glace"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Streep",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "brewed_thai_tea",
+      "instructions": "Mesurez les feuilles de thé thaïlandaises dans une souche fine ou un sac de mousseline placé sur un pichet thermofuge ou un grand verre. Verser l'eau bouillante directement sur les feuilles de thé. Laisser raide exactement 5 minutes — pas moins (le thé sera faible et pâle) et pas plus (il devient tannique et amer, bien que les vendeurs thaïlandais brassent souvent très fort par le design). Après 5 minutes, retirez la souche et appuyez fermement sur les feuilles avec le dos d'une cuillère pour extraire la dernière bière la plus concentrée. Le liquide doit être une orange brûlée dramatique, presque improbable, plus foncée que n'importe quel thé orange typique, avec un arôme riche et épicé de cardamome, d'anis étoilé et de vanille chaude.",
+      "visualCue": {
+        "primaryTarget": "Un liquide brun-cuivre, visiblement foncé et opaque, qui libère de la vapeur parfumée avec un arôme chaud et presque chai.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le thé est ambré pâle ou orange jaune, fin et aqueux. Pas de véritable arôme d'épices.",
+            "action": "Remplacez le filtre et abruptez encore 2 à 3 minutes. Assurez-vous que l'eau était vraiment à ébullition, pas seulement chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep cuivre-orange, presque opaque. Des odeurs de cardamome et de vanille avec une colonne vertébrale de tanin. Goûtant très fort, légèrement amer et épicé, il est destiné à être suralimenté par les standards occidentaux.",
+            "action": "Laisser refroidir à la température ambiante ou refroidir à la vitesse sur un bain de glace."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le thé est brun très foncé, pas orange, et sent fortement tannique et astringent. Goûte agressivement amer.",
+            "action": "Ajoutez une touche d'eau supplémentaire pour diluer et augmentez le lait condensé pour compenser l'amertume supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Le thé thaï brassé devrait se sentir velouté sur le dos de la gorge — les tanins enveloppent votre bouche comme un thé noir, mais les épices laissent une piste chaude, au goût de vanille après avoir avalé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Refroidissement",
+      "inputs": [
+        "brewed_thai_tea"
+      ],
+      "outputState": "cooled_thai_tea",
+      "instructions": "Laisser refroidir le thé brassé à température ambiante (environ 10 minutes) ou placer le pichet dans un bol d'eau glacée pendant 3 à 5 minutes de refroidissement rapide. Ne versez pas de thé chaud directement sur la glace — il dilue la bière et produit une boisson aqueuse. Le thé doit être à température ambiante ou plus frais avant de rencontrer la glace. Si vous vous préparez à l'avance, le thé brassé conserve réfrigéré jusqu'à 3 jours et s'améliore en fait à mesure que les saveurs s'intègrent et se moellent.",
+      "visualCue": {
+        "primaryTarget": "Le thé a refroidi à la température ambiante. Toujours la même couleur brûlée-orange, maintenant sans vapeur. Aucune condensation visible à l'intérieur d'un essai à main froide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le thé est encore chaud, brûlant, et va fondre la glace instantanément quand versé.",
+            "action": "Attendez plus longtemps — un bain de glace est la méthode la plus rapide. Placer le pichet dans un bol d'eau froide et remuer le thé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le thé est frais au toucher à l'extérieur du pichet, à la température ambiante ou en dessous. Toujours très orange-brun.",
+            "action": "Préparer les verres avec du lait condensé et de la glace."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le thé a été réfrigéré et est maintenant très froid — c'est bien et en fait préféré pour l'efficacité.",
+            "action": "Passer directement à l'assemblage."
+          }
+        ]
+      },
+      "feelCue": "Touchez l'extérieur du pichet avec le dos de votre main — il devrait se sentir frais, pas chaud. Si votre main veut rester là plutôt que de s'éloigner de la chaleur, le thé est prêt."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "cooled_thai_tea",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "finished_thai_milk_tea",
+      "instructions": "Spoon 2 cuillères à soupe de lait condensé sucré dans le fond d'un grand verre — ce n'est pas facultatif, c'est la douceur structurelle de la boisson. Emballez le verre complètement avec de la glace écrasée. Verser le thé refroidi lentement sur la glace, en remplissant le verre à environ 2 cm du haut. Enfin, versez le lait évaporé ou le lait de noix de coco sur le dessus d'une hauteur afin qu'il s'enfonce sur le côté du verre dans des ruisseaux blancs, en nuageant le thé orange dans une diffusion lente et belle. Ne remuez pas — présentez-le tourbillonnant et laissez le buveur le mélanger, ou remuez à la table. Traditionnellement servi avec une paille.",
+      "visualCue": {
+        "primaryTarget": "Un grand verre de thé orange foncé brillamment stratifié sous des nuages tourbillonnants de lait évaporé, lait condensé pooling à la base, glace visible au-dessus de la ligne de thé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le lait condensé n'a pas été ajouté ou le lait évaporé a été mélangé dans — la boisson est uniformément beige-orange et le goût est mince.",
+            "action": "Ajouter plus de lait condensé et ajouter le lait évaporé dans une goutte lente de hauteur pour l'effet de cascade visuelle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Thé orangé dramatique, lait blanc tourbillonnant dans les panaches, caramel de lait condensé visible à la base. Goûte doux, riche en tanin, épicé et profondément satisfaisant lorsqu'il est remué ensemble.",
+            "action": "Servir immédiatement avec une paille."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de lait condensé rend la boisson cloyantement sucrée, et la saveur de thé est perdue.",
+            "action": "Ajouter plus de thé pour diluer, ou ajouter une pression de jus de lime très léger pour couper la douceur."
+          }
+        ]
+      },
+      "feelCue": "La première gorgée d'une paille du fond du verre est du lait condensé pur, une douceur choquante. Par la troisième gorgée, les couches se fusionnent en quelque chose de complexe : tanin, caramel, épices, et la richesse grasse tout à la fois."
+    }
+  ]
 };

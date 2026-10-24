@@ -1,129 +1,291 @@
 export default {
-  repoId: "master_french_appletartetatin_001",
-  parentRepoId: null,
-  slug: "apple-tarte-tatin",
-  author: "ForkRecipe Kitchen",
-  title: "Apple Tarte Tatin",
-  description: "Apples caramelized to amber in butter and sugar, then blanketed under a crisp pastry lid and inverted — the upside-down tart that invented itself by accident in the Loire Valley.",
-  cuisine: "French",
-  culture: "Solognaise",
-  category: "desserts",
-  tags: ["tart", "french", "apple", "caramel", "pastry", "dessert", "inverted"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "1 hr 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 4, salty: 1, sour: 2, bitter: 2, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Firm apples (Golden Delicious or Braeburn), peeled, halved, cored", ratioValue: 100, defaultUnit: "parts", substitutions: ["Granny Smith", "Cox", "Fuji"] },
-    { ingId: "ing_02", role: "Sweetener",  name: "Caster sugar",                         ratioValue: 30,  defaultUnit: "parts", substitutions: ["granulated sugar"] },
-    { ingId: "ing_03", role: "Fat",        name: "Unsalted butter, cold, cut into pieces", ratioValue: 20, defaultUnit: "parts", substitutions: ["salted butter (omit any added salt)"] },
-    { ingId: "ing_04", role: "Structure",  name: "Puff pastry or shortcrust, rolled to 3 mm", ratioValue: 40, defaultUnit: "parts", substitutions: ["rough puff pastry", "homemade shortcrust"] },
-    { ingId: "ing_05", role: "Aromatic",   name: "Vanilla pod, split and seeds scraped",  ratioValue: 1,   defaultUnit: "pod",   substitutions: ["1 tsp vanilla extract"] },
-    { ingId: "ing_06", role: "Dairy",      name: "Crème fraîche, to serve",               ratioValue: 20,  defaultUnit: "parts", substitutions: ["clotted cream", "vanilla ice cream"] },
+  "repoId": "master_french_appletartetatin_001",
+  "parentRepoId": null,
+  "slug": "apple-tarte-tatin",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tarte de pomme Tatin",
+  "description": "Pommes caramélisées en ambre dans le beurre et le sucre, puis recouvertes sous un couvercle de pâtisserie croustillant et inversées, la tarte à l'envers qui s'est inventée par accident dans la vallée de la Loire.",
+  "cuisine": "Français",
+  "culture": "Solognaise",
+  "category": "desserts",
+  "tags": [
+    "tarte",
+    "français",
+    "pomme",
+    "Caramel",
+    "pâtisserie",
+    "dessert",
+    "inversé"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "1 hr 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Caramelize",
-      inputs: ["ing_02"],
-      outputState: "amber_caramel",
-      instructions: "Scatter the caster sugar in an even layer across the base of a heavy 24–26 cm oven-safe skillet or tarte tatin mold. Set over medium heat without stirring. The sugar will begin to liquefy at the edges — let it pool before swirling the pan gently to even the color. Continue until the liquid caramel reaches a deep amber, the color of dark mahogany. Remove from heat.",
-      visualCue: {
-        primaryTarget: "A deep, uniformly amber liquid that moves freely when the pan is tilted. The smell is complex: butterscotch, a clean bitter edge, faintly nutty — not raw sugar, not smoke.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold and smelling purely sweet. No bitterness on the air.", action: "Continue over medium heat, swirling occasionally. The bitterness that defines a true tatin only arrives at genuine amber." },
-          { state: "Perfect",   description: "Deep mahogany amber, wisps of smoke just beginning to appear. The pan smells of complex caramel with a controlled bitter note.", action: "Remove from heat immediately and add the butter and vanilla." },
-          { state: "Overdone",  description: "Black at the edges, acrid smoke, irreversibly bitter and sharp.", action: "Discard completely and start over — burnt caramel cannot be rescued." },
-        ],
-      },
-      feelCue: "The pan radiates intense heat. When tilted, the caramel should flow freely as a liquid, never grainy or crystalline.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Pommes fermes (Golden Delicious ou Braeburn), pelées, coupées en deux, cardées",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Grand-mère Smith",
+        "Cox",
+        "Fuji"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Melt",
-      inputs: ["amber_caramel", "ing_03", "ing_05"],
-      outputState: "butter_caramel",
-      instructions: "Off the heat, drop the cold butter pieces into the amber caramel one at a time. Add the vanilla seeds and pod. The mixture will bubble furiously — this is correct. Stir with a heatproof spatula until the butter is fully incorporated and the caramel is smooth, glossy, and homogeneous.",
-      visualCue: {
-        primaryTarget: "A lacquered, glossy dark-amber sauce that moves as one body. No white butter pools, no sugar grains visible on the spatula.",
-        spectrum: [
-          { state: "Underdone", description: "Butter still floating in droplets or pale streaks across the caramel surface.", action: "Stir more vigorously off heat. The residual heat in the caramel is sufficient to melt cold butter without returning to the flame." },
-          { state: "Perfect",   description: "Homogeneous, deeply colored sauce. Pulls into short threads from the spatula tip.", action: "Immediately begin packing the apples." },
-          { state: "Overdone",  description: "Fat has broken free into a greasy pool above grainy, crystallized caramel.", action: "Add one tablespoon of hot water and stir firmly over very low heat to rehydrate the crystals." },
-        ],
-      },
-      feelCue: "The caramel should feel faintly sticky on the back of the spatula and pull away in short, glossy threads — a sign of correct sugar concentration.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre granulé"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["butter_caramel", "ing_01"],
-      outputState: "cooked_apple_base",
-      instructions: "Remove the vanilla pod. Arrange the apple halves cut-side up over the caramel, packing them as tightly as possible in a circular pattern — they will shrink during cooking, so crowding is correct. Set the pan over medium heat and cook 15–20 minutes until the apples are partially softened and the caramel has deepened and thickened around them.",
-      visualCue: {
-        primaryTarget: "Apple edges translucent and amber-tinged, centers still holding shape but yielding at the thickest point. Caramel is thick and clings to the apples rather than pooling at the base.",
-        spectrum: [
-          { state: "Underdone", description: "Apples still firm and bright white at the center. Caramel thin and pale.", action: "Continue on medium-low. Partially cooked apples are essential — they will finish in the oven; raw apples will remain raw after baking." },
-          { state: "Perfect",   description: "Edges translucent, golden at the tips. Centers give slightly under a fingernail. Gaps between apples have closed as they contracted.", action: "Remove from heat and let cool briefly before draping the pastry." },
-          { state: "Overdone",  description: "Apples collapsing and releasing water, caramel watery or beginning to blacken.", action: "Remove from heat immediately. The tart will still invert, but the apple layer will be very soft." },
-        ],
-      },
-      feelCue: "Probe the thickest part of an apple with a knife tip — it should enter with moderate resistance, like ripe fruit rather than raw potato.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé, froid, coupé en morceaux",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre salé (comprimer tout sel ajouté)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Assemble",
-      inputs: ["cooked_apple_base", "ing_04"],
-      outputState: "assembled_tatin",
-      instructions: "Cut the pastry into a circle 2 cm wider than the pan diameter. Drape it over the apples and tuck the overhanging edge down into the pan, hugging the apple perimeter. Prick the pastry six times with a fork. Preheat the oven to 190°C (375°F) fan-assisted.",
-      visualCue: {
-        primaryTarget: "An even pastry dome sitting over the apples, edge cleanly tucked 1–2 cm inside the pan rim. Prick holes evenly distributed across the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Pastry doesn't reach the pan rim, or edge is folded unevenly — thick in some areas, thin in others.", action: "Ease the pastry with a spatula and re-tuck. Uneven coverage leads to uneven browning." },
-          { state: "Perfect",   description: "Even dome making gentle contact with the apples. Edge is tucked uniformly inside the rim.", action: "Bake immediately on the middle rack." },
-          { state: "Overdone",  description: "Pastry warmed to the point of softness or has torn near the edge from handling.", action: "Refrigerate the assembled tatin for 10 minutes before baking to firm the pastry again." },
-        ],
-      },
-      feelCue: "The pastry should feel cool and firm — almost rigid — before entering the oven. Soft, warm pastry has lost its layered structure.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Pâtisserie ou croûte courte, laminée à 3 mm",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pâtisserie bouffée brute",
+        "courte croûte maison"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Bake",
-      inputs: ["assembled_tatin"],
-      outputState: "baked_tatin",
-      instructions: "Bake at 190°C for 25–30 minutes until the pastry is deeply golden and puffed, and caramel is visibly bubbling at the pan edges. Remove and rest on a wire rack for exactly 5 minutes — no longer, or the caramel will seize and the tart will stick on inversion.",
-      visualCue: {
-        primaryTarget: "Rich honey-brown pastry, puffed and flaky with no pale patches. Dark amber caramel actively bubbling at the pan edges.",
-        spectrum: [
-          { state: "Underdone", description: "Pastry pale gold, still soft and doughy. Caramel not yet bubbling at the edges.", action: "Return to the oven for 5 more minutes. Soft pastry will collapse when inverted." },
-          { state: "Perfect",   description: "Deep golden-brown with a hollow sound when tapped. Caramel visibly reducing around the perimeter with a dark amber color.", action: "Rest exactly 5 minutes on a rack, then invert." },
-          { state: "Overdone",  description: "Pastry very dark or charred at the edges. Acrid caramel smell.", action: "Trim the darkest edges before inverting. The interior will likely be fine." },
-        ],
-      },
-      feelCue: "Listen at the oven: an active, low bubbling from the caramel should be audible as you crack the door. The pastry sounds crisp — not soft — when lightly tapped.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Gousse de vanille, fendue et graines raclées",
+      "ratioValue": 1,
+      "defaultUnit": "pod",
+      "substitutions": [
+        "1 c. à thé extrait de vanille"
+      ]
     },
     {
-      nodeId: "step_6",
-      action: "Assemble",
-      inputs: ["baked_tatin", "ing_06"],
-      outputState: "finished_tarte_tatin",
-      instructions: "Place a large, lipped serving plate firmly over the pan. Grip both plate and pan securely, count to one, then invert with confidence. Hold for three seconds, then lift the pan away. Any apples that have shifted can be pressed gently back into place with a spoon. Serve warm with crème fraîche alongside.",
-      visualCue: {
-        primaryTarget: "Glistening amber apple halves arranged in an overlapping rosette, lacquered with deep caramel. The pastry beneath is crisp and golden, caramel running slowly down the sides.",
-        spectrum: [
-          { state: "Underdone", description: "Caramel still liquid — apples slide and the tart has no structure on the plate.", action: "You inverted too soon. Carefully return to the pan and heat on low for 2 minutes to resettle. Allow 5 minutes next time." },
-          { state: "Perfect",   description: "A deep amber, caramel-glazed apple disc sitting proudly on its crisp pastry base. Caramel just begins to run at the edges.", action: "Serve within 10 minutes while the caramel remains fluid and warm." },
-          { state: "Overdone",  description: "Caramel has seized completely — apples stick to the pan and won't release.", action: "Return the pan to very low heat for 30 seconds to re-liquefy the caramel, then invert again." },
-        ],
-      },
-      feelCue: "Press your palm flat against the serving plate before inverting — it should feel warm from the caramel radiated through the pan. Warmth means the caramel is fluid enough to release cleanly.",
-    },
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Crème fraîche, pour servir",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème caillotée",
+        "crème glacée vanille"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Caramélisation",
+      "inputs": [
+        "ing_02"
+      ],
+      "outputState": "amber_caramel",
+      "instructions": "Épargnez le sucre de la roulette dans une couche uniforme sur la base d'une poêle lourde de 24 à 26 cm ou d'un moule à tatin de tarte. Régler à feu moyen sans remuer. Le sucre commencera à se liquéfier aux bords — laissez-le s'assembler avant de tourner doucement la poêle à même la couleur. Continuer jusqu'à ce que le caramel liquide atteigne un ambre profond, la couleur de l'acajou foncé. Retirer du feu.",
+      "visualCue": {
+        "primaryTarget": "Un liquide ambre profond et uniforme qui se déplace librement lorsque la casserole est inclinée. L'odeur est complexe: beurre de coco, un bord amer propre, peu de noix — pas de sucre brut, pas de fumée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle et sentant purement sucré. Pas d'amertume à l'air.",
+            "action": "Continuer à feu moyen, en tourbillonnant occasionnellement. L'amertume qui définit un vrai tatin n'arrive qu'à l'ambre véritable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep acajou ambre, wisps de fumée qui commence à apparaître. La poêle sent le caramel complexe avec une note amère contrôlée.",
+            "action": "Retirer immédiatement du feu et ajouter le beurre et la vanille."
+          },
+          {
+            "state": "Overdone",
+            "description": "Noir aux bords, fumée acride, irréversiblement amer et tranchant.",
+            "action": "Jeter complètement et recommencer — le caramel brûlé ne peut être sauvé."
+          }
+        ]
+      },
+      "feelCue": "La poêle émet une chaleur intense. Lorsqu'il est incliné, le caramel doit circuler librement comme liquide, jamais granuleux ou cristallin."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Faire fondre",
+      "inputs": [
+        "amber_caramel",
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "butter_caramel",
+      "instructions": "Hors du feu, déposer les morceaux de beurre froid dans le caramel ambre une à la fois. Ajouter les graines de vanille et la goutte. Le mélange va exploser furieusement — c'est exact. Incorporer une spatule thermofuge jusqu'à ce que le beurre soit entièrement incorporé et que le caramel soit lisse, brillant et homogène.",
+      "visualCue": {
+        "primaryTarget": "Une sauce à l'ambre foncé laqué et brillant qui se déplace comme un seul corps. Pas de piscines de beurre blanc, pas de grains de sucre visibles sur la spatule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Beurre flottant encore dans des gouttelettes ou des stries pâles sur la surface du caramel.",
+            "action": "Mélanger plus vigoureusement la chaleur. La chaleur résiduelle du caramel est suffisante pour faire fondre le beurre froid sans retourner à la flamme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce homogène et de couleur profonde. Tire dans des fils courts de la pointe de la spatule.",
+            "action": "Commencez immédiatement à emballer les pommes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le gras s'est cassé libre dans une piscine grasse au-dessus du caramel granuleux cristallisé.",
+            "action": "Ajouter une cuillère à soupe d'eau chaude et remuer fermement à feu très doux pour réhydrater les cristaux."
+          }
+        ]
+      },
+      "feelCue": "Le caramel doit se sentir légèrement collant sur le dos de la spatule et s'éloigner en courts fils brillants, signe de concentration correcte de sucre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "butter_caramel",
+        "ing_01"
+      ],
+      "outputState": "cooked_apple_base",
+      "instructions": "Enlevez la gousse de vanille. Disposer les moitiés de pommes coupées sur le caramel, les emballer le plus étroitement possible dans un motif circulaire — elles se rétréciront pendant la cuisson, de sorte que la foule est correcte. Placer la poêle à feu moyen et cuire de 15 à 20 minutes jusqu'à ce que les pommes soient partiellement adoucies et que le caramel s'est approfondi et épaissi autour d'elles.",
+      "visualCue": {
+        "primaryTarget": "Les bords des pommes translucides et ambrées, les centres tiennent encore forme mais donnent au point le plus épais. Le caramel est épais et s'accroche aux pommes plutôt qu'à la base.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pommes encore fermes et blanc vif au centre. Caramel mince et pâle.",
+            "action": "Continuer sur moyenne-doux. Les pommes partiellement cuites sont essentielles: elles finiront au four; les pommes crues resteront crues après cuisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bords translucides, dorés aux extrémités. Les centres donnent un peu sous un ongle. Les écarts entre les pommes se sont rompus au fur et à mesure qu'elles se contractaient.",
+            "action": "Retirer du feu et laisser refroidir brièvement avant de draper la pâtisserie."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pommes s'effondrent et libèrent de l'eau, du caramel ou commencent à noircir.",
+            "action": "Retirer immédiatement du feu. La tarte sera encore inversée, mais la couche de pomme sera très douce."
+          }
+        ]
+      },
+      "feelCue": "Sonder la partie la plus épaisse d'une pomme avec une pointe de couteau — il devrait entrer avec une résistance modérée, comme le fruit mûr plutôt que la pomme de terre crue."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Assemblage",
+      "inputs": [
+        "cooked_apple_base",
+        "ing_04"
+      ],
+      "outputState": "assembled_tatin",
+      "instructions": "Couper la pâte en un cercle de 2 cm de plus que le diamètre de la poêle. Enveloppez-le au-dessus des pommes et placez le bord surplombant dans la poêle, en embrassant le périmètre des pommes. Pique la pâtisserie six fois avec une fourchette. Préchauffer le four à 190°C (375°F) assisté par le ventilateur.",
+      "visualCue": {
+        "primaryTarget": "Un dôme de pâtisserie même assis au-dessus des pommes, bord propre cousu 1–2 cm à l'intérieur du bord de la casserole. Les trous de briques sont répartis uniformément sur la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte n'atteint pas le bord de la casserole, ou le bord est plié inégalement — épais dans certaines régions, mince dans d'autres.",
+            "action": "Soulagez la pâtisserie avec une spatule et re-tuck. Une couverture inégale entraîne un brunissement inégal."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même coupole en contact doux avec les pommes. Le bord est cousu uniformément à l'intérieur du bord.",
+            "action": "Cuire immédiatement sur la grille du milieu."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pâtisserie chaude au point de douceur ou a déchiré près du bord de la manipulation.",
+            "action": "Réfrigérer le tatin assemblé pendant 10 minutes avant de faire cuire la pâte de nouveau."
+          }
+        ]
+      },
+      "feelCue": "La pâtisserie doit être fraîche et ferme, presque rigide, avant d'entrer dans le four. Une pâte douce et chaude a perdu sa structure en couches."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Cuire",
+      "inputs": [
+        "assembled_tatin"
+      ],
+      "outputState": "baked_tatin",
+      "instructions": "Cuire à 190°C pendant 25 à 30 minutes jusqu'à ce que la pâtisserie soit profondément dorée et gonflée, et que le caramel bouillonne visiblement aux bords de la poêle. Retirez-vous et reposez-vous sur un porte-fils pendant exactement 5 minutes, ou le caramel s'emparera et la tarte s'accrochera à l'inversion.",
+      "visualCue": {
+        "primaryTarget": "Riche pâtisserie au miel, gonflée et flocée sans taches pâles. Caramel ambré foncé bouillonnant activement aux bords de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pâtisserie or pâle, encore doux et pâteux. Caramel pas encore bouillonner aux bords.",
+            "action": "Retourner au four 5 minutes de plus. La pâte molle s'effondrera quand elle sera inversée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep doré-brun avec un son creux quand tapoté. Caramel réduisant visiblement autour du périmètre avec une couleur jaune foncé.",
+            "action": "Repose exactement 5 minutes sur un rack, puis inverse."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pâtisserie très foncée ou carbonisée aux bords. Une odeur de caramel acride.",
+            "action": "Couper les bords les plus sombres avant de retourner. L'intérieur sera probablement bien."
+          }
+        ]
+      },
+      "feelCue": "Écouter au four : un bouillon actif et bas du caramel doit être audible lorsque la porte se fissure. La pâtisserie semble croustillante, pas douce, quand elle est légèrement tapée."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Assemblage",
+      "inputs": [
+        "baked_tatin",
+        "ing_06"
+      ],
+      "outputState": "finished_tarte_tatin",
+      "instructions": "Déposer fermement sur la casserole une grande assiette de service lissée. Poignez bien la plaque et la poêle, comptez jusqu'à un, puis inversez avec confiance. Attendez trois secondes, puis soulevez la poêle. Toutes les pommes qui se sont déplacées peuvent être pressées doucement en place avec une cuillère. Servir au chaud avec crème fraîche à côté.",
+      "visualCue": {
+        "primaryTarget": "Collage de moitiés de pomme ambre disposées dans une rosette recoupante, laquée avec du caramel profond. La pâtisserie en dessous est croquante et dorée, caramel courant lentement sur les côtés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Caramel encore liquide — les pommes glissent et la tarte n'a pas de structure sur la plaque.",
+            "action": "Tu t'es inversé trop tôt. Retourner soigneusement à la poêle et chauffer à feu doux pendant 2 minutes pour se réinstaller. Laisser 5 minutes la prochaine fois."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un disque de pomme en ambre profond, glacé de caramel, assis fièrement sur sa base de pâtisserie croustillante. Caramel commence juste à courir aux bords.",
+            "action": "Servir en 10 minutes pendant que le caramel reste fluide et chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Caramel s'est complètement saisi — les pommes s'accrochent à la poêle et ne relâchent pas.",
+            "action": "Remettre la poêle à feu très faible pendant 30 secondes pour re-liquéfier le caramel, puis inverser à nouveau."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur votre paume plat contre la plaque de service avant d'inverser — il devrait se sentir chaud du caramel irradié dans la poêle. La chaleur signifie que le caramel est suffisamment fluide pour se libérer proprement."
+    }
+  ]
 };

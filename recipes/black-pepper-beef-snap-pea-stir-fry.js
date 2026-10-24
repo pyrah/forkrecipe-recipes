@@ -1,124 +1,342 @@
 export default {
-  repoId: "master_chineseamerican_blackpepperbeefsnappea_001",
-  parentRepoId: null,
-  slug: "black-pepper-beef-snap-pea-stir-fry",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Black Pepper Beef and Snap Pea Stir-Fry",
-  description: "Thin slices of flank steak seared in a smoking-hot pan and tossed with crisp snap peas and onion in a savory oyster-soy glaze loaded with coarsely cracked black pepper that tingles more than it burns.",
-  cuisine: "Chinese-American",
-  culture: "American home kitchen",
-  category: "proteins",
-  tags: ["home-kitchen", "weeknight", "beef", "stir-fry", "wok", "black-pepper", "snap-peas", "quick"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "35 min",
-  ratioSystem: "weight",
-  servings: 4,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 2, salty: 4, sour: 0, bitter: 1, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Flank steak, sliced 5 mm thick against the grain", ratioValue: 500, defaultUnit: "g", substitutions: ["sirloin steak", "skirt steak"] },
-    { ingId: "ing_02", role: "Umami",     name: "Soy sauce (for the marinade)",                    ratioValue: 15,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_03", role: "Liquid",    name: "Shaoxing wine",                                   ratioValue: 15,  defaultUnit: "ml", substitutions: ["dry sherry"] },
-    { ingId: "ing_04", role: "Binder",    name: "Cornstarch (for the marinade)",                   ratioValue: 8,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Glutamate", name: "Oyster sauce",                                    ratioValue: 30,  defaultUnit: "ml", substitutions: ["vegetarian mushroom oyster sauce"] },
-    { ingId: "ing_06", role: "Umami",     name: "Soy sauce (for the sauce)",                       ratioValue: 15,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_07", role: "Sweetener", name: "Sugar",                                           ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Black peppercorns, coarsely cracked",             ratioValue: 2,   defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_09", role: "Binder",    name: "Cornstarch (for the sauce)",                      ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Hydration", name: "Water",                                           ratioValue: 60,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_11", role: "Fat",       name: "Neutral oil with a high smoke point",             ratioValue: 45,  defaultUnit: "ml", substitutions: ["peanut oil"] },
-    { ingId: "ing_12", role: "Base",      name: "Sugar snap peas, strings removed",                ratioValue: 300, defaultUnit: "g", substitutions: ["snow peas", "green beans, halved and blanched"] },
-    { ingId: "ing_13", role: "Allium",    name: "Yellow onion, cut into 2 cm wedges and separated", ratioValue: 150, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_14", role: "Allium",    name: "Garlic, minced",                                  ratioValue: 3,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_15", role: "Aromatic",  name: "Fresh ginger, minced",                            ratioValue: 10,  defaultUnit: "g", substitutions: [] },
+  "repoId": "master_chineseamerican_blackpepperbeefsnappea_001",
+  "parentRepoId": null,
+  "slug": "black-pepper-beef-snap-pea-stir-fry",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Boeuf de poivre noir et sciure de pois snap",
+  "description": "De fines tranches de steak flanqué dans un poêlon chaud au fumage et jetées avec des pois secs croustillants et de l'oignon dans une glaçure salée à la soie d'huître chargée de poivre noir grossièrement craqué qui s'attache plus qu'il ne brûle.",
+  "cuisine": "Chinois-Américain",
+  "culture": "Cuisine américaine à domicile",
+  "category": "proteins",
+  "tags": [
+    "cuisine maison",
+    "nuit",
+    "boeuf",
+    "sauté",
+    "wok",
+    "le poivre noir",
+    "Pois cassés",
+    "Vite"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "35 min",
+  "ratioSystem": "weight",
+  "servings": 4,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Marinate",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "marinated_beef",
-      instructions: "Toss the sliced beef with the soy sauce, Shaoxing wine and cornstarch until every slice is coated and the liquid has been absorbed. Let stand 15 minutes at room temperature while you prep everything else. (Partly freezing the steak for 20 minutes beforehand makes thin slicing much easier.)",
-      visualCue: {
-        primaryTarget: "Beef slices with a thin, silky, even coating and no liquid pooling in the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Dry patches of cornstarch or a puddle of loose marinade at the bottom.", action: "Massage with your fingers for 30 seconds until absorbed." },
-          { state: "Perfect",   description: "Each slice glossy and slightly tacky, bowl nearly dry.", action: "Mix the sauce while it stands." },
-          { state: "Overdone",  description: "Sitting longer than a few hours; the surface turns pasty.", action: "Proceed — cook in smaller batches so it still browns." },
-        ],
-      },
-      feelCue: "The slices should feel velvety and slide against each other, like wet silk.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Steak plat, tranché 5 mm d'épaisseur contre le grain",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "steak longe",
+        "steak de jupe"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "pepper_sauce",
-      instructions: "In a small bowl, stir together the oyster sauce, soy sauce, sugar, cracked black pepper, cornstarch and water until the cornstarch dissolves. Keep a spoon in it — it settles and needs a final stir before using.",
-      visualCue: {
-        primaryTarget: "A smooth, cloudy brown sauce speckled with black pepper.",
-        spectrum: [
-          { state: "Underdone", description: "Cornstarch sitting as a white sludge at the bottom.", action: "Stir until fully suspended." },
-          { state: "Perfect",   description: "Uniform, opaque brown liquid with pepper floating throughout.", action: "Set next to the stove." },
-          { state: "Overdone",  description: "Pepper ground to dust instead of cracked, turning the sauce gray.", action: "Still fine to use — the flavor will be hotter and less aromatic." },
-        ],
-      },
-      feelCue: "Smell the bowl: the pepper should hit you as fruity and piney, not dusty.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "sauce soja (pour la marinade)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Sear",
-      inputs: ["marinated_beef", "ing_11"],
-      outputState: "seared_beef",
-      instructions: "Heat a wok or 12-inch (30 cm) skillet over high heat until a drop of water vaporizes instantly. Add 1 tbsp oil, swirl, and add half the beef in a single layer. Sear untouched 60 seconds until browned underneath, then toss 30 seconds more until just barely pink. Transfer to a plate. Repeat with another 1 tbsp oil and the rest of the beef.",
-      visualCue: {
-        primaryTarget: "Slices browned at the edges, still slightly pink in patches.",
-        spectrum: [
-          { state: "Underdone", description: "Gray and wet with liquid pooling in the pan.", action: "The pan was overloaded; cook in smaller batches and wait for it to reheat between them." },
-          { state: "Perfect",   description: "Browned on one side, faintly pink in spots, glistening.", action: "Remove — they finish in the sauce." },
-          { state: "Overdone",  description: "Curled, gray-brown throughout and chewy.", action: "Slice smaller if needed and keep the final toss brief." },
-        ],
-      },
-      feelCue: "The beef should hit the pan with a loud crackle and a wisp of smoke; silence means the pan is too cool.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Vins mousseux",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sherry sec"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Stir-fry",
-      inputs: ["ing_11", "ing_12", "ing_13", "ing_14", "ing_15"],
-      outputState: "stir_fried_vegetables",
-      instructions: "Add the remaining 1 tbsp oil to the hot pan. Add the onion and snap peas and stir-fry 2 minutes until the peas are bright green and blistered in spots. Add the garlic and ginger and toss 30 seconds until fragrant.",
-      visualCue: {
-        primaryTarget: "Vivid green, blistered snap peas and onion petals with charred edges, still crisp.",
-        spectrum: [
-          { state: "Underdone", description: "Peas dull and raw-tasting, onion still white and stiff.", action: "Another 30–60 seconds over high heat." },
-          { state: "Perfect",   description: "Peas glossy and bright with brown spots, onion edges translucent; garlic fragrant but pale.", action: "Add the beef and sauce immediately." },
-          { state: "Overdone",  description: "Peas olive-drab and limp; garlic browning.", action: "Move straight on to the sauce to stop the cooking." },
-        ],
-      },
-      feelCue: "Bite a snap pea: it should snap loudly and taste sweet, with just a whisper of char.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Farine de maïs (pour la marinade)",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Toss and glaze",
-      inputs: ["stir_fried_vegetables", "seared_beef", "pepper_sauce"],
-      outputState: "finished_black_pepper_beef",
-      instructions: "Return the beef and its juices to the pan. Stir the sauce and pour it in, tossing constantly for 30–60 seconds until it bubbles, thickens and turns glossy, coating everything. Serve right away over steamed rice.",
-      visualCue: {
-        primaryTarget: "Beef and vegetables lacquered in a glossy dark sauce that clings without pooling.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce still thin, cloudy and watery at the bottom of the pan.", action: "Keep tossing over high heat until it boils — cornstarch needs to boil to thicken and clear." },
-          { state: "Perfect",   description: "Sauce clear, glossy and clinging, pepper visible on every piece.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Sauce reduced to a sticky paste and catching on the pan.", action: "Add 1–2 tbsp water and toss to loosen." },
-        ],
-      },
-      feelCue: "Tilt the pan: the sauce should slide slowly as a glaze, and a bite should leave a warm pepper tingle on your lips.",
+      "ingId": "ing_05",
+      "role": "Glutamate",
+      "name": "sauce à l'huître",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce végétarienne à l'huître aux champignons"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "sauce soja (pour la sauce)",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Maïs de poivre noir, grossièrement craqué",
+      "ratioValue": 2,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Binder",
+      "name": "Farine de maïs (pour la sauce)",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Hydration",
+      "name": "Eau",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Fat",
+      "name": "Huile neutre avec un point de fumée élevé",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile d'arachide"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Base",
+      "name": "Pois secs de sucre, cordes enlevées",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pois de neige",
+        "haricots verts, coupés en deux et blanchis"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Allium",
+      "name": "Oignon jaune, coupé en quartiers de 2 cm et séparé",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 3,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Aromatic",
+      "name": "Gingembre frais, haché",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "marinated_beef",
+      "instructions": "Mélanger le boeuf tranché avec la sauce soja, le vin Shaoxing et la fécule de maïs jusqu'à ce que chaque tranche soit enrobée et que le liquide ait été absorbé. Laisser reposer 15 minutes à température ambiante pendant que vous préparez tout le reste. (La congélation partielle du steak pendant 20 minutes à l'avance facilite grandement la coupe.)",
+      "visualCue": {
+        "primaryTarget": "tranches de boeuf avec un revêtement mince, soyeux, uniforme et pas de mise en commun liquide dans le bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des taches sèches de fécule de maïs ou une flaque de marinade lâche au fond.",
+            "action": "Massage des doigts pendant 30 secondes jusqu'à absorption."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque tranche brillante et légèrement collante, bol presque sec.",
+            "action": "Mélanger la sauce pendant qu'elle est debout."
+          },
+          {
+            "state": "Overdone",
+            "description": "Assis plus de quelques heures; la surface devient pâteuse.",
+            "action": "Procéder — faire cuire en petits lots afin qu'il brunisse encore."
+          }
+        ]
+      },
+      "feelCue": "Les tranches doivent se sentir veloutées et glisser l'une contre l'autre, comme de la soie humide."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "pepper_sauce",
+      "instructions": "Dans un petit bol, mélanger la sauce huître, la sauce soja, le sucre, le poivre noir cassé, la fécule de maïs et l'eau jusqu'à ce que la fécule de maïs se dissout. Gardez-y une cuillère — elle s'installe et a besoin d'un brassage final avant d'utiliser.",
+      "visualCue": {
+        "primaryTarget": "Une sauce marron lisse et nuageuse tachetée de poivre noir.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Cornstarch assis comme une boue blanche au fond.",
+            "action": "Mélanger jusqu'à suspension complète."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme, liquide brun opaque avec poivre flottant partout.",
+            "action": "Mets-toi à côté du poêle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pepper broyé à la poussière au lieu de fissuré, tournant la sauce grise.",
+            "action": "Toujours bon à utiliser — la saveur sera plus chaude et moins aromatique."
+          }
+        ]
+      },
+      "feelCue": "Senser le bol : le poivre devrait vous frapper comme fruité et piné, pas poussiéreux."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sear",
+      "inputs": [
+        "marinated_beef",
+        "ing_11"
+      ],
+      "outputState": "seared_beef",
+      "instructions": "Chauffer un wok ou une poêle de 30 cm à feu vif jusqu'à ce qu'une goutte d'eau vaporise instantanément. Ajouter 1 c. à soupe d'huile, tourner et ajouter la moitié du boeuf en une seule couche. Sear n'a pas changé 60 secondes jusqu'à ce qu'il brunisse en dessous, puis jete 30 secondes de plus jusqu'à peine rose. Transférer dans une assiette. Répéter avec 1 c. à soupe d'huile et le reste du boeuf.",
+      "visualCue": {
+        "primaryTarget": "Tranches brunies aux bords, encore légèrement roses dans les taches.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Gris et humide avec mise en commun liquide dans la casserole.",
+            "action": "La poêle était surchargée; faire cuire en petits lots et attendre qu'elle se réchauffe entre eux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Marronné d'un côté, légèrement rose dans les taches, scintillement.",
+            "action": "Retirer — ils finissent dans la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Courbé, brun gris tout au long et mâche.",
+            "action": "Couper plus petit si nécessaire et garder le lancer final bref."
+          }
+        ]
+      },
+      "feelCue": "Le boeuf doit frapper la poêle avec un fort craquement et une cuillerée de fumée; le silence signifie que la poêle est trop froide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Poêle",
+      "inputs": [
+        "ing_11",
+        "ing_12",
+        "ing_13",
+        "ing_14",
+        "ing_15"
+      ],
+      "outputState": "stir_fried_vegetables",
+      "instructions": "Ajouter le reste de 1 c. à soupe d'huile dans la poêle chaude. Ajouter l'oignon et casser les petits pois et remuer 2 minutes jusqu'à ce que les petits pois soient vert vif et cloqués dans des taches. Ajouter l'ail et le gingembre et mélanger 30 secondes jusqu'à parfumer.",
+      "visualCue": {
+        "primaryTarget": "Vert vif, pois cassés cloqués et pétales d'oignon aux bords carbonisés, toujours croustillants.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pois ternes et croustillants, oignon encore blanc et raide.",
+            "action": "Encore 30 à 60 secondes à feu vif."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pois brillants et brillants avec des taches brunes, bords d'oignon translucides; ail parfumé mais pâle.",
+            "action": "Ajouter immédiatement le bœuf et la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pois olive-drabe et limon; brunissement à l'ail.",
+            "action": "Passez directement à la sauce pour arrêter la cuisson."
+          }
+        ]
+      },
+      "feelCue": "Mange un petit pois: il devrait claquer fort et goûter doux, avec juste un murmure d'omble."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Toss et glaçures",
+      "inputs": [
+        "stir_fried_vegetables",
+        "seared_beef",
+        "pepper_sauce"
+      ],
+      "outputState": "finished_black_pepper_beef",
+      "instructions": "Retournez le boeuf et ses jus dans la poêle. Incorporez la sauce et versez-la, jetant constamment pendant 30 à 60 secondes jusqu'à ce qu'elle s'épaississe et devienne brillante, enrobant tout. Servir immédiatement sur du riz cuit à la vapeur.",
+      "visualCue": {
+        "primaryTarget": "Boeuf et légumes laqués dans une sauce foncée brillante qui s'accroche sans mise en commun.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sauce encore mince, nuageuse et aqueuse au fond de la poêle.",
+            "action": "Continuez à jeter à feu vif jusqu'à ce qu'il ébullition — la fécule de maïs doit bouillir pour épaissir et limpide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sauce claire, brillante et collante, poivre visible sur chaque morceau.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sauce réduite à une pâte collante et attraper sur la poêle.",
+            "action": "Ajouter 1–2 c. à soupe d'eau et mélanger pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "Inclinez la poêle : la sauce doit glisser lentement comme une glaçure, et une bouchée doit laisser un piment chaud sur vos lèvres."
+    }
+  ]
 };

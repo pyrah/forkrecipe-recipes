@@ -1,80 +1,217 @@
 export default {
-  repoId: "master_french_court_bouillon_001",
-  parentRepoId: null,
-  slug: "court-bouillon",
-  author: "ForkRecipe Kitchen",
-  title: "Court-Bouillon",
-  description: "A quick, acidulated aromatic broth — the classic French poaching liquid for fish and shellfish. Water briefly simmered with mirepoix, wine, herbs and a sharp splash of vinegar, then cooled so delicate flesh slips in gently and emerges perfumed rather than washed out. Not a long-cooked stock but a fragrant bath built in under an hour.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "stocks",
-  tags: ["court-bouillon", "french", "poaching", "fish", "shellfish", "aromatic", "acidulated"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 1, umami: 1, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Water (cold)",                                      ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Acid",       name: "Dry white wine (Muscadet, Sauvignon Blanc)",        ratioValue: 25,  defaultUnit: "parts", substitutions: ["dry white vermouth", "extra court-bouillon plus more vinegar"] },
-    { ingId: "ing_03", role: "Acid",       name: "White wine vinegar",                                ratioValue: 4,   defaultUnit: "parts", substitutions: ["lemon juice", "cider vinegar"] },
-    { ingId: "ing_04", role: "Aromatic",   name: "Carrot, onion & leek (sliced into thin coins)",     ratioValue: 18,  defaultUnit: "parts", substitutions: ["shallot", "fennel"] },
-    { ingId: "ing_05", role: "Citrus",     name: "Lemon (sliced into rounds)",                        ratioValue: 6,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Herb",       name: "Bouquet garni (thyme, bay, parsley stalks)",        ratioValue: 1,   defaultUnit: "parts", substitutions: ["dill stalks", "tarragon"] },
-    { ingId: "ing_07", role: "Spice",      name: "Black peppercorns & coriander seed (cracked)",      ratioValue: 1,   defaultUnit: "parts", substitutions: ["white peppercorns"] },
-    { ingId: "ing_08", role: "Seasoning",  name: "Fine sea salt",                                     ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_court_bouillon_001",
+  "parentRepoId": null,
+  "slug": "court-bouillon",
+  "author": "ForkRecipe Kitchen",
+  "title": "Cour-Bouillon",
+  "description": "Un bouillon aromatique rapide et acidulé, le liquide de braconnage français classique pour poissons et crustacés. L'eau mijotée de mirépoix, de vin, d'herbes et d'une forte éclaboussure de vinaigre, puis refroidie si délicate chair glisse doucement et émerge parfumée plutôt que lavée. Pas un stock de longue cuisson, mais un bain parfumé construit en moins d'une heure.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "stocks",
+  "tags": [
+    "court-bouillon",
+    "français",
+    "braconnage",
+    "poissons",
+    "crustacés",
+    "aromatiques",
+    "acide"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Combine",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_08"],
-      outputState: "cold_infusion",
-      instructions: "Put the cold water, white wine and vinegar into a wide, non-reactive pot. Add the sliced carrot, onion and leek, the lemon rounds and the salt. Everything goes in cold and together — the acid and aromatics need the full heat-up to leach their flavour into the liquid. Use a stainless or enamelled pot, never bare aluminium, which the acid will dull and discolour.",
-      visualCue: {
-        primaryTarget: "A cool, cloudy pot of pale, lemony liquid with vegetable coins and lemon slices floating freely, the salt dissolving as you stir.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are clumped on one side and the salt sits granular at the bottom of a barely-stirred pot.", action: "Stir to distribute the aromatics and dissolve the salt before heating begins." },
-          { state: "Perfect",   description: "Aromatics evenly suspended, salt dissolved, the liquid smelling faintly of wine and lemon even while cold.", action: "Add the bouquet garni and spices and bring to a simmer." },
-          { state: "Overdone",  description: "Too much vinegar already added, the raw liquid sharp enough to sting the back of the nose.", action: "Add a splash more water and wine to soften the acid before it concentrates with simmering." },
-        ],
-      },
-      feelCue: "The cold liquid should smell bright and clean — wine and citrus over a faint green note of leek. No off, sulphurous smell from the onion if it is fresh.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Eau (froid)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Simmer",
-      inputs: ["cold_infusion", "ing_06", "ing_07"],
-      outputState: "infused_broth",
-      instructions: "Tuck in the bouquet garni and the cracked peppercorns and coriander. Bring the pot slowly to a gentle simmer over medium heat, then drop it to the barest tremble and hold for 20-30 minutes. A lazy simmer, not a rolling boil — hard boiling muddies the broth and drives off the delicate aromatics. The kitchen should fill with the smell of herbs, wine and warm lemon.",
-      visualCue: {
-        primaryTarget: "A clear, pale-gold broth with only the occasional bubble breaking the surface, the vegetables soft and the herbs fully steeped.",
-        spectrum: [
-          { state: "Underdone", description: "Liquid is still thin and watery-tasting, the herbs and spices barely registering, vegetables firm.", action: "Keep it at a bare simmer longer — the flavour deepens noticeably in the last ten minutes." },
-          { state: "Perfect",   description: "Fragrant, lightly golden broth that tastes of wine, herb and gentle acid; aromatics are tender and spent.", action: "Pull the pot off the heat and let it cool, or strain depending on use." },
-          { state: "Overdone",  description: "Liquid has boiled hard and reduced, turning cloudy and aggressively sour and salty as it concentrates.", action: "Take it off the heat at once and top up with a little water to rebalance the acid and salt." },
-        ],
-      },
-      feelCue: "Listen for the soft tick of an occasional bubble rather than a steady churn. Taste a spoonful, cooled — it should read pleasantly tart and seasoned, like a liquid you would happily sip.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Vin blanc sec (Muscadet, Sauvignon Blanc)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vermouth blanc sec",
+        "extra court-bouillon et plus de vinaigre"
+      ]
     },
     {
-      nodeId: "step_3", action: "Cool & Strain",
-      inputs: ["infused_broth"],
-      outputState: "court_bouillon",
-      instructions: "For poaching whole fish or shellfish, let the broth cool to warm or even cold before the seafood goes in, so the flesh heats gently and stays moist — a violent boil seizes and toughens it. For poaching fillets or as a ready bath, strain the broth through a fine sieve, pressing the aromatics, and discard the solids. Taste and adjust salt and a final squeeze of acid. Use within a day, or freeze.",
-      visualCue: {
-        primaryTarget: "A clean, strained, golden-amber liquid, clear enough to read through, smelling balanced between wine, herb, citrus and salt with no single note dominating.",
-        spectrum: [
-          { state: "Underdone", description: "Broth tastes flat and under-seasoned, the acid faded after the heat, with little aromatic lift.", action: "Brighten with a squeeze of lemon or a few drops of vinegar and correct the salt to taste." },
-          { state: "Perfect",   description: "Bright, savoury, gently tart liquid, well seasoned and aromatic — poised to perfume seafood without overwhelming it.", action: "Cool to the right temperature and poach, or store covered and chilled." },
-          { state: "Overdone",  description: "Broth is harsh and puckeringly sour or over-salted, masking rather than flattering delicate fish.", action: "Dilute with a little water until the acid and salt settle back into balance, then taste again." },
-        ],
-      },
-      feelCue: "The finished court-bouillon should taste like a broth you would sip on its own — tart and clean, never flabby and never punishingly sour. Slip a finger in once cooled: lukewarm is the right temperature to start poaching delicate fish.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Vin blanc",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de citron",
+        "vinaigre de cidre"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Carotte, oignon et poireau (en pièces minces)",
+      "ratioValue": 18,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalote",
+        "fenouil"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Citrus",
+      "name": "Citron (en rondelles)",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Bouquet garni (thyme, baie, tiges de persil)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tiges d'aneth",
+        "estragon"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Graines de poivre et de coriandre noires",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "grains de poivre blancs"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Combiner",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_08"
+      ],
+      "outputState": "cold_infusion",
+      "instructions": "Mettre l'eau froide, le vin blanc et le vinaigre dans une grande casserole non réactive. Ajouter la carotte tranchée, l'oignon et le poireau, les rondelles de citron et le sel. Tout va au froid et ensemble — l'acide et les aromatiques ont besoin de la chaleur complète pour lixivier leur saveur dans le liquide. Utilisez un pot en acier inoxydable ou émaillé, jamais d'aluminium nu, que l'acide va terne et décolorer.",
+      "visualCue": {
+        "primaryTarget": "Un pot frais et nuageux de liquide pâle et citronné avec des pièces de légumes et des tranches de citron flottant librement, le sel se dissolvant lorsque vous remuez.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont entassés d'un côté et le sel est granulé au fond d'un pot à peine cintré.",
+            "action": "Mélanger pour distribuer les aromatiques et dissoudre le sel avant le début du chauffage."
+          },
+          {
+            "state": "Perfect",
+            "description": "Aromatique également suspendue, sel dissout, le liquide sent peu le vin et le citron même au froid.",
+            "action": "Ajouter le bouquet garni et les épices et laisser mijoter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de vinaigre déjà ajouté, le liquide cru assez tranchant pour piquer l'arrière du nez.",
+            "action": "Ajouter une éclaboussure d'eau et de vin pour adoucir l'acide avant de se concentrer avec mijoter."
+          }
+        ]
+      },
+      "feelCue": "Le liquide froid doit sentir clair et propre — vin et agrumes sur une faible note verte de poireau. Non, une odeur sulfureuse de l'oignon si elle est fraîche."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "cold_infusion",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "infused_broth",
+      "instructions": "Dans le bouquet garni et les grains de poivre et la coriandre. Portez lentement le pot à mijoter légèrement à feu moyen, puis déposez-le dans le tremble le plus barré et maintenez-le pendant 20-30 minutes. Une mijotée paresseuse, et non un ébullition, fait bouillir le bouillon et évacue les arômes délicats. La cuisine doit se remplir de l'odeur des herbes, du vin et du citron chaud.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon clair d'or pâle avec seulement la bulle occasionnelle brisant la surface, les légumes doux et les herbes complètement abîmées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le liquide est encore mince et rafraîchissant, les herbes et les épices à peine enregistrées, les légumes fermes.",
+            "action": "Gardez-le à l'abri plus longtemps — la saveur s'approfondit sensiblement au cours des dix dernières minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bouillon parfumé, légèrement doré qui goûte de vin, d'herbe et d'acide doux; les aromatiques sont tendres et dépensés.",
+            "action": "Retirez le pot du feu et laissez refroidir, ou de la déformation selon l'utilisation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide a bouilli dur et réduit, tournant nuageux et agressivement aigre et salé à mesure qu'il se concentre.",
+            "action": "Enlevez-le de la chaleur à la fois et remplissez avec un peu d'eau pour rééquilibrer l'acide et le sel."
+          }
+        ]
+      },
+      "feelCue": "Écoutez la tique douce d'une bulle occasionnelle plutôt que d'une huître stable. Goûtez une cuillerée, refroidie — elle devrait lire agréablement tarte et assaisonnée, comme un liquide que vous siroteriez avec joie."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Frais & souche",
+      "inputs": [
+        "infused_broth"
+      ],
+      "outputState": "court_bouillon",
+      "instructions": "Pour le braconnage de poissons entiers ou de mollusques, laissez le bouillon refroidir à chaud ou même froid avant l'entrée des fruits de mer, de sorte que la chair chauffe doucement et reste humide — un ébullition violent saisit et la durcit. Pour le braconnage des filets ou comme bain prêt, presser le bouillon dans un tamis fin, presser les aromatiques et jeter les solides. Goûtez et ajustez le sel et une pression finale d'acide. Utiliser dans la journée ou congeler.",
+      "visualCue": {
+        "primaryTarget": "Un liquide d'ambre doré propre, tendu, suffisamment clair pour être lu, sentant équilibré entre le vin, l'herbe, les agrumes et le sel sans aucune note dominante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon est plat et sous-assaisonné, l'acide s'estompe après la chaleur, avec peu de lifting aromatique.",
+            "action": "Lumineux avec une pression de citron ou quelques gouttes de vinaigre et corriger le sel au goût."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lumineux, salé, légèrement goudronné liquide, assaisonné et aromatique, prêt à parfumer les fruits de mer sans les écraser.",
+            "action": "Laisser refroidir à la bonne température et braconnier, ou conserver couvert et réfrigéré."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le Broth est dur et amer ou sursauté, masquant plutôt que flattant les poissons délicats.",
+            "action": "Diluer avec un peu d'eau jusqu'à ce que l'acide et le sel se rééquilibrent, puis goûter à nouveau."
+          }
+        ]
+      },
+      "feelCue": "Le court-bouillon fini devrait avoir le goût d'un bouillon que l'on siroterait tout seul — tarte et propre, jamais flasque et jamais amère. Glissez un doigt dans une fois refroidi: tiède est la bonne température pour commencer à braconner des poissons délicats."
+    }
+  ]
 };

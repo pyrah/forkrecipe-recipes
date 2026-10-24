@@ -1,84 +1,223 @@
 export default {
-  repoId: "master_mexican_mexicancarnitas_001",
-  parentRepoId: null,
-  slug: "mexican-carnitas",
-  author: "ForkRecipe Kitchen",
-  title: "Mexican Carnitas",
-  description: "Pork shoulder braised low and slow in lard with orange and bay until it surrenders completely, then crisped under the broiler into shatteringly caramelized shards — the essential Michoacán street taco filling.",
-  cuisine: "Mexican",
-  culture: "Michoacán",
-  category: "proteins",
-  tags: ["protein", "pork", "mexican", "slow-cooked", "crispy", "carnitas"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "3 hours 30 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 1, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Pork shoulder (bone-in preferred), cut into 8cm chunks",  ratioValue: 1200, defaultUnit: "g",  substitutions: ["pork butt", "boneless shoulder"] },
-    { ingId: "ing_02", role: "Fat",       name: "Lard (or neutral oil as substitute)",                      ratioValue: 200,  defaultUnit: "g",  substitutions: ["vegetable shortening", "neutral oil"] },
-    { ingId: "ing_03", role: "Citrus",    name: "Oranges (juice and halved peels)",                         ratioValue: 2,    defaultUnit: "g",  substitutions: ["1 grapefruit"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves, unpeeled, smashed",                         ratioValue: 20,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Bay leaves",                                               ratioValue: 3,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Dried Mexican oregano",                                    ratioValue: 3,    defaultUnit: "g",  substitutions: ["Mediterranean oregano"] },
-    { ingId: "ing_07", role: "Spice",     name: "Ground cumin",                                             ratioValue: 3,    defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning", name: "Coarse salt",                                              ratioValue: 15,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Sweetener", name: "Sweetened condensed milk (the Michoacán secret)",          ratioValue: 60,   defaultUnit: "ml", substitutions: ["2 tsp sugar + 2 tsp milk"] },
+  "repoId": "master_mexican_mexicancarnitas_001",
+  "parentRepoId": null,
+  "slug": "mexican-carnitas",
+  "author": "ForkRecipe Kitchen",
+  "title": "Carnitas mexicains",
+  "description": "L'épaule de porc braisée basse et lente en saindoux avec de l'orange et de la baie jusqu'à ce qu'elle se rende complètement, puis croustillante sous le grilleur en éclats caramélisés, le taco essentiel de la rue Michoacán.",
+  "cuisine": "Mexicain",
+  "culture": "Michoacán",
+  "category": "proteins",
+  "tags": [
+    "protéine",
+    "porc",
+    "Mexique",
+    "cuits lentement",
+    "croustillant",
+    "Carnites"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "3 hours 30 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Braise",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "braised_pork",
-      instructions: "Place the pork chunks in a wide, heavy Dutch oven or deep skillet. Add the lard, orange juice, orange peel halves (squeezed side down), smashed garlic, bay leaves, oregano, cumin, and salt. Add just enough cold water to barely cover the pork — about 500ml. Bring to a boil over high heat, then reduce to a steady simmer. Cook uncovered, maintaining a moderate simmer throughout. Do not cover — you want the liquid to evaporate. After 1 hour, add the condensed milk. Continue cooking for another 1.5–2 hours. As the water evaporates, the pork will transition from braising to frying in the rendered lard.",
-      visualCue: {
-        primaryTarget: "After 2.5 hours, the liquid has fully evaporated and the pork is frying in its own lard. The pieces are golden and beginning to caramelize.",
-        spectrum: [
-          { state: "Underdone", description: "After 1.5 hours there is still significant liquid. Pork resists a fork — collagen hasn't converted.", action: "Continue simmering. Do not increase heat — the gradual transition from braising to frying is the method." },
-          { state: "Perfect",   description: "Liquid has evaporated. Pork is golden and beginning to develop caramelized spots in the lard. It shreds easily when pressed with a spatula.", action: "Begin stirring every few minutes to caramelize evenly. Proceed to crisping." },
-          { state: "Overdone",  description: "All liquid evaporated too early — pork is still tough and now frying hard in the lard.", action: "Add a splash of orange juice or water and continue cooking, covered, for 30 minutes." },
-        ],
-      },
-      feelCue: "At the end of the braise, press a chunk of pork with a wooden spoon — it should split apart with no resistance, falling into natural, striated shards.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Épaule de porc (de préférence désossée), coupée en morceaux de 8 cm",
+      "ratioValue": 1200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "fesses de porc",
+        "épaule désossée"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Crisp",
-      inputs: ["braised_pork"],
-      outputState: "crisped_carnitas",
-      instructions: "Once the liquid has evaporated and the pork is frying, begin turning the pieces every 2–3 minutes. The condensed milk will caramelize with the orange sugars, creating dark, lacquered spots. Break larger pieces apart with a spatula as you go. When the pork is a patchwork of deep golden and dark caramelized spots — or transfer to a foil-lined baking sheet and finish under the highest broiler for 5–7 minutes for extra shattering crispiness.",
-      visualCue: {
-        primaryTarget: "Shredded pork in irregular shards — some pieces pale gold, some mahogany, some with crisp dark edges. A variety of textures from tender interior to crackled exterior.",
-        spectrum: [
-          { state: "Underdone", description: "All pieces are uniformly blond. No caramelization. The flavor is still mild and steamed.", action: "Increase heat slightly and stir less — let the pork make contact with the hot pan for longer between turns." },
-          { state: "Perfect",   description: "A textural mosaic: crisp caramelized edges, dark mahogany spots, pale tender interior. The kitchen smells of orange caramel and roasted pork. Each piece is self-basting in the lard.", action: "Remove from heat. Squeeze remaining orange juice over the top. Serve immediately." },
-          { state: "Overdone",  description: "Pieces are uniformly very dark and dry. Caramel has burned bitter. Lard may be smoking.", action: "Remove from heat. Add a squeeze of fresh lime juice to introduce fresh acid and cut bitterness." },
-        ],
-      },
-      feelCue: "Pick up a piece of carnitas — the exterior should feel rigid and papery, while the interior gives immediately under pressure. If it's all crisp and no yield, it's overdone.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Lard (ou huile neutre comme substitut)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Écourtement des légumes",
+        "huile neutre"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Season",
-      inputs: ["crisped_carnitas"],
-      outputState: "finished_carnitas",
-      instructions: "Taste the carnitas and adjust salt. Squeeze the remaining fresh orange juice over the hot meat — the acid will sizzle against the hot lard and brighten the flavor dramatically. Serve immediately on warm corn tortillas with diced white onion, fresh cilantro, salsa verde, and lime wedges. Carnitas are best within 30 minutes of cooking — the texture changes as they cool.",
-      visualCue: {
-        primaryTarget: "Glistening shards of pork with visible golden, mahogany, and dark crisp patches. Steam rising when the orange juice hits.",
-        spectrum: [
-          { state: "Underdone", description: "Carnitas appear pale and moist. The flavor is mild and porky without caramelized depth.", action: "Return to high heat for 5 more minutes, or finish under the broiler." },
-          { state: "Perfect",   description: "A mosaic of textures and colors — crisp edges, tender core. The bright acid of the orange juice cuts through the rich lard.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Carnitas are dry throughout, no textural contrast.", action: "Add a very small drizzle of fresh lard or oil before serving to restore some richness." },
-        ],
-      },
-      feelCue: "The smell at this moment should be extraordinary — roasted pork, caramelized citrus, and toasted lard. If it doesn't make you want to eat immediately, it needs more color.",
+      "ingId": "ing_03",
+      "role": "Citrus",
+      "name": "Oranges (jus et demi pelés)",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1 pamplemousse"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Girofles d'ail, non pelées, cassées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Origan mexicain séché",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Origan méditerranéen"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel grossier",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Lait condensé sucré (le secret Michoacán)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "2 c. à thé sucre + 2 c. à thé lait"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Brise",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "braised_pork",
+      "instructions": "Placez les morceaux de porc dans un grand four hollandais ou une poêle profonde. Ajouter le saindoux, le jus d'orange, les moitiés d'écorces d'oranges (côté pressé vers le bas), l'ail cassé, les feuilles de laurier, l'origan, le cumin et le sel. Ajouter juste assez d'eau froide pour couvrir à peine le porc — environ 500ml. Porter à ébullition à feu vif, puis laisser mijoter régulièrement. Cuire à découvert, en maintenant une mijotée modérée. Ne couvrez pas — vous voulez que le liquide s'évapore. Après 1 heure, ajouter le lait condensé. Continuer la cuisson pendant encore 1,5 à 2 heures. Lorsque l'eau s'évaporera, le porc passera de la culture à la friture dans le saindoux rendu.",
+      "visualCue": {
+        "primaryTarget": "Après 2,5 heures, le liquide s'est complètement évaporé et le porc est frit dans son propre saindoux. Les pièces sont dorées et commencent à caraméliser.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 1,5 heure, il y a encore un liquide important. Le porc résiste à une fourchette — le collagène n'a pas converti.",
+            "action": "Continuez à mijoter. N'augmentez pas la chaleur — la méthode est la transition progressive de la cuisson à la friture."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le liquide s'est évaporé. Le porc est doré et commence à développer des taches caramélisées dans le saindoux. Il déchique facilement lorsqu'il est pressé avec une spatule.",
+            "action": "Commencez à remuer toutes les quelques minutes pour caraméliser uniformément. Passez à croquant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tous les liquides s'évaporent trop tôt — le porc est encore dur et fait maintenant frire dur dans le saindoux.",
+            "action": "Ajouter un éclaboussure de jus d'orange ou d'eau et poursuivre la cuisson, couvert, pendant 30 minutes."
+          }
+        ]
+      },
+      "feelCue": "À la fin du braise, pressez un morceau de porc à l'aide d'une cuillère en bois — il doit se séparer sans résistance, tomber dans des shards naturels et striés."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Crisp",
+      "inputs": [
+        "braised_pork"
+      ],
+      "outputState": "crisped_carnitas",
+      "instructions": "Une fois le liquide évaporé et le porc frit, commencez à tourner les morceaux toutes les 2–3 minutes. Le lait condensé caramélisera avec les sucres oranges, créant des taches foncées et laquées. Découpez de plus grandes pièces avec une spatule au fur et à mesure. Lorsque le porc est un patchwork de taches caramélisées dorées profondes et foncées, ou un transfert sur une plaque de cuisson doublée de feuilles et finition sous le plus haut grilleur pendant 5 à 7 minutes pour une croustillante éclatante.",
+      "visualCue": {
+        "primaryTarget": "Des morceaux d'or pâle, des acajous, des bords foncés et croustillants. Une variété de textures de l'intérieur tendre à l'extérieur craqué.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toutes les pièces sont uniformément blondes. Pas de caramélisation. La saveur est encore douce et vapeur.",
+            "action": "Augmentez légèrement la chaleur et remuez moins — laissez le porc entrer en contact avec la poêle chaude plus longtemps entre les virages."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mosaïque textuelle : bords caramélisés croustillants, taches acajou foncées, intérieur pâle et tendre. La cuisine sent le caramel orange et le porc rôti. Chaque pièce est auto-aspirante dans le saindoux.",
+            "action": "Retirer du feu. Pressez le reste du jus d'orange sur le dessus. Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les morceaux sont uniformément très foncés et secs. Caramel a brûlé amer. Lard peut fumer.",
+            "action": "Retirer du feu. Ajouter une pression de jus de lime frais pour introduire de l'acide frais et couper l'amertume."
+          }
+        ]
+      },
+      "feelCue": "Prenez un morceau de carnitas — l'extérieur doit se sentir rigide et papier, tandis que l'intérieur donne immédiatement sous pression. Si tout est croquant et sans rendement, c'est exagéré."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Saison",
+      "inputs": [
+        "crisped_carnitas"
+      ],
+      "outputState": "finished_carnitas",
+      "instructions": "Goûtez les carnitas et ajustez le sel. Pressez le reste du jus d'orange frais sur la viande chaude – l'acide crèvera contre le saindoux chaud et illuminera la saveur de façon spectaculaire. Servir immédiatement sur des tortillas de maïs chaudes avec des oignons blancs en dés, de la coriandre fraîche, de la salsa verde et des quartiers de chaux. Les carnitas sont les meilleurs dans les 30 minutes suivant la cuisson — la texture change à mesure qu'ils refroidissent.",
+      "visualCue": {
+        "primaryTarget": "Coller des tranches de porc avec des taches dorées visibles, acajou et foncées. La vapeur monte quand le jus d'orange frappe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les carnitas semblent pâles et humides. La saveur est douce et porcine sans profondeur caramélisée.",
+            "action": "Retourner à feu vif pendant 5 minutes de plus, ou terminer sous le gril."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une mosaïque de textures et de couleurs – bords croustillants, noyau tendre. L'acide brillant du jus d'orange traverse le riche saindoux.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les carnitas sont sèches, aucun contraste textural.",
+            "action": "Ajouter un très petit filet de saindoux frais ou d'huile avant de servir pour restaurer une certaine richesse."
+          }
+        ]
+      },
+      "feelCue": "L'odeur en ce moment devrait être extraordinaire: porc rôti, agrumes caramélisés et saindoux grillés. S'il ne vous donne pas envie de manger immédiatement, il a besoin de plus de couleur."
+    }
+  ]
 };

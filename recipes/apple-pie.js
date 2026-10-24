@@ -1,102 +1,267 @@
 export default {
-  repoId: "master_american_apple_pie_001",
-  parentRepoId: null,
-  slug: "apple-pie",
-  author: "ForkRecipe Kitchen",
-  title: "Classic Double-Crust American Apple Pie",
-  description: "The American standard — a shattering, lard-and-butter crust enclosing a cinnamon-brown sugar filling of thinly sliced apples that have released and reabsorbed their juice into a glossy, jammy interior. The top crust is latticed, burnished with egg wash and sugar, crackled and amber at the edges.",
-  cuisine: "American",
-  culture: "American",
-  category: "desserts",
-  tags: ["pie", "apple", "dessert", "baking", "pastry", "holiday", "double-crust"],
-  difficulty: 3,
-  activeTime: "60 min",
-  totalTime: "3 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 1, sour: 2, bitter: 0, umami: 0, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour (for crust)",               ratioValue: 300, defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_02", role: "Fat",        name: "Unsalted butter, very cold, cubed",            ratioValue: 115, defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_03", role: "Fat",        name: "Lard or vegetable shortening, cold",           ratioValue: 60,  defaultUnit: "g",   substitutions: ["all butter (add 1 tbsp more flour)"] },
-    { ingId: "ing_04", role: "Hydration",  name: "Ice water",                                   ratioValue: 80,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine salt (for crust)",                        ratioValue: 5,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_06", role: "Protein",    name: "Granny Smith and Honeycrisp apples (mixed), peeled, cored, sliced 5 mm", ratioValue: 1.2, defaultUnit: "kg", substitutions: ["all Granny Smith for a tarter pie"] },
-    { ingId: "ing_07", role: "Sweetener",  name: "Light brown sugar + granulated sugar (mixed equal parts)", ratioValue: 150, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",      name: "Ground cinnamon",                             ratioValue: 8,   defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_09", role: "Starch",     name: "Cornstarch (filling thickener)",               ratioValue: 25,  defaultUnit: "g",   substitutions: ["tapioca starch", "all-purpose flour (use 35 g)"] },
-    { ingId: "ing_10", role: "Acid",       name: "Fresh lemon juice",                            ratioValue: 15,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_11", role: "Binder",     name: "Egg + 1 tbsp cream (for egg wash)",            ratioValue: 1,   defaultUnit: "whole", substitutions: [] },
+  "repoId": "master_american_apple_pie_001",
+  "parentRepoId": null,
+  "slug": "apple-pie",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pâte à pommes américaine classique double croûte",
+  "description": "La norme américaine — une croûte de saindoux et de beurre encombrée d'un sucre brun cannelle rempli de pommes finement coupées qui ont libéré et réabsorbé leur jus dans un intérieur brillant et confitureux. La croûte supérieure est lattée, brûlée avec des œufs et du sucre, crépitée et ambre aux bords.",
+  "cuisine": "Américain",
+  "culture": "Américain",
+  "category": "desserts",
+  "tags": [
+    "tarte",
+    "pomme",
+    "dessert",
+    "Cuisson",
+    "pâtisserie",
+    "jour férié",
+    "à double croûte"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "60 min",
+  "totalTime": "3 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "pie_dough",
-      instructions: "In a large bowl, whisk flour and salt. Add cold butter and lard. Using your fingertips, work the fats into the flour until the mixture looks like coarse crumbs with some larger, flat butter flakes — those flakes create the flaky layers. Do not overwork. Drizzle in ice water 1 tablespoon at a time, tossing with a fork. Stop adding water when the dough just holds together when pinched. Divide in two, flatten into discs, wrap, and refrigerate at least 2 hours or overnight.",
-      visualCue: {
-        primaryTarget: "A rough dough disc with visible flat butter flakes throughout. Shaggy at the edges but holds its shape when pressed.",
-        spectrum: [
-          { state: "Underdone", description: "Dough crumbles apart when pressed. Too dry or not enough water.", action: "Add ice water 1 tsp at a time, tossing, until the dough holds when pinched." },
-          { state: "Perfect",   description: "Rough, shaggy disc with flat butter streaks visible. Holds together under light pressure but not sticky or smooth.", action: "Wrap in plastic and refrigerate minimum 2 hours." },
-          { state: "Overdone",  description: "Smooth, elastic dough. Gluten developed, no visible fat streaks.", action: "Wrap and refrigerate 2 hours before rolling — the rest will relax the gluten somewhat." },
-        ],
-      },
-      feelCue: "The dough disc should feel cool and slightly waxy from the fat — not warm and doughy. Press a thumb in: the indentation holds but the dough does not stick to your thumb.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général (pour croûte)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Marinate",
-      inputs: ["ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "macerated_apples",
-      instructions: "Combine the sliced apples with sugar, cinnamon, cornstarch, and lemon juice. Toss to coat. Let stand 30 minutes at room temperature — the sugar will draw liquid out of the apples. Drain off the released juice into a small saucepan, reduce it to a thick syrup over medium heat, and pour it back over the apples. This pre-reducing step prevents the gap that forms between crust and filling when juices boil away during baking.",
-      visualCue: {
-        primaryTarget: "Apple slices glistening in a thick, caramel-tinted syrup. No excess free liquid in the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Slices still dry and white. Very little juice has been drawn out.", action: "Wait longer — 30 minutes is minimum. Cold apples may need 45 minutes." },
-          { state: "Perfect",   description: "Apple slices are lightly glossed with a caramel-tinged syrup. The reduced juice has been reabsorbed. No watery puddle at the bottom of the bowl.", action: "Fill the pie shell immediately." },
-          { state: "Overdone",  description: "Apples have become so macerated they are beginning to turn soft and mushy.", action: "Drain fully and bake promptly. The filling will be jammy but still delicious." },
-        ],
-      },
-      feelCue: "Pick up a slice — it should be flexible and glossy, bending slightly rather than snapping, and feel faintly tacky from the syrup.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé, très froid, cube",
+      "ratioValue": 115,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["pie_dough", "macerated_apples"],
-      outputState: "assembled_pie",
-      instructions: "On a lightly floured surface, roll the first dough disc to a 30 cm circle, about 3–4 mm thick. Drape into a 23 cm pie dish, pressing into the corners without stretching. Pile the apple filling into the shell, mounding it higher than the rim — it will settle during baking. Roll the second disc and lay it over the top, or cut into strips for a lattice. Trim to 1.5 cm overhang, fold under, and crimp the edge. Cut steam vents if using a full top crust. Refrigerate the assembled pie for 30 minutes before baking.",
-      visualCue: {
-        primaryTarget: "A neatly crimped pie shell filled with a mound of apple slices, latticed or vented top crust sitting evenly over the filling.",
-        spectrum: [
-          { state: "Underdone", description: "Filling slumps to one side. Top crust not sealed. Edges cracking.", action: "Re-crimp edges, re-center filling, and refrigerate 30 minutes to set the shape." },
-          { state: "Perfect",   description: "Even mound of filling, tight crimped edge, smooth top crust with well-cut vents. Crust looks cold and firm.", action: "Brush with egg wash and bake." },
-          { state: "Overdone",  description: "Not applicable for assembly. Proceed to baking.", action: "Proceed." },
-        ],
-      },
-      feelCue: "The assembled pie should feel cold and stiff when lifted from the fridge — the fat in the crust should be completely re-solidified. A warm, soft pie going into the oven will shrink and lose its shape.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Shortening lard ou légume, froid",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tout beurre (ajouter 1 c. à soupe de farine)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Bake",
-      inputs: ["assembled_pie", "ing_11"],
-      outputState: "baked_apple_pie",
-      instructions: "Preheat oven to 220 C (425 F) with a sheet pan on the lower rack (this conducts heat to the bottom crust). Brush the top crust with egg wash and scatter a pinch of granulated sugar over it. Bake at 220 C for 20 minutes until the edges begin to set and color. Reduce heat to 190 C (375 F) and continue baking 35–45 minutes until the crust is deeply golden and the filling is visibly bubbling through the vents. Cool on a wire rack for at least 3 hours before slicing — the filling thickens as it cools.",
-      visualCue: {
-        primaryTarget: "Deep amber-brown lattice or crust top, golden and crackled. Filling visibly bubbling through vents or between lattice strips. No pale patches of uncooked dough.",
-        spectrum: [
-          { state: "Underdone", description: "Pale blond crust. Filling not bubbling at all through the vents. Bottom crust likely still raw.", action: "Continue baking. Tent the edges with foil if they are darkening while the center is still pale." },
-          { state: "Perfect",   description: "Deep amber-brown top with caramelized edges. Filling actively bubbling through vents, filling is thick not watery. Sounds of gentle simmering inside when lifted.", action: "Cool on a rack minimum 3 hours before slicing." },
-          { state: "Overdone",  description: "Very dark brown crust. Edges are nearly burnt. Filling has bubbled over onto the oven floor.", action: "Cover with foil and remove from oven. The interior filling is likely perfect — the crust is the sacrifice." },
-        ],
-      },
-      feelCue: "When you tilt the cooled pie slightly, the filling should not slosh — if it still moves like liquid after 3 hours of cooling, it has not fully set and will flow when sliced. Patience is structural here.",
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Eau glacée",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin (pour croûte)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Granny Smith et Honeycrisp pommes (mélangées), pelées, décortiquées, coupées en tranches de 5 mm",
+      "ratioValue": 1.2,
+      "defaultUnit": "kg",
+      "substitutions": [
+        "Tout Granny Smith pour une tarte aux tartes"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Sucre brun clair + sucre granulé (mixed egal parts)",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Starch",
+      "name": "Farine de maïs (remplissage épaississant)",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Amidon de tapioca",
+        "Farine universelle (utilisation 35 g)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Binder",
+      "name": "Oeufs + 1 c. à soupe de crème (pour laver les œufs)",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "pie_dough",
+      "instructions": "Dans un grand bol, fouetter la farine et le sel. Ajouter le beurre froid et le saindoux. À l'aide de votre bout des doigts, tricotez les graisses dans la farine jusqu'à ce que le mélange ressemble à des miettes grossières avec des flocons de beurre plus larges et plats — ces flocons créent des couches de flocons. Ne pas surmener. Plongez dans l'eau glacée 1 cuillerée à soupe à la fois, jetant avec une fourchette. Arrêtez d'ajouter de l'eau quand la pâte se tient juste ensemble lorsqu'elle est pincée. Divisez en deux, aplatissez en disques, enveloppez et réfrigérez au moins 2 heures ou pendant la nuit.",
+      "visualCue": {
+        "primaryTarget": "Un disque de pâte rugueux avec des flocons de beurre plats visibles. Shaggy aux bords mais tient sa forme lorsqu'il est pressé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux s'écroule lorsqu'elle est pressée. Trop sec ou pas assez d'eau.",
+            "action": "Ajouter de l'eau glacée 1 c. à thé à la fois, jeter, jusqu'à ce que la pâte se maintienne lorsqu'elle est pincée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Disque dur et chaotique avec des stries de beurre plat visibles. Se tient ensemble sous pression légère mais pas collant ou lisse.",
+            "action": "Envelopper en plastique et réfrigérer au moins 2 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pâte lisse et élastique. Le gluten s'est développé, pas de stries graisseuses visibles.",
+            "action": "Enrouler et réfrigérer 2 heures avant de rouler — le reste relâchera un peu le gluten."
+          }
+        ]
+      },
+      "feelCue": "Le disque de pâte doit se sentir frais et légèrement cireux de la graisse — pas chaud et pâteux. Appuyez sur un pouce : l'indentation tient, mais la pâte ne colle pas à votre pouce."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "macerated_apples",
+      "instructions": "Mélanger les pommes coupées avec le sucre, la cannelle, la fécule de maïs et le jus de citron. Mets-toi à manteaur. Laisser reposer 30 minutes à température ambiante — le sucre sortira du liquide des pommes. Égoutter le jus libéré dans une petite casserole, le réduire à un sirop épais à feu moyen et le verser sur les pommes. Cette étape de préréduction empêche l'écart qui se forme entre la croûte et le remplissage lorsque les jus ébullition pendant la cuisson.",
+      "visualCue": {
+        "primaryTarget": "Des tranches de pommes scintillent dans un sirop épais, teinté de caramel. Aucun excès de liquide libre dans le bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tranches sont encore sèches et blanches. Très peu de jus a été tiré.",
+            "action": "Attendez plus longtemps — 30 minutes est minimum. Les pommes froides peuvent nécessiter 45 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tranches de pommes sont légèrement brillantes avec un sirop de caramel. Le jus réduit a été réabsorbé. Pas de flaque aqueuse au fond du bol.",
+            "action": "Remplissez la coquille de tarte immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pommes sont devenues si macérées qu'elles commencent à devenir douces et musquées.",
+            "action": "Égoutter complètement et cuire rapidement. Le remplissage sera jammy mais toujours délicieux."
+          }
+        ]
+      },
+      "feelCue": "Ramassez une tranche — elle doit être souple et brillante, se pliant légèrement plutôt que de se casser, et se sentir légèrement collante du sirop."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "pie_dough",
+        "macerated_apples"
+      ],
+      "outputState": "assembled_pie",
+      "instructions": "Sur une surface légèrement farinée, rouler le premier disque de pâte dans un cercle de 30 cm, d'environ 3 à 4 mm d'épaisseur. Drapé dans un plat à tarte de 23 cm, presser dans les coins sans s'étirer. Pile le remplissage de la pomme dans la coquille, la foulant plus haut que la jante — il se déposera pendant la cuisson. Rouler le deuxième disque et le déposer sur le dessus, ou couper en bandes pour un treillis. Trim à 1,5 cm de surplomb, plier sous et sertir le bord. Couper les évents de vapeur en utilisant une croûte pleine. Réfrigérer la tarte assemblée pendant 30 minutes avant de la cuire.",
+      "visualCue": {
+        "primaryTarget": "Une coquille de tarte bien sertie remplie d'un monticule de tranches de pomme, en croûte supérieure lattis ou éventée, assise uniformément sur le remplissage.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Remplir d'un côté. La croûte supérieure n'est pas scellée. Des bords qui craquent.",
+            "action": "Reformer les bords, recentrer le remplissage et réfrigérer 30 minutes pour régler la forme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même le monticule de remplissage, le bord serré serti, la croûte supérieure lisse avec des évents bien coupés. La croûte semble froide et ferme.",
+            "action": "Badigeonner avec les œufs et cuire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sans objet pour le montage. Passer à la cuisson.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "La tarte assemblée doit se sentir froide et raide lorsqu'elle est levée du réfrigérateur — la graisse de la croûte doit être complètement solidifiée. Une tarte chaude et douce entrant dans le four se rétrécira et perdra sa forme."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Cuire",
+      "inputs": [
+        "assembled_pie",
+        "ing_11"
+      ],
+      "outputState": "baked_apple_pie",
+      "instructions": "Préchauffer le four à 220 °C (425 °F) avec une plaque sur la grille inférieure (ce qui conduit à la chaleur de la croûte inférieure). Badigeonner le dessus de la croûte avec un lavage d'oeufs et disperser une pincée de sucre granulé dessus. Cuire à 220 °C pendant 20 minutes jusqu'à ce que les bords commencent à se fixer et à colorer. Réduisez le feu à 190 C (375 F) et continuez à cuire 35 à 45 minutes jusqu'à ce que la croûte soit profondément dorée et que le remplissage soit visiblement bouillonnant dans les évents. Laisser refroidir sur une grille pendant au moins 3 heures avant de trancher — le remplissage épaissit à mesure qu'il refroidit.",
+      "visualCue": {
+        "primaryTarget": "Un treillis ou une croûte brun-ambre profond, doré et craqué. Remplir visiblement par des évents ou entre des bandes de treillis. Pas de taches pâles de pâte non cuite.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Une croûte blonde pâle. Remplir sans bouillonner du tout à travers les évents. La croûte inférieure est probablement encore crue.",
+            "action": "Continuer la cuisson. Tente les bords avec du papier s'ils s'obscurcissent alors que le centre est encore pâle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tope ambre-brun profond avec bords caramélisés. Remplir activement dans les évents, le remplissage n'est pas aqueux. Des bruits de mijotage doux à l'intérieur lorsqu'ils sont levés.",
+            "action": "Laisser refroidir sur une grille au moins 3 heures avant de trancher."
+          },
+          {
+            "state": "Overdone",
+            "description": "Une croûte brun très foncé. Les bords sont presque brûlés. Le remplissage a fait des bulles sur le plancher du four.",
+            "action": "Couvrir de papier et retirer du four. Le remplissage intérieur est probablement parfait — la croûte est le sacrifice."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous inclinez légèrement la tarte refroidie, le remplissage ne devrait pas s'enliser — s'il se déplace encore comme du liquide après 3 heures de refroidissement, il n'a pas complètement réglé et s'écoule lorsque tranché. La patience est structurelle ici."
+    }
+  ]
 };

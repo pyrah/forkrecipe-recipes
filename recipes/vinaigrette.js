@@ -1,94 +1,237 @@
 export default {
-  repoId: "master_french_vinaigrette_001",
-  parentRepoId: null,
-  slug: "vinaigrette",
-  author: "ForkRecipe Kitchen",
-  title: "Classic Vinaigrette",
-  description: "The everyday French dressing reduced to its physics — sharp wine vinegar and a smear of Dijon held in suspension while olive oil rains in, until what was thin and split turns into a cloudy, clinging emulsion that coats a leaf without pooling at the bottom of the bowl.",
-  cuisine: "French",
-  culture: "Provençal",
-  category: "condiments",
-  tags: ["vinaigrette", "french", "dressing", "emulsion", "salad", "mustard", "vegan"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 1, salty: 3, sour: 4, bitter: 1, umami: 1, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Acid",      name: "Red wine vinegar",            ratioValue: 15, defaultUnit: "parts", substitutions: ["sherry vinegar", "white wine vinegar", "fresh lemon juice"] },
-    { ingId: "ing_02", role: "Binder",    name: "Dijon mustard (smooth)",      ratioValue: 5,  defaultUnit: "parts", substitutions: ["whole-grain mustard for a coarser dressing"] },
-    { ingId: "ing_03", role: "Allium",    name: "Shallot, very finely minced", ratioValue: 6,  defaultUnit: "parts", substitutions: ["small garlic clove, grated"] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",               ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Black pepper, freshly ground", ratioValue: 1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Extra-virgin olive oil",      ratioValue: 45, defaultUnit: "parts", substitutions: ["half neutral oil for a milder, less bitter dressing"] },
-    { ingId: "ing_07", role: "Sweetener", name: "Honey (optional, to balance)", ratioValue: 2, defaultUnit: "parts", substitutions: ["pinch of sugar", "maple syrup"] },
+  "repoId": "master_french_vinaigrette_001",
+  "parentRepoId": null,
+  "slug": "vinaigrette",
+  "author": "ForkRecipe Kitchen",
+  "title": "Vinaigrette classique",
+  "description": "La vinaigrette française quotidienne réduite à sa physique — vinaigre de vin vif et un frottis de Dijon maintenu en suspension tandis que l'huile d'olive pleut, jusqu'à ce que ce qui était mince et fendue se transforme en une émulsion nuageuse et collante qui enrobe une feuille sans se mettre au fond du bol.",
+  "cuisine": "Français",
+  "culture": "Provençal",
+  "category": "condiments",
+  "tags": [
+    "vinaigrette",
+    "français",
+    "vinaigrette",
+    "émulsion",
+    "salade",
+    "moutarde",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Macerate",
-      inputs: ["ing_01", "ing_03", "ing_04"],
-      outputState: "seasoned_vinegar",
-      instructions: "Mince the shallot as finely as you can, then stir it into the vinegar with the salt. Let it sit for 10 minutes (or up to an hour). The acid softens the shallot's raw bite, draws out its sweetness, and dissolves the salt completely so there is no grit left to scratch through the finished dressing. Crucially, salt only dissolves in the water-based vinegar — never in oil — so it must go in now, before any fat enters the bowl.",
-      visualCue: {
-        primaryTarget: "A small bowl of cloudy, blush-pink vinegar with the shallot pieces softened and translucent, no longer sharp white. No undissolved salt crystals visible at the bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Shallot is still bright, opaque white and crunchy; the vinegar is clear and the salt is still grainy at the bottom.", action: "Give it more time. Stir once or twice and wait — five more minutes mellows the shallot and finishes dissolving the salt." },
-          { state: "Perfect",   description: "Shallot has gone soft, pale, and slightly pink from the vinegar; the liquid smells bright but no longer nose-stingingly raw; salt is fully dissolved.", action: "Whisk in the mustard and any honey, then begin streaming the oil." },
-          { state: "Overdone",  description: "Shallot has macerated for hours and gone limp and dull, the vinegar tasting flat and overly oniony.", action: "Still usable — strain out some shallot if it dominates, and brighten with a few drops of fresh vinegar." },
-        ],
-      },
-      feelCue: "Taste a drop on the back of your hand — it should read sharp and clean, salty enough to make you wince slightly, since the oil to come will round off roughly a third of that intensity.",
+      "ingId": "ing_01",
+      "role": "Acid",
+      "name": "vinaigre de vin rouge",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de sherry",
+        "vinaigre de vin blanc",
+        "jus de citron frais"
+      ]
     },
     {
-      nodeId: "step_2", action: "Whisk",
-      inputs: ["seasoned_vinegar", "ing_02", "ing_07"],
-      outputState: "mustard_base",
-      instructions: "Whisk the Dijon (and honey, if using) into the seasoned vinegar until it is uniform and a touch foamy. The mustard is doing real work here, not just flavoring: its mucilage and lecithin act as the emulsifier that will keep the oil suspended. A vinaigrette built on mustard holds together for hours instead of splitting in seconds.",
-      visualCue: {
-        primaryTarget: "A smooth, pale-tan, slightly thickened liquid with a matte, uniform surface and no streaks of unmixed mustard.",
-        spectrum: [
-          { state: "Underdone", description: "Visible ribbons of yellow mustard still streak through the vinegar, and the mix looks two-toned.", action: "Keep whisking — a few seconds more pulls it into one even, opaque base." },
-          { state: "Perfect",   description: "A homogeneous, light-tan base with a slight body and a faint foam from whisking. Tastes sharp, mustardy, and balanced.", action: "Start adding the oil, drop by drop at first." },
-          { state: "Overdone",  description: "Over-whisked to a thin froth, though no real harm done.", action: "Let it settle a moment and proceed — the oil will give it body anyway." },
-        ],
-      },
-      feelCue: "The base should feel slightly viscous on the whisk, clinging rather than sloshing — that little bit of drag is the mustard's emulsifying power you are about to lean on.",
+      "ingId": "ing_02",
+      "role": "Binder",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "moutarde à grains entiers pour une vinaigrette plus grossière"
+      ]
     },
     {
-      nodeId: "step_3", action: "Emulsify",
-      inputs: ["mustard_base", "ing_06"],
-      outputState: "emulsion",
-      instructions: "Whisking constantly and hard, add the olive oil in the thinnest possible thread to start — almost drop by drop. Each addition must be fully absorbed and the mixture thickened before you add more. Once it visibly turns creamy and pale, you can pour the oil in a slow steady stream. The mustard and shallot break the oil into microscopic droplets and trap them in the vinegar; rush it and the droplets coalesce, and the whole thing slips back to oil floating on vinegar.",
-      visualCue: {
-        primaryTarget: "An opaque, creamy, pale-gold dressing that thickens visibly on the whisk and leaves a clinging coat on the back of a spoon, with no separate layer of oil sitting on top.",
-        spectrum: [
-          { state: "Underdone", description: "Beads of oil float on the surface or the mix looks thin and translucent rather than creamy.", action: "Stop adding oil. Whisk vigorously until what's there pulls together and thickens, then resume more slowly." },
-          { state: "Perfect",   description: "A uniformly cloudy, light-gold emulsion with body, thick enough to ribbon briefly off the whisk before melting back in.", action: "Stop here. Taste and adjust before it can break from over-whisking." },
-          { state: "Overdone",  description: "The dressing suddenly looks curdled or has slicked back into oil over a watery layer — it has broken.", action: "Rescue it: whisk a fresh teaspoon of mustard (or a few drops of warm water) in a clean bowl and slowly whisk the broken dressing back into it." },
-        ],
-      },
-      feelCue: "Listen and feel — as it emulsifies, the whisk meets more resistance and the sloshing quiets to a soft, thick sound. That thickening drag is the emulsion forming under your hand.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Échalote, très finement hachée",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "petite gousse d'ail, râpée"
+      ]
     },
     {
-      nodeId: "step_4", action: "Season",
-      inputs: ["emulsion", "ing_05"],
-      outputState: "finished_vinaigrette",
-      instructions: "Grind in the black pepper and taste on a leaf of lettuce, not a spoon — fat coats the tongue and mutes seasoning, so a vinaigrette always tastes blander on greens than off the whisk. Adjust: a pinch more salt if flat, a splash of vinegar if dull, a thread more oil if too sharp. Dress greens only at the last second and use less than you think; a properly emulsified vinaigrette clings, so a little coats a lot.",
-      visualCue: {
-        primaryTarget: "A glossy, creamy, well-seasoned dressing flecked with pepper and shallot that coats a leaf in a thin even sheen without dripping or pooling at the bottom of the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Tastes flat or one-dimensionally sour on a leaf, the sharpness not yet rounded.", action: "Add salt a pinch at a time and a touch of honey or oil until the acid reads bright rather than harsh." },
-          { state: "Perfect",   description: "On a leaf it tastes balanced — bright acid, savory salt, a peppery shallot warmth, and enough fat to round it all without feeling greasy.", action: "Dress the salad lightly just before serving, tossing until every leaf glistens faintly." },
-          { state: "Overdone",  description: "Over-seasoned to aggressively salty or vinegary, or so much oil added that it tastes flat and slick.", action: "Whisk in a little more oil to tame salt and acid, or a splash of vinegar and salt to cut excess oil, until it rebalances." },
-        ],
-      },
-      feelCue: "Dip a leaf and lift it — the dressing should hang on in a thin, glistening film, not slide off in droplets. That cling is how you know the emulsion held and the salad won't sit in a puddle.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poivre noir, fraîchement moulu",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 45,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile moitié neutre pour une vinaigrette plus douce et moins amère"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Miel (facultatif, pour équilibrer)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pincée de sucre",
+        "sirop d'érable"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Macérer",
+      "inputs": [
+        "ing_01",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "seasoned_vinegar",
+      "instructions": "Mincez l'échalote aussi fin que possible, puis remuez-la dans le vinaigre avec le sel. Laisser reposer pendant 10 minutes (ou jusqu'à une heure). L'acide adoucit la morsure brute de l'échalote, en tire la douceur et dissout complètement le sel, de sorte qu'il n'y a plus de craquage à travers la vinaigrette finie. Le sel ne se dissout surtout que dans le vinaigre à base d'eau — jamais dans l'huile — alors il doit entrer dès maintenant, avant que la graisse ne pénètre dans le bol.",
+      "visualCue": {
+        "primaryTarget": "Un petit bol de vinaigre blush-pink nuageux avec les morceaux d'échalote adoucis et translucides, pas plus blanc vif. Pas de cristaux de sel non dissous visibles en bas.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'échalote est encore blanc clair, opaque et croquant; le vinaigre est clair et le sel est encore granuleux au fond.",
+            "action": "Donne-lui plus de temps. Mélanger une ou deux fois et attendre — cinq minutes de plus refroidit l'échalote et finit de dissoudre le sel."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'échalote est devenu doux, pâle et légèrement rose du vinaigre; le liquide sent brillant mais n'est plus cru; le sel est complètement dissous.",
+            "action": "Frottez la moutarde et tout miel, puis commencez à couler l'huile."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'échalote a macéré pendant des heures et est devenu boiteux et terne, le vinaigre goûtant plat et trop oignon.",
+            "action": "Encore utilisable: épuisez un peu d'échalote s'il domine, et illuminez avec quelques gouttes de vinaigre frais."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une goutte sur le dos de votre main — il doit lire vif et propre, assez salé pour vous faire un peu de treuil, car l'huile à venir s'achèvera environ un tiers de cette intensité."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "seasoned_vinegar",
+        "ing_02",
+        "ing_07"
+      ],
+      "outputState": "mustard_base",
+      "instructions": "fouetter le Dijon (et le miel, s'il l'utilise) dans le vinaigre assaisonné jusqu'à ce qu'il soit uniforme et moussant. La moutarde fait du vrai travail ici, pas seulement de l'arôme: son mucilage et la lécithine agissent comme l'émulsionner qui gardera l'huile suspendue. Une vinaigrette construite sur la moutarde tient ensemble pendant des heures au lieu de se diviser en secondes.",
+      "visualCue": {
+        "primaryTarget": "Un liquide lisse, pâle-tan, légèrement épaissi, avec une surface uniforme mate et sans stries de moutarde non mélangée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des rubans visibles de moutarde jaune traversent encore le vinaigre, et le mélange semble à deux tons.",
+            "action": "Continuez à fouetter — quelques secondes de plus la tire dans une base uniforme et opaque."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une base homogène et légère avec un corps léger et une faible mousse de fouettage. Goûts vifs, moutarde et équilibrés.",
+            "action": "Commencez à ajouter l'huile, goutte à goutte au début."
+          },
+          {
+            "state": "Overdone",
+            "description": "Il s'est dégonflé jusqu'à une mousse mince, bien qu'il n'y ait aucun mal réel.",
+            "action": "Laissez-le régler un moment et procéder — l'huile lui donnera corps de toute façon."
+          }
+        ]
+      },
+      "feelCue": "La base doit se sentir légèrement visqueuse sur le fouet, s'accrocher plutôt que de s'enliser — ce petit morceau de traînée est la puissance émulsifiante de la moutarde sur laquelle vous êtes sur le point de vous appuyer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Émulsifier",
+      "inputs": [
+        "mustard_base",
+        "ing_06"
+      ],
+      "outputState": "emulsion",
+      "instructions": "En fouettant constamment et dur, ajouter l'huile d'olive dans le fil le plus fin possible pour commencer — presque goutte à goutte. Chaque addition doit être entièrement absorbée et le mélange épaissit avant d'ajouter plus. Une fois qu'il devient visiblement crémeux et pâle, vous pouvez verser l'huile dans un ruisseau lent et stable. La moutarde et l'échalote brisent l'huile en gouttelettes microscopiques et les piègent dans le vinaigre; précipitent-le et les gouttelettes se fusionnent, et l'ensemble revient à l'huile flottant sur le vinaigre.",
+      "visualCue": {
+        "primaryTarget": "Une vinaigrette opaque, crémeuse et dorée qui s'épaissit visiblement sur le fouet et laisse une couche collante sur le dos d'une cuillère, sans couche d'huile séparée assise sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les perles d'huile flottent à la surface ou le mélange semble mince et translucide plutôt que crémeux.",
+            "action": "Arrête d'ajouter de l'huile. fouetter vigoureusement jusqu'à ce que ce qui s'y trouve s'épaississe, puis reprendre plus lentement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une émulsion uniformément nuageuse, d'or clair avec le corps, assez épaisse pour rubaner brièvement le fouet avant de fondre.",
+            "action": "Arrête ici. Goûtez et ajustez-vous avant qu'il ne se brise."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pansement a soudain l'air caillé ou il est retombé dans l'huile sur une couche aqueuse — il a cassé.",
+            "action": "Sauvez-le : fouettez une cuillère à café fraîche de moutarde (ou quelques gouttes d'eau chaude) dans un bol propre et fouettez lentement la vinaigrette cassée."
+          }
+        ]
+      },
+      "feelCue": "Écoutez et ressentez - vous - même — en émulsionnant, le fouet rencontre plus de résistance et le sloshing calme un son doux et épais. Cette traînée épaississante est l'émulsion qui se forme sous votre main."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "emulsion",
+        "ing_05"
+      ],
+      "outputState": "finished_vinaigrette",
+      "instructions": "Grincer dans le poivre noir et goûter sur une feuille de laitue, pas une cuillère — gras couvre la langue et mutes assaisonnement, de sorte qu'une vinaigrette goûte toujours la calandre sur les verts que hors du fouet. Ajuster : une pincée plus de sel si plat, une éclaboussure de vinaigre si terne, un fil plus d'huile si trop tranchant. Habillez les verts seulement à la dernière seconde et utilisez moins que vous ne le pensez ; une vinaigrette correctement émulsifiée colle, donc un peu de manteaux beaucoup.",
+      "visualCue": {
+        "primaryTarget": "Une vinaigrette lustrée, crémeuse, bien assaisonnée, poivrée et échalote qui enrobe une feuille dans un mince même éclat sans dégoutter ni pooler au fond du bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Goûte plat ou unidimensionnellement aigre sur une feuille, la netteté non encore arrondie.",
+            "action": "Ajouter le sel une pincée à la fois et une touche de miel ou d'huile jusqu'à ce que l'acide lit brillant plutôt que dur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sur une feuille, il a un goût équilibré: acide vif, sel salé, chaleur d'échalote poivrée, et assez de graisse pour tout autour sans se sentir gras.",
+            "action": "Habillez la salade légèrement juste avant de servir, jetez jusqu'à ce que chaque feuille brille faiblement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sursaisonnée à agressivement salée ou vinaigreuse, ou tellement d'huile ajoutée qu'elle a un goût plat et lissé.",
+            "action": "fouetter un peu plus d'huile pour dompter le sel et l'acide, ou un jet de vinaigre et de sel pour couper l'excès d'huile, jusqu'à ce qu'il rééquilibre."
+          }
+        ]
+      },
+      "feelCue": "Plonger une feuille et la soulever — la vinaigrette devrait être accrochée dans un mince film scintillant, et non glisser dans des gouttelettes. C'est comme ça que tu sais que l'émulsion tient et que la salade n'est pas assise dans une flaque."
+    }
+  ]
 };

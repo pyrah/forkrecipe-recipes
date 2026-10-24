@@ -1,81 +1,181 @@
 export default {
-  repoId: "master_mexican_lactojalapeños_001",
-  parentRepoId: null,
-  slug: "lacto-pickled-jalapeños",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Lacto-Fermented Jalapeño Rings",
-  description: "Salt brine and time transform raw jalapeño slices into funky, tangy, persistently hot rings — the heat rounded at the edges by lactic acid and the flesh gone from raw-vegetal to something deeper and fermented, like heat filtered through a wine cellar.",
-  cuisine: "Mexican",
-  culture: "Mexican",
-  category: "fermented",
-  tags: ["jalapeño", "fermented", "lacto", "mexican", "vegan", "gluten-free", "hot", "condiment"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "72 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 3, sour: 4, bitter: 1, umami: 1, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Fresh jalapeños, sliced into 5mm rings",        ratioValue: 100, defaultUnit: "parts by weight", substitutions: ["serrano chiles", "Fresno chiles"] },
-    { ingId: "ing_02", role: "Solvent",   name: "Non-chlorinated water (filtered or boiled cool)", ratioValue: 100, defaultUnit: "parts by weight", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning", name: "Non-iodized sea salt or kosher salt",            ratioValue: 2,   defaultUnit: "parts by weight (2% of total brine+veg weight)", substitutions: [] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Garlic cloves, lightly crushed",                 ratioValue: 3,   defaultUnit: "cloves per jar", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Black peppercorns",                              ratioValue: 1,   defaultUnit: "tsp per jar", substitutions: [] },
+  "repoId": "master_mexican_lactojalapeños_001",
+  "parentRepoId": null,
+  "slug": "lacto-pickled-jalapeños",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Anneaux Jalapeño Lacto-Fermentés",
+  "description": "Saline de sel et le temps transforment les tranches crues de jalapeño en anneaux funky, tangents, constamment chauds — la chaleur arrondie aux bords par l'acide lactique et la chair est passée de cru-végétal à quelque chose de plus profond et fermenté, comme la chaleur filtrée à travers une cave à vin.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain",
+  "category": "fermented",
+  "tags": [
+    "jalapeño",
+    "fermenté",
+    "lacto",
+    "Mexique",
+    "végétalien",
+    "Sans gluten",
+    "chaud",
+    "condiment"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "72 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "salt_brine",
-      instructions: "Dissolve the salt completely in the water at a ratio of 2% salt by total weight (20g salt per 1000g water, or roughly 1 teaspoon per cup). Stir until no crystals remain. Taste it — it should be clearly salty but not overwhelmingly so, like well-seasoned soup. Do not use iodized salt (it inhibits fermentation) or chlorinated tap water (it kills the bacteria you need).",
-      visualCue: {
-        primaryTarget: "A crystal-clear liquid with no visible salt crystals settled at the bottom. Holds no color at all.",
-        spectrum: [
-          { state: "Underdone", description: "Undissolved salt visible on the bottom. The water looks slightly cloudy at the base.", action: "Stir for another 30 seconds. If salt won't dissolve in cold water, warm it slightly and cool before using." },
-          { state: "Perfect",   description: "Completely clear, salt fully dissolved. Tastes pleasantly salty on the tongue.", action: "Pack the jalapeños and proceed to fill." },
-          { state: "Overdone",  description: "Tastes overwhelmingly, unpleasantly salty — more than 3% concentration. The fermentation will be very slow and the result aggressively salty.", action: "Dilute with more water and retest by taste." },
-        ],
-      },
-      feelCue: "The brine should feel identical to plain water between your fingers — slippery at all if it does, which means the salt concentration may be too high.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Jalapeños frais, tranchés en anneaux de 5 mm",
+      "ratioValue": 100,
+      "defaultUnit": "parts by weight",
+      "substitutions": [
+        "serrano chiles",
+        "Fresno chiles"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Pack",
-      inputs: ["ing_01", "ing_04", "ing_05", "salt_brine"],
-      outputState: "packed_jar",
-      instructions: "Pack sliced jalapeño rings tightly into a clean (not sterilized) wide-mouth mason jar. Tuck garlic cloves and peppercorns throughout. Pour the brine over the jalapeños to cover completely, leaving 2-3cm headspace. Weigh down the jalapeños with a small zip-lock bag filled with brine, a fermentation weight, or a folded cabbage leaf wedged under the jar neck — no jalapeño ring should break the brine surface. Cover loosely with a lid or cheesecloth.",
-      visualCue: {
-        primaryTarget: "Jalapeños fully submerged below the brine surface, compact and tightly packed. No floating rings visible from the side. The brine is clear.",
-        spectrum: [
-          { state: "Underdone", description: "Rings floating above the brine level or brine doesn't fully cover. Exposed pepper surfaces will mold within 24 hours.", action: "Add more brine, press down the weight more firmly, or pack more tightly to ensure full submersion." },
-          { state: "Perfect",   description: "Everything submerged. Brine is clear. Headspace of 2-3cm leaves room for CO2 expansion without overflow.", action: "Move to a cool, dark place (18-22 C) and begin fermentation." },
-          { state: "Overdone",  description: "Jar is overfilled — brine to the rim with no headspace. The CO2 produced will force brine out of the jar.", action: "Remove some brine to create 2-3cm headspace. Place the jar on a plate to catch any overflow." },
-        ],
-      },
-      feelCue: "Press down on the weight with a clean fingertip — the jalapeños should feel dense and spring back slightly, not float or disperse. The brine should rise around your finger, covering everything again immediately.",
+      "ingId": "ing_02",
+      "role": "Solvent",
+      "name": "Eau non chlorée (froid filtrée ou bouillie)",
+      "ratioValue": 100,
+      "defaultUnit": "parts by weight",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Ferment",
-      inputs: ["packed_jar"],
-      outputState: "fermented_jalapeños",
-      instructions: "Ferment at room temperature (18-22 C / 65-72 F) away from direct sunlight for 3-7 days. Burp the jar once daily if using a tight lid — just open briefly to release CO2. Check that jalapeños remain submerged each day. You will see: bubbles rising from the bottom (good), the brine gradually turning cloudy (very good), and the color shifting from bright green to olive-drab (normal and expected). Taste starting at day 3 — you want tangy, bright, and hot. Refrigerate when they reach your preferred sourness.",
-      visualCue: {
-        primaryTarget: "The brine has turned from crystal-clear to a milky, slightly opaque white. Tiny bubbles rise from the bottom. Jalapeños have shifted from bright Kelly green to an olive-drab, army-blanket green.",
-        spectrum: [
-          { state: "Underdone", description: "Brine is still clear at day 3. No visible bubbles. Jalapeños still bright green. They taste like salty raw jalapeños with no tang.", action: "Move to a warmer spot (22-24 C). Activity may be sluggish due to cold or chlorinated water. Check submersion." },
-          { state: "Perfect",   description: "Cloudy white brine. Steady micro-bubbles rising. Olive-drab color. The rings taste funky, tangy, sour, and persistently hot with a complexity the raw pepper never had.", action: "Refrigerate to halt fermentation. Will keep for 3 months refrigerated." },
-          { state: "Overdone",  description: "Brine is very murky or has an unpleasant smell — putrid rather than sour. White fuzzy mold growing on the surface or on exposed peppers.", action: "If white mold is on the surface only, skim it off and ensure all peppers are submerged. If mold is pink, black, or fuzzy throughout, discard entirely." },
-        ],
-      },
-      feelCue: "Open the jar and lean in — a properly fermenting brine smells sharp, tangy, and slightly funky, like the inside of a good delicatessen pickle barrel, not rotten or unpleasant. If it smells bad, trust your nose.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel de mer non iodé ou sel casher",
+      "ratioValue": 2,
+      "defaultUnit": "parts by weight (2% of total brine+veg weight)",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Girofles d'ail légèrement broyés",
+      "ratioValue": 3,
+      "defaultUnit": "cloves per jar",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Maïs de poivre noir",
+      "ratioValue": 1,
+      "defaultUnit": "tsp per jar",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "salt_brine",
+      "instructions": "Dissoudre complètement le sel dans l'eau à un rapport de 2% de sel en poids total (20g de sel par 1000g d'eau, ou environ 1 cuillère à café par tasse). Incorporer jusqu'à ce qu'il ne reste plus de cristaux. Goûtez - le — il devrait être clairement salé mais pas écrasantement, comme une soupe bien assaisonnée. N'utilisez pas de sel iodé (il inhibe la fermentation) ou d'eau chlorée du robinet (il tue les bactéries dont vous avez besoin).",
+      "visualCue": {
+        "primaryTarget": "Un liquide cristallin sans cristaux de sel visibles se dépose au fond. Ne tient aucune couleur du tout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sel non dissous visible sur le fond. L'eau semble légèrement trouble à la base.",
+            "action": "Remuer encore 30 secondes. Si le sel ne se dissout pas dans l'eau froide, réchauffez-le légèrement et refroidissez-le avant d'utiliser."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement clair, sel complètement dissous. Goûte agréablement salée sur la langue.",
+            "action": "Emballer les jalapeños et procéder au remplissage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Goûte de façon écrasante, désagréablement salée — plus de 3% de concentration. La fermentation sera très lente et le résultat sera fortement salé.",
+            "action": "Diluer avec plus d'eau et retester par goût."
+          }
+        ]
+      },
+      "feelCue": "La saumure doit se sentir identique à l'eau pure entre les doigts — glissante si elle le fait, ce qui signifie que la concentration de sel peut être trop élevée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Boîte",
+      "inputs": [
+        "ing_01",
+        "ing_04",
+        "ing_05",
+        "salt_brine"
+      ],
+      "outputState": "packed_jar",
+      "instructions": "Emballez les anneaux jalapeño tranchés étroitement dans un pot de maçon à large bouche propre (non stérilisé). Coincez les gousses d'ail et les grains de poivre. Verser la saumure sur les jalapeños pour couvrir complètement, laissant l'espace de tête de 2-3 cm. Peser les jalapeños avec un petit sac à fermeture éclair rempli de saumure, d'un poids de fermentation ou d'une feuille de chou pliée coincée sous le cou du pot — aucun anneau de jalapeño ne doit briser la surface de la saumure. Couvrir lâchement avec un couvercle ou une nappe de fromage.",
+      "visualCue": {
+        "primaryTarget": "Jalapeños entièrement immergés sous la saumure, compacts et bien emballés. Aucun anneau flottant visible du côté. La saumure est claire.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les anneaux flottant au-dessus du niveau de la saumure ou de la saumure ne couvrent pas entièrement. Les surfaces de poivre exposées seront moulées dans les 24 heures.",
+            "action": "Ajouter plus de saumure, appuyer plus fermement sur le poids ou emballer plus étroitement pour assurer la pleine submersion."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tout est submergé. La saumure est claire. Espace de tête de 2-3cm laisse place à l'expansion du CO2 sans débordement.",
+            "action": "Déplacez-vous dans un endroit frais et sombre (18-22 C) et commencez la fermentation."
+          },
+          {
+            "state": "Overdone",
+            "description": "La jarre est surremplie — saumure sur la jante sans espace de tête. Le CO2 produit forcera la saumure hors du pot.",
+            "action": "Enlever une saumure pour créer un espace de tête de 2-3 cm. Placez le pot sur une assiette pour attraper tout débordement."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le poids avec un bout de doigt propre — les jalapeños doivent se sentir denses et ressortent légèrement, pas flotter ou se disperser. La saumure devrait se lever autour de votre doigt, couvrant tout de nouveau immédiatement."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ferment",
+      "inputs": [
+        "packed_jar"
+      ],
+      "outputState": "fermented_jalapeños",
+      "instructions": "Ferment à température ambiante (18-22 C / 65-72 F) loin du soleil direct pendant 3-7 jours. Burp le pot une fois par jour si utiliser un couvercle serré — il suffit d'ouvrir brièvement pour libérer du CO2. Vérifiez que les jalapeños restent submergés chaque jour. Vous verrez : bulles montant du bas (bon), la saumure progressivement nuageuse (très bon), et la couleur passant du vert vif au olive-drabe (normal et attendu). Goûtez à partir du jour 3 — vous voulez tanné, lumineux et chaud. Réfrigérer quand ils atteignent votre amerité préférée.",
+      "visualCue": {
+        "primaryTarget": "La saumure est passée d'un blanc cristallin à un blanc laiteux légèrement opaque. Des petites bulles s'élèvent du bas. Les jalapeños sont passés d'un vert Kelly brillant à un vert olive-drabe, blanc armée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La saumure est encore claire au jour 3. Pas de bulles visibles. Jalapeños encore vert vif. Ils ont le goût de jalapeños crus salés sans tang.",
+            "action": "Passer à un endroit plus chaud (22-24 C). L'activité peut être lente à cause de l'eau froide ou chlorée. Vérifiez l'immersion."
+          },
+          {
+            "state": "Perfect",
+            "description": "Saumure blanche nuageuse. Des microbulles stables se lèvent. Couleur olive-drabe. Les anneaux ont un goût funky, acidulé, aigre et constamment chaud avec une complexité que le poivre cru n'a jamais eu.",
+            "action": "Réfrigérer pour arrêter la fermentation. Gardera 3 mois au réfrigérateur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La saumure est très trouble ou a une odeur désagréable — putride plutôt que acide. Moulure blanche floue poussant à la surface ou sur les poivrons exposés.",
+            "action": "Si la moisissure blanche n'est que sur la surface, écrasez-la et assurez-vous que tous les poivrons sont submergés. Si la moisissure est rose, noire ou floue, jeter entièrement."
+          }
+        ]
+      },
+      "feelCue": "Ouvrir le pot et s'y pencher — une saumure bien fermentée sent aiguisée, tannante et légèrement funky, comme l'intérieur d'un bon cornichon délicat, pas pourri ou désagréable. Si ça sent mauvais, fais confiance à ton nez."
+    }
+  ]
 };

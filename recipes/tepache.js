@@ -1,96 +1,212 @@
 export default {
-  repoId: "master_mexican_tepache_001",
-  parentRepoId: null,
-  slug: "tepache",
-  author: "ForkRecipe Kitchen",
-  title: "Mexican Tepache",
-  description: "A barely-alcoholic fermented pineapple drink spiked with piloncillo and cinnamon — lightly fizzy, sweet-sour, and cooling, made from peel and core that would otherwise go to waste.",
-  cuisine: "Mexican",
-  culture: "Mexican Street Food",
-  category: "fermented",
-  tags: ["mexican", "fermented", "pineapple", "tepache", "beverage", "low-alcohol", "zero-waste"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "3 days",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 3, salty: 0, sour: 3, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Pineapple peel and core (from 1 whole pineapple, washed well)", ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener",  name: "Piloncillo or dark brown sugar",             ratioValue: 25,  defaultUnit: "parts", substitutions: ["panela", "palm sugar", "light brown sugar"] },
-    { ingId: "ing_03", role: "Spice",      name: "Cinnamon stick (Mexican canela preferred)",   ratioValue: 2,   defaultUnit: "parts", substitutions: ["Ceylon cinnamon stick"] },
-    { ingId: "ing_04", role: "Spice",      name: "Whole cloves",                                ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Hydration",  name: "Filtered or non-chlorinated water",           ratioValue: 300, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_mexican_tepache_001",
+  "parentRepoId": null,
+  "slug": "tepache",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tepache mexicaine",
+  "description": "Une boisson d'ananas fermenté à peine alcoolisée, enrichie de piloncillo et de cannelle, légèrement pétillante, sucrée et rafraîchissante, faite de pelure et de noyau qui, autrement, serait gaspillée.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain Street Food",
+  "category": "fermented",
+  "tags": [
+    "Mexique",
+    "fermenté",
+    "ananas",
+    "Tépache",
+    "boisson",
+    "faible consommation d'alcool",
+    "zéro déchet"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "3 days",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 0,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_02", "ing_05"],
-      outputState: "sugar_water",
-      instructions: "Warm about one cup of the measured water to 40°C (just warm to the touch, not hot). Add the piloncillo or brown sugar and stir until fully dissolved. Combine with the remaining measured room-temperature water in a large, clean jar or ceramic crock (at least 2-liter capacity). Never use cold water alone — cold does not dissolve piloncillo.",
-      visualCue: {
-        primaryTarget: "A clear to faintly amber liquid with no visible sugar granules. The water smells faintly of brown sugar and molasses.",
-        spectrum: [
-          { state: "Underdone", description: "Piloncillo chunks or sugar granules still undissolved, sitting at the bottom of the vessel.", action: "Stir longer with warm water. Piloncillo in particular needs warm water and active stirring to dissolve fully." },
-          { state: "Perfect",   description: "Uniformly amber-tinted water, completely clear with no undissolved material. Smells sweetly of raw sugar.", action: "Add the pineapple scraps and spices to the jar." },
-          { state: "Overdone",  description: "Water has been used too hot — steam rising, water above 60°C. Risk of killing wild yeasts on the pineapple skin.", action: "Allow to cool to below 40°C before adding the pineapple. Wild yeasts die above 50°C." },
-        ],
-      },
-      feelCue: "Dip a clean fingertip — the water should feel pleasantly warm, similar to a warm bath, never uncomfortably hot. This temperature keeps the wild yeasts on the pineapple skin alive.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Peau et noyau d'ananas (à partir de 1 ananas entier, bien lavé)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Assemble",
-      inputs: ["ing_01", "sugar_water", "ing_03", "ing_04"],
-      outputState: "tepache_mixture",
-      instructions: "Scrub the pineapple skin thoroughly under running water before cutting to remove surface dirt, then cut the peel and core into rough chunks. Add them to the jar with the sugar water, followed by the cinnamon stick and cloves. The pineapple should be mostly submerged. Cover the jar with a clean cotton cloth secured with a rubber band — not a tight lid, as the fermentation produces CO2 that must escape.",
-      visualCue: {
-        primaryTarget: "A large jar filled with golden pineapple scraps, warm amber water, and spices. The cloth cover is taut and secured, allowing air exchange.",
-        spectrum: [
-          { state: "Underdone", description: "Jar is sealed with a tight lid. No air exchange possible.", action: "Replace the lid with a cloth cover immediately — a sealed jar will pressurize dangerously or create conditions for off-flavors." },
-          { state: "Perfect",   description: "Pineapple scraps mostly submerged in sugar water. Cinnamon and cloves visible through the liquid. Cloth cover secured and breathable.", action: "Set in a warm spot (22–28°C) out of direct sunlight for 2–3 days." },
-          { state: "Overdone",  description: "Pineapple skin was not washed and carries surface contaminants or pesticide residue that can interfere with fermentation.", action: "Always wash pineapple well before using — soap is fine as long as rinsed thoroughly." },
-        ],
-      },
-      feelCue: "Push the pineapple scraps down into the sugar water — they should feel firm and float back up gently. The liquid should feel barely warm to the touch after combining.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Piloncillo ou sucre brun foncé",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "panneaua",
+        "sucre de palme",
+        "sucre brun léger"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Ferment",
-      inputs: ["tepache_mixture"],
-      outputState: "fermented_tepache",
-      instructions: "Leave covered at room temperature (22–28°C is ideal) for 2–3 days, stirring once daily with a clean spoon. Bubbles will begin to appear in the liquid at the 24-hour mark. By 48 hours the tepache should be actively fizzing when the jar is gently tilted. Taste daily — it should move from sweet to lightly sour and pleasantly tropical. Stop when the tartness is to your liking.",
-      visualCue: {
-        primaryTarget: "After 48 hours: the liquid has taken on a deeper amber color, fine bubbles rise continuously from the pineapple pieces, and a thin white foam may sit at the surface (harmless wild yeast).",
-        spectrum: [
-          { state: "Underdone", description: "After 24 hours: liquid is still clear and very sweet. No visible bubbles. No sour note when tasted.", action: "Wait — fermentation may be slow if the room is cool (below 20°C). Move to a warmer spot. Stir to redistribute yeasts." },
-          { state: "Perfect",   description: "Lightly fizzy, pleasantly sour-sweet, with a tropical pineapple fragrance and a hint of cinnamon. Bubbles are active but not violent. The surface foam is white and clean-smelling.", action: "Strain immediately and refrigerate to slow further fermentation." },
-          { state: "Overdone",  description: "Tepache is strongly sour or vinegary, has lost its sweetness entirely, and may smell of alcohol or kombucha. The liquid may be cloudy from over-active fermentation.", action: "Strain and dilute with sparkling water before serving. Or use as a cooking vinegar — excellent in salsas and marinades." },
-        ],
-      },
-      feelCue: "Dip a clean fingertip into the tepache on day 2 — you should feel the faintest tingle of carbonation, like very gentle sparkling water, not aggressive fizzing.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Bâton de cannelle (canelle mexicaine préférée)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Ceylan bâton de cannelle"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Strain",
-      inputs: ["fermented_tepache"],
-      outputState: "finished_tepache",
-      instructions: "Strain the tepache through a fine-mesh sieve or cheesecloth into a clean pitcher or bottles, discarding the pineapple solids, cinnamon, and cloves. Refrigerate immediately to slow fermentation. Serve cold over ice. Tepache keeps refrigerated for up to 5 days and will continue to develop slightly in flavor.",
-      visualCue: {
-        primaryTarget: "A clear to lightly hazy amber-gold liquid with a persistent, fine effervescence. Smells tropical, slightly sour, and warmly spiced.",
-        spectrum: [
-          { state: "Underdone", description: "After straining, liquid is barely carbonated — flat and purely sweet. No sour development.", action: "The fermentation was not long enough or the temperature was too cold. Serve as a sweet pineapple agua fresca, or allow the strained liquid to ferment 12 more hours in a sealed bottle in the fridge." },
-          { state: "Perfect",   description: "Light, lively carbonation that tickles the glass. Color is a warm honey-gold. The nose is pineapple, brown sugar, and cinnamon. The palate finishes with a pleasant, refreshing sourness.", action: "Serve immediately over ice, or bottle and refrigerate for up to 5 days." },
-          { state: "Overdone",  description: "Very strongly sour, minimal sweetness, heavy foam, possibly slightly alcoholic in taste.", action: "Dilute 1:1 with sparkling water or use as a base for cocktails. Still delicious — just more sour than the intended profile." },
-        ],
-      },
-      feelCue: "A sip of finished tepache should feel cooling and lively on the tongue — the mild carbonation gives it a slight effervescence that feels like spring water with a purpose.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Giroves entières",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Hydration",
+      "name": "Eau filtrée ou non chlorée",
+      "ratioValue": 300,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_05"
+      ],
+      "outputState": "sugar_water",
+      "instructions": "Chauffer environ une tasse de l'eau mesurée à 40°C (juste chaud au toucher, pas chaud). Ajouter le piloncillo ou la cassonade et remuer jusqu'à dissolution complète. Combiner avec le reste de l'eau mesurée à température ambiante dans un grand pot propre ou une roche céramique (au moins 2 litres). Ne jamais utiliser l'eau froide seule — le froid ne dissout pas le piloncillo.",
+      "visualCue": {
+        "primaryTarget": "Liquide clair à légèrement ambré sans granulés de sucre visibles. L'eau sent peu la cassonade et la mélasse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux de piloncillo ou des granules de sucre encore non dissous, assis au fond du navire.",
+            "action": "Incorporer plus longtemps avec de l'eau chaude. Piloncillo en particulier a besoin d'eau chaude et de brassage actif pour se dissoudre complètement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Eau uniformément teintée d'ambre, complètement limpide sans matériau non dissout. Ça sent le sucre cru.",
+            "action": "Ajouter les morceaux d'ananas et les épices dans le pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'eau a été utilisée trop chaude — la vapeur s'élève, l'eau est supérieure à 60°C. Risque de tuer des levures sauvages sur la peau de l'ananas.",
+            "action": "Laisser refroidir à moins de 40°C avant d'ajouter l'ananas. Les levures sauvages meurent au-dessus de 50°C."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt propre — l'eau doit se sentir agréablement chaude, semblable à un bain chaud, jamais trop chaud. Cette température maintient les levures sauvages en vie sur la peau de l'ananas."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Assemblage",
+      "inputs": [
+        "ing_01",
+        "sugar_water",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "tepache_mixture",
+      "instructions": "Frottez soigneusement la peau de l'ananas sous l'eau courante avant de couper pour enlever la saleté de surface, puis coupez l'écorce et le noyau en morceaux rugueux. Ajoutez-les dans le pot avec l'eau sucrée, puis avec le bâton de cannelle et les girofles. L'ananas devrait être principalement submergé. Couvrez le pot d'un tissu de coton propre, fixé avec une bande de caoutchouc — pas un couvercle serré, car la fermentation produit du CO2 qui doit s'échapper.",
+      "visualCue": {
+        "primaryTarget": "Un grand pot rempli de débris d'ananas dorés, d'eau ambre chaude et d'épices. La couverture en tissu est tendue et sécurisée, permettant un échange d'air.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Jar est scellé avec un couvercle serré. Aucun échange aérien possible.",
+            "action": "Remplacez immédiatement le couvercle par un couvercle en tissu — un pot scellé exercera une pression dangereuse ou créera des conditions pour les aromatisants."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les débris d'ananas sont surtout submergés dans l'eau sucrée. La cannelle et les girofles visibles dans le liquide. Couverture de vêtements sécurisée et respirante.",
+            "action": "Installez-vous dans un endroit chaud (22 à 28°C) en plein soleil pendant 2 à 3 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau d'ananas n'a pas été lavée et porte des contaminants de surface ou des résidus de pesticides qui peuvent interférer avec la fermentation.",
+            "action": "Lavez toujours l'ananas bien avant d'utiliser — le savon est fin aussi longtemps qu'il est bien rincé."
+          }
+        ]
+      },
+      "feelCue": "Poussez les débris d'ananas dans l'eau de sucre — ils doivent se sentir fermes et flotter doucement. Le liquide doit se sentir à peine chaud au toucher après la combinaison."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ferment",
+      "inputs": [
+        "tepache_mixture"
+      ],
+      "outputState": "fermented_tepache",
+      "instructions": "Laisser couvert à température ambiante (22–28°C est idéal) pendant 2–3 jours, en remuant une fois par jour avec une cuillère propre. Les bulles commenceront à apparaître dans le liquide à la limite de 24 heures. D'ici 48 heures, la tepache doit être active lorsque le pot est légèrement incliné. Goûtez chaque jour — il devrait passer de doux à légèrement aigre et agréablement tropical. Arrête quand la tarte te plaît.",
+      "visualCue": {
+        "primaryTarget": "Après 48 heures : le liquide a pris une couleur ambre plus profonde, de fines bulles s'élèvent en continu des morceaux d'ananas, et une mince mousse blanche peut s'asseoir à la surface (levure sauvage sans danger).",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 24 heures : le liquide est encore clair et très doux. Pas de bulles visibles. Pas de note aigre au goût.",
+            "action": "Attendez — la fermentation peut être lente si la pièce est fraîche (moins de 20°C). Passez à un endroit plus chaud. Incorporer pour redistribuer les levures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légèrement amer, avec un parfum d'ananas tropical et un soupçon de cannelle. Les bulles sont actives mais pas violentes. La mousse de surface est blanche et propre.",
+            "action": "Souchez immédiatement et réfrigérez pour ralentir la fermentation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tepache est fortement aigre ou vinaigre, a perdu sa douceur entièrement, et peut sentir de l'alcool ou kombucha. Le liquide peut être nuageux à cause de la fermentation suractive.",
+            "action": "Fraise et diluer à l'eau pétillante avant de servir. Ou utiliser comme vinaigre de cuisson – excellent en salsas et marinades."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt propre dans la tepache le jour 2 — vous devriez sentir le plus léger fourmillement de la carbonation, comme de l'eau pétillante très douce, pas des étourdissements agressifs."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Poignée",
+      "inputs": [
+        "fermented_tepache"
+      ],
+      "outputState": "finished_tepache",
+      "instructions": "Placer la tepache à travers un tamis à mailles fines ou une nappe de fromage dans un pichet ou des bouteilles propres, en jetant les solides d'ananas, la cannelle et les girofles. Réfrigérer immédiatement pour ralentir la fermentation. Servir froid sur la glace. Tepache conserve réfrigéré jusqu'à 5 jours et continuera à se développer légèrement dans la saveur.",
+      "visualCue": {
+        "primaryTarget": "Un liquide d'ambre clair à légèrement trouble avec une effervescence fine persistante. Sens tropical, légèrement aigre, et chaudement épicé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après la déformation, le liquide est à peine carbonaté — plat et purement sucré. Pas de développement aigre.",
+            "action": "La fermentation n'était pas assez longue ou la température était trop froide. Servir comme un doux ananas agua fresca, ou laisser le liquide tendu fermenter 12 heures de plus dans une bouteille scellée au réfrigérateur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une carbonation légère et vivante qui chatouille le verre. La couleur est un or au miel chaud. Le nez est ananas, cassonade et cannelle. La bouche se termine par une agréable ameresse rafraîchissante.",
+            "action": "Servir immédiatement sur la glace, ou en bouteille et réfrigérer jusqu'à 5 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très fortement aigre, douceur minimale, mousse lourde, peut-être légèrement alcoolique dans le goût.",
+            "action": "Diluer 1:1 avec de l'eau pétillante ou utiliser comme base pour les cocktails. Encore délicieux — juste plus aigre que le profil prévu."
+          }
+        ]
+      },
+      "feelCue": "Une gorgée de tepache finie devrait se sentir refroidie et vive sur la langue — la légère carbonation lui donne une légère effervescence qui se sent comme de l'eau de source avec un but."
+    }
+  ]
 };

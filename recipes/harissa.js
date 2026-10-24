@@ -1,96 +1,253 @@
 export default {
-  repoId: "master_moroccan_harissa_001",
-  parentRepoId: null,
-  slug: "harissa",
-  author: "ForkRecipe Kitchen",
-  title: "Harissa",
-  description: "A brick-red paste of fire and perfume — dried chiles soaked soft and pounded with toasted caraway, coriander, and cumin, sharpened with garlic and lemon, then sealed under olive oil. It carries deep, smoky heat over a slow-blooming warmth of seed spice rather than raw, flat burn.",
-  cuisine: "Moroccan",
-  culture: "Maghrebi",
-  category: "condiments",
-  tags: ["harissa", "moroccan", "chile", "spice-paste", "maghrebi", "vegan", "preserve"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hour",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 2, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",      name: "Dried mild red chiles (guajillo or Aleppo, stemmed and seeded)", ratioValue: 60, defaultUnit: "parts", substitutions: ["dried New Mexico chiles", "ancho for a sweeter, milder paste"] },
-    { ingId: "ing_02", role: "Heat",      name: "Dried hot red chiles (árbol or piri-piri, stemmed)",            ratioValue: 12, defaultUnit: "parts", substitutions: ["cayenne pods", "omit for a milder paste"] },
-    { ingId: "ing_03", role: "Spice",     name: "Caraway seeds",          ratioValue: 4,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",     name: "Coriander seeds",        ratioValue: 4,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Cumin seeds",            ratioValue: 3,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves",          ratioValue: 8,  defaultUnit: "parts", substitutions: ["roasted garlic for a rounder, sweeter note"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Fine sea salt",          ratioValue: 4,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Citrus",    name: "Fresh lemon juice",      ratioValue: 12, defaultUnit: "parts", substitutions: ["red wine vinegar", "preserved-lemon brine"] },
-    { ingId: "ing_09", role: "Fat",       name: "Extra-virgin olive oil", ratioValue: 25, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_moroccan_harissa_001",
+  "parentRepoId": null,
+  "slug": "harissa",
+  "author": "ForkRecipe Kitchen",
+  "title": "Harissa",
+  "description": "Une pâte rouge brique de feu et de parfum — des chiles séchés trempés doux et fourrés de carafe grillée, de coriandre et de cumin, aiguisés d'ail et de citron, puis scellés sous l'huile d'olive. Il porte une chaleur profonde et fumée sur une chaleur lente d'épices de graines plutôt que de brûler à plat.",
+  "cuisine": "Maroc",
+  "culture": "Maghrebi",
+  "category": "condiments",
+  "tags": [
+    "Harissa",
+    "Maroc",
+    "Chile",
+    "pâte aux épices",
+    "Maghrebi",
+    "végétalien",
+    "préserver"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hour",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Soak",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "rehydrated_chiles",
-      instructions: "Tear the stemmed, seeded chiles into rough pieces. Toast them briefly in a dry pan over medium heat, pressing them flat for 20 to 30 seconds a side until they smell warm and faintly smoky and pucker — do not let them blacken, which turns the paste bitter. Cover with just-boiled water and weight them down with a plate so they stay submerged. Soak 20 to 30 minutes until completely soft and leathery-pliable. Drain, but reserve a little of the steeping liquid.",
-      visualCue: {
-        primaryTarget: "Chiles are fully limp and supple, swollen and dark wine-red, with no stiff or brittle edges; the soaking water has turned a deep rusty red.",
-        spectrum: [
-          { state: "Underdone", description: "Edges of the chiles are still firm, papery, or snap when bent; the soak water is only lightly tinted.", action: "Cover again with fresh boiling water and soak another 10 to 15 minutes. Older, drier chiles need longer." },
-          { state: "Perfect",   description: "A piece of chile tears apart like wet leather with no resistance and the flesh feels plump and silky.", action: "Drain well, reserving a few spoonfuls of the soaking liquid, and move to grinding the spices." },
-          { state: "Overdone",  description: "Chiles are mushy and disintegrating and the water smells flat or washed out, having leached away the fruity flavor.", action: "Drain immediately and keep the soaking liquid — stir a little back in later to recover lost flavor." },
-        ],
-      },
-      feelCue: "A properly soaked chile feels like a damp, soft glove leather between the fingers, cool and pliant. The toasting smell should be sweet and raisin-like, never acrid or burnt.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Chiles rouges doux séchés (guajillo ou Alep, pédés et ensemencés)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chiles séchés Nouveau-Mexique",
+        "ancho pour une pâte plus douce et plus douce"
+      ]
     },
     {
-      nodeId: "step_2", action: "Toast",
-      inputs: ["ing_03", "ing_04", "ing_05"],
-      outputState: "ground_spice",
-      instructions: "In the same dry pan over medium heat, toast the caraway, coriander, and cumin seeds, shaking constantly, for 1 to 2 minutes until they darken a shade, turn fragrant, and the first seeds begin to pop. Tip them out immediately so they don't scorch in the hot pan, let them cool a minute, then grind to a fine powder in a mortar or spice grinder. This bloomed, freshly ground spice is the backbone that separates real harissa from plain chile paste.",
-      visualCue: {
-        primaryTarget: "Seeds are a touch darker and glossy with surfaced oil, throwing off a sharp, nutty, citrus-and-earth aroma; a few cumin and coriander seeds have audibly jumped.",
-        spectrum: [
-          { state: "Underdone", description: "Seeds look unchanged and smell raw and grassy with little fragrance rising from the pan.", action: "Keep toasting and shaking — the spices are flat until the oils bloom. Wait for the aroma to bloom and the first pops." },
-          { state: "Perfect",   description: "An even, golden-brown toast with a powerful, complex aroma filling the kitchen; the seeds crush to a fine, oily powder.", action: "Grind at once while warm for the finest powder, then set aside for the pounding." },
-          { state: "Overdone",  description: "Seeds are dark brown to black and smell sharp, smoky, and bitter.", action: "Discard and toast a fresh batch — burnt spice will dominate and ruin the whole paste." },
-        ],
-      },
-      feelCue: "Ground warm, the spice powder should feel slightly oily and clump under the pestle rather than dust away. Listen for the seeds popping — that crackle is your timer.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Chiles rouges chauds séchés (árbol ou piri-piri, pédés)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gousses de Cayenne",
+        "omit pour une pâte plus douce"
+      ]
     },
     {
-      nodeId: "step_3", action: "Pound",
-      inputs: ["ing_06", "ing_07", "rehydrated_chiles", "ground_spice"],
-      outputState: "chile_paste",
-      instructions: "Pound the garlic with the salt in a mortar to a smooth paste — the salt acts as an abrasive to break it down. Add the drained chiles a handful at a time and pound and grind, working in circles, until they collapse into a thick, coarse paste. Work in the ground spice. This takes patience by hand; a food processor works too, pulsing and scraping down, with a splash of the reserved soaking liquid only if needed to keep the blades catching.",
-      visualCue: {
-        primaryTarget: "A thick, deep brick-red paste, coarse but cohesive, that holds the trough of the pestle's stroke and mounds on a spoon without running.",
-        spectrum: [
-          { state: "Underdone", description: "The mix is chunky and loose with recognizable chile skins and pale streaks of unincorporated spice or garlic.", action: "Keep pounding or pulsing and scraping down until uniform. Add reserved soaking liquid only a teaspoon at a time if it's too dry to move." },
-          { state: "Perfect",   description: "A uniform, glossy, thick paste — fine-textured but with a little rustic body — colored an even dark red throughout.", action: "Move to seasoning: work in the lemon and most of the oil." },
-          { state: "Overdone",  description: "The paste has gone watery and slack from too much added liquid and slumps flat on the spoon.", action: "Stir in a little extra ground spice, or rest it uncovered to let some moisture evaporate and tighten before sealing." },
-        ],
-      },
-      feelCue: "Under the pestle the paste should drag heavily and cling to the stone, smelling intensely of chile and warm spice. Smeared on a fingertip it feels dense and slightly tacky, not wet.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Graines de Carave",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Finish",
-      inputs: ["chile_paste", "ing_08", "ing_09"],
-      outputState: "finished_harissa",
-      instructions: "Beat the lemon juice and most of the olive oil into the paste until glossy and emulsified, holding back a little oil. Taste and adjust salt, lemon, and heat. Pack into a clean jar, pressing out air pockets, and smooth the top flat. Pour the reserved oil over the surface to seal it from air. Cover and refrigerate; the flavors deepen and marry overnight. Top up the oil cap each time you dig in, and it will keep for several weeks.",
-      visualCue: {
-        primaryTarget: "A glossy, vivid red paste under a clear film of olive oil in the jar, thick enough to hold a clean spoon-furrow that fills slowly.",
-        spectrum: [
-          { state: "Underdone", description: "The paste tastes harsh and one-dimensional, flat on salt or sharp with raw garlic, and the surface looks dull and dry.", action: "Beat in more oil for sheen, then balance with salt and lemon and let it rest — the rawness mellows within a day." },
-          { state: "Perfect",   description: "Deep, layered flavor — fruity chile and bloomed seed spice over a bright lemon lift and a slow-building heat — with a glossy, spreadable body sealed under oil.", action: "Refrigerate at least a few hours before using, oil cap intact." },
-          { state: "Overdone",  description: "The paste is oily-slick and loose, the oil refusing to sit as a clean cap and the flavor muddied and greasy.", action: "Stir in a spoonful of reserved chile paste or a pinch more ground spice to reabsorb the excess oil and recenter the flavor." },
-        ],
-      },
-      feelCue: "Finished harissa should spread like a soft, dense butter and leave a slick of fragrant red oil on the spoon. The heat should arrive a beat after the flavor — a warmth that builds and lingers rather than a sharp upfront sting.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Graines de coriandre",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Graines de cumin",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ail rôti pour une note plus ronde, plus sucrée"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Citrus",
+      "name": "Jus de citron frais",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin rouge",
+        "saumure de citron conservée"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "rehydrated_chiles",
+      "instructions": "Attachez les chiles ensemencés en morceaux rugueux. Faites-les cuire brièvement dans une poêle sèche à feu moyen, en les pressant à plat pendant 20 à 30 secondes par côté jusqu'à ce qu'ils sentent chaud et légèrement fumé et sucer — ne les laissez pas noircir, ce qui rend la pâte amère. Couvrir d'eau simplement bouillie et les peser avec une assiette pour qu'ils restent submergés. Tremper 20 à 30 minutes jusqu'à ce qu'il soit complètement souple et souple. Égoutter, mais réserver un peu de liquide.",
+      "visualCue": {
+        "primaryTarget": "Les Chiliens sont complètement limpides et souples, gonflés et rouge-vin foncé, sans bords raides ou cassants; l'eau de trempe a tourné un rouge rouillé profond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les bords des chiles sont encore fermes, papier, ou se cassent lorsqu'ils sont pliés; l'eau de trempe n'est teintée que légèrement.",
+            "action": "Couvrir à nouveau d'eau bouillante et tremper encore 10 à 15 minutes. Plus vieux, les chiles secs ont besoin de plus longtemps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un morceau de chile se déchire comme du cuir humide sans résistance et la chair est collante et soyeuse.",
+            "action": "Égoutter bien, réserver quelques cuillères du liquide absorbant, et passer au broyage des épices."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les Chiliens sont musqués et désintégrés et l'eau sent à plat ou lavé, après avoir lixivié la saveur fruitée.",
+            "action": "Égoutter immédiatement et garder le liquide absorbant — remuer un peu plus tard pour récupérer la saveur perdue."
+          }
+        ]
+      },
+      "feelCue": "Un chile bien trempé ressemble à un cuir à gants doux et humide entre les doigts, frais et souple. L'odeur de toast devrait être douce et ressemblant à du raisin, jamais acride ou brûlé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "ground_spice",
+      "instructions": "Dans la même poêle sèche à feu moyen, faire griller la carafe, la coriandre et les graines de cumin, en tremblant constamment, pendant 1 à 2 minutes jusqu'à ce qu'elles s'assombrissent, deviennent parfumées, et les premières graines commencent à éclater. Tuez-les immédiatement afin qu'ils ne scorlent pas dans la poêle chaude, laissez-les refroidir une minute, puis moudre à une poudre fine dans un mortier ou un broyeur d'épices. Cette épice fraîchement moulue fleurie est l'épine dorsale qui sépare le vrai harissa de la pâte de chile.",
+      "visualCue": {
+        "primaryTarget": "Les graines sont une touche plus foncée et brillante avec de l'huile de surface, jetant un arôme vif, de noix, d'agrumes et de terre; quelques graines de cumin et de coriandre ont sauté audiblement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines ont l'air inchangées et sentent crus et herbacés avec peu de parfum qui monte de la poêle.",
+            "action": "Continuez à griller et à trembler: les épices sont plates jusqu'à ce que les huiles fleurissent. Attendez que l'arôme fleurisse et que les premiers éclats."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un toast brun doré uniforme avec un arôme puissant et complexe qui remplit la cuisine; les graines écrasent une poudre fine et huileuse.",
+            "action": "Plonger à la fois tout en étant chaud pour la meilleure poudre, puis réserver pour le pilonnage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les graines sont brun foncé à noir et sentent vif, fumé et amer.",
+            "action": "Jetez et toastez un lot frais — les épices brûlées domineront et ruineront toute la pâte."
+          }
+        ]
+      },
+      "feelCue": "Au sol, la poudre d'épices doit être légèrement grasse et s'agglutiner sous le pestle plutôt que de la poussière. Écoutez les graines qui surgissent: ce crackle est votre minuterie."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Livre",
+      "inputs": [
+        "ing_06",
+        "ing_07",
+        "rehydrated_chiles",
+        "ground_spice"
+      ],
+      "outputState": "chile_paste",
+      "instructions": "Pound l'ail avec le sel dans un mortier à une pâte lisse — le sel agit comme un abrasif pour le briser. Ajouter les chiles drainés une poignée à la fois et la livre et broyer, en travaillant en cercles, jusqu'à ce qu'ils s'effondrent dans une pâte épaisse et grossière. Travailler dans l'épice du sol. Cela demande de la patience à la main; un robot alimentaire fonctionne aussi, poussant et grattant, avec une éclaboussure du liquide d'imprégnation réservé seulement si nécessaire pour garder les lames attraper.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, rouge brique profonde, grossière mais cohésive, qui retient le creux de l'attaque du pestle et les monticules sur une cuillère sans courir.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est volumineux et lâche avec des peaux de chiles reconnaissables et des stries pâles d'épices ou d'ail non incorporées.",
+            "action": "Continuer de frapper ou de pousser et de gratter jusqu'à uniforme. Ajouter un liquide de trempage réservé seulement une cuillère à café à la fois si elle est trop sèche pour se déplacer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte uniforme, brillante et épaisse, finement texturée, mais avec un peu de corps rustique, colorait un rouge foncé.",
+            "action": "Passer à l'assaisonnement : travailler dans le citron et la plupart de l'huile."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est devenue aqueuse et se relâche de trop de liquide ajouté et s'effondre à plat sur la cuillère.",
+            "action": "Incorporer un peu plus d'épices ou le reposer à découvert pour laisser un peu d'humidité s'évaporer et serrer avant de sceller."
+          }
+        ]
+      },
+      "feelCue": "Sous le peste, la pâte doit traîner fortement et s'accrocher à la pierre, sentant intensément le chile et les épices chaudes. Enduit sur un bout de doigt, il est dense et légèrement collant, non mouillé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "chile_paste",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "finished_harissa",
+      "instructions": "Battre le jus de citron et la plupart de l'huile d'olive dans la pâte jusqu'à ce qu'elle soit brillante et émulsifiée, en retenant un peu d'huile. Goûtez et ajustez le sel, le citron et la chaleur. Emballez dans un pot propre, pressez les poches d'air et lissez le dessus à plat. Verser l'huile réservée sur la surface pour la sceller de l'air. Couvrir et réfrigérer; les saveurs s'approfondissent et se marient du jour au lendemain. Remplir le bouchon d'huile chaque fois que vous creusez, et il restera pendant plusieurs semaines.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rouge brillante et vive sous un film clair d'huile d'olive dans le bocal, assez épaisse pour tenir un sourcil propre qui se remplit lentement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte a un goût dur et unidimensionnel, plat sur le sel ou aiguisé avec l'ail cru, et la surface semble terne et sèche.",
+            "action": "Battre plus d'huile pour l'éclaircir, puis équilibrer avec le sel et le citron et laisser reposer — la crudité se calme en un jour."
+          },
+          {
+            "state": "Perfect",
+            "description": "Saveur profonde, en couches — piment fruité et épice de graines fleurie sur un lifting au citron vif et une chaleur lente — avec un corps brillant et extensible scellé sous l'huile.",
+            "action": "Réfrigérer au moins quelques heures avant d'utiliser le bouchon d'huile intact."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est huilée et lâche, l'huile refusant de s'asseoir comme un bouchon propre et la saveur bouillie et grasse.",
+            "action": "Incorporer une cuillère de pâte de chile réservée ou une pincée d'épices plus moulues pour réabsorber l'excès d'huile et plus récemment la saveur."
+          }
+        ]
+      },
+      "feelCue": "La harissa finie doit se répandre comme un beurre doux et dense et laisser une léchée d'huile rouge parfumée sur la cuillère. La chaleur devrait arriver un battement après la saveur — une chaleur qui construit et s'attarde plutôt qu'une piqûre brusque à l'avant."
+    }
+  ]
 };

@@ -1,99 +1,254 @@
 export default {
-  repoId: "master_japanese_chashupork_001",
-  parentRepoId: null,
-  slug: "pork-belly-ramen",
-  author: "ForkRecipe Kitchen",
-  title: "Chashu Pork Belly",
-  description: "Rolled and tied pork belly braised in soy, mirin, sake, and sugar until lacquered, sliceable, and deeply caramel-sweet — the ramen topper that makes the bowl.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "proteins",
-  tags: ["pork", "japanese", "ramen", "chashu", "braised", "slow-cooked", "belly"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "4 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 4, salty: 3, sour: 0, bitter: 0, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Pork belly slab, skin-on, 600–800 g",    ratioValue: 700,  defaultUnit: "g",  substitutions: ["skinless pork belly", "pork shoulder (less fat layers but works)"] },
-    { ingId: "ing_02", role: "Umami",     name: "Soy sauce",                               ratioValue: 80,   defaultUnit: "ml", substitutions: ["tamari", "dark soy sauce (use 50 ml — much more intense)"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Mirin (hon-mirin preferred)",             ratioValue: 60,   defaultUnit: "ml", substitutions: ["sweet rice wine", "dry sherry + 1 tsp sugar"] },
-    { ingId: "ing_04", role: "Solvent",   name: "Sake",                                    ratioValue: 60,   defaultUnit: "ml", substitutions: ["dry sherry", "Chinese Shaoxing rice wine"] },
-    { ingId: "ing_05", role: "Sweetener", name: "White sugar",                             ratioValue: 20,   defaultUnit: "g",  substitutions: ["brown sugar", "honey"] },
-    { ingId: "ing_06", role: "Liquid",    name: "Water",                                   ratioValue: 200,  defaultUnit: "ml", substitutions: ["chicken stock (richer)"] },
-    { ingId: "ing_07", role: "Allium",    name: "Scallions, roughly cut in 5 cm sections", ratioValue: 3,    defaultUnit: "pcs", substitutions: ["leek, white part"] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Fresh ginger slices, unpeeled, 5 mm",    ratioValue: 30,   defaultUnit: "g",  substitutions: ["ground ginger (5 g, less fresh)"] },
+  "repoId": "master_japanese_chashupork_001",
+  "parentRepoId": null,
+  "slug": "pork-belly-ramen",
+  "author": "ForkRecipe Kitchen",
+  "title": "Chashu Pork Belly",
+  "description": "Le ventre de porc roulé et attaché braisé dans le soja, le mirin, le saké et le sucre jusqu'à ce qu'il soit laqué, tranché et profondément sucré au caramel — le ramen qui fait le bol.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "proteins",
+  "tags": [
+    "porc",
+    "Japonais",
+    "Ramen",
+    "Chashu",
+    "braisés",
+    "cuits lentement",
+    "ventre"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "4 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roll",
-      inputs: ["ing_01"],
-      outputState: "rolled_pork",
-      instructions: "Lay the pork belly flat, skin-side down. Starting from the shorter end, roll the belly tightly into a compact cylinder, trapping as many fat-to-meat layers as possible within the roll. Tie at 2–3 cm intervals with butcher's twine, pulling each loop firmly so the roll holds its circular cross-section during cooking. A loose roll will unravel and produce uneven slices. The goal is a tight, even cylinder that will hold its shape through 3 hours of braising.",
-      visualCue: {
-        primaryTarget: "A tight, even cylinder of pork belly, skin wrapped to the outside, held by evenly spaced loops of twine. No fat or skin visible at the ends.",
-        spectrum: [
-          { state: "Underdone", description: "Roll is loose and oval in cross-section. Skin gap visible at one end. Twine loops spaced too far apart.", action: "Untie and re-roll more tightly. Add twine loops every 2 cm. Start the roll from the opposite end for a tighter core." },
-          { state: "Perfect",   description: "A firm, even cylinder with the skin forming a smooth exterior. Each twine loop slightly compressed. Cross-section shows concentric layers of fat and meat.", action: "Sear immediately while the roll is cold and firm." },
-          { state: "Overdone",  description: "Tied so tightly the skin is splitting and the fat layers are squeezing out the ends.", action: "Loosen 2–3 loops at the tightest points — a little give is fine. The roll will firm up during braising." },
-        ],
-      },
-      feelCue: "Grip the roll and squeeze gently — it should feel dense and unyielding, like a cold cylinder of butter. If it flattens under your grip or the layers separate, it is not tight enough.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Plaque du ventre de porc, avec peau, 600–800 g",
+      "ratioValue": 700,
+      "defaultUnit": "g",
+      "substitutions": [
+        "ventre de porc sans peau",
+        "épaule de porc (moins de couches de graisse mais fonctionne)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["rolled_pork"],
-      outputState: "seared_pork",
-      instructions: "Heat a Dutch oven or heavy pot over medium-high heat with no oil — the belly's own exterior fat will render immediately. Place the roll in and sear, turning with tongs every 90 seconds, until all sides are evenly golden-brown, including the flat cut ends. This sear builds the Maillard flavor base that enriches the braising liquid and creates the lacquered exterior. Total searing time: 8–10 minutes.",
-      visualCue: {
-        primaryTarget: "Even golden-brown on all surfaces, including both flat ends. The skin side should be the deepest color — near caramel.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold on only one or two sides. The skin is still white and flabby in places. Rendered fat in the pan but no Maillard browning.", action: "Continue rotating — every side needs direct contact with the hot pan base for at least 90 seconds." },
-          { state: "Perfect",   description: "Uniform deep gold-to-caramel across all sides. The skin has tightened and is just beginning to crisp. Pan base has a layer of golden-brown fond.", action: "Remove the roll to a plate while you build the braising liquid in the same pot." },
-          { state: "Overdone",  description: "Skin has browned to very dark brown on one side; fat pooling and smoking.", action: "Reduce heat and continue rotating more frequently. Dark skin color will still produce good results — the exterior flavors the braise." },
-        ],
-      },
-      feelCue: "The outside of the seared roll should feel firm, slightly tacky from the rendered fat, and warm throughout. The skin side should feel tight and papery-dry under your fingertip.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari",
+        "sauce de soja foncé (utiliser 50 ml – beaucoup plus intense)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Braise",
-      inputs: ["seared_pork", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "braised_chashu",
-      instructions: "Pour the sake into the hot pot and bring to a boil, scraping up the fond from the bottom. Add soy sauce, mirin, sugar, water, scallion, and ginger. Return the pork roll to the pot — the liquid should come about two-thirds of the way up the roll. Bring to a very gentle simmer (90°C, barely bubbling — large bubbles will cause the roll to turn tough and the skin to contract unevenly). Cover and braise for 2.5–3 hours, turning the roll every 45 minutes so all sides spend time submerged. The liquid will reduce and deepen.",
-      visualCue: {
-        primaryTarget: "After 3 hours: the roll is dark mahogany-brown all over, sitting in a glossy, reduced, syrup-like braising liquid. The twine is cutting slightly into the swollen, tender flesh.",
-        spectrum: [
-          { state: "Underdone", description: "Roll still has some spring when pressed. Braising liquid still thin and light amber. Internal temperature below 85°C.", action: "Continue braising. Check that the liquid is at a bare simmer, not a boil — boiling toughens the collagen." },
-          { state: "Perfect",   description: "Roll yields completely with gentle pressure — feels like braised collagen all the way through. Braising liquid has reduced to a dark, glossy, almost syrupy consistency. Mahogany-brown exterior.", action: "Remove from heat. Cool the roll in the braising liquid to room temperature, then refrigerate." },
-          { state: "Overdone",  description: "Roll has partially unrolled in the pot. Exterior is very dark and the liquid has reduced to a sticky paste on the pan bottom.", action: "Remove the roll carefully, add 50 ml water to deglaze the remaining glaze. Cool and refrigerate both." },
-        ],
-      },
-      feelCue: "Press the center of the roll through the pot lid gap — it should feel like pressing into firm gelatin: yielding, gelatinous, giving without bouncing back. The collagen has fully converted.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Mirin (favorité de l'honneur)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Vin de riz doux",
+        "sherry sec + 1 c. à thé sucre"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Slice",
-      inputs: ["braised_chashu"],
-      outputState: "finished_chashu",
-      instructions: "The key: refrigerate the chashu roll in its braising liquid overnight before slicing. Cold fat and gelatin give the roll structural integrity — room-temperature chashu collapses under the knife. Remove from the liquid (reserve the liquid: it becomes your tare for ramen). Remove all twine. Using a very sharp, thin-bladed knife, slice rounds 1.5–2 cm thick in a single confident stroke — no sawing. For ramen, sear each cold slice in a screaming-hot dry pan for 30 seconds per side to reheat and caramelize the glaze before placing in the bowl.",
-      visualCue: {
-        primaryTarget: "Perfect rounds of alternating fat-and-meat layers, each slice a mahogany exterior transitioning to ivory-pink center. The gelatin layer is visible as a translucent ring just inside the skin.",
-        spectrum: [
-          { state: "Underdone", description: "Sliced while warm — roll has compressed and deformed under the knife. Fat layers are smearing rather than cutting cleanly.", action: "Chill the remaining roll at least 2 hours before continuing to slice." },
-          { state: "Perfect",   description: "Clean, even rounds. Fat layers bright white against pink-mahogany meat. Each slice holds its circular shape without falling apart.", action: "Reheat slices in a hot pan for 30 seconds per side immediately before serving in ramen." },
-          { state: "Overdone",  description: "Sliced too thin — rounds are falling apart and the gelatin layer is crumbling.", action: "For ramen, crumbled chashu is still delicious; just arrange the pieces rather than placing whole rounds." },
-        ],
-      },
-      feelCue: "A properly chilled slice should feel like firm, cold butter — it should hold its shape when picked up with chopsticks but yield immediately on the tongue. The fat should feel smooth and waxy-cold, not greasy or liquid.",
+      "ingId": "ing_04",
+      "role": "Solvent",
+      "name": "Mâcher",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sherry sec",
+        "Vin chinois de riz Shaoxing"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brun",
+        "Chérie"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "bouillon de poulet (plus riche)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Échalons, coupés en sections de 5 cm environ",
+      "ratioValue": 3,
+      "defaultUnit": "pcs",
+      "substitutions": [
+        "poireau, partie blanche"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "tranches de gingembre frais, non pelées, 5 mm",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gingembre moulu (5 g, moins frais)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rouleaux",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "rolled_pork",
+      "instructions": "Pose le ventre de porc à plat, côté peau. À partir de l'extrémité plus courte, rouler fermement le ventre dans un cylindre compact, en piégant autant de couches de graisse à viande que possible dans le rouleau. Attachez à intervalles de 2 à 3 cm avec la ficelle du boucher, tirant fermement chaque boucle de sorte que le rouleau conserve sa section circulaire pendant la cuisson. Un rouleau lâche se détachera et produira des tranches inégales. Le but est un cylindre serré, même qui tiendra sa forme pendant 3 heures de braisage.",
+      "visualCue": {
+        "primaryTarget": "Un cylindre serré, même du ventre de porc, la peau enveloppée à l'extérieur, tenue par des boucles uniformément espacées de ficelle. Pas de graisse ou de peau visible aux extrémités.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le rouleau est lâche et ovale en coupe transversale. Écart de peau visible à une extrémité. Des boucles de ficelle trop espacées.",
+            "action": "Dépliez et reroulez plus étroitement. Ajouter les boucles de ficelle tous les 2 cm. Démarrez le rouleau de l'extrémité opposée pour un noyau plus serré."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un cylindre ferme, même avec la peau formant un extérieur lisse. Chaque boucle de ficelle légèrement comprimée. La coupe transversale montre des couches concentriques de graisse et de viande.",
+            "action": "Sear immédiatement pendant que le rouleau est froid et ferme."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau se scintille de façon si serrée et les couches de graisse se détachent.",
+            "action": "Loosen 2-3 boucles aux points les plus serrés — un peu de donner est bien. Le rouleau se raffermira lors de la louange."
+          }
+        ]
+      },
+      "feelCue": "Grappez le rouleau et pressez doucement — il doit se sentir dense et inébranlable, comme un cylindre froid de beurre. S'il s'aplatit sous votre adhérence ou que les couches se séparent, il n'est pas assez serré."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "rolled_pork"
+      ],
+      "outputState": "seared_pork",
+      "instructions": "Chauffer un four hollandais ou un pot lourd à feu moyen-vif sans huile — la graisse extérieure du ventre rendra immédiatement. Placer le rouleau et le saisir, en tournant avec des pinces toutes les 90 secondes, jusqu'à ce que tous les côtés soient uniformément dorés, y compris les bouts plats. Cette couture construit la base de saveur Maillard qui enrichit le liquide de braisage et crée l'extérieur laqué. Durée totale de la mer: 8-10 minutes.",
+      "visualCue": {
+        "primaryTarget": "Même brun doré sur toutes les surfaces, y compris les deux extrémités plates. Le côté de la peau doit être la couleur la plus profonde, près du caramel.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle sur un ou deux côtés. La peau est encore blanche et molle dans les endroits. Graisse fondue dans la poêle mais pas de brunissement maillard.",
+            "action": "Continuer à tourner — chaque côté a besoin d'un contact direct avec la base de la poêle chaude pendant au moins 90 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme or profond à caramel de tous les côtés. La peau a resserré et commence à peine à croquer. La base de la poêle a une couche de couleur dorée.",
+            "action": "Retirez le rouleau dans une assiette pendant que vous construisez le liquide de braisage dans le même pot."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau a bruni à brun très foncé d'un côté; gras pooling et fumer.",
+            "action": "Réduire la chaleur et continuer à tourner plus fréquemment. La couleur foncée de la peau produira encore de bons résultats — les saveurs extérieures du braise."
+          }
+        ]
+      },
+      "feelCue": "L'extérieur du rouleau de mer doit se sentir ferme, légèrement collant de la graisse rendue, et chaud partout. Le côté de la peau doit se sentir serré et sec-papier sous votre bout de doigt."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brise",
+      "inputs": [
+        "seared_pork",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "braised_chashu",
+      "instructions": "Verser le saké dans le pot chaud et porter à ébullition, en grattant le fond du fond. Ajouter la sauce soja, le mirin, le sucre, l'eau, l'oignon et le gingembre. Retournez le rouleau de porc dans la casserole — le liquide devrait venir environ les deux tiers du chemin vers le haut du rouleau. Portez à une mijotée très douce (90°C, à peine bouillonnante — de grandes bulles feront tourner le rouleau dur et la peau se contracter inégalement). Couvrir et brasser pendant 2,5 à 3 heures, faire tourner le rouleau toutes les 45 minutes afin que tous les côtés passent du temps submergé. Le liquide va réduire et approfondir.",
+      "visualCue": {
+        "primaryTarget": "Après 3 heures : le rouleau est noir acajou-brun partout, assis dans un liquide brillant, réduit, comme du sirop de graisse. La ficelle se coupe légèrement dans la chair enflée et tendre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le rouleau a encore un peu de ressort lorsqu'il est pressé. Le liquide est encore mince et léger. Température intérieure inférieure à 85°C.",
+            "action": "Continuez à faire des larmes. Vérifiez que le liquide est à mijoter, et non à ébullition."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le rouleau produit complètement avec une pression douce — on dirait du collagène braisé tout au long de la course. Le liquide de graissage a réduit à une consistance sombre, brillante, presque sirupeuse. Extérieur acajou-brun.",
+            "action": "Retirer du feu. Refroidir le rouleau dans le liquide de cuisson à température ambiante, puis réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le rouleau a été partiellement déroulé dans la casserole. L'extérieur est très sombre et le liquide est réduit à une pâte collante sur le fond de la casserole.",
+            "action": "Retirer soigneusement le rouleau, ajouter 50 ml d'eau pour déglacer le glaçage restant. Refroidir et réfrigérer les deux."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le centre du rouleau à travers l'écart du couvercle du pot — il devrait sentir comme presser dans la gélatine ferme: rendement, gélatineux, donner sans rebondir en arrière. Le collagène s'est complètement converti."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Tranche",
+      "inputs": [
+        "braised_chashu"
+      ],
+      "outputState": "finished_chashu",
+      "instructions": "La clé : réfrigérer le rouleau de chashu dans son liquide de cuisson du jour au lendemain avant de trancher. La graisse froide et la gélatine donnent l'intégrité structurelle du rouleau — le chashu à température ambiante s'effondre sous le couteau. Retirer du liquide (réserver le liquide : il devient votre tare pour ramen). Enlevez toute la ficelle. À l'aide d'un couteau très tranchant et à peau mince, couper les rondelles de 1,5 à 2 cm d'épaisseur en un seul coup sûr — sans sciage. Pour le ramen, entrez chaque tranche froide dans une casserole sèche et chaude pendant 30 secondes par côté pour réchauffer et caraméliser la glaçure avant de la mettre dans le bol.",
+      "visualCue": {
+        "primaryTarget": "Des rondelles parfaites de couches alternées de graisse et de viande, chaque tranche d'acajou se transposant à l'extérieur au centre de l'ivoire-rose. La couche de gélatine est visible comme un anneau translucide à l'intérieur de la peau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Séché au chaud — le rouleau a comprimé et déformé sous le couteau. Les couches de graisse sont démêlées plutôt que de couper proprement.",
+            "action": "Refroidir le reste du rouleau au moins 2 heures avant de continuer à couper."
+          },
+          {
+            "state": "Perfect",
+            "description": "Propre, même les rondes. Les couches de gras blanc vif contre la viande rose-mahogany. Chaque tranche tient sa forme circulaire sans s'effondrer.",
+            "action": "Réchauffer les tranches dans une poêle chaude pendant 30 secondes par côté immédiatement avant de servir en ramen."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop mince, les rondelles s'effondrent et la couche de gélatine s'effondre.",
+            "action": "Pour le ramen, le chashu émietté est encore délicieux; il suffit d'arranger les morceaux plutôt que de placer des ronds entiers."
+          }
+        ]
+      },
+      "feelCue": "Une tranche correctement réfrigérée doit avoir l'air ferme et froide; elle doit tenir sa forme lorsqu'elle est ramassée avec des baguettes, mais elle doit donner immédiatement sur la langue. La graisse doit se sentir lisse et cireuse-froide, pas grasse ou liquide."
+    }
+  ]
 };

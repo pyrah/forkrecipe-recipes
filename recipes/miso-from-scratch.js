@@ -1,122 +1,268 @@
 export default {
-  repoId: "master_japanese_miso-from-scratch_001",
-  parentRepoId: null,
-  slug: "miso-from-scratch",
-  author: "ForkRecipe Kitchen",
-  title: "Homemade Miso",
-  description: "Cooked soybeans inoculated with koji and packed under salt ferment over months into a dense, amber paste — concentrated umami, roasted earthiness, and a complexity that only time can build.",
-  cuisine: "Japanese",
-  culture: "Washoku",
-  category: "fermented",
-  tags: ["miso", "soybean", "fermented", "japanese", "umami"],
-  difficulty: 5,
-  activeTime: "3 hours",
-  totalTime: "90 days",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 8, sour: 3, bitter: 2, umami: 10, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried soybeans",                      ratioValue: 10,  defaultUnit: "parts", substitutions: ["chickpeas (shiro-miso style)", "black soybeans"] },
-    { ingId: "ing_02", role: "Umami",     name: "Dry rice koji (Aspergillus oryzae)",   ratioValue: 10,  defaultUnit: "parts", substitutions: ["barley koji for mugi miso"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Non-iodized sea salt",                 ratioValue: 4.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Hydration", name: "Reserved soybean cooking liquid",      ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Inosinate", name: "Soybean cooking liquid (tamari)",      ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_japanese_miso-from-scratch_001",
+  "parentRepoId": null,
+  "slug": "miso-from-scratch",
+  "author": "ForkRecipe Kitchen",
+  "title": "Miso fait maison",
+  "description": "Le soja cuit inoculé avec du koji et emballé sous ferment de sel pendant des mois dans une pâte dense et ambre — umami concentré, terre rôtie, et une complexité que seul le temps peut construire.",
+  "cuisine": "Japonais",
+  "culture": "Washoku",
+  "category": "fermented",
+  "tags": [
+    "miso",
+    "soja",
+    "fermenté",
+    "Japonais",
+    "umami"
   ],
-  processNodes: [
+  "difficulty": 5,
+  "activeTime": "3 hours",
+  "totalTime": "90 days",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 8,
+    "sour": 3,
+    "bitter": 2,
+    "umami": 10,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Soak",
-      inputs: ["ing_01"],
-      outputState: "soaked_soybeans",
-      instructions: "Rinse soybeans under cold water, sorting out any shriveled or discolored beans. Cover with at least three times their volume in cold water and soak for 18–24 hours at room temperature. The beans will roughly double in size and the skins will become taut. Drain and discard the soaking water — it contains flatulence-causing oligosaccharides. The beans are ready when a fingernail presses through one easily with minimal resistance.",
-      visualCue: {
-        primaryTarget: "Plump, pale-golden beans, fully round and smooth, with taut skins. The soaking water has turned slightly tan.",
-        spectrum: [
-          { state: "Underdone", description: "Beans are still wrinkled, feel hard when squeezed, and the soaking water is still nearly clear.", action: "Soak 4–6 more hours. Cooler water slows absorption significantly." },
-          { state: "Perfect",   description: "Beans have doubled in size, feel firm but yield gently under thumbnail pressure.", action: "Drain and cook." },
-          { state: "Overdone",  description: "Skins are splitting open, beans feel very soft and waterlogged.", action: "Cook immediately — they are just over-soaked, not ruined. Reduce cooking time slightly." },
-        ],
-      },
-      feelCue: "A soaked bean pressed between thumb and forefinger should flatten with moderate resistance — like pressing a soft rubber eraser. A hard bean will crack; a perfect bean will yield smoothly.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Soya séché",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pois chiches (style shiro-miso)",
+        "soja noir"
+      ]
     },
     {
-      nodeId: "step_2", action: "Boil",
-      inputs: ["soaked_soybeans", "ing_04"],
-      outputState: "cooked_soybeans",
-      instructions: "Cover soaked soybeans with fresh cold water by 3 inches and bring to a boil over high heat. Skim and discard the grey foam that rises in the first 10 minutes — this is bitterness. Reduce to a vigorous simmer and cook for 3–5 hours until the beans are very soft: they should crush completely between two fingers with no resistance. Reserve 2 cups of the cooking liquid (tamari-like, deep amber, savory). The beans must be soft enough to mash — under-cooked beans create a lumpy, gritty miso that ferments poorly.",
-      visualCue: {
-        primaryTarget: "Beans are pale gold, completely tender, and crush between two fingers into a smooth paste with no graininess.",
-        spectrum: [
-          { state: "Underdone", description: "Center of the bean is still slightly firm or chalky when bitten. Bean holds its shape under pressure.", action: "Continue cooking. Check every 30 minutes. Hard beans produce gritty miso." },
-          { state: "Perfect",   description: "Bean crushes to a smooth paste between fingers. Entire bean is the same pale golden color throughout.", action: "Drain, reserve cooking liquid, and allow to cool to 40°C (104°F) before adding koji." },
-          { state: "Overdone",  description: "Beans are falling apart, skins all burst, cooking water is very thick.", action: "Proceed — this is actually fine for miso. More surface area for koji to work." },
-        ],
-      },
-      feelCue: "Pick up a single cooked bean and press it between your thumb and forefinger until it collapses — the paste should feel like smooth hummus with no grit. The reserved cooking water will be dark amber and taste deeply savory.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Riz sec koji (Aspergillus oryzae)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "orge koji pour mugi miso"
+      ]
     },
     {
-      nodeId: "step_3", action: "Mash",
-      inputs: ["cooked_soybeans"],
-      outputState: "bean_paste",
-      instructions: "Drain the cooked soybeans (reserving cooking liquid) and spread on a sheet pan to cool to below 40°C (104°F) — hot beans will kill the koji mold spores. Once cool enough to hold comfortably, mash using a potato masher, food mill, or by pressing in a zip-lock bag. The goal is a smooth, uniform paste with minimal bean chunks. Some texture is acceptable in country-style miso; total smoothness is the goal for refined miso.",
-      visualCue: {
-        primaryTarget: "A pale, smooth golden paste — slightly sticky, uniform in color, no visible whole beans. Texture resembles thick peanut butter.",
-        spectrum: [
-          { state: "Underdone", description: "Half the beans are still whole or chunky. Paste is lumpy and uneven.", action: "Continue mashing — lumpy miso ferments unevenly and can harbor dry pockets." },
-          { state: "Perfect",   description: "Smooth, sticky, uniformly golden paste. A handful pressed between palms holds its shape.", action: "Cool to 40°C or below before proceeding." },
-          { state: "Overdone",  description: "Paste is so thoroughly worked it has become warm from friction.", action: "Spread thin and allow to cool below 40°C before adding koji — heat kills Aspergillus." },
-        ],
-      },
-      feelCue: "The mashed paste should feel warm but not hot against the inside of your wrist — like a comfortable bath, not a shower. If it burns, wait longer. The paste will be sticky and cling to your palms.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel marin non iodé",
+      "ratioValue": 4.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Mix",
-      inputs: ["bean_paste", "ing_02", "ing_03"],
-      outputState: "miso_mixture",
-      instructions: "In a large bowl, combine rice koji and salt. Toss with your hands until fully mixed — the salt coats each grain of koji. Add this koji-salt mixture to the cooled bean paste. Mix thoroughly with your hands, kneading and squeezing until the koji is fully incorporated and no white koji clumps remain. If the mixture feels too stiff and crumbly, add reserved cooking liquid tablespoon by tablespoon until the paste holds together when squeezed into a ball. The mixture should hold its shape like wet clay.",
-      visualCue: {
-        primaryTarget: "A uniform, earthy-tan paste with occasional visible rice grains from the koji. Neither too wet (slumps immediately) nor too dry (cracks when squeezed).",
-        spectrum: [
-          { state: "Underdone", description: "White koji grains still visible as distinct lumps. Salt streaks visible in the paste.", action: "Continue kneading for 5 more minutes — even distribution is critical for uniform fermentation." },
-          { state: "Perfect",   description: "Consistent pale amber color throughout. Holds a firm ball when squeezed. Koji grains are evenly distributed.", action: "Form into dense balls and pack into fermentation vessel." },
-          { state: "Overdone",  description: "Mixture is very wet and loose from too much added liquid.", action: "Spread thin, allow to firm up slightly, then proceed — excess moisture slows fermentation." },
-        ],
-      },
-      feelCue: "The miso mixture should feel like firm, slightly sticky modeling clay — cohesive, not crumbly, with the koji grains giving it a slightly granular texture against your palms. It should smell faintly sweet from the koji, earthy from the beans, and sharply salty.",
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Liquide de cuisson de soja réservé",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5", action: "Pack",
-      inputs: ["miso_mixture"],
-      outputState: "packed_miso",
-      instructions: "Sterilize your fermentation crock or container with a clean cloth dampened with shochu or vodka. Form the miso mixture into baseball-sized balls and throw them firmly into the vessel — this packing motion eliminates air pockets, which cause mold growth. Press each layer firmly flat with a flat spatula or your fist. When all the miso is packed, smooth the surface completely flat. Sprinkle a thin layer of salt (about 2 tbsp) over the entire top surface as a protective barrier. Press plastic wrap directly onto the surface, then add a weight (a sealed bag of salt works well).",
-      visualCue: {
-        primaryTarget: "A smooth, flat surface of miso in the vessel with no cracks or depressions. Salt barrier visible as a thin white crust on top. Plastic wrap pressed directly to the surface with no air gaps.",
-        spectrum: [
-          { state: "Underdone", description: "Visible air pockets, surface is uneven and pitted.", action: "Re-pack firmly. Every air pocket is a mold colony waiting to form." },
-          { state: "Perfect",   description: "Dense, smooth, uniform surface. Container sealed with a direct-contact cover and a weight. No visible cracks.", action: "Label with the date and store in a cool, dark place." },
-          { state: "Overdone",  description: "Miso has been packed so firmly the container is dangerously full.", action: "Remove some to a second container — miso expands slightly as it ferments." },
-        ],
-      },
-      feelCue: "Press your palm flat onto the packed miso — it should feel dense and unyielding, like firm clay. Any give or sponginess suggests air pockets that need to be pressed out.",
-    },
-    {
-      nodeId: "step_6", action: "Ferment",
-      inputs: ["packed_miso"],
-      outputState: "aged_miso",
-      instructions: "Store at cool room temperature (60–75°F / 15–24°C), away from direct light. White or tan surface mold (tamari) is normal and expected — scrape and discard at the 30-day mark when you inspect. Shoyu-like liquid that pools on the surface is tamari: stir it back in. Check monthly: at 45 days the miso is a young shinshu style — golden, mildly sweet, and light-bodied. At 90 days it becomes a rounded, complex pale yellow miso. At 6 months: full-bodied aka miso. At 1 year: robust, dark, concentrated hatcho-style depth.",
-      visualCue: {
-        primaryTarget: "At 90 days: the miso has darkened from pale gold to a deep amber-tan. Scraping the surface reveals a paste that smells powerfully of soy sauce and roasted grain.",
-        spectrum: [
-          { state: "Underdone", description: "At 30 days: still pale and smells of salty soy paste with little complexity. Tastes raw and harsh.", action: "Reseal and continue fermenting. Miso cannot be rushed." },
-          { state: "Perfect",   description: "At 90 days: deep golden-amber, smells intensely savory with sweetness. Tastes rounded, salty, and complex on the tongue.", action: "Taste weekly from this point and harvest when you reach your desired depth." },
-          { state: "Overdone",  description: "After 12+ months: very dark, almost black. Overpoweringly salty and concentrated.", action: "This is intentional for hatcho miso style — use in small quantities as a seasoning paste, diluted." },
-        ],
-      },
-      feelCue: "Ready miso yields slowly to a spoon pressed into the surface, leaving a glossy impression that holds its shape. It should smell like a sophisticated, savory version of soy sauce — never rancid, never putrid, always somehow edible and inviting.",
-    },
+      "ingId": "ing_05",
+      "role": "Inosinate",
+      "name": "Liquide de cuisson du soja (tamari)",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "soaked_soybeans",
+      "instructions": "Rincer le soja sous l'eau froide, trier les haricots écrémés ou décolorés. Couvrir d'au moins trois fois leur volume dans l'eau froide et tremper pendant 18 à 24 heures à température ambiante. Les haricots doubleront à peu près en taille et les peaux deviendront tendues. Égoutter et jeter l'eau imbibée — elle contient des oligosaccharides flatulents. Les haricots sont prêts quand un ongle presse facilement avec une résistance minimale.",
+      "visualCue": {
+        "primaryTarget": "Plumeau, haricots dorés pâles, entièrement ronds et doux, avec des peaux taupes. L'eau de trempe a légèrement bronzé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les haricots sont encore ridés, se sentent durs lorsqu'ils sont pressés, et l'eau de trempe est encore presque claire.",
+            "action": "Faites tremper 4 à 6 heures de plus. L'eau de refroidissement ralentit significativement l'absorption."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les haricots ont doublé en taille, se sentent fermes, mais se laissent aller doucement sous la pression des vignettes.",
+            "action": "Égoutter et cuisiner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les peaux se divisent, les haricots se sentent très doux et waterlogged.",
+            "action": "Cuire immédiatement — ils sont juste sursautés, pas ruinés. Réduire légèrement le temps de cuisson."
+          }
+        ]
+      },
+      "feelCue": "Un haricot imbibé pressé entre le pouce et l'index devrait s'aplatir avec une résistance modérée, comme presser une gomme en caoutchouc souple. Un haricot dur va craquer; un haricot parfait va donner en douceur."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Bouillir",
+      "inputs": [
+        "soaked_soybeans",
+        "ing_04"
+      ],
+      "outputState": "cooked_soybeans",
+      "instructions": "Couvrir le soja trempé d'eau froide fraîche de 3 pouces et porter à ébullition à feu vif. Écraser et jeter la mousse grise qui monte dans les 10 premières minutes — c'est de l'amertume. Réduire à une mijotée vigoureuse et cuire pendant 3 à 5 heures jusqu'à ce que les haricots soient très doux : ils doivent écraser complètement entre deux doigts sans résistance. Réserver 2 tasses du liquide de cuisson (tamaris, ambre profond, savore). Les haricots doivent être suffisamment mous pour mash — les haricots sous-cuits créent un miso gritty et grumeux qui ferment mal.",
+      "visualCue": {
+        "primaryTarget": "Les haricots sont d'or pâle, complètement tendres, et écrasent entre deux doigts dans une pâte lisse sans grain.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre de la fève est encore légèrement ferme ou crayeux quand mordu. Le haricot tient sa forme sous pression.",
+            "action": "Continuez à cuisiner. Vérifiez toutes les 30 minutes. Les haricots secs produisent un miso gris."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les haricots s'écrasent à une pâte lisse entre les doigts. Le haricot entier est de la même couleur dorée pâle.",
+            "action": "Égoutter, réserver le liquide de cuisson et laisser refroidir à 40 °C (104 °F) avant d'ajouter koji."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots s'effondrent, les peaux éclatent, l'eau de cuisson est très épaisse.",
+            "action": "Continuez — c'est vraiment bien pour miso. Plus de surface pour koji à travailler."
+          }
+        ]
+      },
+      "feelCue": "Prenez un seul haricot cuit et appuyez-le entre le pouce et l'index jusqu'à ce qu'il s'effondre — la pâte devrait se sentir comme un hummus lisse sans grit. L'eau de cuisson réservée sera ambre foncée et goûtera profondément."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mash",
+      "inputs": [
+        "cooked_soybeans"
+      ],
+      "outputState": "bean_paste",
+      "instructions": "Égoutter le soja cuit (réserver le liquide de cuisson) et l'étaler sur une plaque pour refroidir à moins de 40 °C (104 °F) – les haricots chauds tueront les spores de moisissures koji. Une fois assez frais pour tenir confortablement, mash à l'aide d'une maseuse de pommes de terre, d'un moulin à nourriture, ou en appuyant dans un sac à fermeture éclair. Le but est une pâte lisse et uniforme avec des morceaux de haricots minimes. Une certaine texture est acceptable dans le miso style pays; la douceur totale est le but pour le miso raffiné.",
+      "visualCue": {
+        "primaryTarget": "Une pâte dorée pâle et lisse, légèrement collante, uniforme, sans haricots entiers visibles. La texture ressemble à du beurre d'arachide épais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La moitié des haricots sont encore entiers ou en morceaux. La pâte est bosselée et inégale.",
+            "action": "Continuer la massuration — des miso ferments grumeaux inégalement et peuvent contenir des poches sèches."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte lisse, collante, uniformément dorée. Une poignée pressée entre les palmiers tient sa forme.",
+            "action": "Laisser refroidir à 40°C ou moins avant de procéder."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est tellement travaillée qu'elle est devenue chaude par friction.",
+            "action": "Répartir mince et laisser refroidir en dessous de 40°C avant d'ajouter koji — la chaleur tue Aspergillus."
+          }
+        ]
+      },
+      "feelCue": "La pâte de purée devrait se sentir chaude mais pas chaude contre l'intérieur de votre poignet — comme un bain confortable, pas une douche. Si ça brûle, attendez plus longtemps. La pâte sera collante et attachée à vos paumes."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mélange",
+      "inputs": [
+        "bean_paste",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "miso_mixture",
+      "instructions": "Dans un grand bol, mélanger le riz koji et le sel. Jetez vos mains jusqu'à ce qu'elles soient complètement mélangées — le sel recouvre chaque grain de koji. Ajouter ce mélange koji-sel à la pâte de haricots refroidie. Mélangez soigneusement avec vos mains, pétrissez et pressez jusqu'à ce que le koji soit entièrement incorporé et qu'il ne reste pas d'embouts blancs. Si le mélange se sent trop raide et émietté, ajouter la cuillère à soupe liquide réservée à la cuisson jusqu'à ce que la pâte se maintienne lorsqu'elle est pressée dans une boule. Le mélange doit tenir sa forme comme de l'argile humide.",
+      "visualCue": {
+        "primaryTarget": "Une pâte uniforme de terre-tan avec des grains de riz parfois visibles du koji. Ni trop humide (glousse immédiatement) ni trop sec (cracks quand pressé).",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des grains de koji blancs encore visibles comme des morceaux distincts. Des stries de sel visibles dans la pâte.",
+            "action": "Continuer le pétrissage pendant 5 minutes de plus — même la distribution est essentielle pour une fermentation uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur jaune-auto constante. Il tient une balle ferme lorsqu'il est pressé. Les grains de Koji sont distribués uniformément.",
+            "action": "Former en boules denses et emballer dans un récipient de fermentation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est très humide et lâche de trop de liquide ajouté.",
+            "action": "Étendre mince, laisser se raffermir légèrement, puis procéder — l'excès d'humidité ralentit la fermentation."
+          }
+        ]
+      },
+      "feelCue": "Le mélange miso devrait se sentir ferme, légèrement collant à modeler l'argile — cohésive, non friable, avec les grains koji lui donnant une texture légèrement granulaire contre vos palmiers. Il devrait sentir légèrement sucré du koji, terreux des haricots, et fortement salé."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Boîte",
+      "inputs": [
+        "miso_mixture"
+      ],
+      "outputState": "packed_miso",
+      "instructions": "Stérilisez votre cruche de fermentation ou contenant avec un chiffon propre humide avec shochu ou vodka. Former le mélange miso dans des boules de baseball et les jeter fermement dans le vaisseau — ce mouvement d'emballage élimine les poches d'air, qui provoquent la croissance des moisissures. Appuyez fermement sur chaque couche à plat avec une spatule plate ou votre poing. Lorsque tout le miso est emballé, lisser la surface complètement à plat. Saupoudrer une fine couche de sel (environ 2 c. à soupe) sur toute la surface supérieure comme barrière de protection. Appuyez sur l'enveloppe plastique directement sur la surface, puis ajoutez un poids (un sac scellé de sel fonctionne bien).",
+      "visualCue": {
+        "primaryTarget": "Une surface lisse et plane de miso dans le récipient sans fissures ni dépressions. Barrière de sel visible comme une fine croûte blanche sur le dessus. Enveloppe plastique pressée directement à la surface sans trou d'air.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poches d'air visibles, surface inégale et piquée.",
+            "action": "Réemballez fermement. Chaque poche d'air est une colonie de moisissure qui attend de se former."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface dense, lisse, uniforme. Conteneur scellé avec un couvercle de contact direct et un poids. Aucune fissure visible.",
+            "action": "Étiquette avec la date et stocker dans un endroit frais et sombre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Miso a été emballé si fermement le conteneur est dangereusement plein.",
+            "action": "Enlevez - en un deuxième contenant — le miso se développe légèrement à mesure qu'il ferment."
+          }
+        ]
+      },
+      "feelCue": "Pressez votre palmier à plat sur le miso emballé — il devrait se sentir dense et inébranlable, comme de l'argile ferme. Tout donner ou spongieux suggère des poches d'air qui doivent être pressées."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Ferment",
+      "inputs": [
+        "packed_miso"
+      ],
+      "outputState": "aged_miso",
+      "instructions": "Conserver à température ambiante froide (60–75°F / 15–24°C), à l'abri de la lumière directe. La moisissure de surface blanche ou tan (tamari) est normale et attendue – racler et jeter à la marque de 30 jours lorsque vous inspectez. Le liquide de type Shoyu qui s'accumule à la surface est tamari : remuez-le. Vérifiez chaque mois: à 45 jours le miso est un jeune style shinshu — doré, légèrement doux et léger. À 90 jours, il devient un miso jaune pâle arrondi complexe. À 6 mois : aka miso corsé. À 1 an : robuste, foncé, concentré, de type hachoo.",
+      "visualCue": {
+        "primaryTarget": "À 90 jours, le miso s'est obscurci, de l'or pâle à l'ambre-tan profond. Le scorage de la surface révèle une pâte qui sent fortement la sauce de soja et le grain rôti.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "À 30 jours : encore pâle et sent la pâte de soja salée avec peu de complexité. Goûte cru et dur.",
+            "action": "Respirez et continuez à fermenter. Miso ne peut pas être précipité."
+          },
+          {
+            "state": "Perfect",
+            "description": "À 90 jours : d'or profond-ambre, sent intensément salé avec douceur. Goûte arrondi, salé et complexe sur la langue.",
+            "action": "Goûtez chaque semaine à partir de ce point et récoltez lorsque vous atteignez la profondeur désirée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Après 12 mois et plus : très foncé, presque noir. Extensivement salé et concentré.",
+            "action": "Ceci est intentionnel pour le style hachoo miso — utiliser en petites quantités comme pâte assaisonnement, diluée."
+          }
+        ]
+      },
+      "feelCue": "Le miso prêt donne lentement à une cuillère pressée dans la surface, laissant une impression brillante qui tient sa forme. Il doit sentir comme une version sophistiquée et savore de sauce de soja — jamais ranci, jamais putride, toujours en quelque sorte comestible et invitant."
+    }
+  ]
 };

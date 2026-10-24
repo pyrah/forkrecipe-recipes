@@ -1,105 +1,246 @@
 export default {
-  repoId: "master_scandinavian_swedish_meatballs_001",
-  parentRepoId: null,
-  slug: "swedish-meatballs",
-  author: "ForkRecipe Kitchen",
-
-  title: "Swedish Meatballs (Köttbullar)",
-  description: "Small, perfectly round, and seared to a mahogany crust — these meatballs are half pork, half beef, bound with cream-soaked breadcrumbs and spiced with allspice and white pepper, swimming in a gravy so silky it barely needs anything else.",
-  cuisine: "Scandinavian",
-  culture: "Swedish",
-  category: "proteins",
-
-  tags: ["swedish", "meatballs", "cream-sauce", "comfort", "pork-beef"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "50 min",
-  ratioSystem: "parts",
-
-  stars: 2190,
-  forks: 267,
-  contributors: 35,
-  license: "CC-BY-SA",
-  createdAt: "2024-12-01",
-  updatedAt: "2025-12-15",
-
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 0, umami: 4, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Ground beef (20% fat)",                        ratioValue: 50,  defaultUnit: "parts", substitutions: ["all-pork", "ground turkey (less rich)"] },
-    { ingId: "ing_02", role: "Protein",   name: "Ground pork",                                  ratioValue: 50,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Binder",    name: "Breadcrumbs soaked in heavy cream",            ratioValue: 20,  defaultUnit: "parts", substitutions: ["day-old white bread soaked in milk"] },
-    { ingId: "ing_04", role: "Allium",    name: "Yellow onion, grated or minced very finely",  ratioValue: 15,  defaultUnit: "parts", substitutions: ["shallots"] },
-    { ingId: "ing_05", role: "Spice",     name: "Allspice (ground) and white pepper",          ratioValue: 1,   defaultUnit: "parts", substitutions: ["nutmeg and black pepper"] },
-    { ingId: "ing_06", role: "Dairy",     name: "Heavy cream and beef stock (for gravy)",      ratioValue: 60,  defaultUnit: "parts", substitutions: ["sour cream thinned with stock"] },
-    { ingId: "ing_07", role: "Fat",       name: "Unsalted butter",                             ratioValue: 8,   defaultUnit: "parts", substitutions: ["ghee"] },
-    { ingId: "ing_08", role: "Binder",    name: "All-purpose flour (for the gravy roux)",       ratioValue: 5,   defaultUnit: "parts", substitutions: ["gluten-free flour blend"] },
+  "repoId": "master_scandinavian_swedish_meatballs_001",
+  "parentRepoId": null,
+  "slug": "swedish-meatballs",
+  "author": "ForkRecipe Kitchen",
+  "title": "Boules de viande suédoises (Köttbullar)",
+  "description": "Petits, parfaitement ronds et cousues à une croûte d'acajou, ces boulettes de viande sont à moitié de porc, à moitié de bœuf, liées à des miettes de pain à la crème et épicées avec de l'aspice et du poivre blanc.",
+  "cuisine": "Scandinave",
+  "culture": "Suédois",
+  "category": "proteins",
+  "tags": [
+    "suédois",
+    "boulettes de viande",
+    "crème-sauce",
+    "confort",
+    "Boeuf de porc"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "50 min",
+  "ratioSystem": "parts",
+  "stars": 2190,
+  "forks": 267,
+  "contributors": 35,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-12-01",
+  "updatedAt": "2025-12-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "meatball_mixture",
-      instructions: "In a large bowl, combine the ground beef, ground pork, cream-soaked breadcrumbs, grated onion, allspice, white pepper, and a generous pinch of salt. Mix by hand until just combined — do not overwork the mixture or the meatballs will become dense and tight rather than tender. Test one small ball by frying it in a hot pan for 2 minutes and tasting for seasoning. Adjust the seasoning of the raw mix accordingly.",
-      visualCue: {
-        primaryTarget: "A pale pink, uniformly textured meat mixture with no visible unmixed white breadcrumb lumps or dry spice pockets. Cohesive but loose.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is not fully combined — streaks of pure beef and pure pork are visible. White breadcrumb lumps have not been integrated. Flavor will be uneven throughout the meatballs.", action: "Mix further with your hands, squeezing through your fingers to combine completely. Stop as soon as uniform." },
-          { state: "Perfect",   description: "Uniform pale pink mixture that holds a ball shape when rolled but is not tight or dense. No visible lumps or unmixed portions. Smells lightly of allspice and onion.", action: "Roll into balls of about 2.5cm diameter. Refrigerate for 15 minutes before cooking to help them hold their shape." },
-          { state: "Overdone",  description: "Mixture has been overworked and feels tight and sticky. It pulls away from the bowl in one rubbery mass. The fat proteins have emulsified too tightly.", action: "Proceed, but the final meatballs will be denser and more like sausage than the traditional tender texture." },
-        ],
-      },
-      feelCue: "The meatball mixture should feel cool, smooth, and slightly tacky between your palms when you roll it — like working with slightly wet clay that holds its shape when you stop pressing.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Boeuf haché (20% de matières grasses)",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tous les porques",
+        "dinde hachée (moins riche)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["meatball_mixture", "ing_07"],
-      outputState: "seared_meatballs",
-      instructions: "Melt butter in a wide, heavy-bottomed pan over medium-high heat until it foams and then begins to subside. Add meatballs in a single layer — do not crowd; work in batches if needed. Shake the pan gently after 90 seconds to roll the meatballs onto a new face — their round shape lets them self-rotate with a shake. Continue shaking and rolling every 60–90 seconds for 6–8 minutes total until evenly browned all over. Do not use a spoon to turn them; shaking preserves their round shape.",
-      visualCue: {
-        primaryTarget: "Uniformly dark golden-brown all over with no pale patches. The meatballs are rigid and hold their round shape when the pan is shaken.",
-        spectrum: [
-          { state: "Underdone", description: "Meatballs are pale golden or blond on their browned sides. They are still soft and deform slightly when the pan is shaken.", action: "Continue on medium-high heat. The surface needs to reach a proper Maillard crust before it will release cleanly from the pan." },
-          { state: "Perfect",   description: "All meatballs show deep amber-brown color all over with no pale spots. Rigid and round when shaken. Juices that have escaped into the pan are dark amber and fragrant with meat and butter.", action: "Remove meatballs and reserve. Deglaze the pan for the gravy without cleaning it." },
-          { state: "Overdone",  description: "Meatballs are dark brown to black on at least one face. Strong charred smell. They may have cracked from too much heat.", action: "Remove immediately. The interior is likely fine. The gravy will cover the exterior color, and the dark fond adds flavor to the sauce if you deglaze carefully." },
-        ],
-      },
-      feelCue: "When the meatballs are ready to release from the pan, they will do so with a faint 'pop' as the vacuum of the crust breaks. Try rolling one with a spoon — if it slides smoothly across the pan in one piece, the crust has set.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Porc haché",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Reduce",
-      inputs: ["seared_meatballs", "ing_06"],
-      outputState: "cream_gravy",
-      instructions: "In the meatball pan with its fond intact, melt a small knob of butter. Add a tablespoon of flour and cook for 1 minute, stirring constantly into the fond to make a roux. Gradually whisk in the beef stock, scraping up all the dark fond. Bring to a simmer, then stir in the heavy cream. Simmer for 5 minutes until the gravy is thick enough to coat a spoon. Season with salt, white pepper, and a dash of soy sauce for depth.",
-      visualCue: {
-        primaryTarget: "A glossy, pale-amber gravy that coats the back of a spoon in a thin, even layer. The surface shows a gentle, slow simmer with tiny bubbles at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Gravy is thin and watery, running off a spoon in a fast stream. The flour has not yet thickened it. Raw flour taste detectable.", action: "Simmer for 3–5 more minutes, stirring constantly. If still thin after 8 minutes, mix a teaspoon of cornstarch with cold water and whisk in." },
-          { state: "Perfect",   description: "Gravy coats a spoon evenly and runs off slowly. When you tilt the pan, it moves as a cohesive sheet rather than water. Color is a warm, golden-amber from the beef stock and fond. Flavor is savory, creamy, and deeply meaty.", action: "Return the meatballs to the gravy and heat through for 3 minutes before serving." },
-          { state: "Overdone",  description: "Gravy has reduced past a sauce consistency to a thick, gluey paste that mounds on a spoon. Flavor is very concentrated and may be too salty.", action: "Whisk in additional beef stock or cream to restore consistency." },
-        ],
-      },
-      feelCue: "Dip a finger into the warm gravy and rub your thumb across it — the gravy should cling to your fingertip in a thin, oily film that does not immediately drip. It should feel rich, not watery, and leave a faint fatty residue on your skin.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Fil d'Ariane trempé dans la crème lourde",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pain blanc d'un jour imbibé de lait"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["seared_meatballs", "cream_gravy"],
-      outputState: "finished_swedish_meatballs",
-      instructions: "Return all the seared meatballs to the cream gravy. Simmer gently on low heat for 5 minutes to heat through and allow the meatballs to absorb some of the gravy flavor. Do not boil — high heat will tighten the meatballs and make the gravy break. Serve over egg noodles, mashed potato, or lingonberry jam alongside, with a garnish of fresh dill.",
-      visualCue: {
-        primaryTarget: "Meatballs are fully coated in a shining, pale amber gravy. When cut in half, the interior is uniformly cooked — no pink at the center. Juices run clear.",
-        spectrum: [
-          { state: "Underdone", description: "Meatball center is still pink or grey-pink. Juices run slightly red-pink when cut. The interior temperature has not reached 70°C.", action: "Continue simmering in the gravy for another 3–4 minutes on low heat. The gentle simmer will cook the interior without toughening the outside." },
-          { state: "Perfect",   description: "Uniformly cooked to a pale, juicy grey-brown throughout. When cut, the interior is tender and moist. The gravy clings to the cut surface. The allspice and white pepper are detectable but not dominant.", action: "Serve immediately. Meatballs in cream gravy cool quickly and the texture changes significantly as the fat solidifies." },
-          { state: "Overdone",  description: "Meatballs have tightened and gone rubbery. The interior is dry and the meat has begun to pull away from the surface. The gravy has reduced and thickened around them.", action: "Add a splash of cream and a knob of butter to the gravy and serve with extra sauce over each portion to compensate for the dry texture." },
-        ],
-      },
-      feelCue: "Press a meatball gently with the back of a spoon — it should yield slightly under pressure like a firm mushroom, then spring back halfway when you release. Full spring-back means undercooked; no spring-back means overcooked.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon jaune, râpé ou haché très fin",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Échalotes"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poivre blanc et tout-puits",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "muscade et poivre noir"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Crème lourde et viande bovine (pour sauce)",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème aigre éclaircie avec le stock"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ghee"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Binder",
+      "name": "Farine à usage général (pour la sauce rouge)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Mélange de farine sans gluten"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "meatball_mixture",
+      "instructions": "Dans un grand bol, mélanger le boeuf moulu, le porc moulu, la chapelure à la crème, l'oignon râpé, l'Allspice, le poivre blanc et une pincée généreuse de sel. Mélanger à la main jusqu'à ce qu'il soit simplement combiné — ne pas surcharger le mélange ou les boulettes de viande deviendront denses et serrées plutôt que tendres. Testez une petite boule en la faisant frire dans une poêle chaude pendant 2 minutes et dégustez pour assaisonner. Régler l'assaisonnement du mélange brut en conséquence.",
+      "visualCue": {
+        "primaryTarget": "Un mélange de viande rose pâle, uniformément texturé, sans morceaux de chapelure blanche visiblement non mélangés ni poches d'épices sèches. Cohésif mais lâche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange n'est pas entièrement combiné — des stries de bœuf pur et de porc pur sont visibles. Les morceaux de chapelure blanche n'ont pas été intégrés. Le goût sera inégal dans les boulettes de viande.",
+            "action": "Mélanger davantage avec vos mains, presser entre vos doigts pour se combiner complètement. Arrêtez dès l'uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mélange uniforme rose pâle qui tient une forme de boule lorsqu'elle est roulée mais n'est pas serrée ou dense. Pas de morceaux visibles ou de portions non mélangées. Ça sent le tout et l'oignon.",
+            "action": "Rouler en boules d'environ 2,5cm de diamètre. Réfrigérer 15 minutes avant la cuisson pour les aider à tenir leur forme."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a été surmené et se sent serré et collant. Il s'éloigne du bol en une seule masse caoutchouteuse. Les protéines graisseuses ont été émulsifiées trop étroitement.",
+            "action": "Procéder, mais les boulettes de viande finales seront plus denses et plus comme la saucisse que la texture tendre traditionnelle."
+          }
+        ]
+      },
+      "feelCue": "Le mélange de boulettes de viande doit se sentir frais, doux et légèrement collant entre vos paumes quand vous le roulez — comme travailler avec de l'argile légèrement humide qui tient sa forme lorsque vous arrêtez de presser."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "meatball_mixture",
+        "ing_07"
+      ],
+      "outputState": "seared_meatballs",
+      "instructions": "Faire fondre le beurre dans une casserole large, à fond lourd, à feu moyen-vif jusqu'à ce qu'il mousse puis commence à s'effondrer. Ajouter les boulettes de viande en une seule couche — ne pas fouler; travailler en lots si nécessaire. Agiter doucement la poêle après 90 secondes pour rouler les boulettes de viande sur un nouveau visage — leur forme ronde leur permet de s'autoroter avec un tremblement. Continuer à agiter et rouler toutes les 60 à 90 secondes pendant 6 à 8 minutes au total jusqu'à ce qu'il soit uniformément doré. Ne pas utiliser une cuillère pour les tourner; agiter préserve leur forme ronde.",
+      "visualCue": {
+        "primaryTarget": "Un brun d'or uniformément foncé partout sans taches pâles. Les boulettes de viande sont rigides et tiennent leur forme ronde lorsque la poêle est secouée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les boulettes de viande sont dorées pâles ou blondes sur leurs côtés brunis. Ils sont encore doux et se déforment légèrement lorsque la poêle est secouée.",
+            "action": "Continuer à feu moyen-élevé. La surface doit atteindre une bonne croûte Maillard avant qu'elle ne se libère proprement de la poêle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toutes les boulettes de viande ont une couleur brun-ambre profonde partout sans taches pâles. Rigide et rond quand secoué. Les jus qui se sont échappés dans la poêle sont d'ambre foncé et parfumés de viande et de beurre.",
+            "action": "Retirer les boulettes de viande et réserver. Déglacer la poêle pour la sauce sans la nettoyer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les boulettes de viande sont brun foncé à noir sur au moins un visage. Une forte odeur carbonisée. Ils ont peut-être craqué de trop de chaleur.",
+            "action": "Supprimer immédiatement. L'intérieur est probablement bien. La sauce couvrira la couleur extérieure, et le fond sombre ajoute de la saveur à la sauce si vous déglacez soigneusement."
+          }
+        ]
+      },
+      "feelCue": "Lorsque les boulettes de viande sont prêtes à se libérer de la poêle, elles le font avec une faible «pop» comme le vide de la croûte se brise. Essayez de rouler l'un avec une cuillère — si elle glisse doucement à travers la poêle en une seule pièce, la croûte s'est mise."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Réduire",
+      "inputs": [
+        "seared_meatballs",
+        "ing_06"
+      ],
+      "outputState": "cream_gravy",
+      "instructions": "Dans la poêle à boulettes avec son fond intact, faire fondre un petit bouton de beurre. Ajouter une cuillère à soupe de farine et cuire 1 minute, en remuant constamment dans le fond pour faire un roux. Peu à peu fouetter dans le stock de bœuf, raclant tout le fond sombre. Porter à mijoter, puis mélanger la crème lourde. Laisser mijoter 5 minutes jusqu'à ce que la sauce soit assez épaisse pour enrober une cuillère. Assaisonner avec du sel, du poivre blanc et un soupçon de sauce soja pour la profondeur.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lustrée, pâle-ambrée qui enveloppe l'arrière d'une cuillère dans une couche mince et uniforme. La surface montre une mijotée douce et lente avec de minuscules bulles aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Gravy est mince et aqueuse, en courant une cuillère dans un ruisseau rapide. La farine ne l'a pas encore épaissie. La farine crue a un goût détectable.",
+            "action": "Laisser mijoter encore 3 à 5 minutes, en remuant constamment. Si elle est encore mince après 8 minutes, mélanger une cuillère à café d'amidon de maïs avec de l'eau froide et fouetter."
+          },
+          {
+            "state": "Perfect",
+            "description": "Gravy enveloppe une cuillère uniformément et s'enfuit lentement. Lorsque vous penchez la casserole, elle se déplace comme une feuille cohésive plutôt que comme de l'eau. La couleur est un ambre d'or chaud issu du stock de bœuf et du fond. L'arôme est savoureux, crémeux et profondément charnu.",
+            "action": "Retournez les boulettes de viande dans la sauce et faites chauffer pendant 3 minutes avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Gravy a réduit la consistance de la sauce passée à une pâte épaisse et collante qui fond sur une cuillère. L'arôme est très concentré et peut être trop salé.",
+            "action": "fouetter en bouillon de boeuf ou crème supplémentaire pour rétablir l'uniformité."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt dans la sauce chaude et frottez votre pouce dessus — la sauce devrait s'accrocher à votre bout de doigt dans un film mince et huileux qui ne coule pas immédiatement. Il doit se sentir riche, pas aqueux, et laisser un léger résidu gras sur votre peau."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "seared_meatballs",
+        "cream_gravy"
+      ],
+      "outputState": "finished_swedish_meatballs",
+      "instructions": "Retournez toutes les boulettes de viande dans la sauce à la crème. Laisser mijoter doucement à feu doux pendant 5 minutes pour chauffer et permettre aux boulettes de viande d'absorber une partie de la saveur de sauce. Ne pas faire bouillir — une chaleur élevée resserre les boulettes de viande et fait casser la sauce. Servir sur les nouilles d'œufs, la purée de pommes de terre ou la confiture de lingonberry à côté, avec une garniture d'aneth fraîche.",
+      "visualCue": {
+        "primaryTarget": "Les boulettes de viande sont entièrement enrobées d'une sauce ambre pâle et brillante. Lorsqu'il est coupé en deux, l'intérieur est uniformément cuit — pas de rose au centre. Les jus sont dégagés.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre de boulettes de viande est encore rose ou rose gris. Les jus sont légèrement rouges lorsqu'ils sont coupés. La température intérieure n'a pas atteint 70°C.",
+            "action": "Continuer à mijoter dans la sauce pendant encore 3-4 minutes à feu doux. Le mijot doux fera cuire l'intérieur sans durcir l'extérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cuisez uniformément jusqu'à un brun gris juteux pâle. En coupe, l'intérieur est tendre et humide. La sauce s'accroche à la surface de coupe. Le toutspice et le poivre blanc sont détectables mais non dominants.",
+            "action": "Servir immédiatement. Les boulettes de viande dans la sauce crème refroidissent rapidement et la texture change significativement au fur et à mesure que la graisse se solidifie."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les boulettes de viande se sont serrées et sont devenues caoutchouteuses. L'intérieur est sec et la viande a commencé à s'éloigner de la surface. La sauce s'est réduite et épaissie autour d'eux.",
+            "action": "Ajouter une touche de crème et un bouton de beurre à la sauce et servir avec de la sauce supplémentaire sur chaque portion pour compenser la texture sèche."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur une boule de viande avec l'arrière d'une cuillère — elle devrait produire légèrement sous pression comme un champignon ferme, puis ressortez à mi-chemin quand vous relâchez. Plein retour de printemps signifie sous-cuisson; aucun retour de printemps signifie surcuisson."
+    }
+  ]
 };

@@ -1,80 +1,221 @@
 export default {
-  repoId: "master_ancient_roman_puls_001",
-  parentRepoId: null,
-  slug: "puls",
-  author: "ForkRecipe Kitchen",
-  title: "Puls",
-  description: "The porridge that fed an empire — cracked emmer wheat coaxed in salted water until it surrenders into a thick, nutty pottage, glossed with oil and crowned with sharp cheese and herbs. This is the legionary's bowl, older than bread in the Roman kitchen and the bedrock of the Mediterranean table.",
-  cuisine: "Ancient Roman",
-  culture: "Latial",
-  category: "grains",
-  tags: ["roman", "emmer", "farro", "porridge", "ancient", "legion", "vegetarian"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "9 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-15",
-  updatedAt: "2026-06-15",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 1, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Emmer wheat / farro (whole or coarsely cracked)", ratioValue: 100, defaultUnit: "parts", substitutions: ["spelt berries", "pearled farro (shorter soak/cook)"] },
-    { ingId: "ing_02", role: "Hydration", name: "Water",                       ratioValue: 350, defaultUnit: "parts", substitutions: ["light vegetable broth for a richer puls"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Sea salt",                    ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Fat",       name: "Olive oil",                   ratioValue: 12,  defaultUnit: "parts", substitutions: ["rendered pork fat for a non-meatless legionary version"] },
-    { ingId: "ing_05", role: "Umami",     name: "Aged hard cheese (pecorino), grated", ratioValue: 15, defaultUnit: "parts", substitutions: ["aged caciocavallo", "Parmigiano"] },
-    { ingId: "ing_06", role: "Herb",      name: "Fresh lovage or celery leaf, chopped", ratioValue: 4, defaultUnit: "parts", substitutions: ["flat-leaf parsley", "fresh oregano"] },
-    { ingId: "ing_07", role: "Spice",     name: "Cracked black pepper",        ratioValue: 1,   defaultUnit: "parts", substitutions: ["long pepper for a more authentically Roman bite"] },
-    { ingId: "ing_08", role: "Garnish",   name: "Olive oil (to finish)",       ratioValue: 8,   defaultUnit: "parts", substitutions: ["a spoonful of garum or fish sauce for a salty-savory drizzle"] },
+  "repoId": "master_ancient_roman_puls_001",
+  "parentRepoId": null,
+  "slug": "puls",
+  "author": "ForkRecipe Kitchen",
+  "title": "Puls",
+  "description": "Le porridge qui alimentait un empire — le blé d'emmer fissuré coaxe dans l'eau salée jusqu'à ce qu'il se rende dans un pot épais et noisette, brillant d'huile et couronné de fromage et d'herbes tranchantes. C'est le bol de la légionnaire, plus vieux que le pain dans la cuisine romaine et la roche de la table méditerranéenne.",
+  "cuisine": "Ancien romain",
+  "culture": "Latial",
+  "category": "grains",
+  "tags": [
+    "romaine",
+    "Emmer",
+    "Farro",
+    "porridge",
+    "anciens",
+    "Légion",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "9 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-15",
+  "updatedAt": "2026-06-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Soak",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "soaked_emmer",
-      instructions: "Rinse the emmer in cold water until it runs clear, then cover it generously with part of the water and leave it overnight, 8 hours or more. Whole emmer is a tough, hulled grain; the long soak rehydrates the bran and lets the kernels swell so they will cook down sweet and tender rather than staying chalky at the core. Reserve the rest of the water for the cook.",
-      visualCue: {
-        primaryTarget: "Plumped, glossy kernels that have visibly swollen and softened at the edges, sitting in faintly cloudy, starch-tinged water.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still small, hard, and dry-looking, and the soak water is nearly clear.", action: "Keep soaking. Old or very whole emmer can need a full 12 hours — give it more time in a cool spot." },
-          { state: "Perfect",   description: "Kernels are noticeably swollen and bend slightly under a fingernail without splitting. The water has gone cloudy with released starch.", action: "Drain off the soak water (or keep it for extra body) and move to the simmer." },
-          { state: "Overdone",  description: "Water smells sour or yeasty and bubbles cling to the surface — the grain fermented in a warm room.", action: "If only faintly sour, rinse very well and proceed. If clearly fermented, discard and start again with a cooler soak." },
-        ],
-      },
-      feelCue: "A soaked kernel should feel leathery and yielding, not glassy-hard. Bitten, it gives a chewy resistance with no dry, powdery center.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Blé emmer / farro (gros ou entier)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "baies d'épeautre",
+        "Farro perlé (brûlure/cuisson plus courte)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Simmer",
-      inputs: ["soaked_emmer", "ing_02", "ing_03"],
-      outputState: "cooked_porridge",
-      instructions: "Put the drained emmer in a heavy pot with the reserved water and the salt. Bring to a boil, then drop to the barest simmer and cook uncovered, stirring often as it thickens, 45 minutes to over an hour depending on the grain. As the kernels burst they release starch and the pot turns from soupy to a thick, spoon-coating pottage. Add hot water as needed; you want the grains broken and creamy, not dry. Salting now seasons from within as the starch absorbs the liquid.",
-      visualCue: {
-        primaryTarget: "A thick, oatmeal-like porridge where many kernels have split open into a creamy starch matrix, and a dragged spoon leaves a slowly closing trail across the bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still distinct and firm with a chalky center, swimming in thin, watery liquid.", action: "Keep simmering low and stir more often. The porridge thickens only once the kernels burst — be patient and top up with hot water if it tightens too soon." },
-          { state: "Perfect",   description: "A cohesive, creamy pottage that mounds softly on the spoon; the grains are tender with a pleasant chew and the liquid has all but vanished into a glossy body.", action: "Pull from the heat and move to finishing while it is still loose and hot — it firms quickly as it cools." },
-          { state: "Overdone",  description: "The puls is stiff and gluey, sticking to the pot bottom and threatening to scorch.", action: "Stir in a splash of hot water to loosen and scrape the pot off the heat before it catches and turns bitter." },
-        ],
-      },
-      feelCue: "The pot should burble lazily, not boil, and the porridge will pull heavier on the spoon as it goes. Crush a kernel against the side — it should smear to a soft, sweet-smelling paste with only a gentle chew left.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau",
+      "ratioValue": 350,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bouillon de légumes légers pour un puls plus riche"
+      ]
     },
     {
-      nodeId: "step_3", action: "Finish",
-      inputs: ["cooked_porridge", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "finished_puls",
-      instructions: "Off the heat, beat in the olive oil and most of the grated cheese until the puls turns glossy and rich; the residual heat melts the cheese into the starch for savory depth. Stir through the chopped lovage and a heavy grind of pepper. Taste and correct the salt. Spoon into bowls, scatter the remaining cheese over the top, and finish with a thread of olive oil — or, for the full Roman effect, a few drops of garum.",
-      visualCue: {
-        primaryTarget: "A glossy, cohesive porridge flecked green with herb, its surface sheened with oil and dotted with half-melted cheese, mounding softly without weeping liquid.",
-        spectrum: [
-          { state: "Underdone", description: "The puls tastes flat and starchy, the oil and cheese sitting on top rather than blended in.", action: "Stir more vigorously to emulsify the oil into the hot starch and add salt or a little more cheese until it tastes savory and rounded." },
-          { state: "Perfect",   description: "Rich, glossy, and well seasoned — nutty grain, salty-sharp cheese, green herb, and warm pepper in balance, loose enough to fall softly from the spoon.", action: "Serve at once while hot and yielding, with the final drizzle of oil or garum." },
-          { state: "Overdone",  description: "Stirred too long off the heat, the puls has cooled and stiffened into a dense, claggy mass.", action: "Loosen with a splash of hot water or broth and warm gently, stirring, to bring back its soft, spoonable texture." },
-        ],
-      },
-      feelCue: "It should slump, not pour — thick enough to hold a shape on the spoon yet soft enough to spread. The first taste is nutty and warm, then the cheese hits salty and sharp, with the lovage lifting it like wild celery.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel de mer",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gras de porc fondu pour une version légionnaire sans viande"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Fromage dur vieilli (pécorino), râpé",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "caciocavallo âgé",
+        "Parmigiano"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Feuilles de livage ou de céleri frais, hachées",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Persil à feuilles plates",
+        "Origan frais"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre noir craqué",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre long pour une morsure plus authentiquement romaine"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Huile d'olive (pour finir)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une cuillère de garum ou de sauce de poisson pour une bruine salée"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "soaked_emmer",
+      "instructions": "Rincer l'emmère dans l'eau froide jusqu'à ce qu'elle soit claire, puis la couvrir généreusement d'une partie de l'eau et la laisser toute la nuit, 8 heures ou plus. L'emmère entière est un grain dur et coquillé; la longue trempe réhydrate le son et laisse les grains gonfler pour qu'ils cuisent doux et tendre plutôt que de rester crayeux au cœur. Réserver le reste de l'eau pour le cuisinier.",
+      "visualCue": {
+        "primaryTarget": "Amandes plumées et brillantes qui ont visiblement gonflées et adoucies aux bords, assises dans de l'eau légèrement nuageuse et amidonisée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore petits, durs et secs, et l'eau de trempe est presque claire.",
+            "action": "Continuez à tremper. Un emmère vieux ou très complet peut avoir besoin d'une durée complète de 12 heures — donnez - lui plus de temps dans un endroit frais."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les amandes sont nettement gonflées et se plient légèrement sous un ongle sans se fractionner. L'eau est devenue trouble avec de l'amidon libéré.",
+            "action": "Égoutter de l'eau d'imprégnation (ou la garder pour un corps supplémentaire) et passer à l'immersion."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'eau sent l'aurore ou la levure et les bulles s'accrochent à la surface — le grain fermenté dans une pièce chaude.",
+            "action": "Si seulement légèrement aigre, rincer très bien et procéder. S'il est clairement fermenté, jeter et recommencer avec un trempage plus froid."
+          }
+        ]
+      },
+      "feelCue": "Un amande trempée doit se sentir cuir et rendement, pas vitreux-dur. Bitten, il donne une résistance mâcheuse sans centre sec et poudreux."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "soaked_emmer",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "cooked_porridge",
+      "instructions": "Mettre l'emmère égouttée dans un pot lourd avec l'eau réservée et le sel. Porter à ébullition, puis laisser mijoter et cuire à découvert, en remuant souvent en épaississant, 45 minutes à plus d'une heure selon le grain. Au fur et à mesure que les grains éclatent, ils libèrent de l'amidon et le pot passe d'un pot pot pot pot pot pot pot pot pot. Ajouter de l'eau chaude au besoin; vous voulez les grains cassés et crémeux, pas secs. Le sel s'écoule maintenant de l'intérieur comme l'amidon absorbe le liquide.",
+      "visualCue": {
+        "primaryTarget": "Un porridge épais, semblable à de la farine d'avoine, où de nombreux grains s'ouvrent dans une matrice d'amidon crémeux, et une cuillère traînée laisse un sentier qui se ferme lentement à travers le fond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore distincts et fermes avec un centre crayeux, nageant dans un liquide mince et aqueux.",
+            "action": "Continuer à mijoter et remuer plus souvent. Le porridge ne s'épaissit qu'une fois que les grains éclatent — soyez patient et remplissez d'eau chaude s'il se resserre trop tôt."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un potage cohésif et crémeux qui fond doucement sur la cuillère; les grains sont tendres avec une agréable mâche et le liquide a tout sauf disparu dans un corps brillant.",
+            "action": "Tirer de la chaleur et passer à la finition alors qu'il est encore lâche et chaud — il se ferme rapidement comme il refroidit."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pulsations sont rigides et collantes, collées au fond du pot et menaçant de scorcher.",
+            "action": "Incorporer une éclaboussure d'eau chaude pour se détendre et racler le pot de la chaleur avant qu'il ne prenne et devienne amer."
+          }
+        ]
+      },
+      "feelCue": "Le pot devrait se casser paresseusement, pas bouillir, et le porridge tirera plus lourd sur la cuillère comme il va. Écraser un amande contre le côté — il devrait frotter à une pâte douce et sucrée avec seulement une douceur de mâcher."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Finition",
+      "inputs": [
+        "cooked_porridge",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_puls",
+      "instructions": "Hors de la chaleur, battre dans l'huile d'olive et la plupart du fromage râpé jusqu'à ce que les pulsations deviennent brillantes et riches; la chaleur résiduelle fait fondre le fromage dans l'amidon pour une profondeur savoureuse. Incorporer le love haché et le poivre. Goûter et corriger le sel. Spoon dans des bols, disperser le reste du fromage sur le dessus, et finir avec un fil d'huile d'olive — ou, pour l'effet romain complet, quelques gouttes de garum.",
+      "visualCue": {
+        "primaryTarget": "Un porridge brillant, cohésif, vert flanqué d'herbe, sa surface brillait d'huile et parsemé de fromage à moitié fondu, bombant doucement sans pleurer liquide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pulses ont un goût plat et féculent, l'huile et le fromage sont assis sur le dessus plutôt que mélangés.",
+            "action": "Incorporer plus vigoureusement l'huile dans l'amidon chaud et ajouter du sel ou un peu plus de fromage jusqu'à ce qu'elle ait un goût salé et arrondi."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche, brillant et bien assaisonné — grain de noix, fromage salé, herbe verte et poivre chaud en équilibre, assez lâche pour tomber doucement de la cuillère.",
+            "action": "Servir à la fois à la chaleur et à la production, avec le filet final d'huile ou de garum."
+          },
+          {
+            "state": "Overdone",
+            "description": "Étirés trop longtemps hors de la chaleur, les pulsations se refroidissent et se raidissent en une masse dense et serrée.",
+            "action": "Loyer avec un jet d'eau chaude ou de bouillon et réchauffer doucement, en remuant, pour ramener sa texture douce et cuillerable."
+          }
+        ]
+      },
+      "feelCue": "Il devrait s'effondrer, ne pas verser — assez épais pour tenir une forme sur la cuillère mais assez doux pour se propager. Le premier goût est la noix et chaud, puis le fromage frappe salé et aiguisé, avec le love le levant comme le céleri sauvage."
+    }
+  ]
 };

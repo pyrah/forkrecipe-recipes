@@ -1,100 +1,254 @@
 export default {
-  repoId: "master_greek_loukoumades_001",
-  parentRepoId: null,
-  slug: "loukoumades",
-  author: "ForkRecipe Kitchen",
-  title: "Loukoumades",
-  description: "Greece's ancient honey-dipped fritters — yeasted dough dropped by the spoonful into hot oil where they puff into irregular golden spheres, pulled and immediately drenched in warm honey and dusted with cinnamon and crushed walnut.",
-  cuisine: "Greek",
-  culture: "Greek",
-  category: "desserts",
-  tags: ["greek", "fried", "honey", "cinnamon", "doughnut", "dessert", "street-food"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "1 hr 20 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 5, salty: 1, sour: 0, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",                                          ratioValue: 100, defaultUnit: "%", substitutions: ["bread flour for more chew"] },
-    { ingId: "ing_02", role: "Leavener",   name: "Instant dry yeast",                                         ratioValue: 1.5, defaultUnit: "%", substitutions: ["active dry yeast (bloom first in warm water)"] },
-    { ingId: "ing_03", role: "Hydration",  name: "Warm water (38–40C / 100–104F)",                           ratioValue: 90,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                                             ratioValue: 1,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Sugar (for the dough)",                                    ratioValue: 3,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",        name: "Neutral oil for frying (sunflower or rice bran)",           ratioValue: 200, defaultUnit: "%", substitutions: ["peanut oil"] },
-    { ingId: "ing_07", role: "Sweetener",  name: "Thyme or wildflower honey, warmed",                        ratioValue: 40,  defaultUnit: "%", substitutions: ["orange blossom honey", "dark honey"] },
-    { ingId: "ing_08", role: "Spice",      name: "Ground cinnamon",                                          ratioValue: 1,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_09", role: "Garnish",    name: "Walnuts, lightly toasted and roughly crushed",             ratioValue: 15,  defaultUnit: "%", substitutions: ["crushed pistachios", "sesame seeds"] },
+  "repoId": "master_greek_loukoumades_001",
+  "parentRepoId": null,
+  "slug": "loukoumades",
+  "author": "ForkRecipe Kitchen",
+  "title": "Loukoumades",
+  "description": "Les anciennes beignets au miel de la Grèce — pâte à levure jetée par la cuillerée dans l'huile chaude où ils ont soufflé dans des sphères d'or irrégulières, tiré et immédiatement trempé dans du miel chaud et poussière de cannelle et de noix concassées.",
+  "cuisine": "Grec",
+  "culture": "Grec",
+  "category": "desserts",
+  "tags": [
+    "grec",
+    "frits",
+    "Chérie",
+    "cannelle",
+    "beignet",
+    "dessert",
+    "Produits de la rue"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "1 hr 20 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix and proof batter",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "proofed_batter",
-      instructions: "Combine the flour, instant yeast, salt, and sugar in a large bowl. Make a well in the center and pour in all of the warm water at once. Mix vigorously with a wooden spoon or your hand for 2–3 minutes until a completely smooth, thick, pourable batter forms — it should look like a very thick pancake batter or a soft porridge, not a kneadable dough. There should be no lumps. Cover the bowl tightly with clingfilm and leave in a warm place (28–30C) to ferment for 1 hour. The batter is ready when it has doubled in volume, is visibly bubbly throughout, and smells yeasty-sweet. Do not stir the proofed batter — you want to preserve the air bubbles that the yeast has worked to produce, as they are what make the loukoumades puff and become light inside.",
-      visualCue: {
-        primaryTarget: "A doubled, airy batter with a dome of foam on top and visible bubbles throughout — the surface should look actively alive, with bubbles rising and popping slowly. A spoon drawn through it should reveal a spongy, web-like interior structure.",
-        spectrum: [
-          { state: "Underdone", description: "Batter has barely grown and shows few bubbles — the yeast has not activated sufficiently, possibly due to water that was too cold, or the resting environment was too cool.", action: "Move to a warmer spot and give it another 30 minutes. Loukoumades from under-fermented batter will be dense and bread-like rather than light and hollow." },
-          { state: "Perfect",   description: "Doubled in volume, domed, actively bubbly, with a tangy-yeasty fragrance. When the bowl is tilted gently, the batter moves as a jiggly, web-like mass.", action: "Fry immediately — do not let it over-ferment or the batter will taste too sour and the gluten will weaken." },
-          { state: "Overdone",  description: "Batter has over-proofed: it may have collapsed or have a sharp, sour, alcoholic smell. The surface is flat rather than domed.", action: "Use immediately if this has just happened — the first batch may still be passable. Strongly over-fermented batter should be discarded and restarted." },
-        ],
-      },
-      feelCue: "Dip a spoon into the center of the proofed batter and pull it up slowly — a long, stretchy veil of batter should trail from the spoon before breaking. That elasticity is the yeast-built gluten network trapping air. If the batter falls off the spoon in a plop with no trailing veil, it hasn't proofed long enough.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de pain pour plus de mâcher"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Warm honey and prepare garnish",
-      inputs: ["ing_07", "ing_08", "ing_09"],
-      outputState: "prepared_honey_and_garnish",
-      instructions: "Gently warm the honey in a small saucepan over very low heat, or in a heatproof bowl set over hot water, until it is pourable and fluid — around 40–50C. Do not boil it. Warm honey soaks into freshly fried loukoumades almost instantly, whereas cold honey sits on the surface and creates a thick, sticky coating that feels cloying. Set the warm honey, ground cinnamon, and roughly crushed toasted walnuts in small separate bowls next to the frying setup. The loukoumades must be dressed the instant they leave the oil, so everything needs to be in place before the first fritter hits the fat. Speed is the whole game at this stage.",
-      visualCue: {
-        primaryTarget: "Honey that is fluid and pourable, dripping freely from a spoon in a thin, translucent stream — not thick and slow like cold honey from a jar.",
-        spectrum: [
-          { state: "Underdone", description: "Honey is still viscous and cold — it will slide off the hot loukoumades rather than soaking in.", action: "Warm over gentle heat for another 2 minutes, stirring. Honey should flow like water at 50C." },
-          { state: "Perfect",   description: "Runny, golden, and aromatic — it runs freely from a spoon in a thin stream and smells of flowers and warmth.", action: "Keep warm on the lowest heat setting while frying. Dress each batch immediately as it comes out of the oil." },
-          { state: "Overdone",  description: "Honey has been boiled and has started to caramelize — it will harden as it cools and may smell slightly burnt.", action: "Remove from heat. A slightly caramelized honey is still usable and can add an interesting bittersweet note, but cool it to 50C before using." },
-        ],
-      },
-      feelCue: "Dip a finger into the warm honey (carefully — it can be hot) and rub it between thumb and forefinger. It should feel silky-thin and flow freely, coating the skin in a thin film rather than building up in a sticky layer. That thinness is what allows it to penetrate the loukoumade rather than just sitting on top.",
+      "ingId": "ing_02",
+      "role": "Leavener",
+      "name": "levure sèche instantanée",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "levure sèche active (bloom d'abord dans l'eau chaude)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fry loukoumades",
-      inputs: ["ing_06", "proofed_batter"],
-      outputState: "fried_loukoumades",
-      instructions: "Heat the frying oil in a wide, deep pot to 175–180C / 350–360F. Using two wet spoons or a small ice cream scoop dipped in water between batches, drop heaped tablespoon-sized portions of batter into the oil without crowding — 6–8 at a time is typical. The batter will immediately puff and begin rolling in the oil. Do not move them for the first 30 seconds. After they have set on the bottom, they will begin to rotate on their own as the steam inside expands and shifts their center of gravity — this self-rolling is the sign of properly fermented batter and correctly heated oil. Fry for 3–4 minutes total, turning once or twice with a slotted spoon to encourage even color, until they are a deep, uniform golden-amber. Remove with a slotted spoon, shaking off excess oil.",
-      visualCue: {
-        primaryTarget: "Irregular golden spheres with a slightly craggy surface, deep amber and uniformly colored on all sides, puffed and visually light despite their small size — they should look round and full, not flat or pancake-like.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold and still slightly doughy — when pressed, they feel soft and don't spring back firmly. The interior won't be cooked through.", action: "Return to the oil for another 60–90 seconds. The color change from gold to amber is not just surface — it correlates with the interior being cooked through." },
-          { state: "Perfect",   description: "Deep amber on all sides, puffed and round, feeling light when lifted with a slotted spoon. When one is broken open, the interior is hollow at the center or webbed with large air pockets.", action: "Remove immediately — they darken fast from this point. Transfer to a plate and dress with honey, cinnamon, and walnut within 30 seconds." },
-          { state: "Overdone",  description: "Dark brown with a hard, thick shell that cracks rather than gives when pressed — the interior fat has overheated the dough and the sugar has begun to burn.", action: "These are still edible (a bit bitter) — the honey will help balance. Reduce oil temperature by 10C for the next batch." },
-        ],
-      },
-      feelCue: "Press a finished loukoumade gently with a spoon — it should spring back immediately, like a small resilient ball. It should feel light for its size and hollow at the center. If it feels dense and bread-heavy, the batter was either under-fermented or the oil was too cool.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau chaude (38–40C / 100–104F)",
+      "ratioValue": 90,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Dress and serve",
-      inputs: ["fried_loukoumades", "prepared_honey_and_garnish"],
-      outputState: "finished_loukoumades",
-      instructions: "Transfer the hot loukoumades to a shallow bowl or plate. Immediately drizzle the warm honey generously over them — use more than you think you need, because the honey is partly absorbed by the hot dough. Dust liberally with ground cinnamon, then scatter the roughly crushed toasted walnuts over the top. The whole dressing process should take no more than 30 seconds per batch. Loukoumades must be eaten hot: the contrast between the crispy exterior and the steaming hollow interior is the defining characteristic of a great loukoumade, and within 5 minutes the exterior softens from the honey's moisture and the steam inside. At Greek festivals and street stalls, loukoumades are served in paper cones and eaten standing, immediately, without ceremony.",
-      visualCue: {
-        primaryTarget: "A bowl of glistening golden spheres lacquered in amber honey, dusted snow-white with cinnamon, and freckled with golden walnut crumbs — steam still rising from the heap.",
-        spectrum: [
-          { state: "Underdone", description: "Honey applied sparingly — the loukoumades look almost dry, with only a thin sheen of honey rather than a proper lacquer. They will taste one-dimensional.", action: "Add more honey immediately. There is no such thing as too much honey on a loukoumade." },
-          { state: "Perfect",   description: "Glistening, generously coated, cinnamon-dusted, and walnut-studded — each piece is a complete world: crispy, yielding, sweet, warmly spiced, and nutty in a single bite.", action: "Eat immediately. This dish will not wait." },
-          { state: "Overdone",  description: "Loukoumades dressed and then left for 10+ minutes — the exterior has gone soft and the honey has made them heavy and wet.", action: "Nothing recoverable. Next time, fry and dress in small batches to serve continuously rather than all at once." },
-        ],
-      },
-      feelCue: "Bite into a loukoumade within the first minute: the exterior should give with a faint crunch before yielding to a soft, slightly hollow interior that releases a puff of steam. Honey should ooze slightly from the interior where it soaked through the wall. The cinnamon should hit the back of the nose rather than the tongue — aromatic, not sharp.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre (pour la pâte)",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile neutre pour la friture (soleil ou son de riz)",
+      "ratioValue": 200,
+      "defaultUnit": "%",
+      "substitutions": [
+        "huile d'arachide"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Thym ou miel de fleurs sauvages, chauffé",
+      "ratioValue": 40,
+      "defaultUnit": "%",
+      "substitutions": [
+        "miel de fleur d'orange",
+        "miel foncé"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Garnish",
+      "name": "Noix, légèrement grillées et broyées",
+      "ratioValue": 15,
+      "defaultUnit": "%",
+      "substitutions": [
+        "pistaches concassées",
+        "Graines de sésame"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélanger et étaler la pâte",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "proofed_batter",
+      "instructions": "Mélanger la farine, la levure instantanée, le sel et le sucre dans un grand bol. Faites un puits au centre et versez dans toute l'eau chaude à la fois. Mélanger vigoureusement avec une cuillère en bois ou votre main pendant 2 à 3 minutes jusqu'à ce qu'une pâte complètement lisse, épaisse, versable forme — il devrait ressembler à une pâte à crêpe très épaisse ou à un porridge doux, pas à une pâte pétrifiable. Il ne devrait pas y avoir de bosses. Couvrez bien le bol avec du film de collage et laissez-le au ferment chaud (28-30C) pendant 1 heure. La pâte est prête quand elle a doublé en volume, est visiblement bubble tout au long, et sent la levure-douce. Ne remuez pas la pâte éprouvée — vous voulez préserver les bulles d'air que la levure a travaillé à produire, car ce sont eux qui font souffler les loukoumades et deviennent légers à l'intérieur.",
+      "visualCue": {
+        "primaryTarget": "Une pâte aérée doublée avec un dôme de mousse sur le dessus et des bulles visibles à travers – la surface devrait regarder activement vivant, avec des bulles montant et surgissant lentement. Une cuillère tirée à travers elle devrait révéler une structure intérieure spongieuse et en toile.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La batteuse a à peine grandi et présente peu de bulles — la levure n'a pas suffisamment activé, peut-être à cause d'eau trop froide, ou l'environnement de repos trop frais.",
+            "action": "Passez à un endroit plus chaud et donnez-lui encore 30 minutes. Loukoumades à partir de pâte sous-fermentée sera dense et comme du pain plutôt que léger et creux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Double dans le volume, bombé, activement bubble, avec une fragrance tange-yesty. Lorsque le bol est incliné doucement, la pâte se déplace comme une masse en forme de toile.",
+            "action": "Faites frire immédiatement — ne laissez pas le surferment ou la pâte aura un goût trop aigre et le gluten va s'affaiblir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batteuse est surpropriété : elle peut s'être effondrée ou avoir une odeur forte, aigre, alcoolique. La surface est plane plutôt que bombée.",
+            "action": "Utilisez immédiatement si cela vient de se produire — le premier lot peut encore être passable. Une pâte fortement surfermentée doit être jetée et redémarrée."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère dans le centre de la pâte éprouvée et tirez - la lentement — un long voile extensible de pâte devrait sortir de la cuillère avant de casser. Cette élasticité est l'air de piégeage du réseau de gluten fabriqué à la levure. Si la pâte tombe de la cuillère dans une pente sans voile, elle n'a pas été prouvée assez longtemps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Cuire le miel et préparer la garniture",
+      "inputs": [
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "prepared_honey_and_garnish",
+      "instructions": "Chauffer délicatement le miel dans une petite casserole à feu très doux, ou dans un bol thermofuge sur de l'eau chaude, jusqu'à ce qu'il soit versable et fluide — environ 40–50C. Ne le faites pas bouillir. Le miel chaud s'imprégne presque instantanément dans des loukoumades fraichement frits, tandis que le miel froid s'assied à la surface et crée un revêtement épais et collant qui se sent bouillant. Mettre le miel chaud, la cannelle moulue et les noix grillées à peu près broyées dans de petits bols séparés à côté de la poêle. Les loukoumades doivent être habillés à l'instant où ils quittent l'huile, donc tout doit être en place avant que la première friteuse frappe la graisse. La vitesse est tout le jeu à ce stade.",
+      "visualCue": {
+        "primaryTarget": "Le miel qui est fluide et versable, qui coule librement d'une cuillère dans un cours d'eau mince et translucide — pas épais et lent comme le miel froid d'un pot.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le miel est encore visqueux et froid — il glissera des loukoumades chauds plutôt que de s'imprégner.",
+            "action": "Chauffer à feu doux encore 2 minutes en remuant. Le miel devrait couler comme de l'eau à 50 °C."
+          },
+          {
+            "state": "Perfect",
+            "description": "Courbé, doré et aromatique, il coule librement d'une cuillère dans un cours d'eau mince et sent les fleurs et la chaleur.",
+            "action": "Gardez au chaud le réglage thermique le plus bas pendant la friture. Habillez chaque lot immédiatement lorsqu'il sort de l'huile."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le miel a été bouilli et a commencé à caraméliser — il durcira car il refroidit et peut sentir légèrement brûlé.",
+            "action": "Retirer du feu. Un miel légèrement caramélisé est encore utilisable et peut ajouter une note sucrée amère intéressante, mais le refroidir à 50C avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Plongez un doigt dans le miel chaud (attention – il peut être chaud) et frottez-le entre le pouce et l'index. Il doit se sentir soyeux-mince et couler librement, enrobant la peau dans un film mince plutôt que de s'accumuler dans une couche collante. Cette minceur est ce qui lui permet de pénétrer le loukoumade plutôt que simplement assis sur le dessus."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Loukoumades à frire",
+      "inputs": [
+        "ing_06",
+        "proofed_batter"
+      ],
+      "outputState": "fried_loukoumades",
+      "instructions": "Chauffer l'huile de friture dans un grand pot profond à 175–180C / 350–360F. À l'aide de deux cuillères mouillées ou d'une petite boule de crème glacée trempée dans l'eau entre les lots, déposer des portions de pâte à soupe entaillées dans l'huile sans encombrer — 6–8 à la fois est typique. La pâte souffle immédiatement et commence à rouler dans l'huile. Ne les déplacez pas pendant les 30 premières secondes. Après qu'ils se sont mis sur le fond, ils commenceront à tourner sur leur propre que la vapeur à l'intérieur s'étend et déplace leur centre de gravité — cet auto-roulement est le signe de pâte correctement fermentée et d'huile correctement chauffée. Faire frire pendant 3 à 4 minutes au total, en tournant une ou deux fois avec une cuillère à fentes pour favoriser une couleur uniforme, jusqu'à ce qu'ils soient un or-ambre profond et uniforme. Retirer avec une cuillère à fentes, agiter l'excès d'huile.",
+      "visualCue": {
+        "primaryTarget": "Des sphères dorées irrégulières avec une surface légèrement craquante, d'ambre profond et uniformément colorées de tous les côtés, gonflées et visuellement lumineuses malgré leur petite taille — elles devraient paraître rondes et pleines, non plates ni crêpes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle et encore légèrement pâteux — lorsqu'ils sont pressés, ils se sentent doux et ne ressortent pas fermement. L'intérieur ne sera pas cuit.",
+            "action": "Retourner à l'huile pendant 60 à 90 secondes. Le changement de couleur de l'or à l'ambre n'est pas seulement la surface — il est corrélé avec l'intérieur étant cuit à travers."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profonde de tous les côtés, gonflée et ronde, sentant la lumière quand levée avec une cuillère à fentes. Lorsque l'on est cassé ouvert, l'intérieur est creux au centre ou en toile avec de grandes poches d'air.",
+            "action": "Enlevez immédiatement — ils s'assombrissent rapidement à partir de ce point. Transférer dans une assiette et s'habiller avec du miel, de la cannelle et du noyer dans les 30 secondes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé avec une coquille dure et épaisse qui se fissure plutôt que donne quand pressé — la graisse intérieure a surchauffé la pâte et le sucre a commencé à brûler.",
+            "action": "Ils sont encore comestibles (un peu amers) — le miel aidera à équilibrer. Réduire la température de l'huile de 10C pour le prochain lot."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un loukou fait doucement à l'aide d'une cuillère — il devrait revenir immédiatement, comme une petite balle résiliente. Il devrait sentir la lumière pour sa taille et creux au centre. S'il se sent dense et riche en pain, la pâte était soit sous-fermentée, soit trop fraîche."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Habiller et servir",
+      "inputs": [
+        "fried_loukoumades",
+        "prepared_honey_and_garnish"
+      ],
+      "outputState": "finished_loukoumades",
+      "instructions": "Transférer les loukoumades chauds dans un bol ou une assiette peu profond. Immédiatement arrosez le miel chaud généreusement sur eux — utilisez plus que vous ne le pensez, parce que le miel est partiellement absorbé par la pâte chaude. Poussière libéralement avec de la cannelle moulue, puis disperser les noix légèrement broyées sur le dessus. L'ensemble du procédé de pansement ne doit pas prendre plus de 30 secondes par lot. Loukoumades doit être mangé chaud: le contraste entre l'extérieur croustillant et l'intérieur creux vapeur est la caractéristique caractéristique d'un grand loukoumade, et dans les 5 minutes l'extérieur s'adoucit de l'humidité du miel et de la vapeur à l'intérieur. Dans les festivals grecs et les stands de rue, les loukoumades sont servis dans des cônes en papier et mangés debout, immédiatement, sans cérémonie.",
+      "visualCue": {
+        "primaryTarget": "Un bol de sphères dorées scintillantes laquées en miel ambre, blanc-neige à la cannelle, et roussâtres avec des miettes de noix dorées — vapeur toujours montant du tas.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Miel appliqué avec parcimonie — les loukoumades semblent presque secs, avec seulement un mince éclat de miel plutôt qu'une laque appropriée. Ils auront un goût unidimensionnel.",
+            "action": "Ajouter plus de miel immédiatement. Il n'y a pas trop de miel sur un loukoumade."
+          },
+          {
+            "state": "Perfect",
+            "description": "Collage, généreusement enduit, pulvérisé à la cannelle et collé à la noix – chaque pièce est un monde complet : croustillant, productif, doux, épicé chaud et noisette en une seule bouchée.",
+            "action": "Mangez immédiatement. Ce plat n'attendra pas."
+          },
+          {
+            "state": "Overdone",
+            "description": "Loukoumades habillés puis laissés 10+ minutes — l'extérieur est devenu doux et le miel les a rendus lourds et humides.",
+            "action": "Rien de récupérable. La prochaine fois, faire frire et s'habiller en petits lots pour servir continuellement plutôt que tous à la fois."
+          }
+        ]
+      },
+      "feelCue": "Mordre dans un loukoumade dans la première minute: l'extérieur doit donner avec un léger croûte avant de céder à un intérieur doux, légèrement creux qui libère une bouffée de vapeur. Le miel devrait ooze légèrement de l'intérieur où il a trempé à travers le mur. La cannelle doit frapper l'arrière du nez plutôt que la langue — aromatique, pas tranchante."
+    }
+  ]
 };

@@ -1,85 +1,236 @@
 export default {
-  repoId: "master_mexican_mexicanesquites_001",
-  parentRepoId: null,
-  slug: "mexican-esquites",
-  author: "ForkRecipe Kitchen",
-  title: "Esquites (Mexican Street Corn Salad)",
-  description: "Charred corn kernels tossed warm with crema, lime, cotija, and chile powder — all the drama of elote in a cup, the kernels popping with sweetness against the salty, creamy, spicy dressing.",
-  cuisine: "Mexican",
-  culture: "Mexican",
-  category: "vegetables",
-  tags: ["vegetable", "vegetarian", "corn", "mexican", "street-food", "cotija"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 3, sour: 3, bitter: 0, umami: 2, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Fresh corn kernels (from 4 ears) or frozen",  ratioValue: 500, defaultUnit: "g",  substitutions: ["canned corn (drain well and dry before charring)"] },
-    { ingId: "ing_02", role: "Dairy",    name: "Mexican crema or sour cream",                  ratioValue: 80,  defaultUnit: "g",  substitutions: ["Greek yogurt", "crème fraîche"] },
-    { ingId: "ing_03", role: "Dairy",    name: "Mayonnaise",                                   ratioValue: 40,  defaultUnit: "g",  substitutions: ["vegan mayo"] },
-    { ingId: "ing_04", role: "Dairy",    name: "Cotija cheese, crumbled",                      ratioValue: 60,  defaultUnit: "g",  substitutions: ["feta cheese", "Parmesan"] },
-    { ingId: "ing_05", role: "Citrus",   name: "Fresh lime juice",                             ratioValue: 30,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",    name: "Chile powder or tajín",                        ratioValue: 5,   defaultUnit: "g",  substitutions: ["ancho powder", "smoked paprika"] },
-    { ingId: "ing_07", role: "Allium",   name: "Scallions, thinly sliced",                     ratioValue: 30,  defaultUnit: "g",  substitutions: ["white onion, minced"] },
-    { ingId: "ing_08", role: "Herb",     name: "Fresh cilantro, chopped",                      ratioValue: 10,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning","name": "Salt",                                       ratioValue: 3,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_10", role: "Fat",      name: "Butter or neutral oil",                        ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_mexican_mexicanesquites_001",
+  "parentRepoId": null,
+  "slug": "mexican-esquites",
+  "author": "ForkRecipe Kitchen",
+  "title": "Esquites (Salade de maïs de la rue mexicaine)",
+  "description": "Des grains de maïs carbonisé ont été jetés au chaud avec de la créma, de la chaux, du cotija et de la poudre de chile.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain",
+  "category": "vegetables",
+  "tags": [
+    "légumes",
+    "végétarien",
+    "maïs",
+    "Mexique",
+    "Produits de la rue",
+    "cotija"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sear",
-      inputs: ["ing_01", "ing_10", "ing_09"],
-      outputState: "charred_corn",
-      instructions: "Heat a wide, dry cast-iron skillet or heavy pan over the highest possible heat until you can hold your palm 5cm above the surface for only 1–2 seconds. Add the butter, let it foam and begin to brown, then add the corn kernels in a single, uncrowded layer — you may need to do this in two batches. Do not stir for 2 full minutes. Let the bottom layer of corn make hard contact with the hot pan and char. Then toss once and let it sit for another 90 seconds. The goal is visible black charring on some kernels with others remaining golden — a variety of char is more interesting than uniform browning.",
-      visualCue: {
-        primaryTarget: "A mosaic of golden-yellow, deep amber, and char-black corn kernels. The pan should have a dark, fragrant fond.",
-        spectrum: [
-          { state: "Underdone", description: "All kernels are pale yellow and steaming. No char anywhere. The pan is too cold or the corn is too wet.", action: "Remove half the corn if overcrowded. Increase heat. Wait until the pan is screaming hot before adding corn." },
-          { state: "Perfect",   description: "A spectrum of char — some kernels black, some amber-gold, some pale. The kitchen smells of popcorn and butter char. The corn has dried slightly and concentrated in sweetness.", action: "Transfer to a bowl and proceed while still hot." },
-          { state: "Overdone",  description: "Most kernels are uniformly black. The pan has burnt fond.", action: "The corn is fine — very charred corn is intentional in Mexican street food. Proceed with the recipe." },
-        ],
-      },
-      feelCue: "Listen for a constant, aggressive pop and hiss when the corn is in the hot pan — it should sound like popcorn about to pop. Silence means the pan isn't hot enough.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Graines fraîches (à partir de 4 épis) ou congelées",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "maïs en conserve (drainer bien et sécher avant l'abattage)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toss",
-      inputs: ["charred_corn", "ing_02", "ing_03", "ing_05", "ing_06", "ing_07"],
-      outputState: "dressed_esquites",
-      instructions: "While the corn is still hot, transfer to a bowl. Add the crema, mayonnaise, lime juice, chile powder, and sliced scallions. Toss immediately — the heat from the corn will warm the dressing and help it coat every kernel. Taste and adjust: more lime for brightness, more chile for heat, a pinch of salt if needed. The dressing should be creamy, tangy, and spicy — each bite should have all four elements simultaneously.",
-      visualCue: {
-        primaryTarget: "Charred corn kernels fully coated in a creamy, pale-yellow dressing with visible chile-red specks and green scallion.",
-        spectrum: [
-          { state: "Underdone", description: "Dressing is not fully coating the corn — some kernels are dry and uncoated.", action: "Toss more vigorously. If the dressing is too thick, a few drops more lime juice will loosen it." },
-          { state: "Perfect",   description: "Every kernel is coated. The mixture is warm, steaming, and the char smell mingles with lime and cream. The scallion is distributed throughout.", action: "Plate and finish with cotija and herbs." },
-          { state: "Overdone",  description: "The dressing has gone from creamy to thin from too much lime juice.", action: "Add an extra tablespoon of crema to restore body." },
-        ],
-      },
-      feelCue: "Taste a spoonful — the first flavor should be sweet corn, then cream, then the brightness of lime cutting through, then a heat build from the chile. If one element dominates, adjust.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Crème créma ou aigre mexicaine",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Yogourt grec",
+        "Crème fraîche"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Garnish",
-      inputs: ["dressed_esquites", "ing_04", "ing_08", "ing_06"],
-      outputState: "finished_esquites",
-      instructions: "Transfer to cups or a serving bowl. Scatter the crumbled cotija generously over the top — it should look like a snow of salty cheese. Add the chopped cilantro. Finish with an extra dusting of chile powder on top for visual contrast and an additional hit of heat. Serve immediately — this is a hot dish and the textural contrast of the charred kernels diminishes as they cool.",
-      visualCue: {
-        primaryTarget: "Creamy, charred corn in a cup or bowl with a generous cap of white cotija, vivid green cilantro, and a rust-red dusting of chile.",
-        spectrum: [
-          { state: "Underdone", description: "Little garnish — the dish looks monochromatic and flat.", action: "Be generous with the cotija. It is not merely garnish — it is a main flavor component." },
-          { state: "Perfect",   description: "Abundant cotija, bright cilantro, and visible chile red. The colors are vivid and appetizing. Steam still rising from the corn.", action: "Serve within 5 minutes of dressing." },
-          { state: "Overdone",  description: "Corn has cooled and is no longer steaming. The dressing has absorbed and the kernels look dry.", action: "A 30-second blast in a hot pan with a drop of butter revives it. Add fresh cotija and herbs after reheating." },
-        ],
-      },
-      feelCue: "Scoop a spoonful and let it fall — the corn should fall in a creamy cascade, not a dry clatter. Each kernel should glisten with dressing.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Mayonnaise",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "mayo végétalien"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Dairy",
+      "name": "Fromage Cotija, émietté",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "fromage feta",
+        "Parmesan"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Citrus",
+      "name": "Jus de chaux frais",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Chili poudre ou tajín",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poudre d'ancho",
+        "paprika fumé"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Échalons, tranchés finement",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon blanc haché"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Coriandre fraîche, hachée",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Beurre ou huile neutre",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sear",
+      "inputs": [
+        "ing_01",
+        "ing_10",
+        "ing_09"
+      ],
+      "outputState": "charred_corn",
+      "instructions": "Chauffer une poêle en fonte large et sèche ou une poêle lourde sur la plus haute chaleur possible jusqu'à ce que vous puissiez maintenir votre paume 5cm au-dessus de la surface pendant seulement 1-2 secondes. Ajouter le beurre, laisser mousser et commencer à brunir, puis ajouter les grains de maïs dans une seule couche non surpeuplée — vous devrez peut-être le faire en deux lots. Ne pas remuer pendant 2 minutes. Laissez la couche inférieure de maïs entrer en contact dur avec la poêle chaude et l'omble. Puis jetez une fois et laissez-la reposer encore 90 secondes. Le but est l'ombrage noir visible sur certains grains avec d'autres restant dorés — une variété d'omble est plus intéressante que le brunissement uniforme.",
+      "visualCue": {
+        "primaryTarget": "Une mosaïque de grains de maïs jaune-or, ambre profond et noir-char. La poêle devrait avoir un goût sombre et parfumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Tous les grains sont jaune pâle et à la vapeur. Pas de char nulle part. La poêle est trop froide ou le maïs trop humide.",
+            "action": "Enlever la moitié du maïs si elle est surpeuplée. Augmenter la chaleur. Attendez que la poêle crie chaud avant d'ajouter du maïs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un spectre de char — quelques grains noirs, un peu d'or ambre, un peu pâle. La cuisine sent le pop-corn et le beurre. Le maïs a séché légèrement et concentré dans la douceur.",
+            "action": "Transférer dans un bol et procéder tout en étant encore chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "La plupart des grains sont uniformément noirs. La poêle a brûlé.",
+            "action": "Le maïs est fin — le maïs très carbonisé est intentionnel dans la nourriture de rue mexicaine. Passez à la recette."
+          }
+        ]
+      },
+      "feelCue": "Écoutez un pop constant et agressif et sifflez quand le maïs est dans la poêle chaude — il devrait sonner comme du popcorn sur le point de sauter. Le silence signifie que la poêle n'est pas assez chaude."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Découpe",
+      "inputs": [
+        "charred_corn",
+        "ing_02",
+        "ing_03",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "dressed_esquites",
+      "instructions": "Alors que le maïs est encore chaud, transférer dans un bol. Ajouter le créma, la mayonnaise, le jus de lime, la poudre de chile et les pétoncles tranchés. Jetez immédiatement — la chaleur du maïs réchauffera la vinaigrette et l'aidera à enrober chaque grain. Goûtez et ajustez : plus de chaux pour la luminosité, plus de chile pour la chaleur, une pincée de sel si nécessaire. La vinaigrette doit être crémeuse, acidulée et épicée; chaque morsure doit avoir les quatre éléments simultanément.",
+      "visualCue": {
+        "primaryTarget": "Amandes de maïs carbonisé entièrement enrobées d'une vinaigrette crémeuse jaune pâle avec des taches rouge chile visibles et de l'échalon vert.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'habillage ne recouvre pas entièrement le maïs — certains grains sont secs et non couchés.",
+            "action": "Jetez plus vigoureusement. Si la vinaigrette est trop épaisse, quelques gouttes de jus de lime le desserrent."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque noyau est enduit. Le mélange est chaud, à la vapeur, et l'odeur de char se mêle à la chaux et à la crème. Le pétoncle est distribué partout.",
+            "action": "Assietter et finir avec le cotija et les herbes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La vinaigrette est passée de crémeux à mince de trop de jus de lime.",
+            "action": "Ajouter une cuillère à soupe supplémentaire de créma pour restaurer le corps."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillerée — la première saveur devrait être le maïs sucré, puis la crème, puis la luminosité de la chaux couper à travers, puis une chaleur construire à partir du chile. Si un élément domine, ajustez."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Garnir",
+      "inputs": [
+        "dressed_esquites",
+        "ing_04",
+        "ing_08",
+        "ing_06"
+      ],
+      "outputState": "finished_esquites",
+      "instructions": "Transférer dans des tasses ou un bol de service. Dispersez généreusement le cotija émietté sur le dessus — il devrait ressembler à une neige de fromage salé. Ajouter la coriandre hachée. Terminer avec une poussière supplémentaire de poudre de chile sur le dessus pour un contraste visuel et un coup de chaleur supplémentaire. Servir immédiatement — c'est un plat chaud et le contraste textural des grains carbonisés diminue à mesure qu'ils refroidissent.",
+      "visualCue": {
+        "primaryTarget": "Maïs crémeux, carbonisé dans une tasse ou un bol avec une généreuse casquette de cotija blanc, une coriandre verte vive et une poussière rouge rouille de chile.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Peu garnir — le plat semble monochromatique et plat.",
+            "action": "Soyez généreux avec le cotija. Il ne s'agit pas seulement d'une garniture — c'est une composante principale de la saveur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cotija abondante, coriandre brillante et rouge chile visible. Les couleurs sont vives et appétissantes. La vapeur monte toujours du maïs.",
+            "action": "Servir dans les 5 minutes suivant la vinaigrette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le maïs s'est refroidi et ne fume plus. La vinaigrette a absorbé et les grains ont l'air secs.",
+            "action": "Une explosion de 30 secondes dans une poêle chaude avec une goutte de beurre la ravive. Ajouter le cotija frais et les herbes après le réchauffage."
+          }
+        ]
+      },
+      "feelCue": "Coupez une cuillère et laissez tomber — le maïs devrait tomber dans une cascade crémeuse, et non dans un clatter sec. Chaque noyau doit briller avec de la vinaigrette."
+    }
+  ]
 };

@@ -1,100 +1,259 @@
 export default {
-  repoId: "master_korean_doenjang-jjigae_001",
-  parentRepoId: null,
-  slug: "doenjang-jjigae",
-  author: "ForkRecipe Kitchen",
-  title: "Doenjang Jjigae",
-  description: "Korea's essential soybean-paste stew — doenjang simmered with zucchini, tofu, and mushrooms in a kelp-anchovy broth, intensely savory and deeply comforting in every mouthful.",
-  cuisine: "Korean",
-  culture: "Seoul",
-  category: "proteins",
-  tags: ["korean", "fermented", "soybean", "stew", "tofu", "comfort"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "35 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 5, sour: 1, bitter: 2, umami: 5, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Anchovy-kelp stock (myeolchi dashima yuksu)",      ratioValue: 500, defaultUnit: "g",  substitutions: ["kombu dashi", "vegetable stock"] },
-    { ingId: "ing_02", role: "Umami",     name: "Doenjang (Korean fermented soybean paste)",        ratioValue: 50,  defaultUnit: "g",  substitutions: ["miso paste (use 35g, less assertive)"] },
-    { ingId: "ing_03", role: "Protein",   name: "Firm or medium tofu, cubed 2 cm",                  ratioValue: 200, defaultUnit: "g",  substitutions: ["silken tofu", "soft tofu"] },
-    { ingId: "ing_04", role: "Structure", name: "Korean zucchini (or regular zucchini), half-moon sliced", ratioValue: 120, defaultUnit: "g", substitutions: ["grey zucchini", "Korean squash"] },
-    { ingId: "ing_05", role: "Umami",     name: "Shiitake mushrooms, quartered",                    ratioValue: 60,  defaultUnit: "g",  substitutions: ["king oyster mushrooms", "dried shiitake reconstituted"] },
-    { ingId: "ing_06", role: "Allium",    name: "Scallions, cut into 3 cm lengths",                 ratioValue: 40,  defaultUnit: "g",  substitutions: ["green onion"] },
-    { ingId: "ing_07", role: "Allium",    name: "Garlic cloves, minced",                            ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Heat",      name: "Gochugaru (Korean chili flake)",                   ratioValue: 10,  defaultUnit: "g",  substitutions: ["gochujang (1 tbsp, adds more sweetness)"] },
-    { ingId: "ing_09", role: "Fat",       name: "Toasted sesame oil",                               ratioValue: 10,  defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_korean_doenjang-jjigae_001",
+  "parentRepoId": null,
+  "slug": "doenjang-jjigae",
+  "author": "ForkRecipe Kitchen",
+  "title": "Doenjang Jjigae",
+  "description": "Le ragoût de soja-paste essentiel de la Corée — doenjang mijoté de courgettes, de tofu et de champignons dans un bouillon d'alpage, intensément salé et profondément réconfortant dans chaque bouche.",
+  "cuisine": "Coréen",
+  "culture": "Séoul",
+  "category": "proteins",
+  "tags": [
+    "coréen",
+    "fermenté",
+    "soja",
+    "ragoût",
+    "tofu",
+    "confort"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "35 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 5,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 5,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_02", "ing_07", "ing_08"],
-      outputState: "doenjang_broth",
-      instructions: "Pour the anchovy-kelp stock into a clay pot (ttukbaegi) or medium heavy saucepan and bring to a gentle simmer over medium heat. Add the minced garlic and gochugaru and stir to combine. Now add the doenjang: do not drop it in whole — instead, place it in a fine-mesh strainer set over the simmering broth and press it through with the back of a spoon, or place it directly in the broth and dissolve it by mashing against the side of the pot with a wooden spoon. Undissolved lumps of doenjang will cook unevenly and leave harsh, sharp pockets. Once fully dissolved, taste the broth — it should be assertively savory, slightly pungent, and have a good underlying heat. Adjust with a pinch more doenjang if it tastes flat.",
-      visualCue: {
-        primaryTarget: "A gently simmering, cloudy, amber-tan broth with a faint reddish tint from the gochugaru — opaque rather than clear, smelling deeply of fermented soybean with garlic undertones.",
-        spectrum: [
-          { state: "Underdone", description: "Doenjang lumps still visible as darker paste islands floating in the stock, undissolved garlic sitting at the bottom, broth smelling raw and sharp.", action: "Stir vigorously and press any remaining doenjang lumps against the pot side until the broth is uniformly cloudy and fragrant." },
-          { state: "Perfect",   description: "Uniformly cloudy, a warm amber color, simmering gently with lazy bubbles, the kitchen filling with the deeply appetizing smell of fermented soybean and garlic — complex, savoury, slightly funky.", action: "Add the zucchini and mushrooms." },
-          { state: "Overdone",  description: "Broth is boiling aggressively, the surface foamy and the doenjang's more delicate fermented notes being driven off. The smell is sharp and one-dimensional.", action: "Reduce heat immediately to a gentle simmer — doenjang jjigae should never boil hard." },
-        ],
-      },
-      feelCue: "Taste a spoonful of broth — it should land immediately with a wall of savory, fermented depth that coats the back of your throat. There should be a slow-building gentle heat from the gochugaru underneath, not sharpness. If it tastes flat, the doenjang needs more time to dissolve and bloom.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Stock d'anchois-kelp (myeolchi dashima yuksu)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "kombu dashi",
+        "stock de légumes"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["doenjang_broth", "ing_04", "ing_05"],
-      outputState: "vegetables_simmered",
-      instructions: "Add the zucchini half-moons and quartered shiitake mushrooms to the doenjang broth. Stir gently to submerge and bring back to a gentle simmer. Cook for 5–7 minutes until the zucchini is just tender — it should offer slight resistance at the center when pressed with a spoon but not be raw or crunchy. The mushrooms will have softened and begun to release their own umami into the broth, deepening it further. Do not overcook the zucchini to mush; it should hold its shape while becoming silky and fully cooked through.",
-      visualCue: {
-        primaryTarget: "Zucchini half-moons sitting in the broth are slightly translucent at the edges and jade-green in the center, the mushrooms have darkened and softened, and the broth has taken on a slightly deeper color from their released liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Zucchini is still opaque white and raw-tasting at the center, the cut surface not yet softened. Mushrooms look unchanged from their raw state.", action: "Continue simmering — 2–3 more minutes. Press a zucchini piece with a spoon; it should just begin to yield." },
-          { state: "Perfect",   description: "Zucchini is just tender and yielding, jade-green, holding its shape but with no raw crunch. Mushrooms are tender and dark, fully seasoned by the broth.", action: "Add the tofu gently." },
-          { state: "Overdone",  description: "Zucchini has collapsed to a pale, watery mush, releasing water into the broth and diluting it. Mushrooms are stringy and tough from over-cooking.", action: "Add the tofu and finish the stew — the vegetables cannot be recovered, but the rest of the dish can be brought to a good result." },
-        ],
-      },
-      feelCue: "Pierce a zucchini piece at its thickest point with a chopstick — it should slide through with gentle, even resistance, the way a ripe peach feels under pressure. Not mushy, not raw-firm.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Doenjang (pâte de soja fermentée coréenne)",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâte miso (utiliser 35g, moins assertive)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["vegetables_simmered", "ing_03", "ing_06"],
-      outputState: "assembled_jjigae",
-      instructions: "Add the cubed tofu gently to the simmering stew, nestling it between the vegetables without stirring aggressively — tofu is fragile and breaks apart easily, and large intact cubes are part of the visual and textural identity of the dish. Add the scallion lengths. Simmer gently for 3–4 more minutes, just enough for the tofu to heat through completely and absorb some of the broth. The tofu should retain its cube shape; do not stir the stew once the tofu is in, only gently tilt the pot or spoon broth over the top of the tofu cubes to cook the upper surface.",
-      visualCue: {
-        primaryTarget: "White tofu cubes sitting intact in the tawny broth alongside jade zucchini and dark mushrooms, the scallion rings adding bright green, the surface of the broth gently trembling from the simmer below.",
-        spectrum: [
-          { state: "Underdone", description: "Tofu cubes are cold at the center — cutting one reveals a temperature divide, the inside still pale and cool, the surface barely warmed.", action: "Simmer another 2 minutes, spooning hot broth over the top of each cube if needed." },
-          { state: "Perfect",   description: "Tofu is uniformly warmed through, its surface has taken on a slightly silkier texture from the simmering broth, the scallion is just wilted and bright green. The stew looks complete.", action: "Remove from heat and finish with sesame oil." },
-          { state: "Overdone",  description: "Tofu has broken into ragged pieces from aggressive stirring or prolonged boiling; the stew looks messy and the tofu has released its water into the broth, diluting it.", action: "The flavor is unaffected; finish with sesame oil and serve, focusing on the ladle rather than the spoon to keep remaining tofu pieces intact." },
-        ],
-      },
-      feelCue: "Gently press the back of a spoon against a tofu cube — it should resist slightly, feel warm all the way through, and spring back without crumbling. If it feels cold or the center has a rubbery squeak, it needs more time.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Tofu ferme ou moyen, cube 2 cm",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tofu de soie",
+        "tofu doux"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["assembled_jjigae", "ing_09"],
-      outputState: "finished_doenjang_jjigae",
-      instructions: "Remove the pot from the heat and drizzle the toasted sesame oil in a thin stream across the surface of the stew. Do not stir it in; let it pool and shimmer on top. Carry the entire pot or clay vessel directly to the table — doenjang jjigae is served bubbling hot, traditionally in a clay pot that retains heat throughout the meal. Set it on a trivet and ladle into individual bowls over steamed rice. The stew should be eaten immediately while piping hot; the flavors are at their most vivid in the first five minutes of serving.",
-      visualCue: {
-        primaryTarget: "A gently bubbling, tawny stew in the pot, a thin slick of sesame oil catching the light on the surface, white tofu cubes and jade zucchini visible beneath, scallion rings bright green throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Sesame oil not yet added, stew looks flat on the surface with no sheen, and the aroma is missing the nutty, aromatic top note that defines the finished dish.", action: "Drizzle sesame oil across the surface before serving." },
-          { state: "Perfect",   description: "A deeply aromatic, complex stew with a glossy surface. The smell is simultaneously funky, savory, nutty, and slightly spicy — deeply Korean in character. It should make you want to lean in and breathe deeply.", action: "Serve immediately in the pot, with rice and banchan alongside." },
-          { state: "Overdone",  description: "Stew has been reheated multiple times and the tofu has become rubbery and tight, the zucchini is grey and waterlogged, and the doenjang's flavors have flattened.", action: "Add a fresh spoonful of doenjang dissolved in hot water and a few drops of sesame oil to revive the aroma and depth." },
-        ],
-      },
-      feelCue: "The first spoonful should hit you with warmth before the flavors even register — this is a dish defined by its temperature as much as its taste. The tofu should be almost silky, the zucchini tender but present, and the broth should leave a long, savory, slightly bitter aftertaste from the doenjang that lingers pleasantly for minutes.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Courgettes coréennes (ou courgettes régulières), demi-lune tranchées",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "courgettes grises",
+        "Courge coréenne"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Umami",
+      "name": "Champignons chiitake, quartiers",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "champignons des huîtres",
+        "shiitake séché reconstitué"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Échalons, coupés en longueurs de 3 cm",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon vert"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Heat",
+      "name": "Gochugaru (glaces coréens)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gochujang (1 c. à soupe, ajoute plus de douceur)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "doenjang_broth",
+      "instructions": "Verser le bouillon d'anchois-kelp dans une casserole d'argile (ttukbaegi) ou une casserole moyennement lourde et laisser mijoter légèrement à feu moyen. Ajouter l'ail haché et le gochugaru et mélanger. Ajoutez maintenant le doenjang: ne le déposez pas en entier — au lieu de cela, placez-le dans une passoire fine sur le bouillon mijotant et pressez-le à l'arrière d'une cuillère, ou placez-le directement dans le bouillon et dissolvez-le en massant contre le côté de la casserole avec une cuillère en bois. Les morceaux non dissous de doenjang cuireont inégalement et laisseront des poches fortes et pointues. Une fois complètement dissout, goûtez au bouillon — il devrait être savoureux, légèrement piquant, et avoir une bonne chaleur sous -jacente. Ajustez avec une pincée plus de doenjang si elle a un goût plat.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon légèrement mijoté, nuageux et ambre-tan avec une faible teinte rougeâtre du gochugaru — opaque plutôt que clair, sentant profondément le soja fermenté avec des tons d'ail.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Doenjang grumes toujours visibles comme des îles à pâte plus foncée flottant dans le stock, ail non dissout assis au fond, bouillon sentant cru et tranchant.",
+            "action": "Incorporer vigoureusement et presser les morceaux de doenjang restants contre le côté pot jusqu'à ce que le bouillon soit uniformément nuageux et parfumé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un temps uniformément nuageux, une couleur ambre chaude, mijotant doucement avec des bulles paresseuses, le remplissage de la cuisine avec l'odeur profondément appétissante du soja fermenté et de l'ail - complexe, salé, légèrement funky.",
+            "action": "Ajouter les courgettes et les champignons."
+          },
+          {
+            "state": "Overdone",
+            "description": "Broth est bouillant agressivement, la surface mousseuse et les notes fermentées plus délicates du doenjang étant chassées. L'odeur est nette et unidimensionnelle.",
+            "action": "Réduisez immédiatement la chaleur jusqu'à ce qu'elle mijote doucement."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une cuillère de bouillon — il devrait atterrir immédiatement avec un mur de profondeur salée et fermentée qui enveloppe l'arrière de votre gorge. Il devrait y avoir une chaleur douce de construction lente du gochugaru en dessous, pas une netteté. Si elle a un goût plat, le doenjang a besoin de plus de temps pour se dissoudre et fleurir."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "doenjang_broth",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "vegetables_simmered",
+      "instructions": "Ajouter les demi-lunes de courgettes et les shiitakes dans le bouillon de doenjang. Incorporer délicatement pour submerger et laisser mijoter. Cuire de 5 à 7 minutes jusqu'à ce que les courgettes soient tendres; elles devraient offrir une légère résistance au centre lorsqu'elles sont pressées avec une cuillère, mais ne pas être crues ou croquantes. Les champignons se sont adoucis et ont commencé à libérer leur propre umami dans le bouillon, l'approfondissement plus loin. Ne pas trop cuire les courgettes pour les bouillir; il devrait tenir sa forme tout en devenant soyeux et entièrement cuit à travers.",
+      "visualCue": {
+        "primaryTarget": "Les demi-lunes de Zucchini assises dans le bouillon sont légèrement translucides aux bords et vert jade au centre, les champignons ont obscurci et adouci, et le bouillon a pris une couleur légèrement plus profonde de leur liquide libéré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Zucchini est encore blanc opaque et goût cru au centre, la surface coupée n'est pas encore adoucie. Les champignons semblent inchangés par rapport à leur état brut.",
+            "action": "Continuer à mijoter — 2–3 minutes de plus. Appuyez sur un morceau de courgette avec une cuillère; il devrait juste commencer à produire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Zucchini est juste tendre et productif, vert jade, tenant sa forme mais sans croquant brut. Les champignons sont tendres et sombres, entièrement assaisonnés par le bouillon.",
+            "action": "Ajouter le tofu doucement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Zucchini s'est effondré jusqu'à un mousquet pâle et aqueux, libérant de l'eau dans le bouillon et le diluant. Les champignons sont durs et difficiles à cuire.",
+            "action": "Ajouter le tofu et finir le ragoût — les légumes ne peuvent pas être récupérés, mais le reste du plat peut être apporté à un bon résultat."
+          }
+        ]
+      },
+      "feelCue": "Percez un morceau de courgette à son point le plus épais avec une baguette — il devrait glisser à travers avec une résistance douce, même, la façon dont une pêche mûre se sent sous pression. Pas musclé, pas cru."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "vegetables_simmered",
+        "ing_03",
+        "ing_06"
+      ],
+      "outputState": "assembled_jjigae",
+      "instructions": "Ajouter le tofu cube en douceur au ragoût mijotant, le nicher entre les légumes sans remuer agressivement — le tofu est fragile et se décompose facilement, et les grands cubes intacts font partie de l'identité visuelle et texturale du plat. Ajouter les longueurs de pétoncle. Laisser mijoter 3 à 4 minutes de plus, juste assez pour que le tofu puisse chauffer complètement et absorber une partie du bouillon. Le tofu doit conserver sa forme cube; ne pas remuer le ragoût une fois le tofu entré, il suffit d'incliner doucement le bouillon de pot ou de cuillère sur le dessus des cubes de tofu pour cuire la surface supérieure.",
+      "visualCue": {
+        "primaryTarget": "Des cubes de tofus blancs, assis intacts dans le bouillon fauve aux côtés des courgettes jade et des champignons foncés, les anneaux de pétoncle ajoutant vert vif, la surface du bouillon tremblant doucement de la mijoter en dessous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cubes de tofu sont froids au centre — la coupe révèle une fracture de température, l'intérieur encore pâle et frais, la surface à peine chauffée.",
+            "action": "Laisser mijoter encore 2 minutes, en cuillerant du bouillon chaud sur le dessus de chaque cube si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le tofu est uniformément réchauffé à travers, sa surface a pris une texture légèrement plus soyeuse du bouillon mijotant, l'échon est simplement flétri et vert vif. Le ragoût a l'air complet.",
+            "action": "Retirer du feu et finir avec de l'huile de sésame."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le tofu s'est cassé en morceaux d'agitation agressive ou d'ébullition prolongée; le ragoût semble désordonné et le tofu a libéré son eau dans le bouillon, le diluant.",
+            "action": "La saveur n'est pas affectée; terminer avec l'huile de sésame et servir, en se concentrant sur la louche plutôt que la cuillère pour garder les morceaux de tofu restants intacts."
+          }
+        ]
+      },
+      "feelCue": "Appuyez doucement sur le dos d'une cuillère contre un cube de tofu — il devrait résister légèrement, se sentir chaud tout le long du chemin, et revenir sans s'effondrer. S'il fait froid ou si le centre a un squeak caoutchouteux, il faut plus de temps."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "assembled_jjigae",
+        "ing_09"
+      ],
+      "outputState": "finished_doenjang_jjigae",
+      "instructions": "Retirez le pot du feu et arrosez l'huile de sésame grillée dans un mince ruisseau sur la surface du ragoût. Ne le remuez pas; laissez-le baigner et briller sur le dessus. Portez l'ensemble du vase d'argile directement à la table — doenjang jjigae est servi bouillonnant chaud, traditionnellement dans un vase d'argile qui conserve la chaleur tout au long du repas. Placez-le sur une trivette et une louche dans des bols individuels sur du riz cuit à la vapeur. Le ragoût doit être mangé immédiatement pendant que la tuyauterie est chaude; les saveurs sont à leur plus vif dans les cinq premières minutes de service.",
+      "visualCue": {
+        "primaryTarget": "Un ragoût crépus dans le pot, légèrement bouillonnant, une fine lécherette d'huile de sésame captant la lumière à la surface, des cubes de tofus blancs et des courgettes en jade visibles sous, des anneaux de pétoncle vert vif partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Huile de sésame non encore ajoutée, le ragoût semble plat à la surface sans éclat, et l'arôme manque la note supérieure aromatique de noix qui définit le plat fini.",
+            "action": "Arroser l'huile de sésame à travers la surface avant de servir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un ragoût complexe et aromatique avec une surface brillante. L'odeur est à la fois funky, savoureuse, noisette et légèrement épicée, profondément coréenne. Il devrait vous donner envie de vous pencher et de respirer profondément.",
+            "action": "Servir immédiatement dans la casserole, avec du riz et du banchan."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le ragoût a été réchauffé plusieurs fois et le tofu est devenu caoutchouteux et serré, les courgettes sont grises et arrosées, et les saveurs du doenjang se sont aplaties.",
+            "action": "Ajouter une cuillère fraîche de doenjang dissous dans l'eau chaude et quelques gouttes d'huile de sésame pour raviver l'arôme et la profondeur."
+          }
+        ]
+      },
+      "feelCue": "La première cuillère devrait vous frapper avec chaleur avant que les saveurs s'enregistrent — c'est un plat défini par sa température autant que son goût. Le tofu devrait être presque soyeux, les courgettes tendres mais présentes, et le bouillon devrait laisser un arrière-goût long, salé, légèrement amer du doenjang qui s'attarde agréablement pendant des minutes."
+    }
+  ]
 };

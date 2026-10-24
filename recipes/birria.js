@@ -1,144 +1,402 @@
 export default {
-  repoId: "master_mexican_birria_001",
-  parentRepoId: null,
-  slug: "birria",
-  author: "ForkRecipe Kitchen",
-
-  title: "Birria de Res (Jalisco Beef Birria)",
-  description: "Beef braised in a deep, brick-red broth of toasted guajillo and ancho chilies, charred tomato, and aromatic spices until the meat falls apart — the rich consommé served alongside for dipping birria tacos.",
-  cuisine: "Mexican",
-  culture: "Jalisco",
-  category: "proteins",
-
-  tags: ["mexican", "jalisco", "beef", "birria", "chili", "braise", "consomme", "tacos"],
-  difficulty: 4,
-  activeTime: "1 hour",
-  totalTime: "5 hours",
-  ratioSystem: "weight",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 2, umami: 5, heat: 3 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Beef chuck, bone-in short ribs, and oxtail mixed", ratioValue: 2000, defaultUnit: "g", substitutions: ["goat shoulder", "lamb shoulder"] },
-    { ingId: "ing_02", role: "Spice",     name: "Dried guajillo chilies, stems and seeds removed", ratioValue: 60,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Spice",     name: "Dried ancho chilies, stems and seeds removed",    ratioValue: 40,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",     name: "Dried chipotle or morita chilies",               ratioValue: 15,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Roma tomatoes, halved",                           ratioValue: 300,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "White onion, quartered",                          ratioValue: 200,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Allium",    name: "Garlic cloves, unpeeled",                         ratioValue: 30,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Ground cumin",                                    ratioValue: 6,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Dried oregano (Mexican)",                         ratioValue: 6,    defaultUnit: "g", substitutions: ["Italian oregano"] },
-    { ingId: "ing_10", role: "Spice",     name: "Ground cloves",                                   ratioValue: 2,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Ground cinnamon",                                 ratioValue: 3,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_12", role: "Aromatic",  name: "Bay leaves",                                      ratioValue: 4,    defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_13", role: "Aromatic",  name: "Fresh thyme sprigs",                              ratioValue: 10,   defaultUnit: "g", substitutions: ["dried thyme"] },
-    { ingId: "ing_14", role: "Acid",      name: "Apple cider vinegar",                             ratioValue: 30,   defaultUnit: "g", substitutions: ["white wine vinegar"] },
-    { ingId: "ing_15", role: "Liquid",    name: "Beef stock or water",                             ratioValue: 1500, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_16", role: "Seasoning", name: "Fine sea salt",                                   ratioValue: 20,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_17", role: "Garnish",   name: "White onion, finely diced",                       ratioValue: 80,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_18", role: "Garnish",   name: "Fresh cilantro, chopped",                         ratioValue: 30,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_19", role: "Acid",      name: "Lime wedges",                                     ratioValue: 60,   defaultUnit: "g", substitutions: [] },
+  "repoId": "master_mexican_birria_001",
+  "parentRepoId": null,
+  "slug": "birria",
+  "author": "ForkRecipe Kitchen",
+  "title": "Birria de Res (Jalisco Beef Birria)",
+  "description": "Le boeuf braisé dans un bouillon de guajillo et d'anchos grillés, de tomates carbonisées et d'épices aromatiques jusqu'à ce que la viande tombe en morceaux — le riche consommé servi aux côtés pour tremper des tacos de birrias.",
+  "cuisine": "Mexicain",
+  "culture": "Jalisco",
+  "category": "proteins",
+  "tags": [
+    "Mexique",
+    "Jalisco",
+    "boeuf",
+    "birria",
+    "Chili",
+    "braise",
+    "Consommation",
+    "tacos"
   ],
-
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hour",
+  "totalTime": "5 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 2,
+    "umami": 5,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_02", "ing_03", "ing_04"],
-      outputState: "toasted_chilies",
-      instructions: "Heat a dry comal or cast iron skillet over medium heat. Toast the dried chilies one by one: press each flat against the hot surface for 15–20 seconds per side, until they deepen in color, blister slightly, and release a rich, smoky aroma. Do not burn — they should smell of chocolate and smoke, not acrid char.",
-      visualCue: {
-        primaryTarget: "Each chili is slightly puffed and blistered, color has deepened to a near-black at the pressed spots. The kitchen smells of smoky chocolate and dried fruit.",
-        spectrum: [
-          { state: "Underdone", description: "Chilies look the same as before toasting — flat, dark, and without any blistering. Smell is flat and dusty.", action: "Return to the comal. The key moment is when you smell the chocolate-smoke aroma." },
-          { state: "Perfect",   description: "Light blistering, a faint smokiness, and the skin has become slightly pliable. The smell is rich, complex — chocolate, raisin, smoke.", action: "Place in a bowl, cover with boiling water, and soak 20 minutes." },
-          { state: "Overdone",  description: "Chilies are smoking and smell acrid and bitter. Black patches that crumble.", action: "Discard these chilies and start fresh. Burnt guajillo makes an intensely bitter birria that cannot be fixed." },
-        ],
-      },
-      feelCue: "A properly toasted chili becomes pliable and almost leathery — it bends rather than cracks. Undertoasted ones snap brittlely; overtoasted ones crumble.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Mâchoire de boeuf, côtes courtes désossées et queue de bœuf mélangée",
+      "ratioValue": 2000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "épaule de chèvre",
+        "épaule d'agneau"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Char",
-      inputs: ["ing_05", "ing_06", "ing_07"],
-      outputState: "charred_aromatics",
-      instructions: "On the same dry comal or directly over a gas flame, char the halved tomatoes cut-side down until blackened. Char the quartered onion and unpeeled garlic cloves on all sides until deeply browned, almost black in spots. This charring adds a deep, slightly bitter smokiness essential to birria.",
-      visualCue: {
-        primaryTarget: "Tomatoes are black on the cut side and collapsed. Onion is charred at the edges with softened interior. Garlic cloves are dark brown in spots and softened.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are only lightly browned, no char. Tomatoes haven't released their juices.", action: "Continue — the vegetables need to be genuinely charred, not just browned." },
-          { state: "Perfect",   description: "Black char marks on all vegetables. Tomatoes are collapsing and juicy. Onion edges are black with a soft center. Garlic is nearly soft.", action: "Add directly to the soaking chilies." },
-          { state: "Overdone",  description: "Completely black and acrid. Vegetables are entirely carbon.", action: "Trim the worst char off tomatoes and onion but retain some. Garlic should be discarded if completely burnt." },
-        ],
-      },
-      feelCue: "Press a charred tomato — it should completely give way and release juices. The char on the skin should be almost crunchy, contrasting with the soft, steamy interior.",
+      "ingId": "ing_02",
+      "role": "Spice",
+      "name": "Chilies de guajillo séchées, tiges et graines enlevées",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["toasted_chilies", "charred_aromatics", "ing_08", "ing_09", "ing_10", "ing_11", "ing_14"],
-      outputState: "birria_sauce",
-      instructions: "Drain the soaked chilies, reserving 250 g of the soaking liquid. Peel the charred garlic. Blend chilies, charred tomatoes, onion, garlic, all spices, and vinegar with the reserved soaking liquid until completely smooth. The sauce should be silky with no visible fiber or chunks. Pass through a medium-mesh strainer for maximum smoothness.",
-      visualCue: {
-        primaryTarget: "A deep, dark brick-red sauce — almost burgundy — completely smooth, with no visible pieces. Smells of toasted chili, chocolate, smoke, and spice.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is chunky with visible chili skin and seed pieces. Texture is rough.", action: "Blend longer and pass through a strainer. Chili skins left in will make the sauce bitter and gritty." },
-          { state: "Perfect",   description: "Completely smooth, deep brick-burgundy, fragrant and slightly thick. Passes through a strainer leaving behind only a small amount of fibrous material.", action: "Fry the sauce to deepen flavor, then braise the meat." },
-          { state: "Overdone",  description: "Blended too long and the sauce is very hot and frothy.", action: "Allow to cool before handling. Proceed." },
-        ],
-      },
-      feelCue: "Rub a small amount of strained sauce between your fingers — it should feel completely smooth, like a thin paint, with no graininess.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Chilies ancho séchées, tiges et graines enlevées",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Sear",
-      inputs: ["ing_01", "ing_16"],
-      outputState: "seared_beef",
-      instructions: "Season the beef generously with salt. In a large Dutch oven over high heat, sear all pieces in batches until deeply browned on all sides — about 4 minutes per side. Don't crowd the pot. The sear builds the fond that gives the consommé its depth.",
-      visualCue: {
-        primaryTarget: "Deep mahogany-brown crust on all seared surfaces. Dark, sticky fond on the pot bottom. The kitchen smells of roasting beef.",
-        spectrum: [
-          { state: "Underdone", description: "Beef is grey and steamed, not browned. Meat is sticking to the pot.", action: "The pot isn't hot enough. Remove beef, let pan reheat, and try again in smaller batches." },
-          { state: "Perfect",   description: "Deep brown crust, meat releases cleanly. Dark, rich fond coating the pot bottom.", action: "Remove beef, reduce heat, and fry the chili sauce." },
-          { state: "Overdone",  description: "Fond is very dark and beginning to burn. Bitter smell.", action: "Deglaze immediately with a splash of stock before adding the chili sauce." },
-        ],
-      },
-      feelCue: "When searing correctly, the beef will initially stick, then release cleanly when a proper crust has formed. Never force it off the pan prematurely.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Chipotle séché ou piments morita",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Braise",
-      inputs: ["seared_beef", "birria_sauce", "ing_15", "ing_12", "ing_13"],
-      outputState: "braised_birria",
-      instructions: "In the same pot, add the chili sauce over medium heat and fry for 3–4 minutes, stirring constantly, until it darkens slightly and smells toasted. Add the beef back in along with the stock, bay leaves, and thyme. Bring to a boil, skim thoroughly, then cover and cook in a 160 C (320 F) oven or over the lowest stovetop simmer for 3 to 3.5 hours.",
-      visualCue: {
-        primaryTarget: "After 3 hours, the broth is deep garnet-red and clear, the beef has collapsed into shreds at the slightest touch, and a layer of red-tinted fat floats at the top.",
-        spectrum: [
-          { state: "Underdone", description: "Beef is tender but still holds its shape firmly. Broth is thin and lighter in color.", action: "Continue braising. The collagen needs 3 full hours to dissolve into the broth." },
-          { state: "Perfect",   description: "Beef falls apart at a touch. Broth is deep, clear garnet with a beautiful red fat cap. Taste is complex, smoky, and deeply savory.", action: "Shred the beef into the broth and serve." },
-          { state: "Overdone",  description: "Beef has completely dissolved into the broth. Broth may be cloudy.", action: "Strain and serve as a soup. The shredded meat can be pressed and pan-fried for tacos." },
-        ],
-      },
-      feelCue: "After 3 hours, reach in with tongs and squeeze a piece of beef — it should crumble between your fingers like wet paper, offering no resistance at all.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Tomates roms, coupées en deux",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_6",
-      action: "Garnish",
-      inputs: ["braised_birria", "ing_17", "ing_18", "ing_19"],
-      outputState: "finished_birria",
-      instructions: "Shred the beef with two forks and return to the consommé. Taste and adjust salt. Ladle meat and broth into bowls. Top with diced white onion and cilantro. Serve lime wedges alongside. For tacos, dip tortillas in the red fat cap of the consommé before gridding, fill with birria meat and cheese, and serve with the consommé for dipping.",
-      visualCue: {
-        primaryTarget: "Deep garnet consommé with shreds of dark, tender beef. Bright white onion and green cilantro on top. The fat cap on the broth surface is a vivid red from the chili oil.",
-        spectrum: [
-          { state: "Underdone", description: "Consommé is thin and lacks depth. Beef shreds are still somewhat firm.", action: "Simmer uncovered for 20 more minutes to concentrate the broth." },
-          { state: "Perfect",   description: "Rich, deep-colored consommé that tastes intensely of chili, beef, and smoke. Shredded beef is silk-soft. Garnishes bright and fresh.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Consommé is very salty or very thick from over-reduction.", action: "Add water to dilute and adjust seasoning." },
-        ],
-      },
-      feelCue: "The finished consommé should coat your lips when you sip it — not watery, but body-full from rendered collagen, with a lingering warmth from the chipotle.",
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Oignon blanc, quartiers",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Gousses d'ail, non pelées",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Origan séché (Mexicain)",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Origan italien"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Gousses de terre",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 4,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Aromatic",
+      "name": "Fils de thym frais",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Thym séché"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Acid",
+      "name": "vinaigre de cidre de pomme",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "vinaigre de vin blanc"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Liquid",
+      "name": "Viande bovine ou eau",
+      "ratioValue": 1500,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_17",
+      "role": "Garnish",
+      "name": "Oignon blanc, finement coupé en dés",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_18",
+      "role": "Garnish",
+      "name": "Coriandre fraîche, hachée",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_19",
+      "role": "Acid",
+      "name": "Coins de chaux",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "toasted_chilies",
+      "instructions": "Chauffer une poêle en comal sec ou en fonte à feu moyen. Faire cuire les chilis séchés un par un : presser chaque plat contre la surface chaude pendant 15 à 20 secondes de chaque côté, jusqu'à ce qu'ils approfondissent en couleur, blister légèrement, et libérer un arôme riche et fumé. Ne brûlez pas — ils doivent sentir le chocolat et la fumée, pas l'omble d'acre.",
+      "visualCue": {
+        "primaryTarget": "Chaque chili est légèrement gonflé et blister, la couleur s'est approfondie jusqu'à un proche noir aux taches pressées. La cuisine sent le chocolat fumé et les fruits secs.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les chilis ressemblent à ceux d'avant le toast: plat, sombre et sans cloques. L'odeur est plate et poussiéreuse.",
+            "action": "Retournez au comal. Le moment clé est quand vous sentez l'arôme de fumée au chocolat."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des cloques légères, une légère fumée, et la peau est devenue légèrement souple. L'odeur est riche, complexe — chocolat, raisins secs, fumée.",
+            "action": "Mettre dans un bol, couvrir d'eau bouillante et tremper 20 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les chilies fument et sentent amère et amère. Des taches noires qui s'effondrent.",
+            "action": "Jetez ces piments et commencez à être frais. Le guajillo brûlé fait un birria intensément amer qui ne peut être fixé."
+          }
+        ]
+      },
+      "feelCue": "Un chili bien grillé devient pliable et presque coriace — il fléchit plutôt que craquelures. Les sous-vêtements se cassent, les survêtements s'effondrent."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Objet",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "charred_aromatics",
+      "instructions": "Sur le même comal sec ou directement au-dessus d'une flamme à gaz, charrer les tomates coupées en deux côtés jusqu'à ce que noircisse. Charr l'oignon en quartiers et les gousses d'ail non pelées de tous les côtés jusqu'à ce qu'elles soient profondément dorées, presque noires dans les taches. Cet ombrage ajoute une fumée profonde et légèrement amère essentielle à la birria.",
+      "visualCue": {
+        "primaryTarget": "Les tomates sont noires sur le côté coupé et se sont effondrées. L'oignon est carbonisé aux bords avec un intérieur adouci. Les gousses d'ail sont brun foncé dans les taches et ramollies.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes ne sont que légèrement dorés, pas d'omble. Les tomates n'ont pas libéré leur jus.",
+            "action": "Continuer — les légumes doivent être véritablement carbonisés, et pas seulement dorés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des marques de char sur tous les légumes. Les tomates s'effondrent et juteuses. Les bords de l'oignon sont noirs avec un centre doux. L'ail est presque doux.",
+            "action": "Ajouter directement aux piments."
+          },
+          {
+            "state": "Overdone",
+            "description": "Complètement noir et acride. Les légumes sont entièrement carbone.",
+            "action": "Couper le pire omble des tomates et de l'oignon mais en conserver. L'ail doit être jeté s'il est complètement brûlé."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une tomate carbonisée — elle devrait complètement céder et libérer des jus. L'omble sur la peau devrait être presque croquant, contrastant avec l'intérieur doux et vapeur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "toasted_chilies",
+        "charred_aromatics",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_14"
+      ],
+      "outputState": "birria_sauce",
+      "instructions": "Égoutter les piments trempés, réservant 250 g de liquide trempé. Peler l'ail carbonisé. Mélanger les chilis, les tomates carbonisées, l'oignon, l'ail, toutes les épices et le vinaigre avec le liquide absorbant réservé jusqu'à ce qu'il soit complètement lisse. La sauce doit être soyeuse sans fibre visible ni morceaux. Passez à travers un filtre à mailles moyennes pour une douceur maximale.",
+      "visualCue": {
+        "primaryTarget": "Une sauce rouge brique profonde et foncée, presque bordeaux, complètement lisse, sans morceaux visibles. Des odeurs de chili grillé, chocolat, fumée et épices.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est épaisse avec une peau de chili visible et des morceaux de graines. La texture est rude.",
+            "action": "Mélanger plus longtemps et passer à travers une souche. Les peaux de Chili laissées dans fera la sauce amère et gritty."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, brique profonde, parfumée et légèrement épaisse. Il passe à travers une souche ne laissant derrière lui qu'une petite quantité de matière fibreuse.",
+            "action": "Faire frire la sauce pour approfondir la saveur, puis brasser la viande."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mélange trop long et la sauce est très chaude et mousseuse.",
+            "action": "Laisser refroidir avant la manipulation. Continuez."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité de sauce tendue entre vos doigts — elle devrait se sentir complètement lisse, comme une fine peinture, sans grain."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Sear",
+      "inputs": [
+        "ing_01",
+        "ing_16"
+      ],
+      "outputState": "seared_beef",
+      "instructions": "Assaisonner généreusement le bœuf de sel. Dans un grand four néerlandais à feu vif, saisir tous les morceaux en lots jusqu'à ce qu'ils soient profondément dorés de tous les côtés, soit environ 4 minutes de chaque côté. Ne foulez pas le pot. La couture construit le fond qui donne au consommé sa profondeur.",
+      "visualCue": {
+        "primaryTarget": "Croûte acajou-brun profonde sur toutes les surfaces de mer. Un amour sombre et collant sur le fond du pot. La cuisine sent le boeuf rôti.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le boeuf est gris et cuit à la vapeur, non bruni. La viande colle au pot.",
+            "action": "Le pot n'est pas assez chaud. Retirer le boeuf, laisser la poêle réchauffer, et essayer à nouveau en petits lots."
+          },
+          {
+            "state": "Perfect",
+            "description": "Croûte brune profonde, la viande libère proprement. C'est sombre et riche.",
+            "action": "Retirer le boeuf, réduire le feu et faire frire la sauce chili."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le fond est très sombre et commence à brûler. Une odeur amère.",
+            "action": "Déglacer immédiatement avec un jet de bouillon avant d'ajouter la sauce chili."
+          }
+        ]
+      },
+      "feelCue": "Lorsque le boeuf est bien mis en mer, il doit d'abord coller, puis se libérer proprement lorsqu'une croûte appropriée s'est formée. Ne le force jamais prématurément."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Brise",
+      "inputs": [
+        "seared_beef",
+        "birria_sauce",
+        "ing_15",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "braised_birria",
+      "instructions": "Dans la même casserole, ajouter la sauce chili à feu moyen et faire frire pendant 3-4 minutes, en remuant constamment, jusqu'à ce qu'elle s'assombrisse légèrement et sente grillée. Ajouter le bœuf avec le stock, les feuilles de laurier et le thym. Porter à ébullition, écrémer abondamment, puis couvrir et cuire dans un four de 160 C (320 F) ou au-dessus de la plaque de cuisson la plus basse mijoter pendant 3 à 3,5 heures.",
+      "visualCue": {
+        "primaryTarget": "Après 3 heures, le bouillon est rouge grenat profond et clair, le bœuf s'est effondré en morceaux au moindre toucher, et une couche de graisse rouge-tinte flotte au sommet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La viande bovine est tendre mais conserve sa forme. Broth est mince et plus léger en couleur.",
+            "action": "Continuez à faire des larmes. Le collagène a besoin de 3 heures complètes pour se dissoudre dans le bouillon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le boeuf tombe en morceaux. Broth est un grenat clair et profond avec une belle casquette rouge. Le goût est complexe, fumé et profondément salé.",
+            "action": "Écraser le bœuf dans le bouillon et servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le boeuf s'est complètement dissous dans le bouillon. Le papillon peut être nuageux.",
+            "action": "Strain et servir de soupe. La viande déchiquetée peut être pressée et frite pour les tacos."
+          }
+        ]
+      },
+      "feelCue": "Après 3 heures, approchez avec des pinces et pressez un morceau de bœuf — il devrait s'effondrer entre vos doigts comme du papier mouillé, offrant aucune résistance du tout."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Garnir",
+      "inputs": [
+        "braised_birria",
+        "ing_17",
+        "ing_18",
+        "ing_19"
+      ],
+      "outputState": "finished_birria",
+      "instructions": "Écraser le bœuf avec deux fourchettes et revenir au consommé. Goûtez et ajustez le sel. Déposer la viande et le bouillon dans des bols. Garnir d'oignon blanc en dés et de coriandre. Servir les coins de chaux à côté. Pour les tacos, tremper les tortillas dans la casquette rouge du consommé avant le grillage, remplir de viande et de fromage de biria, et servir avec le consommé pour tremper.",
+      "visualCue": {
+        "primaryTarget": "Garnet profond consommé avec des lambeaux de bœuf foncé et tendre. Oignon blanc vif et coriandre verte sur le dessus. Le bouchon gras de la surface du bouillon est un rouge vif de l'huile de chili.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Consommé est mince et manque de profondeur. Les morceaux de boeuf sont encore un peu fermes.",
+            "action": "Laisser mijoter à découvert pendant 20 minutes pour concentrer le bouillon."
+          },
+          {
+            "state": "Perfect",
+            "description": "Consommé riche et de couleur profonde qui goûte intensément au chili, au boeuf et à la fumée. Le bœuf écrémé est doux de soie. Garnir lumineux et frais.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Consommé est très salé ou très épais à cause de la surréduction.",
+            "action": "Ajouter l'eau pour diluer et ajuster l'assaisonnement."
+          }
+        ]
+      },
+      "feelCue": "Le consommé fini devrait enrober vos lèvres quand vous le sirotez — non pas aqueuse, mais le corps plein de collagène rendu, avec une chaleur persistante du chipotle."
+    }
+  ]
 };

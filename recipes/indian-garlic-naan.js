@@ -1,85 +1,232 @@
 export default {
-  repoId: "master_indian_indiangarlicnaan_001",
-  parentRepoId: null,
-  slug: "indian-garlic-naan",
-  author: "ForkRecipe Kitchen",
-  title: "Garlic Naan",
-  description: "Charred, blistered, impossibly tender leavened flatbread — slicked with garlic butter and draped over a screaming-hot cast-iron pan that subs admirably for a tandoor, with a char that smells exactly right.",
-  cuisine: "Indian",
-  culture: "North Indian",
-  category: "breads",
-  tags: ["bread", "vegetarian", "dairy", "garlic", "indian"],
-  difficulty: 2,
-  activeTime: "40 min",
-  totalTime: "1 hour 30 min",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 1, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "All-purpose flour",              ratioValue: 100,  defaultUnit: "%", substitutions: ["bread flour (chewier result)"] },
-    { ingId: "ing_02", role: "Dairy",      name: "Plain full-fat yogurt",           ratioValue: 20,   defaultUnit: "%", substitutions: ["vegan yogurt", "sour cream"] },
-    { ingId: "ing_03", role: "Hydration",  name: "Warm water (38 C)",               ratioValue: 30,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning",  name: "Fine sea salt",                   ratioValue: 1.5,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_05", role: "Leavener",   name: "Instant yeast",                   ratioValue: 1,    defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_06", role: "Leavener",   name: "Baking powder",                   ratioValue: 0.5,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",        name: "Neutral oil (for dough)",         ratioValue: 3,    defaultUnit: "%", substitutions: ["ghee"] },
-    { ingId: "ing_08", role: "Fat",        name: "Unsalted butter (for finishing)", ratioValue: 5,    defaultUnit: "%", substitutions: ["ghee (more authentic)"] },
-    { ingId: "ing_09", role: "Allium",     name: "Garlic cloves, finely minced",    ratioValue: 4,    defaultUnit: "cloves", substitutions: ["garlic paste"] },
-    { ingId: "ing_10", role: "Herb",       name: "Fresh coriander (cilantro), chopped", ratioValue: 10, defaultUnit: "g", substitutions: ["parsley"] },
+  "repoId": "master_indian_indiangarlicnaan_001",
+  "parentRepoId": null,
+  "slug": "indian-garlic-naan",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ail Naan",
+  "description": "Le pain plat carbonisé, blister, incroyablement tendre, léché avec du beurre d'ail et drapé sur une poêle en fonte chaude qui se substitue admirablement à une tangle, avec un omble qui sent exactement la bonne.",
+  "cuisine": "Indiens",
+  "culture": "Inde du Nord",
+  "category": "breads",
+  "tags": [
+    "pain",
+    "végétarien",
+    "laitière",
+    "Ail",
+    "indienne"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "40 min",
+  "totalTime": "1 hour 30 min",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "naan_dough",
-      instructions: "In a large bowl, whisk flour, salt, yeast, and baking powder together. Add yogurt, warm water, and oil. Mix until a rough dough forms, then knead by hand for 8 minutes until smooth and soft. The yogurt makes this dough notably more supple than plain water doughs. Aim for a consistency slightly softer than earlobe. Cover and rest for 1 hour until doubled.",
-      visualCue: {
-        primaryTarget: "A soft, slightly tacky dough ball with a smooth, satiny surface and a slight sheen from the oil.",
-        spectrum: [
-          { state: "Underdone", description: "Still rough and ragged. Tears instead of stretching.", action: "Knead another 3 minutes. The yogurt proteins need time to fully incorporate." },
-          { state: "Perfect",   description: "Smooth, supple, slightly sticky to the touch. Pulls away from bowl cleanly. Springs back slowly when pressed.", action: "Cover tightly and rest 1 hour at warm room temperature." },
-          { state: "Overdone",  description: "Stiff and tight. Hard to push flat. No give when poked.", action: "Wet hands and knead briefly to rehydrate. Rest covered 10 minutes." },
-        ],
-      },
-      feelCue: "The dough should feel softer and more yielding than any bread dough — almost silky from the yogurt fat. If it clings to the bowl, it is perfectly hydrated.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "farine de pain (résultat chewier)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Shape",
-      inputs: ["naan_dough"],
-      outputState: "shaped_naans",
-      instructions: "Divide the dough into 6 equal balls (about 80 g each). On a lightly floured surface, roll each ball into a teardrop or oval shape about 20 cm long and 3 mm thick. Some lumpy irregularity is desirable — real tandoor naans are never perfectly uniform. If the dough springs back when rolling, let it rest 5 minutes then try again.",
-      visualCue: {
-        primaryTarget: "Thin, roughly oval flatbreads about 3 mm thick with slightly uneven edges and a lightly floured surface.",
-        spectrum: [
-          { state: "Underdone", description: "Thick, 6 mm or more. The rolled naan is still plump and round.", action: "Roll more assertively, working from the center outward. Dust lightly if sticking." },
-          { state: "Perfect",   description: "Thin enough to see light through in places. Holds its shape when lifted from the board. Teardrop outline.", action: "Cook immediately — fresh-rolled naans cook more evenly than ones left to rest." },
-          { state: "Overdone",  description: "Translucent and tears easily. Less than 2 mm in places.", action: "Fold the torn area back and re-roll from a ball — overrolled dough is too fragile to recover by pressing." },
-        ],
-      },
-      feelCue: "The rolled naan should drape over your palm without tearing — flexible and supple like a sheet of chamois leather.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Yogourt plein de gras",
+      "ratioValue": 20,
+      "defaultUnit": "%",
+      "substitutions": [
+        "yogourt végétalien",
+        "crème aigre"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sear",
-      inputs: ["shaped_naans", "ing_08", "ing_09", "ing_10"],
-      outputState: "finished_naan",
-      instructions: "Heat a cast-iron skillet over high heat until it begins to smoke — at least 5 minutes of preheating. Place a naan directly on the dry pan. Cook 1–2 minutes until large bubbles form and the bottom has dark char spots. Flip and cook 30–60 seconds on the second side. While still hot, brush immediately with melted butter in which you have cooked the minced garlic until fragrant (30 seconds over medium). Scatter chopped coriander. Stack finished naans under a clean towel to keep soft.",
-      visualCue: {
-        primaryTarget: "Dramatic black char blisters on both sides, with a golden-tan background between the char spots. The naan puffs up in places like a hot air balloon.",
-        spectrum: [
-          { state: "Underdone", description: "Pale, wan, soft. No char blisters. Smells of raw dough.", action: "The pan is not hot enough. Let it preheat longer on maximum heat. This is the most common naan mistake." },
-          { state: "Perfect",   description: "Bold black blisters over a golden base. The naan puffed dramatically during cooking. Smells of toasted wheat and char.", action: "Brush with garlic butter immediately while scorching hot — the butter sizzles on contact." },
-          { state: "Overdone",  description: "Uniformly black and stiff. Brittle edges. Bitter, acrid smell.", action: "Reduce cooking time by 30 seconds per side. Save heavily charred naans for scooping rather than wrapping." },
-        ],
-      },
-      feelCue: "A correctly cooked naan bends without breaking and has a satisfying slight crunch from the charred spots, giving way to a soft, chewy center that stretches under your fingers.",
+      "ingId": "ing_03",
+      "role": "Hydration",
+      "name": "Eau chaude (38 C)",
+      "ratioValue": 30,
+      "defaultUnit": "%",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "levure instantanée",
+      "ratioValue": 1,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 0.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile neutre (pour pâte)",
+      "ratioValue": 3,
+      "defaultUnit": "%",
+      "substitutions": [
+        "ghee"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Beurre non salé (pour finissage)",
+      "ratioValue": 5,
+      "defaultUnit": "%",
+      "substitutions": [
+        "ghee (plus authentique)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Allium",
+      "name": "Gousses d'ail, finement hachées",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": [
+        "Pâte d'ail"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Coriandre fraîche (cilantro), hachée",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "persil"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "naan_dough",
+      "instructions": "Dans un grand bol, fouetter la farine, le sel, la levure et la poudre à pâte ensemble. Ajouter le yaourt, l'eau chaude et l'huile. Mélanger jusqu'à ce qu'une pâte rugueuse se forme, puis pétrir à la main pendant 8 minutes jusqu'à ce qu'elle soit lisse et douce. Le yogourt rend cette pâte particulièrement plus souple que les pâtes à eau pure. Visez une consistance légèrement plus douce que le lobe d'oreille. Couvrir et se reposer pendant 1 heure jusqu'à doublé.",
+      "visualCue": {
+        "primaryTarget": "Une boule de pâte douce et légèrement collante avec une surface lisse et satinée et un léger reflet de l'huile.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours rugueux et rigolé. Des larmes au lieu de s'étirer.",
+            "action": "Encore 3 minutes. Les protéines de yogourt ont besoin de temps pour intégrer pleinement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, souple, légèrement collant au toucher. Éloignez-vous proprement du bol. Il ressort lentement lorsqu'il est pressé.",
+            "action": "Couvrir soigneusement et reposer 1 heure à température ambiante chaude."
+          },
+          {
+            "state": "Overdone",
+            "description": "Stiff et serré. Difficile à pousser à plat. Pas d'argent quand on pique.",
+            "action": "Mains humides et pétrir brièvement pour réhydrater. Repos couvert 10 minutes."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit être plus douce et plus productive que n'importe quelle pâte à pain, presque soyeuse à partir de la graisse de yogourt. Si elle s'accroche au bol, elle est parfaitement hydratée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Forme",
+      "inputs": [
+        "naan_dough"
+      ],
+      "outputState": "shaped_naans",
+      "instructions": "Divisez la pâte en 6 boules égales (environ 80 g chacune). Sur une surface légèrement farinée, rouler chaque boule en forme de larme ou ovale d'environ 20 cm de long et 3 mm d'épaisseur. Une certaine irrégularité est souhaitable: les vrais naans tandoor ne sont jamais parfaitement uniformes. Si la pâte revient en roulant, laissez reposer 5 minutes, puis essayez encore.",
+      "visualCue": {
+        "primaryTarget": "Pains plats minces, approximativement ovales, d'environ 3 mm d'épaisseur avec des bords légèrement irréguliers et une surface légèrement farineuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Épais, 6 mm ou plus. Le naan roulé est encore rond.",
+            "action": "Rouler de façon plus affirmée, travailler du centre vers l'extérieur. Poussière légèrement si elle colle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Assez pour voir la lumière dans les endroits. Il tient sa forme lorsqu'il est sorti de la planche. Le contour de Teardrop.",
+            "action": "Cuire immédiatement — les naans laminés frais cuisinent plus uniformément que ceux laissés pour se reposer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Translucide et larmes facilement. Moins de 2 mm dans les endroits.",
+            "action": "Repliez la zone déchirée en arrière et reroulez à partir d'une boule — la pâte laminée est trop fragile pour se rétablir en appuyant."
+          }
+        ]
+      },
+      "feelCue": "Le naan roulé devrait draper votre paume sans déchirer, souple et souple comme une feuille de cuir chamois."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sear",
+      "inputs": [
+        "shaped_naans",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_naan",
+      "instructions": "Chauffer une poêle en fonte à feu vif jusqu'à ce qu'elle commence à fumer — au moins 5 minutes de préchauffage. Placez un naan directement sur la casserole sèche. Cuire 1 à 2 minutes jusqu'à ce que de grandes bulles se forment et que le fond ait des taches d'omble foncé. Flip et cuire 30 à 60 secondes sur le deuxième côté. Bien qu'il reste chaud, brossez immédiatement avec du beurre fondu dans lequel vous avez cuit l'ail haché jusqu'à ce qu'il soit parfumé (30 secondes sur le milieu). Scatter la coriandre hachée. Stack fini naans sous une serviette propre pour garder doux.",
+      "visualCue": {
+        "primaryTarget": "Des blisters noir dramatiques sur les deux côtés, avec un fond doré-tan entre les taches d'omble. Le naan souffle dans des endroits comme un ballon d'air chaud.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pale, wan, doux. Pas de cloques. Des odeurs de pâte crue.",
+            "action": "La poêle n'est pas assez chaude. Laisser préchauffer plus longtemps sur la chaleur maximale. C'est l'erreur la plus courante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bold blister noir sur une base dorée. Le naan a considérablement gonflé pendant la cuisson. Des odeurs de blé grillé et d'omble.",
+            "action": "Badigeonner immédiatement le beurre d'ail en brûlant à chaud — le beurre s'étourne au contact."
+          },
+          {
+            "state": "Overdone",
+            "description": "Uniformement noir et raide. Des bords fragiles. Une odeur amère et acride.",
+            "action": "Réduire le temps de cuisson de 30 secondes par côté. Épargnez les naans fortement carbonisés pour les scoops plutôt que l'emballage."
+          }
+        ]
+      },
+      "feelCue": "Un cintre naan correctement cuit sans casser et a un léger croquant satisfaisant des taches carbonisées, laissant place à un centre doux et mâcheux qui s'étire sous vos doigts."
+    }
+  ]
 };

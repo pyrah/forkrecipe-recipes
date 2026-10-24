@@ -1,105 +1,298 @@
 export default {
-  repoId: "master_indian_tandoori_chicken_001",
-  parentRepoId: null,
-  slug: "tandoori-chicken",
-  author: "ForkRecipe Kitchen",
-  title: "Tandoori Chicken",
-  description: "Bone-in chicken pieces marinated in a brilliantly crimson double-coat of spiced yogurt, where the dairy's lactic acid tenderizes the flesh as the garam masala, cumin, and fenugreek perfume every fiber — then cooked at ferocious heat until the exterior chars at the edges and the marinade blisters to a smoky, caramelized crust that peels apart in fragrant shards.",
-  cuisine: "Indian",
-  culture: "Punjabi",
-  category: "proteins",
-  tags: ["tandoori", "chicken", "indian", "punjabi", "yogurt-marinade", "spiced"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "4 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 3, sour: 2, bitter: 1, umami: 2, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in, skin-on chicken pieces (legs, thighs, breasts)", ratioValue: 3,   defaultUnit: "lbs",  substitutions: ["boneless chicken thighs"] },
-    { ingId: "ing_02", role: "Dairy",     name: "Full-fat plain yogurt",                                    ratioValue: 1,   defaultUnit: "cup",  substitutions: ["Greek yogurt thinned with 2 tbsp water"] },
-    { ingId: "ing_03", role: "Acid",      name: "Fresh lemon juice",                                        ratioValue: 2,   defaultUnit: "tbsp", substitutions: ["lime juice"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic cloves, grated or minced to paste",                ratioValue: 6,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Fresh ginger, grated",                                    ratioValue: 1.5, defaultUnit: "tbsp", substitutions: ["1 tsp ground ginger"] },
-    { ingId: "ing_06", role: "Spice",     name: "Kashmiri chili powder (mild, for color and flavor)",      ratioValue: 2,   defaultUnit: "tbsp", substitutions: ["paprika + pinch cayenne"] },
-    { ingId: "ing_07", role: "Spice",     name: "Garam masala",                                            ratioValue: 1.5, defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Ground cumin",                                            ratioValue: 1,   defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_09", role: "Spice",     name: "Ground coriander",                                        ratioValue: 1,   defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Ground turmeric",                                         ratioValue: 0.5, defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Ground fenugreek leaves (kasuri methi), crushed",         ratioValue: 0.5, defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_12", role: "Fat",       name: "Neutral oil",                                             ratioValue: 2,   defaultUnit: "tbsp", substitutions: ["ghee, melted"] },
-    { ingId: "ing_13", role: "Seasoning", name: "Kosher salt",                                             ratioValue: 1.5, defaultUnit: "tsp",  substitutions: [] },
-    { ingId: "ing_14", role: "Garnish",   name: "Chaat masala and lemon wedges, to serve",                 ratioValue: 1,   defaultUnit: "pinch", substitutions: [] },
+  "repoId": "master_indian_tandoori_chicken_001",
+  "parentRepoId": null,
+  "slug": "tandoori-chicken",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poulet tandoori",
+  "description": "Des morceaux de poulet osés marinés dans un double manteau de yogourt épicé brillamment pourpre, où l'acide lactique de la laiterie tend la chair comme le garam masala, le cumin et le fenugrec parfument chaque fibre — puis cuit à la chaleur féroce jusqu'à ce que les ombles extérieurs aux bords et la marinade cloques à une croûte fumée et caramélisée qui pele dans des shards parfumés.",
+  "cuisine": "Indiens",
+  "culture": "Punjabi",
+  "category": "proteins",
+  "tags": [
+    "tandoori",
+    "poulet",
+    "indienne",
+    "punjabi",
+    "yaourt-marinade",
+    "épicé"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "4 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Score",
-      inputs: ["ing_01"],
-      outputState: "scored_chicken",
-      instructions: "Using a sharp knife, score each piece of chicken to the bone with 3-4 deep parallel cuts (about 1 cm deep) through the thickest part. For breasts, make diagonal cuts across the chest. For legs and thighs, cut down to the bone. This is not optional — without scoring, the marinade sits only on the surface and the thickest parts will undercook before the exterior chars.",
-      visualCue: {
-        primaryTarget: "Deep, clean cuts through the skin and flesh, reaching the bone, evenly spaced across all pieces.",
-        spectrum: [
-          { state: "Underdone", description: "Shallow nicks only. The marinade will coat the surface but not penetrate.", action: "Cut deeper — overcome the hesitation. The cuts close during cooking and are invisible in the final dish." },
-          { state: "Perfect",   description: "Deep cuts that open like mouths when the chicken is held curved side up. Reach the bone. Evenly spaced.", action: "Apply the first coat of marinade." },
-          { state: "Overdone",  description: "Cuts have severed through to the other side or completely split the drumstick.", action: "Proceed carefully — the piece will cook faster in those areas." },
-        ],
-      },
-      feelCue: "Run your finger across the cuts — they should open cleanly under your fingertip like slots.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Oignons, morceaux de poulet sur la peau (jambes, cuisses, poitrines)",
+      "ratioValue": 3,
+      "defaultUnit": "lbs",
+      "substitutions": [
+        "cuisses de poulet désossées"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Marinate",
-      inputs: ["scored_chicken", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11", "ing_12", "ing_13"],
-      outputState: "marinated_chicken",
-      instructions: "Whisk together all marinade ingredients until thoroughly combined — the mixture should be a brilliant red-orange with an even, yogurt-cream consistency. Apply in two stages: first, rub a light coat of just salt, lemon juice, and a pinch of chili into the chicken and rest 20 minutes. Then apply the full yogurt marinade, pressing aggressively into every score and under the skin wherever possible. Cover and refrigerate for at least 3 hours; overnight (up to 24 hours) is significantly better.",
-      visualCue: {
-        primaryTarget: "Chicken pieces completely coated in a thick, brilliant crimson-orange marinade, with marinade visibly packed into every scored cut and draped over the bone ends.",
-        spectrum: [
-          { state: "Underdone", description: "Thin coating. Pale skin visible beneath. Marinade pooled at the bottom of the dish rather than clinging.", action: "Apply more marinade and work it in firmly. The yogurt should cling without dripping." },
-          { state: "Perfect",   description: "Thick, even coat on every surface. Cuts packed with marinade. Chicken is a uniform crimson-orange and smells powerfully spiced.", action: "Refrigerate and wait for the acid and enzymes to work." },
-          { state: "Overdone",  description: "More than 24 hours in marinade. Yogurt acid may have made the surface texture mushy.", action: "Cook immediately." },
-        ],
-      },
-      feelCue: "Work the marinade under the skin with your fingers — it should feel like spreading thick cream under a thin membrane.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Yogourt plein gras",
+      "ratioValue": 1,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "Yogourt grec éclairci avec 2 c. à soupe d'eau"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Roast",
-      inputs: ["marinated_chicken"],
-      outputState: "roasted_tandoori",
-      instructions: "Preheat oven to the maximum temperature (500-550 F / 260-290 C) and place a rack in the highest position. Line a sheet pan with foil and set a wire rack on top. Remove chicken from marinade and shake off excess — a thin, even coat is what remains. Arrange on the rack skin-side up. Roast for 20-25 minutes for thighs and legs, 18-22 minutes for breasts, until the marinade is charred at the highest points and the juices run clear. Optional: finish under the broiler for 2-3 minutes for authentic char.",
-      visualCue: {
-        primaryTarget: "Deeply charred, blistered marinade crust at the raised edges and bone ends, brilliant orange-red elsewhere, with the scored cuts opening and showing cooked-through flesh.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade is still pale orange and wet-looking. Juices run pink at the scored cuts. Interior feels springy.", action: "Continue roasting and check temperature: target 165 F (74 C) at the thickest point away from the bone." },
-          { state: "Perfect",   description: "Marinade is charred and blistered at the peaks, deep orange-red elsewhere. Scored cuts show fully cooked, juicy flesh. Juices run clear. The kitchen smells of smoke and toasted spice.", action: "Remove from oven. Rest 5 minutes." },
-          { state: "Overdone",  description: "Marinade is uniformly black and acrid. Flesh feels dry when the scored cuts are pressed.", action: "Salvage: remove from oven, trim worst char. The interior may still be juicy." },
-        ],
-      },
-      feelCue: "Press a finger into the thickest part of a thigh — it should spring back firmly with a slight residual give, like a firm handshake.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "jus de citron vert"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["roasted_tandoori", "ing_14"],
-      outputState: "finished_tandoori_chicken",
-      instructions: "Transfer chicken to a serving platter. Dust immediately with chaat masala — its sour, salty, smoky profile amplifies the marinade. Arrange lemon wedges alongside. Serve with naan or roti, sliced raw onion, and fresh cilantro chutney. The charred edges are the best part — encourage diners to eat them.",
-      visualCue: {
-        primaryTarget: "A platter of dramatically colored, charred-edge chicken pieces dusted with tart chaat masala, surrounded by bright lemon wedges.",
-        spectrum: [
-          { state: "Underdone", description: "Served without chaat masala and lemon — technically fine but missing the acid counterpoint that makes tandoori snap.", action: "Add both. Do not skip the lemon — its juice squeezed at the table brightens everything." },
-          { state: "Perfect",   description: "Served immediately with chaat masala settled into the charred crevices and lemon squeezed over the scored cuts.", action: "Eat." },
-          { state: "Overdone",  description: "Chicken has been sitting under a foil tent for more than 15 minutes and the crust has softened.", action: "A 2-minute blast under the broiler will revive the crust." },
-        ],
-      },
-      feelCue: "The crust should shatter when you bite through it, like breaking through a thin spiced crust, yielding to the moist flesh beneath.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Giroves d'ail râpées ou hachées à pâte",
+      "ratioValue": 6,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Gingembre frais, râpé",
+      "ratioValue": 1.5,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "1 c. à thé de gingembre moulu"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poudre de chili cachemiri (légère, pour la couleur et la saveur)",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "paprika + pincée cayenne"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Garam masala",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Turcuma au sol",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Feuilles de fénugreek broyées",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "Ghee, fondu"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 1.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Garnish",
+      "name": "Chaat masala et quartiers de citron, pour servir",
+      "ratioValue": 1,
+      "defaultUnit": "pinch",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Score",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "scored_chicken",
+      "instructions": "À l'aide d'un couteau tranchant, marquer chaque morceau de poulet à l'os avec 3-4 découpes parallèles profondes (environ 1 cm de profondeur) à travers la partie la plus épaisse. Pour les seins, faire des coupes diagonales à travers la poitrine. Pour les jambes et les cuisses, couper jusqu'aux os. Ce n'est pas facultatif — sans marquer, la marinade n'est assise qu'à la surface et les parties les plus épaisses seront cuites avant les chars extérieurs.",
+      "visualCue": {
+        "primaryTarget": "Des découpes profondes et propres à travers la peau et la chair, atteignant l'os, uniformément espacées sur tous les morceaux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Seulement des petites bites. La marinade enrobera la surface mais ne pénétrera pas.",
+            "action": "Couper plus profondément — surmonter l'hésitation. Les coupes se ferment pendant la cuisson et sont invisibles dans le plat final."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des découpes profondes qui s'ouvrent comme des bouches quand le poulet est maintenu côté courbé vers le haut. Atteindre l'os. Toujours espacé.",
+            "action": "Appliquer la première couche de marinade."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les découpes se sont coupées de l'autre côté ou ont complètement coupé le pilon.",
+            "action": "Continuez soigneusement — la pièce sera cuite plus rapidement dans ces zones."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre doigt sur les coupes — elles devraient s'ouvrir proprement sous votre bout de doigt comme des fentes."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "scored_chicken",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "marinated_chicken",
+      "instructions": "Battre tous les ingrédients de la marinade jusqu'à ce qu'ils soient bien combinés – le mélange doit être un orange rouge brillant avec une consistance yogourt-crème uniforme. Appliquer en deux étapes : d'abord, frotter une légère couche de sel, de jus de citron et une pincée de chili dans le poulet et reposer 20 minutes. Ensuite, appliquer la marinade complète du yogourt, en appuyant agressivement sur chaque score et sous la peau chaque fois que possible. Couvrir et réfrigérer pendant au moins 3 heures; la nuit (jusqu'à 24 heures) est significativement meilleure.",
+      "visualCue": {
+        "primaryTarget": "Morceaux de poulet entièrement enduits d'une marinade orangée-carmson épaisse et brillante, avec marinade visiblement emballée dans chaque coupe et drapée sur les extrémités osseuses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Revêtement mince. Peau pâle visible en dessous. Marinade mise en commun au fond du plat plutôt que de s'accrocher.",
+            "action": "Appliquer plus de marinade et le travailler fermement. Le yaourt doit s'accrocher sans goutter."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, même manteau sur chaque surface. Découpes emballées avec marinade. Le poulet est un pourpre-orange uniforme et sent très épicé.",
+            "action": "Réfrigérer et attendre que l'acide et les enzymes fonctionnent."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus de 24 heures en marinade. L'acide yogourt peut avoir rendu la texture de surface musquée.",
+            "action": "Cuire immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Travaillez la marinade sous la peau avec vos doigts — elle devrait avoir l'impression de répandre une crème épaisse sous une membrane mince."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Rôtis",
+      "inputs": [
+        "marinated_chicken"
+      ],
+      "outputState": "roasted_tandoori",
+      "instructions": "Préchauffer le four à la température maximale (500-550 F / 260-290 C) et placer un rack dans la position la plus haute. Étaler une plaque avec du papier et placer un porte-fils sur le dessus. Enlevez le poulet de la marinade et secouez l'excès — une couche mince et uniforme est ce qui reste. Arrangez-vous sur le côté de la rack. Faire cuire 20-25 minutes pour les cuisses et les jambes, 18-22 minutes pour les seins, jusqu'à ce que la marinade soit carbonisée aux points les plus hauts et que les jus soient dégagés. En option : terminer sous le grille-croûte pendant 2-3 minutes pour un char authentique.",
+      "visualCue": {
+        "primaryTarget": "Croûte de marinade fortement carbonisée, blister aux bords élevés et aux extrémités osseuses, rouge orangé brillant ailleurs, avec les découpes marquées ouverture et montrant la chair cuite à travers.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Marinade est encore orange pâle et humide. Les jus sont roses aux coupures. L'intérieur est printanier.",
+            "action": "Continuer la torréfaction et vérifier la température : cible 165 F (74 C) au point le plus épais de l'os."
+          },
+          {
+            "state": "Perfect",
+            "description": "La marinade est carbonisée et cloquée aux pics, rouge orangé profond ailleurs. Les coupes notées montrent une chair juteuse entièrement cuite. Les jus sont dégagés. La cuisine sent la fumée et les épices grillées.",
+            "action": "Retirer du four. Reposez-vous 5 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Marinade est uniformément noire et acride. La chair est sèche lorsque les coupures sont pressées.",
+            "action": "Salvage: retirer du four, garnir le pire omble. L'intérieur peut encore être juteux."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un doigt dans la partie la plus épaisse d'une cuisse — il devrait ressorter fermement avec un léger fil résiduel, comme une poignée de main ferme."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "roasted_tandoori",
+        "ing_14"
+      ],
+      "outputState": "finished_tandoori_chicken",
+      "instructions": "Transférer le poulet dans un plateau de service. Poussière immédiatement au chaat masala — son profil aigre, salé et fumé amplifie la marinade. Disposer les coins de citron à côté. Servir avec du naan ou du roti, de l'oignon cru tranché et du chutney coriandre frais. Les bords carbonisés sont la meilleure partie — encourager les dîneurs à les manger.",
+      "visualCue": {
+        "primaryTarget": "Un plateau de morceaux de poulet de couleur spectaculaire, carbonisé-arête poussière avec tart chaat masala, entouré de quartiers de citron lumineux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Servi sans chaat masala et citron — techniquement fin mais manquant le contrepoint acide qui fait tandoori snap.",
+            "action": "Ajoutez les deux. Ne sautez pas le citron — son jus pressé à la table illumine tout."
+          },
+          {
+            "state": "Perfect",
+            "description": "Servi immédiatement avec le chaat masala installé dans les crevasses carbonisées et le citron pressé sur les coupes marquées.",
+            "action": "Mangez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poulet est assis sous une tente en feuilles depuis plus de 15 minutes et la croûte s'est adoucie.",
+            "action": "Une explosion de 2 minutes sous le grilleur ravivera la croûte."
+          }
+        ]
+      },
+      "feelCue": "La croûte doit se briser quand vous la mordez, comme en brisant une fine croûte épicée, donnant à la chair humide en dessous."
+    }
+  ]
 };

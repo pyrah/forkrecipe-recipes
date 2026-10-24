@@ -1,95 +1,259 @@
 export default {
-  repoId: "master_american_hushpuppies_001",
-  parentRepoId: null,
-  slug: "hushpuppies",
-  author: "ForkRecipe Kitchen",
-  title: "Hushpuppies",
-  description: "Crisp-shelled, soft-centered cornmeal fritters with a sweet onion core, dropped by the spoonful into hot oil until they bob to the surface wearing a deep amber crust.",
-  cuisine: "American",
-  culture: "Southern",
-  category: "breads",
-  tags: ["cornmeal", "fried", "southern", "side", "vegetarian"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 5, sour: 2, bitter: 1, umami: 2, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Yellow cornmeal (medium grind)",        ratioValue: 4,   defaultUnit: "parts", substitutions: ["white cornmeal (milder flavor)"] },
-    { ingId: "ing_02", role: "Structure", name: "All-purpose flour",                     ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Leavener",  name: "Baking powder",                         ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Leavener",  name: "Baking soda",                           ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Kosher salt",                           ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Dairy",     name: "Buttermilk",                            ratioValue: 3.5, defaultUnit: "parts", substitutions: ["whole milk + 1 tsp vinegar (let sit 5 min)"] },
-    { ingId: "ing_07", role: "Binder",    name: "Large egg",                             ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Allium",    name: "Yellow onion, finely grated",           ratioValue: 1,   defaultUnit: "parts", substitutions: ["scallions (milder, less sweet)"] },
-    { ingId: "ing_09", role: "Sweetener", name: "White sugar",                           ratioValue: 0.3, defaultUnit: "parts", substitutions: ["omit for savory version"] },
-    { ingId: "ing_10", role: "Fat",       name: "Frying oil (peanut or vegetable), for deep frying", ratioValue: 16, defaultUnit: "parts", substitutions: ["lard (more authentic and flavorful)"] },
+  "repoId": "master_american_hushpuppies_001",
+  "parentRepoId": null,
+  "slug": "hushpuppies",
+  "author": "ForkRecipe Kitchen",
+  "title": "Autres",
+  "description": "Fritters de maïs décortiquées, avec un noyau d'oignon sucré, lâchées par la cuillère dans de l'huile chaude jusqu'à ce qu'elles s'accroupissent à la surface avec une croûte ambre profonde.",
+  "cuisine": "Américain",
+  "culture": "Sud",
+  "category": "breads",
+  "tags": [
+    "farine de maïs",
+    "frits",
+    "sud",
+    "côté",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 5,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_09"],
-      outputState: "dry_mix",
-      instructions: "Whisk together the cornmeal, flour, baking powder, baking soda, salt, and sugar in a large bowl until the leaveners are evenly distributed. This is important — baking powder and baking soda need to be spread evenly through the dry mix before the wet ingredients are added, or you will have uneven rising and pockets of chemical taste.",
-      visualCue: {
-        primaryTarget: "A uniform pale yellow dry mixture with no visible clumps of baking powder or streaks of any single ingredient.",
-        spectrum: [
-          { state: "Underdone", description: "Visible white clumps of baking powder or baking soda not yet distributed through the cornmeal.", action: "Whisk another 10–15 seconds, making sure to reach the corners of the bowl." },
-          { state: "Perfect",   description: "Uniformly pale yellow powder with even distribution of all dry ingredients. No lumps.", action: "Make a well in the center and add the wet ingredients." },
-          { state: "Overdone",  description: "N/A — dry ingredients cannot be over-mixed.", action: "Proceed." },
-        ],
-      },
-      feelCue: "Run a finger through the dry mix — it should feel like fine yellow sand with a faintly gritty texture from the cornmeal. No tacky spots, no damp clumps.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine de maïs jaune (mouture moyenne)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "farine de maïs blanche (arôme doux)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Mix",
-      inputs: ["dry_mix", "ing_06", "ing_07", "ing_08"],
-      outputState: "hushpuppy_batter",
-      instructions: "In a separate bowl, whisk together the buttermilk, egg, and grated onion (use the large holes of a box grater — grated onion releases more juice than diced and integrates more evenly). Pour the wet ingredients into the well in the dry mix and stir with a fork just until combined — 15–20 strokes maximum. Lumps are expected and correct. Overmixed hushpuppy batter develops too much gluten and produces tough, dense fritters instead of tender-crumbed ones. Rest the batter for 5 minutes before frying.",
-      visualCue: {
-        primaryTarget: "A thick, scoopable batter — roughly the consistency of thick muffin batter — with visible lumps and no dry pockets of flour or cornmeal.",
-        spectrum: [
-          { state: "Underdone", description: "Dry streaks or pockets of unmixed cornmeal are visible at the bottom of the bowl.", action: "Fold in the dry pockets with 3–4 more strokes. Do not over-correct." },
-          { state: "Perfect",   description: "Slightly lumpy, thick, pale-yellow batter. Drops off a spoon in a single blob rather than flowing. Smells of buttermilk and raw onion.", action: "Rest 5 minutes while heating the oil to let the leaveners activate." },
-          { state: "Overdone",  description: "Batter is smooth and stretchy — gluten has developed. The batter may already feel elastic when stirred.", action: "Rest the batter 10 minutes before frying and do not stir again. The hushpuppies will be tougher but still good." },
-        ],
-      },
-      feelCue: "The batter should fall off a spoon in a single, heavy plop rather than flowing smoothly. If you hold the batter-loaded spoon upside down, it should cling for 2–3 seconds before dropping. Too thin means too much liquid; too thick means not enough.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Heat",
-      inputs: ["ing_10"],
-      outputState: "hot_fry_oil",
-      instructions: "Pour at least 5–6 cm of oil into a heavy pot (cast iron Dutch oven ideal). Heat over medium-high to 185 C (365 F). Use a thermometer — temperature is the single most important variable in frying. Too cool and the hushpuppies absorb oil and are greasy and pale. Too hot and the outside burns before the inside cooks through.",
-      visualCue: {
-        primaryTarget: "Oil is shimmering with gentle movement on the surface. A small drop of batter dropped in sinks briefly, then rises immediately, surrounded by vigorous bubbles.",
-        spectrum: [
-          { state: "Underdone", description: "Batter test piece sinks and sits on the bottom. Bubbles are slow and lazy. Temperature below 175 C.", action: "Continue heating. Frying in cool oil produces oily, dense hushpuppies." },
-          { state: "Perfect",   description: "Batter test piece sinks 2 cm, then rises within 5 seconds, surrounded by vigorous, active bubbling. Temperature reads 183–188 C.", action: "Reduce heat to medium to maintain temperature during frying. Add hushpuppies in batches." },
-          { state: "Overdone",  description: "Oil is smoking and the test piece browns in under 30 seconds. Temperature above 200 C.", action: "Remove from heat and let cool 2–3 minutes. Over-hot oil will burn the outside while leaving the inside raw." },
-        ],
-      },
-      feelCue: "Hold your palm 15 cm above the oil surface — you should feel a strong, steady heat pushing upward. The air directly above the pot should shimmer visibly when viewed from the side.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Fry",
-      inputs: ["hushpuppy_batter", "hot_fry_oil"],
-      outputState: "finished_hushpuppies",
-      instructions: "Use two wet spoons or a small ice cream scoop to drop walnut-sized portions of batter into the oil, working in batches of 6–8 (overcrowding drops the oil temperature). The hushpuppies will sink briefly, begin to form a crust, and then roll themselves over as the leaveners create an uneven steam pocket — this self-rolling is the sign of a well-made batter. Fry 3–4 minutes total, turning once if they do not roll on their own, until deep golden-brown all over. Drain on a wire rack, not paper towels.",
-      visualCue: {
-        primaryTarget: "Deep, uniform amber-brown on all sides, with a slightly irregular surface from the cornmeal and a visible crust. The hushpuppy should look puffed and rounded, not flat.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold with a soft, yielding crust that dents easily when pressed. The interior will be gummy or raw.", action: "Return to the oil for 60–90 more seconds. The exterior color is a reliable guide — pale means underdone." },
-          { state: "Perfect",   description: "Deep amber-brown, completely rounded, with a firm crust that resists light pressure. The interior should feel airy when squeezed very gently.", action: "Drain on a wire rack. Serve immediately — hushpuppies are best within 10 minutes of frying." },
-          { state: "Overdone",  description: "Dark brown to black edges. Crust has cracked. Bitter, acrid smell from burnt cornmeal.", action: "Trim the darkest edges with scissors or discard. The interior may still be good. Reduce heat for the next batch." },
-        ],
-      },
-      feelCue: "A perfectly fried hushpuppy picked up between two fingers should feel rigid on the outside but have a slight give to the center — like a firm marshmallow with a crunchy shell. The crust should make a faint, dry crackling sound when squeezed lightly.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "Soda au four",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Beurre",
+      "ratioValue": 3.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "lait entier + 1 c. à thé vinaigre (laisser reposer 5 min)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Binder",
+      "name": "Grand œuf",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Oignon jaune, râpé finement",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pétoncles (mineurs, moins sucrés)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omit pour la version savoureuse"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile de friture (pois ou légumes), pour friture profonde",
+      "ratioValue": 16,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "saindoux (plus authentique et plus savoureux)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_09"
+      ],
+      "outputState": "dry_mix",
+      "instructions": "Dans un grand bol, fouetter la farine de maïs, la poudre à pâte, le bicarbonate de soude, le sel et le sucre jusqu'à ce que les levains soient uniformément distribués. C'est important: la poudre à pâte et le bicarbonate de soude doivent être répartis uniformément dans le mélange sec avant que les ingrédients humides ne soient ajoutés, ou vous aurez des augmentations inégales et des poches de goût chimique.",
+      "visualCue": {
+        "primaryTarget": "Mélange à sec jaune pâle uniforme sans croûtes visibles de poudre à pâte ou de stries d'un seul ingrédient.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des amas blancs visibles de poudre à pâte ou de soude à pâte ne sont pas encore distribués dans la farine de maïs.",
+            "action": "Frottez encore 10 à 15 secondes pour atteindre les coins du bol."
+          },
+          {
+            "state": "Perfect",
+            "description": "Poudre uniformément jaune pâle avec distribution uniforme de tous les ingrédients secs. Pas de bosses.",
+            "action": "Faites un puits au centre et ajoutez les ingrédients humides."
+          },
+          {
+            "state": "Overdone",
+            "description": "S/O — les ingrédients secs ne peuvent pas être trop mélangés.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "Passez un doigt à travers le mélange sec — il devrait se sentir comme du sable jaune fin avec une texture légèrement grisâtre de la farine de maïs. Pas de taches collantes, pas de touffes humides."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "dry_mix",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "hushpuppy_batter",
+      "instructions": "Dans un bol séparé, fouetter ensemble le babeurre, l'œuf et l'oignon râpé (utiliser les grands trous d'une boîte râpée — l'oignon râpé libère plus de jus que les dés et s'intègre plus uniformément). Verser les ingrédients humides dans le puits dans le mélange sec et remuer avec une fourchette jusqu'à ce qu'ils soient combinés — 15-20 coups maximum. Les lumps sont attendus et corrects. La pâte hushpuppy surmélangée développe trop de gluten et produit des beignets durs et denses au lieu de tendres. Reposez la pâte pendant 5 minutes avant de faire frire.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse et écorcable — à peu près la consistance d'une pâte épaisse à muffin — avec des morceaux visibles et sans poches sèches de farine ou de farine de maïs.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries sèches ou des poches de farines de maïs non mélangées sont visibles au fond du bol.",
+            "action": "Plier dans les poches sèches avec 3 à 4 coups de plus. Ne pas trop corriger."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légèrement grumeux, épais, pâte jaune pâle. Déposer une cuillère dans un seul blob plutôt que de couler. Parfums de babeurre et d'oignon cru.",
+            "action": "Reposez-vous 5 minutes pendant le chauffage de l'huile pour laisser les levains s'activer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie est lisse et extensible — le gluten s'est développé. La pâte peut déjà se sentir élastique lorsqu'elle est agitée.",
+            "action": "Reposez la pâte 10 minutes avant de faire frire et ne remuez plus. Les chushpuppies seront plus durs mais toujours bons."
+          }
+        ]
+      },
+      "feelCue": "La pâte devrait tomber d'une cuillère dans une seule patte lourde plutôt que de couler en douceur. Si vous maintenez la cuillère chargée de pâte à l'envers, elle devrait s'accrocher pendant 2-3 secondes avant de tomber. Trop mince signifie trop de liquide; trop épais signifie pas assez."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Chaleur",
+      "inputs": [
+        "ing_10"
+      ],
+      "outputState": "hot_fry_oil",
+      "instructions": "Verser au moins 5 à 6 cm d'huile dans un pot lourd (four hollandais en fonte idéal). Chauffer sur une température moyennement élevée à 185 C (365 F). Utilisez un thermomètre — la température est la variable la plus importante dans la friture. Trop frais et les chiots absorbent l'huile et sont gras et pâles. Trop chaud et l'extérieur brûle avant que l'intérieur ne passe.",
+      "visualCue": {
+        "primaryTarget": "L'huile est chatoyante avec un mouvement doux à la surface. Une petite goutte de pâte est tombée brièvement dans les puits, puis s'élève immédiatement, entouré de bulles vigoureuses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pièce d'essai de battement coule et s'assied sur le fond. Les bulles sont lentes et paresseuses. Température inférieure à 175 C.",
+            "action": "Continuez le chauffage. La friture dans l'huile fraîche produit des hushpuppies huileux et denses."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'éprouvette de battement coule 2 cm, puis se lève en 5 secondes, entourée de bouillons vigoureux et actifs. La température est de 183 à 188 C.",
+            "action": "Réduire le feu à moyen pour maintenir la température pendant la friture. Ajouter les hushpuppies en lots."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'huile fume et l'éprouvette brunit en moins de 30 secondes. Température supérieure à 200 C.",
+            "action": "Retirer du feu et laisser refroidir 2–3 minutes. L'huile surchauffée brûlera l'extérieur tout en laissant l'intérieur brut."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre paume à 15 cm au - dessus de la surface de l'huile — vous devriez sentir une chaleur forte et constante poussant vers le haut. L'air directement au-dessus du pot devrait mijoter visiblement lorsqu'il est vu du côté."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "hushpuppy_batter",
+        "hot_fry_oil"
+      ],
+      "outputState": "finished_hushpuppies",
+      "instructions": "Utilisez deux cuillères mouillées ou une petite boule de crème glacée pour déposer des portions de pâte de noyer dans l'huile, en travaillant en lots de 6 à 8 (surpeuplement baisse la température de l'huile). Les hushpuppies couleront brièvement, commenceront à former une croûte, puis se rouleront comme les levains créent une poche de vapeur inégale — cette auto-roulement est le signe d'une pâte bien faite. Fry 3-4 minutes au total, tourner une fois s'ils ne roulent pas sur leur propre, jusqu'à ce que l'or profond brun partout. Égoutter sur un porte-fils, pas des serviettes en papier.",
+      "visualCue": {
+        "primaryTarget": "De tous les côtés, de couleur ambrée, uniforme, avec une surface légèrement irrégulière de la farine de maïs et une croûte visible. Le hushpuppy doit avoir l'air gonflé et arrondi, et non plat.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle avec une croûte douce et productive qui vacille facilement lorsqu'on la presse. L'intérieur sera gommé ou cru.",
+            "action": "Retourner à l'huile pendant 60 à 90 secondes de plus. La couleur extérieure est un guide fiable, c'est - à - dire pâle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep ambre-brun, complètement arrondi, avec une croûte ferme qui résiste à la légère pression. L'intérieur doit se sentir aéré lorsqu'il est pressé très doucement.",
+            "action": "Égoutter sur une grille. Servir immédiatement — les chushpuppies sont préférables dans les 10 minutes suivant la friture."
+          },
+          {
+            "state": "Overdone",
+            "description": "Marron foncé aux bords noirs. La croûte a craqué. Une odeur amère de farine de maïs brûlée.",
+            "action": "Couper les bords les plus sombres avec des ciseaux ou jeter. L'intérieur peut encore être bon. Réduire la chaleur pour le prochain lot."
+          }
+        ]
+      },
+      "feelCue": "Un hushpuppy parfaitement frit ramassé entre deux doigts devrait se sentir rigide à l'extérieur, mais avoir un léger don au centre — comme un guimauve ferme avec une coquille croquante. La croûte devrait faire un léger bruit de craquelage sec lorsqu'elle est pressée légèrement."
+    }
+  ]
 };

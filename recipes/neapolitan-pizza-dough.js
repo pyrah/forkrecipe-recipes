@@ -1,137 +1,299 @@
 export default {
-  repoId: "master_neapolitan_pizzadough_001",
-  parentRepoId: null,
-  slug: "neapolitan-pizza-dough",
-  tool: { kind: "dough", doughId: "pizza" },
-  author: "ForkRecipe Kitchen",
-  title: "Neapolitan Pizza Dough",
-  description: "A 60% hydration lean dough leavened slowly with commercial yeast. The structure relies on long autolyse and gluten development through folds, not kneading.",
-  cuisine: "Italian",
-  culture: "Neapolitan",
-  category: "breads",
-  tags: ["dough", "fermented", "yeast", "italian", "pizza"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "24 hours",
-  ratioSystem: "bakers_percentage",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-01-15",
-  updatedAt: "2024-11-02",
-  flavorRadar: { sweet: 2, salty: 5, sour: 3, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",   name: "00 flour",     ratioValue: 1.00, defaultUnit: "g", substitutions: ["bread flour", "tipo 0"] },
-    { ingId: "ing_02", role: "Hydration",   name: "Water (cool)", ratioValue: 0.60, defaultUnit: "g", substitutions: ["filtered water"] },
-    { ingId: "ing_03", role: "Seasoning",   name: "Fine sea salt",ratioValue: 0.028,defaultUnit: "g", substitutions: ["kosher salt"] },
-    { ingId: "ing_04", role: "Leavener",    name: "Active dry yeast", ratioValue: 0.002, defaultUnit: "g", substitutions: ["instant yeast", "sourdough starter (5%)"] },
+  "repoId": "master_neapolitan_pizzadough_001",
+  "parentRepoId": null,
+  "slug": "neapolitan-pizza-dough",
+  "tool": {
+    "kind": "dough",
+    "doughId": "pizza"
+  },
+  "author": "ForkRecipe Kitchen",
+  "title": "Pâte à pizza napolitaine",
+  "description": "Une pâte maigre à hydratation de 60 % leissait lentement avec de la levure commerciale. La structure repose sur l'autolyse longue et le développement du gluten à travers les plis, pas le pétrissage.",
+  "cuisine": "Italien",
+  "culture": "Napolitaine",
+  "category": "breads",
+  "tags": [
+    "pâte",
+    "fermenté",
+    "levure",
+    "Italien",
+    "pizza"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "24 hours",
+  "ratioSystem": "bakers_percentage",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-01-15",
+  "updatedAt": "2024-11-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 5,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Dissolve",
-      inputs: ["ing_02", "ing_04"],
-      outputState: "yeast_slurry",
-      instructions: "Stir yeast into cool water (18–20 °C / 65–68 °F) until no granules float on the surface.",
-      visualCue: {
-        primaryTarget: "A faintly cloudy water with no yeast specks visible.",
-        spectrum: [
-          { state: "Underdone", description: "Granules still floating on surface.", action: "Whisk gently and wait." },
-          { state: "Perfect",   description: "Uniform pale haze, no foam yet.",     action: "Add the flour." },
-          { state: "Overdone",  description: "Heavy foam, sour smell — water was too warm.", action: "Start over with cooler water." },
-        ],
-      },
-      feelCue: "The water should feel cool against the wrist — like a spring stream, never warm.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "00 farine",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": [
+        "farine de pain",
+        "tipo 0"
+      ]
     },
     {
-      nodeId: "step_2", action: "Hydrate",
-      inputs: ["ing_01", "yeast_slurry"],
-      outputState: "shaggy_mass",
-      instructions: "Add flour to the slurry. Stir with a wooden spoon until no dry flour remains.",
-      visualCue: {
-        primaryTarget: "A rough, lumpy ball with damp patches on the bowl walls.",
-        spectrum: [
-          { state: "Underdone", description: "Dry pockets of flour at the bottom.", action: "Fold in with wet hands until uniform." },
-          { state: "Perfect",   description: "Shaggy, uneven, sticks to itself more than the bowl.", action: "Cover and rest." },
-          { state: "Overdone",  description: "Smooth and glossy already.", action: "You worked it too hard — rest 30 min longer." },
-        ],
-      },
-      feelCue: "Tacky and stubborn. It should grip your fingers but release with a flick.",
+      "ingId": "ing_02",
+      "role": "Hydration",
+      "name": "Eau (froid)",
+      "ratioValue": 0.6,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau filtrée"
+      ]
     },
     {
-      nodeId: "step_3", action: "Autolyse",
-      inputs: ["shaggy_mass"],
-      outputState: "rested_dough",
-      instructions: "Cover and let the dough rest 20–30 minutes at room temperature. The flour will fully hydrate and gluten will begin organizing on its own.",
-      visualCue: {
-        primaryTarget: "Dough has relaxed, lost its rough edges, smells faintly of bread.",
-        spectrum: [
-          { state: "Underdone", description: "Still rough, edges sharp.", action: "Wait longer in a warm spot." },
-          { state: "Perfect",   description: "Domed, soft, holds a fingerprint briefly.", action: "Add salt and begin folds." },
-          { state: "Overdone",  description: "Visibly bubbly and slack.", action: "Skip the long rise — it's already started fermenting." },
-        ],
-      },
-      feelCue: "Pillow-soft. A poked finger leaves a slow-fading dimple.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.028,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher"
+      ]
     },
     {
-      nodeId: "step_4", action: "Salt",
-      inputs: ["rested_dough", "ing_03"],
-      outputState: "seasoned_dough",
-      instructions: "Sprinkle salt across the surface. Pinch and fold until it disappears into the dough.",
-      visualCue: {
-        primaryTarget: "No salt crystals visible; surface looks marbled briefly, then uniform.",
-        spectrum: [
-          { state: "Underdone", description: "You can see white salt streaks.", action: "Keep folding." },
-          { state: "Perfect",   description: "Smooth surface with faint sheen.", action: "Begin stretch and folds." },
-          { state: "Overdone",  description: "Dough has tightened and torn.", action: "Rest 20 min before continuing." },
-        ],
-      },
-      feelCue: "The dough resists you suddenly — that's the salt waking up the gluten.",
-    },
-    {
-      nodeId: "step_5", action: "Fold",
-      inputs: ["seasoned_dough"],
-      outputState: "developed_dough",
-      instructions: "Perform stretch-and-folds at 30-minute intervals: lift one side, stretch up, fold over. Rotate. Repeat across four rounds (about 2 hours total), then let the dough relax 15–20 minutes before the bulk rise.",
-      visualCue: {
-        primaryTarget: "Dough holds its shape when lifted and shows a smooth, taut top.",
-        spectrum: [
-          { state: "Underdone", description: "Tears when lifted, oozes flat in the bowl.", action: "Add another fold cycle." },
-          { state: "Perfect",   description: "Stretches without tearing, springs back slowly.", action: "Bulk ferment." },
-          { state: "Overdone",  description: "Tight, snappy, won't stretch.", action: "Rest 30 min to relax gluten." },
-        ],
-      },
-      feelCue: "Like pulling cool taffy. Resistant but yielding — never brittle.",
-    },
-    {
-      nodeId: "step_6", action: "Ferment",
-      inputs: ["developed_dough"],
-      outputState: "bulk_dough",
-      instructions: "Cover. Let rise at cool room temperature (18–20 °C / 65–68 °F) for 8–12 hours — or 4–6 hours at a warm 24–26 °C / 75–79 °F — until the dough has roughly doubled and is jiggly when nudged.",
-      visualCue: {
-        primaryTarget: "Doubled in volume, domed, with a few visible bubbles along the edge of the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Barely grown, dense.", action: "Wait — yeast is still working." },
-          { state: "Perfect",   description: "Doubled, jiggly, bubbles trail along the bowl wall.", action: "Divide and ball." },
-          { state: "Overdone",  description: "Collapsed dome, sour smell, sticky.", action: "Reshape gently and use immediately — flavor will be sharper." },
-        ],
-      },
-      feelCue: "Smells like beer and warm bread. A poke leaves a dimple that returns slowly halfway.",
-    },
-    {
-      nodeId: "step_7", action: "Shape",
-      inputs: ["bulk_dough"],
-      outputState: "balled_doughs",
-      instructions: "Divide into equal portions (about 250–280 g each for a 30 cm pizza). Tuck each into a tight ball under cupped hands, sealing the seam underneath, then cover and proof 4–6 hours at room temperature (or cold-proof in the fridge 24–48 hours, returning the balls to room temperature about 2 hours before stretching) until puffy and relaxed.",
-      visualCue: {
-        primaryTarget: "Smooth, taut, glossy spheres with no seams visible from above.",
-        spectrum: [
-          { state: "Underdone", description: "Wrinkles and seams across the top.", action: "Re-tuck and rotate on the bench." },
-          { state: "Perfect",   description: "Drum-tight surface that catches the light.", action: "Cover and proof." },
-          { state: "Overdone",  description: "Surface tears, white belly visible.", action: "Rest 15 min and gently re-shape." },
-        ],
-      },
-      feelCue: "Smooth like an earlobe. Cool, dry, with a quiet bounce.",
-    },
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "levure sèche active",
+      "ratioValue": 0.002,
+      "defaultUnit": "g",
+      "substitutions": [
+        "levure instantanée",
+        "démarreur aurifère (5 %)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Dissoudre",
+      "inputs": [
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "yeast_slurry",
+      "instructions": "Incorporer la levure dans l'eau fraîche (18–20 °C / 65–68 °F) jusqu'à ce qu'aucun granule ne flotte sur la surface.",
+      "visualCue": {
+        "primaryTarget": "Une eau peu nuageuse sans tache de levure visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les granules flottent toujours en surface.",
+            "action": "Whisk doucement et attendre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une brume pâle uniforme, pas encore de mousse.",
+            "action": "Ajouter la farine."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'eau était trop chaude.",
+            "action": "Recommencer avec de l'eau plus fraîche."
+          }
+        ]
+      },
+      "feelCue": "L'eau doit se sentir fraîche contre le poignet — comme un ruisseau de source, jamais chaude."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "yeast_slurry"
+      ],
+      "outputState": "shaggy_mass",
+      "instructions": "Ajouter la farine au lisier. Incorporer avec une cuillère en bois jusqu'à ce qu'aucune farine sèche ne reste.",
+      "visualCue": {
+        "primaryTarget": "Une boule rugueuse et bosselée avec des taches humides sur les parois du bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Poches sèches de farine au fond.",
+            "action": "Plier avec les mains mouillées jusqu'à uniforme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Shaggy, inégale, se colle plus que le bol.",
+            "action": "Couvrir et se reposer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Doux et brillant déjà.",
+            "action": "Vous avez travaillé trop dur — reposez 30 minutes de plus."
+          }
+        ]
+      },
+      "feelCue": "Tactky et têtu. Il devrait serrer vos doigts mais relâcher avec un fil."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Autolyse",
+      "inputs": [
+        "shaggy_mass"
+      ],
+      "outputState": "rested_dough",
+      "instructions": "Couvrir et laisser reposer la pâte de 20 à 30 minutes à température ambiante. La farine s'hydratera entièrement et le gluten commencera à s'organiser seul.",
+      "visualCue": {
+        "primaryTarget": "Dough s'est détendu, a perdu ses bords rugueux, sent peu le pain.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours rugueux, les bords tranchants.",
+            "action": "Attendez plus longtemps dans un endroit chaud."
+          },
+          {
+            "state": "Perfect",
+            "description": "Domed, doux, tient une empreinte digitale brièvement.",
+            "action": "Ajouter le sel et commencer les plis."
+          },
+          {
+            "state": "Overdone",
+            "description": "Visuellement bourdon et lâche.",
+            "action": "Sautez la longue montée — elle a déjà commencé à fermenter."
+          }
+        ]
+      },
+      "feelCue": "Un oreiller doux. Un doigt poché laisse une fossette lente."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Sel",
+      "inputs": [
+        "rested_dough",
+        "ing_03"
+      ],
+      "outputState": "seasoned_dough",
+      "instructions": "Saupoudrer de sel à la surface. Pincer et plier jusqu'à ce qu'il disparaisse dans la pâte.",
+      "visualCue": {
+        "primaryTarget": "Pas de cristaux de sel visibles; la surface semble marbrée brièvement, puis uniforme.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Vous pouvez voir des traces de sel blanc.",
+            "action": "Continuez à plier."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface lisse avec faible reflet.",
+            "action": "Commencez à s'étirer et à plier."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux s'est resserrée et déchirée.",
+            "action": "Reposez-vous 20 min avant de continuer."
+          }
+        ]
+      },
+      "feelCue": "La pâte vous résiste soudainement — c'est le sel qui réveille le gluten."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Plier",
+      "inputs": [
+        "seasoned_dough"
+      ],
+      "outputState": "developed_dough",
+      "instructions": "Effectuez des étirements à intervalles de 30 minutes : soulevez un côté, étirez-vous, pliez-vous. Rotation. Répéter sur quatre rondes (environ 2 heures au total), puis laisser la pâte se détendre 15 à 20 minutes avant la montée en masse.",
+      "visualCue": {
+        "primaryTarget": "Dough tient sa forme lorsqu'elle est levée et montre un haut lisse et tendu.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les larmes, lorsqu'elles sont levées, sont plates dans le bol.",
+            "action": "Ajouter un autre cycle de plis."
+          },
+          {
+            "state": "Perfect",
+            "description": "S'étirent sans déchirer, ressort lentement.",
+            "action": "Ferment en vrac."
+          },
+          {
+            "state": "Overdone",
+            "description": "C'est dur, c'est dur.",
+            "action": "Reposez 30 min pour détendre le gluten."
+          }
+        ]
+      },
+      "feelCue": "Comme tirer cool taffiy. Résistant, mais donnant — jamais cassant."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Ferment",
+      "inputs": [
+        "developed_dough"
+      ],
+      "outputState": "bulk_dough",
+      "instructions": "Couvre-toi. Laisser monter à température ambiante froide (18–20 °C / 65–68 °F) pendant 8–12 heures — ou de 4–6 heures à une température chaude de 24–26 °C / 75–79 °F — jusqu'à ce que la pâte ait à peu près doublé et soit jiggly lorsqu'elle est bouchée.",
+      "visualCue": {
+        "primaryTarget": "Double en volume, bombé, avec quelques bulles visibles le long du bord du bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "A peine cultivé, dense.",
+            "action": "Attendez — la levure fonctionne toujours."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doubled, jiggly, bulles sillonnent le mur du bol.",
+            "action": "Diviser et jouer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Dôme écroulé, odeur aigre, collant.",
+            "action": "Remodeler doucement et utiliser immédiatement — la saveur sera plus nette."
+          }
+        ]
+      },
+      "feelCue": "Ça sent la bière et le pain chaud. Un poke laisse une fossette qui revient lentement à mi-chemin."
+    },
+    {
+      "nodeId": "step_7",
+      "action": "Forme",
+      "inputs": [
+        "bulk_dough"
+      ],
+      "outputState": "balled_doughs",
+      "instructions": "Divisez en portions égales (environ 250 à 280 g chacune pour une pizza de 30 cm). Tuez-les dans une boule serrée sous les mains, en scellant la couture en dessous, puis couvrez et étalez de 4 à 6 heures à la température ambiante (ou à l'épreuve du froid au réfrigérateur 24 à 48 heures, en retournant les boules à la température ambiante environ 2 heures avant l'étirement) jusqu'à ce qu'elles soient gonflées et détendues.",
+      "visualCue": {
+        "primaryTarget": "Des sphères lisses, tendues, brillantes sans coutures visibles d'en haut.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des rides et des coutures au-dessus.",
+            "action": "Re-tuck et tourner sur le banc."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface étanche au tambour qui capte la lumière.",
+            "action": "Couverture et preuve."
+          },
+          {
+            "state": "Overdone",
+            "description": "Larmes de surface, ventre blanc visible.",
+            "action": "Reposez 15 min et reformez doucement."
+          }
+        ]
+      },
+      "feelCue": "Doux comme un lobe d'oreille. Cool, sec, avec un rebond calme."
+    }
+  ]
 };

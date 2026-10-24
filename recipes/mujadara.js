@@ -1,100 +1,250 @@
 export default {
-  repoId: "master_lebanese_mujadara_001",
-  parentRepoId: null,
-  slug: "mujadara",
-  author: "ForkRecipe Kitchen",
-  title: "Mujadara",
-  description: "Lebanon's ancient dish of lentils and rice cooked together into a savory, cumin-scented pilaf — crowned with a landslide of caramelized onions so dark and sweet they taste of concentrated time, and finished with crispy shallots that shatter over the top like edible glass. Peasant food elevated to poetry.",
-  cuisine: "Lebanese",
-  culture: "Lebanese",
-  category: "grains",
-  tags: ["lentils", "rice", "lebanese", "vegan", "gluten-free", "dairy-free", "caramelized-onion", "protein", "comfort"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-  stars: 1743,
-  forks: 152,
-  contributors: 41,
-  license: "CC-BY-SA",
-  createdAt: "2026-01-15",
-  updatedAt: "2026-01-15",
-  flavorRadar: { sweet: 3, salty: 2, sour: 0, bitter: 1, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Green or brown lentils, rinsed",           ratioValue: 200, defaultUnit: "g", substitutions: ["French lentils (firmer texture)"] },
-    { ingId: "ing_02", role: "Starch",    name: "Long-grain rice, rinsed",                  ratioValue: 150, defaultUnit: "g", substitutions: ["basmati (more fragrant)", "cracked wheat (bulgur)"] },
-    { ingId: "ing_03", role: "Allium",    name: "Large yellow onions, thinly sliced",        ratioValue: 600, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "Shallots, thinly sliced into rings",        ratioValue: 200, defaultUnit: "g", substitutions: ["additional onion"] },
-    { ingId: "ing_05", role: "Fat",       name: "Olive oil",                                 ratioValue: 80,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Ground cumin",                              ratioValue: 8,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Ground allspice",                           ratioValue: 3,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Liquid",    name: "Water or light vegetable stock",            ratioValue: 700, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine sea salt",                             ratioValue: 8,   defaultUnit: "g", substitutions: [] },
+  "repoId": "master_lebanese_mujadara_001",
+  "parentRepoId": null,
+  "slug": "mujadara",
+  "author": "ForkRecipe Kitchen",
+  "title": "Mujadara",
+  "description": "L'ancien plat libanais de lentilles et de riz cuits ensemble en un pilaf salé et parfumé de cumin, couronné d'un glissement d'oignons caramélisés si sombres et si doux qu'ils goûtent de temps concentré, et fini avec des échalotes croustillantes qui éclatent au dessus comme du verre comestible. La nourriture paysanne élevée à la poésie.",
+  "cuisine": "Libanais",
+  "culture": "Libanais",
+  "category": "grains",
+  "tags": [
+    "lentilles",
+    "riz",
+    "lébanèse",
+    "végétalien",
+    "Sans gluten",
+    "sans produits laitiers",
+    "oignon caramélisé",
+    "protéine",
+    "confort"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 1743,
+  "forks": 152,
+  "contributors": 41,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-01-15",
+  "updatedAt": "2026-01-15",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Caramelize",
-      inputs: ["ing_03", "ing_05"],
-      outputState: "caramelized_onions",
-      instructions: "Heat two-thirds of the olive oil in a wide, heavy skillet over medium heat. Add all sliced onions with a pinch of salt. Cook, stirring every 3–4 minutes, for 35–45 minutes total — patience here is not optional. The onions will reduce dramatically: first they release water and become translucent (15 min), then they will start to color (25 min), then darken and concentrate into a rich mahogany sweetness (35–45 min). Do not rush with high heat — the sugars must caramelize slowly.",
-      visualCue: {
-        primaryTarget: "Deep mahogany-brown onions, reduced to a small fraction of their original volume. Deeply sweet smell, no raw sharpness.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are golden but not dark. Still have volume and some residual sharpness.", action: "Continue cooking. True caramelization requires 35 minutes minimum." },
-          { state: "Perfect",   description: "Deeply dark mahogany, almost jammy. Volume reduced by 80%. Taste is pure concentrated sweetness with no sharpness. Falling apart in long strands.", action: "Reserve one-third for topping. Use remaining for the lentil base." },
-          { state: "Overdone",  description: "Very dark, almost black. Bitter burnt-sugar smell.", action: "Add a splash of water to the pan and scrape. Remove the darkest bits. The remaining ones may still be good." },
-        ],
-      },
-      feelCue: "The caramelized onions should feel like jam when pressed between two spoons — completely soft, nearly dissolving, with an intensely sweet, concentrated aroma.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Lentilles vertes ou brunes, rincées",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Lentilles françaises ( texture ferme)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fry",
-      inputs: ["ing_04", "ing_05"],
-      outputState: "crispy_shallots",
-      instructions: "In a separate small saucepan, heat remaining olive oil over medium-high. Add shallot rings — the oil should sizzle immediately. Fry, stirring often, for 8–10 minutes until rings are deeply golden and just beginning to darken. They will crisp as they cool, so remove them when still slightly flexible. Drain on paper towels. They turn crispy within 2 minutes of draining.",
-      visualCue: {
-        primaryTarget: "Golden-brown rings, some darker at the edges. Still slightly pliable when hot, but crisp when cooled.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold, still soft and greasy. Will not crisp on cooling.", action: "Continue frying until at least medium-gold." },
-          { state: "Perfect",   description: "Deep gold with darker edges. Just removed while slightly flexible. Draining on towels. Will be completely crispy in 2 minutes.", action: "Reserve for garnish. Do not cover." },
-          { state: "Overdone",  description: "Very dark brown. Bitter. Crumbling when handled.", action: "Use sparingly as accent — the bitterness can be compensated by the sweet caramelized onion beneath." },
-        ],
-      },
-      feelCue: "Pick up a cooled shallot ring — it should snap cleanly like a potato chip, not bend or feel greasy between the fingers.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Riz à grains longs, rincé",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "basmati (plus parfumée)",
+        "blé craqué (bulgur)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_08", "ing_06", "ing_07", "ing_09"],
-      outputState: "cooked_lentils",
-      instructions: "In the same caramelized-onion pot (with the onions still in it minus the reserved portion), add lentils and cover with water or stock. Add cumin and allspice. Bring to a boil, then simmer for 15 minutes until lentils are about two-thirds cooked — still with a slight firmness. Season with salt at this point.",
-      visualCue: {
-        primaryTarget: "Lentils have absorbed the caramelized onion color and are beginning to soften. Spiced, fragrant broth.",
-        spectrum: [
-          { state: "Underdone", description: "Lentils are still hard and raw-tasting. Less than 12 minutes cooking.", action: "Continue simmering before adding rice." },
-          { state: "Perfect",   description: "Lentils have a slight bite — about 70% cooked. Broth is spiced and fragrant. Onion has dissolved into the base.", action: "Add the rice immediately." },
-          { state: "Overdone",  description: "Lentils have fully softened and some are starting to burst.", action: "Add rice immediately and reduce heat. The lentils will continue cooking with the rice." },
-        ],
-      },
-      feelCue: "Bite a lentil — it should be tender at the outer edge but still have a firm, starchy center when you press it with your tongue.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Grand oignons jaunes, tranchés finement",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["cooked_lentils", "ing_02"],
-      outputState: "finished_mujadara",
-      instructions: "Stir in the rinsed rice. Ensure there is enough liquid to cook the rice — about 1.5 cm above the surface of the lentil-rice mixture. Bring back to a boil, then cover tightly with a lid and cook over very low heat for 15 minutes. Remove from heat, keep covered, and steam for 5 more minutes. Fluff gently with a fork. The lentils and rice should be cohesive but not mushy.",
-      visualCue: {
-        primaryTarget: "Unified, dark-tinted pilaf. Rice and lentils cooked through, no excess liquid. Surface dry and fluffy.",
-        spectrum: [
-          { state: "Underdone", description: "Rice still chalky. Crunchy in the center.", action: "Cover and steam for another 5 minutes with a splash of water." },
-          { state: "Perfect",   description: "Rice fully cooked, tender, fluffy. Lentils soft but not mushy. Dark, sweet, cumin-fragrant. Pilaf clings together loosely.", action: "Plate immediately, top with caramelized onions and crispy shallots." },
-          { state: "Overdone",  description: "Rice and lentils have fused into a thick, porridge-like mass.", action: "Still delicious — mujadara exists on a spectrum from pilaf to porridge in different regions. Serve it as is." },
-        ],
-      },
-      feelCue: "Press a spoonful between the back of the spoon and the bowl — it should hold together gently but not be dense or stiff, falling apart into separate grains with light pressure.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalotes, tranchées finement en anneaux",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon supplémentaire"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile d'olive",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Vers le sol",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Liquid",
+      "name": "Stock d'eau ou de légumes légers",
+      "ratioValue": 700,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Caramélisation",
+      "inputs": [
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "caramelized_onions",
+      "instructions": "Chauffer les deux tiers de l'huile d'olive dans une grande poêle lourde à feu moyen. Ajouter tous les oignons tranchés avec une pincée de sel. Faites cuire en remuant toutes les 3-4 minutes, pour 35-45 minutes au total — la patience ici n'est pas facultative. Les oignons vont réduire considérablement : d'abord ils libèrent de l'eau et deviennent translucides (15 min), puis ils commencent à colorier (25 min), puis s'assombrissent et se concentrent dans une riche douceur acajou (35–45 min). Ne vous précipitez pas avec une chaleur élevée — les sucres doivent caraméliser lentement.",
+      "visualCue": {
+        "primaryTarget": "Oignons brun acajou profonds, réduits à une petite fraction de leur volume d'origine. Une odeur très douce, pas de netteté brute.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont dorés mais pas sombres. Il a encore du volume et une netteté résiduelle.",
+            "action": "Continuez à cuisiner. La vraie caramélisation nécessite 35 minutes minimum."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une acajou très sombre, presque jammy. Volume réduit de 80%. Le goût est une douceur concentrée pure sans netteté. Se détacher en longs brins.",
+            "action": "Réserve un tiers pour la garniture. Utilisation restante pour la base de lentilles."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très sombre, presque noire. Une odeur amère de sucre brûlé.",
+            "action": "Ajouter une éclaboussure d'eau dans la casserole et racler. Enlevez les morceaux les plus sombres. Les autres peuvent encore être bons."
+          }
+        ]
+      },
+      "feelCue": "Les oignons caramélisés devraient se sentir comme de la confiture lorsqu'ils sont pressés entre deux cuillères — complètement doux, presque dissolvants, avec un arôme concentré et intensement sucré."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "crispy_shallots",
+      "instructions": "Dans une petite casserole séparée, faire chauffer le reste de l'huile d'olive à feu moyen-élevé. Ajouter les anneaux d'échalote — l'huile doit s'étourdir immédiatement. Faire frire, en remuant souvent, pendant 8-10 minutes jusqu'à ce que les anneaux soient profondément dorés et commencent à s'assombrir. Ils seront croustillants à mesure qu'ils refroidissent, alors retirez-les quand ils sont encore légèrement flexibles. Égoutter sur des serviettes en papier. Ils deviennent croustillants dans les 2 minutes suivant leur égouttage.",
+      "visualCue": {
+        "primaryTarget": "Anneaux dorés, un peu plus foncés aux bords. Toujours légèrement souple quand chaud, mais croustillant quand refroidi.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle, encore doux et gras. Ne sera pas croquant sur le refroidissement.",
+            "action": "Continuer à frire jusqu'à ce que l'or soit au moins moyen."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or profond avec des bords plus foncés. Juste enlevé tout en légèrement flexible. Drainer sur les serviettes. Sera complètement croustillant dans 2 minutes.",
+            "action": "Réserve pour garnir. Ne pas couvrir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très brun foncé. Amère. Crombissement quand il est manipulé.",
+            "action": "Utilisez parcimonieusement comme accent — l'amertume peut être compensée par l'oignon caramélisé sucré en dessous."
+          }
+        ]
+      },
+      "feelCue": "Ramassez un anneau d'échalote refroidi — il devrait se casser proprement comme une croustille de pomme de terre, ne pas plier ou se sentir gras entre les doigts."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_08",
+        "ing_06",
+        "ing_07",
+        "ing_09"
+      ],
+      "outputState": "cooked_lentils",
+      "instructions": "Dans le même pot caramélisé-oignon (avec les oignons encore dedans moins la portion réservée), ajouter les lentilles et couvrir d'eau ou de stock. Ajouter le cumin et le toutspice. Porter à ébullition, puis laisser mijoter pendant 15 minutes jusqu'à ce que les lentilles soient environ deux tiers cuites, toujours avec une légère fermeté. Assaisonner de sel à ce stade.",
+      "visualCue": {
+        "primaryTarget": "Les lentilles ont absorbé la couleur caramélisée de l'oignon et commencent à s'adoucir. Bouillon épicé et parfumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les lentilles sont encore dures et durs. Moins de 12 minutes de cuisson.",
+            "action": "Continuer à mijoter avant d'ajouter du riz."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lentilles ont une légère bouchée — environ 70% cuits. Le bouillon est épicé et parfumé. L'oignon s'est dissous dans la base.",
+            "action": "Ajouter le riz immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les lentilles ont complètement ramolli et certains commencent à éclater.",
+            "action": "Ajouter le riz immédiatement et réduire la chaleur. Les lentilles continueront à cuire avec le riz."
+          }
+        ]
+      },
+      "feelCue": "Mange une lentille — elle devrait être tendre au bord extérieur, mais elle doit toujours avoir un centre d'amidon ferme lorsque tu la presses avec ta langue."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "cooked_lentils",
+        "ing_02"
+      ],
+      "outputState": "finished_mujadara",
+      "instructions": "Incorporer le riz rincé. S'assurer qu'il y a suffisamment de liquide pour cuire le riz — environ 1,5 cm au-dessus de la surface du mélange de lentilles et de riz. Ramener à ébullition, puis bien couvrir avec un couvercle et cuire à feu très doux pendant 15 minutes. Retirer du feu, garder couvert et vapeur 5 minutes de plus. Fluffer doucement avec une fourchette. Les lentilles et le riz doivent être cohésifs mais pas musclés.",
+      "visualCue": {
+        "primaryTarget": "Pilaf uni, teinté foncé. Riz et lentilles cuits, sans excès de liquide. Surface sèche et moelleuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le riz est toujours crayeux. Crunchy au centre.",
+            "action": "Couvrir et vapeur encore 5 minutes avec un jet d'eau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riz entièrement cuit, tendre, moelleux. Lentilles douces mais pas musclées. Dark, doux, parfumé au cumin. Pilaf s'accroche librement.",
+            "action": "Assiette immédiatement, garnir d'oignons caramélisés et d'échalotes croustillantes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz et les lentilles se sont fondus dans une masse épaisse, semblable au porridge.",
+            "action": "Encore délicieux — le mujadara existe sur un spectre allant du pilaf au porridge dans différentes régions. Servez-le comme il est."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une cuillère entre l'arrière de la cuillère et le bol — il doit tenir ensemble doucement mais ne pas être dense ou raide, en tombant dans des grains séparés avec une légère pression."
+    }
+  ]
 };

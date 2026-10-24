@@ -1,98 +1,270 @@
 export default {
-  repoId: "master_middle_eastern_lamb_kofta_001",
-  parentRepoId: null,
-  slug: "lamb-kofta",
-  author: "ForkRecipe Kitchen",
-  title: "Lamb Kofta",
-  description: "Hand-blended ground lamb mixed with onion, parsley, and warm spices, molded onto flat skewers and grilled over charcoal until charred outside and juicy within.",
-  cuisine: "Middle Eastern",
-  culture: "Levantine",
-  category: "proteins",
-  tags: ["kofta", "lamb", "middle-eastern", "grilled", "spiced", "gluten-free"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 1, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Ground lamb (20–25% fat, not too lean)",       ratioValue: 100, defaultUnit: "parts", substitutions: ["ground beef (80/20)", "mixed lamb and beef"] },
-    { ingId: "ing_02", role: "Allium",    name: "Yellow onion (grated on a box grater)",         ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Herb",      name: "Flat-leaf parsley (finely chopped)",            ratioValue: 8,   defaultUnit: "parts", substitutions: ["fresh cilantro for a different character"] },
-    { ingId: "ing_04", role: "Spice",     name: "Ground cumin",                                  ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Ground coriander",                              ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Ground cinnamon",                               ratioValue: 0.5, defaultUnit: "parts", substitutions: ["allspice"] },
-    { ingId: "ing_07", role: "Spice",     name: "Cayenne pepper or Aleppo chili flakes",         ratioValue: 0.5, defaultUnit: "parts", substitutions: ["red chili powder"] },
-    { ingId: "ing_08", role: "Spice",     name: "Freshly ground black pepper",                   ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine salt",                                     ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Fat",       name: "Lamb fat or neutral oil (if meat is very lean)", ratioValue: 3,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_11", role: "Garnish",   name: "Sumac (for finishing)",                         ratioValue: 1,   defaultUnit: "parts", substitutions: ["a squeeze of lemon"] },
+  "repoId": "master_middle_eastern_lamb_kofta_001",
+  "parentRepoId": null,
+  "slug": "lamb-kofta",
+  "author": "ForkRecipe Kitchen",
+  "title": "Agneau Kofta",
+  "description": "L'agneau moulu mélangé à la main avec de l'oignon, du persil et des épices chaudes, moulé sur des brochettes plates et grillé sur du charbon jusqu'à ce qu'il soit carbonisé à l'extérieur et juteux à l'intérieur.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Levantine",
+  "category": "proteins",
+  "tags": [
+    "kofta",
+    "agneau",
+    "Moyen-Orient",
+    "grillé",
+    "épicé",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Blend",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10"],
-      outputState: "kofta_mixture",
-      instructions: "Squeeze the grated onion in a clean cloth or between your palms and wring out as much liquid as possible — excess onion water makes the mixture loose and the kofta will not hold on the skewer. Combine the drained onion with the ground lamb, parsley, all the spices, and salt in a large bowl. Mix and knead by hand for 3 to 4 minutes — not just stirring, but squeezing, folding, and pressing the mixture against the side of the bowl. This develops the myosin proteins in the lamb, binding the mixture so it holds its shape without any added egg or breadcrumb. The mixture should shift from loose and crumbly to smooth, sticky, and cohesive.",
-      visualCue: {
-        primaryTarget: "After thorough mixing, the kofta mixture is a uniform, deep rose-red paste with visible flecks of green parsley and spice throughout. It holds its shape when pressed into a ball and does not crack or crumble at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "The mixture is still crumbly and loose — pinched between the fingers it falls apart and the fat is still separate from the meat. The spices have not been fully incorporated.", action: "Continue kneading for 2 to 3 more minutes. The binding comes from working the proteins; it cannot be rushed." },
-          { state: "Perfect",   description: "Smooth, slightly tacky, and uniform — a pinch between two fingers sticks together without falling apart. When you slam a handful against the bowl, it lands with a satisfying thwack and holds its shape. The mixture feels like dense, sticky play-dough.", action: "Cover and refrigerate for at least 30 minutes to allow the proteins to tighten further and the spices to bloom into the fat." },
-          { state: "Overdone",  description: "The mixture has been kneaded so aggressively that the fat has separated and pooled, and the texture is mealy and slightly greasy rather than smooth.", action: "Chill the mixture for 20 minutes and then work it briefly again with cold hands — the cold will help re-emulsify the fat back into the meat." },
-        ],
-      },
-      feelCue: "The moment the mixture is properly developed, it changes character: it becomes noticeably stickier and heavier, clinging to your palm and resisting when you try to peel it off. It is the proteins binding — you can feel the cohesion forming under your hands.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "agneau moulu (20 à 25 % de gras, pas trop maigre)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "boeuf haché (80/20)",
+        "agneau et boeuf mélangés"
+      ]
     },
     {
-      nodeId: "step_2", action: "Shape",
-      inputs: ["kofta_mixture"],
-      outputState: "skewered_kofta",
-      instructions: "Wet your hands with cold water to prevent sticking. Take a handful of the chilled mixture (about 80–100 g) and mold it around a flat metal skewer, starting from the center and pressing the meat firmly onto the skewer as you work your hands toward each end. The kofta should be roughly 15 to 18 cm long, about 2 to 2.5 cm thick, with gently tapered ends that taper to secure the meat to the skewer. Squeeze firmly — especially near the ends — to seal the meat onto the metal. A properly attached kofta will not rotate around the skewer when you turn it. Lay the shaped kofta on a tray and refrigerate for 15 minutes to firm up before grilling.",
-      visualCue: {
-        primaryTarget: "An elongated, even cylinder of meat on the skewer, gently tapered at both ends, with a smooth surface showing faint finger-press marks. The surface looks tight and cohesive — no cracks or gaps.",
-        spectrum: [
-          { state: "Underdone", description: "The kofta is roughly shaped but the meat is loose around the skewer and spins freely when the skewer is rotated. There are cracks and gaps in the surface.", action: "Remove from the skewer, re-chill the mixture for 10 minutes, and reshape, squeezing more firmly. The surface must be completely sealed." },
-          { state: "Perfect",   description: "A smooth, dense cylinder firmly bonded to the skewer. It does not rotate or slip when the skewer is turned. Lifting the skewer, the kofta hangs without sagging or cracking.", action: "Refrigerate for 15 minutes before grilling to firm the fat and ensure the kofta holds its shape under the first blast of charcoal heat." },
-          { state: "Overdone",  description: "The kofta has been squeezed and reworked so much that the fat is visibly separating to the surface and the mixture is starting to look mealy.", action: "Chill immediately without further handling. Grill from cold to help the fat resolve back into the mixture as it heats." },
-        ],
-      },
-      feelCue: "Grip the skewer and rotate it — the kofta should move with it as one solid piece. Give the end of the kofta a firm squeeze: it should feel dense and spring back immediately like firm putty, not squishy or crumbly.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon jaune (grâpé sur une boîte)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Grill",
-      inputs: ["skewered_kofta"],
-      outputState: "grilled_kofta",
-      instructions: "Prepare a charcoal grill with a high heat zone — the coals should be white-ashed and glowing intensely. If using a gas grill, preheat to maximum. Oil the grate lightly. Lay the skewers across the grate and grill, turning a quarter-turn every 90 seconds, for a total of 6 to 8 minutes. You want all four sides developed: deep char marks, blistered and caramelized with rendered fat dripping and flaring the coals below. The kofta should have a bold char on the outside while the interior stays juicy — an internal temperature of 70 C / 158 F is sufficient for well-blended ground meat. Do not press with a spatula; this squeezes out the juices.",
-      visualCue: {
-        primaryTarget: "The kofta are deeply charred on all sides — dark brown to near-black in patches, with grill lines where they rested on the grate, and the surface glistening with rendered lamb fat. The fat drips are causing short flares on the coals below.",
-        spectrum: [
-          { state: "Underdone", description: "The kofta are grey and pale, barely colored, still clinging tightly to the skewer and feeling firm and springy throughout — the center is still raw and pink.", action: "Do not move them yet if they are sticking to the grate — wait 30 more seconds and they will release when properly seared. Continue turning every 90 seconds." },
-          { state: "Perfect",   description: "Deep, caramelized char on all sides, glistening with fat, fragrant with spice and smoke. Pulled from the skewer, each kofta has a distinct crust that yields to slight pressure, and the interior is just barely pink and abundantly juicy.", action: "Serve immediately, scattered with sumac and alongside flatbread, tahini, and salad." },
-          { state: "Overdone",  description: "Uniformly black outside with dry, grey, compact meat inside — all the fat has rendered out and the juices are gone. The kofta feel light and stiff.", action: "Slice immediately and serve with a sauce — the meat will benefit from the moisture of tahini, labneh, or a chopped herb salad to compensate for what was lost to the fire." },
-        ],
-      },
-      feelCue: "Press the side of the kofta lightly with a finger: it should spring back firmly but not rigidly — like pressing a ripe fig. If it feels completely solid and unyielding, it is overcooked. If it feels entirely soft and doughy, it needs more time. You should also hear a steady sizzle-crackle as the fat drips onto the coals — that sound is flavor in real time.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Persil à feuilles plates (finement haché)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "coriandre fraîche pour un personnage différent"
+      ]
     },
     {
-      nodeId: "step_4", action: "Garnish",
-      inputs: ["grilled_kofta", "ing_11"],
-      outputState: "finished_lamb_kofta",
-      instructions: "Slide the kofta from the skewers onto a serving platter or individual plates with a swift, confident pull — they should release cleanly. Scatter generously with sumac, which adds a tart, fruity brightness that cuts the richness of the lamb fat and lifts the entire dish. Serve immediately with warm flatbread, a chopped parsley and tomato salad, tahini sauce, and pickles. Kofta must be eaten the moment they come from the grill — they lose their succulence rapidly as they cool and the fat begins to solidify.",
-      visualCue: {
-        primaryTarget: "Juicy, char-crusted kofta on the plate, dusted with deep red-purple sumac, with glistening rendered fat on the surface. In the light from the grill, they look like mahogany logs.",
-        spectrum: [
-          { state: "Underdone", description: "The sumac has not been applied and the kofta look plain — the acidity of the sumac is not just decorative but essential to the dish's balance.", action: "Add the sumac now while the kofta are still warm and will hold the powder." },
-          { state: "Perfect",   description: "Mahogany kofta, glossy with rendered fat, dusted with the burgundy of sumac, hot and fragrant. Cut open, the center is moist and just barely pink, with visible fat and the spices distributed throughout.", action: "Eat immediately, with flatbread folded around the meat and everything else on the plate." },
-          { state: "Overdone",  description: "The kofta have cooled on the plate — the fat is beginning to set on the surface and the interior has lost its pink and gone a uniform grey.", action: "Rewarm briefly over the remaining coals or under a broiler. A cooled kofta is edible but not the experience it should be." },
-        ],
-      },
-      feelCue: "Bite through the char crust of a fresh kofta and feel the contrast: a crisp, slightly brittle exterior giving way to a dense, juicy, yielding interior that floods with fat and spice-scented juice. That moment — when the crust breaks and the inside yields — is the entire promise of the dish delivered.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Cumin",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Toussages"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poivre de Cayenne ou flocons de chili d'Alep",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poudre de chili rouge"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Graisse d'agneau ou huile neutre (si la viande est très maigre)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Sumac (pour la finition)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une pression de citron"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "kofta_mixture",
+      "instructions": "Pressez l'oignon râpé dans un chiffon propre ou entre vos paumes et arrosez le plus de liquide possible – l'excès d'eau d'oignon libère le mélange et le kofta ne tiendra pas sur la brochette. Mélanger l'oignon égoutté avec l'agneau moulu, le persil, toutes les épices et le sel dans un grand bol. Mélanger et pétrir à la main pendant 3 à 4 minutes, non seulement en remuant, mais en pressant, en pliant et en appuyant sur le côté du bol. Cela développe les protéines de myosine dans l'agneau, liant le mélange de sorte qu'il conserve sa forme sans aucun œuf ajouté ou chapelure. Le mélange doit passer d'un mélange lâche et émietté à un mélange lisse, collant et cohérent.",
+      "visualCue": {
+        "primaryTarget": "Après un mélange approfondi, le mélange de kofta est une pâte rose-rouge foncé uniforme avec des taches visibles de persil vert et d'épices partout. Il tient sa forme lorsqu'il est pressé dans une boule et ne craque pas ou ne s'écroule pas aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est toujours émietté et lâche — pincée entre les doigts, il tombe en morceaux et la graisse est encore séparée de la viande. Les épices n'ont pas été entièrement incorporées.",
+            "action": "Continuer à pétrir pendant 2 à 3 minutes. La liaison provient du travail des protéines; elle ne peut pas être précipitée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, légèrement téméraire et uniforme — une pincée entre les deux doigts colle ensemble sans tomber en morceaux. Lorsque vous claquez une poignée contre le bol, il atterrit avec un thwack satisfaisant et tient sa forme. Le mélange semble dense et collant.",
+            "action": "Couvrir et réfrigérer pendant au moins 30 minutes pour permettre aux protéines de se resserrer davantage et aux épices de fleurir dans la graisse."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a été pétri de façon si agressive que la graisse s'est séparée et mise en commun, et la texture est farineuse et légèrement grasse plutôt que lisse.",
+            "action": "Refroidissez le mélange pendant 20 minutes puis retravaillez brièvement avec les mains froides — le froid aidera à ré-émulsionner le gras dans la viande."
+          }
+        ]
+      },
+      "feelCue": "Au moment où le mélange est correctement développé, il change de caractère : il devient nettement plus collant et plus lourd, s'accrochant à votre paume et résistant lorsque vous essayez de l'éplucher. C'est la liaison des protéines — vous pouvez sentir la cohésion qui se forme sous vos mains."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Forme",
+      "inputs": [
+        "kofta_mixture"
+      ],
+      "outputState": "skewered_kofta",
+      "instructions": "Mouiller les mains avec de l'eau froide pour éviter de coller. Prenez une poignée de mélange réfrigéré (environ 80 à 100 g) et moulez-la autour d'une brochette en métal plat, en commençant par le centre et en pressant fermement la viande sur la brochette pendant que vous travaillez vos mains vers chaque extrémité. Le kofta doit avoir une longueur d'environ 15 à 18 cm, d'environ 2 à 2,5 cm d'épaisseur, avec des extrémités légèrement effilées qui se taisent pour fixer la viande à la brochette. Pressez fermement — surtout près des extrémités — pour sceller la viande sur le métal. Un kofta correctement attaché ne tourne pas autour de la brochette lorsque vous le tournez. Placer le kofta en forme sur un plateau et réfrigérer pendant 15 minutes pour le raffermir avant de griller.",
+      "visualCue": {
+        "primaryTarget": "Un cylindre allongé et uniforme de viande sur la brochette, légèrement conique aux deux extrémités, avec une surface lisse montrant des marques de pression des doigts faibles. La surface semble étroite et cohésive — pas de fissures ni de trous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le kofta est grossièrement façonné mais la viande est lâche autour de la brochette et tourne librement lorsque la brochette est tournée. Il y a des fissures et des trous dans la surface.",
+            "action": "Retirer de la brochette, refroidir le mélange pendant 10 minutes et reformer, presser plus fermement. La surface doit être complètement scellée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un cylindre lisse et dense solidement lié à la brochette. Il ne tourne ni ne glisse lorsque la brochette est tournée. Levant la brochette, le kofta s'accroche sans s'accrocher ni craquer.",
+            "action": "Réfrigérer pendant 15 minutes avant de griller pour raffermir la graisse et s'assurer que le kofta conserve sa forme sous le premier souffle de chaleur de charbon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le kofta a été pressé et retravaillé tellement que la graisse se sépare visiblement à la surface et le mélange commence à avoir l'air farineux.",
+            "action": "Refroidir immédiatement sans autre manipulation. Griller à partir du froid pour aider la graisse à revenir dans le mélange pendant qu'il chauffe."
+          }
+        ]
+      },
+      "feelCue": "Poignez la brochette et faites-la tourner — le kofta devrait se déplacer avec elle comme une seule pièce solide. Donner à la fin de la kofta une pression ferme: il doit se sentir dense et revenir immédiatement comme un mastic ferme, pas squishy ou friable."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Grille",
+      "inputs": [
+        "skewered_kofta"
+      ],
+      "outputState": "grilled_kofta",
+      "instructions": "Préparez une grille de charbon avec une zone de chaleur élevée — les charbons devraient être à la chaux et briller intensément. Si vous utilisez une grille à gaz, préchauffez au maximum. Huilez la grille légèrement. Placez les brochettes sur la grille et faites griller, tournant un quart de tour toutes les 90 secondes, pour un total de 6 à 8 minutes. Vous voulez que les quatre côtés se développent : des traces d'omble profonde, des cloques et des caramélisés avec de la graisse fondue et des flocons de charbons ci-dessous. Le kofta devrait avoir un omble gras à l'extérieur pendant que l'intérieur reste juteux — une température interne de 70 °C / 158 °F est suffisante pour la viande hachée bien mélangée. Ne pas presser avec une spatule; cela presse les jus.",
+      "visualCue": {
+        "primaryTarget": "Les kofta sont profondément carbonisés de tous les côtés — brun foncé à presque noir dans les taches, avec des lignes de grill où ils reposaient sur la grille, et la surface scintille avec rendu gras d'agneau. Les gouttes de graisse provoquent de courtes éruptions sur les charbons ci-dessous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les kofta sont gris et pâles, à peine colorés, toujours étroitement attachés à la brochette et se sentent fermes et printanières dans l'ensemble — le centre est encore cru et rose.",
+            "action": "Ne les déplacez pas encore s'ils s'en tiennent à la grille — attendez 30 secondes de plus et ils se relâcheront lorsqu'ils seront bien mis en mer. Continuer à tourner toutes les 90 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "omble caramélisé profond de tous les côtés, scintillant de graisse, parfumé d'épices et de fumée. Tiré de la brochette, chaque kofta a une croûte distincte qui donne à une légère pression, et l'intérieur est à peine rose et abondamment juteux.",
+            "action": "Servir immédiatement, éparpillé de sumac et aux côtés de pain plat, de tahini et de salade."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'extérieur est uniformément noir avec de la viande sèche, grise et compacte à l'intérieur. Le kofta se sent léger et raide.",
+            "action": "Couper immédiatement et servir avec une sauce — la viande bénéficiera de l'humidité du tahini, du labneh ou d'une salade d'herbe hachée pour compenser ce qui a été perdu au feu."
+          }
+        ]
+      },
+      "feelCue": "Appuyez légèrement sur le côté du kofta avec un doigt: il devrait revenir fermement mais pas rigidement — comme appuyer sur une figuier mûre. S'il se sent complètement solide et inébranlable, il est trop cuit. Si elle se sent entièrement douce et pâteuse, elle a besoin de plus de temps. Vous devriez également entendre un grésillement constant comme la graisse coule sur les charbons — ce son est saveur en temps réel."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "grilled_kofta",
+        "ing_11"
+      ],
+      "outputState": "finished_lamb_kofta",
+      "instructions": "Glissez le kofta des brochettes sur un plateau de service ou des assiettes individuelles avec une traction rapide et confiante — ils devraient se libérer proprement. Scatter généreusement avec le sumac, qui ajoute une brillance tarte fruitée qui coupe la richesse de la graisse d'agneau et soulève le plat entier. Servir immédiatement avec du pain plat chaud, un persil haché et une salade de tomates, de la sauce tahini et des cornichons. Kofta doit être mangé au moment où ils viennent de la grille — ils perdent leur succulence rapidement quand ils refroidissent et la graisse commence à se solidifier.",
+      "visualCue": {
+        "primaryTarget": "Kofta juteux croustillé d'omble sur la plaque, pulvérisé avec du sumac rouge-violet profond, avec du gras rendu brillant sur la surface. Dans la lumière du grill, ils ressemblent à des bûches d'acajou.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sumac n'a pas été appliqué et le kofta semble uni — l'acidité du sumac n'est pas seulement décorative mais essentielle à l'équilibre du plat.",
+            "action": "Ajoutez maintenant le sumac pendant que le kofta est encore chaud et tiendra la poudre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Acajou kofta, brillant avec de la graisse rendue, poussière avec la bourgogne de sumac, chaud et parfumé. Couper ouvert, le centre est humide et à peine rose, avec de la graisse visible et les épices distribuées à travers.",
+            "action": "Mangez immédiatement, avec du pain plat plié autour de la viande et tout le reste sur l'assiette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les kofta ont refroidi sur l'assiette — la graisse commence à se poser sur la surface et l'intérieur a perdu son rose et est devenu un gris uniforme.",
+            "action": "Réchauffer brièvement les charbons restants ou sous une grille. Un kofta refroidi est comestible mais pas l'expérience qu'il devrait être."
+          }
+        ]
+      },
+      "feelCue": "Agitez à travers la croûte d'omble d'un kofta frais et ressentez le contraste : un extérieur croustillant et légèrement fragile qui laisse place à un intérieur dense et juteux qui inonde de graisse et de jus parfumé d'épices. Ce moment — lorsque la croûte se brise et que l'intérieur se répand — est la promesse complète du plat livré."
+    }
+  ]
 };

@@ -1,104 +1,268 @@
 export default {
-  repoId: "master_american_snickerdoodle_bars_001",
-  parentRepoId: null,
-  slug: "snickerdoodle-bars",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Snickerdoodle Bars",
-  description: "Soft, chewy vanilla-butter bars with a faint tang from cream of tartar, baked under a crackly crust of cinnamon sugar — everything good about the cookie, in a pan big enough for a crowd.",
-  cuisine: "American",
-  culture: "American home baking",
-  category: "desserts",
-  tags: ["bars", "cookies", "cinnamon", "snickerdoodle", "crowd-pleaser", "home-kitchen", "baking"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "1 hr 45 min",
-  ratioSystem: "weight",
-  servings: 24,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 5, salty: 1, sour: 1, bitter: 0, umami: 0, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Unsalted butter, softened",                         ratioValue: 225, defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener", name: "Granulated sugar (dough)",                          ratioValue: 200, defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener", name: "Light brown sugar, packed",                         ratioValue: 100, defaultUnit: "g",     substitutions: ["all granulated sugar (crisper bars)"] },
-    { ingId: "ing_04", role: "Binder",    name: "Large eggs, room temperature",                      ratioValue: 2,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Vanilla extract",                                   ratioValue: 10,  defaultUnit: "ml",    substitutions: [] },
-    { ingId: "ing_06", role: "Structure", name: "All-purpose flour",                                 ratioValue: 340, defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_07", role: "Leavener",  name: "Cream of tartar",                                   ratioValue: 4,   defaultUnit: "g",     substitutions: ["replace cream of tartar and baking soda with 8 g baking powder (loses the tang)"] },
-    { ingId: "ing_08", role: "Leavener",  name: "Baking soda",                                       ratioValue: 3,   defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine salt",                                         ratioValue: 4,   defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_10", role: "Sweetener", name: "Granulated sugar (topping)",                        ratioValue: 50,  defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_11", role: "Spice",     name: "Ground cinnamon",                                   ratioValue: 8,   defaultUnit: "g",     substitutions: ["add a pinch of nutmeg or cardamom"] },
+  "repoId": "master_american_snickerdoodle_bars_001",
+  "parentRepoId": null,
+  "slug": "snickerdoodle-bars",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Barres de snickerdood",
+  "description": "Des barres de beurre de vanille molles et mâcheuses avec un léger tang de crème de tartre, cuites sous une croûte de sucre de cannelle, tout est bon pour le biscuit, dans une casserole assez grande pour une foule.",
+  "cuisine": "Américain",
+  "culture": "Cuisson maison américaine",
+  "category": "desserts",
+  "tags": [
+    "barres",
+    "cookies",
+    "cannelle",
+    "snickerdoodle",
+    "S'il vous plaît",
+    "cuisine maison",
+    "Cuisson"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "1 hr 45 min",
+  "ratioSystem": "weight",
+  "servings": 24,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 1,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Cream",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "creamed_butter",
-      instructions: "Heat the oven to 350°F (175°C). Grease a 9 × 13 in (23 × 33 cm) metal baking pan and line it with a parchment sling overhanging the long sides. In a stand mixer with the paddle (or with a hand mixer), beat the softened butter with the granulated and brown sugars on medium speed for 2–3 minutes until lighter in color and fluffy.",
-      visualCue: {
-        primaryTarget: "A pale, fluffy, spreadable mixture noticeably lighter than the starting butter.",
-        spectrum: [
-          { state: "Underdone", description: "Mixture is dense, gritty, and the same color as the original butter.", action: "Beat another minute or two." },
-          { state: "Perfect",   description: "Pale beige, fluffy, holds soft peaks, and looks like frosting.", action: "Add the eggs." },
-          { state: "Overdone",  description: "Butter was too warm; the mixture looks greasy and soupy.", action: "Chill the bowl 10 minutes and beat again briefly." },
-        ],
-      },
-      feelCue: "Rub a bit between your fingers — it should feel smooth and airy, with only a slight grittiness from the sugar.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli",
+      "ratioValue": 225,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Mix dough",
-      inputs: ["creamed_butter", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "snickerdoodle_dough",
-      instructions: "Beat in the eggs one at a time, then the vanilla, scraping down the bowl. Whisk the flour, cream of tartar, baking soda, and salt in a separate bowl, add to the butter mixture, and mix on low speed just until no dry flour remains. The dough will be thick and soft, like cookie dough.",
-      visualCue: {
-        primaryTarget: "A thick, smooth, pale dough with no visible flour.",
-        spectrum: [
-          { state: "Underdone", description: "Floury streaks and dry patches at the bottom of the bowl.", action: "Finish folding by hand with a spatula." },
-          { state: "Perfect",   description: "Soft, uniform, slightly glossy dough that holds its shape when scooped.", action: "Spread into the pan." },
-          { state: "Overdone",  description: "Mixed on high for a long time; the dough looks elastic and greasy.", action: "Proceed — the bars may be a bit tougher." },
-        ],
-      },
-      feelCue: "The dough should feel soft and slightly tacky, like play dough warmed in your hand.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["snickerdoodle_dough", "ing_10", "ing_11"],
-      outputState: "baked_bars",
-      instructions: "Spread the dough evenly into the pan with an offset spatula or damp fingers. Stir the topping sugar and cinnamon together and sprinkle it in an even layer over the whole surface. Bake 22–28 minutes, until the edges are light golden and pulling away from the pan and the center is puffed and set but still soft; a toothpick in the center should come out with a few moist crumbs, not wet dough.",
-      visualCue: {
-        primaryTarget: "A puffed, crackled cinnamon-sugar crust over golden edges, with a set center.",
-        spectrum: [
-          { state: "Underdone", description: "Center is shiny, wet-looking under the sugar, and jiggles; the toothpick comes out gooey.", action: "Bake 3–4 minutes more." },
-          { state: "Perfect",   description: "Edges light golden and pulling away; center puffed with a crinkled, matte cinnamon crust; toothpick shows moist crumbs.", action: "Cool in the pan." },
-          { state: "Overdone",  description: "Edges are deep brown and hard, and a toothpick comes out completely dry.", action: "Bars will be firmer and cakey; pull earlier next time." },
-        ],
-      },
-      feelCue: "The center should feel set but soft and give slightly when pressed, sinking a little as it cools.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre brun clair, emballé",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tous les sucres granulés (barres de croissant)"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Cool",
-      inputs: ["baked_bars"],
-      outputState: "snickerdoodle_bars",
-      instructions: "Cool in the pan on a wire rack for at least 1 hour so the center finishes setting. Lift out with the parchment sling and cut into 24 bars with a sharp knife, wiping the blade between cuts.",
-      visualCue: {
-        primaryTarget: "Clean-edged squares with a chewy, dense interior and intact sugar crust.",
-        spectrum: [
-          { state: "Underdone", description: "Cut warm — the center smears and the bars crumble.", action: "Let the remaining slab cool fully before cutting." },
-          { state: "Perfect",   description: "Bars cut cleanly, soft and chewy inside, with a crackly cinnamon top.", action: "Serve; keep airtight at room temperature up to 3 days." },
-          { state: "Overdone",  description: "Left uncovered for a day, and the edges have dried and hardened.", action: "Store airtight with a slice of bread to soften them." },
-        ],
-      },
-      feelCue: "The bottom of the pan should feel fully cool to the touch before you cut.",
+      "ingId": "ing_04",
+      "role": "Binder",
+      "name": "Gros œufs, température ambiante",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Extrait de vanille",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 340,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Leavener",
+      "name": "Crème de tartre",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": [
+        "remplacer la crème de tartre et de bicarbonate de soude par 8 g de poudre à pâte (perte le tang)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Leavener",
+      "name": "Soda au four",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Cannelle du sol",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": [
+        "ajouter une pincée de muscade ou de cardamome"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Crème",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "creamed_butter",
+      "instructions": "Chauffer le four à 350°F (175°C). Graisser une poêle métallique de 9 × 13 po (23 × 33 cm) et la garnir d'une élingue parchemin surplombant les longs côtés. Dans un mélangeur de stand avec la pagaie (ou avec un mélangeur à main), battre le beurre ramolli avec les sucres granulés et bruns à vitesse moyenne pendant 2–3 minutes jusqu'à ce qu'il soit plus léger et moelleux.",
+      "visualCue": {
+        "primaryTarget": "Un mélange pâle, moelleux et extensible nettement plus léger que le beurre de départ.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est dense, granuleux et de la même couleur que le beurre d'origine.",
+            "action": "Encore une minute ou deux."
+          },
+          {
+            "state": "Perfect",
+            "description": "beige pâle, moelleux, tient des pics doux, et ressemble à du gel.",
+            "action": "Ajouter les œufs."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre était trop chaud; le mélange semble gras et soupeux.",
+            "action": "Refroidir le bol 10 minutes et battre à nouveau brièvement."
+          }
+        ]
+      },
+      "feelCue": "Frottez un peu entre vos doigts — il devrait se sentir doux et aéré, avec seulement un léger gras du sucre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélanger la pâte",
+      "inputs": [
+        "creamed_butter",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "snickerdoodle_dough",
+      "instructions": "Battre dans les œufs un à la fois, puis la vanille, grattant le bol. fouetter la farine, la crème de tartre, le bicarbonate de soude et le sel dans un bol séparé, ajouter au mélange de beurre et mélanger à basse vitesse jusqu'à ce qu'il ne reste plus de farine sèche. La pâte sera épaisse et douce, comme la pâte à biscuits.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, lisse, pâle sans farine visible.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Flouries et taches sèches au fond du bol.",
+            "action": "Terminer pliage à la main avec une spatule."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte douce, uniforme et légèrement brillante qui tient sa forme lorsqu'elle est écopée.",
+            "action": "Répartir dans la poêle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mélanger sur haute pendant longtemps; la pâte semble élastique et grasse.",
+            "action": "Continuez — les barres peuvent être un peu plus difficiles."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir douce et légèrement collante, comme jouer de la pâte chaude dans votre main."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "snickerdoodle_dough",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "baked_bars",
+      "instructions": "Étendre la pâte uniformément dans la casserole avec une spatule offset ou des doigts humides. Incorporer le sucre et la cannelle et le saupoudrer d'une couche uniforme sur toute la surface. Cuire de 22 à 28 minutes, jusqu'à ce que les bords soient dorés et s'éloignent de la poêle et que le centre soit gonflé et mis mais encore doux; un cure-dent au centre devrait sortir avec quelques miettes humides, pas de pâte humide.",
+      "visualCue": {
+        "primaryTarget": "Une croûte de cannelle-sucre gonflée et crépitée sur les bords dorés, avec un centre fixe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le centre est brillant, humide sous le sucre, et des jiggles; le cure-dent sort gooey.",
+            "action": "Faites cuire encore 3-4 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords sont dorés et s'éloignent; le centre est gonflé d'une croûte de cannelle mate riquée; le cure-dent présente des miettes humides.",
+            "action": "Refroidir dans la casserole."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont brun foncé et dur, et un cure-dent sort complètement sec.",
+            "action": "Les barres seront plus fermes et cakey; tirer plus tôt la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Le centre doit se sentir réglé mais doux et donner légèrement quand pressé, en s'enfonceant un peu comme il refroidit."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Frais",
+      "inputs": [
+        "baked_bars"
+      ],
+      "outputState": "snickerdoodle_bars",
+      "instructions": "Laisser refroidir dans la poêle sur un support filaire pendant au moins 1 heure afin que le centre termine le réglage. Soulevez avec le parchemin et coupez en 24 barres avec un couteau tranchant, essuyant la lame entre les coupes.",
+      "visualCue": {
+        "primaryTarget": "Des carrés nettoyés avec une croûte de sucre interne dense et à croûte de sucre intacte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Couper au chaud — les frottis centraux et les barres s'écroulent.",
+            "action": "Laisser refroidir complètement le reste de la dalle avant de couper."
+          },
+          {
+            "state": "Perfect",
+            "description": "Barres coupées proprement, douces et mâcheuses à l'intérieur, avec un plateau de cannelle crépitante.",
+            "action": "Servir; maintenir l'étanchéité à la température ambiante jusqu'à 3 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "A découvert pendant une journée, et les bords ont séché et durci.",
+            "action": "Conserver hermétiquement avec une tranche de pain pour les adoucir."
+          }
+        ]
+      },
+      "feelCue": "Le fond de la poêle doit se sentir complètement frais au toucher avant de couper."
+    }
+  ]
 };

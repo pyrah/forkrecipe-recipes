@@ -1,77 +1,182 @@
 export default {
-  repoId: "master_mexican_agua_jamaica_001",
-  parentRepoId: null,
-  slug: "agua-de-jamaica",
-  author: "ForkRecipe Kitchen",
-  title: "Agua de Jamaica (Hibiscus Water)",
-  description: "Mexico's crimson flower water — dried hibiscus petals steeped in just-boiled water until the liquid turns a deep, jewel-like garnet, then sweetened, squeezed with lime, and diluted into a tart, floral agua fresca that is at once refreshing and complex. The colour alone stops you in your tracks.",
-  cuisine: "Mexican",
-  culture: "Mexican",
-  category: "beverages",
-  tags: ["beverage", "mexican", "hibiscus", "agua-fresca", "vegan", "gluten-free", "dairy-free"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 0, sour: 4, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "Dried hibiscus flowers (jamaica)",     ratioValue: 60,  defaultUnit: "g",  substitutions: ["dried hibiscus tea bags — use 8 bags for a similar concentration"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Boiling water (for steeping)",          ratioValue: 1,   defaultUnit: "L",  substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener", name: "White sugar",                           ratioValue: 120, defaultUnit: "g",  substitutions: ["agave nectar", "piloncillo for a deeper, caramel sweetness"] },
-    { ingId: "ing_04", role: "Acid",      name: "Fresh lime juice (about 2 limes)",      ratioValue: 60,  defaultUnit: "ml", substitutions: ["lemon juice"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Cold water (to dilute)",                ratioValue: 1,   defaultUnit: "L",  substitutions: [] },
+  "repoId": "master_mexican_agua_jamaica_001",
+  "parentRepoId": null,
+  "slug": "agua-de-jamaica",
+  "author": "ForkRecipe Kitchen",
+  "title": "Agua de Jamaica (Hibiscus Water)",
+  "description": "L'eau pourpre du Mexique — les pétales d'hibiscus séchés, imprégnés d'eau juste bouillie jusqu'à ce que le liquide devienne un grenat profond, comme un bijou, puis sucré, pressé avec de la chaux, et dilué dans une tarte, agua fresca florale qui est à la fois rafraîchissante et complexe. La couleur seule vous arrête dans vos traces.",
+  "cuisine": "Mexicain",
+  "culture": "Mexicain",
+  "category": "beverages",
+  "tags": [
+    "boisson",
+    "Mexique",
+    "hibiscus",
+    "agua-fresca",
+    "végétalien",
+    "Sans gluten",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 4,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Steep",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "hibiscus_concentrate",
-      instructions: "Place the dried hibiscus flowers in a heatproof pitcher or bowl. Pour the boiling water directly over them — the water will turn crimson almost immediately. Stir once to submerge all the petals, then let them steep uncovered for 20 minutes. A shorter steep yields a thin pink agua; a full 20 minutes produces a deep concentrate that holds its colour through dilution. Stir in the sugar while the concentrate is still hot so it dissolves completely.",
-      visualCue: {
-        primaryTarget: "A deep, jewel-red liquid, nearly opaque at full concentration, with the petals darkened from bright magenta to a dull garnet — the colour of red wine held against a light.",
-        spectrum: [
-          { state: "Underdone", description: "After 5 minutes the liquid is still a thin, bright pink — more rose water than concentrate.", action: "Continue steeping. The full depth of colour and tart flavour takes the whole 20 minutes." },
-          { state: "Perfect",   description: "A dark, concentrated ruby-red that coats the spoon. The petals have surrendered their colour and sit pale and limp. The smell is tart and floral, faintly like cranberry.", action: "Stir in the sugar now, while hot, to dissolve it fully, then strain out the petals." },
-          { state: "Overdone",  description: "Steeped more than 45 minutes; the liquid has taken on a slightly muddy, earthy edge and the petals have begun to break apart into the brew.", action: "Strain immediately through a fine sieve and dilute as normal — the flavour is still pleasant, with more depth, though a touch less floral." },
-        ],
-      },
-      feelCue: "Dip a white teaspoon into the concentrate and watch the colour climb the ceramic — it should stain deeply and instantly, the way a red fruit juice does, not run off like weak tea.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Fleurs séchées d'hibiscus (jamaïque)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Sacs à thé en hibiscus séché — 8 sacs pour une concentration similaire"
+      ]
     },
     {
-      nodeId: "step_2", action: "Strain",
-      inputs: ["hibiscus_concentrate"],
-      outputState: "strained_concentrate",
-      instructions: "Set a fine-mesh sieve over a large jug or pitcher and pour the sweetened hibiscus concentrate through it. Press the spent petals gently with the back of a spoon to extract every last drop — but do not force them through the mesh, as they will cloud the liquid. Discard the spent petals. The strained concentrate should be a clear, deep ruby-red with a glossy sheen from the dissolved sugar.",
-      visualCue: {
-        primaryTarget: "A clear, glossy, deep-red concentrate with no floating debris, running cleanly off the sieve with a bright, jewel-like translucence when held to the light.",
-        spectrum: [
-          { state: "Underdone", description: "Petals and fibres are still floating freely in the jug — the straining step was rushed.", action: "Pour through the sieve a second time. Cloudy jamaica is not unpleasant, but free petals in the drink are undesirable." },
-          { state: "Perfect",   description: "Crystal-clear ruby liquid, sweetened and deep, smelling of tart hibiscus and lime. It holds its colour without browning.", action: "Add the cold water, lime juice, and taste to balance." },
-          { state: "Overdone",  description: "Forced too hard through the sieve, the liquid has gone cloudy from petal fragments.", action: "Let it settle for 5 minutes and pour through a coffee filter to clarify, or accept the cloudiness — the taste is unaffected." },
-        ],
-      },
-      feelCue: "The concentrate should feel slightly syrupy and sticky between your fingers from the dissolved sugar — noticeably denser than plain water.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau bouillante (à tremper)",
+      "ratioValue": 1,
+      "defaultUnit": "L",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Finish",
-      inputs: ["strained_concentrate", "ing_04", "ing_05"],
-      outputState: "finished_agua_jamaica",
-      instructions: "Pour the cold diluting water into the pitcher and squeeze in the lime juice. Stir well and taste: a good agua de jamaica should be emphatically tart, with the sweetness playing a supporting role. If it tastes flat, add more lime juice. If it's too sour, add a little more sugar. Refrigerate until cold — at least 30 minutes — and serve over plenty of ice. The colour will lighten from garnet-red to a vivid cranberry-red as it dilutes, which is exactly right.",
-      visualCue: {
-        primaryTarget: "A vivid cranberry-red agua fresca in a glass over ice, bright and clear, with a colour that seems almost artificially saturated — it is entirely natural.",
-        spectrum: [
-          { state: "Underdone", description: "The drink looks pale pink and tastes insipid — either under-steeped concentrate was used or too much diluting water was added.", action: "Add more hibiscus concentrate or reduce the diluting water by half next time. The colour and flavour are direct reflections of concentration." },
-          { state: "Perfect",   description: "A vivid, glowing cranberry-red that tastes sharply floral and tart, with the sweetness holding it back from puckering. It looks like a jewel in the glass.", action: "Serve immediately over ice, or refrigerate up to 3 days." },
-          { state: "Overdone",  description: "Too much lime juice has tipped the drink into harshly sour territory and the red has slightly faded to an orange-pink from the acid.", action: "Stir in a little more sugar to balance the acid and dilute with a splash more cold water." },
-        ],
-      },
-      feelCue: "The cold drink should feel almost effervescent on the tongue from the acid and floral compounds — a mouth-watering tartness that makes you reach for the glass again immediately.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "nectar d'agave",
+        "piloncillo pour une douceur caramel plus profonde"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Jus de chaux frais (environ 2 chaux)",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "jus de citron"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau froide (à diluer)",
+      "ratioValue": 1,
+      "defaultUnit": "L",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Streep",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "hibiscus_concentrate",
+      "instructions": "Placer les fleurs d'hibiscus séchées dans un pichet ou un bol résistant à la chaleur. Versez l'eau bouillante directement au - dessus d'eux; l'eau deviendra presque immédiatement pourpre. Mélanger une fois pour submerger tous les pétales, puis les laisser à découvert pendant 20 minutes. Une pente plus courte donne une agua rose mince; une pleine 20 minutes produit un concentré profond qui tient sa couleur par dilution. Incorporer le sucre pendant que le concentré est encore chaud et se dissout complètement.",
+      "visualCue": {
+        "primaryTarget": "Un liquide rouge rubis profond, presque opaque à pleine concentration, avec les pétales obscurcis du magenta brillant au grenat terne – la couleur du vin rouge maintenu contre une lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 5 minutes, le liquide est encore un rose fin et brillant — plus d'eau de rose que de concentré.",
+            "action": "Continuez. Toute la profondeur de couleur et de saveur de tarte prend 20 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un rouge rubis foncé et concentré qui enveloppe la cuillère. Les pétales ont cédé leur couleur et s'assoient pâles et boiteux. L'odeur est tarte et florale, légèrement comme la canneberge.",
+            "action": "Incorporer le sucre maintenant, bien qu'il soit chaud, pour le dissoudre complètement, puis extirper les pétales."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus de 45 minutes; le liquide a pris sur un bord légèrement boueux, terreux et les pétales ont commencé à se briser dans le brassage.",
+            "action": "Plongez immédiatement dans un tamis fin et diluez comme d'habitude — le goût est toujours agréable, avec plus de profondeur, bien qu'une touche moins florale."
+          }
+        ]
+      },
+      "feelCue": "Plonger une cuillère à café blanche dans le concentré et regarder la couleur grimper la céramique — il devrait tacher profondément et instantanément, comme un jus de fruits rouge fait, pas s'écouler comme du thé faible."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Poignée",
+      "inputs": [
+        "hibiscus_concentrate"
+      ],
+      "outputState": "strained_concentrate",
+      "instructions": "Réglez un tamis à mailles fines sur un grand pot ou pichet et versez le concentré sucré d'hibiscus à travers lui. Appuyez doucement sur les pétales usés avec l'arrière d'une cuillère pour extraire chaque dernière goutte — mais ne les forcez pas à travers la maille, car ils obscurciront le liquide. Jetez les pétales usés. Le concentré tendu doit être un rubis-rouge clair et profond avec un reflet brillant du sucre dissous.",
+      "visualCue": {
+        "primaryTarget": "Un concentré limpide, brillant, rouge profond sans débris flottants, s'enfuyant proprement du tamis avec une translucence brillante, comme un bijou lorsqu'il est tenu à la lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pétales et les fibres flottent toujours librement dans la cruche — l'étape de déformation a été précipitée.",
+            "action": "Versez dans le tamis une deuxième fois. La jamaïque nuageuse n'est pas désagréable, mais les pétales libres dans la boisson sont indésirables."
+          },
+          {
+            "state": "Perfect",
+            "description": "Liquide rubis cristallin, sucré et profond, sentant l'hibiscus de tarte et la chaux. Il tient sa couleur sans brunir.",
+            "action": "Ajouter l'eau froide, le jus de lime et le goût pour équilibrer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Forced trop dur à travers le tamis, le liquide est devenu nuageux des fragments de pétales.",
+            "action": "Laisser reposer pendant 5 minutes et verser à travers un filtre à café pour clarifier, ou accepter le trouble — le goût n'est pas affecté."
+          }
+        ]
+      },
+      "feelCue": "Le concentré doit se sentir légèrement sirupeux et collant entre les doigts à partir du sucre dissous — nettement plus dense que l'eau pure."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Finition",
+      "inputs": [
+        "strained_concentrate",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "finished_agua_jamaica",
+      "instructions": "Verser l'eau de dilution froide dans le pichet et presser le jus de lime. Bien mélanger et goûter : une bonne agua de jamaica doit être farcie, avec la douceur jouant un rôle de support. Si elle a un goût plat, ajouter plus de jus de lime. Si c'est trop aigre, ajoutez un peu plus de sucre. Réfrigérer jusqu'à froid — au moins 30 minutes — et servir sur beaucoup de glace. La couleur s'éclaircira du rouge grenat à un rouge canneberge vif comme elle dilue, ce qui est exactement juste.",
+      "visualCue": {
+        "primaryTarget": "Un agua fresca rouge canneberge vif dans un verre sur glace, lumineux et clair, avec une couleur qui semble presque artificiellement saturée — il est entièrement naturel.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La boisson a l'air rose pâle et a un goût insipide: soit on a utilisé du concentré sous-tendu, soit on a ajouté trop d'eau de dilution.",
+            "action": "Ajouter plus de concentré d'hibiscus ou réduire l'eau de dilution de moitié la prochaine fois. La couleur et la saveur sont des reflets directs de la concentration."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un rouge de canneberge vif et éclatant qui a un goût fortement floral et de tarte, avec la douceur qui le retient de se faire sucer. On dirait un bijou dans le verre.",
+            "action": "Servir immédiatement sur la glace ou réfrigérer jusqu'à 3 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de jus de lime a fait basculer la boisson dans un territoire fortement aigre et le rouge s'est légèrementompé à un rose-orange de l'acide.",
+            "action": "Incorporer un peu plus de sucre pour équilibrer l'acide et diluer avec une eau plus froide."
+          }
+        ]
+      },
+      "feelCue": "La boisson froide devrait se sentir presque effervescente sur la langue à partir des composés acides et floraux — une tarte à l'eau de la bouche qui vous fait atteindre à nouveau pour le verre immédiatement."
+    }
+  ]
 };

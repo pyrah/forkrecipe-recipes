@@ -1,94 +1,238 @@
 export default {
-  repoId: "master_italian_pesto_001",
-  parentRepoId: null,
-  slug: "pesto-genovese",
-  author: "ForkRecipe Kitchen",
-  title: "Pesto alla Genovese",
-  description: "The mortar-pounded green of Liguria — young basil bruised against marble with garlic and pine nuts until it bleeds an electric, grassy oil, then bound with two cheeses and a slow thread of fruity Riviera olive oil into a coarse, glistening emerald paste that smells of summer the instant it touches hot pasta.",
-  cuisine: "Italian",
-  culture: "Ligurian",
-  category: "sauces",
-  tags: ["pesto", "italian", "ligurian", "basil", "no-cook", "pasta", "vegetarian"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 1, salty: 4, sour: 0, bitter: 2, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Herb",      name: "Genovese basil leaves (small, young, picked from the tips)", ratioValue: 100, defaultUnit: "parts", substitutions: ["any sweet basil with small leaves; avoid large, peppery summer leaves"] },
-    { ingId: "ing_02", role: "Allium",    name: "Garlic clove, peeled and green germ removed",                ratioValue: 6,   defaultUnit: "parts", substitutions: ["young spring garlic for a gentler note"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Coarse sea salt (acts as the abrasive in the mortar)",        ratioValue: 4,   defaultUnit: "parts", substitutions: ["flaky sea salt"] },
-    { ingId: "ing_04", role: "Fat",       name: "Pine nuts (Italian, Mediterranean)",                          ratioValue: 25,  defaultUnit: "parts", substitutions: ["walnuts for a rustic, more bitter pesto"] },
-    { ingId: "ing_05", role: "Glutamate", name: "Parmigiano-Reggiano, finely grated (aged 24+ months)",        ratioValue: 35,  defaultUnit: "parts", substitutions: ["Grana Padano"] },
-    { ingId: "ing_06", role: "Dairy",     name: "Pecorino Sardo (mature, sharp), finely grated",               ratioValue: 15,  defaultUnit: "parts", substitutions: ["Pecorino Romano, used a touch less as it is saltier"] },
-    { ingId: "ing_07", role: "Solvent",   name: "Ligurian extra-virgin olive oil (mild, fruity, low-bitter)",  ratioValue: 90,  defaultUnit: "parts", substitutions: ["any delicate, sweet EVOO; avoid grassy, peppery Tuscan oils"] },
+  "repoId": "master_italian_pesto_001",
+  "parentRepoId": null,
+  "slug": "pesto-genovese",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pesto alla Genovese",
+  "description": "Le vert de la Ligurie, un jeune basilic meurtri contre le marbre avec de l'ail et des noix de pin jusqu'à ce qu'il saigne une huile électrique et herbacée, puis lié à deux fromages et à un fil d'huile d'olive riviera fruité dans une pâte d'émeraude grossière et scintillante qui sent l'été à l'instant il touche les pâtes chaudes.",
+  "cuisine": "Italien",
+  "culture": "Ligurien",
+  "category": "sauces",
+  "tags": [
+    "pesto",
+    "Italien",
+    "ligurienne",
+    "basilic",
+    "pas de cuisson",
+    "pâtes",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 2,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Pound",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "garlic_paste",
-      instructions: "Drop the peeled, de-germed garlic and the coarse salt together into a marble mortar. Crush with a circular grinding motion of the wooden pestle — not a pounding hammer — until the garlic dissolves into a smooth, wet paste. The salt crystals do double duty: they shred the garlic's cells and draw out its moisture, so a little goes a long way and the harsh raw bite is tamed before any basil ever touches it.",
-      visualCue: {
-        primaryTarget: "A slick, pale, almost translucent garlic paste smeared around the bottom of the mortar, with no visible chunks and a glassy sheen from its own released juice.",
-        spectrum: [
-          { state: "Underdone", description: "Garlic is still in distinct white shards or pebbles, sliding around dry against the salt.", action: "Keep grinding in firm circles, pressing the pestle into the wall of the mortar. The garlic must be fully broken before adding anything green." },
-          { state: "Perfect",   description: "A uniform, glistening paste that smears like wet chalk, smelling pungent but no longer raw and acrid.", action: "Add the pine nuts and continue to the next step." },
-          { state: "Overdone",  description: "The paste is liquefying and smells sharply hot — you have ground long past necessary and the garlic is bruising bitter.", action: "Move on immediately; do not over-grind garlic, as friction heat turns it acrid. A little extra basil later will soften the edge." },
-        ],
-      },
-      feelCue: "The pestle should glide more easily as the garlic breaks down — the gritty drag of salt crystals gives way to a slippery, smooth turn. Your eyes will sting slightly from the fresh allicin; that is the garlic working, not burning.",
+      "ingId": "ing_01",
+      "role": "Herb",
+      "name": "Feuilles de basilic génoves (petites, jeunes, cueillies dans les pointes)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tout basilic doux avec de petites feuilles; éviter les grandes feuilles d'été poivrées"
+      ]
     },
     {
-      nodeId: "step_2", action: "Crush",
-      inputs: ["garlic_paste", "ing_04"],
-      outputState: "nut_garlic_base",
-      instructions: "Add the pine nuts to the garlic paste and grind them down with the same patient circular motion. They are soft and oily, so they break quickly into a thick, sandy cream that loosens the garlic and rounds out its sharpness. Work until you have a cohesive, buttery base with no whole nuts left — this fat-rich layer is what will carry and protect the basil's color in the next step.",
-      visualCue: {
-        primaryTarget: "A pale ivory, slightly grainy paste with the consistency of wet sand binding into a soft cream, faintly sweet and resinous on the nose.",
-        spectrum: [
-          { state: "Underdone", description: "Whole or half pine nuts are still rolling under the pestle, refusing to break.", action: "Keep crushing; pin each nut against the mortar wall and grind. Unbroken nuts make a watery, separating pesto." },
-          { state: "Perfect",   description: "A smooth-ish, oily, light-colored paste — grainy but cohesive, holding together when the pestle lifts.", action: "Begin adding the basil a handful at a time." },
-          { state: "Overdone",  description: "The base is warm to the touch from prolonged grinding and starting to look oily-separated.", action: "Stop and add basil now; the cool leaves and their moisture will pull the temperature back down." },
-        ],
-      },
-      feelCue: "The pine nuts give a soft, oily resistance — nothing like the gritty garlic. The paste should feel slightly slick and leave a buttery film on the pestle. Keep it cool: warmth at this stage is the enemy of green.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Gousse d'ail, pelée et germe vert enlevé",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jeune ail de printemps pour une note plus douce"
+      ]
     },
     {
-      nodeId: "step_3", action: "Bruise",
-      inputs: ["nut_garlic_base", "ing_01"],
-      outputState: "basil_paste",
-      instructions: "Add the basil a generous handful at a time, pressing and rolling the leaves up the sides of the mortar with the pestle rather than smashing them flat. The goal is to bruise and tear the leaf cells so they weep their oils — a rotating, wall-scraping motion does this without overheating. Add more basil only as the previous handful breaks down. Work fairly briskly; the longer the cut basil is exposed to air and friction heat, the faster it oxidizes from electric green toward muddy olive.",
-      visualCue: {
-        primaryTarget: "A coarse, vivid emerald paste flecked with the cream of the nut base, slick with released basil oil and smelling explosively of fresh basil and pepper.",
-        spectrum: [
-          { state: "Underdone", description: "Ragged, recognizable leaf pieces sit in a thin, pale liquid that hasn't gone deep green yet.", action: "Keep pressing the leaves against the mortar wall in firm circles until they collapse and stain the whole mass green." },
-          { state: "Perfect",   description: "A bright, uniform green paste with a coarse, slightly chunky texture — leaves broken but not pulverized to baby food — glossy with their own oil.", action: "Work in the grated cheeses." },
-          { state: "Overdone",  description: "The paste has darkened toward brown-olive and smells flat or hay-like, with a slightly warm, cooked edge.", action: "Stop grinding immediately and proceed. A squeeze of nothing can undo oxidation — work faster next time and keep the mortar cool." },
-        ],
-      },
-      feelCue: "The basil should feel like it is melting under the pestle, releasing slippery oil that turns the whole mass loose and fragrant. If the mortar feels warm against your palm, you are going too slow — speed up or pause to let it cool.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel de mer grossier (agit comme l'abrasif dans le mortier)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sel de mer flocé"
+      ]
     },
     {
-      nodeId: "step_4", action: "Mount",
-      inputs: ["basil_paste", "ing_05", "ing_06", "ing_07"],
-      outputState: "finished_pesto",
-      instructions: "Stir the two grated cheeses into the basil paste; they thicken it into a dense, clay-like mass. Now switch to a spoon or the pestle and work in the olive oil in a slow thread, beating it into the paste a little at a time the way you would mount a sauce, until the pesto turns glossy, loose, and pourable but still coarse. Taste: it should be lush, salty from the cheese, and almost too intense on its own — it is meant to be cut by hot starchy pasta water at the moment of saucing. Use within a few hours, the surface filmed with a little extra oil to seal it from the air.",
-      visualCue: {
-        primaryTarget: "A glistening, deep-emerald sauce, loose enough to slide slowly off the spoon in a thick ribbon, coarse with tiny flecks of nut and cheese, smelling of basil, garlic, and aged cheese all at once.",
-        spectrum: [
-          { state: "Underdone", description: "The pesto is stiff and pasty, clinging in a heavy clump, and tastes sharp and unrounded.", action: "Beat in more olive oil a thread at a time until it loosens to a glossy, spoonable sauce. Re-taste for salt." },
-          { state: "Perfect",   description: "Bright green, glossy, and just pourable, the oil fully worked in so the sauce looks unified rather than oily-separated. Tastes balanced, rich, and vivid.", action: "Film the top with oil and use within a few hours, or toss immediately with hot pasta loosened by a splash of cooking water." },
-          { state: "Overdone",  description: "The sauce looks slick and broken, with a pool of free oil sitting on top and a thin, watery body beneath.", action: "Stir in a little more grated cheese to reabsorb the oil and rebuild body, then re-season." },
-        ],
-      },
-      feelCue: "As the oil goes in, the paste should turn satiny and relax around the spoon. Rubbed between two fingers it stays slightly coarse — you should still feel the grain of nut and cheese. On the tongue it reads almost aggressively concentrated; that intensity is correct and will mellow the instant it meets warm pasta.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Noix de pin (italienne, méditerranéenne)",
+      "ratioValue": 25,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Noix pour un pesto rustique, plus amer"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Glutamate",
+      "name": "Parmigiano-Reggiano, râpé finement (âgé de 24 mois et plus)",
+      "ratioValue": 35,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Grana Padano"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Pecorino Sardo ( mature, vif), finement râpé",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pecorino Romano, utilisé une touche moins car il est plus salé"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Solvent",
+      "name": "Huile d'olive extra-vierge ligurienne (légère, fruitée, peu amère)",
+      "ratioValue": 90,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Toute huile toscane délicate et sucrée; éviter l'herbe, poivrée"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "garlic_paste",
+      "instructions": "Déposer l'ail épluché et le sel grossier dans un mortier de marbre. Écraser avec un mouvement circulaire de broyage du pâté de bois — et non avec un marteau — jusqu'à ce que l'ail se dissout en pâte lisse et humide. Les cristaux de sel font double devoir: ils déchiquetent les cellules de l'ail et en tirent l'humidité, donc un peu va un long chemin et la morsure brute dure est apprivoisée avant que n'importe quel basilic ne le touche.",
+      "visualCue": {
+        "primaryTarget": "Une pâte d'ail lisse, pâle, presque translucide, frottée autour du fond du mortier, sans morceaux visibles et avec un éclat vitreux provenant de son propre jus libéré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est toujours dans des éclats blancs ou des cailloux distincts, glissant autour sec contre le sel.",
+            "action": "Continuer à broyer dans des cercles fermes, en appuyant sur le pilon dans le mur du mortier. L'ail doit être complètement cassé avant d'ajouter quelque chose de vert."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte uniforme et scintillante qui gronde comme de la craie mouillée, sentant la puanteur, mais n'est plus crue et acride.",
+            "action": "Ajouter les noix de pin et continuer à l'étape suivante."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est liquéfiante et sent fortement chaud — vous avez le sol depuis longtemps nécessaire et l'ail est meurtri.",
+            "action": "Déplacez-vous immédiatement; ne surgissez pas d'ail, car la chaleur de friction le rend acride. Un peu de basilic supplémentaire plus tard va adoucir le bord."
+          }
+        ]
+      },
+      "feelCue": "Le pestle devrait glisser plus facilement à mesure que l'ail se brise, la traînée de cristaux de sel donne lieu à un tour lisse et glissant. Vos yeux piqueront légèrement de l'allicine fraîche ; c'est-à-dire l'ail qui fonctionne, qui ne brûle pas."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Crush",
+      "inputs": [
+        "garlic_paste",
+        "ing_04"
+      ],
+      "outputState": "nut_garlic_base",
+      "instructions": "Ajouter les noix de pin à la pâte d'ail et les moudre avec le même mouvement circulaire patient. Ils sont doux et huileux, donc ils se cassent rapidement dans une crème épaisse et sablonneuse qui relâche l'ail et arrondit sa netteté. Travaillez jusqu'à ce que vous ayez une base cohésive et beurrée sans noix entières, cette couche riche en gras est ce qui transportera et protégera la couleur du basilic dans la prochaine étape.",
+      "visualCue": {
+        "primaryTarget": "Une pâte d'ivoire pâle, légèrement grainée avec la consistance du sable humide liant dans une crème douce, légèrement douce et résineuse au nez.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des pignons entiers ou à moitié de pin roulent encore sous le pestle, refusant de casser.",
+            "action": "Continuez à écraser; épinglez chaque écrou contre le mur de mortier et moudre. Les noix intactes font un pesto aqueux qui sépare."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte lisse, huileuse, de couleur claire – grainée mais cohésive, tenant ensemble quand le pestle se lève.",
+            "action": "Commencez à ajouter le basilic une poignée à la fois."
+          },
+          {
+            "state": "Overdone",
+            "description": "La base est chaude au toucher depuis le broyage prolongé et commence à paraître huileuse-séparée.",
+            "action": "Arrêtez et ajoutez maintenant le basilic; les feuilles fraîches et leur humidité vont faire baisser la température."
+          }
+        ]
+      },
+      "feelCue": "Les pignons donnent une résistance douce et huileuse, rien de tel que l'ail gris. La pâte doit être légèrement lissée et laisser un film beurré sur le pestle. Gardez-le frais : la chaleur à ce stade est l'ennemi du vert."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Brute",
+      "inputs": [
+        "nut_garlic_base",
+        "ing_01"
+      ],
+      "outputState": "basil_paste",
+      "instructions": "Ajouter le basilic une poignée généreuse à la fois, presser et rouler les feuilles sur les côtés du mortier avec le pilon plutôt que de les briser à plat. L'objectif est de contuser et de déchirer les cellules foliaires pour qu'elles pleurent leurs huiles — un mouvement rotatif et mural encrassant le fait sans surchauffe. Ajouter plus de basilic seulement lorsque la poignée précédente se décompose. Travaillez assez rapidement; plus le basilic coupé est exposé à l'air et à la chaleur de friction, plus il s'oxyde rapidement du vert électrique vers l'olive boueuse.",
+      "visualCue": {
+        "primaryTarget": "Une pâte d'émeraude grossière et vive flétrie avec la crème de la base de noix, lissée avec de l'huile de basilic libérée et sentant explosivement le basilic frais et le poivre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des feuilles ramassées et reconnaissables s'assoient dans un liquide mince et pâle qui n'est pas encore vert profond.",
+            "action": "Continuer à presser les feuilles contre le mur de mortier dans des cercles fermes jusqu'à ce qu'elles s'effondrent et tachent toute la masse verte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte verte claire et uniforme avec une texture grossière et légèrement chaotique — feuilles cassées mais non pulvérisées pour la nourriture des bébés — brillantes avec leur propre huile.",
+            "action": "Travailler dans les fromages râpés."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte s'obscurcit vers l'olive brune et sent plat ou semblable au foin, avec un bord légèrement chaud et cuit.",
+            "action": "Arrêtez de broyer immédiatement et continuez. Une compression de rien ne peut annuler l'oxydation — travailler plus vite la prochaine fois et garder le mortier frais."
+          }
+        ]
+      },
+      "feelCue": "Le basilic devrait avoir l'impression de fondre sous le pestle, libérant de l'huile glissante qui rend la masse entière lâche et parfumée. Si le mortier se sent chaud contre votre paume, vous allez trop lentement — accélèrez ou arrêtez pour le laisser refroidir."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Monter",
+      "inputs": [
+        "basil_paste",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "finished_pesto",
+      "instructions": "Incorporer les deux fromages râpés dans la pâte de basilic; ils l'épaississent en une masse dense et argileuse. Maintenant, passez à une cuillère ou au pesto et travaillez dans l'huile d'olive dans un fil lent, en le battant dans la pâte un peu à la fois la façon dont vous monteriez une sauce, jusqu'à ce que le pesto devienne brillant, lâche, et versable mais encore grossier. Bouche: il doit être luxuriant, salé du fromage, et presque trop intense à lui seul — il est destiné à être coupé par de l'eau chaude de pâtes féculentes au moment du saucisson. Utilisez en quelques heures la surface filmée avec un peu d'huile supplémentaire pour la sceller de l'air.",
+      "visualCue": {
+        "primaryTarget": "Une sauce scintillante, émeraude, assez lâche pour glisser lentement de la cuillère dans un ruban épais, grossière avec de minuscules flocons de noix et de fromage, sentant le basilic, l'ail et le fromage vieilli tout à la fois.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le pesto est raide et pâteux, s'accroche dans un gros tas, et a un goût vif et non arrondi.",
+            "action": "Battre plus d'huile d'olive un fil à la fois jusqu'à ce qu'il se détache à une sauce brillante et cuillerable. Reprendre le sel."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vert vif, brillant, et juste versable, l'huile a entièrement travaillé dans de sorte que la sauce semble unifiée plutôt que huileuse-séparée. Goûté équilibré, riche et vif.",
+            "action": "Filmez le dessus avec de l'huile et utilisez-le en quelques heures, ou jetez immédiatement avec des pâtes chaudes desserrées par un jet d'eau de cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce semble lisse et cassée, avec une piscine d'huile libre assise sur le dessus et un corps mince et aqueux en dessous.",
+            "action": "Incorporer un peu plus de fromage râpé pour réabsorber l'huile et reconstruire le corps, puis re-saisonner."
+          }
+        ]
+      },
+      "feelCue": "Au fur et à mesure que l'huile pénètre, la pâte doit se satiner et se détendre autour de la cuillère. Frotte entre deux doigts, il reste légèrement grossier — vous devriez encore sentir le grain de noix et de fromage. Sur la langue elle lit presque agressivement concentrée; cette intensité est correcte et va meller l'instant où elle rencontre des pâtes chaudes."
+    }
+  ]
 };

@@ -1,114 +1,263 @@
 export default {
-  repoId: "master_chinese_black_sesame_pudding_001",
-  parentRepoId: null,
-  slug: "black-sesame-pudding",
-  author: "ForkRecipe Kitchen",
-  title: "Black Sesame Pudding",
-  description: "A jet-black, satiny pudding built on toasted sesame paste — roasted until nutty and almost smoky, blended with coconut milk and set with agar into trembling obsidian slabs that unmold cleanly and melt on the tongue.",
-  cuisine: "Chinese",
-  culture: "Cantonese",
-  category: "desserts",
-  tags: ["vegan", "gluten-free", "chinese", "cantonese", "dessert", "sesame"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "2 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 1, sour: 0, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Black sesame seeds",              ratioValue: 150,  defaultUnit: "g",   substitutions: ["black sesame paste (use 120 g, skip toast step)"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Water (for blending)",            ratioValue: 200,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_03", role: "Dairy",      name: "Full-fat coconut milk",           ratioValue: 400,  defaultUnit: "ml",  substitutions: ["oat milk for lighter version", "whole milk"] },
-    { ingId: "ing_04", role: "Sweetener",  name: "Rock sugar, crushed, or caster sugar", ratioValue: 80, defaultUnit: "g", substitutions: ["palm sugar", "honey (not for vegan)"] },
-    { ingId: "ing_05", role: "Binder",     name: "Agar agar powder",               ratioValue: 4,    defaultUnit: "g",   substitutions: ["gelatine leaves x4 (not vegan; bloom in cold water first)"] },
-    { ingId: "ing_06", role: "Liquid",     name: "Water (for agar activation)",    ratioValue: 100,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Pinch of fine sea salt",         ratioValue: 1,    defaultUnit: "g",   substitutions: [] },
+  "repoId": "master_chinese_black_sesame_pudding_001",
+  "parentRepoId": null,
+  "slug": "black-sesame-pudding",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poudre de sésame noir",
+  "description": "Un pudding noir-jet, satiné construit sur de la pâte de sésame grillée — torréfié jusqu'à noisette et presque fumé, mélangé avec du lait de noix de coco et serti d'une gélose dans des dalles obsidiennes tremblantes qui s'éclaircissent et fondent sur la langue.",
+  "cuisine": "Chinois",
+  "culture": "Cantonais",
+  "category": "desserts",
+  "tags": [
+    "végétalien",
+    "Sans gluten",
+    "Chinois",
+    "cantonais",
+    "dessert",
+    "sésame"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "2 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_01"],
-      outputState: "toasted_sesame",
-      instructions: "Place the black sesame seeds in a dry skillet or wok over medium heat. Stir or swirl constantly — sesame seeds burn in seconds once they get going. Toast until the seeds pop and jump in the pan, a nutty, roasted fragrance fills the kitchen, and a small pinch rubbed between your fingers releases an intensely roasted aroma. This should take 3–5 minutes; do not walk away. Transfer immediately to a cool plate to stop the carry-over cooking — leaving them in the hot pan will push them to bitter.",
-      visualCue: {
-        primaryTarget: "Seeds are popping and jumping. A fragrant, nutty-roasted cloud rises from the pan. A few seeds have developed a slight matte sheen instead of flat black.",
-        spectrum: [
-          { state: "Underdone", description: "Seeds are still flat and silent. No aroma yet. Rubbing them between fingers produces no scent.", action: "Continue toasting — the pan likely isn't hot enough yet. Increase to medium-high and stir constantly." },
-          { state: "Perfect",   description: "Audible popping. Intense, almost smoky sesame fragrance. Seeds dance in the pan. Rubbed between fingers they smell powerfully of toasted nuts.", action: "Tip onto a cool plate or baking sheet immediately." },
-          { state: "Overdone",  description: "Smoke rises, seeds smell acrid or burnt rather than nutty. Some seeds look slightly grey rather than deep black.", action: "Discard and start over — bitter, scorched sesame will ruin the entire pudding. The margin between perfect and burnt is small." },
-        ],
-      },
-      feelCue: "Press a pinch of the toasted seeds between your fingers and bring them close to your nose — the smell should hit you like a warm, roasted nut, not a charred one.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Graines de sésame noir",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâte de sésame noir (utiliser 120 g, sauter l'étape toast)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["toasted_sesame", "ing_02"],
-      outputState: "sesame_paste",
-      instructions: "Transfer the cooled toasted seeds to a high-powered blender. Add the water for blending. Start on low and gradually increase to maximum speed. Blend for a full 3–4 minutes, scraping down the sides twice. The seeds will first become a coarse, gritty powder, then a dark grey slurry, then finally a deep-black, smooth, homogenous paste — almost silky. If your blender struggles, add water one tablespoon at a time. For an ultra-smooth pudding, strain the paste through a fine-mesh sieve or nut-milk bag, pressing firmly to extract all the liquid.",
-      visualCue: {
-        primaryTarget: "A completely jet-black paste with no visible seed particles. When a spoonful is dropped back into the blender it folds smoothly with no graininess.",
-        spectrum: [
-          { state: "Underdone", description: "Still visibly gritty — you can see and feel individual seed fragments. The color is dark grey rather than pure black.", action: "Blend another 2 minutes at maximum speed; add water one tablespoon at a time if the blender is struggling." },
-          { state: "Perfect",   description: "Completely black, silky smooth paste. No visible grain. Flows slowly like molten licorice. Smells intensely of roasted sesame.", action: "Strain if desired (for a more refined set pudding) or use as-is for a more rustic, textured result." },
-          { state: "Overdone",  description: "Blender has overheated the paste; it smells faintly of scorched oil. Oily sheen on top indicates the oils have separated.", action: "Chill the paste for 10 minutes and re-blend briefly — separation is cosmetic and won't affect the final flavor significantly." },
-        ],
-      },
-      feelCue: "Rub the paste between two fingers — it should feel completely smooth, like black satin, with no grit that would catch or scratch.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau (pour mélange)",
+      "ratioValue": 200,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Dissolve",
-      inputs: ["ing_05", "ing_06"],
-      outputState: "agar_solution",
-      instructions: "Whisk the agar agar powder into the cold water in a small saucepan until fully dispersed. Do not add hot water — add agar to cold then heat. Bring to a boil over medium heat, whisking constantly. Boil for exactly 2 minutes, stirring to fully dissolve — agar must reach boiling to activate; a simmer is not enough. The solution should look perfectly clear or very faintly cloudy with no visible powder granules. Set aside briefly but keep warm — agar begins to gel around 40°C and cannot be re-liquefied without re-boiling.",
-      visualCue: {
-        primaryTarget: "A clear, viscous liquid that is distinctly more syrupy than plain water when poured off the spoon. Fully clear with no powder specks.",
-        spectrum: [
-          { state: "Underdone", description: "The solution still looks slightly grainy or dusty. Small white specks of undissolved agar powder are visible.", action: "Continue boiling and whisking for another 60 seconds — agar needs a full boil to hydrate and activate." },
-          { state: "Perfect",   description: "Completely clear to very faintly milky. Distinctly thicker than water. Falls off the whisk in a thin, slightly viscous sheet.", action: "Use immediately while hot — pour into the sesame milk mixture before it begins to set." },
-          { state: "Overdone",  description: "Mixture has reduced significantly and become gel-like in the pan. It is beginning to set before being incorporated.", action: "Add a splash of water and re-boil briefly to re-liquefy, then incorporate immediately." },
-        ],
-      },
-      feelCue: "Tilt the saucepan — the agar solution should run to the edge slightly slower than water would, with a faint viscosity you can see but barely feel.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Lait de coco plein gras",
+      "ratioValue": 400,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "lait d'avoine pour version plus légère",
+        "lait entier"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Heat",
-      inputs: ["sesame_paste", "ing_03", "ing_04", "ing_07"],
-      outputState: "sesame_milk",
-      instructions: "Pour the coconut milk into a medium saucepan over medium heat. Add the sesame paste, crushed rock sugar, and salt. Whisk gently and continuously until the mixture is fully combined, the sugar has dissolved, and the liquid is uniformly black with no streaks of undiluted paste or coconut cream. Bring to just below a boil — you will see lazy steam and small bubbles forming at the edges. Do not boil vigorously, as this can affect the coconut milk's texture. Taste and adjust sweetness: the pudding should taste pleasantly sweet with a strong sesame flavor and just a whisper of salt.",
-      visualCue: {
-        primaryTarget: "A uniformly jet-black, smooth, aromatic liquid steaming gently. No coconut-white streaks. No sugar visible. Deep sesame aroma fills the kitchen.",
-        spectrum: [
-          { state: "Underdone", description: "Pale grey streaks of coconut cream are still visible. Sugar crystals are still visible at the bottom of the pan. Sesame paste has not fully integrated.", action: "Whisk more vigorously and raise heat slightly; all components must be fully uniform before adding agar." },
-          { state: "Perfect",   description: "Completely uniform, black, fragrant liquid. Steaming but not boiling. Tastes balanced: sweet, nutty, faintly salty.", action: "Remove from heat and immediately whisk in the hot agar solution." },
-          { state: "Overdone",  description: "Liquid is at a full boil and has reduced by 10%+. Coconut milk has a slightly oily, split appearance.", action: "Remove from heat, add 2 tablespoons of cold water, whisk to re-homogenize, and proceed immediately." },
-        ],
-      },
-      feelCue: "Dip a clean fingertip into the mixture — it should feel warm and silky, not gritty, and leave a clean black stain on your skin that smells powerfully of toasted sesame.",
+      "ingId": "ing_04",
+      "role": "Sweetener",
+      "name": "Sucre de roche, broyé ou caster",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre de palme",
+        "miel (pas pour végétalien)"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Set",
-      inputs: ["sesame_milk", "agar_solution"],
-      outputState: "black_sesame_pudding",
-      instructions: "Working quickly, pour the hot agar solution into the hot sesame milk in a thin stream while whisking constantly. Whisk for 30 seconds to fully distribute the agar throughout the mixture. Immediately pour through a fine strainer into individual serving cups, glasses, or a lightly-oiled flat mold. Work fast — agar begins setting from around 40°C and you have only a 3–5 minute working window. Tap each mold gently on the counter to dislodge air bubbles. Refrigerate uncovered for 15 minutes until set, then cover and refrigerate at least 2 hours before unmolding or serving.",
-      visualCue: {
-        primaryTarget: "Firm, jet-black puddings with a smooth, slightly glossy surface that unmold cleanly onto the plate with no cracks or wobble.",
-        spectrum: [
-          { state: "Underdone", description: "Pudding is still soft or liquid in the center after 2 hours of refrigeration. It wobbles too freely and collapses when unmolded.", action: "Refrigerate another hour; if still not setting, the agar was insufficient or not fully activated — serve as a soft pudding soup in cups." },
-          { state: "Perfect",   description: "Firm enough to unmold cleanly and hold its shape on the plate. Slight jiggle when the plate is tapped, like set panna cotta. Surface is matte-glossy and perfectly smooth.", action: "Unmold and serve with a drizzle of condensed milk or coconut cream if desired." },
-          { state: "Overdone",  description: "Pudding is very firm and rubbery, bounces back hard, and the texture is unpleasant — too much agar or too long a cook.", action: "Slice into cubes and serve in cold sweet soy milk or coconut water as a tang yuan-style dessert, where the firmer texture works better." },
-        ],
-      },
-      feelCue: "Run a finger across the set surface — it should feel cool, absolutely smooth, and firm enough to resist a light press without leaving a dent.",
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Poudre de gélose",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Feuilles de gélatine x4 (non véganes; fleurs en eau froide d'abord)"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Eau (pour l'activation de la gélose)",
+      "ratioValue": 100,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Pince de sel de mer fin",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "toasted_sesame",
+      "instructions": "Placer les graines de sésame noir dans une poêle sèche ou wok à feu moyen. Remuer ou tourner constamment — les graines de sésame brûlent en quelques secondes. Toast jusqu'à ce que les graines sautent dans la poêle, une fragrance de noix rôtie remplit la cuisine, et une petite pincée frottée entre les doigts libère un arôme intensément torréfié. Cela devrait prendre 3 à 5 minutes; ne pas s'éloigner. Transférer immédiatement dans une assiette fraîche pour arrêter la cuisson de report — les laisser dans la poêle chaude les poussera à l'amertume.",
+      "visualCue": {
+        "primaryTarget": "Les graines sautent. Un nuage parfumé, torréfié aux noix, se lève de la poêle. Quelques graines ont développé un léger reflet mat au lieu de noir plat.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les graines sont encore plates et silencieuses. Pas encore d'arôme. Les frotter entre les doigts ne produit aucun parfum.",
+            "action": "Continuez à griller — la poêle n'est probablement pas encore assez chaude. Augmenter à moyenne-élevée et remuer constamment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ça saute. Parfum de sésame intense et presque fumé. Les graines dansent dans la poêle. Ils se frottent entre les doigts et sentent des noix grillées.",
+            "action": "Astucez immédiatement sur une plaque fraîche ou une plaque de cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La fumée s'élève, les graines sentent acrides ou brûlées plutôt que noix. Certaines graines sont légèrement grises plutôt que noires profondes.",
+            "action": "Jetez et recommencez: le sésame amer et brûlé ruinera tout le pudding. La marge entre parfait et brûlé est petite."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une pincée de graines grillées entre vos doigts et portez - les près de votre nez — l'odeur devrait vous frapper comme un écrou chaud et rôti, et non comme un carbonisé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "toasted_sesame",
+        "ing_02"
+      ],
+      "outputState": "sesame_paste",
+      "instructions": "Transférer les graines grillées refroidies dans un mélangeur à haute puissance. Ajouter l'eau pour mélanger. Commencez à faible et augmentez progressivement à la vitesse maximale. Mélanger pendant 3 à 4 minutes, en grattant les côtés deux fois. Les graines deviendront d'abord une grosse poudre, puis un lisier gris foncé, puis enfin une pâte noire profonde, lisse et homogène, presque soyeuse. Si votre mélangeur lutte, ajoutez de l'eau une cuillère à soupe à la fois. Pour un pudding ultra lisses, filtrez la pâte à travers un tamis à mailles fines ou un sac à lait de noix, appuyez fermement pour extraire tout le liquide.",
+      "visualCue": {
+        "primaryTarget": "Une pâte complètement noire à jet sans particules visibles de graines. Lorsqu'une cuillère est retombée dans le mélangeur, elle se plie facilement sans grain.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Vous pouvez voir et sentir des fragments de graines individuels. La couleur est gris foncé plutôt que noir pur.",
+            "action": "Mélanger encore 2 minutes à la vitesse maximale; ajouter de l'eau une cuillère à soupe à la fois si le mélangeur est en difficulté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte lisse complètement noire et soyeuse. Pas de grain visible. Elle coule lentement comme de la réglisse fondue. Sensation intense de sésame rôti.",
+            "action": "La souche si désiré (pour un pudding plus raffiné) ou l'utilisation comme-est pour un résultat plus rustique et texturé."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélangeur a surchauffé la pâte; elle sent peu l'huile brûlée. L'éclat huileux sur le dessus indique que les huiles se sont séparées.",
+            "action": "Refroidissez la pâte pendant 10 minutes et reblendez brièvement — la séparation est cosmétique et n'affectera pas significativement la saveur finale."
+          }
+        ]
+      },
+      "feelCue": "Frottez la pâte entre les deux doigts — elle devrait être complètement lisse, comme du satin noir, sans grume qui pourrait attraper ou gratter."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Dissoudre",
+      "inputs": [
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "agar_solution",
+      "instructions": "Dans une petite casserole, fouetter la gélose en poudre dans l'eau froide jusqu'à ce qu'elle soit complètement dispersée. N'ajoutez pas d'eau chaude — ajoutez la gélose au froid puis faites chauffer. Porter à ébullition à feu moyen, en fouettant constamment. Faire bouillir pendant exactement 2 minutes, en remuant pour dissoudre complètement — la gélose doit atteindre le point d'ébullition pour s'activer; une mijotée ne suffit pas. La solution doit être parfaitement limpide ou très faiblement trouble, sans granules de poudre visibles. Réserver brièvement, mais garder au chaud — la gélose commence à geler autour de 40°C et ne peut pas être re-liquée sans re-boiller.",
+      "visualCue": {
+        "primaryTarget": "Un liquide visqueux clair qui est nettement plus sirupeux que l'eau ordinaire lorsqu'il est versé de la cuillère. Entièrement clair sans taches de poudre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La solution semble encore légèrement granuleuse ou poussiéreuse. De petites taches blanches de poudre de gélose non dissoute sont visibles.",
+            "action": "Continuer à bouillir et fouetter encore 60 secondes — la gélose a besoin d'un ébullition complet pour s'hydrater et s'activer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement clair à très faiblement laiteux. Plus épais que l'eau. Il tombe du fouet dans une mince feuille légèrement visqueuse.",
+            "action": "Utilisez immédiatement pendant la chaleur — versez dans le mélange de lait de sésame avant qu'il ne commence à se mettre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange s'est considérablement réduit et est devenu gelé dans la poêle. Il commence à se mettre avant d'être incorporé.",
+            "action": "Ajouter un éclaboussure d'eau et ré-huiler brièvement pour re-liquéfier, puis incorporer immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Inclinez la casserole — la solution de gélose devrait tourner au bord légèrement plus lentement que l'eau ne le ferait, avec une faible viscosité que vous pouvez voir mais à peine sentir."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Chaleur",
+      "inputs": [
+        "sesame_paste",
+        "ing_03",
+        "ing_04",
+        "ing_07"
+      ],
+      "outputState": "sesame_milk",
+      "instructions": "Verser le lait de coco dans une casserole moyenne à feu moyen. Ajouter la pâte de sésame, le sucre de roche concassé et le sel. fouetter doucement et continuellement jusqu'à ce que le mélange soit complètement combiné, le sucre s'est dissout, et le liquide est uniformément noir sans stries de pâte non diluée ou de crème de coco. Portez à un peu en dessous d'un ébullition — vous verrez la vapeur paresseuse et de petites bulles se former aux bords. Ne pas faire bouillir vigoureusement, car cela peut affecter la texture du lait de coco. Goûtez et ajustez la douceur : le pudding doit goûter agréablement sucré avec une forte saveur de sésame et juste un murmure de sel.",
+      "visualCue": {
+        "primaryTarget": "Un liquide à jet noir uniforme, lisse et aromatique qui s'évapore doucement. Pas de stries blanches de noix de coco. Pas de sucre visible. Un arôme de sésame profond remplit la cuisine.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries de crème de coco gris pâle sont encore visibles. Les cristaux de sucre sont encore visibles au fond de la casserole. La pâte de sésame n'est pas entièrement intégrée.",
+            "action": "fouetter plus vigoureusement et augmenter légèrement la chaleur; tous les composants doivent être entièrement uniformes avant d'ajouter de la gélose."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement uniforme, noir, liquide parfumé. Brûlant mais pas bouillant. Goûts équilibrés : doux, noisette, légèrement salé.",
+            "action": "Retirer du feu et fouetter immédiatement dans la solution de gélose chaude."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le liquide est à ébullition complète et a diminué de 10%+. Le lait de coco a un aspect légèrement huileux, fendue.",
+            "action": "Retirer du feu, ajouter 2 cuillerées à soupe d'eau froide, fouetter pour ré-homogèner et procéder immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt propre dans le mélange — il doit se sentir chaud et soyeux, pas gritty, et laisser une tache noire propre sur votre peau qui sent puissant de sésame grillé."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Jeu",
+      "inputs": [
+        "sesame_milk",
+        "agar_solution"
+      ],
+      "outputState": "black_sesame_pudding",
+      "instructions": "Travailler rapidement, verser la solution de gélose chaude dans le lait de sésame chaud dans un ruisseau mince tout en fouettant constamment. fouetter pendant 30 secondes pour distribuer complètement la gélose dans tout le mélange. Versez immédiatement une fine souche dans des tasses, des verres ou un moule plat légèrement huilé. Travail rapide — la gélose commence à se régler à partir d'environ 40°C et vous n'avez qu'une fenêtre de travail de 3 à 5 minutes. Appuyez doucement sur chaque moule sur le comptoir pour déloger les bulles d'air. Réfrigérer à découvert pendant 15 minutes jusqu'à ce qu'il soit réglé, puis recouvrir et réfrigérer au moins 2 heures avant de ne pas fondre ou servir.",
+      "visualCue": {
+        "primaryTarget": "Des puddings fermes, noirs-jets avec une surface lisse et légèrement brillante qui s'immolent proprement sur la plaque sans fissures ni oscillations.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pudding est encore douce ou liquide au centre après 2 heures de réfrigération. Il tremble trop librement et s'effondre lorsqu'il n'est pas mélangé.",
+            "action": "Réfrigérer une autre heure; si la gélose n'était pas encore réglée, elle était insuffisante ou n'était pas complètement activée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Assez ferme pour s'éclaircir et tenir sa forme sur la plaque. Léger jeu quand la plaque est tapotée, comme set panna cotta. La surface est mat-brillante et parfaitement lisse.",
+            "action": "Démoudre et servir avec une bruine de lait condensé ou de crème de coco si désiré."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pudding est très ferme et caoutchouteuse, rebondit dur, et la texture est désagréable — trop de gélose ou trop longtemps un cuisinier.",
+            "action": "Couper en cubes et servir dans du lait de soja doux froid ou de l'eau de coco comme dessert tang yuan-style, où la texture plus ferme fonctionne mieux."
+          }
+        ]
+      },
+      "feelCue": "Passez un doigt sur la surface de l'ensemble — il devrait se sentir frais, absolument lisse, et assez ferme pour résister à une presse légère sans laisser une bosse."
+    }
+  ]
 };

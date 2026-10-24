@@ -1,63 +1,141 @@
 export default {
-  repoId: "master_korean_black_garlic_paste_001",
-  parentRepoId: null,
-  slug: "black-garlic-paste",
-  author: "ForkRecipe Kitchen",
-  title: "Black Garlic Paste",
-  description: "A near-effortless paste of extraordinary depth — aged black garlic cloves, whose months of slow Maillard transformation have rendered them jet-black, soft as ripe figs, and tasting of balsamic vinegar and tamarind, blended with olive oil and salt into a smooth, intensely umami spread.",
-  cuisine: "Korean",
-  culture: "Korean",
-  category: "condiments",
-  tags: ["black-garlic", "korean", "umami", "paste", "condiment", "vegan", "aged"],
-  difficulty: 1,
-  activeTime: "5 min",
-  totalTime: "5 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 2, sour: 3, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Umami",     name: "Black garlic cloves (peeled)",            ratioValue: 100, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Fat",       name: "Extra-virgin olive oil",                  ratioValue: 30,  defaultUnit: "g", substitutions: ["neutral oil for a cleaner flavor"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fine sea salt",                           ratioValue: 2,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Acid",      name: "Balsamic vinegar (aged, optional)",       ratioValue: 5,   defaultUnit: "g", substitutions: ["sherry vinegar"] },
+  "repoId": "master_korean_black_garlic_paste_001",
+  "parentRepoId": null,
+  "slug": "black-garlic-paste",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pâte d'ail noir",
+  "description": "Une pâte presque sans effort d'une profondeur extraordinaire — des gousses d'ail noir vieillis, dont les mois de lente transformation de Maillard les ont rendus jet-noir, doux comme figues mûres, et dégustation de vinaigre balsamique et de tamarin, mélangé avec l'huile d'olive et le sel en une diffusion lisse, intensément umami.",
+  "cuisine": "Coréen",
+  "culture": "Coréen",
+  "category": "condiments",
+  "tags": [
+    "l'ail noir",
+    "coréen",
+    "umami",
+    "pâte",
+    "condiment",
+    "végétalien",
+    "âgés"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "5 min",
+  "totalTime": "5 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Assess black garlic",
-      inputs: ["ing_01"],
-      outputState: "ready_black_garlic",
-      instructions: "Peel the black garlic cloves — the skin should come off easily, revealing uniformly black or very dark purple-brown, completely soft cloves that yield to slight finger pressure. A properly aged black garlic clove should feel like a very ripe, moist fig — soft throughout with no firm white core. If you find firm white centers, the garlic was not aged long enough and the paste will have an unpleasant raw garlic bite mixed with the fermented sweetness.",
-      visualCue: {
-        primaryTarget: "Uniformly jet-black, soft cloves with a slight sheen. No white visible when a clove is halved — black throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Cloves have pale centers when halved — the Maillard process did not reach the interior. Flavor will be harsh, a raw garlic note mixed with sweetness.", action: "This batch of black garlic was under-aged. Use only the fully-black cloves for the paste, and use the partially black ones in cooking where heat will mellow the raw note." },
-          { state: "Perfect",   description: "Black throughout, completely soft, smells of balsamic vinegar, tamarind, and molasses with no sharp garlic bite.", action: "Proceed to blending — these cloves are ready." },
-          { state: "Overdone",  description: "Cloves are very dry, tough, and dark with a concentrated bitter-sweet edge. They smell more of dried fruit than fresh black garlic.", action: "Add a few drops more oil and a drop of water when blending to compensate for the dryness. The flavor may be more intense but is still excellent." },
-        ],
-      },
-      feelCue: "A perfect black garlic clove yields under thumb pressure like a very soft Medjool date — no resistance, no firm core, just uniform softness. It should leave a faint black stain on your fingers and smell of vinegar and caramel.",
+      "ingId": "ing_01",
+      "role": "Umami",
+      "name": "Gousses d'ail noires (peautées)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Blend to paste",
-      inputs: ["ready_black_garlic", "ing_02", "ing_03", "ing_04"],
-      outputState: "finished_black_garlic_paste",
-      instructions: "Combine the black garlic cloves, olive oil, salt, and balsamic vinegar (if using) in a small food processor or using an immersion blender. Process 2 to 3 minutes, scraping down the sides every 30 seconds, until the paste is absolutely smooth, glossy, and black. The high natural sugar content of black garlic makes it want to clump rather than blend — be patient and add the oil gradually if the blender is struggling. The finished paste should be smooth enough to pipe through a fine nozzle. Store in a small airtight jar under a layer of olive oil, refrigerated, for up to 1 month.",
-      visualCue: {
-        primaryTarget: "A jet-black, glossy, smooth paste that moves slowly in the blender like a very thick jam. No clumps, no graininess.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is still lumpy with visible clove pieces and a gummy, uneven texture. The flavor will be inconsistent.", action: "Blend longer, adding oil a few drops at a time to help the blade catch. Scrape the sides frequently." },
-          { state: "Perfect",   description: "Completely smooth, jet-black, glossy paste. Smells of concentrated umami — vinegar, molasses, and a faint garlic warmth. Taste reveals extraordinary sweetness and savory depth simultaneously.", action: "Transfer to a jar and top with a layer of olive oil. Refrigerate. Use stirred into butter, as a flatbread spread, in marinades, or whisked into vinaigrette." },
-          { state: "Overdone",  description: "Blended to the point of being warm from friction, the paste has become slightly brown-tinged and has lost some of its glossy black depth.", action: "Chill the paste immediately and stir to cool. The color will darken again as it cools. No flavor harm done." },
-        ],
-      },
-      feelCue: "Spread a thin smear of black garlic paste on the back of your hand and taste it. It should register as sweet before it registers as savory — then the umami depth blooms outward like a chord resolving — and a whisper of fermented complexity lingers for a long time afterward. No sharpness, no pungency, just quiet depth.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile neutre pour une saveur plus propre"
+      ]
     },
+    {
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "vinaigre balsamique (âge, option)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": [
+        "vinaigre de sherry"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Évaluer l'ail noir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "ready_black_garlic",
+      "instructions": "Peler les gousses d'ail noir — la peau devrait se détacher facilement, révélant uniformément noir ou brun-violet très foncé, des gousses complètement douces qui donnent à une légère pression des doigts. Une girofle d'ail noire vieillie correctement doit se sentir comme une figuier très mûre et humide, douce, sans noyau blanc ferme. Si vous trouvez des centres blancs fermes, l'ail n'a pas été vieilli assez longtemps et la pâte aura une bouchée d'ail cru désagréable mélangée avec la douceur fermentée.",
+      "visualCue": {
+        "primaryTarget": "Uniformement noir-jet, gousses douces avec un léger éclat. Pas de blanc visible lorsqu'une girofle est coupée en deux — noir partout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les vêtements ont des centres pâles lorsqu'ils sont coupés de moitié — le processus de Maillard n'a pas atteint l'intérieur. La saveur sera dure, une note d'ail crue mélangée avec de la douceur.",
+            "action": "Ce lot d'ail noir était sous-âge. N'utilisez que les girofles entièrement noirs pour la pâte, et utilisez les girofles partiellement noirs pour la cuisson où la chaleur assouplira la note brute."
+          },
+          {
+            "state": "Perfect",
+            "description": "Noir, complètement doux, sent le vinaigre balsamique, le tamarin et la mélasse sans morsure d'ail.",
+            "action": "Procédez au mélange — ces girofles sont prêts."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les vêtements sont très secs, durs et sombres avec un bord amer-doux concentré. Ils sentent plus de fruits secs que l'ail noir frais.",
+            "action": "Ajoutez quelques gouttes d'huile et une goutte d'eau en mélangeant pour compenser la sécheresse. La saveur peut être plus intense mais est toujours excellente."
+          }
+        ]
+      },
+      "feelCue": "Un gousse d'ail noir parfait donne sous pression comme une date Medjool très douce — pas de résistance, pas de noyau ferme, juste une douceur uniforme. Il devrait laisser une faible tache noire sur vos doigts et une odeur de vinaigre et de caramel."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélanger à coller",
+      "inputs": [
+        "ready_black_garlic",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "finished_black_garlic_paste",
+      "instructions": "Mélanger les gousses d'ail noir, l'huile d'olive, le sel et le vinaigre balsamique (si utilisé) dans un petit robot culinaire ou dans un mélangeur d'immersion. Procéder 2 à 3 minutes, en grattant les côtés toutes les 30 secondes, jusqu'à ce que la pâte soit absolument lisse, brillante et noire. La teneur élevée en sucre naturel de l'ail noir lui donne envie de se mélanger plutôt que de se mélanger — soyez patient et ajoutez l'huile progressivement si le mélangeur est en difficulté. La pâte finie doit être suffisamment lisse pour passer par une fine buse. Conserver dans un petit pot hermétique sous une couche d'huile d'olive, réfrigéré, jusqu'à 1 mois.",
+      "visualCue": {
+        "primaryTarget": "Un jet noir, brillant, pâte lisse qui se déplace lentement dans le mélangeur comme une confiture très épaisse. Pas d'embrouille, pas de grain.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore grumelée avec des morceaux visibles de girofle et une texture gommée et inégale. La saveur sera incohérente.",
+            "action": "Mélanger plus longtemps, ajouter de l'huile quelques gouttes à la fois pour aider la lame à attraper. Frapper les côtés fréquemment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, noir-jet, pâte brillante. Sensations d'umami concentré — vinaigre, mélasse, et une faible chaleur d'ail. Le goût révèle une douceur extraordinaire et une profondeur savoureuse simultanément.",
+            "action": "Transférer dans un pot et en haut avec une couche d'huile d'olive. Réfrigérer. Utiliser mélangé au beurre, comme un pain plat à tartiner, dans les marinades ou fouetté en vinaigrette."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mixée au point d'être chaude par friction, la pâte est devenue légèrement brune et a perdu une partie de sa profondeur noire brillante.",
+            "action": "Refroidir immédiatement la pâte et remuer pour refroidir. La couleur va s'assombrir à nouveau en refroidissant. Aucun mal de saveur fait."
+          }
+        ]
+      },
+      "feelCue": "Étendre un mince frottis de pâte d'ail noir sur le dos de votre main et le goûter. Il devrait s'enregistrer aussi doux avant de s'enregistrer comme savoureux — puis la profondeur de l'umami fleurit vers l'extérieur comme une résolution d'accord — et un murmure de complexité fermentée persiste longtemps après. Pas de netteté, pas de patience, juste une profondeur tranquille."
+    }
+  ]
 };

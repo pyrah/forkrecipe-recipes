@@ -1,108 +1,245 @@
-// Maafe — West African peanut stew from Mali and Senegal.
-// Author: SpiceTrader
-
 export default {
-  repoId: "master_west_african_maafe_peanut_stew_001",
-  parentRepoId: null,
-  slug: "maafe-peanut-stew",
-  author: "ForkRecipe Kitchen",
-
-  title: "Maafe (West African Peanut Stew)",
-  description: "A Malian and Senegalese stew where peanut butter melts into a tomato and broth base, enveloping braised lamb and sweet potato in a sauce so rich and unctuous it clings to the spoon like liquid velvet — every bowl a tightrope between nutty sweetness and savory, peppery depth.",
-  cuisine: "West African",
-  culture: "Malian/Senegalese",
-  category: "proteins",
-
-  tags: ["west-african", "peanut", "stew", "lamb", "tomato"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "1 hr 15 min",
-  ratioSystem: "parts",
-
-  stars: 1780,
-  forks: 165,
-  contributors: 21,
-  license: "CC-BY-SA",
-  createdAt: "2024-10-14",
-  updatedAt: "2025-12-28",
-
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 0, umami: 3, heat: 2 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in lamb shoulder, cut into 5 cm pieces",  ratioValue: 8,  defaultUnit: "parts", substitutions: ["beef chuck", "skin-on chicken thighs"] },
-    { ingId: "ing_02", role: "Structure", name: "Unsweetened peanut butter (smooth)",            ratioValue: 4,  defaultUnit: "parts", substitutions: ["freshly ground roasted peanuts"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Canned whole tomatoes, crushed by hand",        ratioValue: 4,  defaultUnit: "parts", substitutions: ["4 fresh plum tomatoes, blended"] },
-    { ingId: "ing_04", role: "Allium",    name: "Onion, diced",                                  ratioValue: 2,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Starch",    name: "Sweet potato, peeled and cubed",                ratioValue: 3,  defaultUnit: "parts", substitutions: ["regular potato", "winter squash"] },
-    { ingId: "ing_06", role: "Liquid",    name: "Chicken or lamb stock",                         ratioValue: 6,  defaultUnit: "parts", substitutions: ["water"] },
-    { ingId: "ing_07", role: "Spice",     name: "Fresh scotch bonnet or habanero, whole",        ratioValue: 0.5, defaultUnit: "parts", substitutions: ["cayenne powder"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Salt, black pepper, seasoning cube",            ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_west_african_maafe_peanut_stew_001",
+  "parentRepoId": null,
+  "slug": "maafe-peanut-stew",
+  "author": "ForkRecipe Kitchen",
+  "title": "Mafe (Bâti d'arachides d'Afrique de l'Ouest)",
+  "description": "Un ragoût malien et sénégalais où le beurre d'arachide fond dans une base de tomates et de bouillons, enveloppant l'agneau braisé et la patate douce dans une sauce si riche et onctueuse qu'il s'accroche à la cuillère comme du velours liquide — chaque bol une corde serrée entre la douceur de noix et la profondeur salée et poivrée.",
+  "cuisine": "Afrique de l ' Ouest",
+  "culture": "Mali/Sénégalais",
+  "category": "proteins",
+  "tags": [
+    "Afrique de l ' Ouest",
+    "arachide",
+    "ragoût",
+    "agneau",
+    "tomates"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "1 hr 15 min",
+  "ratioSystem": "parts",
+  "stars": 1780,
+  "forks": 165,
+  "contributors": 21,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-10-14",
+  "updatedAt": "2025-12-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sear lamb",
-      inputs: ["ing_01", "ing_08"],
-      outputState: "seared_lamb",
-      instructions: "Season lamb pieces generously with salt and pepper. Heat a neutral oil in a large, heavy pot over high heat until shimmering. Sear the lamb in batches — do not crowd the pot — for 3–4 minutes per side until deeply browned on at least two surfaces. Transfer to a plate. Browning is not merely aesthetic: it builds the Maillard flavor compounds that will give the stew its deep, roasted depth.",
-      visualCue: {
-        primaryTarget: "Each piece of lamb has a uniform, deep mahogany-brown crust on at least two sides. The pot has visible fond — dark, caramelized deposits stuck to the bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Lamb is pale grey on the seared surface. Meat has steamed rather than seared, indicating the pot was overcrowded or not hot enough.", action: "Remove some pieces and sear in smaller batches. The fond and color are essential to the stew's flavor — do not skip this." },
-          { state: "Perfect",   description: "Deep, even mahogany crust. The pot bottom has a layer of brown fond. Lamb releases from the pan cleanly when pulled with tongs.", action: "Set lamb aside and build the sauce in the same pot, using the fond as the flavor base." },
-          { state: "Overdone",  description: "Lamb surfaces are very dark brown, nearly black, with an acrid smell. Fond on the pan bottom is dark and may be burnt.", action: "Deglaze immediately with the stock, scraping vigorously. Taste the stock — if bitter, proceed with less of the burnt fond and add a pinch of sugar to balance." },
-        ],
-      },
-      feelCue: "Press a seared piece of lamb with your tongs — it should feel firm and resistant on the surface with a slight give underneath. You should hear a sustained, loud sizzle that doesn't quiet until you stop touching it.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Épaule d'agneau désossée, coupée en morceaux de 5 cm",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mandrin de boeuf",
+        "cuisses de poulet sur la peau"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Build tomato-onion base",
-      inputs: ["seared_lamb", "ing_03", "ing_04", "ing_07", "ing_06"],
-      outputState: "tomato_stew_base",
-      instructions: "In the same pot over medium heat, add the diced onion and cook, scraping up the fond, for 5 minutes until soft and translucent. Add the crushed tomatoes and stir, scraping all the caramelized bits from the bottom — these dissolve into the sauce. Add the whole scotch bonnet pepper (leave whole and intact to control heat — puncturing it releases much more capsaicin). Pour in the stock and add the seared lamb back. Bring to a simmer.",
-      visualCue: {
-        primaryTarget: "A deep red-orange broth with the lamb pieces submerged or nearly so, the intact scotch bonnet floating at the surface. All the fond has dissolved into the liquid.",
-        spectrum: [
-          { state: "Underdone", description: "Pan fond has not been fully incorporated — brown deposits still stuck to the bottom. The broth is thin and pale, lacking the color from the tomatoes.", action: "Stir vigorously and add a splash more stock to help dissolve the fond. The brown bits are concentrated flavor — leave none behind." },
-          { state: "Perfect",   description: "Richly colored, tomato-red broth with no stuck fond. Lamb pieces visible beneath the surface. Whole scotch bonnet floating. The liquid smells deeply savory with a warm chili undertone.", action: "Add the peanut butter and simmer to combine." },
-          { state: "Overdone",  description: "Scotch bonnet has been broken open or punctured — the broth will be very much hotter than intended. Oil from the chili is visible on the surface.", action: "Remove the scotch bonnet fragments. Add more stock and proceed — the stew will be very spicy. Taste and balance with extra peanut butter, which tempers heat." },
-        ],
-      },
-      feelCue: "Drag a wooden spoon across the pot bottom — you should feel no resistance from stuck deposits. The liquid should flow smoothly back into the path left by the spoon, indicating everything has dissolved.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Beurre d'arachide non sucré",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "arachides grillées fraîchement moulues"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Add peanut butter and sweet potato",
-      inputs: ["tomato_stew_base", "ing_02", "ing_05"],
-      outputState: "simmering_maafe",
-      instructions: "Ladle a cup of the hot broth into a bowl and whisk the peanut butter into it until smooth — this tempers the peanut butter so it doesn't seize up when added to the pot. Pour the smooth peanut mixture back into the pot, stirring to fully incorporate. Add the sweet potato cubes. Simmer uncovered for 35–40 minutes, stirring every 10 minutes, until the lamb is pull-apart tender, the sweet potato is soft, and the sauce has thickened to a glossy, rich stew that coats the spoon.",
-      visualCue: {
-        primaryTarget: "The stew has thickened to a deep, orange-brown color. The peanut butter has fully integrated — no white streaks visible. Sweet potato is tender when pierced with a knife.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still thin and watery, or streaks of un-integrated peanut butter are visible. Sweet potato resists a knife. Lamb is still firm when prodded.", action: "Continue simmering uncovered and stirring regularly. The stew will thicken naturally as the peanut butter proteins and sweet potato starch release." },
-          { state: "Perfect",   description: "Thick, glossy, uniformly colored sauce. Sweet potato is tender throughout. Lamb falls apart with gentle fork pressure. A spoon dragged through the surface leaves a trail that fills in over 4–5 seconds.", action: "Remove the scotch bonnet pepper. Taste and adjust seasoning. Serve." },
-          { state: "Overdone",  description: "Sauce has become very thick and is beginning to scorch on the bottom. Sweet potato is mushy and disintegrating into the stew. Lamb is falling apart into shreds.", action: "Add stock or water to loosen, stir gently (so as not to break up the sweet potato further), and remove from heat." },
-        ],
-      },
-      feelCue: "Rub a small amount of the sauce between your fingers — it should feel slick and rich from the peanut oil, with no watery dilution. The aroma should be simultaneously nutty, savory, and lightly sweet from the potato.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Tomates entières en conserve, broyées à la main",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "4 tomates prunes fraîches, mélangées"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Finish and season",
-      inputs: ["simmering_maafe"],
-      outputState: "finished_maafe",
-      instructions: "Remove the whole scotch bonnet pepper before serving — discard it. Taste the stew and adjust salt, seasoning cube, and heat to your preference. If the stew is too thick, add a splash of stock. If too thin, simmer uncovered for 5 more minutes. The sauce should be thick enough to mound slightly on a serving spoon. Serve over white rice or with white bread, with the lamb and sweet potato prominently visible.",
-      visualCue: {
-        primaryTarget: "Deep orange-brown stew with visible pieces of tender lamb and sweet potato. Sauce mounds slightly on a spoon. Rich, glossy surface with no oil separation.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and pours like soup. The peanut butter flavor is weak and the tomato dominates. The balance between nutty and savory is off.", action: "Whisk in an additional tablespoon of peanut butter dissolved in hot stock and simmer 5 more minutes." },
-          { state: "Perfect",   description: "Thick, glossy, deeply flavored sauce that is simultaneously nutty, savory, tomato-forward, and warmly spiced. Mounds on a spoon and falls in thick sheets. The scotch bonnet heat is a background warmth, not a punch.", action: "Serve immediately." },
-          { state: "Overdone",  description: "Sauce has separated — pools of orange peanut oil visible on the surface with a stiff stew beneath. Overly thick and pasty.", action: "Add stock, remove from heat, and stir vigorously in large circles. The emulsion will re-form as it cools slightly." },
-        ],
-      },
-      feelCue: "Taste the sauce alone — the peanut flavor should arrive first, warm and roasted, followed by savory tomato, then a slow building heat from the pepper. Each note should arrive in sequence, not simultaneously in a muddle.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon coupé en dés",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Starch",
+      "name": "Pommes de terre douces, pelées et cubes",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Pommes de terre régulières",
+        "courge d'hiver"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Liquid",
+      "name": "Stocks de poulet ou d'agneau",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Bonnet de scotch frais ou habanero, entier",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poudre de Cayenne"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel, poivre noir, cube assaisonnement",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Agneau de mer",
+      "inputs": [
+        "ing_01",
+        "ing_08"
+      ],
+      "outputState": "seared_lamb",
+      "instructions": "Assaisonner généreusement les morceaux d'agneau avec du sel et du poivre. Chauffer une huile neutre dans un grand pot lourd à feu vif jusqu'à ce qu'elle mijote. Casser l'agneau en lots — ne pas fouler le pot — pendant 3 à 4 minutes de chaque côté jusqu'à ce qu'il soit profondément doré sur au moins deux surfaces. Transférer dans une assiette. Le brunissement n'est pas seulement esthétique : il construit les composés de saveur Maillard qui donneront au ragoût sa profondeur profonde et torréfié.",
+      "visualCue": {
+        "primaryTarget": "Chaque morceau d'agneau a une croûte brun acajou uniforme et profonde sur au moins deux côtés. Le pot a de l'affection visible — des dépôts sombres et caramélisés collés au fond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'agneau est gris pâle sur la surface de mer. La viande a été cuite à la vapeur plutôt qu'à la mer, ce qui indique que le pot était surpeuplé ou pas assez chaud.",
+            "action": "Retirer quelques morceaux et les saisir en petits lots. Le goût et la couleur sont essentiels à la saveur du ragoût — ne sautez pas cela."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte d'acajou. Le fond du pot a une couche de couleur marron. L'agneau se libère proprement de la poêle lorsqu'il est tiré avec des pinces.",
+            "action": "Réserver l'agneau et construire la sauce dans la même casserole, en utilisant le fond comme base de saveur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les surfaces d'agneau sont brun foncé, presque noires, avec une odeur acride. Le fond de la poêle est sombre et peut être brûlé.",
+            "action": "Déglacer immédiatement avec le stock, racler vigoureusement. Goûtez le stock — si amer, continuez avec moins de fond brûlé et ajoutez une pincée de sucre pour équilibrer."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau d'agneau avec vos pinces — il doit se sentir ferme et résistant à la surface avec un léger donner en dessous. Vous devriez entendre un étourdissement fort et soutenu qui ne se calme pas jusqu'à ce que vous arrêtiez de le toucher."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Construire une base d'oignons de tomates",
+      "inputs": [
+        "seared_lamb",
+        "ing_03",
+        "ing_04",
+        "ing_07",
+        "ing_06"
+      ],
+      "outputState": "tomato_stew_base",
+      "instructions": "Dans la même casserole à feu moyen, ajouter l'oignon en dés et cuire, grattant le fond, pendant 5 minutes jusqu'à ce que doux et translucide. Ajouter les tomates concassées et remuer, en grattant tous les morceaux caramélisés du fond — ceux-ci se dissolvent dans la sauce. Ajouter l'ensemble du bonnet de scotch (le laisser entier et intact pour contrôler la chaleur — la ponctuer libère beaucoup plus de capsaïcine). Verser le stock et ajouter l'agneau marin. Faites frémir.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon rouge-orange profond avec les morceaux d'agneau submergés ou presque, le capot de scotch intact flottant à la surface. Tout le fond s'est dissous dans le liquide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le fonds Pan n'a pas été entièrement incorporé — les dépôts bruns sont toujours collés au fond. Le bouillon est mince et pâle, sans la couleur des tomates.",
+            "action": "Incorporer vigoureusement et ajouter un peu plus de bouillon pour aider à dissoudre le fond. Les morceaux bruns sont une saveur concentrée — ne laisser aucun derrière."
+          },
+          {
+            "state": "Perfect",
+            "description": "Bouillon rouge tomate, richement coloré, sans goût. Des pièces d'agneau visibles sous la surface. Le capot entier de scotch flotte. Le liquide sent profondément savoureux avec un sous-ton chaud de chili.",
+            "action": "Ajouter le beurre d'arachide et laisser mijoter pour mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le capot scotch a été cassé ouvert ou perforé — le bouillon sera beaucoup plus chaud que prévu. L'huile du chili est visible à la surface.",
+            "action": "Enlevez les fragments de bonnet de scotch. Ajoutez plus de stock et continuez — le ragoût sera très épicé. Goûtez et équilibrez avec du beurre d'arachide supplémentaire, qui tempère la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère en bois sur le fond du pot — vous ne devriez pas sentir de résistance des dépôts coincés. Le liquide doit s'écouler en douceur dans le sentier laissé par la cuillère, indiquant que tout s'est dissous."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ajouter le beurre d'arachide et la patate douce",
+      "inputs": [
+        "tomato_stew_base",
+        "ing_02",
+        "ing_05"
+      ],
+      "outputState": "simmering_maafe",
+      "instructions": "Ajouter une tasse du bouillon chaud dans un bol et fouetter le beurre de cacahuète jusqu'à ce qu'il soit lisse — ce qui tempère le beurre de cacahuètes de sorte qu'il ne se saisit pas lorsqu'il est ajouté au pot. Verser le mélange d'arachide lisse dans le pot, en remuant pour incorporer complètement. Ajouter les cubes de patate douce. Laisser mijoter à découvert de 35 à 40 minutes, en remuant toutes les 10 minutes, jusqu'à ce que l'agneau soit tendre, la patate douce est molle, et la sauce s'est épaissie jusqu'à un ragoût brillant et riche qui enrobe la cuillère.",
+      "visualCue": {
+        "primaryTarget": "Le ragoût s'est épaissi jusqu'à une couleur brun-orange profonde. Le beurre de cacahuètes a été entièrement intégré — pas de stries blanches visibles. La patate douce est tendre lorsqu'elle est percée avec un couteau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore mince et aqueuse, ou des stries de beurre d'arachide non intégré sont visibles. La patate douce résiste à un couteau. L'agneau est toujours ferme lorsqu'il est en marche.",
+            "action": "Continuer à mijoter à découvert et à remuer régulièrement. Le ragoût s'épaissira naturellement sous forme de protéines de beurre d'arachide et de fécule de pomme de terre douce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sa sauce épaisse, brillante et uniformément colorée. La patate douce est tendre partout. L'agneau s'effondre avec une légère pression de fourche. Une cuillère traînée à travers la surface laisse un sentier qui se remplit de plus de 4 à 5 secondes.",
+            "action": "Enlevez le poivre de bonnet de scotch. Goûtez et assaisonnez. Servez."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est devenue très épaisse et commence à brûler sur le fond. La patate douce est musquée et désintégrée dans le ragoût. L'agneau tombe en morceaux.",
+            "action": "Ajouter le bouillon ou l'eau pour se détendre, remuer doucement (de manière à ne pas briser la patate douce plus loin) et retirer du feu."
+          }
+        ]
+      },
+      "feelCue": "Frotter une petite quantité de sauce entre les doigts — elle devrait se sentir lisse et riche de l'huile d'arachide, sans dilution aqueuse. L'arôme doit être simultanément noisette, salé et légèrement sucré de la pomme de terre."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finale et saison",
+      "inputs": [
+        "simmering_maafe"
+      ],
+      "outputState": "finished_maafe",
+      "instructions": "Retirez tout le poivre de scotch avant de servir — jetez-le. Goûtez le ragoût et ajustez le sel, assaisonner le cube et chauffer à votre préférence. Si le ragoût est trop épais, ajoutez un peu de bouillon. Si trop mince, laisser mijoter pendant 5 minutes. La sauce doit être assez épaisse pour être légèrement butée sur une cuillère à servir. Servir sur du riz blanc ou avec du pain blanc, l'agneau et la patate douce étant bien visibles.",
+      "visualCue": {
+        "primaryTarget": "Ragoût brun orangé profond avec des morceaux visibles d'agneau tendre et de patate douce. Sauce légèrement sur une cuillère. Surface riche et brillante sans séparation d'huile.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et verse comme de la soupe. La saveur de beurre d'arachide est faible et la tomate domine. L'équilibre entre la noix et la savoureuse est rompu.",
+            "action": "Ajouter une cuillère à soupe de beurre d'arachide dissous en bouillon chaud et laisser mijoter 5 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Sauce épaisse, brillante et aromatisée qui est à la fois nutty, salée, tomate-avant et chaudement épicée. Mounds sur une cuillère et tombe dans des draps épais. La chaleur du capot de scotch est une chaleur de fond, pas un coup de poing.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce s'est séparée — des piscines d'huile d'arachide orange visibles à la surface avec un ragoût raide en dessous. Trop épaisse et pâteuse.",
+            "action": "Ajouter le bouillon, retirer de la chaleur et remuer vigoureusement en grands cercles. L'émulsion se reformera car elle refroidit légèrement."
+          }
+        ]
+      },
+      "feelCue": "Goûtez la sauce seule — le goût d'arachide devrait arriver d'abord, chaud et rôti, suivi de tomates salées, puis d'une chaleur de construction lente du poivre. Chaque note doit arriver en séquence, pas simultanément dans un muffle."
+    }
+  ]
 };

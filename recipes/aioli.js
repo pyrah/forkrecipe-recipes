@@ -1,77 +1,187 @@
 export default {
-  repoId: "master_spanish_aioli_001",
-  parentRepoId: null,
-  slug: "aioli",
-  author: "ForkRecipe Kitchen",
-  title: "Aioli",
-  description: "The true all i oli — garlic and oil and nothing else, pounded in a mortar until the cloves surrender and pull a stream of olive oil into a stiff, matte, ivory paste that stands in the pestle and rings the bowl with the raw green heat of the Mediterranean.",
-  cuisine: "Spanish",
-  culture: "Catalan",
-  category: "condiments",
-  tags: ["aioli", "all-i-oli", "garlic", "emulsion", "catalan", "vegan", "mortar"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "20 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 0, salty: 2, sour: 1, bitter: 1, umami: 0, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Allium",    name: "Fresh garlic cloves (firm, no green germ)", ratioValue: 12, defaultUnit: "parts", substitutions: ["spring garlic for a milder, greener sauce"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Fine sea salt",                              ratioValue: 2,  defaultUnit: "parts", substitutions: ["flaky salt, crushed fine"] },
-    { ingId: "ing_03", role: "Fat",       name: "Mild olive oil (or part extra-virgin)",      ratioValue: 100, defaultUnit: "parts", substitutions: ["half mild olive, half neutral oil for a gentler finish"] },
-    { ingId: "ing_04", role: "Citrus",    name: "Fresh lemon juice (optional, to slacken)",   ratioValue: 3,  defaultUnit: "parts", substitutions: ["a few drops of mild white wine vinegar"] },
-    { ingId: "ing_05", role: "Binder",    name: "Egg yolk (optional insurance, room temp)",   ratioValue: 8,  defaultUnit: "parts", substitutions: ["omit entirely for a traditional egg-free all i oli"] },
+  "repoId": "master_spanish_aioli_001",
+  "parentRepoId": null,
+  "slug": "aioli",
+  "author": "ForkRecipe Kitchen",
+  "title": "Aioli",
+  "description": "Le vrai tout i oli — l'ail et l'huile et rien d'autre, pilonné dans un mortier jusqu'à ce que les girofles se rendent et tirent un jet d'huile d'olive dans une pâte rigide, mate, ivoire qui se tient dans le pestle et sonne le bol avec la chaleur verte crue de la Méditerranée.",
+  "cuisine": "Espagnol",
+  "culture": "Catalan",
+  "category": "condiments",
+  "tags": [
+    "Aïoli",
+    "Tous-i-oli",
+    "Ail",
+    "émulsion",
+    "catalan",
+    "végétalien",
+    "mortier"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "20 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Pound",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "garlic_paste",
-      instructions: "Halve each clove and flick out any green germ at the center — it is bitter and will sharpen the sauce. Drop the garlic into a heavy mortar with the salt and pound, then grind in circles, working the pestle against the wall of the bowl. The salt is an abrasive; let it shred the garlic for you. Keep going past the point of looking done until you have a completely smooth, sticky, slightly translucent paste with no visible fibers.",
-      visualCue: {
-        primaryTarget: "A glossy, pale-gold paste that clings to the pestle and smears across the mortar like wet plaster, with no chunks or stringy fibers left.",
-        spectrum: [
-          { state: "Underdone", description: "The garlic is still in ragged shreds and small chips, wet but lumpy, sliding around the mortar.", action: "Keep pounding and grinding in firm circles. The salt does the cutting — give it time to break the cell walls fully or the emulsion will refuse to hold." },
-          { state: "Perfect",   description: "A uniform, sticky, faintly translucent paste that pulls in a thin film up the side of the mortar and smells pungent and sweet at once.", action: "You have your base. Begin adding oil literally drop by drop while grinding." },
-          { state: "Overdone",  description: "The paste smells acrid and harshly sulfurous, almost hot in the nose, from very aggressive prolonged crushing.", action: "It will still emulsify, but expect a fierce sauce. Lean on the optional lemon at the end to round off the burn." },
-        ],
-      },
-      feelCue: "Under the pestle the garlic shifts from a slippery, skidding resistance to a smooth, tacky drag that grips the stone. Your eyes will water — that is the allicin firing, and exactly what you want.",
+      "ingId": "ing_01",
+      "role": "Allium",
+      "name": "Girofles d'ail frais (firmes, sans germe vert)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Ail de printemps pour une sauce plus douce et plus verte"
+      ]
     },
     {
-      nodeId: "step_2", action: "Emulsify",
-      inputs: ["garlic_paste", "ing_05", "ing_03"],
-      outputState: "loose_emulsion",
-      instructions: "If using the optional yolk for insurance, work it smoothly into the garlic paste now. Then begin the oil — and this is the whole game. Add it a single drop, then a thin trickle at a time, grinding the pestle in steady circles always in the same direction. Do not rush. The paste will whiten and thicken with each addition. Only once it is visibly thick and pale and has accepted perhaps a third of the oil may you pour in a slow, pencil-thin stream, still grinding without pause.",
-      visualCue: {
-        primaryTarget: "A thickening, pale-ivory cream that grows stiffer and lighter with every drop, holding the swirl marks of the pestle.",
-        spectrum: [
-          { state: "Underdone", description: "The mixture is loose, yellow, and oily-looking, sliding rather than gripping, with oil pooling separately.", action: "Stop adding oil at once. Grind hard until what is in the mortar pulls back together and thickens, then resume drop by drop. You added oil faster than the garlic could take it." },
-          { state: "Perfect",   description: "A pale, matte, mayonnaise-thick cream climbing the pestle, lightening toward white, that holds a clear trail when the pestle lifts.", action: "Keep streaming oil in slowly. Watch the thickness — you are building toward a paste that will stand on its own." },
-          { state: "Overdone",  description: "The cream suddenly slackens, looks greasy and curdled, and oil weeps to the surface — the emulsion has broken.", action: "Scrape it into a jug. Start a fresh teaspoon of garlic paste (or a clean yolk) in the mortar and drizzle the broken sauce back in slowly to rebuild." },
-        ],
-      },
-      feelCue: "Listen to the pestle: a wet sucking, slapping sound means the emulsion is tight and happy. A thin, sloshing silence means too much loose oil — pause and grind it back together before adding more.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sel flocé, fin broyé"
+      ]
     },
     {
-      nodeId: "step_3", action: "Mount",
-      inputs: ["loose_emulsion", "ing_03", "ing_04"],
-      outputState: "finished_aioli",
-      instructions: "Continue streaming in the remaining oil, faster now that the emulsion is strong, until it is all incorporated and the sauce is dense enough to stand up in the mortar in a soft peak. Taste. A few drops of lemon juice will both slacken an overly stiff aioli and brighten the garlic; add salt only if it needs it. Serve at once, mounded in the mortar, alongside grilled meat, rice, or bread — it is at its most fragrant the moment it is made.",
-      visualCue: {
-        primaryTarget: "A thick, ivory-white paste so stiff it holds a standing peak and a smear pulls clean off a spoon, glossy where the pestle smoothed it.",
-        spectrum: [
-          { state: "Underdone", description: "The aioli is the texture of loose mayonnaise — pourable, not standing — and tastes flatly oily.", action: "Grind in a little more oil to build body, and sharpen with a few drops of lemon and a pinch of salt to wake the flavor." },
-          { state: "Perfect",   description: "A dense, matte, pale paste that stands in a peak, tastes of pure garlic and green olive oil, fierce but balanced, with a long warm finish.", action: "Stop. Serve immediately at room temperature; cover the surface flush if it must wait, but it is best within the hour." },
-          { state: "Overdone",  description: "So stiff it is almost waxy and crumbles at the edges rather than smearing, and the garlic reads as harsh.", action: "Loosen with a teaspoon of cold water or lemon juice, working it in gently until it flows again." },
-        ],
-      },
-      feelCue: "A finished all i oli grips the spoon and resists the pull, with a faint elastic stretch as you lift it. On the tongue it should hit hot and pungent, then mellow into the fruity bitterness of the oil — a sauce that bites first and lingers sweet.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile d'olive légère (ou partie extra-vierge)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "olive moitié douce, huile moitié neutre pour une finition plus douce"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Citrus",
+      "name": "Jus de citron frais (facultatif, pour relâcher)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "quelques gouttes de vinaigre de vin blanc doux"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Binder",
+      "name": "Jaune d'œuf (assurance facultative, durée de la chambre)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omit entièrement pour un traditionnel sans oeuf tout i oli"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Livre",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "garlic_paste",
+      "instructions": "Halte chaque girofle et efface tout germe vert au centre – il est amer et aiguise la sauce. Déposez l'ail dans un lourd mortier avec le sel et la livre, puis moudre en ronds, en travaillant le pilon contre la paroi du bol. Le sel est abrasif, qu'il déchiquete l'ail pour vous. Continuer à passer le point de regarder fait jusqu'à ce que vous avez une pâte complètement lisse, collante, légèrement translucide sans fibres visibles.",
+      "visualCue": {
+        "primaryTarget": "Une pâte glosseuse et dorée qui s'accroche au pilon et frotte à travers le mortier comme du plâtre humide, sans morceaux ni fibres à cordes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'ail est toujours en croûtes et petits copeaux, mouillés mais grumelés, qui glissent autour du mortier.",
+            "action": "Continuez à frapper et à broyer dans des cercles fermes. Le sel fait la coupe — donnez-lui le temps de briser complètement les parois cellulaires ou l'émulsion refusera de tenir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte uniforme, collante, légèrement translucide qui tire dans un mince film vers le haut du côté du mortier et sent piquant et doux à la fois.",
+            "action": "Vous avez votre base. Commencez à ajouter de l'huile littéralement goutte à goutte pendant le broyage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte sent acride et durement sulfureuse, presque chaude dans le nez, d'un concassage prolongé très agressif.",
+            "action": "Il émulsionnera encore, mais s'attendra à une sauce féroce. Penchez-vous sur le citron en option à la fin pour arrondir la brûlure."
+          }
+        ]
+      },
+      "feelCue": "Sous le pilon, l'ail passe d'une résistance glissante à l'éboulement à une traînée lisse et collante qui accroche la pierre. Vos yeux vont arroser — c'est l'allicine qui tire, et exactement ce que vous voulez."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Émulsifier",
+      "inputs": [
+        "garlic_paste",
+        "ing_05",
+        "ing_03"
+      ],
+      "outputState": "loose_emulsion",
+      "instructions": "Si vous utilisez le jaune en option pour l'assurance, travaillez-le en douceur dans la pâte d'ail maintenant. Alors commencez le pétrole — et c'est tout le jeu. Ajoutez-le une seule goutte, puis un mince filet à la fois, broyant le pestle dans des cercles stables toujours dans la même direction. Ne vous pressez pas. La pâte blanchit et épaissit avec chaque addition. Seulement une fois qu'il est visiblement épais et pâle et a accepté peut-être un tiers de l'huile peut vous verser dans un flux lent, crayon-fin, toujours broyage sans pause.",
+      "visualCue": {
+        "primaryTarget": "Une crème épaississante et pâle-ivorieuse qui devient plus raide et plus légère à chaque goutte, tenant les marques tourbillonnantes du pestle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange est lâche, jaune et huileux, glissant plutôt que grippant, avec pooling d'huile séparément.",
+            "action": "Arrêtez d'ajouter de l'huile immédiatement. Grind dur jusqu'à ce que ce qui est dans le mortier se retire et s'épaississe, puis reprendre la chute à la goutte. Tu as ajouté de l'huile plus vite que l'ail."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une crème pâle, mate, mayonnaise-épaisseur grimpant le pestle, s'éclaircissant vers le blanc, qui tient un sentier clair quand le pestle se lève.",
+            "action": "Continuez à diffuser du pétrole lentement. Regardez l'épaisseur — vous construisez vers une pâte qui se tiendra sur elle - même."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème s'affaiblit soudainement, semble grasse et caillé, et l'huile pleure à la surface — l'émulsion s'est brisée.",
+            "action": "Encrassez-le dans une cruche. Commencer une cuillère à café fraîche de pâte d'ail (ou un jaune propre) dans le mortier et arroser la sauce cassée à nouveau lentement pour reconstruire."
+          }
+        ]
+      },
+      "feelCue": "Écouter le pestle : un aspirateur humide, gifler le son signifie que l'émulsion est serrée et heureuse. Un silence mince et étouffant signifie trop d'huile libre — arrêtez - le et rectifiez - le avant d'ajouter plus."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Monter",
+      "inputs": [
+        "loose_emulsion",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "finished_aioli",
+      "instructions": "Continuer à couler dans le reste de l'huile, plus vite maintenant que l'émulsion est forte, jusqu'à ce qu'elle soit toute incorporée et que la sauce soit assez dense pour se tenir debout dans le mortier dans un pic doux. Goûte. Quelques gouttes de jus de citron relâcheront un aioli trop raide et illumineront l'ail; ajouter le sel seulement si elle en a besoin. Servir immédiatement, bombé dans le mortier, à côté de la viande grillée, du riz ou du pain — c'est à son plus parfumé le moment où il est fait.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, blanc ivoire si rigide qu'elle tient un pic debout et un frottis tire nettoyer une cuillère, brillant où le pilon l'a lissé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'aioli est la texture de la mayonnaise lâche — versable, non debout — et a un goût d'huile.",
+            "action": "Mouiller dans un peu plus d'huile pour construire le corps, et aiguiser avec quelques gouttes de citron et une pincée de sel pour réveiller la saveur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte dense, mate, pâle qui se tient dans un pic, goûts d'ail pur et d'huile d'olive verte, féroce mais équilibrée, avec une longue finale chaude.",
+            "action": "Arrête. Servir immédiatement à la température ambiante; couvrir la surface si elle doit attendre, mais il est préférable dans l'heure."
+          },
+          {
+            "state": "Overdone",
+            "description": "Il est si raide qu'il est presque cireux et s'écroule aux bords plutôt que de frotter, et l'ail se lit comme dur.",
+            "action": "Allongez-vous avec une cuillère à café d'eau froide ou de jus de citron, en travaillant doucement jusqu'à ce qu'elle coule à nouveau."
+          }
+        ]
+      },
+      "feelCue": "Un tout fini i oli saisit la cuillère et résiste à la traction, avec un étirement élastique faible que vous le soulevez. Sur la langue il doit frapper chaud et piquant, puis se mouiller dans l'amertume fruitée de l'huile — une sauce qui mord d'abord et reste douce."
+    }
+  ]
 };

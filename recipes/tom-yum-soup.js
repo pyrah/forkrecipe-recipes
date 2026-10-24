@@ -1,107 +1,266 @@
 export default {
-  repoId: "master_thai_tom_yum_soup_001",
-  parentRepoId: null,
-  slug: "tom-yum-soup",
-  author: "ForkRecipe Kitchen",
-
-  title: "Tom Yum Goong",
-  description: "A Thai broth that hits every receptor at once — galangal and lemongrass steep into a translucent, deeply fragrant base, shrimp cook just past translucent, and a final bloom of lime juice and fish sauce tilts everything into fierce, clean heat and sour brightness.",
-  cuisine: "Thai",
-  culture: "Central Thai",
-  category: "stocks",
-
-  tags: ["thai", "soup", "shrimp", "lemongrass", "hot-sour"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-
-  stars: 2876,
-  forks: 310,
-  contributors: 35,
-  license: "CC-BY-SA",
-  createdAt: "2024-04-08",
-  updatedAt: "2025-10-22",
-
-  flavorRadar: { sweet: 1, salty: 3, sour: 4, bitter: 0, umami: 4, heat: 4 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "Water or light chicken stock",                               ratioValue: 100, defaultUnit: "parts", substitutions: ["shrimp shell stock for double intensity"] },
-    { ingId: "ing_02", role: "Aromatic",  name: "Lemongrass stalks, bruised and cut into 5cm segments",      ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Galangal (kha), sliced into coins (not ginger)",            ratioValue: 8,   defaultUnit: "parts", substitutions: ["ginger is a different flavor — use only in emergency"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Kaffir lime leaves, lightly bruised and torn",              ratioValue: 5,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Heat",      name: "Thai bird's eye chilies, crushed",                          ratioValue: 4,   defaultUnit: "parts", substitutions: ["serrano chilies"] },
-    { ingId: "ing_06", role: "Protein",   name: "Large shrimp (head-on preferred), shell-on or peeled",      ratioValue: 40,  defaultUnit: "parts", substitutions: ["chicken breast slices", "mixed seafood"] },
-    { ingId: "ing_07", role: "Umami",     name: "Straw mushrooms or oyster mushrooms, halved",               ratioValue: 15,  defaultUnit: "parts", substitutions: ["button mushrooms"] },
-    { ingId: "ing_08", role: "Seasoning", name: "Fish sauce (Tiparos or Megachef)",                          ratioValue: 8,   defaultUnit: "parts", substitutions: ["light soy sauce for vegetarian"] },
-    { ingId: "ing_09", role: "Acid",      name: "Fresh lime juice (from about 2 limes)",                     ratioValue: 10,  defaultUnit: "parts", substitutions: ["tamarind water for a more complex sour"] },
-    { ingId: "ing_10", role: "Garnish",   name: "Fresh cilantro and spring onion, chopped",                  ratioValue: 5,   defaultUnit: "parts", substitutions: ["culantro / long coriander for authenticity"] },
+  "repoId": "master_thai_tom_yum_soup_001",
+  "parentRepoId": null,
+  "slug": "tom-yum-soup",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tom Yum Goong",
+  "description": "Un bouillon thaïlandais qui frappe tous les récepteurs à la fois - galangal et citronnelle raide dans une base translucide, profondément parfumée, crevettes cuisinent juste après translucide, et une floraison finale de jus de lime et de sauce de poisson bascule tout dans la chaleur féroce, propre et la luminosité aigre.",
+  "cuisine": "Thaï",
+  "culture": "Centre thaïlandais",
+  "category": "stocks",
+  "tags": [
+    "Thaï",
+    "Soupe",
+    "crevettes",
+    "citronnelle",
+    "Chaud-sour"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 2876,
+  "forks": 310,
+  "contributors": 35,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-04-08",
+  "updatedAt": "2025-10-22",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 4,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Steep aromatics",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "aromatic_stock",
-      instructions: "Combine water (or stock), lemongrass, galangal, kaffir lime leaves, and bruised chilies in a pot. Bring to a boil, then reduce to a vigorous simmer. Cook for 10-12 minutes to extract the aromatics fully. Do not strain yet — the aromatic solids continue infusing as you cook the rest of the soup.",
-      visualCue: {
-        primaryTarget: "Broth has taken on a pale golden-green tinge; the surface is fragrant with lemongrass, lime leaf, and a faint heat rising in the steam.",
-        spectrum: [
-          { state: "Underdone", description: "Broth still smells mostly like plain water; lemongrass and galangal haven't fully released their compounds.", action: "Continue simmering for another 5 minutes; the aromatics need time and heat." },
-          { state: "Perfect",   description: "Broth is pale gold, fragrant with lemongrass, citrus, and earthy galangal. Chilies have released visible orange-red color into the liquid.", action: "Add mushrooms and proceed." },
-          { state: "Overdone",  description: "Broth has reduced significantly and may taste slightly bitter from over-extracted kaffir lime — the pithy stems contribute bitterness over time.", action: "Remove kaffir lime leaves; add a splash of water to reconstitute volume." },
-        ],
-      },
-      feelCue: "Lean over the pot and inhale — you should smell lemongrass, citrus, and something almost medicinal from the galangal. If the fragrance is faint, simmer longer with the lid off.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Eau ou bouillon de poulet léger",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "stock de coquilles de crevettes pour double intensité"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Cook mushrooms",
-      inputs: ["ing_07", "aromatic_stock"],
-      outputState: "mushroom_broth",
-      instructions: "Add halved mushrooms to the simmering aromatic stock. Cook for 3-4 minutes until tender but still holding their shape. The mushrooms release their own umami into the broth, deepening the base.",
-      visualCue: {
-        primaryTarget: "Mushrooms are tender and have absorbed the broth color; the stock itself looks slightly more golden and opaque from the mushroom release.",
-        spectrum: [
-          { state: "Underdone", description: "Mushrooms are still pale and resistant when pressed with a spoon.", action: "Cook another 2-3 minutes." },
-          { state: "Perfect",   description: "Mushrooms yield slightly when pressed but hold their shape. The broth is a deeper golden with visible umami richness.", action: "Add shrimp immediately." },
-          { state: "Overdone",  description: "Mushrooms are completely soft and beginning to disintegrate into the broth — texture is lost.", action: "Proceed quickly; they will still taste fine." },
-        ],
-      },
-      feelCue: "The broth at this stage should smell like the sea and the forest simultaneously — the mushrooms add an earthy depth that anchors the citrus aromatics.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "Patins de citronnelle, meurtris et coupés en segments de 5 cm",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Cook shrimp",
-      inputs: ["ing_06", "mushroom_broth"],
-      outputState: "cooked_shrimp_broth",
-      instructions: "Add shrimp to the simmering broth. Cook for 1-2 minutes only — until just pink and curled. Do not overcook. If using head-on shrimp, the heads release a burst of shrimp essence into the broth: press them gently with a spoon as they cook. Remove from heat immediately when the shrimp curl.",
-      visualCue: {
-        primaryTarget: "Shrimp are uniformly pink-orange throughout, curled into a C-shape — not an O, which indicates overcooking.",
-        spectrum: [
-          { state: "Underdone", description: "Shrimp are still grey-translucent and limp. The color change hasn't completed.", action: "Cook another 30-60 seconds. Do not leave the pot." },
-          { state: "Perfect",   description: "Shrimp are vivid pink-orange, curled to a loose C, and slightly firm when pressed. The broth smells strongly of sweet shrimp essence.", action: "Remove from heat and season immediately." },
-          { state: "Overdone",  description: "Shrimp are curled tightly to an O-shape, opaque white throughout, and rubbery when pressed.", action: "Season and serve immediately — nothing further helps overcooked shrimp." },
-        ],
-      },
-      feelCue: "Touch a shrimp with your finger — it should feel firm and spring back slightly, like a pencil eraser. If it feels hard and doesn't spring, it is already overcooked.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Galangal (kha), tranché en pièces de monnaie (pas de gingembre)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "le gingembre est une saveur différente — utiliser uniquement en cas d'urgence"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Season and finish",
-      inputs: ["cooked_shrimp_broth", "ing_08", "ing_09", "ing_10"],
-      outputState: "finished_tom_yum",
-      instructions: "Off heat (critical — lime juice loses brightness when simmered), add fish sauce and lime juice. Taste and balance: fish sauce for salt, lime for sour, and adjust chili level to taste. The soup should be bracingly sour and hot in equal measure. Ladle into bowls, add garnish, and serve immediately — this soup does not wait.",
-      visualCue: {
-        primaryTarget: "Clear, pale golden broth with vivid pink shrimp, green herbs floating, and orange chili specks — a soup that looks as electrifying as it tastes.",
-        spectrum: [
-          { state: "Underdone", description: "Soup tastes flat, mostly of lemongrass water — fish sauce and lime haven't been added yet.", action: "Add fish sauce first (season), then lime juice little by little, tasting as you go." },
-          { state: "Perfect",   description: "The flavors hit in sequence: first the heat from the chilies, then the sour brightness of lime, then the savory depth of fish sauce and shrimp. Each element is distinct and loud.", action: "Ladle and garnish immediately." },
-          { state: "Overdone",  description: "Over-seasoned — either too salty (too much fish sauce) or too sour (too much lime). The flavors overwhelm each other.", action: "Add a small amount of water and a pinch of sugar to balance. The sugar should be barely perceptible." },
-        ],
-      },
-      feelCue: "The finished soup should make you draw a sharp breath from the heat, then exhale with the sour — that one-two punch is the soul of tom yum.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Feuilles de chaux de Kaffir, légèrement meurtries et déchirées",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Heat",
+      "name": "Chilies oculaires thaïlandaises, écrasées",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "serrano chilies"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Grandes crevettes (en tête), décortiquées ou pelées",
+      "ratioValue": 40,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tranches de poitrine de poulet",
+        "fruits de mer mélangés"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "Champignons de paille ou d'huîtres, coupés en deux",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "champignons bouton"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "sauce de poisson (Tiparos ou Megachef)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja légère pour végétarien"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "Jus de lime frais (d'environ 2 limes)",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "eau tamarine pour une aigre plus complexe"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Coriandre fraîche et oignon de printemps, haché",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "culantro / long coriandre pour l'authenticité"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Aromatiques profonds",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "aromatic_stock",
+      "instructions": "Mélanger de l'eau (ou du bouillon), de la citronnelle, du galangal, des feuilles de lime kaffir et des chilis meurtris dans un pot. Porter à ébullition, puis laisser mijoter vigoureusement. Cuire 10-12 minutes pour extraire complètement les aromatiques. Ne pas encore se fatiguer — les solides aromatiques continuent à infuser pendant que vous faites cuire le reste de la soupe.",
+      "visualCue": {
+        "primaryTarget": "Le papillon a pris une teinte vert doré pâle; la surface est parfumée de citronnelle, de feuille de lime et d'une faible chaleur qui monte dans la vapeur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le broth sent toujours l'eau ordinaire; la citronnelle et le galangal n'ont pas complètement libéré leurs composés.",
+            "action": "Continuer à mijoter pendant 5 minutes; les aromatiques ont besoin de temps et de chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bouillon est d'or pâle, parfumé de citronnelle, d'agrumes et de galangal terreux. Les chilies ont libéré la couleur orange-rouge visible dans le liquide.",
+            "action": "Ajouter les champignons et poursuivre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon a diminué de façon significative et peut avoir un goût légèrement amer à partir de la chaux de kaffir sur-extractée.",
+            "action": "Retirer les feuilles de chaux kaffir; ajouter un jet d'eau pour reconstituer le volume."
+          }
+        ]
+      },
+      "feelCue": "Penchez - vous sur le pot et inhalez — vous devriez sentir la citronnelle, les agrumes et quelque chose de presque médicinal du galangal. Si le parfum est faible, laisser mijoter plus longtemps avec le couvercle."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Champignons cuits",
+      "inputs": [
+        "ing_07",
+        "aromatic_stock"
+      ],
+      "outputState": "mushroom_broth",
+      "instructions": "Ajouter les champignons à moitié au stock aromatique mijotant. Cuire 3-4 minutes jusqu'à tendreté mais en tenant toujours leur forme. Les champignons libèrent leur propre umami dans le bouillon, approfondissant la base.",
+      "visualCue": {
+        "primaryTarget": "Les champignons sont tendres et ont absorbé la couleur du bouillon; le stock lui-même semble légèrement plus doré et opaque de la libération des champignons.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les champignons sont encore pâles et résistants lorsqu'ils sont pressés avec une cuillère.",
+            "action": "Cuire encore 2-3 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les champignons produisent légèrement lorsqu'ils sont pressés mais tiennent leur forme. Le bouillon est un plus profond doré avec une richesse visible en umami.",
+            "action": "Ajouter les crevettes immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les champignons sont complètement mous et commencent à se désintégrer dans le bouillon — la texture est perdue.",
+            "action": "Procéder rapidement; ils auront encore un bon goût."
+          }
+        ]
+      },
+      "feelCue": "Le bouillon à ce stade devrait sentir comme la mer et la forêt simultanément — les champignons ajoutent une profondeur terreuse qui ancre les aromatiques d'agrumes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Crevettes cuites",
+      "inputs": [
+        "ing_06",
+        "mushroom_broth"
+      ],
+      "outputState": "cooked_shrimp_broth",
+      "instructions": "Ajouter les crevettes au bouillon mijotant. Cuire 1-2 minutes seulement — jusqu'à ce qu'il soit rose et frisé. Ne pas trop cuire. Si l'on utilise des crevettes tête-à-tête, les têtes libèrent un éclat d'essence de crevettes dans le bouillon : pressez-les doucement avec une cuillère pendant qu'elles cuisinent. Retirer du feu immédiatement lorsque la crevette se boucle.",
+      "visualCue": {
+        "primaryTarget": "Les crevettes sont uniformément orange-rose tout au long, enroulées en forme de C — et non en O, ce qui indique une cuisson excessive.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont encore gris-translucides et boiteuses. Le changement de couleur n'est pas terminé.",
+            "action": "Faites cuire encore 30-60 secondes. Ne laissez pas le pot."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les crevettes sont rose-orange vif, frisé à un C lâche, et légèrement fermes lorsqu'elles sont pressées. Le bouillon sent fortement l'essence de la crevette douce.",
+            "action": "Retirer du feu et assaisonner immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes sont serrées à une forme O, blanches opaques dans l'ensemble et caoutchouteuses lorsqu'elles sont pressées.",
+            "action": "Assaisonner et servir immédiatement — rien d'autre n'aide les crevettes surcuites."
+          }
+        ]
+      },
+      "feelCue": "Touchez une crevette avec votre doigt – elle devrait se sentir ferme et revenir légèrement, comme une gomme à crayon. S'il se sent dur et ne ressort pas, il est déjà trop cuit."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison et fin",
+      "inputs": [
+        "cooked_shrimp_broth",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "finished_tom_yum",
+      "instructions": "Hors chaleur (critique — le jus de lime perd de la luminosité lorsqu'il mijote), ajouter la sauce de poisson et le jus de lime. Bouche et équilibre : sauce de poisson pour sel, chaux pour aigrer et ajuster le niveau de chili au goût. La soupe doit être amère et chaude dans une mesure égale. Déposer dans des bols, garnir et servir immédiatement — cette soupe n'attend pas.",
+      "visualCue": {
+        "primaryTarget": "Bouillon clair et doré avec des crevettes roses vives, des herbes vertes flottantes et des taches de chili orange — une soupe qui semble aussi électrifiante qu'elle le goûte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La soupe a un goût plat, surtout de l'eau de citronnelle — la sauce de poisson et la chaux n'ont pas encore été ajoutées.",
+            "action": "Ajouter la sauce de poisson d'abord (saison), puis le jus de lime petit à petit, dégustation au fur et à mesure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les saveurs frappent en séquence : d'abord la chaleur des piments, puis la luminosité aigre de la chaux, puis la profondeur salée de la sauce de poisson et de crevettes. Chaque élément est distinct et fort.",
+            "action": "Louche et garnir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sur saison — soit trop salé (trop de sauce de poisson) ou trop acide (trop de chaux). Les saveurs s'écrasent.",
+            "action": "Ajouter une petite quantité d'eau et une pincée de sucre pour équilibrer. Le sucre doit être à peine perceptible."
+          }
+        ]
+      },
+      "feelCue": "La soupe finie devrait vous faire tirer un souffle vif de la chaleur, puis expirer avec la aigre — que un-deux coup est l'âme de tom yum."
+    }
+  ]
 };

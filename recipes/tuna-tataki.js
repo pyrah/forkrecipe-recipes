@@ -1,104 +1,268 @@
 export default {
-  repoId: "master_japanese_tuna_tataki_001",
-  parentRepoId: null,
-  slug: "tuna-tataki",
-  author: "ForkRecipe Kitchen",
-
-  title: "Tuna Tataki with Ponzu",
-  description: "Sushi-grade ahi tuna briefly seared on all sides in an almost-smoking pan until a thin cooked shell forms around a fully raw, deep-red center — sliced thin, draped with ponzu and ginger, the contrast between the warm sear and the cold interior the entire point.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "seafood",
-
-  tags: ["japanese", "tuna", "tataki", "ponzu", "sashimi", "seared", "raw", "ahi"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "1 hour",
-  ratioSystem: "weight",
-
-  stars: 0, forks: 0, contributors: 1, license: "CC-BY-SA",
-  createdAt: "2026-06-27", updatedAt: "2026-06-27",
-
-  flavorRadar: { sweet: 1, salty: 3, sour: 3, bitter: 0, umami: 4, heat: 1 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Sushi-grade ahi (yellowfin) tuna loin, in a block", ratioValue: 400, defaultUnit: "g", substitutions: ["bluefin otoro (richer)", "sashimi-grade salmon"] },
-    { ingId: "ing_02", role: "Umami",     name: "Ponzu sauce",                       ratioValue: 60,  defaultUnit: "g", substitutions: ["soy sauce + 1 tbsp yuzu or lemon juice"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Fresh ginger, very finely grated",  ratioValue: 10,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                     ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Freshly cracked black pepper",      ratioValue: 2,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Neutral oil with high smoke point (grapeseed or avocado)", ratioValue: 20, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Garnish",   name: "Thinly sliced green onions (scallions)", ratioValue: 15, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",   name: "Toasted sesame seeds",              ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Aromatic",  name: "Toasted sesame oil",                ratioValue: 8,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Garnish",   name: "Daikon radish, julienned (optional)", ratioValue: 50, defaultUnit: "g", substitutions: ["microgreens"] },
-    { ingId: "ing_11", role: "Acid",      name: "Yuzu juice or lemon juice (optional finishing acid)", ratioValue: 10, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_japanese_tuna_tataki_001",
+  "parentRepoId": null,
+  "slug": "tuna-tataki",
+  "author": "ForkRecipe Kitchen",
+  "title": "Tuna Tataki avec Ponzu",
+  "description": "Le thon ahi de qualité sushi a brièvement séché de tous les côtés dans une casserole presque-fumeur jusqu'à ce qu'une mince coquille cuite se forme autour d'un centre entièrement cru, rouge profond – tranché mince, drapé de ponzu et de gingembre, le contraste entre la mer chaude et l'intérieur froid le point entier.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "seafood",
+  "tags": [
+    "Japonais",
+    "thon",
+    "Tataki",
+    "ponzu",
+    "sashimi",
+    "en mer",
+    "cru",
+    "ahi"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "1 hour",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Chill",
-      inputs: ["ing_01"],
-      outputState: "cold_tuna_block",
-      instructions: "Place the tuna in the freezer for 30–40 minutes before searing. Very cold tuna sears faster without cooking the interior — the goal is maximum exterior heat, minimum interior cook. The tuna should feel hard at the surface but not frozen solid. Remove and immediately season all four long sides with salt and pepper.",
-      visualCue: {
-        primaryTarget: "The tuna block feels very firm and cold to the touch but bends very slightly when pressed. Surface is dry and matte, not icy or frost-covered.",
-        spectrum: [
-          { state: "Underdone", description: "Tuna is only fridge-cold, not chilled below 5 C. The sear will cook too deep into the interior before a crust forms.", action: "Freeze for the full 30 minutes. A frozen exterior is essential to the technique." },
-          { state: "Perfect",   description: "Surface is very cold and firm. The block doesn't flex. No ice crystals visible. Dry surface will maximize Maillard reaction in the pan.", action: "Season and sear immediately — do not let it sit and warm." },
-          { state: "Overdone",  description: "Tuna is partly frozen solid throughout. Ice crystals inside mean the sear will steam instead of crust.", action: "Let stand at room temperature for 5 minutes, then sear." },
-        ],
-      },
-      feelCue: "The chilled tuna should feel like cold, slightly flexible steel against your palm — not bouncy at room temperature, not rigid like a frozen block.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "longe de thon ahi (fin jaune) de qualité sushi, dans un bloc",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "otoro à nageoires bleues (richissant)",
+        "saumon de qualité sashimi"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sear",
-      inputs: ["cold_tuna_block", "ing_04", "ing_05", "ing_06"],
-      outputState: "seared_tuna",
-      instructions: "Heat a cast iron or stainless steel pan over maximum heat for 3 minutes until smoking — test by flicking a drop of water (should vaporize instantly). Add oil in a thin film. Sear the tuna block for exactly 30–45 seconds per side on all four long sides, moving it with tongs. Do not sear the ends. The tuna must never rest stationary long enough to cook through. Work quickly.",
-      visualCue: {
-        primaryTarget: "A thin, uniform grey-white cooked shell approximately 3–4 mm deep on all four sides, the interior remaining completely raw and deep-red when viewed at the ends.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is very thin and patchy — less than 2 mm. Little to no color formation.", action: "The pan was not hot enough. The exterior must sear, not steam." },
-          { state: "Perfect",   description: "A thin, uniform crust on all four sides. The ends reveal the interior is fully raw red. The exterior smells of seared meat. Removed from heat before color reached the center.", action: "Transfer to a cold plate to stop cooking." },
-          { state: "Overdone",  description: "The cooked shell is more than 6 mm deep. The interior has begun to grey and is no longer fully raw. The tuna looks like a cooked piece with a small raw center.", action: "Still excellent if medium-rare is acceptable. Slice thin and serve." },
-        ],
-      },
-      feelCue: "The seared tuna should hiss loudly the moment it hits the pan — a sustained, aggressive crackle. Any silence means the pan isn't hot enough and the tuna will steam instead of sear.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Ponzu sauce",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sauce soja + 1 c. à soupe yuzu ou jus de citron"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Slice",
-      inputs: ["seared_tuna"],
-      outputState: "sliced_tataki",
-      instructions: "Transfer the seared tuna immediately to a cold plate or rest over a small bowl of ice for 2 minutes to halt carryover cooking. Using a very sharp, thin-bladed knife (yanagiba or slicing knife), slice the tuna into 5 mm thick slices in one smooth, drawing motion — never saw. Arrange slices in a single overlapping layer on a cold plate.",
-      visualCue: {
-        primaryTarget: "Each slice reveals the tataki's signature: a clean white-grey outer ring (the sear) surrounding a vivid, deep-red, raw center. The slices are translucent at the center when held to light.",
-        spectrum: [
-          { state: "Underdone", description: "The outer ring is very thin and patchy. The contrast with the raw center is barely visible.", action: "Next time sear at higher heat for a complete, even ring. Still presentable." },
-          { state: "Perfect",   description: "A dramatic contrast — the grey-white sear ring is uniform and 3–4 mm, the center is vivid crimson. Slices are translucent at the center and hold their shape cleanly.", action: "Dress immediately with ponzu." },
-          { state: "Overdone",  description: "Slices reveal a large grey cooked portion with only a small raw center. Tuna is medium-well.", action: "Serve very cold with extra ponzu and yuzu to add brightness." },
-        ],
-      },
-      feelCue: "The slices should yield to the knife with almost no resistance — a good tuna tataki is sliced, not cut. If you feel fibrous resistance, your knife is not sharp enough.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Gingembre frais, très finement râpé",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Garnish",
-      inputs: ["sliced_tataki", "ing_02", "ing_03", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "finished_tuna_tataki",
-      instructions: "Drizzle ponzu over and around the slices. Spoon a small mound of grated ginger onto each slice or place at the side. Drizzle sesame oil in a thin stream. Scatter green onion and sesame seeds. Add daikon alongside if using. A few drops of yuzu juice at the very end brighten everything. Serve immediately.",
-      visualCue: {
-        primaryTarget: "Glistening slices of tuna in two-tone sear-and-raw, pooled in pale ponzu, bright with green onion and white sesame seeds. The daikon julienne provides a white counterpoint.",
-        spectrum: [
-          { state: "Underdone", description: "Ponzu not yet added. Slices are dry.", action: "Dress immediately before the tuna surface dries out." },
-          { state: "Perfect",   description: "Slices glistening in ponzu, all garnishes in place. Served on a cold plate so the tuna stays at the right temperature.", action: "Eat immediately." },
-          { state: "Overdone",  description: "Tuna has been sitting in ponzu for more than 5 minutes and the acid has begun to 'cook' the raw interior, turning it grey.", action: "Serve tataki the moment it is dressed. Never let raw fish sit in acid." },
-        ],
-      },
-      feelCue: "A slice of perfect tuna tataki on the tongue should first register the cool, clean rawness of the center, then the slightly chewier texture of the seared exterior — two entirely different textures in one thin slice.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Poivre noir fraichement craqué",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile neutre à haut point de fumée (grape-seed ou avocat)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Oignons verts tranchés finement (épices)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Radis de Daikon, julienned (facultatif)",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "microverts"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "Jus de Yuzu ou jus de citron (acide de finition en option)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Refroidissement",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "cold_tuna_block",
+      "instructions": "Placez le thon dans le congélateur pendant 30 à 40 minutes avant de faire la mer. Le thon est très froid, plus vite sans cuisiner l'intérieur — l'objectif est la chaleur extérieure maximale, la cuisson intérieure minimale. Le thon doit se sentir dur à la surface mais pas congelé solide. Retirer et assaisonner immédiatement les quatre longs côtés de sel et de poivre.",
+      "visualCue": {
+        "primaryTarget": "Le bloc de thon se sent très ferme et froid au toucher, mais se plie très légèrement lorsqu'il est pressé. La surface est sèche et mate, pas glacée ou recouverte de gel.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le thon est seulement froid au réfrigérateur, non réfrigéré en dessous de 5°C. La couture fera cuire trop profondément dans l'intérieur avant qu'une croûte ne se forme.",
+            "action": "Congeler pendant 30 minutes. Un extérieur gelé est essentiel à la technique."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est très froide et ferme. Le bloc ne fléchit pas. Pas de cristaux de glace visibles. La surface sèche maximisera la réaction de Maillard dans la casserole.",
+            "action": "Assaisonner et saisir immédiatement — ne le laissez pas s'asseoir et se réchauffer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le thon est en partie gelé et solide. Les cristaux de glace à l'intérieur signifient que la mer va vapeur au lieu de croûte.",
+            "action": "Laisser reposer à température ambiante pendant 5 minutes, puis saisir."
+          }
+        ]
+      },
+      "feelCue": "Le thon réfrigéré devrait se sentir comme de l'acier froid, légèrement flexible contre votre palmier — pas bon marché à température ambiante, pas rigide comme un bloc congelé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sear",
+      "inputs": [
+        "cold_tuna_block",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "seared_tuna",
+      "instructions": "Chauffer une poêle en fonte ou en acier inoxydable sur une température maximale de 3 minutes jusqu'à ce qu'elle fume. Ajouter l'huile dans un film mince. Casser le bloc de thon pendant exactement 30–45 secondes de chaque côté sur les quatre côtés longs, le déplaçant avec des pinces. Ne pas saisir les extrémités. Le thon ne doit jamais reposer assez longtemps pour cuire. Travaillez vite.",
+      "visualCue": {
+        "primaryTarget": "Coquille mince et uniforme de couleur gris-blanc cuite d'environ 3 à 4 mm de profondeur sur les quatre côtés, l'intérieur restant complètement cru et rouge profond vu aux extrémités.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est très fine et inégale — moins de 2 mm. Peu ou pas de formation de couleurs.",
+            "action": "La poêle n'était pas assez chaude. L'extérieur doit saisir, pas la vapeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte mince et uniforme sur les quatre côtés. Les extrémités révèlent que l'intérieur est entièrement rouge brut. Les odeurs extérieures de viande séchée. Supprimé du feu avant que la couleur atteigne le centre.",
+            "action": "Transférer dans une assiette froide pour arrêter la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "La coquille cuite est de plus de 6 mm de profondeur. L'intérieur a commencé à griser et n'est plus complètement brut. Le thon ressemble à une pièce cuite avec un petit centre brut.",
+            "action": "Toujours excellent si le risque moyen est acceptable. Couper mince et servir."
+          }
+        ]
+      },
+      "feelCue": "Le thon de mer siffle fort dès qu'il frappe la poêle, un craquage soutenu et agressif. Tout silence signifie que la poêle n'est pas assez chaude et que le thon va vapeur au lieu de semer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Tranche",
+      "inputs": [
+        "seared_tuna"
+      ],
+      "outputState": "sliced_tataki",
+      "instructions": "Transférer immédiatement le thon marin dans une assiette froide ou reposer au-dessus d'un petit bol de glace pendant 2 minutes pour arrêter la cuisson. À l'aide d'un couteau à peau fine très tranchant (yanagiba ou couteau à trancher), couper le thon en tranches d'épaisseur de 5 mm en un mouvement lisse et dessinant — jamais vu. Disposer les tranches en une seule couche de recouvrement sur une plaque froide.",
+      "visualCue": {
+        "primaryTarget": "Chaque tranche révèle la signature du tataki : un anneau extérieur blanc-gris propre (la couture) qui entoure un centre vif, rouge profond, brut. Les tranches sont translucides au centre lorsqu'elles sont maintenues à la lumière.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'anneau extérieur est très mince et patchy. Le contraste avec le centre brut est à peine visible.",
+            "action": "La prochaine fois que la chaleur sera plus élevée pour un anneau complet, même. Toujours présentable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un contraste spectaculaire : l'anneau de couture gris-blanc est uniforme et de 3 à 4 mm, le centre est très vif. Les tranches sont translucides au centre et tiennent leur forme proprement.",
+            "action": "Habillez immédiatement avec ponzu."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tranches révèlent une grande portion de cuisson grise avec seulement un petit centre brut. Le thon est moyennement bien.",
+            "action": "Servir très froid avec ponzu extra et yuzu pour ajouter de la luminosité."
+          }
+        ]
+      },
+      "feelCue": "Les tranches devraient céder au couteau avec presque aucune résistance — un bon tataki de thon est tranché, pas coupé. Si vous ressentez une résistance fibreuse, votre couteau n'est pas assez tranchant."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "sliced_tataki",
+        "ing_02",
+        "ing_03",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "finished_tuna_tataki",
+      "instructions": "Arrosez ponzu et autour des tranches. Déposer un petit monticule de gingembre râpé sur chaque tranche ou placer sur le côté. Arrosez l'huile de sésame dans un cours d'eau mince. Éparpiller l'oignon vert et les graines de sésame. Ajouter le daikon à côté si vous l'utilisez. Quelques gouttes de jus de yuzu à la fin illuminent tout. Servir immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Glisser des tranches de thon dans des graines de sésame blanc et blanc, poêlées de ponzu pâle, lumineuses d'oignon vert. Le daikon julienne fournit un contrepoint blanc.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pas encore ajouté. Les tranches sont sèches.",
+            "action": "Habillez-vous immédiatement avant que la surface du thon sèche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tranches scintillent en ponzu, toutes garnies en place. Servi sur une assiette froide pour que le thon reste à la bonne température.",
+            "action": "Mangez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le thon est assis dans le ponzu depuis plus de 5 minutes et l'acide commence à « cuire » l'intérieur brut, le rendant gris.",
+            "action": "Servir tataki dès qu'il est habillé. Ne laissez jamais le poisson cru s'asseoir dans l'acide."
+          }
+        ]
+      },
+      "feelCue": "Une tranche de tataki de thon parfait sur la langue devrait d'abord enregistrer la fraîcheur, la netteté du centre, puis la texture légèrement mâcher de l'extérieur mariné — deux textures entièrement différentes dans une tranche mince."
+    }
+  ]
 };

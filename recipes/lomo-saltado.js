@@ -1,104 +1,297 @@
 export default {
-  repoId: "master_peruvian_lomo-saltado_001",
-  parentRepoId: null,
-  slug: "lomo-saltado",
-  author: "ForkRecipe Kitchen",
-  title: "Lomo Saltado",
-  description: "Peru's definitive chifa stir-fry — strips of sirloin and tomato hit in a screaming-hot wok with soy sauce and vinegar, tossed with fried potatoes and red onion into a juicy, smoky, uniquely Peruvian fusion dish.",
-  cuisine: "Peruvian",
-  culture: "Lima",
-  category: "proteins",
-  tags: ["peruvian", "chifa", "beef", "stir-fry", "soy-sauce", "tomato", "fries"],
-  difficulty: 3,
-  activeTime: "25 min",
-  totalTime: "40 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 4, sour: 3, bitter: 0, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Beef sirloin or tenderloin, sliced 1cm thick against the grain", ratioValue: 600, defaultUnit: "g", substitutions: ["beef strip loin", "lamb fillet"] },
-    { ingId: "ing_02", role: "Starch",    name: "Yellow potatoes (Yukon Gold or similar), cut into thick fries",  ratioValue: 400, defaultUnit: "g", substitutions: ["Russet potatoes"] },
-    { ingId: "ing_03", role: "Allium",    name: "Red onion, cut into thick wedges (8 wedges per onion)",          ratioValue: 250, defaultUnit: "g", substitutions: ["white onion"] },
-    { ingId: "ing_04", role: "Structure", name: "Ripe tomatoes, cut into thick wedges",                           ratioValue: 300, defaultUnit: "g", substitutions: ["cherry tomatoes, halved"] },
-    { ingId: "ing_05", role: "Heat",      name: "Ají amarillo paste (or 1 fresh ají amarillo, seeded and sliced)", ratioValue: 30,  defaultUnit: "g", substitutions: ["habanero, used sparingly"] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic cloves, minced",                                          ratioValue: 20,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Umami",     name: "Soy sauce",                                                      ratioValue: 60,  defaultUnit: "g", substitutions: ["tamari (gluten-free)"] },
-    { ingId: "ing_08", role: "Acid",      name: "Red wine vinegar",                                               ratioValue: 30,  defaultUnit: "g", substitutions: ["apple cider vinegar"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Ground cumin",                                                   ratioValue: 4,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_10", role: "Fat",       name: "Vegetable oil (for frying and wok)",                             ratioValue: 120, defaultUnit: "g", substitutions: ["peanut oil"] },
-    { ingId: "ing_11", role: "Herb",      name: "Fresh coriander (cilantro), roughly chopped",                    ratioValue: 20,  defaultUnit: "g", substitutions: ["flat-leaf parsley"] },
-    { ingId: "ing_12", role: "Seasoning", name: "Fine sea salt and black pepper",                                  ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_13", role: "Garnish",   name: "Cooked white rice, to serve",                                    ratioValue: 300, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_peruvian_lomo-saltado_001",
+  "parentRepoId": null,
+  "slug": "lomo-saltado",
+  "author": "ForkRecipe Kitchen",
+  "title": "Lomo Saltado",
+  "description": "Au Pérou, les lanières de sirloine et de tomate ont été frappées dans un wok chaud et criant avec de la sauce de soja et du vinaigre, jetées avec des pommes de terre frites et de l'oignon rouge dans un plat de fusion juteux, fumé, unique au Pérou.",
+  "cuisine": "Pérou",
+  "culture": "Lima",
+  "category": "proteins",
+  "tags": [
+    "périuvien",
+    "Chifa",
+    "boeuf",
+    "sauté",
+    "de soja",
+    "tomates",
+    "frites"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "25 min",
+  "totalTime": "40 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Fry",
-      inputs: ["ing_02", "ing_10", "ing_12"],
-      outputState: "fried_potatoes",
-      instructions: "Heat about 4cm of vegetable oil in a large deep pot or wok to 175C / 350F. Test with a potato strip — it should sizzle immediately and vigorously. Fry the potato strips in batches, never crowding the oil, for 6–8 minutes per batch until cooked through and golden on the outside. Transfer to a wire rack set over paper towel and season immediately with salt while hot — the salt adheres to the hot potato surface. Do not cover; you want them to stay crisp. These potatoes will be added back to the wok at the end. This double-presence of fries and rice in a single dish is one of the things that makes lomo saltado uniquely Peruvian — the carb abundance is intentional and joyful.",
-      visualCue: {
-        primaryTarget: "Golden, crispy-edged potato strips with a matte, starchy interior visible at the cut ends. They should stand up on the rack without bending.",
-        spectrum: [
-          { state: "Underdone", description: "Potatoes are pale, limp, and still bend when picked up; they will go soggy in the wok.", action: "Return to the oil for 2–3 more minutes; ensure oil temperature is at 175C — if the oil wasn't hot enough, the potatoes absorbed oil rather than crisping." },
-          { state: "Perfect",   description: "Golden-brown, crisp exterior, cooked through but not hollow or dark. They snap cleanly when broken. Seasoned with salt while still steaming.", action: "Set on a rack and keep in a warm oven (100C / 210F) while you cook the stir-fry." },
-          { state: "Overdone",  description: "Deep brown approaching dark; the exterior is very crunchy but the interior has dried out; they smell of hot oil.", action: "Still usable — just reduce the final wok time to prevent further color. The darker flavors will actually work with the soy sauce." },
-        ],
-      },
-      feelCue: "Pick up a fry and rap it gently against the rim of the bowl — a good fry sounds hollow and almost brittle, like tapping a dry biscuit. A limp or muted thud means more time in the oil is needed.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Linge de boeuf ou filet, tranché 1cm d'épaisseur contre le grain",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "longe de la bande de bœuf",
+        "Filet d'agneau"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Marinate",
-      inputs: ["ing_01", "ing_09", "ing_12"],
-      outputState: "marinated_beef",
-      instructions: "While the potatoes fry, season the beef strips with ground cumin, salt, and black pepper. Toss to coat evenly. Let the beef sit at room temperature for 10 minutes — this isn't a long marinade but a short seasoning rest that lets the salt draw a small amount of moisture to the surface, which helps the meat sear faster and more evenly. Crucial point: the beef must be dry on the surface before it hits the wok. Pat it with paper towels if any moisture has pooled. Wet beef steams rather than sears, and the sear is everything in lomo saltado — it's what creates the signature smoky, charred edges that no amount of sauce can substitute.",
-      visualCue: {
-        primaryTarget: "Beef strips that are uniformly dry on the surface, coated in a faint dark dust of cumin and pepper, glistening only slightly from the natural meat moisture.",
-        spectrum: [
-          { state: "Underdone", description: "Beef strips still wet and shiny from surface moisture, spices sliding off rather than adhering.", action: "Pat dry with paper towels, then toss again with seasonings." },
-          { state: "Perfect",   description: "Dry, matte surface; spices evenly distributed; beef has a faint, earthy cumin smell. Room temperature rather than fridge-cold.", action: "Have the wok screaming hot before the beef goes in — timing is everything." },
-          { state: "Overdone",  description: "Beef has been sitting so long with salt that it has drawn out significant moisture and looks wet again, starting to cure rather than season.", action: "Pat thoroughly dry and cook immediately." },
-        ],
-      },
-      feelCue: "Touch the surface of a beef strip — your fingertip should come away with just the ghost of a stain from the spices, not wet or slippery. The strip should feel firm and slightly tacky, like properly dried meat before a sear.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Pommes de terre jaunes (Yukon Gold ou similaires), coupées en frites épaisses",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Pommes de terre russes"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Sear",
-      inputs: ["marinated_beef", "ing_03", "ing_04", "ing_05", "ing_06", "ing_10"],
-      outputState: "stir_fried_beef",
-      instructions: "Heat your wok or largest cast-iron skillet over the absolute highest heat your stove can produce for two full minutes. Add a thin film of vegetable oil and let it begin to smoke — this is the signal that you're at the right temperature. Add the beef strips in a single layer and leave them untouched for 60 seconds to develop a deep, dark sear. Toss once and sear for another 30 seconds. Remove the beef to a plate — you want it cooked to medium, not beyond. In the same screaming-hot wok (add a splash more oil if needed), add the red onion wedges and garlic. Toss constantly for 90 seconds — you want the onion to char slightly at the edges while staying crunchy at the core. Add the tomato wedges and ají amarillo paste, toss for 30 seconds, then return the beef. Pour the soy sauce and red wine vinegar directly into the center of the wok — they will spit, steam, and partially vaporize, creating the characteristic 'chifa smoke' of lomo saltado. Toss everything together vigorously for 60 seconds.",
-      visualCue: {
-        primaryTarget: "Beef strips with dark, charred edges and a juicy center; onion wedges charred at the tips but structurally intact; tomatoes collapsed and weeping juice into the dark, glossy soy-vinegar sauce coating everything.",
-        spectrum: [
-          { state: "Underdone", description: "Beef is grey and steamed, no char; onion is softened but not charred; tomatoes are raw; the sauce has not reduced and smells strongly of raw soy and vinegar.", action: "The wok was not hot enough. Return everything to the wok over the highest possible heat and toss rapidly; the goal now is to drive off the excess liquid quickly." },
-          { state: "Perfect",   description: "Beef is charred at the edges, cooked to just-beyond-pink inside; onion has black tips but satisfying crunch; tomatoes are burst and jammy; sauce is a dark, glossy, concentrated coating. The wok smells like smoke, soy, and something uniquely Peruvian.", action: "Add the fried potatoes and coriander and toss once more." },
-          { state: "Overdone",  description: "Beef is grey throughout and tough; onion is soft and collapsed; tomatoes have disintegrated into the sauce; everything tastes flat and stewed rather than wok-charred.", action: "Nothing to remedy — this batch is a stew, not a stir-fry. Serve over rice as a braised version and note the lessons for next time: hotter wok, faster hands, smaller batches." },
-        ],
-      },
-      feelCue: "You should feel the heat of the wok from 30cm above it before the food goes in. When the soy sauce hits, the steam and smoke should make your eyes water briefly. That is the proper heat level. If you feel nothing but a gentle simmer, the wok is too cool.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon rouge, coupé en coins épais (8 coins par oignon)",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon blanc"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Toss",
-      inputs: ["stir_fried_beef", "fried_potatoes", "ing_11", "ing_13"],
-      outputState: "finished_lomo_saltado",
-      instructions: "Add the fried potato strips to the wok and toss once with the stir-fried beef and vegetables — just once or twice; you want the potatoes to pick up the dark, glossy sauce without going soggy from excessive stirring. Scatter the fresh coriander over the top and toss again. Taste a piece of beef and a potato: the beef should be savory, slightly charred, warm-spiced from the cumin, with the sour brightness of vinegar; the potato should be crisp outside and carry a coating of the dark sauce. Serve immediately, piling directly alongside white rice. The potatoes should still have their crunch — lomo saltado waits for no one.",
-      visualCue: {
-        primaryTarget: "A tumble of dark, glossy beef strips, charred-edged onion wedges, burst tomatoes, and golden fries all coated in a mahogany-dark soy-vinegar sauce, with bright green coriander scattered throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Potatoes are not coated and look pale and separate; coriander is wilted and stirred in rather than scattered as a fresh garnish.", action: "Toss once more and immediately plate — do not continue cooking once the potatoes are in, or they will steam and soften." },
-          { state: "Perfect",   description: "Potatoes coated in the dark sauce but still audibly crunchy; beef dark and charred at edges; coriander vivid green; the plate smells of wok smoke, soy, citrus vinegar, and cumin — all at once.", action: "Serve alongside steamed white rice." },
-          { state: "Overdone",  description: "Potatoes have gone soggy from excess sauce or too many tossing motions; fries are limp and the whole dish looks wet and stewed.", action: "Nothing to fix — serve immediately and cook fresh fries next time; add them in the very last 30 seconds only." },
-        ],
-      },
-      feelCue: "Spear a fry that has been in the wok — it should still crack cleanly between your teeth at first before giving way to a soft, sauce-coated interior. That textural contrast — crunchy outside, sauced within — is the defining mouthfeel of a properly executed lomo saltado.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Tomates de ripe, coupées en quartiers épais",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tomates cerises, coupées en deux"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Heat",
+      "name": "Ají amarillo (ou 1 ají amarillo frais, ensemencé et tranché)",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "habanero utilisé avec parcimonie"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Gousses d'ail hachées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tamari (sans gluten)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Acid",
+      "name": "vinaigre de vin rouge",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "vinaigre de cidre de pomme"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Cumin",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile végétale (pour la friture et le wok)",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile d'arachide"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Herb",
+      "name": "Coriandre fraîche (cilantro), grossièrement hachée",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Persil à feuilles plates"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre noir",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Garnish",
+      "name": "Riz blanc cuit, à servir",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Fry",
+      "inputs": [
+        "ing_02",
+        "ing_10",
+        "ing_12"
+      ],
+      "outputState": "fried_potatoes",
+      "instructions": "Chauffer environ 4cm d'huile végétale dans un grand pot profond ou wok à 175C / 350F. Testez avec une bande de pommes de terre – elle doit étourdir immédiatement et vigoureusement. Faire frire les bandes de pommes de terre en lots, ne jamais encombrer l'huile, pendant 6 à 8 minutes par lot jusqu'à ce qu'elles soient cuites et dorées à l'extérieur. Transférer sur un porte-fils sur une serviette en papier et assaisonner immédiatement avec du sel à chaud — le sel adhère à la surface de la pomme de terre chaude. Ne couvrez pas; vous voulez qu'ils restent croustillants. Ces pommes de terre seront ajoutées au wok à la fin. Cette double présence de frites et de riz dans un seul plat est l'une des choses qui rend le lomo salado uniquement péruvien – l'abondance de glucides est intentionnelle et joyeuse.",
+      "visualCue": {
+        "primaryTarget": "Bandes de pommes de terre dorées et croustillantes avec un intérieur mat et féculent visible aux extrémités coupées. Ils devraient se tenir debout sur la grille sans plier.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pommes de terre sont pâles, boiteuses et encore courbées lorsqu'elles sont ramassées; elles sèment dans le wok.",
+            "action": "Retournez à l'huile pendant 2-3 minutes de plus; assurez-vous que la température de l'huile est à 175C — si l'huile n'était pas assez chaude, les pommes de terre ont absorbé l'huile plutôt que le croustillant."
+          },
+          {
+            "state": "Perfect",
+            "description": "Extérieur doré-brun, croustillant, cuit à travers mais pas creux ou sombre. Ils se cassent proprement quand ils sont cassés. Assaisonner avec du sel tout en restant à vapeur.",
+            "action": "Placer sur une grille et conserver dans un four chaud (100C / 210F) pendant que vous faites cuire le sauté."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun profond approchant sombre; l'extérieur est très croquant mais l'intérieur a séché; ils sentent l'huile chaude.",
+            "action": "Encore utilisable — il suffit de réduire le temps de wok final pour éviter d'autres couleurs. Les saveurs plus foncées travailleront en fait avec la sauce soja."
+          }
+        ]
+      },
+      "feelCue": "Prenez une frite et raplez - la doucement contre le bord du bol. Une bonne frite semble creuse et presque fragile, comme tapoter un biscuit sec. Il faut plus de temps dans l'huile."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_09",
+        "ing_12"
+      ],
+      "outputState": "marinated_beef",
+      "instructions": "Pendant que les pommes de terre frisent, assaisonner les bandes de boeuf avec du cumin moulu, du sel et du poivre noir. Jetez-le uniformément. Laissez le boeuf s'asseoir à température ambiante pendant 10 minutes — ce n'est pas une longue marinade, mais un court repos assaisonné qui permet au sel d'attirer une petite quantité d'humidité à la surface, ce qui aide la viande à se saisir plus rapidement et plus uniformément. Point crucial : le boeuf doit être sec à la surface avant de toucher le wok. Portez-le avec des serviettes en papier si l'humidité a mis en commun. La vapeur de boeuf humide plutôt que les sears, et le sear est tout dans lomo salado — c'est ce qui crée la signature fumée, bords carbonisés que aucune quantité de sauce ne peut remplacer.",
+      "visualCue": {
+        "primaryTarget": "Bandes de boeuf uniformément sèches à la surface, recouvertes d'une faible poussière foncée de cumin et de poivre, resplendissant seulement légèrement de l'humidité naturelle de la viande.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Bandes de boeuf encore humides et brillantes à partir de l'humidité de surface, les épices glissent au lieu d'adhérer.",
+            "action": "Séchez-vous avec des serviettes en papier, puis lancez à nouveau avec des assaisonnements."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est sèche et mate; les épices sont distribuées uniformément; le boeuf a une faible odeur de cumin terreux. Température ambiante plutôt que frigo-froid.",
+            "action": "Que le wok crie chaud avant que le boeuf entre — le timing est tout."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le boeuf a été si longtemps assis avec du sel qu'il a attiré l'humidité importante et semble à nouveau humide, commençant à guérir plutôt que de la saison.",
+            "action": "Laisser bien sécher et cuire immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Touchez la surface d'une bande de bœuf — votre bout de doigt devrait sortir avec le fantôme d'une tache des épices, pas mouillé ou glissant. La bande doit se sentir ferme et légèrement collante, comme de la viande bien séchée avant la couture."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Sear",
+      "inputs": [
+        "marinated_beef",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_10"
+      ],
+      "outputState": "stir_fried_beef",
+      "instructions": "Chauffer votre wok ou votre plus grande poêle en fonte sur la plus haute chaleur absolue que votre poêle puisse produire pendant deux minutes complètes. Ajoutez un mince film d'huile végétale et laissez-le commencer à fumer — c'est le signal que vous êtes à la bonne température. Ajouter les bandes de bœuf dans une seule couche et laisser intact pendant 60 secondes pour développer une couche foncée profonde. Jetez-le une fois et faites-le saisir encore 30 secondes. Retirez le boeuf dans une assiette — vous voulez qu'il soit cuit à moyen, pas au-delà. Dans le même wok chaud et criant (ajouter une éclaboussure plus d'huile si nécessaire), ajouter les coins d'oignon rouge et l'ail. Rouler constamment pendant 90 secondes — vous voulez que l'oignon s'affiche légèrement aux bords tout en restant croustillant au cœur. Ajouter les quartiers de tomate et la pâte ají amarillo, mélanger pendant 30 secondes, puis retourner le bœuf. Verser la sauce de soja et le vinaigre de vin rouge directement dans le centre du wok — ils cracheront, vapeurront et vaporiseront partiellement, créant la \"fumée de chifa\" caractéristique de lomo salado. Jetez tout ensemble vigoureusement pendant 60 secondes.",
+      "visualCue": {
+        "primaryTarget": "Bandes de boeuf aux bords foncés et carbonisés et au centre juteux; coins d'oignon carbonisés aux extrémités mais structurellement intacts; tomates s'effondrent et pleurent le jus dans la sauce soya-vinegar sombre et brillante enrobant tout.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le boeuf est gris et cuit à la vapeur, sans omble; l'oignon est adouci mais non carbonisé; les tomates sont crues; la sauce n'a pas diminué et sent fortement le soja cru et le vinaigre.",
+            "action": "Le wok n'était pas assez chaud. Retournez tout au wok sur la plus haute chaleur possible et lancez rapidement; l'objectif maintenant est de chasser rapidement l'excès de liquide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le boeuf est carbonisé aux bords, cuit à l'intérieur juste au-delà de l'épicéa; l'oignon a des bouts noirs mais une croûte satisfaisante; les tomates sont éclatées et confitures; la sauce est un revêtement foncé, brillant et concentré. Le wok sent la fumée, le soja et quelque chose d'uniquement péruvien.",
+            "action": "Ajouter les pommes de terre frites et la coriandre et jeter une fois de plus."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le boeuf est gris tout au long et dur; l'oignon est doux et effondré; les tomates se sont désintégrées dans la sauce; tout a un goût plat et ragoûté plutôt qu'au wok-charred.",
+            "action": "Rien à réparer: ce lot est un ragoût, pas un bouillon. Servir sur le riz comme une version braisée et noter les leçons pour la prochaine fois: wok plus chaud, mains plus rapides, petits lots."
+          }
+        ]
+      },
+      "feelCue": "Vous devriez sentir la chaleur du wok à partir de 30cm au-dessus avant que la nourriture entre. Lorsque la sauce de soja frappe, la vapeur et la fumée devraient faire vos yeux arroser brièvement. C'est le bon niveau de chaleur. Si vous ne ressentez rien d'autre qu'une mijotée douce, le wok est trop frais."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Découpe",
+      "inputs": [
+        "stir_fried_beef",
+        "fried_potatoes",
+        "ing_11",
+        "ing_13"
+      ],
+      "outputState": "finished_lomo_saltado",
+      "instructions": "Ajoutez les bandes de pommes de terre frites au wok et jetez une fois avec le bœuf et les légumes sautés — juste une ou deux fois; vous voulez que les pommes de terre ramassent la sauce foncée et brillante sans se laisser pousser par un remuant excessif. Dispersez la coriandre fraîche au-dessus du sommet et jetez à nouveau. Goûtez un morceau de boeuf et une pomme de terre : le boeuf doit être salé, légèrement carbonisé, à l'ombre chaude du cumin, avec la luminosité aigre du vinaigre; la pomme de terre doit être croquante à l'extérieur et porter un enrobage de la sauce foncée. Servir immédiatement, en empilant directement le riz blanc. Les pommes de terre devraient encore avoir leur croquant — lomo salado n'attend personne.",
+      "visualCue": {
+        "primaryTarget": "Un tumble de lanières de bœuf foncées et brillantes, de coins d'oignons carbonisés, de tomates éclatées et de frites dorées, toutes enrobées d'une sauce acajou-soya-vinegar foncé, avec une coriandre vert vif dispersée dans l'ensemble.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pommes de terre ne sont pas enrobées et semblent pâles et séparées; la coriandre est flétrie et agitée plutôt qu'éparpillée comme garniture fraîche.",
+            "action": "Jetez une fois de plus et immédiatement l'assiette — ne continuez pas la cuisson une fois que les pommes de terre sont entrées, ou ils vont vapeur et adoucir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pommes de terre enrobées dans la sauce foncée mais encore audiquement croquantes; boeuf foncé et carbonisé aux bords; coriandre vert vif; l'assiette sent la fumée de wok, le soja, le vinaigre d'agrumes et le cumin — le tout à la fois.",
+            "action": "Servir avec du riz blanc cuit à la vapeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pommes de terre sont devenues farcies par l'excès de sauce ou trop de mouvements de lancer; les frites sont boiteuses et le plat entier semble humide et ragoûté.",
+            "action": "Rien à réparer — servir immédiatement et cuire des frites fraîches la prochaine fois; les ajouter dans les 30 dernières secondes seulement."
+          }
+        ]
+      },
+      "feelCue": "Lancez une frite qui a été dans le wok — il devrait encore craquer proprement entre vos dents au début avant de céder la place à un intérieur doux et enrobé de sauce. Ce contraste textural — croquant à l'extérieur, soudé à l'intérieur — est la sensation de la bouche d'un lomo salado bien exécuté."
+    }
+  ]
 };

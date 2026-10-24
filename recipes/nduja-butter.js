@@ -1,81 +1,190 @@
 export default {
-  repoId: "master_italian_nduja_butter_001",
-  parentRepoId: null,
-  slug: "nduja-butter",
-  author: "ForkRecipe Kitchen",
-  title: "Nduja Butter",
-  description: "Unsalted butter whipped with fiery Calabrian nduja until the two meld into a silky, pork-scented compound that spreads like luxury and burns with a slow, building heat.",
-  cuisine: "Italian",
-  culture: "Calabrian",
-  category: "sauces",
-  tags: ["italian", "calabrian", "compound-butter", "nduja", "spicy", "pork", "spreadable"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "1 hr (chilling)",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 4, sour: 0, bitter: 1, umami: 4, heat: 4 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Unsalted butter, softened to room temperature", ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_02", role: "Protein",   name: "Nduja (spreadable Calabrian sausage)",          ratioValue: 30,  defaultUnit: "parts", substitutions: ["spicy chorizo paste", "'nduja-style' roasted red pepper and chili paste"] },
-    { ingId: "ing_03", role: "Herb",      name: "Fresh chives, very finely minced",              ratioValue: 10,  defaultUnit: "parts", substitutions: ["flat-leaf parsley, finely minced"] },
-    { ingId: "ing_04", role: "Citrus",    name: "Lemon zest (from 1 unwaxed lemon)",            ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Spice",     name: "Freshly ground black pepper",                  ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt",                                ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_nduja_butter_001",
+  "parentRepoId": null,
+  "slug": "nduja-butter",
+  "author": "ForkRecipe Kitchen",
+  "title": "Nduja Beurre",
+  "description": "Beurre non salé fouetté de feu Calabrian nduja jusqu'à ce que les deux se mélangent dans un composé soyeux, parfumé de porc qui se répand comme le luxe et brûle avec une chaleur lente, bâtiment.",
+  "cuisine": "Italien",
+  "culture": "Calabre",
+  "category": "sauces",
+  "tags": [
+    "Italien",
+    "Calabre",
+    "Beurre composé",
+    "nduja",
+    "épicé",
+    "porc",
+    "Étendue"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "1 hr (chilling)",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whip",
-      inputs: ["ing_01"],
-      outputState: "whipped_butter",
-      instructions: "The butter must be genuinely soft — not cold and hard, and not starting to melt. Leave it at room temperature for at least 45–60 minutes before beginning, or until it dents easily under gentle finger pressure. Beat the softened butter in a bowl with a wooden spoon or hand mixer on medium speed for 2–3 minutes until it turns pale ivory, increases in volume, and becomes noticeably lighter and fluffier in texture. This step aerates the butter and creates the foundation for a silky compound that melts smoothly rather than breaking into greasy pools.",
-      visualCue: {
-        primaryTarget: "The butter has turned from deep yellow to a pale ivory-cream and increased in volume slightly. It should look fluffy and light rather than dense and waxy.",
-        spectrum: [
-          { state: "Underdone", description: "The butter is still dense, yellow, and waxy — it's been beaten but not yet aerated. The texture is smooth but heavy.", action: "Continue beating for another 1–2 minutes. If the butter is still cold and resistant, it may not have been at room temperature long enough — warm the bowl briefly in a bowl of hot water." },
-          { state: "Perfect",   description: "The butter is pale ivory, visibly fluffy, and clings to the sides of the bowl in soft, pillowy smears rather than dense streaks. The texture is almost like whipped cream — light and easy to fold.", action: "Add the nduja and beat to combine." },
-          { state: "Overdone",  description: "The butter has been beaten too long and is beginning to soften from the friction and warmth, starting to look slightly greasy or wet at the edges.", action: "Refrigerate the butter for 5 minutes to firm it slightly, then proceed with the nduja. A slightly soft compound butter will still roll and chill successfully." },
-        ],
-      },
-      feelCue: "Press a finger into the whipped butter — it should leave a clean impression that holds without the butter collapsing back in, like a very light foam rather than a heavy paste.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli à température ambiante",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Cream",
-      inputs: ["whipped_butter", "ing_02"],
-      outputState: "nduja_butter_base",
-      instructions: "Add the nduja to the whipped butter. At room temperature, nduja is soft and spreadable — it will cream into the butter easily. Beat on medium speed until the nduja is completely incorporated and no red-orange streaks remain. The nduja's fat and spice oils will dye the butter a warm terracotta-orange color throughout. The mixture will smell intensely of pork fat, fermented meat, and Calabrian chili — a very direct, animal aroma. This step should take no more than 90 seconds of active beating.",
-      visualCue: {
-        primaryTarget: "A uniformly orange-terracotta compound butter with no visible streaks of either plain white butter or unincorporated nduja — completely consistent in color and texture throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Orange-red streaks of nduja remain visible against the paler butter. The mixture is not yet uniform in color or texture — some spots are dense with sausage, others are plain butter.", action: "Continue beating. Scrape down the sides of the bowl to capture any nduja hiding there and beat for another 30 seconds." },
-          { state: "Perfect",   description: "A smooth, uniform terracotta-orange butter that holds its light, fluffy texture despite the addition of the sausage. The color is consistent from edge to center. The fat from the nduja has emulsified completely into the butter.", action: "Add the chives, lemon zest, pepper, and salt and fold through gently." },
-          { state: "Overdone",  description: "The butter has been beaten so long that it is separating slightly — a faint sheen of orange fat is appearing on the surface of the compound.", action: "Refrigerate the mixture for 10 minutes, then beat very briefly by hand to re-homogenize before folding in the aromatics." },
-        ],
-      },
-      feelCue: "Taste a small amount on your fingertip: the first sensation should be rich, salted butter, immediately followed by the slow, blooming heat of the Calabrian chili — not a sharp burn but a warming glow that builds over 5–10 seconds.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Nduja (sauce Calabrienne extensible)",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pâte de chorizo épicée",
+        "Poivre rouge rôti et pâte de chili de style « nduja »"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["nduja_butter_base", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "nduja_compound_butter",
-      instructions: "Add the chives, lemon zest, black pepper, and salt to the nduja butter base. Fold in gently with a rubber spatula — do not beat, which would bruise the chives and turn them dark. Three or four broad folds are enough to distribute them evenly. Lay a large sheet of plastic wrap on the counter. Spoon the butter along one edge and use the wrap to roll it into a compact log about 5 cm in diameter. Twist the ends firmly to compress and shape the log. Refrigerate for at least 45 minutes until very firm, or freeze for up to 2 months. Slice into rounds directly from the refrigerator.",
-      visualCue: {
-        primaryTarget: "A terracotta-orange log with visible green chive flecks throughout — the color contrast is striking, and the log holds its shape firmly when cold.",
-        spectrum: [
-          { state: "Underdone", description: "The aromatics are not evenly distributed — clumps of chive in some areas, plain compound in others. The plastic wrap roll is loose and the log is irregularly shaped.", action: "Fold more thoroughly before rolling. Once wrapped, roll the log firmly on the counter while pressing down gently to shape it uniformly, then re-twist the ends tighter." },
-          { state: "Perfect",   description: "The log is compact, even in diameter, and firm after 45 minutes of chilling. Slices cut cleanly with a sharp knife and show a consistent terracotta-and-green pattern throughout.", action: "Melt rounds over hot grilled steaks, stir into pasta or risotto at the last moment, spread on grilled bread, or top seared scallops." },
-          { state: "Overdone",  description: "The butter was too warm when rolled and has slumped rather than holding a log shape. The chives may have darkened from excess handling.", action: "Refrigerate the misshapen log for 15 minutes until firm enough to re-roll, then reshape. Even imperfectly shaped compound butter performs identically when melted." },
-        ],
-      },
-      feelCue: "A chilled slice should feel as firm as cold cheese — dense, cold, and yielding cleanly under a knife. Placed on a warm surface it should begin melting at the edges immediately, releasing a burst of chili-scented fat.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Ciboulette fraîche, très finement hachée",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "persil à feuilles plates, finement haché"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Citrus",
+      "name": "Zeste de citron (à partir de 1 citron non épilé)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whip",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "whipped_butter",
+      "instructions": "Le beurre doit être vraiment doux — pas froid et dur, et ne pas commencer à fondre. Laissez-le à température ambiante pendant au moins 45 à 60 minutes avant le début, ou jusqu'à ce qu'il s'éteigne facilement sous une légère pression des doigts. Battre le beurre ramolli dans un bol avec une cuillère en bois ou un mélangeur à la main à vitesse moyenne de 2 à 3 minutes jusqu'à ce qu'il devienne ivoire pâle, augmente en volume, et devient nettement plus léger et fluffier dans la texture. Cette étape aérera le beurre et créera la base d'un composé soyeux qui fondra en douceur plutôt que de se briser dans des piscines grasses.",
+      "visualCue": {
+        "primaryTarget": "Le beurre est passé d'un jaune profond à une crème d'ivoire pâle et a augmenté légèrement en volume. Il devrait avoir l'air souple et léger plutôt que dense et cireux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est encore dense, jaune et cireux — il a été battu mais pas encore aéré. La texture est lisse mais lourde.",
+            "action": "Continuer à battre pendant encore 1-2 minutes. Si le beurre est encore froid et résistant, il n'a peut - être pas été assez longtemps à la température ambiante — réchauffez brièvement le bol dans un bol d'eau chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le beurre est d'ivoire pâle, visiblement moelleux, et s'accroche aux côtés du bol dans des frottis mous et oreillers plutôt que des stries denses. La texture est presque comme de la crème fouettée — légère et facile à plier.",
+            "action": "Ajouter le nduja et battre pour combiner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre a été battu trop longtemps et commence à s'adoucir de la friction et de la chaleur, en commençant à regarder légèrement gras ou mouillé aux bords.",
+            "action": "Réfrigérer le beurre pendant 5 minutes pour le raffermir légèrement, puis poursuivre avec le nduja. Un beurre composé légèrement doux va toujours rouler et refroidir avec succès."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un doigt dans le beurre fouetté — il devrait laisser une impression propre qui tient sans que le beurre s'effondre, comme une mousse très légère plutôt qu'une pâte lourde."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Crème",
+      "inputs": [
+        "whipped_butter",
+        "ing_02"
+      ],
+      "outputState": "nduja_butter_base",
+      "instructions": "Ajouter le nduja au beurre fouetté. À la température ambiante, le nduja est doux et tartinable, et il est facilement crémeux dans le beurre. Battre à vitesse moyenne jusqu'à ce que le nduja soit complètement incorporé et qu'il ne reste pas de stries rouge-orange. Les huiles de graisse et d'épices du nduja teindreont le beurre d'une couleur chaude terre cuite-orange. Le mélange sent intensément la graisse de porc, la viande fermentée et le chili calabrien, un arôme animal très direct. Cette étape ne devrait pas prendre plus de 90 secondes de battement actif.",
+      "visualCue": {
+        "primaryTarget": "Un beurre composé uniformément orange-terracotta sans stries visibles de beurre blanc clair ou de nduja non incorporé – complètement cohérent dans la couleur et la texture.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des stries de nduja rouge-orange restent visibles contre le beurre plus pâle. Le mélange n'est pas encore uniforme en couleur ou en texture — certaines taches sont denses avec la saucisse, d'autres sont du beurre uni.",
+            "action": "Continuez à battre. Grattez les côtés du bol pour capturer n'importe quel nduja qui s'y cache et battre encore 30 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un beurre lisse et uniforme en terre cuite-orange qui conserve sa texture légère et moelleuse malgré l'ajout de la saucisse. La couleur est cohérente du bord au centre. La graisse du nduja est complètement émulsifiée dans le beurre.",
+            "action": "Ajouter la ciboulette, le zeste de citron, le poivre et le sel."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre a été battu si longtemps qu'il se sépare légèrement — un léger éclat de graisse orange apparaît à la surface du composé.",
+            "action": "Réfrigérer le mélange pendant 10 minutes, puis battre très brièvement à la main pour ré-homogèner avant de plier dans les aromatiques."
+          }
+        ]
+      },
+      "feelCue": "Goûtez une petite quantité sur le bout des doigts : la première sensation doit être riche en beurre salé, immédiatement suivie de la chaleur lente et florissante du chili calabrien — non pas une brûlure aiguë mais une lueur de réchauffement qui se construit sur 5-10 secondes."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "nduja_butter_base",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "nduja_compound_butter",
+      "instructions": "Ajouter la ciboulette, le zeste de citron, le poivre noir et le sel à la base du beurre de nduja. Plier doucement avec une spatule en caoutchouc — ne pas battre, ce qui écraserait la ciboulette et les ferait sombrer. Trois ou quatre plis larges suffisent pour les distribuer uniformément. Placez une grande feuille de plastique sur le comptoir. Déposer le beurre le long d'un seul bord et utiliser l'enveloppe pour le rouler dans une bûche compacte d'environ 5 cm de diamètre. Tordre les extrémités fermement pour compresser et façonner le log. Réfrigérer pendant au moins 45 minutes jusqu'à très ferme, ou congeler jusqu'à 2 mois. Couper en rondelles directement du réfrigérateur.",
+      "visualCue": {
+        "primaryTarget": "Un log terracotta-orange avec des cigognes vertes visibles partout - le contraste de couleur est frappant, et le log tient fermement sa forme quand il est froid.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les aromatiques ne sont pas distribués de façon uniforme — des croûtes de ciboulette dans certaines régions, des composés simples dans d'autres. Le rouleau d'emballage en plastique est lâche et le log est de forme irrégulière.",
+            "action": "Plier plus soigneusement avant de rouler. Une fois enroulé, rouler fermement la bille sur le comptoir tout en appuyant doucement pour la former uniformément, puis retwist les extrémités plus serrées."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le log est compact, même en diamètre, et ferme après 45 minutes de refroidissement. Couper les tranches de façon propre avec un couteau tranchant et montrer un motif cohérent en terre cuite et en vert.",
+            "action": "Faire fondre les rondelles sur des steaks grillés chauds, remuer dans les pâtes ou le risotto au dernier moment, étaler sur du pain grillé, ou des pétoncles haut de mer."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre était trop chaud lorsqu'il était roulé et s'est effondré plutôt que de tenir une forme de log. La ciboulette peut s'être obscurcie par suite d'une manipulation excessive.",
+            "action": "Réfrigérer le bûcheron pendant 15 minutes jusqu'à ce qu'il soit suffisamment ferme pour rouler, puis remodeler. Même le beurre composé de forme imparfaite agit de façon identique lorsqu'il est fondu."
+          }
+        ]
+      },
+      "feelCue": "Une tranche réfrigérée doit être aussi ferme que le fromage froid — dense, froid et propre sous un couteau. Placé sur une surface chaude, il devrait commencer à fondre aux bords immédiatement, libérant un éclat de graisse parfumée de chili."
+    }
+  ]
 };

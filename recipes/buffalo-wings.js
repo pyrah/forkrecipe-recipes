@@ -1,120 +1,264 @@
 export default {
-  repoId: "master_american_buffalo_wings_001",
-  parentRepoId: null,
-  slug: "buffalo-wings",
-  author: "ForkRecipe Kitchen",
-
-  title: "Buffalo Wings",
-  description: "Crispy-fried chicken wings, each one lacquered in a glossy, brick-red sauce that is simultaneously molten butter and eye-watering hot sauce — the kind of wings that require paper towels, cold beer, and no apology.",
-  cuisine: "American",
-  culture: "Buffalo, New York",
-  category: "proteins",
-
-  tags: ["american", "chicken", "wings", "spicy", "hot-sauce"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "1 hr",
-  ratioSystem: "parts",
-
-  stars: 2947,
-  forks: 318,
-  contributors: 27,
-  license: "CC-BY-SA",
-  createdAt: "2024-05-10",
-  updatedAt: "2025-08-14",
-
-  flavorRadar: { sweet: 1, salty: 4, sour: 2, bitter: 0, umami: 3, heat: 4 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Chicken wings, split into flats and drumettes", ratioValue: 100, defaultUnit: "parts", substitutions: ["whole wings", "chicken thigh pieces"] },
-    { ingId: "ing_02", role: "Structure", name: "Baking powder (aluminum-free)",                 ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning", name: "Kosher salt",                                   ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",    name: "Frank's RedHot Original hot sauce",             ratioValue: 20,  defaultUnit: "parts", substitutions: ["Crystal hot sauce", "Tabasco (use less)"] },
-    { ingId: "ing_05", role: "Fat",       name: "Unsalted butter",                               ratioValue: 10,  defaultUnit: "parts", substitutions: ["clarified butter", "vegan butter"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Garlic powder",                                 ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Garnish",   name: "Celery sticks and blue cheese dressing (for serving)", ratioValue: 15, defaultUnit: "parts", substitutions: ["ranch dressing", "carrot sticks"] },
+  "repoId": "master_american_buffalo_wings_001",
+  "parentRepoId": null,
+  "slug": "buffalo-wings",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ailes Buffalo",
+  "description": "Des ailes de poulet frites, chacune laquées dans une sauce rouge brique brillante qui est simultanément du beurre fondu et de la sauce chaude à l'eau oculaire — le genre d'ailes qui nécessitent des serviettes en papier, de la bière froide et aucune excuse.",
+  "cuisine": "Américain",
+  "culture": "Buffalo, New York",
+  "category": "proteins",
+  "tags": [
+    "américains",
+    "poulet",
+    "ailes",
+    "épicé",
+    "Sucre chaude"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "1 hr",
+  "ratioSystem": "parts",
+  "stars": 2947,
+  "forks": 318,
+  "contributors": 27,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-05-10",
+  "updatedAt": "2025-08-14",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 4
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Dry and season",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "seasoned_wings",
-      instructions: "Pat the wings completely dry with paper towels — press firmly on all surfaces. In a large bowl, toss the dry wings with kosher salt and baking powder until evenly coated. The baking powder raises surface pH, which accelerates browning and draws moisture to the surface over time. Spread in a single layer on a wire rack over a sheet pan.",
-      visualCue: {
-        primaryTarget: "Wings are completely dry and coated in a thin, chalky white film of baking powder and salt. No moisture sheen on the skin.",
-        spectrum: [
-          { state: "Underdone", description: "Skin still looks shiny and damp. Baking powder hasn't coated evenly — patches of bare, wet skin.", action: "Pat dry again more aggressively, then toss with another light dusting of baking powder. Wet skin will steam, not crisp." },
-          { state: "Perfect",   description: "Skin is matte and chalky-looking. All surfaces evenly coated. Wings look dry and slightly dusty.", action: "Refrigerate uncovered for 30 minutes or up to 24 hours for best results." },
-          { state: "Overdone",  description: "Wings have been refrigerating so long that the baking powder has pulled moisture out visibly, and the skin looks almost leathery.", action: "Proceed to frying. Over-dried wings can actually crisp more quickly — watch them carefully and reduce cook time slightly." },
-        ],
-      },
-      feelCue: "Pick up a wing and hold it — the skin should feel almost papery and slightly rough from the baking powder coating, never slick or tacky.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Ailes de poulet, divisées en plats et tambours",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ailes entières",
+        "morceaux de cuisse de poulet"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fry until crispy",
-      inputs: ["seasoned_wings"],
-      outputState: "fried_wings",
-      instructions: "Heat oil in a deep pot or fryer to 190°C. Fry the wings in batches — do not crowd the pot — for 10–12 minutes, turning occasionally, until deep golden-brown and fully cooked through. Between batches, let the oil return to 190°C. Alternatively, bake at 220°C on a wire rack for 40–45 minutes, flipping halfway.",
-      visualCue: {
-        primaryTarget: "Wings are deep golden-brown all over, with taut, blistered, crispy skin. No soft or pale patches. An instant-read thermometer reads 74°C at the thickest point.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is pale gold or blond, with some soft patches. The baking powder coating is visible and powdery-white in places. Skin bends without cracking.", action: "Return to the fryer or oven. Pale wings mean the skin has not rendered enough fat yet — they will not become crispy in the sauce." },
-          { state: "Perfect",   description: "Deep, even golden-brown with blistered, taut skin. Skin shatters when bitten. Fat has fully rendered. Internal temp is 74°C or above.", action: "Drain briefly on a rack, then sauce immediately while still hot." },
-          { state: "Overdone",  description: "Skin is dark brown to almost black. Wings smell slightly bitter. The exterior is very hard.", action: "Sauce generously — the butter-hot sauce mixture will hydrate the exterior. They may still be delicious despite the color." },
-        ],
-      },
-      feelCue: "When you lift a wing from the fryer, the skin should sound like crumpling cellophane when you squeeze it gently — a dry, crackling rustle. If it makes a wet, soft sound, they need more time.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Poudre de cuisson (sans aluminium)",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Make buffalo sauce",
-      inputs: ["ing_04", "ing_05", "ing_06"],
-      outputState: "buffalo_sauce",
-      instructions: "In a small saucepan over low heat, melt the butter. Remove from heat and whisk in the hot sauce and garlic powder until fully combined and glossy. The sauce should be warm but not boiling — boiling will break the emulsion, leaving a greasy, separated sauce. The ratio is roughly 2 parts hot sauce to 1 part butter by volume.",
-      visualCue: {
-        primaryTarget: "Sauce is opaque, glossy, and uniformly brick-orange with no visible pools of butter floating on the surface. It coats a spoon in a thin, even film.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is still partially solid, with white lumps visible in the sauce. Sauce appears streaky — alternating orange and yellow.", action: "Whisk vigorously and warm briefly over low heat. Cold butter will not incorporate fully." },
-          { state: "Perfect",   description: "Uniform, glossy, opaque orange sauce. Butter and hot sauce are fully emulsified. A spoon dragged through it leaves a clean trail that fills in slowly.", action: "Toss the wings immediately while both are hot." },
-          { state: "Overdone",  description: "Sauce is boiling and separated — red hot sauce floating on top of yellow pools of clarified butter. Sauce smells harsh and vinegary.", action: "Remove from heat, let cool slightly, then whisk vigorously. A splash of cold butter can help re-emulsify. Do not re-boil." },
-        ],
-      },
-      feelCue: "Dip a fingertip in the sauce — it should coat your finger in a thin, glossy film that clings evenly. If it runs off like water or pools in fat droplets, the emulsion needs more whisking.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Toss and glaze",
-      inputs: ["fried_wings", "buffalo_sauce"],
-      outputState: "glazed_wings",
-      instructions: "Transfer hot wings to a large bowl. Pour the warm buffalo sauce over them and toss vigorously until every surface is evenly coated. Work quickly — the heat from the wings will keep the sauce fluid and help it adhere. If the sauce starts to congeal, add a splash of hot sauce and toss again.",
-      visualCue: {
-        primaryTarget: "Every wing surface is lacquered in a glossy, even coating of brick-red sauce. No dry patches. No pooling sauce at the bottom of the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Some wings are partially coated. Dry, pale patches of skin visible. Sauce is pooling in the bowl rather than clinging.", action: "Toss more vigorously, tilting the bowl to redistribute sauce. Add a tablespoon more melted butter to help it adhere if needed." },
-          { state: "Perfect",   description: "All wings uniformly coated in glossy, brick-red sauce. The crispy skin is still audible beneath the glaze. Wings smell of cayenne, vinegar, and butter.", action: "Plate immediately and serve with celery and blue cheese." },
-          { state: "Overdone",  description: "Wings have been sitting in the sauce and the crispy skin has fully softened. Sauce has absorbed into the exterior.", action: "Serve immediately — delayed wings are a fact of life in restaurants. Next time, sauce in small batches only as you plate." },
-        ],
-      },
-      feelCue: "Pick up a sauced wing — it should feel slightly slick and warm, with a faint tackiness from the sauce. When you bite through the skin, you should still hear a faint crunch beneath the sauce glaze.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Frank's RedHot sauce chaude originale",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Sauce chaude en cristal",
+        "Tabasco (utiliser moins)"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Plate and serve",
-      inputs: ["glazed_wings", "ing_07"],
-      outputState: "finished_buffalo_wings",
-      instructions: "Arrange the glazed wings on a platter. Serve immediately with celery sticks and a generous pool of blue cheese dressing for dipping. Do not cover — the steam will destroy any remaining crispness. These are best eaten within 5 minutes of saucing.",
-      visualCue: {
-        primaryTarget: "Wings are glistening and deeply red-orange. Steam rises gently. Celery sticks and blue cheese dressing are plated alongside.",
-        spectrum: [
-          { state: "Underdone", description: "Wings are sitting cold and the sauce has congealed into a dull, matte coating. Celery and dressing not yet plated.", action: "If wings have gone cold, flash them in a 200°C oven for 3 minutes, then re-sauce with warm buffalo sauce." },
-          { state: "Perfect",   description: "Wings are hot, glossy, and steam-fresh. Blue cheese dressing is cool against the heat. The room smells of cayenne and butter.", action: "Eat immediately. Buffalo wings are a singular moment." },
-          { state: "Overdone",  description: "Wings have been sitting too long. Sauce has soaked in completely. Skin is soft. They're still flavorful but no longer the dish.", action: "Accept it. Reheat in a hot oven without more sauce, then re-glaze briefly for the best salvage." },
-        ],
-      },
-      feelCue: "The first wing you pick up should be almost too hot to hold comfortably, with sauce that immediately transfers to your fingers — that's how you know the timing is right.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre clarifié",
+        "beurre végétal"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Poudre d'ail",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Bâtons de céleri et vinaigrette de fromage bleu (pour servir)",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigrette de ranch",
+        "bâtonnets de carottes"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sécheresse et saison",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "seasoned_wings",
+      "instructions": "Les ailes sont complètement sèches avec des serviettes en papier — appuyez fermement sur toutes les surfaces. Dans un grand bol, jeter les ailes sèches avec du sel casher et de la poudre à pâte jusqu'à ce qu'elles soient uniformément enrobées. La poudre à pâte augmente le pH de surface, ce qui accélère le brunissement et attire l'humidité à la surface au fil du temps. Répartir en une seule couche sur un support de fil sur une plaque.",
+      "visualCue": {
+        "primaryTarget": "Les ailes sont complètement sèches et recouvertes d'un mince film blanc crayeux de poudre à pâte et de sel. Pas d'humidité sur la peau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau semble encore brillante et humide. La poudre de cuisson n'a pas été couchée uniformément — des taches de peau nue et humide.",
+            "action": "Pat sécher de nouveau de manière plus agressive, puis lancer avec une autre légère poussière de poudre de cuisson. La peau humide va vapeur, pas croquante."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est mate et crayeuse. Toutes les surfaces sont uniformément revêtues. Les ailes sont sèches et légèrement poussiéreuses.",
+            "action": "Réfrigérer à découvert pendant 30 minutes ou jusqu'à 24 heures pour obtenir les meilleurs résultats."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les ailes réfrigérantes ont été si longtemps que la poudre de cuisson a tiré l'humidité visiblement, et la peau semble presque cuir.",
+            "action": "Aller à la friture. Les ailes surséchées peuvent en fait croustiller plus rapidement, les regarder soigneusement et réduire légèrement le temps de cuisson."
+          }
+        ]
+      },
+      "feelCue": "Prenez une aile et maintenez - la peau doit se sentir presque papier et légèrement rugueuse du revêtement en poudre de cuisson, jamais lissée ou collante."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Faire frire jusqu'à croustillant",
+      "inputs": [
+        "seasoned_wings"
+      ],
+      "outputState": "fried_wings",
+      "instructions": "Chauffer l'huile dans une casserole ou une friteuse à 190°C. Faire frire les ailes en lots — ne pas fouler le pot — pendant 10 à 12 minutes, en tournant occasionnellement, jusqu'à ce qu'elles soient bien dorées et entièrement cuites. Entre les lots, laissez revenir l'huile à 190°C. Alternativement, faire cuire à 220°C sur une grille de 40 à 45 minutes, en retournant à mi-chemin.",
+      "visualCue": {
+        "primaryTarget": "Les ailes sont de couleur dorée-brun foncée partout, avec une peau tendue, blister, croustillante. Pas de taches molles ou pâles. Un thermomètre à lecture instantanée lit 74°C au point le plus épais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est d'or pâle ou blond, avec quelques taches douces. Le revêtement en poudre de cuisson est visible et blanc poudreux dans les endroits. La peau fléchit sans craquer.",
+            "action": "Retourner à la friteuse ou au four. Les ailes pâles signifient que la peau n'a pas encore rendu assez de gras — elles ne deviendront pas croustillantes dans la sauce."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep, même brun doré avec une peau blister et taupe. La peau se brise quand elle est mordue. La graisse a rendu. La température interne est de 74°C ou plus.",
+            "action": "Égoutter brièvement sur une grille, puis saucer immédiatement tout en étant encore chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau est brun foncé à presque noire. Les ailes sentent un peu amer. L'extérieur est très dur.",
+            "action": "Sauce généreusement — le mélange de sauce chaude au beurre hydrate l'extérieur. Ils peuvent encore être délicieux malgré la couleur."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous soulevez une aile de la friteuse, la peau doit sonner comme du cellophane grippant quand vous la pressez doucement — un rouille sec et crépitant. Si ça fait un son doux et humide, ils ont besoin de plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Faire de la sauce au bison",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "buffalo_sauce",
+      "instructions": "Dans une petite casserole à feu doux, faire fondre le beurre. Retirer du feu et fouetter dans la sauce chaude et la poudre d'ail jusqu'à ce qu'elle soit entièrement combinée et brillante. La sauce doit être chaude mais ne pas bouillir — bouillir brisera l'émulsion, laissant une sauce grasse et séparée. Le rapport est d'environ 2 parties sauce chaude à 1 partie beurre par volume.",
+      "visualCue": {
+        "primaryTarget": "La sauce est opaque, brillante et uniformément orange brique, sans piscine visible de beurre flottant à la surface. Il enrobe une cuillère dans un mince film.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est encore partiellement solide, avec des morceaux blancs visibles dans la sauce. La sauce semble striée, alternant orange et jaune.",
+            "action": "fouetter vigoureusement et réchauffer brièvement à feu doux. Le beurre froid ne sera pas complètement incorporé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme, brillant, sauce orange opaque. Le beurre et la sauce chaude sont entièrement émulsifiés. Une cuillère traînée à travers elle laisse un sentier propre qui se remplit lentement.",
+            "action": "Jetez immédiatement les ailes alors que les deux sont chaudes."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est bouillante et séparée — sauce chaude rouge flottant sur des bassins jaunes de beurre clarifié. La sauce sent dur et vinaigre.",
+            "action": "Retirer du feu, laisser refroidir légèrement, puis fouetter vigoureusement. Un jet de beurre froid peut aider à réémulsionner. Ne pas faire bouillir."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt dans la sauce — il devrait enrober votre doigt dans un mince film brillant qui s'accroche uniformément. S'il s'écoule comme de l'eau ou des piscines dans des gouttelettes de graisse, l'émulsion a besoin de plus de fouet."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Toss et glaçures",
+      "inputs": [
+        "fried_wings",
+        "buffalo_sauce"
+      ],
+      "outputState": "glazed_wings",
+      "instructions": "Transférer les ailes chaudes dans un grand bol. Verser la sauce tiède sur eux et jeter vigoureusement jusqu'à ce que chaque surface soit uniformément enrobée. Travaillez rapidement — la chaleur des ailes gardera le liquide de sauce et l'aidera à adhérer. Si la sauce commence à congeler, ajoutez une touche de sauce chaude et jetez à nouveau.",
+      "visualCue": {
+        "primaryTarget": "Chaque surface d'aile est laquée dans un revêtement brillant et uniforme de sauce rouge brique. Pas de taches sèches. Pas de sauce au fond du bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Certaines ailes sont partiellement recouvertes. Morceaux secs et pâles de peau visibles. La sauce est mise dans le bol plutôt que de s'accrocher.",
+            "action": "Mélanger plus vigoureusement le bol pour redistribuer la sauce. Ajouter une cuillère à soupe plus de beurre fondu pour l'aider à adhérer si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toutes les ailes sont uniformément revêtues de sauce rouge brique brillante. La peau croustillante est encore audible sous la glaçure. Les ailes sentent la Cayenne, le vinaigre et le beurre.",
+            "action": "Assortir immédiatement et servir avec du céleri et du fromage bleu."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les ailes sont assises dans la sauce et la peau croustillante s'est complètement adoucie. La sauce est absorbée dans l'extérieur.",
+            "action": "Servir immédiatement — les ailes retardées sont un fait de la vie dans les restaurants. La prochaine fois, la sauce en petits lots seulement comme vous l'assiette."
+          }
+        ]
+      },
+      "feelCue": "Prenez une aile souillée – elle doit être légèrement lissée et tiède, avec un léger collant de la sauce. Lorsque vous mordez à travers la peau, vous devriez encore entendre une légère croûte sous la sauce glaçure."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Assiette et service",
+      "inputs": [
+        "glazed_wings",
+        "ing_07"
+      ],
+      "outputState": "finished_buffalo_wings",
+      "instructions": "Disposer les ailes vitrées sur un plateau. Servir immédiatement avec des bâtonnets de céleri et une généreuse piscine de vinaigrette de fromage bleu pour tremper. Ne pas couvrir — la vapeur va détruire toute croustillante restante. Ceux-ci sont mieux mangés dans les 5 minutes suivant le saucisson.",
+      "visualCue": {
+        "primaryTarget": "Les ailes brillent et sont profondément rouge-orange. La vapeur se lève doucement. Les bâtonnets de céleri et la vinaigrette au fromage bleu sont plaqués à côté.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les ailes sont assises à froid et la sauce s'est condensée dans un revêtement mat et terne. Céleri et pansement pas encore plaqué.",
+            "action": "Si les ailes sont devenues froides, clignotez-les dans un four à 200°C pendant 3 minutes, puis ré-sautez avec de la sauce de bison chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les ailes sont chaudes, brillantes et fraîches à la vapeur. La vinaigrette au fromage bleu est fraîche contre la chaleur. La chambre sent la Cayenne et le beurre.",
+            "action": "Mangez immédiatement. Les ailes de Buffalo sont un moment singulier."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les ailes sont assises trop longtemps. La sauce est complètement trempée. La peau est douce. Ils sont encore savoureux, mais plus le plat.",
+            "action": "Acceptez. Réchauffer dans un four chaud sans plus de sauce, puis rééchauffer brièvement pour le meilleur récupération."
+          }
+        ]
+      },
+      "feelCue": "La première aile que vous prenez devrait être presque trop chaude pour tenir confortablement, avec de la sauce qui se transfère immédiatement à vos doigts — c'est ainsi que vous savez que le timing est correct."
+    }
+  ]
 };

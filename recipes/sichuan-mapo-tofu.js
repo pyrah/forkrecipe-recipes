@@ -1,118 +1,297 @@
 export default {
-  repoId: "master_chinese_sichuan_mapo_tofu_001",
-  parentRepoId: null,
-  slug: "sichuan-mapo-tofu",
-  author: "ForkRecipe Kitchen",
-  title: "Sichuan Mapo Tofu",
-  description: "Silken tofu trembling in a scarlet, numbing-hot sauce of fermented black beans, doubanjiang, and Sichuan peppercorns — the mala (numbing-spicy) combination is not a flavor but an experience, a slow tingle that builds across the lips and tongue.",
-  cuisine: "Chinese",
-  culture: "Sichuanese",
-  category: "proteins",
-  tags: ["tofu", "sichuan", "chinese", "spicy", "mala", "mapo tofu", "peppercorn"],
-  difficulty: 3,
-  activeTime: "25 min",
-  totalTime: "35 min",
-  ratioSystem: "weight",
-  stars: 2410,
-  forks: 318,
-  contributors: 71,
-  license: "CC-BY-SA",
-  createdAt: "2026-01-15",
-  updatedAt: "2026-01-15",
-  flavorRadar: { sweet: 0, salty: 4, sour: 0, bitter: 1, umami: 5, heat: 5 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Silken tofu, cut into 2 cm cubes",               ratioValue: 400, defaultUnit: "g",  substitutions: ["medium-firm tofu (less delicate)"] },
-    { ingId: "ing_02", role: "Protein",   name: "Ground pork (or beef)",                          ratioValue: 100, defaultUnit: "g",  substitutions: ["ground turkey", "omit for vegetarian"] },
-    { ingId: "ing_03", role: "Spice",     name: "Doubanjiang (Pixian broad bean chili paste)",     ratioValue: 40,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_04", role: "Umami",     name: "Fermented black beans (douchi), roughly chopped", ratioValue: 20,  defaultUnit: "g",  substitutions: ["black bean garlic sauce"] },
-    { ingId: "ing_05", role: "Spice",     name: "Sichuan peppercorns, toasted and ground",         ratioValue: 5,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic, minced",                                  ratioValue: 15,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Fresh ginger, minced",                            ratioValue: 10,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Liquid",    name: "Chicken or vegetable stock",                      ratioValue: 250, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_09", role: "Fat",       name: "Neutral oil",                                     ratioValue: 30,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_10", role: "Starch",    name: "Cornstarch dissolved in water (2:1 water:starch)", ratioValue: 20, defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_11", role: "Allium",    name: "Green onion, sliced",                             ratioValue: 20,  defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_chinese_sichuan_mapo_tofu_001",
+  "parentRepoId": null,
+  "slug": "sichuan-mapo-tofu",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sichuan Mapo Tofu",
+  "description": "Silken tofu tremblant dans une sauce écarlate, chaude engourdissante de haricots noirs fermentés, de doubanjiang et de grains de poivre Sichuan – la combinaison mala (numbing-spicy) n'est pas une saveur mais une expérience, un fourmillement lent qui construit à travers les lèvres et la langue.",
+  "cuisine": "Chinois",
+  "culture": "Sichuanese",
+  "category": "proteins",
+  "tags": [
+    "tofu",
+    "Sichuan",
+    "Chinois",
+    "épicé",
+    "mala",
+    "mapo tofu",
+    "maïs poivré"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "25 min",
+  "totalTime": "35 min",
+  "ratioSystem": "weight",
+  "stars": 2410,
+  "forks": 318,
+  "contributors": 71,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-01-15",
+  "updatedAt": "2026-01-15",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 5
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blanch",
-      inputs: ["ing_01"],
-      outputState: "blanched_tofu",
-      instructions: "Gently lower the silken tofu cubes into lightly salted simmering water for 2 minutes. This step firms the exterior slightly so the tofu survives the subsequent braising without disintegrating, and seasons the interior. Remove with a slotted spoon to a plate — do not drain aggressively.",
-      visualCue: {
-        primaryTarget: "Tofu cubes that hold their shape, slightly firmer at the exterior but still yielding. Surface looks opaque and slightly set.",
-        spectrum: [
-          { state: "Underdone", description: "Tofu is still very fragile and breaks when touched with the spoon.", action: "Allow 1 more minute in the hot water." },
-          { state: "Perfect",   description: "Cubes hold their shape under a gentle prod with a spoon. Surface looks slightly set and opaque. Interior still silky when bitten.", action: "Set aside carefully and proceed to the sauce." },
-          { state: "Overdone",  description: "Tofu has developed a tough, rubbery exterior from too long in salted water.", action: "Still usable; reduce the final sauce braise time slightly." },
-        ],
-      },
-      feelCue: "Properly blanched silken tofu should feel like a very firm, cool jelly when picked up with a spoon — solid enough to hold together but yielding at the slightest pressure.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Tofu en soie, coupé en cubes de 2 cm",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tofu moyennement ferme (moins délicat)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sauté",
-      inputs: ["ing_02", "ing_09"],
-      outputState: "cooked_pork",
-      instructions: "Heat oil in a wok or wide skillet over high heat until smoking. Add the ground pork and cook without stirring for 1 minute, then break up and stir-fry until the pork is browned and the fat has rendered. The pork should be slightly crispy at the edges. Remove from the wok with a slotted spoon, leaving the rendered fat behind.",
-      visualCue: {
-        primaryTarget: "Browned ground pork with slightly crispy edges and rendered fat pooling in the pan.",
-        spectrum: [
-          { state: "Underdone", description: "Pork is grey and still releasing moisture — steaming rather than frying.", action: "Raise heat and spread pork thinner in the pan; it needs dry, high heat to brown." },
-          { state: "Perfect",   description: "Pork is browned with slightly crisped edges. Fat rendered and clear in the pan. Smells of cooked meat.", action: "Remove pork, leaving the fat in the wok." },
-          { state: "Overdone",  description: "Pork is very dark and dry — excess moisture has cooked off completely.", action: "Still fine; the pork will rehydrate in the sauce." },
-        ],
-      },
-      feelCue: "The wok should sound like aggressive frying — not steaming or hissing, but a dry, hot crackling — at the moment the pork goes in.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Porc haché (ou boeuf)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "dinde hachée",
+        "omit pour végétarien"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Bloom",
-      inputs: ["cooked_pork", "ing_03", "ing_04", "ing_06", "ing_07"],
-      outputState: "sauce_base",
-      instructions: "In the fat remaining in the wok, add doubanjiang, fermented black beans, garlic, and ginger. Stir-fry over medium-high heat for 2–3 minutes, stirring constantly. The doubanjiang will turn the oil a deep, vivid red — this is the sa xiang (fragrance-releasing) step, where the fat-soluble capsaicin and fermented compounds extract into the oil. The kitchen should smell powerfully of chili and fermented bean. Return the pork.",
-      visualCue: {
-        primaryTarget: "Deep crimson-red oil pooling around the paste, separating slightly from the solids. The paste looks darker and more fragrant than when raw.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is still bright red, oil not yet tinted red. Raw, sharp chili smell.", action: "Continue stirring over medium-high heat for 1–2 more minutes." },
-          { state: "Perfect",   description: "Oil is vivid crimson-red. Paste has darkened to a deeper brick-red. Intense, complex aroma of fermented chili, garlic, and black beans.", action: "Add the stock." },
-          { state: "Overdone",  description: "Paste has darkened to near-black and smells bitter and acrid.", action: "Add stock immediately — the heat is extracting too far; a slightly bitter mapo tofu is recoverable." },
-        ],
-      },
-      feelCue: "The bloomed doubanjiang should feel thick and paste-like when stirred, not watery — the fat in the wok has been thoroughly infused and separated into a red oil pool.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Doubanjiang (Pâte de chili de haricots large de Pixian)",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["sauce_base", "ing_08", "blanched_tofu"],
-      outputState: "braised_mapo",
-      instructions: "Pour the stock into the wok and stir to combine. Bring to a boil, then gently slide the tofu cubes in. Do not stir aggressively — ladle the sauce over the tofu or tilt the wok to distribute. Simmer for 5 minutes until the tofu has absorbed the flavors of the sauce and the liquid has slightly reduced. The sauce should be thin enough to flow but rich enough to coat.",
-      visualCue: {
-        primaryTarget: "Tofu cubes intact in a bright red, bubbling broth. Sauce is thin but vibrantly colored.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce tastes raw and the tofu is cold — not enough simmer time.", action: "Continue for 3 more minutes." },
-          { state: "Perfect",   description: "Tofu is heated through and very slightly infused with the red color at its edges. Sauce bubbles steadily. Aroma is fierce and complex.", action: "Add the cornstarch slurry to thicken." },
-          { state: "Overdone",  description: "Tofu has broken down and the sauce is very thick from released tofu liquid.", action: "Reduce heat immediately; reduce or skip the cornstarch addition." },
-        ],
-      },
-      feelCue: "Dip a spoon into the braising sauce — on the tip of the tongue you should feel the clean, prickling heat of the doubanjiang building toward the tingling numbness from the Sichuan peppercorn.",
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Haricots noirs fermentés (douchi), hachés à peu près",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sauce à l'ail de haricots noirs"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Reduce",
-      inputs: ["braised_mapo", "ing_10", "ing_05", "ing_11"],
-      outputState: "finished_mapo_tofu",
-      instructions: "Stir the cornstarch slurry and pour it in a slow circle into the simmering sauce while gently shaking the wok. The sauce will thicken to a glossy, coating consistency within 30 seconds. Taste and adjust soy sauce or doubanjiang. Transfer to a serving bowl, dust generously with ground Sichuan peppercorn, and scatter green onion.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, scarlet sauce clinging to every cube of tofu, topped with green onion and the pale green-grey dust of Sichuan peppercorn.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is still watery and doesn't coat the tofu. Sichuan peppercorn not yet added.", action: "Add the cornstarch slurry; do not skip — thin mapo tofu lacks the characteristic body." },
-          { state: "Perfect",   description: "Thick, brilliant scarlet sauce coats every surface. Green onion scattered. Sichuan peppercorn dust visible. The surface of the dish is glossy and trembling. Smells of chili, fermented bean, and citrus from the peppercorn.", action: "Serve over steamed rice immediately." },
-          { state: "Overdone",  description: "Sauce has over-thickened to a gluey paste.", action: "Add 2 tablespoons of stock and stir gently to thin back to glossy." },
-        ],
-      },
-      feelCue: "The definitive test: eat a bite with rice and wait 10 seconds — your lips should begin to tingle and then slowly go numb at the edges, the heat from the doubanjiang building in parallel — that dual sensation is mala, and it is why mapo tofu exists.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Maïs poivré sichuan, grillé et moulu",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Aile hachée",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Gingembre frais, haché",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Liquid",
+      "name": "Stocks de poulet ou de légumes",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Starch",
+      "name": "L'amidon de maïs dissous dans l'eau (2:1 eau:amidon)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Allium",
+      "name": "Oignon vert, tranché",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Blanch",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "blanched_tofu",
+      "instructions": "Abaissez doucement les cubes de tofu soyeux dans de l'eau légèrement salée mijotant pendant 2 minutes. Cette étape raffermit légèrement l'extérieur pour que le tofu survive au braisage subséquent sans se désintégrer, et saisonne l'intérieur. Retirer avec une cuillère à fentes dans une assiette — ne pas égoutter agressivement.",
+      "visualCue": {
+        "primaryTarget": "Les cubes de tofu qui tiennent leur forme, légèrement plus ferme à l'extérieur mais qui continuent de produire. La surface semble opaque et légèrement réglée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le tofu est encore très fragile et se brise avec la cuillère.",
+            "action": "Laisser 1 minute de plus dans l'eau chaude."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les cubes tiennent leur forme sous un doux prod avec une cuillère. La surface semble légèrement réglée et opaque. Intérieur encore soyeux quand mordu.",
+            "action": "Réserver soigneusement et passer à la sauce."
+          },
+          {
+            "state": "Overdone",
+            "description": "Tofu a développé un extérieur robuste et caoutchouteux de trop longtemps dans l'eau salée.",
+            "action": "Toujours utilisable; réduire légèrement le temps de brasage de la sauce finale."
+          }
+        ]
+      },
+      "feelCue": "Le tofu de soie bien blanchi devrait se sentir comme une gelée très ferme et fraîche lorsqu'il est ramassé avec une cuillère — assez solide pour tenir ensemble mais donnant à la moindre pression."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_02",
+        "ing_09"
+      ],
+      "outputState": "cooked_pork",
+      "instructions": "Chauffer l'huile dans un wok ou une grande poêle à feu vif jusqu'à ce qu'elle fume. Ajouter le porc moulu et cuire sans remuer pendant 1 minute, puis casser et remuer jusqu'à ce que le porc soit doré et que la graisse ait fondu. Le porc doit être légèrement croustillant aux bords. Retirer du wok avec une cuillère à fente, laissant la graisse rendue derrière.",
+      "visualCue": {
+        "primaryTarget": "Porc broyé avec des bords légèrement croustillants et rendu gras pooling dans la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc est gris et dégage toujours de l'humidité, au lieu de la friture.",
+            "action": "Élevez la chaleur et étalez le diluant de porc dans la poêle; il a besoin de chaleur sèche et élevée pour brunir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le porc est bruni avec des bords légèrement croustillants. Graisse rendue et claire dans la poêle. Sens de viande cuite.",
+            "action": "Retirer le porc en laissant la graisse dans le wok."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le porc est très foncé et sec: l'excès d'humidité a complètement cuit.",
+            "action": "Toujours bien; le porc réhydratera dans la sauce."
+          }
+        ]
+      },
+      "feelCue": "Le wok doit sonner comme de la friture agressive — non pas de la vapeur ou du sifflement, mais d'un craquage sec et chaud — au moment où le porc entre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Bloom",
+      "inputs": [
+        "cooked_pork",
+        "ing_03",
+        "ing_04",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "sauce_base",
+      "instructions": "Dans la graisse restante dans le wok, ajouter le doubanjiang, les haricots noirs fermentés, l'ail et le gingembre. Faire revenir à feu moyen-vif pendant 2 à 3 minutes, en remuant constamment. Le doubanjiang transformera l'huile en un rouge vif et profond, c'est l'étape sa xiang (fragrance-releasing), où la capsaïcine soluble dans la graisse et les composés fermentés extraireont l'huile. La cuisine doit sentir le chili et les haricots fermentés. Rendez le porc.",
+      "visualCue": {
+        "primaryTarget": "L'huile rouge cramoisi se superpose autour de la pâte, se séparant légèrement des solides. La pâte semble plus foncée et plus parfumée que lorsqu'elle est crue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore rouge vif, l'huile n'est pas encore teintée rouge. Une odeur de chili vif.",
+            "action": "Continuer à remuer à feu moyen-élevé pendant 1 à 2 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'huile est rouge cramoisi vif. La pâte est devenue rouge brique plus profonde. Arôme intense et complexe de chili fermenté, d'ail et de haricots noirs.",
+            "action": "Ajoutez le stock."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est devenue presque noire et sent amère et acride.",
+            "action": "Ajouter immédiatement du stock — la chaleur s'extrait trop loin; un tofu mapo légèrement amer est récupérable."
+          }
+        ]
+      },
+      "feelCue": "Le doubanjiang fleuri devrait se sentir épais et pâteux lorsqu'il est agité, non aqueux — la graisse du wok a été complètement infusée et séparée dans une piscine d'huile rouge."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "sauce_base",
+        "ing_08",
+        "blanched_tofu"
+      ],
+      "outputState": "braised_mapo",
+      "instructions": "Verser le stock dans le wok et mélanger. Porter à ébullition, puis glisser doucement les cubes de tofu. Ne pas remuer de façon agressive – faire glisser la sauce sur le tofu ou incliner le wok pour la distribuer. Laisser mijoter pendant 5 minutes jusqu'à ce que le tofu ait absorbé les saveurs de la sauce et que le liquide soit légèrement réduit. La sauce doit être assez fine pour couler mais assez riche pour enrober.",
+      "visualCue": {
+        "primaryTarget": "Les cubes de tofu sont intacts dans un bouillon rouge vif et bouillonnant. La sauce est mince mais de couleur vibrante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a un goût cru et le tofu est froid — pas assez de temps.",
+            "action": "Continuer pendant 3 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le tofu est chauffé à travers et très légèrement infusé avec la couleur rouge à ses bords. Des bulles de sauce régulièrement. Aroma est féroce et complexe.",
+            "action": "Ajouter la fécule de maïs à épaissir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le tofu s'est cassé et la sauce est très épaisse du liquide de tofu libéré.",
+            "action": "Réduire immédiatement la chaleur; réduire ou sauter l'ajout de fécule de maïs."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère dans la sauce de cuisson — sur l'extrémité de la langue, vous devriez sentir la chaleur propre et piquante du bâtiment du doubanjiang vers l'engourdissement piquant du maïs poivré Sichuan."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Réduire",
+      "inputs": [
+        "braised_mapo",
+        "ing_10",
+        "ing_05",
+        "ing_11"
+      ],
+      "outputState": "finished_mapo_tofu",
+      "instructions": "Incorporer la fécule de maïs et la verser dans un cercle lent dans la sauce mijotante tout en agitant doucement le wok. La sauce s'épaissira à une consistance de revêtement brillante dans les 30 secondes. Goûtez et ajustez la sauce de soja ou le doubanjiang. Transférer dans un bol de service, la poussière généreusement avec du maïs poivré Sichuan moulu, et disperser l'oignon vert.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse, brillante et écarlate s'accrochant à chaque cube de tofu, surmontée d'oignon vert et de la poussière de poivre gris clair du Sichuan.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore aqueuse et ne recouvre pas le tofu. Pas encore ajouté.",
+            "action": "Ajouter le lisier d'amidon de maïs; ne pas sauter — le tofu mapo mince manque du corps caractéristique."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce écarlate épaisse et brillante enveloppe chaque surface. Oignon vert dispersé. Poussière de maïs poivré sichuan visible. La surface du plat est brillante et tremblante. Des odeurs de chili, de haricots fermentés et d'agrumes du maïs poivré.",
+            "action": "Servir sur le riz cuit à la vapeur immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est trop épaisse pour être collée.",
+            "action": "Ajouter 2 cuillères à soupe de stock et remuer délicatement à l'arrière fin à brillant."
+          }
+        ]
+      },
+      "feelCue": "Le test définitif: manger une bouchée avec du riz et attendre 10 secondes — vos lèvres devraient commencer à fourmiller et puis aller lentement engourdir aux bords, la chaleur du bâtiment du doubanjiang en parallèle — que la double sensation est mala, et c'est pourquoi le tofu mapo existe."
+    }
+  ]
 };

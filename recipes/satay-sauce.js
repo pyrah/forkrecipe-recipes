@@ -1,104 +1,290 @@
 export default {
-  repoId: "master_indonesian_satay_sauce_001",
-  parentRepoId: null,
-  slug: "satay-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Satay Sauce",
-  description: "Indonesia's magnificent peanut sauce — not the thin, sweet shortcut, but the real thing: dry-roasted peanuts blended into a fragrant lemongrass-galangal-chile paste, simmered with coconut milk, and balanced with palm sugar, tamarind, and fish sauce into something thick, glossy, and savagely complex.",
-  cuisine: "Indonesian",
-  culture: "Indonesian/Malay",
-  category: "sauces",
-  tags: ["indonesian", "peanut", "satay", "sauce", "coconut", "southeast-asian", "grilling"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 2, salty: 3, sour: 1, bitter: 0, umami: 2, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",      name: "Dry-roasted unsalted peanuts",                                ratioValue: 6,   defaultUnit: "parts", substitutions: ["crunchy unsweetened peanut butter — 3 parts, skip roasting step"] },
-    { ingId: "ing_02", role: "Liquid",   name: "Full-fat coconut milk",                                       ratioValue: 4,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",   name: "Shallots, peeled and roughly chopped",                        ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",   name: "Garlic cloves",                                               ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic", name: "Lemongrass stalks (white and pale-green part only), sliced", ratioValue: 1,   defaultUnit: "parts", substitutions: ["1 tsp lemongrass paste"] },
-    { ingId: "ing_06", role: "Aromatic", name: "Galangal (fresh or frozen), peeled and roughly chopped",     ratioValue: 0.5, defaultUnit: "parts", substitutions: ["fresh ginger — different character, but functional"] },
-    { ingId: "ing_07", role: "Aromatic", name: "Kaffir lime leaves, torn (ribs removed)",                    ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Heat",     name: "Dried red chiles (stemmed and seeded), or 1 tsp sambal oelek", ratioValue: 1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Sweetener", name: "Palm sugar or packed brown sugar",                          ratioValue: 1,   defaultUnit: "parts", substitutions: ["gula melaka (coconut palm sugar) for authenticity"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Fish sauce",                                                 ratioValue: 1,   defaultUnit: "parts", substitutions: ["soy sauce + a pinch of salt for vegetarian"] },
-    { ingId: "ing_11", role: "Acid",     name: "Tamarind paste (from a block, dissolved in warm water)",     ratioValue: 0.5, defaultUnit: "parts", substitutions: ["fresh lime juice — less complex but functional"] },
-    { ingId: "ing_12", role: "Acid",     name: "Fresh lime juice",                                           ratioValue: 0.3, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_13", role: "Liquid",   name: "Water (for thinning)",                                       ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_indonesian_satay_sauce_001",
+  "parentRepoId": null,
+  "slug": "satay-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce satay",
+  "description": "La magnifique sauce aux cacahuètes de l'Indonésie — pas le raccourci fin et doux, mais la vraie chose: les cacahuètes grillées à sec mélangées dans une pâte parfumée de citronnelle-galangal-chile, mijotées avec du lait de coco, et équilibrées avec du sucre de palme, tamarin, et sauce de poisson dans quelque chose d'épais, brillant, et sauvagement complexe.",
+  "cuisine": "Indonésien",
+  "culture": "Indonésie/Malais",
+  "category": "sauces",
+  "tags": [
+    "par an",
+    "arachide",
+    "satay",
+    "sauce",
+    "noix de coco",
+    "Sud-Est asiatique",
+    "grillage"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Blend",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_08"],
-      outputState: "aromatics_paste",
-      instructions: "Combine the shallots, garlic, lemongrass, galangal, and dried chiles in a blender or food processor. Add a tablespoon of water and blend until you have a rough paste, scraping down the sides as needed. The lemongrass is fibrous and the galangal is woody — blend for at least 2 minutes at high speed, pausing to scrape the sides, until the paste is as smooth as the blender will allow. Some texture is acceptable and even desirable, but the lemongrass in particular must be finely broken down or it will remain fibrous and unpleasant in the finished sauce. A high-powered blender will give a smoother result; a food processor gives a rougher but excellent paste.",
-      visualCue: {
-        primaryTarget: "A pale golden-brown, rough paste with the consistency of coarse hummus — fragrant with lemongrass, ginger-like galangal, and mild chile. No visible large chunks of lemongrass.",
-        spectrum: [
-          { state: "Underdone", description: "Visible chunks of lemongrass — 5mm or larger pieces of fibrous stalk. The galangal is still in identifiable pieces. The paste is rough and chunky.", action: "Continue blending. Fibrous lemongrass must be broken down or it will create an unpleasant texture in the finished sauce — no amount of simmering will soften it further." },
-          { state: "Perfect",   description: "A rough but cohesive paste with no identifiable chunks of lemongrass. The color is pale golden-tan and the smell is intensely aromatic: bright, citrusy lemongrass over warm galangal and mild chile.", action: "Proceed to frying the paste." },
-          { state: "Overdone",  description: "The blender has created a completely smooth, liquid purée rather than a paste, from too much added water.", action: "This is fine — the paste will still fry correctly. The extra water will evaporate during cooking." },
-        ],
-      },
-      feelCue: "Rub a small amount of paste between your fingers and press — it should feel slightly gritty from the lemongrass fibers, not completely smooth. Smell your fingers: lemongrass should be the dominant note, not just garlic.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Cacahuètes non salées grillées à sec",
+      "ratioValue": 6,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre d'arachide croquant non sucré — 3 parties, saut de la grille"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fry",
-      inputs: ["aromatics_paste", "ing_07"],
-      outputState: "fried_paste",
-      instructions: "Heat 2 tablespoons of neutral oil or coconut oil in a wok or wide saucepan over medium-high heat until shimmering. Add the blended aromatics paste and the torn kaffir lime leaves and fry, stirring constantly, until the raw smell of garlic and shallot has cooked out and the paste is fragrant, drier, and deeper in color — 5-8 minutes. Crucially, cook until you can see the oil beginning to separate and collect at the edges of the paste — this is called pecah minyak (oil breaking) in Indonesian and Malay cooking, and it signals that the water in the aromatics has fully evaporated and the paste is truly fried, not merely stewed. This step transforms the raw sharp aromatics into a mellow, complex base.",
-      visualCue: {
-        primaryTarget: "A drier, deeper golden-brown paste that has visibly shrunk and from which a thin ring of pale oil has separated at the edges of the pan. The raw vegetable smell is gone — replaced by a toasted, sweet, complex aroma.",
-        spectrum: [
-          { state: "Underdone", description: "The paste is still light-colored and wet, steaming heavily with no caramelization. The garlic-shallot smell is still raw and pungent. No oil separation visible.", action: "Continue frying. Lower the heat slightly if it is spitting aggressively, but keep it moving. The oil separation is the non-negotiable doneness signal for this paste." },
-          { state: "Perfect",   description: "The paste is golden-brown and significantly drier than when you started. A ring of pale yellow oil has appeared at the edges of the pan. The smell is sweet, toasty, and aromatic — lemongrass forward with a warm underlying garlic depth.", action: "Add the ground peanuts and coconut milk immediately. Proceed." },
-          { state: "Overdone",  description: "The paste has caught on the bottom and is burning — dark brown or black spots and a bitter, acrid smell.", action: "Deglaze immediately with a splash of coconut milk and stir vigorously. Lower the heat significantly. If the paste smells genuinely burnt (not just toasted), scrape into a clean pan and proceed — the bottom layer is sacrificed." },
-        ],
-      },
-      feelCue: "The paste in the pan should make a steady, dry sizzle — not a wet, spitting hiss. When you press it with a spatula, it should spring back slightly rather than collapsing into a wet pool. That spring means the water is gone.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Lait de coco plein gras",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["fried_paste", "ing_01", "ing_02", "ing_13"],
-      outputState: "peanut_coconut_base",
-      instructions: "If using whole roasted peanuts, pulse them in a food processor to a rough, crumbly texture — about the size of coarse breadcrumbs, not a paste. Add the ground peanuts to the fried aromatics paste and stir to coat them in the fragrant oil. Pour in the coconut milk and water, stirring to combine everything into a thick, rough soup. Bring to a simmer over medium heat, stirring frequently, and cook for 10-12 minutes until the sauce is thick, glossy, and the peanuts have absorbed the coconut milk and swelled slightly. The sauce should coat a spoon in a heavy, flowing layer — much thicker than pourable cream.",
-      visualCue: {
-        primaryTarget: "A thick, creamy, pale brown sauce — the peanuts visible throughout as a rough texture, the coconut milk fully integrated rather than separate. The surface should have a faint glossy sheen from the coconut fat.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is thin and watery, with the coconut milk not yet reduced and the peanuts still raw-tasting and floating separately. The flavors have not yet merged.", action: "Continue simmering and stirring. The peanuts need sustained heat and moisture to swell and become creamy — at least 10 minutes at a active simmer." },
-          { state: "Perfect",   description: "A thick, creamy, cohesive sauce — the peanuts swollen and creamy, the coconut milk absorbed into a glossy, rich base. It coats a spoon heavily and flows in a slow, heavy ribbon.", action: "Add the seasonings. Proceed." },
-          { state: "Overdone",  description: "The sauce has reduced too far and is thick and gluey, beginning to stick and scorch at the bottom despite stirring.", action: "Add more coconut milk or water, whisking to loosen. The sauce will thicken further as it cools — allow for that when adjusting consistency." },
-        ],
-      },
-      feelCue: "Dip a spoon and lift it above the sauce — the sauce should flow off in a heavy, slow, continuous ribbon rather than dripping in drops. The peanuts throughout should feel softened and creamy rather than crunchy.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Échalotes, pelées et hachées grossièrement",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Season",
-      inputs: ["peanut_coconut_base", "ing_09", "ing_10", "ing_11", "ing_12"],
-      outputState: "finished_satay_sauce",
-      instructions: "Add the palm sugar, fish sauce, tamarind paste, and lime juice to the simmering sauce. Stir to dissolve the palm sugar completely and simmer 2-3 minutes more to integrate everything. Now taste carefully and balance the sauce along four axes: savory-salty (fish sauce), sweet (palm sugar), sour-tamarind (tamarind and lime), and heat (chile). The sauce should be rich and deeply savory first, with the sweetness present but not candy-like, the sourness brightening rather than dominating, and the chile an undercurrent of warmth. Adjust each element incrementally — a satay sauce that tastes sweet and peanut-buttery without complexity is incomplete; one that tastes only fishy has the fish sauce ratio wrong.",
-      visualCue: {
-        primaryTarget: "After seasoning and final simmering, the sauce takes on a deeper amber color from the palm sugar caramelizing slightly into the coconut base. The surface is glossy and the sauce flows in a rich, heavy pour.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce still tastes flat and peanut-buttery without complexity — the fish sauce, tamarind, and palm sugar have not yet been added, or are in insufficient quantity to create the characteristic layered depth.", action: "Add each seasoning component in sequence, tasting between each addition. The complex, savory-sweet-sour-spicy balance is what separates a real satay sauce from peanut butter thinned with coconut milk." },
-          { state: "Perfect",   description: "Rich, glossy, and deeply complex. The taste moves from initial peanut-coconut richness through a savory-sweet middle (fish sauce and palm sugar) to a bright tamarind-lime finish, with chile warmth throughout. It clings to a spoon in a heavy, uniform coat.", action: "Thin with warm water if needed for a pourable dipping consistency. Serve warm alongside satay skewers." },
-          { state: "Overdone",  description: "One element dominates destructively — the sauce tastes only sweet from too much palm sugar, or fishy from excess fish sauce, or mouth-puckeringly sour from too much tamarind.", action: "Counter the dominant note: excess sweetness needs more tamarind and fish sauce; excess fishiness needs more palm sugar and tamarind; excess sourness needs more palm sugar and coconut milk to dilute and round." },
-        ],
-      },
-      feelCue: "Finished satay sauce served over a skewer of grilled chicken should cling to every surface of the meat in a thick, glossy coat without running off. If it pools at the base of the skewer and runs away, the sauce needs further reduction. If it sets like paste on the hot meat, thin with a splash of warm water.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Gousses d'ail",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Pâtes de citronnelle (partie blanche et vert pâle seulement), tranchées",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "1 c. à thé pâte de citronnelle"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Galangal (fraîche ou congelée), pelé et haché approximativement",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gingembre frais — caractère différent, mais fonctionnel"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Feuilles de chaux kaffir déchirées (ribs enlevées)",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Heat",
+      "name": "Chiles rouges séchés (épilés et ensemencés), ou 1 c. à thé sambal oelek",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Sucre de palme ou sucre brun emballé",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gula melaka (sucre de coco) pour l'authenticité"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Sauce de poisson",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja + une pincée de sel pour végétarien"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "Pâte de tamarin (à partir d'un bloc, dissoute dans de l'eau chaude)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "jus de chaux frais — moins complexe mais fonctionnel"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 0.3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Liquid",
+      "name": "Eau (pour éclaircir)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_08"
+      ],
+      "outputState": "aromatics_paste",
+      "instructions": "Mélanger les échalotes, l'ail, la citronnelle, le galangal et les chiles séchés dans un mélangeur ou un robot culinaire. Ajouter une cuillère à soupe d'eau et mélanger jusqu'à ce que vous ayez une pâte rugueuse, grattant les côtés au besoin. La citronnelle est fibreuse et le galangal est boisé — mélanger pendant au moins 2 minutes à grande vitesse, en arrêtant de gratter les côtés, jusqu'à ce que la pâte soit aussi lisse que le mélangeur le permettra. Une certaine texture est acceptable et même souhaitable, mais la citronnelle en particulier doit être finement décomposée ou elle restera fibreuse et désagréable dans la sauce finie. Un mélangeur à haute puissance donnera un résultat plus lisse; un robot alimentaire donne une pâte plus rugueuse mais excellente.",
+      "visualCue": {
+        "primaryTarget": "Une pâte rugueuse dorée pâle avec la consistance de l'hummus grossier, parfumée de citronnelle, galangale de gingembre et de chile doux. Pas de gros morceaux visibles de citronnelle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux visibles de citronnelle — 5mm ou plus de tige fibreuse. Le galangal est toujours en pièces identifiables. La pâte est rugueuse et épaisse.",
+            "action": "Continuez à mélanger. La citronnelle fibreuse doit être décomposée ou elle créera une texture désagréable dans la sauce finie — aucune quantité de mijotation ne l'adoucira davantage."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte rugueuse mais cohésive sans morceaux identifiables de citronnelle. La couleur est dorée-tan pâle et l'odeur est intensément aromatique: citronnelle vive et agrumes sur galangal chaud et chile doux.",
+            "action": "Faire frire la pâte."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélangeur a créé une purée liquide complètement lisse plutôt qu'une pâte, à partir de trop d'eau ajoutée.",
+            "action": "C'est bien, la pâte va encore frire correctement. L'eau supplémentaire s'évaporera pendant la cuisson."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité de pâte entre vos doigts et pressez - elle doit se sentir légèrement gritte des fibres de citronnelle, pas complètement lisse. Sensez vos doigts : la citronnelle doit être la note dominante, pas seulement l'ail."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Fry",
+      "inputs": [
+        "aromatics_paste",
+        "ing_07"
+      ],
+      "outputState": "fried_paste",
+      "instructions": "Chauffer 2 cuillerées à soupe d'huile neutre ou d'huile de coco dans un wok ou une casserole large à feu moyen-vif jusqu'à ce qu'elles mijotent. Ajouter la pâte aromatique mélangée et les feuilles de chaux de kaffir déchirées et faire frire, en remuant constamment, jusqu'à ce que l'odeur brute de l'ail et de l'échalote ait cuit et que la pâte soit parfumée, sèche et de couleur plus profonde — 5-8 minutes. Crucieusement, cuire jusqu'à ce que vous puissiez voir l'huile commencer à se séparer et recueillir aux bords de la pâte — c'est ce qu'on appelle pecah minyak (fraction d'huile) dans la cuisine indonésienne et malaise, et cela indique que l'eau dans les aromatiques a complètement évaporé et la pâte est vraiment frite, pas simplement ragoûtée. Cette étape transforme les aromatiques bruts pointus en une base moelleuse et complexe.",
+      "visualCue": {
+        "primaryTarget": "Une pâte dorée plus sèche et plus profonde qui a visiblement rétréci et dont un mince anneau d'huile pâle s'est séparé aux bords de la casserole. L'odeur de légumes crus a disparu, remplacée par un arôme torréfié, doux et complexe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est encore de couleur claire et humide, vaporisant fortement sans caramélisation. L'odeur de l'ail-hallot est encore crue et piquante. Aucune séparation d'huile visible.",
+            "action": "Continuez à frire. Baissez légèrement la chaleur si elle crache agressivement, mais continuez à la bouger. La séparation de l'huile est le signal de cuisson non négociable pour cette pâte."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte est dorée et significativement plus sèche que lorsque vous avez commencé. Un anneau d'huile jaune pâle est apparu aux bords de la poêle. L'odeur est douce, grillée et aromatique — citronnelle vers l'avant avec une chaude profondeur sous -jacente à l'ail.",
+            "action": "Ajouter immédiatement les cacahuètes et le lait de coco. Continuez."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a pris sur le fond et est brûlante — taches brunes foncées ou noires et une odeur amère et acride.",
+            "action": "Déglacer immédiatement avec un jet de lait de coco et remuer vigoureusement. Baissez significativement la chaleur. Si la pâte sent vraiment brûlée (pas seulement grillée), racler dans une poêle propre et procéder — la couche inférieure est sacrifiée."
+          }
+        ]
+      },
+      "feelCue": "La pâte dans la poêle devrait faire un étourdissement stable et sec — pas un sifflement humide, crachant le sifflement. Lorsque vous pressez avec une spatule, elle doit revenir légèrement au lieu de s'effondrer dans une piscine humide. Cette source signifie que l'eau est partie."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "fried_paste",
+        "ing_01",
+        "ing_02",
+        "ing_13"
+      ],
+      "outputState": "peanut_coconut_base",
+      "instructions": "Si vous utilisez des arachides grillées entières, faites - les pousser dans un robot alimentaire à une texture rugueuse et émiettée — environ la taille de la chapelure grossière, et non une pâte. Ajouter les cacahuètes moulues à la pâte aromatique frite et mélanger pour les enrober dans l'huile parfumée. Verser dans le lait de coco et l'eau, en remuant pour combiner tout dans une soupe épaisse et rugueuse. Porter à mijoter à feu moyen, en remuant fréquemment, et cuire pendant 10-12 minutes jusqu'à ce que la sauce soit épaisse, brillante, et que les arachides aient absorbé le lait de coco et gonflé légèrement. La sauce doit enrober une cuillère dans une couche épaisse et fluide, beaucoup plus épaisse que la crème versable.",
+      "visualCue": {
+        "primaryTarget": "Une sauce épaisse, crémeuse, brun pâle — les arachides visibles à travers une texture rugueuse, le lait de coco complètement intégré plutôt que séparé. La surface doit avoir un léger reflet brillant de la graisse de noix de coco.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse, le lait de coco n'est pas encore réduit et les cacahuètes encore crues et flottant séparément. Les saveurs n'ont pas encore fusionné.",
+            "action": "Continuer à mijoter et à remuer. Les cacahuètes ont besoin d'une chaleur et d'une humidité soutenues pour gonfler et devenir crémeuses — au moins 10 minutes à une mijotée active."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une sauce épaisse, crémeuse et cohésive — les cacahuètes gonflées et crémeuses, le lait de coco absorbé dans une base brillante et riche. Il enveloppe fortement une cuillère et coule dans un ruban lent et lourd.",
+            "action": "Ajoutez les assaisonnements. Continuez."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a été réduite trop loin et est épaisse et collante, commençant à coller et scorcher au fond malgré le remuant.",
+            "action": "Ajouter plus de lait de coco ou d'eau, fouetter pour se détendre. La sauce s'épaissira davantage au fur et à mesure qu'elle refroidit, ce qui permettra d'ajuster la consistance."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère et soulevez-la au-dessus de la sauce — la sauce doit s'écouler dans un ruban lourd, lent et continu plutôt que de couler dans des gouttes. Les cacahuètes doivent se sentir adoucies et crémeuses plutôt que croquantes."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "peanut_coconut_base",
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "finished_satay_sauce",
+      "instructions": "Ajouter le sucre de palme, la sauce de poisson, la pâte de tamarin et le jus de lime à la sauce mijotée. Mélanger pour dissoudre complètement le sucre de palme et laisser mijoter 2-3 minutes de plus pour intégrer tout. Goûtez maintenant avec soin et équilibrez la sauce sur quatre axes : sel salé (sauce de poisson), doux (sucre de palm), aigre-tamarin (tamarin et chaux) et chaleur (chile). La sauce doit être riche et profondément salée d'abord, avec la douceur présente mais pas comme des bonbons, l'aurore éclaircissant plutôt que dominant, et le chile un courant de chaleur. Ajustez chaque élément progressivement — une sauce satay qui goûte sucrée et cacahuète sans complexité est incomplète; celle qui goûte seulement poissonneux a le mauvais rapport sauce poisson.",
+      "visualCue": {
+        "primaryTarget": "Après assaisonnement et cuisson finale, la sauce prend une couleur ambre plus profonde du sucre de palme caramélisant légèrement dans la base de noix de coco. La surface est brillante et la sauce s'écoule dans une couche riche et lourde.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce a encore un goût plat et cacahuète sans complexité – la sauce de poisson, le tamarin et le sucre de palme n'ont pas encore été ajoutés, ou sont en quantité insuffisante pour créer la profondeur caractéristique en couches.",
+            "action": "Ajouter chaque composant d'assaisonnement en séquence, dégustation entre chaque ajout. L'équilibre complexe, salé, sucré, épicé est ce qui sépare une vraie sauce satay du beurre d'arachide éclairci avec du lait de coco."
+          },
+          {
+            "state": "Perfect",
+            "description": "Riche, brillant et profondément complexe. Le goût passe de la richesse initiale en arachides-coconut à un milieu salé-doux (sauce de poisson et sucre de palme) à une finition brillante en tamarin-lime, avec chaleur de chile tout au long. Il s'accroche à une cuillère dans un manteau lourd et uniforme.",
+            "action": "Finissez avec de l'eau chaude si nécessaire pour une consistance de trempe versable. Servir chaud aux côtés des brochettes satay."
+          },
+          {
+            "state": "Overdone",
+            "description": "Un élément domine de façon destructrice: la sauce n'a un goût sucré qu'à partir de trop de sucre de palme, ou poissonneux à partir de l'excès de sauce de poisson, ou amer à la bouche de trop de tamarin.",
+            "action": "Contrer la note dominante : l'excès de douceur nécessite plus de tamarin et de sauce de poisson ; l'excès de poisson nécessite plus de sucre de palme et de tamarin ; l'excès d'auresse nécessite plus de sucre de palme et de lait de coco pour diluer et rond."
+          }
+        ]
+      },
+      "feelCue": "La sauce satay finie servie sur une brochette de poulet grillé doit s'accrocher à toutes les surfaces de la viande dans une couche épaisse et brillante sans s'écouler. Si elle s'abaisse à la base de la brochette et s'enfuit, la sauce doit être réduite. S'il se met comme pâte sur la viande chaude, mince avec un jet d'eau chaude."
+    }
+  ]
 };

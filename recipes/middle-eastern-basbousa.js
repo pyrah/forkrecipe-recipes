@@ -1,98 +1,273 @@
 export default {
-  repoId: "master_middleeastern_middleeasternbasbousa_001",
-  parentRepoId: null,
-  slug: "middle-eastern-basbousa",
-  author: "ForkRecipe Kitchen",
-  title: "Basbousa",
-  description: "A golden, grainy semolina cake soaked with orange blossom syrup — dense yet tender, with a faint crunch at the surface and the heady perfume of rose water in every bite.",
-  cuisine: "Middle Eastern",
-  culture: "Levantine",
-  category: "desserts",
-  tags: ["dessert", "vegetarian", "semolina", "middle-eastern", "syrup", "rose-water"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "1 hour",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 5, salty: 1, sour: 0, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Fine semolina",                     ratioValue: 250, defaultUnit: "g", substitutions: ["coarse semolina (texture will be grainier)"] },
-    { ingId: "ing_02", role: "Sweetener",  name: "Caster sugar",                      ratioValue: 100, defaultUnit: "g", substitutions: ["granulated sugar"] },
-    { ingId: "ing_03", role: "Dairy",      name: "Plain yoghurt",                     ratioValue: 200, defaultUnit: "g", substitutions: ["sour cream"] },
-    { ingId: "ing_04", role: "Fat",        name: "Unsalted butter, melted",           ratioValue: 80,  defaultUnit: "g", substitutions: ["neutral oil", "coconut oil"] },
-    { ingId: "ing_05", role: "Leavener",   name: "Baking powder",                     ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",   name: "Rose water",                        ratioValue: 10,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_07", role: "Garnish",    name: "Blanched almonds, whole",           ratioValue: 30,  defaultUnit: "pieces", substitutions: ["pine nuts", "pistachios"] },
-    { ingId: "ing_08", role: "Sweetener",  name: "Sugar (for syrup)",                 ratioValue: 200, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Hydration",  name: "Water (for syrup)",                 ratioValue: 150, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_10", role: "Aromatic",   name: "Orange blossom water",              ratioValue: 15,  defaultUnit: "ml", substitutions: ["rose water"] },
-    { ingId: "ing_11", role: "Acid",       name: "Fresh lemon juice",                 ratioValue: 10,  defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_middleeastern_middleeasternbasbousa_001",
+  "parentRepoId": null,
+  "slug": "middle-eastern-basbousa",
+  "author": "ForkRecipe Kitchen",
+  "title": "Basbousa",
+  "description": "Un gâteau à la semoule doré et grainé imbibé de sirop de fleur d'orange, dense mais tendre, avec un léger croûte à la surface et le parfum capricieux de l'eau de rose dans chaque bouchée.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Levantine",
+  "category": "desserts",
+  "tags": [
+    "dessert",
+    "végétarien",
+    "sémoline",
+    "Moyen-Orient",
+    "sirop",
+    "eau de rose"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "1 hour",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "basbousa_batter",
-      instructions: "Combine the semolina, sugar, and baking powder in a large bowl. Add the yoghurt, melted butter, and rose water. Mix well with a spatula until fully combined — the batter will be thick and grainy, not smooth. Unlike a standard cake batter, it should hold its shape when mounded. Grease a 23x23cm baking pan. Spread the batter evenly with a wet spatula, pressing it into an even layer about 2cm thick. Let rest 15 minutes to allow the semolina to hydrate.",
-      visualCue: {
-        primaryTarget: "A thick, uniform, grainy batter spread evenly in the pan — matte surface, no liquid pooling.",
-        spectrum: [
-          { state: "Underdone", description: "Batter is lumpy and uneven. Dry semolina still visible as separate grains at the surface. Mixture has not fully come together.", action: "Mix more thoroughly until all dry spots are incorporated. The butter and yoghurt need to coat every grain." },
-          { state: "Perfect",   description: "Thick, uniform batter that holds its shape in the pan. Surface is matte and even. Smells of rose and butter.", action: "Place an almond on each pre-scored square and bake." },
-          { state: "Overdone",  description: "Batter is very thin and runny — too much yoghurt was added, or the yoghurt was very liquid.", action: "Add 2-3 tbsp more semolina and stir in. Batter should be thick enough to hold a spoon upright briefly." },
-        ],
-      },
-      feelCue: "The batter should feel grainy and thick when stirred — like wet sand mixed with fat, not a smooth cake batter.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Sémoline fine",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "semoule grossière (la texture sera plus granuleuse)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Bake",
-      inputs: ["basbousa_batter", "ing_07"],
-      outputState: "baked_basbousa",
-      instructions: "Preheat oven to 180°C (350°F). Score the rested batter into diamond or square shapes with a wet knife, cutting almost all the way through. Press a whole blanched almond into the center of each piece. Bake for 25-30 minutes until the top is golden and the edges are beginning to pull away from the pan. The surface should look slightly firm and dry.",
-      visualCue: {
-        primaryTarget: "An even golden top with slightly darker edges. Surface is firm and dry to the touch. Almonds are lightly toasted.",
-        spectrum: [
-          { state: "Underdone", description: "Pale, soft top that gives when pressed. Interior still wet and custard-like. Edges not pulling from the pan.", action: "Bake for another 5-8 minutes. The cake must be fully set before the syrup is added." },
-          { state: "Perfect",   description: "Golden top with the slightest resistance to a gentle press. Edges have pulled cleanly from the pan. A toothpick comes out mostly clean with a few moist crumbs. Almonds are light caramel in color.", action: "Remove from oven and immediately pour the hot syrup over the hot cake." },
-          { state: "Overdone",  description: "Very dark golden edges approaching brown. Very firm, dry surface. Almonds are dark brown.", action: "Pour syrup immediately and generously — a dry basbousa needs more syrup to compensate." },
-        ],
-      },
-      feelCue: "Tap the center — it should sound slightly hollow and feel set, not wet. The aroma should be warm semolina and toasted almond, not raw flour.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre granulé"
+      ]
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "scented_syrup",
-      instructions: "Combine sugar and water in a small saucepan. Bring to a boil over medium heat, stirring only until the sugar dissolves. Once boiling, stop stirring and cook for 5-7 minutes until slightly thickened. Add the lemon juice and cook for 1 more minute (the acid prevents crystallization). Remove from heat and stir in the orange blossom water. The syrup should be ready just before the cake comes out of the oven — it must go hot onto hot.",
-      visualCue: {
-        primaryTarget: "A clear, slightly viscous syrup with light orange-blossom fragrance — not colored, not thick enough to thread.",
-        spectrum: [
-          { state: "Underdone", description: "Thin, watery syrup that runs immediately off a spoon. Has not concentrated.", action: "Simmer for another 2-3 minutes. Test: a drop on a cold plate should hold its shape slightly." },
-          { state: "Perfect",   description: "Lightly viscous, clear syrup that coats the back of a spoon thinly. Fragrant with orange blossom. Still hot and fluid.", action: "Add orange blossom water and pour immediately over the hot baked cake." },
-          { state: "Overdone",  description: "Thick, golden syrup beginning to caramelize. Threads form between finger and thumb.", action: "Add 50ml hot water and stir to thin. The syrup must be fluid enough to soak in, not sit on top." },
-        ],
-      },
-      feelCue: "The syrup should feel barely slick between moistened fingertips — slightly thicker than water, but nowhere near honey.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Yogourt ordinaire",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "crème aigre"
+      ]
     },
     {
-      nodeId: "step_4", action: "Soak",
-      inputs: ["baked_basbousa", "scented_syrup"],
-      outputState: "finished_basbousa",
-      instructions: "Pour the hot syrup slowly and evenly over the hot basbousa in a thin, steady stream. Pour in the scored lines first, then over the whole surface. The cake will sizzle and absorb the syrup immediately. You should use all the syrup. Allow to rest at room temperature for at least 30 minutes until fully absorbed and the cake has cooled slightly. Cut along the score lines to serve. Basbousa improves after several hours as the flavors meld.",
-      visualCue: {
-        primaryTarget: "A glistening, lightly sticky surface with no pooling liquid — the syrup has fully absorbed into the semolina.",
-        spectrum: [
-          { state: "Underdone", description: "Syrup is still pooled in the score lines and on the surface. The cake looks wet and waterlogged.", action: "Wait 20-30 more minutes for absorption. The semolina will continue to drink in the liquid." },
-          { state: "Perfect",   description: "Surface is uniformly glistening but not wet. No puddles. Each piece has an even sheen. The bottom of the pan shows just a thin residue of syrup.", action: "Serve at room temperature. Each piece should feel moist but intact when lifted." },
-          { state: "Overdone",  description: "Syrup was added cold to a cold cake and sits on the surface refusing to absorb, making the top soggy while the interior remains dry.", action: "Warm the pan briefly in a 160°C oven for 5 minutes to re-melt and drive the syrup in." },
-        ],
-      },
-      feelCue: "A perfect piece of basbousa should feel slightly dense and moist in the hand — not heavy with syrup, not dry, but with that characteristic yielding semolina texture.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Beurre non salé fondu",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile neutre",
+        "Huile de coco"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Eau de rose",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Amandes blanchies, entières",
+      "ratioValue": 30,
+      "defaultUnit": "pieces",
+      "substitutions": [
+        "noix de pin",
+        "Pistaches"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Sucre (pour sirop)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Hydration",
+      "name": "Eau (pour sirop)",
+      "ratioValue": 150,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Aromatic",
+      "name": "Eau de fleur d'orange",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "eau de rose"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "basbousa_batter",
+      "instructions": "Mélanger la semoule, le sucre et la poudre à pâte dans un grand bol. Ajouter le yaourt, le beurre fondu et l'eau de rose. Bien mélanger avec une spatule jusqu'à ce qu'elle soit complètement combinée — la pâte sera épaisse et granuleuse, pas lisse. Contrairement à une pâte à gâteau standard, elle doit tenir sa forme lorsqu'elle est bombée. Graisser une casserole de 23x23cm. Étendre la pâte uniformément avec une spatule humide, la presser dans une couche uniforme d'environ 2cm d'épaisseur. Laisser reposer 15 minutes pour permettre à la semoule d'hydrater.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, uniforme et granuleuse s'étend uniformément dans la casserole — surface mate, pas de mise en commun liquide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les battements sont bosseux et inégaux. Sémoline sèche encore visible comme des grains séparés à la surface. Le mélange ne s'est pas complètement réuni.",
+            "action": "Mélanger plus soigneusement jusqu'à ce que toutes les taches sèches soient incorporées. Le beurre et le yaourt doivent enrober chaque grain."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte épaisse et uniforme qui tient sa forme dans la poêle. La surface est mate et uniforme. Sens de rose et de beurre.",
+            "action": "Placer une amande sur chaque carré pré-scoré et cuire."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batteuse est très mince et rugueuse — trop de yaourt a été ajouté, ou le yaourt était très liquide.",
+            "action": "Ajouter 2-3 c. à soupe de semoule et remuer. La batte doit être assez épaisse pour tenir une cuillère debout brièvement."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir granuleuse et épaisse lorsqu'elle est agitée — comme du sable humide mélangé avec du gras, pas une pâte à gâteau lisse."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Cuire",
+      "inputs": [
+        "basbousa_batter",
+        "ing_07"
+      ],
+      "outputState": "baked_basbousa",
+      "instructions": "Préchauffer le four à 180°C (350°F). Fixez la pâte reposée en diamant ou en forme carrée avec un couteau mouillé, coupant presque tout le chemin à travers. Appuyez sur une amande blanchie dans le centre de chaque pièce. Cuire 25-30 minutes jusqu'à ce que le dessus soit doré et que les bords commencent à s'éloigner de la poêle. La surface doit être légèrement ferme et sèche.",
+      "visualCue": {
+        "primaryTarget": "Un haut même doré avec des bords légèrement plus foncés. La surface est ferme et sèche au toucher. Les amandes sont légèrement grillées.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pale, haut doux qui donne quand pressé. L'intérieur est encore humide et coquin. Les bords ne tirent pas de la casserole.",
+            "action": "Cuire encore 5-8 minutes. Le gâteau doit être entièrement préparé avant d'ajouter le sirop."
+          },
+          {
+            "state": "Perfect",
+            "description": "Top doré avec la moindre résistance à une presse douce. Les bords ont tiré proprement de la casserole. Un cure-dent sort principalement propre avec quelques miettes humides. Les amandes sont de couleur caramel clair.",
+            "action": "Retirer du four et verser immédiatement le sirop chaud sur le gâteau chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords d'or très foncés s'approchent du brun. Surface très ferme et sèche. Les amandes sont brun foncé.",
+            "action": "Verser le sirop immédiatement et généreusement — une basbousa sèche a besoin de plus de sirop pour compenser."
+          }
+        ]
+      },
+      "feelCue": "Tapez sur le centre — il doit sembler légèrement creux et se sentir réglé, pas mouillé. L'arôme doit être de semoule chaude et d'amande grillée, pas de farine crue."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "scented_syrup",
+      "instructions": "Mélanger le sucre et l'eau dans une petite casserole. Porter à ébullition à feu moyen, en remuant seulement jusqu'à dissolution du sucre. Une fois bouillant, arrêter de remuer et cuire 5-7 minutes jusqu'à ce qu'il y ait un léger épaississement. Ajouter le jus de citron et cuire encore 1 minute (l'acide empêche la cristallisation). Retirer du feu et remuer dans l'eau de fleur d'oranger. Le sirop doit être prêt juste avant que le gâteau ne sorte du four — il doit être chaud.",
+      "visualCue": {
+        "primaryTarget": "Un sirop clair, légèrement visqueux avec un léger parfum orange-blossom — pas coloré, pas assez épais pour filer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Un sirop mince et aqueux qui coule immédiatement d'une cuillère. Ne se concentre pas.",
+            "action": "Laisser mijoter encore 2-3 minutes. Essai : une goutte sur une plaque froide doit tenir légèrement sa forme."
+          },
+          {
+            "state": "Perfect",
+            "description": "Légèrement visqueux, sirop clair qui enveloppe l'arrière d'une cuillère finement. Parfumé de fleur d'oranger. Toujours chaud et fluide.",
+            "action": "Ajouter l'eau de fleur d'oranger et verser immédiatement sur le gâteau chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sirop d'or épais commence à caraméliser. Les fils se forment entre le doigt et le pouce.",
+            "action": "Ajouter 50ml d'eau chaude et remuer à mince. Le sirop doit être suffisamment fluide pour tremper, et non s'asseoir sur le dessus."
+          }
+        ]
+      },
+      "feelCue": "Le sirop devrait se sentir à peine lissé entre les doigts mouillés — légèrement plus épais que l'eau, mais nulle part près du miel."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Trempage",
+      "inputs": [
+        "baked_basbousa",
+        "scented_syrup"
+      ],
+      "outputState": "finished_basbousa",
+      "instructions": "Verser le sirop chaud lentement et uniformément sur la basbousa chaude dans un ruisseau mince et stable. Versez d'abord les lignes marquées, puis sur toute la surface. Le gâteau s'assemble et absorbe le sirop immédiatement. Tu devrais utiliser tout le sirop. Laisser reposer à température ambiante pendant au moins 30 minutes jusqu'à ce que le gâteau soit complètement absorbé et refroidi légèrement. Couper le long des lignes de score pour servir. Basbousa s'améliore après plusieurs heures que les saveurs se mélangent.",
+      "visualCue": {
+        "primaryTarget": "Une surface étincelante, légèrement collante, sans liquide de mise en commun, le sirop s'est complètement absorbé dans la semoule.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sirop est toujours mis en commun dans les lignes de score et à la surface. Le gâteau a l'air mouillé et mouillé.",
+            "action": "Attendez encore 20-30 minutes pour l'absorption. La semoule continuera à boire dans le liquide."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est uniformément brillante mais pas humide. Pas de flaques. Chaque pièce a un même éclat. Le fond de la poêle ne présente qu'un léger résidu de sirop.",
+            "action": "Servir à température ambiante. Chaque pièce doit se sentir humide mais intacte lorsqu'elle est levée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sirop a été ajouté froid à un gâteau froid et est assis sur la surface refusant d'absorber, rendant le haut soggy tandis que l'intérieur reste sec.",
+            "action": "Chauffer brièvement la poêle dans un four à 160°C pendant 5 minutes pour la refondre et faire entrer le sirop."
+          }
+        ]
+      },
+      "feelCue": "Un morceau parfait de basbousa devrait se sentir légèrement dense et humide dans la main — pas lourd avec du sirop, pas sec, mais avec cette texture de semoule caractéristique."
+    }
+  ]
 };

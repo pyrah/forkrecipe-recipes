@@ -1,92 +1,211 @@
 export default {
-  repoId: "master_french_veloute_001",
-  parentRepoId: null,
-  slug: "veloute",
-  author: "ForkRecipe Kitchen",
-  title: "Sauce Velouté",
-  description: "One of the French mother sauces — a blond roux moistened with clear white stock, then patiently simmered and skimmed into a smooth, light, ivory sauce. Named for its velvet texture: it should coat a spoon without ever feeling heavy.",
-  cuisine: "French",
-  culture: "Classical French",
-  category: "sauces",
-  tags: ["sauce", "french", "mother-sauce", "roux", "stock"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "45 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2025-06-09",
-  updatedAt: "2025-06-09",
-  flavorRadar: { sweet: 1, salty: 2, sour: 0, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Liquid",    name: "White stock (chicken or veal)", ratioValue: 12, defaultUnit: "parts", substitutions: ["fish stock", "vegetable stock"] },
-    { ingId: "ing_02", role: "Fat",       name: "Unsalted butter",               ratioValue: 1,  defaultUnit: "parts", substitutions: ["clarified butter"] },
-    { ingId: "ing_03", role: "Structure", name: "All-purpose flour",             ratioValue: 1,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine sea salt",                 ratioValue: 0.1, defaultUnit: "parts", substitutions: ["kosher salt"] },
-    { ingId: "ing_05", role: "Spice",     name: "White pepper",                  ratioValue: 0.02, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_french_veloute_001",
+  "parentRepoId": null,
+  "slug": "veloute",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Velouté",
+  "description": "Une des sauces mères françaises — un roux blond humidifié de blanc clair, puis patiemment mijoté et écrémé dans une sauce ivoire lisse, légère. Nommée pour sa texture velours : elle doit enrober une cuillère sans jamais se sentir lourde.",
+  "cuisine": "Français",
+  "culture": "Français classique",
+  "category": "sauces",
+  "tags": [
+    "sauce",
+    "français",
+    "mère-sauce",
+    "rouge",
+    "stock"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "45 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-06-09",
+  "updatedAt": "2025-06-09",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 2,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Toast",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "blond_roux",
-      instructions: "Melt the butter in a heavy saucepan over medium-low heat until it foams but does not brown. Whisk in the flour all at once. Cook, stirring constantly, a touch longer than you would for a white roux — about 4 to 6 minutes — until the raw-flour smell gives way to a faint scent of toasted hazelnut and the paste takes on a pale straw color.",
-      visualCue: {
-        primaryTarget: "A loose, glossy paste the color of fresh straw — just past pale, not yet tan. It moves like wet sand and smells of warm toasted nuts, not raw flour.",
-        spectrum: [
-          { state: "Underdone", description: "Roux is bright white and pasty, still smells of raw flour and chalk.", action: "Keep stirring over the heat another minute or two until the smell turns nutty and the color shifts to faint straw." },
-          { state: "Perfect",   description: "Even pale straw color, smooth and fluid, smells of toasted hazelnut. Bubbles lazily at the edges.", action: "Pull from the heat for a moment and ready the warm stock." },
-          { state: "Overdone",  description: "Roux has gone golden-brown and smells distinctly toasted, almost like a blond peanut.", action: "It has tipped toward a brun roux — it will tint the sauce and thicken less. Either proceed for a deeper, ivory-tan velouté or start over for a true blond." },
-        ],
-      },
-      feelCue: "The whisk should drag through a soft, fluid paste with almost no resistance — if it stiffens into a dry ball, there is too much flour or not enough fat.",
+      "ingId": "ing_01",
+      "role": "Liquid",
+      "name": "Stock blanc (poulets ou veau)",
+      "ratioValue": 12,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "stocks de poissons",
+        "stock de légumes"
+      ]
     },
     {
-      nodeId: "step_2", action: "Whisk",
-      inputs: ["blond_roux", "ing_01"],
-      outputState: "loose_veloute",
-      instructions: "Off the heat, pour in the warm white stock in a steady stream, whisking constantly. Add it in three or four additions, letting each disappear before the next. Return to medium heat and bring to a gentle boil, whisking, until the sauce thickens and turns glossy. Lumps mean the stock went in too fast — whisk hard or strain.",
-      visualCue: {
-        primaryTarget: "A smooth, pale ivory liquid with no lumps, glossy and just thick enough to leave a fleeting trail behind the whisk as it comes to a boil.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and watery, slides off the whisk like stock with no body.", action: "Keep it at a gentle boil, whisking, for a few more minutes — the starch needs heat to fully thicken." },
-          { state: "Perfect",   description: "Smooth, lump-free, pale ivory. Lightly coats the whisk and flows in a glossy ribbon.", action: "Lower to a bare simmer and begin skimming." },
-          { state: "Overdone",  description: "Sauce is gluey and paste-thick, with a dull matte surface.", action: "Whisk in a little more warm stock to loosen it back to a pourable, glossy consistency." },
-        ],
-      },
-      feelCue: "As the stock goes in, the whisk meets less and less drag — then, as it boils, you feel a sudden gentle thickening grab the whisk. That grab is the starch setting.",
+      "ingId": "ing_02",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre clarifié"
+      ]
     },
     {
-      nodeId: "step_3", action: "Skim",
-      inputs: ["loose_veloute"],
-      outputState: "skimmed_veloute",
-      instructions: "Slide the pan half off the burner so the sauce simmers on one side only — this pushes a skin of fat, foam, and impurities to the cooler side (dépouillage). Simmer gently for 20 to 30 minutes, skimming the surface with a ladle every few minutes, until the sauce is glass-clear in color and reduced to a true nappe.",
-      visualCue: {
-        primaryTarget: "A clean, satiny ivory sauce with a bright, undisturbed surface — no scum, no flecks, no fat slick. It coats the back of a spoon and holds a clean line when you draw a finger through it.",
-        spectrum: [
-          { state: "Underdone", description: "Surface still throws up gray foam and an oily sheen; sauce tastes faintly of raw starch.", action: "Keep skimming and simmering — the foam stops surfacing and the starchy edge fades only with time." },
-          { state: "Perfect",   description: "Glossy, clean ivory surface that stays clear between skims. Coats a spoon in a nappe; a finger drawn across leaves a clean canyon.", action: "Strain through a fine chinois if you like, then season." },
-          { state: "Overdone",  description: "Sauce has reduced too far — thick, sticky, and starting to catch on the bottom of the pan.", action: "Whisk in a splash of warm stock to bring it back to a nappe and lower the heat." },
-        ],
-      },
-      feelCue: "The simmer should be a lazy blip on one side of the pan, never a rolling boil. The sauce smells clean and savory — like good stock made silken, with no raw-flour edge left.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Season",
-      inputs: ["skimmed_veloute", "ing_04", "ing_05"],
-      outputState: "finished_veloute",
-      instructions: "Season with fine sea salt and a small pinch of white pepper — white, so no dark specks mar the pale sauce. Taste and adjust. The velouté should taste of clean, concentrated stock, rounded and gently savory, never floury or flat.",
-      visualCue: {
-        primaryTarget: "A flawless ivory sauce, evenly seasoned with no visible specks, glossy and smooth. It flows in a thick ribbon and slowly settles back to a level surface.",
-        spectrum: [
-          { state: "Underdone", description: "Tastes flat and a little floury — the stock flavor sits muted behind the starch.", action: "Add salt a pinch at a time until the savory depth of the stock snaps into focus." },
-          { state: "Perfect",   description: "Clean ivory, glossy, evenly seasoned. Tastes of rounded, velvety stock with a whisper of pepper.", action: "Use at once, or press plastic onto the surface to hold without forming a skin." },
-          { state: "Overdone",  description: "Over-salted or peppery enough to sting — the delicate stock flavor is buried.", action: "Whisk in a little more unseasoned stock to dilute the seasoning back into balance." },
-        ],
-      },
-      feelCue: "On the spoon it feels like warm velvet — it should coat the tongue smoothly and finish clean, with no grit, no chalk, and no greasy film.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sel casher"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Poivre blanc",
+      "ratioValue": 0.02,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "blond_roux",
+      "instructions": "Faire fondre le beurre dans une casserole lourde à feu moyen-doux jusqu'à ce qu'il mousse mais ne brunisse pas. Frottez la farine en même temps. Cuire, en remuant constamment, une touche plus longue que vous ne le feriez pour un roux blanc — environ 4 à 6 minutes — jusqu'à ce que l'odeur de la farine brute laisse place à un léger parfum de noisettes grillées et que la pâte prenne une couleur paille pâle.",
+      "visualCue": {
+        "primaryTarget": "Une pâte souple et brillante de la couleur de la paille fraîche — juste après pâle, pas encore bronzée. Il se déplace comme du sable humide et des odeurs de noix grillées chaudes, pas de farine crue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Roux est blanc vif et pâteux, sent toujours la farine crue et la craie.",
+            "action": "Continuez à remuer sur le feu encore une minute ou deux jusqu'à ce que l'odeur devienne noisette et que la couleur se déplace vers la paille évanouie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même couleur paille pâle, lisse et fluide, odeurs de noisettes grillées. Bubbles paresseux aux bords.",
+            "action": "Tirez de la chaleur un moment et préparez le stock chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Roux est devenu brun doré et sent nettement grillé, presque comme une cacahuète blonde.",
+            "action": "Il s'est incliné vers un brun roux — il teintera la sauce et épaissira moins. Soit procéder pour une velouté ivoire-tan plus profonde, soit recommencer pour une vraie blonde."
+          }
+        ]
+      },
+      "feelCue": "Le fouet devrait glisser à travers une pâte douce et fluide sans résistance — s'il se raidit dans une boule sèche, il y a trop de farine ou pas assez de graisse."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "blond_roux",
+        "ing_01"
+      ],
+      "outputState": "loose_veloute",
+      "instructions": "Hors de la chaleur, verser dans le stock blanc chaud dans un ruisseau constant, fouettant constamment. Ajoutez-le en trois ou quatre ajouts, laissant chacun disparaître avant le suivant. Retourner à feu moyen et porter à ébullition douce, fouetter, jusqu'à ce que la sauce épaississe et devienne brillante. Lumps signifie que le stock est allé trop vite — fouetter dur ou la souche.",
+      "visualCue": {
+        "primaryTarget": "Un liquide d'ivoire lisse et pâle, sans grumeaux, brillant et juste assez épais pour laisser une trace fugace derrière le fouet quand il vient à ébullition.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et aqueuse, glisse du fouet comme du bouillon sans corps.",
+            "action": "Gardez-le à ébullition douce, fouettant, quelques minutes de plus — l'amidon a besoin de chaleur pour s'épaissir complètement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Doux, sans bosse, ivoire pâle. Enduit légèrement le fouet et coule dans un ruban brillant.",
+            "action": "Descendre à une mijoter nue et commencer à écrémer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est collante et collante, avec une surface mate terne.",
+            "action": "Whirk dans un peu plus chaud stock pour le desserrer à une consistance versable, brillant."
+          }
+        ]
+      },
+      "feelCue": "Au fur et à mesure que le stock entre en jeu, le fouet rencontre de moins en moins de traînées, puis, au fur et à mesure qu'il se bouillit, on sent soudain un léger épaississement saisir le fouet. Cette prise est le réglage de l'amidon."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Abat-jour",
+      "inputs": [
+        "loose_veloute"
+      ],
+      "outputState": "skimmed_veloute",
+      "instructions": "Faites glisser la poêle à moitié du brûleur pour que la sauce mijote d'un seul côté, ce qui pousse une peau de graisse, de mousse et d'impuretés sur le côté plus frais (dépouillage). Laisser mijoter doucement pendant 20 à 30 minutes, en écumant la surface avec une louche toutes les quelques minutes, jusqu'à ce que la sauce soit claire en verre et réduite à une véritable nappe.",
+      "visualCue": {
+        "primaryTarget": "Une sauce ivoire propre et satinée avec une surface brillante et non perturbée: pas de racaille, pas de taches, pas de graisse. Il enveloppe l'arrière d'une cuillère et tient une ligne propre quand vous tirez un doigt à travers elle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface jette encore de la mousse grise et un éclat huileux; la sauce a un goût peu d'amidon brut.",
+            "action": "Continuez à écrémer et à mijoter: la mousse arrête de surfacer et le bord féculent se fane seulement avec le temps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface d'ivoire brillante et propre qui reste dégagée entre les écumes. Coats une cuillère dans une nappe; un doigt tiré à travers laisse un canyon propre.",
+            "action": "Plongez dans un bon chinois si vous voulez, puis assaisonner."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce a diminué trop loin — épaisse, collante, et commence à prendre sur le fond de la poêle.",
+            "action": "fouetter dans un jet de bouillon chaud pour le ramener à une nappe et baisser la chaleur."
+          }
+        ]
+      },
+      "feelCue": "La mijoter doit être un blip paresseux d'un côté de la poêle, jamais un ébullition. La sauce sent propre et savoureuse — comme un bon stock fait de soie, sans bord de fleur brute gauche."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saison",
+      "inputs": [
+        "skimmed_veloute",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "finished_veloute",
+      "instructions": "Assaisonner avec du sel de mer fin et une petite pincée de poivre blanc — blanc, donc pas de taches foncées marment la sauce pâle. Goûtez et ajustez. Le velouté doit avoir un goût propre, concentré, arrondi et légèrement salé, jamais farineux ou plat.",
+      "visualCue": {
+        "primaryTarget": "Une sauce ivoire impeccable, assaisonnée uniformément sans tache visible, brillante et lisse. Il coule dans un ruban épais et s'installe lentement à une surface de niveau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Goûte plat et un peu farineux — la saveur du stock est muette derrière l'amidon.",
+            "action": "Ajouter le sel une pincée à la fois jusqu'à ce que la profondeur savoureuse du stock se met au point."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'ivoire propre, brillant, assaisonné uniformément. Goûts de bouillon arrondi et velouté avec un murmure de poivre.",
+            "action": "Utilisez immédiatement ou pressez le plastique sur la surface pour le maintenir sans former de peau."
+          },
+          {
+            "state": "Overdone",
+            "description": "La saveur délicate du stock est enterrée.",
+            "action": "Whisk dans un peu plus de stock non-saisonné pour diluer l'assaisonnement de nouveau en équilibre."
+          }
+        ]
+      },
+      "feelCue": "Sur la cuillère, il se sent comme du velours chaud — il devrait enrober la langue en douceur et finir propre, sans grain, sans craie et sans film gras."
+    }
+  ]
 };

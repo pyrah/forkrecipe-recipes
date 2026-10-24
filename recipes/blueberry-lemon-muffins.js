@@ -1,90 +1,261 @@
 export default {
-  repoId: "master_american_blueberry_lemon_muffins_001",
-  parentRepoId: null,
-  slug: "blueberry-lemon-muffins",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Blueberry Lemon Muffins",
-  description: "Tall, tender muffins crowned with a crunchy sugar top, their soft sour-cream crumb bursting with jammy blueberries and brightened with fresh lemon zest.",
-  cuisine: "American",
-  culture: "American home baking",
-  category: "desserts",
-  tags: ["muffins", "blueberry", "lemon", "breakfast", "brunch", "home-kitchen", "baking"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  servings: 12,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 4, salty: 1, sour: 2, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure", name: "All-purpose flour",                               ratioValue: 260, defaultUnit: "g",     substitutions: ["60 g whole wheat pastry flour in place of 60 g AP"] },
-    { ingId: "ing_02", role: "Leavener",  name: "Baking powder",                                   ratioValue: 8,   defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_03", role: "Leavener",  name: "Baking soda",                                     ratioValue: 2,   defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Fine salt",                                       ratioValue: 3,   defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener", name: "Granulated sugar",                                ratioValue: 170, defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_06", role: "Citrus",    name: "Lemon, zested and juiced",                        ratioValue: 1,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_07", role: "Binder",    name: "Large eggs, room temperature",                    ratioValue: 2,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_08", role: "Dairy",     name: "Sour cream, full-fat",                            ratioValue: 180, defaultUnit: "g",     substitutions: ["plain whole-milk Greek yogurt"] },
-    { ingId: "ing_09", role: "Dairy",     name: "Whole milk",                                      ratioValue: 60,  defaultUnit: "ml",    substitutions: [] },
-    { ingId: "ing_10", role: "Fat",       name: "Unsalted butter, melted and slightly cooled",     ratioValue: 115, defaultUnit: "g",     substitutions: ["neutral oil, 100 ml"] },
-    { ingId: "ing_11", role: "Aromatic",  name: "Vanilla extract",                                 ratioValue: 5,   defaultUnit: "ml",    substitutions: [] },
-    { ingId: "ing_12", role: "Sweetener", name: "Blueberries, fresh (or frozen, not thawed)",      ratioValue: 250, defaultUnit: "g",     substitutions: ["raspberries", "chopped strawberries"] },
-    { ingId: "ing_13", role: "Garnish",   name: "Turbinado sugar, for topping",                    ratioValue: 25,  defaultUnit: "g",     substitutions: ["granulated sugar mixed with a pinch of lemon zest"] },
+  "repoId": "master_american_blueberry_lemon_muffins_001",
+  "parentRepoId": null,
+  "slug": "blueberry-lemon-muffins",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Muffins de citron de myrtilles",
+  "description": "De grands muffins tendres couronnés d'un haut de sucre croquant, leur mijot doux à la crème aigre éclatant de bleuets confitureux et éclairés de zeste de citron frais.",
+  "cuisine": "Américain",
+  "culture": "Cuisson maison américaine",
+  "category": "desserts",
+  "tags": [
+    "Muffins",
+    "bleuets",
+    "citron",
+    "Petit déjeuner",
+    "brunch",
+    "cuisine maison",
+    "Cuisson"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "servings": 12,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk wet ingredients",
-      inputs: ["ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "muffin_wet_mix",
-      instructions: "Heat the oven to 400°F (200°C) and line a standard 12-cup muffin tin with paper liners (or grease well). In a large bowl, rub the lemon zest into the sugar with your fingertips until fragrant. Whisk in the eggs until smooth, then the sour cream, milk, melted butter, vanilla, and 15 ml of the lemon juice.",
-      visualCue: {
-        primaryTarget: "A smooth, thick, pale-yellow mixture with no lumps of sour cream.",
-        spectrum: [
-          { state: "Underdone", description: "White lumps of sour cream float in the mixture.", action: "Keep whisking until smooth." },
-          { state: "Perfect",   description: "Uniformly smooth and creamy, the thickness of heavy cream.", action: "Add the dry ingredients." },
-          { state: "Overdone",  description: "Butter was cold and has seized into small yellow flecks.", action: "Set the bowl over warm water briefly and whisk until smooth." },
-        ],
-      },
-      feelCue: "The mixture should flow off the whisk in a thick, even stream with no grit from the sugar.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 260,
+      "defaultUnit": "g",
+      "substitutions": [
+        "60 g de farine de pâte de blé entier au lieu de 60 g de PA"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Fold",
-      inputs: ["muffin_wet_mix", "ing_01", "ing_02", "ing_03", "ing_04", "ing_12"],
-      outputState: "muffin_batter",
-      instructions: "Whisk the flour, baking powder, baking soda, and salt in a separate bowl. Take 1 tbsp of this and toss with the blueberries. Add the rest to the wet mixture and fold with a spatula 10–12 strokes, just until mostly combined with a few floury streaks. Add the blueberries and fold 3–4 more strokes until no dry flour shows. The batter should be thick and lumpy.",
-      visualCue: {
-        primaryTarget: "A thick, lumpy batter with blueberries distributed throughout and no dry pockets.",
-        spectrum: [
-          { state: "Underdone", description: "Dry flour pockets are visible on the bottom.", action: "Fold 2–3 more strokes from the bottom up." },
-          { state: "Perfect",   description: "Thick, lumpy, and scoopable, with berries intact and just a few faint purple streaks.", action: "Portion immediately." },
-          { state: "Overdone",  description: "Batter is smooth, stretchy, and streaked heavily purple with crushed berries.", action: "Bake it; expect a tighter crumb and flatter tops." },
-        ],
-      },
-      feelCue: "The spatula should feel resistance, like folding thick oatmeal, rather than gliding through a pourable batter.",
+      "ingId": "ing_02",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Bake",
-      inputs: ["muffin_batter", "ing_13"],
-      outputState: "baked_muffins",
-      instructions: "Divide the batter evenly among the 12 cups (about 85 g each) — they'll be filled to the top, which gives a tall dome. Sprinkle the tops generously with turbinado sugar. Bake 18–22 minutes, until domed and golden and a toothpick in the center of a muffin comes out clean or with a few moist crumbs (streaks of purple berry juice are fine; wet batter is not). Cool 5 minutes in the tin, then transfer to a rack.",
-      visualCue: {
-        primaryTarget: "High, golden, cracked domes with sparkling sugar crusts.",
-        spectrum: [
-          { state: "Underdone", description: "Tops are pale and shiny in the cracks, and the toothpick comes out with wet batter.", action: "Bake 2–3 more minutes and test again." },
-          { state: "Perfect",   description: "Golden domes with a light-brown edge, sugar crust crunchy, toothpick clean or with moist crumbs, and tops spring back when pressed.", action: "Cool 5 minutes in the tin." },
-          { state: "Overdone",  description: "Deep brown sides and a dry, crumbly crumb.", action: "Serve warm with butter; pull the next batch 3 minutes sooner." },
-        ],
-      },
-      feelCue: "A light press on the dome should spring back at once, and the sugar crust should crackle under your fingertip.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "Soda au four",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre granulé",
+      "ratioValue": 170,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Citrus",
+      "name": "Citron, zeste et jus",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Binder",
+      "name": "Gros œufs, température ambiante",
+      "ratioValue": 2,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Dairy",
+      "name": "Crème aigre, pleine graisse",
+      "ratioValue": 180,
+      "defaultUnit": "g",
+      "substitutions": [
+        "yogourt grec à lait entier"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Dairy",
+      "name": "Lait entier",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Beurre non salé fondu et légèrement refroidi",
+      "ratioValue": 115,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile neutre, 100 ml"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Aromatic",
+      "name": "Extrait de vanille",
+      "ratioValue": 5,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Sweetener",
+      "name": "Bleuets frais (ou congelés, non dégelés)",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "framboises",
+        "fraises hachées"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Garnish",
+      "name": "Sucre Turbinado, pour garniture",
+      "ratioValue": 25,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre granulé mélangé avec une pincée de zeste de citron"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "fouetter les ingrédients humides",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "muffin_wet_mix",
+      "instructions": "Chauffer le four à 400°F (200°C) et allonger une boîte à muffins standard de 12 tasses avec des doublures en papier (ou bien graisser). Dans un grand bol, frotter le zeste de citron dans le sucre avec le bout des doigts jusqu'à odorat. fouetter les œufs jusqu'à ce qu'ils soient lisses, puis la crème sure, le lait, le beurre fondu, la vanille et 15 ml du jus de citron.",
+      "visualCue": {
+        "primaryTarget": "Un mélange lisse, épais, jaune pâle sans grumeaux de crème aigre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des morceaux blancs de crème sure flottent dans le mélange.",
+            "action": "Continuez à fouetter jusqu'à ce qu'il soit lisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Lisses et crémeuses, l'épaisseur de la crème lourde.",
+            "action": "Ajouter les ingrédients secs."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre était froid et s'est emparé de petites taches jaunes.",
+            "action": "Placer le bol sur de l'eau tiède brièvement et fouetter jusqu'à ce qu'il soit lisse."
+          }
+        ]
+      },
+      "feelCue": "Le mélange doit s'écouler du fouet dans un ruisseau épais, même sans râpe du sucre."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "muffin_wet_mix",
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_12"
+      ],
+      "outputState": "muffin_batter",
+      "instructions": "Dans un bol séparé, fouetter la farine, la poudre à pâte, le bicarbonate de soude et le sel. Prenez 1 c. à soupe et lancez avec les bleuets. Ajouter le reste au mélange humide et plier avec une spatule 10-12 coups, juste jusqu'à ce que la plupart combinés avec quelques stries farineuses. Ajouter les bleuets et plier 3 à 4 traits de plus jusqu'à ce qu'aucune farine sèche ne montre. La pâte doit être épaisse et bosselée.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse et grumelée avec des bleuets distribués dans toutes les poches et sans poches sèches.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les poches de farine sèche sont visibles sur le fond.",
+            "action": "Plier 2 à 3 coups de plus du bas vers le haut."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, grumeaux et écorcables, avec des baies intactes et quelques petites stries violettes.",
+            "action": "Portion immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batte est lisse, stretchy et striée fortement pourpre avec des baies concassées.",
+            "action": "Faites-le cuire, attendez-vous à une miette plus serrée et à des sommets plus plats."
+          }
+        ]
+      },
+      "feelCue": "La spatule devrait sentir la résistance, comme plier les épais flocons d'avoine, plutôt que de glisser à travers une pâte versable."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "muffin_batter",
+        "ing_13"
+      ],
+      "outputState": "baked_muffins",
+      "instructions": "Divisez la pâte uniformément parmi les 12 tasses (environ 85 g chacune) – elles seront remplies au sommet, ce qui donne un grand dôme. Saupoudrer généreusement de sucre turbinado. Cuire de 18 à 22 minutes, jusqu'à ce qu'un dôme et un cure-dent au centre d'un muffin sortent propres ou avec quelques miettes humides (les streaks de jus de baies violettes sont fins; pâte humide n'est pas). Laisser refroidir 5 minutes dans l'étain, puis transférer sur un rack.",
+      "visualCue": {
+        "primaryTarget": "Dômes hauts, dorés, fissurés avec des croûtes de sucre mousseux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les dessus sont pâles et brillants dans les fissures, et le cure-dent sort avec une pâte humide.",
+            "action": "Faire cuire encore 2-3 minutes et tester à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Dômes dorés à bord brun clair, croûte de sucre croustillante, cure-dent propre ou avec miettes humides, et le dessus ressort quand pressé.",
+            "action": "Laisser refroidir 5 minutes dans l'étain."
+          },
+          {
+            "state": "Overdone",
+            "description": "Des côtés brun foncé et une miette sèche et friable.",
+            "action": "Servir au chaud avec du beurre; tirer le lot suivant 3 minutes plus tôt."
+          }
+        ]
+      },
+      "feelCue": "Une légère pression sur le dôme devrait revenir immédiatement, et la croûte de sucre devrait craquer sous votre bout de doigt."
+    }
+  ]
 };

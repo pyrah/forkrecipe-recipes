@@ -1,127 +1,267 @@
 export default {
-  repoId: "master_japanese_misopaste_001",
-  parentRepoId: null,
-  slug: "miso-paste",
-  author: "ForkRecipe Kitchen",
-  title: "White Shiro Miso",
-  description: "Short-fermented, mild, and sweetly umami — white miso made from steamed soybeans, rice koji, and salt aged weeks rather than years for a pale, paste-smooth result.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "fermented",
-  tags: ["japanese", "miso", "fermented", "umami", "koji", "soybeans", "condiment", "paste"],
-  difficulty: 4,
-  activeTime: "1 hr",
-  totalTime: "4 weeks",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 2, salty: 4, sour: 1, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried soybeans",                            ratioValue: 500, defaultUnit: "g", substitutions: ["yellow soybeans", "chickpeas (for a lighter flavored miso)"] },
-    { ingId: "ing_02", role: "Starch",    name: "Rice koji (fresh or dried)",                 ratioValue: 500, defaultUnit: "g", substitutions: ["barley koji (gives slightly earthier miso)"] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fine non-iodized sea salt",                  ratioValue: 150, defaultUnit: "g", substitutions: ["non-iodized kosher salt — never iodized salt, which inhibits fermentation"] },
-    { ingId: "ing_04", role: "Hydration", name: "Reserved soybean cooking water, cooled",     ratioValue: 100, defaultUnit: "g", substitutions: ["filtered water"] },
+  "repoId": "master_japanese_misopaste_001",
+  "parentRepoId": null,
+  "slug": "miso-paste",
+  "author": "ForkRecipe Kitchen",
+  "title": "Shiro Miso blanc",
+  "description": "Sucré, doux et doux — miso blanc à base de soja à la vapeur, de koji de riz et de sel pendant des semaines plutôt que des années pour un résultat pâle et pâteux.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "fermented",
+  "tags": [
+    "Japonais",
+    "miso",
+    "fermenté",
+    "umami",
+    "Koji",
+    "soja",
+    "condiment",
+    "pâte"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hr",
+  "totalTime": "4 weeks",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Rest",
-      inputs: ["ing_01"],
-      outputState: "soaked_soybeans",
-      instructions: "Rinse the dried soybeans thoroughly. Place in a large bowl and cover with cold water by at least 10 cm — the beans will roughly double in size overnight. Soak for a minimum of 12 hours, ideally 18. Drain and discard the soaking water.",
-      visualCue: {
-        primaryTarget: "Fully hydrated soybeans that have plumped to roughly twice their original size. Skins are smooth and taut, no wrinkling. Opaque pale yellow throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Beans still show wrinkling or are noticeably smaller than twice their dry size. Hard at the center when bitten.", action: "Soak longer — ideally overnight (12–18 hours). Under-soaked beans cook unevenly and produce a gritty miso paste." },
-          { state: "Perfect",   description: "Plump, smooth-skinned, and uniformly pale. Yield cleanly when split — no hard center, no wrinkled skin.", action: "Drain and proceed to cooking." },
-          { state: "Overdone",  description: "Beans have begun to ferment in the soaking water — skins have split, liquid is slightly bubbly or sour-smelling.", action: "Drain and cook immediately. The fermentation is harmless but indicates the beans have soaked too long in warm conditions." },
-        ],
-      },
-      feelCue: "A fully soaked soybean pressed between the thumb and forefinger should yield readily and split cleanly, feeling much like a firm cooked bean — soft, not starchy or powdery.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Soya séché",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "soja jaune",
+        "pois chiches (pour un miso aromatisé plus léger)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["soaked_soybeans"],
-      outputState: "cooked_soybeans",
-      instructions: "Transfer soaked beans to a large pot and cover with fresh water by 5 cm. Bring to a boil, skim the foam, then reduce to a steady simmer. Cook for 3–4 hours until the soybeans are completely soft — they should crush between thumb and ring finger with almost no effort. Taste one: it should be creamy, not starchy. Reserve 100 g of the cooking water before draining.",
-      visualCue: {
-        primaryTarget: "Soybeans that have swelled further and turned a deeper, creamy yellow. The cooking water is lightly cloudy and golden-tinted.",
-        spectrum: [
-          { state: "Underdone", description: "Beans are still firm at the center when crushed. Starchy, chalky taste.", action: "Continue simmering — under-cooked soybeans produce a grainy, poorly textured miso and ferment unevenly." },
-          { state: "Perfect",   description: "The bean crushes completely under gentle thumb-ring-finger pressure, feeling like soft butter. Taste is nutty and creamy.", action: "Reserve cooking water, drain, and cool to room temperature before blending." },
-          { state: "Overdone",  description: "Beans have broken apart in the water and partially disintegrated.", action: "Proceed — the miso paste will be slightly more liquid but will still ferment and taste correct. Use less cooking water to compensate." },
-        ],
-      },
-      feelCue: "The thumb-ring-finger test is definitive: if the bean disappears into a smooth paste between those two fingers with no resistance, it is ready.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Riz koji (fraîche ou séché)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "orge koji (donne un peu plus de terre)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["cooked_soybeans", "ing_04"],
-      outputState: "soybean_paste",
-      instructions: "While still warm, blend or pound the cooked soybeans to a smooth paste using a food processor, blender, or traditional suribachi (grinding bowl). Add the reserved cooking water a little at a time to achieve a smooth, thick consistency — similar to very stiff hummus. No visible bean pieces should remain.",
-      visualCue: {
-        primaryTarget: "A thick, completely smooth, pale amber paste that mounds on a spatula and drops slowly. No visible skins or bean pieces.",
-        spectrum: [
-          { state: "Underdone", description: "Paste is grainy or lumpy — bean pieces still visible. Skin fragments in the mixture.", action: "Continue blending. Pass through a coarse sieve if needed to remove any skins that resist blending." },
-          { state: "Perfect",   description: "Completely smooth, thick, and glossy. When you run a spatula through it, the trail holds cleanly. Drops from a spoon in slow, heavy blobs.", action: "Cool fully to room temperature before combining with the koji-salt mixture." },
-          { state: "Overdone",  description: "Paste is thin and soupy — too much cooking water added.", action: "Spread on a flat tray and let cool — the starch will thicken it slightly. Proceed with less cooking water compensation." },
-        ],
-      },
-      feelCue: "Rub a little soybean paste between your fingertips — it should feel completely smooth, with no granular texture whatsoever, like very thick pudding.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Sel de mer fin non iodé",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher non iodé — sel jamais iodé, qui inhibe la fermentation"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Mix",
-      inputs: ["ing_02", "ing_03"],
-      outputState: "koji_salt_mix",
-      instructions: "Combine the rice koji and the fine salt in a large bowl. Rub the salt into the koji with both hands for 2–3 minutes, squeezing and pressing to ensure every grain of koji is coated in salt. The salt both seasons the miso and protects against harmful bacteria during fermentation.",
-      visualCue: {
-        primaryTarget: "A slightly damp, uniformly salted koji mixture. Every grain coated in white salt. The koji should be fragrant — faintly sweet, mushroom-like, and slightly floral.",
-        spectrum: [
-          { state: "Underdone", description: "Salt and koji appear separate — pockets of white salt visible sitting on top of the koji grains.", action: "Rub and squeeze with both hands until the salt is fully and evenly distributed through the koji." },
-          { state: "Perfect",   description: "Uniform, slightly damp mixture with every grain of koji coated. The mass is cohesive and smells of sweet rice and salt.", action: "Combine immediately with the cooled soybean paste." },
-          { state: "Overdone",  description: "Koji has been crushed to a powder from over-vigorous rubbing.", action: "Proceed — powdered koji still ferments correctly, though the final texture may be slightly denser." },
-        ],
-      },
-      feelCue: "Grab a handful of the koji-salt mix and squeeze — it should clump together momentarily, then crumble apart, each grain distinct but salt-coated.",
-    },
-    {
-      nodeId: "step_5",
-      action: "Mix",
-      inputs: ["soybean_paste", "koji_salt_mix"],
-      outputState: "miso_mixture",
-      instructions: "Combine the cooled soybean paste and the koji-salt mixture in a large bowl. Mix thoroughly with your hands, squeezing and pressing until completely uniform — no streaks of pale soybean paste visible, no unmixed pockets of koji. Form the mixture into balls roughly the size of a tennis ball by pressing firmly.",
-      visualCue: {
-        primaryTarget: "A uniform, pale, slightly grainy-textured paste with no streaks or unmixed pockets. Can be formed into cohesive balls without crumbling.",
-        spectrum: [
-          { state: "Underdone", description: "Streaks of pale soybean paste and darker koji-salt visible. Mixture crumbles when formed into a ball.", action: "Continue mixing with both hands. Every gram of koji must have direct contact with the soybean paste to ferment evenly." },
-          { state: "Perfect",   description: "Uniform color and texture throughout. The mixture holds a ball shape under light pressure without cracking.", action: "Begin packing firmly into the sterilized fermentation crock." },
-          { state: "Overdone",  description: "Mixture has been warmed from too much hand contact, becoming slightly greasy or sticky.", action: "Cool the mixture for 10 minutes in the refrigerator, then continue. Warm miso mixture packs poorly." },
-        ],
-      },
-      feelCue: "The miso mixture should feel like dense, slightly wet clay — malleable, cohesive, and willing to be formed without sticking aggressively to your hands.",
-    },
-    {
-      nodeId: "step_6",
-      action: "Ferment",
-      inputs: ["miso_mixture"],
-      outputState: "finished_white_miso",
-      instructions: "Sterilize a crock or large jar with boiling water. Throw each ball of miso mixture into the crock with force, pressing firmly to eliminate all air pockets. Smooth the surface flat. Sprinkle a thin layer of salt over the entire surface to protect it. Press plastic wrap directly against the surface, then place a weight on top. Cover the crock with a cloth and store at room temperature (18–22°C) for 3–4 weeks, tasting weekly. Refrigerate once the flavor is mild, sweet, and satisfyingly salty-umami.",
-      visualCue: {
-        primaryTarget: "After 3–4 weeks: a darker, deeper amber surface with a clean, miso-like aroma. The paste has contracted slightly from the crock walls. No mold beneath the protective salt layer.",
-        spectrum: [
-          { state: "Underdone", description: "After 3 weeks: paste still tastes raw and salty with no sweet umami development. Pale, almost identical to when packed.", action: "Leave for another 1–2 weeks. Temperature below 18°C slows fermentation significantly." },
-          { state: "Perfect",   description: "Pale golden-brown with a sweet, mild, savory depth. Umami is present but not aggressive. Salt rounds into the background. Texture is smooth and spreadable.", action: "Refrigerate immediately to arrest fermentation. White miso will keep refrigerated for 3 months." },
-          { state: "Overdone",  description: "Very dark surface, intensely salty, sour or alcoholic smell. Possible dark mold growth at the edges (scrape away before tasting).", action: "Taste below the surface — if still pleasant, refrigerate now. Salty miso can be used as a seasoning paste rather than a soup base." },
-        ],
-      },
-      feelCue: "Properly fermented shiro miso should feel smooth and cohesive when smeared across a fingertip — silky, not grainy — and the aroma should make your mouth water before you even taste it.",
-    },
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Eau de cuisson de soja, refroidie",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau filtrée"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Repos",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "soaked_soybeans",
+      "instructions": "Rincer soigneusement le soja séché. Placer dans un grand bol et couvrir d'eau froide d'au moins 10 cm — les haricots doubleront à peu près en taille pendant la nuit. Tremper pendant au moins 12 heures, idéalement 18. Égoutter et jeter l'eau de trempage.",
+      "visualCue": {
+        "primaryTarget": "Soya entièrement hydraté qui a plu à environ deux fois sa taille originale. Les peaux sont lisses et tendues, sans rides. Jaune pâle opaque dans l'ensemble.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les haricots présentent toujours des rides ou sont nettement plus petits que deux fois leur taille sèche. Dur au centre quand mordu.",
+            "action": "Faire tremper plus longtemps — idéalement pendant la nuit (12–18 heures). Les haricots sous-poêlés font une cuisson inégale et produisent une pâte de miso."
+          },
+          {
+            "state": "Perfect",
+            "description": "Plume, à la peau lisse et uniformément pâle. Rendement net en cas de division — pas de centre dur, pas de peau ridée.",
+            "action": "Égoutter et procéder à la cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots ont commencé à fermenter dans l'eau de trempage — les peaux se sont fendues, le liquide est légèrement bouillant ou amer.",
+            "action": "Égoutter et cuire immédiatement. La fermentation est inoffensive mais indique que les haricots ont trempé trop longtemps dans des conditions chaudes."
+          }
+        ]
+      },
+      "feelCue": "Un soja entièrement imbibé pressé entre le pouce et l'index doit produire facilement et se fractionner proprement, se sentant comme un haricot cuit ferme — doux, non féculent ou poudreux."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "soaked_soybeans"
+      ],
+      "outputState": "cooked_soybeans",
+      "instructions": "Transférer les haricots trempés dans une grande casserole et couvrir d'eau douce de 5 cm. Porter à ébullition, écrémer la mousse, puis réduire à un ébullition régulier. Cuire pendant 3 à 4 heures jusqu'à ce que le soja soit complètement mou — ils devraient écraser entre le pouce et l'annulaire avec presque aucun effort. Goûtez un: il doit être crémeux, pas féculent. Réserver 100 g d'eau de cuisson avant l'égouttage.",
+      "visualCue": {
+        "primaryTarget": "Les sojas qui ont gonflé plus loin et sont devenus un jaune crème plus profond. L'eau de cuisson est légèrement nuageuse et dorée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les haricots sont encore fermes au centre quand ils sont écrasés. Starchy, goût crayeux.",
+            "action": "Continuer à mijoter: le soja sous-cuit produit un miso et un ferment granuleux et mal texturés."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le haricot s'écrase complètement sous une légère pression au pouce et au doigt, sentant le beurre doux. Le goût est noisette et crémeuse.",
+            "action": "Réserver l'eau de cuisson, égoutter et refroidir à la température ambiante avant de mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots se sont brisés dans l'eau et partiellement désintégrés.",
+            "action": "Procéder — la pâte miso sera un peu plus liquide mais sera toujours fermentée et le goût correct. Utilisez moins d'eau de cuisson pour compenser."
+          }
+        ]
+      },
+      "feelCue": "Le test du pouce-ring-finger est définitif : si le haricot disparaît dans une pâte lisse entre ces deux doigts sans résistance, il est prêt."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "cooked_soybeans",
+        "ing_04"
+      ],
+      "outputState": "soybean_paste",
+      "instructions": "Bien qu'il soit encore chaud, mélanger ou bourrer le soja cuit en pâte lisse à l'aide d'un robot culinaire, d'un mélangeur ou d'un suribachi traditionnel. Ajoutez l'eau de cuisson réservée un peu à la fois pour obtenir une consistance lisse et épaisse, semblable à un hummus très raide. Il ne doit pas rester de morceaux de haricots visibles.",
+      "visualCue": {
+        "primaryTarget": "Une pâte d'ambre épaisse, complètement lisse et pâle qui fond sur une spatule et tombe lentement. Pas de peaux visibles ou de morceaux de haricots.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est grineuse ou grincheuse — des morceaux de haricots encore visibles. fragments de peau dans le mélange.",
+            "action": "Continuez à mélanger. Passer à travers un tamis grossier si nécessaire pour enlever les peaux qui résistent au mélange."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, épais et brillant. Quand on y fait passer une spatule, le sentier se tient parfaitement. Des gouttes d'une cuillère dans des taches lentes et lourdes.",
+            "action": "Refroidir complètement à la température ambiante avant de combiner avec le mélange koji-sel."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte est fine et soupeuse — trop d'eau de cuisson ajoutée.",
+            "action": "Étaler sur un plateau plat et laisser refroidir — l'amidon l'épaissira légèrement. Procéder avec moins de compensation de l'eau de cuisson."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite pâte de soja entre vos doigts — elle devrait être complètement lisse, sans texture granulaire, comme du pudding très épais."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "koji_salt_mix",
+      "instructions": "Mélanger le riz koji et le sel fin dans un grand bol. Frotter le sel dans le koji avec les deux mains pendant 2 à 3 minutes, presser et presser pour s'assurer que chaque grain de koji est enrobé de sel. Le sel assaille le miso et protège contre les bactéries nuisibles pendant la fermentation.",
+      "visualCue": {
+        "primaryTarget": "Un mélange de koji légèrement humide, uniformément salé. Chaque grain recouvert de sel blanc. Le koji devrait être parfumé — légèrement sucré, semblable à un champignon et légèrement floral.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le sel et le koji apparaissent séparés — des poches de sel blanc visibles assises sur les grains koji.",
+            "action": "Frottez et pressez les deux mains jusqu'à ce que le sel soit entièrement et uniformément distribué à travers le koji."
+          },
+          {
+            "state": "Perfect",
+            "description": "Mélange uniforme, légèrement humide avec chaque grain de koji enrobé. La masse est cohésive et sent le riz sucré et le sel.",
+            "action": "Mélanger immédiatement avec la pâte de soja refroidie."
+          },
+          {
+            "state": "Overdone",
+            "description": "Koji a été écrasé à une poudre à la suite de frottements trop vigoureux.",
+            "action": "Procéder — koji pulvérisé toujours ferments correctement, bien que la texture finale peut être légèrement plus dense."
+          }
+        ]
+      },
+      "feelCue": "Prenez une poignée du mélange koji-sel et pressez - il devrait se serrer momentanément, puis s'effondrer, chaque grain distinct mais salin."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Mélange",
+      "inputs": [
+        "soybean_paste",
+        "koji_salt_mix"
+      ],
+      "outputState": "miso_mixture",
+      "instructions": "Mélanger la pâte de soja refroidie et le mélange koji-sel dans un grand bol. Mélanger soigneusement avec vos mains, presser et presser jusqu'à ce qu'il soit complètement uniforme — pas de stries de pâte de soja pâle visible, pas de poches de koji non mélangées. Former le mélange en boules environ de la taille d'une balle de tennis en appuyant fermement.",
+      "visualCue": {
+        "primaryTarget": "Une pâte uniforme, pâle, légèrement texturée, sans stries ni poches non mélangées. Peut se former en boules cohésives sans s'effondrer.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Streaks de pâte de soja pâle et de koji-sel plus foncé visibles. Le mélange s'écroule lorsqu'il est formé en boule.",
+            "action": "Continuer à mélanger avec les deux mains. Chaque gramme de koji doit avoir un contact direct avec la pâte de soja à fermenter uniformément."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur et texture uniformes. Le mélange maintient une bille sous pression lumineuse sans fissuration.",
+            "action": "Commencez à emballer fermement dans la roche stérilisée de fermentation."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange a été chauffé par trop de contact avec les mains, devenant légèrement gras ou collant.",
+            "action": "Laisser refroidir le mélange 10 minutes au réfrigérateur, puis continuer. Le mélange miso chaud est mal emballé."
+          }
+        ]
+      },
+      "feelCue": "Le mélange miso doit se sentir comme de l'argile dense, légèrement humide, malléable, cohésive et prête à se former sans s'accrocher agressivement à vos mains."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Ferment",
+      "inputs": [
+        "miso_mixture"
+      ],
+      "outputState": "finished_white_miso",
+      "instructions": "Stériliser une cruche ou un grand pot avec de l'eau bouillante. Jetez chaque boule de mélange miso dans la roche avec force, appuyez fermement pour éliminer toutes les poches d'air. Lisser la surface à plat. Saupoudrer une fine couche de sel sur toute la surface pour la protéger. Appuyez directement sur l'enveloppe plastique contre la surface, puis placez un poids sur le dessus. Couvrir la roche avec un chiffon et conserver à température ambiante (18–22°C) pendant 3–4 semaines, dégustation hebdomadaire. Réfrigérer une fois la saveur est douce, douce, et satisfaisantement salée-umami.",
+      "visualCue": {
+        "primaryTarget": "Après 3-4 semaines : une surface ambre plus foncée et plus profonde avec un arôme propre et miso. La pâte s'est légèrement contractée des parois de la roche. Pas de moule sous la couche de sel protectrice.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Après 3 semaines : la pâte a encore un goût cru et salé sans développement umami sucré. Pale, presque identique à quand emballé.",
+            "action": "Laisser passer 1 à 2 semaines de plus. La température inférieure à 18°C ralentit significativement la fermentation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Marron doré pâle avec une profondeur douce et salée. Umami est présent mais pas agressif. Du sel dans le fond. La texture est lisse et extensible.",
+            "action": "Réfrigérer immédiatement pour arrêter la fermentation. Le miso blanc restera réfrigéré pendant 3 mois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surface très foncée, intensement salée, aigre ou alcoolique. Possible croissance des moisissures foncées aux bords (scrape loin avant la dégustation).",
+            "action": "Goûtez sous la surface — si toujours agréable, réfrigérez maintenant. Le miso salé peut être utilisé comme pâte assaisonnée plutôt que comme base de soupe."
+          }
+        ]
+      },
+      "feelCue": "Un shiro miso bien fermenté devrait se sentir lisse et cohésif lorsqu'il est frotté sur un bout de doigt — soyeux, pas granuleux — et l'arôme devrait faire votre eau de bouche avant même de le goûter."
+    }
+  ]
 };

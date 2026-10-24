@@ -1,94 +1,230 @@
 export default {
-  repoId: "master_japanese_soft_boiled_ramen_eggs_001",
-  parentRepoId: null,
-  slug: "soft-boiled-ramen-eggs",
-  author: "ForkRecipe Kitchen",
-  title: "Ajitsuke Tamago",
-  description: "Soft-boiled eggs with a jammy, barely-set yolk, peeled and marinated overnight in a soy-mirin-sake tare until the whites stain amber and the yolks turn into a fudgy, deeply savory gold.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "eggs",
-  tags: ["ramen-egg", "japanese", "marinated", "soft-boiled", "umami", "gluten-free"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "13 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 4, sour: 0, bitter: 0, umami: 4, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Large eggs (cold from fridge)",        ratioValue: 6,   defaultUnit: "eggs",  substitutions: [] },
-    { ingId: "ing_02", role: "Umami",     name: "Soy sauce (koikuchi)",                 ratioValue: 4,   defaultUnit: "parts", substitutions: ["tamari (gluten-free)"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Mirin (hon-mirin)",                    ratioValue: 4,   defaultUnit: "parts", substitutions: ["sweet rice wine"] },
-    { ingId: "ing_04", role: "Solvent",   name: "Sake",                                 ratioValue: 2,   defaultUnit: "parts", substitutions: ["dry sherry", "water"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Water",                                ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Dried kombu (5 cm piece)",             ratioValue: 1,   defaultUnit: "piece", substitutions: [] },
-    { ingId: "ing_07", role: "Liquid",    name: "Water (for boiling)",                  ratioValue: 20,  defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_japanese_soft_boiled_ramen_eggs_001",
+  "parentRepoId": null,
+  "slug": "soft-boiled-ramen-eggs",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ajitsuke Tamago",
+  "description": "Oeufs mous avec un jaune jammy, à peine coupé, pelé et mariné pendant la nuit dans une tare de soja-mirin-sake jusqu'à ce que les blancs tachent l'ambre et les jaunes se transforment en un or flou et profondément salé.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "eggs",
+  "tags": [
+    "Légumes et légumes",
+    "Japonais",
+    "mariné",
+    "huilé doux",
+    "umami",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "13 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 4,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Boil",
-      inputs: ["ing_07", "ing_01"],
-      outputState: "soft_boiled_eggs",
-      instructions: "Bring a pot of water to a vigorous, rolling boil — enough water to cover the eggs by at least 2 cm. Lower the eggs in one at a time using a slotted spoon or spider, straight from the refrigerator (cold eggs into boiling water give more predictable timing). Boil at a steady medium-high simmer — not a furious churn that cracks the shells — for exactly 6 minutes and 30 seconds. Meanwhile, prepare an ice bath in a large bowl. At time, transfer immediately to the ice bath and chill for at least 5 minutes before peeling.",
-      visualCue: {
-        primaryTarget: "Water at a steady, moderate boil — active bubbles but not violent. Eggs fully submerged. Timer is the true guide here; visual cues during boiling are minimal.",
-        spectrum: [
-          { state: "Underdone", description: "Below 6 minutes: whites will be set on the outside but translucent and jelly-like near the yolk — too loose to peel cleanly.", action: "Return to the boiling water for 30-second increments and re-ice each time." },
-          { state: "Perfect",   description: "At 6 min 30 sec (from cold-fridge eggs): whites fully set and just firm, yolk is jammy and deeply golden with a liquid-soft center that yields under gentle pressure. The egg holds its shape but the yolk trembles.", action: "Transfer immediately to the ice bath to stop all cooking." },
-          { state: "Overdone",  description: "Beyond 7 minutes: yolk center begins to set and firm, losing the fudgy jammy texture; a pale grey-green ring will form around the yolk at 9+ minutes.", action: "Use these eggs for another purpose (deviled eggs, egg salad). Start a fresh batch and time precisely." },
-        ],
-      },
-      feelCue: "When you remove the egg and press it gently through the shell, the yolk should offer almost no resistance — you'll feel it yield like cold butter, a soft give that tells you the center is still set-but-tender.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Gros œufs (froid du réfrigérateur)",
+      "ratioValue": 6,
+      "defaultUnit": "eggs",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Peel",
-      inputs: ["soft_boiled_eggs"],
-      outputState: "peeled_soft_boiled_eggs",
-      instructions: "Peel the chilled eggs under a thin stream of cold running water. Crack the shell all over by rolling the egg gently on the counter, then begin peeling from the broad end where the air pocket is, slipping your thumb under the membrane. The cold water helps the membrane separate from the white cleanly. Work slowly — a 6.5-minute egg white is set but more delicate than a hard-boiled one. Pat dry with kitchen paper when done.",
-      visualCue: {
-        primaryTarget: "A smooth, unblemished egg white surface — glossy, ivory-white, with no gouges or tears. The white holds its oval shape firmly when cupped in the palm.",
-        spectrum: [
-          { state: "Underdone", description: "The white tears as you peel — chunks of white coming away with the shell membrane, leaving a pockmarked surface. The egg may have been under-chilled or peeled too soon.", action: "Chill for longer in the ice bath (up to 10 minutes) before attempting to peel the remaining eggs." },
-          { state: "Perfect",   description: "Shell comes away in large pieces with the membrane intact; the white is smooth, firm, and completely opaque. No stickiness between shell and white.", action: "Pat dry and proceed to the marinade." },
-          { state: "Overdone",  description: "Shell sticks aggressively and takes large chunks of white with it — often caused by very fresh eggs (low pH) or insufficient chilling. The egg surface is ragged.", action: "Fresh eggs always peel more poorly; use eggs that are at least a week old. A teaspoon of baking soda in the boiling water can also help." },
-        ],
-      },
-      feelCue: "A properly peeled, well-chilled ajitsuke tamago should feel firm but not rubbery in the palm — compact, cool, and smooth, like a small polished stone.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "sauce soja (koikuchi)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tamari (sans gluten)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06"],
-      outputState: "cooled_tare",
-      instructions: "Combine the soy sauce, mirin, sake, water, and kombu in a small saucepan. Bring to a gentle simmer over medium heat and cook for 3 minutes to cook off the alcohol from the sake and let the kombu begin releasing its glutamates. Remove the kombu after 4 minutes total (over-steeped kombu turns slimy and bitter). Cool the tare completely to room temperature before adding the eggs — adding warm eggs to warm tare cooks the yolk further. The tare can be prepared hours ahead.",
-      visualCue: {
-        primaryTarget: "A dark amber, glossy liquid that smells simultaneously sweet and savory — the raw alcohol edge of the sake should be gone, replaced by a rounded, warm fragrance.",
-        spectrum: [
-          { state: "Underdone", description: "Tare smells sharp and alcoholic — the sake has not cooked off fully. Color is pale for the ratio of soy used.", action: "Simmer 2 more minutes until the sharp alcohol note disappears from the steam." },
-          { state: "Perfect",   description: "Deep amber, smells complex: sweet mirin caramel, saline soy, a marine whisper from the kombu. Tastes intensely seasoned — it should, as it will be diluted by the egg white over hours.", action: "Cool completely, remove kombu, and add the peeled eggs." },
-          { state: "Overdone",  description: "Tare has reduced by more than a third — now very thick and cloying, potentially burning the soy sugars. Smells scorched rather than sweet.", action: "Add water to restore the volume and adjust salinity to taste." },
-        ],
-      },
-      feelCue: "Dip a fingertip into the cooled tare — it should feel slightly sticky and coat your skin. Taste it: aggressively savory and sweet, nearly overwhelmingly so, which is correct for a marinade.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Mirin (Hon-mirin)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Vin de riz doux"
+      ]
     },
     {
-      nodeId: "step_4", action: "Marinate",
-      inputs: ["peeled_soft_boiled_eggs", "cooled_tare"],
-      outputState: "marinated_ramen_eggs",
-      instructions: "Place the peeled eggs in a zip-lock bag or a snug container just large enough to hold them. Pour the cooled tare over the eggs and seal the bag, pressing out the air so the tare contacts every surface of each egg. Refrigerate for at least 4 hours; overnight (8–12 hours) is ideal. Do not exceed 24 hours — the salt will tighten the white to a rubbery, overly-dense texture and the yolk will lose its fudginess. Turn the bag occasionally so all sides marinate evenly.",
-      visualCue: {
-        primaryTarget: "After 8–12 hours: whites stained a deep, uniform amber-brown — the color of strong tea. The yolk, when sliced, is a deep golden-orange at the center, jammy and glistening.",
-        spectrum: [
-          { state: "Underdone", description: "At 4 hours: whites are only lightly tinted — pale tan on the outer layer, still mostly white underneath. Flavor penetration is shallow.", action: "Leave for at least 4 more hours; the marinade takes time to penetrate the dense white." },
-          { state: "Perfect",   description: "At 8–12 hours: glossy amber exterior, with the white fully stained. Slice to reveal a jammy, burnt-sienna yolk center that glistens and yields at the cut. Flavor is deeply savory, faintly sweet, with no raw egg taste.", action: "Slice lengthwise through the center with a sharp knife or dental floss for clean presentation." },
-          { state: "Overdone",  description: "At 24+ hours: white has turned very dark, almost black at the surface, and has taken on a spongy, almost squeaky texture from too much salt. The yolk has dried slightly and lost its liquid center.", action: "Use these as a condiment or finely chop them into a rice bowl rather than serving halved. Next time, pull at 12 hours." },
-        ],
-      },
-      feelCue: "When you press the marinated egg gently through the bag, the yolk should still feel yielding — a soft push-back, like pressing on a ripe plum through its skin. If it feels uniformly firm all the way through, the yolk has firmed past its window.",
+      "ingId": "ing_04",
+      "role": "Solvent",
+      "name": "Mâcher",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec",
+        "eau"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Kombu séché (5 cm pièce)",
+      "ratioValue": 1,
+      "defaultUnit": "piece",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Liquid",
+      "name": "Eau (à bouillir)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_07",
+        "ing_01"
+      ],
+      "outputState": "soft_boiled_eggs",
+      "instructions": "Portez un pot d'eau à ébullition vigoureuse et enroulée — suffisamment d'eau pour couvrir les œufs d'au moins 2 cm. Abaissez les œufs en un à la fois à l'aide d'une cuillère à fente ou d'une araignée, directement depuis le réfrigérateur (les oeufs froids dans l'eau bouillante donnent un timing plus prévisible). Faire bouillir à un mijotement constant de moyenne-élevée — pas une hurne furieuse qui fend les coquilles — pendant exactement 6 minutes et 30 secondes. Pendant ce temps, préparez un bain de glace dans un grand bol. Transférer immédiatement dans le bain de glace et refroidir au moins 5 minutes avant de peler.",
+      "visualCue": {
+        "primaryTarget": "Eau à ébullition régulière et modérée: bulles actives mais non violentes. Œufs entièrement submergés. Le minuteur est le véritable guide ici; les repères visuels pendant l'ébullition sont minimes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "En dessous de 6 minutes : les blancs seront placés à l'extérieur mais translucides et gelés près du jaune, trop lâches pour être pelés proprement.",
+            "action": "Retourner à l'eau bouillante pendant 30 secondes d'accroissement et de glace chaque fois."
+          },
+          {
+            "state": "Perfect",
+            "description": "A 6 min 30 sec (à partir d'oeufs de réfrigérateur à froid) : blancs, tout simplement fermes, le jaune est jammy et profondément doré avec un centre liquide-doux qui donne sous pression douce. L'œuf tient sa forme mais le jaune tremble.",
+            "action": "Transférer immédiatement dans le bain de glace pour arrêter toute cuisson."
+          },
+          {
+            "state": "Overdone",
+            "description": "Au-delà de 7 minutes : le centre du jaune commence à se fixer et à se raffermir, perdant la texture floue du jammy ; un anneau gris-vert pâle se formera autour du jaune à 9 minutes et plus.",
+            "action": "Utilisez ces œufs à d'autres fins (œufs détestés, salade d'oeufs). Commencez un nouveau lot et le temps précisément."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous retirez l'œuf et pressez-le doucement à travers la coquille, le jaune devrait offrir presque aucune résistance — vous sentirez qu'il donne comme du beurre froid, un don doux qui vous dit que le centre est toujours défini-but-tender."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Peler",
+      "inputs": [
+        "soft_boiled_eggs"
+      ],
+      "outputState": "peeled_soft_boiled_eggs",
+      "instructions": "Peler les œufs réfrigérés sous un mince jet d'eau courante froide. Casser la coquille partout en roulant doucement l'oeuf sur le comptoir, puis commencer à peler de l'extrémité large où la poche d'air est, glisser votre pouce sous la membrane. L'eau froide aide la membrane à se séparer du blanc proprement. Travaillez lentement — un blanc d'œuf de 6,5 minutes est mis mais plus délicat qu'un blanc dur. Séchage Pat avec du papier de cuisine quand c'est fait.",
+      "visualCue": {
+        "primaryTarget": "Une surface blanche d'œuf lisse et non blanchie, brillante, blanche d'ivoire, sans gouges ni larmes. Le blanc tient fermement sa forme ovale lorsqu'il est coupé dans la paume.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les larmes blanches que vous épluchez — des morceaux de blanc qui s'en vont avec la membrane de la coquille, laissant une surface pochée. L'œuf peut avoir été sous-froid ou pelé trop tôt.",
+            "action": "Refroidir plus longtemps dans le bain de glace (jusqu'à 10 minutes) avant de tenter de peler les oeufs restants."
+          },
+          {
+            "state": "Perfect",
+            "description": "La coquille sort en gros morceaux avec la membrane intacte; le blanc est lisse, ferme et complètement opaque. Pas de collants entre la coquille et le blanc.",
+            "action": "Séchez-vous et passez à la marinade."
+          },
+          {
+            "state": "Overdone",
+            "description": "La coquille colle agressivement et prend de grands morceaux de blanc avec elle — souvent causée par des oeufs très frais (faible pH) ou un refroidissement insuffisant. La surface de l'œuf est ravagée.",
+            "action": "Les œufs frais se pelent toujours plus mal; utilisez des œufs âgés d'au moins une semaine. Une cuillère à café de bicarbonate de soude dans l'eau bouillante peut également aider."
+          }
+        ]
+      },
+      "feelCue": "Un ajitsuke bien pelé et bien refroidi doit se sentir ferme mais pas caoutchouteux dans la paume — compact, frais et lisse, comme une petite pierre polie."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "cooled_tare",
+      "instructions": "Mélanger la sauce de soja, le mirin, le saké, l'eau et le kombu dans une petite casserole. Faire mijoter doucement à feu moyen et cuire 3 minutes pour faire cuire l'alcool du saké et laisser le kombu commencer à libérer ses glutamates. Retirez le kombu après 4 minutes au total (le kombu surélevé devient visqueux et amer). Refroidir complètement l'ivraie à température ambiante avant d'ajouter les œufs — ajouter des oeufs chauds à l'ivraie chaude fait cuire le jaune plus loin. La tare peut être préparée des heures à l'avance.",
+      "visualCue": {
+        "primaryTarget": "Un liquide foncé et brillant qui sent simultanément sucré et salé — le bord de l'alcool brut du saké devrait disparaître, remplacé par un parfum arrondi et chaud.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La tare sent l'alcool et le vif — le saké n'a pas complètement cuit. La couleur est pâle pour le rapport de soja utilisé.",
+            "action": "Laisser mijoter encore 2 minutes jusqu'à ce que la note d'alcool vive disparaisse de la vapeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profonde, sent complexe: doux mirin caramel, soja salin, un murmure marin du kombu. Goûté intensément assaisonné — il devrait, comme il sera dilué par l'œuf blanc sur les heures.",
+            "action": "Laisser refroidir complètement, enlever le kombu et ajouter les œufs pelés."
+          },
+          {
+            "state": "Overdone",
+            "description": "La tare a diminué de plus d'un tiers — maintenant très épaisse et enfermant les sucres de soja. Sensations brûlées plutôt que douces.",
+            "action": "Ajouter de l'eau pour restaurer le volume et ajuster la salinité au goût."
+          }
+        ]
+      },
+      "feelCue": "Plongez un bout de doigt dans la tare refroidie – il devrait se sentir légèrement collant et enrober votre peau. Goûtez-le : agressifment salé et doux, presque écrasantement, ce qui est correct pour une marinade."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Marinaté",
+      "inputs": [
+        "peeled_soft_boiled_eggs",
+        "cooled_tare"
+      ],
+      "outputState": "marinated_ramen_eggs",
+      "instructions": "Placez les œufs pelés dans un sac à fermeture éclair ou dans un contenant à bourrelet suffisamment grand pour les retenir. Verser la tare refroidie sur les œufs et sceller le sac, presser l'air afin que la tare touche chaque surface de chaque oeuf. Réfrigérer pendant au moins 4 heures; la nuit (8 à 12 heures) est idéale. Ne dépassez pas 24 heures — le sel resserre le blanc à une texture caoutchouteuse et trop dense et le jaune perdra sa fugacité. Tourner le sac de temps en temps pour que tous les côtés marinent uniformément.",
+      "visualCue": {
+        "primaryTarget": "Après 8–12 heures: les blancs taillaient un brun-ambre profond et uniforme — la couleur du thé fort. Le jaune, lorsqu'il est tranché, est un orange-or profond au centre, jammy et scintillement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "À 4 heures : les blancs ne sont que légèrement teintés — bronzage pâle sur la couche externe, encore pour la plupart blancs en dessous. La pénétration de l'arôme est peu profonde.",
+            "action": "Laisser au moins 4 heures de plus; la marinade prend le temps de pénétrer le blanc dense."
+          },
+          {
+            "state": "Perfect",
+            "description": "De 8 à 12 heures : extérieur ambré brillant, avec le blanc entièrement teinté. Couper pour révéler un centre de jaune jammy, brûlé-sienne qui brille et donne à la coupe. Le goût est profondément salé, légèrement sucré, sans goût d'oeuf cru.",
+            "action": "Couper en longueur dans le centre avec un couteau tranchant ou un fil dentaire pour une présentation propre."
+          },
+          {
+            "state": "Overdone",
+            "description": "À 24 heures et plus: le blanc est devenu très sombre, presque noir à la surface, et a pris une texture spongieuse, presque squeaky de trop de sel. Le jaune a légèrement séché et a perdu son centre liquide.",
+            "action": "Utilisez-les comme condiment ou coupez-les finement dans un bol de riz plutôt que de servir à moitié. La prochaine fois, tirez à 12 heures."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous pressez l'oeuf mariné doucement dans le sac, le jaune doit encore se sentir céder — un doux repousse, comme appuyer sur une prune mûre à travers sa peau. S'il se sent uniformément ferme jusqu'au bout, le jaune s'est raffermi devant sa fenêtre."
+    }
+  ]
 };

@@ -1,123 +1,334 @@
 export default {
-  repoId: "master_american_roasted_beet_salad_001",
-  parentRepoId: null,
-  slug: "roasted-beet-salad",
-  author: "ForkRecipe Kitchen",
-  title: "Roasted Beet Salad with Goat Cheese and Walnut Vinaigrette",
-  description: "Deeply sweet roasted beets in multiple colors, warm from the oven and blushing after peeling, set over peppery arugula with crumbled goat cheese and dressed with a walnut-sherry vinaigrette that bridges the earthy and the bright. The beets roasted in their skins come out sweeter and more concentrated than any other method.",
-  cuisine: "American",
-  culture: "Modern American",
-  category: "vegetables",
-  tags: ["vegetarian", "gluten-free", "salad", "beet", "goat-cheese"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "1 hr 15 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-
-  flavorRadar: { sweet: 3, salty: 1, sour: 2, bitter: 1, umami: 1, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Mixed beets — red, golden, and Chioggia (candy cane)", ratioValue: 600, defaultUnit: "g", substitutions: ["single-color beets (roast red and golden separately if mixing — their juices bleed)"] },
-    { ingId: "ing_02", role: "Dairy",      name: "Fresh goat cheese (chèvre), crumbled",              ratioValue: 120, defaultUnit: "g",  substitutions: ["feta (saltier — reduce salt in vinaigrette)", "ricotta"] },
-    { ingId: "ing_03", role: "Structure",  name: "Walnuts, roughly chopped",                          ratioValue: 60,  defaultUnit: "g",  substitutions: ["toasted pecans", "candied walnuts"] },
-    { ingId: "ing_04", role: "Structure",  name: "Arugula or mixed greens, washed and dried",        ratioValue: 80,  defaultUnit: "g",  substitutions: ["watercress", "frisée", "baby spinach"] },
-    { ingId: "ing_05", role: "Acid",       name: "Sherry vinegar",                                    ratioValue: 25,  defaultUnit: "ml", substitutions: ["aged red wine vinegar", "champagne vinegar"] },
-    { ingId: "ing_06", role: "Fat",        name: "Extra-virgin olive oil",                            ratioValue: 60,  defaultUnit: "ml", substitutions: ["walnut oil (more nutty, use 2 tbsp olive + 2 tbsp walnut)"] },
-    { ingId: "ing_07", role: "Binder",     name: "Dijon mustard",                                     ratioValue: 10,  defaultUnit: "g",  substitutions: ["whole-grain mustard"] },
-    { ingId: "ing_08", role: "Sweetener",  name: "Honey",                                             ratioValue: 10,  defaultUnit: "g",  substitutions: ["maple syrup"] },
-    { ingId: "ing_09", role: "Allium",     name: "Shallot, very finely minced",                       ratioValue: 20,  defaultUnit: "g",  substitutions: ["red onion (rinse in cold water first to remove harshness)"] },
-    { ingId: "ing_10", role: "Herb",       name: "Fresh thyme sprigs (for roasting)",                 ratioValue: 4,   defaultUnit: "sprigs", substitutions: ["rosemary", "bay leaf"] },
-    { ingId: "ing_11", role: "Citrus",     name: "Orange zest (half an orange)",                      ratioValue: 4,   defaultUnit: "g",  substitutions: ["lemon zest"] },
-    { ingId: "ing_12", role: "Seasoning",  name: "Flaky salt and black pepper",                       ratioValue: 5,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_13", role: "Fat",        name: "Olive oil, for roasting",                           ratioValue: 20,  defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_american_roasted_beet_salad_001",
+  "parentRepoId": null,
+  "slug": "roasted-beet-salad",
+  "author": "ForkRecipe Kitchen",
+  "title": "Salade de betterave grillée au fromage de chèvre et vinaigrette de noyer",
+  "description": "Betteraves torréfiés très sucrées en plusieurs couleurs, chaudes du four et rougissantes après pelage, posées sur une roquette poivrée au fromage de chèvre émietté et habillées d'une vinaigrette à la noyer-sherry qui fait le pont entre la terre et la lumière. Les betteraves grillées dans leur peau sortent plus sucrées et plus concentrées que toute autre méthode.",
+  "cuisine": "Américain",
+  "culture": "Américain moderne",
+  "category": "vegetables",
+  "tags": [
+    "végétarien",
+    "Sans gluten",
+    "salade",
+    "betterave",
+    "Choux de chèvre"
   ],
-
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "1 hr 15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 1,
+    "sour": 2,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Roast",
-      inputs: ["ing_01", "ing_10", "ing_13"],
-      outputState: "roasted_beets",
-      instructions: "Preheat the oven to 200°C (400°F). Scrub the beets and trim the root tip and leafy tops to 1 cm stubs. Do not peel — the skin protects the flesh and prevents moisture loss, and it will slip off effortlessly after roasting. Place each beet on a square of foil, add a thyme sprig, a drizzle of olive oil, and a pinch of salt. Wrap tightly into individual parcels. If roasting both red and golden/Chioggia beets, keep them in separate parcels — red beet juice bleeds aggressively and will stain all the others crimson. Roast for 45–60 minutes, depending on size, until a thin knife enters with zero resistance.",
-      visualCue: {
-        primaryTarget: "Beets that feel completely soft when pressed through the foil, with juices visible at the bottom of the opened parcel. The skin should look wrinkled and slightly loose.",
-        spectrum: [
-          { state: "Underdone", description: "The knife meets firm resistance at the center. The beet feels hard through the foil.", action: "Return to the oven for 10 more minutes and test again. Large beets can take up to 75 minutes." },
-          { state: "Perfect",   description: "A knife pierces the center with zero resistance, like pushing into warm butter. Juices in the foil are reduced to a deep syrup. Beets smell intensely earthy and sweet.", action: "Open the parcels and let cool until handleable, about 10 minutes." },
-          { state: "Overdone",  description: "Beets are very soft and slightly shriveled. The foil parcels have caramelized syrup from evaporated juices.", action: "Proceed — very well-roasted beets are sweeter and more concentrated. The texture will be very soft." },
-        ],
-      },
-      feelCue: "Squeeze a parcel gently with a folded towel — a fully roasted beet feels like squeezing a ripe stone fruit: yielding and almost fluid, not rigid.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Betteraves mixtes — rouges, dorées et chioggia (cantine)",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "betteraves monocolores (rouge rôti et doré séparément si mélange — leurs jus saignent)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Peel",
-      inputs: ["roasted_beets"],
-      outputState: "sliced_beets",
-      instructions: "When the beets are cool enough to handle but still quite warm, peel them: hold each one in a folded paper towel and rub — the skin should slide off in large sheets under gentle pressure, revealing the gleaming flesh beneath. Wear gloves if working with red beets or expect deeply stained hands. Peel while warm because the skin adheres more stubbornly as the beet cools. Slice or wedge the peeled beets according to preference — thin slices (5mm) for an elegant, layered presentation, or wedges for a more rustic look. Reserve any juice in the foil parcels for the vinaigrette.",
-      visualCue: {
-        primaryTarget: "Gleaming, smooth beet flesh in vivid colors: deep ruby-red, bright gold, and the pink-and-white rings of Chioggia. Surfaces glistening from residual roasting juices.",
-        spectrum: [
-          { state: "Underdone", description: "The skin is not releasing cleanly and requires significant scraping. The beet is still too cool or under-roasted.", action: "If under-roasted, return to the oven. If just cool, warm briefly in the foil or microwave for 20 seconds." },
-          { state: "Perfect",   description: "Skin slides off in large papery sheets with a gentle rub. The flesh is smooth, vibrant, and glistening. Smells deeply earthy and sweet.", action: "Slice or wedge and set aside by color." },
-          { state: "Overdone",  description: "Skin has already dried and re-adhered as the beet cooled too long. Requires more aggressive peeling.", action: "Peel under a thin stream of cold water to soften the skin. This washes away some of the roasted flavor but is the only recovery." },
-        ],
-      },
-      feelCue: "Freshly peeled warm beet feels almost like wet velvet — smooth, dense, and slightly tacky with sweet juice. The smell is strongly of cooked earth and sugar.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Fromage frais de chèvre (chèvre), émietté",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "feta (saltier – réduire le sel dans la vinaigrette)",
+        "ricotta"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Whisk",
-      inputs: ["ing_05", "ing_07", "ing_08", "ing_09", "ing_06"],
-      outputState: "walnut_vinaigrette",
-      instructions: "In a small bowl, combine the sherry vinegar, Dijon mustard, honey, and finely minced shallot. Season with a pinch of salt and pepper. Whisk vigorously to combine and dissolve the mustard. Then add the olive oil in a slow, steady drizzle while whisking constantly — the mustard acts as an emulsifier and will help the dressing stay together rather than separating into oil and vinegar layers. Taste and adjust: it should be assertively tart (more vinegar), pleasantly sweet (more honey), and pungent from the mustard. Add any reserved beet juices from the foil for depth.",
-      visualCue: {
-        primaryTarget: "A creamy, emulsified, golden-brown dressing that falls from the whisk in a slow, opaque stream rather than separating into oily and watery layers.",
-        spectrum: [
-          { state: "Underdone", description: "The dressing has separated: clear oil floating above the dark vinegar layer. Mustard is sitting in clumps at the bottom.", action: "Whisk more vigorously or use an immersion blender for 10 seconds to re-emulsify." },
-          { state: "Perfect",   description: "Uniform, slightly opaque golden dressing that coats the whisk and falls in a slow, creamy stream. Tastes bright, sweet, and pungent in balance.", action: "Taste and adjust, then use immediately." },
-          { state: "Overdone",  description: "The dressing has been over-whisked and is very thick and almost paste-like.", action: "Whisk in a splash of water to loosen the emulsion to a pourable consistency." },
-        ],
-      },
-      feelCue: "Dip a finger and taste — the vinaigrette should feel slightly thick and coating on the tongue, not thin and watery. The acid should be immediate, the sweetness trailing.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Noix communes, hachées approximativement",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pécans grillés",
+        "Noix confites"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Toast",
-      inputs: ["ing_03"],
-      outputState: "toasted_walnuts",
-      instructions: "Toast the roughly chopped walnuts in a dry skillet over medium heat, tossing constantly, for 3–4 minutes until they are evenly golden, fragrant, and the oils have activated. Alternatively, toast on the baking tray alongside the beets for the final 5 minutes of roasting. Walnuts move from raw to perfect to burnt in a very short window — constant motion and attention are required. Transfer to a cool plate immediately when done. Season lightly with flaky salt while hot.",
-      visualCue: {
-        primaryTarget: "Uniformly golden-brown walnuts with a dry, matte surface. The kitchen smells of toasted walnut oil.",
-        spectrum: [
-          { state: "Underdone", description: "Walnuts are still pale, almost white, and smell raw and slightly floury.", action: "Continue tossing on medium heat for 1–2 more minutes." },
-          { state: "Perfect",   description: "Even golden-brown color, intensely fragrant. Walnuts feel dry and light when handled.", action: "Remove from heat immediately and salt lightly." },
-          { state: "Overdone",  description: "Dark brown, bitter-smelling, with visible burnt spots on the interior.", action: "Discard if predominantly burnt — the bitterness overwhelms the salad. Use only lightly darkened ones." },
-        ],
-      },
-      feelCue: "A toasted walnut piece dropped back into the pan makes a dry, hard click — a raw one makes a duller, slightly soft thud. Listen for the change.",
+      "ingId": "ing_04",
+      "role": "Structure",
+      "name": "Arugula ou vert mélangé, lavé et séché",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cresson d'eau",
+        "frite",
+        "bébé épinards"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Assemble",
-      inputs: ["sliced_beets", "toasted_walnuts", "walnut_vinaigrette", "ing_02", "ing_04", "ing_11", "ing_12"],
-      outputState: "roasted_beet_salad",
-      instructions: "Dress the arugula with about one-third of the vinaigrette and toss to coat the leaves lightly. Arrange on a large, wide plate or individual plates. Lay the beet slices or wedges over the greens, alternating colors for visual effect. Drizzle more vinaigrette directly over the beets. Crumble the goat cheese in generous irregular pieces across the surface — do not press it flat. Scatter the toasted walnuts. Finish with the orange zest, a final drizzle of vinaigrette, flaky salt, and a few grinds of black pepper. Serve within 10 minutes of assembly.",
-      visualCue: {
-        primaryTarget: "Vivid, multi-colored beet slices over dark green arugula, with white goat cheese crumbles and golden walnut pieces scattered throughout. Dressing glistens on every element.",
-        spectrum: [
-          { state: "Underdone", description: "Salad is underdressed — beets look dry and the greens are bare. The flavors will be flat.", action: "Drizzle more vinaigrette, especially over the beets." },
-          { state: "Perfect",   description: "Every element glistens lightly with dressing. Beets are vivid, goat cheese is in generous irregular crumbles, walnuts are distributed throughout. Orange zest provides fragrance.", action: "Serve immediately." },
-          { state: "Overdone",  description: "The salad has been assembled too far in advance. The arugula has wilted from the acid and the goat cheese has melted into the dressing.", action: "Serve anyway if unavoidable. Next time, dress the greens and assemble at the last moment." },
-        ],
-      },
-      feelCue: "Taste a piece of beet with goat cheese and a walnut on the same bite — the beet should taste intensely sweet and earthy, the cheese cool and tangy, the walnut bitter and crisp. All three notes should be distinct and complementary.",
+      "ingId": "ing_05",
+      "role": "Acid",
+      "name": "vinaigre de sherry",
+      "ratioValue": 25,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "vinaigre de vin rouge vieilli",
+        "vinaigre de champagne"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 60,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "huile de noix (plus de noix, utiliser 2 c. à soupe d'olive + 2 c. à soupe de noix)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Binder",
+      "name": "Moutarde de Dijon",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "moutarde à grains entiers"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Sweetener",
+      "name": "Chérie",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sirop d'érable"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Allium",
+      "name": "Échalote, très finement hachée",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon rouge (rinçage dans l'eau froide d'abord pour éliminer la dureté)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Tours de thym frais (pour rôtir)",
+      "ratioValue": 4,
+      "defaultUnit": "sprigs",
+      "substitutions": [
+        "romarin",
+        "feuille de laurier"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Citrus",
+      "name": "Zeste d'orange (demi-orange)",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": [
+        "zeste de citron"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Seasoning",
+      "name": "Sel aplati et poivre noir",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Fat",
+      "name": "Huile d'olive, pour rôtir",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_01",
+        "ing_10",
+        "ing_13"
+      ],
+      "outputState": "roasted_beets",
+      "instructions": "Préchauffer le four à 200°C (400°F). Frottez les betteraves et coupez l'extrémité des racines et les feuilles jusqu'à 1 cm de long. Ne pas peler — la peau protège la chair et empêche la perte d'humidité, et elle s'effacera sans effort après la torréfaction. Placez chaque betterave sur un carré de papier, ajoutez un brin de thym, une bruine d'huile d'olive et une pincée de sel. Envelopper étroitement les colis individuels. Si on rôtit les betteraves rouges et dorées/chioggia, gardez-les dans des parcelles séparées — le jus de betterave rouge saigne agressivement et tachera tous les autres pourpre. Faire cuire pendant 45 à 60 minutes, selon la taille, jusqu'à ce qu'un couteau fin pénètre avec une résistance zéro.",
+      "visualCue": {
+        "primaryTarget": "Betteraves qui se sentent complètement douces lorsqu'elles sont pressées à travers la feuille, avec des jus visibles au bas de la parcelle ouverte. La peau doit être ridée et légèrement lâche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le couteau rencontre une résistance ferme au centre. La betterave est dure à travers le film.",
+            "action": "Retourner au four pendant 10 minutes et tester à nouveau. Les grandes betteraves peuvent prendre jusqu'à 75 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un couteau perce le centre avec une résistance zéro, comme pousser dans le beurre chaud. Les jus dans la feuille sont réduits à un sirop profond. Les betteraves sentent intensément terreuse et sucrée.",
+            "action": "Ouvrez les colis et laissez refroidir jusqu'à ce qu'il soit maniable, environ 10 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les betteraves sont très douces et légèrement râpées. Les feuilles ont du sirop caramélisé à partir de jus évaporés.",
+            "action": "Procéder — les betteraves très bien grillées sont plus douces et plus concentrées. La texture sera très douce."
+          }
+        ]
+      },
+      "feelCue": "Pressez délicatement une parcelle avec une serviette pliée – une betterave entièrement torréfié ressemble à du jus de fruits mûrs en pierre : elle donne et presque fluide, pas rigide."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Peler",
+      "inputs": [
+        "roasted_beets"
+      ],
+      "outputState": "sliced_beets",
+      "instructions": "Lorsque les betteraves sont assez froides pour être manipulées, mais encore assez chaudes, épluchez - les: tenez - les chacun dans une serviette en papier pliée et frottez - la peau doit glisser dans de grandes feuilles sous une pression douce, révélant la chair brillante en dessous. Portez des gants si vous travaillez avec des betteraves rouges ou attendez-vous à des mains profondément tachées. Peler au chaud parce que la peau adhère plus obstinément que la betterave refroidit. Couper ou coincer les betteraves pelées selon la préférence — tranches fines (5mm) pour une présentation élégante et en couches, ou coins pour un look plus rustique. Réserver tout jus dans les feuilles pour la vinaigrette.",
+      "visualCue": {
+        "primaryTarget": "Peau de betterave lisse en couleurs vives : rouge rubis profond, or brillant, et les anneaux rose et blanc de Chioggia. Les surfaces scintillent à partir de jus de torréfaction résiduels.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau ne se libère pas proprement et nécessite un grattage important. La betterave est encore trop froide ou trop fraiche.",
+            "action": "Si elle est sous-chauffée, retourner au four. Si simplement refroidir, chauffer brièvement dans la feuille ou le micro-ondes pendant 20 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau glisse dans de grandes feuilles de papier avec un frottage doux. La chair est lisse, vibrante et brillante. Ça sent profondément terreux et doux.",
+            "action": "Couper ou coinner et réserver par couleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau a déjà séché et re-adheré que la betterave refroidie trop longtemps. Nécessite un pelage plus agressif.",
+            "action": "Peler sous un mince flux d'eau froide pour adoucir la peau. Cela lave une partie de la saveur torréfié mais est la seule récupération."
+          }
+        ]
+      },
+      "feelCue": "La betterave chaude fraîchement pelée ressemble presque à du velours humide — lisse, dense et légèrement collante avec du jus sucré. L'odeur est fortement de terre cuite et de sucre."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "ing_05",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_06"
+      ],
+      "outputState": "walnut_vinaigrette",
+      "instructions": "Dans un petit bol, mélanger le vinaigre de sherry, la moutarde de Dijon, le miel et l'échalote finement hachée. Assaisonner avec une pincée de sel et de poivre. fouetter vigoureusement pour combiner et dissoudre la moutarde. Puis ajouter l'huile d'olive dans une bruine lente et régulière tout en fouettant constamment — la moutarde agit comme un émulsifiant et aidera la vinaigrette à rester ensemble plutôt que de se séparer en couches d'huile et de vinaigre. Goûtez et ajustez : il devrait être acidulé (plus de vinaigre), agréablement sucré (plus de miel) et piquant de la moutarde. Ajouter tout jus de betterave réservé de la feuille pour la profondeur.",
+      "visualCue": {
+        "primaryTarget": "Une vinaigrette crémeuse, émulsifiée et dorée qui tombe du fouet dans un cours d'eau lent et opaque plutôt que de se séparer en couches huileuses et aqueuses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La vinaigrette s'est séparée : huile claire flottant au-dessus de la couche de vinaigre foncé. La moutarde est assise en touffes en bas.",
+            "action": "fouetter plus vigoureusement ou utiliser un mélangeur d'immersion pendant 10 secondes pour réémulsionner."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une vinaigrette dorée uniforme et légèrement opaque qui enveloppe le fouet et tombe dans un ruisseau lent et crémeux. Goûts brillants, doux, et en équilibre.",
+            "action": "Goûtez et ajustez, puis utilisez immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pansement a été débordé et est très épais et presque collant.",
+            "action": "fouetter dans un jet d'eau pour relâcher l'émulsion à une consistance versable."
+          }
+        ]
+      },
+      "feelCue": "Plonger le doigt et le goût — la vinaigrette doit se sentir légèrement épaisse et enrober la langue, non mince et aqueuse. L'acide doit être immédiat, la douceur suit."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Toast",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "toasted_walnuts",
+      "instructions": "Faire cuire les noix grossièrement hachées dans une poêle sèche à feu moyen, en jetant constamment, pendant 3-4 minutes jusqu'à ce qu'elles soient uniformément dorées, parfumées, et que les huiles se déclenchent. Alternativement, toast sur le plateau de cuisson à côté des betteraves pour les 5 dernières minutes de torréfaction. Les noix passent de crus à parfaits pour être brûlées dans une fenêtre très courte — un mouvement et une attention constants sont nécessaires. Transférer immédiatement dans une assiette fraîche. Assaisonner légèrement avec du sel feuilleté tout en étant chaud.",
+      "visualCue": {
+        "primaryTarget": "Noyers uniformément dorés avec une surface sèche et mate. La cuisine sent l'huile de noix grillée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les noix sont encore pâles, presque blanches, et sentent crus et légèrement farineux.",
+            "action": "Continuez à jeter à feu moyen pendant 1 à 2 minutes de plus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même couleur brun doré, intensément parfumée. Les noix se sentent sèches et légères lorsqu'elles sont manipulées.",
+            "action": "Retirer immédiatement du feu et saler légèrement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brun foncé, senteur amère, avec des taches brûlées visibles à l'intérieur.",
+            "action": "Jeter s'il est principalement brûlé — l'amertume envahit la salade. N'utilisez que les plus sombres."
+          }
+        ]
+      },
+      "feelCue": "Une pièce de noix grillée qui est retombée dans la poêle fait un clic dur et sec, une pièce crue qui fait un twud plus terne et légèrement doux. Écoutez la monnaie."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Assemblage",
+      "inputs": [
+        "sliced_beets",
+        "toasted_walnuts",
+        "walnut_vinaigrette",
+        "ing_02",
+        "ing_04",
+        "ing_11",
+        "ing_12"
+      ],
+      "outputState": "roasted_beet_salad",
+      "instructions": "Habillez la roquette avec environ un tiers de la vinaigrette et jetez pour enrober légèrement les feuilles. Disposer sur une plaque large ou individuelle. Déposer les tranches de betteraves ou les coins sur les verts, en alternant les couleurs pour un effet visuel. Dressez plus de vinaigrette directement sur les betteraves. Frottez le fromage de chèvre en morceaux irréguliers généreux à travers la surface — ne le pressez pas à plat. Dispersez les noix grillées. Finissez avec le zeste d'orange, une dernière bruine de vinaigrette, du sel flocé et quelques moulures de poivre noir. Servir dans les 10 minutes suivant l'assemblage.",
+      "visualCue": {
+        "primaryTarget": "Des tranches de betteraves multicolores et vives sur une roquette vert foncé, avec des miettes blanches de chèvre et des morceaux de noix dorés éparpillés. La robe brille sur chaque élément.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La salade est sous-vêtue — les betteraves ont l'air sèches et les verts sont nus. Les saveurs seront plates.",
+            "action": "Plus de vinaigrette, surtout sur les betteraves."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque élément brille légèrement avec l'habillage. Les betteraves sont vives, le fromage de chèvre est en miettes irrégulières généreuses, les noix sont distribuées partout. Le zeste orange fournit un parfum.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "La salade a été assemblée trop loin à l'avance. La roquette s'est flétrie de l'acide et le fromage de chèvre a fondu dans la vinaigrette.",
+            "action": "Servez quand même si inévitable. La prochaine fois, habillez les verts et assemblez-les au dernier moment."
+          }
+        ]
+      },
+      "feelCue": "Goûtez un morceau de betterave au fromage de chèvre et une noix sur la même bouchée — la betterave doit goûter intensément sucrée et terreuse, le fromage frais et tannant, la noix amère et croustillante. Les trois notes doivent être distinctes et complémentaires."
+    }
+  ]
 };

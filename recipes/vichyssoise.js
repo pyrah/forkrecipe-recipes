@@ -1,104 +1,231 @@
 export default {
-  repoId: "master_french_vichyssoise_001",
-  parentRepoId: null,
-  slug: "vichyssoise",
-  author: "ForkRecipe Kitchen",
-
-  title: "Vichyssoise",
-  description: "A cold French soup as pale and smooth as porcelain — leeks and potatoes gently simmered in stock, blended until silky, then enriched with cream and chilled until the flavors deepen and the texture becomes something between velvet and liquid satin.",
-  cuisine: "French",
-  culture: "French",
-  category: "vegetables",
-
-  tags: ["french", "leek", "potato", "cold-soup", "vegetarian"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "1 hr 20 min",
-  ratioSystem: "parts",
-
-  stars: 876,
-  forks: 64,
-  contributors: 11,
-  license: "CC-BY-SA",
-  createdAt: "2025-02-11",
-  updatedAt: "2025-10-30",
-
-  flavorRadar: { sweet: 1, salty: 3, sour: 0, bitter: 0, umami: 2, heat: 0 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Allium",    name: "Leeks (white and pale-green parts only), cleaned, sliced", ratioValue: 60,  defaultUnit: "parts", substitutions: ["spring onions (milder)", "white onions (sharper)"] },
-    { ingId: "ing_02", role: "Starch",    name: "Floury potatoes (Maris Piper or russet), peeled and cubed", ratioValue: 50, defaultUnit: "parts", substitutions: ["Yukon Gold (creamier, less starchy)"] },
-    { ingId: "ing_03", role: "Fat",       name: "Unsalted butter",                                           ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Liquid",    name: "Chicken or vegetable stock (good quality, not too salty)",  ratioValue: 100, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Dairy",     name: "Double (heavy) cream",                                      ratioValue: 20,  defaultUnit: "parts", substitutions: ["crème fraîche (adds slight tang)"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Salt, white pepper (not black — it makes dark flecks)",     ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Garnish",   name: "Chives, finely snipped (for serving)",                      ratioValue: 3,   defaultUnit: "parts", substitutions: ["a drizzle of cream and chive oil"] },
+  "repoId": "master_french_vichyssoise_001",
+  "parentRepoId": null,
+  "slug": "vichyssoise",
+  "author": "ForkRecipe Kitchen",
+  "title": "Vichyssoise",
+  "description": "Une soupe française froide aussi pâle et lisse que de la porcelaine – poireaux et pommes de terre mijotées délicatement en stock, mélangées jusqu'à soyeuses, puis enrichies de crème et réfrigérées jusqu'à ce que les saveurs s'approfondissent et que la texture devienne quelque chose entre velours et satin liquide.",
+  "cuisine": "Français",
+  "culture": "Français",
+  "category": "vegetables",
+  "tags": [
+    "français",
+    "poireaux",
+    "pommes de terre",
+    "Soupe froide",
+    "végétarien"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "1 hr 20 min",
+  "ratioSystem": "parts",
+  "stars": 876,
+  "forks": 64,
+  "contributors": 11,
+  "license": "CC-BY-SA",
+  "createdAt": "2025-02-11",
+  "updatedAt": "2025-10-30",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_01", "ing_03", "ing_06"],
-      outputState: "sweated_leeks",
-      instructions: "Melt butter in a heavy saucepan over medium-low heat. Add the sliced leeks and a generous pinch of salt. Sweat gently for 10–12 minutes, stirring occasionally, until completely soft, translucent, and sweet-smelling. Do not allow the leeks to color — the finished soup should be ivory-white. Use a lid for the first 5 minutes to steam them faster without browning.",
-      visualCue: {
-        primaryTarget: "Leeks are completely translucent, collapsed, and pale green-white. They smell sweet and onion-mild, not sharp. The butter in the pan is clear, not browned.",
-        spectrum: [
-          { state: "Underdone", description: "Leeks are still partially opaque with some firm texture remaining. They smell raw and slightly sharp. Some strands are still bright green.", action: "Continue sweating with the lid on. Underdone leeks will leave a raw, grassy edge in the finished soup." },
-          { state: "Perfect",   description: "Fully translucent, soft, sweet-smelling. Color is pale sage-white. Butter remains clear and light. Leeks collapse under gentle pressure.", action: "Add potatoes and stock." },
-          { state: "Overdone",  description: "Leeks are beginning to turn golden at the edges. Some caramelization is happening. The butter may be starting to brown.", action: "Add a splash of stock immediately to cool the pan. The soup will have a slightly sweeter, nuttier taste but remain acceptable." },
-        ],
-      },
-      feelCue: "Press a leek strand against the side of the pot with a spoon — it should flatten immediately with no resistance, like pressing a soft tissue, not spring back with any firmness.",
+      "ingId": "ing_01",
+      "role": "Allium",
+      "name": "Levains (blanc et vert pâle seulement), nettoyés, tranchés",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Oignons de printemps",
+        "Oignons blancs (récolte)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["sweated_leeks", "ing_02", "ing_04"],
-      outputState: "cooked_soup",
-      instructions: "Add the cubed potatoes and pour in the warm stock. Bring to a simmer and cook for 20–25 minutes until the potatoes are completely tender throughout. Do not rush with high heat — a gentle simmer preserves the clean, delicate flavors. The liquid will turn very slightly cloudy as potato starch is released.",
-      visualCue: {
-        primaryTarget: "Potatoes are completely tender — a paring knife inserted meets zero resistance and the cube falls off when the knife is withdrawn. The stock is slightly cloudy and pale.",
-        spectrum: [
-          { state: "Underdone", description: "Potato cubes are firm and opaque in the center. A knife meets resistance. Soup tastes starchy and lean.", action: "Continue simmering. Underdone potato will leave a grainy texture even after blending." },
-          { state: "Perfect",   description: "Potatoes fall apart when pressed with a spoon. Stock is slightly cloudy. The combination tastes mild, starchy, and sweet.", action: "Remove from heat and blend." },
-          { state: "Overdone",  description: "Potatoes have completely dissolved into the stock. The mixture is already very thick and starchy-tasting.", action: "Proceed to blending — the soup will be even more velvety and may need extra stock to adjust consistency." },
-        ],
-      },
-      feelCue: "Bite a potato cube from the simmering soup — it should crumble to a paste immediately on the tongue with no graininess, like a perfectly cooked floury potato in a jacket.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Pommes de terre mousseuses (Maris Piper ou russet), pelées et cubes",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Or du Yukon (plus crémeux, moins féculent)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["cooked_soup", "ing_05"],
-      outputState: "blended_soup",
-      instructions: "Use an immersion blender directly in the pot, or carefully transfer in batches to a stand blender (never fill more than half full with hot liquid). Blend for at least 2 minutes until completely smooth. Pass through a fine-mesh sieve, pressing firmly with a ladle to extract all the liquid and force the vegetable pulp through. Stir in the cold double cream. This sieving step is non-negotiable for the characteristic silky vichyssoise texture.",
-      visualCue: {
-        primaryTarget: "A completely smooth, ivory-white soup with the consistency of thin cream. When poured, it falls in a single, unbroken ribbon with no lumps, fibrous strands, or opaque patches.",
-        spectrum: [
-          { state: "Underdone", description: "Blended but not sieved — visible fibrous strands from the leeks, small lumps, a slightly grainy texture. The soup is off-white but not fully smooth.", action: "Pass through a fine-mesh sieve. This step is essential for vichyssoise — the texture difference is dramatic." },
-          { state: "Perfect",   description: "Completely smooth, ivory-white, flowing like thin cream. No visible particles. The cream is fully incorporated and the soup has a slight sheen.", action: "Season carefully with white pepper and salt. Chill for at least 1 hour before serving." },
-          { state: "Overdone",  description: "Over-blended and too warm when cream was added — the cream may have partly separated or the potato has become slightly gluey.", action: "Sieve again and add a small amount of cold stock to loosen. Chill thoroughly." },
-        ],
-      },
-      feelCue: "Rub a small amount of the blended, sieved soup between your fingers — it should feel entirely smooth with the slight slip of cream, like fine hand lotion, with absolutely no graininess.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Chill",
-      inputs: ["blended_soup", "ing_07"],
-      outputState: "finished_vichyssoise",
-      instructions: "Transfer the blended soup to a container and refrigerate for at least 1 hour, ideally 4 hours or overnight. Cold temperatures transform the soup — the flavors deepen and meld, and the texture firms slightly to a richer, more velvety consistency. Before serving, taste again — cold soup always needs more salt than warm soup. Adjust seasoning. Serve in chilled bowls with finely snipped chives.",
-      visualCue: {
-        primaryTarget: "A pale ivory soup in a chilled bowl, perfectly still and smooth as a mirror. Finely snipped chives scattered across the surface provide the only color contrast — vivid green against white.",
-        spectrum: [
-          { state: "Underdone", description: "Served too warm — above 10°C. The soup tastes flat and the texture feels thin. The cream hasn't fully integrated.", action: "Return to the refrigerator. Vichyssoise must be truly cold to taste correct — warmth flattens the flavors entirely." },
-          { state: "Perfect",   description: "Served at 4–8°C — pleasantly cold, like a savoury milkshake. Flavors are clean, rounded, and gently sweet. Chives are bright and fragrant against the pale surface.", action: "Serve immediately from refrigerator-cold bowls." },
-          { state: "Overdone",  description: "Soup is nearly freezing — ice crystals have begun to form at the edges. Flavor is muted and the texture is slightly grainy.", action: "Stir gently and allow to come up to 5°C before serving. Alternatively, blend the icy patches smooth." },
-        ],
-      },
-      feelCue: "A spoonful of properly chilled vichyssoise on the tongue should feel cool and silky simultaneously — the cold temperature creates a clean, mineral sharpness while the cream coats the palate in richness.",
+      "ingId": "ing_04",
+      "role": "Liquid",
+      "name": "Stock de poulet ou de légumes (bonne qualité, pas trop salé)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Dairy",
+      "name": "Crème double (lourde)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème fraîche (ajoute un léger tang)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel, poivre blanc (pas noir — il fait des taches foncées)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Poêles, finement fouettées (pour servir)",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "une bruine de crème et d'huile de ciboulette"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_01",
+        "ing_03",
+        "ing_06"
+      ],
+      "outputState": "sweated_leeks",
+      "instructions": "Faire fondre le beurre dans une casserole à feu moyen-doux. Ajouter les poireaux tranchés et une pincée généreuse de sel. Plongez doucement pendant 10 à 12 minutes, en remuant occasionnellement, jusqu'à ce qu'il soit complètement doux, translucide et sucré. Ne laissez pas les poireaux colorer — la soupe finie devrait être blanc ivoire. Utilisez un couvercle pendant les 5 premières minutes pour les cuire plus vite sans brunir.",
+      "visualCue": {
+        "primaryTarget": "Les poireaux sont complètement translucides, effondrés et blanc vert pâle. Ils sentent doux et doux à l'oignon, pas vifs. Le beurre dans la poêle est clair, pas doré.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les poireaux sont encore partiellement opaques avec une texture ferme restante. Ils sentent crus et légèrement tranchants. Certains brins sont encore vert vif.",
+            "action": "Continuez à transpirer avec le couvercle allumé. Les poireaux sous-dosés laisseront un bord cru et herbacé dans la soupe finie."
+          },
+          {
+            "state": "Perfect",
+            "description": "Entièrement translucide, doux, sucré. La couleur est blanche-sauge pâle. Le beurre reste clair et léger. Les poireaux s'effondrent sous une légère pression.",
+            "action": "Ajouter les pommes de terre et le bouillon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les poireaux commencent à devenir dorés aux bords. Une certaine caramélisation se produit. Le beurre peut commencer à brunir.",
+            "action": "Ajouter immédiatement un jet de stock pour refroidir la poêle. La soupe aura un goût légèrement plus sucré, plus noisette, mais reste acceptable."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un brin de poireau contre le côté de la casserole avec une cuillère — il devrait s'aplatir immédiatement sans résistance, comme presser un tissu mou, ne pas ressortr avec une fermeté quelconque."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "sweated_leeks",
+        "ing_02",
+        "ing_04"
+      ],
+      "outputState": "cooked_soup",
+      "instructions": "Ajouter les pommes de terre en cube et verser dans le bouillon chaud. Porter à mijoter et cuire de 20 à 25 minutes jusqu'à ce que les pommes de terre soient complètement tendres. Ne vous précipitez pas avec une chaleur élevée — une mijotée douce préserve les saveurs propres et délicates. Le liquide deviendra très légèrement nuageux à mesure que la fécule de pomme de terre sera libérée.",
+      "visualCue": {
+        "primaryTarget": "Les pommes de terre sont complètement tendres — un couteau de triage inséré répond à une résistance zéro et le cube tombe quand le couteau est retiré. Le stock est légèrement nuageux et pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les cubes de pommes de terre sont fermes et opaques au centre. Un couteau rencontre la résistance. La soupe a un goût féculent et maigre.",
+            "action": "Continuez à mijoter. La pomme de terre sous-done laissera une texture granuleuse même après mélange."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pommes de terre tombent lorsqu'elles sont pressées avec une cuillère. Le stock est légèrement nuageux. La combinaison a un goût doux, féculent et sucré.",
+            "action": "Retirer du feu et mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pommes de terre se sont complètement dissoutes dans le stock. Le mélange est déjà très épais et amylacé.",
+            "action": "Procéder au mélange — la soupe sera encore plus veloutée et pourrait avoir besoin d'un stock supplémentaire pour ajuster la consistance."
+          }
+        ]
+      },
+      "feelCue": "Mâcher un cube de pomme de terre de la soupe mijotée — il devrait s'effondrer à une pâte immédiatement sur la langue sans grain, comme une pomme de terre farinée parfaitement cuite dans une veste."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "cooked_soup",
+        "ing_05"
+      ],
+      "outputState": "blended_soup",
+      "instructions": "Utilisez un mélangeur d'immersion directement dans le pot, ou transférez soigneusement en lots dans un mélangeur de peuplement (ne remplir jamais plus de la moitié de liquide chaud). Mélanger pendant au moins 2 minutes jusqu'à ce qu'il soit complètement lisse. Passer à travers un tamis à mailles fines, presser fermement avec une louche pour extraire tout le liquide et forcer la pulpe végétale. Incorporer la crème double froide. Cette étape de tamisage n'est pas négociable pour la texture vichyssoise soyeuse caractéristique.",
+      "visualCue": {
+        "primaryTarget": "Une soupe entièrement lisse, blanc ivoire avec la consistance de la crème fine. Lorsqu'il est versé, il tombe dans un seul ruban non cassé sans grumeaux, brins fibreux ou taches opaques.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Mélanges mais non tamisés — brins fibreux visibles provenant des poireaux, petits morceaux, texture légèrement granuleuse. La soupe est blanc cassé mais pas entièrement lisse.",
+            "action": "Passez par un tamis à mailles fines. Cette étape est essentielle pour la vichyssoise — la différence de texture est dramatique."
+          },
+          {
+            "state": "Perfect",
+            "description": "Complètement lisse, blanc ivoire, coulant comme de la crème fine. Pas de particules visibles. La crème est entièrement incorporée et la soupe a un léger reflet.",
+            "action": "Assaisonner soigneusement avec du poivre blanc et du sel. Refroidir au moins 1 heure avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème a peut-être été partiellement séparée ou la pomme de terre est devenue légèrement collante.",
+            "action": "Sieve encore et ajouter une petite quantité de stock froid pour se détendre. Refroidir complètement."
+          }
+        ]
+      },
+      "feelCue": "Frottez une petite quantité de soupe mélangée et tamisée entre vos doigts – elle devrait être entièrement lisse avec la légère goutte de crème, comme une fine lotion à la main, sans grain."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Refroidissement",
+      "inputs": [
+        "blended_soup",
+        "ing_07"
+      ],
+      "outputState": "finished_vichyssoise",
+      "instructions": "Transférer la soupe mélangée dans un contenant et réfrigérer pendant au moins 1 heure, idéalement 4 heures ou une nuit. Les températures froides transforment la soupe — les saveurs s'approfondissent et se mélangent, et la texture s'enchaîne légèrement à une consistance plus riche et plus veloutée. Avant de servir, goûtez à nouveau — la soupe froide a toujours besoin de plus de sel que la soupe chaude. Réglez l'assaisonnement. Servir dans des bols réfrigérés avec de la ciboulette finement coupée.",
+      "visualCue": {
+        "primaryTarget": "Une soupe d'ivoire pâle dans un bol réfrigéré, parfaitement calme et lisse comme un miroir. La ciboulette éparpillée sur toute la surface offre le seul contraste de couleur: vert vif contre blanc.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Servi trop chaud — au-dessus de 10°C. La soupe a un goût plat et la texture est mince. La crème n'est pas complètement intégrée.",
+            "action": "Retournez au réfrigérateur. Vichyssoise doit être vraiment froid pour le goût correct — la chaleur aplatit les saveurs entièrement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Servi à 4-8°C — agréablement froid, comme un milkshake salé. Les arômes sont propres, arrondis et doux. Les chives sont lumineuses et parfumées contre la surface pâle.",
+            "action": "Servir immédiatement à partir de bols froids au réfrigérateur."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe est presque gelée — les cristaux de glace ont commencé à se former aux bords. L'arôme est muté et la texture est légèrement granuleuse.",
+            "action": "Incorporer doucement et laisser monter jusqu'à 5°C avant de servir. Alternativement, mélanger les patchs glacés en douceur."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère de vichyssoise correctement réfrigérée sur la langue doit se sentir frais et soyeux simultanément — la température froide crée une netteté minérale propre tandis que la crème enveloppe le palais en richesse."
+    }
+  ]
 };

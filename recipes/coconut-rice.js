@@ -1,91 +1,219 @@
 export default {
-  repoId: "master_caribbean_coconut-rice_001",
-  parentRepoId: null,
-  slug: "coconut-rice",
-  author: "ForkRecipe Kitchen",
-  title: "Coconut Rice",
-  description: "Long-grain rice steamed in a mixture of coconut milk and salted water until each grain is separate, perfumed, and glossed with the faintest tropical sweetness.",
-  cuisine: "Caribbean",
-  culture: "Caribbean",
-  category: "grains",
-  tags: ["rice", "coconut", "caribbean", "vegan", "side"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "35 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 4, sour: 0, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Long-grain white rice (jasmine or basmati)", ratioValue: 4, defaultUnit: "parts", substitutions: ["parboiled rice (increase water slightly)"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Full-fat coconut milk (shaken well)",  ratioValue: 4,   defaultUnit: "parts", substitutions: ["coconut cream (reduce by 1 part, add 1 part water)"] },
-    { ingId: "ing_03", role: "Liquid",    name: "Water",                                ratioValue: 2,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Kosher salt",                          ratioValue: 0.15, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Sweetener", name: "White sugar",                          ratioValue: 0.1, defaultUnit: "parts", substitutions: ["omit for a strictly savory profile"] },
-    { ingId: "ing_06", role: "Fat",       name: "Coconut oil or neutral oil",           ratioValue: 0.2, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_caribbean_coconut-rice_001",
+  "parentRepoId": null,
+  "slug": "coconut-rice",
+  "author": "ForkRecipe Kitchen",
+  "title": "Riz de coco",
+  "description": "Riz à grains longs cuit à la vapeur dans un mélange de lait de coco et d'eau salée jusqu'à ce que chaque grain soit séparé, parfumé et brillant avec la douceur tropicale la plus faible.",
+  "cuisine": "Caraïbes",
+  "culture": "Caraïbes",
+  "category": "grains",
+  "tags": [
+    "riz",
+    "noix de coco",
+    "Caribbean",
+    "végétalien",
+    "côté"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "35 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Rinse",
-      inputs: ["ing_01"],
-      outputState: "rinsed_rice",
-      instructions: "Place the rice in a fine-mesh strainer and rinse under cold running water, working the grains with your hand, until the water runs clear rather than milky. This removes excess surface starch that would cause the grains to clump together and produce a gummy texture. For a slightly creamier result, skip the rinse — a valid choice for some Caribbean preparations.",
-      visualCue: {
-        primaryTarget: "Water flowing through the strainer is fully transparent, not cloudy or milky.",
-        spectrum: [
-          { state: "Underdone", description: "Water is still milky-white and starchy. Grains release white starch when rubbed.", action: "Continue rinsing and agitating for another 30 seconds." },
-          { state: "Perfect",   description: "Water runs completely clear. Grains are translucent at the edges and appear slightly glassy.", action: "Drain thoroughly and proceed to toasting." },
-          { state: "Overdone",  description: "Rice has been rinsed so long it appears waterlogged and some grains have begun to soften.", action: "Drain immediately and proceed. The rice will still cook, though it may be slightly softer than ideal." },
-        ],
-      },
-      feelCue: "Rub a pinch of rinsed rice between your fingers — it should feel sandy and dry rather than slick and starchy. Slick means more rinsing is needed.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz blanc à grains longs (jasmine ou basmati)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "riz séché (augmenter légèrement l'eau)"
+      ]
     },
     {
-      nodeId: "step_2", action: "Toast",
-      inputs: ["rinsed_rice", "ing_06"],
-      outputState: "toasted_rice",
-      instructions: "Heat a medium saucepan over medium heat. Add the oil and the drained rice. Stir continuously for 2–3 minutes — you are coating each grain in fat and lightly toasting the exterior, which creates a moisture barrier that helps the grains stay separate and not stick together during steaming. The rice will turn from transparent to opaque-white.",
-      visualCue: {
-        primaryTarget: "All grains have turned uniformly opaque and chalky-white. A faint nutty fragrance is present. No browning — you are drying and coating, not toasting to color.",
-        spectrum: [
-          { state: "Underdone", description: "Many grains are still translucent and glistening with moisture. No fragrance released.", action: "Stir and continue over medium heat for another minute." },
-          { state: "Perfect",   description: "All grains are chalky-white and move loosely in the pan with no sticking. A very faint starchy-nutty smell.", action: "Add the coconut milk, water, salt, and sugar immediately." },
-          { state: "Overdone",  description: "Some grains are turning golden or the pan smells of browning starch.", action: "Proceed immediately and reduce heat — slightly toasted rice will still be excellent, with more depth." },
-        ],
-      },
-      feelCue: "The rice should hiss gently and smell faintly of hot starch and coconut oil. Run the spoon through — the grains should flow apart freely, no clumping, like dry sand in a warm pan.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Lait de noix de coco plein gras (bien agité)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "crème de coco (réduire de 1 partie, ajouter 1 partie d'eau)"
+      ]
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["toasted_rice", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "steaming_rice",
-      instructions: "Pour in the coconut milk, water, salt, and sugar. Stir once to combine. Bring to a boil over medium-high heat, stirring once more at the boil to prevent any rice settling and scorching on the pan bottom. Once boiling, reduce heat to the absolute lowest setting, cover tightly, and cook for 15 minutes. Do not lift the lid — steam is the cooking medium and every lift loses heat and moisture.",
-      visualCue: {
-        primaryTarget: "The liquid has been fully absorbed. No standing liquid visible when you tilt the pan. Steam vents are active around the lid edge.",
-        spectrum: [
-          { state: "Underdone", description: "Visible liquid still standing above the rice level after 15 minutes.", action: "Replace the lid and cook 3–5 more minutes. Check if the heat was high enough to generate steam." },
-          { state: "Perfect",   description: "No visible liquid. The rice surface has small steam holes (craters) across it. The sound has changed from a bubbling simmer to a quiet, dry hiss.", action: "Remove from heat and rest covered for 10 minutes before fluffing." },
-          { state: "Overdone",  description: "The bottom of the pan is beginning to scorch — you can smell it and hear crackling. The rice above the scorch is still fine.", action: "Remove from heat immediately. Do not scrape the bottom. The scorched layer (socarrat) can be left or discarded — it is not ruined unless the burn is deep." },
-        ],
-      },
-      feelCue: "Hold your palm near the lid vent — you should feel a steady, moist heat pulsing out. When that steam pulse stops or slows significantly, the water has been absorbed and the rice is nearly done.",
+      "ingId": "ing_03",
+      "role": "Liquid",
+      "name": "Eau",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Rest",
-      inputs: ["steaming_rice"],
-      outputState: "finished_coconut_rice",
-      instructions: "Remove the pot from heat. Place a clean folded kitchen towel or a double layer of paper towel between the pot and the lid. The towel absorbs any residual steam condensation that would otherwise drip back onto the rice and create wet spots. Let rest, covered, for exactly 10 minutes — this is not optional. The grains finish cooking off-heat and firm up during the rest. Fluff gently with a fork, lifting from the bottom.",
-      visualCue: {
-        primaryTarget: "Each grain is distinct, slightly plump, and coated in a faint coconut gloss. No wet clumps. No crunchy undercooked grains. Bottom of the pot is lightly dried, not burnt.",
-        spectrum: [
-          { state: "Underdone", description: "Grains feel firm and slightly chalky in the center when bitten. Fluffing reveals a dense, compressed mass.", action: "Replace the lid (with the towel) and rest another 5 minutes. Add no more liquid — the residual steam will finish them." },
-          { state: "Perfect",   description: "Each grain is tender all the way through, separate, and lightly perfumed. The fork moves through the rice without resistance. A subtle coconut sweetness on the nose.", action: "Serve immediately or hold covered and warm for up to 20 minutes." },
-          { state: "Overdone",  description: "Grains have split and mushhed together. The texture is creamy and soft like risotto, not individual grains.", action: "Spread on a sheet pan to cool and firm. Overcooked coconut rice makes excellent arancini or fried rice the next day." },
-        ],
-      },
-      feelCue: "Press a single grain between your thumb and forefinger — it should compress cleanly to a smooth paste with no chalky resistance in the center and no mushiness. That clean compression is the texture target.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 0.15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omit pour un profil strictement savoureux"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile de coco ou huile neutre",
+      "ratioValue": 0.2,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Rincer",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "rinsed_rice",
+      "instructions": "Placez le riz dans une passoire fine et rincer à l'eau courante froide, en travaillant les grains avec votre main, jusqu'à ce que l'eau soit limpide plutôt que laiteuse. Ceci élimine l'excès d'amidon de surface qui causerait les grains à se serrer ensemble et produire une texture gommante. Pour un résultat légèrement plus crémeux, sautez le rinçage — un choix valable pour certaines préparations des Caraïbes.",
+      "visualCue": {
+        "primaryTarget": "L'eau qui coule à travers le filtre est entièrement transparente, pas trouble ou laiteuse.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est encore blanc laiteux et féculente. Les grains libèrent de l'amidon blanc lorsqu'ils sont frottés.",
+            "action": "Continuer à rincer et agiter pendant 30 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'eau est complètement dégagée. Les grains sont translucides aux bords et semblent légèrement vitreux.",
+            "action": "Égoutter soigneusement et faire griller."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le riz a été rincé si longtemps qu'il semble recouvert d'eau et que certains grains ont commencé à s'assouplir.",
+            "action": "Égoutter immédiatement et continuer. Le riz sera encore cuit, même s'il peut être légèrement plus doux que l'idéal."
+          }
+        ]
+      },
+      "feelCue": "Frottez une pincée de riz rincé entre vos doigts — il devrait être sablonneux et sec plutôt que lissé et féculent. Slick signifie plus de rinçage est nécessaire."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "rinsed_rice",
+        "ing_06"
+      ],
+      "outputState": "toasted_rice",
+      "instructions": "Chauffer une casserole moyenne à feu moyen. Ajouter l'huile et le riz égoutté. Mélanger en continu pendant 2 à 3 minutes – vous enrobez chaque grain dans de la graisse et grillez légèrement l'extérieur, ce qui crée une barrière d'humidité qui aide les grains à rester séparés et à ne pas coller ensemble pendant la vapeur. Le riz passera de blanc transparent à blanc opaque.",
+      "visualCue": {
+        "primaryTarget": "Tous les grains sont devenus uniformément opaques et blancs crayeux. Un léger parfum de noix est présent. Pas de brunissement — vous êtes le séchage et le revêtement, pas de toast à la couleur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Beaucoup de grains sont encore translucides et scintillent avec l'humidité. Aucun parfum libéré.",
+            "action": "Incorporer et poursuivre à feu moyen pendant une autre minute."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les grains sont blancs crayeux et se déplacent librement dans la poêle sans coller. Une odeur très faible de noix d'amidon.",
+            "action": "Ajouter immédiatement le lait de coco, l'eau, le sel et le sucre."
+          },
+          {
+            "state": "Overdone",
+            "description": "Certains grains deviennent dorés ou la poêle sent l'amidon brunissant.",
+            "action": "Continuez immédiatement et réduisez la chaleur — le riz légèrement grillé sera encore excellent, avec plus de profondeur."
+          }
+        ]
+      },
+      "feelCue": "Le riz doit siffler doucement et sentir peu d'amidon chaud et d'huile de coco. Passez la cuillère à travers — les grains doivent s'écouler librement, sans accroupissement, comme du sable sec dans une poêle chaude."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "toasted_rice",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "steaming_rice",
+      "instructions": "Verser dans le lait de coco, l'eau, le sel et le sucre. Mélanger une fois. Porter à ébullition à feu moyen-vif, en remuant une fois de plus à ébullition afin d'éviter toute décongélation du riz et toute brûlure sur le fond de la poêle. Une fois bouillant, réduire le feu au réglage le plus bas, couvrir soigneusement et cuire pendant 15 minutes. Ne pas soulever le couvercle — la vapeur est le moyen de cuisson et chaque ascenseur perd la chaleur et l'humidité.",
+      "visualCue": {
+        "primaryTarget": "Le liquide a été complètement absorbé. Pas de liquide debout visible lorsque vous inclinez la casserole. Les évents à vapeur sont actifs autour du bord du couvercle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Liquide visible toujours debout au-dessus du niveau du riz après 15 minutes.",
+            "action": "Remplacer le couvercle et cuire encore 3-5 minutes. Vérifiez si la chaleur était assez élevée pour générer de la vapeur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pas de liquide visible. La surface du riz a de petits trous de vapeur (cratères) à travers. Le son est passé d'une mijotée à un sifflement calme et sec.",
+            "action": "Retirer du feu et reposer couvert pendant 10 minutes avant de pleuvoir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le fond de la poêle commence à brûler — vous pouvez le sentir et entendre craqueler. Le riz au-dessus de la corbeille est encore bien.",
+            "action": "Retirer immédiatement du feu. Ne grattez pas le fond. La couche brûlée (socarrat) peut être laissée ou jetée — elle n'est pas ruinée à moins que la brûlure ne soit profonde."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre paume près de l'évent du couvercle — vous devriez sentir une chaleur régulière et humide qui jaillit. Lorsque le pouls de la vapeur s'arrête ou ralentit considérablement, l'eau a été absorbée et le riz est presque fini."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos",
+      "inputs": [
+        "steaming_rice"
+      ],
+      "outputState": "finished_coconut_rice",
+      "instructions": "Retirer la casserole du feu. Placez une serviette de cuisine pliée ou une double couche de papier entre le pot et le couvercle. La serviette absorbe toute condensation résiduelle de vapeur qui, autrement, retomberait sur le riz et créerait des taches humides. Laisser reposer, couvrir, pendant exactement 10 minutes — ce n'est pas facultatif. Les grains terminent la cuisson hors-chauffe et se raffermissent pendant le reste. Flûtez doucement avec une fourchette, levant du bas.",
+      "visualCue": {
+        "primaryTarget": "Chaque grain est distinct, légèrement repulpé et recouvert d'un léger brillant de noix de coco. Pas d'embrouille humide. Pas de grains croustillants sous-cuits. Le fond du pot est légèrement séché, non brûlé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains se sentent fermes et légèrement crayeux au centre quand mordus. La coulée révèle une masse dense et comprimée.",
+            "action": "Remplacer le couvercle (avec la serviette) et reposer encore 5 minutes. N'ajoutez plus de liquide, la vapeur résiduelle les finira."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque grain est tendre à travers, séparé et légèrement parfumé. La fourchette traverse le riz sans résistance. Une subtile douceur de noix de coco sur le nez.",
+            "action": "Servir immédiatement ou tenir couvert et réchauffer jusqu'à 20 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains se sont fendus et bousculés ensemble. La texture est crémeuse et douce comme le risotto, pas les grains individuels.",
+            "action": "Étaler sur une casserole pour refroidir et ferme. Le riz de coco surcuit fait d'excellents arancini ou riz frit le lendemain."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un seul grain entre le pouce et l'index — il devrait compresser proprement à une pâte lisse sans résistance crayeuse au centre et sans mushiness. Cette compression propre est la cible de texture."
+    }
+  ]
 };

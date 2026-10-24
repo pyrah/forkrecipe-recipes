@@ -1,97 +1,227 @@
 export default {
-  repoId: "master_indian_dosa_batter_001",
-  parentRepoId: null,
-  slug: "dosa-batter",
-  author: "ForkRecipe Kitchen",
-  title: "Dosa Batter",
-  description: "Overnight-fermented rice and urad dal batter that transforms a hot cast-iron griddle into a theatre — when ladled thin and spread in a single circular motion, it sets into a translucent, crisp-edged, sour-tinged crêpe that shatters at the first bite. The fermentation is where the flavour lives.",
-  cuisine: "Indian",
-  culture: "South Indian (Tamil Nadu)",
-  category: "breads",
-  tags: ["indian", "south-indian", "fermented", "rice", "lentil", "dosa", "batter", "vegan", "gluten-free"],
-  difficulty: 3,
-  activeTime: "20 min",
-  totalTime: "16 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 2, sour: 2, bitter: 0, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Idli rice or parboiled short-grain rice",               ratioValue: 300, defaultUnit: "g", substitutions: ["regular long-grain white rice (less starchy, thinner batter)", "sona masoori rice"] },
-    { ingId: "ing_02", role: "Protein",   name: "Whole white urad dal (skinned black gram)",             ratioValue: 100, defaultUnit: "g", substitutions: ["split urad dal (less airy result)"] },
-    { ingId: "ing_03", role: "Leavener",  name: "Fenugreek seeds (helps fermentation and browning)",     ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Hydration", name: "Cool water (for soaking + grinding; non-chlorinated preferred)", ratioValue: 500, defaultUnit: "g", substitutions: ["filtered or bottled water (chlorine inhibits fermentation)"] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt (added after fermentation)",              ratioValue: 10,  defaultUnit: "g", substitutions: ["rock salt"] },
-    { ingId: "ing_06", role: "Fat",       name: "Neutral oil or ghee (for cooking each dosa)",          ratioValue: 15,  defaultUnit: "g", substitutions: ["refined coconut oil (traditional for crispness)"] },
+  "repoId": "master_indian_dosa_batter_001",
+  "parentRepoId": null,
+  "slug": "dosa-batter",
+  "author": "ForkRecipe Kitchen",
+  "title": "Dosa Batter",
+  "description": "Le riz fermenté et la pâte d'urad dal qui transforment une grille en fonte chaude en un théâtre — lorsqu'elle est mince et s'étend en un seul mouvement circulaire, elle se met en crêpe translucide, croustillante et aigre qui se brise à la première bouchée. La fermentation est l'endroit où vit la saveur.",
+  "cuisine": "Indiens",
+  "culture": "Indien du Sud (Tamil Nadu)",
+  "category": "breads",
+  "tags": [
+    "indienne",
+    "Inde du Sud",
+    "fermenté",
+    "riz",
+    "lentilles",
+    "dosa",
+    "pâte",
+    "végétalien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "20 min",
+  "totalTime": "16 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Hydrate",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "soaked_grains",
-      instructions: "Rinse the rice and urad dal separately in several changes of cold water until it runs clear. Combine the urad dal and fenugreek seeds in one bowl and the rice in a separate bowl. Cover each generously with cool, non-chlorinated water and soak for 6 to 8 hours, or overnight. They must be soaked separately because the dal grinds to a different consistency than the rice and requires a different texture grind. Keep in a cool place but not the refrigerator — the ambient bacteria on the grains are the fermentation agents and cold temperatures suppress their activity.",
-      visualCue: {
-        primaryTarget: "Grains are swollen to roughly one-and-a-half times their original size. The urad dal is plump and has a faint white bloom. Rice grains are bloated and crush easily between the fingers.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are still small and hard. Rice resists pressure between fingers.", action: "Soak for at least another 2 hours. The swelling is what allows the grains to grind smoothly." },
-          { state: "Perfect",   description: "Both components are swollen and soft. A grain of rice pressed between two fingers smears rather than cracks. Dal is soft all the way through.", action: "Drain and proceed to grinding." },
-          { state: "Overdone",  description: "Grains have been soaking more than 12 hours and have a slightly sour or fermented smell.", action: "This is fine — mild pre-fermentation helps. Grind and proceed immediately." },
-        ],
-      },
-      feelCue: "Press a soaked rice grain between your thumb and forefinger — it should yield like a very soft contact lens, smearing flat without any hard or grainy centre.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Riz d'Idli ou riz à grains courts",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "riz blanc à grains longs (moins féculent, pâte plus fine)",
+        "riz sano masoori"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Blend",
-      inputs: ["soaked_grains"],
-      outputState: "raw_batter",
-      instructions: "Drain the urad dal and fenugreek seeds, reserving their soaking water. In a high-powered blender, grind the dal with fenugreek using a minimal amount of the reserved soaking water — just enough to get the blender moving. The urad dal must be ground ultra-fine, to a smooth, aerated foam-like paste that is almost sticky, roughly 5 to 8 minutes of grinding. It should feel like thick, dense foam. Separately, drain the rice and grind it with more reserved water to a slightly coarser, granular paste — some very fine grains are acceptable and help give the dosa texture. Combine both in a large container with room to rise: the batter will increase in volume by 30 to 50% during fermentation.",
-      visualCue: {
-        primaryTarget: "Urad dal paste: thick white foam, completely smooth, almost sticky with trapped air bubbles. Rice paste: fine-grained, slightly textured cream. Combined: a pourable, pale batter with a slight cream colour.",
-        spectrum: [
-          { state: "Underdone", description: "Urad paste is still gritty — fine grain visible when you rub it between fingers. Rice paste has visible pieces.", action: "Grind longer, adding small amounts of water. The smoothness of the dal paste is critical for fermentation." },
-          { state: "Perfect",   description: "Dal paste is silk-smooth and nearly foamy. Rice paste is fine but has very faint granularity. Combined batter pours like thick pancake batter.", action: "Combine, stir, and transfer to a large container for fermentation." },
-          { state: "Overdone",  description: "Batter is very thin from too much water added during grinding.", action: "You cannot remove water. The dosa will be thinner and crisper than ideal. Ferment and cook — reduce cooking time accordingly." },
-        ],
-      },
-      feelCue: "Rub a drop of the ground urad dal paste between your index finger and thumb — it should feel completely smooth, like hand lotion, with absolutely no graininess.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Urad blanc entier dal (gras noir en peau)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "(résultat moins aéré)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Ferment",
-      inputs: ["raw_batter"],
-      outputState: "fermented_batter",
-      instructions: "Cover the combined batter loosely — a plate or cloth, not an airtight lid — and place in a warm spot at 28–32°C (82–90°F). In a North American or European kitchen in winter this may mean a turned-off oven with only the light bulb on, or near a radiator. Ferment for 8 to 12 hours. The batter is ready when it has risen noticeably, smells faintly sour, and the surface is bubbly and porous-looking. Add salt only after fermentation is complete — salt added before fermentation suppresses the wild yeast and bacteria. Stir the salt in gently, trying not to deflate the risen batter unnecessarily.",
-      visualCue: {
-        primaryTarget: "Batter has risen by 30 to 50% in the container. The surface is covered in fine bubbles. The smell is pleasantly sour — like mild yogurt or young sourdough.",
-        spectrum: [
-          { state: "Underdone", description: "Batter looks exactly as it did before. No visible bubbles, no sour smell, no volume increase.", action: "Move to a warmer location. Cold kills fermentation. If in a very cold kitchen, this could take 16 to 20 hours." },
-          { state: "Perfect",   description: "Visibly risen, bubbly surface, pleasant sour-yogurt aroma. Batter has a slight tang when tasted raw.", action: "Stir in salt and begin cooking, or refrigerate and use within 3 days." },
-          { state: "Overdone",  description: "Batter has extremely sour smell, is very liquidy and the bubbles have collapsed. Very tangy taste.", action: "Still usable, just tarter than ideal. This makes a very sour dosa — add a pinch of sugar to the batter to balance." },
-        ],
-      },
-      feelCue: "Smell the batter after 8 hours — if fermentation is active you will smell a clean, gentle sourness like the inside of a good yogurt container. If it smells of nothing, it needs more time or more warmth.",
+      "ingId": "ing_03",
+      "role": "Leavener",
+      "name": "Graines de fénugreek (aide à la fermentation et au brunissement)",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Sear",
-      inputs: ["fermented_batter", "ing_06"],
-      outputState: "finished_dosa",
-      instructions: "Heat a cast-iron or heavy non-stick skillet over high heat until it begins to smoke lightly. Rub the surface with a cut onion half dipped in oil — this seasons the pan and prevents sticking. Ladle approximately 80ml of fermented batter into the centre of the hot pan. Immediately and confidently use the back of the ladle in a circular motion to spread the batter outward from the centre in a single continuous spiral — you have about 10 seconds before it sets. Drizzle a few drops of oil around the edges. Cook on high heat until the edges lift and curl away from the pan and the underside is deep golden-brown and crisp, about 2 to 3 minutes. Flip only if you want a double-cooked dosa — the traditional paper dosa is cooked on one side only.",
-      visualCue: {
-        primaryTarget: "A thin, translucent, lacy crêpe with deep golden-brown patches on the bottom and edges that are curling away from the pan. The uncooked top surface has turned from white to a faintly translucent steamed look.",
-        spectrum: [
-          { state: "Underdone", description: "Edges are still flat and the surface looks wet. Batter slides when you try to lift an edge.", action: "Leave on high heat. The dosa is not ready. Never force it off the pan." },
-          { state: "Perfect",   description: "Edges have curled and lifted from the pan spontaneously. Bottom is visible deep gold when you peek with a spatula. Top surface is completely dry and matte.", action: "Fold in half or roll, serve immediately." },
-          { state: "Overdone",  description: "Edges are dark brown and the dosa is rigid and brittle. Slightly charred smell.", action: "Still edible and extra crisp. Remove and serve — they are called paper dosa for a reason." },
-        ],
-      },
-      feelCue: "When you can hear the dosa crackling and popping from 30 cm away and smell a faint nutty-sour toast, it is almost done. Slide a thin spatula under an edge — if it lifts cleanly with no tearing, the dosa is ready to fold.",
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Eau froide (pour le trempage + le broyage; préféré non chloré)",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau filtrée ou embouteillée (le chlore inhibe la fermentation)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel de mer fin (ajouté après fermentation)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel de roche"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile neutre ou ghee (pour la cuisson de chaque dosa)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile de coco raffinée (traditionnelle pour la croustillante)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Hydrate",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "soaked_grains",
+      "instructions": "Rincer le riz et l'urad dal séparément dans plusieurs changements d'eau froide jusqu'à ce qu'il soit clair. Mélanger les graines d'urad et de fenugrec dans un bol et le riz dans un bol séparé. Couvrez-les généreusement avec de l'eau fraîche non chlorée et laissez tremper pendant 6 à 8 heures, ou pendant la nuit. Ils doivent être trempés séparément parce que le dal broie à une consistance différente de celle du riz et nécessite une texture différente. Conserver dans un endroit frais, mais pas au réfrigérateur — les bactéries ambiantes sur les grains sont les agents de fermentation et les températures froides suppriment leur activité.",
+      "visualCue": {
+        "primaryTarget": "Les grains sont gonflés à environ une fois et demie leur taille originale. L'urad dal est plumé et a une faible floraison blanche. Les grains de riz sont gonflés et écrasent facilement entre les doigts.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont encore petits et durs. Le riz résiste à la pression entre les doigts.",
+            "action": "Tremper encore au moins 2 heures. Le gonflement est ce qui permet aux grains de broyer en douceur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les deux composants sont gonflés et doux. Un grain de riz pressé entre deux doigts frotte plutôt que des fissures. Dal est doux jusqu'au bout.",
+            "action": "Égoutter et procéder au broyage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les grains ont trempé plus de 12 heures et ont une odeur légèrement aigre ou fermentée.",
+            "action": "C'est bien, une préfermentation légère aide. Grind et procéder immédiatement."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un grain de riz trempé entre le pouce et l'index — il devrait donner comme une lentille de contact très douce, frottant à plat sans centre dur ou grainé."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "soaked_grains"
+      ],
+      "outputState": "raw_batter",
+      "instructions": "Égoutter les graines d'urad et de fenugrec, en réservant leur eau de trempe. Dans un mélangeur à haute puissance, moudre le dal avec du fenugrec à l'aide d'une quantité minimale de l'eau de trempe réservée — juste assez pour faire bouger le mélangeur. L'urad dal doit être moulu ultra-fin, à une pâte lisse et aérée en mousse qui est presque collante, environ 5 à 8 minutes de broyage. Ça devrait être une mousse épaisse et dense. Séparément, égouttez le riz et moudre avec de l'eau plus réservée à une pâte granulaire légèrement plus grossière — certains grains très fins sont acceptables et aident à donner la texture dosa. Combinez les deux dans un grand récipient avec de la place pour augmenter : la pâte augmentera en volume de 30 à 50% pendant la fermentation.",
+      "visualCue": {
+        "primaryTarget": "Pâte de dal d'Urad : mousse blanche épaisse, complètement lisse, presque collante avec des bulles d'air piégées. Pâte de riz : crème fine, légèrement texturée. Combiné : une pâte versable, pâle et légèrement crème.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte d'Urad est encore gritty — fine grain visible quand on la frotte entre les doigts. La pâte de riz a des morceaux visibles.",
+            "action": "Mouiller plus longtemps, en ajoutant de petites quantités d'eau. La douceur de la pâte de dal est essentielle à la fermentation."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte de Dal est soyeuse et presque mousseuse. La pâte de riz est fine mais a une granularité très faible. La pâte combinée verse comme la pâte à crêpes épaisse.",
+            "action": "Mélanger, remuer et transférer dans un grand récipient pour la fermentation."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie est très mince de trop d'eau ajoutée lors du broyage.",
+            "action": "Vous ne pouvez pas enlever l'eau. La dosa sera plus mince et plus croquante que l'idéal. Fermenter et cuire — réduire le temps de cuisson en conséquence."
+          }
+        ]
+      },
+      "feelCue": "Frottez une goutte de la pâte de l'urade de terre entre votre index et le pouce — il devrait se sentir complètement lisse, comme la lotion à la main, sans grain."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Ferment",
+      "inputs": [
+        "raw_batter"
+      ],
+      "outputState": "fermented_batter",
+      "instructions": "Couvrir la pâte combinée de façon lâche — une plaque ou un chiffon, non un couvercle hermétique — et la placer dans un endroit chaud à 28–32 °C (82–90 °F). Dans une cuisine nord-américaine ou européenne en hiver, cela peut signifier un four éteint avec seulement l'ampoule allumée, ou près d'un radiateur. Ferment pendant 8 à 12 heures. La pâte est prête lorsqu'elle s'est relevée de façon notable, sent peu aigre, et la surface est pétillante et poreuse. Ajouter du sel seulement une fois la fermentation terminée — le sel ajouté avant la fermentation supprime la levure et les bactéries sauvages. Incorporer le sel en douceur, en essayant de ne pas dégonfler inutilement la pâte levée.",
+      "visualCue": {
+        "primaryTarget": "La batterie a augmenté de 30 à 50% dans le récipient. La surface est couverte de fines bulles. L'odeur est agréablement aigre, comme le yogourt doux ou le jeune armois.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Batter ressemble exactement comme avant. Pas de bulles visibles, pas d'odeur acide, pas d'augmentation du volume.",
+            "action": "Passez à un endroit plus chaud. Le froid tue la fermentation. Si dans une cuisine très froide, cela pourrait prendre 16 à 20 heures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface visiblement relevée, bubble, agréable arôme aigre-yogurt. La batterie a un léger tang quand elle est crue.",
+            "action": "Incorporer le sel et commencer la cuisson, ou réfrigérer et utiliser dans les 3 jours."
+          },
+          {
+            "state": "Overdone",
+            "description": "La batterie a une odeur extrêmement aigre, est très liquide et les bulles se sont effondrées. Un goût très tannant.",
+            "action": "Toujours utilisable, juste plus tard que l'idéal. Cela rend une dosa très aigre — ajouter une pincée de sucre à la pâte pour équilibrer."
+          }
+        ]
+      },
+      "feelCue": "Sentez la pâte après 8 heures — si la fermentation est active, vous sentirez une ameresse propre et douce comme l'intérieur d'un bon contenant de yaourt. Si ça sent rien, il faut plus de temps ou plus de chaleur."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Sear",
+      "inputs": [
+        "fermented_batter",
+        "ing_06"
+      ],
+      "outputState": "finished_dosa",
+      "instructions": "Chauffer une poêle en fonte ou une poêle antiadhésive lourde à feu vif jusqu'à ce qu'elle commence à fumer légèrement. Frottez la surface avec un oignon coupé à moitié trempé dans l'huile. Déposer environ 80 ml de pâte fermentée au centre de la poêle chaude. Immédiatement et en toute confiance, utilisez le dos de la louche dans un mouvement circulaire pour étendre la pâte vers l'extérieur du centre en une seule spirale continue — vous avez environ 10 secondes avant qu'elle ne se mette. Arrosez quelques gouttes d'huile autour des bords. Cuire à feu vif jusqu'à ce que les bords se lèvent et se bouclent loin de la poêle et que le dessous soit brun-or profond et croustillant, environ 2 à 3 minutes. Flip seulement si vous voulez une double dosa cuite — le papier traditionnel dosa est cuit d'un seul côté.",
+      "visualCue": {
+        "primaryTarget": "Une crêpe mince, translucide et lacy avec des taches dorées profondes sur le fond et les bords qui sont en train de friser loin de la poêle. La surface supérieure non cuite est passée du blanc à un aspect légèrement translucide à la vapeur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les bords sont encore plats et la surface semble mouillée. Les toboggans se glissent quand vous essayez de soulever un bord.",
+            "action": "Laisser à feu vif. La dosa n'est pas prête. Ne le forcez jamais."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les bords se sont recourbés et levés spontanément. Le fond est visible en or profond lorsque vous regardez avec une spatule. La surface supérieure est complètement sèche et mate.",
+            "action": "Plier en deux ou rouler, servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont brun foncé et la dosa est rigide et fragile. Une odeur légèrement carbonisée.",
+            "action": "Toujours comestible et croustillant. Enlevez et servez — ils sont appelés dosa papier pour une raison."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous pouvez entendre la dosa craquer et sauter à partir de 30 cm de distance et sentir un léger toast de noix-sour, il est presque fait. Faites glisser une spatule mince sous un bord — si elle se soulève proprement sans déchirer, la dosa est prête à se plier."
+    }
+  ]
 };

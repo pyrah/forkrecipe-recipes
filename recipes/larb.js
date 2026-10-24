@@ -1,108 +1,263 @@
 export default {
-  repoId: "master_thai_larb_001",
-  parentRepoId: null,
-  slug: "larb",
-  author: "ForkRecipe Kitchen",
-
-  title: "Larb Moo",
-  description: "A Northeastern Thai salad of minced pork cooked in its own rendered fat and doused with lime juice and fish sauce, the meat still steaming when it hits a blizzard of fresh herbs, shallots, and toasted rice powder that soaks up every last drop of the hot, sour, savoury dressing.",
-  cuisine: "Thai",
-  culture: "Isaan",
-  category: "proteins",
-
-  tags: ["minced pork", "herbs", "thai", "isaan", "lime"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-
-  // 0–5 scale. Lime and fish sauce push sour and salty hard; toasted spice adds bitterness.
-  flavorRadar: { sweet: 1, salty: 4, sour: 5, bitter: 2, umami: 3, heat: 3 },
-
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Minced pork (20% fat minimum)",                          ratioValue: 4,    defaultUnit: "parts", substitutions: ["minced chicken thigh", "minced duck"] },
-    { ingId: "ing_02", role: "Acid",      name: "Fresh lime juice (2–3 limes)",                          ratioValue: 1.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning", name: "Fish sauce (Tiparos preferred)",                        ratioValue: 1,    defaultUnit: "parts", substitutions: ["soy sauce for vegetarian"] },
-    { ingId: "ing_04", role: "Spice",     name: "Dried chili flakes (prik bon), toasted",               ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["fresh bird's eye chili, thinly sliced"] },
-    { ingId: "ing_05", role: "Starch",    name: "Khao khua: raw glutinous or jasmine rice, dry-toasted", ratioValue: 0.5,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Asian shallots (4–5 small), thinly sliced into rings",  ratioValue: 1,    defaultUnit: "parts", substitutions: ["red onion, soaked in cold water"] },
-    { ingId: "ing_07", role: "Herb",      name: "Fresh mint leaves",                                     ratioValue: 1,    defaultUnit: "parts", substitutions: ["Vietnamese mint (laksa leaf)"] },
-    { ingId: "ing_08", role: "Herb",      name: "Fresh sawtooth coriander (culantro), sliced",          ratioValue: 0.5,  defaultUnit: "parts", substitutions: ["regular coriander (cilantro)"] },
-    { ingId: "ing_09", role: "Aromatic",  name: "Lemongrass stalk, inner tender part only, very finely sliced", ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Garnish",   name: "Cabbage wedges and cucumber slices, to serve",          ratioValue: 2,    defaultUnit: "parts", substitutions: ["lettuce cups"] },
+  "repoId": "master_thai_larb_001",
+  "parentRepoId": null,
+  "slug": "larb",
+  "author": "ForkRecipe Kitchen",
+  "title": "Lamb Moo",
+  "description": "Un nord-est Salade thaïlandaise de porc haché cuite dans sa propre graisse fondue et avec du jus de citron vert et de la sauce de poisson, la viande encore à la vapeur quand il frappe un blizzard d'herbes fraîches, échalotes, et la poudre de riz grillé qui absorbe chaque dernière goutte de la vinaigrette chaude, aigre, salée.",
+  "cuisine": "Thaï",
+  "culture": "Isaan",
+  "category": "proteins",
+  "tags": [
+    "porc haché",
+    "herbes",
+    "Thaï",
+    "estaan",
+    "Chaux"
   ],
-
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 5,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_05"],
-      outputState: "khao_khua",
-      instructions: "Place raw rice in a dry wok or small heavy pan over medium heat. Stir continuously with a wooden spoon or shake the pan constantly for 5–8 minutes until every grain has turned a deep golden-brown — the colour of a perfect wood-fired crouton. The rice will smell nutty, toasty, and faintly smoky. Allow to cool, then pound in a mortar or pulse in a spice grinder until you have a coarse powder — not fine flour, but irregular gritty crumbs the size of coarse sea salt. This toasted rice powder (khao khua) is what makes larb larb: it absorbs the dressing, thickens it slightly, and adds a nutty, slightly bitter back-note to every bite.",
-      visualCue: {
-        primaryTarget: "Deep golden-brown grains, uniform in colour, with a toasted, popcorn-like aroma. No pale grains, no burnt-black grains.",
-        spectrum: [
-          { state: "Underdone", description: "Grains are pale gold or unevenly coloured. The powder tastes starchy rather than nutty.", action: "Continue toasting on medium heat. Be patient — the colour deepens quickly in the last 90 seconds." },
-          { state: "Perfect",   description: "All grains a deep even gold. The smell is intensely nutty, like roasted peanuts. The ground powder has a warm, complex aroma.", action: "Cool and pound to a coarse powder." },
-          { state: "Overdone",  description: "Several grains have turned dark brown or black. The powder will be acrid and bitter.", action: "Pick out any burnt grains before grinding, or discard and start again — burnt khao khua ruins the dish." },
-        ],
-      },
-      feelCue: "When you grind the toasted rice, the powder should feel gritty between your fingers like coarse polenta — not fine and floury. That texture is what gives larb its characteristic slight crunch.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Porc haché (20 % minimum de matières grasses)",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cuisse de poulet hachée",
+        "canard haché"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Heat",
-      inputs: ["ing_01"],
-      outputState: "cooked_pork",
-      instructions: "Place the minced pork in a cold wok or wide pan — do not add oil, the pork fat will render. Set over medium-high heat and cook, breaking up the mince with a wooden spoon, for 4–5 minutes. You want the pork cooked through with some slight caramelisation around the edges — not a steamed grey mass and not a dry, hard crumble. Remove from heat as soon as the pork is just cooked. Transfer immediately to a large mixing bowl. The pork should still be steaming hot when you dress it — the heat blooms the herbs and opens up the lime.",
-      visualCue: {
-        primaryTarget: "Pork is cooked through and light brown with some caramelised edges. No pink, no grey water pooling around the meat. The fat has rendered and the meat looks slightly glossy.",
-        spectrum: [
-          { state: "Underdone", description: "Pork is still pink in patches. Liquid is pooling around the meat — it is steaming rather than frying.", action: "Drain any excess liquid and raise heat. Continue cooking until no pink remains." },
-          { state: "Perfect",   description: "Cooked through, with some browning on the clumps that settled against the pan. Fat has rendered and coats the meat. Still steaming.", action: "Transfer to the mixing bowl immediately and dress while hot." },
-          { state: "Overdone",  description: "Pork is dry, hard, and crumbling. All fat has cooked off and the meat is sticking to the pan.", action: "Proceed — it will still taste good dressed, but the texture will be less juicy. Add a touch more lime juice and fish sauce to rehydrate slightly." },
-        ],
-      },
-      feelCue: "Freshly cooked pork mince should feel loosely textured and slightly moist when pressed with the back of a spoon — it should yield like coarse wet sand, not bounce back like rubber or crumble like dry breadcrumbs.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Jus de chaux frais (2–3 chaux)",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Mix",
-      inputs: ["cooked_pork", "ing_02", "ing_03", "ing_04"],
-      outputState: "dressed_larb",
-      instructions: "Working quickly while the pork is still very hot, add lime juice, fish sauce, and toasted chili flakes to the bowl. Toss aggressively — the acidity of the lime will stop the carryover cooking. Taste immediately: the dressing should be aggressively sour and salty with a chili hit at the back. Larb is intentionally bold — if it seems too intense in the bowl, it will balance beautifully when eaten with plain rice and fresh vegetables. Adjust: more lime for sour, more fish sauce for savoury depth, more chili for heat.",
-      visualCue: {
-        primaryTarget: "The pork looks glossy and lightly dressed, glistening with lime juice. The colour is warm brown-pink. Steam is still rising.",
-        spectrum: [
-          { state: "Underdone", description: "Dressing not yet added. The pork is cooling rapidly and will be cold before the herbs are added.", action: "Dress immediately — cold larb is a different (less good) dish." },
-          { state: "Perfect",   description: "Hot, glossy, aggressively seasoned pork. You taste it and your mouth puckers from the lime and blooms with chili heat. The fish sauce gives umami depth.", action: "Add the herbs and rice powder immediately." },
-          { state: "Overdone",  description: "Too much fish sauce or lime was added and the dressing is overwhelming. Pork tastes pickled.", action: "Balance by adding a pinch of sugar and a tablespoon of finely sliced fresh lemongrass to cut through." },
-        ],
-      },
-      feelCue: "When you stir the dressed pork, it should smell like a market larb stall — hot lime steam, fish sauce funk, and dried chili warmth all hitting the face at once.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "sauce de poisson (Tiparos préféré)",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sauce soja pour végétarien"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Toss",
-      inputs: ["dressed_larb", "khao_khua", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "finished_larb",
-      instructions: "Add the toasted rice powder, sliced shallots, mint leaves (torn if large), sawtooth coriander, and lemongrass to the dressed pork. Toss gently but thoroughly, distributing all the herbs and powder evenly through the meat. The khao khua will immediately begin absorbing the dressing and thickening it slightly. Taste one more time and adjust seasoning if necessary. Serve immediately on a plate or in a shallow bowl with the cabbage wedges and cucumber slices on the side — these are not garnish, they are structural: you use them to scoop the larb and cool the heat.",
-      visualCue: {
-        primaryTarget: "A warm, fragrant mound of pork studded with bright green mint and herb shreds, pale shallot rings, and dusted with tan rice powder. Still steaming faintly.",
-        spectrum: [
-          { state: "Underdone", description: "Herbs just scattered on top, not tossed in. Rice powder not added. Larb tastes flat and unherbed.", action: "Toss everything together so every piece of pork has herb and rice powder coverage." },
-          { state: "Perfect",   description: "Herbs are wilted very slightly by the heat of the pork, releasing their fragrance. Shallots retain crunch. Rice powder has thickened the dressing to a glaze.", action: "Plate immediately and serve at once." },
-          { state: "Overdone",  description: "Larb has been sitting for 15 minutes — herbs are fully wilted and dark, shallots have softened, rice powder has dissolved into the dressing.", action: "It is still edible but has lost freshness. Dress with a handful of fresh mint leaves and a final squeeze of lime to revive it." },
-        ],
-      },
-      feelCue: "The finished larb should be warm enough that the mint slightly wilts on contact and releases its menthol aroma into your face when you lean over the bowl — that steaming-herb perfume is the signature of larb cooked and dressed correctly.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Flacons de chili séchés, grillés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chili des yeux d'oiseau frais, tranché finement"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Starch",
+      "name": "Khao khua: riz glutineux brut ou jasmin, cuit à sec",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Échalotes asiatiques (4 à 5 petites), tranchées finement en anneaux",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "oignon rouge, trempé dans l'eau froide"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Feuilles fraîches de menthe",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "menthe vietnamienne (feuille de laksa)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Coriandre à scie fraîche (culantro), tranchée",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Coriandre régulière (cilantro)"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Aromatic",
+      "name": "Pâte de citronnelle, partie tendre interne seulement, très finement tranchée",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Choux et tranches de concombre, à servir",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tasses de laitue"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_05"
+      ],
+      "outputState": "khao_khua",
+      "instructions": "Mettre le riz cru dans un wok sec ou une petite poêle lourde à feu moyen. Mélanger en continu avec une cuillère en bois ou agiter constamment la poêle pendant 5 à 8 minutes jusqu'à ce que chaque grain ait changé de couleur dorée profonde – la couleur d'un crouton au bois parfait. Le riz sent la noix, le toast, et peu fumé. Laisser refroidir, puis mettre un mortier ou un pouls dans un broyeur d'épices jusqu'à ce que vous ayez une poudre grossière — pas de farine fine, mais des miettes irrégulières de la taille du sel de mer grossier. Cette poudre de riz grillée (khao khua) est ce qui rend les larbes : elle absorbe la vinaigrette, l'épaissit légèrement, et ajoute une note arrière légèrement amère à chaque bouchée.",
+      "visualCue": {
+        "primaryTarget": "Grains brun doré foncé, de couleur uniforme, avec un arôme de popcorn grillé. Pas de grain pâle, pas de grain noir brûlé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les grains sont d'or pâle ou de couleur inégale. La poudre a un goût d'amidon plutôt que de noix.",
+            "action": "Continuer à griller à feu moyen. Soyez patient — la couleur s'approfondit rapidement au cours des 90 dernières secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tous les grains un or même profond. L'odeur est intense, comme des cacahuètes grillées. La poudre moulue a un arôme chaud et complexe.",
+            "action": "Refroidissez et livrez à une poudre grossière."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plusieurs grains sont devenus brun foncé ou noir. La poudre sera amère et amère.",
+            "action": "Choisissez les grains brûlés avant de les broyer, ou jetez - les et recommencez."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous moudrez le riz grillé, la poudre doit se sentir gritty entre vos doigts comme une polenta grossière — pas fine et farineuse. Cette texture donne à la larb sa légère croûte caractéristique."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Chaleur",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "cooked_pork",
+      "instructions": "Placez le porc haché dans un wok froid ou une casserole large — ne pas ajouter d'huile, la graisse de porc rendra. Mettre à feu moyen-vif et cuire, en brisant la menthe avec une cuillère en bois, pendant 4 à 5 minutes. Vous voulez que le porc soit cuit avec un peu de caramélisation autour des bords — pas une masse grise à la vapeur et pas un crumble dur et sec. Retirer du feu dès que le porc est cuit. Transférer immédiatement dans un grand bol de mélange. Le porc devrait encore être chaud quand vous l'habillez — la chaleur fleurit les herbes et ouvre la chaux.",
+      "visualCue": {
+        "primaryTarget": "Le porc est cuit à travers et brun clair avec quelques bords caramélisés. Pas de rose, pas d'eau grise autour de la viande. La graisse a rendu et la viande semble légèrement brillante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le porc est encore rose dans les taches. Le liquide s'accumule autour de la viande — il est à la vapeur plutôt que de la friture.",
+            "action": "Égoutter tout excès de liquide et augmenter la chaleur. Continuer la cuisson jusqu'à ce qu'il ne reste pas de rose."
+          },
+          {
+            "state": "Perfect",
+            "description": "On a cuit à travers, avec un peu de brunissement sur les touffes qui se sont fixées contre la poêle. La graisse a rendu et enrobe la viande. Toujours à la vapeur.",
+            "action": "Transférer immédiatement dans le bol de mélange et s'habiller à chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le porc est sec, dur et s'effondre. Tout le gras a cuit et la viande colle à la poêle.",
+            "action": "Continuez — il aura encore bon goût habillé, mais la texture sera moins juteuse. Ajouter une touche plus de jus de lime et de sauce de poisson pour réhydrater légèrement."
+          }
+        ]
+      },
+      "feelCue": "La menthe de porc fraîchement cuite doit se sentir souplement texturée et légèrement humide lorsqu'elle est pressée à l'arrière d'une cuillère."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "cooked_pork",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "dressed_larb",
+      "instructions": "Travailler rapidement alors que le porc est encore très chaud, ajouter le jus de lime, la sauce de poisson et les flocons de chili grillés dans le bol. Agressivement, l'acidité de la chaux arrêtera la cuisson. Goûtez immédiatement : la vinaigrette doit être amère et salée avec un chili frappé au dos. La larde est intentionnellement audacieuse — si elle semble trop intense dans le bol, elle s'équilibrera magnifiquement avec du riz et des légumes frais. Ajuster: plus de chaux pour l'aur, plus de sauce de poisson pour la profondeur salée, plus de chili pour la chaleur.",
+      "visualCue": {
+        "primaryTarget": "Le porc a l'air brillant et légèrement habillé, scintillant avec du jus de lime. La couleur est brun-rose. La vapeur monte encore.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Dressing pas encore ajouté. Le porc se refroidit rapidement et sera froid avant que les herbes soient ajoutées.",
+            "action": "Habillez - vous immédiatement: le larbe froid est un plat différent (moins bon)."
+          },
+          {
+            "state": "Perfect",
+            "description": "Porc chaud, brillant, assaisonné agressivement. Vous le goûtez et votre bouche suce de la chaux et fleurit avec de la chaleur de chili. La sauce au poisson donne de la profondeur à l'umami.",
+            "action": "Ajouter immédiatement les herbes et la poudre de riz."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de sauce de poisson ou de citron vert a été ajouté et la vinaigrette est écrasante. Le porc a un goût mariné.",
+            "action": "Équilibrez en ajoutant une pincée de sucre et une cuillère à soupe de citronnelle fraîche finement tranchée à couper."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous remuez le porc habillé, il doit sentir comme un étal de larb du marché — la vapeur de chaux chaude, la sauce de poisson funk, et la chaleur de chili séchée tous frapper le visage à la fois."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Découpe",
+      "inputs": [
+        "dressed_larb",
+        "khao_khua",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "finished_larb",
+      "instructions": "Ajouter la poudre de riz grillée, les échalotes tranchées, les feuilles de menthe (orées si grandes), la coriandre à sciure et la citronnelle au porc habillé. Mélanger délicatement mais soigneusement, distribuer toutes les herbes et la poudre uniformément à travers la viande. Le khua khao commencera immédiatement à absorber la vinaigrette et à l'épaissir légèrement. Goûtez encore une fois et assaisonner si nécessaire. Servir immédiatement sur une assiette ou dans un bol peu profond avec les coins de chou et les tranches de concombre sur le côté — ce ne sont pas des garnitures, ils sont structuraux: vous les utilisez pour écoper le larb et refroidir la chaleur.",
+      "visualCue": {
+        "primaryTarget": "Un monticule chaud et parfumé de porc parsemé de menthe verte vive et de lambeaux d'herbes, d'échalotes pâles et de poudre de riz tan. Toujours à la vapeur.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Herbes juste dispersées sur le dessus, pas jetées dans. Poudre de riz non ajoutée. L'herbe a un goût plat et non herbé.",
+            "action": "Jetez tout ensemble afin que chaque morceau de porc ait une couverture d'herbe et de riz en poudre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les herbes sont flétries très légèrement par la chaleur du porc, libérant leur parfum. Les échalotes restent croquantes. La poudre de riz a épaissi la vinaigrette en glaçure.",
+            "action": "Assiette immédiatement et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'herbe est assise pendant 15 minutes — les herbes sont complètement flétries et sombres, les échalotes se sont adoucies, la poudre de riz s'est dissoute dans la vinaigrette.",
+            "action": "Il est encore comestible mais a perdu de la fraîcheur. Habillez-vous avec une poignée de feuilles de menthe fraîche et une touche finale de lime pour la raviver."
+          }
+        ]
+      },
+      "feelCue": "Le larbe fini doit être suffisamment chaud pour que la menthe se fane légèrement au contact et libère son arôme de menthol dans votre visage lorsque vous vous penchez sur le bol — ce parfum d'herbe à vapeur est la signature de larbe cuit et habillé correctement."
+    }
+  ]
 };

@@ -1,115 +1,271 @@
 export default {
-  repoId: "master_italian_porchetta_001",
-  parentRepoId: null,
-  slug: "porchetta",
-  author: "ForkRecipe Kitchen",
-  title: "Porchetta",
-  description: "A whole pork belly rolled around a core of fennel pollen, wild fennel fronds, rosemary, and garlic, then slow-roasted for hours until the fat renders completely and the skin transforms into a thunderous, blistered crackling that shatters into a thousand shards at the first cut. Central Italy's greatest street food, sliced and eaten in a bread roll.",
-  cuisine: "Italian",
-  culture: "Central Italian",
-  category: "proteins",
-  tags: ["pork", "italian", "roast", "fennel", "crackling", "special-occasion", "gluten-free", "dairy-free"],
-  difficulty: 4,
-  activeTime: "1 hr",
-  totalTime: "4 hr",
-  ratioSystem: "weight",
-  stars: 2314,
-  forks: 203,
-  contributors: 58,
-  license: "CC-BY-SA",
-  createdAt: "2026-01-15",
-  updatedAt: "2026-01-15",
-  flavorRadar: { sweet: 1, salty: 4, sour: 0, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Skin-on pork belly, deboned, butterflied flat",    ratioValue: 2000, defaultUnit: "g", substitutions: ["skin-on pork loin tied inside belly (leaner)"] },
-    { ingId: "ing_02", role: "Herb",      name: "Fresh rosemary, needles stripped",                  ratioValue: 15,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Herb",      name: "Fresh fennel fronds or wild fennel",                ratioValue: 20,   defaultUnit: "g", substitutions: ["dried fennel fronds", "fennel tops"] },
-    { ingId: "ing_04", role: "Spice",     name: "Fennel seeds, toasted and coarsely ground",         ratioValue: 10,   defaultUnit: "g", substitutions: ["fennel pollen (more intense, if available)"] },
-    { ingId: "ing_05", role: "Allium",    name: "Garlic cloves, very finely minced",                 ratioValue: 8,    defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Coarsely cracked black pepper",                     ratioValue: 5,    defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning", name: "Coarse sea salt",                                   ratioValue: 20,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",       name: "Extra-virgin olive oil",                            ratioValue: 30,   defaultUnit: "ml", substitutions: [] },
+  "repoId": "master_italian_porchetta_001",
+  "parentRepoId": null,
+  "slug": "porchetta",
+  "author": "ForkRecipe Kitchen",
+  "title": "Porcette",
+  "description": "Un ventre entier de porc a roulé autour d'un noyau de pollen de fenouil, de frondes de fenouil sauvage, de romarin et d'ail, puis rôti lentement pendant des heures jusqu'à ce que la graisse se transforme complètement et la peau se transforme en un craquage tondeux et cloqué qui se brise en mille bouts à la première coupe. Le plus grand plat de rue d'Italie centrale, tranché et mangé dans un pain.",
+  "cuisine": "Italien",
+  "culture": "Centre italien",
+  "category": "proteins",
+  "tags": [
+    "porc",
+    "Italien",
+    "rôti",
+    "fenouil",
+    "crépitement",
+    "occasion spéciale",
+    "Sans gluten",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hr",
+  "totalTime": "4 hr",
+  "ratioSystem": "weight",
+  "stars": 2314,
+  "forks": 203,
+  "contributors": 58,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-01-15",
+  "updatedAt": "2026-01-15",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Season",
-      inputs: ["ing_01", "ing_07"],
-      outputState: "salted_belly",
-      instructions: "The night before: lay the pork belly skin-side down. Score the flesh side in a crosshatch pattern about 5 mm deep (this is where the filling will cling). Season the flesh generously with salt — use about half the total salt. Flip the belly and score the skin with a sharp knife in parallel lines about 1 cm apart, cutting only through the skin and just into the fat — do not cut into the flesh. Salt the skin lightly, rub in, and refrigerate uncovered overnight. Dry skin is the key to crackling.",
-      visualCue: {
-        primaryTarget: "Skin is pale and completely dry after overnight refrigeration. Score lines are visible across both skin and flesh.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is still moist or tacky. Scoring cuts are too shallow.", action: "Pat with paper towels and return uncovered to the fridge for another hour, or score deeper." },
-          { state: "Perfect",   description: "Skin feels like dry paper. Score lines are deep, even, and clean. Flesh is firm and cold.", action: "Proceed to building the filling." },
-          { state: "Overdone",  description: "Not possible — the longer the skin dries, the better. 48 hours is fine.", action: "Proceed." },
-        ],
-      },
-      feelCue: "Run your finger across the scored skin — it should feel like dry parchment, with no moisture transferring to your finger.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Skin-on porc ventre, désossé, plat au beurre",
+      "ratioValue": 2000,
+      "defaultUnit": "g",
+      "substitutions": [
+        "longe de porc sur la peau attachée à l'intérieur du ventre"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mix",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_08"],
-      outputState: "herb_paste",
-      instructions: "Roughly chop rosemary, fennel fronds, and garlic together on a cutting board until finely minced. Transfer to a bowl. Add ground fennel seeds, black pepper, and olive oil. Stir into a fragrant, moist paste. Taste — it should be aggressively herby and garlicky. This is the soul of the porchetta.",
-      visualCue: {
-        primaryTarget: "A dense, moist, dark green paste with visible fennel seed specks. Intensely fragrant.",
-        spectrum: [
-          { state: "Underdone", description: "Herbs are too coarsely chopped — large pieces will fall out when rolling.", action: "Continue chopping until everything is very fine." },
-          { state: "Perfect",   description: "Fine, cohesive paste. Sticky from the natural oils in the herbs. Deeply fragrant when you stir it.", action: "Apply immediately to the pork — the paste must stay moist for rolling." },
-          { state: "Overdone",  description: "Over-chopped into a near-liquid puree.", action: "Add a few whole fennel seeds to restore texture. Proceed." },
-        ],
-      },
-      feelCue: "The paste should feel like cool, gritty butter when you press it between two fingers — moist and cohesive, not dry and crumbly.",
+      "ingId": "ing_02",
+      "role": "Herb",
+      "name": "Romarin frais, aiguilles dépouillées",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["salted_belly", "herb_paste"],
-      outputState: "rolled_porchetta",
-      instructions: "Spread the herb paste evenly over the entire scored flesh side, pressing it into the crosshatch cuts. Roll the belly tightly from one short end, keeping the tension even, ensuring the roll is tight with no air pockets. Tie with kitchen twine at 3 cm intervals — tight enough that the roll holds a drum-like firmness. Rub remaining salt all over the skin. Refrigerate uncovered for at least 2 hours, or overnight if possible.",
-      visualCue: {
-        primaryTarget: "A tight, drum-like cylinder with parallel twine loops. Skin smooth and dry. No gaps visible at the seam.",
-        spectrum: [
-          { state: "Underdone", description: "Roll is loose, seam gaping, filling falling out at the ends.", action: "Re-tie more firmly, starting at the center and working outward. Tuck filling back in at the ends." },
-          { state: "Perfect",   description: "Firm cylinder, evenly tied, no sag between loops. Seam tightly closed. Skin dry and pale.", action: "Rest uncovered in fridge until ready to roast." },
-          { state: "Overdone",  description: "Tied so tightly the meat is bulging between loops.", action: "Retie with slightly looser tension — uneven pressure creates uneven cooking." },
-        ],
-      },
-      feelCue: "Squeeze the roll — it should feel as firm and solid as a magazine rolled tight, with no give or shift between the skin and filling.",
+      "ingId": "ing_03",
+      "role": "Herb",
+      "name": "Frondes fraîches de fenouil ou de fenouil sauvage",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "frondes de fenouil séchées",
+        "haut de fenouil"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Roast",
-      inputs: ["rolled_porchetta"],
-      outputState: "slow_roasted_porchetta",
-      instructions: "Take porchetta from the fridge 1 hour before roasting. Preheat oven to 230 C (450 F). Place porchetta on a wire rack over a roasting pan, seam-side down. Roast at 230 C for 30 minutes — this blast of heat begins the crackling. Reduce heat to 160 C (325 F) and roast for 2 to 2.5 more hours until internal temperature reaches 70 C (158 F) at the center.",
-      visualCue: {
-        primaryTarget: "After the blast heat: skin is blistered, bubbled, and starting to turn golden. After slow roast: deeply amber with dramatic bubbled blisters covering the entire surface.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is still flat and pale golden after the blast heat period. Internal temp below 65 C.", action: "Continue slow-roasting and check temperature every 20 minutes." },
-          { state: "Perfect",   description: "Skin is covered in dramatic, amber-gold bubbles — each blister a tiny pocket of crackle. Internal temp 70–75 C. Fat rendered clear.", action: "Rest for 20 minutes before slicing. The crackling continues to crisp as it rests." },
-          { state: "Overdone",  description: "Skin is very dark brown, some areas blackened. Possible burnt smell.", action: "Tent with foil for the rest of the cook. The interior is likely still moist." },
-        ],
-      },
-      feelCue: "Tap the skin with a knife — fully rendered crackling rings with a hollow, crisp click, not a dull thud. If it thuds, return to high heat for 10 more minutes.",
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Graines de fenouil, grillées et grossièrement moulues",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pollen de fenouil (plus intense, si disponible)"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Rest",
-      inputs: ["slow_roasted_porchetta"],
-      outputState: "finished_porchetta",
-      instructions: "Rest the porchetta on a wire rack (not a cutting board) uncovered for 20–30 minutes. Resting lets the juices redistribute through the fat and flesh. Do not tent with foil — steam will soften the crackling you worked so hard for. Slice with a sharp, serrated bread knife using a sawing motion — a chef's knife will crack and shatter the crackling rather than cut through it cleanly.",
-      visualCue: {
-        primaryTarget: "Cross-section reveals alternating rings of herb-flecked meat, rendered white fat, and a shattering amber crackling crust.",
-        spectrum: [
-          { state: "Underdone", description: "Juices run freely when cut — meat is not rested. Interior is slack.", action: "Patience — rest 10 more minutes. Cutting now wastes juice." },
-          { state: "Perfect",   description: "Juices stay in the meat. Crackling shatters at the first touch of the knife. Layers of fat, herb, and meat visible in the cross-section.", action: "Slice immediately and serve." },
-          { state: "Overdone",  description: "Rested too long, gone cold. Crackling has softened from surface steam.", action: "Blast under the broiler for 3–4 minutes to re-crisp the skin before slicing." },
-        ],
-      },
-      feelCue: "The crackling should shatter with a sound like breaking a thin sheet of caramel — if it bends, it needs more heat.",
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Gousses d'ail, très finement hachées",
+      "ratioValue": 8,
+      "defaultUnit": "cloves",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poivre noir grossièrement craqué",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Sels de mer grossiers",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saison",
+      "inputs": [
+        "ing_01",
+        "ing_07"
+      ],
+      "outputState": "salted_belly",
+      "instructions": "La veille : déposer la peau du ventre de porc. Noter le côté chair dans un motif de croisement d'environ 5 mm de profondeur (c'est là que le remplissage s'accrochera). Assaisonner généreusement la chair de sel — utiliser environ la moitié du sel total. Dépliez le ventre et marquez la peau avec un couteau tranchant en lignes parallèles à environ 1 cm d'intervalle, coupant seulement à travers la peau et juste dans la graisse — ne pas couper dans la chair. Saler légèrement la peau, frotter et réfrigérer la nuit. La peau sèche est la clé du craquage.",
+      "visualCue": {
+        "primaryTarget": "La peau est pâle et complètement sèche après la réfrigération de nuit. Les lignes de score sont visibles sur la peau et la chair.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore humide ou collante. Les coupures sont trop superficielles.",
+            "action": "Pat avec des serviettes en papier et retour découvert au réfrigérateur pendant une autre heure, ou marquer plus profondément."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau ressemble à du papier sec. Les lignes de score sont profondes, uniformes et propres. La chair est ferme et froide.",
+            "action": "Passer à la construction du remplissage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pas possible — plus la peau sèche, mieux c'est. 48 heures, ça va.",
+            "action": "Continuez."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre doigt sur la peau marquée — il devrait se sentir comme un parchemin sec, sans transfert d'humidité à votre doigt."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mélange",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_08"
+      ],
+      "outputState": "herb_paste",
+      "instructions": "Hacher grossièrement le romarin, les frondes de fenouil et l'ail sur une planche à découper jusqu'à ce qu'ils soient finement hachés. Transférer dans un bol. Ajouter les graines de fenouil moulu, le poivre noir et l'huile d'olive. Incorporer une pâte parfumée et humide. Goûter — il devrait être agressif herby et ailky. C'est l'âme de la porchette.",
+      "visualCue": {
+        "primaryTarget": "Une pâte dense, humide, vert foncé avec des taches de graines de fenouil visibles. Intensément parfumé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les herbes sont trop grossièrement hachées — de gros morceaux tomberont quand ils rouleront.",
+            "action": "Continuez à couper jusqu'à ce que tout soit très bien."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une pâte bien cohésive. Sticky des huiles naturelles dans les herbes. Profondément parfumé quand vous le remuez.",
+            "action": "Appliquer immédiatement sur le porc — la pâte doit rester humide pour le laminage."
+          },
+          {
+            "state": "Overdone",
+            "description": "C'est une purée presque liquide.",
+            "action": "Ajoutez quelques graines entières de fenouil pour restaurer la texture. Continuez."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir comme du beurre frais et gritty quand on la presse entre deux doigts — humide et cohésif, non sec et émietté."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "salted_belly",
+        "herb_paste"
+      ],
+      "outputState": "rolled_porchetta",
+      "instructions": "Étendre la pâte d'herbe uniformément sur le côté entier de la chair marquée, en la pressant dans les coupes croisées. Rouler le ventre bien à partir d'une extrémité courte, en maintenant la tension uniforme, en veillant à ce que le rouleau soit serré sans poches d'air. Attachez la ficelle de cuisine à des intervalles de 3 cm — assez serré pour que le rouleau conserve une fermeté semblable à un tambour. Frotter le reste du sel sur toute la peau. Réfrigérer à découvert pendant au moins 2 heures, ou pendant la nuit si possible.",
+      "visualCue": {
+        "primaryTarget": "Un cylindre serré, semblable à un tambour, avec des boucles de ficelle parallèles. Peau lisse et sèche. Pas de trous visibles à la couture.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le rouleau est lâche, les coutures s'entremêlent, le remplissage tombe aux extrémités.",
+            "action": "Relier plus fermement, en commençant au centre et en travaillant vers l'extérieur. Remplir les deux bouts."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cylindrée ferme, uniformément attachée, pas de sag entre les boucles. La couture est bien fermée. Peau sèche et pâle.",
+            "action": "Reposez-vous au réfrigérateur jusqu'à ce qu'il soit prêt à rôtir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Attachée de manière si serrée, la viande se gonfle entre les boucles.",
+            "action": "Relier avec une tension légèrement plus lâche — une pression inégale crée une cuisson inégale."
+          }
+        ]
+      },
+      "feelCue": "Pressez le rouleau — il doit se sentir aussi ferme et solide qu'un magazine roulé serré, sans donner ni déplacer entre la peau et le remplissage."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Rôtis",
+      "inputs": [
+        "rolled_porchetta"
+      ],
+      "outputState": "slow_roasted_porchetta",
+      "instructions": "Prenez le porchetta du réfrigérateur 1 heure avant de rôtir. Préchauffer le four à 230 C (450 F). Placez le porchetta sur un porte-fils sur une rôtissoire, côté couture vers le bas. Faire cuire à 230 °C pendant 30 minutes — cette explosion de chaleur commence à craquer. Réduire la chaleur à 160 C (325 F) et rôtir pendant 2 à 2,5 heures de plus jusqu'à ce que la température interne atteigne 70 C (158 F) au centre.",
+      "visualCue": {
+        "primaryTarget": "Après la chaleur de l'explosion: la peau est cloquée, bublée, et commence à devenir dorée. Après torréfaction lente: profonde ambre avec des blisters spectaculaires à bulles couvrant toute la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore plate et dorée après la période de chaleur. Température intérieure inférieure à 65°C.",
+            "action": "Continuer le torréfaction lente et vérifier la température toutes les 20 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est recouverte de bulles d'or ambre dramatiques — chaque blister est une minuscule poche de craquelin. Température interne 70–75 C. Gras rendu clair.",
+            "action": "Reposez-vous 20 minutes avant de trancher. Le crépitement continue à croquer comme il repose."
+          },
+          {
+            "state": "Overdone",
+            "description": "La peau est très brun foncé, certaines zones sont noircies. Possible odeur brûlée.",
+            "action": "Tente avec feuille pour le reste de la cuisson. L'intérieur est probablement encore humide."
+          }
+        ]
+      },
+      "feelCue": "Tapez la peau avec un couteau — des anneaux crépitants entièrement rendus avec un clic creux et croustillant, et non pas un bourbier terne. Si ça tord, retourne à feu vif pendant 10 minutes."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Repos",
+      "inputs": [
+        "slow_roasted_porchetta"
+      ],
+      "outputState": "finished_porchetta",
+      "instructions": "Reposez le porchetta sur un porte-fils (pas une planche à découper) à découvert pendant 20 à 30 minutes. Le repos permet aux jus de se redistribuer à travers la graisse et la chair. Ne tentez pas avec du papier — la vapeur adoucira le craquage pour lequel vous avez travaillé si dur. Tranche avec un couteau à pain tranchant et dentelé à l'aide d'un mouvement de sciage — le couteau d'un chef craquera et brisera le craquage plutôt que de le couper proprement.",
+      "visualCue": {
+        "primaryTarget": "La coupe transversale révèle des anneaux alternés de viande aux feuilles d'herbe, de la graisse blanche et une croûte de craquage ambre éclatante.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les jus coulent librement lorsqu'ils sont coupés — la viande n'est pas reposée. L'intérieur est lâche.",
+            "action": "Patience — Reposez-vous encore 10 minutes. Découpe maintenant le jus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les jus restent dans la viande. Les éclats se brisent au premier contact du couteau. Des couches de graisse, d'herbe et de viande visibles dans la section transversale.",
+            "action": "Couper immédiatement et servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop longtemps reposé, froid. Le craquage s'est adouci de la vapeur de surface.",
+            "action": "Brûlez sous le grilleur pendant 3 à 4 minutes pour re-criper la peau avant de trancher."
+          }
+        ]
+      },
+      "feelCue": "Le crépitement devrait éclater avec un son comme casser une mince feuille de caramel — s'il fléchit, il a besoin de plus de chaleur."
+    }
+  ]
 };

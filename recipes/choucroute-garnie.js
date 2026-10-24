@@ -1,83 +1,214 @@
 export default {
-  repoId: "master_french_choucroute_garnie_001",
-  parentRepoId: null,
-  slug: "choucroute-garnie",
-  author: "ForkRecipe Kitchen",
-  title: "Choucroute Garnie",
-  description: "Alsatian braised sauerkraut — rinsed to tame its sharpness, then slow-cooked in Riesling with juniper and bay until silk-tender, piled high with smoked pork knuckle, sausages, and lardons. A dish that makes winter honorable.",
-  cuisine: "French",
-  culture: "Alsatian",
-  category: "proteins",
-  tags: ["french", "alsatian", "sauerkraut", "pork", "sausage", "braised", "winter", "Riesling"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "3 hours",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 1, salty: 4, sour: 3, bitter: 1, umami: 4, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Acid",      name: "Sauerkraut (fermented cabbage), rinsed and squeezed", ratioValue: 1200, defaultUnit: "g",     substitutions: [] },
-    { ingId: "ing_02", role: "Protein",   name: "Smoked pork knuckle (Eisbein)",  ratioValue: 1,    defaultUnit: "piece",  substitutions: ["smoked pork ribs"] },
-    { ingId: "ing_03", role: "Protein",   name: "Smoked Strasbourg or Frankfurter sausages", ratioValue: 6, defaultUnit: "sausages", substitutions: ["bratwurst", "weisswurst"] },
-    { ingId: "ing_04", role: "Protein",   name: "Smoked lardons",                 ratioValue: 200,  defaultUnit: "g",      substitutions: ["smoked bacon slices"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Alsatian Riesling",              ratioValue: 300,  defaultUnit: "ml",     substitutions: ["dry Pinot Gris", "dry white wine"] },
-    { ingId: "ing_06", role: "Allium",    name: "Onions, sliced",                 ratioValue: 2,    defaultUnit: "large",  substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Juniper berries, lightly crushed", ratioValue: 10, defaultUnit: "berries", substitutions: [] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Bay leaves",                     ratioValue: 3,    defaultUnit: "leaves", substitutions: [] },
+  "repoId": "master_french_choucroute_garnie_001",
+  "parentRepoId": null,
+  "slug": "choucroute-garnie",
+  "author": "ForkRecipe Kitchen",
+  "title": "Choucroute Garnie",
+  "description": "Sauerkraut braisé alsacien — rincé pour apprivoiser sa netteté, puis cuit lentement à Riesling avec genévrier et laurier jusqu'à ce que la soie tendre, empilé haut avec le knuckle de porc fumé, les saucisses et les lardons. Un plat qui rend l'hiver honorable.",
+  "cuisine": "Français",
+  "culture": "Alsaciens",
+  "category": "proteins",
+  "tags": [
+    "français",
+    "alsacien",
+    "choucroute",
+    "porc",
+    "Saucisse",
+    "braisés",
+    "hiver",
+    "Le riesling"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "3 hours",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Sauté",
-      inputs: ["ing_06", "ing_04"],
-      outputState: "rendered_base",
-      instructions: "In a large, deep pot or Dutch oven over medium heat, cook the lardons for 5 minutes until the fat begins to render and they are lightly golden. Add the sliced onions and continue cooking, stirring occasionally, for 8–10 minutes until the onions are soft and translucent. They should not colour significantly — keep the heat medium at most.",
-      visualCue: {
-        primaryTarget: "Soft, translucent onions in a pool of rendered smoky fat. Lardons are golden. No browning on the onions.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are still firm and opaque. The lardon fat is not yet fully rendered.", action: "Continue cooking — raw onion will create a harsh base note that the wine cannot soften." },
-          { state: "Perfect",   description: "Onions are silky, translucent, and yielding. The lardons are golden and the pan smells of smoke and sweet onion.", action: "Add the sauerkraut and aromatics." },
-          { state: "Overdone",  description: "Onions have browned significantly. The pan smells of caramelization.", action: "Proceed — the sweetness from browned onions works well here, but the dish will be slightly richer and sweeter than the traditional version." },
-        ],
-      },
-      feelCue: "Press an onion slice against the side of the pot — it should flatten without resistance and feel completely limp, like cooked pasta.",
+      "ingId": "ing_01",
+      "role": "Acid",
+      "name": "Saucisse (caoutchouc fermenté), rincée et pressée",
+      "ratioValue": 1200,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Braise",
-      inputs: ["rendered_base", "ing_01", "ing_02", "ing_05", "ing_07", "ing_08"],
-      outputState: "braised_choucroute",
-      instructions: "Add the rinsed and well-squeezed sauerkraut to the pot, nestling the smoked pork knuckle into the center. Scatter the juniper berries and bay leaves over the top. Pour the Riesling over everything — it should come about halfway up the sauerkraut. Bring to a simmer, then cover tightly and cook over very low heat (or in a 150 C / 300 F oven) for 2 hours. The sauerkraut should braise gently, not boil.",
-      visualCue: {
-        primaryTarget: "After 2 hours: the sauerkraut has gone from pale white to a soft, creamy-ivory colour, lying in a reduced wine broth. The pork knuckle skin is beginning to loosen.",
-        spectrum: [
-          { state: "Underdone", description: "Sauerkraut is still bright and firm, retaining most of its acidic sharpness. The pork knuckle skin is tight.", action: "Continue braising. The sauerkraut needs time to mellow and absorb the wine and pork fat." },
-          { state: "Perfect",   description: "Sauerkraut is creamy-ivory, soft, and mellow — still tangy but without the raw harshness of fresh kraut. The wine has reduced to a fragrant broth. The pork knuckle yields when pressed.", action: "Nestle the sausages in and continue for the final step." },
-          { state: "Overdone",  description: "Sauerkraut has completely lost its structure and dissolved into the broth. The liquid has reduced to almost nothing.", action: "Add a splash of water or white wine to reconstitute. The kraut may be mushy but the flavour is good." },
-        ],
-      },
-      feelCue: "Taste a strand of sauerkraut — after proper braising it should feel completely tender on the tongue, with only the faintest resistance, like well-cooked pasta. The acidity should be mellow and integrated, not sharp and immediate.",
+      "ingId": "ing_02",
+      "role": "Protein",
+      "name": "Porc fumé (Eisbein)",
+      "ratioValue": 1,
+      "defaultUnit": "piece",
+      "substitutions": [
+        "côtes de porc fumées"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["braised_choucroute", "ing_03"],
-      outputState: "finished_choucroute_garnie",
-      instructions: "Nestle the smoked sausages into the sauerkraut so they are half-submerged. Cover and cook for a further 20–25 minutes at a gentle simmer until the sausages are heated through and have absorbed some of the kraut perfume. To serve, make a bed of sauerkraut on a large warmed platter, tear the pork knuckle meat from the bone in large pieces, and arrange everything — knuckle, sausages, lardons — over the sauerkraut. Serve with boiled potatoes and Dijon mustard.",
-      visualCue: {
-        primaryTarget: "Sausages are plump and the skin is tight, pulling slightly at the ends. The sauerkraut beneath them is fragrant with juniper and Riesling.",
-        spectrum: [
-          { state: "Underdone", description: "Sausages are barely warm at the center. When squeezed with tongs, the center feels cool and firm.", action: "Continue simmering covered. Cold sausage in a hot dish is the only failure here." },
-          { state: "Perfect",   description: "Sausages are plump and evenly heated. The skin is taut and lightly shiny. Juices run clear when pierced. The sauerkraut has taken on the sausage's smoke. The knuckle meat pulls away from the bone in large silky pieces.", action: "Plate immediately on a large warmed platter." },
-          { state: "Overdone",  description: "Sausage skins have burst and the meat inside is contracting and dry. The fat has rendered out.", action: "Serve quickly — burst sausages are not a failure but they look less elegant. The flavour remains good." },
-        ],
-      },
-      feelCue: "Squeeze a sausage gently with tongs — it should feel uniformly yielding from end to end, plump and springy like a taut balloon. Any cold firmness in the center means more time is needed.",
+      "ingId": "ing_03",
+      "role": "Protein",
+      "name": "Saucisses fumées Strasbourg ou Frankfurter",
+      "ratioValue": 6,
+      "defaultUnit": "sausages",
+      "substitutions": [
+        "bratwurst",
+        "weisswurst"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Protein",
+      "name": "Lardons fumés",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tranches de bacon fumées"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Alsacienne Riesling",
+      "ratioValue": 300,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "Pinot Gris sec",
+        "vin blanc sec"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Oignons tranchés",
+      "ratioValue": 2,
+      "defaultUnit": "large",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "baies de genièvre, légèrement broyées",
+      "ratioValue": 10,
+      "defaultUnit": "berries",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Feuilles de baies",
+      "ratioValue": 3,
+      "defaultUnit": "leaves",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_06",
+        "ing_04"
+      ],
+      "outputState": "rendered_base",
+      "instructions": "Dans une grande casserole ou un four hollandais à feu moyen, cuire les lardons pendant 5 minutes jusqu'à ce que la graisse commence à se rendre et qu'ils soient légèrement dorés. Ajouter les oignons tranchés et poursuivre la cuisson en remuant occasionnellement pendant 8 à 10 minutes jusqu'à ce que les oignons soient doux et translucides. Ils ne doivent pas colorier de façon significative — garder le milieu de chaleur au maximum.",
+      "visualCue": {
+        "primaryTarget": "Des oignons doux et translucides dans une réserve de graisse fumée. Les lardons sont dorés. Pas de brunissement sur les oignons.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont encore fermes et opaques. La graisse de lardon n'est pas encore complètement rendue.",
+            "action": "Continuer la cuisson — l'oignon cru créera une dure note de base que le vin ne peut pas adoucir."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont soyeux, translucides et productifs. Les lardons sont dorés et la poêle sent la fumée et l'oignon sucré.",
+            "action": "Ajouter la choucroute et les aromatiques."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oignons ont bruni de façon significative. La poêle sent la caramélisation.",
+            "action": "Procéder — la douceur des oignons brunis fonctionne bien ici, mais le plat sera légèrement plus riche et plus doux que la version traditionnelle."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une tranche d'oignon contre le côté de la casserole — elle devrait s'aplatir sans résistance et se sentir complètement boiteuse, comme des pâtes cuites."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Brise",
+      "inputs": [
+        "rendered_base",
+        "ing_01",
+        "ing_02",
+        "ing_05",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "braised_choucroute",
+      "instructions": "Ajouter la choucroute rincée et bien pressée dans la casserole, en nichant le coulis de porc fumé au centre. Dispersez les baies de genévrier et les feuilles de laurier au-dessus du sommet. Verser le Riesling sur tout — il devrait venir à la moitié de la choucroute. Porter à mijoter, puis couvrir soigneusement et cuire à feu très doux (ou dans un four de 150 C / 300 F) pendant 2 heures. La choucroute doit braser doucement, pas bouillir.",
+      "visualCue": {
+        "primaryTarget": "Après 2 heures : la choucroute est passée d'un blanc pâle à une couleur douce et onctueuse, dans un bouillon de vin réduit. La peau de knuckle de porc commence à se détendre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Sauerkraut est encore brillant et ferme, conservant la plus grande partie de sa netteté acide. La peau de porc est serrée.",
+            "action": "Continuez à faire des larmes. La choucroute a besoin de temps pour se moeller et absorber le vin et la graisse de porc."
+          },
+          {
+            "state": "Perfect",
+            "description": "La choucroute est crémeuse, douce et moelleuse, encore tannante mais sans la dureté crue du kraut frais. Le vin est réduit à un bouillon parfumé. Le knuckle de porc donne quand il est pressé.",
+            "action": "Nettoyez les saucisses et continuez pour la dernière étape."
+          },
+          {
+            "state": "Overdone",
+            "description": "Sauerkraut a complètement perdu sa structure et s'est dissous dans le bouillon. Le liquide s'est réduit à presque rien.",
+            "action": "Ajouter un jet d'eau ou de vin blanc pour reconstituer. Le kraut peut être musqué mais la saveur est bonne."
+          }
+        ]
+      },
+      "feelCue": "Goûtez un brin de choucroute — après avoir bien broyé, il devrait se sentir complètement tendre sur la langue, avec seulement la résistance la plus faible, comme des pâtes bien cuites. L'acidité doit être moelleuse et intégrée, et non pointue et immédiate."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "braised_choucroute",
+        "ing_03"
+      ],
+      "outputState": "finished_choucroute_garnie",
+      "instructions": "Nettoyez les saucisses fumées dans la choucroute pour qu'elles soient à moitié submergées. Couvrir et cuire encore 20 à 25 minutes à mijoter doucement jusqu'à ce que les saucisses soient chauffées et aient absorbé une partie du parfum de kraut. Pour servir, faites un lit de choucroute sur un grand plateau chaud, déchirez la viande de porc de l'os en gros morceaux, et arrangez tout — choucroute, saucisses, lardons — sur la choucroute. Servir avec des pommes de terre bouillies et de la moutarde de Dijon.",
+      "visualCue": {
+        "primaryTarget": "Les saucisses sont plumées et la peau est serrée, tirant légèrement aux extrémités. La choucroute est parfumée de genièvre et de Riesling.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les saucisses sont à peine chaudes au centre. Lorsque pressé avec des pinces, le centre se sent frais et ferme.",
+            "action": "Continuer à mijoter couvert. La saucisse froide dans un plat chaud est la seule défaillance ici."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les saucissons sont plumés et uniformément chauffés. La peau est tendue et légèrement brillante. Les jus sont dégagés quand ils sont percés. La choucroute a pris la fumée de la saucisse. La viande pétillante s'éloigne de l'os en gros morceaux soyeux.",
+            "action": "Assiette immédiatement sur un grand plateau chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les peaux de saucisson ont éclaté et la viande à l'intérieur se contracte et sèche. La graisse est sortie.",
+            "action": "Servir rapidement — les saucisses brisées ne sont pas un échec, mais elles semblent moins élégantes. La saveur reste bonne."
+          }
+        ]
+      },
+      "feelCue": "Pressez doucement une saucisse avec des pinces — elle doit se sentir uniformément céder d'extrémité en bout, s'épanouir et s'épanouir comme un ballon. Toute fermeté froide dans le centre signifie plus de temps est nécessaire."
+    }
+  ]
 };

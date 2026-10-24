@@ -1,108 +1,255 @@
 export default {
-  repoId: "master_french_salmon_001",
-  parentRepoId: null,
-  slug: "pan-seared-salmon",
-  author: "ForkRecipe Kitchen",
-  title: "Pan-Seared Salmon",
-  description: "A single fillet, skin side down, given the patience it deserves — the skin shatters like glass, the flesh stays rose-pink at the center, and the boundary between the two is where all the magic lives.",
-  cuisine: "French",
-  culture: "French Bistro",
-  category: "seafood",
-  tags: ["salmon", "seafood", "french", "pan-sear", "technique"],
-  difficulty: 2,
-  activeTime: "15 min",
-  totalTime: "25 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2024-07-12",
-  updatedAt: "2025-02-18",
-  flavorRadar: { sweet: 1, salty: 3, sour: 1, bitter: 0, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Skin-on salmon fillet (150-180g)", ratioValue: 100, defaultUnit: "parts", substitutions: ["arctic char", "steelhead trout"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Fine sea salt",                     ratioValue: 1.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Seasoning", name: "Black pepper (freshly ground)",     ratioValue: 0.5, defaultUnit: "parts", substitutions: ["white pepper"] },
-    { ingId: "ing_04", role: "Fat",       name: "Neutral high-heat oil",             ratioValue: 3,   defaultUnit: "parts", substitutions: ["grapeseed oil", "avocado oil"] },
-    { ingId: "ing_05", role: "Fat",       name: "Unsalted butter",                   ratioValue: 5,   defaultUnit: "parts", substitutions: ["ghee"] },
-    { ingId: "ing_06", role: "Citrus",    name: "Lemon (halved)",                    ratioValue: 8,   defaultUnit: "parts", substitutions: ["Meyer lemon"] },
+  "repoId": "master_french_salmon_001",
+  "parentRepoId": null,
+  "slug": "pan-seared-salmon",
+  "author": "ForkRecipe Kitchen",
+  "title": "Saumon panmer",
+  "description": "Un seul filet, côté peau vers le bas, étant donné la patience qu'il mérite — la peau se brise comme le verre, la chair reste rose-rose au centre, et la frontière entre les deux est où toute la magie vit.",
+  "cuisine": "Français",
+  "culture": "Bistro français",
+  "category": "seafood",
+  "tags": [
+    "saumon",
+    "Produits de la mer",
+    "français",
+    "pan-couleur",
+    "technique"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "15 min",
+  "totalTime": "25 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2024-07-12",
+  "updatedAt": "2025-02-18",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Temper and dry",
-      inputs: ["ing_01", "ing_02", "ing_03"],
-      outputState: "tempered_salmon",
-      instructions: "Remove salmon from the refrigerator 20 minutes before cooking. Pat the skin side and flesh side thoroughly dry with paper towels — press firmly, especially on the skin. Season both sides with salt and pepper. The salt will draw moisture; after 5 minutes, pat dry once more. Dry skin is the single most important factor for a crisp sear.",
-      visualCue: {
-        primaryTarget: "The skin is matte and papery-dry to the touch. The flesh surface shows a slight sheen from the salt draw but no pooling moisture.",
-        spectrum: [
-          { state: "Underdone", description: "Skin is still damp and shiny. Beads of moisture visible on the surface.", action: "Pat dry again. Use fresh paper towels — damp towels just redistribute moisture." },
-          { state: "Perfect",   description: "Skin is completely dry and slightly tacky when you drag a finger across it. Flesh has a thin, dry pellicle.", action: "Heat the pan." },
-          { state: "Overdone",  description: "Salt has been sitting too long — the surface is sticky and the flesh looks desiccated.", action: "Proceed. The exterior will be saltier than ideal but the interior will be unaffected." },
-        ],
-      },
-      feelCue: "Run your finger across the skin — it should feel like dry paper, catching slightly on your fingerprint. If it slides smoothly, moisture remains.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filet de saumon sur la peau (150-180g)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "omble chevalier",
+        "truite arc-en-ciel"
+      ]
     },
     {
-      nodeId: "step_2", action: "Heat pan",
-      inputs: ["ing_04"],
-      outputState: "hot_pan",
-      instructions: "Set a stainless steel or cast-iron skillet over medium-high heat. Add oil and heat until it shimmers and just begins to smoke. Nonstick pans will not achieve the same crust — the skin needs direct metal contact and high heat.",
-      visualCue: {
-        primaryTarget: "Oil is shimmering with visible ripples across its surface. The first wisps of smoke are rising. A drop of water would skitter and evaporate instantly.",
-        spectrum: [
-          { state: "Underdone", description: "Oil is liquid but still. No shimmer, no smoke. Surface looks flat.", action: "Wait. Placing the fish in cool oil guarantees the skin will stick and steam instead of sear." },
-          { state: "Perfect",   description: "Oil ripples like desert heat haze. First faint smoke wisps. The pan radiates heat when you hold your hand 15cm above.", action: "Place the salmon skin-side down." },
-          { state: "Overdone",  description: "Heavy smoke pouring off the pan. Oil is darkening. Acrid smell.", action: "Remove from heat for 30 seconds. The oil has passed its smoke point and will taste bitter." },
-        ],
-      },
-      feelCue: "Hold your palm flat, 15cm above the pan — you should feel intense, even heat pushing against your hand within two seconds. If you can hold it there comfortably, the pan is not ready.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Sear skin side",
-      inputs: ["tempered_salmon", "hot_pan"],
-      outputState: "skin_seared",
-      instructions: "Lay the salmon skin-side down, away from you, pressing gently with a fish spatula for the first 30 seconds to prevent curling. Reduce heat to medium. Do not move the fish. Cook for 4-5 minutes — the flesh will visually cook from the bottom up, turning opaque in a rising line. When the opaque zone reaches about three-quarters of the way up the side, it is time to flip.",
-      visualCue: {
-        primaryTarget: "A visible line of opacity rising through the fillet — pale pink below, translucent rose above. The skin is audibly crackling, and the edges are turning golden where the flesh meets the pan.",
-        spectrum: [
-          { state: "Underdone", description: "The opacity line is only at the bottom third. Skin is still pale and silent. The fillet feels floppy when gently nudged.", action: "Wait. Resist the urge to check — lifting breaks the skin's contact with the pan." },
-          { state: "Perfect",   description: "Opacity has climbed to 70-75% of the fillet height. Skin is deep golden and crackles when the pan is shaken. The top quarter remains translucent and jewel-toned.", action: "Flip once, gently." },
-          { state: "Overdone",  description: "The entire fillet is opaque to the top. Skin is dark brown. White albumin is beading heavily on the surface.", action: "Flip and immediately remove from heat — residual heat will finish it. The center may be medium-well." },
-        ],
-      },
-      feelCue: "Listen to the pan — a steady, moderate sizzle like rain on pavement is correct. If it pops violently, the heat is too high. If it is nearly silent, too low. The kitchen should smell like roasting chestnuts, not burning fish.",
+      "ingId": "ing_03",
+      "role": "Seasoning",
+      "name": "Poivre noir (fraîchir)",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "poivre blanc"
+      ]
     },
     {
-      nodeId: "step_4", action: "Flip and finish",
-      inputs: ["skin_seared", "ing_05"],
-      outputState: "cooked_salmon",
-      instructions: "Flip the fillet onto the flesh side. Add butter to the pan — it will foam and brown. Tilt the pan and baste the top of the fish with the butter using a spoon for 30-60 seconds. The residual heat and butter basting will gently finish the top without overcooking the center.",
-      visualCue: {
-        primaryTarget: "Butter is foaming and turning hazelnut-brown. The salmon skin, now facing up, is deeply golden and rigid. The flesh side develops a light golden crust from the basting.",
-        spectrum: [
-          { state: "Underdone", description: "Butter is still pale and foamy. The flesh side has barely touched the pan.", action: "Continue basting. The flesh side only needs 30-60 seconds of contact and butter heat." },
-          { state: "Perfect",   description: "Butter is nutty-brown. The fillet gives gently when pressed — firm at the edges, yielding at the center. The flesh side has a light golden sheen.", action: "Remove to a warm plate immediately." },
-          { state: "Overdone",  description: "Butter has gone black. The flesh side is browned and firm throughout. No give when pressed.", action: "Remove immediately. Squeeze lemon over to cut the dryness. Lesson: flesh side needs seconds, not minutes." },
-        ],
-      },
-      feelCue: "Press the center of the fillet with your fingertip — it should yield like a ripe plum, springing back slowly. If it feels firm like your forehead, it is overcooked. The butter should smell like hazelnuts, never burnt popcorn.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile neutre à haute chaleur",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile de raisin",
+        "huile d'avocat"
+      ]
     },
     {
-      nodeId: "step_5", action: "Rest and serve",
-      inputs: ["cooked_salmon", "ing_06"],
-      outputState: "finished_salmon",
-      instructions: "Transfer to a warm plate, skin side up. Squeeze lemon over the top. Rest for 2 minutes — the carryover heat will bring the center to a perfect medium. Serve immediately.",
-      visualCue: {
-        primaryTarget: "When flaked with a fork, the interior is translucent rose-pink at the very center, graduating to opaque peach at the edges. Juices are pale orange, not milky white.",
-        spectrum: [
-          { state: "Underdone", description: "Center is deeply translucent and cool. Juices are thin and watery. The flakes resist separating.", action: "Return to the pan flesh-side down for 30 seconds, or finish under a hot broiler for one minute." },
-          { state: "Perfect",   description: "Center is barely translucent — like stained glass. Flakes separate with gentle pressure. A bead of orange juice forms between the layers.", action: "Eat. This moment does not last." },
-          { state: "Overdone",  description: "Uniformly opaque throughout. White albumin has pooled on the surface. Flesh is dry and flakes into tight, dry segments.", action: "Serve with extra lemon and butter sauce. Next time, pull from the pan one minute earlier." },
-        ],
-      },
-      feelCue: "The aroma should be brown butter, ocean, and lemon. The skin, when tapped with a fingernail, should sound like tapping a potato chip — brittle and hollow.",
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ghee"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Citrus",
+      "name": "Citron (réchauffé)",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Citron Meyer"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Temper et sec",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03"
+      ],
+      "outputState": "tempered_salmon",
+      "instructions": "Retirer le saumon du réfrigérateur 20 minutes avant la cuisson. Faites sécher soigneusement le côté peau et le côté chair avec des serviettes en papier — appuyez fermement, surtout sur la peau. Assaisonner les deux côtés de sel et de poivre. Le sel va puiser l'humidité; après 5 minutes, tapoter à nouveau. La peau sèche est le facteur le plus important pour une couture croustillante.",
+      "visualCue": {
+        "primaryTarget": "La peau est mate et sèche au toucher. La surface de la chair montre un léger reflet de l'attraction du sel, mais pas d'humidité.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La peau est encore humide et brillante. Perles d'humidité visibles à la surface.",
+            "action": "Pat sèche encore. Utilisez des serviettes en papier frais — les serviettes humides redistribuent simplement l'humidité."
+          },
+          {
+            "state": "Perfect",
+            "description": "La peau est complètement sèche et légèrement collante lorsque vous faites glisser un doigt dessus. La chair a un pellicule mince et sec.",
+            "action": "Chauffer la poêle."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sel est resté trop longtemps — la surface est collante et la chair semble déshydratée.",
+            "action": "Continuez. L'extérieur sera plus salé que l'idéal, mais l'intérieur ne sera pas affecté."
+          }
+        ]
+      },
+      "feelCue": "Exécutez votre doigt sur la peau — il devrait se sentir comme du papier sec, attraper légèrement sur votre empreinte digitale. Si elle glisse en douceur, l'humidité reste."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plaque thermoformée",
+      "inputs": [
+        "ing_04"
+      ],
+      "outputState": "hot_pan",
+      "instructions": "Réglez une poêle en acier inoxydable ou en fonte à feu moyen-élevé. Ajouter l'huile et chauffer jusqu'à ce qu'elle mijote et commence à fumer. Les poêles antiadhésifs ne réaliseront pas la même croûte: la peau a besoin d'un contact direct avec le métal et d'une chaleur élevée.",
+      "visualCue": {
+        "primaryTarget": "L'huile brille avec des ondulations visibles sur sa surface. Les premières fumées s'élèvent. Une goutte d'eau dérape et s'évapore instantanément.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'huile est liquide, mais quand même. Pas de frisson, pas de fumée. La surface semble plate.",
+            "action": "Attendez. Placer le poisson dans de l'huile fraîche garantit que la peau va coller et la vapeur au lieu de la mer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ondulations d'huile comme la brume de chaleur du désert. D'abord faible fumée. La poêle émet de la chaleur lorsque vous tenez votre main 15cm au-dessus.",
+            "action": "Déposer la peau du saumon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Une forte fumée déverse la poêle. L'huile s'assombrit. Une odeur d'acride.",
+            "action": "Retirer du feu pendant 30 secondes. L'huile a passé son point de fumée et aura un goût amer."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre paume à plat, à 15 cm au-dessus de la poêle — vous devriez vous sentir intense, même la chaleur poussant contre votre main en deux secondes. Si vous pouvez le tenir confortablement, la casserole n'est pas prête."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Côté peau de la couture",
+      "inputs": [
+        "tempered_salmon",
+        "hot_pan"
+      ],
+      "outputState": "skin_seared",
+      "instructions": "Éteignez la peau du saumon, loin de vous, pressez doucement avec une spatule de poisson pendant les 30 premières secondes pour éviter le curling. Réduire le feu à moyen. Ne bougez pas le poisson. Cuire 4-5 minutes — la chair fera cuire visuellement du bas vers le haut, devenant opaque dans une ligne montante. Lorsque la zone opaque atteint environ les trois quarts du chemin vers le haut du côté, il est temps de retourner.",
+      "visualCue": {
+        "primaryTarget": "Une ligne visible d'opacité s'élevant à travers le filet – rose pâle au-dessous, translucide au-dessus. La peau craque audiblement, et les bords deviennent dorés là où la chair rencontre la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La ligne d'opacité n'est qu'au tiers inférieur. La peau est encore pâle et silencieuse. Le filet est flippé lorsqu'il est légèrement bouché.",
+            "action": "Attendez. Résistez à l'envie de vérifier — le levage brise le contact de la peau avec la poêle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Opacité a grimpé à 70-75% de la hauteur du filet. La peau est d'or profond et craque lorsque la poêle est secouée. Le quart supérieur reste translucide et orné de bijoux.",
+            "action": "Flip une fois, doucement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le filet entier est opaque au sommet. La peau est brun foncé. L'albumine blanche est fortement perlée à la surface.",
+            "action": "Flip et immédiatement retirer de la chaleur — la chaleur résiduelle finira. Le centre peut être moyen-bien."
+          }
+        ]
+      },
+      "feelCue": "Écoutez la poêle: un étourdissement constant et modéré comme la pluie sur le trottoir est correct. Si elle éclate violemment, la chaleur est trop élevée. S'il est presque silencieux, trop bas. La cuisine devrait sentir comme rôtir les marrons, pas brûler le poisson."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Flip et finition",
+      "inputs": [
+        "skin_seared",
+        "ing_05"
+      ],
+      "outputState": "cooked_salmon",
+      "instructions": "Déposer le filet sur le côté chair. Ajouter le beurre dans la poêle – il moussera et brunira. Incliner la poêle et arroser le haut du poisson avec le beurre à l'aide d'une cuillère pendant 30-60 secondes. La chaleur résiduelle et le basting au beurre finiront doucement le dessus sans trop cuire le centre.",
+      "visualCue": {
+        "primaryTarget": "Le beurre mousse et devient brun noisette. La peau du saumon, maintenant exposée, est profondément dorée et rigide. Le côté chair développe une croûte d'or clair du basting.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le beurre est encore pâle et mousseux. Le côté chair a à peine touché la poêle.",
+            "action": "Continuez à vous abaisser. Le côté chair n'a besoin que de 30 à 60 secondes de contact et de chaleur au beurre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le beurre est brun noisette. Le filet donne doucement quand il est pressé — ferme aux bords, donnant au centre. Le côté chair a un reflet d'or clair.",
+            "action": "Retirez immédiatement dans une assiette chaude."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre est devenu noir. Le côté chair est bruni et ferme. Pas de donner en appuyant.",
+            "action": "Supprimer immédiatement. Pressez le citron pour couper la sécheresse. Leçon : le côté chair a besoin de secondes, pas de minutes."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le centre du filet avec votre bout de doigt — il devrait céder comme une prune mûre, ressortant lentement. S'il se sent ferme comme votre front, il est trop cuit. Le beurre devrait sentir les noisettes, jamais brûlé le popcorn."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Repos et service",
+      "inputs": [
+        "cooked_salmon",
+        "ing_06"
+      ],
+      "outputState": "finished_salmon",
+      "instructions": "Transférer dans une assiette chaude, côté peau vers le haut. Pressez le citron sur le dessus. Reposez-vous 2 minutes — la chaleur de report amènera le centre à un milieu parfait. Servir immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Lorsqu'il est flasqué avec une fourchette, l'intérieur est translucide rose-rose au centre même, graduant à la pêche opaque aux bords. Les jus sont orange pâle, pas blanc laiteux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Centre est profondément translucide et frais. Les jus sont minces et aqueux. Les flocons résistent à la séparation.",
+            "action": "Retourner à la poêle en bas pendant 30 secondes, ou terminer sous un grille-pain chaud pendant une minute."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le centre est à peine translucide, comme le vitrail. Flacons séparés par une pression douce. Une perle de jus d'orange se forme entre les couches.",
+            "action": "Mangez. Ce moment ne dure pas."
+          },
+          {
+            "state": "Overdone",
+            "description": "Toujours opaque. L'albumine blanche a été mise en commun à la surface. La chair est sèche et s'enfonce dans des segments serrés et secs.",
+            "action": "Servir avec de la sauce citron et beurre. La prochaine fois, tirez de la casserole une minute plus tôt."
+          }
+        ]
+      },
+      "feelCue": "L'arôme doit être le beurre brun, l'océan et le citron. Lorsqu'elle est tapée d'un ongle, la peau doit sonner comme une croustille de pomme de terre, fragile et creuse."
+    }
+  ]
 };

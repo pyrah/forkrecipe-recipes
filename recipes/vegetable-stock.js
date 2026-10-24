@@ -1,97 +1,270 @@
 export default {
-  repoId: "master_french_vegetable_stock_001",
-  parentRepoId: null,
-  slug: "vegetable-stock",
-  author: "ForkRecipe Kitchen",
-  title: "Vegetable Stock",
-  description: "A clear, golden bouillon de légumes built on the classic French aromatic trinity — onion, carrot, and celery sweated gently into sweetness, then coaxed with leek, tomato, and herbs into a clean, fragrant broth that tastes of the garden, not the spice rack. No browning, no salt, no muddle: just bright vegetable essence, ready to carry a risotto, a soup, or a braise.",
-  cuisine: "French",
-  culture: "Provençal",
-  category: "stocks",
-  tags: ["stock", "vegetable", "french", "bouillon", "mirepoix", "vegan", "base"],
-  difficulty: 1,
-  activeTime: "20 min",
-  totalTime: "1 hour 15 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-14",
-  updatedAt: "2026-06-14",
-  flavorRadar: { sweet: 2, salty: 0, sour: 1, bitter: 1, umami: 2, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",      name: "Neutral oil or unsalted butter", ratioValue: 30,   defaultUnit: "g",  substitutions: ["light olive oil"] },
-    { ingId: "ing_02", role: "Allium",   name: "Yellow onion, peel on, halved", ratioValue: 200,  defaultUnit: "g",  substitutions: ["leek tops", "shallot"] },
-    { ingId: "ing_03", role: "Base",     name: "Carrot, scrubbed, roughly chopped", ratioValue: 150, defaultUnit: "g", substitutions: ["parsnip (for a sweeter, earthier stock)"] },
-    { ingId: "ing_04", role: "Aromatic", name: "Celery stalks with leaves, chopped", ratioValue: 120, defaultUnit: "g", substitutions: ["celery root", "lovage stem"] },
-    { ingId: "ing_05", role: "Allium",   name: "Leek, white and pale green, split and washed", ratioValue: 120, defaultUnit: "g", substitutions: ["extra onion"] },
-    { ingId: "ing_06", role: "Umami",    name: "Ripe tomato or 1 tbsp tomato paste", ratioValue: 100, defaultUnit: "g", substitutions: ["a Parmesan rind", "dried shiitake"] },
-    { ingId: "ing_07", role: "Allium",   name: "Garlic cloves, crushed, skin on", ratioValue: 20, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Herb",     name: "Bouquet garni (parsley stems, thyme, bay leaf)", ratioValue: 15, defaultUnit: "g", substitutions: ["a few fennel fronds for an anise note"] },
-    { ingId: "ing_09", role: "Spice",    name: "Black peppercorns, lightly cracked", ratioValue: 3, defaultUnit: "g", substitutions: ["white peppercorns for a paler stock"] },
-    { ingId: "ing_10", role: "Solvent",  name: "Cold water", ratioValue: 2000, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_french_vegetable_stock_001",
+  "parentRepoId": null,
+  "slug": "vegetable-stock",
+  "author": "ForkRecipe Kitchen",
+  "title": "Stock de légumes",
+  "description": "Un bouillon de légumes clair et doré construit sur la trinité aromatique française classique – l'oignon, la carotte et le céleri transpiraient doucement dans la douceur, puis coaxaient avec le poireau, la tomate et les herbes dans un bouillon propre et parfumé qui goûte au jardin, et non au porte-épices. Pas de brunissement, pas de sel, pas de bâillon : juste une essence légume brillante, prête à porter un risotto, une soupe ou un braise.",
+  "cuisine": "Français",
+  "culture": "Provençal",
+  "category": "stocks",
+  "tags": [
+    "stock",
+    "légumes",
+    "français",
+    "bouillon",
+    "mirpoix",
+    "végétalien",
+    "base"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "20 min",
+  "totalTime": "1 hour 15 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-14",
+  "updatedAt": "2026-06-14",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 0,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 2,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Sweat",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_07"],
-      outputState: "sweated_mirepoix",
-      instructions: "Warm the oil or butter in a heavy stockpot over medium-low heat. Add the onion, carrot, celery, leek, and crushed garlic and stir to coat. Sweat gently for 8 to 10 minutes, stirring often, until the vegetables soften and smell sweet and fragrant. The goal is to draw out moisture and develop sweetness WITHOUT color — keep the heat low. Browning here would tint and muddy a stock meant to stay clean and bright.",
-      visualCue: {
-        primaryTarget: "The vegetables are glossy, slumped, and softened, the onion turned translucent at the edges, with a sweet aroma rising and not a hint of golden-brown anywhere.",
-        spectrum: [
-          { state: "Underdone", description: "Vegetables are still firm, opaque, and sharp-smelling; the pot smells raw rather than sweet.", action: "Keep sweating over low heat for a few more minutes. You want them softened and aromatic before any liquid goes in." },
-          { state: "Perfect",   description: "Onions are translucent and the whole mass is soft and glistening, releasing a sweet, mellow vegetable smell. No color on anything.", action: "Add the tomato and aromatics and continue to the next step." },
-          { state: "Overdone",  description: "Edges are browning and the pot smells toasty or caramelized.", action: "Pull off the heat at once. A little color gives a deeper, darker stock — acceptable, but it will no longer be a pale, neutral base." },
-        ],
-      },
-      feelCue: "Listen for a quiet, steady sizzle, not an aggressive crackle — if it's spitting and snapping, the heat is too high. The vegetables should give way softly when pressed with the spoon.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Huile neutre ou beurre non salé",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile d'olive légère"
+      ]
     },
     {
-      nodeId: "step_2", action: "Build",
-      inputs: ["sweated_mirepoix", "ing_06", "ing_08", "ing_09", "ing_10"],
-      outputState: "raw_stockpot",
-      instructions: "Stir in the tomato (or tomato paste) and let it cook for a minute to lose its raw edge and lend a gentle savory backbone. Add the bouquet garni and cracked peppercorns, then pour in the cold water — starting cold helps draw flavor out as it heats. The water should cover the vegetables by an inch or two. Bring slowly up toward a simmer; do not let it boil.",
-      visualCue: {
-        primaryTarget: "A full pot of cold, cloudy water with the vegetables and herbs suspended and just beginning to release lazy threads of steam as it warms.",
-        spectrum: [
-          { state: "Underdone", description: "Water is still cold and still; nothing is moving and no aroma has developed yet.", action: "Be patient and let it heat gradually. The slow climb to a simmer is what extracts clean flavor." },
-          { state: "Perfect",   description: "Small bubbles are starting to rise from the bottom and the surface trembles, with a fragrant steam beginning to lift off.", action: "Hold it right here at a bare simmer and move to extraction — never let it reach a rolling boil." },
-          { state: "Overdone",  description: "The pot has hit a hard, rolling boil, churning the vegetables violently and turning the liquid cloudy.", action: "Lower the heat immediately. A boil emulsifies fine particles into the broth and makes it murky and dull-tasting." },
-        ],
-      },
-      feelCue: "The water should go in shockingly cold against the warm pot. As it heats, the kitchen fills with the smell of celery and herbs — a green, garden-fresh aroma, never bitter.",
+      "ingId": "ing_02",
+      "role": "Allium",
+      "name": "Oignon jaune, pelé, coupé en deux",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "haut de poireaux",
+        "Échalote"
+      ]
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["raw_stockpot"],
-      outputState: "extracted_stock",
-      instructions: "Hold the pot at the barest simmer — a few bubbles lazily breaking the surface — for 40 to 45 minutes, uncovered or just barely cracked. Skim any foam that rises in the first ten minutes. Resist cooking it longer: unlike meat stock, vegetable stock turns dull, bitter, and cabbage-like if over-extracted. Taste at 40 minutes; when the broth tastes sweet, rounded, and clearly of vegetables, it is done.",
-      visualCue: {
-        primaryTarget: "A gently steaming, lightly golden broth with only occasional bubbles, the vegetables faded and spent, the liquid clear beneath a thin clean surface.",
-        spectrum: [
-          { state: "Underdone", description: "The broth tastes thin and watery, more like warm water than stock, with little aroma.", action: "Give it another 10 to 15 minutes at a bare simmer and taste again. It needs time to build body." },
-          { state: "Perfect",   description: "The liquid is fragrant and golden, tasting sweet and full of clean vegetable flavor with a soft savory depth from the tomato. The vegetables look exhausted and pale.", action: "Kill the heat and move to straining before the flavor flattens." },
-          { state: "Overdone",  description: "The broth smells and tastes flat, sulfurous, or faintly bitter, with a stewed cabbage edge.", action: "Stop immediately and strain. You cannot reverse over-extraction; next time pull it at 40 minutes." },
-        ],
-      },
-      feelCue: "Hold your face over the pot: the steam should smell sweet and green like a stockpot in a good bistro, never harsh or sour. The surface barely moves — if it's churning, turn it down.",
+      "ingId": "ing_03",
+      "role": "Base",
+      "name": "Carotte, broyée, grossièrement hachée",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "panais (pour un stock plus doux et plus terreux)"
+      ]
     },
     {
-      nodeId: "step_4", action: "Strain",
-      inputs: ["extracted_stock"],
-      outputState: "finished_stock",
-      instructions: "Set a fine-mesh sieve (lined with a layer of cheesecloth for a crystal-clear stock) over a clean bowl or second pot. Ladle the stock through rather than dumping it — disturbing the settled solids less keeps it clearer. Let the vegetables drip on their own; do NOT press them, as pressing forces cloudy pulp and bitterness into the broth. Cool quickly in an ice bath, then refrigerate up to 4 days or freeze for months.",
-      visualCue: {
-        primaryTarget: "A clean, translucent, pale-gold stock with no floating debris — light enough to read print through, with a clear sheen and no muddy sediment.",
-        spectrum: [
-          { state: "Underdone", description: "Bits of herb, pepper, and vegetable pulp cloud the strained liquid and settle at the bottom.", action: "Strain a second time through cheesecloth and let it settle. Ladle off the clear liquid from above the sediment." },
-          { state: "Perfect",   description: "A glossy, clear, golden broth, free of particles, that tastes bright and rounded and seasons-ready (add salt only when you cook with it).", action: "Cool rapidly in an ice bath, then store. Leaving it salt-free keeps it versatile for any dish." },
-          { state: "Overdone",  description: "The stock is cloudy and gray because the vegetables were pressed or the boil was too hard.", action: "Let it settle in the fridge and decant the clear portion, or use the cloudy stock for soups and braises where clarity doesn't matter." },
-        ],
-      },
-      feelCue: "The stock should feel light-bodied and silky on the spoon, never gelatinous or thick. Cooled, it stays liquid — vegetable stock has no gelatin, so a thin, clean texture is exactly right.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri avec feuilles, hachées",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Racine de céleri",
+        "tige de love"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Allium",
+      "name": "Fuite, blanche et vert pâle, fendue et lavée",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon supplémentaire"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "Farine de tomate ou 1 c. à soupe de pâte de tomate",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "une croûte de parmesan",
+        "shiitake séché"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Giroves d'ail écrasées, peau sur",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Herb",
+      "name": "Bouquet garni (graines de persil, thym, feuilles de laurier)",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "quelques frondes de fenouil pour une note d'anis"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Spice",
+      "name": "Graines de poivre noires, légèrement craquées",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "grains de poivre blanc pour un stock plus pâle"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Solvent",
+      "name": "Eau froide",
+      "ratioValue": 2000,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Sueur",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "sweated_mirepoix",
+      "instructions": "Chauffer l'huile ou le beurre dans un dépôt lourd à feu moyen-doux. Ajouter l'oignon, la carotte, le céleri, le poireau et l'ail concassé et mélanger pour enrober. Transpirer doucement pendant 8 à 10 minutes, en remuant souvent, jusqu'à ce que les légumes adoucissent et sentent doux et parfumé. L'objectif est d'extraire l'humidité et de développer la douceur SANS couleur — garder la chaleur faible. Browner ici teinterait et boueux un stock destiné à rester propre et lumineux.",
+      "visualCue": {
+        "primaryTarget": "Les légumes sont brillants, basculés et adoucis, l'oignon est devenu translucide aux bords, avec un arôme doux qui s'élève et pas un soupçon de brun doré nulle part.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les légumes sont encore fermes, opaques et durs; le pot sent cru plutôt que sucré.",
+            "action": "Continuez à transpirer à feu doux pendant quelques minutes. Vous voulez qu'ils soient adoucis et aromatiques avant que n'importe quel liquide n'entre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les oignons sont translucides et toute la masse est douce et scintillante, ce qui libère une odeur douce et moelleuse de légumes. Aucune couleur.",
+            "action": "Ajouter la tomate et les aromatiques et continuer à l'étape suivante."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les bords sont brunis et le pot sent grillé ou caramélisé.",
+            "action": "Retirez immédiatement la chaleur. Un peu de couleur donne un stock plus profond et plus sombre — acceptable, mais il ne sera plus une base pâle et neutre."
+          }
+        ]
+      },
+      "feelCue": "Écoutez un étourdissement calme et constant, et non un craquement agressif — s'il crache et craque, la chaleur est trop élevée. Les légumes doivent céder doucement lorsqu'ils sont pressés avec la cuillère."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Construire",
+      "inputs": [
+        "sweated_mirepoix",
+        "ing_06",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "raw_stockpot",
+      "instructions": "Incorporer la tomate (ou la pâte de tomate) et laisser cuire une minute pour perdre son bord brut et prêter une douce colonne vertébrale salée. Ajouter le bouquet garni et les grains de poivre fissurés, puis verser dans l'eau froide. L'eau doit couvrir les légumes d'un pouce ou deux. Portez lentement vers un mijot; ne le laissez pas bouillir.",
+      "visualCue": {
+        "primaryTarget": "Un pot plein d'eau froide et nuageuse avec les légumes et les herbes suspendues et juste commencer à libérer des fils paresseux de vapeur qu'il réchauffe.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'eau est encore froide et immobile; rien ne bouge et aucun arôme n'a encore évolué.",
+            "action": "Soyez patient et laissez-le chauffer progressivement. La montée lente à un mijot est ce qui extrait saveur propre."
+          },
+          {
+            "state": "Perfect",
+            "description": "De petites bulles commencent à s'élever du fond et la surface tremble, avec une vapeur parfumée commençant à décoller.",
+            "action": "Maintenez - le ici à un mijot nu et passez à l'extraction — ne le laissez jamais atteindre un ébullition."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pot a frappé un ébullition dur et enroulé, poussant les légumes violemment et tournant le liquide nuageux.",
+            "action": "Baissez immédiatement la chaleur. Un ébullition émulsifie les particules fines dans le bouillon et le rend agité et terni."
+          }
+        ]
+      },
+      "feelCue": "L'eau doit être froide contre le pot chaud. Comme il chauffe, la cuisine se remplit de l'odeur du céleri et des herbes — un arôme vert, frais de jardin, jamais amer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "raw_stockpot"
+      ],
+      "outputState": "extracted_stock",
+      "instructions": "Maintenez le pot à la frémissante barest — quelques bulles qui brisent paresseusement la surface — pendant 40 à 45 minutes, à découvert ou à peine cassé. Écraser toute mousse qui monte dans les dix premières minutes. Résistez à la cuisiner plus longtemps : contrairement aux stocks de viande, les stocks de légumes deviennent ternes, amers et choux-comme s'ils étaient surextraits. Goûtez à 40 minutes; quand le bouillon goûte doux, arrondi, et clairement des légumes, il est fait.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon légèrement doré à la vapeur avec seulement des bulles occasionnelles, les légumes se sont fanés et dépensés, le liquide s'est dégagé sous une mince surface propre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le bouillon a un goût fin et aqueux, plus comme l'eau chaude que le bouillon, avec peu d'arôme.",
+            "action": "Donnez-lui encore 10 à 15 minutes à une mijoter nue et goûtez à nouveau. Il lui faut du temps pour construire son corps."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le liquide est parfumé et doré, goûtant sucré et plein de saveur de légumes propres avec une douce profondeur salée de la tomate. Les légumes semblent épuisés et pâles.",
+            "action": "Tuer la chaleur et passer à la pression avant les aplatissements de saveur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le bouillon sent et goûte plat, sulfureux ou légèrement amer, avec un bord de chou mijoté.",
+            "action": "Arrêtez immédiatement et forcez-vous. Vous ne pouvez pas inverser la surextraction; la prochaine fois tirez à 40 minutes."
+          }
+        ]
+      },
+      "feelCue": "Tenez votre visage au-dessus de la casserole: la vapeur doit sentir doux et vert comme une réserve dans un bon bistrot, jamais dur ou aigre. La surface bouge à peine — si elle grogne, baisse-la."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Poignée",
+      "inputs": [
+        "extracted_stock"
+      ],
+      "outputState": "finished_stock",
+      "instructions": "Mettre un tamis à mailles fines (liné d'une couche de fromage pour un stock cristallin) sur un bol propre ou un second pot. Faire passer le stock au lieu de le déverser — déranger les solides installés le rend moins clair. Laissez les légumes couler par eux-mêmes; ne les pressez PAS, comme force de pression la pulpe trouble et l'amertume dans le bouillon. Laisser refroidir rapidement dans un bain de glace, puis réfrigérer jusqu'à 4 jours ou congeler pendant des mois.",
+      "visualCue": {
+        "primaryTarget": "Un stock d'or clair, translucide et pâle, sans débris flottants, assez léger pour lire l'impression, avec un éclat clair et sans sédiments boueux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les particules d'herbe, de poivre et de pulpe végétale obscurcissent le liquide tendu et se déposent au fond.",
+            "action": "Plongez une seconde fois dans la nappe de fromage et laissez-la s'installer. Retirez le liquide clair au-dessus des sédiments."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un bouillon doré brillant, clair, exempt de particules, qui a un goût brillant et arrondi et prêt pour les saisons (ajouter du sel seulement quand vous cuisinez avec).",
+            "action": "Laisser refroidir rapidement dans un bain de glace, puis entreposer. Le laisser sans sel le maintient polyvalent pour n'importe quel plat."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le stock est nuageux et gris car les légumes étaient pressés ou l'ébullition était trop dure.",
+            "action": "Laissez-le reposer au réfrigérateur et décanter la portion claire, ou utilisez le stock nuageux pour les soupes et les braises où la clarté n'a pas d'importance."
+          }
+        ]
+      },
+      "feelCue": "Le stock doit se sentir léger et soyeux sur la cuillère, jamais gélatineux ou épais. Refroidie, elle reste liquide — le stock végétal n'a pas de gélatine, donc une texture fine et propre est exactement juste."
+    }
+  ]
 };

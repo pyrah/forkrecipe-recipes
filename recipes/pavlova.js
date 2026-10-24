@@ -1,113 +1,298 @@
 export default {
-  repoId: "master_australian_pavlova_001",
-  parentRepoId: null,
-  slug: "pavlova",
-  author: "ForkRecipe Kitchen",
-  title: "Pavlova",
-  description: "A crisp, snowy meringue shell giving way to a marshmallow-soft interior, topped with billowing cream and vivid fresh fruit — the balance of crunch, yielding sweetness, and tart fruit is the whole art of this continent-defining dessert.",
-  cuisine: "Australian",
-  culture: "Australian/New Zealand",
-  category: "desserts",
-  tags: ["gluten-free", "vegetarian", "australian", "meringue", "fruit", "baking"],
-  difficulty: 3,
-  activeTime: "25 min",
-  totalTime: "4 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 5, salty: 0, sour: 1, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Egg whites (room temperature, no trace of yolk)", ratioValue: 6,   defaultUnit: "large", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener", name: "Caster sugar (superfine)",                       ratioValue: 300, defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_03", role: "Starch",    name: "Cornstarch",                                     ratioValue: 2,   defaultUnit: "tsp", substitutions: ["arrowroot"] },
-    { ingId: "ing_04", role: "Acid",      name: "White wine vinegar or lemon juice",              ratioValue: 1,   defaultUnit: "tsp", substitutions: ["cream of tartar (1/4 tsp)"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Vanilla extract",                               ratioValue: 1,   defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_06", role: "Dairy",     name: "Heavy whipping cream (cold)",                   ratioValue: 400, defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Vanilla extract (for cream)",                   ratioValue: 0.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",   name: "Fresh passionfruit (pulp scooped)",             ratioValue: 4,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_09", role: "Garnish",   name: "Strawberries (hulled, halved)",                 ratioValue: 200, defaultUnit: "g",   substitutions: ["raspberries", "sliced mango"] },
-    { ingId: "ing_10", role: "Garnish",   name: "Kiwi fruit (peeled, sliced)",                  ratioValue: 3,   defaultUnit: "whole", substitutions: [] },
-    { ingId: "ing_11", role: "Garnish",   name: "Blueberries",                                   ratioValue: 100, defaultUnit: "g",   substitutions: ["blackberries"] },
+  "repoId": "master_australian_pavlova_001",
+  "parentRepoId": null,
+  "slug": "pavlova",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pavlova",
+  "description": "Une coquille de meringue croustillante et enneigée qui laisse place à un intérieur mou en guimauve, surmontée de crème bouillante et de fruits frais vifs — l'équilibre de la croûte, de la douceur et de la tarte est l'art tout entier de ce dessert qui définit le continent.",
+  "cuisine": "Australien",
+  "culture": "Australie/Nouvelle-Zélande",
+  "category": "desserts",
+  "tags": [
+    "Sans gluten",
+    "végétarien",
+    "australien",
+    "meringue",
+    "fruits",
+    "Cuisson"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "25 min",
+  "totalTime": "4 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 5,
+    "salty": 0,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Whip",
-      inputs: ["ing_01", "ing_02"],
-      outputState: "stiff_meringue",
-      instructions: "Ensure the mixing bowl, whisk, and all utensils are completely clean, dry, and free of any trace of fat — even a drop of egg yolk or a smear of butter will prevent the whites from whipping. Wipe everything with a cut lemon half and dry thoroughly. Beat the room-temperature egg whites on medium speed until they form soft peaks that droop at the tip when the whisk is lifted. Begin adding the caster sugar one tablespoon at a time — this slow addition is non-negotiable. After each addition, beat for 30 seconds before adding more. The process takes 10–12 minutes total, and the patience is what creates a stable, dense meringue rather than a brittle shell.",
-      visualCue: {
-        primaryTarget: "A stiff, brilliantly white, glossy meringue that holds sharp, upright peaks with no droop whatsoever. When the bowl is inverted, the meringue does not move. The surface looks like shaving cream — satiny, not dull.",
-        spectrum: [
-          { state: "Underdone", description: "Soft, glossy peaks that curve over at the tip. The meringue slides when the bowl is tilted. Sugar is still partially undissolved — the meringue feels grainy when rubbed between fingers.", action: "Continue beating, adding no more sugar. Test by rubbing a small amount between index finger and thumb — beat until no grittiness remains." },
-          { state: "Perfect",   description: "Stiff peaks stand bolt upright. When rubbed between fingers: silky-smooth, no grit. When the bowl is inverted: the meringue sits still. Brilliant white and satiny. It takes some force to pull the whisk free.", action: "Fold in the cornstarch, vinegar, and vanilla, then shape." },
-          { state: "Overdone",  description: "The meringue looks dry, lumpy, and curdled — like cottage cheese. It does not flow when the bowl is tilted but breaks apart in chunks. The proteins have been over-beaten and the foam has collapsed.", action: "This cannot be recovered. Start again with clean equipment and fresh egg whites." },
-        ],
-      },
-      feelCue: "Pinch the meringue between thumb and forefinger and pull away slowly — it should form a firm, clean peak that stands on its own without slumping, like stiff whipped butter.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Blancs d'oeufs (température ambiante, aucune trace de jaune)",
+      "ratioValue": 6,
+      "defaultUnit": "large",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Fold",
-      inputs: ["stiff_meringue", "ing_03", "ing_04", "ing_05"],
-      outputState: "pavlova_meringue",
-      instructions: "Sprinkle the cornstarch and vanilla extract over the meringue and pour in the vinegar. Fold with a large metal spoon or rubber spatula using exactly three or four large, sweeping motions from the bottom of the bowl up and over the top. Do not stir or beat. This technique is intentionally under-mixed — a few unincorporated streaks are perfectly fine. The cornstarch and vinegar work together with the egg proteins to create the marshmallow interior: the starch gelatinizes and the acid keeps the proteins tender, preventing the meringue from setting entirely solid.",
-      visualCue: {
-        primaryTarget: "The meringue with a few faint streaks of cornstarch visible but mostly incorporated. The texture is unchanged from before folding — still stiff and glossy, not deflated.",
-        spectrum: [
-          { state: "Underdone", description: "Large white clumps of dry cornstarch still visible and vinegar visibly pooled in the bowl. The meringue looks marbled.", action: "One or two more gentle folds — just enough to incorporate the dry spots and pooled vinegar." },
-          { state: "Perfect",   description: "Meringue is still stiff and glossy. The cornstarch and vinegar are mostly incorporated with perhaps a faint streak or two remaining. The meringue holds its shape when a spoon is dragged through it.", action: "Spoon immediately onto the prepared baking sheet." },
-          { state: "Overdone",  description: "The meringue has deflated from over-folding. It looks softer and less voluminous. Peaks no longer hold shape.", action: "Shape and bake quickly — deflated meringue will spread more and may crack, but will still taste good." },
-        ],
-      },
-      feelCue: "Lift a large spoonful — the meringue should hold its shape on the spoon for several seconds before slowly sinking, dense and pillowy like a cloud made solid.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Sucre de canne (superfine)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Bake",
-      inputs: ["pavlova_meringue"],
-      outputState: "baked_pavlova_shell",
-      instructions: "Draw a 22cm circle on a sheet of parchment paper (trace a dinner plate), flip the parchment so the pencil is face-down, and place on a baking sheet. Spoon the meringue onto the circle in a mounded pile. Using the back of a spoon, shape it into a disc with slightly raised sides and a shallow indent in the center — the well is where the cream and fruit will pool. Bake at 140°C (285°F) for 1 hour and 15 minutes. Turn the oven off completely and leave the pavlova inside with the door closed for at least 2 hours — overnight is ideal. Do not open the oven during this time.",
-      visualCue: {
-        primaryTarget: "After the oven rest: an ivory-white meringue shell that has dried to a crisp, slightly chalky exterior. The surface may have fine cracks — this is traditional and beautiful. The base is dry and sounds hollow when tapped.",
-        spectrum: [
-          { state: "Underdone", description: "The meringue is still soft and sticky to the touch. The exterior has not set to a crisp shell. It will stick to the parchment and collapse when moved.", action: "Close the oven and leave for another hour. The resting time is as important as the baking time — never rush this stage." },
-          { state: "Perfect",   description: "The exterior is bone-dry, crisp, and ivory-white. Fine cracks may appear on the surface — this is characteristic, not a failure. The pavlova lifts cleanly from the parchment. The interior, when the well is probed with a spoon, is soft and marshmallow-like.", action: "Leave at room temperature until ready to top. Do not refrigerate." },
-          { state: "Overdone",  description: "The pavlova has taken on a yellow or brown tinge and the exterior is very hard throughout with no marshmallow interior remaining. The oven was too hot or the bake too long.", action: "Top and serve anyway — the flavor is still meringue, just without the yielding interior contrast." },
-        ],
-      },
-      feelCue: "Tap the surface with a fingernail — you should hear a crisp, dry click, and the exterior should yield slightly under pressure but not sink in, like tapping on a hollow eggshell.",
+      "ingId": "ing_03",
+      "role": "Starch",
+      "name": "Farine de maïs",
+      "ratioValue": 2,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "fléchée"
+      ]
     },
     {
-      nodeId: "step_4", action: "Whip",
-      inputs: ["ing_06", "ing_07"],
-      outputState: "whipped_cream",
-      instructions: "Just before serving — not hours ahead — beat the cold heavy whipping cream and vanilla extract in a chilled bowl until the cream reaches medium-firm peaks. The cream should hold its shape when the bowl is tilted but still have a slight jiggle at the top of the peaks. Stop before the cream becomes stiff or grainy. The target is a cream that billows generously rather than standing in rigid blocks — it will settle slightly on the meringue, which is the correct look.",
-      visualCue: {
-        primaryTarget: "Soft, billowing, ivory-white cream with peaks that curl gently at the tip. When spooned onto the pavlova it settles into gentle mounds rather than rigid peaks.",
-        spectrum: [
-          { state: "Underdone", description: "Cream still pourable and does not hold peaks. It will slide off the meringue and pool around the base.", action: "Continue beating for 30-second intervals until medium peaks form — peaks that hold when the whisk is held upright but curl at the tip." },
-          { state: "Perfect",   description: "Cream holds a soft, curved peak that just droops slightly at the tip. Billowy and voluminous. Pure white with a satiny sheen.", action: "Spoon immediately onto the pavlova and top with fruit." },
-          { state: "Overdone",  description: "Cream is stiff, grainy, and beginning to look yellow. It has started to turn into butter.", action: "Fold in 2 tablespoons of fresh cold cream to soften. Use quickly." },
-        ],
-      },
-      feelCue: "Run a spoon through the cream — it should leave a clean, smooth track that gradually softens at the edges, like drawing through very cold clotted cream.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Vin blanc ou jus de citron",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "crème de tartre (1/4 c. à thé)"
+      ]
     },
     {
-      nodeId: "step_5", action: "Garnish",
-      inputs: ["baked_pavlova_shell", "whipped_cream", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "finished_pavlova",
-      instructions: "Transfer the cooled pavlova shell to a serving plate. Pile the whipped cream into the center well in generous, billowing mounds, allowing it to spread naturally toward the raised edges without spilling over. Arrange the strawberry halves and kiwi slices first, then scatter the blueberries and finally spoon the passionfruit pulp over everything — the golden, seedy pulp running down over the cream and fruit is the signature finish. Serve immediately or within 30 minutes — the pavlova softens quickly once topped.",
-      visualCue: {
-        primaryTarget: "A stunning arrangement: snow-white meringue shell, cloud of cream, and a cascade of bright fruit — red, green, blue, and gold passionfruit — creating a vivid contrast of textures and colors.",
-        spectrum: [
-          { state: "Underdone", description: "Cream has been applied too sparingly and the fruit sits directly on the meringue. The visual layers of cream between shell and fruit are lost.", action: "Add more cream generously — pavlova should be abundant, not restrained." },
-          { state: "Perfect",   description: "The meringue shell is visible around the edge, the cream billows generously in the center, and the fruit is piled with abandon on top. The passionfruit pulp runs in golden rivulets over everything. Serve within 30 minutes.", action: "Bring to the table immediately." },
-          { state: "Overdone",  description: "The pavlova was topped hours ahead and has sat in the refrigerator. The meringue has absorbed moisture from the cream and fruit and the crisp shell has become soft and chewy throughout.", action: "It still tastes good but loses the textural contrast. Serve remaining portions immediately and do not refrigerate once topped." },
-        ],
-      },
-      feelCue: "The first spoon through a perfect pavlova gives you three resistances in sequence: the light crunch of the shell, the yielding softness of the marshmallow interior, and the cool slip of cream.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Extrait de vanille",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Dairy",
+      "name": "Crème fouettée lourde (froid)",
+      "ratioValue": 400,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Extrait de vanille (pour crème)",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Fruits de passion frais (poupées)",
+      "ratioValue": 4,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Garnish",
+      "name": "Fraises (chaudées, coupées en deux)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "framboises",
+        "Mango tranché"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Fruits kiwis (peautés, tranchés)",
+      "ratioValue": 3,
+      "defaultUnit": "whole",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Bleuets",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "mûres"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whip",
+      "inputs": [
+        "ing_01",
+        "ing_02"
+      ],
+      "outputState": "stiff_meringue",
+      "instructions": "S'assurer que le bol de mélange, le fouet et tous les ustensiles sont complètement propres, secs et exempts de toute trace de graisse — même une goutte de jaune d'œuf ou un frottis de beurre empêchera les blancs de fouetter. Essuyer tout avec une moitié de citron coupée et bien sécher. Battre les blancs d'oeufs à température ambiante à vitesse moyenne jusqu'à ce qu'ils forment des pics mous qui s'enfoncent à l'extrémité lorsque le fouet est levé. Commencez à ajouter le sucre de roulette une cuillère à soupe à la fois — cet ajout lent n'est pas négociable. Après chaque ajout, battre pendant 30 secondes avant d'ajouter plus. Le processus prend 10-12 minutes au total, et la patience est ce qui crée une meringue stable et dense plutôt qu'une coquille fragile.",
+      "visualCue": {
+        "primaryTarget": "Une meringue rigide, brillamment blanche et brillante qui tient des pics aigus et droits sans aucune embrouille. Lorsque le bol est inversé, la meringue ne bouge pas. La surface ressemble à de la crème à raser — satinée, pas terne.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des pics doux et brillants qui se courbent à l'extrémité. La meringue glisse quand le bol est incliné. Le sucre n'est toujours pas dissout — la meringue est granuleuse lorsqu'elle est frottée entre les doigts.",
+            "action": "Continuer à battre, en ajoutant plus de sucre. Testez en frottant une petite quantité entre l'index et le pouce — battez jusqu'à ce qu'il ne reste pas de graisse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les pics raides support boulon debout. Lorsqu'il est frotté entre les doigts : soyeux-smooth, pas de grain. Quand le bol est inversé : la meringue reste immobile. Brillant blanc et satiné. Il faut de la force pour libérer le fouet.",
+            "action": "Plier la fécule de maïs, le vinaigre et la vanille, puis former."
+          },
+          {
+            "state": "Overdone",
+            "description": "La meringue a l'air sèche, bosselée et caillé, comme du fromage cottage. Il ne coule pas lorsque le bol est incliné mais se brise en morceaux. Les protéines ont été exagérées et la mousse s'est effondrée.",
+            "action": "Cela ne peut pas être récupéré. Recommencer avec un équipement propre et des blancs d'oeuf frais."
+          }
+        ]
+      },
+      "feelCue": "Pincez la meringue entre le pouce et l'index et tirez - la lentement — il devrait former un pic ferme et propre qui se tient sur son propre, sans s'effondrer, comme le beurre fouetté raide."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Plier",
+      "inputs": [
+        "stiff_meringue",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "pavlova_meringue",
+      "instructions": "Saupoudrer la fécule de maïs et l'extrait de vanille sur la meringue et verser dans le vinaigre. Plier avec une grande cuillère en métal ou une spatule en caoutchouc en utilisant exactement trois ou quatre grands mouvements balayants du bas du bol en haut et en haut. Ne pas remuer ou battre. Cette technique est intentionnellement sous-mixée — quelques stries non incorporées sont parfaitement fines. La fécule de maïs et le vinaigre travaillent ensemble avec les protéines d'œufs pour créer l'intérieur de la guimauve : l'amidon gélatinise et l'acide maintient les protéines tendres, empêchant la meringue de se fixer entièrement solide.",
+      "visualCue": {
+        "primaryTarget": "La meringue avec quelques petites stries de fécule de maïs visible mais principalement incorporée. La texture est inchangée par rapport à avant le pliage — toujours rigide et brillant, non dégonflé.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Grandes touffes blanches de fécule de maïs sèche encore visibles et vinaigre visiblement mis en commun dans le bol. La meringue est marbrée.",
+            "action": "Un ou deux plis plus doux — juste assez pour incorporer les taches sèches et le vinaigre en commun."
+          },
+          {
+            "state": "Perfect",
+            "description": "Meringue est toujours raide et brillant. La fécule de maïs et le vinaigre sont principalement incorporés avec peut-être une faible stries ou deux restants. La meringue tient sa forme quand une cuillère est traînée.",
+            "action": "Déposer immédiatement sur la plaque de cuisson préparée."
+          },
+          {
+            "state": "Overdone",
+            "description": "La meringue s'est dégonflée du surpliage. Il semble plus doux et moins volumineux. Les pics ne tiennent plus forme.",
+            "action": "Former et cuire rapidement — la meringue dégonflée s'étendra davantage et pourrait craquer, mais aura encore un bon goût."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une grande cuillère — la meringue devrait tenir sa forme sur la cuillère pendant plusieurs secondes avant de sombrer lentement, dense et oreiller comme un nuage fait solide."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Cuire",
+      "inputs": [
+        "pavlova_meringue"
+      ],
+      "outputState": "baked_pavlova_shell",
+      "instructions": "Dessinez un cercle de 22 cm sur une feuille de papier parchemin (tracez une assiette de dîner), retournez le parchemin de sorte que le crayon soit vers le bas et placez-le sur une plaque de cuisson. Spotez la meringue sur le cercle dans une pile bombée. À l'aide de l'arrière d'une cuillère, formez-la en un disque avec des côtés légèrement surélevés et un creux peu profond au centre. Cuire au four à 140°C (285°F) pendant 1 heure et 15 minutes. Éteignez complètement le four et laissez la pavlova à l'intérieur avec la porte fermée pendant au moins 2 heures — la nuit est idéale. Ne pas ouvrir le four pendant cette période.",
+      "visualCue": {
+        "primaryTarget": "Après le repos du four: une coquille de meringue blanc ivoire qui a séché à un extérieur croustillant et légèrement crayeux. La surface peut avoir des fissures fines — c'est traditionnel et beau. La base est sèche et sonne creuse lorsqu'elle est tapée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La meringue est encore douce et collante au toucher. L'extérieur n'a pas une coquille croustillante. Il s'en tiendra au parchemin et s'effondrera lorsqu'il sera déplacé.",
+            "action": "Fermez le four et partez pendant une heure. Le temps de repos est aussi important que le temps de cuisson — ne précipitez jamais cette étape."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'extérieur est sec, croustillant et blanc ivoire. Des fissures fines peuvent apparaître à la surface — c'est caractéristique, pas une défaillance. La pavlova se lève proprement du parchemin. L'intérieur, quand le puits est sondé avec une cuillère, est doux et de type guimauve.",
+            "action": "Laisser à température ambiante jusqu'à ce qu'il soit prêt à monter. Ne pas réfrigérer."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pavlova a pris une teinte jaune ou brun et l'extérieur est très dur tout au long sans guimauve intérieure restant. Le four était trop chaud ou trop long.",
+            "action": "Top et servir de toute façon — la saveur est toujours meringue, juste sans le contraste intérieur qui donne."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la surface avec un ongle — vous devriez entendre un clic sec et croustillant, et l'extérieur devrait produire légèrement sous pression, mais pas couler dans, comme taper sur une coquille creuse."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Whip",
+      "inputs": [
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "whipped_cream",
+      "instructions": "Juste avant de servir — pas les heures avant — battre la crème fouettée lourde froide et l'extrait de vanille dans un bol réfrigéré jusqu'à ce que la crème atteigne des pics de moyenne fermeté. La crème devrait tenir sa forme lorsque le bol est incliné, mais avoir encore un léger glissade au sommet des pics. Arrêtez avant que la crème devienne raide ou granuleuse. La cible est une crème qui gonfle généreusement plutôt que de se tenir dans des blocs rigides — elle s'installera légèrement sur la meringue, qui est l'aspect correct.",
+      "visualCue": {
+        "primaryTarget": "Crème douce, bouffante, blanc ivoire avec des pics qui se bouclent doucement à l'extrémité. Lorsque cuilleré sur le pavlova, il se dépose dans des monticules doux plutôt que des pics rigides.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème est toujours versable et ne tient pas les pics. Il glissera de la meringue et de la piscine autour de la base.",
+            "action": "Continuer à battre pendant 30 secondes jusqu'à ce que des pics moyens se forment — pics qui tiennent quand le fouet est maintenu debout mais bouclent à l'extrémité."
+          },
+          {
+            "state": "Perfect",
+            "description": "La crème tient un pic doux et courbé qui s'enfonce légèrement à l'extrémité. Billowy et volumineux. Blanc pur avec un éclat satiné.",
+            "action": "Déposer immédiatement sur le pavlova et garnir de fruits."
+          },
+          {
+            "state": "Overdone",
+            "description": "La crème est raide, granuleuse, et commence à paraître jaune. Il a commencé à se transformer en beurre.",
+            "action": "Plier dans 2 cuillères à soupe de crème fraîche froide pour adoucir. Utilisez vite."
+          }
+        ]
+      },
+      "feelCue": "Passez une cuillère à travers la crème — elle devrait laisser une piste propre et lisse qui s'assouplit progressivement aux bords, comme en tirant à travers la crème caillot très froide."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Garnir",
+      "inputs": [
+        "baked_pavlova_shell",
+        "whipped_cream",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "finished_pavlova",
+      "instructions": "Transférer la coquille de pavlova refroidie dans une assiette de service. Pile la crème fouettée dans le centre bien dans des monticules généreuses et bondissantes, lui permettant de se propager naturellement vers les bords élevés sans déborder. Disposer les moitiés de fraises et les tranches de kiwi d'abord, puis disperser les bleuets et enfin cuiller la pulpe de fruit passion sur tout — la pulpe dorée et sourcie qui coule sur la crème et le fruit est la finale signature. Servir immédiatement ou dans les 30 minutes — le pavlova s'assouplit rapidement une fois surmonté.",
+      "visualCue": {
+        "primaryTarget": "Un arrangement étonnant: coquille de meringue blanc neige, nuage de crème, et une cascade de fruits brillants - rouge, vert, bleu, et or passionfruit - créant un contraste vif de textures et de couleurs.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La crème a été appliquée trop parcimonieusement et le fruit est assis directement sur la meringue. Les couches visuelles de crème entre la coquille et le fruit sont perdues.",
+            "action": "Ajouter plus de crème généreusement — le pavlova doit être abondant, non retenu."
+          },
+          {
+            "state": "Perfect",
+            "description": "La coquille de meringue est visible autour du bord, la crème souffle généreusement au centre, et le fruit est empilé avec l'abandon sur le dessus. La pulpe de fruits de la passion coule dans des rivaux dorés sur tout. Servir dans les 30 minutes.",
+            "action": "Apportez à la table immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le pavlova était couvert d'heures d'avance et s'est assis au réfrigérateur. La meringue a absorbé l'humidité de la crème et des fruits et la coquille croustillante est devenue douce et mâcheuse partout.",
+            "action": "Il a encore bon goût mais perd le contraste textural. Servir immédiatement les portions restantes et ne pas réfrigérer une fois surmontées."
+          }
+        ]
+      },
+      "feelCue": "La première cuillère à travers un pavlova parfait vous donne trois résistances en séquence: la croûte légère de la coquille, la douceur de production de l'intérieur de guimauve, et le glissade frais de la crème."
+    }
+  ]
 };

@@ -1,118 +1,296 @@
 export default {
-  repoId: "master_italian_ribollita_001",
-  parentRepoId: null,
-  slug: "ribollita",
-  author: "ForkRecipe Kitchen",
-  title: "Ribollita",
-  description: "A thick Tuscan peasant soup built from the bones of yesterday's bread and the season's darkest cavolo nero — re-boiled until the beans dissolve into the broth and the torn bread swells to a trembling, almost porridge-like consistency that a spoon stands up in.",
-  cuisine: "Italian",
-  culture: "Tuscan",
-  category: "vegetables",
-  tags: ["soup", "tuscan", "bread", "beans", "vegan"],
-  difficulty: 2,
-  activeTime: "40 min",
-  totalTime: "2 hours 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 4, sour: 1, bitter: 4, umami: 6, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Dried cannellini beans, soaked overnight",        ratioValue: 2,   defaultUnit: "parts", substitutions: ["canned cannellini beans, drained"] },
-    { ingId: "ing_02", role: "Structure", name: "Stale Tuscan pane sciocco (unsalted bread), torn", ratioValue: 1.5, defaultUnit: "parts", substitutions: ["any stale country bread"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Cavolo nero (lacinato kale), stems removed, roughly chopped", ratioValue: 2, defaultUnit: "parts", substitutions: ["savoy cabbage"] },
-    { ingId: "ing_04", role: "Allium",    name: "White onion, finely diced",                       ratioValue: 0.75, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Celery stalks, diced",                            ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Aromatic",  name: "Carrot, diced",                                   ratioValue: 0.5, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Allium",    name: "Garlic cloves, crushed",                          ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_08", role: "Umami",     name: "Canned whole San Marzano tomatoes, hand-crushed",  ratioValue: 0.75, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Fat",       name: "Extra-virgin olive oil, plus more to finish",     ratioValue: 0.25, defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Herb",      name: "Fresh rosemary, sage, and thyme (tied into a bundle)", ratioValue: 0.05, defaultUnit: "parts", substitutions: ["dried herbs"] },
-    { ingId: "ing_11", role: "Seasoning", name: "Fine sea salt and black pepper",                  ratioValue: 0.05, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_italian_ribollita_001",
+  "parentRepoId": null,
+  "slug": "ribollita",
+  "author": "ForkRecipe Kitchen",
+  "title": "Ribollita",
+  "description": "Une soupe paysanne toscane épaisse, construite à partir des os du pain d'hier et du nero cavolo le plus sombre de la saison, réchauffée jusqu'à ce que les haricots se dissolvent dans le bouillon et que le pain déchiré gonfle jusqu'à une consistance tremblante, presque porridge, dans laquelle se dresse une cuillère.",
+  "cuisine": "Italien",
+  "culture": "Toscane",
+  "category": "vegetables",
+  "tags": [
+    "Soupe",
+    "Tuscan",
+    "pain",
+    "haricots",
+    "végétalien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "40 min",
+  "totalTime": "2 hours 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 4,
+    "umami": 6,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Simmer",
-      inputs: ["ing_01", "ing_10", "ing_11"],
-      outputState: "cooked_beans",
-      instructions: "Drain the soaked beans and cover with fresh cold water by 5 cm in a large pot. Add the herb bundle and a generous pinch of salt. Bring to a boil, skim any grey foam that rises, then reduce to a gentle simmer. Cook for 60-90 minutes until the beans are completely tender throughout with no chalky center when bitten. Do not add acid (no tomato, no vinegar) until the beans are fully cooked — acid toughens bean skins. Reserve all the cooking liquid — it becomes the base of the soup. Remove the herb bundle. Roughly mash or blend one-third of the cooked beans directly in the pot to create body in the soup; leave two-thirds whole.",
-      visualCue: {
-        primaryTarget: "Beans uniformly creamy-white and completely tender throughout. When pressed between thumb and forefinger, they crush to a smooth paste with no graininess.",
-        spectrum: [
-          { state: "Underdone", description: "Beans are still firm with a chalky, powdery center. Resist crushing between fingers.", action: "Continue simmering. Check every 15 minutes — old beans can take up to 2 hours." },
-          { state: "Perfect",   description: "Tender all the way through, crush to a smooth paste, but still hold their skin and shape in the broth.", action: "Mash one-third directly in the pot and proceed to the soffritto." },
-          { state: "Overdone",  description: "Beans have burst and largely dissolved into the cooking liquid. The broth is very thick and starchy.", action: "This is excellent for ribollita — proceed. The dissolved beans create natural body." },
-        ],
-      },
-      feelCue: "Pinch a bean between your thumb and forefinger — it should crush completely and smoothly, with the texture of soft butter, leaving no gritty remnant.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Graines de cannellini séchées, trempées pendant la nuit",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "haricots cannellini en conserve, égouttés"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sweat",
-      inputs: ["ing_04", "ing_05", "ing_06", "ing_07", "ing_09"],
-      outputState: "soffritto",
-      instructions: "In a separate large, heavy pot, heat the olive oil over medium-low heat. Add the onion, celery, carrot, and garlic with a pinch of salt. Cook slowly for 12-15 minutes, stirring occasionally, until the vegetables are completely soft, sweet-smelling, and lightly golden. This is the soffritto — the flavor foundation. The vegetables should be so soft they break apart when pressed with a spoon. Add the crushed tomatoes, stir in, and cook for another 5 minutes until the tomato has darkened slightly and smells sweet.",
-      visualCue: {
-        primaryTarget: "Glossy, completely soft vegetables in a pale gold soffritto. Tomato has been added and cooked to a darker, jammy red.",
-        spectrum: [
-          { state: "Underdone", description: "Onion still has a raw, sharp smell. Vegetables are translucent but still firm.", action: "Continue on medium-low heat. Patience is essential — raw soffritto will make the soup taste harsh." },
-          { state: "Perfect",   description: "Vegetables are completely tender, glossy, and sweet-smelling. Tomato is a dark jammy red. Everything looks cohesive.", action: "Add the cavolo nero and cooked beans." },
-          { state: "Overdone",  description: "Soffritto is browned and slightly sticky. Vegetables beginning to dry out.", action: "Add a splash of the bean cooking water to deglaze and moisten before adding the greens." },
-        ],
-      },
-      feelCue: "Press a piece of carrot against the pot wall with a spoon — it should smear completely with almost no force. The soffritto should smell deeply sweet and savory, like the beginning of every good Italian soup.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "Plaque toscane sciocco (pain non salé), déchirée",
+      "ratioValue": 1.5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tout pain de campagne inexistant"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Simmer",
-      inputs: ["soffritto", "cooked_beans", "ing_03"],
-      outputState: "base_ribollita",
-      instructions: "Add the cavolo nero leaves to the soffritto and stir until wilted, about 3 minutes. Pour in the cooked beans along with all their cooking liquid. Add more water or stock if needed — the mixture should be soupy, not stew-thick. Bring to a gentle simmer and cook for 25-30 minutes until the cavolo nero is completely tender and has lost its tough, fibrous quality. The broth should taste deeply savory and slightly sweet from the beans. Season generously with salt and pepper.",
-      visualCue: {
-        primaryTarget: "Dark, olive-green cavolo nero completely wilted and tender in a creamy, bean-rich broth. The soup looks dark and substantial.",
-        spectrum: [
-          { state: "Underdone", description: "Cavolo nero is still bright green and slightly tough — chewy stems remain. The broth is pale and thin.", action: "Simmer longer — cavolo nero needs at least 20 minutes of gentle cooking to become tender." },
-          { state: "Perfect",   description: "Cavolo nero is dark olive-green, completely tender, and has enriched the broth with its bitterness. Broth is thick and savory.", action: "Add the torn bread and simmer for 20 more minutes." },
-          { state: "Overdone",  description: "Cavolo nero has turned grey-green and mushy. Broth is very thick from dissolved beans.", action: "This is still delicious ribollita. Add the bread and proceed." },
-        ],
-      },
-      feelCue: "Chew a piece of cavolo nero — the stem should yield without effort and the leaf should feel silky rather than fibrous. The broth should taste of the entire earth: sweet, bitter, savory, and deep.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Cavolo nero (lacinato kale), tiges enlevées, hachées approximativement",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Choux savoy"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Soak",
-      inputs: ["base_ribollita", "ing_02"],
-      outputState: "ribollita_with_bread",
-      instructions: "Tear the stale bread into large, rough chunks — about 5 cm pieces — and press them into the simmering soup. Do not stir immediately. Let the bread absorb the broth for 2-3 minutes, then stir gently to incorporate. The bread will swell dramatically and begin to fall apart, thickening the soup to a porridge-like consistency. Add more broth if the mixture becomes too thick to stir. Simmer for another 15-20 minutes on low heat, stirring regularly to prevent the bread from sticking to the bottom.",
-      visualCue: {
-        primaryTarget: "Bread completely absorbed into the soup — no intact pieces of bread visible, but the soup is dramatically thickened and has a slightly rough, porridge-like texture.",
-        spectrum: [
-          { state: "Underdone", description: "Bread chunks are still discrete and soggy — floating on the surface without fully incorporating.", action: "Stir more vigorously and continue simmering. The bread needs to break down completely." },
-          { state: "Perfect",   description: "Bread has dissolved into the soup, creating a thick, porridge-like consistency. A spoon dragged through leaves a channel that fills back slowly.", action: "Taste and adjust seasoning. The soup is ready to re-boil (ribollire)." },
-          { state: "Overdone",  description: "Soup is so thick it has become a brick-like paste that barely moves.", action: "Add more water or bean cooking liquid and stir vigorously on low heat to loosen." },
-        ],
-      },
-      feelCue: "Stir the soup with a wooden spoon — you should feel real resistance, like stirring polenta. The spoon should leave a trail that closes slowly. If it moves freely, add more bread.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc, finement coupé en dés",
+      "ratioValue": 0.75,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_5",
-      action: "Reboil",
-      inputs: ["ribollita_with_bread", "ing_09"],
-      outputState: "finished_ribollita",
-      instructions: "This is the step that gives ribollita its name — 're-boiled.' Bring the thick soup back to a lively simmer over medium heat, stirring frequently to prevent the bread-thickened base from scorching on the bottom. Simmer for 10 minutes. Taste and adjust salt generously — ribollita needs bold seasoning. Ladle into deep bowls. Finish each bowl with a generous pour of the best olive oil you have — it will pool on the surface and slowly sink in. Serve with a coarse grind of black pepper and, optionally, a slice of grilled bread across the top.",
-      visualCue: {
-        primaryTarget: "A thick, dark, near-solid soup with a deep olive-and-bean color. A generous pool of bright green olive oil sits on the surface of each bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Soup is still thin and watery. Bread and beans haven't melded into the base.", action: "Continue simmering uncovered to reduce and concentrate the flavors." },
-          { state: "Perfect",   description: "Thick, deeply savory, and completely cohesive. The spoon stands upright in the bowl. Colors are deep — dark green, brick red, and cream.", action: "Finish with olive oil and serve immediately, or cool and reheat the next day when it will be even better." },
-          { state: "Overdone",  description: "Scorched on the bottom — dark, bitter burnt flavor in the soup.", action: "Do not scrape the scorched bottom. Pour the soup into a clean pot immediately, leaving the burnt layer behind." },
-        ],
-      },
-      feelCue: "Ladle into the bowl and let a ribbon of your best olive oil sink into the surface — you should smell the grassy, fruity oil hitting the hot soup, releasing a wave of fresh olive fragrance against the deep savory base.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Pâtes de céleri en dés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_06",
+      "role": "Aromatic",
+      "name": "Carotte coupée en dés",
+      "ratioValue": 0.5,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Giroves d'ail écrasées",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "tomates entières en conserve de San Marzano, concassées à la main",
+      "ratioValue": 0.75,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge, plus plus à finir",
+      "ratioValue": 0.25,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Romarin frais, sauge et thym (lié en un paquet)",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "herbes séchées"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel de mer fin et poivre noir",
+      "ratioValue": 0.05,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_01",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "cooked_beans",
+      "instructions": "Égoutter les haricots trempés et couvrir d'eau froide fraîche de 5 cm dans un grand pot. Ajouter le paquet d'herbes et une pincée généreuse de sel. Porter à ébullition, écrémer toute mousse grise qui monte, puis réduire à mijoter doucement. Cuire pendant 60-90 minutes jusqu'à ce que les haricots soient complètement tendres tout au long sans centre crayeux quand mordu. Ne pas ajouter d'acide (pas de tomate, pas de vinaigre) jusqu'à ce que les haricots soient entièrement cuits — les peaux de haricots durs acides. Réserver tout le liquide de cuisson — il devient la base de la soupe. Enlevez le paquet d'herbes. Masser ou mélanger un tiers des haricots cuits directement dans le pot pour créer du corps dans la soupe; laisser les deux tiers entiers.",
+      "visualCue": {
+        "primaryTarget": "Haricots uniformément blanc crème et complètement tendres. Lorsqu'ils sont pressés entre le pouce et l'index, ils écrasent à une pâte lisse sans grain.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les haricots sont encore fermes avec un centre crayeux et poudreux. Résister au broyage entre les doigts.",
+            "action": "Continuez à mijoter. Vérifiez toutes les 15 minutes — les vieux haricots peuvent prendre jusqu'à 2 heures."
+          },
+          {
+            "state": "Perfect",
+            "description": "Prêter tout le chemin, écraser à une pâte lisse, mais garder leur peau et la forme dans le bouillon.",
+            "action": "Mash un tiers directement dans le pot et passer au soffritto."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots ont explosé et sont largement dissous dans le liquide de cuisson. Le bouillon est très épais et féculent.",
+            "action": "C'est excellent pour la ribollita — continuez. Les haricots dissous créent un corps naturel."
+          }
+        ]
+      },
+      "feelCue": "Pincez un haricot entre le pouce et l'index — il devrait s'écraser complètement et en douceur, avec la texture de beurre doux, ne laissant aucun reste gritty."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Sueur",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_09"
+      ],
+      "outputState": "soffritto",
+      "instructions": "Dans une grande casserole séparée, faire chauffer l'huile d'olive à feu moyen-doux. Ajouter l'oignon, le céleri, la carotte et l'ail avec une pincée de sel. Cuire lentement pendant 12-15 minutes, en remuant occasionnellement, jusqu'à ce que les légumes soient complètement doux, doux et légèrement dorés. C'est le soffritto — la fondation de la saveur. Les légumes doivent être si doux qu'ils se brisent lorsqu'ils sont pressés avec une cuillère. Ajouter les tomates écrasées, remuer et cuire encore 5 minutes jusqu'à ce que la tomate s'assombrisse légèrement et sente sucrée.",
+      "visualCue": {
+        "primaryTarget": "Légumes brillants, complètement mous dans un soffritto en or pâle. La tomate a été ajoutée et cuite à un rouge plus foncé et confitureux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon a encore une odeur brute et nette. Les légumes sont translucides mais toujours fermes.",
+            "action": "Continuer à feu moyen-doux. La patience est essentielle: le soffritto brut rendra la soupe dure."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les légumes sont complètement tendres, brillants et sucrés. La tomate est un rouge jammy foncé. Tout semble cohérent.",
+            "action": "Ajouter le nero cavolo et les haricots cuits."
+          },
+          {
+            "state": "Overdone",
+            "description": "Soffritto est bruni et légèrement collant. Les légumes commencent à sécher.",
+            "action": "Ajouter une touche d'eau de cuisson de haricots pour déglacer et humidifier avant d'ajouter les verts."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un morceau de carotte contre la paroi du pot avec une cuillère — il devrait frotter complètement avec presque aucune force. Le soffritto doit sentir profondément sucré et salé, comme le début de chaque bonne soupe italienne."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "soffritto",
+        "cooked_beans",
+        "ing_03"
+      ],
+      "outputState": "base_ribollita",
+      "instructions": "Ajouter les feuilles de cavolo nero au soffritto et remuer jusqu'à ce qu'elles se flétrissent, environ 3 minutes. Verser les haricots cuits avec tout leur liquide de cuisson. Ajouter plus d'eau ou de bouillon si nécessaire — le mélange doit être soupeux, et non ragoûté. Porter à mijoter doucement et cuire 25-30 minutes jusqu'à ce que le nero cavolo soit complètement tendre et ait perdu sa qualité fibreuse. Le bouillon doit goûter profondément salé et légèrement sucré des haricots. Assaisonner généreusement de sel et de poivre.",
+      "visualCue": {
+        "primaryTarget": "Nero cavolo vert olive foncé complètement flétri et tendre dans un bouillon crémeux et riche en haricots. La soupe semble sombre et substantielle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le nero de Cavolo est encore vert vif et légèrement dur: il reste des tiges croustillantes. Le bouillon est pâle et mince.",
+            "action": "Laisser mijoter plus longtemps — il faut au moins 20 minutes de cuisson douce pour devenir tendre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cavolo nero est vert olive foncé, complètement tendre, et a enrichi le bouillon de son amertume. Le bouillon est épais et salé.",
+            "action": "Ajouter le pain déchiré et laisser mijoter encore 20 minutes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Cavolo nero est devenu gris-vert et musqué. Le bouillon est très épais à partir de haricots dissous.",
+            "action": "C'est toujours délicieux ribollita. Ajouter le pain et poursuivre."
+          }
+        ]
+      },
+      "feelCue": "Mâcher un morceau de cavolo nero — la tige doit produire sans effort et la feuille doit se sentir soyeuse plutôt que fibreuse. Le bouillon doit goûter à toute la terre: doux, amer, salé et profond."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Trempage",
+      "inputs": [
+        "base_ribollita",
+        "ing_02"
+      ],
+      "outputState": "ribollita_with_bread",
+      "instructions": "Appliquez le pain étouffé dans de gros morceaux rugueux — environ 5 cm — et pressez - les dans la soupe mijotée. Ne pas remuer immédiatement. Laisser le pain absorber le bouillon pendant 2-3 minutes, puis remuer doucement pour incorporer. Le pain va gonfler considérablement et commencer à s'effondrer, épaississant la soupe à une consistance de porridge. Ajouter plus de bouillon si le mélange devient trop épais pour remuer. Laisser mijoter encore 15 à 20 minutes à feu doux, en remuant régulièrement pour éviter que le pain ne colle au fond.",
+      "visualCue": {
+        "primaryTarget": "Le pain est complètement absorbé dans la soupe — pas de morceaux de pain intacts visibles, mais la soupe est considérablement épaissie et a une texture légèrement rugueuse, de type porridge.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les morceaux de pain sont toujours discrets et soyeux — flottant sur la surface sans être entièrement incorporés.",
+            "action": "Incorporer plus vigoureusement et continuer à mijoter. Le pain doit se décomposer complètement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le pain s'est dissous dans la soupe, créant une consistance épaisse, semblable à un porridge. Une cuillère traînée à travers laisse un canal qui se remplit lentement.",
+            "action": "Goûtez et assaisonnez. La soupe est prête à bouillir (ribollire)."
+          },
+          {
+            "state": "Overdone",
+            "description": "La soupe est si épaisse qu'elle est devenue une pâte de brique qui bouge à peine.",
+            "action": "Ajouter plus d'eau ou de fève liquide de cuisson et remuer vigoureusement à feu doux pour se détendre."
+          }
+        ]
+      },
+      "feelCue": "Mélanger la soupe avec une cuillère en bois — vous devriez sentir une vraie résistance, comme en remuant la polenta. La cuillère devrait laisser un sentier qui se ferme lentement. Si elle se déplace librement, ajouter plus de pain."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Rebois",
+      "inputs": [
+        "ribollita_with_bread",
+        "ing_09"
+      ],
+      "outputState": "finished_ribollita",
+      "instructions": "C'est l'étape qui donne son nom à ribollita: \"reboisé\". Portez l'épaisse soupe à mijoter vif à feu moyen, en remuant fréquemment afin d'éviter que la base du pain ne brûle sur le fond. Laisser mijoter 10 minutes. Goûtez et ajustez généreusement le sel. Déposer dans des bols profonds. Finissez chaque bol avec une généreuse versée de la meilleure huile d'olive que vous ayez – il poolera à la surface et s'enfoncera lentement. Servir avec une mouture grossière de poivre noir et, en option, une tranche de pain grillé sur le dessus.",
+      "visualCue": {
+        "primaryTarget": "Une soupe épaisse, sombre, presque solide avec une couleur olive et haricots profonds. Une généreuse piscine d'huile d'olive vert vif se trouve à la surface de chaque bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La soupe est encore mince et aqueuse. Le pain et les haricots n'ont pas fondu dans la base.",
+            "action": "Continuer à mijoter à découvert pour réduire et concentrer les saveurs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épais, profondément savoureux et complètement cohésif. La cuillère se tient debout dans le bol. Les couleurs sont profondes: vert foncé, rouge brique et crème.",
+            "action": "Terminer avec l'huile d'olive et servir immédiatement, ou refroidir et réchauffer le lendemain quand il sera encore mieux."
+          },
+          {
+            "state": "Overdone",
+            "description": "Brûlé sur le fond — saveur brûlée sombre et amère dans la soupe.",
+            "action": "Ne grattez pas le fond brûlé. Versez immédiatement la soupe dans un pot propre, laissant la couche brûlée derrière."
+          }
+        ]
+      },
+      "feelCue": "Plongez dans le bol et laissez un ruban de votre meilleure huile d'olive couler dans la surface — vous devriez sentir l'huile herbacée et fruitée frapper la soupe chaude, libérant une vague de parfum d'olive fraîche contre la base salée profonde."
+    }
+  ]
 };

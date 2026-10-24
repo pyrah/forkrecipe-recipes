@@ -1,81 +1,193 @@
 export default {
-  repoId: "master_levantine_tahini_sauce_001",
-  parentRepoId: null,
-  slug: "tahini-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Tahini Sauce",
-  description: "Raw sesame paste thinned with lemon juice and cold water until it loosens, pales, and brightens into something altogether silkier than its starting point — nutty, sour, and creamy in equal measure.",
-  cuisine: "Middle Eastern",
-  culture: "Levantine",
-  category: "sauces",
-  tags: ["middle-eastern", "levantine", "tahini", "sesame", "lemon", "vegan", "quick"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "10 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 0, salty: 2, sour: 3, bitter: 1, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Fat",       name: "Tahini (well-stirred, stone-ground preferred)", ratioValue: 100, defaultUnit: "parts", substitutions: ["almond butter for a nuttier variation"] },
-    { ingId: "ing_02", role: "Acid",      name: "Fresh lemon juice",                            ratioValue: 45,  defaultUnit: "parts", substitutions: ["white wine vinegar in a pinch"] },
-    { ingId: "ing_03", role: "Allium",    name: "Garlic clove, grated to a paste",              ratioValue: 5,   defaultUnit: "parts", substitutions: ["roasted garlic for a milder result"] },
-    { ingId: "ing_04", role: "Hydration", name: "Ice-cold water",                               ratioValue: 60,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning", name: "Fine sea salt",                                ratioValue: 3,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Spice",     name: "Ground cumin (optional)",                      ratioValue: 2,   defaultUnit: "parts", substitutions: ["smoked paprika for a different register"] },
+  "repoId": "master_levantine_tahini_sauce_001",
+  "parentRepoId": null,
+  "slug": "tahini-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce Tahini",
+  "description": "Pâte de sésame crue éclaircie avec du jus de citron et de l'eau froide jusqu'à ce qu'elle détende, pâle et scintille en quelque chose de plus soyeux que son point de départ — noix, aigre et crémeux dans une mesure égale.",
+  "cuisine": "Moyen-Orient",
+  "culture": "Levantine",
+  "category": "sauces",
+  "tags": [
+    "Moyen-Orient",
+    "lévantine",
+    "Tahini",
+    "sésame",
+    "citron",
+    "végétalien",
+    "Vite"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "10 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 3,
+    "bitter": 1,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_01"],
-      outputState: "stirred_tahini",
-      instructions: "Open the tahini jar and stir it thoroughly from the bottom up before measuring — tahini separates in storage, and you need a fully recombined paste, not the dry paste at the bottom with the separated oil on top. Transfer the required amount to a mixing bowl. The tahini at this point should be a uniform, thick, peanut-butter-brown paste with a strong sesame aroma. If the tahini is very stiff or cold, the sauce will be harder to whisk smooth — room temperature tahini works best.",
-      visualCue: {
-        primaryTarget: "A uniform, glossy, medium-brown paste with no visible oil separation — consistent color and texture from top to bottom of the spoon.",
-        spectrum: [
-          { state: "Underdone", description: "The tahini is visibly separated — pale, dry paste at the bottom of the jar and a clear layer of sesame oil floating on top. Measuring this directly gives an incorrect ratio.", action: "Stir vigorously from the very bottom of the jar for 1–2 minutes until the oil is fully re-emulsified into the paste. If the jar is very cold, briefly warm it in a bowl of hot water first." },
-          { state: "Perfect",   description: "The tahini flows as a single, uniform, glossy paste — consistent color throughout, no dry patches, no oil pooling at the edges.", action: "Add the lemon juice and proceed to whisk." },
-          { state: "Overdone",  description: "There is no such thing as over-stirred tahini at this stage. Proceed.", action: "Proceed to the next step." },
-        ],
-      },
-      feelCue: "A small amount of well-stirred tahini rolled between the fingers should feel sleek and slightly greasy — uniform throughout, with the dense, smooth texture of a thick nut butter.",
+      "ingId": "ing_01",
+      "role": "Fat",
+      "name": "Tahini (préféré en pierre bien ciré)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "beurre d'amande pour une variation de noix"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Whisk",
-      inputs: ["stirred_tahini", "ing_02", "ing_03", "ing_05", "ing_06"],
-      outputState: "tahini_seized",
-      instructions: "Add the lemon juice all at once to the tahini and whisk immediately. The mixture will seize dramatically — it will thicken and seize into a stiff, pale, crumbly-looking mass. This is expected and not a failure. It is the same reaction as seizing chocolate: the acid is disrupting the fat emulsion and binding the solids. Add the grated garlic paste, salt, and cumin (if using) and whisk them into the seized mass. The mixture will look broken and unappetizing — resist the urge to add anything else yet.",
-      visualCue: {
-        primaryTarget: "A thick, pale, stiff paste — noticeably lighter in color than the raw tahini, somewhere between putty and cream. It should look almost crumbly and cohesive at the same time.",
-        spectrum: [
-          { state: "Underdone", description: "Only a portion of the lemon juice has been incorporated — the mixture is still dark in color and some tahini has not yet seized.", action: "Add the remaining lemon juice and whisk until the full seizure occurs. Don't add water until the tahini has fully seized with all the acid." },
-          { state: "Perfect",   description: "The entire mass has turned noticeably paler (cream to pale beige), become very stiff, and pulled away from the sides of the bowl slightly. It looks almost like thick clay.", action: "Begin adding ice-cold water one tablespoon at a time." },
-          { state: "Overdone",  description: "You added water before the tahini fully seized with the lemon juice — the texture is uneven, with lumps of seized tahini suspended in thin liquid.", action: "Keep whisking vigorously. The lumps will usually smooth out with sustained whisking, even if out of sequence." },
-        ],
-      },
-      feelCue: "Press a spoon into the seized tahini — it should resist like stiff clay before yielding. The pale color is the giveaway: a dramatic lightening from brown to cream signals that the lemon has done its work.",
+      "ingId": "ing_02",
+      "role": "Acid",
+      "name": "Jus de citron frais",
+      "ratioValue": 45,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "vinaigre de vin blanc dans une pincée"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Whisk",
-      inputs: ["tahini_seized", "ing_04"],
-      outputState: "tahini_sauce",
-      instructions: "Add the ice-cold water one tablespoon at a time, whisking vigorously after each addition. With each addition the sauce will first appear to loosen further before pulling back together — this is normal. Continue until the sauce is smooth, silky, and falls off the whisk in a slow, unbroken ribbon. The sauce should be noticeably pale — an almost off-white cream color — significantly lighter than the raw tahini. Taste and adjust: more lemon for brightness, more water for a looser consistency, more salt to bring everything forward.",
-      visualCue: {
-        primaryTarget: "A smooth, pale cream-colored sauce that pours in a slow, ribboning fall from a lifted spoon. The color should be considerably lighter than the original tahini — think heavy cream, not peanut butter.",
-        spectrum: [
-          { state: "Underdone", description: "The sauce is still stiff and paste-like, clinging to the whisk rather than flowing. The color is still mid-brown. More water is needed.", action: "Continue adding cold water a tablespoon at a time, whisking thoroughly after each addition. Do not add all the water at once or the sauce will become watery before emulsifying properly." },
-          { state: "Perfect",   description: "The sauce is silky-smooth, pale cream, and flows in a continuous ribbon off the spoon. It coats a dipped finger evenly. The flavor is nutty, bright with lemon, and garlicky without being harsh.", action: "Use immediately or refrigerate for up to 3 days — it will thicken in the fridge; thin with cold water and re-whisk before serving." },
-          { state: "Overdone",  description: "The sauce is too thin and watery, running off a spoon immediately rather than ribboning. The pale color has become almost translucent.", action: "Whisk in a tablespoon of additional tahini to bring the body back. Add a small squeeze of extra lemon to re-brighten." },
-        ],
-      },
-      feelCue: "The finished sauce should feel silky-smooth on the tongue with no graininess — if you detect any roughness, whisk for another 30 seconds. The cold water is critical: warm water produces a thinner, less stable sauce.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Gousse d'ail râpée à la pâte",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "ail rôti pour un résultat plus doux"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Eau froide",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Cumin de fond (facultatif)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "paprika fumé pour un autre registre"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "stirred_tahini",
+      "instructions": "Ouvrez le pot de tahini et remuez-le soigneusement du bas vers le haut avant de mesurer — le tahini se sépare dans le stockage, et vous avez besoin d'une pâte entièrement recombinée, pas la pâte sèche au bas avec l'huile séparée sur le dessus. Transférer la quantité requise dans un bol de mélange. Le tahini à ce stade devrait être une pâte uniforme, épaisse, brun cacahuète-beurre avec un fort arôme de sésame. Si le tahini est très raide ou froid, la sauce sera plus difficile à fouetter lisse — le tahini à température ambiante fonctionne mieux.",
+      "visualCue": {
+        "primaryTarget": "Une pâte uniforme, brillant, brun moyen, sans séparation visible de l'huile – couleur et texture cohérentes du haut au bas de la cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le tahini est visiblement séparé: pâte pâle et sèche au fond du pot et couche claire d'huile de sésame flottant sur le dessus. La mesure de ceci donne un rapport incorrect.",
+            "action": "Incorporer vigoureusement du fond du pot pendant 1 à 2 minutes jusqu'à ce que l'huile soit complètement réémulsionnée dans la pâte. Si le pot est très froid, le réchauffer brièvement dans un bol d'eau chaude d'abord."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le tahini s'écoule comme une pâte unique, uniforme et brillante — couleur uniforme à travers, pas de taches sèches, pas de mise en commun d'huile aux bords.",
+            "action": "Ajouter le jus de citron et faire fouetter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Il n'y a pas de tahini trop stirred à ce stade. Continuez.",
+            "action": "Passez à l'étape suivante."
+          }
+        ]
+      },
+      "feelCue": "Une petite quantité de tahini bien ciré roulé entre les doigts devrait se sentir lisse et légèrement gras — uniforme dans l'ensemble, avec la texture dense et lisse d'un épais beurre de noix."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Whisk",
+      "inputs": [
+        "stirred_tahini",
+        "ing_02",
+        "ing_03",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "tahini_seized",
+      "instructions": "Ajouter le jus de citron tout à la fois au tahini et fouetter immédiatement. Le mélange s'emparera de façon spectaculaire — il s'épaissira et s'emparera d'une masse raide, pâle et miroitée. Ceci est attendu et non pas un échec. C'est la même réaction que la saisie du chocolat : l'acide perturbe l'émulsion graisseuse et lie les solides. Ajouter la pâte d'ail râpée, le sel et le cumin (si utilisé) et les fouetter dans la masse saisie. Le mélange aura l'air brisé et inappétissant — résistez à l'envie d'ajouter autre chose encore.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, pâle et raide, de couleur nettement plus légère que le tahini cru, quelque part entre le mastic et la crème. Il devrait être presque friable et cohérent en même temps.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Seule une partie du jus de citron a été incorporée — le mélange est encore de couleur foncée et certains tahini n'ont pas encore été saisis.",
+            "action": "Ajouter le jus de citron restant et fouetter jusqu'à ce que la crise se produise. N'ajoutez pas d'eau jusqu'à ce que le tahini ait complètement saisi tout l'acide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Toute la masse est devenue nettement plus pâle (crème à beige pâle), devient très raide, et s'éloigne légèrement des côtés du bol. Ça ressemble presque à de l'argile épaisse.",
+            "action": "Commencer à ajouter de l'eau froide glacée une cuillère à soupe à la fois."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez ajouté de l'eau avant que le tahini ne soit complètement saisi avec le jus de citron — la texture est inégale, avec des morceaux de tahini saisis en suspension dans un liquide mince.",
+            "action": "Continuez à fouetter vigoureusement. Les grumeaux s'assèchent généralement avec un sifflement soutenu, même hors séquence."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une cuillère dans le tahini saisi — il devrait résister comme de l'argile raide avant de céder. La couleur pâle est le cadeau: un éclairement spectaculaire du brun à la crème indique que le citron a fait son travail."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Whisk",
+      "inputs": [
+        "tahini_seized",
+        "ing_04"
+      ],
+      "outputState": "tahini_sauce",
+      "instructions": "Ajouter l'eau glacée une cuillère à soupe à la fois, fouettant vigoureusement après chaque ajout. Avec chaque addition, la sauce semble d'abord se détendre davantage avant de se ressaisir — c'est normal. Continuer jusqu'à ce que la sauce soit lisse, soyeuse, et tomber du fouet dans un ruban lent et non cassé. La sauce doit être nettement plus pâle — une crème presque blanche — que le tahini cru. Goûtez et ajustez : plus de citron pour la luminosité, plus d'eau pour une consistance plus lâche, plus de sel pour tout faire avancer.",
+      "visualCue": {
+        "primaryTarget": "Une sauce douce et pâle de couleur crème qui verse dans une goutte lente et en ruban d'une cuillère levée. La couleur doit être considérablement plus claire que le tahini d'origine — pensez crème lourde, pas beurre d'arachide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est encore raide et pâteuse, s'accroche au fouet plutôt que de couler. La couleur est encore mi-brun. Plus d'eau est nécessaire.",
+            "action": "Continuer à ajouter de l'eau froide une cuillère à soupe à la fois, en fouettant soigneusement après chaque ajout. Ne pas ajouter toute l'eau à la fois ou la sauce deviendra aqueuse avant d'émulsionner correctement."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est soyeuse, crème pâle et coule dans un ruban continu de la cuillère. Il enrobe un doigt trempé uniformément. La saveur est noisette, brillante avec du citron, et ailky sans être dure.",
+            "action": "Utiliser immédiatement ou réfrigérer jusqu'à 3 jours — il s'épaissira dans le réfrigérateur; mince avec de l'eau froide et re-whisk avant de servir."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce est trop fine et arrosée, qui sort immédiatement d'une cuillère plutôt que de rubaner. La couleur pâle est devenue presque translucide.",
+            "action": "fouetter dans une cuillère à soupe de tahini supplémentaire pour ramener le corps. Ajouter une petite pression de citron supplémentaire pour rebriller."
+          }
+        ]
+      },
+      "feelCue": "La sauce finie devrait se sentir soyeuse sur la langue sans grain — si vous détectez une rugosité, fouetter encore 30 secondes. L'eau froide est critique : l'eau chaude produit une sauce plus mince et moins stable."
+    }
+  ]
 };

@@ -1,128 +1,277 @@
 export default {
-  repoId: "master_american_smoked_brisket_001",
-  parentRepoId: null,
-  slug: "smoked-brisket",
-  author: "ForkRecipe Kitchen",
-  title: "Texas Post-Oak Smoked Brisket",
-  description: "A full packer brisket — flat and point together — rubbed in nothing but coarse salt and cracked pepper, then surrendered to post-oak smoke for twelve hours until the bark is near-black and the collagen has completely dissolved into trembling, self-basting fat.",
-  cuisine: "American",
-  culture: "Texan",
-  category: "proteins",
-  tags: ["bbq", "beef", "smoke", "texas", "low-and-slow", "brisket", "pit"],
-  difficulty: 4,
-  activeTime: "1 hr 30 min",
-  totalTime: "14 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 2, umami: 5, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Full packer brisket (USDA Choice or Prime), 12–16 lb",  ratioValue: 1,    defaultUnit: "whole", substitutions: ["flat-only brisket (reduce cook time by 2–3 hr)"] },
-    { ingId: "ing_02", role: "Seasoning", name: "Coarse kosher salt",                                     ratioValue: 0.5,  defaultUnit: "cup",   substitutions: ["sea salt flakes"] },
-    { ingId: "ing_03", role: "Spice",     name: "Coarsely cracked black pepper (16-mesh)",                ratioValue: 0.5,  defaultUnit: "cup",   substitutions: ["tri-color peppercorn blend"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Post-oak wood splits",                                   ratioValue: 4,    defaultUnit: "pieces",substitutions: ["pecan wood", "hickory (use sparingly — sharper smoke)"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Beef tallow or neutral oil, for binder",                 ratioValue: 2,    defaultUnit: "tbsp",  substitutions: ["yellow mustard (flavor neutral once cooked)"] },
+  "repoId": "master_american_smoked_brisket_001",
+  "parentRepoId": null,
+  "slug": "smoked-brisket",
+  "author": "ForkRecipe Kitchen",
+  "title": "Texas Post-Oak smoked Brisket",
+  "description": "Une poitrine pleine d'emballage — plate et pointée ensemble — frottait en rien d'autre que du sel grossier et du poivre fissuré, puis se livrait à la fumée post-oak pendant douze heures jusqu'à ce que l'écorce soit presque noire et que le collagène se soit complètement dissous en graisse tremblante et auto-soufflante.",
+  "cuisine": "Américain",
+  "culture": "Texan",
+  "category": "proteins",
+  "tags": [
+    "bbq",
+    "boeuf",
+    "fumée",
+    "texas",
+    "faible et faible",
+    "poitrine",
+    "fosse"
   ],
-  processNodes: [
+  "difficulty": 4,
+  "activeTime": "1 hr 30 min",
+  "totalTime": "14 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 5,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Trim",
-      inputs: ["ing_01"],
-      outputState: "trimmed_brisket",
-      instructions: "Lay the brisket fat-side up on a cutting board. Using a sharp boning knife, trim the fat cap to a uniform 1/4-inch thickness — no thinner, or it will render away before it can protect the flat; no thicker, or it will insulate too aggressively and slow the cook. Round off the hard edges along the fat cap's perimeter so the rub adheres evenly and the bark forms without charring on corners. Flip the brisket and remove any silver skin and the thick seam of hard, waxy inter-muscular fat between the point and flat — this fat will never render and creates a greasy mouthfeel. Remove any large deposits of hard fat from the deckle (the knob at the thick end of the point). The finished brisket should look aerodynamic: smooth, uniform, with no abrupt ridges. Trim into a rounded boat shape so it fits the smoker with clearance on all sides.",
-      visualCue: {
-        primaryTarget: "Uniform ivory-white fat cap, 1/4-inch thick, with no abrupt ridges or peaks. Smooth beef muscle visible on the underside.",
-        spectrum: [
-          { state: "Underdone", description: "Thick uneven fat cap, visible hard white knobs of deckle fat, silver skin intact on the underside.", action: "Continue trimming — a poor trim means uneven bark and a greasy slice. Take your time; this is the most important prep step." },
-          { state: "Perfect",   description: "Even 1/4-inch fat cap, rounded edges, no hard fat deposits. The brisket lies flat and symmetrical.", action: "Proceed to rub application." },
-          { state: "Overdone",  description: "Fat cap trimmed below 1/8-inch or completely removed in spots. Bare muscle exposed.", action: "Proceed carefully — the flat will need to be monitored more closely during the cook and may require wrapping earlier to prevent drying." },
-        ],
-      },
-      feelCue: "Cold, firm, and slightly slick. The fat under your palm should feel like cold butter — yielding but structured, not wet or greasy. Any section that feels rubbery and resists the knife is hard fat that must come off.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Poches pleines (USDA Choice ou Prime), 12–16 lb",
+      "ratioValue": 1,
+      "defaultUnit": "whole",
+      "substitutions": [
+        "poitrine plate (réduire le temps de cuisson de 2 à 3 heures)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Season",
-      inputs: ["trimmed_brisket", "ing_02", "ing_03", "ing_05"],
-      outputState: "rubbed_brisket",
-      instructions: "Brush or rub a thin, even coat of beef tallow (or mustard) over the entire surface of the brisket — this acts as a binder to help the rub adhere, not as a flavor component. Mix the salt and pepper 1:1 by volume in a shaker or bowl. Hold your hand 12 inches above the brisket and apply the rub in an even rain, rotating the brisket to coat all surfaces: fat cap, underside, sides, and the thick point end. You want a bold, visible crust — heavier than you think is right. The flat (thinner end) gets a slightly lighter application than the thick point, which has more mass to season. Let the seasoned brisket rest uncovered on a wire rack in the refrigerator for at least 1 hour, or overnight up to 12 hours. The salt will draw out a thin film of moisture that then re-absorbs, seasoning the meat from within.",
-      visualCue: {
-        primaryTarget: "A uniform dark grey-black crust of salt and pepper covering every visible surface. No pink meat showing through bare patches.",
-        spectrum: [
-          { state: "Underdone", description: "Patchy application — bare pink spots visible, rub clumped in drifts.", action: "Re-apply rub to bare areas. Clumps can be spread by pressing lightly with the flat of your hand." },
-          { state: "Perfect",   description: "Even, confident crust. The fat cap shows a regular stippling of black pepper. No bare spots. The rub looks almost too heavy — it is not.", action: "Refrigerate uncovered on a wire rack for 1–12 hours." },
-          { state: "Overdone",  description: "Rub so thick it has formed a wet paste and is falling off in clumps.", action: "Gently pat off excess with a dry hand. The wet paste will not form good bark — it needs to dry on the surface." },
-        ],
-      },
-      feelCue: "After the rest, the surface of the brisket should feel slightly tacky and dry to the touch — like the outside of a well-seasoned cast iron pan. If it feels wet or sticky, pat it dry with paper towels before loading the smoker.",
+      "ingId": "ing_02",
+      "role": "Seasoning",
+      "name": "Sel casher grossier",
+      "ratioValue": 0.5,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "flocons de sel de mer"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Smoke",
-      inputs: ["rubbed_brisket", "ing_04"],
-      outputState: "smoked_brisket_unwrapped",
-      instructions: "Light your offset smoker or kettle and bring it to a steady 225–250°F (107–121°C) measured at grate level. Add post-oak splits to maintain a clean, thin blue smoke — not thick white or grey billowing smoke, which imparts a bitter, acrid flavor. Place the brisket fat-side up (or toward the heat source for offset pits) with the thicker point end toward the firebox. Maintain temperature, adding splits as needed every 45–60 minutes. Do not open the lid except to add wood. Cook untouched until the brisket develops a dark mahogany bark and the internal temperature of the flat plateaus (the 'stall') between 155–170°F (68–77°C). The stall can last 2–4 hours — do not panic and do not raise the temperature. Continue cooking through the stall until the bark is set: nearly black, firm, and does not smear when you press it with your thumb. This typically takes 6–9 hours depending on the brisket's size and your pit.",
-      visualCue: {
-        primaryTarget: "A deep mahogany-to-near-black bark covering all surfaces. The fat cap has rendered and pulled away from the edges slightly. The point looks darker than the flat.",
-        spectrum: [
-          { state: "Underdone", description: "Bark is reddish-brown and smears when pressed — the crust is not yet set. Internal temp of the flat still climbing or just entering the stall.", action: "Close the lid and continue cooking. Do not wrap yet — wrapping before the bark sets will steam it soft and it will never recover. Be patient through the stall." },
-          { state: "Perfect",   description: "Near-black bark that feels firm and dry under a thumb press. It crinkles slightly at the edges of the fat cap. Smoke ring visible in a cross-section. Flat internal temp: 165–170°F.", action: "Wrap in pink butcher paper (preferred) or foil and return to smoker." },
-          { state: "Overdone",  description: "Bark is charred black, flaking off in brittle chips. Acrid smell. Fat has rendered completely and the surface looks dry.", action: "Wrap immediately in butcher paper to stop further darkening. The bark may be slightly bitter but the interior should still be good." },
-        ],
-      },
-      feelCue: "Reach in and press the bark firmly with your thumb — a perfectly set bark does not smear or dent. It should feel like the crust of a good artisan bread: rigid and dry, with a faint crackling sound when pressed. The smoke smell at this stage should be sweet and woodsy, not acrid.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Poivre noir grossièrement craqué (16 mailles)",
+      "ratioValue": 0.5,
+      "defaultUnit": "cup",
+      "substitutions": [
+        "mélange de maïs poivré tricolore"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Braise",
-      inputs: ["smoked_brisket_unwrapped"],
-      outputState: "wrapped_brisket",
-      instructions: "Wrap the brisket tightly in two layers of uncoated pink butcher paper (the Texas crutch, paper version). Pull the paper snug — you want it to trap steam and juices while still breathing slightly, which preserves the bark better than foil. Return the wrapped brisket to the smoker at 250°F (121°C). Continue cooking until the internal temperature of the flat reaches 200–205°F (93–96°C). At this temperature, the collagen has fully converted to gelatin and the intramuscular fat in the point has fully rendered. The true test is not temperature but probe feel: insert an instant-read thermometer or a toothpick into the thickest part of the flat. It should glide in with zero resistance — like pushing into room-temperature butter.",
-      visualCue: {
-        primaryTarget: "The butcher paper is deeply stained with rendered beef fat and juice. The wrapped brisket feels soft and heavy when you pick it up — a slight wobble.",
-        spectrum: [
-          { state: "Underdone", description: "Thermometer meets resistance in the flat. Reads below 200°F. Paper is barely stained.", action: "Continue cooking. Check every 30 minutes by probing. Do not rush — underdone brisket is tough and chewy." },
-          { state: "Perfect",   description: "Probe glides in with no resistance anywhere in the flat. Internal temp 200–205°F. Paper is heavily stained. Brisket wobbles in the paper like a water balloon.", action: "Rest immediately — do not slice." },
-          { state: "Overdone",  description: "Paper is dry and darkening. Probe meets no resistance but the meat has started to pull away from the fat cap or crumble.", action: "Rest immediately and slice as soon as possible. Overcooked brisket dries quickly." },
-        ],
-      },
-      feelCue: "Pick the wrapped brisket up with both hands — it should feel limp and heavy, with a perceptible jiggle in the point end. If it feels stiff and board-like, it needs more time. The paper should be warm and slick with rendered fat, and the whole package smells of deep, caramelized beef.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Fendaisons de bois post-oak",
+      "ratioValue": 4,
+      "defaultUnit": "pieces",
+      "substitutions": [
+        "bois de pécan",
+        "hickory (utiliser parcimonieusement une fumée plus forte)"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Rest",
-      inputs: ["wrapped_brisket"],
-      outputState: "rested_brisket",
-      instructions: "Place the wrapped brisket in an empty dry cooler (no ice). Close the lid. Rest for a minimum of 1 hour; 2–3 hours is ideal, and up to 4 hours is safe. Do not skip or shorten the rest. During this time, the muscle fibers, which have contracted under the extreme heat, relax and reabsorb the expelled juices. A brisket sliced straight from the smoker bleeds out on the cutting board; a properly rested one holds its moisture in the slice. The internal temperature will plateau around 150°F (65°C) in the cooler — well within food-safe range.",
-      visualCue: {
-        primaryTarget: "The brisket, still wrapped, has settled and flattened slightly under its own weight in the cooler. The paper is damp but not leaking.",
-        spectrum: [
-          { state: "Underdone", description: "Brisket rested fewer than 45 minutes. Still very hot — above 170°F internal.", action: "Return to the cooler. The rest is not optional — patience here pays for itself in every slice." },
-          { state: "Perfect",   description: "Internal temperature has dropped to 150–160°F. The brisket feels soft and yielding when pressed through the paper. Rested 1.5–3 hours.", action: "Unwrap and slice immediately." },
-          { state: "Overdone",  description: "Rested more than 5 hours. Internal temp below 140°F.", action: "Re-wrap in foil and place in a 170°F oven to bring back to safe serving temperature before slicing." },
-        ],
-      },
-      feelCue: "Press the brisket through the paper — the whole mass should give like a firm pillow, uniform and yielding. No hard spots, no rigid zones. The smell rising from the paper seams is a warm fog of rendered tallow, smoke, and deeply caramelized pepper.",
-    },
-    {
-      nodeId: "step_6",
-      action: "Slice",
-      inputs: ["rested_brisket"],
-      outputState: "sliced_brisket",
-      instructions: "Unwrap the brisket and place it on a large cutting board with a juice groove. Identify the grain direction of the flat — long, parallel muscle fibers running lengthwise. Locate where the point and flat meet: this is the separation point. Separate the point from the flat by cutting through the fat seam between them. Slice the flat across the grain into 1/4-inch slices — the width of a pencil. Rotating the flat 90 degrees to cut across the grain is critical: slicing with the grain produces shoe-leather strips. The point has grain running in a different direction; rotate it and slice across its grain as well. Each slice of the flat should hold together but pull apart easily when tugged. Each slice of the point should be visibly lacier with rendered fat.",
-      visualCue: {
-        primaryTarget: "Flat slices: deep mahogany exterior with a visible smoke ring (1/8–1/4 inch of pink) under the bark, moist grey-brown interior. Point slices: darker, fatty, glistening.",
-        spectrum: [
-          { state: "Underdone", description: "Slices hold their shape rigidly, no flexibility. The interior looks grey and dry with no visible fat glisten. Pulling the slice apart requires force.", action: "The brisket was either undercooked or cut too soon. Return it to the oven wrapped at 275°F for 30-minute increments, probing until tender." },
-          { state: "Perfect",   description: "Each slice bends without cracking, holds together when lifted by one end, and shows a moist, glistening interior. The smoke ring is a bright pink halo. The slice separates with a gentle tug.", action: "Serve immediately, cutting board juices spooned over the slices." },
-          { state: "Overdone",  description: "Slices crumble or fall apart as you cut. The meat looks stringy and dry. Fat has rendered completely.", action: "Chop the crumbled pieces for chopped brisket sandwiches with extra sauce — overcooked brisket still makes excellent chopped beef." },
-        ],
-      },
-      feelCue: "A perfect slice of flat held at one end should droop under its own weight and gently sway — not snap, not flop limply. It is firm enough to pick up but soft enough to give between your fingers without resistance. The cutting board should be pooled with reddish-gold juice — that is liquid gold; spoon it back over everything.",
-    },
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Suif de boeuf ou huile neutre, pour liant",
+      "ratioValue": 2,
+      "defaultUnit": "tbsp",
+      "substitutions": [
+        "moutarde jaune (arôme neutre une fois cuit)"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trim",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "trimmed_brisket",
+      "instructions": "Placez la poitrine sur une planche à découper. À l'aide d'un couteau à désossage tranchant, tailler le bouchon de graisse à une épaisseur uniforme de 1/4 po — pas d'éclaircir, ou il se refermera avant qu'il puisse protéger le plat; pas plus épais, ou il isolera trop agressivement et ralentira la cuisson. Arrondissez les bords durs le long du périmètre du bouchon de graisse afin que le frotte adhère uniformément et l'écorce se forme sans carboniser sur les coins. Dépliez la poitrine et retirez toute peau d'argent et l'épaisseur de la graisse intermusculaire dure et cireuse entre le point et plat — cette graisse ne rendra jamais et créera une sensation de bouche grasse. Enlevez tout gros dépôt de graisse dure du pont (le bouton à l'extrémité épaisse du point). La poitrine finie doit avoir l'air aérodynamique : lisse, uniforme, sans crêtes abruptes. Trim en forme de bateau arrondie donc il convient au fumeur avec dégagement de tous les côtés.",
+      "visualCue": {
+        "primaryTarget": "Casquette uniforme blanc ivoire, 1/4 pouce d'épaisseur, sans crêtes ou pics abrupts. Muscle lisse de boeuf visible sur le dessous.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Couvercle gras épais et inégal, boutons blancs visibles et durs, peau argentée intacte sur le dessous.",
+            "action": "Continuer le parage — une mauvaise parure signifie une écorce inégale et une tranche grasse. Prenez votre temps; c'est l'étape de préparation la plus importante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même 1/4-pouce de graisse, bords arrondis, aucun dépôt de graisse dure. La poitrine est plate et symétrique.",
+            "action": "Passez à l'application de frotter."
+          },
+          {
+            "state": "Overdone",
+            "description": "Bouchon de graisse paré en dessous de 1/8 po ou complètement enlevé dans les taches. Muscle nu exposé.",
+            "action": "Procéder soigneusement — l'appartement devra être surveillé de plus près pendant la cuisson et peut nécessiter un emballage plus tôt pour éviter le séchage."
+          }
+        ]
+      },
+      "feelCue": "Froid, ferme et légèrement lissé. La graisse sous votre paume doit se sentir comme du beurre froid — rendement mais structuré, pas humide ou gras. Toute section qui se sent caoutchouteuse et résiste au couteau est la graisse dure qui doit sortir."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "trimmed_brisket",
+        "ing_02",
+        "ing_03",
+        "ing_05"
+      ],
+      "outputState": "rubbed_brisket",
+      "instructions": "Brossez ou frottez une fine et uniforme couche de suif de boeuf (ou de moutarde) sur toute la surface de la poitrine — ce qui agit comme un liant pour aider à la frotter, pas comme un composant de saveur. Mélanger le sel et le poivre 1:1 par volume dans un shaker ou un bol. Tenez votre main 12 pouces au-dessus de la poitrine et appliquez le frotter dans une pluie uniforme, en tournant la poitrine pour enrober toutes les surfaces : le capuchon gras, le dessous, les côtés et l'extrémité du point épais. Vous voulez une croûte audacieuse et visible, plus lourde que vous ne le pensez. Le plat (fin mince) obtient une application légèrement plus légère que le point épais, qui a plus de masse à la saison. Laisser la poitrine assaisonnée reposer à découvert sur un support de fil au réfrigérateur pendant au moins 1 heure, ou toute la nuit jusqu'à 12 heures. Le sel tirera un mince film d'humidité qui réabsorbera ensuite, assaisonnant la viande de l'intérieur.",
+      "visualCue": {
+        "primaryTarget": "Une croûte noire-gris foncée uniforme de sel et de poivre couvrant chaque surface visible. Pas de viande rose à travers des taches nues.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Application patchy – taches roses nues visibles, frottées dans des dérives.",
+            "action": "Ré-appliquer frotter aux zones nues. Les griffes peuvent être propagées en appuyant légèrement sur le plat de votre main."
+          },
+          {
+            "state": "Perfect",
+            "description": "Même la croûte confiante. Le capuchon gras montre un piment régulier de poivre noir. Pas de taches nues. La masse semble presque trop lourde — ce n'est pas le cas.",
+            "action": "Réfrigérer à découvert sur un porte-fils pendant 1 à 12 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ruber si épais qu'il a formé une pâte humide et tombe en touffes.",
+            "action": "Éliminez doucement l'excès avec une main sèche. La pâte humide ne formera pas une bonne écorce — elle doit sécher à la surface."
+          }
+        ]
+      },
+      "feelCue": "Après le reste, la surface de la poitrine doit être légèrement collante et sèche au toucher, comme l'extérieur d'une poêle en fonte bien assaisonnée. S'il est mouillé ou collant, faites sécher avec des serviettes en papier avant de charger le fumeur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fumée",
+      "inputs": [
+        "rubbed_brisket",
+        "ing_04"
+      ],
+      "outputState": "smoked_brisket_unwrapped",
+      "instructions": "Allumez votre fumeur offset ou bouilloire et portez-la à 225–250°F (107–121°C) au niveau de la grille. Ajouter des fractions post-oak pour maintenir une fumée bleue propre et mince — pas de fumée blanche épaisse ou grise qui donne une saveur amère et acride. Placez le côté gras de la poitrine vers le haut (ou vers la source de chaleur pour les fosses offset) avec l'extrémité du point plus épais vers le foyer. Maintenir la température en ajoutant des fractions toutes les 45 à 60 minutes. Ne pas ouvrir le couvercle sauf pour ajouter du bois. Cuire intacte jusqu'à ce que la poitrine développe une écorce d'acajou foncée et que la température interne des plateaux plats (la « butte ») se situe entre 155 et 170 °F (68 et 77 °C). Le décrochage peut durer de 2 à 4 heures — ne paniquez pas et n'augmentez pas la température. Continuer la cuisson à travers la stalle jusqu'à ce que l'écorce soit réglée: presque noir, ferme, et ne frotte pas quand vous appuyez avec votre pouce. Cela prend généralement de 6 à 9 heures selon la taille de la poitrine et votre fosse.",
+      "visualCue": {
+        "primaryTarget": "Une écorce acajou-à-près-noire profonde couvrant toutes les surfaces. Le bouchon de graisse a rendu et retiré légèrement des bords. Le point semble plus sombre que le plat.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'écorce est brun rougeâtre et frotte lorsqu'elle est pressée — la croûte n'est pas encore réglée. Température interne de l'appartement toujours en montée ou juste en entrant dans la stalle.",
+            "action": "Fermez le couvercle et continuez la cuisson. Ne l'enveloppez pas encore — l'envelopper avant que les ensembles d'écorce ne la vapeur et il ne se rétablira jamais. Soyez patient à travers le stand."
+          },
+          {
+            "state": "Perfect",
+            "description": "Aboiement presque noir qui se sent ferme et sec sous une pression de pouce. Il se plisse légèrement aux bords du bouchon. Anneau de fumée visible dans une section transversale. Température interne plate: 165– 170°F.",
+            "action": "Envelopper le papier de boucher rose (préféré) ou la feuille et retourner au fumeur."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'écorce est noire carbonisée, s'éteint dans des jetons cassants. Une odeur d'acride. La graisse a rendu complètement et la surface semble sèche.",
+            "action": "Enveloppez immédiatement le papier de boucherie pour arrêter d'assombrir davantage. L'écorce peut être légèrement amère, mais l'intérieur devrait encore être bon."
+          }
+        ]
+      },
+      "feelCue": "Atteindre et presser fermement l'écorce avec votre pouce — une écorce parfaitement réglée ne frotte ni ne dentele. Il doit se sentir comme la croûte d'un bon pain artisanal : rigide et sec, avec un léger bruit de craquelure lorsqu'il est pressé. L'odeur de fumée à ce stade devrait être douce et boisée, pas acride."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Brise",
+      "inputs": [
+        "smoked_brisket_unwrapped"
+      ],
+      "outputState": "wrapped_brisket",
+      "instructions": "Enveloppez fermement la poitrine en deux couches de papier boucher rose non couché (la béquille du Texas, version papier). Tirez le papier snoug — vous voulez qu'il piège la vapeur et les jus tout en respirant légèrement, ce qui préserve l'écorce mieux que la feuille. Retourner la poitrine enveloppée au fumeur à 250 °F (121 °C). Continuer la cuisson jusqu'à ce que la température interne du plat atteigne 200–205°F (93–96°C). À cette température, le collagène s'est entièrement converti en gélatine et la graisse intramusculaire dans le point a rendu pleinement. Le vrai test n'est pas la température mais la sensation de sonde : insérer un thermomètre à lecture instantanée ou un cure-dent dans la partie la plus épaisse de l'appartement. Il devrait glisser avec une résistance nulle, comme pousser dans le beurre à température ambiante.",
+      "visualCue": {
+        "primaryTarget": "Le papier de boucher est profondément teinté de graisse et de jus de boeuf. La poitrine enroulée est douce et lourde lorsque vous la ramassez — un léger frottement.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Thermomètre répond à la résistance dans le plat. Lis en dessous de 200°F. Le papier est à peine teinté.",
+            "action": "Continuez à cuisiner. Vérifiez toutes les 30 minutes. Ne vous précipitez pas: la poitrine sous - morte est dure et mâcheuse."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sonde glisse dans le plat sans résistance nulle part. Température interne 200–205°F. Le papier est fortement teinté. La bride se balance dans le papier comme un ballon d'eau.",
+            "action": "Reposez-vous immédiatement — ne pas couper."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le papier est sec et sombre. Sonde ne rencontre aucune résistance mais la viande a commencé à s'éloigner du bouchon de graisse ou s'est effondrée.",
+            "action": "Reposez-vous immédiatement et tranchez le plus tôt possible. La poitrine trop cuite sèche rapidement."
+          }
+        ]
+      },
+      "feelCue": "Prenez la poitrine enroulée avec les deux mains — elle devrait se sentir boiteuse et lourde, avec un gabarit perceptible à l'extrémité du point. Si elle se sent raide et comme une planche, elle a besoin de plus de temps. Le papier doit être chaud et léché de graisse fondue, et l'ensemble de l'emballage sent le boeuf caramélisé profond."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Repos",
+      "inputs": [
+        "wrapped_brisket"
+      ],
+      "outputState": "rested_brisket",
+      "instructions": "Placer la poitrine enveloppée dans un refroidisseur sec vide (pas de glace). Ferme le couvercle. Reposez-vous pendant au moins 1 heure; 2 à 3 heures sont idéales et jusqu'à 4 heures sont sûres. Ne sautez pas ou raccourcissez pas le reste. Pendant ce temps, les fibres musculaires, qui ont contracté sous la chaleur extrême, se détendre et réabsorber les jus expulsés. Une poitrine tranchée directement du fumeur saigne sur la planche à découper; une poitrine bien reposée tient son humidité dans la tranche. La température interne s'échelonnera autour de 150 °F (65 °C) dans le refroidisseur, bien à l'intérieur de la plage de sécurité alimentaire.",
+      "visualCue": {
+        "primaryTarget": "La poitrine, encore enveloppée, s'est installée et s'est légèrement aplatie sous son propre poids dans la glacière. Le papier est humide mais ne fuit pas.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Brisket reposé moins de 45 minutes. Toujours très chaud — au-dessus de 170°F interne.",
+            "action": "Retournez à la glacière. Le reste n'est pas facultatif — la patience ici paie pour elle-même dans chaque tranche."
+          },
+          {
+            "state": "Perfect",
+            "description": "La température interne est tombée à 150–160°F. La poitrine est douce et s'incline lorsqu'elle est pressée dans le papier. Reposé de 1,5 à 3 heures.",
+            "action": "Défaire et trancher immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Reposé plus de 5 heures. Température intérieure inférieure à 140°F.",
+            "action": "Reconditionner le papier d'aluminium et le placer dans un four à 170 °F pour ramener à une température de service sûre avant de trancher."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur la poitrine à travers le papier — toute la masse devrait donner comme un oreiller ferme, uniforme et donnant. Pas de points durs, pas de zones rigides. L'odeur montant des coutures de papier est un brouillard chaud de suif rendu, de fumée et de poivre profondément caramélisé."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Tranche",
+      "inputs": [
+        "rested_brisket"
+      ],
+      "outputState": "sliced_brisket",
+      "instructions": "Déballez la poitrine et placez-la sur une grande planche à découper avec une rainure de jus. Identifier la direction du grain de la plate - longues fibres musculaires parallèles courant dans le sens de la longueur. Localiser où se rencontrent le point et le plat : c'est le point de séparation. Séparer le point de l'appartement en coupant à travers la couche grasse entre eux. Couper le plat sur le grain en tranches de 1/4 po — la largeur d'un crayon. La rotation de 90 degrés à plat pour couper le grain est essentielle : le tranchage avec le grain produit des bandes de cuir. Le point a le grain courant dans une direction différente, le faire tourner et couper sur son grain aussi bien. Chaque tranche de plat doit tenir ensemble, mais s'en détacher facilement lorsqu'elle est ajustée. Chaque tranche du point doit être visiblement plus molle avec la graisse rendue.",
+      "visualCue": {
+        "primaryTarget": "Tranches plates : extérieur acajou profond avec un anneau de fumée visible (1/8-1/4 pouce de rose) sous l'écorce, intérieur gris-brun humide. Tranches pointues : plus foncées, grasses, scintillantes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tranches tiennent leur forme rigidement, sans flexibilité. L'intérieur a l'air gris et sec sans reflet visible de graisse. Il faut de la force pour séparer la tranche.",
+            "action": "La poitrine était soit mal cuite, soit coupée trop tôt. Retourner au four enroulé à 275°F pour des incréments de 30minutes, prospecter jusqu'à tendreté."
+          },
+          {
+            "state": "Perfect",
+            "description": "Chaque tranche fléchit sans craquelure, tient ensemble lorsqu'elle est levée d'une extrémité, et montre un intérieur humide et scintillant. L'anneau de fumée est un halo rose vif. La tranche se sépare par un remorqueur doux.",
+            "action": "Servir immédiatement, couper les jus de planches en cuillère sur les tranches."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les tranches s'effondrent ou s'effondrent à mesure que vous coupez. La viande a l'air rugueuse et sèche. La graisse a rendu complètement.",
+            "action": "Coupez les morceaux émiettés pour les sandwichs hachés à la poitrine avec de la sauce supplémentaire – la poitrine trop cuite fait encore un excellent bœuf haché."
+          }
+        ]
+      },
+      "feelCue": "Une tranche parfaite de plat maintenue à une extrémité devrait s'enfoncer sous son propre poids et se balancer doucement — pas se casser, pas s'enfoncer doucement. Il est assez ferme pour prendre mais assez doux pour donner entre vos doigts sans résistance. La planche à découper devrait être mise en commun avec du jus d'or rougeâtre, c'est - à - dire de l'or liquide; cuillerez - la sur tout."
+    }
+  ]
 };

@@ -1,74 +1,167 @@
 export default {
-  repoId: "master_turkish_turkish-coffee_001",
-  parentRepoId: null,
-  slug: "turkish-coffee",
-  author: "ForkRecipe Kitchen",
-  title: "Turkish Coffee",
-  description: "Finely pulverized coffee and sugar simmered together in a small copper cezve until a thick, foamy head rises — served in a tiny cup with the grounds settling below into a rich, silty sediment.",
-  cuisine: "Turkish",
-  culture: "Ottoman",
-  category: "beverages",
-  tags: ["coffee", "turkish", "spiced", "strong", "traditional"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "15 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 0, sour: 2, bitter: 7, umami: 1, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Turkish-ground coffee (extra-fine grind)", ratioValue: 2,   defaultUnit: "parts", substitutions: ["espresso-ground coffee — flavor will differ"] },
-    { ingId: "ing_02", role: "Liquid",     name: "Cold water",                               ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Sweetener",  name: "White sugar",                              ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Spice",      name: "Ground cardamom",                          ratioValue: 0.1, defaultUnit: "parts", substitutions: [] },
+  "repoId": "master_turkish_turkish-coffee_001",
+  "parentRepoId": null,
+  "slug": "turkish-coffee",
+  "author": "ForkRecipe Kitchen",
+  "title": "Café turc",
+  "description": "Le café et le sucre finement pulvérisés mijotés ensemble dans un petit cezve de cuivre jusqu'à ce qu'une tête épaisse et mousseuse s'élève — servis dans une petite tasse dont les terrains se déposent en dessous dans un riche sédiment limoneux.",
+  "cuisine": "Turquie",
+  "culture": "Ottoman",
+  "category": "beverages",
+  "tags": [
+    "café",
+    "turc",
+    "épicé",
+    "forte",
+    "traditionnel"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "15 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 0,
+    "sour": 2,
+    "bitter": 7,
+    "umami": 1,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Dissolve",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04"],
-      outputState: "cold_coffee_mixture",
-      instructions: "Measure cold water into a cezve (or small saucepan with a pour spout) using the coffee cup as your measure — about 60ml per cup. Add the coffee, sugar, and cardamom to the cold water. Do not stir yet. This cold-start method is essential: adding coffee to hot water causes it to clump. Use a small spoon to stir gently two or three times until the coffee is wetted and beginning to hydrate. The mixture will look like muddy water.",
-      visualCue: {
-        primaryTarget: "A smooth dark-brown liquid with no floating dry pockets of coffee, sugar dissolved, small bubbles rising from the cardamom.",
-        spectrum: [
-          { state: "Underdone", description: "Dry clumps of coffee are still floating on the surface.", action: "Stir once more very gently to submerge them." },
-          { state: "Perfect",   description: "A uniform dark muddy liquid; all coffee is wetted and the sugar has dissolved. Very slight swirl of grounds.", action: "Place over the lowest possible heat." },
-          { state: "Overdone",  description: "You stirred too vigorously and aerated the mixture — small froth already forming before heating.", action: "Proceed, but watch the heat carefully. Pre-aerated coffee foams unpredictably." },
-        ],
-      },
-      feelCue: "The cold mixture should smell faintly of roasted coffee and cardamom — the cold water barely carries the aroma until heat releases it fully.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Café moulu turc (broyage extra-fin)",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "café espresso-fond — la saveur sera différente"
+      ]
     },
     {
-      nodeId: "step_2", action: "Simmer",
-      inputs: ["cold_coffee_mixture"],
-      outputState: "foamed_coffee",
-      instructions: "Place the cezve over the lowest possible flame. Do not walk away — Turkish coffee requires constant attention. Watch for a ring of tiny bubbles to form at the edge, then a slow creep of foam (kaymak) rising from the center. When the foam has risen to about two-thirds of the way up the cezve and is trembling on the edge of boiling, remove from heat immediately. Spoon the foam into each cup first to reserve it.",
-      visualCue: {
-        primaryTarget: "A thick, tan-colored foam rising as a dome in the center of the cezve, with the coffee below still and dark.",
-        spectrum: [
-          { state: "Underdone", description: "No foam has formed yet; the liquid is just beginning to steam.", action: "Continue on low heat. Rushing with higher heat produces no foam." },
-          { state: "Perfect",   description: "A substantial dome of tan, creamy foam rising toward the rim. The coffee below is still dark and not yet bubbling.", action: "Remove from heat and spoon foam into cups, then pour the coffee slowly to preserve it." },
-          { state: "Overdone",  description: "The coffee boiled — the foam has collapsed and the coffee is rolling. No foam remains.", action: "The coffee is still drinkable but the kaymak is lost. Remove from heat and pour. Brew a second time to correct: Turkish coffee is never boiled." },
-        ],
-      },
-      feelCue: "You will hear a soft, rhythmic crackling as the grounds toast against the metal and the liquid begins to move — the moment the crackling becomes a bubble, you are seconds from the foam.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Eau froide",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Rest",
-      inputs: ["foamed_coffee"],
-      outputState: "finished_turkish_coffee",
-      instructions: "Pour the coffee slowly into the cup, over the reserved foam, in a single slow stream from a low height. The pour is gentle so the foam reforms on top. Let the coffee rest for 30 seconds before drinking — the grounds need time to settle to the bottom. Serve with a glass of cold water and a small sweet (a piece of lokum or sugar cube). Do not stir after pouring.",
-      visualCue: {
-        primaryTarget: "A small cup of very dark coffee crowned with a pale tan foam cap — no grounds visible on the surface, grounds settled at the bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Grounds are still visibly swirling in the cup, not yet settled.", action: "Wait 30 more seconds. Drinking before settling means a mouthful of grounds." },
-          { state: "Perfect",   description: "The surface is calm, with a velvety foam cap and dark coffee below. The aroma is intense and roasted.", action: "Drink in small sips, stopping two-thirds through before reaching the grounds." },
-          { state: "Overdone",  description: "Waited too long — coffee has gone cold and the foam has reabsorbed into the liquid, leaving a plain black surface.", action: "Turkish coffee must be drunk fresh. If it is cold, reheat very gently in the cezve, but do not re-foam." },
-        ],
-      },
-      feelCue: "The cup should feel almost uncomfortably hot to hold — Turkish coffee is meant to be drunk in slow, careful sips while still very hot, releasing each layer of bitterness and sweetness as it cools.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_04",
+      "role": "Spice",
+      "name": "Cardamome au sol",
+      "ratioValue": 0.1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Dissoudre",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "cold_coffee_mixture",
+      "instructions": "Mesurez l'eau froide dans un cezve (ou une petite casserole avec un bec verseur) en utilisant la tasse à café comme mesure — environ 60ml par tasse. Ajoutez le café, le sucre et la cardamome à l'eau froide. Ne remuez pas encore. Cette méthode de démarrage à froid est essentielle : l'ajout de café à l'eau chaude l'entraîne à s'écraser. Utilisez une petite cuillère pour remuer doucement deux ou trois fois jusqu'à ce que le café soit mouillé et commence à hydrater. Le mélange ressemblera à de l'eau boueuse.",
+      "visualCue": {
+        "primaryTarget": "Un liquide lisse brun foncé sans poches sèches flottantes de café, sucre dissous, petites bulles montant de la cardamome.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Des taillis de café secs flottent encore à la surface.",
+            "action": "Mélanger une fois de plus très doucement pour les submerger."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un liquide boueux foncé uniforme ; tout le café est humidifié et le sucre s'est dissous. Très léger tourbillon de terrain.",
+            "action": "Placez sur la chaleur la plus basse possible."
+          },
+          {
+            "state": "Overdone",
+            "description": "Vous avez agité trop vigoureusement et aéré le mélange — une petite mousse se formant déjà avant le chauffage.",
+            "action": "Continuez, mais regardez attentivement la chaleur. Les mousses de café préaéré sont imprévisibles."
+          }
+        ]
+      },
+      "feelCue": "Le mélange froid doit sentir faiblement le café rôti et la cardamome — l'eau froide porte à peine l'arôme jusqu'à ce que la chaleur le libère complètement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "cold_coffee_mixture"
+      ],
+      "outputState": "foamed_coffee",
+      "instructions": "Placez le cezve sur la flamme la plus basse possible. Ne partez pas — le café turc exige une attention constante. Surveillez un anneau de bulles minuscules pour se former au bord, puis un lent fluage de mousse (kaymak) montant du centre. Lorsque la mousse est montée à environ deux tiers du chemin vers le haut du cezve et tremble sur le bord de l'ébullition, retirer immédiatement de la chaleur. Déposer la mousse dans chaque tasse d'abord pour la réserver.",
+      "visualCue": {
+        "primaryTarget": "Une épaisse mousse de couleur bronzée s'élève comme un dôme au centre du cezve, avec le café en dessous calme et sombre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Aucune mousse ne s'est encore formée; le liquide commence à peine à vapeur.",
+            "action": "Continuer à feu doux. La chaleur élevée ne produit pas de mousse."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un dôme substantiel de mousse bronzante et crémeuse qui monte vers le bord. Le café ci-dessous est encore sombre et pas encore bouillonnant.",
+            "action": "Retirer du feu et de la mousse de cuillère en tasses, puis verser lentement le café pour le préserver."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le café bouilli — la mousse s'est effondrée et le café roule. Pas de mousse.",
+            "action": "Le café est encore buvable mais le kaymak est perdu. Retirer du feu et verser. Briser une deuxième fois pour corriger : le café turc n'est jamais bouilli."
+          }
+        ]
+      },
+      "feelCue": "Vous entendrez un crépitement doux et rythmique alors que le sol grillé contre le métal et le liquide commence à bouger — au moment où le crépitement devient une bulle, vous êtes à quelques secondes de la mousse."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Repos",
+      "inputs": [
+        "foamed_coffee"
+      ],
+      "outputState": "finished_turkish_coffee",
+      "instructions": "Verser lentement le café dans la tasse, sur la mousse réservée, en un seul flux lent à partir d'une hauteur basse. Le pourboire est doux donc les réformes de mousse sur le dessus. Laissez reposer le café pendant 30 secondes avant de boire — le terrain a besoin de temps pour s'installer au fond. Servir avec un verre d'eau froide et un petit sucre (un morceau de lokum ou de cube de sucre). Ne pas remuer après avoir versé.",
+      "visualCue": {
+        "primaryTarget": "Une petite tasse de café très foncé couronné d'un capuchon en mousse de bronzage pâle — aucun terrain visible à la surface, le terrain se trouvait au fond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les sols sont encore visiblement tourbillonnés dans la tasse, pas encore fixés.",
+            "action": "Attendez 30 secondes. Boire avant de s'installer signifie une bouche de terrain."
+          },
+          {
+            "state": "Perfect",
+            "description": "La surface est calme, avec un capuchon en mousse veloutée et un café foncé en dessous. L'arôme est intense et rôti.",
+            "action": "Buvez en petites gorgées, en arrêtant les deux tiers avant d'atteindre le terrain."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le café est devenu froid et la mousse s'est réabsorbée dans le liquide, laissant une surface noire.",
+            "action": "Le café turc doit être bu frais. S'il fait froid, réchauffer très doucement dans le cezve, mais ne pas se remousser."
+          }
+        ]
+      },
+      "feelCue": "La tasse devrait se sentir presque insupportablement chaude à tenir — le café turc est destiné à être bu dans des gorgées lentes et soigneuses tout en restant très chaud, libérant chaque couche d'amertume et de douceur pendant qu'elle refroidit."
+    }
+  ]
 };

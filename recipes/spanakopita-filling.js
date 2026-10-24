@@ -1,99 +1,243 @@
 export default {
-  repoId: "master_greek_spanakopita-filling_001",
-  parentRepoId: null,
-  slug: "spanakopita-filling",
-  author: "ForkRecipe Kitchen",
-  title: "Spanakopita Filling",
-  description: "The savory filling at the heart of every great spanakopita — wilted spinach wrung bone-dry, crumbled feta, egg, scallion, and dill stirred together into a rich, briny mixture that stays moist inside phyllo pastry.",
-  cuisine: "Greek",
-  culture: "Greek",
-  category: "proteins",
-  tags: ["greek", "spinach", "feta", "phyllo", "filling", "vegetarian"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "35 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 1, salty: 4, sour: 1, bitter: 2, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Fresh spinach, stems removed (or baby spinach)",            ratioValue: 100, defaultUnit: "%", substitutions: ["silverbeet (Swiss chard)", "frozen spinach (thawed and squeezed)"] },
-    { ingId: "ing_02", role: "Dairy",      name: "Feta cheese, crumbled (not pre-crumbled — buy a block)",   ratioValue: 50,  defaultUnit: "%", substitutions: ["ricotta salata (less salty)", "goat cheese"] },
-    { ingId: "ing_03", role: "Binder",     name: "Large eggs",                                               ratioValue: 10,  defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",     name: "Scallions (spring onions), thinly sliced",                 ratioValue: 15,  defaultUnit: "%", substitutions: ["shallots", "chives"] },
-    { ingId: "ing_05", role: "Herb",       name: "Fresh dill, finely chopped",                               ratioValue: 8,   defaultUnit: "%", substitutions: ["fennel fronds"] },
-    { ingId: "ing_06", role: "Fat",        name: "Extra-virgin olive oil",                                   ratioValue: 8,   defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_07", role: "Seasoning",  name: "Freshly ground black pepper",                              ratioValue: 0.5, defaultUnit: "%", substitutions: [] },
-    { ingId: "ing_08", role: "Aromatic",   name: "Freshly grated nutmeg",                                    ratioValue: 0.2, defaultUnit: "%", substitutions: [] },
+  "repoId": "master_greek_spanakopita-filling_001",
+  "parentRepoId": null,
+  "slug": "spanakopita-filling",
+  "author": "ForkRecipe Kitchen",
+  "title": "Spanakopita Remplissage",
+  "description": "Le remplissage salé au cœur de chaque grande spanakopita — épinards flétris, désossé, émietté, feta, oeuf, pétoncle, et l'aneth se mirent ensemble dans un mélange riche et briny qui reste humide à l'intérieur de la pâtisserie phyllo.",
+  "cuisine": "Grec",
+  "culture": "Grec",
+  "category": "proteins",
+  "tags": [
+    "grec",
+    "épinards",
+    "Féta",
+    "phyllo",
+    "remplissage",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "35 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 1,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 2,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Wilt and drain spinach",
-      inputs: ["ing_01"],
-      outputState: "wrung_dry_spinach",
-      instructions: "Heat a large, dry skillet over high heat until it is very hot. Add the fresh spinach in large handfuls — it will collapse dramatically, reducing to a fraction of its original volume in about 1–2 minutes per batch. Stir and press the spinach to encourage even wilting. Do not add water or oil at this stage; you want the leaves to steam in their own moisture and give up as much liquid as possible. Once all the spinach has wilted, transfer it to a colander and let it cool enough to handle. Then take handfuls and squeeze them with maximum force over the sink — wring them like a wet cloth. The goal is to extract every possible drop of water. The dry spinach should feel almost gritty in your hand, not damp. Then chop the wrung spinach roughly into 1 cm pieces.",
-      visualCue: {
-        primaryTarget: "A dark green, rough-textured mass of spinach that barely releases any liquid when pressed — the wringing should have removed so much moisture that the pile looks dark and compact, not shiny or wet.",
-        spectrum: [
-          { state: "Underdone", description: "Spinach is wilted but still releasing water when squeezed — the pile feels wet and heavy, and liquid pools under it on the board.", action: "Wring again in smaller handfuls with more force. This step cannot be rushed or compromised — excess moisture is the single greatest enemy of crispy spanakopita." },
-          { state: "Perfect",   description: "Dark, cohesive, and barely moist — the chopped pieces separate from each other without clumping, and pressing the pile firmly yields only a few drops of liquid.", action: "Proceed with combining. Dry spinach means crispy phyllo." },
-          { state: "Overdone",  description: "Spinach has been squeezed so aggressively it has broken down to a paste and most of the fresh vegetable texture is gone.", action: "This is acceptable — the texture will be more homogeneous but the flavor is the same. Proceed." },
-        ],
-      },
-      feelCue: "Take a large handful and squeeze with both hands as hard as you can. If more than a tablespoon of green liquid runs out, squeeze again. The finished wad in your hand should feel like dry clay — dense, compact, barely moist. This is the most important step in the whole recipe.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "épinards frais, tiges enlevées (ou épinards bébés)",
+      "ratioValue": 100,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Betteraves argentées",
+        "épinards congelés (dégelés et pressés)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Sweat scallions",
-      inputs: ["ing_04", "ing_06"],
-      outputState: "softened_scallions",
-      instructions: "In a small skillet, warm the olive oil over medium heat. Add the sliced scallions and cook for 3–4 minutes, stirring occasionally, until they are wilted and sweet-smelling but not browned. The goal is to take the raw edge off the scallion flavor — raw scallion in a baked filling can be sharp and pungent, whereas briefly cooked scallion becomes sweet and integrated. Remove from heat and allow to cool slightly. The scallions will continue to soften in the residual heat. They should look translucent and smell mild and sweet.",
-      visualCue: {
-        primaryTarget: "Translucent, glistening scallion rings with no browning, smelling sweet and mild rather than sharp and raw — a complete transformation from their raw state.",
-        spectrum: [
-          { state: "Underdone", description: "Scallions still have a sharp, raw bite and are only slightly softened — they will taste pungently of raw onion in the finished filling.", action: "Cook for another 2 minutes. The goal is translucency and sweetness, not caramelization." },
-          { state: "Perfect",   description: "Translucent, soft, and mildly sweet. They collapse easily when pressed against the pan. The oil they cooked in smells of sweet allium.", action: "Remove from heat and cool before adding to the filling." },
-          { state: "Overdone",  description: "Scallions have browned and taken on a caramelized sweetness that may overpower the delicate filling.", action: "A little browning is not catastrophic — proceed, knowing the filling will be slightly sweeter than intended." },
-        ],
-      },
-      feelCue: "Press a scallion ring with the tip of a spatula — it should yield instantly and completely without any firm resistance. The oil in the pan should feel slippery from the released sugars — slightly thicker than when you started.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Fromage feta, émietté (non pré-brûlé — acheter un bloc)",
+      "ratioValue": 50,
+      "defaultUnit": "%",
+      "substitutions": [
+        "ricotta salata (moins salée)",
+        "Fromage de chèvre"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Combine filling",
-      inputs: ["wrung_dry_spinach", "ing_02", "ing_03", "ing_05", "ing_07", "ing_08", "softened_scallions"],
-      outputState: "spanakopita_filling",
-      instructions: "In a large bowl, combine the wrung, chopped spinach, cooled sweated scallions, crumbled feta, beaten eggs, chopped dill, black pepper, and freshly grated nutmeg. Mix thoroughly with your hands or a large spoon, breaking the feta into crumbles no larger than a small pea — some very fine feta dust is fine and helps bind the filling. Do not add salt before tasting: the feta carries significant salt and the filling may need none. Taste critically and add salt only if truly needed. The mixture should smell of fresh dill, creamy feta, and cooked spinach — fresh and grassy with a briny background. The texture should be cohesive enough to hold its shape briefly when scooped but not stiff.",
-      visualCue: {
-        primaryTarget: "A dark green filling generously studded with white feta crumbles and flecked with dill green — the mixture should look vivid and fresh, not grey or watery, and should hold a loose scoop shape.",
-        spectrum: [
-          { state: "Underdone", description: "Filling is not thoroughly combined — there are unmixed pockets of spinach, chunks of feta, and the egg hasn't coated everything evenly.", action: "Mix more thoroughly, particularly breaking up any large feta chunks and making sure the egg coats all the spinach." },
-          { state: "Perfect",   description: "Evenly combined, with feta distributed throughout and every piece of spinach coated in egg. The filling holds a scooped shape and smells fresh and herby.", action: "Use immediately as a filling or refrigerate for up to 24 hours." },
-          { state: "Overdone",  description: "Over-mixed to the point where the spinach has broken down and the feta has dissolved into the spinach — the filling is uniformly grey-green rather than spotted with white.", action: "Proceed. The texture has changed but the flavor is intact." },
-        ],
-      },
-      feelCue: "Scoop a spoonful and hold it up — it should mound slightly, then slowly slump, not pour. If it pours, the spinach was too wet. Press the back of the spoon into the mixture in the bowl; it should leave a clean impression that holds for a moment before the filling slowly returns to level.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Gros œufs",
+      "ratioValue": 10,
+      "defaultUnit": "%",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Rest and adjust",
-      inputs: ["spanakopita_filling"],
-      outputState: "finished_spanakopita_filling",
-      instructions: "Leave the combined filling to rest for 10 minutes at room temperature. During this time, the egg will begin to bind more firmly with the spinach and feta, and the dill and scallion flavors will bloom and integrate. After resting, taste once more — flavors will have mellowed and merged. Make any final adjustments: more dill if the herb flavor is too subtle, a few more grinds of pepper if it tastes flat, a drop of lemon juice if it needs brightness. The filling is now ready to be used with buttered phyllo sheets for triangles, a pan pie, or rolled cigars. It holds refrigerated for 24 hours with minimal quality loss; the flavors actually deepen slightly overnight.",
-      visualCue: {
-        primaryTarget: "After resting, the filling looks denser and more cohesive, with the egg visibly having knit the components together — it holds the shape of a spoon indentation longer than the freshly mixed version.",
-        spectrum: [
-          { state: "Underdone", description: "Still freshly mixed and watery at the bottom of the bowl — the components haven't had time to bind and the filling will make phyllo soggy.", action: "Rest for the full 10 minutes. If the bottom of the bowl is pooled with liquid, squeeze the whole filling through a clean towel once more." },
-          { state: "Perfect",   description: "Cohesive, vivid, and fragrant. A scoopful holds its mound shape. No liquid pooling at the base of the bowl. Tastes bright, briny, herby, and deeply satisfying.", action: "Proceed immediately to layering with phyllo, or refrigerate covered for up to 24 hours." },
-          { state: "Overdone",  description: "The filling has been refrigerated for 2+ days and the feta has made the spinach very wet and the dill has turned drab and pungent.", action: "Squeeze the filling again through a clean towel to remove excess moisture before using." },
-        ],
-      },
-      feelCue: "After resting, drag two fingers through the filling and press them together — there should be enough body from the egg that the filling briefly strings between your fingers before breaking. That thin, soft thread is the egg binder at work, and it tells you the filling will stay put inside phyllo rather than oozing out during baking.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Échalons (oignons de printemps), tranchés finement",
+      "ratioValue": 15,
+      "defaultUnit": "%",
+      "substitutions": [
+        "Échalotes",
+        "ruches"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Diluant frais, haché finement",
+      "ratioValue": 8,
+      "defaultUnit": "%",
+      "substitutions": [
+        "frondes de fenouil"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 8,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 0.5,
+      "defaultUnit": "%",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Noix de muscade fraîchement râpée",
+      "ratioValue": 0.2,
+      "defaultUnit": "%",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Wilt et égoutter les épinards",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "wrung_dry_spinach",
+      "instructions": "Chauffer une grande poêle sèche à feu vif jusqu'à ce qu'elle soit très chaude. Ajouter les épinards frais dans de grandes poignées — il s'effondrera considérablement, réduisant à une fraction de son volume original en environ 1-2 minutes par lot. Mélanger et presser les épinards pour encourager le flétrissement. Ne pas ajouter d'eau ou d'huile à ce stade; vous voulez que les feuilles s'évaporent dans leur propre humidité et abandonnent le plus de liquide possible. Une fois que tous les épinards se sont flétris, transférez-le dans une calandre et laissez-la refroidir pour la manipuler. Puis prenez des poignées et pressez - les avec une force maximale sur l'évier, en les enfilant comme un chiffon mouillé. Le but est d'extraire chaque goutte d'eau possible. Les épinards secs devraient se sentir presque gritty dans votre main, pas humide. Puis couper les épinards en morceaux d'environ 1 cm.",
+      "visualCue": {
+        "primaryTarget": "Une masse d'épinards à texture rugueuse, vert foncé, qui libère à peine tout liquide lorsqu'elle est pressée — les harnais auraient dû enlever tellement d'humidité que la pile semble sombre et compacte, non brillante ni humide.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les épinards sont flétris, mais ils libèrent toujours de l'eau lorsqu'ils sont pressés — la pile est mouillée et lourde, et le liquide se trouve sous la planche.",
+            "action": "Encore une fois en petites poignées avec plus de force. Cette étape ne peut pas être précipitée ou compromise — l'excès d'humidité est le plus grand ennemi de la spakopita croustillante."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ténébreux, cohésifs et à peine humides — les morceaux hachés se séparent les uns des autres sans accroupir, et presser fermement la pile ne donne que quelques gouttes de liquide.",
+            "action": "Procéder à la combinaison. Les épinards secs signifient du phyllo croustillant."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les épinards ont été pressés de manière si agressive qu'ils se sont décomposés en pâte et la plupart de la texture de légumes frais a disparu.",
+            "action": "Ceci est acceptable — la texture sera plus homogène mais la saveur est la même. Continuez."
+          }
+        ]
+      },
+      "feelCue": "Prenez une grande poignée et pressez les deux mains aussi fort que possible. Si plus d'une cuillère à soupe de liquide vert s'écoule, pressez à nouveau. Le wad fini dans votre main devrait être comme de l'argile sèche — dense, compact, à peine humide. C'est l'étape la plus importante de toute la recette."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Choux verts",
+      "inputs": [
+        "ing_04",
+        "ing_06"
+      ],
+      "outputState": "softened_scallions",
+      "instructions": "Dans une petite poêle, chauffer l'huile d'olive à feu moyen. Ajouter les pétoncles tranchés et cuire 3 à 4 minutes, en remuant occasionnellement, jusqu'à ce qu'ils soient flétris et sucrés, mais non dorés. Le but est de retirer le bord brut de la saveur de pétoncle — le pétoncle brut dans un remplissage cuit au four peut être aiguisé et piquant, tandis que le pétoncle cuit brièvement devient sucré et intégré. Retirer du feu et laisser refroidir légèrement. Les pétoncles continueront de s'assouplir dans la chaleur résiduelle. Ils devraient avoir l'air translucide et sentir doux et doux.",
+      "visualCue": {
+        "primaryTarget": "Des anneaux de pétoncle translucides et brillants, sans brunissement, sentant doux et doux plutôt que vifs et crus — une transformation complète de leur état brut.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pétoncles ont encore une morsure brute et ne sont que légèrement ramollis — ils goûteront piquantment à l'oignon brut dans le remplissage fini.",
+            "action": "Cuire encore 2 minutes. Le but est la translucidité et la douceur, pas la caramélisation."
+          },
+          {
+            "state": "Perfect",
+            "description": "Translucide, doux et légèrement sucré. Ils s'effondrent facilement lorsqu'ils sont pressés contre la casserole. L'huile qu'ils ont cuite dans des odeurs d'allium sucré.",
+            "action": "Retirer du feu et refroidir avant d'ajouter au remplissage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pétoncles ont bruni et ont pris une douceur caramélisée qui peut surpasser le remplissage délicat.",
+            "action": "Un peu de brunissement n'est pas catastrophique — continuez, sachant que le remplissage sera légèrement plus doux que prévu."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur un anneau de pétoncle avec l'extrémité d'une spatule — il devrait donner instantanément et complètement sans résistance ferme. L'huile dans la poêle devrait se sentir glissante à partir des sucres libérés — légèrement plus épais que lorsque vous avez commencé."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélanger le remplissage",
+      "inputs": [
+        "wrung_dry_spinach",
+        "ing_02",
+        "ing_03",
+        "ing_05",
+        "ing_07",
+        "ing_08",
+        "softened_scallions"
+      ],
+      "outputState": "spanakopita_filling",
+      "instructions": "Dans un grand bol, mélanger les épinards hachés, les pétoncles transpirés refroidis, les fetas émiettées, les oeufs battus, l'aneth hachée, le poivre noir et la muscade fraîchement râpée. Mélangez soigneusement avec vos mains ou une grande cuillère, en brisant le feta en miettes, pas plus grand qu'un petit pois. Ne pas ajouter de sel avant la dégustation : le feta porte du sel significatif et le remplissage peut n'en avoir besoin. Goûtez critiquement et ajoutez du sel seulement si nécessaire. Le mélange doit sentir l'aneth fraîche, le feta crémeux et les épinards cuits — frais et herbacés avec un fond de brio. La texture doit être suffisamment cohésive pour tenir sa forme brièvement lorsqu'elle est écorcée mais non raide.",
+      "visualCue": {
+        "primaryTarget": "Un remplissage vert foncé généreusement cloué avec des miettes de feta blanc et flocé de vert d'aneth – le mélange devrait avoir l'air vif et frais, pas gris ou aqueux, et devrait tenir une forme de scoop lâche.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le remplissage n'est pas complètement combiné — il y a des poches d'épinards non mélangés, des morceaux de feta, et l'œuf n'a pas tout recouvert uniformément.",
+            "action": "Mélanger plus soigneusement, en particulier en brisant les gros morceaux de feta et en veillant à ce que l'oeuf enveloppe tous les épinards."
+          },
+          {
+            "state": "Perfect",
+            "description": "Combiné uniformément, avec du feta distribué dans l'ensemble et chaque morceau d'épinard enrobé d'oeuf. Le remplissage tient une forme écorcée et sent frais et herbie.",
+            "action": "Utiliser immédiatement comme remplissage ou réfrigérer jusqu'à 24 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmélangé au point où les épinards se sont brisés et le feta s'est dissous dans les épinards — le remplissage est uniformément vert-gris plutôt que tacheté de blanc.",
+            "action": "Continuez. La texture a changé mais la saveur est intacte."
+          }
+        ]
+      },
+      "feelCue": "Faites glisser une cuillère et maintenez - la en haut, elle devrait bourdonner légèrement, puis s'effondrer lentement, ne pas verser. S'il s'écoule, les épinards étaient trop mouillés. Appuyez sur le dos de la cuillère dans le mélange dans le bol; il devrait laisser une impression propre qui tient un moment avant que le remplissage retourne lentement au niveau."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Repos et réglage",
+      "inputs": [
+        "spanakopita_filling"
+      ],
+      "outputState": "finished_spanakopita_filling",
+      "instructions": "Laisser reposer le remplissage combiné pendant 10 minutes à température ambiante. Pendant ce temps, l'oeuf commencera à se lier plus fermement avec les épinards et le feta, et les saveurs d'aneth et d'échon fleuriront et s'intégreront. Après le repos, goûtez une fois de plus — les saveurs se seront mélangées et fusionnées. Faire les derniers ajustements: plus d'aneth si la saveur de l'herbe est trop subtile, quelques autres meules de poivre si elle a un goût plat, une goutte de jus de citron si elle a besoin de luminosité. Le remplissage est maintenant prêt à être utilisé avec des feuilles de phyllo beurré pour triangles, une tarte à la poêle ou des cigares roulés. Il tient réfrigéré pendant 24 heures avec une perte de qualité minimale; les saveurs en fait s'approfondissent légèrement pendant la nuit.",
+      "visualCue": {
+        "primaryTarget": "Après le repos, le remplissage semble plus dense et plus cohésif, l'œuf ayant visiblement tricoté les composants ensemble — il tient la forme d'une indentation de cuillère plus longue que la version fraîchement mélangée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours fraîchement mélangées et aqueuses au fond du bol — les composants n'ont pas eu le temps de se lier et le remplissage fera du phyllo soggy.",
+            "action": "Reposez-vous pendant 10 minutes. Si le fond du bol est rempli de liquide, pressez une fois de plus l'ensemble du remplissage à travers une serviette propre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Cohésif, vif et parfumé. Un scoopful tient sa forme de monticule. Pas de mise en commun liquide à la base du bol. Goûts brillants, brillants, herbies, et profondément satisfaisant.",
+            "action": "Procéder immédiatement à la superposition avec du phyllo ou réfrigérer pendant 24 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le remplissage a été réfrigéré pendant plus de 2 jours et le feta a rendu les épinards très humides et l'aneth s'est transformé en drab et en piquant.",
+            "action": "Pressez à nouveau le remplissage à travers une serviette propre pour éliminer l'excès d'humidité avant d'utiliser."
+          }
+        ]
+      },
+      "feelCue": "Après le repos, faites glisser deux doigts à travers le remplissage et pressez - les ensemble — il devrait y avoir suffisamment de corps de l'œuf que le remplissage s'attache brièvement entre vos doigts avant de casser. Ce fil mince et doux est le liant d'oeufs au travail, et il vous dit que le remplissage restera mis à l'intérieur du phyllo plutôt que de se faner pendant la cuisson."
+    }
+  ]
 };

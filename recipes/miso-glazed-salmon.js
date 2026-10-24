@@ -1,94 +1,237 @@
 export default {
-  repoId: "master_japanese_miso_glazed_salmon_001",
-  parentRepoId: null,
-  slug: "miso-glazed-salmon",
-  author: "ForkRecipe Kitchen",
-  title: "Miso-Glazed Salmon",
-  description: "Salmon fillets marinated in white miso, mirin, and sake, then broiled until the glaze caramelizes to a burnished lacquer and the interior flakes into rich, lustrous layers.",
-  cuisine: "Japanese",
-  culture: "Japanese",
-  category: "seafood",
-  tags: ["salmon", "japanese", "miso", "glazed", "seafood", "gluten-free"],
-  difficulty: 2,
-  activeTime: "10 min",
-  totalTime: "1 hr 30 min",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 3, salty: 3, sour: 1, bitter: 1, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Skin-on salmon fillets (centre-cut, 4 cm thick)", ratioValue: 100, defaultUnit: "parts", substitutions: ["black cod (sablefish)", "mahi-mahi"] },
-    { ingId: "ing_02", role: "Umami",     name: "White shiro miso",                                ratioValue: 20,  defaultUnit: "parts", substitutions: ["awase miso"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Mirin",                                           ratioValue: 10,  defaultUnit: "parts", substitutions: ["sake + 1 tsp sugar"] },
-    { ingId: "ing_04", role: "Solvent",   name: "Sake",                                            ratioValue: 8,   defaultUnit: "parts", substitutions: ["dry sherry", "dry vermouth"] },
-    { ingId: "ing_05", role: "Sweetener", name: "White sugar",                                     ratioValue: 4,   defaultUnit: "parts", substitutions: ["brown sugar"] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine salt",                                       ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_07", role: "Garnish",   name: "Thinly sliced scallion greens",                   ratioValue: 3,   defaultUnit: "parts", substitutions: ["toasted sesame seeds"] },
+  "repoId": "master_japanese_miso_glazed_salmon_001",
+  "parentRepoId": null,
+  "slug": "miso-glazed-salmon",
+  "author": "ForkRecipe Kitchen",
+  "title": "Saumon miso-glacé",
+  "description": "Filets de saumon marinés en miso blanc, mirin et saké, puis grillés jusqu'à ce que la glaçure caramélise une laque brûlée et l'intérieur flocons en couches riches et lustrées.",
+  "cuisine": "Japonais",
+  "culture": "Japonais",
+  "category": "seafood",
+  "tags": [
+    "saumon",
+    "Japonais",
+    "miso",
+    "glacé",
+    "Produits de la mer",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "10 min",
+  "totalTime": "1 hr 30 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Whisk",
-      inputs: ["ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "miso_marinade",
-      instructions: "Whisk together the white miso, mirin, sake, and sugar until fully smooth and the sugar has dissolved. The marinade should be a pale caramel paste that flows like thick honey. Taste it: it should be intensely savory and sweet, with the faint sting of alcohol — the sake and mirin will carry the volatile top notes away as the fish broils, leaving the miso caramelized and fragrant.",
-      visualCue: {
-        primaryTarget: "A uniform, glossy, pale-amber paste with no lumps of undissolved miso. It pours in a slow, thick ribbon from the whisk.",
-        spectrum: [
-          { state: "Underdone", description: "Lumpy with flecks of unmixed miso; the sugar is gritty at the bottom.", action: "Keep whisking and add a few drops more sake to help the paste loosen and the sugar dissolve." },
-          { state: "Perfect",   description: "Silky, glossy, uniformly amber — the whisk leaves a brief trail. The smell is sweet, yeasty, and umami-rich.", action: "Pour over the salmon fillets and proceed to marinate." },
-          { state: "Overdone",  description: "Thinned to a watery liquid — too much sake added. The marinade will run off the fish without adhering.", action: "Whisk in a little more miso to thicken it back to a coating consistency." },
-        ],
-      },
-      feelCue: "The marinade should cling to the whisk rather than drip freely — somewhere between heavy cream and smooth peanut butter in body.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filets de saumon sur la peau (coupés au centre, 4 cm d'épaisseur)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cabillaud noir (sablefish)",
+        "Mahi-mahi"
+      ]
     },
     {
-      nodeId: "step_2", action: "Marinate",
-      inputs: ["ing_01", "miso_marinade", "ing_06"],
-      outputState: "marinated_salmon",
-      instructions: "Season the salmon lightly with salt, then coat each fillet on all sides with the miso marinade. Place in a shallow dish or zip-lock bag, making sure the marinade contacts every surface. Refrigerate for at least 1 hour and up to 24 hours — the longer the rest, the deeper the savory penetration and the more intense the caramelized crust. Wipe off the excess marinade before broiling; any thick layer will burn before the fish cooks.",
-      visualCue: {
-        primaryTarget: "Fillets evenly coated in a pale amber veil — no bare patches, no thick pooled clumps. After resting, the surface looks slightly tacky and the marinade has tightened where it touches the flesh.",
-        spectrum: [
-          { state: "Underdone", description: "Marinade is thin and mostly dripped off; fish looks pale and barely colored.", action: "Spoon the pooled marinade back over the fish and return to the fridge for a longer rest." },
-          { state: "Perfect",   description: "An even, amber-tinted coat that clings firmly. The flesh has taken on a slightly firmer texture at the edges from the salt and enzymes.", action: "Wipe away the excess with a finger or paper towel, then broil immediately." },
-          { state: "Overdone",  description: "Marinated beyond 36 hours: the flesh looks grey and mushy at the surface, texture broken down by the salt and miso enzymes.", action: "Wipe the surface clean, cook promptly, and keep a closer eye on texture during cooking. The flavor will still be good." },
-        ],
-      },
-      feelCue: "The coated fillets should feel slightly sticky to the touch, the marinade gripping your fingertip before releasing — that tack is what will bond the glaze to the fish under the broiler's heat.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "Shiro miso blanc",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "C'est une erreur."
+      ]
     },
     {
-      nodeId: "step_3", action: "Broil",
-      inputs: ["marinated_salmon"],
-      outputState: "glazed_broiled_salmon",
-      instructions: "Position an oven rack about 15 cm from the broiler element and preheat the broiler to maximum. Line a baking sheet with foil and lightly oil it. Wipe the excess marinade from the salmon, place skin-side down, and broil 8–12 minutes depending on thickness — no flipping needed. Watch continuously: the miso sugars move from golden to burnt in under a minute at this heat. The skin should crisp and the glaze should bubble, bronze, and develop dark caramelized spots at the edges.",
-      visualCue: {
-        primaryTarget: "A deep mahogany-lacquered surface with dark caramelized flecks at the edges, the center a burnished amber-gold. The skin is crisp and slightly charred. The flesh beneath has gone from translucent to barely opaque at the very center.",
-        spectrum: [
-          { state: "Underdone", description: "Surface is pale yellow, no caramelization, the glaze looks wet and steamed rather than bronzed. The flesh is soft and translucent at the center.", action: "Continue broiling, watching every 30 seconds — the browning accelerates quickly once the surface dries." },
-          { state: "Perfect",   description: "Deep, burnished mahogany crust with concentrated dark edges, the interior just turning opaque and flaking under gentle pressure of a fork. The skin crisps and pulls slightly from the flesh.", action: "Transfer immediately to plates; the fish continues cooking briefly off the heat." },
-          { state: "Overdone",  description: "Black and acrid-smelling surface; the miso sugars have burnt past caramelization to carbon. Flesh is chalky and dry underneath.", action: "Scrape away any fully carbonized bits; the fish beneath may still be salvageable but will be dry. Next time, wipe off excess marinade more thoroughly and watch the broiler constantly." },
-        ],
-      },
-      feelCue: "Prod the thickest part with the tip of your finger: perfectly cooked salmon yields and just begins to separate into flakes, with the faintest resistance at the very center — not rock-solid (overcooked) and not a slippery give (raw).",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Mirin",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Saké + 1 c. à thé sucre"
+      ]
     },
     {
-      nodeId: "step_4", action: "Garnish",
-      inputs: ["glazed_broiled_salmon", "ing_07"],
-      outputState: "finished_miso_salmon",
-      instructions: "Slide the fillets onto warm plates using a thin spatula. The skin may stick to the foil — use the spatula to separate it cleanly. Scatter thinly sliced scallion greens over the top. Serve immediately with steamed short-grain rice and a small mound of pickled ginger or a wedge of sudachi if available.",
-      visualCue: {
-        primaryTarget: "A lacquered, deep amber fillet contrasted with bright green scallion ribbons. The glaze shimmers under the light. Pressed with a fork, the flesh separates into rich, lustrous flakes.",
-        spectrum: [
-          { state: "Underdone", description: "Flesh parts reveal large, glassy, translucent sections — the interior is raw.", action: "Return to the oven (not the broiler) at 180 C / 350 F for 2–3 minutes to finish gently without burning the glaze further." },
-          { state: "Perfect",   description: "Flakes separate cleanly into large, moist, ivory-pink layers. The glaze is glossy, tacky, and fragrant — sweet, savory, and smoky from caramelization.", action: "Serve at once — the glaze sets and loses its sheen as it cools." },
-          { state: "Overdone",  description: "Flesh crumbles into dry, fine-grained pieces with white albumin pressed out; the color has gone pale and chalky.", action: "Flake the fish and serve over rice with extra warm miso broth to compensate for the lost moisture." },
-        ],
-      },
-      feelCue: "The finished fillet should offer almost no resistance to a fork — the flakes should release with a gentle nudge, each one glistening with its own fat. If you have to push, it has gone too far.",
+      "ingId": "ing_04",
+      "role": "Solvent",
+      "name": "Mâcher",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sherry sec",
+        "Vermouth sec"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre blanc",
+      "ratioValue": 4,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "sucre brun"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Garnish",
+      "name": "Verts de pétoncle tranchés finement",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Graines de sésame grillées"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "miso_marinade",
+      "instructions": "Frottez le miso blanc, le mirin, le saké et le sucre jusqu'à ce qu'ils soient complètement lisses et que le sucre soit dissous. La marinade doit être une pâte de caramel pâle qui coule comme du miel épais. Goûtez-le: il devrait être intensément salé et doux, avec la faible piqûre d'alcool — le saké et le mirin emporteront les notes supérieures volatiles comme les broches de poisson, laissant le miso caramélisé et parfumé.",
+      "visualCue": {
+        "primaryTarget": "Une pâte uniforme, brillante, pâle-ambre sans morceaux de miso non dissous. Il coule dans un ruban lent et épais du fouet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Lumpy avec des taches de miso non mélangé; le sucre est gritty au fond.",
+            "action": "Continuez à fouetter et ajoutez quelques gouttes de saké supplémentaire pour aider la pâte desserrer et le sucre dissoudre."
+          },
+          {
+            "state": "Perfect",
+            "description": "Soyeux, brillant, uniformément ambre — le fouet laisse un bref sentier. L'odeur est douce, levure et riche en umami.",
+            "action": "Verser les filets de saumon et faire mariner."
+          },
+          {
+            "state": "Overdone",
+            "description": "Fini à un liquide aqueux — trop de saké ajouté. La marinade s'échappera du poisson sans y adhérer.",
+            "action": "fouetter dans un peu plus miso pour l'épaissir de nouveau à une consistance de revêtement."
+          }
+        ]
+      },
+      "feelCue": "La marinade doit s'accrocher au fouet plutôt que de s'égoutter librement — quelque part entre la crème lourde et le beurre d'arachide lisse dans le corps."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "miso_marinade",
+        "ing_06"
+      ],
+      "outputState": "marinated_salmon",
+      "instructions": "Assaisonner légèrement le saumon de sel, puis enrober chaque filet de tous les côtés de la marinade miso. Placer dans un plat peu profond ou un sac à fermeture éclair, en veillant à ce que la marinade contacte toutes les surfaces. Réfrigérer pendant au moins 1 heure et jusqu'à 24 heures — plus le reste est long, plus la pénétration savoureuse est profonde et plus la croûte caramélisée est intense. Essuyez l'excès de marinade avant de griller; toute couche épaisse brûlera avant que le poisson cuisine.",
+      "visualCue": {
+        "primaryTarget": "Filets uniformément revêtus d'un voile ambre pâle — pas de taches nues, pas de touffes épaisses. Après le repos, la surface est légèrement collante et la marinade s'est serrée là où elle touche la chair.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La marinade est mince et généralement dégouttée; le poisson semble pâle et à peine coloré.",
+            "action": "Replacez la marinade en piscine sur le poisson et retournez au réfrigérateur pour un repos plus long."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un manteau uniforme, teinté d'ambre, qui s'accroche fermement. La chair a pris une texture légèrement plus ferme aux bords du sel et des enzymes.",
+            "action": "Essuyer l'excédent avec un doigt ou une serviette en papier, puis griller immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Mariné au-delà de 36 heures : la chair a l'air grise et musquée à la surface, la texture décomposée par le sel et les enzymes miso.",
+            "action": "Essuyer la surface propre, cuire rapidement et garder un œil plus proche sur la texture pendant la cuisson. La saveur sera encore bonne."
+          }
+        ]
+      },
+      "feelCue": "Les filets enduits doivent se sentir légèrement collants au toucher, la marinade grippant votre bout de doigt avant de relâcher — c'est ce qui liera la glaçure au poisson sous la chaleur du poulet."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Broil",
+      "inputs": [
+        "marinated_salmon"
+      ],
+      "outputState": "glazed_broiled_salmon",
+      "instructions": "Placer un support de four à environ 15 cm de l'élément de grille et préchauffer l'élément de grille au maximum. Disposer une plaque de cuisson avec du papier et l'huiler légèrement. Essuyez l'excès de marinade du saumon, déposez la peau vers le bas et faites griller de 8 à 12 minutes selon l'épaisseur. Attention en continu : les méso sucres passent de l'or à la combustion en moins d'une minute à cette chaleur. La peau doit croquer et la glaçure doit buller, bronze, et développer des taches foncées caramélisées aux bords.",
+      "visualCue": {
+        "primaryTarget": "Une surface laquée d'acajou profonde avec des taches caramélisées foncées aux bords, le centre un or ambré brûlé. La peau est croquante et légèrement carbonisée. La chair en dessous est passée de translucide à à peine opaque au centre même.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La surface est jaune pâle, pas de caramélisation, la glaçure semble humide et à la vapeur plutôt que bronzée. La chair est douce et translucide au centre.",
+            "action": "Continuez à pousser, à regarder toutes les 30 secondes — le brunissement s'accélère rapidement une fois la surface sèche."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une croûte d'acajou profonde et brulée aux bords foncés concentrés, l'intérieur devient opaque et s'évanouit sous une légère pression d'une fourchette. La peau croustille et tire légèrement de la chair.",
+            "action": "Transférer immédiatement dans les assiettes; le poisson continue à cuire brièvement hors de la chaleur."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surface noire et acride-smelling; les sucres miso ont brûlé la caramélisation passée au carbone. La chair est crayeuse et sèche en dessous.",
+            "action": "Enlevez les morceaux complètement carbonisés; les poissons en dessous peuvent encore être récupérés mais seront secs. La prochaine fois, essuyer l'excès de marinade plus soigneusement et regarder le grille-lait constamment."
+          }
+        ]
+      },
+      "feelCue": "Prod la partie la plus épaisse avec l'extrémité de votre doigt : le saumon parfaitement cuit donne et commence juste à se séparer en flocons, avec la résistance la plus faible au centre – pas solide de roche (surcuite) et pas glissant donner (brut)."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Garnir",
+      "inputs": [
+        "glazed_broiled_salmon",
+        "ing_07"
+      ],
+      "outputState": "finished_miso_salmon",
+      "instructions": "Faites glisser les filets sur des plaques chaudes en utilisant une spatule mince. La peau peut s'accrocher à la feuille — utilisez la spatule pour la séparer proprement. Éparpiller les verts de pétoncle mincement tranchés sur le dessus. Servir immédiatement avec du riz à grains courts à la vapeur et un petit monticule de gingembre mariné ou un coin de sudachi si disponible.",
+      "visualCue": {
+        "primaryTarget": "Un filet ambré laqué et profond contraste avec des rubans de pétoncle vert vif. La glaçure brille sous la lumière. Pressée d'une fourchette, la chair se sépare en flocons riches et lustres.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pièces de chair révèlent de grandes sections vitrées, translucides — l'intérieur est brut.",
+            "action": "Retourner au four (et non au four) à 180 °C / 350 °F pendant 2 à 3 minutes pour finir doucement sans brûler la glaçure plus loin."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les flocons se séparent proprement en grandes couches d'ivoire-rose humides. La glaçure est brillante, collante et parfumée — douce, salée et fumée de la caramélisation.",
+            "action": "Servir à la fois — la glaçure se sert et perd son éclat en refroidissant."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair s'écroule en morceaux secs à grains fins avec de l'albumine blanche pressée ; la couleur est devenue pâle et crayeuse.",
+            "action": "Flake le poisson et servir sur le riz avec un bouillon miso chaud supplémentaire pour compenser la perte d'humidité."
+          }
+        ]
+      },
+      "feelCue": "Le filet fini devrait offrir presque aucune résistance à une fourche — les flocons devraient se relâcher avec un coup doux, chacun scintille avec sa propre graisse. Si vous devez pousser, il est allé trop loin."
+    }
+  ]
 };

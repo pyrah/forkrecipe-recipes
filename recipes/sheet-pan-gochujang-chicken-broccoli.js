@@ -1,106 +1,291 @@
 export default {
-  repoId: "master_koreanamerican_sheetpangochujangchicken_001",
-  parentRepoId: null,
-  slug: "sheet-pan-gochujang-chicken-broccoli",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Sheet-Pan Gochujang Chicken and Broccoli",
-  description: "Chicken thighs roasted in a sticky, brick-red gochujang glaze that turns sweet, smoky and gently fiery at the charred edges, alongside broccoli florets that roast until their tips go crisp and nutty.",
-  cuisine: "Korean-American",
-  culture: "American home kitchen",
-  category: "proteins",
-  tags: ["home-kitchen", "weeknight", "chicken", "sheet-pan", "roasted", "gochujang", "spicy", "broccoli"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "40 min",
-  ratioSystem: "weight",
-  servings: 4,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 3, salty: 3, sour: 1, bitter: 1, umami: 4, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Heat",      name: "Gochujang (Korean chili paste)",                  ratioValue: 45,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Umami",     name: "Soy sauce",                                       ratioValue: 30,  defaultUnit: "ml", substitutions: ["tamari"] },
-    { ingId: "ing_03", role: "Sweetener", name: "Honey",                                           ratioValue: 20,  defaultUnit: "g", substitutions: ["brown sugar"] },
-    { ingId: "ing_04", role: "Acid",      name: "Rice vinegar",                                    ratioValue: 15,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_05", role: "Fat",       name: "Toasted sesame oil",                              ratioValue: 10,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_06", role: "Allium",    name: "Garlic, finely grated",                           ratioValue: 3,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_07", role: "Aromatic",  name: "Fresh ginger, finely grated",                     ratioValue: 10,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Protein",   name: "Boneless skinless chicken thighs, trimmed",       ratioValue: 800, defaultUnit: "g", substitutions: ["chicken breast, cut into 4 cm chunks (roast 15–18 min)"] },
-    { ingId: "ing_09", role: "Base",      name: "Broccoli, cut into florets with peeled sliced stems", ratioValue: 500, defaultUnit: "g", substitutions: ["broccolini", "cauliflower florets"] },
-    { ingId: "ing_10", role: "Fat",       name: "Neutral oil",                                     ratioValue: 20,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_11", role: "Seasoning", name: "Kosher salt",                                     ratioValue: 0,   defaultUnit: "to taste", substitutions: [] },
-    { ingId: "ing_12", role: "Garnish",   name: "Scallions, thinly sliced",                        ratioValue: 3,   defaultUnit: "stalks", substitutions: [] },
-    { ingId: "ing_13", role: "Garnish",   name: "Toasted sesame seeds",                            ratioValue: 2,   defaultUnit: "tsp", substitutions: [] },
+  "repoId": "master_koreanamerican_sheetpangochujangchicken_001",
+  "parentRepoId": null,
+  "slug": "sheet-pan-gochujang-chicken-broccoli",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Feuille de poulet Gochujang et brocoli",
+  "description": "Les cuisses de poulet rôties dans un glaçage gochujang collant et rouge brique qui devient doux, fumé et feu doux aux bords carbonisés, aux côtés des fleurs de brocoli qui rôtissent jusqu'à ce que leurs bouts deviennent croustillants et noisette.",
+  "cuisine": "Coréen-Américain",
+  "culture": "Cuisine américaine à domicile",
+  "category": "proteins",
+  "tags": [
+    "cuisine maison",
+    "nuit",
+    "poulet",
+    "Tôle",
+    "grillés",
+    "Gochujang",
+    "épicé",
+    "brocoli"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "40 min",
+  "ratioSystem": "weight",
+  "servings": 4,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Whisk",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "gochujang_glaze",
-      instructions: "Heat the oven to 425°F (220°C) with a rack in the upper-middle position. In a large bowl, whisk the gochujang, soy sauce, honey, rice vinegar, sesame oil, garlic and ginger until smooth. Transfer 3 tablespoons of the glaze to a small bowl and reserve for brushing later.",
-      visualCue: {
-        primaryTarget: "A smooth, glossy, brick-red glaze that coats a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Stiff gochujang clumps floating in the thin soy.", action: "Whisk harder, or add a teaspoon of warm water to loosen the paste." },
-          { state: "Perfect",   description: "Uniform, shiny glaze the thickness of ketchup.", action: "Reserve a portion, then coat the chicken." },
-          { state: "Overdone",  description: "Too thin and runny, sliding straight off the spoon.", action: "Add another tablespoon of gochujang so it clings to the chicken." },
-        ],
-      },
-      feelCue: "Dip a fingertip and taste: sweet and salty up front with a slow warmth that builds at the back of the throat.",
+      "ingId": "ing_01",
+      "role": "Heat",
+      "name": "Gochujang (Pâte de chili coréen)",
+      "ratioValue": 45,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Coat",
-      inputs: ["gochujang_glaze", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "coated_tray",
-      instructions: "Pat the chicken dry, add it to the large bowl of glaze and toss until every piece is coated; let sit while you prep the broccoli (10 minutes is plenty). Toss the broccoli with the neutral oil and 1/2 tsp kosher salt. Line a rimmed sheet pan with foil for easier cleanup (lightly oiled). Arrange the chicken smooth-side up on one half and the broccoli spread out on the other half.",
-      visualCue: {
-        primaryTarget: "Chicken fully lacquered in red glaze, broccoli glossy with oil, both in a single uncrowded layer.",
-        spectrum: [
-          { state: "Underdone", description: "Bare pink patches on the chicken; broccoli dry and dusty.", action: "Toss again, turning pieces over with tongs." },
-          { state: "Perfect",   description: "Chicken evenly coated with excess glaze dripped off, broccoli shiny, space between pieces.", action: "Roast." },
-          { state: "Overdone",  description: "Puddles of glaze pooled around the chicken on the pan.", action: "Lift the chicken, let excess drip, and wipe the puddles — pooled sugar burns before the chicken is cooked." },
-        ],
-      },
-      feelCue: "The chicken should feel tacky and heavy with glaze, not dripping wet.",
+      "ingId": "ing_02",
+      "role": "Umami",
+      "name": "sauce soja",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "tamari"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Roast",
-      inputs: ["coated_tray"],
-      outputState: "roasted_gochujang_tray",
-      instructions: "Roast for 18–22 minutes, flipping the broccoli once at the halfway point, until the chicken edges are charred in spots and the thickest piece registers 165°F (74°C) on an instant-read thermometer (thighs stay juicy up to about 175°F / 79°C). If the broccoli is browning faster than the chicken, pull it to a bowl early.",
-      visualCue: {
-        primaryTarget: "Chicken with a darkened, sticky glaze and blackened freckles at the edges; broccoli tips crisp and browned.",
-        spectrum: [
-          { state: "Underdone", description: "Glaze still wet and bright red; thickest thigh below 165°F (74°C); broccoli still firm and green.", action: "Roast another 3–4 minutes and recheck the temperature." },
-          { state: "Perfect",   description: "Glaze set and mahogany-red with spots of char; chicken 165–175°F (74–79°C); broccoli tender with crunchy browned tips.", action: "Brush with the reserved glaze and broil." },
-          { state: "Overdone",  description: "Glaze black and bitter across the whole surface; broccoli shriveled and dark.", action: "Scrape off the worst of the burnt glaze and rely on the reserved glaze to re-coat; skip the broil." },
-        ],
-      },
-      feelCue: "The pan should be crackling and the kitchen should smell of caramelized chili and toasted sesame.",
+      "ingId": "ing_03",
+      "role": "Sweetener",
+      "name": "Chérie",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sucre brun"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Broil and finish",
-      inputs: ["roasted_gochujang_tray", "gochujang_glaze", "ing_12", "ing_13"],
-      outputState: "finished_gochujang_chicken",
-      instructions: "Brush the reserved glaze over the chicken. Switch the oven to broil and broil 1–2 minutes, watching closely, until the glaze bubbles. Rest the chicken 3 minutes, then slice. Toss the broccoli through the pan juices and scatter everything with scallions and sesame seeds. Serve with rice.",
-      visualCue: {
-        primaryTarget: "Freshly glossy, bubbling chicken with bright green scallions over the top.",
-        spectrum: [
-          { state: "Underdone", description: "Reserved glaze still raw-looking and matte.", action: "Broil 30 seconds more." },
-          { state: "Perfect",   description: "Glaze bubbling and shiny, edges just re-charred.", action: "Rest briefly, slice and serve." },
-          { state: "Overdone",  description: "Glaze scorched black within seconds under the broiler.", action: "Trim charred bits and brush with a little honey thinned with soy." },
-        ],
-      },
-      feelCue: "A slice should be juicy enough to glisten on the cut face, with a chewy, sticky edge where the glaze caramelized.",
+      "ingId": "ing_04",
+      "role": "Acid",
+      "name": "Vinaigre de riz",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Fat",
+      "name": "Huile de sésame grillée",
+      "ratioValue": 10,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Ail, râpé finement",
+      "ratioValue": 3,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Aromatic",
+      "name": "Gingembre frais, râpé finement",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Protein",
+      "name": "Cuisses de poulet sans peau, désossées, parées",
+      "ratioValue": 800,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poitrine de poulet, coupée en morceaux de 4 cm"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Base",
+      "name": "Brocoli, coupé en fleurs avec des tiges pelées en tranches",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "broccolini",
+        "fleurs de chou-fleur"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 20,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 0,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Garnish",
+      "name": "Échalons, tranchés finement",
+      "ratioValue": 3,
+      "defaultUnit": "stalks",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 2,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Whisk",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "gochujang_glaze",
+      "instructions": "Chauffer le four à 425°F (220°C) avec une grille en position médiane supérieure. Dans un grand bol, fouetter le gochujang, la sauce soja, le miel, le vinaigre de riz, l'huile de sésame, l'ail et le gingembre jusqu'à ce qu'ils soient doux. Transférer 3 cuillères à soupe de glaçure dans un petit bol et réserver pour brossage plus tard.",
+      "visualCue": {
+        "primaryTarget": "Un glaçure lisse, brillant et rouge brique qui enveloppe une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Stiff gochujang flotte dans le soya mince.",
+            "action": "fouetter plus fort, ou ajouter une cuillère à café d'eau chaude pour desserrer la pâte."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme, brillant glaçure l'épaisseur du ketchup.",
+            "action": "Réserver une portion, puis enrober le poulet."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop mince et rudimentaire, glissant tout droit sur la cuillère.",
+            "action": "Ajouter une autre cuillère à soupe de gochujang pour qu'elle s'accroche au poulet."
+          }
+        ]
+      },
+      "feelCue": "Dégustez un bout de doigt et goût : doux et salé devant avec une chaleur lente qui se construit à l'arrière de la gorge."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Manteau",
+      "inputs": [
+        "gochujang_glaze",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "coated_tray",
+      "instructions": "Faire sécher le poulet, l'ajouter dans le grand bol de glaçure et mélanger jusqu'à ce que chaque morceau soit enduit; laisser reposer pendant que vous préparez le brocoli (10 minutes c'est beaucoup). Mélanger le brocoli avec l'huile neutre et 1/2 c. à thé de sel casher. Étaler une poêle à feuilles bordées avec du papier pour faciliter le nettoyage (légèrement huilé). Disposer le côté lisse du poulet sur une moitié et le brocoli sur l'autre moitié.",
+      "visualCue": {
+        "primaryTarget": "Poulet entièrement laqué en glaçure rouge, brocoli brillant à l'huile, les deux en une seule couche non surpeuplée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Patchs roses sur le poulet; brocoli sec et poussiéreux.",
+            "action": "Jetez encore, retournez les morceaux avec des pinces."
+          },
+          {
+            "state": "Perfect",
+            "description": "Poulet uniformément recouvert d'excès de glaçure, brocoli brillant, espace entre les morceaux.",
+            "action": "Rôtir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Puddles de glaçure baigné autour du poulet sur la poêle.",
+            "action": "Soulevez le poulet, laissez couler l'excès et essuyez les flaques — le sucre en commun brûle avant que le poulet soit cuit."
+          }
+        ]
+      },
+      "feelCue": "Le poulet doit se sentir tacky et lourd avec glaçure, pas goutte à goutte humide."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Rôtis",
+      "inputs": [
+        "coated_tray"
+      ],
+      "outputState": "roasted_gochujang_tray",
+      "instructions": "Faire cuire pendant 18 à 22 minutes, retourner le brocoli une fois à mi-chemin, jusqu'à ce que les bords du poulet soient carbonisés dans des taches et que la pièce la plus épaisse enregistre 165°F (74°C) sur un thermomètre à lecture instantanée (les hauts restent juteux jusqu'à environ 175°F / 79°C). Si le brocoli brunit plus vite que le poulet, tirez-le dans un bol tôt.",
+      "visualCue": {
+        "primaryTarget": "Poulet avec une glaçure foncée, collante et des taches de rousseur noircies aux bords; bouts de brocoli croustillants et brunis.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Glace encore humide et rouge vif; cuisse la plus épaisse en dessous de 165°F (74°C); brocoli encore ferme et vert.",
+            "action": "Faites cuire encore 3 à 4 minutes et revérifiez la température."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ensemble glacé et rouge acajou avec des taches d'omble; poulet 165–175°F (74–79°C); brocoli tendre aux extrémités brunâtres croquantes.",
+            "action": "Badigeonner avec la glaçure réservée et le brochet."
+          },
+          {
+            "state": "Overdone",
+            "description": "Glace noire et amère sur toute la surface; brocoli frisé et foncé.",
+            "action": "Écraser le pire de la glaçure brûlée et compter sur la glaçure réservée pour re-coat; sauter la grille."
+          }
+        ]
+      },
+      "feelCue": "La poêle devrait craquer et la cuisine devrait sentir du chili caramélisé et du sésame grillé."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Brûlure et finition",
+      "inputs": [
+        "roasted_gochujang_tray",
+        "gochujang_glaze",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "finished_gochujang_chicken",
+      "instructions": "Badigeonner la glaçure réservée sur le poulet. Passez le four à griller et à griller 1 à 2 minutes, en regardant attentivement, jusqu'à ce que les bulles de glaçure. Reposez le poulet 3 minutes, puis tranchez. Faites passer le brocoli à travers les jus de casserole et dispersez tout avec des oignons et des graines de sésame. Servir avec du riz.",
+      "visualCue": {
+        "primaryTarget": "Poulet fraichement brillant, bouillonnant avec des oignons verts vifs sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Glaçage réservé toujours cru et mat.",
+            "action": "Encore 30 secondes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Glaze bouillonnant et brillant, les bords sont simplement recharrés.",
+            "action": "Reposez-vous brièvement, tranchez et servez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Glace brûlée en noir en quelques secondes sous le grilleur.",
+            "action": "Trim charred bits et brosser avec un peu de miel éclairci avec du soja."
+          }
+        ]
+      },
+      "feelCue": "Une tranche doit être suffisamment juteuse pour briller sur le visage coupé, avec un bord collant et croustillant où la glaçure caramélisée."
+    }
+  ]
 };

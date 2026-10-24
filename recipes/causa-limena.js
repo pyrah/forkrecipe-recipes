@@ -1,245 +1,256 @@
 export default {
-  repoId: "master_peruvian_causa_limena_001",
-  parentRepoId: null,
-  slug: "causa-limena",
-  author: "ForkRecipe Kitchen",
-  title: "Causa Limeña",
-  description: "A cold Limeño terrine of yellow potato mashed with ají amarillo and lime — tangy, sunny, and surprisingly bold — pressed around a filling of creamy tuna salad and sliced avocado, then chilled into a firm, sliceable tower that reveals its layers only when cut.",
-  cuisine: "Peruvian",
-  culture: "Lima",
-  category: "vegetables",
-  tags: ["peruvian", "potato", "terrine", "aji-amarillo", "lime", "avocado", "tuna", "cold"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "2 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 3, sour: 3, bitter: 0, umami: 3, heat: 2 },
-  ingredients: [
-    {
-      ingId: "ing_01",
-      role: "Starch",
-      name: "Yellow-fleshed potato (papa amarilla or Yukon Gold, peeled)",
-      ratioValue: 800,
-      defaultUnit: "g",
-      substitutions: ["russet potato (blander, but works)"],
-    },
-    {
-      ingId: "ing_02",
-      role: "Heat",
-      name: "Ají amarillo paste",
-      ratioValue: 60,
-      defaultUnit: "g",
-      substitutions: ["yellow bell pepper purée + ½ tsp cayenne (milder)"],
-    },
-    {
-      ingId: "ing_03",
-      role: "Acid",
-      name: "Fresh lime juice",
-      ratioValue: 45,
-      defaultUnit: "g",
-      substitutions: ["lemon juice"],
-    },
-    {
-      ingId: "ing_04",
-      role: "Fat",
-      name: "Neutral oil (vegetable or sunflower)",
-      ratioValue: 50,
-      defaultUnit: "g",
-      substitutions: ["light olive oil"],
-    },
-    {
-      ingId: "ing_05",
-      role: "Seasoning",
-      name: "Fine salt",
-      ratioValue: 10,
-      defaultUnit: "g",
-      substitutions: [],
-    },
-    {
-      ingId: "ing_06",
-      role: "Protein",
-      name: "Canned tuna in olive oil (drained)",
-      ratioValue: 300,
-      defaultUnit: "g",
-      substitutions: ["poached chicken breast, finely shredded", "canned salmon"],
-    },
-    {
-      ingId: "ing_07",
-      role: "Fat",
-      name: "Mayonnaise",
-      ratioValue: 80,
-      defaultUnit: "g",
-      substitutions: [],
-    },
-    {
-      ingId: "ing_08",
-      role: "Aromatic",
-      name: "Ripe avocado (sliced 5mm thick)",
-      ratioValue: 200,
-      defaultUnit: "g",
-      substitutions: [],
-    },
-    {
-      ingId: "ing_09",
-      role: "Garnish",
-      name: "Black olive slices, hard-boiled egg, fresh parsley sprigs",
-      ratioValue: 1,
-      defaultUnit: "parts",
-      substitutions: ["capers, sliced radishes, micro herbs"],
-    },
+  "repoId": "master_peruvian_causa_limena_001",
+  "parentRepoId": null,
+  "slug": "causa-limena",
+  "author": "ForkRecipe Kitchen",
+  "title": "Causa Limeña",
+  "description": "Une terrine froide de limeño de pommes de terre jaunes masquée d'ají amarillo et de chaux — acidulée, ensoleillée et étonnamment audacieuse — pressée autour d'une farce de salade de thon crémeuse et tranchée d'avocat, puis réfrigérée dans une tour ferme et trancheuse qui révèle ses couches seulement lorsqu'elle est coupée.",
+  "cuisine": "Pérou",
+  "culture": "Lima",
+  "category": "vegetables",
+  "tags": [
+    "périuvien",
+    "pommes de terre",
+    "terrine",
+    "Aji-amarillo",
+    "Chaux",
+    "avocat",
+    "thon",
+    "froid"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "2 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 3,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Boil",
-      inputs: ["ing_01"],
-      outputState: "cooked_potatoes",
-      instructions:
-        "Place the peeled, halved potatoes in a pot of well-salted cold water and bring to a boil. Cook until completely tender and a knife slides through without any resistance — about 20–25 minutes depending on size. Drain immediately and spread on a tray to steam-dry for 5 minutes. This step is critical: wet potatoes produce a gluey causa that will not hold its shape. The potatoes must be very dry when mashed.",
-      visualCue: {
-        primaryTarget:
-          "Potatoes are very pale yellow, falling apart at the edges, with a completely dry, mealy surface after draining.",
-        spectrum: [
-          {
-            state: "Underdone",
-            description:
-              "A knife meets resistance in the center. The potato snaps rather than compresses.",
-            action:
-              "Return to the pot with the heat on low for 5 more minutes — do not re-submerge in water.",
-          },
-          {
-            state: "Perfect",
-            description:
-              "A skewer passes through with zero resistance. The potato's edges are just beginning to feather and crumble.",
-            action:
-              "Drain and spread out to dry. Do not cover with plastic — the steam must escape.",
-          },
-          {
-            state: "Overdone",
-            description:
-              "Potatoes are waterlogged and crumbling in the pot, falling apart when lifted.",
-            action:
-              "Drain extremely well and spread on a tray in a 150°C oven for 5 minutes to dry out before mashing.",
-          },
-        ],
-      },
-      feelCue:
-        "A perfectly cooked causa potato pressed between two fingers should crumble dryly and immediately — like pressing a chalk stick — with no damp springiness.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Pommes de terre à chair jaune (papa amarilla ou or du Yukon, pelées)",
+      "ratioValue": 800,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Pommes de terre rousses (blande, mais fonctionne)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Mash",
-      inputs: ["cooked_potatoes", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "causa_dough",
-      instructions:
-        "While the potatoes are still hot, pass them through a potato ricer or press them through a fine-mesh strainer with a spatula — never use a food processor, which will make them gluey. Transfer the riced potato to a large bowl. Add the ají amarillo paste, lime juice, and oil. Fold and work with a flexible spatula until completely homogenous, with no white streaks of unmixed potato. Season with salt. The causa dough should taste boldly of lime and ají, with a vibrant orange-yellow color throughout and the texture of soft, pliable clay.",
-      visualCue: {
-        primaryTarget:
-          "A uniform, vivid golden-yellow mass — the color of egg yolk — with no white patches of unmixed potato and no visible lumps.",
-        spectrum: [
-          {
-            state: "Underdone",
-            description:
-              "White unmixed potato streaks are visible throughout, flavor is uneven.",
-            action:
-              "Fold more firmly until completely uniform — every bite must taste the same.",
-          },
-          {
-            state: "Perfect",
-            description:
-              "Uniform golden-orange, smells intensely of lime and ají, holds its shape when pressed into a ball but is pliable and smooth.",
-            action: "Divide into three equal portions. Proceed to assembly.",
-          },
-          {
-            state: "Overdone",
-            description:
-              "Overworked — dough has become dense, sticky, and slightly gluey.",
-            action:
-              "Unfortunately this cannot be fixed. Work gently and quickly in the future — causa is not bread dough.",
-          },
-        ],
-      },
-      feelCue:
-        "The causa dough should feel like dense, cool Play-Doh — smooth, pliable, and able to hold any shape you press it into without cracking or crumbling.",
+      "ingId": "ing_02",
+      "role": "Heat",
+      "name": "Ají amarillo pâte",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poivron jaune purée + 1⁄2 c. à thé caïenne (mineur)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Assemble",
-      inputs: ["causa_dough", "ing_06", "ing_07", "ing_08"],
-      outputState: "assembled_causa",
-      instructions:
-        "Mix the drained tuna with the mayonnaise and season with salt and a squeeze of lime — it should taste well-seasoned and creamy. Line a loaf pan or individual ring molds with plastic wrap. Press one-third of the causa dough firmly into the base in an even, compact layer. Lay the avocado slices in a single, slightly overlapping layer. Spread the tuna mixture evenly over the avocado. Press the remaining two-thirds of causa dough over the tuna in two equal layers, pressing firmly between each addition to eliminate air gaps. The layers must be dense and cohesive or the causa will crumble when sliced.",
-      visualCue: {
-        primaryTarget:
-          "From the side of a glass container, distinct horizontal bands are visible: golden potato, green avocado, cream tuna, golden potato — each layer flat and level.",
-        spectrum: [
-          {
-            state: "Underdone",
-            description:
-              "Layers are uneven, the tuna filling has lumps, air gaps are visible.",
-            action:
-              "Press the top firmly with the back of a wet spoon to compress, and refrigerate as-is.",
-          },
-          {
-            state: "Perfect",
-            description:
-              "Flat, level layers with clear color distinctions. The assembled causa is firm under gentle pressing.",
-            action:
-              "Fold plastic wrap over the top and refrigerate for at least 1 hour before unmolding.",
-          },
-          {
-            state: "Overdone",
-            description:
-              "The causa was overfilled and the plastic wrap cannot close over the top.",
-            action:
-              "Remove excess from the top layer, level it, and proceed. Serve the extra causa as a small side tasting.",
-          },
-        ],
-      },
-      feelCue:
-        "When you press the top of the assembled causa through the plastic, it should give slightly and then resist — firm and cold, with no wobble.",
+      "ingId": "ing_03",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 45,
+      "defaultUnit": "g",
+      "substitutions": [
+        "jus de citron"
+      ]
     },
     {
-      nodeId: "step_4",
-      action: "Chill",
-      inputs: ["assembled_causa", "ing_09"],
-      outputState: "causa_limena",
-      instructions:
-        "Refrigerate the assembled causa for at least 1 hour, or up to 24 hours — it only improves as it firms and the flavors meld. When ready to serve, unmold onto a cutting board or serving plate by inverting the mold and gently lifting. Remove the plastic wrap. With a sharp knife dipped in hot water and wiped dry between cuts, slice into clean portions. Garnish each serving with sliced black olives, hard-boiled egg quarters, and parsley. Serve cold — causa is a cold dish.",
-      visualCue: {
-        primaryTarget:
-          "Clean, visible layer cross-sections when sliced — golden potato, green avocado, cream-white tuna, golden potato — each layer distinct and intact.",
-        spectrum: [
-          {
-            state: "Underdone",
-            description:
-              "Causa crumbles when sliced, layers do not hold together.",
-            action:
-              "It needed more time in the refrigerator — 1 hour minimum, 2 hours ideal. Serve it as a fork-crushed pile and call it deconstructed.",
-          },
-          {
-            state: "Perfect",
-            description:
-              "Clean, sharp slice reveals beautiful distinct horizontal layers. The causa holds its shape on the plate without crumbling.",
-            action: "Garnish and serve immediately.",
-          },
-          {
-            state: "Overdone",
-            description:
-              "Causa has been refrigerated too long (over 24 hours) — the avocado has discolored slightly.",
-            action:
-              "Trim any discolored avocado edge visible in the slice. The flavor is still excellent — serve with confidence.",
-          },
-        ],
-      },
-      feelCue:
-        "The first forkful should give a clean, cool snap through the potato and a soft yield through the avocado — the contrast of firm and yielding in a single bite is the point.",
+      "ingId": "ing_04",
+      "role": "Fat",
+      "name": "Huile neutre (légume ou tournesol)",
+      "ratioValue": 50,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile d'olive légère"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Protein",
+      "name": "Thon en conserve dans l'huile d'olive (drainé)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "poitrine de poulet pochée, finement déchiquetée",
+        "saumon en conserve"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Mayonnaise",
+      "ratioValue": 80,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Avocat en rouille (coté 5mm d'épaisseur)",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Garnish",
+      "name": "Tranches d'olives noires, oeufs durs, brins de persil frais",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "câpres, radis tranchés, microherbes"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Bouillir",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "cooked_potatoes",
+      "instructions": "Mettre les pommes de terre pelées et les moitiés dans une casserole d'eau froide bien salée et porter à ébullition. Cuire jusqu'à ce qu'il soit complètement tendre et qu'un couteau glisse sans résistance — environ 20 à 25 minutes selon la taille. Égoutter immédiatement et étaler sur un plateau pour sécher à la vapeur pendant 5 minutes. Cette étape est critique : les pommes de terre humides produisent une causa collante qui ne tiendra pas sa forme. Les pommes de terre doivent être très sèches en purée.",
+      "visualCue": {
+        "primaryTarget": "Les pommes de terre sont de couleur jaune très pâle, s'écroulant aux bords, avec une surface farineuse complètement sèche après égouttage.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Un couteau rencontre une résistance au centre. La pomme de terre craque plutôt que compresse.",
+            "action": "Retourner à la casserole avec la chaleur à basse température pendant 5 minutes de plus — ne pas re-submerger dans l'eau."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une brochette passe avec une résistance nulle. Les bords de la pomme de terre commencent à peine à s'effondrer.",
+            "action": "Égoutter et assécher. Ne pas couvrir de plastique — la vapeur doit s'échapper."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les pommes de terre sont arrosées et s'écroulent dans le pot, s'écroulant lorsqu'elles sont levées.",
+            "action": "Égoutter extrêmement bien et étaler sur un plateau dans un four à 150°C pendant 5 minutes pour sécher avant d'écraser."
+          }
+        ]
+      },
+      "feelCue": "Une pomme de terre causa parfaitement cuite, pressée entre deux doigts, devrait s'effondrer sèchement et immédiatement, comme un bâton de craie, sans printemps humide."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Mash",
+      "inputs": [
+        "cooked_potatoes",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "causa_dough",
+      "instructions": "Alors que les pommes de terre sont encore chaudes, passez-les à travers un rizier de pomme de terre ou pressez-les à travers une passoire à mailles fines avec une spatule — n'utilisez jamais un robot alimentaire, qui les rendra collants. Transférer la pomme de terre rizisée dans un grand bol. Ajouter la pâte ají amarillo, le jus de lime et l'huile. Plier et travailler avec une spatule flexible jusqu'à ce que complètement homogène, sans stries blanches de pommes de terre non mélangées. Assaisonner de sel. La pâte de causa doit avoir un goût audacieux de chaux et d'ají, avec une couleur jaune orange vif et la texture d'argile douce et souple.",
+      "visualCue": {
+        "primaryTarget": "Une masse uniforme, jaune doré vif — la couleur du jaune d'œuf — sans taches blanches de pommes de terre non mélangées et sans grumeaux visibles.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les stries de pommes de terre blanches non mélangées sont visibles partout, la saveur est inégale.",
+            "action": "Plier plus fermement jusqu'à ce qu'il soit complètement uniforme — chaque bouchée doit avoir le même goût."
+          },
+          {
+            "state": "Perfect",
+            "description": "Uniforme or-orange, sent intensément la chaux et l'ají, tient sa forme lorsqu'il est pressé dans une boule mais est souple et lisse.",
+            "action": "Divisez en trois parties égales. Passez à l'assemblage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Surmené — la pâte est devenue dense, collante et légèrement collante.",
+            "action": "Malheureusement, cela ne peut être corrigé. Travailler doucement et rapidement à l'avenir — causa n'est pas de la pâte à pain."
+          }
+        ]
+      },
+      "feelCue": "La pâte de causa doit se sentir comme dense, fraîche Play-Doh — lisse, souple, et capable de tenir toute forme que vous appuyez sur elle sans craquer ou s'effondrer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Assemblage",
+      "inputs": [
+        "causa_dough",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "assembled_causa",
+      "instructions": "Mélangez le thon égoutté avec la mayonnaise et assaisonnez avec du sel et un peu de chaux — il doit goûter bien assaisonné et crémeux. Étaler un moule à pain ou un moule à anneau individuel avec du plastique. Appuyez fermement sur un tiers de la pâte causa dans la base dans une couche homogène et compacte. Déposer les tranches d'avocat dans une seule couche légèrement recoupante. Étendre le mélange de thon uniformément sur l'avocat. Appuyez sur les deux tiers restants de la pâte causa sur le thon en deux couches égales, en appuyant fermement entre chaque addition pour éliminer les vides d'air. Les couches doivent être denses et cohésives ou la causa s'effondrera lorsqu'elle sera tranchée.",
+      "visualCue": {
+        "primaryTarget": "Du côté d'un récipient en verre, des bandes horizontales distinctes sont visibles: pomme de terre dorée, avocat vert, thon à la crème, pomme de terre dorée — chaque couche plate et de niveau.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les couches sont inégales, le remplissage du thon a des bosses, des trous d'air sont visibles.",
+            "action": "Appuyez fermement sur le dessus avec le dos d'une cuillère humide pour compresser, et réfrigérer comme-est."
+          },
+          {
+            "state": "Perfect",
+            "description": "Des couches plates et de niveau avec des distinctions de couleur claires. Le causa assemblé est ferme sous pression douce.",
+            "action": "Pliez le plastique sur le dessus et réfrigérez-le pendant au moins 1 heure avant de le démonter."
+          },
+          {
+            "state": "Overdone",
+            "description": "La causa a été surremplie et l'enveloppe en plastique ne peut pas se refermer sur le dessus.",
+            "action": "Retirer l'excédent de la couche supérieure, le mettre à niveau et procéder. Servir la causa supplémentaire comme une petite dégustation latérale."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous appuyez sur le dessus de la causa assemblée à travers le plastique, il devrait donner légèrement et ensuite résister — ferme et froid, sans friction."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Refroidissement",
+      "inputs": [
+        "assembled_causa",
+        "ing_09"
+      ],
+      "outputState": "causa_limena",
+      "instructions": "Réfrigérer le causa assemblé pendant au moins 1 heure, ou jusqu'à 24 heures — il ne fait qu'améliorer à mesure qu'il ferme et que les saveurs se mélangent. Lorsqu'il est prêt à servir, démoudre sur une planche à découper ou sur une plaque de service en inversant le moule et en levant doucement. Enlevez l'enveloppe en plastique. Avec un couteau tranchant trempé dans l'eau chaude et essuyé entre les coupes, couper en portions propres. Garnir chaque portion d'olives noires tranchées, de quartiers d'oeufs durs et de persil. Servir à froid — le causa est un plat froid.",
+      "visualCue": {
+        "primaryTarget": "Coupes transversales claires et visibles lorsqu'elles sont tranchées — pomme de terre dorée, avocat vert, thon blanc crème, pomme de terre dorée — chaque couche est distincte et intacte.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Causa s'écroule en tranches, les couches ne tiennent pas ensemble.",
+            "action": "Il a fallu plus de temps au réfrigérateur — 1 heure minimum, 2 heures idéales. Servez-le comme un tas de fourche et appelez-le déconstruite."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une tranche nette et nette révèle de belles couches horizontales distinctes. La causa tient sa forme sur l'assiette sans s'effondrer.",
+            "action": "Garnir et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Causa a été réfrigéré trop longtemps (plus de 24 heures) - l'avocat a légèrement décoloré.",
+            "action": "Couper tout bord d'avocat décoloré visible dans la tranche. La saveur est encore excellente — servir avec confiance."
+          }
+        ]
+      },
+      "feelCue": "La première fourche devrait donner un coup propre et frais à travers la pomme de terre et un rendement doux à travers l'avocat — le contraste de ferme et de rendement en une seule bouchée est le point."
+    }
+  ]
 };

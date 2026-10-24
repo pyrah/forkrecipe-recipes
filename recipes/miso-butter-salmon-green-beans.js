@@ -1,104 +1,275 @@
 export default {
-  repoId: "master_japaneseamerican_misobuttersalmon_001",
-  parentRepoId: null,
-  slug: "miso-butter-salmon-green-beans",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "Miso-Butter Salmon with Roasted Green Beans",
-  description: "Salmon fillets painted with a salty-sweet miso butter roast on the same pan as blistered green beans, and the butter that melts off the fish pools into a savory glaze you spoon over the beans at the end.",
-  cuisine: "Japanese-American",
-  culture: "American home kitchen",
-  category: "seafood",
-  tags: ["home-kitchen", "weeknight", "salmon", "fish", "sheet-pan", "roasted", "miso", "green-beans"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "30 min",
-  ratioSystem: "weight",
-  servings: 4,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 2, salty: 4, sour: 1, bitter: 0, umami: 5, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Salmon fillets, skin-on, about 150 g each",       ratioValue: 600, defaultUnit: "g", substitutions: ["arctic char", "steelhead trout"] },
-    { ingId: "ing_02", role: "Base",      name: "Green beans, trimmed",                            ratioValue: 450, defaultUnit: "g", substitutions: ["asparagus, woody ends snapped off"] },
-    { ingId: "ing_03", role: "Fat",       name: "Neutral oil",                                     ratioValue: 15,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_04", role: "Seasoning", name: "Kosher salt",                                     ratioValue: 0,   defaultUnit: "to taste", substitutions: [] },
-    { ingId: "ing_05", role: "Glutamate", name: "White (shiro) miso",                              ratioValue: 45,  defaultUnit: "g", substitutions: ["yellow miso"] },
-    { ingId: "ing_06", role: "Fat",       name: "Unsalted butter, softened",                       ratioValue: 40,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Sweetener", name: "Honey",                                           ratioValue: 2,   defaultUnit: "tsp", substitutions: ["maple syrup", "mirin (1 tbsp)"] },
-    { ingId: "ing_08", role: "Allium",    name: "Garlic, finely grated",                           ratioValue: 1,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_09", role: "Acid",      name: "Rice vinegar, unseasoned",                        ratioValue: 2,   defaultUnit: "tsp", substitutions: ["fresh lemon juice"] },
-    { ingId: "ing_10", role: "Garnish",   name: "Scallions, thinly sliced",                        ratioValue: 2,   defaultUnit: "stalks", substitutions: [] },
-    { ingId: "ing_11", role: "Garnish",   name: "Toasted sesame seeds",                            ratioValue: 1,   defaultUnit: "tsp", substitutions: [] },
+  "repoId": "master_japaneseamerican_misobuttersalmon_001",
+  "parentRepoId": null,
+  "slug": "miso-butter-salmon-green-beans",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Saumon Miso-Butter aux haricots verts rôtis",
+  "description": "Filets de saumon peints à l'aide d'un torréfaction au beurre miso salé sur la même casserole que les haricots verts cloqués, et le beurre qui fond des piscines de poisson en une glaçure salée que vous cuillerez sur les haricots à la fin.",
+  "cuisine": "Japonais-Américain",
+  "culture": "Cuisine américaine à domicile",
+  "category": "seafood",
+  "tags": [
+    "cuisine maison",
+    "nuit",
+    "saumon",
+    "poissons",
+    "Tôle",
+    "grillés",
+    "miso",
+    "Haricots verts"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "30 min",
+  "ratioSystem": "weight",
+  "servings": 4,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 4,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 5,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Mix",
-      inputs: ["ing_05", "ing_06", "ing_07", "ing_08"],
-      outputState: "miso_butter",
-      instructions: "Heat the oven to 425°F (220°C) with a rack in the upper-middle position. In a small bowl, mash the miso, softened butter, honey and grated garlic with a fork until completely smooth and uniform.",
-      visualCue: {
-        primaryTarget: "A smooth, pale-caramel paste with no streaks of plain butter or lumps of miso.",
-        spectrum: [
-          { state: "Underdone", description: "White butter streaks and beige miso lumps visible.", action: "Keep mashing; if the butter is too cold, set the bowl near the warm oven for 1 minute." },
-          { state: "Perfect",   description: "Uniform, spreadable paste the color of peanut butter.", action: "Set aside while the beans start roasting." },
-          { state: "Overdone",  description: "Butter has fully melted and the miso has separated into a grainy layer.", action: "Chill 5 minutes and stir again; or just brush it on as a thinner glaze." },
-        ],
-      },
-      feelCue: "It should spread like soft frosting on the back of a spoon and smell sweet, salty and faintly funky.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Filets de saumon, avec peau, environ 150 g chacun",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "omble chevalier",
+        "truite arc-en-ciel"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Roast",
-      inputs: ["ing_02", "ing_03", "ing_04"],
-      outputState: "par_roasted_beans",
-      instructions: "On a rimmed sheet pan, toss the green beans with the oil and 1/2 tsp kosher salt and spread them out. Roast for 8 minutes to give them a head start.",
-      visualCue: {
-        primaryTarget: "Beans turning a brighter, glossier green with the first small blisters appearing.",
-        spectrum: [
-          { state: "Underdone", description: "Beans unchanged, dull green, no sizzle.", action: "Give them 2 more minutes before adding the fish." },
-          { state: "Perfect",   description: "Vivid green with a few browned freckles; still firm.", action: "Push to the edges and add the salmon." },
-          { state: "Overdone",  description: "Beans already shriveled and brown throughout.", action: "Move them to a plate and return them to the pan for only the last 3 minutes of the salmon's roast." },
-        ],
-      },
-      feelCue: "The pan should be sizzling faintly when you open the oven, and a bean should bend slightly but still snap.",
+      "ingId": "ing_02",
+      "role": "Base",
+      "name": "Haricots verts, parés",
+      "ratioValue": 450,
+      "defaultUnit": "g",
+      "substitutions": [
+        "asperges, extrémités boisées cassées"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Glaze and roast",
-      inputs: ["par_roasted_beans", "ing_01", "miso_butter"],
-      outputState: "roasted_salmon_beans",
-      instructions: "Pat the salmon dry. Push the beans to the edges of the pan and lay the fillets skin-side down in the center. Spread the miso butter thickly over the tops and sides of the fillets. Roast 9–12 minutes, depending on thickness, until the salmon flakes easily and is opaque at the center or reads 145°F (63°C) in the thickest part. If the tops are pale, switch to the broiler for the final 1–2 minutes, watching constantly — miso burns quickly.",
-      visualCue: {
-        primaryTarget: "Salmon with a bronzed, bubbling miso crust, flesh opaque and just separating into flakes, butter pooling around the beans.",
-        spectrum: [
-          { state: "Underdone", description: "Center still deep translucent orange and the flesh resists a fork.", action: "Return to the oven for 2 minutes and check again." },
-          { state: "Perfect",   description: "Opaque pale-coral flesh that separates into large moist flakes under gentle fork pressure, 145°F (63°C) at the thickest point; glaze caramelized at the edges.", action: "Remove immediately." },
-          { state: "Overdone",  description: "White albumin beading heavily on the sides, flakes dry and chalky, glaze blackened.", action: "Spoon extra pan butter over the fish and scrape off any burnt glaze." },
-        ],
-      },
-      feelCue: "Press the top of a fillet with a fingertip: it should give and begin to separate into layers, like pressing a stack of cards, not spring back firmly.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Huile neutre",
+      "ratioValue": 15,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Finish",
-      inputs: ["roasted_salmon_beans", "ing_09", "ing_10", "ing_11"],
-      outputState: "finished_miso_salmon",
-      instructions: "Drizzle the rice vinegar over the green beans and toss them in the melted miso butter on the pan. Plate the salmon with the beans, spoon over any remaining pan juices, and scatter with scallions and sesame seeds. Serve with steamed rice if you like.",
-      visualCue: {
-        primaryTarget: "Beans glistening with miso butter, salmon glazed and topped with fresh green scallion rings.",
-        spectrum: [
-          { state: "Underdone", description: "Beans dry and plain while the butter sits pooled under the fish.", action: "Tilt the pan and roll the beans through the juices." },
-          { state: "Perfect",   description: "Everything coated in a thin, savory gloss with a bright hit of vinegar.", action: "Serve hot." },
-          { state: "Overdone",  description: "Too much vinegar pooling and making the beans sour.", action: "Add a small pat of butter and a pinch of salt to rebalance." },
-        ],
-      },
-      feelCue: "A bite of bean should taste deeply savory first and then clean and bright from the vinegar.",
+      "ingId": "ing_04",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 0,
+      "defaultUnit": "to taste",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Glutamate",
+      "name": "Blanc (shiro) miso",
+      "ratioValue": 45,
+      "defaultUnit": "g",
+      "substitutions": [
+        "miso jaune"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé, ramolli",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Sweetener",
+      "name": "Chérie",
+      "ratioValue": 2,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "sirop d'érable",
+        "mirine (1 c. à soupe)"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Ail, râpé finement",
+      "ratioValue": 1,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Acid",
+      "name": "vinaigre de riz, non assaisonné",
+      "ratioValue": 2,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "jus de citron frais"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Garnish",
+      "name": "Échalons, tranchés finement",
+      "ratioValue": 2,
+      "defaultUnit": "stalks",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Garnish",
+      "name": "Graines de sésame grillées",
+      "ratioValue": 1,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "miso_butter",
+      "instructions": "Chauffer le four à 425°F (220°C) avec une grille en position médiane supérieure. Dans un petit bol, écraser le miso, adoucir le beurre, le miel et râpé l'ail avec une fourchette jusqu'à ce qu'il soit complètement lisse et uniforme.",
+      "visualCue": {
+        "primaryTarget": "Une pâte de caramel lisse et pâle sans stries de beurre clair ou de morceaux de miso.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Stries de beurre blanc et morceaux de miso beige visibles.",
+            "action": "Continuez à broyer; si le beurre est trop froid, placez le bol près du four chaud pendant 1 minute."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte uniforme et à tartiner de la couleur du beurre d'arachide.",
+            "action": "Réserver pendant que les haricots commencent à rôtir."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le beurre a complètement fondu et le miso s'est séparé en une couche granuleuse.",
+            "action": "Refroidir 5 minutes et remuer à nouveau; ou simplement le brosser comme une glaçure plus mince."
+          }
+        ]
+      },
+      "feelCue": "Il devrait se propager comme le gel doux sur le dos d'une cuillère et sentir doux, salé et légèrement funky."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_02",
+        "ing_03",
+        "ing_04"
+      ],
+      "outputState": "par_roasted_beans",
+      "instructions": "Sur une casserole en tôle bordée, jeter les haricots verts avec l'huile et 1/2 c. à thé sel casher et les étaler. Faites cuire pendant 8 minutes pour leur donner une longueur d'avance.",
+      "visualCue": {
+        "primaryTarget": "Les haricots tournent un vert plus brillant avec les premières petites ampoules apparaissant.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Haricots inchangés, vert terne, sans étourdissement.",
+            "action": "Donnez-leur 2 minutes avant d'ajouter le poisson."
+          },
+          {
+            "state": "Perfect",
+            "description": "Vert vif avec quelques rousseurs brunis; encore ferme.",
+            "action": "Poussez sur les bords et ajoutez le saumon."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les haricots sont déjà rivés et bruns.",
+            "action": "Déplacez-les dans une assiette et retournez-les dans la poêle pour seulement les 3 dernières minutes du rôti du saumon."
+          }
+        ]
+      },
+      "feelCue": "La poêle doit être légèrement étourdie lorsque vous ouvrez le four, et un haricot doit se plier légèrement mais se casser encore."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Glace et rôti",
+      "inputs": [
+        "par_roasted_beans",
+        "ing_01",
+        "miso_butter"
+      ],
+      "outputState": "roasted_salmon_beans",
+      "instructions": "Faites sécher le saumon. Poussez les haricots sur les bords de la poêle et posez les filets côté peau au centre. Étendre le beurre miso épais sur le dessus et les côtés des filets. Faire cuire 9-12 minutes, selon l'épaisseur, jusqu'à ce que le saumon floce facilement et soit opaque au centre ou lit 145°F (63°C) dans la partie la plus épaisse. Si les sommets sont pâles, passez au grilleur pendant les dernières 1 à 2 minutes, en regardant constamment — miso brûle rapidement.",
+      "visualCue": {
+        "primaryTarget": "Saumon avec une croûte miso bronzée et bouillonnante, chair opaque et juste se séparant en flocons, beurre brouillant autour des haricots.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Centrer encore l'orange translucide profonde et la chair résiste à une fourchette.",
+            "action": "Retourner au four 2 minutes et vérifier à nouveau."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair opaque pâle-corale qui se sépare en grands flocons humides sous une légère pression de fourche, 145°F (63°C) au point le plus épais; glaçure caramélisée aux bords.",
+            "action": "Supprimer immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'albumine blanche perle fortement sur les côtés, flocons secs et crayeux, glaçure noircie.",
+            "action": "Spoon beurre de casserole supplémentaire sur le poisson et racler toute glaçure brûlée."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur le dessus d'un filet avec un bout de doigt : il doit donner et commencer à se séparer en couches, comme en appuyant sur une pile de cartes, ne ressort pas fermement."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Finition",
+      "inputs": [
+        "roasted_salmon_beans",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "finished_miso_salmon",
+      "instructions": "Arrosez le vinaigre de riz sur les haricots verts et jetez-les dans le beurre miso fondu sur la poêle. Associez le saumon avec les haricots, cuillerez sur tout jus de poêle restant et dispersez-le avec les oignons et les graines de sésame. Servir avec du riz cuit à la vapeur si vous voulez.",
+      "visualCue": {
+        "primaryTarget": "Les haricots scintillent avec du beurre miso, du saumon glacé et garnis d'anneaux verts frais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Haricots secs et unis tandis que le beurre est baigné sous le poisson.",
+            "action": "Incliner la poêle et rouler les haricots dans les jus."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tout enduit d'un fin brillant savoureux avec un coup lumineux de vinaigre.",
+            "action": "Servir chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de vinaigre et de faire les haricots aigre.",
+            "action": "Ajouter une petite tape de beurre et une pincée de sel pour rééquilibrer."
+          }
+        ]
+      },
+      "feelCue": "Une bouchée de haricot doit d'abord être profondément salée, puis propre et brillante du vinaigre."
+    }
+  ]
 };

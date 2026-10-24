@@ -1,91 +1,219 @@
 export default {
-  repoId: "master_polish_pierogi-dough_001",
-  parentRepoId: null,
-  slug: "pierogi-dough",
-  author: "ForkRecipe Kitchen",
-  title: "Pierogi Dough",
-  description: "A supple, silky dumpling dough that rolls impossibly thin without tearing — pale and smooth as chamois leather, pliable enough to pleat easily, yet firm enough to survive a rolling boil.",
-  cuisine: "Polish",
-  culture: "Polish",
-  category: "breads",
-  tags: ["dumpling", "dough", "polish", "boiled", "vegetarian"],
-  difficulty: 2,
-  activeTime: "30 min",
-  totalTime: "60 min",
-  ratioSystem: "parts",
-  stars: 0, forks: 0, contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 2, sour: 1, bitter: 0, umami: 1, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Plain flour (all-purpose)",                  ratioValue: 100, defaultUnit: "parts", substitutions: ["tipo 00 flour for extra silkiness"] },
-    { ingId: "ing_02", role: "Binder",     name: "Egg yolks",                                  ratioValue: 10,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_03", role: "Dairy",      name: "Sour cream (full-fat)",                      ratioValue: 20,  defaultUnit: "parts", substitutions: ["crème fraîche"] },
-    { ingId: "ing_04", role: "Hydration",  name: "Warm water",                                 ratioValue: 15,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_05", role: "Seasoning",  name: "Fine sea salt",                              ratioValue: 1,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",        name: "Unsalted butter, melted (for boiled finish)", ratioValue: 5,  defaultUnit: "parts", substitutions: ["sunflower oil"] },
+  "repoId": "master_polish_pierogi-dough_001",
+  "parentRepoId": null,
+  "slug": "pierogi-dough",
+  "author": "ForkRecipe Kitchen",
+  "title": "Pierogi Dough",
+  "description": "Une pâte souple et soyeuse qui roule de façon impossible sans déchirer — pâle et lisse comme du cuir chamois, suffisamment souple pour plisser facilement, mais assez ferme pour survivre à un ébullition.",
+  "cuisine": "Polonais",
+  "culture": "Polonais",
+  "category": "breads",
+  "tags": [
+    "les boulettes",
+    "pâte",
+    "poli",
+    "bouillie",
+    "végétarien"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "30 min",
+  "totalTime": "60 min",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 1,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05"],
-      outputState: "shaggy_pierogi_dough",
-      instructions: "Mound the flour on a clean work surface and make a wide well in the center. Add the egg yolks, sour cream, warm water, and salt to the well. Beat the wet ingredients gently with a fork, then gradually incorporate the flour from the inner walls of the well, stirring in a widening spiral. When the mixture becomes too thick to stir, begin kneading with your hands — flour from the edges inward, pressing and folding. The dough will come together into a rough, slightly sticky mass.",
-      visualCue: {
-        primaryTarget: "A cohesive, slightly sticky dough mass that holds together without crumbling. No dry flour pockets. Rough and irregular in texture.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is crumbly and falling apart. Dry flour patches on the surface.", action: "Add warm water one teaspoon at a time, kneading after each addition, until the dough coheres." },
-          { state: "Perfect",   description: "Dough holds together cleanly and is slightly tacky but not wet. Rough and lumpy at this stage — that is fine.", action: "Knead for 5-8 minutes until smooth." },
-          { state: "Overdone",  description: "Dough is very wet and sticky, spreading out on the work surface.", action: "Dust with flour a tablespoon at a time, kneading after each addition, until the dough stops spreading." },
-        ],
-      },
-      feelCue: "The initial dough should feel like thick, slightly tacky playdough — it sticks to your fingers slightly but does not pull off in strings or feel wet. That slight tackiness is the sour cream working.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Farine plate (tout usage)",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tipo 00 farine pour une soyosité supplémentaire"
+      ]
     },
     {
-      nodeId: "step_2", action: "Knead",
-      inputs: ["shaggy_pierogi_dough"],
-      outputState: "rested_pierogi_dough",
-      instructions: "Knead the dough on a lightly floured surface for 5-8 minutes using a push-fold-turn rhythm: push the heel of your hand forward, fold the dough back over itself, rotate a quarter turn, repeat. The dough transforms from rough and lumpy to smooth and supple. It should not require much flour — add only enough to prevent sticking. Once smooth, wrap tightly in plastic wrap and rest at room temperature for 30 minutes. This rest is essential: it relaxes the gluten so the dough can be rolled paper-thin without springing back.",
-      visualCue: {
-        primaryTarget: "Smooth, pale, slightly shiny dough with a surface like chamois leather. No lumps, tears, or rough patches. Springs back slowly when poked.",
-        spectrum: [
-          { state: "Underdone", description: "Dough is still rough and lumpy. Tears when stretched slightly. Resists rolling back together.", action: "Knead for another 3 minutes. The gluten network is still underdeveloped." },
-          { state: "Perfect",   description: "Completely smooth surface. Uniform pale color. Slowly springs back about halfway when poked. Feels soft, silky, and pliable.", action: "Wrap tightly and rest for 30 minutes at room temperature." },
-          { state: "Overdone",  description: "Dough is warm, very stiff, and elastic — springs back aggressively when stretched.", action: "Wrap and rest for 20 minutes. Over-kneaded dough relaxes well; the rest is mandatory." },
-        ],
-      },
-      feelCue: "After kneading, the dough should feel silky and almost elastic under the palm — like pressing on a firm gel pad. Push a thumb in: it should slowly spring back three-quarters of the way. If it springs back instantly, it needs more rest.",
+      "ingId": "ing_02",
+      "role": "Binder",
+      "name": "Jaunes d'œuf",
+      "ratioValue": 10,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_3", action: "Roll",
-      inputs: ["rested_pierogi_dough"],
-      outputState: "rolled_dough_sheets",
-      instructions: "Divide the rested dough into two halves (keep one half covered while working the other). On a lightly floured surface, roll with a rolling pin from the center outward, turning the sheet a quarter turn after every 3-4 passes. The goal is a uniform sheet 2mm thick — thin enough to be almost translucent when held up to light, but not so thin it tears. Cut circles with a 7-8 cm round cutter or an upturned glass. Re-roll scraps once.",
-      visualCue: {
-        primaryTarget: "A smooth, even sheet approximately 2mm thick — when held up to a light source, it should be slightly translucent. Circles cut cleanly with no ragged edges.",
-        spectrum: [
-          { state: "Underdone", description: "Sheet is 4mm or more — too thick. The pierogi will be bready and heavy. The edges of cut circles look chunky.", action: "Continue rolling — apply more even pressure from the center outward. Rotate the sheet more frequently." },
-          { state: "Perfect",   description: "2mm sheet that shows a very slight translucency when lifted. Circles cut cleanly and hold their round shape. Thin enough to be tender, thick enough to be pleatable.", action: "Fill and pleat immediately, or keep circles covered with a damp cloth." },
-          { state: "Overdone",  description: "Sheet is tearing or has holes. Translucent to the point of being see-through. Will break when filled and boiled.", action: "Re-roll gently with scraps to patch tears. Slightly thicker is always better than too thin." },
-        ],
-      },
-      feelCue: "The rolled sheet should feel cool, smooth, and pliable — it should drape over your hand like thin fabric without drooping through your fingers. If it tears just from handling, it is too thin.",
+      "ingId": "ing_03",
+      "role": "Dairy",
+      "name": "Crème acide (graisse pleine)",
+      "ratioValue": 20,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Crème fraîche"
+      ]
     },
     {
-      nodeId: "step_4", action: "Boil",
-      inputs: ["rolled_dough_sheets", "ing_06"],
-      outputState: "cooked_pierogi",
-      instructions: "Bring a large pot of well-salted water to a rolling boil. Work in batches — no more than 8-10 pierogi at a time to prevent sticking and temperature drops. Lower the pierogi gently with a slotted spoon. They will sink to the bottom, then float up as they cook. Once they float, cook for a further 2-3 minutes for a total of 4-5 minutes from entry. Remove with a slotted spoon, drain, and toss immediately with melted butter to prevent sticking.",
-      visualCue: {
-        primaryTarget: "Cooked pierogi float at the surface, slightly plumped and translucent, with a smooth, unwrinkled surface. The sealed edges are intact.",
-        spectrum: [
-          { state: "Underdone", description: "Pierogi have barely floated or have not floated yet. The dough looks gummy and wet when bitten.", action: "Cook for another 1-2 minutes after floating. Raw pierogi dough is stodgy and unpleasant." },
-          { state: "Perfect",   description: "Floating with a smooth, slightly translucent surface. Plump from steam inside. Dough is tender and silky when bitten — no raw starchy taste.", action: "Drain, toss in butter, and serve immediately. Or cool and pan-fry in butter for golden, crispy sides." },
-          { state: "Overdone",  description: "Pierogi have been in the water too long. The dough has started to swell and become bloated. The sealed edge may be opening.", action: "Remove immediately. Very over-cooked pierogi become waterlogged — serve quickly with butter." },
-        ],
-      },
-      feelCue: "A cooked pierogi should feel plump and light when lifted on a spoon — noticeably puffed from the steam trapped inside. Bite one: the dough should be silky and tender, just slightly chewy, yielding instantly to reveal the filling.",
+      "ingId": "ing_04",
+      "role": "Hydration",
+      "name": "Eau chaude",
+      "ratioValue": 15,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_05",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 1,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Beurre non salé, fondu (pour ébullition)",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "huile de tournesol"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05"
+      ],
+      "outputState": "shaggy_pierogi_dough",
+      "instructions": "Défoncer la farine sur une surface de travail propre et faire un grand puits au centre. Ajouter les jaunes d'œufs, la crème sure, l'eau chaude et le sel au puits. Battre les ingrédients humides doucement avec une fourchette, puis incorporer progressivement la farine des parois intérieures du puits, en remuant dans une spirale d'élargissement. Quand le mélange devient trop épais pour remuer, commencez à pétrir avec vos mains — de la farine des bords vers l'intérieur, en pressant et en pliant. La pâte se retrouvera dans une masse rugueuse, légèrement collante.",
+      "visualCue": {
+        "primaryTarget": "Une masse de pâte cohésive et légèrement collante qui se maintient sans s'effondrer. Pas de poches de farine sèche. Dure et irrégulière dans la texture.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est émiettée et s'effondre. Farine sèche à la surface.",
+            "action": "Ajouter l'eau chaude une cuillère à café à la fois, pétrir après chaque addition, jusqu'à ce que la pâte cohère."
+          },
+          {
+            "state": "Perfect",
+            "description": "La touffe se tient bien et est légèrement collante mais pas humide. C'est bien.",
+            "action": "Agenouiller pendant 5-8 minutes jusqu'à ce qu'il soit lisse."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est très humide et collante, s'étendant sur la surface de travail.",
+            "action": "Poudre avec la farine une cuillère à soupe à la fois, pétrir après chaque ajout, jusqu'à ce que la pâte cesse de se répandre."
+          }
+        ]
+      },
+      "feelCue": "La pâte initiale doit avoir l'air épaisse et légèrement piquante; elle colle légèrement aux doigts, mais ne se tire pas dans les cordes ou se sent mouillée. Cette légèreté est la crème aigre qui fonctionne."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Agenouillement",
+      "inputs": [
+        "shaggy_pierogi_dough"
+      ],
+      "outputState": "rested_pierogi_dough",
+      "instructions": "Agenouillez la pâte sur une surface légèrement farinée pendant 5-8 minutes à l'aide d'un rythme de retournement : poussez le talon de votre main vers l'avant, repliez la pâte sur elle-même, tournez un quart de tour, répétez. La pâte se transforme de rugueux et grumeux à lisse et souple. Il ne devrait pas exiger beaucoup de farine — ajouter seulement assez pour empêcher le collage. Une fois lisses, envelopper fermement l'enveloppe en plastique et reposer à température ambiante pendant 30 minutes. Ce repos est essentiel : il détend le gluten pour que la pâte soit roulée en papier-mince sans retomber.",
+      "visualCue": {
+        "primaryTarget": "Pâte lisse, pâle, légèrement brillante avec une surface comme le cuir chamois. Pas de grumeaux, de larmes ou de taches rugueuses. Il ressort lentement quand il pète.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La toux est encore rugueuse et grogneuse. Larmes légèrement tendues. Les résistances se retournent ensemble.",
+            "action": "Agenouillez encore 3 minutes. Le réseau de gluten est encore sous-développé."
+          },
+          {
+            "state": "Perfect",
+            "description": "Surface complètement lisse. Couleur pâle uniforme. Lentement, il ressort vers la moitié quand il est poché. Se sent doux, soyeux et souple.",
+            "action": "Enveloppez bien et reposez-vous 30 minutes à température ambiante."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est chaude, très raide et élastique.",
+            "action": "Envelopper et reposer pendant 20 minutes. La pâte surcollée se détend bien; le reste est obligatoire."
+          }
+        ]
+      },
+      "feelCue": "Après le pétrissage, la pâte devrait se sentir soyeuse et presque élastique sous la paume, comme en appuyant sur un tampon de gel ferme. Poussez un pouce à l'intérieur: il devrait lentement revenir en arrière trois quarts du chemin. Si elle revient instantanément, elle a besoin de plus de repos."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Rouleaux",
+      "inputs": [
+        "rested_pierogi_dough"
+      ],
+      "outputState": "rolled_dough_sheets",
+      "instructions": "Diviser la pâte reposée en deux moitiés (conserver une moitié couverte pendant le travail de l'autre). Sur une surface légèrement farinée, rouler avec un rouleau du centre vers l'extérieur, tourner la feuille un quart de tour après chaque 3-4 passe. Le but est une feuille uniforme de 2mm d'épaisseur, assez mince pour être presque translucide lorsqu'elle est portée à la lumière, mais pas si mince qu'elle déchire. Couper les cercles avec une coupe ronde de 7-8 cm ou un verre retourné. Reroulez les débris une fois.",
+      "visualCue": {
+        "primaryTarget": "Une feuille lisse et uniforme d'environ 2 mm d'épaisseur — lorsqu'elle est maintenue jusqu'à une source lumineuse, elle doit être légèrement translucide. Les cercles sont coupés de façon propre sans arêtes.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La feuille est de 4mm ou plus — trop épaisse. Les pierogis seront maigres et lourds. Les bords des cercles coupés ont l'air volumineux.",
+            "action": "Continuer à rouler — appliquer une pression plus uniforme du centre vers l'extérieur. Faites tourner la feuille plus fréquemment."
+          },
+          {
+            "state": "Perfect",
+            "description": "Feuille de 2 mm montrant une très légère translucidité lorsqu'elle est levée. Les cercles coupent proprement et tiennent leur forme ronde. Assez mince pour être tendre, assez épaisse pour être plissée.",
+            "action": "Remplir et plisser immédiatement, ou garder les cercles couverts d'un chiffon humide."
+          },
+          {
+            "state": "Overdone",
+            "description": "La feuille se déchire ou a des trous. Translucide au point d'être vu. Sera cassé quand rempli et bouilli.",
+            "action": "Reroulez doucement avec des débris pour patcher les larmes. Un peu plus épais est toujours mieux que trop mince."
+          }
+        ]
+      },
+      "feelCue": "La feuille roulée devrait être fraîche, lisse et souple, elle devrait draper sur votre main comme un tissu mince sans glisser dans vos doigts. Si elle déchire juste de la manipulation, elle est trop mince."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Bouillir",
+      "inputs": [
+        "rolled_dough_sheets",
+        "ing_06"
+      ],
+      "outputState": "cooked_pierogi",
+      "instructions": "Portez un grand pot d'eau bien salée à ébullition. Travaillez en lots — pas plus de 8-10 pierogi à la fois pour éviter les chutes de température et de collage. Abaissez doucement le pierogi avec une cuillère à fentes. Ils couleront jusqu'au fond, puis flotteront en cuisine. Une fois qu'ils flottent, cuire encore 2-3 minutes pendant un total de 4-5 minutes à partir de l'entrée. Retirer avec une cuillère à fentes, égoutter et mélanger immédiatement avec du beurre fondu pour éviter de coller.",
+      "visualCue": {
+        "primaryTarget": "Le pierogi cuit flotte à la surface, légèrement plumé et translucide, avec une surface lisse et non pliée. Les bords scellés sont intacts.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Pierogi ont à peine flotté ou n'ont pas encore flotté. La pâte a l'air gommée et mouillée quand mordue.",
+            "action": "Cuire encore 1-2 minutes après avoir flottant. La pâte crule de pierogi est stodique et désagréable."
+          },
+          {
+            "state": "Perfect",
+            "description": "Flouer avec une surface lisse, légèrement translucide. La vapeur à l'intérieur. La toux est tendre et soyeuse lorsqu'elle est mordue — pas de goût d'amidon cru.",
+            "action": "Égoutter, mélanger le beurre et servir immédiatement. Ou refroidir et fritr dans le beurre pour les côtés dorés et croustillants."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pierogi est dans l'eau depuis trop longtemps. La pâte a commencé à gonfler et à se gonfler. Le bord scellé peut s'ouvrir.",
+            "action": "Supprimer immédiatement. Les pierogis très surcuits deviennent waterlogged — servent rapidement avec du beurre."
+          }
+        ]
+      },
+      "feelCue": "Un pierogi cuit doit se sentir plumé et léger lorsqu'il est soulevé sur une cuillère, bien gonflé de la vapeur qui se trouve à l'intérieur. Bite un: la pâte doit être soyeuse et tendre, juste légèrement mâcheuse, donnant instantanément pour révéler le remplissage."
+    }
+  ]
 };

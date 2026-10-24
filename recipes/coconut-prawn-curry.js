@@ -1,101 +1,311 @@
 export default {
-  repoId: "master_thai_coconut_prawn_curry_001",
-  parentRepoId: null,
-  slug: "coconut-prawn-curry",
-  author: "ForkRecipe Kitchen",
-  title: "Coconut Prawn Curry",
-  description: "Tiger prawns simmered in a golden, fragrant coconut curry alive with lemongrass, galangal and fresh turmeric — fresh, quick and bracingly bright. The south of Thailand in a bowl: coconut-sweet, fish-sauce-salty, lime-sour, chili-warm.",
-  cuisine: "Thai",
-  culture: "Southern Thai",
-  category: "seafood",
-  tags: ["thai", "seafood", "curry", "coconut", "gluten-free", "dairy-free"],
-  difficulty: 2,
-  activeTime: "25 min",
-  totalTime: "35 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 2, salty: 3, sour: 2, bitter: 0, umami: 3, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Tiger prawns, shell-on and heads on",            ratioValue: 500, defaultUnit: "g",   substitutions: ["king prawns", "large shrimp"] },
-    { ingId: "ing_02", role: "Liquid",    name: "Full-fat coconut milk (1 can)",                  ratioValue: 400, defaultUnit: "ml",  substitutions: ["coconut cream, diluted 1:1 with water"] },
-    { ingId: "ing_03", role: "Aromatic",  name: "Lemongrass stalks, outer layers removed, bruised", ratioValue: 40, defaultUnit: "g",  substitutions: ["lemongrass paste (2 tsp per stalk)"] },
-    { ingId: "ing_04", role: "Aromatic",  name: "Galangal, thinly sliced",                        ratioValue: 20,  defaultUnit: "g",   substitutions: ["fresh ginger (milder, different character)"] },
-    { ingId: "ing_05", role: "Spice",     name: "Fresh turmeric, grated (or 1 tsp dried)",        ratioValue: 10,  defaultUnit: "g",   substitutions: ["ground turmeric"] },
-    { ingId: "ing_06", role: "Allium",    name: "Shallots, thinly sliced",                        ratioValue: 60,  defaultUnit: "g",   substitutions: ["red onion"] },
-    { ingId: "ing_07", role: "Allium",    name: "Garlic cloves, thinly sliced",                   ratioValue: 15,  defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_08", role: "Umami",     name: "Fish sauce",                                     ratioValue: 30,  defaultUnit: "ml",  substitutions: ["soy sauce + touch of lime for vegan"] },
-    { ingId: "ing_09", role: "Sweetener", name: "Palm sugar or soft brown sugar",                 ratioValue: 15,  defaultUnit: "g",   substitutions: ["coconut sugar", "granulated sugar"] },
-    { ingId: "ing_10", role: "Herb",      name: "Kaffir lime leaves (fresh or frozen)",           ratioValue: 6,   defaultUnit: "pcs", substitutions: ["1 tsp lime zest (weaker substitute)"] },
-    { ingId: "ing_11", role: "Heat",      name: "Fresh red chilies, deseeded and sliced",         ratioValue: 20,  defaultUnit: "g",   substitutions: ["bird's eye chili for more heat", "sweet red pepper for less"] },
-    { ingId: "ing_12", role: "Herb",      name: "Thai basil leaves",                              ratioValue: 15,  defaultUnit: "g",   substitutions: ["Italian basil (different flavor)"] },
-    { ingId: "ing_13", role: "Acid",      name: "Fresh lime juice",                               ratioValue: 30,  defaultUnit: "ml",  substitutions: [] },
-    { ingId: "ing_14", role: "Fat",       name: "Coconut oil or neutral oil",                     ratioValue: 30,  defaultUnit: "ml",  substitutions: [] },
+  "repoId": "master_thai_coconut_prawn_curry_001",
+  "parentRepoId": null,
+  "slug": "coconut-prawn-curry",
+  "author": "ForkRecipe Kitchen",
+  "title": "Curry de noix de coco",
+  "description": "Des crevettes tigrées mijotées dans un curry de noix de coco doré et parfumé vif avec de la citronnelle, du galangal et du curcuma frais – frais, rapide et éclatant. Le sud de la Thaïlande dans un bol: noix de coco-doux, poisson-sauce-sel, chaux-sour, chili-chauffe.",
+  "cuisine": "Thaï",
+  "culture": "Thaï du Sud",
+  "category": "seafood",
+  "tags": [
+    "Thaï",
+    "Produits de la mer",
+    "curry",
+    "noix de coco",
+    "Sans gluten",
+    "sans produits laitiers"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "25 min",
+  "totalTime": "35 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 3,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Build aromatic base",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_11", "ing_14"],
-      outputState: "aromatic_base",
-      instructions: "Heat the coconut oil in a wide wok or pan over medium-high heat. Add the shallots and cook, stirring, for 3 minutes until softened and slightly golden. Add the garlic, galangal slices, and sliced lemongrass. Cook 1 minute. Add the fresh turmeric and chili slices. Stir-fry for another 2 minutes — the kitchen should fill with a sharp, citrusy, spicy fragrance. The aromatics should be softened and fragrant but not browned — you are blooming, not frying.",
-      visualCue: {
-        primaryTarget: "The aromatics are soft and glistening, the turmeric has turned everything a vivid golden-orange. The lemongrass and galangal are paler and slightly wilted at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Shallots are still translucent white, the galangal raw-hard, the turmeric raw-smelling and bitter.", action: "Cook another minute on medium-high. Underdone aromatics give the curry a raw, bitter edge." },
-          { state: "Perfect",   description: "Everything is softened, deeply fragrant, and golden. The oil is stained vivid orange from the turmeric. The smell is citrusy, sharp, and floral.", action: "Add the coconut milk immediately." },
-          { state: "Overdone",  description: "Shallots and garlic are dark brown and bitter, the galangal is beginning to char. The smell is sharp and acrid.", action: "Lower the heat, add the coconut milk now to stop the browning. A slightly bitter base can be balanced with extra palm sugar." },
-        ],
-      },
-      feelCue: "The wok should feel lively and hot under your hand held above it — the aromatics should sizzle actively and fill the air with fragrance the instant they hit the oil.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Crevettes tigrées, coquillages et têtes",
+      "ratioValue": 500,
+      "defaultUnit": "g",
+      "substitutions": [
+        "crevettes royales",
+        "grandes crevettes"
+      ]
     },
     {
-      nodeId: "step_2", action: "Simmer the curry sauce",
-      inputs: ["aromatic_base", "ing_02", "ing_08", "ing_09", "ing_10"],
-      outputState: "curry_sauce",
-      instructions: "Pour the coconut milk into the pan, scraping any golden bits from the bottom. Add the kaffir lime leaves, fish sauce, and palm sugar. Stir to dissolve the sugar. Bring to a gentle simmer over medium heat — do not boil hard, which breaks the coconut milk and makes the sauce grainy. Simmer for 5 minutes, stirring occasionally, until the sauce is fragrant and slightly thickened. Taste: it should be savory-sweet-salty with a sharp citrus note from the lime leaves.",
-      visualCue: {
-        primaryTarget: "A smooth, golden-yellow sauce at a lazy simmer — small bubbles breaking slowly at the surface, the color vivid from the turmeric, glossy from the coconut fat.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is very thin and pale, the coconut milk barely simmered, the aromatics still raw-tasting in the background.", action: "Simmer another 3–4 minutes until the sauce thickens slightly and smells deeply fragrant." },
-          { state: "Perfect",   description: "Sauce is golden, aromatic, glossy, and slightly thickened. It clings lightly to a spoon. The lime leaf fragrance is prominent.", action: "Add the prawns." },
-          { state: "Overdone",  description: "The coconut milk has split — a greasy, grainy layer of coconut oil sits on top of a thin, watery layer. The sauce looks broken.", action: "Remove from heat and stir vigorously, adding a splash of fresh coconut milk or water. Keep at a very gentle simmer going forward." },
-        ],
-      },
-      feelCue: "Dip a spoon into the curry sauce and run your finger across the back — the sauce should coat in a thin, uniform layer that smells unmistakably of kaffir lime and lemongrass.",
+      "ingId": "ing_02",
+      "role": "Liquid",
+      "name": "Lait de coco plein gras (1 boîte)",
+      "ratioValue": 400,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "crème de coco, diluée 1:1 avec de l'eau"
+      ]
     },
     {
-      nodeId: "step_3", action: "Cook the prawns",
-      inputs: ["curry_sauce", "ing_01"],
-      outputState: "cooked_prawns",
-      instructions: "Add the shell-on prawns to the simmering sauce, pressing them beneath the surface. Simmer gently for 3–4 minutes — shell-on prawns take slightly longer than peeled but the shells release flavor into the sauce. The prawns are done when they are uniformly coral-pink and have just turned from translucent to opaque at the thickest part. Do not boil or overcook. Pull from heat immediately.",
-      visualCue: {
-        primaryTarget: "Prawns are uniformly bright coral-pink, tightly curled into a C-shape, the shells vivid against the golden sauce. The flesh inside the shell is opaque white-pink throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Prawns are still grey-translucent at the head and body. They look limp and have not yet curled.", action: "Simmer 60–90 more seconds. Underdone prawn is unpleasantly slippery and tastes raw-sweet." },
-          { state: "Perfect",   description: "Uniformly pink, curled into a C, the flesh just opaque and yielding when a shell is pressed. The heads are vivid orange from the tomally.", action: "Add lime juice and Thai basil and serve immediately." },
-          { state: "Overdone",  description: "Prawns have curled into a tight O and feel rubbery when the shell is pressed. The meat inside is tough and slightly dry.", action: "Serve immediately without further cooking. The sauce will provide moisture. Squeeze extra lime to brighten." },
-        ],
-      },
-      feelCue: "Press a prawn through its shell — it should give gently and spring back, the flesh inside feeling pliant and soft like a firm grape, not rigid like a pencil eraser.",
+      "ingId": "ing_03",
+      "role": "Aromatic",
+      "name": "Pâtes de citronnelle, couches extérieures enlevées, meurtries",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pâte de citronnelle (2 c. à thé par tige)"
+      ]
     },
     {
-      nodeId: "step_4", action: "Balance and finish",
-      inputs: ["cooked_prawns", "ing_13", "ing_12"],
-      outputState: "finished_curry",
-      instructions: "Off the heat, add the lime juice and taste. Adjust the balance: more fish sauce if it needs salt and depth, more palm sugar if it needs sweetness, more lime if it needs brightness. The four Thai taste pillars — sweet, salty, sour, and hot — should be in balance, each present but none dominating. Tear the Thai basil leaves over the top. Serve immediately over jasmine rice.",
-      visualCue: {
-        primaryTarget: "A vivid golden curry studded with coral prawns and torn green-purple basil leaves. The sauce is glossy and the surface shows a faint slick of golden coconut oil.",
-        spectrum: [
-          { state: "Underdone", description: "The lime juice hasn't been added — the curry tastes flat and heavy, the sweetness and salt unanchored without the acid's brightness.", action: "Add the lime juice now. Acid is not optional — it is the flavors' anchor." },
-          { state: "Perfect",   description: "All four taste pillars are present and in balance. The basil is bright green and fragrant, slightly wilted by the heat. The sauce coats the prawns.", action: "Serve immediately. Thai basil wilts fast — this dish waits for nobody." },
-          { state: "Overdone",  description: "Too much lime has been added — the curry tastes primarily sour and bright, the coconut sweetness and umami buried.", action: "Stir in a small pinch of palm sugar and a splash more coconut milk to rebalance." },
-        ],
-      },
-      feelCue: "Take a sip of the sauce from a spoon — the sequence of tastes should arrive in waves: coconut sweetness first, then the salty-savory depth of fish sauce, then lime's brightness cutting across, then the slow warm build of chili. If any one of these is missing, it needs adjustment.",
+      "ingId": "ing_04",
+      "role": "Aromatic",
+      "name": "Galangal, tranché finement",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "gingembre frais (douleur, caractère différent)"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Curcuma frais, râpé (ou 1 c. à thé séché)",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "curcuma au sol"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Allium",
+      "name": "Échalotes, tranchées finement",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon rouge"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Allium",
+      "name": "Girofles à l'ail, tranchés finement",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Umami",
+      "name": "Sauce de poisson",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "sauce soja + touche de lime pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Sucre de palme ou cassonade molle",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Sucre de coco",
+        "sucre granulé"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Herb",
+      "name": "Feuilles de chaux de Kaffir (fraîches ou congelées)",
+      "ratioValue": 6,
+      "defaultUnit": "pcs",
+      "substitutions": [
+        "1 c. à thé zeste de chaux"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Heat",
+      "name": "Pilisses rouges fraîches, décortiquées et tranchées",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "chili oculaire d'oiseau pour plus de chaleur",
+        "poivre rouge doux pour moins"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Herb",
+      "name": "Feuilles de basilic thaï",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Basilic italien (différente saveur)"
+      ]
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Acid",
+      "name": "Jus de chaux frais",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Fat",
+      "name": "Huile de coco ou huile neutre",
+      "ratioValue": 30,
+      "defaultUnit": "ml",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Construire une base aromatique",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_11",
+        "ing_14"
+      ],
+      "outputState": "aromatic_base",
+      "instructions": "Chauffer l'huile de coco dans un wok large ou une poêle à feu moyen-vif. Ajouter les échalotes et cuire en remuant pendant 3 minutes jusqu'à ce qu'elles soient adoucies et légèrement dorées. Ajouter l'ail, les tranches de galangal et la citronnelle en tranches. Faire cuire 1 minute. Ajouter les tranches de curcuma et de chili frais. Faire revenir 2 minutes de plus — la cuisine doit se remplir d'une fragrance piquante, agrumes et épicée. Les aromatiques doivent être adoucis et parfumés mais pas brunis — vous fleurissez, vous ne faites pas frire.",
+      "visualCue": {
+        "primaryTarget": "Les aromatiques sont doux et scintillants, le curcuma a tout transformé en orange doré vif. La citronnelle et le galangal sont plus pâles et légèrement flétris aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les échalotes sont toujours blanches translucides, le galangal cru-dur, le curcuma cru-smelling et amer.",
+            "action": "Cuire encore une minute sur le haut moyen. Les aromatiques sous-dotés donnent au curry un bord cru et amer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Tout est adouci, profondément parfumé et doré. L'huile est teinte d'orange vif du curcuma. L'odeur est agrumes, tranchante et florale.",
+            "action": "Ajouter immédiatement le lait de coco."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les échalotes et l'ail sont brun foncé et amer, le galangal commence à être char. L'odeur est forte et acride.",
+            "action": "Abaissez le feu, ajoutez le lait de coco maintenant pour arrêter le brunissement. Une base légèrement amère peut être équilibrée avec du sucre de palme supplémentaire."
+          }
+        ]
+      },
+      "feelCue": "Le wok devrait se sentir vif et chaud sous votre main tenu au-dessus de lui — les aromatiques devraient s'étourdir activement et remplir l'air de parfum dès qu'ils ont frappé l'huile."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter la sauce au curry",
+      "inputs": [
+        "aromatic_base",
+        "ing_02",
+        "ing_08",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "curry_sauce",
+      "instructions": "Verser le lait de coco dans la poêle, en grattant les morceaux dorés du fond. Ajouter les feuilles de lime kaffir, la sauce de poisson et le sucre de palme. Mélanger pour dissoudre le sucre. Porter à mijoter doucement à feu moyen — ne pas faire bouillir dur, ce qui brise le lait de coco et rend la sauce granuleuse. Laisser mijoter pendant 5 minutes, en remuant occasionnellement, jusqu'à ce que la sauce soit parfumée et légèrement épaissie. Bouche : il doit être salé-doux-doux avec une note d'agrumes aiguë des feuilles de chaux.",
+      "visualCue": {
+        "primaryTarget": "Une sauce lisse, jaune doré, à la mijote paresseuse — de petites bulles se cassent lentement à la surface, la couleur vive du curcuma, brillant de la graisse de noix de coco.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est très fine et pâle, le lait de noix de coco à peine mijoté, les arômes encore crus au fond.",
+            "action": "Laisser mijoter encore 3-4 minutes jusqu'à ce que la sauce épaississe légèrement et sente profondément parfumée."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce est dorée, aromatique, brillante et légèrement épaissie. Il s'accroche légèrement à une cuillère. Le parfum des feuilles de lime est proéminent.",
+            "action": "Ajouter les crevettes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le lait de coco s'est fendu — une couche grasse et granuleuse d'huile de coco se trouve sur une couche mince et aqueuse. La sauce a l'air cassée.",
+            "action": "Retirer du feu et remuer vigoureusement, en ajoutant une touche de lait de coco frais ou d'eau. Garder à une mijot très douce allant de l'avant."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère dans la sauce au curry et lancez votre doigt sur le dos. La sauce doit être enrobée d'une couche mince et uniforme qui sent la lime de kaffir et la citronnelle."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Faire cuire les crevettes",
+      "inputs": [
+        "curry_sauce",
+        "ing_01"
+      ],
+      "outputState": "cooked_prawns",
+      "instructions": "Ajouter les crevettes décortiquées à la sauce mijotante, les presser sous la surface. Laisser mijoter en douceur pendant 3 à 4 minutes — les crevettes pelées prennent un peu plus de temps que les crevettes pelées, mais les coquilles dégagent de l'arôme dans la sauce. Les crevettes sont faites lorsqu'elles sont uniformément coralliennes et qu'elles viennent de passer du translucide au opaque à la partie la plus épaisse. Ne pas faire bouillir ou trop cuire. Tirez de la chaleur immédiatement.",
+      "visualCue": {
+        "primaryTarget": "Les crevettes sont uniformément rose corallien, serrées en forme de C, les coquillages vifs contre la sauce dorée. La chair à l'intérieur de la coquille est opaque rose-blanc.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les crevettes sont toujours translucides à la tête et au corps. Ils ont l'air boiteux et n'ont pas encore frisé.",
+            "action": "Laisser mijoter 60 à 90 secondes de plus. La crevette underdone est désagréablement glissante et goûte cru-doux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un rose uniforme, enroulé en C, la chair juste opaque et donnant quand une coquille est pressée. Les têtes sont orange vif de la tonalité.",
+            "action": "Ajouter le jus de lime et le basilic thaïlandais et servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les crevettes se sont enroulées dans un O serré et se sentent caoutchouteuses lorsque la coque est pressée. La viande à l'intérieur est dure et légèrement sèche.",
+            "action": "Servir immédiatement sans autre cuisson. La sauce apportera de l'humidité. Pressez la chaux supplémentaire pour éclaircir."
+          }
+        ]
+      },
+      "feelCue": "Appuyez sur une crevette à travers sa coquille — elle doit donner doucement et ressortre, la chair à l'intérieur se sent souple et douce comme un raisin ferme, pas rigide comme une gomme au crayon."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Balance et finition",
+      "inputs": [
+        "cooked_prawns",
+        "ing_13",
+        "ing_12"
+      ],
+      "outputState": "finished_curry",
+      "instructions": "Hors du feu, ajoutez le jus de lime et le goût. Ajustez l'équilibre : plus de sauce de poisson si elle a besoin de sel et de profondeur, plus de sucre de palme si elle a besoin de douceur, plus de chaux si elle a besoin de luminosité. Les quatre piliers du goût thaïlandais — sucrés, salés, aigres et chauds — devraient être équilibrés, chacun étant présent, mais aucun dominant. Attachez le basilic thaïlandais au-dessus du sommet. Servir immédiatement sur le riz jasmin.",
+      "visualCue": {
+        "primaryTarget": "Un curry doré vif clouté de crevettes coralliennes et de feuilles de basilic vert déchirées. La sauce est brillante et la surface montre une légère liquéfaction d'huile de coco dorée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le jus de lime n'a pas été ajouté — le curry goûte plat et lourd, la douceur et le sel sans ancrer sans la luminosité de l'acide.",
+            "action": "Ajouter le jus de lime maintenant. L'acide n'est pas facultatif, c'est l'ancre des saveurs."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les quatre piliers du goût sont présents et équilibrés. Le basilic est vert vif et parfumé, légèrement flétri par la chaleur. La sauce enveloppe les crevettes.",
+            "action": "Servir immédiatement. Le basilic thaïlandais se flétrit rapidement — ce plat n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de chaux a été ajouté — le curry goûte principalement aigre et lumineux, la douceur de la noix de coco et l'umami enterré.",
+            "action": "Incorporer une petite pincée de sucre de palme et éclabousser plus de lait de coco pour rééquilibrer."
+          }
+        ]
+      },
+      "feelCue": "Prenez une gorgée de la sauce d'une cuillère — la séquence des goûts devrait arriver en vagues: la douceur de la noix de coco d'abord, puis la profondeur salée-savoureuse de la sauce de poisson, puis la luminosité de la chaux à travers, puis la construction chaude lente de chili. Si l'un d'eux manque, il faut l'adapter."
+    }
+  ]
 };

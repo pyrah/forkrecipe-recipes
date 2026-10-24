@@ -1,82 +1,203 @@
 export default {
-  repoId: "master_indian_cucumberraita_001",
-  parentRepoId: null,
-  slug: "cucumber-raita",
-  author: "ForkRecipe Kitchen",
-  title: "Cucumber Raita",
-  description: "India's great cooling counterpoint — cold thick yogurt folded with grated cucumber, bloomed cumin, fresh mint, and coriander into a condiment that brings peace to any fiery curry or biryani it accompanies.",
-  cuisine: "Indian",
-  culture: "Indian",
-  category: "condiments",
-  tags: ["condiments", "indian", "yogurt", "cucumber", "raita", "vegetarian", "gluten-free"],
-  difficulty: 1,
-  activeTime: "10 min",
-  totalTime: "20 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 2, sour: 2, bitter: 0, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Dairy",     name: "Full-fat plain yogurt (strained or Greek style)", ratioValue: 250, defaultUnit: "g",  substitutions: ["regular whole-milk yogurt, strained 30 min"] },
-    { ingId: "ing_02", role: "Aromatic",  name: "English cucumber, grated on large holes",         ratioValue: 150, defaultUnit: "g",  substitutions: ["Persian cucumber", "seeded regular cucumber"] },
-    { ingId: "ing_03", role: "Spice",     name: "Cumin seeds",                                     ratioValue: 3,   defaultUnit: "g",  substitutions: ["1/2 tsp ground cumin"] },
-    { ingId: "ing_04", role: "Herb",      name: "Fresh mint leaves, finely chopped",               ratioValue: 8,   defaultUnit: "g",  substitutions: ["dried mint (half the quantity)"] },
-    { ingId: "ing_05", role: "Herb",      name: "Fresh coriander (cilantro), finely chopped",      ratioValue: 8,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning", name: "Fine sea salt",                                   ratioValue: 4,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Ground coriander",                                ratioValue: 1,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_indian_cucumberraita_001",
+  "parentRepoId": null,
+  "slug": "cucumber-raita",
+  "author": "ForkRecipe Kitchen",
+  "title": "Cucumber Raita",
+  "description": "Le grand contrepoint de refroidissement de l'Inde — yogourt épais froid plié avec du concombre râpé, du cumin fleuri, de la menthe fraîche et de la coriandre dans un condiment qui apporte la paix à tout curry ardent ou biryani qu'il accompagne.",
+  "cuisine": "Indiens",
+  "culture": "Indiens",
+  "category": "condiments",
+  "tags": [
+    "condiments",
+    "indienne",
+    "yaourt",
+    "concombre",
+    "Raita",
+    "végétarien",
+    "Sans gluten"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "10 min",
+  "totalTime": "20 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Strain",
-      inputs: ["ing_02", "ing_06"],
-      outputState: "drained_cucumber",
-      instructions: "Grate cucumber on the large holes of a box grater. Sprinkle with half the salt and toss. Place in a colander or wrap in a clean kitchen towel and squeeze out as much liquid as possible — really compress it. Let drain for 10 minutes, then squeeze again. A single cucumber holds a surprising amount of water; releasing it prevents a watery raita.",
-      visualCue: {
-        primaryTarget: "Cucumber reduced to roughly half its original volume, pale green, compacted — still identifiable as cucumber but much drier.",
-        spectrum: [
-          { state: "Underdone", description: "Cucumber still wet and dripping. You can wring more water out.", action: "Continue squeezing. Press between two plates with a weight on top for 10 minutes." },
-          { state: "Perfect",   description: "Cucumber barely drips when squeezed in the fist. Still green and fresh-smelling. Feels like a compressed sponge.", action: "Fold into yogurt." },
-          { state: "Overdone",  description: "You cannot over-drain cucumber — but if it's been sitting in salt more than 30 minutes, it tastes excessively salty.", action: "Rinse quickly under cold water and squeeze again before adding to yogurt." },
-        ],
-      },
-      feelCue: "Squeeze the grated cucumber in your fist — it should feel like wet sand compressing, and a stream of pale green water should run out.",
+      "ingId": "ing_01",
+      "role": "Dairy",
+      "name": "Yogourt plein de matières grasses (strained ou style grec)",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "yogourt régulier de lait entier, souche 30 min"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Toast",
-      inputs: ["ing_03"],
-      outputState: "bloomed_cumin",
-      instructions: "Toast cumin seeds in a small dry skillet over medium heat for 60-90 seconds, shaking constantly, until they darken and begin to pop. Immediately grind coarsely in a mortar or between two spoons. The heat transforms the raw, slightly harsh flavor of cumin into a warm, nutty, aromatic note.",
-      visualCue: {
-        primaryTarget: "Seeds darkened to a warm brown, no black, releasing a warm spice aroma.",
-        spectrum: [
-          { state: "Underdone", description: "Seeds still pale and grassy-smelling. No visible darkening.", action: "Continue over medium heat." },
-          { state: "Perfect",   description: "Dark brown, fragrant, one or two have popped. Kitchen smells of warm spice.", action: "Grind immediately and add to yogurt." },
-          { state: "Overdone",  description: "Black and smoking. Acrid, bitter smell.", action: "Discard and start again." },
-        ],
-      },
-      feelCue: "The smell of toasted cumin is unmistakable — earthy, warm, faintly smoky. If you can't smell it strongly from arm's length, it needs more heat.",
+      "ingId": "ing_02",
+      "role": "Aromatic",
+      "name": "Concombre anglais, râpé sur de grands trous",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Concombre perse",
+        "concombre régulier ensemencé"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fold",
-      inputs: ["ing_01", "drained_cucumber", "bloomed_cumin", "ing_04", "ing_05", "ing_07"],
-      outputState: "finished_cucumber_raita",
-      instructions: "In a bowl, combine yogurt, drained cucumber, bloomed cumin, mint, coriander, ground coriander, and remaining salt. Fold gently — don't overstir into a smooth paste. The texture should be spoonable with visible herb flecks and cucumber strands. Taste and adjust salt. Refrigerate for 15 minutes before serving — the rest allows the flavors to meld.",
-      visualCue: {
-        primaryTarget: "A thick, white-green speckled condiment — clearly yogurt-based with visible mint, coriander, cucumber, and cumin throughout.",
-        spectrum: [
-          { state: "Underdone", description: "Cucumber still too wet — raita pools liquid after 2 minutes in the bowl.", action: "Drain the raita by pressing through a strainer, or add more yogurt to absorb the liquid." },
-          { state: "Perfect",   description: "Thick, cool, aromatic. Holds its shape on a spoon. Visible flecks of green herb throughout. Tastes simultaneously cooling and flavored.", action: "Serve cold alongside biryani, curry, or grilled meats." },
-          { state: "Overdone",  description: "Over-stirred into a smooth puree. Texture uniform and herb flecks unrecognizable.", action: "Still delicious. Add a last-minute fold of fresh mint for texture." },
-        ],
-      },
-      feelCue: "A spoonful should feel cool and thick, with a slight resistance — yogurt-thick, not pourable. If it runs off the spoon, the cucumber wasn't drained enough.",
+      "ingId": "ing_03",
+      "role": "Spice",
+      "name": "Graines de cumin",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": [
+        "1/2 cumin moulu"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Herb",
+      "name": "Feuilles de menthe fraîches, hachées finement",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": [
+        "menthe séchée (la moitié de la quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Herb",
+      "name": "Coriandre fraîche (cilantro), finement hachée",
+      "ratioValue": 8,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Coriandre au sol",
+      "ratioValue": 1,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Poignée",
+      "inputs": [
+        "ing_02",
+        "ing_06"
+      ],
+      "outputState": "drained_cucumber",
+      "instructions": "Grattez le concombre sur les grands trous d'un grater de boîte. Saupoudrer de la moitié du sel et jeter. Placer dans une calandre ou envelopper dans une serviette de cuisine propre et presser le plus de liquide possible — vraiment compresser. Laisser égoutter pendant 10 minutes, puis presser à nouveau. Un seul concombre contient une quantité surprenante d'eau; il empêche une raita aqueuse.",
+      "visualCue": {
+        "primaryTarget": "Le concombre réduit à environ la moitié de son volume original, vert pâle, compacté — encore identifiable comme concombre mais beaucoup plus sec.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le concombre est encore humide et goutte à goutte. Tu peux arracher plus d'eau.",
+            "action": "Continuez à presser. Appuyez entre deux assiettes avec un poids sur le dessus pendant 10 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le concombre coule à peine lorsqu'il est pressé dans le poing. Toujours vert et frais. On dirait une éponge comprimée.",
+            "action": "Plier dans le yaourt."
+          },
+          {
+            "state": "Overdone",
+            "description": "On ne peut pas trop drainer le concombre — mais s'il est assis dans du sel pendant plus de 30 minutes, il a un goût trop salé.",
+            "action": "Rincer rapidement sous l'eau froide et presser à nouveau avant d'ajouter au yogourt."
+          }
+        ]
+      },
+      "feelCue": "Serrez le concombre râpé dans votre poing — il devrait se sentir comme le sable humide compresser, et un flux d'eau verte pâle devrait s'épuiser."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Toast",
+      "inputs": [
+        "ing_03"
+      ],
+      "outputState": "bloomed_cumin",
+      "instructions": "Faire cuire les graines de cumin dans une petite poêle sèche à feu moyen pendant 60 à 90 secondes, en tremblant constamment, jusqu'à ce qu'elles s'assombrissent et commencent à éclater. Broyer immédiatement grossièrement dans un mortier ou entre deux cuillères. La chaleur transforme la saveur brute et légèrement dure du cumin en une note aromatique chaude et noisette.",
+      "visualCue": {
+        "primaryTarget": "Graines foncées à un brun chaud, pas de noir, libérant un arôme d'épice chaud.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Graines encore pâles et herbeuses. Pas d'obscurité visible.",
+            "action": "Continuer à feu moyen."
+          },
+          {
+            "state": "Perfect",
+            "description": "Brun foncé, parfumé, un ou deux ont sauté. La cuisine sent les épices chaudes.",
+            "action": "Graisser immédiatement et ajouter au yaourt."
+          },
+          {
+            "state": "Overdone",
+            "description": "Noir et fumer. Une odeur amère.",
+            "action": "Jeter et recommencer."
+          }
+        ]
+      },
+      "feelCue": "L'odeur du cumin grillé est incomparable: terreux, chaud, légèrement fumé. Si vous ne pouvez pas le sentir fortement de bras, il a besoin de plus de chaleur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Plier",
+      "inputs": [
+        "ing_01",
+        "drained_cucumber",
+        "bloomed_cumin",
+        "ing_04",
+        "ing_05",
+        "ing_07"
+      ],
+      "outputState": "finished_cucumber_raita",
+      "instructions": "Dans un bol, mélanger le yaourt, le concombre égoutté, le cumin fleuri, la menthe, la coriandre, la coriandre moulue et le sel restant. Plier doucement — ne pas s'écraser dans une pâte lisse. La texture doit être cuillerable avec des taches d'herbe visibles et des brins de concombre. Goûtez et ajustez le sel. Réfrigérer pendant 15 minutes avant de servir — le reste permet aux saveurs de fondre.",
+      "visualCue": {
+        "primaryTarget": "Un condiment épais, tacheté de vert blanc, à base de yogourt, avec menthe visible, coriandre, concombre et cumin.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le concombre est encore trop humide — la raita est liquide après 2 minutes dans le bol.",
+            "action": "Égoutter la raita en appuyant sur une souche, ou ajouter plus de yogourt pour absorber le liquide."
+          },
+          {
+            "state": "Perfect",
+            "description": "Épaisseur, frais, aromatique. Il tient sa forme sur une cuillère. Des taches visibles d'herbe verte. Goûte simultanément refroidir et aromatisé.",
+            "action": "Servir à froid aux côtés des viandes biryani, curry ou grillées."
+          },
+          {
+            "state": "Overdone",
+            "description": "Extirpée dans une purée lisse. Un uniforme texturé et des taches d'herbe non reconnaissables.",
+            "action": "Toujours délicieux. Ajouter un pli de dernière minute de menthe fraîche pour la texture."
+          }
+        ]
+      },
+      "feelCue": "Une cuillère doit se sentir fraîche et épaisse, avec une légère résistance — yogourt-épaisseur, non versable. S'il s'échappe de la cuillère, le concombre n'a pas été suffisamment drainé."
+    }
+  ]
 };

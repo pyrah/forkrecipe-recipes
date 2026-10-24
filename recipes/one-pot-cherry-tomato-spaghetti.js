@@ -1,88 +1,244 @@
 export default {
-  repoId: "master_italian_onepotcherrytomatospaghetti_001",
-  parentRepoId: null,
-  slug: "one-pot-cherry-tomato-spaghetti",
-  parentSlug: null,
-  author: "ForkRecipe Kitchen",
-  title: "One-Pot Cherry Tomato and Basil Spaghetti",
-  description: "Dry spaghetti, halved cherry tomatoes, sliced garlic and onion all start together in a wide pan of cold water, and as the pasta cooks its starch and the bursting tomatoes reduce into a sweet, glossy sauce that clings to every strand.",
-  cuisine: "Italian",
-  culture: "Italian-American home kitchen",
-  category: "grains",
-  tags: ["home-kitchen", "weeknight", "pasta", "vegetarian", "one-pot", "tomato", "basil", "spaghetti"],
-  difficulty: 1,
-  activeTime: "15 min",
-  totalTime: "25 min",
-  ratioSystem: "weight",
-  servings: 4,
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-09-29",
-  updatedAt: "2026-09-29",
-  flavorRadar: { sweet: 2, salty: 2, sour: 2, bitter: 0, umami: 3, heat: 1 },
-  ingredients: [
-    { ingId: "ing_01", role: "Starch",    name: "Spaghetti, dry",                                  ratioValue: 400, defaultUnit: "g", substitutions: ["linguine"] },
-    { ingId: "ing_02", role: "Base",      name: "Cherry or grape tomatoes, halved",                ratioValue: 600, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_03", role: "Allium",    name: "Yellow onion, halved and thinly sliced",          ratioValue: 150, defaultUnit: "g", substitutions: ["2 shallots"] },
-    { ingId: "ing_04", role: "Allium",    name: "Garlic, thinly sliced",                           ratioValue: 4,   defaultUnit: "cloves", substitutions: [] },
-    { ingId: "ing_05", role: "Heat",      name: "Red pepper flakes",                               ratioValue: 0.5, defaultUnit: "tsp", substitutions: [] },
-    { ingId: "ing_06", role: "Herb",      name: "Fresh basil leaves, half left whole, half torn to finish", ratioValue: 20, defaultUnit: "leaves", substitutions: [] },
-    { ingId: "ing_07", role: "Fat",       name: "Extra-virgin olive oil, plus more to finish",     ratioValue: 45,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_08", role: "Seasoning", name: "Kosher salt",                                     ratioValue: 2,   defaultUnit: "tsp", substitutions: ["1 1/4 tsp fine sea salt"] },
-    { ingId: "ing_09", role: "Hydration", name: "Water, cold",                                     ratioValue: 1100, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_10", role: "Dairy",     name: "Parmesan, finely grated",                         ratioValue: 40,  defaultUnit: "g", substitutions: ["pecorino romano", "omit for vegan"] },
-    { ingId: "ing_11", role: "Spice",     name: "Black pepper, freshly ground",                    ratioValue: 0,   defaultUnit: "to taste", substitutions: [] },
+  "repoId": "master_italian_onepotcherrytomatospaghetti_001",
+  "parentRepoId": null,
+  "slug": "one-pot-cherry-tomato-spaghetti",
+  "parentSlug": null,
+  "author": "ForkRecipe Kitchen",
+  "title": "Tomates de cerise et de basilic",
+  "description": "Les spaghettis secs, les tomates cerises coupées en deux, l'ail tranché et l'oignon commencent tous ensemble dans une grande casserole d'eau froide, et quand les pâtes font cuire son amidon et les tomates en éclat réduisent dans une sauce douce et brillante qui s'accroche à chaque brin.",
+  "cuisine": "Italien",
+  "culture": "Cuisine maison italo-américaine",
+  "category": "grains",
+  "tags": [
+    "cuisine maison",
+    "nuit",
+    "pâtes",
+    "végétarien",
+    "un seul pot",
+    "tomates",
+    "basilic",
+    "Spaghetti"
   ],
-  processNodes: [
+  "difficulty": 1,
+  "activeTime": "15 min",
+  "totalTime": "25 min",
+  "ratioSystem": "weight",
+  "servings": 4,
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-09-29",
+  "updatedAt": "2026-09-29",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 2,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 1
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Assemble",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09"],
-      outputState: "raw_one_pot",
-      instructions: "Use a 12-inch (30 cm) straight-sided skillet or wide braiser the spaghetti can lie flat in. Lay the dry spaghetti in the pan, then scatter over the tomatoes, onion, garlic, red pepper flakes and half the basil (whole leaves). Add the olive oil, salt and the cold water — the pasta should be just submerged.",
-      visualCue: {
-        primaryTarget: "Spaghetti lying flat and fully submerged, vegetables scattered evenly on top.",
-        spectrum: [
-          { state: "Underdone", description: "Pasta ends poking above the water or bent up the sides of a too-small pot.", action: "Switch to a wider pan, or snap the spaghetti in half so it lies flat." },
-          { state: "Perfect",   description: "Pasta just under the waterline, tomatoes and onion distributed across the whole surface.", action: "Turn the heat to high." },
-          { state: "Overdone",  description: "Water several centimeters above the pasta because the pan is deep and narrow.", action: "Expect a longer reduction at the end; be ready to boil hard uncovered for a few extra minutes." },
-        ],
-      },
-      feelCue: "The dry strands should feel stiff and loose under your hand as you spread them into an even raft.",
+      "ingId": "ing_01",
+      "role": "Starch",
+      "name": "Spaghettis secs",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "linguine"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Boil and stir",
-      inputs: ["raw_one_pot"],
-      outputState: "sauced_spaghetti",
-      instructions: "Bring to a rolling boil over high heat. As soon as the pasta softens (about 2 minutes), start turning it with tongs every 30–60 seconds so it doesn't clump. Keep at a vigorous boil, uncovered, for 9–11 minutes, until the pasta is al dente and the water has reduced to a few tablespoons of glossy, orange-red sauce. Press some of the tomatoes against the side of the pan as they soften.",
-      visualCue: {
-        primaryTarget: "Al dente spaghetti bound in a thin, glossy, starchy tomato sauce, with most of the water gone.",
-        spectrum: [
-          { state: "Underdone", description: "Soupy, cloudy liquid still covering the bottom and pasta firm at the center.", action: "Keep boiling hard and turning; the liquid will tighten fast in the last 2 minutes." },
-          { state: "Perfect",   description: "A slick of sauce coats the pan and each strand; pasta bends with a faint white dot of resistance at the core.", action: "Take off the heat and finish." },
-          { state: "Overdone",  description: "Pan dry and pasta sticking or catching on the bottom.", action: "Add 60–120 ml hot water and toss until saucy again; lower the heat." },
-        ],
-      },
-      feelCue: "Bite a strand at 9 minutes — you want a slight chew at the center, and the sauce should feel silky, not watery, on your lips.",
+      "ingId": "ing_02",
+      "role": "Base",
+      "name": "Tomates de cerise ou de raisin, coupées en deux",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_3",
-      action: "Finish",
-      inputs: ["sauced_spaghetti", "ing_06", "ing_07", "ing_10", "ing_11"],
-      outputState: "finished_tomato_spaghetti",
-      instructions: "Off the heat, add the Parmesan, a drizzle of olive oil and a few grinds of black pepper, and toss vigorously for 30 seconds so the cheese emulsifies into the sauce. Let stand 2 minutes. Fold in the remaining torn basil, taste for salt, and serve with extra cheese.",
-      visualCue: {
-        primaryTarget: "Creamy-glossy strands with burst tomatoes clinging to them and bright torn basil on top.",
-        spectrum: [
-          { state: "Underdone", description: "Cheese in clumps and a watery pool under the pasta.", action: "Toss harder and let it stand another minute to absorb." },
-          { state: "Perfect",   description: "Sauce clings in a light, emulsified coat; no pooling; tomatoes jammy.", action: "Serve at once." },
-          { state: "Overdone",  description: "Pasta tight and sticky after sitting too long.", action: "Loosen with a splash of hot water and olive oil." },
-        ],
-      },
-      feelCue: "Lift a forkful — the sauce should cling and slide slowly down the strands rather than drip off.",
+      "ingId": "ing_03",
+      "role": "Allium",
+      "name": "Oignon jaune, coupé en deux et tranché finement",
+      "ratioValue": 150,
+      "defaultUnit": "g",
+      "substitutions": [
+        "2 échalotes"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Ail, tranché finement",
+      "ratioValue": 4,
+      "defaultUnit": "cloves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Heat",
+      "name": "Flacons de poivre rouge",
+      "ratioValue": 0.5,
+      "defaultUnit": "tsp",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Herb",
+      "name": "Feuilles de basilic fraîches, à moitié laissées entières, à moitié déchirées pour finir",
+      "ratioValue": 20,
+      "defaultUnit": "leaves",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge, plus plus à finir",
+      "ratioValue": 45,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Seasoning",
+      "name": "Sel casher",
+      "ratioValue": 2,
+      "defaultUnit": "tsp",
+      "substitutions": [
+        "1 1/4 c. à thé sel de mer fin"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Hydration",
+      "name": "Eau froide",
+      "ratioValue": 1100,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Dairy",
+      "name": "Parmesan, râpé finement",
+      "ratioValue": 40,
+      "defaultUnit": "g",
+      "substitutions": [
+        "pécorino romano",
+        "omit pour végétalien"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Poivre noir, fraîchement moulu",
+      "ratioValue": 0,
+      "defaultUnit": "to taste",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Assemblage",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09"
+      ],
+      "outputState": "raw_one_pot",
+      "instructions": "Utilisez une poêle rectiligne de 30 cm ou un brasseur large de 12 pouces. Placer les spaghettis secs dans la poêle, puis disperser sur les tomates, l'oignon, l'ail, les flocons de poivre rouge et la moitié du basilic (feuilles entières). Ajouter l'huile d'olive, le sel et l'eau froide — les pâtes doivent juste être submergées.",
+      "visualCue": {
+        "primaryTarget": "Spaghetti couché plat et entièrement submergé, légumes éparpillés uniformément sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pâtes se terminent par se glisser au-dessus de l'eau ou par se pencher sur les côtés d'un pot trop petit.",
+            "action": "Passez à une casserole plus large, ou claquez les spaghettis en deux afin qu'il soit plat."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâtes juste sous la ligne de flottaison, tomates et oignons distribués sur toute la surface.",
+            "action": "Tournez la chaleur à haute."
+          },
+          {
+            "state": "Overdone",
+            "description": "Arroser plusieurs centimètres au-dessus des pâtes parce que la poêle est profonde et étroite.",
+            "action": "S'attendre à une réduction plus longue à la fin; être prêt à bouillir dur à découvert pendant quelques minutes supplémentaires."
+          }
+        ]
+      },
+      "feelCue": "Les brins secs devraient se sentir raides et lâches sous votre main pendant que vous les étendez dans un radeau uniforme."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Faire bouillir et remuer",
+      "inputs": [
+        "raw_one_pot"
+      ],
+      "outputState": "sauced_spaghetti",
+      "instructions": "Porter à ébullition à feu vif. Dès que les pâtes s'adoucissent (environ 2 minutes), commencez à les tourner avec des pinces toutes les 30 à 60 secondes afin qu'elles ne s'agrippent pas. Conserver à ébullition vigoureuse, à découvert, pendant 9 à 11 minutes, jusqu'à ce que les pâtes soient al dente et que l'eau ait réduit à quelques cuillères à soupe de sauce rouge orange brillant. Appuyez sur une partie des tomates contre le côté de la poêle en adoucissant.",
+      "visualCue": {
+        "primaryTarget": "Al dente spaghetti lié dans une sauce tomate fine, brillante, féculente, avec la plupart de l'eau disparue.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Soupy, liquide nuageux qui recouvre encore le fond et les pâtes fermes au centre.",
+            "action": "Continuer à bouillir et tourner; le liquide se serrera rapidement au cours des 2 dernières minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une fine sauce enrobe la poêle et chaque brin; les pâtes se plient avec un petit point blanc de résistance au cœur.",
+            "action": "Enlevez la chaleur et terminez."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pan sèche et pâtes collant ou attraper sur le fond.",
+            "action": "Ajouter 60 à 120 ml d'eau chaude et remuer jusqu'à ce qu'il soit encore chaud; baisser la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Agiter un brin à 9 minutes — vous voulez une légère mâche au centre, et la sauce doit se sentir soyeuse, pas aqueuse, sur vos lèvres."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Finition",
+      "inputs": [
+        "sauced_spaghetti",
+        "ing_06",
+        "ing_07",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "finished_tomato_spaghetti",
+      "instructions": "Hors du feu, ajoutez le parmesan, une bruine d'huile d'olive et quelques moulures de poivre noir, et jetez vigoureusement pendant 30 secondes afin que le fromage émulsifie dans la sauce. Laisser reposer 2 minutes. Pliez dans le reste du basilic déchiré, goûtez au sel et servez avec du fromage supplémentaire.",
+      "visualCue": {
+        "primaryTarget": "Des brins crémeux-brillants avec des tomates éclatantes qui s'accrochent à eux et un basilic brillant déchiré sur le dessus.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Fromage dans des taillis et une piscine aqueuse sous les pâtes.",
+            "action": "Jetez plus fort et laissez-le reposer une autre minute pour absorber."
+          },
+          {
+            "state": "Perfect",
+            "description": "La sauce s'accroche dans une légère couche émulsifiée; pas de pooling; tomates confiture.",
+            "action": "Servir immédiatement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Pasta serrée et collante après s'être assise trop longtemps.",
+            "action": "Loosen avec un jet d'eau chaude et d'huile d'olive."
+          }
+        ]
+      },
+      "feelCue": "Soulevez une fourchette — la sauce doit s'accrocher et glisser lentement dans les brins plutôt que de s'égoutter."
+    }
+  ]
 };

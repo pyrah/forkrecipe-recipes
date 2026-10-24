@@ -1,133 +1,317 @@
 export default {
-  repoId: "master_portuguese_bacalhau_a_bras_001",
-  parentRepoId: null,
-  slug: "bacalhau-a-bras",
-  author: "ForkRecipe Kitchen",
-  title: "Bacalhau à Brás",
-  description: "Portugal's beloved salt cod scramble — thin-shredded bacalhau tumbled with shatteringly crisp straw potatoes and slow-scrambled eggs, then finished with black olives and vivid flat-leaf parsley. The dish is a study in contrast: salt and silk, crunch and cream.",
-  cuisine: "Portuguese",
-  culture: "Portuguese",
-  category: "proteins",
-  tags: ["salt-cod", "bacalhau", "portuguese", "eggs", "potato", "comfort"],
-  difficulty: 2,
-  activeTime: "40 min",
-  totalTime: "1 hr (plus overnight soak)",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 0, salty: 3, sour: 0, bitter: 0, umami: 3, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Salt cod (bacalhau), skin-on fillets", ratioValue: 400, defaultUnit: "g",  substitutions: ["fresh cod (reduce soaking, add extra salt)"] },
-    { ingId: "ing_02", role: "Starch",    name: "Waxy potatoes, peeled",                ratioValue: 400, defaultUnit: "g",  substitutions: ["Yukon Gold potatoes"] },
-    { ingId: "ing_03", role: "Binder",    name: "Eggs, large",                          ratioValue: 6,   defaultUnit: "ea", substitutions: [] },
-    { ingId: "ing_04", role: "Allium",    name: "White onion, finely sliced",           ratioValue: 200, defaultUnit: "g",  substitutions: ["yellow onion"] },
-    { ingId: "ing_05", role: "Aromatic",  name: "Garlic cloves, sliced thin",           ratioValue: 4,   defaultUnit: "ea", substitutions: [] },
-    { ingId: "ing_06", role: "Fat",       name: "Extra-virgin olive oil",               ratioValue: 80,  defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_07", role: "Herb",      name: "Flat-leaf parsley, roughly chopped",   ratioValue: 20,  defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_08", role: "Garnish",   name: "Pitted black olives (Kalamata or Gaeta)", ratioValue: 60, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine sea salt",                        ratioValue: 4,   defaultUnit: "g",  substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Black pepper, freshly cracked",        ratioValue: 2,   defaultUnit: "g",  substitutions: [] },
+  "repoId": "master_portuguese_bacalhau_a_bras_001",
+  "parentRepoId": null,
+  "slug": "bacalhau-a-bras",
+  "author": "ForkRecipe Kitchen",
+  "title": "Bacalhau à Brás",
+  "description": "La morue salée bien-aimée du Portugal se brouillait — bacalhau mince éparpillé de pommes de terre de paille croustillantes et d'œufs à égratignures lentes, puis fini avec des olives noires et du persil à feuilles plates vives. Le plat est une étude en contraste : sel et soie, croquant et crème.",
+  "cuisine": "Portugais",
+  "culture": "Portugais",
+  "category": "proteins",
+  "tags": [
+    "morue salée",
+    "BACALHAU",
+    "portugais",
+    "œufs",
+    "pommes de terre",
+    "confort"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "40 min",
+  "totalTime": "1 hr (plus overnight soak)",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 0,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Soak",
-      inputs: ["ing_01"],
-      outputState: "desalted_cod",
-      instructions: "Place the salt cod in a large bowl of cold water, skin side up. Refrigerate and change the water three times over 24 hours — at 8-hour intervals is ideal. The fish should taste of the sea, not of brine. After soaking, pat thoroughly dry and remove any remaining bones with tweezers.",
-      visualCue: {
-        primaryTarget: "Flesh has plumped and turned from stiff and ivory to soft and slightly translucent white, almost like fresh fish.",
-        spectrum: [
-          { state: "Underdone", description: "Flesh still very stiff, visibly shrunken. Tastes intensely, painfully salty — like eating a seasoning cube.", action: "Change the water and return to the refrigerator for another 8 hours. Taste again before proceeding." },
-          { state: "Perfect",   description: "Fish is pliable, tears easily along the flake lines, and tastes pleasantly saline — like a well-seasoned broth, not a salt lick.", action: "Drain and pat dry. Move to the poaching step." },
-          { state: "Overdone",  description: "Fish has become bland and waterlogged, losing all its characteristic bacalhau depth. Flesh tears apart at a touch.", action: "Proceed — the olives and careful seasoning will restore balance. Do not add salt until you taste the finished dish." },
-        ],
-      },
-      feelCue: "Properly desalted bacalhau should feel similar to a fresh fish fillet — supple and yielding — but with a slight firmness that will help it hold its threads during cooking.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Cabillaud salé (bacalhau), filets de peau",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "morue fraîche (réduire le trempage, ajouter le sel)"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Poach",
-      inputs: ["desalted_cod"],
-      outputState: "poached_shredded_cod",
-      instructions: "Lower the cod into a wide pan of barely simmering water (no rolling boil — the water should just tremble). Poach for 5–7 minutes until the flesh is cooked through but still moist. Remove with a slotted spoon and let cool enough to handle. Peel away the skin, then use your fingers and two forks to shred the cod into fine, thread-like pieces — as thin as you can manage without reducing it to mush.",
-      visualCue: {
-        primaryTarget: "Shredded cod should resemble pulled pork in texture — long, fine threads rather than chunks, none larger than a small matchstick.",
-        spectrum: [
-          { state: "Underdone", description: "Center of thick fillets still translucent and gelatinous. Won't shred cleanly — holds together in large pieces.", action: "Return to the simmering water for 2 more minutes. The gentle heat will cook it through without toughening the exterior." },
-          { state: "Perfect",   description: "Flesh is fully opaque white, separates into natural flakes, and shreds into long golden-white threads that hold their shape.", action: "Set aside and proceed to frying the potato straws." },
-          { state: "Overdone",  description: "Flesh is dry, chalky, and breaking into tiny granules rather than threads. Has a faint rubbery resistance.", action: "Proceed — the slow egg scramble will rehydrate and bind the dry cod. A drizzle of extra olive oil will help." },
-        ],
-      },
-      feelCue: "Each thread of bacalhau should have a slight spring to it — not mushy, not rubbery — and smell of the sea with sweet, milky undertones from the gentle poach.",
+      "ingId": "ing_02",
+      "role": "Starch",
+      "name": "Pommes de terre de cire, pelées",
+      "ratioValue": 400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Yukon Pommes de terre d'or"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Fry",
-      inputs: ["ing_02", "ing_06"],
-      outputState: "potato_straws",
-      instructions: "Cut the peeled potatoes into matchstick julienne — about 2mm × 2mm × 6cm — using a mandoline or sharp knife. Rinse in cold water, then dry completely on towels (wet potato steams rather than fries). Heat 2–3cm of the olive oil in a wide pan to 180°C (a test straw should sizzle immediately). Fry the potatoes in batches until light gold and crisp, about 3–4 minutes per batch. Drain on a wire rack, not paper towels, which soften the bottom.",
-      visualCue: {
-        primaryTarget: "Straws are pale gold — not deep brown — crisp enough to clink against each other in the bowl, with a slight translucency at the center.",
-        spectrum: [
-          { state: "Underdone", description: "Straws are blond and limp, bending without snapping. Centers are still starchy and dense.", action: "Return to the oil for another 60–90 seconds. Ensure oil temperature is high enough — crowded batches drop the temperature." },
-          { state: "Perfect",   description: "Light gold, rigid, and shatteringly crisp. They sound like glass chimes when tossed. Interior is fluffy and cooked through.", action: "Season lightly with salt (the bacalhau adds more) and set aside until assembly." },
-          { state: "Overdone",  description: "Deep amber to brown, bitter in the aftertaste. Some may have darkened at the tips.", action: "Use them — bacalhau à Brás is forgiving. The egg and olive oil soften the bitterness. Next batch, lower the heat slightly." },
-        ],
-      },
-      feelCue: "A perfect straw snaps cleanly between two fingers with a dry crack, leaving no grease on the fingertips. If it bends, it needs more oil time.",
+      "ingId": "ing_03",
+      "role": "Binder",
+      "name": "Oeufs grands",
+      "ratioValue": 6,
+      "defaultUnit": "ea",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Sauté",
-      inputs: ["ing_04", "ing_05", "ing_06"],
-      outputState: "softened_aromatics",
-      instructions: "In the same pan (wipe out excess frying oil, leave a thin film), warm 2 tablespoons of fresh olive oil over medium heat. Add the onion and cook slowly for 10–12 minutes, stirring occasionally, until deeply soft, translucent, and faintly golden at the edges — this is the aromatic backbone of the dish. Add the garlic in the last 2 minutes and stir until fragrant but not coloured.",
-      visualCue: {
-        primaryTarget: "Onion is jammy, translucent, and collapsed, with gold edges. Garlic is soft and fragrant but still pale cream in colour.",
-        spectrum: [
-          { state: "Underdone", description: "Onion is still opaque and has some raw sharpness on the tongue. Garlic smells sharp and raw.", action: "Lower the heat and give it another 3–4 minutes, covered. The steam will help collapse the onion." },
-          { state: "Perfect",   description: "Onion has sweetened completely, edges show caramel hints, and the garlic smells nutty and sweet. The pan bottom has faint golden fond.", action: "Add the shredded cod and potato straws and toss to combine." },
-          { state: "Overdone",  description: "Onion is brown and crispy at the edges, garlic has darkened to amber or beyond — bitterness is present.", action: "Deglaze with a splash of water to stop the browning. The sweetness of the egg will compensate, but note for next time." },
-        ],
-      },
-      feelCue: "When you press a piece of onion between thumb and finger after 10 minutes, it should collapse completely without resistance — like pressing warm wax.",
+      "ingId": "ing_04",
+      "role": "Allium",
+      "name": "Oignon blanc, tranché finement",
+      "ratioValue": 200,
+      "defaultUnit": "g",
+      "substitutions": [
+        "oignon jaune"
+      ]
     },
     {
-      nodeId: "step_5",
-      action: "Fold",
-      inputs: ["softened_aromatics", "poached_shredded_cod", "potato_straws", "ing_03", "ing_09", "ing_10"],
-      outputState: "assembled_bras",
-      instructions: "Add the shredded cod to the onions and garlic. Toss gently over medium-low heat for 1 minute to warm through and marry the flavours. Add the potato straws and toss again — you want them still crisp at this stage. Beat the eggs lightly with a fork (do not season — the cod does that) and pour over the mixture. Fold continuously with a spatula over low heat, pulling the eggs through the mixture in slow waves. Remove from the heat while the eggs are still a little underdone — they will carry-cook.",
-      visualCue: {
-        primaryTarget: "Eggs form soft, creamy, barely-set ribbons that cling to and coat the cod and potatoes without pooling as raw liquid at the bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Eggs are still visibly liquid, pooling at the bottom of the pan when tilted. The mixture slides rather than holds together.", action: "Continue folding over low heat. Be patient — do not raise the heat, or you will get rubbery curds." },
-          { state: "Perfect",   description: "Eggs are just set, glossy, and creamy — the consistency of loose French scrambled eggs. The dish holds together on the spatula in a moist, cohesive mass.", action: "Remove from heat immediately and serve. Every second on heat past this point is a second too many." },
-          { state: "Overdone",  description: "Eggs are dry and granular, fully set and separating from the cod and potato. The mixture looks crumbly and sandy.", action: "Add a tablespoon of olive oil and fold off heat — it will partially restore the creaminess. Serve immediately." },
-        ],
-      },
-      feelCue: "The pan should feel light and the mixture should move in a single soft mass when you tilt it — not slosh like raw eggs, not resist like a dry scramble. There is a 30-second window where it is perfect.",
+      "ingId": "ing_05",
+      "role": "Aromatic",
+      "name": "Girofles d'ail, tranchés minces",
+      "ratioValue": 4,
+      "defaultUnit": "ea",
+      "substitutions": []
     },
     {
-      nodeId: "step_6",
-      action: "Garnish",
-      inputs: ["assembled_bras", "ing_07", "ing_08"],
-      outputState: "finished_bacalhau_bras",
-      instructions: "Scatter the roughly chopped parsley generously over the top — it is not just a garnish here but a bright, herbal counterpoint to the salt and richness. Add the olives, either scattered whole or halved. Drizzle with a thread of your best olive oil. Taste and adjust salt only if needed — it rarely will be. Serve immediately in the pan or on warm plates; this dish does not wait.",
-      visualCue: {
-        primaryTarget: "A golden, creamy mass studded with dark olive jewels and bright green flecks of parsley. Olive oil glistens on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "Parsley has not been added yet — the dish looks monochrome and heavy without the bright herbal note.", action: "Add the parsley now. Do not skip it; it is structural to the flavour, not optional decoration." },
-          { state: "Perfect",   description: "Vivid contrast of pale gold, jet black, and emerald green. The smell of olive oil, salt, and parsley is immediate and arresting.", action: "Serve at once. Bacalhau à Brás waits for no one." },
-          { state: "Overdone",  description: "Parsley was added too early and has wilted to an olive-drab colour, losing its brightness.", action: "Add a fresh handful of parsley on top just before serving to restore the vibrancy." },
-        ],
-      },
-      feelCue: "Serve in a warm pan or on a heated plate — the moment the dish hits a cold surface, the olive oil congeals and the eggs tighten. The best bite is taken straight from the pan.",
+      "ingId": "ing_06",
+      "role": "Fat",
+      "name": "Huile d'olive extra vierge",
+      "ratioValue": 80,
+      "defaultUnit": "ml",
+      "substitutions": []
     },
+    {
+      "ingId": "ing_07",
+      "role": "Herb",
+      "name": "Persil à feuilles plates, approximativement haché",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Garnish",
+      "name": "Olives noires piquées (Kalamata ou Gaeta)",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Poivre noir, fraichement craqué",
+      "ratioValue": 2,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Trempage",
+      "inputs": [
+        "ing_01"
+      ],
+      "outputState": "desalted_cod",
+      "instructions": "Placer la morue salée dans un grand bol d'eau froide, côté peau vers le haut. Réfrigérer et changer l'eau trois fois sur 24 heures – à intervalles de 8 heures est idéal. Les poissons doivent goûter à la mer, pas à la saumure. Après tremper, sécher soigneusement et enlever les os restants avec des pinces.",
+      "visualCue": {
+        "primaryTarget": "La chair a plumé et est passée de raide et ivoire à blanc doux et légèrement translucide, presque comme du poisson frais.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La chair est toujours très raide, visiblement réduite. Goûte intensément, douloureusement salée, comme manger un cube assaisonné.",
+            "action": "Changez l'eau et retournez au réfrigérateur pendant encore 8 heures. Goûtez encore avant de continuer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le poisson est pliable, se déchire facilement le long des lignes de flocons, et goûte agréablement saline — comme un bouillon bien assaisonné, pas un lécher de sel.",
+            "action": "Égoutter et sécher. Passez à l'étape du braconnage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le poisson est devenu fade et waterlogged, perdant toute sa profondeur caractéristique de bacalhau. La chair se déchire d'un coup.",
+            "action": "Continuez — les olives et l'assaisonnement soigneux rétabliront l'équilibre. N'ajoutez pas de sel avant de goûter le plat fini."
+          }
+        ]
+      },
+      "feelCue": "Le bacalhau bien désalté devrait se sentir semblable à un filet de poisson frais — souple et productif — mais avec une légère fermeté qui l'aidera à tenir ses fils pendant la cuisson."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Pochette",
+      "inputs": [
+        "desalted_cod"
+      ],
+      "outputState": "poached_shredded_cod",
+      "instructions": "Abaissez la morue dans une large casserole d'eau à peine mijotante (pas d'ébullition en roulant — l'eau devrait trembler). Pocher 5 à 7 minutes jusqu'à ce que la chair soit cuite mais encore humide. Retirer avec une cuillère à fentes et laisser refroidir assez pour manipuler. Épluchez la peau, puis utilisez vos doigts et deux fourchettes pour déchiqueter la morue en morceaux fins, en forme de filet, aussi mince que possible sans la réduire en bouillie.",
+      "visualCue": {
+        "primaryTarget": "La morue éraflée devrait ressembler à du porc tiré à la texture — de longs fils fins plutôt qu'à des morceaux, aucun plus grand qu'un petit bâtonnet.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Centre de filets épais encore translucides et gélatineux. Ne pas déchiqueter proprement — tient ensemble en gros morceaux.",
+            "action": "Retournez à l'eau mijotante pendant 2 minutes. La chaleur douce la fera cuire à travers sans durcir l'extérieur."
+          },
+          {
+            "state": "Perfect",
+            "description": "La chair est entièrement blanche opaque, se sépare en flocons naturels, et les râpes en longs fils blancs dorés qui tiennent leur forme.",
+            "action": "Réserver et faire frire les pailles de pommes de terre."
+          },
+          {
+            "state": "Overdone",
+            "description": "La chair est sèche, crayeuse et se brise en minuscules granules plutôt qu'en fils. A une faible résistance caoutchouteuse.",
+            "action": "Procéder — le brouillon d'oeufs lent réhydratera et liera la morue sèche. Une bruine d'huile d'olive supplémentaire vous aidera."
+          }
+        ]
+      },
+      "feelCue": "Chaque fil de bacalhau doit avoir un léger ressort à lui — pas musqué, pas caoutchouteux — et l'odeur de la mer avec des tons doux et laiteux du braconnier doux."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Fry",
+      "inputs": [
+        "ing_02",
+        "ing_06"
+      ],
+      "outputState": "potato_straws",
+      "instructions": "Couper les pommes de terre pelées en julienne d'allumette — environ 2mm × 2mm × 6cm — en utilisant une mandoline ou un couteau tranchant. Rincer à l'eau froide, puis sécher complètement sur les serviettes (pomme de terre humide plutôt que frites). Chauffer de 2 à 3 cm de l'huile d'olive dans une casserole large à 180°C (une paille d'essai doit étourdir immédiatement). Faire frire les pommes de terre en lots jusqu'à ce que l'or soit léger et croquant, environ 3 à 4 minutes par lot. Égoutter sur un porte-fils, pas des serviettes en papier, qui adoucissent le fond.",
+      "visualCue": {
+        "primaryTarget": "Les pailles sont d'or pâle — pas brun foncé — assez croustillantes pour se serrer l'une contre l'autre dans le bol, avec une légère translucidité au centre.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les pailles sont blondes et boiteuses, pliantes sans craquer. Les centres sont encore féculents et denses.",
+            "action": "Retourner à l'huile pendant 60 à 90 secondes. Assurez-vous que la température de l'huile est assez élevée — les lots encombrés baissent la température."
+          },
+          {
+            "state": "Perfect",
+            "description": "Or léger, rigide et croustillant. Ils sonnent comme des carillons de verre quand ils sont jetés. L'intérieur est moelleux et cuit.",
+            "action": "Assaisonner légèrement avec du sel (le bacalhau ajoute plus) et réserver jusqu'à assemblage."
+          },
+          {
+            "state": "Overdone",
+            "description": "Ambre profond à brun, amer dans l'arrière-goût. Certains ont peut-être obscurci aux extrémités.",
+            "action": "Utilisez - les — Bacalhau à Brás est pardon. L'oeuf et l'huile d'olive adoucissent l'amertume. Ensuite, baissez légèrement la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Une paille parfaite s'enclenche proprement entre deux doigts avec une fissure sèche, ne laissant aucune graisse au bout des doigts. Si elle fléchit, il lui faut plus de temps de pétrole."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Saucisse",
+      "inputs": [
+        "ing_04",
+        "ing_05",
+        "ing_06"
+      ],
+      "outputState": "softened_aromatics",
+      "instructions": "Dans la même casserole (sauter l'excès d'huile de friture, laisser un mince film), chauffer 2 cuillères à soupe d'huile d'olive fraîche à feu moyen. Ajouter l'oignon et faire cuire lentement pendant 10 à 12 minutes, en remuant occasionnellement, jusqu'à ce qu'il soit profondément doux, translucide et légèrement doré aux bords. Ajouter l'ail dans les 2 dernières minutes et remuer jusqu'à ce qu'il soit parfumé mais non coloré.",
+      "visualCue": {
+        "primaryTarget": "L'oignon est confitureux, translucide et effondré, avec des bords dorés. L'ail est doux et parfumé, mais encore crème pâle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "L'oignon est encore opaque et a une netteté brute sur la langue. L'ail sent vif et cru.",
+            "action": "Abaissez le feu et donnez-lui encore 3-4 minutes, couvert. La vapeur aidera à faire tomber l'oignon."
+          },
+          {
+            "state": "Perfect",
+            "description": "L'oignon s'est complètement sucré, les bords montrent des notes de caramel, et l'ail sent la noix et le sucre. Le fond de la poêle a un faible goût doré.",
+            "action": "Ajouter la morue déchiquetée et les pailles de pomme de terre et mélanger."
+          },
+          {
+            "state": "Overdone",
+            "description": "L'oignon est brun et croustillant aux bords, l'ail est foncé jusqu'à l'ambre ou au-delà.",
+            "action": "Déglacer avec un jet d'eau pour arrêter le brunissement. La douceur de l'œuf compensera, mais notez pour la prochaine fois."
+          }
+        ]
+      },
+      "feelCue": "Lorsque vous pressez un morceau d'oignon entre le pouce et le doigt après 10 minutes, il devrait s'effondrer complètement sans résistance — comme presser la cire chaude."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Plier",
+      "inputs": [
+        "softened_aromatics",
+        "poached_shredded_cod",
+        "potato_straws",
+        "ing_03",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "assembled_bras",
+      "instructions": "Ajouter la morue déchiquetée aux oignons et à l'ail. Mélanger doucement à feu moyen-doux pendant 1 minute pour réchauffer et épouser les saveurs. Ajoutez encore les pailles de pommes de terre et jetez - vous voulez qu'elles soient encore croustillantes à ce stade. Battre légèrement les oeufs avec une fourchette (ne pas assaisonner — la morue fait cela) et verser sur le mélange. Plier continuellement avec une spatule à feu doux, en tirant les œufs à travers le mélange en vagues lentes. Retirer de la chaleur pendant que les œufs sont encore un peu sous-dosés — ils feront cuire.",
+      "visualCue": {
+        "primaryTarget": "Les oeufs forment des rubans mous, crémeux et à peine sertis qui s'accrochent à la morue et aux pommes de terre et les enrobent sans se regrouper en liquide brut au fond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les œufs sont encore visiblement liquides, se superposant au fond de la poêle lorsqu'ils sont inclinés. Le mélange glisse plutôt que de se tenir ensemble.",
+            "action": "Continuer à plier à feu doux. Soyez patient — n'élèvez pas la chaleur, ou vous obtiendrez des caillés caoutchouteux."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les œufs sont simplement sertis, brillants et crémeux, la consistance des oeufs brouillés français. Le plat tient ensemble sur la spatule dans une masse humide et cohésive.",
+            "action": "Retirer immédiatement du feu et servir. Chaque seconde sur la chaleur passé ce point est une seconde trop."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oeufs sont secs et granulés, entièrement sertis et séparés de la morue et de la pomme de terre. Le mélange semble émietté et sablonneux.",
+            "action": "Ajoutez une cuillerée à soupe d'huile d'olive et pliez-la au feu. Servir immédiatement."
+          }
+        ]
+      },
+      "feelCue": "La poêle devrait sentir la lumière et le mélange devrait se déplacer en une seule masse molle lorsque vous l'inclinez — pas slosh comme des œufs crus, pas résister comme un brouillon sec. Il y a une fenêtre de 30 secondes où elle est parfaite."
+    },
+    {
+      "nodeId": "step_6",
+      "action": "Garnir",
+      "inputs": [
+        "assembled_bras",
+        "ing_07",
+        "ing_08"
+      ],
+      "outputState": "finished_bacalhau_bras",
+      "instructions": "Dispersez généreusement le persil grossièrement haché sur le dessus — ce n'est pas seulement une garniture ici, mais une plante brillante, contrepoint au sel et à la richesse. Ajouter les olives, éparpillées entières ou coupées en deux. Arrosez avec un fil de votre meilleure huile d'olive. Goûtez et ajustez le sel seulement si nécessaire — il le sera rarement. Servir immédiatement dans la poêle ou sur des assiettes chaudes; ce plat n'attend pas.",
+      "visualCue": {
+        "primaryTarget": "Une masse dorée et crémeuse parsemée de bijoux d'olive foncés et de paillettes de persil vert vif. L'huile d'olive brille à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le persil n'a pas encore été ajouté — le plat semble monochrome et lourd sans la note à base de plantes brillantes.",
+            "action": "Ajoutez le persil maintenant. Ne le sautez pas; il est structurel à la saveur, pas de décoration en option."
+          },
+          {
+            "state": "Perfect",
+            "description": "Un contraste vif d'or pâle, de noir de jet et de vert émeraude. L'odeur de l'huile d'olive, du sel et du persil est immédiate et arrêtante.",
+            "action": "Servir immédiatement. Bacalhau à Brás n'attend personne."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le persil a été ajouté trop tôt et s'est flétri à une couleur olive-drabe, perdant sa luminosité.",
+            "action": "Ajouter une poignée de persil frais sur le dessus juste avant de servir pour restaurer la vivacité."
+          }
+        ]
+      },
+      "feelCue": "Servir dans une poêle chaude ou sur une assiette chauffée — au moment où le plat atteint une surface froide, l'huile d'olive congeals et les œufs serrer. La meilleure morsure est prise directement dans la poêle."
+    }
+  ]
 };

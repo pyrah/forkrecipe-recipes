@@ -1,100 +1,284 @@
 export default {
-  repoId: "master_peruvian_peruvianpicarones_001",
-  parentRepoId: null,
-  slug: "peruvian-picarones",
-  author: "ForkRecipe Kitchen",
-  title: "Picarones",
-  description: "Peru's beloved fried doughnuts — rings of sweet potato and butternut squash dough, yeast-risen and crisp on the outside, pillowy within, drizzled with chancaca syrup spiced with anise and cinnamon.",
-  cuisine: "Peruvian",
-  culture: "Limeño",
-  category: "desserts",
-  tags: ["dessert", "vegan", "sweet-potato", "squash", "peruvian", "fried", "syrup"],
-  difficulty: 3,
-  activeTime: "45 min",
-  totalTime: "3 hours",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 4, salty: 1, sour: 0, bitter: 1, umami: 0, heat: 0 },
-  ingredients: [
-    { ingId: "ing_01", role: "Structure",  name: "Orange-flesh sweet potato, cooked and mashed", ratioValue: 250, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Structure",  name: "Butternut squash, cooked and mashed",           ratioValue: 250, defaultUnit: "g", substitutions: ["pumpkin"] },
-    { ingId: "ing_03", role: "Structure",  name: "All-purpose flour",                             ratioValue: 300, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_04", role: "Leavener",   name: "Active dry yeast",                              ratioValue: 7,   defaultUnit: "g", substitutions: ["instant yeast"] },
-    { ingId: "ing_05", role: "Sweetener",  name: "Caster sugar",                                  ratioValue: 30,  defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_06", role: "Seasoning",  name: "Fine salt",                                     ratioValue: 5,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_07", role: "Spice",      name: "Anise seeds, lightly crushed",                  ratioValue: 3,   defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_08", role: "Fat",        name: "Neutral oil for deep-frying",                   ratioValue: 700, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_09", role: "Sweetener",  name: "Chancaca (raw cane sugar block) or dark muscovado sugar", ratioValue: 250, defaultUnit: "g", substitutions: ["piloncillo", "dark muscovado"] },
-    { ingId: "ing_10", role: "Hydration",  name: "Water (for syrup)",                             ratioValue: 300, defaultUnit: "ml", substitutions: [] },
-    { ingId: "ing_11", role: "Spice",      name: "Cinnamon stick",                                ratioValue: 1,   defaultUnit: "piece", substitutions: [] },
-    { ingId: "ing_12", role: "Spice",      name: "Whole cloves",                                  ratioValue: 3,   defaultUnit: "pieces", substitutions: [] },
-    { ingId: "ing_13", role: "Citrus",     name: "Orange peel strip",                             ratioValue: 1,   defaultUnit: "piece", substitutions: [] },
+  "repoId": "master_peruvian_peruvianpicarones_001",
+  "parentRepoId": null,
+  "slug": "peruvian-picarones",
+  "author": "ForkRecipe Kitchen",
+  "title": "Picarones",
+  "description": "Les beignets frits bien-aimés du Pérou - des anneaux de patate douce et de courge de beurre, levain de levure et croustillants à l'extérieur, oreiller à l'intérieur, arrosés de sirop de chancaca épicé avec de l'anis et de la cannelle.",
+  "cuisine": "Pérou",
+  "culture": "Limeño",
+  "category": "desserts",
+  "tags": [
+    "dessert",
+    "végétalien",
+    "Potato doux",
+    "squash",
+    "périuvien",
+    "frits",
+    "sirop"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "45 min",
+  "totalTime": "3 hours",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 4,
+    "salty": 1,
+    "sour": 0,
+    "bitter": 1,
+    "umami": 0,
+    "heat": 0
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Mix",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_05", "ing_06", "ing_07"],
-      outputState: "picarone_dough",
-      instructions: "Ensure the sweet potato and squash mashes are cooled to lukewarm — warm enough to activate the yeast, cool enough not to kill it (38°C / 100°F is ideal). Combine the mashes in a large bowl. Dissolve the yeast in 3 tablespoons of warm water with a pinch of the sugar and leave 5 minutes until foamy. Add the foamy yeast, remaining sugar, salt, and anise seeds to the mash. Add the flour gradually, mixing to form a soft, slightly sticky dough. It will be softer and stickier than bread dough due to the vegetable moisture — do not add too much flour.",
-      visualCue: {
-        primaryTarget: "A soft, orange-hued, slightly sticky dough that holds together but clings to the bowl.",
-        spectrum: [
-          { state: "Underdone", description: "Still too wet and sloshy. Does not hold any shape. Very sticky and runny.", action: "Add flour 2 tablespoons at a time and mix until the dough holds together when a ball is attempted." },
-          { state: "Perfect",   description: "Soft, slightly sticky, orange-tinted dough. Holds together as a mass but clings gently to the bowl. Smells of anise and sweet potato. Can be stretched without tearing easily.", action: "Cover and prove in a warm place until doubled, about 1-2 hours." },
-          { state: "Overdone",  description: "Dough is tight, smooth, and no longer sticky — too much flour added. Will produce dense, chewy picarones.", action: "Cover and rest — the yeast activity will help loosen the dough during proofing." },
-        ],
-      },
-      feelCue: "The dough should feel warm, soft, and just barely manageable with wet hands — if it feels like standard bread dough it has too much flour.",
+      "ingId": "ing_01",
+      "role": "Structure",
+      "name": "Pommes de terre douces à chair orange, cuites et purées",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2", action: "Proof",
-      inputs: ["picarone_dough"],
-      outputState: "proofed_picarone_dough",
-      instructions: "Cover the bowl with plastic wrap or a damp cloth. Leave in a warm place (25-28°C / 77-82°F) for 1-2 hours until the dough has roughly doubled in volume and looks airy and loose. The dough will also become even stickier as the yeast activates — this is normal. The anise aroma will become more pronounced.",
-      visualCue: {
-        primaryTarget: "Doubled in volume, very airy-looking, with a slightly domed surface and visible bubbles at the edges.",
-        spectrum: [
-          { state: "Underdone", description: "Barely risen. Dense and still compact. Smells of raw vegetable and flour, not yeast activity.", action: "Move to a warmer location. In cold kitchens, place the bowl in a turned-off oven with just the light on." },
-          { state: "Perfect",   description: "Doubled or more. Loose and airy, with bubbles visible at the surface and sides. Smells of fermenting sweetness with anise notes. The dough jiggles when the bowl is shaken.", action: "The dough is ready to fry. Keep it in the bowl and use wet hands to form rings directly over the oil." },
-          { state: "Overdone",  description: "Dough has over-proofed — strong sour/alcoholic smell. Very slack and sticky. Surface may show collapse.", action: "Fry immediately. Over-proofed picarones will be less airy but still edible." },
-        ],
-      },
-      feelCue: "A poke with a floured finger should leave a dimple that fills back slowly — half-spring, half-collapse. If it springs back fast, it needs more time.",
+      "ingId": "ing_02",
+      "role": "Structure",
+      "name": "courges à beurre, cuites et purées",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Citrouille"
+      ]
     },
     {
-      nodeId: "step_3", action: "Simmer",
-      inputs: ["ing_09", "ing_10", "ing_11", "ing_12", "ing_13"],
-      outputState: "chancaca_syrup",
-      instructions: "Break or chop the chancaca into pieces. Combine with water, cinnamon stick, cloves, and orange peel in a saucepan. Heat over medium, stirring to dissolve the sugar. Once dissolved, bring to a gentle boil and cook for 10-12 minutes until syrupy and fragrant. Strain out the spices and peel. Keep warm. The syrup should be dark, spiced, and thick enough to drizzle.",
-      visualCue: {
-        primaryTarget: "A dark amber-brown, fragrant syrup thick enough to drizzle slowly from a spoon.",
-        spectrum: [
-          { state: "Underdone", description: "Thin, watery, and very dark — all the sugar flavor but no viscosity. Runs off in a thin stream.", action: "Cook for another 5 minutes. The syrup needs to reduce to a light coating consistency." },
-          { state: "Perfect",   description: "Dark amber, distinctly spiced and fragrant. Drizzles slowly off a spoon in a thick stream. Smells of anise, cinnamon, and raw cane sugar.", action: "Strain and keep warm to drizzle over the hot picarones." },
-          { state: "Overdone",  description: "Syrup has set hard — crystallizing or becoming very thick and sticky. Clumps on the spoon.", action: "Add 50ml of hot water and reheat gently until fluid again." },
-        ],
-      },
-      feelCue: "Dip a spoon in and lift — the syrup should fall in a thin, steady drizzle that slowly tapers. Not a stream, not drops.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_4", action: "Fry",
-      inputs: ["proofed_picarone_dough", "ing_08"],
-      outputState: "fried_picarones",
-      instructions: "Heat the oil to 175°C (345°F) in a deep, wide pan. Wet your hands thoroughly. Grab a golf ball-sized portion of dough, poke a hole through the center with your finger, and stretch into a ring shape (about 10cm diameter) directly over the hot oil. Drop it in. Fry in batches of 3-4, turning once after 2-3 minutes, until both sides are deep golden-brown. Total frying time is 4-5 minutes per batch. The dough will expand in the oil. Drain on paper towels.",
-      visualCue: {
-        primaryTarget: "Puffed, deep golden rings with an even color on both sides and open, airy-looking texture.",
-        spectrum: [
-          { state: "Underdone", description: "Pale gold, soft, and still yielding when pressed. Interior may be doughy and raw. Oil not hot enough.", action: "Increase oil temperature and fry longer. The exterior must be genuinely golden before flipping." },
-          { state: "Perfect",   description: "Deep golden-brown on both sides, puffed, and with a slightly crisped exterior. When broken open, the interior is soft, airy, and orange-tinted from the sweet potato. Smells of fried sweetness.", action: "Drain and drizzle immediately with warm chancaca syrup." },
-          { state: "Overdone",  description: "Very dark brown, hard exterior. Bitter-fried smell. The rings are rigid and not yielding.", action: "Lower oil temperature. Dark picarones lose the contrast between crisp exterior and soft interior." },
-        ],
-      },
-      feelCue: "A perfect picarone should feel light in the hand relative to its size — a crisp exterior that yields to gentle pressure, revealing a soft interior.",
+      "ingId": "ing_04",
+      "role": "Leavener",
+      "name": "levure sèche active",
+      "ratioValue": 7,
+      "defaultUnit": "g",
+      "substitutions": [
+        "levure instantanée"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Sucre de canne",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 5,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Graines d'anis, légèrement broyées",
+      "ratioValue": 3,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Fat",
+      "name": "Huile neutre pour friture profonde",
+      "ratioValue": 700,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Sweetener",
+      "name": "Chancaca (bloc de sucre de canne brute) ou sucre de muscovado foncé",
+      "ratioValue": 250,
+      "defaultUnit": "g",
+      "substitutions": [
+        "piloncillo",
+        "muscovado foncé"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Hydration",
+      "name": "Eau (pour sirop)",
+      "ratioValue": 300,
+      "defaultUnit": "ml",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "Bâton de cannelle",
+      "ratioValue": 1,
+      "defaultUnit": "piece",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Spice",
+      "name": "Giroves entières",
+      "ratioValue": 3,
+      "defaultUnit": "pieces",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Citrus",
+      "name": "Bandes de peau orange",
+      "ratioValue": 1,
+      "defaultUnit": "piece",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Mélange",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "picarone_dough",
+      "instructions": "S'assurer que la patate douce et les cils de courge sont refroidis à tiède — assez chauds pour activer la levure, assez frais pour ne pas la tuer (38°C / 100°F est idéal). Mélanger les cils dans un grand bol. Dissoudre la levure dans 3 cuillères à soupe d'eau chaude avec une pincée de sucre et laisser 5 minutes jusqu'à mousser. Ajouter la levure mousseuse, le sucre restant, le sel et les graines d'anis dans la masse. Ajouter la farine graduellement, mélanger pour former une pâte douce et légèrement collante. Il sera plus doux et plus collant que la pâte à pain en raison de l'humidité végétale — n'ajoutez pas trop de farine.",
+      "visualCue": {
+        "primaryTarget": "Une pâte douce, teintée d'orange, légèrement collante qui tient ensemble mais s'accroche au bol.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Toujours trop humide et trop slosy. Ne tient aucune forme. Très collant et rugueux.",
+            "action": "Ajouter la farine 2 cuillerées à soupe à la fois et mélanger jusqu'à ce que la pâte se maintienne lorsqu'une balle est tentée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Pâte douce, légèrement collante, teintée d'orange. Se tient ensemble en masse, mais s'accroche doucement au bol. Des odeurs d'anis et de patate douce. Peut être étiré sans déchirer facilement.",
+            "action": "Couvrir et prouver dans un endroit chaud jusqu'à doublé, environ 1-2 heures."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est serrée, lisse et n'est plus collante — trop de farine ajoutée. Produira des picarones denses et mâcheuses.",
+            "action": "Couvrir et se reposer — l'activité de la levure aidera à relâcher la pâte pendant la mise à l'épreuve."
+          }
+        ]
+      },
+      "feelCue": "La pâte doit se sentir chaude, douce et à peine gérable avec les mains mouillées — si elle se sent comme la pâte à pain standard, elle a trop de farine."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Preuve",
+      "inputs": [
+        "picarone_dough"
+      ],
+      "outputState": "proofed_picarone_dough",
+      "instructions": "Couvrir le bol d'une enveloppe en plastique ou d'un chiffon humide. Laisser dans un endroit chaud (25-28°C / 77-82°F) pendant 1-2 heures jusqu'à ce que la pâte ait à peu près doublé en volume et semble aérée et lâche. La pâte deviendra également encore plus collante à mesure que la levure s'active — c'est normal. L'arôme d'anis deviendra plus prononcé.",
+      "visualCue": {
+        "primaryTarget": "Double en volume, très aéré, avec une surface légèrement bombée et des bulles visibles aux bords.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "A peine ressuscité. Sensé et toujours compact. Sens de légumes crus et de farine, pas d'activité levure.",
+            "action": "Déplacez-vous dans un endroit plus chaud. Dans les cuisines froides, placer le bol dans un four éteint avec juste la lumière allumée."
+          },
+          {
+            "state": "Perfect",
+            "description": "Double ou plus. Allongé et aéré, avec des bulles visibles à la surface et sur les côtés. Sens de douceur fermentante avec des notes d'anis. La pâte saute quand le bol est secoué.",
+            "action": "La pâte est prête à frire. Gardez-le dans le bol et utilisez les mains mouillées pour former des anneaux directement sur l'huile."
+          },
+          {
+            "state": "Overdone",
+            "description": "La toux est surpropriété — forte odeur acide/alcoolique. Très lâche et collant. La surface peut montrer un effondrement.",
+            "action": "Fry immédiatement. Les picarones surprotégées seront moins aérées mais toujours comestibles."
+          }
+        ]
+      },
+      "feelCue": "Un poke avec un doigt fariné devrait laisser une fossette qui se remplit lentement — demi - printemps, demi - effondrement. Si ça revient vite, il lui faut plus de temps."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "ing_09",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_13"
+      ],
+      "outputState": "chancaca_syrup",
+      "instructions": "Briser ou couper le chancaca en morceaux. Mélanger avec de l'eau, du bâton de cannelle, des gousses et de l'écorce d'orange dans une casserole. Chauffer à feu moyen, en remuant pour dissoudre le sucre. Une fois dissous, porter à ébullition douce et cuire 10-12 minutes jusqu'à ce que le tout soit sirupeux et parfumé. Éteignez les épices et pelez. Restez au chaud. Le sirop doit être foncé, épicé et assez épais pour être arrosé.",
+      "visualCue": {
+        "primaryTarget": "Un sirop brun-ambre foncé et parfumé assez épais pour arroser lentement d'une cuillère.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Fine, aqueuse et très sombre — toute la saveur de sucre, mais pas de viscosité. Elle coule dans un ruisseau mince.",
+            "action": "Cuire encore 5 minutes. Le sirop doit réduire à une légère consistance de revêtement."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre foncée, distinctement épicée et parfumée. Dessèche lentement une cuillère dans un ruisseau épais. Sens d'anis, de cannelle et de sucre cru de canne.",
+            "action": "Plongez et gardez au chaud pour arroser les picarones chaudes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le sirop s'est fixé dur — cristallisant ou devenant très épais et collant. Des coups sur la cuillère.",
+            "action": "Ajouter 50 ml d'eau chaude et réchauffer doucement jusqu'à ce que le liquide soit à nouveau."
+          }
+        ]
+      },
+      "feelCue": "Arrosez une cuillère et soulevez - le sirop doit tomber dans une bruine mince et stable qui s'affaisse lentement. Pas un ruisseau, pas des gouttes."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "proofed_picarone_dough",
+        "ing_08"
+      ],
+      "outputState": "fried_picarones",
+      "instructions": "Chauffer l'huile à 175°C (345°F) dans un poêlon profond et large. Mouillez bien vos mains. Prenez une partie de la pâte de la taille d'une balle de golf, faites un trou dans le centre avec votre doigt, et étirez-vous en forme d'anneau (environ 10 cm de diamètre) directement sur l'huile chaude. Laisse tomber. Faire frire en lots de 3-4, en tournant une fois après 2-3 minutes, jusqu'à ce que les deux côtés soient profondément dorés. La durée totale de cuisson est de 4-5 minutes par lot. La pâte va s'étendre dans l'huile. Égoutter sur des serviettes en papier.",
+      "visualCue": {
+        "primaryTarget": "Anneaux dorés et piqués avec une couleur uniforme des deux côtés et une texture ouverte et aérée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Or pâle, doux, et toujours à la pression. L'intérieur peut être pâteux et cru. L'huile n'est pas assez chaude.",
+            "action": "Augmenter la température de l'huile et faire frire plus longtemps. L'extérieur doit être vraiment doré avant de basculer."
+          },
+          {
+            "state": "Perfect",
+            "description": "D'or profond-brun des deux côtés, gonflé, et avec un extérieur légèrement croustillant. Lorsqu'il est cassé, l'intérieur est doux, aéré et teinté d'orange de la patate douce. Des odeurs de douceur frite.",
+            "action": "Égoutter et arroser immédiatement avec du sirop de chancaca chaud."
+          },
+          {
+            "state": "Overdone",
+            "description": "Très brun foncé, extérieur dur. Une odeur frite. Les anneaux sont rigides et ne donnent pas.",
+            "action": "Température d'huile inférieure. Les picarones foncées perdent le contraste entre extérieur croustillant et intérieur doux."
+          }
+        ]
+      },
+      "feelCue": "Un picarone parfait devrait sentir la lumière dans la main par rapport à sa taille — un extérieur croustillant qui donne à la pression douce, révélant un intérieur doux."
+    }
+  ]
 };

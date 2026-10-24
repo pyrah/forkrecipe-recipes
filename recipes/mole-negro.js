@@ -1,112 +1,381 @@
 export default {
-  repoId: "master_mexican_mole_negro_001",
-  parentRepoId: null,
-  slug: "mole-negro",
-  author: "ForkRecipe Kitchen",
-  title: "Oaxacan Mole Negro",
-  description: "Twenty-one ingredients charred, toasted, soaked, and simmered for hours until they collapse into an obsidian sauce of staggering depth — bitter chocolate and dried chilies threading through smoke, spice, and time.",
-  cuisine: "Mexican",
-  culture: "Oaxacan",
-  category: "sauces",
-  tags: ["mexican", "oaxacan", "mole", "chilies", "chocolate", "complex", "slow-cook"],
-  difficulty: 5,
-  activeTime: "2 hr",
-  totalTime: "3 hr",
-  ratioSystem: "parts",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-07-02",
-  updatedAt: "2026-07-02",
-  flavorRadar: { sweet: 2, salty: 2, sour: 1, bitter: 3, umami: 4, heat: 3 },
-  ingredients: [
-    { ingId: "ing_01", role: "Base",      name: "Dried mulato chilies, stems and most seeds removed",       ratioValue: 50,   defaultUnit: "parts", substitutions: ["extra ancho chilies"] },
-    { ingId: "ing_02", role: "Base",      name: "Dried pasilla negro chilies, stems and most seeds removed", ratioValue: 50,   defaultUnit: "parts", substitutions: ["mulato chilies"] },
-    { ingId: "ing_03", role: "Base",      name: "Dried ancho chilies, stems and most seeds removed",         ratioValue: 50,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_04", role: "Base",      name: "Dried chihuacle negro chilies, stems removed",             ratioValue: 50,   defaultUnit: "parts", substitutions: ["additional mulato or pasilla"] },
-    { ingId: "ing_05", role: "Sweetener", name: "Ripe plantain, peeled and sliced thick",                   ratioValue: 100,  defaultUnit: "parts", substitutions: ["very ripe banana"] },
-    { ingId: "ing_06", role: "Umami",     name: "Dark chocolate (70% cacao minimum), roughly chopped",      ratioValue: 60,   defaultUnit: "parts", substitutions: ["Mexican chocolate tablet"] },
-    { ingId: "ing_07", role: "Base",      name: "Ripe tomatoes, halved",                                    ratioValue: 300,  defaultUnit: "parts", substitutions: ["canned fire-roasted tomatoes"] },
-    { ingId: "ing_08", role: "Allium",    name: "White onion, quartered",                                   ratioValue: 150,  defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_09", role: "Allium",    name: "Garlic cloves, unpeeled",                                  ratioValue: 30,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_10", role: "Spice",     name: "Cumin seeds",                                              ratioValue: 5,    defaultUnit: "parts", substitutions: ["ground cumin (add at blending stage)"] },
-    { ingId: "ing_11", role: "Spice",     name: "Mexican cinnamon (canela), 1 small stick",                 ratioValue: 3,    defaultUnit: "parts", substitutions: ["Ceylon cinnamon (not cassia)"] },
-    { ingId: "ing_12", role: "Spice",     name: "Black peppercorns",                                        ratioValue: 3,    defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_13", role: "Herb",      name: "Dried thyme",                                              ratioValue: 2,    defaultUnit: "parts", substitutions: ["fresh thyme (double the quantity)"] },
-    { ingId: "ing_14", role: "Herb",      name: "Dried Mexican oregano",                                    ratioValue: 3,    defaultUnit: "parts", substitutions: ["dried marjoram"] },
-    { ingId: "ing_15", role: "Fat",       name: "Sesame seeds",                                             ratioValue: 30,   defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_16", role: "Fat",       name: "Pumpkin seeds (pepitas), raw",                             ratioValue: 30,   defaultUnit: "parts", substitutions: ["sunflower seeds"] },
-    { ingId: "ing_17", role: "Sweetener", name: "Raisins",                                                  ratioValue: 30,   defaultUnit: "parts", substitutions: ["dried currants"] },
-    { ingId: "ing_18", role: "Fat",       name: "Lard or neutral oil",                                      ratioValue: 50,   defaultUnit: "parts", substitutions: ["duck fat"] },
-    { ingId: "ing_19", role: "Liquid",    name: "Turkey or chicken broth, warm",                            ratioValue: 1000, defaultUnit: "parts", substitutions: ["vegetable broth for a vegetarian version"] },
-    { ingId: "ing_20", role: "Seasoning", name: "Fine salt",                                                ratioValue: 8,    defaultUnit: "parts", substitutions: [] },
-    { ingId: "ing_21", role: "Starch",    name: "Day-old corn tortilla, torn into pieces",                  ratioValue: 30,   defaultUnit: "parts", substitutions: ["stale bread"] },
+  "repoId": "master_mexican_mole_negro_001",
+  "parentRepoId": null,
+  "slug": "mole-negro",
+  "author": "ForkRecipe Kitchen",
+  "title": "Oaxacan Mole Negro",
+  "description": "Vingt et un ingrédients carbonisés, grillés, trempés et mijotés pendant des heures jusqu'à ce qu'ils s'effondrent dans une sauce obsidienne d'une profondeur stupéfiante — chocolat amer et chilis séchés filant à travers la fumée, les épices et le temps.",
+  "cuisine": "Mexicain",
+  "culture": "Oaxacan",
+  "category": "sauces",
+  "tags": [
+    "Mexique",
+    "oaxacan",
+    "Mole",
+    "piments",
+    "chocolat",
+    "complexe",
+    "Cuisson lente"
   ],
-  processNodes: [
+  "difficulty": 5,
+  "activeTime": "2 hr",
+  "totalTime": "3 hr",
+  "ratioSystem": "parts",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-07-02",
+  "updatedAt": "2026-07-02",
+  "flavorRadar": {
+    "sweet": 2,
+    "salty": 2,
+    "sour": 1,
+    "bitter": 3,
+    "umami": 4,
+    "heat": 3
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Toast",
-      inputs: ["ing_01", "ing_02", "ing_03", "ing_04", "ing_10", "ing_11", "ing_12", "ing_15", "ing_16", "ing_21"],
-      outputState: "toasted_dry_components",
-      instructions: "Heat a dry comal or heavy skillet over medium-high. Working in batches, toast each chili variety: press them flat against the hot surface for 15–20 seconds per side until they blister, puff, and release a deep, smoky fragrance — not the acrid scent of burning. Immediately submerge toasted chilies in a bowl of very hot water and weigh them down with a plate; soak 25–30 minutes until fully soft. In the same dry pan, toast cumin seeds until fragrant (30 seconds), then cinnamon, peppercorns, sesame seeds, pumpkin seeds, and torn tortilla pieces separately, each until golden and aromatic. Toast the reserved chili seeds if you want more heat (optional). Keep all toasted dry components together.",
-      visualCue: {
-        primaryTarget: "Each chili should show blistered, puffed skin with small dark spots — deeply fragrant, not black or ashy. Soaked chilies are fully pliable, dark, and almost silky.",
-        spectrum: [
-          { state: "Underdone", description: "Chilies are flat and matte with no blistering. The pan smells of dried pepper but not of smoke or depth. Seeds and sesame are still pale and raw-tasting.", action: "Increase the heat and continue pressing — the comal must be hot enough to generate immediate contact with the chili skin. Listen for a faint sizzle when they touch the surface." },
-          { state: "Perfect",   description: "Chilies have puffed, showing small blistered dark patches on the skin and a mahogany-brown interior when torn open. The kitchen smells of smoky dried fruit and spice. Sesame and pumpkin seeds are golden and smell nutty.", action: "Soak the toasted chilies immediately while they are still hot; this is when they rehydrate most efficiently." },
-          { state: "Overdone",  description: "Chilies are black in patches, brittle, and smell acrid. The scorched flavor will make the entire mole bitter in a way that can't be corrected.", action: "Discard the burnt chilies — bitterness from char cannot be masked even by chocolate. Start with fresh dried chilies and reduce the heat before proceeding." },
-        ],
-      },
-      feelCue: "A fully soaked chili should feel completely pliable, almost silky between the fingers — no stiff or papery patches anywhere along the skin. Tear one open; the flesh inside should be dark, moist, and intensely fragrant.",
+      "ingId": "ing_01",
+      "role": "Base",
+      "name": "Morceaux séchés, tiges et la plupart des graines enlevées",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "chilies extra ancho"
+      ]
     },
     {
-      nodeId: "step_2",
-      action: "Roast",
-      inputs: ["ing_07", "ing_08", "ing_09", "ing_05", "ing_17"],
-      outputState: "charred_wet_components",
-      instructions: "Place tomato halves, quartered onion, and unpeeled garlic directly on the same dry comal over high heat. Char them without moving: you want dramatic blackening on at least one side — this char is structural flavor, not a mistake. Turn once and char the other side. Garlic is done when its papery skin is blackened and the cloves feel soft inside when pressed. In a small pan with a splash of lard or oil, fry plantain slices over medium heat until deeply caramelized and bronze on both sides (3–4 min per side). Add raisins to the pan in the last minute and fry until they puff. Peel the garlic; do not peel the onion char.",
-      visualCue: {
-        primaryTarget: "Tomatoes have blackened, collapsed skins with juices bubbling out. Onion quarters are charred black on the cut faces with softened interiors. Garlic papery skins are fully black. Plantain slices are a deep amber-brown.",
-        spectrum: [
-          { state: "Underdone", description: "Tomatoes are merely softened with pale, unchanged skin. Onion and garlic show light browning rather than char. Plantain is golden but not caramelized.", action: "Return to high heat without moving — the char must be genuine. A properly hot pan with no oil is required." },
-          { state: "Perfect",   description: "Tomatoes are collapsed and black-skinned with juices caramelized at the edges. Onion faces are mahogany-black. Garlic skins are fully charred, cloves tender inside. Plantain is deep caramel.", action: "Leave all components with their charred skins for the blending stage — the char contributes the mole's characteristic dark color and bitter base note." },
-          { state: "Overdone",  description: "Components have crossed from char into ash — tomatoes are dry and shrunken, onions carbonized to a powder. Plantain is burnt-sweet and acrid.", action: "Discard and start the wet components again. Some char is essential; complete carbonization is not recoverable." },
-        ],
-      },
-      feelCue: "Press a charred garlic clove through its blackened skin — it should yield completely, squeezing out like soft butter. If there is any resistance, return it to the heat.",
+      "ingId": "ing_02",
+      "role": "Base",
+      "name": "Pasilla nègre séchée, tiges et la plupart des graines enlevées",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Mulato chilies"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Blend",
-      inputs: ["toasted_dry_components", "charred_wet_components", "ing_19"],
-      outputState: "mole_paste",
-      instructions: "Drain the soaked chilies, reserving the soaking liquid (but use sparingly — it can be very bitter). Working in batches in a blender: combine soaked chilies, charred tomatoes and onion, peeled charred garlic, toasted spices, sesame seeds, pumpkin seeds, tortilla pieces, fried plantain, and raisins. Add warm broth as needed (not chili soaking liquid) to get the blades moving — typically 3–4 ladles per batch. Blend each batch for at least 2 full minutes until completely smooth. Pass through a medium sieve if you want a very refined texture; leave it as-is for a more rustic, textured mole.",
-      visualCue: {
-        primaryTarget: "A thick, jet-black to very dark brown paste that moves like molasses when the blender is stopped — viscous, completely smooth, and so dark it is nearly opaque.",
-        spectrum: [
-          { state: "Underdone", description: "The paste is grainy and speckled with visible chili skin pieces, seed fragments, or green patches of unblended herbs. The color is reddish-brown rather than true black.", action: "Blend longer — 2 full minutes at high speed per batch is the minimum. Add more broth to free the blades if needed." },
-          { state: "Perfect",   description: "The paste is completely smooth, deeply dark (black-brown), and flows off a spatula in a slow, thick ribbon. The smell is extraordinary — chocolate, smoke, dried fruit, and spice simultaneously.", action: "Proceed immediately to frying — the paste must be cooked in hot fat to develop its final flavor." },
-          { state: "Overdone",  description: "The paste has been blended so long and with so much broth that it is thin and watery rather than thick.", action: "Reduce the paste in a saucepan over medium heat, stirring constantly, until it thickens back to a mole-paste consistency before frying." },
-        ],
-      },
-      feelCue: "Rub a little paste between your fingers — it should feel velvet-smooth with absolutely no graininess. If you feel any roughness, it needs more blending.",
+      "ingId": "ing_03",
+      "role": "Base",
+      "name": "Piments ancho séchés, tiges et la plupart des graines enlevées",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": []
     },
     {
-      nodeId: "step_4",
-      action: "Simmer",
-      inputs: ["mole_paste", "ing_18", "ing_19", "ing_06", "ing_13", "ing_14", "ing_20"],
-      outputState: "mole_negro",
-      instructions: "Heat the lard in a large, heavy-bottomed pot (preferably clay or enameled cast iron) over high heat until it begins to smoke lightly. Pour the mole paste in all at once — it will spit violently, so stand back and have a lid ready. Fry the paste, stirring constantly with a wooden spoon, for 10–15 minutes until it darkens another shade, thickens, and the fat separates visibly at the edges. This frying step is what transforms a blended mixture into a true mole. Reduce heat to medium-low. Add warm broth one ladle at a time, stirring well after each addition. Add dried thyme, oregano, and salt. Simmer gently for at least 1 hour, skimming any fat that rises. Add the chopped chocolate in the final 5 minutes, stirring until fully melted. Taste and adjust salt.",
-      visualCue: {
-        primaryTarget: "A sauce the color of polished obsidian — almost black — that coats the back of a spoon completely and falls in a single unbroken, heavy curtain when the spoon is lifted.",
-        spectrum: [
-          { state: "Underdone", description: "The mole is reddish-brown rather than black and tastes raw and harsh — the paste hasn't been fried long enough, and the flavors haven't unified. The consistency is too thin.", action: "Fry the paste for another 5–10 minutes on higher heat, and continue simmering to reduce and concentrate." },
-          { state: "Perfect",   description: "Deep, near-black color. The mole coats a spoon thickly and falls off in an unbroken curtain. The flavor is extraordinarily complex — you taste layers: first heat, then chocolate bitterness, then dried fruit sweetness, then smoke, then umami depth.", action: "The mole is done. It will hold refrigerated for 5 days and improve. Thin as needed with warm broth when reheating." },
-          { state: "Overdone",  description: "The mole has reduced too far — it is stiff, clinging, and salty, with the chocolate dominating and the broth flavor gone.", action: "Whisk in warm broth, a ladle at a time, until the consistency returns to coating-spoon weight. Taste for salt after each addition." },
-        ],
-      },
-      feelCue: "The properly finished mole clings to every surface it touches — spoon, pot, tongue — with a weight that feels almost substantial, like a liquid you can lean against.",
+      "ingId": "ing_04",
+      "role": "Base",
+      "name": "Chihuacle séché nègre, tiges enlevées",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "mulato ou pasilla supplémentaires"
+      ]
     },
+    {
+      "ingId": "ing_05",
+      "role": "Sweetener",
+      "name": "Ripe plantain, pelé et tranché épais",
+      "ratioValue": 100,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "banane très mûre"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "Chocolat noir (minimum de 70 % de cacao), approximativement haché",
+      "ratioValue": 60,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Comprimé de chocolat mexicain"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Base",
+      "name": "Tomates ripées, coupées en deux",
+      "ratioValue": 300,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "tomates cuites au feu en conserve"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Allium",
+      "name": "Oignon blanc, quartiers",
+      "ratioValue": 150,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Allium",
+      "name": "Gousses d'ail, non pelées",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Spice",
+      "name": "Graines de cumin",
+      "ratioValue": 5,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "cumin de fond (ajouter au stade du mélange)"
+      ]
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Spice",
+      "name": "cannelle mexicaine (canela), 1 petit bâton",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Ceylan cannelle (pas cassie)"
+      ]
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Spice",
+      "name": "Maïs de poivre noir",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_13",
+      "role": "Herb",
+      "name": "Thym séché",
+      "ratioValue": 2,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "thym frais (double quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_14",
+      "role": "Herb",
+      "name": "Origan mexicain séché",
+      "ratioValue": 3,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Marjoram séché"
+      ]
+    },
+    {
+      "ingId": "ing_15",
+      "role": "Fat",
+      "name": "Graines de sésame",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_16",
+      "role": "Fat",
+      "name": "Graines de citrouille (pepitas), brutes",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "graines de tournesol"
+      ]
+    },
+    {
+      "ingId": "ing_17",
+      "role": "Sweetener",
+      "name": "Raisins",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "Cerises séchées"
+      ]
+    },
+    {
+      "ingId": "ing_18",
+      "role": "Fat",
+      "name": "Lard ou huile neutre",
+      "ratioValue": 50,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "gras de canard"
+      ]
+    },
+    {
+      "ingId": "ing_19",
+      "role": "Liquid",
+      "name": "Bouillon de dinde ou de poulet, chaud",
+      "ratioValue": 1000,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "bouillon de légumes pour une version végétarienne"
+      ]
+    },
+    {
+      "ingId": "ing_20",
+      "role": "Seasoning",
+      "name": "Sel fin",
+      "ratioValue": 8,
+      "defaultUnit": "parts",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_21",
+      "role": "Starch",
+      "name": "Tortille de maïs d'un jour, déchirée en morceaux",
+      "ratioValue": 30,
+      "defaultUnit": "parts",
+      "substitutions": [
+        "pain mort"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Toast",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_03",
+        "ing_04",
+        "ing_10",
+        "ing_11",
+        "ing_12",
+        "ing_15",
+        "ing_16",
+        "ing_21"
+      ],
+      "outputState": "toasted_dry_components",
+      "instructions": "Chauffer une poêle comale sèche ou lourde sur moyenne-élevée. Travaillant en lots, toastez chaque variété de chili : appuyez-les à plat sur la surface chaude pendant 15 à 20 secondes de chaque côté jusqu'à ce qu'ils blistent, bouffent et libèrent un parfum profond et fumé, et non l'odeur acride de la combustion. Submerger immédiatement les piments grillés dans un bol d'eau très chaude et les peser avec une assiette; tremper 25 à 30 minutes jusqu'à ce qu'ils soient entièrement doux. Dans la même casserole sèche, toast cumin graines jusqu'à parfumé (30 secondes), puis cannelle, grains de poivre, graines de sésame, graines de citrouille et morceaux de tortilla déchirés séparément, chacun jusqu'à doré et aromatique. Toast les graines de chili réservées si vous voulez plus de chaleur (facultatif). Conserver tous les composants secs grillés ensemble.",
+      "visualCue": {
+        "primaryTarget": "Chaque chili doit présenter une peau boursouflée et gonflée avec de petites taches sombres, profondément parfumées, non noires ou cendrées. Les chilis trempés sont entièrement souples, sombres et presque soyeux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les piments sont plats et mats sans cloques. La poêle sent le poivre séché mais pas la fumée ou la profondeur. Les graines et le sésame sont encore pâles et croustillants.",
+            "action": "Augmentez la chaleur et continuez à presser — le comal doit être assez chaud pour générer un contact immédiat avec la peau de chili. Écoutez un léger étourdissement quand ils touchent la surface."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les piments ont gonflé, montrant de petites taches foncées sur la peau et un intérieur brun acajou lorsqu'ils sont déchirés. La cuisine sent les fruits secs fumés et les épices. Les graines de sésame et de citrouille sont dorées et sentent la noix.",
+            "action": "Faire tremper les piments grillés immédiatement pendant qu'ils sont encore chauds; c'est quand ils réhydratent le plus efficacement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les chilis sont noirs dans les taches, cassants, et sent l'acride. La saveur brûlée rendra la graine entière amère d'une manière qui ne peut pas être corrigée.",
+            "action": "Jeter les piments brûlés — l'amertume de l'omble ne peut être masquée même par le chocolat. Commencez par des piments frais séchés et réduisez la chaleur avant de procéder."
+          }
+        ]
+      },
+      "feelCue": "Un chili complètement trempé doit se sentir complètement souple, presque soyeux entre les doigts — pas de patches rigides ou papier partout sur la peau. Attachez-en un ouvert; la chair intérieure doit être sombre, humide et intensément parfumée."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Rôtis",
+      "inputs": [
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_05",
+        "ing_17"
+      ],
+      "outputState": "charred_wet_components",
+      "instructions": "Placer les moitiés de tomates, l'oignon en quartiers et l'ail non pelé directement sur le même comal sec à feu vif. Char ils sans bouger: vous voulez noircissement dramatique d'au moins un côté — cet omble est saveur structurelle, pas une erreur. Tourne une fois et char de l'autre côté. L'ail se fait lorsque sa peau papier est noircie et que les gousses se sentent douces à l'intérieur lorsqu'elles sont pressées. Dans une petite casserole avec une éclaboussure de saindoux ou d'huile, faire frire les tranches de plantain à feu moyen jusqu'à ce que les deux côtés soient profondément caramélisés et bronzer (3–4 min de chaque côté). Ajouter les raisins secs dans la poêle à la dernière minute et faire frire jusqu'à ce qu'ils bouffent. Peler l'ail; ne pas peler l'oignon.",
+      "visualCue": {
+        "primaryTarget": "Les tomates ont des peaux noircies et effondrées avec des jus qui bouillonnent. Les quartiers d'oignon sont carbonisés en noir sur les faces coupées avec des intérieurs adoucis. Les peaux de papier à l'ail sont entièrement noires. Les tranches de plantain sont un brun-ambre profond.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les tomates sont simplement adoucies avec une peau pâle et inchangée. L'oignon et l'ail sont légèrement brunis plutôt que de l'omble. Plantain est doré mais pas caramélisé.",
+            "action": "Retourner à la chaleur élevée sans bouger — l'omble doit être authentique. Une casserole bien chaude sans huile est nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "Les tomates sont effondrées et à peau noire avec des jus caramélisés aux bords. Les visages d'oignon sont noirs d'acajou. Les peaux d'ail sont entièrement carbonisées, les gousses tendres à l'intérieur. Plantain est un caramel profond.",
+            "action": "Laisser tous les composants avec leurs peaux carbonisées pour le stade de mélange — l'omble contribue à la couleur foncée caractéristique de la taupe et à la note de base amère."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les composants sont passés de l'omble à la cendre — les tomates sont sèches et éparpillées, les oignons carbonisés en poudre. Plantain est brûlé-doux et acride.",
+            "action": "Jeter et recommencer les composants humides. Certains chars sont essentiels; la carbonisation complète n'est pas récupérable."
+          }
+        ]
+      },
+      "feelCue": "Pressez une girofle d'ail carbonisée à travers sa peau noircie — elle devrait donner complètement, en poussant comme du beurre doux. S'il y a une résistance, retournez-la à la chaleur."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Mélange",
+      "inputs": [
+        "toasted_dry_components",
+        "charred_wet_components",
+        "ing_19"
+      ],
+      "outputState": "mole_paste",
+      "instructions": "Égoutter les piments trempés, réserver le liquide absorbant (mais utiliser parcimonieusement — il peut être très amer). Travail en lots dans un mélangeur : combiner les piments trempés, les tomates carbonisées et l'oignon, l'ail carbonisé pelé, les épices grillées, les graines de sésame, les graines de citrouille, les morceaux de tortilla, le plantain frit et les raisins secs. Ajouter le bouillon chaud au besoin (pas le liquide de trempage de chili) pour faire bouger les lames — généralement 3 à 4 louches par lot. Mélanger chaque lot pendant au moins 2 minutes complètes jusqu'à ce qu'il soit complètement lisse. Passez à travers un tamis moyen si vous voulez une texture très raffinée; laissez-le comme-est pour une mole plus rustique et texturée.",
+      "visualCue": {
+        "primaryTarget": "Une pâte épaisse, noire-jet à brun très foncé qui se déplace comme de la mélasse quand le mélangeur est arrêté - visqueuse, complètement lisse, et si sombre, il est presque opaque.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pâte est granuleuse et tachetée de morceaux visibles de peau de chili, de fragments de graines ou de taches vertes d'herbes non mélangées. La couleur est rouge-brun plutôt que vrai noir.",
+            "action": "Mélanger plus longtemps — 2 minutes complètes à grande vitesse par lot est le minimum. Ajouter plus de bouillon pour libérer les lames si nécessaire."
+          },
+          {
+            "state": "Perfect",
+            "description": "La pâte est complètement lisse, profondément sombre (brun-noir), et coule d'une spatule dans un ruban lent et épais. L'odeur est extraordinaire: chocolat, fumée, fruits secs et épices simultanément.",
+            "action": "Passez immédiatement à la friture — la pâte doit être cuite dans de la graisse chaude pour développer sa saveur finale."
+          },
+          {
+            "state": "Overdone",
+            "description": "La pâte a été mélangée si longtemps et avec tellement de bouillon qu'elle est fine et aqueuse plutôt qu'épais.",
+            "action": "Réduisez la pâte dans une casserole à feu moyen, en remuant constamment, jusqu'à ce qu'elle s'épaississe à la consistance d'un taupe-colle avant de faire frire."
+          }
+        ]
+      },
+      "feelCue": "Frottez un peu de pâte entre vos doigts — elle devrait sentir le velours-lisse avec absolument aucun grain. Si vous ressentez une rugosité, il faut plus de mélange."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "mole_paste",
+        "ing_18",
+        "ing_19",
+        "ing_06",
+        "ing_13",
+        "ing_14",
+        "ing_20"
+      ],
+      "outputState": "mole_negro",
+      "instructions": "Chauffer le saindoux dans un grand pot à fond lourd (de préférence en argile ou en fonte émaillée) à feu vif jusqu'à ce qu'il commence à fumer légèrement. Versez la pâte de taupe en une seule fois — elle crachera violemment, alors reculez et faites un couvercle prêt. Faire frire la pâte, en remuant constamment avec une cuillère en bois, pendant 10 à 15 minutes jusqu'à ce qu'elle s'assombrisse, épaississe et que la graisse se sépare visiblement aux bords. Cette étape de friture est ce qui transforme un mélange mélangé en une vraie mole. Réduire le feu à moyen-doux. Ajouter le bouillon chaud une louche à la fois, en remuant bien après chaque addition. Ajouter le thym séché, l'origan et le sel. Laisser mijoter doucement pendant au moins 1 heure, en écrémant toute graisse qui monte. Ajouter le chocolat haché dans les 5 dernières minutes, en remuant jusqu'à ce qu'il soit complètement fondu. Goûtez et ajustez le sel.",
+      "visualCue": {
+        "primaryTarget": "Une sauce de la couleur de l'obsidienne polie — presque noire — qui enveloppe complètement l'arrière d'une cuillère et tombe dans un seul rideau non cassé et lourd quand la cuillère est levée.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La taupe est rouge-brun plutôt que noire et goûte cru et dur — la pâte n'a pas été frite assez longtemps, et les saveurs n'ont pas unifié. La consistance est trop mince.",
+            "action": "Faire frire la pâte pendant 5 à 10 minutes à feu plus élevé et continuer à mijoter pour réduire et concentrer."
+          },
+          {
+            "state": "Perfect",
+            "description": "Couleur profonde, presque noire. La taupe enrobe une cuillère épaissement et tombe dans un rideau intact. La saveur est extraordinairement complexe — vous goûtez des couches: d'abord la chaleur, puis l'amertume au chocolat, puis la douceur des fruits secs, puis la fumée, puis la profondeur de l'umami.",
+            "action": "La taupe est terminée. Il tiendra réfrigéré pendant 5 jours et s'améliorera. Finir au besoin avec le bouillon chaud lors du réchauffage."
+          },
+          {
+            "state": "Overdone",
+            "description": "La taupe a diminué trop loin — elle est raide, collante et salée, avec le chocolat dominant et le goût du bouillon disparu.",
+            "action": "fouetter dans un bouillon chaud, une louche à la fois, jusqu'à ce que la consistance retourne au poids de la feuille de revêtement. Goûtez au sel après chaque ajout."
+          }
+        ]
+      },
+      "feelCue": "La taupe bien finie s'accroche à chaque surface qu'elle touche — cuillère, pot, langue — avec un poids qui se sent presque substantiel, comme un liquide contre lequel on peut se pencher."
+    }
+  ]
 };

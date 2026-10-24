@@ -1,83 +1,217 @@
 export default {
-  repoId: "master_japanese_katsu_curry_sauce_001",
-  parentRepoId: null,
-  slug: "katsu-curry-sauce",
-  author: "ForkRecipe Kitchen",
-  title: "Katsu Curry Sauce",
-  description: "A thick, amber-golden Japanese curry sauce built on slowly caramelized onions and apple, thickened by store-bought roux blocks and gentled with a low simmer until it pours like silk over a breaded cutlet — mild, slightly sweet, and fragrant with a warm curry note that never overwhelms. This is Western-style Japanese yoshoku cooking at its most comforting.",
-  cuisine: "Japanese",
-  culture: "Japanese Yoshoku",
-  category: "sauces",
-  tags: ["japanese", "curry", "sauce", "yoshoku", "comfort", "mild", "katsu"],
-  difficulty: 2,
-  activeTime: "20 min",
-  totalTime: "45 min",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-28",
-  updatedAt: "2026-06-28",
-  flavorRadar: { sweet: 3, salty: 3, sour: 1, bitter: 1, umami: 4, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Allium",    name: "Onion (2 medium, thinly sliced)", ratioValue: 300, defaultUnit: "g", substitutions: [] },
-    { ingId: "ing_02", role: "Sweetener", name: "Apple (1 small, grated or finely diced)", ratioValue: 120, defaultUnit: "g", substitutions: ["grated carrot", "apple sauce (use 60g)"] },
-    { ingId: "ing_03", role: "Fat",       name: "Unsalted butter", ratioValue: 30, defaultUnit: "g", substitutions: ["neutral oil for dairy-free"] },
-    { ingId: "ing_04", role: "Umami",     name: "Japanese curry roux blocks (S&B Golden Curry, medium heat)", ratioValue: 100, defaultUnit: "g", substitutions: ["Vermont Curry blocks (milder)", "homemade roux with curry powder and flour"] },
-    { ingId: "ing_05", role: "Liquid",    name: "Chicken stock (or dashi)", ratioValue: 600, defaultUnit: "g", substitutions: ["water (sauce will be lighter in body)"] },
-    { ingId: "ing_06", role: "Umami",     name: "Tonkatsu sauce (or Worcestershire sauce)", ratioValue: 20, defaultUnit: "g", substitutions: ["HP sauce", "kecap manis (use half quantity)"] },
-    { ingId: "ing_07", role: "Seasoning", name: "Soy sauce", ratioValue: 10, defaultUnit: "g", substitutions: ["tamari"] },
-    { ingId: "ing_08", role: "Aromatic",  name: "Garlic (2 cloves, minced)", ratioValue: 12, defaultUnit: "g", substitutions: [] },
+  "repoId": "master_japanese_katsu_curry_sauce_001",
+  "parentRepoId": null,
+  "slug": "katsu-curry-sauce",
+  "author": "ForkRecipe Kitchen",
+  "title": "Sauce de Curry Katsu",
+  "description": "Une sauce de curry japonaise épaisse, dorée à l'ambre, construite sur des oignons et des pommes caramélisés lentement, épaissie par des blocs de roux achetés en magasin et douce avec un faible mijoter jusqu'à ce qu'elle verse comme de la soie sur une coupe panée — douce, légèrement sucrée et parfumée avec une note de curry chaude qui ne déborde jamais. C'est la cuisine yoshiku japonaise de style occidental à son plus réconfortant.",
+  "cuisine": "Japonais",
+  "culture": "Yoshoku japonais",
+  "category": "sauces",
+  "tags": [
+    "Japonais",
+    "curry",
+    "sauce",
+    "yoshiku",
+    "confort",
+    "légère",
+    "katsu"
   ],
-  processNodes: [
+  "difficulty": 2,
+  "activeTime": "20 min",
+  "totalTime": "45 min",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "flavorRadar": {
+    "sweet": 3,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 1,
+    "umami": 4,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1",
-      action: "Caramelize",
-      inputs: ["ing_01", "ing_03"],
-      outputState: "caramelized_onions",
-      instructions: "Melt the butter in a heavy-bottomed saucepan or Dutch oven over medium heat. Add the sliced onions with a pinch of salt and cook, stirring every 2 to 3 minutes, for 15 to 20 minutes total. The onions will first turn translucent, then golden, then begin to develop amber patches and a sweet, almost nutty aroma. Do not rush this step with high heat — the slow caramelization builds the sweet foundation that distinguishes Japanese curry from sharper Indian-style curries. After 15 minutes, add the minced garlic and cook for 2 more minutes.",
-      visualCue: {
-        primaryTarget: "Onions have reduced to less than a third of their starting volume and are a deep golden-amber — the colour of dark honey — with some caramelized strands clinging to the pan bottom.",
-        spectrum: [
-          { state: "Underdone", description: "Onions are translucent and soft but still pale gold. Barely any colour on the pan bottom. Smells sweet but not yet toasted.", action: "Continue cooking — the Maillard reaction hasn't fully developed yet. Resist the urge to raise heat." },
-          { state: "Perfect",   description: "Deep amber, jammy, very sweet smell. Volume reduced to a thin layer across the pan. Pan bottom has caramel deposits that lift easily when liquid is added.", action: "Add garlic and cook 2 minutes, then add grated apple." },
-          { state: "Overdone",  description: "Onions are dark brown to black in patches, smell of burnt sugar. Pan bottom has charred crust that doesn't lift.", action: "Deglaze with 50ml stock, scraping up any dark bits that are not burnt-black. Pick out any pieces that are fully carbonized." },
-        ],
-      },
-      feelCue: "Stir and listen — properly caramelizing onions make a gentle sizzle that lowers in pitch as the water evaporates, shifting from a watery hiss to a dry, soft whisper. When it sounds quiet and the spoon meets almost no liquid resistance, the colour is about to develop fast.",
+      "ingId": "ing_01",
+      "role": "Allium",
+      "name": "Oignon (2 rond, tranché finement)",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": []
     },
     {
-      nodeId: "step_2",
-      action: "Simmer",
-      inputs: ["caramelized_onions", "ing_02", "ing_05", "ing_06", "ing_07"],
-      outputState: "curry_base",
-      instructions: "Add the grated apple to the caramelized onions and stir for 1 minute to cook out any raw edge. Pour in the chicken stock, tonkatsu sauce, and soy sauce. Bring to a gentle simmer over medium heat, scraping up any caramelized bits from the pan bottom — these are pure flavour. Simmer uncovered for 10 minutes, stirring occasionally, until the apple has dissolved into the sauce and the liquid has reduced slightly. The base should smell rich, sweet, and savoury with no sharp raw apple note remaining.",
-      visualCue: {
-        primaryTarget: "A golden-brown broth with visible depth of colour, no distinct pieces of apple, and a surface that simmers gently with small bubbles around the edge.",
-        spectrum: [
-          { state: "Underdone", description: "Apple is still in distinct chunks; broth is pale and watery; raw apple smell persists.", action: "Continue simmering for 5 more minutes and mash any remaining apple pieces against the pan side." },
-          { state: "Perfect",   description: "Broth is deep golden, apple has dissolved, and the liquid smells complex and sweet-savoury. A spoon coats thinly.", action: "Reduce heat to very low and add the curry roux blocks." },
-          { state: "Overdone",  description: "Broth has reduced too much and is beginning to scorch at the edges.", action: "Add 100ml additional stock and reduce heat immediately." },
-        ],
-      },
-      feelCue: "Dip a spoon in and taste the base before adding the roux — it should taste pleasantly sweet and savoury but too thin, almost like a refined onion soup. The roux will transform that foundation.",
+      "ingId": "ing_02",
+      "role": "Sweetener",
+      "name": "Pommes (1 petite, râpée ou finement dés)",
+      "ratioValue": 120,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Carotte râpée",
+        "sauce de pomme (utiliser 60g)"
+      ]
     },
     {
-      nodeId: "step_3",
-      action: "Reduce",
-      inputs: ["curry_base", "ing_04"],
-      outputState: "finished_curry_sauce",
-      instructions: "Break the curry roux blocks into pieces and add them to the simmering base off the heat. Stir with a wooden spoon until each block has fully dissolved and no lumps remain — this takes 2 to 3 minutes of patient stirring. Return to very low heat and simmer gently for 10 minutes, stirring frequently to prevent scorching on the bottom. The sauce will thicken dramatically as the starch in the roux cooks out. It should coat a spoon heavily and pour in a slow, controlled stream. Taste and adjust with a pinch of salt or a splash of soy sauce if needed. The finished sauce should taste deeply savoury, mildly spiced, and sweetly rounded — not salty or one-dimensional.",
-      visualCue: {
-        primaryTarget: "A thick, glossy, deep amber sauce that pours in a slow ribbon from a tilted ladle, coats the back of a spoon thickly, and has a smooth, uniform surface with no lumps.",
-        spectrum: [
-          { state: "Underdone", description: "Sauce is thin and the roux blocks have not fully dissolved — visible lumps, pale colour, watery consistency.", action: "Continue stirring off the heat until all lumps dissolve, then return to gentle heat and cook 5 more minutes." },
-          { state: "Perfect",   description: "Deep amber-gold, thick enough to coat a spoon in a distinct film, flows slowly, smells of toasted curry and caramelized onion. No lumps.", action: "Keep warm over the lowest heat, stirring every few minutes, until ready to serve. Can be made a day ahead — reheats beautifully with a splash of stock to adjust consistency." },
-          { state: "Overdone",  description: "Sauce has thickened to a paste and clings to the pot in heavy sheets. Scorched smell.", action: "Add 100ml stock, stir vigorously off the heat until smooth, then taste for seasoning." },
-        ],
-      },
-      feelCue: "Ladle a spoonful over the back of a cold plate and tilt — the sauce should flow slowly and hold its edge cleanly like warm chocolate ganache, not spread instantly like water or refuse to move like paste.",
+      "ingId": "ing_03",
+      "role": "Fat",
+      "name": "Beurre non salé",
+      "ratioValue": 30,
+      "defaultUnit": "g",
+      "substitutions": [
+        "huile neutre sans lait"
+      ]
     },
+    {
+      "ingId": "ing_04",
+      "role": "Umami",
+      "name": "Blocs roux de curry japonais (S&B Golden Curry, feu moyen)",
+      "ratioValue": 100,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Blocs de curry du Vermont",
+        "roux maison avec poudre de curry et farine"
+      ]
+    },
+    {
+      "ingId": "ing_05",
+      "role": "Liquid",
+      "name": "Stock de poulet (ou dashi)",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "eau (la sauce sera plus légère dans le corps)"
+      ]
+    },
+    {
+      "ingId": "ing_06",
+      "role": "Umami",
+      "name": "sauce Tonkatsu (ou sauce Worcestershire)",
+      "ratioValue": 20,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sauce HP",
+        "kécap manis (utiliser la moitié de la quantité)"
+      ]
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Seasoning",
+      "name": "sauce soja",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "tamari"
+      ]
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Aromatic",
+      "name": "Ail (2 girofles hachés)",
+      "ratioValue": 12,
+      "defaultUnit": "g",
+      "substitutions": []
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Caramélisation",
+      "inputs": [
+        "ing_01",
+        "ing_03"
+      ],
+      "outputState": "caramelized_onions",
+      "instructions": "Faire fondre le beurre dans une casserole à fond lourd ou un four hollandais à feu moyen. Ajouter les oignons tranchés avec une pincée de sel et cuire en remuant toutes les 2 à 3 minutes, pendant 15 à 20 minutes au total. Les oignons vont d'abord devenir translucides, puis dorés, puis commencer à développer des taches ambres et un arôme doux, presque noisette. Ne précipitez pas cette étape avec une chaleur élevée — la caramélisation lente construit la fondation douce qui distingue le curry japonais des currys de style indien plus vif. Après 15 minutes, ajouter l'ail haché et cuire encore 2 minutes.",
+      "visualCue": {
+        "primaryTarget": "Les oignons ont diminué à moins d'un tiers de leur volume de départ et sont un ambre d'or profond, la couleur du miel foncé, avec quelques brins caramélisés accrochés au fond de la poêle.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Les oignons sont translucides et doux, mais encore d'or pâle. A peine n'importe quelle couleur sur le fond de la poêle. Ça sent bon mais pas encore grillé.",
+            "action": "Continuer la cuisson — la réaction de Maillard n'a pas encore complètement évolué. Résistez à l'envie d'élever la chaleur."
+          },
+          {
+            "state": "Perfect",
+            "description": "Ambre profonde, confiture, odeur très douce. Volume réduit à une fine couche à travers la casserole. Pan bas a des dépôts de caramel qui se lèvent facilement lorsque le liquide est ajouté.",
+            "action": "Ajouter l'ail et cuire 2 minutes, puis ajouter la pomme râpée."
+          },
+          {
+            "state": "Overdone",
+            "description": "Les oignons sont brun foncé à noir dans les taches, odeur de sucre brûlé. Le fond de la poêle a une croûte carbonisée qui ne se lève pas.",
+            "action": "Déglacer avec du stock de 50ml, racler les morceaux sombres qui ne sont pas noir-brûlé. Choisissez les pièces entièrement carbonisées."
+          }
+        ]
+      },
+      "feelCue": "Mélanger et écouter — caraméliser correctement les oignons font un doux étourdissement qui baisse en hauteur lorsque l'eau s'évapore, passant d'un sifflement aqueux à un murmure sec et doux. Quand il semble calme et que la cuillère ne rencontre presque aucune résistance liquide, la couleur est sur le point de se développer rapidement."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Laisser mijoter",
+      "inputs": [
+        "caramelized_onions",
+        "ing_02",
+        "ing_05",
+        "ing_06",
+        "ing_07"
+      ],
+      "outputState": "curry_base",
+      "instructions": "Ajouter la pomme râpée aux oignons caramélisés et remuer 1 minute pour faire cuire n'importe quel bord cru. Verser le bouillon de poulet, la sauce tonkatsu et la sauce soja. Faire mijoter doucement à feu moyen, en grattant tous les morceaux caramélisés du fond de la poêle — ce sont des arômes purs. Laisser mijoter à découvert pendant 10 minutes, en remuant occasionnellement, jusqu'à ce que la pomme se soit dissoute dans la sauce et que le liquide ait légèrement diminué. La base doit sentir riche, sucrée et salée, sans note de pomme brute nette restante.",
+      "visualCue": {
+        "primaryTarget": "Un bouillon doré-brun avec une profondeur de couleur visible, pas de morceaux distincts de pomme, et une surface qui mijote doucement avec de petites bulles autour du bord.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La pomme est encore dans des morceaux distincts; le bouillon est pâle et aqueux; l'odeur brute persiste.",
+            "action": "Continuer à mijoter 5 minutes de plus et écraser les morceaux de pomme restants contre le côté de la poêle."
+          },
+          {
+            "state": "Perfect",
+            "description": "Le bouillon est d'or profond, la pomme s'est dissoute et le liquide sent complexe et sucré. Une cuillère est mince.",
+            "action": "Réduire la chaleur à très faible et ajouter les blocs de courgettes."
+          },
+          {
+            "state": "Overdone",
+            "description": "Broth a trop réduit et commence à brûler aux bords.",
+            "action": "Ajouter 100ml de bouillon supplémentaire et réduire immédiatement la chaleur."
+          }
+        ]
+      },
+      "feelCue": "Plongez une cuillère et goûtez la base avant d'ajouter le roux — il doit goûter agréablement sucré et salé mais trop mince, presque comme une soupe d'oignon raffinée. Le roux transformera cette fondation."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Réduire",
+      "inputs": [
+        "curry_base",
+        "ing_04"
+      ],
+      "outputState": "finished_curry_sauce",
+      "instructions": "Briser les blocs de curry roux en morceaux et les ajouter à la base mijotante du feu. Incorporer une cuillère en bois jusqu'à ce que chaque bloc soit complètement dissous et qu'il ne reste plus de grumeaux, ce qui prend 2 à 3 minutes de brassage du patient. Retourner à feu très doux et laisser mijoter doucement pendant 10 minutes, en remuant fréquemment pour éviter les brûlures au fond. La sauce s'épaissira de façon spectaculaire lorsque l'amidon dans le roux sera cuit. Il devrait enrober une cuillère fortement et verser dans un cours d'eau lent et contrôlé. Goûtez et ajustez avec une pincée de sel ou une touche de sauce de soja si nécessaire. La sauce finie doit avoir un goût très salé, légèrement épicé et légèrement arrondi, non salé ni unidimensionnel.",
+      "visualCue": {
+        "primaryTarget": "Une sauce ambre épaisse, brillante et profonde qui verse dans un ruban lent d'une louche inclinée, enrobe l'arrière d'une cuillère épais, et a une surface lisse et uniforme sans grumeaux.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La sauce est fine et les blocs roux n'ont pas complètement dissous: morceaux visibles, couleur pâle, consistance aqueuse.",
+            "action": "Continuer à remuer le feu jusqu'à ce que tous les morceaux se dissolvent, puis revenir à feu doux et cuire encore 5 minutes."
+          },
+          {
+            "state": "Perfect",
+            "description": "Deep ambre-or, assez épais pour enrober une cuillère dans un film distinct, coule lentement, sent le curry grillé et l'oignon caramélisé. Pas de bosses.",
+            "action": "Maintenez au chaud sur le feu le plus bas, en remuant toutes les quelques minutes, jusqu'à ce qu'il soit prêt à servir. Peut être fait un jour d'avance — réchauffe magnifiquement avec un jet de stock pour ajuster la consistance."
+          },
+          {
+            "state": "Overdone",
+            "description": "La sauce s'est épaissie à la pâte et s'accroche au pot dans des feuilles lourdes. Une odeur brûlée.",
+            "action": "Ajouter 100 ml de bouillon, remuer vigoureusement le feu jusqu'à ce qu'il soit lisse, puis goûter à l'assaisonnement."
+          }
+        ]
+      },
+      "feelCue": "Déposer une cuillère sur l'arrière d'une assiette froide et basculer — la sauce doit s'écouler lentement et tenir son bord proprement comme une ganache au chocolat chaud, ne pas se propager instantanément comme de l'eau ou refuser de bouger comme de la pâte."
+    }
+  ]
 };

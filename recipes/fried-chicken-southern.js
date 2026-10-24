@@ -1,114 +1,315 @@
 export default {
-  repoId: "master_american_fried_chicken_southern_001",
-  parentRepoId: null,
-  slug: "fried-chicken-southern",
-  author: "ForkRecipe Kitchen",
-  title: "Southern Buttermilk Fried Chicken",
-  description: "Bone-in chicken soaked long and slow in seasoned buttermilk until the acid tenderises every fibre, then dredged in spiced flour and fried in a cast-iron skillet in shallow lard until the crust shatters like a cracker and the interior runs with its own juice.",
-  cuisine: "American",
-  culture: "Southern American",
-  category: "proteins",
-  tags: ["american", "southern", "fried-chicken", "comfort-food"],
-  difficulty: 3,
-  activeTime: "30 min",
-  totalTime: "5 hr",
-  ratioSystem: "weight",
-  stars: 0,
-  forks: 0,
-  contributors: 1,
-  license: "CC-BY-SA",
-  createdAt: "2026-06-27",
-  updatedAt: "2026-06-27",
-  flavorRadar: { sweet: 0, salty: 3, sour: 1, bitter: 0, umami: 3, heat: 2 },
-  ingredients: [
-    { ingId: "ing_01", role: "Protein",   name: "Bone-in chicken pieces (thighs, drumsticks, breasts, wings)",  ratioValue: 1400, defaultUnit: "g",   substitutions: ["skin-on chicken thighs only for a simpler fry"] },
-    { ingId: "ing_02", role: "Dairy",     name: "Buttermilk (full-fat)",                                         ratioValue: 480,  defaultUnit: "ml",  substitutions: ["whole milk + 1 tbsp white vinegar, rested 10 min"] },
-    { ingId: "ing_03", role: "Structure", name: "All-purpose flour",                                             ratioValue: 300,  defaultUnit: "g",   substitutions: ["half flour, half cornmeal for extra crunch"] },
-    { ingId: "ing_04", role: "Starch",    name: "Cornstarch",                                                    ratioValue: 60,   defaultUnit: "g",   substitutions: ["potato starch"] },
-    { ingId: "ing_05", role: "Spice",     name: "Smoked paprika",                                                ratioValue: 10,   defaultUnit: "g",   substitutions: ["sweet paprika"] },
-    { ingId: "ing_06", role: "Spice",     name: "Garlic powder",                                                 ratioValue: 6,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_07", role: "Spice",     name: "Onion powder",                                                  ratioValue: 6,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_08", role: "Spice",     name: "Cayenne pepper",                                                ratioValue: 4,    defaultUnit: "g",   substitutions: ["hot paprika"] },
-    { ingId: "ing_09", role: "Seasoning", name: "Fine sea salt",                                                 ratioValue: 15,   defaultUnit: "g",   substitutions: ["kosher salt (use 20 g)"] },
-    { ingId: "ing_10", role: "Seasoning", name: "Freshly ground black pepper",                                   ratioValue: 6,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_11", role: "Leavener",  name: "Baking powder",                                                 ratioValue: 6,    defaultUnit: "g",   substitutions: [] },
-    { ingId: "ing_12", role: "Fat",       name: "Lard or peanut oil for frying (enough for 4 cm depth in skillet)", ratioValue: 600, defaultUnit: "g", substitutions: ["vegetable shortening", "refined coconut oil"] },
+  "repoId": "master_american_fried_chicken_southern_001",
+  "parentRepoId": null,
+  "slug": "fried-chicken-southern",
+  "author": "ForkRecipe Kitchen",
+  "title": "Poulet frit au lait de bouche du sud",
+  "description": "Poulet désossé imbibé longtemps et lent dans du babeurre assaisonné jusqu'à ce que l'acide fendise chaque fibre, puis dragué dans de la farine épicée et frit dans une poêle en fonte dans du saindoux peu profond jusqu'à ce que la croûte se brise comme un craquelin et que l'intérieur coule avec son propre jus.",
+  "cuisine": "Américain",
+  "culture": "Amérique du Sud",
+  "category": "proteins",
+  "tags": [
+    "américains",
+    "sud",
+    "Choux frits",
+    "la nourriture confortable"
   ],
-  processNodes: [
+  "difficulty": 3,
+  "activeTime": "30 min",
+  "totalTime": "5 hr",
+  "ratioSystem": "weight",
+  "stars": 0,
+  "forks": 0,
+  "contributors": 1,
+  "license": "CC-BY-SA",
+  "createdAt": "2026-06-27",
+  "updatedAt": "2026-06-27",
+  "flavorRadar": {
+    "sweet": 0,
+    "salty": 3,
+    "sour": 1,
+    "bitter": 0,
+    "umami": 3,
+    "heat": 2
+  },
+  "ingredients": [
     {
-      nodeId: "step_1", action: "Marinate",
-      inputs: ["ing_01", "ing_02", "ing_09", "ing_10"],
-      outputState: "marinated_chicken",
-      instructions: "Whisk 1 tsp of the salt and a good grinding of black pepper into the buttermilk. Submerge all the chicken pieces in the seasoned buttermilk, pressing them under the surface. Cover tightly and refrigerate for at least 4 hours, ideally overnight. The acid in the buttermilk tenderises the surface of the meat and the moisture helps the dredge adhere in a thick, shaggy crust.",
-      visualCue: {
-        primaryTarget: "After marinating, the chicken pieces are deeply coated in a thick, creamy, pink-tinged buttermilk that clings to the skin in opaque sheets.",
-        spectrum: [
-          { state: "Underdone", description: "Less than 2 hours in the marinade — the buttermilk is still thin on the surface and the meat feels as firm as it did raw.", action: "Return to the refrigerator. The tenderising action of the acid needs time. Minimum 4 hours; overnight is better." },
-          { state: "Perfect",   description: "4–12 hours: buttermilk has thickened slightly where it contacts the meat, the surface feels tender but not mushy, and the colour has lightened from pink to a paler blush.", action: "Remove from refrigerator 30 minutes before dredging to take the chill off, which ensures more even frying." },
-          { state: "Overdone",  description: "Over 24 hours: the buttermilk has broken down the surface proteins aggressively — the chicken feels soft and slightly slippery, almost mushy at the edges.", action: "The texture is acceptable once fried, but take care not to tear the pieces as you dredge them. Keep future batches to 12 hours maximum." },
-        ],
-      },
-      feelCue: "Fish out a piece after marinating and run a finger along the skin — it should feel tacky and coated, like it is already wearing a thin glaze. It should never feel slimy or fall-apart soft.",
+      "ingId": "ing_01",
+      "role": "Protein",
+      "name": "Morceaux de poulet désossé (cuisses, pilons, poitrines, ailes)",
+      "ratioValue": 1400,
+      "defaultUnit": "g",
+      "substitutions": [
+        "cuisses de poulet sur la peau uniquement pour une frite plus simple"
+      ]
     },
     {
-      nodeId: "step_2", action: "Season",
-      inputs: ["ing_03", "ing_04", "ing_05", "ing_06", "ing_07", "ing_08", "ing_09", "ing_10", "ing_11"],
-      outputState: "seasoned_dredge",
-      instructions: "Whisk together the flour, cornstarch, paprika, garlic powder, onion powder, cayenne, remaining salt, black pepper, and baking powder in a wide, shallow bowl. The baking powder creates small CO2 bubbles during frying that puff and shatter the crust. Taste a pinch — it should be clearly, aggressively seasoned, because the chicken below is thick and needs the crust to carry the flavour.",
-      visualCue: {
-        primaryTarget: "A pale terracotta-coloured, slightly powdery mixture that smells simultaneously of smoke, garlic, and warmth — a full sensory preview of the finished crust.",
-        spectrum: [
-          { state: "Underdone", description: "The mixture tastes flat and starchy with no real spice presence. It will produce a bland crust.", action: "Add more salt and paprika, tasting again after each addition until the seasoning is assertive — it must be able to season a thick piece of bone-in chicken through the entire crust." },
-          { state: "Perfect",   description: "The dredge tastes bright, peppery, and clearly spiced. It smells of paprika and garlic. The baking powder gives it a faint airy lightness.", action: "Set up the dredging station alongside the marinating chicken and begin coating." },
-          { state: "Overdone",  description: "The mixture is too salty or too hot — either overpowering the chicken or creating a uniformly bitter crust.", action: "Add more flour and cornstarch to dilute, then re-taste and re-balance the other spices proportionally." },
-        ],
-      },
-      feelCue: "Run your fingers through the dredge — it should feel light and slightly gritty from the cornstarch, never sticky or clumped. Lumps mean moisture got in; sift and start again.",
+      "ingId": "ing_02",
+      "role": "Dairy",
+      "name": "Beurre (graisse pleine)",
+      "ratioValue": 480,
+      "defaultUnit": "ml",
+      "substitutions": [
+        "lait entier + 1 c. à soupe de vinaigre blanc, reposé 10 min"
+      ]
     },
     {
-      nodeId: "step_3", action: "Dredge",
-      inputs: ["marinated_chicken", "seasoned_dredge"],
-      outputState: "dredged_chicken",
-      instructions: "Lift a piece of chicken out of the buttermilk, letting the excess drip back — but not shaking it bone-dry, you want a wet surface for the flour to grab. Press it firmly into the seasoned flour, turning and pressing several times so the dredge adheres in thick, uneven clusters. For the most shattering crust, drizzle a teaspoon of the excess buttermilk over the floured piece and press again — those wet spots create ragged, craggy bumps that fry into dramatic shards. Rest on a wire rack for 10 minutes before frying.",
-      visualCue: {
-        primaryTarget: "Each piece is covered in an opaque, thick, shaggy coat of flour with irregular ridges and bumps — it should look like rough terrain, not a smooth, even dusting.",
-        spectrum: [
-          { state: "Underdone", description: "The coating is thin and translucent in patches, the skin still visible underneath. It will fry unevenly and the crust will be thin and fragile.", action: "Dip the piece back in the buttermilk, let excess drip off, and press firmly into the flour again. Repeat the buttermilk-drizzle trick for better adherence." },
-          { state: "Perfect",   description: "A thick, opaque, jagged coat that completely obscures the skin underneath. Visible craggy peaks and valleys that will become shattering spikes of crust.", action: "Let rest on a rack for 10 minutes so the coating can hydrate and bond to the surface before frying." },
-          { state: "Overdone",  description: "Too much dredge applied in too many layers has created a doughy, thick paste rather than a light crust — it will cook to a dense, bready shell.", action: "Shake off the excess firmly. The coating should adhere but not be plastered on in thick dabs." },
-        ],
-      },
-      feelCue: "Press the coating firmly onto each piece with both hands — you should feel the flour compact into the surface and feel the irregular bumps under your palms. It should feel like rough sandpaper, not wet clay.",
+      "ingId": "ing_03",
+      "role": "Structure",
+      "name": "Farine à usage général",
+      "ratioValue": 300,
+      "defaultUnit": "g",
+      "substitutions": [
+        "moitié farine, moitié farine de maïs pour croquant supplémentaire"
+      ]
     },
     {
-      nodeId: "step_4", action: "Fry",
-      inputs: ["dredged_chicken", "ing_12"],
-      outputState: "fried_chicken",
-      instructions: "Heat the lard in a 12-inch cast-iron skillet to 175°C / 345°F. The fat should be 3–4 cm deep. Lower the chicken pieces in carefully, skin-side down, without crowding — fry in two batches if necessary. Maintain the oil at 160–170°C throughout (it will drop when you add the cold chicken; this is normal). Fry thighs and drumsticks 12–14 minutes per side, breasts 8–10 minutes per side, wings 6–8 minutes per side. Turn once, carefully, when the underside crust is deeply golden and releases freely.",
-      visualCue: {
-        primaryTarget: "The crust is a rich, reddish-amber gold with dark peaks on the craggy bumps, and the oil around the chicken sizzles in a steady, active, but not violent froth.",
-        spectrum: [
-          { state: "Underdone", description: "Crust is pale gold or still beige after 10 minutes. The oil is not sizzling actively — it may be below temperature. The coating may be sticking to the pan.", action: "Do not force the chicken to move — wait until it releases naturally, which it will do when the crust is set. If the oil is too cool, raise the heat slightly but watch the temperature." },
-          { state: "Perfect",   description: "Deep amber crust with darker peaks on the ridges, sizzling in an even, steady froth. A thermometer in the thickest part of the thigh reads 74°C / 165°F. The crust sounds hollow when tapped.", action: "Drain on a wire rack, not paper towels. Paper towels trap steam and soften the crust." },
-          { state: "Overdone",  description: "Crust is dark mahogany to near-black; the oil is smoking. The surface looks dry and the bumps have flattened, suggestng the interior has overcooked.", action: "Remove from oil immediately and drain. The skin will taste bitter at the darkest spots. Note that bone-in pieces can stay medium-dark without being overdone — use the internal temperature as the real indicator." },
-        ],
-      },
-      feelCue: "Listen to the oil: a steady, consistent sizzle like heavy rain means the temperature is right. A violent, spluttering roar means it is too hot. Silence or a faint hiss means it is too cold and the chicken is beginning to absorb oil.",
+      "ingId": "ing_04",
+      "role": "Starch",
+      "name": "Farine de maïs",
+      "ratioValue": 60,
+      "defaultUnit": "g",
+      "substitutions": [
+        "fécule de pomme de terre"
+      ]
     },
     {
-      nodeId: "step_5", action: "Rest",
-      inputs: ["fried_chicken"],
-      outputState: "finished_fried_chicken",
-      instructions: "Drain the fried pieces on a wire rack set over a baking sheet. Do not crowd them or stack them — each piece needs air circulation on all sides to stay crisp. Season immediately with a light pinch of fine sea salt while the crust is still glistening from the oil. Rest for at least 5 minutes before serving; the internal temperature will continue to rise and the juices will redistribute. The crust will remain shatteringly crisp on the rack for at least 15 minutes.",
-      visualCue: {
-        primaryTarget: "The crust has set to a rigid, faceted shell — dark amber with reddish-brown peaks — and the oil drips off cleanly without pooling on the surface.",
-        spectrum: [
-          { state: "Underdone", description: "The crust is slightly soft and pale in places; when cut, the juices run pink-tinged and the meat near the bone looks undercooked.", action: "Return to the oil for a further 3–4 minutes, or finish in a 200°C oven for 5–8 minutes to cook through without further darkening the crust." },
-          { state: "Perfect",   description: "The crust is rigid, dry-feeling, and shatters audibly when pressed or tapped. Juices run completely clear when the thickest point is pierced. The meat is moist and white throughout.", action: "Serve immediately, or hold on the rack in a 90°C oven for up to 20 minutes without losing the crunch." },
-          { state: "Overdone",  description: "The crust is very dark, the chicken smells more of fried dough than of seasoned meat, and the flesh inside is dry and cottony when bitten.", action: "Serve with a sauce — a hot honey drizzle or a buttermilk ranch — to reintroduce moisture. Avoid for future batches by relying on the thermometer." },
-        ],
-      },
-      feelCue: "Tap the crust with a fingernail — it should ring hollow and sharp, like knocking on a very thin ceramic tile. That sound is the crunch that the buttermilk and baking powder worked to create.",
+      "ingId": "ing_05",
+      "role": "Spice",
+      "name": "Paprika fumé",
+      "ratioValue": 10,
+      "defaultUnit": "g",
+      "substitutions": [
+        "paprika doux"
+      ]
     },
+    {
+      "ingId": "ing_06",
+      "role": "Spice",
+      "name": "Poudre d'ail",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_07",
+      "role": "Spice",
+      "name": "Poudre d'oignon",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_08",
+      "role": "Spice",
+      "name": "Poivre de Cayenne",
+      "ratioValue": 4,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Paprika chaud"
+      ]
+    },
+    {
+      "ingId": "ing_09",
+      "role": "Seasoning",
+      "name": "Sel fin de mer",
+      "ratioValue": 15,
+      "defaultUnit": "g",
+      "substitutions": [
+        "sel casher (utiliser 20 g)"
+      ]
+    },
+    {
+      "ingId": "ing_10",
+      "role": "Seasoning",
+      "name": "Poivre noir fraîchement moulu",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_11",
+      "role": "Leavener",
+      "name": "Poudre de cuisson",
+      "ratioValue": 6,
+      "defaultUnit": "g",
+      "substitutions": []
+    },
+    {
+      "ingId": "ing_12",
+      "role": "Fat",
+      "name": "Huile de lard ou d'arachide pour la friture (assez pour 4 cm de profondeur dans la poêle)",
+      "ratioValue": 600,
+      "defaultUnit": "g",
+      "substitutions": [
+        "Écourtement des légumes",
+        "huile de coco raffinée"
+      ]
+    }
   ],
+  "processNodes": [
+    {
+      "nodeId": "step_1",
+      "action": "Marinaté",
+      "inputs": [
+        "ing_01",
+        "ing_02",
+        "ing_09",
+        "ing_10"
+      ],
+      "outputState": "marinated_chicken",
+      "instructions": "fouetter 1 c. à thé du sel et bien broyer le poivre noir dans le babeurre. Submerger tous les morceaux de poulet dans le babeurre assaisonné, les presser sous la surface. Couvrir soigneusement et réfrigérer pendant au moins 4 heures, idéalement toute la nuit. L'acide dans le babeurre tendre la surface de la viande et l'humidité aide la drague à adhérer dans une croûte épaisse et chaotique.",
+      "visualCue": {
+        "primaryTarget": "Après la marinade, les morceaux de poulet sont enduits en profondeur dans un babeurre épais, crémeux et rose qui s'accroche à la peau en feuilles opaques.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Moins de 2 heures dans la marinade — le babeurre est encore mince à la surface et la viande est aussi ferme que crue.",
+            "action": "Retournez au réfrigérateur. L'action de soumissionnement de l'acide a besoin de temps. Au moins 4 heures; la nuit est meilleure."
+          },
+          {
+            "state": "Perfect",
+            "description": "4 à 12 heures : le babeurre s'est légèrement épaissi là où il touche la viande, la surface est tendre mais pas musquée, et la couleur s'est allégée du rose au blush plus pâle.",
+            "action": "Retirer du réfrigérateur 30 minutes avant le dragage pour enlever le froid, ce qui assure une friture plus uniforme."
+          },
+          {
+            "state": "Overdone",
+            "description": "Plus de 24 heures : le babeurre a cassé les protéines de surface de façon agressive – le poulet est doux et légèrement glissant, presque musclé aux bords.",
+            "action": "La texture est acceptable une fois frite, mais prenez soin de ne pas déchirer les morceaux pendant que vous les draguez. Conserver les lots futurs à 12 heures maximum."
+          }
+        ]
+      },
+      "feelCue": "Poissonr une pièce après avoir mariné et courir un doigt le long de la peau — il devrait se sentir collant et enduit, comme il porte déjà une fine glaçure. Il ne devrait jamais se sentir visqueux ou à l'automne doux."
+    },
+    {
+      "nodeId": "step_2",
+      "action": "Saison",
+      "inputs": [
+        "ing_03",
+        "ing_04",
+        "ing_05",
+        "ing_06",
+        "ing_07",
+        "ing_08",
+        "ing_09",
+        "ing_10",
+        "ing_11"
+      ],
+      "outputState": "seasoned_dredge",
+      "instructions": "Mélanger la farine, l'amidon de maïs, le paprika, la poudre d'ail, la poudre d'oignon, la cayenne, le sel restant, le poivre noir et la poudre à pâte dans un grand bol peu profond. La poudre à pâte crée de petites bulles de CO2 pendant la friture qui souffle et brise la croûte. Goûtez une pincée – elle devrait être assaisonnée clairement, agressivement, parce que le poulet en dessous est épais et a besoin de la croûte pour porter la saveur.",
+      "visualCue": {
+        "primaryTarget": "Un mélange de couleur terre cuite pâle, légèrement poudreux qui sent simultanément la fumée, l'ail et la chaleur, un aperçu sensoriel complet de la croûte finie.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le mélange a un goût plat et féculent sans présence réelle d'épices. Il produira une croûte molle.",
+            "action": "Ajouter plus de sel et de paprika, déguster à nouveau après chaque ajout jusqu'à ce que l'assaisonnement soit affirmé – il doit pouvoir assaisonner un morceau épais de poulet osseux dans toute la croûte."
+          },
+          {
+            "state": "Perfect",
+            "description": "La drague a un goût vif, poivré et nettement épicé. Ça sent le paprika et l'ail. La poudre à pâte lui donne une légère légèreté aérée.",
+            "action": "Mettre en place la station de dragage à côté du poulet mariné et commencer le revêtement."
+          },
+          {
+            "state": "Overdone",
+            "description": "Le mélange est trop salé ou trop chaud, soit en suralimentant le poulet, soit en créant une croûte uniformément amère.",
+            "action": "Ajouter plus de farine et de fécule de maïs pour diluer, puis ré-goûter et rééquilibrer les autres épices proportionnellement."
+          }
+        ]
+      },
+      "feelCue": "Passez vos doigts à travers la drague — il devrait sentir léger et légèrement gritté de la fécule de maïs, jamais collant ou entaillé. Lumps signifie que l'humidité est entrée; tamiser et recommencer."
+    },
+    {
+      "nodeId": "step_3",
+      "action": "Drague",
+      "inputs": [
+        "marinated_chicken",
+        "seasoned_dredge"
+      ],
+      "outputState": "dredged_chicken",
+      "instructions": "Soulevez un morceau de poulet du babeurre, laissant retomber l'excès — mais sans le secouer, vous voulez une surface humide pour la farine à saisir. Appuyez fermement dans la farine assaisonnée, tournant et pressant plusieurs fois afin que la drague adhère en grappes épaisses et inégales. Pour la croûte la plus brisée, arrosez une cuillère à café de l'excès de beurre sur la pièce fardée et pressez à nouveau — ces taches humides créent des bosses enragées et enragées qui frisent en éclats dramatiques. Repose-toi sur une grille pendant 10 minutes avant de frire.",
+      "visualCue": {
+        "primaryTarget": "Chaque morceau est recouvert d'une couche opaque, épaisse et chaotique de farine avec des crêtes irrégulières et des bosses.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "Le revêtement est mince et translucide dans les patchs, la peau encore visible en dessous. Elle frire de façon inégale et la croûte sera mince et fragile.",
+            "action": "Arrosez le morceau dans le lait de beurre, laissez couler l'excès et pressez fermement dans la farine. Répétez l'astuce du lait de beurre pour une meilleure adhérence."
+          },
+          {
+            "state": "Perfect",
+            "description": "Une couche épaisse, opaque et dentelée qui obscurcit complètement la peau en dessous. Des pics et des vallées visibles qui deviendront des pics éclatants de croûte.",
+            "action": "Laisser reposer sur un support pendant 10 minutes afin que le revêtement puisse s'hydrater et se lier à la surface avant de frire."
+          },
+          {
+            "state": "Overdone",
+            "description": "Trop de drague appliquée dans trop de couches a créé une pâte pâteuse et épaisse plutôt qu'une croûte légère — il fera cuire à une coquille dense et painée.",
+            "action": "Agiter fermement l'excès. Le revêtement doit adhérer, mais ne pas être plâtré dans de grosses pattes."
+          }
+        ]
+      },
+      "feelCue": "Appuyez fermement sur le revêtement de chaque pièce avec les deux mains — vous devriez sentir la farine compacte dans la surface et sentir les bosses irrégulières sous vos paumes. Ça devrait être du papier de sable, pas de l'argile humide."
+    },
+    {
+      "nodeId": "step_4",
+      "action": "Fry",
+      "inputs": [
+        "dredged_chicken",
+        "ing_12"
+      ],
+      "outputState": "fried_chicken",
+      "instructions": "Chauffer le saindoux dans une poêle en fonte de 12 pouces à 175°C / 345°F. La graisse doit être de 3 à 4 cm de profondeur. Abaissez soigneusement les morceaux de poulet, vers le bas de la peau, sans encombrer – faire frire en deux lots si nécessaire. Maintenez l'huile à 160–180°C pendant toute la période (elle chutera lorsque vous ajouterez le poulet froid; c'est normal). Fry cuisses et pilons 12-14 minutes par côté, seins 8-10 minutes par côté, ailes 6-8 minutes par côté. Tourner une fois, soigneusement, lorsque la croûte inférieure est profondément dorée et libère librement.",
+      "visualCue": {
+        "primaryTarget": "La croûte est un or riche, rougeâtre-ambre avec des pics foncés sur les bosses folles, et l'huile autour du poulet grésille dans une mousse stable, active, mais pas violente.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est d'or pâle ou encore beige après 10 minutes. L'huile ne gronde pas activement — elle peut être inférieure à la température. Le revêtement peut être collé à la casserole.",
+            "action": "Ne forcez pas le poulet à bouger — attendez qu'il libère naturellement, ce qu'il fera lorsque la croûte sera réglée. Si l'huile est trop froide, levez légèrement la chaleur mais regardez la température."
+          },
+          {
+            "state": "Perfect",
+            "description": "Croûte ambre profonde avec pics plus foncés sur les crêtes, grésillant dans une mousse uniforme et stable. Un thermomètre dans la partie la plus épaisse de la cuisse indique 74°C 165°F. La croûte semble creuse lorsqu'elle est tapée.",
+            "action": "Égoutter sur un porte-fils, pas des serviettes en papier. Les serviettes en papier piègent la vapeur et adoucissent la croûte."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est acajou foncé à presque noir; l'huile fume. La surface semble sèche et les bosses se sont aplaties, suggérant que l'intérieur a trop cuit.",
+            "action": "Retirer immédiatement de l'huile et égoutter. La peau aura un goût amer aux taches les plus foncées. Notez que les morceaux osseux peuvent rester à l'obscurité moyenne sans être surdosés — utilisez la température interne comme indicateur réel."
+          }
+        ]
+      },
+      "feelCue": "Écoutez l'huile : un étourdissement constant et constant comme une forte pluie signifie que la température est correcte. Un rugissement violent et éclatant signifie qu'il est trop chaud. Le silence ou un sifflement faible signifie qu'il fait trop froid et que le poulet commence à absorber l'huile."
+    },
+    {
+      "nodeId": "step_5",
+      "action": "Repos",
+      "inputs": [
+        "fried_chicken"
+      ],
+      "outputState": "finished_fried_chicken",
+      "instructions": "Égoutter les morceaux frits sur un porte-fils placé sur une plaque de cuisson. Ne les foulez pas ou ne les empilez pas — chaque pièce a besoin de circulation d'air de tous les côtés pour rester croquante. Assaisonner immédiatement avec une légère pincée de sel fin de mer tandis que la croûte est encore scintillante de l'huile. Reposez-vous au moins 5 minutes avant de servir; la température interne continuera à augmenter et les jus se redistribueront. La croûte restera croustillante sur la grille pendant au moins 15 minutes.",
+      "visualCue": {
+        "primaryTarget": "La croûte s'est mise à une coquille rigide à facettes — ambre foncé avec des pics brun rougeâtre — et l'huile s'écoule proprement sans se mettre en commun à la surface.",
+        "spectrum": [
+          {
+            "state": "Underdone",
+            "description": "La croûte est légèrement molle et pâle dans les endroits; lorsqu'elle est coupée, les jus sont rosés et la viande près de l'os semble mal cuite.",
+            "action": "Retourner à l'huile encore 3-4 minutes, ou terminer dans un four à 200°C pendant 5-8 minutes pour cuire à travers sans assombrir davantage la croûte."
+          },
+          {
+            "state": "Perfect",
+            "description": "La croûte est rigide, sèche et se brise audiquement lorsqu'elle est pressée ou tapée. Les jus sont complètement clairs lorsque le point le plus épais est percé. La viande est humide et blanche partout.",
+            "action": "Servir immédiatement, ou maintenir le support dans un four à 90°C jusqu'à 20 minutes sans perdre la croûte."
+          },
+          {
+            "state": "Overdone",
+            "description": "La croûte est très sombre, le poulet sent plus la pâte frite que la viande assaisonnée, et la chair à l'intérieur est sèche et cotonneuse quand mordue.",
+            "action": "Servir avec une sauce — une bruine de miel chaude ou un ranch de lait de beurre — pour réintroduire l'humidité. Évitez les futurs lots en comptant sur le thermomètre."
+          }
+        ]
+      },
+      "feelCue": "Tapotez la croûte avec un ongle — il devrait sonner creux et tranchant, comme frapper sur un carrelage en céramique très mince. Ce bruit est la croûte que le babeurre et la poudre à pâte ont travaillé pour créer."
+    }
+  ]
 };
